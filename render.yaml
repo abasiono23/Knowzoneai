@@ -1,0 +1,46 @@
+# Render blueprint: runs the Knowzone API (apps/server). In Render: New → Blueprint → pick this repo.
+# Render asks for every value marked `sync: false` once; copy them from apps/server/.env (never commit them).
+# Database changes are not applied here: run `npx prisma migrate deploy` against Supabase yourself, as before.
+
+services:
+  - type: web
+    name: knowzone-api
+    runtime: node
+    # Closest Render region to the Supabase database (eu-west-1, Ireland).
+    region: frankfurt
+    # The free plan sleeps after 15 minutes without requests, and the first request then waits about a minute.
+    # Switch to a paid plan (Starter) before real users arrive.
+    plan: free
+    rootDir: apps/server
+    buildCommand: npm ci --include=dev && npm run build
+    startCommand: npm start
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: NODE_VERSION
+        value: '22'
+      - key: DATABASE_URL
+        sync: false
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_SECRET_KEY
+        sync: false
+      # Required in production: data exports and deletion notices are emailed.
+      - key: RESEND_API_KEY
+        sync: false
+      - key: EMAIL_FROM
+        sync: false
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: YOUTUBE_API_KEY
+        sync: false
+      - key: FLW_SECRET_KEY
+        sync: false
+      - key: FLW_SECRET_HASH
+        sync: false
+      - key: SUPPORT_EMAIL
+        sync: false
+      - key: APP_URL
+        sync: false
