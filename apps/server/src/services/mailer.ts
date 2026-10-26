@@ -1,3 +1,4 @@
+import nodemailer from 'nodemailer';
 import { config } from '../config.js';
 
 export type Email = {
@@ -10,11 +11,32 @@ export type Email = {
 /** Emails "sent" without a provider (development and tests). Tests read codes from here. */
 export const outbox: Email[] = [];
 
+const smtp =
+  config.SMTP_USER && config.SMTP_PASS
+    ? nodemailer.createTransport({
+        host: config.SMTP_HOST,
+        port: config.SMTP_PORT,
+        secure: config.SMTP_PORT === 465,
+        auth: { user: config.SMTP_USER, pass: config.SMTP_PASS },
+      })
+    : null;
+
 /**
- * Sends through Resend when RESEND_API_KEY is set. Otherwise the email is kept in `outbox`
- * and printed in development, so codes can be read from the server log.
+ * Sends through Resend when RESEND_API_KEY is set, else through SMTP (e.g. Gmail) when SMTP_USER and
+ * SMTP_PASS are set. Otherwise the email is kept in `outbox` and printed in development, so codes can be
+ * read from the server log.
  */
 export async function sendEmail(email: Email) {
+  if (!config.RESEND_API_KEY && smtp) {
+    await smtp.sendMail({
+      from: config.EMAIL_FROM,
+      to: email.to,
+      subject: email.subject,
+      text: email.text,
+      attachments: email.attachments?.map((a) => ({ filename: a.filename, content: a.content })),
+    });
+    return;
+  }
   if (!config.RESEND_API_KEY) {
     outbox.push(email);
     if (outbox.length > 100) outbox.shift();

@@ -27,7 +27,12 @@ services:
         sync: false
       - key: SUPABASE_SECRET_KEY
         sync: false
-      # Required in production: data exports and deletion notices are emailed.
+      # Email for data exports and deletion notices: Gmail (SMTP_USER + an app password in SMTP_PASS) or a
+      # Resend key once you have a domain. One of the two is required.
+      - key: SMTP_USER
+        sync: false
+      - key: SMTP_PASS
+        sync: false
       - key: RESEND_API_KEY
         sync: false
       - key: EMAIL_FROM

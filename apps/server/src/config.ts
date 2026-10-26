@@ -34,8 +34,15 @@ const Env = z.object({
   FLW_BASE_URL: z.string().default('https://api.flutterwave.com'),
 
   // Emails the API sends itself (data exports, deletion notices). Sign-up and reset codes are sent by Supabase.
-  // Without a Resend key, emails are printed to the server log (development only).
+  // Sent through Resend (needs your own domain) or SMTP, e.g. Gmail with an app password. Without either,
+  // emails are printed to the server log (development only).
   RESEND_API_KEY: z.string().optional(),
+  /** SMTP server. smtp.gmail.com with SMTP_USER = your Gmail address and SMTP_PASS = a Gmail app password. */
+  SMTP_HOST: z.string().default('smtp.gmail.com'),
+  SMTP_PORT: z.coerce.number().default(465),
+  SMTP_USER: z.string().optional(),
+  SMTP_PASS: z.string().optional(),
+  /** With Gmail this must be your Gmail address, e.g. "Knowzone <you@gmail.com>". */
   EMAIL_FROM: z.string().default('Knowzone <hello@knowzone.ai>'),
   /** Where new help requests, reports and copyright notices are emailed for the team. Optional. */
   SUPPORT_EMAIL: z.union([z.literal(''), z.email()]).optional(),
@@ -43,5 +50,5 @@ const Env = z.object({
 
 export const config = Env.parse(process.env);
 
-if (config.NODE_ENV === 'production' && !config.RESEND_API_KEY)
-  throw new Error('RESEND_API_KEY is required in production so data exports and notices can be emailed');
+if (config.NODE_ENV === 'production' && !config.RESEND_API_KEY && !(config.SMTP_USER && config.SMTP_PASS))
+  throw new Error('Set RESEND_API_KEY or SMTP_USER and SMTP_PASS in production so data exports and notices can be emailed');
