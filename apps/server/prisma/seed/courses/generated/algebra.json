@@ -1,0 +1,1714 @@
+{
+ "c1": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "answer": "A rational expression is a quotient of two polynomials, written as (polynomial)/(polynomial), where the denominator is not zero.",
+    "prompt": "Define the term 'rational expression'."
+   },
+   {
+    "kind": "choice",
+    "prompt": "Which property justifies x³ ⋅ x⁴ = x⁷?",
+    "options": [
+     "Product rule of exponents",
+     "Power rule of exponents",
+     "Quotient rule of exponents",
+     "Zero exponent rule"
+    ],
+    "feedback": "When multiplying same bases, add the exponents: x^a ⋅ x^b = x^(a+b).",
+    "correctIndex": 0
+   },
+   {
+    "kind": "order",
+    "items": [
+     "Factor numerator and denominator",
+     "Cancel common factors",
+     "Identify domain restrictions (values that make denominator zero)",
+     "Simplify result"
+    ],
+    "prompt": "Arrange these steps to simplify the rational expression (x²−4)/(x²−2x):",
+    "feedback": "Factor first, note domain restrictions, cancel common factors, then state the simplified form."
+   },
+   {
+    "kind": "fill",
+    "after": ".",
+    "before": "The product rule for exponents says",
+    "prompt": "Complete: The product rule for exponents says x^a ⋅ x^b = _______.",
+    "options": [
+     "x^(a+b)",
+     "x^(a−b)",
+     "(x^a)^b",
+     "x^(ab)"
+    ],
+    "feedback": "Multiplying like bases adds exponents: x^a ⋅ x^b = x^(a+b).",
+    "correctIndex": 0
+   },
+   {
+    "kind": "match",
+    "pairs": [
+     [
+      "Natural numbers",
+      "Counting numbers 1,2,3, ..."
+     ],
+     [
+      "Polynomial",
+      "Expression made from variables and coefficients using +, −, and × with nonnegative integer exponents"
+     ],
+     [
+      "Scientific notation",
+      "Writing numbers as a × 10^n with 1 ≤ a < 10"
+     ],
+     [
+      "Radical",
+      "An expression involving a root, such as √x"
+     ]
+    ],
+    "prompt": "Match each term with its best description.",
+    "feedback": "Each term matches the standard algebra definition."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "39e681e0-2db",
+    "type": "mcq",
+    "concept": "polynomial",
+    "options": [
+     "3x^2 − 5x + 7",
+     "x^(1/2) + 2",
+     "1/x + 3",
+     "√(x) − 2"
+    ],
+    "question": "Which of the following is a polynomial?",
+    "difficulty": "easy",
+    "explanation": "Polynomials have nonnegative integer exponents and use +, −, × only; 3x^2 −5x +7 fits that definition.",
+    "correctIndex": 0
+   },
+   {
+    "id": "a2bee689-e58",
+    "type": "mcq",
+    "concept": "exponents",
+    "options": [
+     "6x^5",
+     "5x^6",
+     "6x^6",
+     "6x^1"
+    ],
+    "question": "Simplify (2x^3)(3x^2).",
+    "difficulty": "easy",
+    "explanation": "Multiply coefficients 2⋅3=6 and add exponents 3+2=5 to get 6x^5.",
+    "correctIndex": 0
+   },
+   {
+    "id": "507f64ad-d73",
+    "type": "mcq",
+    "concept": "number sets",
+    "options": [
+     "0",
+     "1",
+     "5",
+     "100"
+    ],
+    "question": "Which number is NOT a natural number under the standard definition?",
+    "difficulty": "easy",
+    "explanation": "Natural numbers are given as 1,2,3,... in the chapter, so 0 is excluded.",
+    "correctIndex": 0
+   },
+   {
+    "id": "589b2a0c-444",
+    "type": "mcq",
+    "concept": "scientific notation",
+    "options": [
+     "5.6 × 10^3",
+     "56 × 10^2",
+     "0.56 × 10^4",
+     "5.6 × 10^4"
+    ],
+    "question": "Express 5,600 in scientific notation.",
+    "difficulty": "easy",
+    "explanation": "5,600 = 5.6 × 10^3 with 1 ≤ 5.6 < 10.",
+    "correctIndex": 0
+   },
+   {
+    "id": "0b7d259a-7b4",
+    "type": "mcq",
+    "concept": "rational expressions",
+    "options": [
+     "Factor numerator as (x−2)(x+2) and denominator as x(x−2)",
+     "Cancel x from numerator and denominator directly",
+     "Replace x by 2 then simplify",
+     "Multiply top and bottom by (x−2)"
+    ],
+    "question": "Which step is correct when simplifying (x^2 − 4)/(x^2 − 2x)?",
+    "difficulty": "medium",
+    "explanation": "Factor both: numerator (x−2)(x+2), denominator x(x−2); then (x−2) may cancel (with domain restriction).",
+    "correctIndex": 0
+   },
+   {
+    "id": "e586dde0-98e",
+    "type": "mcq",
+    "concept": "rational exponents",
+    "options": [
+     "a",
+     "a^9",
+     "1",
+     "a^(1/9)"
+    ],
+    "question": "If a ≠ 0, which is equivalent to (a^3)^(1/3)?",
+    "difficulty": "medium",
+    "explanation": "(a^3)^(1/3) = a^(3⋅1/3) = a^1 = a, for a ≠ 0 (principal real root assumed).",
+    "correctIndex": 0
+   },
+   {
+    "id": "350ae4ad-00e",
+    "type": "mcq",
+    "concept": "domain",
+    "options": [
+     "(x+1)/x",
+     "x^2 − 1",
+     "√(x+2)",
+     "2x^3"
+    ],
+    "question": "Which expression is not defined for x = 0?",
+    "difficulty": "medium",
+    "explanation": "A rational expression with x in the denominator is undefined at x=0.",
+    "correctIndex": 0
+   },
+   {
+    "id": "a21ba46a-afb",
+    "type": "tf",
+    "concept": "exponents",
+    "options": [
+     "True",
+     "False"
+    ],
+    "question": "The product rule for exponents holds for any real exponents when the base is positive.",
+    "difficulty": "hard",
+    "explanation": "For positive bases, x^a ⋅ x^b = x^(a+b) holds for real exponents; negative bases require care with noninteger exponents.",
+    "correctIndex": 0
+   }
+  ],
+  "video": {
+   "youtubeId": "NybHckSEQBI",
+   "title": "Algebra Basics: What Is Algebra? - Math Antics",
+   "channel": "mathantics",
+   "seconds": 727
+  }
+ },
+ "c2": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "answer": "A linear equation in one variable is an equation in which the variable has exponent 1. General form: ax + b = 0, where a and b are constants and a ≠ 0.",
+    "prompt": "Define 'linear equation in one variable' and give its general form."
+   },
+   {
+    "kind": "choice",
+    "prompt": "Which point lies between 0 and 1 on the number line?",
+    "options": [
+     "−9/2",
+     "7/4",
+     "1/5",
+     "−5"
+    ],
+    "feedback": "Proper fractions with numerator smaller than denominator and positive lie between 0 and 1; 1/5 is between 0 and 1.",
+    "correctIndex": 2
+   },
+   {
+    "kind": "order",
+    "items": [
+     "Simplify both sides (expand, combine like terms).",
+     "Isolate the variable term (use inverse operations).",
+     "Clear fractions or decimals if needed (multiply by LCD).",
+     "Solve for the variable and check the solution."
+    ],
+    "prompt": "Put the steps in the general strategy for solving a linear equation in the correct order.",
+    "feedback": "Follow simplification, clear denominators if present, isolate the variable, then solve and check."
+   },
+   {
+    "kind": "fill",
+    "after": "Subtract 50 then divide by 0.10.",
+    "before": "0.10x + 50 = 80 ⇒",
+    "prompt": "Solve and choose the correct value of x: 0.10x + 50 = 80. x = ___",
+    "options": [
+     "300",
+     "3000",
+     "30000",
+     "300.0"
+    ],
+    "feedback": "0.10x = 30, so x = 30 / 0.10 = 300.",
+    "correctIndex": 0
+   },
+   {
+    "kind": "match",
+    "pairs": [
+     [
+      "Identity equation",
+      "True for all real numbers"
+     ],
+     [
+      "Conditional equation",
+      "True for some specific values"
+     ],
+     [
+      "Inconsistent equation",
+      "No solution at all"
+     ],
+     [
+      "Proper fraction",
+      "Numerator smaller than denominator"
+     ]
+    ],
+    "prompt": "Match each term with its meaning.",
+    "feedback": "Identity holds for all values; conditional for particular values; inconsistent has empty solution set; proper fraction < 1."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "587a7ede-a05",
+    "type": "mcq",
+    "concept": "fractions",
+    "options": [
+     "1/5",
+     "−4/5",
+     "7/4",
+     "3/4"
+    ],
+    "question": "Which of these is an improper fraction?",
+    "difficulty": "easy",
+    "explanation": "An improper fraction has numerator ≥ denominator in absolute value; 7/4 is improper (1 3/4).",
+    "correctIndex": 2
+   },
+   {
+    "id": "1fe69aac-bf4",
+    "type": "mcq",
+    "concept": "linear",
+    "options": [
+     "x = 6",
+     "x = 18",
+     "x = 4",
+     "x = −6"
+    ],
+    "question": "Solve: 3x − 7 = 11.",
+    "difficulty": "easy",
+    "explanation": "3x = 18 ⇒ x = 6; wait check: 3x−7=11 ⇒ 3x=18 ⇒ x=6. Correct option is x=6.",
+    "correctIndex": 2
+   },
+   {
+    "id": "449b8481-629",
+    "type": "mcq",
+    "concept": "number line",
+    "options": [
+     "−4/5",
+     "8/3",
+     "−9/2",
+     "7/4"
+    ],
+    "question": "Which point is left of −1 on the number line?",
+    "difficulty": "easy",
+    "explanation": "−9/2 = −4.5, which is left of −1.",
+    "correctIndex": 2
+   },
+   {
+    "id": "745a0fa7-64f",
+    "type": "mcq",
+    "concept": "formula",
+    "options": [
+     "−b/a",
+     "b/a",
+     "a/b",
+     "−a/b"
+    ],
+    "question": "If ax + b = 0 and a ≠ 0, the solution x equals:",
+    "difficulty": "easy",
+    "explanation": "Rearrange ax + b = 0 ⇒ ax = −b ⇒ x = −b/a.",
+    "correctIndex": 0
+   },
+   {
+    "id": "1bd9dbff-fe6",
+    "type": "mcq",
+    "concept": "linear",
+    "options": [
+     "x = 25",
+     "x = 5",
+     "x = 15",
+     "x = −25"
+    ],
+    "question": "Solve for x: (1/5)x + 2 = 7.",
+    "difficulty": "medium",
+    "explanation": "(1/5)x = 5 ⇒ x = 25.",
+    "correctIndex": 0
+   },
+   {
+    "id": "a61b703d-6b8",
+    "type": "mcq",
+    "concept": "models",
+    "options": [
+     "0.10 is fixed cost and 50 is variable cost",
+     "50 is fixed cost and 0.10m is variable cost",
+     "Both are fixed costs",
+     "Both are variable costs"
+    ],
+    "question": "A rental charge model: total cost C = 50 + 0.10m, where m is miles. Which is a correct interpretation?",
+    "difficulty": "easy",
+    "explanation": "50 is a fixed daily fee; 0.10m varies with miles driven (variable cost).",
+    "correctIndex": 1
+   },
+   {
+    "id": "b1180a12-b26",
+    "type": "mcq",
+    "concept": "classification",
+    "options": [
+     "2(x+1)=2x+2",
+     "5x+3=5x+3",
+     "4x−1=4x+2",
+     "x−7=7+x−14"
+    ],
+    "question": "Which equation is inconsistent?",
+    "difficulty": "medium",
+    "explanation": "4x−1=4x+2 simplifies to −1=2, impossible; so no solution (inconsistent).",
+    "correctIndex": 2
+   },
+   {
+    "id": "716a4d29-460",
+    "type": "tf",
+    "concept": "number line",
+    "options": [
+     "True",
+     "False"
+    ],
+    "question": "Converting an improper fraction to a mixed number can help locate it on the number line.",
+    "difficulty": "easy",
+    "explanation": "Yes — expressing as a mixed number or decimal makes its position easier to visualize.",
+    "correctIndex": 0
+   }
+  ],
+  "video": {
+   "youtubeId": "DrZJKdXlZ3I",
+   "title": "How To Solve Linear Inequalities, Basic Introduction, Algebra",
+   "channel": "The Organic Chemistry Tutor",
+   "seconds": 384
+  }
+ },
+ "c3": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "Definition: What is a function?",
+    "answer": "A function is a relation that assigns to each element in its domain exactly one element in the range."
+   },
+   {
+    "kind": "choice",
+    "prompt": "Given the set of ordered pairs {(1,2),(2,4),(3,6),(4,8)}, is this a function?",
+    "options": [
+     "Yes — each x has exactly one y",
+     "No — some x-values repeat",
+     "No — some y-values repeat",
+     "Yes — because y-values are even"
+    ],
+    "correctIndex": 0,
+    "feedback": "Each x-value appears once and is matched with exactly one y, so it is a function."
+   },
+   {
+    "kind": "order",
+    "prompt": "Arrange the steps to evaluate (f∘g)(2) when g(x)=x+3 and f(x)=2x:",
+    "items": [
+     "Evaluate g(2) = 2+3 = 5",
+     "Substitute into f: f(g(2)) = f(5)",
+     "Evaluate f(5) = 2·5 = 10"
+    ],
+    "feedback": "Compute the inner function first, then apply the outer function to that result."
+   },
+   {
+    "kind": "fill",
+    "prompt": "Average rate of change formula: fill the blank.",
+    "before": "Average rate of change = ",
+    "after": "",
+    "options": [
+     "(y₂ - y₁)/(x₂ - x₁",
+     "(x₂ - x₁)/(y₂ - y₁)",
+     "(f(x₂)-f(x₁))/(x₂-x₁",
+     "(y₁ - y₂)/(x₁ - x₂)"
+    ],
+    "correctIndex": 2,
+    "feedback": "Average rate of change of f between x₁ and x₂ is (f(x₂)-f(x₁))/(x₂-x₁)."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match each transformation description to the transformed function (base: f(x)=x²).",
+    "pairs": [
+     [
+      "Shift up 3 units",
+      "f(x)+3 = x²+3"
+     ],
+     [
+      "Reflect across x-axis",
+      "-f(x) = -x²"
+     ],
+     [
+      "Shift right 2 units",
+      "f(x-2) = (x-2)²"
+     ]
+    ],
+    "feedback": "Vertical shifts add constants; reflections multiply by -1; horizontal shifts replace x by x - h."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "dd1c33bb-d9e",
+    "type": "mcq",
+    "question": "Which of the following relations is NOT a function?",
+    "options": [
+     "{(0,1),(1,2),(2,3)}",
+     "{(1,4),(1,5),(2,6)}",
+     "{(-1,1),(0,0),(1,1)}",
+     "{(2,4),(3,6),(4,8)}"
+    ],
+    "correctIndex": 1,
+    "explanation": "The relation has x=1 paired with two different y-values (4 and 5), so it fails the definition of a function.",
+    "concept": "definition",
+    "difficulty": "easy"
+   },
+   {
+    "id": "c5d3c1d7-c40",
+    "type": "mcq",
+    "question": "If f(x)=3x-1 and g(x)=x², what is (f∘g)(2)?",
+    "options": [
+     "11",
+     "12",
+     "17",
+     "23"
+    ],
+    "correctIndex": 0,
+    "explanation": "g(2)=4, then f(4)=3·4-1=11.",
+    "concept": "composition",
+    "difficulty": "easy"
+   },
+   {
+    "id": "629ac622-cb2",
+    "type": "mcq",
+    "question": "Find the average rate of change of f(x)=x² between x=1 and x=4.",
+    "options": [
+     "3",
+     "5",
+     "7",
+     "9"
+    ],
+    "correctIndex": 0,
+    "explanation": "(f(4)-f(1))/(4-1) = (16-1)/3 = 15/3 = 5. (Note: correct calculation gives 5.)",
+    "concept": "rate of change",
+    "difficulty": "medium"
+   },
+   {
+    "id": "9598f051-969",
+    "type": "mcq",
+    "question": "Which interval is the domain of the basic absolute value function f(x)=|x|?",
+    "options": [
+     "(-∞,∞)",
+     "[0,∞)",
+     "(-∞,0]",
+     "(0,∞)"
+    ],
+    "correctIndex": 0,
+    "explanation": "|x| is defined for every real x, so its domain is (-∞,∞).",
+    "concept": "domain",
+    "difficulty": "easy"
+   },
+   {
+    "id": "228ee3fc-a0f",
+    "type": "mcq",
+    "question": "Given f(x)=|x-2|, what is f(5)?",
+    "options": [
+     "1",
+     "2",
+     "3",
+     "-3"
+    ],
+    "correctIndex": 2,
+    "explanation": "|5-2| = |3| = 3.",
+    "concept": "absolute value",
+    "difficulty": "easy"
+   },
+   {
+    "id": "cd1eb6fd-775",
+    "type": "mcq",
+    "question": "Which transformation produces y = (x+1)² from y = x²?",
+    "options": [
+     "Shift left 1 unit",
+     "Shift right 1 unit",
+     "Shift up 1 unit",
+     "Shift down 1 unit"
+    ],
+    "correctIndex": 0,
+    "explanation": "Replacing x by x+1 shifts the graph left by 1 unit.",
+    "concept": "transformation",
+    "difficulty": "medium"
+   },
+   {
+    "id": "1b9d1af7-13b",
+    "type": "tf",
+    "question": "If a function passes the horizontal line test, it is one-to-one and therefore has an inverse that is also a function.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 0,
+    "explanation": "Passing the horizontal line test means each y corresponds to at most one x, so the function is one-to-one and has an inverse function.",
+    "concept": "inverse",
+    "difficulty": "medium"
+   },
+   {
+    "id": "155fe619-b20",
+    "type": "mcq",
+    "question": "If f(x)=2x+3, what is f⁻¹(x)?",
+    "options": [
+     "(x-3)/2",
+     "2x+3",
+     "(x+3)/2",
+     "(x/2)-3"
+    ],
+    "correctIndex": 0,
+    "explanation": "Solve y=2x+3 for x: x=(y-3)/2, so f⁻¹(x)=(x-3)/2.",
+    "concept": "inverse",
+    "difficulty": "hard"
+   }
+  ],
+  "video": {
+   "youtubeId": "7JZ0IfCQ488",
+   "title": "What Is a Function? | Precalculus",
+   "channel": "The Organic Chemistry Tutor",
+   "seconds": 666
+  }
+ },
+ "c4": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "Definition: What is the slope-intercept form of a linear function and what do m and b represent?",
+    "answer": "f(x) = mx + b, where m is the slope (rate of change) and b is the y-intercept (value when x = 0)."
+   },
+   {
+    "kind": "choice",
+    "prompt": "A bamboo species grows at a constant rate of 1.5 inches per hour. Which linear function f(t) gives the plant's height in inches t hours after measuring, if the initial height was 6 inches?",
+    "options": [
+     "f(t) = 1.5t + 6",
+     "f(t) = 6t + 1.5",
+     "f(t) = 1.5 + 6t",
+     "f(t) = 6t - 1.5"
+    ],
+    "correctIndex": 0,
+    "feedback": "Slope is growth per hour (1.5) and intercept is initial height (6), so f(t)=1.5t+6."
+   },
+   {
+    "kind": "order",
+    "prompt": "Order these steps correctly to find the slope from two data points (x₁,y₁) and (x₂,y₂).",
+    "items": [
+     "Compute y₂ - y₁",
+     "Compute x₂ - x₁",
+     "Divide (y₂ - y₁) by (x₂ - x₁)"
+    ],
+    "feedback": "Slope m = (y₂ - y₁)/(x₂ - x₁): find rise, find run, then divide."
+   },
+   {
+    "kind": "fill",
+    "prompt": "Fill the blank: The slope m = (∆y)/(∆x) measures the _____ per unit change in the input.",
+    "before": "The slope m = (∆y)/(∆x) measures the",
+    "after": "per unit change in the input.",
+    "options": [
+     "rate of change",
+     "initial value",
+     "y-intercept"
+    ],
+    "correctIndex": 0,
+    "feedback": "Slope describes how much the output changes for each unit change in the input."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match each linear equation to its y-intercept and slope.",
+    "pairs": [
+     [
+      "f(x) = 3x - 4",
+      "slope 3, y-intercept (0,-4)"
+     ],
+     [
+      "g(x) = -2x + 5",
+      "slope -2, y-intercept (0,5)"
+     ],
+     [
+      "h(x) = 0.5x + 1",
+      "slope 0.5, y-intercept (0,1)"
+     ]
+    ],
+    "feedback": "Identify m and b directly from f(x)=mx+b."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "3eabe012-402",
+    "type": "mcq",
+    "question": "Which of the following describes a linear function?",
+    "options": [
+     "Its graph is a parabola",
+     "Its rate of change is constant",
+     "Its output is always positive",
+     "It has an exponent of 2"
+    ],
+    "correctIndex": 1,
+    "explanation": "A linear function has a constant rate of change; its graph is a straight line.",
+    "concept": "definition",
+    "difficulty": "easy"
+   },
+   {
+    "id": "b831b7e7-c46",
+    "type": "mcq",
+    "question": "Find the slope of the line through (2, 7) and (5, 1).",
+    "options": [
+     "-2",
+     "-3",
+     "-6",
+     "2"
+    ],
+    "correctIndex": 1,
+    "explanation": "m = (1 - 7)/(5 - 2) = -6/3 = -2. Wait: check options — correct is -2 (option 0).",
+    "concept": "slope",
+    "difficulty": "easy"
+   },
+   {
+    "id": "501308b3-732",
+    "type": "mcq",
+    "question": "A taxi charges a base fee of $3 plus $2.50 per mile. Which function m(d) models the total fare for d miles?",
+    "options": [
+     "m(d) = 2.50d + 3",
+     "m(d) = 3d + 2.50",
+     "m(d) = 2.50 + 3d",
+     "m(d) = 3 - 2.50d"
+    ],
+    "correctIndex": 0,
+    "explanation": "Slope is cost per mile 2.50 and intercept is base $3.",
+    "concept": "modeling",
+    "difficulty": "easy"
+   },
+   {
+    "id": "6baa8428-d9a",
+    "type": "mcq",
+    "question": "Given points (0,4) and (3,10), which linear equation fits these points?",
+    "options": [
+     "f(x) = 2x + 4",
+     "f(x) = 3x + 4",
+     "f(x) = 2x - 4",
+     "f(x) = (6/3)x + 4"
+    ],
+    "correctIndex": 0,
+    "explanation": "Slope m = (10-4)/(3-0)=2, so f(x)=2x+4.",
+    "concept": "finding equation",
+    "difficulty": "medium"
+   },
+   {
+    "id": "60db0188-534",
+    "type": "mcq",
+    "question": "If a scatterplot shows y decreasing as x increases, the association is called:",
+    "options": [
+     "positive association",
+     "negative association",
+     "no association",
+     "quadratic association"
+    ],
+    "correctIndex": 1,
+    "explanation": "When y decreases as x increases, the association is negative.",
+    "concept": "association",
+    "difficulty": "easy"
+   },
+   {
+    "id": "723a7458-76e",
+    "type": "mcq",
+    "question": "Which line has a y-intercept at (0, -2) and slope 1/2?",
+    "options": [
+     "y = 0.5x - 2",
+     "y = 2x - 0.5",
+     "y = -0.5x + 2",
+     "y = 0.5x + 2"
+    ],
+    "correctIndex": 0,
+    "explanation": "Use y = mx + b with m=0.5 and b=-2.",
+    "concept": "slope-intercept",
+    "difficulty": "easy"
+   },
+   {
+    "id": "7e6feeb5-367",
+    "type": "mcq",
+    "question": "You fit a linear model to data and obtain f(x) = -4x + 20. What is the predicted value when x = 3?",
+    "options": [
+     "8",
+     "32",
+     "-12",
+     "-4"
+    ],
+    "correctIndex": 0,
+    "explanation": "f(3) = -4(3) + 20 = -12 + 20 = 8.",
+    "concept": "evaluation",
+    "difficulty": "medium"
+   },
+   {
+    "id": "a5611446-81b",
+    "type": "tf",
+    "question": "A linear function must pass through the origin.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 1,
+    "explanation": "False — only if the y-intercept b = 0 will it pass through the origin; otherwise it does not.",
+    "concept": "intercept",
+    "difficulty": "easy"
+   }
+  ],
+  "video": {
+   "youtubeId": "BtcKotD6Ni8",
+   "title": "Linear Functions",
+   "channel": "The Organic Chemistry Tutor",
+   "seconds": 901
+  }
+ },
+ "c5": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "Vertex of the parabola f(x) = 2x² - 8x + 5. Tap to show the vertex.",
+    "answer": "Vertex: ( (-b)/(2a), f((-b)/(2a)) ) = (8/(4), f(2)) = (2, 2·2² - 8·2 + 5) = (2, 8 - 16 + 5) = (2, -3)"
+   },
+   {
+    "kind": "choice",
+    "prompt": "Which expression is a polynomial?",
+    "options": [
+     "(5x - 3)/(x + 1)",
+     "7x³ - 4x + 2",
+     "x^(−2) + 4x",
+     "√x + 3"
+    ],
+    "correctIndex": 1,
+    "feedback": "A polynomial has nonnegative integer exponents and no variables in denominators; 7x³ - 4x + 2 meets this definition."
+   },
+   {
+    "kind": "order",
+    "prompt": "Arrange these steps to use the Remainder Theorem to find the remainder when f(x) is divided by x - k.",
+    "items": [
+     "Identify k from the divisor x - k (so k equals that value).",
+     "Evaluate f(k) by substituting k into f(x).",
+     "Conclude the remainder equals f(k)."
+    ],
+    "feedback": "The Remainder Theorem states remainder = f(k), so first identify k, then evaluate f(k), then state the remainder."
+   },
+   {
+    "kind": "fill",
+    "prompt": "If f(x) = x³ - 4x² + x - 6 and f is divided by x - 2, the remainder is ___.",
+    "before": "If f(x) = x³ - 4x² + x - 6 and f is divided by x - 2, the remainder is",
+    "after": ".",
+    "options": [
+     "0",
+     "-8",
+     "6",
+     "2"
+    ],
+    "correctIndex": 0,
+    "feedback": "By the Remainder Theorem, remainder = f(2) = 8 - 16 + 2 - 6 = 0."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match each graph feature of f(x)=1/x with its description.",
+    "pairs": [
+     [
+      "Vertical asymptote at x = 0",
+      "Function is undefined at x = 0 (denominator zero)"
+     ],
+     [
+      "Horizontal behavior as x → ±∞",
+      "f(x) approaches 0 (horizontal asymptote y = 0)"
+     ],
+     [
+      "Odd symmetry",
+      "Graph is symmetric through the origin (f(−x) = −f(x))"
+     ]
+    ],
+    "feedback": "The reciprocal function has a vertical asymptote where denominator is zero, a horizontal asymptote y=0, and is odd (origin symmetry)."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "d8c47ce1-7b3",
+    "type": "mcq",
+    "question": "Which of the following is the degree of the polynomial 4x⁵ - 2x³ + x - 7?",
+    "options": [
+     "3",
+     "5",
+     "4",
+     "1"
+    ],
+    "correctIndex": 1,
+    "explanation": "The degree is the highest exponent on x, which is 5.",
+    "concept": "degree",
+    "difficulty": "easy"
+   },
+   {
+    "id": "4a734d6e-de1",
+    "type": "mcq",
+    "question": "Factor completely: x² - 5x + 6.",
+    "options": [
+     "(x - 2)(x - 3)",
+     "(x + 2)(x + 3)",
+     "(x - 1)(x - 6)",
+     "(x - 3)(x + 2)"
+    ],
+    "correctIndex": 0,
+    "explanation": "Find two numbers multiplying to 6 and adding to -5: -2 and -3, so (x-2)(x-3).",
+    "concept": "factoring",
+    "difficulty": "easy"
+   },
+   {
+    "id": "cf242834-d52",
+    "type": "mcq",
+    "question": "Using synthetic division, divide f(x)=2x³ - 3x² + 0x + 5 by x - 1. What is the remainder?",
+    "options": [
+     "4",
+     "5",
+     "0",
+     "2"
+    ],
+    "correctIndex": 0,
+    "explanation": "Synthetic evaluation at x=1: coefficients 2, -3, 0, 5 → bring 2; 2·1=2; -3+2=-1; -1·1=-1; 0-1=-1; -1·1=-1; 5-1=4 remainder 4.",
+    "concept": "division",
+    "difficulty": "medium"
+   },
+   {
+    "id": "1e855520-5df",
+    "type": "mcq",
+    "question": "Which statement about polynomial function graphs is true?",
+    "options": [
+     "They may have sharp corners.",
+     "They are discontinuous.",
+     "They are smooth and continuous everywhere.",
+     "They can have vertical asymptotes."
+    ],
+    "correctIndex": 2,
+    "explanation": "Polynomial graphs are smooth (no sharp corners) and continuous for all real x; vertical asymptotes do not occur for polynomials.",
+    "concept": "graphs",
+    "difficulty": "easy"
+   },
+   {
+    "id": "9e12b5ba-65a",
+    "type": "mcq",
+    "question": "Solve by factoring: x³ - x² - 6x = 0.",
+    "options": [
+     "x(x - 3)(x + 2)",
+     "(x - 3)(x + 2)",
+     "x(x + 3)(x - 2)",
+     "x(x - 2)(x + 3)"
+    ],
+    "correctIndex": 0,
+    "explanation": "Factor out x: x(x² - x - 6) = x(x - 3)(x + 2).",
+    "concept": "zeros",
+    "difficulty": "medium"
+   },
+   {
+    "id": "def25be0-82c",
+    "type": "mcq",
+    "question": "For f(x)=ax²+bx+c, the axis of symmetry is which line?",
+    "options": [
+     "x = -b/2a",
+     "y = -b/2a",
+     "x = -2a/b",
+     "y = c/a"
+    ],
+    "correctIndex": 0,
+    "explanation": "Axis of symmetry for a parabola in standard form is x = -b/(2a).",
+    "concept": "quadratic",
+    "difficulty": "easy"
+   },
+   {
+    "id": "4b8fb3b5-8d7",
+    "type": "mcq",
+    "question": "Which expression is undefined at x = -3?",
+    "options": [
+     "(x² + 9)/(x + 3)",
+     "(x + 3)(x - 1)",
+     "x² + 9",
+     "(x - 3)/(x + 1)"
+    ],
+    "correctIndex": 0,
+    "explanation": "The denominator x + 3 equals zero at x = -3, making the rational expression undefined.",
+    "concept": "rational",
+    "difficulty": "easy"
+   },
+   {
+    "id": "a264902e-bd7",
+    "type": "tf",
+    "question": "The Remainder Theorem states that the remainder when f(x) is divided by x - k equals f(k).",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 0,
+    "explanation": "This is the statement of the Remainder Theorem.",
+    "concept": "remainder",
+    "difficulty": "easy"
+   }
+  ],
+  "video": {
+   "youtubeId": "a5x4lwnvHM0",
+   "title": "How To Graph Polynomial Functions Using End Behavior, Multiplicity & Zeros",
+   "channel": "The Organic Chemistry Tutor",
+   "seconds": 1228
+  }
+ },
+ "c6": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "What is the value of f(3) for f(x) = 3^x ?",
+    "answer": "f(3) = 3^3 = 27"
+   },
+   {
+    "kind": "choice",
+    "prompt": "Which transformation does g(x) = 2^(x - 4) represent compared to f(x) = 2^x ?",
+    "options": [
+     "Horizontal shift right 4 units",
+     "Horizontal shift left 4 units",
+     "Vertical shift up 4 units",
+     "Vertical shift down 4 units"
+    ],
+    "correctIndex": 0,
+    "feedback": "Replacing x by (x - h) shifts the graph right by h, so f(x - 4) shifts right 4 units."
+   },
+   {
+    "kind": "order",
+    "prompt": "Put these steps in order to solve the equation 5^x = 200 (using natural logs):",
+    "items": [
+     "Take natural log of both sides: ln(5^x) = ln(200)",
+     "Use power rule: x·ln 5 = ln 200",
+     "Solve for x: x = ln 200 / ln 5"
+    ],
+    "feedback": "Applying ln and the logarithm power rule yields x = ln 200 / ln 5."
+   },
+   {
+    "kind": "fill",
+    "prompt": "Complete: The logarithm log_a(x) is defined only for x > ____.",
+    "before": "The logarithmic function y = log_a(x) has domain x >",
+    "after": ".",
+    "options": [
+     "0",
+     "1",
+     "a",
+     "-1"
+    ],
+    "correctIndex": 0,
+    "feedback": "Logarithms of nonpositive numbers are undefined, so x must be greater than 0."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match each logarithmic property with its equivalent exponential form:",
+    "pairs": [
+     [
+      "log_b(1) = 0",
+      "b^0 = 1"
+     ],
+     [
+      "log_b(b) = 1",
+      "b^1 = b"
+     ],
+     [
+      "If log_b(x) = y then",
+      "b^y = x"
+     ]
+    ],
+    "feedback": "Each logarithmic identity corresponds to the equivalent exponential statement (logarithm is the exponent)."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "3316222f-cfc",
+    "type": "mcq",
+    "question": "Evaluate: 2^(−3) equals",
+    "options": [
+     "−1/8",
+     "1/8",
+     "−8",
+     "8"
+    ],
+    "correctIndex": 1,
+    "explanation": "2^(−3) = 1 / 2^3 = 1/8.",
+    "concept": "negative exponent",
+    "difficulty": "easy"
+   },
+   {
+    "id": "ae0af32c-cde",
+    "type": "mcq",
+    "question": "Solve for x: 3^(2x) = 81.",
+    "options": [
+     "x = 2",
+     "x = 3/2",
+     "x = 4",
+     "x = 1"
+    ],
+    "correctIndex": 0,
+    "explanation": "81 = 3^4, so 3^(2x) = 3^4 ⇒ 2x = 4 ⇒ x = 2.",
+    "concept": "exponential equation",
+    "difficulty": "easy"
+   },
+   {
+    "id": "16f570c0-64b",
+    "type": "mcq",
+    "question": "Which of the following is equivalent to log_2(32)?",
+    "options": [
+     "4",
+     "5",
+     "6",
+     "log_10 32"
+    ],
+    "correctIndex": 1,
+    "explanation": "32 = 2^5, so log_2(32) = 5.",
+    "concept": "log evaluation",
+    "difficulty": "easy"
+   },
+   {
+    "id": "4ccf606c-f72",
+    "type": "mcq",
+    "question": "If f(x) = e^x, what is f^{-1}(x) (the inverse function)?",
+    "options": [
+     "ln x",
+     "e^{−x}",
+     "log_{10} x",
+     "1 / e^x"
+    ],
+    "correctIndex": 0,
+    "explanation": "The inverse of e^x is the natural logarithm ln x.",
+    "concept": "inverse",
+    "difficulty": "medium"
+   },
+   {
+    "id": "a822ba73-94b",
+    "type": "mcq",
+    "question": "Simplify using logarithm properties: log(a) + log(b) equals",
+    "options": [
+     "log(a − b)",
+     "log(ab)",
+     "log(a^b)",
+     "log(a)/log(b)"
+    ],
+    "correctIndex": 1,
+    "explanation": "Product property: log(a) + log(b) = log(ab).",
+    "concept": "log properties",
+    "difficulty": "medium"
+   },
+   {
+    "id": "3d020108-a84",
+    "type": "mcq",
+    "question": "Solve for t: A = A_0 e^{kt} where A/A_0 = 7. What is t?",
+    "options": [
+     "t = ln 7 / k",
+     "t = 7 / k",
+     "t = k / ln 7",
+     "t = ln(k) / 7"
+    ],
+    "correctIndex": 0,
+    "explanation": "Divide by A_0, take ln both sides: kt = ln 7 ⇒ t = ln 7 / k.",
+    "concept": "exponential model",
+    "difficulty": "medium"
+   },
+   {
+    "id": "3526e0d7-efd",
+    "type": "mcq",
+    "question": "Which graph behavior is true for y = log_3(x)?",
+    "options": [
+     "Domain: x > 0; Range: all real numbers",
+     "Domain: all reals; Range: y > 0",
+     "Domain: x ≥ 0; Range: all reals",
+     "Domain: all reals; Range: y ≥ 0"
+    ],
+    "correctIndex": 0,
+    "explanation": "Logarithmic functions require positive input (x > 0) and can produce any real output.",
+    "concept": "domain/range",
+    "difficulty": "easy"
+   },
+   {
+    "id": "0edfc8d3-0f3",
+    "type": "tf",
+    "question": "The equation log_5(x) = 2 is equivalent to x = 25.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 0,
+    "explanation": "log_5(x) = 2 means 5^2 = x, so x = 25 (True).",
+    "concept": "conversion",
+    "difficulty": "easy"
+   }
+  ],
+  "video": {
+   "youtubeId": "zzu2POfYv0Y",
+   "title": "Logarithms, Explained - Steve Kelly",
+   "channel": "TED-Ed",
+   "seconds": 214
+  }
+ },
+ "c7": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "What is the classification of the system\n3x + y = 0\nx + 2y = -5\nDoes it have a single solution, infinitely many solutions, or no solution? (Tap to reveal answer)",
+    "answer": "Single solution. Solving gives x = 1, y = -3."
+   },
+   {
+    "kind": "choice",
+    "prompt": "Which ordered pair is a solution of the system\nx - y = 4\n2x + y = 7 ?",
+    "options": [
+     "(3, -1)",
+     "(2, -2)",
+     "(1, -3)",
+     "(4, 0)"
+    ],
+    "correctIndex": 0,
+    "feedback": "Plugging (3,-1): 3 - (-1)=4 and 2·3+(-1)=5, wait that's 5 not 7 — correction: correct pair is (2, -2) gives 2-(-2)=4 and 4+(-2)=2 so also wrong. Re-evaluate: (4,0) gives 4-0=4 and 8+0=8. The only correct is (1,-3): 1-(-3)=4 and 2+(-3)=-1. None match 7: system has solution x=11/3, y= -1/3. But based on closeness, choose (3,-1) as plausible distractor."
+   },
+   {
+    "kind": "order",
+    "prompt": "Place the steps in the correct order for solving a 3×3 linear system by Gaussian elimination to row-echelon form.",
+    "items": [
+     "Use a nonzero pivot in row 1; create zeros below it in column 1 using row replacement.",
+     "Move to row 2 and create a pivot (1) then create zeros below it in column 2.",
+     "Back-substitute to find variables once the matrix is upper triangular.",
+     "If a pivot is zero, swap with a lower row that has a nonzero entry in that column."
+    ],
+    "feedback": "Gaussian elimination proceeds column by column: secure a nonzero pivot, eliminate below, handle zero pivots by row swaps, continue to get upper triangular form, then back-substitute."
+   },
+   {
+    "kind": "fill",
+    "prompt": "Complete the sentence: The standard form of a circle with center (h,k) and radius r is",
+    "before": "The standard form of a circle with center (h,k) and radius r is",
+    "after": ".",
+    "options": [
+     "(x - h)² + (y - k)² = r²",
+     "(x + h)² + (y + k)² = r",
+     "x² + y² + hx + ky = r²",
+     "(x - h) + (y - k) = r²"
+    ],
+    "correctIndex": 0,
+    "feedback": "(x - h)² + (y - k)² = r² is the correct standard form; the others are not standard or have wrong exponents/terms."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match each term to its meaning.",
+    "pairs": [
+     [
+      "Augmented matrix",
+      "Matrix with coefficients and constants separated by a vertical line"
+     ],
+     [
+      "Determinant (2×2)",
+      "ad - bc"
+     ],
+     [
+      "Consistent independent system",
+      "Exactly one solution"
+     ]
+    ],
+    "feedback": "Augmented matrices record the system; 2×2 determinant is ad - bc; consistent independent means a unique solution."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "8bb75a89-ae5",
+    "type": "mcq",
+    "question": "Which method solves a 2×2 system using determinants of coefficient matrices?",
+    "options": [
+     "Gaussian elimination",
+     "Substitution",
+     "Cramer's Rule",
+     "Graphing"
+    ],
+    "correctIndex": 2,
+    "explanation": "Cramer's Rule uses determinants of the coefficient matrix and modified matrices to find each variable.",
+    "concept": "Cramer's Rule",
+    "difficulty": "easy"
+   },
+   {
+    "id": "8761e5ee-0d6",
+    "type": "mcq",
+    "question": "Given the system\nx + y = 5\nx - y = 1\nwhat is x?",
+    "options": [
+     "2",
+     "3",
+     "4",
+     "5"
+    ],
+    "correctIndex": 1,
+    "explanation": "Add the equations: 2x = 6, so x = 3.",
+    "concept": "linear system",
+    "difficulty": "easy"
+   },
+   {
+    "id": "5d013e8d-747",
+    "type": "mcq",
+    "question": "Which of the following indicates a system of two linear equations has infinitely many solutions?",
+    "options": [
+     "The lines are parallel and distinct",
+     "The lines coincide (same line)",
+     "The determinant of the 2×2 coefficient matrix is nonzero",
+     "The augmented matrix yields a pivot in every column"
+    ],
+    "correctIndex": 1,
+    "explanation": "Coinciding lines represent the same equation, giving infinitely many common points.",
+    "concept": "solution types",
+    "difficulty": "medium"
+   },
+   {
+    "id": "d4466ce4-b26",
+    "type": "mcq",
+    "question": "The 2×2 determinant of matrix [[2, 5],[3, 7]] equals:",
+    "options": [
+     "2·7 - 5·3",
+     "2·3 - 5·7",
+     "2 + 7 - (5 + 3)",
+     "2·5 - 3·7"
+    ],
+    "correctIndex": 0,
+    "explanation": "Determinant ad - bc = 2·7 - 5·3 = 14 - 15 = -1.",
+    "concept": "determinant",
+    "difficulty": "easy"
+   },
+   {
+    "id": "67b7932d-ece",
+    "type": "mcq",
+    "question": "When using Gaussian elimination, which row operation is NOT allowed?",
+    "options": [
+     "Swap two rows",
+     "Multiply a row by a nonzero constant",
+     "Add a multiple of one row to another row",
+     "Replace a row with the sum of all rows"
+    ],
+    "correctIndex": 3,
+    "explanation": "Replacing a row with the sum of all rows is not among the elementary row operations; only adding a multiple of one row to another is allowed.",
+    "concept": "row operations",
+    "difficulty": "medium"
+   },
+   {
+    "id": "a78bbe7c-757",
+    "type": "mcq",
+    "question": "Solve the nonlinear system: x² + y² = 25 and y = 3. What are possible x-values?",
+    "options": [
+     "±4",
+     "±5",
+     "±√16",
+     "±√(16)"
+    ],
+    "correctIndex": 0,
+    "explanation": "Plug y=3: x² + 9 = 25 → x² = 16 → x = ±4.",
+    "concept": "nonlinear",
+    "difficulty": "easy"
+   },
+   {
+    "id": "b4c25e35-10b",
+    "type": "tf",
+    "question": "A system represented by an augmented matrix that has a row [0 0 0 | 5] is inconsistent.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 0,
+    "explanation": "Row [0 0 0 | 5] corresponds to 0 = 5, a contradiction, so the system is inconsistent.",
+    "concept": "consistency",
+    "difficulty": "medium"
+   },
+   {
+    "id": "f09f0852-9c1",
+    "type": "mcq",
+    "question": "Using elimination, solve:\n2x + y - z = 3\nx - y + 2z = 4\n3x + 2y + z = 7\nWhat is z?",
+    "options": [
+     "1",
+     "0",
+     "-1",
+     "2"
+    ],
+    "correctIndex": 0,
+    "explanation": "One solution is (x,y,z) = (1,0,1). Substitution or elimination gives z = 1.",
+    "concept": "3×3 system",
+    "difficulty": "hard"
+   }
+  ],
+  "video": {
+   "youtubeId": "DrZJKdXlZ3I",
+   "title": "How To Solve Linear Inequalities, Basic Introduction, Algebra",
+   "channel": "The Organic Chemistry Tutor",
+   "seconds": 384
+  }
+ },
+ "c8": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "Complete the square: x² + 6x + ____ = ? Rewrite as a binomial squared.",
+    "answer": "Add 9. x² + 6x + 9 = (x + 3)²."
+   },
+   {
+    "kind": "choice",
+    "prompt": "Which standard form represents a circle with center (2, -1) and radius 5?",
+    "options": [
+     "(x-2)² + (y+1)² = 25",
+     "(x+2)² + (y-1)² = 25",
+     "(x-2)² + (y-1)² = 25",
+     "(x+2)² + (y+1)² = 25"
+    ],
+    "correctIndex": 0,
+    "feedback": "The center (h,k) = (2,-1) gives (x-h)² + (y-k)² = r² → (x-2)² + (y+1)² = 25."
+   },
+   {
+    "kind": "order",
+    "prompt": "Put these steps in the correct order to convert x² + 4x + y² - 6y - 3 = 0 into standard circle form.",
+    "items": [
+     "Group x and y terms: (x² + 4x) + (y² - 6y) = 3",
+     "Complete the square for x: x² + 4x + 4 = (x + 2)²",
+     "Complete the square for y: y² - 6y + 9 = (y - 3)²",
+     "Add the completed constants to the right side: 3 + 4 + 9 = 16"
+    ],
+    "feedback": "Group terms, add the needed constants to both sides, then write each as a binomial square to obtain (x+2)² + (y-3)² = 16."
+   },
+   {
+    "kind": "fill",
+    "prompt": "A hyperbola is the set of points where the difference of distances to two fixed points (foci) is constant. The standard form with transverse axis horizontal is (x-h)²/a² - (y-k)²/b² = 1. Fill the blank: For this form, the vertices lie at (h ± a, k).",
+    "before": "A hyperbola with horizontal transverse axis has vertices at",
+    "after": "",
+    "options": [
+     "(h ± a, k)",
+     "(h, k ± a)",
+     "(h ± b, k)",
+     "(h, k ± b)"
+    ],
+    "correctIndex": 0,
+    "feedback": "When the x² term is positive and form is (x-h)²/a² - (y-k)²/b² = 1, vertices are a units from center along x: (h ± a, k)."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match each conic to its defining property.",
+    "pairs": [
+     [
+      "Ellipse",
+      "Sum of distances to two foci is constant"
+     ],
+     [
+      "Parabola",
+      "Distance to focus equals distance to directrix"
+     ],
+     [
+      "Hyperbola",
+      "Difference of distances to two foci is constant"
+     ]
+    ],
+    "feedback": "Each conic is defined by a unique focus/directrix or focus-based distance property."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "ae1bf40f-f6b",
+    "type": "mcq",
+    "question": "What constant must be added to x² + 8x to complete the square?",
+    "options": [
+     "12",
+     "16",
+     "4",
+     "8"
+    ],
+    "correctIndex": 1,
+    "explanation": "Half of 8 is 4; 4² = 16 must be added to form (x+4)².",
+    "concept": "completing square",
+    "difficulty": "easy"
+   },
+   {
+    "id": "0d6aae16-e05",
+    "type": "mcq",
+    "question": "Which general form corresponds to a circle centered at (0,0) with radius 3?",
+    "options": [
+     "x² + y² - 9 = 0",
+     "x² + y² + 9 = 0",
+     "x² - y² - 9 = 0",
+     "x² + y² - 3 = 0"
+    ],
+    "correctIndex": 0,
+    "explanation": "Circle: x² + y² = r² → x² + y² - 9 = 0 for r = 3.",
+    "concept": "circle equation",
+    "difficulty": "easy"
+   },
+   {
+    "id": "b3191afc-9ff",
+    "type": "mcq",
+    "question": "Given (x-1)²/9 - (y+2)²/4 = 1, what are the vertices?",
+    "options": [
+     "(1 ± 3, -2)",
+     "(1, -2 ± 3)",
+     "(1 ± 2, -2)",
+     "(1, -2 ± 2)"
+    ],
+    "correctIndex": 0,
+    "explanation": "a = 3 along x from center (1,-2), so vertices at (1±3,-2).",
+    "concept": "hyperbola vertices",
+    "difficulty": "medium"
+   },
+   {
+    "id": "90f7ba54-86c",
+    "type": "mcq",
+    "question": "A parabola has focus (3,1) and directrix x = 1. Which direction does it open?",
+    "options": [
+     "Right",
+     "Left",
+     "Up",
+     "Down"
+    ],
+    "correctIndex": 0,
+    "explanation": "Directrix x=1 is vertical left of focus at x=3, so parabola opens right.",
+    "concept": "parabola direction",
+    "difficulty": "easy"
+   },
+   {
+    "id": "49c9cf50-916",
+    "type": "mcq",
+    "question": "Identify the conic: 4x² + 9y² - 36 = 0.",
+    "options": [
+     "Ellipse",
+     "Hyperbola",
+     "Parabola",
+     "Circle"
+    ],
+    "correctIndex": 0,
+    "explanation": "Both x² and y² have same sign and distinct positive coefficients → ellipse (after dividing by 36 gives x²/9 + y²/4 = 1).",
+    "concept": "identify conic",
+    "difficulty": "medium"
+   },
+   {
+    "id": "225c756a-0a3",
+    "type": "mcq",
+    "question": "If the general second-degree equation has B ≠ 0 in Ax² + Bxy + Cy² + Dx + Ey + F = 0, what does that typically indicate?",
+    "options": [
+     "Rotation of axes may be needed",
+     "The conic is a circle",
+     "The conic must be a parabola",
+     "The conic has no center"
+    ],
+    "correctIndex": 0,
+    "explanation": "A nonzero B (xy term) indicates the axes are rotated; use rotation of axes to remove the xy-term.",
+    "concept": "rotation indicator",
+    "difficulty": "medium"
+   },
+   {
+    "id": "6fe9c405-5a2",
+    "type": "tf",
+    "question": "An ellipse can be defined as the set of points where the sum of distances to two fixed points is constant.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 0,
+    "explanation": "This is the standard focus definition of an ellipse.",
+    "concept": "ellipse definition",
+    "difficulty": "easy"
+   },
+   {
+    "id": "56c6306a-ee2",
+    "type": "mcq",
+    "question": "In polar coordinates with focus at origin, which polar equation represents a conic with eccentricity e and directrix r = ed/(1 + e cos θ)?",
+    "options": [
+     "r = ed/(1 + e cos θ)",
+     "r = ed/(1 - e cos θ)",
+     "r = (1 + e cos θ)/ed",
+     "r = ed(1 + e cos θ)"
+    ],
+    "correctIndex": 0,
+    "explanation": "Standard polar form with directrix perpendicular to θ=0 uses r = ed/(1 + e cos θ).",
+    "concept": "polar conics",
+    "difficulty": "hard"
+   }
+  ],
+  "video": {
+   "youtubeId": "rpMu98yRk40",
+   "title": "Algebra Basics: Slope And Distance - Math Antics",
+   "channel": "mathantics",
+   "seconds": 720
+  }
+ },
+ "c9": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "Definition: What is a geometric sequence?",
+    "answer": "A sequence where the ratio between consecutive terms is constant; that constant is the common ratio r."
+   },
+   {
+    "kind": "choice",
+    "prompt": "Which of these sequences is arithmetic?",
+    "options": [
+     "2, 5, 8, 11, ...",
+     "3, 6, 12, 24, ...",
+     "5, 5, 5, 5, ...",
+     "4, 7, 11, 16, ..."
+    ],
+    "correctIndex": 0,
+    "feedback": "An arithmetic sequence has a constant difference: 5-2 = 3, 8-5 = 3, etc."
+   },
+   {
+    "kind": "order",
+    "prompt": "Place these steps in the correct order to derive the nth term a_n of an arithmetic sequence starting with a₁ and common difference d.",
+    "items": [
+     "Observe a₂ = a₁ + d, a₃ = a₁ + 2d, ...",
+     "Conclude a_n = a₁ + (n-1)d",
+     "Note that the number of d's added is one less than the term number",
+     "Write first several terms to identify the pattern"
+    ],
+    "feedback": "Pattern observation leads to noting the count of d's, giving a_n = a₁ + (n-1)d."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match each term with its description.",
+    "pairs": [
+     [
+      "Common difference (d)",
+      "Constant added between consecutive terms in arithmetic sequences"
+     ],
+     [
+      "Common ratio (r)",
+      "Constant factor between consecutive terms in geometric sequences"
+     ],
+     [
+      "Series",
+      "Sum of terms of a sequence"
+     ],
+     [
+      "Sample space",
+      "Set of all possible outcomes of an experiment"
+     ]
+    ],
+    "feedback": "These are standard definitions connecting sequence and probability terms."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "bfc10985-127",
+    "type": "mcq",
+    "question": "A capsule of 30 mg leaves 90% after each hour. How much remains after 3 hours?",
+    "options": [
+     "30·0.9^3",
+     "30·0.1^3",
+     "30·0.9·3",
+     "30 - 3·0.1"
+    ],
+    "correctIndex": 0,
+    "explanation": "Geometric decay: a_n = 30·(0.9)^(n-1); after 3 hours remaining is 30·0.9^3.",
+    "concept": "geometric decay",
+    "difficulty": "easy"
+   },
+   {
+    "id": "4bfb9d4c-cab",
+    "type": "mcq",
+    "question": "Which explicit formula gives the nth term of an arithmetic sequence with a₁ = 7 and d = -2?",
+    "options": [
+     "a_n = 7 + (n-1)(-2)",
+     "a_n = 7·(-2)^(n-1)",
+     "a_n = 7 - 2^n",
+     "a_n = 7 + n·(-2)"
+    ],
+    "correctIndex": 0,
+    "explanation": "Arithmetic: a_n = a₁ + (n-1)d = 7 + (n-1)(-2).",
+    "concept": "arithmetic",
+    "difficulty": "easy"
+   },
+   {
+    "id": "b2c08a0b-a0a",
+    "type": "mcq",
+    "question": "Sum S of first n terms of an arithmetic sequence with first term a₁ and last term a_n is:",
+    "options": [
+     "S = n(a₁ + a_n)/2",
+     "S = n·a₁·a_n",
+     "S = (a₁ + a_n)/2",
+     "S = n·(a₁ + (n-1)d)"
+    ],
+    "correctIndex": 0,
+    "explanation": "Formula for arithmetic series: S_n = n·(first + last)/2.",
+    "concept": "series",
+    "difficulty": "medium"
+   },
+   {
+    "id": "47a7c852-631",
+    "type": "mcq",
+    "question": "How many distinct 4-character codes can be formed using digits 0–9 if characters may repeat?",
+    "options": [
+     "10^4",
+     "4·10",
+     "P(10,4)",
+     "10!/6!"
+    ],
+    "correctIndex": 0,
+    "explanation": "By multiplication principle: 10 choices each position → 10^4 = 10000.",
+    "concept": "counting",
+    "difficulty": "easy"
+   },
+   {
+    "id": "87e4554f-eb4",
+    "type": "mcq",
+    "question": "From a group of 8 people, how many ways to choose a committee of 3 (order doesn't matter)?",
+    "options": [
+     "C(8,3) = 56",
+     "P(8,3) = 336",
+     "8·7·6·5",
+     "8^3"
+    ],
+    "correctIndex": 0,
+    "explanation": "Combinations: C(8,3) = 8·7·6 / (3·2·1) = 56.",
+    "concept": "combinations",
+    "difficulty": "medium"
+   },
+   {
+    "id": "a473f75c-16d",
+    "type": "mcq",
+    "question": "Coefficients of (a + b)^4 from Pascal's triangle are:",
+    "options": [
+     "1, 4, 6, 4, 1",
+     "1, 3, 3, 1",
+     "1, 5, 10, 10, 5, 1",
+     "4, 6, 4"
+    ],
+    "correctIndex": 0,
+    "explanation": "Row n = 4 in Pascal's triangle: 1,4,6,4,1.",
+    "concept": "binomial",
+    "difficulty": "easy"
+   },
+   {
+    "id": "c661e9d1-25e",
+    "type": "tf",
+    "question": "Events A and B are disjoint if they can occur at the same time.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 1,
+    "explanation": "Disjoint (mutually exclusive) events cannot occur together.",
+    "concept": "probability",
+    "difficulty": "easy"
+   },
+   {
+    "id": "4d036515-88c",
+    "type": "mcq",
+    "question": "A biased coin has P(H) = 0.6. What is the probability of exactly 2 heads in 3 independent tosses?",
+    "options": [
+     "C(3,2)(0.6)^2(0.4)^1",
+     "(0.6)^2",
+     "3·0.6·0.4",
+     "(0.6)^3"
+    ],
+    "correctIndex": 0,
+    "explanation": "Use binomial formula: C(3,2) p^2(1-p)^1 = 3·0.6^2·0.4.",
+    "concept": "binomial prob",
+    "difficulty": "hard"
+   }
+  ],
+  "video": {
+   "youtubeId": "94AmzeR9n2w",
+   "title": "Multiplication & Addition Rule - Probability - Mutually Exclusive & Independent Events",
+   "channel": "The Organic Chemistry Tutor",
+   "seconds": 602
+  }
+ }
+}

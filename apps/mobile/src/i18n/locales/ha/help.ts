@@ -1,0 +1,820 @@
+import type { Translation } from '../../types';
+import type en from '../en/help';
+
+const help: Translation<typeof en> = {
+  ui: {
+    searchPlaceholder: 'Nemi maƙalolin taimako',
+    searchLabel: 'Nemi taimako',
+    clearSearch: 'Share binciken',
+    draftBanner: 'Daftari ne da lauyoyi za su duba kafin ƙaddamarwa ga jama’a. Kalmomin na iya canzawa.',
+    danger:
+      'Idan wani yana cikin haɗari a yanzu, kira <strong>112</strong> ko ka gaya wa babban mutum da ka amince da shi nan take.',
+    includeDevice: 'Haɗa bayanan na’ura',
+    eyebrow: 'CIBIYAR TAIMAKO',
+    safetyEyebrow: 'TSARO',
+    readGuidelines: 'Karanta Ƙa’idojin Al’umma',
+    contactSupport: 'Tuntuɓi tallafi',
+    reportContent: 'Kai rahoton abun ciki',
+  },
+  tickets: {
+    kind: {
+      support: 'Tallafi',
+      bug: 'Rahoton matsala',
+      feedback: 'Ra’ayi',
+      report: 'Rahoton tsaro',
+      copyright: 'Haƙƙin mallaka',
+      appeal: 'Ɗaukaka ƙara',
+    },
+    status: {
+      open: 'A buɗe',
+      waiting: 'Ana jiran ka',
+      resolved: 'An warware',
+    },
+    rowLabel: '{{subject}}, {{status}}',
+    lastFromSupport: 'Knowzone: {{text}}',
+    lastFromMe: 'Kai: {{text}}',
+    loadError: 'An kasa loda buƙatunka',
+    title: 'Buƙatunka',
+    filters: { all: 'Duka', open: 'A buɗe', resolved: 'An warware' },
+    emptyTitle: 'Babu komai a nan',
+    emptyBody: 'Saƙonni, rahotannin matsala da rahotannin da ka aika suna bayyana a nan don ka bi su.',
+  },
+  centre: {
+    eyebrow: 'TALLAFI',
+    title: 'Cibiyar taimako',
+    greeting: 'Sannu {{name}}, me za mu taimaka maka da shi?',
+    greetingAnonymous: 'Sannu, me za mu taimaka maka da shi?',
+    openRequests: 'Buƙatunka da ke a buɗe',
+    actions: {
+      contact: { title: 'Tuntuɓi tallafi', body: 'Muna amsawa cikin kwana 1 na aiki' },
+      bug: { title: 'Kai rahoton matsala', body: 'Wani abu ba ya aiki?' },
+      feedback: { title: 'Aiko da ra’ayi', body: 'Dabaru da shawarwari' },
+      report: { title: 'Kai rahoton abun ciki', body: 'Mara aminci ko bai dace ba' },
+    },
+    browse: 'Duba ta maudu’i',
+    popular: 'Tambayoyin da aka fi yi',
+    allFaqs: 'Duk tambayoyin da ake yawan yi',
+    safetyLegal: 'Tsaro da doka',
+    links: {
+      guidelines: 'Ƙa’idojin al’umma',
+      blocked: 'Ƴan wasa da abun ciki da aka toshe',
+      ai: 'Iyakokin AI da daidaitonsa',
+      terms: 'Sharuɗɗan amfani',
+      privacy: 'Manufar sirri',
+      copyright: 'Haƙƙin mallaka da kai rahoton abun ciki',
+    },
+    viewAll: 'Duba duk buƙatunka ({{count}})',
+  },
+  faq: {
+    title: 'Tambayoyin da ake yawan yi',
+    all: 'Duka',
+    results_one: 'Sakamako {{count}}',
+    results_other: 'Sakamako {{count}}',
+    helpfulQuestion: 'Wannan ya amsa tambayarka?',
+    gladItHelped: 'Mun yi farin ciki da ya taimaka!',
+    askTeam: 'Ka yi haƙuri. Tambayi ƙungiyarmu →',
+    noResultsTitle: 'Babu amsoshi don “{{query}}”',
+    noResultsBody: 'Gwada wasu kalmomi, ko ka tambayi ƙungiyarmu kai tsaye.',
+    stillNeedHelp: 'Har yanzu kana buƙatar taimako?',
+    categories: {
+      start: 'Farawa',
+      ai: 'Malamin AI da kayan karatu',
+      videos: 'Bidiyo',
+      courses: 'Kwasa-kwasai da takardun shaida',
+      world: 'Knowzone World da lada',
+      account: 'Asusu da sirri',
+      payments: 'Tsare-tsare da biyan kuɗi',
+      safety: 'Tsaro da kai rahoto',
+      teachers: 'Don malamai',
+    },
+    items: {
+      'what-is': {
+        q: 'Mene ne Knowzone AI?',
+        a: 'Knowzone yana mayar da rubuce-rubucenka, PDF da maudu’ai zuwa taƙaitattun bayanai, katunan bita, gwaje-gwaje da gajerun bidiyon bayani, tare da malamin AI don tambayoyi da Knowzone World don koyo ta hanyar wasa.',
+      },
+      'first-pack': {
+        q: 'Ta yaya zan yi fakitin karatu na na farko?',
+        a: 'Taɓa Ƙirƙira (shafin +), sannan ka liƙa rubuce-rubuce, ka ɗora fayil, ka zaɓi maudu’i ko ka zaɓi bidiyo. Knowzone zai gina taƙaitawa, katunan bita da gwaji. Fakitin karatu yana amfani da kiredit na AI 1, kuma sai idan an yi shi cikin nasara.',
+      },
+      streaks: {
+        q: 'Yaya jerin kwanaki ke aiki?',
+        a: 'Ka koyi wani abu a rana (darasi, gwaji, mataki ko zaman karatu) sai jerin kwanakinka ya ƙaru da ɗaya. Idan ka tsallake rana, zai sake farawa, sai dai idan kana da kariyar jerin kwanaki.',
+      },
+      credits: {
+        q: 'Mene ne kiredit na AI?',
+        a: 'Kiredit suna biyan manyan ayyukan AI: fakitin karatu yana cin 1, bidiyon bayani kuma 1–5, ya danganta da tsawonsa. Sababbin asusu suna samun {{welcome}}. Kowace gayyata tana kawo {{referral}}, kuma Plus yana ƙara {{plusMonthly}} a wata. Ana amfani da kiredit ne kawai idan samarwa ta yi nasara.',
+      },
+      'tutor-limit': {
+        q: 'Tambayoyi nawa zan iya yi wa malamin?',
+        a: 'Asusun kyauta suna samun tambayoyi {{tutorFree}} ga malamin a rana, Plus {{tutorPlus}}, Pro kuma {{tutorPro}}. Ƙidayar tana sake farawa da tsakar dare. Tambayoyin malamin ba sa cin kiredit na AI.',
+      },
+      'ai-wrong': {
+        q: 'AI ya yi kuskure a wani abu. Me zan yi?',
+        a: 'AI na iya yin kuskure, musamman a lissafi, abubuwan da suka faru kwanan nan da cikakkun bayanan manhaja. Ka tabbatar da muhimman bayanai da littafinka ko malaminka, kuma ka yi amfani da “Kai rahoton matsala” a kan amsar ko bidiyon don mu gyara.',
+      },
+      'ai-data': {
+        q: 'Ana amfani da kayan da na ɗora don horar da AI?',
+        a: 'A’a, sai dai idan ka kunna “Taimaka inganta Knowzone AI” a Saituna → Sirri. A kashe yake tun farko. Ana amfani da fayilolinka ne don yin kayan karatunka.',
+      },
+      'video-length': {
+        q: 'Me ya sa ba zan iya zaɓar bidiyo na minti 3 ko 5 ba?',
+        a: 'Dogayen bidiyon bayani suna cikin Knowzone Plus da Pro. Asusun kyauta na iya yin bidiyo na daƙiƙa 30 da na minti 1.',
+      },
+      'video-failed': {
+        q: 'Bidiyona bai gama samuwa ba',
+        a: 'Buɗe shi daga Bidiyona ka taɓa Sake gwadawa. Ba a cire maka kiredit don bidiyon da bai yi nasara ba.',
+      },
+      certificate: {
+        q: 'Ta yaya zan samu takardar shaida?',
+        a: 'Kammala kowane darasi a cikin kwas. Takardar shaidarka za ta bayyana a Bayanan kai → Takardun shaidata, inda za ka iya saukewa ko raba ta.',
+      },
+      'course-progress': {
+        q: 'Ana ajiye ci gaban kwas ɗina?',
+        a: 'Eh. Ci gaba daga inda ka tsaya ta Gida ko Bayanan kai → Kwasa-kwasaina.',
+      },
+      coins: {
+        q: 'Me zan iya yi da tsabobi?',
+        a: 'Kashe tsabobi a shagon Lada kan kayan avatar, firam ɗin bayanan kai, laƙabi da kariyar jerin kwanaki. Ba za a iya musanya tsabobi da kuɗi ko kiredit na AI ba.',
+      },
+      'leaderboard-privacy': {
+        q: 'Zan iya ɓoye kaina daga jadawalin gwaraza?',
+        a: 'Eh. A Knowzone World → Saituna, kashe jadawalin gwaraza ko ka nuna kanka a matsayin mai bincike da ba a san sunansa ba.',
+      },
+      password: {
+        q: 'Na manta kalmar sirrina',
+        a: 'A shafin shiga, taɓa “Ka manta kalmar sirri?” za mu aiko maka da lamba mai lambobi 6 ta imel don saita sabuwa.',
+      },
+      export: {
+        q: 'Ta yaya zan sauke bayanaina?',
+        a: 'Saituna → Sauke bayanaina yana ba ka duk abin da muke riƙe da shi game da kai a matsayin fayil, ko hanyar haɗi ta imel.',
+      },
+      delete: {
+        q: 'Ta yaya zan share asusuna?',
+        a: 'Saituna → Share asusu. Kana da kwanaki 14 don canza ra’ayi: sake shiga zai soke shi. Bayan haka, za a cire asusunka da bayananka har abada.',
+      },
+      refund: {
+        q: 'Zan iya samun mayar da kuɗi?',
+        a: 'Za a mayar maka da cikakken kuɗin biyan farko na tsari idan ka nema cikin kwanaki 7. Je zuwa Saituna → Mayar da kuɗi da taimakon biyan kuɗi. Ana duba sabuntawa ɗaya bayan ɗaya.',
+      },
+      cancel: {
+        q: 'Ta yaya zan soke rajistar biyan kuɗina?',
+        a: 'Saituna → Rajistar biyan kuɗi → Soke rajistar biyan kuɗi. Za ka ci gaba da tsarinka har ƙarshen lokacin da ka biya. Ana soke tsare-tsaren App Store da Google Play a cikin shagon.',
+      },
+      transfer: {
+        q: 'Na biya ta hanyar tura kuɗi a banki amma tsarina bai fara aiki ba',
+        a: 'Tura kuɗi na iya ɗaukar ’yan mintoci. Buɗe Rajistar biyan kuɗi, taɓa biyan da ake jira ka zaɓi “Na tura kuɗin”. Idan har yanzu bai bayyana ba, tuntuɓi taimakon biyan kuɗi tare da lambar shaidar biyanka.',
+      },
+      report: {
+        q: 'Ta yaya zan kai rahoton wani abu?',
+        a: 'Yi amfani da “Kai rahoto” a kan bidiyo, amsar malami ko ɗan wasa, ko ka je Taimako → Kai rahoton abun ciki da bai dace ba. Mai sa ido zai duba rahotanni cikin awa 24, kuma ba a gaya wa mutumin wanda ya kai rahotonsa ba.',
+      },
+      block: {
+        q: 'Ta yaya zan toshe wani?',
+        a: 'A jadawalin gwaraza ko jerin abokai, taɓa ⋯ kusa da ɗan wasan ka zaɓi Toshe. Ba za ku ga juna a jadawalin gwaraza ko a fafatawa ba. Sarrafa ’yan wasan da ka toshe a Saituna → Ƴan wasa da abun ciki da aka toshe.',
+      },
+      danger: {
+        q: 'Wani yana cikin haɗari',
+        a: 'Idan wani yana cikin haɗari a yanzu, kira 112 (lambar gaggawa ta Najeriya) ko ka gaya wa babban mutum da ka amince da shi nan take. Sannan ka kai mana rahoto don mu ɗauki mataki kan asusun.',
+      },
+      'class-code': {
+        q: 'Ta yaya ɗalibai za su shiga ajina?',
+        a: 'Raba lambar shiga ajinka mai haruffa 6. Ɗalibai za su shigar da ita a Knowzone kuma su bayyana a ajinka nan take.',
+      },
+      'class-reports': {
+        q: 'Yaushe rahotannin aji ke bayyana?',
+        a: 'Da zarar ɗalibai sun fara atisayen da ka ba su. Kowane aikin gida yana nuna maki da maudu’an da ɗalibai suka fi samun wahala.',
+      },
+    },
+  },
+  contact: {
+    title: 'Tuntuɓi tallafi',
+    intro: 'Ƙungiyarmu tana karanta kowane saƙo kuma galibi tana amsawa cikin kwana 1 na aiki, a nan cikin manhajar.',
+    topicQuestion: 'Game da me ne?',
+    topics: {
+      account: 'Asusu da shiga',
+      learning: 'Darussa da kwasa-kwasai',
+      ai: 'Malamin AI da kayan karatu',
+      payments: 'Tsare-tsare da biyan kuɗi',
+      technical: 'Manhajar ba ta aiki',
+      safety: 'Damuwa game da tsaro',
+      other: 'Wani abu daban',
+    },
+    paymentsTip: 'Mayar da kuɗi, cire kuɗi sau biyu da tsare-tsaren da suka ɓace sun fi sauri ta Taimakon biyan kuɗi.',
+    safetyTip:
+      'Kana kai rahoton wani mutum ko wani abun ciki? Yi amfani da Kai rahoton abun ciki don mai sa ido ya fara gani.',
+    subject: 'Batu',
+    subjectPlaceholder: 'Ƴan kalmomi game da matsalar',
+    suggestions: 'WAƊANNAN NA IYA TAIMAKAWA',
+    suggestion: '{{question}} →',
+    message: 'Saƙo',
+    messagePlaceholder: 'Me ya faru, me kake tsammani, da duk abin da ka riga ka gwada',
+    sendError: 'An kasa aika saƙonka. Don Allah ka sake gwadawa.',
+    send: 'Aika saƙo',
+    footer:
+      'Amsoshi suna bayyana a Taimako → Buƙatunka. Kada ka taɓa raba kalmar sirrinka: ma’aikatan Knowzone ba za su taɓa tambayar ta ba.',
+  },
+  feedback: {
+    title: 'Aiko da ra’ayi',
+    moods: {
+      '1': 'Ban ji daɗi ko kaɗan ba',
+      '2': 'Ban ji daɗi ba',
+      '3': 'Ba laifi',
+      '4': 'Na ji daɗi',
+      '5': 'Ina son shi sosai',
+    },
+    areas: {
+      tutor: 'Malamin AI',
+      packs: 'Fakitin karatu',
+      videos: 'Bidiyo',
+      courses: 'Kwasa-kwasai',
+      world: 'Knowzone World',
+      rewards: 'Lada',
+      design: 'Zane',
+      new: 'Wani sabon abu',
+    },
+    sendError: 'An kasa aika ra’ayinka',
+    thanksTitle: 'Na gode!',
+    thanksBody:
+      'Mutanen da ke gina Knowzone suna karanta kowace shawara. Dabarunka suna tsara abin da za mu yi aiki a kai nan gaba.',
+    seeRequests: 'Duba buƙatunka',
+    feelQuestion: 'Yaya kake ji game da Knowzone?',
+    aboutQuestion: 'Game da me ne? (na zaɓi)',
+    label: 'Ra’ayinka',
+    placeholderUnhappy: 'Me ke ɓata maka rai? Muna son mu gyara shi.',
+    placeholderHappy: 'Me kake so, kuma me zai sa Knowzone ya fi kyau?',
+    send: 'Aika ra’ayi',
+    bugFooter: 'Wani abu ya lalace? <link>Kai rahoton matsala</link> maimakon haka don injiniyoyinmu su gani.',
+  },
+  bug: {
+    title: 'Kai rahoton matsala',
+    intro: 'Gaya mana abin da ya lalace. Yawan bayani, saurin gyara.',
+    whatLabel: 'Me ya lalace?',
+    whatPlaceholder: 'misali Gwaji yana daskarewa a tambaya ta 3',
+    whereQuestion: 'A ina a cikin manhajar?',
+    areas: {
+      signIn: 'Shiga',
+      home: 'Gida',
+      tutor: 'Malamin AI',
+      packs: 'Fakitin karatu',
+      videos: 'Bidiyo',
+      courses: 'Kwasa-kwasai',
+      world: 'Knowzone World',
+      payments: 'Biyan kuɗi',
+      other: 'Wani',
+    },
+    stepsLabel: 'Matakan da ke kawo matsalar',
+    stepsPlaceholder: '1. Buɗe fakitin karatu\n2. Fara gwajin\n3. Amsa tambaya ta 2…',
+    expectedLabel: 'Me kake tsammani? (na zaɓi)',
+    expectedPlaceholder: 'misali Tambaya ta gaba ya kamata ta bayyana',
+    frequencyQuestion: 'Sau nawa?',
+    frequency: {
+      always: 'Kowane lokaci',
+      sometimes: 'Wani lokaci',
+      once: 'Sau ɗaya kawai',
+    },
+    screenshotAdded: 'An ƙara hoton allo',
+    addScreenshot: 'Ƙara hoton allo',
+    addScreenshotOptional: 'Ƙara hoton allo (na zaɓi)',
+    photosError: 'An kasa buɗe hotunanka. Za ka iya aika rahoton ba tare da hoton allo ba.',
+    sendError: 'An kasa aika rahoton',
+    send: 'Aika rahoton matsala',
+  },
+  report: {
+    reasons: {
+      bullying: 'Cin zali ko tsangwama',
+      name: 'Suna ko avatar da bai dace ba',
+      cheating: 'Magudi a fafatawa ko jadawalin gwaraza',
+      impersonation: 'Yin kamar wani mutum daban',
+      'underage-risk': 'Neman bayanan sirri ko neman haɗuwa',
+      inappropriate: 'Na batsa, na tashin hankali ko bai dace da ɗalibai ba',
+      harmful: 'Mai cutarwa ko mai haɗari',
+      hate: 'Na ƙiyayya ko nuna wariya',
+      incorrect: 'Bayani mara gaskiya ko mai ɓatarwa',
+      spam: 'Saƙon banza ko zamba',
+      copyright: 'Kwafin aikin wani',
+      other: 'Wani abu daban',
+    },
+    types: {
+      player: 'Ɗan wasa',
+      video: 'Bidiyo',
+      'tutor-answer': 'Amsar malami',
+      course: 'Kwas ko darasi',
+      other: 'Wani abu daban',
+    },
+    titleFor: {
+      player: 'Kai rahoton ɗan wasa',
+      video: 'Kai rahoton bidiyo',
+      'tutor-answer': 'Kai rahoton amsa',
+      course: 'Kai rahoton kwas',
+      lesson: 'Kai rahoton darasi',
+      'study-pack': 'Kai rahoton fakitin karatu',
+      other: 'Kai rahoton abun ciki',
+    },
+    hideToggle: {
+      video: 'Ɓoye min wannan bidiyon',
+      'tutor-answer': 'Ɓoye min wannan amsar',
+      course: 'Ɓoye min wannan kwas ɗin',
+      lesson: 'Ɓoye min wannan darasin',
+      'study-pack': 'Ɓoye min wannan fakitin karatun',
+      other: 'Ɓoye min wannan abun cikin',
+    },
+    hiddenNow: {
+      video: 'An ɓoye maka wannan bidiyon yanzu',
+      'tutor-answer': 'An ɓoye maka wannan amsar yanzu',
+      course: 'An ɓoye maka wannan kwas ɗin yanzu',
+      lesson: 'An ɓoye maka wannan darasin yanzu',
+      'study-pack': 'An ɓoye maka wannan fakitin karatun yanzu',
+      other: 'An ɓoye maka wannan abun cikin yanzu',
+    },
+    sendError: 'An kasa aika rahotonka. Don Allah ka sake gwadawa.',
+    thanksTitle: 'Na gode da kai rahoto',
+    thanksBodyPlayer: 'Mai sa ido zai duba shi cikin awa 24. Ba za a gaya musu wanda ya kai rahoton ba.',
+    thanksBodyContent:
+      'Mai sa ido zai duba shi cikin awa 24. Ba za a gaya wa wanda ya ƙirƙira wanda ya kai rahoton ba.',
+    reference: 'LAMBAR SHAIDA {{id}}',
+    nextTitle: 'Abin da zai biyo baya',
+    next: {
+      review: 'Ƙwararren mai sa ido zai duba shi bisa Ƙa’idojin Al’ummarmu',
+      action: 'Idan ya karya dokoki, za mu cire shi ko mu taƙaita asusun',
+      follow: 'Za ka iya bin rahoton a Taimako → Buƙatunka',
+      blocked: 'An toshe {{name}}. Cire toshewa a kowane lokaci a Saituna',
+    },
+    viewReport: 'Duba rahoto',
+    whatQuestion: 'Me kake kai rahotonsa?',
+    playerName: 'Sunan ɗan wasa',
+    whichOne: 'Wanne ne?',
+    playerPlaceholder: 'Suna kamar yadda yake a jadawalin gwaraza',
+    itemPlaceholder: 'Take, ko inda ka gan shi',
+    wrongQuestion: 'Me ke damun sa?',
+    copyrightLink: 'Kai ne mai aikin? Aika sanarwar haƙƙin mallaka maimakon haka →',
+    detailsLabel: 'Ƙara gaya mana (na zaɓi)',
+    detailsPlaceholder: 'Me ya faru? Yaushe? Duk abin da zai taimaki mai sa ido ya fahimta.',
+    alsoBlock: 'Kuma toshe {{name}}',
+    alsoBlockHint: 'Ba za ku ga juna a jadawalin gwaraza ko a fafatawa ba',
+    hideHint: 'Ba zai bayyana a shafukanka ba yayin da muke duba shi',
+    alsoBlockLabel: 'Kuma toshe',
+    hideLabel: 'Ɓoye min',
+    send: 'Aika rahoto',
+  },
+  blocked: {
+    title: 'Waɗanda aka toshe da aka ɓoye',
+    types: {
+      video: 'Bidiyo',
+      course: 'Kwas',
+      lesson: 'Darasi',
+      'study-pack': 'Fakitin karatu',
+      'tutor-answer': 'Amsar malami',
+      player: 'Ɗan wasa',
+      other: 'Abun ciki',
+    },
+    blockedOn: 'An toshe {{date}}',
+    hiddenOn: '{{type}} · an ɓoye {{date}}',
+    playersTab: 'Ƴan wasa ({{count}})',
+    contentTab: 'Abun ciki ({{count}})',
+    playersIntro:
+      'Ƴan wasan da aka toshe ba sa ganinka, kai ma ba ka ganinsu, a jadawalin gwaraza, jerin abokai ko fafatawar gwaji. Ba a gaya musu ba.',
+    contentIntro: 'Bidiyo da sauran abun ciki da ka ɓoye ko ka kai rahotonsu ba za su bayyana a shafukanka ba.',
+    noPlayers: 'Babu ’yan wasan da aka toshe',
+    noContent: 'Babu abin da aka ɓoye',
+    noPlayersHint: 'Taɓa ⋯ kusa da ɗan wasa a jadawalin gwaraza don toshe shi ko kai rahotonsa.',
+    noContentHint: 'Yi amfani da Kai rahoto a kan bidiyo ko amsa don ɓoye maka shi.',
+    unblock: 'Cire toshewa',
+    show: 'Nuna',
+    unblockTitle: 'Cire toshewar {{name}}?',
+    showTitle: 'A sake nuna wannan?',
+    unblockBody: 'Za ku sake ganin juna a jadawalin gwaraza da a fafatawa. Ba za a gaya musu ba.',
+    showBody: 'Yana iya sake bayyana a shafukanka. Rahotonka zai ci gaba da kasancewa a wurin masu sa idonmu.',
+    showAgain: 'Sake nunawa',
+  },
+  ticket: {
+    acks: {
+      support:
+        'Mun gode da tuntuɓar mu. Wani daga ƙungiyar Knowzone zai amsa maka a nan, yawanci cikin rana ɗaya ta aiki.',
+      bug: 'Mun gode da rahoton. Injiniyoyinmu suna duba kowace matsala. Za mu sabunta wannan buƙata idan muna buƙatar ƙarin bayani ko idan an gyara ta.',
+      feedback:
+        'Mun gode! Ƙungiyar samfur tana karanta kowace shawara. Ba ma amsa kowacce, amma tana tsara abin da muke ginawa.',
+      report:
+        'Mun gode da taimakawa wajen kiyaye Knowzone lafiya. Mai sa ido zai duba rahotanni cikin awanni 24. Ba za a gaya wa wanda ka kai rahoto cewa kai ne ba.',
+      copyright: 'Mun karɓi sanarwarka kuma za mu duba ta cikin kwanaki 3 na aiki.',
+      appeal:
+        'Mun karɓi ƙararka. Wani mai sa ido daban, ba wanda ya yanke hukuncin ba, zai duba ta cikin kwanaki 3 na aiki.',
+    },
+    eyebrow: 'BUƘATA',
+    notFound: 'Ba mu sami wannan buƙatar ba.',
+    eyebrowWithId: '{{kind}} · {{id}}',
+    sendError: 'An kasa aikawa. Don Allah ka sake gwadawa.',
+    updateError: 'An kasa sabunta wannan buƙatar',
+    created: 'An aika! Ajiye lambar shaidarka <strong>{{id}}</strong>. Amsoshi za su bayyana a nan.',
+    opened: 'An buɗe {{date}}',
+    support: 'TALLAFIN KNOWZONE',
+    detailsSent: 'BAYANAN DA KA AIKA',
+    meta: {
+      app: 'Manhaja',
+      platform: 'Na’ura',
+      screen: 'Shafi',
+      area: 'A ina',
+      frequency: 'Sau nawa',
+      type: 'Nau’in abu',
+      title: 'Abu',
+      reason: 'Dalili',
+      rating: 'Ƙima',
+      reference: 'Lambar shaida',
+      screenshot: 'Hoton allo',
+    },
+    screenshotAttached: 'An haɗa hoton allo',
+    replyToReopen: 'Amsa don sake buɗe wannan buƙatar',
+    addDetails: 'Ƙara bayani',
+    reply: 'Amsa',
+    sendReply: 'Aika amsa',
+    solved: 'An warware matsalata',
+  },
+  legal: {
+    lastUpdated: 'An sabunta a ƙarshe {{date}}',
+    shortVersion: 'A TAƘAICE',
+    plainWords: 'A SAUƘAƘAN KALMOMI',
+    contents: 'Abubuwan ciki',
+    reportSomething: 'Kai rahoton wani abu',
+    reportWrongAnswer: 'Kai rahoton amsar da ba daidai ba',
+    related: 'MASU ALAƘA',
+    copyrightLink: 'Haƙƙin mallaka da kai rahoton abun ciki',
+    docs: {
+      terms: {
+        title: 'Sharuɗɗan Amfani',
+        eyebrow: 'DOKA',
+        summary: [
+          'Dole ne ka kai shekara 13 ko fiye, ko ka sami izinin iyaye ko mai kula da kai.',
+          'Rubuce-rubucenka da abubuwan da ka ɗora naka ne. Kana ba mu izinin sarrafa su don yin kayan karatunka.',
+          'AI na iya yin kuskure. Ka tabbatar da muhimman bayanai kafin ka dogara da su.',
+          'Tsare-tsaren biya suna sabuntawa har sai an soke su; ana iya mayar da kuɗin biyan farko cikin kwanaki 7.',
+          'Ka zama mai kirki da gaskiya. Za mu iya taƙaita ko dakatar da asusun da suka karya dokoki.',
+        ],
+        sections: {
+          who: {
+            title: '1. Su wane ne mu da waɗannan sharuɗɗa',
+            body: [
+              'Knowzone AI (“Knowzone”, “mu”) yana samar da manhajar koyo mai amfani da AI don ɗalibai da malamai. Waɗannan sharuɗɗa yarjejeniya ce tsakaninka da Knowzone. Ta hanyar buɗe asusu ko amfani da manhajar, ka amince da su.',
+              'Idan shekarunka ba su kai 18 ba, don Allah ka karanta waɗannan sharuɗɗa tare da iyaye ko mai kula da kai.',
+            ],
+          },
+          account: {
+            title: '2. Asusunka',
+            body: ['Don amfani da Knowzone dole ne ka:'],
+            bullets: [
+              'Kai aƙalla shekara 13, ko ka sami izini daga iyaye ko mai kula da kai',
+              'Ba da bayanai na gaskiya kuma ka ɓoye kalmar sirrinka',
+              'Yi amfani da asusu ɗaya na kanka. Ba za a iya raba, sayar ko mika asusu ga wani ba',
+              'Gaya mana nan take idan kana tunanin wani yana amfani da asusunka',
+            ],
+          },
+          content: {
+            title: '3. Abun cikinka',
+            body: [
+              'Kai ne mai rubuce-rubuce, fayiloli, tambayoyi da sauran kayan da ka ƙara (“abun cikinka”). Kana ba mu izinin adanawa da sarrafa abun cikinka ne kawai don gudanar da Knowzone a gare ka: misali, don yin taƙaitattun bayanai, katunan bita, gwaje-gwaje da bidiyo.',
+              'Ka ɗora kayan da kake da haƙƙin amfani da su kawai. Kada ka ɗora bayanan sirri na wasu mutane ba tare da izini ba.',
+            ],
+          },
+          ai: {
+            title: '4. Fasalolin AI',
+            body: [
+              'Knowzone yana amfani da basirar wucin gadi (AI) don samar da bayani, taƙaitattun bayanai, gwaje-gwaje da bidiyo. Abin da AI ya samar na iya zama bai cika ba ko ba daidai ba. Kayan taimakon karatu ne, ba madadin malamanka, littattafanka ko jagorancin jarrabawa na hukuma ba. Duba “Iyakokin AI da daidaitonsa” don ƙarin bayani.',
+              'Asusun kyauta suna da iyakoki na yau da kullum (misali tambayoyi {{tutorFree}} ga malamin a rana). Manyan ayyukan AI suna amfani da kiredit na AI, waɗanda ba su da darajar kuɗi.',
+            ],
+          },
+          rules: {
+            title: '5. Amfani da Knowzone cikin hankali',
+            body: ['Ka amince ba za ka:'],
+            bullets: [
+              'Karya Ƙa’idojin Al’umma ko wata doka',
+              'Yi amfani da Knowzone don yin magudi a jarrabawa ko tantancewa inda ba a yarda ba',
+              'Ci zali, yi barazana ko raba abun ciki mai cutarwa da sauran masu amfani',
+              'Yi ƙoƙarin kauce wa iyakoki, kwashe bayanan sabis ɗin ko tsoma baki a yadda yake aiki',
+              'Ɗora kayan da ke keta haƙƙin mallakar wani',
+            ],
+          },
+          paid: {
+            title: '6. Tsare-tsare, biyan kuɗi da mayar da kuɗi',
+            body: [
+              'Ana karɓar kuɗin tsare-tsaren biya tun kafin lokaci. Tsare-tsaren kati da na shagon manhaja suna sabuntawa kai tsaye har sai ka soke; biyan kuɗi ta tura kuɗin banki da USSD yana rufe lokaci ɗaya ne kuma ba ya sabuntawa. Za ka iya soke a kowane lokaci kuma ka ci gaba da samun dama har ƙarshen lokacin da ka biya.',
+              'Za a mayar maka da cikakken kuɗin biyan farko na tsari idan ka nema cikin kwanaki 7. Ana duba sauran buƙatun mayar da kuɗi ɗaya bayan ɗaya kuma kamar yadda doka ta buƙata. Sayayya ta App Store da Google Play kuma suna bin dokokin mayar da kuɗi na shagon.',
+              'Za mu sanar da kai tun da wuri kafin mu canza farashin tsarin da kake biya.',
+            ],
+          },
+          rewards: {
+            title: '7. XP, tsabobi da lada',
+            body: [
+              'XP, tsabobi, jerin kwanaki, baji da sauran lada wani ɓangare ne na ƙwarewar koyo. Ba su da darajar kuɗi kuma ba za a iya sayar da su, mika su ko musanya su da kuɗi ba.',
+            ],
+          },
+          moderation: {
+            title: '8. Sa ido, taƙaitawa da dakatarwa',
+            body: [
+              'Za mu iya cire abun ciki, taƙaita fasaloli ko dakatar da asusun da ya karya waɗannan sharuɗɗa ko Ƙa’idojin Al’umma, ko don kare masu amfani. Za mu gaya maka dalili da yadda za ka ɗaukaka ƙara. Manyan laifuffuka ko maimaita su na iya kai ga rufe asusun.',
+            ],
+          },
+          ending: {
+            title: '9. Rufe asusunka',
+            body: [
+              'Za ka iya share asusunka a kowane lokaci a Saituna. Sharewar tana fara aiki bayan kwanaki 14 na jinkiri, inda sake shiga a cikinsu zai soke ta.',
+            ],
+          },
+          liability: {
+            title: '10. Alhakinmu a gare ka',
+            body: [
+              'Muna aiki tuƙuru don Knowzone ya kasance a samu, daidai kuma amintacce, amma ba za mu iya yin alƙawarin cewa koyaushe ba zai sami kuskure ko katsewa ba. Babu abin da ke cikin waɗannan sharuɗɗa da ke taƙaita haƙƙoƙin da kake da su ƙarƙashin dokar kare masu sayayya ta Najeriya.',
+            ],
+          },
+          changes: {
+            title: '11. Canje-canje da tuntuɓa',
+            body: [
+              'Za mu iya sabunta waɗannan sharuɗɗa. Idan canje-canjen suna da girma, za mu sanar da kai a cikin manhajar kafin su fara aiki. Kana da tambayoyi? Tuntuɓe mu ta Taimako → Tuntuɓi tallafi a cikin manhajar.',
+              'Dokokin Jamhuriyar Tarayyar Najeriya ne ke tafiyar da waɗannan sharuɗɗa.',
+            ],
+          },
+        },
+      },
+      privacy: {
+        title: 'Manufar Sirri',
+        eyebrow: 'DOKA',
+        summary: [
+          'Ba ma taɓa sayar da bayananka kuma babu tallace-tallace a cikin darussa.',
+          'Muna amfani da bayananka don gudanar da Knowzone da daidaita koyonka da kai.',
+          'Ba a amfani da kayanka don horar da AI sai dai idan ka kunna hakan.',
+          'Za ka iya sauke ko share bayananka a kowane lokaci a Saituna.',
+        ],
+        sections: {
+          scope: {
+            title: '1. Game da wannan manufa',
+            body: [
+              'Wannan manufa tana bayyana irin bayanan sirri da Knowzone ke tattarawa, dalilin haka, da haƙƙoƙinka ƙarƙashin Nigeria Data Protection Act 2023 (NDPA) da sauran dokokin da suka shafe ka.',
+            ],
+          },
+          collect: {
+            title: '2. Abin da muke tattarawa',
+            body: ['Muna tattara:'],
+            bullets: [
+              'Bayanan asusu: suna, imel, kalmar sirri (an adana ta cikin tsaro, ba a rubutu a bayyane ba), hanyar shiga',
+              'Bayanan kai da zaɓin koyo: aji, fannoni, burika, kwanakin jarrabawa, harshe',
+              'Abun cikinka: rubuce-rubuce, fayiloli, tambayoyi da kayan karatun da aka yi daga gare su',
+              'Ayyukan koyo: darussa, gwaje-gwaje, maki, XP, jerin kwanaki da lokacin da aka kashe',
+              'Biyan kuɗi: tsari, adadi da matsayi. Flutterwave ko shagon manhaja ne ke sarrafa bayanan kati; ba ma taɓa ganin cikakkiyar lambar kati',
+              'Bayanan na’ura da zama: nau’in na’ura, sigar manhaja da kimanin wurin da aka shiga, don kiyaye asusunka',
+              'Saƙonnin da ka aiko mana: buƙatun tallafi, rahotannin matsala, ra’ayoyi da rahotanni',
+            ],
+          },
+          use: {
+            title: '3. Yadda muke amfani da su',
+            body: ['Muna amfani da bayananka don:'],
+            bullets: [
+              'Samar da Knowzone da samar da kayan karatunka',
+              'Daidaita shawarwari, bita da tunatarwa da kai',
+              'Kiyaye asusu da al’umma, har da sa ido',
+              'Sarrafa biyan kuɗi da ba da rasit',
+              'Amsa buƙatun tallafi da gyara matsaloli',
+              'Inganta manhajar ta amfani da ƙididdiga da ba sa bayyana ko kai wane ne',
+            ],
+          },
+          ai: {
+            title: '4. Sarrafawa ta AI',
+            body: [
+              'Don samar da kayan karatu da amsoshin malami, ana aika rubutun da ya dace zuwa ga mai samar mana da AI (OpenAI) don sarrafawa. Ba a amfani da shi don horar da samfuransu.',
+              'Ana amfani da abun cikinka don inganta fasalolin AI na Knowzone ne kawai idan ka kunna “Taimaka inganta Knowzone AI” a Saituna → Sirri. A kashe yake tun farko, kuma za ka iya kashe shi a kowane lokaci.',
+            ],
+          },
+          share: {
+            title: '5. Waɗanda muke raba su da su',
+            body: [
+              'Muna raba bayanai ne kawai da masu ba da sabis da ke taimaka mana gudanar da Knowzone (ajiyar sabar, sarrafa AI, biyan kuɗi, imel) ƙarƙashin kwangiloli da ke kare su, da malaminka idan ka shiga ajinsa (ci gabanka a kan ayyukan da ya bayar), da kuma lokacin da doka ta buƙata. Ba ma taɓa sayar da bayanan sirri.',
+              'Wasu darussa suna da bidiyo daga YouTube, wanda ke kunnawa a cikin na’urar YouTube. Knowzone tana amfani da YouTube API Services don nemo waɗannan bidiyo. Idan ka kalle su, ka amince da Sharuɗɗan Sabis na YouTube (youtube.com/t/terms), kuma Manufar Sirri ta Google (policies.google.com/privacy) ta shafi abin da YouTube ke tattarawa.',
+            ],
+          },
+          children: {
+            title: '6. Yara da matasa',
+            body: [
+              'Yawancin masu amfani da mu ɗalibai ne. Masu amfani ’yan ƙasa da shekara 13 suna buƙatar izinin iyaye ko mai kula da su. Jadawalin gwaraza yana nuna sunan farko da baƙaƙe kawai, kuma za ka iya ɓoye kanka daga gare shi. Iyaye na iya tuntuɓar mu don dubawa ko share bayanan ɗansu.',
+            ],
+          },
+          keep: {
+            title: '7. Tsawon lokacin da muke ajiye su',
+            body: [
+              'Muna ajiye bayananka muddin asusunka a buɗe yake. Idan ka share asusunka, muna cire bayananka na sirri bayan kwanaki 14 na jinkiri, sai dai bayanan da doka ta wajabta mu ajiye (kamar bayanan biyan kuɗi).',
+            ],
+          },
+          rights: {
+            title: '8. Haƙƙoƙinka',
+            body: ['Za ka iya:'],
+            bullets: [
+              'Samun dama da sauke bayananka (Saituna → Sauke bayanaina)',
+              'Gyara bayananka (Saituna → Gyara bayanan kai)',
+              'Share asusunka (Saituna → Share asusu)',
+              'Ƙi ko janye amincewa don sarrafawa na zaɓi, kamar inganta AI ko tallace-tallace',
+              'Kai ƙara ga Nigeria Data Protection Commission (NDPC)',
+            ],
+          },
+          security: {
+            title: '9. Tsaro',
+            body: [
+              'Muna kare bayananka da ɓoyewa (encryption) yayin tafiya, adana kalmar sirri cikin tsaro da ikon sarrafa damar shiga. Za ka iya gani da fitar da na’urori a Saituna → Na’urori.',
+            ],
+          },
+          contact: {
+            title: '10. Tuntuɓa',
+            body: [
+              'Don tambayoyi ko buƙatu game da sirri, yi amfani da Taimako → Tuntuɓi tallafi a cikin manhajar ka zaɓi “Asusu da sirri”.',
+            ],
+          },
+        },
+      },
+      guidelines: {
+        title: 'Ƙa’idojin Al’umma',
+        eyebrow: 'TSARO',
+        summary: [
+          'Ka zama mai kirki. Kowa a nan yana koyo.',
+          'Ka zama mai gaskiya. Ka samu XP ɗinka, kada ka yi magudi.',
+          'Ka riƙe bayanan sirrinka a ɓoye.',
+          'Ka ga wani abu ba daidai ba? Ka kai rahoto.',
+        ],
+        sections: {
+          kind: {
+            title: 'Ka zama mai kirki da girmamawa',
+            body: [
+              'Babu cin zali, tsangwama, barazana, ƙiyayya ko yi wa kowa ba’a saboda yadda yake koyo, kamanninsa ko inda ya fito.',
+            ],
+          },
+          safe: {
+            title: 'Ka kiyaye tsaro da dacewa da shekaru',
+            body: ['Kada ka raba ko ƙirƙira:'],
+            bullets: [
+              'Abun ciki na batsa, na tashin hankali ko mai muni a gani',
+              'Abun ciki da ke ƙarfafa cutar da kai, ƙwayoyi ko ƙalubale masu haɗari',
+              'Zamba, saƙon banza ko hanyoyin haɗi zuwa shafukan da ba su da aminci',
+            ],
+          },
+          private: {
+            title: 'Ka kare sirrinka',
+            body: [
+              'Kada ka raba lambar wayarka, adireshinka, jadawalin makarantarka ko kalmomin sirri, ko na wani daban. Ma’aikatan Knowzone ba za su taɓa tambayar kalmar sirrinka ba.',
+            ],
+          },
+          honest: {
+            title: 'Ka yi wasa da adalci',
+            body: [
+              'Kada ka yi magudi a fafatawa ko jadawalin gwaraza, ka yi amfani da asusu fiye da ɗaya, ko ka yi amfani da Knowzone don yin magudi a jarrabawa. Yi amfani da AI don fahimta, ba don kwafa ba.',
+            ],
+          },
+          names: {
+            title: 'Sunaye da avatar',
+            body: ['Zaɓi sunaye da avatar masu kyau waɗanda ba sa yin kamar wani mutum daban.'],
+          },
+          enforce: {
+            title: 'Abin da ke faruwa idan aka karya dokoki',
+            body: [
+              'Ya danganta da girman laifin, za mu iya cire abun ciki, ba da gargaɗi, taƙaita fasaloli kamar jadawalin gwaraza da fafatawa, ko dakatar da asusun. Za ka iya ɗaukaka ƙara kan kowane hukunci daga shafin matsayin asusu.',
+            ],
+          },
+          report: {
+            title: 'Kai rahoto',
+            body: [
+              'Kai rahoton ’yan wasa da abun ciki da “Kai rahoto” ko daga Taimako. Rahotanni sirri ne. Idan wani yana cikin haɗari a yanzu, kira 112 ko ka gaya wa babban mutum da ka amince da shi tukuna.',
+            ],
+          },
+        },
+      },
+      ai: {
+        title: 'Iyakokin AI da daidaitonsa',
+        eyebrow: 'YADDA AI KE AIKI A NAN',
+        summary: [
+          'AI na iya yin kuskure cikin ƙarfin gwiwa. Ka sake tabbatar da muhimman bayanai.',
+          'Yi amfani da shi tare da malamanka, littattafanka da manhajar karatu ta hukuma.',
+          'Ka ga kuskure? Ka kai rahoto don mu gyara.',
+        ],
+        sections: {
+          what: {
+            title: 'Abin da AI ɗinmu ke yi',
+            body: [
+              'Knowzone yana amfani da manyan samfuran harshe (a yanzu daga OpenAI) don bayyana maudu’ai, amsa tambayoyi, da mayar da kayanka zuwa taƙaitattun bayanai, katunan bita, gwaje-gwaje da rubutun bidiyo.',
+            ],
+          },
+          limits: {
+            title: 'Inda zai iya yin kuskure',
+            body: ['Abin da AI ya samar na iya:'],
+            bullets: [
+              'Ƙunshi kurakurai na gaskiya, musamman a lissafi, kwanan wata da alƙaluma',
+              'Rasa bayanai daga takamaiman manhajarka ko hukumar jarrabawarka (WAEC, NECO, JAMB)',
+              'Kasa karanta rubutun hannu daidai, hotuna masu duhu-duhu ko zane-zane masu sarƙaƙiya',
+              'Rashin sanin abubuwan da suka faru kwanan nan ko canje-canjen manhaja',
+              'Yin magana da ƙarfin gwiwa ko da ba daidai ba ne',
+            ],
+          },
+          use: {
+            title: 'Yadda za ka yi amfani da shi da kyau',
+            bullets: [
+              'Tabbatar da muhimman bayanai, dabaru (formulas) da amsoshi da littafinka ko malaminka',
+              'Nemi malamin ya nuna aikinsa mataki-mataki',
+              'Yi amfani da gwaje-gwaje don auna fahimtarka, ba a matsayin amsoshin jarrabawa na hukuma ba',
+              'Kada ka dogara da Knowzone don shawarar lafiya, doka ko tsaro',
+            ],
+          },
+          exams: {
+            title: 'Jarrabawa da gaskiya',
+            body: [
+              'Knowzone don koyo ne. Amfani da shi yayin jarrabawa ko gwaji inda ba a yarda ba ya karya sharuɗɗanmu da dokokin makarantarka.',
+            ],
+          },
+          safety: {
+            title: 'Matatun tsaro',
+            body: [
+              'Muna amfani da matatu don kiyaye amsoshi su dace da shekaru kuma su tsaya kan maudu’i, amma babu matatar da ta cika. Idan ka ga wani abu da bai dace ba, ka kai rahoto nan take.',
+            ],
+          },
+          improve: {
+            title: 'Bayananka da AI',
+            body: [
+              'Ana amfani da abubuwan da ka ɗora don yin kayan karatunka. Ana amfani da su don inganta AI na Knowzone ne kawai idan ka kunna hakan a Saituna → Sirri.',
+            ],
+          },
+        },
+      },
+    },
+  },
+  copyright: {
+    eyebrow: 'DOKA',
+    title: 'Haƙƙin mallaka',
+    steps: [
+      'Aika sanarwa tare da bayanan da ke ƙasa',
+      'Muna duba ta cikin kwanaki 3 na aiki kuma mu cire kayan da ke keta haƙƙi',
+      'Idan wani mai amfani ne ya raba shi, za a sanar da shi kuma zai iya aika sanarwar martani idan yana ganin mun yi kuskure',
+      'Ana dakatar da asusun da ke maimaita keta haƙƙi',
+    ],
+    sendError: 'An kasa aika sanarwarka. Don Allah ka sake gwadawa.',
+    receivedTitle: 'An karɓi sanarwa',
+    receivedBody: 'Lambar shaida {{reference}}. Za mu duba ta cikin kwanaki 3 na aiki mu amsa zuwa {{email}}.',
+    intro:
+      'Muna girmama aikin masu ƙirƙira. Ya kamata ɗalibai su ɗora kayan da aka ba su izinin amfani da su kawai. Idan kai ne mai abun ciki da ya bayyana a Knowzone ba tare da izini ba, gaya mana a nan.',
+    howItWorks: 'Yadda yake aiki',
+    privateNote:
+      'Rubuce-rubuce da fayilolin da ɗalibai ke ɗorawa don karatunsu sirri ne a gare su kuma ba a wallafa su ga wasu.',
+    sendTitle: 'Aika sanarwa',
+    name: 'Cikakken sunanka',
+    email: 'Imel',
+    organisation: 'Ƙungiya (na zaɓi)',
+    organisationPlaceholder: 'Mawallafi, makaranta, kamfani',
+    work: 'Aikinka',
+    workPlaceholder: 'Bayyana ainihin aikin, misali sunan littafi, bugu da shafuka, ko hanyar haɗi zuwa gare shi',
+    location: 'Inda ya bayyana a Knowzone',
+    locationPlaceholder: 'Sunan bidiyo ko kwas, hanyar haɗi, ko inda ka gan shi',
+    statementLabel: 'Bayanin kyakkyawar niyya',
+    statement:
+      'Na yi imani da kyakkyawar niyya cewa mai shi ko doka ba su ba da izinin wannan amfani ba, kuma bayanin da ke cikin wannan sanarwa daidai ne. Ni ne mai shi ko an ba ni izinin yin aiki a madadinsa.',
+    send: 'Aika sanarwa',
+    footer:
+      'Abun ciki mara daidai ko mai cutarwa da bai shafi haƙƙin mallaka ba? Yi amfani da Kai rahoton abun ciki a Cibiyar taimako maimakon haka.',
+  },
+  accountStatus: {
+    eyebrow: 'ASUSU',
+    title: 'Matsayin asusu',
+    appealError: 'An kasa aika ƙararka',
+    goodTitle: 'Asusunka yana cikin yanayi mai kyau',
+    goodBody:
+      'Babu gargaɗi, taƙaitawa ko dakatarwa. Na gode da taimakawa wajen kiyaye Knowzone a matsayin wuri mai kyau na koyo.',
+    backToLearning: 'Koma ga koyo',
+    suspendedTitle: 'An dakatar da asusunka',
+    limitedTitle: 'An taƙaita wasu fasaloli',
+    suspendedUntil: 'An dakatar har zuwa {{date}}. Komai zai dawo kai tsaye bayan haka.',
+    limitedUntil: 'An taƙaita har zuwa {{date}}. Komai zai dawo kai tsaye bayan haka.',
+    suspendedReview: 'Har sai ƙungiyarmu ta duba shi. Za ka iya ɗaukaka ƙara a ƙasa.',
+    limitedReview: 'Har sai ƙungiyarmu ta duba shi. Za ka iya ci gaba da koyo kamar yadda aka saba.',
+    why: 'DALILI',
+    decision: 'An yanke hukunci {{date}} ƙarƙashin Ƙa’idojin Al’ummarmu.',
+    cantWhileLimited: 'YAYIN DA AKA TAƘAITA KA, BA ZA KA IYA BA',
+    limits: {
+      leaderboards: 'Bayyana a jadawalin gwaraza',
+      battles: 'Fara fafatawar gwaji da abokai',
+      invites: 'Aika gayyata da hanyoyin haɗin gayyata',
+      sharing: 'Raba bidiyo da fakitin karatu',
+    },
+    stillWorks: 'Darussa, malamin AI, fakitin karatu da ci gabanka duk suna aiki kamar yadda aka saba',
+    canStillDo: 'ABIN DA HAR YANZU ZA KA IYA YI',
+    canDo: [
+      'Ɗaukaka ƙara kan hukuncin',
+      'Tuntuɓi tallafi',
+      'Sauke bayananka',
+      'Ana ajiye ci gabanka, XP da takardun shaidarka cikin aminci',
+    ],
+    appealPending: 'Ana duba ƙarar',
+    appealRejected: 'Ba a amince da ƙarar ba',
+    appealPendingBody: 'An aika {{date}}. Wani mai sa ido daban zai duba ta cikin kwanaki 3 na aiki.',
+    appealRejectedBody: 'Hukuncin farko yana nan. Tuntuɓi tallafi idan wani abu ya canza.',
+    viewAppeal: 'Duba ƙara {{id}}',
+    appealTitle: 'Ɗaukaka ƙara kan wannan hukunci',
+    appealIntro:
+      'Bayyana dalilin da ya sa kake ganin kuskure ne, ko abin da ya canza. Wani mai sa ido daban zai duba shi.',
+    appealLabel: 'Ƙararka',
+    sendAppeal: 'Aika ƙara',
+    continue: 'Ci gaba zuwa Knowzone',
+    helpCentre: 'Cibiyar taimako',
+    downloadData: 'Sauke bayanaina',
+    logOut: 'Fita',
+  },
+};
+
+export default help;

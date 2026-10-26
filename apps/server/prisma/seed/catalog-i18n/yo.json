@@ -1,0 +1,523 @@
+{
+  "categories": {
+    "sciences": {
+      "name": "Sáyẹ́ǹsì"
+    },
+    "maths": {
+      "name": "Ìṣirò"
+    },
+    "languages": {
+      "name": "Èdè & Lítírésọ̀"
+    },
+    "humanities": {
+      "name": "Ẹ̀kọ́ Ọmọnìyàn"
+    },
+    "business": {
+      "name": "Iṣòwò & Owó"
+    },
+    "tech": {
+      "name": "Ìmọ̀ Ẹ̀rọ & Ọgbọ́n Ọjọ́ Iwájú"
+    }
+  },
+  "subjects": {
+    "mathematics": {
+      "name": "Ìṣirò",
+      "description": "Nọ́ńbà, àlùjẹ́bà, jọ́mẹ́trì àti ọgbọ́n tó wà lẹ́yìn wọn.",
+      "topics": [
+        "Àlùjẹ́bà",
+        "Ìdọ́gba quadratic",
+        "Jọ́mẹ́trì",
+        "Ìṣirò dátà (Statistics)",
+        "Trigonometry",
+        "Calculus"
+      ]
+    },
+    "further-maths": {
+      "name": "Ìṣirò Gíga",
+      "description": "Matrices, vectors àti yíyanjú ìṣòro tó le jù.",
+      "topics": [
+        "Matrices",
+        "Vectors",
+        "Nọ́ńbà complex",
+        "Differentiation"
+      ]
+    },
+    "physics": {
+      "name": "Físíìsì",
+      "description": "Bí agbára, ipá àti gbogbo àgbáyé ṣe ń ṣiṣẹ́.",
+      "topics": [
+        "Ìrìn",
+        "Ipá (Forces)",
+        "Ìgbì",
+        "Iná mànàmáná",
+        "Agbára",
+        "Ìmọ̀ ìmọ́lẹ̀ (Optics)"
+      ]
+    },
+    "chemistry": {
+      "name": "Kẹ́mísírì",
+      "description": "Átọ̀mù, ìhùwàsí kẹ́míkà àti ohun tí a fi ṣe ohun gbogbo.",
+      "topics": [
+        "Èrò mole (Mole concept)",
+        "Ìsopọ̀ kẹ́míkà",
+        "Kẹ́mísírì organic",
+        "Electrolysis",
+        "Ìyára ìhùwàsí kẹ́míkà"
+      ]
+    },
+    "biology": {
+      "name": "Bàyọ́lọ́jì",
+      "description": "Àwọn ohun ẹlẹ́mìí, láti sẹ́ẹ̀lì títí dé gbogbo àyíká ìgbé-ayé (ecosystem).",
+      "topics": [
+        "Bàyọ́lọ́jì sẹ́ẹ̀lì",
+        "Jẹ́nẹ́tíìkì",
+        "Ìmọ̀ àyíká (Ecology)",
+        "Oúnjẹ ara (Nutrition)",
+        "Bí ara ènìyàn ṣe ń ṣiṣẹ́"
+      ]
+    },
+    "agric": {
+      "name": "Ẹ̀kọ́ Iṣẹ́ Àgbẹ̀",
+      "description": "Ohun ọ̀gbìn, ilẹ̀, ẹranko àti iṣòwò oko.",
+      "topics": [
+        "Ìmọ̀ ilẹ̀",
+        "Ìpèsè ohun ọ̀gbìn",
+        "Ọ̀sìn ẹran"
+      ]
+    },
+    "english": {
+      "name": "Èdè Gẹ̀ẹ́sì",
+      "description": "Kíkà, kíkọ àti sísọ̀rọ̀ pẹ̀lú ìgboyà.",
+      "topics": [
+        "Òye kíkà (Comprehension)",
+        "Kíkọ àkópọ̀",
+        "Kíkọ àròkọ",
+        "Lexis & structure",
+        "Gẹ̀ẹ́sì ẹnu (Oral English)"
+      ]
+    },
+    "literature": {
+      "name": "Lítírésọ̀ Gẹ̀ẹ́sì",
+      "description": "Ìtàn àròsọ, ewì àti eré onítàn, tí a ṣàlàyé kedere.",
+      "topics": [
+        "Ìtàn àròsọ (Prose)",
+        "Ewì",
+        "Eré onítàn",
+        "Àwọn ọnà èdè (Literary devices)"
+      ]
+    },
+    "french": {
+      "name": "Èdè Faransé",
+      "description": "Faransé ojoojúmọ́ fún ilé-ìwé àti ìrìn-àjò.",
+      "topics": [
+        "Ìkíni",
+        "Ọ̀rọ̀-ìṣe",
+        "Gírámà",
+        "Ìjíròrò"
+      ]
+    },
+    "government": {
+      "name": "Ẹ̀kọ́ Ìjọba",
+      "description": "Bí a ṣe ń ṣàkóso orílẹ̀-èdè, àti ìdí tó fi ṣe pàtàkì.",
+      "topics": [
+        "Òfin orílẹ̀-èdè",
+        "Àwọn apá ìjọba",
+        "Ètò ìdìbò",
+        "Ìjọba àpapọ̀ Nàìjíríà"
+      ]
+    },
+    "history": {
+      "name": "Ìtàn",
+      "description": "Àwọn ìtàn àtijọ́ tó mọ ayé òde òní.",
+      "topics": [
+        "Áfíríkà ṣáájú ìjọba amúnisìn",
+        "Àsìkò ìjọba amúnisìn",
+        "Ìjàǹgbara fún òmìnira",
+        "Àwọn ogun àgbáyé"
+      ]
+    },
+    "geography": {
+      "name": "Jogírafì",
+      "description": "Ayé wa, àwọn ènìyàn rẹ̀ àti ìṣesí ojú-ọjọ́ rẹ̀.",
+      "topics": [
+        "Kíka máàpù",
+        "Ìṣesí ojú-ọjọ́",
+        "Iye ènìyàn",
+        "Ìrísí ilẹ̀"
+      ]
+    },
+    "economics": {
+      "name": "Ọ̀rọ̀-ajé",
+      "description": "Owó, ọjà àti bí a ṣe ń ṣe ìpinnu.",
+      "topics": [
+        "Ìbéèrè & ìpèsè",
+        "Elasticity",
+        "Ọ̀wọ́ngógó (Inflation)",
+        "Owó-wọlé orílẹ̀-èdè",
+        "Ètò ọjà"
+      ]
+    },
+    "accounting": {
+      "name": "Ìṣirò Owó Ìṣúná",
+      "description": "Ìwé àkọsílẹ̀, ledger àti ìjábọ̀ ìṣúná owó.",
+      "topics": [
+        "Double entry",
+        "Trial balance",
+        "Final accounts",
+        "Àdínkù iye (Depreciation)"
+      ]
+    },
+    "entrepreneurship": {
+      "name": "Iṣòwò Àdáni",
+      "description": "Sísọ èrò di iṣòwò tó ń ṣiṣẹ́.",
+      "topics": [
+        "Èrò iṣòwò",
+        "Ìpolówó ọjà",
+        "Ìdíyelé",
+        "Ìgbékalẹ̀ èrò (Pitching)"
+      ]
+    },
+    "computer-science": {
+      "name": "Sáyẹ́ǹsì Kọ̀ǹpútà",
+      "description": "Bí kọ̀ǹpútà ṣe ń ronú, láti ọgbọ́n (logic) dé kóòdù.",
+      "topics": [
+        "Algorithm",
+        "Ìpìlẹ̀ programming",
+        "Data structures",
+        "Nẹ́tíwọ̀ọ̀kì"
+      ]
+    },
+    "ai-literacy": {
+      "name": "Ìmọ̀ AI",
+      "description": "Kí ni AI, bí ó ṣe ń ṣiṣẹ́ àti bí a ṣe lè lò ó dáadáa.",
+      "topics": [
+        "Kí ni AI",
+        "Machine learning",
+        "Prompting",
+        "Ìlànà ìwà AI"
+      ]
+    }
+  },
+  "lessons": {
+    "l1": {
+      "title": "Bí sẹ́ẹ̀lì ṣe ń ṣe agbára",
+      "topic": "Bàyọ́lọ́jì sẹ́ẹ̀lì",
+      "summary": "Mitochondria ń sọ glucose àti oxygen di ATP, owó agbára tí gbogbo sẹ́ẹ̀lì ń ná.",
+      "keyPoints": [
+        "Respiration (mímí sẹ́ẹ̀lì) ń ṣẹlẹ̀ nínú mitochondria",
+        "Glucose + oxygen → CO₂ + omi + ATP",
+        "Anaerobic respiration ń ṣe lactic acid nínú iṣan ara"
+      ]
+    },
+    "l2": {
+      "title": "Jẹ́nẹ́tíìkì ní ọ̀nà tó rọrùn: dominant àti recessive",
+      "topic": "Jẹ́nẹ́tíìkì",
+      "summary": "Ìdí tí o fi lè ní ojú màmá rẹ ṣùgbọ́n gíga bàbá-àgbà rẹ: alleles, genotypes àti Punnett squares.",
+      "keyPoints": [
+        "Ìwà-àbínibí (trait) kọ̀ọ̀kan ní alleles méjì",
+        "Dominant alleles ń bo àwọn recessive mọ́lẹ̀",
+        "Punnett squares ń sọ ìpín àwọn ọmọ tí a ó bí tẹ́lẹ̀"
+      ]
+    },
+    "l3": {
+      "title": "Ẹ̀wọ̀n oúnjẹ (food chain) àti ìṣàn agbára",
+      "topic": "Ìmọ̀ àyíká (Ecology)",
+      "summary": "Agbára ń lọ láti ọ̀dọ̀ olùpèsè (producers) sí olùjẹ (consumers), ìwọ̀n 10% nìkan ló sì ń kọjá sí ìpele tó tẹ̀lé.",
+      "keyPoints": [
+        "Olùpèsè ń ṣe oúnjẹ nípasẹ̀ photosynthesis",
+        "Ìwọ̀n 10% agbára ló ń gòkè sí ìpele kọ̀ọ̀kan",
+        "Decomposers (olùjẹrà) ń tún àwọn èròjà ṣe lò"
+      ]
+    },
+    "l4": {
+      "title": "Èrò mole ní ìṣẹ́jú 5",
+      "topic": "Èrò mole (Mole concept)",
+      "summary": "Mole kan jẹ́ particles 6.02 × 10²³. Kọ́ bí o ṣe lè yí padà láàárín mass, moles àti particles pẹ̀lú ìgboyà.",
+      "keyPoints": [
+        "1 mole = 6.02 × 10²³ particles",
+        "Moles = mass ÷ molar mass",
+        "Lo ìpín (ratio) láti inú balanced equations"
+      ]
+    },
+    "l5": {
+      "title": "Ionic àti covalent bonding",
+      "topic": "Ìsopọ̀ kẹ́míkà",
+      "summary": "Ionic bonds ń gbé electrons fúnni; covalent bonds ń pín wọn. Káàdì 20 láti jẹ́ kó dúró sí ọpọlọ.",
+      "keyPoints": [
+        "Ionic: metal + non-metal, gbígbé electron",
+        "Covalent: àwọn non-metal tí ń pín electrons",
+        "Ionic compounds ń gbé iná mànàmáná nígbà tí wọ́n bá yọ́ (molten)"
+      ]
+    },
+    "l6": {
+      "title": "Kẹ́mísírì organic: sísọ àwọn alkane lórúkọ",
+      "topic": "Kẹ́mísírì organic",
+      "summary": "Dán ara rẹ wò lórí ìsọlórúkọ IUPAC fún alkanes, alkenes àti alcohols.",
+      "keyPoints": [
+        "Wá ẹ̀wọ̀n carbon tó gùn jù",
+        "Bẹ̀rẹ̀ nọ́ńbà láti òpin tó súnmọ́ ẹ̀ka (branch) jù",
+        "Àwọn ìbẹ̀rẹ̀ (prefixes): meth, eth, prop, but…"
+      ]
+    },
+    "l7": {
+      "title": "Òfin mẹ́ta Newton, ní àlàyé",
+      "topic": "Ipá (Forces)",
+      "summary": "Inertia, F = ma, àti action–reaction, pẹ̀lú àpẹẹrẹ ojoojúmọ́ láti ọkọ̀ danfo dé bọ́ọ̀lù.",
+      "keyPoints": [
+        "Ohun kan máa dúró jẹ́ẹ́ àyàfi tí nǹkan bá ṣiṣẹ́ lé e lórí",
+        "Force = mass × acceleration",
+        "Gbogbo action ló ní reaction tó dọ́gba tó sì lòdì sí i"
+      ]
+    },
+    "l8": {
+      "title": "Òfin Ohm àti circuit tó rọrùn",
+      "topic": "Iná mànàmáná",
+      "summary": "V = IR. Bí voltage, current àti resistance ṣe jọ ń ṣiṣẹ́ nínú circuit series àti parallel.",
+      "keyPoints": [
+        "V = I × R",
+        "Series: àwọn resistance ń di àròpọ̀",
+        "Parallel: 1/R = 1/R₁ + 1/R₂"
+      ]
+    },
+    "l9": {
+      "title": "Ìgbì: frequency, wavelength, ìyára",
+      "topic": "Ìgbì",
+      "summary": "Ìbéèrè mẹ́wàá bí ti ìdánwò lórí v = fλ.",
+      "keyPoints": [
+        "v = f × λ",
+        "Transverse àti longitudinal",
+        "Ohùn (sound) nílò ohun tí yóò gbé e kọjá (medium)"
+      ]
+    },
+    "l10": {
+      "title": "Yíyanjú ìdọ́gba quadratic",
+      "topic": "Ìdọ́gba quadratic",
+      "summary": "Factorisation, completing the square àti formula. Yan ọ̀nà tó yára jù nígbà gbogbo.",
+      "keyPoints": [
+        "Kọ́kọ́ gbìyànjú factorising",
+        "x = (−b ± √(b²−4ac)) / 2a",
+        "Discriminant ń sọ iye roots tí ó wà fún ọ"
+      ]
+    },
+    "l11": {
+      "title": "Trigonometry: SOH CAH TOA",
+      "topic": "Trigonometry",
+      "summary": "Ìpín sine, cosine àti tangent pẹ̀lú ọgbọ́n ìrántí tí kì í gbàgbé.",
+      "keyPoints": [
+        "sin = opposite / hypotenuse",
+        "cos = adjacent / hypotenuse",
+        "tan = opposite / adjacent"
+      ]
+    },
+    "l12": {
+      "title": "Statistics: mean, median àti mode",
+      "topic": "Ìṣirò dátà (Statistics)",
+      "summary": "Ọ̀nà mẹ́ta láti ṣàpèjúwe “àárín” dátà, àti ìgbà tí a ó lo ọ̀kọ̀ọ̀kan.",
+      "keyPoints": [
+        "Mean: ṣe àròpọ̀ kí o sì pín in",
+        "Median: iye tó wà ní àárín",
+        "Mode: èyí tó fara hàn jù"
+      ]
+    },
+    "l13": {
+      "title": "Differentiation láti first principles",
+      "topic": "Differentiation",
+      "summary": "Ohun tí derivative túmọ̀ sí gan-an, tí a kọ́ ní ìgbésẹ̀-ìgbésẹ̀.",
+      "keyPoints": [
+        "Derivative ni ìyára ìyípadà (rate of change)",
+        "Limit of (f(x+h) − f(x)) / h",
+        "Power rule: d/dx xⁿ = nxⁿ⁻¹"
+      ]
+    },
+    "l14": {
+      "title": "Kíkọ ìfáárà àròkọ tó lágbára",
+      "topic": "Kíkọ àròkọ",
+      "summary": "Hook, àyíká ọ̀rọ̀, thesis: ìfáárà apá mẹ́ta tí àwọn olùyẹ̀wò fẹ́ràn.",
+      "keyPoints": [
+        "Bẹ̀rẹ̀ pẹ̀lú hook (ohun tó ń fa ojú mọ́ra)",
+        "Fún wọn ní àyíká ọ̀rọ̀ ní ṣókí",
+        "Parí pẹ̀lú thesis tó ṣe kedere"
+      ]
+    },
+    "l15": {
+      "title": "Kíkọ àkópọ̀ tó ń gba máàkì",
+      "topic": "Kíkọ àkópọ̀",
+      "summary": "Bí o ṣe lè rí àwọn kókó pàtàkì kí o sì tún wọn kọ ní ọ̀rọ̀ ara rẹ, láìkọjá iye ọ̀rọ̀ tí a fún ọ.",
+      "keyPoints": [
+        "Ka ìbéèrè náà lẹ́ẹ̀mejì",
+        "Kókó kan nínú gbólóhùn kan",
+        "Má ṣe da gbogbo gbólóhùn kọ láé"
+      ]
+    },
+    "l16": {
+      "title": "Ìdánrawò Lexis & structure",
+      "topic": "Lexis & structure",
+      "summary": "Synonyms, antonyms àti sentence completion bí ti JAMB.",
+      "keyPoints": [
+        "Kọ́kọ́ ka gbogbo gbólóhùn náà",
+        "Ṣọ́ àwọn àmì tense",
+        "Yọ àwọn ìdáhùn tí ó hàn gbangba pé kò tọ̀nà kúrò"
+      ]
+    },
+    "l17": {
+      "title": "Things Fall Apart: àwọn kókó-ọ̀rọ̀ (themes)",
+      "topic": "Ìtàn àròsọ (Prose)",
+      "summary": "Ìgbéraga, àṣà àti ìyípadà nínú ìwé olókìkí Achebe, gẹ́gẹ́ bí ẹ̀kọ́ olóhùn tí o lè gbọ́ níbikíbi.",
+      "keyPoints": [
+        "Ìbẹ̀rù àìlera Okonkwo",
+        "Àṣà àti ìyípadà ìjọba amúnisìn",
+        "Akọni oníjàǹbá (tragic hero)"
+      ]
+    },
+    "l18": {
+      "title": "Ìbéèrè àti ìpèsè, ní ọ̀nà tó rọrùn",
+      "topic": "Ìbéèrè & ìpèsè",
+      "summary": "Ìdí tí iye owó fi ń gòkè tí ó sì ń wálẹ̀, a fi ọjà tòmátò ṣe àpẹẹrẹ.",
+      "keyPoints": [
+        "Ìbéèrè (demand) ń dínkù bí iye owó ṣe ń gòkè",
+        "Ìpèsè (supply) ń pọ̀ sí i bí iye owó ṣe ń gòkè",
+        "Equilibrium ni ibi tí àwọn méjèèjì ti pàdé"
+      ]
+    },
+    "l19": {
+      "title": "Ọ̀wọ́ngógó: ìdí tí iye owó kò fi dẹ́kun gígòkè",
+      "topic": "Ọ̀wọ́ngógó (Inflation)",
+      "summary": "Àwọn ohun tó ń fà á, àbájáde rẹ̀ àti bí àwọn banki àpapọ̀ (central banks) ṣe ń bá a jà.",
+      "keyPoints": [
+        "Demand-pull àti cost-push",
+        "Ọ̀wọ́ngógó ń dín agbára ìrajà owó kù",
+        "Interest rates (èlé owó) ni irinṣẹ́ pàtàkì jù"
+      ]
+    },
+    "l20": {
+      "title": "Double entry bookkeeping",
+      "topic": "Double entry",
+      "summary": "Gbogbo ìdúnàádúrà ló ní ẹ̀gbẹ́ méjì. Debits, credits àti accounting equation.",
+      "keyPoints": [
+        "Assets = Liabilities + Capital",
+        "Gbogbo debit ló ní credit tó bá a mu",
+        "Lo T-accounts láti fi ṣe ìdánrawò"
+      ]
+    },
+    "l21": {
+      "title": "Àwọn apá ìjọba",
+      "topic": "Àwọn apá ìjọba",
+      "summary": "Aṣòfin (legislature), aláṣẹ (executive) àti ẹ̀ka ìdájọ́ (judiciary): ta ló ń ṣe kí ni.",
+      "keyPoints": [
+        "Aṣòfin ń ṣe òfin",
+        "Aláṣẹ ń mú wọn ṣẹ",
+        "Ẹ̀ka ìdájọ́ ń túmọ̀ wọn"
+      ]
+    },
+    "l22": {
+      "title": "Òmìnira Nàìjíríà ní ìṣẹ̀lẹ̀ 10",
+      "topic": "Ìjàǹgbara fún òmìnira",
+      "summary": "Láti ìsopọ̀ (amalgamation) 1914 títí dé 1 October 1960.",
+      "keyPoints": [
+        "Ìsopọ̀ (amalgamation) 1914",
+        "Ìjàǹgbara àwọn ọmọ orílẹ̀-èdè (nationalist movements)",
+        "Òmìnira ní 1 October 1960"
+      ]
+    },
+    "l23": {
+      "title": "Kíka máàpù contour",
+      "topic": "Kíka máàpù",
+      "summary": "Contours, spot heights àti gradients, tí a ṣàlàyé.",
+      "keyPoints": [
+        "Contours tó súnmọ́ ara wọn = gẹ̀rẹ́gẹ̀rẹ́ tó ga (steep slope)",
+        "Contour interval kì í yípadà",
+        "Ìrísí V ń tọ́ka sí orí odò (upstream)"
+      ]
+    },
+    "l24": {
+      "title": "Program Python rẹ àkọ́kọ́",
+      "topic": "Ìpìlẹ̀ programming",
+      "summary": "Variables, print àti input: kọ program tí yóò kí ọ ní orúkọ rẹ.",
+      "keyPoints": [
+        "Variables ń tọ́jú àwọn iye (values)",
+        "print() ń fi àbájáde hàn",
+        "input() ń ka ohun tí olùlò bá tẹ̀"
+      ]
+    },
+    "l25": {
+      "title": "Algorithm nínú ìgbé-ayé ojoojúmọ́",
+      "topic": "Algorithm",
+      "summary": "Ìlànà oúnjẹ sísè, ìtọ́sọ́nà ọ̀nà àti títo playlist rẹ: algorithm wà níbi gbogbo.",
+      "keyPoints": [
+        "Algorithm jẹ́ àkójọ ìgbésẹ̀",
+        "Ìtòlẹ́sẹẹsẹ ṣe pàtàkì",
+        "Algorithm tó dára máa ń yára, kì í sì í fi nǹkan ṣòfò"
+      ]
+    },
+    "l26": {
+      "title": "Kí ni AI, gan-an?",
+      "topic": "Kí ni AI",
+      "summary": "Bí ẹ̀rọ ṣe ń kọ́ àpẹẹrẹ (patterns) láti inú dátà, àti ohun tí wọn kò tíì lè ṣe.",
+      "keyPoints": [
+        "AI ń kọ́ patterns láti inú àpẹẹrẹ",
+        "Ó ń sọ tẹ́lẹ̀, kò “mọ̀” nǹkan",
+        "Máa ṣàyẹ̀wò ìdáhùn AI nígbà gbogbo"
+      ]
+    },
+    "l27": {
+      "title": "Prompting bí ògbóǹtarìgì",
+      "topic": "Prompting",
+      "summary": "Fún un ní àyíká ọ̀rọ̀, yan ipa fún un kí o sì béèrè fún ìrísí ìdáhùn: gba ìdáhùn tó dára jù láti ọ̀dọ̀ AI.",
+      "keyPoints": [
+        "Sọ àfojúsùn rẹ ní pàtó",
+        "Fún un ní àpẹẹrẹ",
+        "Ní kí ó ronú ní ìgbésẹ̀-ìgbésẹ̀"
+      ]
+    },
+    "l28": {
+      "title": "Dídíyelé ọjà rẹ àkọ́kọ́",
+      "topic": "Ìdíyelé",
+      "summary": "Cost-plus, value-based àti competitor pricing fún àwọn ọ̀dọ́ oníṣòwò.",
+      "keyPoints": [
+        "Mọ gbogbo ìnáwó rẹ",
+        "Díyelé gẹ́gẹ́ bí iyì ọjà, kì í ṣe ìnáwó nìkan",
+        "Dán an wò kí o sì ṣàtúnṣe"
+      ]
+    },
+    "l29": {
+      "title": "Ìkíni & ìfara-ẹni-hàn ní Faransé",
+      "topic": "Ìkíni",
+      "summary": "Bonjour, ça va? Sọ gbólóhùn Faransé rẹ àkọ́kọ́ pẹ̀lú ìgboyà.",
+      "keyPoints": [
+        "Bonjour / Bonsoir",
+        "Je m’appelle…",
+        "Comment ça va?"
+      ]
+    },
+    "l30": {
+      "title": "Electrolysis ní ìgbésẹ̀-ìgbésẹ̀",
+      "topic": "Electrolysis",
+      "summary": "Ohun tó ń ṣẹlẹ̀ ní anode àti cathode, àti bí a ṣe lè sọ àwọn èso (products) tẹ́lẹ̀.",
+      "keyPoints": [
+        "Cations ń lọ sí cathode",
+        "Anions ń lọ sí anode",
+        "Oxidation ní anode, reduction ní cathode"
+      ]
+    },
+    "l31": {
+      "title": "Ọkàn ènìyàn àti ìṣàn ẹ̀jẹ̀",
+      "topic": "Bí ara ènìyàn ṣe ń ṣiṣẹ́",
+      "summary": "Ìbéèrè méjìlá lórí ọkàn, àwọn òpó ẹ̀jẹ̀ àti double circulation.",
+      "keyPoints": [
+        "Yàrá (chambers) mẹ́rin",
+        "Arteries ń gbé ẹ̀jẹ̀ kúrò lọ́dọ̀ ọkàn",
+        "Double circulation nínú àwọn ẹranko afọ́mọlọ́mú (mammals)"
+      ]
+    },
+    "l32": {
+      "title": "Jọ́mẹ́trì: igun nínú òbìrí",
+      "topic": "Jọ́mẹ́trì",
+      "summary": "Circle theorems pẹ̀lú àwòrán tí o lè tẹ̀lé ní tòótọ́.",
+      "keyPoints": [
+        "Igun ní àárín (centre) = 2 × igun ní circumference",
+        "Àwọn igun nínú segment kan náà dọ́gba",
+        "Àwọn igun òdìkejì nínú cyclic quad ń di 180°"
+      ]
+    }
+  }
+}

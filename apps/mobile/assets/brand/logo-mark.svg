@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5A3BFF"/>
+      <stop offset="0.55" stop-color="#8E4DFF"/>
+      <stop offset="1" stop-color="#B04CFF"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.92" cy="0.95" r="0.75">
+      <stop offset="0" stop-color="#2DD4BF" stop-opacity="0.85"/>
+      <stop offset="0.6" stop-color="#2DD4BF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="shine" cx="0.2" cy="0.1" r="0.7">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFE7A8"/>
+      <stop offset="1" stop-color="#FFB627"/>
+    </linearGradient>
+  </defs>
+  <rect width="1024" height="1024" rx="232" fill="url(#bg)"/>
+  <rect width="1024" height="1024" rx="232" fill="url(#glow)"/>
+  <rect width="1024" height="1024" rx="232" fill="url(#shine)"/>
+  <g transform="translate(-64 40)">
+  <g fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="124">
+    <path d="M330 300 V724"/>
+    <path d="M330 540 L585 345"/>
+    <path d="M440 472 L680 724"/>
+  </g>
+  <path fill="url(#gold)" d="M742 150 C754 236 774 256 860 268 C774 280 754 300 742 386 C730 300 710 280 624 268 C710 256 730 236 742 150 Z"/>
+  <path fill="#FFFFFF" fill-opacity="0.9" d="M860 400 C865 432 872 439 904 444 C872 449 865 456 860 488 C855 456 848 449 816 444 C848 439 855 432 860 400 Z"/>
+  </g>
+</svg>

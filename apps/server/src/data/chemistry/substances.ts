@@ -1,0 +1,221 @@
+/**
+ * Mystery Substance: unknown liquids and what each school test shows for them (WAEC qualitative
+ * analysis). Every substance answers every test, so cases can be checked for a unique answer.
+ */
+export type TestId = 'litmus' | 'ph' | 'mg' | 'flame' | 'agno3' | 'naoh' | 'bacl2';
+
+/** Tests open at each level (appearance is always shown). */
+export const TESTS_BY_LEVEL: Record<number, TestId[]> = {
+  1: ['litmus', 'ph', 'mg'],
+  2: ['litmus', 'ph', 'mg', 'flame'],
+  3: ['litmus', 'ph', 'mg', 'flame', 'agno3'],
+  4: ['litmus', 'ph', 'mg', 'flame', 'agno3', 'naoh'],
+  5: ['litmus', 'ph', 'mg', 'flame', 'agno3', 'naoh', 'bacl2'],
+};
+
+export type Substance = { id: string; name: string; appearance: string; level: number; results: Record<TestId, string> };
+
+const none = 'No visible change';
+
+export const SUBSTANCES: Substance[] = [
+  {
+    id: 'hcl',
+    name: 'Dilute hydrochloric acid',
+    appearance: 'Colourless liquid',
+    level: 1,
+    results: {
+      litmus: 'Blue litmus turns red',
+      ph: 'pH 1',
+      mg: 'Fizzes quickly; a gas pops with a lighted splint',
+      flame: 'No flame colour',
+      agno3: 'White precipitate',
+      naoh: 'Gets warm; no precipitate',
+      bacl2: none,
+    },
+  },
+  {
+    id: 'naoh',
+    name: 'Sodium hydroxide solution',
+    appearance: 'Colourless liquid, feels soapy',
+    level: 1,
+    results: { litmus: 'Red litmus turns blue', ph: 'pH 13', mg: none, flame: 'Golden-yellow flame', agno3: 'Brown precipitate', naoh: none, bacl2: none },
+  },
+  {
+    id: 'water',
+    name: 'Distilled water',
+    appearance: 'Colourless liquid',
+    level: 1,
+    results: { litmus: 'No change to either litmus', ph: 'pH 7', mg: none, flame: 'No flame colour', agno3: none, naoh: none, bacl2: none },
+  },
+  {
+    id: 'vinegar',
+    name: 'Ethanoic acid (vinegar)',
+    appearance: 'Colourless liquid with a sharp smell',
+    level: 1,
+    results: {
+      litmus: 'Blue litmus turns red',
+      ph: 'pH 3',
+      mg: 'Fizzes slowly',
+      flame: 'No flame colour',
+      agno3: none,
+      naoh: 'Gets slightly warm; no precipitate',
+      bacl2: none,
+    },
+  },
+  {
+    id: 'nacl',
+    name: 'Sodium chloride solution',
+    appearance: 'Colourless liquid',
+    level: 2,
+    results: { litmus: 'No change to either litmus', ph: 'pH 7', mg: none, flame: 'Golden-yellow flame', agno3: 'White precipitate', naoh: none, bacl2: none },
+  },
+  {
+    id: 'kcl',
+    name: 'Potassium chloride solution',
+    appearance: 'Colourless liquid',
+    level: 2,
+    results: { litmus: 'No change to either litmus', ph: 'pH 7', mg: none, flame: 'Lilac flame', agno3: 'White precipitate', naoh: none, bacl2: none },
+  },
+  {
+    id: 'limewater',
+    name: 'Limewater (calcium hydroxide)',
+    appearance: 'Colourless liquid',
+    level: 2,
+    results: {
+      litmus: 'Red litmus turns blue',
+      ph: 'pH 12',
+      mg: none,
+      flame: 'Brick-red flame',
+      agno3: 'Brown precipitate',
+      naoh: 'Slight white cloudiness',
+      bacl2: none,
+    },
+  },
+  {
+    id: 'ethanol',
+    name: 'Ethanol',
+    appearance: 'Colourless liquid with a sweet smell',
+    level: 2,
+    results: {
+      litmus: 'No change to either litmus',
+      ph: 'pH 7',
+      mg: none,
+      flame: 'Catches fire and burns with a clean blue flame',
+      agno3: none,
+      naoh: none,
+      bacl2: none,
+    },
+  },
+  {
+    id: 'h2so4',
+    name: 'Dilute sulfuric acid',
+    appearance: 'Colourless liquid',
+    level: 3,
+    results: {
+      litmus: 'Blue litmus turns red',
+      ph: 'pH 1',
+      mg: 'Fizzes quickly; a gas pops with a lighted splint',
+      flame: 'No flame colour',
+      agno3: none,
+      naoh: 'Gets warm; no precipitate',
+      bacl2: 'White precipitate',
+    },
+  },
+  {
+    id: 'cuso4',
+    name: 'Copper(II) sulfate solution',
+    appearance: 'Blue liquid',
+    level: 3,
+    results: {
+      litmus: 'Blue litmus turns slightly red',
+      ph: 'pH 4',
+      mg: 'Brown coating forms on the magnesium; blue colour fades',
+      flame: 'Blue-green flame',
+      agno3: none,
+      naoh: 'Pale blue precipitate',
+      bacl2: 'White precipitate',
+    },
+  },
+  {
+    id: 'nh3',
+    name: 'Ammonia solution',
+    appearance: 'Colourless liquid with a choking smell',
+    level: 3,
+    results: {
+      litmus: 'Red litmus turns blue',
+      ph: 'pH 11',
+      mg: none,
+      flame: 'No flame colour',
+      agno3: 'Brown precipitate that dissolves in more ammonia',
+      naoh: 'Warming gives more choking gas',
+      bacl2: none,
+    },
+  },
+  {
+    id: 'feso4',
+    name: 'Iron(II) sulfate solution',
+    appearance: 'Pale green liquid',
+    level: 4,
+    results: {
+      litmus: 'Blue litmus turns slightly red',
+      ph: 'pH 4',
+      mg: 'A grey coating forms slowly',
+      flame: 'No flame colour (a few orange sparks)',
+      agno3: none,
+      naoh: 'Dirty green precipitate',
+      bacl2: 'White precipitate',
+    },
+  },
+  {
+    id: 'fecl3',
+    name: 'Iron(III) chloride solution',
+    appearance: 'Yellow-brown liquid',
+    level: 4,
+    results: {
+      litmus: 'Blue litmus turns red',
+      ph: 'pH 2',
+      mg: 'Fizzes; a dark coating forms',
+      flame: 'No flame colour (orange sparks)',
+      agno3: 'White precipitate',
+      naoh: 'Red-brown precipitate',
+      bacl2: none,
+    },
+  },
+  {
+    id: 'znso4',
+    name: 'Zinc sulfate solution',
+    appearance: 'Colourless liquid',
+    level: 4,
+    results: {
+      litmus: 'Blue litmus turns slightly red',
+      ph: 'pH 5',
+      mg: 'A grey coating forms slowly',
+      flame: 'No flame colour',
+      agno3: none,
+      naoh: 'White precipitate that dissolves in excess',
+      bacl2: 'White precipitate',
+    },
+  },
+  {
+    id: 'na2co3',
+    name: 'Sodium carbonate solution',
+    appearance: 'Colourless liquid',
+    level: 5,
+    results: {
+      litmus: 'Red litmus turns blue',
+      ph: 'pH 11',
+      mg: none,
+      flame: 'Golden-yellow flame',
+      agno3: 'Pale yellow-white precipitate',
+      naoh: none,
+      bacl2: 'White precipitate that fizzes in acid',
+    },
+  },
+  {
+    id: 'na2so4',
+    name: 'Sodium sulfate solution',
+    appearance: 'Colourless liquid',
+    level: 5,
+    results: { litmus: 'No change to either litmus', ph: 'pH 7', mg: none, flame: 'Golden-yellow flame', agno3: none, naoh: none, bacl2: 'White precipitate' },
+  },
+];

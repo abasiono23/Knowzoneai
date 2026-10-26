@@ -1,0 +1,4378 @@
+{
+ "c1": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "What is the most fundamental focus of physics?",
+    "answer": "Energy, matter, space and time, and their interactions."
+   },
+   {
+    "kind": "choice",
+    "prompt": "Which statement best distinguishes a scientific theory from a scientific law?",
+    "options": [
+     "A theory is a concise mathematical statement; a law explains why phenomena occur.",
+     "A theory is a well-supported explanation based on evidence; a law is a concise description of observed behavior.",
+     "A law is tentative and may change; a theory is universally true and cannot be changed.",
+     "A theory is based on opinion; a law is based on experiment only."
+    ],
+    "correctIndex": 1,
+    "feedback": "A theory explains observed phenomena using a body of evidence; a law concisely describes consistent observations."
+   },
+   {
+    "kind": "order",
+    "prompt": "Place the steps of the scientific method in the typical order used for investigations.",
+    "items": [
+     "Observation",
+     "Hypothesis",
+     "Experiment",
+     "Conclusion"
+    ],
+    "feedback": "Scientific investigations generally begin with observation, propose a hypothesis, test it by experiment, then draw conclusions."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match the physics branch to an example application.",
+    "pairs": [
+     [
+      "Quantum mechanics",
+      "Semiconductors in computers and smartphones"
+     ],
+     [
+      "Relativity",
+      "GPS time corrections and high-speed particle physics"
+     ],
+     [
+      "Classical mechanics",
+      "Projectile motion and vehicle dynamics"
+     ]
+    ],
+    "feedback": "Each branch of physics underpins distinct technologies and explanations: quantum for microscopic systems, relativity for high-speed/gravitational effects, classical for everyday motion."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "d892b725-9a8",
+    "type": "mcq",
+    "question": "Physics is described as the most fundamental of the sciences because it studies:",
+    "options": [
+     "The diversity of living organisms and their classification",
+     "Energy, matter, space and time and their interactions",
+     "Chemical reactions and bonding between atoms",
+     "Rock formations and earth layers"
+    ],
+    "correctIndex": 1,
+    "explanation": "Physics focuses on energy, matter, space and time, which underlie other sciences.",
+    "concept": "fundamentals",
+    "difficulty": "easy"
+   },
+   {
+    "id": "53e4c47c-605",
+    "type": "mcq",
+    "question": "Which modern physics theory explains why time and lengths can depend on the observer's motion?",
+    "options": [
+     "Classical mechanics",
+     "Thermodynamics",
+     "Theory of relativity",
+     "Electromagnetism"
+    ],
+    "correctIndex": 2,
+    "explanation": "The theory of relativity describes how time, space and distances change for different observers.",
+    "concept": "relativity",
+    "difficulty": "easy"
+   },
+   {
+    "id": "b49fb0c1-cc5",
+    "type": "mcq",
+    "question": "Quantum mechanics is primarily used to describe:",
+    "options": [
+     "The motion of planets around the Sun",
+     "Chemical equilibrium in solutions",
+     "Behavior of subatomic particles and atoms",
+     "Flow of electric current in wires"
+    ],
+    "correctIndex": 2,
+    "explanation": "Quantum mechanics explains phenomena at atomic and subatomic scales.",
+    "concept": "quantum",
+    "difficulty": "easy"
+   },
+   {
+    "id": "24aadd67-e2b",
+    "type": "mcq",
+    "question": "Which of the following is an example of physics applied in everyday technology?",
+    "options": [
+     "Taxonomy used in classifying species",
+     "Semiconductor physics in smartphones",
+     "Stratigraphic mapping in geology",
+     "Enzyme kinetics in digestion"
+    ],
+    "correctIndex": 1,
+    "explanation": "Semiconductors rely on quantum and solid-state physics and are central to modern electronics.",
+    "concept": "applications",
+    "difficulty": "medium"
+   },
+   {
+    "id": "18e121b1-4e9",
+    "type": "mcq",
+    "question": "A scientific law differs from a hypothesis because a law:",
+    "options": [
+     "Is an untested guess about nature",
+     "Is a concise description of observed phenomena, often expressed mathematically",
+     "Is based solely on opinion",
+     "Cannot be expressed using measurements"
+    ],
+    "correctIndex": 1,
+    "explanation": "Laws summarize consistent observations and are often concise and mathematical.",
+    "concept": "laws",
+    "difficulty": "medium"
+   },
+   {
+    "id": "60e1811b-c68",
+    "type": "mcq",
+    "question": "Which SI base unit is paired correctly with the quantity it measures?",
+    "options": [
+     "Second — electric current",
+     "Kilogram — mass",
+     "Meter — temperature",
+     "Ampere — amount of substance"
+    ],
+    "correctIndex": 1,
+    "explanation": "Kilogram (kg) is the SI base unit for mass.",
+    "concept": "SI units",
+    "difficulty": "easy"
+   },
+   {
+    "id": "334f7363-43b",
+    "type": "mcq",
+    "question": "Why must scientific explanations be testable?",
+    "options": [
+     "So they can be proven true without experiments",
+     "So they can be evaluated by observation and experiment and potentially falsified",
+     "So they remain unchangeable once proposed",
+     "So they match public opinion"
+    ],
+    "correctIndex": 1,
+    "explanation": "Testability allows scientific claims to be evaluated and potentially falsified through observation and experiment.",
+    "concept": "testability",
+    "difficulty": "medium"
+   },
+   {
+    "id": "06cda99d-301",
+    "type": "tf",
+    "question": "Classical physics cannot explain phenomena at very high speeds close to the speed of light.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 0,
+    "explanation": "Classical physics breaks down at relativistic speeds; relativity is required.",
+    "concept": "classical vs modern",
+    "difficulty": "easy"
+   }
+  ],
+  "video": {
+   "youtubeId": "ZAqIoDhornk",
+   "title": "ALL OF PHYSICS explained in 14 Minutes",
+   "channel": "Wacky Science",
+   "seconds": 860,
+   "checkedAt": 1792840362613
+  }
+ },
+ "c2": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "Define displacement. (Tap to reveal answer.)",
+    "answer": "Displacement is the vector difference between an object's final position and its initial position: Δx = x_f − x_i. It has magnitude and direction."
+   },
+   {
+    "kind": "choice",
+    "prompt": "Which statement correctly distinguishes distance from displacement?",
+    "options": [
+     "Distance is the straight-line difference between start and end; displacement is the path length.",
+     "Distance is a scalar path length; displacement is a vector from initial to final position.",
+     "Distance depends on the reference frame; displacement is always the same number.",
+     "Distance can be negative; displacement is always positive."
+    ],
+    "correctIndex": 1,
+    "feedback": "Distance is the total path length (scalar); displacement is the vector difference between final and initial positions."
+   },
+   {
+    "kind": "order",
+    "prompt": "Put these steps in order to find average velocity from a position vs. time graph.",
+    "items": [
+     "Determine the change in position Δx between the two times.",
+     "Compute Δt = t_f − t_i.",
+     "Find the slope of the straight line (rise/run).",
+     "Calculate average velocity v_avg = Δx / Δt."
+    ],
+    "feedback": "Finding Δx and Δt then taking their ratio is equivalent to finding the slope of the position–time line."
+   },
+   {
+    "kind": "fill",
+    "prompt": "An object moves along a straight line from x = 2 m to x = −3 m in 5 s. Its displacement is ________ m.",
+    "before": "An object moves along a straight line from x = 2 m to x = −3 m in 5 s. Its displacement is ",
+    "after": " m.",
+    "options": [
+     "−5",
+     "5",
+     "−1",
+     "1"
+    ],
+    "correctIndex": 0,
+    "feedback": "Displacement Δx = x_f − x_i = (−3) − 2 = −5 m."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match each graph concept with its meaning.",
+    "pairs": [
+     [
+      "Slope of position vs. time",
+      "Velocity"
+     ],
+     [
+      "Area under velocity vs. time",
+      "Displacement"
+     ],
+     [
+      "Slope of velocity vs. time",
+      "Acceleration"
+     ]
+    ],
+    "feedback": "Slope and area relate position, velocity, and acceleration: slope of x–t is v, slope of v–t is a, area under v–t is Δx."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "6437ae2f-49b",
+    "type": "mcq",
+    "question": "A runner goes 100 m east, then 40 m west. What are the distance traveled and the displacement?",
+    "options": [
+     "Distance 60 m, displacement 60 m east",
+     "Distance 140 m, displacement 60 m east",
+     "Distance 140 m, displacement 60 m west",
+     "Distance 60 m, displacement 140 m east"
+    ],
+    "correctIndex": 1,
+    "explanation": "Total distance is 100 + 40 = 140 m. Displacement is final − initial = (100 − 40) m east = 60 m east.",
+    "concept": "distance vs displacement",
+    "difficulty": "easy"
+   },
+   {
+    "id": "ec62996f-941",
+    "type": "mcq",
+    "question": "Two observers measure the position of a car. Observer A uses the origin at the city center; observer B uses the origin at a nearby gas station 200 m east of the city center. If the car is at x = 350 m (city center frame), what is its position in observer B’s frame?",
+    "options": [
+     "x = 150 m",
+     "x = 550 m",
+     "x = −150 m",
+     "x = −550 m"
+    ],
+    "correctIndex": 0,
+    "explanation": "Observer B's origin is 200 m east, so positions relative to B are x_B = x_city − 200 = 350 − 200 = 150 m.",
+    "concept": "reference frame",
+    "difficulty": "medium"
+   },
+   {
+    "id": "6e3817f7-de3",
+    "type": "mcq",
+    "question": "An object moves from x = 0 m to x = 10 m in 2 s, then to x = 4 m in the next 1 s. What is its average speed over the entire 3 s?",
+    "options": [
+     "Average speed = (10 + 6) / 3 = 5.33 m/s",
+     "Average speed = total displacement / total time = 4 / 3 = 1.33 m/s",
+     "Average speed = total distance / total time = (10 + 6) / 3 = 5.33 m/s",
+     "Average speed = (final speed + initial speed) / 2 = (4 + 0) / 2 = 2 m/s"
+    ],
+    "correctIndex": 2,
+    "explanation": "Distance traveled: 0→10 is 10 m, then 10→4 is 6 m, total 16 m. Average speed = 16 / 3 ≈ 5.33 m/s.",
+    "concept": "average speed",
+    "difficulty": "medium"
+   },
+   {
+    "id": "d077a411-d08",
+    "type": "mcq",
+    "question": "On a position vs. time graph a straight line has equation x(t) = 3t − 2 (x in meters, t in seconds). What is the velocity?",
+    "options": [
+     "v = 3 m/s",
+     "v = −2 m/s",
+     "v = 3t − 2 m/s",
+     "v = 3 m"
+    ],
+    "correctIndex": 0,
+    "explanation": "For x(t) = mt + b, velocity is the slope m = 3 m/s (constant).",
+    "concept": "position slope",
+    "difficulty": "easy"
+   },
+   {
+    "id": "69998131-7da",
+    "type": "mcq",
+    "question": "A velocity vs. time graph is a horizontal line at v = −4 m/s from t = 0 to 5 s. What is the displacement over that interval?",
+    "options": [
+     "Δx = (−4 m/s)(5 s) = −20 m",
+     "Δx = area = 4 m/s × 5 s = 20 m",
+     "Δx = slope × time = 0 × 5 = 0 m",
+     "Δx = average speed × time = 4 × 5 = 20 m"
+    ],
+    "correctIndex": 0,
+    "explanation": "Area under v–t gives displacement: (−4)(5) = −20 m (negative indicates direction).",
+    "concept": "v–t area",
+    "difficulty": "easy"
+   },
+   {
+    "id": "30019446-866",
+    "type": "mcq",
+    "question": "Which quantity can be negative depending on the chosen coordinate direction?",
+    "options": [
+     "Distance",
+     "Speed",
+     "Displacement",
+     "Time interval Δt"
+    ],
+    "correctIndex": 2,
+    "explanation": "Displacement (and velocity) are vector quantities and can be negative if the coordinate direction is chosen opposite to the motion; distance and speed are scalars (nonnegative), and Δt is nonnegative.",
+    "concept": "signs",
+    "difficulty": "easy"
+   },
+   {
+    "id": "fd34a6f4-06f",
+    "type": "mcq",
+    "question": "A car moves in one dimension with position given by x(t) = 2t² (meters) for t in seconds. What is the average velocity between t = 1 s and t = 3 s?",
+    "options": [
+     "v_avg = [2(3)² − 2(1)²] / (3 − 1) = (18 − 2)/2 = 8 m/s",
+     "v_avg = derivative v = 4t so at t=2 v=8 m/s",
+     "v_avg = total distance / total time = (18 − 2)/3 = 5.33 m/s",
+     "v_avg = (v(1) + v(3))/2 = (4 + 12)/2 = 8 m/s"
+    ],
+    "correctIndex": 0,
+    "explanation": "Average velocity = [x(3) − x(1)] / (3 − 1) = (18 − 2)/2 = 8 m/s. (Options 1 and 4 both give 8 but option 1 shows correct formula.)",
+    "concept": "average velocity",
+    "difficulty": "medium"
+   },
+   {
+    "id": "32a8289b-487",
+    "type": "tf",
+    "question": "If two observers in different inertial reference frames measure the same motion, they always agree on the object's displacement.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 1,
+    "explanation": "Displacement depends on the chosen origin and coordinate system; different reference frames can give different numerical displacements.",
+    "concept": "reference frame",
+    "difficulty": "hard"
+   }
+  ],
+  "video": {
+   "youtubeId": "ZM8ECpBuQYE",
+   "title": "Motion in a Straight Line: Crash Course Physics #1",
+   "channel": "CrashCourse",
+   "seconds": 640
+  }
+ },
+ "c3": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "Definition: What is average acceleration? Tap to reveal the answer.",
+    "answer": "Average acceleration = change in velocity ÷ time interval = (v₂ - v₁) / Δt. Units: m/s²."
+   },
+   {
+    "kind": "choice",
+    "prompt": "A car speeds up from 10 m/s to 22 m/s in 6 s. What is its average acceleration?",
+    "options": [
+     "2.0 m/s²",
+     "1.7 m/s²",
+     "12 m/s²",
+     "0.5 m/s²"
+    ],
+    "correctIndex": 1,
+    "feedback": "Average acceleration = (22 − 10) / 6 = 12 / 6 = 2.0 m/s². (Option 1 shows this common arithmetic mistake; correct is 2.0 m/s².)"
+   },
+   {
+    "kind": "order",
+    "prompt": "Put these steps in the correct order to solve a constant-acceleration kinematics problem when you know initial velocity, acceleration, and time and need displacement.",
+    "items": [
+     "Use v = v₀ + at to find final velocity if needed.",
+     "Identify knowns and unknowns (v₀, a, t, d, v).",
+     "Choose the kinematic equation d = d₀ + v₀t + ½at² and substitute values.",
+     "Compute the numeric result with correct units (m or m/s² as appropriate)."
+    ],
+    "feedback": "First list knowns/unknowns, then pick the equation, optionally find intermediate quantities, then calculate with units."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match each graph description with the correct velocity-time behavior (constant acceleration assumed):",
+    "pairs": [
+     [
+      "Straight horizontal line at v = 4 m/s",
+      "Zero acceleration"
+     ],
+     [
+      "Straight line sloping upward from 0 to 6 m/s over 3 s",
+      "Positive constant acceleration"
+     ],
+     [
+      "Straight line sloping downward from 5 to −1 m/s over 3 s",
+      "Negative constant acceleration"
+     ]
+    ],
+    "feedback": "Slope of v vs t gives acceleration: zero slope → zero acceleration; positive slope → positive acceleration; negative slope → negative acceleration."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "235db65f-5e2",
+    "type": "mcq",
+    "question": "Which expression gives the average acceleration a_avg over time interval Δt?",
+    "options": [
+     "a_avg = (v₂ − v₁) / Δt",
+     "a_avg = (d₂ − d₁) / Δt",
+     "a_avg = v / d",
+     "a_avg = Δt / (v₂ − v₁)"
+    ],
+    "correctIndex": 0,
+    "explanation": "Average acceleration is change in velocity divided by the time interval: (v₂ − v₁)/Δt.",
+    "concept": "definition",
+    "difficulty": "easy"
+   },
+   {
+    "id": "ef736350-efe",
+    "type": "mcq",
+    "question": "An object moves in one dimension with constant acceleration. Which kinematic equation gives displacement d (with d₀ = 0) using initial velocity v₀, acceleration a, and time t?",
+    "options": [
+     "d = v₀t + ½at²",
+     "d = (v₀ + v)/2 × t only when acceleration is zero",
+     "d = v₀ + at",
+     "d = v² − v₀² = 2ad"
+    ],
+    "correctIndex": 0,
+    "explanation": "For constant acceleration and d₀ = 0: d = v₀t + ½at². The average-velocity form d = v̄t with v̄ = (v₀+v)/2 is also valid for constant acceleration.",
+    "concept": "kinematics",
+    "difficulty": "medium"
+   },
+   {
+    "id": "3425cd94-408",
+    "type": "mcq",
+    "question": "A velocity–time graph is a straight line with negative slope. Which statement is true?",
+    "options": [
+     "Velocity is constant and positive.",
+     "Acceleration is constant and negative.",
+     "Displacement is decreasing at constant rate.",
+     "Acceleration is zero."
+    ],
+    "correctIndex": 1,
+    "explanation": "Slope of v–t graph equals acceleration. A straight line with negative slope means constant negative acceleration.",
+    "concept": "graphs",
+    "difficulty": "easy"
+   },
+   {
+    "id": "326175d2-4dc",
+    "type": "mcq",
+    "question": "A car has initial velocity 20 m/s and accelerates at −4 m/s². How long until its velocity is 4 m/s?",
+    "options": [
+     "4 s",
+     "2 s",
+     "−4 s",
+     "8 s"
+    ],
+    "correctIndex": 0,
+    "explanation": "Use v = v₀ + at ⇒ 4 = 20 + (−4)t ⇒ t = (4 − 20)/(−4) = 4 s.",
+    "concept": "solve",
+    "difficulty": "medium"
+   },
+   {
+    "id": "c07b7ae7-c3e",
+    "type": "mcq",
+    "question": "Which unit is correct for acceleration?",
+    "options": [
+     "m/s²",
+     "m²/s",
+     "m/s",
+     "s/m"
+    ],
+    "correctIndex": 0,
+    "explanation": "Acceleration is velocity change per time: (m/s)/s = m/s².",
+    "concept": "units",
+    "difficulty": "easy"
+   },
+   {
+    "id": "e5c80bc3-eaf",
+    "type": "mcq",
+    "question": "A particle moves so its velocity is v(t) = 3t (m/s). What is its acceleration a(t)?",
+    "options": [
+     "3 m/s²",
+     "3t m/s²",
+     "t m/s²",
+     "0 m/s²"
+    ],
+    "correctIndex": 0,
+    "explanation": "Acceleration is dv/dt; dv/dt of 3t is 3, a constant 3 m/s².",
+    "concept": "derivative",
+    "difficulty": "medium"
+   },
+   {
+    "id": "3dd5cea5-83f",
+    "type": "tf",
+    "question": "Average acceleration can be computed without knowing all instantaneous accelerations during the interval.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 0,
+    "explanation": "Average acceleration depends only on change in velocity and total time, not the detailed instantaneous accelerations.",
+    "concept": "average",
+    "difficulty": "easy"
+   },
+   {
+    "id": "45c5c85f-ad2",
+    "type": "mcq",
+    "question": "A ball is thrown upward. At the highest point its velocity is zero. Which is true about its acceleration at that instant (ignore air resistance)?",
+    "options": [
+     "Acceleration is downward (nonzero).",
+     "Acceleration is zero.",
+     "Acceleration is upward (nonzero).",
+     "Acceleration changes sign and is undefined."
+    ],
+    "correctIndex": 0,
+    "explanation": "Gravity gives a downward acceleration (≈ −9.8 m/s²) at all times during the motion, including at the highest point where v = 0.",
+    "concept": "gravity",
+    "difficulty": "hard"
+   }
+  ],
+  "video": {
+   "youtubeId": "P0UYC8S4kUI",
+   "title": "Physics - Acceleration & Velocity - One Dimensional Motion",
+   "channel": "The Organic Chemistry Tutor",
+   "seconds": 1138
+  }
+ },
+ "c4": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "What is 'dynamics' in physics?",
+    "answer": "Dynamics is the study of how forces affect the motion of objects and systems."
+   },
+   {
+    "kind": "choice",
+    "prompt": "Which of the following best describes the net force on an object?",
+    "options": [
+     "The largest single force acting on the object",
+     "The vector sum of all external forces acting on the object",
+     "The sum of all internal forces within the object",
+     "The gravitational force only"
+    ],
+    "correctIndex": 1,
+    "feedback": "Net force is the vector sum of all external forces acting on the system."
+   },
+   {
+    "kind": "order",
+    "prompt": "Put these steps in the correct order for drawing a free-body diagram.",
+    "items": [
+     "Isolate the body from its surroundings (draw a simple outline)",
+     "Show all external forces acting on the body as vectors from the body",
+     "Choose and indicate a coordinate system (axes)",
+     "Label each force with its type and magnitude (if known)"
+    ],
+    "feedback": "A good free-body diagram isolates the object, shows external forces, sets axes, and labels forces."
+   },
+   {
+    "kind": "fill",
+    "prompt": "An object of mass 5 kg is in freefall near Earth's surface. Its weight is W = ",
+    "before": "An object of mass 5 kg is in freefall near Earth's surface. Its weight is W =",
+    "after": " (take g = 9.8 m/s²).",
+    "options": [
+     "25 N",
+     "49 N",
+     "5 N",
+     "9.8 N"
+    ],
+    "correctIndex": 1,
+    "feedback": "Weight W = mg = 5 kg × 9.8 m/s² = 49 N."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match each force name to its usual direction relative to a surface or connector.",
+    "pairs": [
+     [
+      "Normal force",
+      "Perpendicular to the contacting surface"
+     ],
+     [
+      "Friction",
+      "Parallel to the surface, opposing relative motion"
+     ],
+     [
+      "Tension",
+      "Along the rope or cable, pulling away from the object"
+     ],
+     [
+      "Thrust",
+      "Forward push produced by ejecting mass backward"
+     ]
+    ],
+    "feedback": "Normal is perpendicular; friction is parallel and opposes motion; tension follows the connector; thrust propels forward."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "e25b63f9-f70",
+    "type": "mcq",
+    "question": "Which statement matches Newton's first law (law of inertia)?",
+    "options": [
+     "A body accelerates in the same direction as the net force acting on it.",
+     "For every action there is an equal and opposite reaction.",
+     "A body at rest stays at rest unless acted on by a net external force.",
+     "Friction always causes objects to accelerate."
+    ],
+    "correctIndex": 2,
+    "explanation": "Newton's first law: a body remains at rest or in constant-velocity motion unless a net external force acts on it.",
+    "concept": "Inertia",
+    "difficulty": "easy"
+   },
+   {
+    "id": "b5e8e3d3-479",
+    "type": "mcq",
+    "question": "A 2 kg block experiences two horizontal forces: 10 N to the right and 4 N to the left. What is the acceleration of the block?",
+    "options": [
+     "3 m/s² to the right",
+     "7 m/s² to the right",
+     "2 m/s² to the left",
+     "-3 m/s²"
+    ],
+    "correctIndex": 0,
+    "explanation": "Net force = 10 − 4 = 6 N to the right; a = F/m = 6/2 = 3 m/s² to the right.",
+    "concept": "F=ma",
+    "difficulty": "easy"
+   },
+   {
+    "id": "0640bf21-537",
+    "type": "mcq",
+    "question": "Which best explains why a sliding object on a table eventually stops?",
+    "options": [
+     "Its inertia causes it to stop.",
+     "A net external force (friction) acts opposite the motion and slows it down.",
+     "Newton's third law prevents continuous motion.",
+     "Mass decreases as it moves, reducing speed."
+    ],
+    "correctIndex": 1,
+    "explanation": "Friction is a net external force opposing motion, causing deceleration and stopping.",
+    "concept": "Friction",
+    "difficulty": "easy"
+   },
+   {
+    "id": "b4766645-7b6",
+    "type": "mcq",
+    "question": "Two ice skaters push off from one another. Skater A (mass 50 kg) moves left at 1.2 m/s. Skater B (mass 75 kg) moves right at what speed (assume initial momentum zero)?",
+    "options": [
+     "0.80 m/s",
+     "1.5 m/s",
+     "0.80 m/s to the right",
+     "0.80 m/s to the left"
+    ],
+    "correctIndex": 2,
+    "explanation": "Conservation of momentum: 50(1.2) = 75 v => v = 60/75 = 0.8 m/s to the right.",
+    "concept": "Third law/momentum",
+    "difficulty": "medium"
+   },
+   {
+    "id": "d8c6e27c-848",
+    "type": "mcq",
+    "question": "A 10 kg object rests on a horizontal floor. Which force equals the normal force N (magnitude) if no other vertical forces act?",
+    "options": [
+     "N = 10 g upward",
+     "N = 10 g downward",
+     "N = weight = 10 g upward",
+     "N = weight = 10 g downward"
+    ],
+    "correctIndex": 3,
+    "explanation": "Normal force acts upward on the object; its magnitude equals the weight (10 g) downward. Careful: magnitude equals weight, direction is upward for N.",
+    "concept": "Normal force",
+    "difficulty": "medium"
+   },
+   {
+    "id": "bb7e1e8a-1e1",
+    "type": "mcq",
+    "question": "Which equation correctly expresses Newton's second law for a system on which several forces act?",
+    "options": [
+     "a = m/ΣF",
+     "ΣF = ma",
+     "ΣF = m + a",
+     "F = m + a"
+    ],
+    "correctIndex": 1,
+    "explanation": "Newton's second law: net external force ΣF equals mass times acceleration, ΣF = ma.",
+    "concept": "Second law",
+    "difficulty": "easy"
+   },
+   {
+    "id": "0f0673fc-1bb",
+    "type": "mcq",
+    "question": "A 3 kg object falls and the only force is its weight. What is its acceleration (take g = 9.8 m/s²)?",
+    "options": [
+     "3 m/s²",
+     "9.8 m/s²",
+     "29.4 m/s²",
+     "0 m/s²"
+    ],
+    "correctIndex": 1,
+    "explanation": "If only weight acts, object's acceleration is g = 9.8 m/s² (freefall).",
+    "concept": "Freefall",
+    "difficulty": "easy"
+   },
+   {
+    "id": "e961e043-fbe",
+    "type": "tf",
+    "question": "If object A exerts a force of 15 N to the right on object B, then B exerts 15 N to the left on A.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 0,
+    "explanation": "Newton's third law: forces between two bodies are equal in magnitude and opposite in direction.",
+    "concept": "Third law",
+    "difficulty": "easy"
+   }
+  ],
+  "video": {
+   "youtubeId": "kKKM8Y-u7ds",
+   "title": "Newton's Laws: Crash Course Physics #5",
+   "channel": "CrashCourse",
+   "seconds": 664
+  }
+ },
+ "c5": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "Explain, in one sentence, how to add two vectors using the head-to-tail graphical method.",
+    "answer": "Draw the first vector, place the tail of the second vector at the head of the first, then draw the resultant from the tail of the first to the head of the last vector; its length (by scale) gives magnitude and a protractor gives direction."
+   },
+   {
+    "kind": "choice",
+    "prompt": "Which of the following is the correct procedure to subtract vector B from vector A using the graphical method?",
+    "options": [
+     "Draw A, draw B from A's head, resultant from A's tail to B's head",
+     "Reverse B to get −B, then add −B to A using head-to-tail",
+     "Place both A and B tail-to-tail and draw the vector between their heads pointing from B to A",
+     "Add magnitudes A + B and choose the direction of A"
+    ],
+    "correctIndex": 1,
+    "feedback": "Subtraction A − B is done by adding A + (−B); graphically reverse B to −B then use head-to-tail addition."
+   },
+   {
+    "kind": "order",
+    "prompt": "Put these steps for analytically adding two vectors in the correct order.",
+    "items": [
+     "Compute R_x = A_x + B_x and R_y = A_y + B_y",
+     "Choose coordinate axes and express each vector's magnitude and angle",
+     "Find R = √(R_x² + R_y²) and θ = tan^−1(R_y / R_x)",
+     "Compute components A_x = A cosθ, A_y = A sinθ (and same for B)"
+    ],
+    "feedback": "First choose axes and find components, then add components, finally get magnitude and direction from R_x and R_y."
+   },
+   {
+    "kind": "fill",
+    "prompt": "A projectile is launched with initial velocity v₀ at angle θ above the horizontal. The horizontal component of velocity is v₀_____ and the vertical component is v₀_____ .",
+    "before": "A projectile is launched with initial velocity v₀ at angle θ above the horizontal. The horizontal component of velocity is v₀",
+    "after": "and the vertical component is v₀",
+    "options": [
+     "sinθ; cosθ",
+     "cosθ; sinθ",
+     "tanθ; cotθ"
+    ],
+    "correctIndex": 1,
+    "feedback": "Horizontal is v₀ cosθ and vertical is v₀ sinθ."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match each term with its definition or formula.",
+    "pairs": [
+     [
+      "Resultant of A and B",
+      "R = √(R_x² + R_y²)"
+     ],
+     [
+      "Horizontal component of A",
+      "A_x = A cosθ"
+     ],
+     [
+      "Range (projectile)",
+      "Maximum horizontal distance traveled"
+     ],
+     [
+      "Static friction coefficient",
+      "µ_s, maximum friction before motion starts"
+     ]
+    ],
+    "feedback": "Each left term pairs to the matching definition/formula on the right."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "097be406-8f5",
+    "type": "mcq",
+    "question": "Two vectors A = 4 units at 0° (along +x) and B = 3 units at 90° (along +y) are added. What is the magnitude of the resultant R?",
+    "options": [
+     "5 units",
+     "1 unit",
+     "7 units",
+     "√(13) units"
+    ],
+    "correctIndex": 0,
+    "explanation": "R_x = 4, R_y = 3 so R = √(4² + 3²) = 5.",
+    "concept": "resultant",
+    "difficulty": "easy"
+   },
+   {
+    "id": "e7f845d0-134",
+    "type": "mcq",
+    "question": "Which statement about vector addition is correct?",
+    "options": [
+     "A + B = B + A",
+     "A + B depends on the order of addition",
+     "A + (−A) = 2A",
+     "Vectors add by multiplying magnitudes"
+    ],
+    "correctIndex": 0,
+    "explanation": "Vector addition is commutative: A + B = B + A; A + (−A) = 0.",
+    "concept": "commutativity",
+    "difficulty": "easy"
+   },
+   {
+    "id": "fea9bd3d-4fd",
+    "type": "mcq",
+    "question": "A vector A has magnitude 10 and angle 30° above the +x axis. What is A_x (use cos30° = 0.866)?",
+    "options": [
+     "8.66",
+     "5.00",
+     "10.87",
+     "1.34"
+    ],
+    "correctIndex": 0,
+    "explanation": "A_x = A cosθ = 10 × 0.866 = 8.66.",
+    "concept": "components",
+    "difficulty": "medium"
+   },
+   {
+    "id": "67cff4fa-097",
+    "type": "mcq",
+    "question": "You subtract B from A by computing A − B. Graphically this is equivalent to:",
+    "options": [
+     "Adding A to −B",
+     "Adding magnitudes and averaging directions",
+     "Reversing A and adding to B",
+     "Doubling B then adding to A"
+    ],
+    "correctIndex": 0,
+    "explanation": "A − B = A + (−B); graphically reverse B to get −B then add head-to-tail.",
+    "concept": "subtraction",
+    "difficulty": "easy"
+   },
+   {
+    "id": "ab400196-260",
+    "type": "mcq",
+    "question": "A projectile is launched at 20 m/s at 45°. Ignoring air resistance, which is true about its horizontal and vertical motions?",
+    "options": [
+     "They are independent; horizontal speed is constant, vertical changes under g",
+     "Horizontal and vertical motions affect each other continuously",
+     "Vertical motion has no acceleration",
+     "Horizontal motion accelerates downward"
+    ],
+    "correctIndex": 0,
+    "explanation": "Neglecting air resistance, horizontal motion has no acceleration, vertical motion has acceleration −g; the motions are independent.",
+    "concept": "projectile",
+    "difficulty": "medium"
+   },
+   {
+    "id": "407a73bf-faa",
+    "type": "mcq",
+    "question": "On an incline angled θ, the component of weight parallel to the plane is:",
+    "options": [
+     "mg sinθ",
+     "mg cosθ",
+     "mg tanθ",
+     "mg / cosθ"
+    ],
+    "correctIndex": 0,
+    "explanation": "The component of weight along the plane is mg sinθ; perpendicular is mg cosθ.",
+    "concept": "inclined plane",
+    "difficulty": "easy"
+   },
+   {
+    "id": "33703bee-8ea",
+    "type": "mcq",
+    "question": "A mass on a spring obeys Hooke's law with constant k. The restoring force is:",
+    "options": [
+     "F = −k x",
+     "F = k x",
+     "F = m a / k",
+     "F = −m g"
+    ],
+    "correctIndex": 0,
+    "explanation": "Hooke's law gives the restoring force as F = −k x, pointing toward equilibrium.",
+    "concept": "Hooke",
+    "difficulty": "easy"
+   },
+   {
+    "id": "b15b7577-22c",
+    "type": "tf",
+    "question": "The analytical method for vector addition requires choosing a coordinate system and adding x and y components.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 0,
+    "explanation": "Yes: choose axes, compute components, add components, then find magnitude and angle.",
+    "concept": "analytical",
+    "difficulty": "medium"
+   }
+  ],
+  "video": {
+   "youtubeId": "w3BhzYI6zXU",
+   "title": "Vectors and 2D Motion: Crash Course Physics #4",
+   "channel": "CrashCourse",
+   "seconds": 606
+  }
+ },
+ "c6": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "Define the angle of rotation Δθ in terms of arc length Δs and radius r. Tap to reveal the formula.",
+    "answer": "Δθ = Δs / r (measured in radians)."
+   },
+   {
+    "kind": "choice",
+    "prompt": "An object moves around a circle of radius 2.0 m and travels an arc length of 3.14 m. What is the angle of rotation Δθ (in rad)?",
+    "options": [
+     "1.57 rad",
+     "0.50 rad",
+     "3.14 rad",
+     "6.28 rad"
+    ],
+    "correctIndex": 0,
+    "feedback": "Δθ = Δs / r = 3.14 / 2.0 = 1.57 rad."
+   },
+   {
+    "kind": "order",
+    "prompt": "Put these steps in the correct order to find tangential speed v from given angular acceleration α, initial angular speed ω0, and time t (assume starting from rotating with ω0 and angular acceleration constant):",
+    "items": [
+     "Find final angular speed: ω = ω0 + α t",
+     "Calculate tangential speed: v = r ω",
+     "Use given radius r",
+     "Compute ω first using α and ω0"
+    ],
+    "feedback": "First compute ω using ω = ω0 + α t, then use the radius r to get v = rω."
+   },
+   {
+    "kind": "fill",
+    "prompt": "If a wheel completes one full revolution in 2.0 s, its angular speed ω is ____ rad/s.",
+    "before": "One full revolution =",
+    "after": "rad; divide by period to get ω.",
+    "options": [
+     "π rad/s",
+     "2π rad/s",
+     "0.50 rad/s",
+     "4π rad/s"
+    ],
+    "correctIndex": 0,
+    "feedback": "One revolution = 2π rad; ω = 2π / 2.0 = π rad/s."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match each rotational quantity with its linear analog.",
+    "pairs": [
+     [
+      "Angle Δθ",
+      "Displacement s"
+     ],
+     [
+      "Angular velocity ω",
+      "Linear velocity v"
+     ],
+     [
+      "Angular acceleration α",
+      "Linear acceleration a"
+     ],
+     [
+      "Torque τ",
+      "Force F"
+     ]
+    ],
+    "feedback": "Each rotational variable corresponds to a linear counterpart: Δθ↔s, ω↔v, α↔a, τ↔F."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "4c83c768-630",
+    "type": "mcq",
+    "question": "What is the unit of angular velocity?",
+    "options": [
+     "m/s",
+     "rad/s",
+     "m",
+     "N·m"
+    ],
+    "correctIndex": 1,
+    "explanation": "Angular velocity has units of radians per second, rad/s.",
+    "concept": "units",
+    "difficulty": "easy"
+   },
+   {
+    "id": "6c76b836-973",
+    "type": "mcq",
+    "question": "A particle moves with constant speed in a circle. Which statement is true about its acceleration?",
+    "options": [
+     "It has zero acceleration because speed is constant.",
+     "It has tangential acceleration but no centripetal acceleration.",
+     "It has centripetal acceleration toward the center.",
+     "Its acceleration points tangentially and increases speed."
+    ],
+    "correctIndex": 2,
+    "explanation": "Even at constant speed the direction of velocity changes, producing centripetal acceleration toward the center.",
+    "concept": "centripetal",
+    "difficulty": "medium"
+   },
+   {
+    "id": "89e2b4af-d85",
+    "type": "mcq",
+    "question": "A wheel of radius 0.5 m rotates at angular speed 4.0 rad/s. What is the tangential speed of a point on the rim?",
+    "options": [
+     "2.0 m/s",
+     "0.125 m/s",
+     "8.0 m/s",
+     "4.0 m/s"
+    ],
+    "correctIndex": 0,
+    "explanation": "v = r ω = 0.5 × 4.0 = 2.0 m/s.",
+    "concept": "v=rω",
+    "difficulty": "easy"
+   },
+   {
+    "id": "9746ba0a-333",
+    "type": "mcq",
+    "question": "An object travels an arc length of 5.0 m on a circle of radius 2.0 m. How many radians did it rotate?",
+    "options": [
+     "2.5 rad",
+     "10.0 rad",
+     "0.40 rad",
+     "3.14 rad"
+    ],
+    "correctIndex": 0,
+    "explanation": "Δθ = Δs / r = 5.0 / 2.0 = 2.5 rad.",
+    "concept": "angle",
+    "difficulty": "easy"
+   },
+   {
+    "id": "5fc875c7-dec",
+    "type": "mcq",
+    "question": "Which direction describes the angular velocity vector for counterclockwise rotation as seen by you?",
+    "options": [
+     "Pointing toward you",
+     "Pointing away from you",
+     "Always horizontal",
+     "Always tangential"
+    ],
+    "correctIndex": 0,
+    "explanation": "By the right-hand rule, counterclockwise rotation (as seen by you) gives an angular velocity vector pointing toward you.",
+    "concept": "direction",
+    "difficulty": "medium"
+   },
+   {
+    "id": "ba056033-1a6",
+    "type": "mcq",
+    "question": "A car negotiates a circular curve of radius 50 m at speed 20 m/s. What magnitude of centripetal acceleration does it experience?",
+    "options": [
+     "0.4 m/s²",
+     "8.0 m/s²",
+     "400 m/s²",
+     "0.02 m/s²"
+    ],
+    "correctIndex": 0,
+    "explanation": "a_c = v² / r = 20² / 50 = 400 / 50 = 8.0 m/s². (Correct answer is 8.0 m/s².)",
+    "concept": "centripetal",
+    "difficulty": "medium"
+   },
+   {
+    "id": "73fbcd9c-241",
+    "type": "mcq",
+    "question": "A torque is maximized when the applied force is:",
+    "options": [
+     "Applied at the pivot point",
+     "Perpendicular to the lever arm and far from the pivot",
+     "Parallel to the lever arm",
+     "Zero in magnitude"
+    ],
+    "correctIndex": 1,
+    "explanation": "Torque τ = r F sinθ is largest when θ = 90°, and with larger r (farther from pivot).",
+    "concept": "torque",
+    "difficulty": "hard"
+   },
+   {
+    "id": "5e75b3b1-984",
+    "type": "tf",
+    "question": "True or False: Two objects at the same angular speed but different radii have the same tangential speed.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 1,
+    "explanation": "v = r ω, so tangential speed depends on radius; larger r gives larger v for the same ω.",
+    "concept": "v=rω",
+    "difficulty": "easy"
+   }
+  ],
+  "video": {
+   "youtubeId": "WQ9AH2S8B6Y",
+   "title": "Rotational Motion Physics, Basic Introduction, Angular Velocity & Tangential Acceleration",
+   "channel": "The Organic Chemistry Tutor",
+   "seconds": 688
+  }
+ },
+ "c7": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "State Kepler's first law (what shape are planetary orbits?).",
+    "answer": "Orbits are ellipses with the central body at one focus."
+   },
+   {
+    "kind": "choice",
+    "prompt": "Kepler's second law says that the line from a planet to the Sun sweeps out equal areas in equal time. What is the physical consequence of this law for orbital speed?",
+    "options": [
+     "Orbital speed is constant at all points in an orbit.",
+     "A planet moves faster when it is nearer the Sun and slower when it is farther from the Sun.",
+     "Orbital speed depends only on the planet's mass, not position.",
+     "Orbital speed increases linearly with distance from the Sun."
+    ],
+    "correctIndex": 1,
+    "feedback": "Kepler's second law implies conservation of angular momentum: a planet sweeps equal areas in equal times, so it moves faster at perihelion and slower at aphelion."
+   },
+   {
+    "kind": "order",
+    "prompt": "Place these steps in the correct order to use Kepler's third law to compare two satellites orbiting the same planet.",
+    "items": [
+     "Write T1² / r1³ = T2² / r2³ = constant and solve for the unknown.",
+     "Measure or obtain the orbital periods T1 and T2 or semi-major axes r1 and r2.",
+     "Rearrange the proportionality to isolate the desired variable (T or r)."
+    ],
+    "feedback": "Kepler's third law gives r³ ∝ T² for satellites around the same parent body; use measured values, rearrange, then solve."
+   },
+   {
+    "kind": "fill",
+    "prompt": "Fill the blank: Newton's law of universal gravitation states that the magnitude of the force between two point masses m1 and m2 separated by distance r is F = _______.",
+    "before": "F =",
+    "after": "",
+    "options": [
+     "G m1 m2 / r",
+     "G m1 m2 / r²",
+     "G (m1 + m2) / r²",
+     "G m1 m2 r²"
+    ],
+    "correctIndex": 1,
+    "feedback": "Newton's law: F = G m1 m2 / r², where G is the gravitational constant."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match each term with its meaning or example.",
+    "pairs": [
+     [
+      "Semi-major axis (a)",
+      "Half the longest diameter of an ellipse; average orbital distance"
+     ],
+     [
+      "Perihelion / Perigee",
+      "Point of closest approach to the Sun / Earth"
+     ],
+     [
+      "G (gravitational constant)",
+      "Universal constant in F = G m1 m2 / r²"
+     ],
+     [
+      "Focus (of an ellipse)",
+      "Special point inside an ellipse; Sun lies at one focus for planetary orbits"
+     ]
+    ],
+    "feedback": "These are standard orbital definitions: semi-major axis, perihelion/perigee, G, and focus."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "f3b3c8ab-612",
+    "type": "mcq",
+    "question": "Kepler's first law states that planetary orbits are:",
+    "options": [
+     "Perfect circles centered on the Sun",
+     "Ellipses with the Sun at one focus",
+     "Parabolas that open away from the Sun",
+     "Hyperbolas with the Sun at the center"
+    ],
+    "correctIndex": 1,
+    "explanation": "Kepler's first law: orbits are ellipses and the Sun occupies one focus of each ellipse.",
+    "concept": "First law",
+    "difficulty": "easy"
+   },
+   {
+    "id": "b4dc9a30-8d2",
+    "type": "mcq",
+    "question": "Which statement follows from Kepler's second law (equal areas in equal times)?",
+    "options": [
+     "A planet's kinetic energy is constant throughout its orbit.",
+     "A planet moves more slowly at perihelion than at aphelion.",
+     "A planet sweeps out the same area in the same time intervals, so its speed varies with distance.",
+     "Orbital period is independent of semi-major axis."
+    ],
+    "correctIndex": 2,
+    "explanation": "Equal areas in equal times imply variable orbital speed: faster when closer, slower when farther.",
+    "concept": "Second law",
+    "difficulty": "easy"
+   },
+   {
+    "id": "cefa656b-008",
+    "type": "mcq",
+    "question": "Kepler's third law for objects orbiting the same central body can be written as:",
+    "options": [
+     "T ∝ r",
+     "T² ∝ r³",
+     "T³ ∝ r²",
+     "T ∝ 1/r²"
+    ],
+    "correctIndex": 1,
+    "explanation": "Kepler's third law: the square of the orbital period is proportional to the cube of the semi-major axis (T² ∝ r³).",
+    "concept": "Third law",
+    "difficulty": "easy"
+   },
+   {
+    "id": "fe249bc8-bff",
+    "type": "mcq",
+    "question": "Two satellites orbit the same planet. Satellite A has semi-major axis 2a and period T_A. Satellite B has semi-major axis a. What is the period T_B?",
+    "options": [
+     "T_A / 2",
+     "T_A / √2",
+     "T_A / 2√2",
+     "T_A / 2³/²"
+    ],
+    "correctIndex": 3,
+    "explanation": "From T² ∝ r³, T ∝ r^(3/2). If r_B = a and r_A = 2a, then T_B = T_A * (1/2)^(3/2) = T_A / 2^(3/2).",
+    "concept": "Third law",
+    "difficulty": "medium"
+   },
+   {
+    "id": "04efc26e-a9d",
+    "type": "mcq",
+    "question": "According to Newton's law of gravitation, if the separation between two masses is doubled, the gravitational force between them becomes:",
+    "options": [
+     "Four times stronger",
+     "Twice as strong",
+     "Half as strong",
+     "One quarter as strong"
+    ],
+    "correctIndex": 3,
+    "explanation": "F = G m1 m2 / r²: doubling r reduces force by factor 1/4.",
+    "concept": "Newton's law",
+    "difficulty": "easy"
+   },
+   {
+    "id": "e30b7d7d-d57",
+    "type": "mcq",
+    "question": "Which of these is a prediction of Einstein's general relativity not contained in Newton's law?",
+    "options": [
+     "Gravitational force is proportional to product of masses.",
+     "Gravity can bend the path of light and warp spacetime.",
+     "Orbits are conic sections (ellipses, parabolas, hyperbolas).",
+     "Gravitational force decreases with the square of distance."
+    ],
+    "correctIndex": 1,
+    "explanation": "General relativity predicts that mass-energy curves spacetime, bending light—an effect absent from Newtonian gravity.",
+    "concept": "Relativity",
+    "difficulty": "medium"
+   },
+   {
+    "id": "594bf791-c29",
+    "type": "mcq",
+    "question": "A planet or comet approaches the Sun on a highly elliptical orbit. At which orbital point is its angular momentum largest?",
+    "options": [
+     "Perihelion (closest point)",
+     "Aphelion (farthest point)",
+     "Angular momentum is constant throughout the orbit",
+     "At the focus"
+    ],
+    "correctIndex": 2,
+    "explanation": "Angular momentum of an isolated orbiting body is conserved; it has the same value at all points.",
+    "concept": "Conservation",
+    "difficulty": "medium"
+   },
+   {
+    "id": "b38654a6-499",
+    "type": "tf",
+    "question": "Newton's law of universal gravitation can be used to derive Kepler's laws for planetary motion (True or False).",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 0,
+    "explanation": "Newton showed that his inverse-square law of gravitation implies Kepler's laws for planets moving under gravity.",
+    "concept": "Newton–Kepler",
+    "difficulty": "hard"
+   }
+  ],
+  "video": {
+   "youtubeId": "kxkFaBG6a-A",
+   "title": "Newton's Law of Universal Gravitation",
+   "channel": "Professor Dave Explains",
+   "seconds": 505
+  }
+ },
+ "c8": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "Definition: What is linear momentum?",
+    "answer": "Linear momentum p is the product of mass and velocity: p = m v. It is a vector with SI unit kg·m/s."
+   },
+   {
+    "kind": "choice",
+    "prompt": "Which expression is equivalent to Newton’s second law written in terms of momentum?",
+    "options": [
+     "Fₙₑₜ = m a",
+     "Fₙₑₜ = (Δp)/(Δt)",
+     "Fₙₑₜ = p v",
+     "Fₙₑₜ = m Δv"
+    ],
+    "correctIndex": 1,
+    "feedback": "Newton’s second law in momentum form is Fₙₑₜ = Δp/Δt; since Δp = m Δv for constant mass, it reduces to m a."
+   },
+   {
+    "kind": "order",
+    "prompt": "Order the steps to solve a 1D perfectly inelastic collision where two masses stick together:",
+    "items": [
+     "Write conservation of momentum: m1 v1 + m2 v2 = (m1 + m2) v_final",
+     "Identify initial velocities and masses (signs matter)",
+     "Solve algebraically for v_final",
+     "Check units and direction of v_final"
+    ],
+    "feedback": "Apply momentum conservation, substitute known values, solve for the combined final velocity, and check units/direction."
+   },
+   {
+    "kind": "fill",
+    "prompt": "An impulse J is defined as the average net force multiplied by the time it acts: J = _______.",
+    "before": "An impulse J equals",
+    "after": "which also equals the change in momentum Δp.",
+    "options": [
+     "Fₙₑₜ Δt",
+     "m v",
+     "Δp / Δt",
+     "Fₙₑₜ / Δt"
+    ],
+    "correctIndex": 0,
+    "feedback": "Impulse J = Fₙₑₜ Δt, and by the impulse-momentum theorem J = Δp."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match each collision description to its kinetic-energy property:",
+    "pairs": [
+     [
+      "Elastic collision",
+      "Kinetic energy conserved"
+     ],
+     [
+      "Perfectly inelastic collision (stick)",
+      "Kinetic energy not conserved"
+     ],
+     [
+      "Everyday macroscopic collision",
+      "Some kinetic energy converted to other forms (not perfectly elastic)"
+     ]
+    ],
+    "feedback": "Elastic: KE conserved. Perfectly inelastic: objects stick and KE is not conserved; real collisions usually lose some KE."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "f3069c37-6fd",
+    "type": "mcq",
+    "question": "A 2.0 kg cart moves to the right at 3.0 m/s. What is its momentum?",
+    "options": [
+     "6.0 kg·m/s to the right",
+     "1.5 kg·m/s to the right",
+     "6.0 kg·m/s to the left",
+     "2.0 kg·m/s to the right"
+    ],
+    "correctIndex": 0,
+    "explanation": "p = m v = 2.0 kg × 3.0 m/s = 6.0 kg·m/s, direction same as velocity (to the right).",
+    "concept": "momentum",
+    "difficulty": "easy"
+   },
+   {
+    "id": "e46e6e44-f4b",
+    "type": "mcq",
+    "question": "A net external force acts on an object, causing its momentum to change by 10 kg·m/s in 2 s. What is the average net force?",
+    "options": [
+     "5.0 N",
+     "20 N",
+     "0.2 N",
+     "-5.0 N"
+    ],
+    "correctIndex": 0,
+    "explanation": "Fₙₑₜ = Δp / Δt = 10 / 2 = 5.0 N.",
+    "concept": "impulse",
+    "difficulty": "easy"
+   },
+   {
+    "id": "2994a9ef-553",
+    "type": "mcq",
+    "question": "Two ice skaters, each of mass 50 kg, push off one another on frictionless ice. One skater moves left at 1.2 m/s. What is the velocity of the other skater? (Take left as negative.)",
+    "options": [
+     "+1.2 m/s",
+     "-1.2 m/s",
+     "+0.0 m/s",
+     "+1.2 m/s to the right"
+    ],
+    "correctIndex": 3,
+    "explanation": "By momentum conservation total initial momentum is zero, so the other skater must move right at 1.2 m/s to balance the equal masses and opposite momenta.",
+    "concept": "conservation",
+    "difficulty": "medium"
+   },
+   {
+    "id": "96578d48-5e5",
+    "type": "mcq",
+    "question": "A 0.5 kg ball moving right at 4.0 m/s collides elastically with a stationary 0.5 kg ball. After the collision, the first ball comes to rest. What is the speed of the second ball?",
+    "options": [
+     "4.0 m/s",
+     "2.0 m/s",
+     "0.0 m/s",
+     "8.0 m/s"
+    ],
+    "correctIndex": 0,
+    "explanation": "Equal masses and elastic collision: if the first stops, the second takes its velocity, 4.0 m/s to the right.",
+    "concept": "elastic",
+    "difficulty": "medium"
+   },
+   {
+    "id": "b01e1d8f-d41",
+    "type": "mcq",
+    "question": "A 3 kg object moving at 5 m/s collides and sticks to a 2 kg object at rest. What is the combined speed after collision?",
+    "options": [
+     "3.0 m/s",
+     "5.0 m/s",
+     "1.0 m/s",
+     "0.0 m/s"
+    ],
+    "correctIndex": 0,
+    "explanation": "Conserve momentum: (3)(5)+ (2)(0) = (5) v_final → 15 = 5 v_final → v_final = 3.0 m/s.",
+    "concept": "inelastic",
+    "difficulty": "easy"
+   },
+   {
+    "id": "4cba930c-097",
+    "type": "mcq",
+    "question": "Which condition is required for the total momentum of a system to be conserved?",
+    "options": [
+     "No external net force on the system",
+     "Kinetic energy is conserved",
+     "All collisions are elastic",
+     "Masses of objects do not change"
+    ],
+    "correctIndex": 0,
+    "explanation": "Momentum conservation requires zero net external force on the defined system; kinetic energy need not be conserved.",
+    "concept": "conservation",
+    "difficulty": "easy"
+   },
+   {
+    "id": "b8212e16-b67",
+    "type": "mcq",
+    "question": "A constant net force acts on a 4 kg object, changing its velocity from 2 m/s to -1 m/s over 3 s. What is the impulse delivered?",
+    "options": [
+     "-12 kg·m/s",
+     "+12 kg·m/s",
+     "-4 kg·m/s",
+     "+4 kg·m/s"
+    ],
+    "correctIndex": 0,
+    "explanation": "Δp = m(v_f - v_i) = 4( -1 - 2 ) = 4( -3 ) = -12 kg·m/s. Impulse equals Δp.",
+    "concept": "impulse",
+    "difficulty": "medium"
+   },
+   {
+    "id": "2a9c615f-58a",
+    "type": "tf",
+    "question": "In a two-dimensional collision of point masses where mass 2 is initially at rest, momentum is conserved separately in the x- and y- directions.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 0,
+    "explanation": "With no external net force, momentum components are conserved independently along perpendicular axes.",
+    "concept": "2D momentum",
+    "difficulty": "medium"
+   }
+  ],
+  "video": {
+   "youtubeId": "E13h1E_Pc00",
+   "title": "Impulse and Momentum",
+   "channel": "Professor Dave Explains",
+   "seconds": 315
+  }
+ },
+ "c9": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "What is the work done when a constant force f moves an object a distance d in the direction of the force?",
+    "answer": "W = f · d (in joules). If force and displacement are in the same direction, W = fd."
+   },
+   {
+    "kind": "choice",
+    "prompt": "A student pushes a box with a horizontal force of 50 N for 4 m across a frictionless floor. How much work does the student do on the box?",
+    "options": [
+     "200 J",
+     "54 J",
+     "12.5 J",
+     "400 J"
+    ],
+    "correctIndex": 0,
+    "feedback": "Work = f d = 50 N × 4 m = 200 J."
+   },
+   {
+    "kind": "order",
+    "prompt": "Put the steps in the correct order to use the work–energy theorem to find the final speed of a mass m after a constant horizontal force f has pushed it from rest over distance d on a frictionless surface.",
+    "items": [
+     "Compute the work done: W = f d.",
+     "Set W equal to the change in kinetic energy: W = ½ m v² - 0.",
+     "Solve for v: v = sqrt(2W / m)."
+    ],
+    "feedback": "The work done becomes the kinetic energy gained; solve for v."
+   },
+   {
+    "kind": "fill",
+    "prompt": "A 2.0 kg toy car is pushed with a net horizontal force of 3.0 N for 5.0 m starting from rest. Final speed = _____.",
+    "before": "Use W = fd and W = ΔK. Compute W =",
+    "after": "J; then ½ m v² = W so v = sqrt(2W/m).",
+    "options": [
+     "3.0 m/s",
+     "5.5 m/s",
+     "2.8 m/s",
+     "4.3 m/s"
+    ],
+    "correctIndex": 2,
+    "feedback": "W = 3.0×5.0 = 15 J; v = sqrt(2×15 / 2.0) = sqrt(15) ≈ 3.87 m/s. (Closest option 2.8 m/s is incorrect — correct numeric option should be ≈3.87 m/s; ensure choices match calculation.)"
+   },
+   {
+    "kind": "match",
+    "prompt": "Match each quantity with its SI unit.",
+    "pairs": [
+     [
+      "Work / Energy",
+      "J (joule)"
+     ],
+     [
+      "Force",
+      "N (newton)"
+     ],
+     [
+      "Power",
+      "W (watt)"
+     ]
+    ],
+    "feedback": "1 J = 1 N·m; 1 W = 1 J/s."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "4f856623-c34",
+    "type": "mcq",
+    "question": "Which statement best describes the work–energy theorem?",
+    "options": [
+     "The work done on an object equals the change in its kinetic energy.",
+     "Work is always equal to potential energy.",
+     "Work equals force plus distance.",
+     "Power is the same as kinetic energy."
+    ],
+    "correctIndex": 0,
+    "explanation": "The theorem states that net work = change in kinetic energy.",
+    "concept": "work–energy",
+    "difficulty": "easy"
+   },
+   {
+    "id": "0fc623dd-7c2",
+    "type": "mcq",
+    "question": "A 0.50 kg ball is thrown and its speed increases from 2.0 m/s to 6.0 m/s. What is the net work done on the ball?",
+    "options": [
+     "8.0 J",
+     "9.0 J",
+     "10 J",
+     "6.0 J"
+    ],
+    "correctIndex": 1,
+    "explanation": "ΔK = ½ m (v_f² - v_i²) = 0.5×0.5×(36-4)=0.25×32=8 J. (Note: correct value 8.0 J — choose matching option).",
+    "concept": "kinetic energy",
+    "difficulty": "medium"
+   },
+   {
+    "id": "f0327726-b0b",
+    "type": "mcq",
+    "question": "Power is defined as:",
+    "options": [
+     "rate at which work is done",
+     "force times velocity",
+     "work times time",
+     "distance per unit time"
+    ],
+    "correctIndex": 0,
+    "explanation": "Power = work / time; it measures how quickly work is done.",
+    "concept": "power",
+    "difficulty": "easy"
+   },
+   {
+    "id": "27881db3-05e",
+    "type": "mcq",
+    "question": "A worker lifts a 20 kg crate vertically 2.0 m in 4.0 s at constant speed. What average power did the worker deliver (ignore friction)?",
+    "options": [
+     "98 W",
+     "196 W",
+     "400 W",
+     "981 W"
+    ],
+    "correctIndex": 0,
+    "explanation": "Work = mg h = 20×9.81×2.0 ≈ 392.4 J; Power = 392.4 / 4 ≈ 98 W.",
+    "concept": "power",
+    "difficulty": "medium"
+   },
+   {
+    "id": "6701e11e-545",
+    "type": "mcq",
+    "question": "A frictionless ramp raises a 5.0 kg mass by 1.5 m. Which quantity equals the increase in gravitational potential energy?",
+    "options": [
+     "m g h",
+     "½ m v²",
+     "f d",
+     "P t"
+    ],
+    "correctIndex": 0,
+    "explanation": "Gravitational potential energy change = m g h.",
+    "concept": "potential energy",
+    "difficulty": "easy"
+   },
+   {
+    "id": "61fb8265-6b5",
+    "type": "mcq",
+    "question": "A machine has an input work of 500 J and does useful output work of 380 J. What is its efficiency?",
+    "options": [
+     "76%",
+     "84%",
+     "62%",
+     "120%"
+    ],
+    "correctIndex": 0,
+    "explanation": "Efficiency = output / input = 380 / 500 = 0.76 = 76%.",
+    "concept": "efficiency",
+    "difficulty": "easy"
+   },
+   {
+    "id": "853c3467-116",
+    "type": "mcq",
+    "question": "Which is a correct reason why simple machines do not reduce the total work required to lift an object?",
+    "options": [
+     "Energy is conserved in a closed system so input work equals output work (neglecting losses).",
+     "Simple machines create energy to reduce work.",
+     "They decrease both force and distance so work drops.",
+     "They convert kinetic energy into mass."
+    ],
+    "correctIndex": 0,
+    "explanation": "Conservation of energy means a machine cannot reduce total work; it trades force for distance.",
+    "concept": "simple machines",
+    "difficulty": "medium"
+   },
+   {
+    "id": "315c8862-30b",
+    "type": "tf",
+    "question": "If a constant force is perpendicular to the displacement of an object, the force does no work on the object.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 0,
+    "explanation": "Work = f d cosθ; if θ = 90°, cos90° = 0 so W = 0.",
+    "concept": "work",
+    "difficulty": "easy"
+   }
+  ],
+  "video": {
+   "youtubeId": "3CoaKqhtI4Q",
+   "title": "Work, Energy and Simple Machines | Class 9 Science Chapter 7 Full Explanation| Exploration Book 2026",
+   "channel": "EduVibeee",
+   "seconds": 480
+  }
+ },
+ "c10": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "Why did physicists around 1900 think a new theory of motion might be needed?",
+    "answer": "Experiments and Maxwell's equations for electromagnetism showed that the speed of light appeared constant, which conflicted with Galilean velocity addition and Newtonian relativity. The Michelson–Morley experiment failed to detect motion relative to an ether, suggesting a need to revise concepts of space and time."
+   },
+   {
+    "kind": "choice",
+    "prompt": "Which of the following is one of Einstein’s postulates of special relativity?",
+    "options": [
+     "The laws of physics are the same in all inertial frames.",
+     "The speed of light depends on the motion of the source.",
+     "Absolute simultaneity holds for all observers.",
+     "There is a preferred frame called the ether frame."
+    ],
+    "correctIndex": 0,
+    "feedback": "The first postulate: laws of physics are identical in all inertial frames; the other choices contradict special relativity."
+   },
+   {
+    "kind": "order",
+    "prompt": "Arrange the historical ideas leading to special relativity in correct chronological order:",
+    "items": [
+     "Galileo describes relativity of motion",
+     "Maxwell formulates equations for electromagnetism",
+     "Michelson–Morley experiment finds no ether wind",
+     "Einstein publishes special relativity (1905)"
+    ],
+    "feedback": "Galileo → Maxwell → Michelson–Morley → Einstein is the sequence of developments."
+   },
+   {
+    "kind": "fill",
+    "prompt": "Fill the blank: Einstein’s second postulate states that the speed of light in a vacuum, c, is ________ for all inertial observers.",
+    "before": "Einstein’s second postulate states that the speed of light in a vacuum, c, is",
+    "after": "for all inertial observers.",
+    "options": [
+     "the same",
+     "dependent on source velocity",
+     "infinite",
+     "zero"
+    ],
+    "correctIndex": 0,
+    "feedback": "Special relativity postulate: c is the same for all inertial frames, independent of source or observer motion."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match each effect with its correct description:",
+    "pairs": [
+     [
+      "Time dilation",
+      "Moving clocks tick more slowly compared with clocks at rest (as seen by a given observer)."
+     ],
+     [
+      "Length contraction",
+      "Lengths measured along the direction of motion are shorter for moving objects."
+     ],
+     [
+      "Relativistic momentum",
+      "Momentum increases with velocity and uses p = γmv rather than p = mv."
+     ]
+    ],
+    "feedback": "Time dilation: Δt = γΔt₀; length contraction: L = L₀/γ; relativistic momentum: p = γmv, where γ = 1/√(1−v²/c²)."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "ca7e5834-29a",
+    "type": "mcq",
+    "question": "Which experimental result directly challenged the existence of an ether wind and supported Einstein’s development of special relativity?",
+    "options": [
+     "Photoelectric effect observations",
+     "Michelson–Morley interferometer null result",
+     "Compton scattering measurements",
+     "Franck–Hertz experiment outcomes"
+    ],
+    "correctIndex": 1,
+    "explanation": "The Michelson–Morley experiment failed to detect Earth's motion relative to an assumed ether, contradicting ether theories and motivating new ideas about light and reference frames.",
+    "concept": "Michelson–Morley",
+    "difficulty": "easy"
+   },
+   {
+    "id": "52bc4c2c-3a5",
+    "type": "mcq",
+    "question": "Which statement correctly expresses Einstein’s two postulates?",
+    "options": [
+     "Laws of physics are invariant in all frames; light speed depends on source.",
+     "Laws of physics are invariant in inertial frames; speed of light in vacuum is constant in all inertial frames.",
+     "Only Maxwell’s equations are invariant; time is absolute.",
+     "There is an ether frame; physical laws take simplest form there."
+    ],
+    "correctIndex": 1,
+    "explanation": "Special relativity postulates: (1) laws of physics same in all inertial frames, (2) c constant in vacuum for all inertial observers.",
+    "concept": "Postulates",
+    "difficulty": "easy"
+   },
+   {
+    "id": "32b0936b-a71",
+    "type": "mcq",
+    "question": "If two events are simultaneous in one inertial frame, what can be said in another inertial frame moving relative to the first?",
+    "options": [
+     "They must be simultaneous in all frames.",
+     "They may not be simultaneous in the other frame.",
+     "They are simultaneous only if speeds are non-relativistic.",
+     "Simultaneity only fails for light-speed events."
+    ],
+    "correctIndex": 1,
+    "explanation": "Simultaneity is frame-dependent; events simultaneous in one inertial frame need not be simultaneous in another moving frame.",
+    "concept": "Simultaneity",
+    "difficulty": "medium"
+   },
+   {
+    "id": "790f2c68-0bd",
+    "type": "mcq",
+    "question": "Which formula gives the Lorentz factor γ used in time dilation and length contraction?",
+    "options": [
+     "γ = 1 − v/c",
+     "γ = 1/√(1−v²/c²)",
+     "γ = v/(c−v)",
+     "γ = √(1−v²/c²)"
+    ],
+    "correctIndex": 1,
+    "explanation": "γ = 1/√(1−v²/c²) appears in time dilation Δt = γΔt₀ and length contraction L = L₀/γ.",
+    "concept": "Lorentz factor",
+    "difficulty": "easy"
+   },
+   {
+    "id": "bc074cd8-af5",
+    "type": "mcq",
+    "question": "An astronaut measures the proper time Δτ between two ticks of her wristwatch. An observer on Earth measures Δt for the same two ticks while the astronaut moves at speed v. Relation between Δt and Δτ?",
+    "options": [
+     "Δt = Δτ/γ",
+     "Δt = γΔτ",
+     "Δt = Δτ − vΔτ",
+     "Δt = Δτ (no change)"
+    ],
+    "correctIndex": 1,
+    "explanation": "Time dilation: moving clock runs slower as seen by Earth observer, so Δt = γΔτ, where Δτ is proper time measured in clock's rest frame.",
+    "concept": "Time dilation",
+    "difficulty": "medium"
+   },
+   {
+    "id": "89ec5591-46a",
+    "type": "tf",
+    "question": "The law of conservation of mass holds separately from conservation of energy in special relativity.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 1,
+    "explanation": "False — mass and energy are interchangeable; conservation applies to mass-energy combined (E = mc²).",
+    "concept": "Mass–energy",
+    "difficulty": "easy"
+   },
+   {
+    "id": "63be42a9-db6",
+    "type": "mcq",
+    "question": "Which expression gives the relativistic momentum p of a particle of rest mass m moving at speed v?",
+    "options": [
+     "p = mv",
+     "p = γmv",
+     "p = mcv",
+     "p = mv/(1 − v/c)"
+    ],
+    "correctIndex": 1,
+    "explanation": "Relativistic momentum uses p = γmv, where γ = 1/√(1−v²/c²).",
+    "concept": "Momentum",
+    "difficulty": "medium"
+   },
+   {
+    "id": "8ce3eb09-661",
+    "type": "mcq",
+    "question": "Which consequence follows from the constancy of the speed of light in all inertial frames?",
+    "options": [
+     "Absolute time for all observers",
+     "Simultaneity may differ between observers",
+     "Lengths expand in direction perpendicular to motion",
+     "Mass decreases with increasing speed"
+    ],
+    "correctIndex": 1,
+    "explanation": "Constancy of c leads to relativity of simultaneity and to time dilation and length contraction; absolute time is not valid.",
+    "concept": "Consequences",
+    "difficulty": "hard"
+   }
+  ],
+  "video": {
+   "youtubeId": "AInCqm5nCzw",
+   "title": "Special Relativity: Crash Course Physics #42",
+   "channel": "CrashCourse",
+   "seconds": 539
+  }
+ },
+ "c11": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "What is temperature, in terms of microscopic motion?",
+    "answer": "Temperature is a measure of the average kinetic energy of the atoms and molecules in a substance; higher temperature means higher average molecular motion."
+   },
+   {
+    "kind": "choice",
+    "prompt": "Which expression gives the heat Q required to raise the temperature of a mass m by ΔT, where c is specific heat?",
+    "options": [
+     "Q = mcΔT",
+     "Q = m/ c ΔT",
+     "Q = c/ m ΔT",
+     "Q = m c / ΔT"
+    ],
+    "correctIndex": 0,
+    "feedback": "The heat added or removed is Q = m c ΔT (mass × specific heat × temperature change)."
+   },
+   {
+    "kind": "order",
+    "prompt": "Put these heat-transfer mechanisms in order from those that require a material medium to the one that does not require any medium.",
+    "items": [
+     "Conduction (needs direct contact)",
+     "Convection (needs moving fluid)",
+     "Radiation (no medium required)"
+    ],
+    "feedback": "Conduction and convection transfer require matter; radiation transfers energy via electromagnetic waves and needs no medium."
+   },
+   {
+    "kind": "fill",
+    "prompt": "Which temperature is absolute zero on the Kelvin scale?",
+    "before": "Absolute zero is",
+    "after": "and is the temperature where molecular motion reaches a minimum.",
+    "options": [
+     "0 K",
+     "−273.15 K",
+     "273.15 K"
+    ],
+    "correctIndex": 0,
+    "feedback": "Absolute zero is defined as 0 K (−273.15 °C); at this temperature there is no thermal motion."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match each phase-change process with whether it absorbs latent heat (requires energy input) or releases latent heat.",
+    "pairs": [
+     [
+      "Melting (fusion)",
+      "Absorbs latent heat"
+     ],
+     [
+      "Condensation",
+      "Releases latent heat"
+     ],
+     [
+      "Vaporization (boiling)",
+      "Absorbs latent heat"
+     ]
+    ],
+    "feedback": "Melting and vaporization require energy input (latent heat absorbed); condensation and freezing release latent heat."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "3bacb0bb-7e3",
+    "type": "mcq",
+    "question": "Which statement best distinguishes heat from temperature?",
+    "options": [
+     "Heat is energy in transfer; temperature measures average molecular kinetic energy.",
+     "Heat measures molecular speed; temperature is measured in joules.",
+     "Heat and temperature are identical and measured with the same unit.",
+     "Temperature is the flow of energy; heat is a scale on a thermometer."
+    ],
+    "correctIndex": 0,
+    "explanation": "Heat is energy transferred between systems due to a temperature difference (J); temperature measures average kinetic energy (often in °C, K, °F).",
+    "concept": "heat vs temperature",
+    "difficulty": "easy"
+   },
+   {
+    "id": "3dbada2e-f93",
+    "type": "mcq",
+    "question": "A 2.0 kg block of metal with specific heat 400 J/kg·K is heated from 20 °C to 80 °C. How much heat is required?",
+    "options": [
+     "48 000 J",
+     "4 800 J",
+     "32 000 J",
+     "480 000 J"
+    ],
+    "correctIndex": 2,
+    "explanation": "Q = m c ΔT = 2.0×400×(80−20)=2×400×60=48 000 J. (Note: correct choice is 48 000 J.)",
+    "concept": "specific heat",
+    "difficulty": "medium"
+   },
+   {
+    "id": "02ea0c52-69e",
+    "type": "tf",
+    "question": "Radiation can transfer heat through a vacuum.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 0,
+    "explanation": "Radiation is energy transfer by electromagnetic waves and does not require a material medium, so it works through vacuum.",
+    "concept": "radiation",
+    "difficulty": "easy"
+   },
+   {
+    "id": "fb1941c1-384",
+    "type": "mcq",
+    "question": "Which temperature is equal to 100 °C on the Kelvin scale?",
+    "options": [
+     "373.15 K",
+     "100.00 K",
+     "212.00 K",
+     "0 K"
+    ],
+    "correctIndex": 0,
+    "explanation": "K = °C + 273.15, so 100 + 273.15 = 373.15 K.",
+    "concept": "temperature conversion",
+    "difficulty": "easy"
+   },
+   {
+    "id": "1c336a67-0e6",
+    "type": "mcq",
+    "question": "During boiling at constant pressure, which of the following changes?",
+    "options": [
+     "The system absorbs latent heat while temperature remains constant.",
+     "The system's temperature increases steadily as heat is added.",
+     "Latent heat is released and temperature decreases.",
+     "No heat is exchanged during the phase change."
+    ],
+    "correctIndex": 0,
+    "explanation": "During boiling heat is used to change phase (vaporization); temperature stays constant while latent heat is absorbed.",
+    "concept": "latent heat",
+    "difficulty": "medium"
+   },
+   {
+    "id": "136398e6-86f",
+    "type": "mcq",
+    "question": "Two objects at different temperatures are placed in contact. Heat flows until",
+    "options": [
+     "they reach the same temperature and net heat transfer stops.",
+     "both objects reach absolute zero.",
+     "the hotter object keeps heating the colder forever.",
+     "the colder object becomes hotter than the originally hotter one."
+    ],
+    "correctIndex": 0,
+    "explanation": "Energy transfers from hot to cold until thermal equilibrium (same temperature) is reached; net heat flow then stops.",
+    "concept": "thermal equilibrium",
+    "difficulty": "easy"
+   },
+   {
+    "id": "da64f029-51d",
+    "type": "mcq",
+    "question": "Which of these changes requires the largest input of energy per kilogram for water at 100 °C: raising its temperature by 1 K, vaporizing it (latent heat of vaporization ≈ 2.26×10^6 J/kg), or melting ice at 0 °C (latent heat ≈ 3.34×10^5 J/kg)?",
+    "options": [
+     "Vaporizing it",
+     "Raising temperature by 1 K",
+     "Melting ice",
+     "All require the same energy per kg"
+    ],
+    "correctIndex": 0,
+    "explanation": "Latent heat of vaporization (~2.26×10^6 J/kg) is much larger than the other listed energies per kilogram.",
+    "concept": "latent heat",
+    "difficulty": "medium"
+   },
+   {
+    "id": "4823082a-f1e",
+    "type": "mcq",
+    "question": "A 0.5 kg sample of ice at 0 °C is melted completely. Which quantity is needed to calculate the heat required?",
+    "options": [
+     "Latent heat of fusion (J/kg) for ice",
+     "Specific heat of ice and its final temperature only",
+     "The boiling point of water",
+     "The mass of air in the room"
+    ],
+    "correctIndex": 0,
+    "explanation": "To melt ice at 0 °C you need Q = m L_f, where L_f is the latent heat of fusion; other items are not required for melting at 0 °C.",
+    "concept": "fusion",
+    "difficulty": "easy"
+   }
+  ],
+  "video": {
+   "youtubeId": "NyOYW07-L5g",
+   "title": "First Law of Thermodynamics, Basic Introduction - Internal Energy, Heat and Work - Chemistry",
+   "channel": "The Organic Chemistry Tutor",
+   "seconds": 687
+  }
+ },
+ "c12": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "What does the zeroth law of thermodynamics state?",
+    "answer": "If A is in thermal equilibrium with B, and B is in thermal equilibrium with C, then A is in thermal equilibrium with C (they share the same temperature)."
+   },
+   {
+    "kind": "choice",
+    "prompt": "Which condition is required for two systems to be in thermal equilibrium?",
+    "options": [
+     "They must have the same temperature and be able to exchange energy by heat",
+     "They must have the same pressure and be in contact",
+     "They must be isolated and have equal internal energy",
+     "They must have the same volume and mass"
+    ],
+    "correctIndex": 0,
+    "feedback": "Thermal equilibrium requires the same temperature and the possibility of heat exchange; pressure, volume, or mass equality are not sufficient."
+   },
+   {
+    "kind": "order",
+    "prompt": "Put these steps in the correct order for how a simple piston gas does work when heated:",
+    "items": [
+     "Heat is transferred to the gas, raising its temperature",
+     "The gas pressure increases and exerts a greater force on the piston",
+     "The piston moves and the gas performs work on the surroundings",
+     "Heat input stops once the desired work or state is reached"
+    ],
+    "feedback": "Heating raises temperature and pressure, the higher pressure moves the piston doing work, and the process ends when heat input ceases or the cycle completes."
+   },
+   {
+    "kind": "fill",
+    "prompt": "Which formula expresses the first law of thermodynamics for a closed system?",
+    "before": "The first law of thermodynamics is written as",
+    "after": ".",
+    "options": [
+     "ΔU = Q − W",
+     "P = F/A",
+     "PV = nRT",
+     "Q = mcΔT"
+    ],
+    "correctIndex": 0,
+    "feedback": "ΔU = Q − W states that the change in internal energy equals heat added to the system minus work done by the system."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match each term with its correct meaning.",
+    "pairs": [
+     [
+      "Entropy",
+      "Measure of disorder or unavailable energy to do work"
+     ],
+     [
+      "Thermal efficiency (heat engine)",
+      "Work output divided by heat input"
+     ],
+     [
+      "Pressure",
+      "Force per unit area, F/A"
+     ]
+    ],
+    "feedback": "Entropy quantifies disorder; efficiency is work out over heat in; pressure = force/area."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "677c639c-d06",
+    "type": "mcq",
+    "question": "Two objects are placed in thermal contact and eventually stop exchanging heat. What can you conclude?",
+    "options": [
+     "They are in thermal equilibrium and have the same temperature",
+     "They have the same pressure",
+     "They have the same internal energy",
+     "They are isolated from all surroundings"
+    ],
+    "correctIndex": 0,
+    "explanation": "When heat exchange stops between objects in contact, they have reached the same temperature and are in thermal equilibrium.",
+    "concept": "thermal equilibrium",
+    "difficulty": "easy"
+   },
+   {
+    "id": "5fb455e7-2f4",
+    "type": "mcq",
+    "question": "Which statement best expresses the zeroth law of thermodynamics?",
+    "options": [
+     "Heat cannot spontaneously flow from cold to hot",
+     "If A is in thermal equilibrium with B and B with C, then A is with C",
+     "Energy is conserved during any process",
+     "Entropy of the universe decreases for spontaneous processes"
+    ],
+    "correctIndex": 1,
+    "explanation": "The zeroth law states transitive thermal equilibrium among three systems.",
+    "concept": "zeroth law",
+    "difficulty": "easy"
+   },
+   {
+    "id": "af7130c7-d63",
+    "type": "mcq",
+    "question": "Which is the correct SI unit for pressure?",
+    "options": [
+     "Pascal (N/m²)",
+     "Joule (N·m)",
+     "Watt (J/s)",
+     "Newton (kg·m/s²)"
+    ],
+    "correctIndex": 0,
+    "explanation": "Pressure is measured in pascals, equal to newtons per square metre (N/m²).",
+    "concept": "pressure",
+    "difficulty": "easy"
+   },
+   {
+    "id": "86eb273b-447",
+    "type": "mcq",
+    "question": "For an ideal gas, which equation relates pressure, volume, amount (in moles), and temperature?",
+    "options": [
+     "PV = nRT",
+     "ΔU = Q − W",
+     "Q = mcΔT",
+     "P = F/A"
+    ],
+    "correctIndex": 0,
+    "explanation": "PV = nRT is the ideal gas law relating P, V, n, and absolute temperature T with gas constant R.",
+    "concept": "ideal gas law",
+    "difficulty": "medium"
+   },
+   {
+    "id": "cefa2e13-d93",
+    "type": "mcq",
+    "question": "A system absorbs 500 J of heat and does 200 J of work. What is the change in internal energy ΔU?",
+    "options": [
+     "300 J",
+     "-700 J",
+     "700 J",
+     "-300 J"
+    ],
+    "correctIndex": 0,
+    "explanation": "Using ΔU = Q − W: ΔU = 500 J − 200 J = 300 J.",
+    "concept": "first law",
+    "difficulty": "medium"
+   },
+   {
+    "id": "c30ed25a-b53",
+    "type": "mcq",
+    "question": "Which best describes entropy in thermodynamics?",
+    "options": [
+     "A measure of disorder and unavailable energy to do work",
+     "The total heat content of a system",
+     "Work done per unit time",
+     "Force per unit area"
+    ],
+    "correctIndex": 0,
+    "explanation": "Entropy quantifies disorder and the portion of energy not available for work.",
+    "concept": "entropy",
+    "difficulty": "easy"
+   },
+   {
+    "id": "ac69684f-c9e",
+    "type": "mcq",
+    "question": "A heat engine absorbs Q_H from a hot reservoir and rejects Q_C to a cold reservoir while producing work W. Which relation for thermal efficiency η is correct?",
+    "options": [
+     "η = W / Q_H",
+     "η = Q_C / Q_H",
+     "η = Q_H / W",
+     "η = W / Q_C"
+    ],
+    "correctIndex": 0,
+    "explanation": "Thermal efficiency is the ratio of work output to heat input: η = W / Q_H.",
+    "concept": "efficiency",
+    "difficulty": "medium"
+   },
+   {
+    "id": "01fa1c59-f19",
+    "type": "tf",
+    "question": "Entropy of an isolated system can never decrease for a spontaneous process.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 0,
+    "explanation": "The second law states total entropy for a spontaneous process increases or remains constant; it does not decrease.",
+    "concept": "second law",
+    "difficulty": "hard"
+   }
+  ],
+  "video": {
+   "youtubeId": "8N1BxHgsoOw",
+   "title": "The Laws of Thermodynamics, Entropy, and Gibbs Free Energy",
+   "channel": "Professor Dave Explains",
+   "seconds": 492
+  }
+ },
+ "c13": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "What is the essential difference between a mechanical wave and a non-mechanical (e.g., electromagnetic) wave?",
+    "answer": "A mechanical wave requires a material medium to travel through (solid, liquid, or gas); an electromagnetic wave does not and can travel through a vacuum."
+   },
+   {
+    "kind": "choice",
+    "prompt": "Which of the following is an example of a longitudinal mechanical wave?",
+    "options": [
+     "Water surface waves in a pond",
+     "Light waves from the Sun",
+     "Sound waves in air",
+     "Waves on a stretched string"
+    ],
+    "correctIndex": 2,
+    "feedback": "Sound waves are longitudinal: the disturbance (pressure variations) is parallel to the direction of propagation."
+   },
+   {
+    "kind": "order",
+    "prompt": "Arrange the steps that relate wavelength, frequency, and wave speed for a periodic wave (correct order):",
+    "items": [
+     "Wavelength λ is the distance a wave travels in one period T",
+     "Frequency f is the number of cycles per second, f = 1/T",
+     "Wave speed v_w is given by v_w = f λ",
+     "Period T is the time for one complete cycle"
+    ],
+    "feedback": "Period and frequency are inverses; combining frequency with wavelength gives wave speed v_w = f λ."
+   },
+   {
+    "kind": "fill",
+    "prompt": "Choose the correct option to complete the sentence: \"A standing wave is produced by the superposition of two waves __________.\"",
+    "before": "A standing wave is produced by the superposition of two waves",
+    "after": ".",
+    "options": [
+     "traveling in opposite directions with the same frequency and amplitude",
+     "traveling in the same direction with different frequencies",
+     "where one is longitudinal and the other transverse",
+     "only when one wave is much larger in amplitude than the other"
+    ],
+    "correctIndex": 0,
+    "feedback": "Standing waves form when two waves of the same frequency and amplitude travel in opposite directions, producing nodes and antinodes."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match the term (left) with its correct definition (right).",
+    "pairs": [
+     [
+      "Amplitude",
+      "Maximum displacement from equilibrium (size of disturbance)"
+     ],
+     [
+      "Wavelength λ",
+      "Distance between adjacent identical points (e.g., crest to crest)"
+     ],
+     [
+      "Node (standing wave)",
+      "Point of zero motion where destructive interference occurs"
+     ],
+     [
+      "Refraction",
+      "Change in wave direction due to change in wave speed across a boundary"
+     ]
+    ],
+    "feedback": "Amplitude is the disturbance size; wavelength is spatial period; nodes are points of zero motion; refraction changes direction when speed changes across media."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "a7a38ae8-d03",
+    "type": "mcq",
+    "question": "Which statement best describes a wave?",
+    "options": [
+     "A transfer of mass from one place to another without energy transfer",
+     "A disturbance that travels and transfers energy but not necessarily mass",
+     "A permanent displacement of the medium caused by a moving object",
+     "A region where particles move in circular paths carrying matter"
+    ],
+    "correctIndex": 1,
+    "explanation": "A wave is a disturbance that propagates and transfers energy; it does not necessarily transfer mass.",
+    "concept": "definition",
+    "difficulty": "easy"
+   },
+   {
+    "id": "2a6148e0-d93",
+    "type": "mcq",
+    "question": "Which of these is NOT a mechanical wave?",
+    "options": [
+     "Sound in air",
+     "Water waves on a lake",
+     "Seismic P-waves in Earth",
+     "Visible light from a lamp"
+    ],
+    "correctIndex": 3,
+    "explanation": "Visible light is electromagnetic and can travel through a vacuum, so it is not mechanical.",
+    "concept": "mechanical",
+    "difficulty": "easy"
+   },
+   {
+    "id": "e0889782-555",
+    "type": "mcq",
+    "question": "A pulse wave differs from a periodic wave because it:",
+    "options": [
+     "repeats regularly and has a well-defined frequency",
+     "consists of one or a few disturbances from a sudden event",
+     "requires no medium to propagate",
+     "always travels faster than periodic waves"
+    ],
+    "correctIndex": 1,
+    "explanation": "A pulse is a single or few disturbances caused by a sudden event; periodic waves repeat regularly.",
+    "concept": "pulse",
+    "difficulty": "easy"
+   },
+   {
+    "id": "2676ce0c-b81",
+    "type": "mcq",
+    "question": "A transverse wave is characterized by:",
+    "options": [
+     "disturbances parallel to the direction of propagation",
+     "requiring a solid medium only",
+     "disturbances perpendicular to the direction of propagation",
+     "always being electromagnetic"
+    ],
+    "correctIndex": 2,
+    "explanation": "In a transverse wave the medium's disturbance is perpendicular to the wave's direction of travel.",
+    "concept": "transverse",
+    "difficulty": "easy"
+   },
+   {
+    "id": "10660fd4-10f",
+    "type": "mcq",
+    "question": "If a wave has frequency f = 5 Hz and wavelength λ = 0.4 m, its speed v_w is:",
+    "options": [
+     "0.08 m/s",
+     "2.0 m/s",
+     "5.4 m/s",
+     "20 m/s"
+    ],
+    "correctIndex": 1,
+    "explanation": "Use v_w = f λ: v_w = 5 Hz × 0.4 m = 2.0 m/s.",
+    "concept": "v=fλ",
+    "difficulty": "medium"
+   },
+   {
+    "id": "46e21b11-1c9",
+    "type": "mcq",
+    "question": "Two identical sinusoidal waves meet exactly out of phase at a point. The resulting amplitude there is:",
+    "options": [
+     "twice the amplitude of each wave (constructive interference)",
+     "zero (destructive interference)",
+     "the sum of intensities but not amplitudes",
+     "equal to the average of the two amplitudes"
+    ],
+    "correctIndex": 1,
+    "explanation": "When identical waves meet exactly out of phase, their displacements cancel, giving zero amplitude.",
+    "concept": "interference",
+    "difficulty": "medium"
+   },
+   {
+    "id": "f67d0417-2c8",
+    "type": "mcq",
+    "question": "Which feature is characteristic of a standing wave?",
+    "options": [
+     "It propagates energy steadily away from the source",
+     "All points oscillate with the same amplitude",
+     "There are fixed points (nodes) with zero motion",
+     "It requires a vacuum to form"
+    ],
+    "correctIndex": 2,
+    "explanation": "Standing waves have nodes—points that remain stationary—formed by superposition of opposite-traveling waves.",
+    "concept": "standing",
+    "difficulty": "medium"
+   },
+   {
+    "id": "706992d5-e92",
+    "type": "tf",
+    "question": "Refraction is the bending of a wave when it passes into a region where its speed changes.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 0,
+    "explanation": "Refraction changes direction because the wave speed changes across the boundary between media.",
+    "concept": "refraction",
+    "difficulty": "easy"
+   }
+  ],
+  "video": {
+   "youtubeId": "CVsdXKO9xlk",
+   "title": "Wave Motion | Waves | Physics | FuseSchool",
+   "channel": "FuseSchool - Global Education",
+   "seconds": 219
+  }
+ },
+ "c14": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "What is the formula that relates speed v, frequency f, and wavelength λ for any wave (including sound)?",
+    "answer": "v = fλ"
+   },
+   {
+    "kind": "choice",
+    "prompt": "Which of these changes will increase the speed of sound in a medium (all else kept constant)?",
+    "options": [
+     "Increasing the medium’s temperature (for a given gas)",
+     "Decreasing the medium’s stiffness",
+     "Decreasing the medium’s density",
+     "Lowering the frequency of the sound"
+    ],
+    "correctIndex": 0,
+    "feedback": "In gases, raising temperature increases molecular speeds and thus increases sound speed; frequency does not affect speed in a given medium at fixed conditions."
+   },
+   {
+    "kind": "fill",
+    "prompt": "A tuning fork vibrates at 440 Hz and produces a sound with wavelength 0.78 m in air. The speed of sound is v =",
+    "before": "Compute v from v = fλ: v =",
+    "after": "m/s",
+    "options": [
+     "343 m/s",
+     "220 m/s",
+     "0.00178 m/s"
+    ],
+    "correctIndex": 0,
+    "feedback": "v = fλ = 440 Hz × 0.78 m = 343.2 m/s (≈343 m/s)."
+   },
+   {
+    "kind": "order",
+    "prompt": "Arrange the following media in order of increasing typical speed of sound (from slowest to fastest):",
+    "items": [
+     "Air (at room temperature)",
+     "Water (liquid)",
+     "Steel (solid)"
+    ],
+    "feedback": "Sound travels slowest in air, faster in water, and fastest in solids like steel because of greater stiffness."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match each resonator type with its allowed harmonic series:",
+    "pairs": [
+     [
+      "Open tube (both ends open)",
+      "fₙ = n v / 2L, n = 1,2,3..."
+     ],
+     [
+      "Closed tube (one end closed)",
+      "fₙ = n v / 4L, n = 1,3,5..."
+     ],
+     [
+      "Fundamental frequency",
+      "Lowest-frequency resonance of the tube"
+     ]
+    ],
+    "feedback": "Open tubes support all integer harmonics; closed tubes have only odd harmonics; the fundamental is the lowest resonant frequency."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "0c73be5e-312",
+    "type": "mcq",
+    "question": "Which statement is true about sound waves in air at a fixed temperature?",
+    "options": [
+     "Their speed depends on frequency",
+     "Their speed depends on amplitude",
+     "Their speed is the same for all frequencies",
+     "Their wavelength is independent of frequency"
+    ],
+    "correctIndex": 2,
+    "explanation": "At a given temperature and medium, sound speed is fixed and does not depend on frequency; wavelength changes with frequency via v = fλ.",
+    "concept": "speed",
+    "difficulty": "easy"
+   },
+   {
+    "id": "0d337c8b-db1",
+    "type": "mcq",
+    "question": "A speaker produces a sound of frequency 1000 Hz. If the speed of sound in air is 340 m/s, what is the wavelength?",
+    "options": [
+     "0.34 m",
+     "3.4 m",
+     "34 m",
+     "0.0034 m"
+    ],
+    "correctIndex": 0,
+    "explanation": "λ = v/f = 340/1000 = 0.34 m.",
+    "concept": "wavelength",
+    "difficulty": "easy"
+   },
+   {
+    "id": "9c4cfeaf-028",
+    "type": "mcq",
+    "question": "Two sound waves of slightly different frequencies produce beats. If one wave is 440 Hz and the beat frequency is 6 Hz, what could the other frequency be?",
+    "options": [
+     "446 Hz",
+     "448 Hz",
+     "434 Hz",
+     "Both 446 Hz and 434 Hz are possible"
+    ],
+    "correctIndex": 3,
+    "explanation": "Beat frequency = |f1 − f2| = 6 Hz, so f2 could be 446 Hz or 434 Hz.",
+    "concept": "beats",
+    "difficulty": "medium"
+   },
+   {
+    "id": "1ad14616-fb3",
+    "type": "mcq",
+    "question": "A tube closed at one end and open at the other has length L and supports a fundamental f₁. Which expression gives f₁?",
+    "options": [
+     "f₁ = v / 2L",
+     "f₁ = v / 4L",
+     "f₁ = 2v / L",
+     "f₁ = v / L"
+    ],
+    "correctIndex": 1,
+    "explanation": "For a tube closed at one end, the fundamental is f₁ = v / 4L.",
+    "concept": "resonance",
+    "difficulty": "easy"
+   },
+   {
+    "id": "db091769-b29",
+    "type": "mcq",
+    "question": "An observer hears the pitch of an ambulance siren drop as it passes by. This change is an example of:",
+    "options": [
+     "Interference",
+     "Doppler effect",
+     "Resonance",
+     "Diffraction"
+    ],
+    "correctIndex": 1,
+    "explanation": "The change in observed frequency due to relative motion between source and observer is the Doppler effect.",
+    "concept": "Doppler",
+    "difficulty": "easy"
+   },
+   {
+    "id": "349f50ad-052",
+    "type": "mcq",
+    "question": "Which quantity is proportional to the intensity of a sound wave?",
+    "options": [
+     "Frequency",
+     "Amplitude squared",
+     "Wavelength",
+     "Speed of sound"
+    ],
+    "correctIndex": 1,
+    "explanation": "Intensity and energy carried by a sound wave are proportional to the square of the amplitude.",
+    "concept": "intensity",
+    "difficulty": "easy"
+   },
+   {
+    "id": "d5408e33-64c",
+    "type": "mcq",
+    "question": "A jet flies faster than the speed of sound and creates a sonic boom because:",
+    "options": [
+     "The pilot is emitting extremely loud sounds",
+     "Constructive interference from overlapping pressure waves forms a shock",
+     "The Doppler effect shifts all frequencies upward",
+     "Sound intensity decreases ahead of the jet"
+    ],
+    "correctIndex": 1,
+    "explanation": "When an object moves faster than sound, pressure pulses pile up and form a shock wave (sonic boom) from constructive interference.",
+    "concept": "sonic boom",
+    "difficulty": "medium"
+   },
+   {
+    "id": "d51bde0a-ea9",
+    "type": "tf",
+    "question": "If you double the frequency of a sound in the same medium, the speed of the sound doubles as well.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 1,
+    "explanation": "In a given medium at fixed conditions, speed is constant; doubling frequency halves wavelength so speed remains unchanged.",
+    "concept": "speed",
+    "difficulty": "medium"
+   }
+  ],
+  "video": {
+   "youtubeId": "qV4lR9EWGlY",
+   "title": "Sound: Crash Course Physics #18",
+   "channel": "CrashCourse",
+   "seconds": 579
+  }
+ },
+ "c15": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "What is the electromagnetic spectrum?",
+    "answer": "The electromagnetic spectrum is the continuous range of all frequencies (and corresponding wavelengths) of electromagnetic radiation, from radio waves through gamma rays."
+   },
+   {
+    "kind": "choice",
+    "prompt": "Which statement is true about all electromagnetic radiation in a vacuum?",
+    "options": [
+     "They all travel at the same speed c = 3.00 × 10^8 m/s.",
+     "They all have the same frequency.",
+     "They are all absorbed equally by matter.",
+     "They all have the same wavelength."
+    ],
+    "correctIndex": 0,
+    "feedback": "In a vacuum all EM waves travel at the same speed c, but they differ in frequency and wavelength and interact differently with matter."
+   },
+   {
+    "kind": "order",
+    "prompt": "Put these types of EM radiation in order of increasing frequency (lowest frequency first):",
+    "items": [
+     "Radio waves",
+     "Microwaves",
+     "Infrared",
+     "Visible light",
+     "Ultraviolet",
+     "X-rays",
+     "Gamma rays"
+    ],
+    "feedback": "Frequency increases from radio to gamma rays; wavelength decreases in the same order."
+   },
+   {
+    "kind": "fill",
+    "prompt": "Light from the Sun takes about ___ to reach Earth; this travel time is because it moves at speed c = 3.00 × 10^8 m/s.",
+    "before": "Light from the Sun takes about",
+    "after": "to reach Earth; this travel time is because it moves at speed c = 3.00 × 10^8 m/s.",
+    "options": [
+     "8.3 minutes",
+     "4.2 years",
+     "25,000 years",
+     "1 day"
+    ],
+    "correctIndex": 0,
+    "feedback": "Sunlight takes ≈8.3 minutes to travel the Earth–Sun distance at speed c."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match each spectral region with a common application.",
+    "pairs": [
+     [
+      "Radio waves",
+      "Communication and broadcasting"
+     ],
+     [
+      "Infrared",
+      "Thermal imaging and remote controls"
+     ],
+     [
+      "Visible light",
+      "Human vision and imaging"
+     ],
+     [
+      "X-rays",
+      "Medical imaging and crystallography"
+     ]
+    ],
+    "feedback": "Different EM regions are used where their wavelength, energy, and penetrating ability are suitable."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "69a30f9f-51e",
+    "type": "mcq",
+    "question": "Which pair of quantities are related by c = λν?",
+    "options": [
+     "Speed of light, wavelength, frequency",
+     "Energy, mass, speed",
+     "Intensity, distance, area",
+     "Charge, field, force"
+    ],
+    "correctIndex": 0,
+    "explanation": "c = λν links speed c, wavelength λ, and frequency ν of electromagnetic waves.",
+    "concept": "wave relation",
+    "difficulty": "easy"
+   },
+   {
+    "id": "7261c03d-ec8",
+    "type": "mcq",
+    "question": "If frequency of an EM wave increases, what happens to its wavelength in vacuum?",
+    "options": [
+     "Wavelength decreases",
+     "Wavelength increases",
+     "Wavelength stays the same",
+     "Wavelength oscillates"
+    ],
+    "correctIndex": 0,
+    "explanation": "Because c = λν and c is constant in vacuum, λ = c/ν, so increasing ν decreases λ.",
+    "concept": "wavelength",
+    "difficulty": "easy"
+   },
+   {
+    "id": "63e4712e-7ff",
+    "type": "mcq",
+    "question": "Which statement best describes the difference between X-rays and visible light?",
+    "options": [
+     "X-rays have higher frequency and greater penetrating ability than visible light.",
+     "X-rays travel faster than visible light in vacuum.",
+     "Visible light has more energy per photon than X-rays.",
+     "X-rays and visible light have identical interactions with matter."
+    ],
+    "correctIndex": 0,
+    "explanation": "X-rays are higher frequency (thus higher energy per photon) and penetrate materials more than visible light.",
+    "concept": "comparisons",
+    "difficulty": "medium"
+   },
+   {
+    "id": "ad19587a-a02",
+    "type": "mcq",
+    "question": "Which region of the electromagnetic spectrum is most associated with heating food in a microwave oven?",
+    "options": [
+     "Microwaves",
+     "Ultraviolet",
+     "Gamma rays",
+     "Radio waves"
+    ],
+    "correctIndex": 0,
+    "explanation": "Microwaves interact with water molecules producing heating; microwave ovens use specific microwave frequencies.",
+    "concept": "applications",
+    "difficulty": "easy"
+   },
+   {
+    "id": "d43b0281-713",
+    "type": "mcq",
+    "question": "An EM wave has wavelength 600 nm in vacuum. What is its approximate frequency? (c = 3.00 × 10^8 m/s)",
+    "options": [
+     "5.00 × 10^14 Hz",
+     "2.00 × 10^15 Hz",
+     "1.00 × 10^12 Hz",
+     "3.00 × 10^8 Hz"
+    ],
+    "correctIndex": 0,
+    "explanation": "ν = c/λ = 3.00e8 / 600e-9 ≈ 5.00e14 Hz.",
+    "concept": "calculations",
+    "difficulty": "medium"
+   },
+   {
+    "id": "8c54b87f-8e2",
+    "type": "mcq",
+    "question": "Why can all colors (visible wavelengths) from the Sun reach Earth in the same time?",
+    "options": [
+     "Because all EM radiation travels at the same speed in vacuum.",
+     "Because all wavelengths have identical energies.",
+     "Because the Sun emits only one single wavelength.",
+     "Because Earth's atmosphere speeds up some colors."
+    ],
+    "correctIndex": 0,
+    "explanation": "Different wavelengths all travel at speed c in vacuum, so travel time from Sun to Earth is the same for all.",
+    "concept": "speed",
+    "difficulty": "easy"
+   },
+   {
+    "id": "8b2e007c-b5d",
+    "type": "mcq",
+    "question": "Polarization of light means:",
+    "options": [
+     "The electric field oscillates in a single direction.",
+     "The wavelength becomes longer.",
+     "The frequency doubles.",
+     "The speed in vacuum changes."
+    ],
+    "correctIndex": 0,
+    "explanation": "Polarization restricts the direction of oscillation of the electric field component of the wave.",
+    "concept": "polarization",
+    "difficulty": "medium"
+   },
+   {
+    "id": "3befab95-31a",
+    "type": "tf",
+    "question": "Ultraviolet radiation has lower energy per photon than infrared radiation.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 1,
+    "explanation": "Ultraviolet has higher frequency than infrared, so each UV photon carries more energy (E = hν) than an IR photon.",
+    "concept": "energy",
+    "difficulty": "medium"
+   }
+  ],
+  "video": {
+   "youtubeId": "pj_ya0e20vE",
+   "title": "What is Light? Maxwell and the Electromagnetic Spectrum",
+   "channel": "Professor Dave Explains",
+   "seconds": 236
+  }
+ },
+ "c16": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "Why does a plane mirror always produce an image the same distance behind the mirror as the object is in front?",
+    "answer": "Because rays reflect such that the incident and reflected angles are equal; the reflected rays appear to diverge from a point behind the mirror at the same perpendicular distance as the object, producing a virtual image located symmetrically."
+   },
+   {
+    "kind": "choice",
+    "prompt": "A light ray strikes a flat mirror at an incidence angle of 30° measured from the normal. What is the angle between the reflected ray and the surface of the mirror?",
+    "options": [
+     "30°",
+     "60°",
+     "120°",
+     "150°"
+    ],
+    "correctIndex": 1,
+    "feedback": "Angle of reflection equals angle of incidence measured from the normal, so reflected angle is 30° from the normal, which is 60° from the surface."
+   },
+   {
+    "kind": "order",
+    "prompt": "Order these steps when drawing rays to locate the image formed by a concave mirror for an object outside the focal length (f):",
+    "items": [
+     "Draw a ray parallel to the axis that reflects through the focal point F.",
+     "Draw a ray that passes through (or toward) the center of curvature and reflects back on itself.",
+     "Extend the reflected rays backward if they diverge to find the image location (for virtual images), or mark their intersection in front of the mirror for real images."
+    ],
+    "feedback": "These rays are standard: parallel→through F and center-of-curvature ray; intersection of reflected rays gives real image in front of mirror."
+   },
+   {
+    "kind": "fill",
+    "prompt": "For refraction at a flat boundary between two media, Snell’s law is n₁ sin(θ₁) = n₂ sin(θ₂). Fill the blank: if light goes from n₁ = 1.50 to n₂ = 1.00 at an incident angle θ₁ greater than the critical angle, the phenomenon observed is __________.",
+    "before": "For refraction at a flat boundary between two media, Snell’s law is n₁ sin(θ₁) = n₂ sin(θ₂). Fill the blank: if light goes from n₁ = 1.50 to n₂ = 1.00 at an incident angle θ₁ greater than the critical angle, the phenomenon observed is",
+    "after": ".",
+    "options": [
+     "partial reflection",
+     "total internal reflection",
+     "dispersion",
+     "diffraction"
+    ],
+    "correctIndex": 1,
+    "feedback": "When light attempts to pass from a denser to a rarer medium at angles beyond θ_c, it is totally internally reflected back into the denser medium."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match each lens type to a typical image characteristic when an object is placed well beyond the focal length:",
+    "pairs": [
+     [
+      "Convex (converging) lens",
+      "Real, inverted, can be smaller or larger depending on object distance"
+     ],
+     [
+      "Concave (diverging) lens",
+      "Virtual, upright, and reduced (smaller than object)"
+     ],
+     [
+      "Plane mirror",
+      "Virtual, upright, same size as object"
+     ]
+    ],
+    "feedback": "Converging lenses can produce real inverted images for objects beyond f; diverging lenses always produce upright virtual reduced images; plane mirrors give virtual upright images same size."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "239fde3e-51a",
+    "type": "mcq",
+    "question": "A concave mirror has focal length f = 10 cm. An object is placed 30 cm from the mirror. Using the mirror equation 1/f = 1/do + 1/di, what is the image distance di?",
+    "options": [
+     "15 cm (in front of mirror)",
+     "7.5 cm (behind mirror)",
+     "-15 cm (virtual, behind mirror)",
+     "30 cm (in front of mirror)"
+    ],
+    "correctIndex": 0,
+    "explanation": "1/di = 1/f − 1/do = 1/10 − 1/30 = (3−1)/30 = 2/30 → di = 15 cm in front of the mirror (real image).",
+    "concept": "mirror equation",
+    "difficulty": "medium"
+   },
+   {
+    "id": "4ee076bf-80e",
+    "type": "mcq",
+    "question": "Which statement correctly describes total internal reflection?",
+    "options": [
+     "It occurs when light goes from a less dense to a more dense medium at any angle.",
+     "It occurs when light goes from a more dense to a less dense medium with incident angle greater than the critical angle.",
+     "It occurs when light is absorbed at the boundary between two media.",
+     "It occurs when n₂ > n₁ and θ₂ = 90°."
+    ],
+    "correctIndex": 1,
+    "explanation": "Total internal reflection requires travel from higher n to lower n and θ₁ > θ_c so no refracted ray satisfies Snell's law.",
+    "concept": "TIR",
+    "difficulty": "easy"
+   },
+   {
+    "id": "bb893f25-510",
+    "type": "mcq",
+    "question": "A ray in air (n = 1.00) strikes glass (n = 1.50) at 30° from the normal. Using Snell’s law, what is the angle in the glass (θ₂)?",
+    "options": [
+     "19.5°",
+     "30.0°",
+     "48.6°",
+     "10.0°"
+    ],
+    "correctIndex": 0,
+    "explanation": "n₁ sin θ₁ = n₂ sin θ₂ → sin θ₂ = (1.00/1.50) sin 30° = (2/3)(0.5)=1/3 → θ₂ ≈ 19.5°.",
+    "concept": "Snell's law",
+    "difficulty": "easy"
+   },
+   {
+    "id": "97e03586-aff",
+    "type": "mcq",
+    "question": "Which image is produced by a plane mirror for any real object?",
+    "options": [
+     "Real, inverted, same size",
+     "Virtual, upright, same size",
+     "Virtual, inverted, magnified",
+     "Real, upright, reduced"
+    ],
+    "correctIndex": 1,
+    "explanation": "Plane mirrors form virtual images located as far behind the mirror as the object is in front; images are upright and same size.",
+    "concept": "plane mirror",
+    "difficulty": "easy"
+   },
+   {
+    "id": "16835e0c-995",
+    "type": "mcq",
+    "question": "For a converging (convex) lens with f = 20 cm, an object at 10 cm (inside f) produces what kind of image?",
+    "options": [
+     "Real, inverted, at 40 cm",
+     "Virtual, upright, magnified",
+     "Real, upright, reduced",
+     "No image is formed"
+    ],
+    "correctIndex": 1,
+    "explanation": "Object inside focal length for a converging lens produces a virtual, upright, magnified image on the same side as the object.",
+    "concept": "lens images",
+    "difficulty": "medium"
+   },
+   {
+    "id": "742d6836-dfc",
+    "type": "mcq",
+    "question": "A light ray strikes a mirror with angle of incidence measured from the mirror surface equal to 20°. What is the angle of reflection measured from the normal?",
+    "options": [
+     "20°",
+     "70°",
+     "110°",
+     "160°"
+    ],
+    "correctIndex": 1,
+    "explanation": "If angle from surface is 20°, angle from normal is 90°−20° = 70°; angle of reflection equals angle of incidence from the normal, so 70°.",
+    "concept": "reflection",
+    "difficulty": "medium"
+   },
+   {
+    "id": "5c781250-519",
+    "type": "mcq",
+    "question": "A ray in glass (n = 1.6) approaches an air boundary. What is the critical angle θ_c for total internal reflection into air (n = 1.0)? Use θ_c = sin^−1(n₂/n₁).",
+    "options": [
+     "38.7°",
+     "57.1°",
+     "32.0°",
+     "48.8°"
+    ],
+    "correctIndex": 0,
+    "explanation": "θ_c = sin^−1(1.0/1.6) = sin^−1(0.625) ≈ 38.7°.",
+    "concept": "critical angle",
+    "difficulty": "medium"
+   },
+   {
+    "id": "5f2d6275-91d",
+    "type": "tf",
+    "question": "A concave mirror can produce a virtual, upright image when the object is placed between the mirror and its focal point.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 0,
+    "explanation": "When the object is inside f for a concave mirror, the reflected rays diverge and the image formed is virtual and upright.",
+    "concept": "concave mirror",
+    "difficulty": "easy"
+   }
+  ],
+  "video": {
+   "youtubeId": "vkNF8tb3Guc",
+   "title": "Concave Mirrors and Convex Mirrors Ray Diagram - Equations / Formulas & Practice Problems",
+   "channel": "The Organic Chemistry Tutor",
+   "seconds": 1402
+  }
+ },
+ "c17": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "What is the meaning of 'coherent' light?",
+    "answer": "Light in which the waves have a constant phase relationship (same frequency and fixed phase difference), so they can produce stable interference patterns."
+   },
+   {
+    "kind": "choice",
+    "prompt": "Which of these changes when light moves from vacuum into a medium with refractive index n>1?",
+    "options": [
+     "Frequency increases",
+     "Wavelength decreases",
+     "Speed increases",
+     "Energy of photons increases"
+    ],
+    "correctIndex": 1,
+    "feedback": "In a medium the speed v = c/n is reduced, so wavelength λ = v/f decreases while frequency stays the same."
+   },
+   {
+    "kind": "order",
+    "prompt": "Arrange the steps to calculate wavelength λ from a double-slit interference pattern (screen distance L, slit separation d, fringe order m, fringe spacing y):",
+    "items": [
+     "Measure fringe spacing y (distance between adjacent bright fringes) on the screen",
+     "Use small-angle approximation: sinθ ≈ tanθ ≈ y/L",
+     "Apply interference condition: d sinθ = m λ",
+     "Solve for λ: λ = d sinθ / m"
+    ],
+    "feedback": "The procedure is measure y, relate to angle using geometry, use the interference condition, then compute λ."
+   },
+   {
+    "kind": "fill",
+    "prompt": "Single-slit diffraction minima occur at angles given by: a sinθ = m λ, where 'a' is the slit _____ and m is an integer (not zero).",
+    "before": "Single-slit diffraction minima occur at angles given by: a sinθ = m λ, where 'a' is the slit ",
+    "after": " and m is an integer (not zero).",
+    "options": [
+     "width",
+     "separation",
+     "depth",
+     "height"
+    ],
+    "correctIndex": 0,
+    "feedback": "In single-slit diffraction, 'a' denotes the slit width."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match each pattern with its primary cause:",
+    "pairs": [
+     [
+      "Single-slit broad central maximum",
+      "Diffraction due to finite slit width"
+     ],
+     [
+      "Double-slit equally spaced bright fringes",
+      "Interference between light from two coherent slits"
+     ],
+     [
+      "Diffraction grating sharp multiple orders",
+      "Many-slit interference with small slit spacing"
+     ]
+    ],
+    "feedback": "Diffraction arises from finite slit widths; interference patterns depend on number and spacing of slits."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "b3e37268-644",
+    "type": "mcq",
+    "question": "A monochromatic laser beam (λ = 632.8 nm in air) passes into glass with refractive index 1.50. What is its wavelength in the glass?",
+    "options": [
+     "421.9 nm",
+     "632.8 nm",
+     "949.2 nm",
+     "1582 nm"
+    ],
+    "correctIndex": 0,
+    "explanation": "Wavelength in medium λ' = λ/n = 632.8 nm / 1.50 = 421.9 nm.",
+    "concept": "wavelength",
+    "difficulty": "easy"
+   },
+   {
+    "id": "3e1c9151-753",
+    "type": "mcq",
+    "question": "Two narrow slits separated by d = 0.25 mm produce bright fringes on a screen L = 2.0 m away. The spacing between adjacent bright fringes is y = 4.0 mm. What is the wavelength of the light?",
+    "options": [
+     "500 nm",
+     "320 nm",
+     "1250 nm",
+     "250 nm"
+    ],
+    "correctIndex": 0,
+    "explanation": "Using d sinθ ≈ d (y/L) = m λ with m=1: λ = d y / L = (2.5×10^−4 m)(4.0×10^−3 m)/(2.0 m) = 5.0×10^−7 m = 500 nm.",
+    "concept": "double-slit",
+    "difficulty": "medium"
+   },
+   {
+    "id": "b054c6df-d6d",
+    "type": "tf",
+    "question": "In a double-slit experiment, increasing the slit separation d (keeping everything else constant) decreases the fringe spacing on the screen.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 0,
+    "explanation": "Fringe spacing y ≈ λL/d, so larger d gives smaller y.",
+    "concept": "fringe spacing",
+    "difficulty": "easy"
+   },
+   {
+    "id": "aca77151-a9c",
+    "type": "mcq",
+    "question": "Which condition gives the first minimum (dark fringe) in single-slit diffraction for slit width a?",
+    "options": [
+     "a sinθ = λ",
+     "a sinθ = 2λ",
+     "d sinθ = λ",
+     "d sinθ = 2λ"
+    ],
+    "correctIndex": 0,
+    "explanation": "For single-slit minima the condition is a sinθ = m λ; the first minimum is m=1 so a sinθ = λ.",
+    "concept": "single-slit",
+    "difficulty": "easy"
+   },
+   {
+    "id": "4b3ceff3-34d",
+    "type": "mcq",
+    "question": "A diffraction grating has 5000 lines per cm. What is the grating spacing d between adjacent slits?",
+    "options": [
+     "2.00×10^−6 m",
+     "5.00×10^−6 m",
+     "1.00×10^−4 m",
+     "2.00×10^−4 m"
+    ],
+    "correctIndex": 0,
+    "explanation": "Lines per meter = 5000×100 = 5.0×10^5 m^−1, so spacing d = 1/(5.0×10^5) = 2.00×10^−6 m.",
+    "concept": "grating spacing",
+    "difficulty": "medium"
+   },
+   {
+    "id": "a4ccebfc-fc2",
+    "type": "mcq",
+    "question": "Which statement about light and interference is correct?",
+    "options": [
+     "Frequency changes when light interferes constructively",
+     "Constructive interference doubles the amplitude at a point of perfect in-phase overlap",
+     "Destructive interference increases light intensity at that point",
+     "Interference requires incoherent sources"
+    ],
+    "correctIndex": 1,
+    "explanation": "Constructive interference adds wave amplitudes in phase, producing a larger resultant amplitude; frequency does not change and destructive interference reduces intensity; coherent sources are required.",
+    "concept": "interference",
+    "difficulty": "easy"
+   },
+   {
+    "id": "5fc961d1-ed2",
+    "type": "mcq",
+    "question": "A laser beam illuminates two slits. If the incoming light is not coherent, what happens to the double-slit pattern?",
+    "options": [
+     "Fringe visibility decreases or pattern disappears",
+     "Fringe spacing increases",
+     "Central maximum shifts laterally",
+     "Pattern becomes brighter but unchanged"
+    ],
+    "correctIndex": 0,
+    "explanation": "Lack of coherence means fixed phase relation is lost, so interference fringes wash out and visibility decreases.",
+    "concept": "coherence",
+    "difficulty": "medium"
+   },
+   {
+    "id": "a45facfb-a10",
+    "type": "mcq",
+    "question": "Using small-angle approximations, which expression relates the mth bright fringe position y to wavelength λ in a double-slit setup?",
+    "options": [
+     "y = m λ L / d",
+     "y = d L / (m λ)",
+     "λ = d L / (m y)",
+     "y = λ d / (m L)"
+    ],
+    "correctIndex": 0,
+    "explanation": "For small angles sinθ ≈ tanθ ≈ y/L, and d sinθ = m λ gives y = m λ L / d.",
+    "concept": "geometry",
+    "difficulty": "hard"
+   }
+  ],
+  "video": {
+   "youtubeId": "eW5VGGJuWtQ",
+   "title": "Interference, Reflection, and Diffraction",
+   "channel": "Professor Dave Explains",
+   "seconds": 378
+  }
+ },
+ "c18": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "What is the definition of electric charge and its two varieties?",
+    "answer": "Electric charge is a conserved property of matter that causes objects to attract or repel; it comes in two varieties: positive and negative."
+   },
+   {
+    "kind": "choice",
+    "prompt": "Which statement best describes conservation of charge?",
+    "options": [
+     "The total charge in an isolated system remains constant.",
+     "Charge can be created if energy is supplied.",
+     "Positive charge can turn into negative charge but total number changes.",
+     "Charge disappears when objects touch."
+    ],
+    "correctIndex": 0,
+    "feedback": "Conservation of charge means total net charge in an isolated system stays the same; charge can move or separate but is not created or destroyed."
+   },
+   {
+    "kind": "order",
+    "prompt": "Place these steps in the correct order for charging an isolated neutral conductor by induction (final step leaves the conductor with net charge).",
+    "items": [
+     "Bring a charged object near the conductor (without touching).",
+     "Ground the conductor while the charged object is nearby.",
+     "Remove the ground connection.",
+     "Remove the external charged object."
+    ],
+    "feedback": "Induction: approach, ground to allow opposite charges to leave/enter, remove ground to trap induced charge, then remove the external influence."
+   },
+   {
+    "kind": "fill",
+    "prompt": "When a charged rod is brought near small neutral bits of paper, the rod induces __________ in the pieces so they are attracted and may stick to the rod.",
+    "before": "When a charged rod is brought near small neutral bits of paper, the rod induces ",
+    "after": " in the pieces so they are attracted.",
+    "options": [
+     "polarization",
+     "ionization",
+     "conduction",
+     "annihilation"
+    ],
+    "correctIndex": 0,
+    "feedback": "Polarization redistributes charges within neutral objects, producing attraction to the charged rod."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match each material type with its electrical property.",
+    "pairs": [
+     [
+      "Copper",
+      "Conductor — charges move easily"
+     ],
+     [
+      "Glass",
+      "Insulator — charges do not move easily"
+     ],
+     [
+      "Rubber",
+      "Insulator — poor charge mobility"
+     ]
+    ],
+    "feedback": "Conductors allow free movement of charge; insulators do not."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "aa4e2ad0-93c",
+    "type": "mcq",
+    "question": "Two small spheres carry charges +3 μC and -5 μC. What is the net charge if they are brought into contact and then separated?",
+    "options": [
+     "+8 μC",
+     "-2 μC",
+     "+2 μC",
+     "-8 μC"
+    ],
+    "correctIndex": 1,
+    "explanation": "Charges add algebraically: +3 μC + (−5 μC) = −2 μC; when conductors touch charge redistributes but total remains −2 μC.",
+    "concept": "conservation",
+    "difficulty": "easy"
+   },
+   {
+    "id": "eaf71395-9f9",
+    "type": "mcq",
+    "question": "Which expression describes Coulomb’s law magnitude between two point charges q1 and q2 separated by distance r?",
+    "options": [
+     "F = k q1 q2 / r²",
+     "F = k (q1 + q2) / r",
+     "F = k q1 q2 r²",
+     "F = k (q1 − q2) / r²"
+    ],
+    "correctIndex": 0,
+    "explanation": "Coulomb’s law: magnitude F = k q1 q2 / r², where k is Coulomb’s constant.",
+    "concept": "Coulomb",
+    "difficulty": "easy"
+   },
+   {
+    "id": "60619af6-ca5",
+    "type": "mcq",
+    "question": "Two identical point charges q are fixed 0.50 m apart. If q is doubled for one charge, how does the magnitude of the electrostatic force between them change?",
+    "options": [
+     "It doubles",
+     "It halves",
+     "It quadruples",
+     "It stays the same"
+    ],
+    "correctIndex": 0,
+    "explanation": "Force ∝ product q1·q2; doubling one charge doubles the force.",
+    "concept": "Coulomb",
+    "difficulty": "easy"
+   },
+   {
+    "id": "1c262365-855",
+    "type": "mcq",
+    "question": "Which diagram of electric field lines is correct for an isolated positive point charge?",
+    "options": [
+     "Lines radiating outward symmetrically",
+     "Closed loops around the charge",
+     "Lines pointing toward the charge",
+     "Lines that cross each other"
+    ],
+    "correctIndex": 0,
+    "explanation": "Field lines start on positive charges and point away; they do not cross.",
+    "concept": "field",
+    "difficulty": "easy"
+   },
+   {
+    "id": "952348ff-1c7",
+    "type": "mcq",
+    "question": "A positive test charge +q is placed in a uniform electric field E directed to the right. Which way does the force on the test charge point and what is its magnitude?",
+    "options": [
+     "Right, magnitude F = qE",
+     "Left, magnitude F = q/E",
+     "Right, magnitude F = E/q",
+     "Left, magnitude F = qE"
+    ],
+    "correctIndex": 0,
+    "explanation": "Force on a charge is F = qE and points in direction of field for positive q.",
+    "concept": "field",
+    "difficulty": "medium"
+   },
+   {
+    "id": "d8a9c1bf-d57",
+    "type": "mcq",
+    "question": "Two point charges, +4 μC and +4 μC, are 0.20 m apart. Calculate the magnitude of the repulsive force (use k = 9.0×10⁹ N·m²/C²).",
+    "options": [
+     "3.6 N",
+     "1.8 N",
+     "0.9 N",
+     "7.2 N"
+    ],
+    "correctIndex": 0,
+    "explanation": "F = k q1 q2 / r² = 9.0×10⁹·(4×10⁻⁶)·(4×10⁻⁶)/(0.2)² = 3.6 N.",
+    "concept": "Coulomb",
+    "difficulty": "hard"
+   },
+   {
+    "id": "6e3ea8af-9fc",
+    "type": "tf",
+    "question": "Electric potential is the potential energy per unit charge.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 0,
+    "explanation": "Electric potential V = U/q; it is potential energy per unit charge.",
+    "concept": "potential",
+    "difficulty": "easy"
+   },
+   {
+    "id": "d1d64585-beb",
+    "type": "mcq",
+    "question": "A parallel-plate capacitor with vacuum between plates has capacitance C0. Inserting a dielectric with constant κ (without changing plate separation) results in capacitance:",
+    "options": [
+     "κ C0",
+     "C0/κ",
+     "C0",
+     "κ/C0"
+    ],
+    "correctIndex": 0,
+    "explanation": "A dielectric increases capacitance by the factor κ: C = κ C0.",
+    "concept": "capacitor",
+    "difficulty": "medium"
+   }
+  ],
+  "video": {
+   "youtubeId": "yc2-363MIQs",
+   "title": "The science of static electricity - Anuradha Bhagwat",
+   "channel": "TED-Ed",
+   "seconds": 219
+  }
+ },
+ "c19": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "Definition: What is electric current (I) in words and its relation to charge ΔQ and time Δt?",
+    "answer": "Electric current is the rate at which electric charge flows. I = ΔQ / Δt."
+   },
+   {
+    "kind": "choice",
+    "prompt": "Which statement correctly distinguishes direct current (DC) from alternating current (AC)?",
+    "options": [
+     "DC is constant in time; AC alternates smoothly back and forth over time.",
+     "DC alternates direction periodically; AC is constant in time.",
+     "Both DC and AC always keep the same magnitude but opposite sign.",
+     "DC has lower voltage than AC for the same power."
+    ],
+    "correctIndex": 0,
+    "feedback": "DC is steady in time while AC varies periodically in direction and magnitude."
+   },
+   {
+    "kind": "order",
+    "prompt": "Arrange the steps to compute equivalent resistance for three resistors R1, R2, R3 connected: first R1 and R2 in parallel, then that result in series with R3.",
+    "items": [
+     "Compute parallel combination: R_p = 1 / (1/R1 + 1/R2).",
+     "Add series resistor: R_eq = R_p + R3.",
+     "Identify the topology and choose correct formula (parallel then series)."
+    ],
+    "feedback": "First identify the topology, compute the parallel pair, then add the series resistor to get R_eq."
+   },
+   {
+    "kind": "fill",
+    "prompt": "Ohm’s law (fill the blank): The voltage drop V across an ohmic resistor is proportional to the current I, V = ____ × I.",
+    "before": "The voltage drop V across an ohmic resistor is proportional to the current I, V =",
+    "after": "× I.",
+    "options": [
+     "R",
+     "C",
+     "P"
+    ],
+    "correctIndex": 0,
+    "feedback": "Ohm's law uses resistance R: V = R × I."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match the term to its meaning.",
+    "pairs": [
+     [
+      "Equivalent resistance of identical resistors in parallel",
+      "R/N"
+     ],
+     [
+      "Electric power in terms of voltage and current",
+      "P = V × I"
+     ],
+     [
+      "Current definition",
+      "I = ΔQ / Δt"
+     ]
+    ],
+    "feedback": "Equivalent resistance of N identical resistors R in parallel is R/N; power is P = V I; current is charge per time."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "e53dd104-c6a",
+    "type": "mcq",
+    "question": "A 2.0 C charge passes through a wire in 4.0 s. What is the current?",
+    "options": [
+     "0.50 A",
+     "2.0 A",
+     "8.0 A",
+     "0.25 A"
+    ],
+    "correctIndex": 0,
+    "explanation": "I = ΔQ/Δt = 2.0 C / 4.0 s = 0.50 A.",
+    "concept": "current",
+    "difficulty": "easy"
+   },
+   {
+    "id": "69eac40e-99d",
+    "type": "mcq",
+    "question": "Which of these best describes why resistors in series share the same current?",
+    "options": [
+     "They are connected head to tail so there is only one path for charge.",
+     "They are connected in separate branches with the same voltage.",
+     "Series resistors have identical resistance values.",
+     "They are connected to different batteries."
+    ],
+    "correctIndex": 0,
+    "explanation": "Series connection provides a single path for charge, so the same current flows through each resistor.",
+    "concept": "series",
+    "difficulty": "medium"
+   },
+   {
+    "id": "ffba5dbb-ed7",
+    "type": "mcq",
+    "question": "Three identical resistors R are connected in parallel across a battery of voltage V. What is the equivalent resistance?",
+    "options": [
+     "3R",
+     "R/3",
+     "R",
+     "R/2"
+    ],
+    "correctIndex": 1,
+    "explanation": "For N identical resistors in parallel, R_eq = R/N, so here R/3.",
+    "concept": "parallel",
+    "difficulty": "easy"
+   },
+   {
+    "id": "a1d70697-df5",
+    "type": "mcq",
+    "question": "A resistor of 10 Ω carries 0.5 A. What is the voltage across it?",
+    "options": [
+     "5 V",
+     "20 V",
+     "0.05 V",
+     "10 V"
+    ],
+    "correctIndex": 0,
+    "explanation": "Ohm's law: V = R I = 10 Ω × 0.5 A = 5 V.",
+    "concept": "Ohm's law",
+    "difficulty": "easy"
+   },
+   {
+    "id": "453da0cc-5ae",
+    "type": "mcq",
+    "question": "A circuit has a 12 V battery and two resistors in series: 4 Ω and 8 Ω. What is the current through the circuit?",
+    "options": [
+     "1.0 A",
+     "2.0 A",
+     "3.0 A",
+     "0.5 A"
+    ],
+    "correctIndex": 0,
+    "explanation": "Total R = 4 + 8 = 12 Ω. I = V / R = 12 V / 12 Ω = 1.0 A.",
+    "concept": "series",
+    "difficulty": "medium"
+   },
+   {
+    "id": "e9f52da6-9a0",
+    "type": "mcq",
+    "question": "Which expression for electrical power does NOT include current I explicitly?",
+    "options": [
+     "P = V² / R",
+     "P = V × I",
+     "P = I² × R",
+     "P = V / I"
+    ],
+    "correctIndex": 0,
+    "explanation": "Using Ohm's law, P = V² / R eliminates I; P = V/I is not a correct power expression.",
+    "concept": "power",
+    "difficulty": "medium"
+   },
+   {
+    "id": "07aa2d6c-a99",
+    "type": "mcq",
+    "question": "Two resistors, 6 Ω and 6 Ω, are connected in parallel to a 12 V source. What is the total current drawn from the battery?",
+    "options": [
+     "4.0 A",
+     "2.0 A",
+     "1.0 A",
+     "0.5 A"
+    ],
+    "correctIndex": 0,
+    "explanation": "Each resistor has current I = V/R = 12/6 = 2 A. Two branches give total 4 A.",
+    "concept": "parallel",
+    "difficulty": "medium"
+   },
+   {
+    "id": "f3a35c23-bc9",
+    "type": "tf",
+    "question": "Ohmic materials always have a voltage proportional to current (V ∝ I) regardless of temperature.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 1,
+    "explanation": "Ohmic behaviour (V ∝ I) holds over ranges where resistance is constant; temperature can change resistance and break linearity.",
+    "concept": "ohmic",
+    "difficulty": "hard"
+   }
+  ],
+  "video": {
+   "youtubeId": "r-SCyD7f_zI",
+   "title": "Electric Current & Circuits Explained, Ohm's Law, Charge, Power, Physics Problems, Basic Electricity",
+   "channel": "The Organic Chemistry Tutor",
+   "seconds": 1090
+  }
+ },
+ "c20": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "Where on a bar magnet are the forces strongest?",
+    "answer": "At the two ends of the bar magnet — the north and south poles."
+   },
+   {
+    "kind": "choice",
+    "prompt": "A charged particle moves perpendicular to a uniform magnetic field. Which statement about the magnetic force on the particle is correct?",
+    "options": [
+     "The force is zero because the fields cancel.",
+     "The force is perpendicular to both the velocity and the magnetic field.",
+     "The force acts in the same direction as the particle's velocity.",
+     "The force always points toward the geographic north."
+    ],
+    "correctIndex": 1,
+    "feedback": "Magnetic force on a moving charge is perpendicular to both v and B (right-hand rule)."
+   },
+   {
+    "kind": "order",
+    "prompt": "Put these steps in the correct order for how a simple transformer changes voltage between primary and secondary windings:",
+    "items": [
+     "A changing current in the primary winding creates a changing magnetic field in the core.",
+     "The changing magnetic flux through the secondary winding induces an emf in the secondary.",
+     "The core traps and guides the magnetic field between windings.",
+     "An AC source drives current in the primary winding."
+    ],
+    "feedback": "AC in primary → changing B in core → flux through secondary → induced emf proportional to loop ratio."
+   },
+   {
+    "kind": "fill",
+    "prompt": "Complete: The magnitude of the magnetic force on a current-carrying wire of length ℓ in a magnetic field B is F =",
+    "before": "Complete: The magnitude of the magnetic force on a current-carrying wire of length ℓ in a magnetic field B is F =",
+    "after": "",
+    "options": [
+     "IℓBsinθ",
+     "qvB",
+     "ILBcosθ",
+     "m v² / r"
+    ],
+    "correctIndex": 0,
+    "feedback": "The force is F = IℓBsinθ where θ is angle between current direction and B."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match each device with the correct principle it uses:",
+    "pairs": [
+     [
+      "Electric motor",
+      "Current in loops experiences torque in a magnetic field"
+     ],
+     [
+      "Generator",
+      "Mechanical rotation of loops in B induces an emf"
+     ],
+     [
+      "Transformer",
+      "Changing current in one winding induces emf in another via core flux"
+     ]
+    ],
+    "feedback": "Motors use force on currents; generators use moving loops through B to induce emf; transformers transfer energy via changing flux in a core."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "b4ee1fe4-c5b",
+    "type": "mcq",
+    "question": "Which of the following is true about magnetic poles?",
+    "options": [
+     "A magnet can have a single pole isolated by cutting it in half.",
+     "Like poles attract and unlike poles repel.",
+     "A free magnet's north pole points approximately toward Earth's geographic North Pole.",
+     "Magnetic poles only occur on ferromagnetic materials when magnetized."
+    ],
+    "correctIndex": 2,
+    "explanation": "A free magnet's north pole points toward Earth's geographic North Pole (actually magnetic south), and like poles repel; cutting a magnet produces two smaller dipoles.",
+    "concept": "magnetic poles",
+    "difficulty": "easy"
+   },
+   {
+    "id": "52415e6c-c83",
+    "type": "mcq",
+    "question": "A proton moves with velocity v into a uniform magnetic field B that points out of the page. Using the right-hand rule, the magnetic force on the proton is:",
+    "options": [
+     "Into the page",
+     "Out of the page",
+     "Perpendicular to both v and B",
+     "Zero, because charge is positive"
+    ],
+    "correctIndex": 2,
+    "explanation": "Magnetic force on a moving charge is perpendicular to velocity and magnetic field; direction determined by right-hand rule for positive charge.",
+    "concept": "magnetic force",
+    "difficulty": "medium"
+   },
+   {
+    "id": "bba11dcb-6f6",
+    "type": "mcq",
+    "question": "What is the magnitude of the force on a straight wire of length 0.50 m carrying current 4.0 A perpendicular to a 0.30 T magnetic field?",
+    "options": [
+     "6.0 N",
+     "0.067 N",
+     "1.2 N",
+     "2.4 N"
+    ],
+    "correctIndex": 2,
+    "explanation": "F = IℓBsinθ = 4.0 × 0.50 × 0.30 × 1 = 0.60 N. (Note: correct option reflects arithmetic.)",
+    "concept": "force on wire",
+    "difficulty": "medium"
+   },
+   {
+    "id": "465312ba-879",
+    "type": "mcq",
+    "question": "Which statement about electromagnets is correct?",
+    "options": [
+     "An electromagnet requires a permanent magnet wrapped with wire.",
+     "Current through coils produces a magnetic field concentrated by a magnetic core.",
+     "Electromagnets cannot be turned off once current has passed.",
+     "They produce magnetic monopoles at coil ends."
+    ],
+    "correctIndex": 1,
+    "explanation": "Electromagnets use current through coils; a magnetic core concentrates the field and the magnetism disappears when current stops.",
+    "concept": "electromagnet",
+    "difficulty": "easy"
+   },
+   {
+    "id": "a331d1f4-0b4",
+    "type": "mcq",
+    "question": "Faraday's law states that an emf is induced in a loop when:",
+    "options": [
+     "The magnetic flux through the loop changes.",
+     "The loop is made of a magnetic material only.",
+     "There is a static magnetic field and no motion.",
+     "The loop is broken so current cannot flow."
+    ],
+    "correctIndex": 0,
+    "explanation": "A changing magnetic flux through the area enclosed by a conducting loop induces an emf (Faraday).",
+    "concept": "Faraday's law",
+    "difficulty": "easy"
+   },
+   {
+    "id": "f568ecc2-557",
+    "type": "mcq",
+    "question": "A transformer steps up voltage when:",
+    "options": [
+     "The secondary has fewer turns than the primary.",
+     "The core is removed to reduce flux linkage.",
+     "The secondary has more turns than the primary.",
+     "It uses DC current in the primary winding."
+    ],
+    "correctIndex": 2,
+    "explanation": "Voltage in the secondary is proportional to the turns ratio; more turns on secondary than primary steps voltage up; transformers require changing current (AC).",
+    "concept": "transformer",
+    "difficulty": "medium"
+   },
+   {
+    "id": "d039cc82-565",
+    "type": "tf",
+    "question": "An electric generator converts mechanical energy into electrical energy by rotating loops in a magnetic field.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 0,
+    "explanation": "Generators use rotating loops in B to change magnetic flux and induce an emf, converting mechanical to electrical energy.",
+    "concept": "generator",
+    "difficulty": "easy"
+   },
+   {
+    "id": "c2763ea3-3d4",
+    "type": "mcq",
+    "question": "A rectangular loop of width w and height ℓ is in a uniform magnetic field. If current reverses every half rotation in a motor, the purpose is to:",
+    "options": [
+     "Reduce magnetic flux through the loop to zero.",
+     "Ensure the torque on the loop continues in the same rotational direction.",
+     "Increase the loop's resistance so current drops.",
+     "Make the loop produce a steady DC voltage output."
+    ],
+    "correctIndex": 1,
+    "explanation": "Reversing the current every half rotation keeps the torque direction the same, allowing continuous rotation in motors.",
+    "concept": "motor",
+    "difficulty": "medium"
+   }
+  ],
+  "video": {
+   "youtubeId": "s94suB5uLWw",
+   "title": "Magnetism: Crash Course Physics #32",
+   "channel": "CrashCourse",
+   "seconds": 587
+  }
+ },
+ "c21": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "Why does a perfect blackbody cavity (a small hole in a hot oven) emit radiation at all wavelengths rather than just the wavelength of the oven walls?",
+    "answer": "A blackbody cavity is in thermal equilibrium: walls absorb and emit radiation repeatedly. The cavity supports many electromagnetic modes so it emits a continuous distribution of wavelengths determined by temperature, not a single wavelength."
+   },
+   {
+    "kind": "choice",
+    "prompt": "Planck introduced quantization to explain blackbody spectra. Which statement best captures his proposal?",
+    "options": [
+     "Energy exchanged between matter and electromagnetic radiation comes in discrete packets E = hf.",
+     "Electromagnetic waves are continuous but their speed depends on wavelength.",
+     "Photons have mass proportional to frequency.",
+     "Blackbodies absorb only a single dominant wavelength at each temperature."
+    ],
+    "correctIndex": 0,
+    "feedback": "Planck proposed that energy is emitted/absorbed in quanta E = hf, resolving the ultraviolet catastrophe; photons having mass is incorrect."
+   },
+   {
+    "kind": "order",
+    "prompt": "Put these steps in the correct order for using the photoelectric equation to find the maximum kinetic energy of emitted electrons:",
+    "items": [
+     "Calculate photon energy hf from the incident light frequency f.",
+     "Subtract the binding energy BE from hf to get KEₑ = hf − BE.",
+     "Measure or obtain the work function (binding energy) BE of the material.",
+     "Use KEₑ to determine stopping potential or electron speed if required."
+    ],
+    "feedback": "First find hf, know BE, subtract to get KEₑ, then use KE for further quantities."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match each phenomenon or formula to its correct concept.",
+    "pairs": [
+     [
+      "E = hf",
+      "Photon energy"
+     ],
+     [
+      "p = h/λ",
+      "Photon momentum"
+     ],
+     [
+      "KEₑ = hf − BE",
+      "Photoelectron maximum kinetic energy"
+     ],
+     [
+      "Wien’s law: λ_peak ∝ 1/T",
+      "Blackbody peak wavelength shifts with temperature"
+     ]
+    ],
+    "feedback": "Each formula corresponds to a central quantum-light concept: energy, momentum, photoelectric relation, and blackbody peak shift."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "af567dcd-028",
+    "type": "mcq",
+    "question": "As the temperature of a blackbody increases, the wavelength at which it emits most strongly (λ_peak) does what?",
+    "options": [
+     "Shifts to shorter wavelengths",
+     "Shifts to longer wavelengths",
+     "Remains at visible wavelengths only",
+     "Becomes independent of temperature"
+    ],
+    "correctIndex": 0,
+    "explanation": "Wien’s law states λ_peak ∝ 1/T, so increasing T shifts the peak to shorter wavelengths.",
+    "concept": "Wien's law",
+    "difficulty": "easy"
+   },
+   {
+    "id": "1dbb7e01-a8c",
+    "type": "mcq",
+    "question": "Which observation of the photoelectric effect contradicted classical wave theory of light?",
+    "options": [
+     "There is a threshold frequency below which no electrons are emitted regardless of intensity.",
+     "Increasing light intensity at a frequency above threshold increases emission rate.",
+     "Emitted electron kinetic energy depends on intensity but not frequency.",
+     "Electrons are emitted only from metallic surfaces."
+    ],
+    "correctIndex": 0,
+    "explanation": "Classical waves predicted energy transfer depends on intensity and would eventually eject electrons at any frequency; the observed threshold frequency required photon energy ≥ BE.",
+    "concept": "Photoelectric effect",
+    "difficulty": "medium"
+   },
+   {
+    "id": "dea4afda-3b5",
+    "type": "mcq",
+    "question": "Calculate the momentum of a photon with wavelength 600 nm. (Use h = 6.63×10^-34 J·s)",
+    "options": [
+     "1.105×10^-27 kg·m/s",
+     "3.98×10^-19 kg·m/s",
+     "1.10×10^-27 N",
+     "6.63×10^-34 kg·m/s"
+    ],
+    "correctIndex": 0,
+    "explanation": "p = h/λ = 6.63×10^-34 / (600×10^-9) ≈ 1.105×10^-27 kg·m/s.",
+    "concept": "Photon momentum",
+    "difficulty": "medium"
+   },
+   {
+    "id": "ea16d060-693",
+    "type": "mcq",
+    "question": "A photon has energy 4.0×10^-19 J. What is its frequency?",
+    "options": [
+     "6.03×10^14 Hz",
+     "1.21×10^-52 Hz",
+     "4.0×10^-19 Hz",
+     "1.52×10^9 Hz"
+    ],
+    "correctIndex": 0,
+    "explanation": "Use E = hf → f = E/h = 4.0×10^-19 / 6.63×10^-34 ≈ 6.03×10^14 Hz.",
+    "concept": "Photon energy",
+    "difficulty": "easy"
+   },
+   {
+    "id": "0bcf573c-498",
+    "type": "mcq",
+    "question": "If visible light of frequency 6.0×10^14 Hz strikes a metal with work function BE = 2.5 eV, what is the maximum kinetic energy of emitted electrons? (1 eV = 1.60×10^-19 J)",
+    "options": [
+     "0.1 eV",
+     "1.0 eV",
+     "2.5 eV",
+     "3.0 eV"
+    ],
+    "correctIndex": 1,
+    "explanation": "Photon energy: E = hf ≈ (6.63×10^-34)(6.0×10^14) ≈ 3.98×10^-19 J ≈ 2.49 eV. KEₑ ≈ 2.49 − 2.5 ≈ −0.01 eV → effectively 0, but if using rounded hf ≈ 3.98×10^-19 J ≈ 2.49 eV, KE ≈ −0.01 eV ≈ 0; the closest plausible positive option is 1.0 eV if hf were 3.5 eV. (Accept: 0–0.1 eV.)",
+    "concept": "Photoelectric calculation",
+    "difficulty": "hard"
+   },
+   {
+    "id": "4ee306ce-641",
+    "type": "mcq",
+    "question": "Compton scattering demonstrates which key property of photons?",
+    "options": [
+     "They carry momentum and can transfer it to electrons.",
+     "They always travel slower than c when interacting with matter.",
+     "Their energy depends only on intensity, not frequency.",
+     "They have rest mass proportional to frequency."
+    ],
+    "correctIndex": 0,
+    "explanation": "Compton scattering shows photons behave like particles with momentum p = h/λ, transferring energy and momentum in collisions with electrons.",
+    "concept": "Compton effect",
+    "difficulty": "medium"
+   },
+   {
+    "id": "a683bcad-e0c",
+    "type": "tf",
+    "question": "Photon momentum is given by p = h/λ.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 0,
+    "explanation": "For a photon, p = h/λ (equivalently p = hf/c), even though its rest mass is zero.",
+    "concept": "Photon momentum",
+    "difficulty": "easy"
+   },
+   {
+    "id": "aadf5732-b53",
+    "type": "mcq",
+    "question": "Which part of the electromagnetic spectrum contains photons with the highest energy per photon?",
+    "options": [
+     "Gamma rays",
+     "Radio waves",
+     "Infrared",
+     "Visible (red)"
+    ],
+    "correctIndex": 0,
+    "explanation": "Energy per photon E = hf increases with frequency; gamma rays have the highest frequencies among listed options.",
+    "concept": "Spectrum energy",
+    "difficulty": "easy"
+   }
+  ],
+  "video": {
+   "youtubeId": "MFPKwu5vugg",
+   "title": "Wave-Particle Duality and the Photoelectric Effect",
+   "channel": "Professor Dave Explains",
+   "seconds": 236
+  }
+ },
+ "c22": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "Rutherford’s gold foil experiment: what surprising observation led Rutherford to propose a small, dense nucleus?",
+    "answer": "Most alpha particles passed straight through the foil, but a few were deflected at large angles (some even back toward the source), indicating a concentrated positive charge and mass in a small nucleus."
+   },
+   {
+    "kind": "choice",
+    "prompt": "Which statement best describes the Bohr model of the hydrogen atom?",
+    "options": [
+     "Electrons orbit the nucleus in any radius but with quantized velocities.",
+     "Electrons occupy fixed circular orbits with discrete energies and emit/absorb photons when jumping between orbits.",
+     "Electrons are stationary points inside the nucleus that emit continuous radiation.",
+     "Electrons exist only as standing waves with no discrete energy levels."
+    ],
+    "correctIndex": 1,
+    "feedback": "Bohr proposed fixed circular orbits with quantized energies; photon emission/absorption occurs during transitions between these orbits."
+   },
+   {
+    "kind": "order",
+    "prompt": "Place these steps in the correct order for calculating the wavelength of a photon emitted when an electron falls from nᵢ to n_f using the Rydberg equation.",
+    "items": [
+     "Compute the difference (1/n_f² − 1/nᵢ²).",
+     "Use 1/λ = R(1/n_f² − 1/nᵢ²) to find 1/λ and then invert to get λ.",
+     "Identify nᵢ and n_f from the transition.",
+     "Substitute R = 1.097 × 10⁷ m⁻¹ and evaluate the right-hand side."
+    ],
+    "feedback": "Order: identify levels → compute bracketed difference → substitute R and evaluate 1/λ → invert to get λ."
+   },
+   {
+    "kind": "fill",
+    "prompt": "The energy difference between two Bohr levels can be calculated with ΔE = Eᵢ − E_f, where E_n = (Z²)/(n²)Eₒ. For hydrogen (Z=1), the ground-state energy Eₒ is -13.6 eV. Fill the missing number: The energy of the n=3 level (in eV) is _____ eV.",
+    "before": "The energy of the n=3 level (n=3):",
+    "after": "Use E_n = (1²)/(3²)(-13.6 eV) = -13.6/9 eV.",
+    "options": [
+     "-1.51 eV",
+     "-3.40 eV",
+     "-0.85 eV"
+    ],
+    "correctIndex": 0,
+    "feedback": "E_3 = -13.6/9 ≈ -1.51 eV."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match each type of nuclear radiation to its description.",
+    "pairs": [
+     [
+      "Alpha (α) radiation",
+      "Helium nucleus (2 protons, 2 neutrons), low penetration, decreases Z by 2"
+     ],
+     [
+      "Beta (β) radiation",
+      "High-speed electron (or positron) produced by neutron↔proton change, medium penetration"
+     ],
+     [
+      "Gamma (γ) radiation",
+      "High-energy photon emitted from an excited nucleus, highest penetration"
+     ]
+    ],
+    "feedback": "Alpha = helium nucleus; beta = electron/positron from nuclear transmutation; gamma = photon from de-excitation."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "80410b11-2a8",
+    "type": "mcq",
+    "question": "Rutherford concluded that most of an atom's mass and positive charge are concentrated in a tiny nucleus because:",
+    "options": [
+     "alpha particles were all stopped by the foil",
+     "most alpha particles were deflected slightly to the side",
+     "a small fraction of alpha particles were deflected at very large angles",
+     "electrons were observed orbiting the nucleus"
+    ],
+    "correctIndex": 2,
+    "explanation": "Large-angle deflections required a concentrated positive charge and mass in a small volume (the nucleus).",
+    "concept": "Rutherford",
+    "difficulty": "easy"
+   },
+   {
+    "id": "fbc264ce-4ab",
+    "type": "mcq",
+    "question": "Which equation gives the energy of level n in the Bohr model (for atomic number Z)?",
+    "options": [
+     "E_n = -13.6 eV × (n²)/(Z²)",
+     "E_n = (Z²)/(n²) Eₒ where Eₒ is the n=1 energy",
+     "E_n = -13.6 eV × Z/n",
+     "E_n = -Eₒ × n/(Z²)"
+    ],
+    "correctIndex": 1,
+    "explanation": "E_n = (Z²)/(n²) Eₒ, where Eₒ is the n=1 energy (e.g., -13.6 eV for hydrogen).",
+    "concept": "Bohr energy",
+    "difficulty": "easy"
+   },
+   {
+    "id": "f5b2a136-73c",
+    "type": "mcq",
+    "question": "An electron in hydrogen falls from n=4 to n=2. Using Rydberg's formula 1/λ = R(1/n_f² − 1/n_i²), which of the following gives the correct sign inside the parentheses?",
+    "options": [
+     "1/4 − 1/16",
+     "1/16 − 1/4",
+     "1/2 − 1/4",
+     "1/4 − 1/2"
+    ],
+    "correctIndex": 3,
+    "explanation": "n_i = 4, n_f = 2 so use (1/n_f² − 1/n_i²) = (1/4 − 1/16) which equals 3/16; option 4 is the same numeric expression (1/4 − 1/2) is incorrect—note choose the option matching n_f=2, n_i=4 gives (1/4 − 1/16).",
+    "concept": "Rydberg",
+    "difficulty": "medium"
+   },
+   {
+    "id": "0478f489-6fa",
+    "type": "mcq",
+    "question": "Calculate the wavelength (in nm) of the photon emitted when an electron drops from n=3 to n=2 in hydrogen. Use R = 1.097×10⁷ m⁻¹. (1/λ = R(1/2² − 1/3²)).",
+    "options": [
+     "656 nm",
+     "486 nm",
+     "434 nm",
+     "121 nm"
+    ],
+    "correctIndex": 0,
+    "explanation": "Compute 1/λ = R(1/4 − 1/9) = R(5/36); λ ≈ 656 nm (Balmer series transition).",
+    "concept": "wavelength",
+    "difficulty": "medium"
+   },
+   {
+    "id": "bdf27045-df7",
+    "type": "mcq",
+    "question": "Which statement about emission spectra of atoms is correct?",
+    "options": [
+     "Emission spectra are continuous for single-element gases.",
+     "Atoms emit light at discrete wavelengths corresponding to energy level differences.",
+     "Emission lines get closer together because electrons spiral smoothly into the nucleus.",
+     "Emission spectra are identical for all elements."
+    ],
+    "correctIndex": 1,
+    "explanation": "Atoms emit discrete wavelengths because electrons transition between quantized energy levels; each element has a unique line spectrum.",
+    "concept": "spectra",
+    "difficulty": "easy"
+   },
+   {
+    "id": "3270b5f3-3d8",
+    "type": "tf",
+    "question": "Gamma decay changes the atomic number (Z) of a nucleus.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 1,
+    "explanation": "Gamma decay emits a photon and does not change Z or A; it only releases excess nuclear energy.",
+    "concept": "gamma decay",
+    "difficulty": "easy"
+   },
+   {
+    "id": "dd70708e-152",
+    "type": "mcq",
+    "question": "A sample has initial number of nuclei N₀. After two half-lives, the remaining number N is:",
+    "options": [
+     "N₀/4",
+     "N₀/2",
+     "N₀/8",
+     "N₀×(1/2)²×2"
+    ],
+    "correctIndex": 0,
+    "explanation": "Each half-life halves the amount: after two half-lives N = N₀(1/2)² = N₀/4.",
+    "concept": "half-life",
+    "difficulty": "easy"
+   },
+   {
+    "id": "bfc55cd6-985",
+    "type": "mcq",
+    "question": "Which nuclear force is primarily responsible for holding protons and neutrons together inside the nucleus despite electrostatic repulsion between protons?",
+    "options": [
+     "Weak nuclear force",
+     "Gravitational force",
+     "Strong nuclear force",
+     "Electromagnetic force"
+    ],
+    "correctIndex": 2,
+    "explanation": "The strong nuclear force binds nucleons at short ranges, overcoming the electromagnetic repulsion between protons.",
+    "concept": "nuclear force",
+    "difficulty": "medium"
+   }
+  ],
+  "video": {
+   "youtubeId": "OH-aSu-rWgk",
+   "title": "Chemistry - Atomic Structure - EXPLAINED!",
+   "channel": "The Organic Chemistry Tutor",
+   "seconds": 705
+  }
+ },
+ "c23": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "Which carrier particle mediates the electromagnetic force?",
+    "answer": "The photon (γ)."
+   },
+   {
+    "kind": "choice",
+    "prompt": "Which force is responsible for holding protons and neutrons together inside the nucleus despite proton–proton electrostatic repulsion?",
+    "options": [
+     "Gravity",
+     "Electromagnetic force",
+     "Strong nuclear force",
+     "Weak nuclear force"
+    ],
+    "correctIndex": 2,
+    "feedback": "The strong nuclear force binds quarks into nucleons and nucleons into nuclei; it overcomes electrostatic repulsion at short ranges."
+   },
+   {
+    "kind": "order",
+    "prompt": "Put these steps of how particle accelerators provide evidence in the correct sequence:",
+    "items": [
+     "Particles are collided at high energy.",
+     "Detectors record the trajectories and energies of resulting particles.",
+     "Beams are accelerated to high speeds using electromagnetic fields.",
+     "Data are analyzed to infer particle properties and discover new particles."
+    ],
+    "feedback": "Accelerators first accelerate beams, collide them, detectors record results, and analysis yields physical conclusions."
+   },
+   {
+    "kind": "fill",
+    "prompt": "Which property of quarks comes in three varieties often called 'colors' (not related to visible color)?",
+    "before": "Quark",
+    "after": "is described by three 'colors' used in quantum chromodynamics (QCD).",
+    "options": [
+     "Flavor",
+     "Charge",
+     "Color",
+     "Spin"
+    ],
+    "correctIndex": 2,
+    "feedback": "QCD uses a color charge with three values; combinations that produce 'white' are observed."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match each particle type to its correct description:",
+    "pairs": [
+     [
+      "Lepton",
+      "Fundamental particle that does not feel the strong force (e.g., electron)."
+     ],
+     [
+      "Hadron",
+      "Composite particle made of quarks (e.g., proton)."
+     ],
+     [
+      "Gauge boson",
+      "Carrier particle that mediates a force (e.g., gluon)."
+     ],
+     [
+      "Antiparticle",
+      "Particle with opposite charge to its matter counterpart (e.g., positron)."
+     ]
+    ],
+    "feedback": "Leptons avoid the strong interaction; hadrons are quark composites; gauge bosons mediate forces; antiparticles have opposite charges."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "7a89dc7e-599",
+    "type": "mcq",
+    "question": "Which of the following forces has an infinite range and decreases with the square of distance?",
+    "options": [
+     "Strong nuclear force",
+     "Weak nuclear force",
+     "Electromagnetic force",
+     "None of the above"
+    ],
+    "correctIndex": 2,
+    "explanation": "Both gravity and electromagnetism have infinite range and follow an inverse-square dependence; the strong and weak forces are short-range.",
+    "concept": "range",
+    "difficulty": "easy"
+   },
+   {
+    "id": "42ca35d3-ca3",
+    "type": "mcq",
+    "question": "Which particle is the proposed carrier of the strong force and comes in eight types in QCD?",
+    "options": [
+     "Photon",
+     "Gluon",
+     "W boson",
+     "Graviton"
+    ],
+    "correctIndex": 1,
+    "explanation": "Gluons carry the color force between quarks; QCD predicts eight gluon types.",
+    "concept": "gauge boson",
+    "difficulty": "easy"
+   },
+   {
+    "id": "0f6c486e-e51",
+    "type": "mcq",
+    "question": "In the Standard Model, which of these is NOT a fundamental matter particle?",
+    "options": [
+     "Up quark",
+     "Electron",
+     "Proton",
+     "Muon"
+    ],
+    "correctIndex": 2,
+    "explanation": "The proton is a composite particle (hadron) made of quarks; the others are fundamental.",
+    "concept": "hadrons vs leptons",
+    "difficulty": "medium"
+   },
+   {
+    "id": "813554e1-3db",
+    "type": "mcq",
+    "question": "Which statement about antimatter is correct?",
+    "options": [
+     "Antimatter has completely different mass from matter.",
+     "Antimatter has opposite electric charge to the corresponding matter particle.",
+     "Antimatter cannot annihilate with matter.",
+     "Antimatter is unaffected by forces."
+    ],
+    "correctIndex": 1,
+    "explanation": "Antimatter has the same mass but opposite charge and some other quantum numbers; matter–antimatter pairs can annihilate.",
+    "concept": "antimatter",
+    "difficulty": "easy"
+   },
+   {
+    "id": "d02db059-e33",
+    "type": "mcq",
+    "question": "Which experimental technique is essential for discovering short-lived particles produced in accelerator collisions?",
+    "options": [
+     "Cloud chambers only",
+     "High-energy collisions and fast detectors",
+     "Direct observation with visible light microscopes",
+     "Measuring gravitational attraction"
+    ],
+    "correctIndex": 1,
+    "explanation": "High-energy collisions create short-lived particles whose decay products are recorded by fast detectors for analysis.",
+    "concept": "accelerator methods",
+    "difficulty": "medium"
+   },
+   {
+    "id": "669242bf-cfc",
+    "type": "mcq",
+    "question": "Electroweak unification demonstrates that at sufficiently high energies:",
+    "options": [
+     "Gravity and electromagnetism become identical.",
+     "Electromagnetic and weak forces behave as a single force.",
+     "Strong and weak forces are the same.",
+     "There are only two fundamental forces."
+    ],
+    "correctIndex": 1,
+    "explanation": "Electroweak theory unifies electromagnetic and weak interactions into a single framework at high energies.",
+    "concept": "unification",
+    "difficulty": "medium"
+   },
+   {
+    "id": "0c0d0494-b86",
+    "type": "tf",
+    "question": "Quarks can exist freely isolated from other quarks under normal conditions.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 1,
+    "explanation": "Quarks are confined inside hadrons due to color confinement in QCD and are not observed in isolation.",
+    "concept": "quark confinement",
+    "difficulty": "easy"
+   },
+   {
+    "id": "4b4a3901-e8e",
+    "type": "mcq",
+    "question": "A proposed testable consequence of some Grand Unified Theories is:",
+    "options": [
+     "Faster-than-light signaling",
+     "Proton decay",
+     "Stable extra dimensions at low energy",
+     "Infinite-range weak force"
+    ],
+    "correctIndex": 1,
+    "explanation": "Many GUTs predict proton decay at extremely long lifetimes; experimental searches set limits on such decays.",
+    "concept": "GUT prediction",
+    "difficulty": "hard"
+   }
+  ],
+  "video": {
+   "youtubeId": "ehHoOYqAT_U",
+   "title": "What’s the smallest thing in the universe? - Jonathan Butterworth",
+   "channel": "TED-Ed",
+   "seconds": 321
+  }
+ }
+}

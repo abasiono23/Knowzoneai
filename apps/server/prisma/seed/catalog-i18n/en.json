@@ -1,0 +1,523 @@
+{
+  "categories": {
+    "sciences": {
+      "name": "Sciences"
+    },
+    "maths": {
+      "name": "Mathematics"
+    },
+    "languages": {
+      "name": "Languages & Literature"
+    },
+    "humanities": {
+      "name": "Humanities"
+    },
+    "business": {
+      "name": "Business & Money"
+    },
+    "tech": {
+      "name": "Tech & Future Skills"
+    }
+  },
+  "subjects": {
+    "mathematics": {
+      "name": "Mathematics",
+      "description": "Numbers, algebra, geometry and the logic behind them.",
+      "topics": [
+        "Algebra",
+        "Quadratic equations",
+        "Geometry",
+        "Statistics",
+        "Trigonometry",
+        "Calculus"
+      ]
+    },
+    "further-maths": {
+      "name": "Further Mathematics",
+      "description": "Matrices, vectors and advanced problem solving.",
+      "topics": [
+        "Matrices",
+        "Vectors",
+        "Complex numbers",
+        "Differentiation"
+      ]
+    },
+    "physics": {
+      "name": "Physics",
+      "description": "How energy, forces and the universe behave.",
+      "topics": [
+        "Motion",
+        "Forces",
+        "Waves",
+        "Electricity",
+        "Energy",
+        "Optics"
+      ]
+    },
+    "chemistry": {
+      "name": "Chemistry",
+      "description": "Atoms, reactions and the stuff everything is made of.",
+      "topics": [
+        "Mole concept",
+        "Chemical bonding",
+        "Organic chemistry",
+        "Electrolysis",
+        "Rates of reaction"
+      ]
+    },
+    "biology": {
+      "name": "Biology",
+      "description": "Living things, from cells to whole ecosystems.",
+      "topics": [
+        "Cell biology",
+        "Genetics",
+        "Ecology",
+        "Nutrition",
+        "Human physiology"
+      ]
+    },
+    "agric": {
+      "name": "Agricultural Science",
+      "description": "Crops, soil, animals and farm business.",
+      "topics": [
+        "Soil science",
+        "Crop production",
+        "Animal husbandry"
+      ]
+    },
+    "english": {
+      "name": "English Language",
+      "description": "Reading, writing and speaking with confidence.",
+      "topics": [
+        "Comprehension",
+        "Summary writing",
+        "Essay writing",
+        "Lexis & structure",
+        "Oral English"
+      ]
+    },
+    "literature": {
+      "name": "Literature in English",
+      "description": "Prose, poetry and drama, analysed clearly.",
+      "topics": [
+        "Prose",
+        "Poetry",
+        "Drama",
+        "Literary devices"
+      ]
+    },
+    "french": {
+      "name": "French",
+      "description": "Everyday French for school and travel.",
+      "topics": [
+        "Greetings",
+        "Verbs",
+        "Grammar",
+        "Conversation"
+      ]
+    },
+    "government": {
+      "name": "Government",
+      "description": "How countries are run, and why it matters.",
+      "topics": [
+        "Constitution",
+        "Arms of government",
+        "Electoral systems",
+        "Nigerian federalism"
+      ]
+    },
+    "history": {
+      "name": "History",
+      "description": "Stories of the past that shaped today.",
+      "topics": [
+        "Pre-colonial Africa",
+        "Colonial era",
+        "Independence movements",
+        "World wars"
+      ]
+    },
+    "geography": {
+      "name": "Geography",
+      "description": "Our planet, its people and its climate.",
+      "topics": [
+        "Map reading",
+        "Climate",
+        "Population",
+        "Landforms"
+      ]
+    },
+    "economics": {
+      "name": "Economics",
+      "description": "Money, markets and how choices are made.",
+      "topics": [
+        "Demand & supply",
+        "Elasticity",
+        "Inflation",
+        "National income",
+        "Market structures"
+      ]
+    },
+    "accounting": {
+      "name": "Financial Accounting",
+      "description": "Books, ledgers and financial statements.",
+      "topics": [
+        "Double entry",
+        "Trial balance",
+        "Final accounts",
+        "Depreciation"
+      ]
+    },
+    "entrepreneurship": {
+      "name": "Entrepreneurship",
+      "description": "Turning ideas into businesses that work.",
+      "topics": [
+        "Business ideas",
+        "Marketing",
+        "Pricing",
+        "Pitching"
+      ]
+    },
+    "computer-science": {
+      "name": "Computer Science",
+      "description": "How computers think, from logic to code.",
+      "topics": [
+        "Algorithms",
+        "Programming basics",
+        "Data structures",
+        "Networks"
+      ]
+    },
+    "ai-literacy": {
+      "name": "AI Literacy",
+      "description": "What AI is, how it works and how to use it well.",
+      "topics": [
+        "What is AI",
+        "Machine learning",
+        "Prompting",
+        "AI ethics"
+      ]
+    }
+  },
+  "lessons": {
+    "l1": {
+      "title": "How cells make energy",
+      "topic": "Cell biology",
+      "summary": "Mitochondria turn glucose and oxygen into ATP, the energy currency every cell spends.",
+      "keyPoints": [
+        "Respiration happens in the mitochondria",
+        "Glucose + oxygen → CO₂ + water + ATP",
+        "Anaerobic respiration makes lactic acid in muscles"
+      ]
+    },
+    "l2": {
+      "title": "Genetics made simple: dominant vs recessive",
+      "topic": "Genetics",
+      "summary": "Why you might have your mum’s eyes but your grandad’s height: alleles, genotypes and Punnett squares.",
+      "keyPoints": [
+        "Each trait has two alleles",
+        "Dominant alleles mask recessive ones",
+        "Punnett squares predict offspring ratios"
+      ]
+    },
+    "l3": {
+      "title": "Food chains and energy flow",
+      "topic": "Ecology",
+      "summary": "Energy moves from producers to consumers, and only about 10% passes to each next level.",
+      "keyPoints": [
+        "Producers make food by photosynthesis",
+        "About 10% of energy passes up each level",
+        "Decomposers recycle nutrients"
+      ]
+    },
+    "l4": {
+      "title": "The mole concept in 5 minutes",
+      "topic": "Mole concept",
+      "summary": "One mole is 6.02 × 10²³ particles. Learn to switch between mass, moles and particles with confidence.",
+      "keyPoints": [
+        "1 mole = 6.02 × 10²³ particles",
+        "Moles = mass ÷ molar mass",
+        "Use ratios from balanced equations"
+      ]
+    },
+    "l5": {
+      "title": "Ionic vs covalent bonding",
+      "topic": "Chemical bonding",
+      "summary": "Ionic bonds transfer electrons; covalent bonds share them. 20 cards to lock it in.",
+      "keyPoints": [
+        "Ionic: metal + non-metal, electron transfer",
+        "Covalent: non-metals sharing electrons",
+        "Ionic compounds conduct when molten"
+      ]
+    },
+    "l6": {
+      "title": "Organic chemistry: naming alkanes",
+      "topic": "Organic chemistry",
+      "summary": "Test yourself on IUPAC naming for alkanes, alkenes and alcohols.",
+      "keyPoints": [
+        "Find the longest carbon chain",
+        "Number from the end nearest a branch",
+        "Prefixes: meth, eth, prop, but…"
+      ]
+    },
+    "l7": {
+      "title": "Newton’s three laws, explained",
+      "topic": "Forces",
+      "summary": "Inertia, F = ma, and action–reaction, with everyday examples from danfo buses to football.",
+      "keyPoints": [
+        "An object stays at rest unless acted on",
+        "Force = mass × acceleration",
+        "Every action has an equal and opposite reaction"
+      ]
+    },
+    "l8": {
+      "title": "Ohm’s law and simple circuits",
+      "topic": "Electricity",
+      "summary": "V = IR. How voltage, current and resistance relate in series and parallel circuits.",
+      "keyPoints": [
+        "V = I × R",
+        "Series: resistances add",
+        "Parallel: 1/R = 1/R₁ + 1/R₂"
+      ]
+    },
+    "l9": {
+      "title": "Waves: frequency, wavelength, speed",
+      "topic": "Waves",
+      "summary": "Ten exam-style questions on v = fλ.",
+      "keyPoints": [
+        "v = f × λ",
+        "Transverse vs longitudinal",
+        "Sound needs a medium"
+      ]
+    },
+    "l10": {
+      "title": "Solving quadratic equations",
+      "topic": "Quadratic equations",
+      "summary": "Factorisation, completing the square and the formula. Pick the fastest method every time.",
+      "keyPoints": [
+        "Try factorising first",
+        "x = (−b ± √(b²−4ac)) / 2a",
+        "The discriminant tells you how many roots"
+      ]
+    },
+    "l11": {
+      "title": "Trigonometry: SOH CAH TOA",
+      "topic": "Trigonometry",
+      "summary": "Sine, cosine and tangent ratios with memory tricks that stick.",
+      "keyPoints": [
+        "sin = opposite / hypotenuse",
+        "cos = adjacent / hypotenuse",
+        "tan = opposite / adjacent"
+      ]
+    },
+    "l12": {
+      "title": "Statistics: mean, median and mode",
+      "topic": "Statistics",
+      "summary": "Three ways to describe the “middle” of data, and when to use each.",
+      "keyPoints": [
+        "Mean: add and divide",
+        "Median: the middle value",
+        "Mode: the most frequent"
+      ]
+    },
+    "l13": {
+      "title": "Differentiation from first principles",
+      "topic": "Differentiation",
+      "summary": "What a derivative really means, built up step by step.",
+      "keyPoints": [
+        "The derivative is a rate of change",
+        "Limit of (f(x+h) − f(x)) / h",
+        "Power rule: d/dx xⁿ = nxⁿ⁻¹"
+      ]
+    },
+    "l14": {
+      "title": "Writing a strong essay introduction",
+      "topic": "Essay writing",
+      "summary": "Hook, context, thesis: the three-part intro examiners love.",
+      "keyPoints": [
+        "Start with a hook",
+        "Give brief context",
+        "End with a clear thesis"
+      ]
+    },
+    "l15": {
+      "title": "Summary writing that scores",
+      "topic": "Summary writing",
+      "summary": "How to find the key points and rewrite them in your own words, within the word limit.",
+      "keyPoints": [
+        "Read the question twice",
+        "One point per sentence",
+        "Never copy whole sentences"
+      ]
+    },
+    "l16": {
+      "title": "Lexis & structure practice",
+      "topic": "Lexis & structure",
+      "summary": "JAMB-style synonyms, antonyms and sentence completion.",
+      "keyPoints": [
+        "Read the whole sentence first",
+        "Watch for tense clues",
+        "Eliminate obvious wrong options"
+      ]
+    },
+    "l17": {
+      "title": "Things Fall Apart: themes",
+      "topic": "Prose",
+      "summary": "Pride, tradition and change in Achebe’s classic, as a listen-anywhere audio lesson.",
+      "keyPoints": [
+        "Okonkwo’s fear of weakness",
+        "Tradition vs colonial change",
+        "The tragic hero"
+      ]
+    },
+    "l18": {
+      "title": "Demand and supply, simply",
+      "topic": "Demand & supply",
+      "summary": "Why prices rise and fall, using the market for tomatoes as an example.",
+      "keyPoints": [
+        "Demand falls as price rises",
+        "Supply rises as price rises",
+        "Equilibrium is where they meet"
+      ]
+    },
+    "l19": {
+      "title": "Inflation: why prices keep rising",
+      "topic": "Inflation",
+      "summary": "Causes, effects and how central banks fight inflation.",
+      "keyPoints": [
+        "Demand-pull vs cost-push",
+        "Inflation erodes purchasing power",
+        "Interest rates are the main tool"
+      ]
+    },
+    "l20": {
+      "title": "Double entry bookkeeping",
+      "topic": "Double entry",
+      "summary": "Every transaction has two sides. Debits, credits and the accounting equation.",
+      "keyPoints": [
+        "Assets = Liabilities + Capital",
+        "Every debit has a matching credit",
+        "Use T-accounts to practise"
+      ]
+    },
+    "l21": {
+      "title": "Arms of government",
+      "topic": "Arms of government",
+      "summary": "Legislature, executive and judiciary: who does what.",
+      "keyPoints": [
+        "Legislature makes laws",
+        "Executive carries them out",
+        "Judiciary interprets them"
+      ]
+    },
+    "l22": {
+      "title": "Nigerian independence in 10 moments",
+      "topic": "Independence movements",
+      "summary": "From the 1914 amalgamation to 1 October 1960.",
+      "keyPoints": [
+        "1914 amalgamation",
+        "Nationalist movements",
+        "Independence on 1 October 1960"
+      ]
+    },
+    "l23": {
+      "title": "Reading contour maps",
+      "topic": "Map reading",
+      "summary": "Contours, spot heights and gradients, decoded.",
+      "keyPoints": [
+        "Close contours = steep slope",
+        "Contour interval is constant",
+        "V-shapes point upstream"
+      ]
+    },
+    "l24": {
+      "title": "Your first Python program",
+      "topic": "Programming basics",
+      "summary": "Variables, print and input: write a program that greets you by name.",
+      "keyPoints": [
+        "Variables store values",
+        "print() shows output",
+        "input() reads what the user types"
+      ]
+    },
+    "l25": {
+      "title": "Algorithms in everyday life",
+      "topic": "Algorithms",
+      "summary": "Recipes, directions and sorting your playlist: algorithms are everywhere.",
+      "keyPoints": [
+        "An algorithm is a set of steps",
+        "Order matters",
+        "Good algorithms are efficient"
+      ]
+    },
+    "l26": {
+      "title": "What is AI, really?",
+      "topic": "What is AI",
+      "summary": "How machines learn patterns from data, and what they still can’t do.",
+      "keyPoints": [
+        "AI learns patterns from examples",
+        "It predicts, it doesn’t “know”",
+        "Always check AI answers"
+      ]
+    },
+    "l27": {
+      "title": "Prompting like a pro",
+      "topic": "Prompting",
+      "summary": "Give context, set a role and ask for a format: get better answers from AI.",
+      "keyPoints": [
+        "Be specific about the goal",
+        "Give examples",
+        "Ask for step-by-step reasoning"
+      ]
+    },
+    "l28": {
+      "title": "Pricing your first product",
+      "topic": "Pricing",
+      "summary": "Cost-plus, value-based and competitor pricing for young entrepreneurs.",
+      "keyPoints": [
+        "Know your total costs",
+        "Price on value, not just cost",
+        "Test and adjust"
+      ]
+    },
+    "l29": {
+      "title": "French greetings & introductions",
+      "topic": "Greetings",
+      "summary": "Bonjour, ça va? Speak your first French sentences with confidence.",
+      "keyPoints": [
+        "Bonjour / Bonsoir",
+        "Je m’appelle…",
+        "Comment ça va?"
+      ]
+    },
+    "l30": {
+      "title": "Electrolysis step by step",
+      "topic": "Electrolysis",
+      "summary": "What happens at the anode and cathode, and how to predict products.",
+      "keyPoints": [
+        "Cations go to the cathode",
+        "Anions go to the anode",
+        "Oxidation at anode, reduction at cathode"
+      ]
+    },
+    "l31": {
+      "title": "Human heart and circulation",
+      "topic": "Human physiology",
+      "summary": "Twelve questions on the heart, blood vessels and double circulation.",
+      "keyPoints": [
+        "Four chambers",
+        "Arteries carry blood away",
+        "Double circulation in mammals"
+      ]
+    },
+    "l32": {
+      "title": "Geometry: angles in circles",
+      "topic": "Geometry",
+      "summary": "Circle theorems with diagrams you can actually follow.",
+      "keyPoints": [
+        "Angle at centre = 2 × angle at circumference",
+        "Angles in the same segment are equal",
+        "Opposite angles of a cyclic quad sum to 180°"
+      ]
+    }
+  }
+}

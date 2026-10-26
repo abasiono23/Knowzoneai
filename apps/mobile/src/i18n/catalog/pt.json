@@ -1,0 +1,523 @@
+{
+  "categories": {
+    "sciences": {
+      "name": "Ciências"
+    },
+    "maths": {
+      "name": "Matemática"
+    },
+    "languages": {
+      "name": "Línguas e Literatura"
+    },
+    "humanities": {
+      "name": "Humanidades"
+    },
+    "business": {
+      "name": "Negócios e Dinheiro"
+    },
+    "tech": {
+      "name": "Tecnologia e Competências do Futuro"
+    }
+  },
+  "subjects": {
+    "mathematics": {
+      "name": "Matemática",
+      "description": "Números, álgebra, geometria e a lógica por trás de tudo isso.",
+      "topics": [
+        "Álgebra",
+        "Equações do segundo grau",
+        "Geometria",
+        "Estatística",
+        "Trigonometria",
+        "Cálculo"
+      ]
+    },
+    "further-maths": {
+      "name": "Matemática Avançada",
+      "description": "Matrizes, vetores e resolução de problemas avançados.",
+      "topics": [
+        "Matrizes",
+        "Vetores",
+        "Números complexos",
+        "Derivação"
+      ]
+    },
+    "physics": {
+      "name": "Física",
+      "description": "Como se comportam a energia, as forças e o universo.",
+      "topics": [
+        "Movimento",
+        "Forças",
+        "Ondas",
+        "Eletricidade",
+        "Energia",
+        "Ótica"
+      ]
+    },
+    "chemistry": {
+      "name": "Química",
+      "description": "Átomos, reações e aquilo de que tudo é feito.",
+      "topics": [
+        "Conceito de mole",
+        "Ligações químicas",
+        "Química orgânica",
+        "Eletrólise",
+        "Velocidade das reações"
+      ]
+    },
+    "biology": {
+      "name": "Biologia",
+      "description": "Os seres vivos, das células aos ecossistemas completos.",
+      "topics": [
+        "Biologia celular",
+        "Genética",
+        "Ecologia",
+        "Nutrição",
+        "Fisiologia humana"
+      ]
+    },
+    "agric": {
+      "name": "Ciências Agrárias",
+      "description": "Culturas, solo, animais e gestão da exploração agrícola.",
+      "topics": [
+        "Ciência do solo",
+        "Produção vegetal",
+        "Criação de animais"
+      ]
+    },
+    "english": {
+      "name": "Língua Inglesa",
+      "description": "Ler, escrever e falar com confiança.",
+      "topics": [
+        "Compreensão de texto",
+        "Escrita de resumos",
+        "Escrita de composições",
+        "Léxico e estrutura",
+        "Inglês oral"
+      ]
+    },
+    "literature": {
+      "name": "Literatura em Inglês",
+      "description": "Prosa, poesia e teatro, analisados com clareza.",
+      "topics": [
+        "Prosa",
+        "Poesia",
+        "Teatro",
+        "Recursos literários"
+      ]
+    },
+    "french": {
+      "name": "Francês",
+      "description": "Francês do dia a dia para a escola e para viajar.",
+      "topics": [
+        "Cumprimentos",
+        "Verbos",
+        "Gramática",
+        "Conversação"
+      ]
+    },
+    "government": {
+      "name": "Governo",
+      "description": "Como os países são governados e porque é que isso importa.",
+      "topics": [
+        "Constituição",
+        "Poderes do Estado",
+        "Sistemas eleitorais",
+        "Federalismo nigeriano"
+      ]
+    },
+    "history": {
+      "name": "História",
+      "description": "Histórias do passado que moldaram o presente.",
+      "topics": [
+        "África pré-colonial",
+        "Época colonial",
+        "Movimentos de independência",
+        "Guerras mundiais"
+      ]
+    },
+    "geography": {
+      "name": "Geografia",
+      "description": "O nosso planeta, as suas pessoas e o seu clima.",
+      "topics": [
+        "Leitura de mapas",
+        "Clima",
+        "População",
+        "Formas de relevo"
+      ]
+    },
+    "economics": {
+      "name": "Economia",
+      "description": "Dinheiro, mercados e como se fazem escolhas.",
+      "topics": [
+        "Procura e oferta",
+        "Elasticidade",
+        "Inflação",
+        "Rendimento nacional",
+        "Estruturas de mercado"
+      ]
+    },
+    "accounting": {
+      "name": "Contabilidade Financeira",
+      "description": "Livros, razão e demonstrações financeiras.",
+      "topics": [
+        "Partidas dobradas",
+        "Balancete de verificação",
+        "Contas finais",
+        "Depreciação"
+      ]
+    },
+    "entrepreneurship": {
+      "name": "Empreendedorismo",
+      "description": "Transformar ideias em negócios que funcionam.",
+      "topics": [
+        "Ideias de negócio",
+        "Marketing",
+        "Definição de preços",
+        "Apresentar a tua ideia (pitch)"
+      ]
+    },
+    "computer-science": {
+      "name": "Informática",
+      "description": "Como os computadores “pensam”, da lógica ao código.",
+      "topics": [
+        "Algoritmos",
+        "Bases da programação",
+        "Estruturas de dados",
+        "Redes"
+      ]
+    },
+    "ai-literacy": {
+      "name": "Literacia em IA",
+      "description": "O que é a IA, como funciona e como usá-la bem.",
+      "topics": [
+        "O que é a IA",
+        "Aprendizagem automática",
+        "Escrever prompts",
+        "Ética da IA"
+      ]
+    }
+  },
+  "lessons": {
+    "l1": {
+      "title": "Como as células produzem energia",
+      "topic": "Biologia celular",
+      "summary": "As mitocôndrias transformam a glicose e o oxigénio em ATP, a “moeda energética” que todas as células gastam.",
+      "keyPoints": [
+        "A respiração acontece nas mitocôndrias",
+        "Glicose + oxigénio → CO₂ + água + ATP",
+        "A respiração anaeróbia produz ácido lático nos músculos"
+      ]
+    },
+    "l2": {
+      "title": "Genética sem complicações: dominante vs recessivo",
+      "topic": "Genética",
+      "summary": "Porque podes ter os olhos da tua mãe mas a altura do teu avô: alelos, genótipos e quadros de Punnett.",
+      "keyPoints": [
+        "Cada característica tem dois alelos",
+        "Os alelos dominantes escondem os recessivos",
+        "Os quadros de Punnett preveem as proporções na descendência"
+      ]
+    },
+    "l3": {
+      "title": "Cadeias alimentares e fluxo de energia",
+      "topic": "Ecologia",
+      "summary": "A energia passa dos produtores para os consumidores, e só cerca de 10% passa para cada nível seguinte.",
+      "keyPoints": [
+        "Os produtores fabricam alimento por fotossíntese",
+        "Cerca de 10% da energia sobe a cada nível",
+        "Os decompositores reciclam os nutrientes"
+      ]
+    },
+    "l4": {
+      "title": "O conceito de mole em 5 minutos",
+      "topic": "Conceito de mole",
+      "summary": "Uma mole são 6,02 × 10²³ partículas. Aprende a passar de massa para moles e partículas com confiança.",
+      "keyPoints": [
+        "1 mole = 6,02 × 10²³ partículas",
+        "Moles = massa ÷ massa molar",
+        "Usa as proporções das equações acertadas"
+      ]
+    },
+    "l5": {
+      "title": "Ligação iónica vs covalente",
+      "topic": "Ligações químicas",
+      "summary": "Nas ligações iónicas há transferência de eletrões; nas covalentes, os eletrões são partilhados. 20 cartões para fixar isto.",
+      "keyPoints": [
+        "Iónica: metal + não metal, transferência de eletrões",
+        "Covalente: não metais que partilham eletrões",
+        "Os compostos iónicos conduzem corrente quando fundidos"
+      ]
+    },
+    "l6": {
+      "title": "Química orgânica: nomenclatura dos alcanos",
+      "topic": "Química orgânica",
+      "summary": "Testa os teus conhecimentos da nomenclatura IUPAC de alcanos, alcenos e álcoois.",
+      "keyPoints": [
+        "Encontra a cadeia de carbono mais longa",
+        "Numera a partir da ponta mais próxima de uma ramificação",
+        "Prefixos: met, et, prop, but…"
+      ]
+    },
+    "l7": {
+      "title": "As três leis de Newton, explicadas",
+      "topic": "Forças",
+      "summary": "Inércia, F = ma e ação–reação, com exemplos do dia a dia, dos autocarros danfo ao futebol.",
+      "keyPoints": [
+        "Um corpo fica em repouso a menos que uma força atue sobre ele",
+        "Força = massa × aceleração",
+        "A toda a ação corresponde uma reação igual e oposta"
+      ]
+    },
+    "l8": {
+      "title": "Lei de Ohm e circuitos simples",
+      "topic": "Eletricidade",
+      "summary": "V = IR. Como a tensão, a corrente e a resistência se relacionam em circuitos em série e em paralelo.",
+      "keyPoints": [
+        "V = I × R",
+        "Em série: as resistências somam-se",
+        "Em paralelo: 1/R = 1/R₁ + 1/R₂"
+      ]
+    },
+    "l9": {
+      "title": "Ondas: frequência, comprimento de onda, velocidade",
+      "topic": "Ondas",
+      "summary": "Dez perguntas de estilo exame sobre v = fλ.",
+      "keyPoints": [
+        "v = f × λ",
+        "Transversais vs longitudinais",
+        "O som precisa de um meio para se propagar"
+      ]
+    },
+    "l10": {
+      "title": "Resolver equações do segundo grau",
+      "topic": "Equações do segundo grau",
+      "summary": "Fatorização, completar o quadrado e a fórmula resolvente. Escolhe sempre o método mais rápido.",
+      "keyPoints": [
+        "Tenta primeiro fatorizar",
+        "x = (−b ± √(b²−4ac)) / 2a",
+        "O binómio discriminante diz-te quantas raízes há"
+      ]
+    },
+    "l11": {
+      "title": "Trigonometria: SOH CAH TOA",
+      "topic": "Trigonometria",
+      "summary": "Razões de seno, cosseno e tangente, com truques de memória que ficam.",
+      "keyPoints": [
+        "sin = cateto oposto / hipotenusa",
+        "cos = cateto adjacente / hipotenusa",
+        "tan = cateto oposto / cateto adjacente"
+      ]
+    },
+    "l12": {
+      "title": "Estatística: média, mediana e moda",
+      "topic": "Estatística",
+      "summary": "Três formas de descrever o “meio” dos dados, e quando usar cada uma.",
+      "keyPoints": [
+        "Média: soma e divide",
+        "Mediana: o valor do meio",
+        "Moda: o valor mais frequente"
+      ]
+    },
+    "l13": {
+      "title": "Derivação a partir da definição",
+      "topic": "Derivação",
+      "summary": "O que significa realmente uma derivada, construída passo a passo.",
+      "keyPoints": [
+        "A derivada é uma taxa de variação",
+        "Limite de (f(x+h) − f(x)) / h",
+        "Regra da potência: d/dx xⁿ = nxⁿ⁻¹"
+      ]
+    },
+    "l14": {
+      "title": "Escrever uma boa introdução de composição",
+      "topic": "Escrita de composições",
+      "summary": "Gancho, contexto, tese: a introdução em três partes que os examinadores adoram.",
+      "keyPoints": [
+        "Começa com um gancho",
+        "Dá um contexto breve",
+        "Termina com uma tese clara"
+      ]
+    },
+    "l15": {
+      "title": "Resumos que dão nota",
+      "topic": "Escrita de resumos",
+      "summary": "Como encontrar os pontos-chave e reescrevê-los por palavras tuas, dentro do limite de palavras.",
+      "keyPoints": [
+        "Lê a pergunta duas vezes",
+        "Uma ideia por frase",
+        "Nunca copies frases inteiras"
+      ]
+    },
+    "l16": {
+      "title": "Prática de léxico e estrutura",
+      "topic": "Léxico e estrutura",
+      "summary": "Sinónimos, antónimos e completamento de frases ao estilo do JAMB.",
+      "keyPoints": [
+        "Lê primeiro a frase toda",
+        "Presta atenção às pistas do tempo verbal",
+        "Elimina as opções claramente erradas"
+      ]
+    },
+    "l17": {
+      "title": "Things Fall Apart: temas",
+      "topic": "Prosa",
+      "summary": "Orgulho, tradição e mudança no clássico de Achebe, numa aula em áudio para ouvires onde quiseres.",
+      "keyPoints": [
+        "O medo de Okonkwo de parecer fraco",
+        "Tradição vs mudança colonial",
+        "O herói trágico"
+      ]
+    },
+    "l18": {
+      "title": "Procura e oferta, de forma simples",
+      "topic": "Procura e oferta",
+      "summary": "Porque é que os preços sobem e descem, usando o mercado do tomate como exemplo.",
+      "keyPoints": [
+        "A procura diminui quando o preço sobe",
+        "A oferta aumenta quando o preço sobe",
+        "O equilíbrio é onde as duas se encontram"
+      ]
+    },
+    "l19": {
+      "title": "Inflação: porque é que os preços não param de subir",
+      "topic": "Inflação",
+      "summary": "Causas, efeitos e como os bancos centrais combatem a inflação.",
+      "keyPoints": [
+        "Inflação pela procura vs inflação pelos custos",
+        "A inflação reduz o poder de compra",
+        "As taxas de juro são o principal instrumento"
+      ]
+    },
+    "l20": {
+      "title": "Contabilidade por partidas dobradas",
+      "topic": "Partidas dobradas",
+      "summary": "Cada operação tem dois lados. Débitos, créditos e a equação fundamental da contabilidade.",
+      "keyPoints": [
+        "Ativo = Passivo + Capital",
+        "Cada débito tem um crédito correspondente",
+        "Usa contas em T para praticar"
+      ]
+    },
+    "l21": {
+      "title": "Poderes do Estado",
+      "topic": "Poderes do Estado",
+      "summary": "Legislativo, executivo e judicial: quem faz o quê.",
+      "keyPoints": [
+        "O legislativo faz as leis",
+        "O executivo põe-nas em prática",
+        "O judicial interpreta-as"
+      ]
+    },
+    "l22": {
+      "title": "A independência da Nigéria em 10 momentos",
+      "topic": "Movimentos de independência",
+      "summary": "Da unificação de 1914 ao 1 de outubro de 1960.",
+      "keyPoints": [
+        "A unificação de 1914",
+        "Os movimentos nacionalistas",
+        "A independência a 1 de outubro de 1960"
+      ]
+    },
+    "l23": {
+      "title": "Ler mapas de curvas de nível",
+      "topic": "Leitura de mapas",
+      "summary": "Curvas de nível, pontos cotados e declives, descodificados.",
+      "keyPoints": [
+        "Curvas de nível juntas = declive acentuado",
+        "A equidistância entre curvas é constante",
+        "As formas em V apontam para montante"
+      ]
+    },
+    "l24": {
+      "title": "O teu primeiro programa em Python",
+      "topic": "Bases da programação",
+      "summary": "Variáveis, print e input: escreve um programa que te cumprimenta pelo nome.",
+      "keyPoints": [
+        "As variáveis guardam valores",
+        "print() mostra o resultado",
+        "input() lê o que o utilizador escreve"
+      ]
+    },
+    "l25": {
+      "title": "Algoritmos no dia a dia",
+      "topic": "Algoritmos",
+      "summary": "Receitas, indicações de caminho e ordenar a tua playlist: os algoritmos estão em todo o lado.",
+      "keyPoints": [
+        "Um algoritmo é um conjunto de passos",
+        "A ordem importa",
+        "Os bons algoritmos são eficientes"
+      ]
+    },
+    "l26": {
+      "title": "O que é, afinal, a IA?",
+      "topic": "O que é a IA",
+      "summary": "Como as máquinas aprendem padrões a partir de dados, e o que ainda não conseguem fazer.",
+      "keyPoints": [
+        "A IA aprende padrões a partir de exemplos",
+        "Ela prevê, não “sabe”",
+        "Verifica sempre as respostas da IA"
+      ]
+    },
+    "l27": {
+      "title": "Escrever prompts como um profissional",
+      "topic": "Escrever prompts",
+      "summary": "Dá contexto, define um papel e pede um formato: obtém melhores respostas da IA.",
+      "keyPoints": [
+        "Sê específico quanto ao objetivo",
+        "Dá exemplos",
+        "Pede um raciocínio passo a passo"
+      ]
+    },
+    "l28": {
+      "title": "Definir o preço do teu primeiro produto",
+      "topic": "Definição de preços",
+      "summary": "Preço por custo mais margem, preço pelo valor e preço face à concorrência, para jovens empreendedores.",
+      "keyPoints": [
+        "Conhece os teus custos totais",
+        "Define o preço pelo valor, não só pelo custo",
+        "Testa e ajusta"
+      ]
+    },
+    "l29": {
+      "title": "Cumprimentos e apresentações em francês",
+      "topic": "Cumprimentos",
+      "summary": "Bonjour, ça va? Diz as tuas primeiras frases em francês com confiança.",
+      "keyPoints": [
+        "Bonjour / Bonsoir",
+        "Je m’appelle…",
+        "Comment ça va?"
+      ]
+    },
+    "l30": {
+      "title": "Eletrólise passo a passo",
+      "topic": "Eletrólise",
+      "summary": "O que acontece no ânodo e no cátodo, e como prever os produtos.",
+      "keyPoints": [
+        "Os catiões vão para o cátodo",
+        "Os aniões vão para o ânodo",
+        "Oxidação no ânodo, redução no cátodo"
+      ]
+    },
+    "l31": {
+      "title": "O coração humano e a circulação",
+      "topic": "Fisiologia humana",
+      "summary": "Doze perguntas sobre o coração, os vasos sanguíneos e a circulação dupla.",
+      "keyPoints": [
+        "Quatro cavidades",
+        "As artérias levam o sangue para fora do coração",
+        "Circulação dupla nos mamíferos"
+      ]
+    },
+    "l32": {
+      "title": "Geometria: ângulos na circunferência",
+      "topic": "Geometria",
+      "summary": "Teoremas da circunferência com figuras que consegues mesmo acompanhar.",
+      "keyPoints": [
+        "Ângulo ao centro = 2 × ângulo inscrito",
+        "Ângulos inscritos no mesmo arco são iguais",
+        "Os ângulos opostos de um quadrilátero inscrito somam 180°"
+      ]
+    }
+  }
+}

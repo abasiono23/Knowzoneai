@@ -1,0 +1,821 @@
+import type { Translation } from '../../types';
+import type en from '../en/help';
+
+const help: Translation<typeof en> = {
+  ui: {
+    searchPlaceholder: 'Buscar artículos de ayuda',
+    searchLabel: 'Buscar en la ayuda',
+    clearSearch: 'Borrar búsqueda',
+    draftBanner:
+      'Borrador pendiente de revisión por asesoría legal antes del lanzamiento público. El texto puede cambiar.',
+    danger:
+      'Si alguien está en peligro inmediato, llama al <strong>112</strong> o díselo enseguida a un adulto de confianza.',
+    includeDevice: 'Incluir datos del dispositivo',
+    eyebrow: 'CENTRO DE AYUDA',
+    safetyEyebrow: 'SEGURIDAD',
+    readGuidelines: 'Leer las Normas de la comunidad',
+    contactSupport: 'Contactar con soporte',
+    reportContent: 'Denunciar contenido',
+  },
+  tickets: {
+    kind: {
+      support: 'Soporte',
+      bug: 'Informe de error',
+      feedback: 'Comentarios',
+      report: 'Denuncia de seguridad',
+      copyright: 'Derechos de autor',
+      appeal: 'Apelación',
+    },
+    status: {
+      open: 'Abierta',
+      waiting: 'Esperando tu respuesta',
+      resolved: 'Resuelta',
+    },
+    rowLabel: '{{subject}}, {{status}}',
+    lastFromSupport: 'Knowzone: {{text}}',
+    lastFromMe: 'Tú: {{text}}',
+    loadError: 'No se pudieron cargar tus solicitudes',
+    title: 'Tus solicitudes',
+    filters: { all: 'Todas', open: 'Abiertas', resolved: 'Resueltas' },
+    emptyTitle: 'No hay nada aquí',
+    emptyBody: 'Los mensajes, informes de errores y denuncias que envíes aparecen aquí para que puedas seguirlos.',
+  },
+  centre: {
+    eyebrow: 'SOPORTE',
+    title: 'Centro de ayuda',
+    greeting: 'Hola, {{name}}, ¿en qué podemos ayudarte?',
+    greetingAnonymous: 'Hola, ¿en qué podemos ayudarte?',
+    openRequests: 'Tus solicitudes abiertas',
+    actions: {
+      contact: { title: 'Contactar con soporte', body: 'Respuesta en 1 día hábil' },
+      bug: { title: 'Informar de un error', body: '¿Algo no funciona?' },
+      feedback: { title: 'Enviar comentarios', body: 'Ideas y sugerencias' },
+      report: { title: 'Denunciar contenido', body: 'Peligroso o inapropiado' },
+    },
+    browse: 'Explorar por tema',
+    popular: 'Preguntas populares',
+    allFaqs: 'Todas las preguntas frecuentes',
+    safetyLegal: 'Seguridad e información legal',
+    links: {
+      guidelines: 'Normas de la comunidad',
+      blocked: 'Jugadores y contenido bloqueados',
+      ai: 'Limitaciones y precisión de la IA',
+      terms: 'Términos del servicio',
+      privacy: 'Política de privacidad',
+      copyright: 'Derechos de autor y denuncia de contenido',
+    },
+    viewAll: 'Ver todas tus solicitudes ({{count}})',
+  },
+  faq: {
+    title: 'Preguntas frecuentes',
+    all: 'Todas',
+    results_one: '{{count}} resultado',
+    results_other: '{{count}} resultados',
+    results_many: '{{count}} resultados',
+    helpfulQuestion: '¿Esto respondió tu pregunta?',
+    gladItHelped: '¡Nos alegra que te haya servido!',
+    askTeam: 'Lo sentimos. Pregunta a nuestro equipo →',
+    noResultsTitle: 'No hay respuestas para «{{query}}»',
+    noResultsBody: 'Prueba con otras palabras o pregunta directamente a nuestro equipo.',
+    stillNeedHelp: '¿Aún necesitas ayuda?',
+    categories: {
+      start: 'Primeros pasos',
+      ai: 'Tutor de IA y herramientas de estudio',
+      videos: 'Videos',
+      courses: 'Cursos y certificados',
+      world: 'Knowzone World y recompensas',
+      account: 'Cuenta y privacidad',
+      payments: 'Planes y pagos',
+      safety: 'Seguridad y denuncias',
+      teachers: 'Para profesores',
+    },
+    items: {
+      'what-is': {
+        q: '¿Qué es Knowzone AI?',
+        a: 'Knowzone convierte tus apuntes, PDF y temas en resúmenes, tarjetas de memoria, quizzes y videos explicativos cortos, con un tutor de IA para tus preguntas y Knowzone World para aprender jugando.',
+      },
+      'first-pack': {
+        q: '¿Cómo creo mi primer paquete de estudio?',
+        a: 'Toca Crear (la pestaña +) y luego pega apuntes, sube un archivo, elige un tema o escoge un video. Knowzone crea un resumen, tarjetas de memoria y un quiz. Un paquete de estudio usa 1 crédito de IA, y solo si se crea correctamente.',
+      },
+      streaks: {
+        q: '¿Cómo funcionan las rachas?',
+        a: 'Aprende algo en un día (una lección, un quiz, un nivel o una sesión de estudio) y tu racha sube en uno. Si te saltas un día, vuelve a empezar, salvo que tengas un protector de racha.',
+      },
+      credits: {
+        q: '¿Qué son los créditos de IA?',
+        a: 'Los créditos pagan las tareas de IA más grandes: un paquete de estudio cuesta 1 y un video explicativo de 1 a 5, según su duración. Las cuentas nuevas reciben {{welcome}}. Cada invitación da {{referral}}, y Plus añade {{plusMonthly}} al mes. Los créditos solo se usan cuando la generación sale bien.',
+      },
+      'tutor-limit': {
+        q: '¿Cuántas preguntas puedo hacerle al tutor?',
+        a: 'Las cuentas Gratis tienen {{tutorFree}} preguntas al tutor al día, Plus {{tutorPlus}} y Pro {{tutorPro}}. El contador se reinicia a medianoche. Las preguntas al tutor no gastan créditos de IA.',
+      },
+      'ai-wrong': {
+        q: 'La IA se equivocó en algo. ¿Qué hago?',
+        a: 'La IA puede cometer errores, sobre todo con cálculos, hechos recientes y detalles muy concretos del temario. Comprueba los datos importantes con tu libro de texto o tu profesor, y usa «Informar de un problema» en la respuesta o el video para que podamos corregirlo.',
+      },
+      'ai-data': {
+        q: '¿Se usa el material que subo para entrenar la IA?',
+        a: 'No, a menos que actives «Ayudar a mejorar Knowzone AI» en Ajustes → Privacidad. Está desactivado por defecto. Tus archivos se usan para crear tu material de estudio.',
+      },
+      'video-length': {
+        q: '¿Por qué no puedo elegir un video de 3 o 5 minutos?',
+        a: 'Las explicaciones más largas son parte de Knowzone Plus y Pro. Las cuentas Gratis pueden crear videos de 30 segundos y de 1 minuto.',
+      },
+      'video-failed': {
+        q: 'Mi video no terminó de generarse',
+        a: 'Ábrelo desde Mis videos y toca Reintentar. No se te cobran créditos por un video que falla.',
+      },
+      certificate: {
+        q: '¿Cómo obtengo un certificado?',
+        a: 'Termina todas las lecciones de un curso. Tu certificado aparece en Perfil → Mis certificados, donde puedes descargarlo o compartirlo.',
+      },
+      'course-progress': {
+        q: '¿Se guarda mi progreso en los cursos?',
+        a: 'Sí. Sigue donde lo dejaste desde Inicio o Perfil → Mis cursos.',
+      },
+      coins: {
+        q: '¿Qué puedo hacer con las monedas?',
+        a: 'Gasta monedas en la tienda de Recompensas en objetos de avatar, marcos de perfil, títulos y protectores de racha. Las monedas no se pueden cambiar por dinero ni por créditos de IA.',
+      },
+      'leaderboard-privacy': {
+        q: '¿Puedo ocultarme de las clasificaciones?',
+        a: 'Sí. En Knowzone World → Ajustes, desactiva las clasificaciones o aparece como explorador anónimo.',
+      },
+      password: {
+        q: 'Olvidé mi contraseña',
+        a: 'En la pantalla de inicio de sesión, toca «¿Olvidaste tu contraseña?» y te enviaremos por correo un código de 6 dígitos para crear una nueva.',
+      },
+      export: {
+        q: '¿Cómo descargo mis datos?',
+        a: 'Ajustes → Descargar mis datos te da todo lo que guardamos sobre ti en un archivo, o un enlace por correo.',
+      },
+      delete: {
+        q: '¿Cómo elimino mi cuenta?',
+        a: 'Ajustes → Eliminar cuenta. Tienes 14 días para cambiar de opinión: si vuelves a iniciar sesión, se cancela. Después, tu cuenta y tus datos se eliminan para siempre.',
+      },
+      refund: {
+        q: '¿Puedo pedir un reembolso?',
+        a: 'El primer pago de un plan se reembolsa por completo si lo pides dentro de los 7 días. Ve a Ajustes → Reembolsos y ayuda con pagos. Las renovaciones se revisan caso por caso.',
+      },
+      cancel: {
+        q: '¿Cómo cancelo mi suscripción?',
+        a: 'Ajustes → Suscripción → Cancelar suscripción. Mantienes tu plan hasta el final del periodo que pagaste. Los planes de App Store y Google Play se cancelan en la tienda.',
+      },
+      transfer: {
+        q: 'Pagué por transferencia bancaria pero mi plan no está activo',
+        a: 'Las transferencias pueden tardar unos minutos. Abre Suscripción, toca el pago pendiente y elige «Ya envié el dinero». Si sigue sin aparecer, contacta con la ayuda con pagos indicando tu referencia.',
+      },
+      report: {
+        q: '¿Cómo denuncio algo?',
+        a: 'Usa «Denunciar» en un video, una respuesta del tutor o un jugador, o ve a Ayuda → Denunciar contenido inapropiado. Un moderador revisa las denuncias en 24 horas, y no se le dice a la persona quién la denunció.',
+      },
+      block: {
+        q: '¿Cómo bloqueo a alguien?',
+        a: 'En una clasificación o lista de amigos, toca ⋯ junto al jugador y elige Bloquear. No se verán en las clasificaciones ni en las batallas. Gestiona los jugadores bloqueados en Ajustes → Jugadores y contenido bloqueados.',
+      },
+      danger: {
+        q: 'Alguien está en peligro',
+        a: 'Si alguien está en peligro inmediato, llama al 112 (el número de emergencias de Nigeria) o díselo enseguida a un adulto de confianza. Después, denúncialo para que podamos actuar sobre la cuenta.',
+      },
+      'class-code': {
+        q: '¿Cómo se unen los estudiantes a mi clase?',
+        a: 'Comparte el código de 6 caracteres de tu clase. Los estudiantes lo introducen en Knowzone y aparecen en tu clase al momento.',
+      },
+      'class-reports': {
+        q: '¿Cuándo aparecen los informes de la clase?',
+        a: 'En cuanto los estudiantes empiezan la práctica que asignaste. Cada tarea muestra las notas y los temas que más les cuestan.',
+      },
+    },
+  },
+  contact: {
+    title: 'Contactar con soporte',
+    intro: 'Nuestro equipo lee todos los mensajes y suele responder en 1 día hábil, aquí en la app.',
+    topicQuestion: '¿De qué se trata?',
+    topics: {
+      account: 'Cuenta e inicio de sesión',
+      learning: 'Lecciones y cursos',
+      ai: 'Tutor de IA y herramientas de estudio',
+      payments: 'Planes y pagos',
+      technical: 'La app no funciona',
+      safety: 'Problema de seguridad',
+      other: 'Otra cosa',
+    },
+    paymentsTip:
+      'Los reembolsos, cobros duplicados y planes que no aparecen se resuelven más rápido desde Ayuda con pagos.',
+    safetyTip:
+      '¿Quieres denunciar a una persona o un contenido? Usa Denunciar contenido para que un moderador lo vea primero.',
+    subject: 'Asunto',
+    subjectPlaceholder: 'Unas palabras sobre el problema',
+    suggestions: 'ESTO PODRÍA AYUDARTE',
+    suggestion: '{{question}} →',
+    message: 'Mensaje',
+    messagePlaceholder: 'Qué pasó, qué esperabas y lo que ya has probado',
+    sendError: 'No se pudo enviar tu mensaje. Inténtalo de nuevo.',
+    send: 'Enviar mensaje',
+    footer:
+      'Las respuestas aparecen en Ayuda → Tus solicitudes. Nunca compartas tu contraseña: el personal de Knowzone nunca te la pedirá.',
+  },
+  feedback: {
+    title: 'Enviar comentarios',
+    moods: {
+      '1': 'Muy descontento',
+      '2': 'Descontento',
+      '3': 'Normal',
+      '4': 'Contento',
+      '5': 'Me encanta',
+    },
+    areas: {
+      tutor: 'Tutor de IA',
+      packs: 'Paquetes de estudio',
+      videos: 'Videos',
+      courses: 'Cursos',
+      world: 'Knowzone World',
+      rewards: 'Recompensas',
+      design: 'Diseño',
+      new: 'Algo nuevo',
+    },
+    sendError: 'No se pudieron enviar tus comentarios',
+    thanksTitle: '¡Gracias!',
+    thanksBody:
+      'Las personas que crean Knowzone leen todas las sugerencias. Tus ideas marcan en qué trabajaremos después.',
+    seeRequests: 'Ver tus solicitudes',
+    feelQuestion: '¿Qué te parece Knowzone?',
+    aboutQuestion: '¿Sobre qué es? (opcional)',
+    label: 'Tus comentarios',
+    placeholderUnhappy: '¿Qué te ha resultado frustrante? Nos encantaría arreglarlo.',
+    placeholderHappy: '¿Qué te encanta y qué haría que Knowzone fuera aún mejor?',
+    send: 'Enviar comentarios',
+    bugFooter: '¿Algo no funciona? Mejor <link>informa de un error</link> para que lo vean nuestros ingenieros.',
+  },
+  bug: {
+    title: 'Informar de un error',
+    intro: 'Cuéntanos qué salió mal. Cuantos más detalles, antes podremos arreglarlo.',
+    whatLabel: '¿Qué salió mal?',
+    whatPlaceholder: 'p. ej., El quiz se congela en la pregunta 3',
+    whereQuestion: '¿En qué parte de la app?',
+    areas: {
+      signIn: 'Inicio de sesión',
+      home: 'Inicio',
+      tutor: 'Tutor de IA',
+      packs: 'Paquetes de estudio',
+      videos: 'Videos',
+      courses: 'Cursos',
+      world: 'Knowzone World',
+      payments: 'Pagos',
+      other: 'Otra',
+    },
+    stepsLabel: 'Pasos para reproducirlo',
+    stepsPlaceholder: '1. Abre un paquete de estudio\n2. Empieza el quiz\n3. Responde la pregunta 2…',
+    expectedLabel: '¿Qué esperabas? (opcional)',
+    expectedPlaceholder: 'p. ej., Debería aparecer la siguiente pregunta',
+    frequencyQuestion: '¿Con qué frecuencia?',
+    frequency: {
+      always: 'Siempre',
+      sometimes: 'A veces',
+      once: 'Solo una vez',
+    },
+    screenshotAdded: 'Captura añadida',
+    addScreenshot: 'Añadir una captura de pantalla',
+    addScreenshotOptional: 'Añadir una captura de pantalla (opcional)',
+    photosError: 'No se pudieron abrir tus fotos. Puedes enviar el informe sin captura.',
+    sendError: 'No se pudo enviar el informe',
+    send: 'Enviar informe de error',
+  },
+  report: {
+    reasons: {
+      bullying: 'Acoso o intimidación',
+      name: 'Nombre o avatar inapropiado',
+      cheating: 'Trampas en batallas o clasificaciones',
+      impersonation: 'Se hace pasar por otra persona',
+      'underage-risk': 'Pide datos personales o quedar en persona',
+      inappropriate: 'Sexual, violento o no apto para estudiantes',
+      harmful: 'Dañino o peligroso',
+      hate: 'Odio o discriminación',
+      incorrect: 'Información errónea o engañosa',
+      spam: 'Spam o estafa',
+      copyright: 'Copia el trabajo de otra persona',
+      other: 'Otra cosa',
+    },
+    types: {
+      player: 'Un jugador',
+      video: 'Un video',
+      'tutor-answer': 'Una respuesta del tutor',
+      course: 'Un curso o lección',
+      other: 'Otra cosa',
+    },
+    titleFor: {
+      player: 'Denunciar jugador',
+      video: 'Denunciar video',
+      'tutor-answer': 'Denunciar respuesta',
+      course: 'Denunciar curso',
+      lesson: 'Denunciar lección',
+      'study-pack': 'Denunciar paquete de estudio',
+      other: 'Denunciar contenido',
+    },
+    hideToggle: {
+      video: 'Ocultarme este video',
+      'tutor-answer': 'Ocultarme esta respuesta',
+      course: 'Ocultarme este curso',
+      lesson: 'Ocultarme esta lección',
+      'study-pack': 'Ocultarme este paquete de estudio',
+      other: 'Ocultarme este contenido',
+    },
+    hiddenNow: {
+      video: 'Este video ya está oculto para ti',
+      'tutor-answer': 'Esta respuesta ya está oculta para ti',
+      course: 'Este curso ya está oculto para ti',
+      lesson: 'Esta lección ya está oculta para ti',
+      'study-pack': 'Este paquete de estudio ya está oculto para ti',
+      other: 'Este contenido ya está oculto para ti',
+    },
+    sendError: 'No se pudo enviar tu denuncia. Inténtalo de nuevo.',
+    thanksTitle: 'Gracias por denunciarlo',
+    thanksBodyPlayer: 'Un moderador lo revisará en 24 horas. No se le dirá quién lo denunció.',
+    thanksBodyContent: 'Un moderador lo revisará en 24 horas. No se le dirá al creador quién lo denunció.',
+    reference: 'REFERENCIA {{id}}',
+    nextTitle: 'Qué pasa ahora',
+    next: {
+      review: 'Un moderador formado lo comprueba según nuestras Normas de la comunidad',
+      action: 'Si incumple las normas, lo eliminamos o restringimos la cuenta',
+      follow: 'Puedes seguir la denuncia en Ayuda → Tus solicitudes',
+      blocked: '{{name}} está bloqueado. Puedes desbloquearlo cuando quieras en Ajustes',
+    },
+    viewReport: 'Ver denuncia',
+    whatQuestion: '¿Qué quieres denunciar?',
+    playerName: 'Nombre del jugador',
+    whichOne: '¿Cuál?',
+    playerPlaceholder: 'Nombre tal como aparece en la clasificación',
+    itemPlaceholder: 'Título, o dónde lo viste',
+    wrongQuestion: '¿Qué ocurre?',
+    copyrightLink: '¿La obra es tuya? Mejor envía un aviso de derechos de autor →',
+    detailsLabel: 'Cuéntanos más (opcional)',
+    detailsPlaceholder: '¿Qué pasó? ¿Cuándo? Cualquier cosa que ayude a un moderador a entenderlo.',
+    alsoBlock: 'Bloquear también a {{name}}',
+    alsoBlockHint: 'No se verán en las clasificaciones ni en las batallas',
+    hideHint: 'No aparecerá en tus feeds mientras lo revisamos',
+    alsoBlockLabel: 'Bloquear también',
+    hideLabel: 'Ocultármelo',
+    send: 'Enviar denuncia',
+  },
+  blocked: {
+    title: 'Bloqueados y ocultos',
+    types: {
+      video: 'Video',
+      course: 'Curso',
+      lesson: 'Lección',
+      'study-pack': 'Paquete de estudio',
+      'tutor-answer': 'Respuesta del tutor',
+      player: 'Jugador',
+      other: 'Contenido',
+    },
+    blockedOn: 'Bloqueado el {{date}}',
+    hiddenOn: '{{type}} · oculto el {{date}}',
+    playersTab: 'Jugadores ({{count}})',
+    contentTab: 'Contenido ({{count}})',
+    playersIntro:
+      'Los jugadores bloqueados no te ven, ni tú a ellos, en clasificaciones, listas de amigos o batallas de quiz. No se les avisa.',
+    contentIntro: 'Los videos y otros contenidos que has ocultado o denunciado no aparecen en tus feeds.',
+    noPlayers: 'No hay jugadores bloqueados',
+    noContent: 'No hay nada oculto',
+    noPlayersHint: 'Toca ⋯ junto a un jugador en una clasificación para bloquearlo o denunciarlo.',
+    noContentHint: 'Usa Denunciar en un video o una respuesta para ocultártelo.',
+    unblock: 'Desbloquear',
+    show: 'Mostrar',
+    unblockTitle: '¿Desbloquear a {{name}}?',
+    showTitle: '¿Volver a mostrar esto?',
+    unblockBody: 'Volverán a verse en las clasificaciones y en las batallas. No se le avisará.',
+    showBody: 'Puede volver a aparecer en tus feeds. Tu denuncia sigue en manos de nuestros moderadores.',
+    showAgain: 'Volver a mostrar',
+  },
+  ticket: {
+    acks: {
+      support:
+        'Gracias por escribirnos. Alguien del equipo de Knowzone te responderá aquí, normalmente en 1 día hábil.',
+      bug: 'Gracias por el reporte. Nuestros ingenieros revisan cada error. Actualizaremos esta solicitud si necesitamos más detalles o cuando esté resuelto.',
+      feedback:
+        '¡Gracias! El equipo de producto lee cada sugerencia. No respondemos a cada una, pero orientan lo que construimos.',
+      report:
+        'Gracias por ayudar a mantener Knowzone seguro. Un moderador revisa las denuncias en 24 horas. La persona denunciada no sabe quién la denunció.',
+      copyright: 'Hemos recibido tu aviso y lo revisaremos en 3 días hábiles.',
+      appeal:
+        'Hemos recibido tu apelación. Un moderador distinto del que tomó la decisión la revisará en 3 días hábiles.',
+    },
+    eyebrow: 'SOLICITUD',
+    notFound: 'No pudimos encontrar esta solicitud.',
+    eyebrowWithId: '{{kind}} · {{id}}',
+    sendError: 'No se pudo enviar. Inténtalo de nuevo.',
+    updateError: 'No se pudo actualizar esta solicitud',
+    created: '¡Enviado! Guarda tu referencia <strong>{{id}}</strong>. Las respuestas aparecerán aquí.',
+    opened: 'Abierta el {{date}}',
+    support: 'SOPORTE DE KNOWZONE',
+    detailsSent: 'DATOS QUE ENVIASTE',
+    meta: {
+      app: 'App',
+      platform: 'Dispositivo',
+      screen: 'Pantalla',
+      area: 'Dónde',
+      frequency: 'Frecuencia',
+      type: 'Tipo de elemento',
+      title: 'Elemento',
+      reason: 'Motivo',
+      rating: 'Valoración',
+      reference: 'Referencia',
+      screenshot: 'Captura de pantalla',
+    },
+    screenshotAttached: 'Captura adjunta',
+    replyToReopen: 'Responde para reabrir esta solicitud',
+    addDetails: 'Añadir más detalles',
+    reply: 'Responder',
+    sendReply: 'Enviar respuesta',
+    solved: 'Mi problema está resuelto',
+  },
+  legal: {
+    lastUpdated: 'Última actualización: {{date}}',
+    shortVersion: 'EN RESUMEN',
+    plainWords: 'EN PALABRAS SENCILLAS',
+    contents: 'Contenido',
+    reportSomething: 'Denunciar algo',
+    reportWrongAnswer: 'Informar de una respuesta incorrecta',
+    related: 'RELACIONADO',
+    copyrightLink: 'Derechos de autor y denuncia de contenido',
+    docs: {
+      terms: {
+        title: 'Términos del servicio',
+        eyebrow: 'LEGAL',
+        summary: [
+          'Debes tener 13 años o más, o contar con el permiso de tu padre, madre o tutor.',
+          'Tus apuntes y archivos siguen siendo tuyos. Nos permites procesarlos para crear tu material de estudio.',
+          'La IA puede equivocarse. Comprueba los datos importantes antes de fiarte de ellos.',
+          'Los planes de pago se renuevan hasta que los canceles; los primeros pagos se reembolsan dentro de los 7 días.',
+          'Sé amable y honesto. Podemos limitar o suspender las cuentas que incumplan las normas.',
+        ],
+        sections: {
+          who: {
+            title: '1. Quiénes somos y estos términos',
+            body: [
+              'Knowzone AI («Knowzone», «nosotros») ofrece una app de aprendizaje con IA para estudiantes y profesores. Estos términos son un acuerdo entre tú y Knowzone. Al crear una cuenta o usar la app, los aceptas.',
+              'Si tienes menos de 18 años, lee estos términos con tu padre, madre o tutor.',
+            ],
+          },
+          account: {
+            title: '2. Tu cuenta',
+            body: ['Para usar Knowzone debes:'],
+            bullets: [
+              'Tener al menos 13 años, o contar con el permiso de tu padre, madre o tutor',
+              'Dar datos correctos y mantener tu contraseña en privado',
+              'Usar una única cuenta personal. Las cuentas no se pueden compartir, vender ni transferir',
+              'Avisarnos enseguida si crees que otra persona está usando tu cuenta',
+            ],
+          },
+          content: {
+            title: '3. Tu contenido',
+            body: [
+              'Eres dueño de los apuntes, archivos, preguntas y demás material que añades («tu contenido»). Nos das permiso para guardar y procesar tu contenido solo para que Knowzone funcione para ti: por ejemplo, para crear resúmenes, tarjetas de memoria, quizzes y videos.',
+              'Sube solo material que tengas derecho a usar. No subas información personal de otras personas sin su permiso.',
+            ],
+          },
+          ai: {
+            title: '4. Funciones de IA',
+            body: [
+              'Knowzone usa inteligencia artificial para generar explicaciones, resúmenes, quizzes y videos. Lo que genera la IA puede estar incompleto o ser incorrecto. Es una ayuda para estudiar, no sustituye a tus profesores, libros de texto ni a las indicaciones oficiales de los exámenes. Consulta «Limitaciones y precisión de la IA» para saber más.',
+              'Las cuentas Gratis tienen límites diarios (por ejemplo, {{tutorFree}} preguntas al tutor al día). Las tareas de IA más grandes usan créditos de IA, que no tienen valor monetario.',
+            ],
+          },
+          rules: {
+            title: '5. Usar Knowzone con responsabilidad',
+            body: ['Te comprometes a no:'],
+            bullets: [
+              'Incumplir las Normas de la comunidad ni ninguna ley',
+              'Usar Knowzone para hacer trampas en exámenes o evaluaciones donde no esté permitido',
+              'Acosar, amenazar o compartir contenido dañino con otros usuarios',
+              'Intentar saltarte los límites, extraer datos del servicio de forma automatizada o interferir en su funcionamiento',
+              'Subir material que infrinja los derechos de autor de otra persona',
+            ],
+          },
+          paid: {
+            title: '6. Planes, pagos y reembolsos',
+            body: [
+              'Los planes de pago se cobran por adelantado. Los planes con tarjeta y de tiendas de apps se renuevan automáticamente hasta que los canceles; los pagos por transferencia bancaria y USSD cubren un periodo y no se renuevan. Puedes cancelar cuando quieras y mantienes el acceso hasta el final del periodo que pagaste.',
+              'El primer pago de un plan se reembolsa por completo si lo pides dentro de los 7 días. Las demás solicitudes de reembolso se revisan caso por caso y según lo que exija la ley. Las compras en App Store y Google Play también siguen las normas de reembolso de cada tienda.',
+              'Te avisaremos con antelación antes de cambiar el precio de un plan al que estés suscrito.',
+            ],
+          },
+          rewards: {
+            title: '7. XP, monedas y recompensas',
+            body: [
+              'Los XP, las monedas, las rachas, las insignias y otras recompensas forman parte de la experiencia de aprendizaje. No tienen valor monetario y no se pueden vender, transferir ni cambiar por dinero.',
+            ],
+          },
+          moderation: {
+            title: '8. Moderación, restricción y suspensión',
+            body: [
+              'Podemos eliminar contenido, restringir funciones o suspender una cuenta que incumpla estos términos o las Normas de la comunidad, o para proteger a los usuarios. Te explicaremos el motivo y cómo apelar. Las infracciones graves o repetidas pueden llevar al cierre de la cuenta.',
+            ],
+          },
+          ending: {
+            title: '9. Cerrar tu cuenta',
+            body: [
+              'Puedes eliminar tu cuenta cuando quieras desde Ajustes. La eliminación se hace efectiva tras un periodo de gracia de 14 días, durante el cual iniciar sesión la cancela.',
+            ],
+          },
+          liability: {
+            title: '10. Nuestra responsabilidad contigo',
+            body: [
+              'Nos esforzamos para que Knowzone esté disponible, sea preciso y seguro, pero no podemos prometer que siempre funcione sin errores ni interrupciones. Nada de estos términos limita los derechos que te da la legislación nigeriana de protección al consumidor.',
+            ],
+          },
+          changes: {
+            title: '11. Cambios y contacto',
+            body: [
+              'Podemos actualizar estos términos. Si los cambios son importantes, te avisaremos en la app antes de que se apliquen. ¿Tienes preguntas? Escríbenos desde Ayuda → Contactar con soporte en la app.',
+              'Estos términos se rigen por las leyes de la República Federal de Nigeria.',
+            ],
+          },
+        },
+      },
+      privacy: {
+        title: 'Política de privacidad',
+        eyebrow: 'LEGAL',
+        summary: [
+          'Nunca vendemos tus datos y no hay anuncios en las lecciones.',
+          'Usamos tus datos para que Knowzone funcione y para personalizar tu aprendizaje.',
+          'Tu material no se usa para entrenar la IA a menos que lo actives.',
+          'Puedes descargar o eliminar tus datos cuando quieras desde Ajustes.',
+        ],
+        sections: {
+          scope: {
+            title: '1. Sobre esta política',
+            body: [
+              'Esta política explica qué datos personales recoge Knowzone, para qué y cuáles son tus derechos según la Nigeria Data Protection Act 2023 (NDPA, Ley de Protección de Datos de Nigeria) y otras leyes que se te apliquen.',
+            ],
+          },
+          collect: {
+            title: '2. Qué recogemos',
+            body: ['Recogemos:'],
+            bullets: [
+              'Datos de la cuenta: nombre, correo, contraseña (guardada de forma segura, nunca en texto plano) y método de inicio de sesión',
+              'Perfil y preferencias de aprendizaje: curso, asignaturas, metas, fechas de exámenes e idioma',
+              'Tu contenido: apuntes, archivos, preguntas y el material de estudio creado a partir de ellos',
+              'Actividad de aprendizaje: lecciones, quizzes, notas, XP, rachas y tiempo dedicado',
+              'Pagos: plan, importe y estado. Los datos de la tarjeta los gestiona Flutterwave o la tienda de apps; nunca vemos los números completos de las tarjetas',
+              'Información del dispositivo y la sesión: tipo de dispositivo, versión de la app y ubicación aproximada de inicio de sesión, para mantener tu cuenta segura',
+              'Mensajes que nos envías: solicitudes de soporte, informes de errores, comentarios y denuncias',
+            ],
+          },
+          use: {
+            title: '3. Cómo los usamos',
+            body: ['Usamos tus datos para:'],
+            bullets: [
+              'Ofrecer Knowzone y generar tu material de estudio',
+              'Personalizar recomendaciones, repasos y recordatorios',
+              'Mantener seguras las cuentas y la comunidad, incluida la moderación',
+              'Procesar pagos y emitir recibos',
+              'Responder solicitudes de soporte y resolver problemas',
+              'Mejorar el producto con estadísticas que no te identifican',
+            ],
+          },
+          ai: {
+            title: '4. Procesamiento con IA',
+            body: [
+              'Para generar material de estudio y respuestas del tutor, el texto necesario se envía a nuestro proveedor de IA (OpenAI) para procesarlo. No se usa para entrenar sus modelos.',
+              'Tu contenido solo se usa para mejorar las funciones de IA propias de Knowzone si activas «Ayudar a mejorar Knowzone AI» en Ajustes → Privacidad. Está desactivado por defecto y puedes desactivarlo cuando quieras.',
+            ],
+          },
+          share: {
+            title: '5. Con quién los compartimos',
+            body: [
+              'Solo compartimos datos con proveedores de servicios que nos ayudan a hacer funcionar Knowzone (alojamiento, procesamiento con IA, pagos, correo) bajo contratos que los protegen; con tu profesor si te unes a su clase (tu progreso en sus tareas); y cuando la ley lo exige. Nunca vendemos datos personales.',
+              'Algunas lecciones de los cursos incluyen videos de YouTube, que se reproducen en el reproductor de YouTube. Knowzone usa los Servicios de la API de YouTube para encontrar estos videos. Al verlos, aceptas los Términos del Servicio de YouTube (youtube.com/t/terms), y la Política de Privacidad de Google (policies.google.com/privacy) se aplica a lo que recopila YouTube.',
+            ],
+          },
+          children: {
+            title: '6. Niños y jóvenes',
+            body: [
+              'Muchos de nuestros usuarios son estudiantes. Los menores de 13 años necesitan el permiso de su padre, madre o tutor. Las clasificaciones solo muestran nombres e iniciales, y puedes ocultarte de ellas. Los padres pueden contactarnos para revisar o eliminar los datos de sus hijos.',
+            ],
+          },
+          keep: {
+            title: '7. Cuánto tiempo los guardamos',
+            body: [
+              'Guardamos tus datos mientras tu cuenta esté abierta. Cuando eliminas tu cuenta, borramos tus datos personales tras el periodo de gracia de 14 días, salvo los registros que la ley nos obliga a conservar (como los registros de pagos).',
+            ],
+          },
+          rights: {
+            title: '8. Tus derechos',
+            body: ['Puedes:'],
+            bullets: [
+              'Acceder a tus datos y descargarlos (Ajustes → Descargar mis datos)',
+              'Corregir tus datos (Ajustes → Editar perfil)',
+              'Eliminar tu cuenta (Ajustes → Eliminar cuenta)',
+              'Oponerte o retirar tu consentimiento a tratamientos opcionales, como la mejora de la IA o el marketing',
+              'Presentar una reclamación ante la Nigeria Data Protection Commission (NDPC)',
+            ],
+          },
+          security: {
+            title: '9. Seguridad',
+            body: [
+              'Protegemos tus datos con cifrado en tránsito, almacenamiento seguro de contraseñas y controles de acceso. Puedes ver tus dispositivos y cerrar su sesión en Ajustes → Dispositivos.',
+            ],
+          },
+          contact: {
+            title: '10. Contacto',
+            body: [
+              'Para preguntas o solicitudes sobre privacidad, usa Ayuda → Contactar con soporte en la app y elige «Cuenta y privacidad».',
+            ],
+          },
+        },
+      },
+      guidelines: {
+        title: 'Normas de la comunidad',
+        eyebrow: 'SEGURIDAD',
+        summary: [
+          'Sé amable. Aquí todos estamos aprendiendo.',
+          'Sé honesto. Gana tus XP, no hagas trampas.',
+          'Mantén en privado tus datos personales.',
+          '¿Ves algo que está mal? Denúncialo.',
+        ],
+        sections: {
+          kind: {
+            title: 'Sé amable y respetuoso',
+            body: [
+              'Nada de acoso, intimidación, amenazas, odio ni burlas hacia nadie por cómo aprende, por su aspecto o por su origen.',
+            ],
+          },
+          safe: {
+            title: 'Mantenlo seguro y adecuado para la edad',
+            body: ['No compartas ni crees:'],
+            bullets: [
+              'Contenido sexual, violento o explícito',
+              'Contenido que anime a autolesionarse, a consumir drogas o a hacer retos peligrosos',
+              'Estafas, spam o enlaces a sitios inseguros',
+            ],
+          },
+          private: {
+            title: 'Protege tu privacidad',
+            body: [
+              'No compartas tu número de teléfono, tu dirección, tu horario escolar ni tus contraseñas, ni los de nadie más. El personal de Knowzone nunca te pedirá tu contraseña.',
+            ],
+          },
+          honest: {
+            title: 'Juega limpio',
+            body: [
+              'No hagas trampas en batallas ni clasificaciones, no uses más de una cuenta y no uses Knowzone para hacer trampas en exámenes. Usa la IA para entender, no para copiar.',
+            ],
+          },
+          names: {
+            title: 'Nombres y avatares',
+            body: ['Elige nombres y avatares amables que no se hagan pasar por otra persona.'],
+          },
+          enforce: {
+            title: 'Qué pasa si se incumplen las normas',
+            body: [
+              'Según la gravedad, podemos eliminar contenido, dar un aviso, restringir funciones como las clasificaciones y las batallas, o suspender la cuenta. Puedes apelar cualquier decisión desde la pantalla de estado de la cuenta.',
+            ],
+          },
+          report: {
+            title: 'Denuncias',
+            body: [
+              'Denuncia jugadores y contenidos con «Denunciar» o desde Ayuda. Las denuncias son confidenciales. Si alguien está en peligro inmediato, llama primero al 112 o díselo a un adulto de confianza.',
+            ],
+          },
+        },
+      },
+      ai: {
+        title: 'Limitaciones y precisión de la IA',
+        eyebrow: 'CÓMO FUNCIONA LA IA AQUÍ',
+        summary: [
+          'La IA puede equivocarse con mucha seguridad. Comprueba los datos importantes.',
+          'Úsala junto con tus profesores, tus libros de texto y el temario oficial.',
+          '¿Has visto un error? Infórmanos para que podamos corregirlo.',
+        ],
+        sections: {
+          what: {
+            title: 'Qué hace nuestra IA',
+            body: [
+              'Knowzone usa modelos de lenguaje grandes (actualmente de OpenAI) para explicar temas, responder preguntas y convertir tu material en resúmenes, tarjetas de memoria, quizzes y guiones de video.',
+            ],
+          },
+          limits: {
+            title: 'En qué puede fallar',
+            body: ['Lo que genera la IA puede:'],
+            bullets: [
+              'Contener errores, sobre todo en cálculos, fechas y cifras',
+              'Pasar por alto detalles de tu temario o tu examen concreto (WAEC, NECO, JAMB)',
+              'Leer mal la letra a mano, las fotos borrosas o los diagramas complejos',
+              'No conocer hechos muy recientes ni cambios en el temario',
+              'Sonar segura incluso cuando se equivoca',
+            ],
+          },
+          use: {
+            title: 'Cómo usarla bien',
+            bullets: [
+              'Comprueba los datos clave, las fórmulas y las respuestas con tu libro de texto o tu profesor',
+              'Pide al tutor que muestre su razonamiento paso a paso',
+              'Usa los quizzes para comprobar lo que entiendes, no como respuestas oficiales de examen',
+              'No confíes en Knowzone para consejos médicos, legales o de seguridad',
+            ],
+          },
+          exams: {
+            title: 'Exámenes y honestidad',
+            body: [
+              'Knowzone es para aprender. Usarlo durante un examen o una prueba en la que no esté permitido incumple nuestros términos y las normas de tu centro.',
+            ],
+          },
+          safety: {
+            title: 'Filtros de seguridad',
+            body: [
+              'Usamos filtros para que las respuestas sean adecuadas para la edad y no se salgan del tema, pero ningún filtro es perfecto. Si ves algo inapropiado, denúncialo enseguida.',
+            ],
+          },
+          improve: {
+            title: 'Tus datos y la IA',
+            body: [
+              'Lo que subes se usa para crear tu material de estudio. Solo se usa para mejorar la IA de Knowzone si lo activas en Ajustes → Privacidad.',
+            ],
+          },
+        },
+      },
+    },
+  },
+  copyright: {
+    eyebrow: 'LEGAL',
+    title: 'Derechos de autor',
+    steps: [
+      'Envía un aviso con los datos que se piden abajo',
+      'Lo revisamos en 3 días hábiles y eliminamos el material que infrinja derechos',
+      'Si lo compartió un usuario, se le avisa y puede enviar un contraaviso si cree que nos equivocamos',
+      'Las cuentas que infringen derechos repetidamente se suspenden',
+    ],
+    sendError: 'No se pudo enviar tu aviso. Inténtalo de nuevo.',
+    receivedTitle: 'Aviso recibido',
+    receivedBody: 'Referencia {{reference}}. Lo revisaremos en 3 días hábiles y responderemos a {{email}}.',
+    intro:
+      'Respetamos el trabajo de los creadores. Los estudiantes solo deben subir material que tengan permiso para usar. Si eres titular de un contenido que aparece en Knowzone sin permiso, cuéntanoslo aquí.',
+    howItWorks: 'Cómo funciona',
+    privateNote:
+      'Los apuntes y archivos que los estudiantes suben para su propio estudio son privados y no se publican para otras personas.',
+    sendTitle: 'Enviar un aviso',
+    name: 'Tu nombre completo',
+    email: 'Correo electrónico',
+    organisation: 'Organización (opcional)',
+    organisationPlaceholder: 'Editorial, centro educativo, empresa',
+    work: 'Tu obra',
+    workPlaceholder: 'Describe la obra original, p. ej., título del libro, edición y páginas, o un enlace',
+    location: 'Dónde aparece en Knowzone',
+    locationPlaceholder: 'Título del video o curso, un enlace, o dónde lo viste',
+    statementLabel: 'Declaración de buena fe',
+    statement:
+      'Creo de buena fe que este uso no está autorizado por el titular ni por la ley, y que la información de este aviso es correcta. Soy el titular o estoy autorizado para actuar en su nombre.',
+    send: 'Enviar aviso',
+    footer:
+      '¿Contenido erróneo o dañino que no tiene que ver con derechos de autor? Mejor usa Denunciar contenido en el Centro de ayuda.',
+  },
+  accountStatus: {
+    eyebrow: 'CUENTA',
+    title: 'Estado de la cuenta',
+    appealError: 'No se pudo enviar tu apelación',
+    goodTitle: 'Tu cuenta no tiene incidencias',
+    goodBody:
+      'Sin avisos, restricciones ni suspensiones. Gracias por ayudar a que Knowzone sea un gran lugar para aprender.',
+    backToLearning: 'Volver a aprender',
+    suspendedTitle: 'Tu cuenta está suspendida',
+    limitedTitle: 'Algunas funciones están limitadas',
+    suspendedUntil: 'Suspendida hasta el {{date}}. Después, todo vuelve automáticamente.',
+    limitedUntil: 'Limitada hasta el {{date}}. Después, todo vuelve automáticamente.',
+    suspendedReview: 'Hasta que nuestro equipo lo revise. Puedes apelar abajo.',
+    limitedReview: 'Hasta que nuestro equipo lo revise. Puedes seguir aprendiendo con normalidad.',
+    why: 'MOTIVO',
+    decision: 'Decisión tomada el {{date}} según nuestras Normas de la comunidad.',
+    cantWhileLimited: 'MIENTRAS ESTÉ LIMITADA NO PUEDES',
+    limits: {
+      leaderboards: 'Aparecer en las clasificaciones',
+      battles: 'Empezar batallas de quiz con amigos',
+      invites: 'Enviar invitaciones ni enlaces de invitación',
+      sharing: 'Compartir videos ni paquetes de estudio',
+    },
+    stillWorks: 'Las lecciones, el tutor de IA, los paquetes de estudio y tu progreso funcionan con normalidad',
+    canStillDo: 'LO QUE SÍ PUEDES HACER',
+    canDo: [
+      'Apelar la decisión',
+      'Contactar con soporte',
+      'Descargar tus datos',
+      'Tu progreso, tus XP y tus certificados se conservan a salvo',
+    ],
+    appealPending: 'Apelación en revisión',
+    appealRejected: 'Apelación desestimada',
+    appealPendingBody: 'Enviada el {{date}}. Otro moderador la revisará en 3 días hábiles.',
+    appealRejectedBody: 'La decisión original se mantiene. Contacta con soporte si algo ha cambiado.',
+    viewAppeal: 'Ver apelación {{id}}',
+    appealTitle: 'Apelar esta decisión',
+    appealIntro: 'Explica por qué crees que es un error o qué ha cambiado. Otro moderador lo revisará.',
+    appealLabel: 'Tu apelación',
+    sendAppeal: 'Enviar apelación',
+    continue: 'Continuar a Knowzone',
+    helpCentre: 'Centro de ayuda',
+    downloadData: 'Descargar mis datos',
+    logOut: 'Cerrar sesión',
+  },
+};
+
+export default help;

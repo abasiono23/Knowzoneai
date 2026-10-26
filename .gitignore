@@ -1,0 +1,11 @@
+node_modules/
+.env
+dist/
+apps/server/src/generated/
+.DS_Store
+.pgdata/
+# Temporary local check scripts
+apps/server/scripts/.*.ts
+.expo/
+*.log
+docs/design/

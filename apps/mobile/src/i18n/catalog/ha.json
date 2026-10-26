@@ -1,0 +1,523 @@
+{
+  "categories": {
+    "sciences": {
+      "name": "Kimiyya"
+    },
+    "maths": {
+      "name": "Lissafi"
+    },
+    "languages": {
+      "name": "Harsuna da Adabi"
+    },
+    "humanities": {
+      "name": "Ilimin ɗan Adam"
+    },
+    "business": {
+      "name": "Kasuwanci da Kuɗi"
+    },
+    "tech": {
+      "name": "Fasaha da Ƙwarewar Gaba"
+    }
+  },
+  "subjects": {
+    "mathematics": {
+      "name": "Lissafi",
+      "description": "Lambobi, aljabara, siffofi da hikimar da ke bayansu.",
+      "topics": [
+        "Aljabara",
+        "Lissafin quadratic",
+        "Ilimin siffofi (Geometry)",
+        "Ƙididdiga (Statistics)",
+        "Trigonometry",
+        "Calculus"
+      ]
+    },
+    "further-maths": {
+      "name": "Babban Lissafi",
+      "description": "Matrices, vectors da warware matsaloli masu zurfi.",
+      "topics": [
+        "Matrices",
+        "Vectors",
+        "Complex numbers",
+        "Differentiation"
+      ]
+    },
+    "physics": {
+      "name": "Kimiyyar Lissafi",
+      "description": "Yadda kuzari, ƙarfi da sararin samaniya ke aiki.",
+      "topics": [
+        "Motsi",
+        "Ƙarfi (Forces)",
+        "Raƙuma (Waves)",
+        "Wutar lantarki",
+        "Kuzari (Energy)",
+        "Ilimin haske (Optics)"
+      ]
+    },
+    "chemistry": {
+      "name": "Kimiyyar Sinadarai",
+      "description": "Atom, mu’amalar sinadarai da abubuwan da aka yi komai da su.",
+      "topics": [
+        "Ma’anar mole",
+        "Haɗewar sinadarai (Chemical bonding)",
+        "Organic chemistry",
+        "Electrolysis",
+        "Saurin mu’amalar sinadarai"
+      ]
+    },
+    "biology": {
+      "name": "Ilimin Halittu",
+      "description": "Abubuwa masu rai, daga ƙwayoyin halitta (cells) zuwa dukan muhallinsu.",
+      "topics": [
+        "Ilimin ƙwayoyin halitta (Cell biology)",
+        "Ilimin gado (Genetics)",
+        "Ilimin muhallin halittu (Ecology)",
+        "Abinci mai gina jiki",
+        "Tsarin jikin ɗan Adam"
+      ]
+    },
+    "agric": {
+      "name": "Kimiyyar Noma",
+      "description": "Amfanin gona, ƙasa, dabbobi da kasuwancin gona.",
+      "topics": [
+        "Ilimin ƙasar noma",
+        "Noman amfanin gona",
+        "Kiwon dabbobi"
+      ]
+    },
+    "english": {
+      "name": "Harshen Turanci",
+      "description": "Karatu, rubutu da magana da ƙwarin gwiwa.",
+      "topics": [
+        "Fahimtar karatu (Comprehension)",
+        "Rubuta taƙaitawa",
+        "Rubuta maƙala",
+        "Lexis & structure",
+        "Oral English"
+      ]
+    },
+    "literature": {
+      "name": "Adabin Turanci",
+      "description": "Zube, waƙa da wasan kwaikwayo, an yi nazarinsu a fili.",
+      "topics": [
+        "Zube (Prose)",
+        "Waƙa (Poetry)",
+        "Wasan kwaikwayo (Drama)",
+        "Dabarun adabi"
+      ]
+    },
+    "french": {
+      "name": "Faransanci",
+      "description": "Faransanci na yau da kullum don makaranta da tafiye-tafiye.",
+      "topics": [
+        "Gaisuwa",
+        "Aikatau (Verbs)",
+        "Nahawu",
+        "Tattaunawa"
+      ]
+    },
+    "government": {
+      "name": "Ilimin Gwamnati",
+      "description": "Yadda ake gudanar da ƙasashe, da dalilin da ya sa hakan yake da muhimmanci.",
+      "topics": [
+        "Kundin tsarin mulki",
+        "Ɓangarorin gwamnati",
+        "Tsarin zaɓe",
+        "Tsarin tarayya na Najeriya"
+      ]
+    },
+    "history": {
+      "name": "Tarihi",
+      "description": "Labaran da suka gabata waɗanda suka gina yau.",
+      "topics": [
+        "Afirka kafin mulkin mallaka",
+        "Zamanin mulkin mallaka",
+        "Gwagwarmayar neman ’yancin kai",
+        "Yaƙe-yaƙen duniya"
+      ]
+    },
+    "geography": {
+      "name": "Labarin Ƙasa",
+      "description": "Duniyarmu, mutanenta da yanayinta.",
+      "topics": [
+        "Karatun taswira",
+        "Yanayi (Climate)",
+        "Yawan jama’a",
+        "Siffofin ƙasa (Landforms)"
+      ]
+    },
+    "economics": {
+      "name": "Tattalin Arziki",
+      "description": "Kuɗi, kasuwanni da yadda ake yanke shawara.",
+      "topics": [
+        "Buƙata da wadata (Demand & supply)",
+        "Elasticity",
+        "Hauhawar farashi (Inflation)",
+        "Kuɗin shigar ƙasa (National income)",
+        "Tsarin kasuwanni (Market structures)"
+      ]
+    },
+    "accounting": {
+      "name": "Lissafin Kuɗi",
+      "description": "Littattafai, ledgers da rahotannin kuɗi.",
+      "topics": [
+        "Double entry",
+        "Trial balance",
+        "Final accounts",
+        "Raguwar daraja (Depreciation)"
+      ]
+    },
+    "entrepreneurship": {
+      "name": "Harkar Kasuwanci",
+      "description": "Mayar da ra’ayoyi su zama kasuwancin da ke aiki.",
+      "topics": [
+        "Ra’ayoyin kasuwanci",
+        "Tallace-tallace (Marketing)",
+        "Ƙayyade farashi",
+        "Gabatar da shiri (Pitching)"
+      ]
+    },
+    "computer-science": {
+      "name": "Kimiyyar Kwamfuta",
+      "description": "Yadda kwamfuta ke tunani, daga dabaru (logic) zuwa code.",
+      "topics": [
+        "Algorithms",
+        "Tushen rubuta shirin kwamfuta (Programming)",
+        "Data structures",
+        "Hanyoyin sadarwa (Networks)"
+      ]
+    },
+    "ai-literacy": {
+      "name": "Ilimin AI",
+      "description": "Mene ne AI, yadda yake aiki da yadda za a yi amfani da shi yadda ya kamata.",
+      "topics": [
+        "Mene ne AI",
+        "Machine learning",
+        "Rubuta prompt",
+        "Ɗabi’ar AI (AI ethics)"
+      ]
+    }
+  },
+  "lessons": {
+    "l1": {
+      "title": "Yadda ƙwayoyin halitta (cells) ke samar da kuzari",
+      "topic": "Ilimin ƙwayoyin halitta (Cell biology)",
+      "summary": "Mitochondria na mayar da glucose da oxygen su zama ATP, kuɗin kuzari da kowace ƙwayar halitta ke kashewa.",
+      "keyPoints": [
+        "Numfashi (respiration) na faruwa a cikin mitochondria",
+        "Glucose + oxygen → CO₂ + ruwa + ATP",
+        "Numfashi ba tare da oxygen ba (anaerobic) yana samar da lactic acid a cikin tsoka"
+      ]
+    },
+    "l2": {
+      "title": "Ilimin gado a sauƙaƙe: dominant da recessive",
+      "topic": "Ilimin gado (Genetics)",
+      "summary": "Dalilin da ya sa za ka iya samun idanun mahaifiyarka amma tsayin kakanka: alleles, genotypes da Punnett squares.",
+      "keyPoints": [
+        "Kowace sifa (trait) tana da alleles biyu",
+        "Dominant alleles na ɓoye recessive alleles",
+        "Punnett squares na hasashen rabon ’ya’ya (offspring ratios)"
+      ]
+    },
+    "l3": {
+      "title": "Sarƙar abinci da gudanar kuzari",
+      "topic": "Ilimin muhallin halittu (Ecology)",
+      "summary": "Kuzari na tafiya daga masu samar da abinci (producers) zuwa masu cinsa (consumers), kuma kusan 10% kawai ke wucewa zuwa kowane mataki na gaba.",
+      "keyPoints": [
+        "Producers na yin abinci ta hanyar photosynthesis",
+        "Kusan 10% na kuzari ke hawa zuwa kowane mataki",
+        "Decomposers (masu ruɓar da abubuwa) na sake maido da sinadaran abinci"
+      ]
+    },
+    "l4": {
+      "title": "Ma’anar mole cikin minti 5",
+      "topic": "Ma’anar mole",
+      "summary": "Mole ɗaya daidai yake da ƙwayoyi 6.02 × 10²³. Koyi yadda za ka sauya tsakanin nauyi (mass), moles da ƙwayoyi da ƙwarin gwiwa.",
+      "keyPoints": [
+        "1 mole = ƙwayoyi 6.02 × 10²³",
+        "Moles = nauyi ÷ molar mass",
+        "Yi amfani da rabo (ratios) daga daidaitattun lissafin sinadarai"
+      ]
+    },
+    "l5": {
+      "title": "Ionic da covalent bonding",
+      "topic": "Haɗewar sinadarai (Chemical bonding)",
+      "summary": "Ionic bonds na miƙa electrons; covalent bonds na raba su. Katunan bita 20 don ka riƙe shi sosai.",
+      "keyPoints": [
+        "Ionic: ƙarfe (metal) + wanda ba ƙarfe ba (non-metal), miƙa electron",
+        "Covalent: non-metals na raba electrons",
+        "Ionic compounds na gudanar da wutar lantarki idan sun narke"
+      ]
+    },
+    "l6": {
+      "title": "Organic chemistry: sanya wa alkanes suna",
+      "topic": "Organic chemistry",
+      "summary": "Gwada kanka kan tsarin sanya suna na IUPAC don alkanes, alkenes da alcohols.",
+      "keyPoints": [
+        "Nemo sarƙar carbon mafi tsawo",
+        "Fara ƙirga daga ƙarshen da ya fi kusa da reshe",
+        "Prefixes: meth, eth, prop, but…"
+      ]
+    },
+    "l7": {
+      "title": "Dokokin Newton guda uku, an bayyana su",
+      "topic": "Ƙarfi (Forces)",
+      "summary": "Inertia, F = ma, da action–reaction, tare da misalai na yau da kullum daga motar danfo zuwa ƙwallon ƙafa.",
+      "keyPoints": [
+        "Abu na zama a tsaye sai dai idan wani ƙarfi ya yi aiki a kansa",
+        "Ƙarfi (Force) = nauyi (mass) × hanzari (acceleration)",
+        "Kowane aiki (action) yana da martani (reaction) daidai da shi kuma akasinsa"
+      ]
+    },
+    "l8": {
+      "title": "Dokar Ohm da sauƙaƙan circuits",
+      "topic": "Wutar lantarki",
+      "summary": "V = IR. Yadda voltage, current da resistance ke da alaƙa a cikin series da parallel circuits.",
+      "keyPoints": [
+        "V = I × R",
+        "Series: ana haɗa resistances",
+        "Parallel: 1/R = 1/R₁ + 1/R₂"
+      ]
+    },
+    "l9": {
+      "title": "Raƙuma: frequency, wavelength, gudu",
+      "topic": "Raƙuma (Waves)",
+      "summary": "Tambayoyi goma irin na jarrabawa kan v = fλ.",
+      "keyPoints": [
+        "v = f × λ",
+        "Transverse da longitudinal",
+        "Sauti yana buƙatar abin da zai bi (medium)"
+      ]
+    },
+    "l10": {
+      "title": "Warware lissafin quadratic",
+      "topic": "Lissafin quadratic",
+      "summary": "Factorisation, completing the square da formula. Zaɓi hanya mafi sauri a kowane lokaci.",
+      "keyPoints": [
+        "Fara da gwada factorising",
+        "x = (−b ± √(b²−4ac)) / 2a",
+        "Discriminant na gaya maka adadin roots"
+      ]
+    },
+    "l11": {
+      "title": "Trigonometry: SOH CAH TOA",
+      "topic": "Trigonometry",
+      "summary": "Rabon sine, cosine da tangent tare da dabarun tunawa da ba za su manta ba.",
+      "keyPoints": [
+        "sin = opposite / hypotenuse",
+        "cos = adjacent / hypotenuse",
+        "tan = opposite / adjacent"
+      ]
+    },
+    "l12": {
+      "title": "Ƙididdiga: mean, median da mode",
+      "topic": "Ƙididdiga (Statistics)",
+      "summary": "Hanyoyi uku na bayyana “tsakiyar” bayanai (data), da lokacin amfani da kowace.",
+      "keyPoints": [
+        "Mean: haɗa sannan ka raba",
+        "Median: ƙimar da ke tsakiya",
+        "Mode: wadda ta fi maimaituwa"
+      ]
+    },
+    "l13": {
+      "title": "Differentiation daga first principles",
+      "topic": "Differentiation",
+      "summary": "Ainihin ma’anar derivative, an gina shi mataki-mataki.",
+      "keyPoints": [
+        "Derivative shi ne saurin canji (rate of change)",
+        "Limit na (f(x+h) − f(x)) / h",
+        "Power rule: d/dx xⁿ = nxⁿ⁻¹"
+      ]
+    },
+    "l14": {
+      "title": "Rubuta gabatarwar maƙala mai ƙarfi",
+      "topic": "Rubuta maƙala",
+      "summary": "Hook, bayanin baya, thesis: gabatarwa mai sassa uku da masu duba jarrabawa ke so.",
+      "keyPoints": [
+        "Fara da abin jan hankali (hook)",
+        "Ba da taƙaitaccen bayanin baya",
+        "Ƙare da thesis a fili"
+      ]
+    },
+    "l15": {
+      "title": "Rubuta taƙaitawa da ke samun maki",
+      "topic": "Rubuta taƙaitawa",
+      "summary": "Yadda za ka nemo muhimman batutuwa ka sake rubuta su da kalmominka, cikin iyakar adadin kalmomi.",
+      "keyPoints": [
+        "Karanta tambayar sau biyu",
+        "Batu ɗaya a kowace jumla",
+        "Kada ka taɓa kwafar jumla gaba ɗaya"
+      ]
+    },
+    "l16": {
+      "title": "Atisayen Lexis & structure",
+      "topic": "Lexis & structure",
+      "summary": "Synonyms, antonyms da cike jumla irin na JAMB.",
+      "keyPoints": [
+        "Fara karanta dukan jumlar",
+        "Kula da alamun tense (lokaci)",
+        "Cire zaɓuɓɓukan da ke a fili ba daidai ba"
+      ]
+    },
+    "l17": {
+      "title": "Things Fall Apart: jigogi",
+      "topic": "Zube (Prose)",
+      "summary": "Girman kai, al’ada da canji a cikin fitaccen littafin Achebe, a matsayin darasin sauti da za ka iya saurara ko’ina.",
+      "keyPoints": [
+        "Tsoron Okonkwo na zama mai rauni",
+        "Al’ada da canjin mulkin mallaka",
+        "Jarumi mai ban tausayi (tragic hero)"
+      ]
+    },
+    "l18": {
+      "title": "Buƙata da wadata, a sauƙaƙe",
+      "topic": "Buƙata da wadata (Demand & supply)",
+      "summary": "Dalilin da ya sa farashi ke hauhawa da faɗuwa, ta amfani da kasuwar tumatir a matsayin misali.",
+      "keyPoints": [
+        "Buƙata (demand) na raguwa idan farashi ya hau",
+        "Wadata (supply) na ƙaruwa idan farashi ya hau",
+        "Equilibrium shi ne inda suka haɗu"
+      ]
+    },
+    "l19": {
+      "title": "Hauhawar farashi: dalilin da ya sa farashi ke ci gaba da hauhawa",
+      "topic": "Hauhawar farashi (Inflation)",
+      "summary": "Dalilai, illoli da yadda bankunan tsakiya (central banks) ke yaƙi da hauhawar farashi.",
+      "keyPoints": [
+        "Demand-pull da cost-push",
+        "Hauhawar farashi na rage ƙarfin sayayya (purchasing power)",
+        "Kuɗin ruwa (interest rates) shi ne babban makami"
+      ]
+    },
+    "l20": {
+      "title": "Double entry bookkeeping",
+      "topic": "Double entry",
+      "summary": "Kowace ma’amala tana da ɓangarori biyu. Debits, credits da accounting equation.",
+      "keyPoints": [
+        "Assets = Liabilities + Capital",
+        "Kowane debit yana da credit da ya yi daidai da shi",
+        "Yi amfani da T-accounts don yin atisaye"
+      ]
+    },
+    "l21": {
+      "title": "Ɓangarorin gwamnati",
+      "topic": "Ɓangarorin gwamnati",
+      "summary": "Majalisar dokoki, ɓangaren zartarwa da ɓangaren shari’a: wa ke yin me.",
+      "keyPoints": [
+        "Majalisar dokoki (legislature) na yin dokoki",
+        "Ɓangaren zartarwa (executive) na aiwatar da su",
+        "Ɓangaren shari’a (judiciary) na fassara su"
+      ]
+    },
+    "l22": {
+      "title": "’Yancin kan Najeriya cikin muhimman lokuta 10",
+      "topic": "Gwagwarmayar neman ’yancin kai",
+      "summary": "Daga haɗewar 1914 (amalgamation) zuwa 1 ga Oktoba 1960.",
+      "keyPoints": [
+        "Haɗewar 1914 (amalgamation)",
+        "Ƙungiyoyin kishin ƙasa (nationalist movements)",
+        "Samun ’yancin kai a ranar 1 ga Oktoba 1960"
+      ]
+    },
+    "l23": {
+      "title": "Karatun contour maps",
+      "topic": "Karatun taswira",
+      "summary": "Contours, spot heights da gradients, an fayyace su.",
+      "keyPoints": [
+        "Contours masu kusanci = gangare mai tsauri",
+        "Contour interval ba ya canzawa",
+        "Siffofin V na nuna sama da kogi (upstream)"
+      ]
+    },
+    "l24": {
+      "title": "Shirin Python ɗinka na farko",
+      "topic": "Tushen rubuta shirin kwamfuta (Programming)",
+      "summary": "Variables, print da input: rubuta shirin da zai gaishe ka da sunanka.",
+      "keyPoints": [
+        "Variables na adana ƙima (values)",
+        "print() na nuna sakamako",
+        "input() na karanta abin da mai amfani ya rubuta"
+      ]
+    },
+    "l25": {
+      "title": "Algorithms a rayuwar yau da kullum",
+      "topic": "Algorithms",
+      "summary": "Girke-girke, kwatance da tsara jerin waƙoƙinka: algorithms suna ko’ina.",
+      "keyPoints": [
+        "Algorithm jerin matakai ne",
+        "Tsari (order) yana da muhimmanci",
+        "Algorithms masu kyau suna da inganci (efficient)"
+      ]
+    },
+    "l26": {
+      "title": "Mene ne AI, a zahiri?",
+      "topic": "Mene ne AI",
+      "summary": "Yadda na’urori ke koyon tsari (patterns) daga bayanai (data), da abin da har yanzu ba za su iya yi ba.",
+      "keyPoints": [
+        "AI na koyon patterns daga misalai",
+        "Yana hasashe ne, ba wai yana “sani” ba",
+        "Kullum ka duba amsoshin AI"
+      ]
+    },
+    "l27": {
+      "title": "Rubuta prompt kamar ƙwararre",
+      "topic": "Rubuta prompt",
+      "summary": "Ba da bayanin baya, sanya matsayi (role) ka kuma nemi tsari (format): samu amsoshi mafi kyau daga AI.",
+      "keyPoints": [
+        "Ka fayyace burinka sosai",
+        "Ba da misalai",
+        "Nemi bayani mataki-mataki"
+      ]
+    },
+    "l28": {
+      "title": "Ƙayyade farashin kayanka na farko",
+      "topic": "Ƙayyade farashi",
+      "summary": "Cost-plus, value-based da competitor pricing ga matasan ’yan kasuwa.",
+      "keyPoints": [
+        "San jimillar kuɗin da ka kashe",
+        "Ƙayyade farashi bisa amfani (value), ba kawai kuɗin da ka kashe ba",
+        "Gwada sannan ka gyara"
+      ]
+    },
+    "l29": {
+      "title": "Gaisuwa da gabatar da kai a Faransanci",
+      "topic": "Gaisuwa",
+      "summary": "Bonjour, ça va? Faɗi jumlolinka na farko na Faransanci da ƙwarin gwiwa.",
+      "keyPoints": [
+        "Bonjour / Bonsoir",
+        "Je m’appelle…",
+        "Comment ça va?"
+      ]
+    },
+    "l30": {
+      "title": "Electrolysis mataki-mataki",
+      "topic": "Electrolysis",
+      "summary": "Abin da ke faruwa a anode da cathode, da yadda za a yi hasashen abubuwan da za a samu (products).",
+      "keyPoints": [
+        "Cations na zuwa cathode",
+        "Anions na zuwa anode",
+        "Oxidation a anode, reduction a cathode"
+      ]
+    },
+    "l31": {
+      "title": "Zuciyar ɗan Adam da zagayawar jini",
+      "topic": "Tsarin jikin ɗan Adam",
+      "summary": "Tambayoyi goma sha biyu kan zuciya, jijiyoyin jini da double circulation.",
+      "keyPoints": [
+        "Ɗakuna (chambers) huɗu",
+        "Arteries na ɗauke jini daga zuciya",
+        "Double circulation a cikin dabbobi masu shayarwa (mammals)"
+      ]
+    },
+    "l32": {
+      "title": "Ilimin siffofi: kusurwoyi a cikin da’ira",
+      "topic": "Ilimin siffofi (Geometry)",
+      "summary": "Circle theorems tare da zane-zanen da za ka iya bi a zahiri.",
+      "keyPoints": [
+        "Kusurwa a tsakiya = 2 × kusurwa a kewaye (circumference)",
+        "Kusurwoyi a cikin segment ɗaya daidai suke",
+        "Kusurwoyi masu fuskantar juna na cyclic quad suna haɗuwa su zama 180°"
+      ]
+    }
+  }
+}

@@ -1,0 +1,2821 @@
+{
+ "c1": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "Give two everyday examples of computer programs and why they are programs.",
+    "answer": "Examples: (1) A smartphone weather app — it retrieves data, processes it, and displays the forecast. (2) A calculator app — it receives numbers, performs arithmetic instructions, and shows the result."
+   },
+   {
+    "kind": "choice",
+    "prompt": "Which of these is a valid Python variable name?",
+    "options": [
+     "2nd_place",
+     "user_name",
+     "first-name",
+     "total$"
+    ],
+    "correctIndex": 1,
+    "feedback": "Variable names can include letters, digits, and underscores, cannot start with a digit, and cannot contain characters like '-' or '$'."
+   },
+   {
+    "kind": "order",
+    "prompt": "Put these steps for getting input and printing a response in the correct order.",
+    "items": [
+     "Call input(\"prompt\") and store result in a variable",
+     "Use print to display text or variables",
+     "Run the program so the prompt appears to the user",
+     "Process or compute using the input value"
+    ],
+    "feedback": "Typical flow: prompt for input, run program to show prompt, store input, then process and print results."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match each error type with its typical cause.",
+    "pairs": [
+     [
+      "Syntax error",
+      "Missing parentheses in print() or malformed statement"
+     ],
+     [
+      "Name error",
+      "Using a variable that has not been defined"
+     ],
+     [
+      "Indentation error",
+      "Incorrect or inconsistent indentation levels"
+     ],
+     [
+      "Runtime error",
+      "An operation that fails during execution, like division by zero"
+     ]
+    ],
+    "feedback": "Syntax errors are from invalid code structure; name errors from unknown names; indentation errors from wrong indentation; runtime errors occur while running the program."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "c03d8e89-cb6",
+    "type": "mcq",
+    "question": "Which built-in function returns the number of characters in a string?",
+    "options": [
+     "count()",
+     "size()",
+     "len()",
+     "length()"
+    ],
+    "correctIndex": 2,
+    "explanation": "len(s) returns the length (number of characters) of string s.",
+    "concept": "len function",
+    "difficulty": "easy"
+   },
+   {
+    "id": "bfaca6d9-7ec",
+    "type": "mcq",
+    "question": "What does the print function do by default after printing its output?",
+    "options": [
+     "Closes the program",
+     "Adds a newline character",
+     "Converts output to integer",
+     "Saves output to a file"
+    ],
+    "correctIndex": 1,
+    "explanation": "By default, print ends with a newline so subsequent output appears on the next line; this can be changed with end.",
+    "concept": "print end",
+    "difficulty": "easy"
+   },
+   {
+    "id": "05068222-402",
+    "type": "mcq",
+    "question": "Which of the following is a correct assignment statement in Python?",
+    "options": [
+     "age == 18",
+     "18 = age",
+     "age = 18",
+     "int age = 18"
+    ],
+    "correctIndex": 2,
+    "explanation": "Use the single equals sign (=) to assign a value to a variable: age = 18.",
+    "concept": "assignment",
+    "difficulty": "easy"
+   },
+   {
+    "id": "bbfc6ddf-3c4",
+    "type": "mcq",
+    "question": "Which variable name follows Python's recommended snake_case style?",
+    "options": [
+     "TotalPrice",
+     "firstName",
+     "first_name",
+     "first-name"
+    ],
+    "correctIndex": 2,
+    "explanation": "snake_case uses lowercase letters and underscores, e.g., first_name.",
+    "concept": "naming",
+    "difficulty": "medium"
+   },
+   {
+    "id": "215c1d18-f2b",
+    "type": "mcq",
+    "question": "What is the result of 1 + 2 * 3 in Python?",
+    "options": [
+     "9",
+     "7",
+     "6",
+     "Error"
+    ],
+    "correctIndex": 1,
+    "explanation": "Multiplication has higher precedence than addition, so 2 * 3 = 6, then 1 + 6 = 7.",
+    "concept": "operator precedence",
+    "difficulty": "easy"
+   },
+   {
+    "id": "4627a173-45f",
+    "type": "mcq",
+    "question": "Which of these string literals is written so it can include a single quote inside?",
+    "options": [
+     "'Won't work'",
+     "\"Won't work\"",
+     "'He said \"Hi'",
+     "\"She said \"Hello\"\""
+    ],
+    "correctIndex": 1,
+    "explanation": "Enclosing the string in double quotes allows a single quote inside: \"Won't work\".",
+    "concept": "strings",
+    "difficulty": "medium"
+   },
+   {
+    "id": "c122dd72-72d",
+    "type": "tf",
+    "question": "The input(\"prompt\") function both displays a prompt and returns the user's typed response as a string.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 0,
+    "explanation": "input displays the prompt and returns the user input as a string.",
+    "concept": "input",
+    "difficulty": "easy"
+   },
+   {
+    "id": "8933cdac-968",
+    "type": "mcq",
+    "question": "Which error type is most likely shown when you refer to a variable that was never created?",
+    "options": [
+     "Syntax error",
+     "Name error",
+     "Indentation error",
+     "Type error"
+    ],
+    "correctIndex": 1,
+    "explanation": "Referring to an undefined name raises a NameError.",
+    "concept": "errors",
+    "difficulty": "medium"
+   }
+  ],
+  "video": {
+   "youtubeId": "fWjsdhR3z3c",
+   "title": "Learn Python in Less than 10 Minutes for Beginners (Fast & Easy)",
+   "channel": "Indently",
+   "seconds": 630,
+   "checkedAt": 1792840508998
+  }
+ },
+ "c2": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "What output does the Python shell show after you type: 3 + 4.0 ?",
+    "answer": "7.0"
+   },
+   {
+    "kind": "choice",
+    "prompt": "Which expression demonstrates implicit type conversion?",
+    "options": [
+     "5 + 2.0",
+     "int('7') + 3",
+     "str(4) + ' apples'",
+     "float('2.5') * 2"
+    ],
+    "correctIndex": 0,
+    "feedback": "Combining an integer and a float (5 + 2.0) causes the integer to be converted to float implicitly, producing 7.0."
+   },
+   {
+    "kind": "fill",
+    "prompt": "Which built-in function converts the string '42' to the integer 42?",
+    "before": "Use the function",
+    "after": "to convert '42' to 42.",
+    "options": [
+     "int",
+     "float",
+     "str"
+    ],
+    "correctIndex": 0,
+    "feedback": "int('42') converts the string to an integer."
+   },
+   {
+    "kind": "order",
+    "prompt": "Put these steps in the usual order for converting 193 cm into meters and remaining centimeters.",
+    "items": [
+     "Use modulo by 100 to get leftover centimeters: 193 % 100 -> 93",
+     "Use floor division by 100 to get full meters: 193 // 100 -> 1",
+     "Display result as 1 meter and 93 centimeters"
+    ],
+    "feedback": "Programs commonly floor-divide by the modulus to get whole units, then use modulo to get the remainder."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match each term with its example from the chapter.",
+    "pairs": [
+     [
+      "Implicit type conversion",
+      "5 + 2.0 -> 7.0"
+     ],
+     [
+      "Explicit type conversion",
+      "int(input())"
+     ],
+     [
+      "Floor division",
+      "193 // 100 -> 1"
+     ],
+     [
+      "Modulo",
+      "193 % 100 -> 93"
+     ]
+    ],
+    "feedback": "Each term pairs with its corresponding example from the chapter."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "a28d27f2-76a",
+    "type": "mcq",
+    "question": "In the Python shell, what does pressing the up arrow key do?",
+    "options": [
+     "Shows the previous command you entered",
+     "Clears the current line",
+     "Runs the current script in a new process",
+     "Opens the help documentation"
+    ],
+    "correctIndex": 0,
+    "explanation": "The up arrow recalls previous commands so you can edit or re-run them.",
+    "concept": "shell",
+    "difficulty": "easy"
+   },
+   {
+    "id": "fc308d0c-c04",
+    "type": "mcq",
+    "question": "What is the data type of the result of 4 / 2 in Python?",
+    "options": [
+     "int",
+     "float",
+     "str",
+     "bool"
+    ],
+    "correctIndex": 1,
+    "explanation": "Division with / always produces a float, so 4 / 2 evaluates to 2.0.",
+    "concept": "division",
+    "difficulty": "easy"
+   },
+   {
+    "id": "ba976d69-69a",
+    "type": "mcq",
+    "question": "Which statement about mixing ints and floats is true?",
+    "options": [
+     "Combining an int and a float with + produces an int",
+     "Combining an int and a float with + produces a float",
+     "Python raises an error when adding an int and a float",
+     "The result type depends on the value, not the types"
+    ],
+    "correctIndex": 1,
+    "explanation": "When an int and a float are combined, Python converts to float and the result is a float.",
+    "concept": "mixed types",
+    "difficulty": "easy"
+   },
+   {
+    "id": "630a8b8b-8ea",
+    "type": "mcq",
+    "question": "Which of these converts the string '3.14' to a float successfully?",
+    "options": [
+     "int('3.14')",
+     "float('3.14')",
+     "str('3.14')",
+     "bool('3.14')"
+    ],
+    "correctIndex": 1,
+    "explanation": "float('3.14') converts the string to the floating-point number 3.14.",
+    "concept": "type conversion",
+    "difficulty": "easy"
+   },
+   {
+    "id": "bd4430dc-848",
+    "type": "mcq",
+    "question": "Why do floating-point round-off errors occur?",
+    "options": [
+     "Because Python stores floats as decimal strings",
+     "Because floats are stored in binary and some decimals have no exact binary form",
+     "Because Python randomly changes float values to save memory",
+     "Because division always loses precision"
+    ],
+    "correctIndex": 1,
+    "explanation": "Binary representation cannot exactly store some decimal fractions, causing small approximation errors.",
+    "concept": "floating-point",
+    "difficulty": "medium"
+   },
+   {
+    "id": "bf2e90c6-5f9",
+    "type": "mcq",
+    "question": "Which function from the math module computes a square root?",
+    "options": [
+     "math.pow",
+     "math.sqrt",
+     "math.square",
+     "math.root"
+    ],
+    "correctIndex": 1,
+    "explanation": "math.sqrt(x) returns the square root of x when math is imported.",
+    "concept": "math module",
+    "difficulty": "easy"
+   },
+   {
+    "id": "df81c316-baa",
+    "type": "mcq",
+    "question": "You read two numbers with input(): a = input() and b = input(). To add them as numbers you should use:",
+    "options": [
+     "a + b",
+     "int(a) + int(b)",
+     "str(a) + str(b)",
+     "float(a) + str(b)"
+    ],
+    "correctIndex": 1,
+    "explanation": "input() returns strings, so convert to int (or float) before numeric addition; int(a) + int(b) adds them as integers.",
+    "concept": "input",
+    "difficulty": "medium"
+   },
+   {
+    "id": "cce0ed7d-95b",
+    "type": "tf",
+    "question": "Using round(value, 2) can help hide floating-point representation errors when printing results.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 0,
+    "explanation": "round formats the value to a specified number of decimal places, reducing visible round-off artifacts.",
+    "concept": "round",
+    "difficulty": "medium"
+   }
+  ],
+  "video": {
+   "youtubeId": "KW6qncswzHw",
+   "title": "Python Functions - Visually Explained",
+   "channel": "Visually Explained",
+   "seconds": 850
+  }
+ },
+ "c3": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "What does ord(\"A\") return?",
+    "answer": "65"
+   },
+   {
+    "kind": "choice",
+    "prompt": "Given s = \"Python\", which expression returns the last character?",
+    "options": [
+     "s[5]",
+     "s[-1]",
+     "s[6]",
+     "s[0]"
+    ],
+    "correctIndex": 1,
+    "feedback": "s[-1] indexes from the right and gives the last character; s[6] is out of range for a 6-character string."
+   },
+   {
+    "kind": "order",
+    "prompt": "Put these steps in the correct order to format the time 9:5 as \"9:05\" using an f-string:",
+    "items": [
+     "Use an f-string with replacement fields",
+     "Provide hour and minute variables (hour = 9, minute = 5)",
+     "Include a format specifier :02d for minute"
+    ],
+    "feedback": "First have the variables, then use an f-string, and include the :02d specifier to pad minutes to two digits."
+   },
+   {
+    "kind": "fill",
+    "prompt": "Complete the string literal to include a newline character between Hello and World.",
+    "before": "Use an escape sequence: ",
+    "after": "",
+    "options": [
+     "\"Hello\\nWorld\"",
+     "\"Hello\\tWorld\"",
+     "\"Hello\\rWorld\""
+    ],
+    "correctIndex": 0,
+    "feedback": "\\n is the newline escape sequence; \\t is a tab, \\r is carriage return."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match each term to its property.",
+    "pairs": [
+     [
+      "List",
+      "Mutable, indexed sequence"
+     ],
+     [
+      "Tuple",
+      "Immutable, indexed sequence"
+     ],
+     [
+      "ord()",
+      "Character → code point"
+     ],
+     [
+      "chr()",
+      "Code point → character"
+     ]
+    ],
+    "feedback": "Lists can be changed after creation; tuples cannot. ord and chr convert between characters and code points."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "f8ea5646-9b1",
+    "type": "mcq",
+    "question": "What is the index of the first character in a Python string?",
+    "options": [
+     "1",
+     "0",
+     "-1",
+     "None"
+    ],
+    "correctIndex": 1,
+    "explanation": "Indexes start at 0 from the left.",
+    "concept": "indexing",
+    "difficulty": "easy"
+   },
+   {
+    "id": "94376174-361",
+    "type": "mcq",
+    "question": "Given name = \"Ada\", what does name[-1] return?",
+    "options": [
+     "\"A\"",
+     "\"a\"",
+     "Error: negative index not allowed",
+     "\"d\""
+    ],
+    "correctIndex": 1,
+    "explanation": "Negative indexing starts from the right; name[-1] is the last character 'a'.",
+    "concept": "indexing",
+    "difficulty": "easy"
+   },
+   {
+    "id": "0a3102fb-fa6",
+    "type": "mcq",
+    "question": "Which f-string will format minute = 5 as two digits when hour = 9?",
+    "options": [
+     "f\"{hour}:{minute}\"",
+     "f\"{hour}:{minute:2}\"",
+     "f\"{hour}:{minute:02d}\"",
+     "f\"{hour}:{minute:.2f}\""
+    ],
+    "correctIndex": 2,
+    "explanation": ":02d pads an integer with leading zeros to two digits. :.2f is for floats.",
+    "concept": "f-strings",
+    "difficulty": "medium"
+   },
+   {
+    "id": "1faff67c-d40",
+    "type": "mcq",
+    "question": "What does ord(\"!\") return?",
+    "options": [
+     "33",
+     "97",
+     "1",
+     "0"
+    ],
+    "correctIndex": 0,
+    "explanation": "The code point for '!' is 33.",
+    "concept": "unicode",
+    "difficulty": "easy"
+   },
+   {
+    "id": "b5d15498-d5a",
+    "type": "mcq",
+    "question": "Which statement is true about lists and tuples?",
+    "options": [
+     "Lists are immutable; tuples are mutable",
+     "Both are immutable",
+     "Lists are mutable; tuples are immutable",
+     "Both are mutable"
+    ],
+    "correctIndex": 2,
+    "explanation": "Lists can be changed after creation; tuples cannot.",
+    "concept": "mutability",
+    "difficulty": "easy"
+   },
+   {
+    "id": "dcf86fd6-d6a",
+    "type": "mcq",
+    "question": "Consider lst = [10, 20, 30]. Which operation changes the second element to 25?",
+    "options": [
+     "lst[1] = 25",
+     "lst[2] = 25",
+     "lst[0] = 25",
+     "lst.replace(1,25)"
+    ],
+    "correctIndex": 0,
+    "explanation": "Indexes start at 0, so lst[1] refers to the second element and can be assigned a new value.",
+    "concept": "lists",
+    "difficulty": "easy"
+   },
+   {
+    "id": "d9c740f0-3f8",
+    "type": "mcq",
+    "question": "Which of these is a valid tuple containing a single element x?",
+    "options": [
+     "(x)",
+     "[x]",
+     "(x,)",
+     "{x}"
+    ],
+    "correctIndex": 2,
+    "explanation": "A single-element tuple requires a trailing comma: (x,). (x) is just x in parentheses.",
+    "concept": "tuples",
+    "difficulty": "medium"
+   },
+   {
+    "id": "246cd115-a8c",
+    "type": "tf",
+    "question": "The chr() function converts an integer code point into the corresponding character.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 0,
+    "explanation": "chr(33) returns '!', converting a code point to a character.",
+    "concept": "unicode",
+    "difficulty": "easy"
+   }
+  ],
+  "video": {
+   "youtubeId": "ZDa-Z5JzLYM",
+   "title": "Python OOP Tutorial 1: Classes and Instances",
+   "channel": "Corey Schafer",
+   "seconds": 924
+  }
+ },
+ "c4": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "What are the only two values a variable of type bool can hold in Python?",
+    "answer": "True and False"
+   },
+   {
+    "kind": "choice",
+    "prompt": "Which of these conversions yields False when passed to bool()?",
+    "options": [
+     "0",
+     "'False'",
+     "3.5",
+     "\"ice cream\""
+    ],
+    "correctIndex": 0,
+    "feedback": "Only numeric 0 and empty containers/empty strings convert to False; non-empty strings like 'False' are True."
+   },
+   {
+    "kind": "fill",
+    "prompt": "Complete the sentence: Converting a Boolean to an integer with int(True) returns",
+    "before": "Converting a Boolean to an integer with int(True) returns",
+    "after": ".",
+    "options": [
+     "1",
+     "0",
+     "True",
+     "False"
+    ],
+    "correctIndex": 0,
+    "feedback": "True converts to 1 and False converts to 0 when using int()."
+   },
+   {
+    "kind": "order",
+    "prompt": "Put these steps in the correct order for evaluating the expression: not a and b or c (assume standard operator precedence and left associativity where applicable).",
+    "items": [
+     "Evaluate not a",
+     "Evaluate (not a) and b",
+     "Evaluate ((not a) and b) or c"
+    ],
+    "feedback": "not has highest precedence among these, and then and, then or; and/or are left associative."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match each comparison with its result (assume x = 5, y = 3, s = 'cat'):",
+    "pairs": [
+     [
+      "x > y",
+      "True"
+     ],
+     [
+      "x == y",
+      "False"
+     ],
+     [
+      "s == 'cat'",
+      "True"
+     ]
+    ],
+    "feedback": "Compare numeric and string values with comparison operators; results are Booleans."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "65d25ebd-f02",
+    "type": "mcq",
+    "question": "Which of the following is a correct Boolean literal in Python?",
+    "options": [
+     "true",
+     "True",
+     "TRUE",
+     "false"
+    ],
+    "correctIndex": 1,
+    "explanation": "Boolean literals are case-sensitive: True and False exactly.",
+    "concept": "Booleans",
+    "difficulty": "easy"
+   },
+   {
+    "id": "c0172f49-c49",
+    "type": "mcq",
+    "question": "What does bool(\"\") evaluate to?",
+    "options": [
+     "True",
+     "False",
+     "''",
+     "None"
+    ],
+    "correctIndex": 1,
+    "explanation": "An empty string is considered False when converted to a Boolean.",
+    "concept": "Conversion",
+    "difficulty": "easy"
+   },
+   {
+    "id": "ed012062-3bb",
+    "type": "mcq",
+    "question": "What is the result of int(False)?",
+    "options": [
+     "0",
+     "1",
+     "False",
+     "None"
+    ],
+    "correctIndex": 0,
+    "explanation": "False converts to integer 0; True converts to 1.",
+    "concept": "Conversion",
+    "difficulty": "easy"
+   },
+   {
+    "id": "de6dfd9b-f6f",
+    "type": "mcq",
+    "question": "Which expression is True when exactly one of a or b is True?",
+    "options": [
+     "a and b",
+     "a or b",
+     "a != b",
+     "not (a or b)"
+    ],
+    "correctIndex": 2,
+    "explanation": "a != b is True when a and b differ (one True, one False).",
+    "concept": "Boolean ops",
+    "difficulty": "medium"
+   },
+   {
+    "id": "8d7b4626-774",
+    "type": "mcq",
+    "question": "Given score = 85, which chained decision best selects a grade A for score >= 90, B for score >= 80, else C?",
+    "options": [
+     "if score >= 90: ...\nif score >= 80: ...\nelse: ...",
+     "if score >= 90: ...\nelif score >= 80: ...\nelse: ...",
+     "if score >= 80: ...\nelif score >= 90: ...\nelse: ...",
+     "if score >= 90: ...\nelif score >= 80: ...\nelif score >= 70: ..."
+    ],
+    "correctIndex": 1,
+    "explanation": "Use if then elif so only the first true branch is executed; the order matters from highest to lowest.",
+    "concept": "Chaining",
+    "difficulty": "medium"
+   },
+   {
+    "id": "8b49e503-c76",
+    "type": "mcq",
+    "question": "Which of these demonstrates nesting decisions correctly?",
+    "options": [
+     "if logged_in:\n    if is_admin:\n        allow_access()",
+     "if logged_in:\nallow_access()\n    if is_admin:\n        admin_panel()",
+     "if logged_in:\n    allow_access()\nelse:\n    if is_admin:\n        admin_panel()",
+     "if logged_in:\n    if is_admin:\nelse:\n    deny()"
+    ],
+    "correctIndex": 0,
+    "explanation": "The nested if is indented inside the outer if; bodies must be indented consistently.",
+    "concept": "Nesting",
+    "difficulty": "medium"
+   },
+   {
+    "id": "0e4ee6eb-220",
+    "type": "tf",
+    "question": "Parentheses can change the order of evaluation in expressions with multiple operators.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 0,
+    "explanation": "Parentheses have the highest precedence and override normal operator precedence rules.",
+    "concept": "Precedence",
+    "difficulty": "easy"
+   },
+   {
+    "id": "caef7e46-b61",
+    "type": "mcq",
+    "question": "What is the value of the conditional expression: result = 'even' if n % 2 == 0 else 'odd' when n = 7?",
+    "options": [
+     "'even'",
+     "'odd'",
+     "True",
+     "7"
+    ],
+    "correctIndex": 1,
+    "explanation": "The condition n % 2 == 0 is False for 7, so the else expression 'odd' is chosen.",
+    "concept": "Conditional expr",
+    "difficulty": "easy"
+   }
+  ],
+  "video": {
+   "youtubeId": "Y8Tko2YC5hA",
+   "title": "What is Python? Why Python is So Popular?",
+   "channel": "Programming with Mosh",
+   "seconds": 247,
+   "checkedAt": 1792840513106
+  }
+ },
+ "c5": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "What does a while loop do? (tap to reveal)",
+    "answer": "Runs the loop body repeatedly while the loop condition (expression) is True, re-evaluating the condition after each iteration."
+   },
+   {
+    "kind": "choice",
+    "prompt": "Which step-size will make a counter count down from 10 to 1 using a while loop?",
+    "options": [
+     "+1",
+     "-1",
+     "+2",
+     "0"
+    ],
+    "correctIndex": 1,
+    "feedback": "A negative step size like -1 decreases the counter each iteration to count downward."
+   },
+   {
+    "kind": "order",
+    "prompt": "Put these steps in the correct order for using a for loop with range() to print numbers 0..4:",
+    "items": [
+     "Call range(5) to create the sequence.",
+     "Write the for loop header: for i in range(5):",
+     "Place a print(i) statement in the loop body.",
+     "Python retrieves each value from the range and runs the body."
+    ],
+    "feedback": "range(5) generates the sequence, the for header iterates it, and the body runs for each retrieved value."
+   },
+   {
+    "kind": "fill",
+    "prompt": "Complete the sentence: A break statement ______ the loop immediately, while continue ______ the rest of the current iteration.",
+    "before": "A break statement",
+    "after": "the rest of the current iteration.",
+    "options": [
+     "exits / skips",
+     "skips / exits",
+     "restarts / ends",
+     "pauses / continues"
+    ],
+    "correctIndex": 0,
+    "feedback": "break exits the loop; continue skips the remaining statements in that iteration and continues with the next evaluation."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match each loop concept with its description.",
+    "pairs": [
+     [
+      "Outer loop",
+      "Controls how many times the inner loop runs fully"
+     ],
+     [
+      "Loop else",
+      "Runs if the loop completes without a break"
+     ],
+     [
+      "Inner loop",
+      "A loop placed inside another loop"
+     ]
+    ],
+    "feedback": "Outer vs inner describe nesting; loop else executes only when no break interrupted the loop."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "a1f5adbd-ecc",
+    "type": "mcq",
+    "question": "What will this code print?\ncount = 1\nwhile count <= 5:\n    print(count)\n    count += 1",
+    "options": [
+     "1 2 3 4",
+     "1 2 3 4 5",
+     "2 3 4 5 6",
+     "0 1 2 3 4 5"
+    ],
+    "correctIndex": 1,
+    "explanation": "The loop prints values 1 through 5; count starts at 1 and increments until count <= 5 is false.",
+    "concept": "while loop",
+    "difficulty": "easy"
+   },
+   {
+    "id": "c5fcc9a2-2d0",
+    "type": "mcq",
+    "question": "Which range call produces numbers 2, 4, 6, 8?",
+    "options": [
+     "range(2, 9, 2)",
+     "range(2, 8, 2)",
+     "range(2, 9)",
+     "range(1, 9, 2)"
+    ],
+    "correctIndex": 0,
+    "explanation": "range(start, stop, step) includes start and excludes stop; range(2,9,2) yields 2,4,6,8.",
+    "concept": "for loop",
+    "difficulty": "easy"
+   },
+   {
+    "id": "7d182139-a5c",
+    "type": "mcq",
+    "question": "What is the role of the inner loop in a nested loop structure?",
+    "options": [
+     "To set the loop's step size",
+     "Executed once per program run",
+     "Runs completely for each iteration of the outer loop",
+     "Terminates the outer loop"
+    ],
+    "correctIndex": 2,
+    "explanation": "The inner loop executes fully each time the outer loop performs one iteration.",
+    "concept": "nested loops",
+    "difficulty": "medium"
+   },
+   {
+    "id": "48f2abe5-73c",
+    "type": "mcq",
+    "question": "Consider: for ch in user_string:\n    if ch == 'a':\n        print('Found')\n        break\n    else:\n        print('Not yet')\nWhat happens when the first character is 'a'?",
+    "options": [
+     "Prints 'Not yet' then continues",
+     "Prints 'Found' and exits loop",
+     "Prints 'Not yet' for all characters",
+     "Raises an error because break in for is invalid"
+    ],
+    "correctIndex": 1,
+    "explanation": "When ch == 'a', 'Found' is printed and break exits the loop immediately.",
+    "concept": "break",
+    "difficulty": "easy"
+   },
+   {
+    "id": "f0737dac-f31",
+    "type": "mcq",
+    "question": "Which statement best describes loop else behaviour?",
+    "options": [
+     "Else runs when the loop used continue at least once",
+     "Else runs only if the loop ends due to break",
+     "Else runs if the loop completes without break",
+     "Else is required after every loop"
+    ],
+    "correctIndex": 2,
+    "explanation": "The else block executes after normal completion of the loop, not when a break interrupted it.",
+    "concept": "loop else",
+    "difficulty": "medium"
+   },
+   {
+    "id": "e18c7c16-bf5",
+    "type": "mcq",
+    "question": "What is a common reason to use continue inside a loop?",
+    "options": [
+     "To stop the entire program",
+     "To skip processing for the current item but keep looping",
+     "To reverse the loop order",
+     "To convert a for into a while loop"
+    ],
+    "correctIndex": 1,
+    "explanation": "continue skips the remainder of the body for that iteration and proceeds to the next iteration.",
+    "concept": "continue",
+    "difficulty": "easy"
+   },
+   {
+    "id": "6808f7c7-c92",
+    "type": "mcq",
+    "question": "Which of these loops is best when you need to iterate over characters of a string?",
+    "options": [
+     "for ch in s:",
+     "while s:",
+     "while ch in s:",
+     "for i in range(1, len(s)+1):"
+    ],
+    "correctIndex": 0,
+    "explanation": "for ch in s directly iterates over each character in the string, matching the container iteration concept.",
+    "concept": "for loop",
+    "difficulty": "easy"
+   },
+   {
+    "id": "f111574a-546",
+    "type": "tf",
+    "question": "A for loop using range(3) will execute its body 3 times.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 0,
+    "explanation": "range(3) yields three values: 0, 1, 2, so the loop body runs 3 times.",
+    "concept": "range",
+    "difficulty": "easy"
+   }
+  ],
+  "video": {
+   "youtubeId": "6iF8Xb7Z3wQ",
+   "title": "Python Tutorial for Beginners 7: Loops and Iterations - For/While Loops",
+   "channel": "Corey Schafer",
+   "seconds": 614
+  }
+ },
+ "c6": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "What is a function? Tap to reveal the definition.",
+    "answer": "A function is a named, reusable block of code defined with def that performs a task when called."
+   },
+   {
+    "kind": "choice",
+    "prompt": "Which line shows a valid function header in snake_case with no parameters?",
+    "options": [
+     "def CalculateTotal():",
+     "def calculate_total():",
+     "def calculateTotal():",
+     "def calculate-total():"
+    ],
+    "correctIndex": 1,
+    "feedback": "Python function names should use snake_case; parentheses required even with no parameters."
+   },
+   {
+    "kind": "order",
+    "prompt": "Put these control-flow steps in the correct order when a function is called from main:",
+    "items": [
+     "Execution moves back to the calling location after function finishes.",
+     "Control reaches the function call in the main program.",
+     "Control jumps to the function definition and runs the function body."
+    ],
+    "feedback": "When a call is reached, execution jumps to the function body, runs it, then returns to the caller."
+   },
+   {
+    "kind": "fill",
+    "prompt": "Fill the blank: A variable created inside a function has _____ scope and cannot be accessed outside the function.",
+    "before": "A variable created inside a function has ",
+    "after": " scope and cannot be accessed outside the function.",
+    "options": [
+     "global",
+     "local",
+     "module",
+     "universal"
+    ],
+    "correctIndex": 1,
+    "feedback": "Variables created inside functions are local to that function and cease to exist after it returns."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match each term (left) with its correct meaning (right).",
+    "pairs": [
+     [
+      "argument",
+      "Value passed into a function call"
+     ],
+     [
+      "parameter",
+      "Variable name in a function definition representing input"
+     ],
+     [
+      "return value",
+      "Value a function gives back to its caller"
+     ]
+    ],
+    "feedback": "Arguments are passed at calls; parameters appear in definitions; return values come back to the caller."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "7cc1c1cd-4c9",
+    "type": "mcq",
+    "question": "Which keyword starts a function definition in Python?",
+    "options": [
+     "function",
+     "def",
+     "fn",
+     "define"
+    ],
+    "correctIndex": 1,
+    "explanation": "The def keyword is used to define functions in Python.",
+    "concept": "definition",
+    "difficulty": "easy"
+   },
+   {
+    "id": "e1879be4-32e",
+    "type": "mcq",
+    "question": "What does a function return if it finishes without a return statement?",
+    "options": [
+     "0",
+     "None",
+     "'' (empty string)",
+     "False"
+    ],
+    "correctIndex": 1,
+    "explanation": "If no return is used, Python functions return None by default.",
+    "concept": "return",
+    "difficulty": "easy"
+   },
+   {
+    "id": "1e0fce1c-664",
+    "type": "mcq",
+    "question": "Why are functions useful?",
+    "options": [
+     "They make programs run faster automatically",
+     "They group related code for modularity and reusability",
+     "They prevent all runtime errors",
+     "They force global variables everywhere"
+    ],
+    "correctIndex": 1,
+    "explanation": "Functions group related statements, promote reuse, and make code easier to modify.",
+    "concept": "benefit",
+    "difficulty": "easy"
+   },
+   {
+    "id": "ab833754-a8e",
+    "type": "mcq",
+    "question": "What happens to local variables after a function finishes executing?",
+    "options": [
+     "They become global variables",
+     "They remain available for the rest of the program",
+     "They no longer exist",
+     "They are automatically printed"
+    ],
+    "correctIndex": 2,
+    "explanation": "Local variables exist only during the function execution and are removed afterward.",
+    "concept": "scope",
+    "difficulty": "medium"
+   },
+   {
+    "id": "623e72be-225",
+    "type": "mcq",
+    "question": "Which call correctly uses a keyword argument for parameter hemi in def season(m, d, hemi=\"N\")?",
+    "options": [
+     "season(3, 14, \"S\")",
+     "season(m=3, d=14, \"S\")",
+     "season(3, d=14, hemi=\"S\")",
+     "season(hemi=\"S\", 3, 14)"
+    ],
+    "correctIndex": 2,
+    "explanation": "Mixing positional and keyword is allowed if positional arguments come first; here 3 is positional for m, d=14 is keyword for d, and hemi is set by name.",
+    "concept": "keyword args",
+    "difficulty": "medium"
+   },
+   {
+    "id": "a16a10cf-cf3",
+    "type": "mcq",
+    "question": "Given global variable count = 0, which statement lets a function modify this global value inside its body?",
+    "options": [
+     "use count directly",
+     "declare global count inside the function",
+     "assign to count without declaration",
+     "delete count"
+    ],
+    "correctIndex": 1,
+    "explanation": "To modify a global variable inside a function, declare it with global count first.",
+    "concept": "global",
+    "difficulty": "medium"
+   },
+   {
+    "id": "8487a783-59b",
+    "type": "tf",
+    "question": "A function must be defined before it is called in a Python program.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 0,
+    "explanation": "A function must be defined prior to being called; otherwise Python raises a NameError.",
+    "concept": "definition order",
+    "difficulty": "easy"
+   },
+   {
+    "id": "50bb0619-a3d",
+    "type": "mcq",
+    "question": "A function checks if gallons == 0 and returns -1 to indicate an error. Which is true about this return?",
+    "options": [
+     "The function still continues after return",
+     "return -1 both ends the function and gives -1 to the caller",
+     "-1 makes the function global",
+     "The caller cannot use the returned value"
+    ],
+    "correctIndex": 1,
+    "explanation": "A return statement ends the function and sends the specified value back to the caller for use or checking.",
+    "concept": "return",
+    "difficulty": "medium"
+   }
+  ],
+  "video": {
+   "youtubeId": "9Os0o3wzS_I",
+   "title": "Python Tutorial for Beginners 8: Functions",
+   "channel": "Corey Schafer",
+   "seconds": 1308,
+   "checkedAt": 1792840516044
+  }
+ },
+ "c7": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "What filename should contain a module that defines functions for computing areas, if the module is named area?",
+    "answer": "area.py"
+   },
+   {
+    "kind": "choice",
+    "prompt": "You want to use only the function circle_area from a module named area. Which import statement avoids adding other names into your program's global namespace?",
+    "options": [
+     "from area import circle_area",
+     "import area.*",
+     "import area as *",
+     "import circle_area from area"
+    ],
+    "correctIndex": 0,
+    "feedback": "Using from area import circle_area imports only that function so other names are not added to the current module."
+   },
+   {
+    "kind": "order",
+    "prompt": "Put these events in the correct order when a Python program imports a module named mymod.",
+    "items": [
+     "Python locates mymod.py and begins executing its top-level code from top to bottom",
+     "Definitions (functions, classes, constants) are created as the top-level code is run",
+     "Importing program can call functions provided by mymod using mymod.name or imported names",
+     "If mymod contains if __name__ == \"__main__\":, that block is skipped during import"
+    ],
+    "feedback": "Import executes top-level code, which creates definitions; the special if __name__ == \"__main__\" block does not run when imported; then the importing program can use the module's names."
+   },
+   {
+    "kind": "fill",
+    "prompt": "Complete the sentence: When a module is run directly as a program, the expression __name__ has the value _____.",
+    "before": "When a module is run directly as a program, the expression __name__ has the value",
+    "after": ".",
+    "options": [
+     "__main__",
+     "module",
+     "run",
+     "program"
+    ],
+    "correctIndex": 0,
+    "feedback": "When executed as a script, __name__ == \"__main__\"; when imported, __name__ is the module's filename without .py."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match each term with its correct description.",
+    "pairs": [
+     [
+      "Standard Library",
+      "Collection of built-in modules shipped with Python"
+     ],
+     [
+      "PyPI",
+      "Repository for third-party Python packages (pypi.org)"
+     ],
+     [
+      "Top-level code",
+      "Code in a module that runs when the module is imported"
+     ]
+    ],
+    "feedback": "The Standard Library is included with Python; PyPI hosts external packages; top-level code runs on import and can cause side effects."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "5d7aabad-410",
+    "type": "mcq",
+    "question": "Given a module file named utils.py that defines a function greet(), how do you call greet after importing the whole module to avoid name collisions?",
+    "options": [
+     "import utils; utils.greet()",
+     "from utils import *; greet()",
+     "from utils import greet; utils.greet()",
+     "import greet from utils; greet()"
+    ],
+    "correctIndex": 0,
+    "explanation": "Importing the module and using module.name (utils.greet()) avoids collisions with similarly named functions from other modules.",
+    "concept": "import",
+    "difficulty": "easy"
+   },
+   {
+    "id": "23e94389-1b2",
+    "type": "mcq",
+    "question": "Which statement is true about top-level code in a module?",
+    "options": [
+     "Top-level code runs when the module is imported",
+     "Top-level code only runs when the module's functions are called",
+     "Top-level code is ignored by the interpreter",
+     "Top-level code runs only if the module is listed in sys.modules"
+    ],
+    "correctIndex": 0,
+    "explanation": "All top-level statements are executed during import; this can cause unintended side effects if not managed.",
+    "concept": "top-level",
+    "difficulty": "easy"
+   },
+   {
+    "id": "1a26fb3f-167",
+    "type": "mcq",
+    "question": "What does the condition if __name__ == \"__main__\": typically protect?",
+    "options": [
+     "Code that should run only when the module is executed as a script",
+     "Definitions of functions and classes",
+     "Code that must run on every import",
+     "The module's documentation string"
+    ],
+    "correctIndex": 0,
+    "explanation": "That condition is true only when the module is run directly, so the guarded code does not run on import.",
+    "concept": "__name__",
+    "difficulty": "easy"
+   },
+   {
+    "id": "caea1b9e-a7f",
+    "type": "mcq",
+    "question": "Which import form imports specific functions and places them directly into the importing module's namespace?",
+    "options": [
+     "from color import hex_to_rgb",
+     "import color",
+     "import color as c",
+     "import color.hex_to_rgb"
+    ],
+    "correctIndex": 0,
+    "explanation": "The from module import name form imports the specific name into the current namespace.",
+    "concept": "from import",
+    "difficulty": "easy"
+   },
+   {
+    "id": "fafad3f9-c19",
+    "type": "mcq",
+    "question": "Why might selecting specific functions with from ... import reduce name collisions?",
+    "options": [
+     "Because you only import the names you need instead of many names",
+     "Because it automatically renames conflicting functions",
+     "Because it prevents the module's top-level code from running",
+     "Because it disables the standard library"
+    ],
+    "correctIndex": 0,
+    "explanation": "Importing specific names keeps the importing namespace smaller, reducing the chance of overwriting existing names.",
+    "concept": "name collision",
+    "difficulty": "medium"
+   },
+   {
+    "id": "59831a6d-a5e",
+    "type": "mcq",
+    "question": "Which source should you check first for documentation about the math module that's bundled with Python?",
+    "options": [
+     "The Python Standard Library reference on python.org",
+     "The PyPI package page for math",
+     "A random third-party blog",
+     "The module's source on GitHub without official docs"
+    ],
+    "correctIndex": 0,
+    "explanation": "Official documentation on python.org is the authoritative source for standard library modules.",
+    "concept": "standard library",
+    "difficulty": "medium"
+   },
+   {
+    "id": "9e7b1152-1f6",
+    "type": "tf",
+    "question": "True or False: Importing a module twice in the same program causes its top-level code to run twice.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 1,
+    "explanation": "The interpreter loads a module only once per process; subsequent imports reuse the cached module object and do not re-execute top-level code.",
+    "concept": "import",
+    "difficulty": "medium"
+   },
+   {
+    "id": "91360c9f-288",
+    "type": "mcq",
+    "question": "Which of the following is a correct reason to import an entire module (import module) instead of importing specific names (from module import ...)?",
+    "options": [
+     "To avoid name collisions by using module.name for calls",
+     "To automatically document the module's functions",
+     "To prevent any top-level code from running",
+     "To increase the number of names in the global namespace"
+    ],
+    "correctIndex": 0,
+    "explanation": "Importing the whole module lets you refer to names with module.name, which reduces collision risk.",
+    "concept": "import tradeoff",
+    "difficulty": "medium"
+   }
+  ],
+  "video": {
+   "youtubeId": "CqvZ3vGoGs0",
+   "title": "Python Tutorial for Beginners 9: Import Modules and Exploring The Standard Library",
+   "channel": "Corey Schafer",
+   "seconds": 1317,
+   "checkedAt": 1792840517813
+  }
+ },
+ "c8": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "What does the expression \"Hello\".upper() return?",
+    "answer": "\"HELLO\""
+   },
+   {
+    "kind": "choice",
+    "prompt": "Which comparison is True in Python?",
+    "options": [
+     "\"apple\" < \"banana\"",
+     "\"Apple\" > \"apple\"",
+     "\"cat\" == \"Cat\""
+    ],
+    "correctIndex": 0,
+    "feedback": "String comparisons use character-by-character comparison with ASCII values; lowercase letters have higher ASCII codes than uppercase."
+   },
+   {
+    "kind": "order",
+    "prompt": "Put these steps in the correct order to get the substring \"flor\" from s = \"flowerpot\" using slicing:",
+    "items": [
+     "Find the start index of the substring (2)",
+     "Use slicing syntax s[2:6]",
+     "Assign the original string s = \"flowerpot\"",
+     "Evaluate the slice to obtain \"flor\""
+    ],
+    "feedback": "Slicing uses [start:stop] where start is inclusive and stop is exclusive; here start=2 and stop=6 gives \"flor\"."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match the string method to its description.",
+    "pairs": [
+     [
+      "count(sub)",
+      "Returns how many times sub appears in the string"
+     ],
+     [
+      "find(sub)",
+      "Returns index of first occurrence or -1 if missing"
+     ],
+     [
+      "split(sep)",
+      "Splits into list using sep as delimiter"
+     ],
+     [
+      "join(list)",
+      "Concatenates list elements inserting the string between elements"
+     ]
+    ],
+    "feedback": "These are the standard behaviors: count -> occurrences, find -> index or -1, split -> list, join -> concatenated string."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "b5b2d043-b1b",
+    "type": "mcq",
+    "question": "What is the result of \"Data\".lower() == \"data\"?",
+    "options": [
+     "True",
+     "False",
+     "Error",
+     "Depends on platform"
+    ],
+    "correctIndex": 0,
+    "explanation": "lower() converts letters to lowercase; the two strings then match exactly.",
+    "concept": "case",
+    "difficulty": "easy"
+   },
+   {
+    "id": "7a595e68-d8d",
+    "type": "mcq",
+    "question": "Given s = \"python\", what is s[-1]?",
+    "options": [
+     "'p'",
+     "'n'",
+     "IndexError",
+     "'' (empty string)"
+    ],
+    "correctIndex": 1,
+    "explanation": "Negative indexing counts from right, -1 refers to the last character 'n'.",
+    "concept": "indexing",
+    "difficulty": "easy"
+   },
+   {
+    "id": "147ae2ef-761",
+    "type": "mcq",
+    "question": "What does s[1:4] return for s = \"Cloud\"?",
+    "options": [
+     "\"Clo\"",
+     "\"lou\"",
+     "\"louD\"",
+     "\"lou\""
+    ],
+    "correctIndex": 1,
+    "explanation": "Indexes 1 (l) up to 4 (exclusive) give 'lou'.",
+    "concept": "slicing",
+    "difficulty": "medium"
+   },
+   {
+    "id": "60ae7e48-03b",
+    "type": "mcq",
+    "question": "Which expression counts how many times \"an\" appears in text?",
+    "options": [
+     "text.count(\"an\")",
+     "text.find(\"an\")",
+     "\"an\" in text",
+     "text.index(\"an\")"
+    ],
+    "correctIndex": 0,
+    "explanation": "count returns the number of non-overlapping occurrences of the substring.",
+    "concept": "count",
+    "difficulty": "easy"
+   },
+   {
+    "id": "6f1a8886-3e0",
+    "type": "mcq",
+    "question": "What does \"apple\" < \"Banana\" evaluate to in standard Python?",
+    "options": [
+     "True",
+     "False",
+     "Raises TypeError",
+     "Depends on locale"
+    ],
+    "correctIndex": 1,
+    "explanation": "Comparison uses ASCII codes: lowercase letters have higher codes than uppercase, so 'a' > 'B' making the whole comparison False.",
+    "concept": "comparison",
+    "difficulty": "medium"
+   },
+   {
+    "id": "aaf6f8ab-f19",
+    "type": "mcq",
+    "question": "If text.find(\"x\") returns -1, which method would raise an exception instead?",
+    "options": [
+     "text.index(\"x\")",
+     "\"x\" in text",
+     "text.count(\"x\")",
+     "text.split(\"x\")"
+    ],
+    "correctIndex": 0,
+    "explanation": "index assumes the substring exists and raises ValueError if not found.",
+    "concept": "find/index",
+    "difficulty": "medium"
+   },
+   {
+    "id": "d44d051b-0f6",
+    "type": "tf",
+    "question": "The join method can concatenate non-string list items directly without conversion.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 1,
+    "explanation": "join requires all list elements to be strings; non-strings must be converted first.",
+    "concept": "join",
+    "difficulty": "easy"
+   },
+   {
+    "id": "c01262e9-737",
+    "type": "mcq",
+    "question": "Which is the correct way to format name and score into template \"Player: {}, Score: {}\"?",
+    "options": [
+     "\"Player: {}, Score: {}\".format(name, score)",
+     "format(\"Player: {}, Score: {}\", name, score)",
+     "\"Player: {0}, Score: {1}\" % (name, score)",
+     "f\"Player: {name}, Score: {score}\""
+    ],
+    "correctIndex": 0,
+    "explanation": "The format method is used as template.format(args). (Option 4 is valid Python but the chapter teaches format method.)",
+    "concept": "formatting",
+    "difficulty": "hard"
+   }
+  ],
+  "video": {
+   "youtubeId": "k9TUPpGqYTo",
+   "title": "Python Tutorial for Beginners 2: Strings - Working with Textual Data",
+   "channel": "Corey Schafer",
+   "seconds": 1272
+  }
+ },
+ "c9": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "What does list.append(x) do?",
+    "answer": "Adds element x to the end of the list."
+   },
+   {
+    "kind": "choice",
+    "prompt": "Which method removes the specified element (by value) from a list?",
+    "options": [
+     "pop",
+     "remove",
+     "append",
+     "copy"
+    ],
+    "correctIndex": 1,
+    "feedback": "remove(x) deletes the first occurrence of value x; pop() removes by index (default last)."
+   },
+   {
+    "kind": "order",
+    "prompt": "Put these steps in the correct order to remove the last item from a list and store it in a variable 'last':\nA: Call pop on the list\nB: Use the variable 'last' to hold the returned value\nC: Identify the list variable (e.g., items)",
+    "items": [
+     "C",
+     "A",
+     "B"
+    ],
+    "feedback": "You identify the list, call last = items.pop(), and the popped value is stored in last."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match the list operation to its effect:",
+    "pairs": [
+     [
+      "append(x)",
+      "Adds x as the last element"
+     ],
+     [
+      "pop()",
+      "Removes and returns the last element"
+     ],
+     [
+      "sort()",
+      "Arranges elements in ascending order"
+     ],
+     [
+      "copy()",
+      "Creates a shallow duplicate of the list"
+     ]
+    ],
+    "feedback": "Each method performs the described common list operation."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "c33390d0-4ac",
+    "type": "mcq",
+    "question": "Given items = [3, 1, 4], what is the list after executing items.append(2)?",
+    "options": [
+     "[3, 1, 4, 2]",
+     "[2, 3, 1, 4]",
+     "[3, 1, 2, 4]",
+     "[3, 1, 4]"
+    ],
+    "correctIndex": 0,
+    "explanation": "append adds the value to the end of the list.",
+    "concept": "append",
+    "difficulty": "easy"
+   },
+   {
+    "id": "e6c43f85-3f3",
+    "type": "mcq",
+    "question": "If nums = [5, 2, 9, 2] and we call nums.remove(2), what is the result?",
+    "options": [
+     "[5, 9, 2]",
+     "[5, 2, 9]",
+     "[5, 9]",
+     "[2, 9, 2]"
+    ],
+    "correctIndex": 0,
+    "explanation": "remove removes the first occurrence of the value 2, leaving [5,9,2].",
+    "concept": "remove",
+    "difficulty": "easy"
+   },
+   {
+    "id": "d1a2d97e-505",
+    "type": "mcq",
+    "question": "After a = [7,8,9]; b = a.copy(); a.pop(); what is b?",
+    "options": [
+     "[7, 8, 9]",
+     "[7, 8]",
+     "[8, 9]",
+     "[]"
+    ],
+    "correctIndex": 0,
+    "explanation": "copy() made a separate list b that is unchanged by popping from a.",
+    "concept": "copy",
+    "difficulty": "medium"
+   },
+   {
+    "id": "e213a0dc-64c",
+    "type": "mcq",
+    "question": "Which method arranges a list of strings in dictionary order (ascending)?",
+    "options": [
+     "reverse()",
+     "sort()",
+     "pop()",
+     "remove()"
+    ],
+    "correctIndex": 1,
+    "explanation": "sort() orders list elements; for strings this is dictionary (lexicographic) order.",
+    "concept": "sort",
+    "difficulty": "easy"
+   },
+   {
+    "id": "6de91522-075",
+    "type": "mcq",
+    "question": "What does sum([2, 4, 6]) return?",
+    "options": [
+     "12",
+     "6",
+     "24",
+     "[2,4,6]"
+    ],
+    "correctIndex": 0,
+    "explanation": "sum returns the total of numeric list elements: 2+4+6 = 12.",
+    "concept": "sum",
+    "difficulty": "easy"
+   },
+   {
+    "id": "60ed7747-e3e",
+    "type": "tf",
+    "question": "List comprehensions can replace a for loop that builds a new list by appending elements.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 0,
+    "explanation": "True — a list comprehension compactly expresses creating a list from an iterable.",
+    "concept": "comprehension",
+    "difficulty": "medium"
+   },
+   {
+    "id": "e7c66f9d-c58",
+    "type": "mcq",
+    "question": "Given matrix = [[1,2],[3,4]], which expression accesses the element 4?",
+    "options": [
+     "matrix[1][1]",
+     "matrix[2][2]",
+     "matrix[1,2]",
+     "matrix[2][1]"
+    ],
+    "correctIndex": 0,
+    "explanation": "matrix[1] is [3,4], and [1] of that is 4 (0-based indexing).",
+    "concept": "nested indexing",
+    "difficulty": "medium"
+   },
+   {
+    "id": "2ff648ab-70c",
+    "type": "mcq",
+    "question": "Which of these code snippets correctly creates a list of even numbers from 0 to 8 using a list comprehension?",
+    "options": [
+     "evens = [i for i in range(9) if i%2==0]",
+     "evens = [i%2==0 for i in range(9)]",
+     "evens = [i*2 for i in range(5)]",
+     "evens = [i for i in range(0,8)]"
+    ],
+    "correctIndex": 0,
+    "explanation": "The comprehension with a conditional keeps i only when i%2==0; range(9) gives 0..8.",
+    "concept": "filtering",
+    "difficulty": "hard"
+   }
+  ],
+  "video": {
+   "youtubeId": "Eaz5e6M8tL4",
+   "title": "#5 Python Tutorial for Beginners | List in Python",
+   "channel": "Telusko",
+   "seconds": 642
+  }
+ },
+ "c10": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "What is the dictionary type name returned by type({})?",
+    "answer": "dict"
+   },
+   {
+    "kind": "choice",
+    "prompt": "Which of these is a valid way to create a dictionary with keys 'x'->1 and 'y'->2?",
+    "options": [
+     "my_dict = {'x':1, 'y':2}",
+     "my_dict = ['x':1, 'y':2]",
+     "my_dict = ('x':1, 'y':2)",
+     "my_dict = <'x':1, 'y':2>"
+    ],
+    "correctIndex": 0,
+    "feedback": "Curly braces with colon-separated key:value pairs create a dictionary."
+   },
+   {
+    "kind": "order",
+    "prompt": "Put these steps in the correct order to add a new key 'z' with value 3 to an existing dictionary my_dict.",
+    "items": [
+     "Reference the dictionary by name (my_dict)",
+     "Assign the new key: my_dict['z'] = 3",
+     "Confirm the key exists by checking 'z' in my_dict"
+    ],
+    "feedback": "Assigning my_dict['z'] = 3 creates the key; checking confirms it exists."
+   },
+   {
+    "kind": "fill",
+    "prompt": "When retrieving a value for a key that might not exist, use the method ___ on the dictionary to avoid a KeyError.",
+    "before": "When retrieving a value for a key that might not exist, use the method",
+    "after": "on the dictionary to avoid a KeyError.",
+    "options": [
+     "get",
+     "pop",
+     "keys",
+     "items"
+    ],
+    "correctIndex": 0,
+    "feedback": "dict.get(key, default) returns default (or None) instead of raising an error."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match each term to its description.",
+    "pairs": [
+     [
+      "keys()",
+      "Returns dict_keys view of all keys"
+     ],
+     [
+      "values()",
+      "Returns dict_values view of all values"
+     ],
+     [
+      "items()",
+      "Returns dict_items of (key, value) pairs"
+     ]
+    ],
+    "feedback": "keys(), values(), and items() return view objects that can be converted to lists."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "533ac3c6-b70",
+    "type": "mcq",
+    "question": "Which statement explains why dictionary keys must be unique?",
+    "options": [
+     "Dictionaries are ordered collections and duplicate keys would break order",
+     "A dictionary uses keys to look up values; duplicate keys would make lookups ambiguous",
+     "Python forbids repeating any values in any data structure",
+     "Duplicate keys are automatically converted to tuples"
+    ],
+    "correctIndex": 1,
+    "explanation": "Keys must be unique so each key maps to a single value; a later assignment with the same key replaces the previous value.",
+    "concept": "unique keys",
+    "difficulty": "easy"
+   },
+   {
+    "id": "03f47be5-8e2",
+    "type": "mcq",
+    "question": "Which of the following creates an empty dictionary?",
+    "options": [
+     "my_d = {}",
+     "my_d = []",
+     "my_d = ()",
+     "my_d = ''"
+    ],
+    "correctIndex": 0,
+    "explanation": "Curly braces {} create an empty dict. Square brackets create a list, parentheses a tuple, quotes a string.",
+    "concept": "creation",
+    "difficulty": "easy"
+   },
+   {
+    "id": "cc127535-8f2",
+    "type": "mcq",
+    "question": "Given my_dict = {'apple':2, 'banana':3}, which expression returns 3?",
+    "options": [
+     "my_dict['banana']",
+     "my_dict.get('apple')",
+     "my_dict['pineapple']",
+     "my_dict.get('pineapple')"
+    ],
+    "correctIndex": 0,
+    "explanation": "my_dict['banana'] accesses the value 3. get('pineapple') would return None (or a default) since the key is missing.",
+    "concept": "access",
+    "difficulty": "easy"
+   },
+   {
+    "id": "595a82a5-145",
+    "type": "mcq",
+    "question": "What is the type of object returned by calling my_dict.keys()?",
+    "options": [
+     "dict_keys",
+     "list",
+     "tuple",
+     "set"
+    ],
+    "correctIndex": 0,
+    "explanation": "keys() returns a dict_keys view object; it can be converted to a list using list(my_dict.keys()).",
+    "concept": "views",
+    "difficulty": "medium"
+   },
+   {
+    "id": "de6faeb2-49e",
+    "type": "mcq",
+    "question": "Which line correctly removes the item with key 'a' from d without raising an error if 'a' is absent?",
+    "options": [
+     "d.pop('a', None)",
+     "del d['a']",
+     "d.remove('a')",
+     "d.popitem('a')"
+    ],
+    "correctIndex": 0,
+    "explanation": "pop('a', None) returns None if 'a' is missing; del d['a'] raises KeyError when absent.",
+    "concept": "remove",
+    "difficulty": "medium"
+   },
+   {
+    "id": "dd965ebb-e1a",
+    "type": "mcq",
+    "question": "How do you iterate over both keys and values of a dictionary d in a for loop?",
+    "options": [
+     "for k, v in d.items():",
+     "for k, v in d.keys():",
+     "for k, v in d.values():",
+     "for k, v in d: "
+    ],
+    "correctIndex": 0,
+    "explanation": "items() yields (key, value) pairs that can be unpacked as k, v.",
+    "concept": "iteration",
+    "difficulty": "easy"
+   },
+   {
+    "id": "dcf822f9-05d",
+    "type": "tf",
+    "question": "Dictionary values can be lists, other dictionaries, or any Python object.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 0,
+    "explanation": "Dictionary values can be any object, including lists and nested dictionaries.",
+    "concept": "values",
+    "difficulty": "easy"
+   },
+   {
+    "id": "88aaa978-588",
+    "type": "mcq",
+    "question": "Which comprehension creates a dictionary mapping numbers 1–4 to their squares?",
+    "options": [
+     "{n: n*n for n in range(1,5)}",
+     "[n: n*n for n in range(1,5)]",
+     "{n, n*n for n in range(1,5)}",
+     "(n: n*n for n in range(1,5))"
+    ],
+    "correctIndex": 0,
+    "explanation": "Dictionary comprehension uses curly braces with key: value for each item.",
+    "concept": "comprehension",
+    "difficulty": "medium"
+   }
+  ],
+  "video": {
+   "youtubeId": "daefaLgNkw0",
+   "title": "Python Tutorial for Beginners 5: Dictionaries - Working with Key-Value Pairs",
+   "channel": "Corey Schafer",
+   "seconds": 599
+  }
+ },
+ "c11": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "What is encapsulation in OOP?",
+    "answer": "Encapsulation is wrapping data (attributes) and the procedures (methods) that operate on that data into a single unit (a class) and restricting direct access to the unit's internal data to prevent unintended modification."
+   },
+   {
+    "kind": "choice",
+    "prompt": "Which of these best describes the relationship between a class and an instance?",
+    "options": [
+     "A class is a single object created from an instance.",
+     "An instance defines attributes and a class stores values for those attributes.",
+     "A class is a blueprint; an instance is a specific object created from that blueprint.",
+     "An instance is a blueprint used to create multiple classes."
+    ],
+    "correctIndex": 2,
+    "feedback": "A class defines the structure and behavior (blueprint); an instance is a concrete object created from that class."
+   },
+   {
+    "kind": "order",
+    "prompt": "Put these steps in the correct order when creating a new object instance in Python:",
+    "items": [
+     "Define a class with __init__",
+     "Call the class name like MyClass(...) to create an instance",
+     "Use self inside methods to refer to the new instance",
+     "Assign attribute values inside __init__"
+    ],
+    "feedback": "Creating an instance involves defining the class first, then calling it which runs __init__; inside __init__ you assign attributes using self, and self refers to that instance."
+   },
+   {
+    "kind": "fill",
+    "prompt": "Complete the sentence: The special method that is called when a new instance is created is __init__ and its first parameter is _____ .",
+    "before": "The special method that is called when a new instance is created is __init__ and its first parameter is ",
+    "after": ".",
+    "options": [
+     "self",
+     "cls",
+     "this",
+     "instance"
+    ],
+    "correctIndex": 0,
+    "feedback": "__init__ must accept the instance as its first parameter, conventionally named self."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match the magic method to its purpose:",
+    "pairs": [
+     [
+      "__init__",
+      "Initializes a new instance's attributes"
+     ],
+     [
+      "__add__",
+      "Defines behavior for + between instances"
+     ],
+     [
+      "__eq__",
+      "Defines equality comparison (==) between instances"
+     ],
+     [
+      "__str__",
+      "Returns a readable string representation of the instance"
+     ]
+    ],
+    "feedback": "Magic (dunder) methods customize how built-in operations work for user-defined classes."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "fb489a38-91e",
+    "type": "mcq",
+    "question": "Which statement correctly explains abstraction in OOP?",
+    "options": [
+     "Abstraction means grouping data and methods into one unit.",
+     "Abstraction hides implementation details and exposes only necessary functionality.",
+     "Abstraction prevents any access to data from other parts of the program.",
+     "Abstraction forces all methods to be public."
+    ],
+    "correctIndex": 1,
+    "explanation": "Abstraction hides inner workings and exposes only what users need, simplifying usage and reducing complexity.",
+    "concept": "abstraction",
+    "difficulty": "easy"
+   },
+   {
+    "id": "22110483-4b3",
+    "type": "mcq",
+    "question": "Which of the following is a class attribute rather than an instance attribute?",
+    "options": [
+     "self.name assigned in __init__",
+     "A variable defined at the top level inside class body (shared by all instances)",
+     "A local variable inside an instance method",
+     "A parameter passed to __init__ when creating an instance"
+    ],
+    "correctIndex": 1,
+    "explanation": "A variable defined in the class body (outside methods) is shared by all instances and is a class attribute.",
+    "concept": "attributes",
+    "difficulty": "easy"
+   },
+   {
+    "id": "6d8f43e8-a7b",
+    "type": "mcq",
+    "question": "What is the role of self in instance methods?",
+    "options": [
+     "It is a keyword that creates a new instance.",
+     "It references the class object itself, not instances.",
+     "It refers to the current instance so the method can access or modify that instance's attributes.",
+     "It automatically makes methods static."
+    ],
+    "correctIndex": 2,
+    "explanation": "self is the reference to the instance that called the method, used to access or modify that instance's attributes.",
+    "concept": "self",
+    "difficulty": "easy"
+   },
+   {
+    "id": "96023811-62d",
+    "type": "mcq",
+    "question": "Which magic method would you implement to allow two objects of a class to be compared with == ?",
+    "options": [
+     "__str__",
+     "__add__",
+     "__eq__",
+     "__init__"
+    ],
+    "correctIndex": 2,
+    "explanation": "Implementing __eq__ defines the behavior of the == operator for instances of the class.",
+    "concept": "dunder methods",
+    "difficulty": "medium"
+   },
+   {
+    "id": "8e6ba261-38f",
+    "type": "mcq",
+    "question": "Given class Ticket with class attribute total_sold = 0 and __init__ that increments total_sold, what happens when multiple Ticket instances are created?",
+    "options": [
+     "Each instance gets its own total_sold separate from others.",
+     "total_sold increases for the class and is shared across all instances.",
+     "total_sold stays 0 because class attributes cannot be modified.",
+     "An instance assignment to total_sold changes only that instance and not the class."
+    ],
+    "correctIndex": 1,
+    "explanation": "Class attributes are shared; modifying the class attribute (e.g., incrementing it in __init__) changes the value seen by all instances.",
+    "concept": "class attribute",
+    "difficulty": "medium"
+   },
+   {
+    "id": "c43fd165-21f",
+    "type": "mcq",
+    "question": "Which import statement brings only the User class from accounts.py into the current module?",
+    "options": [
+     "import accounts.User",
+     "from accounts import User",
+     "import accounts as User",
+     "from accounts import *"
+    ],
+    "correctIndex": 1,
+    "explanation": "from accounts import User imports only the User class into the current namespace.",
+    "concept": "imports",
+    "difficulty": "easy"
+   },
+   {
+    "id": "758fe581-d65",
+    "type": "tf",
+    "question": "Operator overloading lets you define how built-in operators work with user-defined classes.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 0,
+    "explanation": "By implementing appropriate magic methods like __add__ or __lt__, you customize operator behavior for class instances.",
+    "concept": "overloading",
+    "difficulty": "easy"
+   },
+   {
+    "id": "4b28e252-750",
+    "type": "mcq",
+    "question": "Which is the best reason to use aliasing when importing modules (e.g., import triangle as tri)?",
+    "options": [
+     "To prevent the module from being loaded into memory",
+     "To change the module's internal behavior",
+     "To avoid long names or name collisions while keeping code readable",
+     "To make the module private to the importing file"
+    ],
+    "correctIndex": 2,
+    "explanation": "Aliasing provides a shorter or different name to refer to a module and can avoid name collisions while improving readability when used carefully.",
+    "concept": "aliasing",
+    "difficulty": "medium"
+   }
+  ],
+  "video": {
+   "youtubeId": "ZDa-Z5JzLYM",
+   "title": "Python OOP Tutorial 1: Classes and Instances",
+   "channel": "Corey Schafer",
+   "seconds": 924
+  }
+ },
+ "c12": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "What is the base case for a recursive factorial function factorial(n)?",
+    "answer": "Common base cases: n == 0 (0! = 1) or n == 1 (1! = 1). Either can be used so recursion stops."
+   },
+   {
+    "kind": "choice",
+    "prompt": "Which line best expresses the recursive case for factorial(n)?",
+    "options": [
+     "return n * factorial(n - 1)",
+     "return factorial(n) * n",
+     "return n + factorial(n - 1)",
+     "return factorial(n - 1) - n"
+    ],
+    "correctIndex": 0,
+    "feedback": "The recursive factorial uses multiplication: n! = n * (n - 1)!, so the code returns n * factorial(n - 1)."
+   },
+   {
+    "kind": "order",
+    "prompt": "Put these steps in the correct order to check whether a non-empty string s is a palindrome using recursion.",
+    "items": [
+     "If length of s is 0 or 1, return True (base case).",
+     "If first and last characters of s differ, return False.",
+     "Otherwise, return palindrome(s[1:-1]) to check the middle substring.",
+     "Call the recursive function on the original string s."
+    ],
+    "feedback": "A recursive palindrome check stops for empty/one-character strings, compares ends, and then recurses on the substring without the ends."
+   },
+   {
+    "kind": "fill",
+    "prompt": "Complete the sentence about binary search: 'Binary search checks the __________ element and then recurses on the left or right half.'",
+    "before": "Binary search checks the",
+    "after": "element and then recurses on the left or right half.",
+    "options": [
+     "first",
+     "middle",
+     "last",
+     "largest"
+    ],
+    "correctIndex": 1,
+    "feedback": "Binary search inspects the middle element each step, then continues on the appropriate half."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match each recursion concept with its description.",
+    "pairs": [
+     [
+      "Base case",
+      "A condition where the answer is known and recursion stops"
+     ],
+     [
+      "Recursive case",
+      "The part that calls the function on a smaller problem"
+     ],
+     [
+      "Recursion tree",
+      "A diagram tracing multiple function calls and their results"
+     ],
+     [
+      "count(list, item)",
+      "Returns how many times item appears in list"
+     ]
+    ],
+    "feedback": "These terms describe stopping conditions, recursive calls, tracing calls, and Python's list count behavior."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "787fafbe-ba9",
+    "type": "mcq",
+    "question": "What does the recursive definition n! = n * (n - 1)! rely on to finish computation?",
+    "options": [
+     "An iterative loop that multiplies until n equals 0",
+     "A base case such as 0! = 1 or 1! = 1",
+     "A list of previously computed factorials stored globally",
+     "Using addition instead of multiplication"
+    ],
+    "correctIndex": 1,
+    "explanation": "The recursion depends on a base case (0! = 1 or 1! = 1) so calls eventually stop and results are built upward.",
+    "concept": "factorial",
+    "difficulty": "easy"
+   },
+   {
+    "id": "9a132e95-472",
+    "type": "mcq",
+    "question": "Which pair of base cases is appropriate for the Fibonacci recursive function fib(n)?",
+    "options": [
+     "fib(0) = 1 and fib(1) = 1",
+     "fib(0) = 0 and fib(1) = 1",
+     "fib(1) = 0 and fib(2) = 1",
+     "No base cases are needed"
+    ],
+    "correctIndex": 1,
+    "explanation": "The standard Fibonacci sequence uses f(0) = 0 and f(1) = 1 as base cases.",
+    "concept": "Fibonacci",
+    "difficulty": "easy"
+   },
+   {
+    "id": "d19bbcfc-c54",
+    "type": "mcq",
+    "question": "Given list_num = [1, 3, 3, 4], what does list_num.count(3) return?",
+    "options": [
+     "1",
+     "2",
+     "3",
+     "0"
+    ],
+    "correctIndex": 1,
+    "explanation": "There are two occurrences of 3 in the list, so count returns 2.",
+    "concept": "lists",
+    "difficulty": "easy"
+   },
+   {
+    "id": "e19bb12d-5b4",
+    "type": "mcq",
+    "question": "Which statement best describes why binary search is faster than linear search on a sorted list?",
+    "options": [
+     "Binary search checks every element but uses less memory",
+     "Binary search discards about half of the remaining items each step",
+     "Binary search only works on lists of integers, making it faster",
+     "Binary search modifies the list to speed up access"
+    ],
+    "correctIndex": 1,
+    "explanation": "Binary search eliminates roughly half the candidates each recursion by comparing with the middle element.",
+    "concept": "binary search",
+    "difficulty": "medium"
+   },
+   {
+    "id": "475517d5-fd4",
+    "type": "mcq",
+    "question": "Which recursive palindrome check returns False immediately?",
+    "options": [
+     "When s is empty",
+     "When the first and last characters differ",
+     "When s has length 1",
+     "When s has only vowels"
+    ],
+    "correctIndex": 1,
+    "explanation": "If the first and last characters are different, the word cannot be a palindrome, so return False.",
+    "concept": "strings",
+    "difficulty": "easy"
+   },
+   {
+    "id": "4233babf-055",
+    "type": "mcq",
+    "question": "What is a recursion tree used for?",
+    "options": [
+     "Storing results to avoid recomputation",
+     "Tracing the sequence of recursive calls and their values",
+     "Sorting a list before searching",
+     "Converting recursion into iteration automatically"
+    ],
+    "correctIndex": 1,
+    "explanation": "A recursion tree diagrams how functions call each other and what values each call computes.",
+    "concept": "recursion tree",
+    "difficulty": "medium"
+   },
+   {
+    "id": "19a3d318-019",
+    "type": "mcq",
+    "question": "Compute fib(5) using the standard Fibonacci definition (starting f(0)=0, f(1)=1).",
+    "options": [
+     "3",
+     "5",
+     "8",
+     "13"
+    ],
+    "correctIndex": 1,
+    "explanation": "The sequence is 0,1,1,2,3,5,... so fib(5) = 5.",
+    "concept": "Fibonacci",
+    "difficulty": "medium"
+   },
+   {
+    "id": "b5796914-faf",
+    "type": "tf",
+    "question": "A recursive function must always have exactly one base case.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 1,
+    "explanation": "False — a recursive function must have at least one base case, but it can have multiple base cases (e.g., Fibonacci has two).",
+    "concept": "base case",
+    "difficulty": "hard"
+   }
+  ],
+  "video": {
+   "youtubeId": "XkL3SUioNvo",
+   "title": "#40 Python Tutorial for Beginners | Recursion",
+   "channel": "Telusko",
+   "seconds": 343,
+   "checkedAt": 1792840523882
+  }
+ },
+ "c13": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "What is an 'is-a' relationship?",
+    "answer": "An 'is-a' relationship means one class is a specialized type of another (subclass is a kind of superclass). Example: Daffodil is-a Plant."
+   },
+   {
+    "kind": "choice",
+    "prompt": "Which of these is a has-a relationship?",
+    "options": [
+     "A Car inherits from Vehicle",
+     "A Library contains Book objects",
+     "A Dog is a kind of Animal",
+     "A Square is-a Rectangle"
+    ],
+    "correctIndex": 1,
+    "feedback": "A has-a relationship describes one object containing or referencing another (Library has Books)."
+   },
+   {
+    "kind": "order",
+    "prompt": "Put these steps in the correct order to define a subclass that adds a new attribute:",
+    "items": [
+     "Define subclass header with superclass in parentheses",
+     "Call super().__init__ to initialize inherited attributes",
+     "Add assignment for the new instance attribute inside __init__"
+    ],
+    "feedback": "First declare subclass, then call super().__init__, then assign new attributes."
+   },
+   {
+    "kind": "fill",
+    "prompt": "Complete the sentence with the correct word: Inheritance lets a subclass ____ attributes and methods from its superclass.",
+    "before": "Inheritance lets a subclass",
+    "after": "attributes and methods from its superclass.",
+    "options": [
+     "own",
+     "inherit",
+     "hide",
+     "duplicate"
+    ],
+    "correctIndex": 1,
+    "feedback": "The subclass inherits (receives) attributes and methods from its superclass."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match each term with its correct description:",
+    "pairs": [
+     [
+      "super()",
+      "Provides access to superclass methods and __init__"
+     ],
+     [
+      "override",
+      "Define a method in a subclass with the same name as in the superclass"
+     ],
+     [
+      "mixin",
+      "A small class that adds functionality when used in multiple inheritance"
+     ],
+     [
+      "diamond problem",
+      "Ambiguity when multiple inheritance paths share a common ancestor"
+     ]
+    ],
+    "feedback": "Each term pairs with its typical role in inheritance."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "3ae85f03-bb7",
+    "type": "mcq",
+    "question": "Given class Plant with method grow(), and class Mint(Plant) that defines its own grow(), what is this an example of?",
+    "options": [
+     "Encapsulation",
+     "Polymorphism",
+     "Aggregation",
+     "Composition"
+    ],
+    "correctIndex": 1,
+    "explanation": "Defining a method with the same name in a subclass is method overriding, an example of polymorphism.",
+    "concept": "Polymorphism",
+    "difficulty": "easy"
+   },
+   {
+    "id": "2dac3472-9aa",
+    "type": "mcq",
+    "question": "Which Python syntax correctly defines a subclass Herb of superclass Plant?",
+    "options": [
+     "class Herb: Plant",
+     "class Herb(Plant):",
+     "class Plant(Herb):",
+     "class Herb < Plant:"
+    ],
+    "correctIndex": 1,
+    "explanation": "A subclass lists its superclass in parentheses: class Herb(Plant):",
+    "concept": "Syntax",
+    "difficulty": "easy"
+   },
+   {
+    "id": "d515150e-460",
+    "type": "mcq",
+    "question": "If a subclass does not define __init__, which __init__ runs when creating a subclass instance?",
+    "options": [
+     "No __init__ runs",
+     "The subclass's default empty __init__",
+     "The superclass's __init__",
+     "An error is raised"
+    ],
+    "correctIndex": 2,
+    "explanation": "When a subclass lacks __init__, Python calls the superclass's __init__ to initialize the instance.",
+    "concept": "Attribute access",
+    "difficulty": "easy"
+   },
+   {
+    "id": "a3ee03d2-5c2",
+    "type": "mcq",
+    "question": "What is the primary difference between is-a and has-a relationships?",
+    "options": [
+     "is-a means composition; has-a means inheritance",
+     "is-a is for methods; has-a is for attributes",
+     "is-a denotes subclassing; has-a denotes one class containing another",
+     "They are the same concept"
+    ],
+    "correctIndex": 2,
+    "explanation": "is-a indicates inheritance (subclass-superclass); has-a indicates one class contains or references another.",
+    "concept": "Relationships",
+    "difficulty": "medium"
+   },
+   {
+    "id": "16aa21dd-3cc",
+    "type": "mcq",
+    "question": "Which line correctly calls a superclass __init__ inside a subclass __init__?",
+    "options": [
+     "super.__init__(self, name)",
+     "super().__init__(name)",
+     "Superclass.__init__(name)",
+     "self.super().__init__(name)"
+    ],
+    "correctIndex": 1,
+    "explanation": "Use super().__init__(...) to call the superclass initializer; super.__init__ misses parentheses.",
+    "concept": "super",
+    "difficulty": "medium"
+   },
+   {
+    "id": "0ad0a1df-ead",
+    "type": "mcq",
+    "question": "Which situation best illustrates hierarchical inheritance?",
+    "options": [
+     "A <- B <- C chain of inheritance",
+     "Multiple classes Plant, Tree, Flower all inherit from Organism",
+     "A class inherits from two unrelated classes",
+     "Using mixins to add logging"
+    ],
+    "correctIndex": 1,
+    "explanation": "Hierarchical inheritance means several classes inherit from the same single superclass.",
+    "concept": "Hierarchical",
+    "difficulty": "medium"
+   },
+   {
+    "id": "b9db5e01-307",
+    "type": "mcq",
+    "question": "Why might you use a mixin class?",
+    "options": [
+     "To replace a superclass completely",
+     "To add focused functionality without creating deep inheritance chains",
+     "To force single inheritance only",
+     "To prevent method overriding"
+    ],
+    "correctIndex": 1,
+    "explanation": "Mixins add small pieces of behavior to classes, promoting modularity and avoiding complex diamond inheritance issues.",
+    "concept": "Mixin",
+    "difficulty": "medium"
+   },
+   {
+    "id": "a4e1e321-221",
+    "type": "tf",
+    "question": "The diamond problem occurs only when using single inheritance.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 1,
+    "explanation": "The diamond problem is specific to multiple inheritance scenarios where classes share a common ancestor, not single inheritance.",
+    "concept": "Multiple inheritance",
+    "difficulty": "easy"
+   }
+  ],
+  "video": {
+   "youtubeId": "RSl87lqOXDE",
+   "title": "Python OOP Tutorial 4: Inheritance - Creating Subclasses",
+   "channel": "Corey Schafer",
+   "seconds": 1180,
+   "checkedAt": 1792840525701
+  }
+ },
+ "c14": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "What does open(\"file.txt\") do when used with a single string argument?",
+    "answer": "It opens the file named file.txt in the current working folder in the default mode (read mode) and returns a file object."
+   },
+   {
+    "kind": "choice",
+    "prompt": "Which file mode opens a file for writing and creates the file if it does not exist, truncating existing content?",
+    "options": [
+     "r",
+     "w",
+     "a",
+     "x"
+    ],
+    "correctIndex": 1,
+    "feedback": "Mode 'w' opens for writing, creates the file if missing, and truncates existing content."
+   },
+   {
+    "kind": "order",
+    "prompt": "Put these steps in the correct order for safely writing text to a file in Python:",
+    "items": [
+     "Call write(...) on the file object to add text (include '\\n' if you need a newline).",
+     "Open the file with open(\"name\", 'w') or another write mode.",
+     "Close the file with close() so the buffer is flushed to disk.",
+     "Optionally convert non-string data to str(...) before writing."
+    ],
+    "feedback": "Open → convert (if needed) → write → close ensures data is flushed and file is properly saved."
+   },
+   {
+    "kind": "fill",
+    "prompt": "Complete the sentence about reading functions.",
+    "before": "In Python file objects, ",
+    "after": " Use them depending on how much of the file you need at once.",
+    "options": [
+     "read reads the entire file as a single string; readline reads one line; readlines returns a list of lines.",
+     "readlines reads the entire file as a single string; read reads one line; readline returns a list of lines.",
+     "readline reads the entire file as a single string; readlines reads one line; read returns a list of lines."
+    ],
+    "correctIndex": 0,
+    "feedback": "read -> whole string; readline -> single line; readlines -> list of lines."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match each exception to its typical cause when working with files.",
+    "pairs": [
+     [
+      "FileNotFoundError",
+      "Trying to open a non-existent filename for reading"
+     ],
+     [
+      "ValueError (raised manually)",
+      "Program detects invalid user input and uses raise to signal it"
+     ],
+     [
+      "TypeError when writing",
+      "Passing a non-string directly to write() without converting to str"
+     ]
+    ],
+    "feedback": "Each exception maps to the shown common cause when working with files."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "739e9692-5bb",
+    "type": "mcq",
+    "question": "What does open(\"data.csv\", 'r') return?",
+    "options": [
+     "A list of the file's lines",
+     "A file object opened for reading",
+     "The file contents as a single string",
+     "A CSV reader object"
+    ],
+    "correctIndex": 1,
+    "explanation": "open returns a file object; reading functions must be called on it to get contents.",
+    "concept": "open",
+    "difficulty": "easy"
+   },
+   {
+    "id": "cb0ec633-f86",
+    "type": "mcq",
+    "question": "Which function reads and returns only the next line from a file?",
+    "options": [
+     "read()",
+     "readline()",
+     "readlines()",
+     "open()"
+    ],
+    "correctIndex": 1,
+    "explanation": "readline() returns a single line; read() returns the whole file and readlines() returns a list of lines.",
+    "concept": "readline",
+    "difficulty": "easy"
+   },
+   {
+    "id": "834ec6d7-0a8",
+    "type": "mcq",
+    "question": "If you call write(123) on a file object what will usually happen?",
+    "options": [
+     "The number 123 is written as text automatically",
+     "A FileNotFoundError is raised",
+     "A TypeError is raised because write requires a string",
+     "The file is closed automatically"
+    ],
+    "correctIndex": 2,
+    "explanation": "write requires a string; non-string types must be converted with str(123) first.",
+    "concept": "write",
+    "difficulty": "medium"
+   },
+   {
+    "id": "2067fcc3-b04",
+    "type": "mcq",
+    "question": "Which mode appends to a file, creating it if necessary, without truncating existing content?",
+    "options": [
+     "'w'",
+     "'r'",
+     "'a'",
+     "'x'"
+    ],
+    "correctIndex": 2,
+    "explanation": "'a' opens for appending and creates the file if it doesn't exist, preserving existing content.",
+    "concept": "modes",
+    "difficulty": "easy"
+   },
+   {
+    "id": "85b9ec24-4b6",
+    "type": "mcq",
+    "question": "What must you do to ensure buffered writes are saved to disk before the program ends?",
+    "options": [
+     "Call read() on the file",
+     "Call close() on the file object",
+     "Re-open the file in 'r' mode",
+     "Call open() again with the same filename"
+    ],
+    "correctIndex": 1,
+    "explanation": "close() flushes the file buffer and ensures the data is written to disk.",
+    "concept": "close",
+    "difficulty": "medium"
+   },
+   {
+    "id": "d0d00b2c-76d",
+    "type": "mcq",
+    "question": "When only a filename is passed to open(\"file.txt\"), where must file.txt be located?",
+    "options": [
+     "In the user's home directory",
+     "In the same folder as the running Python file (current working folder)",
+     "In the root folder of the filesystem",
+     "In the desktop folder"
+    ],
+    "correctIndex": 1,
+    "explanation": "A plain filename looks in the current working folder (the folder where the script runs).",
+    "concept": "paths",
+    "difficulty": "easy"
+   },
+   {
+    "id": "6fc052b0-f4d",
+    "type": "tf",
+    "question": "Raising an exception with raise stops construction of an object if not handled.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 0,
+    "explanation": "If an exception is raised in a constructor and not caught, the object is not constructed and the program displays an error.",
+    "concept": "raise",
+    "difficulty": "medium"
+   },
+   {
+    "id": "72bc82c9-13e",
+    "type": "mcq",
+    "question": "Which exception is typically raised when attempting to open a non-existent file for reading?",
+    "options": [
+     "ValueError",
+     "FileNotFoundError",
+     "TypeError",
+     "PermissionError"
+    ],
+    "correctIndex": 1,
+    "explanation": "Opening a missing file for reading raises FileNotFoundError; PermissionError occurs when lacking permissions.",
+    "concept": "exceptions",
+    "difficulty": "medium"
+   }
+  ],
+  "video": {
+   "youtubeId": "Uh2ebFW8OYM",
+   "title": "Python Tutorial: File Objects - Reading and Writing to Files",
+   "channel": "Corey Schafer",
+   "seconds": 1473,
+   "checkedAt": 1792840527492
+  }
+ },
+ "c15": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "What is the primary goal of data science?",
+    "answer": "To collect, process, and analyze data to extract insights that support informed decision-making."
+   },
+   {
+    "kind": "choice",
+    "prompt": "Which stage of the data science life cycle comes immediately after data acquisition?",
+    "options": [
+     "Model deployment",
+     "Data exploration",
+     "Feature engineering",
+     "Reporting and communication"
+    ],
+    "correctIndex": 1,
+    "feedback": "Data exploration follows acquisition and includes cleaning and visual inspection before analysis."
+   },
+   {
+    "kind": "order",
+    "prompt": "Put these NumPy-related steps in the typical order when creating and using an ndarray for computation:",
+    "items": [
+     "Import NumPy as np",
+     "Create an ndarray object",
+     "Perform array operations (e.g., broadcasting, reductions)",
+     "Ensure array has appropriate dtype"
+    ],
+    "feedback": "Importing comes first, then create arrays, ensure correct dtype, then perform computations."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "2128d2de-e9d",
+    "type": "mcq",
+    "question": "Which statement best describes NumPy's ndarray?",
+    "options": [
+     "A list of Python lists with mixed types",
+     "A multi-dimensional array of homogeneous data types",
+     "A visualization library for plots",
+     "A file format for storing tables"
+    ],
+    "correctIndex": 1,
+    "explanation": "ndarray is a multi-dimensional array where all elements share the same data type.",
+    "concept": "ndarray",
+    "difficulty": "easy"
+   },
+   {
+    "id": "766d6d51-44a",
+    "type": "mcq",
+    "question": "Which tool is commonly used to run Python notebooks in the cloud, as mentioned in the chapter?",
+    "options": [
+     "Google Colaboratory",
+     "Microsoft Excel",
+     "Spyder IDE",
+     "Vim editor"
+    ],
+    "correctIndex": 0,
+    "explanation": "Google Colaboratory (Colab) is a cloud-hosted Jupyter environment referenced in the chapter.",
+    "concept": "Colaboratory",
+    "difficulty": "easy"
+   },
+   {
+    "id": "e5460b5f-10f",
+    "type": "mcq",
+    "question": "During exploratory data analysis (EDA) you would typically do all EXCEPT:",
+    "options": [
+     "Identify null values",
+     "Visualize distributions",
+     "Randomly delete half the dataset without reason",
+     "Create new features based on existing data"
+    ],
+    "correctIndex": 2,
+    "explanation": "Randomly deleting data without justification is not part of EDA; EDA focuses on understanding and preparing data.",
+    "concept": "EDA",
+    "difficulty": "medium"
+   },
+   {
+    "id": "e4152968-0d5",
+    "type": "mcq",
+    "question": "Which Python alias is conventionally used for NumPy?",
+    "options": [
+     "import numpy as np",
+     "import numpy as pd",
+     "import np as numpy",
+     "from numpy import pd"
+    ],
+    "correctIndex": 0,
+    "explanation": "The conventional alias for NumPy is np: import numpy as np.",
+    "concept": "alias",
+    "difficulty": "easy"
+   },
+   {
+    "id": "512f826c-54f",
+    "type": "mcq",
+    "question": "What is an appropriate first action when you obtain a new dataset?",
+    "options": [
+     "Begin model training immediately",
+     "Perform data exploration and cleaning",
+     "Publish results without inspection",
+     "Convert everything to strings"
+    ],
+    "correctIndex": 1,
+    "explanation": "You should explore and clean data first to ensure it's suitable for analysis.",
+    "concept": "workflow",
+    "difficulty": "easy"
+   },
+   {
+    "id": "846a5161-861",
+    "type": "mcq",
+    "question": "Which library would you choose primarily for creating statistical plots and higher-level visualizations built on Matplotlib?",
+    "options": [
+     "Seaborn",
+     "NumPy",
+     "pandas.Series",
+     "scikit-learn"
+    ],
+    "correctIndex": 0,
+    "explanation": "Seaborn provides high-level statistical plotting functions built on Matplotlib.",
+    "concept": "visualization",
+    "difficulty": "medium"
+   },
+   {
+    "id": "09b60340-9a9",
+    "type": "mcq",
+    "question": "In Pandas, which structure is best when you need a single labeled column of data?",
+    "options": [
+     "Series",
+     "DataFrame",
+     "ndarray",
+     "dictionary"
+    ],
+    "correctIndex": 0,
+    "explanation": "A Series is a one-dimensional labeled array, ideal for a single column.",
+    "concept": "Series",
+    "difficulty": "easy"
+   },
+   {
+    "id": "c65a0f65-e99",
+    "type": "tf",
+    "question": "The data science life cycle is strictly linear and should never be revisited once a stage is completed.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 1,
+    "explanation": "The life cycle is iterative; stages are often revisited as new insights or requirements arise.",
+    "concept": "life cycle",
+    "difficulty": "medium"
+   }
+  ],
+  "video": {
+   "youtubeId": "-Rf4fZDQ0yw",
+   "title": "Python For Data Science: Introduction",
+   "channel": "DataCamp",
+   "seconds": 217,
+   "checkedAt": 1792840529343
+  }
+ }
+}

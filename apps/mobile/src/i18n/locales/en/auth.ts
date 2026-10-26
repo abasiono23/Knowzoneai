@@ -1,0 +1,298 @@
+/** Welcome, intro carousel, sign-up, log-in, codes, password reset, terms and referral screens. */
+const auth = {
+  welcome: {
+    headline: 'Turn any lesson into something you’ll <highlight>actually remember.</highlight>',
+    highlights: {
+      summaries: 'Summaries in seconds',
+      quizzes: 'Quizzes & flashcards',
+      tutor: 'AI tutor, 24/7',
+    },
+    getStarted: 'Get started — it’s free',
+    haveAccount: 'I already have an account',
+    socialProof: 'Join students learning smarter every day',
+  },
+  brand: {
+    logo: 'Knowzone AI logo',
+  },
+  splash: {
+    tagline: 'Understand more. Remember longer.',
+  },
+  /** Bits shared by several auth screens. */
+  shared: {
+    haveAccount: 'Already have an account? <link>Log in</link>',
+    logIn: 'Log in',
+    backToLogIn: 'Back to log in',
+    continueWithGoogle: 'Continue with Google',
+    continueWithApple: 'Continue with Apple',
+    or: 'or',
+    stepOf: 'Step {{current}} of {{total}}',
+    showPassword: 'Show password',
+    hidePassword: 'Hide password',
+    verificationCode: 'Verification code',
+    passwordStrength: 'Password strength: {{level}}',
+    strength: {
+      tooShort: 'Too short',
+      weak: 'Weak',
+      okay: 'Okay',
+      strong: 'Strong',
+      excellent: 'Excellent',
+    },
+  },
+  fields: {
+    email: 'Email',
+    emailPlaceholder: 'you@example.com',
+    password: 'Password',
+    newPasswordPlaceholder: 'At least 8 characters',
+  },
+  validation: {
+    passwordMin: 'Use at least 8 characters',
+    email: 'Enter a valid email address',
+  },
+  /** Messages lib/auth.ts attaches to errors that have no shared reason text. */
+  errors: {
+    emailRateLimited: 'We’ve sent a lot of emails. Please wait a few minutes and try again.',
+    providerDisabled: '{{provider}} sign-in isn’t switched on yet. Please use your email for now.',
+    providerUnfinished: '{{provider}} didn’t finish signing you in',
+    providerStart: 'Couldn’t start {{provider}} sign-in',
+    linkExpired: 'That sign-in link has expired. Please try again.',
+    currentPassword: 'Your current password is incorrect',
+    linkStart: 'Couldn’t start linking',
+  },
+  onboarding: {
+    progress: '{{current}} / {{total}}',
+    letsGo: 'Let’s go',
+    goToSlide: 'Go to slide {{number}}',
+    slides: {
+      meet: {
+        eyebrow: 'MEET KNOWZONE AI',
+        title: 'Your smartest study partner',
+        body: 'Upload notes, a PDF or a photo of your textbook. Knowzone turns it into something you can understand in minutes.',
+      },
+      videos: {
+        eyebrow: 'SHORT VIDEOS',
+        title: 'Big topics, five-minute videos',
+        body: 'Watch bite-sized explainers with captions, then answer a quick question to lock the idea in.',
+      },
+      tutor: {
+        eyebrow: 'AI TUTOR & SUMMARIES',
+        title: 'Stuck? Just ask.',
+        body: 'Get clear summaries, flashcards and a patient AI tutor that gives hints before answers, at any hour.',
+      },
+      rewards: {
+        eyebrow: 'LEARN · PLAY · EARN',
+        title: 'Progress you can feel',
+        body: 'Earn XP and coins, keep your streak alive and unlock new worlds in Knowzone World as you master subjects.',
+      },
+    },
+    /** Sample text inside the intro illustrations. */
+    art: {
+      biology: 'Biology',
+      chemistry: 'Chemistry',
+      maths: 'Maths',
+      history: 'History',
+      videoTag: 'BIOLOGY · {{minutes}} MIN',
+      videoCaption: 'Mitochondria turn food into energy your cells can use ⚡',
+      videoTitle: 'How cells make energy',
+      quickCheck: 'Quick check: {{score}}/{{total}}',
+      captions: 'Captions',
+      summaryLabel: 'AI SUMMARY',
+      summaryTitle: 'Photosynthesis in one sentence',
+      userAsk: 'Explain it like I’m 12 🙏',
+      aiReply: 'Plants are tiny chefs: sunlight + water + air = food! 🌱',
+      level: 'LEVEL',
+      xpGain: '+{{count}} XP',
+      streak_one: '{{count}}-day streak',
+      streak_other: '{{count}}-day streak',
+      worldUnlocked: 'Space Lab unlocked',
+    },
+  },
+  getStarted: {
+    title: 'Create your free account',
+    subtitle: 'Save your study packs, track your progress and earn rewards.',
+    continueWithEmail: 'Continue with email',
+    legal: 'By continuing you agree to our <terms>Terms</terms> and <privacy>Privacy Policy</privacy>.',
+    perks: {
+      credits: {
+        title_one: '{{count}} free AI credit',
+        title_other: '{{count}} free AI credits',
+        body: 'Turn your first lessons into study packs',
+      },
+      rewards: {
+        title: 'XP, streaks & Knowzone World',
+        body: 'Your progress is saved and rewarded',
+      },
+      sync: {
+        title: 'Phone and web, in sync',
+        body: 'Pick up exactly where you left off',
+      },
+    },
+  },
+  signUp: {
+    title: 'Create your account',
+    subtitle: 'It takes less than a minute. Your first study pack is on us.',
+    firstName: 'First name',
+    firstNamePlaceholder: 'e.g. Amara',
+    nameRequired: 'What should we call you?',
+  },
+  social: {
+    failed: '{{provider}} sign-in failed',
+    errorTitle: 'That didn’t work',
+    connecting: 'Connecting to {{provider}}…',
+    hangTight: 'Hang tight, this only takes a moment.',
+    useEmail: 'Use email instead',
+    willReceive: 'KNOWZONE WILL RECEIVE',
+    shared: {
+      name: 'Your name',
+      email: 'Your email address',
+      photo: 'Your profile picture',
+    },
+    neverPost: 'We’ll never post anything on your behalf',
+  },
+  login: {
+    title: 'Welcome back',
+    subtitle: 'Your streak missed you. Let’s keep it going.',
+    missingFields: 'Enter your email and password',
+    failed: 'Could not log in',
+    newHere: 'New to Knowzone? <link>Create an account</link>',
+    passwordPlaceholder: 'Your password',
+    forgot: 'Forgot password?',
+  },
+  forgotPassword: {
+    title: 'Forgot your password?',
+    subtitle: 'No stress, it happens. Enter your email and we’ll send you a 6-digit code to reset it.',
+    emailRequired: 'Enter the email you signed up with',
+    send: 'Send reset code',
+    remembered: 'Remembered it? <link>Back to log in</link>',
+  },
+  verifyEmail: {
+    titleReset: 'Enter your reset code',
+    titleSignup: 'Check your inbox',
+    sentTo: 'We sent a 6-digit code to <email>{{email}}</email>. It can take a minute to arrive.',
+    yourEmail: 'your email',
+    failed: 'Verification failed',
+    resendFailed: 'Could not resend the code',
+    resent: 'New code sent. Check your spam folder too.',
+    resendIn: 'Resend code in {{time}}',
+    resend: 'Resend code',
+    wrongEmail: 'Wrong email? <link>Change it</link>',
+    demo: 'Demo mode: use code <code>{{code}}</code>',
+  },
+  verified: {
+    title: 'Email verified!',
+    body: 'Nice one. Your account is secure and your progress will always be saved.',
+    bodyNamed: 'Nice one, {{name}}. Your account is secure and your progress will always be saved.',
+  },
+  resetPassword: {
+    title: 'Create a new password',
+    subtitle: 'Make it strong and something you haven’t used before.',
+    newPassword: 'New password',
+    confirmPassword: 'Confirm password',
+    confirmPlaceholder: 'Type it again',
+    mismatch: 'Passwords don’t match',
+    failed: 'Could not reset your password',
+    update: 'Update password',
+    doneTitle: 'Password updated',
+    doneBody: 'You’re good to go. Log in with your new password to pick up where you left off.',
+  },
+  terms: {
+    title: 'A few promises, both ways',
+    subtitle: 'Here’s how we look after you, in plain language.',
+    agree: 'Agree and continue',
+    acceptAll: 'Accept all',
+    promises: {
+      notes: {
+        title: 'Your notes stay yours',
+        body: 'We only use what you upload to build your study material.',
+      },
+      data: {
+        title: 'We never sell your data',
+        body: 'No ads inside lessons and no selling of student information.',
+      },
+      safety: {
+        title: 'A safe place to learn',
+        body: 'Age-appropriate content, with reporting and moderation built in.',
+      },
+    },
+    termsA11y: 'I agree to the Terms of Service',
+    termsText: 'I agree to the <link>Terms of Service</link> <req>*</req>',
+    privacyA11y: 'I have read the Privacy Policy',
+    privacyText: 'I’ve read the <link>Privacy Policy</link> and agree to how my data is used <req>*</req>',
+    ageA11y: 'I am 13 or older, or have a parent’s permission',
+    ageText: 'I’m 13 or older, or a parent or guardian has agreed for me <req>*</req>',
+    marketingA11y: 'Send me study tips and updates',
+    marketingText: 'Send me study tips and product updates (optional)',
+  },
+  referral: {
+    title: 'Got an invite code?',
+    subtitle_one:
+      'If a friend invited you, you’ll both get {{count}} bonus AI credit after you finish your first lesson, quiz or level.',
+    subtitle_other:
+      'If a friend invited you, you’ll both get {{count}} bonus AI credits after you finish your first lesson, quiz or level.',
+    yourFriend: 'your friend',
+    applyFailed: 'Could not apply the code',
+    apply: 'Apply code',
+    noCode: 'I don’t have a code',
+    invitedBy: 'Invited by {{name}} 🎉',
+    bonus_one: '+{{count}} AI credit each, unlocked after your first lesson, quiz or level.',
+    bonus_other: '+{{count}} AI credits each, unlocked after your first lesson, quiz or level.',
+    codeLabel: 'Invite code',
+    codePlaceholder: 'e.g. {{code}}',
+    demo: 'Demo mode: try code <code>{{code}}</code>',
+    rules: 'Rewards apply to new accounts only and are confirmed once you complete a real learning activity.',
+  },
+  referralInvalid: {
+    tryAnother: 'Try another code',
+    continueWithout: 'Continue without a code',
+    note: 'You can use Knowzone fully without an invite. Codes just add a bonus of AI credits for you and your friend.',
+    demo: 'Demo: {{valid}} works · {{expired}} is expired.',
+    reasons: {
+      'not-found': {
+        title: 'We couldn’t find that code',
+        body: 'Check the spelling with your friend. Codes are 6–8 letters and numbers, like ADA2026.',
+      },
+      expired: {
+        title: 'This invite has expired',
+        body: 'That code was part of a campaign that has ended. Ask your friend for their personal code instead; those never expire.',
+      },
+      'own-code': {
+        title: 'That’s your own code',
+        body: 'You can’t invite yourself, but you can share it with friends from the Invite friends screen.',
+      },
+      'already-referred': {
+        title: 'You’ve already used an invite',
+        body: 'Each new account can use one invite code. Your first one is still active.',
+      },
+      'not-new': {
+        title: 'Invites are for new students',
+        body: 'Invite codes only work while creating a new account. You can still invite friends with your own code.',
+      },
+      'cap-reached': {
+        title: 'Your friend has reached this month’s limit',
+        body: 'Each student can earn invite rewards for up to 10 friends a month. You can still join; the bonus just won’t apply.',
+      },
+    },
+  },
+  allSet: {
+    title: 'You’re all set!',
+    titleNamed: 'You’re all set, {{name}}!',
+    subtitle: 'Your account is ready. Here’s what’s waiting for you.',
+    personalize: 'Personalize my learning',
+    starter: {
+      credits: {
+        title_one: '{{count}} AI credit',
+        title_other: '{{count}} AI credits',
+        body: 'Ready to turn lessons into study packs',
+      },
+      level: {
+        title: 'Level {{level}} · Explorer',
+        body: 'Earn XP with every quiz and flashcard',
+      },
+      plan: {
+        title: 'Next: your personal plan',
+        body: 'Two minutes to tailor Knowzone to you',
+      },
+    },
+  },
+};
+
+export default auth;

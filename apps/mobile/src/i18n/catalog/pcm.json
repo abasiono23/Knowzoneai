@@ -1,0 +1,523 @@
+{
+  "categories": {
+    "sciences": {
+      "name": "Sciences"
+    },
+    "maths": {
+      "name": "Mathematics"
+    },
+    "languages": {
+      "name": "Languages & Literature"
+    },
+    "humanities": {
+      "name": "Humanities"
+    },
+    "business": {
+      "name": "Business & Money"
+    },
+    "tech": {
+      "name": "Tech & Future Skills"
+    }
+  },
+  "subjects": {
+    "mathematics": {
+      "name": "Mathematics",
+      "description": "Numbers, algebra, geometry and the sense wey dey behind dem.",
+      "topics": [
+        "Algebra",
+        "Quadratic equations",
+        "Geometry",
+        "Statistics",
+        "Trigonometry",
+        "Calculus"
+      ]
+    },
+    "further-maths": {
+      "name": "Further Mathematics",
+      "description": "Matrices, vectors and hard problem solving wey go sharpen your brain.",
+      "topics": [
+        "Matrices",
+        "Vectors",
+        "Complex numbers",
+        "Differentiation"
+      ]
+    },
+    "physics": {
+      "name": "Physics",
+      "description": "How energy, forces and the whole universe dey behave.",
+      "topics": [
+        "Motion",
+        "Forces",
+        "Waves",
+        "Electricity",
+        "Energy",
+        "Optics"
+      ]
+    },
+    "chemistry": {
+      "name": "Chemistry",
+      "description": "Atoms, reactions and the things wey everything take make.",
+      "topics": [
+        "Mole concept",
+        "Chemical bonding",
+        "Organic chemistry",
+        "Electrolysis",
+        "Rates of reaction"
+      ]
+    },
+    "biology": {
+      "name": "Biology",
+      "description": "Living things, from small cells reach whole ecosystems.",
+      "topics": [
+        "Cell biology",
+        "Genetics",
+        "Ecology",
+        "Nutrition",
+        "Human physiology"
+      ]
+    },
+    "agric": {
+      "name": "Agricultural Science",
+      "description": "Crops, soil, animals and how to run farm business.",
+      "topics": [
+        "Soil science",
+        "Crop production",
+        "Animal husbandry"
+      ]
+    },
+    "english": {
+      "name": "English Language",
+      "description": "Read, write and talk with confidence.",
+      "topics": [
+        "Comprehension",
+        "Summary writing",
+        "Essay writing",
+        "Lexis & structure",
+        "Oral English"
+      ]
+    },
+    "literature": {
+      "name": "Literature in English",
+      "description": "Prose, poetry and drama, we go break dem down well-well.",
+      "topics": [
+        "Prose",
+        "Poetry",
+        "Drama",
+        "Literary devices"
+      ]
+    },
+    "french": {
+      "name": "French",
+      "description": "Everyday French for school and when you dey travel.",
+      "topics": [
+        "Greetings",
+        "Verbs",
+        "Grammar",
+        "Conversation"
+      ]
+    },
+    "government": {
+      "name": "Government",
+      "description": "How dem dey run country, and why e matter.",
+      "topics": [
+        "Constitution",
+        "Arms of government",
+        "Electoral systems",
+        "Nigerian federalism"
+      ]
+    },
+    "history": {
+      "name": "History",
+      "description": "Stories of before wey shape today.",
+      "topics": [
+        "Africa before colonial time",
+        "Colonial era",
+        "Independence movements",
+        "World wars"
+      ]
+    },
+    "geography": {
+      "name": "Geography",
+      "description": "Our planet, the people wey dey inside and the climate.",
+      "topics": [
+        "Map reading",
+        "Climate",
+        "Population",
+        "Landforms"
+      ]
+    },
+    "economics": {
+      "name": "Economics",
+      "description": "Money, markets and how people dey take make choices.",
+      "topics": [
+        "Demand & supply",
+        "Elasticity",
+        "Inflation",
+        "National income",
+        "Market structures"
+      ]
+    },
+    "accounting": {
+      "name": "Financial Accounting",
+      "description": "Books, ledgers and financial statements.",
+      "topics": [
+        "Double entry",
+        "Trial balance",
+        "Final accounts",
+        "Depreciation"
+      ]
+    },
+    "entrepreneurship": {
+      "name": "Entrepreneurship",
+      "description": "How to turn your ideas to business wey dey work.",
+      "topics": [
+        "Business ideas",
+        "Marketing",
+        "Pricing",
+        "Pitching"
+      ]
+    },
+    "computer-science": {
+      "name": "Computer Science",
+      "description": "How computer dey think, from logic reach code.",
+      "topics": [
+        "Algorithms",
+        "Programming basics",
+        "Data structures",
+        "Networks"
+      ]
+    },
+    "ai-literacy": {
+      "name": "AI Literacy",
+      "description": "Wetin AI be, how e dey work and how to use am well.",
+      "topics": [
+        "Wetin be AI",
+        "Machine learning",
+        "Prompting",
+        "AI ethics"
+      ]
+    }
+  },
+  "lessons": {
+    "l1": {
+      "title": "How cells dey make energy",
+      "topic": "Cell biology",
+      "summary": "Mitochondria dey turn glucose and oxygen to ATP, na the energy money wey every cell dey spend.",
+      "keyPoints": [
+        "Respiration dey happen for inside mitochondria",
+        "Glucose + oxygen → CO₂ + water + ATP",
+        "Anaerobic respiration dey make lactic acid for muscles"
+      ]
+    },
+    "l2": {
+      "title": "Genetics wey easy: dominant vs recessive",
+      "topic": "Genetics",
+      "summary": "Why you fit get your mama eye but your grandpa height: alleles, genotypes and Punnett squares.",
+      "keyPoints": [
+        "Every trait get two alleles",
+        "Dominant alleles dey cover the recessive ones",
+        "Punnett squares dey predict offspring ratios"
+      ]
+    },
+    "l3": {
+      "title": "Food chains and how energy dey flow",
+      "topic": "Ecology",
+      "summary": "Energy dey move from producers go consumers, and na only about 10% dey pass reach each next level.",
+      "keyPoints": [
+        "Producers dey make food by photosynthesis",
+        "Na about 10% of energy dey pass go up each level",
+        "Decomposers dey recycle nutrients"
+      ]
+    },
+    "l4": {
+      "title": "Mole concept for 5 minutes",
+      "topic": "Mole concept",
+      "summary": "One mole na 6.02 × 10²³ particles. Learn how to change between mass, moles and particles with confidence.",
+      "keyPoints": [
+        "1 mole = 6.02 × 10²³ particles",
+        "Moles = mass ÷ molar mass",
+        "Use the ratios from balanced equations"
+      ]
+    },
+    "l5": {
+      "title": "Ionic vs covalent bonding",
+      "topic": "Chemical bonding",
+      "summary": "Ionic bonds dey transfer electrons; covalent bonds dey share dem. 20 cards to make am stick for your head.",
+      "keyPoints": [
+        "Ionic: metal + non-metal, electron transfer",
+        "Covalent: non-metals wey dey share electrons",
+        "Ionic compounds dey conduct when dem melt (molten)"
+      ]
+    },
+    "l6": {
+      "title": "Organic chemistry: how to name alkanes",
+      "topic": "Organic chemistry",
+      "summary": "Test yourself for IUPAC naming of alkanes, alkenes and alcohols.",
+      "keyPoints": [
+        "Find the carbon chain wey long pass",
+        "Start number from the end wey near branch pass",
+        "Prefixes: meth, eth, prop, but…"
+      ]
+    },
+    "l7": {
+      "title": "Newton three laws, explained well",
+      "topic": "Forces",
+      "summary": "Inertia, F = ma, and action–reaction, with everyday examples from danfo bus reach football.",
+      "keyPoints": [
+        "Object go stay for rest unless something act on am",
+        "Force = mass × acceleration",
+        "Every action get equal and opposite reaction"
+      ]
+    },
+    "l8": {
+      "title": "Ohm law and simple circuits",
+      "topic": "Electricity",
+      "summary": "V = IR. How voltage, current and resistance dey relate for series and parallel circuits.",
+      "keyPoints": [
+        "V = I × R",
+        "Series: resistances dey add",
+        "Parallel: 1/R = 1/R₁ + 1/R₂"
+      ]
+    },
+    "l9": {
+      "title": "Waves: frequency, wavelength, speed",
+      "topic": "Waves",
+      "summary": "Ten exam-style questions on v = fλ.",
+      "keyPoints": [
+        "v = f × λ",
+        "Transverse vs longitudinal",
+        "Sound need medium to travel"
+      ]
+    },
+    "l10": {
+      "title": "How to solve quadratic equations",
+      "topic": "Quadratic equations",
+      "summary": "Factorisation, completing the square and the formula. Pick the method wey fast pass every time.",
+      "keyPoints": [
+        "Try factorising first",
+        "x = (−b ± √(b²−4ac)) / 2a",
+        "The discriminant go tell you how many roots dey"
+      ]
+    },
+    "l11": {
+      "title": "Trigonometry: SOH CAH TOA",
+      "topic": "Trigonometry",
+      "summary": "Sine, cosine and tangent ratios with memory tricks wey go stick.",
+      "keyPoints": [
+        "sin = opposite / hypotenuse",
+        "cos = adjacent / hypotenuse",
+        "tan = opposite / adjacent"
+      ]
+    },
+    "l12": {
+      "title": "Statistics: mean, median and mode",
+      "topic": "Statistics",
+      "summary": "Three ways to describe the “middle” of data, and when to use each one.",
+      "keyPoints": [
+        "Mean: add am all, then divide",
+        "Median: the value wey dey middle",
+        "Mode: the one wey show pass"
+      ]
+    },
+    "l13": {
+      "title": "Differentiation from first principles",
+      "topic": "Differentiation",
+      "summary": "Wetin derivative really mean, we go build am step by step.",
+      "keyPoints": [
+        "Derivative na rate of change",
+        "Limit of (f(x+h) − f(x)) / h",
+        "Power rule: d/dx xⁿ = nxⁿ⁻¹"
+      ]
+    },
+    "l14": {
+      "title": "How to write strong essay introduction",
+      "topic": "Essay writing",
+      "summary": "Hook, context, thesis: the three-part intro wey examiners like well-well.",
+      "keyPoints": [
+        "Start with hook",
+        "Give small context",
+        "End with clear thesis"
+      ]
+    },
+    "l15": {
+      "title": "Summary writing wey go score",
+      "topic": "Summary writing",
+      "summary": "How to find the key points and rewrite dem for your own words, inside the word limit.",
+      "keyPoints": [
+        "Read the question two times",
+        "One point for each sentence",
+        "No ever copy whole sentence"
+      ]
+    },
+    "l16": {
+      "title": "Lexis & structure practice",
+      "topic": "Lexis & structure",
+      "summary": "JAMB-style synonyms, antonyms and sentence completion.",
+      "keyPoints": [
+        "Read the whole sentence first",
+        "Look out for tense clues",
+        "Remove the options wey clear say dem wrong"
+      ]
+    },
+    "l17": {
+      "title": "Things Fall Apart: themes",
+      "topic": "Prose",
+      "summary": "Pride, tradition and change for Achebe classic book, as audio lesson wey you fit listen anywhere.",
+      "keyPoints": [
+        "Okonkwo fear of weakness",
+        "Tradition vs colonial change",
+        "The tragic hero"
+      ]
+    },
+    "l18": {
+      "title": "Demand and supply, simple-simple",
+      "topic": "Demand & supply",
+      "summary": "Why prices dey go up and come down, using tomato market as example.",
+      "keyPoints": [
+        "Demand dey fall as price dey rise",
+        "Supply dey rise as price dey rise",
+        "Equilibrium na where the two meet"
+      ]
+    },
+    "l19": {
+      "title": "Inflation: why prices no dey stop to rise",
+      "topic": "Inflation",
+      "summary": "Wetin dey cause am, wetin e dey do, and how central banks dey fight inflation.",
+      "keyPoints": [
+        "Demand-pull vs cost-push",
+        "Inflation dey reduce purchasing power (wetin your money fit buy)",
+        "Interest rates na the main tool"
+      ]
+    },
+    "l20": {
+      "title": "Double entry bookkeeping",
+      "topic": "Double entry",
+      "summary": "Every transaction get two sides. Debits, credits and the accounting equation.",
+      "keyPoints": [
+        "Assets = Liabilities + Capital",
+        "Every debit get credit wey match am",
+        "Use T-accounts take practise"
+      ]
+    },
+    "l21": {
+      "title": "Arms of government",
+      "topic": "Arms of government",
+      "summary": "Legislature, executive and judiciary: who dey do wetin.",
+      "keyPoints": [
+        "Legislature dey make laws",
+        "Executive dey carry dem out",
+        "Judiciary dey interpret dem"
+      ]
+    },
+    "l22": {
+      "title": "Nigerian independence for 10 moments",
+      "topic": "Independence movements",
+      "summary": "From the 1914 amalgamation reach 1 October 1960.",
+      "keyPoints": [
+        "1914 amalgamation",
+        "Nationalist movements",
+        "Independence on 1 October 1960"
+      ]
+    },
+    "l23": {
+      "title": "How to read contour maps",
+      "topic": "Map reading",
+      "summary": "Contours, spot heights and gradients, we don explain dem.",
+      "keyPoints": [
+        "Contours wey near each other = steep slope",
+        "Contour interval no dey change",
+        "V-shapes dey point upstream"
+      ]
+    },
+    "l24": {
+      "title": "Your first Python program",
+      "topic": "Programming basics",
+      "summary": "Variables, print and input: write program wey go greet you by your name.",
+      "keyPoints": [
+        "Variables dey store values",
+        "print() dey show output",
+        "input() dey read wetin the user type"
+      ]
+    },
+    "l25": {
+      "title": "Algorithms for everyday life",
+      "topic": "Algorithms",
+      "summary": "Recipes, directions and how you dey arrange your playlist: algorithms dey everywhere.",
+      "keyPoints": [
+        "Algorithm na set of steps",
+        "Order matter",
+        "Good algorithms dey efficient"
+      ]
+    },
+    "l26": {
+      "title": "Wetin AI really be?",
+      "topic": "Wetin be AI",
+      "summary": "How machines dey learn patterns from data, and wetin dem still no fit do.",
+      "keyPoints": [
+        "AI dey learn patterns from examples",
+        "E dey predict, e no “know”",
+        "Always check AI answers"
+      ]
+    },
+    "l27": {
+      "title": "Prompting like pro",
+      "topic": "Prompting",
+      "summary": "Give context, set role and ask for format: get better answers from AI.",
+      "keyPoints": [
+        "Talk the exact goal clear-clear",
+        "Give examples",
+        "Ask am to reason step by step"
+      ]
+    },
+    "l28": {
+      "title": "How to price your first product",
+      "topic": "Pricing",
+      "summary": "Cost-plus, value-based and competitor pricing for young entrepreneurs.",
+      "keyPoints": [
+        "Know all your total costs",
+        "Price based on value, no be only cost",
+        "Test am and adjust"
+      ]
+    },
+    "l29": {
+      "title": "French greetings & introductions",
+      "topic": "Greetings",
+      "summary": "Bonjour, ça va? Talk your first French sentences with confidence.",
+      "keyPoints": [
+        "Bonjour / Bonsoir",
+        "Je m’appelle…",
+        "Comment ça va?"
+      ]
+    },
+    "l30": {
+      "title": "Electrolysis step by step",
+      "topic": "Electrolysis",
+      "summary": "Wetin dey happen for anode and cathode, and how to predict the products.",
+      "keyPoints": [
+        "Cations dey go cathode",
+        "Anions dey go anode",
+        "Oxidation for anode, reduction for cathode"
+      ]
+    },
+    "l31": {
+      "title": "Human heart and circulation",
+      "topic": "Human physiology",
+      "summary": "Twelve questions on the heart, blood vessels and double circulation.",
+      "keyPoints": [
+        "Four chambers",
+        "Arteries dey carry blood comot from heart",
+        "Double circulation for mammals"
+      ]
+    },
+    "l32": {
+      "title": "Geometry: angles for circles",
+      "topic": "Geometry",
+      "summary": "Circle theorems with diagrams wey you go fit follow for real.",
+      "keyPoints": [
+        "Angle for centre = 2 × angle for circumference",
+        "Angles for the same segment dey equal",
+        "Opposite angles of cyclic quad dey add up to 180°"
+      ]
+    }
+  }
+}

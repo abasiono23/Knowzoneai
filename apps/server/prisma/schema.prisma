@@ -1,0 +1,1079 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+// Enum values match the strings the mobile app uses, so no mapping is needed in responses.
+
+enum Plan {
+  FREE
+  PLUS
+  PRO
+}
+
+enum AuthProvider {
+  email
+  google
+  apple
+}
+
+enum Role {
+  learner
+  teacher
+}
+
+enum MaterialStatus {
+  PROCESSING
+  READY
+  FAILED
+}
+
+enum ReferralStatus {
+  pending
+  confirmed
+  rejected
+}
+
+/// App profile for a Supabase Auth user. Passwords, codes and Google/Apple identities live in Supabase.
+model User {
+  /// The Supabase Auth user id (auth.users.id).
+  id                 String       @id
+  email              String       @unique
+  name               String
+  authProvider       AuthProvider @default(email)
+  emailVerified      Boolean      @default(false)
+  termsAccepted      Boolean      @default(false)
+  marketingConsent   Boolean      @default(false)
+  consentAt          DateTime?
+  onboardingComplete Boolean      @default(false)
+  role               Role         @default(learner)
+  plan               Plan         @default(FREE)
+
+  // Profile (screen 178)
+  username String? @unique
+  school   String?
+  grade    String?
+  bio      String?
+  /// { kind: 'avatar' } | { kind: 'initials', color } | { kind: 'photo', uri }
+  photo    Json?
+
+  /// Answers from personalisation onboarding (subjects, goals, exam dates, reminders…).
+  personalization Json?
+  /// AppSettings: notifications, reminders, language, privacy. Defaults are filled in on read.
+  settings        Json?
+
+  /// Sign-in methods linked in Supabase (email, google, apple), refreshed from each token.
+  providers String[] @default([])
+
+  // Progress
+  xp               Int       @default(0)
+  coins            Int       @default(0)
+  aiCredits        Int       @default(0)
+  streak           Int       @default(0)
+  lastActiveDate   DateTime? @db.Date
+  todayMinutes     Float     @default(0)
+  dailyGoalMinutes Int       @default(15)
+  /// Daily reward cycle: index of the next day to claim and the local day last claimed (YYYY-MM-DD).
+  dailyNext        Int       @default(0)
+  dailyLast        String?
+
+  referralCode String @unique
+
+  /// Moderation (232): { kind: restricted | suspended, reason, at, until?, limits?, appeal? }. Null when in good standing.
+  restriction Json?
+
+  /// Set when the user asks to delete their account; signing in before then cancels it.
+  deleteAt  DateTime?
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  sessions          Session[]
+  materials         Material[]
+  quizAttempts      QuizAttempt[]
+  usageEvents       UsageEvent[]
+  coinTransactions  CoinTransaction[]
+  redemptions       Redemption[]
+  creditEntries     CreditEntry[]
+  referralsMade     Referral[]          @relation("inviter")
+  referredBy        Referral?           @relation("invitee")
+  lessonProgress    LessonProgress[]
+  savedItems        SavedItem[]
+  searches          SearchQuery[]
+  notifications     Notification[]
+  tutorChats        TutorConversation[]
+  tutorFiles        TutorFile[]
+  tutorNotes        TutorNote[]
+  tutorDecks        TutorDeck[]
+  videos            Video[]
+  videoStates       VideoUserState[]
+  videoReports      VideoReport[]
+  /// Video collections the learner made (besides the built-in Watch later and Exam revision).
+  videoCollections  String[]            @default([])
+  courseEnrollments CourseEnrollment[]
+  lessonCompletions LessonCompletion[]
+  courseAttempts    CourseQuizAttempt[]
+  courseNotes       CourseNote[]
+  courseRatings     CourseRating[]
+  certificates      Certificate[]
+  subscription      Subscription?
+  payments          Payment[]
+  billingTickets    BillingTicket[]
+  profilePhoto      ProfilePhoto?
+  helpTickets       HelpTicket[]
+  helpFiles         HelpFile[]
+  blockedUsers      BlockedUser[]
+  hiddenItems       HiddenItem[]
+  gameRuns          GameRun[]
+  gameProgress      GameProgress[]
+  questBoards       QuestBoard[]
+  worldProfile      WorldProfile?
+  leagueMembers     LeagueMember[]
+  friendsAsked      Friendship[]        @relation("friendRequester")
+  friendsAnswered   Friendship[]        @relation("friendAddressee")
+}
+
+/// One signed-in device, keyed by the Supabase session id in the access token. A revoked row
+/// makes the API reject that session's tokens, so "sign out other devices" takes effect at once.
+model Session {
+  id           String    @id
+  userId       String
+  user         User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  device       String
+  platform     String
+  location     String
+  userAgent    String?
+  createdAt    DateTime  @default(now())
+  lastActiveAt DateTime  @default(now())
+  revokedAt    DateTime?
+
+  @@index([userId, revokedAt])
+}
+
+/// Coin and XP ledger (screen 160). Positive or negative coins; XP only ever grows.
+model CoinTransaction {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  xp        Int
+  coins     Int
+  reason    String
+  createdAt DateTime @default(now())
+
+  @@index([userId, createdAt])
+}
+
+model Redemption {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  rewardId  String
+  cost      Int
+  code      String   @unique
+  createdAt DateTime @default(now())
+
+  // Not unique: boosts can be redeemed again; one-off rewards are checked in code.
+  @@index([userId, rewardId])
+}
+
+/// AI credit ledger: welcome credits, referral rewards, plan credits and spending.
+model CreditEntry {
+  id         String   @id @default(cuid())
+  userId     String
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  credits    Int
+  /// welcome | referral-inviter | referral-invitee | plan | spend
+  reason     String
+  /// Friend's short name for referral entries; what was made for spend entries.
+  friendName String?
+  createdAt  DateTime @default(now())
+
+  @@index([userId, createdAt])
+}
+
+model Referral {
+  id           String         @id @default(cuid())
+  inviterId    String
+  inviter      User           @relation("inviter", fields: [inviterId], references: [id], onDelete: Cascade)
+  inviteeId    String         @unique
+  invitee      User           @relation("invitee", fields: [inviteeId], references: [id], onDelete: Cascade)
+  /// Invitee's first name and initial, as shown to the inviter.
+  friendName   String
+  status       ReferralStatus @default(pending)
+  credits      Int
+  rejectReason String?
+  qualifiedAt  DateTime?
+  createdAt    DateTime       @default(now())
+
+  @@index([inviterId, status, qualifiedAt])
+}
+
+/// One row per AI call so cost can be tracked per user and feature.
+model UsageEvent {
+  id           String   @id @default(cuid())
+  userId       String
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  feature      String
+  model        String
+  inputTokens  Int
+  outputTokens Int
+  createdAt    DateTime @default(now())
+
+  @@index([userId, createdAt])
+}
+
+// ─── Learning catalogue (Home, Explore, Search, Subjects) ─────────────────────
+
+/// Fields shown to learners are stored in English; `i18n` holds translations keyed by language,
+/// e.g. { "yo": { "name": "…" } }. The API returns each item in the learner's language.
+model Category {
+  id       String    @id
+  name     String
+  icon     String
+  color    String
+  position Int       @default(0)
+  i18n     Json      @default("{}")
+  subjects Subject[]
+}
+
+model Subject {
+  id          String   @id
+  categoryId  String
+  category    Category @relation(fields: [categoryId], references: [id])
+  name        String
+  emoji       String
+  colors      String[]
+  description String
+  topics      String[]
+  position    Int      @default(0)
+  i18n        Json     @default("{}")
+  lessons     Lesson[]
+}
+
+enum LessonFormat {
+  video
+  summary
+  quiz
+  flashcards
+  audio
+}
+
+enum LessonLevel {
+  Beginner
+  Intermediate
+  Advanced
+}
+
+model Lesson {
+  id        String       @id
+  subjectId String
+  subject   Subject      @relation(fields: [subjectId], references: [id])
+  title     String
+  topic     String
+  format    LessonFormat
+  minutes   Int
+  level     LessonLevel
+  summary   String
+  keyPoints String[]
+  /// Exam tags such as WAEC, JAMB, NECO.
+  exams     String[]
+  /// Popularity, updated from real views; seeded with starting values.
+  views     Int          @default(0)
+  rating    Float        @default(4.5)
+  /// 0–100: how fast it's growing this week.
+  trend     Int          @default(0)
+  published Boolean      @default(true)
+  i18n      Json         @default("{}")
+  createdAt DateTime     @default(now())
+
+  progress LessonProgress[]
+
+  @@index([subjectId])
+}
+
+// ─── Learner library ──────────────────────────────────────────────────────────
+
+/// One row per learner and lesson: drives Continue learning and Recently viewed.
+model LessonProgress {
+  userId       String
+  user         User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  lessonId     String
+  lesson       Lesson    @relation(fields: [lessonId], references: [id], onDelete: Cascade)
+  /// 0–1. Never goes down.
+  progress     Float     @default(0)
+  lastViewedAt DateTime  @default(now())
+  completedAt  DateTime?
+
+  @@id([userId, lessonId])
+  @@index([userId, lastViewedAt])
+}
+
+model SavedItem {
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  /// 'lesson' today; courses, videos and study packs can use the same table.
+  kind      String   @default("lesson")
+  itemId    String
+  createdAt DateTime @default(now())
+
+  @@id([userId, kind, itemId])
+  @@index([userId, createdAt])
+}
+
+model SearchQuery {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  query     String
+  createdAt DateTime @default(now())
+
+  @@index([userId, createdAt])
+}
+
+// ─── Notifications inbox ──────────────────────────────────────────────────────
+
+/// Text is not stored: `template` + `params` are rendered by the app in the reader's language.
+model Notification {
+  id        String    @id @default(cuid())
+  userId    String
+  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  /// streak | reminder | achievement | class | content | referral | system
+  type      String
+  template  String
+  params    Json      @default("{}")
+  /// Where the button goes in the app, e.g. /lesson/l4
+  href      String?
+  readAt    DateTime?
+  createdAt DateTime  @default(now())
+
+  @@index([userId, createdAt])
+}
+
+// ─── AI tutor (screens 47–61) ─────────────────────────────────────────────────
+
+model TutorConversation {
+  /// Made by the app (so it can open the chat before the first reply), unique per account.
+  id        String         @id
+  userId    String
+  user      User           @relation(fields: [userId], references: [id], onDelete: Cascade)
+  title     String
+  /// English school subject from the first answer ("General" until then).
+  subject   String         @default("General")
+  /// explain | steps | exam | teach-back
+  mode      String
+  /// beginner | advanced
+  level     String
+  pinned    Boolean        @default(false)
+  /// { kind: 'lesson' | 'pack' | 'upload' | 'image', label, refId? }
+  context   Json?
+  createdAt DateTime       @default(now())
+  updatedAt DateTime       @updatedAt
+  messages  TutorMessage[]
+  files     TutorFile[]
+
+  @@index([userId, updatedAt])
+}
+
+model TutorMessage {
+  id             String            @id @default(cuid())
+  conversationId String
+  conversation   TutorConversation @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+  /// user | assistant
+  role           String
+  text           String            @default("")
+  /// { kind: 'image' | 'pdf', name, fileId?, page? }; the file itself is in TutorFile.
+  attachment     Json?
+  /// Assistant only: the structured answer (TutorAnswer in the app).
+  answer         Json?
+  /// ok | error
+  status         String            @default("ok")
+  error          Json?
+  replyToId      String?
+  /// Made on request and kept: { flashcards?, quiz?, imageFileId? }
+  extras         Json              @default("{}")
+  createdAt      DateTime          @default(now())
+
+  @@index([conversationId, createdAt])
+}
+
+/// Photos the learner asked about and diagrams the tutor drew, stored in the database (JPEG/PNG/WebP
+/// up to 10 MB, PDFs up to 10 MB). Served by an unguessable token.
+model TutorFile {
+  id             String             @id @default(cuid())
+  token          String             @unique
+  userId         String
+  user           User               @relation(fields: [userId], references: [id], onDelete: Cascade)
+  /// The conversation it belongs to; deleting the conversation deletes its files.
+  conversationId String?
+  conversation   TutorConversation? @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+  /// upload | diagram
+  kind           String
+  mimeType       String
+  data           Bytes
+  createdAt      DateTime           @default(now())
+
+  @@index([userId])
+  @@index([conversationId])
+}
+
+model TutorNote {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  title     String
+  notebook  String
+  tags      String[]
+  summary   String
+  body      Json
+  source    String
+  createdAt DateTime @default(now())
+
+  @@index([userId, createdAt])
+}
+
+model TutorDeck {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  name      String
+  subject   String
+  /// [{ front, back }]
+  cards     Json
+  createdAt DateTime @default(now())
+
+  @@index([userId, createdAt])
+}
+
+// ─── Study packs (screens 62–87) ──────────────────────────────────────────────
+
+/// A study pack made with AI from a PDF, document, photo, pasted text, topic or video.
+model Material {
+  /// Made by the app (so it can show upload progress before the server replies), unique per account.
+  id          String         @id
+  userId      String
+  user        User           @relation(fields: [userId], references: [id], onDelete: Cascade)
+  title       String
+  /// English school subject ("General" until the AI names one).
+  subject     String         @default("General")
+  folder      String         @default("")
+  tags        String[]       @default([])
+  /// pdf | doc | text | topic | video | image
+  sourceType  String
+  sourceLabel String
+  sourceUrl   String?
+  fileName    String?
+  fileSize    Int?
+  /// Text read from the source, kept for retries and so the tutor can answer from it.
+  sourceText  String         @default("")
+  /// { depth, difficulty, outputs }
+  options     Json
+  status      MaterialStatus @default(PROCESSING)
+  /// Processing step: 0 reading, 1 ideas, 2 notes, 3 practice, 4 mind map.
+  stage       Int            @default(0)
+  /// { code, retryable } when status is FAILED; the app shows text for the code.
+  error       Json?
+  /// The study pack (StudyContent in the app).
+  content     Json?
+  /// Flashcard review progress: { [cardId]: { box, dueAt, reviews } }
+  cards       Json           @default("{}")
+  saved       Boolean        @default(false)
+  offline     Boolean        @default(false)
+  /// Best quiz score so far, 0–1.
+  mastery     Float          @default(0)
+  /// The credit reserved for the current generation, returned if it fails.
+  creditHeld  Boolean        @default(false)
+  createdAt   DateTime       @default(now())
+  updatedAt   DateTime       @updatedAt
+
+  files        MaterialFile[]
+  quizAttempts QuizAttempt[]
+
+  @@index([userId, createdAt])
+}
+
+/// The uploaded source file and drawn diagrams, stored in the database and served by an unguessable token.
+model MaterialFile {
+  id         String   @id @default(cuid())
+  token      String   @unique
+  materialId String
+  material   Material @relation(fields: [materialId], references: [id], onDelete: Cascade)
+  /// source | diagram
+  kind       String
+  name       String
+  mimeType   String
+  data       Bytes
+  createdAt  DateTime @default(now())
+
+  @@index([materialId])
+}
+
+model QuizAttempt {
+  id           String   @id @default(cuid())
+  userId       String
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  materialId   String
+  material     Material @relation(fields: [materialId], references: [id], onDelete: Cascade)
+  questionIds  String[]
+  /// The option picked for each question, or null when time ran out.
+  answers      Json
+  score        Int
+  total        Int
+  seconds      Int      @default(0)
+  /// { count, difficulty, types, timed }
+  settings     Json
+  weakConcepts String[]
+  createdAt    DateTime @default(now())
+
+  @@index([materialId, createdAt])
+}
+
+// ─── Short videos (screens 88–109) ────────────────────────────────────────────
+
+/**
+ * A narrated explainer: scenes (heading, text, illustration, narration) the app plays in time with
+ * each scene's audio. Knowzone Originals have no owner and one row per lesson and language;
+ * generated videos belong to the learner who made them.
+ */
+model Video {
+  /// Originals: o-<lessonId>-<language>. Generated: made by the app, unique per account.
+  id          String      @id
+  userId      String?
+  user        User?       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  /// catalog | generated
+  origin      String
+  lessonId    String?
+  /// Narration language (an app language id).
+  language    String      @default("en")
+  title       String
+  subject     String      @default("General")
+  level       String      @default("Your level")
+  description String      @default("")
+  /// { length, voiceId, styleId, captions, captionStyle, language }
+  settings    Json
+  /// What it was made from: { kind: 'topic' | 'material' | 'lesson' | 'text', ... }
+  source      Json?
+  /// The scenes the app plays (Scene[]), with audio and image links.
+  scenes      Json        @default("[]")
+  /// generating | ready | failed
+  status      String      @default("generating")
+  stage       Int         @default(0)
+  /// { code, retryable } when failed; the app shows text for the code.
+  error       Json?
+  revision    Int         @default(1)
+  /// AI credits held while this video is made, returned if it fails.
+  creditsHeld Int         @default(0)
+  views       Int         @default(0)
+  /// Starting likes for Originals; real likes are counted from VideoUserState.
+  baseLikes   Int         @default(0)
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+  files       VideoFile[]
+
+  @@unique([lessonId, language])
+  @@index([userId, createdAt])
+}
+
+/// Narration audio (MP3) and scene illustrations (JPEG), stored in the database, served by token.
+model VideoFile {
+  id        String   @id @default(cuid())
+  token     String   @unique
+  videoId   String
+  video     Video    @relation(fields: [videoId], references: [id], onDelete: Cascade)
+  /// audio | image
+  kind      String
+  mimeType  String
+  data      Bytes
+  createdAt DateTime @default(now())
+
+  @@index([videoId])
+}
+
+/// One learner's likes, saves, offline downloads and watch progress for a video.
+model VideoUserState {
+  userId     String
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  /// Any video id the app shows (Originals, own videos, or built-in fallbacks).
+  videoId    String
+  liked      Boolean  @default(false)
+  /// The collection it's saved in, or null when not saved.
+  collection String?
+  offline    Boolean  @default(false)
+  /// Seconds watched, to resume.
+  progress   Float    @default(0)
+  viewed     Boolean  @default(false)
+  updatedAt  DateTime @updatedAt
+
+  @@id([userId, videoId])
+  @@index([videoId])
+}
+
+/// A learner's report about a video (97), for moderation. `videoId` may be a built-in video with no row here.
+model VideoReport {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  videoId   String
+  reason    String
+  details   String   @default("")
+  /// open | reviewed | removed
+  status    String   @default("open")
+  createdAt DateTime @default(now())
+
+  @@index([status, createdAt])
+}
+
+// ─── Courses (screens 110–128) ────────────────────────────────────────────────
+
+/**
+ * A full course built from an openly licensed textbook (OpenStax, CC BY 4.0, pinned to a licensed
+ * version): one module per chapter, a reading lesson per section, plus a video, an interactive
+ * lesson and a quiz per chapter.
+ */
+model Course {
+  id           String         @id
+  title        String
+  subtitle     String
+  /// Catalogue subject id (biology, physics…).
+  subjectId    String
+  /// Beginner | Intermediate | Advanced
+  level        String
+  emoji        String
+  colors       String[]
+  description  String
+  outcomes     String[]
+  requirements String[]
+  exams        String[]
+  tags         String[]
+  featured     Boolean        @default(false)
+  position     Int            @default(0)
+  /// { book, authors, publisher, url, license, licenseUrl, version, attribution }
+  source       Json
+  published    Boolean        @default(true)
+  updatedAt    DateTime       @updatedAt
+  modules      CourseModule[]
+  lessons      CourseLesson[]
+}
+
+model CourseModule {
+  id       String         @id
+  courseId String
+  course   Course         @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  position Int
+  title    String
+  summary  String
+  lessons  CourseLesson[]
+
+  @@index([courseId, position])
+}
+
+model CourseLesson {
+  /// <courseId>/<lesson slug>
+  id       String       @id
+  courseId String
+  course   Course       @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  moduleId String
+  module   CourseModule @relation(fields: [moduleId], references: [id], onDelete: Cascade)
+  position Int
+  title    String
+  /// reading | video | interactive | quiz
+  kind     String
+  minutes  Int
+  summary  String
+  /// LessonContent in the app: objectives, reading, interactive, quiz, keyPoints, resources, video.
+  content  Json
+
+  @@index([courseId, position])
+}
+
+model CourseEnrollment {
+  userId       String
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  courseId     String
+  enrolledAt   DateTime @default(now())
+  saved        Boolean  @default(false)
+  lastLessonId String?
+  minutes      Float    @default(0)
+  updatedAt    DateTime @updatedAt
+
+  @@id([userId, courseId])
+}
+
+model LessonCompletion {
+  userId      String
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  courseId    String
+  lessonId    String
+  completedAt DateTime @default(now())
+
+  @@id([userId, lessonId])
+  @@index([userId, courseId])
+}
+
+/// A lesson quiz, marked by the server.
+model CourseQuizAttempt {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  courseId  String
+  lessonId  String
+  answers   Int[]
+  score     Int
+  total     Int
+  seconds   Int      @default(0)
+  createdAt DateTime @default(now())
+
+  @@index([userId, lessonId])
+}
+
+model CourseNote {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  courseId  String
+  lessonId  String
+  text      String
+  quote     String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([userId, courseId])
+}
+
+model CourseRating {
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  courseId  String
+  stars     Int
+  tags      String[]
+  text      String   @default("")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@id([userId, courseId])
+  @@index([courseId])
+}
+
+/// Issued by the server only when every lesson is done and every quiz passed. Anyone can verify it by id.
+model Certificate {
+  id       String   @id
+  userId   String
+  user     User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  courseId String
+  /// The learner's name as printed.
+  name     String
+  /// Average best quiz score, 0–1.
+  score    Float
+  issuedAt DateTime @default(now())
+
+  @@unique([userId, courseId])
+}
+
+// ─── Subscriptions and payments (screens 198–218) ─────────────────────────────
+
+/**
+ * A learner's paid plan. Prepaid: each payment adds a month, term or year; reminders go out before
+ * it ends, and it expires unless renewed. Cancelling keeps access until the end of the paid period.
+ */
+model Subscription {
+  userId           String   @id
+  user             User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  plan             Plan
+  /// month | term | year
+  period           String
+  /// active | cancelled | expired
+  status           String
+  startedAt        DateTime
+  currentPeriodEnd DateTime
+  /// Prepaid plans don't renew by themselves (card saving isn't used).
+  autoRenew        Boolean  @default(false)
+  /// { type, label } of the last payment
+  method           Json
+  cancelReason     String?
+  /// When the next month's AI credits are due (a paid plan adds credits month by month).
+  nextCreditAt     DateTime
+  /// Renewal reminders already sent for this period: '7d', '1d'.
+  remindersSent    String[] @default([])
+  updatedAt        DateTime @updatedAt
+}
+
+model Payment {
+  id            String    @id @default(cuid())
+  userId        String
+  user          User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  plan          Plan
+  /// month | term | year
+  period        String
+  /// Charged after any discount, in minor units of `currency` (kobo, cents): 499 = $4.99.
+  amount        Int
+  /// Minor units, like amount.
+  discount      Int       @default(0)
+  /// NGN | USD
+  currency      String    @default("NGN")
+  /// pending | paid | failed | refunded
+  status        String    @default("pending")
+  /// { type: card | transfer | ussd, label }
+  method        Json
+  /// Our reference, sent to Flutterwave as the tx_ref.
+  reference     String    @unique
+  /// Flutterwave's transaction id (used for refunds), known once the learner pays.
+  providerRef   String?   @unique
+  /// Flutterwave's hosted payment page (cards, or when transfer/USSD details can't be made in the app).
+  checkoutUrl   String?
+  /// Bank transfer / USSD details shown in the app: { bank, accountNumber, accountName, expiresAt } or { bank, code, expiresAt }
+  instructions  Json?
+  promo         String?
+  failureReason String?
+  renewal       Boolean   @default(false)
+  paidAt        DateTime?
+  refundedAt    DateTime?
+  createdAt     DateTime  @default(now())
+
+  @@index([userId, createdAt])
+  @@index([status, createdAt])
+}
+
+/// Refund and payment support requests (218).
+model BillingTicket {
+  id         String   @id
+  userId     String
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  /// refund | double-charge | not-activated | other
+  topic      String
+  paymentId  String?
+  message    String
+  /// open | resolved
+  status     String   @default("open")
+  resolution String?
+  createdAt  DateTime @default(now())
+
+  @@index([userId, createdAt])
+}
+
+/**
+ * An uploaded profile picture (179), stored in the database and served by an unguessable token.
+ */
+model ProfilePhoto {
+  userId    String   @id
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  /// Changes with every upload, so old links (and caches) stop showing the old picture.
+  token     String   @unique
+  mimeType  String
+  data      Bytes
+  updatedAt DateTime @updatedAt
+}
+
+// ─── Help, safety and legal (screens 219–232) ─────────────────────────────────
+
+/**
+ * A request to the Knowzone team: contact support, bug report, feedback, safety report, copyright
+ * notice or appeal. Staff answer with `npm run support` and the learner reads the thread in the app.
+ */
+model HelpTicket {
+  /// KZ-123456: short enough to read out on the phone.
+  id        String        @id
+  userId    String
+  user      User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  /// support | bug | feedback | report | copyright | appeal
+  kind      String
+  /// account | learning | ai | payments | technical | safety | other
+  topic     String?
+  subject   String
+  /// open (waiting for the team) | waiting (waiting for the learner) | resolved
+  status    String        @default("open")
+  /// Device details for bugs, the reported item, a feedback rating…
+  meta      Json          @default("{}")
+  createdAt DateTime      @default(now())
+  updatedAt DateTime      @updatedAt
+  messages  HelpMessage[]
+
+  @@index([userId, updatedAt])
+  @@index([status, kind, createdAt])
+}
+
+model HelpMessage {
+  id        String     @id @default(cuid())
+  ticketId  String
+  ticket    HelpTicket @relation(fields: [ticketId], references: [id], onDelete: Cascade)
+  /// me (the learner) | support
+  from      String
+  text      String
+  /// Automatic replies: the app shows its own translation (ack) instead of `text`.
+  template  String?
+  /// Which staff member replied (for the team's records; not shown to learners).
+  staff     String?
+  createdAt DateTime   @default(now())
+
+  @@index([ticketId, createdAt])
+}
+
+/// Screenshots attached to bug reports, stored in the database and served by an unguessable token.
+model HelpFile {
+  id        String   @id @default(cuid())
+  token     String   @unique
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  mimeType  String
+  data      Bytes
+  createdAt DateTime @default(now())
+
+  @@index([userId])
+}
+
+/// Players the learner blocked (231).
+model BlockedUser {
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  blockedId String
+  name      String
+  createdAt DateTime @default(now())
+
+  @@id([userId, blockedId])
+}
+
+/// Content the learner hid from their feeds, usually after reporting it (225, 231).
+model HiddenItem {
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  /// video | course | lesson | study-pack | tutor-answer | player | other
+  type      String
+  itemId    String
+  title     String
+  createdAt DateTime @default(now())
+
+  @@id([userId, type, itemId])
+  @@index([userId, createdAt])
+}
+
+/// Copyright notices (230). Anyone can send one, signed in or not; kept even if the sender's account goes.
+model CopyrightNotice {
+  /// CR-123456
+  reference    String   @id
+  userId       String?
+  name         String
+  email        String
+  organisation String   @default("")
+  work         String
+  location     String
+  /// open | actioned | rejected
+  status       String   @default("open")
+  createdAt    DateTime @default(now())
+
+  @@index([status, createdAt])
+}
+
+// ─── Knowzone World word games (English) ──────────────────────────────────────
+
+/**
+ * One play of a word game. The server builds the puzzles and keeps the answers in `state`; the app
+ * only ever sees the questions, and every answer is checked here before points count.
+ */
+model GameRun {
+  id         String    @id @default(cuid())
+  userId     String
+  user       User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  /// hidden-letters | word-clash | word-hunter | spellcaster | sentence-master
+  game       String
+  level      Int
+  /// Word Clash: another learner's run with the same racks reuses this seed.
+  seed       String
+  /// The puzzles with their answers, and what happened at each step. Never sent to the app as is.
+  state      Json
+  /// playing | finished | abandoned
+  status     String    @default("playing")
+  score      Int       @default(0)
+  correct    Int       @default(0)
+  total      Int       @default(0)
+  hearts     Int       @default(3)
+  stars      Int       @default(0)
+  xp         Int       @default(0)
+  coins      Int       @default(0)
+  /// Coins spent on hints during this run.
+  hintCoins  Int       @default(0)
+  /// Bumped on every change, so two taps arriving together can't both count.
+  version    Int       @default(0)
+  startedAt  DateTime  @default(now())
+  finishedAt DateTime?
+
+  @@index([userId, status, startedAt])
+  @@index([game, level, status, finishedAt])
+}
+
+/// Best result per game level, which unlocks the next level.
+model GameProgress {
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  game      String
+  level     Int
+  bestStars Int      @default(0)
+  bestScore Int      @default(0)
+  plays     Int      @default(0)
+  updatedAt DateTime @updatedAt
+
+  @@id([userId, game, level])
+}
+
+/// World Quests: one board per learner per period ("daily" for a local day, "weekly" for an ISO
+/// week, which also holds the journey). Progress comes from finished game runs; rewards are paid on claim.
+model QuestBoard {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  kind      String
+  key       String
+  /// Quests picked for this period, their progress and what's been claimed (see services/quests.ts).
+  state     Json
+  /// Bumped on every change, so two claims at once can't both pay.
+  version   Int      @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([userId, kind, key])
+}
+
+/// Knowzone World on the server: the learner's avatar, cosmetics they've won, and leaderboard choice.
+model WorldProfile {
+  userId         String   @id
+  user           User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  /// The avatar as the app draws it (skin, hair, eyes, mouth, outfit, background, hat, glasses).
+  avatar         Json?
+  /// Cosmetics won from achievements and quest chests (bought ones are Redemptions).
+  earned         String[] @default([])
+  /// Show me on leagues and school boards (friends still see each other).
+  onLeaderboards Boolean  @default(true)
+  /// Appear without a name or avatar on leagues and school boards (friends still see you).
+  anonymous      Boolean  @default(false)
+  updatedAt      DateTime @updatedAt
+}
+
+/// A learner's place in a weekly league: a tier (0 bronze … 3 diamond) and a group of up to 30.
+model LeagueMember {
+  userId   String
+  user     User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  /// ISO week, e.g. "2026-W44" (Lagos time).
+  week     String
+  tier     Int
+  group    String
+  joinedAt DateTime @default(now())
+
+  @@id([userId, week])
+  @@index([week, group])
+}
+
+/// Friends, added with a Knowzone code: a request, then accepted (declined requests are deleted).
+model Friendship {
+  id          String    @id @default(cuid())
+  requesterId String
+  requester   User      @relation("friendRequester", fields: [requesterId], references: [id], onDelete: Cascade)
+  addresseeId String
+  addressee   User      @relation("friendAddressee", fields: [addresseeId], references: [id], onDelete: Cascade)
+  /// "pending" or "accepted".
+  status      String
+  createdAt   DateTime  @default(now())
+  respondedAt DateTime?
+
+  @@unique([requesterId, addresseeId])
+  @@index([addresseeId, status])
+}

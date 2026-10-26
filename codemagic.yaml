@@ -1,0 +1,63 @@
+# Codemagic: builds the Knowzone AI Android app (apps/mobile, Expo) as an installable APK.
+#
+# Set up once in Codemagic (Team settings → Environment variables / Code signing):
+# - Environment group "knowzone_app" with:
+#     EXPO_PUBLIC_API_URL                    the server's public address (https://…)
+#     EXPO_PUBLIC_SUPABASE_URL               from the Supabase project settings
+#     EXPO_PUBLIC_SUPABASE_PUBLISHABLE_KEY   the publishable (anon) key — never the service key
+# - Optional: an Android keystore named "knowzone_keystore" (Code signing identities). Without it the
+#   APK is signed with a debug key: fine for installing on phones to test, not for the Play Store.
+#   Keep the keystore and its passwords safe: every future update must be signed with the same one.
+
+workflows:
+  android-apk:
+    name: Knowzone AI · Android APK
+    instance_type: linux_x2
+    max_build_duration: 60
+    working_directory: apps/mobile
+    environment:
+      node: 22
+      java: 17
+      groups:
+        - knowzone_app
+      android_signing:
+        - knowzone_keystore
+      vars:
+        EXPO_PUBLIC_USE_MOCKS: 'false'
+    cache:
+      cache_paths:
+        - $HOME/.npm
+        - $HOME/.gradle/caches
+    triggering:
+      events:
+        - push
+      branch_patterns:
+        - pattern: main
+          include: true
+      cancel_previous_builds: true
+    scripts:
+      - name: Install dependencies
+        script: npm ci
+      - name: Check types, lint and translations
+        script: |
+          npx tsc --noEmit
+          npm run lint
+          npm run i18n:check
+      - name: Generate the Android project
+        script: npx expo prebuild --platform android --no-install --clean
+      - name: Use the Codemagic keystore for release builds
+        script: node scripts/ci-android-signing.mjs
+      - name: Build the APK
+        script: |
+          cd android
+          chmod +x gradlew
+          ./gradlew assembleRelease --no-daemon
+    artifacts:
+      - android/app/build/outputs/apk/release/*.apk
+    publishing:
+      email:
+        recipients:
+          - nopausemd@gmail.com
+        notify:
+          success: true
+          failure: true

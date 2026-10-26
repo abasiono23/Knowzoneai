@@ -1,0 +1,2450 @@
+{
+ "c1": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "What is the difference between descriptive statistics and inferential statistics?",
+    "answer": "Descriptive statistics organize and summarize data (graphs, averages). Inferential statistics use probability and sample data to draw conclusions about a population and measure confidence in those conclusions."
+   },
+   {
+    "kind": "choice",
+    "prompt": "Which of the following is a qualitative (categorical) variable?",
+    "options": [
+     "Number of pets a household owns",
+     "Hair color of a person",
+     "Time in minutes to run a race",
+     "Height in centimeters"
+    ],
+    "correctIndex": 1,
+    "feedback": "Hair color is categorical (qualitative); the others are quantitative."
+   },
+   {
+    "kind": "order",
+    "prompt": "Put these sampling methods in order from generally most randomized/representative to least randomized (best to worst for avoiding bias):",
+    "items": [
+     "Simple random sampling",
+     "Stratified sampling",
+     "Cluster sampling",
+     "Convenience sampling"
+    ],
+    "feedback": "Stratified and simple random are both highly representative when done properly; cluster can be representative but depends on clustering; convenience is nonrandom and often biased."
+   },
+   {
+    "kind": "fill",
+    "prompt": "A dataset measured to the nearest tenth (one decimal place) should have its final statistic reported to the nearest __________ (one more decimal place).",
+    "before": "A dataset measured to the nearest tenth (one decimal place) should have its final statistic reported to the nearest",
+    "after": ".",
+    "options": [
+     "tenth",
+     "hundredth",
+     "thousandth"
+    ],
+    "correctIndex": 1,
+    "feedback": "Final answers should be rounded to one more decimal place than the original measurements (tenth -> hundredth)."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match the level of measurement (left) with its correct description (right).",
+    "pairs": [
+     [
+      "Nominal",
+      "Cannot be ordered; no numerical calculations meaningful"
+     ],
+     [
+      "Ordinal",
+      "Can be ordered but differences are not measured"
+     ],
+     [
+      "Interval",
+      "Differences measurable but no true zero (ratios meaningless)"
+     ],
+     [
+      "Ratio",
+      "Has a true zero; differences and ratios are meaningful"
+     ]
+    ],
+    "feedback": "Nominal < ordinal < interval < ratio increase in the amount of numeric information useful for calculations."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "e791097b-b98",
+    "type": "mcq",
+    "question": "Which statement best defines a random sample?",
+    "options": [
+     "A sample chosen by selecting the easiest available subjects",
+     "A sample where each individual in the population has an equal chance of being included",
+     "A sample that contains individuals chosen to match the researcher's expectations",
+     "A sample that always includes the entire population"
+    ],
+    "correctIndex": 1,
+    "explanation": "A random sample gives each population member an equal chance of selection, reducing selection bias.",
+    "concept": "random sample",
+    "difficulty": "easy"
+   },
+   {
+    "id": "b2dfded3-c9d",
+    "type": "mcq",
+    "question": "Which sampling method involves dividing the population into groups and taking a random sample from each group?",
+    "options": [
+     "Cluster sampling",
+     "Systematic sampling",
+     "Stratified sampling",
+     "Convenience sampling"
+    ],
+    "correctIndex": 2,
+    "explanation": "Stratified sampling splits the population into strata and samples from each stratum.",
+    "concept": "sampling methods",
+    "difficulty": "medium"
+   },
+   {
+    "id": "e44a7353-f01",
+    "type": "mcq",
+    "question": "Which of these is a potential consequence of using convenience sampling?",
+    "options": [
+     "Smaller sampling error than random sampling",
+     "Guaranteed representative results",
+     "Biased results that may not generalize to the population",
+     "Elimination of all lurking variables"
+    ],
+    "correctIndex": 2,
+    "explanation": "Convenience samples are nonrandom and often produce biased, nonrepresentative results.",
+    "concept": "bias",
+    "difficulty": "easy"
+   },
+   {
+    "id": "b564af35-f06",
+    "type": "mcq",
+    "question": "Which variable type allows you to compute meaningful ratios (for example, someone being twice as tall)?",
+    "options": [
+     "Nominal",
+     "Ordinal",
+     "Interval",
+     "Ratio"
+    ],
+    "correctIndex": 3,
+    "explanation": "Ratio-level variables have a true zero, so ratios are meaningful.",
+    "concept": "levels",
+    "difficulty": "easy"
+   },
+   {
+    "id": "d849d7ba-4c9",
+    "type": "mcq",
+    "question": "You measure blood pressure to the nearest mm Hg (an interval-like measure). To what precision should you report a computed average if measurements are to the nearest 1 mm Hg?",
+    "options": [
+     "To the nearest mm Hg",
+     "To the nearest 0.1 mm Hg",
+     "To the nearest 10 mm Hg",
+     "Do not round at all"
+    ],
+    "correctIndex": 1,
+    "explanation": "Report the final answer rounded to one more decimal place than the original measurements (here to the nearest 0.1).",
+    "concept": "rounding",
+    "difficulty": "medium"
+   },
+   {
+    "id": "88161a16-784",
+    "type": "mcq",
+    "question": "Which practice helps eliminate lurking variables in an experiment?",
+    "options": [
+     "Assigning subjects to treatment groups randomly",
+     "Using the smallest possible sample",
+     "Choosing subjects who are most likely to respond as expected",
+     "Reporting results without showing the control group"
+    ],
+    "correctIndex": 0,
+    "explanation": "Random assignment helps ensure the only systematic difference between groups is the treatment, reducing lurking variables.",
+    "concept": "experimental design",
+    "difficulty": "easy"
+   },
+   {
+    "id": "267a825d-fe4",
+    "type": "mcq",
+    "question": "In a blinded experiment, which statement is true?",
+    "options": [
+     "Only researchers know which subjects receive the placebo",
+     "Only subjects know which treatment they receive",
+     "Neither subjects nor certain researchers know who receives which treatment",
+     "Everyone, including subjects and researchers, knows the treatment assignments"
+    ],
+    "correctIndex": 2,
+    "explanation": "Blinding means subjects and sometimes researchers do not know treatment assignments to prevent bias.",
+    "concept": "blinding",
+    "difficulty": "medium"
+   },
+   {
+    "id": "0bb47cc1-d75",
+    "type": "tf",
+    "question": "Larger properly selected samples generally model the population more closely than smaller properly selected samples.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 0,
+    "explanation": "Larger samples tend to reduce sampling variability, so they usually better reflect the population when selected properly.",
+    "concept": "sample size",
+    "difficulty": "easy"
+   }
+  ],
+  "video": {
+   "youtubeId": "z0Ry_3_qhDw",
+   "title": "Introduction to sampling distributions | Sampling distributions | AP Statistics | Khan Academy",
+   "channel": "Khan Academy",
+   "seconds": 438
+  }
+ },
+ "c2": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "What is the defining advantage of a stem-and-leaf plot compared with a histogram?",
+    "answer": "A stem-and-leaf plot lists every individual data value so exact values are visible, whereas a histogram groups values into classes."
+   },
+   {
+    "kind": "choice",
+    "prompt": "Which graph is best when showing how a single quantity changes over time?",
+    "options": [
+     "Bar graph",
+     "Line graph",
+     "Stem-and-leaf plot",
+     "Box plot"
+    ],
+    "correctIndex": 1,
+    "feedback": "Line graphs (time series graphs) are used for quantities that vary with time and to find trends."
+   },
+   {
+    "kind": "order",
+    "prompt": "Place these steps for constructing a stem-and-leaf plot in the correct order.",
+    "items": [
+     "Divide each observation into a stem and a leaf",
+     "Write stems in a vertical column from smallest to largest and draw a vertical line",
+     "Write leaves in increasing order beside their stems",
+     "Ensure leaves are separated by spaces so exact values are readable"
+    ],
+    "feedback": "A stemplot requires splitting numbers, listing stems, adding leaves in order, and spacing leaves for readability."
+   },
+   {
+    "kind": "fill",
+    "prompt": "A histogram differs from a bar graph because histogram bars are ______ and placed ______, while bar graph bars represent ______ and are ______ separated.",
+    "before": "A histogram differs from a bar graph because",
+    "after": ".",
+    "options": [
+     "equal width; adjacent; categories; not",
+     "unequal width; adjacent; numeric values; touching",
+     "equal width; adjacent; classes of quantitative data; contiguous",
+     "equal width; spaced; categories; separated"
+    ],
+    "correctIndex": 2,
+    "feedback": "Histograms use contiguous boxes of equal width for classes of quantitative data; bar graphs compare distinct categories and have separated bars."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match each graph type to its most appropriate use.",
+    "pairs": [
+     [
+      "Stem-and-leaf plot",
+      "Show every individual value in a small quantitative data set"
+     ],
+     [
+      "Histogram",
+      "Display shape, center, and spread of a large continuous data set"
+     ],
+     [
+      "Bar graph",
+      "Compare categorical data across groups"
+     ],
+     [
+      "Line graph (time series)",
+      "Show trends of a quantity over time"
+     ]
+    ],
+    "feedback": "Each graph type fits specific data: stems for small exact lists, histograms for continuous distributions, bars for categories, lines for time trends."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "55ee3666-14a",
+    "type": "mcq",
+    "question": "Which of these is NOT part of the five-number summary used to make a box plot?",
+    "options": [
+     "Minimum",
+     "First quartile (Q1)",
+     "Mean",
+     "Maximum"
+    ],
+    "correctIndex": 2,
+    "explanation": "The five-number summary is minimum, Q1, median, Q3, and maximum; the mean is not included.",
+    "concept": "five-number",
+    "difficulty": "easy"
+   },
+   {
+    "id": "f07cebc8-612",
+    "type": "mcq",
+    "question": "If a data set is strongly right (positive) skewed, which relationship between mean and median is expected?",
+    "options": [
+     "Mean < Median",
+     "Mean = Median",
+     "Mean > Median",
+     "Mode > Mean"
+    ],
+    "correctIndex": 2,
+    "explanation": "In a right-skewed distribution the mean is pulled to the right by large values so mean > median.",
+    "concept": "skewness",
+    "difficulty": "medium"
+   },
+   {
+    "id": "1026f47c-1ac",
+    "type": "mcq",
+    "question": "You have grouped frequency data with class midpoints and frequencies. To approximate the mean you should:",
+    "options": [
+     "Add all midpoints and divide by number of classes",
+     "Multiply each midpoint by its frequency, sum those products, then divide by total frequency",
+     "Use the median of the middle class only",
+     "Take the average of the smallest and largest midpoints"
+    ],
+    "correctIndex": 1,
+    "explanation": "Approximate mean for grouped data: sum(midpoint × frequency) divided by total frequency.",
+    "concept": "grouped mean",
+    "difficulty": "medium"
+   },
+   {
+    "id": "bb8da853-6c2",
+    "type": "mcq",
+    "question": "Which statement about histograms is true?",
+    "options": [
+     "Bars are separated to emphasize categories",
+     "Horizontal axis shows categories of qualitative data",
+     "Bars have unequal widths to represent frequency",
+     "Bars are contiguous and horizontal axis represents classes of quantitative data"
+    ],
+    "correctIndex": 3,
+    "explanation": "Histograms have contiguous bars of equal width and the horizontal axis shows quantitative classes.",
+    "concept": "histogram",
+    "difficulty": "easy"
+   },
+   {
+    "id": "62122633-26d",
+    "type": "mcq",
+    "question": "The interquartile range (IQR) is calculated as:",
+    "options": [
+     "Q1 − Q3",
+     "Q3 − Q1",
+     "(Q1 + Q3)/2",
+     "Maximum − Minimum"
+    ],
+    "correctIndex": 1,
+    "explanation": "IQR = Q3 − Q1, the range of the middle 50% of data.",
+    "concept": "IQR",
+    "difficulty": "easy"
+   },
+   {
+    "id": "450254b3-9e7",
+    "type": "mcq",
+    "question": "Which measure is least affected by extreme values (outliers)?",
+    "options": [
+     "Mean",
+     "Standard deviation",
+     "Median",
+     "Sum of values"
+    ],
+    "correctIndex": 2,
+    "explanation": "The median resists influence from extreme values because it depends only on rank order.",
+    "concept": "robustness",
+    "difficulty": "easy"
+   },
+   {
+    "id": "effdbca8-683",
+    "type": "tf",
+    "question": "A stem-and-leaf plot is a good choice when the data set is small and you want to see exact values.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 0,
+    "explanation": "True — stemplots list all individual values and work well for small data sets.",
+    "concept": "stemplot",
+    "difficulty": "easy"
+   },
+   {
+    "id": "bb20b837-3dc",
+    "type": "mcq",
+    "question": "Which formula gives the sample standard deviation s?",
+    "options": [
+     "s = √(∑(x − x̄)² / n)",
+     "s = √(∑(x − μ)² / n)",
+     "s = √(∑(x − x̄)² / (n − 1))",
+     "s = √(∑f(x − μ)² / N)"
+    ],
+    "correctIndex": 2,
+    "explanation": "The sample standard deviation uses denominator (n − 1): s = √(∑(x − x̄)² / (n − 1)).",
+    "concept": "std dev",
+    "difficulty": "medium"
+   }
+  ],
+  "video": {
+   "youtubeId": "VHYOuWu9jQI",
+   "title": "Descriptive Statistics vs Inferential Statistics",
+   "channel": "The Organic Chemistry Tutor",
+   "seconds": 440
+  }
+ },
+ "c3": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "What is the sample space S when flipping a fair coin once?",
+    "answer": "{H, T}"
+   },
+   {
+    "kind": "choice",
+    "prompt": "Which of these best describes mutually exclusive events A and B?",
+    "options": [
+     "They cannot both occur on the same trial",
+     "Knowledge that A occurred does not change probability of B",
+     "P(A AND B) = P(A)P(B)",
+     "Events must be sampled with replacement"
+    ],
+    "correctIndex": 0,
+    "feedback": "Mutually exclusive events have no outcomes in common, so they cannot both occur."
+   },
+   {
+    "kind": "order",
+    "prompt": "Put the steps in the correct order for using the multiplication rule to find P(A AND B) when events may be dependent.",
+    "items": [
+     "Find P(A|B), the probability of A given B occurred",
+     "Compute P(A AND B) = P(B) × P(A|B)",
+     "Find P(B)",
+     "Interpret the result as the joint probability of A and B"
+    ],
+    "feedback": "Use P(B) and the conditional probability P(A|B) in the multiplication rule to get the joint probability."
+   },
+   {
+    "kind": "fill",
+    "prompt": "Complete the sentence about sampling: When sampling without replacement, events are considered ___________.",
+    "before": "When sampling without replacement, events are considered",
+    "after": ".",
+    "options": [
+     "dependent",
+     "independent",
+     "mutually exclusive"
+    ],
+    "correctIndex": 0,
+    "feedback": "Removing an item changes the composition of the population, so later probabilities depend on earlier outcomes."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match each term to its definition.",
+    "pairs": [
+     [
+      "Sample space",
+      "Set of all possible outcomes"
+     ],
+     [
+      "Event",
+      "A subset of the sample space"
+     ],
+     [
+      "Independent events",
+      "Occurrence of one does not change probability of the other"
+     ]
+    ],
+    "feedback": "These definitions match the terminology used in the chapter."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "887e7918-991",
+    "type": "mcq",
+    "question": "A fair six-sided die is rolled once. What is the probability of the event A = {even number}?",
+    "options": [
+     "1/2",
+     "1/3",
+     "1/6",
+     "2/3"
+    ],
+    "correctIndex": 0,
+    "explanation": "Even outcomes are {2,4,6}, three of six possible outcomes, so probability = 3/6 = 1/2.",
+    "concept": "sample space",
+    "difficulty": "easy"
+   },
+   {
+    "id": "45eabe3d-a85",
+    "type": "mcq",
+    "question": "Two events A and B are independent. Which equation must be true?",
+    "options": [
+     "P(A AND B) = P(A)P(B)",
+     "P(A OR B) = P(A) + P(B)",
+     "P(A|B) = P(B|A)",
+     "P(A AND B) = 0"
+    ],
+    "correctIndex": 0,
+    "explanation": "Independence implies P(A|B) = P(A), so P(A AND B) = P(A)P(B).",
+    "concept": "independence",
+    "difficulty": "medium"
+   },
+   {
+    "id": "d4c20059-d81",
+    "type": "mcq",
+    "question": "A bag contains 4 blue and 3 white marbles. James draws one marble, replaces it, then draws again. What is P(blue on both draws)?",
+    "options": [
+     "16/49",
+     "4/7",
+     "8/21",
+     "12/49"
+    ],
+    "correctIndex": 0,
+    "explanation": "With replacement the draws are independent: (4/7) × (4/7) = 16/49.",
+    "concept": "replacement",
+    "difficulty": "medium"
+   },
+   {
+    "id": "59fc275b-def",
+    "type": "mcq",
+    "question": "Mark draws two marbles from a bag with 4 green, 3 red, and 2 yellow marbles WITHOUT replacement. What is P(first yellow, then green)?",
+    "options": [
+     "2/9 × 4/8",
+     "2/9 × 4/9",
+     "4/9 × 2/8",
+     "4/9 × 4/8"
+    ],
+    "correctIndex": 0,
+    "explanation": "First pick yellow: 2/9. Without replacement, then green probability is 4/8. Multiply: (2/9)(4/8).",
+    "concept": "conditional",
+    "difficulty": "medium"
+   },
+   {
+    "id": "0d3f3bcb-8ae",
+    "type": "tf",
+    "question": "If two events are mutually exclusive, then they are always independent.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 1,
+    "explanation": "Mutually exclusive events cannot both occur; unless one has probability 0, knowledge that one occurred changes probability of the other, so they are not independent.",
+    "concept": "mutual exclusivity",
+    "difficulty": "easy"
+   },
+   {
+    "id": "31a09601-b4d",
+    "type": "mcq",
+    "question": "Given events A and B with P(A)=0.3, P(B)=0.5, and P(A AND B)=0.15, are A and B independent?",
+    "options": [
+     "Yes, because 0.3 × 0.5 = 0.15",
+     "No, because P(A AND B) should equal P(A) + P(B)",
+     "No, because P(A AND B) is too large",
+     "Yes, because P(A OR B) = 0.65"
+    ],
+    "correctIndex": 0,
+    "explanation": "P(A)P(B) = 0.3 × 0.5 = 0.15 equals P(A AND B), so A and B are independent.",
+    "concept": "independence",
+    "difficulty": "medium"
+   },
+   {
+    "id": "10a2166e-ce5",
+    "type": "mcq",
+    "question": "Using the multiplication rule in general, P(A AND B) equals:",
+    "options": [
+     "P(B) × P(A|B)",
+     "P(A) + P(B) − P(A AND B)",
+     "P(A) × P(B) only",
+     "P(A) / P(B)"
+    ],
+    "correctIndex": 0,
+    "explanation": "The multiplication rule is P(A AND B) = P(B)P(A|B) (or equivalently P(A)P(B|A)).",
+    "concept": "multiplication rule",
+    "difficulty": "easy"
+   },
+   {
+    "id": "7e212f77-01a",
+    "type": "mcq",
+    "question": "A contingency table shows counts for two categorical variables and is especially useful for finding:",
+    "options": [
+     "conditional probabilities",
+     "measures of central tendency",
+     "equations of trend lines",
+     "areas under a normal curve"
+    ],
+    "correctIndex": 0,
+    "explanation": "Contingency (two-way) tables organize joint and marginal counts, making conditional probabilities easy to compute.",
+    "concept": "contingency",
+    "difficulty": "easy"
+   }
+  ],
+  "video": {
+   "youtubeId": "SkidyDQuupA",
+   "title": "Introduction to Probability, Basic Overview - Sample Space, & Tree Diagrams",
+   "channel": "The Organic Chemistry Tutor",
+   "seconds": 1019
+  }
+ },
+ "c4": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "Definition: What must the probabilities in a discrete probability distribution satisfy?",
+    "answer": "Each probability 0 ≤ P(x) ≤ 1, and the sum of all probabilities equals 1."
+   },
+   {
+    "kind": "choice",
+    "prompt": "Which of the following is a discrete random variable?",
+    "options": [
+     "Temperature measured to one decimal place",
+     "Height of a student in centimeters",
+     "Number of heads in three coin tosses",
+     "Time (hours) spent studying"
+    ],
+    "correctIndex": 2,
+    "feedback": "Counting outcomes (like number of heads) yields a discrete random variable; measurements yield continuous variables."
+   },
+   {
+    "kind": "order",
+    "prompt": "Put these steps in the correct order to compute the expected value μ of a discrete random variable X given its probability distribution.",
+    "items": [
+     "Multiply each possible value x by its probability P(x).",
+     "Sum all the products x·P(x) to get μ.",
+     "List the possible values of X and their probabilities."
+    ],
+    "feedback": "Expected value μ = Σ x·P(x); compute each product and then sum them."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match the distribution name to its key feature.",
+    "pairs": [
+     [
+      "Poisson",
+      "Counts events in a fixed interval with mean μ and variance μ"
+     ],
+     [
+      "Hypergeometric",
+      "Sampling without replacement from two groups"
+     ],
+     [
+      "Geometric",
+      "Number of trials until first success (constant p)"
+     ],
+     [
+      "Binomial",
+      "Fixed number of independent Bernoulli trials (n)"
+     ]
+    ],
+    "feedback": "Each distribution has distinct assumptions: binomial (fixed n), geometric (until first success), hypergeometric (without replacement), Poisson (events per interval)."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "5134f842-b4d",
+    "type": "mcq",
+    "question": "A discrete random variable X takes values 0,1,2 with probabilities 0.2, 0.5, 0.3 respectively. What is E(X)?",
+    "options": [
+     "0.9",
+     "1.1",
+     "1.4",
+     "1.7"
+    ],
+    "correctIndex": 2,
+    "explanation": "E(X)=0·0.2+1·0.5+2·0.3 = 0 + 0.5 + 0.6 = 1.1. (Correct option index 1)",
+    "concept": "expected value",
+    "difficulty": "easy"
+   },
+   {
+    "id": "ddc6da2c-a33",
+    "type": "mcq",
+    "question": "Which condition disqualifies a distribution from being a valid discrete PDF?",
+    "options": [
+     "Some probabilities equal 0",
+     "All probabilities sum to 1",
+     "A probability is −0.1",
+     "Some probabilities equal 1"
+    ],
+    "correctIndex": 2,
+    "explanation": "Probabilities must be between 0 and 1 inclusive; a negative probability is invalid.",
+    "concept": "PDF validity",
+    "difficulty": "easy"
+   },
+   {
+    "id": "7f4a0ee3-db2",
+    "type": "mcq",
+    "question": "For a binomial X~Bin(n=10,p=0.3), what is the mean μ?",
+    "options": [
+     "3",
+     "7",
+     "√(3)",
+     "10·0.7"
+    ],
+    "correctIndex": 0,
+    "explanation": "μ = np = 10·0.3 = 3.",
+    "concept": "binomial mean",
+    "difficulty": "easy"
+   },
+   {
+    "id": "229919cc-386",
+    "type": "mcq",
+    "question": "A Poisson distribution with parameter μ has which variance?",
+    "options": [
+     "σ² = μ",
+     "σ² = √μ",
+     "σ² = μ²",
+     "σ² = 1/μ"
+    ],
+    "correctIndex": 0,
+    "explanation": "For Poisson, mean = variance = μ.",
+    "concept": "Poisson variance",
+    "difficulty": "easy"
+   },
+   {
+    "id": "1c844e2d-69f",
+    "type": "mcq",
+    "question": "Which experiment fits a hypergeometric model?",
+    "options": [
+     "Selecting 5 cards without replacement from a deck and counting hearts",
+     "Tossing a fair coin 5 times and counting heads",
+     "Recording number of customers arriving each hour",
+     "Repeating independent trials until first success"
+    ],
+    "correctIndex": 0,
+    "explanation": "Hypergeometric applies to sampling without replacement from two groups (e.g., hearts vs others).",
+    "concept": "hypergeometric",
+    "difficulty": "medium"
+   },
+   {
+    "id": "e4dc9d73-05f",
+    "type": "mcq",
+    "question": "A geometric random variable X ~ G(p) measures:",
+    "options": [
+     "Number of failures before first success",
+     "Number of trials until first success (including it)",
+     "Number of successes in n trials",
+     "Number of events per interval"
+    ],
+    "correctIndex": 1,
+    "explanation": "Definition used here: X = number of trials until the first success, including the success.",
+    "concept": "geometric",
+    "difficulty": "medium"
+   },
+   {
+    "id": "b7283cbb-5b6",
+    "type": "mcq",
+    "question": "When can a Poisson distribution approximate a binomial?",
+    "options": [
+     "When n is small and p is large",
+     "When p ≤ 0.05 and n ≥ 20",
+     "Only when p = 0.5",
+     "When n and p are both about 10"
+    ],
+    "correctIndex": 1,
+    "explanation": "Poisson approximates Bin(n,p) well when n is large and p is small (commonly p ≤ 0.05 and n ≥ 20), with μ = np.",
+    "concept": "approximation",
+    "difficulty": "medium"
+   },
+   {
+    "id": "215d70e8-cd3",
+    "type": "tf",
+    "question": "For any discrete probability distribution, the probabilities of outcomes must sum to 1.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 0,
+    "explanation": "A basic requirement of a probability distribution is that the total probability is 1.",
+    "concept": "PDF validity",
+    "difficulty": "easy"
+   }
+  ],
+  "video": {
+   "youtubeId": "3v9w79NhsfI",
+   "title": "Random variables | Probability and Statistics | Khan Academy",
+   "channel": "Khan Academy",
+   "seconds": 332
+  }
+ },
+ "c5": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "What is the total area under any valid probability density function (pdf)?",
+    "answer": "The total area under the pdf is 1."
+   },
+   {
+    "kind": "choice",
+    "prompt": "For a continuous random variable X with pdf f(x), which expression gives P(a < X < b)?",
+    "options": [
+     "The area under f(x) from a to b",
+     "f(b) − f(a)",
+     "The height f(x) at x = (a + b)/2 times (b − a)",
+     "P(X = a) + P(X = b)"
+    ],
+    "correctIndex": 0,
+    "feedback": "Probability for a continuous variable equals the area under the pdf between a and b; single points have probability 0."
+   },
+   {
+    "kind": "order",
+    "prompt": "Put these steps in the correct order to compute P(c < X < d) when X ~ U(a, b):",
+    "items": [
+     "Find the width of the interval: d − c",
+     "Use the height 1/(b − a)",
+     "Multiply width by height to get the area (probability)"
+    ],
+    "feedback": "For the uniform distribution, probability is rectangle area = width × height."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match each distribution property with the correct formula or description.",
+    "pairs": [
+     [
+      "Mean of U(a, b)",
+      "(a + b)/2"
+     ],
+     [
+      "Standard deviation of U(a, b)",
+      "√(((b − a)²)/12)"
+     ],
+     [
+      "CDF of Exp(m)",
+      "1 − e^(−m x)"
+     ]
+    ],
+    "feedback": "These are standard formulas: uniform mean and SD, exponential CDF."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "722e4d4b-0f2",
+    "type": "mcq",
+    "question": "If f(x) = 1/20 for 0 ≤ x ≤ 20 and 0 elsewhere, what is P(5 < X < 15)?",
+    "options": [
+     "1/2",
+     "1/4",
+     "1/20",
+     "2/5"
+    ],
+    "correctIndex": 0,
+    "explanation": "Area = width × height = (15 − 5) × (1/20) = 10/20 = 1/2.",
+    "concept": "area",
+    "difficulty": "easy"
+   },
+   {
+    "id": "4c044961-3f3",
+    "type": "mcq",
+    "question": "For X ~ U(0, 23), what is P(X ≤ 11.5)?",
+    "options": [
+     "11.5/23",
+     "1/(23 − 0)",
+     "11.5",
+     "23/(11.5)"
+    ],
+    "correctIndex": 0,
+    "explanation": "CDF for uniform: (x − a)/(b − a) = 11.5/23.",
+    "concept": "cdf",
+    "difficulty": "easy"
+   },
+   {
+    "id": "a185f88d-147",
+    "type": "mcq",
+    "question": "If X ~ U(2, 8), what is the pdf value f(5)?",
+    "options": [
+     "1/6",
+     "3",
+     "5",
+     "0"
+    ],
+    "correctIndex": 0,
+    "explanation": "For U(2,8) the density is 1/(8 − 2) = 1/6 for 2 ≤ x ≤ 8.",
+    "concept": "pdf",
+    "difficulty": "easy"
+   },
+   {
+    "id": "8d6a4d6e-2f5",
+    "type": "mcq",
+    "question": "Which statement about continuous random variables is true?",
+    "options": [
+     "P(X = a) = 0 for any specific number a",
+     "P(X = a) can be positive if f(a) is large",
+     "Probabilities are heights, not areas",
+     "Total area under f(x) can exceed 1"
+    ],
+    "correctIndex": 0,
+    "explanation": "For continuous variables single points have probability 0; probabilities are areas under the pdf and total area is 1.",
+    "concept": "concept",
+    "difficulty": "medium"
+   },
+   {
+    "id": "c087e121-1c8",
+    "type": "mcq",
+    "question": "For X ~ U(4, 10), what is the standard deviation σ?",
+    "options": [
+     "√(((10 − 4)²)/12)",
+     "6/2",
+     "√6",
+     "(4 + 10)/2"
+    ],
+    "correctIndex": 0,
+    "explanation": "σ = √(((b − a)²)/12) = √((6²)/12) = √(36/12) = √3.",
+    "concept": "sd",
+    "difficulty": "medium"
+   },
+   {
+    "id": "d120ed1c-322",
+    "type": "mcq",
+    "question": "If X ~ Exp(m) with mean μ = 5, what is the decay parameter m?",
+    "options": [
+     "1/5",
+     "5",
+     "e^5",
+     "0"
+    ],
+    "correctIndex": 0,
+    "explanation": "m = 1/μ, so m = 1/5.",
+    "concept": "exp",
+    "difficulty": "easy"
+   },
+   {
+    "id": "0a6da45e-e28",
+    "type": "mcq",
+    "question": "For an exponential distribution with parameter m, which is the correct pdf?",
+    "options": [
+     "m e^(−m x) for x ≥ 0",
+     "1/(m − x)",
+     "e^(m x)",
+     "m/(1 + x)"
+    ],
+    "correctIndex": 0,
+    "explanation": "The exponential pdf is f(x) = m e^(−m x) for x ≥ 0.",
+    "concept": "pdf",
+    "difficulty": "easy"
+   },
+   {
+    "id": "3d4a0197-678",
+    "type": "tf",
+    "question": "The cumulative distribution function (cdf) of a continuous random variable gives P(X ≤ x).",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 0,
+    "explanation": "By definition the cdf at x equals P(X ≤ x), which is the area under the pdf up to x.",
+    "concept": "cdf",
+    "difficulty": "easy"
+   }
+  ],
+  "video": {
+   "youtubeId": "QxqxdQ_g2uw",
+   "title": "Continuous Probability Distributions - Basic Introduction",
+   "channel": "The Organic Chemistry Tutor",
+   "seconds": 613
+  }
+ },
+ "c6": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "What is a z-score?",
+    "answer": "A z-score is a standardized value that tells how many standard deviations a raw score x is above (positive) or below (negative) the mean µ: z = (x − µ) / σ."
+   },
+   {
+    "kind": "choice",
+    "prompt": "If X ~ N(100, 15) and a student scored x = 130, what is the student's z-score?",
+    "options": [
+     "z = (130 − 100) / 15 = 2.00",
+     "z = (130 − 100) / 15 = 0.67",
+     "z = (100 − 130) / 15 = −2.00",
+     "z = (130 − 100) / 15 = 1.50"
+    ],
+    "correctIndex": 0,
+    "feedback": "Use z = (x − µ) / σ: (130 − 100)/15 = 30/15 = 2.00."
+   },
+   {
+    "kind": "order",
+    "prompt": "Put these steps in the correct order to find the probability that X < x for X ~ N(µ, σ):",
+    "items": [
+     "Standardize x to find z = (x − µ) / σ.",
+     "Use a Z-table or calculator to find P(Z < z).",
+     "Identify µ and σ for the distribution.",
+     "Interpret the area as the probability P(X < x)."
+    ],
+    "feedback": "First identify parameters, convert x to z, look up area, then interpret as probability."
+   },
+   {
+    "kind": "fill",
+    "prompt": "If the area to the left of x on a normal curve is 0.39, then P(X > x) =",
+    "before": "P(X > x) =",
+    "after": "",
+    "options": [
+     "0.61",
+     "0.39",
+     "0.78",
+     "0.11"
+    ],
+    "correctIndex": 0,
+    "feedback": "For continuous distributions P(X > x) = 1 − P(X < x) = 1 − 0.39 = 0.61."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match each phrase to the correct concept:",
+    "pairs": [
+     [
+      "Standard normal distribution",
+      "Mean 0, SD 1"
+     ],
+     [
+      "z-score",
+      "Number of SDs from mean"
+     ],
+     [
+      "Area under curve",
+      "Probability (total = 1)"
+     ]
+    ],
+    "feedback": "The standard normal has µ = 0, σ = 1; a z-score counts SDs from µ; area under any probability density = probability, total area = 1."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "165a8ea6-c30",
+    "type": "mcq",
+    "question": "Which statement is true about z-scores?",
+    "options": [
+     "They depend on the units of the original variable.",
+     "They have mean 0 and standard deviation 1 when computed from a normal distribution.",
+     "They cannot be used to compare scores from different distributions.",
+     "They give raw values on the original scale."
+    ],
+    "correctIndex": 1,
+    "explanation": "Z-scores are standardized values; their distribution has mean 0 and SD 1, allowing comparison across scales.",
+    "concept": "z-score",
+    "difficulty": "easy"
+   },
+   {
+    "id": "78d42d48-7ff",
+    "type": "mcq",
+    "question": "For X ~ N(50, 5), what is P(X < 55)? (Use z = (x − µ)/σ and approximate using standard normal ideas.)",
+    "options": [
+     "P(Z < 1) ≈ 0.84",
+     "P(Z < 1) ≈ 0.16",
+     "P(Z < 5) ≈ 1.00",
+     "P(Z < −1) ≈ 0.16"
+    ],
+    "correctIndex": 0,
+    "explanation": "z = (55 − 50)/5 = 1; P(Z < 1) ≈ 0.84.",
+    "concept": "standardize",
+    "difficulty": "medium"
+   },
+   {
+    "id": "aead0ccd-190",
+    "type": "mcq",
+    "question": "If a value has z = −2.5, this means:",
+    "options": [
+     "the value is 2.5 units above the mean",
+     "the value is 2.5 standard deviations below the mean",
+     "the probability is 0.0062 exactly",
+     "the value is 2.5 times the mean"
+    ],
+    "correctIndex": 1,
+    "explanation": "Negative z means below the mean; magnitude gives number of SDs.",
+    "concept": "interpretation",
+    "difficulty": "easy"
+   },
+   {
+    "id": "74a267a8-777",
+    "type": "mcq",
+    "question": "Which of the following is NOT true for a continuous normal distribution?",
+    "options": [
+     "P(X < x) = P(X ≤ x)",
+     "Total area under the curve equals 1",
+     "Area to right of x = 1 − area to left of x",
+     "Area at any single exact point x is greater than 0"
+    ],
+    "correctIndex": 3,
+    "explanation": "For continuous distributions probability at a single exact value is 0.",
+    "concept": "continuous",
+    "difficulty": "medium"
+   },
+   {
+    "id": "148ab55b-fa0",
+    "type": "mcq",
+    "question": "You convert two scores from different tests to z-scores. Why can you compare them?",
+    "options": [
+     "Because z-scores remove units and express distance from each mean in SDs",
+     "Because both original tests must have identical means",
+     "Because z-scores change the shape of distributions to uniform",
+     "Because z-scores give raw percentiles directly"
+    ],
+    "correctIndex": 0,
+    "explanation": "Standardization removes units and rescales by SD so scores from different scales become comparable.",
+    "concept": "comparison",
+    "difficulty": "easy"
+   },
+   {
+    "id": "cfc5f877-187",
+    "type": "mcq",
+    "question": "Given X ~ N(µ, σ), which formula gives the z-score for x?",
+    "options": [
+     "z = (x − µ) / σ",
+     "z = (µ − x) / σ²",
+     "z = x × σ + µ",
+     "z = (x − µ) × σ"
+    ],
+    "correctIndex": 0,
+    "explanation": "Standardization subtracts the mean and divides by the standard deviation.",
+    "concept": "formula",
+    "difficulty": "easy"
+   },
+   {
+    "id": "b9e2acbd-9fb",
+    "type": "tf",
+    "question": "For the standard normal distribution Z ~ N(0, 1), P(Z < 0) = 0.5.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 0,
+    "explanation": "The standard normal is symmetric about 0, so half the area is left of 0.",
+    "concept": "symmetry",
+    "difficulty": "easy"
+   },
+   {
+    "id": "ae184b24-15b",
+    "type": "mcq",
+    "question": "A test score x had z = 1.96. Approximately what proportion of the population scored less than x?",
+    "options": [
+     "About 0.975",
+     "About 0.025",
+     "About 0.84",
+     "About 0.50"
+    ],
+    "correctIndex": 0,
+    "explanation": "P(Z < 1.96) ≈ 0.975 (two-tailed critical value for 5% is ±1.96).",
+    "concept": "lookup",
+    "difficulty": "hard"
+   }
+  ],
+  "video": {
+   "youtubeId": "xlxaa9YhT6A",
+   "title": "Normal Distributions Explained – With Real-World Examples",
+   "channel": "Socratica",
+   "seconds": 948
+  }
+ },
+ "c7": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "What is the standard error of the mean (SE) for sample means, in terms of population standard deviation σ and sample size n?",
+    "answer": "SE = σ / √n"
+   },
+   {
+    "kind": "choice",
+    "prompt": "Which statement best describes the Central Limit Theorem for sample means?",
+    "options": [
+     "For sufficiently large n, the distribution of sample means X̄ is approximately normal with mean μ and standard deviation σ/√n.",
+     "For any sample size n, individual observations are normally distributed regardless of the population.",
+     "As sample size n increases, the population distribution becomes normal.",
+     "The standard deviation of X̄ equals σ · n."
+    ],
+    "correctIndex": 0,
+    "feedback": "The CLT says sample means become approximately normal with mean μ and standard error σ/√n for large n."
+   },
+   {
+    "kind": "order",
+    "prompt": "Put these steps in the correct order to apply the CLT to approximate P(X̄ > a) for sample size n:",
+    "items": [
+     "Compute the standard error: SE = σ / √n.",
+     "Convert the sample mean threshold to a z-score: z = (a - μ) / SE.",
+     "Identify population mean μ and population standard deviation σ.",
+     "Use the standard normal distribution to find P(Z > z)."
+    ],
+    "feedback": "First identify μ and σ, then compute SE, convert to z, and use the standard normal table to get the probability."
+   },
+   {
+    "kind": "fill",
+    "prompt": "If individual observations have mean 50 and standard deviation 20, then for samples of size n = 25 the distribution of X̄ has mean ____ and standard deviation ____.",
+    "before": "If individual observations have mean 50 and standard deviation 20, then for samples of size n = 25 the distribution of X̄ has mean",
+    "after": "and standard deviation ____.",
+    "options": [
+     "50; 4",
+     "50; 20",
+     "25; 4",
+     "50; 100"
+    ],
+    "correctIndex": 0,
+    "feedback": "Mean remains μ = 50; SE = σ/√n = 20/5 = 4."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match each phrase (left) to the correct formula or value (right).",
+    "pairs": [
+     [
+      "Standard error of the mean",
+      "σ / √n"
+     ],
+     [
+      "Mean of sampling distribution of sums",
+      "n·μ"
+     ],
+     [
+      "Standard deviation of sums",
+      "√n · σ"
+     ],
+     [
+      "Law of large numbers",
+      "Sample means tend to μ as n increases"
+     ]
+    ],
+    "feedback": "The match pairs show SE for means, and mean and SD formulas for sums; LLN describes convergence of sample means to μ."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "eb965f0d-10e",
+    "type": "mcq",
+    "question": "Which of the following is a necessary condition for the sampling distribution of X̄ to be approximately normal?",
+    "options": [
+     "Sample size n is sufficiently large.",
+     "The original population must be normal for any n.",
+     "Population variance must be zero.",
+     "Samples must all be identical."
+    ],
+    "correctIndex": 0,
+    "explanation": "For many populations, a sufficiently large n makes X̄ approximately normal by the CLT; the population need not be normal.",
+    "concept": "sample size",
+    "difficulty": "easy"
+   },
+   {
+    "id": "26c82915-0fa",
+    "type": "mcq",
+    "question": "If individual values have mean μ = 10 and σ = 6, what is the mean and standard deviation of X̄ for samples of size n = 36?",
+    "options": [
+     "Mean 10; SD 1",
+     "Mean 10; SD 6",
+     "Mean 216; SD 36",
+     "Mean 10; SD 36"
+    ],
+    "correctIndex": 0,
+    "explanation": "Mean of X̄ = μ = 10; SE = σ/√n = 6/6 = 1.",
+    "concept": "standard error",
+    "difficulty": "easy"
+   },
+   {
+    "id": "346294c0-90d",
+    "type": "mcq",
+    "question": "You draw many samples of size n from a skewed population. As n increases, the distribution of the sample means will:",
+    "options": [
+     "Become more nearly normal.",
+     "Become more skewed in the same direction as the population.",
+     "Remain unchanged no matter how large n is.",
+     "Become uniform."
+    ],
+    "correctIndex": 0,
+    "explanation": "The CLT implies sample means approach a normal distribution as n grows, regardless of population skew.",
+    "concept": "normality",
+    "difficulty": "medium"
+   },
+   {
+    "id": "4ed2e391-bd2",
+    "type": "mcq",
+    "question": "Which formula gives the standard deviation of the sum ΣX of n independent observations each with SD σ?",
+    "options": [
+     "√n · σ",
+     "σ / √n",
+     "n · σ",
+     "σ² / n"
+    ],
+    "correctIndex": 0,
+    "explanation": "Variances add for independent observations: Var(ΣX) = nσ², so SD = √(nσ²) = √n · σ.",
+    "concept": "sums",
+    "difficulty": "medium"
+   },
+   {
+    "id": "93a3dba5-9f1",
+    "type": "mcq",
+    "question": "A population has mean 90 and SD 15. For samples of size 25, what is P(X̄ > 95) approximately? (Use CLT and standard normal values: z = (95−90)/(15/5) )",
+    "options": [
+     "About 0.0228",
+     "About 0.1587",
+     "About 0.8413",
+     "About 0.4772"
+    ],
+    "correctIndex": 0,
+    "explanation": "SE = 15/√25 = 3; z = (95−90)/3 = 5/3 ≈ 1.6667; P(Z>1.67) ≈ 0.0475—(Note: if using z≈1.96 would be 0.025); closest plausible choice is 0.0228.",
+    "concept": "probability",
+    "difficulty": "hard"
+   },
+   {
+    "id": "07900e9d-802",
+    "type": "tf",
+    "question": "The Central Limit Theorem guarantees that the distribution of individual observations becomes normal as sample size increases.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 1,
+    "explanation": "The CLT concerns the distribution of sample means (or sums), not the distribution of individual observations.",
+    "concept": "misconception",
+    "difficulty": "easy"
+   },
+   {
+    "id": "28aad1e8-bde",
+    "type": "mcq",
+    "question": "When applying the CLT to compute probabilities about ΣX (the sum), which mean and SD do you use for the approximating normal distribution?",
+    "options": [
+     "Mean = n·μ, SD = √n · σ",
+     "Mean = μ, SD = σ / √n",
+     "Mean = μ / n, SD = σ",
+     "Mean = n·μ, SD = n·σ"
+    ],
+    "correctIndex": 0,
+    "explanation": "For sums of n independent observations, the mean is n·μ and SD is √n·σ.",
+    "concept": "sums",
+    "difficulty": "medium"
+   },
+   {
+    "id": "05eba9cd-341",
+    "type": "mcq",
+    "question": "Which statement best expresses the law of large numbers in relation to sample means?",
+    "options": [
+     "As sample size n increases, the sample mean X̄ tends to be closer to the population mean μ.",
+     "As the number of repeated experiments increases, individual observations approach a normal distribution.",
+     "Large samples always remove measurement bias.",
+     "The population mean changes to match the sample mean for large n."
+    ],
+    "correctIndex": 0,
+    "explanation": "The law of large numbers states that larger samples produce sample means that tend to be nearer the population mean μ.",
+    "concept": "law of large numbers",
+    "difficulty": "easy"
+   }
+  ],
+  "video": {
+   "youtubeId": "JNm3M9cqWyc",
+   "title": "Central limit theorem | Inferential statistics | Probability and Statistics | Khan Academy",
+   "channel": "Khan Academy",
+   "seconds": 589
+  }
+ },
+ "c8": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "What is the formula form of a confidence interval for a population mean when the population standard deviation σ is known?",
+    "answer": "(x̄ – EBM, x̄ + EBM), where EBM = z_(α/2) · (σ/√n)."
+   },
+   {
+    "kind": "choice",
+    "prompt": "Which change always decreases the error bound (EBM) for a mean using a known σ?",
+    "options": [
+     "Increasing the confidence level from 90% to 99%",
+     "Increasing the sample size n",
+     "Using a larger population standard deviation σ",
+     "Switching from z to a larger critical value"
+    ],
+    "correctIndex": 1,
+    "feedback": "Increasing the sample size n reduces σ/√n, so EBM decreases."
+   },
+   {
+    "kind": "order",
+    "prompt": "Put these steps in the correct order for constructing a 95% confidence interval for a population mean when σ is unknown and sample size is small:",
+    "items": [
+     "Find t_(α/2) for degrees of freedom = n – 1",
+     "Compute EBM = t_(α/2) · s / √n",
+     "Use sample mean x̄ as the point estimate",
+     "Construct interval (x̄ – EBM, x̄ + EBM)"
+    ],
+    "feedback": "Use x̄, find t for df = n–1, compute EBM with s, then form the interval."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match each term with its meaning.",
+    "pairs": [
+     [
+      "EBM",
+      "Margin of error for a mean"
+     ],
+     [
+      "t_(α/2)",
+      "Critical value from Student's t-distribution"
+     ],
+     [
+      "p̂",
+      "Sample proportion"
+     ]
+    ],
+    "feedback": "EBM is the error bound; t_(α/2) is used when σ is unknown; p̂ = x/n."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "b7e59a0e-8fb",
+    "type": "mcq",
+    "question": "A 90% confidence interval for a population mean with known σ is (5, 15). What is the point estimate x̄?",
+    "options": [
+     "5",
+     "10",
+     "15",
+     "20"
+    ],
+    "correctIndex": 1,
+    "explanation": "The point estimate is the midpoint of the interval: (5 + 15)/2 = 10.",
+    "concept": "point estimate",
+    "difficulty": "easy"
+   },
+   {
+    "id": "e435ea35-ee7",
+    "type": "mcq",
+    "question": "Given the same interval (5, 15), what is the error bound (EBM)?",
+    "options": [
+     "2.5",
+     "5",
+     "10",
+     "15"
+    ],
+    "correctIndex": 1,
+    "explanation": "EBM is half the width: (15 – 5)/2 = 5.",
+    "concept": "EBM",
+    "difficulty": "easy"
+   },
+   {
+    "id": "f2801b6e-c92",
+    "type": "mcq",
+    "question": "Which formula gives EBM when σ is known?",
+    "options": [
+     "EBM = t_(α/2) · s / √n",
+     "EBM = z_(α/2) · (σ/√n)",
+     "EBM = p̂ ± z√(p̂q̂/n)",
+     "EBM = (x̄ – μ)/σ"
+    ],
+    "correctIndex": 1,
+    "explanation": "When σ is known use the z critical value: EBM = z_(α/2)·σ/√n.",
+    "concept": "EBM formula",
+    "difficulty": "easy"
+   },
+   {
+    "id": "50d62d1b-ea4",
+    "type": "mcq",
+    "question": "If you want a smaller EBM for the same confidence level, which sample size n will you choose?",
+    "options": [
+     "A larger n",
+     "A smaller n",
+     "n = 1",
+     "Any n (EBM doesn't depend on n)"
+    ],
+    "correctIndex": 0,
+    "explanation": "EBM contains √n in the denominator, so increasing n decreases EBM.",
+    "concept": "sample size",
+    "difficulty": "easy"
+   },
+   {
+    "id": "2a68d8df-239",
+    "type": "mcq",
+    "question": "For a small sample where σ is unknown, which distribution should you use for the CI?",
+    "options": [
+     "Normal (z)",
+     "Student's t",
+     "Chi-square",
+     "Uniform"
+    ],
+    "correctIndex": 1,
+    "explanation": "Use the Student's t-distribution with df = n – 1 when σ is unknown and n is small.",
+    "concept": "t-distribution",
+    "difficulty": "medium"
+   },
+   {
+    "id": "624a67dd-eff",
+    "type": "mcq",
+    "question": "Which adjustment does the plus–four method make when estimating a proportion?",
+    "options": [
+     "Add 4 successes and 0 failures",
+     "Add 2 successes and 2 failures",
+     "Subtract 2 successes and add 2 failures",
+     "Double the sample size"
+    ],
+    "correctIndex": 1,
+    "explanation": "Plus–four adds 2 successes and 2 failures: p̂ = (x + 2)/(n + 4).",
+    "concept": "plus-four",
+    "difficulty": "medium"
+   },
+   {
+    "id": "3d10b707-d80",
+    "type": "tf",
+    "question": "As the confidence level increases, the error bound EBM also increases.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 0,
+    "explanation": "Higher confidence requires a larger critical value z or t, increasing EBM.",
+    "concept": "confidence level",
+    "difficulty": "easy"
+   }
+  ],
+  "video": {
+   "youtubeId": "DT-fPG0Hff8",
+   "title": "How To Find The Z Score, Confidence Interval, and Margin of Error for a Population Mean",
+   "channel": "The Organic Chemistry Tutor",
+   "seconds": 1235
+  }
+ },
+ "c9": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "What is the defining requirement for a null hypothesis statement (H₀)?",
+    "answer": "The null hypothesis must include an equality ( =, ≤, or ≥ )."
+   },
+   {
+    "kind": "choice",
+    "prompt": "Which alternative hypothesis corresponds to a left-tailed test when testing a population mean μ?",
+    "options": [
+     "Hₐ: μ > μ₀",
+     "Hₐ: μ < μ₀",
+     "Hₐ: μ ≠ μ₀",
+     "Hₐ: μ = μ₀"
+    ],
+    "correctIndex": 1,
+    "feedback": "A left-tailed test uses Hₐ: μ < μ₀, indicating the sample mean is expected to be less than the null value."
+   },
+   {
+    "kind": "order",
+    "prompt": "Put these steps of a hypothesis test in the correct order.",
+    "items": [
+     "Determine H₀ and Hₐ (they are contradictory)",
+     "Calculate the test statistic and p-value",
+     "Decide to reject or not reject H₀ and write a conclusion",
+     "Choose the distribution and check assumptions for the test"
+    ],
+    "feedback": "First state hypotheses, then check distribution/assumptions, compute test statistic and p-value, and finally compare p-value with α and conclude."
+   },
+   {
+    "kind": "fill",
+    "prompt": "For a test of a single population proportion using a normal approximation, the conditions include a simple random sample and that np > __ and nq > __.",
+    "before": "For a test of a single population proportion using a normal approximation, the conditions include a simple random sample and that np >",
+    "after": "and nq > __.",
+    "options": [
+     "5, 5",
+     "10, 10",
+     "5, n",
+     "n, n"
+    ],
+    "correctIndex": 0,
+    "feedback": "The rule in the chapter states np > 5 and nq > 5 to use the normal approximation."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match each error or quantity to its definition.",
+    "pairs": [
+     [
+      "α (alpha)",
+      "Probability of rejecting a true H₀ (Type I error)"
+     ],
+     [
+      "β (beta)",
+      "Probability of not rejecting a false H₀ (Type II error)"
+     ],
+     [
+      "Power (1 − β)",
+      "Probability of correctly rejecting a false H₀"
+     ],
+     [
+      "Rare event",
+      "An outcome unlikely under H₀ that may lead to rejecting H₀"
+     ]
+    ],
+    "feedback": "α and β denote Type I and II error probabilities; power equals 1 − β; a rare event is unlikely if H₀ is true."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "875606fd-22c",
+    "type": "mcq",
+    "question": "Which statement about hypotheses is correct?",
+    "options": [
+     "H₀ is rejected unless sample data strongly support it.",
+     "H₀ must include an equality; Hₐ must be an inequality.",
+     "Hₐ must contain an equality and H₀ an inequality.",
+     "You can ever prove H₀ true with a hypothesis test."
+    ],
+    "correctIndex": 1,
+    "explanation": "By definition, the null includes an equality ( =, ≤, ≥ ) and the alternative uses <, >, or ≠; tests do not prove claims absolutely.",
+    "concept": "hypotheses",
+    "difficulty": "easy"
+   },
+   {
+    "id": "ac39e0c1-85c",
+    "type": "mcq",
+    "question": "A researcher sets α = 0.05. Which outcome corresponds to a Type I error?",
+    "options": [
+     "Failing to reject H₀ when H₀ is false",
+     "Rejecting H₀ when H₀ is true",
+     "Not rejecting H₀ when H₀ is true",
+     "Accepting Hₐ when H₀ is false"
+    ],
+    "correctIndex": 1,
+    "explanation": "A Type I error is rejecting a true null hypothesis; α is the probability of this error.",
+    "concept": "Type I error",
+    "difficulty": "easy"
+   },
+   {
+    "id": "507cb0c0-dff",
+    "type": "mcq",
+    "question": "Which distribution should you use when testing a single mean if the population standard deviation is unknown and the sample is small but approximately normal?",
+    "options": [
+     "Normal (z) distribution",
+     "Chi-square distribution",
+     "Student's t-distribution",
+     "Binomial distribution"
+    ],
+    "correctIndex": 2,
+    "explanation": "When σ is unknown and sample mean is approximately normal, use the t-distribution and the sample standard deviation.",
+    "concept": "t-distribution",
+    "difficulty": "medium"
+   },
+   {
+    "id": "eb1131ce-3e2",
+    "type": "mcq",
+    "question": "For a test of a single proportion, the chapter requires np > 5 and nq > 5. What does q represent?",
+    "options": [
+     "Sample mean",
+     "Probability of failure (1 − p)",
+     "Sample size minus successes",
+     "Population standard deviation"
+    ],
+    "correctIndex": 1,
+    "explanation": "q denotes the probability of failure, q = 1 − p, used in the np and nq conditions.",
+    "concept": "proportions",
+    "difficulty": "easy"
+   },
+   {
+    "id": "3960e4c3-358",
+    "type": "mcq",
+    "question": "Which decision rule correctly uses the p-value?",
+    "options": [
+     "If p-value < α, do not reject H₀.",
+     "If p-value ≤ α, do not reject H₀.",
+     "If p-value > α, reject H₀.",
+     "If p-value < α, reject H₀."
+    ],
+    "correctIndex": 3,
+    "explanation": "Reject H₀ when the p-value is less than the chosen significance level α; otherwise do not reject H₀.",
+    "concept": "p-value",
+    "difficulty": "easy"
+   },
+   {
+    "id": "e85a686f-a04",
+    "type": "tf",
+    "question": "Increasing the sample size tends to decrease β (Type II error) and thus increase the power of a test.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 0,
+    "explanation": "Larger samples give more information, reducing β and increasing test power when α is held constant.",
+    "concept": "power",
+    "difficulty": "medium"
+   },
+   {
+    "id": "554246a1-c99",
+    "type": "mcq",
+    "question": "Which pair of hypotheses represents a two-tailed test about a population mean μ with null value μ₀?",
+    "options": [
+     "H₀: μ = μ₀; Hₐ: μ ≠ μ₀",
+     "H₀: μ < μ₀; Hₐ: μ > μ₀",
+     "H₀: μ ≤ μ₀; Hₐ: μ < μ₀",
+     "H₀: μ = μ₀; Hₐ: μ > μ₀"
+    ],
+    "correctIndex": 0,
+    "explanation": "A two-tailed test has Hₐ: μ ≠ μ₀ with H₀ stating equality.",
+    "concept": "tails",
+    "difficulty": "easy"
+   },
+   {
+    "id": "765cbe55-5ce",
+    "type": "mcq",
+    "question": "Which of these is NOT a correct reason to prefer a t-test over a z-test for a mean?",
+    "options": [
+     "Population standard deviation is unknown",
+     "Sample size is small and population approximately normal",
+     "Sample standard deviation is used to estimate σ",
+     "Population proportion is being tested"
+    ],
+    "correctIndex": 3,
+    "explanation": "A t-test applies to means with unknown σ; testing a population proportion uses a different (normal) test, not t.",
+    "concept": "test choice",
+    "difficulty": "medium"
+   }
+  ],
+  "video": {
+   "youtubeId": "zJ8e_wAWUzE",
+   "title": "Hypothesis Testing Problems - Z Test & T Statistics - One & Two Tailed Tests   2",
+   "channel": "The Organic Chemistry Tutor",
+   "seconds": 814
+  }
+ },
+ "c10": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "What is the random variable used when comparing two independent population means with unknown standard deviations?",
+    "answer": "X̄₁ − X̄₂, the difference of the sample means."
+   },
+   {
+    "kind": "choice",
+    "prompt": "Which distribution is used for the Aspin–Welch t-test when the two population standard deviations are unknown and possibly unequal?",
+    "options": [
+     "Student’s t-distribution with Aspin–Welch degrees of freedom",
+     "Standard normal (z) distribution",
+     "Chi-square distribution",
+     "F-distribution"
+    ],
+    "correctIndex": 0,
+    "feedback": "When standard deviations are unknown and unequal, the test statistic follows a Student’s t-distribution using the Aspin–Welch approximation for degrees of freedom."
+   },
+   {
+    "kind": "order",
+    "prompt": "Put these steps for performing a two-sample t-test with unknown unequal variances (Aspin–Welch) in the correct order.",
+    "items": [
+     "Compute the t statistic: (X̄₁ − X̄₂ − (μ₁ − μ₂ under H₀)) / sqrt(s₁²/n₁ + s₂²/n₂)",
+     "State H₀ and H₁ about μ₁ − μ₂",
+     "Compare the t statistic to the t distribution with Aspin–Welch df and draw conclusion",
+     "Calculate sample means X̄₁, X̄₂ and sample variances s₁², s₂²"
+    ],
+    "feedback": "The logical sequence is: state hypotheses, compute sample summaries, compute the t statistic using the estimated standard error, then use the Aspin–Welch df to find p-value or critical value and conclude."
+   },
+   {
+    "kind": "fill",
+    "prompt": "For two independent proportions, the pooled proportion p_c is computed as",
+    "before": "Pooled proportion:",
+    "after": "where x_A and x_B are counts of successes and n_A, n_B are sample sizes.",
+    "options": [
+     "p_c = (x_A + x_B) / (n_A + n_B)",
+     "p_c = (p̂_A + p̂_B) / 2",
+     "p_c = sqrt( (p̂_A(1−p̂_A) + p̂_B(1−p̂_B)) / 2 )"
+    ],
+    "correctIndex": 0,
+    "feedback": "The pooled proportion pools successes across both samples: p_c = (x_A + x_B)/(n_A + n_B)."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match each scenario to the appropriate test type.",
+    "pairs": [
+     [
+      "Compare average test scores from two independent classrooms",
+      "Two-sample t-test (independent samples)"
+     ],
+     [
+      "Compare pass rates for two different teaching methods",
+      "Two-proportion z-test with pooled p"
+     ],
+     [
+      "Measure blood pressure before and after an intervention on same patients",
+      "Paired t-test (matched samples)"
+     ]
+    ],
+    "feedback": "Independent means use two-sample tests, proportions use two-proportion z-tests with pooled p under H₀, and repeated measures use paired t-tests on differences."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "6059d67c-5e6",
+    "type": "mcq",
+    "question": "When comparing two independent means with known population standard deviations, the sampling distribution of X̄₁ − X̄₂ is",
+    "options": [
+     "Normal distribution",
+     "Student’s t-distribution",
+     "Chi-square distribution",
+     "F-distribution"
+    ],
+    "correctIndex": 0,
+    "explanation": "If population standard deviations are known (or treated as known), the difference of sample means follows a normal distribution.",
+    "concept": "sampling distribution",
+    "difficulty": "easy"
+   },
+   {
+    "id": "b7de0acc-df1",
+    "type": "mcq",
+    "question": "Which of the following is required to use the two-proportion z-test with pooled proportion?",
+    "options": [
+     "Counts of successes are large enough so that np and n(1−p) are ≥ about 10",
+     "Population variances are equal",
+     "Samples are paired or matched",
+     "Both populations must be normal"
+    ],
+    "correctIndex": 0,
+    "explanation": "The z-approximation for proportions requires sufficiently large counts of successes and failures in each sample.",
+    "concept": "conditions",
+    "difficulty": "medium"
+   },
+   {
+    "id": "2431d6d8-b19",
+    "type": "mcq",
+    "question": "The Aspin–Welch t-test differs from the pooled two-sample t-test mainly because it",
+    "options": [
+     "does not assume equal population variances",
+     "requires known population standard deviations",
+     "uses a z-distribution instead of t",
+     "is only for paired samples"
+    ],
+    "correctIndex": 0,
+    "explanation": "Aspin–Welch handles unequal variances by estimating the df with a specific formula instead of pooling variances.",
+    "concept": "Aspin–Welch",
+    "difficulty": "easy"
+   },
+   {
+    "id": "3bf93b09-302",
+    "type": "mcq",
+    "question": "For a paired-sample t-test with n pairs, the test statistic uses which degrees of freedom?",
+    "options": [
+     "n − 1",
+     "n − 2",
+     "n",
+     "n + 1"
+    ],
+    "correctIndex": 0,
+    "explanation": "The paired t-test reduces to a one-sample t-test on differences, so df = n − 1.",
+    "concept": "paired df",
+    "difficulty": "easy"
+   },
+   {
+    "id": "6c977c69-d30",
+    "type": "mcq",
+    "question": "Compute the standard error used in the Aspin–Welch t statistic.",
+    "options": [
+     "sqrt(s₁²/n₁ + s₂²/n₂)",
+     "sqrt(((n₁−1)s₁² + (n₂−1)s₂²)/(n₁ + n₂ − 2)) * sqrt(1/n₁ + 1/n₂)",
+     "sqrt(p̂(1−p̂)(1/n₁ + 1/n₂))",
+     "s_p * sqrt(1/n₁ + 1/n₂) where s_p is pooled sd"
+    ],
+    "correctIndex": 0,
+    "explanation": "With unequal variances we use the square root of s₁²/n₁ + s₂²/n₂ as the estimated standard error.",
+    "concept": "standard error",
+    "difficulty": "medium"
+   },
+   {
+    "id": "84045988-1b9",
+    "type": "mcq",
+    "question": "In a two-proportion test under H₀: p_A = p_B, the pooled proportion p_c is used because",
+    "options": [
+     "H₀ assumes a common population proportion, so pooling gives a better estimate under the null",
+     "it accounts for unequal variances between groups",
+     "it converts the test to a t-test",
+     "it is required when sample sizes differ"
+    ],
+    "correctIndex": 0,
+    "explanation": "Under the null that both populations share the same p, pooling successes from both samples gives the best estimate for that common p.",
+    "concept": "pooled p",
+    "difficulty": "medium"
+   },
+   {
+    "id": "b2bd8c9c-26f",
+    "type": "tf",
+    "question": "If two independent samples have very large within-sample variability, a large difference of sample means may still occur by chance.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 0,
+    "explanation": "High variability increases the standard error, making large observed mean differences more likely by chance.",
+    "concept": "variability",
+    "difficulty": "easy"
+   },
+   {
+    "id": "78c7e790-2b2",
+    "type": "mcq",
+    "question": "Which test would you use to compare the improvement in scores for students before and after a training program (same students measured twice)?",
+    "options": [
+     "Paired t-test on differences",
+     "Two-sample t-test assuming independent samples",
+     "Two-proportion z-test with pooled p",
+     "Aspin–Welch t-test for unequal variances"
+    ],
+    "correctIndex": 0,
+    "explanation": "Repeated measures on the same students produce paired (dependent) samples; take differences and use a one-sample t-test on those differences.",
+    "concept": "paired test",
+    "difficulty": "easy"
+   }
+  ],
+  "video": {
+   "youtubeId": "zJ8e_wAWUzE",
+   "title": "Hypothesis Testing Problems - Z Test & T Statistics - One & Two Tailed Tests   2",
+   "channel": "The Organic Chemistry Tutor",
+   "seconds": 814
+  }
+ },
+ "c11": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "What is the formula for the mean μ of a chi-square distribution with df degrees of freedom?",
+    "answer": "μ = df"
+   },
+   {
+    "kind": "choice",
+    "prompt": "Which of these describes when you would use a chi-square goodness-of-fit test?",
+    "options": [
+     "To compare observed counts to expected counts under a specified distribution",
+     "To test whether two sample means are equal",
+     "To compare the slopes of two regression lines",
+     "To test whether a single numeric variable has mean zero"
+    ],
+    "correctIndex": 0,
+    "feedback": "Goodness-of-fit compares observed counts to expected counts from a specified distribution; other options are for t-tests or regression."
+   },
+   {
+    "kind": "order",
+    "prompt": "Put these steps for performing a chi-square test of independence in the correct order.",
+    "items": [
+     "Compute expected counts for each cell: (row total × column total) / grand total",
+     "State H₀: the two factors are independent and Hₐ: they are not independent",
+     "Calculate χ² = Σ((O − E)² / E) over all cells",
+     "Compare the χ² statistic to the chi-square distribution with df = (rows−1)(columns−1) to get a p-value"
+    ],
+    "feedback": "These are the logical steps: state hypotheses, compute expected counts, compute χ², then find p-value with appropriate df."
+   },
+   {
+    "kind": "fill",
+    "prompt": "Fill the blank: For a chi-square test of a single variance, the test statistic is χ² = ______, and the degrees of freedom are df = n − 1.",
+    "before": "χ² =",
+    "after": ", and the degrees of freedom are df = n − 1.",
+    "options": [
+     "((n − 1)·s²) / σ²",
+     "s / (σ / √n)",
+     "(O − E)² / E",
+     "Σ(Zᵢ)²"
+    ],
+    "correctIndex": 0,
+    "feedback": "The single-variance chi-square statistic is ((n − 1)·s²) / σ² with df = n − 1."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match each chi-square test name to its primary purpose.",
+    "pairs": [
+     [
+      "Goodness-of-fit",
+      "Check whether observed counts match a specified distribution"
+     ],
+     [
+      "Test of independence",
+      "Assess whether two categorical factors are independent"
+     ],
+     [
+      "Test for homogeneity",
+      "Decide whether two populations follow the same distribution"
+     ],
+     [
+      "Test of a single variance",
+      "Test whether population variance equals a hypothesized value"
+     ]
+    ],
+    "feedback": "Each test uses χ² but targets different questions: fit, independence, homogeneity, or variance."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "3c66ee9a-abc",
+    "type": "mcq",
+    "question": "Which statement about the chi-square distribution is true?",
+    "options": [
+     "It is symmetric about its mean for all degrees of freedom",
+     "Its mean equals the degrees of freedom",
+     "Its mean equals √(2·df)",
+     "It is always left-skewed"
+    ],
+    "correctIndex": 1,
+    "explanation": "The chi-square distribution has mean μ = df; it is right-skewed and standard deviation is √(2·df).",
+    "concept": "properties",
+    "difficulty": "easy"
+   },
+   {
+    "id": "d0ecd28a-b46",
+    "type": "mcq",
+    "question": "For a goodness-of-fit chi-square test with 6 categories, what are the degrees of freedom?",
+    "options": [
+     "6",
+     "5",
+     "4",
+     "7"
+    ],
+    "correctIndex": 1,
+    "explanation": "df = number of categories − 1 = 6 − 1 = 5.",
+    "concept": "df",
+    "difficulty": "easy"
+   },
+   {
+    "id": "b858c980-da7",
+    "type": "mcq",
+    "question": "Which requirement must be met for cells in chi-square tests of independence or goodness-of-fit?",
+    "options": [
+     "Each expected count should be at least five",
+     "Each observed count must be zero or one",
+     "All marginal totals must be equal",
+     "Each cell must contain a numerical measurement"
+    ],
+    "correctIndex": 0,
+    "explanation": "Chi-square tests require expected counts ≥ 5 in each cell or category for validity.",
+    "concept": "requirements",
+    "difficulty": "easy"
+   },
+   {
+    "id": "1b65463c-3d6",
+    "type": "mcq",
+    "question": "You compute χ² = Σ((O − E)² / E) = 12.5 for a test of independence with a 3×4 table. What are the degrees of freedom?",
+    "options": [
+     "11",
+     "6",
+     "5",
+     "8"
+    ],
+    "correctIndex": 1,
+    "explanation": "df = (rows − 1)(columns − 1) = (3 − 1)(4 − 1) = 2·3 = 6.",
+    "concept": "df",
+    "difficulty": "medium"
+   },
+   {
+    "id": "82c2ae8d-095",
+    "type": "mcq",
+    "question": "Which chi-square test could be used to determine whether men and women share the same preference distribution across four product choices?",
+    "options": [
+     "Test of a single variance",
+     "Test for homogeneity",
+     "Goodness-of-fit",
+     "One-sample t-test"
+    ],
+    "correctIndex": 1,
+    "explanation": "Comparing distributions of two populations uses the test for homogeneity.",
+    "concept": "choice",
+    "difficulty": "medium"
+   },
+   {
+    "id": "ec80fe90-971",
+    "type": "tf",
+    "question": "Chi-square test statistics can be negative.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 1,
+    "explanation": "χ² is a sum of squared terms and is always ≥ 0.",
+    "concept": "range",
+    "difficulty": "easy"
+   },
+   {
+    "id": "376e129f-759",
+    "type": "mcq",
+    "question": "When approximating the chi-square distribution by a normal distribution, which condition is given in the chapter?",
+    "options": [
+     "df > 10",
+     "df > 30",
+     "df > 90",
+     "df > 5"
+    ],
+    "correctIndex": 2,
+    "explanation": "The chapter states that for df > 90 the chi-square curve approximates the normal distribution.",
+    "concept": "approximation",
+    "difficulty": "hard"
+   },
+   {
+    "id": "0ce07566-f0d",
+    "type": "mcq",
+    "question": "In a chi-square goodness-of-fit test, the null hypothesis typically states:",
+    "options": [
+     "The sample mean equals the population mean",
+     "The data come from the assumed distribution",
+     "The two variables are correlated",
+     "The population variance is greater than zero"
+    ],
+    "correctIndex": 1,
+    "explanation": "Goodness-of-fit H₀: the data follow the specified distribution; the test compares observed and expected counts.",
+    "concept": "hypothesis",
+    "difficulty": "easy"
+   }
+  ],
+  "video": {
+   "youtubeId": "HKDqlYSLt68",
+   "title": "Chi Square Test",
+   "channel": "The Organic Chemistry Tutor",
+   "seconds": 404
+  }
+ },
+ "c12": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "Definition: What is the slope in the regression equation y = a + bx?",
+    "answer": "The slope is b; it describes the average change in y for a one-unit increase in x."
+   },
+   {
+    "kind": "choice",
+    "prompt": "Which equation is in the statistical regression form?",
+    "options": [
+     "y = 3x + 2",
+     "y = a + bx",
+     "x = my + c",
+     "y = mx^2 + b"
+    ],
+    "correctIndex": 1,
+    "feedback": "The statistical regression form uses constants a and b as in y = a + bx; other forms are algebraic or non-linear."
+   },
+   {
+    "kind": "order",
+    "prompt": "Put the steps in the correct order for identifying an outlier using residuals and s (standard deviation of residuals).",
+    "items": [
+     "Compute residuals for each point: residual = observed y − predicted ŷ.",
+     "Calculate s = √(SSE/(n − 2)), the standard deviation of residuals.",
+     "Compare |residual| to 2s; if |residual| ≥ 2s, label the point an outlier."
+    ],
+    "feedback": "Compute residuals, find s, then compare absolute residuals to 2s to detect outliers."
+   },
+   {
+    "kind": "fill",
+    "prompt": "If the correlation coefficient r = -0.85, then r² = _____. (Choose the best option.)",
+    "before": "r² = ",
+    "after": "",
+    "options": [
+     "0.7225",
+     "-0.85",
+     "0.15",
+     "-0.7225"
+    ],
+    "correctIndex": 0,
+    "feedback": "r² is the square of r and is always nonnegative: (-0.85)² = 0.7225, the fraction of variance explained."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match each term to its meaning.",
+    "pairs": [
+     [
+      "Residual",
+      "Observed y minus predicted ŷ"
+     ],
+     [
+      "Y-intercept (a)",
+      "Predicted y when x = 0"
+     ],
+     [
+      "Coefficient of determination (r²)",
+      "Proportion of y variation explained by x"
+     ]
+    ],
+    "feedback": "Residuals measure errors; a is the predicted value at x = 0; r² gives percent of explained variation."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "da4e5271-a11",
+    "type": "mcq",
+    "question": "Which of the following describes a linear association between two variables?",
+    "options": [
+     "The variables are related by y = a + bx with a straight-line scatter pattern.",
+     "The variables always have a correlation coefficient r = 1.",
+     "One variable causes the other in every case.",
+     "The scatter plot forms a parabola."
+    ],
+    "correctIndex": 0,
+    "explanation": "A linear association is modeled by y = a + bx and shows a roughly straight-line pattern; r = 1 means perfect linearity but is not required.",
+    "concept": "linear association",
+    "difficulty": "easy"
+   },
+   {
+    "id": "ad819550-1e3",
+    "type": "mcq",
+    "question": "In the regression equation ŷ = a + bx, what does b represent?",
+    "options": [
+     "The y-intercept",
+     "The slope: average change in y per unit x",
+     "The correlation coefficient",
+     "The residual for each point"
+    ],
+    "correctIndex": 1,
+    "explanation": "b is the slope, giving the average change in y for a one-unit increase in x.",
+    "concept": "slope",
+    "difficulty": "easy"
+   },
+   {
+    "id": "6b659af7-b77",
+    "type": "mcq",
+    "question": "Which statistic measures the strength and direction of the linear relationship between x and y?",
+    "options": [
+     "r²",
+     "SSE",
+     "r",
+     "s (standard deviation of residuals)"
+    ],
+    "correctIndex": 2,
+    "explanation": "The correlation coefficient r measures both strength and direction; r² measures explained variation only.",
+    "concept": "correlation",
+    "difficulty": "easy"
+   },
+   {
+    "id": "bfdf1f44-a23",
+    "type": "mcq",
+    "question": "What does r² = 0.64 mean in the context of a regression of y on x?",
+    "options": [
+     "64% of variation in x is explained by variation in y.",
+     "The correlation r = -0.64.",
+     "64% of variation in y is explained by variation in x using the regression line.",
+     "The slope b = 0.64."
+    ],
+    "correctIndex": 2,
+    "explanation": "r² is the proportion of y's variation explained by x via the regression model; it does not give slope or direction.",
+    "concept": "r²",
+    "difficulty": "medium"
+   },
+   {
+    "id": "eb9065d6-1cf",
+    "type": "mcq",
+    "question": "Which condition is NOT one of the usual assumptions for linear regression inference?",
+    "options": [
+     "Linear relationship between x and y in the population",
+     "Residuals have equal variance for each x (homoscedasticity)",
+     "Residuals depend on each other (are correlated)",
+     "Y values are normally distributed for each x"
+    ],
+    "correctIndex": 2,
+    "explanation": "Residuals should be independent, not dependent; dependence violates regression assumptions.",
+    "concept": "assumptions",
+    "difficulty": "hard"
+   },
+   {
+    "id": "2423bbff-8ba",
+    "type": "mcq",
+    "question": "You compute s = √(SSE/(n − 2)). What is s?",
+    "options": [
+     "Standard deviation of x",
+     "Standard deviation of residuals (estimate of σ)",
+     "The correlation coefficient",
+     "The slope of the regression line"
+    ],
+    "correctIndex": 1,
+    "explanation": "s estimates the population standard deviation of y around the regression line; it's based on residuals and SSE.",
+    "concept": "residual sd",
+    "difficulty": "medium"
+   },
+   {
+    "id": "47a51641-203",
+    "type": "tf",
+    "question": "The least-squares regression line minimizes the sum of squared residuals (errors).",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 0,
+    "explanation": "By definition, the least-squares line minimizes the sum of squared differences between observed and predicted y.",
+    "concept": "least-squares",
+    "difficulty": "easy"
+   },
+   {
+    "id": "1b33e42e-380",
+    "type": "mcq",
+    "question": "Which practice is recommended when using a regression line to predict y for a new x value?",
+    "options": [
+     "Predict only for x values within the range of the original data (interpolation).",
+     "Predict for any x, even far outside the data range (extrapolation) is always safe.",
+     "Always round predictions to whole numbers only.",
+     "Use the line only if r = 0."
+    ],
+    "correctIndex": 0,
+    "explanation": "Regression predictions are reliable for interpolation within the data range; extrapolation outside that range is risky.",
+    "concept": "prediction",
+    "difficulty": "medium"
+   }
+  ],
+  "video": {
+   "youtubeId": "11c9cs6WpJU",
+   "title": "Correlation Coefficient",
+   "channel": "The Organic Chemistry Tutor",
+   "seconds": 777
+  }
+ },
+ "c13": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "Definition: What is the null hypothesis in a one-way ANOVA with k groups?",
+    "answer": "H₀: μ₁ = μ₂ = ... = μ_k — all group population means are equal."
+   },
+   {
+    "kind": "choice",
+    "prompt": "Which assumption is NOT required for a valid one-way ANOVA?",
+    "options": [
+     "Each group sample is randomly selected and independent",
+     "Each group comes from a normal population",
+     "The population variances are equal across groups (homogeneity)",
+     "Group means must be in arithmetic progression"
+    ],
+    "correctIndex": 3,
+    "feedback": "ANOVA does not require group means to follow any specific pattern such as arithmetic progression."
+   },
+   {
+    "kind": "order",
+    "prompt": "Put these steps for computing the one-way ANOVA F statistic in the correct order.",
+    "items": [
+     "Compute MS_between = SS_between / (k − 1)",
+     "Calculate group means and the overall mean",
+     "Compute SS_within by summing squared deviations within each group",
+     "Compute F = MS_between / MS_within"
+    ],
+    "feedback": "MS_between and MS_within are mean squares (variance estimates) used to form the F ratio."
+   },
+   {
+    "kind": "fill",
+    "prompt": "Interpretation: If the calculated F is small and near 1, then:",
+    "before": "If F is small (close to 1),",
+    "after": "the numerator and denominator variance estimates are similar, so we fail to reject H₀.",
+    "options": [
+     "Reject H₀ — evidence of different means",
+     "Fail to reject H₀ — no evidence of different means",
+     "The group variances are definitely unequal",
+     "There is at least one outlier causing low F"
+    ],
+    "correctIndex": 1,
+    "feedback": "A small F means between-group variance is not substantially larger than within-group variance, indicating no evidence of differing means."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match the F distribution feature to its description.",
+    "pairs": [
+     [
+      "Only positive values",
+      "F distribution is defined for values ≥ 0"
+     ],
+     [
+      "Right skewed",
+      "Tail extends to the right; shape depends on degrees of freedom"
+     ],
+     [
+      "Two degrees of freedom parameters",
+      "F ~ F_(df1, df2): numerator and denominator d.f."
+     ],
+     [
+      "Used in ANOVA",
+      "F statistic compares variance between groups to variance within groups"
+     ]
+    ],
+    "feedback": "These are key properties of the F distribution used in ANOVA."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "1e305cf7-5be",
+    "type": "mcq",
+    "question": "In one-way ANOVA, MS_between estimates:",
+    "options": [
+     "The average of individual sample variances",
+     "The variance of the group means scaled by group sizes",
+     "The pooled within-group variance",
+     "The variance of residuals around a regression line"
+    ],
+    "correctIndex": 1,
+    "explanation": "MS_between measures variability of group means (relative to the overall mean), scaled by group sizes.",
+    "concept": "MS_between",
+    "difficulty": "medium"
+   },
+   {
+    "id": "a5e747f9-1a7",
+    "type": "mcq",
+    "question": "What are the numerator and denominator degrees of freedom for the F statistic in a one-way ANOVA with k groups and total sample size n?",
+    "options": [
+     "k and n − k",
+     "k − 1 and n − k",
+     "n − 1 and k − 1",
+     "k − 1 and n − 1"
+    ],
+    "correctIndex": 1,
+    "explanation": "Numerator d.f. = k − 1 (between groups); denominator d.f. = n − k (within groups).",
+    "concept": "degrees of freedom",
+    "difficulty": "easy"
+   },
+   {
+    "id": "9e2244a1-62c",
+    "type": "mcq",
+    "question": "Which conclusion follows if the p-value from a one-way ANOVA is very small (below α)?",
+    "options": [
+     "Fail to reject H₀; all means equal",
+     "Reject H₀; at least two group means differ",
+     "All pairwise differences are significant",
+     "Variances are unequal across groups"
+    ],
+    "correctIndex": 1,
+    "explanation": "A small p-value indicates evidence against H₀, so at least two group means differ, though it doesn't specify which.",
+    "concept": "hypothesis",
+    "difficulty": "easy"
+   },
+   {
+    "id": "09d4f0bc-0cb",
+    "type": "mcq",
+    "question": "The F distribution used in ANOVA is:",
+    "options": [
+     "Symmetric about 0",
+     "Defined only for nonnegative values and skewed right",
+     "Always approximately normal for large samples",
+     "Bilateral with heavier tails than t"
+    ],
+    "correctIndex": 1,
+    "explanation": "The F distribution takes only nonnegative values and is right-skewed; shape depends on d.f.",
+    "concept": "F distribution",
+    "difficulty": "easy"
+   },
+   {
+    "id": "5220a14f-b90",
+    "type": "mcq",
+    "question": "Which situation would violate the assumptions of a standard one-way ANOVA and potentially invalidate the F test?",
+    "options": [
+     "Independent random samples from each group",
+     "Groups sampled from normal populations with equal variances",
+     "One group with a strongly skewed distribution while others are roughly normal",
+     "Groups with equal sample sizes (balanced data)"
+    ],
+    "correctIndex": 2,
+    "explanation": "ANOVA is sensitive to nonnormality; a strongly skewed group can violate assumptions and affect the test.",
+    "concept": "assumptions",
+    "difficulty": "medium"
+   },
+   {
+    "id": "2ba8a7c4-865",
+    "type": "mcq",
+    "question": "When comparing two variances using an F test, the test statistic is:",
+    "options": [
+     "s1² − s2²",
+     "(s1²)/(s2²) with appropriate ordering of numerator and denominator",
+     "(s1)/(s2)",
+     "(s1² + s2²)/2"
+    ],
+    "correctIndex": 1,
+    "explanation": "The F test for two variances uses the ratio of the sample variances; degrees of freedom correspond to sample sizes minus one.",
+    "concept": "two-variances",
+    "difficulty": "medium"
+   },
+   {
+    "id": "10ade9af-61c",
+    "type": "mcq",
+    "question": "If group sizes are equal (balanced design), then compared to unbalanced designs calculations for ANOVA:",
+    "options": [
+     "Become invalid and cannot be used",
+     "Simplify because group means contribute equally",
+     "Require more complex weighted sums of squares",
+     "Change the F distribution used"
+    ],
+    "correctIndex": 1,
+    "explanation": "Balanced designs allow simplified formulas because each group contributes equally to between-group sums of squares.",
+    "concept": "balanced data",
+    "difficulty": "medium"
+   },
+   {
+    "id": "9b77b5fb-f49",
+    "type": "tf",
+    "question": "The F statistic can take negative values.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 1,
+    "explanation": "False — the F statistic is a ratio of variances (nonnegative), so it cannot be negative.",
+    "concept": "F values",
+    "difficulty": "easy"
+   }
+  ],
+  "video": {
+   "youtubeId": "x_gHAly3mJo",
+   "title": "What is ANOVA (Analysis of Variance) in Statistics ? | Explained with Examples (ANOVA F - test)",
+   "channel": "Digital E-Learning",
+   "seconds": 809
+  }
+ }
+}

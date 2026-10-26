@@ -1,0 +1,523 @@
+{
+  "categories": {
+    "sciences": {
+      "name": "Sayensị"
+    },
+    "maths": {
+      "name": "Mgbakọ na Mwepụ"
+    },
+    "languages": {
+      "name": "Asụsụ na Agụmagụ"
+    },
+    "humanities": {
+      "name": "Ọmụmụ omenala na mmadụ"
+    },
+    "business": {
+      "name": "Azụmahịa na Ego"
+    },
+    "tech": {
+      "name": "Teknụzụ na Ikike Ọdịnihu"
+    }
+  },
+  "subjects": {
+    "mathematics": {
+      "name": "Mgbakọ na Mwepụ",
+      "description": "Ọnụọgụgụ, aljebra, jiometrị na echiche dị n’azụ ha.",
+      "topics": [
+        "Aljebra",
+        "Nhata quadratic",
+        "Jiometrị",
+        "Statistiks",
+        "Trigonometrị",
+        "Calculus"
+      ]
+    },
+    "further-maths": {
+      "name": "Mgbakọ na Mwepụ Ọkaibe",
+      "description": "Matrices, vector na idozi nsogbu siri ike karịa.",
+      "topics": [
+        "Matrices",
+        "Vector",
+        "Ọnụọgụgụ complex",
+        "Differentiation"
+      ]
+    },
+    "physics": {
+      "name": "Fiziksị",
+      "description": "Otu ume, ike (forces) na eluigwe na ala si akpa àgwà.",
+      "topics": [
+        "Mmegharị",
+        "Ike (Forces)",
+        "Ebili (Waves)",
+        "Ọkụ eletrik",
+        "Ume (Energy)",
+        "Ọmụmụ ìhè (Optics)"
+      ]
+    },
+    "chemistry": {
+      "name": "Kemistrị",
+      "description": "Atọm, mmeghachi kemịkalụ na ihe e ji mee ihe niile.",
+      "topics": [
+        "Echiche mole (Mole concept)",
+        "Njikọ kemịkalụ",
+        "Kemistrị organic",
+        "Electrolysis",
+        "Ọsọ mmeghachi kemịkalụ"
+      ]
+    },
+    "biology": {
+      "name": "Bayọlọjị",
+      "description": "Ihe ndị dị ndụ, site na sel ruo n’usoro gburugburu ebe obibi (ecosystem) dum.",
+      "topics": [
+        "Bayọlọjị sel",
+        "Jenetiks",
+        "Ikoloji (Ecology)",
+        "Nri na edozi ahụ",
+        "Otu ahụ mmadụ si arụ ọrụ"
+      ]
+    },
+    "agric": {
+      "name": "Sayensị Ọrụ Ugbo",
+      "description": "Ihe ọkụkụ, ala, anụmanụ na azụmahịa ugbo.",
+      "topics": [
+        "Sayensị ala",
+        "Mmepụta ihe ọkụkụ",
+        "Nzụ anụmanụ"
+      ]
+    },
+    "english": {
+      "name": "Asụsụ Bekee",
+      "description": "Ịgụ, ide na ikwu okwu na ntụkwasị obi.",
+      "topics": [
+        "Nghọta ihe agụrụ",
+        "Ide nchịkọta",
+        "Ide edemede",
+        "Lexis & structure",
+        "Bekee ọnụ (Oral English)"
+      ]
+    },
+    "literature": {
+      "name": "Agụmagụ Bekee",
+      "description": "Iduuazị, abụ na ejije, a kọwara nke ọma.",
+      "topics": [
+        "Iduuazị (Prose)",
+        "Abụ",
+        "Ejije",
+        "Ngwa agụmagụ (Literary devices)"
+      ]
+    },
+    "french": {
+      "name": "Asụsụ Frenchị",
+      "description": "Frenchị kwa ụbọchị maka ụlọ akwụkwọ na njem.",
+      "topics": [
+        "Ekele",
+        "Ngwaa",
+        "Ụtọasụsụ",
+        "Mkparịta ụka"
+      ]
+    },
+    "government": {
+      "name": "Ọchịchị",
+      "description": "Otu e si achị mba, na ihe mere o ji dị mkpa.",
+      "topics": [
+        "Iwu obodo (Constitution)",
+        "Ngalaba ọchịchị",
+        "Usoro ntuli aka",
+        "Ọchịchị etiti Naịjirịa (Federalism)"
+      ]
+    },
+    "history": {
+      "name": "Akụkọ Ihe Mere Eme",
+      "description": "Akụkọ oge gara aga nke kpụrụ taa.",
+      "topics": [
+        "Afrịka tupu ọchịchị colonial",
+        "Oge ọchịchị colonial",
+        "Mgbalị nnwere onwe",
+        "Agha ụwa"
+      ]
+    },
+    "geography": {
+      "name": "Jiografị",
+      "description": "Ụwa anyị, ndị bi na ya na ihu igwe ya.",
+      "topics": [
+        "Ịgụ maapụ",
+        "Ihu igwe (Climate)",
+        "Ọnụ ọgụgụ mmadụ",
+        "Ọdịdị ala"
+      ]
+    },
+    "economics": {
+      "name": "Akụnaụba",
+      "description": "Ego, ahịa na otu e si eme mkpebi.",
+      "topics": [
+        "Ọchịchọ & ọnyịnye (Demand & supply)",
+        "Elasticity",
+        "Ịrị elu ọnụahịa (Inflation)",
+        "Ego mba na-enweta (National income)",
+        "Usoro ahịa"
+      ]
+    },
+    "accounting": {
+      "name": "Akaụntịn Ego",
+      "description": "Akwụkwọ ndekọ, ledger na akụkọ ego (financial statements).",
+      "topics": [
+        "Double entry",
+        "Trial balance",
+        "Final accounts",
+        "Mbelata uru (Depreciation)"
+      ]
+    },
+    "entrepreneurship": {
+      "name": "Ọchụnta Ego",
+      "description": "Ime ka echiche ghọọ azụmahịa na-aga nke ọma.",
+      "topics": [
+        "Echiche azụmahịa",
+        "Ịre ahịa (Marketing)",
+        "Ịkpụ ọnụahịa",
+        "Igosi echiche (Pitching)"
+      ]
+    },
+    "computer-science": {
+      "name": "Sayensị Kọmputa",
+      "description": "Otu kọmputa si eche echiche, site na logic ruo koodu.",
+      "topics": [
+        "Algorithm",
+        "Ntọala programming",
+        "Data structures",
+        "Netwọk"
+      ]
+    },
+    "ai-literacy": {
+      "name": "Ọmụma AI",
+      "description": "Gịnị bụ AI, otu o si arụ ọrụ na otu e si eji ya nke ọma.",
+      "topics": [
+        "Gịnị bụ AI",
+        "Machine learning",
+        "Prompting",
+        "Ụkpụrụ omume AI"
+      ]
+    }
+  },
+  "lessons": {
+    "l1": {
+      "title": "Otu sel si emepụta ume",
+      "topic": "Bayọlọjị sel",
+      "summary": "Mitochondria na-agbanwe glucose na oxygen ka ọ ghọọ ATP, ego ume nke sel ọ bụla na-emefu.",
+      "keyPoints": [
+        "Respiration na-eme n’ime mitochondria",
+        "Glucose + oxygen → CO₂ + mmiri + ATP",
+        "Anaerobic respiration na-emepụta lactic acid n’ime akwara"
+      ]
+    },
+    "l2": {
+      "title": "Jenetiks mere ka ọ dị mfe: dominant na recessive",
+      "topic": "Jenetiks",
+      "summary": "Ihe mere i nwere ike inwe anya nne gị mana ogologo nna nna gị: alleles, genotypes na Punnett squares.",
+      "keyPoints": [
+        "Àgwà (trait) ọ bụla nwere alleles abụọ",
+        "Dominant alleles na-ekpuchi ndị recessive",
+        "Punnett squares na-ebu amụma ratio ụmụ a ga-amụ"
+      ]
+    },
+    "l3": {
+      "title": "Usoro nri (food chain) na ọsọ ume",
+      "topic": "Ikoloji (Ecology)",
+      "summary": "Ume na-esi n’aka ndị na-emepụta (producers) gaa n’aka ndị na-eri (consumers), ọ bụ naanị ihe dị ka 10% na-agafe gaa n’ọkwa ọ bụla na-esote.",
+      "keyPoints": [
+        "Producers na-emepụta nri site na photosynthesis",
+        "Ihe dị ka 10% nke ume na-agafe n’ọkwa ọ bụla",
+        "Decomposers na-emegharị nri ala (nutrients)"
+      ]
+    },
+    "l4": {
+      "title": "Echiche mole n’ime nkeji 5",
+      "topic": "Echiche mole (Mole concept)",
+      "summary": "Otu mole bụ particles 6.02 × 10²³. Mụta ịgbanwe n’etiti mass, moles na particles na ntụkwasị obi.",
+      "keyPoints": [
+        "1 mole = 6.02 × 10²³ particles",
+        "Moles = mass ÷ molar mass",
+        "Jiri ratio sitere na balanced equations"
+      ]
+    },
+    "l5": {
+      "title": "Ionic na covalent bonding",
+      "topic": "Njikọ kemịkalụ",
+      "summary": "Ionic bonds na-enyefe electrons; covalent bonds na-ekerịta ha. Kaadị 20 iji mee ka ọ banye gị n’isi.",
+      "keyPoints": [
+        "Ionic: metal + non-metal, nnyefe electron",
+        "Covalent: non-metal na-ekerịta electrons",
+        "Ionic compounds na-eduba ọkụ eletrik mgbe ha gbazere (molten)"
+      ]
+    },
+    "l6": {
+      "title": "Kemistrị organic: ịkpọ alkanes aha",
+      "topic": "Kemistrị organic",
+      "summary": "Nwalee onwe gị n’ịkpọ aha IUPAC maka alkanes, alkenes na alcohols.",
+      "keyPoints": [
+        "Chọta carbon chain kacha ogologo",
+        "Malite ọnụọgụgụ site na nsọtụ kacha nso na alaka (branch)",
+        "Prefixes: meth, eth, prop, but…"
+      ]
+    },
+    "l7": {
+      "title": "Iwu atọ Newton, a kọwara ha",
+      "topic": "Ike (Forces)",
+      "summary": "Inertia, F = ma, na action–reaction, ya na ihe atụ kwa ụbọchị site na ụgbọ danfo ruo bọọlụ.",
+      "keyPoints": [
+        "Ihe ga-anọ jụụ ma ọ bụrụ na ihe emetụghị ya",
+        "Force = mass × acceleration",
+        "Action ọ bụla nwere reaction hà nhata ma chee ya ihu"
+      ]
+    },
+    "l8": {
+      "title": "Iwu Ohm na circuit dị mfe",
+      "topic": "Ọkụ eletrik",
+      "summary": "V = IR. Otu voltage, current na resistance si metụta onwe ha na circuit series na parallel.",
+      "keyPoints": [
+        "V = I × R",
+        "Series: resistances na-agbakọ ọnụ",
+        "Parallel: 1/R = 1/R₁ + 1/R₂"
+      ]
+    },
+    "l9": {
+      "title": "Ebili: frequency, wavelength, ọsọ",
+      "topic": "Ebili (Waves)",
+      "summary": "Ajụjụ iri dị ka nke ule na v = fλ.",
+      "keyPoints": [
+        "v = f × λ",
+        "Transverse na longitudinal",
+        "Ụda chọrọ medium (ihe ọ ga-esi gafee)"
+      ]
+    },
+    "l10": {
+      "title": "Idozi nhata quadratic",
+      "topic": "Nhata quadratic",
+      "summary": "Factorisation, completing the square na formula. Họrọ ụzọ kacha ọsọ oge niile.",
+      "keyPoints": [
+        "Buru ụzọ nwaa factorising",
+        "x = (−b ± √(b²−4ac)) / 2a",
+        "Discriminant na-agwa gị ole roots dị"
+      ]
+    },
+    "l11": {
+      "title": "Trigonometrị: SOH CAH TOA",
+      "topic": "Trigonometrị",
+      "summary": "Ratio sine, cosine na tangent ya na aghụghọ ncheta na-anọgide n’isi.",
+      "keyPoints": [
+        "sin = opposite / hypotenuse",
+        "cos = adjacent / hypotenuse",
+        "tan = opposite / adjacent"
+      ]
+    },
+    "l12": {
+      "title": "Statistiks: mean, median na mode",
+      "topic": "Statistiks",
+      "summary": "Ụzọ atọ isi kọwaa “etiti” data, na mgbe a ga-eji nke ọ bụla.",
+      "keyPoints": [
+        "Mean: gbakọọ ọnụ, wee kee",
+        "Median: uru nọ n’etiti",
+        "Mode: nke na-apụta ugboro ugboro karịa"
+      ]
+    },
+    "l13": {
+      "title": "Differentiation site na first principles",
+      "topic": "Differentiation",
+      "summary": "Ihe derivative pụtara n’ezie, a na-ewuli ya nzọụkwụ nzọụkwụ.",
+      "keyPoints": [
+        "Derivative bụ ọsọ mgbanwe (rate of change)",
+        "Limit of (f(x+h) − f(x)) / h",
+        "Power rule: d/dx xⁿ = nxⁿ⁻¹"
+      ]
+    },
+    "l14": {
+      "title": "Ide mmalite edemede siri ike",
+      "topic": "Ide edemede",
+      "summary": "Hook, ọnọdụ, thesis: mmalite nwere akụkụ atọ nke ndị na-ahụ maka ule hụrụ n’anya.",
+      "keyPoints": [
+        "Malite na hook (ihe na-adọta mmasị)",
+        "Nye ọnọdụ dị mkpụmkpụ",
+        "Mechie na thesis doro anya"
+      ]
+    },
+    "l15": {
+      "title": "Ide nchịkọta na-enweta akara",
+      "topic": "Ide nchịkọta",
+      "summary": "Otu e si achọta isi ihe ma degharịa ha n’okwu nke gị, n’ime oke okwu e nyere.",
+      "keyPoints": [
+        "Gụọ ajụjụ ahụ ugboro abụọ",
+        "Otu isi ihe n’ahịrịokwu ọ bụla",
+        "Edepụtakwala ahịrịokwu dum"
+      ]
+    },
+    "l16": {
+      "title": "Mmemme Lexis & structure",
+      "topic": "Lexis & structure",
+      "summary": "Synonyms, antonyms na sentence completion dị ka nke JAMB.",
+      "keyPoints": [
+        "Buru ụzọ gụọ ahịrịokwu ahụ dum",
+        "Lezie anya maka ihe ngosi tense",
+        "Wepụ nhọrọ ndị doro anya na ha ezighi ezi"
+      ]
+    },
+    "l17": {
+      "title": "Things Fall Apart: isiokwu (themes)",
+      "topic": "Iduuazị (Prose)",
+      "summary": "Mpako, omenala na mgbanwe n’akwụkwọ ama ama Achebe, dị ka ihe ọmụmụ ọdịyo ị nwere ike ige ebe ọ bụla.",
+      "keyPoints": [
+        "Egwu Okonkwo na-atụ adịghị ike",
+        "Omenala na mgbanwe colonial",
+        "Dike ọdachi (tragic hero)"
+      ]
+    },
+    "l18": {
+      "title": "Ọchịchọ na ọnyịnye, n’ụzọ dị mfe",
+      "topic": "Ọchịchọ & ọnyịnye (Demand & supply)",
+      "summary": "Ihe mere ọnụahịa ji arị elu ma na-agbada, jiri ahịa tomato mee ihe atụ.",
+      "keyPoints": [
+        "Ọchịchọ (demand) na-ebelata ka ọnụahịa na-arị elu",
+        "Ọnyịnye (supply) na-arị elu ka ọnụahịa na-arị elu",
+        "Equilibrium bụ ebe ha abụọ zutere"
+      ]
+    },
+    "l19": {
+      "title": "Inflation: ihe mere ọnụahịa ji na-arị elu mgbe niile",
+      "topic": "Ịrị elu ọnụahịa (Inflation)",
+      "summary": "Ihe na-akpata ya, mmetụta ya na otu central banks si alụso inflation ọgụ.",
+      "keyPoints": [
+        "Demand-pull na cost-push",
+        "Inflation na-ebelata ike ego ịzụ ihe (purchasing power)",
+        "Interest rates bụ isi ngwa ọrụ"
+      ]
+    },
+    "l20": {
+      "title": "Double entry bookkeeping",
+      "topic": "Double entry",
+      "summary": "Azụmahịa (transaction) ọ bụla nwere akụkụ abụọ. Debits, credits na accounting equation.",
+      "keyPoints": [
+        "Assets = Liabilities + Capital",
+        "Debit ọ bụla nwere credit dabara ya",
+        "Jiri T-accounts mee mmemme"
+      ]
+    },
+    "l21": {
+      "title": "Ngalaba ọchịchị",
+      "topic": "Ngalaba ọchịchị",
+      "summary": "Legislature, executive na judiciary: onye na-eme gịnị.",
+      "keyPoints": [
+        "Legislature na-eme iwu",
+        "Executive na-emejuputa ha",
+        "Judiciary na-akọwa ha"
+      ]
+    },
+    "l22": {
+      "title": "Nnwere onwe Naịjirịa n’oge 10 dị mkpa",
+      "topic": "Mgbalị nnwere onwe",
+      "summary": "Site na amalgamation nke 1914 ruo 1 October 1960.",
+      "keyPoints": [
+        "Amalgamation nke 1914",
+        "Mgbalị ndị nationalist",
+        "Nnwere onwe na 1 October 1960"
+      ]
+    },
+    "l23": {
+      "title": "Ịgụ contour maps",
+      "topic": "Ịgụ maapụ",
+      "summary": "Contours, spot heights na gradients, a kọwara ha.",
+      "keyPoints": [
+        "Contours dị nso n’ibe ha = mkpọda dị elu (steep slope)",
+        "Contour interval anaghị agbanwe",
+        "Ọdịdị V na-atụ aka n’isi mmiri (upstream)"
+      ]
+    },
+    "l24": {
+      "title": "Mmemme Python mbụ gị",
+      "topic": "Ntọala programming",
+      "summary": "Variables, print na input: dee program ga-ekele gị n’aha gị.",
+      "keyPoints": [
+        "Variables na-echekwa values",
+        "print() na-egosi output",
+        "input() na-agụ ihe onye ọrụ pịnyere"
+      ]
+    },
+    "l25": {
+      "title": "Algorithm na ndụ kwa ụbọchị",
+      "topic": "Algorithm",
+      "summary": "Usoro isi nri, ntụziaka ụzọ na ịhazi playlist gị: algorithm dị ebe niile.",
+      "keyPoints": [
+        "Algorithm bụ usoro nzọụkwụ",
+        "Usoro (order) dị mkpa",
+        "Algorithm ọma na-arụ ọrụ nke ọma n’efughị oge"
+      ]
+    },
+    "l26": {
+      "title": "Gịnị bụ AI n’ezie?",
+      "topic": "Gịnị bụ AI",
+      "summary": "Otu igwe si amụta patterns site na data, na ihe ha ka na-enweghị ike ime.",
+      "keyPoints": [
+        "AI na-amụta patterns site n’ihe atụ",
+        "Ọ na-ebu amụma, ọ “maghị” ihe",
+        "Nyochaa azịza AI mgbe niile"
+      ]
+    },
+    "l27": {
+      "title": "Prompting dị ka ọkachamara",
+      "topic": "Prompting",
+      "summary": "Nye ọnọdụ, kenye ya ọrụ (role) ma rịọ maka ụdị azịza: nweta azịza ka mma site n’aka AI.",
+      "keyPoints": [
+        "Kọwaa ebumnuche gị nke ọma",
+        "Nye ihe atụ",
+        "Rịọ ka o chee echiche nzọụkwụ nzọụkwụ"
+      ]
+    },
+    "l28": {
+      "title": "Ịkpụ ọnụahịa ngwaahịa mbụ gị",
+      "topic": "Ịkpụ ọnụahịa",
+      "summary": "Cost-plus, value-based na competitor pricing maka ndị na-eto eto na-achụ ego.",
+      "keyPoints": [
+        "Mara ngụkọta ego niile ị na-emefu",
+        "Kpụọ ọnụahịa dabere n’uru, ọ bụghị naanị ego ị mefuru",
+        "Nwalee ma gbanwee"
+      ]
+    },
+    "l29": {
+      "title": "Ekele & mmeghe onwe gị na Frenchị",
+      "topic": "Ekele",
+      "summary": "Bonjour, ça va? Kwuo ahịrịokwu Frenchị mbụ gị na ntụkwasị obi.",
+      "keyPoints": [
+        "Bonjour / Bonsoir",
+        "Je m’appelle…",
+        "Comment ça va?"
+      ]
+    },
+    "l30": {
+      "title": "Electrolysis nzọụkwụ nzọụkwụ",
+      "topic": "Electrolysis",
+      "summary": "Ihe na-eme na anode na cathode, na otu e si ebu amụma products.",
+      "keyPoints": [
+        "Cations na-aga na cathode",
+        "Anions na-aga na anode",
+        "Oxidation na anode, reduction na cathode"
+      ]
+    },
+    "l31": {
+      "title": "Obi mmadụ na mgbasa ọbara",
+      "topic": "Otu ahụ mmadụ si arụ ọrụ",
+      "summary": "Ajụjụ iri na abụọ gbasara obi, akwara ọbara na double circulation.",
+      "keyPoints": [
+        "Ọnụ ụlọ (chambers) anọ",
+        "Arteries na-ebupụ ọbara n’obi",
+        "Double circulation na mammals"
+      ]
+    },
+    "l32": {
+      "title": "Jiometrị: akụkụ (angles) na okirikiri",
+      "topic": "Jiometrị",
+      "summary": "Circle theorems ya na eserese ị ga-enwe ike ịgbaso n’ezie.",
+      "keyPoints": [
+        "Angle na centre = 2 × angle na circumference",
+        "Angles nọ n’otu segment hà nhata",
+        "Angles chere ibe ha ihu na cyclic quad na-agbakọ ruo 180°"
+      ]
+    }
+  }
+}

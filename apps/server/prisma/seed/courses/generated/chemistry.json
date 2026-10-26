@@ -1,0 +1,4003 @@
+{
+ "c1": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "Define 'matter' as used in chemistry.",
+    "answer": "Matter is anything that occupies space and has mass."
+   },
+   {
+    "kind": "choice",
+    "prompt": "Which of the following is a homogeneous mixture?",
+    "options": [
+     "Granite countertop",
+     "Salt dissolved in water",
+     "Oil and vinegar salad dressing",
+     "Pulverized rock sample"
+    ],
+    "correctIndex": 1,
+    "feedback": "A homogeneous mixture has the same composition throughout; salt dissolved in water is uniform at the molecular level."
+   },
+   {
+    "kind": "order",
+    "prompt": "Place these steps in the factor-label (dimensional analysis) method in the correct order.",
+    "items": [
+     "Write the given quantity with its unit.",
+     "Choose conversion factors that cancel unwanted units.",
+     "Perform the arithmetic to obtain the final number with the desired unit."
+    ],
+    "feedback": "Dimensional analysis proceeds by writing the given, multiplying by conversion factors to cancel units, then calculating the result."
+   },
+   {
+    "kind": "fill",
+    "prompt": "Choose the best option to complete the sentence: A physical change _____ change the chemical identity of a substance.",
+    "before": "A physical change",
+    "after": "the chemical identity of a substance.",
+    "options": [
+     "does not",
+     "always does",
+     "sometimes does",
+     "only in gases"
+    ],
+    "correctIndex": 0,
+    "feedback": "Physical changes alter state or appearance without changing chemical composition."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match each term (left) with its correct description (right).",
+    "pairs": [
+     [
+      "Extensive property",
+      "Depends on the amount of matter (e.g., mass)"
+     ],
+     [
+      "Intensive property",
+      "Independent of amount (e.g., density, temperature)"
+     ],
+     [
+      "Compound",
+      "Substance composed of two or more types of atoms chemically bonded"
+     ],
+     [
+      "Element",
+      "Substance made of only one type of atom that cannot be broken down by chemical change"
+     ]
+    ],
+    "feedback": "Extensive vs intensive depend on sample size; elements and compounds are pure substances."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "ebac1396-452",
+    "type": "mcq",
+    "question": "Which domain do chemists use to represent molecules and atoms symbolically?",
+    "options": [
+     "Macroscopic domain",
+     "Microscopic domain",
+     "Symbolic domain",
+     "Experimental domain"
+    ],
+    "correctIndex": 2,
+    "explanation": "The symbolic domain is used for formulas, equations, and models that represent atoms and molecules.",
+    "concept": "domains",
+    "difficulty": "easy"
+   },
+   {
+    "id": "97fc38bc-faa",
+    "type": "mcq",
+    "question": "Which of these is a chemical property?",
+    "options": [
+     "Boiling point of water",
+     "Hardness of diamond",
+     "Flammability of gasoline",
+     "Melting of wax"
+    ],
+    "correctIndex": 2,
+    "explanation": "Flammability describes how a substance reacts chemically (burns), so it is a chemical property.",
+    "concept": "properties",
+    "difficulty": "easy"
+   },
+   {
+    "id": "db39113b-1e2",
+    "type": "mcq",
+    "question": "Which statement best distinguishes an element from a compound?",
+    "options": [
+     "Elements are homogeneous mixtures; compounds are heterogeneous mixtures.",
+     "Elements contain only one type of atom; compounds contain two or more kinds of atoms chemically bonded.",
+     "Elements can be broken down by chemical changes; compounds cannot.",
+     "Elements always exist as single atoms; compounds always exist as molecules."
+    ],
+    "correctIndex": 1,
+    "explanation": "An element consists of only one type of atom; a compound is made of two or more types of atoms chemically combined.",
+    "concept": "pure substance",
+    "difficulty": "easy"
+   },
+   {
+    "id": "c50a22e3-339",
+    "type": "mcq",
+    "question": "A balloon is inflated by gas. This observation demonstrates that gas has which property?",
+    "options": [
+     "Fixed volume",
+     "Fixed shape",
+     "Occupies space",
+     "Rigid structure"
+    ],
+    "correctIndex": 2,
+    "explanation": "Gases take the shape and the volume of their container, so they occupy space.",
+    "concept": "states",
+    "difficulty": "easy"
+   },
+   {
+    "id": "4b07d8be-677",
+    "type": "mcq",
+    "question": "Which of the following is an intensive property?",
+    "options": [
+     "Mass of a sample of copper",
+     "Volume of a beaker of water",
+     "Density of gold",
+     "Amount of heat in a heated rod"
+    ],
+    "correctIndex": 2,
+    "explanation": "Density is independent of the amount of substance and is therefore an intensive property.",
+    "concept": "intensive/extensive",
+    "difficulty": "medium"
+   },
+   {
+    "id": "81ddedb9-e2a",
+    "type": "mcq",
+    "question": "Which description fits a heterogeneous mixture?",
+    "options": [
+     "Composition is uniform throughout",
+     "Components are present in fixed whole-number ratios",
+     "Composition varies from point to point",
+     "Contains only one kind of particle"
+    ],
+    "correctIndex": 2,
+    "explanation": "A heterogeneous mixture has different compositions at different locations in the sample.",
+    "concept": "mixture",
+    "difficulty": "medium"
+   },
+   {
+    "id": "86428292-703",
+    "type": "tf",
+    "question": "Counting objects produces results that are free from measurement uncertainty.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 0,
+    "explanation": "Counting (when done correctly) and defined quantities are exact and do not carry measurement uncertainty.",
+    "concept": "uncertainty",
+    "difficulty": "medium"
+   },
+   {
+    "id": "457bc348-8ad",
+    "type": "mcq",
+    "question": "When converting units using dimensional analysis, what is the primary purpose of choosing conversion factors?",
+    "options": [
+     "To change the numeric value arbitrarily",
+     "To cancel unwanted units and introduce desired units",
+     "To increase precision beyond measurement uncertainty",
+     "To make the calculation longer"
+    ],
+    "correctIndex": 1,
+    "explanation": "Conversion factors are selected to cancel the original units and produce the desired units in the result.",
+    "concept": "dimensional analysis",
+    "difficulty": "hard"
+   }
+  ],
+  "video": {
+   "youtubeId": "5iTOphGnCtg",
+   "title": "GENERAL CHEMISTRY explained in 19 Minutes",
+   "channel": "Wacky Science",
+   "seconds": 1129
+  }
+ },
+ "c2": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "Who proposed that matter is made of indivisible particles called atomos in the 5th century BC?",
+    "answer": "Leucippus and Democritus"
+   },
+   {
+    "kind": "choice",
+    "prompt": "Which observation from Thomson’s cathode ray experiments showed that electrons are negatively charged?",
+    "options": [
+     "The ray was deflected toward the positive electrode",
+     "The ray passed straight through gold foil",
+     "The ray produced fluorescence only with certain gases",
+     "The ray caused alpha particles to scatter"
+    ],
+    "correctIndex": 0,
+    "feedback": "The cathode ray was attracted to the positive electrode, indicating the particles carry negative charge."
+   },
+   {
+    "kind": "order",
+    "prompt": "Place these discoveries in the order they contributed to the modern atomic model (earliest → latest).",
+    "items": [
+     "Thomson identifies electrons by cathode ray experiments",
+     "Rutherford discovers the small, dense nucleus via gold foil",
+     "Dalton proposes atoms as distinct, indivisible elements",
+     "Chadwick discovers the neutron"
+    ],
+    "feedback": "Order: Dalton → Thomson → Rutherford → Chadwick."
+   },
+   {
+    "kind": "fill",
+    "prompt": "Which term completes the sentence: Atoms that have the same atomic number but different numbers of neutrons are called _____?",
+    "before": "Atoms that have the same atomic number but different numbers of neutrons are called",
+    "after": "?",
+    "options": [
+     "isotopes",
+     "ions",
+     "allotropes",
+     "molecules"
+    ],
+    "correctIndex": 0,
+    "feedback": "Isotopes differ in neutron number while keeping the same number of protons (atomic number)."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match each particle with its approximate mass (amu).",
+    "pairs": [
+     [
+      "Proton",
+      "1.0073 amu"
+     ],
+     [
+      "Neutron",
+      "1.0087 amu"
+     ],
+     [
+      "Electron",
+      "0.00055 amu"
+     ]
+    ],
+    "feedback": "Protons and neutrons have masses near 1 amu; electrons are much lighter."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "a3775ea9-e88",
+    "type": "mcq",
+    "question": "According to Dalton’s postulates, which statement is correct?",
+    "options": [
+     "Atoms of a given element are identical in mass and properties",
+     "Atoms are divisible into smaller electrical charges",
+     "Compounds form by continuous mixing of elements in any proportions",
+     "Electrons orbit a dense nucleus like planets around the sun"
+    ],
+    "correctIndex": 0,
+    "explanation": "Dalton proposed that atoms of a given element have identical properties and mass; later findings (isotopes) modified this.",
+    "concept": "Dalton",
+    "difficulty": "easy"
+   },
+   {
+    "id": "59249537-f45",
+    "type": "mcq",
+    "question": "Millikan’s oil-drop experiment determined which fundamental quantity?",
+    "options": [
+     "Mass of the proton",
+     "Charge of the electron",
+     "Size of the atomic nucleus",
+     "Ratio of proton to neutron masses"
+    ],
+    "correctIndex": 1,
+    "explanation": "Millikan measured the charge on a single electron, revealing the fundamental unit of electric charge.",
+    "concept": "electron charge",
+    "difficulty": "medium"
+   },
+   {
+    "id": "e0d40f93-2a1",
+    "type": "mcq",
+    "question": "Rutherford’s gold foil experiment led to which conclusion about atomic structure?",
+    "options": [
+     "Atoms are uniform spheres of positive charge",
+     "Electrons have quantized energy levels",
+     "A small, dense, positively charged nucleus exists",
+     "All mass is distributed evenly throughout the atom"
+    ],
+    "correctIndex": 2,
+    "explanation": "Most alpha particles passed through foil but some were strongly deflected, implying a small dense nucleus.",
+    "concept": "nucleus",
+    "difficulty": "easy"
+   },
+   {
+    "id": "eb3b65ab-48a",
+    "type": "mcq",
+    "question": "Which of these best describes an anion?",
+    "options": [
+     "A positively charged ion formed by electron loss",
+     "A neutral atom with excess neutrons",
+     "A negatively charged ion formed by electron gain",
+     "A polyatomic ion made only of metals"
+    ],
+    "correctIndex": 2,
+    "explanation": "Anions are negatively charged ions created when atoms gain electrons.",
+    "concept": "ions",
+    "difficulty": "easy"
+   },
+   {
+    "id": "a7cbab14-ed0",
+    "type": "mcq",
+    "question": "Which value is closest to the mass of one atomic mass unit (amu) in grams?",
+    "options": [
+     "1.6605 × 10⁻²⁴ g",
+     "9.1094 × 10⁻²⁸ g",
+     "1.0073 g",
+     "6.022 × 10²³ g"
+    ],
+    "correctIndex": 0,
+    "explanation": "1 amu is defined as exactly 1/12 the mass of a carbon-12 atom, equal to 1.6605 × 10⁻²⁴ g.",
+    "concept": "amu",
+    "difficulty": "medium"
+   },
+   {
+    "id": "499e222c-6d1",
+    "type": "mcq",
+    "question": "Which pair of elements are both in Group 1 of the periodic table?",
+    "options": [
+     "Li and K",
+     "Ca and Sr",
+     "F and Cl",
+     "O and S"
+    ],
+    "correctIndex": 0,
+    "explanation": "Lithium (Li) and potassium (K) are both alkali metals in Group 1.",
+    "concept": "periodic groups",
+    "difficulty": "easy"
+   },
+   {
+    "id": "6cc47f0d-2aa",
+    "type": "mcq",
+    "question": "A molecular formula shows:",
+    "options": [
+     "The exact numbers of each type of atom in a molecule",
+     "Only the simplest whole-number ratio of atoms",
+     "The 3D spatial arrangement of atoms",
+     "The charge on each ion in an ionic lattice"
+    ],
+    "correctIndex": 0,
+    "explanation": "A molecular formula lists element symbols with subscripts giving exact atom counts in a molecule.",
+    "concept": "formulas",
+    "difficulty": "easy"
+   },
+   {
+    "id": "be60c8da-695",
+    "type": "tf",
+    "question": "Isotopes of the same element have different numbers of neutrons.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 0,
+    "explanation": "By definition, isotopes share the same atomic number (protons) but differ in neutron count.",
+    "concept": "isotopes",
+    "difficulty": "easy"
+   }
+  ],
+  "video": {
+   "youtubeId": "pSJeMJaCkVU",
+   "title": "Elements, Atoms, Molecules, Ions, Ionic and Molecular Compounds, Cations vs Anions, Chemistry",
+   "channel": "The Organic Chemistry Tutor",
+   "seconds": 833
+  }
+ },
+ "c3": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "What is Avogadro’s number and why is it useful in chemistry?",
+    "answer": "Avogadro’s number is 6.022 × 10²³, the number of entities (atoms, molecules, ions) in 1 mole; it converts between number of particles and amount in moles."
+   },
+   {
+    "kind": "choice",
+    "prompt": "Which expression gives the formula mass of CO₂ (use average atomic masses: C = 12.0, O = 16.0)?",
+    "options": [
+     "12.0 + 16.0 = 28.0 amu",
+     "12.0 + 2(16.0) = 44.0 amu",
+     "2(12.0) + 16.0 = 40.0 amu",
+     "12.0 × 16.0 = 192.0 amu"
+    ],
+    "correctIndex": 1,
+    "feedback": "Formula mass is the sum of average atomic masses for each atom: 12.0 + 2×16.0 = 44.0 amu."
+   },
+   {
+    "kind": "order",
+    "prompt": "Place the steps in order to determine the empirical formula from percent composition:",
+    "items": [
+     "Convert each element % to mass (assume 100 g sample).",
+     "Divide each element mass by its atomic mass to get moles.",
+     "Divide all mole values by the smallest mole value to get whole-number ratios.",
+     "Use the whole-number ratios to write the empirical formula."
+    ],
+    "feedback": "These steps convert percent composition into relative atom counts and then into an empirical formula."
+   },
+   {
+    "kind": "fill",
+    "prompt": "A solution labeled 0.500 M NaCl contains 0.500 ______ of NaCl per ______ of solution.",
+    "before": "A solution labeled 0.500 M NaCl contains 0.500 ",
+    "after": " of NaCl per liter of solution.",
+    "options": [
+     "moles; liter",
+     "grams; liter",
+     "molecules; liter",
+     "moles; kilogram"
+    ],
+    "correctIndex": 0,
+    "feedback": "Molarity is defined as moles of solute per liter of solution."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match each concentration unit to its typical use.",
+    "pairs": [
+     [
+      "ppm",
+      "Trace contaminants in environmental samples"
+     ],
+     [
+      "mass % (w/w)",
+      "High-concentration mixtures or commercial solutions"
+     ],
+     [
+      "molarity (M)",
+      "Stoichiometry and reaction calculations in the lab"
+     ]
+    ],
+    "feedback": "Different units are convenient in different contexts: ppm for trace, mass % for concentrated mixtures, molarity for mole-based chemistry."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "a92d8cd2-429",
+    "type": "mcq",
+    "question": "Which statement is true about formula mass (amu) and molar mass (g/mol)?",
+    "options": [
+     "They have different numerical values for the same substance.",
+     "They are numerically equivalent for a given substance.",
+     "Formula mass applies only to ionic compounds while molar mass applies only to covalent compounds.",
+     "Molar mass is always larger than formula mass by a factor of Avogadro’s number."
+    ],
+    "correctIndex": 1,
+    "explanation": "Because of the definitions, the numerical value of a substance’s formula mass in amu equals its molar mass in g/mol.",
+    "concept": "molar mass",
+    "difficulty": "easy"
+   },
+   {
+    "id": "e47b2ed4-58d",
+    "type": "mcq",
+    "question": "What is the molar mass of H₂O (use H = 1.01, O = 16.00)?",
+    "options": [
+     "17.01 g/mol",
+     "18.02 g/mol",
+     "34.04 g/mol",
+     "16.00 g/mol"
+    ],
+    "correctIndex": 1,
+    "explanation": "H₂O: 2×1.01 + 16.00 = 18.02 g/mol.",
+    "concept": "molar mass",
+    "difficulty": "easy"
+   },
+   {
+    "id": "a2400b8e-586",
+    "type": "mcq",
+    "question": "A sample contains 3.01 × 10²³ molecules of CO. How many moles of CO is this? (Avogadro’s number = 6.022 × 10²³)",
+    "options": [
+     "0.50 mol",
+     "2.00 mol",
+     "3.01 mol",
+     "6.02 mol"
+    ],
+    "correctIndex": 0,
+    "explanation": "Moles = particles / Avogadro’s number = (3.01×10²³)/(6.022×10²³) = 0.50 mol.",
+    "concept": "Avogadro",
+    "difficulty": "easy"
+   },
+   {
+    "id": "a3db583d-9e1",
+    "type": "mcq",
+    "question": "A compound has percent composition: 40.0% C, 6.7% H, 53.3% O. Which empirical formula is correct? (Use atomic masses C=12.0, H=1.0, O=16.0)",
+    "options": [
+     "C2H6O2",
+     "CH2O",
+     "C3H8O3",
+     "C H O (not enough information)"
+    ],
+    "correctIndex": 1,
+    "explanation": "Assume 100 g → 40.0 g C (3.33 mol), 6.7 g H (6.7 mol), 53.3 g O (3.33 mol); divide by 3.33 → C1H2O1 → CH2O.",
+    "concept": "empirical formula",
+    "difficulty": "medium"
+   },
+   {
+    "id": "9206b499-3dc",
+    "type": "mcq",
+    "question": "You dissolve 0.250 mol of KBr in water and dilute to a final volume of 0.500 L. What is the molarity of the solution?",
+    "options": [
+     "0.125 M",
+     "0.250 M",
+     "0.500 M",
+     "1.00 M"
+    ],
+    "correctIndex": 2,
+    "explanation": "M = moles/volume = 0.250 mol / 0.500 L = 0.500 M.",
+    "concept": "molarity",
+    "difficulty": "easy"
+   },
+   {
+    "id": "697cbc45-19a",
+    "type": "mcq",
+    "question": "Which procedure will decrease the concentration (molarity) of a solution without changing the amount of solute?",
+    "options": [
+     "Evaporating some solvent",
+     "Adding more solute",
+     "Adding pure solvent",
+     "Heating the solution"
+    ],
+    "correctIndex": 2,
+    "explanation": "Adding solvent increases solution volume while moles of solute stay the same, lowering molarity (dilution).",
+    "concept": "dilution",
+    "difficulty": "easy"
+   },
+   {
+    "id": "d36fe292-dd9",
+    "type": "mcq",
+    "question": "A compound has empirical formula CH2 and empirical formula mass ≈ 14.0 g/mol. Its measured molar mass is 84.0 g/mol. What is the molecular formula?",
+    "options": [
+     "CH2",
+     "C6H12",
+     "C3H6",
+     "C2H4"
+    ],
+    "correctIndex": 1,
+    "explanation": "Molecular mass / empirical mass = 84/14 = 6 → multiply subscripts by 6: C6H12.",
+    "concept": "molecular formula",
+    "difficulty": "medium"
+   },
+   {
+    "id": "28733114-bce",
+    "type": "tf",
+    "question": "Percent by mass of an element in a compound is the mass of that element divided by the total mass of the compound, multiplied by 100.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 0,
+    "explanation": "That is the definition of mass percent (percent composition).",
+    "concept": "percent composition",
+    "difficulty": "easy"
+   }
+  ],
+  "video": {
+   "youtubeId": "9h2f1Bjr0p4",
+   "title": "Solutions: Crash Course Chemistry #27",
+   "channel": "CrashCourse",
+   "seconds": 500
+  }
+ },
+ "c4": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "Why must chemical equations be balanced?",
+    "answer": "Because atoms are neither created nor destroyed in ordinary chemical reactions, so a balanced equation ensures the same number of each element's atoms on both sides."
+   },
+   {
+    "kind": "choice",
+    "prompt": "Which coefficient set balances the combustion of methane: CH₄ + O₂ → CO₂ + H₂O ?",
+    "options": [
+     "1, 2, 1, 2",
+     "2, 1, 2, 1",
+     "1, 1, 1, 2",
+     "1, 4, 1, 2"
+    ],
+    "correctIndex": 0,
+    "feedback": "Balance C, then H, then O. CH₄ + 2 O₂ → CO₂ + 2 H₂O gives equal numbers of each atom."
+   },
+   {
+    "kind": "order",
+    "prompt": "Place the steps of using a balanced equation to compute grams of product from grams of reactant in the correct order.",
+    "items": [
+     "Convert given mass of reactant to moles using its molar mass.",
+     "Use the equation coefficients as mole ratios to find moles of product.",
+     "Convert moles of product to mass using product molar mass.",
+     "Write and balance the chemical equation for the reaction."
+    ],
+    "feedback": "First write and balance the equation, then convert mass→moles, use stoichiometric mole ratios, and convert moles→mass."
+   },
+   {
+    "kind": "fill",
+    "prompt": "Complete the sentence: In an aqueous reaction between soluble ionic compounds, the complete ionic equation shows all strong electrolytes as __________, while the net ionic equation excludes __________.",
+    "before": "In an aqueous reaction between soluble ionic compounds, the complete ionic equation shows all strong electrolytes as",
+    "after": ", while the net ionic equation excludes spectator ions.",
+    "options": [
+     "ions; spectator ions",
+     "molecules; precipitates",
+     "atoms; charges",
+     "cations only; anions only"
+    ],
+    "correctIndex": 0,
+    "feedback": "Complete ionic equations show dissolved species as separate ions; spectators that appear unchanged are removed to give the net ionic equation."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match each reaction type with its defining feature.",
+    "pairs": [
+     [
+      "Precipitation",
+      "Formation of an insoluble solid"
+     ],
+     [
+      "Acid–base",
+      "Transfer of H+ (proton)"
+     ],
+     [
+      "Redox",
+      "Change in oxidation numbers"
+     ]
+    ],
+    "feedback": "Each classification is defined by the characteristic process: solid formation, H+ transfer, or electron/oxidation-number changes."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "1e4070eb-7a7",
+    "type": "mcq",
+    "question": "Which statement best defines a balanced chemical equation?",
+    "options": [
+     "It has equal numbers of atoms of each element on both sides.",
+     "It lists reactants and products with molecular models shown.",
+     "It uses only ionic formulas for aqueous reactions.",
+     "It shows the physical states of all species."
+    ],
+    "correctIndex": 0,
+    "explanation": "A balanced equation requires the same number of each element's atoms in reactants and products.",
+    "concept": "balancing",
+    "difficulty": "easy"
+   },
+   {
+    "id": "969ca7cd-e2d",
+    "type": "mcq",
+    "question": "Given the unbalanced reaction: Fe + O₂ → Fe₂O₃, what are the smallest whole-number coefficients that balance the equation?",
+    "options": [
+     "4, 3, 2",
+     "2, 3, 1",
+     "4, 1, 2",
+     "2, 1, 1"
+    ],
+    "correctIndex": 0,
+    "explanation": "Balance by making Fe: 4 Fe → 2 Fe₂O₃ needs 3 O₂ to supply 6 O atoms; coefficients 4 Fe + 3 O₂ → 2 Fe₂O₃.",
+    "concept": "balancing",
+    "difficulty": "medium"
+   },
+   {
+    "id": "20cd03ef-dc7",
+    "type": "mcq",
+    "question": "Which of the following is a net ionic equation for the reaction of aqueous AgNO₃ and NaCl that forms a precipitate?",
+    "options": [
+     "Ag+ (aq) + Cl- (aq) → AgCl (s)",
+     "AgNO₃ (aq) + NaCl (aq) → AgCl (s) + NaNO₃ (aq)",
+     "Ag+ (aq) + NO₃- (aq) → AgNO₃ (aq)",
+     "Na+ (aq) + Cl- (aq) → NaCl (s)"
+    ],
+    "correctIndex": 0,
+    "explanation": "Net ionic equations include only the species that undergo change; Ag+ and Cl- combine to form solid AgCl.",
+    "concept": "net ionic",
+    "difficulty": "easy"
+   },
+   {
+    "id": "8c90a715-3b4",
+    "type": "mcq",
+    "question": "Which choice best identifies the limiting reactant when 5.0 g of A (MM = 50.0 g/mol) and 10.0 g of B (MM = 100.0 g/mol) react in a 1A:1B stoichiometry?",
+    "options": [
+     "A is limiting (0.100 mol A vs 0.100 mol B, tie → limiting = A)",
+     "A is limiting (0.100 mol A < 0.100 mol B)",
+     "Neither limits (both 0.100 mol)",
+     "B is limiting (0.100 mol B < 0.100 mol A)"
+    ],
+    "correctIndex": 2,
+    "explanation": "Both provide 0.100 mol, matching the 1:1 stoichiometry; neither is limiting.",
+    "concept": "limiting reactant",
+    "difficulty": "medium"
+   },
+   {
+    "id": "05fea62b-926",
+    "type": "mcq",
+    "question": "A reaction theoretically yields 25.0 g of product but the actual yield is 20.0 g. What is the percent yield?",
+    "options": [
+     "80.0%",
+     "125.0%",
+     "20.0%",
+     "5.0%"
+    ],
+    "correctIndex": 0,
+    "explanation": "Percent yield = (actual/theoretical)×100% = (20.0/25.0)×100% = 80.0%.",
+    "concept": "percent yield",
+    "difficulty": "easy"
+   },
+   {
+    "id": "43157a63-a00",
+    "type": "mcq",
+    "question": "Which analytical method separates and weighs a precipitate to determine analyte amount?",
+    "options": [
+     "Gravimetric analysis",
+     "Titration",
+     "Combustion analysis",
+     "Colorimetry"
+    ],
+    "correctIndex": 0,
+    "explanation": "Gravimetric analysis isolates and weighs a species (often a precipitate) to quantify the analyte.",
+    "concept": "analysis",
+    "difficulty": "medium"
+   },
+   {
+    "id": "5ef2045e-991",
+    "type": "mcq",
+    "question": "In a titration, the volume of titrant consumed at the equivalence point is used with the balanced equation to calculate:",
+    "options": [
+     "Concentration of the analyte",
+     "Molar mass of the titrant",
+     "Percent purity of the titrant",
+     "Boiling point of the solution"
+    ],
+    "correctIndex": 0,
+    "explanation": "Using the known titrant concentration and stoichiometry from the balanced equation, the analyte concentration is calculated.",
+    "concept": "titration",
+    "difficulty": "medium"
+   },
+   {
+    "id": "8f82c76f-b25",
+    "type": "tf",
+    "question": "Oxidation–reduction reactions always involve formation of a precipitate.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 1,
+    "explanation": "False — redox reactions involve changes in oxidation numbers; they do not necessarily form precipitates.",
+    "concept": "redox",
+    "difficulty": "easy"
+   }
+  ],
+  "video": {
+   "youtubeId": "UL1jmJaUkaQ",
+   "title": "Stoichiometry - Chemistry for Massive Creatures: Crash Course Chemistry #6",
+   "channel": "CrashCourse",
+   "seconds": 767
+  }
+ },
+ "c5": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "Define 'heat' as used in thermochemistry.",
+    "answer": "Heat is the transfer of thermal energy between objects at different temperatures."
+   },
+   {
+    "kind": "choice",
+    "prompt": "Which statement best distinguishes temperature from thermal energy?",
+    "options": [
+     "Temperature is an extensive property proportional to mass; thermal energy is intensive.",
+     "Temperature measures average kinetic energy; thermal energy is the total kinetic energy of particles.",
+     "Temperature is the total energy stored; thermal energy is the energy per particle.",
+     "Temperature is energy units (J); thermal energy is measured in °C."
+    ],
+    "correctIndex": 1,
+    "feedback": "Temperature is an intensive property reflecting average kinetic energy; thermal energy is the total kinetic energy of all particles and depends on mass."
+   },
+   {
+    "kind": "order",
+    "prompt": "Put the steps in a simple coffee-cup calorimetry experiment in the correct order.",
+    "items": [
+     "Measure and record the mass and initial temperature of the solution in the calorimeter.",
+     "Add the reactant or substance that will undergo the process, seal and stir.",
+     "Measure and record the final temperature after the reaction equilibrates.",
+     "Use q = m c ΔT (and calorimeter corrections if needed) to calculate heat exchanged."
+    ],
+    "feedback": "Accurate mass and initial temperature are required first; after reaction and equilibration, the temperature change gives q which is calculated using heat capacity relations."
+   },
+   {
+    "kind": "fill",
+    "prompt": "Select the best completion: Under constant pressure where only PV work occurs, the heat exchanged for a process equals the change in _______.",
+    "before": "Under constant pressure where only PV work occurs, the heat exchanged for a process equals the change in",
+    "after": ".",
+    "options": [
+     "internal energy U",
+     "entropy S",
+     "enthalpy H",
+     "Gibbs free energy G"
+    ],
+    "correctIndex": 2,
+    "feedback": "At constant pressure with only expansion work, q_p = ΔH (enthalpy change)."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match each term (left) with its correct definition (right).",
+    "pairs": [
+     [
+      "Specific heat (c)",
+      "Energy required to raise 1 g of a substance by 1 °C"
+     ],
+     [
+      "Endothermic",
+      "Process that absorbs heat from the surroundings"
+     ],
+     [
+      "Standard enthalpy of formation ΔHf°",
+      "Enthalpy change when 1 mol of a compound forms from elements in their standard states"
+     ]
+    ],
+    "feedback": "Specific heat is per gram per degree; endothermic means heat is absorbed; ΔHf° is defined per mole from elements in standard states."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "0cf1a1a5-25c",
+    "type": "mcq",
+    "question": "Which of the following is an intensive property?",
+    "options": [
+     "Thermal energy of a cup of water",
+     "Mass of the sample",
+     "Temperature",
+     "Total internal energy U"
+    ],
+    "correctIndex": 2,
+    "explanation": "Temperature is intensive (does not depend on amount); thermal energy, mass, and total internal energy are extensive.",
+    "concept": "intensive property",
+    "difficulty": "easy"
+   },
+   {
+    "id": "83944f68-03d",
+    "type": "mcq",
+    "question": "Which equation gives the heat absorbed by a substance when its temperature changes?",
+    "options": [
+     "q = n ΔHf°",
+     "q = m c ΔT",
+     "q = P V",
+     "q = ΔG + TΔS"
+    ],
+    "correctIndex": 1,
+    "explanation": "q = m c ΔT relates heat, mass, specific heat, and temperature change.",
+    "concept": "calorimetry",
+    "difficulty": "easy"
+   },
+   {
+    "id": "7b052e08-e63",
+    "type": "mcq",
+    "question": "When a reaction is exothermic, which is true about ΔH for the reaction?",
+    "options": [
+     "ΔH is positive because heat is absorbed.",
+     "ΔH is negative because heat is released.",
+     "ΔH equals zero at constant pressure.",
+     "ΔH is independent of the amount of reactants."
+    ],
+    "correctIndex": 1,
+    "explanation": "Exothermic reactions release heat to surroundings so ΔH for the reaction is negative; ΔH is proportional to amount of substance.",
+    "concept": "enthalpy sign",
+    "difficulty": "easy"
+   },
+   {
+    "id": "f58051e4-49c",
+    "type": "mcq",
+    "question": "Hess’s law allows calculation of ΔH for a reaction by:",
+    "options": [
+     "Measuring temperature change only.",
+     "Summing enthalpy changes of stepwise processes that add to the overall reaction.",
+     "Using q = m c ΔT for solids only.",
+     "Assuming enthalpy is not a state function."
+    ],
+    "correctIndex": 1,
+    "explanation": "Hess’s law follows from enthalpy being a state function: the total ΔH equals the sum of ΔH for individual steps.",
+    "concept": "Hess's law",
+    "difficulty": "medium"
+   },
+   {
+    "id": "6fdfe082-c93",
+    "type": "mcq",
+    "question": "Standard enthalpy of formation ΔHf° is defined for forming how much of a substance from its elements?",
+    "options": [
+     "1 gram",
+     "1 mole",
+     "1 liter",
+     "1 kilogram"
+    ],
+    "correctIndex": 1,
+    "explanation": "ΔHf° is the enthalpy change to form 1 mole of the compound from its elements in standard states.",
+    "concept": "ΔHf°",
+    "difficulty": "easy"
+   },
+   {
+    "id": "2dac4609-ce8",
+    "type": "mcq",
+    "question": "A calorimeter is designed primarily to:",
+    "options": [
+     "Maximize heat exchange with the room.",
+     "Ensure no chemical reactions occur.",
+     "Minimize energy exchange with the external environment.",
+     "Measure mass with high precision."
+    ],
+    "correctIndex": 2,
+    "explanation": "Calorimeters are insulated to reduce energy loss to surroundings so measured temperature changes reflect the process.",
+    "concept": "calorimeter",
+    "difficulty": "medium"
+   },
+   {
+    "id": "b7b1bb5e-aae",
+    "type": "mcq",
+    "question": "Which quantity is conserved according to the first law of thermodynamics?",
+    "options": [
+     "Entropy",
+     "Enthalpy",
+     "Energy",
+     "Temperature"
+    ],
+    "correctIndex": 2,
+    "explanation": "The first law states energy cannot be created or destroyed, only transformed or transferred.",
+    "concept": "conservation",
+    "difficulty": "easy"
+   },
+   {
+    "id": "16f294f4-5ee",
+    "type": "tf",
+    "question": "If ΔH for the forward reaction is -150 kJ, then ΔH for the reverse reaction is +150 kJ.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 0,
+    "explanation": "Enthalpy changes reverse sign when the reaction is reversed; magnitudes are equal.",
+    "concept": "enthalpy sign",
+    "difficulty": "medium"
+   }
+  ],
+  "video": {
+   "youtubeId": "ZVhJ4TO8a-M",
+   "title": "Thermochemistry: Heat and Enthalpy",
+   "channel": "Professor Dave Explains",
+   "seconds": 257
+  }
+ },
+ "c6": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "What is the value of the speed of light in a vacuum, c, as given in the chapter?",
+    "answer": "c = 2.998 × 10⁸ m s⁻¹"
+   },
+   {
+    "kind": "choice",
+    "prompt": "Which equation correctly relates the speed of light c, wavelength λ, and frequency ν?",
+    "options": [
+     "c = λ + ν",
+     "c = λν",
+     "c = λ/ν",
+     "c = ν/λ"
+    ],
+    "correctIndex": 1,
+    "feedback": "The wave relation is c = λν (wavelength times frequency)."
+   },
+   {
+    "kind": "order",
+    "prompt": "Put these steps in the Bohr model for emission of a photon in the correct order.",
+    "items": [
+     "Electron transitions from a higher-energy orbit to a lower-energy orbit",
+     "A photon with energy equal to the energy difference is emitted",
+     "Electron occupies a quantized orbit with a fixed energy",
+     "Initial atom is in an excited state"
+    ],
+    "feedback": "Emission occurs when an electron in a quantized excited orbit drops to a lower allowed orbit and emits a photon whose energy equals the difference."
+   },
+   {
+    "kind": "fill",
+    "prompt": "Fill the blank: The energy of a photon can be written as E = ___ (use symbols taught in the chapter).",
+    "before": "The energy of a photon can be written as",
+    "after": "where h is Planck’s constant and ν is frequency.",
+    "options": [
+     "E = hν",
+     "E = mc²",
+     "E = kT",
+     "E = qV"
+    ],
+    "correctIndex": 0,
+    "feedback": "Photon energy is E = hν (also E = hc/λ)."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match each quantum number to the property it describes.",
+    "pairs": [
+     [
+      "n (principal quantum number)",
+      "Energy level and average distance from nucleus"
+     ],
+     [
+      "l (angular momentum quantum number)",
+      "Orbital shape (s, p, d, f)"
+     ],
+     [
+      "m_l (magnetic quantum number)",
+      "Orientation of orbital in space"
+     ],
+     [
+      "m_s (spin quantum number)",
+      "Electron spin, ±1/2"
+     ]
+    ],
+    "feedback": "Each quantum number corresponds to a distinct property: n → shell/energy, l → shape, m_l → orientation, m_s → spin."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "d8763aa6-a90",
+    "type": "mcq",
+    "question": "Which phenomenon provided early strong evidence for the wave nature of light?",
+    "options": [
+     "Photoelectric effect",
+     "Blackbody radiation",
+     "Double-slit interference",
+     "Discrete atomic spectra"
+    ],
+    "correctIndex": 2,
+    "explanation": "Young’s double-slit experiment produced an interference pattern that is characteristic of waves.",
+    "concept": "wave nature",
+    "difficulty": "easy"
+   },
+   {
+    "id": "cdd5b6d3-871",
+    "type": "mcq",
+    "question": "Which expression gives the energy of a photon in terms of wavelength λ?",
+    "options": [
+     "E = h/λ",
+     "E = hc/λ",
+     "E = λhc",
+     "E = hλ"
+    ],
+    "correctIndex": 1,
+    "explanation": "Using E = hν and ν = c/λ gives E = hc/λ.",
+    "concept": "photon energy",
+    "difficulty": "easy"
+   },
+   {
+    "id": "d0c53418-7d7",
+    "type": "mcq",
+    "question": "In the Bohr model for hydrogen, what determines the wavelength of emitted light when an electron falls between orbits?",
+    "options": [
+     "Difference in orbital radii only",
+     "Difference in orbital energies",
+     "Sum of the energies of the two orbits",
+     "Absolute value of the higher orbit’s energy"
+    ],
+    "correctIndex": 1,
+    "explanation": "Photon energy (and thus wavelength) equals the energy difference between the two allowed orbits.",
+    "concept": "Bohr transitions",
+    "difficulty": "medium"
+   },
+   {
+    "id": "2b30a3d7-eb6",
+    "type": "mcq",
+    "question": "Which historical problem led to the development of quantum ideas because classical physics predicted infinite emitted energy at high frequencies?",
+    "options": [
+     "Photoelectric effect",
+     "Blackbody problem",
+     "Hydrogen line spectrum",
+     "Electron diffraction"
+    ],
+    "correctIndex": 1,
+    "explanation": "Classical theory predicted the ultraviolet catastrophe for blackbody radiation, resolved by quantization.",
+    "concept": "blackbody",
+    "difficulty": "medium"
+   },
+   {
+    "id": "11101e85-236",
+    "type": "mcq",
+    "question": "How many possible values does the magnetic quantum number m_l have for an l = 2 subshell?",
+    "options": [
+     "2",
+     "3",
+     "5",
+     "7"
+    ],
+    "correctIndex": 2,
+    "explanation": "m_l has 2l + 1 values; for l = 2, 2×2 + 1 = 5.",
+    "concept": "m_l values",
+    "difficulty": "easy"
+   },
+   {
+    "id": "69ec4eef-c23",
+    "type": "tf",
+    "question": "Hund’s rule states that electrons occupy degenerate orbitals singly with parallel spins before pairing up.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 0,
+    "explanation": "Hund’s rule minimizes electron repulsion by maximizing the number of unpaired electrons with parallel spins.",
+    "concept": "Hund’s rule",
+    "difficulty": "easy"
+   },
+   {
+    "id": "0dfedcb7-37a",
+    "type": "mcq",
+    "question": "Which ordering of subshell energies is generally correct within a given shell (same n) for multi-electron atoms?",
+    "options": [
+     "p < s < d < f",
+     "s < p < d < f",
+     "d < f < s < p",
+     "s < d < p < f"
+    ],
+    "correctIndex": 1,
+    "explanation": "Within a shell the energy ordering is s < p < d < f due to electron repulsion and penetrating power.",
+    "concept": "subshell energy",
+    "difficulty": "medium"
+   },
+   {
+    "id": "0a2d1180-5c5",
+    "type": "mcq",
+    "question": "Which atomic property generally increases when moving down a group in the periodic table?",
+    "options": [
+     "Ionization energy",
+     "Covalent radius",
+     "Effective nuclear charge (Z_eff) experienced by valence electrons",
+     "Electron affinity"
+    ],
+    "correctIndex": 1,
+    "explanation": "Covalent radius increases down a group because electrons occupy orbitals with larger principal quantum number n.",
+    "concept": "periodic trend",
+    "difficulty": "medium"
+   }
+  ],
+  "video": {
+   "youtubeId": "hePb00CqvP0",
+   "title": "The Periodic Table: Atomic Radius, Ionization Energy, and Electronegativity",
+   "channel": "Professor Dave Explains",
+   "seconds": 473
+  }
+ },
+ "c7": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "Why do ionic solids generally have high melting points?",
+    "answer": "Because strong electrostatic attractions (ionic bonds) between oppositely charged ions throughout the crystal lattice require large amounts of energy to overcome."
+   },
+   {
+    "kind": "choice",
+    "prompt": "Which of the following best describes a polar covalent bond?",
+    "options": [
+     "Electrons are shared equally between two identical atoms.",
+     "Electrons are transferred completely from one atom to another.",
+     "Electrons are shared unequally because one atom has higher electronegativity.",
+     "Ions are held together by lattice energy in a crystal."
+    ],
+    "correctIndex": 2,
+    "feedback": "Polar covalent bonds result when one atom attracts the shared pair more strongly (higher electronegativity), producing unequal sharing."
+   },
+   {
+    "kind": "order",
+    "prompt": "Place these steps in order for using formal charge to choose the best Lewis structure.",
+    "items": [
+     "Calculate formal charges on each atom in each resonance or Lewis structure.",
+     "Draw all reasonable Lewis structures with different electron arrangements.",
+     "Prefer the structure(s) with formal charges closest to zero and negative charges on more electronegative atoms.",
+     "Assign bonding and lone-pair electrons for each drawn structure."
+    ],
+    "feedback": "First draw structures, assign electrons, compute formal charges, and then select the structure(s) with minimal and properly placed charges."
+   },
+   {
+    "kind": "fill",
+    "prompt": "Complete the sentence: Lattice energy of an ionic compound increases when ionic charges are ___________ and ionic radii are ___________.",
+    "before": "Lattice energy of an ionic compound increases when ionic charges are",
+    "after": "and ionic radii are ___________.",
+    "options": [
+     "larger; smaller",
+     "larger; larger",
+     "smaller; smaller",
+     "smaller; larger"
+    ],
+    "correctIndex": 0,
+    "feedback": "Higher charges increase electrostatic attraction; smaller ion sizes bring ions closer, both increasing lattice energy."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match each term to its definition.",
+    "pairs": [
+     [
+      "Bond dissociation energy",
+      "Energy required to break one mole of a particular covalent bond in gaseous molecules"
+     ],
+     [
+      "Formal charge",
+      "Hypothetical charge obtained by assigning half the bonding electrons to each atom"
+     ],
+     [
+      "VSEPR theory",
+      "Predicts 3D arrangement of atoms by minimizing electron-pair repulsions"
+     ]
+    ],
+    "feedback": "These definitions match the concepts: bond strength, method for evaluating Lewis structures, and geometry prediction."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "240a52ff-0ac",
+    "type": "mcq",
+    "question": "Which of the following species is a cation?",
+    "options": [
+     "Cl⁻",
+     "Na⁺",
+     "O²⁻",
+     "F⁻"
+    ],
+    "correctIndex": 1,
+    "explanation": "A cation is a positively charged ion; Na⁺ is a sodium atom that lost one electron.",
+    "concept": "Ions",
+    "difficulty": "easy"
+   },
+   {
+    "id": "2ae309ca-cf3",
+    "type": "mcq",
+    "question": "For two atoms with identical electronegativities forming a bond, the bond is best described as:",
+    "options": [
+     "Polar covalent",
+     "Ionic",
+     "Pure covalent (nonpolar)",
+     "Coordinate covalent"
+    ],
+    "correctIndex": 2,
+    "explanation": "If electronegativities are identical, electrons are shared equally, giving a nonpolar (pure covalent) bond.",
+    "concept": "Covalent",
+    "difficulty": "easy"
+   },
+   {
+    "id": "a9d94523-e80",
+    "type": "mcq",
+    "question": "When drawing a Lewis structure, which atom is usually placed at the center?",
+    "options": [
+     "The most electronegative atom",
+     "Hydrogen",
+     "The atom with the greatest number of valence electrons",
+     "The least electronegative atom (often single atom)"
+    ],
+    "correctIndex": 3,
+    "explanation": "Central atoms are typically the least electronegative (except hydrogen), allowing more bonds around them.",
+    "concept": "Lewis",
+    "difficulty": "medium"
+   },
+   {
+    "id": "e0a5d811-7ab",
+    "type": "mcq",
+    "question": "Which factor does NOT increase lattice energy of an ionic solid?",
+    "options": [
+     "Higher ionic charges",
+     "Shorter distance between ion centers",
+     "Greater polarizability of ions",
+     "Smaller ionic radii"
+    ],
+    "correctIndex": 2,
+    "explanation": "Greater polarizability affects covalent character and might lower lattice energy; lattice energy increases with charge magnitude and shorter distances (smaller radii).",
+    "concept": "Lattice energy",
+    "difficulty": "medium"
+   },
+   {
+    "id": "3de3476a-51c",
+    "type": "mcq",
+    "question": "Formal charge on an atom is calculated by subtracting which of the following from the atom's valence electrons?",
+    "options": [
+     "Number of protons and number of bonds",
+     "Nonbonding electrons and number of bonds",
+     "Total electrons in the molecule and number of bonds",
+     "Bonding electrons only"
+    ],
+    "correctIndex": 1,
+    "explanation": "Formal charge = valence electrons of neutral atom − nonbonding electrons − number of bonds (each bond counted as one).",
+    "concept": "Formal charge",
+    "difficulty": "medium"
+   },
+   {
+    "id": "c7a6a7b0-a6b",
+    "type": "mcq",
+    "question": "Which of these molecules is expected to have a net dipole moment?",
+    "options": [
+     "CO₂ (linear, O=C=O)",
+     "BF₃ (trigonal planar)",
+     "NH₃ (trigonal pyramidal)",
+     "CCl₄ (tetrahedral, identical substituents)"
+    ],
+    "correctIndex": 2,
+    "explanation": "NH₃ has a trigonal pyramidal shape with an asymmetric distribution of bond dipoles and a lone pair, producing a net dipole moment.",
+    "concept": "Polarity",
+    "difficulty": "medium"
+   },
+   {
+    "id": "0f2d7674-4d7",
+    "type": "mcq",
+    "question": "Which bond is strongest based on bond order alone?",
+    "options": [
+     "C–C single bond",
+     "C=C double bond",
+     "C≡C triple bond",
+     "All have equal strength"
+    ],
+    "correctIndex": 2,
+    "explanation": "Higher bond orders (triple > double > single) correspond to stronger bonds and higher bond dissociation energies.",
+    "concept": "Bond strength",
+    "difficulty": "easy"
+   },
+   {
+    "id": "fc0de376-d0c",
+    "type": "tf",
+    "question": "Resonance structures represent different possible placements of electrons for the same arrangement of atoms.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 0,
+    "explanation": "True: resonance forms differ only in electron distribution; the actual structure is a resonance hybrid.",
+    "concept": "Resonance",
+    "difficulty": "easy"
+   }
+  ],
+  "video": {
+   "youtubeId": "Q9-JjyAEqnU",
+   "title": "VSEPR Theory and Molecular Geometry",
+   "channel": "Professor Dave Explains",
+   "seconds": 391
+  }
+ },
+ "c8": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "Why does simple valence bond theory (using unhybridized atomic orbitals) predict a 90° H–O–H bond angle for H₂O?",
+    "answer": "Valence bond theory with unhybridized orbitals assumes the two O–H bonds come from two perpendicular 2p orbitals on O. Perpendicular p orbitals give a 90° angle between their lobes, so the predicted H–O–H angle is 90°."
+   },
+   {
+    "kind": "choice",
+    "prompt": "Which hybridization on a central atom corresponds to a trigonal planar electron-pair geometry?",
+    "options": [
+     "sp",
+     "sp²",
+     "sp³",
+     "sp³d"
+    ],
+    "correctIndex": 1,
+    "feedback": "Trigonal planar geometry has three regions of electron density, which corresponds to sp² hybridization (3 hybrid orbitals)."
+   },
+   {
+    "kind": "order",
+    "prompt": "Place these steps in the correct order for constructing the molecular orbital diagram for a simple diatomic molecule (valence-only):",
+    "items": [
+     "Combine atomic wave functions to form bonding and antibonding molecular orbitals",
+     "Determine the relative energies of the atomic orbitals (e.g., s vs. p, and differences between atoms)",
+     "Fill the molecular orbitals with the total number of valence electrons using Aufbau and Hund’s rules",
+     "Count net bonding electrons to determine bond order and predict magnetic properties"
+    ],
+    "feedback": "You first compare AO energies, build MOs, fill them with electrons, then use occupation to get bond order and magnetism."
+   },
+   {
+    "kind": "fill",
+    "prompt": "Complete the sentence: In multiple bonds, the σ component is usually formed by overlapping _____ orbitals, while the π component is formed from side-by-side overlap of _____ orbitals.",
+    "before": "In multiple bonds, the σ component is usually formed by overlapping",
+    "after": "orbitals, while the π component is formed from side-by-side overlap of _____ orbitals.",
+    "options": [
+     "hybridized; unhybridized",
+     "unhybridized; hybridized",
+     "s orbitals; hybridized",
+     "d orbitals; s orbitals"
+    ],
+    "correctIndex": 0,
+    "feedback": "σ bonds typically arise from hybrid orbitals (or end-to-end p), whereas π bonds come from unhybridized p (or d) orbitals side-by-side."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match each concept to its correct short definition.",
+    "pairs": [
+     [
+      "Bonding molecular orbital",
+      "In-phase combination that lowers electron energy and stabilizes the molecule"
+     ],
+     [
+      "Antibonding molecular orbital",
+      "Out-of-phase combination that raises electron energy and destabilizes the molecule"
+     ],
+     [
+      "Paramagnetism",
+      "Attraction to a magnetic field due to unpaired electrons"
+     ]
+    ],
+    "feedback": "Bonding/antibonding describe phase relationships of combined AOs; paramagnetism arises from unpaired electrons in MOs."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "deb54070-5cf",
+    "type": "mcq",
+    "question": "Which of the following best explains why H₂O has a bond angle of ~104.5° rather than 90°?",
+    "options": [
+     "Oxygen’s 2p orbitals hybridize with the 2s orbital to form sp³ hybrids that direct bonds away from each other",
+     "Lone pairs on oxygen are absent, allowing bonding electrons to compress the angle",
+     "Hydrogen’s 1s orbitals force a larger angle by electrostatic repulsion",
+     "The O–H bonds are purely ionic, changing the bond angle"
+    ],
+    "correctIndex": 0,
+    "explanation": "Oxygen undergoes sp³-like hybridization (two hybrid orbitals containing lone pairs and two forming O–H bonds), producing bond angles larger than 90° (about 104.5°).",
+    "concept": "hybridization",
+    "difficulty": "medium"
+   },
+   {
+    "id": "1cad96ee-a60",
+    "type": "mcq",
+    "question": "Which set of orbitals remains unhybridized and typically forms π bonds in second-row elements?",
+    "options": [
+     "s orbitals",
+     "p orbitals",
+     "sp hybrid orbitals",
+     "sp³d orbitals"
+    ],
+    "correctIndex": 1,
+    "explanation": "π bonds form from side-by-side overlap of unhybridized p orbitals (or d in heavier elements), not from s or hybrid orbitals.",
+    "concept": "π bonds",
+    "difficulty": "easy"
+   },
+   {
+    "id": "c04db77b-340",
+    "type": "mcq",
+    "question": "According to MO theory, what is the effect of placing electrons in an antibonding molecular orbital?",
+    "options": [
+     "They increase the overall stability and strength of the bond",
+     "They do not affect bond strength because antibonding orbitals are empty",
+     "They decrease bond order and destabilize the bond",
+     "They convert σ bonds into π bonds"
+    ],
+    "correctIndex": 2,
+    "explanation": "Electrons in antibonding orbitals counteract bonding interactions, reducing bond order and making the molecule less stable.",
+    "concept": "antibonding",
+    "difficulty": "easy"
+   },
+   {
+    "id": "cbd72bdf-d14",
+    "type": "mcq",
+    "question": "Which hybridization corresponds to a central atom with five regions of electron density (e.g., trigonal bipyramidal)?",
+    "options": [
+     "sp²",
+     "sp³",
+     "sp³d",
+     "sp³d²"
+    ],
+    "correctIndex": 2,
+    "explanation": "Five regions require five hybrid orbitals, commonly described as sp³d hybridization (trigonal bipyramidal geometry).",
+    "concept": "hybridization",
+    "difficulty": "easy"
+   },
+   {
+    "id": "27c00a4c-a28",
+    "type": "mcq",
+    "question": "Which observation for the O₂ molecule is explained correctly by molecular orbital theory but not by the simple Lewis structure?",
+    "options": [
+     "O₂ has a double bond between the oxygens",
+     "Each oxygen atom has an octet",
+     "O₂ is paramagnetic (has unpaired electrons)",
+     "O₂ is a colourless gas"
+    ],
+    "correctIndex": 2,
+    "explanation": "MO theory predicts two unpaired electrons in π* antibonding orbitals for O₂, explaining its paramagnetism; the simple Lewis structure shows all electrons paired.",
+    "concept": "molecular orbital",
+    "difficulty": "medium"
+   },
+   {
+    "id": "4e2aee96-55a",
+    "type": "mcq",
+    "question": "In ethene (C₂H₄), which orbitals on carbon form the σ bond between the two carbons?",
+    "options": [
+     "Two unhybridized 2p orbitals",
+     "An sp² hybrid from each carbon",
+     "Two 2s orbitals",
+     "An sp hybrid from each carbon"
+    ],
+    "correctIndex": 1,
+    "explanation": "Each carbon in ethene is sp² hybridized; one sp² orbital from each carbon overlaps end-to-end to form the C–C σ bond, while the remaining p orbitals form the π bond.",
+    "concept": "sp²",
+    "difficulty": "easy"
+   },
+   {
+    "id": "1f4f9894-726",
+    "type": "tf",
+    "question": "Electrons fill molecular orbitals according to Hund’s rule and the Aufbau principle, just as they do in atoms.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 0,
+    "explanation": "MO filling uses the same principles: lower-energy orbitals fill first (Aufbau), and degenerate orbitals are singly occupied before pairing (Hund).",
+    "concept": "MO filling",
+    "difficulty": "easy"
+   },
+   {
+    "id": "b9eef8a4-d1e",
+    "type": "mcq",
+    "question": "Which description best fits a σ bond?",
+    "options": [
+     "Side-by-side overlap of unhybridized p orbitals creating electron density above and below the internuclear axis",
+     "End-to-end overlap of orbitals with electron density along the internuclear axis",
+     "A bond formed only from d orbitals",
+     "An electrostatic attraction without orbital overlap"
+    ],
+    "correctIndex": 1,
+    "explanation": "σ bonds result from end-to-end (axial) overlap, giving electron density along the internuclear axis; π bonds are side-by-side overlaps above and below the axis.",
+    "concept": "σ bond",
+    "difficulty": "medium"
+   }
+  ],
+  "video": {
+   "youtubeId": "Vqx9a2aU99c",
+   "title": "Valence Bond Theory & Hybrid Atomic Orbitals",
+   "channel": "The Organic Chemistry Tutor",
+   "seconds": 639
+  }
+ },
+ "c9": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "What causes gas pressure at the microscopic level?",
+    "answer": "Gas pressure is caused by collisions of gas molecules with surfaces; the force from many collisions per unit area produces pressure."
+   },
+   {
+    "kind": "choice",
+    "prompt": "Which instrument is commonly used to measure atmospheric pressure?",
+    "options": [
+     "Manometer",
+     "Barometer",
+     "Thermometer",
+     "Spectrometer"
+    ],
+    "correctIndex": 1,
+    "feedback": "A barometer measures atmospheric pressure; manometers measure pressure differences between a gas and atmosphere or between two gases."
+   },
+   {
+    "kind": "order",
+    "prompt": "Arrange the gas laws historically from the one relating pressure and volume to the one relating volume and amount (Avogadro).",
+    "items": [
+     "Boyle’s law (pressure ∝ 1/volume)",
+     "Charles’s law (volume ∝ temperature at constant pressure)",
+     "Amontons’s law (pressure ∝ temperature at constant volume)",
+     "Avogadro’s law (volume ∝ amount at constant T and P)"
+    ],
+    "feedback": "These laws were established over time and later combined into the ideal gas law PV = nRT."
+   },
+   {
+    "kind": "fill",
+    "prompt": "Complete the sentence: The ideal gas law is written as _____, where R is the _____ gas constant.",
+    "before": "The ideal gas law is written as",
+    "after": ", where R is the _____ gas constant.",
+    "options": [
+     "PV = nRT; universal",
+     "P = nRT/V; empirical",
+     "PV = nRT; molar",
+     "P = nV/R T; ideal"
+    ],
+    "correctIndex": 0,
+    "feedback": "PV = nRT is the ideal gas law and R is the universal (ideal) gas constant."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match each term with its definition.",
+    "pairs": [
+     [
+      "Effusion",
+      "Passage of gas through a small orifice into a vacuum"
+     ],
+     [
+      "Diffusion",
+      "Spreading of gas molecules from high to low concentration"
+     ],
+     [
+      "Mean free path",
+      "Average distance a molecule travels between collisions"
+     ]
+    ],
+    "feedback": "Effusion is through small holes into vacuum; diffusion is mixing by random motion; mean free path increases at lower pressure."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "0fa4a9a5-514",
+    "type": "mcq",
+    "question": "Which of the following best explains why atmospheric pressure decreases with altitude?",
+    "options": [
+     "Fewer gas molecules above a surface, so less weight of the air column",
+     "Temperature increases with altitude, reducing pressure",
+     "Molecules move slower at higher altitude, lowering collisions",
+     "Air composition changes to heavier gases at altitude"
+    ],
+    "correctIndex": 0,
+    "explanation": "Atmospheric pressure is due to the weight of the column of air above; higher altitude means a shorter column and fewer molecules above, so lower pressure.",
+    "concept": "Atmospheric pressure",
+    "difficulty": "easy"
+   },
+   {
+    "id": "ef867499-259",
+    "type": "mcq",
+    "question": "Which expression correctly rearranges the ideal gas law to solve for density (ρ) of a gas? (M = molar mass)",
+    "options": [
+     "ρ = PM/RT",
+     "ρ = nRT/PM",
+     "ρ = RT/PM",
+     "ρ = P/RTM"
+    ],
+    "correctIndex": 0,
+    "explanation": "Density = mass/volume = (nM)/V. From PV = nRT, n/V = P/RT, so ρ = M·P/RT.",
+    "concept": "Density",
+    "difficulty": "medium"
+   },
+   {
+    "id": "3e25f0bf-f2a",
+    "type": "mcq",
+    "question": "Graham’s law states that rates of effusion of two gases are related to their molar masses how?",
+    "options": [
+     "rate A / rate B = sqrt(MB/MA)",
+     "rate A / rate B = MB/MA",
+     "rate A / rate B = sqrt(MA/MB)",
+     "rate A / rate B = MA/MB"
+    ],
+    "correctIndex": 0,
+    "explanation": "Graham’s law: rate ∝ 1/√M, so rateA/rateB = √(MB/MA).",
+    "concept": "Effusion",
+    "difficulty": "medium"
+   },
+   {
+    "id": "101c9bdc-09c",
+    "type": "mcq",
+    "question": "Which condition makes a real gas most closely behave like an ideal gas?",
+    "options": [
+     "High temperature and low pressure",
+     "Low temperature and high pressure",
+     "High pressure and high temperature",
+     "Low pressure and low temperature"
+    ],
+    "correctIndex": 0,
+    "explanation": "High temperature and low pressure minimize intermolecular attractions and molecular volume effects, so gases approach ideal behavior.",
+    "concept": "Non-ideal behavior",
+    "difficulty": "easy"
+   },
+   {
+    "id": "36c6a2ff-750",
+    "type": "mcq",
+    "question": "Avogadro’s law implies that equal volumes of different gases at the same T and P contain equal numbers of molecules. Which consequence follows directly?",
+    "options": [
+     "At the same T and P, equal volumes have equal numbers of moles",
+     "At the same T and P, gases have equal densities",
+     "All gases have same molar mass",
+     "Partial pressures are equal"
+    ],
+    "correctIndex": 0,
+    "explanation": "Avogadro’s law states equal volumes at the same T and P contain equal numbers of molecules, i.e., equal moles.",
+    "concept": "Avogadro",
+    "difficulty": "easy"
+   },
+   {
+    "id": "6fcc2e80-cac",
+    "type": "mcq",
+    "question": "A 2.00 L sample of an ideal gas at 300 K and 2.00 atm contains how many moles? (R = 0.08206 L·atm·K⁻¹·mol⁻¹)",
+    "options": [
+     "0.162 mol",
+     "0.081 mol",
+     "1.22 mol",
+     "0.0244 mol"
+    ],
+    "correctIndex": 0,
+    "explanation": "n = PV/RT = (2.00 atm)(2.00 L)/(0.08206·300 K) ≈ 0.162 mol.",
+    "concept": "Ideal gas law",
+    "difficulty": "medium"
+   },
+   {
+    "id": "74893ee5-228",
+    "type": "tf",
+    "question": "True or False: In the kinetic molecular theory, the average kinetic energy of gas molecules depends only on temperature.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 0,
+    "explanation": "Kinetic molecular theory states average kinetic energy is proportional to absolute temperature and independent of molecular identity at a given T.",
+    "concept": "KMT",
+    "difficulty": "easy"
+   }
+  ],
+  "video": {
+   "youtubeId": "BxUS1K7xu30",
+   "title": "The Ideal Gas Law: Crash Course Chemistry #12",
+   "channel": "CrashCourse",
+   "seconds": 543
+  }
+ },
+ "c10": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "Define London dispersion forces and explain when they become most significant.",
+    "answer": "London dispersion forces are instantaneous induced dipole–induced dipole attractions that arise from momentary fluctuations in an atom’s or molecule’s electron distribution; they become most significant for larger, more polarizable atoms or molecules (higher molar mass and greater surface area)."
+   },
+   {
+    "kind": "choice",
+    "prompt": "Which intermolecular force is responsible for the unusually high boiling point of water compared with H₂S of similar molar mass?",
+    "options": [
+     "London dispersion forces only",
+     "Hydrogen bonding",
+     "Ionic bonding between molecules",
+     "Dipole–induced dipole forces"
+    ],
+    "correctIndex": 1,
+    "feedback": "Water forms strong hydrogen bonds (H bonded to O), which raise its boiling point compared with H₂S that cannot hydrogen-bond strongly."
+   },
+   {
+    "kind": "order",
+    "prompt": "Arrange these steps in the formation of vapor pressure equilibrium in a closed container in the correct order.",
+    "items": [
+     "Liquid molecules escape into the gas phase (vaporization)",
+     "Some gas molecules collide with the liquid surface and re-enter the liquid (condensation)",
+     "Rates of vaporization and condensation become equal (dynamic equilibrium)"
+    ],
+    "feedback": "Vaporization and condensation occur until their rates are equal, producing a constant vapor pressure."
+   },
+   {
+    "kind": "fill",
+    "prompt": "Choose the correct term to complete the sentence: \"When a liquid wets a surface, adhesive forces between the liquid and surface are greater than the liquid’s ______ forces.\"",
+    "before": "When a liquid wets a surface, adhesive forces between the liquid and surface are greater than the liquid’s",
+    "after": "forces.",
+    "options": [
+     "cohesive",
+     "crystalline",
+     "ionic",
+     "sublimation"
+    ],
+    "correctIndex": 0,
+    "feedback": "Wetting occurs when adhesive forces to the surface exceed cohesive forces between like liquid molecules."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match each solid type with its typical property.",
+    "pairs": [
+     [
+      "Ionic solid",
+      "High melting point, conducts when molten or dissolved"
+     ],
+     [
+      "Molecular solid",
+      "Low melting point, held by van der Waals and dipole forces"
+     ],
+     [
+      "Covalent network solid",
+      "Very high melting point, atoms linked in extended covalent network"
+     ],
+     [
+      "Metallic solid",
+      "Malleable, conducts electricity in solid state"
+     ]
+    ],
+    "feedback": "Properties follow from particle types and strengths of bonding/IMFs."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "0cbad128-5ed",
+    "type": "mcq",
+    "question": "Which statement best explains why liquids have a definite volume but no fixed shape?",
+    "options": [
+     "Particles in liquids are locked in place in a rigid lattice",
+     "Intermolecular attractions hold particles close but particles have enough kinetic energy to move past each other",
+     "Liquids have no intermolecular forces so they flow freely",
+     "Particles in liquids are as far apart as in gases"
+    ],
+    "correctIndex": 1,
+    "explanation": "In liquids, intermolecular attractions keep particles near each other (definite volume) while kinetic energy allows them to move relative to one another (no fixed shape).",
+    "concept": "liquid nature",
+    "difficulty": "easy"
+   },
+   {
+    "id": "2b98d9c5-e85",
+    "type": "mcq",
+    "question": "Which factor does NOT increase a liquid’s viscosity?",
+    "options": [
+     "Stronger intermolecular forces",
+     "Lower temperature",
+     "More spherical molecular shape",
+     "Larger molecular size"
+    ],
+    "correctIndex": 2,
+    "explanation": "More spherical molecules tend to flow more easily (lower viscosity) than elongated molecules; stronger IMFs, lower T, and larger size generally increase viscosity.",
+    "concept": "viscosity",
+    "difficulty": "medium"
+   },
+   {
+    "id": "b9a7ae57-fca",
+    "type": "mcq",
+    "question": "At pressures below a substance’s triple point, which statement is true?",
+    "options": [
+     "All three phases can coexist at that pressure",
+     "A liquid phase cannot exist regardless of temperature",
+     "The substance must be a gas only",
+     "The critical point is reached"
+    ],
+    "correctIndex": 1,
+    "explanation": "Below the triple-point pressure the liquid phase is not accessible; the substance transitions directly between solid and gas (sublimation/deposition).",
+    "concept": "phase diagram",
+    "difficulty": "medium"
+   },
+   {
+    "id": "899caa7d-b64",
+    "type": "mcq",
+    "question": "Which of these increases the strength of London dispersion forces most effectively?",
+    "options": [
+     "Increasing molecular polarity",
+     "Decreasing molar mass",
+     "Increasing molecular surface area and polarizability",
+     "Replacing H with F atoms"
+    ],
+    "correctIndex": 2,
+    "explanation": "Dispersion forces grow with increasing polarizability — larger molar mass and greater surface area produce stronger London forces.",
+    "concept": "dispersion forces",
+    "difficulty": "easy"
+   },
+   {
+    "id": "908b2e37-3e6",
+    "type": "mcq",
+    "question": "Which phase transition is exothermic?",
+    "options": [
+     "Melting",
+     "Vaporization",
+     "Condensation",
+     "Sublimation"
+    ],
+    "correctIndex": 2,
+    "explanation": "Condensation releases energy as gas molecules form intermolecular attractions in the liquid; melting and vaporization are endothermic; sublimation is endothermic.",
+    "concept": "phase changes",
+    "difficulty": "easy"
+   },
+   {
+    "id": "4a57b1c6-1e3",
+    "type": "mcq",
+    "question": "Which choice correctly pairs a crystalline defect with its description?",
+    "options": [
+     "Vacancy — an extra atom sitting in an interstitial site",
+     "Substitutional impurity — atom missing from lattice site",
+     "Interstitial defect — atom occupying a normally empty space between lattice points",
+     "Edge dislocation — removal of an entire plane of atoms from a crystal"
+    ],
+    "correctIndex": 2,
+    "explanation": "An interstitial defect is an atom in a normally empty space between lattice sites. A vacancy is a missing atom; substitutional impurity replaces a lattice atom; edge dislocation involves an extra partial plane. ",
+    "concept": "crystal defects",
+    "difficulty": "hard"
+   },
+   {
+    "id": "2f3cb388-f62",
+    "type": "tf",
+    "question": "Hydrogen bonding can occur when hydrogen is covalently bonded to carbon if the molecule is large.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 1,
+    "explanation": "Hydrogen bonds require H bonded to highly electronegative F, O, or N; C–H is not sufficiently polar to form hydrogen bonds.",
+    "concept": "hydrogen bond",
+    "difficulty": "medium"
+   }
+  ],
+  "video": {
+   "youtubeId": "9TVOlTolKFA",
+   "title": "States of Matter - Solids, Liquids, Gases & Plasma - Chemistry",
+   "channel": "The Organic Chemistry Tutor",
+   "seconds": 766
+  }
+ },
+ "c11": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "Why do sucrose (C12H22O11) molecules remain uniformly dispersed in water rather than settling out under gravity?",
+    "answer": "Because the solution is homogeneous at the molecular level: sucrose molecules are individually solvated by water and are small enough that Brownian motion and solvent interactions prevent settling; thermal motion overcomes gravitational separation."
+   },
+   {
+    "kind": "choice",
+    "prompt": "Which of the following best describes a strong electrolyte?",
+    "options": [
+     "A substance that dissolves but produces no ions in water",
+     "A substance that ionizes or dissociates nearly completely in water",
+     "A substance that reacts with water to form larger neutral molecules",
+     "A substance that forms a supersaturated solution"
+    ],
+    "correctIndex": 1,
+    "feedback": "Strong electrolytes produce essentially all ions in solution, giving high electrical conductivity."
+   },
+   {
+    "kind": "order",
+    "prompt": "Place these steps in the correct order for forming a saturated solution of a solid solute in a liquid solvent by adding solute gradually:",
+    "items": [
+     "Add more solute and stir; observe whether undissolved solute remains.",
+     "Begin with the pure solvent in a container.",
+     "Stir until no more solute dissolves and undissolved solute remains at the bottom.",
+     "Add small amounts of solute and allow each portion to dissolve before adding more."
+    ],
+    "feedback": "You reach saturation by successive additions and stirring until extra solute remains undissolved, indicating equilibrium."
+   },
+   {
+    "kind": "fill",
+    "prompt": "Fill the blank: A colligative property depends only on the _____ of solute particles, not on their chemical identity.",
+    "before": "A colligative property depends only on the",
+    "after": "of solute particles, not on their chemical identity.",
+    "options": [
+     "charge",
+     "mass",
+     "concentration",
+     "size"
+    ],
+    "correctIndex": 2,
+    "feedback": "Colligative properties (vapor pressure lowering, boiling point elevation, etc.) depend on the total particle concentration."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match each term with its correct description.",
+    "pairs": [
+     [
+      "Supersaturated solution",
+      "Contains solute concentration greater than equilibrium solubility; unstable"
+     ],
+     [
+      "Miscible liquids",
+      "Liquids soluble in all proportions"
+     ],
+     [
+      "Colloid",
+      "Mixture with dispersed particles that do not settle and are intermediate in size between solution and suspension"
+     ]
+    ],
+    "feedback": "These definitions distinguish equilibrium solubility, complete mutual solubility of liquids, and colloidal dispersions."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "cf44d0d6-f3c",
+    "type": "mcq",
+    "question": "Which statement distinguishes a solution from a suspension?",
+    "options": [
+     "Solutions contain particles large enough to be seen with a magnifying glass.",
+     "Suspensions are homogeneous at the molecular level.",
+     "In solutions, solute particles do not settle out over time.",
+     "Suspensions always conduct electricity well."
+    ],
+    "correctIndex": 2,
+    "explanation": "Solutions are homogeneous and the dissolved species do not settle; suspensions contain larger particles that settle on standing.",
+    "concept": "solution vs suspension",
+    "difficulty": "easy"
+   },
+   {
+    "id": "3e4ff69a-735",
+    "type": "mcq",
+    "question": "Which of these processes produces ions in water without requiring pre-existing ions in the compound?",
+    "options": [
+     "Dissolution of KCl into K+ and Cl-",
+     "Dissolution of sucrose (C12H22O11)",
+     "Ionization of HCl in water",
+     "Formation of a colloid"
+    ],
+    "correctIndex": 2,
+    "explanation": "Acids like HCl chemically ionize in water to yield ions even though they are covalent molecules before dissolution.",
+    "concept": "electrolyte",
+    "difficulty": "medium"
+   },
+   {
+    "id": "e7cd32a2-6a3",
+    "type": "mcq",
+    "question": "Which factor primarily determines whether an ionic solid will dissolve in water?",
+    "options": [
+     "Ion-dipole attractions between ions and water molecules",
+     "Magnetic properties of the ions",
+     "The color of the solid",
+     "Whether the solid forms a colloid"
+    ],
+    "correctIndex": 0,
+    "explanation": "Ion-dipole interactions between the ions and polar water molecules facilitate dissolution of ionic compounds.",
+    "concept": "solubility",
+    "difficulty": "easy"
+   },
+   {
+    "id": "34b6d8e1-0a6",
+    "type": "mcq",
+    "question": "A solution that contains the maximum amount of solute that can dissolve at given conditions is called:",
+    "options": [
+     "Unsaturated",
+     "Supersaturated",
+     "Saturated",
+     "Colloidal"
+    ],
+    "correctIndex": 2,
+    "explanation": "A saturated solution has solute at a concentration equal to its solubility under the specified conditions.",
+    "concept": "saturated",
+    "difficulty": "easy"
+   },
+   {
+    "id": "03e052d2-6c1",
+    "type": "mcq",
+    "question": "How does the solubility of most solid solutes in water change with increasing temperature?",
+    "options": [
+     "It decreases for most solids",
+     "It increases for most solids",
+     "It is independent of temperature",
+     "It follows Henry's law"
+    ],
+    "correctIndex": 1,
+    "explanation": "For most (but not all) solid solutes, solubility in water increases with temperature.",
+    "concept": "temperature effect",
+    "difficulty": "medium"
+   },
+   {
+    "id": "3124d5cc-9b3",
+    "type": "mcq",
+    "question": "Which colligative property describes the pressure needed to stop solvent flow through a semipermeable membrane into a solution?",
+    "options": [
+     "Boiling point elevation",
+     "Vapor pressure lowering",
+     "Freezing point depression",
+     "Osmotic pressure"
+    ],
+    "correctIndex": 3,
+    "explanation": "Osmotic pressure is the pressure required to prevent net flow of solvent into a solution across a semipermeable membrane.",
+    "concept": "colligative",
+    "difficulty": "easy"
+   },
+   {
+    "id": "fccc489c-e0a",
+    "type": "mcq",
+    "question": "An ionic compound predicted to double the number of solute particles per formula unit in solution shows a smaller-than-expected colligative effect. A likely cause is:",
+    "options": [
+     "Complete dissociation into more ions than predicted",
+     "Activity effects reducing effective particle concentration",
+     "The solvent changed identity",
+     "The solution is supersaturated"
+    ],
+    "correctIndex": 1,
+    "explanation": "Activity effects (interionic interactions) reduce the effective concentration of independent particles, lowering observed colligative effects.",
+    "concept": "activity",
+    "difficulty": "hard"
+   },
+   {
+    "id": "a1223740-aaa",
+    "type": "tf",
+    "question": "Colloidal particles typically settle out of the dispersion under gravity.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 1,
+    "explanation": "False; colloidal particles remain dispersed and do not settle due to their small size and stabilizing effects (e.g., charge).",
+    "concept": "colloid",
+    "difficulty": "easy"
+   }
+  ],
+  "video": {
+   "youtubeId": "9h2f1Bjr0p4",
+   "title": "Solutions: Crash Course Chemistry #27",
+   "channel": "CrashCourse",
+   "seconds": 500
+  }
+ },
+ "c12": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "Define 'rate of reaction' in one sentence.",
+    "answer": "The rate of reaction is the change in the amount (concentration, pressure, or volume) of a reactant or product per unit time."
+   },
+   {
+    "kind": "choice",
+    "prompt": "Which change will generally increase the rate of a heterogeneous reaction between a solid reactant and a gas reactant?",
+    "options": [
+     "Decrease the surface area of the solid (fewer, larger pieces)",
+     "Increase the surface area of the solid (many fine particles)",
+     "Lower the temperature",
+     "Remove a catalyst from the surface"
+    ],
+    "correctIndex": 1,
+    "feedback": "Greater surface area increases contact between phases and increases the reaction rate."
+   },
+   {
+    "kind": "order",
+    "prompt": "Arrange these steps describing collision theory from initial statement to successful reaction:",
+    "items": [
+     "Colliding species must have sufficient energy (≥ activation energy).",
+     "Reactant species collide.",
+     "Collisions must have proper orientation to form products.",
+     "A successful collision leads to product formation."
+    ],
+    "feedback": "Collisions occur, then those with enough energy and proper orientation lead to successful product formation."
+   },
+   {
+    "kind": "fill",
+    "prompt": "Complete the sentence about rate laws:",
+    "before": "A general differential rate law relating rate to reactant concentrations has the form",
+    "after": "where m and n are reaction orders and k is the rate constant.",
+    "options": [
+     "Rate = k[A]^m[B]^n",
+     "Rate = k[A] + [B]",
+     "Rate = k[A] × stoichiometric coefficients",
+     "Rate = k × time"
+    ],
+    "correctIndex": 0,
+    "feedback": "Rate laws have the form Rate = k[A]^m[B]^n; orders m and n are determined experimentally."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match each term with its description.",
+    "pairs": [
+     [
+      "Half-life (first-order)",
+      "Independent of initial concentration"
+     ],
+     [
+      "Unimolecular elementary step",
+      "Typically leads to a first-order rate law"
+     ],
+     [
+      "Catalyst",
+      "Provides an alternative mechanism with lower activation energy"
+     ],
+     [
+      "Termolecular elementary step",
+      "Rare; involves three species colliding simultaneously"
+     ]
+    ],
+    "feedback": "Each description matches the kinetic concept as stated in the chapter."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "b7cc1806-1eb",
+    "type": "mcq",
+    "question": "Which method would be most direct for measuring the rate of a reaction that produces a gas?",
+    "options": [
+     "Measure changes in solution color using spectrophotometry",
+     "Measure the change in gas volume or pressure over time",
+     "Measure mass of solid catalyst",
+     "Measure electrical conductivity of a pure solvent"
+    ],
+    "correctIndex": 1,
+    "explanation": "Gas-producing reactions are conveniently monitored by measuring gas volume or pressure changes versus time.",
+    "concept": "measurement",
+    "difficulty": "easy"
+   },
+   {
+    "id": "77d665d1-55a",
+    "type": "mcq",
+    "question": "For the reaction 2A + B → products, how are the rates of change of [A] and [B] related?",
+    "options": [
+     "-1/2 × d[A]/dt = -d[B]/dt",
+     "-d[A]/dt = -2 × d[B]/dt",
+     "d[A]/dt = d[B]/dt",
+     "-d[B]/dt = -2 × d[A]/dt"
+    ],
+    "correctIndex": 0,
+    "explanation": "Rates relate by stoichiometry: (1/2)(-d[A]/dt) = -d[B]/dt, so -1/2 × d[A]/dt = -d[B]/dt.",
+    "concept": "stoichiometry",
+    "difficulty": "medium"
+   },
+   {
+    "id": "1c65c88c-f48",
+    "type": "mcq",
+    "question": "Which statement about rate laws is true?",
+    "options": [
+     "Rate laws can be derived directly from the balanced chemical equation in all cases",
+     "Reaction orders must be integers and are predicted by stoichiometry",
+     "Rate laws are determined experimentally and may include non-integer orders",
+     "The rate constant k depends only on concentrations"
+    ],
+    "correctIndex": 2,
+    "explanation": "Rate laws and orders must be determined experimentally; orders can be fractional or negative.",
+    "concept": "rate law",
+    "difficulty": "easy"
+   },
+   {
+    "id": "742cbc4d-f6b",
+    "type": "mcq",
+    "question": "How does increasing temperature typically affect reaction rate and why?",
+    "options": [
+     "Rate decreases because collisions become less frequent",
+     "Rate increases because a larger fraction of collisions have sufficient energy",
+     "Rate is unchanged; temperature affects only equilibrium",
+     "Rate decreases because activation energy increases"
+    ],
+    "correctIndex": 1,
+    "explanation": "Higher temperature increases kinetic energy so more collisions exceed activation energy, raising the rate.",
+    "concept": "temperature",
+    "difficulty": "easy"
+   },
+   {
+    "id": "539d448a-190",
+    "type": "mcq",
+    "question": "Which elementary step molecularity corresponds to a second-order rate law when that step is rate-determining?",
+    "options": [
+     "Unimolecular",
+     "Bimolecular",
+     "Termolecular",
+     "Zero-order"
+    ],
+    "correctIndex": 1,
+    "explanation": "A bimolecular elementary step (two reactant species colliding) typically leads to a second-order rate law.",
+    "concept": "molecularity",
+    "difficulty": "medium"
+   },
+   {
+    "id": "19de959e-56e",
+    "type": "mcq",
+    "question": "A reaction follows first-order kinetics. Which statement about its half-life (t1/2) is correct?",
+    "options": [
+     "t1/2 depends on the initial concentration [A]0",
+     "t1/2 = ln(2) / k and is independent of [A]0",
+     "t1/2 increases as [A]0 increases proportionally",
+     "t1/2 = [A]0 / (2k)"
+    ],
+    "correctIndex": 1,
+    "explanation": "For first-order reactions, t1/2 = ln(2)/k and is independent of initial concentration.",
+    "concept": "half-life",
+    "difficulty": "medium"
+   },
+   {
+    "id": "d77bdc5a-ee2",
+    "type": "mcq",
+    "question": "Which effect does a catalyst have on a reaction?",
+    "options": [
+     "It increases the overall energy change (ΔE) of the reaction",
+     "It lowers the activation energy by providing an alternative mechanism",
+     "It is consumed and therefore must be replenished",
+     "It always changes the position of equilibrium"
+    ],
+    "correctIndex": 1,
+    "explanation": "A catalyst provides an alternative pathway with lower activation energy and is not consumed overall.",
+    "concept": "catalysis",
+    "difficulty": "easy"
+   },
+   {
+    "id": "7a564926-789",
+    "type": "tf",
+    "question": "Collision theory requires that reacting species collide with proper orientation and sufficient energy for a reaction to occur.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 0,
+    "explanation": "Collision theory postulates that both orientation and sufficient collision energy are necessary for successful reactions.",
+    "concept": "collision theory",
+    "difficulty": "easy"
+   }
+  ],
+  "video": {
+   "youtubeId": "wYqQCojggyM",
+   "title": "Kinetics: Initial Rates and Integrated Rate Laws",
+   "channel": "Professor Dave Explains",
+   "seconds": 550
+  }
+ },
+ "c13": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "What does it mean for a chemical reaction to be at equilibrium?",
+    "answer": "The forward and reverse processes occur at equal rates so that the concentrations of reactants and products remain constant over time."
+   },
+   {
+    "kind": "choice",
+    "prompt": "Which expression correctly represents the equilibrium constant Kc for the reaction: aA + bB ⇌ cC + dD ?",
+    "options": [
+     "Kc = [A]^a [B]^b / [C]^c [D]^d",
+     "Kc = [C]^c [D]^d / [A]^a [B]^b",
+     "Kc = ([A]^a [B]^b) / ([C]^c [D]^d) × T",
+     "Kc = [C]^c + [D]^d − [A]^a − [B]^b"
+    ],
+    "correctIndex": 1,
+    "feedback": "Kc is the ratio of product concentrations (each raised to its stoichiometric coefficient) to reactant concentrations."
+   },
+   {
+    "kind": "order",
+    "prompt": "Arrange these steps of an ICE table procedure in the correct order.",
+    "items": [
+     "Write equilibrium expression for K (from balanced equation).",
+     "List initial concentrations for each species (I).",
+     "Solve algebraically for the change (x) using K, then compute equilibrium concentrations (E).",
+     "Express changes in concentration using stoichiometry (C)."
+    ],
+    "feedback": "ICE stands for Initial, Change, Equilibrium; use the balanced equation to relate changes and then solve using K."
+   },
+   {
+    "kind": "fill",
+    "prompt": "Le Châtelier’s principle: If the concentration of a reactant is increased, the equilibrium will shift to the _____ to partly counter the disturbance.",
+    "before": "Le Châtelier’s principle: If the concentration of a reactant is increased, the equilibrium will shift to the",
+    "after": "to partly counter the disturbance.",
+    "options": [
+     "left",
+     "right",
+     "up",
+     "down"
+    ],
+    "correctIndex": 1,
+    "feedback": "Increasing a reactant drives the net reaction toward product formation (the right) to consume some added reactant."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match each disturbance to the correct expected effect on a typical exothermic equilibrium (heat as product):",
+    "pairs": [
+     [
+      "Increase temperature",
+      "shift left (favor reactants)"
+     ],
+     [
+      "Add a catalyst",
+      "no change in K; equilibrium reached faster"
+     ],
+     [
+      "Decrease pressure (for a reaction with more gas molecules on products side)",
+      "shift right (favor product side with more gas)"
+     ]
+    ],
+    "feedback": "Temperature affects position depending on reaction enthalpy; catalysts speed both directions without changing K; pressure/volume shifts depend on gas molecule counts."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "f77fb673-c59",
+    "type": "mcq",
+    "question": "Which statement best describes a homogeneous equilibrium?",
+    "options": [
+     "All components are in the same phase",
+     "Components are in different phases",
+     "Only gases are present",
+     "Only solids are present"
+    ],
+    "correctIndex": 0,
+    "explanation": "A homogeneous equilibrium has all reactants and products in the same phase (e.g., all aqueous).",
+    "concept": "homogeneous",
+    "difficulty": "easy"
+   },
+   {
+    "id": "a1754119-993",
+    "type": "mcq",
+    "question": "For the gas-phase reaction N2(g) + 3H2(g) ⇌ 2NH3(g), which reaction quotient expression Qp (using partial pressures) is correct?",
+    "options": [
+     "Qp = PNH3^2 / (PN2 × PH2^3)",
+     "Qp = PN2 × PH2^3 / PNH3^2",
+     "Qp = PNH3 / (PN2 × PH2)",
+     "Qp = PN2^2 / (PH2^3 × PNH3)"
+    ],
+    "correctIndex": 0,
+    "explanation": "Qp mirrors the stoichiometry: product partial pressures raised to coefficients over reactants raised to theirs.",
+    "concept": "reaction quotient",
+    "difficulty": "medium"
+   },
+   {
+    "id": "cf1e5d55-031",
+    "type": "mcq",
+    "question": "If a system at equilibrium is disturbed by adding more product, the immediate effect is:",
+    "options": [
+     "The reverse reaction rate temporarily exceeds the forward rate",
+     "The forward reaction rate permanently increases",
+     "K increases",
+     "No change in reaction rates"
+    ],
+    "correctIndex": 0,
+    "explanation": "Adding product increases the reverse rate, causing a net shift toward reactants until equilibrium is re-established.",
+    "concept": "Le Châtelier",
+    "difficulty": "easy"
+   },
+   {
+    "id": "6768a3bf-bf5",
+    "type": "mcq",
+    "question": "A reaction has Kc = 1.0 × 10^3 at a certain temperature. At equilibrium, which statement is most likely true?",
+    "options": [
+     "Products are favored; equilibrium mixture has mostly products",
+     "Reactants are heavily favored",
+     "Only reactants are present",
+     "Kc indicates the reaction is not at equilibrium"
+    ],
+    "correctIndex": 0,
+    "explanation": "Large Kc (>1) means products predominate at equilibrium.",
+    "concept": "Kc magnitude",
+    "difficulty": "medium"
+   },
+   {
+    "id": "b55ce582-d8d",
+    "type": "mcq",
+    "question": "Which quantity changes when a catalyst is added to a reversible reaction at constant temperature?",
+    "options": [
+     "Rate at which equilibrium is reached",
+     "Equilibrium constant K",
+     "Equilibrium concentrations",
+     "Stoichiometric coefficients"
+    ],
+    "correctIndex": 0,
+    "explanation": "Catalysts increase both forward and reverse rates equally, speeding attainment of equilibrium but not changing K or equilibrium concentrations.",
+    "concept": "catalyst",
+    "difficulty": "easy"
+   },
+   {
+    "id": "dc575f74-f6d",
+    "type": "mcq",
+    "question": "In an ICE calculation for A ⇌ B, initial [A] = 0.50 M, initial [B] = 0.10 M. At equilibrium [B] = 0.30 M. What is the change in [A] (assuming 1:1 stoichiometry)?",
+    "options": [
+     "−0.20 M",
+     "+0.20 M",
+     "−0.40 M",
+     "+0.40 M"
+    ],
+    "correctIndex": 0,
+    "explanation": "B increased by 0.20 M, so A decreased by 0.20 M (consumed) for a 1:1 reaction.",
+    "concept": "ICE",
+    "difficulty": "easy"
+   },
+   {
+    "id": "24f5db8b-2da",
+    "type": "tf",
+    "question": "The reaction quotient Q and equilibrium constant K have the same numerical value only when the system is at equilibrium.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 0,
+    "explanation": "Q equals K only at equilibrium; otherwise Q indicates the direction of net reaction needed to reach equilibrium.",
+    "concept": "Q vs K",
+    "difficulty": "easy"
+   },
+   {
+    "id": "8baa2e86-cd2",
+    "type": "mcq",
+    "question": "For an exothermic reaction written with heat as a product, increasing the temperature will shift the equilibrium:",
+    "options": [
+     "Toward reactants (left)",
+     "Toward products (right)",
+     "No shift; only rates change",
+     "K becomes zero"
+    ],
+    "correctIndex": 0,
+    "explanation": "Adding heat to an exothermic reaction (heat as product) is like adding a product, so equilibrium shifts to the left.",
+    "concept": "temperature effect",
+    "difficulty": "medium"
+   }
+  ],
+  "video": {
+   "youtubeId": "g5wNg_dKsYY",
+   "title": "Equilibrium: Crash Course Chemistry #28",
+   "channel": "CrashCourse",
+   "seconds": 656
+  }
+ },
+ "c14": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "Define Brønsted-Lowry acid, Brønsted-Lowry base, conjugate acid, and conjugate base.",
+    "answer": "Brønsted-Lowry acid: a species that donates a proton (H⁺). Brønsted-Lowry base: a species that accepts a proton. Conjugate base: the species formed after an acid donates a proton. Conjugate acid: the species formed after a base accepts a proton."
+   },
+   {
+    "kind": "choice",
+    "prompt": "Which aqueous solution is neutral at 25 °C?",
+    "options": [
+     "[H₃O⁺] = 1.0 × 10⁻⁷ M, [OH⁻] = 1.0 × 10⁻⁷ M",
+     "[H₃O⁺] = 1.0 × 10⁻⁶ M, [OH⁻] = 1.0 × 10⁻⁸ M",
+     "[H₃O⁺] = 1.0 × 10⁻⁸ M, [OH⁻] = 1.0 × 10⁻⁶ M"
+    ],
+    "correctIndex": 0,
+    "feedback": "Neutral solutions have equal [H₃O⁺] and [OH⁻]; at 25 °C that common value in pure water is 1.0 × 10⁻⁷ M."
+   },
+   {
+    "kind": "order",
+    "prompt": "Place these steps in the correct order for calculating pH of a weak acid HA given initial concentration c and Kₐ (assume simple approximation where appropriate).",
+    "items": [
+     "Write the acid dissociation equilibrium: HA ⇌ H⁺ + A⁻ and expression Kₐ = [H⁺][A⁻]/[HA].",
+     "Assume [H⁺] ≈ [A⁻] = x and [HA] ≈ c − x; substitute into Kₐ to get Kₐ = x²/(c − x).",
+     "Solve for x (approximate by x ≪ c so x ≈ √(Kₐ·c) if valid), then pH = −log[H₃O⁺].",
+     "Check the approximation by verifying x ≪ c (usually x/c < 0.05)."
+    ],
+    "feedback": "These are the standard steps: write equilibrium, set up x, approximate and solve, then check the approximation."
+   },
+   {
+    "kind": "fill",
+    "prompt": "Fill the blank: For a conjugate acid-base pair, the stronger the acid, the ______ the conjugate base.",
+    "before": "For a conjugate acid-base pair, the stronger the acid, the",
+    "after": "the conjugate base.",
+    "options": [
+     "weaker",
+     "stronger",
+     "unchanged"
+    ],
+    "correctIndex": 0,
+    "feedback": "There is an inverse relationship: a strong acid has a weak conjugate base."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match each salt ion with the expected effect on the pH of its aqueous solution (acidic, basic, neutral).",
+    "pairs": [
+     [
+      "NH₄⁺ (from NH₄Cl)",
+      "acidic"
+     ],
+     [
+      "Cl⁻ (from HCl)",
+      "neutral"
+     ],
+     [
+      "CH₃COO⁻ (from CH₃COONa)",
+      "basic"
+     ]
+    ],
+    "feedback": "Acidic cations are conjugate acids of weak bases; basic anions are conjugate bases of weak acids; Cl⁻ is the conjugate base of strong HCl and is essentially neutral."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "82dfd7cc-f11",
+    "type": "mcq",
+    "question": "Which species is amphiprotic?",
+    "options": [
+     "H₂O",
+     "Na⁺",
+     "Cl⁻",
+     "NH₄⁺"
+    ],
+    "correctIndex": 0,
+    "explanation": "Water can both donate a proton to form OH⁻ and accept a proton to form H₃O⁺; Na⁺ and Cl⁻ are not amphiprotic and NH₄⁺ is only a proton donor (acid).",
+    "concept": "amphiprotic",
+    "difficulty": "easy"
+   },
+   {
+    "id": "9d63b34e-a61",
+    "type": "mcq",
+    "question": "At 25 °C, a solution with pH 5 has [OH⁻] equal to which of the following?",
+    "options": [
+     "1.0 × 10⁻⁹ M",
+     "1.0 × 10⁻⁵ M",
+     "1.0 × 10⁻¹⁹ M",
+     "1.0 × 10⁻⁵ × 10⁻⁹ M"
+    ],
+    "correctIndex": 0,
+    "explanation": "At 25 °C pH + pOH = 14, so pOH = 9 and [OH⁻] = 10⁻⁹ M.",
+    "concept": "pOH",
+    "difficulty": "easy"
+   },
+   {
+    "id": "dc4d355a-371",
+    "type": "mcq",
+    "question": "Which trend is correct for binary acid strength across a period (left → right)?",
+    "options": [
+     "CH₄ < NH₃ < H₂O < HF",
+     "HF < H₂O < NH₃ < CH₄",
+     "H₂O < HF < NH₃ < CH₄",
+     "NH₃ < CH₄ < HF < H₂O"
+    ],
+    "correctIndex": 0,
+    "explanation": "Binary acid strength increases left to right across the period, so CH₄ (very weak) → NH₃ → H₂O → HF (stronger).",
+    "concept": "binary acids",
+    "difficulty": "medium"
+   },
+   {
+    "id": "05a83ae6-680",
+    "type": "mcq",
+    "question": "Which statement about Kₐ and acid strength is true?",
+    "options": [
+     "Larger Kₐ indicates a stronger acid",
+     "Smaller Kₐ indicates a stronger acid",
+     "Kₐ = 0 for strong acids",
+     "Kₐ is independent of acid strength"
+    ],
+    "correctIndex": 0,
+    "explanation": "Kₐ measures the extent of ionization; larger values mean more ionization and thus stronger acids.",
+    "concept": "Kₐ",
+    "difficulty": "easy"
+   },
+   {
+    "id": "3e46f1f5-224",
+    "type": "mcq",
+    "question": "Which salt will produce a basic aqueous solution?",
+    "options": [
+     "NaF",
+     "NH₄Cl",
+     "KCl",
+     "HCl"
+    ],
+    "correctIndex": 0,
+    "explanation": "F⁻ is the conjugate base of the weak acid HF and will hydrolyze to make the solution basic; NH₄Cl is acidic, KCl is neutral, HCl is an acid (not a salt producing basic solution).",
+    "concept": "salt hydrolysis",
+    "difficulty": "medium"
+   },
+   {
+    "id": "2cf170fd-266",
+    "type": "mcq",
+    "question": "For a diprotic acid H₂A with K₁ and K₂, which is generally true?",
+    "options": [
+     "K₁ > K₂",
+     "K₁ = K₂",
+     "K₁ < K₂",
+     "K₁·K₂ = 1"
+    ],
+    "correctIndex": 0,
+    "explanation": "Ionization constants decrease for successive deprotonation steps, so the first (K₁) is larger than the second (K₂).",
+    "concept": "polyprotic",
+    "difficulty": "medium"
+   },
+   {
+    "id": "f526019c-c9e",
+    "type": "mcq",
+    "question": "A buffer made from acetic acid and sodium acetate best resists pH change when",
+    "options": [
+     "[CH₃COOH] ≈ [CH₃COO⁻]",
+     "[CH₃COOH] ≫ [CH₃COO⁻]",
+     "[CH₃COOH] ≪ [CH₃COO⁻]",
+     "either component is absent"
+    ],
+    "correctIndex": 0,
+    "explanation": "Buffer capacity is greatest when the concentrations of the weak acid and its conjugate base are comparable.",
+    "concept": "buffers",
+    "difficulty": "easy"
+   },
+   {
+    "id": "3935a099-bc9",
+    "type": "tf",
+    "question": "Adding a small amount of strong acid to a buffer will consume some conjugate base and shift an equilibrium to restore pH.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 0,
+    "explanation": "True — the conjugate base reacts with added H₃O⁺, converting to its conjugate acid and minimizing pH change.",
+    "concept": "buffers",
+    "difficulty": "easy"
+   }
+  ],
+  "video": {
+   "youtubeId": "OP6RKqSp1Xw",
+   "title": "Conjugate Acid Base Pairs, Arrhenius, Bronsted Lowry and Lewis Definition - Chemistry",
+   "channel": "The Organic Chemistry Tutor",
+   "seconds": 697
+  }
+ },
+ "c15": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "Define Ksp for a slightly soluble ionic solid M_pX_q that dissociates into p M^(m+) and q X^(n–). Write the general expression.",
+    "answer": "Ksp = [M^(m+)]^p [X^(n–)]^q"
+   },
+   {
+    "kind": "choice",
+    "prompt": "A solid AgCl (s) ⇌ Ag+ (aq) + Cl– (aq) has Ksp = 1.8×10^−10. What is the molar solubility (s) of AgCl in pure water?",
+    "options": [
+     "1.8×10^−10 M",
+     "1.3×10^−5 M",
+     "4.2×10^−6 M",
+     "1.8×10^−3 M"
+    ],
+    "correctIndex": 1,
+    "feedback": "For AgCl, Ksp = s^2, so s = sqrt(1.8×10^−10) ≈ 1.34×10^−5 M."
+   },
+   {
+    "kind": "order",
+    "prompt": "Put these steps in the correct order to decide whether precipitation will occur when 0.0100 M Na2SO4 is mixed with 0.0100 M BaCl2 (equal volumes):",
+    "items": [
+     "Calculate concentrations after mixing (each diluted by 2).",
+     "Compute the reaction quotient Q = [Ba2+][SO4^2–].",
+     "Compare Q with the Ksp of BaSO4.",
+     "If Q > Ksp, precipitation occurs; if Q ≤ Ksp, no precipitation."
+    ],
+    "feedback": "You must first find concentrations after dilution, then Q, then compare with Ksp and decide."
+   },
+   {
+    "kind": "fill",
+    "prompt": "Complete the sentence: In Lewis acid-base theory, a Lewis base is _______ and a Lewis acid is _______.",
+    "before": "In Lewis acid-base theory, a Lewis base is",
+    "after": "and a Lewis acid is",
+    "options": [
+     "an electron‑pair acceptor; an electron‑pair donor",
+     "an electron‑pair donor; an electron‑pair acceptor",
+     "a proton donor; a proton acceptor",
+     "an H+ donor; an H+ acceptor"
+    ],
+    "correctIndex": 1,
+    "feedback": "Lewis bases donate an electron pair; Lewis acids accept an electron pair."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match each term with its correct example or description:",
+    "pairs": [
+     [
+      "Ligand",
+      "NH3 or H2O (donates electron pair to a metal) "
+     ],
+     [
+      "Formation constant (Kf)",
+      "Equilibrium constant for M^n+ + ligands → complex ion"
+     ],
+     [
+      "Coordinate covalent bond",
+      "Bond where one atom supplies both electrons (e.g., NH3→H+) "
+     ],
+     [
+      "Lewis acid",
+      "Metal cation that accepts electron pairs (e.g., Fe^3+)"
+     ]
+    ],
+    "feedback": "Ligands donate electron pairs; Kf describes complex formation; coordinate covalent bonds have both electrons from one atom; metal cations act as Lewis acids."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "226d4d8e-599",
+    "type": "mcq",
+    "question": "For a salt M_pX_q that dissolves as M_pX_q (s) ⇌ p M^(m+) + q X^(n–), which expression correctly gives Ksp?",
+    "options": [
+     "Ksp = p[M^(m+)] + q[X^(n–)]",
+     "Ksp = [M^(m+)]^p [X^(n–)]^q",
+     "Ksp = [M^(m+)]/[X^(n–)]",
+     "Ksp = [M^(m+)]^q [X^(n–)]^p"
+    ],
+    "correctIndex": 1,
+    "explanation": "Ksp is the product of ion concentrations raised to the stoichiometric coefficients.",
+    "concept": "Ksp expression",
+    "difficulty": "easy"
+   },
+   {
+    "id": "9f826fd8-15a",
+    "type": "mcq",
+    "question": "If the solubility of CaF2 in water is s mol·L^−1, and CaF2(s) ⇌ Ca2+ + 2 F−, what is Ksp in terms of s?",
+    "options": [
+     "Ksp = s^3",
+     "Ksp = 4s^3",
+     "Ksp = 2s^2",
+     "Ksp = s^2"
+    ],
+    "correctIndex": 1,
+    "explanation": "[Ca2+] = s and [F−] = 2s so Ksp = s(2s)^2 = 4s^3.",
+    "concept": "solubility calc",
+    "difficulty": "medium"
+   },
+   {
+    "id": "9b7fe96b-e1b",
+    "type": "mcq",
+    "question": "Which statement best predicts when a precipitate will form?",
+    "options": [
+     "When Q = Ksp",
+     "When Q < Ksp",
+     "When Q > Ksp",
+     "When Q is negative"
+    ],
+    "correctIndex": 2,
+    "explanation": "Precipitation begins when the reaction quotient Q exceeds Ksp; it proceeds until Q = Ksp.",
+    "concept": "precipitation criterion",
+    "difficulty": "easy"
+   },
+   {
+    "id": "6468c3ed-803",
+    "type": "tf",
+    "question": "A higher Ksp always means a compound is more soluble in water.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 1,
+    "explanation": "Ksp depends on the ion stoichiometry; comparing solubility requires accounting for stoichiometric relationships, not Ksp alone.",
+    "concept": "Ksp vs solubility",
+    "difficulty": "medium"
+   },
+   {
+    "id": "bcd3dfef-50a",
+    "type": "mcq",
+    "question": "Which of the following is a Lewis acid?",
+    "options": [
+     "NH3",
+     "H2O",
+     "BF3",
+     "CH4"
+    ],
+    "correctIndex": 2,
+    "explanation": "BF3 has an empty orbital and can accept an electron pair, making it a Lewis acid.",
+    "concept": "Lewis acid",
+    "difficulty": "easy"
+   },
+   {
+    "id": "c1dc3f03-4a0",
+    "type": "mcq",
+    "question": "In complex formation, the formation constant Kf is large when:",
+    "options": [
+     "the complex is weak and dissociates easily",
+     "the complex is highly favored at equilibrium",
+     "the ligand is a poor electron donor",
+     "the metal ion cannot accept electron pairs"
+    ],
+    "correctIndex": 1,
+    "explanation": "A large Kf indicates complex formation is strongly favored, so the complex predominates at equilibrium.",
+    "concept": "formation constant",
+    "difficulty": "medium"
+   },
+   {
+    "id": "7b42a98b-ed5",
+    "type": "mcq",
+    "question": "Ocean acidification can increase the solubility of CaCO3 because:",
+    "options": [
+     "increased H+ shifts carbonate equilibria, reducing [CO3^2−] and driving more CaCO3 dissolution",
+     "higher CO2 converts CaCO3 to Ca(HCO3)2 directly without equilibria",
+     "acidification increases water temperature causing more dissolution",
+     "acidification removes Ca2+ from solution"
+    ],
+    "correctIndex": 0,
+    "explanation": "Added H+ reacts with CO3^2−, lowering its concentration and shifting the CaCO3 dissolution equilibrium to dissolve more solid.",
+    "concept": "coupled equilibria",
+    "difficulty": "medium"
+   },
+   {
+    "id": "81b5dde8-671",
+    "type": "mcq",
+    "question": "Which change will increase the solubility of a sparingly soluble salt containing an anion that is also a weak base (A−)?",
+    "options": [
+     "Adding a strong base",
+     "Adding a common-ion of A−",
+     "Adding acid that reacts with A−",
+     "Decreasing temperature always"
+    ],
+    "correctIndex": 2,
+    "explanation": "Adding acid consumes A− by protonation, lowering its concentration and shifting dissolution to the right, increasing solubility.",
+    "concept": "coupled equilibria",
+    "difficulty": "hard"
+   }
+  ],
+  "video": {
+   "youtubeId": "1GiZzCzmO5Q",
+   "title": "Chemical Equilibria and Reaction Quotients",
+   "channel": "Professor Dave Explains",
+   "seconds": 408
+  }
+ },
+ "c16": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "What is a spontaneous process?",
+    "answer": "A process that occurs naturally under given conditions without the need for a continual input of energy from an external source."
+   },
+   {
+    "kind": "choice",
+    "prompt": "Which statement best describes entropy (S)?",
+    "options": [
+     "A measure of the total energy contained in a system",
+     "A state function related to the number of microstates and distribution of matter/energy",
+     "The heat released by a reaction at constant pressure",
+     "The pressure exerted by an ideal gas at a given temperature"
+    ],
+    "correctIndex": 1,
+    "feedback": "Entropy is a state function related to the number of microstates and how matter/energy are distributed."
+   },
+   {
+    "kind": "order",
+    "prompt": "Arrange phases in order of increasing entropy for a single pure substance at the same temperature.",
+    "items": [
+     "Solid",
+     "Liquid",
+     "Gas"
+    ],
+    "feedback": "For a given substance S(solid) < S(liquid) < S(gas) because molecular freedom increases."
+   },
+   {
+    "kind": "fill",
+    "prompt": "Choose the best completion: The Second Law of Thermodynamics states that for a spontaneous process ΔS_univ is ______.",
+    "before": "The Second Law of Thermodynamics states that for a spontaneous process ΔS_univ is",
+    "after": ".",
+    "options": [
+     "positive (ΔS_univ > 0)",
+     "negative (ΔS_univ < 0)",
+     "zero (ΔS_univ = 0)",
+     "equal to the system's ΔS"
+    ],
+    "correctIndex": 0,
+    "feedback": "A spontaneous process increases the entropy of the universe, so ΔS_univ > 0."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match each thermodynamic concept to its concise definition.",
+    "pairs": [
+     [
+      "Gibbs free energy (G)",
+      "State function used to predict spontaneity at constant T and P"
+     ],
+     [
+      "Reversible process",
+      "Idealized slow process that remains at equilibrium and can be reversed by an infinitesimal change"
+     ],
+     [
+      "Third law of thermodynamics",
+      "Entropy of a perfect crystalline solid at 0 K is zero"
+     ]
+    ],
+    "feedback": "G predicts spontaneity at constant T and P; reversible processes are idealized equilibrium paths; the third law sets S = 0 for perfect crystals at 0 K."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "537b1ac5-9a5",
+    "type": "mcq",
+    "question": "Which of the following is a correct statement about spontaneity?",
+    "options": [
+     "A spontaneous process always releases heat (exothermic).",
+     "Spontaneity indicates the direction a process occurs under given conditions without continual external energy.",
+     "If a process is slow it must be nonspontaneous.",
+     "A spontaneous process cannot be reversed under any conditions."
+    ],
+    "correctIndex": 1,
+    "explanation": "Spontaneity refers to direction under given conditions without continual external energy; it is independent of heat sign or rate.",
+    "concept": "Spontaneity",
+    "difficulty": "easy"
+   },
+   {
+    "id": "fd36341c-ad1",
+    "type": "mcq",
+    "question": "Entropy typically increases for which of these processes?",
+    "options": [
+     "Freezing of liquid water at 273 K",
+     "Formation of a solution when a salt dissolves",
+     "Condensation of water vapor to liquid",
+     "Conversion of a gas to a perfect crystal"
+    ],
+    "correctIndex": 1,
+    "explanation": "Dissolving a solid to form a solution increases dispersal of matter and often increases entropy.",
+    "concept": "Entropy",
+    "difficulty": "medium"
+   },
+   {
+    "id": "fb0995ab-188",
+    "type": "mcq",
+    "question": "According to the third law of thermodynamics, the entropy of a perfect crystalline solid at 0 K is:",
+    "options": [
+     "Undefined",
+     "Maximum for that substance",
+     "Zero",
+     "Equal to the entropy at 298 K"
+    ],
+    "correctIndex": 2,
+    "explanation": "The third law sets S = 0 for a perfect pure crystal at 0 K because only one microstate is available.",
+    "concept": "Third law",
+    "difficulty": "easy"
+   },
+   {
+    "id": "6472534e-ea3",
+    "type": "mcq",
+    "question": "Which expression relates Gibbs free energy change to enthalpy and entropy at constant T and P?",
+    "options": [
+     "ΔG = ΔH + TΔS",
+     "ΔG = ΔH - TΔS",
+     "ΔG = ΔS - TΔH",
+     "ΔG = TΔH - ΔS"
+    ],
+    "correctIndex": 1,
+    "explanation": "By definition ΔG = ΔH − TΔS at constant temperature and pressure.",
+    "concept": "Free energy",
+    "difficulty": "easy"
+   },
+   {
+    "id": "851f75ad-327",
+    "type": "mcq",
+    "question": "Which of these changes would most likely decrease the entropy of a system?",
+    "options": [
+     "Heating a solid to produce more vibrational motion",
+     "Evaporation of a liquid into a gas",
+     "Deposition of a gas into a crystalline solid",
+     "Dissolution of a gas into a solvent that disperses it"
+    ],
+    "correctIndex": 2,
+    "explanation": "Deposition (gas → solid) reduces molecular freedom and decreases entropy.",
+    "concept": "Entropy change",
+    "difficulty": "medium"
+   },
+   {
+    "id": "df9bee79-2f0",
+    "type": "mcq",
+    "question": "If ΔG for a reaction at constant T and P is positive, then the reaction is:",
+    "options": [
+     "Spontaneous as written",
+     "At equilibrium",
+     "Nonspontaneous as written",
+     "Exothermic"
+    ],
+    "correctIndex": 2,
+    "explanation": "A positive ΔG indicates the process is nonspontaneous in the forward direction under those conditions.",
+    "concept": "Free energy",
+    "difficulty": "easy"
+   },
+   {
+    "id": "57e58894-01f",
+    "type": "mcq",
+    "question": "Which factor does NOT directly affect the sign of ΔS for a pure substance?",
+    "options": [
+     "Change of phase (solid → liquid → gas)",
+     "Mass or molecular complexity at the same state",
+     "Temperature increase at constant phase",
+     "Electrical conductivity of the substance"
+    ],
+    "correctIndex": 3,
+    "explanation": "Electrical conductivity is not a direct determinant of entropy sign in the chapter's guidelines; phase, mass/complexity, and heating do affect entropy.",
+    "concept": "Entropy factors",
+    "difficulty": "medium"
+   },
+   {
+    "id": "7abc7882-083",
+    "type": "tf",
+    "question": "An irreversible (real) process can never be approximated as reversible for theoretical calculations.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 1,
+    "explanation": "False — reversible processes are idealizations used for theoretical development; real processes may be approximated as reversible under limiting conditions.",
+    "concept": "Reversible",
+    "difficulty": "hard"
+   }
+  ],
+  "video": {
+   "youtubeId": "8N1BxHgsoOw",
+   "title": "The Laws of Thermodynamics, Entropy, and Gibbs Free Energy",
+   "channel": "Professor Dave Explains",
+   "seconds": 492
+  }
+ },
+ "c17": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "Define 'oxidation number' in one sentence (tap to reveal).",
+    "answer": "The oxidation number of an element in a compound is the charge the atom would have if the compound were purely ionic; for a free element it is zero."
+   },
+   {
+    "kind": "choice",
+    "prompt": "Which of the following is the correct oxidation half-reaction when copper metal is oxidized in aqueous solution to Cu²⁺?",
+    "options": [
+     "Cu → Cu²⁺ + 2 e⁻",
+     "Cu + 2 e⁻ → Cu²⁺",
+     "Cu → Cu⁺ + e⁻",
+     "Cu²⁺ + 2 e⁻ → Cu"
+    ],
+    "correctIndex": 0,
+    "feedback": "Oxidation is loss of electrons: Cu(s) → Cu²⁺(aq) + 2 e⁻."
+   },
+   {
+    "kind": "order",
+    "prompt": "Place these steps of the half-reaction method in the correct order.",
+    "items": [
+     "Balance atoms other than O and H in each half-reaction",
+     "Combine the two half-reactions ensuring electrons cancel",
+     "Balance O by adding H₂O and H by adding H⁺ (in acidic solution)",
+     "Multiply half-reactions by integers so electrons lost = electrons gained"
+    ],
+    "feedback": "Follow separate balancing for each half-reaction, equalize electron transfer, then combine."
+   },
+   {
+    "kind": "fill",
+    "prompt": "In a galvanic cell, electrons flow from the ______ (anode/cathode) through the external circuit to the ______ (anode/cathode).",
+    "before": "In a galvanic cell, electrons flow from the",
+    "after": "through the external circuit to the ______.",
+    "options": [
+     "anode; cathode",
+     "cathode; anode",
+     "anode; anode",
+     "cathode; cathode"
+    ],
+    "correctIndex": 0,
+    "feedback": "Oxidation occurs at the anode (electron source); reduction occurs at the cathode (electron sink)."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match each term with its definition.",
+    "pairs": [
+     [
+      "Standard hydrogen electrode (SHE)",
+      "Reference electrode assigned E° = 0 V"
+     ],
+     [
+      "Salt bridge",
+      "Permits ion flow to maintain charge neutrality between half-cells"
+     ],
+     [
+      "Cell potential (Ecell)",
+      "Difference between cathode and anode potentials"
+     ]
+    ],
+    "feedback": "These are core components and definitions used to describe galvanic cells."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "cae2618d-2f4",
+    "type": "mcq",
+    "question": "Which statement correctly describes a redox reaction?",
+    "options": [
+     "It involves a transfer of protons between species.",
+     "It involves changes in oxidation numbers for one or more elements.",
+     "It always produces water as a product.",
+     "It requires formation of ionic compounds only."
+    ],
+    "correctIndex": 1,
+    "explanation": "Redox reactions are defined by changes in oxidation number (electron transfer).",
+    "concept": "redox",
+    "difficulty": "easy"
+   },
+   {
+    "id": "cc425b18-ce6",
+    "type": "mcq",
+    "question": "When a copper wire is immersed in AgNO₃(aq) and a spontaneous reaction occurs, which species is oxidized and which is reduced?",
+    "options": [
+     "Cu is oxidized; Ag⁺ is reduced.",
+     "Ag⁺ is oxidized; Cu is reduced.",
+     "Both are oxidized.",
+     "Both are reduced."
+    ],
+    "correctIndex": 0,
+    "explanation": "Copper metal loses electrons (oxidized to Cu²⁺) while Ag⁺ gains electrons (reduced to Ag(s)).",
+    "concept": "redox",
+    "difficulty": "easy"
+   },
+   {
+    "id": "582c4251-2ee",
+    "type": "mcq",
+    "question": "Given standard electrode potentials: Ag⁺ + e⁻ → Ag(s) E° = +0.80 V and Cu²⁺ + 2 e⁻ → Cu(s) E° = +0.34 V, what is the standard cell potential for the Daniell-like cell where Cu(s) is oxidized and Ag⁺(aq) is reduced?",
+    "options": [
+     "E°cell = +0.46 V",
+     "E°cell = +1.14 V",
+     "E°cell = -0.46 V",
+     "E°cell = -1.14 V"
+    ],
+    "correctIndex": 1,
+    "explanation": "E°cell = E°cathode − E°anode = 0.80 − 0.34 = +0.46 V; however because Ag⁺ accepts one e⁻ and Cu gives two e⁻, the cell constructed with two Ag half-cells gives E°cell = 0.80 − (−0.34)? Note: correct arithmetic gives 0.80 − 0.34 = 0.46 V.",
+    "concept": "cell potential",
+    "difficulty": "medium"
+   },
+   {
+    "id": "b3089156-dc6",
+    "type": "mcq",
+    "question": "Which expression correctly relates standard free energy change ΔG° to standard cell potential E°cell for a reaction that transfers n moles of electrons?",
+    "options": [
+     "ΔG° = −n F E°cell",
+     "ΔG° = +n R T ln K",
+     "ΔG° = −R T ln K",
+     "ΔG° = n F E°cell"
+    ],
+    "correctIndex": 0,
+    "explanation": "Maximum electrical work: ΔG° = −n F E°cell, where F is Faraday constant.",
+    "concept": "thermodynamics",
+    "difficulty": "medium"
+   },
+   {
+    "id": "16e3f436-09c",
+    "type": "mcq",
+    "question": "The Nernst equation shows how electrode potential depends on composition. Which form is correct for a half-reaction: Ox + z e⁻ ⇌ Red?",
+    "options": [
+     "E = E° − (R T / z F) ln([Red]/[Ox])",
+     "E = E° + (R T / z F) ln([Red]/[Ox])",
+     "E = E° − (R T / z F) ln([Ox]/[Red])",
+     "E = E° + (R T / z F) ln([Ox]/[Red])"
+    ],
+    "correctIndex": 2,
+    "explanation": "E = E° − (R T / z F) ln Q with Q = [Ox]/[Red] for Ox + z e⁻ ⇌ Red.",
+    "concept": "Nernst",
+    "difficulty": "hard"
+   },
+   {
+    "id": "f6ef7761-9ed",
+    "type": "mcq",
+    "question": "Which of these is a plausible method to prevent iron corrosion on a large steel structure?",
+    "options": [
+     "Connect the steel to a more noble metal so it becomes the anode.",
+     "Coat the steel with zinc (galvanization).",
+     "Expose the steel to oxygen to form a passive oxide layer immediately.",
+     "Remove all water by heating continuously."
+    ],
+    "correctIndex": 1,
+    "explanation": "Galvanization applies a zinc coating that protects steel; connecting to a more noble metal would make steel the anode and accelerate corrosion. Continuous heating is impractical.",
+    "concept": "corrosion",
+    "difficulty": "medium"
+   },
+   {
+    "id": "46354c2e-2b1",
+    "type": "mcq",
+    "question": "A fuel cell differs from a primary battery because:",
+    "options": [
+     "A fuel cell stores reactants internally and cannot run continuously.",
+     "A fuel cell requires continuous input of fuel and oxidant to operate.",
+     "A fuel cell always uses hydrogen as fuel.",
+     "A fuel cell operates only at standard state conditions."
+    ],
+    "correctIndex": 1,
+    "explanation": "Fuel cells require continuous supply of reactants from external reservoirs.",
+    "concept": "batteries",
+    "difficulty": "easy"
+   },
+   {
+    "id": "66fd726b-244",
+    "type": "tf",
+    "question": "Standard electrode potentials are measured relative to the standard hydrogen electrode assigned E° = 0 V.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 0,
+    "explanation": "The SHE is the chosen reference with E° = 0 V for tabulating electrode potentials.",
+    "concept": "SHE",
+    "difficulty": "easy"
+   }
+  ],
+  "video": {
+   "youtubeId": "IV4IUsholjg",
+   "title": "Electrochemistry: Crash Course Chemistry #36",
+   "channel": "CrashCourse",
+   "seconds": 544
+  }
+ },
+ "c18": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "Why are most representative metals produced by reduction of their naturally occurring compounds rather than found as free elements in nature?",
+    "answer": "Because representative metals are chemically reactive (they readily lose electrons) so they occur as compounds in minerals; producing the pure metal requires reducing the metal cation in those compounds to the elemental state."
+   },
+   {
+    "kind": "choice",
+    "prompt": "Which of the following elements is classified as a metalloid?",
+    "options": [
+     "Silicon",
+     "Magnesium",
+     "Chlorine",
+     "Copper"
+    ],
+    "correctIndex": 0,
+    "feedback": "Silicon is a metalloid (semimetal) with intermediate properties between metals and nonmetals."
+   },
+   {
+    "kind": "order",
+    "prompt": "Put these representative element groups in order of increasing ease of removing the outermost electron (i.e., from hardest to remove to easiest):",
+    "items": [
+     "Alkaline earth metals (group 2)",
+     "Aluminum group (group 13 metals such as Al)",
+     "Alkali metals (group 1)"
+    ],
+    "feedback": "Alkali metals have the easiest-to-remove outer electron, alkaline earth metals are harder, and many group 13 metals are easier to oxidize than hydrogen but not as reactive as group 1."
+   },
+   {
+    "kind": "fill",
+    "prompt": "Complete the sentence: When heated, many metal carbonates decompose to give a metal oxide and __________.",
+    "before": "When heated, many metal carbonates decompose to give a metal oxide and ",
+    "after": ".",
+    "options": [
+     "CO₂",
+     "H₂O",
+     "O₂"
+    ],
+    "correctIndex": 0,
+    "feedback": "Thermal decomposition of carbonates typically yields the metal oxide and carbon dioxide (CO₂)."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match each element with the oxidation state it commonly exhibits in simple ionic compounds:",
+    "pairs": [
+     [
+      "Alkali metals (group 1)",
+      "1+"
+     ],
+     [
+      "Alkaline earth metals (group 2)",
+      "2+"
+     ],
+     [
+      "Group 12 metals (Zn, Cd, Hg)",
+      "2+"
+     ],
+     [
+      "Group 13 (Al, Ga, In, Tl)",
+      "3+ (but Tl also 1+)"
+     ]
+    ],
+    "feedback": "Representative metals commonly form cations with charges equal to their group tendencies (with some exceptions like Tl⁺)."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "4639a345-6f7",
+    "type": "mcq",
+    "question": "Why are group 12 elements (Zn, Cd, Hg) considered representative elements rather than transition metals?",
+    "options": [
+     "Their last electron enters an s orbital, not a d orbital",
+     "They are gases at room temperature",
+     "They always form 3+ ions",
+     "They have completely filled f orbitals"
+    ],
+    "correctIndex": 0,
+    "explanation": "Although in the d-block region, the last electron for group 12 elements occupies an s orbital, so they are treated as representative elements.",
+    "concept": "classification",
+    "difficulty": "medium"
+   },
+   {
+    "id": "dabde7f9-d85",
+    "type": "mcq",
+    "question": "Which method is commonly used to produce aluminum from its ore?",
+    "options": [
+     "Electrolysis",
+     "Thermal decomposition",
+     "Direct reaction with hydrogen gas",
+     "Displacement by zinc"
+    ],
+    "correctIndex": 0,
+    "explanation": "Electrolysis (Hall–Héroult process) is the primary industrial method to reduce alumina to aluminum metal.",
+    "concept": "preparation",
+    "difficulty": "easy"
+   },
+   {
+    "id": "df722034-463",
+    "type": "mcq",
+    "question": "Which property best explains why metalloids are useful as semiconductors?",
+    "options": [
+     "Their electrons are more tightly bound than in metals but less tightly than in nonmetals",
+     "They form ionic lattices like alkali halides",
+     "They are gases at room temperature",
+     "They always conduct electricity as well as metals"
+    ],
+    "correctIndex": 0,
+    "explanation": "Metalloids have intermediate electron binding, allowing controlled electrical conductivity characteristic of semiconductors.",
+    "concept": "metalloids",
+    "difficulty": "easy"
+   },
+   {
+    "id": "fede7865-61e",
+    "type": "mcq",
+    "question": "Which reaction describes how many alkali metals react with water?",
+    "options": [
+     "2 M + 2 H₂O → 2 M⁺ + 2 OH⁻ + H₂ (M = alkali metal)",
+     "M + H₂ → MH₂",
+     "M + O₂ → M₂O₇",
+     "M + CO₂ → MCO₃"
+    ],
+    "correctIndex": 0,
+    "explanation": "Alkali metals react vigorously with water to form soluble metal hydroxide, H₂ gas, and metal cations (M⁺).",
+    "concept": "reactivity",
+    "difficulty": "medium"
+   },
+   {
+    "id": "bdf44496-f53",
+    "type": "mcq",
+    "question": "Which carbonate preparation is consistent with the chapter's description for groups 1 and 2?",
+    "options": [
+     "Reaction of a metal oxide or hydroxide with CO₂",
+     "Direct combustion of the metal in CO₂",
+     "Electrolysis of aqueous metal carbonate",
+     "Reaction of metal with nitrogen gas"
+    ],
+    "correctIndex": 0,
+    "explanation": "Carbonates of alkali and alkaline earth metals are commonly prepared by reacting the corresponding oxide or hydroxide with CO₂.",
+    "concept": "carbonates",
+    "difficulty": "easy"
+   },
+   {
+    "id": "402cb04e-5fe",
+    "type": "mcq",
+    "question": "Hydrogen can display which of the following behaviors according to the chapter?",
+    "options": [
+     "Form ionic hydrides with active metals and covalent hydrides with nonmetals",
+     "Always act as a noble gas",
+     "Form stable 2+ cations in water",
+     "Exist only as H⁻ in compounds"
+    ],
+    "correctIndex": 0,
+    "explanation": "Hydrogen behaves like an alkali metal with active metals (forming H⁻) and like a nonmetal in covalent compounds (as H⁺ or H⁻ depending on partner).",
+    "concept": "hydrogen",
+    "difficulty": "medium"
+   },
+   {
+    "id": "86cade2f-237",
+    "type": "tf",
+    "question": "Most nonmetal oxides are acid anhydrides that react with water to form acidic solutions.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 0,
+    "explanation": "Nonmetal oxides typically form acids when dissolved in water, so they are acid anhydrides.",
+    "concept": "nonmetals",
+    "difficulty": "easy"
+   },
+   {
+    "id": "86139640-ec5",
+    "type": "mcq",
+    "question": "Which statement about the reactivity of alkaline earth metals (group 2) is correct?",
+    "options": [
+     "Their outer electrons are harder to remove than those of alkali metals, making them less reactive",
+     "They are more reactive than alkali metals because they form 1+ ions",
+     "They commonly form 4+ oxidation states",
+     "They are typically found as free elements in nature"
+    ],
+    "correctIndex": 0,
+    "explanation": "Alkaline earth metals have two valence electrons held more tightly, so they are less reactive than alkali metals and typically form 2+ ions.",
+    "concept": "reactivity",
+    "difficulty": "medium"
+   }
+  ],
+  "video": {
+   "youtubeId": "QmvpO9aBXFw",
+   "title": "Metals and Nonmetals | Chemistry",
+   "channel": "The Organic Chemistry Tutor",
+   "seconds": 492
+  }
+ },
+ "c19": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "What defines a transition metal according to the chapter?",
+    "answer": "An element that has (or readily forms) partially filled d orbitals; typically the d-block elements of the periodic table (groups 3–11)."
+   },
+   {
+    "kind": "choice",
+    "prompt": "Which preparation method is generally more difficult for more active transition metals?",
+    "options": [
+     "Electrolytic reduction of their ions to the metal",
+     "Mechanical separation by density",
+     "Sublimation of the metal",
+     "Formation of volatile metal carbonyls"
+    ],
+    "correctIndex": 0,
+    "feedback": "More active metals are more difficult to reduce, so electrolytic or chemical reduction of ions to the metal is more challenging."
+   },
+   {
+    "kind": "order",
+    "prompt": "Place these coordination numbers in order of increasing typical number of ligands around a metal center.",
+    "items": [
+     "Coordination number 4 (square planar or tetrahedral)",
+     "Coordination number 6 (octahedral)",
+     "Coordination number 2 (linear)"
+    ],
+    "feedback": "Coordination number 2 < 4 < 6 is increasing ligand count."
+   },
+   {
+    "kind": "fill",
+    "prompt": "Choose the best completion for the sentence.",
+    "before": "Ligands with more than one donor atom are called",
+    "after": ".",
+    "options": [
+     "ligands with multiple donor atoms are called chelates",
+     "all ligands are always monodentate",
+     "optical isomers cannot exist for octahedral complexes",
+     "coordination number has no relation to geometry"
+    ],
+    "correctIndex": 0,
+    "feedback": "Polydentate ligands bind through multiple donor atoms and form chelates."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match each ligand type or property with its effect on crystal field splitting (Δoct).",
+    "pairs": [
+     [
+      "Strong-field ligand (e.g., CN⁻)",
+      "Large Δoct, favors low-spin"
+     ],
+     [
+      "Weak-field ligand (e.g., H₂O)",
+      "Small Δoct, favors high-spin"
+     ],
+     [
+      "Ligands that increase splitting",
+      "Change color and magnetic properties"
+     ]
+    ],
+    "feedback": "Strong-field ligands increase Δoct favoring low-spin; weak-field ligands give smaller Δoct and high-spin complexes."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "7508eb1d-d8b",
+    "type": "mcq",
+    "question": "Which of these elements is NOT conventionally classified as a transition metal by the chapter's definition?",
+    "options": [
+     "Iron (Fe)",
+     "Copper (Cu)",
+     "Zinc (Zn)",
+     "Scandium (Sc)"
+    ],
+    "correctIndex": 2,
+    "explanation": "Group 12 elements like Zn have filled d orbitals in their common oxidation states and so are technically not transition metals, though they are often discussed with them.",
+    "concept": "definition",
+    "difficulty": "easy"
+   },
+   {
+    "id": "67351000-77e",
+    "type": "mcq",
+    "question": "Which property is typical of oxides, hydroxides, and carbonates of transition metals in low oxidation states?",
+    "options": [
+     "They are acidic",
+     "They are basic",
+     "They are neutral",
+     "They are strong oxidizing agents"
+    ],
+    "correctIndex": 1,
+    "explanation": "Compounds of transition metals in low oxidation states generally behave as bases.",
+    "concept": "acid-base",
+    "difficulty": "easy"
+   },
+   {
+    "id": "4b93bdef-43c",
+    "type": "mcq",
+    "question": "Which coordination geometry corresponds to coordination number 6?",
+    "options": [
+     "Tetrahedral",
+     "Square planar",
+     "Octahedral",
+     "Trigonal planar"
+    ],
+    "correctIndex": 2,
+    "explanation": "Octahedral geometry is characteristic of coordination number 6.",
+    "concept": "geometry",
+    "difficulty": "easy"
+   },
+   {
+    "id": "9198426a-3ad",
+    "type": "mcq",
+    "question": "Which statement about crystal field theory is supported by the chapter?",
+    "options": [
+     "It treats metal–ligand interactions as purely covalent bonding with hybrid orbitals",
+     "It explains d-orbital energy splitting due to electrostatic interactions with ligands",
+     "It predicts that all d orbitals remain degenerate in complexes",
+     "It denies any relation between ligand identity and color"
+    ],
+    "correctIndex": 1,
+    "explanation": "Crystal field theory models the ligand–metal interaction as an electrostatic effect that splits the metal d orbitals.",
+    "concept": "CFT",
+    "difficulty": "medium"
+   },
+   {
+    "id": "65eb879c-b76",
+    "type": "mcq",
+    "question": "A complex with strong-field ligands is most likely to be:",
+    "options": [
+     "High-spin with unpaired electrons in e_g",
+     "Low-spin with t_2g filled before e_g",
+     "Always diamagnetic regardless of metal d count",
+     "Unstable compared with weak-field complexes"
+    ],
+    "correctIndex": 1,
+    "explanation": "Strong-field ligands produce large Δoct and favor low-spin configurations where t_2g orbitals fill before e_g.",
+    "concept": "spin state",
+    "difficulty": "medium"
+   },
+   {
+    "id": "505396be-b39",
+    "type": "mcq",
+    "question": "Which of the following is a correct description of a chelate?",
+    "options": [
+     "A ligand that bonds through a single donor atom",
+     "A multidentate ligand that forms a ring with the metal",
+     "A complex with coordination number 2",
+     "A ligand that always produces square planar geometry"
+    ],
+    "correctIndex": 1,
+    "explanation": "Chelates arise when a polydentate ligand binds through multiple donor atoms, forming one or more rings with the metal center.",
+    "concept": "chelate",
+    "difficulty": "easy"
+   },
+   {
+    "id": "96089ddb-bd5",
+    "type": "mcq",
+    "question": "Which observation about many transition metal complexes is explained by d-orbital splitting?",
+    "options": [
+     "Their tendency to form covalent bonds exclusively",
+     "Their widespread color and magnetic behavior",
+     "Their inability to form coordination compounds",
+     "Their insensitivity to ligand identity"
+    ],
+    "correctIndex": 1,
+    "explanation": "Differences in d-orbital energies caused by ligand fields account for colors (electronic transitions) and magnetic properties (electron pairing).",
+    "concept": "properties",
+    "difficulty": "medium"
+   },
+   {
+    "id": "36faa903-611",
+    "type": "tf",
+    "question": "Transition metals above hydrogen in the activity series react with acids to produce hydrogen gas.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 0,
+    "explanation": "Elements above hydrogen in the activity series will reduce H+ in acids to H₂, forming the corresponding metal salts.",
+    "concept": "reactivity",
+    "difficulty": "easy"
+   }
+  ],
+  "video": {
+   "youtubeId": "r4H5XjJPn58",
+   "title": "Complex Ions, Ligands, & Coordination Compounds, Basic Introduction   Chemistry",
+   "channel": "The Organic Chemistry Tutor",
+   "seconds": 822
+  }
+ },
+ "c20": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "What is the functional group of an alcohol?",
+    "answer": "The hydroxyl group, –OH."
+   },
+   {
+    "kind": "choice",
+    "prompt": "Which hydrocarbon family contains one or more carbon–carbon triple bonds?",
+    "options": [
+     "Alkenes",
+     "Alkanes",
+     "Alkynes",
+     "Aromatic hydrocarbons"
+    ],
+    "correctIndex": 2,
+    "feedback": "Alkynes contain one or more C≡C triple bonds."
+   },
+   {
+    "kind": "order",
+    "prompt": "Put these structural features in order from simplest (fewest kinds of atoms/elements) to most chemically diverse (contains more element types):",
+    "items": [
+     "Hydrocarbons (C and H only)",
+     "Alcohols/ethers (contain O)",
+     "Amines/amides (contain N, possibly O)",
+     "Carboxylic acids/esters (contain O and C=O)"
+    ],
+    "feedback": "Introducing heteroatoms (O, N) increases chemical diversity and functionality."
+   },
+   {
+    "kind": "fill",
+    "prompt": "An aldehyde contains the carbonyl functional group written as ___ before the carbonyl and at least one hydrogen attached to the carbonyl carbon.",
+    "before": "An aldehyde contains the carbonyl functional group written as",
+    "after": "before the carbonyl and at least one hydrogen attached to the carbonyl carbon.",
+    "options": [
+     "–CHO",
+     "–CO–",
+     "–OH",
+     "–CO₂H"
+    ],
+    "correctIndex": 0,
+    "feedback": "Aldehydes are represented as –CHO, showing the C=O plus an H on the carbonyl carbon."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match each functional group to the compound family.",
+    "pairs": [
+     [
+      "–OH",
+      "Alcohol"
+     ],
+     [
+      "–R–O–R–",
+      "Ether"
+     ],
+     [
+      "–CO₂H",
+      "Carboxylic acid"
+     ],
+     [
+      "–NH₂",
+      "Amine"
+     ]
+    ],
+    "feedback": "Each functional group defines the compound family and largely determines its properties."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "bd0a2b98-4b4",
+    "type": "mcq",
+    "question": "Which statement best explains why carbon forms such a huge number of organic compounds?",
+    "options": [
+     "Carbon always forms ionic bonds with other elements.",
+     "Carbon can form up to four strong covalent bonds with other carbon atoms.",
+     "Carbon only forms single bonds, allowing many isomers.",
+     "Carbon atoms are always arranged in rings."
+    ],
+    "correctIndex": 1,
+    "explanation": "Carbon’s ability to form up to four strong covalent bonds enables long chains, branches, and rings, producing vast structural variety.",
+    "concept": "carbon bonding",
+    "difficulty": "easy"
+   },
+   {
+    "id": "0e252a05-231",
+    "type": "mcq",
+    "question": "Which formula represents ethanol?",
+    "options": [
+     "CH₃CH₂OH",
+     "CH₃OCH₃",
+     "CH₃CH₂CHO",
+     "C₂H₄"
+    ],
+    "correctIndex": 0,
+    "explanation": "Ethanol is CH₃CH₂OH, an alcohol with a terminal –OH group on a two-carbon chain.",
+    "concept": "alcohols",
+    "difficulty": "easy"
+   },
+   {
+    "id": "dce89eb5-0d0",
+    "type": "mcq",
+    "question": "Which family contains a carbon atom double-bonded to oxygen and bonded to two other carbon groups?",
+    "options": [
+     "Aldehydes",
+     "Ketones",
+     "Esters",
+     "Alcohols"
+    ],
+    "correctIndex": 1,
+    "explanation": "Ketones have a carbonyl (C=O) bonded to two carbon groups; aldehydes have at least one H on the carbonyl carbon.",
+    "concept": "carbonyls",
+    "difficulty": "medium"
+   },
+   {
+    "id": "3d474211-38d",
+    "type": "mcq",
+    "question": "Which functional group defines an ester?",
+    "options": [
+     "–CO₂R",
+     "–CO₂H",
+     "–CHO",
+     "–OH"
+    ],
+    "correctIndex": 0,
+    "explanation": "Esters have the –CO₂R structure: a carbonyl carbon bonded to an –O–R group.",
+    "concept": "esters",
+    "difficulty": "medium"
+   },
+   {
+    "id": "414bff3b-dae",
+    "type": "mcq",
+    "question": "How do alcohols differ from strong bases like NaOH?",
+    "options": [
+     "Alcohols contain OH^(–) ions in solution just like NaOH.",
+     "Alcohols are ionic compounds.",
+     "Alcohols are covalent molecules with an –OH bonded to carbon, not free OH^(–).",
+     "Alcohols always ionize completely in water."
+    ],
+    "correctIndex": 2,
+    "explanation": "Alcohols are covalent; their –OH is covalently bonded to carbon and does not exist as free OH^(–) unless the alcohol is deprotonated.",
+    "concept": "alcohol properties",
+    "difficulty": "medium"
+   },
+   {
+    "id": "4366d66e-f98",
+    "type": "mcq",
+    "question": "Which description fits aromatic hydrocarbons?",
+    "options": [
+     "Open-chain molecules with only single bonds.",
+     "Molecules with C≡C triple bonds.",
+     "Ring structures with delocalized π electron systems.",
+     "Hydrocarbons that contain an –OH group."
+    ],
+    "correctIndex": 2,
+    "explanation": "Aromatic hydrocarbons have ring structures with delocalized π electrons (e.g., benzene).",
+    "concept": "aromatics",
+    "difficulty": "easy"
+   },
+   {
+    "id": "f1e070f2-d8c",
+    "type": "mcq",
+    "question": "An amide is best described as:",
+    "options": [
+     "A nitrogen bonded directly to a carbonyl carbon.",
+     "A nitrogen replacing a carbon inside an aromatic ring.",
+     "A molecule with an –OH attached to a carbonyl carbon.",
+     "A hydrocarbon with a triple bond."
+    ],
+    "correctIndex": 0,
+    "explanation": "Amides have nitrogen bonded to the carbonyl carbon (R–C(=O)–NR₂).",
+    "concept": "amides",
+    "difficulty": "medium"
+   },
+   {
+    "id": "3b17b198-0f1",
+    "type": "tf",
+    "question": "Alkenes are saturated hydrocarbons.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 1,
+    "explanation": "Alkenes contain C=C double bonds and are unsaturated; alkanes are saturated (only single bonds).",
+    "concept": "alkenes",
+    "difficulty": "easy"
+   }
+  ],
+  "video": {
+   "youtubeId": "kniu96bu1y8",
+   "title": "Introduction to Organic Chemistry Gr 12",
+   "channel": "Kevinmathscience",
+   "seconds": 391
+  }
+ },
+ "c21": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "What is the mass defect and what does it represent?",
+    "answer": "The mass defect is the difference between the total mass of separate nucleons and the measured mass of the nucleus; it represents mass converted into the nucleus's binding energy via E = mc²."
+   },
+   {
+    "kind": "choice",
+    "prompt": "Which particle is identical to a ₁¹p when used in nuclear equations?",
+    "options": [
+     "A hydrogen nucleus (₁¹H)",
+     "An alpha particle (₂⁴He)",
+     "A beta particle (₋₁⁰β)",
+     "A neutron (₀¹n)"
+    ],
+    "correctIndex": 0,
+    "feedback": "A proton is the same as a hydrogen nucleus, often written ₁¹p or ₁¹H."
+   },
+   {
+    "kind": "order",
+    "prompt": "Place these steps for writing a balanced nuclear equation in the correct order.",
+    "items": [
+     "Write symbols with mass numbers (A) and atomic numbers (Z) for all species.",
+     "Ensure the total mass numbers (A) on each side are equal.",
+     "Ensure the total atomic numbers (Z) (charges) on each side are equal.",
+     "Identify the type of decay or incoming particle and the product nuclide."
+    ],
+    "feedback": "Balance mass numbers and atomic numbers after identifying the reactants and products."
+   },
+   {
+    "kind": "fill",
+    "prompt": "Identify the missing product: ₂³⁸U → ₉₂²³⁸U undergoes α decay to form ₉₀? + ₂⁴He. Fill the blank with the mass and atomic numbers.",
+    "before": "₂³⁸U →",
+    "after": "+ ₂⁴He",
+    "options": [
+     "²³⁴ ₉₀",
+     "²³⁴ ₉₁",
+     "²³⁶ ₉₀",
+     "²³² ₈₈"
+    ],
+    "correctIndex": 0,
+    "feedback": "Alpha decay reduces A by 4 and Z by 2: 238 − 4 = 234 and 92 − 2 = 90, so ₉₀²³⁴Th."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match each radiation type to its description.",
+    "pairs": [
+     [
+      "Alpha (α)",
+      "Helium nucleus; low penetration, high ionization"
+     ],
+     [
+      "Beta (β)",
+      "High-energy electron; moderate penetration"
+     ],
+     [
+      "Gamma (γ)",
+      "High-energy photon; high penetration"
+     ]
+    ],
+    "feedback": "Alpha particles are heavy and highly ionizing but stop quickly; beta are electrons; gamma are penetrating photons."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "ed54f0cf-6ae",
+    "type": "mcq",
+    "question": "Which statement best explains why nuclei with even numbers of protons or neutrons tend to be more stable?",
+    "options": [
+     "Nucleons pair up, lowering the total energy and increasing binding energy",
+     "Even numbers mean a greater electrical attraction between nucleons",
+     "Even-numbered nuclei always have magic numbers of protons and neutrons",
+     "Even numbers prevent emission of beta particles"
+    ],
+    "correctIndex": 0,
+    "explanation": "Pairing of nucleons (proton–proton, neutron–neutron) increases stability by lowering energy and increasing binding energy.",
+    "concept": "stability",
+    "difficulty": "medium"
+   },
+   {
+    "id": "675080bd-13d",
+    "type": "mcq",
+    "question": "A nucleus has a mass defect. According to E = mc², this defect corresponds to:",
+    "options": [
+     "The binding energy that holds the nucleus together",
+     "Energy released only during chemical reactions",
+     "The kinetic energy of emitted alpha particles",
+     "The electrical potential energy between protons"
+    ],
+    "correctIndex": 0,
+    "explanation": "The missing mass has been converted into binding energy that binds the nucleus, as given by E = mc².",
+    "concept": "mass defect",
+    "difficulty": "easy"
+   },
+   {
+    "id": "7cae289c-d20",
+    "type": "mcq",
+    "question": "Which of the following is a beta particle in nuclear notation?",
+    "options": [
+     "₋₁⁰β",
+     "₀¹n",
+     "₂⁴He",
+     "₁¹p"
+    ],
+    "correctIndex": 0,
+    "explanation": "A beta particle is a high-energy electron often shown as ₋₁⁰β (or ₋₁⁰e).",
+    "concept": "particles",
+    "difficulty": "easy"
+   },
+   {
+    "id": "2227df31-658",
+    "type": "mcq",
+    "question": "Complete this decay: ₈³²₃₇Rb → ? + ₋₁⁰β (beta decay). Which product nuclide is produced?",
+    "options": [
+     "₃₈⁸²Sr",
+     "₃₆⁸²Kr",
+     "₃₇⁸²Rb",
+     "₃₉⁸²Y"
+    ],
+    "correctIndex": 0,
+    "explanation": "Beta decay converts a neutron to a proton, increasing Z by 1 while A stays 82: 37 → 38 gives ₃₈⁸²Sr.",
+    "concept": "beta decay",
+    "difficulty": "medium"
+   },
+   {
+    "id": "45d88aab-8d8",
+    "type": "mcq",
+    "question": "Which quantity is conserved in every nuclear reaction?",
+    "options": [
+     "Total mass number (A) and total atomic number (Z)",
+     "Total number of electrons only",
+     "Total kinetic energy only",
+     "Total chemical energy"
+    ],
+    "correctIndex": 0,
+    "explanation": "Nuclear reactions always conserve total mass number (A) and total atomic number (Z) (charge).",
+    "concept": "conservation",
+    "difficulty": "easy"
+   },
+   {
+    "id": "5f4e9614-d4d",
+    "type": "mcq",
+    "question": "A radionuclide has a half-life. Which statement about radioactive decay is correct?",
+    "options": [
+     "Decay follows first-order kinetics, so the fraction remaining is independent of initial amount",
+     "The half-life shortens as the sample gets smaller",
+     "Half-life depends on the chemical form of the isotope",
+     "All atoms decay at the same instant when the half-life is reached"
+    ],
+    "correctIndex": 0,
+    "explanation": "Radioactive decay is first-order: the half-life is a constant property of the isotope and does not depend on initial amount or chemical form.",
+    "concept": "half-life",
+    "difficulty": "medium"
+   },
+   {
+    "id": "efd360c9-9c8",
+    "type": "mcq",
+    "question": "Which nuclear process is most associated with generating energy in current nuclear power reactors?",
+    "options": [
+     "Fission of heavy nuclei into lighter nuclei",
+     "Fusion of light nuclei into heavier nuclei",
+     "Positron emission from medium-mass nuclides",
+     "Electron capture releasing large amounts of energy"
+    ],
+    "correctIndex": 0,
+    "explanation": "Commercial nuclear reactors use fission of heavy nuclei (e.g., ²³⁵U) to release energy and sustain chain reactions.",
+    "concept": "fission",
+    "difficulty": "easy"
+   },
+   {
+    "id": "35ac1b2f-342",
+    "type": "tf",
+    "question": "Gamma (γ) emission changes the atomic number and mass number of the nucleus.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 1,
+    "explanation": "Gamma emission releases energy (a photon) without changing the nucleus's A or Z; it changes only the energy state.",
+    "concept": "gamma",
+    "difficulty": "easy"
+   }
+  ],
+  "video": {
+   "youtubeId": "KWAsz59F8gA",
+   "title": "Nuclear Chemistry: Crash Course Chemistry #38",
+   "channel": "CrashCourse",
+   "seconds": 598
+  }
+ }
+}

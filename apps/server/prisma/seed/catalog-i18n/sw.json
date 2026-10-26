@@ -1,0 +1,523 @@
+{
+  "categories": {
+    "sciences": {
+      "name": "Sayansi"
+    },
+    "maths": {
+      "name": "Hisabati"
+    },
+    "languages": {
+      "name": "Lugha na Fasihi"
+    },
+    "humanities": {
+      "name": "Sanaa na Jamii"
+    },
+    "business": {
+      "name": "Biashara na Pesa"
+    },
+    "tech": {
+      "name": "Teknolojia na Ujuzi wa Baadaye"
+    }
+  },
+  "subjects": {
+    "mathematics": {
+      "name": "Hisabati",
+      "description": "Namba, aljebra, jiometri na mantiki iliyo nyuma yake.",
+      "topics": [
+        "Aljebra",
+        "Milinganyo ya kwadratiki",
+        "Jiometri",
+        "Takwimu",
+        "Trigonometria",
+        "Kalkulasi"
+      ]
+    },
+    "further-maths": {
+      "name": "Hisabati ya Juu",
+      "description": "Matriki, vekta na utatuzi wa matatizo magumu zaidi.",
+      "topics": [
+        "Matriki",
+        "Vekta",
+        "Namba changamani",
+        "Utofautishaji (differentiation)"
+      ]
+    },
+    "physics": {
+      "name": "Fizikia",
+      "description": "Jinsi nishati, nguvu na ulimwengu vinavyofanya kazi.",
+      "topics": [
+        "Mwendo",
+        "Nguvu",
+        "Mawimbi",
+        "Umeme",
+        "Nishati",
+        "Optiki (mwanga)"
+      ]
+    },
+    "chemistry": {
+      "name": "Kemia",
+      "description": "Atomu, mimenyuko na vitu vinavyounda kila kitu.",
+      "topics": [
+        "Dhana ya mole",
+        "Vifungo vya kemikali",
+        "Kemia ogania",
+        "Elektrolisisi",
+        "Kasi ya mmenyuko"
+      ]
+    },
+    "biology": {
+      "name": "Biolojia",
+      "description": "Viumbe hai, kuanzia seli hadi mifumo-ikolojia mizima.",
+      "topics": [
+        "Biolojia ya seli",
+        "Jenetiki",
+        "Ikolojia",
+        "Lishe",
+        "Fiziolojia ya binadamu"
+      ]
+    },
+    "agric": {
+      "name": "Sayansi ya Kilimo",
+      "description": "Mazao, udongo, wanyama na biashara ya shamba.",
+      "topics": [
+        "Sayansi ya udongo",
+        "Uzalishaji wa mazao",
+        "Ufugaji wa wanyama"
+      ]
+    },
+    "english": {
+      "name": "Lugha ya Kiingereza",
+      "description": "Kusoma, kuandika na kuzungumza kwa kujiamini.",
+      "topics": [
+        "Ufahamu",
+        "Uandishi wa muhtasari",
+        "Uandishi wa insha",
+        "Msamiati na muundo",
+        "Kiingereza cha kuzungumza"
+      ]
+    },
+    "literature": {
+      "name": "Fasihi kwa Kiingereza",
+      "description": "Nathari, ushairi na tamthilia, vimechambuliwa kwa uwazi.",
+      "topics": [
+        "Nathari",
+        "Ushairi",
+        "Tamthilia",
+        "Mbinu za kifasihi"
+      ]
+    },
+    "french": {
+      "name": "Kifaransa",
+      "description": "Kifaransa cha kila siku kwa shule na safari.",
+      "topics": [
+        "Salamu",
+        "Vitenzi",
+        "Sarufi",
+        "Mazungumzo"
+      ]
+    },
+    "government": {
+      "name": "Uraia na Serikali",
+      "description": "Jinsi nchi zinavyoendeshwa, na kwa nini ni muhimu.",
+      "topics": [
+        "Katiba",
+        "Mihimili ya serikali",
+        "Mifumo ya uchaguzi",
+        "Shirikisho la Nigeria"
+      ]
+    },
+    "history": {
+      "name": "Historia",
+      "description": "Hadithi za zamani zilizounda leo.",
+      "topics": [
+        "Afrika kabla ya ukoloni",
+        "Enzi ya ukoloni",
+        "Harakati za uhuru",
+        "Vita vya dunia"
+      ]
+    },
+    "geography": {
+      "name": "Jiografia",
+      "description": "Sayari yetu, watu wake na tabianchi yake.",
+      "topics": [
+        "Usomaji wa ramani",
+        "Tabianchi",
+        "Idadi ya watu",
+        "Maumbo ya ardhi"
+      ]
+    },
+    "economics": {
+      "name": "Uchumi",
+      "description": "Pesa, masoko na jinsi maamuzi yanavyofanywa.",
+      "topics": [
+        "Mahitaji na ugavi",
+        "Unyumbufu",
+        "Mfumuko wa bei",
+        "Pato la taifa",
+        "Miundo ya soko"
+      ]
+    },
+    "accounting": {
+      "name": "Uhasibu wa Fedha",
+      "description": "Vitabu vya hesabu, leja na taarifa za fedha.",
+      "topics": [
+        "Uingizaji pacha (double entry)",
+        "Mizania ya majaribio",
+        "Hesabu za mwisho",
+        "Uchakavu (depreciation)"
+      ]
+    },
+    "entrepreneurship": {
+      "name": "Ujasiriamali",
+      "description": "Kugeuza mawazo kuwa biashara zinazofanikiwa.",
+      "topics": [
+        "Mawazo ya biashara",
+        "Masoko",
+        "Upangaji wa bei",
+        "Kuwasilisha wazo (pitching)"
+      ]
+    },
+    "computer-science": {
+      "name": "Sayansi ya Kompyuta",
+      "description": "Jinsi kompyuta zinavyofikiri, kuanzia mantiki hadi msimbo.",
+      "topics": [
+        "Algorithimu",
+        "Misingi ya uandishi wa programu",
+        "Miundo ya data",
+        "Mitandao"
+      ]
+    },
+    "ai-literacy": {
+      "name": "Ujuzi wa AI",
+      "description": "AI ni nini, inavyofanya kazi na jinsi ya kuitumia vizuri.",
+      "topics": [
+        "AI ni nini",
+        "Ujifunzaji wa mashine",
+        "Kuandika maelekezo (prompting)",
+        "Maadili ya AI"
+      ]
+    }
+  },
+  "lessons": {
+    "l1": {
+      "title": "Jinsi seli zinavyotengeneza nishati",
+      "topic": "Biolojia ya seli",
+      "summary": "Mitokondria hugeuza glukosi na oksijeni kuwa ATP, “sarafu ya nishati” ambayo kila seli hutumia.",
+      "keyPoints": [
+        "Upumuaji hufanyika ndani ya mitokondria",
+        "Glukosi + oksijeni → CO₂ + maji + ATP",
+        "Upumuaji usiotumia oksijeni hutengeneza asidi laktiki kwenye misuli"
+      ]
+    },
+    "l2": {
+      "title": "Jenetiki kwa urahisi: dominanti dhidi ya resesivu",
+      "topic": "Jenetiki",
+      "summary": "Kwa nini unaweza kuwa na macho ya mama yako lakini urefu wa babu yako: aleli, jenotaipu na miraba ya Punnett.",
+      "keyPoints": [
+        "Kila sifa ina aleli mbili",
+        "Aleli dominanti hufunika zile resesivu",
+        "Miraba ya Punnett hutabiri uwiano wa watoto"
+      ]
+    },
+    "l3": {
+      "title": "Minyororo ya chakula na mtiririko wa nishati",
+      "topic": "Ikolojia",
+      "summary": "Nishati husafiri kutoka kwa wazalishaji hadi kwa walaji, na takriban 10% tu hupita hadi kila ngazi inayofuata.",
+      "keyPoints": [
+        "Wazalishaji hutengeneza chakula kwa usanisinuru",
+        "Takriban 10% ya nishati hupanda kila ngazi",
+        "Waozeshaji hurejesha virutubisho"
+      ]
+    },
+    "l4": {
+      "title": "Dhana ya mole kwa dakika 5",
+      "topic": "Dhana ya mole",
+      "summary": "Mole moja ni chembe 6.02 × 10²³. Jifunze kubadilisha kati ya uzito, mole na chembe kwa kujiamini.",
+      "keyPoints": [
+        "1 mole = chembe 6.02 × 10²³",
+        "Mole = uzito ÷ uzito wa molar",
+        "Tumia uwiano kutoka milinganyo iliyosawazishwa"
+      ]
+    },
+    "l5": {
+      "title": "Kifungo cha ioni dhidi ya kifungo cha kovalenti",
+      "topic": "Vifungo vya kemikali",
+      "summary": "Vifungo vya ioni huhamisha elektroni; vifungo vya kovalenti hushirikiana elektroni. Kadi 20 za kukusaidia kukumbuka.",
+      "keyPoints": [
+        "Ioni: metali + isiyo metali, uhamishaji wa elektroni",
+        "Kovalenti: zisizo metali zikishirikiana elektroni",
+        "Michanganyiko ya ioni hupitisha umeme ikiyeyushwa"
+      ]
+    },
+    "l6": {
+      "title": "Kemia ogania: kutaja alkani",
+      "topic": "Kemia ogania",
+      "summary": "Jipime kuhusu utaratibu wa IUPAC wa kutaja alkani, alkeni na alkoholi.",
+      "keyPoints": [
+        "Tafuta mnyororo mrefu zaidi wa kaboni",
+        "Hesabu kuanzia mwisho ulio karibu na tawi",
+        "Viambishi: meth, eth, prop, but…"
+      ]
+    },
+    "l7": {
+      "title": "Sheria tatu za Newton, zimeelezwa",
+      "topic": "Nguvu",
+      "summary": "Inesha, F = ma, na kitendo–mwitikio, kwa mifano ya kila siku kuanzia mabasi ya danfo hadi mpira wa miguu.",
+      "keyPoints": [
+        "Kitu hubaki kimetulia mpaka kitu kingine kikitende",
+        "Nguvu = uzito (mass) × mchapuko",
+        "Kila kitendo kina mwitikio sawa na kinyume"
+      ]
+    },
+    "l8": {
+      "title": "Sheria ya Ohm na saketi rahisi",
+      "topic": "Umeme",
+      "summary": "V = IR. Jinsi volteji, mkondo na ukinzani vinavyohusiana katika saketi za mfululizo na sambamba.",
+      "keyPoints": [
+        "V = I × R",
+        "Mfululizo: ukinzani hujumlishwa",
+        "Sambamba: 1/R = 1/R₁ + 1/R₂"
+      ]
+    },
+    "l9": {
+      "title": "Mawimbi: marudio, urefu wa wimbi, kasi",
+      "topic": "Mawimbi",
+      "summary": "Maswali kumi ya mtindo wa mtihani kuhusu v = fλ.",
+      "keyPoints": [
+        "v = f × λ",
+        "Mawimbi ya kuvuka dhidi ya ya longitudo",
+        "Sauti inahitaji kati (medium) ya kusafiria"
+      ]
+    },
+    "l10": {
+      "title": "Kutatua milinganyo ya kwadratiki",
+      "topic": "Milinganyo ya kwadratiki",
+      "summary": "Kugawanya kwa vipengele, kukamilisha mraba na kanuni. Chagua njia ya haraka zaidi kila mara.",
+      "keyPoints": [
+        "Jaribu kugawanya kwa vipengele kwanza",
+        "x = (−b ± √(b²−4ac)) / 2a",
+        "Kipambanuzi (discriminant) hukuambia kuna mizizi mingapi"
+      ]
+    },
+    "l11": {
+      "title": "Trigonometria: SOH CAH TOA",
+      "topic": "Trigonometria",
+      "summary": "Uwiano wa sine, cosine na tangent pamoja na mbinu za kukumbuka zinazodumu.",
+      "keyPoints": [
+        "sin = kinyume / hipotenusi",
+        "cos = kando / hipotenusi",
+        "tan = kinyume / kando"
+      ]
+    },
+    "l12": {
+      "title": "Takwimu: wastani, wastani wa kati na modi",
+      "topic": "Takwimu",
+      "summary": "Njia tatu za kueleza “katikati” ya data, na wakati wa kutumia kila moja.",
+      "keyPoints": [
+        "Wastani (mean): jumlisha kisha gawanya",
+        "Wastani wa kati (median): thamani ya katikati",
+        "Modi (mode): inayojitokeza mara nyingi zaidi"
+      ]
+    },
+    "l13": {
+      "title": "Utofautishaji kutoka kanuni za msingi",
+      "topic": "Utofautishaji (differentiation)",
+      "summary": "Maana halisi ya derivative, ikijengwa hatua kwa hatua.",
+      "keyPoints": [
+        "Derivative ni kiwango cha mabadiliko",
+        "Kikomo cha (f(x+h) − f(x)) / h",
+        "Kanuni ya kipeo: d/dx xⁿ = nxⁿ⁻¹"
+      ]
+    },
+    "l14": {
+      "title": "Kuandika utangulizi imara wa insha",
+      "topic": "Uandishi wa insha",
+      "summary": "Kivutio, muktadha, tasnifu: utangulizi wa sehemu tatu ambao watahini huupenda.",
+      "keyPoints": [
+        "Anza na kivutio (hook)",
+        "Toa muktadha mfupi",
+        "Malizia kwa tasnifu (thesis) iliyo wazi"
+      ]
+    },
+    "l15": {
+      "title": "Uandishi wa muhtasari unaopata alama",
+      "topic": "Uandishi wa muhtasari",
+      "summary": "Jinsi ya kupata hoja kuu na kuziandika upya kwa maneno yako mwenyewe, ndani ya kikomo cha maneno.",
+      "keyPoints": [
+        "Soma swali mara mbili",
+        "Hoja moja kwa kila sentensi",
+        "Usinakili sentensi nzima kamwe"
+      ]
+    },
+    "l16": {
+      "title": "Mazoezi ya msamiati na muundo",
+      "topic": "Msamiati na muundo",
+      "summary": "Visawe, vinyume na ukamilishaji wa sentensi kwa mtindo wa JAMB.",
+      "keyPoints": [
+        "Soma sentensi nzima kwanza",
+        "Angalia dalili za njeo (tense)",
+        "Ondoa majibu yaliyo wazi kuwa makosa"
+      ]
+    },
+    "l17": {
+      "title": "Things Fall Apart: maudhui",
+      "topic": "Nathari",
+      "summary": "Kiburi, mila na mabadiliko katika riwaya maarufu ya Achebe, kama somo la sauti unaloweza kusikiliza popote.",
+      "keyPoints": [
+        "Hofu ya Okonkwo ya kuonekana dhaifu",
+        "Mila dhidi ya mabadiliko ya kikoloni",
+        "Shujaa wa kitanzia"
+      ]
+    },
+    "l18": {
+      "title": "Mahitaji na ugavi, kwa urahisi",
+      "topic": "Mahitaji na ugavi",
+      "summary": "Kwa nini bei hupanda na kushuka, kwa kutumia soko la nyanya kama mfano.",
+      "keyPoints": [
+        "Mahitaji hupungua bei ikipanda",
+        "Ugavi huongezeka bei ikipanda",
+        "Msawazo ni pale vinapokutana"
+      ]
+    },
+    "l19": {
+      "title": "Mfumuko wa bei: kwa nini bei zinaendelea kupanda",
+      "topic": "Mfumuko wa bei",
+      "summary": "Visababishi, athari na jinsi benki kuu zinavyopambana na mfumuko wa bei.",
+      "keyPoints": [
+        "Mfumuko wa kuvutwa na mahitaji dhidi ya kusukumwa na gharama",
+        "Mfumuko wa bei hupunguza uwezo wa kununua",
+        "Viwango vya riba ndicho chombo kikuu"
+      ]
+    },
+    "l20": {
+      "title": "Utunzaji wa hesabu kwa uingizaji pacha",
+      "topic": "Uingizaji pacha (double entry)",
+      "summary": "Kila muamala una pande mbili. Debiti, krediti na mlinganyo wa uhasibu.",
+      "keyPoints": [
+        "Rasilimali = Madeni + Mtaji",
+        "Kila debiti ina krediti inayolingana",
+        "Tumia akaunti-T kufanya mazoezi"
+      ]
+    },
+    "l21": {
+      "title": "Mihimili ya serikali",
+      "topic": "Mihimili ya serikali",
+      "summary": "Bunge, serikali kuu (utendaji) na mahakama: nani hufanya nini.",
+      "keyPoints": [
+        "Bunge hutunga sheria",
+        "Serikali kuu huzitekeleza",
+        "Mahakama huzitafsiri"
+      ]
+    },
+    "l22": {
+      "title": "Uhuru wa Nigeria katika matukio 10",
+      "topic": "Harakati za uhuru",
+      "summary": "Kuanzia muungano wa 1914 hadi 1 Oktoba 1960.",
+      "keyPoints": [
+        "Muungano wa 1914",
+        "Harakati za kizalendo",
+        "Uhuru tarehe 1 Oktoba 1960"
+      ]
+    },
+    "l23": {
+      "title": "Kusoma ramani za kontua",
+      "topic": "Usomaji wa ramani",
+      "summary": "Kontua, miinuko ya alama na miteremko, imefafanuliwa.",
+      "keyPoints": [
+        "Kontua zilizokaribiana = mteremko mkali",
+        "Nafasi kati ya kontua haibadiliki",
+        "Maumbo ya V huelekeza juu ya mto"
+      ]
+    },
+    "l24": {
+      "title": "Programu yako ya kwanza ya Python",
+      "topic": "Misingi ya uandishi wa programu",
+      "summary": "Vigezo (variables), print na input: andika programu inayokusalimu kwa jina lako.",
+      "keyPoints": [
+        "Vigezo huhifadhi thamani",
+        "print() huonyesha matokeo",
+        "input() husoma kile mtumiaji anachoandika"
+      ]
+    },
+    "l25": {
+      "title": "Algorithimu katika maisha ya kila siku",
+      "topic": "Algorithimu",
+      "summary": "Mapishi, maelekezo ya njia na kupanga orodha yako ya nyimbo: algorithimu ziko kila mahali.",
+      "keyPoints": [
+        "Algorithimu ni mfululizo wa hatua",
+        "Mpangilio ni muhimu",
+        "Algorithimu nzuri hufanya kazi kwa ufanisi"
+      ]
+    },
+    "l26": {
+      "title": "AI ni nini hasa?",
+      "topic": "AI ni nini",
+      "summary": "Jinsi mashine zinavyojifunza ruwaza kutoka kwenye data, na mambo ambayo bado haziwezi kufanya.",
+      "keyPoints": [
+        "AI hujifunza ruwaza kutoka kwa mifano",
+        "Inatabiri, haina “ujuzi” halisi",
+        "Kagua majibu ya AI kila mara"
+      ]
+    },
+    "l27": {
+      "title": "Kuandika maelekezo kama mtaalamu",
+      "topic": "Kuandika maelekezo (prompting)",
+      "summary": "Toa muktadha, weka jukumu na omba muundo maalum: pata majibu bora kutoka kwa AI.",
+      "keyPoints": [
+        "Kuwa mahususi kuhusu lengo",
+        "Toa mifano",
+        "Omba maelezo ya hatua kwa hatua"
+      ]
+    },
+    "l28": {
+      "title": "Kupanga bei ya bidhaa yako ya kwanza",
+      "topic": "Upangaji wa bei",
+      "summary": "Bei ya gharama-pamoja-faida, bei kulingana na thamani na bei kulingana na washindani kwa wajasiriamali vijana.",
+      "keyPoints": [
+        "Jua gharama zako zote",
+        "Panga bei kwa thamani, si gharama tu",
+        "Jaribu kisha rekebisha"
+      ]
+    },
+    "l29": {
+      "title": "Salamu na kujitambulisha kwa Kifaransa",
+      "topic": "Salamu",
+      "summary": "Bonjour, ça va? Zungumza sentensi zako za kwanza za Kifaransa kwa kujiamini.",
+      "keyPoints": [
+        "Bonjour / Bonsoir",
+        "Je m’appelle…",
+        "Comment ça va?"
+      ]
+    },
+    "l30": {
+      "title": "Elektrolisisi hatua kwa hatua",
+      "topic": "Elektrolisisi",
+      "summary": "Kinachotokea kwenye anodi na kathodi, na jinsi ya kutabiri bidhaa zitakazotokea.",
+      "keyPoints": [
+        "Kationi huenda kwenye kathodi",
+        "Anioni huenda kwenye anodi",
+        "Uoksidishaji kwenye anodi, upunguzaji kwenye kathodi"
+      ]
+    },
+    "l31": {
+      "title": "Moyo wa binadamu na mzunguko wa damu",
+      "topic": "Fiziolojia ya binadamu",
+      "summary": "Maswali kumi na mawili kuhusu moyo, mishipa ya damu na mzunguko pacha wa damu.",
+      "keyPoints": [
+        "Vyumba vinne",
+        "Ateri hubeba damu kutoka kwenye moyo",
+        "Mzunguko pacha kwa mamalia"
+      ]
+    },
+    "l32": {
+      "title": "Jiometri: pembe katika duara",
+      "topic": "Jiometri",
+      "summary": "Nadharia za duara zenye michoro unayoweza kuifuata kwa urahisi.",
+      "keyPoints": [
+        "Pembe kwenye kitovu = 2 × pembe kwenye mzingo",
+        "Pembe katika sehemu moja ya duara ni sawa",
+        "Pembe kinyume za pembenne-duara hujumlika kuwa 180°"
+      ]
+    }
+  }
+}

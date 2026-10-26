@@ -1,0 +1,2869 @@
+{
+ "c1": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "What is the simplest definition of an entrepreneur?",
+    "answer": "Someone who starts an entrepreneurial venture to create something new that solves a problem."
+   },
+   {
+    "kind": "choice",
+    "prompt": "Which of these is NOT described in the chapter as a common entrepreneurial career option?",
+    "options": [
+     "Small business ownership",
+     "Franchising",
+     "Long-term public service employee with no side ventures",
+     "Nonprofit venture founder"
+    ],
+    "correctIndex": 2,
+    "feedback": "The chapter highlights small business ownership, franchising, and nonprofit ventures as entrepreneurial options; remaining solely a public service employee with no side ventures is not presented as an entrepreneurial option."
+   },
+   {
+    "kind": "order",
+    "prompt": "Put these stages of creating an entrepreneurial vision in the CORRECT sequence as described in the chapter.",
+    "items": [
+     "Begin with an image or idea of something you are passionate about",
+     "Use brainstorming or investigative methods to define the vision",
+     "Write concrete goals to achieve the vision",
+     "Recognize the vision may change as the venture develops"
+    ],
+    "feedback": "The chapter describes starting with an initial idea, using creative or investigative methods to shape a vision, writing goals, and being open to the vision evolving."
+   },
+   {
+    "kind": "fill",
+    "prompt": "Fill the blank: Conducting the necessary research and investigation to make informed decisions that minimize risk is called ________.",
+    "before": "Conducting the necessary research and investigation to make informed decisions that minimize risk is called",
+    "after": ".",
+    "options": [
+     "due diligence",
+     "franchising",
+     "divergent thinking"
+    ],
+    "correctIndex": 0,
+    "feedback": "Due diligence is the process of researching and investigating to reduce uncertainty and make more informed decisions."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match each entrepreneurial term with its description from the chapter.",
+    "pairs": [
+     [
+      "Lifestyle venture",
+      "A business that supports a desired way of living rather than rapid growth or sale"
+     ],
+     [
+      "Serial entrepreneur",
+      "Someone who starts multiple ventures over time"
+     ],
+     [
+      "Disruptive technology",
+      "Applying existing technology in new ways that create opportunities and challenges"
+     ]
+    ],
+    "feedback": "These pairings reflect definitions given in the chapter."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "97641dd8-4d1",
+    "type": "mcq",
+    "question": "Which factor is listed in the chapter as driving recent growth in entrepreneurship?",
+    "options": [
+     "Universal guaranteed income",
+     "Employment instability",
+     "Global elimination of regulations",
+     "Decrease in retired population"
+    ],
+    "correctIndex": 1,
+    "explanation": "The chapter cites employment instability as one of several factors encouraging people to pursue entrepreneurship.",
+    "concept": "Drivers",
+    "difficulty": "easy"
+   },
+   {
+    "id": "524d29db-038",
+    "type": "mcq",
+    "question": "According to the chapter, an entrepreneurial venture can be:",
+    "options": [
+     "Only for profit",
+     "Only nonprofit",
+     "Either for profit or nonprofit depending on the problem it intends to solve",
+     "Restricted to tech industries"
+    ],
+    "correctIndex": 2,
+    "explanation": "The chapter explains ventures may be for profit or not-for-profit, based on the problem being addressed.",
+    "concept": "Venture type",
+    "difficulty": "easy"
+   },
+   {
+    "id": "428c71f1-bad",
+    "type": "mcq",
+    "question": "What attitude or trait is described as part of an 'entrepreneurial spirit'?",
+    "options": [
+     "Passive conformity",
+     "Persistent curiosity",
+     "Avoiding all risks",
+     "Preference for lifelong steady employment"
+    ],
+    "correctIndex": 1,
+    "explanation": "The chapter lists traits like passion, curiosity, boldness, and persistence as part of entrepreneurial spirit.",
+    "concept": "Mindset",
+    "difficulty": "medium"
+   },
+   {
+    "id": "010463bd-cad",
+    "type": "mcq",
+    "question": "Which approach is suggested in the chapter to reduce personal financial risk when starting a venture?",
+    "options": [
+     "Quitting your job immediately without a plan",
+     "Continuing full-time employment while working on the venture on the side",
+     "Refusing to do market research",
+     "Only seeking friends' opinions"
+    ],
+    "correctIndex": 1,
+    "explanation": "The chapter notes many entrepreneurs stay in their current job while developing their idea to mitigate financial risk.",
+    "concept": "Risk",
+    "difficulty": "easy"
+   },
+   {
+    "id": "8d2c609f-0df",
+    "type": "mcq",
+    "question": "Which country is mentioned as a leader in entrepreneurial innovation due to cultural factors?",
+    "options": [
+     "Japan",
+     "United States",
+     "Brazil",
+     "Italy"
+    ],
+    "correctIndex": 1,
+    "explanation": "The chapter identifies the United States as a leader in entrepreneurial innovation because of its culture and institutions.",
+    "concept": "Global",
+    "difficulty": "medium"
+   },
+   {
+    "id": "32ef9e42-d1d",
+    "type": "mcq",
+    "question": "Brainstorming and divergent thinking are used in the chapter primarily to:",
+    "options": [
+     "Write financial statements",
+     "Develop an entrepreneurial vision",
+     "Enforce regulations",
+     "Hire franchisees"
+    ],
+    "correctIndex": 1,
+    "explanation": "These creative methods are described as ways to define or expand an entrepreneurial vision.",
+    "concept": "Vision",
+    "difficulty": "medium"
+   },
+   {
+    "id": "caba27e9-38c",
+    "type": "mcq",
+    "question": "Which of these is an example of entrepreneurs finding inspiration, according to the chapter?",
+    "options": [
+     "Ignoring social issues to focus only on profits",
+     "Addressing environmental problems with new products or services",
+     "Waiting for others to solve all problems",
+     "Copying a business model without change"
+    ],
+    "correctIndex": 1,
+    "explanation": "The chapter states entrepreneurs often draw inspiration from social, environmental, and economic issues.",
+    "concept": "Inspiration",
+    "difficulty": "easy"
+   },
+   {
+    "id": "efd8b05c-c53",
+    "type": "tf",
+    "question": "Being an entrepreneur always requires quitting a steady job immediately.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 1,
+    "explanation": "False — the chapter explains entrepreneurs can remain employed while developing their venture to lower financial risk.",
+    "concept": "Risk",
+    "difficulty": "hard"
+   }
+  ],
+  "video": {
+   "youtubeId": "aozlwC3XwfY",
+   "title": "Who Even Is An Entrepreneur?: Crash Course Business - Entrepreneurship #1",
+   "channel": "CrashCourse",
+   "seconds": 782,
+   "checkedAt": 1792840541992
+  }
+ },
+ "c2": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "What is a situational opportunity in entrepreneurship?",
+    "answer": "A situational opportunity is an entrepreneurial opening that becomes available because of specific circumstances such as where you work, family obligations, a recent job change, an idea or invention, or other life events that create a chance to start a venture."
+   },
+   {
+    "kind": "choice",
+    "prompt": "Which statement best describes an independent contractor?",
+    "options": [
+     "An employee paid through payroll with employer-provided benefits",
+     "A person who provides work similar to an employee but pays their own taxes and benefits",
+     "A volunteer who works without pay for training experience",
+     "A partner who shares ownership and profits of a business"
+    ],
+    "correctIndex": 1,
+    "feedback": "Independent contractors perform work for a business but are not on payroll; they handle their own taxes and benefits."
+   },
+   {
+    "kind": "order",
+    "prompt": "Put these stages of the entrepreneurial life cycle in the CORRECT general sequence (use the chapter's nine-stage idea as a flexible process):",
+    "items": [
+     "Ideation and opportunity recognition",
+     "Launching the venture",
+     "Harvesting or exit"
+    ],
+    "feedback": "The process begins with ideation, moves to launching the venture, and may conclude with harvesting or exiting; stages are flexible and iterative."
+   },
+   {
+    "kind": "fill",
+    "prompt": "Many entrepreneurs launch ventures using their own ______, _______, or ______ rather than outside funding.",
+    "before": "Many entrepreneurs launch ventures using their own",
+    "after": "rather than outside funding.",
+    "options": [
+     "time, savings, connections",
+     "only loans, patents, employees",
+     "government grants, donations, subsidies",
+     "brand names, trademarks, competitors"
+    ],
+    "correctIndex": 0,
+    "feedback": "Personal capital, labor (time), and connections are common resources used to start ventures."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match the framework to its focus.",
+    "pairs": [
+     [
+      "Design thinking",
+      "Solving problems from the customer's perspective"
+     ],
+     [
+      "Action plan",
+      "Outlines steps and tools to reach entrepreneurial goals"
+     ],
+     [
+      "Framework selection",
+      "Chooses an approach that best fits the venture type"
+     ]
+    ],
+    "feedback": "Design thinking centers on customer needs; action plans list steps; framework selection matches methods to venture requirements."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "b5110d44-dcd",
+    "type": "mcq",
+    "question": "Which age group accounts for most new startup activity according to the chapter?",
+    "options": [
+     "Under 25 years old",
+     "25–30 years old",
+     "Over 40 years old",
+     "30–40 years old"
+    ],
+    "correctIndex": 2,
+    "explanation": "The chapter states that people over 40 account for most new startup activity.",
+    "concept": "Founders' age",
+    "difficulty": "easy"
+   },
+   {
+    "id": "a9f321bd-0dc",
+    "type": "mcq",
+    "question": "What effect does a strong economy and job market have on entrepreneurship?",
+    "options": [
+     "Increases risk and reduces new startups",
+     "Decreases the safety net for entrepreneurs",
+     "Decreases risks and encourages more new startups",
+     "Eliminates the need for startup funding"
+    ],
+    "correctIndex": 2,
+    "explanation": "A strong economy provides a safety net, lowering risk and encouraging more startups.",
+    "concept": "Economic context",
+    "difficulty": "medium"
+   },
+   {
+    "id": "435c32f5-0be",
+    "type": "mcq",
+    "question": "Which of the following best describes the entrepreneurial process presented in the chapter?",
+    "options": [
+     "A fixed checklist that must be followed exactly",
+     "A fluid guideline that adjusts to market needs",
+     "A single-step plan that ends after launch",
+     "A legal requirement for starting a business"
+    ],
+    "correctIndex": 1,
+    "explanation": "The chapter describes the entrepreneurial process as a flexible, fluid guideline that adapts to market needs.",
+    "concept": "Process nature",
+    "difficulty": "easy"
+   },
+   {
+    "id": "55acf593-66f",
+    "type": "mcq",
+    "question": "Which historical example is mentioned to illustrate early entrepreneurship in the U.S.?",
+    "options": [
+     "Silicon Valley software startups",
+     "Pembina Band of Chippewa pemmican trade",
+     "Colonial textile factories",
+     "19th-century railroad tycoons"
+    ],
+    "correctIndex": 1,
+    "explanation": "The chapter mentions the Pembina Band of Chippewa trading pemmican as an early example.",
+    "concept": "History",
+    "difficulty": "medium"
+   },
+   {
+    "id": "a94484ce-2ec",
+    "type": "mcq",
+    "question": "What is one core concern of entrepreneurship highlighted in the chapter?",
+    "options": [
+     "Choosing a corporate career path",
+     "How to fund a venture and find necessary resources",
+     "Complying with unrelated industry regulations",
+     "Avoiding all competition"
+    ],
+    "correctIndex": 1,
+    "explanation": "Funding and finding resources is a core concern when planning a venture.",
+    "concept": "Funding",
+    "difficulty": "easy"
+   },
+   {
+    "id": "4d193432-98f",
+    "type": "mcq",
+    "question": "Design thinking primarily approaches venture creation from whose perspective?",
+    "options": [
+     "The competitor's perspective",
+     "The investor's perspective",
+     "The customer's perspective",
+     "The government regulator's perspective"
+    ],
+    "correctIndex": 2,
+    "explanation": "Design thinking focuses on solving problems from the customer's perspective.",
+    "concept": "Design thinking",
+    "difficulty": "easy"
+   },
+   {
+    "id": "98860584-ad4",
+    "type": "tf",
+    "question": "A situational opportunity depends partly on where you work and your family obligations.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 0,
+    "explanation": "The chapter defines situational opportunities as depending on factors like work location and family obligations.",
+    "concept": "Opportunities",
+    "difficulty": "easy"
+   },
+   {
+    "id": "2143652f-94b",
+    "type": "mcq",
+    "question": "Which statement about the entrepreneurial life cycle is consistent with the chapter?",
+    "options": [
+     "It is always linear and never repeated",
+     "It can lead to harvesting and then begin again with a new idea",
+     "It ends definitively after the first sale",
+     "It requires government approval to continue"
+    ],
+    "correctIndex": 1,
+    "explanation": "The chapter notes harvesting the venture can lead to starting the process again with a new idea.",
+    "concept": "Life cycle",
+    "difficulty": "medium"
+   }
+  ],
+  "video": {
+   "youtubeId": "lJjILQu2xM8",
+   "title": "How to be an Entrepreneur",
+   "channel": "The School of Life",
+   "seconds": 205,
+   "checkedAt": 1792840543811
+  }
+ },
+ "c3": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "Define \"stakeholder.\"",
+    "answer": "Any person, group, or organization that has an interest in, or is affected by, a company’s actions (employees, customers, suppliers, community, shareholders, etc.)."
+   },
+   {
+    "kind": "choice",
+    "prompt": "Which statement best distinguishes ethics from law in a business context?",
+    "options": [
+     "Ethics are voluntary standards guiding right and wrong; laws are mandatory rules enforced by government.",
+     "Laws are optional behaviors companies choose; ethics are legally enforced.",
+     "Ethics and laws always require the same behavior from businesses.",
+     "Laws are set by a company’s board; ethics are set by courts."
+    ],
+    "correctIndex": 0,
+    "feedback": "Ethics are voluntary moral standards, while laws are mandatory rules enforced by government."
+   },
+   {
+    "kind": "order",
+    "prompt": "Put these steps in the recommended order for resolving an ethical/legal dilemma in a startup.",
+    "items": [
+     "Identify and describe the dilemma clearly",
+     "Gather relevant facts and applicable laws/policies",
+     "Consider affected stakeholders and possible consequences",
+     "Choose and implement the ethically defensible action"
+    ],
+    "feedback": "A careful process moves from identification and facts to stakeholder analysis and then action."
+   },
+   {
+    "kind": "fill",
+    "prompt": "Complete the sentence: A company that becomes a B-corporation has undergone an outside ______ that verifies its social and environmental performance.",
+    "before": "A company that becomes a B-corporation has undergone an outside",
+    "after": "that verifies its social and environmental performance.",
+    "options": [
+     "audit",
+     "inspection",
+     "merger",
+     "registration"
+    ],
+    "correctIndex": 0,
+    "feedback": "B-corp certification requires an external audit of social and environmental practices."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match the term (left) with its best definition (right).",
+    "pairs": [
+     [
+      "Shareholder primacy",
+      "Focus on maximizing returns for owners/stockholders only"
+     ],
+     [
+      "Corporate social responsibility (CSR)",
+      "Business practice considering social and environmental obligations beyond legal compliance"
+     ],
+     [
+      "Social entrepreneurship",
+      "Ventures that pursue social or environmental missions while operating commercially"
+     ],
+     [
+      "Reactive ethics management",
+      "Responding to ethical problems after they occur"
+     ]
+    ],
+    "feedback": "Terms contrast a shareholder-only view with stakeholder-focused CSR and proactive vs reactive approaches."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "fe9554f7-f3c",
+    "type": "mcq",
+    "question": "Which of the following best describes a stakeholder?",
+    "options": [
+     "Only people who own company stock",
+     "Any group affected by the company’s actions",
+     "Only company employees",
+     "Only government regulators"
+    ],
+    "correctIndex": 1,
+    "explanation": "Stakeholders include all parties affected by the business (employees, customers, suppliers, community, shareholders, etc.).",
+    "concept": "Stakeholder",
+    "difficulty": "easy"
+   },
+   {
+    "id": "0f105308-3c1",
+    "type": "mcq",
+    "question": "Why might ethical conduct differ from legal conduct in entrepreneurship?",
+    "options": [
+     "Ethics are personal and voluntary while laws are mandatory and enforceable",
+     "Laws never address business behavior",
+     "Businesses are exempt from laws when ethical",
+     "Ethical conduct is always less strict than laws"
+    ],
+    "correctIndex": 0,
+    "explanation": "Ethics are voluntary moral choices and may go beyond or differ from what law requires; laws are mandatory rules enforced by authorities.",
+    "concept": "Ethics vs Law",
+    "difficulty": "easy"
+   },
+   {
+    "id": "c6b05777-fec",
+    "type": "mcq",
+    "question": "What was the historical implication of the Dodge brothers vs. Ford case often cited in shareholder primacy discussions?",
+    "options": [
+     "It supported the idea that maximizing shareholder profit is the primary corporate duty",
+     "It created B-corporation certification",
+     "It prohibited shareholders from suing CEOs",
+     "It made CSR a legal requirement"
+    ],
+    "correctIndex": 0,
+    "explanation": "The case established a precedent emphasizing shareholder profit as a primary corporate purpose, underpinning shareholder primacy.",
+    "concept": "Shareholder primacy",
+    "difficulty": "medium"
+   },
+   {
+    "id": "a25e425d-b47",
+    "type": "mcq",
+    "question": "Which feature distinguishes a B-corporation from C-corps and S-corps?",
+    "options": [
+     "External audit of social/environmental performance",
+     "Different federal tax rates",
+     "Being a nonprofit organization",
+     "Exemption from employment laws"
+    ],
+    "correctIndex": 0,
+    "explanation": "B-corp status requires passing an external assessment showing social and environmental responsibility; C/S corps are tax classifications.",
+    "concept": "B-corporation",
+    "difficulty": "medium"
+   },
+   {
+    "id": "999686ec-019",
+    "type": "mcq",
+    "question": "Corporate social responsibility (CSR) primarily requires a company to:",
+    "options": [
+     "Consider its social and environmental obligations beyond legal compliance",
+     "Maximize shareholder wealth at all costs",
+     "Avoid paying taxes",
+     "Merge with nonprofits"
+    ],
+    "correctIndex": 0,
+    "explanation": "CSR is about viewing the company within a broader social context and acting beyond mere legal compliance toward social and environmental responsibilities.",
+    "concept": "CSR",
+    "difficulty": "easy"
+   },
+   {
+    "id": "50ec6e17-bc9",
+    "type": "mcq",
+    "question": "Which approach is proactive ethics management?",
+    "options": [
+     "Embedding ethical training and policies before problems arise",
+     "Waiting for a scandal and then creating rules",
+     "Firing employees after an incident without policy changes",
+     "Ignoring stakeholder concerns until lawsuits occur"
+    ],
+    "correctIndex": 0,
+    "explanation": "Proactive management implements policies, training, and culture to prevent ethical problems rather than just reacting.",
+    "concept": "Proactive ethics",
+    "difficulty": "medium"
+   },
+   {
+    "id": "20b12683-546",
+    "type": "tf",
+    "question": "Becoming a B-corporation is the same as choosing a C-corp for tax purposes.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 1,
+    "explanation": "B-corp is a certification of social/environmental performance, not a tax classification like C-corp or S-corp.",
+    "concept": "B-corp vs tax",
+    "difficulty": "easy"
+   },
+   {
+    "id": "25b02c39-7e9",
+    "type": "mcq",
+    "question": "Which leadership change often becomes necessary as startups grow to maintain an ethical workplace?",
+    "options": [
+     "Shifting from purely charismatic, competitive leadership toward more humanistic, accountable styles",
+     "Increasing harshness to maintain discipline",
+     "Removing all employee input to speed decisions",
+     "Focusing only on short-term profits"
+    ],
+    "correctIndex": 0,
+    "explanation": "Mature firms often need leaders who are accountable and humanistic to retain and motivate employees and sustain ethical culture.",
+    "concept": "Leadership",
+    "difficulty": "medium"
+   }
+  ],
+  "video": {
+   "youtubeId": "Z5KZhm19EO0",
+   "title": "The social responsibility of business | Alex Edmans | TEDxLondonBusinessSchool",
+   "channel": "TEDx Talks",
+   "seconds": 1046,
+   "checkedAt": 1792840545283
+  }
+ },
+ "c4": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "Human-centered design begins with which key activity?",
+    "answer": "Empathizing with the people experiencing a problem or pain point."
+   },
+   {
+    "kind": "choice",
+    "prompt": "Which step is NOT one of the five parts of the Stanford-style design thinking practice described?",
+    "options": [
+     "Accessing and expressing empathy",
+     "Defining the problem",
+     "Prosecuting patent claims",
+     "Ideating solutions (brainstorming)"
+    ],
+    "correctIndex": 2,
+    "feedback": "Prosecuting patent claims is part of later legal steps but not one of the five Stanford design-thinking parts described."
+   },
+   {
+    "kind": "order",
+    "prompt": "Put these five stages of creativity in the sequence presented in the chapter.",
+    "items": [
+     "Preparation",
+     "Incubation",
+     "Insight",
+     "Evaluation",
+     "Elaboration"
+    ],
+    "feedback": "The sequence is Preparation → Incubation → Insight → Evaluation → Elaboration."
+   },
+   {
+    "kind": "fill",
+    "prompt": "Complete the sentence with the best option: Innovations that add value to an existing product or service are called ____.",
+    "before": "Innovations that add value to an existing product or service are called",
+    "after": ".",
+    "options": [
+     "creations",
+     "inventions",
+     "innovations",
+     "artifacts"
+    ],
+    "correctIndex": 2,
+    "feedback": "Innovation applies something new to an existing product or service to add value; invention implies a truly novel product or process."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match the term on the left with its best short definition on the right.",
+    "pairs": [
+     [
+      "Brainstorming",
+      "Generating ideas in an environment free of judgment"
+     ],
+     [
+      "Six Thinking Hats",
+      "Assigning limited roles to guide group ideation"
+     ],
+     [
+      "DICEE",
+      "A set of qualities: deep, indulgent, complete, elegant, emotive"
+     ]
+    ],
+    "feedback": "Each term aligns with the provided concise definition from the chapter."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "e49fa42a-43e",
+    "type": "mcq",
+    "question": "Which practice emphasizes returning to empathy repeatedly during the process?",
+    "options": [
+     "Six Thinking Hats",
+     "Human-centered design",
+     "Sourcify.com's five steps",
+     "Statement starter method"
+    ],
+    "correctIndex": 1,
+    "explanation": "Human-centered design begins with empathizing and repeatedly returns to empathy throughout problem definition, prototyping, and testing.",
+    "concept": "human-centered",
+    "difficulty": "easy"
+   },
+   {
+    "id": "c2ea5ccc-d4b",
+    "type": "mcq",
+    "question": "Which description best fits an invention as distinguished from innovation?",
+    "options": [
+     "A small improvement to an existing product",
+     "A marketing strategy for a product",
+     "A truly novel product, service, or process representing a leap",
+     "A staged testing protocol for user feedback"
+    ],
+    "correctIndex": 2,
+    "explanation": "Inventions are truly novel and represent a significant leap beyond prior products or processes.",
+    "concept": "invention",
+    "difficulty": "medium"
+   },
+   {
+    "id": "95985438-210",
+    "type": "mcq",
+    "question": "The Six Thinking Hats method helps teams by:",
+    "options": [
+     "Focusing only on positive feedback",
+     "Limiting roles individuals play to direct different thinking modes",
+     "Replacing human-centered design",
+     "Providing a patent research checklist"
+    ],
+    "correctIndex": 1,
+    "explanation": "Six Thinking Hats assigns different roles or modes of thought to participants to structure ideation and explore multiple perspectives.",
+    "concept": "Six Hats",
+    "difficulty": "easy"
+   },
+   {
+    "id": "1734dcf5-46a",
+    "type": "mcq",
+    "question": "Which of these is NOT part of Sourcify.com's five steps for developing an invention?",
+    "options": [
+     "Educate yourself",
+     "Conduct market research",
+     "Prosecute a trademark",
+     "Develop a prototype"
+    ],
+    "correctIndex": 2,
+    "explanation": "Sourcify's listed steps include educating yourself, staying organized, market and patent research, and prototyping; prosecuting a trademark was not listed.",
+    "concept": "Sourcify",
+    "difficulty": "medium"
+   },
+   {
+    "id": "cf3729d7-53b",
+    "type": "mcq",
+    "question": "Which phrase best captures the base of the innovation pyramid?",
+    "options": [
+     "Directing the future",
+     "Continuous improvement",
+     "Problem solving",
+     "Prevention"
+    ],
+    "correctIndex": 2,
+    "explanation": "The innovation pyramid begins with problem solving at its base, then moves up to prevention, continuous improvement, and directing the future.",
+    "concept": "innovation pyramid",
+    "difficulty": "easy"
+   },
+   {
+    "id": "e4b8943f-04c",
+    "type": "mcq",
+    "question": "What does the DICEE acronym describe about products?",
+    "options": [
+     "Durable, inexpensive, compatible, efficient, expandable",
+     "Deep, indulgent, complete, elegant, emotive",
+     "Design, implementation, cost, evaluation, engineering",
+     "Digital, integrated, customizable, easy, environmental"
+    ],
+    "correctIndex": 1,
+    "explanation": "DICEE stands for deep, indulgent, complete, elegant, and emotive—qualities of innovative products mentioned in the chapter.",
+    "concept": "DICEE",
+    "difficulty": "medium"
+   },
+   {
+    "id": "29c9a9de-e74",
+    "type": "mcq",
+    "question": "Which approach is most associated with engaging potential consumers continuously to bridge the diffusion chasm?",
+    "options": [
+     "Black box innovation",
+     "Iterative innovation",
+     "Statement starter method",
+     "Artistic creativity"
+    ],
+    "correctIndex": 1,
+    "explanation": "Iterative innovators engage continually with consumers to develop the product and consumer base and bridge the diffusion chasm.",
+    "concept": "iterative",
+    "difficulty": "hard"
+   },
+   {
+    "id": "94743abf-ef7",
+    "type": "tf",
+    "question": "Brainstorming requires an environment free of judgment to effectively generate ideas.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 0,
+    "explanation": "The chapter defines brainstorming as generating ideas in an environment free of judgment or dissension to encourage creative idea generation.",
+    "concept": "brainstorm",
+    "difficulty": "easy"
+   }
+  ],
+  "video": {
+   "youtubeId": "kg8WjcC2KTw",
+   "title": "💡 What's the difference between invention and innovation?",
+   "channel": "EconClips",
+   "seconds": 618,
+   "checkedAt": 1792840546730
+  }
+ },
+ "c5": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "Define 'entrepreneurial opportunity' in one sentence.",
+    "answer": "An entrepreneurial opportunity exists when there is sufficient consumer demand and it is feasible to bring a product or service to market."
+   },
+   {
+    "kind": "choice",
+    "prompt": "According to Schumpeter, which phrase best describes the process by which innovation both creates new businesses and destroys established ones?",
+    "options": [
+     "Creative destruction",
+     "Market saturation",
+     "Incremental improvement",
+     "Cost leadership"
+    ],
+    "correctIndex": 0,
+    "feedback": "Schumpeter called disruptive innovation that creates new value while displacing older firms 'creative destruction.'"
+   },
+   {
+    "kind": "order",
+    "prompt": "Put these steps for researching a potential business opportunity in a useful order.",
+    "items": [
+     "Gather secondary data (e.g., US Census, industry reports)",
+     "Conduct primary research with target customers (surveys, interviews, focus groups)",
+     "Analyze market size, demand, margins and resources",
+     "Perform competitive analysis (SWOT, PEST, three circles)"
+    ],
+    "feedback": "Secondary and primary research inform analysis, which is refined by competitive tools."
+   },
+   {
+    "kind": "fill",
+    "prompt": "Choose the best option to complete the sentence: Small companies typically cannot compete with Walmart on ______, but can compete on ______.",
+    "before": "Small companies typically cannot compete on",
+    "after": ", but they may succeed by focusing on other variables like",
+    "options": [
+     "price; better service or unique experience",
+     "marketing; inventory size",
+     "location; economy of scale",
+     "technology; supplier contracts"
+    ],
+    "correctIndex": 0,
+    "feedback": "Large firms gain advantages from volume and internal efficiencies, so small firms often differentiate on service, quality, or experience."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match each research source with what it provides.",
+    "pairs": [
+     [
+      "US Census data",
+      "Population and regional economic statistics"
+     ],
+     [
+      "Surveys and focus groups",
+      "Direct feedback from target customers"
+     ],
+     [
+      "Social media research",
+      "Time- and cost-efficient insights into competitor activity"
+     ]
+    ],
+    "feedback": "Each source gives different kinds of market and competitor information useful for viability research."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "a1b39f78-99e",
+    "type": "mcq",
+    "question": "Which two conditions must be present for an entrepreneurial opportunity, according to the chapter?",
+    "options": [
+     "Consumer demand and feasibility to bring the product/service to market",
+     "Government subsidies and a large factory",
+     "A patented invention and celebrity endorsement",
+     "Low competition and unlimited funding"
+    ],
+    "correctIndex": 0,
+    "explanation": "An opportunity exists when customer demand aligns with the feasibility of delivering the offering.",
+    "concept": "Opportunity",
+    "difficulty": "easy"
+   },
+   {
+    "id": "4136914c-7a7",
+    "type": "mcq",
+    "question": "Schumpeter's concept of 'creative destruction' implies that innovation often:",
+    "options": [
+     "Preserves all existing companies unchanged",
+     "Disrupts established firms while creating new value",
+     "Only improves product packaging",
+     "Prevents technological change"
+    ],
+    "correctIndex": 1,
+    "explanation": "Creative destruction describes disruptive innovation that can destroy old firms and enable new ones.",
+    "concept": "Schumpeter",
+    "difficulty": "easy"
+   },
+   {
+    "id": "c2a924b5-85f",
+    "type": "mcq",
+    "question": "Which is NOT one of the types of opportunities Schumpeter emphasized?",
+    "options": [
+     "Opening a new source of supply or new market outlet",
+     "Producing an old commodity in a new way",
+     "Changing consumer habits through forced regulation",
+     "Exploiting a new invention or technological possibility"
+    ],
+    "correctIndex": 2,
+    "explanation": "Schumpeter focused on innovations in supply, demand, and technology use—not on forced regulation as a primary category.",
+    "concept": "Schumpeter",
+    "difficulty": "medium"
+   },
+   {
+    "id": "89f05c1b-e8b",
+    "type": "mcq",
+    "question": "Which research source is listed as a recommended starting point for demographic and economic data?",
+    "options": [
+     "US Census data",
+     "Private blogs",
+     "Only competitor websites",
+     "Personal opinion"
+    ],
+    "correctIndex": 0,
+    "explanation": "The US Census provides demographic and regional economic statistics useful for market research.",
+    "concept": "Research",
+    "difficulty": "easy"
+   },
+   {
+    "id": "8474d204-6ba",
+    "type": "mcq",
+    "question": "Primary research methods mentioned in the chapter include:",
+    "options": [
+     "Surveys, focus groups, and in-depth interviews",
+     "Patent filings and manufacturing blueprints",
+     "Only secondary data analysis",
+     "Hiring a celebrity for promotion"
+    ],
+    "correctIndex": 0,
+    "explanation": "Primary research involves direct methods like surveys, focus groups, and interviews with target customers.",
+    "concept": "Research",
+    "difficulty": "easy"
+   },
+   {
+    "id": "c58383ce-6ba",
+    "type": "mcq",
+    "question": "A SWOT analysis is used primarily to:",
+    "options": [
+     "Identify strengths, weaknesses, opportunities, and threats in a competitive analysis",
+     "Calculate tax liabilities",
+     "Design a product prototype",
+     "Set retail prices automatically"
+    ],
+    "correctIndex": 0,
+    "explanation": "SWOT helps examine internal and external factors affecting viability within a competitive landscape.",
+    "concept": "Competitive analysis",
+    "difficulty": "medium"
+   },
+   {
+    "id": "51807bdc-282",
+    "type": "mcq",
+    "question": "Which driver of opportunity should entrepreneurs monitor to find new ways to fund ventures?",
+    "options": [
+     "Emerging funding options",
+     "Historic weather patterns",
+     "Company dress codes",
+     "Trademark laws from the 1800s"
+    ],
+    "correctIndex": 0,
+    "explanation": "New funding mechanisms are a key driver that can enable entrepreneurial opportunities.",
+    "concept": "Drivers",
+    "difficulty": "medium"
+   },
+   {
+    "id": "25f7aedb-51d",
+    "type": "tf",
+    "question": "Small businesses can usually compete with Walmart on price because they have similar economies of scale.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 1,
+    "explanation": "Small firms typically cannot match large firms' price advantages due to lower volume and fewer internal efficiencies.",
+    "concept": "Competition",
+    "difficulty": "easy"
+   }
+  ],
+  "video": {
+   "youtubeId": "pC5l5j2u9SQ",
+   "title": "What is Entrepreneurship? | 10 shared characteristics of entrepreneurs | From A Business Professor",
+   "channel": "Business School 101",
+   "seconds": 671,
+   "checkedAt": 1792840548153
+  }
+ },
+ "c6": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "What is the first step in the creative problem-solving process described in the chapter?",
+    "answer": "Clarify"
+   },
+   {
+    "kind": "choice",
+    "prompt": "Which of these is NOT listed as a problem-solving skill in the chapter?",
+    "options": [
+     "Critical thinking",
+     "Decisiveness",
+     "Astrology-based forecasting",
+     "Resourcefulness"
+    ],
+    "correctIndex": 2,
+    "feedback": "Astrology-based forecasting is not a problem-solving skill in the chapter; the chapter lists skills like critical thinking, decisiveness, and resourcefulness."
+   },
+   {
+    "kind": "order",
+    "prompt": "Place these stages of Stanford’s design thinking model in the CORRECT order.",
+    "items": [
+     "Empathizing",
+     "Defining",
+     "Ideating",
+     "Prototyping",
+     "Testing"
+    ],
+    "feedback": "The design thinking stages proceed from empathizing with users, to defining the problem, to ideating solutions, to prototyping, and finally testing."
+   },
+   {
+    "kind": "fill",
+    "prompt": "A key lean principle seeks to minimize ______ (fill one word).",
+    "before": "A key lean principle seeks to minimize",
+    "after": ".",
+    "options": [
+     "waste",
+     "time",
+     "cost",
+     "risk"
+    ],
+    "correctIndex": 0,
+    "feedback": "Lean focuses on minimizing waste (surplus or unused material) to enable continuous improvement."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match the problem-solving model to its characteristic.",
+    "pairs": [
+     [
+      "Adaptive model",
+      "Improves existing solutions"
+     ],
+     [
+      "Innovative model",
+      "Generates novel, nonconforming solutions"
+     ],
+     [
+      "KAI inventory",
+      "Measures style on originality, conformity, efficiency"
+     ]
+    ],
+    "feedback": "Adaptive models tweak current approaches; innovative models create new approaches; Kirton’s KAI measures problem-solving style based on originality, conformity, and efficiency."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "0f3d6246-d1e",
+    "type": "mcq",
+    "question": "Which step in the creative problem-solving cycle focuses on recognizing a gap between current and desired states?",
+    "options": [
+     "Ideate",
+     "Clarify",
+     "Implement",
+     "Evaluate"
+    ],
+    "correctIndex": 1,
+    "explanation": "Clarify involves need awareness and recognizing the gap between current and desired states.",
+    "concept": "clarify",
+    "difficulty": "easy"
+   },
+   {
+    "id": "f4f01ad6-fcb",
+    "type": "mcq",
+    "question": "According to the chapter, which tool can help unblock creativity by collecting many ideas from a group?",
+    "options": [
+     "Storyboarding",
+     "Crowdsourcing",
+     "Lean observation",
+     "KAI inventory"
+    ],
+    "correctIndex": 1,
+    "explanation": "Crowdsourcing gathers input from many people and can relieve creativity blocks.",
+    "concept": "creativity tools",
+    "difficulty": "easy"
+   },
+   {
+    "id": "5784af94-200",
+    "type": "mcq",
+    "question": "Which of these is a primary aim of lean processes?",
+    "options": [
+     "Maximize surplus inventory",
+     "Minimize waste",
+     "Replace prototyping",
+     "Measure originality"
+    ],
+    "correctIndex": 1,
+    "explanation": "Lean seeks to minimize surplus or unused material—i.e., waste—to improve processes.",
+    "concept": "lean",
+    "difficulty": "easy"
+   },
+   {
+    "id": "6125caaa-8c8",
+    "type": "mcq",
+    "question": "Who is credited with popularizing design thinking in business and founding Stanford’s Design School?",
+    "options": [
+     "Michael Kirton",
+     "Geoffrey Graybeal",
+     "David Kelley",
+     "Taiichi Ohno"
+    ],
+    "correctIndex": 2,
+    "explanation": "David Kelley founded Stanford’s Design School and helped popularize design thinking.",
+    "concept": "design thinking",
+    "difficulty": "medium"
+   },
+   {
+    "id": "b15684ba-a0c",
+    "type": "mcq",
+    "question": "Which sequence best matches the creative problem-solving process in the chapter?",
+    "options": [
+     "Ideate → Clarify → Implement → Develop → Evaluate",
+     "Clarify → Ideate → Develop → Implement → Evaluate",
+     "Develop → Implement → Clarify → Ideate → Evaluate",
+     "Empathize → Define → Ideate → Prototype → Test"
+    ],
+    "correctIndex": 1,
+    "explanation": "The chapter lists clarify, ideate, develop, implement, evaluate as the creative problem-solving steps.",
+    "concept": "process sequence",
+    "difficulty": "medium"
+   },
+   {
+    "id": "74f3c142-1d1",
+    "type": "tf",
+    "question": "The Kirton Adaption-Innovation (KAI) Inventory measures an individual’s problem-solving style by assessing originality, conformity, and efficiency.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 0,
+    "explanation": "The KAI inventory measures problem-solving preferences based on originality, conformity, and efficiency.",
+    "concept": "KAI",
+    "difficulty": "easy"
+   },
+   {
+    "id": "d8bf91a4-e59",
+    "type": "mcq",
+    "question": "Which problem-solving style is described as more likely to produce novel, nonconforming solutions?",
+    "options": [
+     "Adaptive",
+     "Theorist",
+     "Petitioner",
+     "Innovative"
+    ],
+    "correctIndex": 3,
+    "explanation": "Innovative problem-solvers tend to challenge rules and create novel solutions, unlike adaptive solvers who improve existing methods.",
+    "concept": "styles",
+    "difficulty": "medium"
+   },
+   {
+    "id": "e4606801-1f2",
+    "type": "mcq",
+    "question": "Which step in lean problem solving is primarily about studying the challenge and asking questions to understand what must change?",
+    "options": [
+     "Assessment",
+     "Observation",
+     "Evaluation",
+     "Whiteboarding"
+    ],
+    "correctIndex": 1,
+    "explanation": "Observation is the phase where the entrepreneur studies the challenge and asks questions to understand why change is needed.",
+    "concept": "lean steps",
+    "difficulty": "medium"
+   }
+  ],
+  "video": {
+   "youtubeId": "dItUGF8GdTw",
+   "title": "5 tips to improve your critical thinking - Samantha Agoos",
+   "channel": "TED-Ed",
+   "seconds": 270,
+   "checkedAt": 1792840549981
+  }
+ },
+ "c7": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "Problem-solution narrative — the most basic formula for telling your innovation story. What is the core idea?",
+    "answer": "State the problem your target customers face, then describe your solution and how it solves that problem better than existing options."
+   },
+   {
+    "kind": "choice",
+    "prompt": "Which statement best describes a vision statement?",
+    "options": [
+     "A short description of daily operations and tasks",
+     "A broad description of what the venture aims to become in the future",
+     "A legal document assigning ownership of an idea",
+     "A detailed monthly budget for the first year"
+    ],
+    "correctIndex": 1,
+    "feedback": "A vision statement outlines the venture’s broader purpose and what it could become in the future."
+   },
+   {
+    "kind": "order",
+    "prompt": "Put these steps in the approximate order you would use when preparing a professional pitch deck.",
+    "items": [
+     "Problem-solution statement and value proposition",
+     "Describe the team and traction",
+     "State the ask (funding or support) and expected returns",
+     "Market need and competition"
+    ],
+    "feedback": "A typical pitch begins with problem/solution and value proposition, then market and competition, team and traction, and finishes with the ask."
+   },
+   {
+    "kind": "fill",
+    "prompt": "Fill the blank: SMART goals are Specific, Measurable, ______, Relevant, and Time-bound.",
+    "before": "SMART goals are Specific, Measurable,",
+    "after": "Relevant, and Time-bound.",
+    "options": [
+     "Achievable",
+     "Ambitious",
+     "Transformative",
+     "Reported"
+    ],
+    "correctIndex": 0,
+    "feedback": "The A stands for Achievable (or Attainable), ensuring goals are realistic."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match the legal protection to its typical purpose.",
+    "pairs": [
+     [
+      "Patent",
+      "Protects a technical invention or novel process"
+     ],
+     [
+      "Nondisclosure agreement (NDA)",
+      "Limits others from revealing proprietary information"
+     ],
+     [
+      "Work-for-hire agreement",
+      "Assigns ownership of created work to the employer or client"
+     ]
+    ],
+    "feedback": "Patents protect inventions; NDAs restrict disclosure; work-for-hire assigns ownership of produced work."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "f66bd262-e4f",
+    "type": "mcq",
+    "question": "What is the simplest structure to tell the story of your innovation?",
+    "options": [
+     "Background-details-results",
+     "Problem-solution narrative",
+     "Feature-list narrative",
+     "Technical-specification narrative"
+    ],
+    "correctIndex": 1,
+    "explanation": "The problem-solution narrative directly links a customer problem to the entrepreneur’s solution and is the basic storytelling formula.",
+    "concept": "story format",
+    "difficulty": "easy"
+   },
+   {
+    "id": "46828936-c8e",
+    "type": "mcq",
+    "question": "Which of the following is TRUE about vision and mission statements?",
+    "options": [
+     "Vision statements are narrower than mission statements",
+     "Mission statements describe the venture’s future ideal state",
+     "Vision statements are broader and look to the future",
+     "Mission statements replace the need for SMART goals"
+    ],
+    "correctIndex": 2,
+    "explanation": "Vision statements are broader than mission statements and describe the venture’s future purpose; missions are more focused on who, what, and how.",
+    "concept": "vision vs mission",
+    "difficulty": "easy"
+   },
+   {
+    "id": "f5192e3f-fb3",
+    "type": "mcq",
+    "question": "Which element is NOT usually required in a concise elevator pitch?",
+    "options": [
+     "A clear ask for specific funding amount",
+     "The problem your venture addresses",
+     "A catchy hook about your vision",
+     "A brief statement of the value proposition"
+    ],
+    "correctIndex": 0,
+    "explanation": "An elevator pitch is short and aims to spark interest; a precise funding ask is usually part of a longer pitch, not a very brief elevator version.",
+    "concept": "pitch types",
+    "difficulty": "medium"
+   },
+   {
+    "id": "74451dbc-4d0",
+    "type": "mcq",
+    "question": "When tailoring a pitch, what question should you ask first to guide content and emphasis?",
+    "options": [
+     "What is the legal structure of the business?",
+     "Who is the audience and what is the ask?",
+     "How many patents can we file?",
+     "What fonts should appear on the slides?"
+    ],
+    "correctIndex": 1,
+    "explanation": "Knowing who you are pitching and the specific ask determines what content to prioritize and how to present it.",
+    "concept": "audience",
+    "difficulty": "easy"
+   },
+   {
+    "id": "6a4d9b61-8fb",
+    "type": "mcq",
+    "question": "Why might an entrepreneur choose not to patent every small innovation?",
+    "options": [
+     "Patents are always free and take no time",
+     "Small innovations are never valuable in the marketplace",
+     "Patenting can be time-consuming, costly, and sometimes unnecessary",
+     "Investors always demand no patents be filed"
+    ],
+    "correctIndex": 2,
+    "explanation": "Patents require time and expense; in crowded markets small variations may be hard to protect, and other protections or speed to market can be better priorities.",
+    "concept": "IP strategy",
+    "difficulty": "medium"
+   },
+   {
+    "id": "ab8cc49f-8d6",
+    "type": "mcq",
+    "question": "Which of these is a disadvantage of crafting a strong entrepreneurial story?",
+    "options": [
+     "Stories cannot communicate the problem clearly",
+     "Stories always make products cheaper",
+     "Stories can create fear of missing out and set rigid expectations",
+     "Stories eliminate the need for market research"
+    ],
+    "correctIndex": 2,
+    "explanation": "While stories help communicate value, they can create FOMO and unrealistic expectations that may lead to rigid goals.",
+    "concept": "story risks",
+    "difficulty": "medium"
+   },
+   {
+    "id": "b5b9dd83-221",
+    "type": "tf",
+    "question": "An open-ended nondisclosure agreement (NDA) allows the recipient to disclose proprietary information after a fixed time period.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 1,
+    "explanation": "An open-ended NDA has no set end date; time-limited NDAs allow disclosure after a specified period.",
+    "concept": "NDA types",
+    "difficulty": "hard"
+   },
+   {
+    "id": "431c3325-5b4",
+    "type": "mcq",
+    "question": "In preparing for pitch competitions, which of the following is good practice?",
+    "options": [
+     "Accept any contract terms immediately if you win",
+     "Focus only on the pitch and ignore networking",
+     "Carefully review any contracts before accepting awards and build your network regardless of winning",
+     "Assume contests always give fair deals and require no review"
+    ],
+    "correctIndex": 2,
+    "explanation": "Winners should review contract terms before accepting awards; even losing can be valuable for networking and mentorship.",
+    "concept": "competitions",
+    "difficulty": "medium"
+   }
+  ],
+  "video": {
+   "youtubeId": "r5_34YnCmMY",
+   "title": "Telling Stories with Data in 3 Steps (Quick Study)",
+   "channel": "Harvard Business Review",
+   "seconds": 287,
+   "checkedAt": 1792840551921
+  }
+ },
+ "c8": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "What is entrepreneurial marketing in one sentence?",
+    "answer": "A set of unconventional, resourceful marketing practices that help start-ups and younger firms survive and grow in competitive markets."
+   },
+   {
+    "kind": "choice",
+    "prompt": "Which of the following is NOT one of the 7Ps of the marketing mix?",
+    "options": [
+     "Product",
+     "Promotion",
+     "Positioning",
+     "Physical environment"
+    ],
+    "correctIndex": 2,
+    "feedback": "Positioning is a marketing concept but the 7Ps are product, price, promotion, place, people, physical environment, and process."
+   },
+   {
+    "kind": "order",
+    "prompt": "Put these steps of primary market research in the correct common order.",
+    "items": [
+     "Define the research goal (what you want to find out)",
+     "Choose a sample and design data collection",
+     "Collect the data",
+     "Analyze the data and draw conclusions"
+    ],
+    "feedback": "Primary research typically starts with a clear goal, then moves to sampling and design, data collection, and finally analysis."
+   },
+   {
+    "kind": "fill",
+    "prompt": "Complete the sentence: Guerrilla marketing aims to gain maximum exposure through ______ means that often encourage interaction.",
+    "before": "Guerrilla marketing aims to gain maximum exposure through",
+    "after": "means that often encourage interaction.",
+    "options": [
+     "unconventional",
+     "expensive",
+     "traditional",
+     "passive"
+    ],
+    "correctIndex": 0,
+    "feedback": "Guerrilla marketing is defined by creative, unconventional tactics rather than expensive or traditional ones."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match each marketing technique to a correct characteristic or benefit.",
+    "pairs": [
+     [
+      "Viral marketing",
+      "Can spread quickly through shares and deliver large reach at low cost"
+     ],
+     [
+      "Relationship marketing",
+      "Focuses on long-term customer relationships and loyalty"
+     ],
+     [
+      "Real-time marketing",
+      "Leverages timely events and immediate customer feedback"
+     ],
+     [
+      "Word-of-mouth (WOM)",
+      "Relies on customers recommending the product to others"
+     ]
+    ],
+    "feedback": "Each technique has distinct strengths: viral and WOM for reach, relationship for loyalty, real-time for timeliness."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "c97bf977-f8b",
+    "type": "mcq",
+    "question": "Which statement best distinguishes traditional marketing from entrepreneurial marketing?",
+    "options": [
+     "Traditional marketing focuses on creativity; entrepreneurial marketing relies only on mass media.",
+     "Traditional marketing emphasizes managing and growing established brands with large resources; entrepreneurial marketing uses unconventional, resourceful tactics for smaller firms.",
+     "Traditional marketing is used only by small firms; entrepreneurial marketing is used only by large firms.",
+     "Traditional marketing never uses agencies; entrepreneurial marketing always uses agencies."
+    ],
+    "correctIndex": 1,
+    "explanation": "Traditional marketing typically involves managing established programs with substantial resources, while entrepreneurial marketing uses unconventional, resourceful methods suitable for smaller firms.",
+    "concept": "traditional vs entrepreneurial",
+    "difficulty": "easy"
+   },
+   {
+    "id": "a633e1e0-7d4",
+    "type": "mcq",
+    "question": "Which of these is part of the 7Ps of the marketing mix?",
+    "options": [
+     "Packaging",
+     "Partnerships",
+     "People",
+     "Pricing strategy"
+    ],
+    "correctIndex": 2,
+    "explanation": "People is one of the 7Ps. Pricing strategy is related to Price but the 7Ps list uses the single term 'price'.",
+    "concept": "marketing mix",
+    "difficulty": "easy"
+   },
+   {
+    "id": "51f51708-0cc",
+    "type": "mcq",
+    "question": "When should an entrepreneur choose primary market research over relying solely on secondary data?",
+    "options": [
+     "When existing secondary data answers all specific questions",
+     "When they need new, specific information about niche customer preferences",
+     "When they want only high-level industry statistics",
+     "When they need historical financial reports"
+    ],
+    "correctIndex": 1,
+    "explanation": "Primary research is best when specific, new data are needed about a target market or niche that secondary sources do not cover.",
+    "concept": "primary research",
+    "difficulty": "medium"
+   },
+   {
+    "id": "02ddb195-2ca",
+    "type": "mcq",
+    "question": "Which is a common first step in a primary market research project?",
+    "options": [
+     "Hiring a large advertising agency",
+     "Defining the research goal and questions",
+     "Launching the full marketing campaign",
+     "Setting retail prices"
+    ],
+    "correctIndex": 1,
+    "explanation": "Research projects begin by defining clear goals and questions to determine what information must be collected.",
+    "concept": "research design",
+    "difficulty": "easy"
+   },
+   {
+    "id": "102c23e3-b06",
+    "type": "mcq",
+    "question": "Which marketing technique is most associated with creating long-term customer loyalty?",
+    "options": [
+     "Expeditionary marketing",
+     "Relationship marketing",
+     "Guerrilla marketing",
+     "Viral marketing"
+    ],
+    "correctIndex": 1,
+    "explanation": "Relationship marketing focuses on building and maintaining long-term customer relationships and loyalty.",
+    "concept": "marketing techniques",
+    "difficulty": "medium"
+   },
+   {
+    "id": "504c77a2-4ed",
+    "type": "mcq",
+    "question": "A disadvantage common to guerrilla, viral, and WOM marketing is:",
+    "options": [
+     "They always require large advertising budgets",
+     "They make it impossible to measure outcomes",
+     "Negative customer reviews can spread quickly and harm reputation",
+     "They guarantee immediate sales"
+    ],
+    "correctIndex": 2,
+    "explanation": "While affordable and effective, these techniques can also allow negative reviews to spread rapidly, which can damage reputation if not managed.",
+    "concept": "technique risks",
+    "difficulty": "medium"
+   },
+   {
+    "id": "84367b24-e71",
+    "type": "tf",
+    "question": "An executive summary in a marketing plan is usually written first and is typically several pages long.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 1,
+    "explanation": "The executive summary is placed first in the document but is generally written last and is typically one or two pages long.",
+    "concept": "marketing plan",
+    "difficulty": "easy"
+   },
+   {
+    "id": "792087b8-571",
+    "type": "mcq",
+    "question": "Which sequence best describes the six-step sales strategy example outlined in the chapter?",
+    "options": [
+     "Make an appointment → Prospecting → Present proposal → Close → Handle objections → Nurture relationship",
+     "Prospecting → Make an appointment → Meet and present proposal → Handle objections → Close the deal → Nurture the relationship",
+     "Prospecting → Close the deal → Present proposal → Make an appointment → Handle objections → Nurture relationship",
+     "Handle objections → Prospecting → Make an appointment → Present proposal → Close the deal → Nurture relationship"
+    ],
+    "correctIndex": 1,
+    "explanation": "The example sequence starts with prospecting, then appointment, meeting and proposal, handling objections, closing, and nurturing the relationship afterward.",
+    "concept": "sales process",
+    "difficulty": "medium"
+   }
+  ],
+  "video": {
+   "youtubeId": "pC5l5j2u9SQ",
+   "title": "What is Entrepreneurship? | 10 shared characteristics of entrepreneurs | From A Business Professor",
+   "channel": "Business School 101",
+   "seconds": 671,
+   "checkedAt": 1792840553688
+  }
+ },
+ "c9": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "What is the accounting equation?",
+    "answer": "Assets = Liabilities + Equity"
+   },
+   {
+    "kind": "choice",
+    "prompt": "Which financing source is MOST typical for a seed-stage startup?",
+    "options": [
+     "Venture capital",
+     "Personal savings and friends & family",
+     "Initial public offering (IPO)",
+     "Private equity buyout"
+    ],
+    "correctIndex": 1,
+    "feedback": "Seed-stage ventures commonly rely on founders' personal savings and small investments from friends and family because revenue and formal investor interest are usually limited."
+   },
+   {
+    "kind": "order",
+    "prompt": "Put these typical company lifecycle financing stages in the correct order from earliest to latest.",
+    "items": [
+     "Seed stage (personal savings, friends & family, crowdfunding)",
+     "Early stage (angel investors, venture capital)",
+     "Maturity (private equity sales, IPO or self-sustaining)"
+    ],
+    "feedback": "This order follows how funding sources generally become available as a company moves from idea to mature operations."
+   },
+   {
+    "kind": "fill",
+    "prompt": "Debt financing requires regular repayment and can restrict financial flexibility, while _____ financing gives founders more flexibility because dividends are not required.",
+    "before": "Debt financing requires regular repayment and can restrict financial flexibility, while",
+    "after": "financing gives founders more flexibility because dividends are not required.",
+    "options": [
+     "equity",
+     "credit card",
+     "bank loan",
+     "SBA loan"
+    ],
+    "correctIndex": 0,
+    "feedback": "Equity financing doesn't require scheduled repayments; owners receive returns via dividends or appreciation, which can be distributed when cash flow allows."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match each term with its definition.",
+    "pairs": [
+     [
+      "Bootstrapping",
+      "Self-funding a startup using personal resources and creative cost-saving"
+     ],
+     [
+      "Break-even point",
+      "Sales level where total revenue equals total expenses"
+     ],
+     [
+      "Burn rate",
+      "Rate at which a startup uses cash to cover negative cash flow"
+     ]
+    ],
+    "feedback": "These definitions relate to funding approaches and basic financial metrics used in startup planning."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "c0fdcb9e-c9a",
+    "type": "mcq",
+    "question": "Which of the following is an advantage of debt financing?",
+    "options": [
+     "No required repayments",
+     "Maintains full ownership without dilution",
+     "Investors help run the company",
+     "Dividends can be postponed"
+    ],
+    "correctIndex": 1,
+    "explanation": "Debt financing allows founders to retain ownership because lenders do not receive equity, though repayments and interest are required.",
+    "concept": "debt financing",
+    "difficulty": "easy"
+   },
+   {
+    "id": "27410096-0d4",
+    "type": "mcq",
+    "question": "Which funding source is most likely to require giving up a portion of ownership and maybe board seats?",
+    "options": [
+     "Crowdfunding",
+     "Bank loan",
+     "Venture capital",
+     "Personal savings"
+    ],
+    "correctIndex": 2,
+    "explanation": "Venture capital typically provides equity investment and may require governance rights like board seats in exchange for funding.",
+    "concept": "venture capital",
+    "difficulty": "medium"
+   },
+   {
+    "id": "8595943a-cee",
+    "type": "mcq",
+    "question": "A nonprofit museum charging admission is generating which type of revenue?",
+    "options": [
+     "Program service revenue",
+     "Grant revenue",
+     "Donation revenue",
+     "Equity revenue"
+    ],
+    "correctIndex": 0,
+    "explanation": "Program services are the offerings that produce revenue for a nonprofit, such as admission fees or paid events.",
+    "concept": "nonprofit revenue",
+    "difficulty": "easy"
+   },
+   {
+    "id": "0d601f68-6d6",
+    "type": "mcq",
+    "question": "Which statement about equity financing is TRUE?",
+    "options": [
+     "Interest payments are required monthly.",
+     "Equity financing always costs less than debt.",
+     "Dividends are optional and paid when cash allows.",
+     "Equity investors are never involved in company decisions."
+    ],
+    "correctIndex": 2,
+    "explanation": "Equity holders receive dividends at the company's discretion; there are no mandatory interest payments as with debt.",
+    "concept": "equity",
+    "difficulty": "easy"
+   },
+   {
+    "id": "db898379-385",
+    "type": "mcq",
+    "question": "Bootstrapping is best described as:",
+    "options": [
+     "Raising a large Series A from venture capitalists",
+     "Using personal savings and creative methods to fund growth",
+     "Selling the company to private equity immediately",
+     "Issuing an IPO to public investors"
+    ],
+    "correctIndex": 1,
+    "explanation": "Bootstrapping relies on founders' own funds and resourcefulness rather than external investor capital.",
+    "concept": "bootstrapping",
+    "difficulty": "easy"
+   },
+   {
+    "id": "f64e2d13-18a",
+    "type": "mcq",
+    "question": "Which metric shows how quickly a startup is spending its cash reserves?",
+    "options": [
+     "Run rate",
+     "Burn rate",
+     "Break-even point",
+     "Equity ratio"
+    ],
+    "correctIndex": 1,
+    "explanation": "Burn rate measures the speed at which a company uses cash, often expressed per month.",
+    "concept": "burn rate",
+    "difficulty": "medium"
+   },
+   {
+    "id": "32591b7f-a84",
+    "type": "tf",
+    "question": "The accounting equation is Assets = Liabilities + Equity.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 0,
+    "explanation": "This is the fundamental accounting equation used on the balance sheet.",
+    "concept": "accounting equation",
+    "difficulty": "easy"
+   },
+   {
+    "id": "4c349dc1-e53",
+    "type": "mcq",
+    "question": "Which funding source often provides small amounts from many individuals online and may avoid giving up equity?",
+    "options": [
+     "Angel investor",
+     "Crowdfunding",
+     "SBA loan",
+     "Private equity"
+    ],
+    "correctIndex": 1,
+    "explanation": "Crowdfunding platforms let many backers contribute, and some campaigns use reward-based models that do not require giving equity.",
+    "concept": "crowdfunding",
+    "difficulty": "medium"
+   }
+  ],
+  "video": {
+   "youtubeId": "_HK5gpg39pY",
+   "title": "Understanding Financial Statements and Accounting: Crash Course Entrepreneurship #15",
+   "channel": "CrashCourse",
+   "seconds": 763,
+   "checkedAt": 1792840555041
+  }
+ },
+ "c10": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "What is the core idea behind the lean startup method?",
+    "answer": "Build a simple prototype, get customer feedback, measure results, and learn—repeat the build–measure–learn loop to improve the product and business model."
+   },
+   {
+    "kind": "choice",
+    "prompt": "Which statement best describes a Minimum Viable Product (MVP)?",
+    "options": [
+     "A fully finished product with all planned features, ready for mass market",
+     "A basic version of a product with just enough features for early customers to test and give feedback",
+     "A prototype used only internally and never shown to customers",
+     "A product free of defects that investors require before funding"
+    ],
+    "correctIndex": 1,
+    "feedback": "An MVP is the simplest product version that lets customers test value and provide real feedback for iteration."
+   },
+   {
+    "kind": "order",
+    "prompt": "Put these steps of the build–measure–learn loop in the correct order.",
+    "items": [
+     "Build a prototype or MVP",
+     "Measure customer responses and collect data",
+     "Learn from the data and change the product accordingly"
+    ],
+    "feedback": "The loop begins with building, then measuring how customers respond, and finally learning to make improvements."
+   },
+   {
+    "kind": "fill",
+    "prompt": "Complete the sentence: A startup should launch an imperfect product because __________.",
+    "before": "A startup should launch an imperfect product because",
+    "after": ".",
+    "options": [
+     "customers refuse to use anything but perfect products",
+     "early feedback helps shape the product into something customers want",
+     "it guarantees immediate profitability"
+    ],
+    "correctIndex": 1,
+    "feedback": "Early customer feedback lets entrepreneurs iterate; perfection before launch wastes time and resources."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match the term to its meaning.",
+    "pairs": [
+     [
+      "Pivot",
+      "A major change in product, strategy, or business model based on learning"
+     ],
+     [
+      "Lean plan",
+      "A short, living document focused on essentials: product, market, metrics"
+     ],
+     [
+      "Fear of failure",
+      "A mindset that can prevent risk-taking and cause missed opportunities"
+     ],
+     [
+      "Growth stage",
+      "Lifecycle phase with rapid sales increase and need for more resources"
+     ]
+    ],
+    "feedback": "Each term connects to how startups adapt, plan, and respond to challenges."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "3fcc2859-c6f",
+    "type": "mcq",
+    "question": "Which founder is credited with developing the lean startup methodology?",
+    "options": [
+     "Steve Jobs",
+     "Eric Ries",
+     "Elon Musk",
+     "Peter Drucker"
+    ],
+    "correctIndex": 1,
+    "explanation": "Eric Ries developed and popularized the lean startup approach after experiences with a failed startup and studying lean manufacturing.",
+    "concept": "lean startup",
+    "difficulty": "easy"
+   },
+   {
+    "id": "775030ad-22e",
+    "type": "mcq",
+    "question": "Which of these is NOT a primary purpose of the build–measure–learn loop?",
+    "options": [
+     "To get real customer feedback",
+     "To prove assumptions with data",
+     "To avoid any changes to the product after launch",
+     "To improve the product-market fit"
+    ],
+    "correctIndex": 2,
+    "explanation": "The loop exists to test assumptions and iterate; avoiding changes contradicts its purpose.",
+    "concept": "build–measure–learn",
+    "difficulty": "easy"
+   },
+   {
+    "id": "bd4a1bd7-2ab",
+    "type": "mcq",
+    "question": "Why do investors often prefer lean pitches that include data from early experiments?",
+    "options": [
+     "Data shows validated learning and reduces uncertainty",
+     "Investors dislike hearing customer stories",
+     "Data guarantees the business will be profitable",
+     "Lean pitches are always longer and more detailed"
+    ],
+    "correctIndex": 0,
+    "explanation": "Validated data demonstrates learning and reduces risk, making the opportunity more credible to investors.",
+    "concept": "pitching",
+    "difficulty": "medium"
+   },
+   {
+    "id": "bf64bb7e-042",
+    "type": "mcq",
+    "question": "Which scenario best illustrates a pivot?",
+    "options": [
+     "Adding a new color option to a product",
+     "Changing the target customer segment after tests show a different group values the product more",
+     "Hiring a new salesperson",
+     "Increasing production to meet higher demand"
+    ],
+    "correctIndex": 1,
+    "explanation": "A pivot is a substantial strategy or product change informed by learning, such as shifting target customers.",
+    "concept": "pivot",
+    "difficulty": "medium"
+   },
+   {
+    "id": "e9440544-28f",
+    "type": "mcq",
+    "question": "A lean plan should typically include all EXCEPT:",
+    "options": [
+     "A short description of the product and target market",
+     "Detailed multi-year company history and personnel bios",
+     "Key metrics and testing schedule",
+     "Basic financial assumptions"
+    ],
+    "correctIndex": 1,
+    "explanation": "A lean plan is brief and focuses on essentials; long company histories and full bios are not required.",
+    "concept": "lean plan",
+    "difficulty": "easy"
+   },
+   {
+    "id": "76cc8682-704",
+    "type": "tf",
+    "question": "An MVP must be perfect and feature-complete before being shown to customers.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 1,
+    "explanation": "An MVP is intentionally minimal; perfection before customer testing is unnecessary and costly.",
+    "concept": "MVP",
+    "difficulty": "easy"
+   },
+   {
+    "id": "2e4a2250-8b5",
+    "type": "mcq",
+    "question": "Which of these is a common early reason startups fail, according to research summarized in the chapter?",
+    "options": [
+     "Too much short-term profit",
+     "Marketing mistakes and targeting the wrong customer",
+     "Having too many mentors",
+     "Excessive government support"
+    ],
+    "correctIndex": 1,
+    "explanation": "Marketing missteps and wrong customer targeting are common causes of early startup failure.",
+    "concept": "failure causes",
+    "difficulty": "medium"
+   },
+   {
+    "id": "4c72a28e-56f",
+    "type": "mcq",
+    "question": "Which action can help an entrepreneur manage fear of failure?",
+    "options": [
+     "Avoid asking for help and work alone",
+     "Adjust expectations and seek advice or mentorship",
+     "Ignore customer feedback",
+     "Delay launching indefinitely"
+    ],
+    "correctIndex": 1,
+    "explanation": "Adjusting expectations and asking for help are practical steps to reduce fear and improve decision-making.",
+    "concept": "fear management",
+    "difficulty": "easy"
+   }
+  ],
+  "video": {
+   "youtubeId": "O3iIIAxppPo",
+   "title": "How to start a social media marketing agency step by step | 2026 FULL GUIDE",
+   "channel": "Jade Beason",
+   "seconds": 1390,
+   "checkedAt": 1792840556561
+  }
+ },
+ "c11": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "Why is the “Field of Dreams” approach risky for a new venture?",
+    "answer": "Because it assumes customers will appear without testing demand; planning and market validation reduce the risk of building a product no one wants."
+   },
+   {
+    "kind": "choice",
+    "prompt": "Which business model example matches a multisided model?",
+    "options": [
+     "A coffee shop selling cups of coffee to walk-in customers",
+     "An enterprise analytics platform that charges businesses while offering free user access",
+     "A local hardware store selling tools and supplies",
+     "A bakery selling cakes directly to consumers"
+    ],
+    "correctIndex": 1,
+    "feedback": "Multisided models have distinct user and customer groups; enterprise analytics often provides free access for users while charging a different customer base."
+   },
+   {
+    "kind": "order",
+    "prompt": "Put these steps of a basic feasibility analysis in the correct order.",
+    "items": [
+     "Market analysis (size, demand, competitors)",
+     "Financial analysis (projections, break-even)",
+     "Management/organizational analysis (team ability, resources)"
+    ],
+    "feedback": "Feasibility typically begins by verifying market demand, then assesses financial viability, and finally examines management and resources."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match the business model type to its best example.",
+    "pairs": [
+     [
+      "Direct model",
+      "Coffee shop selling to walk-in customers"
+     ],
+     [
+      "Marketplace model",
+      "An online platform connecting independent hosts with travelers (e.g., Airbnb)"
+     ],
+     [
+      "Multisided model",
+      "A social media platform that is free to users but sells advertising to businesses"
+     ]
+    ],
+    "feedback": "Direct involves one customer group; multisided involves different user and paying customer groups; marketplace connects buyers and sellers."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "602e7680-11c",
+    "type": "mcq",
+    "question": "Which statement best describes a business model?",
+    "options": [
+     "A legal document registering a company with the government",
+     "A unique rationale explaining how a company creates, delivers, and captures value",
+     "A marketing plan focused only on customer acquisition",
+     "A schedule of daily operations and employee shifts"
+    ],
+    "correctIndex": 1,
+    "explanation": "A business model explains how the organization creates, delivers, and captures value across its components.",
+    "concept": "definition",
+    "difficulty": "easy"
+   },
+   {
+    "id": "af1fe2d6-bbc",
+    "type": "mcq",
+    "question": "Which of the following is NOT one of the original nine blocks of the business model canvas?",
+    "options": [
+     "Customer segments",
+     "Value propositions",
+     "Product design specifications",
+     "Cost structure"
+    ],
+    "correctIndex": 2,
+    "explanation": "Product design specifications are not a distinct block; the canvas focuses on business components like channels and revenue streams.",
+    "concept": "canvas",
+    "difficulty": "easy"
+   },
+   {
+    "id": "2589d1ef-ca7",
+    "type": "mcq",
+    "question": "Why should entrepreneurs focus early on the right side of the business model canvas?",
+    "options": [
+     "Because it contains legal and patent information needed first",
+     "Because it addresses customer-facing elements like segments, relationships, channels, and revenue streams",
+     "Because it lists suppliers and manufacturing details",
+     "Because it records the founders’ resumes"
+    ],
+    "correctIndex": 1,
+    "explanation": "The right side covers customer-facing elements that validate demand and how the business will capture value.",
+    "concept": "canvas focus",
+    "difficulty": "medium"
+   },
+   {
+    "id": "d97499fb-e46",
+    "type": "mcq",
+    "question": "Which example most clearly illustrates a marketplace model?",
+    "options": [
+     "A SaaS invoicing tool sold by subscription to businesses",
+     "An online auction platform where sellers list items and buyers bid",
+     "A single retail store selling electronics directly to consumers",
+     "A subscription news website funded by membership fees"
+    ],
+    "correctIndex": 1,
+    "explanation": "Marketplace models bring together distinct buyer and seller segments on a platform.",
+    "concept": "models",
+    "difficulty": "easy"
+   },
+   {
+    "id": "32910405-08a",
+    "type": "mcq",
+    "question": "What is the main purpose of a feasibility study?",
+    "options": [
+     "To register the company with tax authorities",
+     "To decide early whether to proceed with a venture by analyzing market, financial, and management factors",
+     "To replace a business plan entirely",
+     "To design a logo and brand colors"
+    ],
+    "correctIndex": 1,
+    "explanation": "Feasibility studies analyze real-world numbers to inform a go/no-go decision and refine the venture focus.",
+    "concept": "feasibility",
+    "difficulty": "medium"
+   },
+   {
+    "id": "b33e3972-436",
+    "type": "mcq",
+    "question": "Which element is typically assessed in organizational feasibility?",
+    "options": [
+     "Founders’ passion and industry expertise",
+     "The company’s trademark designs",
+     "Daily inventory counts",
+     "The exact number of customers in year five"
+    ],
+    "correctIndex": 0,
+    "explanation": "Organizational feasibility evaluates management prowess such as passion, expertise, education, and experience.",
+    "concept": "organizational feasibility",
+    "difficulty": "easy"
+   },
+   {
+    "id": "08c18142-e2a",
+    "type": "tf",
+    "question": "A brief business plan is usually longer than a full business plan and contains more detail. ",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 1,
+    "explanation": "False — a brief business plan is a shorter, big-picture summary; a full plan is longer and more detailed.",
+    "concept": "plans",
+    "difficulty": "easy"
+   },
+   {
+    "id": "a2692a70-c27",
+    "type": "mcq",
+    "question": "Which revenue arrangement aligns best with a multisided model?",
+    "options": [
+     "Charging a single user group a subscription fee only",
+     "Offering free access to users while selling advertising to businesses",
+     "Selling physical goods in a brick-and-mortar store only",
+     "Charging a fixed fee to all suppliers regardless of usage"
+    ],
+    "correctIndex": 1,
+    "explanation": "Multisided models often monetize a different customer group (e.g., advertisers) while providing free access to users.",
+    "concept": "multisided",
+    "difficulty": "medium"
+   }
+  ],
+  "video": {
+   "youtubeId": "eHJnEHyyN1Y",
+   "title": "6 Tips on Being a Successful Entrepreneur | John Mullins | TED",
+   "channel": "TED",
+   "seconds": 920,
+   "checkedAt": 1792840558282
+  }
+ },
+ "c12": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "Define networking in one sentence (tap to reveal answer).",
+    "answer": "Networking is interacting with other people who have a common interest that eventually leads to the exchange of goods and services for payment."
+   },
+   {
+    "kind": "choice",
+    "prompt": "Which of the following is NOT listed as a cost of networking in the chapter?",
+    "options": [
+     "Time",
+     "Fear",
+     "Dedication",
+     "Guaranteed quick profit"
+    ],
+    "correctIndex": 3,
+    "feedback": "The chapter lists time, fear, and dedication as non-monetary costs; it does not promise guaranteed quick profit."
+   },
+   {
+    "kind": "order",
+    "prompt": "Put these steps for creating an operational business plan in the correct sequence as suggested by the chapter.",
+    "items": [
+     "List activities of the business (what)",
+     "Assign responsibility (who)",
+     "Identify tools/equipment required (with what)",
+     "Set schedule and duration (when/how long)"
+    ],
+    "feedback": "An operational plan details what activities occur, who does them, with what tools, and when/how long they occur."
+   },
+   {
+    "kind": "fill",
+    "prompt": "Complete the sentence about building an entrepreneurial team: \"Whatever the entrepreneur can do best is what they should focus on doing. Other required tasks can be assigned to __________.\"",
+    "before": "Whatever the entrepreneur can do best is what they should focus on doing. Other required tasks can be assigned to",
+    "after": ".",
+    "options": [
+     "employees, service providers, or consultants",
+     "only family members",
+     "no one — do everything yourself",
+     "only investors"
+    ],
+    "correctIndex": 0,
+    "feedback": "The chapter recommends assigning other tasks to employees, service providers, or consultants."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match the professional with the main reason an entrepreneur needs them (from chapter).",
+    "pairs": [
+     [
+      "Accountant",
+      "Determine financial health and prepare tax returns"
+     ],
+     [
+      "Attorney",
+      "Provide legal advice and help choose business structure"
+     ],
+     [
+      "Banker/financial institution",
+      "Provide funding and evaluate creditworthiness"
+     ],
+     [
+      "Insurance agent",
+      "Protect business against financial losses"
+     ]
+    ],
+    "feedback": "Each professional fills a specific, essential role in supporting the venture's success."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "c0e9b0ed-3f5",
+    "type": "mcq",
+    "question": "Which statement best describes entrepreneurial networking as defined in the chapter?",
+    "options": [
+     "A formal club membership that guarantees sales",
+     "Interacting with people of common interest leading to exchange of goods and services for payment",
+     "Exchanging only social favors without professional benefit",
+     "Avoiding face-to-face meetings and relying solely on advertising"
+    ],
+    "correctIndex": 1,
+    "explanation": "The chapter defines networking as interacting with others of common interest that can lead to exchange of goods and services for payment.",
+    "concept": "Networking",
+    "difficulty": "easy"
+   },
+   {
+    "id": "01363fe7-6a7",
+    "type": "mcq",
+    "question": "Which of the following is an important non-monetary cost of networking mentioned in the chapter?",
+    "options": [
+     "Time",
+     "Shipping fees",
+     "Office rent",
+     "Inventory"
+    ],
+    "correctIndex": 0,
+    "explanation": "Time is listed as a non-monetary cost of networking (along with fear and dedication).",
+    "concept": "Costs",
+    "difficulty": "easy"
+   },
+   {
+    "id": "70e1b691-c21",
+    "type": "mcq",
+    "question": "Why is joining campus groups during college valuable for future entrepreneurs?",
+    "options": [
+     "It guarantees immediate funding for a startup",
+     "It provides opportunities to practice initiating and developing connections and leadership skills",
+     "It replaces the need for professional advisors",
+     "It removes the need for an operational plan"
+    ],
+    "correctIndex": 1,
+    "explanation": "The chapter states campus groups help students practice making connections and develop leadership skills.",
+    "concept": "College networking",
+    "difficulty": "medium"
+   },
+   {
+    "id": "34bae70b-aaf",
+    "type": "mcq",
+    "question": "Which professional is compared to a doctor diagnosing a company's financial health?",
+    "options": [
+     "Attorney",
+     "Accountant",
+     "Insurance agent",
+     "Marketing specialist"
+    ],
+    "correctIndex": 1,
+    "explanation": "Accountants are compared to doctors who diagnose and treat financial health issues.",
+    "concept": "Accountant role",
+    "difficulty": "easy"
+   },
+   {
+    "id": "e0b29534-887",
+    "type": "mcq",
+    "question": "What should an operational business plan specify about activities?",
+    "options": [
+     "Only the price of products",
+     "What the activities are, when they occur, who is responsible, how long, with what, and how much",
+     "That plans must never change once written",
+     "That only managers need to read the plan"
+    ],
+    "correctIndex": 1,
+    "explanation": "The chapter explains an operational plan details what, when, who, how long, with what, and how much for activities.",
+    "concept": "Operations",
+    "difficulty": "medium"
+   },
+   {
+    "id": "28403c19-804",
+    "type": "mcq",
+    "question": "Which is the best reason to build a cross-functional entrepreneurial team?",
+    "options": [
+     "To keep all tasks with the founder",
+     "To assign tasks outside the founder's strengths to employees or consultants",
+     "To avoid tracking financials",
+     "To eliminate the need for networking"
+    ],
+    "correctIndex": 1,
+    "explanation": "The chapter emphasizes assigning tasks the entrepreneur is not best at to employees, service providers, or consultants.",
+    "concept": "Team",
+    "difficulty": "medium"
+   },
+   {
+    "id": "ad4149a4-8c8",
+    "type": "tf",
+    "question": "People do business most often with those they know and trust.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 0,
+    "explanation": "The chapter explicitly states that people do business with those they know and trust.",
+    "concept": "Trust",
+    "difficulty": "easy"
+   },
+   {
+    "id": "ad5e7817-8ea",
+    "type": "mcq",
+    "question": "Which is NOT listed as a major area of operations management in the chapter?",
+    "options": [
+     "Money",
+     "Methods",
+     "Machines",
+     "Advertising campaigns"
+    ],
+    "correctIndex": 3,
+    "explanation": "The chapter lists money, methods, machines, people, and leadership; advertising campaigns are not named as a major area.",
+    "concept": "Operations areas",
+    "difficulty": "hard"
+   }
+  ],
+  "video": {
+   "youtubeId": "jmmW0F0biz0",
+   "title": "Neural Networks Explained in 5 minutes",
+   "channel": "IBM Technology",
+   "seconds": 272,
+   "checkedAt": 1792840559671
+  }
+ },
+ "c13": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "What is the primary reason an entrepreneur should decide the business purpose before choosing a legal structure?",
+    "answer": "The business purpose determines who benefits from the entity and guides choices about ownership, profit use, liability, and the most suitable legal structure."
+   },
+   {
+    "kind": "choice",
+    "prompt": "Which statement best describes a sole proprietorship?",
+    "options": [
+     "It is legally separate from its owner and can sell stock.",
+     "It is the simplest form, automatically created when an entrepreneur starts doing business, but the owner has unlimited personal liability.",
+     "It must register with the federal government before operating.",
+     "It offers limited liability and multiple owners by definition."
+    ],
+    "correctIndex": 1,
+    "feedback": "A sole proprietorship is automatically created, simple to form, but the owner bears unlimited personal liability."
+   },
+   {
+    "kind": "order",
+    "prompt": "Put these steps in the order an entrepreneur should follow when deciding on a business structure.",
+    "items": [
+     "Draft a business plan analyzing cash flows and obligations",
+     "Decide whether the business is for-profit or not-for-profit",
+     "Choose a legal entity (LLC, corporation, partnership, sole proprietorship)",
+     "Determine who should benefit from forming the entity (business purpose)"
+    ],
+    "feedback": "Determining purpose and profit orientation informs the business plan, which then guides the choice of legal entity."
+   },
+   {
+    "kind": "fill",
+    "prompt": "Complete the sentence: An LLC provides limited liability to its members as long as they avoid using the LLC as an ______ and avoid commingling personal funds with LLC funds.",
+    "before": "An LLC provides limited liability to its members as long as they avoid using the LLC as an",
+    "after": "and avoid commingling personal funds with LLC funds.",
+    "options": [
+     "3",
+     "4",
+     "2"
+    ],
+    "correctIndex": 2,
+    "feedback": "The correct term is 'alter ego' — using the LLC as an alter ego can void limited liability protections."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match the entity (left) with a correct characteristic (right).",
+    "pairs": [
+     [
+      "C Corporation",
+      "Taxed as a separate corporate entity (possible double taxation)"
+     ],
+     [
+      "S Corporation",
+      "Treated as a pass-through for tax purposes like a partnership"
+     ],
+     [
+      "Joint Venture",
+      "Two or more entities collaborating for a limited time and purpose"
+     ]
+    ],
+    "feedback": "Each pair links an entity type to a defining tax or structural feature."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "b0e91246-0da",
+    "type": "mcq",
+    "question": "Which factor most directly helps determine the appropriate business legal structure?",
+    "options": [
+     "The entrepreneur's favorite business name",
+     "The business's purpose and who should benefit from it",
+     "The weather in the business domicile state",
+     "The number of employees expected in year five"
+    ],
+    "correctIndex": 1,
+    "explanation": "The business purpose — who benefits and how profits are used — is central to choosing the legal structure.",
+    "concept": "business purpose",
+    "difficulty": "easy"
+   },
+   {
+    "id": "6e78046f-113",
+    "type": "mcq",
+    "question": "Which entity is legally allowed to sell shares of stock?",
+    "options": [
+     "Limited Liability Company (LLC)",
+     "Partnership",
+     "Corporation",
+     "Sole proprietorship"
+    ],
+    "correctIndex": 2,
+    "explanation": "Only corporations may issue stock under the law; other entities cannot issue shares.",
+    "concept": "stock issuance",
+    "difficulty": "easy"
+   },
+   {
+    "id": "98c70cb8-413",
+    "type": "mcq",
+    "question": "A C corporation differs from an S corporation primarily in:",
+    "options": [
+     "The state where it must be formed",
+     "How it is taxed",
+     "Whether it can have shareholders",
+     "Whether it can operate internationally"
+    ],
+    "correctIndex": 1,
+    "explanation": "C vs S classification is mainly a tax decision: C corps are taxed as corporations; S corps are pass-through for tax purposes.",
+    "concept": "C vs S tax",
+    "difficulty": "easy"
+   },
+   {
+    "id": "fadbf7c7-676",
+    "type": "mcq",
+    "question": "Which is a major disadvantage of a sole proprietorship?",
+    "options": [
+     "It must issue stock to raise capital",
+     "It requires filing complex corporate paperwork",
+     "Owner has unlimited personal liability for business obligations",
+     "It cannot ever be converted into another entity type"
+    ],
+    "correctIndex": 2,
+    "explanation": "A key drawback is unlimited personal liability; sole proprietors are personally responsible for business debts.",
+    "concept": "sole proprietorship",
+    "difficulty": "easy"
+   },
+   {
+    "id": "593d7e3c-e76",
+    "type": "mcq",
+    "question": "Why have LLCs become popular for startups?",
+    "options": [
+     "They always pay less tax than corporations",
+     "They combine easy formation, flexible operation, and limited liability",
+     "LLCs can sell stock on public exchanges",
+     "They eliminate the need for any operating agreement"
+    ],
+    "correctIndex": 1,
+    "explanation": "LLCs are popular because they are low cost, flexible in management and taxation, and provide limited liability.",
+    "concept": "LLC benefits",
+    "difficulty": "medium"
+   },
+   {
+    "id": "b6b001e8-e72",
+    "type": "mcq",
+    "question": "Which partnership form generally exposes partners to the most personal liability?",
+    "options": [
+     "Limited Partnership (LP)",
+     "Limited Liability Partnership (LLP)",
+     "General Partnership (GP)",
+     "Limited Liability Limited Partnership (LLLP)"
+    ],
+    "correctIndex": 2,
+    "explanation": "In a general partnership, general partners typically have unlimited personal liability for partnership obligations.",
+    "concept": "partnership liability",
+    "difficulty": "medium"
+   },
+   {
+    "id": "561a5730-c89",
+    "type": "mcq",
+    "question": "A joint venture is best described as:",
+    "options": [
+     "A permanent merger of two companies into one new corporation",
+     "A short-term collaboration between entities for a specified purpose",
+     "An individual operating under a trade name",
+     "A sole proprietor hiring an employee"
+    ],
+    "correctIndex": 1,
+    "explanation": "A joint venture is a limited-duration collaboration between two or more entities for a specific goal.",
+    "concept": "joint venture",
+    "difficulty": "easy"
+   },
+   {
+    "id": "0b5b9ce2-a06",
+    "type": "tf",
+    "question": "An entrepreneur who starts doing business without filing any paperwork is automatically operating as a sole proprietorship.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 0,
+    "explanation": "Unless they elect another entity and file paperwork, the default status is a sole proprietorship.",
+    "concept": "default status",
+    "difficulty": "easy"
+   }
+  ],
+  "video": {
+   "youtubeId": "4-yE5JduTIo",
+   "title": "How to Choose the Right Business Structure: LLC vs Corporation vs Sole Proprietorship",
+   "channel": "TRUiC",
+   "seconds": 390,
+   "checkedAt": 1792840561575
+  }
+ },
+ "c14": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "Define 'tangible resource' in one sentence.",
+    "answer": "A tangible resource is an asset with physical form that can be seen, touched, or felt (e.g., machinery, buildings, raw materials)."
+   },
+   {
+    "kind": "choice",
+    "prompt": "Which of the following is an example of an intangible resource?",
+    "options": [
+     "Factory machinery",
+     "Trademarked brand name",
+     "Raw materials inventory",
+     "Company delivery van"
+    ],
+    "correctIndex": 1,
+    "feedback": "A trademarked brand name is intangible because it cannot be physically touched but provides value and legal protection."
+   },
+   {
+    "kind": "order",
+    "prompt": "Place these steps in the correct order for preparing a resource cost estimate before seeking funding.",
+    "items": [
+     "Identify resource needs",
+     "Split costs into one-time vs ongoing",
+     "Research prices and availability",
+     "Sum costs and prepare documentation"
+    ],
+    "feedback": "First list needs, then find prices, separate one-time/ongoing, and finally add them up for investor or bank documentation."
+   },
+   {
+    "kind": "fill",
+    "prompt": "Complete the sentence about PEST: The 'E' in PEST stands for ______, which includes factors like inflation, interest rates, and consumer spending.",
+    "before": "The 'E' in PEST stands for",
+    "after": ", which includes factors like inflation, interest rates, and consumer spending.",
+    "options": [
+     "Economic",
+     "Environmental",
+     "Educational",
+     "Entrepreneurial"
+    ],
+    "correctIndex": 0,
+    "feedback": "Economic factors include inflation, interest rates, and general consumer demand that affect resource costs and availability."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match each funding source with a key advantage.",
+    "pairs": [
+     [
+      "Venture capitalists",
+      "Large capital for rapid scaling"
+     ],
+     [
+      "Bootstrapping (own savings)",
+      "Full ownership and control retained"
+     ],
+     [
+      "Bank loan",
+      "Predictable repayment schedule"
+     ],
+     [
+      "Crowdfunding",
+      "Market validation and public pre-sales"
+     ]
+    ],
+    "feedback": "Each funding source has distinct pros: VCs provide big funds, bootstrapping keeps control, loans are predictable, and crowdfunding validates demand."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "375108b5-9c4",
+    "type": "mcq",
+    "question": "Which of the following best distinguishes tangible from intangible resources?",
+    "options": [
+     "Tangible resources are owned; intangible resources are rented",
+     "Tangible resources have physical form; intangible resources lack physical form",
+     "Tangible resources are always more valuable than intangible resources",
+     "Tangible resources cannot be protected legally; intangibles can"
+    ],
+    "correctIndex": 1,
+    "explanation": "Tangible resources can be seen and touched (e.g., machines), while intangible resources lack physical form (e.g., patents, brands).",
+    "concept": "Tangible vs intangible",
+    "difficulty": "easy"
+   },
+   {
+    "id": "f922dfe7-0ea",
+    "type": "mcq",
+    "question": "Which action is recommended before applying for a patent, trademark, or copyright?",
+    "options": [
+     "Immediately file without research to secure an early date",
+     "Check existing registrations (e.g., USPTO) and consider hiring an attorney",
+     "Only rely on informal common-law rights without registration",
+     "Wait until competitors copy you before applying"
+    ],
+    "correctIndex": 1,
+    "explanation": "Searching existing registrations and consulting an attorney helps ensure the idea is novel and navigates the complex, costly process.",
+    "concept": "IP protection",
+    "difficulty": "medium"
+   },
+   {
+    "id": "df469fd2-2e6",
+    "type": "mcq",
+    "question": "Under the PEST framework, which factor would include new data privacy laws that affect how you collect customer information?",
+    "options": [
+     "Sociocultural",
+     "Technological",
+     "Political",
+     "Economic"
+    ],
+    "correctIndex": 2,
+    "explanation": "Data privacy laws are political/legal factors that can restrict or mandate how businesses handle customer data.",
+    "concept": "PEST - political",
+    "difficulty": "medium"
+   },
+   {
+    "id": "1ce25d70-0da",
+    "type": "mcq",
+    "question": "A service-based business is likely to prioritize which tangible resource compared with a product-based business?",
+    "options": [
+     "Raw materials inventory",
+     "Manufacturing machinery",
+     "Professional office space or medical clinic",
+     "Large warehouse for inventory"
+    ],
+    "correctIndex": 2,
+    "explanation": "Service businesses often require facilities like offices or clinics rather than production machinery or warehouses.",
+    "concept": "Tangible resources",
+    "difficulty": "easy"
+   },
+   {
+    "id": "d43c3e7f-a85",
+    "type": "mcq",
+    "question": "Which funding source typically involves giving up some ownership or control in exchange for capital?",
+    "options": [
+     "Bootstrapping with personal savings",
+     "Bank loan with fixed repayments",
+     "Venture capitalists or angel investors",
+     "Using crowdfunding with pre-sales only"
+    ],
+    "correctIndex": 2,
+    "explanation": "Venture capitalists and angel investors usually take equity, reducing the entrepreneur's ownership and possibly influence over decisions.",
+    "concept": "Funding sources",
+    "difficulty": "easy"
+   },
+   {
+    "id": "e7c65fd2-9fc",
+    "type": "tf",
+    "question": "Resource dependence theory (RDT) encourages building networks like mergers or joint ventures to reduce competitive pressure and secure resources.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 0,
+    "explanation": "RDT emphasizes creating interorganizational networks (mergers, joint ventures, vertical integration) to manage dependence and access resources.",
+    "concept": "RDT",
+    "difficulty": "medium"
+   },
+   {
+    "id": "21eada1a-596",
+    "type": "mcq",
+    "question": "When estimating startup costs, which of the following is the correct way to categorize expenses?",
+    "options": [
+     "By vendor name and color coding",
+     "As recurring (ongoing) costs and one-time (startup) costs",
+     "Only consider one-time costs and ignore ongoing costs",
+     "Group all costs together without separation"
+    ],
+    "correctIndex": 1,
+    "explanation": "Separating one-time startup costs from ongoing recurring costs gives a clearer view of immediate financing needs and future cash flow requirements.",
+    "concept": "Cost estimation",
+    "difficulty": "easy"
+   },
+   {
+    "id": "e1f9f295-4c5",
+    "type": "mcq",
+    "question": "Which statement about protecting an invention is supported by the chapter?",
+    "options": [
+     "Hiring an attorney is unnecessary if you search the USPTO yourself",
+     "Patents, trademarks, and copyrights are cheap and quick to obtain",
+     "Always search existing records and consider legal help because protection can be lengthy and expensive",
+     "Protection automatically applies once you publicly announce your idea"
+    ],
+    "correctIndex": 2,
+    "explanation": "The chapter advises searching databases and hiring an attorney because the registration process can be lengthy, complex, and costly.",
+    "concept": "IP process",
+    "difficulty": "medium"
+   }
+  ],
+  "video": {
+   "youtubeId": "gBXJ_PhlADQ",
+   "title": "Enterprise Resource Planning (ERP) in 15 minutes",
+   "channel": "Leaders Talk - ThinkEduca",
+   "seconds": 892,
+   "checkedAt": 1792840563092
+  }
+ },
+ "c15": {
+  "interactive": [
+   {
+    "kind": "reveal",
+    "prompt": "Why is it important for the founding team to agree on a single vision statement before launch?",
+    "answer": "A shared vision aligns priorities, reduces conflicts over direction, guides decision-making, and helps attract the right investors and team members."
+   },
+   {
+    "kind": "choice",
+    "prompt": "Which document should define how founders’ contributions are valued and describe contingency plans if the business does not continue?",
+    "options": [
+     "Founders’ agreement",
+     "Code of conduct",
+     "Vision statement",
+     "Operational schedule"
+    ],
+    "correctIndex": 0,
+    "feedback": "The founders’ agreement addresses contributions, compensation, equity, and contingency plans if the business stops."
+   },
+   {
+    "kind": "order",
+    "prompt": "Put these steps for preparing an operational launch schedule in the correct order.",
+    "items": [
+     "Identify all operational tasks and their time requirements",
+     "Determine dependencies between tasks",
+     "Assign responsibilities and set launch dates",
+     "Review and build contingency flexibility into the schedule"
+    ],
+    "feedback": "A clear schedule starts with listing tasks and times, then their dependencies, then assignments/dates, and finally adding contingency flexibility."
+   },
+   {
+    "kind": "match",
+    "prompt": "Match each support source with the primary benefit it provides.",
+    "pairs": [
+     [
+      "Angel investor",
+      "Industry expertise and connections beyond funding"
+     ],
+     [
+      "Mentor",
+      "Practical guidance from prior entrepreneurial experience"
+     ],
+     [
+      "Local/regional groups",
+      "Access to community resources and localized support"
+     ]
+    ],
+    "feedback": "Different sources bring funding, experience, networks, or community resources—choose based on the support needed."
+   }
+  ],
+  "quiz": [
+   {
+    "id": "9a04202e-89b",
+    "type": "mcq",
+    "question": "Which of the following is NOT a purpose of a company code of conduct?",
+    "options": [
+     "Define expected behaviour and ethics",
+     "Outline operational task dependencies",
+     "Support company culture",
+     "Provide standards for employee interactions"
+    ],
+    "correctIndex": 1,
+    "explanation": "A code of conduct sets behavioural standards; operational task dependencies belong in the launch schedule or operations plan.",
+    "concept": "Code of conduct",
+    "difficulty": "easy"
+   },
+   {
+    "id": "d5accf2a-8cd",
+    "type": "mcq",
+    "question": "What is the best first step when the founding team encounters conflicting expectations about equity and time commitment?",
+    "options": [
+     "Hold an honest discussion and create a founders’ agreement",
+     "Postpone the launch indefinitely",
+     "Let the majority decide informally",
+     "Seek immediate external funding"
+    ],
+    "correctIndex": 0,
+    "explanation": "Open discussions and a founders’ agreement clarify contributions and avoid misguided expectations about equity and compensation.",
+    "concept": "Founders’ agreement",
+    "difficulty": "easy"
+   },
+   {
+    "id": "6fca52a8-770",
+    "type": "mcq",
+    "question": "Which planning action directly helps manage risks at launch?",
+    "options": [
+     "Identifying operational tasks, time requirements, and dependencies",
+     "Writing a vision statement after opening",
+     "Choosing branding colours first",
+     "Hiring all staff without trial periods"
+    ],
+    "correctIndex": 0,
+    "explanation": "A detailed operational plan with times and dependencies reveals risks and allows contingencies to be added before launch.",
+    "concept": "Operations",
+    "difficulty": "medium"
+   },
+   {
+    "id": "1388b880-d45",
+    "type": "mcq",
+    "question": "Which cognitive bias involves overestimating one’s ability to control outcomes?",
+    "options": [
+     "Illusion of control",
+     "Law of small numbers",
+     "Delphi effect",
+     "Nominal group bias"
+    ],
+    "correctIndex": 0,
+    "explanation": "The illusion of control is the tendency to overestimate control over events, which can prevent recognizing the need to change course.",
+    "concept": "Cognitive bias",
+    "difficulty": "medium"
+   },
+   {
+    "id": "23fac3de-a4d",
+    "type": "mcq",
+    "question": "Why might an entrepreneur select an angel investor beyond funding?",
+    "options": [
+     "For the investor’s industry knowledge, networks, and mentorship",
+     "To avoid creating a founders’ agreement",
+     "To guarantee short-term profits",
+     "To eliminate the need for operational planning"
+    ],
+    "correctIndex": 0,
+    "explanation": "Angel investors often provide expertise, industry connections, and guidance that help the venture grow beyond just capital.",
+    "concept": "Angel investor",
+    "difficulty": "easy"
+   },
+   {
+    "id": "336b498d-c5f",
+    "type": "mcq",
+    "question": "Which decision-making tool gathers anonymous expert opinions iteratively to build consensus?",
+    "options": [
+     "Delphi method",
+     "Nominal Group Technique",
+     "SWOT analysis",
+     "Founders’ agreement"
+    ],
+    "correctIndex": 0,
+    "explanation": "The Delphi method uses rounds of anonymous expert input to reach a consensus; the Nominal Group Technique is in-person ranking.",
+    "concept": "Decision tools",
+    "difficulty": "medium"
+   },
+   {
+    "id": "a39e70ec-732",
+    "type": "tf",
+    "question": "Staying openminded and flexible at launch reduces the chance of escalation of commitment.",
+    "options": [
+     "True",
+     "False"
+    ],
+    "correctIndex": 0,
+    "explanation": "Being open to new information and flexible helps prevent continuing to invest in failing strategies due to past commitments.",
+    "concept": "Flexibility",
+    "difficulty": "easy"
+   },
+   {
+    "id": "0fdc08e3-ca0",
+    "type": "mcq",
+    "question": "After exiting a venture, serving as a champion typically means:",
+    "options": [
+     "Publicly promoting and supporting other entrepreneurs or the venture community",
+     "Offering only financial investments without advice",
+     "Focusing solely on writing a reflection journal",
+     "Re-entering the same venture as CEO"
+    ],
+    "correctIndex": 0,
+    "explanation": "A champion advocates and promotes entrepreneurs or organizations, helping them gain visibility and support.",
+    "concept": "Champion",
+    "difficulty": "medium"
+   }
+  ],
+  "video": {
+   "youtubeId": "MdNNGfoxrqA",
+   "title": "What is Entrepreneurship? definition, characteristics and entrepreneurial process",
+   "channel": "Key Differences",
+   "seconds": 419,
+   "checkedAt": 1792840564541
+  }
+ }
+}
