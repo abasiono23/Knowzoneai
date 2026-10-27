@@ -69,7 +69,6 @@ export default function ForgotPasswordScreen() {
         textContentType="emailAddress"
         returnKeyType="send"
         onSubmitEditing={submit}
-        autoFocus
       />
     </AuthScreen>
   );

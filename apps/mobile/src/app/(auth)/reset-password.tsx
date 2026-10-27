@@ -91,7 +91,6 @@ export default function ResetPasswordScreen() {
         textContentType="newPassword"
         returnKeyType="next"
         onSubmitEditing={() => confirmRef.current?.focus()}
-        autoFocus
       />
       <PasswordStrength password={password} />
       <TextField

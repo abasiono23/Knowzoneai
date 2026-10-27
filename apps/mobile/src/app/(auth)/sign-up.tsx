@@ -72,7 +72,6 @@ export default function SignUpScreen() {
         textContentType="givenName"
         returnKeyType="next"
         onSubmitEditing={() => emailRef.current?.focus()}
-        autoFocus
       />
       <TextField
         ref={emailRef}

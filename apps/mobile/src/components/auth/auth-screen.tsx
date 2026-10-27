@@ -2,7 +2,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import type { ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
-import { KeyboardAvoidingView, Platform, Pressable, ScrollView, StyleSheet, View } from 'react-native';
+import { Pressable, ScrollView, StyleSheet, View } from 'react-native';
 import Animated, { FadeInDown } from 'react-native-reanimated';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
@@ -32,7 +32,7 @@ export function AuthScreen({ title, subtitle, hero, children, footer, back = tru
     <View style={styles.fill}>
       <Backdrop variant={backdrop} />
       <SafeAreaView style={styles.fill}>
-        <KeyboardAvoidingView style={styles.fill} behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
+        <View style={styles.fill}>
           {(back || step) && (
             <View style={styles.topBar}>
               {back && router.canGoBack() ? (
@@ -59,6 +59,7 @@ export function AuthScreen({ title, subtitle, hero, children, footer, back = tru
           <ScrollView
             contentContainerStyle={[styles.content, center && styles.centered]}
             keyboardShouldPersistTaps="handled"
+            automaticallyAdjustKeyboardInsets
             showsVerticalScrollIndicator={false}>
             {hero}
             {(title || subtitle) && (
@@ -87,7 +88,7 @@ export function AuthScreen({ title, subtitle, hero, children, footer, back = tru
               {footer}
             </Animated.View>
           )}
-        </KeyboardAvoidingView>
+        </View>
       </SafeAreaView>
     </View>
   );
