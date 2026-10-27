@@ -3,8 +3,6 @@ import { router, useLocalSearchParams } from 'expo-router';
 import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import {
-  KeyboardAvoidingView,
-  Platform,
   Pressable,
   ScrollView,
   StyleSheet,
@@ -77,7 +75,7 @@ export default function TutorChat() {
     <View style={{ flex: 1 }}>
       <Backdrop />
       <SafeAreaView style={{ flex: 1 }}>
-        <KeyboardAvoidingView style={{ flex: 1 }} behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
+        <View style={{ flex: 1 }}>
           <View style={styles.header}>
             <IconButton
               // IconButton doesn't mirror icons, so pick the arrow that points back in this direction.
@@ -167,7 +165,7 @@ export default function TutorChat() {
               />
             )}
           </View>
-        </KeyboardAvoidingView>
+        </View>
       </SafeAreaView>
       <ActionSheet
         visible={menuOpen}

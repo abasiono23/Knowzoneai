@@ -116,7 +116,6 @@ export default function NewClassScreen() {
         value={name}
         onChangeText={setName}
         autoCapitalize="words"
-        autoFocus
       />
       <Text variant="heading">{t('newClass.subject')}</Text>
       <ChipWrap>

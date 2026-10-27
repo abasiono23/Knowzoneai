@@ -112,7 +112,6 @@ export default function VideoSourceScreen() {
               placeholder={t('source.topicPlaceholder')}
               value={topic}
               onChangeText={setTopic}
-              autoFocus
             />
             <ChipWrap>
               {SUGGESTIONS.map((id) => {

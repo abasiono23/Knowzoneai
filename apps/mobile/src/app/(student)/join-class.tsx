@@ -75,7 +75,6 @@ export default function JoinClassScreen() {
         error={error}
         autoCapitalize="characters"
         autoCorrect={false}
-        autoFocus
         style={{ letterSpacing: 4, fontSize: 20 }}
       />
     </AuthScreen>

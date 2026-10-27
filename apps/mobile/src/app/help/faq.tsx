@@ -37,7 +37,7 @@ export default function FaqScreen() {
   return (
     <Screen withTabBar={false}>
       <ScreenHeader eyebrow={t('ui.eyebrow')} title={t('faq.title')} />
-      <SearchField value={q} onChangeText={setQ} autoFocus={!!params.q} />
+      <SearchField value={q} onChangeText={setQ} />
       {!q.trim() && (
         <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.chips}>
           <Chip label={t('faq.all')} selected={!category} onPress={() => setCategory(null)} />

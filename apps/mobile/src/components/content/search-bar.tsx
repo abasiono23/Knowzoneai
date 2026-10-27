@@ -9,10 +9,9 @@ type Props = {
   value: string;
   onChangeText: (q: string) => void;
   onSubmit: (q: string) => void;
-  autoFocus?: boolean;
 };
 
-export function SearchBar({ value, onChangeText, onSubmit, autoFocus }: Props) {
+export function SearchBar({ value, onChangeText, onSubmit }: Props) {
   const { t } = useTranslation('home');
   return (
     <View style={styles.row}>
@@ -34,7 +33,6 @@ export function SearchBar({ value, onChangeText, onSubmit, autoFocus }: Props) {
           placeholderTextColor={Colors.textMuted}
           selectionColor={Colors.primary}
           returnKeyType="search"
-          autoFocus={autoFocus}
           autoCorrect={false}
           accessibilityLabel={t('actions.search', { ns: 'common' })}
           style={styles.input}

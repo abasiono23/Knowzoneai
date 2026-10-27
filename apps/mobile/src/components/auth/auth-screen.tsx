@@ -59,7 +59,6 @@ export function AuthScreen({ title, subtitle, hero, children, footer, back = tru
           <ScrollView
             contentContainerStyle={[styles.content, center && styles.centered]}
             keyboardShouldPersistTaps="handled"
-            automaticallyAdjustKeyboardInsets
             showsVerticalScrollIndicator={false}>
             {hero}
             {(title || subtitle) && (

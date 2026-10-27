@@ -26,7 +26,7 @@ export default function SearchScreen() {
 
   return (
     <Screen withTabBar={false}>
-      <SearchBar value={q} onChangeText={setQ} onSubmit={submit} autoFocus />
+      <SearchBar value={q} onChangeText={setQ} onSubmit={submit} />
 
       {live ? (
         <View style={{ gap: 2 }}>

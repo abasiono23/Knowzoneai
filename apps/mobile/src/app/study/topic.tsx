@@ -46,7 +46,6 @@ export default function TopicScreen() {
         placeholder={t('topic.topicPlaceholder')}
         value={topic}
         onChangeText={setTopic}
-        autoFocus
       />
       <TextField
         label={t('topic.focusLabel')}
