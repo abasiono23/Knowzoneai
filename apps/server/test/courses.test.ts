@@ -5,8 +5,26 @@ import { invalidateCourses } from '../src/routes/courses.js';
 import { http, signIn } from './helpers.js';
 
 const QUIZ = [
-  { id: 'q1', type: 'mcq', question: 'Unit of force?', options: ['Newton', 'Joule', 'Watt', 'Volt'], correctIndex: 0, explanation: '…', concept: 'Force', difficulty: 'easy' },
-  { id: 'q2', type: 'tf', question: 'Speed is a vector.', options: ['True', 'False'], correctIndex: 1, explanation: '…', concept: 'Vectors', difficulty: 'easy' },
+  {
+    id: 'q1',
+    type: 'mcq',
+    question: 'Unit of force?',
+    options: ['Newton', 'Joule', 'Watt', 'Volt'],
+    correctIndex: 0,
+    explanation: '…',
+    concept: 'Force',
+    difficulty: 'easy',
+  },
+  {
+    id: 'q2',
+    type: 'tf',
+    question: 'Speed is a vector.',
+    options: ['True', 'False'],
+    correctIndex: 1,
+    explanation: '…',
+    concept: 'Vectors',
+    difficulty: 'easy',
+  },
 ];
 
 /** A small course: one chapter with a reading, a video and a quiz. */
@@ -25,15 +43,53 @@ async function seedCourse(id = 'physics') {
       requirements: [],
       exams: ['WAEC'],
       tags: ['motion'],
-      source: { book: 'Physics', authors: 'A. Author', publisher: 'OpenStax, Rice University', url: 'https://openstax.org', license: 'CC BY 4.0', licenseUrl: 'https://creativecommons.org/licenses/by/4.0/', attribution: 'Adapted from Physics…' },
+      source: {
+        book: 'Physics',
+        authors: 'A. Author',
+        publisher: 'OpenStax, Rice University',
+        url: 'https://openstax.org',
+        license: 'CC BY 4.0',
+        licenseUrl: 'https://creativecommons.org/licenses/by/4.0/',
+        attribution: 'Adapted from Physics…',
+      },
       modules: { create: { id: `${id}/m1`, position: 0, title: 'Motion', summary: 'Distance and displacement' } },
     },
   });
   await prisma.courseLesson.createMany({
     data: [
-      { id: `${id}/c1s1`, courseId: id, moduleId: `${id}/m1`, position: 0, title: 'Displacement', kind: 'reading', minutes: 6, summary: 'Define displacement', content: { reading: [{ heading: 'Defining motion', blocks: [{ type: 'p', text: 'Kinematics…' }] }] } },
-      { id: `${id}/c1video`, courseId: id, moduleId: `${id}/m1`, position: 1, title: 'Video: Motion', kind: 'video', minutes: 8, summary: 'A video', content: { video: { youtubeId: 'abc123def45', title: 'Motion', channel: 'Khan Academy', seconds: 480 } } },
-      { id: `${id}/c1quiz`, courseId: id, moduleId: `${id}/m1`, position: 2, title: 'Quiz: Motion', kind: 'quiz', minutes: 4, summary: '2 questions', content: { quiz: QUIZ } },
+      {
+        id: `${id}/c1s1`,
+        courseId: id,
+        moduleId: `${id}/m1`,
+        position: 0,
+        title: 'Displacement',
+        kind: 'reading',
+        minutes: 6,
+        summary: 'Define displacement',
+        content: { reading: [{ heading: 'Defining motion', blocks: [{ type: 'p', text: 'Kinematics…' }] }] },
+      },
+      {
+        id: `${id}/c1video`,
+        courseId: id,
+        moduleId: `${id}/m1`,
+        position: 1,
+        title: 'Video: Motion',
+        kind: 'video',
+        minutes: 8,
+        summary: 'A video',
+        content: { video: { youtubeId: 'abc123def45', title: 'Motion', channel: 'Khan Academy', seconds: 480 } },
+      },
+      {
+        id: `${id}/c1quiz`,
+        courseId: id,
+        moduleId: `${id}/m1`,
+        position: 2,
+        title: 'Quiz: Motion',
+        kind: 'quiz',
+        minutes: 4,
+        summary: '2 questions',
+        content: { quiz: QUIZ },
+      },
     ],
   });
   invalidateCourses();
@@ -122,5 +178,16 @@ describe('learning a course', () => {
     await as.delete(`/me/courses/physics/notes/${note.body.note.id}`).expect(200);
     expect((await as.get('/me/courses')).body.notes).toEqual({});
     await http().get('/me/courses').expect(401);
+  });
+});
+
+describe('course video player page', () => {
+  it('serves a YouTube player page that may frame YouTube and send its address; bad ids are refused', async () => {
+    const res = await http().get('/embed/youtube/ZAqIoDhornk').expect(200);
+    expect(res.type).toBe('text/html');
+    expect(res.text).toContain('https://www.youtube-nocookie.com/embed/ZAqIoDhornk?');
+    expect(res.headers['content-security-policy']).toContain('frame-src https://www.youtube-nocookie.com');
+    expect(res.headers['referrer-policy']).toBe('strict-origin-when-cross-origin');
+    await http().get('/embed/youtube/not-a-video"><script>').expect(404);
   });
 });

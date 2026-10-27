@@ -4,7 +4,7 @@ import helmet from 'helmet';
 import { ZodError } from 'zod';
 
 import { config } from './config.js';
-import { AppError } from './lib/errors.js';
+import { AppError, notFound } from './lib/errors.js';
 import { accountRouter } from './routes/account.js';
 import { billingRouter } from './routes/billing.js';
 import { catalogRouter } from './routes/catalog.js';
@@ -43,6 +43,23 @@ export function createApp() {
   });
   app.get('/health', (_req, res) => {
     res.json({ ok: true });
+  });
+  // The page the app's course videos play in. YouTube's embedded player only plays on a real web
+  // page that sends its address (a page made inside the app is refused with "Error 153"), so the
+  // app loads this one. Only this page may frame YouTube and send a referrer.
+  app.get('/embed/youtube/:id', (req, res) => {
+    const id = String(req.params.id);
+    if (!/^[\w-]{11}$/.test(id)) throw notFound('Video not found');
+    res
+      .set({
+        'Content-Security-Policy': "default-src 'none'; frame-src https://www.youtube-nocookie.com https://www.youtube.com; style-src 'unsafe-inline'",
+        'Referrer-Policy': 'strict-origin-when-cross-origin',
+        'Cache-Control': 'public, max-age=86400',
+      })
+      .type('html')
+      .send(
+        `<!doctype html><html><head><meta name="viewport" content="width=device-width,initial-scale=1"><style>html,body{margin:0;height:100%;background:#000}iframe{border:0;width:100%;height:100%}</style></head><body><iframe src="https://www.youtube-nocookie.com/embed/${id}?playsinline=1&rel=0&modestbranding=1" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></body></html>`,
+      );
   });
   app.use(photosRouter);
   app.use(accountRouter);
