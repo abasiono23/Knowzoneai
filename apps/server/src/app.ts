@@ -38,6 +38,9 @@ export function createApp() {
     }),
   );
 
+  app.get('/', (_req, res) => {
+    res.json({ name: 'Knowzone API', ok: true });
+  });
   app.get('/health', (_req, res) => {
     res.json({ ok: true });
   });
