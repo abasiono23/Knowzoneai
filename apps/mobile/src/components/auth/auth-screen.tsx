@@ -3,7 +3,6 @@ import { router } from 'expo-router';
 import type { ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Pressable, ScrollView, StyleSheet, View } from 'react-native';
-import Animated, { FadeInDown } from 'react-native-reanimated';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { Backdrop } from '@/components/brand/backdrop';
@@ -62,7 +61,7 @@ export function AuthScreen({ title, subtitle, hero, children, footer, back = tru
             showsVerticalScrollIndicator={false}>
             {hero}
             {(title || subtitle) && (
-              <Animated.View entering={FadeInDown.duration(500)} style={{ gap: Spacing.xs }}>
+              <View style={{ gap: Spacing.xs }}>
                 {title && (
                   <Text variant="display" center={center}>
                     {title}
@@ -73,19 +72,19 @@ export function AuthScreen({ title, subtitle, hero, children, footer, back = tru
                     {subtitle}
                   </Text>
                 )}
-              </Animated.View>
+              </View>
             )}
             {children && (
-              <Animated.View entering={FadeInDown.delay(120).duration(500)} style={{ gap: Spacing.md }}>
+              <View style={{ gap: Spacing.md }}>
                 {children}
-              </Animated.View>
+              </View>
             )}
           </ScrollView>
 
           {footer && (
-            <Animated.View entering={FadeInDown.delay(220).duration(500)} style={styles.footer}>
+            <View style={styles.footer}>
               {footer}
-            </Animated.View>
+            </View>
           )}
         </View>
       </SafeAreaView>
