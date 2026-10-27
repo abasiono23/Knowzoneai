@@ -82,6 +82,19 @@ import {
   type TechGame,
   type TechState,
 } from '../services/games/tech.js';
+import {
+  BUSINESS_GAMES,
+  buildBusinessPuzzle,
+  businessCheck,
+  businessHelpContext,
+  businessIsOver,
+  businessPublicState,
+  businessStars,
+  businessStepCount,
+  type BusinessAnswer,
+  type BusinessGame,
+  type BusinessState,
+} from '../services/games/business.js';
 import { recordQuestEvent } from '../services/quests.js';
 import { confirmReferralIfEligible } from '../services/referrals.js';
 import { me, requireAuth } from '../services/sessions.js';
@@ -95,8 +108,8 @@ export const DAILY_CAP = { xp: 400, coins: 150 };
 const DAY = 86_400_000;
 
 /** Games by subject. Game ids are unique across subjects. */
-const SUBJECTS = { english: ENGLISH_GAMES, chemistry: CHEMISTRY_GAMES, space: SPACE_GAMES, history: HISTORY_GAMES, tech: TECH_GAMES } as const;
-const Subject = z.enum(['english', 'chemistry', 'space', 'history', 'tech']);
+const SUBJECTS = { english: ENGLISH_GAMES, chemistry: CHEMISTRY_GAMES, space: SPACE_GAMES, history: HISTORY_GAMES, tech: TECH_GAMES, business: BUSINESS_GAMES } as const;
+const Subject = z.enum(['english', 'chemistry', 'space', 'history', 'tech', 'business']);
 const Level = z.coerce.number().int().min(1).max(MAX_LEVEL);
 
 /** A lab state: the run's puzzle and progress (each lab has its own puzzle shape). */
@@ -106,7 +119,7 @@ type LabState = { puzzle: unknown; progress: Progress };
  * They share one way of running: build from a seed, check on the server, stars at the end.
  */
 type Lab = {
-  subject: 'chemistry' | 'space' | 'history' | 'tech';
+  subject: 'chemistry' | 'space' | 'history' | 'tech' | 'business';
   games: readonly string[];
   build: (game: string, level: number, seed: string) => unknown;
   steps: (state: LabState) => number;
@@ -160,6 +173,17 @@ const LABS: Lab[] = [
     isOver: (s, hearts) => techIsOver(s as TechState, hearts),
     stars: (s) => techStars(s as TechState),
     help: (s) => techHelpContext(s as TechState),
+  },
+  {
+    subject: 'business',
+    games: BUSINESS_GAMES,
+    build: (game, level, seed) => buildBusinessPuzzle(game as BusinessGame, level, seed),
+    steps: (s) => businessStepCount((s as BusinessState).puzzle),
+    view: (s) => businessPublicState(s as BusinessState),
+    check: (s, a) => businessCheck(s as BusinessState, a as BusinessAnswer),
+    isOver: (s, hearts) => businessIsOver(s as BusinessState, hearts),
+    stars: (s) => businessStars(s as BusinessState),
+    help: (s) => businessHelpContext(s as BusinessState),
   },
 ];
 const labOf = (game: string) => LABS.find((l) => l.games.includes(game));
@@ -381,6 +405,8 @@ const AnswerBody = z.object({
     .optional(),
   bits: z.array(z.number().int().min(0).max(1)).max(16).optional(),
   gates: z.record(z.string().max(8), z.enum(['AND', 'OR', 'NOT', 'NAND', 'NOR', 'XOR', 'WIRE'])).optional(),
+  // Business District: a turn's decisions (staff, budget, price and stock, portfolio).
+  plan: z.record(z.string().max(24), z.number().min(0).max(1_000_000)).optional(),
 });
 
 /** Lab games: check an answer, update the run's progress, and answer the app. */

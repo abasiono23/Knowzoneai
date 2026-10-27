@@ -2,7 +2,7 @@
  * UI concept art for Knowzone World mini-games, made with OpenAI, to agree on a look before building.
  * Run from apps/server:
  *
- *   npx tsx scripts/ui-concepts.ts <output folder> [game id] [--set english|chemistry|chemistry-lab|space|history|quests|tech] [--n 2] [--quality medium|high]
+ *   npx tsx scripts/ui-concepts.ts <output folder> [game id] [--set english|chemistry|chemistry-lab|space|history|quests|tech|business] [--n 2] [--quality medium|high]
  *
  * Cost with gpt-image-1-mini: about $0.02–0.03 per portrait picture at medium quality.
  * These are mock-ups: the real screens are built in the app (real text, real fonts, translations).
@@ -470,6 +470,76 @@ const TECH: Record<string, { title: string; prompt: string }> = {
   },
 };
 
+/**
+ * Business, Finance & Economics, stylised 3D like the Tech Hub: a business district the learner walks
+ * around (startup office, bank, market square, factory, stock exchange). Led by a young white woman.
+ */
+const BUSINESS_STYLE = [
+  'A single mobile game screenshot, portrait phone screen (no phone frame, no hands), for a business, finance and economics learning game for secondary-school students around the world.',
+  'Visual style: stylised 3D game render, like a Pixar film or a premium console game: realistic lighting and materials (glass towers, polished wood, brass, paper money, coins, glowing charts), slightly cartoon proportions and friendly rounded shapes. Rich colours: warm cream and emerald green with deep navy, gold and coral accents.',
+  'The player character: a young white woman (about 19) with wavy auburn hair in a ponytail, light freckles and green eyes, wearing a smart emerald-green blazer over a white top with a small violet "K" logo badge on the blazer pocket, navy trousers and white sneakers, holding a tablet; stylised but believable, confident friendly face.',
+  'Game UI overlaid with clean, modern, semi-transparent dark navy panels with violet (#7C5CFF) and gold (#FFC857) accents and rounded corners:',
+  'top-left a round pause button; top-right a gold coin counter with a "K" coin and three small pink hearts;',
+  'an AI help button with a small violet owl icon labelled "Ask AI · 10" with a gold coin.',
+  'Money in the games is a fictional currency shown with the symbol "$". Bold sans-serif UI font. All English text must be spelled exactly as given; keep text short. No other words, no watermark, no other logos.',
+].join(' ');
+
+const BUSINESS: Record<string, { title: string; prompt: string }> = {
+  'business-hub': {
+    title: 'Business District (walking around)',
+    prompt: [
+      'Screen: exploring the Business District, a sunny stylised city square with a fountain, trees and glass towers. A wide 2.5D view from slightly above and behind; the young woman walks across the plaza.',
+      'Around the square, five buildings with floating labels: "Startup HQ" (a modern glass office with a rocket sign), "Budget Bank" (a classic bank with columns and a piggy bank sign), "Market Square" (colourful fruit and craft stalls with awnings), "Profit Factory" (a small brick factory with a conveyor and boxes), "Stock Exchange" (a grand building with a big glowing ticker board of rising and falling green and red arrows).',
+      'Bottom-left a round virtual joystick; bottom-right a big round action button "Enter".',
+    ].join(' '),
+  },
+  'startup-tycoon': {
+    title: 'Startup Tycoon',
+    prompt: [
+      'Game: "Startup Tycoon". A cutaway 3D view of a small startup office building, two floors, like a dollhouse: desks with computers, a coffee corner, a few cartoon staff working; an empty room with a "+" sign to build.',
+      'Top bar: "Month 6", cash "$12,400", a staff icon "5", a smiley "Morale 82%".',
+      'At the bottom a row of candidate cards to hire: "Designer · $900/month", "Developer · $1,200/month", "Salesperson · $800/month", each with a small portrait and a "Hire" button.',
+      'A small revenue chart going up, and a big gold button "Next month".',
+    ].join(' '),
+  },
+  'budget-master': {
+    title: 'Budget Master',
+    prompt: [
+      'Game: "Budget Master". The young woman sits at a cosy desk in a bright apartment, with a big paper-style budget planner in front.',
+      'Card at the top: "Monthly income $2,000". Below, a list of bills to drag money into: "Rent $700" (paid, green check), "Food $300", "Transport $120", "Phone $40", and a goal jar "Savings: new laptop $600" half full.',
+      'A pop-up event card: "Your friend invites you to a concert: $80" with two buttons "Go" and "Skip".',
+      'A ring chart showing needs, wants and savings, and a label "Left to plan: $440".',
+    ].join(' '),
+  },
+  'market-master': {
+    title: 'Market Master',
+    prompt: [
+      'Game: "Market Master". A lively outdoor market street; the young woman runs a lemonade and fruit stall with a striped awning; a queue of cartoon customers, and a rival stall across the street.',
+      'A price board on the stall: "Lemonade $2.50" with "−" and "+" buttons.',
+      'A supply and demand chart panel: a blue demand curve sloping down and an orange supply curve sloping up, crossing at a glowing dot, with the label "Best price".',
+      'Small labels: "Stock 40 cups", "Sold 26", "Hot day! Demand up", and a weather sun icon. A big gold button "Open stall".',
+    ].join(' '),
+  },
+  'profit-quest': {
+    title: 'Profit Quest',
+    prompt: [
+      'Game: "Profit Quest". Inside a cheerful small factory making cartoon backpacks on a conveyor belt; the young woman stands at a control panel.',
+      'A big panel: "Price per bag $25", "Cost per bag $14", "Fixed costs $1,500 per week", with sliders for "Production 200 bags" and "Price".',
+      'A profit result card: "Revenue $5,000 − Costs $4,300 = Profit $700" with the profit glowing green, and a small break-even chart.',
+      'A label "Week 3 of 8" and a big gold button "Run the week".',
+    ].join(' '),
+  },
+  'market-simulator': {
+    title: 'Market Simulator',
+    prompt: [
+      'Game: "Market Simulator". The young woman stands in front of a grand stock exchange wall of glowing screens with candlestick charts.',
+      'A portfolio card: "Portfolio $10,850 (+8.5%)" with a small pie chart of four fictional companies: "SunPower Energy", "GreenLeaf Foods", "RoboWorks", "City Bank".',
+      'A news ticker card: "Breaking: heatwave boosts energy demand!" with an upward green arrow.',
+      'Buttons "Buy" (green) and "Sell" (coral), and a label "Practice money only · Year 2, Q1". A big gold button "Next quarter".',
+    ].join(' '),
+  },
+};
+
 const SETS: Record<string, Record<string, { title: string; prompt: string }>> = {
   english: GAMES,
   chemistry: CHEMISTRY,
@@ -478,9 +548,10 @@ const SETS: Record<string, Record<string, { title: string; prompt: string }>> = 
   history: HISTORY,
   quests: QUESTS,
   tech: TECH,
+  business: BUSINESS,
 };
 /** Sets drawn in another style than the cartoon one. */
-const SET_STYLE: Record<string, string> = { 'chemistry-lab': REALISTIC, space: STYLISED, history: HISTORY_STYLE, quests: QUEST_STYLE, tech: TECH_STYLE };
+const SET_STYLE: Record<string, string> = { 'chemistry-lab': REALISTIC, space: STYLISED, history: HISTORY_STYLE, quests: QUEST_STYLE, tech: TECH_STYLE, business: BUSINESS_STYLE };
 
 const args = process.argv.slice(2);
 const flag = (name: string) => (args.includes(`--${name}`) ? args[args.indexOf(`--${name}`) + 1] : undefined);

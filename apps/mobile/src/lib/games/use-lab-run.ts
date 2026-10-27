@@ -15,6 +15,8 @@ import {
   type SpaceRun,
   type TechGameId,
   type TechRun,
+  type BusinessGameId,
+  type BusinessRun,
 } from '@/lib/api';
 import { useSession } from '@/lib/session';
 import { useWorld } from '@/lib/world/store';
@@ -23,7 +25,7 @@ import { useWorld } from '@/lib/world/store';
  * One lab game at a time, chosen while walking around (the chemistry lab, the Space Academy):
  * start, answer, ask Kora, finish and quit. Every answer is checked on the server.
  */
-export function useLabRun<R extends LabRun | SpaceRun | HistoryRun | TechRun = LabRun>() {
+export function useLabRun<R extends LabRun | SpaceRun | HistoryRun | TechRun | BusinessRun = LabRun>() {
   const { setUser } = useSession();
   const { settings } = useWorld();
   const [run, setRun] = useState<R | null>(null);
@@ -58,7 +60,9 @@ export function useLabRun<R extends LabRun | SpaceRun | HistoryRun | TechRun = L
           ? HistoryGameId
           : R extends TechRun
             ? TechGameId
-            : ChemGameId,
+            : R extends BusinessRun
+              ? BusinessGameId
+              : ChemGameId,
       level: number,
     ) => {
       setBusy(true);
@@ -150,3 +154,4 @@ export type LabGame = ReturnType<typeof useLabRun<LabRun>>;
 export type SpaceGame = ReturnType<typeof useLabRun<SpaceRun>>;
 export type HistoryGame = ReturnType<typeof useLabRun<HistoryRun>>;
 export type TechGame = ReturnType<typeof useLabRun<TechRun>>;
+export type BusinessGame = ReturnType<typeof useLabRun<BusinessRun>>;

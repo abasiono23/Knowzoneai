@@ -83,7 +83,7 @@ export function GamePicker<G extends string>({
   busy?: boolean;
   onStart: (game: G, level: number) => void;
   /** Where the games' names and how-to texts are (`games.<id>.name`). */
-  ns?: 'lab' | 'space' | 'history' | 'tech';
+  ns?: 'lab' | 'space' | 'history' | 'tech' | 'business';
 }) {
   const { t } = useTranslation('lab');
   const tn = useTranslation(ns).t;
@@ -173,7 +173,7 @@ export function LabResult({
   onNext: () => void;
   onReplay: () => void;
   onBack: () => void;
-  ns?: 'lab' | 'space' | 'history' | 'tech';
+  ns?: 'lab' | 'space' | 'history' | 'tech' | 'business';
 }) {
   const { t } = useTranslation(ns);
   const tg = useTranslation('games').t;

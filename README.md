@@ -626,6 +626,57 @@ reference). Designs and screenshots: `docs/design/tech-games/`. Art: `apps/serve
   journey stop can come later.
 - **Tests:** 162 server tests in total, 8 for Tech and 9 for the World backend.
 
+### Business District: Business, Finance & Economics (Knowzone World)
+
+A sunny city square the entrepreneur (a young woman in an emerald Knowzone blazer; the logo is fed to the image
+model as a reference) walks around: Startup HQ, Budget Bank, Market Square, Profit Factory and Stock Exchange.
+Designs: `docs/design/business-games/` (kept locally, not in git). Art: `apps/server/scripts/business-art.ts`.
+
+Four games are simulations the server runs turn by turn
+(`apps/server/src/services/games/business.ts`). A run is rebuilt from its seed plus the decisions so far, so the
+app can't change what already happened. The server sends ids and numbers; every word (dilemmas, life events,
+news, quiz questions, lessons) lives in the app's `business` translations. Money is a made-up "$". Each turn ends
+with a report and a business lesson.
+
+- **Startup Tycoon:** run one of five companies (bakery, phone repair, app studio, fashion, solar) for 5–8
+  months.
+  - **Each month:** hire or let go makers (capacity), sellers (customers) and support staff (one per four
+    teammates, or everyone slows down); choose marketing (diminishing returns); answer a management dilemma (20 in
+    all: retention, discounts, reviews, burnout, debt, rent, competitors, equity and dilution, tax, ethics…), each
+    option graded best, fair or poor.
+  - **The month's report:** a profit and loss statement (revenue, cost of sales, gross margin, salaries, rent,
+    marketing, one-offs, loan repayments, net profit, cash, runway).
+  - **The market:** it saturates, morale and reputation react, running out of cash ends the run.
+  - **The goal:** the founder's share of company value (cash + equipment − debt + 3 months of operating profit).
+    It is set per run at a share of what a sensible plan reaches. A scripted check confirms that doing nothing
+    falls short and that good management reaches it at every level.
+- **Budget Master:** split a monthly income across fixed bills, food (with a minimum), fun, clothes, an emergency
+  fund, a savings goal and (from level 3) extra credit-card payments.
+  - **Rules:** every dollar must be planned; card interest is charged monthly.
+  - **Life events:** 16 in all (repairs, sales, scams, payday loans, subscriptions, employer matching, car deals…).
+    Each is paid from the pot you choose, and anything the pot can't cover goes on the card.
+  - **Scoring:** food covered, saving at least 20%, wants at most 30% (shown as a 50/30/20 bar), the choice made,
+    and no new card debt.
+- **Market Master:** set the price and how much stock to buy each day.
+  - **Demand:** follows a demand curve, shifted by weather, festivals, rivals, supply shocks, tourists and more
+    (12 kinds of day, each with its economics idea).
+  - **Waste and research:** unsold stock is thrown away. Market research is exact up to level 3; after that there
+    is only a forecast, with hidden noise.
+  - **Scoring:** profit compared with the best possible that day.
+- **Profit Quest:** business maths with four options per question (contribution, break-even, profit, margin,
+  price for a target, a machine's new break-even) alternates with factory weeks.
+  - **Each week:** set the price and the quantity made, and (from level 3) invest in a machine or advertising.
+  - **Accounting:** profit counts the cost of goods sold, and leftover stock costs storage. Scored against the best
+    price that week.
+- **Market Simulator:** practice money only, in made-up companies.
+  - **Each quarter:** read the news (16 headlines, including hype that's already priced in and a crash), answer an
+    investing question (18), and spread the portfolio in 10% steps across cash, a bond fund, an index fund and 4–6
+    companies with different risk.
+  - **Scoring:** compared with the whole market. From level 3 there are fees, and more than 40% in one company
+    costs points.
+- **Quests:** Business games count towards "anywhere" quests.
+- **Tests:** 9 Business tests (171 server tests in total).
+
 ### Languages
 
 Choosing a language switches **everything the person sees**, plus the AI's explanations. There are 10 languages:

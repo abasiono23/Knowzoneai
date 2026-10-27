@@ -109,6 +109,16 @@ export type SpaceCatalogue = Omit<GamesCatalogue, 'games'> & { games: { id: Spac
 const HISTORY_GAMES: HistoryGameId[] = ['time-machine', 'lost-civilization', 'africa-explorer'];
 const TECH_GAMES: TechGameId[] = ['code-runner', 'cyber-defender', 'robot-rescue', 'binary-breaker', 'circuit-master'];
 export type TechCatalogue = Omit<GamesCatalogue, 'games'> & { games: { id: TechGameId; levels: GameLevel[] }[] };
+const BUSINESS_GAMES: BusinessGameId[] = [
+  'startup-tycoon',
+  'budget-master',
+  'market-master',
+  'profit-quest',
+  'market-simulator',
+];
+export type BusinessCatalogue = Omit<GamesCatalogue, 'games'> & {
+  games: { id: BusinessGameId; levels: GameLevel[] }[];
+};
 export type HistoryCatalogue = Omit<GamesCatalogue, 'games'> & { games: { id: HistoryGameId; levels: GameLevel[] }[] };
 export type GamesCatalogue = {
   games: { id: EnglishGameId; levels: GameLevel[] }[];
@@ -497,6 +507,210 @@ export type CyberDefenderRun = RunBase & {
 };
 export type TechRun = CodeRunnerRun | RobotRescueRun | BinaryBreakerRun | CircuitMasterRun | CyberDefenderRun;
 
+// Business District (Business, Finance & Economics): the server runs each simulation turn.
+export type BusinessGameId = 'startup-tycoon' | 'budget-master' | 'market-master' | 'profit-quest' | 'market-simulator';
+export type StaffRole = 'maker' | 'seller' | 'support';
+export type Grade = 'best' | 'ok' | 'poor';
+export type StartupReport = {
+  month: number;
+  dilemma: string;
+  choice: string;
+  grade: Grade;
+  best: string[];
+  demand: number;
+  capacity: number;
+  sold: number;
+  order: number;
+  revenue: number;
+  cogs: number;
+  gross: number;
+  payroll: number;
+  rent: number;
+  marketing: number;
+  other: number;
+  loan: number;
+  net: number;
+  operating: number;
+  cash: number;
+  morale: number;
+  rep: number;
+  runway: number | null;
+  margin: number;
+  overload: number;
+  market: number;
+};
+export type StartupTycoonRun = RunBase & {
+  game: 'startup-tycoon';
+  company: 'bakery' | 'repair' | 'apps' | 'fashion' | 'solar';
+  months: number;
+  goal: number;
+  startCash: number;
+  salary: Record<StaffRole, number>;
+  perMaker: number;
+  perSeller: number;
+  firm: {
+    cash: number;
+    staff: Record<StaffRole, number>;
+    morale: number;
+    rep: number;
+    price: number;
+    unitCost: number;
+    rent: number;
+    owned: number;
+    loanBalance: number;
+    bankrupt: boolean;
+    value: number;
+  };
+  dilemmas: { id: string; options: string[]; report?: StartupReport }[];
+};
+export type BudgetKey = 'food' | 'fun' | 'clothes' | 'emergency' | 'goal' | 'debt';
+export type BudgetReport = {
+  month: number;
+  income: number;
+  bills: Record<string, number>;
+  billTotal: number;
+  plan: Record<BudgetKey, number>;
+  event: string;
+  choice: string;
+  grade: Grade;
+  best: string[];
+  interest: number;
+  card: number;
+  debt: number;
+  emergency: number;
+  goal: number;
+  savingRate: number;
+  wantsRate: number;
+  foodOk: boolean;
+  points: number;
+};
+export type BudgetMasterRun = RunBase & {
+  game: 'budget-master';
+  income: number[];
+  foodMin: number;
+  goal: { id: string; amount: number };
+  emergencyTarget: number;
+  debtRate: number;
+  wallet: { emergency: number; goal: number; debt: number };
+  bills: Record<string, number>;
+  interest: number;
+  keys: BudgetKey[];
+  events: {
+    id: string;
+    options: {
+      id: string;
+      cost: number;
+      income: number;
+      bill: number;
+      from: 'fun' | 'emergency' | 'goal' | 'card' | null;
+    }[];
+    report?: BudgetReport;
+  }[];
+};
+export type DayReport = {
+  day: string;
+  idea: string;
+  price: number;
+  stock: number;
+  cost: number;
+  wanted: number;
+  sold: number;
+  wasted: number;
+  missed: number;
+  revenue: number;
+  stockCost: number;
+  fee: number;
+  profit: number;
+  bestPrice: number;
+  bestStock: number;
+  bestProfit: number;
+  rival: number | null;
+  points: number;
+};
+export type MarketMasterRun = RunBase & {
+  game: 'market-master';
+  product: 'lemonade' | 'fruit' | 'icePops' | 'sandwiches';
+  cost: number;
+  fee: number;
+  maxPrice: number;
+  days: {
+    id: string;
+    cost: number;
+    rival: number | null;
+    research?: { price: number; customers: number }[];
+    report?: DayReport;
+  }[];
+};
+export type WeekReport = {
+  price: number;
+  made: number;
+  wanted: number;
+  sold: number;
+  inventory: number;
+  revenue: number;
+  cogs: number;
+  fixed: number;
+  storage: number;
+  profit: number;
+  unit: number;
+  upgrade: 'machine' | 'ads' | null;
+  breakEven: number | null;
+  bestPrice: number;
+  bestProfit: number;
+  points: number;
+};
+export type CalcKind = 'contribution' | 'breakeven' | 'profit' | 'margin' | 'priceForTarget' | 'machine';
+export type ProfitQuestRun = RunBase & {
+  game: 'profit-quest';
+  product: 'backpacks' | 'bikes' | 'phoneCases' | 'shoes';
+  step: number;
+  plant: { unit: number; fixed: number; a: number; inventory: number; machine: boolean; ads: boolean };
+  upgrades: boolean;
+  maxPrice: number;
+  steps: (
+    | {
+        type: 'calc';
+        calc: CalcKind;
+        nums: Record<string, number>;
+        options: string[];
+        result?: PuzzleResult & { answer: string; choice?: string };
+      }
+    | {
+        type: 'week';
+        research?: { price: number; customers: number; about: boolean }[];
+        report?: WeekReport;
+      }
+  )[];
+};
+export type QuarterReport = {
+  quarter: number;
+  returns: Record<string, number>;
+  weights: Record<string, number>;
+  ret: number;
+  fees: number;
+  before: number;
+  value: number;
+  index: number;
+  indexValue: number;
+  concentrated: boolean;
+  quiz: string;
+  answer: string;
+  choice: string | null;
+  right: boolean;
+  points: number;
+};
+export type MarketSimulatorRun = RunBase & {
+  game: 'market-simulator';
+  stocks: { id: string; sector: string; risk: 'low' | 'medium' | 'high' }[];
+  assets: string[];
+  value: number;
+  index: number;
+  fees: boolean;
+  limit: number | null;
+  quarters: { news: string[]; quiz: { id: string; options: number }; report?: QuarterReport }[];
+};
+export type BusinessRun = StartupTycoonRun | BudgetMasterRun | MarketMasterRun | ProfitQuestRun | MarketSimulatorRun;
+
 // Knowzone World on the server: avatar and items, leagues, friends
 export type WorldAvatar = {
   skin: string;
@@ -570,7 +784,8 @@ export type GameRunPublic =
   | LabRun
   | SpaceRun
   | HistoryRun
-  | TechRun;
+  | TechRun
+  | BusinessRun;
 export type GameAnswer = {
   step?: number;
   letters?: string[];
@@ -597,6 +812,8 @@ export type GameAnswer = {
   cards?: RobotCard[];
   bits?: number[];
   gates?: Record<string, LogicGate>;
+  /** Business District: a turn's decisions. */
+  plan?: Record<string, number>;
 };
 export type GameOutcome = {
   correct: boolean;
@@ -635,7 +852,9 @@ export type GameOutcome = {
     | 'missed'
     | 'cards'
     | 'wrong'
-    | 'lit';
+    | 'lit'
+    | 'choose'
+    | 'unbalanced';
   solution?: Body[];
   /** Lost Civilization: where and when, once it's named. */
   about?: string;
@@ -1047,6 +1266,7 @@ export const api = {
   getSpaceGames: () => request<SpaceCatalogue>('/me/games/space'),
   getHistoryGames: () => request<HistoryCatalogue>('/me/games/history'),
   getTechGames: () => request<TechCatalogue>('/me/games/tech'),
+  getBusinessGames: () => request<BusinessCatalogue>('/me/games/business'),
 
   // World Quests
   getQuests: () => request<QuestBoards>('/me/quests'),
@@ -1074,7 +1294,10 @@ export const api = {
   addFriend: (code: string) => post<FriendsView>('/me/friends', { code }),
   acceptFriend: (requestId: string) => post<FriendsView>(`/me/friends/${requestId}/accept`, {}),
   removeFriend: (id: string) => request<FriendsView>(`/me/friends/${id}`, { method: 'DELETE' }),
-  startGame: (game: EnglishGameId | ChemGameId | SpaceGameId | HistoryGameId | TechGameId, level: number) =>
+  startGame: (
+    game: EnglishGameId | ChemGameId | SpaceGameId | HistoryGameId | TechGameId | BusinessGameId,
+    level: number,
+  ) =>
     post<{ run: GameRunPublic }>(
       `/me/games/${
         CHEM_GAMES.includes(game as ChemGameId)
@@ -1085,7 +1308,9 @@ export const api = {
               ? 'history'
               : TECH_GAMES.includes(game as TechGameId)
                 ? 'tech'
-                : 'english'
+                : BUSINESS_GAMES.includes(game as BusinessGameId)
+                  ? 'business'
+                  : 'english'
       }/${game}/runs`,
       { level },
     ),

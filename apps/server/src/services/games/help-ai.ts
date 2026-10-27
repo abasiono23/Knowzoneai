@@ -9,7 +9,7 @@ export const ASK_COST = 10;
  * Kora, the helper in the lab games (chemistry and space): a short, friendly hint about the current task. Kora is given the answer so
  * the guidance is correct, but must lead the learner to it rather than say it.
  */
-const PLACES = { chemistry: 'a chemistry lab game', space: 'a space and physics game', history: 'a history and geography game', tech: 'a technology and computer science game' };
+const PLACES = { chemistry: 'a chemistry lab game', space: 'a space and physics game', history: 'a history and geography game', tech: 'a technology and computer science game', business: 'a business, finance and economics game' };
 
 export async function askKora(userId: string, input: { subject: keyof typeof PLACES; context: string; question: string; language: LanguageId }) {
   const model = config.OPENAI_MODEL_TUTOR;

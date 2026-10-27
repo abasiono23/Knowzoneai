@@ -17,6 +17,7 @@ import { SCENES, STUDENT } from '@/lib/games/lab';
 import { EXPLORER, MUSEUM_SCENES } from '@/lib/games/history';
 import { PLACE_ICON } from '@/lib/quests/art';
 import { CODER, TECH_SCENES } from '@/lib/games/tech';
+import { BUSINESS_SCENES, ENTREPRENEUR } from '@/lib/games/business';
 import { useQuests } from '@/lib/quests/use-quests';
 import { useQuestTitle } from '@/components/quests/quest-ui';
 import { ASTRONAUT, SPACE_SCENES } from '@/lib/games/space';
@@ -34,6 +35,8 @@ const MUSEUM_HALL = MUSEUM_SCENES.museum;
 const MUSEUM_STUDENT = EXPLORER.front.src;
 const TECH_HALL = TECH_SCENES.hub;
 const TECH_STUDENT = CODER.front.src;
+const BUSINESS_HALL = BUSINESS_SCENES.hub;
+const BUSINESS_STUDENT = ENTREPRENEUR.front.src;
 /** Made with OpenAI (apps/server/scripts/world-art.ts, play-hero-tall): a student scientist and a student gamer. */
 const PLAY_HERO = require('@/assets/images/world/play-hero.webp');
 
@@ -194,6 +197,7 @@ export default function WorldMapScreen() {
       <LabCard ns="space" href="/world/space" scene={SPACE_HALL} student={SPACE_STUDENT} wide />
       <LabCard ns="history" href="/world/history" scene={MUSEUM_HALL} student={MUSEUM_STUDENT} />
       <LabCard ns="tech" href="/world/tech" scene={TECH_HALL} student={TECH_STUDENT} />
+      <LabCard ns="business" href="/world/business" scene={BUSINESS_HALL} student={BUSINESS_STUDENT} />
 
       <View style={styles.mapHead}>
         <Text variant="heading">{t('play.worldMap')}</Text>
@@ -244,7 +248,7 @@ function LabCard({
   student,
   wide,
 }: {
-  ns: 'lab' | 'space' | 'history' | 'tech';
+  ns: 'lab' | 'space' | 'history' | 'tech' | 'business';
   href: string;
   scene: number;
   student: number;

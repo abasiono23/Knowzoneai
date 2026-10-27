@@ -3,12 +3,12 @@
  * already checked). Titles live in the app (`quests` translations, by id) so they follow the
  * learner's language; `{{count}}` there is the target.
  */
-/** Places with their own quests (the Tech Hub's games count towards "anywhere" quests). */
+/** Places with their own quests (the Tech Hub's and Business District's games count towards "anywhere" quests). */
 export type Place = 'english' | 'chemistry' | 'space' | 'history';
 
 /** A finished game, as quests see it. */
 export type QuestEvent = {
-  subject: Place | 'tech';
+  subject: Place | 'tech' | 'business';
   game: string;
   level: number;
   stars: number;

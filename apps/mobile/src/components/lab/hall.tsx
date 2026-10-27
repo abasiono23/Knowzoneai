@@ -32,7 +32,7 @@ export function LabHall<S extends string = string>({
   openLabel,
 }: {
   place?: Place<S>;
-  ns?: 'lab' | 'space' | 'history' | 'tech';
+  ns?: 'lab' | 'space' | 'history' | 'tech' | 'business';
   onOpen: (station: S) => void;
   /** Small text under a station's name (stars, "Your list"…). */
   badges?: Partial<Record<S, string>>;
