@@ -5,7 +5,8 @@
 #     EXPO_PUBLIC_API_URL                    the server's public address (https://…)
 #     EXPO_PUBLIC_SUPABASE_URL               from the Supabase project settings
 #     EXPO_PUBLIC_SUPABASE_PUBLISHABLE_KEY   the publishable (anon) key — never the service key
-# - Optional: an Android keystore named "knowzone_keystore" (Code signing identities). Without it the
+# - Later, for the Play Store: upload an Android keystore named "knowzone_keystore" (Code signing
+#   identities) and add `android_signing: [knowzone_keystore]` under `environment` below. Until then the
 #   APK is signed with a debug key: fine for installing on phones to test, not for the Play Store.
 #   Keep the keystore and its passwords safe: every future update must be signed with the same one.
 
@@ -20,8 +21,6 @@ workflows:
       java: 17
       groups:
         - knowzone_app
-      android_signing:
-        - knowzone_keystore
       vars:
         EXPO_PUBLIC_USE_MOCKS: 'false'
     cache:
