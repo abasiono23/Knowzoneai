@@ -1,0 +1,53 @@
+/** Flashcards (French): the "Did you know?" feed of fun facts, with likes and comments. */
+import type { Translation } from '../../types';
+import type en from '../en/reels';
+
+const reels: Translation<typeof en> = {
+  title: 'Le savais-tu ?',
+  back: 'Retour',
+  offline: 'Les cartes ont besoin d’une connexion internet.',
+  loadFailed: 'Impossible de charger les cartes. Vérifie ta connexion et réessaie.',
+  retry: 'Réessayer',
+  didYouKnow: 'LE SAVAIS-TU ?',
+  card: '{{n}} sur {{total}}',
+  previous: 'Carte précédente',
+  next: 'Carte suivante',
+  like: 'J’aime',
+  unlike: 'Je n’aime plus',
+  comments: 'Commentaires',
+  share: 'Partager',
+  shareTail: 'Découvre d’autres faits amusants sur Knowzone AI.',
+  soundOn: 'Son',
+  soundOff: 'Muet',
+  mute: 'Couper la narration',
+  unmute: 'Écouter la narration (anglais)',
+  commentsTitle_one: '{{count}} commentaire',
+  commentsTitle_many: '{{count}} commentaires',
+  commentsTitle_other: '{{count}} commentaires',
+  noComments: 'Aucun commentaire pour l’instant. Sois le premier !',
+  placeholder: 'Ajouter un commentaire…',
+  send: 'Publier le commentaire',
+  you: 'Toi',
+  learner: 'Un élève',
+  delete: 'Supprimer ton commentaire',
+  report: 'Signaler ce commentaire',
+  reported: 'Signalé',
+  close: 'Fermer les commentaires',
+  rules: 'Reste gentil et dans le sujet. Les commentaires sont vérifiés avant d’apparaître.',
+  subjects: {
+    biology: 'Biologie',
+    'human body': 'Corps humain',
+    animals: 'Animaux',
+    chemistry: 'Chimie',
+    physics: 'Physique',
+    space: 'Espace',
+    mathematics: 'Mathématiques',
+    geography: 'Géographie',
+    history: 'Histoire',
+    technology: 'Technologie',
+    'economics and money': 'Argent & économie',
+    'languages and words': 'Langues & mots',
+  },
+};
+
+export default reels;

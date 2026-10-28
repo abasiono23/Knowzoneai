@@ -1,0 +1,52 @@
+/** Flashcards (Swahili): the "Did you know?" feed of fun facts, with likes and comments. */
+import type { Translation } from '../../types';
+import type en from '../en/reels';
+
+const reels: Translation<typeof en> = {
+  title: 'Je, wajua?',
+  back: 'Rudi',
+  offline: 'Kadi zinahitaji intaneti.',
+  loadFailed: 'Hatukuweza kupakia kadi. Angalia intaneti yako kisha ujaribu tena.',
+  retry: 'Jaribu tena',
+  didYouKnow: 'JE, WAJUA?',
+  card: '{{n}} kati ya {{total}}',
+  previous: 'Kadi iliyopita',
+  next: 'Kadi inayofuata',
+  like: 'Penda',
+  unlike: 'Ondoa kupenda',
+  comments: 'Maoni',
+  share: 'Shiriki',
+  shareTail: 'Jifunze mambo mengi ya kuvutia kwenye Knowzone AI.',
+  soundOn: 'Sauti',
+  soundOff: 'Kimya',
+  mute: 'Zima simulizi',
+  unmute: 'Cheza simulizi (Kiingereza)',
+  commentsTitle_one: 'Maoni {{count}}',
+  commentsTitle_other: 'Maoni {{count}}',
+  noComments: 'Bado hakuna maoni. Kuwa wa kwanza!',
+  placeholder: 'Andika maoni…',
+  send: 'Tuma maoni',
+  you: 'Wewe',
+  learner: 'Mwanafunzi',
+  delete: 'Futa maoni yako',
+  report: 'Ripoti maoni haya',
+  reported: 'Imeripotiwa',
+  close: 'Funga maoni',
+  rules: 'Kuwa mpole na usitoke nje ya mada. Maoni hukaguliwa kabla ya kuonekana.',
+  subjects: {
+    biology: 'Biolojia',
+    'human body': 'Mwili wa binadamu',
+    animals: 'Wanyama',
+    chemistry: 'Kemia',
+    physics: 'Fizikia',
+    space: 'Anga za juu',
+    mathematics: 'Hisabati',
+    geography: 'Jiografia',
+    history: 'Historia',
+    technology: 'Teknolojia',
+    'economics and money': 'Pesa na uchumi',
+    'languages and words': 'Lugha na maneno',
+  },
+};
+
+export default reels;

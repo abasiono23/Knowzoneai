@@ -1,0 +1,52 @@
+/** Flashcards (Nigerian Pidgin): the "Did you know?" feed of fun facts, with likes and comments. */
+import type { Translation } from '../../types';
+import type en from '../en/reels';
+
+const reels: Translation<typeof en> = {
+  title: 'You know say?',
+  back: 'Go back',
+  offline: 'Flashcards need internet connection.',
+  loadFailed: 'We no fit load the flashcards. Check your connection come try again.',
+  retry: 'Try again',
+  didYouKnow: 'YOU KNOW SAY?',
+  card: '{{n}} of {{total}}',
+  previous: 'Card wey pass',
+  next: 'Next card',
+  like: 'Like am',
+  unlike: 'Remove like',
+  comments: 'Comments',
+  share: 'Share',
+  shareTail: 'Learn more sweet facts for Knowzone AI.',
+  soundOn: 'Sound',
+  soundOff: 'Muted',
+  mute: 'Off the voice',
+  unmute: 'Play the voice (English)',
+  commentsTitle_one: '{{count}} comment',
+  commentsTitle_other: '{{count}} comments',
+  noComments: 'No comment never dey. Be the first!',
+  placeholder: 'Write comment…',
+  send: 'Post comment',
+  you: 'You',
+  learner: 'One learner',
+  delete: 'Delete your comment',
+  report: 'Report this comment',
+  reported: 'We don report am',
+  close: 'Close comments',
+  rules: 'Talk with respect and stay for the topic. We dey check comments before dem show.',
+  subjects: {
+    biology: 'Biology',
+    'human body': 'Human body',
+    animals: 'Animals',
+    chemistry: 'Chemistry',
+    physics: 'Physics',
+    space: 'Space',
+    mathematics: 'Maths',
+    geography: 'Geography',
+    history: 'History',
+    technology: 'Technology',
+    'economics and money': 'Money & economics',
+    'languages and words': 'Languages & words',
+  },
+};
+
+export default reels;

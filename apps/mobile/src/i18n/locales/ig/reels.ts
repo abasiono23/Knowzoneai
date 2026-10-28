@@ -1,0 +1,52 @@
+/** Flashcards (Igbo): ihe ngosi "Ị maara?" nke eziokwu na-atọ ụtọ, na mmasị na nkọwa. */
+import type { Translation } from '../../types';
+import type en from '../en/reels';
+
+const reels: Translation<typeof en> = {
+  title: 'Ị maara?',
+  back: 'Laghachi',
+  offline: 'Kaadị eziokwu chọrọ ịntanetị.',
+  loadFailed: 'Anyị enweghị ike ibulite kaadị ndị a. Lelee ịntanetị gị ma nwaa ọzọ.',
+  retry: 'Nwaa ọzọ',
+  didYouKnow: 'Ị MAARA?',
+  card: '{{n}} n’ime {{total}}',
+  previous: 'Kaadị gara aga',
+  next: 'Kaadị ọzọ',
+  like: 'Hụ n’anya',
+  unlike: 'Wepụ mmasị',
+  comments: 'Nkọwa',
+  share: 'Kesaa',
+  shareTail: 'Mụta eziokwu ndị ọzọ na-atọ ụtọ na Knowzone AI.',
+  soundOn: 'Ụda',
+  soundOff: 'Ụda gbanyụrụ',
+  mute: 'Gbanyụọ olu nkọwa',
+  unmute: 'Kpọọ olu nkọwa (Bekee)',
+  commentsTitle_one: 'Nkọwa {{count}}',
+  commentsTitle_other: 'Nkọwa {{count}}',
+  noComments: 'Enweghị nkọwa ọ bụla ugbu a. Bụrụ onye mbụ!',
+  placeholder: 'Dee nkọwa…',
+  send: 'Zipu nkọwa',
+  you: 'Gị',
+  learner: 'Otu onye mmụta',
+  delete: 'Hichapụ nkọwa gị',
+  report: 'Kọọ banyere nkọwa a',
+  reported: 'Akọọla ya',
+  close: 'Mechie nkọwa',
+  rules: 'Jiri obi ọma kwuo okwu ma nọrọ n’isiokwu. A na-enyocha nkọwa tupu ha apụta.',
+  subjects: {
+    biology: 'Bayọlọjị',
+    'human body': 'Ahụ mmadụ',
+    animals: 'Anụmanụ',
+    chemistry: 'Kemistrị',
+    physics: 'Fiziks',
+    space: 'Mbara igwe',
+    mathematics: 'Mgbakọ na mwepụ',
+    geography: 'Jọgrafị',
+    history: 'Akụkọ ihe mere eme',
+    technology: 'Teknụzụ',
+    'economics and money': 'Ego & akụnụba',
+    'languages and words': 'Asụsụ & okwu',
+  },
+};
+
+export default reels;

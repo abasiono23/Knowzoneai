@@ -10,6 +10,7 @@ import { billingRouter } from './routes/billing.js';
 import { catalogRouter } from './routes/catalog.js';
 import { coursesRouter } from './routes/courses.js';
 import { examsRouter } from './routes/exams.js';
+import { reelsRouter } from './routes/reels.js';
 import { gamesRouter } from './routes/games.js';
 import { questsRouter } from './routes/quests.js';
 import { worldRouter } from './routes/world.js';
@@ -78,6 +79,7 @@ export function createApp() {
   app.use(videosRouter);
   app.use(coursesRouter);
   app.use(examsRouter);
+  app.use(reelsRouter);
   app.use(materialsRouter);
 
   app.use((_req, res) => {

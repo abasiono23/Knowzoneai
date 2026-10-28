@@ -1,0 +1,52 @@
+/** Flashcards (Hausa): jerin "Ka sani?" na abubuwan ban sha'awa, tare da so da sharhi. */
+import type { Translation } from '../../types';
+import type en from '../en/reels';
+
+const reels: Translation<typeof en> = {
+  title: 'Ka sani?',
+  back: 'Koma baya',
+  offline: 'Katunan bayanai suna buƙatar intanet.',
+  loadFailed: 'Ba mu iya loda katunan ba. Duba haɗin intanet ɗinka kuma ka sake gwadawa.',
+  retry: 'Sake gwadawa',
+  didYouKnow: 'KA SANI?',
+  card: '{{n}} cikin {{total}}',
+  previous: 'Katin baya',
+  next: 'Katin gaba',
+  like: 'So',
+  unlike: 'Cire so',
+  comments: 'Sharhi',
+  share: 'Raba',
+  shareTail: 'Koyi ƙarin abubuwan ban sha’awa a Knowzone AI.',
+  soundOn: 'Sauti',
+  soundOff: 'An kashe sauti',
+  mute: 'Kashe muryar bayani',
+  unmute: 'Kunna muryar bayani (Turanci)',
+  commentsTitle_one: 'Sharhi {{count}}',
+  commentsTitle_other: 'Sharhi {{count}}',
+  noComments: 'Babu sharhi tukuna. Ka zama na farko!',
+  placeholder: 'Rubuta sharhi…',
+  send: 'Aika sharhi',
+  you: 'Kai',
+  learner: 'Wani ɗalibi',
+  delete: 'Goge sharhinka',
+  report: 'Kai rahoton wannan sharhi',
+  reported: 'An kai rahoto',
+  close: 'Rufe sharhi',
+  rules: 'Yi magana cikin ladabi kuma ka tsaya kan batun. Ana duba sharhi kafin ya bayyana.',
+  subjects: {
+    biology: 'Ilimin halittu',
+    'human body': 'Jikin ɗan adam',
+    animals: 'Dabbobi',
+    chemistry: 'Kimiyyar sinadarai',
+    physics: 'Fiziks',
+    space: 'Sararin samaniya',
+    mathematics: 'Lissafi',
+    geography: 'Labarin ƙasa',
+    history: 'Tarihi',
+    technology: 'Fasaha',
+    'economics and money': 'Kuɗi & tattalin arziki',
+    'languages and words': 'Harsuna & kalmomi',
+  },
+};
+
+export default reels;

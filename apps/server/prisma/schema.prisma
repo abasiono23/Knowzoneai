@@ -117,6 +117,8 @@ model User {
   lessonCompletions LessonCompletion[]
   courseAttempts    CourseQuizAttempt[]
   examAttempts      ExamAttempt[]
+  reelLikes         ReelLike[]
+  reelComments      ReelComment[]
   courseNotes       CourseNote[]
   courseRatings     CourseRating[]
   certificates      Certificate[]
@@ -1094,4 +1096,30 @@ model Friendship {
 
   @@unique([requesterId, addresseeId])
   @@index([addresseeId, status])
+}
+
+/// "Did you know?" reels (facts are files in data/facts): likes and comments.
+model ReelLike {
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  reelId    String
+  createdAt DateTime @default(now())
+
+  @@id([userId, reelId])
+  @@index([reelId])
+}
+
+/// A comment on a reel. Comments are screened by OpenAI moderation before they're saved; reported ones
+/// are hidden once enough people report them.
+model ReelComment {
+  id        String   @id @default(cuid())
+  reelId    String
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  text      String
+  reports   Int      @default(0)
+  hidden    Boolean  @default(false)
+  createdAt DateTime @default(now())
+
+  @@index([reelId, createdAt])
 }

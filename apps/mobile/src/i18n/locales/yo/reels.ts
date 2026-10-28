@@ -1,0 +1,52 @@
+/** Flashcards (Yoruba): ìfúnni "Ṣé o mọ̀?" ti àwọn òtítọ́ alárinrin, pẹ̀lú ìfẹ́ràn àti ọ̀rọ̀ ìwòye. */
+import type { Translation } from '../../types';
+import type en from '../en/reels';
+
+const reels: Translation<typeof en> = {
+  title: 'Ṣé o mọ̀?',
+  back: 'Padà',
+  offline: 'Àwọn káàdì òtítọ́ nílò íntánẹ́ẹ̀tì.',
+  loadFailed: 'A kò lè gbé àwọn káàdì wá. Ṣàyẹ̀wò íntánẹ́ẹ̀tì rẹ kí o sì tún gbìyànjú.',
+  retry: 'Tún gbìyànjú',
+  didYouKnow: 'ṢÉ O MỌ̀?',
+  card: '{{n}} nínú {{total}}',
+  previous: 'Káàdì tó ṣáájú',
+  next: 'Káàdì tó kàn',
+  like: 'Fẹ́ràn',
+  unlike: 'Yọ ìfẹ́ràn kúrò',
+  comments: 'Ọ̀rọ̀ ìwòye',
+  share: 'Pín',
+  shareTail: 'Kọ́ àwọn òtítọ́ alárinrin míì lórí Knowzone AI.',
+  soundOn: 'Ohùn',
+  soundOff: 'Ohùn pa',
+  mute: 'Pa ohùn àlàyé',
+  unmute: 'Ṣe ohùn àlàyé (Gẹ̀ẹ́sì)',
+  commentsTitle_one: 'Ọ̀rọ̀ ìwòye {{count}}',
+  commentsTitle_other: 'Ọ̀rọ̀ ìwòye {{count}}',
+  noComments: 'Kò sí ọ̀rọ̀ ìwòye síbẹ̀. Jẹ́ ẹni àkọ́kọ́!',
+  placeholder: 'Kọ ọ̀rọ̀ ìwòye…',
+  send: 'Fi ọ̀rọ̀ ìwòye ránṣẹ́',
+  you: 'Ìwọ',
+  learner: 'Akẹ́kọ̀ọ́ kan',
+  delete: 'Pa ọ̀rọ̀ ìwòye rẹ rẹ́',
+  report: 'Fi ẹjọ́ ọ̀rọ̀ ìwòye yìí sùn',
+  reported: 'A ti fi ẹjọ́ sùn',
+  close: 'Pa ọ̀rọ̀ ìwòye dé',
+  rules: 'Sọ̀rọ̀ pẹ̀lú inúrere, kí o sì dúró lórí kókó. A máa ń ṣàyẹ̀wò ọ̀rọ̀ ìwòye kí ó tó hàn.',
+  subjects: {
+    biology: 'Bàyọ́lọ́jì',
+    'human body': 'Ara ènìyàn',
+    animals: 'Ẹranko',
+    chemistry: 'Kẹ́mísírì',
+    physics: 'Físíìsì',
+    space: 'Òfurufú',
+    mathematics: 'Ìṣirò',
+    geography: 'Jọ́gíráfì',
+    history: 'Ìtàn',
+    technology: 'Ìmọ̀ ẹ̀rọ',
+    'economics and money': 'Owó & ọrọ̀ ajé',
+    'languages and words': 'Èdè & ọ̀rọ̀',
+  },
+};
+
+export default reels;

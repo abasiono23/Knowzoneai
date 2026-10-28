@@ -666,6 +666,33 @@ A card on the dashboard opens Past Questions: choose the exam, then the subject,
 - **Migration:** `20261027120000_exam_attempts`. It also switches on Row Level Security for the four World tables
   added on 26 October, which had missed it.
 
+### Flashcards: "Did you know?" reels
+
+The dashboard's Flashcards tile opens a feed like short videos: swipe up for the next reel.
+
+- **Each reel:**
+  - One fun fact explained in 5 cards: the hook ("Did you know…?"), three cards explaining it, and a takeaway.
+  - Every card has its own realistic picture and English narration. The picture slowly zooms while the words
+    slide in, story-style progress bars sit at the top, a tap on either side goes back or forward a card, and
+    holding pauses.
+  - Narration is on by default in English. In other languages the cards show translated words, and the English
+    narration is one tap away.
+- **Content:**
+  - `scripts/fun-facts.ts` writes facts in 12 subjects and keeps only the ones a second, independent AI pass
+    confirms are accurate. Each reel is checked again as a whole, translated into the other 9 languages, and
+    given its pictures and narration (gpt-image-1-mini at low quality, gpt-4o-mini-tts).
+  - Files in `apps/server/data/facts/` (`reels.json`, `img/`, `audio/`), served by the API. Made once: about $3
+    for 60 reels. Users watching them cost nothing.
+- **Likes and comments** (`ReelLike`, `ReelComment`):
+  - Comments are screened by OpenAI's moderation endpoint (free) before they're saved.
+  - Limits: 10 comments an hour, and none on accounts restricted from commenting.
+  - Visibility: comments from people you blocked are hidden, and a comment is hidden for everyone after 3
+    reports.
+  - Names: they follow each person's profile visibility.
+- **Endpoints:** `GET /reels`, `GET /reels/media/:file`, `GET /reels/:id/comments`, `POST /me/reels/:id/like`,
+  `POST /me/reels/:id/comments`, `DELETE /me/reels/comments/:id`, `POST /me/reels/comments/:id/report`.
+- **Migration:** `20261028120000_fact_reels`.
+
 ### Business District: Business, Finance & Economics (Knowzone World)
 
 A sunny city square the entrepreneur (a young woman in an emerald Knowzone blazer; the logo is fed to the image

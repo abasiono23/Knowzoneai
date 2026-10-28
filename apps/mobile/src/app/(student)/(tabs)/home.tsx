@@ -28,7 +28,7 @@ const QUICK: {
   href?: string;
 }[] = [
   { id: 'rooms', icon: 'account-group', colors: ['#9B6BFF', '#6A45FF'] },
-  { id: 'flashcards', icon: 'play-circle', colors: ['#FF6FB5', '#E0459A'], href: '/study/library' },
+  { id: 'flashcards', icon: 'play-circle', colors: ['#FF6FB5', '#E0459A'], href: '/reels' },
   { id: 'videos', icon: 'video', colors: ['#3BA9FF', '#1F6FE5'], href: '/videos' },
   { id: 'challenges', icon: 'trophy', colors: ['#FFB547', '#FF8A1F'], href: '/world/daily' },
   { id: 'tutor', icon: 'robot-happy', colors: ['#3DDCB0', '#14A88E'], href: '/tutor' },

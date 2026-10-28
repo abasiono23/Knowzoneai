@@ -1,0 +1,53 @@
+/** Flashcards (Spanish): the "Did you know?" feed of fun facts, with likes and comments. */
+import type { Translation } from '../../types';
+import type en from '../en/reels';
+
+const reels: Translation<typeof en> = {
+  title: '¿Sabías que…?',
+  back: 'Volver',
+  offline: 'Las tarjetas necesitan conexión a internet.',
+  loadFailed: 'No pudimos cargar las tarjetas. Revisa tu conexión e inténtalo de nuevo.',
+  retry: 'Intentar de nuevo',
+  didYouKnow: '¿SABÍAS QUE…?',
+  card: '{{n}} de {{total}}',
+  previous: 'Tarjeta anterior',
+  next: 'Tarjeta siguiente',
+  like: 'Me gusta',
+  unlike: 'Ya no me gusta',
+  comments: 'Comentarios',
+  share: 'Compartir',
+  shareTail: 'Aprende más datos curiosos en Knowzone AI.',
+  soundOn: 'Sonido',
+  soundOff: 'Silencio',
+  mute: 'Silenciar narración',
+  unmute: 'Escuchar narración (inglés)',
+  commentsTitle_one: '{{count}} comentario',
+  commentsTitle_many: '{{count}} comentarios',
+  commentsTitle_other: '{{count}} comentarios',
+  noComments: 'Aún no hay comentarios. ¡Sé el primero!',
+  placeholder: 'Escribe un comentario…',
+  send: 'Publicar comentario',
+  you: 'Tú',
+  learner: 'Un estudiante',
+  delete: 'Borrar tu comentario',
+  report: 'Denunciar este comentario',
+  reported: 'Denunciado',
+  close: 'Cerrar comentarios',
+  rules: 'Sé amable y no te salgas del tema. Los comentarios se revisan antes de publicarse.',
+  subjects: {
+    biology: 'Biología',
+    'human body': 'Cuerpo humano',
+    animals: 'Animales',
+    chemistry: 'Química',
+    physics: 'Física',
+    space: 'Espacio',
+    mathematics: 'Matemáticas',
+    geography: 'Geografía',
+    history: 'Historia',
+    technology: 'Tecnología',
+    'economics and money': 'Dinero y economía',
+    'languages and words': 'Idiomas y palabras',
+  },
+};
+
+export default reels;
