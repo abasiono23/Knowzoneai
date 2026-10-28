@@ -1,5 +1,5 @@
-import { Ionicons } from '@expo/vector-icons';
-import { LinearGradient } from 'expo-linear-gradient';
+import { Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
+import { LinearGradient } from '@/components/ui/gradient';
 import { router, useFocusEffect, type Href } from 'expo-router';
 import { useCallback, useMemo, useState } from 'react';
 import { Trans, useTranslation } from 'react-i18next';
@@ -20,6 +20,20 @@ import { reasonText, recommend } from '@/lib/recommend';
 import { useActivity } from '@/lib/rewards/activity';
 import { useSession } from '@/lib/session';
 
+/** The dashboard's quick actions (Study Rooms isn't built yet: it explains that instead of opening). */
+const QUICK: {
+  id: 'rooms' | 'flashcards' | 'videos' | 'challenges' | 'tutor';
+  icon: keyof typeof MaterialCommunityIcons.glyphMap;
+  colors: readonly [string, string];
+  href?: string;
+}[] = [
+  { id: 'rooms', icon: 'account-group', colors: ['#9B6BFF', '#6A45FF'] },
+  { id: 'flashcards', icon: 'play-circle', colors: ['#FF6FB5', '#E0459A'], href: '/study/library' },
+  { id: 'videos', icon: 'video', colors: ['#3BA9FF', '#1F6FE5'], href: '/videos' },
+  { id: 'challenges', icon: 'trophy', colors: ['#FFB547', '#FF8A1F'], href: '/world/daily' },
+  { id: 'tutor', icon: 'robot-happy', colors: ['#3DDCB0', '#14A88E'], href: '/tutor' },
+];
+
 function greetingKey() {
   const h = new Date().getHours();
   if (h < 12) return 'greeting.morning' as const;
@@ -33,6 +47,7 @@ export default function HomeScreen() {
   const { t: tPlan } = useTranslation('personalize');
   const { t: tExams } = useTranslation('exams');
   const [now] = useState(() => Date.now());
+  const [soon, setSoon] = useState(false);
   const { current: streak } = useActivity(now);
   const lib = useLibrary();
   const { materials: packs } = useMaterials();
@@ -116,7 +131,7 @@ export default function HomeScreen() {
 
       {/* Daily goal, streak and level */}
       <LinearGradient
-        colors={['#1F1A5C', '#141A3A']}
+        colors={['#F1ECFF', '#FFFFFF']}
         start={{ x: 0, y: 0 }}
         end={{ x: 1, y: 1 }}
         style={styles.goalCard}>
@@ -171,6 +186,41 @@ export default function HomeScreen() {
           </Text>
         </View>
       </LinearGradient>
+
+      {/* Quick actions */}
+      <View style={styles.quick}>
+        {QUICK.map((q) => (
+          <Pressable
+            key={q.id}
+            onPress={() => (q.href ? router.push(q.href as Href) : setSoon((v) => !v))}
+            accessibilityRole="button"
+            accessibilityLabel={`${t(`home.quickActions.${q.id}.title`)}. ${t(`home.quickActions.${q.id}.body`)}`}
+            style={({ pressed }) => [styles.quickItem, pressed && { transform: [{ scale: 0.96 }] }]}>
+            <LinearGradient colors={q.colors} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={styles.quickIcon}>
+              <MaterialCommunityIcons name={q.icon} size={28} color="#fff" />
+            </LinearGradient>
+            <Text variant="small" center numberOfLines={1} style={{ fontFamily: 'Manrope_700Bold', fontSize: 13 }}>
+              {t(`home.quickActions.${q.id}.title`)}
+            </Text>
+            <Text
+              variant="small"
+              center
+              numberOfLines={1}
+              color={Colors.textMuted}
+              style={{ fontSize: 11, lineHeight: 14 }}>
+              {t(`home.quickActions.${q.id}.body`)}
+            </Text>
+          </Pressable>
+        ))}
+      </View>
+      {soon && (
+        <Card style={{ flexDirection: 'row', alignItems: 'center', gap: Spacing.sm }}>
+          <MaterialCommunityIcons name="account-group" size={22} color={Colors.primary} />
+          <Text variant="small" color={Colors.textSecondary} style={{ flex: 1 }}>
+            {t('home.quickActions.soon')}
+          </Text>
+        </Card>
+      )}
 
       {/* Past Questions: JAMB, WAEC and NECO */}
       <Pressable
@@ -355,6 +405,17 @@ function Shortcut({
 }
 
 const styles = StyleSheet.create({
+  quick: { flexDirection: 'row', justifyContent: 'space-between', gap: 4 },
+  quickItem: { flex: 1, alignItems: 'center', gap: 2 },
+  quickIcon: {
+    width: 58,
+    height: 58,
+    borderRadius: 18,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginBottom: 4,
+    boxShadow: '0 6px 14px rgba(124, 92, 255, 0.22)',
+  },
   exams: { flexDirection: 'row', alignItems: 'center', gap: Spacing.md, padding: Spacing.lg, borderRadius: Radius.lg },
   examChips: { flexDirection: 'row', gap: 6, marginTop: 4 },
   examChip: {

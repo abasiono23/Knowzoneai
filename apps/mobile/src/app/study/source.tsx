@@ -74,7 +74,7 @@ export default function SelectSourceScreen() {
                 <Text variant="bodyStrong">{t(`source.${s.key}.title`)}</Text>
                 {s.badge && (
                   <View style={styles.badge}>
-                    <Text variant="label" color={Colors.backgroundDeep} style={{ fontSize: 9, lineHeight: 13 }}>
+                    <Text variant="label" color={Colors.onBright} style={{ fontSize: 9, lineHeight: 13 }}>
                       {t('source.upload.badge')}
                     </Text>
                   </View>

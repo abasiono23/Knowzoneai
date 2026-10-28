@@ -1,5 +1,5 @@
 import { Ionicons } from '@expo/vector-icons';
-import { LinearGradient } from 'expo-linear-gradient';
+import { LinearGradient } from '@/components/ui/gradient';
 import { router, type Href } from 'expo-router';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -120,7 +120,7 @@ export default function ProfileScreen() {
           accessibilityLabel={t('editProfile.changePhotoA11y')}>
           <ProfileAvatar size={96} />
           <View style={styles.camera}>
-            <Ionicons name="camera" size={14} color={Colors.backgroundDeep} />
+            <Ionicons name="camera" size={14} color={Colors.onBright} />
           </View>
         </Pressable>
         <Text variant="title" center>
@@ -242,7 +242,7 @@ export default function ProfileScreen() {
                 <LinearGradient
                   colors={earned ? Gradients.reward : [Colors.surfaceRaised, Colors.surfaceRaised]}
                   style={styles.badgeIcon}>
-                  <Ionicons name={b.icon} size={24} color={earned ? Colors.backgroundDeep : Colors.textMuted} />
+                  <Ionicons name={b.icon} size={24} color={earned ? Colors.onBright : Colors.textMuted} />
                 </LinearGradient>
                 <Text variant="label" center>
                   {t(`profile.badges.${b.id}`)}
@@ -287,14 +287,14 @@ export default function ProfileScreen() {
         {user.plan === 'FREE' ? (
           <LinearGradient colors={Gradients.reward} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={styles.upgrade}>
             <View style={{ flex: 1, gap: 4 }}>
-              <Text variant="heading" color={Colors.backgroundDeep}>
+              <Text variant="heading" color={Colors.onBright}>
                 {t('profile.goPlus')}
               </Text>
-              <Text variant="small" color={Colors.backgroundDeep}>
+              <Text variant="small" color={Colors.onBright}>
                 {t('profile.goPlusBody', { credits: MONTHLY_CREDITS.PLUS })}
               </Text>
             </View>
-            <Ionicons name="arrow-forward-circle" size={32} color={Colors.backgroundDeep} />
+            <Ionicons name="arrow-forward-circle" size={32} color={Colors.onBright} />
           </LinearGradient>
         ) : (
           <LinearGradient

@@ -94,7 +94,7 @@ export default function LearningStatsScreen() {
           {week.map((d) => (
             <View key={d.key} style={{ alignItems: 'center', gap: 4 }}>
               <View style={[styles.day, d.on && styles.dayOn]}>
-                {d.on && <Ionicons name="checkmark" size={14} color={Colors.backgroundDeep} />}
+                {d.on && <Ionicons name="checkmark" size={14} color={Colors.onBright} />}
               </View>
               <Text variant="small" color={Colors.textMuted} style={{ fontSize: 11 }}>
                 {d.label}

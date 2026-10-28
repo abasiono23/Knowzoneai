@@ -1,5 +1,5 @@
 import { Ionicons } from '@expo/vector-icons';
-import { LinearGradient } from 'expo-linear-gradient';
+import { LinearGradient } from '@/components/ui/gradient';
 import type { ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
 import { StyleSheet, View, type ViewStyle } from 'react-native';
@@ -270,11 +270,11 @@ const styles = StyleSheet.create({
     paddingLeft: 7,
     paddingRight: 12,
     borderRadius: Radius.pill,
-    backgroundColor: 'rgba(26, 33, 80, 0.92)',
+    backgroundColor: Colors.surface,
     borderWidth: 1,
     borderColor: Colors.borderStrong,
-    shadowColor: '#000',
-    shadowOpacity: 0.35,
+    shadowColor: '#5B45C9',
+    shadowOpacity: 0.18,
     shadowRadius: 12,
     shadowOffset: { width: 0, height: 6 },
     elevation: 6,
@@ -287,7 +287,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: Colors.borderStrong,
     overflow: 'hidden',
-    shadowColor: '#000',
+    shadowColor: '#5B45C9',
     shadowOpacity: 0.5,
     shadowRadius: 24,
     elevation: 12,

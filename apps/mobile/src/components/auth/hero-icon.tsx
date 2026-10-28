@@ -1,5 +1,5 @@
 import { Ionicons } from '@expo/vector-icons';
-import { LinearGradient } from 'expo-linear-gradient';
+import { LinearGradient } from '@/components/ui/gradient';
 import Animated, { ZoomIn } from 'react-native-reanimated';
 
 import { Colors, Gradients, Radius } from '@/constants/theme';
@@ -54,7 +54,7 @@ export function HeroIcon({ icon, colors = Gradients.ai, size = 88, badge }: Prop
             alignItems: 'center',
             justifyContent: 'center',
           }}>
-          <Ionicons name={badge} size={14} color={Colors.backgroundDeep} />
+          <Ionicons name={badge} size={14} color={Colors.onBright} />
         </Animated.View>
       )}
     </Animated.View>

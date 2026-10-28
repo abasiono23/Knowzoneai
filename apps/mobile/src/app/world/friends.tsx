@@ -174,7 +174,7 @@ export default function FriendsScreen() {
                 disabled={busy}
                 accessibilityRole="button"
                 style={styles.accept}>
-                <Text variant="small" color={Colors.backgroundDeep} style={{ fontFamily: 'Manrope_700Bold' }}>
+                <Text variant="small" color={Colors.onBright} style={{ fontFamily: 'Manrope_700Bold' }}>
                   {t('friends.accept')}
                 </Text>
               </Pressable>

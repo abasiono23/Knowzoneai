@@ -1,5 +1,5 @@
 import { Ionicons } from '@expo/vector-icons';
-import { LinearGradient } from 'expo-linear-gradient';
+import { LinearGradient } from '@/components/ui/gradient';
 import { router } from 'expo-router';
 import { useState } from 'react';
 import { Trans, useTranslation } from 'react-i18next';
@@ -52,7 +52,7 @@ export default function ReferralProgressScreen() {
                 <LinearGradient
                   colors={got ? Gradients.reward : [Colors.surfaceRaised, Colors.surfaceRaised]}
                   style={styles.medal}>
-                  <Ionicons name={m.icon} size={20} color={got ? Colors.backgroundDeep : Colors.textMuted} />
+                  <Ionicons name={m.icon} size={20} color={got ? Colors.onBright : Colors.textMuted} />
                 </LinearGradient>
                 <Text variant="label" color={got ? Colors.reward : Colors.textMuted} style={{ fontSize: 10 }}>
                   {m.friends}

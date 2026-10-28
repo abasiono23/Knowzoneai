@@ -55,7 +55,7 @@ function Curriculum({ course }: { course: Course }) {
               style={styles.head}>
               <View style={[styles.num, doneHere === m.lessons.length && { backgroundColor: Colors.success }]}>
                 {doneHere === m.lessons.length ? (
-                  <Ionicons name="checkmark" size={16} color={Colors.backgroundDeep} />
+                  <Ionicons name="checkmark" size={16} color={Colors.onBright} />
                 ) : (
                   <Text variant="label">{mi + 1}</Text>
                 )}

@@ -58,7 +58,7 @@ export function OptionCard({
           <Text variant="bodyStrong">{label}</Text>
           {badge && (
             <View style={styles.badge}>
-              <Text variant="label" color={Colors.backgroundDeep} style={{ fontSize: 10, lineHeight: 14 }}>
+              <Text variant="label" color={Colors.onBright} style={{ fontSize: 10, lineHeight: 14 }}>
                 {badge}
               </Text>
             </View>

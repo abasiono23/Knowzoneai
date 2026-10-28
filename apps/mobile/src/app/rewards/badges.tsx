@@ -1,5 +1,5 @@
 import { Ionicons } from '@expo/vector-icons';
-import { LinearGradient } from 'expo-linear-gradient';
+import { LinearGradient } from '@/components/ui/gradient';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Modal, Pressable, StyleSheet, View } from 'react-native';
@@ -168,7 +168,7 @@ export default function BadgesScreen() {
                 <LinearGradient
                   colors={got ? Gradients.reward : [Colors.surfaceRaised, Colors.surfaceRaised]}
                   style={styles.medal}>
-                  <Ionicons name={b.icon} size={26} color={got ? Colors.backgroundDeep : Colors.textMuted} />
+                  <Ionicons name={b.icon} size={26} color={got ? Colors.onBright : Colors.textMuted} />
                 </LinearGradient>
                 <Text
                   variant="small"
@@ -197,7 +197,7 @@ export default function BadgesScreen() {
                 <Ionicons
                   name={open.icon}
                   size={44}
-                  color={isEarned(open) ? Colors.backgroundDeep : Colors.textMuted}
+                  color={isEarned(open) ? Colors.onBright : Colors.textMuted}
                 />
               </LinearGradient>
               <Text variant="label" color={Colors.textMuted}>

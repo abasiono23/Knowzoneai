@@ -29,7 +29,9 @@ export function StatPill({ icon, value, color, label }: Props) {
         borderColor: Colors.border,
       }}>
       <Ionicons name={icon} size={16} color={color} />
-      <Text variant="label">{value}</Text>
+      <Text variant="label" color={Colors.text}>
+        {value}
+      </Text>
     </View>
   );
 }

@@ -1,6 +1,6 @@
 import { Ionicons } from '@expo/vector-icons';
 import * as Haptics from 'expo-haptics';
-import { LinearGradient } from 'expo-linear-gradient';
+import { LinearGradient } from '@/components/ui/gradient';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { StyleSheet, View } from 'react-native';
@@ -65,14 +65,14 @@ export default function DailyRewardsScreen() {
             <Animated.View entering={ZoomIn.springify()} style={{ alignItems: 'center', gap: Spacing.xs }}>
               <Coin size={72} />
               <Text style={styles.big}>+{got.coins}</Text>
-              <Text variant="bodyStrong" color={Colors.backgroundDeep}>
+              <Text variant="bodyStrong" color={Colors.onBright}>
                 {t('daily.gotXp', { xp: got.xp })}
               </Text>
             </Animated.View>
           ) : (
             <>
               <Text style={{ fontSize: 64, lineHeight: 76 }}>{claimed ? '✅' : '🎁'}</Text>
-              <Text variant="title" color={Colors.backgroundDeep} center>
+              <Text variant="title" color={Colors.onBright} center>
                 {claimed ? t('daily.claimedToday') : t('daily.ready', { day: todayIndex + 1 })}
               </Text>
             </>
@@ -136,7 +136,7 @@ export default function DailyRewardsScreen() {
 
 const styles = StyleSheet.create({
   hero: { alignItems: 'center', gap: Spacing.sm, padding: Spacing.xl, borderRadius: Radius.xl },
-  big: { fontFamily: 'Manrope_800ExtraBold', fontSize: 48, lineHeight: 56, color: Colors.backgroundDeep },
+  big: { fontFamily: 'Manrope_800ExtraBold', fontSize: 48, lineHeight: 56, color: Colors.onBright },
   week: { flexDirection: 'row', flexWrap: 'wrap', gap: Spacing.xs },
   day: {
     width: '22.5%',

@@ -94,7 +94,7 @@ const styles = StyleSheet.create({
     paddingVertical: 7,
     paddingHorizontal: 12,
     borderRadius: Radius.pill,
-    backgroundColor: 'rgba(26, 33, 80, 0.7)',
+    backgroundColor: Colors.surfaceRaised,
     borderWidth: 1,
     borderColor: Colors.border,
   },

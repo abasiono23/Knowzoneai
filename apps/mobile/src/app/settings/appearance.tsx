@@ -19,9 +19,16 @@ export default function AppearanceScreen() {
   return (
     <Screen withTabBar={false}>
       <ScreenHeader eyebrow={t('eyebrow')} title={t('appearance.title')} />
-      <SettingsSection title={t('appearance.theme')} footer={t('appearance.themeFooter')}>
-        <SettingsChoice label={t('appearance.dark')} hint={t('appearance.darkHint')} selected onPress={() => {}} />
-        <SettingsChoice label={t('appearance.light')} selected={false} disabled badge={t('soon')} onPress={() => {}} />
+      <SettingsSection title={t('appearance.theme')}>
+        <SettingsChoice label={t('appearance.light')} selected onPress={() => {}} />
+        <SettingsChoice
+          label={t('appearance.dark')}
+          hint={t('appearance.darkHint')}
+          selected={false}
+          disabled
+          badge={t('soon')}
+          onPress={() => {}}
+        />
         <SettingsChoice
           label={t('appearance.system')}
           selected={false}

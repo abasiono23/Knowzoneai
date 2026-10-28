@@ -1,11 +1,11 @@
 import { Platform, type TextStyle } from 'react-native';
 
 /**
- * Knowzone design tokens — "Midnight Galaxy".
+ * Knowzone design tokens — "Open Book".
  *
- * Dark-first: deep navy surfaces make the electric purple (learning/AI),
- * teal (mastery/success) and warm gold (rewards) feel luminous, and are
- * easier on the eyes during late-night study sessions.
+ * White pages with a soft purple open book behind the content; white cards with light lavender
+ * borders and dark navy text. Purple stays the accent (learning/AI and primary actions), teal for
+ * mastery, gold for rewards.
  *
  * Rules of colour:
  *  - Purple  = AI and primary actions ("Create with AI", buttons, focus).
@@ -43,32 +43,34 @@ export const Palette = {
 } as const;
 
 export const Colors = {
-  background: Palette.navy900,
-  backgroundDeep: Palette.navy950,
-  surface: Palette.navy800,
-  surfaceRaised: Palette.navy700,
-  border: 'rgba(195, 181, 255, 0.12)',
-  borderStrong: 'rgba(195, 181, 255, 0.24)',
+  background: Palette.white,
+  backgroundDeep: '#F4F1FF',
+  surface: Palette.white,
+  surfaceRaised: '#F4F1FF',
+  border: 'rgba(124, 92, 255, 0.16)',
+  borderStrong: 'rgba(124, 92, 255, 0.32)',
 
-  text: '#F4F5FF',
-  textSecondary: '#A6ADD6',
-  textMuted: '#6E76A8',
+  text: '#1B1F3B',
+  textSecondary: '#4A5078',
+  textMuted: '#868BAE',
   textOnAccent: Palette.white,
+  /** Dark ink for bright badges and pills (gold, teal, white). */
+  onBright: '#1B1F3B',
 
   primary: Palette.purple500,
   primaryPressed: Palette.purple600,
-  primarySoft: 'rgba(124, 92, 255, 0.16)',
+  primarySoft: 'rgba(124, 92, 255, 0.10)',
 
-  success: Palette.teal400,
-  successSoft: 'rgba(45, 212, 191, 0.14)',
+  success: '#0F9F8A',
+  successSoft: 'rgba(20, 200, 180, 0.12)',
 
-  reward: Palette.gold400,
-  rewardSoft: 'rgba(255, 200, 87, 0.14)',
+  reward: '#D99000',
+  rewardSoft: 'rgba(255, 182, 39, 0.14)',
 
-  danger: Palette.coral500,
-  dangerSoft: 'rgba(255, 90, 122, 0.14)',
+  danger: '#E5486A',
+  dangerSoft: 'rgba(255, 90, 122, 0.10)',
 
-  info: Palette.sky400,
+  info: '#1C93D1',
 } as const;
 
 /** Gradients are reserved for hero moments: the AI button, level-ups, world cards. */
@@ -78,7 +80,7 @@ export const Gradients = {
   mastery: [Palette.teal500, Palette.sky400] as const,
   reward: [Palette.gold400, '#FF9F43'] as const,
   streak: ['#FF9F43', Palette.coral500] as const,
-  screen: [Palette.navy800, Palette.navy900, Palette.navy950] as const,
+  screen: [Palette.white, Palette.white, '#F8F6FF'] as const,
 };
 
 /** Themed worlds in Knowzone World — each gets its own signature gradient. */

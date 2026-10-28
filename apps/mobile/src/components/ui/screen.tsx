@@ -1,16 +1,17 @@
-import { LinearGradient } from 'expo-linear-gradient';
 import type { ReactNode } from 'react';
 import { ScrollView, StyleSheet, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-import { Gradients, MaxContentWidth, Spacing, TabBarHeight } from '@/constants/theme';
+import { BookBackground } from '@/components/brand/book-background';
+import { MaxContentWidth, Spacing, TabBarHeight } from '@/constants/theme';
 
 type Props = { children: ReactNode; scroll?: boolean; withTabBar?: boolean };
 
 export function Screen({ children, scroll = true, withTabBar = true }: Props) {
   const inner = <View style={styles.inner}>{children}</View>;
   return (
-    <LinearGradient colors={Gradients.screen} style={styles.fill}>
+    <View style={styles.fill}>
+      <BookBackground />
       <SafeAreaView style={styles.fill} edges={['top']}>
         {scroll ? (
           <ScrollView
@@ -25,7 +26,7 @@ export function Screen({ children, scroll = true, withTabBar = true }: Props) {
           inner
         )}
       </SafeAreaView>
-    </LinearGradient>
+    </View>
   );
 }
 

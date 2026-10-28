@@ -54,7 +54,7 @@ function SocialButton({
         { transform: [{ scale: pressed ? 0.98 : 1 }], opacity: loading ? 0.7 : 1 },
       ]}>
       <View style={styles.icon}>{loading ? <ActivityIndicator color={dark ? '#fff' : '#111'} /> : icon}</View>
-      <Text style={[styles.label, { color: dark ? Colors.text : '#14161F' }]}>{label}</Text>
+      <Text style={[styles.label, { color: dark ? '#FFFFFF' : '#14161F' }]}>{label}</Text>
       <View style={styles.icon} />
     </Pressable>
   );

@@ -75,7 +75,7 @@ export default function ReferralScreen() {
         <Animated.View entering={FadeInDown.springify()}>
           <Card style={styles.success}>
             <View style={styles.successIcon}>
-              <Ionicons name="checkmark" size={22} color={Colors.backgroundDeep} />
+              <Ionicons name="checkmark" size={22} color={Colors.onBright} />
             </View>
             <View style={{ flex: 1, gap: 2 }}>
               <Text variant="bodyStrong">{t('referral.invitedBy', { name: inviter })}</Text>

@@ -1,6 +1,6 @@
 import { Ionicons } from '@expo/vector-icons';
 import * as Clipboard from 'expo-clipboard';
-import { LinearGradient } from 'expo-linear-gradient';
+import { LinearGradient } from '@/components/ui/gradient';
 import { router, type Href } from 'expo-router';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -83,8 +83,8 @@ export default function ReferralDashboard() {
             accessibilityLabel={t('dashboard.copyCode')}
             hitSlop={8}
             style={styles.copy}>
-            <Ionicons name={copied ? 'checkmark' : 'copy-outline'} size={18} color={Colors.backgroundDeep} />
-            <Text variant="label" color={Colors.backgroundDeep}>
+            <Ionicons name={copied ? 'checkmark' : 'copy-outline'} size={18} color={Colors.onBright} />
+            <Text variant="label" color={Colors.onBright}>
               {copied ? t('dashboard.copied') : t('dashboard.copy')}
             </Text>
           </Pressable>

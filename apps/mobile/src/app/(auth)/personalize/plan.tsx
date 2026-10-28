@@ -1,5 +1,5 @@
 import { Ionicons } from '@expo/vector-icons';
-import { LinearGradient } from 'expo-linear-gradient';
+import { LinearGradient } from '@/components/ui/gradient';
 import { router } from 'expo-router';
 import { useEffect, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -128,7 +128,7 @@ export default function PlanScreen() {
         {plan.milestones.map((m) => (
           <View key={m.week} style={styles.milestone}>
             <View style={styles.weekDot}>
-              <Text variant="label" color={Colors.backgroundDeep}>
+              <Text variant="label" color={Colors.onBright}>
                 {t('plan.weekShort', { week: m.week })}
               </Text>
             </View>

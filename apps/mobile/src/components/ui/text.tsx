@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { Text as RNText, StyleSheet, type TextProps } from 'react-native';
 
 import { Colors, Type, type TypeVariant } from '@/constants/theme';
+import { useInk } from './gradient';
 import { ARABIC_FONT } from '@/i18n';
 import { useTextScale } from '@/lib/appearance';
 
@@ -11,7 +12,10 @@ type Props = TextProps & {
   center?: boolean;
 };
 
-export function Text({ variant = 'body', color = Colors.text, center, style, ...rest }: Props) {
+export function Text({ variant = 'body', color: given, center, style, ...rest }: Props) {
+  // Text on a strong gradient card defaults to white (see ./gradient); elsewhere to the page's ink.
+  const ink = useInk();
+  const color = given ?? ink ?? Colors.text;
   const scale = useTextScale();
   const { i18n } = useTranslation();
   const arabic = i18n.language === 'ar';

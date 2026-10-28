@@ -101,7 +101,7 @@ export default function XpLevelScreen() {
               <View style={styles.rail}>
                 <View style={[styles.node, reached && styles.nodeOn, current && styles.nodeNow]}>
                   {reached && !current ? (
-                    <Ionicons name="checkmark" size={14} color={Colors.backgroundDeep} />
+                    <Ionicons name="checkmark" size={14} color={Colors.onBright} />
                   ) : (
                     <Text variant="label">{n}</Text>
                   )}

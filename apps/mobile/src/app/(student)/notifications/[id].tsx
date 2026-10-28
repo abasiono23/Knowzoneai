@@ -1,5 +1,5 @@
 import { Ionicons } from '@expo/vector-icons';
-import { LinearGradient } from 'expo-linear-gradient';
+import { LinearGradient } from '@/components/ui/gradient';
 import { router, useLocalSearchParams, type Href } from 'expo-router';
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -48,7 +48,7 @@ export default function NotificationDetailScreen() {
         end={{ x: 1, y: 1 }}
         style={styles.hero}>
         <View style={[styles.icon, { backgroundColor: meta.color }]}>
-          <Ionicons name={meta.icon} size={32} color={Colors.backgroundDeep} />
+          <Ionicons name={meta.icon} size={32} color={Colors.onBright} />
         </View>
         <Text variant="title" center>
           {text.title}

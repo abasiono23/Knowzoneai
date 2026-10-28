@@ -1,5 +1,5 @@
 import { Ionicons } from '@expo/vector-icons';
-import { LinearGradient } from 'expo-linear-gradient';
+import { LinearGradient } from '@/components/ui/gradient';
 import { router } from 'expo-router';
 import { useTranslation } from 'react-i18next';
 import { Pressable, StyleSheet, View } from 'react-native';
@@ -63,10 +63,10 @@ export default function TeacherAccountScreen() {
       </SettingsSection>
 
       <LinearGradient colors={Gradients.reward} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={styles.upsell}>
-        <Text variant="heading" color={Colors.backgroundDeep}>
+        <Text variant="heading" color={Colors.onBright}>
           {t('account.upsellTitle')}
         </Text>
-        <Text variant="small" color={Colors.backgroundDeep}>
+        <Text variant="small" color={Colors.onBright}>
           {t('account.upsellBody')}
         </Text>
       </LinearGradient>

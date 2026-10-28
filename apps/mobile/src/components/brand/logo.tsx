@@ -79,7 +79,7 @@ export function Wordmark({ fontSize = 24 }: { fontSize?: number }) {
             fontFamily: Fonts.extrabold,
             fontSize: fontSize * 0.62,
             lineHeight: fontSize * 0.85,
-            color: Colors.backgroundDeep,
+            color: Colors.onBright,
           }}>
           AI
         </Text>

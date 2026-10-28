@@ -1,8 +1,8 @@
-import { LinearGradient } from 'expo-linear-gradient';
 import { StyleSheet, View } from 'react-native';
 import Svg, { Defs, RadialGradient, Rect, Stop } from 'react-native-svg';
 
-import { Gradients, Palette } from '@/constants/theme';
+import { BookBackground } from '@/components/brand/book-background';
+import { Palette } from '@/constants/theme';
 
 type Glow = { color: string; x: number; y: number; r: number; opacity: number };
 
@@ -23,12 +23,12 @@ const PRESETS: Record<'default' | 'hero' | 'reward', Glow[]> = {
   ],
 };
 
-/** Navy gradient with soft aurora glows: the signature Knowzone background. */
+/** The book background with soft colour glows: the signature Knowzone background. */
 export function Backdrop({ variant = 'default' }: { variant?: keyof typeof PRESETS }) {
   const glows = PRESETS[variant];
   return (
     <View style={StyleSheet.absoluteFill} pointerEvents="none">
-      <LinearGradient colors={Gradients.screen} style={StyleSheet.absoluteFill} />
+      <BookBackground />
       <Svg width="100%" height="100%" preserveAspectRatio="none">
         <Defs>
           {glows.map((g, i) => (
@@ -39,7 +39,7 @@ export function Backdrop({ variant = 'default' }: { variant?: keyof typeof PRESE
               cy={g.y}
               r={g.r}
               gradientUnits="objectBoundingBox">
-              <Stop offset="0" stopColor={g.color} stopOpacity={g.opacity} />
+              <Stop offset="0" stopColor={g.color} stopOpacity={g.opacity * 0.4} />
               <Stop offset="1" stopColor={g.color} stopOpacity={0} />
             </RadialGradient>
           ))}

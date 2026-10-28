@@ -1,5 +1,5 @@
 import { Image } from 'expo-image';
-import { LinearGradient } from 'expo-linear-gradient';
+import { LinearGradient } from '@/components/ui/gradient';
 import { useTranslation } from 'react-i18next';
 import { View } from 'react-native';
 

@@ -1,5 +1,5 @@
 import { Ionicons } from '@expo/vector-icons';
-import { LinearGradient } from 'expo-linear-gradient';
+import { LinearGradient } from '@/components/ui/gradient';
 import { router } from 'expo-router';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -62,7 +62,7 @@ export default function CoinWalletScreen() {
             <Text variant="label" color="rgba(11,16,38,0.65)">
               {t('wallet.earnedWeek')}
             </Text>
-            <Text variant="heading" color={Colors.backgroundDeep}>
+            <Text variant="heading" color={Colors.onBright}>
               +{earned}
             </Text>
           </View>
@@ -70,7 +70,7 @@ export default function CoinWalletScreen() {
             <Text variant="label" color="rgba(11,16,38,0.65)">
               {t('wallet.spentWeek')}
             </Text>
-            <Text variant="heading" color={Colors.backgroundDeep}>
+            <Text variant="heading" color={Colors.onBright}>
               {spent ? `−${spent}` : 0}
             </Text>
           </View>
@@ -181,7 +181,7 @@ export default function CoinWalletScreen() {
 const styles = StyleSheet.create({
   card: { borderRadius: Radius.xl, padding: Spacing.lg, gap: Spacing.xs },
   cardTop: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' },
-  balance: { fontFamily: 'Manrope_800ExtraBold', fontSize: 48, lineHeight: 56, color: Colors.backgroundDeep },
+  balance: { fontFamily: 'Manrope_800ExtraBold', fontSize: 48, lineHeight: 56, color: Colors.onBright },
   flow: {
     flexDirection: 'row',
     gap: Spacing.md,

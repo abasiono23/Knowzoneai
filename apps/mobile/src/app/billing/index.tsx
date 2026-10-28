@@ -1,5 +1,5 @@
 import { Ionicons } from '@expo/vector-icons';
-import { LinearGradient } from 'expo-linear-gradient';
+import { LinearGradient } from '@/components/ui/gradient';
 import { router } from 'expo-router';
 import { useTranslation } from 'react-i18next';
 import { Platform, Pressable, StyleSheet, View } from 'react-native';
@@ -56,8 +56,8 @@ export default function PricingScreen() {
           <View key={plan} style={plan === 'PLUS' && styles.popularWrap}>
             {plan === 'PLUS' && (
               <View style={styles.popular}>
-                <Ionicons name="star" size={12} color={Colors.backgroundDeep} />
-                <Text variant="label" color={Colors.backgroundDeep} style={{ fontSize: 11 }}>
+                <Ionicons name="star" size={12} color={Colors.onBright} />
+                <Text variant="label" color={Colors.onBright} style={{ fontSize: 11 }}>
                   {t('pricing.mostPopular')}
                 </Text>
               </View>

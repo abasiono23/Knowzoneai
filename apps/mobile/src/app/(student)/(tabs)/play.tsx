@@ -1,6 +1,6 @@
 import { Ionicons } from '@expo/vector-icons';
 import { Image } from 'expo-image';
-import { LinearGradient } from 'expo-linear-gradient';
+import { LinearGradient } from '@/components/ui/gradient';
 import { router, type Href } from 'expo-router';
 import { useTranslation } from 'react-i18next';
 import { Pressable, StyleSheet, useWindowDimensions, View } from 'react-native';
@@ -153,14 +153,14 @@ export default function WorldMapScreen() {
           <LinearGradient colors={Gradients.reward} start={{ x: 0, y: 0 }} end={{ x: 1, y: 0 }} style={styles.daily}>
             <Text style={{ fontSize: 30 }}>📅</Text>
             <View style={{ flex: 1 }}>
-              <Text variant="bodyStrong" color={Colors.backgroundDeep}>
+              <Text variant="bodyStrong" color={Colors.onBright}>
                 {t('play.todaysDaily')}
               </Text>
               <Text variant="small" color="rgba(11,16,38,0.75)">
                 {w.dailyStreak ? t('play.dailyMetaStreak', { count: w.dailyStreak }) : t('play.dailyMetaNoStreak')}
               </Text>
             </View>
-            <Ionicons name="play-circle" size={34} color={Colors.backgroundDeep} />
+            <Ionicons name="play-circle" size={34} color={Colors.onBright} />
           </LinearGradient>
         </Pressable>
       )}
@@ -420,7 +420,7 @@ function Shortcut({
       </Text>
       {badge && (
         <View style={[styles.badge, { backgroundColor: color }]}>
-          <Text style={{ fontSize: 9, color: Colors.backgroundDeep, fontFamily: 'Manrope_800ExtraBold' }}>{badge}</Text>
+          <Text style={{ fontSize: 9, color: Colors.onBright, fontFamily: 'Manrope_800ExtraBold' }}>{badge}</Text>
         </View>
       )}
     </Pressable>

@@ -1,6 +1,6 @@
 import { Ionicons } from '@expo/vector-icons';
 import * as Haptics from 'expo-haptics';
-import { LinearGradient } from 'expo-linear-gradient';
+import { LinearGradient } from '@/components/ui/gradient';
 import { Fragment } from 'react';
 import { Pressable, StyleSheet, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
@@ -47,11 +47,11 @@ export function TabBar({ state, navigateToTab, tabs, center }: Props) {
                 <Ionicons
                   name={focused ? meta.iconActive : meta.icon}
                   size={24}
-                  color={focused ? Colors.text : Colors.textMuted}
+                  color={focused ? Colors.primary : Colors.textMuted}
                 />
                 <Text
                   variant="label"
-                  color={focused ? Colors.text : Colors.textMuted}
+                  color={focused ? Colors.primary : Colors.textMuted}
                   style={{ fontFamily: Fonts.semibold, letterSpacing: 0.2 }}>
                   {meta.label}
                 </Text>
@@ -87,13 +87,13 @@ const styles = StyleSheet.create({
   bar: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: 'rgba(18, 24, 56, 0.96)',
+    backgroundColor: 'rgba(255, 255, 255, 0.97)',
     borderRadius: Radius.xl,
     borderWidth: 1,
     borderColor: Colors.border,
     paddingVertical: Spacing.xs,
-    shadowColor: '#000',
-    shadowOpacity: 0.4,
+    shadowColor: '#5B45C9',
+    shadowOpacity: 0.16,
     shadowRadius: 24,
     shadowOffset: { width: 0, height: 10 },
     elevation: 16,

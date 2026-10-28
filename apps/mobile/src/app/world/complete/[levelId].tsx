@@ -94,7 +94,7 @@ function Complete({ level }: { level: LoadedLevel }) {
           {achievements.map((a, k) => (
             <Animated.View key={a.id} entering={FadeInDown.delay(750 + k * 150)} style={styles.card}>
               <View style={styles.achIcon}>
-                <Ionicons name={a.icon} size={22} color={Colors.backgroundDeep} />
+                <Ionicons name={a.icon} size={22} color={Colors.onBright} />
               </View>
               <View style={{ flex: 1 }}>
                 <Text variant="label" color={Colors.success}>
@@ -110,7 +110,7 @@ function Complete({ level }: { level: LoadedLevel }) {
           {next && !unlocked.length && (
             <Animated.View entering={FadeInDown.delay(900)} style={styles.card}>
               <View style={[styles.achIcon, { backgroundColor: KIND_INFO[next.kind].color }]}>
-                <Ionicons name={KIND_INFO[next.kind].icon} size={22} color={Colors.backgroundDeep} />
+                <Ionicons name={KIND_INFO[next.kind].icon} size={22} color={Colors.onBright} />
               </View>
               <View style={{ flex: 1 }}>
                 <Text variant="label" color={Colors.primary}>

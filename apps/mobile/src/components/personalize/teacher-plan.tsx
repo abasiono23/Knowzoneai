@@ -1,5 +1,5 @@
 import { Ionicons } from '@expo/vector-icons';
-import { LinearGradient } from 'expo-linear-gradient';
+import { LinearGradient } from '@/components/ui/gradient';
 import { router } from 'expo-router';
 import { useTranslation } from 'react-i18next';
 import { StyleSheet, View } from 'react-native';
@@ -99,7 +99,7 @@ export function TeacherPlan({ profile }: { profile: Personalization }) {
         {WEEK_ONE.map((step, i) => (
           <View key={step} style={styles.step}>
             <View style={styles.stepDot}>
-              <Text variant="label" color={Colors.backgroundDeep}>
+              <Text variant="label" color={Colors.onBright}>
                 {i + 1}
               </Text>
             </View>

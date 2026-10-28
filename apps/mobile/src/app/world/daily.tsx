@@ -56,7 +56,7 @@ export default function DailyChallengeScreen() {
         <Text variant="label" color="rgba(11,16,38,0.7)">
           {formatDate(now, { weekday: 'long', day: 'numeric', month: 'long' }).toUpperCase()}
         </Text>
-        <Text variant="title" color={Colors.backgroundDeep} center>
+        <Text variant="title" color={Colors.onBright} center>
           {dailyDone ? t('daily.done') : t('daily.headline')}
         </Text>
         {dailyDone && today ? (

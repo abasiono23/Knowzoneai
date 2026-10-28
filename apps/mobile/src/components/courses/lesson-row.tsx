@@ -42,7 +42,7 @@ export function LessonRow({
       style={({ pressed }) => [styles.row, upNext && styles.next, pressed && { opacity: 0.8 }]}>
       <View style={[styles.status, done && { backgroundColor: Colors.success, borderColor: Colors.success }]}>
         {done ? (
-          <Ionicons name="checkmark" size={14} color={Colors.backgroundDeep} />
+          <Ionicons name="checkmark" size={14} color={Colors.onBright} />
         ) : (
           <Text variant="label" color={upNext ? Colors.primary : Colors.textMuted} style={{ fontSize: 11 }}>
             {number}

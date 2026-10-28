@@ -1,6 +1,6 @@
 import { Ionicons } from '@expo/vector-icons';
 import * as Haptics from 'expo-haptics';
-import { LinearGradient } from 'expo-linear-gradient';
+import { LinearGradient } from '@/components/ui/gradient';
 import { ActivityIndicator, Pressable, StyleSheet, View, type ViewStyle } from 'react-native';
 
 import { Colors, Gradients, Radius, Spacing } from '@/constants/theme';
@@ -19,15 +19,19 @@ type Props = {
 
 export function Button({ title, onPress, variant = 'primary', icon, loading, disabled, style }: Props) {
   const inactive = disabled || loading;
+  // White on the filled buttons; the page's ink on the light ones (whatever card the button sits on).
+  const ink = variant === 'primary' || variant === 'danger' ? Colors.textOnAccent : Colors.text;
 
   const content = (
     <View style={styles.row}>
       {loading ? (
-        <ActivityIndicator color={Colors.textOnAccent} />
+        <ActivityIndicator color={ink} />
       ) : (
         <>
-          {icon && <Ionicons name={icon} size={20} color={Colors.text} />}
-          <Text variant="bodyStrong">{title}</Text>
+          {icon && <Ionicons name={icon} size={20} color={ink} />}
+          <Text variant="bodyStrong" color={ink}>
+            {title}
+          </Text>
         </>
       )}
     </View>

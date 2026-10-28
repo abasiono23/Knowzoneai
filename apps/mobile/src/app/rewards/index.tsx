@@ -1,5 +1,5 @@
 import { Ionicons } from '@expo/vector-icons';
-import { LinearGradient } from 'expo-linear-gradient';
+import { LinearGradient } from '@/components/ui/gradient';
 import { router, type Href } from 'expo-router';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -78,14 +78,14 @@ export default function RewardsDashboard() {
           <LinearGradient colors={Gradients.reward} start={{ x: 0, y: 0 }} end={{ x: 1, y: 0 }} style={styles.daily}>
             <Text style={{ fontSize: 30 }}>🎁</Text>
             <View style={{ flex: 1 }}>
-              <Text variant="bodyStrong" color={Colors.backgroundDeep}>
+              <Text variant="bodyStrong" color={Colors.onBright}>
                 {t('dashboard.dailyReady')}
               </Text>
               <Text variant="small" color="rgba(11,16,38,0.75)">
                 {t('dashboard.dailyDay', { day: wallet.daily.next + 1 })}
               </Text>
             </View>
-            <Ionicons name="chevron-forward" size={20} color={Colors.backgroundDeep} />
+            <Ionicons name="chevron-forward" size={20} color={Colors.onBright} />
           </LinearGradient>
         </Pressable>
       )}

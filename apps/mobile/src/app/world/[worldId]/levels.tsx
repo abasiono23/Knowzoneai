@@ -113,8 +113,8 @@ export default function LevelSelectScreen() {
                   <Text style={{ fontSize: 40 }}>{world.boss.emoji}</Text>
                 ) : (
                   <>
-                    <Ionicons name={info.icon} size={22} color={Colors.backgroundDeep} />
-                    <Text variant="label" color={Colors.backgroundDeep}>
+                    <Ionicons name={info.icon} size={22} color={Colors.onBright} />
+                    <Text variant="label" color={Colors.onBright}>
                       {l.number}
                     </Text>
                   </>
