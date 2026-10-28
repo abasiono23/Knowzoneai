@@ -1,0 +1,531 @@
+{
+ "id": "jamb-commerce-p1",
+ "exam": "jamb",
+ "subject": "commerce",
+ "year": null,
+ "number": 1,
+ "source": "ai",
+ "minutes": 27,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Foreign trade",
+   "q": "A Lagos exporter sells 100 cartons of yams to a buyer in Accra at $4 per carton FOB Lagos. Freight to Accra is $150 and insurance is $50. If the exchange rate is ₦750 to $1, what is the total landed cost in naira for the buyer in Accra (assume no import duty)?",
+   "options": [
+    "₦(100×4) × 750 = ₦400 × 750 = ₦300,000",
+    "₦(100×4 + 150) × 750 = ₦(400 + 150) × 750 = ₦550 × 750 = ₦412,500",
+    "₦(100×4 + 50) × 750 = ₦(400 + 50) × 750 = ₦450 × 750 = ₦337,500",
+    "₦(100×4 + 150 + 50) × 750 = ₦(400 + 200) × 750 = ₦600 × 750 = ₦450,000"
+   ],
+   "answer": 3,
+   "explanation": "Landed cost includes cost of goods (100×$4 = $400), freight $150 and insurance $50, totalling $600. Convert to naira at ₦750/$: $600 × 750 = ₦450,000. The tempting wrong options omitted freight or insurance or both."
+  },
+  {
+   "n": 2,
+   "topic": "Foreign trade",
+   "q": "Which of the following best describes a bill of lading in international trade?",
+   "options": [
+    "A government permit allowing goods to cross a national border without duty",
+    "An invoice prepared by the importer showing customs value and duty payable",
+    "A document issued by a carrier acknowledging receipt of goods for shipment and serving as a contract of carriage and a title to the goods",
+    "A certificate issued by a bank guaranteeing payment to the exporter on arrival of goods"
+   ],
+   "answer": 2,
+   "explanation": "A bill of lading is issued by the carrier, confirms receipt, and is both contract and document of title. A bank guarantee is a letter of credit-related document, a government permit is not the bill of lading, and an invoice is commercial documentation, not carriage title."
+  },
+  {
+   "n": 3,
+   "topic": "Foreign trade",
+   "q": "An exporter uses a letter of credit (L/C) payable at sight. Which statement is true about payment?",
+   "options": [
+    "Payment is made only after both importer and exporter sign a delivery note",
+    "Payment is deferred until the importer confirms receipt of goods",
+    "The issuing bank must pay the exporter immediately upon presentation of compliant documents",
+    "The exporter must wait until the goods clear customs in the importer’s country"
+   ],
+   "answer": 2,
+   "explanation": "A sight L/C requires the issuing bank to pay when the exporter presents documents that comply with the L/C terms. It does not depend on importer confirmation, customs clearance, or additional delivery signatures."
+  },
+  {
+   "n": 4,
+   "topic": "Consumer protection",
+   "q": "Which action best demonstrates consumer rights under the Nigerian Consumer Protection Council principles when a purchased blender stops working within warranty?",
+   "options": [
+    "Ignore the warranty and purchase a different brand without contacting the seller",
+    "Sell the faulty blender to recover part of the cost and buy a new one",
+    "Keep using the faulty blender because the seller said warranties are optional",
+    "Return the blender to the seller for repair, replacement or refund under the warranty terms"
+   ],
+   "answer": 3,
+   "explanation": "Consumer protection entitles the buyer to repair, replacement or refund during warranty. Selling the item, ignoring the seller, or accepting seller's incorrect claim that warranties are optional do not assert the consumer's rights."
+  },
+  {
+   "n": 5,
+   "topic": "Consumer protection",
+   "q": "A shop displays a price tag of ₦18,000 on a phone but sells it at ₦20,000 at the till. Under consumer protection law, which is the best immediate recourse for the customer?",
+   "options": [
+    "Refuse to buy and destroy the price tag to prevent future customers from being misled",
+    "Pay the higher price and later demand triple compensation from the manufacturer",
+    "Complain to the shop manager and request the displayed price be honoured, then report to the consumer protection agency if unresolved",
+    "Accept the higher price because display prices are mere suggestions"
+   ],
+   "answer": 2,
+   "explanation": "The correct step is to ask the seller to honour the displayed price and report to the appropriate agency if not resolved. Demanding triple compensation from the manufacturer is inappropriate, destruction of property is illegal, and display prices are not mere suggestions under consumer law."
+  },
+  {
+   "n": 6,
+   "topic": "Consumer protection",
+   "q": "Which practice is an example of unfair trade practice that consumer protection bodies would act against?",
+   "options": [
+    "Deliberately advertising a product with false claims about health benefits to boost sales",
+    "Displaying accurate nutritional information on packaged food",
+    "Providing a free demonstration of a product in the store",
+    "Offering a genuine seasonal discount on unsold stock"
+   ],
+   "answer": 0,
+   "explanation": "False advertising about health benefits is unfair and harmful, and consumer bodies will act against it. Seasonal discounts, free demonstrations, and accurate information are legitimate business practices."
+  },
+  {
+   "n": 7,
+   "topic": "Transport and communication",
+   "q": "Which mode of transport is most suitable for moving 20 tonnes of perishable vegetables from Benin City to Lagos quickly and with minimal spoilage?",
+   "options": [
+    "Rail freight without refrigeration because rail is always faster than road",
+    "Refrigerated road haulage (truck) for direct fast delivery",
+    "Sea freight by container ship, as it is cheapest for short distances",
+    "Pipeline transport because it is continuous and low cost"
+   ],
+   "answer": 1,
+   "explanation": "For short distance and perishables, refrigerated road haulage gives fast, direct, temperature-controlled delivery. Sea freight is slow; pipelines are for liquids/gases; rail may not be faster or refrigerated, risking spoilage."
+  },
+  {
+   "n": 8,
+   "topic": "Transport and communication",
+   "q": "A company needs to send large confidential documents to Abuja within hours. Which communication method best balances speed and security?",
+   "options": [
+    "Publish the documents on social media to ensure rapid access",
+    "Send the documents via standard (non-registered) postal mail for lower cost",
+    "Use a registered courier service with same-day delivery and signed receipt",
+    "Email scanned copies without encryption to save time"
+   ],
+   "answer": 2,
+   "explanation": "Registered same-day courier offers quick physical delivery with tracking and signature for security. Standard mail is slower and less secure, unencrypted email risks interception, and social media would violate confidentiality."
+  },
+  {
+   "n": 9,
+   "topic": "Business units",
+   "q": "Which characteristic distinguishes a sole proprietorship from a limited liability company in Nigeria?",
+   "options": [
+    "Only sole proprietorships can employ staff legally in Nigeria",
+    "Sole proprietorships cannot make profit while companies always do",
+    "Sole proprietorship requires filing Articles of Association, but a company does not",
+    "Personal unlimited liability of the owner in a sole proprietorship versus limited liability for shareholders in a company"
+   ],
+   "answer": 3,
+   "explanation": "Sole proprietors bear unlimited personal liability; companies provide limited liability to shareholders. Articles of Association are for companies, both can legally employ staff, and profit is possible for either depending on operations."
+  },
+  {
+   "n": 10,
+   "topic": "Business units",
+   "q": "If a partnership agreement states profits are shared 3:2:1 among Amina, Chinedu and Bayo and the firm made a profit of ₦360,000, how much does Chinedu receive?",
+   "options": [
+    "Chinedu receives ₦60,000 because his share is 1/6",
+    "Chinedu receives ₦200,000 because profits are split equally",
+    "Share ratio sum = 3+2+1 = 6; Chinedu's share = 2/6 × ₦360,000 = ₦120,000",
+    "Chinedu receives ₦180,000 because he gets half of the profit"
+   ],
+   "answer": 2,
+   "explanation": "Total ratio is 6; Chinedu has 2 parts so 2/6 of ₦360,000 = ₦120,000. ₦180,000 assumes a 1/2 share, ₦60,000 mistakes his part as 1, and ₦200,000 wrongly assumes equal division."
+  },
+  {
+   "n": 11,
+   "topic": "Money and banking",
+   "q": "Mrs. Adebayo places ₦500,000 in a savings account that pays 6% interest compounded annually. What will the balance be after 2 years?",
+   "options": [
+    "₦530,000",
+    "₦561,800",
+    "₦560,000",
+    "₦575,000"
+   ],
+   "answer": 1,
+   "explanation": "With annual compounding: A = 500,000 × (1 + 0.06)² = 500,000 × 1.1236 = ₦561,800. ₦530,000 is simple interest for one year; ₦560,000 is approximate simple interest for two years (500,000 × 1.12); ₦575,000 is too large."
+  },
+  {
+   "n": 12,
+   "topic": "Money and banking",
+   "q": "Which instrument is primarily used by the Central Bank of Nigeria to reduce excess liquidity in the banking system?",
+   "options": [
+    "Issuing bank overdrafts to commercial banks",
+    "Introducing subsidy on bank loans",
+    "Open market sale of government securities",
+    "Lowering cash reserve ratio for banks"
+   ],
+   "answer": 2,
+   "explanation": "Open market sales withdraw excess liquidity as banks buy securities. Lowering cash reserve ratio increases liquidity, not reduce it. Issuing overdrafts increases liquidity and subsidies on loans do not directly reduce system liquidity."
+  },
+  {
+   "n": 13,
+   "topic": "Money and banking",
+   "q": "A customer writes a cheque for ₦85,450 but the bank processes only ₦85,000 because the cheque was faint in one digit. Which service did the bank fail to provide?",
+   "options": [
+    "Credit reference check",
+    "Standing order",
+    "Foreign exchange service",
+    "Accurate cheque clearing"
+   ],
+   "answer": 3,
+   "explanation": "Processing a cheque for the correct amount is part of cheque clearing accuracy. A standing order is a recurring instruction; credit reference and forex services are unrelated to cheque amount errors."
+  },
+  {
+   "n": 14,
+   "topic": "Occupation and production",
+   "q": "A cassava farmer notices soil fertility declining. Which action will most directly increase output per hectare next season?",
+   "options": [
+    "Switch to trading imported goods",
+    "Apply appropriate NPK fertilizer and practice crop rotation",
+    "Increase the price of cassava in the market",
+    "Hire more labourers during harvest only"
+   ],
+   "answer": 1,
+   "explanation": "Using NPK fertilizer and crop rotation restores soil nutrients and raises yield per hectare. Hiring labour helps harvesting but not soil fertility; changing market price or switching to trade do not directly increase farm output."
+  },
+  {
+   "n": 15,
+   "topic": "Occupation and production",
+   "q": "In Nigeria, an artisan operates a small tailoring business from home with no formal registration and keeps personal and business money together. Which characteristic best describes this enterprise?",
+   "options": [
+    "Public limited company listed on the stock exchange",
+    "Cooperative society owned by many members",
+    "Sole proprietorship with unlimited liability",
+    "Private limited company with limited liability"
+   ],
+   "answer": 2,
+   "explanation": "A one-person, unregistered business where personal and business funds mix is a sole proprietorship with unlimited liability. Limited companies require registration and separation of assets; cooperatives are member-owned."
+  },
+  {
+   "n": 16,
+   "topic": "Occupation and production",
+   "q": "A factory produces 2,400 units in 8 hours. If output increases by 25% but working hours remain 8, what is the new hourly productivity (units per hour)?",
+   "options": [
+    "325 units per hour",
+    "400 units per hour",
+    "375 units per hour",
+    "300 units per hour"
+   ],
+   "answer": 2,
+   "explanation": "Original hourly productivity = 2,400 ÷ 8 = 300 units/hour. A 25% increase: 300 × 1.25 = 375 units/hour. 300 is original rate; 325 and 400 are incorrect calculations."
+  },
+  {
+   "n": 17,
+   "topic": "E-commerce",
+   "q": "A Lagos online store offers door-to-door delivery but asks customers to pay on delivery only. Which e-commerce model does this best illustrate?",
+   "options": [
+    "Peer-to-peer lending platform",
+    "Business-to-consumer (B2C) with cash-on-delivery payment",
+    "Consumer-to-consumer (C2C) auction platform",
+    "Business-to-business (B2B) electronic marketplace"
+   ],
+   "answer": 1,
+   "explanation": "A seller offering goods to end consumers with COD is B2C. B2B involves trade between businesses; C2C is consumers selling to each other; P2P lending is finance, not goods delivery."
+  },
+  {
+   "n": 18,
+   "topic": "E-commerce",
+   "q": "Which practice best improves customer trust for a Nigerian e-commerce site?",
+   "options": [
+    "Hiding the physical address to avoid queries",
+    "Displaying secure payment logos, clear return policy, and verified customer reviews",
+    "Posting only idealised photos with no product details",
+    "Using a single generic email for all communication"
+   ],
+   "answer": 1,
+   "explanation": "Secure payment signs, transparent returns and real reviews build trust. Hiding contact details, vague product info, or impersonal communication reduce trust and increase buyer suspicion."
+  },
+  {
+   "n": 19,
+   "topic": "Advertising and marketing",
+   "q": "A beverage company sponsors the halftime of a popular Abuja football match and hands out free samples. Which promotional mix elements are being used?",
+   "options": [
+    "Price skimming and distribution",
+    "Direct selling and personal selling",
+    "Production management and quality control",
+    "Sales promotion and public relations"
+   ],
+   "answer": 3,
+   "explanation": "Free samples are sales promotion; sponsoring an event is public relations. Direct/personal selling imply salesperson-to-customer interactions; price skimming and production terms are irrelevant to promotion."
+  },
+  {
+   "n": 20,
+   "topic": "Advertising and marketing",
+   "q": "Which statement about a product's market segmentation is correct?",
+   "options": [
+    "Segmentation requires selling the same product to everyone",
+    "Segmentation eliminates competition in the market",
+    "Segmentation means charging different prices to each customer individually",
+    "Segmentation divides a market into groups with similar needs to target marketing effectively"
+   ],
+   "answer": 3,
+   "explanation": "Market segmentation groups consumers by similar needs so firms can tailor marketing. It does not remove competition, is not the same as individualized pricing (price discrimination), nor does it imply a one-size-fits-all product."
+  },
+  {
+   "n": 21,
+   "topic": "Documents of trade",
+   "q": "Which document issued by a carrier acknowledges receipt of goods for shipment and serves as evidence of the contract of carriage and title to the goods?",
+   "options": [
+    "Delivery note",
+    "Bill of lading",
+    "Commercial invoice",
+    "Insurance policy"
+   ],
+   "answer": 1,
+   "explanation": "A bill of lading is issued by the carrier, acknowledges receipt of goods, evidences the contract of carriage and can serve as title. A commercial invoice is a seller's billing document, an insurance policy covers risk, and a delivery note records goods delivered but is not a carriage contract or title document."
+  },
+  {
+   "n": 22,
+   "topic": "Documents of trade",
+   "q": "Which document does a buyer present to a bank to obtain payment under a sight letter of credit (L/C)?",
+   "options": [
+    "A delivery note from the seller",
+    "The buyer's internal purchase order",
+    "Only a proforma invoice",
+    "Commercial invoice and shipping documents complying with the L/C terms"
+   ],
+   "answer": 3,
+   "explanation": "Under a sight L/C the beneficiary presents the required commercial invoice and complying shipping documents to the negotiating/paying bank to receive payment. A proforma invoice precedes shipment, a purchase order is internal, and a delivery note is not sufficient for L/C payment."
+  },
+  {
+   "n": 23,
+   "topic": "Insurance",
+   "q": "Which type of insurance would best protect a Lagos freight-forwarding firm against legal liability for loss or damage to customers' goods while in their custody?",
+   "options": [
+    "Group health insurance",
+    "Credit insurance",
+    "Life insurance",
+    "Public liability and freight liability insurance"
+   ],
+   "answer": 3,
+   "explanation": "Freight-forwarding firms need liability insurance to cover legal claims for loss/damage to customers' goods. Life and group health protect persons, and credit insurance covers non-payment by debtors, so they are inappropriate for this firm’s custody liabilities."
+  },
+  {
+   "n": 24,
+   "topic": "Insurance",
+   "q": "A trader has marine cargo insurance on shipment from Lagos to London with an 80% average clause. If the goods' actual value is ₦1,000,000 but insured for ₦600,000 and a loss of ₦200,000 occurs, what amount does the insurer pay?",
+   "options": [
+    "₦160,000",
+    "₦200,000",
+    "₦240,000",
+    "₦120,000"
+   ],
+   "answer": 3,
+   "explanation": "With average: payment = (sum insured ÷ actual value) × loss = (600,000 ÷ 1,000,000) × 200,000 = 0.6 × 200,000 = ₦120,000. Common wrong answers ignore the underinsurance factor (₦200,000) or use a wrong proportion (₦160,000 corresponds to 0.8 factor)."
+  },
+  {
+   "n": 25,
+   "topic": "The stock exchange",
+   "q": "Which function of the stock exchange helps companies raise long-term capital for expansion?",
+   "options": [
+    "Providing a market for issuing new shares through public offerings",
+    "Acting as a central bank to control interest rates",
+    "Providing short-term bank overdrafts to firms",
+    "Issuing government bonds directly"
+   ],
+   "answer": 0,
+   "explanation": "The stock exchange facilitates raising long-term capital by listing companies and providing a platform for public share issues. It does not act as a central bank, directly issue government bonds, or provide bank overdrafts; those are functions of central banks, governments/treasuries, and commercial banks respectively."
+  },
+  {
+   "n": 26,
+   "topic": "The stock exchange",
+   "q": "If Mrs. Eze buys 500 shares at ₦48.00 and later sells them at ₦54.00, what is her gross profit before commissions and taxes?",
+   "options": [
+    "₦12,000",
+    "₦6,000",
+    "₦3,000",
+    "₦2,500"
+   ],
+   "answer": 2,
+   "explanation": "Profit per share = ₦54.00 − ₦48.00 = ₦6.00. Total profit = 500 × ₦6.00 = ₦3,000. ₦12,000 would be if profit per share were ₦24, ₦6,000 doubles the correct amount, and ₦2,500 is an arithmetic error."
+  },
+  {
+   "n": 27,
+   "topic": "Home trade: retail and wholesale",
+   "q": "Which practice is characteristic of wholesale trade rather than retail trade in Nigeria?",
+   "options": [
+    "Selling goods in bulk to retailers at discounted unit prices",
+    "Displaying goods in small quantities for immediate purchase",
+    "Offering credit to individual final consumers",
+    "Providing after-sales services to household buyers"
+   ],
+   "answer": 0,
+   "explanation": "Wholesalers sell in bulk to retailers, often at lower unit prices. Offering credit and after-sales services to final consumers and displaying goods in small quantities are typical retail practices."
+  },
+  {
+   "n": 28,
+   "topic": "Home trade: retail and wholesale",
+   "q": "A shopkeeper marks up goods by 40% on cost. If a customer negotiates and gets a 10% discount on the marked price, what is the seller's gross margin on cost on the goods sold? (Express as percent of cost.)",
+   "options": [
+    "36%",
+    "30%",
+    "26%",
+    "40%"
+   ],
+   "answer": 2,
+   "explanation": "If cost = C, marked price = C × 1.40. After 10% discount the selling price = 1.40C × 0.90 = 1.26C. Gross margin on cost = (selling price − cost) ÷ cost = (1.26C − C)/C = 0.26 = 26%. Other options reflect common calculation mistakes like ignoring the discount effect."
+  },
+  {
+   "n": 29,
+   "topic": "Foreign trade",
+   "q": "A Lagos exporter sells cocoa beans to a buyer in Rotterdam FOB Lagos for ₦2,800,000. Freight to Rotterdam is ₦300,000 and insurance is ₦50,000, both paid by the buyer after arrival. Under the FOB term, which of the following is correct?",
+   "options": [
+    "The exporter bears risk until the goods reach the buyer’s warehouse in Rotterdam.",
+    "The exporter’s responsibility ends when the goods pass the ship’s rail at Lagos and the buyer bears freight and insurance thereafter.",
+    "The exporter must arrange and pay both freight and insurance to Rotterdam.",
+    "The exporter must pay freight but the buyer pays insurance after arrival."
+   ],
+   "answer": 1,
+   "explanation": "FOB (Free On Board) means the seller delivers when goods pass the ship’s rail at the port of shipment; risk transfers to buyer at that point. Therefore exporter need not pay freight or insurance to Rotterdam. Options stating exporter pays freight or bears risk to buyer’s warehouse are incorrect."
+  },
+  {
+   "n": 30,
+   "topic": "Foreign trade",
+   "q": "A Nigerian firm imports machinery worth $24,000 CIF Lagos. The freight cost is $1,200 and insurance $300. What is the value of the goods for customs duty when CIF basis is used?",
+   "options": [
+    "$23,700",
+    "$24,000",
+    "$25,200",
+    "$24,500"
+   ],
+   "answer": 1,
+   "explanation": "CIF (Cost, Insurance, Freight) value already includes cost, insurance and freight. The invoice states $24,000 CIF Lagos, so the customs value is $24,000. Adding or subtracting individual components is unnecessary; options that add freight or insurance are incorrect."
+  },
+  {
+   "n": 31,
+   "topic": "Foreign trade",
+   "q": "A Nigerian exporter receives payment under a confirmed irrevocable letter of credit. Which is the main advantage of this arrangement for the exporter?",
+   "options": [
+    "Payment is guaranteed by the confirming bank even if the buyer’s bank or buyer defaults.",
+    "The exporter can delay shipment until after payment is received in cash at the buyer’s bank.",
+    "The exporter can change the letter of credit terms unilaterally after shipment.",
+    "The exporter avoids submitting documents to any bank for payment."
+   ],
+   "answer": 0,
+   "explanation": "A confirmed irrevocable LC provides a guarantee from the confirming bank to pay if the exporter meets documentary conditions, protecting against buyer or buyer’s bank default. It does not remove need to submit documents, nor allow unilateral changes or delay shipment until cash receipt."
+  },
+  {
+   "n": 32,
+   "topic": "Consumer protection",
+   "q": "Which of the following actions most directly enforces consumer rights when a defective electronic appliance is sold in a Lagos shop?",
+   "options": [
+    "The consumer returns the appliance with the receipt and demands repair, replacement or refund under the Consumer Protection Act.",
+    "The consumer posts a negative comment on social media without contacting the seller.",
+    "The consumer resells the defective appliance to another buyer to recoup loss.",
+    "The consumer keeps using the appliance despite the defect hoping it will improve."
+   ],
+   "answer": 0,
+   "explanation": "Direct enforcement involves returning the defective item with proof of purchase and invoking statutory remedies (repair, replacement, refund). Social media posts, continued use, or reselling avoid legal remedies and don’t directly enforce rights."
+  },
+  {
+   "n": 33,
+   "topic": "Consumer protection",
+   "q": "A packaged drink in Abuja shows a best-before date that has passed. Under consumer protection principles, which remedy is most appropriate for the consumer who purchased it?",
+   "options": [
+    "Keep drinking it but claim compensation later only if illness occurs.",
+    "Ignore the date because best-before simply indicates ideal taste, not safety.",
+    "Donate the drink to avoid confronting the seller.",
+    "Return the product to the seller and demand a refund or replacement because selling expired goods is unfair and unsafe."
+   ],
+   "answer": 3,
+   "explanation": "Selling expired food/drink is a violation; the consumer should return it and seek a refund or replacement. Keeping it and waiting to claim later or donating it avoids immediate remedy; 'best-before' may relate to quality but expired indicates risk and seller liability."
+  },
+  {
+   "n": 34,
+   "topic": "Consumer protection",
+   "q": "Which practice by a Lagos retailer would most likely be considered unfair trade practice under Nigerian consumer law?",
+   "options": [
+    "Refusing to accept returns of non-defective items after a stated return period.",
+    "Selling goods at a discount during a clearance sale.",
+    "Displaying approximate dimensions for hand-made rugs in the shop.",
+    "Deliberately labeling a 500 g pack as 600 g to charge higher prices."
+   ],
+   "answer": 3,
+   "explanation": "Mislabeling weight to overcharge is deceptive and unfair. Discounts, enforcing a clearly stated return policy for non-defective items, and approximations for hand-made goods (if stated) are generally acceptable practices; only deliberate false weight is illegal."
+  },
+  {
+   "n": 35,
+   "topic": "Transport and communication",
+   "q": "A company in Kano needs to move 12 tonnes of fresh fish 900 km to Port Harcourt within 18 hours to retain freshness. Which transport mode is most suitable?",
+   "options": [
+    "Sea transport because it is cheapest for heavy consignments over long distances.",
+    "Rail transport because trains always travel faster than trucks for perishables.",
+    "Road transport by refrigerated trucks because it provides direct, rapid door-to-door delivery with temperature control.",
+    "Pipeline transport because it is the safest for fish."
+   ],
+   "answer": 2,
+   "explanation": "For perishable fish needing door-to-door delivery within hours, refrigerated road transport is most suitable. Sea is slower; rail may not offer requisite speed or door-to-door refrigerated service; pipelines are unsuitable for fish."
+  },
+  {
+   "n": 36,
+   "topic": "Transport and communication",
+   "q": "An Abuja-based firm sends confidential contracts via courier requiring proof of delivery and tracking. Which communication/transport service best meets these needs?",
+   "options": [
+    "A reputable express courier offering tracking and signed proof of delivery.",
+    "Public bus luggage service because buses follow fixed routes.",
+    "Hand-delivery by an ordinary driver with no receipt.",
+    "Regular postal service without tracking because it is cheaper."
+   ],
+   "answer": 0,
+   "explanation": "Express couriers provide tracking and signed POD, satisfying confidentiality and proof needs. Regular post or bus luggage lack reliable tracking/POD; hand-delivery without receipt offers no formal proof."
+  },
+  {
+   "n": 37,
+   "topic": "Business units",
+   "q": "Which characteristic most clearly distinguishes a private limited liability company in Nigeria from a sole proprietorship?",
+   "options": [
+    "Shareholders’ liability is limited to the amount unpaid on their shares, protecting personal assets beyond that.",
+    "A sole proprietorship issues shares traded on the stock exchange whereas a private limited company does not.",
+    "A private limited company can only be owned by foreigners while a sole proprietorship is for Nigerians.",
+    "Owners of sole proprietorships cannot employ any staff, but private companies can."
+   ],
+   "answer": 0,
+   "explanation": "Limited liability means shareholders are liable only up to unpaid share capital, protecting personal assets—this is a key distinction. The wrong options are false: ownership is not restricted by nationality this way, sole proprietors cannot issue shares, and they may employ staff."
+  },
+  {
+   "n": 38,
+   "topic": "Business units",
+   "q": "Three friends form a partnership to run a printing business in Ibadan. If the partnership agreement is silent on profit sharing, which default rule applies under typical partnership principles?",
+   "options": [
+    "Profits are distributed according to capital contributed even if not stated.",
+    "Profits and losses are shared equally among partners regardless of capital contribution.",
+    "The partners must seek a court order to decide profit sharing.",
+    "The oldest partner receives 50% and the rest divide equally."
+   ],
+   "answer": 1,
+   "explanation": "Where no agreement exists, standard partnership law presumes equal sharing of profits and losses. Distribution by capital, age-based shares, or needing a court are incorrect; equal division is the default legal rule."
+  },
+  {
+   "n": 39,
+   "topic": "Foreign trade",
+   "q": "Mr. Okoro in Lagos exports cocoa beans to a buyer in Rotterdam under a confirmed letter of credit payable at sight. Which statement is true?",
+   "options": [
+    "Mr. Okoro must wait until the buyer receives the goods and acknowledges them before he can present documents for payment.",
+    "Payment will be made only after the goods arrive at Rotterdam and customs clearance is completed.",
+    "The issuing bank will pay Mr. Okoro only if the buyer first sends written approval after delivery.",
+    "The confirming bank must pay Mr. Okoro on presentation of complying documents, even if the buyer defaults later."
+   ],
+   "answer": 3,
+   "explanation": "A confirmed sight L/C gives the seller the right to receive payment from the confirming bank immediately upon presenting documents that comply with the credit terms; the confirming bank thus guarantees payment even if the buyer defaults. The tempting wrong options confuse receipt of goods or buyer approval with documentary conditions — under a sight L/C payment depends on documents, not on physical delivery or the buyer's later approval."
+  },
+  {
+   "n": 40,
+   "topic": "Consumer protection",
+   "q": "A customer in Abuja buys a smartphone that stops working within 10 days. The phone was sold with a written one-year warranty. Under Nigerian consumer protection practice, what is the customer's most direct remedy?",
+   "options": [
+    "Sell the phone at a discount and claim the balance from the seller later in small claims court.",
+    "Keep the phone and ask the bank that handled the purchase to cancel the seller's account.",
+    "Return the phone to the seller or manufacturer and demand repair, replacement or refund under the warranty.",
+    "Report the matter to the police for criminal prosecution of the seller."
+   ],
+   "answer": 2,
+   "explanation": "The warranty gives the consumer the immediate right to have the product repaired, replaced or refunded by the seller or manufacturer; this is the normal and direct remedy. Police action is inappropriate unless there is fraud or criminal conduct; selling the phone or involving the bank are not proper first remedies and would delay getting a repair, replacement or refund."
+  }
+ ]
+}

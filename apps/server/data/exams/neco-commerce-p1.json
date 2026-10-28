@@ -1,0 +1,791 @@
+{
+ "id": "neco-commerce-p1",
+ "exam": "neco",
+ "subject": "commerce",
+ "year": null,
+ "number": 1,
+ "source": "ai",
+ "minutes": 60,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Home trade: retail and wholesale",
+   "q": "A wholesaler sells cartons of canned tomatoes to a retailer at ₦4,500 per carton. The retailer applies a mark-up of 40% on cost and expects a gross profit margin of 25% on selling price. Which statement is correct?",
+   "options": [
+    "Retail price is ₦6,300 and gives exactly 25% margin on selling price.",
+    "Retails price = ₦4,500 × 1.40 = ₦6,300; this implies gross profit margin = (₦6,300 − ₦4,500)/₦6,300 = 28.57%, so the retailer's mark-up exceeds the desired 25% margin.",
+    "Retail price should be ₦4,500 × 1.25 = ₦5,625 to meet 25% margin on selling price.",
+    "Retail price is ₦5,625 and gives 40% profit on cost."
+   ],
+   "answer": 1,
+   "explanation": "Mark-up on cost of 40% gives selling price ₦4,500 × 1.40 = ₦6,300. The gross profit margin is profit/selling price = (₦1,800)/₦6,300 ≈ 28.57%, not 25%. Option one confuses margin on selling price with mark-up on cost; option three mixes the figures incorrectly."
+  },
+  {
+   "n": 2,
+   "topic": "Home trade: retail and wholesale",
+   "q": "In a retail store in Kano, a shopkeeper offers a 3-for-2 deal on sachet water priced at ₦30 per sachet. A customer buys 9 sachets. How much does the customer pay?",
+   "options": [
+    "₦210",
+    "₦150",
+    "₦270",
+    "₦180"
+   ],
+   "answer": 3,
+   "explanation": "Under 3-for-2 the customer pays for 2 out of every 3 sachets. For 9 sachets the customer pays for 6 sachets: 6 × ₦30 = ₦180. ₦210 would be paying for 7 sachets; ₦270 would be full price for 9; ₦150 would be paying for 5 sachets."
+  },
+  {
+   "n": 3,
+   "topic": "Money and banking",
+   "q": "If Mr. Musa places ₦50,000 in a savings account paying simple interest at 6% per annum for 3 years, what is the total interest earned and the amount on maturity?",
+   "options": [
+    "Interest ₦9,800; amount ₦59,800",
+    "Interest ₦10,000; amount ₦60,000",
+    "Interest ₦3,000; amount ₦53,000",
+    "Interest ₦9,000; amount ₦59,000"
+   ],
+   "answer": 3,
+   "explanation": "Simple interest = P × r × t = ₦50,000 × 0.06 × 3 = ₦9,000. Amount = principal + interest = ₦50,000 + ₦9,000 = ₦59,000. Option two uses a wrong rate or compounding; option three is interest for one year only."
+  },
+  {
+   "n": 4,
+   "topic": "Money and banking",
+   "q": "Which of the following is a primary function of the Central Bank of Nigeria (CBN)?",
+   "options": [
+    "Buying and selling manufactured goods to control inflation",
+    "Providing retail loans to household customers as a primary business",
+    "Issuing legal tender currency and acting as banker to the government",
+    "Fixing prices of agricultural products in the market"
+   ],
+   "answer": 2,
+   "explanation": "The CBN issues legal tender and serves as banker to the government; it formulates monetary policy and regulates banks. It does not primarily provide retail loans (that is commercial banks' role), nor does it trade goods or fix agricultural prices."
+  },
+  {
+   "n": 5,
+   "topic": "Money and banking",
+   "q": "A depositor transfers ₦200,000 from a current account to a 1-year fixed deposit paying compound interest at 8% per annum, compounded annually. What will be the balance after one year?",
+   "options": [
+    "₦224,000",
+    "₦216,000",
+    "₦208,000",
+    "₦200,800"
+   ],
+   "answer": 1,
+   "explanation": "Compound interest for one year = ₦200,000 × (1 + 0.08) = ₦200,000 × 1.08 = ₦216,000. ₦208,000 would be 4% interest, ₦224,000 is 12% or two years at 6% each, and ₦200,800 is 0.4% — none match the 8% compound calculation."
+  },
+  {
+   "n": 6,
+   "topic": "Occupation and production",
+   "q": "Which of these is an example of tertiary occupation in Nigeria?",
+   "options": [
+    "A miner extracting coal in Enugu mines",
+    "A tailor weaving cloth at a village workshop",
+    "A woman running a mobile money agency in Enugu",
+    "A farmer cultivating yams in Benue"
+   ],
+   "answer": 2,
+   "explanation": "Tertiary occupations provide services (e.g., retail, banking, transport). Running a mobile money agency is a service. Farming and mining are primary activities; tailoring (though small industry) is a secondary/production activity."
+  },
+  {
+   "n": 7,
+   "topic": "Occupation and production",
+   "q": "During the planting season, a cooperative buys 250 kg of fertilizer and distributes equally to 25 members. If each member receives the fertilizer and pays a handling fee of ₦120, what is the quantity per member and total handling fees collected?",
+   "options": [
+    "10 kg per member; total fees ₦3,000",
+    "15 kg per member; total fees ₦3,000",
+    "12.5 kg per member; total fees ₦3,000",
+    "10 kg per member; total fees ₦2,500"
+   ],
+   "answer": 0,
+   "explanation": "250 kg ÷ 25 members = 10 kg per member. Handling fee total = 25 × ₦120 = ₦3,000. 12.5 kg would be 250 ÷ 20; 15 kg and ₦2,500 are both incorrect calculations."
+  },
+  {
+   "n": 8,
+   "topic": "E-commerce",
+   "q": "Ngozi orders goods online from a Lagos vendor. The vendor displays a full price of ₦12,000 and adds shipping ₦800 and VAT at 7.5% on goods only. What is the total amount Ngozi should expect to pay?",
+   "options": [
+    "₦13,300",
+    "₦12,900",
+    "₦13,700",
+    "₦13,700.00 plus VAT on shipping ₦1,027"
+   ],
+   "answer": 2,
+   "explanation": "VAT = 7.5% of ₦12,000 = ₦900. Total = ₦12,000 + ₦900 + ₦800 = ₦13,700. Option one omits either VAT or shipping; option three wrongly adds VAT on shipping which the question excludes."
+  },
+  {
+   "n": 9,
+   "topic": "Consumer protection",
+   "q": "Under the Federal Competition and Consumer Protection Act (FCCPA) in Nigeria, which of the following is a right specifically protected for consumers?",
+   "options": [
+    "Right to honest and clear information about goods and services",
+    "Right to determine trade policy for importers",
+    "Right to set prices for local retailers",
+    "Right to inspect a manufacturer’s private accounts"
+   ],
+   "answer": 0,
+   "explanation": "The FCCPA protects consumers’ right to accurate, clear information so they can make informed choices. The other options are not consumer rights: setting prices and trade policy are not consumer entitlements, and inspection of a manufacturer’s private accounts is not a protected consumer right."
+  },
+  {
+   "n": 10,
+   "topic": "Consumer protection",
+   "q": "Mrs. Funke bought a blender from a Lagos store. It stopped working after three days. Which remedy is most appropriate under Nigerian consumer law if the defect is not due to misuse?",
+   "options": [
+    "Sue the manufacturer in a foreign court immediately",
+    "Keep the blender and ask the store to give a discount on future purchases",
+    "Return the blender and request repair, replacement or refund from the seller",
+    "Demand compensation equal to ten times the purchase price"
+   ],
+   "answer": 2,
+   "explanation": "Nigerian consumer law entitles buyers to repair, replacement or refund for goods with defects not caused by misuse. Suing abroad or demanding punitive multiples of price are not appropriate initial remedies; asking for a future discount does not address the defective product."
+  },
+  {
+   "n": 11,
+   "topic": "Consumer protection",
+   "q": "A Lagos supermarket advertises ‘packed water — pure and natural’ but its test shows contamination. Which consumer protection concept applies to this case?",
+   "options": [
+    "Strict liability for sellers in all contracts",
+    "Requirement for consumers to test every product before purchase",
+    "Misleading and deceptive conduct",
+    "Right to free returns every time"
+   ],
+   "answer": 2,
+   "explanation": "Describing contaminated water as ‘pure and natural’ is misleading/deceptive conduct, prohibited under consumer protection law. Free returns always, strict liability in all contracts, and requiring consumers to test products are incorrect; the law protects consumers against deceptive claims by sellers."
+  },
+  {
+   "n": 12,
+   "topic": "The stock exchange",
+   "q": "What is the main role of a stockbroker on the Nigerian Stock Exchange for individual investors?",
+   "options": [
+    "Guarantee profits on every trade",
+    "Issue new shares for companies",
+    "Execute buy and sell orders for clients and give investment advice",
+    "Set the official share prices for listed companies"
+   ],
+   "answer": 2,
+   "explanation": "Stockbrokers act as agents to execute clients’ orders and may give advice. They do not guarantee profits, issue shares (that’s the issuing company and registrars/underwriters), nor do they set official prices (prices are determined by market supply and demand)."
+  },
+  {
+   "n": 13,
+   "topic": "The stock exchange",
+   "q": "If 1,000 ordinary shares of XYZ Plc are declared to receive a total dividend of ₦5,000, what is the dividend per share?",
+   "options": [
+    "₦50.00 per share",
+    "₦0.50 per share",
+    "₦5.00 per share",
+    "₦500.00 per share"
+   ],
+   "answer": 2,
+   "explanation": "Dividend per share = total dividend ÷ number of shares = ₦5,000 ÷ 1,000 = ₦5.00. ₦0.50 would be ₦500 ÷ 1,000, and ₦50 or ₦500 are far too large for this calculation."
+  },
+  {
+   "n": 14,
+   "topic": "The stock exchange",
+   "q": "An investor buys shares on the floor of the stock exchange through a broker; settlement occurs later. Which risk is the investor mainly exposed to between trade and settlement?",
+   "options": [
+    "Soil erosion risk affecting share value",
+    "Industrial robot malfunction risk",
+    "Settlement risk (failure to receive shares or pay funds at settlement)",
+    "Currency exchange risk from trading in naira"
+   ],
+   "answer": 2,
+   "explanation": "Between trade and settlement, settlement risk (also called counterparty risk) is primary — the other party may fail to deliver shares or funds. Currency risk is not specific here (trades are in naira), and the other options are irrelevant."
+  },
+  {
+   "n": 15,
+   "topic": "Business units",
+   "q": "Which feature best describes a private limited liability company in Nigeria?",
+   "options": [
+    "Shares are freely traded on the stock exchange",
+    "Company is owned and run by the government",
+    "Owners have unlimited personal liability for company debts",
+    "Shareholders’ liability is limited to their unpaid share capital"
+   ],
+   "answer": 3,
+   "explanation": "A private limited liability company limits shareholders’ liability to unpaid share capital. Its shares are not freely traded publicly (that’s public companies), it is not government-owned by definition, and owners do not have unlimited liability."
+  },
+  {
+   "n": 16,
+   "topic": "Business units",
+   "q": "A cooperative society in a rural Nigerian community is most likely formed primarily to achieve which goal?",
+   "options": [
+    "Provide members with goods or services at lower cost through collective action",
+    "Issue public shares to raise capital on the stock exchange",
+    "Avoid paying any taxes on business activities",
+    "Operate for political party governance"
+   ],
+   "answer": 0,
+   "explanation": "Cooperatives pool members’ resources to obtain goods/services cheaper or improve bargaining power. They do not issue public shares on the stock exchange, are not political party vehicles, and are not formed simply to avoid taxes."
+  },
+  {
+   "n": 17,
+   "topic": "Advertising and marketing",
+   "q": "A Lagos shoe maker lowers the price of a new sneaker below competitors for a short period to attract customers. This pricing strategy is called:",
+   "options": [
+    "Penetration pricing",
+    "Loss of market pricing",
+    "Price skimming",
+    "Predatory pricing (intent to eliminate competitors)"
+   ],
+   "answer": 0,
+   "explanation": "Penetration pricing sets a low initial price to quickly gain market share. Price skimming is high initial price; predatory pricing implies intent to drive competitors out of business (which may be illegal) and is more extreme; “loss of market pricing” is not a standard term."
+  },
+  {
+   "n": 18,
+   "topic": "Advertising and marketing",
+   "q": "In the AIDA model of advertising, which stage comes immediately after Attention?",
+   "options": [
+    "Awareness",
+    "Action",
+    "Interest",
+    "Desire"
+   ],
+   "answer": 2,
+   "explanation": "AIDA stands for Attention → Interest → Desire → Action, so Interest follows Attention. Awareness is similar to Attention but not the next stage in AIDA; Desire and Action come later."
+  },
+  {
+   "n": 19,
+   "topic": "Transport and communication",
+   "q": "A trader in Kano needs to send fragile ceramics to Port Harcourt. Which mode of transport gives the best balance of speed, safety for fragile goods, and reasonable cost for this long domestic route?",
+   "options": [
+    "Rail transport without special packing because trains are always smooth",
+    "Air freight without packaging since air is fastest and safe",
+    "Road transport using a reputable parcel service with cushioning and insurance",
+    "Water transport by coastal barge to save cost despite open deck handling"
+   ],
+   "answer": 2,
+   "explanation": "Road parcel services allow careful handling, door-to-door delivery and use cushioning for fragile items, offering a balance of speed and cost. Rail may be smoother but often lacks door-to-door convenience and careful handling; air freight is fast but expensive and still needs proper packing; coastal barges are cheaper but expose fragile goods to rough handling and weather."
+  },
+  {
+   "n": 20,
+   "topic": "Transport and communication",
+   "q": "Which communication method is least suitable for sending a legally binding signed contract between Lagos and Abuja?",
+   "options": [
+    "Registered post with proof of delivery of the original document",
+    "Sending a scanned signed contract via secure email with an electronic signature",
+    "Courier delivery of the original signed contract",
+    "Sending a photo of the signed pages by instant messaging without a verified digital signature"
+   ],
+   "answer": 3,
+   "explanation": "A photo sent via instant messaging lacks reliable verification and may not satisfy legal signature requirements. Courier and registered post provide original documents and proof of delivery; a secure email with electronic signature can meet legal standards when properly executed."
+  },
+  {
+   "n": 21,
+   "topic": "Transport and communication",
+   "q": "A manufacturer exports perishable fruit and needs the shortest transit time to London from Lagos. Which carrier choice will most reduce spoilage risk?",
+   "options": [
+    "Coastal scheduled barge to Europe with multi-stop calls",
+    "Air freight with temperature-controlled cargo hold",
+    "Road transport to a neighbouring country then sea freight",
+    "Deep-sea container shipping with standard containers"
+   ],
+   "answer": 1,
+   "explanation": "Air freight is fastest and temperature-controlled holds minimise spoilage for perishables. Sea container shipping is much slower; coastal barges with multiple stops increase delays; road plus sea adds handling and time, increasing spoilage risk."
+  },
+  {
+   "n": 22,
+   "topic": "Documents of trade",
+   "q": "Which document serves as both a receipt for goods loaded aboard a ship and a negotiable title to the goods in international trade?",
+   "options": [
+    "Bill of lading",
+    "Commercial invoice",
+    "Insurance policy",
+    "Packing list"
+   ],
+   "answer": 0,
+   "explanation": "The bill of lading acknowledges goods received on board and can be transferred as title, making it negotiable. A commercial invoice is for payment; a packing list details contents but is not title; an insurance policy covers risk but does not represent ownership."
+  },
+  {
+   "n": 23,
+   "topic": "Documents of trade",
+   "q": "Mr. Adebayo receives a proforma invoice from a supplier in Ibadan. What is the correct meaning of a proforma invoice in trade practice?",
+   "options": [
+    "A certificate confirming goods were inspected and accepted",
+    "A document that transfers title of goods to the buyer",
+    "A preliminary statement of goods and estimated price sent before a sale is finalised",
+    "A legally enforceable tax invoice issued after payment"
+   ],
+   "answer": 2,
+   "explanation": "A proforma invoice is an initial estimate to inform the buyer of likely costs before final sale. It is not a tax invoice issued after payment, does not transfer title, and is not an inspection certificate."
+  },
+  {
+   "n": 24,
+   "topic": "Documents of trade",
+   "q": "Which document would a customs officer most likely require to determine the value of imported textiles for duty assessment at Lagos port?",
+   "options": [
+    "Proforma invoice issued before shipment and not updated",
+    "Internal purchase order used by the importing company",
+    "Commercial invoice showing unit prices and total value",
+    "Delivery note showing only quantities delivered within Nigeria"
+   ],
+   "answer": 2,
+   "explanation": "Customs use the commercial invoice to assess declared value and duty because it shows actual transaction prices. A delivery note lacks declared prices; internal purchase orders are internal records; a proforma may not reflect final transaction value."
+  },
+  {
+   "n": 25,
+   "topic": "Foreign trade",
+   "q": "Nigeria imports machinery from South Korea under a documentary letter of credit (L/C). What main advantage does an L/C give the Nigerian importer?",
+   "options": [
+    "It assures payment to the exporter only on presentation of specified documents, protecting the importer from non-shipment",
+    "It eliminates the need for any inspection of goods after delivery",
+    "It transfers ownership of the goods to the issuing bank immediately",
+    "It guarantees the importer will get the best market price"
+   ],
+   "answer": 0,
+   "explanation": "An L/C ensures payment occurs only when exporter presents required documents, reducing risk of non-shipment. It does not remove the need for inspection after delivery, does not guarantee market-best prices, nor does it transfer ownership to the bank."
+  },
+  {
+   "n": 26,
+   "topic": "Foreign trade",
+   "q": "A Nigerian exporter sells garments for $10,000 FOB Lagos. The buyer arranges sea freight costing $1,200 and insurance $200. What is the CIF value of the shipment?",
+   "options": [
+    "$9,800",
+    "$11,400",
+    "$12,200",
+    "$10,200"
+   ],
+   "answer": 1,
+   "explanation": "CIF = FOB price + freight + insurance = $10,000 + $1,200 + $200 = $11,400. $9,800 is FOB minus costs (wrong), $10,200 is FOB plus only insurance, and $12,200 adds an extra $800 not given."
+  },
+  {
+   "n": 27,
+   "topic": "Insurance",
+   "q": "A Lagos trader insures a consignment for ₦600,000 at 80% average clause (reinstatement) insurable value and suffers a loss valued at ₦300,000. What amount will the insurer pay under average (pro rata) principle?",
+   "options": [
+    "₦480,000",
+    "₦600,000",
+    "₦240,000",
+    "₦300,000"
+   ],
+   "answer": 2,
+   "explanation": "Under average: insurer pays proportion equal to sum insured / actual value = (₦600,000 / ₦750,000) since 80% clause means sum insured is 80% of value? Clarification: If insured for 80% of true value, true value = ₦600,000 ÷ 0.8 = ₦750,000. Payment = loss × (sum insured / true value) = ₦300,000 × (₦600,000/₦750,000) = ₦300,000 × 0.8 = ₦240,000. The other options ignore the pro rata reduction or assume full coverage."
+  },
+  {
+   "n": 28,
+   "topic": "Insurance",
+   "q": "Which statement best describes indemnity in general insurance for a petty trader in Benin City?",
+   "options": [
+    "Indemnity is the process of cancelling a policy and returning all premiums",
+    "Indemnity guarantees the insurer will pay the full original purchase price regardless of depreciation",
+    "Indemnity restores the insured, so far as possible, to the financial position before the loss but does not allow profit from the claim",
+    "Indemnity requires the insured to bear all loss and insurer only gives advice"
+   ],
+   "answer": 2,
+   "explanation": "Indemnity means compensation to restore the insured's pre-loss financial position, preventing profit from a claim. It does not guarantee full replacement without considering depreciation, does not shift all loss to the insured, nor is it policy cancellation."
+  },
+  {
+   "n": 29,
+   "topic": "Home trade: retail and wholesale",
+   "q": "Which of the following best describes a wholesaler's function in a Nigerian supply chain?",
+   "options": [
+    "Selling directly to final consumers at retail prices",
+    "Buying in bulk from producers and selling in smaller lots to retailers",
+    "Issuing retail credit cards to consumers",
+    "Providing only storage services without buying goods"
+   ],
+   "answer": 1,
+   "explanation": "A wholesaler purchases large quantities from manufacturers and sells smaller quantities to retailers. Selling directly to final consumers is a retailer's role; providing only storage would be a warehouseman; issuing retail credit cards is a bank or retailer function, not that of a wholesaler."
+  },
+  {
+   "n": 30,
+   "topic": "Home trade: retail and wholesale",
+   "q": "Mrs. Okonkwo opens a small shop and wants to minimise the risk of unsold perishable stock. Which retail practice will best help her?",
+   "options": [
+    "Refusing to use credit sales to loyal customers",
+    "Buying smaller, more frequent quantities from a wholesaler",
+    "Buying larger quantities at bulk discount to reduce unit cost",
+    "Stocking only imported canned goods with long shelf life"
+   ],
+   "answer": 1,
+   "explanation": "Buying smaller, frequent quantities reduces the chance of spoilage for perishables. Buying larger quantities may lower unit cost but increases spoilage risk; stocking only canned goods changes product range but may reduce customer appeal; refusing credit sales does not directly reduce perishable stock risk."
+  },
+  {
+   "n": 31,
+   "topic": "Home trade: retail and wholesale",
+   "q": "A wholesaler offers retailers goods with a 10% trade discount on list price ₦50,000 and an additional 5% cash discount if paid within 14 days. What net amount will a retailer pay if she takes both discounts?",
+   "options": [
+    "₦42,750",
+    "₦43,000",
+    "₦42,500",
+    "₦45,000"
+   ],
+   "answer": 0,
+   "explanation": "First apply 10% trade discount: ₦50,000 − 10% = ₦45,000. Then 5% cash discount on ₦45,000 = ₦2,250. Net = ₦45,000 − ₦2,250 = ₦42,750. ₦42,500 would be if both discounts were applied on list price incorrectly; ₦43,000 and ₦45,000 are incorrect calculations."
+  },
+  {
+   "n": 32,
+   "topic": "Money and banking",
+   "q": "Which of these is a primary function of the Central Bank of Nigeria (CBN)?",
+   "options": [
+    "Setting prices for all consumer goods",
+    "Issuing legal tender and regulating the money supply",
+    "Providing personal loans to small traders",
+    "Operating all commercial bank branches"
+   ],
+   "answer": 1,
+   "explanation": "The CBN issues legal tender and manages monetary policy including money supply. It does not provide personal loans to individuals (that is commercial banks), set prices for consumer goods (that's market-driven/government policy), nor operate commercial bank branches."
+  },
+  {
+   "n": 33,
+   "topic": "Money and banking",
+   "q": "If Mr. Musa places ₦120,000 in a savings account paying 6% per annum simple interest for 2 years, how much interest will he earn?",
+   "options": [
+    "₦14,400",
+    "₦7,200",
+    "₦15,000",
+    "₦12,960"
+   ],
+   "answer": 0,
+   "explanation": "Simple interest = P × r × t = ₦120,000 × 0.06 × 2 = ₦14,400. ₦7,200 would be for one year; ₦12,960 could be a mistaken compound interest calculation with wrong rounding; ₦15,000 is incorrect arithmetic."
+  },
+  {
+   "n": 34,
+   "topic": "Money and banking",
+   "q": "Which document issued by a bank guarantees payment to a seller when conditions in a sales contract are met and is often used in international trade?",
+   "options": [
+    "Payee's cheque",
+    "Deposit receipt",
+    "Standing order",
+    "Letter of credit"
+   ],
+   "answer": 3,
+   "explanation": "A letter of credit guarantees payment by the bank on fulfilment of documentary terms in international trade. A payee's cheque is a negotiable instrument for payment, a standing order instructs a bank to pay regularly, and a deposit receipt shows deposited funds; none guarantee conditional payment in trade."
+  },
+  {
+   "n": 35,
+   "topic": "Occupation and production",
+   "q": "Which of the following best defines 'labour productivity' in a manufacturing firm?",
+   "options": [
+    "Total sales revenue in a year",
+    "Output produced per worker or per hour worked",
+    "Number of workers employed regardless of output",
+    "Quantity of raw materials purchased"
+   ],
+   "answer": 1,
+   "explanation": "Labour productivity measures output per worker or per labour hour, indicating efficiency. Total sales revenue is financial performance, number of workers alone ignores output, and raw materials purchased do not measure worker efficiency."
+  },
+  {
+   "n": 36,
+   "topic": "Occupation and production",
+   "q": "A small garment factory produced 1,200 shirts in 30 working days using 8 workers, each working 8 hours per day. What is the labour productivity in shirts per worker per day?",
+   "options": [
+    "5 shirts per worker per day",
+    "4 shirts per worker per day",
+    "10 shirts per worker per day",
+    "0.5 shirts per worker per day"
+   ],
+   "answer": 0,
+   "explanation": "Total shirts 1,200 ÷ 30 days = 40 shirts per day; with 8 workers, 40 ÷ 8 = 5 shirts per worker per day. 4 and 10 are wrong divisions, 0.5 confuses per hour with per day."
+  },
+  {
+   "n": 37,
+   "topic": "E-commerce",
+   "q": "Which practice improves trust for online buyers on a Lagos-based e-commerce site?",
+   "options": [
+    "Showing only discounted prices without vendor details",
+    "Allowing payment by cash only on delivery",
+    "Displaying clear return policy, secure payment icons and customer reviews",
+    "Blocking customer reviews to avoid negative comments"
+   ],
+   "answer": 2,
+   "explanation": "Clear return policies, secure payment indicators and reviews build buyer trust. Showing discounts without vendor info reduces transparency; blocking reviews removes social proof; cash on delivery may limit reach and security for online payments."
+  },
+  {
+   "n": 38,
+   "topic": "E-commerce",
+   "q": "Ife purchases items online and uses a payment gateway that charges a 2.5% fee on each transaction. If her order is ₦48,000, how much will the gateway charge and what total amount leaves her account?",
+   "options": [
+    "Gateway charge ₦1,200; total deducted ₦49,200",
+    "Gateway charge ₦1,000; total deducted ₦49,000",
+    "Gateway charge ₦1,080; total deducted ₦49,080",
+    "Gateway charge ₦1,500; total deducted ₦49,500"
+   ],
+   "answer": 0,
+   "explanation": "Fee = 2.5% of ₦48,000 = 0.025 × ₦48,000 = ₦1,200. Total deducted = ₦48,000 + ₦1,200 = ₦49,200. ₦1,080 is 2.25% not 2.5%; ₦1,000 or ₦1,500 are incorrect percentages."
+  },
+  {
+   "n": 39,
+   "topic": "Consumer protection",
+   "q": "Mrs. Bello buys a blender from a Lagos shop. After two days it stops working. She returns with the receipt and asks for a repair or replacement. Under Nigerian consumer protection principles, what is the seller primarily required to do?",
+   "options": [
+    "Repair the blender, replace it or give a refund if the product is faulty within a reasonable period",
+    "Refer Mrs. Bello to the manufacturer and take no further action",
+    "Provide a repair only if Mrs. Bello pays for inspection first",
+    "Offer only a credit note that expires in 7 days"
+   ],
+   "answer": 0,
+   "explanation": "Consumer protection requires that sellers remedy faulty goods by repair, replacement or refund within a reasonable time. Offering only a short credit note or demanding payment for inspection shifts the seller's responsibility; simply referring to the manufacturer without assisting fails to meet the seller's duty of care."
+  },
+  {
+   "n": 40,
+   "topic": "Consumer protection",
+   "q": "A Lagos supermarket advertises a '50% off' sale but quietly increases original prices the week before. Which unfair practice does this represent under consumer protection guidance?",
+   "options": [
+    "Predatory pricing, because prices are too low to compete",
+    "Product bundling, because items are sold together",
+    "Bait-and-switch, because the sale items are all in stock",
+    "Misleading pricing (false reference price) to create an illusion of discount"
+   ],
+   "answer": 3,
+   "explanation": "Raising prices before a discount to claim large reductions is misleading pricing (false reference price). It is distinct from bundling (selling together), predatory pricing (intent to eliminate competition), and bait-and-switch (advertising unavailable goods then offering alternatives)."
+  },
+  {
+   "n": 41,
+   "topic": "The stock exchange",
+   "q": "Which of the following best describes a market order placed on the Nigerian Stock Exchange?",
+   "options": [
+    "An instruction to trade only at a specific price or better",
+    "An order to execute a transaction only when the market opens the next day",
+    "An instruction guaranteeing a maximum price for selling regardless of market",
+    "An instruction to the broker to buy or sell immediately at the best available current price"
+   ],
+   "answer": 3,
+   "explanation": "A market order is executed immediately at the best available price. Specifying a price is a limit order, not a market order. Market orders are not delayed to the next day and they do not guarantee a maximum price for selling."
+  },
+  {
+   "n": 42,
+   "topic": "Business units",
+   "q": "Which characteristic most clearly distinguishes a sole proprietorship from a private limited company in Nigeria?",
+   "options": [
+    "Only private limited companies can keep business accounts",
+    "Sole proprietorships cannot make a profit",
+    "Private limited companies must be owned by foreigners",
+    "Owner has unlimited liability in a sole proprietorship but limited liability in a private limited company"
+   ],
+   "answer": 3,
+   "explanation": "The key legal difference is liability: sole proprietors have unlimited personal liability, while private limited company members have limited liability. Both business forms can keep accounts and make profit, and private companies need not be foreign-owned."
+  },
+  {
+   "n": 43,
+   "topic": "Business units",
+   "q": "A small Lagos tailoring firm employs four tailors who share equipment and profits equally. They formalise as a partnership. Which feature applies to this business now?",
+   "options": [
+    "Partners share management duties and profits according to the partnership agreement",
+    "The partnership becomes a separate legal person distinct from partners",
+    "Each partner can transfer their share freely on the stock market",
+    "Partners have complete limited liability against business debts"
+   ],
+   "answer": 0,
+   "explanation": "Partnerships typically have joint management and profit sharing as per their agreement. Partners usually have unlimited liability, the partnership is not a separate legal person like a company, and partnership shares are not freely tradable on stock markets."
+  },
+  {
+   "n": 44,
+   "topic": "Advertising and marketing",
+   "q": "A producer in Enugu uses radio adverts targeted at farmers during planting season, and city newspapers for urban customers. This is an example of which marketing strategy?",
+   "options": [
+    "Mass marketing, because the adverts are the same everywhere",
+    "Price skimming, because prices are being raised for different groups",
+    "Market segmentation and targeted promotion",
+    "Loss leader strategy, because products are sold below cost"
+   ],
+   "answer": 2,
+   "explanation": "Using different media and messages for distinct groups is market segmentation with targeted promotion. Mass marketing uses the same message for all; price skimming and loss leader refer to pricing strategies, not targeted media selection."
+  },
+  {
+   "n": 45,
+   "topic": "Advertising and marketing",
+   "q": "Which of the following measures would best assess whether a billboard campaign in Abuja increased brand awareness for a new beverage?",
+   "options": [
+    "Counting the number of billboards installed without any customer feedback",
+    "Conducting pre- and post-campaign surveys measuring unaided brand recall among target consumers",
+    "Only tracking shelf space in supermarkets where the beverage is stocked",
+    "Measuring production volume at the factory during the campaign"
+   ],
+   "answer": 1,
+   "explanation": "Pre- and post-campaign surveys of unaided brand recall directly measure change in awareness. Counting billboards or production volume does not measure consumer awareness, and shelf space tracking shows distribution but not awareness."
+  },
+  {
+   "n": 46,
+   "topic": "Consumer protection",
+   "q": "A buyer signs a contract in Lagos to purchase 100 boxes of bottled water from Supplier X. The contract has a clause that excludes all liability for defects. Under Nigerian consumer law principles, how is such an exclusion clause likely treated?",
+   "options": [
+    "It may be unenforceable if it seeks to exclude liability for defects in consumer goods",
+    "It automatically makes the goods tax-exempt",
+    "It is always fully enforceable if the buyer signed the contract",
+    "It converts the transaction into a barter agreement"
+   ],
+   "answer": 0,
+   "explanation": "Exclusion clauses that remove liability for defective consumer goods can be unenforceable as contrary to consumer protection. A signed contract does not automatically validate unfair exclusion; such clauses don't affect tax status nor turn the sale into barter."
+  },
+  {
+   "n": 47,
+   "topic": "The stock exchange",
+   "q": "An investor purchases a bond with a face value of ₦100,000 paying 8% annual coupon and matures in 5 years. If the investor receives yearly coupons and holds to maturity, what total interest income will they receive over the 5 years (excluding principal)?",
+   "options": [
+    "₦8,000",
+    "₦20,000",
+    "₦40,000",
+    "₦50,000"
+   ],
+   "answer": 2,
+   "explanation": "Annual coupon = 8% of ₦100,000 = ₦8,000. Over 5 years total interest = ₦8,000 × 5 = ₦40,000. ₦8,000 is a single-year amount; ₦50,000 or ₦20,000 are incorrect multiples."
+  },
+  {
+   "n": 48,
+   "topic": "Transport and communication",
+   "q": "A Lagos firm needs to send urgent legal documents to Kano the same day. Which transport/communication method is the most appropriate to ensure fastest secure delivery with proof of receipt?",
+   "options": [
+    "Sending scanned copies by social media chat",
+    "Surface freight via interstate haulage",
+    "Ordinary postal service",
+    "Courier service with signature-on-delivery"
+   ],
+   "answer": 3,
+   "explanation": "A courier service with signature-on-delivery provides same-day or next-day physical delivery and an official proof of receipt. Ordinary post is slower and less secure; scanned copies via social media lack legal proof of original-document delivery; surface freight is for bulky goods and takes much longer."
+  },
+  {
+   "n": 49,
+   "topic": "Transport and communication",
+   "q": "Which feature best distinguishes multimodal transport from single-mode transport in international trade?",
+   "options": [
+    "Use of two or more different modes of transport under one contract",
+    "Use of one carrier for a single transport leg",
+    "Transport where the buyer pays all carriage costs",
+    "Transport of goods only by road within one country"
+   ],
+   "answer": 0,
+   "explanation": "Multimodal transport combines two or more transport modes (e.g., sea and road) under a single contract. The wrong options describe single-mode road transport, single-leg carriage, and a pricing issue unrelated to multimodal definition."
+  },
+  {
+   "n": 50,
+   "topic": "Transport and communication",
+   "q": "A trader in Onitsha needs to estimate freight cost for 2 tonnes of goods transported 300 km by road at a rate of ₦18 per tonne-km. What is the freight charge?",
+   "options": [
+    "₦5,400",
+    "₦21,600",
+    "₦10,800",
+    "₦16,200"
+   ],
+   "answer": 2,
+   "explanation": "Freight = rate × weight × distance = ₦18 × 2 tonnes × 300 km = ₦18 × 600 = ₦10,800. ₦5,400 would be half that (as if 1 tonne), ₦16,200 equals ₦18×900 (3 tonnes), and ₦21,600 equals ₦18×1,200 (4 tonnes)."
+  },
+  {
+   "n": 51,
+   "topic": "Documents of trade",
+   "q": "Which document issued by a seller gives the buyer details of goods shipped and requests payment according to agreed credit terms?",
+   "options": [
+    "Invoice",
+    "Insurance certificate",
+    "Packing list",
+    "Bill of lading"
+   ],
+   "answer": 0,
+   "explanation": "An invoice details goods, prices and payment terms and requests payment. A bill of lading is a transport document; an insurance certificate covers risk; a packing list describes contents but does not request payment."
+  },
+  {
+   "n": 52,
+   "topic": "Documents of trade",
+   "q": "Which document serves as evidence that a carrier has received goods for shipment and can be used to claim those goods at destination?",
+   "options": [
+    "Delivery note",
+    "Proforma invoice",
+    "Bill of lading",
+    "Commercial invoice"
+   ],
+   "answer": 2,
+   "explanation": "A bill of lading is the carrier's receipt, title document and contract for carriage. A proforma invoice is a preliminary quote, a delivery note accompanies goods within local delivery, and a commercial invoice is for payment and customs but does not itself confirm carrier receipt like a bill of lading."
+  },
+  {
+   "n": 53,
+   "topic": "Documents of trade",
+   "q": "A Lagos exporter ships goods and wants the buyer to have details of weights and packaging but not to use that document to claim ownership. Which document should the exporter include?",
+   "options": [
+    "Letter of credit",
+    "Packing list",
+    "Certificate of origin",
+    "Bill of lading"
+   ],
+   "answer": 1,
+   "explanation": "A packing list details weights and packaging for the buyer and customs; it is not a title document. A bill of lading can convey title; a letter of credit is a payment instrument; a certificate of origin shows origin for duty purposes."
+  },
+  {
+   "n": 54,
+   "topic": "Foreign trade",
+   "q": "Nigeria imports cocoa processing equipment from Brazil CIF Lagos for $50,000. The freight and insurance part together cost $5,000. What is the CIF value used for customs valuation?",
+   "options": [
+    "$45,000",
+    "$55,000",
+    "$50,000",
+    "$50,000 plus applicable duties"
+   ],
+   "answer": 2,
+   "explanation": "CIF value already includes cost, insurance and freight; therefore the CIF value is $50,000. $45,000 would be the cost only (FOB) if freight/insurance were excluded; $55,000 incorrectly adds freight twice; duties are applied on CIF value but are not part of CIF amount."
+  },
+  {
+   "n": 55,
+   "topic": "Foreign trade",
+   "q": "A Nigerian exporter receives payment under a confirmed irrevocable letter of credit. What advantage does confirmation provide?",
+   "options": [
+    "The confirming bank guarantees payment even if the issuing bank defaults",
+    "It removes the need to present documents for payment",
+    "It converts the credit into a grant from the confirming bank",
+    "It allows the buyer to cancel the credit at any time without notice"
+   ],
+   "answer": 0,
+   "explanation": "Confirmation means a second bank (often the seller's bank) adds its guarantee to pay if the issuing bank fails. It does not allow buyer cancellation at will, does not waive document presentation, and is not a grant."
+  },
+  {
+   "n": 56,
+   "topic": "Insurance",
+   "q": "Mrs. Adebayo insures a shop stock valued at ₦400,000 on an 'average clause (reinstated)' basis at 75% sum insured. A fire causes loss of ₦120,000. How much will she receive from the insurer (rounded to nearest naira)?",
+   "options": [
+    "₦160,000",
+    "₦90,000",
+    "₦120,000",
+    "₦100,000"
+   ],
+   "answer": 1,
+   "explanation": "Under average clause, payment = loss × (sum insured ÷ value of goods). Sum insured = 75% of ₦400,000 = ₦300,000. So payment = ₦120,000 × (₦300,000 ÷ ₦400,000) = ₦120,000 × 0.75 = ₦90,000. ₦120,000 is full loss (no average applied), ₦100,000 assumes 5/6 ratio, and ₦160,000 exceeds loss."
+  },
+  {
+   "n": 57,
+   "topic": "Insurance",
+   "q": "Which principle of insurance requires the insured to disclose material facts (like previous fire damage) to the insurer before a policy is issued?",
+   "options": [
+    "Proximate cause",
+    "Indemnity",
+    "Utmost good faith (uberrima fides)",
+    "Subrogation"
+   ],
+   "answer": 2,
+   "explanation": "Utmost good faith obliges full disclosure of material facts by both parties. Indemnity relates to restoring loss, subrogation to insurer's right to pursue third parties, and proximate cause identifies the dominant cause of loss—none require prior disclosure like utmost good faith."
+  },
+  {
+   "n": 58,
+   "topic": "Home trade: retail and wholesale",
+   "q": "Which of the following best describes the primary function of a wholesaler in Nigeria?",
+   "options": [
+    "Selling directly to final consumers at retail prices",
+    "Buying large quantities from producers and selling smaller lots to retailers (breaking bulk)",
+    "Carrying out large-scale manufacturing of goods",
+    "Providing long-term credit to individual customers"
+   ],
+   "answer": 1,
+   "explanation": "The main role of a wholesaler is to buy in bulk from producers and resell in smaller quantities to retailers (breaking bulk). Wholesalers do not normally sell to final consumers (that is the retailer's role), they are not primarily long-term creditors to individual customers, and they do not engage in large-scale manufacturing."
+  },
+  {
+   "n": 59,
+   "topic": "Money and banking",
+   "q": "Which of the following is NOT a function of the Central Bank of Nigeria (CBN)?",
+   "options": [
+    "Acting as banker and financial adviser to the federal government",
+    "Granting personal loans to private individuals",
+    "Issuing legal tender (Naira)",
+    "Formulating and implementing monetary policy to regulate money supply"
+   ],
+   "answer": 1,
+   "explanation": "The CBN issues the Naira, advises and acts as banker to the federal government, and implements monetary policy. It does not grant personal loans to private individuals; that is a function of commercial banks."
+  },
+  {
+   "n": 60,
+   "topic": "E-commerce",
+   "q": "A Lagos online seller wants to reduce the risk of receiving payment fraud and chargebacks. Which practice will best protect the seller?",
+   "options": [
+    "Accepting only cash-on-delivery orders and refusing online payments",
+    "Relying solely on email confirmations from buyers before shipping",
+    "Asking buyers to send screenshots of mobile transfers as proof of payment",
+    "Using an independent escrow service that releases payment only after buyer confirms receipt"
+   ],
+   "answer": 3,
+   "explanation": "An escrow service holds funds until the buyer confirms receipt, protecting sellers from fraudulent payments and chargebacks. Cash-on-delivery avoids online payment risk but is impractical for many transactions; screenshots can be forged; and email confirmations are easy to falsify and do not prevent chargebacks."
+  }
+ ]
+}

@@ -2,7 +2,7 @@
  * UI concept art for Knowzone World mini-games, made with OpenAI, to agree on a look before building.
  * Run from apps/server:
  *
- *   npx tsx scripts/ui-concepts.ts <output folder> [game id] [--set english|chemistry|chemistry-lab|space|history|quests|tech|business] [--n 2] [--quality medium|high]
+ *   npx tsx scripts/ui-concepts.ts <output folder> [game id] [--set english|chemistry|chemistry-lab|space|history|quests|tech|business|redesign] [--n 2] [--quality medium|high]
  *
  * Cost with gpt-image-1-mini: about $0.02–0.03 per portrait picture at medium quality.
  * These are mock-ups: the real screens are built in the app (real text, real fonts, translations).
@@ -540,6 +540,49 @@ const BUSINESS: Record<string, { title: string; prompt: string }> = {
   },
 };
 
+/**
+ * App redesign concepts (not games): three book-themed directions for the whole app, each shown on the
+ * dashboard and on Past Questions, to replace the all-purple look.
+ */
+const REDESIGN_STYLE = [
+  'A single high-fidelity mobile app screen design, portrait phone screenshot (no phone frame, no hands), for "Knowzone AI", a learning app for secondary-school students (JAMB, WAEC, courses, AI tutor).',
+  'A modern, clean, professional app UI like a top App Store education app: clear hierarchy, generous spacing, rounded cards, readable typography, a bottom tab bar with Home, Explore, a round "+" Create button, Play and Profile.',
+  'All English text must be spelled exactly as given; keep text short. No watermark, no other logos.',
+].join(' ');
+
+const HOME = (look: string) =>
+  [
+    look,
+    'Screen: the home dashboard. Top: a round avatar, "Good morning," and the name "Ada" in a big heading, a search icon and a bell.',
+    'A "Today\'s goal" card: "10 / 15 min" with a progress bar, a flame streak "5" and a coin counter "297".',
+    'A prominent card: "JAMB, WAEC & NECO past questions" with the line "Practise every subject in the real exam format" and three small chips "JAMB", "WAEC", "NECO" and a graduation-cap icon.',
+    'A card "Stuck on something? Ask the AI tutor".',
+    'A row "Continue learning" with two lesson cards: "Cell structure" and "Quadratic equations" with small progress bars.',
+  ].join(' ');
+const EXAMS = (look: string) =>
+  [
+    look,
+    'Screen: "Past Questions". A back arrow, the small label "JAMB · WAEC · NECO" and the big title "Past Questions".',
+    'Three large tabs "JAMB" (selected), "WAEC", "NECO".',
+    'A list of subject rows, each with a small coloured icon: "English Language · 2 papers", "Mathematics · 2 papers", "Physics · 2 papers", "Chemistry · 2 papers", "Biology · 2 papers".',
+  ].join(' ');
+
+const LIBRARY =
+  'Look: "Warm library". The background is a softly blurred photo-real open book with cream paper pages and a hint of a wooden desk, warm natural light, lightly faded so text stays readable. Cards are warm white paper with soft shadows and a subtle paper texture. Colours: deep ink navy (#1F2A44) text, emerald green (#1E7A5A) for primary buttons and progress, warm gold (#C9962B) for coins and highlights, small coral accents. Headings in an elegant serif font (like a book title), body text in a clean sans-serif. Light theme.';
+const ACADEMIA =
+  'Look: "Evening study". The background is a dark, cosy library at night: tall wooden bookshelves full of books, softly blurred, with warm reading-lamp glow. Cards are deep brown-black glass with parchment-coloured text and thin gold borders. Colours: parchment (#F3E9D2) text, warm amber (#E0A84B) for primary buttons and progress, forest green accents (#3F7D5A), burgundy for alerts. Headings in a classic serif font, body text in a clean sans-serif. Dark theme, rich and calm, not purple.';
+const NOTEBOOK =
+  'Look: "Study notebook". The background is a clean light notebook page with faint blue ruled lines and a red margin line, with a few subtle pencil doodles and a paper clip at the edges. Cards look like neat white index cards and sticky notes with soft shadows. Colours: ink blue (#1D4ED8) for primary buttons, text in near-black (#1F2328), highlighter yellow (#FFE066) for highlights, coral (#F2665E) and teal (#14B8A6) accents. Friendly rounded sans-serif headings with a slightly hand-written accent font for small labels. Light theme, fresh and student-friendly.';
+
+const REDESIGN: Record<string, { title: string; prompt: string }> = {
+  'library-home': { title: 'Warm library · dashboard', prompt: HOME(LIBRARY) },
+  'library-exams': { title: 'Warm library · past questions', prompt: EXAMS(LIBRARY) },
+  'academia-home': { title: 'Evening study · dashboard', prompt: HOME(ACADEMIA) },
+  'academia-exams': { title: 'Evening study · past questions', prompt: EXAMS(ACADEMIA) },
+  'notebook-home': { title: 'Study notebook · dashboard', prompt: HOME(NOTEBOOK) },
+  'notebook-exams': { title: 'Study notebook · past questions', prompt: EXAMS(NOTEBOOK) },
+};
+
 const SETS: Record<string, Record<string, { title: string; prompt: string }>> = {
   english: GAMES,
   chemistry: CHEMISTRY,
@@ -549,9 +592,10 @@ const SETS: Record<string, Record<string, { title: string; prompt: string }>> = 
   quests: QUESTS,
   tech: TECH,
   business: BUSINESS,
+  redesign: REDESIGN,
 };
 /** Sets drawn in another style than the cartoon one. */
-const SET_STYLE: Record<string, string> = { 'chemistry-lab': REALISTIC, space: STYLISED, history: HISTORY_STYLE, quests: QUEST_STYLE, tech: TECH_STYLE, business: BUSINESS_STYLE };
+const SET_STYLE: Record<string, string> = { 'chemistry-lab': REALISTIC, space: STYLISED, history: HISTORY_STYLE, quests: QUEST_STYLE, tech: TECH_STYLE, business: BUSINESS_STYLE, redesign: REDESIGN_STYLE };
 
 const args = process.argv.slice(2);
 const flag = (name: string) => (args.includes(`--${name}`) ? args[args.indexOf(`--${name}`) + 1] : undefined);

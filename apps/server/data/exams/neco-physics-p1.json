@@ -1,0 +1,791 @@
+{
+ "id": "neco-physics-p1",
+ "exam": "neco",
+ "subject": "physics",
+ "year": null,
+ "number": 1,
+ "source": "ai",
+ "minutes": 60,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Elasticity and pressure",
+   "q": "A steel wire 2.00 m long and of cross-sectional area 1.00 mm² supports a load that stretches it by 1.00 mm when a tensile force of 200 N is applied. What is the Young's modulus of the steel?",
+   "options": [
+    "4.0 × 10^11 Pa",
+    "1.0 × 10^10 Pa",
+    "2.0 × 10^8 Pa",
+    "4.0 × 10^9 Pa"
+   ],
+   "answer": 0,
+   "explanation": "Young's modulus Y = (F L)/(A ΔL). Here A = 1.00 mm² = 1.00×10^-6 m², ΔL = 1.00 mm = 1.00×10^-3 m. So Y = (200 × 2.00)/(1.00×10^-6 × 1.00×10^-3) = 400/(1.00×10^-9) = 4.0×10^11 Pa. The other options result from incorrect unit conversion or arithmetic mistakes."
+  },
+  {
+   "n": 2,
+   "topic": "Elasticity and pressure",
+   "q": "At a Lagos market an umbrella stand uses two springs of constants 200 N/m and 300 N/m arranged in series to support a pole. If a 5.00 kg pole is hung from the pair, what is the extension of the combined springs? (Take g = 9.81 m/s².)",
+   "options": [
+    "0.409 m",
+    "0.163 m",
+    "0.817 m",
+    "0.245 m"
+   ],
+   "answer": 0,
+   "explanation": "For springs in series, k_eq = (k1 k2)/(k1 + k2) = (200×300)/(200+300) = 60000/500 = 120 N/m. Extension x = mg/k_eq = (5.00×9.81)/120 = 49.05/120 = 0.40875 m ≈ 0.409 m. Other answers come from using wrong combination rules or arithmetic errors."
+  },
+  {
+   "n": 3,
+   "topic": "Elasticity and pressure",
+   "q": "A cylindrical tank contains 0.20 m depth of oil (density 800 kg/m³) on top of 0.30 m depth of water. What is the gauge pressure at the bottom of the tank? (Take g = 9.81 m/s².)",
+   "options": [
+    "4.51 × 10^3 Pa",
+    "2.95 × 10^3 Pa",
+    "1.57 × 10^3 Pa",
+    "7.38 × 10^3 Pa"
+   ],
+   "answer": 0,
+   "explanation": "Gauge pressure at bottom = ρ_oil g h_oil + ρ_water g h_water = 800×9.81×0.20 + 1000×9.81×0.30 = 1569.6 + 2943 = 4512.6 Pa ≈ 4.51×10^3 Pa. The other options ignore one layer or use incorrect densities/heights."
+  },
+  {
+   "n": 4,
+   "topic": "Magnetism and electromagnetic induction",
+   "q": "A straight conductor of length 0.20 m carries a current of 4.0 A at right angles to a uniform magnetic field of flux density 0.50 T. What is the magnetic force on the conductor?",
+   "options": [
+    "4.00 N",
+    "0.40 N",
+    "0.10 N",
+    "2.00 N"
+   ],
+   "answer": 1,
+   "explanation": "Magnetic force F = B I L sinθ. Here θ = 90°, so sinθ = 1. Thus F = 0.50 × 4.0 × 0.20 = 0.40 N. Other choices arise from multiplying/dividing by wrong factors or omitting the length or field."
+  },
+  {
+   "n": 5,
+   "topic": "Magnetism and electromagnetic induction",
+   "q": "A rectangular coil 0.10 m wide is pulled into a region of uniform magnetic field B = 0.20 T at a constant speed 0.50 m/s, with the plane of the coil perpendicular to the field. What is the induced emf in the coil while it enters the field?",
+   "options": [
+    "0.0050 V",
+    "0.010 V",
+    "0.020 V",
+    "0.100 V"
+   ],
+   "answer": 1,
+   "explanation": "The rate of change of magnetic flux for a loop edge entering is E = B × width × v = 0.20 × 0.10 × 0.50 = 0.010 V. Other answers are from doubling/halving factors or using area instead of width."
+  },
+  {
+   "n": 6,
+   "topic": "Magnetism and electromagnetic induction",
+   "q": "A transformer used in a Nigerian town has 2400 turns on the primary and 120 turns on the secondary. If the primary is connected to 240 V and draws 0.50 A, what is the current in the secondary (ideal transformer)?",
+   "options": [
+    "10 A",
+    "0.025 A",
+    "1.00 A",
+    "20 A"
+   ],
+   "answer": 0,
+   "explanation": "For an ideal transformer Vp/Vs = Np/Ns, so Vs = Vp×(Ns/Np) = 240×(120/2400) = 12 V. Power (ideal) gives IpVp = IsVs, so Is = IpVp/Vs = 0.50×240/12 = 0.50×20 = 10 A. Wrong options result from misapplying turns ratio or power relation."
+  },
+  {
+   "n": 7,
+   "topic": "Atomic and nuclear physics",
+   "q": "A sample of radioactive material of mass 24 g decays so that after some time only 3.0 g remains. If the half-life is 6.0 years, how long did the decay take?",
+   "options": [
+    "12 years",
+    "6 years",
+    "24 years",
+    "18 years"
+   ],
+   "answer": 3,
+   "explanation": "Each half-life halves the mass: 24 → 12 (1), 12 → 6 (2), 6 → 3 (3). So 3 half-lives elapsed. Time = 3 × 6.0 years = 18 years. Other choices are from miscounting half-lives."
+  },
+  {
+   "n": 8,
+   "topic": "Atomic and nuclear physics",
+   "q": "A metal surface has work function 2.50 eV. What is the threshold frequency for photoelectric emission? (Planck's constant h = 6.63×10^-34 J·s; 1 eV = 1.60×10^-19 J.)",
+   "options": [
+    "4.02 × 10^14 Hz",
+    "2.50 × 10^14 Hz",
+    "6.03 × 10^14 Hz",
+    "1.51 × 10^15 Hz"
+   ],
+   "answer": 2,
+   "explanation": "Work function φ = 2.50 eV = 2.50×1.60×10^-19 = 4.00×10^-19 J. Threshold frequency f0 = φ/h = 4.00×10^-19 / 6.63×10^-34 ≈ 6.03×10^14 Hz. Other options come from arithmetic errors or incorrect unit conversion."
+  },
+  {
+   "n": 9,
+   "topic": "Newton’s laws and momentum",
+   "q": "In a courtship display, student Emeka drops a 0.20 kg wooden ball moving at 5.00 m/s which collides elastically head-on with a stationary 0.10 kg ball. What is the speed of the 0.10 kg ball immediately after the collision?",
+   "options": [
+    "1.67 m/s",
+    "5.00 m/s",
+    "6.67 m/s",
+    "3.33 m/s"
+   ],
+   "answer": 2,
+   "explanation": "For a perfectly elastic head-on collision where m1 = 0.20 kg, u1 = 5.00 m/s, m2 = 0.10 kg, u2 = 0, the speed of m2 after collision is v2 = [2 m1/(m1 + m2)] u1 = (2×0.20/0.30)×5.00 = (0.40/0.30)×5.00 = 1.333...×5.00 = 6.666... ≈ 6.67 m/s. Other values come from wrong formulae or arithmetic."
+  },
+  {
+   "n": 10,
+   "topic": "Newton’s laws and momentum",
+   "q": "A Lagos taxi of mass 800 kg increases its speed from 10.0 m/s to 22.0 m/s. What impulse was delivered to the taxi?",
+   "options": [
+    "1.76 × 10^4 N·s",
+    "8.80 × 10^3 N·s",
+    "9.60 × 10^3 N·s",
+    "6.40 × 10^2 N·s"
+   ],
+   "answer": 2,
+   "explanation": "Impulse = change in momentum = m (v - u) = 800 × (22.0 - 10.0) = 800 × 12.0 = 9600 N·s = 9.60×10^3 N·s. Other options come from arithmetic slip or using average speed instead of Δv."
+  },
+  {
+   "n": 11,
+   "topic": "Gas laws",
+   "q": "A cylinder contains a fixed amount of gas at constant temperature. The pressure is 80.0 kPa when the gas occupies 240 cm³. If the volume is compressed to 120 cm³, what is the new pressure?",
+   "options": [
+    "40.0 kPa",
+    "120 kPa",
+    "160 kPa",
+    "320 kPa"
+   ],
+   "answer": 2,
+   "explanation": "At constant temperature Boyle's law gives P1V1 = P2V2. So P2 = 80.0×240/120 = 80.0×2 = 160 kPa. 40.0 kPa would be if volume doubled instead of halved; 120 kPa and 320 kPa do not satisfy P1V1 = P2V2."
+  },
+  {
+   "n": 12,
+   "topic": "Gas laws",
+   "q": "A rigid 10.0 L container holds 2.0 mol N2 and 1.0 mol O2 at the same temperature. The total pressure is 300 kPa. What is the partial pressure of O2?",
+   "options": [
+    "200 kPa",
+    "150 kPa",
+    "50.0 kPa",
+    "100 kPa"
+   ],
+   "answer": 3,
+   "explanation": "Partial pressure is proportional to mole fraction. Mole fraction of O2 = 1.0/(2.0+1.0) = 1/3, so p(O2) = (1/3)×300 kPa = 100 kPa. 150 kPa would be 1/2 of total; 200 kPa or 50.0 kPa are inconsistent with the 1:2 mole ratio."
+  },
+  {
+   "n": 13,
+   "topic": "Gas laws",
+   "q": "A fixed mass of an ideal gas at constant pressure has volume 2.00 L at 27.0°C. If heated to 127°C at the same pressure, what is the new volume?",
+   "options": [
+    "3.00 L",
+    "2.40 L",
+    "2.67 L",
+    "1.78 L"
+   ],
+   "answer": 2,
+   "explanation": "Charles's law V ∝ T (in K). T1 = 27.0+273 = 300 K, T2 = 127+273 = 400 K, so V2 = V1×(400/300) = 2.00×4/3 = 2.666... ≈ 2.67 L. 3.00 L would be if temperature doubled; 1.78 L and 2.40 L are incorrect ratios."
+  },
+  {
+   "n": 14,
+   "topic": "Electrostatics and capacitors",
+   "q": "Two point charges, each +2.00 μC, are fixed 0.50 m apart in air. What is the magnitude of the electrostatic force between them? (Use k = 9.0×10⁹ N·m²/C²)",
+   "options": [
+    "1.44 N",
+    "0.288 N",
+    "0.0720 N",
+    "0.144 N"
+   ],
+   "answer": 3,
+   "explanation": "Coulomb's law: F = k q1 q2 / r² = 9.0×10⁹ × (2.00×10⁻⁶)² / (0.50)² = 9.0×10⁹ × 4.00×10⁻¹² / 0.25 = 0.036 / 0.25 = 0.144 N. 0.0720 N would result from a mistaken factor of 1/2; 0.288 N doubles the correct value; 1.44 N is off by factor 10."
+  },
+  {
+   "n": 15,
+   "topic": "Electrostatics and capacitors",
+   "q": "Two capacitors, 4.0 μF and 6.0 μF, are connected in series across a 120 V supply. What is the magnitude of the charge on each capacitor?",
+   "options": [
+    "1.44×10⁻⁴ C",
+    "6.00×10⁻⁴ C",
+    "4.80×10⁻⁴ C",
+    "2.88×10⁻⁴ C"
+   ],
+   "answer": 3,
+   "explanation": "Series equivalent C = (C1 C2)/(C1+C2) = (4.0×6.0)/(4.0+6.0) = 24/10 = 2.4 μF. Charge Q = C_eq × V = 2.4×10⁻⁶ × 120 = 2.88×10⁻⁴ C. 4.80×10⁻⁴ C would be C1×V if mistaken for parallel; 1.44×10⁻⁴ C is half the correct value; 6.00×10⁻⁴ C is from using the larger capacitor alone."
+  },
+  {
+   "n": 16,
+   "topic": "Electrostatics and capacitors",
+   "q": "A charge +5.0 μC moves from point A at 300 V to point B at 100 V. How much work is done by the electric field on the charge?",
+   "options": [
+    "1.00×10⁻³ J",
+    "-1.00×10⁻³ J",
+    "0 J",
+    "4.00×10⁻³ J"
+   ],
+   "answer": 0,
+   "explanation": "Work done by the field = q (V_A − V_B) = 5.0×10⁻⁶ C × (300−100) V = 5.0×10⁻⁶ × 200 = 1.00×10⁻³ J. A negative sign would mean work done against the field; 4.00×10⁻³ J corresponds to using 800 V difference; 0 J is incorrect since potentials differ."
+  },
+  {
+   "n": 17,
+   "topic": "Motion",
+   "q": "A car starting from rest accelerates uniformly to 20.0 m/s in 10.0 s. What distance does it travel in that time?",
+   "options": [
+    "50.0 m",
+    "200 m",
+    "400 m",
+    "100 m"
+   ],
+   "answer": 3,
+   "explanation": "Acceleration a = Δv/Δt = 20.0/10.0 = 2.00 m/s². Distance s = ½ a t² = 0.5×2.00×(10.0)² = 1.0×100 = 100 m. 200 m would be from using full speed × time without ½; 50.0 m is half the correct answer; 400 m is four times larger."
+  },
+  {
+   "n": 18,
+   "topic": "Motion",
+   "q": "A ball is thrown horizontally from a cliff 45.0 m high with horizontal speed 10.0 m/s. Using g = 9.80 m/s², how far from the base of the cliff does it land (neglect air resistance)?",
+   "options": [
+    "10.0 m",
+    "45.0 m",
+    "20.0 m",
+    "30.3 m"
+   ],
+   "answer": 3,
+   "explanation": "Time to fall: t = √(2h/g) = √(2×45.0/9.80) = √(90.0/9.80) = √9.1837 = 3.03 s. Horizontal range = u_x t = 10.0×3.03 = 30.3 m. 45.0 m and 20.0 m are common distractors from miscalculating time; 10.0 m ignores vertical motion entirely."
+  },
+  {
+   "n": 19,
+   "topic": "Measurement and units",
+   "q": "Express 0.004020 m to three significant figures.",
+   "options": [
+    "0.0040 m",
+    "0.00402 m",
+    "0.00420 m",
+    "0.00403 m"
+   ],
+   "answer": 1,
+   "explanation": "Significant figures ignore leading zeros. The nonzero digits are 4, 0, 2 so three significant figures give 0.00402 m. 0.0040 m has only two significant figures; 0.00403 and 0.00420 change digits beyond the 3 s.f. rounding rule."
+  },
+  {
+   "n": 20,
+   "topic": "Measurement and units",
+   "q": "A rectangular metal block has mass 250 g and dimensions 5.0 cm × 2.0 cm × 2.5 cm. What is its density in kg/m³?",
+   "options": [
+    "10000 kg/m³",
+    "1000 kg/m³",
+    "1.00×10⁶ kg/m³",
+    "10 kg/m³"
+   ],
+   "answer": 0,
+   "explanation": "Volume = 5.0×2.0×2.5 = 25.0 cm³ = 25.0×10⁻⁶ m³. Mass = 250 g = 0.250 kg. Density = 0.250 / (25.0×10⁻⁶) = 0.250 / 2.5×10⁻⁵ = 1.0×10⁴ kg/m³ = 10000 kg/m³. 1000 kg/m³ is ten times smaller; 10 kg/m³ and 1.00×10⁶ kg/m³ are far from the correct conversion."
+  },
+  {
+   "n": 21,
+   "topic": "Light and optics",
+   "q": "A concave mirror has focal length 10.0 cm. An object is placed 30.0 cm in front of the mirror. Where is the image formed measured from the mirror surface?",
+   "options": [
+    "15.0 cm in front of the mirror (real image)",
+    "7.50 cm in front of the mirror",
+    "15.0 cm behind the mirror (virtual image)",
+    "20.0 cm in front of the mirror"
+   ],
+   "answer": 0,
+   "explanation": "Use the mirror equation 1/f = 1/u + 1/v with f = 10.0 cm and u = 30.0 cm. 1/v = 1/10 - 1/30 = 2/30 = 1/15 so v = 15.0 cm. Positive v (with this sign convention) means a real image in front of the mirror; the \"behind\" option is wrong and 7.50 or 20.0 cm do not satisfy the equation."
+  },
+  {
+   "n": 22,
+   "topic": "Light and optics",
+   "q": "Light from air (n = 1.00) is incident on glass of refractive index 1.50 at 30.0°. What is the angle of refraction inside the glass (to one decimal place)?",
+   "options": [
+    "11.5°",
+    "19.5°",
+    "30.0°",
+    "45.0°"
+   ],
+   "answer": 1,
+   "explanation": "Snell's law: n1 sinθ1 = n2 sinθ2 → sinθ2 = (1.00 × sin30.0°)/1.50 = 0.5/1.5 = 0.3333. θ2 = arcsin(0.3333) ≈ 19.47° ≈ 19.5°. 30° would be no refraction; 45° and 11.5° do not match the numeric result from Snell's law."
+  },
+  {
+   "n": 23,
+   "topic": "Light and optics",
+   "q": "A thin convex lens has focal length 20.0 cm. An object is placed 40.0 cm from the lens on the principal axis. What is the nature and size of the image compared with the object?",
+   "options": [
+    "Real, inverted and same size (magnification = 1) at 40.0 cm on the other side",
+    "Virtual, upright and twice the size at 80.0 cm",
+    "Real, inverted and half the size at 20.0 cm",
+    "Virtual, upright and same size at 40.0 cm on the object side"
+   ],
+   "answer": 0,
+   "explanation": "Lens formula 1/f = 1/u + 1/v with f = 20.0 cm and u = 40.0 cm gives 1/v = 1/20 - 1/40 = 1/40 so v = 40.0 cm. Magnification m = v/u = 40/40 = 1, so the image is real, inverted and same size. The virtual/upright options are incorrect and the half/twice size options don't follow from the calculation."
+  },
+  {
+   "n": 24,
+   "topic": "Simple machines",
+   "q": "At a Lagos market, a trader uses a simple lever to lift a crate. The distance from the fulcrum to the effort is 1.00 m and to the load is 0.25 m. What is the mechanical advantage (ideal) of this lever?",
+   "options": [
+    "0.25",
+    "2.0",
+    "1.25",
+    "4.0"
+   ],
+   "answer": 3,
+   "explanation": "Ideal mechanical advantage (MA) for a lever is effort arm ÷ load arm = 1.00 m ÷ 0.25 m = 4.0. 0.25 would be the reciprocal; 1.25 and 2.0 are incorrect ratios that do not match the given arms."
+  },
+  {
+   "n": 25,
+   "topic": "Simple machines",
+   "q": "A crate weighing 200 N is pulled up a frictionless inclined plane of length 5.00 m and vertical height 1.00 m. What effort force is required (ideal) to move the crate up the plane at constant speed?",
+   "options": [
+    "160 N",
+    "50.0 N",
+    "200 N",
+    "40.0 N"
+   ],
+   "answer": 3,
+   "explanation": "Ideal mechanical advantage of an inclined plane = length/height = 5.00/1.00 = 5.0. Effort = weight ÷ MA = 200 N ÷ 5.0 = 40.0 N. 200 N ignores the advantage; 50.0 and 160 N are arithmetic mistakes."
+  },
+  {
+   "n": 26,
+   "topic": "Simple machines",
+   "q": "A block of 240 N is supported by a movable pulley system with two supporting rope segments (ideal, no friction). What effort must be applied to lift the block at constant speed?",
+   "options": [
+    "240 N",
+    "60 N",
+    "480 N",
+    "120 N"
+   ],
+   "answer": 3,
+   "explanation": "A movable pulley with two supporting rope segments gives MA = 2. Thus effort = load ÷ 2 = 240 N ÷ 2 = 120 N. 240 N would be no mechanical advantage; 480 N is double the load; 60 N would be MA = 4 which is not the system described."
+  },
+  {
+   "n": 27,
+   "topic": "Scalars and vectors",
+   "q": "A student walks 3.0 m east then 4.0 m north. What is the magnitude of the resultant displacement?",
+   "options": [
+    "1.0 m",
+    "7.0 m",
+    "5.0 m",
+    "√13 m"
+   ],
+   "answer": 2,
+   "explanation": "The two displacements are perpendicular, so resultant = √(3.0² + 4.0²) = √(9 + 16) = √25 = 5.0 m. 1.0 m is the net component difference in one direction, 7.0 m is the path length and √13 ≈ 3.61 is from 2² + 3², not this case."
+  },
+  {
+   "n": 28,
+   "topic": "Scalars and vectors",
+   "q": "Yusuf walks 3.0 km east from his home and then 4.0 km west. What is his displacement from home?",
+   "options": [
+    "7.0 km",
+    "1.0 km west",
+    "1.0 km east",
+    "-1.0 km"
+   ],
+   "answer": 1,
+   "explanation": "Take east as positive: displacement = +3.0 km + (−4.0 km) = −1.0 km, which is 1.0 km west. 7.0 km is total distance walked, 1.0 km east is sign reversed, and \"-1.0 km\" is a correct numeric value but not the required direction wording."
+  },
+  {
+   "n": 29,
+   "topic": "Heat and temperature",
+   "q": "A 200 g sample of water is heated from 20.0°C to 80.0°C. Using specific heat of water 4200 J/kg·°C, how much heat energy is required (to three significant figures)?",
+   "options": [
+    "2.52 × 10^4 J",
+    "504 J",
+    "1.26 × 10^5 J",
+    "5.04 × 10^4 J"
+   ],
+   "answer": 3,
+   "explanation": "Q = mcΔT = 0.200 kg × 4200 J/kg·°C × (80.0 − 20.0)°C = 0.200 × 4200 × 60 = 50,400 J = 5.04 × 10^4 J. 504 J is too small by ×100, 1.26×10^5 J would be if mass were 0.5 kg, and 2.52×10^4 J is half the correct value."
+  },
+  {
+   "n": 30,
+   "topic": "Heat and temperature",
+   "q": "A steel rod of length 2.00 m is heated by 50.0°C. If the linear expansion coefficient for steel is 1.20 × 10^-5 /°C, by how much does the rod lengthen (give answer in mm to two significant figures)?",
+   "options": [
+    "1.2 mm",
+    "0.12 mm",
+    "2.4 mm",
+    "12 mm"
+   ],
+   "answer": 0,
+   "explanation": "ΔL = α L ΔT = 1.20×10^-5 /°C × 2.00 m × 50.0°C = 1.20×10^-5 × 100 = 1.20×10^-3 m = 1.20 mm ≈ 1.2 mm. 12 mm is ten times too large, 0.12 mm is ten times too small, and 2.4 mm corresponds to α = 2.4×10^-5 /°C."
+  },
+  {
+   "n": 31,
+   "topic": "Waves",
+   "q": "A wave travelling along the surface of a pond has equation y = 0.020 sin(40πt − 2πx) where y is in metres, x in metres and t in seconds. What are the wavelength and the frequency of the wave?",
+   "options": [
+    "Wavelength 2.0 m; frequency 20 Hz",
+    "Wavelength 1.0 m; frequency 40 Hz",
+    "Wavelength 0.5 m; frequency 20 Hz",
+    "Wavelength 1.0 m; frequency 20 Hz"
+   ],
+   "answer": 3,
+   "explanation": "General form sin(ωt − kx): ω = 40π → f = ω/(2π) = 20 Hz. k = 2π → λ = 2π/k = 1.0 m. Common mistakes: using ω or k directly as frequency or treating k as 4π leading to wrong λ."
+  },
+  {
+   "n": 32,
+   "topic": "Waves",
+   "q": "A radio station in Kano transmits a carrier wave of frequency 1.0 MHz. If the wave travels at 3.0 × 10^8 m/s, what is the minimum length of a half-wave dipole antenna for this frequency?",
+   "options": [
+    "150 m",
+    "75.0 m",
+    "450 m",
+    "300 m"
+   ],
+   "answer": 0,
+   "explanation": "A half-wave dipole has length L = λ/2. First λ = v/f = (3.0×10^8)/(1.0×10^6) = 300 m, so L = 300/2 = 150 m. Wrong options come from using full-wave, quarter-wave or triple-half values."
+  },
+  {
+   "n": 33,
+   "topic": "Current electricity",
+   "q": "A torch bulb has resistance 5.0 Ω at operating temperature and is connected to four 1.5 V cells in series. What current flows through the bulb (neglect internal resistance)?",
+   "options": [
+    "1.2 A",
+    "0.30 A",
+    "6.0 A",
+    "0.75 A"
+   ],
+   "answer": 0,
+   "explanation": "Total voltage = 4 × 1.5 V = 6.0 V. Current I = V/R = 6.0/5.0 = 1.2 A. Common wrong answers come from dividing by number of cells or using R×V incorrectly."
+  },
+  {
+   "n": 34,
+   "topic": "Current electricity",
+   "q": "A student measures 0.20 A through a lamp when a potential difference of 3.0 V is applied. Later the lamp is connected to a 12 V supply and draws 0.80 A. What is the lamp's resistance at operating temperature in the 12 V connection?",
+   "options": [
+    "60 Ω",
+    "3.8 Ω",
+    "15 Ω",
+    "6.0 Ω"
+   ],
+   "answer": 2,
+   "explanation": "At 12 V current 0.80 A so operating resistance R = V/I = 12/0.80 = 15 Ω. The 0.20 A at 3.0 V describes cold or lower-temperature behavior; using those values would give 15 Ω too if ohmic but real lamps change resistance with temperature."
+  },
+  {
+   "n": 35,
+   "topic": "Work, energy and power",
+   "q": "A 60.0 kg student climbs a staircase rising 5.0 m in vertical height in 12.0 s. What is the average power developed by the student against gravity? (Use g = 10.0 m/s²)",
+   "options": [
+    "3.00 × 10^2 W",
+    "2.50 × 10^2 W",
+    "1.00 × 10^2 W",
+    "2.50 × 10^3 W"
+   ],
+   "answer": 1,
+   "explanation": "Work against gravity = mgh = 60.0 × 10.0 × 5.0 = 3000 J. Power = work/time = 3000/12.0 = 250 W = 2.50 × 10^2 W. Common mistakes: using g = 9.81 or wrong division by time."
+  },
+  {
+   "n": 36,
+   "topic": "Elasticity and pressure",
+   "q": "A diver in Lagos is 3.00 m below the surface of fresh water (density 1000 kg/m³). What is the pressure due to the water at that depth? (Take g = 9.81 m/s²)",
+   "options": [
+    "2.94 × 10³ Pa",
+    "9.81 × 10⁴ Pa",
+    "2.94 × 10⁴ Pa",
+    "3.00 × 10³ Pa"
+   ],
+   "answer": 2,
+   "explanation": "Pressure p = ρgh = 1000 × 9.81 × 3.00 = 29,430 Pa ≈ 2.94×10⁴ Pa. The smaller wrong values arise from missing a factor of 10 (confusing m and cm) or using g = 9.81 but dividing instead of multiplying."
+  },
+  {
+   "n": 37,
+   "topic": "Elasticity and pressure",
+   "q": "A 2.00 L sealed metal cylinder loses 0.100 L when the external pressure is increased by 2.00 × 10⁶ Pa. What is the bulk modulus of the material of the cylinder and its contents (assume uniform compressibility)?",
+   "options": [
+    "1.00 × 10⁷ Pa",
+    "4.00 × 10⁶ Pa",
+    "2.00 × 10⁸ Pa",
+    "4.00 × 10⁷ Pa"
+   ],
+   "answer": 3,
+   "explanation": "Bulk modulus K = ΔP / (ΔV/V). Fractional volume change = 0.100/2.00 = 0.050. So K = 2.00×10⁶ / 0.050 = 4.00×10⁷ Pa. Wrong options result from arithmetic errors (e.g. using wrong fractional change or misplacing a factor of 10)."
+  },
+  {
+   "n": 38,
+   "topic": "Magnetism and electromagnetic induction",
+   "q": "A metal rod of length 0.50 m moves at 10.0 m/s perpendicular to a uniform magnetic field of 0.40 T. What emf is induced between the ends of the rod?",
+   "options": [
+    "4.0 V",
+    "2.0 V",
+    "20.0 V",
+    "0.20 V"
+   ],
+   "answer": 1,
+   "explanation": "Motional emf ε = Bℓv = 0.40 × 0.50 × 10.0 = 2.0 V. A common mistake is to forget the length or to misplace a decimal (giving 0.20 V or 20.0 V), or to double v mistakenly (giving 4.0 V)."
+  },
+  {
+   "n": 39,
+   "topic": "Magnetism and electromagnetic induction",
+   "q": "A coil of 200 turns and area 0.100 m² has its plane normal to a uniform magnetic field. The magnetic field falls uniformly from 0.80 T to 0.20 T in 0.250 s. What is the magnitude of the induced emf in the coil?",
+   "options": [
+    "96 V",
+    "48 V",
+    "12 V",
+    "24 V"
+   ],
+   "answer": 1,
+   "explanation": "Magnitude ε = N ΔΦ/Δt = N A ΔB/Δt = 200 × 0.100 × (0.80−0.20)/0.250 = 200 × 0.100 × 0.60 /0.250 = (200 × 0.06)/0.250 = 12/0.250 = 48 V. Wrong options come from forgetting N, using ΔB half-size, or arithmetic slip (e.g. dividing by 2)."
+  },
+  {
+   "n": 40,
+   "topic": "Magnetism and electromagnetic induction",
+   "q": "A straight horizontal wire of length 2.0 m carries a current of 5.0 A at right angles to a uniform magnetic field of magnitude 0.30 T. What is the magnitude of the magnetic force on the wire?",
+   "options": [
+    "3.0 N",
+    "0.75 N",
+    "15.0 N",
+    "0.30 N"
+   ],
+   "answer": 0,
+   "explanation": "Magnetic force F = B I ℓ = 0.30 × 5.0 × 2.0 = 3.0 N. The option 15.0 N equals B × (I × ℓ) with a misplaced decimal for B, while 0.30 N or 0.75 N come from dropping factors of 2 or 5 (current or length errors)."
+  },
+  {
+   "n": 41,
+   "topic": "Atomic and nuclear physics",
+   "q": "A 160 g sample of a radioactive isotope decays to 20.0 g. If the half-life of the isotope is 5.00 days, how long did the decay take?",
+   "options": [
+    "10.0 days",
+    "15.0 days",
+    "5.00 days",
+    "20.0 days"
+   ],
+   "answer": 1,
+   "explanation": "Each half-life halves the mass: 160 → 80 (1 half-life) → 40 (2) → 20 (3). So 3 half-lives elapsed: time = 3 × 5.00 = 15.0 days. The other answers correspond to miscounting the number of half-lives (e.g. thinking 160→20 is two or four halvings)."
+  },
+  {
+   "n": 42,
+   "topic": "Atomic and nuclear physics",
+   "q": "An electron in a hydrogen atom falls from n = 3 to n = 1. What is the energy of the photon emitted? (Use the ionisation energy of hydrogen 13.6 eV)",
+   "options": [
+    "4.53 eV",
+    "12.09 eV",
+    "1.51 eV",
+    "13.60 eV"
+   ],
+   "answer": 1,
+   "explanation": "Energy released ΔE = 13.6×(1/1² − 1/3²) = 13.6×(1 − 1/9) = 13.6×8/9 = 12.088... ≈ 12.09 eV. The 4.53 eV is the n=3→n=2 transition, 13.60 eV is full ionisation from n=1, and 1.51 eV matches small transitions like n=4→n=? but not this one."
+  },
+  {
+   "n": 43,
+   "topic": "Newton’s laws and momentum",
+   "q": "Two trolleys on a track collide and stick. Trolley A has mass 2.0 kg and initially moves at 3.0 m/s to the east. Trolley B has mass 1.0 kg and moves at 2.0 m/s to the west. What is the velocity of the combined mass after collision (take east as positive)?",
+   "options": [
+    "0.33 m/s east",
+    "1.33 m/s east",
+    "2.00 m/s east",
+    "1.00 m/s west"
+   ],
+   "answer": 1,
+   "explanation": "Conservation of momentum: (2.0×3.0) + (1.0×(−2.0)) = 6.0 − 2.0 = 4.0 kg·m/s. Total mass = 3.0 kg, so v = 4.0/3.0 = 1.333... m/s east. The 0.33 result is a common arithmetic slip (dividing by wrong mass), and the westward answers ignore sign of one momentum."
+  },
+  {
+   "n": 44,
+   "topic": "Newton’s laws and momentum",
+   "q": "A 0.50 kg ball moving at 8.0 m/s strikes a vertical wall and rebounds directly back with speed 8.0 m/s. If the contact time with the wall is 0.20 s, what is the magnitude of the average force exerted on the ball by the wall?",
+   "options": [
+    "8.0 N",
+    "16 N",
+    "40 N",
+    "80 N"
+   ],
+   "answer": 2,
+   "explanation": "Change in momentum magnitude Δp = m|v_f − v_i| = 0.50×|−8.0 − 8.0| = 0.50×16 = 8.0 kg·m/s. Average force = Δp/Δt = 8.0/0.20 = 40 N. The 16 N and 8.0 N come from forgetting the factor 2 (rebound doubles the speed change) or using mass without doubling; 80 N would be from halving the contact time mistakenly."
+  },
+  {
+   "n": 45,
+   "topic": "Gas laws",
+   "q": "A hot-air balloon at Jos has a gas volume of 4.00 m³ when the air inside is at 300 K. If the balloon is heated so the internal temperature becomes 360 K while pressure remains atmospheric, what is the new volume?",
+   "options": [
+    "4.80 m³",
+    "3.33 m³",
+    "5.00 m³",
+    "4.20 m³"
+   ],
+   "answer": 0,
+   "explanation": "At constant pressure V ∝ T (Charles's law). V2 = V1 × T2/T1 = 4.00 × 360/300 = 4.00 × 1.2 = 4.80 m³. 4.20 m³ would correspond to T2 = 315 K, 5.00 m³ to T2 = 375 K, and 3.33 m³ is a contraction, not an expansion."
+  },
+  {
+   "n": 46,
+   "topic": "Gas laws",
+   "q": "A rigid sealed cylinder at 27°C contains gas at pressure 1.00 × 10^5 Pa. If the gas is heated at constant volume until its pressure is 3.00 × 10^5 Pa, what is the final temperature in kelvin?",
+   "options": [
+    "300 K",
+    "600 K",
+    "1000 K",
+    "900 K"
+   ],
+   "answer": 3,
+   "explanation": "At constant volume P ∝ T (Gay-Lussac). T1 = 27°C = 300 K. T2 = T1 × P2/P1 = 300 × (3.00×10^5)/(1.00×10^5) = 300 × 3 = 900 K. 600 K would be for P2 = 2×10^5 Pa, 300 K is the initial temperature, and 1000 K is not consistent with the pressure ratio."
+  },
+  {
+   "n": 47,
+   "topic": "Gas laws",
+   "q": "2.00 mol of an ideal gas at 27.0°C is contained in a 10.0 L flask. Using R = 8.31 J mol⁻¹ K⁻¹, what is the pressure of the gas in pascals?",
+   "options": [
+    "4.16 × 10^5 Pa",
+    "4.99 × 10^5 Pa",
+    "2.50 × 10^5 Pa",
+    "9.98 × 10^4 Pa"
+   ],
+   "answer": 1,
+   "explanation": "Convert V = 10.0 L = 0.0100 m³ and T = 27.0°C = 300.0 K. P = nRT/V = 2.00×8.31×300.0 / 0.0100 = (2×8.31×300)/0.01 = 498600 Pa ≈ 4.99×10^5 Pa. 9.98×10^4 Pa would be if V were 0.100 m³, and other options come from calculation or unit errors."
+  },
+  {
+   "n": 48,
+   "topic": "Electrostatics and capacitors",
+   "q": "Two point charges +3.0 μC and −1.0 μC are 10.0 cm apart in air. What is the magnitude of the electrostatic force between them? (Use k = 9.0 × 10^9 N m² C⁻²)",
+   "options": [
+    "8.1 N",
+    "0.27 N",
+    "27 N",
+    "2.7 N"
+   ],
+   "answer": 3,
+   "explanation": "Coulomb's law: F = k|q1 q2|/r² = 9.0×10^9 × (3.0×10⁻⁶ × 1.0×10⁻⁶)/(0.10)² = 9.0×10^9 × 3.0×10⁻¹²/0.01 = 9.0×10^9 × 3.0×10⁻¹⁰ = 2.7 N. 0.27 N is wrong by factor 10 (likely r error), 27 N is factor 10 too large, 8.1 N would be if both charges were 3 μC."
+  },
+  {
+   "n": 49,
+   "topic": "Electrostatics and capacitors",
+   "q": "A parallel-plate capacitor has plate area 0.0200 m² and plate separation 1.00 mm in air. What is its capacitance? (ε0 = 8.85 × 10⁻¹² F m⁻¹)",
+   "options": [
+    "1.77 × 10⁻¹⁰ F",
+    "1.77 × 10⁻¹¹ F",
+    "1.77 × 10⁻⁹ F",
+    "8.85 × 10⁻¹¹ F"
+   ],
+   "answer": 0,
+   "explanation": "C = ε0 A/d = 8.85×10⁻¹² × 0.0200 / 1.00×10⁻³ = 8.85×10⁻¹² × 20 = 1.77×10⁻¹⁰ F. 1.77×10⁻⁹ F would be if d were 0.100 mm, 8.85×10⁻¹¹ F is half of the correct value (area or factor error), and 1.77×10⁻¹¹ F is ten times smaller (likely d taken as 10 mm)."
+  },
+  {
+   "n": 50,
+   "topic": "Electrostatics and capacitors",
+   "q": "A 10.0 μF capacitor is charged to 100 V, then disconnected from the battery and connected in parallel with an uncharged 40.0 μF capacitor. What is the final potential difference across the pair?",
+   "options": [
+    "25.0 V",
+    "20.0 V",
+    "80.0 V",
+    "100 V"
+   ],
+   "answer": 1,
+   "explanation": "Charge conserved: Q_initial = 10.0×10⁻6 × 100 = 1.00×10⁻3 C. Total capacitance C_total = 10.0×10⁻6 + 40.0×10⁻6 = 50.0×10⁻6 F. V_final = Q/C_total = 1.00×10⁻3 / 50.0×10⁻6 = 20.0 V. 25.0 V would be if C_total = 40 μF, 80.0 V and 100 V ignore charge sharing."
+  },
+  {
+   "n": 51,
+   "topic": "Motion",
+   "q": "A Lagos taxi accelerates uniformly from 10.0 m/s to 30.0 m/s in 5.00 s. How far does it travel during this acceleration?",
+   "options": [
+    "50.0 m",
+    "100 m",
+    "200 m",
+    "80.0 m"
+   ],
+   "answer": 1,
+   "explanation": "With uniform acceleration, distance = average speed × time = ((u+v)/2) × t = (10.0+30.0)/2 × 5.00 = 20.0 × 5.00 = 100 m. 50.0 m would be if average speed were 10 m/s, 200 m if average were 40 m/s, and 80.0 m is a calculation error."
+  },
+  {
+   "n": 52,
+   "topic": "Motion",
+   "q": "A student on the University of Ibadan roof throws a stone horizontally at 15.0 m/s from a height of 20.0 m. Neglect air resistance. What horizontal distance from the base of the roof does the stone land? (g = 9.8 m/s²)",
+   "options": [
+    "30.3 m",
+    "45.9 m",
+    "20.0 m",
+    "15.0 m"
+   ],
+   "answer": 0,
+   "explanation": "Vertical fall: y = ½ g t² so t = √(2y/g) = √(40/9.8) = 2.02 s. Horizontal range = u_x × t = 15.0 × 2.02 = 30.3 m. 15.0 m would be using t = 1 s, 20.0 m corresponds to t ≈1.33 s, and 45.9 m would be if t = 3.06 s."
+  },
+  {
+   "n": 53,
+   "topic": "Measurement and units",
+   "q": "A length measured with a ruler is 12.36 cm with an absolute uncertainty of ±0.01 cm. What is the relative (fractional) uncertainty expressed as a percentage (to two significant figures)?",
+   "options": [
+    "0.081%",
+    "1.21%",
+    "0.0081%",
+    "0.81%"
+   ],
+   "answer": 0,
+   "explanation": "Relative uncertainty = (0.01 / 12.36) × 100% = 0.000809 ×100% = 0.0809% ≈ 0.081%. 0.81% is ten times too large, 0.0081% is ten times too small, and 1.21% is unrelated to these values."
+  },
+  {
+   "n": 54,
+   "topic": "Measurement and units",
+   "q": "A student measures current I = 0.240 A ±0.002 A and voltage V = 6.00 V ±0.01 V across a heater. Calculate the power P = VI and its absolute uncertainty (to two significant figures).",
+   "options": [
+    "P = 1.44 W with uncertainty ±0.014 W",
+    "P = 1.44 W with uncertainty ±0.002 W",
+    "P = 1.50 W with uncertainty ±0.01 W",
+    "P = 1.44 W with uncertainty ±0.024 W"
+   ],
+   "answer": 0,
+   "explanation": "P = VI = 6.00 × 0.240 = 1.44 W. Relative uncertainties add: ΔI/I = 0.002/0.240 = 0.00833, ΔV/V = 0.01/6.00 = 0.001667, total relative ≈ 0.0100. Absolute ΔP = 0.0100 × 1.44 = 0.0144 ≈ 0.014 W. ±0.002 W ignores voltage uncertainty, ±0.024 W doubles the correct value, and 1.50 W is an incorrect power value."
+  },
+  {
+   "n": 55,
+   "topic": "Elasticity and pressure",
+   "q": "A steel wire of length 1.50 m and cross-sectional area 1.50 × 10⁻⁶ m² supports a mass of 50.0 kg. Taking Young’s modulus for steel as 2.00 × 10¹¹ Pa and g = 9.81 m/s², what is the extension of the wire? (Give answer in mm.)",
+   "options": [
+    "2.45 mm",
+    "24.5 mm",
+    "0.49 mm",
+    "0.245 mm"
+   ],
+   "answer": 0,
+   "explanation": "Force F = mg = 50.0 × 9.81 = 490.5 N. Extension x = FL/(AY) = 490.5 × 1.50 /(1.50 × 10⁻⁶ × 2.00 × 10¹¹) = 0.0024525 m = 2.45 mm. The 0.245 mm and 0.49 mm answers come from decimal-place or factor-of-5 errors; 24.5 mm is 10× too large."
+  },
+  {
+   "n": 56,
+   "topic": "Elasticity and pressure",
+   "q": "An offshore diver in the Gulf of Guinea descends to a depth of 10.0 m in seawater of density 1025 kg/m³. What is the hydrostatic pressure at that depth (g = 9.81 m/s²)?",
+   "options": [
+    "1.01 × 10⁵ Pa (approximately)",
+    "1.00 × 10⁴ Pa",
+    "1.00 × 10⁶ Pa",
+    "9.81 × 10⁴ Pa"
+   ],
+   "answer": 0,
+   "explanation": "Hydrostatic pressure p = ρgh = 1025 × 9.81 × 10.0 = 100,552.5 Pa ≈ 1.01 × 10⁵ Pa. 9.81 × 10⁴ Pa would be if ρ = 1000 kg/m³; 1.00 × 10⁴ Pa and 1.00 × 10⁶ Pa are incorrect by factors of 10 or 10²."
+  },
+  {
+   "n": 57,
+   "topic": "Magnetism and electromagnetic induction",
+   "q": "A rectangular coil of 50 turns and area 0.0400 m² is in a uniform magnetic field of 0.250 T. The coil’s plane is initially normal to the field. The coil is rapidly turned so its plane becomes parallel to the field in 0.100 s. What is the average induced emf?",
+   "options": [
+    "5.0 V",
+    "0.50 V",
+    "10.0 V",
+    "2.5 V"
+   ],
+   "answer": 0,
+   "explanation": "Change in flux ΔΦ = N B A (from NBA to 0). Average emf = ΔΦ/Δt = (50 × 0.250 × 0.0400)/0.100 = (50 × 0.01)/0.100 = 0.50/0.100 = 5.0 V. 0.50 V and 2.5 V come from dropping factors of 10 or 2; 10.0 V doubles the correct result."
+  },
+  {
+   "n": 58,
+   "topic": "Magnetism and electromagnetic induction",
+   "q": "A horizontal straight wire 0.500 m long carries a current of 4.00 A and is placed perpendicular to a uniform magnetic field of magnitude 2.00 × 10⁻⁵ T. What magnetic force acts on the wire?",
+   "options": [
+    "4.00 × 10⁻⁴ N",
+    "4.00 × 10⁻⁵ N",
+    "2.00 × 10⁻⁵ N",
+    "8.00 × 10⁻⁵ N"
+   ],
+   "answer": 1,
+   "explanation": "Magnetic force F = B I L = 2.00 × 10⁻⁵ × 4.00 × 0.500 = 4.00 × 10⁻⁵ N. 2.00 × 10⁻⁵ N omits either I or L factor, 8.00 × 10⁻⁵ N doubles the result, and 4.00 × 10⁻⁴ N is ten times too large."
+  },
+  {
+   "n": 59,
+   "topic": "Atomic and nuclear physics",
+   "q": "A 80.0 g sample of a radioactive isotope decays to 10.0 g in 12.0 years. What is the half-life of the isotope?",
+   "options": [
+    "6.00 years",
+    "4.00 years",
+    "3.00 years",
+    "2.00 years"
+   ],
+   "answer": 1,
+   "explanation": "80.0 → 10.0 means remaining fraction = 10/80 = 1/8 = (1/2)^3, so three half-lives have passed. Half-life = 12.0 / 3 = 4.00 years. 3.00 or 6.00 or 2.00 years are inconsistent with the 1/8 reduction over 12 years."
+  },
+  {
+   "n": 60,
+   "topic": "Newton’s laws and momentum",
+   "q": "At the Mechanical Workshop in Kano, trolley A of mass 3.00 kg moves at 6.00 m/s towards a stationary trolley B of mass 2.00 kg. They collide and stick together. What is the kinetic energy lost in the collision?",
+   "options": [
+    "21.6 J",
+    "32.4 J",
+    "10.8 J",
+    "54.0 J"
+   ],
+   "answer": 0,
+   "explanation": "Initial momentum p = 3.00 × 6.00 = 18.0 kg·m/s; combined mass = 5.00 kg, so final speed v = 18.0/5.00 = 3.60 m/s. Initial KE = 0.5 × 3.00 × 6.00² = 54.0 J. Final KE = 0.5 × 5.00 × 3.60² = 32.4 J. Energy lost = 54.0 − 32.4 = 21.6 J. 32.4 J is the final KE, 10.8 J is an incorrect subtraction, and 54.0 J is the initial KE."
+  }
+ ]
+}

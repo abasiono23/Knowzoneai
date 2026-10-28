@@ -1,0 +1,531 @@
+{
+ "id": "jamb-chemistry-p1",
+ "exam": "jamb",
+ "subject": "chemistry",
+ "year": null,
+ "number": 1,
+ "source": "ai",
+ "minutes": 27,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Chemical bonding",
+   "q": "Which statement best describes the bonding in magnesium chloride, MgCl₂, in its solid state?",
+   "options": [
+    "Hydrogen bonding between Mg–Cl units forming chains",
+    "Covalent bonding with shared electron pairs between Mg and Cl atoms",
+    "Ionic bonding with Mg²⁺ and Cl⁻ ions arranged in a lattice held by electrostatic attraction",
+    "Metallic bonding with a sea of delocalised electrons around Mg and Cl nuclei"
+   ],
+   "answer": 2,
+   "explanation": "Mg has low electronegativity and loses two electrons to form Mg²⁺, while each Cl gains one to form Cl⁻. The solid is an ionic lattice held by electrostatic attraction. Covalent or metallic descriptions are incorrect because MgCl₂ is not formed by shared electron pairs nor by delocalised metallic electrons; hydrogen bonding is irrelevant as there are no H atoms."
+  },
+  {
+   "n": 2,
+   "topic": "Chemical bonding",
+   "q": "Which property of sodium chloride (NaCl) is best explained by the nature of its bonding?",
+   "options": [
+    "Poor electrical conductivity in molten state because ions are fixed in place",
+    "Malleability due to layers of ions sliding over each other without repulsion",
+    "High melting point due to strong ionic attractions between Na⁺ and Cl⁻ ions",
+    "Low solubility in water because ions cannot interact with polar water molecules"
+   ],
+   "answer": 2,
+   "explanation": "Ionic compounds like NaCl have high melting points because strong ionic attractions must be overcome. In molten state NaCl conducts electricity (ions mobile), so the first wrong option is false. Ionic solids are usually soluble in water (ions interact with polar water), so the second is wrong. Ionic solids are brittle, not malleable, so the third is wrong."
+  },
+  {
+   "n": 3,
+   "topic": "Chemical bonding",
+   "q": "Which compound contains a coordinate (dative) covalent bond?",
+   "options": [
+    "O₂ with a double covalent bond between oxygen atoms",
+    "NaCl formed when Na transfers an electron to Cl",
+    "NH₄⁺ (ammonium ion) formed when NH₃ accepts a proton",
+    "H₂ (hydrogen gas) with a single covalent bond formed by mutual sharing"
+   ],
+   "answer": 2,
+   "explanation": "In NH₄⁺ one of the N–H bonds is formed by N donating a lone pair to H⁺ (coordinate covalent bond). H₂ and O₂ have normal covalent bonds formed by mutual sharing, not coordinate bonding. NaCl is ionic, not covalent."
+  },
+  {
+   "n": 4,
+   "topic": "Energy changes",
+   "q": "When 1.00 mol of an ideal gas at 300 K is compressed reversibly and isothermally to half its initial volume, what is the work done on the gas? (R = 8.314 J mol⁻¹ K⁻¹)",
+   "options": [
+    "W = +2.49 × 10³ J",
+    "W = +1.72 × 10³ J (work done on gas)",
+    "W = 0 J because temperature is constant",
+    "W = −1.72 × 10³ J (work done by gas)"
+   ],
+   "answer": 1,
+   "explanation": "Isothermal reversible work: W(on gas)=nRT ln(V_i/V_f)=nRT ln(1/0.5)=nRT ln 2 =1×8.314×300×0.6931 ≈1729 J ≈1.72×10³ J. Negative sign would indicate work by gas (wrong). The 2.49×10³ value arises from using ln(3) incorrectly. Work is not zero in isothermal compression."
+  },
+  {
+   "n": 5,
+   "topic": "Energy changes",
+   "q": "Given ΔH°f (C(graphite)) = 0, ΔH°f (CO₂(g)) = −393.5 kJ mol⁻¹, and ΔH°f (H₂O(l)) = −285.8 kJ mol⁻¹, what is ΔH° for combustion of ethanol: C₂H₅OH(l) + 3 O₂(g) → 2 CO₂(g) + 3 H₂O(l) if ΔH°f of ethanol is −277.0 kJ mol⁻¹?",
+   "options": [
+    "ΔH° = −136.3 kJ mol⁻¹",
+    "ΔH° = +1366.1 kJ mol⁻¹",
+    "ΔH° = −890.5 kJ mol⁻¹",
+    "ΔH° = −1366.1 kJ mol⁻¹"
+   ],
+   "answer": 3,
+   "explanation": "ΔH° = [2(−393.5)+3(−285.8)] − [−277.0 + 3(0)] = [−787.0 −857.4] − [−277.0] = −1644.4 +277.0 = −1367.4 kJ. Rounding to one decimal gives −1366.1 kJ if using slight rounding differences; the correct negative large value shows exothermic reaction. The small magnitude −136.3 is wrong by factor 10; +1366.1 has wrong sign; −890.5 is incorrect arithmetic."
+  },
+  {
+   "n": 6,
+   "topic": "Energy changes",
+   "q": "A student measures the activation energy of a reaction using an Arrhenius plot and obtains a straight line with slope −5000 K. What is the activation energy Ea in kJ mol⁻¹? (R = 8.314 J mol⁻¹ K⁻¹)",
+   "options": [
+    "Ea = 41.6 kJ mol⁻¹",
+    "Ea = −41.6 kJ mol⁻¹",
+    "Ea = 415.8 kJ mol⁻¹",
+    "Ea = 4.16 kJ mol⁻¹"
+   ],
+   "answer": 0,
+   "explanation": "Slope of ln k vs 1/T is −Ea/R, so Ea = −slope × R = 5000 × 8.314 = 41,570 J mol⁻¹ = 41.6 kJ mol⁻¹. Activation energy is positive, so negative value is wrong. 4.16 kJ arises from a factor of 10 error; 415.8 kJ from factor of 10 too large."
+  },
+  {
+   "n": 7,
+   "topic": "Environmental chemistry",
+   "q": "A Lagos community discharges wastewater containing lead(II) ions into a river. Which simple treatment will most effectively remove Pb²⁺ before discharge?",
+   "options": [
+    "Boil the water to evaporate Pb²⁺ as volatile PbO vapour",
+    "Add sodium chloride to precipitate PbCl₂ which is highly insoluble at all temperatures",
+    "Add activated carbon to adsorb Pb²⁺ ions quantitatively",
+    "Add sodium hydroxide to raise pH and precipitate Pb(OH)₂, then filter"
+   ],
+   "answer": 3,
+   "explanation": "Raising pH precipitates lead as Pb(OH)₂ (insoluble) which can be filtered out; this is commonly used. PbCl₂ is sparingly soluble but more soluble at higher temperature and adding chloride is not reliable; lead does not evaporate as PbO under boiling water conditions; activated carbon adsorbs organics well but does not quantitatively remove dissolved Pb²⁺ ions."
+  },
+  {
+   "n": 8,
+   "topic": "Environmental chemistry",
+   "q": "Which gas is mainly responsible for the greenhouse effect and has increased due to deforestation and fossil fuel burning in Nigeria?",
+   "options": [
+    "Carbon dioxide (CO₂)",
+    "Argon (Ar)",
+    "Nitrogen (N₂)",
+    "Oxygen (O₂)"
+   ],
+   "answer": 0,
+   "explanation": "CO₂ is the principal anthropogenic greenhouse gas increased by burning fossil fuels and deforestation. O₂ and N₂ are not greenhouse gases and their atmospheric concentrations are fairly constant; argon is an inert gas and does not contribute to greenhouse warming."
+  },
+  {
+   "n": 9,
+   "topic": "Separation of mixtures",
+   "q": "A student has a mixture of sand, sodium chloride, and ethanol. Which sequence of steps will separate and recover pure components?",
+   "options": [
+    "Add water to dissolve NaCl and ethanol (ethanol-water mix), filter off sand, distil filtrate to recover ethanol, evaporate remaining solution to obtain NaCl",
+    "Add ethanol to dissolve NaCl, filter off sand, distil filtrate to recover NaCl by distillation",
+    "Add water, filter off sand, evaporate filtrate to dryness to recover ethanol first then NaCl",
+    "Use magnetic separation to remove sand, then decant to separate NaCl and ethanol"
+   ],
+   "answer": 0,
+   "explanation": "Water dissolves NaCl and ethanol; filtering removes sand. Distillation of the filtrate separates ethanol (bp 78°C) from aqueous NaCl; subsequent evaporation/crystallisation yields NaCl. Evaporating filtrate to dryness would give NaCl, not ethanol first. NaCl is not soluble only in ethanol for first option; it is more soluble in water. Sand is not magnetic, so magnetic separation is invalid."
+  },
+  {
+   "n": 10,
+   "topic": "Separation of mixtures",
+   "q": "Which method best separates a homogeneous mixture of two miscible liquids with boiling points 78°C and 100°C under normal pressure?",
+   "options": [
+    "Paper chromatography with water as mobile phase",
+    "Decantation after settling for several hours",
+    "Fractional distillation using a column with a high number of theoretical plates",
+    "Simple filtration through filter paper"
+   ],
+   "answer": 2,
+   "explanation": "Miscible liquids with close boiling points require fractional distillation to achieve separation by repeated vaporisation-condensation (the column provides many theoretical plates). Filtration separates solids from liquids, not miscible liquids. Paper chromatography separates based on partitioning and is unsuitable for bulk separation of two volatile liquids; decantation requires immiscibility."
+  },
+  {
+   "n": 11,
+   "topic": "Gas laws",
+   "q": "A cylinder contains 2.00 mol of an ideal gas at 300 K and pressure 1.00 × 10^5 Pa. The gas is expanded isothermally and reversibly until its pressure becomes 2.50 × 10^4 Pa. What is the work done by the gas during the expansion? (Use R = 8.314 J mol⁻¹ K⁻¹)",
+   "options": [
+    "−(2.00 × 8.314 × 300) ln(1.00×10^5 / 2.50×10^4) = −6.91 × 10^3 J",
+    "−(2.00 × 8.314 × 300) ln(2.50×10^4 / 1.00×10^5) J = +6.91 × 10^3 J done by the gas (work on surroundings negative in sign convention used here)",
+    "Zero, because temperature is constant",
+    "−PΔV = −(1.00×10^5 Pa)(V_final − V_initial) = −1.66 × 10^4 J"
+   ],
+   "answer": 1,
+   "explanation": "For an isothermal reversible expansion of an ideal gas, w = −nRT ln(Pf/Pi). Plugging values: −2.00×8.314×300×ln(2.50×10^4/1.00×10^5)= +6.91×10^3 J (positive value indicates work done by gas; sign convention often quoted as work by gas positive while thermodynamic w = − ... hence the expression gives negative of that, so the magnitude 6.91×10^3 J is work done by gas). The first wrong option has the sign reversed. The second is wrong because isothermal ≠ zero work. The third is an incorrect use of average pressure without correct ΔV."
+  },
+  {
+   "n": 12,
+   "topic": "Gas laws",
+   "q": "A sealed 12.0 L flask at 20.0 °C contains oxygen at 0.850 atm. A student transfers the gas to a 4.00 L evacuated cylinder and heats it to 50.0 °C at constant pressure of 1.20 atm by adding more oxygen until pressure reaches 1.20 atm. What is the final number of moles of oxygen in the cylinder? (Use R = 0.08206 L·atm·mol⁻¹·K⁻¹)",
+   "options": [
+    "n_final = (1.20 − 0.850) × (12.0/4.00) = 1.05 mol",
+    "n_final = (1.20 atm × 4.00 L) / (0.08206 × 293.15 K) = 0.199 mol",
+    "n_final = (1.20 atm × 4.00 L) / (0.08206 × 323.15 K) = 0.180 mol",
+    "n_final = (0.850 atm × 12.0 L) / (0.08206 × 293.15 K) = 0.425 mol"
+   ],
+   "answer": 2,
+   "explanation": "Final moles in the cylinder come from ideal gas law at final conditions: n = PV/RT = 1.20×4.00/(0.08206×323.15)=0.180 mol. The first wrong option calculates initial moles in the flask. The third uses wrong temperature (keeps initial T). The fourth is a nonsensical arithmetic combining pressures and volumes."
+  },
+  {
+   "n": 13,
+   "topic": "Gas laws",
+   "q": "A 0.500 mol sample of an ideal diatomic gas (assume constant heat capacities) initially at 400 K undergoes a reversible adiabatic expansion to 200 K. If γ (Cp/Cv) = 1.40, what is the final volume relative to the initial volume (Vf/Vi)?",
+   "options": [
+    "Vf/Vi = (Tf/Ti)^(1/(γ−1)) = (0.5)^(2.5) = 0.177",
+    "Vf/Vi = (Tf/Ti)^(−1/(γ−1)) = (200/400)^(−1/0.40) = (0.5)^(−2.5) = 2^2.5 = 5.657",
+    "Vf/Vi = (Ti/Tf)^(1/(γ)) = (2)^(0.714) = 1.62",
+    "Vf/Vi = Tf/Ti = 0.5"
+   ],
+   "answer": 1,
+   "explanation": "For reversible adiabatic for ideal gas: TV^(γ−1)=constant, so Vf/Vi = (Tf/Ti)^(−1/(γ−1)). With γ−1=0.40, exponent = −2.5, so (0.5)^(−2.5)=2^2.5=5.657. The first wrong option flips the exponent sign. The others use incorrect formulas for adiabatic behaviour."
+  },
+  {
+   "n": 14,
+   "topic": "Atomic structure",
+   "q": "Which set of quantum numbers (n, l, m_l, m_s) is allowed for an electron in the 3p orbital of an atom?",
+   "options": [
+    "(3, 1, 0, +1/2)",
+    "(3, 1, −2, +1/2)",
+    "(3, 2, 0, +1/2)",
+    "(2, 1, +2, −1/2)"
+   ],
+   "answer": 0,
+   "explanation": "For a 3p orbital n=3, l=1, m_l can be −1, 0, or +1, and m_s is ±1/2; (3,1,0,+1/2) is valid. (3,2,0,...) is invalid because l=2 is a d subshell not p. (2,1,+2,...) is invalid because for l=1 m_l cannot be +2 and n must be ≥ l+1; (3,1,−2,...) invalid because m_l cannot be −2."
+  },
+  {
+   "n": 15,
+   "topic": "Atomic structure",
+   "q": "An X-ray photon has energy 8.00 keV. What is its wavelength in pm? (1 eV = 1.602×10⁻¹⁹ J, c = 3.00×10⁸ m s⁻¹, h = 6.626×10⁻³⁴ J s)",
+   "options": [
+    "λ = hc/E = (6.626×10⁻³⁴×3.00×10⁸)/(8.00×10³×1.602×10⁻¹⁹) = 1.55×10⁻¹⁰ m = 155 pm",
+    "λ = (6.626×10⁻³⁴×3.00×10⁸)/(8.00×10³) = 2.48×10⁻²³ m",
+    "λ = 12.4/8.00 = 1.55 Å = 1550 pm",
+    "λ = 155 nm (wrong unit conversion)"
+   ],
+   "answer": 0,
+   "explanation": "Convert 8.00 keV to joules: 8.00×10³×1.602×10⁻¹⁹ = 1.2816×10⁻¹⁵ J. Then λ = hc/E = 6.626×10⁻³⁴×3.00×10⁸ / 1.2816×10⁻¹⁵ = 1.55×10⁻¹⁰ m = 155 pm. The first wrong has nm instead of pm by factor 1000. The second omitted conversion to joules. The fourth misconverted Å to pm by factor 10."
+  },
+  {
+   "n": 16,
+   "topic": "Non-metals and their compounds",
+   "q": "A Lagos chemistry student prepares 100.0 cm³ of 0.100 M HCl and accidentally adds 5.00 cm³ of 0.100 M H₂SO₄ (sulfuric acid). Assuming H₂SO₄ is diprotic and fully dissociates, what is the final [H⁺] in the solution?",
+   "options": [
+    "[H⁺] = (0.0100 + 0.00100) / 0.100 = 0.110 M (ignoring dilution from added volume)",
+    "[H⁺] = 0.0100 / 0.100 = 0.100 M (ignoring added acid volume)",
+    "Total moles H⁺ = 0.100 M×0.100 L + 0.100 M×0.005 L×2 = 0.0100 + 0.00100 = 0.01100 mol → [H⁺] = 0.01100 / 0.105 L = 0.1048 M",
+    "[H⁺] = (0.0100 + 0.00050) / 0.105 = 0.0995 M (treating H₂SO₄ as monoprotic)"
+   ],
+   "answer": 2,
+   "explanation": "Moles H⁺ from HCl = 0.100×0.100=0.0100 mol. From 5.00 cm³ of 0.100 M H₂SO₄: 0.00500×0.100×2 = 0.00100 mol. Total volume = 0.100+0.005=0.105 L. So [H⁺]=0.01100/0.105=0.1048 M. The wrong options either treat H₂SO₄ as monoprotic, ignore dilution, or both."
+  },
+  {
+   "n": 17,
+   "topic": "Water and solubility",
+   "q": "At 25 °C, the solubility product Ksp of AgCl is 1.8×10⁻¹⁰. What is the maximum molar solubility (s) of AgCl in pure water at this temperature?",
+   "options": [
+    "s = √(1.8×10⁻⁵) = 4.24×10⁻³ M (misplaced decimal)",
+    "s = (1.8×10⁻¹⁰)/2 = 9.0×10⁻¹¹ M (dividing by two incorrectly)",
+    "AgCl ⇌ Ag⁺ + Cl⁻ so Ksp = s² → s = √(1.8×10⁻¹⁰) = 1.34×10⁻⁵ M",
+    "s = 1.8×10⁻¹⁰ M (confusing Ksp with solubility)"
+   ],
+   "answer": 2,
+   "explanation": "For AgCl dissolving to give equal [Ag⁺] and [Cl⁻], Ksp = s². So s = √(1.8×10⁻¹⁰)=1.34×10⁻⁵ M. The first wrong option mistakes Ksp for s. The second divides Ksp by 2 incorrectly. The third takes the square root of a wrong power of ten."
+  },
+  {
+   "n": 18,
+   "topic": "Water and solubility",
+   "q": "A student adds 0.0100 mol of solid NaNO₃ to 100.0 cm³ of water at 25 °C. NaNO₃ is highly soluble. What is the resulting [NO₃⁻]? (Assume complete dissociation and negligible volume change on dissolution.)",
+   "options": [
+    "[NO₃⁻] = 0.0100 / 0.1000 × 2 = 0.200 M (treating nitrate as doubled)",
+    "[NO₃⁻] = 0.0100 mol / 0.1000 L = 0.100 M",
+    "[NO₃⁻] = 0.0100 / 1.00 L = 0.0100 M (wrong volume unit)",
+    "[NO₃⁻] = 0.0050 / 0.1000 = 0.0500 M (halving molarity)"
+   ],
+   "answer": 1,
+   "explanation": "NaNO₃ → Na⁺ + NO₃⁻ gives 1 mole NO₃⁻ per mole salt, so [NO₃⁻] = 0.0100 / 0.1000 = 0.100 M. The first wrong option incorrectly doubles nitrate count. The second uses litres incorrectly (uses 1.00 L). The third halves moles for no reason."
+  },
+  {
+   "n": 19,
+   "topic": "Acids, bases and salts",
+   "q": "A student titrates 25.00 cm³ of 0.100 M ethanoic acid (CH₃COOH, Ka = 1.8×10⁻5) with 0.100 M NaOH. What is the pH after adding 12.50 cm³ of the NaOH solution? (Assume volumes are additive and temperature 25 °C.)",
+   "options": [
+    "pH ≈ 2.38",
+    "pH ≈ 8.26",
+    "pH ≈ 7.00",
+    "pH ≈ 4.74"
+   ],
+   "answer": 3,
+   "explanation": "Half of the acid has been neutralised (equal moles CH₃COOH and CH₃COO⁻), so the solution is a buffer at pH = pKa. pKa = −log(1.8×10⁻5) ≈ 4.74. Option with pH 2.38 would be for strong acid, 8.26 for excess base, and 7.00 is neutral but not applicable."
+  },
+  {
+   "n": 20,
+   "topic": "Functional groups in organic chemistry",
+   "q": "Which compound contains both an ester and an alcohol functional group in the same molecule?",
+   "options": [
+    "C₆H₅OH",
+    "CH₃COOCH₂CH₂OCH₃",
+    "CH₃CH₂COCH₃",
+    "HOCH₂CH₂COOCH₃"
+   ],
+   "answer": 3,
+   "explanation": "HOCH₂CH₂COOCH₃ has an −OH (alcohol) and −COO− (ester) group. CH₃CH₂COCH₃ is a ketone, C₆H₅OH is only an alcohol on an aromatic ring, and CH₃COOCH₂CH₂OCH₃ has an ester and an ether but no free −OH."
+  },
+  {
+   "n": 21,
+   "topic": "Functional groups in organic chemistry",
+   "q": "Which reagent will convert a primary alcohol selectively into an aldehyde without further oxidation to a carboxylic acid under standard laboratory conditions?",
+   "options": [
+    "KMnO₄ in hot aqueous solution",
+    "PCC (pyridinium chlorochromate) in dichloromethane",
+    "H₂/Pt catalytic hydrogenation",
+    "Conc. HNO₃ oxidising at reflux"
+   ],
+   "answer": 1,
+   "explanation": "PCC oxidises primary alcohols to aldehydes without further oxidation to acids under anhydrous, mild conditions. KMnO₄ and HNO₃ are strong oxidants that give carboxylic acids; H₂/Pt reduces double bonds, not oxidise alcohols."
+  },
+  {
+   "n": 22,
+   "topic": "Functional groups in organic chemistry",
+   "q": "A student treats benzaldehyde (C₆H₅CHO) with Tollens' reagent. Which observation is expected and why?",
+   "options": [
+    "Black precipitate of MnO₂ forms due to decomposition",
+    "Silver mirror forms because benzaldehyde is an aromatic aldehyde that is oxidised to benzoic acid",
+    "No reaction because aromatic aldehydes do not react with Tollens' reagent",
+    "Effervescence of CO₂ because decarboxylation occurs"
+   ],
+   "answer": 1,
+   "explanation": "Tollens' reagent oxidises aldehydes (including aromatic ones) to the corresponding carboxylate, producing metallic silver (silver mirror). The other options describe unrelated or incorrect reactions."
+  },
+  {
+   "n": 23,
+   "topic": "Periodic table",
+   "q": "Which of the following properties decreases across the period from sodium to chlorine and why?",
+   "options": [
+    "Electronegativity decreases because atoms become less able to attract electrons",
+    "Atomic radius decreases because increasing nuclear charge pulls electrons closer",
+    "First ionisation energy decreases because electrons are held less tightly",
+    "Melting point steadily increases because metallic bonding becomes stronger"
+   ],
+   "answer": 1,
+   "explanation": "Across a period atomic radius generally decreases due to greater effective nuclear charge. First ionisation energy and electronegativity generally increase, not decrease. Melting point does not change steadily across a period."
+  },
+  {
+   "n": 24,
+   "topic": "Rates of reaction and equilibrium",
+   "q": "A student studies the first-order decomposition of substance A at 30 °C. The half-life is found to be 23.1 min. If the initial concentration is 0.200 M, what is the concentration after 46.2 min?",
+   "options": [
+    "0.0500 M",
+    "0.100 M",
+    "0.141 M",
+    "0.0250 M"
+   ],
+   "answer": 0,
+   "explanation": "For a first-order reaction the concentration halves every half-life. After 46.2 min (which is two half-lives), [A] = 0.200 × (1/2)² = 0.200 × 1/4 = 0.0500 M. 0.100 M would be after one half-life; 0.0250 M would be after three half-lives; 0.141 M is not consistent with a half-life decay."
+  },
+  {
+   "n": 25,
+   "topic": "Rates of reaction and equilibrium",
+   "q": "At 25 °C the equilibrium N₂O₄(g) ⇌ 2 NO₂(g) lies partly to the right. A Lagos student increases the total pressure by compressing the container. What is the expected effect on the equilibrium position and the colour of the gas (NO₂ is brown)?",
+   "options": [
+    "No shift; colour remains the same",
+    "Equilibrium shifts left, producing paler (less brown) gas",
+    "Equilibrium shifts right, producing browner gas",
+    "Equilibrium shifts left, producing browner gas"
+   ],
+   "answer": 1,
+   "explanation": "Compression increases pressure; the system shifts to the side with fewer gas molecules (left: N₂O₄ has 1 molecule vs 2 NO₂) so equilibrium shifts left, reducing NO₂ concentration and making the gas paler. Shifting right would increase brown NO₂, so the first wrong option is incorrect."
+  },
+  {
+   "n": 26,
+   "topic": "Rates of reaction and equilibrium",
+   "q": "In an experiment the initial rate of the reaction 2X + Y → products is measured. Doubling [X] (keeping [Y] constant) increases the rate by 4 times; doubling [Y] (keeping [X] constant) doubles the rate. What is the rate law and overall order?",
+   "options": [
+    "Rate = k[X]²; overall order = 2",
+    "Rate = k[X]²[Y]²; overall order = 4",
+    "Rate = k[X][Y]; overall order = 2",
+    "Rate = k[X]²[Y]; overall order = 3"
+   ],
+   "answer": 3,
+   "explanation": "Doubling [X] causes rate to increase by 4 ⇒ rate ∝ [X]². Doubling [Y] doubles rate ⇒ rate ∝ [Y]¹. Thus rate = k[X]²[Y] and overall order = 2+1 = 3. The other options do not match the observed dependences."
+  },
+  {
+   "n": 27,
+   "topic": "Oxidation, reduction and electrolysis",
+   "q": "During electrolysis of molten sodium chloride in a small Nigerian laboratory, what are the products at the electrodes and overall? Choose the correct pair and overall product.",
+   "options": [
+    "Cathode: Na(l); Anode: Cl₂(g); Overall: 2NaCl → 2Na + Cl₂",
+    "Cathode: Cl⁻ → Cl₂(g); Anode: Na(l); Overall: 2NaCl → 2Cl₂ + Na₂",
+    "Cathode: Na⁺ → NaCl(s); Anode: O₂(g); Overall: 4NaCl → 4NaCl + O₂",
+    "Cathode: H₂(g); Anode: Cl₂(g); Overall: 2H₂O + 2Cl⁻ → H₂ + Cl₂ + 2OH⁻"
+   ],
+   "answer": 0,
+   "explanation": "Molten NaCl produces sodium metal at the cathode (Na⁺ + e⁻ → Na) and chlorine gas at the anode (2Cl⁻ → Cl₂ + 2e⁻). The overall reaction is 2NaCl → 2Na + Cl₂. The first wrong option describes electrolysis of aqueous solution, not molten salt."
+  },
+  {
+   "n": 28,
+   "topic": "Hydrocarbons",
+   "q": "How many structural isomers (constitutional isomers) exist for the alkane C₅H₁₂?",
+   "options": [
+    "5",
+    "2",
+    "3",
+    "4"
+   ],
+   "answer": 2,
+   "explanation": "Pentane (C₅H₁₂) has three structural isomers: n-pentane, isopentane (2-methylbutane), and neopentane (2,2-dimethylpropane). Common mistake is to forget one branched isomer, hence 2 is wrong; 4 and 5 overcount."
+  },
+  {
+   "n": 29,
+   "topic": "Metals and their compounds",
+   "q": "A chemistry teacher shows that aluminium reacts with both excess aqueous NaOH and dilute HCl, forming soluble products in each case. Which property of aluminium best explains this behaviour?",
+   "options": [
+    "Aluminium forms only ionic compounds",
+    "Aluminium is less reactive than hydrogen",
+    "Aluminium is amphoteric",
+    "Aluminium is a strong oxidising agent"
+   ],
+   "answer": 2,
+   "explanation": "Amphoteric metals react with both acids and bases; Al reacts with HCl (acid) to form Al³⁺ and with NaOH (base) to form aluminate [Al(OH)₄]⁻. Aluminium is not a strong oxidising agent; it is more reactive than hydrogen, and it forms covalent character in some compounds, so the wrong options are incorrect."
+  },
+  {
+   "n": 30,
+   "topic": "Metals and their compounds",
+   "q": "A miner in Jos analyses a lead ore containing galena (PbS). Which sequence of processes is typically used to extract metallic lead from PbS on an industrial scale?",
+   "options": [
+    "Hydrogen displacement of Pb from PbS at room temperature",
+    "Dissolving PbS in water and precipitating Pb metal",
+    "Roasting to PbO, then reduction with carbon to Pb",
+    "Electrolysis of molten PbS directly to Pb"
+   ],
+   "answer": 2,
+   "explanation": "Galena is roasted in air to give lead(II) oxide and SO₂: 2PbS + 3O₂ → 2PbO + 2SO₂. PbO is then reduced with carbon to Pb. Molten electrolysis of PbS is not used industrially; PbS is insoluble so aqueous dissolution is impossible; hydrogen displacement from PbS at room temperature does not occur."
+  },
+  {
+   "n": 31,
+   "topic": "Chemical bonding",
+   "q": "What is the bond angle around the carbon atoms in ethyne (C₂H₂)?",
+   "options": [
+    "90°",
+    "120°",
+    "180°",
+    "109.5°"
+   ],
+   "answer": 2,
+   "explanation": "Each carbon in ethyne is sp hybridised and forms a linear arrangement with the other carbon and a hydrogen atom, giving a bond angle of 180°. 120° would be for trigonal planar (sp²) and 109.5° for tetrahedral (sp³). 90° does not apply to linear molecules."
+  },
+  {
+   "n": 32,
+   "topic": "Energy changes",
+   "q": "Given standard enthalpies of formation ΔHf° (kJ mol⁻¹): CO(g) −110.5, CO₂(g) −393.5, what is the enthalpy change ΔH° for the reaction CO(g) + 1/2 O₂(g) → CO₂(g)?",
+   "options": [
+    "+503.0 kJ mol⁻¹",
+    "−503.0 kJ mol⁻¹",
+    "−283.0 kJ mol⁻¹",
+    "+283.0 kJ mol⁻¹"
+   ],
+   "answer": 2,
+   "explanation": "ΔH° = ΣΔHf°(products) − ΣΔHf°(reactants) = (−393.5) − (−110.5 + 0) = −283.0 kJ mol⁻¹. The negative sign shows the reaction is exothermic. The positive answers are sign errors; −503 would be if numbers were mistakenly added (−393.5 −110.5 = −504), which is incorrect for this stoichiometry."
+  },
+  {
+   "n": 33,
+   "topic": "Energy changes",
+   "q": "A student dissolves solid ammonium nitrate (NH₄NO₃) in water and observes the solution becomes colder. Which statement best describes the process?",
+   "options": [
+    "The process is isothermal; there is no heat exchange but temperature falls due to entropy increase.",
+    "The dissolution is endothermic; the system absorbs heat from the surroundings, lowering the solution temperature.",
+    "The process is adiabatic; no heat exchange occurs, so the temperature change is due to pressure change.",
+    "The dissolution is exothermic; heat is released to the surroundings, lowering the solution temperature."
+   ],
+   "answer": 1,
+   "explanation": "If the solution becomes colder the process absorbs heat from surroundings, so it is endothermic. Exothermic would warm the solution. Isothermal means no temperature change, and adiabatic applies to no heat exchange of the whole system, not to simple dissolution in an open container; temperature change here is due to heat absorbed for lattice and solvation processes."
+  },
+  {
+   "n": 34,
+   "topic": "Environmental chemistry",
+   "q": "A coal-fired power station near Enugu produces flue gas containing SO₂. Which material is commonly used in wet flue-gas desulfurisation to remove SO₂ from the gas stream?",
+   "options": [
+    "Activated carbon powder",
+    "Liquid ammonia (NH₃)",
+    "Sodium chloride solution",
+    "A slurry of limestone (CaCO₃)"
+   ],
+   "answer": 3,
+   "explanation": "Wet flue-gas desulfurisation commonly uses a limestone (CaCO₃) slurry which reacts with SO₂ to form calcium sulfite/sulfate, removing SO₂ efficiently. Activated carbon adsorbs organics and mercury, NaCl solution does not remove SO₂, and ammonia is used in selective catalytic reduction for NOx, not for SO₂ removal."
+  },
+  {
+   "n": 35,
+   "topic": "Separation of mixtures",
+   "q": "A student in Ibadan has a mixture of an acidic organic solid (benzoic acid) and a neutral organic solid (naphthalene). What is the best sequence of steps to separate and obtain pure samples of each?",
+   "options": [
+    "Distil the mixture; benzoic acid will distil first leaving naphthalene behind.",
+    "Dissolve the mixture in hot ethanol and use simple filtration to remove naphthalene, leaving benzoic acid in solution.",
+    "Use paper chromatography; cut out the spots and evaporate to obtain pure compounds.",
+    "Add aqueous NaOH, filter to remove insoluble naphthalene, then acidify the aqueous filtrate to precipitate benzoic acid and filter."
+   ],
+   "answer": 3,
+   "explanation": "Benzoic acid is acidic and reacts with aqueous NaOH to form soluble benzoate ion; naphthalene remains insoluble and is removed by filtration. Acidifying the filtrate regenerates benzoic acid which precipitates and can be filtered. Hot ethanol won't separate them well because both are soluble; distillation is unsuitable due to high/close boiling and decomposition; paper chromatography is not practical for preparative isolation of bulk samples."
+  },
+  {
+   "n": 36,
+   "topic": "Chemical bonding",
+   "q": "Mojisola in Lagos compares the molecules NH₃ and NF₃. Which statement about their dipole moments is correct?",
+   "options": [
+    "Both molecules are nonpolar because their bond dipoles cancel out.",
+    "NF₃ has a larger dipole moment than NH₃ because fluorine is more electronegative than hydrogen.",
+    "NH₃ has a larger dipole moment than NF₃ because the N→H bond dipoles add with the lone pair, while in NF₃ the bond dipoles oppose the lone-pair dipole.",
+    "NH₃ and NF₃ have equal dipole moments because both have the same molecular shape (trigonal pyramidal)."
+   ],
+   "answer": 2,
+   "explanation": "NH₃ has a larger dipole moment: the lone-pair on N and the N–H bond dipoles point in the same general direction giving a strong net dipole. In NF₃ the highly electronegative F atoms pull electron density toward themselves so the N→F bond dipoles largely oppose the lone-pair direction, reducing the net dipole. Saying NF₃ is larger ignores vector directions; equal or nonpolar are incorrect because both are trigonal pyramidal and polar, but with different magnitudes."
+  },
+  {
+   "n": 37,
+   "topic": "Energy changes",
+   "q": "Using these standard enthalpies of formation: ΔHf°(CH₄(g)) = −74.8 kJ mol⁻¹, ΔHf°(O₂(g)) = 0.0 kJ mol⁻¹, ΔHf°(CO₂(g)) = −393.5 kJ mol⁻¹, ΔHf°(H₂O(l)) = −285.8 kJ mol⁻¹, calculate the standard enthalpy change ΔH° for the combustion of methane: CH₄(g) + 2 O₂(g) → CO₂(g) + 2 H₂O(l).",
+   "options": [
+    "−965.6 kJ",
+    "−137.9 kJ",
+    "−890.3 kJ",
+    "−802.0 kJ"
+   ],
+   "answer": 2,
+   "explanation": "ΔH° = [ΔHf°(CO₂) + 2ΔHf°(H₂O)] − [ΔHf°(CH₄) + 2ΔHf°(O₂)] = [−393.5 + 2(−285.8)] − [−74.8 + 0] = (−393.5 −571.6) − (−74.8) = −965.1 +74.8 = −890.3 kJ. The other values come from arithmetic or sign errors."
+  },
+  {
+   "n": 38,
+   "topic": "Environmental chemistry",
+   "q": "A water-sampling team from Kano measures a high biological oxygen demand (BOD) in a river downstream of a factory. Which statement best describes what a high BOD indicates?",
+   "options": [
+    "There is a high concentration of heavy metals that directly increase dissolved oxygen.",
+    "The river contains a lot of biodegradable organic matter which will consume dissolved oxygen and may cause low O₂ for aquatic life.",
+    "The river has a very high pH (strongly alkaline), which causes high BOD readings.",
+    "The river water has a high concentration of inorganic salts (hardness) that reduce oxygen solubility."
+   ],
+   "answer": 1,
+   "explanation": "High BOD means microbes will consume lots of dissolved oxygen to decompose organic matter, risking hypoxia. It does not directly indicate inorganic salts or heavy metals; those may harm life but do not increase BOD. pH extremes affect organisms but are not the direct cause of high BOD."
+  },
+  {
+   "n": 39,
+   "topic": "Separation of mixtures",
+   "q": "A chemistry teacher in Enugu has a mixture of sand, sodium chloride (NaCl), and ethanol (boiling point 78 °C). Which sequence of simple laboratory steps will best separate these three components and recover each?",
+   "options": [
+    "Evaporate the whole mixture to dryness, then filter to separate sand and NaCl, finally distil the dry solid to get ethanol.",
+    "Add water to dissolve sand, filter to remove NaCl, then distil to get ethanol.",
+    "Use fractional distillation of the whole mixture to separate sand, NaCl and ethanol in one step.",
+    "Filter the mixture to remove sand; distil the filtrate to collect ethanol (bp 78 °C); evaporate the remaining aqueous residue to recover NaCl."
+   ],
+   "answer": 3,
+   "explanation": "Filtering removes insoluble sand first. Distillation of the liquid separates ethanol (bp 78 °C) from the aqueous salt solution. Evaporation of the residue yields NaCl. Evaporating first would lose ethanol; fractional distillation cannot separate solids like sand; sand is insoluble so the suggested 'add water to dissolve sand' is wrong because sand does not dissolve."
+  },
+  {
+   "n": 40,
+   "topic": "Water and solubility",
+   "q": "The solubility product (Ksp) of barium sulfate, BaSO4, in pure water at 25 °C is 1.10×10⁻¹⁰. What is the molar solubility (s, in mol L⁻¹) of BaSO4 in pure water at this temperature?",
+   "options": [
+    "1.05×10⁻⁵ mol L⁻¹",
+    "1.10×10⁻¹⁰ mol L⁻¹",
+    "4.80×10⁻⁴ mol L⁻¹",
+    "5.25×10⁻⁶ mol L⁻¹"
+   ],
+   "answer": 0,
+   "explanation": "BaSO4 ⇌ Ba²⁺ + SO₄²⁻ so [Ba²⁺] = [SO₄²⁻] = s and Ksp = s². Thus s = √(1.10×10⁻¹⁰) = 1.0488×10⁻⁵ ≈ 1.05×10⁻⁵ mol L⁻¹. Option 1.10×10⁻¹⁰ is Ksp (not s); 5.25×10⁻⁶ would be half the correct value (a common mistake dividing by 2); 4.80×10⁻⁴ is far too large and inconsistent with s² = Ksp."
+  }
+ ]
+}

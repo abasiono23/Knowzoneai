@@ -1,0 +1,661 @@
+{
+ "id": "waec-chemistry-p1",
+ "exam": "waec",
+ "subject": "chemistry",
+ "year": null,
+ "number": 1,
+ "source": "ai",
+ "minutes": 60,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Gas laws",
+   "q": "During an experiment in Lagos, 0.250 mol of an ideal diatomic gas in a 5.00 L vessel is heated from 300 K to 600 K at constant pressure. What is the final volume? (Assume ideal behaviour.)",
+   "options": [
+    "5.00 L",
+    "7.50 L",
+    "10.0 L",
+    "2.50 L"
+   ],
+   "answer": 2,
+   "explanation": "At constant pressure V ∝ T. So Vf = Vi × (Tf/Ti) = 5.00 × (600/300) = 5.00 × 2 = 10.0 L. Option 7.50 L would be if temperature ratio was 1.5, 5.00 L is no change, and 2.50 L is halving volume instead of doubling."
+  },
+  {
+   "n": 2,
+   "topic": "Oxidation, reduction and electrolysis",
+   "q": "In the electrolysis of molten NaCl, which species is oxidised at the anode and what product is formed at the anode?",
+   "options": [
+    "Sodium metal is oxidised to sodium vapour",
+    "Chloride ions are oxidised to chlorine gas",
+    "Chloride ions are oxidised to chlorine monoxide",
+    "Sodium metal is oxidised to Na+"
+   ],
+   "answer": 1,
+   "explanation": "In molten NaCl only Na+ and Cl− mobile; oxidation occurs at anode: 2Cl− → Cl2 + 2e− forming chlorine gas. Sodium metal is formed at the cathode (reduction), so options claiming sodium is oxidised are incorrect. Chlorine monoxide is not produced in simple electrolysis of molten NaCl."
+  },
+  {
+   "n": 3,
+   "topic": "Oxidation, reduction and electrolysis",
+   "q": "How many grams of copper will be deposited at the cathode when 2.00 A flows for 9650 s through a copper(II) sulfate solution? (Cu²⁺ + 2e⁻ → Cu; atomic mass Cu = 63.5; 1 Faraday = 96500 C)",
+   "options": [
+    "6.35 g",
+    "12.7 g",
+    "3.175 g",
+    "1.59 g"
+   ],
+   "answer": 0,
+   "explanation": "Total charge Q = I×t = 2.00×9650 = 19300 C. Moles of electrons = Q/F = 19300/96500 = 0.200 mol e−. Each mole Cu needs 2 mol e− so moles Cu = 0.200/2 = 0.100 mol. Mass = 0.100 × 63.5 = 6.35 g. Other options result from wrong division or forgetting the 2-electron requirement."
+  },
+  {
+   "n": 4,
+   "topic": "Oxidation, reduction and electrolysis",
+   "q": "Which statement correctly describes the change in oxidation number in the reaction: 2MnO4⁻ + 10e⁻ + 16H⁺ → 2Mn²⁺ + 8H2O ?",
+   "options": [
+    "Mn changes from +2 to +7 (oxidation)",
+    "Mn changes from +7 to +2 (reduction)",
+    "Hydrogen is oxidised from +1 to 0",
+    "Oxygen is reduced from −2 to 0"
+   ],
+   "answer": 1,
+   "explanation": "In MnO4− manganese is +7; in Mn²⁺ it is +2, so Mn is reduced by 5 electrons per Mn (balanced in equation). Oxygen remains at −2 in both MnO4− and H2O, so it's not reduced. Hydrogen stays +1 in H+ and H2O; it is not oxidised. Option claiming Mn goes +2→+7 is reversed."
+  },
+  {
+   "n": 5,
+   "topic": "Water and solubility",
+   "q": "The Ksp of AgCl at 25°C is 1.8×10⁻¹⁰. What is the molar solubility of AgCl in pure water at 25°C?",
+   "options": [
+    "4.24×10⁻⁶ mol·L⁻¹",
+    "1.34×10⁻⁵ mol·L⁻¹",
+    "1.80×10⁻⁵ mol·L⁻¹",
+    "1.34×10⁻¹⁰ mol·L⁻¹"
+   ],
+   "answer": 1,
+   "explanation": "For AgCl ⇌ Ag+ + Cl−, Ksp = s². So s = √(1.8×10⁻¹⁰) = 1.3416×10⁻⁵ mol·L⁻¹. 1.80×10⁻⁵ is mistakenly taking Ksp as s, 4.24×10⁻⁶ would be √(1.8×10⁻¹¹), and 1.34×10⁻¹⁰ mixes up Ksp and s."
+  },
+  {
+   "n": 6,
+   "topic": "Water and solubility",
+   "q": "A student adds 0.100 mol of NaCl to 1.00 L of pure water at 25°C. What is the resulting chloride concentration [Cl−]? (Assume complete dissociation.)",
+   "options": [
+    "0.100 M",
+    "0.200 M",
+    "1.00 M",
+    "0.0500 M"
+   ],
+   "answer": 0,
+   "explanation": "NaCl dissociates to Na+ and Cl− in 1:1 ratio. Adding 0.100 mol to 1.00 L gives [Cl−] = 0.100 mol·L⁻¹. 0.200 M would be if both ions counted together, 0.0500 M if half dissociated, and 1.00 M is incorrect scaling."
+  },
+  {
+   "n": 7,
+   "topic": "Acids, bases and salts",
+   "q": "25.0 cm³ of 0.100 M HCl is titrated with 0.100 M NaOH. What volume of NaOH is required to reach equivalence point?",
+   "options": [
+    "50.0 cm³",
+    "12.5 cm³",
+    "100.0 cm³",
+    "25.0 cm³"
+   ],
+   "answer": 3,
+   "explanation": "At equivalence moles HCl = moles NaOH. Moles HCl = 0.0250 L × 0.100 M = 0.00250 mol, so volume NaOH = 0.00250/0.100 = 0.0250 L = 25.0 cm³. 12.5 cm³ is half, 50.0 cm³ double, 100.0 cm³ far too large."
+  },
+  {
+   "n": 8,
+   "topic": "Acids, bases and salts",
+   "q": "A 0.10 M solution of sodium acetate (CH3COONa) in water is prepared. Which best describes the pH of this solution and why?",
+   "options": [
+    "Strongly basic, because acetate is a strong base",
+    "Slightly basic, because acetate ion hydrolyses to produce OH−",
+    "Neutral, because salt of a weak acid and strong base is always neutral",
+    "Acidic, because acetate accepts a proton"
+   ],
+   "answer": 1,
+   "explanation": "Sodium acetate contains the conjugate base acetate (CH3COO−) of weak acid CH3COOH; CH3COO− hydrolyses: CH3COO− + H2O ⇌ CH3COOH + OH−, making the solution slightly basic. It is not strongly basic because hydrolysis is limited; it is not neutral. Saying acetate 'accepts a proton' ignores that this produces OH− and raises pH, so 'acidic' is wrong."
+  },
+  {
+   "n": 9,
+   "topic": "Chemical bonding",
+   "q": "Which of the following statements best explains why diamond is an electrical insulator while graphite conducts electricity?",
+   "options": [
+    "Diamond has all carbon atoms covalently bonded in a 3D network with no free electrons, whereas graphite has delocalised π-electrons that move along layers.",
+    "Diamond contains hydrogen impurities that block conduction, whereas graphite is pure carbon and therefore conducts.",
+    "Diamond is ionic and therefore does not conduct, while graphite is metallic and conducts.",
+    "Diamond has only single C–C bonds which trap electrons, but graphite has polar C–C bonds that allow electron flow."
+   ],
+   "answer": 0,
+   "explanation": "Diamond consists of sp³-hybridised carbons in a 3D covalent network with no delocalised electrons, so it cannot conduct. Graphite is made of sp²-hybridised layers with delocalised π-electrons that move within layers, allowing electrical conduction. The wrong options confuse bonding types or invoke impurities incorrectly."
+  },
+  {
+   "n": 10,
+   "topic": "Chemical bonding",
+   "q": "Which molecule has the largest bond angle at the central atom?",
+   "options": [
+    "NH3",
+    "H2O",
+    "BF3",
+    "CO2"
+   ],
+   "answer": 3,
+   "explanation": "CO2 is linear with a bond angle of 180° because the central C has two regions of electron density and no lone pairs. H2O has ~104.5° due to two lone pairs; NH3 ~107° with one lone pair; BF3 is trigonal planar (120°) but smaller than 180°, so CO2 is largest."
+  },
+  {
+   "n": 11,
+   "topic": "Chemical bonding",
+   "q": "Which statement best explains why NaCl has a high melting point compared with iodine (I2)?",
+   "options": [
+    "NaCl contains multiple covalent bonds per formula unit whereas I2 has only single bonds.",
+    "NaCl is composed of strong ionic bonds between Na+ and Cl− in a lattice, requiring more energy to break than the weak van der Waals forces between I2 molecules.",
+    "NaCl forms metallic bonds which are stronger than the covalent bonds in I2.",
+    "NaCl molecules form hydrogen bonds which raise the melting point compared with non-polar I2."
+   ],
+   "answer": 1,
+   "explanation": "NaCl's ionic lattice involves strong electrostatic attractions between ions, giving a high melting point. I2 is a non-polar covalent molecule held together in the solid by weak London dispersion forces, so it melts at much lower temperature. The wrong answers misidentify bond types (metallic, hydrogen, or covalent network) in NaCl."
+  },
+  {
+   "n": 12,
+   "topic": "Metals and their compounds",
+   "q": "Revised: A student in Ibadan heats 2.50 g of copper(II) oxide (CuO, Mr = 79.55) with excess carbon to produce copper metal. What mass of copper is expected? (Reaction: CuO + C → Cu + CO)",
+   "options": [
+    "2.50 g",
+    "1.87 g",
+    "0.79 g",
+    "2.00 g"
+   ],
+   "answer": 3,
+   "explanation": "Moles of CuO = 2.50 / 79.55 = 0.03142 mol. Each mole CuO gives 1 mol Cu, so mass Cu = 0.03142 × 63.55 = 1.996 g ≈ 2.00 g. The wrong choices arise from calculation errors (using incorrect Mr or assuming mass unchanged)."
+  },
+  {
+   "n": 13,
+   "topic": "Metals and their compounds",
+   "q": "Which of the following explains why aluminium forms a protective oxide layer that prevents further corrosion?",
+   "options": [
+    "Aluminium reacts with oxygen to form a thin, adherent Al2O3 layer that is impermeable and strongly bonded to the metal surface.",
+    "Aluminium forms an alloy with oxygen that is softer and prevents rusting.",
+    "Aluminium forms a thick flaky oxide that flakes off exposing fresh metal.",
+    "Aluminium forms soluble AlO2− ions at the surface which wash away corrosive species."
+   ],
+   "answer": 0,
+   "explanation": "Aluminium rapidly forms Al2O3, a thin, dense, strongly adhered layer that prevents further oxidation. It does not produce soluble ions at neutral conditions nor flaky oxide (that's iron), and oxygen is not an alloying element."
+  },
+  {
+   "n": 14,
+   "topic": "Non-metals and their compounds",
+   "q": "A 0.200 mol sample of HCl gas is reacted with excess NH3 gas to form NH4Cl(s). What mass of ammonium chloride is produced? (Mr NH4Cl = 53.49)",
+   "options": [
+    "2.69 g",
+    "0.200 g",
+    "10.70 g",
+    "53.49 g"
+   ],
+   "answer": 2,
+   "explanation": "Reaction: NH3 + HCl → NH4Cl. 0.200 mol HCl produces 0.200 mol NH4Cl. Mass = 0.200 × 53.49 = 10.698 g ≈ 10.70 g. Wrong answers come from confusing molar mass with moles or misplacing decimal."
+  },
+  {
+   "n": 15,
+   "topic": "Non-metals and their compounds",
+   "q": "Which statement best describes why concentrated sulfuric acid (H2SO4) is a good dehydrating agent?",
+   "options": [
+    "Concentrated H2SO4 forms azeotropes with water preventing dehydration.",
+    "Concentrated H2SO4 acts as a reducing agent and supplies hydrogen to substrates.",
+    "Concentrated H2SO4 has a strong affinity for water and removes H2O from organic compounds, often producing carbon and releasing heat.",
+    "Concentrated H2SO4 oxidises organic compounds to CO2 instead of removing water."
+   ],
+   "answer": 2,
+   "explanation": "Concentrated sulfuric acid strongly absorbs water and can remove water from organic molecules, leading to dehydration (e.g., turning sugar to carbon) and releasing heat. It is not a reducing agent nor does it primarily oxidise to CO2 in dehydration reactions; azeotrope formation is unrelated."
+  },
+  {
+   "n": 16,
+   "topic": "Rates of reaction and equilibrium",
+   "q": "A reaction following first-order kinetics has a half-life of 30.0 min. How long will it take for the concentration to fall to 12.5% of its initial value?",
+   "options": [
+    "60.0 min",
+    "120.0 min",
+    "90.0 min",
+    "30.0 min"
+   ],
+   "answer": 2,
+   "explanation": "For first-order kinetics, each half-life reduces concentration by half. To reach 12.5% = (1/8) requires three half-lives: 3 × 30.0 = 90.0 min. The wrong answers correspond to 1 half-life (50%), 2 half-lives (25%), or 4 half-lives (6.25%)."
+  },
+  {
+   "n": 17,
+   "topic": "Separation of mixtures",
+   "q": "A student in Kano has a suspension of fine clay in water and wants clear water. Which sequence of operations will give the cleanest clear water in the shortest practical time?",
+   "options": [
+    "Centrifugation only",
+    "Fine filtration through filter paper, then decantation",
+    "Coarse filtration through muslin, then flocculation with alum, then fine filtration through filter paper",
+    "Distillation only"
+   ],
+   "answer": 2,
+   "explanation": "Coarse filtration removes large particles, flocculation with alum aggregates fine clay into settleable flocs, and final filtration through paper removes remaining solids. Distillation is slow and unnecessary; fine filtration first would clog the paper and decantation alone leaves colloidal clay; centrifugation alone is less practical for large volumes."
+  },
+  {
+   "n": 18,
+   "topic": "Separation of mixtures",
+   "q": "A lab sample contains benzene and toluene (bp 80.1°C and 110.6°C). A student performs simple distillation at atmospheric pressure. What is the main limitation of this technique for obtaining pure benzene?",
+   "options": [
+    "Boiling points are too low for simple distillation",
+    "Simple distillation will convert benzene to cyclohexane",
+    "Significant vapor-phase mixing: benzene and toluene form a non-ideal mixture so benzene vapour still contains toluene, reducing purity",
+    "Toluene decomposes at benzene boiling point"
+   ],
+   "answer": 2,
+   "explanation": "With a 30.5°C boiling point difference simple distillation gives partial separation but vapour contains some toluene, so purity is limited. The boiling points are not too low, toluene does not decompose at benzene's bp, and benzene will not convert to cyclohexane under distillation."
+  },
+  {
+   "n": 19,
+   "topic": "Atomic structure",
+   "q": "Which statement best describes the major difference between isotopes of chlorine, 35Cl and 37Cl?",
+   "options": [
+    "They have different numbers of protons but the same number of neutrons",
+    "They differ by one electron which changes their chemical reactivity",
+    "They have the same number of protons and electrons but different numbers of neutrons, so different mass numbers",
+    "They have different chemical properties because of different proton numbers"
+   ],
+   "answer": 2,
+   "explanation": "Isotopes have identical proton (and in neutral atoms, electron) counts but differ in neutron count and mass. Protons define the element, so proton numbers are the same; chemical properties are nearly identical; electron count is same in neutral atoms."
+  },
+  {
+   "n": 20,
+   "topic": "Atomic structure",
+   "q": "An X-ray experiment measures the frequency ν of a photon ejected from a metal surface when irradiated with light of frequency f. According to the photoelectric equation h f = φ + h ν, what physical quantity does φ represent?",
+   "options": [
+    "The threshold frequency in hertz",
+    "Work function: the minimum energy needed to remove an electron from the metal surface (in joules)",
+    "The kinetic energy of the incoming photon",
+    "The charge of the ejected electron"
+   ],
+   "answer": 1,
+   "explanation": "φ is the work function (energy) required to release an electron. It is measured in energy units (J), not a frequency; the kinetic energy of the incoming photon is h f, and electron charge is unrelated to φ."
+  },
+  {
+   "n": 21,
+   "topic": "Atomic structure",
+   "q": "A nucleus has 20 protons and 24 neutrons. What is its mass number and which element is it?",
+   "options": [
+    "Mass number 24; element calcium",
+    "Mass number 44; element argon",
+    "Mass number 44; element calcium",
+    "Mass number 20; element magnesium"
+   ],
+   "answer": 2,
+   "explanation": "Mass number is protons + neutrons = 20 + 24 = 44. Atomic number 20 corresponds to calcium (Ca). Argon is atomic number 18; mass numbers 24 or 20 do not match the given proton/neutron counts."
+  },
+  {
+   "n": 22,
+   "topic": "Mole concept and stoichiometry",
+   "q": "In Ibadan a student reacts 5.00 g of solid Mg with excess 2.00 M HCl. Mg + 2HCl → MgCl2 + H2. How many litres of H2 at STP (22.4 L·mol⁻¹ used) are produced? (Mr Mg = 24.31)",
+   "options": [
+    "9.22 L",
+    "0.461 L",
+    "2.30 L",
+    "4.61 L"
+   ],
+   "answer": 3,
+   "explanation": "Moles Mg = 5.00/24.31 = 0.2057 mol. Reaction gives 1 mol H2 per mol Mg, so H2 moles = 0.2057. Volume = 0.2057 × 22.4 = 4.61 L. 2.30 L and 9.22 L are off by factors of 0.5 and 2; 0.461 L is 10× too small."
+  },
+  {
+   "n": 23,
+   "topic": "Mole concept and stoichiometry",
+   "q": "A 0.250 mol sample of gas A occupies 1.00 L at 300 K. Under the same conditions, 0.500 mol of gas B occupies 2.00 L. Which statement about the gases is correct?",
+   "options": [
+    "Gas A and B must be different elements because volumes differ",
+    "Both gases have the same molar volume under the stated conditions (4.00 L·mol⁻¹), suggesting one gas sample may have been measured incorrectly because ideal molar volume at 300 K is constant proportionally",
+    "Gas B is twice as dense as gas A",
+    "Neither gas obeys ideal gas behaviour"
+   ],
+   "answer": 1,
+   "explanation": "For gas A: 0.250 mol → 1.00 L gives molar volume 4.00 L·mol⁻¹; for gas B: 0.500 mol → 2.00 L also 4.00 L·mol⁻¹. They have the same molar volume at those conditions. Statement about incorrect measurement is a reasonable comment; B is not twice as dense (they have same molar volume), and equal volumes per mole do not imply different elements. No evidence given that ideal behaviour fails."
+  },
+  {
+   "n": 24,
+   "topic": "Mole concept and stoichiometry",
+   "q": "In Lagos a student electrolyses molten PbBr2 and passes 2.00 × 10^4 C of charge. Pb²⁺ + 2 e⁻ → Pb. What mass of lead is deposited? (Ar Pb = 207.2; Faraday = 96 500 C·mol⁻¹)",
+   "options": [
+    "21.5 g",
+    "43.0 g",
+    "10.8 g",
+    "5.38 g"
+   ],
+   "answer": 0,
+   "explanation": "Moles of electrons = 2.00×10^4 / 96 500 = 0.2073 mol e⁻. Moles Pb deposited = 0.2073 / 2 = 0.10365 mol. Mass = 0.10365 × 207.2 = 21.48 g ≈ 21.5 g. 10.8 g is half of correct by factor of 2 error; 43.0 g is double; 5.38 g is ≈1/4 of correct."
+  },
+  {
+   "n": 25,
+   "topic": "Environmental chemistry",
+   "q": "A factory near Enugu emits SO2 into the atmosphere. Which immediate change in rainwater chemistry near the factory is most likely?",
+   "options": [
+    "Increase in dissolved oxygen concentration",
+    "Increase in pH due to neutralisation by atmospheric ammonia",
+    "Decrease in pH due to formation of sulphurous/sulphuric acids from dissolved SO2",
+    "No change because SO2 is insoluble in water"
+   ],
+   "answer": 2,
+   "explanation": "SO2 dissolves to form H2SO3 and oxidises to H2SO4, lowering rainwater pH (acid rain). Neutralisation by ammonia could occur farther away but is not the immediate effect near the source. SO2 is soluble; it does not increase dissolved oxygen."
+  },
+  {
+   "n": 26,
+   "topic": "Hydrocarbons",
+   "q": "Which of the following is the major organic product when 2-methylpropene (isobutene) reacts with excess HBr in the presence of peroxide (ROOR)?",
+   "options": [
+    "1-bromo-2-methylpropane (anti-Markovnikov addition at the double bond)",
+    "2-bromo-1-methylpropane (bromine on a methyl group, rearrangement product)",
+    "2-bromo-2-methylpropane (tertiary bromide, Markovnikov product)",
+    "1,2-dibromo-2-methylpropane (addition of two bromine atoms across the double bond)"
+   ],
+   "answer": 0,
+   "explanation": "Peroxide (ROOR) initiates a radical mechanism giving anti‑Markovnikov addition of HBr, so bromine attaches to the less substituted carbon, yielding 1-bromo-2-methylpropane. The Markovnikov tertiary bromide would form in the absence of peroxides; dibromide would result from Br2, not HBr; option three describes a non‑occurring rearrangement."
+  },
+  {
+   "n": 27,
+   "topic": "Hydrocarbons",
+   "q": "During catalytic cracking of a C16 alkane in a refinery near Port Harcourt, which change is most likely to occur?",
+   "options": [
+    "C–C bond cleavage to give smaller alkanes and alkenes (increasing production of gasoline-range hydrocarbons)",
+    "Complete combustion to CO2 and H2O under mild catalytic conditions",
+    "Conversion of alkanes to aromatic compounds only, without formation of alkenes",
+    "Isomerisation to give a single constitutional isomer of C16"
+   ],
+   "answer": 0,
+   "explanation": "Catalytic cracking breaks C–C bonds to produce smaller alkanes and alkenes suitable for gasoline; aromatics may form but not exclusively. Combustion requires oxygen and high temperatures, not cracking. Cracking yields a mixture, not a single isomer."
+  },
+  {
+   "n": 28,
+   "topic": "Energy changes",
+   "q": "The standard enthalpy change for the formation of CO(g) from C(graphite) and 1/2 O2(g) is +110 kJ mol⁻¹. Which statement correctly describes the reaction's spontaneity and temperature dependence under standard conditions?",
+   "options": [
+    "The reaction's spontaneity is independent of entropy and depends only on ΔH°",
+    "The reaction is endothermic (ΔH° = +110 kJ mol⁻¹) and is not spontaneous at low temperature; increasing temperature may make Gibbs free energy more negative if ΔS° > 0.",
+    "The reaction must be spontaneous at standard conditions because formation reactions always are",
+    "The reaction is exothermic and spontaneous at all temperatures because ΔH° is negative"
+   ],
+   "answer": 1,
+   "explanation": "A positive ΔH° means the formation is endothermic and not favoured by enthalpy alone; spontaneity depends on ΔG° = ΔH° − TΔS°. If ΔS° is positive, higher T can favour spontaneity. The wrong options incorrectly assert exothermy, a false generalisation about formation reactions, or ignore entropy."
+  },
+  {
+   "n": 29,
+   "topic": "Periodic table",
+   "q": "Which of the following best explains why potassium (K) has a lower first ionisation energy than sodium (Na)?",
+   "options": [
+    "K has a larger atomic radius and its outer electron is farther from the nucleus, so it is less strongly attracted and easier to remove",
+    "K has more protons, so its electrons are held more tightly than in Na",
+    "Na has an extra filled d-subshell compared with K which increases its ionisation energy",
+    "K is in the same period as Na so ionisation energies are the same"
+   ],
+   "answer": 0,
+   "explanation": "Potassium's outer electron occupies a higher principal quantum level (4s) and is further from the nucleus with greater shielding, lowering its ionisation energy. Although K has more protons, shielding outweighs the increased nuclear charge. The d-subshell statement is incorrect for these elements, and they are in different periods."
+  },
+  {
+   "n": 30,
+   "topic": "Periodic table",
+   "q": "A student compares the oxides of magnesium and aluminium. Which statement correctly contrasts their acid–base character?",
+   "options": [
+    "Both MgO and Al2O3 are strongly acidic oxides",
+    "MgO is basic (forms Mg(OH)2 in water) while Al2O3 is amphoteric (reacts with both acids and bases)",
+    "MgO is neutral and Al2O3 is acidic",
+    "MgO is amphoteric and Al2O3 is strongly basic"
+   ],
+   "answer": 1,
+   "explanation": "MgO is a basic oxide that reacts with acids to form salts; Al2O3 is amphoteric, dissolving in acids and in strong bases. The wrong options misidentify their acid–base behaviour."
+  },
+  {
+   "n": 31,
+   "topic": "Functional groups in organic chemistry",
+   "q": "Which reagent will oxidise a primary alcohol to an aldehyde without further oxidation to a carboxylic acid under carefully controlled conditions?",
+   "options": [
+    "Concentrated HNO3, because it selectively stops at the aldehyde",
+    "PCC (pyridinium chlorochromate) in dichloromethane",
+    "LiAlH4, because it oxidises alcohols to aldehydes",
+    "KMnO4 (aqueous, warm), because it only oxidises to aldehyde"
+   ],
+   "answer": 1,
+   "explanation": "PCC is a mild oxidant that converts primary alcohols to aldehydes without over‑oxidation to acids in non‑aqueous solvent. Aqueous KMnO4 and concentrated HNO3 are strong oxidants that would oxidise further to carboxylic acids. LiAlH4 is a reducing agent, not an oxidant."
+  },
+  {
+   "n": 32,
+   "topic": "Functional groups in organic chemistry",
+   "q": "Which compound will give a positive Tollens' test (silver mirror) when warmed in aqueous ammonia with Tollens' reagent?",
+   "options": [
+    "Butanal (CH3CH2CH2CHO), because it is an aldehyde capable of being oxidised",
+    "Butanol (a primary alcohol), because primary alcohols reduce Tollens' reagent",
+    "2-butanone (a methyl ketone), because all carbonyls give positive Tollens' test",
+    "Butanoic acid, because carboxylic acids give a silver mirror"
+   ],
+   "answer": 0,
+   "explanation": "Tollens' reagent oxidises aldehydes to carboxylates, giving a silver mirror; butanal is an aldehyde so positive. Ketones (like 2-butanone) generally do not react (except some α‑hydroxy ketones). Primary alcohols and carboxylic acids do not give a positive Tollens' test under these conditions."
+  },
+  {
+   "n": 33,
+   "topic": "Energy changes",
+   "q": "In Jos a student measures the activation energy Ea of a reaction by plotting ln k against 1/T and obtains a slope of −6000 K. What is Ea in kJ mol⁻¹? (Use R = 8.314 J mol⁻¹ K⁻¹; slope = −Ea/R.)",
+   "options": [
+    "Ea = 6.000 kJ mol⁻¹",
+    "Ea = 499 kJ mol⁻¹",
+    "Ea = 49.9 kJ mol⁻¹",
+    "Ea = 4.99 kJ mol⁻¹"
+   ],
+   "answer": 2,
+   "explanation": "Slope = −Ea/R so Ea = −slope × R = 6000 × 8.314 J mol⁻¹ = 49,884 J mol⁻¹ ≈ 49.9 kJ mol⁻¹. The other options are off by factors of 10 or misunderstand units."
+  },
+  {
+   "n": 34,
+   "topic": "Gas laws",
+   "q": "A student in Kano collects a sample of hydrogen gas at STP. He has 0.224 L of the gas. How many molecules of hydrogen does he have? (1 mol gas at STP = 22.4 L; Avogadro number = 6.02 × 10^23)",
+   "options": [
+    "6.02 × 10^21 molecules",
+    "1.34 × 10^23 molecules",
+    "6.02 × 10^20 molecules",
+    "3.01 × 10^22 molecules"
+   ],
+   "answer": 0,
+   "explanation": "Moles = 0.224 L / 22.4 L mol⁻¹ = 0.0100 mol. Molecules = 0.0100 × 6.02×10^23 = 6.02×10^21. Wrong options come from decimal slip or using wrong Avogadro scaling."
+  },
+  {
+   "n": 35,
+   "topic": "Oxidation, reduction and electrolysis",
+   "q": "During electrolysis of aqueous copper(II) sulfate with inert electrodes, which correctly describes what happens at the cathode and anode?",
+   "options": [
+    "At the cathode water is reduced to H₂(g); at the anode Cu metal is oxidised to Cu²⁺.",
+    "At the cathode Cu²⁺ ions are oxidised to Cu³⁺; at the anode sulfate ions are reduced to SO₂.",
+    "At the cathode hydrogen gas is produced from sulfate; at the anode oxygen forms from copper.",
+    "At the cathode Cu²⁺ ions are reduced to Cu(s); at the anode water is oxidised to O₂(g) (if using inert electrodes)."
+   ],
+   "answer": 3,
+   "explanation": "In aqueous CuSO4 with inert electrodes, Cu²⁺ (E° positive) is reduced at cathode to Cu(s). At anode, oxidation of water to O₂ occurs rather than oxidation of sulfate (which is harder). Incorrect options confuse oxidation/reduction directions or propose unrealistic Cu³⁺ or sulfate oxidation under these conditions."
+  },
+  {
+   "n": 36,
+   "topic": "Oxidation, reduction and electrolysis",
+   "q": "In an electrolytic cell, 0.500 mol of electrons is passed through a solution to reduce Ag⁺ to Ag(s). What mass of silver is deposited? (Ag atomic mass = 107.87 g mol⁻¹; Ag⁺ + e⁻ → Ag)",
+   "options": [
+    "107.87 g",
+    "161.8 g",
+    "53.94 g",
+    "26.97 g"
+   ],
+   "answer": 2,
+   "explanation": "One mole of electrons reduces one mole of Ag⁺ to 1 mol Ag. 0.500 mol e⁻ deposits 0.500 mol Ag → mass = 0.500×107.87 = 53.935 g ≈ 53.94 g. Wrong answers come from halving/doubling mistakes or using wrong stoichiometry."
+  },
+  {
+   "n": 37,
+   "topic": "Oxidation, reduction and electrolysis",
+   "q": "A student electrolyses molten NaCl and collects the gases at the electrodes. Which pair of gases is expected and why?",
+   "options": [
+    "Chlorine at the cathode and sodium at the anode because cations go to anode.",
+    "Chlorine gas at the anode and sodium metal at the cathode (sodium may be collected as molten metal) because Cl⁻ is oxidised and Na⁺ is reduced in molten salt electrolysis.",
+    "Sodium oxide at the anode and sodium hydroxide at the cathode due to reaction with water.",
+    "Hydrogen at the cathode and oxygen at the anode because electrolysis always yields H₂ and O₂."
+   ],
+   "answer": 1,
+   "explanation": "In molten NaCl there is no water, so Na⁺ is reduced to Na(l) at cathode and Cl⁻ oxidised to Cl₂(g) at anode. The tempting H₂/O₂ option is wrong because that applies to aqueous electrolysis. Other options reverse electrode processes or introduce water-dependent products."
+  },
+  {
+   "n": 38,
+   "topic": "Water and solubility",
+   "q": "In Lagos a student adds excess solid AgCl to 100.0 mL of 0.100 M NaNO3. Which statement is correct about the solubility of AgCl under these conditions?",
+   "options": [
+    "AgCl solubility increases because ionic strength rises with NaNO3.",
+    "AgCl completely dissolves because Na⁺ reacts with Cl⁻ to form NaCl in solution.",
+    "No significant increase in soluble Ag⁺ occurs because AgCl is very insoluble; common ion effect from Na⁺/NO₃⁻ does not affect AgCl solubility, but added NaCl would suppress it.",
+    "AgCl dissolves appreciably because NaNO3 provides nitrate to form soluble AgNO3."
+   ],
+   "answer": 2,
+   "explanation": "AgCl is insoluble; NaNO3 provides Na⁺ and NO₃⁻ which do not form complexes with Ag⁺, so AgCl remains mostly undissolved. AgNO3 is soluble, but nitrate cannot displace chloride from the solid AgCl. Common-ion effect refers to adding Cl⁻ or Ag⁺, not Na⁺/NO₃⁻ here."
+  },
+  {
+   "n": 39,
+   "topic": "Acids, bases and salts",
+   "q": "A student titrates 25.00 mL of a monoprotic acid with 0.1000 M NaOH and requires 18.75 mL of base to reach the equivalence point. What is the concentration of the acid?",
+   "options": [
+    "0.150 M",
+    "0.0500 M",
+    "0.0375 M",
+    "0.0750 M"
+   ],
+   "answer": 3,
+   "explanation": "Moles NaOH = 0.1000 × 0.01875 = 0.001875 mol. For monoprotic acid, moles acid = moles base = 0.001875 mol. Concentration acid = 0.001875 / 0.02500 = 0.0750 M. Wrong answers result from wrong volume conversions or halving/doubling errors."
+  },
+  {
+   "n": 40,
+   "topic": "Acids, bases and salts",
+   "q": "A buffer is prepared by mixing 0.100 mol of acetic acid (CH3COOH, Ka = 1.8 × 10⁻5) and 0.0500 mol of sodium acetate in 1.00 L. What is the pH of the buffer? (Use Henderson-Hasselbalch: pH = pKa + log([A⁻]/[HA]))",
+   "options": [
+    "5.04",
+    "pH = 4.74 + log(0.0500/0.100) = 4.74 − 0.301 = 4.44",
+    "4.74",
+    "3.74"
+   ],
+   "answer": 1,
+   "explanation": "pKa = −log(1.8×10⁻5) ≈ 4.74. Ratio [A⁻]/[HA] = 0.0500/0.100 = 0.50. pH = 4.74 + log 0.50 = 4.74 − 0.301 = 4.44. Common mistakes include using concentrations incorrectly or forgetting the log gives a negative contribution when base is less than acid."
+  },
+  {
+   "n": 41,
+   "topic": "Gas laws",
+   "q": "A sealed container holds a mixture of helium and oxygen at total pressure 1.20 atm. The partial pressure of oxygen is 0.45 atm. A student removes some gas so that the total pressure becomes 0.900 atm while keeping the container temperature constant. Assuming only gas was removed (composition of remaining gas unchanged), what is the new partial pressure of oxygen in atm?",
+   "options": [
+    "0.300 atm",
+    "0.3375 atm",
+    "0.675 atm",
+    "0.450 atm"
+   ],
+   "answer": 1,
+   "explanation": "If composition is unchanged, partial pressures scale with total pressure. New pO2 = 0.45 × (0.900/1.20) = 0.45 × 0.75 = 0.3375 atm. Option 0.450 would be unchanged pressure (wrong because gas removed), 0.675 is 0.45×1.5 (incorrect direction), 0.300 is 0.45×(2/3)≈0.300 but uses wrong ratio."
+  },
+  {
+   "n": 42,
+   "topic": "Gas laws",
+   "q": "At 300 K, the rms speed of oxygen molecules (O2, molar mass 32.0 g·mol⁻¹) is closest to which value? (Use formula vrms = √(3RT/M) with R = 8.314 J·mol⁻¹·K⁻¹ and convert M to kg·mol⁻¹.)",
+   "options": [
+    "967 m·s⁻¹",
+    "155 m·s⁻¹",
+    "483 m·s⁻¹",
+    "242 m·s⁻¹"
+   ],
+   "answer": 2,
+   "explanation": "Convert M = 0.0320 kg·mol⁻¹. vrms = √(3×8.314×300 / 0.0320) = √(7482.6 / 0.0320) = √(233831) ≈ 483 m·s⁻¹. 155 and 242 are too small; 967 is roughly double and corresponds to lighter gas like H2."
+  },
+  {
+   "n": 43,
+   "topic": "Oxidation, reduction and electrolysis",
+   "q": "A student electrolyses an aqueous solution of sodium chloride using inert electrodes. Which gaseous product is expected at the anode and why?",
+   "options": [
+    "Oxygen gas, because water is always oxidised at the anode in aqueous solution",
+    "Chlorine gas, because chloride ions are oxidised before water at the anode under these conditions",
+    "Sodium metal vapour, because sodium ions are reduced at the anode",
+    "Hydrogen gas, because hydrogen is formed at both electrodes"
+   ],
+   "answer": 1,
+   "explanation": "In concentrated aqueous NaCl electrolysis chloride ions are oxidised at the anode to Cl2 rather than water being oxidised to O2 (anode potential of Cl⁻ is lower). Oxygen would be produced if chloride concentration is very low. Hydrogen cannot be produced at the anode (it's produced at the cathode), and sodium metal is not formed at the anode."
+  },
+  {
+   "n": 44,
+   "topic": "Water and solubility",
+   "q": "A saturated solution of AgCl at 25°C has [Ag⁺] = 1.3 × 10⁻⁵ M. A student adds 10.0 mL of 0.0100 M NaCl to 100.0 mL of this saturated solution. Will any solid AgCl precipitate? (Ksp AgCl = 1.8 × 10⁻¹⁰.)",
+   "options": [
+    "Yes, because the ionic product Q = [Ag⁺][Cl⁻] after mixing exceeds Ksp",
+    "No, because the added chloride is too small to change the solubility",
+    "Yes, because AgCl dissolves more in presence of NaCl",
+    "No, because common ion effect always increases solubility"
+   ],
+   "answer": 0,
+   "explanation": "Initial moles Ag⁺ = 1.3×10⁻⁵ M × 0.100 L = 1.30×10⁻⁶ mol. Added Cl⁻ moles = 0.0100 M × 0.0100 L = 1.00×10⁻4 mol. Final volume = 0.110 L. Final [Ag⁺] if no precipitate = 1.30×10⁻⁶/0.110 = 1.18×10⁻⁵ M. Final [Cl⁻] ≈ 1.00×10⁻4/0.110 = 9.09×10⁻4 M (dominant). Q = (1.18×10⁻5)(9.09×10⁻4) = 1.07×10⁻8 which is >> Ksp (1.8×10⁻10), so precipitation occurs. Wrong choices misunderstand common-ion effect."
+  },
+  {
+   "n": 45,
+   "topic": "Acids, bases and salts",
+   "q": "A 25.00 mL sample of 0.1000 M monoprotic acid HA is titrated with 0.1000 M NaOH. The titre at equivalence is 20.00 mL. What is the concentration of HA in mol·L⁻¹ originally?",
+   "options": [
+    "0.1250 M",
+    "0.1000 M",
+    "0.06667 M",
+    "0.08000 M"
+   ],
+   "answer": 3,
+   "explanation": "Moles NaOH at equivalence = 0.02000 L × 0.1000 M = 0.002000 mol. This equals moles HA initially. Concentration HA = 0.002000 mol / 0.02500 L = 0.08000 M. Options 0.1000 would assume equal volumes, 0.1250 arises from wrong division, 0.06667 is 0.002/0.030."
+  },
+  {
+   "n": 46,
+   "topic": "Acids, bases and salts",
+   "q": "A buffer is made by mixing 0.200 mol of acetic acid (CH3COOH, Ka = 1.8 × 10⁻5) with 0.100 mol of sodium acetate (CH3COONa) in water to a total volume of 1.00 L. What is the pH of the buffer? (Use Henderson-Hasselbalch: pH = pKa + log [A⁻]/[HA])",
+   "options": [
+    "4.74",
+    "4.74 + log(0.100/0.200) = 4.44 (approx.)",
+    "5.04",
+    "3.44"
+   ],
+   "answer": 1,
+   "explanation": "pKa = −log(1.8×10⁻5) = 4.74. Ratio [A⁻]/[HA] = 0.100/0.200 = 0.500. pH = 4.74 + log(0.5) = 4.74 − 0.301 = 4.44. Option 4.74 would be when [A⁻]=[HA], 5.04 corresponds to ratio ≈2, and 3.44 is far too acidic (ratio 0.01)."
+  },
+  {
+   "n": 47,
+   "topic": "Chemical bonding",
+   "q": "Graphite and diamond are both allotropes of carbon. Which statement best explains why graphite conducts electricity while diamond does not?",
+   "options": [
+    "Graphite has delocalised π electrons that can move along the layers, allowing electrical conduction.",
+    "Diamond would conduct if its carbon atoms were sp2 hybridised like graphite; its sp3 hybridisation creates mobile charge carriers instead.",
+    "Graphite contains free electrons like a metal which move freely in three dimensions.",
+    "Diamond conducts poorly because its atoms are held by weak van der Waals forces preventing electron flow."
+   ],
+   "answer": 0,
+   "explanation": "Graphite's carbon atoms are sp2 hybridised, leaving one unhybridised p-orbital per carbon; these form a π-system with delocalised electrons free to move along the layers, giving electrical conductivity. Diamond carbons are sp3 hybridised so all valence electrons are in strong σ bonds and there are no delocalised electrons to carry charge. The option claiming metallic free electrons is wrong because graphite's conduction arises from delocalised π electrons, not a metallic electron sea; the van der Waals statement confuses interlayer forces with intralayer bonding."
+  },
+  {
+   "n": 48,
+   "topic": "Metals and their compounds",
+   "q": "In Kano a student reacts 4.00 g of zinc with excess dilute sulfuric acid: Zn + H2SO4 → ZnSO4 + H2. Assuming all zinc reacts and gases are collected at STP (22.4 L mol⁻¹), what volume of hydrogen gas is produced (in litres)?",
+   "options": [
+    "2.74 L",
+    "0.68 L",
+    "0.44 L",
+    "1.37 L"
+   ],
+   "answer": 3,
+   "explanation": "Moles of Zn = 4.00 / 65.38 = 0.06116 mol. Reaction produces 1 mol H2 per mol Zn, so moles H2 = 0.06116 mol. Volume = 0.06116 × 22.4 = 1.3698 L ≈ 1.37 L. 0.68 L would correspond to half the moles (incorrect stoichiometry), 2.74 L is four times too large, and 0.44 L is an arithmetic error."
+  },
+  {
+   "n": 49,
+   "topic": "Non-metals and their compounds",
+   "q": "Which reagent will oxidise aqueous iodide ions (I⁻) to iodine (I2) under acidic conditions at room temperature?",
+   "options": [
+    "CO(g)",
+    "Cl2(aq)",
+    "SO2(aq)",
+    "H2S(aq)"
+   ],
+   "answer": 1,
+   "explanation": "Chlorine is a stronger oxidising agent than iodide and will oxidise I⁻ to I2: Cl2 + 2I⁻ → 2Cl⁻ + I2. Sulfur dioxide (SO2) and hydrogen sulfide (H2S) are reducing agents under acidic conditions and will not oxidise iodide; CO is also a reducing agent and cannot oxidise I⁻ to I2."
+  },
+  {
+   "n": 50,
+   "topic": "Rates of reaction and equilibrium",
+   "q": "For the Haber equilibrium at constant temperature: N2(g) + 3H2(g) ⇌ 2NH3(g). If the total pressure is increased by compressing the gases, which is the correct immediate effect at the new equilibrium (temperature unchanged)?",
+   "options": [
+    "Kp increases and more NH3 forms.",
+    "The equilibrium shifts to the right (more NH3) while the equilibrium constant Kp remains unchanged.",
+    "The equilibrium shifts to the left and Kp decreases.",
+    "There is no change in the position of equilibrium or in Kp."
+   ],
+   "answer": 1,
+   "explanation": "Increasing pressure favours the side with fewer gas moles: 4 mol gas (left) → 2 mol gas (right), so equilibrium shifts right, increasing NH3 yield. At constant temperature the equilibrium constant Kp is unaffected by pressure changes. Statements that Kp changes are incorrect because Kp depends only on temperature; saying no change in position contradicts Le Chatelier's principle for this system."
+  }
+ ]
+}

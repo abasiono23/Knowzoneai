@@ -626,6 +626,46 @@ reference). Designs and screenshots: `docs/design/tech-games/`. Art: `apps/serve
   journey stop can come later.
 - **Tests:** 162 server tests in total, 8 for Tech and 9 for the World backend.
 
+### Past Questions: JAMB, WAEC and NECO
+
+A card on the dashboard opens Past Questions: choose the exam, then the subject, then a paper.
+
+- **Three ways to use a paper:**
+  - **Study:** every question with its answer and a worked explanation (answers can be hidden).
+  - **Practice:** check each answer as you go.
+  - **Timed exam:** the paper's time limit, a question map, free movement between questions, and an automatic
+    hand-in when time runs out.
+  - **After practice or a timed paper:** the score, a breakdown by syllabus topic (weakest first, with "revise
+    first"), and a full review. Scores are kept per paper (`ExamAttempt`).
+- **Formats:**
+  - **JAMB UTME:** Use of English 60 questions in 40 minutes; other subjects 40 questions in 27 minutes (each
+    subject's share of the 2-hour CBT).
+  - **WAEC:** 50 questions in 60 minutes.
+  - **NECO:** 60 questions in 60 minutes.
+  - **Subjects (10):** English, Mathematics, Physics, Chemistry, Biology, Economics, Government, Literature,
+    Geography, Commerce. Syllabus topics are in `apps/server/src/data/exams.ts`.
+- **Papers are files** in `apps/server/data/exams/`, shipped with the server: no database import needed.
+  - **Practice papers** are original AI questions in each exam's format (`scripts/exam-papers.ts`), numbered and
+    never given a year, so they can't be mistaken for real past papers.
+  - **Every question is checked:** a second, independent AI pass solves it without seeing the marked answer. Only
+    questions it agrees on are kept; explanations that second-guess themselves are dropped, and so are stress
+    questions that give the answer away in capitals. In testing, about 4 in 10 first drafts failed the check (a
+    wrong key, no correct option, or two right answers), which is why the check is essential.
+  - **Display:** powers written as `10^8` are shown as 10⁸.
+- **Real past papers by year:** real WAEC, NECO and JAMB papers belong to the exam bodies, so they are only added
+  with a licence.
+  - **Import:** `npx tsx scripts/import-exam-papers.ts papers.csv --credit "Licensed from …"`. The CSV has one
+    row per question (`exam,subject,year,n,topic,passage,question,a,b,c,d,e,answer,explanation`).
+  - **In the app:** imported papers appear under their year, above the practice papers, with the credit shown.
+- **Plans:**
+  - **Free and Plus:** each subject's first practice paper (the "samples" the plans promise).
+  - **Pro:** every paper.
+  - **Enforcement:** on the server (`403 pro`).
+- **Endpoints:** `GET /exams`, `GET /exams/:exam/:subject`, `GET /exams/papers/:id`,
+  `POST /exams/papers/:id/attempts`, `GET /me/exams/attempts?paper=`.
+- **Migration:** `20261027120000_exam_attempts`. It also switches on Row Level Security for the four World tables
+  added on 26 October, which had missed it.
+
 ### Business District: Business, Finance & Economics (Knowzone World)
 
 A sunny city square the entrepreneur (a young woman in an emerald Knowzone blazer; the logo is fed to the image

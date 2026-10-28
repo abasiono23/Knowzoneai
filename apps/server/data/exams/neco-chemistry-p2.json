@@ -1,0 +1,791 @@
+{
+ "id": "neco-chemistry-p2",
+ "exam": "neco",
+ "subject": "chemistry",
+ "year": null,
+ "number": 2,
+ "source": "ai",
+ "minutes": 60,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Non-metals and their compounds",
+   "q": "A trader in Kano uses sodium chloride to preserve kilishi. Which of the following is a correct statement about sodium chloride?",
+   "options": [
+    "It is a metallic compound that conducts electricity in the solid state.",
+    "It is a covalent compound with low melting point and insoluble in water.",
+    "It is an ionic compound with high melting point and conducts electricity when molten or dissolved in water.",
+    "It is a molecular acid that ionises partly in water giving H+ and Cl−."
+   ],
+   "answer": 2,
+   "explanation": "Sodium chloride (NaCl) is formed by transfer of electrons between Na and Cl, giving an ionic lattice with high melting point; ionic substances conduct when ions are free (molten or in solution). It is not covalent or metallic, and it is not an acid (it does not produce H+)."
+  },
+  {
+   "n": 2,
+   "topic": "Non-metals and their compounds",
+   "q": "During a school experiment, Chidinma adds concentrated sulfuric acid to a small amount of sugar and heat is observed with formation of a black residue. Which of the following best explains the black residue?",
+   "options": [
+    "Concentrated H₂SO₄ dehydrates the sugar, removing H₂O and leaving carbon (char) as a black residue.",
+    "The acid reduces sugar to metallic carbon which appears black.",
+    "H₂SO₄ acts as a base and precipitates elemental sulfur as the black solid.",
+    "H₂SO₄ oxidises the sugar completely to CO₂ gas, which condenses to carbon black."
+   ],
+   "answer": 0,
+   "explanation": "Concentrated sulfuric acid is a strong dehydrating agent that removes water from sugar (C₆H₁₂O₆ → 6C + 6H₂O), producing black carbon (char). It does not oxidise to CO₂ nor act as a base or produce metallic carbon."
+  },
+  {
+   "n": 3,
+   "topic": "Periodic table",
+   "q": "Which pair of elements are in the same period but different groups in the periodic table?",
+   "options": [
+    "Lithium (Li) and Sodium (Na)",
+    "Oxygen (O) and Sulfur (S)",
+    "Sodium (Na) and Sulfur (S)",
+    "Chlorine (Cl) and Fluorine (F)"
+   ],
+   "answer": 2,
+   "explanation": "Sodium (atomic number 11) and Sulfur (16) are both in period 3 but Na is in Group 1 while S is in Group 16. Lithium and sodium are in the same group, oxygen and sulfur are same group, and chlorine and fluorine are both in Group 17."
+  },
+  {
+   "n": 4,
+   "topic": "Periodic table",
+   "q": "A student compares ionisation energies of K, Ca and Ar. Which order is correct for first ionisation energy (lowest → highest)?",
+   "options": [
+    "K < Ca < Ar",
+    "K < Ar < Ca",
+    "Ar < Ca < K",
+    "Ca < K < Ar"
+   ],
+   "answer": 0,
+   "explanation": "Across a period ionisation energy increases, and down a group it decreases. Potassium (K) is left of Ca and below, so K has lowest, Ca higher, and noble gas Ar highest due to full shell, so K < Ca < Ar is correct."
+  },
+  {
+   "n": 5,
+   "topic": "Periodic table",
+   "q": "Which property generally decreases down a group in the periodic table?",
+   "options": [
+    "Metallic character",
+    "Atomic radius",
+    "Electronegativity",
+    "Number of electron shells"
+   ],
+   "answer": 2,
+   "explanation": "Electronegativity typically decreases down a group because valence electrons are farther from the nucleus. Atomic radius and number of electron shells increase down a group, and metallic character generally increases (not decreases)."
+  },
+  {
+   "n": 6,
+   "topic": "Functional groups in organic chemistry",
+   "q": "Which compound contains an alcohol functional group?",
+   "options": [
+    "2-propanol",
+    "propanenitrile",
+    "1-propene",
+    "2-propanone"
+   ],
+   "answer": 0,
+   "explanation": "2-propanol (isopropyl alcohol) has the –OH alcohol group. 2-propanone is a ketone (C=O), propanenitrile contains –CN (nitrile), and 1-propene is an alkene (C=C)."
+  },
+  {
+   "n": 7,
+   "topic": "Functional groups in organic chemistry",
+   "q": "If Mrs. Adeola oxidises ethanol gently with acidified dichromate, which functional group appears in the main product?",
+   "options": [
+    "Carboxylic acid (–COOH) under gentle oxidation conditions",
+    "Ketone (C=O in middle of chain)",
+    "Aldehyde (–CHO)",
+    "Alcohol (–OH) remains unchanged"
+   ],
+   "answer": 2,
+   "explanation": "Gentle oxidation of a primary alcohol (ethanol) produces an aldehyde (ethanal, CH₃CHO). Strong oxidation would further convert it to a carboxylic acid; ketones come from secondary alcohols, and the alcohol group does not remain under oxidation."
+  },
+  {
+   "n": 8,
+   "topic": "Oxidation, reduction and electrolysis",
+   "q": "During electrolysis of molten aluminium oxide mixed with cryolite, aluminium is deposited at the cathode. Which half-reaction occurs at the cathode?",
+   "options": [
+    "2Al → 2Al³+ + 6e−",
+    "O²− → 1/2 O₂ + 2e−",
+    "2Cl− → Cl₂ + 2e−",
+    "Al³+ + 3e− → Al"
+   ],
+   "answer": 3,
+   "explanation": "At the cathode reduction occurs: Al³+ gains electrons to form aluminium metal (Al³+ + 3e− → Al). The first wrong option is an oxidation at the anode (oxygen formation), the third reverses aluminium oxidation, and the last is chloride oxidation which is not relevant when electrolysis is of molten oxide."
+  },
+  {
+   "n": 9,
+   "topic": "Oxidation, reduction and electrolysis",
+   "q": "In a redox titration, Ngozi uses 25.0 cm³ of 0.0200 mol/dm³ KMnO₄ to oxidise Fe²+. The reaction is 5Fe²+ + MnO₄− + 8H+ → 5Fe³+ + Mn²+ + 4H₂O. How many moles of Fe²+ were present?",
+   "options": [
+    "0.00050 mol",
+    "0.00100 mol",
+    "0.00500 mol",
+    "0.00250 mol"
+   ],
+   "answer": 3,
+   "explanation": "Moles KMnO₄ = 0.0200 mol/dm³ × 0.0250 dm³ = 0.000500 mol. From equation 1 mol MnO₄− oxidises 5 mol Fe²+, so moles Fe²+ = 5 × 0.000500 = 0.00250 mol. The other options arise from incorrect multiplications or forgetting the 5:1 stoichiometry."
+  },
+  {
+   "n": 10,
+   "topic": "Gas laws",
+   "q": "A diver in Port Harcourt releases a bubble of air at 20.0 m depth in seawater. If the pressure at the surface is 1.00 atm and pressure increases by 1.00 atm every 10.0 m depth (ignore water vapour), what fraction of the bubble's volume at depth remains when it reaches the surface? (Assume temperature constant.)",
+   "options": [
+    "1/3",
+    "1/4",
+    "1/2",
+    "2/3"
+   ],
+   "answer": 0,
+   "explanation": "Pressure at 20.0 m = surface 1.00 atm + (20.0/10.0)×1.00 atm = 3.00 atm. Using Boyle's law (P₁V₁ = P₂V₂) and constant temperature, V_surface/V_depth = P_depth/P_surface = 3.00/1.00 = 3, so fraction remaining = V_depth/V_surface? The question asks fraction of bubble's volume at depth that remains at surface = V_surface / V_depth = P_depth / P_surface = 1/3. Common mistake: inverting ratio gives 3 or 1/3 confusion; 1/2 and 2/3 are from misreading depth-pressure relation."
+  },
+  {
+   "n": 11,
+   "topic": "Hydrocarbons",
+   "q": "Which compound is an isomer of 2-methylpropane (isobutane)?",
+   "options": [
+    "n-butane",
+    "cyclobutane",
+    "2-butene",
+    "2-methylbutane"
+   ],
+   "answer": 0,
+   "explanation": "Isobutane (2-methylpropane, C₄H₁₀) has the same molecular formula as n-butane (C₄H₁₀) and they are structural isomers. 2-butene has formula C₄H₈ (unsaturated), 2-methylbutane is C₅H₁₂, and cyclobutane is C₄H₈ (a ring), so these are not isomers of isobutane."
+  },
+  {
+   "n": 12,
+   "topic": "Hydrocarbons",
+   "q": "During cracking of kerosene in a refining unit at Warri, a heavy alkane C₁₂H₂₆ is cracked to give one molecule of octane (C₈H₁₈) and one molecule of an alkene. What is the formula of the alkene produced?",
+   "options": [
+    "C₄H₆",
+    "C₄H₈",
+    "C₈H₁₆",
+    "C₄H₁₀"
+   ],
+   "answer": 1,
+   "explanation": "Cracking conserves number of carbons and hydrogens: C₁₂H₂₆ → C₈H₁₈ + CxHy. So Cx = 12 − 8 = 4 carbons; Hy = 26 − 18 = 8 hydrogens → C₄H₈, an alkene. C₄H₁₀ would be an alkane (hydrogens too many); C₄H₆ has too few H; C₈H₁₆ is not the leftover fragment."
+  },
+  {
+   "n": 13,
+   "topic": "Energy changes",
+   "q": "The combustion of 1.00 mol of methane releases −890 kJ. How much heat is released when 5.00 g of methane burns completely? (Mr CH₄ = 16.0)",
+   "options": [
+    "−111 kJ",
+    "−278 kJ",
+    "−8900 kJ",
+    "−445 kJ"
+   ],
+   "answer": 1,
+   "explanation": "Moles of CH₄ in 5.00 g = 5.00 / 16.0 = 0.3125 mol. Heat = 0.3125 × (−890 kJ/mol) = −278.125 kJ ≈ −278 kJ. −445 kJ would be for 0.5 mol, −111 kJ would be for 0.125 mol, and −8900 kJ is for 10 mol — none match 5.00 g."
+  },
+  {
+   "n": 14,
+   "topic": "Energy changes",
+   "q": "During the reaction between solid calcium oxide (CaO) and water at room temperature, the temperature of the mixture rises. Which statement is correct about this process?",
+   "options": [
+    "The reaction is endothermic because energy is needed to break the Ca–O lattice.",
+    "The reaction is exothermic because stronger bonds are formed in Ca(OH)₂ than were broken in CaO and H–O interactions.",
+    "The reaction is exothermic because bonds are broken only and heat is released.",
+    "The reaction is endothermic because formation of Ca(OH)₂ absorbs heat from surroundings."
+   ],
+   "answer": 1,
+   "explanation": "Calcium oxide reacts with water to form calcium hydroxide, releasing heat (exothermic) since energy released in forming O–H and Ca–O bonds in Ca(OH)₂ exceeds energy required to break the CaO lattice and disrupt H–O in water. Saying it is endothermic contradicts the observed temperature rise; saying bonds are broken only is incorrect because bond formation is the source of released energy."
+  },
+  {
+   "n": 15,
+   "topic": "Mole concept and stoichiometry",
+   "q": "Ngozi prepares 250.0 cm³ of 0.100 mol/dm³ NaOH solution. How many grams of solid NaOH (Mr = 40.00) must she dissolve? (Give answer to three significant figures.)",
+   "options": [
+    "10.0 g",
+    "4.00 g",
+    "1.00 g",
+    "0.100 g"
+   ],
+   "answer": 2,
+   "explanation": "Moles required = concentration × volume = 0.100 mol/dm³ × 0.2500 dm³ = 0.02500 mol. Mass = moles × Mr = 0.02500 × 40.00 = 1.000 g ≈ 1.00 g. 10.0 g is ten times too large, 0.100 g corresponds to 0.0025 mol, and 4.00 g corresponds to 0.100 mol."
+  },
+  {
+   "n": 16,
+   "topic": "Mole concept and stoichiometry",
+   "q": "A student reacts 3.00 g of solid copper(II) oxide with excess dilute hydrochloric acid according to: CuO + 2HCl → CuCl₂ + H₂O. What mass of CuCl₂ (Mr = 134.45) is formed? (Give answer to three significant figures; Mr CuO = 79.55, Mr Cu = 63.55)",
+   "options": [
+    "2.53 g",
+    "5.06 g",
+    "3.00 g",
+    "10.1 g"
+   ],
+   "answer": 1,
+   "explanation": "Moles of CuO = 3.00 / 79.55 = 0.03771 mol. Reaction gives 1 mol CuCl₂ per mol CuO, so moles CuCl₂ = 0.03771 mol. Mass = 0.03771 × 134.45 = 5.063 g ≈ 5.06 g. 10.1 g is double, 2.53 g assumes wrong Mr or halved moles, and 3.00 g mistakes conservation of mass without stoichiometry."
+  },
+  {
+   "n": 17,
+   "topic": "Separation of mixtures",
+   "q": "A chemistry student in Ibadan has a mixture of sand, sodium chloride and vegetable oil. Which sequence of operations will separate the three components with least loss?",
+   "options": [
+    "Add water and stir; filter to remove sand; separate oil from filtrate using a separating funnel; evaporate water to recover NaCl.",
+    "Heat the whole mixture strongly; collect distilled liquids to get oil and NaCl; sand remains.",
+    "Dissolve the mixture in ethanol; filter to remove sand; distil the filtrate to get oil and NaCl.",
+    "Mix with acid to dissolve NaCl; filter sand; steam-distil to remove oil; neutralise to obtain NaCl."
+   ],
+   "answer": 0,
+   "explanation": "Water dissolves NaCl but not sand or oil, so filtration removes sand, separating funnel separates immiscible oil and aqueous salt, and evaporation of water recovers NaCl. Ethanol would dissolve oil and salt differently; distillation in option 1 would not cleanly separate salt. Acid or steam-distillation are unnecessary and may react with oil or salt (option 2). Strong heating (option 3) risks charring oil and will not give solid NaCl by simple distillation."
+  },
+  {
+   "n": 18,
+   "topic": "Separation of mixtures",
+   "q": "A student needs to separate a mixture of two colourless liquids: A (bp 78°C) and B (bp 95°C). Atmospheric pressure is 760 mmHg. Which apparatus and condition will give the best separation?",
+   "options": [
+    "Simple fractional distillation with a fractionating column and slow heating to collect A first around 78°C.",
+    "Vacuum distillation at 760 mmHg with no column to collect A at a lower temperature.",
+    "Simple distillation with rapid heating and collect distillate while temperature rises from 78°C to 95°C.",
+    "Use paper chromatography at room temperature to separate the two liquids."
+   ],
+   "answer": 0,
+   "explanation": "With boiling points 17°C apart, fractional distillation with a column allows repeated vaporisation-condensation for good separation; collect A first near 78°C. Rapid simple distillation mixes fractions (option 1). Paper chromatography separates solutes in a solvent, not bulk liquids (option 2). Vacuum distillation at 760 mmHg is identical to atmospheric pressure and without a column gives poor separation (option 3)."
+  },
+  {
+   "n": 19,
+   "topic": "Separation of mixtures",
+   "q": "A salt sample from a Lagos market contains soluble copper(II) sulfate and insoluble calcium carbonate. Which method gives pure copper(II) sulfate crystals?",
+   "options": [
+    "Add water to dissolve CuSO4, filter off CaCO3, then evaporate the filtrate slowly to crystallise CuSO4.",
+    "Grind and dissolve the mixture in benzene, filter and evaporate benzene to obtain CuSO4.",
+    "Wash the solid mixture with ethanol to dissolve CuSO4, then evaporate the ethanol to get crystals.",
+    "Add dilute acid to react away CaCO3, then evaporate to get CuSO4 directly without filtration."
+   ],
+   "answer": 0,
+   "explanation": "CuSO4 is water-soluble while CaCO3 is insoluble; filtration followed by evaporation yields CuSO4 crystals. Acid would dissolve CaCO3 to CO2 and Ca2+ (option 1), contaminating the solution with Ca2+. CuSO4 is not soluble in ethanol or benzene, so options 2 and 3 are ineffective."
+  },
+  {
+   "n": 20,
+   "topic": "Atomic structure",
+   "q": "Which statement correctly describes the electronic configuration of a neutral chlorine atom (atomic number 17)?",
+   "options": [
+    "1s² 2s² 2p⁶ 3s² 3p⁵; it has seven electrons in the third shell.",
+    "1s² 2s² 2p⁵ 3s² 3p⁶; it has five electrons in the 2p subshell.",
+    "1s² 2s² 2p⁶ 3s¹ 3p⁶; it has one electron in 3s and six in 3p.",
+    "1s² 2s² 2p⁶ 3s² 3p⁶; it has a full third shell like argon."
+   ],
+   "answer": 0,
+   "explanation": "Chlorine (Z=17) has 17 electrons; filling order gives 1s²2s²2p⁶3s²3p⁵, so seven electrons in n=3. Option 1 incorrectly shows a full 3p (would be argon, Z=18). Option 2 misplaces electrons in 2p and 3p. Option 3 has wrong distribution between 3s and 3p."
+  },
+  {
+   "n": 21,
+   "topic": "Atomic structure",
+   "q": "A singly ionised magnesium ion Mg+ has how many electrons and which electron configuration?",
+   "options": [
+    "11 electrons; 1s² 2s² 2p⁶ 3s¹.",
+    "12 electrons; 1s² 2s² 2p⁶ 3s².",
+    "10 electrons; 1s² 2s² 2p⁶.",
+    "11 electrons; 1s² 2s² 2p⁶ 3p¹."
+   ],
+   "answer": 0,
+   "explanation": "Neutral Mg has 12 electrons; Mg+ has lost one → 11 electrons. The configuration is that of Na: 1s²2s²2p⁶3s¹. Option 1 is neutral Mg. Option 2 is Mg²+ (10e−). Option 3 wrongly places the outer electron in 3p instead of 3s."
+  },
+  {
+   "n": 22,
+   "topic": "Atomic structure",
+   "q": "Which of the following correctly explains atomic radius trends across Period 3 (Na → Ar)?",
+   "options": [
+    "Atomic radius decreases from Na to Ar due to increasing nuclear charge pulling electrons closer with little extra shielding.",
+    "Atomic radius stays the same across the period because proton and electron increases cancel exactly.",
+    "Atomic radius decreases then increases because of irregular filling of d-orbitals in Period 3.",
+    "Atomic radius increases from Na to Ar because electrons are being added to higher shells."
+   ],
+   "answer": 0,
+   "explanation": "Across a period electrons are added to the same principal shell while nuclear charge increases, so attraction increases and radius decreases. Electrons are not being added to higher shells (option 1). Shielding does not exactly cancel (option 2). There are no d-orbitals filled in Period 3 (option 3)."
+  },
+  {
+   "n": 23,
+   "topic": "Environmental chemistry",
+   "q": "In a river near Aba, algal bloom follows sewage discharge. Which is the principal nutrient causing eutrophication and why?",
+   "options": [
+    "Nitrate and phosphate; they are limiting nutrients that stimulate excessive algal growth leading to oxygen depletion.",
+    "Carbon dioxide; more CO2 always causes algal bloom in freshwater.",
+    "Sodium chloride; it raises salinity causing algae to multiply.",
+    "Sulfur dioxide; it dissolves and directly feeds algae with sulfur."
+   ],
+   "answer": 0,
+   "explanation": "Nitrates and phosphates from sewage fertilise aquatic plants; their excess causes algal blooms and subsequent oxygen depletion. NaCl increases salinity but is not a nutrient for blooms (option 1). CO2 is used in photosynthesis but is rarely the limiting nutrient in freshwater (option 2). SO2 is an air pollutant that dissolves to acids, not a primary nutrient for algae (option 3)."
+  },
+  {
+   "n": 24,
+   "topic": "Environmental chemistry",
+   "q": "A factory in Port Harcourt emits nitrogen oxides (NO and NO2). Which reaction in the atmosphere leads directly to formation of acid rain?",
+   "options": [
+    "NO + O2 → N2 + O3 (this creates ozone but not acids).",
+    "NO2 + OH → HNO3 (formation of nitric acid which contributes to acid rain).",
+    "NO + H2O → HNO2 + H2 (produces acid and hydrogen gas).",
+    "NO2 → N2 + O2 (simple decomposition to harmless gases)."
+   ],
+   "answer": 1,
+   "explanation": "NO2 reacts with OH radicals to form HNO3, a major acid in acid rain. Option 1 is incorrect reaction producing ozone is not N2. Thermal decomposition into N2 and O2 (option 2) does not occur in atmosphere. Reaction in option 3 is not a realistic atmospheric pathway and would not produce H2 gas."
+  },
+  {
+   "n": 25,
+   "topic": "Acids, bases and salts",
+   "q": "Ngozi neutralises 25.0 cm³ of 0.100 mol/dm³ HCl with 20.0 cm³ of NaOH solution. What is the concentration of the NaOH solution?",
+   "options": [
+    "0.125 mol/dm³",
+    "0.160 mol/dm³",
+    "0.100 mol/dm³",
+    "0.080 mol/dm³"
+   ],
+   "answer": 0,
+   "explanation": "Moles HCl = 0.0250 L × 0.100 mol/L = 0.00250 mol. Reaction HCl + NaOH → NaCl + H2O so moles NaOH = 0.00250. Concentration = 0.00250 mol / 0.0200 L = 0.125 mol/L. Option 1 is lower; option 2 assumes equal volumes; option 4 is too high."
+  },
+  {
+   "n": 26,
+   "topic": "Acids, bases and salts",
+   "q": "Which solid salt, when dissolved in water, will produce an alkaline solution?",
+   "options": [
+    "NH4Cl (ammonium chloride) because it contains a basic ammonium ion.",
+    "FeCl3 (iron(III) chloride) because hydrated Fe³+ is basic.",
+    "Na2CO3 (sodium carbonate) because CO3²− hydrolyses to give OH−.",
+    "NaCl (sodium chloride) because it is produced from strong acid and strong base."
+   ],
+   "answer": 2,
+   "explanation": "Carbonate ion is the conjugate base of a weak acid (HCO3−/H2CO3), so Na2CO3 gives alkaline solution. NH4Cl gives acidic solution (NH4+ is acidic), so option 1 is wrong. NaCl is neutral in pure water (option 2). Fe³+ hydrolyses to give acidic solutions, not basic (option 3)."
+  },
+  {
+   "n": 27,
+   "topic": "Metals and their compounds",
+   "q": "In a Lagos workshop, iron nails are coated with a thin layer of zinc by dipping them into molten zinc at about 420°C. Which statement best explains why the zinc coating protects the iron from rusting even if scratched lightly?",
+   "options": [
+    "Zinc forms an impermeable oxide layer that prevents oxygen and water reaching the iron.",
+    "Zinc has lower electrical conductivity than iron so it prevents electrochemical corrosion.",
+    "Zinc is more reactive than iron and corrodes preferentially, acting as a sacrificial anode and protecting exposed iron.",
+    "Zinc and iron form a single alloy layer which is non-reactive and prevents rusting."
+   ],
+   "answer": 2,
+   "explanation": "Galvanising protects iron because zinc is more electrochemically active and corrodes first, sacrificing itself and cathodically protecting iron. The zinc oxide layer is not fully impermeable and alloying is limited; electrical conductivity differences are irrelevant to sacrificial protection."
+  },
+  {
+   "n": 28,
+   "topic": "Metals and their compounds",
+   "q": "A student adds excess dilute sulfuric acid to powdered copper(II) oxide (CuO) and warms the mixture. Which observation and equation correctly describe the reaction?",
+   "options": [
+    "Black solid dissolves and a blue solution forms; CuO(s) + H₂SO₄(aq) → CuSO₄(aq) + H₂O(l).",
+    "Black solid turns brown and precipitate forms; 2CuO(s) + H₂SO₄(aq) → Cu₂O(s) + SO₂(g) + H₂O(l).",
+    "Black solid dissolves with gas evolution; CuO(s) + H₂SO₄(aq) → Cu(s) + SO₂(g) + H₂O(l).",
+    "No reaction occurs because CuO is a base that does not react with acids; no change."
+   ],
+   "answer": 0,
+   "explanation": "Copper(II) oxide is a basic oxide and reacts with sulfuric acid to form soluble copper(II) sulfate and water, giving a blue solution. There is no reduction to Cu or formation of SO₂ under these conditions, and the reaction is not non-reactive."
+  },
+  {
+   "n": 29,
+   "topic": "Metals and their compounds",
+   "q": "A sample of aluminium powder is treated with aqueous sodium hydroxide in a test at Enugu. Which product is expected and which balanced equation represents the reaction?",
+   "options": [
+    "Bubbles of hydrogen are evolved and a soluble aluminate forms; 2Al(s) + 2NaOH(aq) + 6H₂O(l) → 2Na[Al(OH)₄](aq) + 3H₂(g).",
+    "Aluminium reacts to give aluminium oxide and oxygen gas; 4Al(s) + 2NaOH(aq) → 2Al₂O₃(s) + O₂(g) + 2Na+(aq).",
+    "Aluminium forms aluminium hydroxide precipitate and no gas; Al(s) + NaOH(aq) → Al(OH)₃(s) + Na+(aq).",
+    "No reaction because aluminium is passive; Al(s) + NaOH(aq) → no change."
+   ],
+   "answer": 0,
+   "explanation": "Aluminium dissolves in cold NaOH due to amphoteric behaviour, forming soluble aluminate and releasing H₂ gas. The equation with Na[Al(OH)₄] and 3H₂ evolution per 2Al is the correct balanced representation. Aluminium does not remain passive once its oxide is attacked by OH−, and oxygen evolution is incorrect here."
+  },
+  {
+   "n": 30,
+   "topic": "Rates of reaction and equilibrium",
+   "q": "Ngozi studies the decomposition of hydrogen peroxide at 30°C. Adding a small amount of solid manganese(IV) oxide (MnO₂) increases the rate but the temperature and concentrations remain the same. Which statement best explains this observation?",
+   "options": [
+    "MnO₂ reacts permanently with H₂O₂ producing more reactant molecules and raising concentration.",
+    "MnO₂ increases the temperature of the mixture causing the faster rate.",
+    "MnO₂ changes the equilibrium position to favour products, causing faster rate until new equilibrium is reached.",
+    "MnO₂ provides an alternative pathway with lower activation energy, acting as a catalyst and increasing the reaction rate without being consumed."
+   ],
+   "answer": 3,
+   "explanation": "A catalyst increases rate by lowering activation energy and is not consumed, which fits MnO₂ in H₂O₂ decomposition. It does not raise temperature by itself, nor does it produce more reactant; catalysts do not change the equilibrium position, only the rate to reach it."
+  },
+  {
+   "n": 31,
+   "topic": "Rates of reaction and equilibrium",
+   "q": "In a closed bottle at 25°C, the Haber equilibrium N₂(g) + 3H₂(g) ⇌ 2NH₃(g) is established. If the pressure is increased by compressing the gas volume, what happens to the equilibrium and why?",
+   "options": [
+    "No shift in equilibrium because pressure changes do not affect heterogeneous equilibria.",
+    "Equilibrium shifts to the left because increasing pressure favours production of more gas molecules.",
+    "Equilibrium shifts to the right only if a catalyst is added; pressure alone cannot change composition.",
+    "Equilibrium shifts to the right (towards ammonia) because the forward side has fewer gas molecules (4 → 2), reducing overall pressure."
+   ],
+   "answer": 3,
+   "explanation": "Le Chatelier's principle predicts that increasing pressure favours the side with fewer gas molecules; here the forward reaction produces 2 molecules from 4, so equilibrium shifts to produce ammonia. The other options misunderstand the pressure effect or mix up catalyst roles."
+  },
+  {
+   "n": 32,
+   "topic": "Rates of reaction and equilibrium",
+   "q": "A student measures initial rates for the reaction A + 2B → products. Doubling [A] while keeping [B] constant doubles the rate. Doubling [B] while keeping [A] constant quadruples the rate. What is the rate law?",
+   "options": [
+    "Rate = k[A]^1[B]^1",
+    "Rate = k[A]^2[B]^1",
+    "Rate = k[A]^1[B]^2",
+    "Rate = k[A]^2[B]^2"
+   ],
+   "answer": 2,
+   "explanation": "Rate changes indicate first order with respect to A (doubling A doubles rate) and second order with respect to B (doubling B quadruples rate). Therefore the rate law is k[A]^1[B]^2. The other forms conflict with the observed effects."
+  },
+  {
+   "n": 33,
+   "topic": "Water and solubility",
+   "q": "Water from a borehole in Ibadan contains 0.050 mol/dm³ of Ca²⁺ ions. To soften 500.0 cm³ of this hard water completely by adding sodium carbonate solution, what volume of 0.100 mol/dm³ Na₂CO₃ is required? (Reaction: Ca²⁺ + CO₃²− → CaCO₃(s)).",
+   "options": [
+    "1000.0 cm³",
+    "250.0 cm³",
+    "500.0 cm³",
+    "125.0 cm³"
+   ],
+   "answer": 1,
+   "explanation": "Moles Ca²⁺ in 500.0 cm³ = 0.050 mol/dm³ × 0.500 dm³ = 0.0250 mol. Each Na₂CO₃ gives 1 CO₃²−, so need 0.0250 mol Na₂CO₃. Volume = moles / concentration = 0.0250 / 0.100 mol/dm³ = 0.250 dm³ = 250.0 cm³. Other choices are arithmetic errors."
+  },
+  {
+   "n": 34,
+   "topic": "Water and solubility",
+   "q": "A polluted river near Aba contains dissolved lead(II) ions. Which treatment most effectively and economically removes Pb²⁺ from large volumes of water in a community treatment plant?",
+   "options": [
+    "Adding dilute hydrochloric acid to dissolve lead and then aerating to remove it.",
+    "Passing the water through a silver-exchanged ion-exchange resin to replace lead ions with silver.",
+    "Boiling the water to drive off lead as a gas and then condensing the vapour.",
+    "Adding sodium hydroxide to precipitate insoluble Pb(OH)₂, followed by sedimentation and filtration."
+   ],
+   "answer": 3,
+   "explanation": "Precipitation as Pb(OH)₂ by raising pH is a common, inexpensive method to remove Pb²⁺ from water. Ion-exchange with silver is impractical and expensive, lead is not volatile so boiling won't remove it, and adding acid would keep lead in solution rather than remove it."
+  },
+  {
+   "n": 35,
+   "topic": "Chemical bonding",
+   "q": "Which statement correctly describes bonding and geometry in ammonia (NH₃)?",
+   "options": [
+    "Nitrogen uses d-orbitals to form five bonds and has trigonal bipyramidal shape.",
+    "Nitrogen is sp³-hybridised with three N–H sigma bonds and one lone pair; molecular shape is trigonal pyramidal with bond angle ≈ 107°.",
+    "Nitrogen forms three ionic bonds to hydrogen and the molecule is linear.",
+    "Nitrogen is sp²-hybridised with a planar trigonal shape and bond angle 120°."
+   ],
+   "answer": 1,
+   "explanation": "NH₃ has four electron regions (three bonding pairs and one lone pair) so nitrogen is sp³-hybridised; the lone pair slightly reduces H–N–H angle to about 107°, giving trigonal pyramidal shape. The other options confuse hybridisation, ionic vs covalent bonding, or invoke impossible d-orbital bonding for nitrogen."
+  },
+  {
+   "n": 36,
+   "topic": "Chemical bonding",
+   "q": "Which of the following correctly explains why solid sodium chloride conducts electricity only when molten or dissolved in water?",
+   "options": [
+    "In the solid state NaCl is covalently bonded and becomes ionic only when melted.",
+    "In the solid state ions are fixed in the lattice and cannot move; when molten or in solution the ions are free to move and carry charge.",
+    "Solid NaCl has metallic bonding that disappears on melting preventing conduction until dissolved.",
+    "Solid NaCl lacks electrons entirely so cannot conduct; melting creates free electrons for conduction."
+   ],
+   "answer": 1,
+   "explanation": "Ionic solids have ions locked in a lattice so no mobile charge carriers; melting or dissolving frees ions to move under an electric field, allowing conduction. The wrong options incorrectly invoke free electrons, reversible change from covalent to ionic, or metallic bonding."
+  },
+  {
+   "n": 37,
+   "topic": "Non-metals and their compounds",
+   "q": "Amina bubbled excess chlorine gas through a cold, concentrated aqueous solution of sodium bromide until no further reaction occurred. The colour of the solution changed from colourless to orange-brown. Which statement best explains the change?",
+   "options": [
+    "Chlorine displaced bromine by reduction: Cl₂ + 2Br → 2Cl + Br₂ (elemental bromine formed by direct combination with bromine atoms).",
+    "Chlorine reacted with water to form hypochlorous acid which directly coloured the solution without producing bromine.",
+    "Chlorine formed sodium chloride and hydrogen bromide gas which produced the orange-brown colour.",
+    "Chlorine oxidised bromide ions to bromine: Cl₂ + 2Br⁻ → 2Cl⁻ + Br₂, and dissolved bromine gives the orange-brown colour."
+   ],
+   "answer": 3,
+   "explanation": "Chlorine is a stronger oxidising agent than bromine and oxidises Br⁻ to Br₂: Cl₂ + 2Br⁻ → 2Cl⁻ + Br₂; dissolved bromine is orange-brown. Option 1 is incorrect chemically (bromide is ionic, not Br atoms). Hypochlorous acid may form but the observed colour is due to bromine; hydrogen bromide is a gas and colourless."
+  },
+  {
+   "n": 38,
+   "topic": "Non-metals and their compounds",
+   "q": "In the laboratory in Kano, a student reduces concentrated nitric acid (HNO₃) with a metal to produce a brown gas. Which gas is most likely produced and why?",
+   "options": [
+    "NH₃, because reduction of nitrate ions yields ammonia (a brown gas).",
+    "NO₂, because concentrated HNO₃ is a strong oxidising acid and reduction of nitrate often gives nitrogen dioxide (brown gas).",
+    "NO, because nitric oxide is brown and is the usual product from reduction of concentrated HNO₃.",
+    "N₂, because reduction of nitrate always gives dinitrogen gas."
+   ],
+   "answer": 1,
+   "explanation": "Reduction of concentrated nitric acid (nitrate) typically yields nitrogen dioxide (NO₂), which is brown. NO is colourless to pale brown and often oxidises to NO₂; N₂ and NH₃ are not commonly formed under these conditions and ammonia is colourless."
+  },
+  {
+   "n": 39,
+   "topic": "Periodic table",
+   "q": "Chinedu compares magnesium and aluminium atoms. Which of the following statements is correct?",
+   "options": [
+    "Aluminium is less metallic than magnesium because its metallic character increases across the period.",
+    "Magnesium has a higher first ionisation energy than aluminium because Mg has more protons.",
+    "Aluminium has a smaller atomic radius than magnesium because increased nuclear charge across the period pulls electrons closer despite added protons and electrons.",
+    "Aluminium has a larger atomic radius than magnesium because it has more electron shells."
+   ],
+   "answer": 2,
+   "explanation": "Across a period atomic radius generally decreases due to increased nuclear charge; Al (period 3) has a smaller radius than Mg (period 3 but earlier). Aluminium does not have more shells than magnesium (both have same principal shells). Magnesium has a slightly higher first ionisation energy than aluminium because Al's outer electron is in a p-subshell (shielded), and metallic character decreases across a period."
+  },
+  {
+   "n": 40,
+   "topic": "Periodic table",
+   "q": "A sample of an unknown element X forms an oxide XO that is basic and reacts with water to give an alkaline solution. On the periodic table, X is most likely to be:",
+   "options": [
+    "A noble gas, because noble gas compounds form basic oxides.",
+    "A transition metal from the middle of the d-block, because their oxides are always strongly basic.",
+    "A group 1 or group 2 metal (such as sodium or calcium), because their oxides are basic and give alkaline solutions.",
+    "A group 17 non-metal (such as chlorine), because halogen oxides are basic."
+   ],
+   "answer": 2,
+   "explanation": "Oxides of group 1 and group 2 metals are basic and produce alkaline solutions (e.g., Na₂O + H₂O → 2NaOH). Halogen oxides are acidic or neutral, transition metal oxides vary and are often amphoteric, and noble gases do not form such oxides under normal conditions."
+  },
+  {
+   "n": 41,
+   "topic": "Periodic table",
+   "q": "Which trend is observed for first ionisation energy down Group 1 (alkali metals) and why?",
+   "options": [
+    "First ionisation energy decreases down the group because atomic size decreases down the group.",
+    "First ionisation energy stays the same because all Group 1 elements have one valence electron.",
+    "First ionisation energy decreases down the group because outer electrons are further from the nucleus and are more shielded by inner shells.",
+    "First ionisation energy increases down the group because nuclear charge increases more than shielding."
+   ],
+   "answer": 2,
+   "explanation": "Down Group 1, outer electrons occupy higher principal quantum levels and are more shielded, making them easier to remove, so ionisation energy decreases. Nuclear charge does increase but is offset by increased shielding. Atomic size increases, not decreases, down a group."
+  },
+  {
+   "n": 42,
+   "topic": "Functional groups in organic chemistry",
+   "q": "A student analyses an unknown organic compound and finds it gives a positive Tollens' test (silver mirror) and does not decolourise bromine water. Which functional group is most likely present?",
+   "options": [
+    "An alkene group (C=C), because alkenes give a positive Tollens' test and decolourise bromine water.",
+    "A carboxylic acid group (−COOH), because carboxylic acids give a positive Tollens' test and do not react with bromine.",
+    "An aldehyde group (−CHO), because aldehydes are oxidised by Tollens' reagent to give a silver mirror and are generally not reactive with bromine water unless they are unsaturated.",
+    "A ketone group (−CO−), because ketones give a positive Tollens' test and do not react with bromine water."
+   ],
+   "answer": 2,
+   "explanation": "Tollens' reagent oxidises aldehydes to carboxylates producing a silver mirror; ketones do not react (except alpha-hydroxy ketones). Alkenes decolourise bromine water (and do not give Tollens'), and carboxylic acids do not give a positive Tollens' test."
+  },
+  {
+   "n": 43,
+   "topic": "Functional groups in organic chemistry",
+   "q": "In a practical exam at Enugu, Emeka converts ethanol to an organic product which is sweet-smelling, immiscible with water, and gives a fragrant smell when warmed with concentrated sulfuric acid. Which functional group is present in the product?",
+   "options": [
+    "Carboxylic acid (−COOH), because oxidation of ethanol directly yields a sweet-smelling acid.",
+    "Ester (−COO−), because esterification of ethanol with an acid produces an ester that is sweet-smelling and immiscible with water.",
+    "Alcohol (−OH), because the product still contains the alcohol group and is immiscible with water.",
+    "Ether (−O−), because ethers from ethanol are sweet-smelling and react with H₂SO₄ to give fragrances."
+   ],
+   "answer": 1,
+   "explanation": "Ethanol reacting (usually with acetic acid and H₂SO₄) gives an ester, which is sweet-smelling and often immiscible with water. Ethers are possible but typical esterification conditions produce esters. Alcohols are miscible with water and carboxylic acids are not sweet-smelling esters."
+  },
+  {
+   "n": 44,
+   "topic": "Oxidation, reduction and electrolysis",
+   "q": "A student electrolyses molten lead(II) bromide, PbBr₂, using inert electrodes. Which products are formed at the electrodes?",
+   "options": [
+    "At the cathode: Pb²⁺ is oxidised to PbO; at the anode: Br⁻ is reduced to Br₂⁻ (bromide radical).",
+    "At the cathode: Br₂ is produced; at the anode: Pb metal is formed.",
+    "At the cathode: H₂ gas is produced by reduction of hydrogen ions; at the anode: O₂ gas is produced from oxide ions.",
+    "At the cathode: Pb (liquid lead) is deposited by reduction of Pb²⁺; at the anode: Br₂ gas is formed by oxidation of Br⁻."
+   ],
+   "answer": 3,
+   "explanation": "In molten PbBr₂ there are only Pb²⁺ and Br⁻ ions. Pb²⁺ is reduced at the cathode to Pb: Pb²⁺ + 2e⁻ → Pb. Br⁻ is oxidised at the anode to Br₂: 2Br⁻ → Br₂ + 2e⁻. Water and oxide ions are not present in the molten salt electrolysis."
+  },
+  {
+   "n": 45,
+   "topic": "Oxidation, reduction and electrolysis",
+   "q": "During electrolysis of brine (concentrated NaCl(aq)) in an industrial cell with inert electrodes, which useful products are usually obtained at the electrodes and in solution?",
+   "options": [
+    "Chlorine gas at the cathode, oxygen at the anode, and concentrated hydrochloric acid in solution.",
+    "Sodium metal at the cathode, chlorine gas at the anode, and potassium hydroxide in solution.",
+    "Oxygen gas at the anode, hydrogen gas at the cathode, and sodium metal in solution.",
+    "Chlorine gas at the anode, hydrogen gas at the cathode, and aqueous sodium hydroxide remains in solution."
+   ],
+   "answer": 3,
+   "explanation": "Electrolysis of brine yields Cl₂ at the anode (2Cl⁻ → Cl₂ + 2e⁻) and H₂ at the cathode (2H₂O + 2e⁻ → H₂ + 2OH⁻), leaving Na⁺ and OH⁻ to form NaOH in solution. Oxygen and sodium metal are not produced under typical aqueous brine electrolysis; potassium hydroxide is unrelated."
+  },
+  {
+   "n": 46,
+   "topic": "Non-metals and their compounds",
+   "q": "At 1 atm and 25°C, which of the following statements about sulfur dioxide, SO₂, is correct?",
+   "options": [
+    "SO₂ is a reducing gas that dissolves in water to form sulfurous acid, H₂SO₃, and can be oxidised to SO₃ or H₂SO₄ in the atmosphere.",
+    "SO₂ is a strong oxidising agent that oxidises metals like iron to iron(III) instantly in the absence of oxygen.",
+    "SO₂ dissolves in water to form sulfuric acid directly (H₂SO₄) without further oxidation.",
+    "SO₂ is an inert gas that does not react with water and cannot be oxidised further."
+   ],
+   "answer": 0,
+   "explanation": "SO₂ dissolves to form H₂SO₃ (sulfurous acid) and acts as a reducing agent; it can be oxidised to SO₃ or, in the presence of water and further oxidation, to H₂SO₄. It is not inert, nor a strong oxidiser, and does not directly form sulfuric acid without oxidation."
+  },
+  {
+   "n": 47,
+   "topic": "Hydrocarbons",
+   "q": "In a school practical in Enugu, Pascal obtains a hydrocarbon sample suspected to be an alkene. Which observation best supports that the compound is an alkene rather than an alkane?",
+   "options": [
+    "The compound gives a blue precipitate with ammoniacal CuCl₂",
+    "The compound decolourises bromine water at room temperature",
+    "The compound is immiscible with water and has density 0.9 g cm⁻³",
+    "The compound burns with a clean, non-luminous flame"
+   ],
+   "answer": 1,
+   "explanation": "Alkenes react with bromine by electrophilic addition, decolourising bromine water; this is a classical test. A blue precipitate with ammoniacal CuCl₂ indicates terminal alkynes, and burning with a clean flame or being immiscible and having density ~0.9 g cm⁻³ are properties shared by many alkanes and alkenes, so they do not distinguish an alkene."
+  },
+  {
+   "n": 48,
+   "topic": "Hydrocarbons",
+   "q": "Which structural formula corresponds to 2-methylbut-2-ene?",
+   "options": [
+    "CH₃—CH₂—C(CH₃)=CH₂ (double bond at C3)",
+    "CH₂=CH—CH(CH₃)—CH₃ (methyl on C3)",
+    "CH₃—C(CH₃)=C—CH₃ (with the double bond between C2 and C3 and a methyl on C2)",
+    "CH₃—CH(CH₃)—CH₂—CH₃ (no double bond)"
+   ],
+   "answer": 2,
+   "explanation": "2-methylbut-2-ene has the double bond at carbon-2 of the longest chain (but-2-ene) and a methyl substituent at C2, giving CH₃–C(CH₃)=C–CH₃. The first wrong option places the methyl on C3; the second has the double bond in the wrong position; the third is a saturated isomer (no double bond)."
+  },
+  {
+   "n": 49,
+   "topic": "Energy changes",
+   "q": "A student in Lagos burns 1.00 g of ethanol, C₂H₅OH(l). The enthalpy change of combustion is −1367 kJ mol⁻¹. How much heat (in kJ) is released by burning 1.00 g? (Molar mass ethanol = 46.07 g mol⁻¹)",
+   "options": [
+    "−29.7 kJ",
+    "−62.3 kJ",
+    "−1367 kJ",
+    "−0.0297 kJ"
+   ],
+   "answer": 0,
+   "explanation": "Moles of ethanol = 1.00 / 46.07 = 0.02170 mol. Heat = moles × ΔH = 0.02170 × (−1367) = −29.68 kJ ≈ −29.7 kJ. −1367 kJ is per mole, −62.3 kJ would come from about 0.0456 mol, and −0.0297 kJ is off by 3 orders of magnitude."
+  },
+  {
+   "n": 50,
+   "topic": "Energy changes",
+   "q": "Which statement correctly describes an exothermic reaction carried out in a calorimeter that loses heat to the surroundings?",
+   "options": [
+    "Heat loss causes the reaction to become endothermic",
+    "Heat loss does not affect the calculated ΔH if mass and specific heat are known",
+    "Measured temperature rise of the calorimeter is smaller than expected, leading to an underestimated magnitude of ΔH (less negative)",
+    "Measured temperature rise is larger than expected, so ΔH is overestimated (more negative)"
+   ],
+   "answer": 2,
+   "explanation": "If heat from an exothermic reaction escapes to surroundings, the observed temperature rise is smaller, so computed heat released (and ΔH) is smaller in magnitude (less negative). Heat loss cannot make an exothermic reaction endothermic, and heat loss always affects calculations unless corrected for."
+  },
+  {
+   "n": 51,
+   "topic": "Mole concept and stoichiometry",
+   "q": "Ngozi titrates 25.00 cm³ of 0.100 mol dm⁻³ HCl with 20.00 cm³ of NaOH solution and finds the reaction just reaches neutralisation. What is the concentration of the NaOH solution in mol dm⁻³?",
+   "options": [
+    "0.125 mol dm⁻³",
+    "0.080 mol dm⁻³",
+    "0.150 mol dm⁻³",
+    "0.100 mol dm⁻³"
+   ],
+   "answer": 0,
+   "explanation": "Moles HCl = 0.100 mol dm⁻³ × 25.00 cm³ × (1 dm³/1000 cm³) = 0.00250 mol. Reaction: HCl + NaOH → NaCl + H₂O, 1:1 mole ratio, so moles NaOH = 0.00250 mol. Concentration = moles/volume = 0.00250 mol / 0.02000 dm³ = 0.125 mol dm⁻³."
+  },
+  {
+   "n": 52,
+   "topic": "Mole concept and stoichiometry",
+   "q": "A sample of limestone (CaCO₃) from Ibadan weighing 5.00 g is completely decomposed by heating to give CaO and CO₂. The molar mass CaCO₃ = 100.09 g mol⁻¹. What volume of CO₂ (in dm³) at STP (22.4 L mol⁻¹ often used at exam level) is produced?",
+   "options": [
+    "11.2 dm³",
+    "2.24 dm³",
+    "1.12 dm³",
+    "0.112 dm³"
+   ],
+   "answer": 2,
+   "explanation": "Moles CaCO₃ = 5.00 / 100.09 = 0.04999 mol ≈ 0.05000 mol. Decomposition: CaCO₃ → CaO + CO₂ gives 1 mol CO₂ per mol CaCO₃, so moles CO₂ = 0.05000 mol. Volume at STP ≈ 22.4 L mol⁻¹ → V = 0.05000 × 22.4 L = 1.12 L = 1.12 dm³. The 11.2 L option is off by factor 10, 0.112 L by factor 10 low."
+  },
+  {
+   "n": 53,
+   "topic": "Hydrocarbons",
+   "q": "During cracking in a refinery near Port Harcourt, decane (C₁₀H₂₂) is converted to octane (C₈H₁₈) and an alkene. What is the formula of the alkene produced?",
+   "options": [
+    "C₃H₆",
+    "C₂H₆",
+    "C₂H₄",
+    "C₂H₂"
+   ],
+   "answer": 2,
+   "explanation": "Mass and atoms balance: C₁₀H₂₂ → C₈H₁₈ + CxHy. Subtracting gives C₂H₄. C₂H₆ is an alkane, not an alkene; C₃H₆ has wrong carbon count; C₂H₂ is an alkyne, not produced by simple pairwise cracking here."
+  },
+  {
+   "n": 54,
+   "topic": "Non-metals and their compounds",
+   "q": "Which one of the following nitrogen oxides is essentially neutral (shows neither significant acidic nor basic behaviour) in aqueous solution?",
+   "options": [
+    "N2O5 (dinitrogen pentoxide)",
+    "NO2 (nitrogen dioxide)",
+    "N2O (nitrous oxide)",
+    "NO (nitric oxide)"
+   ],
+   "answer": 2,
+   "explanation": "N2O is largely insoluble and does not form acidic or basic aqueous species, so it is essentially neutral. NO2 hydrolyses to give acidic solutions (forming HNO3/HNO2 equilibria), and N2O5 gives strong acidic solution (forms HNO3). NO can react but is not usually regarded as neutral in aqueous redox chemistry."
+  },
+  {
+   "n": 55,
+   "topic": "Periodic table",
+   "q": "Which element has the highest first ionisation energy: sodium, magnesium, aluminium or silicon?",
+   "options": [
+    "Silicon",
+    "Sodium",
+    "Magnesium",
+    "Aluminium"
+   ],
+   "answer": 0,
+   "explanation": "Across Period 3 first ionisation energy generally increases from sodium → magnesium → aluminium → silicon; silicon has the highest because increased nuclear charge and similar shielding raise the energy required to remove an electron. Sodium, being an alkali metal, has the lowest value; aluminium's 3p electron is slightly easier to remove than silicon's 3p electron, so aluminium is not highest."
+  },
+  {
+   "n": 56,
+   "topic": "Functional groups in organic chemistry",
+   "q": "Which named compound contains both an ester and an alcohol functional group in the same molecule?",
+   "options": [
+    "Ethyl ethanoate",
+    "Propanone",
+    "Methyl 2-hydroxypropanoate",
+    "2-Methylpropan-1-ol"
+   ],
+   "answer": 2,
+   "explanation": "Methyl 2-hydroxypropanoate is an ester (methyl ... -oate) with a hydroxy group on carbon 2, so it contains both an ester and an alcohol group. Ethyl ethanoate is only an ester, 2-methylpropan-1-ol is only an alcohol, and propanone is a ketone."
+  },
+  {
+   "n": 57,
+   "topic": "Oxidation, reduction and electrolysis",
+   "q": "A student electrolyses a solution of copper(II) sulfate using copper electrodes. After some time the student observes that the mass of the anode decreases and the cathode gains shiny copper. Which is the best explanation?",
+   "options": [
+    "Water is oxidised to oxygen at the anode and Cu²⁺ is reduced at the cathode, causing the solution to lose Cu²⁺.",
+    "Copper is reduced at the anode and oxidised at the cathode, so copper transfers from anode to cathode without ions.",
+    "Copper is oxidised to Cu²⁺ at the anode and Cu²⁺ is reduced to copper metal at the cathode, keeping the solution concentration approximately constant.",
+    "Hydrogen gas is produced at the cathode and chlorine at the anode while copper remains unchanged."
+   ],
+   "answer": 2,
+   "explanation": "With copper electrodes in CuSO4(aq) the metal at the anode is oxidised: Cu(s) → Cu²⁺ + 2e⁻, dissolving the anode. At the cathode Cu²⁺ + 2e⁻ → Cu(s) plates out, so the Cu²⁺ concentration stays about the same. Option one is wrong because oxygen is not produced when copper anode dissolves; option three reverses oxidation/reduction; option four mentions chlorine and hydrogen which are not involved in CuSO4 electrolysis with copper electrodes."
+  },
+  {
+   "n": 58,
+   "topic": "Periodic table",
+   "q": "At STP which element in Period 3 has the highest first ionisation energy?",
+   "options": [
+    "Magnesium (Mg)",
+    "Sodium (Na)",
+    "Chlorine (Cl)",
+    "Aluminium (Al)"
+   ],
+   "answer": 2,
+   "explanation": "First ionisation energy generally increases across a period due to increasing nuclear charge and similar shielding. Chlorine is furthest to the right among the options (period 3) and therefore has the highest attraction for its outer electron, so Cl has the highest first ionisation energy. Sodium and magnesium are much less, and aluminium is lower than chlorine because it is to the left of Cl."
+  },
+  {
+   "n": 59,
+   "topic": "Functional groups in organic chemistry",
+   "q": "Aisha analyses an unknown pure organic solid and finds it gives a positive test for an ester (gives fruity smell on hydrolysis) and also shows basic behaviour with dilute acid. Which of the following compounds best fits these observations?",
+   "options": [
+    "Ethyl 4-aminobenzoate (contains an ester and an amine group)",
+    "Glycine (amino acid: amine and carboxylic acid)",
+    "Methyl acetamide (amide only)",
+    "Ethyl 4-hydroxybenzoate (ester and an alcohol)"
+   ],
+   "answer": 0,
+   "explanation": "Ethyl 4-aminobenzoate contains an ester group (explains fruity smell on hydrolysis) and a basic -NH2 (amine) group which reacts with dilute acid. Ethyl 4-hydroxybenzoate has an -OH that is not basic like an amine. Methyl acetamide has an amide (not a basic free amine) and glycine is zwitterionic and contains a carboxylic acid (acidic), so they do not match both ester plus a basic amine."
+  },
+  {
+   "n": 60,
+   "topic": "Oxidation, reduction and electrolysis",
+   "q": "In the Hall–Héroult process molten Al2O3 is electrolysed using carbon (graphite) anodes. What is the main oxidation half-reaction occurring at the carbon anode?",
+   "options": [
+    "2 O²⁻ → O₂ + 4 e⁻",
+    "Al³⁺ → Al + 3 e⁻",
+    "C + 2 O²⁻ → CO₂ + 4 e⁻",
+    "3 O²⁻ → O₃ + 6 e⁻"
+   ],
+   "answer": 2,
+   "explanation": "With carbon anodes the oxide ions are oxidised and react with the carbon to form CO₂ while releasing electrons: C + 2 O²⁻ → CO₂ + 4 e⁻. The reaction 2 O²⁻ → O₂ + 4 e⁻ occurs only with inert anodes (producing O₂), O₃ formation is not the industrial process, and Al³⁺ → Al + 3 e⁻ is a reduction (occurs at the cathode), not an oxidation at the anode."
+  }
+ ]
+}

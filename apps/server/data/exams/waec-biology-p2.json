@@ -1,0 +1,661 @@
+{
+ "id": "waec-biology-p2",
+ "exam": "waec",
+ "subject": "biology",
+ "year": null,
+ "number": 2,
+ "source": "ai",
+ "minutes": 60,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Nutrition in plants and animals",
+   "q": "A maize farmer in Ogun State observes that younger leaves of some plants are pale between the veins while older leaves remain green. Which nutrient deficiency is most likely responsible?",
+   "options": [
+    "Iron deficiency",
+    "Nitrogen deficiency",
+    "Magnesium deficiency",
+    "Potassium deficiency"
+   ],
+   "answer": 0,
+   "explanation": "Interveinal chlorosis in young leaves with older leaves remaining green is characteristic of iron deficiency because iron is immobile in the plant. Nitrogen deficiency causes uniform yellowing starting in older leaves since nitrogen is mobile. Magnesium deficiency produces interveinal chlorosis on older leaves first because magnesium is mobile. Potassium deficiency causes marginal scorching, not interveinal chlorosis."
+  },
+  {
+   "n": 2,
+   "topic": "Nutrition in plants and animals",
+   "q": "A student feeds two groups of rabbits different diets for a month. Group A receives only carbohydrate-rich porridge; Group B receives porridge supplemented with groundnut cake (rich in protein). At the end, Group B shows better growth. Which statement best explains this result?",
+   "options": [
+    "Carbohydrates are not used at all for growth and repair",
+    "Proteins provide more energy per gram than carbohydrate",
+    "Group B received essential amino acids for tissue synthesis absent in Group A's diet",
+    "Groundnut cake increased water absorption in the gut improving growth"
+   ],
+   "answer": 2,
+   "explanation": "Proteins supply essential amino acids required for synthesis of body tissues and enzymes, so Group B grows better. Proteins and carbohydrates have similar energy values (≈4 kcal/g), so the first wrong option is incorrect. Groundnut cake improving water absorption is not a main reason for growth, and carbohydrates can be used for growth and repair indirectly, so the last option is false."
+  },
+  {
+   "n": 3,
+   "topic": "Nutrition in plants and animals",
+   "q": "Which of the following best describes phloem transport in a healthy cassava plant?",
+   "options": [
+    "Movement of amino acids only from roots to leaves by diffusion",
+    "Translocation of sucrose from mature leaves to developing tubers by pressure-flow",
+    "Active uptake of nitrates into phloem from the soil",
+    "Uni-directional flow of water from root to shoot driven by transpiration"
+   ],
+   "answer": 1,
+   "explanation": "Phloem moves sucrose from source (mature leaves) to sink (developing tubers) via pressure-flow (mass flow). Phloem transports many solutes, not only amino acids and flows can be bi-directional depending on source-sink. Water movement from root to shoot by transpiration occurs in xylem, not phloem. Nitrates are taken up by roots and moved in xylem, not actively into phloem from soil."
+  },
+  {
+   "n": 4,
+   "topic": "Cell structure and organisation",
+   "q": "Under an electron microscope, a cell from a Lagos abattoir sample shows abundant rough endoplasmic reticulum and many Golgi stacks. Which cell type is this most likely to be?",
+   "options": [
+    "A secretory cell producing enzymes or plasma proteins",
+    "A fat-storing adipose cell",
+    "A mature red blood cell",
+    "A neuron with long axon"
+   ],
+   "answer": 0,
+   "explanation": "Abundant RER and Golgi indicate high protein synthesis and secretion, characteristic of secretory cells (e.g., pancreatic acinar or plasma cells). Mature red blood cells lack RER and Golgi as they have no nucleus. Adipose cells have few RER/Golgi and are specialized for lipid storage. Neurons have RER (Nissl bodies) but the description of many Golgi stacks and particularly RER suggests secretory epithelial cells rather than long-axon neurons."
+  },
+  {
+   "n": 5,
+   "topic": "Cell structure and organisation",
+   "q": "A plant cell placed in a 0.6 M sucrose solution becomes plasmolysed. If the cell sap initially was 0.3 M sucrose, which statement is correct?",
+   "options": [
+    "The external solution is hypertonic and water moves out of the cell by osmosis",
+    "There is no net water movement because solute particles cannot cross the membrane",
+    "Plasmolysis occurs because sucrose is toxic to plant cells",
+    "The external solution is hypotonic and water moves into the cell"
+   ],
+   "answer": 0,
+   "explanation": "0.6 M outside vs 0.3 M inside makes the external solution hypertonic, causing water to leave cell by osmosis and plasmolysis. A hypotonic solution would be lower concentration outside, causing swelling, so first wrong is incorrect. Solute impermeability does not prevent osmosis; water still moves, so second wrong is wrong. Plasmolysis is due to water loss, not sucrose toxicity, so third wrong is incorrect."
+  },
+  {
+   "n": 6,
+   "topic": "Cell structure and organisation",
+   "q": "Which of the following organelles is present in both prokaryotic and eukaryotic cells?",
+   "options": [
+    "Chloroplast",
+    "Ribosome",
+    "Nucleus",
+    "Mitochondrion"
+   ],
+   "answer": 1,
+   "explanation": "Ribosomes are found in both prokaryotes and eukaryotes as the site of protein synthesis. Mitochondria and chloroplasts are eukaryotic organelles absent in prokaryotes. A nucleus is defining of eukaryotes; prokaryotes have no membrane-bound nucleus."
+  },
+  {
+   "n": 7,
+   "topic": "Genetics",
+   "q": "In maize, allele T produces tall plants and t produces short plants. A farmer crosses a true-breeding tall plant with a true-breeding short plant. The F1 are all tall. When F1 plants are selfed, the F2 progeny show 72 tall and 28 short plants. What is the most likely explanation?",
+   "options": [
+    "Tall is recessive and shows incomplete dominance with short",
+    "There was a lethal allele causing death of some seedlings",
+    "The original cross was between two heterozygous parents",
+    "Tall is dominant to short and the F2 ratio approximates 3:1 due to Mendelian segregation"
+   ],
+   "answer": 3,
+   "explanation": "A 72:28 ratio approximates 3:1 (expected counts 75:25 for 100), consistent with tall dominant over short from a homozygous tall × homozygous short cross producing heterozygous F1, then selfing. If tall were recessive or incomplete dominance, F1 would not all be tall. A lethal allele would change expected numbers unpredictably, and the original cross used true-breeding parents so they were not both heterozygous."
+  },
+  {
+   "n": 8,
+   "topic": "Genetics",
+   "q": "A geneticist crosses two heterozygous pea plants for a single gene (Aa × Aa). What is the probability that a randomly chosen offspring is heterozygous?",
+   "options": [
+    "75%",
+    "50%",
+    "100%",
+    "25%"
+   ],
+   "answer": 1,
+   "explanation": "Punnett square for Aa × Aa gives genotypes: AA, Aa, Aa, aa — two out of four are heterozygous, so probability is 2/4 = 50%. 25% would be homozygous dominant (AA), 75% is incorrect mixing heterozygous and dominant counts, and 100% is wrong because homozygous recessive and dominant also occur."
+  },
+  {
+   "n": 9,
+   "topic": "Excretion",
+   "q": "A student measures urea concentration in urine of two people: A and B. Person A has much higher urea concentration than B. Which reason best explains the difference, assuming both are healthy?",
+   "options": [
+    "Person A must be a strict vegetarian while B eats meat",
+    "Person B has higher kidney glomerular filtration rate causing urea loss",
+    "Person A had a high-protein meal recently while B had less protein intake",
+    "Person A is better at conserving water so concentrates urine permanently"
+   ],
+   "answer": 2,
+   "explanation": "Urea levels reflect protein breakdown; higher recent protein intake increases urea excretion, explaining higher concentration in A. Being a vegetarian would tend to lower urea, not increase it. Kidney concentrating ability can vary with hydration but is not 'permanent' and the question assumes both healthy; water balance rather than 'better' conservation is relevant. Higher GFR would increase urine volume and dilute urea but without more data this is less likely than dietary protein difference."
+  },
+  {
+   "n": 10,
+   "topic": "Excretion",
+   "q": "Which structure in the nephron is primarily responsible for the selective reabsorption of glucose back into the blood?",
+   "options": [
+    "Proximal convoluted tubule",
+    "Loop of Henle",
+    "Collecting duct",
+    "Glomerulus"
+   ],
+   "answer": 0,
+   "explanation": "The proximal convoluted tubule has microvilli and transporters for active reabsorption of glucose and most useful solutes. The glomerulus is the site of ultrafiltration, not selective reabsorption. Loop of Henle mainly reabsorbs water and salts to concentrate urine. Collecting duct adjusts final water and ion balance but does not perform primary glucose reabsorption."
+  },
+  {
+   "n": 11,
+   "topic": "Support and movement",
+   "q": "Which of the following pairs of bones form part of the pelvic girdle in an adult human?",
+   "options": [
+    "Femur and patella",
+    "Scapula and clavicle",
+    "Ilium and ischium",
+    "Humerus and ulna"
+   ],
+   "answer": 2,
+   "explanation": "The pelvic girdle is formed by the paired hip bones, each made of ilium, ischium and pubis. Scapula and clavicle form the pectoral girdle; femur and patella are bones of the lower limb, while humerus and ulna are bones of the upper limb."
+  },
+  {
+   "n": 12,
+   "topic": "Support and movement",
+   "q": "A sprinter in Lagos strains a muscle and is advised to apply cold compress immediately. Cold application reduces pain mainly by which mechanism?",
+   "options": [
+    "Reducing local blood flow and inflammation",
+    "Increasing muscle metabolism",
+    "Stimulating growth of new muscle fibres",
+    "Causing vasodilation and increased oxygen delivery"
+   ],
+   "answer": 0,
+   "explanation": "Cold causes local vasoconstriction, reducing blood flow and limiting inflammation and pain. It does not increase metabolism or stimulate muscle fibre growth; vasodilation and increased oxygen delivery is the opposite effect of cold."
+  },
+  {
+   "n": 13,
+   "topic": "Reproduction",
+   "q": "In a human ovary the corpus luteum primarily secretes which hormone during the luteal phase?",
+   "options": [
+    "Progesterone",
+    "Follicle-stimulating hormone (FSH)",
+    "Luteinizing hormone (LH)",
+    "Thyroxine (T4)"
+   ],
+   "answer": 0,
+   "explanation": "After ovulation the corpus luteum secretes mainly progesterone (and some oestrogen) to maintain the endometrium. FSH and LH are pituitary hormones, not secreted by corpus luteum; thyroxine is a thyroid hormone unrelated to ovarian function."
+  },
+  {
+   "n": 14,
+   "topic": "Reproduction",
+   "q": "A woman in Abuja misses her period and takes a pregnancy test that detects human chorionic gonadotropin (hCG). hCG is produced by which structure?",
+   "options": [
+    "Anterior pituitary",
+    "Corpus luteum only",
+    "Ovulated oocyte",
+    "Syncytiotrophoblast of the placenta"
+   ],
+   "answer": 3,
+   "explanation": "hCG is produced by the syncytiotrophoblast cells of the developing placenta shortly after implantation. The corpus luteum initially maintains progesterone but hCG is placenta-derived; anterior pituitary and oocyte do not produce hCG."
+  },
+  {
+   "n": 15,
+   "topic": "Reproduction",
+   "q": "Which of the following contraceptives acts mainly by preventing implantation of a fertilised egg?",
+   "options": [
+    "Condom preventing sperm entry",
+    "Copper intrauterine device (IUD)",
+    "Combined oral contraceptive pill suppressing ovulation",
+    "Vasectomy blocking sperm transport"
+   ],
+   "answer": 1,
+   "explanation": "Copper IUDs create a uterine environment hostile to implantation and sperm, so they can prevent implantation of a fertilised egg. Combined pills mainly inhibit ovulation; condoms prevent sperm entry; vasectomy blocks sperm release—these act before fertilisation."
+  },
+  {
+   "n": 16,
+   "topic": "Respiration",
+   "q": "At sea level (atmospheric pressure ≈ 101 kPa) the partial pressure of oxygen in dry air (21% O₂) is approximately:",
+   "options": [
+    "0.21 kPa",
+    "21.2 kPa",
+    "79 kPa",
+    "101 kPa"
+   ],
+   "answer": 1,
+   "explanation": "Partial pressure = 0.21 × 101 kPa ≈ 21.21 kPa, so 21.2 kPa is correct. 101 kPa is total atmospheric pressure; 79 kPa is the approximate partial pressure of nitrogen (0.78 × 101 ≈ 78.8 kPa); 0.21 kPa is 1000× too small."
+  },
+  {
+   "n": 17,
+   "topic": "Respiration",
+   "q": "During intense exercise in a Nigerian athlete, which of the following best explains the rise in breathing rate?",
+   "options": [
+    "Increased CO₂ in blood lowers pH, stimulating respiratory centre",
+    "Stretch receptors in muscles force lungs to inflate more",
+    "Lower CO₂ in blood causes chemoreceptors to increase ventilation",
+    "Increased O₂ directly stimulates medulla to increase ventilation"
+   ],
+   "answer": 0,
+   "explanation": "High CO₂ produces H⁺ (lowers pH), which chemoreceptors detect and stimulate the respiratory centre to increase breathing. Increased O₂ does not directly stimulate the medulla; low CO₂ would reduce ventilation; muscle stretch receptors have minor role compared with chemoreceptor response."
+  },
+  {
+   "n": 18,
+   "topic": "Nervous and hormonal coordination",
+   "q": "A child in Kano receives a painful prick on the finger. The fastest reflex that withdraws the hand is most directly mediated by which sequence?",
+   "options": [
+    "Motor neuron → sensory neuron → spinal cord",
+    "Sensory neuron → thalamus → cerebral cortex → motor neuron",
+    "Hormone release from adrenal medulla → muscle contraction",
+    "Sensory neuron → spinal cord interneuron → motor neuron"
+   ],
+   "answer": 3,
+   "explanation": "Spinal reflexes are fast because the sensory neuron synapses in the spinal cord (often via an interneuron) directly onto motor neurons, bypassing the brain. Routing via thalamus and cortex is slower conscious processing; hormone release is too slow; motor→sensory→spinal cord is the wrong direction."
+  },
+  {
+   "n": 19,
+   "topic": "Nervous and hormonal coordination",
+   "q": "A diabetic patient in Ibadan is given insulin and blood glucose falls from 12.0 mmol/L to 6.0 mmol/L in 2 hours. What is the average rate of decrease in mmol/L per hour?",
+   "options": [
+    "6.0 mmol/L per hour",
+    "3.0 mmol/L per hour",
+    "2.0 mmol/L per hour",
+    "0.5 mmol/L per hour"
+   ],
+   "answer": 1,
+   "explanation": "Change = 12.0 − 6.0 = 6.0 mmol/L over 2 hours; rate = 6.0 ÷ 2 = 3.0 mmol/L per hour. 6.0 per hour would be if the drop occurred in 1 hour; 2.0 per hour would be a 4.0 mmol/L drop; 0.5 is far too small."
+  },
+  {
+   "n": 20,
+   "topic": "Diffusion, osmosis and active transport",
+   "q": "A student places a dialysis tubing bag containing 0.2 M glucose in 0.6 M sucrose solution. After 2 hours the bag has lost mass. Which process best explains the mass loss?",
+   "options": [
+    "Endocytosis removed water from inside the bag leading to mass loss",
+    "Glucose diffused out of the bag down its concentration gradient causing mass loss",
+    "Water moved out of the bag by osmosis because the external solution had lower water potential",
+    "Sucrose actively transported into the bag raising internal solute concentration"
+   ],
+   "answer": 2,
+   "explanation": "Water moves from higher to lower water potential; the 0.2 M glucose inside gives higher water potential than 0.6 M sucrose outside, so net water left the bag by osmosis. Glucose molecules are too large to cross dialysis tubing rapidly, so diffusion of glucose is unlikely; active transport and endocytosis do not occur across dialysis tubing."
+  },
+  {
+   "n": 21,
+   "topic": "Diffusion, osmosis and active transport",
+   "q": "In a plant root hair cell, which of the following requires ATP directly?",
+   "options": [
+    "Active transport of K+ ions from the soil solution into the cytoplasm when soil [K+] is low",
+    "Facilitated diffusion of nitrate via a channel along its concentration gradient",
+    "Diffusion of CO2 into the root hair cell",
+    "Osmotic uptake of water through aquaporins down a water potential gradient"
+   ],
+   "answer": 0,
+   "explanation": "Active transport of K+ against its concentration gradient uses membrane pumps and ATP. Diffusion of gases and osmotic water flow are passive, and facilitated diffusion through channels does not require ATP."
+  },
+  {
+   "n": 22,
+   "topic": "Diffusion, osmosis and active transport",
+   "q": "A red blood cell placed in an unknown solution swells and bursts. Which statement about the unknown solution is correct?",
+   "options": [
+    "The solution is hypertonic to the red blood cell and has lower water potential",
+    "The solution is isotonic so solute concentrations are equal inside and out",
+    "The solution contains impermeable solutes causing plasmolysis of the cell",
+    "The solution is hypotonic to the red blood cell and has higher water potential than the cell interior"
+   ],
+   "answer": 3,
+   "explanation": "Swelling and bursting indicates water entered the cell by osmosis; therefore the external solution was hypotonic (higher water potential). A hypertonic solution would shrink cells, isotonic would cause no volume change, and plasmolysis applies to plant cells and to hypertonic conditions."
+  },
+  {
+   "n": 23,
+   "topic": "Variation and evolution",
+   "q": "In a population of mosquitoes in Lagos, a gene for insecticide resistance is recessive (rr). If 16% of the population are resistant, what is the frequency of the r allele assuming Hardy-Weinberg equilibrium?",
+   "options": [
+    "0.40",
+    "0.84",
+    "0.20",
+    "0.16"
+   ],
+   "answer": 0,
+   "explanation": "Resistant individuals are rr and equal q² = 0.16, so q = √0.16 = 0.4. The r allele frequency is 0.40. 0.16 is q², 0.84 would be p (incorrect), 0.20 is half of q and not correct."
+  },
+  {
+   "n": 24,
+   "topic": "Variation and evolution",
+   "q": "A breeder crosses two heterozygous cattle (Aa × Aa) for hornlessness where A is dominant. What proportion of their offspring are expected to be hornless?",
+   "options": [
+    "25%",
+    "75%",
+    "100%",
+    "50%"
+   ],
+   "answer": 1,
+   "explanation": "Cross Aa × Aa yields genotypes AA, Aa, Aa, aa so 3 out of 4 (75%) show the dominant hornless phenotype. 50% and 25% are common misunderstandings (heterozygote frequency or homozygous dominant), and 100% would be true only if both parents were homozygous dominant."
+  },
+  {
+   "n": 25,
+   "topic": "Variation and evolution",
+   "q": "Which observation best supports natural selection as the mechanism of evolution in peppered moths near an industrial town?",
+   "options": [
+    "All moths in the population mutate to dark form simultaneously",
+    "Moths randomly change colour within a single lifetime to match the bark",
+    "Dark moths become more frequent when soot darkens tree bark and predation on light moths increases",
+    "Light moths become darker because they learn to camouflage"
+   ],
+   "answer": 2,
+   "explanation": "An increase in dark moth frequency due to differential predation when bark darkens shows natural selection acting on heritable variation. Colour change during lifetime, learning to camouflage, or simultaneous mutation are not mechanisms of natural selection."
+  },
+  {
+   "n": 26,
+   "topic": "Transport systems",
+   "q": "Which feature of xylem vessels allows efficient water transport from roots to leaves in tall oil palm trees?",
+   "options": [
+    "End walls with many plasmodesmata to allow cytoplasmic flow",
+    "Thin, non-lignified walls that increase elasticity for pumping",
+    "Long continuous hollow tubes with lignified walls that resist collapse under tension",
+    "Living cells with many mitochondria generating pumping force"
+   ],
+   "answer": 2,
+   "explanation": "Xylem vessels are dead, hollow, lignified tubes that withstand negative pressure (tension) during transpiration pull. They are not living and do not contain mitochondria for pumping; plasmodesmata are in living cells and thin non-lignified walls would collapse under tension."
+  },
+  {
+   "n": 27,
+   "topic": "Transport systems",
+   "q": "During intense activity a Nigerian runner's heart rate and stroke volume increase. Which effect will this have on cardiac output (CO = heart rate × stroke volume) if heart rate rises from 70 min⁻¹ to 150 min⁻¹ and stroke volume from 70 mL to 100 mL?",
+   "options": [
+    "CO remains unchanged because stroke volume and heart rate balance out",
+    "CO decreases because faster heart rate reduces filling time",
+    "CO increases from 4.9 L min⁻¹ to 7.0 L min⁻¹",
+    "CO increases from 4.9 L min⁻¹ to 15.0 L min⁻¹"
+   ],
+   "answer": 3,
+   "explanation": "Initial CO = 70 × 70 mL = 4900 mL = 4.9 L min⁻¹. During exercise CO = 150 × 100 mL = 15000 mL = 15.0 L min⁻¹. The other options ignore the multiplication or assume contrary physiological effects; although very high rates can reduce filling, the given numbers show a net increase."
+  },
+  {
+   "n": 28,
+   "topic": "Transport systems",
+   "q": "Which blood vessel in humans carries blood under highest pressure and why?",
+   "options": [
+    "Pulmonary vein, because it returns oxygenated blood at high pressure",
+    "Pulmonary artery, because it transports blood away from the heart to the lungs",
+    "Superior vena cava, because it drains blood to the heart from the head",
+    "Aorta, because it receives blood directly from the left ventricle during systole"
+   ],
+   "answer": 3,
+   "explanation": "The aorta receives blood ejected from the left ventricle at high systolic pressure, so it has the highest pressure. Pulmonary vessels operate at lower pressures; vena cavae are low-pressure return vessels."
+  },
+  {
+   "n": 29,
+   "topic": "Ecology",
+   "q": "A farmer in Benin City observes fewer earthworms after repeated pesticide use. Which ecological effect is most likely to follow and why?",
+   "options": [
+    "Immediate increase in plant diversity because earthworms competed with seedlings",
+    "Higher oxygen levels in soil because fewer organisms consume O2",
+    "Increase in primary productivity because pesticides act as fertiliser",
+    "Reduced soil aeration and nutrient cycling leading to lower crop yields because earthworms mix soil and aid decomposition"
+   ],
+   "answer": 3,
+   "explanation": "Earthworms improve soil structure and decomposition; their decline reduces aeration and nutrient cycling, harming crop yields. Earthworms do not compete with seedlings in a way that increases diversity, fewer consumers does not raise soil O2 meaningfully, and pesticides are not fertilisers and typically reduce productivity."
+  },
+  {
+   "n": 30,
+   "topic": "Diseases and their control",
+   "q": "A public health team in Kano vaccinates children with the BCG vaccine. Which of the following statements about BCG vaccination is correct?",
+   "options": [
+    "It contains killed Mycobacterium leprae to prevent leprosy",
+    "It protects primarily against infection by influenza virus",
+    "It provides lifelong immunity against all forms of tuberculosis",
+    "It provides protection mainly against severe forms of tuberculosis in young children"
+   ],
+   "answer": 3,
+   "explanation": "BCG vaccine is known to protect mainly against severe forms of tuberculosis (e.g., miliary TB and TB meningitis) in young children. It does not provide lifelong immunity against all forms of TB, nor does it protect against influenza; it contains an attenuated strain of Mycobacterium bovis, not M. leprae."
+  },
+  {
+   "n": 31,
+   "topic": "Diseases and their control",
+   "q": "During an outbreak of cholera in Port Harcourt, authorities advise boiling drinking water. Boiling water for 1 minute is most effective because it:",
+   "options": [
+    "kills Vibrio cholerae by denaturing proteins and disrupting cell membranes",
+    "changes water pH so bacteria cannot survive",
+    "removes cholera toxins by simple boiling",
+    "permanently increases dissolved oxygen to harmful levels for bacteria"
+   ],
+   "answer": 0,
+   "explanation": "Boiling kills bacteria such as Vibrio cholerae primarily by denaturing proteins and disrupting cell membranes. Boiling does not remove preformed toxins (that requires other treatments), nor does it permanently change dissolved oxygen or pH to levels that inhibit bacteria."
+  },
+  {
+   "n": 32,
+   "topic": "Diseases and their control",
+   "q": "A clinician prescribes doxycycline for a patient with suspected malaria in a region with chloroquine resistance. Doxycycline is used because it:",
+   "options": [
+    "functions by neutralising haemozoin in the parasite food vacuole",
+    "kills malaria parasites by disrupting their cell walls",
+    "acts as an antimalarial by inhibiting protein synthesis of Plasmodium parasites",
+    "is the first choice for rapid treatment of severe cerebral malaria"
+   ],
+   "answer": 2,
+   "explanation": "Doxycycline is an antimalarial that inhibits protein synthesis in Plasmodium and is used in combination or for prophylaxis; it does not disrupt cell walls (protozoa lack peptidoglycan), is not the first-line emergency drug for severe cerebral malaria (artesunate is preferred), and does not act by neutralising haemozoin."
+  },
+  {
+   "n": 33,
+   "topic": "Classification of living things",
+   "q": "A student finds a mushroom growing on a rotting log in Jos. Which characteristic best places the mushroom in the kingdom Fungi rather than Plantae?",
+   "options": [
+    "Obtaining nutrients by extracellular digestion and absorption of organic matter",
+    "Storing food as starch in plastids",
+    "Carrying out photosynthesis using chlorophyll a",
+    "Having chitin in the cell walls made of cellulose"
+   ],
+   "answer": 0,
+   "explanation": "Fungi obtain nutrients by extracellular digestion and absorption of organic matter, distinguishing them from plants. Their cell walls contain chitin (not cellulose), they do not photosynthesise (no chlorophyll), and they typically store food as glycogen rather than starch."
+  },
+  {
+   "n": 34,
+   "topic": "Classification of living things",
+   "q": "Which of the following pairs of features would place a newly discovered organism in the Phylum Arthropoda?",
+   "options": [
+    "Notochord and dorsal hollow nerve cord",
+    "Soft unsegmented body with a muscular foot",
+    "Radial symmetry and a water vascular system",
+    "Segmented body and jointed appendages"
+   ],
+   "answer": 3,
+   "explanation": "Arthropods are characterised by segmented bodies and jointed appendages. A notochord and dorsal hollow nerve cord indicate chordates; radial symmetry and a water vascular system indicate echinoderms; a soft unsegmented body with a muscular foot describes molluscs like gastropods."
+  },
+  {
+   "n": 35,
+   "topic": "Classification of living things",
+   "q": "A bacterium from a Lagos sewage sample is found to possess a circular DNA molecule separate from its chromosomal DNA. This extra DNA is best described as:",
+   "options": [
+    "a plasmid that may carry genes for antibiotic resistance",
+    "a mitochondrial genome for aerobic respiration",
+    "a chloroplast genome for photosynthesis",
+    "a nucleosome involved in chromatin packaging"
+   ],
+   "answer": 0,
+   "explanation": "Many bacteria have plasmids: small circular DNA molecules separate from the chromosome that often carry accessory genes such as antibiotic resistance. Nucleosomes are eukaryotic chromatin structures, and bacteria do not have chloroplasts or mitochondria with separate organelle genomes."
+  },
+  {
+   "n": 36,
+   "topic": "Nutrition in plants and animals",
+   "q": "A gardener in Enugu applies nitrogen-rich fertiliser to his tomato plants. Which plant process is most directly increased by the extra nitrogen?",
+   "options": [
+    "Absorption of water via root hair osmotic channels",
+    "Conversion of CO₂ to glucose in the light-independent reactions",
+    "Transport of sugars in the phloem by mass flow",
+    "Synthesis of amino acids and proteins leading to increased leaf growth"
+   ],
+   "answer": 3,
+   "explanation": "Nitrogen is a key component of amino acids and proteins, so extra nitrogen enhances protein synthesis and leaf growth. While nitrogen indirectly supports many functions, it does not directly increase water absorption, the Calvin cycle CO₂ fixation is limited by enzymes but not directly by nitrogen in the short term, and phloem transport is not directly increased by added nitrogen."
+  },
+  {
+   "n": 37,
+   "topic": "Nutrition in plants and animals",
+   "q": "A human patient in Ibadan has severe lactose intolerance due to low lactase. Which dietary change will most reduce symptoms while preserving calcium intake?",
+   "options": [
+    "Switch entirely to plant oils to replace milk",
+    "Consume fermented dairy products like yogurt which have lower lactose",
+    "Drink pasteurised milk warmed to 60°C which destroys lactose",
+    "Avoid all calcium sources and take vitamin D instead"
+   ],
+   "answer": 1,
+   "explanation": "Fermented dairy such as yogurt has bacteria that partially digest lactose, reducing symptoms while keeping calcium. Heating does not destroy lactose (it is heat-stable), plant oils provide no calcium, and avoiding calcium is unsafe; vitamin D does not replace calcium."
+  },
+  {
+   "n": 38,
+   "topic": "Cell structure and organisation",
+   "q": "Under an electron microscope, a cell from a Lagos potato tuber shows many membrane-bound organelles with internal thylakoid membranes stacked as grana. These organelles are most likely:",
+   "options": [
+    "plastids (chloroplasts) involved in photosynthesis",
+    "peroxisomes that store starch",
+    "lysosomes responsible for intracellular digestion",
+    "mitochondria involved only in anaerobic respiration"
+   ],
+   "answer": 0,
+   "explanation": "Organelles with internal thylakoid membranes and grana are chloroplasts, a type of plastid for photosynthesis. Mitochondria have cristae not grana and perform aerobic respiration; lysosomes digest materials; peroxisomes do not store starch."
+  },
+  {
+   "n": 39,
+   "topic": "Genetics",
+   "q": "In guinea-pigs, black fur (B) is dominant to brown fur (b). A black male of unknown genotype is mated with a brown female and their litter has 8 black and 7 brown pups. What is the most likely genotype of the black male?",
+   "options": [
+    "Cannot determine from data",
+    "Homozygous recessive (bb)",
+    "Heterozygous (Bb)",
+    "Homozygous dominant (BB)"
+   ],
+   "answer": 2,
+   "explanation": "The presence of brown offspring (recessive bb) from a black × brown cross indicates the black parent must carry the recessive allele. Expected ratio from Bb × bb is 1:1, matching roughly 8 black : 7 brown, so the black male is Bb. BB would produce all black offspring; bb is impossible for a black individual."
+  },
+  {
+   "n": 40,
+   "topic": "Genetics",
+   "q": "Sickle-cell trait in humans is due to a single base substitution in the haemoglobin gene producing HbS (s). Two parents, both carriers (AS), have a child. What is the probability that the child will be homozygous for the sickle allele and therefore have sickle-cell disease?",
+   "options": [
+    "75%",
+    "50%",
+    "0%",
+    "25%"
+   ],
+   "answer": 3,
+   "explanation": "Parents with genotype AS × AS produce genotypes AA, AS, SA, SS with probabilities 25%, 50%, 25% respectively. Only SS (25%) is homozygous for the sickle allele and expresses sickle-cell disease. 50% would be carriers; 0% is incorrect because homozygous sickle is possible."
+  },
+  {
+   "n": 41,
+   "topic": "Genetics",
+   "q": "In maize, purple kernel colour (P) is dominant to yellow (p). A breeder wants to produce only purple offspring and crosses two purple plants. In one cross all offspring are purple; in another cross 3/4 are purple and 1/4 yellow. Which genotypes correspond to the parents in the second cross?",
+   "options": [
+    "One parent homozygous dominant and one homozygous recessive (PP × pp)",
+    "Both parents are heterozygous (Pp × Pp)",
+    "Both parents homozygous dominant (PP × PP)",
+    "One parent heterozygous and one homozygous dominant (Pp × PP)"
+   ],
+   "answer": 1,
+   "explanation": "A Pp × Pp cross gives 3/4 dominant phenotype and 1/4 recessive (pp). PP × pp would give all purple, and PP × PP also all purple. Pp × PP gives 100% purple. Thus both parents must be heterozygous."
+  },
+  {
+   "n": 42,
+   "topic": "Excretion",
+   "q": "A student measures urine from two adults in Lagos. Sample A has higher urea concentration and lower water volume; Sample B has lower urea concentration and larger water volume. Which physiological condition best explains Sample A?",
+   "options": [
+    "Dehydration causing increased ADH and concentrated urine",
+    "Drinking excess water causing suppressed ADH",
+    "Kidney failure causing inability to concentrate urine",
+    "A low-protein diet producing less urea"
+   ],
+   "answer": 0,
+   "explanation": "Dehydration raises ADH release, increasing water reabsorption and producing concentrated urine with higher urea concentration. Excess water would dilute urine (like Sample B). Kidney failure usually causes impaired excretion and varied urea but often elevated volume or retention; low-protein diet would reduce urea but not increase concentration with low volume."
+  },
+  {
+   "n": 43,
+   "topic": "Excretion",
+   "q": "Which part of the nephron is primarily responsible for the selective reabsorption of glucose back into the blood?",
+   "options": [
+    "Proximal convoluted tubule",
+    "Loop of Henle",
+    "Distal convoluted tubule",
+    "Collecting duct"
+   ],
+   "answer": 0,
+   "explanation": "The proximal convoluted tubule has microvilli and many carrier proteins for reabsorbing glucose, amino acids and ions. The Loop of Henle mainly concentrates urine by water and ion movement; the collecting duct adjusts final water balance under ADH; distal tubule performs further ion exchange but not primary glucose reabsorption."
+  },
+  {
+   "n": 44,
+   "topic": "Support and movement",
+   "q": "A sprinter in Abuja tears a tendon connecting calf muscle to the heel. Which tissue property of the tendon made it suitable for this role?",
+   "options": [
+    "High tensile strength from parallel collagen fibres",
+    "Contractility due to abundant actin and myosin",
+    "Elastic recoil from abundant elastic fibres",
+    "Ability to conduct nerve impulses rapidly"
+   ],
+   "answer": 0,
+   "explanation": "Tendons are rich in parallel collagen fibres giving high tensile strength to transmit muscle pull to bone. Elastic fibres provide stretch in ligaments and skin but tendons are less elastic. Contractility is a muscle property (actin/myosin), not tendon. Tendons do not conduct nerve impulses."
+  },
+  {
+   "n": 45,
+   "topic": "Support and movement",
+   "q": "During a jump, the tibialis anterior muscle must produce a rapid action potential. Which sequence best describes impulse conduction in the muscle fibre leading to contraction?",
+   "options": [
+    "Ca²⁺ release → T-tubule → sarcoplasmic reticulum → actin-myosin cycling",
+    "Actin-myosin cross-bridge cycling → Ca²⁺ release → T-tubule → sarcoplasmic reticulum",
+    "T-tubule → sarcoplasmic reticulum → Ca²⁺ release → actin-myosin cross-bridge cycling",
+    "Sarcoplasmic reticulum → T-tubule → actin-myosin cross-bridge cycling → Ca²⁺ release"
+   ],
+   "answer": 2,
+   "explanation": "An action potential travels along the sarcolemma into T-tubules, triggering the sarcoplasmic reticulum to release Ca²⁺, which allows actin-myosin cross-bridge cycling and contraction. Other sequences misuse the order of excitation-contraction coupling."
+  },
+  {
+   "n": 46,
+   "topic": "Reproduction",
+   "q": "A woman in Enugu has her oviducts blocked and undergoes in vitro fertilisation (IVF). Which step in IVF bypasses the natural function of the oviduct?",
+   "options": [
+    "Fertilisation of egg by sperm in laboratory and transfer of embryo to uterus",
+    "Implantation of embryo into uterine endometrium",
+    "Menstrual shedding of uterine lining",
+    "Ovulation of the mature oocyte"
+   ],
+   "answer": 0,
+   "explanation": "IVF involves fertilising the oocyte outside the body and placing the embryo directly into the uterus, bypassing transport and fertilisation that normally occur in the oviduct. Ovulation and implantation still occur (or are assisted), and menstrual shedding is unrelated to bypassing the oviduct."
+  },
+  {
+   "n": 47,
+   "topic": "Reproduction",
+   "q": "Which hormone peak triggers ovulation in a typical 28-day menstrual cycle?",
+   "options": [
+    "A surge in testosterone",
+    "A surge in prolactin",
+    "A surge in luteinising hormone (LH)",
+    "A steady high level of follicle-stimulating hormone (FSH) throughout"
+   ],
+   "answer": 2,
+   "explanation": "A mid-cycle surge in LH triggers ovulation. Prolactin is involved in lactation, not ovulation. Testosterone is not the trigger in females. FSH rises early to stimulate follicles but a steady high FSH does not directly trigger ovulation; the LH surge does."
+  },
+  {
+   "n": 48,
+   "topic": "Support and movement",
+   "q": "A 60-year-old man in Kano is diagnosed with osteoporosis. Which change at bone tissue level best explains his increased fracture risk?",
+   "options": [
+    "Reduced bone mass due to increased osteoclast activity relative to osteoblast activity",
+    "Thickening of bone due to increased hydroxyapatite crystals",
+    "Excessive deposition of bone matrix by osteoblasts",
+    "Increased cartilage formation within cortical bone"
+   ],
+   "answer": 0,
+   "explanation": "Osteoporosis involves decreased bone density from increased bone resorption (osteoclast activity) or decreased formation (osteoblasts), weakening bones and increasing fracture risk. Excess deposition or thickening would strengthen bone; cartilage formation in cortical bone is not a feature of osteoporosis."
+  },
+  {
+   "n": 49,
+   "topic": "Genetics",
+   "q": "Mr. Okafor (normal) and Mrs. Okafor is a carrier for X-linked haemophilia (genotype XᴴXʰ, where Xʰ carries the faulty allele). They have one child. What is the probability that a son of this couple will have haemophilia?",
+   "options": [
+    "50%",
+    "25%",
+    "100%",
+    "0%"
+   ],
+   "answer": 0,
+   "explanation": "Haemophilia is X-linked recessive. Sons receive their X chromosome from their mother and Y from their father. Since the mother is XᴴXʰ, half her X gametes carry Xʰ and half carry Xᴴ, so 50% of sons (XʰY) will be affected. 25% would be the probability for a specific child being an affected child of either sex in some autosomal scenarios (not here); 0% and 100% are incorrect because the mother's carrier status gives an intermediate 50% chance for sons."
+  },
+  {
+   "n": 50,
+   "topic": "Genetics",
+   "q": "Mr. Chukwu is blood group A (genotype AO) and Mrs. Chukwu is blood group B (genotype BO). If their gametes combine at random, what fraction of their children are expected to have blood group AB?",
+   "options": [
+    "1/4",
+    "1/2",
+    "0",
+    "3/4"
+   ],
+   "answer": 0,
+   "explanation": "Crossing AO × BO gives the Punnett square: AB, AO, BO, OO. This yields one AB out of four possible genotypes, so the expected fraction is 1/4. Common wrong answers arise from forgetting that AO and BO each produce two types of gametes or from miscounting genotype frequencies."
+  }
+ ]
+}

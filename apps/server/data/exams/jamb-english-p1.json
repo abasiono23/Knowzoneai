@@ -1,0 +1,816 @@
+{
+ "id": "jamb-english-p1",
+ "exam": "jamb",
+ "subject": "english",
+ "year": null,
+ "number": 1,
+ "source": "ai",
+ "minutes": 40,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Word stress and emphatic stress",
+   "q": "In the sentence 'I did call you yesterday!', which word is being emphasised for contrast if spoken as written?",
+   "options": [
+    "you",
+    "yesterday",
+    "did",
+    "call"
+   ],
+   "answer": 2,
+   "explanation": "Emphatic 'did' stresses the fact the action occurred (I DID call). Emphasising 'you' would contrast persons; 'yesterday' would stress time; 'call' would emphasise the action rather than the truth of it."
+  },
+  {
+   "n": 2,
+   "topic": "Vowel sounds",
+   "passage": "Mr. Okafor runs a small cassava mill in Enugu. Each week his team processes tubers into garri and supplies markets in Awka and Onitsha. Last season he bought a new gari dryer for ₦45,000 which reduced drying time. Customers like the finer texture he now achieves, and he plans to expand next year if the roads improve.",
+   "q": "Which word in the passage contains a diphthong (a changing vowel sound) as pronounced in standard Nigerian English?",
+   "options": [
+    "mill",
+    "buy",
+    "team",
+    "gari"
+   ],
+   "answer": 1,
+   "explanation": "The word 'buy' (in 'buys' or 'bought' family) contains the diphthong /aɪ/ in Nigerian English. 'Team' has a long monophthong /iː/, 'gari' has a schwa-like vowel at the end, and 'mill' has a short monophthong /ɪ/."
+  },
+  {
+   "n": 3,
+   "topic": "Concord and tenses",
+   "passage": "Mr. Okafor runs a small cassava mill in Enugu. Each week his team processes tubers into garri and supplies markets in Awka and Onitsha. Last season he bought a new gari dryer for ₦45,000 which reduced drying time. Customers like the finer texture he now achieves, and he plans to expand next year if the roads improve.",
+   "q": "Choose the correct verb form to complete: 'If the roads ______ better next year, he will expand his business.'",
+   "options": [
+    "is",
+    "had been",
+    "were",
+    "are"
+   ],
+   "answer": 3,
+   "explanation": "The correct first conditional uses present simple in the 'if' clause: 'If the roads are better next year, he will expand'. 'Were' would suit a subjunctive or unreal present; 'had been' is past perfect and wrong here; 'is' does not agree with the plural subject 'roads'."
+  },
+  {
+   "n": 4,
+   "topic": "Concord and tenses",
+   "passage": "Mr. Okafor runs a small cassava mill in Enugu. Each week his team processes tubers into garri and supplies markets in Awka and Onitsha. Last season he bought a new gari dryer for ₦45,000 which reduced drying time. Customers like the finer texture he now achieves, and he plans to expand next year if the roads improve.",
+   "q": "Which sentence correctly reports this: 'Last season he bought a new gari dryer' into indirect speech?",
+   "options": [
+    "He said that he has bought a new gari dryer this season.",
+    "He said that he will buy a new gari dryer next season.",
+    "He said that he bought a new gari dryer last season.",
+    "He said that he had bought a new gari dryer the previous season."
+   ],
+   "answer": 3,
+   "explanation": "When changing to reported speech after a past reporting verb ('said'), the past simple 'bought' backshifts to past perfect 'had bought' and 'last season' becomes 'the previous season'. The other options fail to backshift correctly or change the time reference."
+  },
+  {
+   "n": 5,
+   "topic": "Synonyms and antonyms",
+   "q": "Choose the word closest in meaning to 'achieve' in the sentence: 'He achieved modest success in the local market.'",
+   "options": [
+    "attain",
+    "lose",
+    "begin",
+    "consider"
+   ],
+   "answer": 0,
+   "explanation": "'Attain' is a synonym of 'achieve' meaning to reach or accomplish. 'Lose' is an antonym, 'begin' and 'consider' are unrelated in meaning."
+  },
+  {
+   "n": 6,
+   "topic": "Synonyms and antonyms",
+   "q": "Choose the word that is the best antonym of 'finer' as used in 'finer texture'.",
+   "options": [
+    "smoother",
+    "lighter",
+    "purer",
+    "coarser"
+   ],
+   "answer": 3,
+   "explanation": "'Coarser' is the opposite of 'finer' when comparing texture. 'Smoother' and 'purer' could be similar to 'finer' depending on context; 'lighter' does not directly oppose 'finer' in texture."
+  },
+  {
+   "n": 7,
+   "topic": "Consonant sounds",
+   "q": "Which word has the same final consonant sound as the underlined consonant in \"booked\" (/kt/ cluster)?",
+   "options": [
+    "bagged",
+    "packed",
+    "broke",
+    "back"
+   ],
+   "answer": 1,
+   "explanation": "booked ends with the /kt/ cluster (k + t). packed also ends with /kt/. broke ends with /k/ only, bagged ends with /gd/ (voiced), and back ends with /k/ without the final /t/ sound."
+  },
+  {
+   "n": 8,
+   "topic": "Sentence completion (lexis and structure)",
+   "q": "Choose the best word to complete: \"The Edo State government promised to pay artisans a monthly stipend of fifty thousand _____ .\"",
+   "options": [
+    "shillings",
+    "naira",
+    "dollars",
+    "pounds"
+   ],
+   "answer": 1,
+   "explanation": "In a Nigerian context, amounts are given in naira. Dollars, pounds and shillings are foreign currencies and therefore inappropriate here."
+  },
+  {
+   "n": 9,
+   "topic": "Sentence completion (lexis and structure)",
+   "q": "Choose the correct verb form: \"If the traders ______ their prices, customers will return to the market.\"",
+   "options": [
+    "reducing",
+    "reduce",
+    "have reduced",
+    "reduced"
+   ],
+   "answer": 1,
+   "explanation": "This is a first conditional: If + present simple, will + base verb. 'reduce' (present) is correct. 'reduced' would require second conditional or past context; 'reducing' is wrong form; 'have reduced' (present perfect) does not fit the first conditional structure."
+  },
+  {
+   "n": 10,
+   "topic": "Sentence completion (lexis and structure)",
+   "q": "Choose the best word to complete: \"After the flood, many families found it hard to _____ the cost of rebuilding their homes.\"",
+   "options": [
+    "meet",
+    "bear",
+    "pay off",
+    "face"
+   ],
+   "answer": 0,
+   "explanation": "'meet the cost' is the common collocation meaning to provide money for expenses. 'face the cost' is possible but less natural; 'bear the cost' is also possible but 'meet' is the best collocational fit here. 'pay off' means to finish paying a debt and is not appropriate."
+  },
+  {
+   "n": 11,
+   "topic": "Comprehension",
+   "passage": "When Mrs. Amina opened the community library in Zaria, she had only a few second-hand books. Over five years she encouraged parents to donate schoolbooks and organised reading sessions for children. The library became a place where pupils did homework and adults took adult-literacy classes after work. Recently a local NGO donated new books and a small computer with solar power. Although the library is modest, it helps many residents prepare for exams and apply for jobs online. Mrs. Amina often reminds volunteers that small, steady efforts can change lives.",
+   "q": "According to the passage, what helped the library offer online job application help?",
+   "options": [
+    "new second-hand books",
+    "a small computer with solar power",
+    "donations of school uniforms",
+    "a big grant from the government"
+   ],
+   "answer": 1,
+   "explanation": "The passage states that a local NGO donated a small computer with solar power, enabling online access used for job applications. The other options are not mentioned: new second-hand books is contradictory, uniforms and a big government grant are not in the passage."
+  },
+  {
+   "n": 12,
+   "topic": "Comprehension",
+   "passage": "When Mrs. Amina opened the community library in Zaria, she had only a few second-hand books. Over five years she encouraged parents to donate schoolbooks and organised reading sessions for children. The library became a place where pupils did homework and adults took adult-literacy classes after work. Recently a local NGO donated new books and a small computer with solar power. Although the library is modest, it helps many residents prepare for exams and apply for jobs online. Mrs. Amina often reminds volunteers that small, steady efforts can change lives.",
+   "q": "The phrase \"small, steady efforts\" in the last sentence most nearly means:",
+   "options": [
+    "large donations given once",
+    "efforts made only by the wealthy",
+    "consistent little actions over time",
+    "quick fixes that work immediately"
+   ],
+   "answer": 2,
+   "explanation": "\"Small, steady efforts\" means consistent, modest actions continued over time. Large one-time donations, quick fixes, or efforts only by the wealthy contradict the idea of small and steady."
+  },
+  {
+   "n": 13,
+   "topic": "Comprehension",
+   "passage": "When Mrs. Amina opened the community library in Zaria, she had only a few second-hand books. Over five years she encouraged parents to donate schoolbooks and organised reading sessions for children. The library became a place where pupils did homework and adults took adult-literacy classes after work. Recently a local NGO donated new books and a small computer with solar power. Although the library is modest, it helps many residents prepare for exams and apply for jobs online. Mrs. Amina often reminds volunteers that small, steady efforts can change lives.",
+   "q": "Which of the following is NOT supported by the passage?",
+   "options": [
+    "an NGO donated resources",
+    "adults used the library after work",
+    "parents donated schoolbooks",
+    "Mrs. Amina charged fees that helped expand the library"
+   ],
+   "answer": 3,
+   "explanation": "The passage mentions parents donating books, adults using the library after work, and an NGO donating resources. It does not mention Mrs. Amina charging fees; that statement is unsupported."
+  },
+  {
+   "n": 14,
+   "topic": "Idioms and figurative expressions",
+   "q": "In the sentence \"After all that rain, the farmers finally saw the silver lining,\" what does \"the silver lining\" mean?",
+   "options": [
+    "a literal piece of silver given to farmers",
+    "a hopeful or positive aspect of a bad situation",
+    "a rainproof cover for crops",
+    "a cloud that won't produce rain"
+   ],
+   "answer": 1,
+   "explanation": "\"Silver lining\" is an idiom meaning a positive aspect in a negative situation. The other options interpret it literally or incorrectly."
+  },
+  {
+   "n": 15,
+   "topic": "Idioms and figurative expressions",
+   "q": "Choose the option that best explains the idiom: \"to bite the bullet\" as used in: \"The headteacher told the students to bite the bullet and accept extra lessons.\"",
+   "options": [
+    "to endure something difficult with courage",
+    "to complain loudly about an injustice",
+    "to avoid responsibility",
+    "to eat quickly during a break"
+   ],
+   "answer": 0,
+   "explanation": "\"Bite the bullet\" means to face a painful or difficult situation bravely. It does not mean eating, complaining, or avoiding responsibility."
+  },
+  {
+   "n": 16,
+   "topic": "Interpretation of sentences",
+   "q": "Choose the meaning of the sentence: 'If Mrs. Adebayo had known about the strike, she would have postponed her trip.'",
+   "options": [
+    "Mrs. Adebayo postponed the trip because she was told to.",
+    "Mrs. Adebayo always postpones trips when there is a strike.",
+    "Mrs. Adebayo knew about the strike but postponed her trip.",
+    "Mrs. Adebayo did not know about the strike and so she did not postpone her trip."
+   ],
+   "answer": 3,
+   "explanation": "This is a third conditional expressing a past unreal condition: she did not know (if she had known) and therefore did not postpone. The first wrong option wrongly asserts she knew; the others introduce facts not supported by the sentence."
+  },
+  {
+   "n": 17,
+   "topic": "Spelling and word formation",
+   "q": "Choose the correctly spelt and formed noun from the adjective 'different'.",
+   "options": [
+    "differentness",
+    "differency",
+    "differrence",
+    "difference"
+   ],
+   "answer": 3,
+   "explanation": "'Difference' is the standard noun formed from 'different'. 'Differentness' is rarely used in standard English; 'differency' and 'differrence' are incorrect spellings or nonstandard forms."
+  },
+  {
+   "n": 18,
+   "topic": "Vowel sounds",
+   "q": "Which word has the same vowel sound as the underlined 'a' in 'cat' (short /æ/)?",
+   "options": [
+    "hat",
+    "care",
+    "cake",
+    "father"
+   ],
+   "answer": 0,
+   "explanation": "The vowel in 'hat' is the same short /æ/ as in 'cat'. 'Father' has an /ɑː/ sound, 'care' has a diphthong /eə/ or /ɛə/, and 'cake' has a long /eɪ/ sound."
+  },
+  {
+   "n": 19,
+   "topic": "Interpretation of sentences",
+   "passage": "The Ilaje Community Library in Lagos, sponsored by a private foundation, opened a small computer hub last year. Many youths attend evening classes where they learn basic word processing, internet searches and how to write formal job applications. The library charges a token fee of ₦200 per session but gives discounts to unemployed applicants. Mrs. Okoro, the librarian, says that employers nowadays often ask candidates to submit CVs by email, so learners practise attaching documents and writing polite messages. The programme has helped several participants secure interviews in Lagos and neighbouring towns.",
+   "q": "What does the passage imply about the token fee of ₦200?",
+   "options": [
+    "It covers full tuition and accommodation for learners.",
+    "It is a small charge intended to help sustain the programme while remaining affordable.",
+    "It is only for employed people; unemployed people pay nothing.",
+    "It is a large fee intended to deter applicants."
+   ],
+   "answer": 1,
+   "explanation": "The passage calls it a token fee and mentions discounts for unemployed people, implying it's small and meant to be affordable. The other options contradict the description or add unsupported claims."
+  },
+  {
+   "n": 20,
+   "topic": "Interpretation of sentences",
+   "passage": "The Ilaje Community Library in Lagos, sponsored by a private foundation, opened a small computer hub last year. Many youths attend evening classes where they learn basic word processing, internet searches and how to write formal job applications. The library charges a token fee of ₦200 per session but gives discounts to unemployed applicants. Mrs. Okoro, the librarian, says that employers nowadays often ask candidates to submit CVs by email, so learners practise attaching documents and writing polite messages. The programme has helped several participants secure interviews in Lagos and neighbouring towns.",
+   "q": "Which of the following is best supported by the passage?",
+   "options": [
+    "The computer programme has improved some learners' chances of getting interviews.",
+    "The library is now fully funded by the government.",
+    "Every learner has secured a job after attending the programme.",
+    "Only youths from Lagos attend the classes."
+   ],
+   "answer": 0,
+   "explanation": "The passage says the programme has helped several participants secure interviews, which supports the correct option. The wrong options make absolute claims not supported by the text."
+  },
+  {
+   "n": 21,
+   "topic": "Spelling and word formation",
+   "q": "Choose the correct adjective formed from the noun 'economy'.",
+   "options": [
+    "economic",
+    "econimic",
+    "economicality",
+    "economicals"
+   ],
+   "answer": 0,
+   "explanation": "'Economic' is the standard adjective from 'economy'. 'Economicals' and 'economicality' are incorrect formations, and 'econimic' is a misspelling."
+  },
+  {
+   "n": 22,
+   "topic": "Vowel sounds",
+   "q": "Which word has the same vowel sound as the underlined 'oo' in 'book' (short /ʊ/)?",
+   "options": [
+    "put",
+    "boot",
+    "boat",
+    "bake"
+   ],
+   "answer": 0,
+   "explanation": "'Put' shares the short /ʊ/ vowel as in 'book'. 'Boot' has a long /uː/, while 'bake' and 'boat' have /eɪ/ and /oʊ/ respectively, so they are different sounds."
+  },
+  {
+   "n": 23,
+   "topic": "Concord and tenses",
+   "q": "Which of the following completes the sentence correctly? \"If the Lagos–Kano highway ______ repaired soon, traders will continue to lose goods to delays.\"",
+   "options": [
+    "wasn't",
+    "will not be",
+    "hadn't been",
+    "is not"
+   ],
+   "answer": 3,
+   "explanation": "The sentence is a first conditional about a likely future consequence, so the correct form is 'if' + simple present, therefore 'is not'. 'Wasn't' is past; 'hadn't been' is past perfect; 'will not be' wrongly puts future in the if-clause."
+  },
+  {
+   "n": 24,
+   "topic": "Synonyms and antonyms",
+   "q": "Choose the word closest in meaning to 'mitigate' as used in: 'The governor introduced measures to mitigate fuel shortages.'",
+   "options": [
+    "aggravate",
+    "alleviate",
+    "provoke",
+    "ignore"
+   ],
+   "answer": 1,
+   "explanation": "'Mitigate' means to make less severe, so 'alleviate' is correct. 'Aggravate' is the opposite; 'ignore' and 'provoke' are unrelated and inappropriate in this context."
+  },
+  {
+   "n": 25,
+   "topic": "Consonant sounds",
+   "q": "Which word has the same initial consonant sound as the underlined consonant in 'Gombe' (the G pronounced like in 'go')? Choose the word with the same initial sound.",
+   "options": [
+    "\"xylophone\"",
+    "\"phone\"",
+    "\"gem\"",
+    "\"garden\""
+   ],
+   "answer": 3,
+   "explanation": "The G in 'Gombe' is the voiced velar stop /g/ as in 'garden'. 'Gem' begins with /dʒ/ not /g/. 'Phone' begins with /f/ and 'xylophone' with /z/ or /ks/, so they are incorrect."
+  },
+  {
+   "n": 26,
+   "topic": "Concord and tenses",
+   "passage": "The Ilorin public library started a digital help-desk after several graduates asked for support with job applications. Volunteers from the university taught patrons how to write CVs and attach documents so that applicants could submit online. For a small token fee of ₦200, the library provided typed letters and scanned certificates. By the end of the year, more employers began accepting emailed applications, and many young people from nearby towns found work. The librarian said that steady, small improvements in access proved more effective than one-off donations. She urged local councils to support ongoing training rather than occasional handouts.",
+   "q": "According to the passage, which tense is used in the sentence: 'The Ilorin public library started a digital help-desk...'?",
+   "options": [
+    "simple past",
+    "past continuous",
+    "future simple",
+    "present perfect"
+   ],
+   "answer": 0,
+   "explanation": "The verb 'started' is in the simple past, describing a completed action. Present perfect would be 'has started'; past continuous would be 'was starting'; future simple would be 'will start'."
+  },
+  {
+   "n": 27,
+   "topic": "Synonyms and antonyms",
+   "passage": "The Ilorin public library started a digital help-desk after several graduates asked for support with job applications. Volunteers from the university taught patrons how to write CVs and attach documents so that applicants could submit online. For a small token fee of ₦200, the library provided typed letters and scanned certificates. By the end of the year, more employers began accepting emailed applications, and many young people from nearby towns found work. The librarian said that steady, small improvements in access proved more effective than one-off donations. She urged local councils to support ongoing training rather than occasional handouts.",
+   "q": "In the passage, the phrase 'steady, small improvements' most nearly means:",
+   "options": [
+    "gradual positive changes",
+    "sudden large gifts",
+    "expensive renovations",
+    "inconsistent progress"
+   ],
+   "answer": 0,
+   "explanation": "'Steady, small improvements' implies gradual positive changes over time. 'Sudden large gifts' is the opposite; 'inconsistent progress' contradicts 'steady'; 'expensive renovations' changes the meaning entirely."
+  },
+  {
+   "n": 28,
+   "topic": "Sentence completion (lexis and structure)",
+   "q": "Choose the best option to complete: \"By the time the market closed, the traders ______ their unsold goods into storage.\"",
+   "options": [
+    "had moved",
+    "are moving",
+    "moved",
+    "will have moved"
+   ],
+   "answer": 0,
+   "explanation": "The phrase 'By the time the market closed' sets a past reference before that past point, so past perfect 'had moved' is correct. 'Moved' (simple past) doesn't show the action occurred before the closing; 'will have moved' is future perfect; 'are moving' is present continuous."
+  },
+  {
+   "n": 29,
+   "topic": "Concord and tenses",
+   "passage": "The Ilorin public library started a digital help-desk after several graduates asked for support with job applications. Volunteers from the university taught patrons how to write CVs and attach documents so that applicants could submit online. For a small token fee of ₦200, the library provided typed letters and scanned certificates. By the end of the year, more employers began accepting emailed applications, and many young people from nearby towns found work. The librarian said that steady, small improvements in access proved more effective than one-off donations. She urged local councils to support ongoing training rather than occasional handouts.",
+   "q": "What does the passage imply about the ₦200 token fee?",
+   "options": [
+    "It paid for large-scale library renovations.",
+    "It was intended to exclude poor applicants.",
+    "It was a voluntary donation with no services given.",
+    "It was a small charge to cover basic services like typing and scanning."
+   ],
+   "answer": 3,
+   "explanation": "The passage states that 'For a small token fee of ₦200, the library provided typed letters and scanned certificates', so the fee covered basic services. There's no suggestion it was to exclude applicants, fund renovations, or that it was merely voluntary without services."
+  },
+  {
+   "n": 30,
+   "topic": "Synonyms and antonyms",
+   "passage": "The Ilorin public library started a digital help-desk after several graduates asked for support with job applications. Volunteers from the university taught patrons how to write CVs and attach documents so that applicants could submit online. For a small token fee of ₦200, the library provided typed letters and scanned certificates. By the end of the year, more employers began accepting emailed applications, and many young people from nearby towns found work. The librarian said that steady, small improvements in access proved more effective than one-off donations. She urged local councils to support ongoing training rather than occasional handouts.",
+   "q": "Which word in the passage is closest in meaning to 'occasional' as used in the last sentence?",
+   "options": [
+    "expensive",
+    "continuous",
+    "infrequent",
+    "regular"
+   ],
+   "answer": 2,
+   "explanation": "'Occasional' means infrequent or happening now and then. 'Regular' and 'continuous' are opposites meaning frequent or ongoing; 'expensive' is unrelated."
+  },
+  {
+   "n": 31,
+   "topic": "Comprehension",
+   "passage": "When the Ilaje Community Library reopened after renovations, the librarian, Mr. Ade, wanted to reach residents who rarely visited. He introduced an evening reading club and a simple SMS alert system that told people about new books and free classes. Attendance improved, but some elderly patrons still found travel difficult, so volunteers delivered books to a few homes. The library also began a small printing service for job applicants, charging ₦100 per page to cover paper and ink. Though modest, these changes helped more people use the library and created goodwill with local schools.",
+   "q": "According to the passage, why did the library volunteers deliver books to some homes?",
+   "options": [
+    "Because the library had too many books on its shelves",
+    "Because some elderly patrons found it difficult to travel to the library",
+    "To advertise the new printing service to households",
+    "To avoid charging the ₦100 fee for home visitors"
+   ],
+   "answer": 1,
+   "explanation": "The passage states volunteers delivered books because some elderly patrons still found travel difficult; other options are not mentioned or contradict the passage (the printing service charged page fees and delivery was to assist access)."
+  },
+  {
+   "n": 32,
+   "topic": "Comprehension",
+   "passage": "When the Ilaje Community Library reopened after renovations, the librarian, Mr. Ade, wanted to reach residents who rarely visited. He introduced an evening reading club and a simple SMS alert system that told people about new books and free classes. Attendance improved, but some elderly patrons still found travel difficult, so volunteers delivered books to a few homes. The library also began a small printing service for job applicants, charging ₦100 per page to cover paper and ink. Though modest, these changes helped more people use the library and created goodwill with local schools.",
+   "q": "Which of the following is best supported by the passage?",
+   "options": [
+    "The SMS alert system helped increase attendance",
+    "The printing service made the library wealthy",
+    "The evening club replaced the library's children section",
+    "Volunteers delivered books because the library closed early"
+   ],
+   "answer": 0,
+   "explanation": "The passage links the SMS alerts and evening club with improved attendance; there is no indication the printing service made the library wealthy, that deliveries were due to early closure, or that the evening club replaced any section."
+  },
+  {
+   "n": 33,
+   "topic": "Comprehension",
+   "passage": "When the Ilaje Community Library reopened after renovations, the librarian, Mr. Ade, wanted to reach residents who rarely visited. He introduced an evening reading club and a simple SMS alert system that told people about new books and free classes. Attendance improved, but some elderly patrons still found travel difficult, so volunteers delivered books to a few homes. The library also began a small printing service for job applicants, charging ₦100 per page to cover paper and ink. Though modest, these changes helped more people use the library and created goodwill with local schools.",
+   "q": "What was the purpose of charging ₦100 per page for printing, as stated in the passage?",
+   "options": [
+    "To pay volunteers for home deliveries",
+    "To make a profit for the library board",
+    "To cover the cost of paper and ink",
+    "To discourage people from applying for jobs"
+   ],
+   "answer": 2,
+   "explanation": "The passage explicitly says the ₦100 charge was to cover paper and ink; it does not suggest the fee was intended to discourage applicants, generate profit, or pay volunteers."
+  },
+  {
+   "n": 34,
+   "topic": "Comprehension",
+   "passage": "When the Ilaje Community Library reopened after renovations, the librarian, Mr. Ade, wanted to reach residents who rarely visited. He introduced an evening reading club and a simple SMS alert system that told people about new books and free classes. Attendance improved, but some elderly patrons still found travel difficult, so volunteers delivered books to a few homes. The library also began a small printing service for job applicants, charging ₦100 per page to cover paper and ink. Though modest, these changes helped more people use the library and created goodwill with local schools.",
+   "q": "The phrase 'created goodwill with local schools' in the last sentence most nearly means:",
+   "options": [
+    "built friendly and cooperative relations with schools",
+    "replaced the schools as educational centres",
+    "caused disagreement between the library and schools",
+    "gave the schools large donations"
+   ],
+   "answer": 0,
+   "explanation": "Goodwill means friendly relations; nothing in the passage indicates donations, replacement of schools, or disagreements."
+  },
+  {
+   "n": 35,
+   "topic": "Idioms and figurative expressions",
+   "q": "If a trader in Mile 12 says, \"I had to bite the bullet and accept the lower price,\" he most likely means:",
+   "options": [
+    "he decided to endure an unpleasant situation and accept the lower price",
+    "he cheated the buyer to get more money",
+    "he physically bit something to show anger",
+    "he pretended to be sick to avoid selling his goods"
+   ],
+   "answer": 0,
+   "explanation": "\"Bite the bullet\" means to endure something unpleasant; the other options are literal or unrelated misinterpretations."
+  },
+  {
+   "n": 36,
+   "topic": "Idioms and figurative expressions",
+   "q": "When someone says, \"His answer was just smoke and mirrors,\" they are suggesting the answer was:",
+   "options": [
+    "clear and transparent",
+    "based on proven facts",
+    "intended to deceive or distract from the real issue",
+    "short and to the point"
+   ],
+   "answer": 2,
+   "explanation": "\"Smoke and mirrors\" denotes deception or distraction; the tempting wrong choices present opposite meanings that do not fit the idiom."
+  },
+  {
+   "n": 37,
+   "topic": "Interpretation of sentences",
+   "q": "In the sentence, \"If the Lagos–Kano express road were finished, travel times would drop,\" the mood of 'were finished' is:",
+   "options": [
+    "interrogative, asking a question",
+    "indicative, stating a factual past event",
+    "subjunctive, expressing an unreal or hypothetical condition",
+    "imperative, giving a command"
+   ],
+   "answer": 2,
+   "explanation": "The use of 'were' in this conditional expresses a hypothetical situation (subjunctive). It is not a factual past statement (indicative), command (imperative), or question (interrogative)."
+  },
+  {
+   "n": 38,
+   "topic": "Spelling and word formation",
+   "q": "Choose the correctly formed noun from the adjective 'different'.",
+   "options": [
+    "differency",
+    "differentness",
+    "difference",
+    "differation"
+   ],
+   "answer": 2,
+   "explanation": "'Difference' is the correct noun form of 'different'. 'Differency' and 'differation' are incorrect spellings; 'differentness' is a less common, awkward formation and not the standard noun derived here."
+  },
+  {
+   "n": 39,
+   "topic": "Word stress and emphatic stress",
+   "q": "In the sentence 'I did give the money to Chinedu yesterday,' which word is most likely to carry emphatic stress?",
+   "options": [
+    "Chinedu",
+    "did",
+    "give",
+    "yesterday"
+   ],
+   "answer": 1,
+   "explanation": "The auxiliary 'did' is used for emphasis to insist that the action happened; it therefore carries emphatic stress. Emphasising 'give' would be normal stress, while stressing 'Chinedu' or 'yesterday' would change the focus of the contrast."
+  },
+  {
+   "n": 40,
+   "topic": "Vowel sounds",
+   "q": "Which word has the same vowel sound as the underlined vowel in 'ship' (short /ɪ/)?",
+   "options": [
+    "sheep",
+    "shout",
+    "shop",
+    "live"
+   ],
+   "answer": 3,
+   "explanation": "'live' has the short /ɪ/ vowel, the same as in 'ship'. 'sheep' has the long /iː/, 'shop' has /ɒ/ and 'shout' has a diphthong /aʊ/; these are common confusions for learners."
+  },
+  {
+   "n": 41,
+   "topic": "Vowel sounds",
+   "q": "Which of these words rhymes with the vowel sound in 'father' (open back /ɑː/) in Nigerian English?",
+   "options": [
+    "butter",
+    "bitter",
+    "better",
+    "bother"
+   ],
+   "answer": 3,
+   "explanation": "'bother' shares the open back /ɑː/ vowel similar to 'father' in many Nigerian accents. 'better' and 'bitter' have /ɛ/ and /ɪ/ respectively, while 'butter' has /ʌ/ or a schwa-like vowel."
+  },
+  {
+   "n": 42,
+   "topic": "Concord and tenses",
+   "passage": "When Aisha opened her small shop in Enugu five years ago, she started by frying a few cassava chips each morning for neighbours. Business grew slowly at first, but market day in the city brought more customers and word spread. Last year she borrowed ₦200,000 from a microfinance bank to buy a better fryer and to hire two youngsters from her street. Now she supplies three local schools and a café, and she hopes to open a second stall by December. Every evening Aisha counts the day's earnings and plans the next day's purchases carefully.",
+   "q": "Which tense is used in the sentence: 'Business grew slowly at first, but market day in the city brought more customers'?",
+   "options": [
+    "present perfect",
+    "past continuous",
+    "simple present",
+    "simple past"
+   ],
+   "answer": 3,
+   "explanation": "The verbs 'grew' and 'brought' are in the simple past, describing completed actions in the past. Present perfect would use 'has grown', past continuous would be 'was growing', and simple present would be 'grows'/'brings'."
+  },
+  {
+   "n": 43,
+   "topic": "Concord and tenses",
+   "passage": "When Aisha opened her small shop in Enugu five years ago, she started by frying a few cassava chips each morning for neighbours. Business grew slowly at first, but market day in the city brought more customers and word spread. Last year she borrowed ₦200,000 from a microfinance bank to buy a better fryer and to hire two youngsters from her street. Now she supplies three local schools and a café, and she hopes to open a second stall by December. Every evening Aisha counts the day's earnings and plans the next day's purchases carefully.",
+   "q": "In the passage, which sentence shows a future intention or plan?",
+   "options": [
+    "she started by frying a few cassava chips",
+    "she hopes to open a second stall by December",
+    "Aisha counts the day's earnings",
+    "Business grew slowly at first"
+   ],
+   "answer": 1,
+   "explanation": "The phrase 'hopes to open a second stall by December' expresses a future plan. The other sentences refer to past actions or habitual present activities, not future intentions."
+  },
+  {
+   "n": 44,
+   "topic": "Concord and tenses",
+   "passage": "When Aisha opened her small shop in Enugu five years ago, she started by frying a few cassava chips each morning for neighbours. Business grew slowly at first, but market day in the city brought more customers and word spread. Last year she borrowed ₦200,000 from a microfinance bank to buy a better fryer and to hire two youngsters from her street. Now she supplies three local schools and a café, and she hopes to open a second stall by December. Every evening Aisha counts the day's earnings and plans the next day's purchases carefully.",
+   "q": "Which sentence from the passage demonstrates correct subject-verb agreement?",
+   "options": [
+    "Every evening Aisha count the day's earnings",
+    "Last year she borrow ₦200,000 from a microfinance bank",
+    "Business grew slowly at first and bring more customers",
+    "Now she supplies three local schools and a café"
+   ],
+   "answer": 3,
+   "explanation": "The correct sentence uses 'she' matched with the verb 'supplies' (third-person singular). The wrong options show subject-verb disagreement: 'bring' should be 'brought', 'borrow' should be 'borrowed', and 'count' should be 'counts'."
+  },
+  {
+   "n": 45,
+   "topic": "Synonyms and antonyms",
+   "passage": "When Aisha opened her small shop in Enugu five years ago, she started by frying a few cassava chips each morning for neighbours. Business grew slowly at first, but market day in the city brought more customers and word spread. Last year she borrowed ₦200,000 from a microfinance bank to buy a better fryer and to hire two youngsters from her street. Now she supplies three local schools and a café, and she hopes to open a second stall by December. Every evening Aisha counts the day's earnings and plans the next day's purchases carefully.",
+   "q": "Choose the word closest in meaning to 'borrowed' as used in the passage.",
+   "options": [
+    "lent",
+    "took a loan",
+    "saved",
+    "stole"
+   ],
+   "answer": 1,
+   "explanation": "'Borrowed' in the context of money from a microfinance bank means 'took a loan'. 'Stole' is illegal taking, 'saved' is the opposite process, and 'lent' means gave money to someone else."
+  },
+  {
+   "n": 46,
+   "topic": "Synonyms and antonyms",
+   "q": "Which word is the closest opposite (antonym) of 'scarce' in the context 'water became scarce during the dry season'?",
+   "options": [
+    "plentiful",
+    "rare",
+    "insufficient",
+    "limited"
+   ],
+   "answer": 0,
+   "explanation": "'Plentiful' is the antonym of 'scarce' meaning abundant. 'Limited', 'rare', and 'insufficient' are synonyms or near-synonyms of 'scarce', and would be incorrect choices."
+  },
+  {
+   "n": 47,
+   "topic": "Idioms and figurative expressions",
+   "q": "In a conversation about budgeting, Amina told her cousin, \"You must cut your coat according to your cloth.\" What does Amina mean?",
+   "options": [
+    "Ask relatives for more money when needed",
+    "Plan your spending according to the money you have",
+    "Make clothes only when you have spare cloth",
+    "Buy cheaper clothes from the market"
+   ],
+   "answer": 1,
+   "explanation": "The proverb 'cut your coat according to your cloth' means to live or plan within your means—i.e., spend only what you can afford. The other options misunderstand the figurative sense: they treat it literally (making clothes) or suggest borrowing or buying cheaper clothes, which do not capture the intended meaning of budgeting according to available resources."
+  },
+  {
+   "n": 48,
+   "topic": "Concord and tenses",
+   "passage": "When the Lagos Central Library reopened after renovations, volunteers from the University of Ibadan reading club brought a stack of children's books and an offer to teach weekly storytelling sessions. The library charged a small ₦200 token fee to cover cleaning supplies and printing handouts, but every child received a free book to take home. Attendance grew slowly at first; by the third week, more than fifty children were coming each Saturday. Parents praised the volunteers and said the sessions had helped their children read more confidently. Organisers plan to expand the programme to two more branches next term if local schools agree to share materials.",
+   "q": "Which sentence in the passage correctly uses future intention or plan?",
+   "options": [
+    "When the Lagos Central Library reopened after renovations, volunteers from the University of Ibadan reading club brought a stack of children's books.",
+    "Organisers plan to expand the programme to two more branches next term if local schools agree to share materials.",
+    "Parents praised the volunteers and said the sessions had helped their children read more confidently.",
+    "The library charged a small ₦200 token fee to cover cleaning supplies and printing handouts."
+   ],
+   "answer": 1,
+   "explanation": "The correct sentence uses 'plan to' and refers to a future action ('next term'), indicating a future intention. The other sentences are in the past or present and describe completed or ongoing events, not a future plan."
+  },
+  {
+   "n": 49,
+   "topic": "Synonyms and antonyms",
+   "passage": "When the Lagos Central Library reopened after renovations, volunteers from the University of Ibadan reading club brought a stack of children's books and an offer to teach weekly storytelling sessions. The library charged a small ₦200 token fee to cover cleaning supplies and printing handouts, but every child received a free book to take home. Attendance grew slowly at first; by the third week, more than fifty children were coming each Saturday. Parents praised the volunteers and said the sessions had helped their children read more confidently. Organisers plan to expand the programme to two more branches next term if local schools agree to share materials.",
+   "q": "In the passage, which word is closest in meaning to 'occasional' as used in the line 'Attendance grew slowly at first'?",
+   "options": [
+    "continuous",
+    "permanent",
+    "frequent",
+    "sporadic"
+   ],
+   "answer": 3,
+   "explanation": "'Sporadic' means happening at irregular intervals, which fits 'grew slowly at first' implying not steady. 'Continuous' and 'permanent' imply unbroken or lasting, and 'frequent' implies happening often, all of which contradict the idea of occasional or irregular attendance."
+  },
+  {
+   "n": 50,
+   "topic": "Synonyms and antonyms",
+   "passage": "When the Lagos Central Library reopened after renovations, volunteers from the University of Ibadan reading club brought a stack of children's books and an offer to teach weekly storytelling sessions. The library charged a small ₦200 token fee to cover cleaning supplies and printing handouts, but every child received a free book to take home. Attendance grew slowly at first; by the third week, more than fifty children were coming each Saturday. Parents praised the volunteers and said the sessions had helped their children read more confidently. Organisers plan to expand the programme to two more branches next term if local schools agree to share materials.",
+   "q": "What does the passage imply about the ₦200 token fee?",
+   "options": [
+    "It paid for each child's free book entirely.",
+    "It was a large fine imposed on parents who arrived late.",
+    "It was a donation required by the University of Ibadan volunteers.",
+    "It was a small charge to cover basic expenses and not meant to stop attendance."
+   ],
+   "answer": 3,
+   "explanation": "The passage states the fee was to cover cleaning supplies and printing handouts and notes every child still received a free book, so it was a small cost to cover basics, not a fine, full payment for books, or a required donation to volunteers."
+  },
+  {
+   "n": 51,
+   "topic": "Vowel sounds",
+   "q": "Which word has the same vowel sound as the underlined letters in 'seat' (long /iː/)?",
+   "options": [
+    "mate",
+    "men",
+    "mean",
+    "met"
+   ],
+   "answer": 2,
+   "explanation": "The vowel in 'seat' is the long /iː/ sound, which is the same in 'mean.' 'Men' and 'met' have short /ɛ/ vowel; 'mate' has the diphthong /eɪ/, so they are incorrect."
+  },
+  {
+   "n": 52,
+   "topic": "Vowel sounds",
+   "q": "Which of these words rhymes with the vowel sound in 'father' (open back /ɑː/)?",
+   "options": [
+    "pam",
+    "palm",
+    "path (in General American pronunciation)",
+    "part (British /ɑː/ but has an r in many accents)"
+   ],
+   "answer": 1,
+   "explanation": "'Palm' in Nigerian and many British-influenced pronunciations shares the /ɑː/ vowel as in 'father.' 'Path' can vary by accent; in General American it's /æ/, making it incorrect. 'Part' includes an r-colored quality in rhotic accents. 'Pam' has /æ/ and does not match /ɑː/."
+  },
+  {
+   "n": 53,
+   "topic": "Word stress and emphatic stress",
+   "q": "In the sentence 'I did pay the ₦500 to Oluchi yesterday,' which word would you stress to contradict someone who claimed you had not paid at all?",
+   "options": [
+    "yesterday",
+    "Oluchi",
+    "₦500",
+    "did"
+   ],
+   "answer": 3,
+   "explanation": "Stressing 'did' (I DID pay...) places emphatic stress on the action to contradict the claim that you did not pay. Stressing '₦500' would emphasize the amount, 'yesterday' would stress timing, and 'Oluchi' would emphasize the recipient; none directly contradict the claim of having paid."
+  },
+  {
+   "n": 54,
+   "topic": "Idioms and figurative expressions",
+   "q": "When the Lagos-based company discovered the payroll error, they decided to \"sweep it under the carpet\" to avoid bad publicity. What does the idiom \"sweep it under the carpet\" mean in this sentence?",
+   "options": [
+    "Hide the problem so people will not find out about it",
+    "Clean it up thoroughly so it cannot be seen",
+    "Tell everyone about it at once to be transparent",
+    "Fix the problem immediately and inform the staff"
+   ],
+   "answer": 0,
+   "explanation": "\"Sweep it under the carpet\" is an idiom meaning to conceal or ignore a problem rather than deal with it; hence the correct option. The other options are literal or opposite: cleaning, publicising, or promptly fixing the issue do not match the idiom's meaning."
+  },
+  {
+   "n": 55,
+   "topic": "Concord and tenses",
+   "passage": "In Enugu last year a small community library began a weekend outreach to local schools. Volunteers collected donated books, catalogued them and delivered bundles to classrooms every Saturday. At first attendance was small, but as word spread the number of pupils attending reading sessions increased. The organisers hope the programme will continue next year and plan to ask the local council for a modest grant. To cover printing of simple worksheets they charged a token of ₦50 per pupil; any surplus was used to buy stationery. Parents who could not pay were still allowed to take part, because the coordinators believed access mattered more than fees.",
+   "q": "Which sentence demonstrates a future intention or plan?",
+   "options": [
+    "Volunteers collected donated books, catalogued them and delivered bundles to classrooms every Saturday.",
+    "At first attendance was small, but as word spread the number of pupils attending reading sessions increased.",
+    "The organisers hope the programme will continue next year and plan to ask the local council for a modest grant.",
+    "Parents who could not pay were still allowed to take part, because the coordinators believed access mattered more than fees."
+   ],
+   "answer": 2,
+   "explanation": "The correct sentence contains 'hope' and 'plan' plus 'will continue', indicating future intention. The wrong options describe past or habitual situations and do not express future plans."
+  },
+  {
+   "n": 56,
+   "topic": "Synonyms and antonyms",
+   "q": "Choose the word closest in meaning to 'modest' as used in the sentence: 'they plan to ask the local council for a modest grant.'",
+   "options": [
+    "unnecessary",
+    "expensive",
+    "generous",
+    "small"
+   ],
+   "answer": 3,
+   "explanation": "In this context 'modest' means 'small' or not large. 'Expensive' and 'unnecessary' are unrelated in meaning, while 'generous' is almost the opposite of 'modest' here."
+  },
+  {
+   "n": 57,
+   "topic": "Vowel sounds",
+   "q": "Which word has the same vowel sound as the underlined vowel in 'ship' (short /ɪ/)? Choose the word with the same vowel sound.",
+   "options": [
+    "soup",
+    "sheep",
+    "sit",
+    "sate"
+   ],
+   "answer": 2,
+   "explanation": "The vowel in 'ship' is the short /ɪ/ as in 'sit'. 'Sheep' has a long /iː/, 'soup' has /uː/ and 'sate' has /eɪ/, so they are not the same sound."
+  },
+  {
+   "n": 58,
+   "topic": "Word stress and emphatic stress",
+   "q": "Which of the following words is stressed on the second syllable?",
+   "options": [
+    "market",
+    "hotel",
+    "library",
+    "table"
+   ],
+   "answer": 1,
+   "explanation": "'hotel' is pronounced ho-TEL with stress on the second syllable. 'Library' is stressed on the first syllable (LI-brar-y), 'table' is stressed on the first syllable (TA-ble), and 'market' is stressed on the first syllable (MAR-ket)."
+  },
+  {
+   "n": 59,
+   "topic": "Comprehension",
+   "passage": "At the start of the yam season in Igala, traders from neighbouring towns gather at the market by the river. Ama, a young seller, arrived with two baskets of polished yams and a small radio. She listened as buyers argued over prices and as occasional rain spattered the tarpaulin roofs. On the second day, a middle-aged buyer offered less than Ama expected. Rather than argue, she put down the basket, smiled, and walked away. Later that afternoon a wholesale buyer from Lokoja approached her with an order for three dozen tubers at a fair price. Ama learned that morning that patience and a calm manner often bring better customers than sharp bargaining. By the market's end she had sold out and paid the market dues of ₦1,200, keeping enough to help her younger brother buy textbooks for school.",
+   "q": "What does the passage imply was most important to Ama's success in selling her yams?",
+   "options": [
+    "Refusing to sell unless offered the highest price",
+    "Being loud and persuasive when buyers haggle",
+    "Having the cheapest prices in the market",
+    "Showing patience and keeping a calm manner"
+   ],
+   "answer": 3,
+   "explanation": "The passage describes Ama walking away calmly from a low offer and later getting a fair order, concluding she learned that patience and a calm manner bring better customers. The wrong options contradict details: the text emphasises calm behaviour rather than loud bargaining or insisting on the highest price, and it does not say she undercut competitors on price."
+  },
+  {
+   "n": 60,
+   "topic": "Idioms and figurative expressions",
+   "q": "When someone says, \"After the accident he had to burn the midnight oil to finish the report,\" what does the idiom mean?",
+   "options": [
+    "Celebrate the completion of a task",
+    "Delay doing the important work",
+    "Try to erase past mistakes",
+    "Work late into the night"
+   ],
+   "answer": 3,
+   "explanation": "\"Burn the midnight oil\" is a common idiom meaning to work late into the night. The other choices misinterpret the expression: it does not mean erasing mistakes, celebrating, or postponing work."
+  }
+ ]
+}

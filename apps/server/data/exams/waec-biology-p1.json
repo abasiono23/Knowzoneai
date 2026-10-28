@@ -1,0 +1,661 @@
+{
+ "id": "waec-biology-p1",
+ "exam": "waec",
+ "subject": "biology",
+ "year": null,
+ "number": 1,
+ "source": "ai",
+ "minutes": 60,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Respiration",
+   "q": "During intense exercise a student in Lagos held his breath for 20 seconds, then breathed deeply. Which of the following most likely describes what happened in his body during the breath-hold?",
+   "options": [
+    "CO₂ concentration in blood rose, lowering blood pH and stimulating chemoreceptors to increase breathing rate",
+    "Blood pH rose (became more alkaline), which directly stimulated the respiratory centre",
+    "CO₂ concentration fell, causing haemoglobin to bind more oxygen and delay breathing",
+    "O₂ concentration in blood rose, stimulating peripheral receptors to increase breathing rate"
+   ],
+   "answer": 0,
+   "explanation": "Holding breath allows CO₂ produced by respiration to accumulate, raising dissolved CO₂ and producing carbonic acid which lowers pH; central and peripheral chemoreceptors sense this and increase ventilation. O₂ does not rise during breath-hold; CO₂ falling or pH rising are incorrect."
+  },
+  {
+   "n": 2,
+   "topic": "Respiration",
+   "q": "Which sequence correctly shows the path of electrons during aerobic respiration in a mitochondrion?",
+   "options": [
+    "NADH → electron carriers in inner mitochondrial membrane → O₂",
+    "NADH → O₂ → electron carriers in inner mitochondrial membrane",
+    "Electron carriers in inner mitochondrial membrane → NADH → O₂",
+    "O₂ → NADH → electron carriers in inner mitochondrial membrane"
+   ],
+   "answer": 0,
+   "explanation": "In aerobic respiration electrons from NADH are transferred to a chain of carriers in the inner mitochondrial membrane and finally to O₂ as the terminal acceptor. The wrong options reverse the correct order of donor and acceptor."
+  },
+  {
+   "n": 3,
+   "topic": "Respiration",
+   "q": "A sample of muscle tissue produced 30 kJ of ATP per mole of glucose via glycolysis only, whereas complete aerobic respiration produced 290 kJ per mole. What percentage of ATP energy yield does glycolysis provide compared with complete respiration (rounded to nearest whole percent)?",
+   "options": [
+    "10%",
+    "30%",
+    "3%",
+    "90%"
+   ],
+   "answer": 0,
+   "explanation": "Percentage = (30 / 290) × 100 ≈ 10.34% ≈ 10%. 3% and 30% are far from the calculated value; 90% confuses the remaining energy with the glycolysis share."
+  },
+  {
+   "n": 4,
+   "topic": "Variation and evolution",
+   "q": "A farmer in Kano notices that some yam plants survive a new pest while others die. Which mechanism best explains how the population of yams may become resistant over time?",
+   "options": [
+    "Gene flow, where resistance arises because pollen from different species introduces new traits each season",
+    "Natural selection, where resistant individuals leave more offspring so alleles for resistance increase in frequency",
+    "Genetic drift, where large populations immediately spread resistance due to random mating",
+    "Lamarckian inheritance, where yams acquire resistance during their lifetime and pass it to offspring"
+   ],
+   "answer": 1,
+   "explanation": "Natural selection acts on heritable variation: resistant plants reproduce more, increasing resistance alleles. Lamarckian inheritance is discredited; gene flow could introduce alleles but scenario describes selection within population; genetic drift is strong in small populations, not a mechanism guaranteeing spread in large farm populations."
+  },
+  {
+   "n": 5,
+   "topic": "Variation and evolution",
+   "q": "In a population of 1,000 butterflies, 360 are homozygous dominant (AA), 480 are heterozygous (Aa), and 160 are homozygous recessive (aa). What is the frequency of allele A?",
+   "options": [
+    "0.6",
+    "0.36",
+    "0.48",
+    "0.4"
+   ],
+   "answer": 0,
+   "explanation": "Allele A frequency = (2×360 + 1×480) / (2×1000) = (720+480)/2000 = 1200/2000 = 0.6. 0.36 and 0.48 confuse genotype frequencies with allele frequency; 0.4 is the frequency of allele a."
+  },
+  {
+   "n": 6,
+   "topic": "Variation and evolution",
+   "q": "Which observation would best support the hypothesis that two populations of frogs are distinct species?",
+   "options": [
+    "They have different diets but the same mating calls",
+    "They live in different habitats but can interbreed when brought together in a lab",
+    "Individuals from the two populations do not mate with each other in areas where they live together (sympatry)",
+    "They show slight differences in throat colour but produce fertile offspring when crossed"
+   ],
+   "answer": 2,
+   "explanation": "Reproductive isolation in sympatry is strong evidence of separate species. Interbreeding in lab indicates they are not reproductively isolated; fertile offspring and slight colour differences suggest same species; diet differences alone are insufficient without reproductive isolation."
+  },
+  {
+   "n": 7,
+   "topic": "Diseases and their control",
+   "q": "Which control measure is most appropriate to reduce transmission of cholera during an outbreak in Port Harcourt?",
+   "options": [
+    "Spraying of insecticide in houses to kill mosquitoes",
+    "Provision of safe drinking water and sanitation to prevent faecal contamination",
+    "Quarantine of all healthy people for 14 days",
+    "Mass administration of antimalarial drugs to the whole community"
+   ],
+   "answer": 1,
+   "explanation": "Cholera is spread by faecal-oral route via contaminated water; improving water/sanitation stops transmission. Antimalarials and mosquito control target different diseases; quarantining healthy people is impractical and unnecessary without evidence of person-to-person airborne spread."
+  },
+  {
+   "n": 8,
+   "topic": "Diseases and their control",
+   "q": "A doctor prescribes antibiotics for a patient with a sore throat. Which practice would most reduce the development of antibiotic resistance in the community?",
+   "options": [
+    "Take antibiotics that were prescribed to someone else last month",
+    "Share leftover antibiotics with family members who have similar symptoms",
+    "Stop taking antibiotics as soon as symptoms improve to avoid side effects",
+    "Complete the full prescribed course only when the infection is proven bacterial and the antibiotic is appropriate"
+   ],
+   "answer": 3,
+   "explanation": "Using antibiotics only for confirmed bacterial infections and completing the correct course reduces selection for resistant bacteria. Sharing or using others' antibiotics and stopping early increase misuse and resistance by exposing bacteria to sub-lethal drug levels."
+  },
+  {
+   "n": 9,
+   "topic": "Nutrition in plants and animals",
+   "q": "A maize farmer in Ibadan notices stunted plants with chlorotic leaves and poor root development. Soil test shows low nitrate (NO₃⁻). Which treatment is most likely to correct the problem?",
+   "options": [
+    "Apply a nitrogenous fertiliser (e.g., ammonium nitrate) to increase soil nitrate levels",
+    "Apply lime to raise soil pH but not add nutrients",
+    "Increase watering frequency without adding fertiliser",
+    "Apply phosphate fertiliser only, since phosphorus stimulates root growth"
+   ],
+   "answer": 0,
+   "explanation": "Low nitrate causes chlorosis and stunting; applying a nitrogenous fertiliser supplies the needed N. Phosphate alone won't correct nitrogen deficiency; watering helps moisture but not N; lime changes pH but doesn't supply nitrate."
+  },
+  {
+   "n": 10,
+   "topic": "Nutrition in plants and animals",
+   "q": "Which component of saliva begins the chemical digestion of carbohydrates in the human mouth?",
+   "options": [
+    "Pepsin, which breaks down proteins into polypeptides",
+    "Rennin (chymosin), which coagulates milk proteins",
+    "Lipase, which hydrolyses triglycerides to fatty acids and glycerol",
+    "Amylase, which hydrolyses starch to maltose and dextrins"
+   ],
+   "answer": 3,
+   "explanation": "Salivary amylase (ptyalin) initiates starch digestion to maltose and dextrins in the mouth. Pepsin and rennin act in the stomach on proteins, and lipase acts on fats in the small intestine; these are not active in salivary secretions."
+  },
+  {
+   "n": 11,
+   "topic": "Transport systems",
+   "q": "During a hot day in Abuja, a gardener notices wilting in tomato plants despite adequate watering. Which process most likely explains the wilting?",
+   "options": [
+    "Root cells lose osmosis ability and actively pump water out of the plant",
+    "Xylem vessels become blocked by air, stopping all water movement",
+    "Transpiration exceeds water uptake, causing leaf turgor loss",
+    "Phloem transports water away from leaves to fruits, leaving leaves dry"
+   ],
+   "answer": 2,
+   "explanation": "Wilting on a hot day with water available is typically due to transpiration rate exceeding the rate of water uptake, causing loss of turgor in leaves. Xylem embolism could cause wilting but would stop all xylem flow, not consistent with adequate watering. Phloem does not transport significant amounts of water away from leaves, and roots do not actively pump water out of the plant."
+  },
+  {
+   "n": 12,
+   "topic": "Transport systems",
+   "q": "A patient in Lagos has low blood pressure and high heart rate. Which change in blood vessels would most directly cause these symptoms?",
+   "options": [
+    "Widespread vasodilation leading to decreased peripheral resistance",
+    "Widespread vasoconstriction lowering cardiac output",
+    "Increased blood viscosity raising peripheral resistance",
+    "Formation of multiple arteriovenous shunts increasing blood pressure"
+   ],
+   "answer": 0,
+   "explanation": "Widespread vasodilation lowers peripheral resistance, reducing blood pressure; the heart compensates by increasing rate. Increased viscosity would raise resistance and blood pressure, opposite to the patient. Vasoconstriction would increase resistance, not cause low blood pressure. Arteriovenous shunts typically reduce capillary resistance but do not cause the described combination."
+  },
+  {
+   "n": 13,
+   "topic": "Cell structure and organisation",
+   "q": "Which organelle is the main site of lipid synthesis and detoxification in liver cells of a Nigerian adult?",
+   "options": [
+    "Smooth endoplasmic reticulum",
+    "Lysosome",
+    "Golgi apparatus",
+    "Rough endoplasmic reticulum"
+   ],
+   "answer": 0,
+   "explanation": "Smooth endoplasmic reticulum (SER) is the site of lipid synthesis and detoxification in liver cells. The Golgi modifies and packages proteins and lipids but is not the primary synthesis site. Rough ER has ribosomes for protein synthesis. Lysosomes contain digestive enzymes for macromolecule breakdown."
+  },
+  {
+   "n": 14,
+   "topic": "Cell structure and organisation",
+   "q": "A student stains a cell and observes DNA concentrated in a single region but without a nuclear membrane. Which cell type is this most likely to be?",
+   "options": [
+    "Fungal cell with chitinous cell wall",
+    "Prokaryotic cell such as a bacterium",
+    "Plant cell from a root tip",
+    "Animal liver cell"
+   ],
+   "answer": 1,
+   "explanation": "Prokaryotes have a nucleoid region where DNA is concentrated but lack a membrane-bound nucleus. Plant and animal eukaryotic cells have a true nucleus with nuclear membrane. Fungal cells are eukaryotic and also have nuclei; the presence of a chitinous wall would not remove the nuclear membrane."
+  },
+  {
+   "n": 15,
+   "topic": "Cell structure and organisation",
+   "q": "During cell fractionation of a homogenised liver sample, which centrifuge speed fraction would be richest in intact mitochondria?",
+   "options": [
+    "Very high-speed pellet (100000 × g) that contains ribosomes and membranes",
+    "Low-speed pellet (500 × g) that contains only nuclei",
+    "Medium-speed pellet after removing nuclei (10000 × g)",
+    "Supernatant after 10000 × g spin that contains soluble cytosolic enzymes"
+   ],
+   "answer": 2,
+   "explanation": "Intact mitochondria sediment in the medium-speed pellet (~10,000 × g) after nuclei are removed at low speed. The low-speed pellet (~500 × g) contains nuclei, not mitochondria. Very high-speed pellets (~100,000 × g) collect microsomes and ribosomes. The supernatant after 10,000 × g contains soluble cytosolic components."
+  },
+  {
+   "n": 16,
+   "topic": "Classification of living things",
+   "q": "A botanist in Enugu finds two flowering plants. One has parallel leaf veins and fibrous roots; the other has netted veins and a taproot. How should they be classified?",
+   "options": [
+    "The first is a dicot and the second is a monocot",
+    "Both are dicots because they have true roots",
+    "Both are monocots because they are flowering plants",
+    "The first as a monocot, the second as a dicot (eudicot)"
+   ],
+   "answer": 3,
+   "explanation": "Parallel venation and fibrous roots are characteristic of monocots; netted venation and a taproot are typical of dicots (eudicots). Not all flowering plants are monocots; flowering plants split into these major groups. The reversed assignment is incorrect."
+  },
+  {
+   "n": 17,
+   "topic": "Classification of living things",
+   "q": "Which characteristic would place an organism in the phylum Arthropoda rather than Annelida?",
+   "options": [
+    "Metameric segmentation with a true coelom",
+    "Jointed appendages and an exoskeleton made of chitin",
+    "Movement by peristalsis using circular and longitudinal muscles",
+    "Presence of bristles (chaetae) on segments"
+   ],
+   "answer": 1,
+   "explanation": "Arthropods have jointed appendages and a chitinous exoskeleton. Metameric segmentation and chaetae are features of annelids. Movement by peristalsis with circular and longitudinal muscles describes annelid locomotion, not arthropod jointed-limb movement."
+  },
+  {
+   "n": 18,
+   "topic": "Support and movement",
+   "q": "A 16-year-old student sprains his ankle playing football in Jos. Which tissue provides the primary passive resistance preventing excessive movement at the joint?",
+   "options": [
+    "Tendon connecting muscle to bone",
+    "Ligament composed of dense regular connective tissue",
+    "Synovial fluid within the joint cavity",
+    "Articular cartilage covering bone surfaces"
+   ],
+   "answer": 1,
+   "explanation": "Ligaments connect bone to bone and provide passive resistance to excessive joint movement; they are made of dense regular connective tissue. Tendons connect muscle to bone and transmit force but do not primarily restrict bone-to-bone movement. Articular cartilage reduces friction but does not prevent excessive motion, and synovial fluid lubricates the joint."
+  },
+  {
+   "n": 19,
+   "topic": "Support and movement",
+   "q": "In a Nigerian weightlifter, which muscle fibre type predominates in muscles used for sprinting and heavy lifting?",
+   "options": [
+    "Slow-twitch (type I) fibres rich in mitochondria and myoglobin",
+    "Cardiac muscle fibres specialised for rhythmic contraction",
+    "Fast-twitch (type II) fibres with high glycolytic capacity",
+    "Smooth muscle fibres found in blood vessels"
+   ],
+   "answer": 2,
+   "explanation": "Fast-twitch type II fibres are adapted for rapid, powerful contractions and high glycolytic metabolism, common in sprinting/weightlifting. Slow-twitch type I are for endurance and sustained activity. Cardiac and smooth muscle fibres are not skeletal muscle types used for voluntary powerful contractions."
+  },
+  {
+   "n": 20,
+   "topic": "Ecology",
+   "q": "A farmer near Abeokuta notices two fields: Field A was left fallow for three years and has many earthworms; Field B was continuously cropped and has few earthworms. Which statement best explains the effect of earthworms on soil fertility?",
+   "options": [
+    "Earthworms produce acids that lower soil pH, making nutrients more soluble and available to plants.",
+    "Earthworms increase soil porosity and mix organic matter into the soil, improving aeration and nutrient availability for plants.",
+    "Earthworms primarily feed on live roots and thus reduce competition, indirectly helping crop growth.",
+    "Earthworms fix atmospheric nitrogen into the soil in the same way as Rhizobium bacteria."
+   ],
+   "answer": 1,
+   "explanation": "Earthworms burrow and cast decomposed organic matter into the soil, which increases porosity (better aeration and drainage) and distributes nutrients, thereby improving fertility. They do not fix atmospheric nitrogen like Rhizobium, nor mainly eat live roots; casts generally raise, not lower, nutrient availability without acidifying soil in the way suggested."
+  },
+  {
+   "n": 21,
+   "topic": "Ecology",
+   "q": "In a pond in Kano, water hyacinth covers large areas, reducing light penetration. Which direct effect on the aquatic ecosystem is most likely?",
+   "options": [
+    "Higher rates of primary productivity by submerged algae due to the shade provided by hyacinth leaves.",
+    "Reduced light leads to decreased photosynthesis by submerged plants, lowering dissolved oxygen and causing fish kills.",
+    "Increased light exposure for zooplankton, raising their population and improving water clarity.",
+    "Immediate increase in dissolved oxygen because hyacinth releases oxygen from its roots."
+   ],
+   "answer": 1,
+   "explanation": "Surface cover by hyacinth shades submerged plants and algae, reducing their photosynthesis and dissolved oxygen production; low oxygen can cause fish kills. Zooplankton do not benefit from reduced light and primary productivity of submerged algae falls, not rises. Hyacinth roots do not release enough oxygen to offset the reduced photosynthesis."
+  },
+  {
+   "n": 22,
+   "topic": "Ecology",
+   "q": "A nature reserve in Jos relocates 60 antelopes to a separate enclosure. After one year the genetic diversity of the relocated group is lower than the source population. Which process most likely caused this change?",
+   "options": [
+    "Directional selection, because the environment in the enclosure steadily favoured one extreme trait.",
+    "Gene flow, because many new individuals migrated into the relocated group from outside.",
+    "Stabilising selection, because extreme phenotypes were removed in the new enclosure.",
+    "Founder effect, because the relocated group had a limited number of individuals whose alleles differ from the original population."
+   ],
+   "answer": 3,
+   "explanation": "Moving a small subset causes the founder effect: reduced genetic diversity due to sampling a limited number of alleles. Stabilising or directional selection refer to selective pressures changing allele frequencies over time, which is less immediate; gene flow would increase, not decrease, diversity and requires immigration."
+  },
+  {
+   "n": 23,
+   "topic": "Diffusion, osmosis and active transport",
+   "q": "A student places a plant cell in a 0.9% NaCl solution and observes no net change in volume. The cell sap concentration is known to be approximately 0.9% NaCl. Which statement best describes the condition of the cell and the net movement of water?",
+   "options": [
+    "The cell is turgid because water moves into the cell causing it to swell.",
+    "The cell is in an isotonic solution; there is no net movement of water across the plasma membrane.",
+    "The cell is in a hypotonic solution so active transport of water into the vacuole is occurring.",
+    "The cell is plasmolysed because water moves out of the cell until equilibrium."
+   ],
+   "answer": 1,
+   "explanation": "Equal solute concentrations inside and outside mean isotonic conditions and no net water movement. Plasmolysis occurs in hypertonic conditions; turgidity occurs in hypotonic conditions. Water movement is passive (osmosis), not active transport."
+  },
+  {
+   "n": 24,
+   "topic": "Diffusion, osmosis and active transport",
+   "q": "In a human kidney nephron, glucose is filtered at the glomerulus and then reabsorbed in the proximal tubule. Which mechanism explains glucose reabsorption into blood when tubular glucose concentration is low?",
+   "options": [
+    "Secondary active transport (co-transport) with Na+ across the apical membrane, followed by facilitated diffusion across the basolateral membrane.",
+    "Simple diffusion through phospholipid bilayer because glucose is small and nonpolar.",
+    "Endocytosis of glucose molecules into vesicles and release into blood capillaries.",
+    "Primary active transport using ATP directly to pump glucose across both membranes."
+   ],
+   "answer": 0,
+   "explanation": "Glucose is reabsorbed via Na⁺-glucose co-transport (secondary active transport driven by Na⁺ gradient), then exits by facilitated diffusion; glucose is polar so cannot cross the lipid bilayer by simple diffusion, and primary active transport does not directly pump glucose. Endocytosis is not the primary route for bulk glucose reabsorption in proximal tubule."
+  },
+  {
+   "n": 25,
+   "topic": "Excretion",
+   "q": "A patient in Ibadan has elevated blood urea concentration and low urine output. Which change in the kidney most likely explains these signs?",
+   "options": [
+    "Increased secretion of urea in the proximal tubule causing elevated blood urea.",
+    "Higher afferent arteriole dilation increasing filtration and lowering blood urea.",
+    "Enhanced reabsorption of urea in the loop of Henle reducing blood urea concentration.",
+    "Reduced glomerular filtration rate leading to less urea being filtered and excreted."
+   ],
+   "answer": 3,
+   "explanation": "A reduced glomerular filtration rate (e.g., due to kidney damage) causes urea to accumulate in blood and reduces urine volume. Increased secretion would lower blood urea, not raise it. Enhanced reabsorption would raise blood urea but reabsorption of urea is limited and not typically increased in this way; dilation of afferent arteriole would increase GFR and reduce blood urea."
+  },
+  {
+   "n": 26,
+   "topic": "Excretion",
+   "q": "Which part of the nephron is primarily responsible for concentrating urine by creating a high osmotic gradient in the medulla?",
+   "options": [
+    "Loop of Henle, because counter-current multiplication generates a hyperosmotic medullary interstitium.",
+    "Distal convoluted tubule, because it reabsorbs large amounts of urea creating the gradient.",
+    "Proximal convoluted tubule, because it actively pumps NaCl into the medulla to concentrate urine.",
+    "Collecting duct, because it is impermeable to water and so creates the medullary gradient."
+   ],
+   "answer": 0,
+   "explanation": "The Loop of Henle, via counter-current flow and differential permeability, establishes the medullary osmotic gradient used to concentrate urine. The proximal tubule mainly reabsorbs solutes and water but does not create the gradient; the distal tubule contributes but is not the primary generator; the collecting duct uses the gradient and its permeability varies with ADH, it does not create the gradient."
+  },
+  {
+   "n": 27,
+   "topic": "Nervous and hormonal coordination",
+   "q": "A diabetic patient in Lagos takes insulin and then experiences sweating, trembling and confusion 1 hour later. Which immediate physiological cause best explains these symptoms?",
+   "options": [
+    "Excess glucagon secretion raising blood glucose rapidly and causing sympathetic overactivity.",
+    "High insulin causing increased ketone production and metabolic acidosis, which produces trembling and sweating.",
+    "Hyperosmotic hyperglycaemia causing cells to shrink and triggering the symptoms described.",
+    "Hypoglycaemia from excess insulin causing low blood glucose and increased sympathetic activity (adrenaline) leading to sweating and trembling."
+   ],
+   "answer": 3,
+   "explanation": "Excess insulin can lower blood glucose causing hypoglycaemia; the body responds with sympathetic activation (adrenaline) producing sweating, tremor and confusion. Hyperglycaemia (high blood sugar) does not cause these acute adrenergic symptoms; excess glucagon would raise glucose, not lower it; while ketoacidosis can cause some symptoms, acute tremor and sweating from insulin administration point to hypoglycaemia."
+  },
+  {
+   "n": 28,
+   "topic": "Genetics",
+   "q": "In a cross between two pea plants, a tall plant (Tt) is crossed with a dwarf plant (tt). Tall (T) is dominant to dwarf (t). What is the expected proportion of offspring that will be tall?",
+   "options": [
+    "50%",
+    "100%",
+    "75%",
+    "25%"
+   ],
+   "answer": 0,
+   "explanation": "Tt × tt produces gametes T and t from the first parent and only t from the second. Offspring genotypes are Tt and tt in a 1:1 ratio, so 1/2 (50%) are tall. 75% and 25% would come from Tt × Tt or Tt × Tt with different crosses, and 100% would require TT or all dominant homozygotes which is not the case."
+  },
+  {
+   "n": 29,
+   "topic": "Genetics",
+   "q": "A mother with blood group O and a father with blood group AB have a child. Which blood group(s) is/are possible for the child?",
+   "options": [
+    "A, B or AB",
+    "A or B",
+    "AB only",
+    "O only"
+   ],
+   "answer": 1,
+   "explanation": "Mother genotype ii, father genotype IAIB. Possible offspring genotypes are IAi (blood A) or IBi (blood B). O only is impossible because father has no i allele to give both parents' i; AB only is impossible because child would need both IA and IB which requires neither parent be ii. A, B or AB is incorrect because AB cannot arise."
+  },
+  {
+   "n": 30,
+   "topic": "Genetics",
+   "q": "In humans, an X-linked recessive trait (r) shows affected males more often than females. A carrier mother (XrX) marries an unaffected father (XY). What fraction of their sons is expected to be affected?",
+   "options": [
+    "50%",
+    "25%",
+    "0%",
+    "100%"
+   ],
+   "answer": 0,
+   "explanation": "Carrier mother produces Xr and X chromosomes; father produces Y for sons. Sons receiving XrY will be affected; probability is 1/2 (50%). 100% would require father to contribute r allele which he cannot; 25% would be from autosomal recessive expectation; 0% is wrong because mother is a carrier."
+  },
+  {
+   "n": 31,
+   "topic": "Reproduction",
+   "q": "A Nigerian couple wish to avoid pregnancy. Which contraceptive method gives the best immediate protection against both pregnancy and most sexually transmitted infections (STIs) when used correctly?",
+   "options": [
+    "Intrauterine device (IUD)",
+    "Withdrawal (coitus interruptus)",
+    "Male condom",
+    "Oral contraceptive pill"
+   ],
+   "answer": 2,
+   "explanation": "Male condoms provide barrier protection preventing sperm contact and reduce exposure to many STIs when used correctly. Oral pills and IUDs protect against pregnancy but do not protect against STIs. Withdrawal is unreliable for pregnancy prevention and offers no STI protection."
+  },
+  {
+   "n": 32,
+   "topic": "Reproduction",
+   "q": "During the menstrual cycle, ovulation is most directly triggered by a surge of which hormone?",
+   "options": [
+    "Follicle-stimulating hormone (FSH)",
+    "Prolactin",
+    "Luteinising hormone (LH)",
+    "Progesterone"
+   ],
+   "answer": 2,
+   "explanation": "A mid-cycle surge of LH triggers ovulation. FSH helps follicle growth but the surge that causes the follicle to release the ovum is LH. Progesterone rises after ovulation; prolactin is mainly involved in milk production and not the ovulation trigger."
+  },
+  {
+   "n": 33,
+   "topic": "Reproduction",
+   "q": "A woman in Lagos is 8 weeks pregnant. Which structure provides nutrients and oxygen to the embryo and removes wastes before the placenta is fully formed?",
+   "options": [
+    "Umbilical arteries alone",
+    "Placenta functioning fully as in third trimester",
+    "Yolk sac and uterine secretions via uterine glands (histotrophic nutrition)",
+    "Fetal lungs"
+   ],
+   "answer": 2,
+   "explanation": "In early pregnancy (around 8 weeks) histotrophic nutrition from yolk sac and uterine gland secretions supports the embryo before the placenta is fully established. The placenta is not yet fully functional as in later pregnancy. Fetal lungs are nonfunctional for gas exchange before birth, and umbilical arteries carry blood away from the fetus but do not alone provide nutrition."
+  },
+  {
+   "n": 34,
+   "topic": "Respiration",
+   "q": "A student measures oxygen consumption of a resting adult and of the same adult after moderate exercise. Which change is expected immediately after exercise?",
+   "options": [
+    "Lower oxygen consumption and lower breathing rate",
+    "Higher oxygen consumption and lower breathing rate",
+    "Higher oxygen consumption and higher breathing rate",
+    "Lower oxygen consumption and higher breathing rate"
+   ],
+   "answer": 2,
+   "explanation": "Exercise increases metabolic demands, so oxygen consumption rises and breathing rate increases to supply more O₂. Lower breathing or lower O₂ consumption would contradict the increased energy demand; higher O₂ consumption with lower breathing is inconsistent because ventilation must increase to supply the oxygen."
+  },
+  {
+   "n": 35,
+   "topic": "Respiration",
+   "q": "During aerobic respiration, how many net ATP molecules are produced per molecule of glucose by oxidative phosphorylation (chemiosmotic synthesis) in mitochondria, assuming the typical yield in human cells?",
+   "options": [
+    "2 ATP",
+    "Approximately 28–30 ATP",
+    "100 ATP",
+    "4 ATP"
+   ],
+   "answer": 1,
+   "explanation": "Glycolysis + Krebs + oxidative phosphorylation typically yield about 30 ATP overall in human cells, with oxidative phosphorylation producing the majority (about 26–28 ATP). 2 ATP is the net from glycolysis alone; 4 ATP is too low for total yield including oxidative phosphorylation; 100 ATP is unrealistically high."
+  },
+  {
+   "n": 36,
+   "topic": "Variation and evolution",
+   "q": "In a population of butterflies in Ibadan, birds preferentially eat the common light-coloured morph, leaving more dark morphs to survive and reproduce. Over several generations the dark morph becomes more common. This change is best described as:",
+   "options": [
+    "Disruptive selection",
+    "Stabilising selection",
+    "Genetic drift",
+    "Directional natural selection"
+   ],
+   "answer": 3,
+   "explanation": "Directional selection favours one extreme phenotype (dark morph), shifting the population mean. Stabilising selection favours intermediate phenotypes, not extremes. Disruptive selection favours both extremes and reduces intermediates. Genetic drift is random change and less likely to systematically increase a phenotype due to predator preference."
+  },
+  {
+   "n": 37,
+   "topic": "Variation and evolution",
+   "q": "A bacterial population acquires resistance to an antibiotic after exposure. The most important first step in evolution of the resistant strain is:",
+   "options": [
+    "Immediate appearance of a new behaviour to avoid the drug",
+    "Antibiotic causing all bacteria to become resistant",
+    "Presence of a heritable mutation conferring resistance",
+    "Individual bacteria deciding to resist"
+   ],
+   "answer": 2,
+   "explanation": "Evolution requires a heritable variation (mutation) that confers resistance; selection by antibiotic exposure increases frequency of that variant. Behavioural changes and conscious decisions are not applicable to bacteria; antibiotics do not induce resistance in every cell uniformly—selection favours pre-existing or acquired mutants."
+  },
+  {
+   "n": 38,
+   "topic": "Cell structure and organisation",
+   "q": "Which organelle is the primary site of ATP production in a hepatocyte and contains its own circular DNA?",
+   "options": [
+    "Smooth endoplasmic reticulum",
+    "Lysosome",
+    "Mitochondrion",
+    "Golgi apparatus"
+   ],
+   "answer": 2,
+   "explanation": "Mitochondria are the main sites of aerobic respiration and ATP synthesis and possess their own circular DNA. Golgi apparatus is involved in protein modification and packaging, lysosomes in digestion, and smooth ER in lipid synthesis — none produce most of the cell's ATP or carry circular DNA."
+  },
+  {
+   "n": 39,
+   "topic": "Cell structure and organisation",
+   "q": "A student stains a plant root tip and observes many chromosomes aligned at the cell centre with spindle fibres attached. Which stage of mitosis is being observed?",
+   "options": [
+    "Anaphase",
+    "Metaphase",
+    "Telophase",
+    "Prophase"
+   ],
+   "answer": 1,
+   "explanation": "In metaphase chromosomes align at the metaphase plate (cell centre) with spindle fibres attached. Prophase shows condensing chromosomes and nuclear envelope breakdown; anaphase shows chromatids being pulled apart toward poles; telophase shows decondensing chromosomes and reformation of the nuclear envelope."
+  },
+  {
+   "n": 40,
+   "topic": "Cell structure and organisation",
+   "q": "Which component of the plasma membrane contributes most to its fluidity at 37 °C?",
+   "options": [
+    "Integral membrane proteins",
+    "Phospholipids with unsaturated fatty acid tails",
+    "Cell-surface glycoproteins",
+    "Cholesterol molecules in high proportion"
+   ],
+   "answer": 1,
+   "explanation": "Unsaturated fatty acid tails introduce kinks that prevent tight packing, increasing membrane fluidity at body temperature. Integral proteins and glycoproteins affect function but not primary fluidity. Cholesterol moderates fluidity and at 37 °C tends to decrease excessive fluidity rather than increase it."
+  },
+  {
+   "n": 41,
+   "topic": "Transport systems",
+   "q": "In humans, which blood vessel normally carries oxygenated blood away from the lungs to the left atrium?",
+   "options": [
+    "Pulmonary artery",
+    "Pulmonary vein",
+    "Aorta",
+    "Vena cava"
+   ],
+   "answer": 1,
+   "explanation": "The pulmonary veins carry oxygenated blood from the lungs to the left atrium. The pulmonary artery carries deoxygenated blood from the right ventricle to the lungs; the aorta carries oxygenated blood from the left ventricle to the body; vena cavae return deoxygenated blood to the right atrium."
+  },
+  {
+   "n": 42,
+   "topic": "Transport systems",
+   "q": "A patient in Lagos has lost a lot of blood. Which immediate cardiovascular change helps maintain blood pressure?",
+   "options": [
+    "Reduced secretion of antidiuretic hormone (ADH)",
+    "Increased heart rate (tachycardia) due to sympathetic stimulation",
+    "Immediate increase in erythropoiesis to restore volume",
+    "Vasodilation of arterioles to reduce resistance"
+   ],
+   "answer": 1,
+   "explanation": "After acute blood loss, sympathetic stimulation increases heart rate to help maintain blood pressure. Erythropoiesis is slower (days) and cannot act immediately. Vasodilation would lower resistance and worsen pressure; ADH typically increases to retain water, not decrease."
+  },
+  {
+   "n": 43,
+   "topic": "Transport systems",
+   "q": "Which feature of xylem vessels most directly facilitates rapid water transport in a tall Nigerian mahogany tree?",
+   "options": [
+    "Presence of sieve plates for water flow",
+    "Living parenchyma cells actively pumping water",
+    "Thick cellulose walls preventing cavitation",
+    "Lignified, continuous tubes with bordered pits and no end walls"
+   ],
+   "answer": 3,
+   "explanation": "Xylem vessels are dead, lignified continuous tubes allowing rapid water movement; bordered pits allow lateral movement. Parenchyma are living but do not actively pump bulk xylem water, thick cellulose alone doesn't prevent cavitation, and sieve plates belong to phloem, not xylem."
+  },
+  {
+   "n": 44,
+   "topic": "Nutrition in plants and animals",
+   "q": "Which process in peas (grown in Ibadan) directly converts ammonium ions into organic nitrogen compounds during nitrogen assimilation?",
+   "options": [
+    "Incorporation into amino acids via glutamine synthetase and glutamate synthase (GS-GOGAT) pathway",
+    "Nitrogen fixation by Rhizobium converting NH₄⁺ to N₂",
+    "Denitrification converting NH₄⁺ to N₂O",
+    "Nitrification converting NH₄⁺ to NO₂⁻ and NO₃⁻"
+   ],
+   "answer": 0,
+   "explanation": "The GS-GOGAT pathway incorporates NH₄⁺ into amino acids (glutamine and glutamate) for plant proteins. Nitrogen fixation converts N₂ to NH₄⁺ (not the reverse). Nitrification oxidises NH₄⁺ to nitrites/nitrates; denitrification reduces nitrates to N₂/N₂O — none directly form organic N from NH₄⁺ like GS-GOGAT."
+  },
+  {
+   "n": 45,
+   "topic": "Nutrition in plants and animals",
+   "q": "A child in Kano shows scaly skin, slowed growth and poor night vision. Which deficiency most likely explains all three symptoms?",
+   "options": [
+    "Iron deficiency",
+    "Vitamin D deficiency",
+    "Vitamin A deficiency",
+    "Vitamin C deficiency"
+   ],
+   "answer": 2,
+   "explanation": "Vitamin A deficiency causes night blindness, skin issues and impaired growth. Vitamin C causes scurvy (bleeding gums, poor wound healing), iron deficiency causes anaemia and pallor, and vitamin D deficiency leads to rickets and bone problems rather than night blindness."
+  },
+  {
+   "n": 46,
+   "topic": "Diseases and their control",
+   "q": "A rural health team in Benin distributes insecticide-treated nets (ITNs). Which effect most directly reduces malaria transmission?",
+   "options": [
+    "Increasing mosquito predators in households",
+    "Induction of herd immunity against Plasmodium",
+    "Eradication of Plasmodium from infected human bloodstreams",
+    "Reduction in human–mosquito contact by killing or repelling Anopheles mosquitoes"
+   ],
+   "answer": 3,
+   "explanation": "ITNs act by killing or repelling Anopheles mosquitoes, reducing human–vector contact and thus transmission. ITNs do not clear Plasmodium infections in humans, do not increase predators, nor induce herd immunity against the parasite."
+  },
+  {
+   "n": 47,
+   "topic": "Diseases and their control",
+   "q": "A child at a clinic in Port Harcourt is prescribed a 5-day course of antibiotics for bacterial otitis media. Which practice most increases the risk of antibiotic resistance developing in the community?",
+   "options": [
+    "Using a different antibiotic for viral infections",
+    "Stopping treatment early when the child feels better",
+    "Isolating the child until symptoms resolve",
+    "Always finishing the prescribed antibiotic course"
+   ],
+   "answer": 1,
+   "explanation": "Stopping antibiotics early can leave surviving bacteria that may be resistant, promoting resistance. Finishing the course reduces this risk. Isolation doesn't affect resistance development, and using antibiotics for viral infections is inappropriate but the option says 'using a different antibiotic for viral infections' which is less directly about promoting resistance than incomplete courses."
+  },
+  {
+   "n": 48,
+   "topic": "Respiration",
+   "q": "During a 400 m sprint, muscle cells in a Lagos athlete convert pyruvate to lactate to regenerate NAD+. Which enzyme catalyses this reaction?",
+   "options": [
+    "Lactate dehydrogenase",
+    "Alcohol dehydrogenase",
+    "Pyruvate kinase",
+    "Pyruvate decarboxylase"
+   ],
+   "answer": 0,
+   "explanation": "Lactate dehydrogenase (LDH) converts pyruvate to lactate while oxidizing NADH to NAD+, allowing glycolysis to continue under low oxygen. Pyruvate decarboxylase and alcohol dehydrogenase act in fermentation pathways of yeast (ethanol production), not the mammalian lactate pathway. Pyruvate kinase catalyses the conversion of phosphoenolpyruvate to pyruvate in glycolysis, not the subsequent reduction of pyruvate to lactate."
+  },
+  {
+   "n": 49,
+   "topic": "Respiration",
+   "q": "A long-distance runner resting in Jos has an oxygen uptake (VO2) of 250 mL·min⁻¹ and a carbon dioxide output (VCO2) of 175 mL·min⁻¹. What is the respiratory quotient (RQ) and which substrate is being mainly oxidised?",
+   "options": [
+    "RQ = 0.70, mainly fat",
+    "RQ = 0.70, mainly protein",
+    "RQ = 1.43, mainly carbohydrate",
+    "RQ = 0.70, mainly carbohydrate"
+   ],
+   "answer": 0,
+   "explanation": "RQ = VCO2 / VO2 = 175 / 250 = 0.70. An RQ of about 0.7 is characteristic of fatty acid oxidation (fat metabolism). Carbohydrate oxidation gives RQ ≈ 1.0, so the carbohydrate option is wrong; protein has RQ ≈ 0.8 so the protein option is incorrect. The 1.43 value is a wrong calculation (reciprocal rather than ratio)."
+  },
+  {
+   "n": 50,
+   "topic": "Nutrition in plants and animals",
+   "q": "A smallholder farmer in Oyo notices that his cowpea plants have root nodules containing bacteria that supply the plants with usable nitrogen. Which process performed by these bacteria converts atmospheric N₂ into a form the plant can use?",
+   "options": [
+    "Nitrogen fixation by nitrogenase in the root nodules",
+    "Denitrification of NO₃⁻ to N₂ gas",
+    "Ammonification of organic nitrogen to NH₄⁺",
+    "Nitrification of NH₄⁺ to NO₂⁻ and then to NO₃⁻"
+   ],
+   "answer": 0,
+   "explanation": "Rhizobium-like bacteria in legume root nodules fix atmospheric N₂ to NH₃/NH₄⁺ using the enzyme nitrogenase (nitrogen fixation), providing usable nitrogen to the plant. Nitrification converts ammonium to nitrite/nitrate and is carried out by soil chemoautotrophs, denitrification returns nitrate to N₂ and would remove usable nitrogen, and ammonification releases NH₄⁺ from organic matter — none of these describe the direct conversion of atmospheric N₂ to a plant-usable form in nodules."
+  }
+ ]
+}

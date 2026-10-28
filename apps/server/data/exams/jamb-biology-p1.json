@@ -1,0 +1,531 @@
+{
+ "id": "jamb-biology-p1",
+ "exam": "jamb",
+ "subject": "biology",
+ "year": null,
+ "number": 1,
+ "source": "ai",
+ "minutes": 27,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Cell structure and organisation",
+   "q": "Which organelle in a liver cell would be most abundant to support high rates of detoxification and lipid synthesis?",
+   "options": [
+    "Golgi apparatus",
+    "Rough endoplasmic reticulum",
+    "Lysosome",
+    "Smooth endoplasmic reticulum"
+   ],
+   "answer": 3,
+   "explanation": "Smooth endoplasmic reticulum (SER) is specialised for lipid synthesis and detoxification in hepatocytes, so it is abundant in liver cells. Rough ER is for protein synthesis (has ribosomes), Golgi modifies and packages molecules rather than performing detoxification, and lysosomes digest macromolecules."
+  },
+  {
+   "n": 2,
+   "topic": "Cell structure and organisation",
+   "q": "A student stains a plant cell and observes a large central vacuole, a cell wall, chloroplasts and plasmodesmata. Which of the following statements is best supported by these observations?",
+   "options": [
+    "This cell is from animal tissue adapted for storage",
+    "The cell cannot photosynthesise because it has a large vacuole",
+    "The cell must be a young meristematic cell dividing rapidly",
+    "The cell is a mature, turgid, photosynthetic plant cell"
+   ],
+   "answer": 3,
+   "explanation": "Presence of large central vacuole, cell wall and chloroplasts indicates a mature plant cell capable of photosynthesis and maintaining turgor. Meristematic cells are small with dense cytoplasm and small vacuoles; animal cells lack cell walls and chloroplasts; a large vacuole does not prevent photosynthesis."
+  },
+  {
+   "n": 3,
+   "topic": "Cell structure and organisation",
+   "q": "Which statement correctly explains why mitochondria have folded inner membranes (cristae)?",
+   "options": [
+    "Folding makes mitochondria lighter to aid cell movement",
+    "Folding produces more ribosomes for protein synthesis",
+    "Folding increases surface area for electron transport and ATP synthesis",
+    "Folding stores extra mitochondrial DNA"
+   ],
+   "answer": 2,
+   "explanation": "Cristae increase the inner membrane surface area, allowing more electron transport chains and ATP synthase complexes to be present, increasing ATP production. Mitochondrial DNA and ribosomes are in the matrix, not stored by folding, and folding has no role in buoyancy."
+  },
+  {
+   "n": 4,
+   "topic": "Variation and evolution",
+   "q": "In a population of maize in Kaduna, plants with allele A produce 20% more grain than those with allele a. If starting genotype frequencies are AA 0.25, Aa 0.50, aa 0.25 and fitness is proportional to grain yield, which genotype will increase in frequency after selection?",
+   "options": [
+    "AA will increase the most in frequency",
+    "aa will increase because recessive alleles are favoured",
+    "Aa will increase more than AA because heterozygotes are intermediate",
+    "All genotypes will remain at the same frequency"
+   ],
+   "answer": 0,
+   "explanation": "If fitness is proportional to grain yield and allele A confers 20% higher yield, AA has highest fitness so its frequency will increase. Aa has intermediate fitness (assuming additive effect) so increases less. aa has lowest fitness. Genotype frequencies change under selection, so they will not remain the same."
+  },
+  {
+   "n": 5,
+   "topic": "Variation and evolution",
+   "q": "Which example provides the best evidence for natural selection rather than genetic drift in a wild bird population?",
+   "options": [
+    "A rare feather colour suddenly fixed in one tiny isolated island population",
+    "A stable polymorphism maintained for centuries with no change in environment",
+    "Random fluctuations in allele frequencies across small populations with no environmental change",
+    "A shift to longer beaks across all islands after a drought that favoured seeds requiring deeper beak penetration"
+   ],
+   "answer": 3,
+   "explanation": "A consistent directional change in beak length across islands linked to drought and seed type indicates natural selection. Fixation in a tiny isolated population or random fluctuations suggest genetic drift. A stable polymorphism without environmental change indicates balancing selection or neutral stability, not directional natural selection."
+  },
+  {
+   "n": 6,
+   "topic": "Variation and evolution",
+   "q": "Two populations of Gambian mosquitoes become reproductively isolated because one feeds at night and the other at dawn. This is an example of which reproductive barrier?",
+   "options": [
+    "Gametic isolation",
+    "Temporal isolation",
+    "Behavioral isolation",
+    "Mechanical isolation"
+   ],
+   "answer": 1,
+   "explanation": "Temporal isolation occurs when populations breed at different times (night vs dawn), preventing interbreeding. Mechanical isolation is due to incompatible reproductive structures, behavioral isolation involves courtship differences (not timing), and gametic isolation involves gamete incompatibility."
+  },
+  {
+   "n": 7,
+   "topic": "Ecology",
+   "q": "A farmer in Enugu applies nitrogen fertiliser to a cassava field. Which immediate ecosystem effect is most likely?",
+   "options": [
+    "Increase in plant growth rate and possible change in species composition favouring fast-growing plants",
+    "Immediate increase in animal species richness within 24 hours",
+    "Complete elimination of soil nutrients except nitrogen",
+    "Decrease in primary productivity because nitrogen kills all microbes"
+   ],
+   "answer": 0,
+   "explanation": "Adding nitrogen typically increases primary productivity and can favour fast-growing plant species, changing species composition. Nitrogen does not immediately kill all microbes or eliminate other nutrients, and animal richness does not increase within 24 hours."
+  },
+  {
+   "n": 8,
+   "topic": "Ecology",
+   "q": "In a lake, dissolved oxygen (DO) falls overnight and recovers by late afternoon. Which process mainly causes the daytime recovery of DO?",
+   "options": [
+    "Sedimentation releasing oxygen from particles",
+    "Photosynthesis by aquatic plants and algae producing O₂",
+    "Atmospheric nitrogen fixing into oxygen",
+    "Respiration by fish increasing O₂ production"
+   ],
+   "answer": 1,
+   "explanation": "Daytime photosynthesis by aquatic plants and algae produces oxygen, raising DO levels. Fish respiration consumes O₂, sedimentation does not release oxygen, and atmospheric nitrogen fixing does not produce O₂."
+  },
+  {
+   "n": 9,
+   "topic": "Nervous and hormonal coordination",
+   "q": "A student prickles a volunteer's finger and measures the response time to withdraw the finger. Which neural pathway produces the fastest withdrawal reflex?",
+   "options": [
+    "A reflex arc using sensory neuron → relay neuron in spinal cord → motor neuron (no brain involvement)",
+    "Neuroendocrine reflex via hypothalamus and pituitary",
+    "Hormonal stimulation from adrenal medulla releasing adrenaline",
+    "A voluntary pathway involving sensory neuron → brain → motor neuron"
+   ],
+   "answer": 0,
+   "explanation": "Simple spinal reflex arcs with sensory → interneuron → motor neuron are fastest because they bypass the brain. Voluntary pathways involving the brain take longer. Hormonal and neuroendocrine pathways are much slower than neural reflexes."
+  },
+  {
+   "n": 10,
+   "topic": "Nervous and hormonal coordination",
+   "q": "A diabetic patient in Lagos has low blood glucose and receives a glucagon injection. What is the immediate effect of glucagon on the liver?",
+   "options": [
+    "Inhibition of gluconeogenesis permanently",
+    "Conversion of glucose to glycogen (glycogenesis)",
+    "Stimulation of insulin release to lower blood glucose",
+    "Activation of glycogenolysis to raise blood glucose concentration"
+   ],
+   "answer": 3,
+   "explanation": "Glucagon triggers glycogenolysis in the liver, releasing glucose into the blood and raising blood sugar. It does not stimulate insulin release; glycogenesis (storage) is the opposite of glucagon's effect, and gluconeogenesis is promoted by glucagon, not permanently inhibited."
+  },
+  {
+   "n": 11,
+   "topic": "Classification of living things",
+   "q": "A botanist in Ibadan discovers a small flowering plant with parallel leaf venation, adventitious roots, and floral parts in multiples of three. According to standard plant classification, this plant should be placed in which group?",
+   "options": [
+    "Gymnosperms",
+    "Dicotyledons",
+    "Pteridophytes",
+    "Monocotyledons"
+   ],
+   "answer": 3,
+   "explanation": "Parallel venation, adventitious roots and floral parts in threes are characteristic features of monocotyledons. Dicots typically have netted venation and flower parts in fours or fives. Gymnosperms lack true flowers and pteridophytes (ferns) reproduce by spores and have neither flowers nor typical seed structures."
+  },
+  {
+   "n": 12,
+   "topic": "Respiration",
+   "q": "A student measures ATP yield from complete aerobic oxidation of one molecule of glucose in human cells. Which ATP value is closest to the accepted estimate under typical cellular conditions?",
+   "options": [
+    "36–38 ATP",
+    "18–20 ATP",
+    "6–8 ATP",
+    "30–32 ATP"
+   ],
+   "answer": 3,
+   "explanation": "Modern estimates for aerobic respiration in mitochondria of eukaryotic cells give about 30–32 ATP per glucose due to proton leak and variable shuttle efficiencies. 36–38 ATP is an older textbook value for prokaryotic ideal conditions. 18–20 or 6–8 ATP are far too low for complete aerobic oxidation."
+  },
+  {
+   "n": 13,
+   "topic": "Excretion",
+   "q": "Which structure in the nephron of a human kidney is primarily responsible for bulk reabsorption of water, glucose and amino acids?",
+   "options": [
+    "Loop of Henle ascending limb",
+    "Collecting duct",
+    "Proximal convoluted tubule",
+    "Bowman's capsule"
+   ],
+   "answer": 2,
+   "explanation": "The proximal convoluted tubule is the main site for bulk reabsorption of water, glucose and amino acids via active and passive transport. Bowman's capsule collects filtrate but does not reabsorb; the ascending limb of Henle is impermeable to water and mainly reabsorbs ions; the collecting duct fine-tunes water reabsorption under hormonal control but does not do the bulk recovery of solutes like the proximal tubule."
+  },
+  {
+   "n": 14,
+   "topic": "Reproduction",
+   "q": "In a human male, failure of the seminiferous tubules to respond to follicle-stimulating hormone (FSH) would most directly cause which effect?",
+   "options": [
+    "Reduced testosterone secretion from Leydig cells",
+    "Reduced spermatogenesis",
+    "Inability to ejaculate",
+    "Increased estrogen production"
+   ],
+   "answer": 1,
+   "explanation": "FSH acts on Sertoli cells in seminiferous tubules to support spermatogenesis, so lack of response leads to reduced sperm production. Leydig cells respond mainly to LH for testosterone secretion, so testosterone would not be directly reduced. Increased estrogen or inability to ejaculate are not direct consequences of Sertoli cell FSH insensitivity."
+  },
+  {
+   "n": 15,
+   "topic": "Classification of living things",
+   "q": "A field guide uses a dichotomous key that begins: 1a: Animal with backbone → go to 2; 1b: Animal without backbone → go to 3. Which principle best describes how a dichotomous key helps identify species?",
+   "options": [
+    "It uses a series of mutually exclusive paired choices based on observable characters",
+    "It groups organisms by geographic location",
+    "It ranks organisms by evolutionary age",
+    "It lists species by abundance in the habitat"
+   ],
+   "answer": 0,
+   "explanation": "A dichotomous key identifies organisms by a sequence of paired, mutually exclusive choices based on characters—each choice narrows possibilities. It does not rank by evolutionary age, group by location, or list by abundance; those are not principles of dichotomous keys."
+  },
+  {
+   "n": 16,
+   "topic": "Respiration",
+   "q": "During vigorous exercise, oxygen consumption in muscle cells increases. Which immediate cellular change explains the increased rate of oxidative phosphorylation?",
+   "options": [
+    "Decrease in NADH concentration activating the electron transport chain",
+    "Increased glucose concentration in mitochondria directly powering ATP synthase",
+    "Increased ADP concentration stimulating ATP synthase activity",
+    "Higher O₂ concentration in cytosol increasing glycolysis"
+   ],
+   "answer": 2,
+   "explanation": "Higher ADP levels signal ATP demand and drive oxidative phosphorylation by stimulating ATP synthase and increasing electron transport to regenerate ATP. Cytosolic O₂ does not increase glycolysis (glycolysis is anaerobic); NADH typically increases during exercise, not decreases; ATP synthase is driven by proton gradient, not directly by glucose concentration."
+  },
+  {
+   "n": 17,
+   "topic": "Excretion",
+   "q": "A patient in Kano has severe dehydration. Which change in urine composition best indicates the kidney's compensatory response?",
+   "options": [
+    "Decreased urea concentration with increased water content",
+    "Urine pH rising above 9",
+    "Decreased urine volume with increased urea concentration",
+    "Increased urine volume with decreased specific gravity"
+   ],
+   "answer": 2,
+   "explanation": "In dehydration, kidneys conserve water, producing small volumes of concentrated urine with higher urea concentration and higher specific gravity. Increased urine volume or decreased urea concentration would indicate loss of concentrating ability. Urine pH above 9 is physiologically unlikely and not a typical dehydration response."
+  },
+  {
+   "n": 18,
+   "topic": "Reproduction",
+   "q": "A woman in Abuja has a fallopian tube blocked on one side. Which statement is most likely regarding her chances of natural conception?",
+   "options": [
+    "She cannot conceive naturally because fertilisation requires both tubes",
+    "She will produce no ova on the blocked side for the rest of her life",
+    "She can still conceive naturally if the other tube and ovary are functional",
+    "In vitro fertilisation is impossible with a single functioning tube"
+   ],
+   "answer": 2,
+   "explanation": "Fertilisation is possible if one fallopian tube and its ovary are functional, because ovulation and fertilisation can occur on the working side. Blockage of one tube does not prevent ovulation from the affected ovary at times nor does it mean in vitro fertilisation is impossible; IVF bypasses tubes entirely. Fertilisation does not require both tubes."
+  },
+  {
+   "n": 19,
+   "topic": "Classification of living things",
+   "q": "A bacterial strain is placed in a gram-stain and appears violet under the microscope. Which cell wall feature most likely caused this result?",
+   "options": [
+    "Presence of teichoic acid preventing staining",
+    "Lack of peptidoglycan allowing dye penetration",
+    "Thick peptidoglycan layer retaining crystal violet-iodine complex",
+    "High outer membrane lipid content"
+   ],
+   "answer": 2,
+   "explanation": "Gram-positive bacteria retain the crystal violet-iodine complex due to a thick peptidoglycan layer, appearing violet. High outer membrane lipid content characterizes gram-negative bacteria and causes decolorisation. Teichoic acids are present in gram-positive walls but do not prevent staining; lack of peptidoglycan would not retain the dye."
+  },
+  {
+   "n": 20,
+   "topic": "Respiration",
+   "q": "During anaerobic fermentation in yeast, 1 molecule of glucose is converted mainly to ethanol and CO₂, yielding ATP by substrate-level phosphorylation. How many net ATP molecules are produced per glucose by glycolysis in this pathway?",
+   "options": [
+    "4 ATP",
+    "36 ATP",
+    "2 ATP",
+    "0 ATP"
+   ],
+   "answer": 2,
+   "explanation": "Glycolysis yields a net of 2 ATP per glucose regardless of whether pyruvate goes into aerobic respiration or fermentation. 36 ATP is the approximate aerobic yield in older estimates, 4 ATP is the gross ATP produced before accounting for ATP used, and 0 ATP is incorrect because glycolysis produces net ATP."
+  },
+  {
+   "n": 21,
+   "topic": "Diffusion, osmosis and active transport",
+   "q": "A farmer in Oyo places two potato cylinders in solutions for 1 hour. Cylinder A is in 0.2 M sucrose, cylinder B is in distilled water. After 1 hour, cylinder A loses mass and cylinder B gains mass. Which statement best explains these observations?",
+   "options": [
+    "Potato cells produce water by respiration in B, increasing its mass",
+    "Water moves from B into the potato (hypotonic relative to cytoplasm) by osmosis, and water moves out of A into the 0.2 M sucrose (hypertonic) by osmosis",
+    "Active transport pumps water into cylinder B causing it to gain mass",
+    "Sucrose enters the potato cells by diffusion causing cylinder A to lose mass"
+   ],
+   "answer": 1,
+   "explanation": "Water moves across plant cell membranes down its water potential by osmosis. Distilled water is hypotonic relative to potato cytoplasm so water enters B causing gain in mass; 0.2 M sucrose is hypertonic so water leaves A causing loss. Sucrose does not freely diffuse across the plasma membrane and active transport does not pump bulk water into cells."
+  },
+  {
+   "n": 22,
+   "topic": "Diffusion, osmosis and active transport",
+   "q": "A red blood cell is placed in a 0.9% NaCl solution and remains unchanged; the same cell shrinks in 2% NaCl and swells in distilled water. Which explanation is most accurate?",
+   "options": [
+    "2% NaCl is isotonic but causes shrinking due to salt entering the cell",
+    "Red blood cells actively pump Na+ out in distilled water causing swelling",
+    "0.9% NaCl contains equal numbers of ions to the cell but 2% has toxic ions that kill the cell",
+    "0.9% NaCl is isotonic to the cell so there is no net water movement; 2% is hypertonic causing net water loss; distilled water is hypotonic causing net water gain"
+   ],
+   "answer": 3,
+   "explanation": "Isotonic solutions (0.9% NaCl for human RBCs) produce no net osmosis. Hypertonic solutions (2% NaCl) pull water out, shrinking cells. Hypotonic solutions (distilled water) cause water to enter and the cell to swell. Toxicity or active pumping are not required to explain the volume changes."
+  },
+  {
+   "n": 23,
+   "topic": "Diffusion, osmosis and active transport",
+   "q": "A root hair cell uses mineral ions from soil where the ion concentration inside the cell is higher than in soil. Which mechanism and energy source allow this uptake?",
+   "options": [
+    "Endocytosis of soil solution using sunlight energy absorbed by chloroplasts",
+    "Simple diffusion down the concentration gradient without energy",
+    "Facilitated diffusion through ion channels using kinetic energy of ions",
+    "Active transport using energy from ATP produced in the root hair's respiration"
+   ],
+   "answer": 3,
+   "explanation": "Uptake of ions against their concentration gradient requires active transport, which uses ATP from cellular respiration. Simple or facilitated diffusion cannot move ions against a gradient. Root hairs lack chloroplast-based photosynthetic energy and do not use endocytosis for bulk ion uptake."
+  },
+  {
+   "n": 24,
+   "topic": "Transport systems",
+   "q": "Which feature of xylem vessels in maize stems best explains their efficiency in transporting water from roots to leaves?",
+   "options": [
+    "Perforated end walls that prevent movement of water between vessels",
+    "Living cells with many chloroplasts that pump water upward",
+    "Lignified, hollow tubes that form a continuous column and resist collapse under tension",
+    "Presence of valves that actively push water against gravity"
+   ],
+   "answer": 2,
+   "explanation": "Xylem vessels are lignified and form continuous hollow tubes allowing water to be pulled up under tension from transpiration without collapsing. They are dead at maturity (no chloroplasts), perforated end walls allow movement not prevention, and there are no valves in xylem acting like pumps."
+  },
+  {
+   "n": 25,
+   "topic": "Transport systems",
+   "q": "During strenuous exercise, a runner from Kano experiences increased cardiac output. Which combination most directly increases oxygen delivery to leg muscles?",
+   "options": [
+    "Increased blood viscosity and vasoconstriction of muscle arterioles",
+    "Increased heart rate and stroke volume, and local arteriolar dilation in active muscles",
+    "Decrease in blood pressure with constriction of arterioles supplying muscles",
+    "Slower heart rate but increased capillary permeability in muscles"
+   ],
+   "answer": 1,
+   "explanation": "Cardiac output rises with increased heart rate and stroke volume; local arteriolar dilation in active muscles increases blood flow and oxygen delivery. Constriction or increased viscosity would reduce delivery, and a slower heart rate would not increase oxygen supply despite capillary changes."
+  },
+  {
+   "n": 26,
+   "topic": "Transport systems",
+   "q": "Which blood vessel is correctly paired with its typical blood pressure and function?",
+   "options": [
+    "Capillaries — highest pressure; store large volumes of blood",
+    "Pulmonary vein — highest pressure; carries deoxygenated blood to lungs",
+    "Aorta — high pressure; distributes oxygenated blood to systemic circulation",
+    "Veins — high pressure; carry blood from tissues to capillaries rapidly"
+   ],
+   "answer": 2,
+   "explanation": "The aorta is under high pressure as it distributes oxygenated blood to the body. Pulmonary veins carry oxygenated blood to the heart at lower pressure, veins are low-pressure vessels returning blood to the heart, and capillaries have low pressure and are sites of exchange, not high-pressure reservoirs."
+  },
+  {
+   "n": 27,
+   "topic": "Diseases and their control",
+   "q": "A child in Lagos is immunised with a vaccine that contains killed bacteria. Which immune response is most likely to occur and provide protection on later exposure?",
+   "options": [
+    "Long-term passive immunity because the vaccine supplies ready-made antibodies",
+    "Immediate destruction of bacteria by the vaccine without involvement of B cells",
+    "Destruction of all memory cells so that no immune response can occur later",
+    "Activation of B cells producing specific antibodies and creation of memory B cells"
+   ],
+   "answer": 3,
+   "explanation": "Killed (inactivated) vaccines stimulate the adaptive immune response, causing activation of B cells to produce specific antibodies and form memory B cells for future protection. Vaccines do not directly destroy pathogens in the body, do not provide passive immunity (that would be injected antibodies), and do not destroy memory cells."
+  },
+  {
+   "n": 28,
+   "topic": "Diseases and their control",
+   "q": "In a community near Port Harcourt an outbreak of cholera occurs. Which measure will most effectively reduce transmission immediately?",
+   "options": [
+    "Closing schools for one day without addressing water sources",
+    "Removal of all aquatic animals from nearby rivers",
+    "Mass administration of antibiotics to all residents without testing",
+    "Provide safe drinking water and promote boiling of water before drinking"
+   ],
+   "answer": 3,
+   "explanation": "Cholera spreads via contaminated water; ensuring safe drinking water (boiling, chlorination) directly interrupts transmission. Mass antibiotics are inappropriate for prevention and encourage resistance; removing aquatic animals or short school closures do not address the contaminated water source."
+  },
+  {
+   "n": 29,
+   "topic": "Genetics",
+   "q": "In a cross between two pea plants, one heterozygous tall (Tt) and one homozygous short (tt), what fraction of offspring are expected to be tall if T is dominant?",
+   "options": [
+    "1/2",
+    "3/4",
+    "All (1)",
+    "1/4"
+   ],
+   "answer": 0,
+   "explanation": "Cross Tt × tt gives gametes T and t from the heterozygote and t only from the homozygote, producing offspring Tt and tt in a 1:1 ratio. Thus 1/2 (50%) are tall. 3/4 applies to Tt × Tt crosses; 1/4 applies to Tt × Tt recessive outcome; all is incorrect here."
+  },
+  {
+   "n": 30,
+   "topic": "Genetics",
+   "q": "A geneticist in Abuja studies a trait controlled by two independently assorting genes with no dominance: A and a at one locus, B and b at another. Two plants with genotypes AaBb are crossed. What proportion of offspring will be aaBB?",
+   "options": [
+    "1/16",
+    "1/4",
+    "3/16",
+    "1/8"
+   ],
+   "answer": 0,
+   "explanation": "For Aa × Aa the chance of aa is 1/4; for Bb × Bb the chance of BB is 1/4. Since loci assort independently, multiply probabilities: 1/4 × 1/4 = 1/16. 1/4 or 1/8 are too large because they ignore the combined probabilities; 3/16 is incorrect arithmetic."
+  },
+  {
+   "n": 31,
+   "topic": "Nutrition in plants and animals",
+   "q": "A farmer in Kano notices yellowing of cassava leaves starting at the oldest leaves while new leaves remain green. Which mineral deficiency is the most likely cause?",
+   "options": [
+    "Calcium deficiency",
+    "Nitrogen deficiency",
+    "Iron deficiency",
+    "Magnesium deficiency"
+   ],
+   "answer": 1,
+   "explanation": "Yellowing (chlorosis) starting at old leaves while new leaves stay green is typical of nitrogen deficiency because nitrogen is mobile and is transported to new growth. Iron deficiency causes chlorosis in young leaves first (iron is immobile). Calcium deficiency affects growing points and causes deformation, not initial older-leaf yellowing. Magnesium deficiency causes interveinal chlorosis starting with older leaves but often with distinct interveinal pattern."
+  },
+  {
+   "n": 32,
+   "topic": "Nutrition in plants and animals",
+   "q": "A student measures the rate of photosynthesis of a potted maize plant by counting oxygen bubbles from a leaf in water at different light intensities. Which change would directly indicate that increasing light intensity no longer increases photosynthetic rate?",
+   "options": [
+    "The temperature of the water rises slightly",
+    "The size of leaves increases",
+    "The number of oxygen bubbles per minute becomes constant despite further increases in light",
+    "Starch content in leaves decreases"
+   ],
+   "answer": 2,
+   "explanation": "Photosynthetic rate is often measured by oxygen evolution; when light is no longer limiting, oxygen evolution per minute will plateau. Leaf size change and starch content decrease are not immediate direct measures of the instant rate; water temperature rising is an indirect physical effect, not direct evidence that photosynthesis has plateaued."
+  },
+  {
+   "n": 33,
+   "topic": "Support and movement",
+   "q": "Which of the following features of a bone most directly allows it to resist bending forces in the shaft (diaphysis)?",
+   "options": [
+    "Spongy (cancellous) bone with trabeculae",
+    "Articular cartilage covering the epiphysis",
+    "The presence of epiphyseal growth plate",
+    "Dense compact bone arranged in concentric lamellae around a central canal"
+   ],
+   "answer": 3,
+   "explanation": "The diaphysis resists bending due to dense compact bone (cortical bone) with lamellae arranged around Haversian canals, providing strength. Spongy bone provides shock absorption at ends, articular cartilage reduces friction, and the growth plate is for lengthening, not primary bending resistance."
+  },
+  {
+   "n": 34,
+   "topic": "Support and movement",
+   "q": "A sprinter from Lagos strains a hamstring muscle while running. Which sequence correctly describes the immediate musculoskeletal events producing the visible limp?",
+   "options": [
+    "Bone fracture → bone re-modelling within minutes → recovery of strength",
+    "Tendon lengthens permanently → increased contraction force → faster movement",
+    "Muscle fibres tear → pain receptors activated → reflex inhibition of muscle → reduced force during contraction",
+    "Joint capsule tightens → increased blood flow → stronger muscle contraction"
+   ],
+   "answer": 2,
+   "explanation": "A muscle strain involves tearing of muscle fibres, activation of nociceptors causing pain, and reflex inhibition reducing force and producing limping. The other options describe incorrect mechanisms: tendon lengthening does not increase force, bone remodelling is slow after fracture, and joint capsule tightening does not immediately cause stronger contraction."
+  },
+  {
+   "n": 35,
+   "topic": "Cell structure and organisation",
+   "q": "Which organelle is primarily responsible for modifying, packaging and directing proteins produced by rough endoplasmic reticulum in a liver cell?",
+   "options": [
+    "Golgi apparatus",
+    "Smooth endoplasmic reticulum",
+    "Lysosome",
+    "Mitochondrion"
+   ],
+   "answer": 0,
+   "explanation": "Proteins from rough ER are further processed, glycosylated, packaged and sorted in the Golgi apparatus. Mitochondria produce ATP, lysosomes digest cellular debris, and smooth ER synthesises lipids and detoxifies but does not package proteins from rough ER."
+  },
+  {
+   "n": 36,
+   "topic": "Cell structure and organisation",
+   "q": "A microbiology student stains bacterial cells and observes many with a thick peptidoglycan layer but lacking an outer membrane. Which description matches these bacteria?",
+   "options": [
+    "Gram-positive bacteria with purple colour after Gram stain",
+    "Mycoplasma lacking a cell wall",
+    "Gram-negative bacteria with red colour after Gram stain",
+    "Acid-fast bacteria that retain carbol-fuchsin"
+   ],
+   "answer": 0,
+   "explanation": "Bacteria with a thick peptidoglycan layer and no outer membrane are gram-positive and retain crystal violet, appearing purple. Gram-negative bacteria have thin peptidoglycan and an outer membrane and appear red after counterstain. Acid-fast bacteria have mycolic acids and use different stain; Mycoplasma lack cell wall entirely."
+  },
+  {
+   "n": 37,
+   "topic": "Variation and evolution",
+   "q": "In a population of fruit flies, an allele for white eyes is recessive. In a sample of 400 flies, 36 show white eyes. Assuming Hardy-Weinberg equilibrium, what is the expected number of heterozygous (carrier) flies?",
+   "options": [
+    "48",
+    "168",
+    "192",
+    "144"
+   ],
+   "answer": 1,
+   "explanation": "q² = 36/400 = 0.09 so q = 0.3, p = 0.7. Heterozygote frequency = 2pq = 2×0.7×0.3 = 0.42. Expected heterozygotes = 0.42×400 = 168. Options like 144 or 192 are common miscalculations from using wrong p or arithmetic; 48 confuses q²×p."
+  },
+  {
+   "n": 38,
+   "topic": "Variation and evolution",
+   "q": "A population of rabbits on an island displays a new dark coat colour that confers better camouflage from hawks. After several generations the dark form increases in frequency. This is best described as an example of:",
+   "options": [
+    "Genetic drift causing fixation",
+    "Artificial selection by humans",
+    "Natural selection leading to directional selection",
+    "Stabilising selection maintaining average phenotype"
+   ],
+   "answer": 2,
+   "explanation": "Improved survival of dark-coated rabbits due to predator pressure and increase in their frequency is natural selection and specifically directional selection toward a darker phenotype. Genetic drift is random, stabilising selection reduces extremes, and artificial selection involves human choice."
+  },
+  {
+   "n": 39,
+   "topic": "Cell structure and organisation",
+   "q": "A 35-year-old woman in Ibadan is taking medication that is processed in her liver. Which organelle in her hepatocytes is primarily responsible for detoxifying drugs and synthesising lipids needed for membrane repair?",
+   "options": [
+    "Golgi apparatus",
+    "Rough endoplasmic reticulum",
+    "Lysosome",
+    "Smooth endoplasmic reticulum"
+   ],
+   "answer": 3,
+   "explanation": "The smooth endoplasmic reticulum (SER) contains enzymes for detoxification and lipid synthesis in liver cells. The rough ER has ribosomes and is chiefly for protein synthesis, the Golgi apparatus modifies and packages proteins and lipids but is not the main site of detoxification, and lysosomes digest macromolecules rather than synthesise lipids."
+  },
+  {
+   "n": 40,
+   "topic": "Nervous and hormonal coordination",
+   "q": "After a heavy meal at a market in Kano, Mr. Musa's blood glucose rises. Which cells and hormone act to lower his blood glucose by increasing glucose uptake and promoting glycogen formation in the liver?",
+   "options": [
+    "Adrenal medulla cells; adrenaline",
+    "Thyroid follicular cells; thyroxine",
+    "Alpha cells of pancreatic islets; glucagon",
+    "Beta cells of pancreatic islets; insulin"
+   ],
+   "answer": 3,
+   "explanation": "Beta cells in the pancreatic islets secrete insulin, which stimulates cells to take up glucose and promotes glycogen synthesis in the liver, lowering blood glucose. Alpha cells secrete glucagon which raises blood glucose, adrenaline (from the adrenal medulla) also raises glucose by stimulating glycogen breakdown, and thyroxine affects metabolic rate rather than directly lowering post-meal blood glucose."
+  }
+ ]
+}

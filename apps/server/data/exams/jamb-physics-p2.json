@@ -1,0 +1,531 @@
+{
+ "id": "jamb-physics-p2",
+ "exam": "jamb",
+ "subject": "physics",
+ "year": null,
+ "number": 2,
+ "source": "ai",
+ "minutes": 27,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Scalars and vectors",
+   "q": "A student walks 3 km east from her house, then 4 km north to the market in Ibadan. What is her displacement from the house?",
+   "options": [
+    "5 km northeast (magnitude 5 km at 53.1° north of east)",
+    "7 km east of north",
+    "1 km northwest",
+    "5 km due north"
+   ],
+   "answer": 0,
+   "explanation": "Displacement is the straight-line vector from start to finish. Using Pythagoras, magnitude = √(3²+4²)=5 km. Direction = arctan(4/3)=53.13° north of east. Options giving 7 km or 1 km are from adding or subtracting distances incorrectly; '5 km due north' gives wrong direction."
+  },
+  {
+   "n": 2,
+   "topic": "Scalars and vectors",
+   "q": "Two forces act on an object: 10 N at 0° (east) and 10 N at 120° (measured counterclockwise from east). What is the resultant magnitude?",
+   "options": [
+    "17.3 N",
+    "5 N",
+    "10 N",
+    "20 N"
+   ],
+   "answer": 2,
+   "explanation": "Resolve into components: x = 10 cos0 + 10 cos120 = 10 + 10(−1/2) = 5 N; y = 10 sin0 + 10 sin120 = 0 + 10(√3/2) = 5√3 N. Magnitude = √(5²+(5√3)²)=√(25+75)=√100=10 N. 20 N is simple addition ignoring direction; 5 N is only x-component; 17.3 N equals √(100×3) and is incorrect here."
+  },
+  {
+   "n": 3,
+   "topic": "Scalars and vectors",
+   "q": "A car moves with velocity 30 m/s due north and then changes direction to 30 m/s due east in 5 s. What is the magnitude of its average acceleration during the turn?",
+   "options": [
+    "0 m/s²",
+    "30 m/s²",
+    "≈8.49 m/s²",
+    "6.0 m/s²"
+   ],
+   "answer": 2,
+   "explanation": "Average acceleration = Δv / Δt. Initial v = (0,30), final v = (30,0) m/s so Δv = (30,−30) m/s with magnitude = 30√2 ≈42.426 m/s. Divide by 5 s gives ≈8.485 m/s². 6.0 comes from 30/5 (one component only); 30 is mistaken as speed change not vector magnitude; 0 is wrong because direction changed."
+  },
+  {
+   "n": 4,
+   "topic": "Gas laws",
+   "q": "A cylinder contains 2.0 mol of an ideal gas at 300 K and pressure 1.0 × 10⁵ Pa. What is the volume of the gas? (R = 8.314 J/mol·K)",
+   "options": [
+    "498.6 L",
+    "≈49.9 L",
+    "0.0499 L",
+    "4.99 L"
+   ],
+   "answer": 1,
+   "explanation": "Use PV = nRT → V = nRT/P = (2.0×8.314×300)/1.0×10⁵ = 4988.4/1.0×10⁵ = 0.049884 m³ = 49.884 L ≈49.9 L. 0.0499 L is off by 1000 (m³ vs L confusion); 4.99 L is factor-of-10 error; 498.6 L is 10× too large."
+  },
+  {
+   "n": 5,
+   "topic": "Gas laws",
+   "q": "In a sealed rigid container, the pressure of an ideal gas at 20°C is 1.2 × 10⁵ Pa. If the temperature is increased to 70°C, what is the new pressure?",
+   "options": [
+    "0.96 × 10⁵ Pa",
+    "1.2 × 10⁵ Pa",
+    "≈1.5 × 10⁵ Pa",
+    "2.4 × 10⁵ Pa"
+   ],
+   "answer": 2,
+   "explanation": "For a rigid container, pressure ∝ temperature (in K). T1 = 20+273 = 293 K; T2 = 70+273 = 343 K. P2 = P1×T2/T1 = 1.2×10⁵×343/293 ≈1.2×10⁵×1.170 ≈1.404×10⁵ ≈1.40×10⁵ Pa (round to 1.5×10⁵ in options). 0.96×10⁵ suggests inverse change or wrong temperature; 2.4×10⁵ doubles pressure incorrectly; 1.2×10⁵ implies no temperature effect."
+  },
+  {
+   "n": 6,
+   "topic": "Gas laws",
+   "q": "A bicycle pump draws in 500 cm³ of air at atmospheric pressure (1.0 × 10⁵ Pa) and then compresses it to 100 cm³ at constant temperature. Assuming ideal gas behaviour, what is the pressure in the compressed cylinder?",
+   "options": [
+    "1.0 × 10⁵ Pa",
+    "5.0 × 10⁵ Pa",
+    "6.0 × 10⁵ Pa",
+    "2.0 × 10⁴ Pa"
+   ],
+   "answer": 1,
+   "explanation": "Boyle's law at constant temperature: P1V1 = P2V2 => P2 = P1V1/V2 = 1.0×10⁵×(500/100) = 1.0×10⁵×5 = 5.0×10⁵ Pa. 2.0×10⁴ Pa is result of dividing instead of multiplying; 1.0×10⁵ Pa assumes no compression; 6.0×10⁵ Pa is an incorrect scaling."
+  },
+  {
+   "n": 7,
+   "topic": "Simple machines",
+   "q": "At a construction site in Kano, labourers use a block and tackle with 4 supporting ropes to lift a 600 N load at constant speed. Ideal pulley system with no friction. What force must they apply to lift the load?",
+   "options": [
+    "600 N",
+    "150 N",
+    "75 N",
+    "300 N"
+   ],
+   "answer": 1,
+   "explanation": "With 4 supporting ropes sharing the load, ideal mechanical advantage = 4, so effort = load/4 = 600/4 = 150 N. 600 N is no mechanical advantage; 300 N corresponds to 2 supporting ropes; 75 N would correspond to 8 ropes."
+  },
+  {
+   "n": 8,
+   "topic": "Work, energy and power",
+   "q": "A motor lifts a 50 kg generator vertically 8.0 m in 10 s at constant speed in Lagos. What is the power output required (ignore friction)? (g = 9.81 m/s²)",
+   "options": [
+    "4.90 W",
+    "490 W",
+    "39240 W",
+    "≈392.4 W"
+   ],
+   "answer": 3,
+   "explanation": "Work done = mgh = 50×9.81×8 = 3924 J. Power = work/time = 3924/10 = 392.4 W. 4.90 W is off by factor 80; 39240 W is factor 100 too large; 490 W is close (50×9.81≈490 N) but that is force not power — 490 N would be weight, not power."
+  },
+  {
+   "n": 9,
+   "topic": "Work, energy and power",
+   "q": "A ball of mass 0.2 kg is thrown vertically upward with speed 20 m/s from ground level. Neglecting air resistance, what is its maximum height? (g = 10 m/s²)",
+   "options": [
+    "10 m",
+    "40 m",
+    "8 m",
+    "20 m"
+   ],
+   "answer": 3,
+   "explanation": "Use energy or v² = u² − 2gh with v = 0 at max height: 0 = 20² − 2×10×h → h = 400/20 = 20 m. 40 m doubles the result (maybe using g = 5), 10 m is half (using v=10), 8 m is unrelated calculation."
+  },
+  {
+   "n": 10,
+   "topic": "Newton’s laws and momentum",
+   "q": "A 0.5 kg football is kicked by a player in Lagos so that its speed increases from 4.0 m/s to 16.0 m/s in 0.25 s. What average force did the player apply to the ball?",
+   "options": [
+    "8 N",
+    "24 N",
+    "48 N",
+    "12 N"
+   ],
+   "answer": 1,
+   "explanation": "Change in momentum Δp = m(v − u) = 0.5(16 − 4) = 6 kg·m/s. Average force F = Δp/Δt = 6 / 0.25 = 24 N. 48 N would result if time were 0.125 s; 12 N or 8 N are from using incorrect Δv or wrong division."
+  },
+  {
+   "n": 11,
+   "topic": "Newton’s laws and momentum",
+   "q": "A gun of mass 5.0 kg fires a bullet of mass 0.020 kg at 400 m/s horizontally. What recoil speed does the gun acquire (assume gun and bullet initially at rest)?",
+   "options": [
+    "40 m/s (forwards)",
+    "1.6 m/s (backwards)",
+    "0.016 m/s (backwards)",
+    "160 m/s (backwards)"
+   ],
+   "answer": 1,
+   "explanation": "Conservation of momentum: 0 = m_bullet v_bullet + m_gun v_gun. So v_gun = −(m_bullet v_bullet)/m_gun = −(0.02×400)/5 = −8/5 = −1.6 m/s (negative indicates backwards). 0.016 m/s results from wrong decimal placement; 40 or 160 m/s are unrealistic and arise from swapping masses."
+  },
+  {
+   "n": 12,
+   "topic": "Motion",
+   "q": "Ngozi runs along a straight track with constant acceleration. Her speed increases from 3.0 m/s to 11.0 m/s in 4.0 s. How far does she run during this time?",
+   "options": [
+    "14 m",
+    "44 m",
+    "56 m",
+    "28 m"
+   ],
+   "answer": 3,
+   "explanation": "Average speed with constant acceleration = (u+v)/2 = (3+11)/2 = 7 m/s. Distance = average speed × time = 7×4 = 28 m. 56 m would be if final speed used instead of average; 44 m from taking wrong average; 14 m from using acceleration directly without time."
+  },
+  {
+   "n": 13,
+   "topic": "Atomic and nuclear physics",
+   "q": "A sample contains 128 atoms of a radioactive isotope. Its half-life is 4 hours. How many atoms remain after 12 hours?",
+   "options": [
+    "32 atoms",
+    "8 atoms",
+    "64 atoms",
+    "16 atoms"
+   ],
+   "answer": 3,
+   "explanation": "Number of half-lives in 12 hours = 12/4 = 3. Remaining atoms = 128 × (1/2)^3 = 128 × 1/8 = 16. 32 would be after 2 half-lives; 8 after 4 half-lives; 64 after 1 half-life."
+  },
+  {
+   "n": 14,
+   "topic": "Atomic and nuclear physics",
+   "q": "In an atomic orbital model, an electron in hydrogen transitions from n = 4 to n = 2. The energy levels (in units of 13.6 eV) are E_n = −13.6/n² eV. What energy (in eV) is emitted in this transition?",
+   "options": [
+    "10.2 eV",
+    "3.40 eV",
+    "0.85 eV",
+    "2.55 eV"
+   ],
+   "answer": 3,
+   "explanation": "E4 = −13.6/16 = −0.85 eV; E2 = −13.6/4 = −3.4 eV. Emitted energy = E2 − E4 = (−3.4) − (−0.85) = −2.55 eV, magnitude 2.55 eV. 10.2 eV is the n=1 to n=2 transition; 0.85 eV is magnitude of E4; 3.40 eV is magnitude of E2 but not the emitted photon energy."
+  },
+  {
+   "n": 15,
+   "topic": "Sound",
+   "q": "At 20°C, speed of sound in air is 343 m/s. A sonographer in Ibadan emits an ultrasound pulse and measures an echo return after 0.010 s. What is the distance to the reflecting surface?",
+   "options": [
+    "3.43 m",
+    "1.72 m",
+    "17.15 m",
+    "0.86 m"
+   ],
+   "answer": 1,
+   "explanation": "Echo time is for round trip. Distance = (v × t)/2 = 343×0.010/2 = 3.43/2 = 1.715 m ≈ 1.72 m. 3.43 m is the round-trip distance; 0.86 m is half of 1.72 by mistake; 17.15 m is off by factor 10."
+  },
+  {
+   "n": 16,
+   "topic": "Sound",
+   "q": "A tuning fork of frequency 512 Hz produces a standing wave on a string stretched across a hall. If the speed of transverse waves on the string is 256 m/s, what is the wavelength on the string?",
+   "options": [
+    "2.0 m",
+    "0.25 m",
+    "0.5 m",
+    "1.0 m"
+   ],
+   "answer": 2,
+   "explanation": "Wavelength λ = v/f = 256 / 512 = 0.5 m. 2.0 m or 1.0 m would correspond to much lower frequencies; 0.25 m corresponds to doubling the frequency wrongly."
+  },
+  {
+   "n": 17,
+   "topic": "Waves",
+   "q": "At a market in Enugu, a trader strikes a drum producing a note of frequency 256 Hz. A listener at a distance hears the sound after 0.30 s. If speed of sound in air is 340 m/s, what is approximate distance between trader and listener?",
+   "options": [
+    "Approximately 85 m",
+    "Approximately 256 m",
+    "Approximately 102 m",
+    "Approximately 340 m"
+   ],
+   "answer": 2,
+   "explanation": "Distance = speed × time = 340 m/s × 0.30 s = 102 m. The option 85 m would correspond to a lower sound speed; 256 m or 340 m confuse frequency with distance or use 1 s delay."
+  },
+  {
+   "n": 18,
+   "topic": "Waves",
+   "q": "A string fixed at both ends vibrates in its third harmonic with frequency 120 Hz. What is the fundamental frequency of the string?",
+   "options": [
+    "30 Hz",
+    "40 Hz",
+    "360 Hz",
+    "80 Hz"
+   ],
+   "answer": 1,
+   "explanation": "For a string, nth harmonic frequency = n × f1. Here n=3 and f3 = 120 Hz so f1 = 120/3 = 40 Hz. 80 Hz would be double the fundamental; 30 Hz would be f3 if n=4; 360 Hz is 3×120 incorrectly multiplied."
+  },
+  {
+   "n": 19,
+   "topic": "Waves",
+   "q": "A sonar emits pulses at 50 kHz from a boat in Lagos and receives echo from the sea bottom after 0.16 s. If speed of sound in seawater is 1500 m/s, what is depth of sea at that point?",
+   "options": [
+    "75 m",
+    "480 m",
+    "240 m",
+    "120 m"
+   ],
+   "answer": 3,
+   "explanation": "Time is for round trip. Distance = v×t/2 = 1500×0.16/2 = 240/2 = 120 m. 240 m forgets divide by 2; 75 or 480 m are from miscalculation or using wrong speed."
+  },
+  {
+   "n": 20,
+   "topic": "Elasticity and pressure",
+   "q": "A hydraulic jack has small piston area 5.0 cm² and large piston area 500 cm². If a force of 200 N is applied to small piston, what upward force can the jack exert (neglect friction)?",
+   "options": [
+    "2,000 N",
+    "20,000 N",
+    "200 N",
+    "50,000 N"
+   ],
+   "answer": 1,
+   "explanation": "Pressure transmitted: p = F/A. Areas ratio = 500/5 = 100. So output force = input force × area ratio = 200×100 = 20,000 N. 2,000 N uses ratio 10; 200 N forgets multiplication; 50,000 N uses wrong ratio 250."
+  },
+  {
+   "n": 21,
+   "topic": "Measurement and units",
+   "q": "A micrometer screw gauge shows a main scale reading of 5.60 mm and the thimble scale indicates 8 divisions, each division being 0.01 mm. What is the measured diameter of a wire?",
+   "options": [
+    "5.60 mm",
+    "5.78 mm",
+    "5.08 mm",
+    "5.68 mm"
+   ],
+   "answer": 3,
+   "explanation": "The total reading = main scale + thimble × division size = 5.60 mm + 8×0.01 mm = 5.60 + 0.08 = 5.68 mm. A common error is to omit the thimble contribution (giving 5.60 mm) or to add an extra 0.10 mm (giving 5.78 mm)."
+  },
+  {
+   "n": 22,
+   "topic": "Measurement and units",
+   "q": "A motorbike travels from Kano to Kaduna at an average speed of 72 km/h. What is this speed in m/s (exact)?",
+   "options": [
+    "72 m/s",
+    "20 m/s",
+    "2.0 m/s",
+    "19.8 m/s"
+   ],
+   "answer": 1,
+   "explanation": "Convert: 72 km/h = 72×1000 m ÷ 3600 s = 72×(1000/3600) = 72×(5/18) = 72×0.277... = 20 m/s exactly. 19.8 m/s is a rounding of 71.28 km/h and not correct here."
+  },
+  {
+   "n": 23,
+   "topic": "Electrostatics and capacitors",
+   "q": "A 4.0 μF capacitor is connected across a 12 V battery and charged. The battery is then disconnected and a 2.0 μF capacitor (initially uncharged) is connected in parallel with the charged capacitor. What is the resulting common potential difference across both capacitors?",
+   "options": [
+    "12 V",
+    "8.0 V",
+    "6.0 V",
+    "4.0 V"
+   ],
+   "answer": 1,
+   "explanation": "Initial charge on 4.0 μF: Q = C V = 4.0×10⁻⁶ ×12 = 48×10⁻⁶ C. After connecting a 2.0 μF in parallel, total capacitance = 6.0 μF, so V_final = Q_total/C_total = 48×10⁻⁶ / 6.0×10⁻⁶ = 8.0 V. A wrong answer like 6.0 V would follow if one mistakenly averaged voltages instead of conserving charge."
+  },
+  {
+   "n": 24,
+   "topic": "Electrostatics and capacitors",
+   "q": "A parallel-plate capacitor has plate area 0.020 m² and separation 1.0 mm filled with air (ε₀ = 8.85×10⁻¹² F/m). What is its capacitance?",
+   "options": [
+    "1.77×10⁻⁹ F",
+    "8.85×10⁻¹² F",
+    "1.77×10⁻¹¹ F",
+    "1.77×10⁻¹⁰ F"
+   ],
+   "answer": 3,
+   "explanation": "C = ε₀A/d = 8.85×10⁻¹² × 0.020 / 1.0×10⁻³ = (1.77×10⁻¹³) ÷ 1.0×10⁻³ = 1.77×10⁻¹⁰ F. A common error is to forget to convert mm to metres (giving a factor of 10 difference)."
+  },
+  {
+   "n": 25,
+   "topic": "Light and optics",
+   "q": "Ngozi uses a converging lens of focal length 20 cm to form an image of a 5.0 cm tall object placed 30 cm from the lens. What is the height and nature of the image?",
+   "options": [
+    "3.0 cm, upright virtual image",
+    "10 cm, inverted real image",
+    "-10 cm, virtual image",
+    "2.0 cm, inverted real image"
+   ],
+   "answer": 1,
+   "explanation": "Lens formula: 1/f = 1/u + 1/v → 1/20 = 1/30 + 1/v ⇒ 1/v = 1/20 − 1/30 = (3−2)/60 = 1/60 ⇒ v = 60 cm (real, on opposite side). Magnification m = −v/u = −60/30 = −2 so image height = m×object = −2×5.0 = −10 cm (magnitude 10 cm), negative sign indicates inverted. Thus a 10 cm inverted real image is correct."
+  },
+  {
+   "n": 26,
+   "topic": "Light and optics",
+   "q": "Light in water (n = 1.33) strikes the water–air surface at an angle of incidence 60°. What happens to the ray? (Take n_air = 1.00)",
+   "options": [
+    "It is partly reflected and partly transmitted with equal intensities",
+    "It refracts out into air at about 40° to the normal",
+    "It undergoes total internal reflection because 60° exceeds the critical angle (~48.8°)",
+    "It is completely transmitted into air without bending"
+   ],
+   "answer": 2,
+   "explanation": "Critical angle θ_c = sin⁻¹(n_air/n_water) = sin⁻¹(1/1.33) ≈ 48.8°. Since incidence 60° > θ_c, total internal reflection occurs. A common misconception is to apply Snell's law without checking the critical angle and predict refraction."
+  },
+  {
+   "n": 27,
+   "topic": "Current electricity",
+   "q": "A circuit contains a 12 V ideal battery connected to two resistors in series: 4.0 Ω and 8.0 Ω. What is the current in the circuit and the potential difference across the 8.0 Ω resistor?",
+   "options": [
+    "I = 1.0 A; V₈ = 8.0 V",
+    "I = 2.0 A; V₈ = 16 V",
+    "I = 1.0 A; V₈ = 4.0 V",
+    "I = 0.67 A; V₈ = 5.3 V"
+   ],
+   "answer": 0,
+   "explanation": "Total resistance = 4.0 + 8.0 = 12.0 Ω. Current I = 12 V / 12 Ω = 1.0 A. V across 8.0 Ω = I×R = 1.0×8.0 = 8.0 V. A wrong option gives doubled current as if only 6 Ω total (I = 2.0 A)."
+  },
+  {
+   "n": 28,
+   "topic": "Work, energy and power",
+   "q": "Chinedu lifts a 50 kg crate vertically onto a shelf 2.5 m above the floor in 5.0 s. If g = 10 N/kg, what is the average power developed by Chinedu while lifting the crate? (Ignore friction and air resistance.)",
+   "options": [
+    "250 W",
+    "12.5 W",
+    "1250 W",
+    "2500 W"
+   ],
+   "answer": 0,
+   "explanation": "Work done = mgh = 50 × 10 × 2.5 = 1250 J. Average power = work / time = 1250 J / 5.0 s = 250 W, so 250 W is correct. 1250 W wrongly equals the total work (J) treated as power without dividing by time; 12.5 W comes from dividing mass×height (50×2.5=125) by time instead of using g; 2500 W is twice the correct value (likely from using g = 20 N/kg or halving the time)."
+  },
+  {
+   "n": 29,
+   "topic": "Scalars and vectors",
+   "q": "A pedestrian in Abuja walks 3.0 m east then 4.0 m north. What is the magnitude and direction of her resultant displacement measured from the starting point?",
+   "options": [
+    "5.0 m, 53.13° north of east",
+    "5.0 m, 36.87° north of east",
+    "4.0 m, 53.13° north of east",
+    "7.0 m, 53.13° north of east"
+   ],
+   "answer": 0,
+   "explanation": "Resultant magnitude = √(3.0² + 4.0²) = √(9+16) = √25 = 5.0 m. Direction = arctan(4.0/3.0) = 53.13° measured north of east. The 36.87° option is the complementary angle (arctan(3/4)) and 4.0 m or 7.0 m are wrong magnitudes."
+  },
+  {
+   "n": 30,
+   "topic": "Scalars and vectors",
+   "q": "A car's velocity changes from 20 m/s east to 15 m/s north. What is the magnitude of the change in velocity (Δv)?",
+   "options": [
+    "35.0 m/s",
+    "√(20² − 15²) m/s = 12.9 m/s",
+    "√(20² + 15²) m/s = 25.0 m/s",
+    "5.0 m/s"
+   ],
+   "answer": 2,
+   "explanation": "Change in velocity is vector difference: Δv = v_final − v_initial; magnitude = √(20² + 15²) since initial and final are perpendicular = √(400+225)=√625=25.0 m/s. 5.0 m/s confuses magnitudes; 12.9 comes from subtracting squares incorrectly; 35 is simple sum of magnitudes, not vector difference."
+  },
+  {
+   "n": 31,
+   "topic": "Scalars and vectors",
+   "q": "Ngozi runs around a 400 m circular track at constant speed of 8.0 m/s and returns to her starting point in 50 s. Which statement is correct?",
+   "options": [
+    "Her velocity is 8.0 m/s and displacement is 0 m",
+    "Her speed is 8.0 m/s and displacement is 400 m",
+    "Her speed is 8.0 m/s (scalar) and her displacement for the 50 s is 0 m (vector).",
+    "Her velocity is 8.0 m/s and displacement is 400 m"
+   ],
+   "answer": 2,
+   "explanation": "Speed is the scalar magnitude 8.0 m/s. After completing a full lap displacement is zero because final and initial positions coincide. Saying velocity is 8.0 m/s is wrong because velocity is a vector and over the full lap average velocity is 0 m/s; displacement 400 m confuses distance with displacement."
+  },
+  {
+   "n": 32,
+   "topic": "Gas laws",
+   "q": "A sealed rigid cylinder contains 0.50 mol of an ideal gas at temperature 300 K. What is the pressure in pascals? (Use R = 8.31 J mol⁻¹ K⁻¹ and cylinder volume 1.0 × 10⁻² m³.)",
+   "options": [
+    "8.31 × 10³ Pa",
+    "1.25 × 10⁵ Pa",
+    "4.15 × 10⁴ Pa",
+    "2.49 × 10⁵ Pa"
+   ],
+   "answer": 1,
+   "explanation": "Ideal gas law: pV = nRT ⇒ p = nRT/V = (0.50×8.31×300)/(1.0×10⁻²) = (1246.5)/(1.0×10⁻²) = 1.2465×10⁵ Pa ≈ 1.25×10⁵ Pa. 4.15×10⁴ and 8.31×10³ arise from arithmetic or unit mistakes; 2.49×10⁵ is twice the correct value (e.g. forgetting the 0.50 factor)."
+  },
+  {
+   "n": 33,
+   "topic": "Gas laws",
+   "q": "A fixed mass of an ideal gas in a rigid container has pressure 2.0 × 10⁵ Pa at 300 K. If the temperature is increased to 450 K, what is the new pressure?",
+   "options": [
+    "1.33 × 10⁵ Pa",
+    "2.0 × 10⁵ Pa",
+    "3.0 × 10⁵ Pa",
+    "4.5 × 10⁵ Pa"
+   ],
+   "answer": 2,
+   "explanation": "At constant volume, p ∝ T, so p₂ = p₁ × (T₂/T₁) = 2.0×10⁵ × (450/300) = 2.0×10⁵ × 1.5 = 3.0×10⁵ Pa. 1.33×10⁵ is division rather than multiplication; 4.5×10⁵ would be multiplying by 2.25; 2.0×10⁵ assumes no change."
+  },
+  {
+   "n": 34,
+   "topic": "Simple machines",
+   "q": "A block and tackle has two supporting ropes and a movable pulley; ideal (no friction). What is the mechanical advantage and what effort is needed to lift a 900 N load?",
+   "options": [
+    "Mechanical advantage 4, effort 225 N",
+    "Mechanical advantage 2, effort 450 N",
+    "Mechanical advantage 3, effort 300 N",
+    "Mechanical advantage 1, effort 900 N"
+   ],
+   "answer": 1,
+   "explanation": "With one movable pulley and two supporting rope segments the ideal mechanical advantage is 2, so effort = load/2 = 900/2 = 450 N. MA 4 corresponds to two movable pulleys; MA 1 is no advantage; MA 3 is not consistent with two supporting ropes."
+  },
+  {
+   "n": 35,
+   "topic": "Work, energy and power",
+   "q": "A motor in Lagos lifts a 30.0 kg water pump vertically 12.0 m at constant speed in 6.0 s. What is the power output of the motor (take g = 9.81 m/s²)?",
+   "options": [
+    "98.1 W",
+    "58.86 W",
+    "1765.8 W",
+    "588.6 W"
+   ],
+   "answer": 3,
+   "explanation": "Work done = mgh = 30.0×9.81×12.0 = 3531.6 J. Power = work/time = 3531.6/6.0 = 588.6 W. 98.1 W is m g ×1.0/ time error; 1765.8 W is if time were 2 s; 58.86 W is factor of 10 error."
+  },
+  {
+   "n": 36,
+   "topic": "Work, energy and power",
+   "q": "A 2.0 kg mass is pushed along a horizontal rough floor by a constant horizontal force of 20 N through 5.0 m. If the frictional force is 8.0 N, what is the net work done on the mass?",
+   "options": [
+    "40 J",
+    "100 J",
+    "160 J",
+    "60 J"
+   ],
+   "answer": 3,
+   "explanation": "Net force = applied − friction = 20 − 8 = 12 N. Net work = net force × displacement = 12×5.0 = 60 J. 100 J is work by applied force only (20×5), 40 J is work by friction alone (8×5) with wrong sign, 160 J is unrelated (e.g. using kinetic energy with incorrect numbers)."
+  },
+  {
+   "n": 37,
+   "topic": "Atomic and nuclear physics",
+   "q": "A sealed sample contains a radioactive isotope used in a medical clinic in Ibadan. Its activity falls from 1600 counts/min to 200 counts/min in 12 hours. Assuming simple exponential decay, what is the half-life of the isotope (in hours)?",
+   "options": [
+    "4.0 hours",
+    "3.0 hours",
+    "12.0 hours",
+    "6.0 hours"
+   ],
+   "answer": 0,
+   "explanation": "Activity falls by a factor 1600/200 = 8 over 12 hours. Since 8 = 2^3, three half-lives occur in 12 hours, so half-life = 12/3 = 4.0 hours. The tempting 3.0 hours would come from mistakenly using ln(8)/ln(2.5) or other wrong bases; 6.0 or 12.0 hours are from miscounting factors of 2."
+  },
+  {
+   "n": 38,
+   "topic": "Waves",
+   "q": "A violin string of length 0.90 m is fixed at both ends. Waves on the string travel with speed 360 m/s. What is the frequency of the second harmonic (first overtone) produced on the string?",
+   "options": [
+    "800 Hz",
+    "600 Hz",
+    "200 Hz",
+    "400 Hz"
+   ],
+   "answer": 3,
+   "explanation": "For a string fixed at both ends the fundamental frequency f1 = v / (2L) = 360 / (2 × 0.90) = 200 Hz. The second harmonic (first overtone) has frequency f2 = 2 f1 = 400 Hz. 200 Hz is the fundamental; 600 Hz and 800 Hz correspond to the third and fourth harmonics respectively."
+  },
+  {
+   "n": 39,
+   "topic": "Magnetism and electromagnetic induction",
+   "q": "A rectangular coil used by a student in Ibadan has 50 turns and area 0.020 m². It is rotated with its plane perpendicular to a uniform magnetic field of magnitude 0.25 T at a rate of 20 revolutions per second about an axis through its centre. What is the maximum (peak) emf induced in the coil?",
+   "options": [
+    "15.7 V",
+    "10.5 V",
+    "62.8 V",
+    "31.4 V"
+   ],
+   "answer": 3,
+   "explanation": "Maximum emf for a rotating coil: E_max = N B A ω, with ω = 2π f. Here N=50, B=0.25 T, A=0.020 m², f=20 s⁻¹ so ω = 40π rad/s. E_max = 50 × 0.25 × 0.020 × 40π = 10π ≈ 31.4 V. 15.7 V is half this value (common arithmetic slip); 62.8 V is twice (wrong factor 2); 10.5 V is an incorrect calculation."
+  },
+  {
+   "n": 40,
+   "topic": "Work, energy and power",
+   "q": "A mechanic in Ibadan uses a winch to lift a 200 kg motorcycle onto a truck bed 1.50 m above the ground. The lift takes 6.0 s and the winch operates at 80% efficiency. What is the electrical power supplied to the winch? (Take g = 9.8 m/s²)",
+   "options": [
+    "6.13 × 10^2 W",
+    "4.90 × 10^2 W",
+    "4.41 × 10^2 W",
+    "7.35 × 10^2 W"
+   ],
+   "answer": 0,
+   "explanation": "Increase in gravitational potential energy = mgh = 200 × 9.8 × 1.50 = 2940 J. Useful (output) power = 2940 J ÷ 6.0 s = 490 W. With 80% efficiency, input power = 490 W ÷ 0.80 = 612.5 W ≈ 6.13 × 10^2 W. 4.90 × 10^2 W ignores the efficiency loss; 4.41 × 10^2 W is an incorrect extra factor (e.g. 490 × 0.9); 7.35 × 10^2 W would correspond to using a 66.7% efficiency instead of 80%."
+  }
+ ]
+}

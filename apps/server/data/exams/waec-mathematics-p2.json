@@ -1,0 +1,661 @@
+{
+ "id": "waec-mathematics-p2",
+ "exam": "waec",
+ "subject": "mathematics",
+ "year": null,
+ "number": 2,
+ "source": "ai",
+ "minutes": 60,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Matrices and determinants",
+   "q": "Given matrices A = [[2,1],[3,4]] and B = [[1,0],[−1,2]], find matrix AB.",
+   "options": [
+    "[[1,2],[−1,8]]",
+    "[[−1,2],[−3,8]]",
+    "[[0,4],[1,8]]",
+    "[[2,1],[3,4]]"
+   ],
+   "answer": 0,
+   "explanation": "Compute AB: first row of A times columns of B: (2,1)·(1,−1) =2·1+1·(−1)=1; (2,1)·(0,2)=0+2=2. Second row (3,4)·(1,−1)=3−4=−1; (3,4)·(0,2)=0+8=8. So AB = [[1,2],[−1,8]]. Other options show common multiplication mistakes like wrong sign or swapped elements."
+  },
+  {
+   "n": 2,
+   "topic": "Surds",
+   "q": "Rationalise the denominator of (3)/(√5 −1). What is the result?",
+   "options": [
+    "(3(√5 +1))/2",
+    "(3(√5 +1))/4",
+    "(3(√5 −1))/4",
+    "(√5 +1)/3"
+   ],
+   "answer": 1,
+   "explanation": "Multiply numerator and denominator by (√5 +1): 3(√5 +1)/( (√5 −1)(√5 +1) ) = 3(√5 +1)/(5 −1) = 3(√5 +1)/4. Common mistakes include forgetting to multiply numerator by the conjugate or miscomputing 5−1."
+  },
+  {
+   "n": 3,
+   "topic": "Sequences and series",
+   "q": "The nth term of an arithmetic progression is given by a_n = 7 + 3(n −1). What is the sum of the first 20 terms?",
+   "options": [
+    "S20 = 20(7 + 64)/2 = 710",
+    "S20 = 20·35 = 700",
+    "S20 = 20·7 + 3·190 = 650",
+    "S20 = 20·(7 + 3·19) = 520"
+   ],
+   "answer": 0,
+   "explanation": "First term a1 =7. Common difference d =3 so a20 = 7 +3·19 = 64. Sum S20 = 20( a1 + a20 )/2 =20(7 +64)/2 =10·71 =710. Some distractors used wrong formulas or multiplied incorrectly."
+  },
+  {
+   "n": 4,
+   "topic": "Indices and logarithms",
+   "q": "If a = 10^3 and b = 10^−5, what is log_10 (a × b^2)?",
+   "options": [
+    "−1",
+    "1",
+    "−13",
+    "−7"
+   ],
+   "answer": 3,
+   "explanation": "Compute a × b^2 = 10^3 × (10^−5)^2 = 10^3 × 10^−10 = 10^(−7). Therefore log_10 of that is −7. Common mistakes include forgetting to square b (giving −2×5 = −10) or sign errors."
+  },
+  {
+   "n": 5,
+   "topic": "Coordinate geometry",
+   "q": "Find the equation of the line through Lagos (2,1) and Abuja (5,7) in the form y = mx + c.",
+   "options": [
+    "y = 2x − 3",
+    "y = 2x + 1",
+    "y = (3/2)x − 2",
+    "y = 3x − 5"
+   ],
+   "answer": 0,
+   "explanation": "Slope m = (7−1)/(5−2) = 6/3 = 2. Using point (2,1): 1 = 2×2 + c → c = 1 − 4 = −3. So y = 2x − 3. Common errors: wrong slope calculation or sign mistake on c."
+  },
+  {
+   "n": 6,
+   "topic": "Coordinate geometry",
+   "q": "The circle x² + y² − 6x + 4y − 3 = 0 has centre at:",
+   "options": [
+    "(3, −2)",
+    "(3, 2)",
+    "(−3, −2)",
+    "(-3, 2)"
+   ],
+   "answer": 0,
+   "explanation": "Complete the square: x² − 6x + y² + 4y = 3 → (x−3)² − 9 + (y+2)² − 4 = 3, so (x−3)² + (y+2)² = 16. Centre is (3, −2). Sign errors in completing the square lead to the tempting wrong options."
+  },
+  {
+   "n": 7,
+   "topic": "Integration",
+   "q": "If the derivative of F(x) is f(x) = 6x^2 − 4x + 3 and F(0) = 5, find F(x).",
+   "options": [
+    "F(x) = 2x^3 − 2x^2 + 3x + 5",
+    "F(x) = 6x^3/3 − 4x^2/2 + 3x + C",
+    "F(x) = 2x^3 − 2x^2 + 3x + 1",
+    "F(x) = 2x^3 − 2x^2 + 3x"
+   ],
+   "answer": 0,
+   "explanation": "Integrate termwise: ∫6x^2 dx = 2x^3, ∫(−4x) dx = −2x^2, ∫3 dx = 3x. So F(x) = 2x^3 − 2x^2 + 3x + C. Use F(0)=5 gives C=5. The other options omit the constant or give wrong C."
+  },
+  {
+   "n": 8,
+   "topic": "Integration",
+   "q": "Evaluate ∫_1^3 (2x + 1) dx.",
+   "options": [
+    "12",
+    "10",
+    "9",
+    "8"
+   ],
+   "answer": 1,
+   "explanation": "Antiderivative is x^2 + x. Evaluate from 1 to 3: (9+3) − (1+1) = 12 − 2 = 10. Common mistakes: forgetting to subtract the lower limit or mis-evaluating values."
+  },
+  {
+   "n": 9,
+   "topic": "Sets",
+   "q": "Let universal set U = {1,2,3,…,15}. Let A be the set of multiples of 3 in U and B the set of prime numbers in U. What is A ∩ B ?",
+   "options": [
+    "{3}",
+    "{6}",
+    "{3,6}",
+    "{2,3}"
+   ],
+   "answer": 0,
+   "explanation": "Multiples of 3 in U are {3,6,9,12,15}. Primes ≤15 are {2,3,5,7,11,13}. The only common element is 3. Options {6} and {3,6} include non-prime multiples; {2,3} includes 2 which is not a multiple of 3."
+  },
+  {
+   "n": 10,
+   "topic": "Sets",
+   "q": "If |A| = 20, |B| = 15 and |A ∩ B| = 5, what is |A ∪ B| ?",
+   "options": [
+    "30",
+    "25",
+    "20",
+    "35"
+   ],
+   "answer": 0,
+   "explanation": "Use |A ∪ B| = |A| + |B| − |A ∩ B| = 20 + 15 − 5 = 30. 25 would be |A| + |B| − 10 (wrong subtraction); 35 is just |A|+|B| without removing intersection; 20 is |A| only."
+  },
+  {
+   "n": 11,
+   "topic": "Sets",
+   "q": "In a school of 120 pupils, 78 passed Mathematics, 85 passed English and 60 passed both subjects. How many pupils failed both subjects?",
+   "options": [
+    "37",
+    "17",
+    "33",
+    "120"
+   ],
+   "answer": 1,
+   "explanation": "Number who passed at least one = 78 + 85 − 60 = 103. Therefore failed both = 120 − 103 = 17. 37 and 33 are results of common arithmetic errors; 120 is the total number (ignoring passes)."
+  },
+  {
+   "n": 12,
+   "topic": "Probability",
+   "q": "A bag contains 5 red, 4 blue and 3 green counters. Two counters are drawn without replacement. What is the probability both are red?",
+   "options": [
+    "1/3",
+    "5/22",
+    "10/33",
+    "5/33"
+   ],
+   "answer": 3,
+   "explanation": "P(first red) = 5/12, P(second red | first red) = 4/11. Multiply: (5/12)×(4/11)=20/132=5/33. 1/3 = 11/33 (too large); 10/33 doubles the correct numerator; 5/22 = 30/132 (incorrect simplification)."
+  },
+  {
+   "n": 13,
+   "topic": "Probability",
+   "q": "A fair six-sided die is rolled twice. If the first roll is 3, what is the probability the sum of the two rolls is 7?",
+   "options": [
+    "1/12",
+    "1/36",
+    "1/3",
+    "1/6"
+   ],
+   "answer": 3,
+   "explanation": "Given first roll = 3, we need second roll = 4 to make sum 7. The chance of rolling a 4 on one fair die is 1/6. 1/3 would require two favourable faces; 1/12 and 1/36 are results of incorrect conditioning or multiplying probabilities unnecessarily."
+  },
+  {
+   "n": 14,
+   "topic": "Probability",
+   "q": "From 8 pupils (5 boys and 3 girls), a committee of 3 is chosen at random. What is the probability that the committee contains at least one girl?",
+   "options": [
+    "23/28",
+    "3/4",
+    "13/28",
+    "5/8"
+   ],
+   "answer": 0,
+   "explanation": "Total ways = C(8,3)=56. Ways with no girl = choose 3 boys from 5 = C(5,3)=10. So at least one girl = 1 − 10/56 = 46/56 = 23/28. 3/4 = 42/56 (too small); 13/28 and 5/8 are wrong simplifications."
+  },
+  {
+   "n": 15,
+   "topic": "Simultaneous equations and inequalities",
+   "q": "Solve the simultaneous equations 2x + 3y = 7 and x − y = 1. What is x?",
+   "options": [
+    "3",
+    "2",
+    "1",
+    "5/2"
+   ],
+   "answer": 1,
+   "explanation": "From x − y =1, x = y +1. Substitute: 2(y+1)+3y=7 →5y+2=7 →5y=5 →y=1, so x = 2. Options 3 and 1 are incorrect substitution results; 5/2 comes from arithmetic error."
+  },
+  {
+   "n": 16,
+   "topic": "Simultaneous equations and inequalities",
+   "q": "For the region defined by x + 2y ≤ 4 with x ≥ 0 and y ≥ 0, what is the maximum possible value of x?",
+   "options": [
+    "3",
+    "4",
+    "2",
+    "8"
+   ],
+   "answer": 1,
+   "explanation": "Set y = 0 (to maximise x) gives x ≤ 4 from x + 2(0) ≤ 4, so maximum x = 4. 2 and 3 are smaller permissible values; 8 violates the inequality."
+  },
+  {
+   "n": 17,
+   "topic": "Number bases",
+   "q": "Convert the binary number 10111₂ to decimal.",
+   "options": [
+    "22",
+    "19",
+    "21",
+    "23"
+   ],
+   "answer": 3,
+   "explanation": "10111₂ = 1×16 +0×8 +1×4 +1×2 +1×1 = 16 +4 +2 +1 = 23. 21 and 22 arise from dropping or changing a bit; 19 is from mis-evaluating the 16-term."
+  },
+  {
+   "n": 18,
+   "topic": "Number bases",
+   "q": "Write 2025₁₀ in base 5.",
+   "options": [
+    "31100₅",
+    "30100₅",
+    "31000₅",
+    "32000₅"
+   ],
+   "answer": 0,
+   "explanation": "Compute powers: 5^4=625; 2025÷625=3 remainder 150. 150÷125=1 remainder 25. 25÷25=1 remainder 0; the remaining 5 and 1 places are 0. So digits are 3,1,1,0,0 → 31100₅. Other options have incorrect digit placements or remainders."
+  },
+  {
+   "n": 19,
+   "topic": "Variation",
+   "q": "Aisha notices that the monthly electricity bill B (in ₦) for her shop varies directly as the square of the number of hours h a cooling unit runs each day, and inversely as the number of days d in the month. If when h = 6 and d = 30 the bill is ₦7,200, what bill should she expect when h = 8 and d = 30?",
+   "options": [
+    "₦8,533.33",
+    "₦10,240",
+    "₦9,600",
+    "₦12,800"
+   ],
+   "answer": 3,
+   "explanation": "B ∝ h²/d so B = k h²/d. Use given: 7200 = k·6²/30 = k·36/30 ⇒ k = 7200·30/36 = 6000. For h=8,d=30: B = 6000·8²/30 = 6000·64/30 = (6000/30)·64 = 200·64 = 12,800 ₦. The other options arise from wrong powers or arithmetic (e.g. treating variation as linear in h instead of h²)."
+  },
+  {
+   "n": 20,
+   "topic": "Variation",
+   "q": "In a laboratory experiment the time t (minutes) for a reaction to complete varies inversely as the concentration c (mol/L). If at concentration 0.4 mol/L the reaction takes 15 minutes, find the concentration required for the reaction to take 10 minutes.",
+   "options": [
+    "0.27 mol/L",
+    "0.6 mol/L",
+    "0.24 mol/L",
+    "0.8 mol/L"
+   ],
+   "answer": 1,
+   "explanation": "t ∝ 1/c so t = k/c. From 15 = k/0.4 ⇒ k = 6. So 10 = 6/c ⇒ c = 6/10 = 0.6 mol/L. Wrong options come from arithmetic mistakes (inverting wrong term or miscomputing k)."
+  },
+  {
+   "n": 21,
+   "topic": "Angles and circle geometry",
+   "q": "Triangle ABC is right-angled at B and AC is the diameter of a circle. If AB = 8 cm and BC = 6 cm, what is the radius of the circle?",
+   "options": [
+    "7 cm",
+    "10 cm",
+    "5 cm",
+    "4 cm"
+   ],
+   "answer": 2,
+   "explanation": "If AC is diameter and triangle is right at B, then AC is hypotenuse: AC = √(AB²+BC²) = √(64+36) = √100 = 10 cm. Radius = AC/2 = 5 cm. Wrong choices come from incorrect square-root or halving errors."
+  },
+  {
+   "n": 22,
+   "topic": "Differentiation",
+   "q": "For the curve y = 3x³ − 5x² + 2x − 7, find dy/dx and then compute the gradient at x = 2.",
+   "options": [
+    "dy/dx = 9x² − 10x + 2; gradient at x=2 is 20",
+    "dy/dx = 9x² − 10x + 2; gradient at x=2 is 18",
+    "dy/dx = 6x² − 10x + 2; gradient at x=2 is 10",
+    "dy/dx = 9x² − 10x + 2; gradient at x=2 is 16"
+   ],
+   "answer": 1,
+   "explanation": "Differentiate: dy/dx = 9x² − 10x + 2. At x=2: 9·4 − 10·2 +2 = 36 − 20 + 2 = 18. Wrong options come from arithmetic slips or wrong differentiation of 3x³ (some may have used 6x²)."
+  },
+  {
+   "n": 23,
+   "topic": "Fractions, decimals and percentages",
+   "q": "A shop in Kano sells a radio for ₦12,600 after a 10% discount on the marked price. What was the marked price?",
+   "options": [
+    "₦14,000",
+    "₦14,400",
+    "₦11,340",
+    "₦13,860"
+   ],
+   "answer": 0,
+   "explanation": "If discounted price = 90% of marked price M: 0.9M = 12,600 ⇒ M = 12,600/0.9 = 14,000 ₦. The other options come from wrong percentage operations: 13,860 is 90% of 15,400 etc., 14,400 is adding 10% instead of reversing discount."
+  },
+  {
+   "n": 24,
+   "topic": "Fractions, decimals and percentages",
+   "q": "Convert 7/12 to a decimal correct to 3 decimal places.",
+   "options": [
+    "0.5833",
+    "0.586",
+    "0.58",
+    "0.583"
+   ],
+   "answer": 3,
+   "explanation": "7 ÷ 12 = 0.583333... Rounded to 3 decimal places gives 0.583. 0.5833 is not rounded to 3 dp, 0.58 is truncated to 2 dp, 0.586 is an incorrect rounding up."
+  },
+  {
+   "n": 25,
+   "topic": "Statistics",
+   "q": "The marks of 10 students in a test are: 12, 15, 18, 20, 15, 17, 14, 18, 16, 15. What is the mode of this distribution?",
+   "options": [
+    "16",
+    "18",
+    "15",
+    "15 and 18"
+   ],
+   "answer": 2,
+   "explanation": "Mode is the value occurring most frequently. 15 appears three times, 18 appears twice and other values once. Therefore the mode is 15; '15 and 18' is wrong because 18 occurs fewer times."
+  },
+  {
+   "n": 26,
+   "topic": "Statistics",
+   "q": "A vendor in Ibadan records the number of customers per hour for 8 hours as: 10, 12, 9, 11, 14, 8, 12, 14. What is the median number of customers?",
+   "options": [
+    "11.5",
+    "11",
+    "12.5",
+    "12"
+   ],
+   "answer": 0,
+   "explanation": "Order the data: 8,9,10,11,12,12,14,14. With 8 observations, median is average of 4th and 5th values: (11+12)/2 = 11.5. 11 or 12 alone would be incorrect because we must average the two middle values."
+  },
+  {
+   "n": 27,
+   "topic": "Trigonometry",
+   "q": "Solve for θ in 0° ≤ θ < 360°: 2 sin²θ − 1 = 0.",
+   "options": [
+    "θ = 30°, 150°, 210°, 330°",
+    "θ = 0°, 180°",
+    "θ = 60°, 120°, 240°, 300°",
+    "θ = 45°, 135°, 225°, 315°"
+   ],
+   "answer": 3,
+   "explanation": "2 sin²θ −1 = 0 ⇒ sin²θ = 1/2 ⇒ sinθ = ±1/√2 ⇒ θ = 45°,135°,225°,315°. The other sets correspond to sin values of √3/2 or 0, which do not satisfy sin²θ = 1/2."
+  },
+  {
+   "n": 28,
+   "topic": "Quadratic equations",
+   "q": "Solve for x: x² − 5x + 6 = 0.",
+   "options": [
+    "−1 and −6",
+    "−2 and −3",
+    "2 and 3",
+    "1 and 6"
+   ],
+   "answer": 2,
+   "explanation": "Factor: x² −5x +6 = (x−2)(x−3) = 0, so x = 2 or 3. Negative pairs or 1 and 6 do not satisfy the factors or equation."
+  },
+  {
+   "n": 29,
+   "topic": "Matrices and determinants",
+   "q": "Let A = [[2, 3], [1, 4]]. Find det(A).",
+   "options": [
+    "11",
+    "10",
+    "5",
+    "−5"
+   ],
+   "answer": 2,
+   "explanation": "Determinant = (2×4) − (3×1) = 8 − 3 = 5. Option −5 would be sign error; 10 and 11 are arithmetic mistakes."
+  },
+  {
+   "n": 30,
+   "topic": "Quadratic equations",
+   "q": "If x² − 6x + k = 0 has equal roots, find k.",
+   "options": [
+    "12",
+    "9",
+    "36",
+    "3"
+   ],
+   "answer": 1,
+   "explanation": "For equal roots the discriminant must be zero: b² − 4ac = (−6)² − 4·1·k = 36 − 4k = 0, so k = 36/4 = 9. 12 would come from an arithmetic error (36 − 4k = 12 → k = 6), 36 is confusing b² with k, and 3 is off by division."
+  },
+  {
+   "n": 31,
+   "topic": "Quadratic equations",
+   "q": "The product of the roots of 2x² − 5x + 3 = 0 is",
+   "options": [
+    "3/2",
+    "2/3",
+    "5/2",
+    "-3/2"
+   ],
+   "answer": 0,
+   "explanation": "For ax² + bx + c = 0 the product of roots = c/a = 3/2. 2/3 is the reciprocal, -3/2 gives wrong sign, and 5/2 confuses with -b/a or sum."
+  },
+  {
+   "n": 32,
+   "topic": "Quadratic equations",
+   "q": "If one root of x² − (m + 2)x + (2m − 3) = 0 is 3, find m.",
+   "options": [
+    "0",
+    "-1",
+    "1",
+    "2"
+   ],
+   "answer": 0,
+   "explanation": "Substitute x = 3: 9 − (m + 2)·3 + (2m − 3) = 0 → 9 −3m −6 +2m −3 = −m = 0, so m = 0. Other options come from arithmetic slips when collecting terms."
+  },
+  {
+   "n": 33,
+   "topic": "Matrices and determinants",
+   "q": "Let A = [[2, 5], [1, 3]]. Find det(A).",
+   "options": [
+    "-1",
+    "11",
+    "1",
+    "7"
+   ],
+   "answer": 2,
+   "explanation": "det(A) = 2·3 − 5·1 = 6 − 5 = 1. 11 would be 6+5, -1 swaps subtraction order, 7 is 5+2 or another arithmetic error."
+  },
+  {
+   "n": 34,
+   "topic": "Matrices and determinants",
+   "q": "If B = [[0, 1], [−2, 4]], what is B^{-1} (the inverse) ?",
+   "options": [
+    "[[4, -1], [2, 0]]",
+    "[[2, -0.5], [1, 0]]",
+    "[[-2, 0.5], [-1, 0]]",
+    "[[0.5, 0.25], [-0.25, 0]]"
+   ],
+   "answer": 1,
+   "explanation": "det(B) = 0·4 − 1·(−2) = 2. Inverse = (1/det)·[[4, -1], [2, 0]] = (1/2)·[[4, -1], [2, 0]] = [[2, -0.5], [1, 0]]. Other options are either not scaled by 1/2 or have sign errors."
+  },
+  {
+   "n": 35,
+   "topic": "Matrices and determinants",
+   "q": "For C = [[3, 2, 1], [0, 1, -1], [2, 0, 4]], what is det(C)?",
+   "options": [
+    "11",
+    "6",
+    "19",
+    "-6"
+   ],
+   "answer": 1,
+   "explanation": "Using expansion along the first row yields 3·(1·4 − (−1)·0) − 2·(0·4 − (−1)·2) + 1·(0·0 − 1·2) = 3·4 − 2·2 − 2 = 12 − 4 − 2 = 6. 19 or 11 arise from arithmetic mistakes; -6 has incorrect sign."
+  },
+  {
+   "n": 36,
+   "topic": "Surds",
+   "q": "Simplify √50 − √18 + √2.",
+   "options": [
+    "3√2",
+    "√34",
+    "5√2 − 3√2",
+    "2√2"
+   ],
+   "answer": 0,
+   "explanation": "√50 = 5√2, √18 = 3√2 so expression = 5√2 − 3√2 + √2 = 3√2. '5√2 − 3√2' omits adding the final √2; 2√2 is a miscalculation; √34 is treating under-root sum."
+  },
+  {
+   "n": 37,
+   "topic": "Surds",
+   "q": "Rationalise the denominator and simplify: 1 / (√3 − 1).",
+   "options": [
+    "(√3 + 1)/2",
+    "(√3 - 1)/2",
+    "(√3 + 1)/4",
+    "√3 + 1"
+   ],
+   "answer": 0,
+   "explanation": "Multiply numerator and denominator by (√3 + 1): (√3 + 1)/(3 − 1) = (√3 + 1)/2. '√3 + 1' misses dividing by 2, (√3 − 1)/2 has wrong sign, and dividing by 4 is off by factor 2."
+  },
+  {
+   "n": 38,
+   "topic": "Sequences and series",
+   "q": "The sequence 5, 8, 11, 14, ... is arithmetic. What is the 20th term?",
+   "options": [
+    "62",
+    "65",
+    "63",
+    "59"
+   ],
+   "answer": 0,
+   "explanation": "Common difference d = 3, first term a = 5. nth term = a + (n−1)d = 5 + 19·3 = 5 + 57 = 62. 65 would be if d = 3.157..., 59 arises from using 18 instead of 19, 63 is off by 1."
+  },
+  {
+   "n": 39,
+   "topic": "Sequences and series",
+   "q": "The sum S of the first n terms of a geometric progression is 1456 and its first term is 4 and common ratio is 3. Find n.",
+   "options": [
+    "5",
+    "7",
+    "8",
+    "6"
+   ],
+   "answer": 3,
+   "explanation": "S = a( r^n − 1 )/(r − 1) gives 1456 = 4(3^n − 1)/2 = 2(3^n − 1), so 3^n − 1 = 728 and 3^n = 729 = 3^6, hence n = 6. Other choices come from mis-evaluating powers of 3."
+  },
+  {
+   "n": 40,
+   "topic": "Mensuration",
+   "q": "A right circular cone has slant height 13 cm and vertical height 5 cm. Find the radius of the base.",
+   "options": [
+    "12 cm",
+    "10 cm",
+    "6 cm",
+    "8 cm"
+   ],
+   "answer": 0,
+   "explanation": "In a right cone, slant² = height² + radius². So radius² = 13² − 5² = 169 − 25 = 144, radius = 12 cm. Options 8, 6, 10 are common mistakes from arithmetic or misapplied Pythagoras."
+  },
+  {
+   "n": 41,
+   "topic": "Integration",
+   "q": "Find ∫(4x^3 − 6x + 2) dx, given constant of integration C.",
+   "options": [
+    "x^4 − 3x^2 + 2x + C",
+    "x^4 − 3x^2 + C",
+    "x^4 − 6x^2 + 2x + C",
+    "4x^4/4 − 6x^2/2 + 2x + C"
+   ],
+   "answer": 0,
+   "explanation": "Integrate termwise: ∫4x^3 dx = x^4, ∫(−6x) dx = −3x^2, ∫2 dx = 2x. So result x^4 − 3x^2 + 2x + C. The option '4x^4/4 − 6x^2/2 + 2x + C' simplifies to the correct form and is algebraically equivalent; it is therefore misleading but equals the correct answer. Other wrong options omit the 2x term or mis-integrate coefficient."
+  },
+  {
+   "n": 42,
+   "topic": "Integration",
+   "q": "If the velocity of a particle moving along a straight line is v(t) = 6t − 4 (m/s), and at t = 1 s the particle is at position s = 3 m, find its position s at t = 4 s.",
+   "options": [
+    "s = 3 + ∫_{1}^{4} (6t − 4) dt = 3 + [3t^2 − 4t]_{1}^{4} = 3 + (48 − 16) − (3 − 4) = 3 + 32 + 1 = 36 m",
+    "27 m",
+    "41 m",
+    "33 m"
+   ],
+   "answer": 0,
+   "explanation": "Position change = ∫ from 1 to 4 of v dt = [3t^2 − 4t]_1^4 = (3×16 − 16) − (3 − 4) = (48 −16) − (−1) = 32 +1 =33. Initial s =3 so final s = 3 + 33 = 36 m. Option 33 omitted initial position; 27 and 41 come from arithmetic mistakes."
+  },
+  {
+   "n": 43,
+   "topic": "Sets",
+   "q": "Let U = {1,2,3,4,5,6,7,8,9,10}. Let A = {x ∈ U | x is prime} and B = {x ∈ U | x is even}. Find A ∪ B.",
+   "options": [
+    "{1,2,3,4,5,6,7,8,9,10}",
+    "{2,4,6,8,10}",
+    "{2,3,5,7}",
+    "{2,3,5,7,4,6,8,10}"
+   ],
+   "answer": 3,
+   "explanation": "Primes in U are {2,3,5,7} and evens are {2,4,6,8,10}. Their union is {2,3,5,7,4,6,8,10}. Option with all elements wrongly includes non-members 1 and 9; the primes-only and evens-only choices omit the other set."
+  },
+  {
+   "n": 44,
+   "topic": "Probability",
+   "q": "Amina has 5 blue, 3 red and 2 green beads in a bag. She draws one bead at random, replaces it, then draws a second bead. What is the probability she draws two red beads?",
+   "options": [
+    "9/25",
+    "6/25",
+    "3/10",
+    "9/100"
+   ],
+   "answer": 3,
+   "explanation": "With replacement the probability of red on each draw is 3/10, so for two reds multiply: (3/10)×(3/10)=9/100. 3/10 is probability of one red only; 9/25 and 6/25 are incorrect multiplications."
+  },
+  {
+   "n": 45,
+   "topic": "Simultaneous equations and inequalities",
+   "q": "Find all x that satisfy both inequalities: 2x − 3 < 5 and x + 4 ≥ 1.",
+   "options": [
+    "x ≥ −3",
+    "−∞ < x < 4 and x ≥ −3, so −3 ≤ x < 4",
+    "x < 4",
+    "−3 < x < 4"
+   ],
+   "answer": 1,
+   "explanation": "Solve 2x −3 <5 → 2x <8 → x <4. And x +4 ≥1 → x ≥ −3. Intersection is −3 ≤ x <4. Other options either omit the lower bound or make it strict."
+  },
+  {
+   "n": 46,
+   "topic": "Number bases",
+   "q": "Convert the base-7 number 345_7 to base 10.",
+   "options": [
+    "180_7",
+    "190",
+    "3×49 + 4×7 + 5 = 170",
+    "(3×49) + (4×7) + 5 = 147 + 28 + 5 = 180"
+   ],
+   "answer": 3,
+   "explanation": "Value = 3·7² + 4·7 + 5 = 147 + 28 + 5 = 180 in base 10. The wrong arithmetic gives 170 or wrong notation; 180_7 is incorrect base."
+  },
+  {
+   "n": 47,
+   "topic": "Variation",
+   "q": "The mass m (kg) of cassava a cart carries varies directly as the number of trips t and inversely as the travel time per trip h (hours). If 3 trips taking 2 hours each carry 540 kg, how much can the cart carry on 5 trips taking 1.5 hours each?",
+   "options": [
+    "1500 kg",
+    "800 kg",
+    "900 kg",
+    "1200 kg"
+   ],
+   "answer": 3,
+   "explanation": "m = k·t/h. From 540 = k·3/2 so k = 540·2/3 = 360. For 5 trips of 1.5 h: m = 360·5/1.5 = 360·(10/3) = 1200 kg. Options like 900 or 800 arise from wrong use of proportionality (e.g. forgetting to divide by h or using additive errors)."
+  },
+  {
+   "n": 48,
+   "topic": "Angles and circle geometry",
+   "q": "Points A, B and C lie on a circle with centre O. If ∠AOB = 140°, what is the size of the inscribed angle ∠ACB that subtends the same arc AB?",
+   "options": [
+    "40°",
+    "70°",
+    "140°",
+    "110°"
+   ],
+   "answer": 1,
+   "explanation": "The central angle ∠AOB subtending arc AB is twice any inscribed angle subtending the same arc, so ∠ACB = ½·140° = 70°. 140° would be the central angle (not the inscribed angle); 40° or 110° are not half of 140° and come from common mistakes in halving or using supplementary relations incorrectly."
+  },
+  {
+   "n": 49,
+   "topic": "Differentiation",
+   "q": "Differentiate y = (2x + 1)(x^2 − 3x). Find dy/dx.",
+   "options": [
+    "6x² − 5x − 3",
+    "6x² − 10x",
+    "6x² − 10x − 3",
+    "4x² − 5x − 3"
+   ],
+   "answer": 2,
+   "explanation": "Expand first: y = (2x+1)(x^2 −3x) = 2x^3 −6x^2 + x^2 −3x = 2x^3 −5x^2 −3x. Then dy/dx = 6x^2 −10x −3. Mistakes come from differentiating only one factor (giving 6x^2 −10x) or wrong combination of coefficients (giving 6x^2 −5x −3)."
+  },
+  {
+   "n": 50,
+   "topic": "Fractions, decimals and percentages",
+   "q": "Aisha buys a shirt priced at ₦3,200. The shop gives 15% discount on the price and then adds 5% VAT on the discounted price. What is the final price she pays, to the nearest naira?",
+   "options": [
+    "₦3,040",
+    "₦2,992",
+    "₦2,856",
+    "₦2,720"
+   ],
+   "answer": 2,
+   "explanation": "Discounted price = 3200·(1 − 0.15) = 3200·0.85 = ₦2,720. After 5% VAT: 2720·1.05 = ₦2,856. ₦2,720 is before VAT; ₦2,992 or ₦3,040 result from applying percentages in the wrong order or using 15% of the wrong base."
+  }
+ ]
+}

@@ -1,0 +1,531 @@
+{
+ "id": "jamb-biology-p2",
+ "exam": "jamb",
+ "subject": "biology",
+ "year": null,
+ "number": 2,
+ "source": "ai",
+ "minutes": 27,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Variation and evolution",
+   "q": "In a village near Ibadan, a population of beetles shows two colour forms: green and brown. After several years of increased predation by birds that hunt mostly against brown tree trunks, the frequency of green beetles rises from 0.2 to 0.6. Which process best explains this change in allele frequency?",
+   "options": [
+    "Natural selection favouring the green colour allele",
+    "Gene flow from a nearby population of green beetles",
+    "Genetic drift due to random sampling",
+    "Mutation introducing new green alleles"
+   ],
+   "answer": 0,
+   "explanation": "Predation that differentially removes brown beetles causes the green allele to confer higher survival, so natural selection increases its frequency. Genetic drift is random and unlikely to cause a consistent directional change in a large population. Mutation rates are too low to produce such a rapid shift, and gene flow would require migrants to be the source rather than differential survival."
+  },
+  {
+   "n": 2,
+   "topic": "Variation and evolution",
+   "q": "A breeder in Lagos selects only the tallest maize plants each season for seed. After ten generations the population mean height increases. Which mechanism is primarily responsible for this change?",
+   "options": [
+    "Genetic drift causing random height changes",
+    "Artificial selection increasing the frequency of alleles for tallness",
+    "Founder effect reducing genetic variation",
+    "Stabilizing selection maintaining average height"
+   ],
+   "answer": 1,
+   "explanation": "Choosing tallest plants each generation is artificial selection: humans select alleles for tallness, increasing their frequency. Stabilizing selection reduces extremes, not increase mean. Founder effect and genetic drift are random processes and unlikely to produce a consistent directional increase under deliberate selection."
+  },
+  {
+   "n": 3,
+   "topic": "Variation and evolution",
+   "q": "Two species of fish in the Niger Delta are very similar but cannot interbreed because their mating seasons occur at different times. This reproductive isolation is best described as:",
+   "options": [
+    "Hybrid inviability, a postzygotic barrier",
+    "Temporal isolation, a prezygotic barrier",
+    "Mechanical isolation, a postzygotic barrier",
+    "Behavioral isolation, caused by different courtship rituals"
+   ],
+   "answer": 1,
+   "explanation": "Different mating times prevent gametes from meeting, which is temporal isolation and acts before fertilisation (prezygotic). Mechanical isolation involves incompatible reproductive structures, and hybrid inviability is a postzygotic problem where hybrids fail to develop. Behavioral isolation involves differences in courtship, not timing."
+  },
+  {
+   "n": 4,
+   "topic": "Nutrition in plants and animals",
+   "q": "A farmer waters his tomato plants with a solution high in nitrate (NO₃⁻) but low in potassium (K⁺). Which deficiency symptom is most likely to appear in the plants?",
+   "options": [
+    "Chlorosis of young leaves due to nitrate deficiency",
+    "Necrotic leaf edges due to excess nitrate",
+    "Poor fruit development and weak stems due to potassium deficiency",
+    "Stunted root growth due to potassium toxicity"
+   ],
+   "answer": 2,
+   "explanation": "Potassium is important for fruit development and stem strength; low K⁺ causes weak stems and poor fruits. Nitrate deficiency causes general chlorosis but the farmer supplied high nitrate. Excess nitrate does not cause necrotic leaf edges; potassium toxicity, not deficiency, would be unlikely and stunted roots are more typical of severe phosphorus deficiency."
+  },
+  {
+   "n": 5,
+   "topic": "Nutrition in plants and animals",
+   "q": "A child in Abuja presents with swollen legs, a pot-bellied appearance and fragile hair. Which nutritional deficiency is most consistent with these signs?",
+   "options": [
+    "Protein deficiency (kwashiorkor)",
+    "Iron deficiency (iron-deficiency anaemia)",
+    "Vitamin D deficiency (rickets)",
+    "Vitamin C deficiency (scurvy)"
+   ],
+   "answer": 0,
+   "explanation": "Kwashiorkor from severe protein deficiency presents with oedema (swollen legs), pot-belly, and hair changes. Scurvy causes bleeding gums and poor wound healing, iron deficiency causes pallor and fatigue, and rickets causes bone deformities rather than oedema and pot-belly."
+  },
+  {
+   "n": 6,
+   "topic": "Nutrition in plants and animals",
+   "q": "During digestion in the human small intestine, which enzyme and product pairing is correct?",
+   "options": [
+    "Lipase → amino acids",
+    "Amylase (pancreatic) → triglycerides",
+    "Maltase → glucose",
+    "Pepsin → fatty acids"
+   ],
+   "answer": 2,
+   "explanation": "Maltase breaks maltose into glucose. Pepsin is a protease that produces peptides, not fatty acids. Pancreatic amylase produces maltose and other oligosaccharides, not triglycerides. Lipase breaks triglycerides into fatty acids and glycerol, not amino acids."
+  },
+  {
+   "n": 7,
+   "topic": "Transport systems",
+   "q": "A patient in Kano has low blood pressure and low plasma protein concentration. Which change in the capillaries of peripheral tissues is most likely?",
+   "options": [
+    "Decreased hydrostatic pressure causing less filtration and no oedema",
+    "Reduced oncotic pressure leading to increased net filtration and tissue oedema",
+    "Increased oncotic pressure causing fluid reabsorption and dehydration",
+    "Increased blood viscosity reducing filtration but increasing tissue perfusion"
+   ],
+   "answer": 1,
+   "explanation": "Low plasma proteins lower oncotic pressure, so less fluid is pulled back into capillaries, increasing net filtration and causing oedema. Increased oncotic pressure would promote reabsorption, not dehydration. Decreased hydrostatic pressure would reduce filtration, and blood viscosity changes do not directly increase tissue perfusion as stated."
+  },
+  {
+   "n": 8,
+   "topic": "Transport systems",
+   "q": "In plant xylem, water moves mainly upwards from roots to leaves. Which mechanism contributes most to this ascent in tall trees during daytime transpiration?",
+   "options": [
+    "Cohesion–tension from transpiration pull",
+    "Root pressure pushing water to the top in tall trees",
+    "Active pumping of water by xylem vessels",
+    "Diffusion of water vapour through phloem"
+   ],
+   "answer": 0,
+   "explanation": "Transpiration creates tension in the continuous water column; cohesion between water molecules transmits this pull, lifting water in tall trees. Xylem vessels do not actively pump; root pressure is usually insufficient for tall trees. Phloem transports solutes, not by diffusion of water vapour."
+  },
+  {
+   "n": 9,
+   "topic": "Classification of living things",
+   "q": "A student in Enugu finds a microscopic organism with no nucleus, circular DNA, and a cell wall containing peptidoglycan. To which kingdom or domain does it belong?",
+   "options": [
+    "Bacteria (Domain Bacteria)",
+    "Archaea (Domain Archaea)",
+    "Protista (Kingdom Protista)",
+    "Fungi (Kingdom Fungi)"
+   ],
+   "answer": 0,
+   "explanation": "Prokaryotes with circular DNA and peptidoglycan cell walls are bacteria in Domain Bacteria. Fungi are eukaryotic and have chitin in cell walls. Protists are eukaryotic. Archaea are prokaryotic but their cell walls lack peptidoglycan and have distinct membrane chemistry."
+  },
+  {
+   "n": 10,
+   "topic": "Classification of living things",
+   "q": "Three organisms share the following features: heterotrophic nutrition, chitin cell walls in some species, and non-photosynthetic. Which taxonomic group fits these traits?",
+   "options": [
+    "Fungi",
+    "Monera",
+    "Animalia",
+    "Plantae"
+   ],
+   "answer": 0,
+   "explanation": "Fungi are heterotrophic, often have chitin in cell walls, and are non-photosynthetic. Plantae are photosynthetic and have cellulose walls, Animalia are heterotrophic but lack cell walls, and Monera (prokaryotes) do not have chitin cell walls typical of fungi."
+  },
+  {
+   "n": 11,
+   "topic": "Respiration",
+   "q": "During vigorous exercise, a runner from Kano breathes faster and deeper. Which of the following best explains the immediate increase in rate of respiration at the cellular level?",
+   "options": [
+    "Increased breathing directly raises blood glucose, which speeds up respiration",
+    "Increased oxygen demand causes faster electron transport in mitochondria, raising ATP production and CO₂ output",
+    "More oxygen in the lungs causes haemoglobin to release oxygen to tissues, slowing respiration",
+    "Muscle cells switch to anaerobic glycolysis exclusively, so mitochondria stop consuming oxygen"
+   ],
+   "answer": 1,
+   "explanation": "During exercise muscle cells consume more ATP, so mitochondria increase oxidative phosphorylation (electron transport) to meet demand, producing more CO₂ and consuming more O₂. Anaerobic glycolysis may also occur but does not stop mitochondrial activity; breathing does not directly raise blood glucose; increased oxygen availability causes haemoglobin to bind more, not release, oxygen."
+  },
+  {
+   "n": 12,
+   "topic": "Respiration",
+   "q": "A biochemistry student from Enugu measures ATP yield from one molecule of glucose under aerobic conditions. What is the closest accepted total ATP yield per glucose in typical eukaryotic cells?",
+   "options": [
+    "About 6 ATP",
+    "About 2 ATP",
+    "About 30–32 ATP",
+    "About 100 ATP"
+   ],
+   "answer": 2,
+   "explanation": "Aerobic respiration (glycolysis, link reaction, Krebs cycle and oxidative phosphorylation) yields approximately 30–32 ATP per glucose in eukaryotes. 2 ATP is the net from glycolysis alone; 6 ATP is too low and 100 ATP is an overestimate not supported by current cell bioenergetics."
+  },
+  {
+   "n": 13,
+   "topic": "Respiration",
+   "q": "During anaerobic respiration in human muscle, pyruvate is converted to lactate. Why does this conversion allow glycolysis to continue?",
+   "options": [
+    "It removes pyruvate which is toxic and would halt glycolysis",
+    "It increases oxygen supply to the cell, restoring aerobic respiration",
+    "It produces extra ATP directly from lactate formation",
+    "It regenerates NAD+ from NADH so glycolysis can oxidize glyceraldehyde-3-phosphate"
+   ],
+   "answer": 3,
+   "explanation": "Conversion of pyruvate to lactate oxidises NADH back to NAD+, which is required for glyceraldehyde-3-phosphate dehydrogenase in glycolysis to continue producing ATP. Lactate formation does not produce ATP directly, does not increase oxygen supply, and pyruvate toxicity is not the main reason for the pathway."
+  },
+  {
+   "n": 14,
+   "topic": "Diffusion, osmosis and active transport",
+   "q": "A plant cell placed in a 0.6 M sucrose solution becomes flaccid. The cell sap has an effective osmotic concentration of 0.3 M. Which statement is correct about water movement and cell turgor?",
+   "options": [
+    "Water moves out of the cell by osmosis, reducing turgor pressure",
+    "Water moves into the cell by osmosis, increasing turgor pressure",
+    "Water moves out only by active transport requiring ATP",
+    "No net water movement occurs because sucrose cannot cross the membrane"
+   ],
+   "answer": 0,
+   "explanation": "The external solution (0.6 M) is hypertonic relative to the cell sap (0.3 M), so water moves out of the cell by osmosis, causing loss of turgor (flaccid). Sucrose impermeability does not prevent osmosis; water movement is passive, not active transport requiring ATP."
+  },
+  {
+   "n": 15,
+   "topic": "Diffusion, osmosis and active transport",
+   "q": "A root hair cell uses active transport to accumulate nitrate (NO₃⁻) from dilute soil. Which of the following is required for this uptake to occur against the concentration gradient?",
+   "options": [
+    "High internal nitrate concentration to facilitate passive diffusion",
+    "Photosynthesis in the root hair to generate oxygen for nitrate binding",
+    "ATP to power protein carriers (pumps) that move nitrate into the cell",
+    "Movement of nitrate by bulk flow only, without carrier proteins"
+   ],
+   "answer": 2,
+   "explanation": "Active transport of ions like nitrate against their gradient requires ATP to drive carrier proteins (pumps). Passive diffusion cannot occur against a gradient; root hairs do not perform photosynthesis to aid nitrate uptake, and bulk flow is not sufficient for uptake against a concentration gradient."
+  },
+  {
+   "n": 16,
+   "topic": "Diffusion, osmosis and active transport",
+   "q": "A freshwater fish in the Niger Delta gains water by osmosis across its gills. Which adaptation helps the fish avoid water overload?",
+   "options": [
+    "Excreting large volumes of dilute urine to remove excess water",
+    "Actively transporting Na+ out of the blood into the water to lower internal osmolarity",
+    "Closing gill surfaces permanently to stop water entry",
+    "Drinking large amounts of water to maintain ion balance"
+   ],
+   "answer": 0,
+   "explanation": "Freshwater fish excrete large volumes of very dilute urine to eliminate excess water while actively retaining ions. They typically actively uptake ions (not expel Na+), they do not drink much freshwater, and they cannot close gills permanently as gas exchange would cease."
+  },
+  {
+   "n": 17,
+   "topic": "Support and movement",
+   "q": "A carpenter in Lagos slips and injures his forearm by bending his elbow suddenly. Which pair of muscles primarily acts to flex the elbow and which to extend it?",
+   "options": [
+    "Flexor carpi radialis extends the elbow; extensor carpi radialis longus flexes the elbow",
+    "Deltoid flexes the elbow; pectoralis major extends the elbow",
+    "Triceps brachii flexes the elbow; biceps brachii extends the elbow",
+    "Biceps brachii flexes the elbow; triceps brachii extends the elbow"
+   ],
+   "answer": 3,
+   "explanation": "The biceps brachii is the main flexor of the elbow, while the triceps brachii is the main extensor; they act antagonistically. The other options confuse muscle actions or list muscles that act at the shoulder or wrist, not primarily at the elbow joint."
+  },
+  {
+   "n": 18,
+   "topic": "Support and movement",
+   "q": "A student compares bone and cartilage. Which characteristic correctly distinguishes compact bone from cartilage?",
+   "options": [
+    "Both tissues have the same blood supply but bone lacks cells",
+    "Compact bone is highly mineralised with Haversian systems; cartilage is avascular and has chondrocytes in lacunae",
+    "Compact bone is flexible and avascular; cartilage is rigid and vascular",
+    "Cartilage contains osteons while bone contains chondrocytes"
+   ],
+   "answer": 1,
+   "explanation": "Compact bone is mineralised and organised into Haversian systems (osteons) with a blood supply, while cartilage is avascular and contains chondrocytes in lacunae embedded in a matrix. The wrong options reverse properties or make incorrect claims about cell presence."
+  },
+  {
+   "n": 19,
+   "topic": "Excretion",
+   "q": "A patient in Abuja has high blood urea concentration and low urine volume. Which renal condition is most consistent with these observations?",
+   "options": [
+    "Diabetes insipidus causing increased urine osmolarity and low blood urea",
+    "Increased aldosterone causing high urine volume and low blood urea",
+    "Excess ADH causing polyuria and decreased blood urea",
+    "Reduced glomerular filtration rate (GFR) leading to urea retention and oliguria"
+   ],
+   "answer": 3,
+   "explanation": "A reduced GFR means less filtrate is formed, so urea accumulates in blood and urine volume falls (oliguria). Increased aldosterone increases water retention but typically reduces urine volume while raising blood sodium; it does not lower blood urea as stated. Excess ADH causes low urine volume (not polyuria). Diabetes insipidus causes large volumes of dilute urine, opposite to the scenario."
+  },
+  {
+   "n": 20,
+   "topic": "Excretion",
+   "q": "During urine formation in the nephron, which process occurs mainly in the proximal convoluted tubule (PCT)?",
+   "options": [
+    "Final concentration of urine under control of ADH",
+    "Active secretion of aldosterone into the tubule lumen",
+    "Filtration of plasma proteins from blood into Bowman's capsule",
+    "Reabsorption of glucose and amino acids via carrier-mediated transport"
+   ],
+   "answer": 3,
+   "explanation": "The PCT is the principal site for reabsorption of glucose and amino acids by carrier-mediated transport along with large amounts of Na+ and water. Filtration of plasma occurs at Bowman's capsule, final concentration is mainly at collecting duct under ADH, and aldosterone is a hormone acting on tubule cells but is not actively secreted into the lumen."
+  },
+  {
+   "n": 21,
+   "topic": "Reproduction",
+   "q": "A woman in Ibadan is told she ovulates on day 14 of her 28-day cycle. Which event most likely occurs nearest to ovulation?",
+   "options": [
+    "Menstruation begins with shedding of the endometrium",
+    "A mature Graafian follicle ruptures and releases an ovum",
+    "The endometrium becomes thin due to low oestrogen",
+    "The corpus luteum forms and secretes progesterone"
+   ],
+   "answer": 1,
+   "explanation": "Ovulation (around day 14) is the rupture of a mature Graafian follicle and release of the ovum. The corpus luteum forms after ovulation, not before. Menstruation occurs at the start of the cycle (day 1), and oestrogen before ovulation thickens the endometrium rather than thinning it."
+  },
+  {
+   "n": 22,
+   "topic": "Nervous and hormonal coordination",
+   "q": "A farmer in Kano notices that his goats produce less milk after they experience long periods of heat stress. Which hormone change is most responsible for reduced milk production during heat stress?",
+   "options": [
+    "Decrease in thyroxine (T4) secretion",
+    "Increase in growth hormone secretion",
+    "Increase in insulin secretion",
+    "Decrease in prolactin secretion"
+   ],
+   "answer": 3,
+   "explanation": "Prolactin directly stimulates milk production, and heat stress commonly reduces prolactin secretion, causing lower milk yield. Insulin and growth hormone do not directly cause the acute drop in milk secretion from heat stress, and a drop in thyroxine would affect metabolism more generally but is not the primary cause."
+  },
+  {
+   "n": 23,
+   "topic": "Genetics",
+   "q": "In a cross between two pea plants both heterozygous for tallness (Tt × Tt) where T (tall) is dominant, what proportion of the offspring are expected to be heterozygous?",
+   "options": [
+    "3/4",
+    "2/3",
+    "1/4",
+    "1/2"
+   ],
+   "answer": 3,
+   "explanation": "Tt × Tt gives genotypes TT, Tt, Tt, tt (1:2:1). Thus half (2/4 = 1/2) are heterozygous. 1/4 is homozygous dominant or recessive, 3/4 is the proportion showing the dominant phenotype, and 2/3 would be the fraction heterozygous among phenotypically tall offspring (excluding tt)."
+  },
+  {
+   "n": 24,
+   "topic": "Cell structure and organisation",
+   "q": "A biology student in Enugu uses onion epidermal cells and stains them to see structures. Which organelle will be seen as a prominent membrane-bound structure containing a dark-staining nucleolus?",
+   "options": [
+    "Ribosome",
+    "Mitochondrion",
+    "Golgi apparatus",
+    "Nucleus"
+   ],
+   "answer": 3,
+   "explanation": "The nucleus is a prominent membrane-bound organelle containing the nucleolus which stains darkly. Mitochondria are smaller and not easily seen as a nucleolus-containing structure with simple light microscopy. Ribosomes are too small to resolve individually and are not membrane-bound, while the Golgi is also membrane-bound but does not contain a nucleolus."
+  },
+  {
+   "n": 25,
+   "topic": "Reproduction",
+   "q": "A teacher explains that assisted reproductive technology used by couples in Lagos sometimes involves in vitro fertilisation (IVF). Which step is essential to IVF?",
+   "options": [
+    "Fertilisation inside the fallopian tube followed by natural implantation",
+    "Injection of hormones into the embryo to increase viability",
+    "Transfer of spermatogonia into the ovary",
+    "Fertilisation of an egg by sperm outside the woman's body"
+   ],
+   "answer": 3,
+   "explanation": "IVF requires fertilisation of the egg by sperm in vitro (in the lab) and then transfer of the embryo to the uterus. Transfer of spermatogonia into the ovary is not a technique used in IVF. Fertilisation inside the fallopian tube is natural conception, not IVF. Injecting hormones into embryos is not a routine or essential IVF step."
+  },
+  {
+   "n": 26,
+   "topic": "Nervous and hormonal coordination",
+   "q": "A patient at a clinic in Abuja has low blood glucose and high adrenaline. Which immediate effect of adrenaline explains the raised blood glucose?",
+   "options": [
+    "Stimulation of glycogenolysis in the liver",
+    "Activation of lipogenesis in adipose tissue",
+    "Increase in glucose uptake by muscle cells",
+    "Increase in insulin secretion from the pancreas"
+   ],
+   "answer": 0,
+   "explanation": "Adrenaline stimulates glycogenolysis in the liver, releasing glucose into the blood, which raises blood glucose. Adrenaline suppresses insulin secretion rather than increasing it. It promotes lipolysis (not lipogenesis), and it reduces insulin-mediated glucose uptake in some tissues, so 'increase in muscle glucose uptake' is incorrect."
+  },
+  {
+   "n": 27,
+   "topic": "Genetics",
+   "q": "In humans, colour-blindness is X-linked recessive. A colour-blind man from Ibadan marries a woman who is a carrier. What is the probability that their son will be colour-blind?",
+   "options": [
+    "1/2",
+    "0",
+    "1/4",
+    "1"
+   ],
+   "answer": 0,
+   "explanation": "Man is X^cY, woman is X^C X^c (carrier). Sons receive Y from father and X from mother, so 50% (1/2) of sons get X^c and will be colour-blind. 0 or 1 are incorrect; 1/4 is the probability among all children (both sexes) being colour-blind and not the specific probability for sons."
+  },
+  {
+   "n": 28,
+   "topic": "Reproduction",
+   "q": "A man in Sokoto is infertile because his sperm have very low motility. Which structure defect is most likely responsible for reduced sperm motility?",
+   "options": [
+    "Acrosome failure to release enzymes",
+    "Flagellum with defective axoneme microtubules",
+    "Large midpiece with excess mitochondria",
+    "Abnormal Sertoli cells producing more inhibin"
+   ],
+   "answer": 1,
+   "explanation": "Sperm motility depends on the flagellum's axoneme microtubule structure (9+2 arrangement); defects here reduce motility. Acrosome enzyme release affects fertilisation, not motility. A large midpiece with more mitochondria would increase energy and likely improve motility, not reduce it. Abnormal Sertoli cells affecting inhibin alter spermatogenesis regulation but motility specifically points to flagellar defects."
+  },
+  {
+   "n": 29,
+   "topic": "Nervous and hormonal coordination",
+   "q": "During a reflex withdrawal of the hand from a hot iron, which neural pathway is used to cause rapid contraction of flexor muscles before conscious awareness?",
+   "options": [
+    "A loop via the hypothalamus and pituitary gland",
+    "A spinal reflex arc with sensory neuron → interneuron → motor neuron",
+    "A direct motor response from cerebellum without spinal involvement",
+    "A descending cortical pathway from motor cortex to spinal cord"
+   ],
+   "answer": 1,
+   "explanation": "The withdrawal reflex is mediated by a spinal reflex arc: sensory neuron synapses with interneurons in the spinal cord which activate motor neurons rapidly, before cortical awareness. Cortical pathways are slower and involve conscious processing. The hypothalamus-pituitary axis is hormonal and too slow. The cerebellum modulates movement but does not produce the immediate spinal reflex without spinal involvement."
+  },
+  {
+   "n": 30,
+   "topic": "Nutrition in plants and animals",
+   "q": "A student from Lagos measures the dry mass of seedlings grown in two pots: Pot A illuminated with full sunlight, Pot B kept in shade. After 3 weeks, Pot A has higher dry mass and thicker leaves. Which statement best explains these observations?",
+   "options": [
+    "Pot A had higher transpiration rate causing more mineral uptake which increased mass.",
+    "Pot B had increased respiration using up reserves so leaves became thinner.",
+    "Pot A had higher rate of photosynthesis, producing more carbohydrate for growth.",
+    "Pot B had more chlorophyll so it used sugars for energy rather than growth."
+   ],
+   "answer": 2,
+   "explanation": "More light increases photosynthetic rate, producing more carbohydrates that are converted to biomass, giving higher dry mass and thicker leaves. Increased transpiration alone does not directly raise dry mass; respiration consuming reserves would reduce mass, and more chlorophyll in shade is unlikely to cause thinner leaves by diverting sugars."
+  },
+  {
+   "n": 31,
+   "topic": "Diseases and their control",
+   "q": "In a rural clinic in Benin City, children are vaccinated with BCG at birth. Which disease does BCG primarily protect against, and by which mechanism?",
+   "options": [
+    "Measles; BCG provides passive immunity by transfer of antibodies.",
+    "Tuberculosis; BCG stimulates cell-mediated immunity against Mycobacterium tuberculosis.",
+    "Tetanus; BCG produces antitoxin to neutralise tetanus toxin.",
+    "Polio; BCG induces neutralising antibodies to inactivate poliovirus."
+   ],
+   "answer": 1,
+   "explanation": "BCG (Bacillus Calmette–Guérin) is a live attenuated vaccine that primarily protects against tuberculosis by inducing T-cell mediated immunity. It does not protect against polio, measles, or tetanus, which require different vaccines and immune mechanisms (neutralising antibodies or antitoxin)."
+  },
+  {
+   "n": 32,
+   "topic": "Ecology",
+   "q": "A conservation group near Jos reintroduces a predator to control an overabundant herbivore. Over 5 years, herbivore numbers drop and vegetation recovers, but small rodent numbers fall too. Which ecological concept best explains the rodent decline?",
+   "options": [
+    "Competitive exclusion because rodents and herbivores competed for the same food.",
+    "Trophic cascade caused by predator-mediated changes in herbivore abundance and habitat structure.",
+    "Mutualism breakdown as predator removal disrupted rodent symbionts.",
+    "Primary succession because the vegetation recovery created a new habitat unsuitable for rodents."
+   ],
+   "answer": 1,
+   "explanation": "Reintroduction of a predator can trigger a trophic cascade: reduced herbivores allow vegetation to recover, altering habitat and indirectly affecting rodents. Competitive exclusion is wrong because rodents were affected indirectly, not by direct competition with large herbivores. Mutualism breakdown and primary succession do not fit the described predator–herbivore–vegetation dynamics."
+  },
+  {
+   "n": 33,
+   "topic": "Variation and evolution",
+   "q": "A population of mosquitoes in Kano are mostly resistant to insecticide due to a recessive allele r. Initially 36% of mosquitoes are r/r. After several years of insecticide use, frequency of r/r rises to 49%. Assuming Hardy-Weinberg conditions except selection, what is the change in allele frequency of r? (Let q² = frequency of r/r.)",
+   "options": [
+    "q rises from 0.36 to 0.49, so allele frequency increases by 0.13.",
+    "q rises from 0.36 to 0.49, so allele frequency increases by 0.13 (but rounded).",
+    "q rises from 0.60 to 0.70, so allele frequency increases by 0.10.",
+    "q rises from 0.40 to 0.30, so allele frequency decreases by 0.10."
+   ],
+   "answer": 2,
+   "explanation": "If q² = 0.36 then q = √0.36 = 0.60. If q² = 0.49 then q = √0.49 = 0.70. The increase in allele frequency q is 0.70 − 0.60 = 0.10. The distractors incorrectly take q as equal to q² or give wrong arithmetic."
+  },
+  {
+   "n": 34,
+   "topic": "Nutrition in plants and animals",
+   "q": "A farmer in Oyo applies urea (CO(NH₂)₂) to his maize field. Which process in soil bacteria converts ammonium from urea into nitrate that plants can absorb, and which intermediate is produced?",
+   "options": [
+    "Ammonification; nitrate (NO₃⁻) is produced directly without intermediate.",
+    "Nitrification; nitrite (NO₂⁻) is produced as an intermediate.",
+    "Denitrification; nitrogen gas (N₂) is produced as an intermediate.",
+    "Nitrogen fixation; ammonia (NH₃) is produced as an intermediate."
+   ],
+   "answer": 1,
+   "explanation": "Urea is hydrolysed to ammonium which soil nitrifying bacteria oxidise to nitrite (NO₂⁻) then to nitrate (NO₃⁻) in nitrification. Nitrogen fixation converts N₂ to ammonia, not relevant here; denitrification reduces nitrate to N₂; ammonification produces ammonium from organic N, not nitrate directly."
+  },
+  {
+   "n": 35,
+   "topic": "Diseases and their control",
+   "q": "A Lagos clinic prescribes oral rehydration solution (ORS) to a child with acute diarrhoea. Which component and property of ORS most directly improves water absorption in the small intestine?",
+   "options": [
+    "Glucose; sodium–glucose co-transport increases sodium and water uptake.",
+    "Sodium chloride alone; sodium by itself moves water independent of glucose.",
+    "Bicarbonate; it neutralises acid and so increases osmotic water movement.",
+    "Potassium; it draws water by osmosis into enterocytes."
+   ],
+   "answer": 0,
+   "explanation": "Glucose promotes sodium uptake via the sodium–glucose co-transporter in intestinal epithelial cells; water follows osmotically. Potassium is important for electrolyte balance but does not drive sodium-coupled water uptake. Bicarbonate corrects acidosis but not the primary mechanism, and sodium alone is less effective than sodium with glucose for co-transport."
+  },
+  {
+   "n": 36,
+   "topic": "Ecology",
+   "q": "In a restored mangrove near the Niger Delta biodiversity surveys show high species richness but low evenness. Which description matches this result?",
+   "options": [
+    "Only non-native species are present and all are abundant.",
+    "Species are equally abundant but only a few species are present.",
+    "Species numbers are low and each species has similar population size.",
+    "Many species are present but a few species are numerically dominant while others are rare."
+   ],
+   "answer": 3,
+   "explanation": "High richness with low evenness means many different species exist, but abundances are uneven — a few dominate and many are rare. The other options describe low richness, equal abundances, or dominance by non-natives which are not synonymous with high richness combined with low evenness."
+  },
+  {
+   "n": 37,
+   "topic": "Variation and evolution",
+   "q": "A breeder in Abeokuta crosses two tomato plants that differ in two independent genes: fruit shape (round R dominant to elongated r) and colour (red C dominant to yellow c). Parents are RrCc × RrCc. What is the expected proportion of offspring that are elongated and yellow?",
+   "options": [
+    "1/8",
+    "1/4",
+    "3/16",
+    "1/16"
+   ],
+   "answer": 3,
+   "explanation": "Elongated yellow genotype is rr cc. For each gene rr occurs with probability 1/4 and cc with 1/4. Independent assortment gives (1/4)×(1/4) = 1/16. The other fractions are probabilities for other genotype combinations (3/16 is heterozygote/dominant mixes, 1/4 and 1/8 are incorrect products)."
+  },
+  {
+   "n": 38,
+   "topic": "Nutrition in plants and animals",
+   "q": "A student measures oxygen uptake of a goldfish at 20°C and finds 2.0 cm³ O₂ per hour. Q₁₀ for metabolic rate in this species is 2. What oxygen uptake would you expect at 30°C?",
+   "options": [
+    "1.0 cm³ O₂ per hour",
+    "2.5 cm³ O₂ per hour",
+    "4.0 cm³ O₂ per hour",
+    "3.0 cm³ O₂ per hour"
+   ],
+   "answer": 2,
+   "explanation": "Q₁₀ = 2 means the rate doubles for a 10°C rise. From 20°C to 30°C the rate doubles: 2.0 × 2 = 4.0 cm³ O₂/h. The other options are not consistent with a Q₁₀ of 2."
+  },
+  {
+   "n": 39,
+   "topic": "Diseases and their control",
+   "q": "A community in Zamfara has an outbreak of cholera. Which public-health measure most directly reduces cholera transmission, and why?",
+   "options": [
+    "Vaccinate only infants; adult vaccination is unnecessary because adults cannot transmit cholera.",
+    "Quarantine of all symptomatic patients for 1 month; cholera is not spread person-to-person by casual contact over that timescale.",
+    "Mass use of insecticide-treated nets; cholera is transmitted by mosquitoes.",
+    "Ensure safe drinking water by chlorination; Vibrio cholerae spreads via contaminated water."
+   ],
+   "answer": 3,
+   "explanation": "Cholera is transmitted primarily through faecal-contaminated water and food; chlorinating water supplies reduces Vibrio cholerae and transmission. Insecticide-treated nets target vector-borne diseases and are irrelevant; while isolation of severe cases and hygiene help, a month-long quarantine is excessive and incorrect about transmission; vaccination strategies include broader groups in outbreaks, so limiting to infants is wrong."
+  },
+  {
+   "n": 40,
+   "topic": "Transport systems",
+   "q": "A plantain farmer in Ibadan notices that older leaves wilt while younger leaves stay turgid during a dry spell. Which structural feature of xylem vessels, absent in phloem sieve tubes, most directly allows continuous water transport from roots to leaves under tension?",
+   "options": [
+    "Lignified, continuous hollow tubes formed from dead cells",
+    "Presence of living cytoplasm and chloroplasts facilitating active transport",
+    "Companion cells supplying ATP to sieve tubes",
+    "End walls with sieve plates perforated for flow"
+   ],
+   "answer": 0,
+   "explanation": "Xylem vessels are dead at maturity with lignified walls and form continuous hollow tubes that resist collapse under tension, allowing water to be pulled up by transpiration. Companion cells and living cytoplasm are features of phloem sieve tubes, not xylem; sieve plates are characteristic of phloem and would impede the unbroken column needed for tension transport; chloroplasts are absent in xylem vessels."
+  }
+ ]
+}

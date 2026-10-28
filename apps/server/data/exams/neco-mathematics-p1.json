@@ -1,0 +1,791 @@
+{
+ "id": "neco-mathematics-p1",
+ "exam": "neco",
+ "subject": "mathematics",
+ "year": null,
+ "number": 1,
+ "source": "ai",
+ "minutes": 60,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Quadratic equations",
+   "q": "Solve the quadratic equation x² - 5x + 6 = 0.",
+   "options": [
+    "x = 1 or x = 6",
+    "x = -2 or x = -3",
+    "x = 3/2 or x = 4",
+    "x = 2 or x = 3"
+   ],
+   "answer": 3,
+   "explanation": "Factor x² - 5x + 6 = (x - 2)(x - 3) so roots are x = 2 and x = 3. Other options show sign errors or incorrect factor pairs."
+  },
+  {
+   "n": 2,
+   "topic": "Quadratic equations",
+   "q": "The product of the roots of x² - (m + 1)x + m = 0 is 6. Find m.",
+   "options": [
+    "m = 1/6",
+    "m = 5",
+    "m = 6",
+    "m = -6"
+   ],
+   "answer": 2,
+   "explanation": "For ax²+bx+c=0, product of roots = c/a = m. Given m = 6. Thus m = 6. Other options confuse product with sum or invert the value."
+  },
+  {
+   "n": 3,
+   "topic": "Quadratic equations",
+   "q": "A ball thrown upwards has height h(t) = -5t² + 20t + 10 metres. At what time t (in seconds) is the ball at maximum height?",
+   "options": [
+    "t = 1 s",
+    "t = 10/5 s",
+    "t = 4 s",
+    "t = 2 s"
+   ],
+   "answer": 3,
+   "explanation": "Vertex time t = -b/(2a) = -20/(2·-5) = 20/10 = 2 s. Other choices arise from wrong sign or arithmetic mistakes; 10/5 = 2 also equals correct value but is presented oddly — the correct time given is 2 s."
+  },
+  {
+   "n": 4,
+   "topic": "Fractions, decimals and percentages",
+   "q": "Express 7/12 as a percentage to two decimal places.",
+   "options": [
+    "57.50%",
+    "59.00%",
+    "58.33%",
+    "58.25%"
+   ],
+   "answer": 2,
+   "explanation": "7 ÷ 12 = 0.583333..., as a percentage 58.333...% ≈ 58.33%. 58.25% comes from 0.5825 (7/12 not), others are common rounding or calculation errors."
+  },
+  {
+   "n": 5,
+   "topic": "Integration",
+   "q": "Evaluate ∫ (3x² − 4x + 1) dx, given constant of integration C.",
+   "options": [
+    "x³ − 4x² + x + C",
+    "x³ − 2x + x + C",
+    "x³ − 2x² + x + C",
+    "x³ − 2x² + 1x² + C"
+   ],
+   "answer": 2,
+   "explanation": "Integrate termwise: ∫3x² dx = x³, ∫(−4x) dx = −2x², ∫1 dx = x. So result x³ − 2x² + x + C is correct. The first wrong option doubles the −4x term to −4x² (common arithmetic slip); the others mis-integrate terms."
+  },
+  {
+   "n": 6,
+   "topic": "Integration",
+   "q": "Find ∫ from 1 to 3 of (2/x) dx. (Give exact value.)",
+   "options": [
+    "ln 3 − ln 1 = ln 3",
+    "2 ln 3 − 2 ln 1 = 2 ln 3",
+    "ln(3/1) = ln 3",
+    "2(3 − 1) = 4"
+   ],
+   "answer": 1,
+   "explanation": "∫(2/x) dx = 2 ln|x| so definite integral = 2[ln 3 − ln 1] = 2 ln 3 because ln 1 = 0. A tempting wrong choice is ln 3 (forgot the factor 2); 4 comes from mistakenly integrating 2/x as 2x."
+  },
+  {
+   "n": 7,
+   "topic": "Integration",
+   "q": "If velocity v(t) = 6t − 4 (m/s) and initial displacement s(0) = 5 m, find displacement s(t).",
+   "options": [
+    "s(t) = 3t² − 4t",
+    "s(t) = 3t² − 4t + 5",
+    "s(t) = 3t² + 5",
+    "s(t) = 6t² − 4t + 5"
+   ],
+   "answer": 1,
+   "explanation": "Displacement is integral of velocity: ∫(6t − 4) dt = 3t² − 4t + C. Using s(0)=5 gives C=5, so s(t)=3t² − 4t +5. The first wrong omits constant; the third drops −4t; the second doubles the quadratic coefficient."
+  },
+  {
+   "n": 8,
+   "topic": "Simultaneous equations and inequalities",
+   "q": "Amina and Chinedu share ₦9,000. Amina has ₦1,800 more than Chinedu. How much does Chinedu have?",
+   "options": [
+    "₦2,700",
+    "₦3,300",
+    "₦3,600",
+    "₦4,200"
+   ],
+   "answer": 2,
+   "explanation": "Let Chinedu = x, Amina = x + 1800, so x + x + 1800 = 9000 → 2x = 7200 → x = 3600. Wrong choices come from arithmetic slips: 3300 from halving 6600, 4200 from misplacing 1800, 2700 from subtracting 1800 then halving incorrectly."
+  },
+  {
+   "n": 9,
+   "topic": "Simultaneous equations and inequalities",
+   "q": "Solve for real x: 3(x − 2) ≤ 2x + 1.",
+   "options": [
+    "x ≤ 5",
+    "x ≤ 7",
+    "x ≥ 7",
+    "x ≤ 3"
+   ],
+   "answer": 1,
+   "explanation": "Expand: 3x − 6 ≤ 2x + 1 → 3x − 2x ≤ 1 + 6 → x ≤ 7. The common mistakes are sign errors (giving x ≥ 7) or arithmetic slips leading to 5 or 3."
+  },
+  {
+   "n": 10,
+   "topic": "Sequences and series",
+   "q": "The first term of an arithmetic progression is 7 and common difference is 5. What is the 10th term?",
+   "options": [
+    "52",
+    "50",
+    "57",
+    "47"
+   ],
+   "answer": 0,
+   "explanation": "nth term = a + (n−1)d, so a₁₀ = 7 + 9×5 = 7 + 45 = 52. 57 would be a + n d (off-by-one), 47 subtracts instead of adds, 50 is arithmetic error."
+  },
+  {
+   "n": 11,
+   "topic": "Sequences and series",
+   "q": "Find the sum of the geometric series 8 + 4 + 2 + ... + 1 (stopping at 1).",
+   "options": [
+    "14",
+    "15",
+    "12",
+    "16"
+   ],
+   "answer": 1,
+   "explanation": "This is geometric with a=8, r=1/2, terms until 1: 8,4,2,1 (4 terms). Sum = a(1−r^n)/(1−r) = 8(1−(1/2)^4)/(1−1/2)=8(1−1/16)/(1/2)=8×(15/16)×2=15. 16 is infinite-series sum 8/(1−1/2); 14 or 12 are arithmetic mistakes."
+  },
+  {
+   "n": 12,
+   "topic": "Surds",
+   "q": "Simplify √75 to the form a√b where b is integer and square-free.",
+   "options": [
+    "25√3",
+    "3√25",
+    "5√15",
+    "5√3"
+   ],
+   "answer": 3,
+   "explanation": "√75 = √(25×3)=5√3. 25√3 multiplies by 5 incorrectly; 3√25 is equivalent to 15 but not simplified; 5√15 is wrong factorization."
+  },
+  {
+   "n": 13,
+   "topic": "Surds",
+   "q": "Rationalize the denominator: (3)/(√2 − 1).",
+   "options": [
+    "3(√2 + 1)",
+    "3(2 − 1)",
+    "3(√2 − 1)",
+    "3/(√2 + 1)"
+   ],
+   "answer": 0,
+   "explanation": "Multiply numerator and denominator by conjugate √2 + 1: 3(√2 + 1)/(2 − 1) = 3(√2 + 1). The first wrong repeats original sign; the third wrongly evaluates conjugate product as 1 without applying to numerator; second fails to rationalize."
+  },
+  {
+   "n": 14,
+   "topic": "Trigonometry",
+   "q": "A ladder leans against a wall making an angle of 60° with the ground. If the foot of the ladder is 3 m from the wall, find the length of the ladder (to 2 decimal places).",
+   "options": [
+    "5.20 m",
+    "3.00 m",
+    "6.00 m",
+    "3.46 m"
+   ],
+   "answer": 2,
+   "explanation": "Length of ladder = adjacent / cos 60° = 3 / cos60° = 3 / 0.5 = 6.00 m. A common error is to use sin 60° (which would give 3 / (√3/2) = 3.46 m) or to confuse adjacent and opposite."
+  },
+  {
+   "n": 15,
+   "topic": "Differentiation",
+   "q": "If s(t) = t²√t (metres), find v(t) = ds/dt.",
+   "options": [
+    "(3/2) t^{1/2} m/s",
+    "2 t^{3/2} m/s",
+    "(5/2) t^{3/2} m/s",
+    "(5/2) t^{1/2} m/s"
+   ],
+   "answer": 2,
+   "explanation": "s(t)=t²·t^{1/2}=t^{5/2}. Then v=ds/dt=(5/2) t^{3/2}. A common mistake is differentiating t²√t as separate terms leading to wrong exponents."
+  },
+  {
+   "n": 16,
+   "topic": "Differentiation",
+   "q": "If f(x)=ln(3x+1), find f'(x).",
+   "options": [
+    "1/(x+1)",
+    "3/(3x+1)",
+    "3x/(3x+1)",
+    "1/(3x+1)"
+   ],
+   "answer": 1,
+   "explanation": "Derivative of ln(u) is u'/u. Here u=3x+1 so u'=3 and f'(x)=3/(3x+1). Mistakes include forgetting to multiply by derivative of inner function."
+  },
+  {
+   "n": 17,
+   "topic": "Sets",
+   "q": "Universal set U = {1,2,3,4,5,6,7,8,9,10}. If A = {2,4,6,8,10} and B = {1,2,3,4,5}, what is A ∩ B?",
+   "options": [
+    "{1,2,3,4,5,6,8,10}",
+    "{2,4,6,8,10}",
+    "{1,3,5}",
+    "{2,4}"
+   ],
+   "answer": 3,
+   "explanation": "Intersection A ∩ B are elements common to A and B: 2 and 4. Other options show union, A itself, or elements only in B; these are typical errors."
+  },
+  {
+   "n": 18,
+   "topic": "Sets",
+   "q": "Let A = {x | x is a prime number less than 12} and B = {2,3,5}. Which of the following is A \\ B?",
+   "options": [
+    "{ }",
+    "{7,11}",
+    "{2,3,5,7,11}",
+    "{2,3,5}"
+   ],
+   "answer": 1,
+   "explanation": "Primes less than 12 are {2,3,5,7,11}. Removing B={2,3,5} leaves {7,11}. Common mistakes include misunderstanding set difference or listing the wrong complement."
+  },
+  {
+   "n": 19,
+   "topic": "Indices and logarithms",
+   "q": "Simplify (8^3)^(1/3) × 4^(1/2).",
+   "options": [
+    "12",
+    "32",
+    "8",
+    "16"
+   ],
+   "answer": 3,
+   "explanation": "(8^3)^(1/3) = 8^(3·1/3)=8^1=8. 4^(1/2)=2. Product = 8×2=16. Mistakes include wrong fractional exponent rules or arithmetic."
+  },
+  {
+   "n": 20,
+   "topic": "Indices and logarithms",
+   "q": "Solve for x: log₃ (x) = 4 − log₃(2).",
+   "options": [
+    "54",
+    "27/2",
+    "162",
+    "81/2"
+   ],
+   "answer": 3,
+   "explanation": "Use log rules: log₃ x = 4 − log₃2 = log₃(3^4) − log₃2 = log₃(81/2). So x = 81/2 = 40.5. Common errors are treating subtraction as division in the wrong order or miscomputing 3^4."
+  },
+  {
+   "n": 21,
+   "topic": "Number bases",
+   "q": "Convert the binary number 1101011₂ to decimal (base 10).",
+   "options": [
+    "111",
+    "106",
+    "109",
+    "107"
+   ],
+   "answer": 3,
+   "explanation": "1101011₂ = 1×2⁶ + 1×2⁵ + 0×2⁴ + 1×2³ + 0×2² + 1×2¹ + 1×2⁰ = 64 + 32 + 0 + 8 + 0 + 2 + 1 = 107. A common error is misplacing powers of 2 (giving 109 or 111) or omitting a bit (giving 106)."
+  },
+  {
+   "n": 22,
+   "topic": "Number bases",
+   "q": "Calculate 356₈ + 474₈ and give the answer in base 8.",
+   "options": [
+    "1052₈",
+    "1062₈",
+    "1042₈",
+    "1152₈"
+   ],
+   "answer": 0,
+   "explanation": "Convert to decimal: 356₈ = 238₁₀, 474₈ = 316₁₀, sum = 554. Convert 554 to base 8: 554 ÷ 8 = 69 R2; 69 ÷ 8 = 8 R5; 8 ÷ 8 = 1 R0; 1 ÷ 8 = 0 R1 → 1052₈. Mistakes come from wrong carries when converting back to base 8 (giving other 4-digit octal results)."
+  },
+  {
+   "n": 23,
+   "topic": "Number bases",
+   "q": "Express the decimal number 125 in base 5.",
+   "options": [
+    "1000₅",
+    "450₅",
+    "10000₅",
+    "100₅"
+   ],
+   "answer": 0,
+   "explanation": "125 = 5³, so in base 5 it is 1×5³ + 0×5² + 0×5¹ + 0×5⁰ = 1000₅. Errors like 450₅ or 100₅ come from incorrect place-value decomposition or wrong powers of 5; 10000₅ would equal 5⁴ = 625 in decimal, which is too large."
+  },
+  {
+   "n": 24,
+   "topic": "Statistics",
+   "q": "The scores of students in a Lagos mock test were: 40, 55, 60, 55, 70, 55, 80. What is the median score?",
+   "options": [
+    "55",
+    "50",
+    "60",
+    "56"
+   ],
+   "answer": 0,
+   "explanation": "Order the data: 40, 55, 55, 55, 60, 70, 80. With 7 values the median is the 4th value, which is 55. Choosing 60 or 50 shows confusion with mean or mis-counting the middle position; 56 is an impossible median here because all values are integers given in the set."
+  },
+  {
+   "n": 25,
+   "topic": "Statistics",
+   "q": "A company in Ibadan reports ages of its 20 workers in grouped form: 20–29 (6 workers), 30–39 (8 workers), 40–49 (6 workers). Using class mid-points, what is the mean age?",
+   "options": [
+    "34.5 years",
+    "35 years",
+    "34 years",
+    "33.5 years"
+   ],
+   "answer": 0,
+   "explanation": "Mid-points: 20–29 → 24.5, 30–39 → 34.5, 40–49 → 44.5. Weighted sum = 6×24.5 + 8×34.5 + 6×44.5 = 147 + 276 + 267 = 690. Mean = 690 ÷ 20 = 34.5 years. Wrong options arise from arithmetic or using wrong mid-points (e.g. 25, 35, 45)."
+  },
+  {
+   "n": 26,
+   "topic": "Statistics",
+   "q": "Given the data set 10, 14, 14, 12, find the population standard deviation (to two decimal places).",
+   "options": [
+    "1.50",
+    "2.00",
+    "1.66",
+    "1.87"
+   ],
+   "answer": 2,
+   "explanation": "Mean = (10+14+14+12)/4 = 12.5. Squared deviations: (−2.5)²=6.25, (1.5)²=2.25, (1.5)²=2.25, (−0.5)²=0.25. Sum = 11. Variance (population) = 11/4 = 2.75. Standard deviation = √2.75 ≈ 1.6583 ≈ 1.66. Other choices come from using sample formula (divide by n−1) or arithmetic mistakes."
+  },
+  {
+   "n": 27,
+   "topic": "Angles and circle geometry",
+   "q": "A circle has radius 7 cm. A chord of the circle is 12 cm long. What is the perpendicular distance from the centre to the chord?",
+   "options": [
+    "√13 cm",
+    "5 cm",
+    "3 cm",
+    "√37 cm"
+   ],
+   "answer": 0,
+   "explanation": "Half the chord = 6 cm. Using right triangle with hypotenuse 7: distance = √(7² − 6²) = √(49 − 36) = √13 cm. 5 cm or 3 cm are results of wrong subtraction or using incorrect half-chord; √37 would arise from 49 − 12, which is incorrect."
+  },
+  {
+   "n": 28,
+   "topic": "Probability",
+   "q": "Two fair six-sided dice are rolled. What is the probability that at least one die shows a 6?",
+   "options": [
+    "1/6",
+    "1/3",
+    "25/36",
+    "11/36"
+   ],
+   "answer": 3,
+   "explanation": "P(at least one 6) = 1 − P(no 6) = 1 − (5/6)² = 1 − 25/36 = 11/36. 1/6 is P(exactly one specified die =6) without considering both; 1/3 is a mistaken simplification; 25/36 is P(no six, the complement)."
+  },
+  {
+   "n": 29,
+   "topic": "Probability",
+   "q": "A box contains 5 red, 3 blue and 2 green beads. Two beads are drawn without replacement. What is the probability both are red?",
+   "options": [
+    "1/3",
+    "2/9",
+    "1/5",
+    "1/6"
+   ],
+   "answer": 1,
+   "explanation": "P(first red) = 5/10. Given first red, P(second red) = 4/9. Product = (5/10)×(4/9) = 20/90 = 2/9. 1/3 or 1/5 come from incorrectly ignoring replacement or miscounting totals; 1/6 is another common arithmetic slip."
+  },
+  {
+   "n": 30,
+   "topic": "Coordinate geometry",
+   "q": "Find the equation of the straight line which is parallel to 3x − 2y + 1 = 0 and passes through the point (2, −3).",
+   "options": [
+    "3x − 2y − 12 = 0",
+    "3x − 2y + 12 = 0",
+    "3x + 2y − 12 = 0",
+    "2x − 3y − 12 = 0"
+   ],
+   "answer": 0,
+   "explanation": "Lines parallel have the same coefficients for x and y, so the slope is 3/2. Using y + 3 = (3/2)(x − 2) gives y = (3/2)x − 6. Clearing denominators: 3x − 2y − 12 = 0. The first wrong option has wrong sign for constant; the others change coefficients or sign of y."
+  },
+  {
+   "n": 31,
+   "topic": "Coordinate geometry",
+   "q": "Midpoint of the line segment joining Lagos at (6, 3) and Ibadan at (−2, 7) is",
+   "options": [
+    "(−4, 10)",
+    "(2, −2)",
+    "(2, 5)",
+    "(4, 5)"
+   ],
+   "answer": 2,
+   "explanation": "Midpoint = ((6 + (−2))/2, (3 + 7)/2) = (4/2, 10/2) = (2,5). The other options result from sign errors or adding/subtracting coordinates incorrectly."
+  },
+  {
+   "n": 32,
+   "topic": "Variation",
+   "q": "A quantity y varies jointly as x and z and inversely as w. If y = 12 when x = 2, z = 3 and w = 4, find y when x = 5, z = 8 and w = 6.",
+   "options": [
+    "160/3",
+    "80/3",
+    "40",
+    "320/3"
+   ],
+   "answer": 0,
+   "explanation": "y = kxz/w. From 12 = k*(2*3)/4 = k*(3/2), so k = 8. Then y = 8*(5*8)/6 = 8*40/6 = 320/6 = 160/3. 320/3 is doubling error; 80/3 and 40 come from mis-evaluating k or cancelling wrongly."
+  },
+  {
+   "n": 33,
+   "topic": "Variation",
+   "q": "A quantity Q varies inversely as the square of time t. If Q = 9 when t = 2 s, find t when Q = 1.",
+   "options": [
+    "4 s",
+    "6 s",
+    "3 s",
+    "2 s"
+   ],
+   "answer": 1,
+   "explanation": "Q = k/t²; 9 = k/4 so k = 36. For Q = 1, 1 = 36/t² so t² = 36 and t = 6 s (positive time). The other options ignore the square or take wrong square roots."
+  },
+  {
+   "n": 34,
+   "topic": "Matrices and determinants",
+   "q": "Given A = [[1, 2], [3, 4]] and B = [[2, 0], [1, 3]], find the product AB.",
+   "options": [
+    "[[2, 6], [3, 12]]",
+    "[[5, 6], [11, 12]]",
+    "[[4, 6], [10, 12]]",
+    "[[4, 3], [10, 7]]"
+   ],
+   "answer": 2,
+   "explanation": "AB = [[1*2+2*1, 1*0+2*3], [3*2+4*1, 3*0+4*3]] = [[4,6],[10,12]]. Wrong options come from multiplying rows and columns incorrectly or adding wrong terms."
+  },
+  {
+   "n": 35,
+   "topic": "Matrices and determinants",
+   "q": "Find the determinant of the matrix [[4, 7], [2, 5]].",
+   "options": [
+    "−6",
+    "6",
+    "35",
+    "14"
+   ],
+   "answer": 1,
+   "explanation": "Determinant = 4×5 − 7×2 = 20 − 14 = 6. A common mistake is to add products (giving 34 or 35) or swap the sign (−6) by reversing the subtraction order."
+  },
+  {
+   "n": 36,
+   "topic": "Quadratic equations",
+   "q": "Solve 2x² − 7x + 3 = 0. The roots are",
+   "options": [
+    "3 and 1/2",
+    "3 and −1/2",
+    "−3 and −1/2",
+    "2 and 3"
+   ],
+   "answer": 0,
+   "explanation": "Discriminant Δ = (−7)² − 4·2·3 = 49 − 24 = 25. Roots = (7 ± 5)/(4) giving x = 12/4 = 3 and x = 2/4 = 1/2. The wrong options show sign errors or wrong factorisation."
+  },
+  {
+   "n": 37,
+   "topic": "Quadratic equations",
+   "q": "If 2 is a root of the quadratic equation x² − (m + 1)x + m = 0, find m.",
+   "options": [
+    "2",
+    "1",
+    "4",
+    "−2"
+   ],
+   "answer": 0,
+   "explanation": "Substitute x = 2: 4 − (m + 1)·2 + m = 0 → 4 − 2m − 2 + m = 0 → 2 − m = 0, so m = 2. The other values come from arithmetic slips in substitution or sign errors."
+  },
+  {
+   "n": 38,
+   "topic": "Matrices and determinants",
+   "q": "Find the determinant of the 3×3 matrix M = [[1, 2, 3], [0, 1, 4], [2, 0, 1]].",
+   "options": [
+    "−11",
+    "7",
+    "9",
+    "11"
+   ],
+   "answer": 3,
+   "explanation": "Compute det M by expansion: 1·det[[1,4],[0,1]] − 2·det[[0,4],[2,1]] + 3·det[[0,1],[2,0]] = 1·1 − 2·(0−8) + 3·(0−2) = 1 +16 −6 = 11. The negative option comes from sign mistakes; 9 or 7 from arithmetic slip-ups."
+  },
+  {
+   "n": 39,
+   "topic": "Fractions, decimals and percentages",
+   "q": "A customer in Enugu bought goods worth ₦8,400. She received a discount of 12.5% and paid the balance. How much did she pay?",
+   "options": [
+    "₦7,560",
+    "₦7,140",
+    "₦7,350",
+    "₦7,280"
+   ],
+   "answer": 2,
+   "explanation": "12.5% of ₦8,400 = (12.5/100)×8,400 = 0.125×8,400 = ₦1,050. Amount paid = 8,400 − 1,050 = ₦7,350. The tempting ₦7,560 is 10% off; ₦7,140 is about 15% off."
+  },
+  {
+   "n": 40,
+   "topic": "Simultaneous equations and inequalities",
+   "q": "Solve the system: 2x + 3y = 12 and x − y = 1.",
+   "options": [
+    "x = 5, y = 2",
+    "x = 2, y = 1",
+    "x = 4, y = 1",
+    "x = 3, y = 2"
+   ],
+   "answer": 3,
+   "explanation": "From x − y = 1 → x = y + 1. Substitute: 2(y+1)+3y = 12 → 5y + 2 = 12 → 5y = 10 → y = 2, hence x = 3. Other options come from calculation errors or wrong substitution."
+  },
+  {
+   "n": 41,
+   "topic": "Fractions, decimals and percentages",
+   "q": "If 7/12 of a number is 84, what is 25% of that number?",
+   "options": [
+    "36",
+    "48",
+    "28",
+    "21"
+   ],
+   "answer": 0,
+   "explanation": "(7/12)N = 84 → N = 84×12/7 = 144. Twenty-five percent of 144 = 0.25×144 = 36. Wrong options come from mis-dividing or mis-multiplying."
+  },
+  {
+   "n": 42,
+   "topic": "Mensuration",
+   "q": "A triangular plot in Abuja is right-angled with legs 30 m and 40 m. Calculate the length of the hypotenuse and the area of the triangle.",
+   "options": [
+    "Hypotenuse = 50 m; Area = 600 m²",
+    "Hypotenuse = 70 m; Area = 600 m²",
+    "Hypotenuse = 50 m; Area = 400 m²",
+    "Hypotenuse = 50 m; Area = 1,200 m²"
+   ],
+   "answer": 0,
+   "explanation": "Right triangle with legs 30 and 40: hypotenuse = √(30²+40²) = √(900+1,600)=√2,500=50 m. Area = (1/2)×30×40 = 600 m². The 1,200 answer doubles area (mistaken by omitting 1/2). 70 m is wrong hypotenuse."
+  },
+  {
+   "n": 43,
+   "topic": "Integration",
+   "q": "Find ∫(4x − 5) dx from x = 1 to x = 3.",
+   "options": [
+    "8",
+    "10",
+    "12",
+    "6"
+   ],
+   "answer": 3,
+   "explanation": "Antiderivative is 2x² − 5x. Evaluate at 3: 18 − 15 = 3; at 1: 2 − 5 = −3. Difference 3 − (−3) = 6. Other options are from arithmetic mistakes."
+  },
+  {
+   "n": 44,
+   "topic": "Quadratic equations",
+   "q": "Solve for x: 3x² − 5x − 2 = 0. (Give the exact roots.)",
+   "options": [
+    "x = 1 or x = -2/3",
+    "x = -2 or x = 1/3",
+    "x = -1 or x = 2/3",
+    "x = 2 or x = -1/3"
+   ],
+   "answer": 3,
+   "explanation": "Use factorization: 3x²−5x−2=(3x+1)(x−2), so roots x=2 and x=−1/3. Wrong options come from incorrect factor pairs or sign errors."
+  },
+  {
+   "n": 45,
+   "topic": "Quadratic equations",
+   "q": "The sum of the roots of 2x² − kx + 8 = 0 is 5. Find k.",
+   "options": [
+    "k = 5",
+    "k = 8",
+    "k = -10",
+    "k = 10"
+   ],
+   "answer": 3,
+   "explanation": "Sum of roots = k/2 = 5 ⇒ k = 10. Wrong options arise from confusion between sum being k or sign errors."
+  },
+  {
+   "n": 46,
+   "topic": "Mensuration",
+   "q": "A cylindrical water tank in Enugu has radius 2 m and height 5 m. Find its curved surface area (use π).",
+   "options": [
+    "20π m²",
+    "10π m²",
+    "40π m²",
+    "25π m²"
+   ],
+   "answer": 0,
+   "explanation": "Curved surface area = 2πrh = 2π·2·5=20π m². Other options reflect mistakes like using πr² or wrong multiplication."
+  },
+  {
+   "n": 47,
+   "topic": "Mensuration",
+   "q": "A right-angled triangular plot in Abuja has hypotenuse 25 m and one leg 15 m. Find the area of the triangle.",
+   "options": [
+    "200 m²",
+    "187.5 m²",
+    "75 m²",
+    "150 m²"
+   ],
+   "answer": 3,
+   "explanation": "Other leg = √(25²−15²)=√(625−225)=√400=20 m. Area = (1/2)·15·20=150 m². Wrong options come from arithmetic or forgetting half."
+  },
+  {
+   "n": 48,
+   "topic": "Integration",
+   "q": "Find ∫ from 0 to 2 of (3x² − 4x + 1) dx.",
+   "options": [
+    "4",
+    "8/3",
+    "2",
+    "0"
+   ],
+   "answer": 2,
+   "explanation": "Integrate termwise: ∫(3x² − 4x +1) dx = x³ − 2x² + x. Evaluate from 0 to 2: (8 − 8 + 2) − 0 = 2. The option 4 double-counts the constant term; 0 would occur if the upper and lower evaluations cancelled completely, which they do not; 8/3 is from an incorrect integration of 3x² as 3x³/3 = x³ but then wrong evaluation."
+  },
+  {
+   "n": 49,
+   "topic": "Integration",
+   "q": "Evaluate ∫ (2x)/(x² + 1) dx.",
+   "options": [
+    "2 ln(x + 1) + C",
+    "ln(x² + 1) + C",
+    "1/(x² + 1) + C",
+    "ln(x + 1) + C"
+   ],
+   "answer": 1,
+   "explanation": "Let u = x² + 1, then du = 2x dx, so integral is ∫ du/u = ln|u| + C = ln(x² +1)+C. Options involving ln(x+1) are wrong because derivative of x+1 is 1, not 2x; 1/(x²+1) is derivative of arctan(x), not this integral."
+  },
+  {
+   "n": 50,
+   "topic": "Simultaneous equations and inequalities",
+   "q": "Solve the system: x − y = 1 and 2x + y = 11. Find x.",
+   "options": [
+    "5",
+    "4",
+    "3",
+    "2"
+   ],
+   "answer": 1,
+   "explanation": "Add the equations: (x − y) + (2x + y) = 1 + 11 →3x =12 →x =4. Common mistakes: sign errors when adding or substituting lead to options 5 or 3."
+  },
+  {
+   "n": 51,
+   "topic": "Simultaneous equations and inequalities",
+   "q": "Find the solution set of the inequality 2x − 5 < 3x + 1.",
+   "options": [
+    "x > −6",
+    "x < 6",
+    "x < −6",
+    "x > 6"
+   ],
+   "answer": 0,
+   "explanation": "Bring x terms one side: 2x −3x < 1 +5 → −x <6. Multiply both sides by −1 reverses inequality: x > −6. A common error is forgetting to reverse the inequality sign leading to x < −6."
+  },
+  {
+   "n": 52,
+   "topic": "Sequences and series",
+   "q": "An arithmetic sequence has 5th term 12 and 9th term 28. Find the first term.",
+   "options": [
+    "0",
+    "3",
+    "4",
+    "-4"
+   ],
+   "answer": 3,
+   "explanation": "Let a be first term and d common difference. a +4d =12, a +8d =28. Subtracting gives 4d =16 so d =4. Then a =12 −4d =12 −16 = −4. Errors come from mixing up term indices or arithmetic sign mistakes."
+  },
+  {
+   "n": 53,
+   "topic": "Sequences and series",
+   "q": "Find the sum of the geometric series 3 + 6 + 12 + ... + 3×2^6 (that is, terms from 3×2^0 up to 3×2^6).",
+   "options": [
+    "381",
+    "378",
+    "384",
+    "3810"
+   ],
+   "answer": 0,
+   "explanation": "This is geometric with a =3, r =2, number of terms n =7. Sum = a( r^n −1)/(r−1) = 3(2^7 −1)/(1) =3(128 −1)=3×127 =381. Option 384 is 3×128 and misses subtracting 1; 378 is close from arithmetic slip; 3810 is off by factor 10."
+  },
+  {
+   "n": 54,
+   "topic": "Surds",
+   "q": "Rationalize the denominator and simplify: 1/(√3 − 1).",
+   "options": [
+    "(√3 + 1)/4",
+    "(1 − √3)/2",
+    "(√3 + 1)/2",
+    "(√3 − 1)/2"
+   ],
+   "answer": 2,
+   "explanation": "Multiply numerator and denominator by (√3 +1): 1/(√3 −1) × (√3 +1)/(√3 +1) = (√3 +1)/(3 −1) = (√3 +1)/2. The sign errors produce (1 − √3)/2 or wrong denominators."
+  },
+  {
+   "n": 55,
+   "topic": "Trigonometry",
+   "q": "At a school in Lagos a student stands 15 m from the foot of a flagpole and measures the angle of elevation to the top as 30°. What is the height of the flagpole (to exact form)?",
+   "options": [
+    "15√3 m",
+    "5√3 m",
+    "5 m",
+    "15/2 m"
+   ],
+   "answer": 1,
+   "explanation": "Height = 15 × tan30° = 15 × (1/√3) = 15/√3 = 5√3 m. 15/2 and 15√3 are common arithmetic errors; 5 m ignores the trigonometric ratio."
+  },
+  {
+   "n": 56,
+   "topic": "Trigonometry",
+   "q": "Find all angles θ in the interval 0° ≤ θ < 360° that satisfy sin θ = 1/2.",
+   "options": [
+    "150° and 210°",
+    "330° only",
+    "30° and 330°",
+    "30° and 150°"
+   ],
+   "answer": 3,
+   "explanation": "sin θ = 1/2 at reference angle 30°. In 0°≤θ<360° the sine is positive in QI and QII, giving θ = 30° and 180°−30° = 150°. Options with 330° give a negative sine; 210° gives negative sine also."
+  },
+  {
+   "n": 57,
+   "topic": "Differentiation",
+   "q": "If f(x) = 3x² − 5x + 4, what is f'(2)?",
+   "options": [
+    "1",
+    "18",
+    "7",
+    "−7"
+   ],
+   "answer": 2,
+   "explanation": "f'(x) = d/dx (3x² −5x +4) = 6x −5. So f'(2) = 6×2 −5 = 12 −5 = 7. 18 comes from differentiating 3x³ instead of 3x²; 1 and −7 are simple arithmetic slips."
+  },
+  {
+   "n": 58,
+   "topic": "Differentiation",
+   "q": "Differentiate y = ln(x² + 1) with respect to x.",
+   "options": [
+    "(2)/(x + 1)",
+    "(2x)/(x² + 1)",
+    "2x ln(x)",
+    "1/(x² + 1)"
+   ],
+   "answer": 1,
+   "explanation": "dy/dx = (1/(x²+1)) × d/dx(x²+1) = (1/(x²+1)) × 2x = 2x/(x²+1). 1/(x²+1) omits the chain-rule factor 2x; 2x ln(x) and 2/(x+1) are incorrect forms."
+  },
+  {
+   "n": 59,
+   "topic": "Sets",
+   "q": "Let universal set U = {1,2,3,4,5,6,7,8,9,10}. Let A = {odd numbers in U} and B = {multiples of 3 in U}. How many elements are in A ∩ B?",
+   "options": [
+    "3",
+    "4",
+    "1",
+    "2"
+   ],
+   "answer": 3,
+   "explanation": "A = {1,3,5,7,9}, B = {3,6,9}. Intersection A ∩ B = {3,9}, which has 2 elements. 3 would wrongly count 6 (which is even); 4 and 1 are other counting errors."
+  },
+  {
+   "n": 60,
+   "topic": "Indices and logarithms",
+   "q": "Solve for x: 2^{x+1} = 8^{2−x}.",
+   "options": [
+    "5",
+    "5/4",
+    "4",
+    "−3/4"
+   ],
+   "answer": 1,
+   "explanation": "Write 8 as 2^3: RHS = (2^3)^{2−x} = 2^{6−3x}. Equate exponents: x+1 = 6−3x → 4x = 5 → x = 5/4. −3/4 is the sign-error solution; 4 and 5 come from incorrect exponent manipulation."
+  }
+ ]
+}

@@ -1,0 +1,661 @@
+{
+ "id": "waec-geography-p2",
+ "exam": "waec",
+ "subject": "geography",
+ "year": null,
+ "number": 2,
+ "source": "ai",
+ "minutes": 60,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Vegetation and soils",
+   "q": "Which feature best describes the Sudan savanna vegetation zone found in northern Nigeria?",
+   "options": [
+    "Mixed grasses with scattered drought-resistant trees and a distinct wet and dry season",
+    "Open desert with no vegetation except occasional succulents",
+    "Continuous dense forest with tall evergreen trees and heavy rainfall year-round",
+    "Lowland swamp vegetation dominated by mangroves and water-tolerant plants"
+   ],
+   "answer": 0,
+   "explanation": "The Sudan savanna is characterised by a grassland cover interspersed with scattered, drought-resistant trees (e.g., acacia) and distinct wet and dry seasons. Dense evergreen forest and mangrove swamp describe rainforest and coastal swamp zones, while an open desert lacks the grasses and scattered trees of savanna."
+  },
+  {
+   "n": 2,
+   "topic": "Vegetation and soils",
+   "q": "Laterite soils in parts of southwestern Nigeria are commonly used for which practical purpose because of their properties when exposed to air?",
+   "options": [
+    "Road surfacing and building foundations because they harden on exposure and provide a firm layer",
+    "Making bricks that dissolve easily in rain and therefore suitable for temporary shelters",
+    "Irrigated horticulture because laterites are high in organic matter and extremely fertile",
+    "Growing rice paddies because they hold water very well"
+   ],
+   "answer": 0,
+   "explanation": "Laterite becomes hard and compact when exposed, making it useful for road surfacing and foundations. It is not particularly water-retentive like paddy soils, nor high in organic matter; it is often low in fertility. Bricks that dissolve in rain would be unsuitable, so that option is incorrect."
+  },
+  {
+   "n": 3,
+   "topic": "Landforms and processes",
+   "q": "An ox-bow lake forms in a mature river mainly by which sequence of processes?",
+   "options": [
+    "Longshore drift depositing sand to join two meander loops",
+    "Erosion on the outside of meander bends and deposition across the neck until the meander is cut off",
+    "Tectonic uplift forcing the river into a straight channel",
+    "Groundwater sapping that enlarges the channel uniformly"
+   ],
+   "answer": 1,
+   "explanation": "Ox-bow lakes form when continued lateral erosion on outer bends and deposition on inner bends narrows the meander neck, which eventually gets breached and cut off. Tectonic uplift or groundwater sapping are not the usual causes, and longshore drift is a coastal process unrelated to river meanders."
+  },
+  {
+   "n": 4,
+   "topic": "Landforms and processes",
+   "q": "Which coastal process most directly causes the formation of a tombolo (a sand connection between an island and the mainland)?",
+   "options": [
+    "Glacial deposition during the last Ice Age depositing moraine between island and shore",
+    "Tidal scouring removing all sediments to expose bedrock",
+    "Wave refraction and deposition of eroded sediments in the lee of the island forming a sand bar",
+    "Strong offshore currents eroding the island until it sinks"
+   ],
+   "answer": 2,
+   "explanation": "A tombolo forms when waves refract around an island, causing deposition of sediments in the calm lee and eventually building a sand bar that connects to the mainland. Offshore currents that erode or tidal scouring that remove sediments would prevent such deposition. Glacial moraine is irrelevant in tropical Nigerian coastal settings."
+  },
+  {
+   "n": 5,
+   "topic": "Landforms and processes",
+   "q": "On a topographic map two points P and Q have elevations 700 m and 300 m respectively. The horizontal ground distance between them measured on the map is 4.0 km. What is the gradient from P down to Q expressed as a ratio (rise:run)?",
+   "options": [
+    "1 : 0.1",
+    "1 : 40",
+    "1 : 10",
+    "1 : 5"
+   ],
+   "answer": 2,
+   "explanation": "Gradient = vertical change / horizontal distance = (700−300) m / 4000 m = 400/4000 = 0.1 which equals 1:10. 1:5 would correspond to 0.2, 1:40 to 0.025, and 1:0.1 is the reciprocal (10) and therefore incorrect."
+  },
+  {
+   "n": 6,
+   "topic": "Latitude, longitude and time",
+   "q": "If the time at Greenwich (0°) is 09:00 GMT, what is the local solar time at a town located at longitude 9°E? (Assume 15° of longitude = 1 hour.)",
+   "options": [
+    "09:36",
+    "09:00",
+    "10:00",
+    "08:24"
+   ],
+   "answer": 0,
+   "explanation": "Each degree of longitude equals 4 minutes of time. At 9°E the local time is 9 × 4 minutes = 36 minutes ahead of GMT, so 09:00 + 36 minutes = 09:36. 10:00 would assume a full hour ahead; 08:24 would be 36 minutes behind; 09:00 ignores longitude difference."
+  },
+  {
+   "n": 7,
+   "topic": "Latitude, longitude and time",
+   "q": "How many standard time zones (each 15° of longitude) lie between longitude 15°W and longitude 30°E?",
+   "options": [
+    "1",
+    "3",
+    "2",
+    "4"
+   ],
+   "answer": 1,
+   "explanation": "The difference in longitude is 15°W to 30°E = 45°. Dividing by 15° per time zone gives 45° ÷ 15° = 3 time zones. 1 or 2 are too few and 4 would require a 60° span."
+  },
+  {
+   "n": 8,
+   "topic": "Map reading and scale",
+   "q": "On a map with scale 1 : 250,000 the straight-line distance between Lokoja and a neighbouring town measures 8.0 cm. What is the ground distance in kilometres?",
+   "options": [
+    "2.0 km",
+    "200 km",
+    "20 km",
+    "0.32 km"
+   ],
+   "answer": 2,
+   "explanation": "Scale 1:250,000 means 1 cm on map = 2.5 km on ground. Therefore 8.0 cm = 8 × 2.5 km = 20 km. 2.0 km would be 0.8 cm, 200 km would be 80 cm on the map, and 0.32 km is far too small."
+  },
+  {
+   "n": 9,
+   "topic": "Map reading and scale",
+   "q": "A lake measures 4.0 cm² on a topographic map with scale 1 : 50,000. What is the actual area of the lake in square kilometres?",
+   "options": [
+    "0.25 km²",
+    "10.0 km²",
+    "1.0 km²",
+    "2.0 km²"
+   ],
+   "answer": 2,
+   "explanation": "At 1:50,000, 1 cm on the map = 50,000 cm = 500 m on the ground. So 1 cm² on the map represents (500 m × 500 m) = 250,000 m² = 0.25 km². Therefore 4.0 cm² = 4 × 0.25 km² = 1.0 km². The other options are incorrect by simple multiplication errors."
+  },
+  {
+   "n": 10,
+   "topic": "Settlements",
+   "q": "Which factor is most important in explaining why Lagos has become Nigeria's largest city and main port?",
+   "options": [
+    "Government policy that prevented any industrial development elsewhere in Nigeria",
+    "The presence of large mineral deposits beneath the city that attracted mining industries",
+    "Its coastal site with a deep natural lagoon and good harbour combined with historical trade and investment",
+    "Its location on the continental interior far from the coast which favoured overland trade"
+   ],
+   "answer": 2,
+   "explanation": "Lagos's coastal site with a deep lagoon and natural harbour, along with historical trade links and subsequent investment, explains its growth as a port city. The distractors are incorrect: Lagos is not inland, it does not owe growth to mining, and national policy alone did not prevent development elsewhere."
+  },
+  {
+   "n": 11,
+   "topic": "Settlements",
+   "q": "A town planner wants to reduce inner-city traffic congestion in Kaduna by encouraging people to travel without private cars. Which measure would be most effective?",
+   "options": [
+    "Ban wheeled street vendors from all residential areas",
+    "Improve and subsidise reliable public transport links and create pedestrianised zones",
+    "Increase the number of multi-storey car parks in the city centre",
+    "Raise parking fees only in suburban neighbourhoods"
+   ],
+   "answer": 1,
+   "explanation": "Improving and subsidising public transport and pedestrian zones encourages modal shift away from private cars, directly reducing congestion. More car parks or parking fees only in suburbs may encourage car use; banning vendors won't reduce car traffic significantly."
+  },
+  {
+   "n": 12,
+   "topic": "Settlements",
+   "q": "Which characteristic best describes a 'conurbation' in the Nigerian context?",
+   "options": [
+    "A rural market centre that serves only local farming settlements",
+    "A continuous urban area formed by the merging of two or more formerly separate towns or cities",
+    "An isolated village located more than 100 km from any city",
+    "A single planned capital city built on previously undeveloped land"
+   ],
+   "answer": 1,
+   "explanation": "A conurbation is a continuous urban region from merging towns or cities (e.g., Lagos metropolitan expansion). A planned capital is a new town, not a conurbation; isolated villages and small market centres are rural, not conurbations."
+  },
+  {
+   "n": 13,
+   "topic": "Environmental hazards and conservation",
+   "q": "Which practice would most directly reduce the risk of flooding in a built-up neighbourhood in Ibadan?",
+   "options": [
+    "Create permeable surfaces and restore vegetated floodplains to increase infiltration",
+    "Build higher boundary walls around each compound",
+    "Replace trees with concrete surfaces to speed runoff into drains",
+    "Increase the number of rooftop water tanks without changing ground surfaces"
+   ],
+   "answer": 0,
+   "explanation": "Permeable surfaces and restored floodplains increase infiltration and storage, reducing flood risk. Replacing trees with concrete increases runoff; rooftop tanks don't reduce surface runoff; higher walls can trap water and worsen flooding."
+  },
+  {
+   "n": 14,
+   "topic": "Environmental hazards and conservation",
+   "q": "Which indicator best shows that a region in northern Nigeria is undergoing desertification?",
+   "options": [
+    "Expansion of permanent wetlands and rice paddies inland",
+    "An increase in coastal mangrove swamp area and fish catch",
+    "A sudden increase in annual rainfall and lush forest regrowth",
+    "Progressive loss of topsoil, reduced vegetation cover and encroaching sand dunes on formerly arable land"
+   ],
+   "answer": 3,
+   "explanation": "Desertification is marked by soil degradation, vegetation loss and dune encroachment. Increased mangroves or wetlands are coastal/aquatic changes, while more rainfall and forest regrowth are opposite to desertification."
+  },
+  {
+   "n": 15,
+   "topic": "Environmental hazards and conservation",
+   "q": "A local government in Rivers State wants to reduce solid-waste pollution in urban rivers. Which single action is likely to be most effective?",
+   "options": [
+    "Prohibit the sale of plastic bottles without providing alternatives or collection systems",
+    "Charge a flat annual waste tax without changing collection frequency",
+    "Fill in small urban streams to prevent people from dumping into them",
+    "Provide regular waste collection services and clearly marked recycling points in all neighbourhoods"
+   ],
+   "answer": 3,
+   "explanation": "Regular waste collection and recycling infrastructure address the root cause by giving residents a proper disposal option. Prohibition without alternatives leads to illegal dumping; filling streams harms drainage and ecology; a tax without service doesn't reduce dumping."
+  },
+  {
+   "n": 16,
+   "topic": "The earth and the solar system",
+   "q": "During a total lunar eclipse observed from Abuja, what is the primary cause of the Moon appearing reddish (a 'blood moon')?",
+   "options": [
+    "The Earth's shadow is red because of volcanic ash which directly colours the shadow",
+    "The Moon emits red light because minerals on its surface heat up during the eclipse",
+    "Sunlight is refracted and scattered through Earth's atmosphere so that red wavelengths reach the Moon while blue is scattered away",
+    "The Sun briefly changes colour during the eclipse causing red light to be sent to the Moon"
+   ],
+   "answer": 2,
+   "explanation": "The red appearance is from Earth's atmosphere refracting and scattering sunlight; red wavelengths pass through and illuminate the Moon. The Moon does not emit light itself; volcanic ash may affect colour marginally but the main mechanism is atmospheric scattering. The Sun does not change colour."
+  },
+  {
+   "n": 17,
+   "topic": "The earth and the solar system",
+   "q": "Which statement correctly explains why the Tropic of Cancer and Tropic of Capricorn are located at about 23.5° N and 23.5° S respectively?",
+   "options": [
+    "They are the latitudes where day and night are always equal throughout the year",
+    "They mark the latitudes where the Sun is directly overhead at local noon on the June and December solstices due to Earth's axial tilt of about 23.5°",
+    "They are the lines where the Earth's rotation speed reverses direction",
+    "They mark the boundaries of the Arctic and Antarctic Circles"
+   ],
+   "answer": 1,
+   "explanation": "These tropics correspond to the maximum declination of the Sun (±23.5°) because Earth's axis is tilted by about 23.5°. Day and night equality occurs at the equator during equinoxes, not these tropics; Arctic/Antarctic Circles are near poles; rotation speed does not reverse."
+  },
+  {
+   "n": 18,
+   "topic": "Population",
+   "q": "A village population grew from 12,000 in 2010 to 14,400 in 2020. What is the approximate annual growth rate (%) assuming exponential growth? (Use r ≈ [ln(Pt/P0)]/t × 100)",
+   "options": [
+    "0.6%",
+    "1.8%",
+    "2.0%",
+    "12.0%"
+   ],
+   "answer": 1,
+   "explanation": "Pt/P0 = 14,400/12,000 = 1.2. ln(1.2) ≈ 0.18232. Divide by t = 10 gives 0.018232; ×100 ≈ 1.823% ≈ 1.8%. The 2.0% is a close but slightly high estimate; 12.0% confuses total growth with annual rate; 0.6% is too low."
+  },
+  {
+   "n": 19,
+   "topic": "Transport and trade",
+   "q": "Which one of the following best explains why port cities such as Lagos have clustered industries near the harbour?",
+   "options": [
+    "To avoid paying urban taxes levied on inland factories",
+    "Because port land is cheaper than inland industrial sites",
+    "To minimise transport costs for bulky imported raw materials and exported finished goods",
+    "Because ports always provide a large supply of skilled labour"
+   ],
+   "answer": 2,
+   "explanation": "Industries that depend on heavy or bulk imports/exports locate close to ports to reduce freight and handling costs. Port land is usually more expensive, not cheaper. Taxes are not the primary locating factor, and ports do not guarantee a large skilled labour pool compared with urban centres."
+  },
+  {
+   "n": 20,
+   "topic": "Transport and trade",
+   "q": "A goods truck travels from Kano to Kaduna, distance 200 km, at an average speed of 50 km/h. If it stops twice for 30 minutes each, what is the total journey time?",
+   "options": [
+    "4 hours 0 minutes",
+    "5 hours 0 minutes",
+    "4 hours 30 minutes",
+    "5 hours 30 minutes"
+   ],
+   "answer": 1,
+   "explanation": "Travel time without stops = 200 km ÷ 50 km/h = 4.0 hours = 4 hours. Two stops of 30 minutes = 1.0 hour. Total = 4 + 1 = 5 hours. 4 hours ignores stops; 4h30min assumes only one stop; 5h30min assumes 1.5 hours of stops."
+  },
+  {
+   "n": 21,
+   "topic": "Transport and trade",
+   "q": "Which transport improvement would most reduce travel time variability on the Abuja–Kaduna corridor during the rainy season?",
+   "options": [
+    "Increasing the number of roadside markets",
+    "Lowering speed limits during dry weather",
+    "Introducing more frequent informal passenger stops",
+    "Upgrading road drainage and surfacing to all-weather standards"
+   ],
+   "answer": 3,
+   "explanation": "All-weather surfacing and drainage prevent road damage and flooding that cause unpredictable delays in rains. More markets and informal stops increase variability. Lowering speeds in dry weather would not address rain-season problems."
+  },
+  {
+   "n": 22,
+   "topic": "Weather and climate",
+   "q": "Which atmospheric condition most directly causes the formation of dew on car windows after a cool night in Ibadan?",
+   "options": [
+    "Surface temperature falling below the dew point of the adjacent air",
+    "Strong daytime solar heating",
+    "Increase in air pressure near the surface",
+    "Advection of dry air over the surface"
+   ],
+   "answer": 0,
+   "explanation": "Dew forms when surfaces cool below the air's dew point, causing water vapour to condense. Rising air pressure or dry air would not produce dew; daytime heating does the opposite by evaporating moisture."
+  },
+  {
+   "n": 23,
+   "topic": "Weather and climate",
+   "q": "A Stevenson screen in Jos records maximum 28.0°C and minimum 12.0°C. What is the daily temperature range and what does a large range typically indicate about local weather?",
+   "options": [
+    "Range 16.0°C; indicates persistent heavy cloud cover",
+    "Range 12.0°C; indicates frequent thunderstorms",
+    "Range 40.0°C; indicates humid cloudy conditions",
+    "Range 16.0°C; indicates dry air with clear skies and strong solar heating by day"
+   ],
+   "answer": 3,
+   "explanation": "Range = 28.0 − 12.0 = 16.0°C. Large diurnal ranges usually occur with clear skies and low humidity (dry air), allowing strong daytime heating and rapid nighttime cooling. Cloudy or humid conditions reduce diurnal range."
+  },
+  {
+   "n": 24,
+   "topic": "Weather and climate",
+   "q": "Which sequence of air mass movement over Nigeria is most likely to bring the onset of the rainy season in southeastern Nigeria (Calabar)?",
+   "options": [
+    "Cold continental polar air from the Sahara moving south",
+    "Moist maritime polar air from the North Atlantic moving east",
+    "Dry continental tropical air from central Nigeria moving to the coast",
+    "Moist maritime tropical air from the Gulf of Guinea moving inland"
+   ],
+   "answer": 3,
+   "explanation": "Rainy season in southeastern Nigeria begins when warm, moist maritime tropical air from the Gulf of Guinea moves inland. Polar or continental tropical air from the Sahara is dry and suppresses rain. Maritime polar air is not the relevant tropical moisture source for Calabar."
+  },
+  {
+   "n": 25,
+   "topic": "Agriculture",
+   "q": "Which farming practice would most directly improve soil structure and reduce erosion on a steep cocoa farm in Ondo State?",
+   "options": [
+    "Increasing use of broad-spectrum herbicides",
+    "Ploughing up and down the slope to expose more soil",
+    "Burning crop residues annually on the slope",
+    "Planting contour hedgerows and terracing along the slope"
+   ],
+   "answer": 3,
+   "explanation": "Contour hedgerows and terraces break slope length, reduce runoff speed and protect soil. Burning residues and ploughing up/down increase erosion. Herbicides do not improve soil structure and can reduce protective vegetation cover."
+  },
+  {
+   "n": 26,
+   "topic": "Agriculture",
+   "q": "A farmer applies 60 kg of NPK (15:15:15) fertilizer per hectare to a maize field. How much actual nitrogen (N) in kg is added per hectare?",
+   "options": [
+    "15.0 kg N",
+    "3.0 kg N",
+    "60.0 kg N",
+    "9.0 kg N"
+   ],
+   "answer": 3,
+   "explanation": "NPK 15:15:15 contains 15% nitrogen by weight. Nitrogen added = 60 kg × 0.15 = 9.0 kg. 15.0 kg would be 25% of 60 kg; 60 kg is total fertilizer mass not N content; 3.0 kg equals 5% of 60 kg and is incorrect."
+  },
+  {
+   "n": 27,
+   "topic": "Rocks and minerals",
+   "q": "A geologist in Jos finds a dark fine-grained igneous rock with small vesicles and olivine crystals. Which rock is it most likely to be?",
+   "options": [
+    "Granite with visible quartz and feldspar",
+    "Sandstone composed of rounded sand grains",
+    "Marble formed by metamorphism of limestone",
+    "Basalt with phenocrysts of olivine and vesicular texture"
+   ],
+   "answer": 3,
+   "explanation": "Basalt is a dark, fine-grained extrusive igneous rock that can show vesicles and olivine phenocrysts. Granite is coarse-grained and light-coloured; marble is metamorphic and crystalline; sandstone is clastic with sand-sized grains—none match the description."
+  },
+  {
+   "n": 28,
+   "topic": "Rocks and minerals",
+   "q": "Which mineral property would best help a student distinguish between gypsum and calcite in the field?",
+   "options": [
+    "Gypsum scratches glass but calcite does not",
+    "Calcite is always red in colour while gypsum is white",
+    "Calcite reacts (fizzes) with dilute hydrochloric acid, gypsum does not",
+    "Gypsum is magnetic while calcite is not"
+   ],
+   "answer": 2,
+   "explanation": "Calcite effervesces with dilute HCl due to reaction with carbonate; gypsum (calcium sulfate) does not fizz. Neither gypsum nor calcite is magnetic. Calcite is not always red; both can be white. Gypsum (Mohs 2) does not scratch glass (≈5.5), so the scratch claim is false."
+  },
+  {
+   "n": 29,
+   "topic": "Industry and natural resources",
+   "q": "Which factor most strongly explains the location of the Ajaokuta Steel Complex near the River Niger in Kogi State?",
+   "options": [
+    "Low labour costs from a dense local population",
+    "Proximity to major coalfields for fuel",
+    "Availability of large water supply for industrial cooling and transport",
+    "Presence of high-quality limestone deposits in immediate vicinity"
+   ],
+   "answer": 2,
+   "explanation": "Large steel mills require abundant water for cooling and processing and access to river transport; Ajaokuta was sited on the Niger partly for water supply and river movement of materials. Coal is not the primary fuel for modern Nigerian steelmaking, and while limestone is needed, the immediate availability of limestone was not as decisive as water and transport. A dense local population is helpful but not the most important factor for location."
+  },
+  {
+   "n": 30,
+   "topic": "Industry and natural resources",
+   "q": "A small cassava-processing factory in Ibadan plans to run on diesel generators. Which change would most reduce its operating cost and local pollution?",
+   "options": [
+    "Switch to higher-sulphur diesel because it is cheaper",
+    "Move the factory closer to the city centre to reduce delivery distances",
+    "Install a biogas digester using cassava peelings to produce methane for engines",
+    "Increase working hours so generators run at higher load"
+   ],
+   "answer": 2,
+   "explanation": "Using cassava waste to make biogas provides a renewable fuel, lowers diesel purchases and reduces emissions. Higher-sulphur diesel increases pollution even if cheaper. Moving nearer the city may reduce transport costs but won't cut fuel for generators. Running generators at higher load can be more efficient, but it still uses diesel and doesn't address pollution as directly as biogas."
+  },
+  {
+   "n": 31,
+   "topic": "Industry and natural resources",
+   "q": "Which policy would best encourage diversification of Nigeria's economy away from crude oil dependence?",
+   "options": [
+    "Fix the naira exchange rate at a high value to reduce import costs",
+    "Provide tax incentives and infrastructure support for manufacturing and agro-processing",
+    "Cut public spending on roads to reduce government debt",
+    "Increase export taxes on all manufactured goods"
+   ],
+   "answer": 1,
+   "explanation": "Tax incentives and infrastructure reduce start-up costs and attract manufacturing and agro-processing, promoting diversification. Increasing export taxes discourages manufacturing exports. Overvalued exchange rates make local products less competitive abroad. Cutting road spending harms infrastructure needed for industry growth."
+  },
+  {
+   "n": 32,
+   "topic": "Geography of Nigeria",
+   "q": "Which city is best described as a port city that developed into a megacity due to trade, industry and migration from across West Africa?",
+   "options": [
+    "Lagos",
+    "Enugu",
+    "Kano",
+    "Yola"
+   ],
+   "answer": 0,
+   "explanation": "Lagos developed as a major port and grew into Nigeria's largest megacity through trade, industry and regional migration. Kano is an inland commercial city with historic trade but not a coastal port. Enugu grew around coal and administration, and Yola is a regional administrative centre; neither matches the coastal port-led megacity pattern."
+  },
+  {
+   "n": 33,
+   "topic": "Geography of Nigeria",
+   "q": "During the Harmattan season, which change in northern Nigerian towns like Maiduguri is commonly observed?",
+   "options": [
+    "Sea breeze influence increasing temperature at night",
+    "Persistent afternoon thunderstorms",
+    "Reduced visibility due to dust haze and cooler dry mornings",
+    "Increased humidity with heavy nightly dew"
+   ],
+   "answer": 2,
+   "explanation": "Harmattan brings dry northeast winds carrying dust, causing haze and cooler mornings; humidity decreases. Increased humidity and nightly dew are opposite effects. Afternoon thunderstorms are associated with the wet season. Sea breezes do not affect inland northern towns like Maiduguri."
+  },
+  {
+   "n": 34,
+   "topic": "Vegetation and soils",
+   "q": "Which soil management practice would most directly restore fertility to a degraded savanna farm in northern Nigeria?",
+   "options": [
+    "Applying only potassium-rich fertiliser annually",
+    "Planting nitrogen-fixing legumes in a crop rotation system",
+    "Burning crop residues before the rainy season",
+    "Clearing remaining shrubs to increase arable area"
+   ],
+   "answer": 1,
+   "explanation": "Leguminous crops add nitrogen to the soil through fixation, improving fertility over rotations. Clearing shrubs removes vegetation cover and can worsen erosion. Applying only potassium ignores nitrogen and phosphorus needs. Burning residues destroys organic matter and reduces soil structure and nutrients."
+  },
+  {
+   "n": 35,
+   "topic": "Vegetation and soils",
+   "q": "A farmer tests a plot and finds pH 5.0 and poor crop growth. Which amendment is best to raise pH and improve fertility?",
+   "options": [
+    "Increase irrigation frequency without amendments",
+    "Add elemental sulfur to the soil",
+    "Apply more urea fertiliser only",
+    "Apply agricultural lime (calcium carbonate)"
+   ],
+   "answer": 3,
+   "explanation": "Acidic soils (pH 5.0) are raised by lime (CaCO3), which neutralises acidity and improves nutrient availability. Elemental sulfur would lower pH further. Urea supplies nitrogen but does not correct acidity. More irrigation won't change soil pH and may worsen leaching."
+  },
+  {
+   "n": 36,
+   "topic": "Landforms and processes",
+   "q": "Which process most directly forms an ox-bow lake from a river such as the Niger in its lower course?",
+   "options": [
+    "Glacial melting increasing river discharge to carve new channels",
+    "Wind deposition blocking the river mouth",
+    "Lateral erosion on river bends followed by channel cut-off during high flow",
+    "Tectonic uplift raising one bank so the river diverts"
+   ],
+   "answer": 2,
+   "explanation": "Meanders enlarge by lateral erosion; during flood the neck is cut off leaving an ox-bow lake. Tectonic uplift and glacial processes are not the usual mechanisms for ox-bow formation in lowland tropical rivers. Wind deposition at a river mouth doesn't create ox-bow lakes inland."
+  },
+  {
+   "n": 37,
+   "topic": "Landforms and processes",
+   "q": "A hill in Ekiti shows a steep slope of 35° and is made of resistant granite with fractures. Which mass movement is most likely after heavy rain?",
+   "options": [
+    "Permafrost thaw slumping",
+    "Rockfall and small-scale rockslides along fractured faces",
+    "Long-runout lahars from volcanic eruption",
+    "Solifluction over frozen soil"
+   ],
+   "answer": 1,
+   "explanation": "Steep fractured granite is prone to rockfalls and rockslides when rain lubricates fractures. Permafrost and solifluction are cold-climate processes absent in Nigeria. Lahars require volcanic eruption and pyroclastic material, not applicable to Ekiti granite hills."
+  },
+  {
+   "n": 38,
+   "topic": "Latitude, longitude and time",
+   "q": "A research student in Abuja (approximately 9°N, 7°E) wants to calculate local solar noon. Which action will give the most accurate local solar noon time?",
+   "options": [
+    "Set noon at 12:00 standard time always, because local and clock noon coincide",
+    "Use the calendar date only, since solar noon is the same every day",
+    "Estimate by watching sunrise and set and taking the midpoint without using longitude",
+    "Use the longitude of Abuja to adjust the standard time and find when the sun crosses the local meridian"
+   ],
+   "answer": 3,
+   "explanation": "Local solar noon occurs when the sun crosses the observer's meridian; this requires correcting clock time using Abuja's longitude relative to the standard meridian. Solar noon varies by date and longitude, so calendar date only or fixed 12:00 are incorrect; midpoint of sunrise and sunset can be affected by atmospheric refraction and seasonal daylight changes and is less accurate than the meridian method."
+  },
+  {
+   "n": 39,
+   "topic": "Map reading and scale",
+   "q": "On a topographic map with scale 1:50,000 a student measures the distance between two towns as 6.4 cm. What is the ground distance in kilometres?",
+   "options": [
+    "0.32 km",
+    "32 km",
+    "6.4 km",
+    "3.2 km"
+   ],
+   "answer": 3,
+   "explanation": "Scale 1:50,000 means 1 cm = 50,000 cm = 500 m = 0.5 km. So 6.4 cm × 0.5 km/cm = 3.2 km. The common mistakes are to forget conversion from cm to km (giving 0.32 km), or to treat 1 cm as 1 km (giving 6.4 km), or to move decimal two places wrong (32 km)."
+  },
+  {
+   "n": 40,
+   "topic": "Map reading and scale",
+   "q": "A contour interval on a Nigerian 1:25,000 map is 10 m. Two adjacent index contours show elevations 120 m and 180 m. How many normal contours lie between them?",
+   "options": [
+    "5 normal contours",
+    "4 normal contours",
+    "1 normal contour",
+    "6 normal contours"
+   ],
+   "answer": 0,
+   "explanation": "Index contours are every fifth contour if interval is 10 m. Between 120 m and 180 m is 60 m difference, which is 60 / 10 = 6 contour intervals; that includes 5 intermediate (normal) contours between the two index lines. A common error is to count intervals instead of intermediate lines or to misapply the 'every fifth' rule."
+  },
+  {
+   "n": 41,
+   "topic": "Map reading and scale",
+   "q": "A student uses a map protractor and finds the bearing from Ibadan to Akure is 320°. Which compass direction best describes this bearing?",
+   "options": [
+    "Northwest by north (slightly west of northwest)",
+    "West by north",
+    "Northeast",
+    "Southeast"
+   ],
+   "answer": 0,
+   "explanation": "Bearings are measured clockwise from north; 320° is 40° west of north, i.e., north-northwest or northwest by north (slightly west of NW). Southeast (140°), northeast (45°), and west by north (281.25°) are incorrect compass interpretations."
+  },
+  {
+   "n": 42,
+   "topic": "Settlements",
+   "q": "Which factor most likely caused the rapid growth of the satellite town of Ota near Lagos in recent decades?",
+   "options": [
+    "High altitude making it a health resort",
+    "Proximity to Lagos industrial zones and cheaper land encouraging peri-urban expansion",
+    "Government policy forcing relocation from Lagos to Ota",
+    "Frequent coastal flooding in Ota increasing migration to it"
+   ],
+   "answer": 1,
+   "explanation": "Ota's growth is driven by its location near Lagos industries and lower land costs that attract factories and workers. High altitude is not applicable; forced relocation policies have not been the primary cause, and coastal flooding would push people away from a low-lying area, not attract them."
+  },
+  {
+   "n": 43,
+   "topic": "Settlements",
+   "q": "A small town in Ogun State has a central market, clustered housing, and households engaged mainly in trading and services. According to settlement hierarchy and functions, which term best fits this town?",
+   "options": [
+    "Metropolis",
+    "Market town",
+    "Hamlet",
+    "Industrial estate"
+   ],
+   "answer": 1,
+   "explanation": "A market town serves surrounding rural areas with trading and services and typically has clustered housing and a central market. A hamlet is much smaller with limited services; metropolis is a very large city; industrial estate refers to an area zoned for factories, not a town defined by market functions."
+  },
+  {
+   "n": 44,
+   "topic": "Environmental hazards and conservation",
+   "q": "During a severe rainy season in a Nigerian upland area, a river's discharge increases and causes channel scouring and bedload transport. Which short-term effect on the riverine ecosystem is most likely?",
+   "options": [
+    "Immediate increase in aquatic vegetation cover",
+    "Increased stability of spawning sites for fish",
+    "Long-term accumulation of fine sediments in the channel bed",
+    "Loss of benthic organisms and reduced habitat complexity due to scouring"
+   ],
+   "answer": 3,
+   "explanation": "High discharge and scouring remove benthic organisms and simplify habitats by washing away substrate. It does not stabilize spawning sites (it destroys them), nor immediately increase vegetation (plants are uprooted), and it causes erosion and coarser material movement rather than immediate fine sediment accumulation."
+  },
+  {
+   "n": 45,
+   "topic": "Environmental hazards and conservation",
+   "q": "A Lagos neighbourhood plans to reduce urban heat island effect. Which measure will most effectively lower daytime surface temperatures locally?",
+   "options": [
+    "Increase building density without vegetation to provide shade",
+    "Replace asphalt roads with darker-coloured concrete",
+    "Increase green roofs and tree canopy cover over streets and buildings",
+    "Install more street lighting to improve night-time visibility"
+   ],
+   "answer": 2,
+   "explanation": "Vegetation and green roofs increase shading and evapotranspiration, lowering surface temperatures. Darker materials raise heat absorption; higher density without green space can trap heat; street lighting affects night-time light but not daytime surface temperature."
+  },
+  {
+   "n": 46,
+   "topic": "Weather and climate",
+   "q": "Jos (≈9°N, 8°E) has an average annual temperature about 6–8°C lower than nearby lowland Nigerian cities at similar latitudes such as Lafia. Which factor best explains this difference?",
+   "options": [
+    "Jos lies under a different latitude band that receives less solar radiation than Lafia.",
+    "Higher altitude of Jos leading to lower temperatures (environmental lapse rate).",
+    "Jos is closer to the sea so maritime influence cools it.",
+    "Jos receives much more cloud cover year-round than Lafia, reducing incoming solar radiation."
+   ],
+   "answer": 1,
+   "explanation": "Jos is located on the Jos Plateau at roughly 1,200–1,400 m above sea level; temperature falls with height (≈6.5°C per 1,000 m), so higher altitude accounts for the 6–8°C cooler average. Maritime influence is incorrect because Jos is inland, not nearer the sea. Year-round cloud cover and a different latitude band are implausible: Jos and Lafia are at similar latitudes, and seasonal cloud differences alone would not produce the consistent temperature gap explained by elevation."
+  },
+  {
+   "n": 47,
+   "topic": "Vegetation and soils",
+   "q": "Which soil type is most characteristic of the tropical rainforest zone of southern Nigeria and commonly develops a hard iron-rich crust when exposed?",
+   "options": [
+    "Lateritic soil (laterite)",
+    "Podzol",
+    "Alluvial soil",
+    "Chernozem"
+   ],
+   "answer": 0,
+   "explanation": "Lateritic soils form in hot, wet tropical climates with intense leaching; they are rich in iron and aluminium oxides and may develop a hard iron-rich crust (laterite) when exposed. Alluvial soils occur on floodplains, podzols form under coniferous cool climates, and chernozems are fertile black soils of temperate grasslands, so these are not typical of southern Nigerian rainforest."
+  },
+  {
+   "n": 48,
+   "topic": "Landforms and processes",
+   "q": "Which process is the main cause of rounded tors and dome-shaped inselbergs (e.g., koppies) in the crystalline basement areas of southwestern Nigeria?",
+   "options": [
+    "Exfoliation and differential weathering of resistant rock",
+    "Glacial plucking and abrasion",
+    "Aeolian deflation and deposition",
+    "Karst solution of limestone"
+   ],
+   "answer": 0,
+   "explanation": "In crystalline basement terrains, inselbergs and tors form where resistant rock remains after surrounding rock is removed by chemical weathering and erosion; exfoliation and differential weathering are key processes. Karst requires soluble limestone, glacial processes are not relevant in tropical Nigeria, and aeolian deflation is important in arid regions rather than crystalline bedrock hills."
+  },
+  {
+   "n": 49,
+   "topic": "Latitude, longitude and time",
+   "q": "If it is 12:00 GMT at Greenwich, what is the local solar time in Sokoto (approx. 5°E longitude)? (Assume 4 minutes of time per degree of longitude.)",
+   "options": [
+    "12:20 local solar time",
+    "11:40 local solar time",
+    "12:40 local solar time",
+    "12:00 local solar time"
+   ],
+   "answer": 0,
+   "explanation": "Sokoto at 5°E is east of Greenwich so local solar time is ahead by 5°×4 minutes = 20 minutes; therefore when it is 12:00 GMT the local solar time in Sokoto is 12:20. 11:40 would be 20 minutes behind (west), 12:00 ignores longitude, and 12:40 would be 10° east (40 minutes ahead)."
+  },
+  {
+   "n": 50,
+   "topic": "Map reading and scale",
+   "q": "On a topographic map with scale 1:100,000 a student measures the straight-line distance between Ilorin and Ogbomoso as 6.5 cm on the map. What is the true ground distance?",
+   "options": [
+    "13 km",
+    "6.5 km",
+    "65 km",
+    "0.65 km"
+   ],
+   "answer": 1,
+   "explanation": "Scale 1:100,000 means 1 cm on the map equals 100,000 cm on the ground = 1 km. Therefore 6.5 cm corresponds to 6.5 × 1 km = 6.5 km. 65 km would be 65 cm on the map, 0.65 km would be 0.65 cm, and 13 km would correspond to 13 cm on the map."
+  }
+ ]
+}

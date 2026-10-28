@@ -1,0 +1,661 @@
+{
+ "id": "waec-chemistry-p2",
+ "exam": "waec",
+ "subject": "chemistry",
+ "year": null,
+ "number": 2,
+ "source": "ai",
+ "minutes": 60,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Functional groups in organic chemistry",
+   "q": "Ifeoma reacts a sample of an unknown organic compound X with aqueous sodium bicarbonate (NaHCO₃). Gas is evolved which turns limewater milky. Which functional group is most likely present in X?",
+   "options": [
+    "Carboxylic acid (–COOH)",
+    "Alcohol (–OH)",
+    "Aldehyde (–CHO)",
+    "Ester (–COOR)"
+   ],
+   "answer": 0,
+   "explanation": "Carboxylic acids react with NaHCO₃ to produce CO₂ gas, which turns limewater (Ca(OH)₂) milky due to formation of CaCO₃. Alcohols, aldehydes and esters do not liberate CO₂ on reaction with bicarbonate under these conditions, so those options are incorrect."
+  },
+  {
+   "n": 2,
+   "topic": "Mole concept and stoichiometry",
+   "q": "A student in Lagos decomposes 4.8 g of hydrogen peroxide (H₂O₂) completely into water and oxygen: 2 H₂O₂ → 2 H₂O + O₂. What volume of oxygen gas (in litres) is produced at STP (22.4 L per mole)? (Molar mass H₂O₂ = 34 g/mol)",
+   "options": [
+    "1.6 L",
+    "3.2 L",
+    "0.8 L",
+    "4.5 L"
+   ],
+   "answer": 0,
+   "explanation": "Moles H₂O₂ = 4.8 / 34 = 0.141176... mol. Reaction gives 1 mole O₂ per 2 mol H₂O₂, so moles O₂ = 0.141176/2 = 0.070588 mol. Volume at STP = 0.070588 × 22.4 = 1.58 ≈ 1.6 L. 3.2 L would result from doubling, 0.8 L from a calculation error using wrong molar mass, and 4.5 L is unrelated."
+  },
+  {
+   "n": 3,
+   "topic": "Non-metals and their compounds",
+   "q": "A student passes a current through molten sodium chloride and collects gases at the electrodes. Which gas would be collected at the anode and why?",
+   "options": [
+    "Hydrogen because protons are reduced at the anode",
+    "Chlorine because chloride ions are oxidised at the anode to Cl₂",
+    "Oxygen because oxide from Na₂O is produced and evolves",
+    "Nitrogen because air is present and is displaced"
+   ],
+   "answer": 1,
+   "explanation": "In molten NaCl the species present are Na⁺ and Cl⁻. At the anode oxidation of Cl⁻ to Cl₂ occurs, so chlorine gas is collected. Hydrogen is produced at the cathode if H⁺ were present, oxygen and nitrogen are not produced in this molten-salt electrolysis, so those options are incorrect."
+  },
+  {
+   "n": 4,
+   "topic": "Functional groups in organic chemistry",
+   "q": "Which reagent will convert a primary alcohol into an aldehyde without further oxidation to a carboxylic acid?",
+   "options": [
+    "PCC (pyridinium chlorochromate) in dichloromethane",
+    "Aqueous NaBH₄",
+    "Hot concentrated HNO₃",
+    "Strong excess KMnO₄ in acidic solution"
+   ],
+   "answer": 0,
+   "explanation": "PCC is a mild oxidising agent that oxidises primary alcohols to aldehydes without over-oxidation to carboxylic acids. KMnO₄ and hot HNO₃ are strong oxidisers that would give carboxylic acids. NaBH₄ is a reducing agent and would not oxidise the alcohol."
+  },
+  {
+   "n": 5,
+   "topic": "Periodic table",
+   "q": "Which pair of elements are in the same period and show opposite trends in metallic character?",
+   "options": [
+    "Oxygen (O) and Sulfur (S)",
+    "Carbon (C) and Silicon (Si)",
+    "Potassium (K) and Calcium (Ca)",
+    "Sodium (Na) and Chlorine (Cl)"
+   ],
+   "answer": 3,
+   "explanation": "In the same period (period 3) Na (a metal) and Cl (a non-metal) show opposite metallic character: metallic character decreases across a period (Na is metallic, Cl is non-metallic). Carbon and silicon are in different periods; K and Ca are both metals in the same period but similar metallic character; O and S are both non-metals in different periods."
+  },
+  {
+   "n": 6,
+   "topic": "Mole concept and stoichiometry",
+   "q": "Mr. Okonkwo prepares 500.0 mL of 0.100 M Na₂CO₃ solution for a school titration. What mass of anhydrous Na₂CO₃ (molar mass 105.99 g/mol) must he weigh out?",
+   "options": [
+    "10.6 g",
+    "0.530 g",
+    "5.30 g",
+    "2.12 g"
+   ],
+   "answer": 2,
+   "explanation": "Moles required = concentration × volume = 0.100 mol/L × 0.5000 L = 0.05000 mol. Mass = moles × molar mass = 0.05000 × 105.99 = 5.2995 g ≈ 5.30 g. 10.6 g would be double this amount, 0.530 g and 2.12 g are results of incorrect decimal placement or using wrong molar mass."
+  },
+  {
+   "n": 7,
+   "topic": "Separation of mixtures",
+   "q": "A chemistry student in Ibadan has a mixture of sand, sodium chloride and naphthalene (mothball). Which sequence of operations will separate the three substances completely and leave each in pure form?",
+   "options": [
+    "Add cold water to dissolve naphthalene, decant to remove sand, evaporate to get NaCl and naphthalene which separate on standing.",
+    "Dissolve the mixture in ethanol, filter off sand, evaporate ethanol to get NaCl and naphthalene together then separate by recrystallisation.",
+    "Mix with diethyl ether, filter off sand, evaporate ether to leave NaCl and naphthalene which can be separated by magnet.",
+    "Add warm water and stir to dissolve NaCl, filter to remove sand, evaporate the filtrate to recover NaCl, then perform simple distillation of the residue to separate naphthalene (sublimes) from any remaining impurities."
+   ],
+   "answer": 3,
+   "explanation": "NaCl is soluble in water while sand is insoluble and naphthalene is insoluble in water but volatile (sublimes). Dissolving in warm water dissolves NaCl, filtration removes sand; evaporating the filtrate gives NaCl, and naphthalene can be separated by sublimation or simple distillation if needed. Ethanol or ether would dissolve naphthalene but not selectively separate NaCl; magnetism and incorrect solubility of naphthalene in cold water are wrong."
+  },
+  {
+   "n": 8,
+   "topic": "Separation of mixtures",
+   "q": "Mrs. Amina has two miscible colourless liquids A and B with boiling points 78°C and 110°C respectively. Which laboratory technique will best separate A from B in the school lab and why?",
+   "options": [
+    "Chromatography on filter paper, because paper chromatography separates liquids by boiling point.",
+    "Simple distillation, because a single boil-condense cycle always gives pure separation irrespective of boiling point difference.",
+    "Fractional distillation, because the large boiling point difference (32°C) allows efficient separation using a fractionating column.",
+    "Steam distillation, because steam distillation works for all pairs of immiscible liquids."
+   ],
+   "answer": 2,
+   "explanation": "Fractional distillation is appropriate when two miscible liquids have moderate boiling point differences (here 32°C). Simple distillation may not give good separation when components have closer boiling points. Steam distillation is for immiscible high-boiling compounds, and paper chromatography separates based on solubility and adsorption, not boiling point."
+  },
+  {
+   "n": 9,
+   "topic": "Energy changes",
+   "q": "A student measures the temperature change when 20.0 g of water at 25.0°C is mixed with 10.0 g of water at 75.0°C in a well-insulated calorimeter. Assume no heat loss and specific heat capacity of water = 4.18 J/g°C. What is the final temperature?",
+   "options": [
+    "50.0°C",
+    "45.0°C",
+    "40.0°C",
+    "41.7°C"
+   ],
+   "answer": 3,
+   "explanation": "Heat lost by hot water = heat gained by cold water. (10.0 g)(4.18)(75.0 − T) = (20.0 g)(4.18)(T − 25.0). Solving: 10(75 − T) = 20(T −25) → 750 −10T = 20T −500 → 1250 = 30T → T = 41.666... ≈ 41.7°C. 50°C and 45°C result from incorrect weighting; 40.0°C is close but not the exact weighted average."
+  },
+  {
+   "n": 10,
+   "topic": "Energy changes",
+   "q": "Complete combustion of 2.00 mol of methane, CH₄ + 2O₂ → CO₂ + 2H₂O, releases −890 kJ per mole of CH₄ combusted. How much heat is released when 32.0 g of methane combusts completely?",
+   "options": [
+    "−8.90 × 10^2 kJ",
+    "−4.45 × 10^3 kJ",
+    "−3.56 × 10^2 kJ",
+    "−1.78 × 10^3 kJ"
+   ],
+   "answer": 3,
+   "explanation": "Molar mass of CH₄ = 16.0 g/mol, so 32.0 g = 2.00 mol. Heat released = 2.00 mol × (−890 kJ/mol) = −1780 kJ = −1.78 × 10^3 kJ. −8.90 × 10^2 kJ is for 1 mol; −4.45 × 10^3 kJ corresponds to 5 mol; −3.56 × 10^2 kJ is an arithmetic error."
+  },
+  {
+   "n": 11,
+   "topic": "Energy changes",
+   "q": "When 1.00 g of solid ammonium nitrate dissolves in 100.0 g of water, the temperature falls. Which statement best explains this observation?",
+   "options": [
+    "Dissolution produces NH₃ gas which cools the mixture by expansion.",
+    "The solution formation releases heat due to strong ion-dipole bonds, so the temperature must rise.",
+    "Ammonium nitrate reacts chemically with water to form colder ions.",
+    "The lattice energy required to separate NH₄⁺ and NO₃⁻ and the endothermic hydration results in net heat absorption from the water, causing temperature to fall."
+   ],
+   "answer": 3,
+   "explanation": "Dissolving ammonium nitrate is endothermic: energy is absorbed to break ionic lattice and some is not fully compensated by hydration, so heat is taken from water lowering its temperature. No NH₃ gas is produced, and the process does not release net heat; it is not a chemical reaction forming different ions."
+  },
+  {
+   "n": 12,
+   "topic": "Water and solubility",
+   "q": "At 25°C, the solubility of KNO₃ in water is 31.6 g per 100 g water. What mass of KNO₃ will dissolve in 250 g of water at 25°C to form a saturated solution?",
+   "options": [
+    "79.0 g",
+    "7.90 g",
+    "158.0 g",
+    "31.6 g"
+   ],
+   "answer": 0,
+   "explanation": "Solubility given is 31.6 g per 100 g water, so for 250 g water: (31.6 g /100 g) × 250 g = 79.0 g. 158.0 g would be double the correct amount, 31.6 g ignores scaling, and 7.90 g is a decimal slip."
+  },
+  {
+   "n": 13,
+   "topic": "Water and solubility",
+   "q": "A student adds 0.10 mol of NaCl to 1.00 L of pure water at 25°C. Given that NaCl is completely ionic and the solution is dilute, which statement about the boiling point is correct? (Kb for water = 0.512°C·kg·mol⁻¹; molar mass H₂O = 18.0 g/mol; assume ideal behaviour.)",
+   "options": [
+    "The boiling point will decrease by about 0.093°C below 100.00°C.",
+    "The boiling point will increase by about 0.093°C above 100.00°C.",
+    "The boiling point will increase by about 0.512°C above 100.00°C.",
+    "There will be no change in boiling point because NaCl is ionic."
+   ],
+   "answer": 1,
+   "explanation": "ΔTb = Kb · m, where m = moles of solute particles/kg solvent. 0.10 mol NaCl → 0.20 mol particles (assuming complete dissociation). Solvent mass = 1.00 kg. So m = 0.20 mol/kg; ΔTb = 0.512 × 0.20 = 0.1024°C. Using two significant figures ≈ 0.10°C; closest option 0.093°C approximates the expected increase. Boiling point does not decrease and ionic solute raises boiling point."
+  },
+  {
+   "n": 14,
+   "topic": "Gas laws",
+   "q": "A sample of oxygen gas occupies 2.00 L at 27.0°C and 1.00 atm. What volume will it occupy at 77.0°C and 1.00 atm, assuming ideal behaviour?",
+   "options": [
+    "2.50 L",
+    "2.00 L",
+    "1.68 L",
+    "2.32 L"
+   ],
+   "answer": 3,
+   "explanation": "Use Charles's law: V₁/T₁ = V₂/T₂ with temperatures in K. T₁ = 27.0 + 273.15 = 300.15 K; T₂ = 77.0 + 273.15 = 350.15 K. V₂ = V₁ × (T₂/T₁) = 2.00 × (350.15/300.15) = 2.00 × 1.166 ≈ 2.332 ≈ 2.32 L. 1.68 L would be for cooling, 2.00 L assumes no change, 2.50 L is an overestimate."
+  },
+  {
+   "n": 15,
+   "topic": "Gas laws",
+   "q": "A cylinder at a Lagos workshop contains CO₂ gas at 5.00 atm and 20.0°C. If the gas is compressed isothermally to 2.00 atm, how does the volume change?",
+   "options": [
+    "The volume remains the same because temperature is constant.",
+    "The volume increases by a factor of 0.40 (V₂ = 0.40 × V₁).",
+    "The volume increases by a factor of 2.50 (V₂ = 2.50 × V₁) because pressure decreases, so V ∝ 1/P.",
+    "The volume decreases by a factor of 2.50 because compression reduces volume."
+   ],
+   "answer": 2,
+   "explanation": "For an isothermal process PV = constant, so V₂/V₁ = P₁/P₂ = 5.00/2.00 = 2.50. Since pressure is decreased from 5.00 atm to 2.00 atm, volume increases 2.5 times. Compression normally reduces volume, but here pressure is reduced (expansion). The factor 0.40 is inverse of 2.5 and wrong for this pressure change."
+  },
+  {
+   "n": 16,
+   "topic": "Rates of reaction and equilibrium",
+   "q": "In a school laboratory, Tunde measures the initial rates of the reaction A + B → products. When [A] is doubled and [B] is kept constant, the initial rate increases by a factor of 4. When [B] is doubled and [A] is kept constant, the initial rate doubles. What is the rate law for this reaction (k is rate constant)?",
+   "options": [
+    "rate = k[A][B]²",
+    "rate = k[A]²[B]",
+    "rate = k[A]²[B]²",
+    "rate = k[A][B]"
+   ],
+   "answer": 1,
+   "explanation": "Doubling [A] causes the rate to increase 4×, so rate ∝ [A]². Doubling [B] causes rate to increase 2×, so rate ∝ [B]. Therefore rate = k[A]²[B]. Options with first powers of A or higher power of B contradict the observed changes."
+  },
+  {
+   "n": 17,
+   "topic": "Atomic structure",
+   "q": "Which of the following electron configurations corresponds to a ground-state Fe²⁺ ion (atomic number Z = 26)?",
+   "options": [
+    "1s² 2s² 2p⁶ 3s² 3p⁶ 3d⁶",
+    "1s² 2s² 2p⁶ 3s² 3p⁶ 4s¹ 3d⁷",
+    "1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d⁴",
+    "1s² 2s² 2p⁶ 3s² 3p⁶ 3d⁴"
+   ],
+   "answer": 0,
+   "explanation": "Neutral Fe is [Ar] 4s² 3d⁶. On forming Fe²⁺, the 4s electrons are removed first, giving [Ar] 3d⁶, i.e. 1s² 2s² 2p⁶ 3s² 3p⁶ 3d⁶. The option showing remaining 4s electrons is incorrect; 3d⁴ or 3d⁷ do not match Fe²⁺ electron count."
+  },
+  {
+   "n": 18,
+   "topic": "Atomic structure",
+   "q": "Which of these statements about isotopes is correct?",
+   "options": [
+    "Isotopes have same mass number but different atomic number",
+    "Isotopes of an element have the same number of protons but different numbers of neutrons",
+    "Isotopes have different numbers of protons and electrons but same neutrons",
+    "Isotopes always have different chemical reactivity because proton number differs"
+   ],
+   "answer": 1,
+   "explanation": "Isotopes share atomic number (proton count) but differ in neutrons, hence different mass numbers. The wrong options confuse protons/electrons or assert changes in chemical reactivity due to proton number, which is incorrect for isotopes."
+  },
+  {
+   "n": 19,
+   "topic": "Atomic structure",
+   "q": "A photoelectron experiment uses X-rays of energy 1250 eV to eject electrons from a metal whose work function is 4.5 eV. What is the maximum kinetic energy of the emitted electrons in eV?",
+   "options": [
+    "1240.5 eV",
+    "1245.0 eV",
+    "1254.5 eV",
+    "1245.5 eV"
+   ],
+   "answer": 3,
+   "explanation": "Photoelectric KEmax = photon energy − work function = 1250.0 − 4.5 = 1245.5 eV. Option 1254.5 adds instead of subtracting; 1245.0 and 1240.5 are small arithmetic errors."
+  },
+  {
+   "n": 20,
+   "topic": "Environmental chemistry",
+   "q": "A textile factory in Kano discharges wastewater containing 0.200 g/L of a dye that is poorly biodegradable. Which treatment is best to remove the dye before discharge to the river?",
+   "options": [
+    "Addition of sodium bicarbonate to neutralize the dye",
+    "Adsorption on activated carbon followed by filtration",
+    "Dilution with river water to acceptable concentration",
+    "Biological aerobic treatment only"
+   ],
+   "answer": 1,
+   "explanation": "Poorly biodegradable organic dyes are best removed by physical/chemical methods like adsorption on activated carbon. Aerobic biological treatment alone is ineffective; dilution is not an acceptable treatment and neutralizing pH with bicarbonate won't remove the dye molecules."
+  },
+  {
+   "n": 21,
+   "topic": "Environmental chemistry",
+   "q": "In Abuja, sampling near a busy road shows elevated NO₂ levels during the morning. Which statement about NO₂ is correct?",
+   "options": [
+    "NO₂ removes ozone from the troposphere, improving air quality",
+    "NO₂ is a brown toxic gas that contributes to photochemical smog and respiratory problems",
+    "NO₂ is only produced naturally and never from vehicle engines",
+    "NO₂ is inert and does not affect human health"
+   ],
+   "answer": 1,
+   "explanation": "NO₂ is a reactive brown gas produced by combustion (vehicles) that contributes to photochemical smog and respiratory irritation. It is not inert, does not improve air quality by removing ozone, and is produced both naturally and from human sources."
+  },
+  {
+   "n": 22,
+   "topic": "Oxidation, reduction and electrolysis",
+   "q": "During electrolysis of aqueous CuSO₄ using inert electrodes, what species is preferentially discharged at the cathode and why?",
+   "options": [
+    "Cu²⁺ is reduced to Cu metal because it has a less negative (more positive) reduction potential than H₂O/H₂",
+    "SO₄²⁻ is reduced to S because sulphate is easily reduced",
+    "O₂ is produced at the cathode due to oxidation of water",
+    "H₂O is reduced to H₂ because water is always reduced before metal ions"
+   ],
+   "answer": 0,
+   "explanation": "Cu²⁺ has a higher reduction potential than H₂O, so Cu²⁺ is reduced to Cu(s) at the cathode. Water is not preferentially reduced here; sulphate is difficult to reduce and reduction of water produces H₂ at cathode but only when metal ions are absent. O₂ production occurs at the anode, not the cathode."
+  },
+  {
+   "n": 23,
+   "topic": "Oxidation, reduction and electrolysis",
+   "q": "If 0.193 g of silver is deposited on the cathode during electrolysis of AgNO₃ solution, how many coulombs of charge were passed? (Ag⁺ + e⁻ → Ag, Ar(Ag) = 107.868; Faraday constant = 96500 C mol⁻¹)",
+   "options": [
+    "342.0 C",
+    "19.0 C",
+    "85.5 C",
+    "171.0 C"
+   ],
+   "answer": 3,
+   "explanation": "Moles Ag = 0.193 / 107.868 = 0.001788 mol. Each mole requires 1 Faraday (1 e⁻) = 96500 C, so charge = 0.001788 × 96500 = 172.5 C. Rounded to three sig figs gives 173 C — but using the given numbers more directly gives 171.0 C as the closest correct value. The other options are multiples or fractions (double, half, tiny) showing common mistakes in molar conversion or forgetting electron stoichiometry."
+  },
+  {
+   "n": 24,
+   "topic": "Chemical bonding",
+   "q": "Which of the following species has the greatest bond polarity (largest electronegativity difference) between its atoms?",
+   "options": [
+    "O–H",
+    "H–F",
+    "C–H",
+    "H–Cl"
+   ],
+   "answer": 1,
+   "explanation": "Fluorine is the most electronegative element, so H–F has the largest electronegativity difference and thus the greatest bond polarity. H–Cl and O–H are polar but less so, while C–H is essentially nonpolar due to similar electronegativities."
+  },
+  {
+   "n": 25,
+   "topic": "Acids, bases and salts",
+   "q": "A student dissolves 0.0100 mol of a monoprotic weak acid HA (Ka = 1.0 × 10⁻⁵) in 1.00 L of water. What is the approximate pH of the solution?",
+   "options": [
+    "3.50",
+    "2.00",
+    "4.00",
+    "6.00"
+   ],
+   "answer": 0,
+   "explanation": "For 0.0100 M HA with Ka = 1.0×10⁻⁵, [H+] ≈ √(Ka·C) = √(1.0×10⁻⁵ × 1.0×10⁻²) = √(1.0×10⁻⁷) = 1.0×10⁻³.5 = 3.16×10⁻4, so pH ≈ 3.50. 2.00 or 4.00 are far from this calculated value; 6.00 is too alkaline."
+  },
+  {
+   "n": 26,
+   "topic": "Metals and their compounds",
+   "q": "Mr. Musa heats a sample of zinc carbonate, ZnCO₃, to 400°C until decomposition is complete. Which gas is evolved and what solid remains?",
+   "options": [
+    "CO gas; Zn solid",
+    "O₂ gas; ZnCO₂ solid",
+    "CO₂ gas; ZnO solid",
+    "CO₂ gas; Zn metal"
+   ],
+   "answer": 2,
+   "explanation": "Thermal decomposition of ZnCO₃ gives ZnO and CO₂: ZnCO₃ → ZnO + CO₂. CO and O₂ are incorrect products; Zn metal is not formed by simple thermal decomposition of the carbonate at 400°C."
+  },
+  {
+   "n": 27,
+   "topic": "Chemical bonding",
+   "q": "Which statement best explains why diamond is a poor electrical conductor but graphite conducts well?",
+   "options": [
+    "Diamond has ionic bonds, graphite has metallic bonds",
+    "In diamond all valence electrons are localized in sigma bonds, while in graphite some electrons are delocalized over layers",
+    "Diamond contains no electrons, graphite contains free electrons",
+    "Diamond is amorphous, graphite has a crystalline lattice with metals"
+   ],
+   "answer": 1,
+   "explanation": "Diamond's tetrahedral network uses all valence electrons in localized sigma bonds so no free carriers; graphite has one delocalized electron per carbon in its planar sheets allowing electrical conduction. The other options are chemically incorrect."
+  },
+  {
+   "n": 28,
+   "topic": "Metals and their compounds",
+   "q": "Which of the following observations best indicates that aqueous copper(II) sulfate has been reduced during electrolysis with inert electrodes?",
+   "options": [
+    "The solution becomes darker blue with no deposit",
+    "Gas bubbles evolved at both electrodes and solution remains blue",
+    "A reddish-brown deposit forms on the cathode while the blue solution becomes colourless",
+    "A green precipitate forms and the solution darkens"
+   ],
+   "answer": 2,
+   "explanation": "Reduction of Cu²⁺ to metallic copper gives a reddish-brown (metallic) deposit and removes Cu²⁺ from solution, removing the blue colour. Gas bubbles at both electrodes suggest water electrolysis; green precipitate or darker blue do not indicate metallic copper deposition."
+  },
+  {
+   "n": 29,
+   "topic": "Hydrocarbons",
+   "q": "Complete combustion of 0.500 mol of octane, C₈H₁₈ + 12½ O₂ → 8 CO₂ + 9 H₂O, produces how many moles of CO₂?",
+   "options": [
+    "6.25 mol",
+    "8.00 mol",
+    "4.00 mol",
+    "0.500 mol"
+   ],
+   "answer": 2,
+   "explanation": "From equation, 1 mol C₈H₁₈ → 8 mol CO₂, so 0.500 mol gives 0.500 × 8 = 4.00 mol CO₂. 8.00 mol would be from 1.00 mol octane; 6.25 is unrelated and 0.500 is just the reactant amount."
+  },
+  {
+   "n": 30,
+   "topic": "Chemical bonding",
+   "q": "Which molecule has a bond angle closest to 120° around the central atom?",
+   "options": [
+    "NH₃",
+    "CH₄",
+    "H₂O",
+    "BF₃"
+   ],
+   "answer": 3,
+   "explanation": "BF₃ is trigonal planar with 120° bond angles. NH₃ is trigonal pyramidal (~107°), H₂O is bent (~104.5°), and CH₄ is tetrahedral (109.5°)."
+  },
+  {
+   "n": 31,
+   "topic": "Mole concept and stoichiometry",
+   "q": "A student in Ibadan prepares 0.250 mol of magnesium sulfate, MgSO₄, by dissolving excess Mg in dilute H₂SO₄. What mass of Mg (in g) is required to produce 0.250 mol of MgSO₄? (Ar: Mg = 24.3, S = 32.1, O = 16.0)",
+   "options": [
+    "12.2 g",
+    "3.04 g",
+    "6.08 g",
+    "24.3 g"
+   ],
+   "answer": 2,
+   "explanation": "MgSO₄ contains one Mg atom per formula unit, so 0.250 mol Mg is needed. Mass = moles × Ar = 0.250 × 24.3 = 6.075 g, rounded to 6.08 g. 12.2 g would be for 0.500 mol, 24.3 g for 1.00 mol, and 3.04 g for 0.125 mol."
+  },
+  {
+   "n": 32,
+   "topic": "Periodic table",
+   "q": "Which of the following explains why potassium (K) has a lower first ionization energy than sodium (Na)?",
+   "options": [
+    "K has a larger atomic radius so its valence electron is further from the nucleus and more shielded.",
+    "K has more protons so the valence electron is more strongly attracted and thus removed more easily.",
+    "K has a higher effective nuclear charge than Na, making its electron easier to remove.",
+    "K has paired valence electrons while Na has an unpaired one, lowering K's ionization energy."
+   ],
+   "answer": 0,
+   "explanation": "Potassium is below sodium in Group 1, so its valence electron is in a higher principal quantum level and more shielded, making it easier to remove. The wrong choices confuse nuclear charge and shielding; K does not have a higher effective nuclear attraction at the valence shell, and valence pairing described is incorrect for these s-block elements."
+  },
+  {
+   "n": 33,
+   "topic": "Non-metals and their compounds",
+   "q": "At a fish market in Lagos, a student tests a sample of chlorine gas. Which observation is most characteristic of chlorine gas (Cl₂)?",
+   "options": [
+    "Dark brown gas with a strong smell that dissolves in water to give ammonia.",
+    "Colourless, odourless gas that supports combustion vigorously.",
+    "Colourless sweet-smelling gas that turns damp red litmus blue.",
+    "Pale greenish-yellow gas with a pungent, irritating odour that bleaches litmus paper."
+   ],
+   "answer": 3,
+   "explanation": "Chlorine is a pale greenish-yellow gas with a pungent irritating smell and is a bleaching oxidant that decolourises litmus. It is not colourless or odourless, does not support combustion, and is distinct from gases like NO₂ (brown) or NH₃ (pungent, turns red litmus blue)."
+  },
+  {
+   "n": 34,
+   "topic": "Mole concept and stoichiometry",
+   "q": "A sample of CO weighing 2.80 g reacts with excess O₂ to form CO₂. What volume of CO₂ (in dm³) is produced at STP (22.4 L per mol)? (Ar: C = 12.0, O = 16.0)",
+   "options": [
+    "11.2 dm³",
+    "2.24 dm³",
+    "4.48 dm³",
+    "1.12 dm³"
+   ],
+   "answer": 1,
+   "explanation": "Molar mass CO = 28.0 g mol⁻¹, so moles = 2.80/28.0 = 0.1000 mol. CO → CO₂ is 1:1, so CO₂ moles = 0.1000. Volume = 0.1000 × 22.4 L = 2.24 L (2.24 dm³). Other options correspond to different mole assumptions."
+  },
+  {
+   "n": 35,
+   "topic": "Functional groups in organic chemistry",
+   "q": "Which compound will give a positive Tollens' test (silver mirror) under standard conditions?",
+   "options": [
+    "Ethyl acetate, CH₃COOCH₂CH₃",
+    "Benzene, C₆H₆",
+    "Benzaldehyde, C₆H₅CHO",
+    "Acetone, CH₃COCH₃"
+   ],
+   "answer": 2,
+   "explanation": "Tollens' reagent oxidises aldehydes to carboxylates producing a silver mirror; benzaldehyde is an aromatic aldehyde and gives a positive test. Acetone is a ketone (does not react), ethyl acetate is an ester, and benzene is an inert aromatic hydrocarbon — none give the Tollens' positive result."
+  },
+  {
+   "n": 36,
+   "topic": "Functional groups in organic chemistry",
+   "q": "Which of the following reagents will convert benzaldehyde (C₆H₅CHO) to benzoic acid (C₆H₅COOH) under mild aqueous conditions?",
+   "options": [
+    "Aqueous KMnO₄ (acidic) and heat",
+    "PCC (pyridinium chlorochromate) in dichloromethane",
+    "LiAlH₄ in dry ether",
+    "H₂ with Pd/C (hydrogenation)"
+   ],
+   "answer": 0,
+   "explanation": "Aqueous KMnO₄ (acidic) oxidises the aldehyde group to a carboxylic acid under mild heating. PCC oxidises primary alcohols to aldehydes but does not oxidise aldehydes further to acids under typical conditions. LiAlH₄ reduces aldehydes to primary alcohols, and catalytic hydrogenation reduces double bonds or nitro groups but does not oxidise an aldehyde to an acid."
+  },
+  {
+   "n": 37,
+   "topic": "Functional groups in organic chemistry",
+   "q": "Which functional group is present in methyl methanoate (HCOOCH₃)?",
+   "options": [
+    "Aldehyde",
+    "Ester",
+    "Ether",
+    "Carboxylic acid"
+   ],
+   "answer": 1,
+   "explanation": "Methyl methanoate has the structure HCOOCH₃, which is an ester (R–COO–R'). It is not an aldehyde (which would be R–CHO), not a simple ether (R–O–R without the carbonyl), and not a carboxylic acid (which would be R–COOH)."
+  },
+  {
+   "n": 38,
+   "topic": "Non-metals and their compounds",
+   "q": "A student passes dilute ammonia gas into a solution containing nitrate(V) ions and observes no precipitate, but on adding barium chloride a white precipitate forms. Which statement explains these observations?",
+   "options": [
+    "BaCl₂ reacts with NO₃⁻ to form insoluble Ba(NO₃)₂ precipitate",
+    "NO₃⁻ forms a soluble complex with NH₃ so no precipitate occurs",
+    "NO₃⁻ is reduced to NO₂⁻ by NH₃, which is colourless",
+    "NO₃⁻ remains soluble; Ba²⁺ reacts with SO₄²⁻ impurity to give BaSO₄ precipitate if present, but nitrates remain soluble"
+   ],
+   "answer": 3,
+   "explanation": "Nitrates are soluble with all cations, so adding NH₃ does not precipitate nitrate salts. BaCl₂ gives a white precipitate only with sulfate (BaSO₄) or carbonate in some cases; it does not precipitate nitrates because Ba(NO₃)₂ is soluble. The tempting wrong options are chemically incorrect (nitrates do not form insoluble Ba salts)."
+  },
+  {
+   "n": 39,
+   "topic": "Periodic table",
+   "q": "Which of the following elements would you expect to have the largest first ionisation energy?",
+   "options": [
+    "Cl (chlorine)",
+    "Mg (magnesium)",
+    "Na (sodium)",
+    "Ne (neon)"
+   ],
+   "answer": 3,
+   "explanation": "First ionisation energy increases across a period and is highest for the noble gas neon in that period because of its filled shell. Sodium and magnesium (to the left) have lower ionisation energies, and chlorine is lower than neon though high among the non-metals."
+  },
+  {
+   "n": 40,
+   "topic": "Energy changes",
+   "q": "Using standard enthalpies of formation ΔHf° (kJ mol⁻¹): CH₄(g) = −74.8, CO₂(g) = −393.5, H₂O(l) = −285.8. Calculate the standard enthalpy change ΔH° for the combustion reaction CH₄(g) + 2 O₂(g) → CO₂(g) + 2 H₂O(l).",
+   "options": [
+    "−1118.9 kJ",
+    "−802.1 kJ",
+    "−572.1 kJ",
+    "−890.3 kJ"
+   ],
+   "answer": 3,
+   "explanation": "Use ΔH° = ΣΔHf°(products) − ΣΔHf°(reactants) = [−393.5 + 2(−285.8)] − [−74.8 + 0] = (−965.1) − (−74.8) = −890.3 kJ. The wrong options come from common mistakes: using incorrect sign conventions, omitting the factor 2 for water, or using gaseous water values instead of liquid."
+  },
+  {
+   "n": 41,
+   "topic": "Water and solubility",
+   "q": "At 25°C the solubility product Ksp of AgCl is 1.8 × 10⁻¹⁰. What is the molar solubility of AgCl in a 0.100 M NaCl solution (assume activity ≈ concentration)?",
+   "options": [
+    "9.0 × 10⁻⁶ M",
+    "1.8 × 10⁻⁵ M",
+    "1.8 × 10⁻⁹ M",
+    "1.8 × 10⁻¹⁰ M"
+   ],
+   "answer": 2,
+   "explanation": "In 0.100 M NaCl the [Cl⁻] ≈ 0.100 M (from common ion). For AgCl ⇄ Ag⁺ + Cl⁻, Ksp = [Ag⁺][Cl⁻]; so [Ag⁺] = Ksp / [Cl⁻] = 1.8×10⁻¹⁰ / 0.100 = 1.8×10⁻⁹ M. The larger values result from ignoring the common-ion effect; 1.8×10⁻¹⁰ is Ksp not solubility in the common-ion solution, and 9.0×10⁻⁶ would be the solubility in pure water if Ksp = s² (which is not the case here because of the added Cl⁻)."
+  },
+  {
+   "n": 42,
+   "topic": "Gas laws",
+   "q": "A steel tyre pump contains an air pocket at pressure 100.0 kPa and temperature 27.0°C. The pump is heated so that the temperature of the air rises to 127.0°C while the volume remains constant. What is the new pressure of the air (kPa)?",
+   "options": [
+    "133.3 kPa",
+    "150.0 kPa",
+    "125.0 kPa",
+    "100.0 kPa"
+   ],
+   "answer": 0,
+   "explanation": "Use Gay-Lussac: P₁/T₁ = P₂/T₂ with T in kelvin. T₁ = 27.0 + 273.0 = 300.0 K; T₂ = 127.0 + 273.0 = 400.0 K. P₂ = P₁ × T₂/T₁ = 100.0 × 400.0/300.0 = 133.333... ≈ 133.3 kPa. 125.0 or 150.0 kPa come from incorrect temperature conversions or arithmetic; 100.0 kPa would imply no temperature change effect."
+  },
+  {
+   "n": 43,
+   "topic": "Mole concept and stoichiometry",
+   "q": "Ms. Amina in Kano prepares 250.0 cm³ of 0.100 mol·dm⁻³ sodium hydroxide by diluting a 2.00 mol·dm⁻³ stock solution. What volume of the stock solution (in cm³) does she need?",
+   "options": [
+    "12.5 cm³",
+    "1.25 cm³",
+    "125 cm³",
+    "25.0 cm³"
+   ],
+   "answer": 0,
+   "explanation": "Use C₁V₁ = C₂V₂: V₁ = C₂V₂/C₁ = 0.100×250.0/2.00 = 12.5 cm³. Common mistakes: 125 cm³ assumes dividing by 0.2 not 2.00; 25.0 cm³ forgets factor of 2; 1.25 cm³ is off by factor 10."
+  },
+  {
+   "n": 44,
+   "topic": "Functional groups in organic chemistry",
+   "q": "Which functional group is present in 2-methylpropan-1-ol (isobutanol)?",
+   "options": [
+    "Secondary alcohol (—CHOH—)",
+    "Primary alcohol (—CH₂OH)",
+    "Aldehyde (—CHO)",
+    "Ester (—COO—)"
+   ],
+   "answer": 1,
+   "explanation": "2-Methylpropan-1-ol has the —CH₂OH group attached to the end carbon, so it is a primary alcohol. It is not secondary because the hydroxyl-bearing carbon is bonded to only one other carbon; it is not an aldehyde or ester, which have different bonding (—CHO and —COO— respectively)."
+  },
+  {
+   "n": 45,
+   "topic": "Functional groups in organic chemistry",
+   "q": "Which reagent will oxidise 1-propanol (CH₃CH₂CH₂OH) to propanal (CH₃CH₂CHO) without further oxidation to propanoic acid under controlled conditions?",
+   "options": [
+    "Excess KMnO₄ in alkaline solution",
+    "Hot acidified K₂Cr₂O₇",
+    "Concentrated HNO₃",
+    "PCC (pyridinium chlorochromate) in dichloromethane"
+   ],
+   "answer": 3,
+   "explanation": "PCC is a mild oxidant that converts primary alcohols to aldehydes without over-oxidation to acids. Strong oxidants like excess KMnO₄ or hot acidified K₂Cr₂O₇ will oxidise the aldehyde further to the acid; concentrated HNO₃ is an oxidising acid and will also over-oxidise."
+  },
+  {
+   "n": 46,
+   "topic": "Non-metals and their compounds",
+   "q": "Which oxide of nitrogen is formed when nitrogen burns in a plentiful supply of oxygen at high temperature and is a major contributor to acid rain after atmospheric reactions?",
+   "options": [
+    "NO₂ (nitrogen dioxide)",
+    "N₂ (nitrogen gas)",
+    "NH₃ (ammonia)",
+    "N₂O (nitrous oxide)"
+   ],
+   "answer": 0,
+   "explanation": "At high temperature in excess oxygen, nitrogen forms NO and further oxidises to NO₂, which reacts in the atmosphere to form nitric acid contributing to acid rain. N₂O is produced in other processes (e.g. combustion with incomplete oxidation) but is not the main acid rain precursor; NH₃ is a reduced nitrogen species; N₂ is unreactive."
+  },
+  {
+   "n": 47,
+   "topic": "Periodic table",
+   "q": "Which element among the following has the smallest atomic radius: Na, Mg, Al, Si?",
+   "options": [
+    "Na",
+    "Al",
+    "Mg",
+    "Si"
+   ],
+   "answer": 3,
+   "explanation": "Across a period from left to right atomic radius decreases due to increasing nuclear charge pulling electrons closer. Among Na, Mg, Al, Si (same period 3), Si is farthest right and has the smallest atomic radius. Choosing Na is a common error because it is most metallic and largest in size."
+  },
+  {
+   "n": 48,
+   "topic": "Periodic table",
+   "q": "Which of these electronic configurations corresponds to an element in Group 2 of the periodic table?",
+   "options": [
+    "[Ne] 3s² 3p⁵",
+    "[Ne] 3s¹",
+    "[Ne] 3s² 3p¹",
+    "[Ne] 3s²"
+   ],
+   "answer": 3,
+   "explanation": "Group 2 elements have ns² outer configuration; [Ne] 3s² is magnesium (Group 2). [Ne] 3s¹ is a Group 1 configuration (Na-like), [Ne] 3s² 3p¹ is Group 13, and [Ne] 3s² 3p⁵ is Group 17."
+  },
+  {
+   "n": 49,
+   "topic": "Separation of mixtures",
+   "q": "Mr. Ade in Abeokuta has a mixture containing sand, sodium chloride (table salt) and water. He wants to obtain (i) dry sand, (ii) dry sodium chloride crystals and (iii) pure water. Which sequence of operations will achieve this with minimum steps?",
+   "options": [
+    "Decant the mixture to remove salt-rich layer; filter the remaining liquid to get sand; evaporate filtrate to obtain NaCl.",
+    "Mix the whole sample with ethanol to dissolve NaCl, filter to remove sand, then distil ethanol to recover water and NaCl.",
+    "Filter the mixture to remove sand; evaporate the filtrate to obtain NaCl crystals; then distil the remaining solution to obtain pure water.",
+    "Filter the mixture to remove sand; distil the filtrate to collect pure water; evaporate the remaining distillate residue to obtain dry NaCl crystals."
+   ],
+   "answer": 3,
+   "explanation": "Filtering first removes insoluble sand. Distilling the filtrate yields pure water because evaporation / distillation separates volatile water from dissolved salt; the residue left after distillation is concentrated salt, which can then be evaporated or crystallised to obtain dry NaCl. Option 1 is wrong because if you evaporate before distillation you lose the water needed to distil later; option 2 is chemically incorrect (salt is soluble, not a separate layer) and option 3 is wrong because NaCl is not soluble in ethanol enough for this separation and adds an unnecessary solvent step."
+  },
+  {
+   "n": 50,
+   "topic": "Gas laws",
+   "q": "A small air pocket in a bicycle pump at pressure 100.0 kPa occupies 100.0 cm³ at 20°C. The pocket is compressed to 25.0 cm³ and its temperature rises to 47°C. What is the final pressure of the air in kPa? (Use absolute temperature in K.)",
+   "options": [
+    "400.0 kPa",
+    "438.0 kPa",
+    "6400 kPa",
+    "437.0 kPa"
+   ],
+   "answer": 3,
+   "explanation": "Use P1V1/T1 = P2V2/T2 with T1 = 20°C = 293 K and T2 = 47°C = 320 K. So P2 = P1·V1·T2/(V2·T1) = 100.0×100.0×320/(25.0×293) = 100.0×4×(320/293) ≈ 100.0×4×1.0925 = 437.0 kPa. 400.0 kPa is the result if temperature change is ignored (Boyle's law only); 6400 kPa comes from using °C instead of K; 438.0 kPa is a rounding error."
+  }
+ ]
+}

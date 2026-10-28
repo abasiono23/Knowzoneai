@@ -96,6 +96,7 @@ function RootNavigator() {
             <Stack.Screen name="study" />
             <Stack.Screen name="videos" />
             <Stack.Screen name="courses" />
+            <Stack.Screen name="exams" />
             <Stack.Screen name="referrals" />
           </Stack.Protected>
           <Stack.Protected guard={inApp}>
@@ -120,22 +121,22 @@ export default function RootLayout() {
         <SessionProvider>
           <RewardsProvider>
             <MaterialsProvider>
-                <CoursesProvider>
-                  <WorldProvider>
-                    <SafetyProvider>
-                      <LanguageProvider>
-                        <CatalogProvider>
-                          {/* Inside the catalogue so built-in videos follow the language. */}
-                          <VideosProvider>
-                            <ReminderSync />
-                            <StatusBar style="light" />
-                            <RootNavigator />
-                          </VideosProvider>
-                        </CatalogProvider>
-                      </LanguageProvider>
-                    </SafetyProvider>
-                  </WorldProvider>
-                </CoursesProvider>
+              <CoursesProvider>
+                <WorldProvider>
+                  <SafetyProvider>
+                    <LanguageProvider>
+                      <CatalogProvider>
+                        {/* Inside the catalogue so built-in videos follow the language. */}
+                        <VideosProvider>
+                          <ReminderSync />
+                          <StatusBar style="light" />
+                          <RootNavigator />
+                        </VideosProvider>
+                      </CatalogProvider>
+                    </LanguageProvider>
+                  </SafetyProvider>
+                </WorldProvider>
+              </CoursesProvider>
             </MaterialsProvider>
           </RewardsProvider>
         </SessionProvider>

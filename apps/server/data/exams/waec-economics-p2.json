@@ -1,0 +1,661 @@
+{
+ "id": "waec-economics-p2",
+ "exam": "waec",
+ "subject": "economics",
+ "year": null,
+ "number": 2,
+ "source": "ai",
+ "minutes": 60,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Basic economic concepts",
+   "q": "Which of the following best illustrates the economic problem of scarcity?",
+   "options": [
+    "The Central Bank issues new N2000 notes to replace old ones",
+    "A trader in Lagos increases price of tomatoes after a weekend market festival",
+    "A family in Enugu saves part of their income for future school fees",
+    "A farmer in Kano has enough land to grow either maize or sorghum but not both, and must choose which to plant"
+   ],
+   "answer": 3,
+   "explanation": "Scarcity arises when resources are limited relative to wants; the farmer must choose between maize and sorghum because the land cannot produce both. The trader raising prices is a response to demand; saving is choice over time but not scarcity per se; issuing notes is monetary policy, not an illustration of scarce resources."
+  },
+  {
+   "n": 2,
+   "topic": "Basic economic concepts",
+   "q": "Which statement best describes opportunity cost?",
+   "options": [
+    "The cost of producing one additional unit of a good",
+    "The total money spent on all alternatives when making a decision",
+    "The value of the next best alternative foregone when a choice is made",
+    "The benefit gained from the least preferred option among choices"
+   ],
+   "answer": 2,
+   "explanation": "Opportunity cost is specifically the value of the next best alternative not chosen. Total money spent is not opportunity cost; benefit from the least preferred option is irrelevant; cost of producing one more unit refers to marginal cost, not opportunity cost."
+  },
+  {
+   "n": 3,
+   "topic": "Basic economic concepts",
+   "q": "If the government of Abuja sets a price ceiling below the market equilibrium for bread, the most likely immediate effect is:",
+   "options": [
+    "No change in market because consumers will pay more elsewhere",
+    "Surplus of bread as quantity supplied exceeds quantity demanded",
+    "Long-term increase in bread quality due to competition",
+    "Shortage of bread as quantity demanded exceeds quantity supplied"
+   ],
+   "answer": 3,
+   "explanation": "A binding price ceiling below equilibrium increases quantity demanded and reduces quantity supplied, causing shortage. A surplus occurs with price floors. Consumers paying more elsewhere contradicts a binding low ceiling, and quality increasing is unlikely when suppliers face lower prices."
+  },
+  {
+   "n": 4,
+   "topic": "Population and labour",
+   "q": "A town in Ondo had 5,000 employed workers and 500 unemployed persons actively seeking work. What is the unemployment rate (to one decimal place)?",
+   "options": [
+    "9.1%",
+    "8.3%",
+    "10.0%",
+    "5.0%"
+   ],
+   "answer": 0,
+   "explanation": "Labour force = employed + unemployed = 5,000 + 500 = 5,500. Unemployment rate = (500 / 5,500) × 100 = 9.0909...% ≈ 9.1%. 10.0% would be if unemployed were 556; 8.3% corresponds to 500/6,000; 5.0% is 500/10,000."
+  },
+  {
+   "n": 5,
+   "topic": "Population and labour",
+   "q": "Which policy would most directly reduce structural unemployment in Nigeria?",
+   "options": [
+    "Providing vocational training to match workers' skills with available jobs",
+    "Printing more money to stimulate demand",
+    "Reducing the retirement age across public service",
+    "Raising the minimum wage for all sectors"
+   ],
+   "answer": 0,
+   "explanation": "Structural unemployment stems from mismatches between skills and jobs; vocational training directly addresses this. Raising minimum wage may increase unemployment in some sectors, printing money targets demand not structural issues, and reducing retirement age affects labour supply but not skill mismatches."
+  },
+  {
+   "n": 6,
+   "topic": "Population and labour",
+   "q": "A factory fires 200 workers due to automation. Which type of unemployment is this most likely to cause?",
+   "options": [
+    "Classical unemployment",
+    "Structural unemployment",
+    "Frictional unemployment",
+    "Seasonal unemployment"
+   ],
+   "answer": 1,
+   "explanation": "Automation changes the structure of demand for labour, causing structural unemployment as workers' skills become obsolete. Seasonal unemployment relates to time-bound jobs; frictional is short-term job search; classical unemployment arises from wages being above equilibrium."
+  },
+  {
+   "n": 7,
+   "topic": "National income",
+   "q": "If Nigeria's nominal GDP in 2024 is N120 trillion and the GDP deflator index (base year 2020=100) is 150, what is real GDP in 2020 prices?",
+   "options": [
+    "N120.0 trillion",
+    "N180.0 trillion",
+    "N80.0 trillion",
+    "N200.0 trillion"
+   ],
+   "answer": 2,
+   "explanation": "Real GDP = Nominal GDP × (100 / GDP deflator) = 120 × (100/150) = 120 × 2/3 = 80 trillion naira. 180 would be multiplying by 1.5; 120 assumes deflator = 100; 200 has no relation to the formula."
+  },
+  {
+   "n": 8,
+   "topic": "National income",
+   "q": "Which of the following is included in Nigeria's Gross Domestic Product (GDP) but not in Gross National Product (GNP)?",
+   "options": [
+    "Income sent to Nigeria by Nigerians working abroad",
+    "Remittances received by a Nigerian family from a relative in the UK",
+    "Profits earned in Nigeria by a foreign-owned oil company",
+    "Income earned by Nigerian-owned firms operating in Ghana"
+   ],
+   "answer": 2,
+   "explanation": "GDP counts production within the country regardless of ownership; profits of a foreign-owned oil company in Nigeria are included in GDP but not GNP. Income sent to Nigeria by Nigerians abroad and remittances are part of GNP (national income) but not necessarily GDP; income earned by Nigerian firms abroad counts in GNP, not GDP."
+  },
+  {
+   "n": 9,
+   "topic": "Costs and revenue",
+   "q": "A Lagos bakery has total fixed cost N30,000 per month. At output 1,000 loaves total cost is N70,000. What is average variable cost (AVC) per loaf at this output?",
+   "options": [
+    "N70 per loaf",
+    "N40 per loaf",
+    "N100 per loaf",
+    "N30 per loaf"
+   ],
+   "answer": 1,
+   "explanation": "Total variable cost = Total cost − Fixed cost = 70,000 − 30,000 = 40,000. AVC = 40,000 / 1,000 = N40 per loaf. N70 is TC/output (70,000/1,000), N30 is FC/output, and N100 is incorrect."
+  },
+  {
+   "n": 10,
+   "topic": "Costs and revenue",
+   "q": "If a firm faces price taker conditions and market price is N10 per unit, marginal cost (MC) equals N10 at output 500 but average total cost (ATC) at 500 units is N12. To maximise profit (or minimise loss), the firm should:",
+   "options": [
+    "Reduce output to where ATC equals price",
+    "Produce 500 units in the short run if price covers average variable cost, because MC = MR = price",
+    "Immediately shut down since ATC > price",
+    "Produce more until ATC falls to N10"
+   ],
+   "answer": 1,
+   "explanation": "In perfect competition MR = price = N10; profit maximisation occurs where MC = MR (MC = 10 at 500). Even if ATC > price (loss), the firm should continue if price covers AVC. Shutting down is wrong unless price < AVC. Producing more to lower ATC may not equate MC=MR; reducing output to where ATC = price ignores MC condition."
+  },
+  {
+   "n": 11,
+   "topic": "Market structures",
+   "q": "Olufunke runs a small hair-salon in Ibadan where many similar salons offer nearly identical services and customers can easily switch between them. Which market structure best describes her industry?",
+   "options": [
+    "Monopoly",
+    "Monopolistic competition",
+    "Oligopoly",
+    "Perfect competition"
+   ],
+   "answer": 1,
+   "explanation": "Many firms offering similar but differentiated services with free entry is monopolistic competition. It is not perfect competition because salons differentiate through location and style; not oligopoly because there are many firms; not monopoly because no single salon controls the market."
+  },
+  {
+   "n": 12,
+   "topic": "Market structures",
+   "q": "A cement firm in Enugu has patent protection allowing it to be sole producer of a new low-cost cement for several years. Which feature is most characteristic of the firm's market during the patent period?",
+   "options": [
+    "Price maker with restricted entry for rival firms",
+    "Numerous close substitutes exist so firm is a price taker",
+    "Firms collude to set output and share market",
+    "Free entry and exit guarantee normal profits only"
+   ],
+   "answer": 0,
+   "explanation": "A patent grants temporary monopoly power, making the firm a price maker and restricting entry. It is not a price taker because substitutes are limited; free entry does not apply; collusion is irrelevant for a single patented firm."
+  },
+  {
+   "n": 13,
+   "topic": "Market structures",
+   "q": "In an industry with only three large firms that often match each other's prices and outputs, which strategy best explains their behaviour?",
+   "options": [
+    "Interdependence leading to strategic behaviour (as in an oligopoly)",
+    "Monopolistic pricing by a single dominant firm",
+    "Non-price competition cannot occur in such an industry",
+    "Independent price taking as in perfect competition"
+   ],
+   "answer": 0,
+   "explanation": "Few large firms cause interdependence and strategic behaviour typical of oligopoly. They are not independent price takers; non-price competition can and often does occur; there is no single dominant monopolist in a symmetric three-firm oligopoly."
+  },
+  {
+   "n": 14,
+   "topic": "Public finance",
+   "q": "The Federal Government of Nigeria increases value-added tax (VAT). Which immediate effect is most likely?",
+   "options": [
+    "No effect on revenue but increase in investment",
+    "Decrease in government revenue and lower consumer prices",
+    "Increase in money supply causing inflation",
+    "Increase in government revenue and higher prices for consumers"
+   ],
+   "answer": 3,
+   "explanation": "Raising VAT raises government revenue and typically raises consumer prices (tax incidence). It does not decrease revenue or lower prices; it does not directly increase investment; it is not a monetary action that changes money supply."
+  },
+  {
+   "n": 15,
+   "topic": "Public finance",
+   "q": "Nigeria issues long-term government bonds and uses proceeds to build highways. This action is best described as:",
+   "options": [
+    "Contractionary monetary policy",
+    "A current expenditure financed by taxes",
+    "Reducing public debt through privatization",
+    "Financing a capital expenditure by borrowing"
+   ],
+   "answer": 3,
+   "explanation": "Issuing bonds to build highways is borrowing to finance capital expenditure. It does not reduce public debt; it is fiscal borrowing, not monetary policy; it is capital (not current) expenditure and financed by debt rather than taxes."
+  },
+  {
+   "n": 16,
+   "topic": "Public finance",
+   "q": "If the Central Bank of Nigeria increases government spending without raising taxes, and the economy was already near full employment, which is the most likely short-run effect?",
+   "options": [
+    "Higher aggregate demand causing inflationary pressure",
+    "Significant long-run increase in the capital stock",
+    "Immediate improvement in trade balance",
+    "Lower aggregate demand and falling prices"
+   ],
+   "answer": 0,
+   "explanation": "Increased government spending raises aggregate demand, and near full employment this causes inflationary pressure. It will not lower aggregate demand or cause falling prices; trade balance is not directly improved; capital stock effects are not immediate nor guaranteed."
+  },
+  {
+   "n": 17,
+   "topic": "International trade",
+   "q": "Nigeria imposes a tariff on imported rice. Which is an expected direct effect of this tariff?",
+   "options": [
+    "Domestic rice prices fall below world price",
+    "Consumers gain due to lower retail prices",
+    "Quantity of imports increases",
+    "Imported rice becomes more expensive, protecting domestic producers"
+   ],
+   "answer": 3,
+   "explanation": "A tariff raises the domestic price of imports, protecting local producers by making imports more costly. It does not lower domestic prices below world price, nor increase import quantity; consumers typically face higher prices, not gains."
+  },
+  {
+   "n": 18,
+   "topic": "International trade",
+   "q": "If Nigeria's naira depreciates against the US dollar, holding other factors constant, which outcome is most likely?",
+   "options": [
+    "Exports become more expensive abroad and imports cheaper in naira",
+    "Nigerian exports become cheaper to foreign buyers and imports become more expensive in naira",
+    "No change in trade competitiveness",
+    "Immediate reduction in domestic inflation"
+   ],
+   "answer": 1,
+   "explanation": "Depreciation makes exports cheaper in foreign currencies and imports costlier in domestic currency, improving price competitiveness but raising import costs. It does not make exports more expensive abroad; trade competitiveness does change; depreciation generally increases import-price-driven inflation, not reduce it."
+  },
+  {
+   "n": 19,
+   "topic": "Elasticity",
+   "q": "A manufacturer finds that a 10% increase in advertising raises sales by 2%. The elasticity of demand with respect to advertising (AED) is:",
+   "options": [
+    "0.2 (inelastic)",
+    "2.0",
+    "5.0",
+    "−0.2"
+   ],
+   "answer": 0,
+   "explanation": "AED = % change in quantity ÷ % change in advertising = 2% ÷ 10% = 0.2 (inelastic). It is positive because advertising increases demand. 5.0 and 2.0 invert the ratio; −0.2 wrongly gives negative sign."
+  },
+  {
+   "n": 20,
+   "topic": "Demand and supply",
+   "q": "A subsidy of N20 per unit is given to producers of gari. Which of the following is the most likely immediate effect in the gari market, ceteris paribus?",
+   "options": [
+    "Demand curve shifts right by N20, raising both price and quantity",
+    "Supply curve shifts left by N20, raising price and reducing quantity",
+    "Demand curve shifts left by N20, lowering price and reducing quantity",
+    "Supply curve shifts right by N20, lowering market price and increasing equilibrium quantity"
+   ],
+   "answer": 3,
+   "explanation": "A per-unit subsidy to producers lowers their cost, effectively shifting supply right (or downward) and leading to lower price paid by consumers and higher quantity. It does not shift demand; options saying demand shifts or supply shifts left are incorrect."
+  },
+  {
+   "n": 21,
+   "topic": "Theory of production",
+   "q": "Chinedu's cassava farm has total product (TP) measured in tonnes: at labour L = 1, TP = 3; L = 2, TP = 7; L = 3, TP = 10; L = 4, TP = 12. What is the marginal product (MP) of the 3rd worker and does it show diminishing returns compared with the 2nd worker?",
+   "options": [
+    "MP of 3rd worker = 3 tonnes; no, it shows constant returns",
+    "MP of 3rd worker = 4 tonnes; no, it shows increasing returns",
+    "MP of 3rd worker = 3 tonnes; yes, it shows diminishing returns compared with the 2nd worker",
+    "MP of 3rd worker = 2 tonnes; yes, it shows diminishing returns"
+   ],
+   "answer": 2,
+   "explanation": "MP3 = TP(L=3) − TP(L=2) = 10 − 7 = 3 tonnes. MP2 = 7 − 3 = 4 tonnes, so MP fell from 4 to 3 when adding the 3rd worker, indicating diminishing marginal returns. Option with MP = 4 or 2 are calculation errors; 'no' is wrong because marginal product decreased."
+  },
+  {
+   "n": 22,
+   "topic": "Money and inflation",
+   "q": "If Nigeria's money supply (M) is N50 billion and velocity of circulation (V) is 6, and real output (Y) is N200 billion (in real terms), what is the implied price level (P) using the equation of exchange MV = PY?",
+   "options": [
+    "P = 24",
+    "P = 1.5",
+    "P = 16.67",
+    "P = 0.6"
+   ],
+   "answer": 1,
+   "explanation": "MV = PY → P = MV / Y = (50 × 6) / 200 = 300 / 200 = 1.5. Option 0.6 would be (50×6)/(500); 24 or 16.67 are arithmetic mistakes."
+  },
+  {
+   "n": 23,
+   "topic": "Money and inflation",
+   "q": "Which monetary policy action by the Central Bank of Nigeria would most directly reduce high inflation expectations?",
+   "options": [
+    "Increase government spending to boost aggregate demand",
+    "Cut the monetary policy rate to stimulate lending",
+    "Increase the monetary policy rate (repo rate) to tighten money supply",
+    "Introduce a temporary price ceiling on all goods"
+   ],
+   "answer": 2,
+   "explanation": "Raising the policy (repo) rate makes borrowing more expensive, reducing money growth and aggregate demand, which helps lower inflation expectations. Cutting the rate or increasing government spending would raise demand and likely increase inflation; price ceilings are fiscal/administrative and can cause shortages, not reduce expectations sustainably."
+  },
+  {
+   "n": 24,
+   "topic": "Banking and financial institutions",
+   "q": "Which of the following best describes the primary role of the Central Bank of Nigeria as lender of last resort?",
+   "options": [
+    "Guarantee profits for all commercial banks every quarter",
+    "Provide emergency liquidity to solvent banks facing temporary runs to prevent systemic collapse",
+    "Set retail prices to control inflation directly",
+    "Accept bad loans from banks and convert them to government bonds permanently"
+   ],
+   "answer": 1,
+   "explanation": "Lender of last resort means supplying short-term liquidity to otherwise solvent banks experiencing runs, to preserve financial stability. The other options describe unrealistic or incorrect functions of a central bank."
+  },
+  {
+   "n": 25,
+   "topic": "Demand and supply",
+   "q": "If the price elasticity of demand for petrol in Lagos is −0.2 in the short run, a 15% increase in price will change quantity demanded by approximately:",
+   "options": [
+    "Decrease by 75%",
+    "Decrease by 30%",
+    "Decrease by 3%",
+    "Increase by 3%"
+   ],
+   "answer": 2,
+   "explanation": "Percentage change in quantity = elasticity × percentage change in price = (−0.2) × 15% = −3%, so quantity demanded falls by about 3%. The other options misapply the elasticity sign or magnitude."
+  },
+  {
+   "n": 26,
+   "topic": "Money and inflation",
+   "q": "Suppose nominal GDP in a year is N600 billion and real GDP (base-year prices) is N500 billion. What is the implicit GDP deflator (price index) and the inflation rate from the base year to this year?",
+   "options": [
+    "Deflator = 83.3; inflation = −16.7%",
+    "Deflator = 100; inflation = 0%",
+    "Deflator = 120; inflation = 20%",
+    "Deflator = 150; inflation = 50%"
+   ],
+   "answer": 2,
+   "explanation": "GDP deflator = (nominal GDP / real GDP) × 100 = (600 / 500) × 100 = 1.2 × 100 = 120. This implies prices are 20% higher than base year, so inflation = 20%. Other options result from wrong division or miscalculation."
+  },
+  {
+   "n": 27,
+   "topic": "Economic development and planning",
+   "q": "The Federal Government of Nigeria adopts a five-year plan focused on building rural roads, improving primary schools and supporting small-scale irrigation. Which development objective does this mix of policies most directly promote?",
+   "options": [
+    "Immediate rapid industrialisation measured by heavy investment in large factories",
+    "Export-led growth by prioritising foreign exchange earnings over domestic needs",
+    "Inclusive growth through improved access to markets and social services in rural areas",
+    "Short-term stabilization by reducing inflation within one year"
+   ],
+   "answer": 2,
+   "explanation": "Rural roads, primary education and small-scale irrigation target access to markets, human capital and agricultural productivity, which collectively promote inclusive growth. The other options are wrong because they focus on heavy industry, short-term macro stabilization or export orientation rather than broad rural development."
+  },
+  {
+   "n": 28,
+   "topic": "Economic development and planning",
+   "q": "A state government offers tax holidays and subsidised land to attract a textile firm. Which potential problem with this policy should planners be most concerned about when assessing long-term development impact?",
+   "options": [
+    "The possibility of rent-seeking where firms benefit from incentives without creating sustainable jobs",
+    "A guaranteed rise in agricultural output",
+    "A sudden permanent decline in national savings rate",
+    "Immediate increase in consumer price index (CPI) across the state"
+   ],
+   "answer": 0,
+   "explanation": "Tax holidays and cheap land can encourage firms to seek favourable deals (rent-seeking) rather than invest productively, producing few sustainable jobs. The other options are unlikely direct consequences: CPI won't necessarily rise immediately, national savings need not permanently fall, and agricultural output is unrelated to textile incentives."
+  },
+  {
+   "n": 29,
+   "topic": "Economic development and planning",
+   "q": "In evaluating a proposed rural electrification project, an economist calculates the benefit-cost ratio (BCR). If the present value of benefits is N240 million and the present value of costs is N200 million, what is the BCR and its policy implication?",
+   "options": [
+    "BCR = 40, indicating extremely high returns and immediate scaling up",
+    "BCR = 1.0, indicating indifference between doing and not doing the project",
+    "BCR = 0.83, indicating the project should be rejected because costs exceed benefits",
+    "BCR = 1.2, indicating the project should be considered because benefits exceed costs"
+   ],
+   "answer": 3,
+   "explanation": "BCR = PV benefits / PV costs = 240 / 200 = 1.2, meaning benefits exceed costs and the project is economically viable. 0.83 is the inverse (200/240), 40 is a miscalculation, and 1.0 would mean benefits equal costs which is not the case."
+  },
+  {
+   "n": 30,
+   "topic": "Agriculture and industry in Nigeria",
+   "q": "Which sectoral policy would most directly help reduce post-harvest losses of yams in South-East Nigeria?",
+   "options": [
+    "Cutting corporate income tax for all exporters",
+    "Investment in community storage facilities and improved market linkages",
+    "Reducing interest rates only for urban mortgage loans",
+    "Imposing import tariffs on foreign yams"
+   ],
+   "answer": 1,
+   "explanation": "Community storage and better market linkages address the storage and market access causes of post-harvest loss. Tariffs on imports, corporate tax cuts for exporters, and urban mortgage rate reductions do not directly reduce on-farm or storage losses of yams."
+  },
+  {
+   "n": 31,
+   "topic": "Agriculture and industry in Nigeria",
+   "q": "A Lagos-based manufacturing firm switches from diesel generators to grid electricity, lowering average cost per unit from N120 to N90 at its current output. Which immediate effect does this change best represent?",
+   "options": [
+    "An increase in sunk cost because generators are irreversible",
+    "A decrease in marginal revenue received per unit",
+    "A change in market demand for the firm's product",
+    "A reduction in average cost due to lower variable energy costs"
+   ],
+   "answer": 3,
+   "explanation": "Switching power sources reduces the firm's variable energy cost, lowering average cost. It is not an increase in sunk cost (existing generator costs are sunk but switching lowers ongoing costs), nor does it directly change market demand or marginal revenue."
+  },
+  {
+   "n": 32,
+   "topic": "Basic economic concepts",
+   "q": "If the price of maize rises from N200 to N250 per 50 kg sack and the quantity demanded falls from 10,000 sacks to 9,000 sacks per month, what is the price elasticity of demand (arc elasticity) roughly, and how is demand classified?",
+   "options": [
+    "Elasticity ≈ −0.1, perfectly inelastic demand",
+    "Elasticity ≈ 0.6, unit elastic demand",
+    "Elasticity ≈ −1.5, elastic demand",
+    "Elasticity ≈ −0.6, inelastic demand"
+   ],
+   "answer": 3,
+   "explanation": "Arc elasticity = (%ΔQ)/(%ΔP) = [(9000−10000)/9500] ÷ [(250−200)/225] ≈ (−1000/9500) ÷ (50/225) ≈ −0.1053 ÷ 0.2222 ≈ −0.474, rounding gives about −0.47, close to −0.6 as inelastic. The correct classification is inelastic demand. The other options give wrong magnitudes or signs."
+  },
+  {
+   "n": 33,
+   "topic": "Basic economic concepts",
+   "q": "Which statement best distinguishes microeconomics from macroeconomics in a Nigerian context?",
+   "options": [
+    "Microeconomics studies individual firms and households (e.g., a Lagos bakery's pricing), while macroeconomics studies aggregate variables (e.g., national inflation rate)",
+    "Microeconomics focuses on government policy while macroeconomics ignores policy",
+    "Microeconomics analyses all international trade but macroeconomics excludes it",
+    "Microeconomics only studies agriculture while macroeconomics only studies industry"
+   ],
+   "answer": 0,
+   "explanation": "Microeconomics deals with individual decision-makers like firms and households, whereas macroeconomics addresses aggregate measures such as inflation. The wrong options misstate scopes: sectors, policy focus, and inclusion of trade are incorrect distinctions."
+  },
+  {
+   "n": 34,
+   "topic": "Population and labour",
+   "q": "The labour force in Kaduna State is 2,000,000. Of these, 1,600,000 are employed and 400,000 are unemployed but actively seeking work. What is the unemployment rate?",
+   "options": [
+    "25%",
+    "80%",
+    "20%",
+    "16%"
+   ],
+   "answer": 2,
+   "explanation": "Unemployment rate = unemployed / labour force = 400,000 / 2,000,000 = 0.20 = 20%. 80% would be the employment rate inverted, 25% equals 500,000/2,000,000, and 16% is 320,000/2,000,000—none match the given figures."
+  },
+  {
+   "n": 35,
+   "topic": "Population and labour",
+   "q": "A demographic report shows that Nigeria's crude birth rate is 35 births per 1,000 population and the crude death rate is 10 per 1,000. Ignoring migration, what is the rate of natural increase and how many additional people per year does this imply in a state of 5 million people?",
+   "options": [
+    "Rate = 10 per 1,000; additional people = 50,000",
+    "Rate = 45 per 1,000; additional people = 225,000",
+    "Rate = 25 per 1,000; additional people = 12,500",
+    "Rate of natural increase = 25 per 1,000; additional people ≈ 125,000 per year"
+   ],
+   "answer": 3,
+   "explanation": "Rate of natural increase = crude birth rate − crude death rate = 35 − 10 = 25 per 1,000. For 5,000,000 population: 25/1,000 × 5,000,000 = 125,000 additional people per year. The other options miscalculate either the rate or the multiplication."
+  },
+  {
+   "n": 36,
+   "topic": "National income",
+   "q": "In 2024, Nigeria's nominal GDP is N1200 billion and the GDP deflator (base year 2015) is 150. What is real GDP in 2015 prices?",
+   "options": [
+    "N2000 billion",
+    "N1800 billion",
+    "N800 billion",
+    "N1200 billion"
+   ],
+   "answer": 2,
+   "explanation": "Real GDP = nominal GDP × (100 / GDP deflator) = 1200 × (100 / 150) = 1200 × 2/3 = 800 billion. The other options result from incorrect division or multiplication by the deflator."
+  },
+  {
+   "n": 37,
+   "topic": "National income",
+   "q": "A Lagos-based economist estimates that net exports are −N50 billion, government spending is N300 billion, private consumption is N700 billion and gross investment is N200 billion. What is GDP by expenditure approach?",
+   "options": [
+    "N1150 billion",
+    "N850 billion",
+    "N11500 billion",
+    "N1250 billion"
+   ],
+   "answer": 0,
+   "explanation": "GDP = C + I + G + (X − M). Here X − M = −50, so GDP = 700 + 200 + 300 − 50 = 1150 billion. N1250 would ignore the negative net exports, N850 would omit government spending, and N11500 is a misplaced zero."
+  },
+  {
+   "n": 38,
+   "topic": "Costs and revenue",
+   "q": "A small bakers in Ibadan has total fixed cost N12,000 per month. At output level 400 loaves, total cost is N28,000. What is average variable cost (AVC) per loaf at 400 loaves?",
+   "options": [
+    "N100.00 per loaf",
+    "N70.00 per loaf",
+    "N40.00 per loaf",
+    "N30.00 per loaf"
+   ],
+   "answer": 2,
+   "explanation": "Total variable cost = TC − TFC = 28,000 − 12,000 = 16,000. AVC = TVC / Q = 16,000 / 400 = N40 per loaf. N70 would come from dividing total cost by Q (28,000/400=70) which is average total cost, not AVC."
+  },
+  {
+   "n": 39,
+   "topic": "Costs and revenue",
+   "q": "A garment firm in Kano finds that when it increases output from 100 to 140 units its total revenue rises from N200,000 to N240,000 while total cost rises from N150,000 to N186,000. What is the marginal profit of producing the additional 40 units?",
+   "options": [
+    "N4,000",
+    "N24,000",
+    "N6,000",
+    "N10,000"
+   ],
+   "answer": 0,
+   "explanation": "Marginal profit = change in profit = (ΔTR − ΔTC) = (240,000 − 200,000) − (186,000 − 150,000) = 40,000 − 36,000 = N4,000. N6,000 would be mistaken if one subtracted average values; N24,000 is ΔTR only; N10,000 is incorrect arithmetic."
+  },
+  {
+   "n": 40,
+   "topic": "Costs and revenue",
+   "q": "If a competitive vegetable seller in Enugu faces a market price of N200 per crate and her marginal cost (MC) at the profit-maximising output is N220, what should she do in the short run?",
+   "options": [
+    "Reduce output because MC > price, producing that unit would reduce profit",
+    "Shut down immediately regardless of fixed costs",
+    "Increase output because higher MC means higher profit",
+    "Keep producing the same because price equals average revenue"
+   ],
+   "answer": 0,
+   "explanation": "Profit maximisation requires producing where P = MC. If MC (220) > P (200), producing additional units reduces profit, so she should reduce output. Increasing output is wrong because MC > P. Shutting down immediately is unnecessary unless price < AVC; we don't have AVC here."
+  },
+  {
+   "n": 41,
+   "topic": "Market structures",
+   "q": "In a market where a single large cement firm faces no close substitutes and blocks entry by owning essential raw materials, which market structure best describes this situation?",
+   "options": [
+    "Oligopoly",
+    "Monopoly",
+    "Perfect competition",
+    "Monopolistic competition"
+   ],
+   "answer": 1,
+   "explanation": "A single seller with barriers to entry and no close substitutes is a monopoly. Perfect competition has many firms and free entry, monopolistic competition has many firms with differentiated products, and oligopoly has a few firms sharing the market."
+  },
+  {
+   "n": 42,
+   "topic": "Market structures",
+   "q": "Two large mobile-phone operators in Abuja set identical subscription fees after observing each other's prices. This is an example of which market behaviour?",
+   "options": [
+    "Price discrimination",
+    "Perfect competition",
+    "Monopsony",
+    "Tacit collusion (price leadership)"
+   ],
+   "answer": 3,
+   "explanation": "When firms implicitly follow one another's pricing without explicit agreement, that's tacit collusion or price leadership. It's not perfect competition (many sellers); price discrimination involves charging different prices to different consumers; monopsony is a single buyer."
+  },
+  {
+   "n": 43,
+   "topic": "Public finance",
+   "q": "The Federal Government of Nigeria increases capital spending on roads by N100 billion financed by issuing bonds. Which immediate effect on the government budget is correct?",
+   "options": [
+    "Reduction in government spending elsewhere by N100 billion automatically",
+    "Immediate increase in tax revenue by N100 billion",
+    "Higher public debt but no immediate increase in tax revenue",
+    "Immediate reduction in public debt"
+   ],
+   "answer": 2,
+   "explanation": "Issuing bonds finances spending by increasing public debt; it does not immediately raise tax revenue. It also does not reduce debt. While spending elsewhere could be cut, that's not automatic when bonds finance the spending."
+  },
+  {
+   "n": 44,
+   "topic": "Public finance",
+   "q": "A state government introduces a property tax that raises N5 billion and uses it to provide potable water in rural areas. This tax is best described as which type?",
+   "options": [
+    "User fee charged at the water point",
+    "Earmarked tax (hypothecated tax) for specific public service",
+    "Indirect tax on consumption",
+    "Progressive income tax"
+   ],
+   "answer": 1,
+   "explanation": "A tax collected and designated for a particular purpose is an earmarked or hypothecated tax. It's not a progressive income tax (based on income brackets), nor an indirect consumption tax, and it's distinct from a user fee which is charged at point of service."
+  },
+  {
+   "n": 45,
+   "topic": "Basic economic concepts",
+   "q": "Which of the following best illustrates the economic problem of scarcity in Nigeria?",
+   "options": [
+    "The Central Bank printing more naira to finance government spending",
+    "A market where many firms compete to sell the same brand of bottled water",
+    "A firm increasing production because it has abundant raw materials",
+    "Households having to choose between spending limited income on food or paying school fees for children"
+   ],
+   "answer": 3,
+   "explanation": "Scarcity is when unlimited wants exceed limited resources, so households choosing between food and school fees (limited income) illustrates trade-offs. A competitive market or abundant raw materials do not show scarcity; printing more money may cause inflation but is not the basic concept of scarcity."
+  },
+  {
+   "n": 46,
+   "topic": "Basic economic concepts",
+   "q": "Which of the following transactions is a transfer payment in the Nigerian context?",
+   "options": [
+    "A student paying tuition to a private university",
+    "A farmer selling yams to a local market",
+    "A retired civil servant receiving a pension from the government",
+    "A contractor paid for building a state hospital"
+   ],
+   "answer": 2,
+   "explanation": "A pension is a transfer payment because it is a government payment without current production in return. Selling yams, paying a contractor, or tuition are payments for goods or services and therefore not transfer payments."
+  },
+  {
+   "n": 47,
+   "topic": "Population and labour",
+   "q": "If Kaduna State has a population of 8,000,000 and 3,200,000 people are economically active (labour force), what is the labour force participation rate (LFPR)?",
+   "options": [
+    "60%",
+    "25%",
+    "32%",
+    "40%"
+   ],
+   "answer": 3,
+   "explanation": "LFPR = (labour force / total population) × 100 = (3,200,000 / 8,000,000) × 100 = 40%. 25% or 32% come from wrong divisions; 60% would be if labour force were 4,800,000."
+  },
+  {
+   "n": 48,
+   "topic": "National income",
+   "q": "In a year, Nigeria records: consumption N400 billion, investment N120 billion, government expenditure N220 billion, exports N80 billion, and imports N150 billion. Using GDP expenditure approach, what is nominal GDP?",
+   "options": [
+    "N670 billion",
+    "N870 billion",
+    "N620 billion",
+    "N570 billion"
+   ],
+   "answer": 0,
+   "explanation": "GDP = C + I + G + (X − M) = 400 + 120 + 220 + (80 − 150) = 740 + (−70) = N670 billion. N620 would be if one mistakenly subtracted investment; N870 or N570 are from other arithmetic errors."
+  },
+  {
+   "n": 49,
+   "topic": "Costs and revenue",
+   "q": "A tailoring firm in Enugu has total fixed cost N12,000 per month. At output q = 60 garments total cost is N30,000. What is average variable cost (AVC) at q = 60?",
+   "options": [
+    "N300 per garment",
+    "N500 per garment",
+    "N100 per garment",
+    "N200 per garment"
+   ],
+   "answer": 0,
+   "explanation": "Total variable cost = TC − TFC = 30,000 − 12,000 = N18,000. AVC = TVC / q = 18,000 / 60 = N300. N200 would correspond to TVC = 12,000; N500 corresponds to TVC = 30,000; N100 to TVC = 6,000 — none match the data."
+  },
+  {
+   "n": 50,
+   "topic": "Costs and revenue",
+   "q": "A small bakery in Ibadan sells loaves at market price N200 each. At output 120 loaves the firm's average total cost (ATC) is N180 and average variable cost (AVC) is N120. What is the firm's profit or loss per loaf and should it continue producing in the short run?",
+   "options": [
+    "Loss N100 per loaf; continue producing because AVC < price",
+    "Profit N20 per loaf; continue producing because price exceeds AVC",
+    "Profit N80 per loaf; continue producing because ATC < price",
+    "Loss N60 per loaf; shut down immediately because ATC > price"
+   ],
+   "answer": 1,
+   "explanation": "Profit per loaf = price − ATC = 200 − 180 = N20, so profit N20. Since price (N200) > AVC (N120), the firm covers variable costs and some fixed costs, so it should continue in short run. The other options confuse ATC and AVC or miscompute profit/loss."
+  }
+ ]
+}

@@ -116,6 +116,7 @@ model User {
   courseEnrollments CourseEnrollment[]
   lessonCompletions LessonCompletion[]
   courseAttempts    CourseQuizAttempt[]
+  examAttempts      ExamAttempt[]
   courseNotes       CourseNote[]
   courseRatings     CourseRating[]
   certificates      Certificate[]
@@ -726,6 +727,23 @@ model CourseQuizAttempt {
   createdAt DateTime @default(now())
 
   @@index([userId, lessonId])
+}
+
+/// A sitting of a Past Questions paper (papers themselves are files in data/exams). -1 = unanswered.
+model ExamAttempt {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  paperId   String
+  /// practice | timed
+  mode      String
+  answers   Int[]
+  score     Int
+  total     Int
+  seconds   Int      @default(0)
+  createdAt DateTime @default(now())
+
+  @@index([userId, paperId])
 }
 
 model CourseNote {

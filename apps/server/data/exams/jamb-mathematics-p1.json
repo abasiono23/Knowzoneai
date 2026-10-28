@@ -1,0 +1,531 @@
+{
+ "id": "jamb-mathematics-p1",
+ "exam": "jamb",
+ "subject": "mathematics",
+ "year": null,
+ "number": 1,
+ "source": "ai",
+ "minutes": 27,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Angles and circle geometry",
+   "q": "Circle with centre O has two radii OA and OB. If chord AB = 6 cm and radius OA = 5 cm, what is the distance from O to the midpoint M of chord AB (OM)?",
+   "options": [
+    "1 cm",
+    "4 cm",
+    "3 cm",
+    "√11 cm"
+   ],
+   "answer": 1,
+   "explanation": "In right triangle OMA, OA = 5 cm is hypotenuse and AM = AB/2 = 3 cm. So OM = √(OA² − AM²) = √(25 − 9) = √16 = 4 cm. 3 cm would be AM, √11 is √(25−14) not relevant, 1 cm is incorrect."
+  },
+  {
+   "n": 2,
+   "topic": "Surds",
+   "q": "If x = √(50) − √(8), simplify x to the form a√2 where a is an integer. What is a?",
+   "options": [
+    "1",
+    "5",
+    "3",
+    "7"
+   ],
+   "answer": 2,
+   "explanation": "√50 = 5√2 and √8 = 2√2 so x = 5√2 − 2√2 = 3√2. Thus a = 3. Options 5 and 1 come from mistaking one term, 7 adds them incorrectly."
+  },
+  {
+   "n": 3,
+   "topic": "Mensuration",
+   "q": "A cylindrical water tank has radius 7 m and height 10 m. How many cubic metres of water fill half the tank? (Use π as needed but give exact volume.)",
+   "options": [
+    "122.5π m³",
+    "245π m³",
+    "70π m³",
+    "490π m³"
+   ],
+   "answer": 1,
+   "explanation": "Volume of cylinder = πr²h = π×7²×10 = 490π m³. Half the tank is 490π ÷ 2 = 245π m³. 490π is the full tank, 70π is π×7×10 (wrong formula), 122.5π is quarter of full."
+  },
+  {
+   "n": 4,
+   "topic": "Indices and logarithms",
+   "q": "Solve for y: log10(y) + log10(4) = 2. What is y?",
+   "options": [
+    "10",
+    "25",
+    "20",
+    "100"
+   ],
+   "answer": 1,
+   "explanation": "Use log rules: log10(y) + log10(4) = log10(4y) = 2, so 4y = 10^2 = 100 and y = 25. A common mistake is to think y = 100 or y = 20 by misplacing the 4."
+  },
+  {
+   "n": 5,
+   "topic": "Indices and logarithms",
+   "q": "If 2^a = 5 and 2^b = 7, express log2(35) in terms of a and b.",
+   "options": [
+    "ab",
+    "a + b",
+    "a + b − 1",
+    "a + b + 1"
+   ],
+   "answer": 1,
+   "explanation": "Since 35 = 5×7, log2(35) = log2(5) + log2(7) = a + b. Multiplication becomes addition of logs; options like ab confuse multiplication of values with logs."
+  },
+  {
+   "n": 6,
+   "topic": "Integration",
+   "q": "Find ∫(3x^2 − 4x + 1) dx.",
+   "options": [
+    "x^3 − 2x^2 + x + C",
+    "x^3 − 2x + 1 + C",
+    "x^3 − (4/3)x^3 + x + C",
+    "x^3 − 4x^2 + x + C"
+   ],
+   "answer": 0,
+   "explanation": "Integrate termwise: ∫3x^2 dx = x^3, ∫(−4x) dx = −2x^2, ∫1 dx = x, so result x^3 − 2x^2 + x + C. The other options mis-integrate the linear or quadratic terms."
+  },
+  {
+   "n": 7,
+   "topic": "Integration",
+   "q": "A car's velocity is v(t) = 6t − 2 (m/s). What distance does it travel from t = 0 to t = 3 s?",
+   "options": [
+    "18 m",
+    "21 m",
+    "24 m",
+    "15 m"
+   ],
+   "answer": 1,
+   "explanation": "Distance = ∫_0^3 (6t−2) dt = [3t^2 − 2t]_0^3 = (27 − 6) − 0 = 21 m. Common errors: forgetting constant term −2 or wrong limits gives 18 or 24."
+  },
+  {
+   "n": 8,
+   "topic": "Integration",
+   "q": "Evaluate ∫_1^e (1/x) dx.",
+   "options": [
+    "e − 1",
+    "ln e",
+    "1",
+    "0"
+   ],
+   "answer": 2,
+   "explanation": "Integral of 1/x is ln x, so ∫_1^e 1/x dx = ln e − ln 1 = 1 − 0 = 1. 'ln e' equals 1 but as a value; 'e−1' confuses exponential with logarithm."
+  },
+  {
+   "n": 9,
+   "topic": "Probability",
+   "q": "A box contains 3 red, 4 blue and 5 green balls. One ball is drawn at random. What is the probability it is blue or green?",
+   "options": [
+    "4/12",
+    "3/4",
+    "7/12",
+    "5/12"
+   ],
+   "answer": 1,
+   "explanation": "Total balls = 3+4+5 = 12. Blue or green count = 4+5 = 9, so probability = 9/12 = 3/4. Options 4/12 and 5/12 count only one colour; 7/12 is 12−5 or another incorrect subtraction."
+  },
+  {
+   "n": 10,
+   "topic": "Probability",
+   "q": "In a class of 40 students, 10 study Hausa, 15 study Igbo, 12 study Yoruba; no student studies more than one language. If a student is chosen at random, what is the probability that the student studies neither Hausa nor Igbo nor Yoruba?",
+   "options": [
+    "3/40",
+    "5/40",
+    "12/40",
+    "3/4"
+   ],
+   "answer": 0,
+   "explanation": "Students studying any of the three = 10+15+12 = 37, so neither = 40−37 = 3; probability = 3/40. 5/40 would result if totals mis-summed as 35; 12/40 confuses with Yoruba only; 3/4 is unrelated."
+  },
+  {
+   "n": 11,
+   "topic": "Fractions, decimals and percentages",
+   "q": "Mr. Ade sold goods for ₦18,200 after offering a 20% discount on the marked price. What was the marked price?",
+   "options": [
+    "₦22,750",
+    "₦22,000",
+    "₦21,200",
+    "₦23,000"
+   ],
+   "answer": 0,
+   "explanation": "Let marked price = M. After 20% discount customer pays 0.8M = 18,200, so M = 18,200 / 0.8 = 22,750. Options like 22,000 or 23,000 come from miscalculating the division."
+  },
+  {
+   "n": 12,
+   "topic": "Fractions, decimals and percentages",
+   "q": "Express 7/8 as a percentage.",
+   "options": [
+    "87.5%",
+    "77.5%",
+    "0.875%",
+    "72%"
+   ],
+   "answer": 0,
+   "explanation": "7/8 = 0.875, which as a percentage is 0.875 × 100% = 87.5%. 0.875% misses the ×100 step; 72% or 77.5% are common calculation errors."
+  },
+  {
+   "n": 13,
+   "topic": "Sets",
+   "q": "In Lagos, let X = {students who play football}, Y = {students who play basketball}. In a class of 40, 18 play football, 12 play basketball and 5 play both. How many students play neither football nor basketball?",
+   "options": [
+    "25",
+    "10",
+    "5",
+    "15"
+   ],
+   "answer": 3,
+   "explanation": "Total who play at least one = 18 + 12 − 5 = 25. Thus neither = 40 − 25 = 15. Incorrect options come from forgetting to subtract the overlap (giving 30 → 10) or miscounting (25 would be those who play at least one)."
+  },
+  {
+   "n": 14,
+   "topic": "Sets",
+   "q": "Let U be all integers from 1 to 20. Let P = {multiples of 3 in U} and Q = {primes in U}. How many elements are in P ∪ Q?",
+   "options": [
+    "13",
+    "12",
+    "11",
+    "10"
+   ],
+   "answer": 0,
+   "explanation": "Multiples of 3 up to 20: {3,6,9,12,15,18} (6 elements). Primes ≤20: {2,3,5,7,11,13,17,19} (8 elements). Intersection {3} counted twice, so |P ∪ Q| = 6+8−1 = 13. A common mistake is to omit subtracting the intersection."
+  },
+  {
+   "n": 15,
+   "topic": "Number bases",
+   "q": "In Ibadan market a price is written as 121 in base 3. What is its value in base 10 (naira)?",
+   "options": [
+    "14",
+    "16",
+    "19",
+    "12"
+   ],
+   "answer": 1,
+   "explanation": "121₃ = 1·3² + 2·3 + 1 = 9 + 6 + 1 = 16. A common error is to treat digits as base 10 place values or to mis-evaluate 2·3 as 2."
+  },
+  {
+   "n": 16,
+   "topic": "Number bases",
+   "q": "Convert the binary number 11011₂ to base 10.",
+   "options": [
+    "23",
+    "29",
+    "27",
+    "25"
+   ],
+   "answer": 2,
+   "explanation": "11011₂ = 1·16 +1·8 +0·4 +1·2 +1·1 = 16+8+0+2+1 = 27. Mistakes arise from wrong place values or omitting the 8 term."
+  },
+  {
+   "n": 17,
+   "topic": "Variation",
+   "q": "The mass m of rice that a trader can carry on a head is directly proportional to the square root of the trader's strength S. If a trader with strength 81 units carries 27 kg, how much can a trader with strength 100 units carry?",
+   "options": [
+    "20 kg",
+    "36 kg",
+    "30 kg",
+    "25 kg"
+   ],
+   "answer": 2,
+   "explanation": "Direct proportionality to √S gives m = k√S. From 27 = k√81 = k·9 so k = 3. For S = 100, m = 3·√100 = 3·10 = 30 kg. The tempting 36 kg uses k = 4 (wrong) and 25 kg would be if k = 2.5."
+  },
+  {
+   "n": 18,
+   "topic": "Quadratic equations",
+   "q": "If the quadratic 2x² − kx + 8 = 0 has equal roots, what is k?",
+   "options": [
+    "−4",
+    "±8",
+    "0",
+    "4"
+   ],
+   "answer": 1,
+   "explanation": "Equal roots require discriminant 0: b² − 4ac = k² − 4·2·8 = k² − 64 = 0 so k² = 64, hence k = ±8. The common mistake is to take only positive root 8 or confuse coefficients."
+  },
+  {
+   "n": 19,
+   "topic": "Variation",
+   "q": "The volume V of a gas (at fixed temperature) varies inversely as the pressure P. If V = 12 L when P = 5 atm, what is V when P = 8 atm?",
+   "options": [
+    "7.5 L",
+    "48/5 L",
+    "16 L",
+    "3 L"
+   ],
+   "answer": 0,
+   "explanation": "Inverse variation: V = k/P. From 12 = k/5 so k = 60. For P = 8, V = 60/8 = 7.5 L. 48/5 equals 9.6 which is wrong; 3 L would be if k = 24."
+  },
+  {
+   "n": 20,
+   "topic": "Trigonometry",
+   "q": "From a point on level ground 50 m from the base of a telecommunication mast, the angle of elevation to the top is 53°. Using tan 53° = 4/3 approximately, find the height of the mast to the nearest metre.",
+   "options": [
+    "75 m",
+    "67 m",
+    "88 m",
+    "38 m"
+   ],
+   "answer": 1,
+   "explanation": "Let height h; tan 53° = h/50 ≈ 4/3, so h ≈ 50×4/3 = 200/3 ≈ 66.67 ≈ 67 m. 75 m corresponds to tan ≈ 1.5; 38 m corresponds to tan ≈ 0.76."
+  },
+  {
+   "n": 21,
+   "topic": "Quadratic equations",
+   "q": "The sum of the reciprocals of the roots of x^2 − 5x + 6 = 0 is",
+   "options": [
+    "5/6",
+    "1",
+    "3/5",
+    "5/3"
+   ],
+   "answer": 0,
+   "explanation": "For roots r1,r2, sum of reciprocals = (1/r1 + 1/r2) = (r1 + r2)/(r1 r2). Here r1 + r2 = 5 and r1 r2 = 6, so value = 5/6. A common error is to take r1 r2 / (r1 + r2) = 6/5."
+  },
+  {
+   "n": 22,
+   "topic": "Statistics",
+   "q": "The 11 exam scores of students in a Lagos class are: 55, 60, 62, 64, 68, 70, 72, 74, 78, 80, 85. What is the median score?",
+   "options": [
+    "72",
+    "74",
+    "68",
+    "70"
+   ],
+   "answer": 3,
+   "explanation": "With 11 scores (odd number) the median is the middle value, the 6th term when scores are ordered. The 6th score here is 70. Other choices come from miscounting the middle position or selecting adjacent values."
+  },
+  {
+   "n": 23,
+   "topic": "Statistics",
+   "q": "A JSS class has test marks grouped as: 50–59: 3 pupils, 60–69: 5 pupils, 70–79: 6 pupils, 80–89: 4 pupils. Using class midpoints, what is the mean mark (to 1 decimal place)?",
+   "options": [
+    "70.6",
+    "72.0",
+    "70.0",
+    "69.0"
+   ],
+   "answer": 0,
+   "explanation": "Midpoints: 54.5, 64.5, 74.5, 84.5. Sum of (midpoint×frequency) = 3·54.5 + 5·64.5 + 6·74.5 + 4·84.5 = 1271. Total frequency =18. Mean =1271/18 =70.611... ≈70.6. Common errors: using class limits instead of midpoints or rounding too early."
+  },
+  {
+   "n": 24,
+   "topic": "Sequences and series",
+   "q": "An arithmetic sequence is 7, 11, 15, ... What is the 20th term?",
+   "options": [
+    "83",
+    "79",
+    "87",
+    "80"
+   ],
+   "answer": 0,
+   "explanation": "Common difference d =4 and a₁ =7. General term a_n = a₁ + (n−1)d =7 +19×4 =7+76 =83. 79 would result from using n×4+? incorrectly; 87 from miscounting index."
+  },
+  {
+   "n": 25,
+   "topic": "Sequences and series",
+   "q": "The geometric sequence 3, −6, 12, ... has common ratio −2. What is the sum of the first 5 terms?",
+   "options": [
+    "48",
+    "15",
+    "33",
+    "-33"
+   ],
+   "answer": 2,
+   "explanation": "Sum S_n = a(1−r^n)/(1−r). Here a=3, r=−2, n=5 so S_5 =3(1−(−2)^5)/(1−(−2)) =3(1+32)/3 =3·33/3 =33. A sign error gives −33; simple add mistakes give other wrong values."
+  },
+  {
+   "n": 26,
+   "topic": "Sequences and series",
+   "q": "An infinite geometric series has first term 4 and sum 20. What is the common ratio r?",
+   "options": [
+    "0.8",
+    "-0.8",
+    "0.25",
+    "4"
+   ],
+   "answer": 0,
+   "explanation": "Sum S = a/(1−r) so 20 =4/(1−r) ⇒1−r =4/20 =0.2 ⇒ r =0.8. r must satisfy |r|<1 for convergence; −0.8 would also converge but does not satisfy the equation."
+  },
+  {
+   "n": 27,
+   "topic": "Angles and circle geometry",
+   "q": "In a circle, the central angle ∠AOB subtends arc AB and measures 120°. What is the measure of an angle at the circumference that subtends the same arc AB?",
+   "options": [
+    "60°",
+    "90°",
+    "30°",
+    "120°"
+   ],
+   "answer": 0,
+   "explanation": "An inscribed (angle at the circumference) that subtends the same arc measures half the central angle, so 120°/2 =60°. 120° is the central angle, 30° and 90° are incorrect halving or unrelated values."
+  },
+  {
+   "n": 28,
+   "topic": "Angles and circle geometry",
+   "q": "Two chords of a circle intersect inside the circle. The measures of the intercepted arcs are 100° and 80°. What is the measure of the angle formed by the chords at the intersection?",
+   "options": [
+    "40°",
+    "90°",
+    "180°",
+    "10°"
+   ],
+   "answer": 1,
+   "explanation": "Angle formed by intersecting chords inside a circle equals half the sum of the measures of the intercepted arcs: (100°+80°)/2 =180°/2 =90°. 10° or 40° are wrong halves or differences; 180° is impossible for an interior angle in this context."
+  },
+  {
+   "n": 29,
+   "topic": "Surds",
+   "q": "Simplify √50 + √8 and express the answer in the form a√2 where a is an integer.",
+   "options": [
+    "√58",
+    "3√2",
+    "9√2",
+    "7√2"
+   ],
+   "answer": 3,
+   "explanation": "√50 =5√2 and √8 =2√2, so sum =5√2+2√2 =7√2. 3√2 would be an undercount, √58 is incorrect combination, 9√2 is too large."
+  },
+  {
+   "n": 30,
+   "topic": "Surds",
+   "q": "Rationalize the denominator and simplify: 3/(√5 − √2). What is the result?",
+   "options": [
+    "(√5 + √2)/3",
+    "3(√5 + √2)",
+    "(√5 − √2)/3",
+    "√5 + √2"
+   ],
+   "answer": 3,
+   "explanation": "Multiply numerator and denominator by (√5+√2): 3(√5+√2)/((√5)^2 − (√2)^2) =3(√5+√2)/(5−2) =3(√5+√2)/3 =√5+√2. Common mistakes include forgetting to divide by 3 or failing to multiply through."
+  },
+  {
+   "n": 31,
+   "topic": "Coordinate geometry",
+   "q": "A triangle has vertices P(0,0), Q(6,0) and R(6,8). Find the equation of the circle passing through P, Q and R.",
+   "options": [
+    "x^2 + y^2 − 6x − 4y = 0",
+    "x^2 + y^2 + 6x + 8y = 0",
+    "x^2 + y^2 − 6x − 8y = 0",
+    "x^2 + y^2 − 3x − 4y = 0"
+   ],
+   "answer": 2,
+   "explanation": "General circle x^2 + y^2 + Dx + Ey + F = 0. Plug P: F = 0. Plug Q(6,0): 36 + 0 + 6D + F = 0 → 36 + 6D = 0 → D = −6. Plug R(6,8): 36+64 + 6D + 8E + F = 0 →100 + 6(−6) + 8E =0 →100 −36 + 8E =0 →64 + 8E =0 →E = −8. So equation x^2 + y^2 −6x −8y =0."
+  },
+  {
+   "n": 32,
+   "topic": "Mensuration",
+   "q": "A right triangular field has legs 30 m and 40 m. A farmer wants a straight drain along the hypotenuse. What is the length of the drain to the nearest metre?",
+   "options": [
+    "70 m",
+    "58 m",
+    "45 m",
+    "50 m"
+   ],
+   "answer": 3,
+   "explanation": "Hypotenuse by Pythagoras = √(30^2 + 40^2) = √(900 +1600)=√2500=50 m. Nearest metre is 50. Other options are common wrong computations."
+  },
+  {
+   "n": 33,
+   "topic": "Integration",
+   "q": "Evaluate ∫_0^2 (3x^2 − 2x) dx.",
+   "options": [
+    "2",
+    "6",
+    "8",
+    "4"
+   ],
+   "answer": 3,
+   "explanation": "Antiderivative is x^3 − x^2. Evaluate from 0 to2: (8 −4) −0 =4. Other options come from arithmetic errors."
+  },
+  {
+   "n": 34,
+   "topic": "Probability",
+   "q": "Two fair dice are rolled. What is the probability that the sum of the two faces is divisible by 3?",
+   "options": [
+    "7/36",
+    "5/12",
+    "1/6",
+    "1/3"
+   ],
+   "answer": 3,
+   "explanation": "There are 36 equally likely outcomes. Sums divisible by 3 are 3, 6, 9, 12; counts are 2, 5, 4, 1 respectively, total 12. Probability = 12/36 = 1/3. A common error is to count only one die or miscount combinations, giving 1/6 or other wrong fractions."
+  },
+  {
+   "n": 35,
+   "topic": "Fractions, decimals and percentages",
+   "q": "Mr. Okoro bought a laptop and later sold it to make a 20% profit. If he sold it for ₦36,000, what was his purchase price?",
+   "options": [
+    "₦29,000",
+    "₦28,800",
+    "₦43,200",
+    "₦30,000"
+   ],
+   "answer": 3,
+   "explanation": "Let cost be C. Selling price = C × 1.20 = ₦36,000, so C = 36000/1.20 = 30,000. ₦28,800 would come from incorrectly subtracting 20% of 36,000; ₦43,200 is adding 20% instead of dividing."
+  },
+  {
+   "n": 36,
+   "topic": "Sets",
+   "q": "Let U = {1,2,...,30}. Let A be multiples of 4 in U and B be multiples of 6 in U. What is n(A ∩ B)?",
+   "options": [
+    "5",
+    "2",
+    "4",
+    "3"
+   ],
+   "answer": 1,
+   "explanation": "A ∩ B are multiples of lcm(4,6)=12 within 1..30: 12 and 24, so n(A ∩ B)=2. Counting multiples of 3 or 4 by mistake can give 3 or 4, but only 12 and 24 satisfy both."
+  },
+  {
+   "n": 37,
+   "topic": "Sets",
+   "q": "In a Lagos college of 40 students, 18 study Physics, 22 study Chemistry and 10 study both Physics and Chemistry. How many students study neither subject?",
+   "options": [
+    "12",
+    "10",
+    "6",
+    "8"
+   ],
+   "answer": 1,
+   "explanation": "Using inclusion–exclusion, number studying at least one = 18 + 22 − 10 = 30. Therefore neither = 40 − 30 = 10. Mistakes arise from omitting the intersection or double-counting, giving 12 or 8."
+  },
+  {
+   "n": 38,
+   "topic": "Matrices and determinants",
+   "q": "If A = [[2, 3],[5, 7]], what is det(A)?",
+   "options": [
+    "−1",
+    "29",
+    "1",
+    "−29"
+   ],
+   "answer": 0,
+   "explanation": "det(A) = 2×7 − 3×5 = 14 − 15 = −1. A sign error would give 1, while multiplying all entries incorrectly could produce 29 or −29."
+  },
+  {
+   "n": 39,
+   "topic": "Number bases",
+   "q": "At Bodija market in Ibadan a seller writes a price as 2101₃ (base 3). What is the price in naira in base 10?",
+   "options": [
+    "32 naira",
+    "73 naira",
+    "64 naira",
+    "46 naira"
+   ],
+   "answer": 2,
+   "explanation": "Convert 2101₃ to base 10: 2×3³ + 1×3² + 0×3 + 1 = 2×27 + 1×9 + 1 = 54 + 9 + 1 = 64. A common error is reversing digit places (giving 32) or using an incorrect base or powers (leading to other wrong totals)."
+  },
+  {
+   "n": 40,
+   "topic": "Trigonometry",
+   "q": "From a point on level ground 30 m from the base of a telecommunication mast the angle of elevation to the top is 53.13°. What is the height of the mast (to the nearest metre)?",
+   "options": [
+    "36 m",
+    "40 m",
+    "60 m",
+    "24 m"
+   ],
+   "answer": 1,
+   "explanation": "Use tan θ = opposite/adjacent. So height = 30×tan53.13°. Since tan53.13° = 4/3, height = 30×(4/3) = 40 m. Mistakes: using sin or cos instead of tan gives 24 m or 36 m respectively; 60 m is from multiplying by 2 instead of 4/3."
+  }
+ ]
+}

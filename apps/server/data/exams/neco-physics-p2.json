@@ -1,0 +1,791 @@
+{
+ "id": "neco-physics-p2",
+ "exam": "neco",
+ "subject": "physics",
+ "year": null,
+ "number": 2,
+ "source": "ai",
+ "minutes": 60,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Work, energy and power",
+   "q": "A labourer lifts a 20 kg crate vertically up a stack by 2.5 m at constant speed. The acceleration due to gravity is 9.8 m/s². What is the work done by the labourer against gravity?",
+   "options": [
+    "500 J",
+    "49 J",
+    "196 J",
+    "490 J"
+   ],
+   "answer": 3,
+   "explanation": "Work against gravity = mgh = 20 × 9.8 × 2.5 = 490 J. 500 J would result from using g = 10 m/s² (20 × 10 × 2.5). 196 J would be m×g (no height), and 49 J is 1/10 of the correct value."
+  },
+  {
+   "n": 2,
+   "topic": "Work, energy and power",
+   "q": "An electric motor consumes 1500 J of electrical energy in 10 s and operates at 80% efficiency. What is the useful power output of the motor?",
+   "options": [
+    "100 W",
+    "12 W",
+    "150 W",
+    "120 W"
+   ],
+   "answer": 3,
+   "explanation": "Useful energy per 10 s = 1500 × 0.80 = 1200 J, so useful power = 1200 J ÷ 10 s = 120 W. 150 W would be if all 1500 J were useful (1500 ÷ 10). 100 W would come from wrong efficiency 2/3, and 12 W is 1/10 of the correct value."
+  },
+  {
+   "n": 3,
+   "topic": "Work, energy and power",
+   "q": "A pendulum bob of mass 0.50 kg is released from rest so it falls through a vertical drop of 0.20 m to the lowest point. Using g = 9.8 m/s², what is its speed at the lowest point (neglect friction)?",
+   "options": [
+    "0.98 m/s",
+    "1.98 m/s",
+    "2.80 m/s",
+    "0.49 m/s"
+   ],
+   "answer": 1,
+   "explanation": "Convert potential energy to kinetic: 1/2 m v² = m g h → v = √(2 g h) = √(2×9.8×0.20) = √3.92 = 1.98 m/s. 0.98 m/s would be mixing with KE value 0.98 J, 2.80 m/s is too large, and 0.49 m/s is incorrect scaling."
+  },
+  {
+   "n": 4,
+   "topic": "Simple machines",
+   "q": "A block-and-tackle gives three supporting rope segments to a load. If the load is 600 N and friction is negligible, what is the ideal effort force required to hold the load?",
+   "options": [
+    "200 N",
+    "150 N",
+    "600 N",
+    "300 N"
+   ],
+   "answer": 0,
+   "explanation": "Ideal mechanical advantage = number of supporting ropes = 3, so effort = load ÷ 3 = 600 ÷ 3 = 200 N. 300 N would be dividing by 2, 150 N dividing by 4, and 600 N is the load (no advantage) which is wrong for this tackle."
+  },
+  {
+   "n": 5,
+   "topic": "Simple machines",
+   "q": "A crate weighing 1200 N is pushed up a smooth ramp. The ramp rises vertically 3.0 m over a length of 5.0 m. Ignoring friction, how much work does the applied force do in moving the crate to the top?",
+   "options": [
+    "6000 J",
+    "3600 J",
+    "720 J",
+    "2400 J"
+   ],
+   "answer": 1,
+   "explanation": "Work done against gravity = mg × height = 1200 N × 3.0 m = 3600 J. Using force × ramp length gives the same since the parallel force = 1200×(3/5)=720 N and 720×5=3600 J. 6000 J uses full length×weight incorrectly, 720 J is the force value, and 2400 J is height×(wrong weight fraction)."
+  },
+  {
+   "n": 6,
+   "topic": "Simple machines",
+   "q": "A wheel and axle have radii 0.20 m and 0.05 m respectively. If an effort of 40 N is applied at the rim of the wheel, what load can be lifted ideally (neglect friction)?",
+   "options": [
+    "800 N",
+    "10 N",
+    "40 N",
+    "160 N"
+   ],
+   "answer": 3,
+   "explanation": "Ideal mechanical advantage = R/r = 0.20 ÷ 0.05 = 4, so load = effort × 4 = 40 × 4 = 160 N. 10 N is dividing instead of multiplying, 40 N assumes no advantage, and 800 N mistakenly multiplies by 20."
+  },
+  {
+   "n": 7,
+   "topic": "Scalars and vectors",
+   "q": "A displacement vector is 3 i + 4 j (units in m). What is the magnitude of this displacement?",
+   "options": [
+    "1 m",
+    "12 m",
+    "5 m",
+    "7 m"
+   ],
+   "answer": 2,
+   "explanation": "Magnitude = √(3² + 4²) = √(9+16) = √25 = 5 m. 7 m is component sum, 1 m is incorrect subtraction, and 12 m is unrelated."
+  },
+  {
+   "n": 8,
+   "topic": "Scalars and vectors",
+   "q": "A trader in Lagos walks 3.0 km due east to the market then 4.0 km due north to the bank. What is his resultant displacement from his starting point?",
+   "options": [
+    "7.0 km",
+    "5.0 km",
+    "1.0 km",
+    "12.0 km"
+   ],
+   "answer": 1,
+   "explanation": "Resultant displacement = √(3.0² + 4.0²) = √(9+16) = √25 = 5.0 km by Pythagoras. 7.0 km is total distance travelled (not displacement), 1.0 km and 12.0 km are incorrect values."
+  },
+  {
+   "n": 9,
+   "topic": "Newton’s laws and momentum",
+   "q": "A 0.20 kg ball travelling at 6.0 m/s strikes a hard wall and rebounds at 4.0 m/s in the opposite direction. What is the magnitude of the change in momentum of the ball?",
+   "options": [
+    "2.0 kg·m/s",
+    "1.0 kg·m/s",
+    "0.40 kg·m/s",
+    "10.0 kg·m/s"
+   ],
+   "answer": 0,
+   "explanation": "Change in momentum Δp = m(v_final − v_initial). Taking initial +6.0 m/s and final −4.0 m/s gives Δp = 0.20×(−4.0 − 6.0) = 0.20×(−10.0) = −2.0 kg·m/s. The magnitude is 2.0 kg·m/s. 0.40 and 1.0 are arithmetic errors, 10.0 is forgetting the mass."
+  },
+  {
+   "n": 10,
+   "topic": "Newton’s laws and momentum",
+   "q": "A lorry of mass 2000 kg travelling at 20 m/s is brought to rest uniformly in 10 s. What is the average retarding force on the lorry?",
+   "options": [
+    "4000 N (retarding)",
+    "40 000 N",
+    "400 N",
+    "20 000 N"
+   ],
+   "answer": 0,
+   "explanation": "Average deceleration a = Δv / t = (0 − 20) ÷ 10 = −2.0 m/s². Force = m a = 2000 × (−2.0) = −4000 N, so the retarding force has magnitude 4000 N. 40 000 N and 20 000 N are off by factors of 10 or 5, and 400 N misses a zero."
+  },
+  {
+   "n": 11,
+   "topic": "Sound",
+   "q": "A market trader in Kano shouts at frequency 512 Hz. A listener stands 170 m away. If the speed of sound in air is 340 m/s, what is the wavelength of the sound heard by the listener?",
+   "options": [
+    "1.48 m",
+    "0.334 m",
+    "0.664 m",
+    "0.250 m"
+   ],
+   "answer": 2,
+   "explanation": "Wavelength λ = v / f = 340 m/s ÷ 512 Hz = 0.6640625 m ≈ 0.664 m. The distance 170 m is irrelevant for wavelength in still air. 0.334 m is v ÷ (2f) or a halved value; 1.48 m is v ÷ 230 Hz (wrong frequency), and 0.250 m is v ÷ 1360 Hz (wrong frequency)."
+  },
+  {
+   "n": 12,
+   "topic": "Sound",
+   "q": "A closed organ pipe of length 0.85 m resonates at its fundamental frequency. If the speed of sound is 340 m/s, what is the fundamental frequency?",
+   "options": [
+    "100 Hz",
+    "400 Hz",
+    "50 Hz",
+    "200 Hz"
+   ],
+   "answer": 0,
+   "explanation": "For a pipe closed at one end, fundamental wavelength λ1 = 4L = 4 × 0.85 = 3.40 m. Thus f1 = v/λ1 = 340 ÷ 3.40 = 100 Hz. 200 Hz would be the second harmonic of an open pipe of that length; 400 Hz and 50 Hz do not match the closed-pipe fundamental."
+  },
+  {
+   "n": 13,
+   "topic": "Gas laws",
+   "q": "A steel cylinder in Abuja contains helium at pressure 2.0 × 10^5 Pa and temperature 300 K. The gas is heated to 450 K while volume is kept constant. What is the final pressure?",
+   "options": [
+    "3.0 × 10^5 Pa",
+    "1.5 × 10^5 Pa",
+    "2.0 × 10^5 Pa",
+    "4.0 × 10^5 Pa"
+   ],
+   "answer": 0,
+   "explanation": "At constant volume, pressure ∝ temperature (in K). So P2 = P1 × (T2/T1) = 2.0×10^5 × (450/300) = 2.0×10^5 × 1.5 = 3.0×10^5 Pa. 1.5×10^5 Pa would be if temperature decreased; 4.0×10^5 Pa corresponds to T2/T1 = 2.0; 2.0×10^5 Pa is no change."
+  },
+  {
+   "n": 14,
+   "topic": "Gas laws",
+   "q": "A piston contains 0.020 m^3 of air at 100 kPa and 300 K. If the piston is compressed isothermally to 0.010 m^3, what is the new pressure (assume ideal gas)?",
+   "options": [
+    "200 kPa",
+    "300 kPa",
+    "50 kPa",
+    "100 kPa"
+   ],
+   "answer": 0,
+   "explanation": "Isothermal compression: P1V1 = P2V2, so P2 = P1V1/V2 = 100 kPa × 0.020/0.010 = 100 kPa × 2 = 200 kPa. 50 kPa would be expansion by factor 2; 100 kPa means no change; 300 kPa corresponds to factor 3 compression."
+  },
+  {
+   "n": 15,
+   "topic": "Gas laws",
+   "q": "A sealed flask contains nitrogen at 1.2 × 10^5 Pa and 290 K. If the pressure is reduced to 0.60 × 10^5 Pa by cooling at constant volume, what is the final temperature?",
+   "options": [
+    "72.5 K",
+    "145 K",
+    "290 K",
+    "580 K"
+   ],
+   "answer": 1,
+   "explanation": "At constant volume, P ∝ T, so T2 = T1 × (P2/P1) = 290 × (0.60×10^5 / 1.2×10^5) = 290 × 0.5 = 145 K. 580 K is double; 290 K is unchanged; 72.5 K would be quarter of original."
+  },
+  {
+   "n": 16,
+   "topic": "Heat and temperature",
+   "q": "A block of copper (specific heat 390 J/kg·K) of mass 2.0 kg is heated from 20°C to 80°C. How much heat is required?",
+   "options": [
+    "2.34 × 10^4 J",
+    "4.68 × 10^4 J",
+    "1.17 × 10^5 J",
+    "7.80 × 10^3 J"
+   ],
+   "answer": 1,
+   "explanation": "Heat Q = mcΔT = 2.0 kg × 390 J/kg·K × (80−20) K = 2.0 × 390 × 60 = 46,800 J = 4.68×10^4 J. 7.80×10^3 J is too small (would be 2×390×10); 1.17×10^5 J is about 2.5 times too large; 2.34×10^4 J is half the correct value."
+  },
+  {
+   "n": 17,
+   "topic": "Light and optics",
+   "q": "A thin converging lens of focal length 20 cm forms an image of a small bulb placed 30 cm from the lens. What is the image distance (to nearest cm) and is the image real or virtual?",
+   "options": [
+    "15 cm, real",
+    "−60 cm, virtual",
+    "60 cm, real",
+    "12 cm, virtual"
+   ],
+   "answer": 2,
+   "explanation": "Lens formula 1/f = 1/u + 1/v. With f = 20 cm, u = 30 cm: 1/v = 1/20 − 1/30 = (3−2)/60 = 1/60 so v = 60 cm. Positive v indicates a real image on opposite side. 12 cm or 15 cm are wrong calculations; −60 cm would indicate virtual on same side but sign is wrong here."
+  },
+  {
+   "n": 18,
+   "topic": "Light and optics",
+   "q": "A ray of light in air strikes a glass surface (n = 1.50) at incident angle 30°. What is the angle of refraction in the glass (to nearest degree)?",
+   "options": [
+    "41°",
+    "10°",
+    "30°",
+    "19°"
+   ],
+   "answer": 3,
+   "explanation": "Snell's law: n1 sinθ1 = n2 sinθ2 ⇒ sinθ2 = (n1/n2) sinθ1 = (1.00/1.50) × sin30° = (0.6667) × 0.5 = 0.3333. Thus θ2 = arcsin(0.3333) ≈ 19.47° ≈ 19°. 30° would be no refraction; 41° is larger than incident angle (would require n2 < n1); 10° is too small."
+  },
+  {
+   "n": 19,
+   "topic": "Motion",
+   "q": "A bus accelerates uniformly from rest to 18 m/s in 12 s on a Lagos highway. What distance does the bus cover during this time?",
+   "options": [
+    "324 m",
+    "216 m",
+    "72 m",
+    "108 m"
+   ],
+   "answer": 3,
+   "explanation": "For uniform acceleration from rest, distance s = 1/2 × a × t². Acceleration a = Δv/ t = 18/12 = 1.5 m/s². Then s = 0.5 × 1.5 × 12² = 0.75 × 144 = 108 m. 216 m would be using full v×t without 1/2; 72 m corresponds to a = 1.0 m/s²; 324 m is triple the correct value."
+  },
+  {
+   "n": 20,
+   "topic": "Motion",
+   "q": "A stone is thrown vertically upward from a roof in Ibadan with initial speed 20 m/s. Take g = 10 m/s². What is the maximum height above the roof reached by the stone?",
+   "options": [
+    "20 m",
+    "10 m",
+    "4 m",
+    "40 m"
+   ],
+   "answer": 0,
+   "explanation": "Maximum height h = u²/(2g) = 20²/(2×10) = 400/20 = 20 m. 40 m would be u²/g (double); 10 m corresponds to using u²/(4g); 4 m is a mistaken division by 100 or wrong substitution."
+  },
+  {
+   "n": 21,
+   "topic": "Waves",
+   "q": "A guitar string of length 0.80 m vibrates in its third harmonic with wave speed 240 m/s. What is the frequency of the string in this harmonic?",
+   "options": [
+    "450 Hz",
+    "600 Hz",
+    "150 Hz",
+    "225 Hz"
+   ],
+   "answer": 0,
+   "explanation": "For a string fixed at both ends, wavelength for nth harmonic λ_n = 2L/n. For n=3, λ = 2×0.80/3 = 1.60/3 = 0.533... m. Frequency f = v/λ = 240 / 0.533... = 450 Hz. 150 Hz would be using n=1?; 600 Hz corresponds to v/(0.4 m), wrong harmonic; 225 Hz is half of correct."
+  },
+  {
+   "n": 22,
+   "topic": "Atomic and nuclear physics",
+   "q": "A sample of radioactive iodine-131 has activity 4.0 × 10⁶ Bq. After 8 days, the activity falls to 1.0 × 10⁶ Bq. What is the half-life of iodine-131 in days?",
+   "options": [
+    "2.0 days",
+    "16.0 days",
+    "8.0 days",
+    "4.0 days"
+   ],
+   "answer": 3,
+   "explanation": "Activity reduces by factor 4 in 8 days, so N/N₀ = (1/2)^(t/T½) = 1/4 = (1/2)^2, hence t/T½ = 2 → T½ = t/2 = 8/2 = 4 days. 2 days would give reduction by factor 16 in 8 days; 8 days would be no reduction; 16 days wrong direction."
+  },
+  {
+   "n": 23,
+   "topic": "Atomic and nuclear physics",
+   "q": "A nucleus emits an alpha particle and its mass number decreases by 4. Which of the following changes also occurs to the nucleus?",
+   "options": [
+    "Its mass number increases by 2",
+    "Its atomic number increases by 2",
+    "Its atomic number decreases by 4",
+    "Its atomic number decreases by 2"
+   ],
+   "answer": 3,
+   "explanation": "An alpha particle is a helium nucleus (2 protons, 2 neutrons), so emission reduces mass number by 4 and atomic number by 2. Atomic number decreasing by 4 or increasing by 2 are incorrect; mass number cannot increase in alpha emission."
+  },
+  {
+   "n": 24,
+   "topic": "Atomic and nuclear physics",
+   "q": "In a cloud chamber experiment at Ahmadu Bello University, a beta particle curve is observed to bend more than an alpha particle under the same magnetic field. Which reason best explains this?",
+   "options": [
+    "Alpha particles move faster than beta particles",
+    "Magnetic field acts only on beta particles",
+    "Beta particles have much smaller mass and similar charge magnitude, so experience larger deflection",
+    "Beta particles have larger charge than alpha particles"
+   ],
+   "answer": 2,
+   "explanation": "Deflection in a magnetic field depends on charge-to-mass ratio q/m; beta particles (electrons) have much larger q/m than alpha particles, so greater curvature. Beta charge is not larger (it's equal in magnitude but opposite sign), alpha particles are not faster generally, and magnetic fields act on any moving charge."
+  },
+  {
+   "n": 25,
+   "topic": "Current electricity",
+   "q": "An incandescent bulb rated 60 W, 240 V is connected in a Lagos house. What is the current drawn by the bulb when it operates normally?",
+   "options": [
+    "0.25 A",
+    "0.40 A",
+    "14.4 A",
+    "4.0 A"
+   ],
+   "answer": 0,
+   "explanation": "Current I = P/V = 60 W ÷ 240 V = 0.25 A. A common error is using I = V/R without computing R; using P = VI directly gives the correct value. 0.40 A would be P ÷ 150 V, 4.0 A and 14.4 A are far too large for a 60 W bulb at 240 V."
+  },
+  {
+   "n": 26,
+   "topic": "Current electricity",
+   "q": "Four identical resistors of resistance 12 Ω each are connected in series across a 48 V battery in Kano. What is the potential difference across one resistor?",
+   "options": [
+    "36 V",
+    "12 V",
+    "4 V",
+    "48 V"
+   ],
+   "answer": 1,
+   "explanation": "Total resistance = 4 × 12 Ω = 48 Ω, total current I = V/R = 48 V ÷ 48 Ω = 1.0 A. Voltage across one resistor = I × 12 Ω = 1.0 A × 12 Ω = 12 V. Mistakes include thinking each gets full battery voltage or dividing incorrectly."
+  },
+  {
+   "n": 27,
+   "topic": "Current electricity",
+   "q": "A student in Enugu measures 2.0 A in a circuit and finds the potential difference across a resistor is 10 V. What is the power dissipated in the resistor?",
+   "options": [
+    "20 W",
+    "12 W",
+    "5.0 W",
+    "200 W"
+   ],
+   "answer": 0,
+   "explanation": "Power P = V × I = 10 V × 2.0 A = 20 W. Using P = I²R would require R; dividing V by I gives R = 5 Ω, then I²R = (2.0)² × 5 = 20 W, same result. 5.0 W is V ÷ I, 12 W is incorrect arithmetic, 200 W is V × 20 A (wrong current)."
+  },
+  {
+   "n": 28,
+   "topic": "Elasticity and pressure",
+   "q": "A steel spring of natural length 0.20 m is stretched by 4.0 cm by a force of 16 N in Ibadan. What is the spring constant k?",
+   "options": [
+    "160 N/m",
+    "400 N/m",
+    "64 N/m",
+    "40 N/m"
+   ],
+   "answer": 1,
+   "explanation": "Extension x = 4.0 cm = 0.040 m. Hooke's law: k = F/x = 16 N ÷ 0.040 m = 400 N/m. 40 N/m would result from dividing by 0.4 m, 64 N/m is 16 ÷ 0.25 and 160 N/m is 16 ÷ 0.10; all are from wrong extension conversions."
+  },
+  {
+   "n": 29,
+   "topic": "Elasticity and pressure",
+   "q": "A cylindrical iron rod of cross-sectional area 1.0 × 10⁻⁴ m² is placed vertically; a 2000 N load compresses it by 0.50 mm. What is the compressive stress on the rod?",
+   "options": [
+    "2.0 × 10⁴ Pa",
+    "2.0 × 10⁷ Pa",
+    "1.0 × 10¹ Pa",
+    "4.0 × 10³ Pa"
+   ],
+   "answer": 1,
+   "explanation": "Stress = force/area = 2000 N ÷ 1.0 × 10⁻⁴ m² = 2.0 × 10⁷ Pa. The compression amount is irrelevant to stress; common mistakes divide by extension or use wrong area powers leading to much smaller values."
+  },
+  {
+   "n": 30,
+   "topic": "Elasticity and pressure",
+   "q": "A hydraulic press in Abuja has a small piston area of 2.0 × 10⁻³ m² and a large piston area of 0.20 m². If a force of 100 N is applied to the small piston, what is the ideal force available at the large piston (neglecting friction)?",
+   "options": [
+    "20 000 N",
+    "50 N",
+    "1000 N",
+    "10 000 N"
+   ],
+   "answer": 3,
+   "explanation": "Pascal's principle: pressure is transmitted, so pressure = 100 N ÷ 2.0 × 10⁻³ m² = 5.0 × 10⁴ Pa. Force on large piston = pressure × area = 5.0 × 10⁴ Pa × 0.20 m² = 1.0 × 10⁴ N = 10 000 N. 1000 N would be if area ratio were 10, 20 000 N doubles area incorrectly."
+  },
+  {
+   "n": 31,
+   "topic": "Magnetism and electromagnetic induction",
+   "q": "A rectangular coil of 50 turns, area 0.020 m², is pulled out of a uniform magnetic field in Zaria so that the flux through the coil changes from 0.60 Wb to 0 Wb in 0.10 s. What is the magnitude of the average induced emf?",
+   "options": [
+    "30 V",
+    "300 V",
+    "3.0 V",
+    "15 V"
+   ],
+   "answer": 1,
+   "explanation": "Change in flux linkage = N ΔΦ = 50 × (0 − 0.60) = −30 Wb. Average emf magnitude = |Δ(NΦ)| ÷ Δt = 30 Wb ÷ 0.10 s = 300 V. Common mistakes include omitting the number of turns or using the area instead of given flux; 3.0 V is 100× too small."
+  },
+  {
+   "n": 32,
+   "topic": "Magnetism and electromagnetic induction",
+   "q": "A straight conductor 0.50 m long moves at 10 m/s perpendicular to a magnetic field of flux density 0.20 T in Kano. What is the emf induced between its ends?",
+   "options": [
+    "0 V",
+    "2.0 V",
+    "1.0 V",
+    "0.10 V"
+   ],
+   "answer": 2,
+   "explanation": "Induced emf in a moving conductor = Bℓv = 0.20 T × 0.50 m × 10 m/s = 1.0 V. 0 V would be if motion were parallel to field; 0.10 V is off by factor 10 and 2.0 V doubles the result."
+  },
+  {
+   "n": 33,
+   "topic": "Measurement and units",
+   "q": "A carpenter in Owerri measures a plank length as 2.34 m ± 0.01 m. What is the percentage uncertainty in the length (to two significant figures)?",
+   "options": [
+    "0.43%",
+    "4.3%",
+    "0.43 m",
+    "0.010%"
+   ],
+   "answer": 0,
+   "explanation": "Percentage uncertainty = (absolute uncertainty ÷ measured value) × 100% = (0.01 ÷ 2.34) × 100% ≈ 0.427% ≈ 0.43%. 4.3% is 10× too large; 0.010% misplaces decimal, and 0.43 m is an incorrect unit and magnitude."
+  },
+  {
+   "n": 34,
+   "topic": "Measurement and units",
+   "q": "A mass is measured on a scale as 1250 g with a possible systematic error of +2 g and random uncertainty ±3 g. What is the best value and combined uncertainty (expressed as best value ± uncertainty) in kilograms, using linear addition of systematic and random uncertainties?",
+   "options": [
+    "1.252 kg ± 0.005 kg",
+    "1.250 kg ± 0.003 kg",
+    "1.255 kg ± 0.003 kg",
+    "1.252 kg ± 0.006 kg"
+   ],
+   "answer": 0,
+   "explanation": "Measured mass = 1250 g = 1.250 kg. Systematic error +2 g and random ±3 g: combined uncertainty (linear) = (2 + 3) g = 5 g = 0.005 kg. Best corrected value = 1.250 kg + 0.002 kg = 1.252 kg, so 1.252 kg ± 0.005 kg. Other options ignore systematic correction or use wrong combination."
+  },
+  {
+   "n": 35,
+   "topic": "Simple machines",
+   "q": "A wheelbarrow is used by Musa to lift a load vertically 0.80 m. The operator applies a force of 200 N through a handle moved 1.6 m. Assuming no frictional loss, what is the load lifted (in newtons)?",
+   "options": [
+    "160 N",
+    "400 N",
+    "100 N",
+    "250 N"
+   ],
+   "answer": 1,
+   "explanation": "Work input = F × distance = 200 × 1.6 = 320 J. With no losses, work output = 320 J = load × 0.80, so load = 320/0.80 = 400 N. Common mistakes: dividing distances wrongly or using lever ratio instead of equating work (100 N would come from halving both values incorrectly)."
+  },
+  {
+   "n": 36,
+   "topic": "Scalars and vectors",
+   "q": "In Abuja, a motorist drives 60 km east, then 80 km north. What is the magnitude of the resultant displacement (km)?",
+   "options": [
+    "100 km",
+    "20 km",
+    "140 km",
+    "10 km"
+   ],
+   "answer": 0,
+   "explanation": "Resultant displacement is the hypotenuse of a right triangle: √(60² + 80²) = √(3600 + 6400) = √10000 = 100 km. Mistakes: adding distances (140 km) or subtracting (20 km) instead of using Pythagoras."
+  },
+  {
+   "n": 37,
+   "topic": "Simple machines",
+   "q": "A screw jack with pitch 5.0 mm and handle radius 0.25 m is used to raise a car requiring an upward force of 10 000 N. Ignoring friction, what tangential force must be applied at the handle? (Use torque balance: F_handle × 2πr = Load × pitch.)",
+   "options": [
+    "63.7 N",
+    "12.7 N",
+    "31.8 N",
+    "318 N"
+   ],
+   "answer": 2,
+   "explanation": "Torque required per revolution = Load × pitch = 10 000 × 0.005 = 50 N·m. Torque from handle = F_handle × 2πr = F_handle × 2π×0.25 = F_handle × 1.571. So F_handle = 50 / 1.571 ≈ 31.8 N. Common error: forgetting 2π factor or using circumference incorrectly gives 318 N or 12.7 N."
+  },
+  {
+   "n": 38,
+   "topic": "Newton’s laws and momentum",
+   "q": "A 1200 kg car moving at 20 m/s applies brakes and stops uniformly in 8.0 s. What average retarding force acts on the car?",
+   "options": [
+    "3000 N",
+    "1500 N",
+    "9600 N",
+    "24 000 N"
+   ],
+   "answer": 0,
+   "explanation": "Deceleration a = Δv / t = (0 − 20)/8 = −2.5 m/s². Force = m a = 1200×(−2.5) = −3000 N; magnitude 3000 N. Common errors: dividing mass by time or using wrong sign."
+  },
+  {
+   "n": 39,
+   "topic": "Work, energy and power",
+   "q": "A 60 W bulb is left on for 2.5 hours in a Lagos household. If the unit cost is ₦50 per kWh, how much does it cost to run the bulb? (Give answer in naira to two significant figures.)",
+   "options": [
+    "₦75.00",
+    "₦0.75",
+    "₦150.00",
+    "₦7.50"
+   ],
+   "answer": 3,
+   "explanation": "Energy = Power × time = 60 W × 2.5 h = 150 Wh = 0.150 kWh. Cost = 0.150×50 = ₦7.5. Rounding to two significant figures gives ₦7.5. Mistakes include forgetting to convert Wh to kWh (leading to ₦75) or misplacing decimal."
+  },
+  {
+   "n": 40,
+   "topic": "Sound",
+   "q": "A speaker in a Lagos market produces a sound of frequency 680 Hz. If the speed of sound in air there is 340 m/s, what is the wavelength of the sound wave?",
+   "options": [
+    "0.50 m",
+    "2.0 m",
+    "0.20 m",
+    "1.00 m"
+   ],
+   "answer": 0,
+   "explanation": "Wavelength λ = v / f = 340 m/s ÷ 680 Hz = 0.50 m. 2.0 m and 1.00 m are too large (they would correspond to much lower frequencies), while 0.20 m would correspond to a higher frequency than 680 Hz."
+  },
+  {
+   "n": 41,
+   "topic": "Sound",
+   "q": "An ambulance siren emits a steady tone of 600 Hz. If the ambulance moves towards a stationary observer at 20 m/s and the speed of sound is 340 m/s, what frequency does the observer hear (use the source-moving Doppler formula)?",
+   "options": [
+    "588.9 Hz",
+    "637.5 Hz",
+    "600.0 Hz",
+    "609.4 Hz"
+   ],
+   "answer": 1,
+   "explanation": "For a moving source approaching a stationary observer f' = f × v/(v − v_s) = 600 × 340/(340−20) = 600 × 340/320 = 600 × 1.0625 = 637.5 Hz. 600 Hz would be the frequency with no motion; 588.9 Hz and 609.4 Hz come from incorrect sign or using observer-moving formula."
+  },
+  {
+   "n": 42,
+   "topic": "Sound",
+   "q": "A cylindrical pipe closed at one end and open at the other has fundamental frequency 100 Hz when the speed of sound is 340 m/s. What is the length of the pipe?",
+   "options": [
+    "0.50 m",
+    "1.70 m",
+    "0.85 m",
+    "0.25 m"
+   ],
+   "answer": 2,
+   "explanation": "For a pipe closed at one end, the fundamental f = v / (4L). So L = v / (4f) = 340 / (4×100) = 340/400 = 0.85 m. 0.25 m and 0.50 m are results of mistaken use of open-pipe formula or arithmetic, 1.70 m would give f = 50 Hz."
+  },
+  {
+   "n": 43,
+   "topic": "Gas laws",
+   "q": "A gas at pressure 1.0×10^5 Pa occupies volume 2.0×10^-3 m³. It is compressed so the pressure becomes 2.5×10^5 Pa at constant temperature. What is the new volume?",
+   "options": [
+    "5.0×10^-4 m³",
+    "8.0×10^-4 m³",
+    "1.25×10^-3 m³",
+    "2.0×10^-3 m³"
+   ],
+   "answer": 1,
+   "explanation": "Boyle's law: P1V1 = P2V2 so V2 = P1V1/P2 = (1.0×10^5 × 2.0×10^-3) / 2.5×10^5 = 200 / 250000 = 8.0×10^-4 m³. 2.0×10^-3 m³ is the original volume; other wrong answers arise from arithmetic errors."
+  },
+  {
+   "n": 44,
+   "topic": "Gas laws",
+   "q": "A sealed cylinder contains 0.0200 mol of helium at pressure 2.00×10^5 Pa and temperature 300 K. Using R = 8.314 J/(mol·K), what is the volume of the gas?",
+   "options": [
+    "2.49×10^-4 m³",
+    "4.98×10^-4 m³",
+    "2.49×10^-3 m³",
+    "1.24×10^-4 m³"
+   ],
+   "answer": 0,
+   "explanation": "Use ideal gas law PV = nRT so V = nRT / P = 0.0200 × 8.314 × 300 ÷ 2.00×10^5 = 49.884 ÷ 200000 = 2.4942×10^-4 m³ ≈ 2.49×10^-4 m³. 2.49×10^-3 is ten times too large, 1.24×10^-4 is half the correct value, likely from halving n or T."
+  },
+  {
+   "n": 45,
+   "topic": "Gas laws",
+   "q": "A 1.00 mol mixture of gases in a cylinder contains 0.400 mol oxygen and 0.600 mol nitrogen. The total pressure is 1.50×10^5 Pa. What is the partial pressure of oxygen?",
+   "options": [
+    "9.00×10^4 Pa",
+    "6.00×10^4 Pa",
+    "4.00×10^4 Pa",
+    "1.50×10^5 Pa"
+   ],
+   "answer": 1,
+   "explanation": "Dalton's law: partial pressure = mole fraction × total pressure. Mole fraction O2 = 0.400/1.00 = 0.400, so p_O2 = 0.400 × 1.50×10^5 Pa = 6.00×10^4 Pa. 9.00×10^4 Pa is for mole fraction 0.60, 1.50×10^5 Pa is total pressure, 4.00×10^4 Pa would be if total pressure were 1.00×10^5 Pa."
+  },
+  {
+   "n": 46,
+   "topic": "Heat and temperature",
+   "q": "A 0.500 kg aluminium pot (specific heat 900 J/kg·K) is heated from 20°C to 150°C on a cooker in Kano. How much heat energy is absorbed by the pot?",
+   "options": [
+    "6.75×10^4 J",
+    "5.85×10^4 J",
+    "1.08×10^5 J",
+    "4.05×10^4 J"
+   ],
+   "answer": 1,
+   "explanation": "Heat Q = mcΔT = 0.500 kg × 900 J/kg·K × (150−20) K = 0.500 × 900 × 130 = 58,500 J = 5.85×10^4 J. 6.75×10^4 J would be if ΔT = 150 K; 4.05×10^4 J corresponds to using c = 625 J/kg·K; 1.08×10^5 J is double the correct value."
+  },
+  {
+   "n": 47,
+   "topic": "Heat and temperature",
+   "q": "How much energy is required to melt 0.200 kg of ice at 0°C to water at 0°C? (Latent heat of fusion of ice = 3.34×10^5 J/kg)",
+   "options": [
+    "1.00×10^5 J",
+    "6.68×10^3 J",
+    "3.34×10^4 J",
+    "6.68×10^4 J"
+   ],
+   "answer": 3,
+   "explanation": "Energy Q = mL_f = 0.200 kg × 3.34×10^5 J/kg = 6.68×10^4 J. 3.34×10^4 J is for 0.100 kg, 6.68×10^3 J is off by factor 10, 1.00×10^5 J is not consistent with given values."
+  },
+  {
+   "n": 48,
+   "topic": "Light and optics",
+   "q": "A thin converging lens of focal length 15 cm is used to form an image of an object placed 30 cm from the lens. What is the size and nature of the image if the object height is 4.0 cm?",
+   "options": [
+    "Image is real, inverted and 8.0 cm high",
+    "Image is real, inverted and 4.0 cm high",
+    "Image is virtual, erect and 2.0 cm high",
+    "Image is virtual, erect and 4.0 cm high"
+   ],
+   "answer": 1,
+   "explanation": "Lens formula: 1/v + 1/u = 1/f so 1/v = 1/f − 1/u = 1/15 − 1/30 = 1/30, therefore v = 30 cm. Magnification m = v/u = 30/30 = 1, so image height = 4.0 cm and image is real and inverted (since v positive for a real image). Virtual/erect options are incorrect given the object outside focal length; 2.0 cm and 8.0 cm are wrong magnifications."
+  },
+  {
+   "n": 49,
+   "topic": "Light and optics",
+   "q": "Light inside a glass slab (n = 1.50) hits the glass-air boundary. What is the critical angle for total internal reflection at the glass-air surface?",
+   "options": [
+    "60.0°",
+    "33.7°",
+    "48.6°",
+    "41.8°"
+   ],
+   "answer": 3,
+   "explanation": "Critical angle c satisfies sin c = n2/n1 = 1.00 / 1.50 = 0.6666667, so c = arcsin(0.6666667) ≈ 41.8°. 48.6° and 33.7° are values from incorrect inverse-sine arguments or wrong refractive indices; 60.0° is not consistent with sin c = 2/3."
+  },
+  {
+   "n": 50,
+   "topic": "Atomic and nuclear physics",
+   "q": "A sealed container contains a radioactive sample of isotope X with half-life 10 days. If the initial activity is 8000 Bq, what is the activity after 30 days?",
+   "options": [
+    "0 Bq",
+    "4000 Bq",
+    "1000 Bq",
+    "2000 Bq"
+   ],
+   "answer": 2,
+   "explanation": "After 30 days = 3 half-lives, activity = 8000 ÷ 2³ = 8000 ÷ 8 = 1000 Bq. 2000 Bq would be after 2 half-lives (40% error), 4000 Bq after 1 half-life (wrong time), and 0 Bq incorrectly assumes complete decay."
+  },
+  {
+   "n": 51,
+   "topic": "Atomic and nuclear physics",
+   "q": "A nucleus of ²³⁵U emits an alpha particle. What are the atomic number and mass number of the daughter nucleus?",
+   "options": [
+    "Atomic number 88, mass number 233",
+    "Atomic number 92, mass number 231",
+    "Atomic number 90, mass number 231",
+    "Atomic number 91, mass number 234"
+   ],
+   "answer": 2,
+   "explanation": "Alpha emission reduces mass number by 4 and atomic number by 2: 235 → 231 and 92 → 90, so (90,231). Options with 92 or 91 leave atomic number unchanged or reduced by only 1; 233 or 234 miscalculate mass loss."
+  },
+  {
+   "n": 52,
+   "topic": "Atomic and nuclear physics",
+   "q": "In a radioactive decay series, a β⁻ decay changes the nucleus by which of the following?",
+   "options": [
+    "Atomic number increases by 1, mass number unchanged",
+    "Atomic number decreases by 1, mass number decreases by 1",
+    "Atomic number increases by 2, mass number decreases by 4",
+    "Atomic number unchanged, mass number decreases by 1"
+   ],
+   "answer": 0,
+   "explanation": "β⁻ decay converts a neutron to a proton, so atomic number +1, mass number stays same. Decreasing atomic number or mass is characteristic of other decay modes (alpha changes mass by 4 and Z by 2). The last option mixes alpha and beta changes incorrectly."
+  },
+  {
+   "n": 53,
+   "topic": "Waves",
+   "q": "A student in Ibadan measures the wavelength of a sound wave in air as 0.50 m when the frequency is 680 Hz. What speed of sound did the student measure?",
+   "options": [
+    "68 m/s",
+    "1360 m/s",
+    "340 m/s",
+    "3400 m/s"
+   ],
+   "answer": 2,
+   "explanation": "Speed = frequency × wavelength = 680 × 0.50 = 340 m/s. 1360 m/s is 4× the correct value (wrong multiplication), 3400 m/s is 10×, and 68 m/s is 0.2×; these are common calculation errors."
+  },
+  {
+   "n": 54,
+   "topic": "Waves",
+   "q": "Two waves of the same frequency travel along a string. At a point their amplitudes are in opposite phase and equal magnitude. What is the resulting amplitude at that point?",
+   "options": [
+    "Half the single amplitude",
+    "Twice the single amplitude (constructive)",
+    "Same as one wave (no change)",
+    "Zero (destructive interference)"
+   ],
+   "answer": 3,
+   "explanation": "Equal amplitudes in opposite phase cancel, giving zero amplitude (complete destructive interference). Twice amplitude is for in-phase addition; same or half are incorrect for equal opposite-phase waves."
+  },
+  {
+   "n": 55,
+   "topic": "Electrostatics and capacitors",
+   "q": "A parallel-plate capacitor has plate area 0.020 m² and separation 1.0 mm. If the space between is vacuum, what is the capacitance? (ε₀ = 8.85×10⁻¹² F/m)",
+   "options": [
+    "1.77×10⁻⁸ F",
+    "1.77×10⁻¹² F",
+    "8.85×10⁻¹¹ F",
+    "1.77×10⁻¹⁰ F"
+   ],
+   "answer": 3,
+   "explanation": "C = ε₀A/d = (8.85×10⁻¹² × 0.020) ÷ 1.0×10⁻³ = 1.77×10⁻¹⁰ F. 1.77×10⁻⁸ is two orders too large (d misused), 1.77×10⁻¹² is too small by 100, and 8.85×10⁻¹¹ is ε₀×A without dividing by d correctly."
+  },
+  {
+   "n": 56,
+   "topic": "Electrostatics and capacitors",
+   "q": "A 12 μF capacitor is charged to 200 V and then isolated. If another identical uncharged 12 μF capacitor is connected in parallel to it, what is the common voltage?",
+   "options": [
+    "100 V",
+    "50 V",
+    "400 V",
+    "200 V"
+   ],
+   "answer": 0,
+   "explanation": "Total charge initially Q = C V = 12 μF × 200 V = 2400 μC. Two equal capacitors share charge, total capacitance 24 μF, so V = Q/(24 μF) = 2400/24 = 100 V. 200 V would mean no sharing, 50 V comes from wrong factor, 400 V impossible (voltage cannot increase)."
+  },
+  {
+   "n": 57,
+   "topic": "Measurement and units",
+   "q": "A force of 2.00 kN is applied uniformly to a flat area of 25.0 cm² on a plate in Kaduna. What is the pressure on the plate in pascals (N/m²)?",
+   "options": [
+    "8.00×10^5 Pa",
+    "8.00×10^3 Pa",
+    "5.00×10^6 Pa",
+    "2.50×10^4 Pa"
+   ],
+   "answer": 0,
+   "explanation": "Convert 2.00 kN to newtons: 2.00 kN = 2000 N. Convert area: 25.0 cm² = 25.0×10^-4 m² = 0.00250 m². Pressure = F/A = 2000 ÷ 0.00250 = 800000 Pa = 8.00×10^5 Pa. The other options come from wrong unit conversions (e.g. using cm² as m² or arithmetic errors)."
+  },
+  {
+   "n": 58,
+   "topic": "Current electricity",
+   "q": "A 12.0 V battery with internal resistance 1.00 Ω supplies current to two resistors 5.00 Ω and 10.0 Ω connected in parallel across its terminals. What is the current through the 5.00 Ω resistor?",
+   "options": [
+    "1.85 A",
+    "2.40 A",
+    "0.92 A",
+    "2.77 A"
+   ],
+   "answer": 0,
+   "explanation": "Parallel combination Rp = (5.00×10.0)/(5.00+10.0) = 50.0/15.0 = 3.333 Ω. Total resistance = 3.333 + 1.00 = 4.333 Ω so terminal voltage = 12.0×(3.333/4.333) = 9.2308 V. Current through 5.00 Ω is V/R = 9.2308 ÷ 5.00 = 1.84616 A ≈ 1.85 A. 2.77 A is the total current from the battery; 2.40 A and 0.92 A arise from incorrect division or using the internal resistance wrongly."
+  },
+  {
+   "n": 59,
+   "topic": "Elasticity and pressure",
+   "q": "A steel wire of length 1.00 m and diameter 1.00 mm is stretched by a force of 100 N producing an extension of 0.50 mm. Calculate the Young's modulus of the wire (in Pa).",
+   "options": [
+    "2.55×10^11 Pa",
+    "2.55×10^10 Pa",
+    "1.27×10^11 Pa",
+    "5.10×10^10 Pa"
+   ],
+   "answer": 0,
+   "explanation": "Area A = π(0.0005 m)² = 7.85398×10^-7 m². Young's modulus Y = (F L)/(A ΔL) = (100×1.00)/(7.85398×10^-7 × 5.00×10^-4) = 100 ÷ 3.92699×10^-10 = 2.545×10^11 Pa ≈ 2.55×10^11 Pa. The smaller values arise from forgetting π in the area, using diameter instead of radius, or wrong unit conversion for ΔL."
+  },
+  {
+   "n": 60,
+   "topic": "Magnetism and electromagnetic induction",
+   "q": "Ade in Lagos has a single circular loop of area 0.200 m² in a region of uniform magnetic field. The field falls uniformly from 0.80 T to 0.20 T in 2.0 s. What is the magnitude of the induced emf in the loop? (Assume plane of loop remains perpendicular to the field.)",
+   "options": [
+    "3.0×10^-2 V",
+    "6.0×10^-2 V",
+    "1.2×10^-1 V",
+    "4.0×10^-3 V"
+   ],
+   "answer": 1,
+   "explanation": "Change in flux ΔΦ = A ΔB = 0.200×(0.80−0.20) = 0.200×0.60 = 0.120 Wb. Induced emf magnitude = |ΔΦ/Δt| = 0.120 ÷ 2.0 = 0.060 V = 6.0×10^-2 V. 3.0×10^-2 V would be obtained if one used half the area or doubled the time; 1.2×10^-1 V is twice the correct value; 4.0×10^-3 V is from a unit or arithmetic error."
+  }
+ ]
+}

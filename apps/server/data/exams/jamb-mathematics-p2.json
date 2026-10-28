@@ -1,0 +1,531 @@
+{
+ "id": "jamb-mathematics-p2",
+ "exam": "jamb",
+ "subject": "mathematics",
+ "year": null,
+ "number": 2,
+ "source": "ai",
+ "minutes": 27,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Sets",
+   "q": "In a secondary school in Ibadan with 120 students, 80 passed Mathematics, 70 passed English and 50 passed both Mathematics and English. How many students passed neither subject?",
+   "options": [
+    "20",
+    "30",
+    "10",
+    "40"
+   ],
+   "answer": 0,
+   "explanation": "Use inclusion–exclusion: number who passed at least one = 80 + 70 − 50 = 100. Therefore neither = 120 − 100 = 20. A common wrong answer 30 arises from forgetting to subtract the intersection or miscomputing totals."
+  },
+  {
+   "n": 2,
+   "topic": "Sets",
+   "q": "If |A ∪ B| = 30, |A ∩ B| = 10 and |B| = 12, what is |A|?",
+   "options": [
+    "8",
+    "32",
+    "10",
+    "28"
+   ],
+   "answer": 3,
+   "explanation": "Use |A ∪ B| = |A| + |B| − |A ∩ B|. So 30 = |A| + 12 − 10, giving |A| = 30 − 2 = 28. Option 8 comes from subtracting instead of adding the intersection; 32 would double count the intersection."
+  },
+  {
+   "n": 3,
+   "topic": "Sets",
+   "q": "Let S be a set with 5 elements. How many non-empty proper subsets does S have?",
+   "options": [
+    "32",
+    "16",
+    "31",
+    "30"
+   ],
+   "answer": 3,
+   "explanation": "Total subsets = 2^5 = 32. Excluding the empty set and the whole set leaves 32 − 2 = 30 non-empty proper subsets. 31 would only exclude the empty set; 16 is 2^{4} and unrelated here."
+  },
+  {
+   "n": 4,
+   "topic": "Surds",
+   "q": "Simplify √72 + √8.",
+   "options": [
+    "2√18",
+    "8√2",
+    "9√2",
+    "10√2"
+   ],
+   "answer": 1,
+   "explanation": "√72 = √(36×2) = 6√2 and √8 = √(4×2) = 2√2, so sum = 6√2 + 2√2 = 8√2. 2√18 simplifies to 2×3√2 = 6√2, which misses the second term."
+  },
+  {
+   "n": 5,
+   "topic": "Surds",
+   "q": "Rationalise the denominator and simplify: 3/(√3 + √5).",
+   "options": [
+    "3(√3 − √5)",
+    "(3√5 − 3√3)/2",
+    "(√15)/2",
+    "(3√3 − 3√5)/2"
+   ],
+   "answer": 1,
+   "explanation": "Multiply numerator and denominator by (√5 − √3): 3(√5 − √3)/(5 − 3) = 3(√5 − √3)/2 = (3√5 − 3√3)/2. The option with (3√3 − 3√5)/2 has the sign reversed; 3(√3 − √5) forgot to divide by 2."
+  },
+  {
+   "n": 6,
+   "topic": "Surds",
+   "q": "Solve for x: √(x + 1) − √(x − 1) = 1/3.",
+   "options": [
+    "37/4",
+    "325/36",
+    "109/12",
+    "10"
+   ],
+   "answer": 1,
+   "explanation": "Let a = √(x+1), b = √(x−1). Then a − b = 1/3. Square: 2x − 2√(x^2 −1) = 1/9 so √(x^2 −1) = x − 1/18. Square again: x^2 −1 = x^2 − (1/9)x + 1/324, giving −1 = −(1/9)x + 1/324. Solve: −325 = −36x, so x = 325/36 ≈ 9.028. Check in original equation; it satisfies. Other options come from algebraic slip-ups when squaring or combining terms."
+  },
+  {
+   "n": 7,
+   "topic": "Coordinate geometry",
+   "q": "Find the equation of the circle with centre (4,5) passing through the point (1,2).",
+   "options": [
+    "(x − 4)² + (y − 5)² = 18",
+    "(x + 4)² + (y + 5)² = 18",
+    "(x − 4)² + (y − 5)² = 9",
+    "(x − 1)² + (y − 2)² = 18"
+   ],
+   "answer": 0,
+   "explanation": "Radius r = distance from (4,5) to (1,2) = √[(3)^2 + (3)^2] = √18, so equation is (x − 4)² + (y − 5)² = 18. The first wrong option uses r² = 9 (too small); the others shift centre or point incorrectly."
+  },
+  {
+   "n": 8,
+   "topic": "Statistics",
+   "q": "The ages of students in a tutorial group are 16 (3 students), 17 (4 students), 18 (2 students) and 19 (1 student). What is the mean age?",
+   "options": [
+    "17.1",
+    "17.2",
+    "16.9",
+    "17"
+   ],
+   "answer": 0,
+   "explanation": "Compute total age = 16×3 + 17×4 + 18×2 + 19×1 = 48 + 68 + 36 + 19 = 171. Total students = 10. Mean = 171/10 = 17.1. Rounding to 17 would lose precision; 17.2 or 16.9 are miscalculations."
+  },
+  {
+   "n": 9,
+   "topic": "Statistics",
+   "q": "A bag contains 5 red, 3 blue and 2 green marbles. Two marbles are drawn at random without replacement. What is the probability both are red?",
+   "options": [
+    "1/9",
+    "1/5",
+    "2/9",
+    "1/3"
+   ],
+   "answer": 2,
+   "explanation": "Probability first red = 5/10 = 1/2, then second red = 4/9. So probability = (1/2)×(4/9) = 4/18 = 2/9. 1/3 would be 3/9 = 6/18, too large; 1/5 or 1/9 come from incorrect counting or replacement assumptions."
+  },
+  {
+   "n": 10,
+   "topic": "Integration",
+   "q": "Find the area under the curve y = 2x + 1 from x = 1 to x = 4.",
+   "options": [
+    "15",
+    "12",
+    "20",
+    "18"
+   ],
+   "answer": 3,
+   "explanation": "Area = ∫₁⁴ (2x+1) dx = [x² + x]₁⁴ = (16+4) − (1+1) = 20 − 2 = 18. Common errors: forgetting to evaluate both limits or miscomputing the antiderivative."
+  },
+  {
+   "n": 11,
+   "topic": "Integration",
+   "q": "Evaluate ∫₀^{ln 2} x e^{2x} dx.",
+   "options": [
+    "2 ln 2 − 1/2",
+    "2 ln 2 − 3/4",
+    "2 ln 2 − 1/4",
+    "ln 2 − 3/4"
+   ],
+   "answer": 1,
+   "explanation": "Integrate by parts: u=x, dv=e^{2x}dx → v=e^{2x}/2. So integral = x e^{2x}/2 − e^{2x}/4 evaluated 0 to ln2. At ln2: 2 ln2 −1; at 0: −1/4. Difference = (2 ln2 −1) − (−1/4) = 2 ln2 −3/4. Missteps often come from arithmetic at the limits."
+  },
+  {
+   "n": 12,
+   "topic": "Trigonometry",
+   "q": "Find the exact value of sin 15°.",
+   "options": [
+    "((√6 + √2)/4)",
+    "((√3 − 1)/2)",
+    "(√2/2)",
+    "((√6 − √2)/4)"
+   ],
+   "answer": 3,
+   "explanation": "Use sin(45° − 30°) = sin45 cos30 − cos45 sin30 = (√2/2)(√3/2) − (√2/2)(1/2) = √2/2 × (√3/2 − 1/2) = (√6 − √2)/4. The other expressions are values of different angles or common mistaken combinations."
+  },
+  {
+   "n": 13,
+   "topic": "Trigonometry",
+   "q": "Solve 2 cos² x − cos x − 1 = 0 for 0 ≤ x < 2π.",
+   "options": [
+    "x = π, 2π/3, 4π/3",
+    "x = π/3, 5π/3",
+    "x = 0, π",
+    "x = 0, 2π/3, 4π/3"
+   ],
+   "answer": 3,
+   "explanation": "Let y = cos x. Then 2y² − y −1 = 0 → (2y+1)(y−1)=0, so y = 1 or y = −1/2. cos x = 1 gives x = 0; cos x = −1/2 gives x = 2π/3 and 4π/3 in [0,2π). Other options include extraneous roots."
+  },
+  {
+   "n": 14,
+   "topic": "Matrices and determinants",
+   "q": "Find the determinant of the matrix [[2, −1, 0],[1, 3, 4],[0, 2, 5]].",
+   "options": [
+    "15",
+    "21",
+    "17",
+    "19"
+   ],
+   "answer": 3,
+   "explanation": "Compute by expansion along the first row: det = 2·det[[3,4],[2,5]] − (−1)·det[[1,4],[0,5]] + 0 = 2·(15−8) + 1·(5−0) = 2·7 + 5 = 19. Errors usually come from sign mistakes or minor arithmetic slips."
+  },
+  {
+   "n": 15,
+   "topic": "Matrices and determinants",
+   "q": "Solve the system 2x + y = 5 and x − y = 1 using matrices (give x,y).",
+   "options": [
+    "(2, −1)",
+    "(1, 3)",
+    "(2, 1)",
+    "(3, −1)"
+   ],
+   "answer": 2,
+   "explanation": "Adding the two equations gives 3x = 6 → x = 2. Then 2(2) + y = 5 → y = 1. Common mistakes include sign errors when eliminating y."
+  },
+  {
+   "n": 16,
+   "topic": "Matrices and determinants",
+   "q": "If A is a 2×2 matrix with det(A) = 4, find det(3A^{-1}).",
+   "options": [
+    "3/4",
+    "12",
+    "9/4",
+    "1/12"
+   ],
+   "answer": 2,
+   "explanation": "For 2×2 matrices, det(A^{-1}) = 1/det(A) = 1/4. Also det(3A^{-1}) = 3²·det(A^{-1}) = 9×(1/4) = 9/4. Mistakes come from treating scalar multiplication as linear rather than quadratic for 2×2 determinants."
+  },
+  {
+   "n": 17,
+   "topic": "Variation",
+   "q": "A variable y varies directly as x² and inversely as z. If y = 8 when x = 2 and z = 1, find y when x = 3 and z = 2.",
+   "options": [
+    "9",
+    "18",
+    "8",
+    "4.5"
+   ],
+   "answer": 0,
+   "explanation": "Model y = k x² / z. From 8 = k·(2²)/1 → k = 8/4 = 2. Then y = 2·(3²)/2 = 2·9/2 = 9. Wrong options arise from forgetting to square x or from incorrect substitution."
+  },
+  {
+   "n": 18,
+   "topic": "Number bases",
+   "q": "If the hexadecimal number A3_16 is added to B2_16, what is the result in hexadecimal?",
+   "options": [
+    "155_16",
+    "155_10",
+    "15D_16",
+    "5D_16"
+   ],
+   "answer": 0,
+   "explanation": "A3_16 = 10·16 + 3 = 163; B2_16 = 11·16 + 2 = 178; sum = 341. Convert 341 to hex: 341 ÷16 = 21 remainder 5; 21 ÷16 = 1 remainder 5; so digits 1,5,5 → 155_16. The other options reflect conversion or carry mistakes."
+  },
+  {
+   "n": 19,
+   "topic": "Sequences and series",
+   "q": "A sequence has nth term a_n = 3n + 2. What is the sum of the first 50 terms?",
+   "options": [
+    "50/2 × (a_1 + a_50) = 25 × (5 + 152) = 25 × 157 = 3925",
+    "3850",
+    "50/2 × (2·3 + 2·152) = incorrect doubling",
+    "50 × (3·50 + 2) = 50 × 152 = 7600"
+   ],
+   "answer": 0,
+   "explanation": "a_1 = 3·1+2 =5; a_50 = 3·50+2 =152. Sum = n/2 (a_1 + a_n) = 50/2 × (5+152) =25×157 = 3925. The first wrong option forgot to average first and last; 3850 is a common arithmetic slip."
+  },
+  {
+   "n": 20,
+   "topic": "Sequences and series",
+   "q": "The sum to infinity of a geometric series is 9 and its common ratio is 1/3. What is the first term?",
+   "options": [
+    "a = 9 × (1 + 1/3) = 12",
+    "a = 9 × 1/3 = 3",
+    "a = S(1 − r) = 9 × (1 − 1/3) = 9 × 2/3 = 6",
+    "a = 9 × (1 − 3) = −18"
+   ],
+   "answer": 2,
+   "explanation": "For |r|<1, S∞ = a/(1 − r). So a = S∞(1 − r) = 9(1 − 1/3) = 9×2/3 = 6. The other options result from misapplying the formula or sign errors."
+  },
+  {
+   "n": 21,
+   "topic": "Indices and logarithms",
+   "q": "Solve for x: 8^{x−1} = 32.",
+   "options": [
+    "x = 1 + 5 = 6",
+    "x = 4",
+    "x = 1 + (log₂ 32)/(log₂ 8) = 1 + 5/3 = 8/3",
+    "x = 5/3"
+   ],
+   "answer": 2,
+   "explanation": "Write both as powers of 2: 8^{x−1} = (2³)^{x−1} = 2^{3(x−1)}; 32 = 2⁵. So 3(x − 1) = 5 → x − 1 = 5/3 → x = 1 + 5/3 = 8/3. The common errors are forgetting the factor 3 or adding exponents incorrectly."
+  },
+  {
+   "n": 22,
+   "topic": "Indices and logarithms",
+   "q": "If log₁₀ (5x) = 2 − log₁₀ x, find x (x > 0).",
+   "options": [
+    "log₁₀ (5x) + log₁₀ x = 2 → log₁₀ (5x²) = 2 → 5x² = 100 → x² = 20 → x = √20 = 2√5",
+    "x = √5",
+    "x = 10",
+    "x = 4"
+   ],
+   "answer": 0,
+   "explanation": "Bring logs together: log(5x) + log x = 2 → log(5x²)=2 → 5x² = 10² =100 → x²=20 → x=√20=2√5 (positive root only). Other options come from misplacing constants or extracting wrong square roots."
+  },
+  {
+   "n": 23,
+   "topic": "Differentiation",
+   "q": "If y = x√x, find dy/dx.",
+   "options": [
+    "√x",
+    "(3/2)√x",
+    "2√x",
+    "(1/2)x^(−1/2)"
+   ],
+   "answer": 1,
+   "explanation": "y = x√x = x·x^{1/2} = x^{3/2}. Differentiate: dy/dx = (3/2)x^{1/2} = (3/2)√x. The option √x misses the factor 3/2; (1/2)x^{−1/2} is derivative of √x alone; 2√x is incorrect power handling."
+  },
+  {
+   "n": 24,
+   "topic": "Differentiation",
+   "q": "Find and classify the stationary points of y = x³ − 3x² + 2.",
+   "options": [
+    "x = −1 (inflection), x = 2 (minimum)",
+    "x = 0 (local minimum), x = 2 (local maximum)",
+    "x = 0 (local maximum), x = 2 (local minimum)",
+    "x = 1 (maximum), x = 2 (minimum)"
+   ],
+   "answer": 2,
+   "explanation": "dy/dx = 3x² − 6x = 3x(x−2) so stationary at x = 0 and x = 2. d²y/dx² = 6x − 6: at x = 0 gives −6 (negative → local maximum); at x = 2 gives 6 (positive → local minimum). Other options misidentify points or give wrong stationary x."
+  },
+  {
+   "n": 25,
+   "topic": "Differentiation",
+   "q": "The tangent to y = ln x at x = 2 meets the y-axis at point (0, b). Find b.",
+   "options": [
+    "ln 2 + 1",
+    "− ln 2",
+    "1 − ln 2",
+    "ln 2 − 1"
+   ],
+   "answer": 3,
+   "explanation": "Slope at x = 2 is 1/2. Tangent line: y − ln 2 = (1/2)(x − 2). Set x = 0 to find y-intercept: b = ln 2 + (1/2)(−2) = ln 2 − 1. Other options arise from sign or algebra mistakes."
+  },
+  {
+   "n": 26,
+   "topic": "Probability",
+   "q": "From a standard 52-card deck two cards are drawn at random without replacement. What is the probability both are kings?",
+   "options": [
+    "1/221",
+    "1/2210",
+    "1/13",
+    "1/169"
+   ],
+   "answer": 0,
+   "explanation": "There are C(4,2)=6 favourable pairs and C(52,2)=1326 total pairs, so probability = 6/1326 = 1/221. 1/169 would be (1/13)² wrong for without replacement; 1/13 is the probability first card is a king only; 1/2210 is an arithmetic error."
+  },
+  {
+   "n": 27,
+   "topic": "Probability",
+   "q": "Amina picks a number uniformly at random from 1 to 20. What is the probability the number is divisible by 3 or by 4?",
+   "options": [
+    "5/20",
+    "1/2",
+    "11/20",
+    "9/20"
+   ],
+   "answer": 1,
+   "explanation": "Numbers divisible by 3: 3,6,9,12,15,18 (6 numbers). Divisible by 4: 4,8,12,16,20 (5 numbers). Overlap (12) counted twice, so total = 6+5−1 = 10. Probability = 10/20 = 1/2. Other fractions come from forgetting overlap or miscounting."
+  },
+  {
+   "n": 28,
+   "topic": "Probability",
+   "q": "A bag contains 3 red, 4 blue and 5 green balls. Two balls are drawn at random without replacement. What is the probability exactly one ball is red?",
+   "options": [
+    "9/22",
+    "1/2",
+    "3/11",
+    "7/22"
+   ],
+   "answer": 0,
+   "explanation": "P(exactly one red) = P(red then non-red) + P(non-red then red) = (3/12·9/11) + (9/12·3/11) = (27+27)/132 = 54/132 = 9/22. 3/11 equals 36/132, 1/2 is 66/132; these are mistaken counts."
+  },
+  {
+   "n": 29,
+   "topic": "Fractions, decimals and percentages",
+   "q": "Compute 7/10 ÷ 2/5 and give the answer in simplest form.",
+   "options": [
+    "7/4",
+    "5/7",
+    "14/5",
+    "7/5"
+   ],
+   "answer": 0,
+   "explanation": "7/10 ÷ 2/5 = 7/10 × 5/2 = 35/20 = 7/4. 7/5 and 14/5 arise from cancelling incorrectly or multiplying wrong way; 5/7 is the reciprocal."
+  },
+  {
+   "n": 30,
+   "topic": "Simultaneous equations and inequalities",
+   "q": "Solve the system 3x − 2y = 7 and 4x + y = 1. Give (x, y).",
+   "options": [
+    "(9/11, −25/11)",
+    "(1, −2)",
+    "(3/11, 25/11)",
+    "(2, −1)"
+   ],
+   "answer": 0,
+   "explanation": "From 4x + y = 1, y = 1 − 4x. Substitute: 3x − 2(1 − 4x) = 7 → 3x −2 +8x =7 →11x =9 → x = 9/11. Then y = 1 − 4(9/11) = 1 − 36/11 = (11 −36)/11 = −25/11. Other options come from arithmetic slips."
+  },
+  {
+   "n": 31,
+   "topic": "Simultaneous equations and inequalities",
+   "q": "Solve the inequality 2x + 3 ≤ 5x − 6. Write the solution set.",
+   "options": [
+    "x ≤ 3",
+    "x < 3",
+    "x ≥ 3",
+    "x > 3"
+   ],
+   "answer": 2,
+   "explanation": "2x + 3 ≤ 5x − 6 → bring terms: 3 + 6 ≤ 5x − 2x → 9 ≤ 3x → x ≥ 3. Reversing the inequality or using strict inequalities produce the wrong options."
+  },
+  {
+   "n": 32,
+   "topic": "Sets",
+   "q": "Universal set U = {1,2,3,…,12}. Let A be the set of multiples of 3 in U and B be the set of prime numbers in U. What is n(A ∪ B)?",
+   "options": [
+    "8",
+    "7",
+    "6",
+    "9"
+   ],
+   "answer": 0,
+   "explanation": "A = {3,6,9,12} (4 elements). B = {2,3,5,7,11} (5 elements). Their intersection is {3} (1 element). So n(A ∪ B) = 4 + 5 − 1 = 8. Common mistakes: forgetting to subtract the overlap or miscounting primes."
+  },
+  {
+   "n": 33,
+   "topic": "Surds",
+   "q": "Simplify (√50 + √18) ÷ √2 exactly.",
+   "options": [
+    "7",
+    "10",
+    "4",
+    "8"
+   ],
+   "answer": 3,
+   "explanation": "√50 = 5√2 and √18 = 3√2, so numerator = 8√2. Dividing by √2 gives 8. A typical error is simplifying √50 to 10 or not factoring √2 correctly."
+  },
+  {
+   "n": 34,
+   "topic": "Coordinate geometry",
+   "q": "Find the equation of the straight line passing through (2, 3) and perpendicular to 3x − 4y + 5 = 0.",
+   "options": [
+    "4x − 3y − 17 = 0",
+    "3x − 4y − 5 = 0",
+    "4x + 3y + 17 = 0",
+    "4x + 3y − 17 = 0"
+   ],
+   "answer": 3,
+   "explanation": "Slope of 3x−4y+5=0 is 3/4, so perpendicular slope is −4/3. Using y−3 = −4/3(x−2) gives 3y−9 = −4x+8, i.e. 4x+3y−17=0. Wrong options change sign or use the original slope instead of the perpendicular slope."
+  },
+  {
+   "n": 35,
+   "topic": "Statistics",
+   "q": "The monthly salaries (₦) of five workers are ₦30,000; ₦45,000; ₦60,000; ₦35,000; ₦50,000. What is the mean monthly salary?",
+   "options": [
+    "₦44,500",
+    "₦44,000",
+    "₦45,000",
+    "₦43,000"
+   ],
+   "answer": 1,
+   "explanation": "Sum = 30,000+45,000+60,000+35,000+50,000 = ₦220,000. Mean = 220,000 ÷ 5 = ₦44,000. Common slips: arithmetic errors in the sum or wrong division."
+  },
+  {
+   "n": 36,
+   "topic": "Sets",
+   "q": "In a school of 60 students, 18 take French, 24 take Spanish and 10 take both French and Spanish. How many students take neither language?",
+   "options": [
+    "30",
+    "28",
+    "22",
+    "26"
+   ],
+   "answer": 1,
+   "explanation": "Students taking at least one = 18 + 24 − 10 = 32. Therefore neither = 60 − 32 = 28. Errors arise from forgetting to subtract the overlap before subtracting from 60."
+  },
+  {
+   "n": 37,
+   "topic": "Surds",
+   "q": "Rationalise the denominator and simplify: 5 ÷ (√3 − √2). Give the exact value.",
+   "options": [
+    "5(√3 − √2)",
+    "5(√3 + √2)",
+    "(√3 + √2)",
+    "5(√3 + √2) ÷ 2"
+   ],
+   "answer": 1,
+   "explanation": "Multiply numerator and denominator by √3+√2: 5(√3+√2)/(3−2) = 5(√3+√2). A common error is to forget to use the conjugate or to leave the denominator unevaluated."
+  },
+  {
+   "n": 38,
+   "topic": "Coordinate geometry",
+   "q": "Find the midpoint and the distance between the points Lagos (6, 3) and Ibadan (−2, −5).",
+   "options": [
+    "Midpoint (−2, 3); distance 8",
+    "Midpoint (2, −1); distance 8√2",
+    "Midpoint (2, −1); distance 4√2",
+    "Midpoint (2, 1); distance 4√2"
+   ],
+   "answer": 1,
+   "explanation": "Midpoint = ((6+(−2))/2, (3+(−5))/2) = (2, −1). Differences: Δx = 8, Δy = 8 so distance = √(8²+8²) = √128 = 8√2. Some wrong options mix signs or halve the distance incorrectly."
+  },
+  {
+   "n": 39,
+   "topic": "Statistics",
+   "q": "A teacher records test scores in classes of 40 students grouped as: 0–9: 2 students; 10–19: 5; 20–29: 8; 30–39: 5; 40–49: 10; 50–59: 6; 60–69: 4. What is the modal class?",
+   "options": [
+    "40–49",
+    "50–59",
+    "20–29",
+    "30–39"
+   ],
+   "answer": 0,
+   "explanation": "Modal class is the class with highest frequency. Frequencies: 2,5,8,5,10,6,4 so the greatest is 10 in 40–49. A mistake is to pick the first class with a large frequency rather than the largest."
+  },
+  {
+   "n": 40,
+   "topic": "Coordinate geometry",
+   "q": "Find the equation of the circle with endpoints of a diameter at (1, 4) and (5, −2).",
+   "options": [
+    "(x − 3)² + (y − 1)² = 13",
+    "(x − 3)² + (y − 1)² = 52",
+    "(x + 3)² + (y + 1)² = 13",
+    "(x − 1)² + (y − 4)² = 13"
+   ],
+   "answer": 0,
+   "explanation": "Centre is midpoint: ((1+5)/2, (4+(−2))/2) = (3,1). Radius² = distance²/4; distance² between endpoints = (4)²+(−6)² = 16+36 = 52, so radius² = 52/4 = 13. Thus (x−3)²+(y−1)²=13. Wrong options use wrong centre or confuse radius² with full distance²."
+  }
+ ]
+}

@@ -1,0 +1,531 @@
+{
+ "id": "jamb-geography-p1",
+ "exam": "jamb",
+ "subject": "geography",
+ "year": null,
+ "number": 1,
+ "source": "ai",
+ "minutes": 27,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Map reading and scale",
+   "q": "On a topographic map, contour lines are labelled 140 m, 160 m and 180 m. Which statement about the slope between the 160 m and 180 m contours is correct if the contour interval is 20 m and the contours are close together?",
+   "options": [
+    "The slope is flat since contours are evenly spaced",
+    "The slope is steep between 160 m and 180 m",
+    "The slope is gentle because altitude difference is only 20 m",
+    "The slope is gentle because the interval is large"
+   ],
+   "answer": 1,
+   "explanation": "Close spacing of contour lines indicates steep slope even though the vertical interval is 20 m. The tempting wrong choices confuse contour interval size with slope steepness or ignore horizontal spacing; equal altitude difference does not imply gentle slope when contours are near."
+  },
+  {
+   "n": 2,
+   "topic": "Map reading and scale",
+   "q": "A student wants to change a map scale from 1:50,000 to a larger scale of 1:25,000. How will features appear on the new map compared with the old map?",
+   "options": [
+    "Features will appear the same size but clearer",
+    "Features will appear larger and show more detail",
+    "Features will appear larger but with less detail",
+    "Features will appear smaller and less detailed"
+   ],
+   "answer": 1,
+   "explanation": "Going from 1:50,000 to 1:25,000 doubles the map scale (larger scale), so features are represented larger and more detail is shown. The wrong options confuse larger scale with reduced size or less detail."
+  },
+  {
+   "n": 3,
+   "topic": "Environmental hazards and conservation",
+   "q": "Which human activity is MOST directly responsible for increased frequency of flash floods in many Nigerian cities?",
+   "options": [
+    "Planting of trees along riverbanks",
+    "Poor drainage due to blockage by refuse and informal structures",
+    "Construction of dams upstream",
+    "Use of concrete pavements for sidewalks"
+   ],
+   "answer": 1,
+   "explanation": "Flash floods in cities are often worsened by blocked drainage from refuse and illegal structures, which prevent rapid runoff. Planting trees reduces flood risk; concrete pavements increase surface runoff but the most direct immediate cause in many Nigerian cities is blocked drains; dams upstream may alter flow but not directly cause urban flash floods."
+  },
+  {
+   "n": 4,
+   "topic": "Environmental hazards and conservation",
+   "q": "A coastal community near Lagos is experiencing accelerated coastal erosion. Which measure would best stabilise the shoreline while allowing public beach access?",
+   "options": [
+    "Install permeable groynes and restore mangroves",
+    "Dump sand from inland quarries onto the beach annually",
+    "Stop all human activity on the beach permanently",
+    "Build a continuous concrete seawall along the shore"
+   ],
+   "answer": 0,
+   "explanation": "Permeable groynes reduce longshore drift and, with mangrove restoration, stabilise the shore while maintaining access and ecological benefits. A continuous concrete seawall often worsens erosion elsewhere and reduces access; dumping sand annually is unsustainable and may harm ecosystems; banning all activity is unnecessary and impractical."
+  },
+  {
+   "n": 5,
+   "topic": "Environmental hazards and conservation",
+   "q": "Which farming practice would most reduce soil erosion on steep slopes in eastern Nigeria?",
+   "options": [
+    "Shifting cultivation with shorter fallows",
+    "Burning crop residues to clear land",
+    "Monoculture of maize on contour",
+    "Terracing with vegetative cover"
+   ],
+   "answer": 3,
+   "explanation": "Terracing reduces slope length and runoff velocity, and adding vegetative cover protects the soil. Shifting cultivation and burning increase erosion; monoculture on contour without terraces still allows significant erosion on steep slopes."
+  },
+  {
+   "n": 6,
+   "topic": "Settlements",
+   "q": "Which factor most often determines the location of major Nigerian port cities such as Lagos and Port Harcourt?",
+   "options": [
+    "Availability of flat land for skyscrapers",
+    "Deep natural harbours with access to the sea and inland transport routes",
+    "Proximity to highland mineral resources",
+    "Location on international borders"
+   ],
+   "answer": 1,
+   "explanation": "Major port cities are sited where natural harbours and navigable access combine with inland transport routes for trade. Highland minerals or skyscraper land are secondary; ports are rarely located because of international borders."
+  },
+  {
+   "n": 7,
+   "topic": "Settlements",
+   "q": "A town planner in Kano wants to reduce inner-city congestion. Which measure is likely to be most effective?",
+   "options": [
+    "Ban all commercial activities within 10 km of the city centre",
+    "Convert all residential zones to high-density apartments immediately",
+    "Increase property taxes in the city centre only",
+    "Develop suburban parks-and-ride trunk bus routes linked to downtown transit hubs"
+   ],
+   "answer": 3,
+   "explanation": "Creating efficient suburban park-and-ride bus routes linked to hubs reduces private car use and congestion. Raising property taxes alone can displace people but not reduce congestion; banning commerce near centre or abrupt conversion to high-density housing are unrealistic and may worsen issues."
+  },
+  {
+   "n": 8,
+   "topic": "Population",
+   "q": "Which population policy would best address a high youth dependency ratio in a Nigerian state?",
+   "options": [
+    "Invest in secondary and vocational education and youth employment programmes",
+    "Offer tax breaks only to elderly households",
+    "Encourage earlier marriage to reduce youth population",
+    "Limit primary schooling to reduce public spending"
+   ],
+   "answer": 0,
+   "explanation": "High youth dependency is best tackled by improving education and employment to convert dependents into productive workers. Encouraging earlier marriage or reducing schooling would worsen dependency and social outcomes; tax breaks for elderly households do not address youth dependency."
+  },
+  {
+   "n": 9,
+   "topic": "Rocks and minerals",
+   "q": "A miner in Zamfara finds a dense, heavy mineral with high specific gravity, black streak, and magnetic attraction. Which mineral is most likely?",
+   "options": [
+    "Pyrite",
+    "Hematite",
+    "Galena",
+    "Magnetite"
+   ],
+   "answer": 3,
+   "explanation": "Magnetite is strongly magnetic, black streak, and high specific gravity. Galena is very dense but not strongly magnetic and has a lead-grey streak; hematite may be weakly magnetic but typically has reddish-brown streak; pyrite is not magnetic and has a greenish-black streak."
+  },
+  {
+   "n": 10,
+   "topic": "Rocks and minerals",
+   "q": "Which rock is most likely to form from the rapid cooling of lava at the Earth's surface, producing glassy texture commonly found in volcanic vents of the Cameroon line?",
+   "options": [
+    "Schist",
+    "Obsidian",
+    "Gabbro",
+    "Granite"
+   ],
+   "answer": 1,
+   "explanation": "Obsidian forms from very rapid cooling of felsic lava producing a glassy texture at the surface. Gabbro and granite are coarse-grained intrusive igneous rocks formed by slow cooling underground. Schist is a metamorphic rock, not an extrusive volcanic glass."
+  },
+  {
+   "n": 11,
+   "topic": "Agriculture",
+   "q": "Which farming practice would most increase soil organic matter and improve soil structure on a small farm in Oyo State?",
+   "options": [
+    "Burning residues after harvest to clear the field",
+    "Growing continuous monoculture without fallow or rotation",
+    "Frequent deep ploughing leaving crop residues on the surface",
+    "Regular incorporation of crop residues and compost into the soil"
+   ],
+   "answer": 3,
+   "explanation": "Incorporating crop residues and compost adds organic matter and improves structure. Deep ploughing that buries residues may damage structure over time; burning removes organic matter and nutrients; continuous monoculture depletes organic matter and reduces soil health."
+  },
+  {
+   "n": 12,
+   "topic": "Agriculture",
+   "q": "A farmer in Benue applies 120 kg/ha of nitrogen fertilizer to maize. If the maize removes 60 kg/ha of nitrogen at harvest, what is the nitrogen surplus or deficit per hectare, and what is the likely immediate consequence if surplus is large?",
+   "options": [
+    "Deficit of 60 kg/ha; immediate soil nitrogen exhaustion",
+    "Surplus of 60 kg/ha; increased risk of nitrate leaching into groundwater",
+    "Surplus of 180 kg/ha; increased soil acidity overnight",
+    "Deficit of 180 kg/ha; crop will not germinate"
+   ],
+   "answer": 1,
+   "explanation": "Surplus = applied (120) − removed (60) = 60 kg/ha. Excess nitrogen can leach as nitrate into groundwater or volatilize, causing pollution. There is not a deficit. Surplus of 180 or deficit of 180 are arithmetically incorrect and the listed consequences are exaggerated or incorrect."
+  },
+  {
+   "n": 13,
+   "topic": "Agriculture",
+   "q": "Which land tenure change would most likely encourage a rural Nigerian smallholder to invest in long-term soil conservation measures?",
+   "options": [
+    "Communal land with no individual user rights",
+    "Short-term seasonal rental with no renewal guarantee",
+    "Informal use based only on tradition without documentation",
+    "Secure long-term lease or ownership with legal recognition"
+   ],
+   "answer": 3,
+   "explanation": "Secure long-term tenure (lease or ownership) gives farmers confidence to invest in long-term measures. Short-term rentals, communal land without rights, or informal traditional use discourage investments because benefits are uncertain or shared."
+  },
+  {
+   "n": 14,
+   "topic": "Geography of Nigeria",
+   "q": "Which factor most directly explains why the Niger Delta region has high rates of sediment deposition and formation of wetlands?",
+   "options": [
+    "Intense tectonic uplift of the coastline raising river profiles",
+    "High average annual rainfall that evaporates quickly before reaching rivers",
+    "Low river gradient as the Niger and Benue rivers enter the Gulf of Guinea, causing reduced flow velocity",
+    "Steep coastal cliffs that trap sediments inland"
+   ],
+   "answer": 2,
+   "explanation": "As rivers reach the low-gradient coastal plain, velocity drops and sediments settle, forming deltas and wetlands. High rainfall does not explain deposition if water reaches the sea; steep coastal cliffs or tectonic uplift would not promote deltaic deposition in the manner described."
+  },
+  {
+   "n": 15,
+   "topic": "Geography of Nigeria",
+   "q": "Lagos State plans to expand urban rail to reduce commute times. Which urban geography principle explains why rail will most reduce congestion if lines connect suburbs directly to the central business district (CBD)?",
+   "options": [
+    "Radial commuting pattern where many commuters travel along corridors to a concentrated CBD",
+    "Isotropic city model where travel demand is uniformly random",
+    "Rank-size rule describing city population distribution rather than commuting patterns",
+    "Multi-nuclei model where all travel is evenly distributed across many centres"
+   ],
+   "answer": 0,
+   "explanation": "Lagos exhibits radial commuting toward a concentrated CBD, so radial rail reduces congestion by serving main corridors. The multi-nuclei model suggests dispersed centres, making single CBD rail less effective. Isotropic city and rank-size rule are not directly about commuting corridors."
+  },
+  {
+   "n": 16,
+   "topic": "Vegetation and soils",
+   "q": "Which soil order would you expect beneath undisturbed tropical rainforest in Cross River State, characterized by deep, highly weathered, low base status and red colour?",
+   "options": [
+    "Andisol (volcanic ash soil)",
+    "Histosol (organic peat soil)",
+    "Gelisol (permafrost soil)",
+    "Oxisol (highly weathered tropical soil)"
+   ],
+   "answer": 3,
+   "explanation": "Oxisols are typical of deeply weathered tropical rainforest soils: red, low base saturation, and deep. Histosols are organic peatlands (not typical rainforest on well-drained terrain); Gelisols occur in permafrost regions; Andisols form from volcanic ash, not general rainforest weathering."
+  },
+  {
+   "n": 17,
+   "topic": "Vegetation and soils",
+   "q": "Which factor best explains the transition from savanna to forest in southern Nigeria along a southward gradient?",
+   "options": [
+    "Increase in altitude toward the coast",
+    "Decrease in average temperature toward the coast",
+    "Higher soil salinity closer to inland areas",
+    "Increasing annual rainfall and longer wet season length toward the coast"
+   ],
+   "answer": 3,
+   "explanation": "Forest requires more moisture; increased rainfall and a longer wet season toward the coast promote forest rather than savanna. Temperature does not strongly decrease southward in Nigeria; altitude generally decreases toward the coast; soil salinity is higher near coasts, not inland, and would not favor forest over savanna."
+  },
+  {
+   "n": 18,
+   "topic": "Transport and trade",
+   "q": "Nigeria plans to move 40% of Lagos–Kano freight from road to rail to reduce road wear. If current annual freight tonnage is 5,000,000 tonnes and average truck carries 25 tonnes, how many truck trips would be removed from the roads each year?",
+   "options": [
+    "200,000 truck trips",
+    "20,000 truck trips",
+    "80,000 truck trips",
+    "160,000 truck trips"
+   ],
+   "answer": 2,
+   "explanation": "Freight to be shifted = 40% of 5,000,000 = 2,000,000 tonnes. Number of truck trips removed = 2,000,000 ÷ 25 = 80,000. 20,000 would correspond to 500,000 tonnes; 200,000 would correspond to 5,000,000 tonnes (all freight); 160,000 equals shifting 4,000,000 tonnes, not 40%."
+  },
+  {
+   "n": 19,
+   "topic": "Transport and trade",
+   "q": "Which factor would MOST likely increase the attractiveness of the Port of Warri for international shippers?",
+   "options": [
+    "Reduction in inland trade tariffs in neighbouring countries",
+    "Greater distance between port and major markets",
+    "Improved dredging that allows deeper-draft vessels",
+    "Increase in local road taxes for heavy trucks"
+   ],
+   "answer": 2,
+   "explanation": "Deeper dredging allows larger, deeper-draft ships to call, directly increasing international traffic. Reduced inland tariffs helps trade but is secondary to ship access. Higher road taxes and greater distance to markets would discourage use, not attract shippers."
+  },
+  {
+   "n": 20,
+   "topic": "Transport and trade",
+   "q": "A freight forwarder in Abuja offers container consolidation to reduce per-ton shipping cost. Which explanation best describes why consolidation lowers cost?",
+   "options": [
+    "Consolidation increases transit distance, thus reducing tariffs",
+    "Fixed overseas shipping charges are spread over more cargo, reducing cost per tonne",
+    "Consolidation guarantees faster customs clearance at destination",
+    "Less handling during consolidation raises insurance premiums, lowering net cost"
+   ],
+   "answer": 1,
+   "explanation": "Combining many consignments fills containers so fixed shipping and handling costs are divided by more tonnes, lowering per-tonne cost. Consolidation does not inherently increase distance, guarantee faster clearance, nor raise insurance in a way that lowers net cost."
+  },
+  {
+   "n": 21,
+   "topic": "Weather and climate",
+   "q": "During the Harmattan season, northern Nigeria often experiences large diurnal temperature ranges. Which cause best explains this?",
+   "options": [
+    "Continuous moist onshore winds reduce daytime heating",
+    "Persistent cloud cover traps heat at night",
+    "High surface water content releases latent heat overnight",
+    "Dry air with low humidity allows rapid nighttime cooling and strong daytime heating"
+   ],
+   "answer": 3,
+   "explanation": "Low humidity means little water vapor to retain heat, so nights cool quickly while days heat strongly. Cloud cover would reduce diurnal range by trapping heat; high surface water and moist onshore winds likewise moderate temperatures, not increase the range."
+  },
+  {
+   "n": 22,
+   "topic": "Weather and climate",
+   "q": "A meteorologist records sea-level pressure of 1000 hPa at Lagos and 990 hPa at Calabar (≈450 km east). Which wind (approximate) will blow between them due to the pressure gradient, neglecting Coriolis effects?",
+   "options": [
+    "No wind because pressure difference is too small",
+    "Wind from Calabar toward Lagos",
+    "Circular wind around both stations",
+    "Wind from Lagos toward Calabar"
+   ],
+   "answer": 3,
+   "explanation": "Air moves from high to low pressure, so from 1000 hPa (Lagos) toward 990 hPa (Calabar). The pressure difference (10 hPa over 450 km) will generate a wind toward Calabar; option suggesting no wind is incorrect because 10 hPa is substantial. Circular wind isn't the basic response to a straightforward pressure gradient."
+  },
+  {
+   "n": 23,
+   "topic": "Weather and climate",
+   "q": "If moist adiabatic lapse rate is about 6°C/1000 m and air at sea level with 26°C rises to 1500 m and remains saturated, what is its approximate temperature at that height?",
+   "options": [
+    "9°C",
+    "20°C",
+    "14°C",
+    "17°C"
+   ],
+   "answer": 3,
+   "explanation": "Temperature drop = 6°C/1000 m × 1500 m = 9°C. So temperature at 1500 m = 26 − 9 = 17°C. 20°C corresponds to a 6°C drop (1000 m), 9°C would be a 17°C drop, and 14°C implies a 12°C drop (2000 m)."
+  },
+  {
+   "n": 24,
+   "topic": "Industry and natural resources",
+   "q": "Which factor most often explains why cement factories in Nigeria are located near limestone deposits?",
+   "options": [
+    "Limestone is the primary raw material for clinker, reducing transport costs",
+    "Limestone supplies are taxed less than imported clay",
+    "Limestone prevents air pollution from kiln exhausts",
+    "Limestone improves local soil fertility for factory gardens"
+   ],
+   "answer": 0,
+   "explanation": "Limestone supplies the calcium carbonate needed for clinker; locating near deposits cuts raw material transport costs. It does not affect soil fertility, nor does it prevent pollution. Tax differences are not the main physical reason for locating a heavy-material industry."
+  },
+  {
+   "n": 25,
+   "topic": "Industry and natural resources",
+   "q": "A small-scale tin mine in Plateau State produces ore with 60% cassiterite (SnO₂). If a shipment contains 10 tonnes of ore, how many tonnes of SnO₂ are present?",
+   "options": [
+    "0.6 tonnes of SnO₂",
+    "4 tonnes of SnO₂",
+    "6 tonnes of SnO₂",
+    "16 tonnes of SnO₂"
+   ],
+   "answer": 2,
+   "explanation": "Mass of SnO₂ = 60% of 10 tonnes = 0.60 × 10 = 6 tonnes. 4 tonnes would be 40%, 0.6 tonnes is 6% and 16 tonnes exceeds the shipment mass."
+  },
+  {
+   "n": 26,
+   "topic": "The earth and the solar system",
+   "q": "Which observation best indicates that Earth’s axis is tilted relative to its orbital plane?",
+   "options": [
+    "Presence of mountains and valleys on Earth",
+    "Daily east-to-west motion of the Sun across the sky",
+    "Occurrence of tides twice each day",
+    "Variations in day length and sun altitude through the year at Lagos (6°N)"
+   ],
+   "answer": 3,
+   "explanation": "Seasonal changes in day length and solar altitude result from axial tilt. The Sun’s east-to-west daily motion is due to Earth’s rotation, tides are from lunar/solar gravity, and mountains are unrelated to axial tilt."
+  },
+  {
+   "n": 27,
+   "topic": "The earth and the solar system",
+   "q": "A total solar eclipse is visible only within a narrow path on Earth because",
+   "options": [
+    "Earth’s atmosphere refracts the Moon’s image into a narrow path",
+    "The Sun shines only on a narrow strip of Earth during eclipse",
+    "The Moon stops orbiting during eclipse, so shadow narrows",
+    "The Moon’s umbral shadow is small where it reaches Earth, covering a narrow track"
+   ],
+   "answer": 3,
+   "explanation": "A total eclipse occurs where the Moon’s umbral shadow falls; that umbra is limited in size at Earth’s surface, producing a narrow path. Atmospheric refraction, Sun shining, or the Moon stopping are incorrect physical explanations."
+  },
+  {
+   "n": 28,
+   "topic": "Latitude, longitude and time",
+   "q": "If Lagos (approx. 3°E) and Maiduguri (approx. 13°E) are on the same date, what is the local time in Maiduguri when it is 09:00 at Lagos, assuming both use solar time? (Use 15° longitude = 1 hour)",
+   "options": [
+    "08:40",
+    "09:40",
+    "10:00",
+    "09:20"
+   ],
+   "answer": 1,
+   "explanation": "Maiduguri is 10° east of Lagos. Each 15° = 60 minutes, so 1° = 4 minutes. 10° × 4 min = 40 minutes ahead. Therefore 09:00 at Lagos corresponds to 09:40 at Maiduguri. 08:40 is behind, 09:20 uses 2.5 min per degree (wrong), and 10:00 assumes 15° difference."
+  },
+  {
+   "n": 29,
+   "topic": "Latitude, longitude and time",
+   "q": "A flight from Abuja (9.1°N, 7.5°E) to Accra (5.6°N, 0.2°W) crosses longitude lines. Approximately how many minutes of solar time difference should a pilot expect between the two cities?",
+   "options": [
+    "30 minutes",
+    "90 minutes",
+    "10 minutes",
+    "60 minutes"
+   ],
+   "answer": 0,
+   "explanation": "Longitude difference ≈ 7.5°E − (−0.2°) = 7.7° ≈ 7.7°. At 4 minutes per degree, 7.7 × 4 ≈ 30.8 minutes, so about 30 minutes. 10 minutes is far too small, 60 and 90 minutes imply 15° or 22.5° differences which are incorrect."
+  },
+  {
+   "n": 30,
+   "topic": "Latitude, longitude and time",
+   "q": "Which statement about places on the same meridian (longitude) is correct?",
+   "options": [
+    "They always have identical climate because of same longitude.",
+    "They share the same local solar time (ignoring political time zones).",
+    "They receive equal amounts of daylight year-round.",
+    "They are at identical distances from the Equator."
+   ],
+   "answer": 1,
+   "explanation": "Meridians connect points with the same longitude, so local solar time is the same (if not using time zones). Longitude does not determine climate or distance from the Equator (that depends on latitude), nor does it ensure equal daylight throughout the year."
+  },
+  {
+   "n": 31,
+   "topic": "Landforms and processes",
+   "q": "Which coastal landform is most likely formed primarily by longshore drift?",
+   "options": [
+    "Cliff formed by wave undercutting",
+    "Tombolo joining an island to the mainland",
+    "Stack isolated by wave erosion",
+    "Spit extending down-drift from a headland"
+   ],
+   "answer": 3,
+   "explanation": "Longshore drift transports sediment alongshore and deposits it where the coastline changes direction, producing spits. Cliffs and stacks are mainly products of wave erosion (not deposition). A tombolo involves deposition too but specifically connects an island to the mainland often by wave refraction and sheltering, not the classic down-drift spit formation."
+  },
+  {
+   "n": 32,
+   "topic": "Landforms and processes",
+   "q": "A valley has a narrow V-shaped cross-section with numerous small waterfalls and interlocking spurs. Which process dominates its formation?",
+   "options": [
+    "Lateral erosion in a mature river",
+    "Mass wasting by soil creep",
+    "Glacial abrasion",
+    "Vertical erosion by a youthful river"
+   ],
+   "answer": 3,
+   "explanation": "V-shaped valleys with interlocking spurs and waterfalls are characteristic of vertical (downcutting) erosion by a youthful river. Glacial abrasion produces U-shaped valleys. Soil creep and lateral erosion do not create narrow V-shaped deep-cut valleys with interlocking spurs."
+  },
+  {
+   "n": 33,
+   "topic": "Landforms and processes",
+   "q": "The inselberg hills of central Nigeria (e.g., Zuma Rock) are best explained by which geomorphic process?",
+   "options": [
+    "Deposition by retreating glaciers",
+    "Recent volcanic extrusion building cones",
+    "Differential weathering and erosion leaving resistant rock as isolated hills",
+    "Marine sedimentation during high sea levels"
+   ],
+   "answer": 2,
+   "explanation": "Inselbergs are residual hills formed where surrounding rocks have been weathered and eroded more rapidly, leaving resistant rock standing. They are not volcanic cones, glacial deposits, or marine sediment features in the Nigerian inland context."
+  },
+  {
+   "n": 34,
+   "topic": "Environmental hazards and conservation",
+   "q": "Which human practice would most directly reduce the risk of flash flooding in a rapidly urbanizing Nigerian town?",
+   "options": [
+    "Relocating industry to the town centre",
+    "Paving all streets to improve vehicle access",
+    "Preserving natural drainage channels and preventing building on floodplains",
+    "Planting only ornamental trees in parks"
+   ],
+   "answer": 2,
+   "explanation": "Flash floods are worsened when natural drainage is blocked and floodplains are built upon; preserving channels and avoiding construction on floodplains maintains runoff routes. Paving increases runoff, relocating industry to centre concentrates impermeable surfaces, and ornamental trees have little effect compared with preserving drainage."
+  },
+  {
+   "n": 35,
+   "topic": "Environmental hazards and conservation",
+   "q": "Which conservation strategy best balances protection of biodiversity and the livelihoods of rural people in a Nigerian forest region?",
+   "options": [
+    "Allowing unrestricted commercial logging with royalties",
+    "Total exclusion of all human activity within the forest",
+    "Community-based forest management with regulated sustainable harvesting",
+    "Conversion of forest to large-scale monoculture plantations"
+   ],
+   "answer": 2,
+   "explanation": "Community-based management allows local people to benefit while enforcing sustainable rules, supporting biodiversity and livelihoods. Total exclusion can harm local economies and provoke illegal use; conversion to monoculture reduces biodiversity; unrestricted logging ignores sustainability and will deplete resources."
+  },
+  {
+   "n": 36,
+   "topic": "Map reading and scale",
+   "q": "A topographic map of a Nigerian region uses the scale 1:250,000. On the map the straight-line distance between the towns of Gboko and Makurdi measures 6.0 cm. What is the real-world distance in kilometres between the two towns?",
+   "options": [
+    "0.15 km",
+    "150 km",
+    "1.5 km",
+    "15 km"
+   ],
+   "answer": 3,
+   "explanation": "At scale 1:250,000, 1 cm on the map = 250,000 cm on the ground = 2.5 km. Therefore 6.0 cm × 2.5 km/cm = 15.0 km. The tempting 150 km confuses 1:250,000 with 1:2,500; 1.5 km or 0.15 km result from misplacing decimal points."
+  },
+  {
+   "n": 37,
+   "topic": "Environmental hazards and conservation",
+   "q": "A hillside community in southeastern Nigeria suffers frequent gulley erosion after heavy rains. Which single intervention would most directly reduce further gully development while helping restore local farmland?",
+   "options": [
+    "Deepen and straighten the stream channel to speed drainage",
+    "Construct contour stone check dams across gullies and replant grasses and trees on the slope",
+    "Relocate farms permanently to lower-lying floodplain areas",
+    "Build a large concrete retaining wall at the valley bottom"
+   ],
+   "answer": 1,
+   "explanation": "Stone check dams on the contour slow runoff, trap sediment and raise the gully bed while replanting vegetation stabilises soil—directly reducing gulley growth and restoring land. A concrete wall at the valley bottom does not stop headward erosion; deepening channels increases flow energy and can worsen erosion upstream; relocating farms avoids the problem but does not repair or stabilise the eroding slopes."
+  },
+  {
+   "n": 38,
+   "topic": "Population",
+   "q": "A local authority reports crude birth rate (CBR) = 40 per 1,000 population, crude death rate (CDR) = 12 per 1,000, and net migration = −2 per 1,000 in a year. What is the annual population growth rate (as a percent) for that year?",
+   "options": [
+    "1.6%",
+    "2.6%",
+    "3.6%",
+    "2.8%"
+   ],
+   "answer": 1,
+   "explanation": "Natural increase = CBR − CDR = 40 − 12 = 28 per 1,000. Accounting for net migration: 28 − 2 = 26 per 1,000 = 26/1000 = 0.026 = 2.6% per year. 2.8% would result from mis-subtracting migration from birth rate before deaths; 1.6% comes from subtracting migration twice; 3.6% adds migration instead of subtracting."
+  },
+  {
+   "n": 39,
+   "topic": "Map reading and scale",
+   "q": "A topographic map of a district in Kaduna State is drawn to a scale of 1:50,000. On the map the straight-line distance between two towns measures 6.4 cm. What is the actual distance on the ground in kilometres?",
+   "options": [
+    "6.4 km",
+    "32.0 km",
+    "0.32 km",
+    "3.2 km"
+   ],
+   "answer": 3,
+   "explanation": "Scale 1:50,000 means 1 cm on map = 50,000 cm on ground = 500 m = 0.5 km. Therefore 6.4 cm × 0.5 km/cm = 3.2 km. The tempting 32.0 km results from treating 1 cm as 5 km (x10 error); 0.32 km comes from treating 1:50,000 as 1:500,000; 6.4 km is the map distance, not ground distance."
+  },
+  {
+   "n": 40,
+   "topic": "Population",
+   "q": "A local government area reports a crude birth rate of 40 per 1,000 population and a crude death rate of 12 per 1,000 population in a year. There is negligible migration. What is the annual population growth rate (percentage) for that year?",
+   "options": [
+    "4.0%",
+    "2.8%",
+    "1.2%",
+    "3.2%"
+   ],
+   "answer": 1,
+   "explanation": "Natural increase per 1,000 = 40 − 12 = 28 per 1,000. Convert to percent: 28/1,000 = 0.028 = 2.8% per year. 3.2% would result from miscalculating the difference as 32 per 1,000; 4.0% comes from misreading rates (e.g. using 40/1,000); 1.2% is the death rate expressed as a percent, not the growth rate."
+  }
+ ]
+}

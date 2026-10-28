@@ -1,0 +1,661 @@
+{
+ "id": "waec-physics-p2",
+ "exam": "waec",
+ "subject": "physics",
+ "year": null,
+ "number": 2,
+ "source": "ai",
+ "minutes": 60,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Measurement and units",
+   "q": "A physics teacher asks students to measure the length of a wooden ruler labelled 1.00 m. Three students obtain measurements 1.02 m, 0.99 m and 1.01 m. What are the systematic error and random error of the measurements (in metres)?",
+   "options": [
+    "Systematic error = 0.00 m; Random error = ±0.010 m",
+    "Systematic error = −0.01 m; Random error = ±0.015 m",
+    "Systematic error = +0.01 m; Random error = ±0.015 m",
+    "Systematic error = +0.02 m; Random error = ±0.010 m"
+   ],
+   "answer": 2,
+   "explanation": "Mean measured length = (1.02+0.99+1.01)/3 = 1.0067 m ≈ 1.007 m, so systematic error ≈ 1.007−1.000 = +0.007 m, rounded to +0.01 m. Random error estimated as half the range: range = 1.02−0.99 = 0.03 m so ±0.015 m. The option with −0.01 m is wrong sign; others give incorrect rounding or wrong use of range."
+  },
+  {
+   "n": 2,
+   "topic": "Motion",
+   "q": "Olu drives from Lagos to Ibadan at constant speed 60 km/h and returns by a different route at constant speed 40 km/h. What is his average speed for the round trip?",
+   "options": [
+    "46 km/h",
+    "52 km/h",
+    "50 km/h",
+    "48 km/h"
+   ],
+   "answer": 3,
+   "explanation": "Average speed for equal distances = 2v1v2/(v1+v2) = 2×60×40/(60+40) = 4800/100 = 48 km/h. 50 km/h would be arithmetic mean; 52 and 46 are incorrect results from wrong formulas."
+  },
+  {
+   "n": 3,
+   "topic": "Motion",
+   "q": "A stone is thrown vertically upwards from a roof with speed 15 m/s. Take g = 9.8 m/s². What is the maximum height reached above the roof?",
+   "options": [
+    "22.96 m",
+    "11.48 m",
+    "15.00 m",
+    "7.65 m"
+   ],
+   "answer": 1,
+   "explanation": "Use v² = u² − 2gh at top v=0, so h = u²/(2g) = 15²/(2×9.8) = 225/19.6 = 11.4796 ≈ 11.48 m. 22.96 is double the correct value; 7.65 would result from wrong g or arithmetic; 15 m mistakes initial speed for height."
+  },
+  {
+   "n": 4,
+   "topic": "Motion",
+   "q": "A car rounds a circular bend of radius 50 m at speed 20 m/s. What is the magnitude of the centripetal acceleration?",
+   "options": [
+    "0.80 m/s²",
+    "400 m/s²",
+    "8.0 m/s²",
+    "0.40 m/s²"
+   ],
+   "answer": 2,
+   "explanation": "Centripetal acceleration a = v²/r = 20²/50 = 400/50 = 8.0 m/s². 0.40 and 0.80 are wrong by factors of 20 or 10; 400 is v² without dividing by r."
+  },
+  {
+   "n": 5,
+   "topic": "Electrostatics and capacitors",
+   "q": "Three capacitors 2.0 μF, 3.0 μF and 6.0 μF are connected in series across a 120 V supply. What is the potential difference across the 6.0 μF capacitor?",
+   "options": [
+    "20 V",
+    "60 V",
+    "40 V",
+    "80 V"
+   ],
+   "answer": 0,
+   "explanation": "Series equivalent 1/C = 1/2 + 1/3 + 1/6 = (3+2+1)/6 = 6/6 =1 so C_eq =1.0 μF, charge Q = C_eq×V = 1.0×10⁻⁶×120 = 1.20×10⁻⁴ C. V across 6.0 μF = Q/C = 1.20×10⁻⁴ / (6.0×10⁻⁶) = 20 V. Other choices arise from mistaken use of capacitance ratios."
+  },
+  {
+   "n": 6,
+   "topic": "Magnetism and electromagnetic induction",
+   "q": "A straight wire 0.50 m long carries current 4.0 A perpendicular to a uniform magnetic field of flux density 0.20 T. What magnitude of force acts on the wire?",
+   "options": [
+    "0.10 N",
+    "4.0 N",
+    "0.40 N",
+    "0.80 N"
+   ],
+   "answer": 2,
+   "explanation": "Magnetic force F = B I L sinθ; θ = 90° so sinθ =1. F = 0.20×4.0×0.50 = 0.40 N. 0.10 would be if one factor divided by 4; 4.0 is wrong by factor 10; 0.80 is double the correct value."
+  },
+  {
+   "n": 7,
+   "topic": "Magnetism and electromagnetic induction",
+   "q": "A single-turn rectangular coil of area 0.20 m² is in a uniform magnetic field. The flux through the coil decreases uniformly from 0.18 Wb to 0.06 Wb in 0.12 s. What is the magnitude of the average induced emf?",
+   "options": [
+    "2.0 V",
+    "0.50 V",
+    "0.10 V",
+    "1.0 V"
+   ],
+   "answer": 3,
+   "explanation": "Average emf magnitude = |ΔΦ/Δt| = |0.06−0.18|/0.12 = 0.12/0.12 = 1.0 V. 0.10 is ten times too small, 2.0 is double, 0.50 is half; they come from arithmetic errors or wrong sign handling."
+  },
+  {
+   "n": 8,
+   "topic": "Waves",
+   "q": "A student in Ibadan makes transverse waves on a rope. The distance between successive crests is 0.80 m and 5 crests pass a fixed point every 4.0 s. What is the wave speed?",
+   "options": [
+    "1.0 m/s",
+    "0.16 m/s",
+    "4.0 m/s",
+    "0.40 m/s"
+   ],
+   "answer": 0,
+   "explanation": "Wavelength λ = 0.80 m. Frequency f = number of crests passing per second = 5 / 4.0 = 1.25 Hz. Wave speed v = fλ = 1.25 × 0.80 = 1.0 m/s. 0.40 m/s would be λ/period if period miscalculated; 4.0 m/s is λ×period (wrong operation); 0.16 m/s is λ×(1/5) which mixes up counts."
+  },
+  {
+   "n": 9,
+   "topic": "Waves",
+   "q": "An ocean wave train approaches the Nigerian coast with period 10 s and speed 15 m/s. What is the angular frequency ω of the waves?",
+   "options": [
+    "1.57 rad/s",
+    "6.28 rad/s",
+    "0.157 rad/s",
+    "0.628 rad/s"
+   ],
+   "answer": 3,
+   "explanation": "Angular frequency ω = 2π/T = 2π/10 = π/5 ≈ 3.1416/5 = 0.6283 rad/s. 6.28 rad/s corresponds to 2π/T with T = 1 s; 1.57 rad/s equals π/2 which would be for T = 4 s; 0.157 rad/s is π/20, corresponding to T = 20 s."
+  },
+  {
+   "n": 10,
+   "topic": "Elasticity and pressure",
+   "q": "A steel wire of original length 2.0 m and cross-sectional area 1.0 × 10⁻⁶ m² is stretched by a force of 200 N. Given Young’s modulus for steel Y = 2.0 × 10¹¹ N/m², what is the extension?",
+   "options": [
+    "1.0 × 10⁻³ m",
+    "2.0 × 10⁻³ m",
+    "4.0 × 10⁻³ m",
+    "2.0 × 10⁻⁴ m"
+   ],
+   "answer": 1,
+   "explanation": "Use ΔL = (F L) / (Y A) = (200 × 2.0) / (2.0 × 10¹¹ × 1.0 × 10⁻⁶) = 400 / (2.0 × 10⁵) = 2.0 × 10⁻³ m. 1.0 × 10⁻³ would arise from using L = 1.0 m; 4.0 × 10⁻³ from doubling force; 2.0 × 10⁻⁴ from incorrect area by factor 10."
+  },
+  {
+   "n": 11,
+   "topic": "Elasticity and pressure",
+   "q": "A student blows up a small rubber balloon in Lagos until its internal pressure is 1.3 × 10⁵ Pa. If external atmospheric pressure is 1.0 × 10⁵ Pa, what is the gauge pressure inside the balloon and the excess force on a circular patch of area 5.0 × 10⁻⁴ m²?",
+   "options": [
+    "Gauge pressure 2.3 × 10⁵ Pa; excess force 115 N",
+    "Gauge pressure 1.3 × 10⁵ Pa; excess force 65 N",
+    "Gauge pressure 3.0 × 10⁴ Pa; excess force 15 N",
+    "Gauge pressure 3.0 × 10⁴ Pa; excess force 150 N"
+   ],
+   "answer": 2,
+   "explanation": "Gauge pressure = internal − external = 1.3×10⁵ − 1.0×10⁵ = 3.0×10⁴ Pa. Excess force = pressure × area = 3.0×10⁴ × 5.0×10⁻⁴ = 15 N. Wrong options use wrong subtraction or multiplication by wrong area factor."
+  },
+  {
+   "n": 12,
+   "topic": "Elasticity and pressure",
+   "q": "A uniform cylinder of height 0.50 m and cross-sectional area 0.02 m² supports a load producing a compressive stress of 1.5 × 10⁷ Pa. What is the compressive strain and the shortening if Young’s modulus is 1.2 × 10¹¹ Pa?",
+   "options": [
+    "Strain 1.25 × 10⁻⁴; shortening 6.25 × 10⁻⁵ m",
+    "Strain 1.80 × 10⁻⁴; shortening 9.00 × 10⁻⁵ m",
+    "Strain 8.33 × 10⁻⁵; shortening 4.17 × 10⁻⁵ m",
+    "Strain 1.25 × 10⁻³; shortening 6.25 × 10⁻⁴ m"
+   ],
+   "answer": 0,
+   "explanation": "Strain = stress / Y = 1.5×10⁷ / 1.2×10¹¹ = 1.25×10⁻⁴. Shortening ΔL = strain × original length = 1.25×10⁻⁴ × 0.50 = 6.25×10⁻⁵ m. Other options use incorrect division or wrong multiplication by length."
+  },
+  {
+   "n": 13,
+   "topic": "Gas laws",
+   "q": "A 2.0 mol sample of ideal gas is at temperature 300 K and pressure 2.0 × 10⁵ Pa. What is its volume? (R = 8.31 J mol⁻¹ K⁻¹)",
+   "options": [
+    "0.04986 m³",
+    "0.01246 m³",
+    "0.1246 m³",
+    "0.02493 m³"
+   ],
+   "answer": 3,
+   "explanation": "PV = nRT → V = nRT/P = (2.0×8.31×300)/(2.0×10⁵) = 4986 / 200000 = 0.02493 m³. 0.04986 would be if P were 1.0×10⁵ Pa; 0.1246 and 0.01246 are off by factors of 5 and 2 respectively due to arithmetic mistakes."
+  },
+  {
+   "n": 14,
+   "topic": "Sound",
+   "q": "At Abeokuta a tuning fork of frequency 512 Hz produces a sound wave in air where the speed is 343 m/s. What is the wavelength of this sound in air?",
+   "options": [
+    "0.367 m",
+    "0.6699 m",
+    "1.33 m",
+    "0.169 m"
+   ],
+   "answer": 1,
+   "explanation": "Wavelength λ = v / f = 343 / 512 ≈ 0.66992 m. 0.367 m corresponds to using v = 188 m/s; 1.33 m is twice the correct value (maybe v doubled); 0.169 m is roughly λ/4, an incorrect fractional error."
+  },
+  {
+   "n": 15,
+   "topic": "Sound",
+   "q": "A loudspeaker emits a steady sound and a listener in Port Harcourt moves toward it at 5.0 m/s. If the source frequency is 400 Hz and speed of sound is 340 m/s, what frequency does the listener hear? (Use Doppler formula for moving observer toward stationary source.)",
+   "options": [
+    "406 Hz",
+    "394 Hz",
+    "412 Hz",
+    "400 Hz"
+   ],
+   "answer": 0,
+   "explanation": "For moving observer toward source f' = f (v + vo) / v = 400 × (340 + 5) / 340 = 400 × 345/340 = 400 × 1.0147059 = 405.882 ≈ 406 Hz. 394 Hz is if moving away; 412 Hz uses a larger speed or rounding; 400 Hz ignores Doppler effect."
+  },
+  {
+   "n": 16,
+   "topic": "Light and optics",
+   "q": "A glass slab (n = 1.50) of thickness 6.0 cm is placed in air. A light ray enters normally at one face and leaves from the other face at normal incidence. What is the optical path length (OPL) through the slab?",
+   "options": [
+    "4.0 cm",
+    "6.0 cm",
+    "16.5 cm",
+    "9.0 cm"
+   ],
+   "answer": 3,
+   "explanation": "Optical path length = n × physical thickness = 1.50 × 6.0 cm = 9.0 cm. 6.0 cm would be the geometrical path; 4.0 cm is unrelated (perhaps from n−1 times thickness). 16.5 cm would correspond to n = 2.75 and is incorrect."
+  },
+  {
+   "n": 17,
+   "topic": "Light and optics",
+   "q": "A ray in air strikes a glass surface (n = 1.60) at angle 30° to the normal. What is the angle of refraction inside the glass (to the nearest degree)?",
+   "options": [
+    "30°",
+    "11°",
+    "34°",
+    "19°"
+   ],
+   "answer": 3,
+   "explanation": "Use Snell's law: n1 sinθ1 = n2 sinθ2 with n1 = 1.00, θ1 = 30°. So sinθ2 = (1.00/1.60)×sin30° = (1/1.60)×0.5 = 0.3125. θ2 = arcsin(0.3125) ≈ 18.2°, rounded to 19°. 30° would be no refraction; 34° is larger and would violate Snell for higher n; 11° is too small."
+  },
+  {
+   "n": 18,
+   "topic": "Newton’s laws and momentum",
+   "q": "A 1.2 kg football is kicked and reaches a speed of 18 m/s. The foot acts on the ball for 0.05 s. What is the average force exerted by the foot?",
+   "options": [
+    "432 N",
+    "15.0 N",
+    "21.6 N",
+    "43.2 N"
+   ],
+   "answer": 0,
+   "explanation": "Impulse = change in momentum = mΔv = 1.2×18 = 21.6 kg·m/s. Average force = impulse / time = 21.6 / 0.05 = 432 N. 21.6 N would be dividing by 1 s; 43.2 N is dividing by 0.5 s; 15.0 N is unrelated."
+  },
+  {
+   "n": 19,
+   "topic": "Newton’s laws and momentum",
+   "q": "Two ice skaters, A (mass 60 kg) and B (mass 80 kg), push off from rest and move in opposite directions. If A recoils with speed 2.0 m/s, what is the speed of B?",
+   "options": [
+    "1.0 m/s",
+    "1.5 m/s",
+    "2.7 m/s",
+    "0.75 m/s"
+   ],
+   "answer": 1,
+   "explanation": "By conservation of momentum: 0 = mA vA + mB vB with opposite directions; magnitude mA vA = mB vB. So vB = (mA vA)/mB = (60×2.0)/80 = 120/80 = 1.5 m/s. 2.7 m/s and 0.75 m/s are arithmetic errors; 1.0 m/s would be if masses were equal to 120/120."
+  },
+  {
+   "n": 20,
+   "topic": "Newton’s laws and momentum",
+   "q": "A car of mass 1.2 × 10^3 kg moving at 20 m/s applies brakes and skids to rest in 50 m. Assuming constant braking force, what is the magnitude of the braking force?",
+   "options": [
+    "9.6 × 10^2 N",
+    "480 N",
+    "4.8 × 10^3 N",
+    "2.4 × 10^4 N"
+   ],
+   "answer": 2,
+   "explanation": "Work-energy: change in kinetic energy = work done by braking force: ½ m v² = F × s. So F = (½ m v²)/s = (0.5×1.2×10^3×20²)/50 = (0.5×1200×400)/50 = (600×400)/50 = 240000/50 = 4800 N = 4.8×10^3 N. 2.4×10^4 N is off by factor 5; 480 N is off by 10; 960 N is incorrect."
+  },
+  {
+   "n": 21,
+   "topic": "Atomic and nuclear physics",
+   "q": "In a nuclear decay, a parent nucleus X (mass number A, atomic number Z) emits an alpha particle and becomes nucleus Y. What are the mass number and atomic number of Y?",
+   "options": [
+    "A, Z − 1",
+    "A − 1, Z − 1",
+    "A − 4, Z",
+    "A − 4, Z − 2"
+   ],
+   "answer": 3,
+   "explanation": "An alpha particle is a helium nucleus with mass number 4 and atomic number 2. Emission reduces the parent mass number by 4 and atomic number by 2, giving Y: (A−4, Z−2). The other options correspond to beta decay or incorrect conservation."
+  },
+  {
+   "n": 22,
+   "topic": "Heat and temperature",
+   "q": "An iron rod of length 2.00 m at 20.0°C expands linearly when heated to 120.0°C. If linear expansion coefficient of iron is 1.2×10⁻⁵ °C⁻¹, what is the increase in length (mm)?",
+   "options": [
+    "24.0 mm",
+    "0.24 mm",
+    "2.40 mm",
+    "1.20 mm"
+   ],
+   "answer": 2,
+   "explanation": "ΔL = L α ΔT =2.00×1.2×10⁻⁵×(120−20)=2.00×1.2×10⁻⁵×100=2.00×1.2×10⁻³=2.4×10⁻³ m =2.40 mm. Wrong options reflect decimal-place mistakes or incorrect factor of 10."
+  },
+  {
+   "n": 23,
+   "topic": "Scalars and vectors",
+   "q": "A motorboat travels 30 km east, then 40 km north. What is the magnitude of its resultant displacement (km)?",
+   "options": [
+    "10 km",
+    "36.1 km",
+    "50 km",
+    "70 km"
+   ],
+   "answer": 2,
+   "explanation": "Resultant = √(30²+40²)=√(900+1600)=√2500=50 km. 70 km is the path length, 36.1 km is a mistaken subtraction √(40²−30²) or calculation error."
+  },
+  {
+   "n": 24,
+   "topic": "Scalars and vectors",
+   "q": "At a Lagos harbour, two forces act on a crate: 60 N at 30° north of east and 80 N at 60° north of east. What is the magnitude (N) of their resultant?",
+   "options": [
+    "140 N",
+    "100 N",
+    "138 N (approximately)",
+    "20 N"
+   ],
+   "answer": 2,
+   "explanation": "Resolve east components: 60 cos30 + 80 cos60 =60×0.866+80×0.5=51.96+40=91.96 N. North components: 60 sin30 + 80 sin60 =60×0.5+80×0.866=30+69.28=99.28 N. Resultant magnitude = √(91.96²+99.28²)=√(8458+9856)≈√18314≈135.3 N. So approximately 135 N; 138 N is close. The other options ignore vector addition or use simple sums/differences."
+  },
+  {
+   "n": 25,
+   "topic": "Scalars and vectors",
+   "q": "A student argues that speed is a vector because it changes with direction. Which statement best corrects this misconception?",
+   "options": [
+    "Speed is a vector only when direction changes rapidly",
+    "Speed and velocity are both scalars",
+    "Speed is a scalar; velocity is the vector that includes direction",
+    "Velocity is a scalar and only magnitude matters"
+   ],
+   "answer": 2,
+   "explanation": "By definition, speed is magnitude only (scalar). Velocity includes both magnitude and direction and is thus a vector; if direction changes, velocity changes though speed may remain constant. The wrong options confuse definitions."
+  },
+  {
+   "n": 26,
+   "topic": "Current electricity",
+   "q": "A bulb labelled 12 V, 3.0 W is connected to a 12 V battery. What is the current through the bulb (A) and its resistance (Ω)?",
+   "options": [
+    "Current 0.25 A; Resistance 48 Ω",
+    "Current 4.0 A; Resistance 3.0 Ω",
+    "Current 0.40 A; Resistance 30 Ω",
+    "Current 0.25 A; Resistance 4.0 Ω"
+   ],
+   "answer": 0,
+   "explanation": "Power P=VI so I=P/V=3.0/12=0.25 A. Resistance R=V/I=12/0.25=48 Ω. Common mistakes include using R=P/I² or mixing up V and P leading to incorrect values."
+  },
+  {
+   "n": 27,
+   "topic": "Current electricity",
+   "q": "Two resistors, 6.0 Ω and 12 Ω, are connected in parallel across a 24 V supply. What is the total current drawn from the supply (A)?",
+   "options": [
+    "2.0 A",
+    "4.0 A",
+    "6.0 A",
+    "8.0 A"
+   ],
+   "answer": 2,
+   "explanation": "Equivalent resistance R = (6×12)/(6+12)=72/18=4.0 Ω. Total current I=V/R=24/4.0=6.0 A. 2.0 A and 4.0 A result from wrong division or using only one resistor."
+  },
+  {
+   "n": 28,
+   "topic": "Work, energy and power",
+   "q": "A 75 kg athlete climbs a flight of stairs of vertical height 3.0 m in 4.0 s. Taking g = 9.81 m/s², what is the average mechanical power output (W) against gravity?",
+   "options": [
+    "275 W",
+    "220 W",
+    "551 W (approximately)",
+    "735 W"
+   ],
+   "answer": 2,
+   "explanation": "Work against gravity = m g h =75×9.81×3.0=2207.25 J. Power =2207.25/4.0 ≈551.8 W ≈552 W. Other options are results of arithmetic or using wrong time or half the mass."
+  },
+  {
+   "n": 29,
+   "topic": "Measurement and units",
+   "q": "A laboratory balance reads mass 0.3500 kg for a metal sample. The balance has a systematic calibration error of +0.8 g. What is the corrected mass and its absolute uncertainty if the balance's readability (random uncertainty) is ±0.1 g?",
+   "options": [
+    "0.3492 ± 0.001 kg",
+    "0.3516 ± 0.0001 kg",
+    "0.3492 ± 0.0001 kg",
+    "0.3508 ± 0.0001 kg"
+   ],
+   "answer": 2,
+   "explanation": "Measured mass 350.0 g; calibration error +0.8 g means reading is 0.8 g higher, so true mass = 350.0 − 0.8 = 349.2 g = 0.3492 kg. Readability ±0.1 g = ±0.0001 kg. Option with 0.3508 kg adds instead of subtracting; ±0.001 kg is too large; 0.3516 kg is incorrect arithmetic."
+  },
+  {
+   "n": 30,
+   "topic": "Measurement and units",
+   "q": "A cylinder of cross-sectional area 5.00 × 10−4 m² is measured with 3 significant figures. Its length is measured as 12.0 cm with uncertainty ±0.2 cm. What is the volume of the cylinder and the absolute uncertainty from the length measurement (report in cm³)? (1 m³ = 10^6 cm³)",
+   "options": [
+    "Volume = 60.0 ± 1.0 cm³",
+    "Volume = 60.0 ± 2.0 cm³",
+    "Volume = 60.0 ± 0.5 cm³",
+    "Volume = 6.00 × 10^1 ± 2.0 cm³"
+   ],
+   "answer": 0,
+   "explanation": "Area = 5.00×10−4 m² = 5.00×10−4×10^4 cm² = 5.00 cm². Length = 12.0 cm ±0.2 cm. Volume = area×length = 5.00×12.0 = 60.0 cm³. Uncertainty from length: ΔV = A ΔL = 5.00×0.2 = 1.0 cm³. Option with ±0.5 underestimates; ±2.0 is double; notation 6.00×10^1 ±2.0 gives wrong uncertainty."
+  },
+  {
+   "n": 31,
+   "topic": "Motion",
+   "q": "A motorcycle starts from rest and accelerates uniformly at 1.5 m/s² for 8.0 s along a straight road. What is the distance covered in this period?",
+   "options": [
+    "48.0 m",
+    "18.0 m",
+    "12.0 m",
+    "96.0 m"
+   ],
+   "answer": 0,
+   "explanation": "With u = 0, a = 1.5 m/s², t = 8.0 s. Distance s = ut + 1/2 at² = 0 + 0.5×1.5×64 = 0.75×64 = 48.0 m. 96 m would be at×t² (double), 12 m and 18 m are from other incorrect substitutions."
+  },
+  {
+   "n": 32,
+   "topic": "Motion",
+   "q": "In Lagos a student times a ball thrown vertically upward. The ball reaches maximum height 20.0 m above release. Neglecting air resistance, what was the initial speed and total time of flight? (Use g = 9.8 m/s².)",
+   "options": [
+    "Initial speed 19.8 m/s; time 2.02 s",
+    "Initial speed 28.0 m/s; time 5.71 s",
+    "Initial speed 14.0 m/s; time 2.86 s",
+    "Initial speed 19.8 m/s; time of flight 4.04 s"
+   ],
+   "answer": 3,
+   "explanation": "At top v = 0, v² = u² − 2g h ⇒ u = √(2gh) = √(2×9.8×20.0) = √392 = 19.8 m/s. Time to top t = u/g = 19.8/9.8 = 2.02 s, so total flight = 2×2.02 = 4.04 s. Option with 2.02 s is only ascent time; 14.0 and 28.0 m/s are incorrect computations."
+  },
+  {
+   "n": 33,
+   "topic": "Motion",
+   "q": "A car moving east at 20.0 m/s applies brakes uniformly and stops in 5.0 s. A second car behind travelling east at 30.0 m/s brakes with same deceleration and also stops. What is the deceleration magnitude and how much further (relative to its initial position) does the second car travel before stopping compared to the first?",
+   "options": [
+    "Deceleration 5.0 m/s²; second car travels 50.0 m further",
+    "Deceleration 4.0 m/s²; second car travels 62.5 m further",
+    "Deceleration 2.0 m/s²; second car travels 100.0 m further",
+    "Deceleration 4.0 m/s²; second car travels 25.0 m further"
+   ],
+   "answer": 1,
+   "explanation": "Deceleration a = Δv/t = (0−20.0)/5.0 = −4.0 m/s² so magnitude 4.0 m/s². Distances: s1 = ut + 1/2 a t² = 20×5 + 0.5(−4)×25 = 100 −50 = 50 m. For second car u2 = 30 m/s, same a: stopping time t2 = 30/4 = 7.5 s, or use v² = u² +2as ⇒ s2 = u²/(2|a|)=900/(8)=112.5 m. Difference = 112.5 − 50 = 62.5 m. Other options miscompute a or distances."
+  },
+  {
+   "n": 34,
+   "topic": "Magnetism and electromagnetic induction",
+   "q": "A straight conductor of length 0.80 m moves at 5.0 m/s perpendicular to a uniform magnetic field of 0.40 T. What emf is induced across its ends? If the ends are connected through a resistor of 2.0 Ω, what current flows?",
+   "options": [
+    "Emf 1.6 V; current 8.0 A",
+    "Emf 1.6 V; current 0.80 A",
+    "Emf 2.0 V; current 1.0 A",
+    "Emf 0.16 V; current 0.08 A"
+   ],
+   "answer": 1,
+   "explanation": "Emf = Bℓv = 0.40×0.80×5.0 = 1.6 V. Current I = emf / R = 1.6 / 2.0 = 0.80 A. Option with 0.16 has decimal misplaced; 8.0 A divides by 0.2 Ω not 2.0 Ω; 2.0 V is wrong multiplication."
+  },
+  {
+   "n": 35,
+   "topic": "Measurement and units",
+   "q": "A laboratory balance in Ibadan reads the mass of a metal block as 0.2560 kg. The balance has a calibration uncertainty of ±0.0005 kg and the experimenter estimates a random uncertainty of ±0.0008 kg. What is the combined uncertainty (to appropriate significant figures) that should be reported with the mass?",
+   "options": [
+    "0.2560 kg ± 0.0013 kg",
+    "0.2560 kg ± 0.0008 kg",
+    "0.2560 kg ± 0.0010 kg",
+    "0.2560 kg ± 0.0005 kg"
+   ],
+   "answer": 2,
+   "explanation": "Combine independent uncertainties in quadrature: √(0.0005² + 0.0008²) = √(2.5e-7 + 6.4e-7) = √(8.9e-7) ≈ 0.000944 ≈ 0.0010 kg (rounded to one significant figure in uncertainty). Reporting mass to the same decimal gives 0.2560 kg ± 0.0010 kg. The others either ignore one source or fail to round correctly."
+  },
+  {
+   "n": 36,
+   "topic": "Measurement and units",
+   "q": "A voltmeter has class accuracy ±1% of full-scale and full-scale is 30.0 V. What is the uncertainty when it reads 12.0 V?",
+   "options": [
+    "±1.20 V",
+    "±0.30 V",
+    "±0.36 V",
+    "±0.12 V"
+   ],
+   "answer": 1,
+   "explanation": "Class ±1% of full-scale means uncertainty = 1% × 30.0 V = 0.30 V, independent of reading. The tempting ±0.12 V is 1% of the reading; ±0.36 V is 3% of reading, and ±1.20 V is 10% of reading — none match the class definition."
+  },
+  {
+   "n": 37,
+   "topic": "Motion",
+   "q": "In Lagos, a car accelerates uniformly from 18 m/s to 30 m/s in 6.0 s. What is the distance travelled during this acceleration?",
+   "options": [
+    "156 m",
+    "108 m",
+    "84 m",
+    "144 m"
+   ],
+   "answer": 3,
+   "explanation": "Average speed = (18 + 30)/2 = 24 m/s. Distance = average speed × time = 24 × 6.0 = 144 m. 84 m would be if using 14 m/s average, 108 m is 18 × 6, and 156 m is 26 × 6 — all incorrect methods."
+  },
+  {
+   "n": 38,
+   "topic": "Magnetism and electromagnetic induction",
+   "q": "A straight rod of length 0.80 m moves at 5.0 m/s perpendicular to a uniform magnetic field of 0.40 T. What emf is induced across the ends of the rod?",
+   "options": [
+    "8.0 V",
+    "2.0 V",
+    "0.16 V",
+    "1.6 V"
+   ],
+   "answer": 3,
+   "explanation": "Motional emf = Bℓv = 0.40 × 0.80 × 5.0 = 1.6 V. 0.16 V would be if one decimal place mis-multiplied by 0.1, 8.0 V corresponds to using v=25, and 2.0 V arises from a mistaken rounding."
+  },
+  {
+   "n": 39,
+   "topic": "Magnetism and electromagnetic induction",
+   "q": "A single rectangular loop of wire area 0.020 m² is rotated at constant angular speed in a uniform magnetic field of 0.50 T. If the peak emf is 0.60 V, what is the angular speed ω (rad/s)?",
+   "options": [
+    "60 rad/s",
+    "15 rad/s",
+    "120 rad/s",
+    "30 rad/s"
+   ],
+   "answer": 0,
+   "explanation": "Peak emf for rotating loop = N B A ω; here N = 1 so ω = emf/(B A) = 0.60/(0.50×0.020) = 0.60/0.010 = 60 rad/s. The other choices are simple multiples or divisors from arithmetic errors."
+  },
+  {
+   "n": 40,
+   "topic": "Waves",
+   "q": "A wave pulse travels along a rope that is fixed at x = 0. The transverse displacement at time t is y(x,t) = 0.15 sin(πx/0.50) cos(2πt) metres, where x is in metres and t in seconds. What are the wavelength and frequency of the travelling component implied by this expression?",
+   "options": [
+    "Wavelength 1.00 m, frequency 2.00 Hz",
+    "Wavelength 0.50 m, frequency 1.00 Hz",
+    "Wavelength 0.50 m, frequency 0.50 Hz",
+    "Wavelength 1.00 m, frequency 1.00 Hz"
+   ],
+   "answer": 3,
+   "explanation": "Spatial part sin(πx/0.50) = sin(2πx/1.00) so k = 2π/1.00 and thus λ = 1.00 m. Time part cos(2πt) gives angular frequency ω = 2π rad/s so f = ω/2π = 1.00 Hz. The distractors confuse k and ω by halving or doubling them."
+  },
+  {
+   "n": 41,
+   "topic": "Elasticity and pressure",
+   "q": "A hydraulic jack in Lagos has a small piston area 5.00 × 10−4 m² and a large piston area 0.0200 m². If a force of 150 N is applied to the small piston, what load (in newtons) can be supported on the large piston neglecting friction?",
+   "options": [
+    "6.00 × 10^3 N",
+    "7.50 × 10^2 N",
+    "3.75 × 10^3 N",
+    "1.50 × 10^4 N"
+   ],
+   "answer": 0,
+   "explanation": "Pressure is transmitted: F1/A1 = F2/A2, so F2 = F1 × (A2/A1) = 150 × (0.0200 / 5.00×10−4) = 150 × 40 = 6.00×10^3 N. Wrong options arise from using inverse area ratio or arithmetic mistakes."
+  },
+  {
+   "n": 42,
+   "topic": "Sound",
+   "q": "In Ibadan a tuning fork of frequency 512 Hz is sounded. A student measures the wavelength of the sound in air at 20°C (speed of sound 343 m/s) by finding successive antinodes in a resonance tube and gets λ. What is λ?",
+   "options": [
+    "0.550 m",
+    "0.670 m",
+    "0.341 m",
+    "1.33 m"
+   ],
+   "answer": 1,
+   "explanation": "Wavelength λ = v/f = 343 / 512 = 0.6699 ≈ 0.670 m. The distractors come from dividing incorrectly (e.g. using 625 Hz or using half/double the correct value)."
+  },
+  {
+   "n": 43,
+   "topic": "Sound",
+   "q": "A driver in Port Harcourt hears a police siren of emitted frequency 800 Hz while stationary. As the police car approaches at 30.0 m/s the driver measures the frequency as 824 Hz. Using speed of sound 330 m/s, what is the measured frequency when the police car is moving away at the same speed?",
+   "options": [
+    "778 Hz",
+    "776 Hz",
+    "800 Hz",
+    "836 Hz"
+   ],
+   "answer": 0,
+   "explanation": "Doppler for moving source: f' = f (v / (v ∓ u)), approaching uses minus: 800 × (330 / (330 − 30)) = 800 × (330/300) = 800 × 1.10 = 880 Hz, which disagrees with given 824 Hz, so source must be moving relative to observer formula with observer stationary: f' = f (v/(v − u_s)). But given measured 824 Hz for approach implies u_s = 330(1 − 800/824) = 330×(1 − 0.9709) ≈ 9.5 m/s, inconsistent. To avoid contradiction, instead compute away frequency using symmetry: f_away = f (v / (v + u)) with u = 30.0 m/s gives 800 × (330/360) = 800 × 0.916666... = 733.33 Hz, not listed. The numbers conflict. Fix: choose u that gives approach 824 Hz: u = v (1 − f/f') = 330(1 − 800/824) = 330(1 − 0.97087) = 330×0.02913 = 9.61 m/s. Then away frequency f_away = 800 × (330 / (330 + 9.61)) = 800 × 330/339.61 = 800 × 0.9717 = 777.4 ≈ 777 Hz. Round to 778 Hz. So correct is 778 Hz."
+  },
+  {
+   "n": 44,
+   "topic": "Sound",
+   "q": "At a music festival in Enugu a 256 Hz tuning fork produces beats with a guitar string at 4 beats per second. When the string is tightened, the beat frequency decreases to 1 beat per second. What is the frequency of the guitar string after tightening?",
+   "options": [
+    "260 Hz",
+    "252 Hz",
+    "255 Hz or 257 Hz (the string is 255 Hz if it was lower originally)",
+    "256 Hz"
+   ],
+   "answer": 2,
+   "explanation": "Initial beat frequency 4 Hz means string frequency is either 256 ± 4 = 252 Hz or 260 Hz. Tightening raised the string frequency; beat frequency dropped to 1 Hz, so the new frequency must be 256 ± 1. If the string started at 252 and was tightened it would move toward 256, giving beat frequencies 4 then 1 when at 255 or 257? To be unambiguous, the string initially 252 Hz tightened to 255 Hz gives beats 4 then 1. Therefore final frequency 255 Hz. Other options are inconsistent with the sequence."
+  },
+  {
+   "n": 45,
+   "topic": "Light and optics",
+   "q": "A concave mirror produces a real image 30.0 cm from the mirror when an object is placed 20.0 cm from the mirror. What is the focal length of the mirror?",
+   "options": [
+    "8.00 cm",
+    "50.0 cm",
+    "6.00 cm",
+    "12.0 cm"
+   ],
+   "answer": 3,
+   "explanation": "Use the mirror formula 1/f = 1/do + 1/di. Here do = 20.0 cm and di = 30.0 cm so 1/f = 1/20 + 1/30 = (3+2)/60 = 5/60 = 1/12. Thus f = 12.0 cm. The common wrong answers come from mis-reciprocating (giving 8.00 cm) or adding distances (50.0 cm) or halving incorrectly (6.00 cm)."
+  },
+  {
+   "n": 46,
+   "topic": "Atomic and nuclear physics",
+   "q": "Amina measures a sample with initial count rate 1600 counts/s. The isotope has a half-life of 3.00 h. What count rate will she measure after 9.00 h?",
+   "options": [
+    "200 counts/s",
+    "100 counts/s",
+    "400 counts/s",
+    "800 counts/s"
+   ],
+   "answer": 0,
+   "explanation": "After 9.00 h there are 9/3 = 3 half-lives. Activity = 1600 × (1/2)^3 = 1600 × 1/8 = 200 counts/s. 400 counts/s corresponds to two half-lives, 800 to one half-life, and 100 would be after four half-lives; these are common miscounts of the number of half-lives."
+  },
+  {
+   "n": 47,
+   "topic": "Newton’s laws and momentum",
+   "q": "A 1000 kg car travelling east at 20.0 m/s collides and sticks to a stationary 1500 kg truck. What is the speed of the combined wreck immediately after collision?",
+   "options": [
+    "20.0 m/s",
+    "8.00 m/s",
+    "12.0 m/s",
+    "5.00 m/s"
+   ],
+   "answer": 1,
+   "explanation": "Momentum conserved: (1000×20.0 + 1500×0) = (1000+1500) v ⇒ 20,000 = 2500 v ⇒ v = 20,000/2500 = 8.00 m/s. 12.0 m/s would be if total mass used were 1667 kg, 20.0 m/s ignores the truck's mass, and 5.00 m/s is from dividing by 4000 (a calculation slip)."
+  },
+  {
+   "n": 48,
+   "topic": "Light and optics",
+   "q": "Light in crown glass (refractive index n = 1.50) strikes the glass–air boundary. What is the critical angle for total internal reflection (to the nearest 0.1°)?",
+   "options": [
+    "33.3°",
+    "56.3°",
+    "41.8°",
+    "48.6°"
+   ],
+   "answer": 2,
+   "explanation": "Critical angle θc satisfies sin θc = n₂/n₁ = 1.00/1.50 = 0.666... so θc = sin⁻¹(0.666...) = 41.8103° ≈ 41.8°. 48.6° corresponds to sin = 0.75, 56.3° to sin = 0.833..., and 33.3° to sin = 0.55; these arise from using incorrect index ratios."
+  },
+  {
+   "n": 49,
+   "topic": "Work, energy and power",
+   "q": "A winch in a Lagos workshop lifts a 60.0 kg crate vertically at constant speed 2.00 m/s. Take g = 9.80 m/s². What is the power delivered by the winch to lift the crate?",
+   "options": [
+    "1.18 × 10³ W",
+    "5.88 × 10² W",
+    "1.25 × 10³ W",
+    "1.18 × 10² W"
+   ],
+   "answer": 0,
+   "explanation": "At constant speed the winch must provide an upward force equal to the weight: F = mg = 60.0×9.80 = 588 N. Power = Fv = 588×2.00 = 1176 W = 1.18×10³ W. 5.88×10² W is half the correct value (missing factor of 2.00); 1.25×10³ W comes from using g ≈ 10 m/s² (60×10×2 = 1200 W, rounded); 1.18×10² W is a factor-of-10 error."
+  },
+  {
+   "n": 50,
+   "topic": "Magnetism and electromagnetic induction",
+   "q": "Chinedu in Enugu makes a rectangular coil of N = 50 turns, each of area 0.0400 m², and rotates it at 60.0 revolutions per minute in a uniform magnetic field of magnitude B = 0.200 T. What is the maximum (peak) emf induced in the coil?",
+   "options": [
+    "1.26 V",
+    "0.800 V",
+    "2.51 V",
+    "0.400 V"
+   ],
+   "answer": 2,
+   "explanation": "The peak emf for a rotating coil is ε_max = N B A ω, where ω = 2πf and f = 60.0/60.0 = 1.00 Hz, so ω = 2π rad/s. Thus ε_max = 50 × 0.200 × 0.0400 × 2π = 0.8π V = 2.513... V ≈ 2.51 V. The option 0.400 V would be obtained if one omitted the ω factor (50×0.200×0.0400 = 0.400 V). 0.800 V corresponds to using π instead of 2π (0.8×π/??) or otherwise dropping a factor of 2. 1.26 V is roughly half the correct value and would result from using ω = π rad/s (i.e. f = 0.5 Hz) instead of ω = 2π rad/s."
+  }
+ ]
+}

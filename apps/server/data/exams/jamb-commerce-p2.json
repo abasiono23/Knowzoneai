@@ -1,0 +1,531 @@
+{
+ "id": "jamb-commerce-p2",
+ "exam": "jamb",
+ "subject": "commerce",
+ "year": null,
+ "number": 2,
+ "source": "ai",
+ "minutes": 27,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Transport and communication",
+   "q": "A Lagos-based firm needs to send a parcel urgently to Kano. Which transport mode is most appropriate if the parcel is small, high-value, and time-sensitive?",
+   "options": [
+    "Interstate road haulage by articulated lorry",
+    "Air courier service",
+    "Rail freight",
+    "Coastal shipping"
+   ],
+   "answer": 1,
+   "explanation": "Air courier service is best for small, high-value, time-sensitive parcels because it offers the fastest door-to-door delivery and higher security. Coastal shipping and rail freight are slower and better for bulk goods; interstate road haulage by articulated lorry is faster than sea/rail for land but slower and less secure than air courier for urgent small high-value items."
+  },
+  {
+   "n": 2,
+   "topic": "Transport and communication",
+   "q": "Which of the following is a primary advantage of using inland container depots (ICDs) for exporters in Kaduna?",
+   "options": [
+    "Reduces congestion at seaports and shortens customs clearance time inland",
+    "Eliminates the need for any customs documentation",
+    "Guarantees lower freight charges than direct port delivery",
+    "Allows export goods to bypass port inspections entirely"
+   ],
+   "answer": 0,
+   "explanation": "ICDs reduce congestion at seaports by allowing customs clearance inland, often shortening overall processing time. They do not eliminate customs documentation, cannot guarantee lower freight charges in every case, and do not allow goods to bypass port inspections."
+  },
+  {
+   "n": 3,
+   "topic": "Transport and communication",
+   "q": "A company planning a daily mail distribution across several Nigerian states wants reliability and scheduled deliveries at low marginal cost per item. Which communication/transport combination best meets this need?",
+   "options": [
+    "Private motorcycle couriers for all routes",
+    "International air freight",
+    "National postal service combined with scheduled road delivery networks",
+    "Unscheduled ad-hoc road taxis"
+   ],
+   "answer": 2,
+   "explanation": "National postal service with scheduled road networks provides reliable, routine deliveries at low marginal cost per item. Motorcycle couriers are better for last-mile but not cost-effective for broad daily distribution; ad-hoc taxis lack reliability and scheduling; international air freight is inappropriate and costly for domestic daily mail."
+  },
+  {
+   "n": 4,
+   "topic": "E-commerce",
+   "q": "Which factor most directly affects consumer trust in a new Nigerian online marketplace?",
+   "options": [
+    "Large number of banner advertisements on the site",
+    "Complex registration form requiring many steps",
+    "High-resolution product images only",
+    "Visible customer reviews and reliable seller ratings"
+   ],
+   "answer": 3,
+   "explanation": "Visible customer reviews and seller ratings directly build trust by showing prior buyers' experiences. Banner ads and high-resolution images are superficial; a complex registration form may deter users rather than build trust."
+  },
+  {
+   "n": 5,
+   "topic": "E-commerce",
+   "q": "Which business model describes an online platform that connects multiple independent artisans in Enugu with buyers and charges a percentage of each sale?",
+   "options": [
+    "Manufacturing model where the platform produces all goods",
+    "Marketplace (platform) model",
+    "Subscription-only model where customers pay monthly for products",
+    "Wholesale cash-and-carry model selling in bulk only"
+   ],
+   "answer": 1,
+   "explanation": "A marketplace model connects independent sellers with buyers and typically charges commission per sale. Subscription, manufacturing, and wholesale cash-and-carry models do not describe a platform connecting third-party artisans and taking percentage fees."
+  },
+  {
+   "n": 6,
+   "topic": "Foreign trade",
+   "q": "Nigeria exports crude oil to a buyer in Rotterdam under a CIF contract. Which cost is the Nigerian exporter responsible for under CIF terms?",
+   "options": [
+    "Cost, insurance and freight to the named port of destination",
+    "Unloading charges at the destination port",
+    "Import duties levied by the buyer's country",
+    "Inland transportation beyond the destination port"
+   ],
+   "answer": 0,
+   "explanation": "Under CIF the seller pays cost, insurance and freight to the named destination port, but the buyer pays unloading charges, import duties, and inland transport beyond arrival. Therefore responsibility for unloading, import duties and inland transport rests with the buyer."
+  },
+  {
+   "n": 7,
+   "topic": "Foreign trade",
+   "q": "An exporter quotes a price in US$ using the 30-day sight draft. Which risk is the exporter primarily exposed to during the 30 days before payment?",
+   "options": [
+    "Buyer's insolvency or default before payment is made",
+    "Loss of ownership due to export licensing rules in Nigeria",
+    "Immediate currency exchange losses at the time of shipment",
+    "Risk of demurrage at the buyer's inland warehouse"
+   ],
+   "answer": 0,
+   "explanation": "With a 30-day sight draft payment is deferred, exposing the exporter to the buyer's insolvency or default risk before payment. Immediate exchange losses occur at receipt, not during the 30 days; export licensing or demurrage at buyer's warehouse are unrelated primary risks in this payment term."
+  },
+  {
+   "n": 8,
+   "topic": "Money and banking",
+   "q": "If the Central Bank of Nigeria raises the monetary policy rate, what is the most likely immediate effect on commercial bank lending rates?",
+   "options": [
+    "Banks stop lending entirely",
+    "Lending rates remain unchanged regardless of policy rate",
+    "Commercial bank lending rates fall sharply",
+    "Commercial bank lending rates generally increase"
+   ],
+   "answer": 3,
+   "explanation": "An increase in the central bank policy rate makes borrowing costlier for banks, which typically pass higher costs to customers by raising lending rates. It is unlikely to cause lending rates to fall or remain unchanged; banks do not stop lending entirely due to a policy rate hike."
+  },
+  {
+   "n": 9,
+   "topic": "Money and banking",
+   "q": "A customer deposits ₦50,000 into a savings account that pays 6% per annum interest compounded annually. What is the account balance after 2 years?",
+   "options": [
+    "₦56,000",
+    "₦53,000",
+    "₦56,180",
+    "₦62,500"
+   ],
+   "answer": 2,
+   "explanation": "Compound interest: Balance = 50,000 × (1 + 0.06)² = 50,000 × 1.1236 = ₦56,180. ₦56,000 would be simple interest rounded (50,000 × 1.06 = 53,000 after one year then incorrect second-year calc), ₦53,000 is one year simple interest, and ₦62,500 is 25% increase (not relevant)."
+  },
+  {
+   "n": 10,
+   "topic": "Consumer protection",
+   "q": "Which of the following actions by a Lagos electronics retailer would most likely violate consumer rights under Nigerian consumer protection principles?",
+   "options": [
+    "Refusing to refund a buyer for a faulty television within the advertised warranty period",
+    "Providing a printed receipt showing model and serial number at the time of sale",
+    "Displaying the total price inclusive of VAT on the price tag",
+    "Advertising a discount and honouring it at the till"
+   ],
+   "answer": 0,
+   "explanation": "Refusing to refund a buyer for a faulty product within the stated warranty period denies the consumer remedy guaranteed by warranty terms; the other options describe proper business practices that protect consumers rather than violate rights."
+  },
+  {
+   "n": 11,
+   "topic": "Consumer protection",
+   "q": "A customer buys a bag of rice labelled 25 kg but it actually weighs 23.5 kg. Which consumer remedy is most appropriate under standard consumer protection rules?",
+   "options": [
+    "Require the manufacturer to double the weight on next production",
+    "Accept the product because packaging claims are not legally binding",
+    "Demand criminal prosecution of the store manager immediately",
+    "Claim a short-weight refund or replacement based on the underweight amount"
+   ],
+   "answer": 3,
+   "explanation": "When a product is underweight the typical remedy is a refund or replacement proportional to the shortage. Criminal prosecution is not the immediate standard remedy, changing future production is irrelevant to the current purchase, and packaging claims are legally enforceable."
+  },
+  {
+   "n": 12,
+   "topic": "Consumer protection",
+   "q": "Which government agency would a Nigerian consumer normally contact first to report misleading advertising for a mobile loan app?",
+   "options": [
+    "Federal Competition and Consumer Protection Commission (FCCPC)",
+    "Nigerian Communications Commission (NCC)",
+    "National Insurance Commission (NAICOM)",
+    "Securities and Exchange Commission (SEC)"
+   ],
+   "answer": 0,
+   "explanation": "The FCCPC handles consumer complaints about unfair or misleading commercial practices. The SEC deals with securities, NCC with telecom regulation generally, and NAICOM with insurance—none are the primary body for consumer advertising complaints."
+  },
+  {
+   "n": 13,
+   "topic": "Insurance",
+   "q": "If Mr. Musa has a motor insurance policy with a ₦500,000 sum insured and a 10% uninsured motorist excess clause applies on claims, how much would the insurer pay on a ₦200,000 repair claim?",
+   "options": [
+    "₦180,000",
+    "₦200,000",
+    "₦150,000",
+    "₦100,000"
+   ],
+   "answer": 0,
+   "explanation": "10% excess on the claim means Mr. Musa bears 10% of ₦200,000 = ₦20,000; insurer pays ₦200,000 − ₦20,000 = ₦180,000. The full amount is wrong because excess reduces insurer payment; ₦150,000 or ₦100,000 are incorrect calculations."
+  },
+  {
+   "n": 14,
+   "topic": "Insurance",
+   "q": "Which type of insurance best protects a small Kano tailoring business against loss of income when its shop is closed due to fire damage?",
+   "options": [
+    "Motor third-party insurance",
+    "Public liability insurance",
+    "Business interruption insurance",
+    "Personal accident insurance"
+   ],
+   "answer": 2,
+   "explanation": "Business interruption insurance covers loss of profits or income during a period the business cannot operate due to insured damage. Public liability covers claims by third parties, motor insurance covers vehicles, and personal accident covers individuals' injuries."
+  },
+  {
+   "n": 15,
+   "topic": "Insurance",
+   "q": "A life insurance policy pays ₦1,200,000 on maturity after 20 years. If the annual premium was level at ₦30,000 and Mr. Okoro paid all 20 premiums, what is the total of premiums paid and what does this show about insurance?",
+   "options": [
+    "Total premiums ₦900,000; insurance always triples the premium amount",
+    "Total premiums ₦600,000; insurance pools risk and provides a long-term financial benefit beyond premiums paid",
+    "Total premiums ₦30,000; premiums are paid once at policy start",
+    "Total premiums ₦1,200,000; insurance simply returns exactly what is paid"
+   ],
+   "answer": 1,
+   "explanation": "Total premiums = ₦30,000 × 20 = ₦600,000. The policy pays more than the total premiums, illustrating long-term benefit from risk pooling and investment. The other options miscalculate totals or misunderstand insurance mechanics."
+  },
+  {
+   "n": 16,
+   "topic": "The stock exchange",
+   "q": "Which of the following is a primary function of the Nigerian Stock Exchange for companies?",
+   "options": [
+    "Setting maximum retail prices for goods sold by listed firms",
+    "Guaranteeing fixed returns to investors on all listed securities",
+    "Providing a platform for raising long-term capital by issuing shares to the public",
+    "Acting as a bank to give short-term loans to listed companies"
+   ],
+   "answer": 2,
+   "explanation": "The stock exchange enables companies to raise long-term capital via share issues. It does not guarantee fixed returns, nor does it act as a bank or control retail prices; those are incorrect roles."
+  },
+  {
+   "n": 17,
+   "topic": "The stock exchange",
+   "q": "A share was purchased on the exchange for ₦45. After one year it paid a dividend of ₦3 and the share price rose to ₦54. What is the total return in percentage (rounded to nearest whole percent)?",
+   "options": [
+    "27%",
+    "30%",
+    "20%",
+    "15%"
+   ],
+   "answer": 0,
+   "explanation": "Total return = (capital gain + dividend) / initial price = (₦54 − ₦45 + ₦3)/₦45 = (₦9 + ₦3)/₦45 = ₦12/₦45 = 0.2667 ≈ 27%. 20% and 15% are too low; 30% is slightly high."
+  },
+  {
+   "n": 18,
+   "topic": "Occupation and production",
+   "q": "Which statement best describes the relationship between human capital and national productivity in Nigeria?",
+   "options": [
+    "Only physical capital (machines) affects productivity, not human capital",
+    "Human capital reduces productivity because it raises wage costs",
+    "Improvements in education and health increase human capital and raise national productivity",
+    "Increasing human population alone always raises productivity per worker"
+   ],
+   "answer": 2,
+   "explanation": "Education and health enhance workers' skills and efficiency, improving productivity. Mere population growth doesn't ensure higher productivity per worker; physical capital complements human capital; and while better skills may increase wages, they typically raise productivity more than costs."
+  },
+  {
+   "n": 19,
+   "topic": "Occupation and production",
+   "q": "A small Ibadan farm uses 5 units of fertilizer and 2 labourers to produce 60 bags of maize. When fertilizer is increased to 7 units (labour unchanged) output rises to 78 bags. What is the marginal product of the extra fertilizer units?",
+   "options": [
+    "18 bags per unit",
+    "39 bags per unit",
+    "9 bags per unit of fertilizer",
+    "6 bags per unit"
+   ],
+   "answer": 2,
+   "explanation": "Marginal product = change in output ÷ change in fertilizer = (78 − 60)/(7 − 5) = 18/2 = 9 bags per additional unit. 18 would be total increase per both units combined, not per unit; 39 and 6 are incorrect calculations."
+  },
+  {
+   "n": 20,
+   "topic": "Advertising and marketing",
+   "q": "A Lagos-based company plans to launch a new brand of bottled water targeted at office workers. Which marketing strategy would best use market segmentation?",
+   "options": [
+    "Divide the market by occupation and promote the water through office vending machines and corporate packages",
+    "Advertise the product on national TV during prime-time to reach the widest audience",
+    "Use only social media influencers without tailoring messages for specific groups",
+    "Offer deep discounts at open-air markets across Lagos to increase trial purchases"
+   ],
+   "answer": 0,
+   "explanation": "Market segmentation involves dividing potential buyers into groups (here by occupation) and tailoring distribution and promotions to that group. National TV or general discounts are mass marketing, not segmentation. Using influencers without targeting ignores the occupational segment and reduces effectiveness."
+  },
+  {
+   "n": 21,
+   "topic": "Advertising and marketing",
+   "q": "Which advertising medium is most appropriate for a Kano tailoring business that wants to reach local housewives with a limited budget?",
+   "options": [
+    "Full-page adverts in a national newspaper published in Abuja",
+    "Prime-time television commercials on a national channel",
+    "Community radio adverts in Hausa and flyers distributed in local markets",
+    "Billboards on the Lagos–Ibadan expressway"
+   ],
+   "answer": 2,
+   "explanation": "Community radio and local flyers are cost-effective and reach local audiences in Kano using appropriate language. National newspaper, TV, or Lagos-area billboards are expensive and unlikely to reach local housewives effectively."
+  },
+  {
+   "n": 22,
+   "topic": "Documents of trade",
+   "q": "An exporter in Port Harcourt ships cocoa to a buyer in Accra using a bill of lading. What primary purpose does the bill of lading serve?",
+   "options": [
+    "It replaces the commercial invoice for payment purposes",
+    "It is a tax document required by Nigerian Customs to determine export duty",
+    "It serves as a receipt for goods shipped and as a document of title to the goods",
+    "It is primarily a certificate of insurance covering the goods"
+   ],
+   "answer": 2,
+   "explanation": "A bill of lading acknowledges receipt of goods by a carrier and can act as title to the goods while in transit. Insurance certificates cover risk, customs documents determine duties, and commercial invoices state value for payment—so those options are incorrect."
+  },
+  {
+   "n": 23,
+   "topic": "Documents of trade",
+   "q": "A Lagos importer receives a sight draft from a foreign seller. What must the importer do to obtain the goods?",
+   "options": [
+    "Sign a promissory note to pay at a later date without any immediate payment",
+    "Accept the draft and receive the goods without any payment since it's only a request",
+    "Pay only the shipping costs because the draft covers the goods automatically",
+    "Pay the face amount of the draft to the presenting bank immediately to receive shipping documents"
+   ],
+   "answer": 3,
+   "explanation": "A sight draft requires immediate payment on presentation to obtain documents and therefore the goods. Signing a note delays payment (time draft), accepting without payment is incorrect, and the draft demands full payment, not just shipping costs."
+  },
+  {
+   "n": 24,
+   "topic": "Home trade: retail and wholesale",
+   "q": "A small retailer in Ibadan buys goods in bulk from a wholesaler to sell at a mark-up. Which practice best shows the retailer engaging in retailing rather than wholesaling?",
+   "options": [
+    "Transporting goods from the wholesaler’s warehouse to the wholesale market",
+    "Selling individual units of goods to local customers for consumption",
+    "Maintaining a warehouse to store goods for other businesses",
+    "Selling large cartons of goods to several village shopkeepers"
+   ],
+   "answer": 1,
+   "explanation": "Retailing involves selling individual units to end consumers. Selling large cartons to other shops, transporting to wholesale markets, or storing for other businesses are wholesaling or distribution activities, not retailing."
+  },
+  {
+   "n": 25,
+   "topic": "Home trade: retail and wholesale",
+   "q": "A supermarket in Enugu runs a promotion: buy 2 packets of noodles at ₦200 each and get the 3rd at 50% off. What is the effective price per packet if a customer buys three packets?",
+   "options": [
+    "₦150 per packet",
+    "₦166.67 per packet",
+    "₦175 per packet",
+    "₦200 per packet"
+   ],
+   "answer": 1,
+   "explanation": "Total cost = 2×200 + 1×(200×0.5) = 400 + 100 = ₦500. Per packet = 500 ÷ 3 = ₦166.666... so ₦166.67. ₦150 would imply total ₦450, ₦200 ignores discount, ₦175 implies total ₦525—none match the promotion."
+  },
+  {
+   "n": 26,
+   "topic": "Business units",
+   "q": "Which business form would best suit three friends in Calabar who wish to run a small bakery, share day-to-day management, and limit their personal liability?",
+   "options": [
+    "Sole proprietorship owned by one friend while others are casual helpers",
+    "Informal club with no registration and shared profits by agreement",
+    "Unlimited liability partnership where each friend is jointly liable for debts",
+    "Private limited liability company with the friends as shareholders and directors"
+   ],
+   "answer": 3,
+   "explanation": "A private limited company limits personal liability and allows shareholders to manage the business. Sole proprietorship gives unlimited liability to one person, unlimited partnership still exposes partners’ personal assets, and an unregistered club lacks legal protection and proper recognition."
+  },
+  {
+   "n": 27,
+   "topic": "Business units",
+   "q": "A Kano entrepreneur wants to raise capital quickly from many investors while keeping management control with a small board. Which characteristic of a public limited company (PLC) supports this goal?",
+   "options": [
+    "Obligation to avoid paying dividends to shareholders",
+    "Requirement that each investor must be involved in daily management",
+    "Ability to sell shares to the public to raise large capital while appointing a board to run the company",
+    "Restriction that shares cannot be transferred without government approval"
+   ],
+   "answer": 2,
+   "explanation": "PLCs can raise capital by selling shares publicly and use a board to manage operations, allowing founders to retain control. Investors are not required to manage day-to-day, dividends are not forbidden, and share transfers are generally allowed subject to company rules."
+  },
+  {
+   "n": 28,
+   "topic": "Advertising and marketing",
+   "q": "A shoe maker in Aba wants to measure customer awareness after a radio campaign. Which metric gives the most direct measure of brand awareness?",
+   "options": [
+    "Number of radio adverts aired, regardless of listener response",
+    "The total number of shoes produced during the campaign period",
+    "Percentage of surveyed listeners who recognise the shoe maker’s brand name unaided",
+    "The retailer’s monthly sales revenue without comparing to prior periods"
+   ],
+   "answer": 2,
+   "explanation": "Unaided brand recall in surveys directly measures awareness. Production numbers don't measure awareness, sales revenue must be compared to prior periods to infer awareness, and count of adverts doesn't show listener recognition or recall."
+  },
+  {
+   "n": 29,
+   "topic": "Documents of trade",
+   "q": "A Kaduna exporter uses an invoice stating CIF Lagos. Which cost is the exporter responsible for under CIF?",
+   "options": [
+    "Payment of the buyer’s import duties and taxes in Lagos",
+    "Cost of goods, insurance during carriage, and freight to Lagos port",
+    "All inland distribution costs in Nigeria and the buyer’s customs duty in Lagos",
+    "Only the cost of goods; insurance and freight are the buyer’s responsibility"
+   ],
+   "answer": 1,
+   "explanation": "CIF (Cost, Insurance, Freight) requires the seller to pay cost of goods plus insurance and freight to the named port. Inland distribution costs beyond the port and import duties are the buyer’s responsibility, so those other options are incorrect."
+  },
+  {
+   "n": 30,
+   "topic": "Transport and communication",
+   "q": "The Lagos State government wants to reduce congestion by encouraging commuters to use water transport across the lagoon. Which policy will most directly increase demand for the new ferry service?",
+   "options": [
+    "Reducing ferry fares below current bus fares on comparable routes",
+    "Providing tax relief to ferry operators for capital investments",
+    "Launching a publicity campaign about Lagos road safety",
+    "Imposing higher parking fees in city centre car parks"
+   ],
+   "answer": 0,
+   "explanation": "Lowering fares directly reduces the price of using ferries, making them more attractive relative to buses and cars, thus increasing demand. Higher parking fees or publicity may influence commuter choice indirectly, while tax relief affects supply/capacity rather than immediate demand."
+  },
+  {
+   "n": 31,
+   "topic": "Transport and communication",
+   "q": "A haulage firm in Kano calculates that using bigger trucks reduces the cost per tonne-kilometre because fixed costs spread over more cargo. Which economic concept best describes this effect?",
+   "options": [
+    "Diminishing marginal returns",
+    "Economies of scale",
+    "Opportunity cost",
+    "Price elasticity of demand"
+   ],
+   "answer": 1,
+   "explanation": "Economies of scale occur when average costs fall as output (or load) increases, which matches spreading fixed costs over more cargo. Diminishing marginal returns applies to additional variable inputs, elasticity concerns responsiveness to price, and opportunity cost is about foregone alternatives."
+  },
+  {
+   "n": 32,
+   "topic": "Transport and communication",
+   "q": "An airline advertises that it will reduce journey time between Abuja and Enugu by 30%. If the original flying time was 90 minutes, what is the new advertised flying time?",
+   "options": [
+    "66 minutes",
+    "60 minutes",
+    "63 minutes",
+    "70 minutes"
+   ],
+   "answer": 2,
+   "explanation": "30% of 90 minutes = 0.30 × 90 = 27 minutes. New time = 90 − 27 = 63 minutes. 66 or 60 minutes correspond to reductions of 24 (26.7%) or 30 minutes (33.3%) respectively, so they are incorrect."
+  },
+  {
+   "n": 33,
+   "topic": "E-commerce",
+   "q": "A Lagos online retailer asks customers to pay by card but uses an unsecured HTTP checkout page. Which risk is the customer most exposed to?",
+   "options": [
+    "Difficulty in returning goods due to store policy",
+    "Product mismatch because of incorrect photos",
+    "Delivery delays due to poor courier tracking",
+    "Their card details being intercepted by hackers"
+   ],
+   "answer": 3,
+   "explanation": "An unsecured HTTP page can allow interception of card information (lack of encryption). The other options are possible e-commerce issues but are not caused by an unsecured payment page specifically."
+  },
+  {
+   "n": 34,
+   "topic": "E-commerce",
+   "q": "A small Ibadan store switches to selling on a marketplace platform that charges a 10% commission and a flat monthly fee of ₦5,000. If the store makes sales of ₦200,000 in a month, what is the total cost of using the platform that month?",
+   "options": [
+    "₦25,000",
+    "₦30,000",
+    "₦15,000",
+    "₦20,000"
+   ],
+   "answer": 0,
+   "explanation": "Commission = 10% of ₦200,000 = ₦20,000. Add monthly fee ₦5,000 → total ₦25,000. ₦20,000 omits the flat fee; ₦15,000 or ₦30,000 are incorrect computations."
+  },
+  {
+   "n": 35,
+   "topic": "E-commerce",
+   "q": "Which feature of mobile money services most helps micro-enterprises in rural Sokoto to access financial services?",
+   "options": [
+    "Ability to send and receive funds using a basic mobile phone without a bank account",
+    "A requirement to visit a bank branch to complete transactions",
+    "Higher interest rates than commercial bank savings accounts",
+    "Guaranteed purchase insurance for goods sold online"
+   ],
+   "answer": 0,
+   "explanation": "Mobile money's key advantage is enabling transactions via basic phones without bank accounts, expanding access. Higher interest or purchase insurance are not typical essential features, and requiring branch visits contradicts the service's purpose."
+  },
+  {
+   "n": 36,
+   "topic": "Foreign trade",
+   "q": "A Nigerian exporter sells cashew nuts to a buyer in Accra under FOB Port Harcourt. Which cost and responsibility is the exporter required to bear?",
+   "options": [
+    "Unloading charges at Accra port",
+    "Cost of freight and insurance to Accra",
+    "Costs of loading the goods onto the ship at Port Harcourt and export customs clearance",
+    "Import duties payable in Ghana"
+   ],
+   "answer": 2,
+   "explanation": "FOB (Free On Board) requires the seller to deliver and load goods onto the ship and clear export formalities. Freight, insurance, unloading, and import duties are typically the buyer's responsibility under FOB."
+  },
+  {
+   "n": 37,
+   "topic": "Foreign trade",
+   "q": "An importer in Abuja pays in US$ for goods shipped from Lagos to New York. The seller issues a document called a bill of lading. What is the primary function of that document?",
+   "options": [
+    "It is a guarantee of payment from the buyer's bank",
+    "It serves as evidence of carriage and a document of title to the goods",
+    "It measures the goods' value for insurance purposes",
+    "It is used to declare import duties to Nigerian customs"
+   ],
+   "answer": 1,
+   "explanation": "A bill of lading is the carrier's receipt and acts as document of title and evidence of contract of carriage. It is not a bank guarantee, a valuation document, nor is it the primary import duty declaration form."
+  },
+  {
+   "n": 38,
+   "topic": "Money and banking",
+   "q": "If the Central Bank of Nigeria increases the cash reserve ratio (CRR) for commercial banks, what is the most likely immediate effect on bank lending?",
+   "options": [
+    "Banks will be forced to lower interest rates to attract deposits",
+    "Commercial banks will have less funds available to lend, reducing credit supply",
+    "There will be no effect on lending since CRR only affects foreign banks",
+    "Banks will increase lending because they need higher profits"
+   ],
+   "answer": 1,
+   "explanation": "Raising CRR requires banks to hold a larger fraction of deposits as reserves, leaving fewer funds for lending and thus reducing credit supply. The other options misunderstand CRR's mechanism or suggest counterintuitive effects."
+  },
+  {
+   "n": 39,
+   "topic": "Money and banking",
+   "q": "A customer deposits ₦80,000 into a fixed deposit that pays simple interest of 8% per annum for 3 years. What total interest will the customer receive at maturity?",
+   "options": [
+    "₦19,200",
+    "₦24,000",
+    "₦25,600",
+    "₦20,736"
+   ],
+   "answer": 0,
+   "explanation": "Simple interest = principal × rate × time = ₦80,000 × 0.08 × 3 = ₦19,200. ₦20,736 would be compound interest annually; ₦24,000 equals 10% per year; ₦25,600 is 8% for 4 years."
+  },
+  {
+   "n": 40,
+   "topic": "E-commerce",
+   "q": "Chinedu runs an online clothing store in Lagos and, to simplify refunds, stores customers' debit/credit card numbers in plain text on his web server. What is the MAIN risk of this practice?",
+   "options": [
+    "It guarantees easier access to foreign markets for the business",
+    "Customers' card details can be stolen leading to financial fraud and damage to the business's reputation",
+    "It reduces the cost of advertising because customers see their card numbers",
+    "It will automatically make payment processing faster for future purchases"
+   ],
+   "answer": 1,
+   "explanation": "Storing card numbers in plain text exposes sensitive payment data to hackers or insider theft, causing financial fraud and severe reputational and regulatory consequences (this violates payment security standards). The tempting wrong option about faster processing is false because secure systems use tokens or encryption to speed while protecting data; the others are unrelated to storing card data."
+  }
+ ]
+}

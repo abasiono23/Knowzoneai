@@ -1,0 +1,531 @@
+{
+ "id": "jamb-chemistry-p2",
+ "exam": "jamb",
+ "subject": "chemistry",
+ "year": null,
+ "number": 2,
+ "source": "ai",
+ "minutes": 27,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Periodic table",
+   "q": "Which of the following elements has the highest first ionisation energy?",
+   "options": [
+    "Magnesium (Mg)",
+    "Neon (Ne)",
+    "Sodium (Na)",
+    "Aluminium (Al)"
+   ],
+   "answer": 1,
+   "explanation": "First ionisation energy increases across a period to the noble gas. Neon is a noble gas at the end of its period and has a full valence shell, so it requires the most energy to remove an electron. Sodium, magnesium and aluminium are to the left and have lower first ionisation energies."
+  },
+  {
+   "n": 2,
+   "topic": "Periodic table",
+   "q": "A metal M forms a chloride of formula MCl2 and has an oxide MO that is basic. Which of the following is the most likely identity of M?",
+   "options": [
+    "Calcium (Ca)",
+    "Iron (Fe)",
+    "Aluminium (Al)",
+    "Sodium (Na)"
+   ],
+   "answer": 0,
+   "explanation": "MCl2 and MO suggest a metal in group 2 (oxidation +2) whose oxide is basic; calcium fits. Aluminium forms AlCl3 and Al2O3 (amphoteric). Iron commonly forms FeCl2 but its oxides are not purely basic, and sodium forms NaCl (NaCl) with +1 oxidation."
+  },
+  {
+   "n": 3,
+   "topic": "Periodic table",
+   "q": "Which pair of elements are in the same period and are most likely to form covalent bonds with each other?",
+   "options": [
+    "Potassium (K) and Calcium (Ca)",
+    "Carbon (C) and Oxygen (O)",
+    "Fluorine (F) and Chlorine (Cl)",
+    "Sodium (Na) and Magnesium (Mg)"
+   ],
+   "answer": 1,
+   "explanation": "Carbon and oxygen are adjacent in the same period and are non-metals that commonly form covalent bonds (e.g., CO2). K and Ca are metals forming metallic/ionic bonds, F and Cl are in same group (not same period), and Na and Mg are metals that do not form covalent bonds with each other."
+  },
+  {
+   "n": 4,
+   "topic": "Oxidation, reduction and electrolysis",
+   "q": "During the electrolysis of molten MgCl2 using inert electrodes, which species is formed at the cathode and why?",
+   "options": [
+    "Mg(s) is formed because Mg2+ ions gain electrons (reduction) at the cathode.",
+    "Cl−(aq) precipitates at the cathode as NaCl(s).",
+    "Cl2(g) is formed at the cathode because chloride ions are reduced there.",
+    "MgCl2 decomposes to MgO at the cathode by oxidation."
+   ],
+   "answer": 0,
+   "explanation": "In molten MgCl2, Mg2+ migrates to the cathode and is reduced: Mg2+ + 2e− → Mg(s). Chloride ions are oxidised at the anode to Cl2(g). The other options confuse electrode processes or involve species not present (Na+) or incorrect chemistry."
+  },
+  {
+   "n": 5,
+   "topic": "Oxidation, reduction and electrolysis",
+   "q": "A student electrolyses an aqueous solution of copper(II) sulfate using copper electrodes. After some time the mass of the anode decreases while the cathode increases by the same mass. Which process explains this observation?",
+   "options": [
+    "Anode oxidation: Cu(s) → Cu2+ + 2e− and cathode deposition: Cu2+ + 2e− → Cu(s), so copper is transferred from anode to cathode.",
+    "Water is reduced at both electrodes producing H2 and O2, causing electrode mass change.",
+    "Sulfate ions are reduced to sulphur at the cathode, increasing mass.",
+    "Copper dissolves at the cathode and plates onto the anode, reversing expected directions."
+   ],
+   "answer": 0,
+   "explanation": "With copper electrodes in CuSO4, the anode dissolves to give Cu2+ (oxidation) and the cathode gains Cu by reduction; equal mass loss/gain occurs. Water reduction/oxidation does not dominate because Cu2+ is easier to reduce, and sulfate is not reduced to sulphur in these conditions."
+  },
+  {
+   "n": 6,
+   "topic": "Oxidation, reduction and electrolysis",
+   "q": "In an electrochemical cell, the standard electrode potentials are: Zn2+/Zn = −0.76 V and Fe2+/Fe = −0.44 V. Which metal will act as the anode when Zn and Fe are connected in a cell?",
+   "options": [
+    "Both act as anodes simultaneously and corrode equally.",
+    "Iron will be the anode because it has the less negative potential.",
+    "Neither acts as anode; both are inert under standard conditions.",
+    "Zinc will be the anode because it has the more negative electrode potential and is more easily oxidised."
+   ],
+   "answer": 3,
+   "explanation": "The species with the more negative standard potential is more easily oxidised; Zn (−0.76 V) will oxidise to Zn2+ and act as anode while Fe is reduced at the cathode. The other options misunderstand electrode potential conventions."
+  },
+  {
+   "n": 7,
+   "topic": "Hydrocarbons",
+   "q": "Which of the following hydrocarbons will undergo electrophilic addition most readily at room temperature?",
+   "options": [
+    "Benzene (C6H6) because it is highly reactive to electrophiles.",
+    "Ethene (C2H4) because it has a C=C double bond that reacts with electrophiles.",
+    "Methane (CH4) because it is the smallest hydrocarbon.",
+    "Ethane (C2H6) because it has the weakest C–H bonds."
+   ],
+   "answer": 1,
+   "explanation": "Alkenes like ethene readily undergo electrophilic addition at the double bond. Ethane and methane are alkanes and are much less reactive toward electrophiles; benzene undergoes electrophilic substitution rather than addition due to aromatic stability."
+  },
+  {
+   "n": 8,
+   "topic": "Water and solubility",
+   "q": "Which of the following changes will decrease the solubility of a gas in water at constant pressure?",
+   "options": [
+    "Increasing the partial pressure of the gas above the water",
+    "Adding a salt that reacts with the gas to form a soluble product",
+    "Increasing the temperature of the water",
+    "Decreasing the temperature of the water"
+   ],
+   "answer": 2,
+   "explanation": "Henry's law shows gas solubility in water generally decreases with increasing temperature; lowering temperature increases solubility, increasing gas pressure increases solubility, and reacting the gas with a dissolved substance usually increases removal from gas phase (so increases solubility)."
+  },
+  {
+   "n": 9,
+   "topic": "Energy changes",
+   "q": "Mrs. Okonkwo mixes solid ammonium nitrate (ΔHf° known) with water in a beaker and measures the solution temperature drop. The reaction is endothermic with enthalpy change +25.7 kJ per mole NH4NO3 dissolved. If 12.8 g of NH4NO3 (molar mass 80.04 g mol−1) is dissolved in 200 g of water initially at 25.0°C, and the specific heat capacity of the resulting solution is 4.18 J g−1 °C−1, what is the final temperature (°C) of the solution, assuming no heat loss? (Give answer to one decimal place.)",
+   "options": [
+    "24.6°C",
+    "20.4°C",
+    "18.7°C",
+    "22.8°C"
+   ],
+   "answer": 1,
+   "explanation": "Moles = 12.8 / 80.04 = 0.1600 mol. Heat absorbed q = 0.1600 × 25.7 kJ = 4.112 kJ = 4112 J. Mass solution ≈ 200 + 12.8 = 212.8 g. Heat capacity = 212.8 × 4.18 = 889.5 J °C−1. ΔT = 4112 / 889.5 = 4.626°C. Final T = 25.0 − 4.626 = 20.4°C. Wrong options come from common mistakes: ignoring solute mass or arithmetic errors."
+  },
+  {
+   "n": 10,
+   "topic": "Energy changes",
+   "q": "Which of the following statements about activation energy (Ea) and reaction rate is correct?",
+   "options": [
+    "A catalyst increases Ea but increases the rate by supplying energy to reactants.",
+    "Activation energy is the enthalpy change ΔH of the reaction.",
+    "A catalyst lowers Ea and increases the rate by providing an alternative pathway with a lower activation energy.",
+    "A higher Ea always makes a reaction faster at all temperatures."
+   ],
+   "answer": 2,
+   "explanation": "A catalyst provides an alternative pathway with a lower activation energy, increasing rate without changing ΔH. Statement that catalyst increases Ea is false. Higher Ea makes reactions slower at a given temperature. Ea is not the same as ΔH, which is overall enthalpy change."
+  },
+  {
+   "n": 11,
+   "topic": "Chemical bonding",
+   "q": "Which of the following best explains why sodium chloride (NaCl) has a high melting point?",
+   "options": [
+    "Its structure is metallic with delocalised electrons binding positive ions.",
+    "It is a covalent network solid with directional covalent bonds between all atoms.",
+    "It is an ionic lattice with strong electrostatic attractions between Na+ and Cl− ions throughout the crystal.",
+    "It is a molecular solid held together by van der Waals forces only."
+   ],
+   "answer": 2,
+   "explanation": "NaCl is an ionic crystal where strong Coulombic attractions between oppositely charged ions require much energy to overcome, giving a high melting point. It is not a covalent network, molecular, or metallic solid, so the other options are incorrect."
+  },
+  {
+   "n": 12,
+   "topic": "Chemical bonding",
+   "q": "A solid compound X has these properties: conducts electricity when molten, soluble in water, and forms a lattice of discrete ions. Which statement about X is most likely true?",
+   "options": [
+    "X is a molecular solid and conducts in molten state due to intact neutral molecules.",
+    "X is ionic and its electrical conductivity when molten is due to mobile ions.",
+    "X is a covalent network and conducts when molten because electrons become mobile.",
+    "X is metallic and its conductivity when molten is due to delocalised electrons in the liquid metal."
+   ],
+   "answer": 1,
+   "explanation": "Conductivity when molten and solubility in water indicate ionic bonding with mobile ions in the liquid. A covalent network does not conduct when molten in this way; molecular solids don't conduct as neutral molecules; metals are typically not soluble in water and their conductivity mechanism differs."
+  },
+  {
+   "n": 13,
+   "topic": "Chemical bonding",
+   "q": "Which pair of species is expected to have the largest bond polarity (greatest partial charges) in their bonds?",
+   "options": [
+    "Br—I",
+    "Na—Cl",
+    "O—O",
+    "C—H"
+   ],
+   "answer": 1,
+   "explanation": "Bond polarity correlates with electronegativity difference. Na (metal) and Cl (nonmetal) form an ionic bond with large polarity. C—H is nearly nonpolar, O—O is nonpolar, Br—I have small difference and thus low polarity."
+  },
+  {
+   "n": 14,
+   "topic": "Gas laws",
+   "q": "A tyre in Lagos at 30.0°C has pressure 220 kPa. The car is driven and the tyre temperature rises to 60.0°C. Assuming tyre volume and number of moles of gas are constant, what is the new pressure in kPa? (Use absolute temperatures and give answer to three significant figures.)",
+   "options": [
+    "240 kPa",
+    "206 kPa",
+    "254 kPa",
+    "242 kPa"
+   ],
+   "answer": 3,
+   "explanation": "Use P1/T1 = P2/T2 with Kelvin. T1 = 303.15 K; T2 = 333.15 K. P2 = 220 × (333.15/303.15) = 220 × 1.0989 = 241.8 → 242 kPa. The tempting 254 kPa arises from arithmetic mistakes; 206 kPa would be a decrease, which is wrong because temperature increases."
+  },
+  {
+   "n": 15,
+   "topic": "Gas laws",
+   "q": "One mole of an ideal gas is heated at constant volume from 300 K to 600 K. If the initial pressure was 150 kPa, what is the final pressure in kPa?",
+   "options": [
+    "75 kPa",
+    "300 kPa",
+    "225 kPa",
+    "450 kPa"
+   ],
+   "answer": 1,
+   "explanation": "At constant volume, P ∝ T. Doubling temperature (300→600 K) doubles pressure: P2 = 150 × (600/300) = 150 × 2 = 300 kPa. 225 kPa corresponds to 1.5× change, 75 kPa is half, and 450 kPa is triple — all incorrect here."
+  },
+  {
+   "n": 16,
+   "topic": "Rates of reaction and equilibrium",
+   "q": "In the equilibrium N2(g) + 3H2(g) ⇌ 2NH3(g), Kc = 1.6 × 10−5 at a given temperature. If initially [N2] = 0.100 mol dm−3 and [H2] = 0.300 mol dm−3 with no NH3, will the reaction proceed to the right or left, and why?",
+   "options": [
+    "Proceed to the right because Qc = [NH3]^2 / ([N2][H2]^3) = 0, and Qc < Kc.",
+    "Remain at equilibrium because Qc = Kc initially.",
+    "Proceed to the right because Qc > Kc.",
+    "Proceed to the left because Qc > Kc."
+   ],
+   "answer": 0,
+   "explanation": "With no NH3 initially, Qc = 0 which is less than Kc, so the forward reaction is favored to produce NH3 until equilibrium is reached. The wrong options confuse the inequality or misidentify Qc."
+  },
+  {
+   "n": 17,
+   "topic": "Rates of reaction and equilibrium",
+   "q": "A student studies the reaction A → products and finds that doubling [A] doubles the initial rate. Which rate law and order is consistent with this observation?",
+   "options": [
+    "Rate = k[A]^1, first order.",
+    "Rate = k[A]^2, second order.",
+    "Rate = k[A]^(1/2), half order.",
+    "Rate = k, zero order."
+   ],
+   "answer": 0,
+   "explanation": "If doubling [A] doubles the rate, the rate is directly proportional to [A], giving rate = k[A] and first order. Second order would quadruple the rate on doubling, zero order would show no change, and half order would increase rate by √2, not 2."
+  },
+  {
+   "n": 18,
+   "topic": "Separation of mixtures",
+   "q": "A mixture of two miscible liquids A and B is separated by fractional distillation. Their boiling points are 78°C and 100°C respectively. During distillation the thermometer reads 85°C at first steady distillation. What is the most likely explanation?",
+   "options": [
+    "Azeotropic or vapour composition richer in A gives a boiling point between the two pure components",
+    "Complete separation has occurred already",
+    "B is decomposing to give a lower boiling product",
+    "Contamination of the thermometer with oil"
+   ],
+   "answer": 0,
+   "explanation": "A mixture of miscible liquids can give an intermediate boiling point when the vapour composition differs from pure liquids; an azeotrope or mixed vapour richer in the more volatile A explains 85°C. Contamination or decomposition are less likely and would not explain a steady boiling temperature between known b.p.s."
+  },
+  {
+   "n": 19,
+   "topic": "Functional groups in organic chemistry",
+   "q": "Mr. Eze oxidises a compound X (C3H8O) with acidified dichromate and obtains propanoic acid. Which functional group is present in X?",
+   "options": [
+    "Aldehyde",
+    "Primary alcohol",
+    "Secondary alcohol",
+    "Ether"
+   ],
+   "answer": 1,
+   "explanation": "Oxidation of a primary alcohol gives a carboxylic acid (propanoic acid). A secondary alcohol would give a ketone, not propanoic acid. An aldehyde would oxidise to the acid too, but C3H8O with an aldehyde (propanal) formula is C3H6O, so X must be a primary alcohol. Ether does not oxidise to the acid under these conditions."
+  },
+  {
+   "n": 20,
+   "topic": "Functional groups in organic chemistry",
+   "q": "A compound Y gives a silver mirror with Tollens' reagent, reacts with 2,4‑DNP to give an orange precipitate, and has molecular formula C3H6O. What is Y?",
+   "options": [
+    "Propanal (an aldehyde)",
+    "Propanol (an alcohol)",
+    "Propanoic acid (a carboxylic acid)",
+    "Propanone (a ketone)"
+   ],
+   "answer": 0,
+   "explanation": "Tollens' reagent gives a silver mirror with aldehydes; 2,4‑DNP gives a positive test with carbonyl compounds (aldehydes and ketones). C3H6O fits propanal; propanone is a ketone which gives 2,4‑DNP but not Tollens' silver mirror. Alcohols and carboxylic acids do not give a Tollens' test."
+  },
+  {
+   "n": 21,
+   "topic": "Functional groups in organic chemistry",
+   "q": "An ester Z gives a fruity smell and hydrolyses with dilute NaOH to give ethanol and sodium ethanoate. Which functional group is present in Z?",
+   "options": [
+    "Ketone",
+    "Carboxylic acid",
+    "Alcohol",
+    "Ester"
+   ],
+   "answer": 3,
+   "explanation": "Hydrolysis of an ester under basic conditions (saponification) yields an alcohol (ethanol) and a carboxylate salt (sodium ethanoate). Carboxylic acids and alcohols would not give that pair, and ketones do not hydrolyse to alcohol + carboxylate."
+  },
+  {
+   "n": 22,
+   "topic": "Atomic structure",
+   "q": "Element P has two naturally occurring isotopes: 69% is 35P with mass 34.96885 u and 31% is 37P with mass 36.96590 u. What is the relative atomic mass of P (to 2 d.p.)?",
+   "options": [
+    "35.61 u",
+    "35.97 u",
+    "36.00 u",
+    "35.00 u"
+   ],
+   "answer": 0,
+   "explanation": "R.A.M = 0.69×34.96885 + 0.31×36.96590 = 24.1285 + 11.4564 = 35.5849 ≈ 35.58 ≈ 35.61 when rounded to 2 d.p. (note small rounding variations). Options like 35.00 or 36.00 ignore isotope weighting; 35.97 is too high."
+  },
+  {
+   "n": 23,
+   "topic": "Atomic structure",
+   "q": "A singly charged ion Q+ has the same number of electrons as the neutral atom of neon (Ne). What is the atomic number of Q?",
+   "options": [
+    "11",
+    "10",
+    "9",
+    "12"
+   ],
+   "answer": 0,
+   "explanation": "Ne has 10 electrons. A singly charged positive ion Q+ has lost one electron, so Q must have 11 electrons originally (neutral), so atomic number is 11 (sodium). If Q were 10 it would be neon itself; 12 or 9 are incorrect counts."
+  },
+  {
+   "n": 24,
+   "topic": "Non-metals and their compounds",
+   "q": "Chlorine gas is bubbled into cold, dilute sodium hydroxide solution at 20°C. Which of the following is the major chlorine-containing product?",
+   "options": [
+    "Chlorine remains unreacted in solution",
+    "Sodium hypochlorite (NaClO) and sodium chloride (NaCl)",
+    "Sodium chlorate (NaClO3) only",
+    "Only sodium chloride (NaCl)"
+   ],
+   "answer": 1,
+   "explanation": "Cold dilute NaOH reacts with Cl2 to give disproportionation: Cl2 + 2 NaOH → NaCl + NaClO + H2O (hypochlorite and chloride). Chlorate forms under hot, concentrated conditions; chlorine does not remain unreacted."
+  },
+  {
+   "n": 25,
+   "topic": "Non-metals and their compounds",
+   "q": "A 0.500 mol sample of ammonia gas (NH3) is burned completely in excess oxygen. What volume of N2 (in dm3) is produced at STP (1 mole gas = 22.4 dm3)? Balanced equation: 4 NH3 + 3 O2 → 2 N2 + 6 H2O.",
+   "options": [
+    "5.60 dm3",
+    "22.4 dm3",
+    "2.80 dm3",
+    "11.2 dm3"
+   ],
+   "answer": 0,
+   "explanation": "From stoichiometry: 4 mol NH3 → 2 mol N2, so 0.500 mol NH3 → (0.500 × 2/4) = 0.250 mol N2. Volume = 0.250 × 22.4 = 5.60 dm3. Common wrong answers use 1:1 ratio (11.2 dm3) or halve/double incorrectly."
+  },
+  {
+   "n": 26,
+   "topic": "Environmental chemistry",
+   "q": "Mrs. Adebayo in Ibadan tested a 25.00 cm3 tap-water sample for total hardness by titration with 0.0100 M EDTA. The titre was 12.50 cm3. Calculate the total hardness expressed as mg CaCO3 per litre (use Mr CaCO3 = 100.09).",
+   "options": [
+    "125 mg CaCO3 per litre",
+    "1000 mg CaCO3 per litre",
+    "250 mg CaCO3 per litre",
+    "500 mg CaCO3 per litre"
+   ],
+   "answer": 3,
+   "explanation": "Moles EDTA = 0.01250 L × 0.0100 mol·L−1 = 1.25×10−4 mol, which equals moles Ca2+ as EDTA complexes 1:1. Mass CaCO3 = 1.25×10−4 ×100.09 g = 0.012511 g in 25.00 cm3, so per litre = 0.012511×40 = 0.50044 g L−1 = 500 mg L−1. The tempting 250 mg/L would arise from an incorrect factor of 20 instead of 40."
+  },
+  {
+   "n": 27,
+   "topic": "Environmental chemistry",
+   "q": "A factory discharges 50.0 kg of lead (Pb) each day into a river whose daily flow is 2.00×10^6 litres. What is the concentration of lead in the river in mg L−1 (approximately)?",
+   "options": [
+    "0.000025 mg L−1",
+    "250 mg L−1",
+    "0.0250 mg L−1",
+    "25.0 mg L−1"
+   ],
+   "answer": 3,
+   "explanation": "50.0 kg = 50 000 g = 50 000 000 mg. Concentration = 50 000 000 mg / 2.00×10^6 L = 25.0 mg L−1. A wrong small value like 0.025 mg L−1 would result from dividing grams by litres without converting to mg (50 000 g/2×10^6 L = 0.025 g L−1 = 25 mg L−1)."
+  },
+  {
+   "n": 28,
+   "topic": "Metals and their compounds",
+   "q": "Which metal will displace copper from aqueous copper(II) sulfate solution at room temperature?",
+   "options": [
+    "Silver",
+    "Gold",
+    "Copper (no reaction)",
+    "Iron"
+   ],
+   "answer": 3,
+   "explanation": "Iron is more reactive than copper and will displace Cu2+: Fe + CuSO4 → FeSO4 + Cu. Silver and gold are less reactive than copper and so will not displace copper; 'Copper (no reaction)' is wrong because a metal cannot displace itself."
+  },
+  {
+   "n": 29,
+   "topic": "Metals and their compounds",
+   "q": "An impure metal carbonate sample of mass 100.0 g was heated and decomposed completely to the metal oxide; the mass loss (due to CO2) was found to be 22.3 g. What is the relative atomic mass (Ar) of the metal (to three significant figures)?",
+   "options": [
+    "24",
+    "40",
+    "56",
+    "137"
+   ],
+   "answer": 3,
+   "explanation": "Moles CO2 lost = 22.3/44.00 = 0.5068 mol, so initial moles of MCO3 = 0.5068. The molar mass of MCO3 = 100.0/0.5068 = 197.3 g mol−1, so Ar(M) = 197.3 − 60.01 = 137.3 ≈ 137. The other choices correspond to much larger or smaller percentage mass losses and do not match the measured 22.3 g."
+  },
+  {
+   "n": 30,
+   "topic": "Mole concept and stoichiometry",
+   "q": "If 2.00 g of hydrogen gas (H2) is completely burned in excess oxygen to give water vapour at 100.0°C (373 K) and 1.00 atm, what volume of H2O(g) is produced? (Use R = 0.08206 L·atm·K−1·mol−1.)",
+   "options": [
+    "30.6 L",
+    "15.3 L",
+    "22.4 L",
+    "44.8 L"
+   ],
+   "answer": 0,
+   "explanation": "Moles H2 = 2.00/2.016 = 0.9921 ≈ 1.00 mol; reaction H2 + 1/2 O2 → H2O produces 1 mol H2O per mol H2, so n ≈ 1.00 mol. V = nRT/P = 1.00×0.08206×373/1.00 = 30.6 L. 22.4 L is the molar volume at STP (273 K), not 373 K."
+  },
+  {
+   "n": 31,
+   "topic": "Mole concept and stoichiometry",
+   "q": "An impure sample weighing 4.00 g containing only sodium carbonate (Na2CO3, Mr = 105.99) and inert impurities was titrated with 25.0 cm3 of 0.100 M HCl. Reaction: Na2CO3 + 2HCl → 2NaCl + H2O + CO2. Calculate the percentage purity of Na2CO3 in the sample.",
+   "options": [
+    "6.62%",
+    "33.1%",
+    "0.331%",
+    "3.31%"
+   ],
+   "answer": 3,
+   "explanation": "Moles HCl = 0.0250×0.100 = 0.00250 mol; moles Na2CO3 = 0.00250/2 = 0.00125 mol. Mass Na2CO3 = 0.00125×105.99 = 0.1325 g. Percent purity = (0.1325/4.00)×100 = 3.312% ≈ 3.31%. A common mistake is to forget the 2:1 stoichiometry and get 33.1%."
+  },
+  {
+   "n": 32,
+   "topic": "Acids, bases and salts",
+   "q": "A buffer solution is prepared by mixing 0.100 M ethanoic acid (CH3COOH, pKa = 4.76) and 0.100 M sodium ethanoate (CH3COONa) in equal volumes. What is the pH of the buffer?",
+   "options": [
+    "3.24",
+    "7.00",
+    "4.76",
+    "5.76"
+   ],
+   "answer": 2,
+   "explanation": "Using Henderson–Hasselbalch: pH = pKa + log([A−]/[HA]) = 4.76 + log(0.100/0.100) = 4.76. 7.00 would be neutral pH but a buffer made of acetic acid/acetate is acidic; 3.24 or 5.76 would imply a 5:1 ratio of acid/base or base/acid respectively."
+  },
+  {
+   "n": 33,
+   "topic": "Acids, bases and salts",
+   "q": "What is the molar solubility of AgCl in 0.100 M NaCl at 25°C? (Ksp AgCl = 1.6×10−10)",
+   "options": [
+    "1.3×10−5 M",
+    "1.6×10−10 M",
+    "1.6×10−3 M",
+    "1.6×10−9 M"
+   ],
+   "answer": 3,
+   "explanation": "If solubility = s, then [Ag+] = s and [Cl−] ≈ 0.100 (common ion). Ksp = [Ag+][Cl−] = s×0.100, so s = 1.6×10−10 / 0.100 = 1.6×10−9 M. Using Ksp alone (1.6×10−10) would be correct only for pure water where [Cl−] = s."
+  },
+  {
+   "n": 34,
+   "topic": "Acids, bases and salts",
+   "q": "25.0 cm3 of 0.100 M HCl is titrated with 0.100 M NaOH. After adding 12.50 cm3 of the NaOH solution, what is the pH of the mixture?",
+   "options": [
+    "0.00",
+    "7.00",
+    "3.00",
+    "1.48"
+   ],
+   "answer": 3,
+   "explanation": "Moles HCl initially = 0.0250×0.100 = 0.00250 mol. Moles NaOH added = 0.01250×0.100 = 0.00125 mol. Excess HCl = 0.00250 − 0.00125 = 0.00125 mol in total volume 0.0250+0.01250 = 0.03750 L, so [H+] = 0.00125/0.03750 = 0.03333 M. pH = −log(0.03333) = 1.477 ≈ 1.48. pH 7.00 would be at equivalence; pH 0.00 would imply a much higher [H+]."
+  },
+  {
+   "n": 35,
+   "topic": "Periodic table",
+   "q": "Which of the following elements has the highest first ionization energy?",
+   "options": [
+    "K",
+    "Li",
+    "Na",
+    "Cs"
+   ],
+   "answer": 1,
+   "explanation": "First ionization energy decreases down a group because outer electrons are farther from the nucleus and are more shielded. Li is at the top of the alkali metals listed, so it has the smallest atomic radius and the highest first ionization energy. Na, K and Cs lie below Li and therefore have lower first ionization energies."
+  },
+  {
+   "n": 36,
+   "topic": "Periodic table",
+   "q": "Which element is most likely to form an amphoteric oxide (reacts with both acids and bases)?",
+   "options": [
+    "Al",
+    "Mg",
+    "Na",
+    "S"
+   ],
+   "answer": 0,
+   "explanation": "Aluminium forms Al2O3 which is amphoteric and reacts with both acids and bases. Sodium oxide is strongly basic, magnesium oxide is predominantly basic, and sulfur (as SO2/SO3 oxides) forms acidic oxides, so they are not amphoteric."
+  },
+  {
+   "n": 37,
+   "topic": "Oxidation, reduction and electrolysis",
+   "q": "During the electrolysis of 1.0 M sodium chloride solution (aqueous NaCl) with inert platinum electrodes, which pair of products is expected at the electrodes?",
+   "options": [
+    "Sodium metal at the cathode and chlorine gas at the anode",
+    "Hydrogen gas at the cathode and chlorine gas at the anode",
+    "Hydrogen gas at the cathode and oxygen gas at the anode",
+    "Sodium metal at the cathode and oxygen gas at the anode"
+   ],
+   "answer": 1,
+   "explanation": "In aqueous NaCl, water is more easily reduced than Na+ so H2 forms at the cathode. At the anode Cl− is oxidised to Cl2 (preferential over water oxidation when [Cl−] is appreciable). Producing sodium metal is prevented by water reduction, and O2 at the anode would occur only if chloride were absent or very dilute."
+  },
+  {
+   "n": 38,
+   "topic": "Oxidation, reduction and electrolysis",
+   "q": "At a Lagos workshop, a student plates copper from Cu2+(aq) using a current of 2.00 A for 3.00 hours. What mass of copper (Cu, Ar = 63.55) is deposited? (Faraday constant = 96 500 C mol−1; Cu2+ + 2 e− → Cu)",
+   "options": [
+    "7.11 g",
+    "1.78 g",
+    "3.56 g",
+    "14.2 g"
+   ],
+   "answer": 0,
+   "explanation": "Charge Q = I t = 2.00 A × (3.00 h × 3600 s/h) = 2.00 × 10 800 = 21 600 C. Moles of electrons = Q/F = 21 600/96 500 = 0.2239 mol e−. Moles Cu deposited = 0.2239/2 = 0.11195 mol. Mass = 0.11195 × 63.55 = 7.11 g. The other options are results of halving, doubling or misplacing the electron stoichiometry."
+  },
+  {
+   "n": 39,
+   "topic": "Hydrocarbons",
+   "q": "Which of these isomers of C4H10 would you expect to have the highest boiling point?",
+   "options": [
+    "n-Butane (butane, CH3CH2CH2CH3)",
+    "Isobutane (2-methylpropane)",
+    "But-1-ene",
+    "2-Methylpropene"
+   ],
+   "answer": 0,
+   "explanation": "Among C4 isomers, the straight-chain n-butane has the largest surface area and thus the strongest London dispersion forces, giving the highest boiling point. Branched isobutane has a lower boiling point. But-1-ene and 2-methylpropene are alkenes (unsaturated) and typically have boiling points similar to or lower than the corresponding alkanes due to slightly different intermolecular interactions."
+  },
+  {
+   "n": 40,
+   "topic": "Water and solubility",
+   "q": "Which statement best describes 'temporary hardness' of natural water?",
+   "options": [
+    "Hardness caused by suspended clay and organic matter; removable by filtration",
+    "Hardness caused mainly by calcium and magnesium chlorides; removable by boiling",
+    "Hardness due to dissolved sodium salts; removable by adding soap",
+    "Hardness caused mainly by dissolved calcium and magnesium bicarbonates; removable by boiling"
+   ],
+   "answer": 3,
+   "explanation": "Temporary hardness is due to bicarbonates of Ca2+ and Mg2+ (e.g. Ca(HCO3)2) which decompose on boiling to give insoluble carbonates that precipitate, softening the water. Chlorides cause permanent hardness (not removed by boiling). Sodium salts do not cause hardness and suspended matter is removed by filtration, not related to the chemical hardness concept."
+  }
+ ]
+}

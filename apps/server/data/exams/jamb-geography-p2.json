@@ -1,0 +1,531 @@
+{
+ "id": "jamb-geography-p2",
+ "exam": "jamb",
+ "subject": "geography",
+ "year": null,
+ "number": 2,
+ "source": "ai",
+ "minutes": 27,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Transport and trade",
+   "q": "A Lagos-based exporter ships 12,000 cartons of yam chips weighing 3.5 kg each by road to the port 240 km away. The truck carries 4,200 cartons per trip and averages 60 km/h. How many complete round trips will be needed and what is the total driving time (hours) for all the trips? (Ignore loading/unloading time.)",
+   "options": [
+    "2 round trips; 16 hours",
+    "4 round trips; 32 hours",
+    "3 round trips; 12 hours",
+    "3 round trips; 24 hours"
+   ],
+   "answer": 3,
+   "explanation": "12,000 ÷ 4,200 = 2.857, so 3 complete round trips are required. Each round trip is 240 km × 2 = 480 km; at 60 km/h that's 8 hours per round trip. For 3 trips total driving time = 8 × 3 = 24 hours. 2 trips are insufficient; 12 hours would be one-way time only."
+  },
+  {
+   "n": 2,
+   "topic": "Transport and trade",
+   "q": "Which of the following most reduces transportation cost per unit for a bulk commodity like cement over long distances in Nigeria?",
+   "options": [
+    "Switching to air freight for faster delivery",
+    "Using many small trucks to deliver directly to customers",
+    "Increasing shipment size by using rail or coastal shipping",
+    "Transporting at night to avoid traffic"
+   ],
+   "answer": 2,
+   "explanation": "Larger shipment size spreads fixed costs and rail/coastal shipping have lower cost per tonne-kilometre for bulk goods. Many small trucks raise per-unit cost; night driving may save time but not unit cost significantly, and air freight is much more expensive for bulk commodities."
+  },
+  {
+   "n": 3,
+   "topic": "The earth and the solar system",
+   "q": "Which statement best explains why Nigeria experiences seasons but not large changes in day length throughout the year?",
+   "options": [
+    "Nigeria is on the Tropic of Cancer, causing small day-length change",
+    "Nigeria is near the equator where day length varies little but seasonal rainfall patterns change due to shifting Intertropical Convergence Zone (ITCZ)",
+    "The Moon's phases control Nigerian seasons and day length",
+    "Nigeria's axial tilt is zero so day length never changes"
+   ],
+   "answer": 1,
+   "explanation": "Near-equatorial locations have little variation in day length because Earth's axial tilt affects day length more strongly at higher latitudes; seasons in Nigeria are driven by movement of the ITCZ and shifting wind patterns, not axial tilt being zero or lunar phases. Nigeria is not on the Tropic of Cancer."
+  },
+  {
+   "n": 4,
+   "topic": "The earth and the solar system",
+   "q": "A solar noon angle of the sun at Abuja (9°N) on a certain day is 81°. What is the solar declination that day? Assume solar elevation at noon = 90° − zenith angle; zenith angle = latitude − declination (if sun north of place) or latitude + declination (if sun south).",
+   "options": [
+    "Declination ≈ 9°N",
+    "Declination ≈ 9°S",
+    "Declination ≈ 0° (on equinox)",
+    "Declination ≈ 18°N"
+   ],
+   "answer": 2,
+   "explanation": "Solar elevation at noon = 81°, so zenith angle = 9°. For Abuja at 9°N, zenith angle = |latitude − declination| = 9°, so declination = 0° (equator) or 18°N; but if declination were 18°N then sun would be north of Abuja giving zenith = 9° still; however typical equinox declination 0° matches solar elevation 81° at 9°N, so declination ≈ 0°. The 18°N option is inconsistent with likely geometry without sign change."
+  },
+  {
+   "n": 5,
+   "topic": "The earth and the solar system",
+   "q": "Which planet in the solar system has a day length (rotation period) longer than its year (orbital period)?",
+   "options": [
+    "Mercury",
+    "Mars",
+    "Venus",
+    "Jupiter"
+   ],
+   "answer": 2,
+   "explanation": "Venus rotates very slowly, taking about 243 Earth days to rotate, while its orbital period is about 225 days, so a Venusian day is longer than its year. Mercury's rotation period (58.6 days) is shorter than its orbital period (88 days); Mars and Jupiter have short rotation periods."
+  },
+  {
+   "n": 6,
+   "topic": "Environmental hazards and conservation",
+   "q": "Which human activity in the Niger Delta most directly increases risk of coastal erosion and habitat loss?",
+   "options": [
+    "Mangrove replanting programmes",
+    "Introducing eco-tourism guidelines",
+    "Constructing inland freshwater reservoirs",
+    "Sand and gravel dredging for construction and road fill"
+   ],
+   "answer": 3,
+   "explanation": "Dredging removes sediments that protect coastlines and damages mangrove roots, increasing erosion and habitat loss. Mangrove replanting and eco-tourism are conservation actions, while inland reservoirs do not directly remove coastal sediment."
+  },
+  {
+   "n": 7,
+   "topic": "Environmental hazards and conservation",
+   "q": "A dam failure releases 12 million m³ of water. If the flood wave travels downstream in a channel with cross-sectional area 120 m² at an average velocity of 4 m/s, what is the duration (seconds) of elevated flow assuming the volume passes as a single pulse?",
+   "options": [
+    "2,500 seconds",
+    "25,000 seconds",
+    "50,000 seconds",
+    "250,000 seconds"
+   ],
+   "answer": 1,
+   "explanation": "Discharge Q = area × velocity = 120 m² × 4 m/s = 480 m³/s. Duration = volume ÷ Q = 12,000,000 m³ ÷ 480 m³/s = 25,000 s. Other options are off by factors of 10 or 2."
+  },
+  {
+   "n": 8,
+   "topic": "Agriculture",
+   "q": "A maize farmer in Oyo rotates maize with cowpea. Which benefit is primarily expected from this rotation?",
+   "options": [
+    "Improved soil nitrogen through biological fixation by cowpea",
+    "Permanent increase in soil bulk density",
+    "Complete elimination of weeds without herbicides",
+    "Increased soil acidity to favour maize growth"
+   ],
+   "answer": 0,
+   "explanation": "Legumes like cowpea fix atmospheric nitrogen via root nodules, increasing soil N for the following cereal crop. Rotation helps weed control but does not completely eliminate weeds; it does not increase acidity or permanently raise bulk density."
+  },
+  {
+   "n": 9,
+   "topic": "Agriculture",
+   "q": "A farmer applies 150 kg/ha of compound fertilizer N-P-K (10-20-10). How many kg of phosphorus (as elemental P) are applied per hectare? (Assume P in formula is P by mass expressed as P₂O₅; but exam uses P directly in formula.)",
+   "options": [
+    "45 kg P",
+    "20 kg P",
+    "30 kg P",
+    "15 kg P"
+   ],
+   "answer": 2,
+   "explanation": "If formula gives P as percentage by mass, 20% of 150 kg = 0.20 × 150 = 30 kg P. Common mistake is to halve or confuse with P₂O₅ conversions, but the question states P directly in the formula so 20% applies."
+  },
+  {
+   "n": 10,
+   "topic": "Industry and natural resources",
+   "q": "Which factor most likely attracted multinational cement companies to build large plants around Sokoto and Gombe States in recent years?",
+   "options": [
+    "Proximity to deepwater ports for export",
+    "Availability of extensive limestone deposits near the sites",
+    "High local demand for consumer goods",
+    "Large urban workforce with advanced manufacturing skills"
+   ],
+   "answer": 1,
+   "explanation": "Cement manufacture requires large, high-quality limestone reserves close to the plant to reduce raw-material transport costs. Sokoto and Gombe locations were chosen for limestone availability rather than for ports, consumer-goods demand, or a highly skilled industrial workforce, which are less important for siting basic raw-material industries."
+  },
+  {
+   "n": 11,
+   "topic": "Industry and natural resources",
+   "q": "A palm oil processing factory in Delta State wants to lower per-litre production cost. Which action will most effectively achieve this?",
+   "options": [
+    "Increasing factory throughput by processing more fruits per day using the same fixed infrastructure",
+    "Selling palm oil at a lower price to attract customers",
+    "Replacing palm oil with imported vegetable oil as raw material",
+    "Hiring more administrative staff to improve paperwork"
+   ],
+   "answer": 0,
+   "explanation": "Spreading fixed costs over a larger output (economies of scale) reduces per-litre cost. Using a different imported raw material raises input costs; more administrative staff increases fixed costs; reducing price lowers revenue and does not reduce production cost per litre."
+  },
+  {
+   "n": 12,
+   "topic": "Industry and natural resources",
+   "q": "Nigeria's artisanal gold miners in Zamfara primarily use sluice boxes and gravity methods. Which environmental problem is most directly caused by these methods?",
+   "options": [
+    "Acid mine drainage from exposure of sulfide ores",
+    "Emission of sulfur dioxide from large smelters",
+    "Sedimentation and siltation of nearby streams and reservoirs",
+    "Large-scale deforestation for open-pit terraces"
+   ],
+   "answer": 2,
+   "explanation": "Gravity and sluicing dislodge sediments that enter waterways, causing siltation. Sulfur dioxide emissions and acid mine drainage are more associated with sulfide ore processing and large-scale sulfur-bearing deposits, while large-scale deforestation is more typical of large mechanised open-pit operations than small-scale sluicing."
+  },
+  {
+   "n": 13,
+   "topic": "Landforms and processes",
+   "q": "A river in eastern Nigeria flows over alternating bands of hard sandstone and soft shale. Which set of features is most likely to form downstream where the river crosses the hard band followed by soft band?",
+   "options": [
+    "A knickpoint or waterfall at the hard band and a downstream plunge pool with increased lateral erosion in the soft band",
+    "A straight, featureless channel with uniform bedload throughout",
+    "Extensive delta formation immediately at the hard band",
+    "A meander cut-off forming an ox-bow lake at the hard band"
+   ],
+   "answer": 0,
+   "explanation": "When a river flows from hard to softer rock, differential erosion creates a knickpoint or waterfall at the resistant layer and stronger erosion (plunge pool, lateral erosion) in the softer layer. Deltas form at river mouths, ox-bow lakes are associated with mature meandering on soft sediments, and a uniform channel is unlikely given rock contrasts."
+  },
+  {
+   "n": 14,
+   "topic": "Landforms and processes",
+   "q": "Which process best explains the formation of lateritic soils over the Nigerian Precambrian basement in humid tropical areas?",
+   "options": [
+    "Intense chemical weathering and leaching that removes silica and concentrates iron and aluminium oxides",
+    "Physical weathering by freeze–thaw in high altitudes",
+    "Deposition of calcareous sediments by marine transgression",
+    "Accumulation of windblown loess during arid conditions"
+   ],
+   "answer": 0,
+   "explanation": "Laterite forms by intense chemical weathering in warm, wet climates that leaches silica and soluble bases, leaving iron and aluminium oxides. Loess and marine calcareous deposits are depositional, not weathering products, and freeze–thaw is not significant in Nigeria's humid tropics."
+  },
+  {
+   "n": 15,
+   "topic": "Landforms and processes",
+   "q": "A coastal village east of Lagos reports that the beach has been retreating steadily over 15 years. Which human action nearby most directly accelerates coastal erosion there?",
+   "options": [
+    "Introducing tilapia aquaculture ponds set back from the shore",
+    "Removal of mangrove and shoreline vegetation for fish smoking and sand filling",
+    "Establishing a protected marine park 5 km offshore",
+    "Construction of an inland reservoir 200 km upriver"
+   ],
+   "answer": 1,
+   "explanation": "Mangroves and shoreline vegetation trap sediments and damp wave energy; their removal exposes the coast to erosion. An inland reservoir might alter sediment supply but is less direct; a marine park protects offshore life and may reduce fishing pressure; inland aquaculture away from the shore does not directly cause shoreline retreat."
+  },
+  {
+   "n": 16,
+   "topic": "Rocks and minerals",
+   "q": "A mining company samples a rock with visible interlocking crystals of quartz and feldspar and no layering. Which rock is this most likely to be?",
+   "options": [
+    "Basalt, a fine-grained extrusive igneous rock",
+    "Granite, an intrusive igneous rock",
+    "Schist, a foliated metamorphic rock",
+    "Conglomerate, a clastic sedimentary rock"
+   ],
+   "answer": 1,
+   "explanation": "Interlocking coarse crystals of quartz and feldspar indicate a coarse-grained intrusive igneous rock—granite. Schist shows foliation and metamorphic minerals, conglomerate contains rounded clasts, and basalt is fine-grained and dark with little visible feldspar/quartz crystals."
+  },
+  {
+   "n": 17,
+   "topic": "Rocks and minerals",
+   "q": "A geologist identifies a mineral sample that is metallic, has a specific gravity ~5, and streaks black; it is likely to be which mineral commonly associated with gold in Nigeria?",
+   "options": [
+    "Halite, which tastes salty and has cubic cleavage",
+    "Pyrite (iron sulfide), often found with gold in quartz veins",
+    "Gypsum, a soft non-metallic sulfate mineral",
+    "Quartz, a hard, non-metallic mineral with white streak"
+   ],
+   "answer": 1,
+   "explanation": "Pyrite is metallic, dense (specific gravity around 5), and gives a dark streak; it commonly occurs with gold in quartz veins. Gypsum and halite are non-metallic, light minerals, and quartz is hard, non-metallic and gives a light streak."
+  },
+  {
+   "n": 18,
+   "topic": "Settlements",
+   "q": "Which factor most directly explains why Ibadan expanded more rapidly than many other Nigerian cities in the mid-20th century?",
+   "options": [
+    "Discovery of offshore oil fields within Ibadan city limits",
+    "Strict city planning that prevented urban sprawl",
+    "Its coastal location providing deepwater port facilities",
+    "Its role as a regional administrative and commercial centre connected by road and rail to agricultural hinterlands"
+   ],
+   "answer": 3,
+   "explanation": "Ibadan's growth was driven by administrative functions and trade with productive agricultural hinterlands via rail and roads. Ibadan is inland (not coastal), has no oil fields within the city, and growth was largely organic rather than prevented by strict anti-sprawl planning."
+  },
+  {
+   "n": 19,
+   "topic": "Settlements",
+   "q": "A new satellite town is planned near Kano to reduce congestion. Which site selection criterion will best reduce commuting time for the greatest number of workers?",
+   "options": [
+    "Locating the town close to major transport corridors and transit hubs serving Kano's industrial areas",
+    "Choosing a site only where land prices are lowest, regardless of access",
+    "Situating the town on remote high ground to offer scenic views",
+    "Placing the town at the farthest available greenfield to avoid noise"
+   ],
+   "answer": 0,
+   "explanation": "Proximity to main transport corridors and transit hubs shortens commuting times for many workers. Remote greenfields, cheapest land regardless of access, or scenic but remote high ground would increase commute times and defeat the purpose."
+  },
+  {
+   "n": 20,
+   "topic": "Weather and climate",
+   "q": "Which of the following best explains why the dry season in northern Nigeria is often accompanied by dusty haze (harmattan) rather than heavy rainfall?",
+   "options": [
+    "Strong maritime winds from the Gulf of Guinea bringing moist air inland",
+    "Frequent passage of the Inter-Tropical Convergence Zone (ITCZ) over the region bringing rain-bearing clouds",
+    "Persistent northeasterly trade winds from the Sahara carrying dry, dusty air and low humidity",
+    "Intense daytime heating causing convective uplift and continuous thunderstorms"
+   ],
+   "answer": 2,
+   "explanation": "Harmattan occurs when dry northeasterly winds from the Sahara blow over northern Nigeria, bringing dust and low humidity. Maritime or ITCZ-related options would bring moisture and rain, which contradict the observed dry, dusty conditions."
+  },
+  {
+   "n": 21,
+   "topic": "Weather and climate",
+   "q": "During a single day in Lagos the wind shifts gradually from southeast in the morning to northwest in the evening and surface temperature falls. Which local wind phenomenon most plausibly explains this pattern?",
+   "options": [
+    "Sea breeze developing in the afternoon then switching to land breeze after sunset is unlikely; pattern indicates passage of a frontal system is unlikely; the best explanation is an onshore breeze followed by offshore flow due to diurnal heating and cooling",
+    "A large-scale monsoon reversal occurring within one day",
+    "Passage of a cold front across the city bringing the northwesterly winds",
+    "A mountain valley wind (anabatic then katabatic) caused by nearby highlands"
+   ],
+   "answer": 0,
+   "explanation": "Coastal diurnal effects cause onshore winds (southeast) during daytime and offshore (northwest) at night as land cools, matching the temperature drop. A cold front or monsoon reversal does not usually change direction steadily within a single day; Lagos's terrain makes valley winds unlikely to dominate city-scale wind shifts."
+  },
+  {
+   "n": 22,
+   "topic": "Latitude, longitude and time",
+   "q": "A traveler leaves Lagos (6.5°N, 3.4°E) at 09:00 local time and flies due east toward Douala, Cameroon, crossing from longitude 3.4°E to 9.4°E. How many minutes later will the local solar time be at the new longitude, ignoring time zone boundaries?",
+   "options": [
+    "48 minutes later",
+    "36 minutes earlier",
+    "6 minutes later",
+    "24 minutes later"
+   ],
+   "answer": 3,
+   "explanation": "Difference in longitude = 6.0°. Solar time changes by 4 minutes per degree, so 6×4 = 24 minutes. Traveling east advances local solar time. Other choices miscalculate degree difference or direction."
+  },
+  {
+   "n": 23,
+   "topic": "Latitude, longitude and time",
+   "q": "Which statement about the position of the subsolar point is correct for the day of the March equinox?",
+   "options": [
+    "It lies at 0° latitude (the Equator) so the sun is overhead at the Equator at local noon",
+    "It moves rapidly from the Arctic to the Antarctic that day crossing all longitudes",
+    "It lies at 23.5°N because the Tropic of Cancer receives vertical sun on equinox",
+    "It is fixed over the Greenwich meridian (0° longitude) on the equinox"
+   ],
+   "answer": 0,
+   "explanation": "On the March equinox the subsolar point is on the Equator (0° latitude), meaning sun overhead at local noon along the Equator. It is not fixed by longitude — it falls somewhere on the Equator at local noon — and tropics are only when solstices occur."
+  },
+  {
+   "n": 24,
+   "topic": "Geography of Nigeria",
+   "q": "Which Nigerian state is least likely to have large areas of true mangrove vegetation?",
+   "options": [
+    "Delta State",
+    "Rivers State",
+    "Kano",
+    "Bayelsa State"
+   ],
+   "answer": 2,
+   "explanation": "True mangroves require tidal coastal or estuarine conditions found in Niger Delta states like Rivers, Delta, Bayelsa. Kano is inland in the Sahel-savanna zone and lacks coastal/tidal environments, so it cannot support mangrove vegetation."
+  },
+  {
+   "n": 25,
+   "topic": "Geography of Nigeria",
+   "q": "Which crop is most commonly associated with the southern rainforest belt of Nigeria and large-scale estate farming in states such as Ondo and Cross River?",
+   "options": [
+    "Cocoa",
+    "Sorghum",
+    "Groundnut",
+    "Millet"
+   ],
+   "answer": 0,
+   "explanation": "Cocoa thrives in humid southern rainforest soils and is grown on estates in Ondo and Cross River. Sorghum and millet are semi-arid savanna crops; groundnut is mainly in northern and some northern Guinea savanna zones."
+  },
+  {
+   "n": 26,
+   "topic": "Geography of Nigeria",
+   "q": "A mining company locates a cement plant near Calabar to exploit limestone. Which factor would most reduce the plant's transport costs per tonne of cement produced?",
+   "options": [
+    "Using many small trucks rather than one rail connection for long-distance transport",
+    "Building the plant where electricity costs are higher to attract labour",
+    "Proximity to deep-water port allowing bulk export by ship",
+    "Locating further inland to be closer to limestone quarries"
+   ],
+   "answer": 2,
+   "explanation": "Access to a deep-water port reduces transport cost per tonne by enabling bulk shipping. Locating inland away from port raises export costs; higher electricity costs increase production cost; many small trucks increase per-tonne transport cost versus rail or ship."
+  },
+  {
+   "n": 27,
+   "topic": "Population",
+   "q": "Nigeria's population structure shows a high proportion of people under 15 years. Which policy would most directly reduce the youth dependency ratio over time?",
+   "options": [
+    "Expanding access to voluntary family planning and reproductive health services",
+    "Increasing import tariffs to protect local industries",
+    "Building more primary schools without changing fertility",
+    "Encouraging rural-urban migration of young adults without changing birth rates"
+   ],
+   "answer": 0,
+   "explanation": "Family planning reduces fertility, lowering the proportion of young dependents and thus the youth dependency ratio. More schools improve education but do not directly reduce birth rates; tariffs or migration do not directly reduce youth population share unless fertility changes."
+  },
+  {
+   "n": 28,
+   "topic": "Map reading and scale",
+   "q": "A topographic map has a linear scale of 1:100,000. On the map, the straight-line distance between two towns is 4.2 cm. What is the actual ground distance in kilometres?",
+   "options": [
+    "4.2 km",
+    "42 km",
+    "0.42 km",
+    "420 km"
+   ],
+   "answer": 0,
+   "explanation": "Scale 1:100,000 means 1 cm = 1 km (100,000 cm = 1 km). So 4.2 cm × 1 km/cm = 4.2 km. A common mistake is to treat 1:100,000 as 1 cm = 100,000 m (which is 100 km) giving 420 km, or to misplace a decimal giving 0.42 km."
+  },
+  {
+   "n": 29,
+   "topic": "Map reading and scale",
+   "q": "On a contour map the contour interval is 20 m. A stream flows across contours that form a V pointing upstream. If one contour line crossing the stream is 120 m and the next upstream is 140 m, what is the vertical drop of the stream between those contours and what does the V-shape indicate?",
+   "options": [
+    "Vertical drop 40 m; V points upstream indicating the stream flows down the valley away from the V",
+    "Vertical drop 40 m; V points downstream indicating the stream flows toward the V",
+    "Vertical drop 20 m; V points downstream indicating the stream flows toward the V",
+    "Vertical drop 20 m; V points upstream indicating the stream flows down the valley away from the V"
+   ],
+   "answer": 3,
+   "explanation": "Contours 120 m and 140 m are successive with 20 m interval, so vertical drop = 20 m. The V shape on contours points upstream (toward higher ground) so the stream flows opposite the V, downstream away from the V. Confusion arises if one reverses upstream/downstream or doubles the interval incorrectly."
+  },
+  {
+   "n": 30,
+   "topic": "Map reading and scale",
+   "q": "A square plot shows as 3.0 cm by 3.0 cm on a map with scale 1:50,000. What is the area of the plot on the ground in hectares? (1 ha = 10,000 m²)",
+   "options": [
+    "4.5 ha",
+    "225 ha",
+    "45 ha",
+    "0.45 ha"
+   ],
+   "answer": 1,
+   "explanation": "At 1:50,000, 1 cm = 500 m, so 3.0 cm = 1,500 m. Area = 1,500 m × 1,500 m = 2,250,000 m² = 225 ha. Common mistakes include treating 1 cm as 50,000 m or misplacing decimals."
+  },
+  {
+   "n": 31,
+   "topic": "Vegetation and soils",
+   "q": "Which vegetation type is most characteristic of the Niger Delta coastline around Bayelsa State?",
+   "options": [
+    "Temperate deciduous woodland with broadleaf trees",
+    "True desert scrub with short xerophytic shrubs",
+    "Montane grassland with tussock grasses",
+    "Mangrove swamp with tall, stilt-rooted trees"
+   ],
+   "answer": 3,
+   "explanation": "The Niger Delta coast (Bayelsa) is dominated by mangrove swamps with tall trees and stilt or prop roots. Montane grassland, desert scrub and temperate deciduous woodland are inappropriate because this region is low-lying, tropical and waterlogged."
+  },
+  {
+   "n": 32,
+   "topic": "Vegetation and soils",
+   "q": "A farmer in Ekiti notices his topsoil dries and hardens into a crust each dry season and becomes laterite-like over many years. Which process best explains this soil change?",
+   "options": [
+    "Deposition of windblown sand producing sandy entisols",
+    "Intense chemical weathering with loss of silica and concentration of iron and aluminium under alternating wet and dry conditions",
+    "Leaching of calcium carbonate in an arid cold climate producing calcic horizons",
+    "Accumulation of organic matter from dense forest litter leading to peat formation"
+   ],
+   "answer": 1,
+   "explanation": "Lateritization involves intense tropical weathering where silica is leached and iron/aluminium oxides concentrate under alternating wet-dry conditions, forming hard crusts. Peat, calcic horizons, or aeolian sand deposition do not explain laterite formation in humid tropical Nigeria."
+  },
+  {
+   "n": 33,
+   "topic": "Vegetation and soils",
+   "q": "A soil sample from a farm in Oyo is described as loamy with good structure, drains moderately well and holds moisture for crops. Which texture and properties correspond to loamy soil?",
+   "options": [
+    "About a balanced mix of sand, silt and clay giving moderate drainage and good fertility",
+    "Almost pure sand with very rapid drainage and low water-holding",
+    "Predominantly clay with very poor drainage and sticky when wet",
+    "Mostly silt with extreme susceptibility to wind erosion and very low permeability"
+   ],
+   "answer": 0,
+   "explanation": "Loam is a balanced mix of sand, silt and clay, providing moderate drainage, water retention and fertility—ideal for crops. Pure sand drains too fast, heavy clay holds water and is sticky, and pure silt erodes easily; these are common misconceptions."
+  },
+  {
+   "n": 34,
+   "topic": "Transport and trade",
+   "q": "A Lagos manufacturer wants to export goods by container and must choose between Apapa Port (close, congested) and Tin Can Island Port (slightly further, less congestion). Which factor most directly favours using Tin Can Island for lower total transport cost?",
+   "options": [
+    "Apapa has fewer labourers so stevedoring is always cheaper there",
+    "Customs tariffs are lower at Tin Can Island than at Apapa",
+    "Tin Can Island is geographically closer to Europe in straight-line distance",
+    "Shorter average ship turnaround time at Tin Can reducing demurrage and delay costs"
+   ],
+   "answer": 3,
+   "explanation": "Lower ship turnaround time reduces demurrage and delay costs, directly lowering total export cost. Straight-line distance to Europe is irrelevant for port choice, labour numbers don't guarantee lower stevedoring cost, and customs tariffs are federal and the same at both ports."
+  },
+  {
+   "n": 35,
+   "topic": "Transport and trade",
+   "q": "A haulage company charges ₦120 per tonne-kilometre by road and ₦70 per tonne-kilometre by rail. For a 300 km trip moving 20 tonnes, how much would using rail save compared with road?",
+   "options": [
+    "₦84,000",
+    "₦300,000",
+    "₦360,000",
+    "₦102,000"
+   ],
+   "answer": 1,
+   "explanation": "Road: ₦120 × 300 × 20 = ₦720,000. Rail: ₦70 × 300 × 20 = ₦420,000. Saving = ₦720,000 − ₦420,000 = ₦300,000. Common mistakes are using per-km figures incorrectly or multiplying by wrong tonnage."
+  },
+  {
+   "n": 36,
+   "topic": "Transport and trade",
+   "q": "A Lagos exporter must send fresh tomatoes to Kano (about 760 km by road). Which transport factor is most important in choosing between refrigerated truck and ordinary truck for this route?",
+   "options": [
+    "Lower freight charge per tonne (cost)",
+    "Better road network connectivity (accessibility)",
+    "Higher carrying capacity (volume)",
+    "Speed and preservation (ability to keep produce fresh)"
+   ],
+   "answer": 3,
+   "explanation": "Fresh tomatoes are highly perishable over a 760 km journey; maintaining temperature and fast delivery prevent spoilage. Cost and capacity are important but cannot substitute for refrigeration/speed when the main risk is loss of quality during transit."
+  },
+  {
+   "n": 37,
+   "topic": "The earth and the solar system",
+   "q": "On the June (northern) solstice the subsolar point is at 23.5°N. Which Nigerian city will receive the most direct solar rays (closest to overhead at noon) on that day?",
+   "options": [
+    "Port Harcourt (≈4.8°N)",
+    "Calabar (≈4.9°N)",
+    "Kano (≈11.9°N)",
+    "Lagos (≈6.5°N)"
+   ],
+   "answer": 2,
+   "explanation": "On 21 June the subsolar latitude is 23.5°N, so locations with higher northern latitudes in Nigeria are closer to the subsolar point and thus receive more direct rays; Kano (~11.9°N) is the northernmost listed city. Cities nearer the equator (Calabar, Lagos, Port Harcourt) are farther from 23.5°N and receive less direct overhead sun that day."
+  },
+  {
+   "n": 38,
+   "topic": "Environmental hazards and conservation",
+   "q": "A coastal community beside the Lagos lagoon wants a long-term, low-cost method to reduce shoreline erosion and storm surge damage. Which option is the best environmental solution?",
+   "options": [
+    "Raise all houses on stilts without changing coastal vegetation",
+    "Dredge the lagoon channel deeper to improve drainage",
+    "Restore and replant mangrove belts along the shoreline",
+    "Build high concrete seawalls along the entire shoreline"
+   ],
+   "answer": 2,
+   "explanation": "Mangroves dissipate wave energy, trap sediment and reduce erosion and storm surge at relatively low cost while providing habitat. Seawalls are expensive and can worsen erosion elsewhere; dredging does not reduce wave impact; stilts protect buildings but do not prevent shoreline loss and remove the protective vegetation."
+  },
+  {
+   "n": 39,
+   "topic": "Environmental hazards and conservation",
+   "q": "Gully erosion in parts of southeastern Nigeria commonly begins where thin topsoil overlies lateritic material and vegetation is removed. Which sequence best describes the primary processes that create such gullies?",
+   "options": [
+    "Urban paving → reduced infiltration → gully formation without surface runoff",
+    "Deforestation → loss of surface protection → concentrated runoff → soil piping and collapse",
+    "Sea-level rise → salt intrusion → gully incision",
+    "Bedrock weathering → chemical dissolution → gully widening"
+   ],
+   "answer": 1,
+   "explanation": "Removing vegetation exposes soil to heavy tropical rains, concentrating runoff in channels; this initiates piping and collapse of the weak lateritic layer, forming gullies. Bedrock dissolution and sea-level processes are irrelevant inland; urban paving reduces infiltration but gullies form where concentrated runoff erodes natural soils, not without surface flow."
+  },
+  {
+   "n": 40,
+   "topic": "Agriculture",
+   "q": "A smallholder in Benue wants to increase maize yield sustainably. Which practice will most directly increase soil available nitrogen for the next season?",
+   "options": [
+    "Leave the field fallow for one season without planting cover crops",
+    "Increase planting density of maize without changing soil management",
+    "Intercrop maize with a nitrogen-fixing legume such as cowpea",
+    "Apply only potassium and phosphorus fertilizers (no nitrogen)"
+   ],
+   "answer": 2,
+   "explanation": "Legumes fix atmospheric nitrogen into the soil through symbiotic bacteria, directly increasing available N for subsequent maize crops. Simple fallow without legumes gives less nitrogen benefit; applying K and P alone does not add nitrogen; increasing maize density raises demand for N and can reduce yields if N is limiting."
+  }
+ ]
+}

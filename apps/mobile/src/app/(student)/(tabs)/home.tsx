@@ -1,6 +1,6 @@
 import { Ionicons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
-import { router, useFocusEffect } from 'expo-router';
+import { router, useFocusEffect, type Href } from 'expo-router';
 import { useCallback, useMemo, useState } from 'react';
 import { Trans, useTranslation } from 'react-i18next';
 import { Pressable, StyleSheet, View } from 'react-native';
@@ -31,6 +31,7 @@ export default function HomeScreen() {
   const { user, refresh } = useSession();
   const { t } = useTranslation('home');
   const { t: tPlan } = useTranslation('personalize');
+  const { t: tExams } = useTranslation('exams');
   const [now] = useState(() => Date.now());
   const { current: streak } = useActivity(now);
   const lib = useLibrary();
@@ -170,6 +171,42 @@ export default function HomeScreen() {
           </Text>
         </View>
       </LinearGradient>
+
+      {/* Past Questions: JAMB, WAEC and NECO */}
+      <Pressable
+        onPress={() => router.push('/exams' as Href)}
+        accessibilityRole="button"
+        accessibilityLabel={`${tExams('card.title')}. ${tExams('card.body')}`}>
+        {({ pressed }) => (
+          <LinearGradient
+            colors={['#0E7C66', '#0B4F6C']}
+            start={{ x: 0, y: 0 }}
+            end={{ x: 1, y: 1 }}
+            style={[styles.exams, { transform: [{ scale: pressed ? 0.98 : 1 }] }]}>
+            <View style={{ flex: 1, gap: 6 }}>
+              <Text variant="label" color="#9FF5D9">
+                {tExams('card.eyebrow')}
+              </Text>
+              <Text variant="heading">{tExams('card.title')}</Text>
+              <Text variant="small" color="rgba(255,255,255,0.85)">
+                {tExams('card.body')}
+              </Text>
+              <View style={styles.examChips}>
+                {(['JAMB', 'WAEC', 'NECO'] as const).map((name) => (
+                  <View key={name} style={styles.examChip}>
+                    <Text variant="small" style={{ fontFamily: 'Manrope_800ExtraBold' }} color="#fff">
+                      {name}
+                    </Text>
+                  </View>
+                ))}
+              </View>
+            </View>
+            <View style={styles.examIcon}>
+              <Ionicons name="school" size={30} color="#0E7C66" />
+            </View>
+          </LinearGradient>
+        )}
+      </Pressable>
 
       {/* Today in your plan */}
       {today && todayLesson && (
@@ -318,6 +355,22 @@ function Shortcut({
 }
 
 const styles = StyleSheet.create({
+  exams: { flexDirection: 'row', alignItems: 'center', gap: Spacing.md, padding: Spacing.lg, borderRadius: Radius.lg },
+  examChips: { flexDirection: 'row', gap: 6, marginTop: 4 },
+  examChip: {
+    paddingHorizontal: 10,
+    paddingVertical: 3,
+    borderRadius: Radius.pill,
+    backgroundColor: 'rgba(255,255,255,0.18)',
+  },
+  examIcon: {
+    width: 56,
+    height: 56,
+    borderRadius: 28,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#fff',
+  },
   restricted: { flexDirection: 'row', alignItems: 'center', gap: Spacing.sm, borderColor: Colors.reward + '88' },
   header: { flexDirection: 'row', alignItems: 'center', gap: Spacing.sm },
   avatar: {

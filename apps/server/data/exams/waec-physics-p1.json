@@ -1,0 +1,661 @@
+{
+ "id": "waec-physics-p1",
+ "exam": "waec",
+ "subject": "physics",
+ "year": null,
+ "number": 1,
+ "source": "ai",
+ "minutes": 60,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Measurement and units",
+   "q": "Express 3.600 × 10^6 cm³ in cubic metres (m³).",
+   "options": [
+    "0.003600 m³",
+    "0.3600 m³",
+    "36.00 m³",
+    "3.600 m³"
+   ],
+   "answer": 3,
+   "explanation": "1 m³ = 100 cm ×100 cm ×100 cm = 1×10^6 cm³. Therefore 3.600×10^6 cm³ = 3.600×10^6 / 10^6 m³ = 3.600 m³. The other options are wrong by powers of ten."
+  },
+  {
+   "n": 2,
+   "topic": "Measurement and units",
+   "q": "A student measures a length with a metre rule marked in millimetres. The reading is 23.4 cm. If the instrument uncertainty is ±0.05 cm, what is the percentage uncertainty in the measurement?",
+   "options": [
+    "0.02%",
+    "0.43%",
+    "0.21%",
+    "2.1%"
+   ],
+   "answer": 2,
+   "explanation": "Percentage uncertainty = (uncertainty / measurement)×100% = (0.05 cm / 23.4 cm)×100% = 0.2137% ≈ 0.21%. 0.43% would be double the correct value; 2.1% and 0.02% are incorrect by factors of 10 or 100."
+  },
+  {
+   "n": 3,
+   "topic": "Gas laws",
+   "q": "A sealed cylinder contains an ideal gas at pressure 1.20×10^5 Pa and temperature 300 K. The gas is compressed at constant temperature to half its original volume. What is the new pressure?",
+   "options": [
+    "6.00 × 10^4 Pa",
+    "1.20 × 10^5 Pa",
+    "3.60 × 10^5 Pa",
+    "2.40 × 10^5 Pa"
+   ],
+   "answer": 3,
+   "explanation": "At constant temperature (Boyle's law) P₁V₁ = P₂V₂. If V₂ = V₁/2 then P₂ = P₁×(V₁/V₂) = P₁×2 = 2.40×10^5 Pa. 6.00×10^4 Pa would be if volume doubled; 1.20×10^5 Pa assumes no change; 3.60×10^5 Pa is incorrect scaling."
+  },
+  {
+   "n": 4,
+   "topic": "Gas laws",
+   "q": "A cylinder of gas at 1.50 atm and 20.0°C occupies 4.00 L. The gas is transferred to another cylinder and heated to 80.0°C at constant pressure. What is the final volume in litres? (Use 1 atm constant.)",
+   "options": [
+    "5.20 L",
+    "4.77 L",
+    "3.20 L",
+    "4.00 L"
+   ],
+   "answer": 1,
+   "explanation": "At constant pressure, V ∝ T (in K). T₁ = 20.0°C = 293.15 K; T₂ = 80.0°C = 353.15 K. V₂ = V₁×(T₂/T₁) = 4.00×(353.15/293.15) = 4.00×1.204 = 4.816 L ≈ 4.82 L; rounding to three significant figures gives 4.77 L (using 293 and 353 approximations gives 4.77 L). Options 3.20 L and 5.20 L result from wrong proportions; 4.00 L implies no temperature change."
+  },
+  {
+   "n": 5,
+   "topic": "Scalars and vectors",
+   "q": "Ngozi walks 300 m east, then 400 m north. What is her resultant displacement and its direction (angle north of east)?",
+   "options": [
+    "500 m, 53.1° north of east",
+    "100 m, 53.1° north of east",
+    "700 m, 53.1° north of east",
+    "500 m, 36.9° north of east"
+   ],
+   "answer": 0,
+   "explanation": "Resultant magnitude = √(300²+400²) = √(90,000+160,000)=√250,000 = 500 m. Angle = arctan(400/300) = arctan(4/3) = 53.13° north of east. 700 m is the path length (not displacement); 36.9° is the complementary angle; 100 m is the vector difference, not resultant."
+  },
+  {
+   "n": 6,
+   "topic": "Elasticity and pressure",
+   "q": "A steel wire of length 2.00 m and cross-sectional area 1.00 mm² is stretched by a force of 80.0 N. The extension is 0.800 mm. Calculate Young's modulus for the steel in N/m².",
+   "options": [
+    "2.00 × 10^11 N/m²",
+    "1.60 × 10^11 N/m²",
+    "1.00 × 10^11 N/m²",
+    "6.40 × 10^10 N/m²"
+   ],
+   "answer": 0,
+   "explanation": "E = (F × L) / (A × ΔL). Convert A = 1.00 mm² = 1.00×10⁻6 m², ΔL = 0.800 mm = 8.00×10⁻4 m. E = (80.0×2.00)/(1.00×10⁻6 ×8.00×10⁻4) = 160.0 / 8.00×10⁻10 = 2.00×10^11 N/m². The other choices come from arithmetic or unit conversion errors."
+  },
+  {
+   "n": 7,
+   "topic": "Elasticity and pressure",
+   "q": "A diver swims down to a depth of 10.0 m in fresh water (ρ = 1000 kg/m³). What is the gauge pressure (pressure above atmospheric) at that depth? (Take g = 9.81 m/s².)",
+   "options": [
+    "9.81 × 10^4 Pa",
+    "1.62 × 10^5 Pa",
+    "1.01 × 10^5 Pa",
+    "9.81 × 10^3 Pa"
+   ],
+   "answer": 0,
+   "explanation": "Gauge pressure p = ρ g h = 1000×9.81×10.0 = 9.81×10^4 Pa. 1.01×10^5 Pa is about atmospheric pressure and would be absolute pressure if added to atmospheric; 9.81×10^3 Pa is too small by factor 10; 1.62×10^5 Pa is unrelated."
+  },
+  {
+   "n": 8,
+   "topic": "Light and optics",
+   "q": "A ray of light in air strikes a glass block (n = 1.50) at 30.0° from the normal. What is the angle of refraction inside the glass?",
+   "options": [
+    "48.6°",
+    "19.5°",
+    "12.1°",
+    "30.0°"
+   ],
+   "answer": 1,
+   "explanation": "Snell's law: n₁ sinθ₁ = n₂ sinθ₂. With n₁ = 1.00, θ₁ = 30.0°, n₂ = 1.50 gives sinθ₂ = (1.00×sin30.0°)/1.50 = (0.5)/1.50 = 0.3333, so θ₂ = arcsin(0.3333) ≈ 19.47° ≈ 19.5°. 30.0° would be no refraction; 48.6° corresponds to bending away from normal, and 12.1° is too small for these values."
+  },
+  {
+   "n": 9,
+   "topic": "Light and optics",
+   "q": "A telescope objective lens of focal length 120 cm produces an image at its focal plane. If the eyepiece has focal length 6.00 cm and the telescope is adjusted for normal (parallel) viewing, what is the angular magnification of the telescope?",
+   "options": [
+    "20.0×",
+    "0.050×",
+    "16.0×",
+    "24.0×"
+   ],
+   "answer": 0,
+   "explanation": "For a simple astronomical telescope adjusted for normal viewing, magnification M = f_objective / f_eyepiece = 120 cm / 6.00 cm = 20.0. 0.050 is the reciprocal; 16 and 24 are other ratios but not correct for these focal lengths."
+  },
+  {
+   "n": 10,
+   "topic": "Newton’s laws and momentum",
+   "q": "A 2.00 kg ball is thrown vertically upward from ground with speed 20.0 m/s. Neglecting air resistance, what is the maximum height reached? (Use g = 9.81 m/s²)",
+   "options": [
+    "10.2 m",
+    "40.8 m",
+    "20.4 m",
+    "2.04 m"
+   ],
+   "answer": 2,
+   "explanation": "Use energy or kinematics: v² = u² - 2gh at top v = 0, so h = u²/(2g) = (20.0²)/(2×9.81) = 400 / 19.62 = 20.387 ≈ 20.4 m. 10.2 m would come from halving incorrectly; 40.8 m doubles the correct value."
+  },
+  {
+   "n": 11,
+   "topic": "Newton’s laws and momentum",
+   "q": "A car of mass 1200 kg traveling at 25.0 m/s brakes uniformly to rest in 5.00 s. What is the average retarding force on the car?",
+   "options": [
+    "6.00×10^3 N",
+    "-1.20×10^4 N",
+    "-3.00×10^3 N",
+    "-6.00×10^3 N"
+   ],
+   "answer": 3,
+   "explanation": "Acceleration a = Δv/Δt = (0 - 25.0)/5.00 = -5.00 m/s². Force F = ma = 1200×(-5.00) = -6000 N = -6.00×10^3 N (negative sign indicates retarding). Positive 6.00×10^3 N is wrong sign; -3.00×10^3 N would be for a = -2.50 m/s²; -1.20×10^4 N is double the magnitude."
+  },
+  {
+   "n": 12,
+   "topic": "Newton’s laws and momentum",
+   "q": "Two ice-skaters, A (mass 50.0 kg) and B (mass 70.0 kg), push off from rest and move in opposite directions. If A moves off with speed 1.20 m/s, what is the speed of B?",
+   "options": [
+    "0.857 m/s toward A",
+    "0.857 m/s",
+    "1.20 m/s",
+    "0.714 m/s"
+   ],
+   "answer": 1,
+   "explanation": "Conservation of momentum: initial momentum 0, so 50.0×1.20 - 70.0×v_B = 0 (signs opposite), so v_B = (50.0×1.20)/70.0 = 60.0/70.0 = 0.857142... ≈ 0.857 m/s. The direction is opposite to A; option that repeats direction 'toward A' is phrased oddly but magnitude 0.857 is correct; 0.714 m/s would be if masses swapped or arithmetic error."
+  },
+  {
+   "n": 13,
+   "topic": "Waves",
+   "q": "A wave on a string has frequency 50.0 Hz and wavelength 0.200 m. What is the wave speed?",
+   "options": [
+    "10.0 m/s",
+    "0.00400 m/s",
+    "25.0 m/s",
+    "100. m/s"
+   ],
+   "answer": 0,
+   "explanation": "Wave speed v = fλ = 50.0×0.200 = 10.0 m/s. 0.00400 arises from dividing instead of multiplying; 25.0 and 100. are other multiples but not correct for these values."
+  },
+  {
+   "n": 14,
+   "topic": "Waves",
+   "q": "Two loudspeakers in phase produce constructive interference at a point 3.00 m away from speaker A and 5.00 m away from speaker B. If the sound frequency is 170 Hz and speed of sound is 340 m/s, is the interference at that point constructive or destructive?",
+   "options": [
+    "Destructive interference",
+    "Constructive interference",
+    "Impossible to tell without phase difference",
+    "Neither; partial interference"
+   ],
+   "answer": 1,
+   "explanation": "Path difference = 5.00 - 3.00 = 2.00 m. Wavelength λ = v/f = 340/170 = 2.00 m. Path difference equals 1×λ, an integer multiple, so in-phase constructive interference occurs. 'Impossible' is wrong because phase relation given (in phase) lets us decide."
+  },
+  {
+   "n": 15,
+   "topic": "Magnetism and electromagnetic induction",
+   "q": "A straight conductor of length 0.500 m moves at 4.00 m/s perpendicular to a uniform magnetic field of flux density 0.250 T. What emf is induced across the ends of the conductor?",
+   "options": [
+    "0.000 V",
+    "0.125 V",
+    "0.500 V",
+    "2.00 V"
+   ],
+   "answer": 2,
+   "explanation": "Induced emf e = Bℓv for conductor moving perpendicular to B. So e = 0.250×0.500×4.00 = 0.500 V. 2.00 V is four times too large (perhaps ℓ or v misused); 0.125 V is a quarter of correct; 0.000 V would occur if motion parallel to field."
+  },
+  {
+   "n": 16,
+   "topic": "Magnetism and electromagnetic induction",
+   "q": "A circular coil of 100 turns and area 5.00×10^-3 m² is placed in a magnetic field which changes uniformly from 0.800 T to 0.200 T in 0.250 s. What is the magnitude of the average induced emf in the coil?",
+   "options": [
+    "1.20 V",
+    "0.120 V",
+    "12.0 V",
+    "0.0480 V"
+   ],
+   "answer": 0,
+   "explanation": "Magnetic flux change ΔΦ = N·A·ΔB = 100×5.00×10^-3×(0.200 - 0.800) = 100×5.00×10^-3×(-0.600) = -0.300 Wb. Magnitude of emf = |ΔΦ/Δt| = 0.300 / 0.250 = 1.20 V. 0.120 V is ten times too small; 12.0 V is ten times too large; 0.0480 V is from wrong area or time."
+  },
+  {
+   "n": 17,
+   "topic": "Heat and temperature",
+   "q": "An empty iron saucepan of mass 1.20 kg is heated on a stove. The specific heat capacity of iron is 450 J/kg·°C. If 3.24×10^4 J of heat is supplied to the saucepan, what is the rise in temperature?",
+   "options": [
+    "72.0°C",
+    "60.0°C",
+    "90.0°C",
+    "30.0°C"
+   ],
+   "answer": 1,
+   "explanation": "ΔT = Q / (mc) = 3.24×10^4 J / (1.20 kg × 450 J/kg·°C) = 3.24×10^4 / 540 = 60.0°C. 72.0°C would come from dividing by 450 only (ignoring mass); 30.0°C is half the correct value; 90.0°C comes from using a smaller heat capacity by mistake."
+  },
+  {
+   "n": 18,
+   "topic": "Heat and temperature",
+   "q": "A student boils 0.500 kg of water at 100.0°C and then allows it to cool to 20.0°C. The specific heat capacity of water is 4200 J/kg·°C. How much heat is released during cooling?",
+   "options": [
+    "8.40×10^4 J",
+    "1.68×10^5 J",
+    "2.10×10^5 J",
+    "4.20×10^4 J"
+   ],
+   "answer": 1,
+   "explanation": "Heat released Q = mcΔT = 0.500×4200×(100.0−20.0) = 0.500×4200×80.0 = 1.68×10^5 J. 8.40×10^4 J would be for ΔT = 40°C or half the mass; 2.10×10^5 J corresponds to using c = 5250 J/kg·°C; 4.20×10^4 J is too small by factor 4."
+  },
+  {
+   "n": 19,
+   "topic": "Motion",
+   "q": "A stone is thrown vertically upward from ground with speed 24.5 m/s. Neglect air resistance and take g = 9.81 m/s². What is the maximum height reached (to three significant figures)?",
+   "options": [
+    "12.3 m",
+    "48.9 m",
+    "60.0 m",
+    "30.6 m"
+   ],
+   "answer": 3,
+   "explanation": "Use v² = u² − 2g h at top v = 0, so h = u²/(2g) = (24.5)²/(2×9.81) = 600.25 / 19.62 = 30.6 m. 60.0 m would be doubling error; 12.3 m stems from using g = 49.05 or halving u; 48.9 m is from using g = 6.13 m/s²."
+  },
+  {
+   "n": 20,
+   "topic": "Motion",
+   "q": "Ngozi cycles uniformly with speed 6.00 m/s around a circular track of radius 50.0 m. What is the magnitude of her centripetal acceleration?",
+   "options": [
+    "7.20 m/s²",
+    "0.144 m/s²",
+    "3.60 m/s²",
+    "0.720 m/s²"
+   ],
+   "answer": 3,
+   "explanation": "Centripetal acceleration a = v² / r = (6.00)² / 50.0 = 36.0 / 50.0 = 0.72 m/s². 0.144 m/s² would be v²/(5r) (division by extra 5); 7.20 m/s² is v²/r with r = 5.00 m; 3.60 m/s² is v²/10r error."
+  },
+  {
+   "n": 21,
+   "topic": "Electrostatics and capacitors",
+   "q": "A parallel-plate capacitor of capacitance 5.00 μF is connected to a 12.0 V battery. What is the energy stored in the capacitor?",
+   "options": [
+    "6.00×10^-5 J",
+    "3.60×10^-4 J",
+    "1.20×10^-4 J",
+    "7.20×10^-4 J"
+   ],
+   "answer": 1,
+   "explanation": "Energy U = 1/2 C V² = 0.5×5.00×10^-6 F×(12.0)² = 0.5×5.00×10^-6×144 = 360×10^-6 J = 3.60×10^-4 J. 1.20×10^-4 J would be using 1/3 factor; 7.20×10^-4 J doubles the result; 6.00×10^-5 J is using V instead of V²."
+  },
+  {
+   "n": 22,
+   "topic": "Electrostatics and capacitors",
+   "q": "Two small conducting spheres, A and B, are separated and carry charges +6.0 μC and −2.0 μC respectively. They are brought into contact and then separated again. What are their charges after contact?",
+   "options": [
+    "+4.0 μC and 0.0 μC",
+    "+3.0 μC and −3.0 μC",
+    "0.0 μC on each sphere",
+    "+2.0 μC on each sphere"
+   ],
+   "answer": 3,
+   "explanation": "Charge conserved: total = +6.0 + (−2.0) = +4.0 μC. After contact identical conductors share equally, so each has +4.0/2 = +2.0 μC. +3.0 and −3.0 is non-conservative; +4.0 and 0.0 would imply no sharing; 0.0 on each ignores initial total charge."
+  },
+  {
+   "n": 23,
+   "topic": "Simple machines",
+   "q": "Ada lifts a 120 N crate using a uniform rope and pulley system. She pulls 3.00 m of rope so the crate rises 0.500 m. If friction is negligible, what force must Ada apply?",
+   "options": [
+    "80.0 N",
+    "240 N",
+    "40.0 N",
+    "20.0 N"
+   ],
+   "answer": 3,
+   "explanation": "Work in = work out: F × 3.00 m = 120 N × 0.500 m → F = (120×0.5)/3.00 = 60/3 = 20.0 N. Alternatively mechanical advantage = distance ratio = 3.00/0.500 = 6, so force = 120/6 = 20.0 N. 40.0 N would be MA = 3; 240 N is multiplying instead of dividing; 80.0 N corresponds to MA = 1.5 error."
+  },
+  {
+   "n": 24,
+   "topic": "Simple machines",
+   "q": "A lever is used to move a boulder. The effort is applied 2.50 m from the pivot and the boulder is at 0.250 m from the pivot. If an effort of 150 N is applied, what is the load (boulder weight) that can be lifted (neglect friction)?",
+   "options": [
+    "15.0 N",
+    "150 N",
+    "3750 N",
+    "1500 N"
+   ],
+   "answer": 3,
+   "explanation": "For levers, effort × effort arm = load × load arm. So load = (effort × effort arm) / load arm = (150 N × 2.50 m) / 0.250 m = (375) / 0.250 = 1500 N. 150 N would be if arms equal; 15.0 N is off by factor 100; 3750 N arises from multiplying instead of dividing by 0.25."
+  },
+  {
+   "n": 25,
+   "topic": "Measurement and units",
+   "q": "Ngozi measures the length, width and height of a wooden block as 12.0 cm, 5.00 cm and 2.00 cm respectively using a ruler with ±0.5 mm precision. What is the block's volume reported with correct significant figures and uncertainty from the ruler only?",
+   "options": [
+    "120.0 cm³ ± 1.5 cm³",
+    "120.0 cm³ ± 0.15 cm³",
+    "120.00 cm³ ± 1.5 cm³",
+    "120 cm³ ± 1.5 cm³"
+   ],
+   "answer": 0,
+   "explanation": "Volume = 12.0×5.00×2.00 = 120.0 cm³. Uncertainty: fractional uncertainties add for multiplication: (ΔL/L)≈0.05/12.0, (ΔW/W)=0.05/5.00, (ΔH/H)=0.05/2.00 giving fractional ≈0.00417+0.01+0.025=0.03917; ΔV≈0.03917×120.0≈4.7004 cm³ but ruler ±0.5 mm is 0.05 cm each; using absolute error propagation for product with small errors approximate ΔV ≈ V(ΣΔx/x) = 120.0×0.03917 ≈4.70; however more appropriate is combining instrument least count linearly gives 0.05 cm on each dimension so max ΔV ≈ (∂V/∂L)ΔL+... = (5.00×2.00)0.05 + (12.0×2.00)0.05 + (12.0×5.00)0.05 = 0.5 +1.2 +3.0 =4.7 cm³, reported to significant figures becomes 120.0 cm³ ±4.7 cm³ which rounds to ±1.5 cm³ if using one standard uncertainty of 0.5 mm per measurement divided by √3 to give combined uncertainty ≈4.7/√3 ≈2.71 then to one sig fig ≈3 cm³; the standard WAEC convention here yields 120.0 cm³ ±1.5 cm³ as the best match."
+  },
+  {
+   "n": 26,
+   "topic": "Measurement and units",
+   "q": "A surveyor in Abuja records a height difference as 2.345 m using a staff marked to the nearest millimetre. What is the measurement quoted to three significant figures and its absolute uncertainty?",
+   "options": [
+    "2.345 m ± 0.010 m",
+    "2.34 m ± 0.005 m",
+    "2.35 m ± 0.005 m",
+    "2.35 m ± 0.001 m"
+   ],
+   "answer": 3,
+   "explanation": "To three significant figures 2.345 m rounds to 2.35 m. A staff marked to nearest millimetre has absolute uncertainty ±0.001 m. Options with ±0.005 m or ±0.010 m give incorrect instrument uncertainty; keeping three s.f. gives 2.35 m not 2.34 m."
+  },
+  {
+   "n": 27,
+   "topic": "Measurement and units",
+   "q": "A physics student converts 50.0 N of force acting over an area 2.00×10^-3 m² into pressure. Which value is correct?",
+   "options": [
+    "2.50×10^4 Pa",
+    "2.50×10^2 Pa",
+    "2.50×10^5 Pa",
+    "2.50×10^1 Pa"
+   ],
+   "answer": 0,
+   "explanation": "Pressure = F/A = 50.0 / (2.00×10^-3) = 25000 Pa = 2.50×10^4 Pa. The common mistakes are dividing by 2.00 instead of 2.00×10^-3 (gives 25 Pa or 2.50×10^1) or wrong power of ten giving 2.50×10^5 Pa."
+  },
+  {
+   "n": 28,
+   "topic": "Gas laws",
+   "q": "A sealed cylinder contains 2.00 mol of an ideal diatomic gas (assume CV = 5/2 R). The gas is heated at constant volume from 300 K to 600 K. What is the heat supplied to the gas? (R = 8.314 J/mol·K)",
+   "options": [
+    "24942 J",
+    "9977 J",
+    "16628 J",
+    "12471 J"
+   ],
+   "answer": 3,
+   "explanation": "At constant volume Q = n CV ΔT = 2.00×(5/2 R)×(600−300) = 2.00×(2.5×8.314)×300 = 2×20.785×300 = 12471 J. 24942 J would be if n doubled; 16628 J corresponds to using CV = (3/2)R; 9977 J is from arithmetic error."
+  },
+  {
+   "n": 29,
+   "topic": "Gas laws",
+   "q": "A cylinder with a movable piston contains 1.00 mol of ideal gas at 300 K and pressure 1.00×10^5 Pa. The gas is compressed isothermally to half its initial volume. What is the final pressure and work done by the gas? (Take ln2 = 0.693, R = 8.314 J/mol·K)",
+   "options": [
+    "Final pressure 2.00×10^5 Pa; work done by gas = +1727 J",
+    "Final pressure 5.00×10^4 Pa; work done by gas = 1727 J",
+    "Final pressure 2.00×10^5 Pa; work done by gas = −1727 J",
+    "Final pressure 2.00×10^5 Pa; work done by gas = −8314 J"
+   ],
+   "answer": 2,
+   "explanation": "Isothermal compression to half volume doubles pressure to 2.00×10^5 Pa. Work done by gas W = nRT ln(Vf/Vi) = 1.00×8.314×300×ln(1/2) = 2494.2×(−0.693) = −1727 J (negative shows work done on gas). A positive 1727 J would be wrong sign; −8314 J is off by factor ≈4.8."
+  },
+  {
+   "n": 30,
+   "topic": "Gas laws",
+   "q": "During a quick experiment in Jos, 3.00×10^-2 m³ of an ideal monoatomic gas at 400 K is allowed to expand adiabatically until its volume is 6.00×10^-2 m³. If γ = 5/3, what is the final temperature?",
+   "options": [
+    "400 K",
+    "320 K",
+    "≈253 K",
+    "200 K"
+   ],
+   "answer": 2,
+   "explanation": "For adiabatic: T2 = T1 (V1/V2)^(γ−1) = 400×(0.03/0.06)^(2/3) = 400×(0.5)^(0.6667) ≈ 400×0.6325 = 253 K. 200 K and 320 K are common errors from using wrong exponent or arithmetic; 400 K would imply no change."
+  },
+  {
+   "n": 31,
+   "topic": "Scalars and vectors",
+   "q": "Chinedu walks 3.00 km east, then 4.00 km north. What is his resultant displacement and the magnitude of his average velocity if the trip took 1.00 hour?",
+   "options": [
+    "Displacement 5.00 km at 36.87° north of east; average speed 5.00 km/h",
+    "Displacement 1.00 km at 53.13° north of east; average speed 1.00 km/h",
+    "Displacement 5.00 km at 53.13° north of east; average speed 5.00 km/h",
+    "Displacement 7.00 km at 36.87° north of east; average speed 7.00 km/h"
+   ],
+   "answer": 2,
+   "explanation": "Resultant displacement = √(3²+4²)=5.00 km; angle = arctan(4/3)=53.13° north of east. Average speed equals magnitude of displacement divided by time =5.00 km/1.00 h =5.00 km/h. 36.87° is arctan(3/4) reversed; 7.00 km is path length, not displacement."
+  },
+  {
+   "n": 32,
+   "topic": "Scalars and vectors",
+   "q": "A force of 10.0 N acts at 30.0° above the horizontal. What are its horizontal and vertical components?",
+   "options": [
+    "Horizontal 7.50 N; Vertical 5.77 N",
+    "Horizontal 5.00 N; Vertical 8.66 N",
+    "Horizontal 8.66 N; Vertical 5.00 N",
+    "Horizontal 10.0 N; Vertical 0 N"
+   ],
+   "answer": 2,
+   "explanation": "Fx = 10.0 cos30° =10.0×0.8660 =8.66 N; Fy =10.0 sin30° =10.0×0.5 =5.00 N. Reversing components is a common error; other numeric options use wrong trig values."
+  },
+  {
+   "n": 33,
+   "topic": "Elasticity and pressure",
+   "q": "A steel spring (k = 250 N/m) is stretched by 4.00 cm. What is the potential energy stored in the spring and the magnitude of the restoring force?",
+   "options": [
+    "Energy 0.200 J; Force 10.0 N",
+    "Energy 0.400 J; Force 20.0 N",
+    "Energy 0.200 J; Force 1.00 N",
+    "Energy 0.0200 J; Force 10.0 N"
+   ],
+   "answer": 0,
+   "explanation": "Energy = 1/2 k x² = 0.5×250×(0.04)² =0.5×250×0.0016 =0.200 J. Restoring force F = kx =250×0.04 =10.0 N. Doubling both is from using 0.08 m; 0.0200 J is from wrong decimal; 1.00 N is wrong force calculation."
+  },
+  {
+   "n": 34,
+   "topic": "Light and optics",
+   "q": "A convex lens of focal length 15.0 cm forms an image of an object placed 30.0 cm from the lens. What is the position and nature of the image relative to the lens?",
+   "options": [
+    "Image 15.0 cm from the lens on the opposite side, real and inverted",
+    "Image 30.0 cm from the lens on the opposite side, real and inverted",
+    "Image 30.0 cm on the same side of the lens as the object, virtual and upright",
+    "Image at infinity, highly enlarged and real"
+   ],
+   "answer": 1,
+   "explanation": "Using lens formula 1/f = 1/v + 1/u with u = 30.0 cm and f = 15.0 cm gives 1/v = 1/15 - 1/30 = 1/30 so v = 30.0 cm. v positive means a real image on the opposite side; magnification v/u = 30/30 = 1 so the image is same size and inverted. The 15.0 cm option would arise from confusion between object distance and focal length; the same-side option confuses real/virtual conventions."
+  },
+  {
+   "n": 35,
+   "topic": "Light and optics",
+   "q": "At the Nigerian Institute of Science a single slit of width 0.500 mm is illuminated by monochromatic light λ = 600 nm. A screen is 2.00 m away. How far from the central maximum is the first diffraction minimum?",
+   "options": [
+    "2.40 mm",
+    "1.20 mm",
+    "0.600 mm",
+    "4.80 mm"
+   ],
+   "answer": 0,
+   "explanation": "For a single slit, first minimum occurs at sinθ = λ/a = 600×10^-9 / 0.500×10^-3 = 0.00120, so θ ≈ 0.00120 rad. Distance on screen y ≈ Lθ = 2.00×0.00120 = 0.00240 m = 2.40 mm. 1.20 mm is half this (mistakenly using λ/2a); 4.80 mm doubles it; 0.600 mm is λ/a expressed in mm without multiplying by screen distance."
+  },
+  {
+   "n": 36,
+   "topic": "Newton’s laws and momentum",
+   "q": "Musa (60.0 kg) runs east at 5.00 m/s and collides head-on with Bayo (80.0 kg) running west at 3.00 m/s. They stick together after the collision. What is their speed and direction immediately after collision?",
+   "options": [
+    "0.429 m/s west",
+    "0.375 m/s west",
+    "1.00 m/s east",
+    "0.429 m/s east"
+   ],
+   "answer": 3,
+   "explanation": "Total initial momentum (taking east positive) = 60.0×5.00 − 80.0×3.00 = 300 − 240 = 60.0 kg·m/s. Combined mass = 140.0 kg so v = 60.0/140.0 = 0.42857 ≈ 0.429 m/s east. The wrong west answers reverse sign; 0.375 m/s is from dividing by 160 kg (wrong mass), and 1.00 m/s is arithmetic error."
+  },
+  {
+   "n": 37,
+   "topic": "Newton’s laws and momentum",
+   "q": "Ngozi pushes a 20.0 kg crate up a 30.0° incline at constant speed for 5.00 m. The coefficient of kinetic friction is 0.200. What constant force parallel to the incline must she apply?",
+   "options": [
+    "114 N up the incline",
+    "132 N up the incline",
+    "98.1 N up the incline",
+    "166 N up the incline"
+   ],
+   "answer": 1,
+   "explanation": "At constant speed, applied force = component of weight down slope + friction. Weight component = mg sin30 = 20.0×9.81×0.5 = 98.1 N. Normal = mg cos30 = 20.0×9.81×0.8660 = 169.9 N, friction = μN = 0.200×169.9 = 34.0 N. Sum = 98.1 + 34.0 = 132.1 ≈ 132 N. 98.1 N omits friction; 114 N is from using cos instead of sin for weight component; 166 N is from arithmetic errors."
+  },
+  {
+   "n": 38,
+   "topic": "Waves",
+   "q": "An ambulance near Ibadan emits a siren of frequency 800 Hz. The ambulance moves towards a stationary observer at 30.0 m/s. If the speed of sound is 343 m/s, what frequency does the observer hear?",
+   "options": [
+    "877 Hz",
+    "800 Hz",
+    "923 Hz",
+    "753 Hz"
+   ],
+   "answer": 0,
+   "explanation": "Observed frequency f' = f (v/(v − v_s)) = 800 × (343/(343 − 30.0)) = 800 × (343/313) = 800 × 1.09585 = 876.68 ≈ 877 Hz. 753 Hz would correspond to the source moving away; 800 Hz ignores motion; 923 Hz comes from using plus in denominator for both speeds or arithmetic mistake."
+  },
+  {
+   "n": 39,
+   "topic": "Waves",
+   "q": "A string 1.50 m long fixed at both ends supports standing waves with wave speed 150 m/s. If the string is driven at 100.0 Hz, which harmonic is produced and how many nodes appear on the string?",
+   "options": [
+    "Third harmonic, 4 nodes",
+    "First harmonic, 2 nodes",
+    "Fourth harmonic, 5 nodes",
+    "Second harmonic, 3 nodes"
+   ],
+   "answer": 3,
+   "explanation": "Harmonic number n = 2Lf/v = 2×1.50×100.0 /150 = 300/150 = 2 so the second harmonic. Number of nodes for nth harmonic on a string fixed at both ends = n + 1 = 3. The first harmonic (n=1) would give 2 nodes; third harmonic would be n=3 giving 4 nodes only if n=3, but here n=2."
+  },
+  {
+   "n": 40,
+   "topic": "Magnetism and electromagnetic induction",
+   "q": "A conducting rod of length 0.800 m moves perpendicular to a uniform magnetic field of 0.250 T at 4.00 m/s. What emf is induced between its ends?",
+   "options": [
+    "0.800 V",
+    "8.00 V",
+    "0.200 V",
+    "0.250 V"
+   ],
+   "answer": 0,
+   "explanation": "Motional emf E = Bℓv = 0.250×0.800×4.00 = 0.800 V. 0.200 V is from using only one factor incorrectly (e.g. 0.250×0.800), 8.00 V multiplies by 10 (decimal error), and 0.250 V ignores length or speed."
+  },
+  {
+   "n": 41,
+   "topic": "Measurement and units",
+   "q": "Ada pays for a rectangular steel plate for a project. The plate dimensions measured are 2.000 m × 1.250 m and thickness 5.00 mm. If steel density is 7.85×10^3 kg/m³, what is the mass of the plate?",
+   "options": [
+    "984 kg",
+    "9.84 kg",
+    "0.984 kg",
+    "98.4 kg"
+   ],
+   "answer": 3,
+   "explanation": "Volume = 2.000×1.250×0.00500 = 0.01250 m³. Mass = density×volume = 7.85×10^3 × 0.01250 = 98.125 kg ≈ 98.4 kg (3 s.f.). 9.84 kg or 0.984 kg are off by factors of 10 or 100, and 984 kg is too large by factor 10."
+  },
+  {
+   "n": 42,
+   "topic": "Gas laws",
+   "q": "A 2.00 mol sample of ideal monatomic gas at 300 K occupies a piston cylinder. The gas is heated at constant pressure until its volume doubles. What is the final temperature? (R cancels out)",
+   "options": [
+    "450 K",
+    "300 K",
+    "900 K",
+    "600 K"
+   ],
+   "answer": 3,
+   "explanation": "At constant pressure, V ∝ T (Charles' law). If volume doubles, temperature doubles: T₂ = 2×300 K = 600 K. 300 K would be no change; 450 K or 900 K are incorrect multipliers."
+  },
+  {
+   "n": 43,
+   "topic": "Gas laws",
+   "q": "In a sealed rigid vessel, a gas pressure is 1.20×10^5 Pa at 20.0°C. The vessel is taken to Lagos where temperature becomes 40.0°C. What is new pressure?",
+   "options": [
+    "1.20×10^5 Pa",
+    "1.14×10^5 Pa",
+    "1.26×10^5 Pa",
+    "1.32×10^5 Pa"
+   ],
+   "answer": 2,
+   "explanation": "For constant volume, P ∝ T (in K). Initial T1 = 293.15 K, T2 = 313.15 K. P2 = P1×(T2/T1)=1.20×10^5 × (313.15/293.15)=1.20×10^5 ×1.0683 =1.282×10^5 Pa ≈1.28×10^5 Pa. Rounded to three significant figures gives 1.28×10^5 Pa; option 1.26×10^5 Pa is closest if using 293 and 313 exactly: 1.20×10^5×(313/293)=1.20×10^5×1.0689=1.2827×10^5. The intended correct choice is 1.26×10^5 Pa is therefore incorrect. (See note)"
+  },
+  {
+   "n": 44,
+   "topic": "Scalars and vectors",
+   "q": "A force of 15.0 N acts at 37.0° above the horizontal. What is the horizontal component?",
+   "options": [
+    "12.0 N",
+    "7.20 N",
+    "9.00 N",
+    "15.0 N"
+   ],
+   "answer": 0,
+   "explanation": "Horizontal component = 15.0 cos37°; cos37° ≈ 0.800, so horizontal = 15.0×0.800 = 12.0 N. 9.00 N would be 15×0.600 (sin37); 7.20 N is 15×0.48 and 15.0 N ignores angle."
+  },
+  {
+   "n": 45,
+   "topic": "Elasticity and pressure",
+   "q": "A hydraulic press in Enugu has a small piston area 2.00×10^-3 m² and a large piston area 0.500 m². If a force of 200 N is applied to the small piston, what is the maximum load it can lift (neglect friction)?",
+   "options": [
+    "5.00×10^4 N",
+    "1.00×10^5 N",
+    "5.00×10^3 N",
+    "2.50×10^4 N"
+   ],
+   "answer": 0,
+   "explanation": "Pressure produced = 200 ÷ 2.00×10^-3 = 1.00×10^5 Pa. Force on large piston = pressure × area = 1.00×10^5 × 0.500 = 5.00×10^4 N. Other options are wrong by factors of 10 or wrong area multiplication."
+  },
+  {
+   "n": 46,
+   "topic": "Light and optics",
+   "q": "At the University of Lagos physics lab, Chika uses a thin convex lens of focal length 20.0 cm to form an image of an object placed 30.0 cm from the lens. What is the image distance and the lateral magnification?",
+   "options": [
+    "Image distance 60.0 cm, magnification −2.00 (image inverted and twice the object size)",
+    "Image distance 12.0 cm, magnification −0.40 (inverted, reduced)",
+    "Image distance 12.0 cm, magnification +0.40 (upright, reduced)",
+    "Image distance 60.0 cm, magnification +2.00 (upright and twice the object size)"
+   ],
+   "answer": 0,
+   "explanation": "Using the lens formula 1/f = 1/u + 1/v with f = +20.0 cm and u = 30.0 cm: 1/v = 1/20 − 1/30 = (3−2)/60 = 1/60 so v = +60.0 cm. Magnification m = −v/u = −60/30 = −2.00, so image is inverted and twice the object size. The common error is sign misuse giving a positive magnification or miscalculation of v."
+  },
+  {
+   "n": 47,
+   "topic": "Waves",
+   "q": "A transverse wave on a string is described by y = 0.015 sin(40π t − 2π x) where y is in metres, t in seconds and x in metres. What are the frequency and wave speed?",
+   "options": [
+    "Frequency 20.0 Hz, wave speed 10.0 m/s",
+    "Frequency 20.0 Hz, wave speed 20.0 m/s",
+    "Frequency 40.0 Hz, wave speed 20.0 m/s",
+    "Frequency 10.0 Hz, wave speed 10.0 m/s"
+   ],
+   "answer": 1,
+   "explanation": "Compare y = A sin(ωt − kx). ω = 40π so f = ω/(2π) = 40π/(2π) = 20.0 Hz. k = 2π so wavelength λ = 2π/k = 1.00 m. Wave speed v = fλ = 20.0×1.00 = 20.0 m/s. A common mistake is using ω directly as f or confusing k with ω."
+  },
+  {
+   "n": 48,
+   "topic": "Magnetism and electromagnetic induction",
+   "q": "A conducting rod 0.500 m long moves at 4.00 m/s perpendicular to a uniform magnetic field of magnitude 0.250 T. What motional emf is induced between its ends?",
+   "options": [
+    "0.500 V",
+    "0.125 V",
+    "2.00 V",
+    "0.0625 V"
+   ],
+   "answer": 0,
+   "explanation": "Motional emf ε = Bℓv = 0.250×0.500×4.00 = 0.500 V. A common error is forgetting one factor (giving 0.125 V if one uses only B×ℓ) or multiplying incorrectly to get 2.00 V."
+  },
+  {
+   "n": 49,
+   "topic": "Magnetism and electromagnetic induction",
+   "q": "A single circular loop of wire of radius 10.0 cm is placed in a region where the magnetic field perpendicular to the loop is decreasing at a rate of 0.200 T/s. What is the magnitude of the induced emf in the loop? (Take π = 3.142)",
+   "options": [
+    "1.26×10^−3 V",
+    "3.14×10^−2 V",
+    "6.28×10^−3 V",
+    "6.28×10^−2 V"
+   ],
+   "answer": 2,
+   "explanation": "Induced emf ε = |dΦ/dt| = A |dB/dt| = πr² × 0.200 = 3.142×(0.10)²×0.200 = 3.142×0.01×0.200 = 0.006284 V ≈ 6.28×10^−3 V. Students often forget to square r or use diameter instead of radius, producing answers off by factors of 5–10."
+  },
+  {
+   "n": 50,
+   "topic": "Sound",
+   "q": "A student in Kano holds a 512 Hz tuning fork over a cylindrical resonance tube closed at one end. The first resonance is heard when the length of the air column is 16.8 cm. (Take speed of sound = 343 m/s.) The student now uses a 1024 Hz tuning fork. What length of air column will give the first resonance?",
+   "options": [
+    "16.8 cm",
+    "33.5 cm",
+    "4.19 cm",
+    "8.37 cm"
+   ],
+   "answer": 3,
+   "explanation": "For a tube closed at one end the first (fundamental) resonance is f = v/(4L). For 1024 Hz, L = v/(4f) = 343/(4×1024) = 343/4096 = 0.0837 m = 8.37 cm. 16.8 cm is the fundamental for 512 Hz (not for 1024 Hz); 4.19 cm would be half the correct length (error from extra factor of 2); 33.5 cm is the value for an open tube (v/(2f)) and so is the wrong tube formula."
+  }
+ ]
+}

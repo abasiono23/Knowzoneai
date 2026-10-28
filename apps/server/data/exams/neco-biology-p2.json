@@ -1,0 +1,791 @@
+{
+ "id": "neco-biology-p2",
+ "exam": "neco",
+ "subject": "biology",
+ "year": null,
+ "number": 2,
+ "source": "ai",
+ "minutes": 60,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Variation and evolution",
+   "q": "A farmer in Kano observes that his maize field has some plants with unusually large ears. He saves seed from these plants and plants them the next season. After several generations the large-ear trait becomes common. Which mechanism best explains this change?",
+   "options": [
+    "Natural selection by predators favouring large ears",
+    "Artificial selection by the farmer favouring individuals with large ears",
+    "Mutation causing all plants to have large ears suddenly",
+    "Genetic drift due to random sampling in a small population"
+   ],
+   "answer": 1,
+   "explanation": "The farmer intentionally saved seeds from plants with large ears, so he imposed selection for that trait—this is artificial selection. Genetic drift requires small population and random change, not directed selection. Natural selection by predators is unlikely to favour larger ears, and a single mutation causing a population-wide change suddenly is implausible."
+  },
+  {
+   "n": 2,
+   "topic": "Variation and evolution",
+   "q": "In a population of lizards on a Nigerian island, 9% show a recessive phenotype aa. Assuming Hardy–Weinberg equilibrium, what percentage of the population are expected to be carriers (heterozygous Aa)?",
+   "options": [
+    "42%",
+    "81%",
+    "9%",
+    "18%"
+   ],
+   "answer": 0,
+   "explanation": "If q² = 0.09 then q = 0.3 and p = 0.7. Heterozygotes = 2pq = 2 × 0.7 × 0.3 = 0.42 = 42%. 18% would be q² + 2pq miscalculation; 9% is q² (recessive), and 81% is p² (homozygous dominant)."
+  },
+  {
+   "n": 3,
+   "topic": "Variation and evolution",
+   "q": "Which observation would best support the theory that two bird populations on different mountains are becoming separate species by allopatric speciation?",
+   "options": [
+    "They live in the same habitat and interbreed freely",
+    "They show different seasonal colour changes but still interbreed",
+    "They have identical DNA sequences throughout their genomes",
+    "They show distinct mating calls and do not interbreed when brought together"
+   ],
+   "answer": 3,
+   "explanation": "Allopatric speciation involves geographic separation leading to reproductive isolation; distinct mating calls and lack of interbreeding indicate reproductive isolation. Living together and interbreeding or identical DNA do not support speciation. Different seasonal colours without reproductive isolation does not indicate speciation."
+  },
+  {
+   "n": 4,
+   "topic": "Diffusion, osmosis and active transport",
+   "q": "Which process requires ATP directly to move ions against their concentration gradient across a membrane?",
+   "options": [
+    "Facilitated diffusion through a channel protein",
+    "Osmosis of water through aquaporins",
+    "Simple diffusion through phospholipid bilayer",
+    "Active transport via membrane carrier proteins (pumps)"
+   ],
+   "answer": 3,
+   "explanation": "Active transport uses carrier proteins (pumps) and ATP to move substances against gradients. Simple diffusion, facilitated diffusion, and osmosis are passive and do not use ATP directly; they move substances down their gradients."
+  },
+  {
+   "n": 5,
+   "topic": "Diffusion, osmosis and active transport",
+   "q": "A root hair cell absorbs nitrate ions (NO₃⁻) from soil where their concentration is lower than inside the cell. Which statement best explains how uptake occurs?",
+   "options": [
+    "Nitrate ions are moved by osmosis with water flow",
+    "Nitrate ions enter via exocytosis of soil solution",
+    "Nitrate ions are taken up by active transport using energy from ATP",
+    "Nitrate ions diffuse passively through the lipid bilayer down their gradient"
+   ],
+   "answer": 2,
+   "explanation": "Uptake of ions against a concentration gradient requires active transport using ATP. Ions cannot diffuse passively through the lipid bilayer if moving against the gradient; osmosis moves water not solutes, and exocytosis moves material out of cells, not into root hair cells."
+  },
+  {
+   "n": 6,
+   "topic": "Transport systems",
+   "q": "Which feature of xylem vessels most directly allows continuous upwards movement of water from roots to leaves in tall Nigerian trees?",
+   "options": [
+    "Presence of living companion cells providing metabolic energy",
+    "Lignified hollow tubes forming a continuous, unbroken column",
+    "Contractile vacuoles pumping water upward",
+    "Perforated sieve plates allowing bidirectional flow"
+   ],
+   "answer": 1,
+   "explanation": "Xylem vessels are lignified, non-living hollow tubes that form continuous columns allowing cohesion-tension driven upward movement. Companion cells and sieve plates are features of phloem, and contractile vacuoles operate in single cells, not in xylem transport."
+  },
+  {
+   "n": 7,
+   "topic": "Transport systems",
+   "q": "A student measures pulse rate at rest and after running up a flight of stairs in Abuja. Which immediate change would be expected and why?",
+   "options": [
+    "Pulse rate remains unchanged because heart rate is independent of activity",
+    "Pulse rate increases because cardiac output must rise to supply more oxygen to muscles",
+    "Pulse rate decreases because blood is diverted to the skin for cooling",
+    "Pulse rate becomes irregular due to increased blood viscosity"
+   ],
+   "answer": 1,
+   "explanation": "Exercise increases muscle oxygen demand, so heart rate and cardiac output rise, raising pulse. Pulse does not decrease at onset of exercise; heart rate is not independent of activity; exercise does not instantly cause irregular pulse from viscosity changes."
+  },
+  {
+   "n": 8,
+   "topic": "Respiration",
+   "q": "Which statement correctly contrasts aerobic and anaerobic respiration in human muscle during intense exercise?",
+   "options": [
+    "Anaerobic respiration yields more ATP than aerobic in muscle",
+    "Aerobic respiration occurs without oxygen in mitochondria",
+    "Aerobic respiration yields more ATP per glucose and produces CO₂ and H₂O, while anaerobic produces less ATP and forms lactic acid",
+    "Aerobic respiration produces lactic acid, anaerobic produces CO₂ and H₂O"
+   ],
+   "answer": 2,
+   "explanation": "Aerobic respiration (with oxygen) yields about 36 ATP per glucose and produces CO₂ and H₂O. Anaerobic (without enough oxygen) yields 2 ATP and produces lactic acid in muscles. The wrong options confuse products and ATP yields or incorrectly state oxygen dependence."
+  },
+  {
+   "n": 9,
+   "topic": "Respiration",
+   "q": "A 70 kg student at Yaba performs moderate exercise and increases oxygen consumption by 0.5 dm³ per minute above resting rate. How much extra oxygen is used in 10 minutes, and why is this oxygen needed?",
+   "options": [
+    "5.0 dm³; extra oxygen is needed for increased aerobic respiration to produce ATP",
+    "5.0 dm³; oxygen is needed to break down lactic acid into glucose directly",
+    "0.5 dm³; oxygen is used to cool the body",
+    "50 dm³; oxygen is used to produce lactic acid"
+   ],
+   "answer": 0,
+   "explanation": "0.5 dm³/min × 10 min = 5.0 dm³ extra O₂. The extra oxygen supports aerobic respiration to meet higher ATP demand. Oxygen is not primarily for cooling; lactic acid is produced under limited oxygen, not by oxygen, and oxygen does not directly convert lactic acid back into glucose in tissues."
+  },
+  {
+   "n": 10,
+   "topic": "Genetics",
+   "q": "In a pedigree chart of a family from Ibadan, a father and mother (both unaffected) have a child affected with an autosomal recessive disorder. What is the probability that a second child will be affected?",
+   "options": [
+    "25%",
+    "50%",
+    "0%",
+    "75%"
+   ],
+   "answer": 0,
+   "explanation": "Autosomal recessive conditions require both parents to be carriers (Aa × Aa) when an unaffected family has an affected child. The genotype cross gives AA : Aa : Aa : aa, so probability of affected (aa) is 1/4 or 25%. 50% is the chance for a carrier child, 0% and 75% are incorrect for this cross."
+  },
+  {
+   "n": 11,
+   "topic": "Genetics",
+   "q": "A plant breeder crosses two heterozygous tall pea plants (Tt × Tt). Tall (T) is dominant to short (t). What fraction of the offspring will be homozygous?",
+   "options": [
+    "100%",
+    "50%",
+    "75%",
+    "25%"
+   ],
+   "answer": 1,
+   "explanation": "Genotypic ratio from Tt × Tt is 1 TT : 2 Tt : 1 tt. Homozygous genotypes are TT and tt, totaling 1 + 1 = 2 out of 4 = 50%. 25% is only one homozygote (TT or tt), 75% and 100% are incorrect."
+  },
+  {
+   "n": 12,
+   "topic": "Genetics",
+   "q": "In humans, red-green colour blindness is X-linked recessive. If a woman from Lagos who is a carrier marries a man with normal vision, what is the probability their son will be colour-blind?",
+   "options": [
+    "0%",
+    "50%",
+    "25%",
+    "100%"
+   ],
+   "answer": 1,
+   "explanation": "Carrier mother genotype X^CX^c and father X^CY (normal) give sons with genotypes X^CY (normal) or X^cY (colour-blind) with equal chance. Therefore 50% of sons will be colour-blind. 0% and 100% are wrong; 25% is the chance among all children being affected, not just sons."
+  },
+  {
+   "n": 13,
+   "topic": "Diseases and their control",
+   "q": "A community in Sokoto has a sudden increase in cholera cases. Which immediate public health measure will most effectively reduce transmission?",
+   "options": [
+    "Provide mass antibiotic prophylaxis to the whole community",
+    "Ensure safe drinking water and sanitation",
+    "Require vaccination of all adults immediately",
+    "Close all schools for one week"
+   ],
+   "answer": 1,
+   "explanation": "Cholera spreads by contaminated water and poor sanitation, so providing safe drinking water and sanitation is the most effective immediate control. Mass antibiotics are not recommended for entire populations, closing schools alone won't stop waterborne spread, and there is no instant mass adult vaccination strategy for immediate outbreak control."
+  },
+  {
+   "n": 14,
+   "topic": "Diseases and their control",
+   "q": "Which feature of Plasmodium falciparum makes it more deadly than other human malaria species?",
+   "options": [
+    "It has a longer life cycle of 21 days",
+    "Ability to cause infected red blood cells to adhere to blood vessel walls (sequestration)",
+    "It only infects white blood cells",
+    "It forms thick-walled cysts in the liver"
+   ],
+   "answer": 1,
+   "explanation": "P. falciparum causes cytoadherence/sequestration of infected RBCs in capillaries, leading to severe complications like cerebral malaria. It does not have a 21-day life cycle (its cycle is ~48 hours), does not form thick-walled liver cysts (that is characteristic of some parasites like Entamoeba cysts), and it infects red blood cells, not only white blood cells."
+  },
+  {
+   "n": 15,
+   "topic": "Diseases and their control",
+   "q": "Which of the following is the best example of active immunity?",
+   "options": [
+    "An injured person is given tetanus antitoxin from another person",
+    "A patient receives pooled immunoglobulin after exposure to hepatitis A",
+    "A newborn has temporary antibodies received through breast milk",
+    "A child develops immunity after receiving measles vaccine"
+   ],
+   "answer": 3,
+   "explanation": "Active immunity arises when the body produces its own antibodies after exposure or vaccination; measles vaccine induces active immunity. The other options are passive immunity examples: pooled immunoglobulin, maternal antibodies in breast milk, and tetanus antitoxin provide immediate but temporary protection."
+  },
+  {
+   "n": 16,
+   "topic": "Support and movement",
+   "q": "Which structure in a long bone stores yellow marrow and helps reduce bone weight?",
+   "options": [
+    "Medullary cavity",
+    "Epiphysis",
+    "Articular cartilage",
+    "Periosteum"
+   ],
+   "answer": 0,
+   "explanation": "The medullary (marrow) cavity in the diaphysis contains yellow marrow (fat) and reduces bone weight. The periosteum is a membrane covering bone for growth and repair, epiphysis is the bone end with spongy bone, and articular cartilage covers joint surfaces to reduce friction."
+  },
+  {
+   "n": 17,
+   "topic": "Support and movement",
+   "q": "Which pair of muscle types is correctly matched with their control and location?",
+   "options": [
+    "Cardiac muscle — voluntary — chamber walls of lymph nodes",
+    "Smooth muscle — voluntary — attached to bones",
+    "Skeletal muscle — involuntary — wall of stomach",
+    "Skeletal muscle — voluntary — attached to bones"
+   ],
+   "answer": 3,
+   "explanation": "Skeletal muscle is under voluntary control and attaches to bones for movement. Cardiac muscle is involuntary and in heart walls (not lymph nodes), smooth muscle is involuntary and found in walls of organs like stomach (not attached to bones), and skeletal muscle is not involuntary."
+  },
+  {
+   "n": 18,
+   "topic": "Excretion",
+   "q": "A urine sample from a 30-year-old man shows a concentration of urea at 0.40 g per 100 cm³. If his urine output in 24 hours is 1500 cm³, what mass of urea is excreted per day?",
+   "options": [
+    "60 g",
+    "0.60 g",
+    "4.0 g",
+    "6.0 g"
+   ],
+   "answer": 3,
+   "explanation": "Urea concentration 0.40 g per 100 cm³ means 0.40 g/100 cm³ = 0.004 g/cm³. Multiply by 1500 cm³ gives 0.004 × 1500 = 6.0 g per day. 0.60 g results from a decimal error, 4.0 g from using 1000 cm³, and 60 g is ten times too large."
+  },
+  {
+   "n": 19,
+   "topic": "Excretion",
+   "q": "Which kidney structure is primarily responsible for ultrafiltration of blood under pressure?",
+   "options": [
+    "Proximal convoluted tubule",
+    "Loop of Henle",
+    "Collecting duct",
+    "Glomerulus"
+   ],
+   "answer": 3,
+   "explanation": "The glomerulus (capillary tuft in Bowman's capsule) filters blood plasma under hydrostatic pressure, producing filtrate. The Loop of Henle concentrates urine, collecting duct modifies final urine and proximal tubule reabsorbs substances but is not the primary ultrafiltration site."
+  },
+  {
+   "n": 20,
+   "topic": "Reproduction",
+   "q": "In a population of maize in Kaduna, a farmer notices some plants produce barren tassels (no pollen) while others are normal. If barren tassel is caused by a single recessive gene b and normal is dominant B, what is the expected phenotypic ratio among offspring when a heterozygous plant (Bb) is crossed with a homozygous recessive plant (bb)?",
+   "options": [
+    "3 normal : 1 barren tassel",
+    "All offspring barren tassel",
+    "1 normal : 1 barren tassel",
+    "All offspring normal"
+   ],
+   "answer": 2,
+   "explanation": "Cross Bb × bb gives gametes B and b from Bb and only b from bb, producing Bb and bb in equal numbers (50% each). So phenotype ratio is 1 normal (Bb) : 1 barren (bb). Options claiming 3:1 or uniform offspring ignore the parental genotypes."
+  },
+  {
+   "n": 21,
+   "topic": "Reproduction",
+   "q": "A 16-year-old girl from Enugu has a menstrual cycle of about 35 days. Compared with the usual 28-day cycle, which of the following is most likely true about the timing of ovulation in her cycle?",
+   "options": [
+    "Ovulation still occurs on day 14",
+    "Ovulation does not occur in a 35-day cycle",
+    "Ovulation occurs earlier than day 7",
+    "Ovulation occurs later than day 14, around day 21"
+   ],
+   "answer": 3,
+   "explanation": "In a typical cycle ovulation is about 14 days before the next period; for a 35-day cycle that places ovulation near day 21. Saying it occurs earlier or still on day 14 ignores the fixed luteal phase length. Ovulation can still occur in a 35-day cycle, so saying it does not occur is incorrect."
+  },
+  {
+   "n": 22,
+   "topic": "Reproduction",
+   "q": "A couple in Lagos undergoes fertility investigation. Semen analysis shows low sperm count and few motile sperm. Which treatment is most appropriate if the female partner has normal reproductive function?",
+   "options": [
+    "Intrauterine insemination (IUI) with processed donor or partner sperm",
+    "Tubal ligation for the female",
+    "Hysterectomy for the female",
+    "Oral contraceptives for the female"
+   ],
+   "answer": 0,
+   "explanation": "IUI places concentrated motile sperm into the uterus and is appropriate for male-factor infertility when the female is normal. The wrong options are contraceptive or sterilizing surgeries unrelated to treating infertility."
+  },
+  {
+   "n": 23,
+   "topic": "Nutrition in plants and animals",
+   "q": "A student measures the rate of transpiration from potted okra plants in Jos. Which treatment will most directly reduce transpiration rate?",
+   "options": [
+    "Adding more nitrate fertiliser to the soil",
+    "Covering the soil surface with plastic and reducing air movement around the leaves",
+    "Increasing light intensity above the plants",
+    "Watering the plants twice as often"
+   ],
+   "answer": 1,
+   "explanation": "Transpiration is reduced by lowering evaporation from soil and reducing air movement (less humid-air exchange). More light and frequent watering often increase transpiration; extra nitrate fertiliser affects growth but not directly reduce transpiration."
+  },
+  {
+   "n": 24,
+   "topic": "Nutrition in plants and animals",
+   "q": "Which of the following correctly matches digestive enzyme and site of action in humans?",
+   "options": [
+    "Amylase — stomach; trypsin — mouth",
+    "Pepsin — small intestine; lipase — stomach",
+    "Pepsin — stomach; lipase — small intestine",
+    "Lactase — stomach; pepsin — mouth"
+   ],
+   "answer": 2,
+   "explanation": "Pepsin acts in the stomach and lipase mainly in the small intestine. Amylase acts in the mouth and small intestine (not stomach), trypsin in small intestine, and lactase in small intestine, so the wrong options misplace enzymes and sites."
+  },
+  {
+   "n": 25,
+   "topic": "Nutrition in plants and animals",
+   "q": "A goat in Ibadan shows signs of deficiency: poor growth, soft bones and fractures. Blood tests show low calcium but normal vitamin D. Which dietary change will most directly correct the goat's problem?",
+   "options": [
+    "Add more carbohydrate-rich grains",
+    "Increase dietary calcium, for example by adding crushed limestone (calcium carbonate) to feed",
+    "Reduce protein in the diet",
+    "Give iron supplements"
+   ],
+   "answer": 1,
+   "explanation": "Low calcium causes soft bones (osteomalacia) and adding calcium directly corrects the deficiency. Protein or carbohydrate changes and iron supplements do not remedy calcium deficiency."
+  },
+  {
+   "n": 26,
+   "topic": "Ecology",
+   "q": "In a freshwater pond near Ibadan, two species of minnows feed on the same plankton. Over several years, one species begins to feed mainly near the surface while the other feeds near the bottom. This is best described as an example of:",
+   "options": [
+    "Primary succession after disturbance",
+    "Resource partitioning reducing competition",
+    "Genetic drift leading to speciation",
+    "Predation pressure causing mimicry"
+   ],
+   "answer": 1,
+   "explanation": "When competing species use different parts of a shared resource (surface vs bottom feeding), that is resource partitioning which reduces competition. Genetic drift, succession, and mimicry are different processes and do not describe niche separation due to competition."
+  },
+  {
+   "n": 27,
+   "topic": "Ecology",
+   "q": "A community garden in Abeokuta is monitored for energy flow. If producers capture 10 000 kJ of sunlight and the net primary productivity (NPP) is 2 000 kJ, and herbivores consume 50% of NPP with 20% of that consumption converted to herbivore biomass, what is the energy stored as herbivore biomass?",
+   "options": [
+    "20 kJ",
+    "500 kJ",
+    "200 kJ",
+    "1000 kJ"
+   ],
+   "answer": 2,
+   "explanation": "Herbivores consume 50% of NPP: 0.5 × 2000 = 1000 kJ consumed. Of that, 20% is converted to herbivore biomass: 0.2 × 1000 = 200 kJ. Other options misapply percentages or use NPP directly."
+  },
+  {
+   "n": 28,
+   "topic": "Nervous and hormonal coordination",
+   "q": "A secondary school student in Benin pricks his finger and quickly withdraws his hand before feeling pain. Which pathway best explains this rapid withdrawal?",
+   "options": [
+    "Stimulus → sensory neurone → spinal cord interneurone → motor neurone → muscle (reflex arc)",
+    "Hormones released into blood cause immediate muscle contraction",
+    "Stimulus → brain cortex → motor neurone → muscle",
+    "Stimulus → motor neurone directly to muscle without sensory input"
+   ],
+   "answer": 0,
+   "explanation": "A reflex arc uses a sensory neurone, spinal interneurone, and motor neurone for rapid response without routing to the brain cortex. The brain-mediated path is slower; motor neurone cannot act without sensory input, and hormones act too slowly for immediate withdrawal."
+  },
+  {
+   "n": 29,
+   "topic": "Nervous and hormonal coordination",
+   "q": "A patient in Port Harcourt has an overactive thyroid producing excess thyroxine. Which symptom is most likely and which treatment is appropriate?",
+   "options": [
+    "Symptom: weight loss with rapid heartbeat; Treatment: drugs to inhibit thyroid hormone production (antithyroid drugs) or surgery",
+    "Symptom: low metabolic rate and weight gain; Treatment: give extra iodised salt",
+    "Symptom: muscle hypertrophy; Treatment: anabolic steroids",
+    "Symptom: bluish skin and low pulse; Treatment: insulin injection"
+   ],
+   "answer": 0,
+   "explanation": "Excess thyroxine causes high metabolism, weight loss and tachycardia; treatment includes antithyroid drugs or thyroidectomy. Low metabolic rate with weight gain is hypothyroidism (not excess), and other options describe unrelated conditions and incorrect treatments."
+  },
+  {
+   "n": 30,
+   "topic": "Cell structure and organisation",
+   "q": "Which of the following organelles is the main site of ATP production and has its own DNA, making it maternally inherited in humans?",
+   "options": [
+    "Mitochondrion",
+    "Rough endoplasmic reticulum",
+    "Lysosome",
+    "Golgi apparatus"
+   ],
+   "answer": 0,
+   "explanation": "Mitochondria are the primary site of aerobic respiration and ATP synthesis and contain mitochondrial DNA inherited from the mother. Golgi modifies and packages proteins, rough ER synthesises proteins, and lysosomes digest cellular waste, none of which contain their own DNA for maternal inheritance."
+  },
+  {
+   "n": 31,
+   "topic": "Cell structure and organisation",
+   "q": "A student examines a plant tissue under the light microscope and sees cells with large central vacuoles, chloroplasts and a thick cellulose wall. Which combination of functions best fits these observations?",
+   "options": [
+    "Lipid synthesis, detoxification, and immune response",
+    "Protein synthesis, movement, and secretion",
+    "Impulse transmission, contraction, and protection",
+    "Storage of water and salts, photosynthesis, and support"
+   ],
+   "answer": 3,
+   "explanation": "Large central vacuoles store water and salts, chloroplasts carry out photosynthesis, and thick cellulose walls provide structural support in plant cells. The wrong options list functions typical of other cell types: protein synthesis/secretion (ER/Golgi), impulse transmission/contraction (neurons/muscle), and lipid synthesis/detoxification/immune response (smooth ER/liver/immune cells)."
+  },
+  {
+   "n": 32,
+   "topic": "Cell structure and organisation",
+   "q": "Which cell surface structure most directly increases the rate of absorption of digested food in the human small intestine?",
+   "options": [
+    "Tight junctions between epithelial cells",
+    "Goblet cell secretions on the surface",
+    "Basement membrane of epithelial tissue",
+    "Microvilli on epithelial cells"
+   ],
+   "answer": 3,
+   "explanation": "Microvilli are small finger-like projections that increase surface area of intestinal epithelial cells, enhancing absorption. The basement membrane supports tissue but does not increase absorptive surface; tight junctions seal cells rather than increase area; goblet cells secrete mucus which protects and lubricates but does not increase absorption."
+  },
+  {
+   "n": 33,
+   "topic": "Classification of living things",
+   "q": "Which characteristic would a taxonomist use to place two flowering plants in the same genus rather than merely the same family?",
+   "options": [
+    "Both having green leaves and carrying out photosynthesis",
+    "Both being found in the same Nigerian state",
+    "Very similar floral structure and closely related reproductive organs",
+    "Both being herbaceous rather than woody"
+   ],
+   "answer": 2,
+   "explanation": "Genus grouping reflects close morphological similarity, especially in reproductive structures like flowers. Being herbaceous, having green leaves, or geographic location are too general and apply across many genera within a family."
+  },
+  {
+   "n": 34,
+   "topic": "Classification of living things",
+   "q": "A new species of beetle is discovered near Kano. To assign its scientific name correctly, which convention must the taxonomist follow?",
+   "options": [
+    "Assign a name that combines family and order names",
+    "Use local Hausa words as the formal scientific name",
+    "Use a binomial consisting of genus and species names in Latinised form",
+    "Name it after the discoverer only, using a single word"
+   ],
+   "answer": 2,
+   "explanation": "Scientific naming follows binomial nomenclature: two parts (genus and species) in a Latinised form. Single-word names, local-language names, or names combining higher taxonomic ranks do not follow the standard Linnaean convention."
+  },
+  {
+   "n": 35,
+   "topic": "Classification of living things",
+   "q": "Two organisms share the same family but different genera. Which statement is most likely true?",
+   "options": [
+    "They share more general features but differ in specific traits used to define genus",
+    "They are in the same species but different subspecies",
+    "They cannot interbreed because they are in different families",
+    "They must have identical DNA sequences"
+   ],
+   "answer": 0,
+   "explanation": "Organisms in the same family share broader similarities but differ in more specific characters that define genus. Being in different genera doesn't automatically mean they cannot interbreed (hybridisation can occur), they do not have identical DNA, and being different genera excludes them from being the same species."
+  },
+  {
+   "n": 36,
+   "topic": "Variation and evolution",
+   "q": "In a village near Enugu, a population of rodents experiences a sudden flood that kills 70% of individuals regardless of phenotype. Which evolutionary process is best illustrated by this event?",
+   "options": [
+    "Directional selection",
+    "Mutation pressure",
+    "Genetic drift (bottleneck effect)",
+    "Stabilising selection"
+   ],
+   "answer": 2,
+   "explanation": "A sudden large reduction in population size that randomly removes individuals is a bottleneck, a form of genetic drift. Directional and stabilising selection involve differential survival based on traits, not random catastrophic loss; mutation pressure refers to changes in allele frequency due to mutation, not mass mortality."
+  },
+  {
+   "n": 37,
+   "topic": "Variation and evolution",
+   "q": "Which observation best supports the idea of common ancestry between whales and land mammals?",
+   "options": [
+    "Whales live in water while land mammals live on land",
+    "Presence of vestigial pelvic bones in modern whales",
+    "Whales have blubber for insulation, which land mammals lack",
+    "Whales give live birth whereas some land mammals lay eggs"
+   ],
+   "answer": 1,
+   "explanation": "Vestigial pelvic bones in whales are remnants of hind limbs and indicate descent from terrestrial ancestors. Habitat differences or presence of blubber do not indicate ancestry, and reproduction modes vary across mammals but do not show shared ancestry as clearly as vestigial structures."
+  },
+  {
+   "n": 38,
+   "topic": "Diffusion, osmosis and active transport",
+   "q": "A dialysis bag containing 0.4 M sucrose is placed in beaker of 0.1 M sucrose solution. After equilibrium, what is the expected net movement and why? (Assume sucrose cannot cross the membrane but water can.)",
+   "options": [
+    "No net movement because concentrations will equalise for sucrose",
+    "Net movement of sucrose into the beaker by diffusion",
+    "Net movement of water out of the bag because the bag is hypotonic",
+    "Net movement of water into the bag by osmosis because the bag is hypertonic"
+   ],
+   "answer": 3,
+   "explanation": "The bag (0.4 M) has higher solute concentration than the beaker (0.1 M), so it is hypertonic; water moves into the bag to dilute solutes. Sucrose cannot cross the membrane so its concentration gradients remain; thus concentrations of sucrose do not equalise and sucrose does not diffuse out."
+  },
+  {
+   "n": 39,
+   "topic": "Diffusion, osmosis and active transport",
+   "q": "Root hair cells absorb nitrate ions (NO₃⁻) from soil where their external concentration is lower than inside the cell. Which mechanism allows uptake under these conditions and what supplies the energy?",
+   "options": [
+    "Facilitated diffusion using carrier proteins without ATP",
+    "Simple diffusion driven by concentration gradient without energy",
+    "Active transport by membrane carrier proteins using ATP from respiration",
+    "Osmosis of nitrate through aquaporins using water potential"
+   ],
+   "answer": 2,
+   "explanation": "When external nitrate concentration is lower than inside, uptake requires active transport via carrier proteins using ATP produced by cellular respiration. Simple diffusion and facilitated diffusion do not move substances against their gradient, and osmosis refers to water movement, not ion uptake."
+  },
+  {
+   "n": 40,
+   "topic": "Transport systems",
+   "q": "In a healthy adult in Lagos at rest, which feature of human blood most directly increases its oxygen-carrying capacity?",
+   "options": [
+    "High concentration of haemoglobin in red blood cells",
+    "High plasma glucose concentration",
+    "High bicarbonate (HCO₃⁻) concentration in plasma",
+    "High number of neutrophils per mm³"
+   ],
+   "answer": 0,
+   "explanation": "Haemoglobin in red blood cells binds oxygen, so a high haemoglobin concentration directly increases oxygen-carrying capacity. Plasma glucose and bicarbonate are not oxygen carriers, and neutrophils are white blood cells involved in defence, not oxygen transport."
+  },
+  {
+   "n": 41,
+   "topic": "Transport systems",
+   "q": "A maize farmer in Kano notices wilting in the morning that recovers by evening. Which vascular feature in the plant most likely explains this daily change?",
+   "options": [
+    "Active uptake of nitrate causing xylem blockage in the morning",
+    "Transpiration-driven tension in xylem causing water loss during day and recovery at night",
+    "Phloem unloading of sucrose during the day causing loss of turgor",
+    "Xylem vessels secreting water into surrounding cells at night"
+   ],
+   "answer": 1,
+   "explanation": "Transpiration during daylight creates tension in xylem leading to reduced water in leaves and wilting; at night transpiration falls and tissues recover. Phloem unloading and nitrate uptake do not cause diurnal wilting, and xylem does not secrete water into cells."
+  },
+  {
+   "n": 42,
+   "topic": "Transport systems",
+   "q": "During capillary exchange in a leg capillary of an adult, which pressure change most favours net fluid reabsorption at the venous end?",
+   "options": [
+    "Decrease in hydrostatic pressure and unchanged or higher oncotic pressure",
+    "Decrease in both hydrostatic and oncotic pressures",
+    "Increase in capillary hydrostatic pressure and decrease in oncotic pressure",
+    "Increase in interstitial oncotic pressure and decrease in capillary hydrostatic pressure"
+   ],
+   "answer": 0,
+   "explanation": "At the venous end capillary hydrostatic pressure falls while plasma oncotic pressure remains, so net reabsorption occurs. An increase in hydrostatic pressure would favour filtration, and decreased oncotic pressure reduces reabsorption. Increased interstitial oncotic pressure would oppose reabsorption."
+  },
+  {
+   "n": 43,
+   "topic": "Respiration",
+   "q": "A student respires into a gas syringe and measures oxygen uptake of 0.24 cm³ in 1 minute per gram of yeast culture. What is the rate for a 5 g sample (cm³ min⁻¹)?",
+   "options": [
+    "0.048 cm³ min⁻¹",
+    "5.0 cm³ min⁻¹",
+    "0.24 cm³ min⁻¹",
+    "1.2 cm³ min⁻¹"
+   ],
+   "answer": 3,
+   "explanation": "Rate per gram is 0.24 cm³ min⁻¹ g⁻¹; for 5 g, multiply: 0.24 × 5 = 1.2 cm³ min⁻¹. 0.048 is division instead of multiplication, 0.24 is for 1 g, and 5.0 is an incorrect scaling."
+  },
+  {
+   "n": 44,
+   "topic": "Respiration",
+   "q": "Which statement best contrasts aerobic and anaerobic respiration in human muscle during strenuous running in Abuja?",
+   "options": [
+    "Aerobic respiration uses no enzymes while anaerobic uses enzymes",
+    "Anaerobic respiration occurs only in the liver while aerobic occurs only in muscles",
+    "Aerobic respiration yields more ATP per glucose and produces CO₂ and H₂O; anaerobic yields less ATP and produces lactate",
+    "Aerobic respiration produces lactate while anaerobic produces CO₂ and H₂O"
+   ],
+   "answer": 2,
+   "explanation": "Aerobic respiration produces more ATP and CO₂ and H₂O; anaerobic (in muscle) produces lactate and less ATP. The wrong options reverse products, misstate tissue locations, or falsely claim absence of enzymes."
+  },
+  {
+   "n": 45,
+   "topic": "Genetics",
+   "q": "In a cross between two heterozygous pea plants (Tt × Tt) where T = tall (dominant), what proportion of the F1 will be genotype tt and show the recessive trait?",
+   "options": [
+    "1/2",
+    "1/4",
+    "0",
+    "3/4"
+   ],
+   "answer": 1,
+   "explanation": "A monohybrid cross Tt × Tt gives genotypes TT: 1/4, Tt: 1/2, tt: 1/4, so 1/4 show recessive tt. 1/2 is proportion of heterozygotes, 3/4 is proportion showing dominant phenotype, and 0 is incorrect."
+  },
+  {
+   "n": 46,
+   "topic": "Genetics",
+   "q": "A pedigree from Ondo shows a trait appearing in every generation and both males and females affected equally. Which mode of inheritance is most likely?",
+   "options": [
+    "Autosomal recessive",
+    "X-linked recessive",
+    "Autosomal dominant",
+    "Mitochondrial inheritance"
+   ],
+   "answer": 2,
+   "explanation": "Appearance in every generation with equal sex distribution suggests autosomal dominant inheritance. X-linked recessive often affects males more; mitochondrial inheritance passes only from mothers; autosomal recessive often skips generations."
+  },
+  {
+   "n": 47,
+   "topic": "Genetics",
+   "q": "In a population of corn, allele A has frequency 0.7 and allele a has frequency 0.3. Under Hardy–Weinberg equilibrium, what is the expected frequency of heterozygotes (Aa)?",
+   "options": [
+    "0.42",
+    "0.21",
+    "0.09",
+    "0.49"
+   ],
+   "answer": 0,
+   "explanation": "Under Hardy–Weinberg, frequency of heterozygotes = 2pq = 2 × 0.7 × 0.3 = 0.42. 0.09 is q², 0.49 is p², and 0.21 is p × q (not doubled)."
+  },
+  {
+   "n": 48,
+   "topic": "Diseases and their control",
+   "q": "A boy in Kano has fever, headache and a stiff neck. A lumbar puncture shows cloudy cerebrospinal fluid with many neutrophils. Which treatment is most appropriate immediately?",
+   "options": [
+    "Delay treatment until a positive culture result is returned",
+    "Treat with antihistamines only because it is allergic reaction",
+    "Give oral antiparasitic drugs at home and wait for lab results",
+    "Start broad-spectrum intravenous antibiotics after taking samples"
+   ],
+   "answer": 3,
+   "explanation": "Cloudy CSF with neutrophils suggests bacterial meningitis, which requires immediate IV antibiotics after obtaining samples. Antiparasitics or antihistamines are inappropriate, and delaying treatment until culture results risks serious harm."
+  },
+  {
+   "n": 49,
+   "topic": "Diseases and their control",
+   "q": "To reduce transmission of cholera in a camp near Maiduguri, which public health measure is most effective and immediately practical?",
+   "options": [
+    "Mass treatment with broad-spectrum antibiotics for all residents",
+    "Provide safe drinking water and promote hand-washing with soap",
+    "Require vaccination against measles for all children",
+    "Spray insecticide around the camp perimeter"
+   ],
+   "answer": 1,
+   "explanation": "Cholera is waterborne; providing safe water and hand hygiene directly reduces transmission. Mass antibiotics promote resistance and are not first-line for prevention, measles vaccination and insecticide spraying do not prevent cholera transmission."
+  },
+  {
+   "n": 50,
+   "topic": "Support and movement",
+   "q": "A student in Ibadan measures the angle of a joint before and after exercise and records 30° at rest and 70° after warming up. Which structure is primarily responsible for increasing the range of movement at this synovial joint during warm-up?",
+   "options": [
+    "Synovial fluid becoming less viscous and cartilage being more pliable",
+    "Ligaments ossifying to provide stronger attachment",
+    "Tendons lengthening permanently to allow greater movement",
+    "Articular cartilage thickening to increase gap between bones"
+   ],
+   "answer": 0,
+   "explanation": "Warming up reduces viscosity of synovial fluid and makes articular cartilage and surrounding tissues more pliable, increasing joint range from 30° to 70°. Tendons do not lengthen permanently during short warm-up, ligaments do not ossify, and cartilage does not thicken acutely."
+  },
+  {
+   "n": 51,
+   "topic": "Support and movement",
+   "q": "During a sprint, a runner from Lagos bends the knee rapidly. Which pair of muscles acts as antagonist and agonist respectively during knee flexion?",
+   "options": [
+    "Hamstrings as antagonist; Quadriceps as agonist",
+    "Quadriceps as antagonist; Hamstrings as agonist",
+    "Iliopsoas as antagonist; Gluteus maximus as agonist",
+    "Gastrocnemius as antagonist; Soleus as agonist"
+   ],
+   "answer": 1,
+   "explanation": "Knee flexion is produced by the hamstrings (agonist) while the quadriceps relax and act as antagonist. Reversing them is incorrect. Gastrocnemius/soleus act mainly at the ankle, and iliopsoas/gluteus maximus act at the hip."
+  },
+  {
+   "n": 52,
+   "topic": "Support and movement",
+   "q": "A bone sample from a 60-year-old woman in Enugu shows reduced density and many large Haversian canals. Which change best explains her increased risk of fracture?",
+   "options": [
+    "Loss of bone matrix due to increased osteoclast activity",
+    "Hypertrophy of periosteum making bone more brittle",
+    "Thickening of compact bone by excess mineralisation",
+    "Increased deposition of collagen by osteoblasts"
+   ],
+   "answer": 0,
+   "explanation": "In osteoporosis, osteoclasts resorb bone matrix causing reduced density and enlarged Haversian canals, increasing fracture risk. Increased collagen deposition or thickening would strengthen bone, and periosteal hypertrophy does not cause the described microscopic pattern."
+  },
+  {
+   "n": 53,
+   "topic": "Excretion",
+   "q": "A villager in Sokoto drinks water contaminated with a diuretic toxin causing high urine output. Which change in the nephron most likely causes the increased urine volume?",
+   "options": [
+    "Reduced permeability of collecting duct to water due to antagonism of ADH action",
+    "Increased secretion of H+ in distal tubule",
+    "Increased reabsorption of Na+ in proximal tubule",
+    "Enhanced filtration at Bowman's capsule due to decreased blood pressure"
+   ],
+   "answer": 0,
+   "explanation": "A diuretic that antagonises ADH reduces water permeability of the collecting duct, decreasing water reabsorption and increasing urine volume. Increased Na+ reabsorption would reduce urine volume, H+ secretion affects pH not volume, and decreased blood pressure would lower filtration, not enhance it."
+  },
+  {
+   "n": 54,
+   "topic": "Excretion",
+   "q": "A patient at a clinic in Abeokuta has blood urea concentration of 18 mmol/L (normal 2.5–7.5 mmol/L). Which kidney function is most directly impaired?",
+   "options": [
+    "Excretion of metabolic waste by glomerular filtration and tubular processing",
+    "Production of bile by hepatocytes",
+    "Synthesis of urea from ammonia in the liver",
+    "Activation of vitamin D in the skin"
+   ],
+   "answer": 0,
+   "explanation": "High blood urea indicates impaired renal excretion (filtration and tubular handling). Urea synthesis occurs in the liver, so that is not directly the kidney issue. Bile production and vitamin D activation are unrelated to urea clearance."
+  },
+  {
+   "n": 55,
+   "topic": "Reproduction",
+   "q": "A couple in Kano uses a method that prevents sperm reaching the ovum by producing a barrier. Which contraceptive method fits this description?",
+   "options": [
+    "Oral contraceptive pills altering hormone levels",
+    "Diaphragm placed over the cervix",
+    "Natural family planning based on calendar method",
+    "Intrauterine device causing local inflammatory reaction"
+   ],
+   "answer": 1,
+   "explanation": "A diaphragm is a physical barrier that prevents sperm entry to the uterine cavity. Oral pills are hormonal and do not create a barrier; IUCDs work mainly by local inflammation and preventing implantation; natural family planning relies on timing, not a physical barrier."
+  },
+  {
+   "n": 56,
+   "topic": "Reproduction",
+   "q": "In a population of garden snails near Jos, a mutation makes some males produce non-motile sperm. If this mutation is recessive and the allele frequency is low, which mating outcome reduces the frequency fastest?",
+   "options": [
+    "Selection against homozygous recessive individuals through reduced reproductive success",
+    "Increased mutation rate producing more recessive alleles",
+    "Assortative mating where carriers preferentially mate with carriers",
+    "Random mating with no selection"
+   ],
+   "answer": 0,
+   "explanation": "Reduced reproductive success of homozygous recessive (non-motile sperm) will be selected against and reduce allele frequency. Random mating doesn't change frequency, assortative mating by carriers increases homozygotes and can maintain or increase frequency, and increasing mutation would raise the allele frequency."
+  },
+  {
+   "n": 57,
+   "topic": "Nutrition in plants and animals",
+   "q": "A maize field in Kaduna is deficient in magnesium. Which visible symptom on older leaves should the farmer expect?",
+   "options": [
+    "Stunted growth with overall uniform chlorosis on new leaves",
+    "Necrotic spots only on leaf margins of young leaves",
+    "Purple discoloration of stems due to anthocyanin accumulation",
+    "Interveinal chlorosis (yellowing) on older leaves while veins remain green"
+   ],
+   "answer": 3,
+   "explanation": "Magnesium is mobile; deficiency shows interveinal chlorosis on older leaves as Mg is moved to new growth. Uniform chlorosis on new leaves suggests immobile nutrient deficiency like iron; necrosis on margins of young leaves fits calcium or boron issues; purple stems suggest phosphorus deficiency."
+  },
+  {
+   "n": 58,
+   "topic": "Nutrition in plants and animals",
+   "q": "A calf in Ibadan consumes 5.0 kg of hay (energy 8.0 MJ/kg) and 2.0 kg of concentrate (energy 12 MJ/kg) in a day. If 30% of the ingested energy is lost in faeces and urine and 80% of the remainder is used for maintenance, what energy is left for growth and production (in MJ)?",
+   "options": [
+    "7.00 MJ",
+    "5.60 MJ",
+    "8.96 MJ",
+    "10.08 MJ"
+   ],
+   "answer": 2,
+   "explanation": "Total intake = 5.0×8.0 + 2.0×12 = 40 + 24 = 64 MJ. After 30% loss, metabolizable = 0.70×64 = 44.8 MJ. Maintenance uses 80% of 44.8 = 35.84 MJ, leaving 44.8 − 35.84 = 8.96 MJ for growth and production."
+  },
+  {
+   "n": 59,
+   "topic": "Diffusion, osmosis and active transport",
+   "q": "A student from Abeokuta cut identical potato cylinders (5.00 g each) and placed one cylinder into each of three sucrose solutions for 24 hours. After 24 hours the masses were: 0.2 M → 5.30 g; 0.4 M → 4.95 g; 0.6 M → 4.60 g. Which sucrose solution is closest to isotonic with the potato tissue?",
+   "options": [
+    "0.6 M",
+    "0.4 M",
+    "All three are isotonic",
+    "0.2 M"
+   ],
+   "answer": 1,
+   "explanation": "Isotonic means no net water gain or loss, so mass should stay about the same. The 0.4 M core changed from 5.00 g to 4.95 g (a tiny loss of 0.05 g), closest to no change. 0.2 M caused net gain (hypotonic) and 0.6 M caused net loss (hypertonic). \"All three\" is wrong because two show clear mass changes."
+  },
+  {
+   "n": 60,
+   "topic": "Respiration",
+   "q": "Wole runs a 400 m race and for part of the sprint his leg muscles respire anaerobically, producing lactate (lactic acid). After the race, which of the following describes the main fate of the lactate produced in his muscles?",
+   "options": [
+    "Lactate is carried to the liver and converted to glucose (Cori cycle) when oxygen is available",
+    "Lactate is broken down to CO₂ and H₂O inside muscle cells without oxygen",
+    "Lactate is immediately stored in muscle as glycogen without using oxygen",
+    "Lactate is converted to ethanol in the muscles and released as gas"
+   ],
+   "answer": 0,
+   "explanation": "Lactate produced anaerobically is transported in the blood to the liver where, when oxygen and ATP are available, it is converted back to glucose (the Cori cycle). It is not converted to ethanol in human muscle, nor can it be oxidised fully to CO₂ and H₂O without oxygen. Immediate storage as glycogen in muscle without metabolic processing is incorrect."
+  }
+ ]
+}

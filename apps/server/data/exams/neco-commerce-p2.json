@@ -1,0 +1,791 @@
+{
+ "id": "neco-commerce-p2",
+ "exam": "neco",
+ "subject": "commerce",
+ "year": null,
+ "number": 2,
+ "source": "ai",
+ "minutes": 60,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Home trade: retail and wholesale",
+   "q": "Which of the following is a primary function of a wholesaler in the Nigerian distribution chain?",
+   "options": [
+    "Providing long-term consumer credit directly to final consumers",
+    "Manufacturing goods for the domestic market",
+    "Setting retail prices for individual customers in the market",
+    "Purchasing goods in bulk from manufacturers and reselling in smaller quantities to retailers"
+   ],
+   "answer": 3,
+   "explanation": "Wholesalers buy large quantities from manufacturers and break them into smaller lots for retailers; they do not typically provide long-term consumer credit (that is a retailer or bank role), set individual retail prices, or manufacture goods."
+  },
+  {
+   "n": 2,
+   "topic": "Home trade: retail and wholesale",
+   "q": "A Lagos-based retailer buys 100 units of a product at ₦450 each and sells them at a 25% mark-up on cost. What is the total selling price for all units?",
+   "options": [
+    "₦56,250",
+    "₦62,500",
+    "₦55,000",
+    "₦51,000"
+   ],
+   "answer": 0,
+   "explanation": "Mark-up = 25% of ₦450 = ₦112.5; selling price per unit = ₦450 + ₦112.5 = ₦562.5. For 100 units total = ₦562.5 × 100 = ₦56,250. ₦62,500 would be 25% of a higher base; ₦55,000 and ₦51,000 are arithmetic errors."
+  },
+  {
+   "n": 3,
+   "topic": "Home trade: retail and wholesale",
+   "q": "Which of the following retail organisations is most suitable for customers seeking low prices through self-service in Nigeria?",
+   "options": [
+    "Sole proprietorship neighbourhood shop",
+    "Pawnbroker",
+    "Supermarket",
+    "Speciality boutique with personal service"
+   ],
+   "answer": 2,
+   "explanation": "Supermarkets offer self-service and economies of scale that lower prices. A neighbourhood sole proprietorship and speciality boutique focus on personal service and limited range; pawnbrokers provide loans against goods, not low-price self-service retailing."
+  },
+  {
+   "n": 4,
+   "topic": "Transport and communication",
+   "q": "Which mode of transport is generally most suitable for bulk, low-value commodities over long distances within Nigeria?",
+   "options": [
+    "Courier services by road",
+    "Rail transport",
+    "Handcart transport",
+    "Air transport"
+   ],
+   "answer": 1,
+   "explanation": "Rail transport is cost-effective for bulk, low-value goods over long distances. Air transport is expensive and used for high-value/urgent goods; courier by road is for parcels, and handcarts are for short local movement."
+  },
+  {
+   "n": 5,
+   "topic": "Transport and communication",
+   "q": "A freight company charges ₦12 per km for road transport plus a fixed loading fee of ₦6,000. For a 250 km trip, what is the total charge?",
+   "options": [
+    "₦9,000",
+    "₦3,000",
+    "₦36,000",
+    "₦18,000"
+   ],
+   "answer": 0,
+   "explanation": "Variable cost = ₦12 × 250 = ₦3,000. Total = ₦3,000 + ₦6,000 = ₦9,000. ₦36,000 would be if rate was ₦144/km; ₦3,000 omitted loading fee; ₦18,000 is another arithmetic mistake."
+  },
+  {
+   "n": 6,
+   "topic": "Transport and communication",
+   "q": "Which communication method best ensures immediate, recorded proof that a business letter was delivered to a supplier in Abuja?",
+   "options": [
+    "Posting the letter in an internal office pigeonhole",
+    "Sending a photograph of the letter by social media",
+    "Registered post with delivery receipt",
+    "Leaving a voicemail message"
+   ],
+   "answer": 2,
+   "explanation": "Registered post with delivery receipt gives proof of delivery. Internal pigeonhole doesn't prove delivery outside the firm; a photograph on social media shows content but not formal delivery; voicemail is unrecorded and lacks signed proof."
+  },
+  {
+   "n": 7,
+   "topic": "Money and banking",
+   "q": "Which of the following is a primary function of the Central Bank of Nigeria (CBN)?",
+   "options": [
+    "Running individual savings accounts for students",
+    "Issuing legal tender and regulating the banking sector",
+    "Accepting deposits from the public as a retail bank",
+    "Competing with commercial banks to provide loans to small traders"
+   ],
+   "answer": 1,
+   "explanation": "The CBN issues currency and regulates banks. It does not operate as a retail deposit-taking bank or compete with commercial banks for ordinary loans or offer personal savings accounts to individuals."
+  },
+  {
+   "n": 8,
+   "topic": "Money and banking",
+   "q": "If Nkem deposits ₦20,000 into a bank account paying 6% simple interest per annum for 3 years, what is the total interest earned?",
+   "options": [
+    "₦3,600",
+    "₦3,720",
+    "₦1,200",
+    "₦6,000"
+   ],
+   "answer": 0,
+   "explanation": "Simple interest = principal × rate × time = ₦20,000 × 0.06 × 3 = ₦3,600. ₦6,000 is compound or double error; ₦3,720 and ₦1,200 are calculation mistakes."
+  },
+  {
+   "n": 9,
+   "topic": "Money and banking",
+   "q": "Which document is usually required by a bank in Nigeria to open a corporate current account?",
+   "options": [
+    "International passport of a random customer with no link to the company",
+    "Certificate of incorporation and board resolution authorising the account signatories",
+    "A copy of every employee's national identity card",
+    "A shop lease agreement for an individual proprietor"
+   ],
+   "answer": 1,
+   "explanation": "Banks require company incorporation documents and board resolution to open corporate accounts. An unrelated passport, every employee ID, or a sole proprietor's lease are inappropriate or insufficient for corporate account opening."
+  },
+  {
+   "n": 10,
+   "topic": "Business units",
+   "q": "Which feature distinguishes a public limited liability company from a sole proprietorship in Nigeria?",
+   "options": [
+    "A sole proprietorship must have a board of directors",
+    "Shares of the public limited company can be offered to the general public and ownership is separate from management",
+    "Both always have unlimited liability for debts",
+    "The sole proprietor can issue shares to the public"
+   ],
+   "answer": 1,
+   "explanation": "A public limited company can offer shares to the public and has separate legal personality; ownership is distinct from managers. A sole proprietor cannot issue public shares, does not have separate legal personality, and does not require a board of directors; unlimited liability for proprietor contrasts with limited liability of shareholders."
+  },
+  {
+   "n": 11,
+   "topic": "Consumer protection",
+   "q": "The Consumer Protection Council (CPC) receives a complaint from Mrs. Amina about a washing machine that failed within one week of purchase. Which action by the CPC would best protect Mrs. Amina's rights?",
+   "options": [
+    "Order the immediate closure of the seller's business without investigation",
+    "Force Mrs. Amina to accept an exchange for a different brand without refund",
+    "Refer the case to a criminal court for prosecution of the seller",
+    "Investigate the complaint, require the seller to repair, replace or refund, and mediate a settlement"
+   ],
+   "answer": 3,
+   "explanation": "Consumer protection agencies typically investigate complaints and seek remedies such as repair, replacement or refund and mediation. Immediate business closure or criminal prosecution without due process is inappropriate, and forcing an unwanted exchange denies the consumer's right to an appropriate remedy."
+  },
+  {
+   "n": 12,
+   "topic": "Consumer protection",
+   "q": "A mobile network advertises 'unlimited data' but slows speeds drastically after 5 GB. Which consumer right best supports subscribers seeking redress?",
+   "options": [
+    "Right to set the network's pricing policy",
+    "Right to truthful information and fair contract terms, enabling claims for misleading advertising and contract variation",
+    "Right to free repairs for unrelated hardware faults",
+    "Right to demand a full company takeover by the federal government"
+   ],
+   "answer": 1,
+   "explanation": "Consumers have the right to truthful information and fair contract terms, so misleading 'unlimited' claims can be challenged. The wrong options are unrelated or impossible rights (hardware repairs, setting pricing, government takeover)."
+  },
+  {
+   "n": 13,
+   "topic": "Insurance",
+   "q": "Olu insured his car for comprehensive cover with a sum insured of ₦2,000,000 and later accepted a ₦250,000 modification to the engine without informing the insurer. After an accident, the insurer reduces the claim payout. Which principle justifies the insurer's action?",
+   "options": [
+    "Indemnity, because it always requires the insurer to pay the full sum insured regardless of non-disclosure",
+    "Insurable interest, because the owner cannot insure his own car",
+    "Utmost good faith (uberrimae fidei) because non-disclosure of a material change (engine modification) can void or reduce the claim",
+    "Contribution, because multiple insurers must share the loss"
+   ],
+   "answer": 2,
+   "explanation": "Utmost good faith requires disclosure of material facts; failing to inform the insurer about modifications is non-disclosure and can lead to reduced or rejected claims. Indemnity relates to compensation amount, not non-disclosure; contribution and insurable interest are irrelevant to this non-disclosure issue."
+  },
+  {
+   "n": 14,
+   "topic": "Insurance",
+   "q": "Chinedu buys a life insurance policy with a 10-year term and a sum assured of ₦5,000,000. He pays annual premiums of ₦120,000. If he dies in the 6th year, what will the insurer most likely pay to the beneficiary?",
+   "options": [
+    "The sum assured of ₦5,000,000, because term life insurance pays the sum assured on death within the term",
+    "A proportion of the sum assured based on age at death",
+    "Half of the sum assured because only part of the term elapsed",
+    "Only the total premiums paid so far (₦720,000)"
+   ],
+   "answer": 0,
+   "explanation": "Term life insurance pays the full sum assured if the insured dies within the policy term. Paying only premiums, a prorated amount, or a proportion based on age are incorrect for standard term life policies."
+  },
+  {
+   "n": 15,
+   "topic": "Insurance",
+   "q": "A small Lagos business buys fire insurance and includes a 'warranted sprinkler system in working order' clause. The business fails to maintain the system and a fire causes loss. Which outcome is most likely?",
+   "options": [
+    "The insurer will transfer the claim to a third-party insurer automatically",
+    "The insurer must pay full claim because warranties do not affect fire policies",
+    "The insurer will double the payout as a penalty for the business's negligence",
+    "The insurer may decline or reduce the claim due to breach of warranty (condition) that was material to the contract"
+   ],
+   "answer": 3,
+   "explanation": "A warranty in an insurance policy is a condition precedent; breach allows the insurer to decline or reduce claims. Warranties do affect fire policies, there is no doubling of payout as penalty, and claims are not automatically transferred to other insurers."
+  },
+  {
+   "n": 16,
+   "topic": "Advertising and marketing",
+   "q": "A Nigerian beverage company uses celebrity endorsements to launch a new soft drink. Which marketing objective is this strategy primarily intended to achieve?",
+   "options": [
+    "Replace the need for a distribution network",
+    "Guarantee immediate product availability in every rural market",
+    "Increase brand awareness and transfer the celebrity's positive image to the product (brand association)",
+    "Ensure the product has the lowest price in the market"
+   ],
+   "answer": 2,
+   "explanation": "Celebrity endorsements aim to raise awareness and associate positive traits with the brand. They do not guarantee distribution, lowest price, or remove the need for distribution channels."
+  },
+  {
+   "n": 17,
+   "topic": "Advertising and marketing",
+   "q": "A retailer in Enugu runs a promotion: buy 2 packs of noodles at ₦250 each and get a third free. What is the effective unit price per pack if a customer takes advantage of the offer and buys 3 packs?",
+   "options": [
+    "₦125 per pack",
+    "₦166.50 per pack",
+    "₦166.67 per pack (total paid ₦500 ÷ 3)",
+    "₦250 per pack"
+   ],
+   "answer": 2,
+   "explanation": "Customer pays for 2 packs: 2 × ₦250 = ₦500 for 3 packs, so unit price = ₦500 ÷ 3 = ₦166.666..., rounded to ₦166.67. ₦250 ignores the free pack; ₦166.50 is a rounding error; ₦125 would be if total cost were ₦375."
+  },
+  {
+   "n": 18,
+   "topic": "Documents of trade",
+   "q": "Which document issued by a carrier to a shipper serves as a receipt for goods, a contract of carriage, and a document of title in international trade?",
+   "options": [
+    "Bill of lading",
+    "Sales receipt",
+    "Quotation",
+    "Invoice"
+   ],
+   "answer": 0,
+   "explanation": "A bill of lading functions as receipt, contract of carriage and document of title in sea transport. An invoice is a commercial document requesting payment; a quotation gives price estimates; a sales receipt proves payment but is not a document of title or contract of carriage."
+  },
+  {
+   "n": 19,
+   "topic": "Documents of trade",
+   "q": "A trader in Ibadan receives an invoice showing: goods value ₦320,000, discount 10%, and VAT 7.5% applied after discount. What is the total amount payable?",
+   "options": [
+    "₦302,400",
+    "₦345,600",
+    "₦320,000",
+    "₦309,600"
+   ],
+   "answer": 3,
+   "explanation": "First apply 10% discount: 10% of ₦320,000 = ₦32,000, discounted price = ₦288,000. VAT 7.5% on ₦288,000 = ₦21,600. Total payable = ₦288,000 + ₦21,600 = ₦309,600. ₦345,600 wrongly added VAT before discount; ₦302,400 is VAT on original price then discount mistakenly applied; ₦320,000 ignores discounts and VAT."
+  },
+  {
+   "n": 20,
+   "topic": "Foreign trade",
+   "q": "Nigeria exports crude oil worth $1,200,000. The buyer agrees to pay by documentary letter of credit (L/C). Which of the following best describes the main advantage of payment by an irrevocable L/C for the exporter?",
+   "options": [
+    "The exporter is guaranteed payment even if the documents do not comply with the L/C terms.",
+    "The exporter has a bank's undertaking to pay if the shipping documents comply with the L/C terms.",
+    "The exporter can change the L/C terms unilaterally after shipment.",
+    "The exporter gets payment immediately on shipment without presenting documents."
+   ],
+   "answer": 1,
+   "explanation": "An irrevocable L/C is a bank's commitment to pay the exporter when the required documents comply with the terms; it protects against buyer default. It is not immediate cash on shipment without documents, cannot be changed unilaterally, and does not pay if documents are non-compliant."
+  },
+  {
+   "n": 21,
+   "topic": "Foreign trade",
+   "q": "A Lagos exporter receives an export licence requiring payment of a 5% export duty on the FOB value of a shipment worth $50,000. Using an exchange rate of ₦750/$1, what is the export duty in naira?",
+   "options": [
+    "₦3,750,000",
+    "₦187,500",
+    "₦1,875,000",
+    "₦750,000"
+   ],
+   "answer": 2,
+   "explanation": "FOB value $50,000 × 5% = $2,500 duty. Convert to naira: $2,500 × ₦750 = ₦1,875,000. ₦3,750,000 would be 10% duty; ₦187,500 wrongly treats rate as ₦75/$. ₦750,000 equals $1,000 × ₦750, not the correct duty."
+  },
+  {
+   "n": 22,
+   "topic": "Foreign trade",
+   "q": "Which document is primarily used to prove that the goods have been shipped on a vessel and also serves as a document of title in international trade?",
+   "options": [
+    "Bill of lading",
+    "Proforma invoice",
+    "Commercial invoice",
+    "Insurance certificate"
+   ],
+   "answer": 0,
+   "explanation": "A bill of lading is issued by the carrier as receipt for goods shipped and functions as a document of title. A proforma invoice is a preliminary quote, a commercial invoice is for customs and payment, and an insurance certificate covers risk but is not a title document."
+  },
+  {
+   "n": 23,
+   "topic": "Occupation and production",
+   "q": "In a small factory in Ibadan producing shoes, which factor of production is best described by hiring a skilled cobbler to design durable soles?",
+   "options": [
+    "Land",
+    "Capital goods",
+    "Labour with specialised skills",
+    "Enterprise"
+   ],
+   "answer": 2,
+   "explanation": "Hiring a skilled cobbler is hiring labour possessing specialised skills. Capital goods are machines or tools, land refers to natural resources, and enterprise is the risk-taking and organising function, not the skilled worker himself."
+  },
+  {
+   "n": 24,
+   "topic": "Occupation and production",
+   "q": "A farmer in Benue increases output by using improved seed and fertiliser. This is an example of which kind of productivity improvement?",
+   "options": [
+    "Extensive cultivation (increasing land area)",
+    "Intensive cultivation (increasing output per unit of land)",
+    "Reduction of fixed costs",
+    "Substitution of capital for labour"
+   ],
+   "answer": 1,
+   "explanation": "Using improved seeds and fertiliser increases output per unit area—intensive cultivation. Extensive cultivation would require more land, not inputs. Substitution of capital for labour and reduction of fixed costs are different methods of raising productivity."
+  },
+  {
+   "n": 25,
+   "topic": "Occupation and production",
+   "q": "A Lagos bakery produces 1,000 loaves per day. Fixed costs are ₦60,000 per day and variable cost per loaf is ₦20. What is the average cost per loaf?",
+   "options": [
+    "₦60",
+    "₦80",
+    "₦140",
+    "₦20"
+   ],
+   "answer": 1,
+   "explanation": "Total cost = fixed ₦60,000 + variable (1,000 × ₦20 = ₦20,000) = ₦80,000. Average cost = ₦80,000 ÷ 1,000 loaves = ₦80 per loaf. ₦20 is only the variable cost; ₦60 is not per loaf; ₦140 doubles costs incorrectly."
+  },
+  {
+   "n": 26,
+   "topic": "The stock exchange",
+   "q": "An investor buys 200 shares of a quoted Nigerian company at ₦25 per share and later sells them at ₦30 per share. If stamp duty and brokerage total ₦200 on purchase and ₦300 on sale, what is the investor's net profit?",
+   "options": [
+    "₦500",
+    "₦1,000",
+    "₦2,000",
+    "₦800"
+   ],
+   "answer": 0,
+   "explanation": "Purchase cost = 200×₦25 = ₦5,000 + ₦200 = ₦5,200. Sale proceeds = 200×₦30 = ₦6,000 − ₦300 = ₦5,700. Net profit = ₦5,700 − ₦5,200 = ₦500. ₦1,000 ignores transaction costs, ₦800/₦2,000 are incorrect arithmetic."
+  },
+  {
+   "n": 27,
+   "topic": "The stock exchange",
+   "q": "Which of the following best explains why a company would issue additional shares (a rights issue) on the Nigerian Stock Exchange?",
+   "options": [
+    "To convert debt into shares without raising new funds",
+    "To reduce the number of shareholders by buying back shares",
+    "To distribute profits as dividends",
+    "To raise new equity capital from existing shareholders for expansion"
+   ],
+   "answer": 3,
+   "explanation": "A rights issue offers new shares to existing shareholders to raise fresh equity for purposes like expansion. Buybacks reduce shares and require cash, not issuing. Converting debt into shares is restructuring, not a rights issue raising funds. Dividends distribute profits, not issue new shares."
+  },
+  {
+   "n": 28,
+   "topic": "E-commerce",
+   "q": "Which of the following is the best example of business-to-consumer (B2C) e-commerce in Nigeria?",
+   "options": [
+    "A payment gateway that processes transactions between banks",
+    "An online store in Lagos selling smartphones directly to individual customers via its website",
+    "A company selling enterprise software subscriptions to other firms",
+    "A wholesaler in Kano using an online portal to sell pallets to retailers"
+   ],
+   "answer": 1,
+   "explanation": "B2C e-commerce involves businesses selling directly to individual consumers, e.g., an online smartphone store. Wholesalers selling to retailers is B2B; enterprise software sales are B2B; a payment gateway is a service provider, not direct B2C retail."
+  },
+  {
+   "n": 29,
+   "topic": "E-commerce",
+   "q": "If a Nigerian online seller offers free delivery for orders ≥ ₦10,000 and charges ₦500 for orders below that, what is the delivery charge for an order of 3 items priced ₦3,400 each?",
+   "options": [
+    "₦1,000",
+    "₦500",
+    "₦300",
+    "₦0"
+   ],
+   "answer": 3,
+   "explanation": "Total order = 3 × ₦3,400 = ₦10,200 which meets the free-delivery threshold, so delivery charge is ₦0. ₦500 applies only when total is below ₦10,000; the other amounts are incorrect."
+  },
+  {
+   "n": 30,
+   "topic": "Home trade: retail and wholesale",
+   "q": "Mercy runs a shop in Enugu. She sells a product for ₦1,500 after allowing a 20% markup on cost. What was her cost price?",
+   "options": [
+    "₦1,000",
+    "₦1,800",
+    "₦1,200",
+    "₦1,250"
+   ],
+   "answer": 3,
+   "explanation": "Selling price = cost + 20% of cost = 1.20 × cost. So cost = ₦1,500 ÷ 1.20 = ₦1,250. ₦1,200 would be if markup were 25%; ₦1,800 is higher than selling price; ₦1,000 would be cost if markup were 50%."
+  },
+  {
+   "n": 31,
+   "topic": "Transport and communication",
+   "q": "Which of the following best describes the Bill of Lading in international sea transport?",
+   "options": [
+    "A local delivery note used only for inland transport",
+    "A customs certificate allowing goods to enter Nigerian ports without inspection",
+    "A document issued by the carrier that serves as receipt for goods, evidence of contract of carriage and a document of title",
+    "A document showing insurance cover only for the goods while in transit by sea"
+   ],
+   "answer": 2,
+   "explanation": "Bill of Lading is issued by the carrier and functions as a receipt, evidence of the contract of carriage and a document of title. It is not an insurance certificate, nor a customs clearance document, nor merely a local inland delivery note."
+  },
+  {
+   "n": 32,
+   "topic": "Transport and communication",
+   "q": "A Lagos company chooses road transport over rail because it needs door-to-door delivery and flexible schedules. Which disadvantage of road transport should the company still expect?",
+   "options": [
+    "Guaranteed faster delivery regardless of distance",
+    "Higher risk of accidents and variable fuel costs compared with rail",
+    "Complete freedom from traffic congestion",
+    "Lower insurance premiums than rail"
+   ],
+   "answer": 1,
+   "explanation": "Road transport gives door-to-door service and flexibility but has higher accident risk and subject to fuel price fluctuations. It is not free from traffic congestion, does not guarantee lower insurance, nor ensures faster delivery in every case."
+  },
+  {
+   "n": 33,
+   "topic": "Money and banking",
+   "q": "If Nneka places ₦50,000 in a savings account paying 4% compound interest annually, how much will she have after 2 years?",
+   "options": [
+    "₦54,000",
+    "₦52,000",
+    "₦58,000",
+    "₦54,080"
+   ],
+   "answer": 3,
+   "explanation": "Amount = ₦50,000 × (1.04)² = ₦50,000 × 1.0816 = ₦54,080. ₦54,000 would be simple interest approximation; ₦52,000 is 2% total; ₦58,000 is too large."
+  },
+  {
+   "n": 34,
+   "topic": "Money and banking",
+   "q": "Which document is normally required by a Nigerian commercial bank when a customer opens a current account for a sole proprietor?",
+   "options": [
+    "Only a recommendation letter from any neighbour",
+    "Means of identification (e.g., national ID), proof of address, and business registration name (where applicable)",
+    "A certified copy of the company Memorandum and Articles of Association",
+    "No documents required; account can be opened anonymously"
+   ],
+   "answer": 1,
+   "explanation": "Banks require ID, proof of address and evidence of business name/registration for sole proprietors. A neighbour's letter or anonymity are incorrect; Memorandum and Articles apply to limited liability companies, not sole proprietors."
+  },
+  {
+   "n": 35,
+   "topic": "Business units",
+   "q": "Which characteristic best distinguishes a cooperative society from a private limited liability company in Nigeria?",
+   "options": [
+    "Members have unlimited personal liability for the cooperative's debts",
+    "Shares are freely transferable on the stock exchange",
+    "Members buy shares and receive services primarily for members' benefit, with democratic control (one member, one vote)",
+    "Ownership is limited to a single individual controlling the society"
+   ],
+   "answer": 2,
+   "explanation": "Cooperatives operate for members' benefit with democratic control (one member, one vote). Members normally have limited liability but not unlimited; cooperative shares are not freely traded on stock exchanges; they are not owned by a single individual."
+  },
+  {
+   "n": 36,
+   "topic": "Business units",
+   "q": "A small family business in Port Harcourt wants to limit personal liability but keep management within the family and avoid extensive public reporting. Which business form is most suitable?",
+   "options": [
+    "Public limited liability company (PLC)",
+    "Unregistered partnership with no agreement",
+    "Private limited liability company (Ltd)",
+    "Sole proprietorship without registration"
+   ],
+   "answer": 2,
+   "explanation": "A private limited liability company limits personal liability, allows family control, and has less onerous reporting than a PLC. A PLC requires public share trading and more disclosure; an unregistered partnership or sole proprietorship do not limit personal liability."
+  },
+  {
+   "n": 37,
+   "topic": "Consumer protection",
+   "q": "Which agency in Nigeria is primarily responsible for protecting consumers from unsafe products and misleading advertising?",
+   "options": [
+    "Federal Inland Revenue Service (FIRS), because it collects taxes on goods",
+    "Nigerian Stock Exchange (NSE), because it monitors companies selling goods",
+    "National Agency for Food and Drug Administration and Control (NAFDAC) for food and drugs and Standards Organisation of Nigeria (SON) for other goods, but the Consumer Protection Council (CPC)/Federal Competition and Consumer Protection Commission (FCCPC) handles general consumer complaints",
+    "Central Bank of Nigeria (CBN), because it regulates prices"
+   ],
+   "answer": 2,
+   "explanation": "Consumer protection in Nigeria is shared: NAFDAC and SON regulate product safety and standards, while the Consumer Protection Council (now FCCPC) handles consumer complaints and unfair practices. CBN, FIRS and NSE do not have primary roles in consumer product safety or complaint resolution."
+  },
+  {
+   "n": 38,
+   "topic": "Consumer protection",
+   "q": "If Aisha buys a defective blender from a Lagos store and the seller refuses repair or refund, which immediate action best protects her consumer rights?",
+   "options": [
+    "Sell the blender to recover some money, because complaints are ineffective",
+    "Ignore the defect since consumer protection laws do not apply to household goods",
+    "Report the matter only to the local police for criminal prosecution",
+    "File a complaint with the Federal Competition and Consumer Protection Commission (FCCPC) and request enforcement"
+   ],
+   "answer": 3,
+   "explanation": "The FCCPC enforces consumer rights and can compel repair, replacement or refund; selling the blender avoids remedy, saying laws don't apply is false, and the police are not the primary body for civil consumer disputes."
+  },
+  {
+   "n": 39,
+   "topic": "Consumer protection",
+   "q": "Under Nigerian consumer law, which of the following is a consumer entitled to when goods are sold with a stated warranty?",
+   "options": [
+    "No remedy because warranties are only voluntary promises with no legal force",
+    "Lifetime free maintenance even if the warranty explicitly limits duration",
+    "An automatic cash compensation equal to twice the purchase price regardless of defect",
+    "Remedy under the warranty period such as repair, replacement or refund if the goods fail to meet the warranty terms"
+   ],
+   "answer": 3,
+   "explanation": "A stated warranty gives the consumer legal rights to remedies (repair/replacement/refund) within its terms. Double compensation or lifetime maintenance are not automatic, and warranties are enforceable, not meaningless promises."
+  },
+  {
+   "n": 40,
+   "topic": "Insurance",
+   "q": "Chukwu insured his shop stock for ₦500,000 with average clause (pro rata) and later suffered a partial loss of ₦200,000. At the time of loss the true value of stock was ₦800,000. How much will the insurer pay (ignore policy excess and assume no other clauses)?",
+   "options": [
+    "₦200,000",
+    "₦250,000",
+    "₦500,000",
+    "₦125,000"
+   ],
+   "answer": 3,
+   "explanation": "Under average (pro rata) clause payment = claim × sum insured / actual value = ₦200,000 × 500,000 / 800,000 = ₦200,000 × 0.625 = ₦125,000. ₦200,000 assumes full recovery, ₦500,000 and ₦250,000 are incorrect calculations."
+  },
+  {
+   "n": 41,
+   "topic": "Insurance",
+   "q": "Which type of insurance best protects a Nigerian trucking company against liabilities if one of its vehicles causes injury to third parties?",
+   "options": [
+    "Fire insurance on warehouses",
+    "Life insurance for the truck drivers",
+    "Third-party liability motor insurance",
+    "Marine cargo insurance"
+   ],
+   "answer": 2,
+   "explanation": "Third-party motor liability covers bodily injury or property damage to others caused by the vehicle. Life insurance, fire insurance and marine cargo insurance do not cover third-party motor liabilities."
+  },
+  {
+   "n": 42,
+   "topic": "Insurance",
+   "q": "A farmer in Oyo pays ₦36,000 yearly for an insurance policy that pays ₦720,000 if his crops fail. What is the premium rate as a percentage of the insured sum?",
+   "options": [
+    "50%",
+    "0.5%",
+    "20%",
+    "5%"
+   ],
+   "answer": 3,
+   "explanation": "Premium rate = (premium / sum insured) × 100 = (36,000 / 720,000) × 100 = 0.05 × 100 = 5%. 0.5% would be 3,600; 20% or 50% are far too large."
+  },
+  {
+   "n": 43,
+   "topic": "Advertising and marketing",
+   "q": "Which advertising objective focuses on convincing customers that a new brand of spaghetti noodles is superior to competitors' brands in Lagos markets?",
+   "options": [
+    "Informing — to give only basic details without making comparative claims",
+    "Reminding — to keep the brand in the minds of long-time buyers only",
+    "Persuasion — to change consumer preference and encourage purchase of the new brand",
+    "Internal promotion — to train staff only"
+   ],
+   "answer": 2,
+   "explanation": "Persuasive advertising seeks to change customer preference and promote trial or switching. Reminding targets existing customers; informing gives facts but not comparative persuasion; internal promotion is not a consumer advertising objective."
+  },
+  {
+   "n": 44,
+   "topic": "Advertising and marketing",
+   "q": "A Lagos firm places ads on radio during weekday mornings and on social media targeting 18–25 year-olds to launch a new drinks brand. This is an example of which marketing strategy?",
+   "options": [
+    "No targeting because radio and social media are random channels",
+    "Mass marketing because the ads reach everyone equally",
+    "Product diversification since multiple ads were placed",
+    "Segmented marketing using targeted media to reach specific demographic groups"
+   ],
+   "answer": 3,
+   "explanation": "Using different media and focusing on 18–25 year-olds is segmented (targeted) marketing. Mass marketing would avoid demographic targeting; media choice is deliberate not random; product diversification refers to introducing different products."
+  },
+  {
+   "n": 45,
+   "topic": "Documents of trade",
+   "q": "Which document created by a seller lists goods dispatched, the quantity, and the consignee's name but is not a demand for payment?",
+   "options": [
+    "Letter of credit, because it records dispatch details",
+    "Delivery note (dispatch note)",
+    "Promissory note, because it is issued by the buyer",
+    "Invoice, because it is only a proof of delivery"
+   ],
+   "answer": 1,
+   "explanation": "A delivery note records goods sent, quantities and consignee and is not a payment demand. An invoice is a request for payment, promissory note is a payment promise by buyer, and letter of credit is a bank payment arrangement, not a dispatch record."
+  },
+  {
+   "n": 46,
+   "topic": "Documents of trade",
+   "q": "Which document usually accompanies goods shipped by road and serves as evidence of contract of carriage between consignor and carrier in Nigeria?",
+   "options": [
+    "Bill of lading, because it is only used for air freight",
+    "Invoice, because it is issued by the carrier",
+    "Consignment note",
+    "Insurance policy, because it proves ownership of goods"
+   ],
+   "answer": 2,
+   "explanation": "A consignment note (or road consignment note) is used for road transport as evidence of the contract of carriage. Bill of lading is used mainly for sea transport (not only air), insurance policies insure goods but don't evidence carriage contract, and invoice is issued by the seller, not the carrier."
+  },
+  {
+   "n": 47,
+   "topic": "Foreign trade",
+   "q": "A Nigerian exporter receives payment from a foreign buyer in a different currency. Which document is most useful to prove the origin of the goods when the buyer's country applies preferential tariff rates?",
+   "options": [
+    "Bill of lading",
+    "Packing list",
+    "Commercial invoice",
+    "Certificate of origin"
+   ],
+   "answer": 3,
+   "explanation": "A Certificate of origin identifies the country where the goods were produced and is required by some countries to grant preferential tariffs. A commercial invoice shows value and terms, a packing list details contents, and a bill of lading evidences carriage, but none certify origin for tariff purposes."
+  },
+  {
+   "n": 48,
+   "topic": "Foreign trade",
+   "q": "If Nigeria imports machinery worth ₦12,000,000 and exports crude oil of ₦8,500,000 in a year, the balance of trade is",
+   "options": [
+    "₦20,500,000 (surplus)",
+    "₦−20,500,000 (deficit)",
+    "₦−3,500,000 (deficit)",
+    "₦3,500,000 (surplus)"
+   ],
+   "answer": 2,
+   "explanation": "Balance of trade = exports − imports = ₦8,500,000 − ₦12,000,000 = ₦−3,500,000, a deficit. The other options either reverse the sign or incorrectly add the values."
+  },
+  {
+   "n": 49,
+   "topic": "Occupation and production",
+   "q": "Which of the following is a direct advantage of division of labour in a Nigerian manufacturing firm?",
+   "options": [
+    "It eliminates the need for supervisors",
+    "Workers become skilled at specific tasks, increasing output per worker",
+    "It reduces the cost of raw materials",
+    "It ensures each worker owns a share of the firm"
+   ],
+   "answer": 1,
+   "explanation": "Division of labour assigns specific tasks to workers so they become more skilled and efficient at those tasks, raising productivity. It does not grant ownership, remove supervision, or directly lower raw material costs."
+  },
+  {
+   "n": 50,
+   "topic": "Occupation and production",
+   "q": "A cassava processing unit in Abeokuta produced 2,400 kg of gari in 8 days using 6 workers working equal hours. What is the average output per worker per day?",
+   "options": [
+    "50 kg",
+    "100 kg",
+    "40 kg",
+    "80 kg"
+   ],
+   "answer": 0,
+   "explanation": "Total worker-days = 6 workers × 8 days = 48 worker-days. Average output per worker per day = 2,400 kg ÷ 48 = 50 kg. The other numbers come from incorrect division or multiplication."
+  },
+  {
+   "n": 51,
+   "topic": "The stock exchange",
+   "q": "If Amina bought 150 shares of a quoted Lagos company at ₦100 per share and the market price rose by 20% the next week, what is her unrealised profit?",
+   "options": [
+    "₦2,000",
+    "₦30,000",
+    "₦300",
+    "₦3,000"
+   ],
+   "answer": 3,
+   "explanation": "New price = ₦100 × 1.20 = ₦120. Profit per share = ₦20. Total unrealised profit = ₦20 × 150 = ₦3,000. ₦30,000 would be if profit per share were ₦200; ₦300 and ₦2,000 are calculation errors."
+  },
+  {
+   "n": 52,
+   "topic": "The stock exchange",
+   "q": "Which statement best describes 'market capitalisation' of a company quoted on the Nigerian Exchange?",
+   "options": [
+    "Market price per share multiplied by the number of issued shares",
+    "Number of shares traded in a day multiplied by the opening price",
+    "Total annual profit multiplied by share price",
+    "Company's paid-up capital plus retained earnings"
+   ],
+   "answer": 0,
+   "explanation": "Market capitalisation = current market price per share × total issued shares. It is not based on daily traded volume, annual profit, or accounting equity measures like paid-up capital plus retained earnings."
+  },
+  {
+   "n": 53,
+   "topic": "E-commerce",
+   "q": "When a Nigerian online shop shows a padlock icon and 'https' in the address bar, this primarily indicates that",
+   "options": [
+    "Data exchanged between the customer and the shop is encrypted",
+    "The seller is licensed by the Central Bank of Nigeria",
+    "The website guarantees delivery within 24 hours",
+    "The product prices are fixed and cannot change"
+   ],
+   "answer": 0,
+   "explanation": "HTTPS and the padlock show that communication is encrypted (SSL/TLS), protecting data in transit. It does not guarantee delivery times, banking licences, or fixed prices."
+  },
+  {
+   "n": 54,
+   "topic": "E-commerce",
+   "q": "An online retailer offers 10% discount on orders over ₦20,000. A customer orders goods worth ₦18,000 and is charged an extra 5% convenience fee on the order value. What is the total amount the customer pays?",
+   "options": [
+    "₦18,900",
+    "₦17,100",
+    "₦19,800",
+    "₦20,000"
+   ],
+   "answer": 0,
+   "explanation": "Order is not eligible for 10% discount, so full price ₦18,000 plus 5% fee = ₦18,000 × 0.05 = ₦900. Total = ₦18,000 + ₦900 = ₦18,900. ₦19,800 wrongly applies 10% discount then fee, ₦17,100 subtracts 5% instead of adding, ₦20,000 is unrelated."
+  },
+  {
+   "n": 55,
+   "topic": "Home trade: retail and wholesale",
+   "q": "Fatima buys 120 cartons of bottled water from a wholesaler in Kano at ₦1,200 per carton. The wholesaler gives a trade discount of 15% on the invoice price. What is the total amount Fatima pays after the discount?",
+   "options": [
+    "₦122,000",
+    "₦115,200",
+    "₦122,800",
+    "₦122,400"
+   ],
+   "answer": 3,
+   "explanation": "Total invoice before discount = 120 × ₦1,200 = ₦144,000. Discount = 15% of ₦144,000 = ₦21,600. Amount payable = ₦144,000 − ₦21,600 = ₦122,400. The tempting ₦115,200 is 20% off; ₦122,000 and ₦122,800 are incorrect arithmetic."
+  },
+  {
+   "n": 56,
+   "topic": "Home trade: retail and wholesale",
+   "q": "Which of the following is a distinguishing feature of retail trade (compared with wholesale trade) in Nigeria?",
+   "options": [
+    "Sells goods in small quantities directly to final consumers",
+    "Requires purchasers to have trade licences before buying",
+    "Sells goods only to manufacturers for further processing",
+    "Deals exclusively in imported goods for re-export"
+   ],
+   "answer": 0,
+   "explanation": "Retail trade serves final consumers and sells in small quantities. Wholesalers sell in bulk to retailers or other businesses (not only manufacturers). Retailers do not require buyers to have trade licences, and they do not deal exclusively in imports for re-export."
+  },
+  {
+   "n": 57,
+   "topic": "Transport and communication",
+   "q": "A furniture company in Ibadan must move a 12-tonne machine to Port Harcourt. Which transport mode is best for balancing cost and reliability for this heavy, long-distance domestic movement?",
+   "options": [
+    "Air transport, because it is fastest and cheapest for heavy loads",
+    "Bicycle courier, because it is the most reliable for long distances",
+    "Rail transport, because it handles heavy loads economically over long distances",
+    "Pipeline transport, because it is flexible for heavy machinery"
+   ],
+   "answer": 2,
+   "explanation": "Rail is most suitable for heavy bulky goods over long domestic distances due to lower cost per tonne and reliability. Air is fastest but very expensive for heavy machinery. Pipelines are for liquids/gases, not machinery. Bicycle courier is irrelevant for long-distance heavy cargo."
+  },
+  {
+   "n": 58,
+   "topic": "Money and banking",
+   "q": "If Chike places ₦80,000 in a bank fixed deposit that pays 6% simple interest per annum for 3 years, how much total interest will he earn?",
+   "options": [
+    "₦14,880",
+    "₦14,400",
+    "₦16,000",
+    "₦15,000"
+   ],
+   "answer": 1,
+   "explanation": "Simple interest = P × r × t = ₦80,000 × 0.06 × 3 = ₦14,400. ₦14,880 would be 6.2% or compound interest miscalculation; ₦15,000 and ₦16,000 are incorrect computations."
+  },
+  {
+   "n": 59,
+   "topic": "Money and banking",
+   "q": "Which document does a customer normally sign when opening a current (checking) account at a Nigerian commercial bank?",
+   "options": [
+    "Account opening mandate or agreement authorising how the account will be operated",
+    "Bill of lading for goods to be stored by the bank",
+    "Insurance policy covering bank deposits against theft",
+    "Promissory note promising to repay a bank loan"
+   ],
+   "answer": 0,
+   "explanation": "Banks require an account opening mandate/agreement that sets out signatories and operating instructions. An insurance policy, bill of lading, and promissory note are unrelated to simply opening a current account."
+  },
+  {
+   "n": 60,
+   "topic": "Business units",
+   "q": "Which characteristic best distinguishes a public limited company from a sole proprietorship in Nigeria?",
+   "options": [
+    "It is always owned and run by a single person who bears unlimited liability",
+    "It never pays corporate taxes in Nigeria",
+    "Shareholders have limited liability and ownership is divided into transferable shares",
+    "It cannot enter into contracts in its own name"
+   ],
+   "answer": 2,
+   "explanation": "A public limited company has limited liability and transferable shares. A sole proprietorship is typically single-owner with unlimited liability (opposite of the correct trait). Public companies do pay corporate taxes and can enter contracts in their own name, so the other options are false."
+  }
+ ]
+}

@@ -1,0 +1,661 @@
+{
+ "id": "waec-economics-p1",
+ "exam": "waec",
+ "subject": "economics",
+ "year": null,
+ "number": 1,
+ "source": "ai",
+ "minutes": 60,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Theory of production",
+   "q": "A Nigerian farmer increases fertilizer on a maize plot. Output rises from 200 kg to 260 kg when fertilizer increases from 10 kg to 15 kg. What is the marginal product (MP) of the additional fertilizer?",
+   "options": [
+    "10 kg per kg of fertilizer",
+    "12 kg per kg of fertilizer",
+    "1.2 kg per kg of fertilizer",
+    "60 kg per kg of fertilizer"
+   ],
+   "answer": 1,
+   "explanation": "MP = change in output ÷ change in input = (260 − 200) kg ÷ (15 − 10) kg = 60 ÷ 5 = 12 kg per kg. A common mistake is dividing total output by input (giving 20) or using the wrong difference (giving 60 or 1.2)."
+  },
+  {
+   "n": 2,
+   "topic": "Theory of production",
+   "q": "If a firm’s total product (TP) of labour is given by TP = 10L − 0.5L², where L is units of labour, what is the marginal product (MP) when L = 6?",
+   "options": [
+    "MP = 10 − L = 4 units",
+    "MP = 10 − L = 6 units",
+    "MP = 10 − 0.5L = 7 units",
+    "MP = 10L − L² = 24 units"
+   ],
+   "answer": 0,
+   "explanation": "MP = d(TP)/dL = 10 − L. At L = 6, MP = 10 − 6 = 4. The first wrong answer confuses coefficient of L, the third mis-evaluates the derivative, and the fourth uses an incorrect derivative form."
+  },
+  {
+   "n": 3,
+   "topic": "Theory of production",
+   "q": "A small factory uses capital (K) and labour (L). If the isoquant is convex and the marginal rate of technical substitution (MRTS) diminishes as L increases, which implication is correct?",
+   "options": [
+    "Capital and labour must be used in fixed proportions (Leontief)",
+    "The firm can substitute labour for capital but needs increasing additional labour to replace each unit of capital",
+    "Labour and capital are perfect substitutes so firm can replace them at constant rate",
+    "MRTS increasing means fewer workers needed to replace a unit of capital"
+   ],
+   "answer": 1,
+   "explanation": "Diminishing MRTS means each additional unit of labour replaces less capital, so more labour is needed to substitute a unit of capital. Perfect substitutes would have constant MRTS. Fixed proportions imply no substitution (right angle isoquant). MRTS increasing is the opposite property."
+  },
+  {
+   "n": 4,
+   "topic": "Money and inflation",
+   "q": "In Nigeria, M = 1,200 billion naira, velocity V = 4, and real output Y = 800 billion naira (real GDP). Using the quantity theory MV = PY, what is the price level P and the annual inflation if next year money supply rises to 1,320 billion with V and Y unchanged?",
+   "options": [
+    "P = 6; inflation = 20%",
+    "P = 4.8; inflation = 10%",
+    "P = 3; inflation = 10%",
+    "P = 6; inflation = 10%"
+   ],
+   "answer": 3,
+   "explanation": "Initial P = MV/Y = (1,200×4)/800 = 4,800/800 = 6. New P = (1,320×4)/800 = 5,280/800 = 6.6. Inflation = (6.6 − 6)/6 = 0.6/6 = 0.10 = 10%. Wrong options miscalculate P or the percent change."
+  },
+  {
+   "n": 5,
+   "topic": "Money and inflation",
+   "q": "A central bank raises the monetary base causing commercial banks to hold higher reserves and not lend. Which short-term effect on money supply and inflation is most likely?",
+   "options": [
+    "Money supply rises little or not at all, so inflationary pressure remains low",
+    "Money supply rises strongly and inflation spikes immediately",
+    "Money supply falls sharply causing deflation",
+    "Money supply doubles because the monetary base rose"
+   ],
+   "answer": 0,
+   "explanation": "If banks hoard reserves, the money multiplier falls and the increase in the monetary base does not translate into a large rise in money supply, so inflation pressure stays low. The tempting error assumes a full multiplier or immediate pass-through to prices."
+  },
+  {
+   "n": 6,
+   "topic": "Money and inflation",
+   "q": "If nominal wages rise by 12% while productivity rises by 5% and prices rise by 6% in the same period, what happens to real unit labour cost (RULC)? (Approximate percent change)",
+   "options": [
+    "RULC rises by about 11%",
+    "RULC falls by about 1%",
+    "RULC unchanged",
+    "RULC rises by about 1%"
+   ],
+   "answer": 3,
+   "explanation": "RULC ≈ nominal wage increase − productivity increase − price increase = 12% − 5% − 6% = 1% rise. Some may forget to subtract productivity or confuse with real wage change."
+  },
+  {
+   "n": 7,
+   "topic": "Economic development and planning",
+   "q": "A state in Nigeria chooses an import substitution industrialisation (ISI) policy. Which outcome is a likely short-term benefit?",
+   "options": [
+    "Immediate increase in export earnings across all sectors",
+    "Lower consumer prices for all imported goods",
+    "Rapid technological catch-up to world frontier without protection",
+    "Growth of local manufacturing capacity and reduction in import bills for targeted goods"
+   ],
+   "answer": 3,
+   "explanation": "ISI encourages local manufacturing and reduces imports of targeted goods, benefiting local capacity. It does not automatically increase export earnings, guarantee rapid technology transfer without incentives, nor lower prices of imports (often raises domestic prices due to protection)."
+  },
+  {
+   "n": 8,
+   "topic": "Economic development and planning",
+   "q": "Nigeria plans a five-year development plan allocating 30% to infrastructure, 40% to education and health, and 30% to agriculture and industry. Which indicator will best show short-term improvement from this allocation?",
+   "options": [
+    "Immediate doubling of GDP per capita",
+    "Increased school enrolment and improved road access in rural areas within two years",
+    "Long-run structural change within six months",
+    "Instant elimination of poverty nationwide"
+   ],
+   "answer": 1,
+   "explanation": "Allocation to education, health and infrastructure will show short-term measurable changes like enrolment and road access. GDP per capita and poverty reduction are slower-moving and structural change takes longer than months."
+  },
+  {
+   "n": 9,
+   "topic": "Market structures",
+   "q": "A small bakery in Ibadan faces many other similar bakeries, sells bread at market price ₦150 per loaf, and cannot influence price. Its average total cost (ATC) at current output 200 loaves is ₦140 and marginal cost (MC) of the 201st loaf is ₦160. Which statement is true for short-run profit maximisation?",
+   "options": [
+    "The bakery should increase output because price is above ATC so profit will rise by producing more.",
+    "The bakery should produce 200 loaves and shut down later if price falls below average variable cost, because MC at the margin exceeds price so increasing output reduces profit.",
+    "The bakery can set a higher price than ₦150 because it has some market power.",
+    "The bakery should immediately shut down because price is less than MC."
+   ],
+   "answer": 1,
+   "explanation": "In perfect competition firms take price = ₦150. Profit-maximising condition is P = MC at margin; here MC (₦160) > P (₦150), so producing the 201st loaf would reduce profit, hence stay at 200 loaves. Price above ATC means profit positive at current output, so option 1 is wrong. Shutdown decision depends on price relative to average variable cost, not just MC, so option 2 is incomplete. Bakeries in this scenario are price-takers, so they cannot raise price, making option 3 wrong."
+  },
+  {
+   "n": 10,
+   "topic": "Market structures",
+   "q": "In Lagos, three large telecommunication firms merge, reducing the number of firms from five to three. Which market outcome is most likely in the short run?",
+   "options": [
+    "Output per firm will fall but total industry output must rise.",
+    "Prices will definitely fall because of increased competition from the merger.",
+    "The merger will convert the market into perfect competition.",
+    "The market becomes more concentrated and firms may tacitly coordinate, leading to higher prices and reduced consumer surplus."
+   ],
+   "answer": 3,
+   "explanation": "Reducing the number of large firms increases market concentration; with fewer firms tacit coordination or oligopolistic pricing may push prices up and reduce consumer surplus. Prices need not fall (wrong 1). Total industry output could fall if firms restrict output to raise price, so wrong 2 is false. A merger cannot create perfect competition (wrong 3)."
+  },
+  {
+   "n": 11,
+   "topic": "Market structures",
+   "q": "A firm in a monopolistically competitive market sells differentiated soap in Kano. It faces a downward-sloping demand and in long run economic profits are zero. Which feature explains zero long-run profit?",
+   "options": [
+    "There are high barriers to entry that keep profits at zero.",
+    "Government price controls force price equal to average cost.",
+    "Free entry and exit: new firms enter when profits exist, shifting each firm's demand left until profits are eliminated.",
+    "The firm faces a perfectly elastic demand curve in the long run."
+   ],
+   "answer": 2,
+   "explanation": "Monopolistic competition has product differentiation but free entry and exit; positive profits attract entrants, reducing demand for incumbents until normal profit (zero economic profit) occurs. Demand is not perfectly elastic (wrong 1). No government price control is necessary for zero long-run profit in this market (wrong 2). High barriers would preserve profits, not eliminate them (wrong 3)."
+  },
+  {
+   "n": 12,
+   "topic": "Basic economic concepts",
+   "q": "If a student chooses between studying an extra hour versus working a part-time job that pays ₦600 per hour, and the study hour increases expected exam score translating to an expected scholarship worth ₦4,000, what is the opportunity cost and should the student study that hour?",
+   "options": [
+    "Opportunity cost is ₦4,000 because that is the next best alternative value.",
+    "Opportunity cost is ₦600 (foregone wage), and the student should study because expected benefit ₦4,000 exceeds the cost ₦600.",
+    "Opportunity cost is ₦3,400 (difference) and so study is not worthwhile.",
+    "There is no opportunity cost if the student enjoys studying."
+   ],
+   "answer": 1,
+   "explanation": "Opportunity cost equals the value of the next best alternative foregone: ₦600 wage. Since expected benefit (₦4,000) > cost (₦600), studying is rational. Option 1 confuses benefit with cost. Option 3 incorrectly subtracts to get a cost. Enjoyment does not eliminate opportunity cost (wrong 4)."
+  },
+  {
+   "n": 13,
+   "topic": "Basic economic concepts",
+   "q": "The price of yam increases, causing consumers to buy more plantain as a substitute. Which demand concept best describes plantain's reaction and what sign does its cross-price elasticity have?",
+   "options": [
+    "Plantain is an inferior good; cross-price elasticity is zero.",
+    "Plantain is unrelated; cross-price elasticity is negative.",
+    "Plantain is a complement; cross-price elasticity is negative.",
+    "Plantain is a substitute; cross-price elasticity is positive."
+   ],
+   "answer": 3,
+   "explanation": "When the price of yam rises and demand for plantain increases, the goods are substitutes; cross-price elasticity (%ΔQd plantain / %ΔP yam) is positive. Complements produce negative cross-elasticity, so wrong 1 is incorrect. Inferiority concerns income, not cross-price, so wrong 2 is irrelevant. Unrelated goods have near-zero cross-price elasticity, not negative (wrong 3)."
+  },
+  {
+   "n": 14,
+   "topic": "Basic economic concepts",
+   "q": "A production possibility frontier (PPF) for two goods, food and clothing, is bowed outwards. What economic principle does this illustrate and why?",
+   "options": [
+    "Increasing opportunity cost: resources are specialized so shifting resources to produce more food costs increasing amounts of clothing forgone.",
+    "Comparative advantage implying one country produces everything.",
+    "Absolute advantage meaning one good is always cheaper to make.",
+    "Constant opportunity cost because resources are perfectly adaptable between goods."
+   ],
+   "answer": 0,
+   "explanation": "A bowed-out PPF shows increasing opportunity cost as resources less suited to the alternative are reallocated; each extra unit of food costs more clothing. Constant opportunity cost would give a straight line PPF (wrong 1). Comparative advantage concerns relative advantage between countries, not the shape per se (wrong 2). Absolute advantage is about productivity levels, not the bowed shape (wrong 3)."
+  },
+  {
+   "n": 15,
+   "topic": "Public finance",
+   "q": "The federal government of Nigeria introduces a specific tax of ₦20 per litre on bottled water. Which immediate effect on the market is most likely?",
+   "options": [
+    "Supply curve shifts left (up) by ₦20 per litre, raising price to consumers and reducing equilibrium quantity.",
+    "Supply curve shifts right because firms can afford to sell more after tax.",
+    "Equilibrium quantity rises because government tax increases market demand.",
+    "Demand curve shifts left by ₦20 per litre, reducing quantity but leaving price unchanged."
+   ],
+   "answer": 0,
+   "explanation": "A specific tax on sellers increases firms' marginal cost by ₦20 per litre, shifting supply upward/left, typically increasing consumer price and reducing quantity. Taxes do not shift demand (wrong 1). Supply cannot shift right due to a tax (wrong 2). Taxes reduce, not raise, equilibrium quantity (wrong 3)."
+  },
+  {
+   "n": 16,
+   "topic": "Public finance",
+   "q": "A Lagos state government finances a new bridge by issuing bonds bought by local banks. If the government spends the bond proceeds on construction, what is a likely short-term macro effect?",
+   "options": [
+    "Aggregate supply increases immediately, lowering prices and reducing GDP.",
+    "Aggregate demand increases due to higher government spending, potentially raising real GDP and interest rates if banks have less loanable funds.",
+    "Money supply falls to zero because bonds replace all deposits.",
+    "There is no macro effect because only assets changed hands."
+   ],
+   "answer": 1,
+   "explanation": "Government bond-financed spending raises aggregate demand as construction spending increases AD; banks buying bonds reduces their reserves available for loans, potentially increasing interest rates (crowding out). Aggregate supply doesn't rise immediately from spending (wrong 1). Money supply does not fall to zero; bonds change asset composition but deposits remain (wrong 2). There is a macro effect through AD and interest rates, so wrong 3 is false."
+  },
+  {
+   "n": 17,
+   "topic": "National income",
+   "q": "Nigeria's nominal GDP in a year is ₦50,000 billion and the GDP deflator is 125 (base year 100). What is real GDP in base-year prices?",
+   "options": [
+    "₦50,000 billion",
+    "₦62,500 billion",
+    "₦25,000 billion",
+    "₦40,000 billion"
+   ],
+   "answer": 3,
+   "explanation": "Real GDP = nominal GDP × (100 / GDP deflator) = ₦50,000 × (100/125) = ₦50,000 × 0.8 = ₦40,000 billion. ₦62,500 would be if deflator <100 (wrong 1). ₦50,000 is nominal GDP without deflator adjustment (wrong 2). ₦25,000 is half of nominal and doesn't follow the calculation (wrong 3)."
+  },
+  {
+   "n": 18,
+   "topic": "National income",
+   "q": "If depreciation in an economy is ₦3,000 billion and gross domestic product (GDP) is ₦30,000 billion, while net factor income from abroad is −₦500 billion, what is gross national income (GNI) and gross national product (GNP)?",
+   "options": [
+    "GNP = ₦29,500 billion; GNI = ₦26,500 billion",
+    "GNP = ₦27,000 billion; GNI = ₦26,500 billion",
+    "GNP = ₦30,000 billion; GNI = ₦26,500 billion",
+    "GNP = ₦29,500 billion; GNI = ₦29,500 billion (since GNP equals GNI when measuring national income before depreciation adjustments)."
+   ],
+   "answer": 3,
+   "explanation": "GNP = GDP + net factor income from abroad = ₦30,000 + (−₦500) = ₦29,500 billion. GNI is another name often used synonymously with GNP before subtracting depreciation; here GNI = ₦29,500 billion. Depreciation is used to compute NNP or NNI, not GNP/GNI directly, so options that subtract depreciation for GNP/GNI are incorrect."
+  },
+  {
+   "n": 19,
+   "topic": "Banking and financial institutions",
+   "q": "A commercial bank in Lagos has deposits of ₦12,000,000 and total reserves of ₦1,500,000. If the required reserve ratio is 10%, what is the maximum amount of new loans the bank can create (assume no excess reserves are held except those shown)?",
+   "options": [
+    "₦300,000",
+    "₦900,000",
+    "₦1,200,000",
+    "₦0"
+   ],
+   "answer": 0,
+   "explanation": "Required reserves = 10% of ₦12,000,000 = ₦1,200,000. Excess reserves = total reserves − required = ₦1,500,000 − ₦1,200,000 = ₦300,000, which is the maximum new loans the bank can create. ₦1,200,000 is the required reserve, not excess; ₦900,000 would be if required were 15%; ₦0 is wrong because there are positive excess reserves."
+  },
+  {
+   "n": 20,
+   "topic": "International trade",
+   "q": "Nigeria imposes a specific import tariff of ₦50 per unit on imported rice. Before the tariff the world price is ₦200 and domestic demand at that price is 1,000 units while domestic supply is 200 units. Assuming imports are the difference between demand and supply and foreign sellers receive the world price, what is the new domestic price and the government revenue from the tariff?",
+   "options": [
+    "Domestic price ₦200; government revenue ₦50,000",
+    "Domestic price ₦240; government revenue ₦40,000",
+    "Domestic price ₦250; government revenue ₦40,000",
+    "Domestic price ₦250; government revenue ₦50,000"
+   ],
+   "answer": 2,
+   "explanation": "A specific tariff of ₦50 raises domestic price to ₦200+₦50 = ₦250. Imports = demand − supply = 1,000 − 200 = 800 units. Government revenue = ₦50 × 800 = ₦40,000. Option with ₦50,000 doubles the units; ₦240 price is inconsistent with a ₦50 tariff on ₦200 world price."
+  },
+  {
+   "n": 21,
+   "topic": "Banking and financial institutions",
+   "q": "A Central Bank introduces a liquidity ratio that forces commercial banks to hold 5% of their deposits as cash in vaults. If First Lagos Bank has deposits of ₦8,000,000 and previously held vault cash of ₦200,000, how much additional vault cash must it hold to comply?",
+   "options": [
+    "₦200,000",
+    "₦0",
+    "₦600,000",
+    "₦400,000"
+   ],
+   "answer": 0,
+   "explanation": "Required vault cash = 5% of ₦8,000,000 = ₦400,000. Already held ₦200,000 so additional = ₦400,000 − ₦200,000 = ₦200,000. ₦0 would be if it already held required; ₦600,000 is sum rather than difference."
+  },
+  {
+   "n": 22,
+   "topic": "International trade",
+   "q": "If Nigeria and Ghana both produce cocoa and engage in trade. Nigeria has an absolute advantage in both goods but Ghana has a lower opportunity cost in cocoa production. According to comparative advantage, which is correct?",
+   "options": [
+    "Ghana should produce both goods and not trade",
+    "Both countries will be worse off if they trade",
+    "Nigeria should specialise in the good where it has lower opportunity cost relative to Ghana; Ghana should specialise in cocoa if it has the lower opportunity cost in cocoa",
+    "Nigeria must avoid trade since it has absolute advantage"
+   ],
+   "answer": 2,
+   "explanation": "Comparative advantage says each country benefits by specialising in goods with lower opportunity cost; having an absolute advantage in both does not prevent gains from trade. The other options confuse absolute with comparative advantage or deny gains from trade."
+  },
+  {
+   "n": 23,
+   "topic": "Demand and supply",
+   "q": "A subsidy of ₦20 per unit is granted to producers of gari. If the supply curve shifts down by ₦20 at each quantity and initial equilibrium price was ₦100 with quantity 500, which of the following is a likely immediate effect (holding demand fixed)?",
+   "options": [
+    "Producer receives market price lowered by less than ₦20 in general and quantity increases",
+    "Producer receives ₦20 more and quantity unchanged",
+    "Market price rises by ₦20 and quantity falls",
+    "Market price remains ₦100 and quantity unchanged"
+   ],
+   "answer": 0,
+   "explanation": "A per-unit subsidy shifts supply down, lowering market price to consumers and increasing quantity. Producers receive market price plus subsidy; the price change to consumers is typically less than the full subsidy, so producers still benefit. The wrong options state effects inconsistent with a supply subsidy."
+  },
+  {
+   "n": 24,
+   "topic": "Banking and financial institutions",
+   "q": "A depositor places ₦100,000 in a 1-year fixed deposit paying 8% nominal annual interest compounded annually. If inflation over the year is 5%, what is the real interest rate approximately?",
+   "options": [
+    "3%",
+    "8%",
+    "≈ 2.86%",
+    "5%"
+   ],
+   "answer": 2,
+   "explanation": "Real interest ≈ (1+nominal)/(1+inflation) − 1 = (1.08/1.05) −1 = 1.0285714 −1 = 0.0285714 ≈ 2.857% ≈ 2.86%. 3% is close but slightly overstated; 5% and 8% ignore inflation."
+  },
+  {
+   "n": 25,
+   "topic": "International trade",
+   "q": "A currency depreciation makes Nigerian exports cheaper abroad and imports more expensive. Which of the following describes a likely short-run effect on the trade balance if import volumes are price-inelastic and export volumes are price-elastic?",
+   "options": [
+    "Trade balance may improve because increased export value outweighs higher import cost",
+    "Trade balance will worsen because imports become more expensive",
+    "Trade balance unchanged because volumes don't change",
+    "Trade balance improves only if tariffs are raised"
+   ],
+   "answer": 0,
+   "explanation": "If exports are price-elastic, depreciation increases export value substantially; if imports are price-inelastic, import volumes fall little but higher prices raise import bill slightly; overall the trade balance can improve. The other options ignore elasticity effects or add irrelevant policy changes."
+  },
+  {
+   "n": 26,
+   "topic": "Agriculture and industry in Nigeria",
+   "q": "Which of the following best explains why smallholder farmers in rural Nigeria often adopt mixed cropping (growing maize and legumes together)?",
+   "options": [
+    "To make harvesting faster because mixed crops mature at same time",
+    "To avoid paying land rent by using the land for two crops at once",
+    "To reduce risk of total crop failure and improve soil fertility through nitrogen fixation by legumes",
+    "To earn higher immediate cash income because mixed cropping doubles yield per hectare"
+   ],
+   "answer": 2,
+   "explanation": "Mixed cropping spreads risk because different crops respond differently to pests, drought and disease; legumes fix nitrogen, improving soil fertility for the cereal. The other options are false: mixed crops often mature at different times, do not literally double yields, and land rent is unrelated to cropping pattern."
+  },
+  {
+   "n": 27,
+   "topic": "Population and labour",
+   "q": "Nigeria's working-age population (15–64) rises faster than the number of available formal jobs. Which of the following is the most likely short-term effect on the official unemployment rate?",
+   "options": [
+    "The official unemployment rate will fall because more people become self-employed",
+    "The official unemployment rate remains unchanged because unemployment does not depend on population",
+    "The official unemployment rate will fall because labour force participation decreases automatically",
+    "The official unemployment rate will rise because more people seek formal employment than there are jobs"
+   ],
+   "answer": 3,
+   "explanation": "When the working-age population grows faster than formal jobs, more people join the labour force seeking work, raising measured unemployment. Self-employment may increase but often in the informal sector and does not immediately reduce official unemployment. Unemployment depends on both job availability and labour force size, so it does change."
+  },
+  {
+   "n": 28,
+   "topic": "Money and inflation",
+   "q": "The Central Bank of Nigeria raises the Monetary Policy Rate (MPR). Which is the most likely immediate effect on commercial bank lending rates and aggregate demand?",
+   "options": [
+    "Commercial bank lending rates stay the same because banks ignore MPR changes; aggregate demand rises",
+    "Commercial bank lending rates become negative, causing immediate deflation",
+    "Commercial bank lending rates rise, making borrowing more expensive and reducing aggregate demand",
+    "Commercial bank lending rates fall, encouraging borrowing and increasing aggregate demand"
+   ],
+   "answer": 2,
+   "explanation": "An increase in MPR raises banks' cost of funds, so they raise lending rates; higher borrowing costs reduce investment and consumption, lowering aggregate demand. The other options contradict standard transmission mechanisms or are unrealistic."
+  },
+  {
+   "n": 29,
+   "topic": "Agriculture and industry in Nigeria",
+   "q": "Which policy would most directly encourage industrialisation through local content in Nigerian manufacturing?",
+   "options": [
+    "An instruction for banks to increase lending to micro-savers",
+    "A reduction in agricultural subsidies for smallholders",
+    "A policy to fix exchange rate permanently at a low level",
+    "A government requirement that a percentage of inputs for public procurement be sourced from Nigerian manufacturers"
+   ],
+   "answer": 3,
+   "explanation": "Local content rules in public procurement force government buyers to source inputs domestically, directly boosting demand for Nigerian manufacturers. Reducing agricultural subsidies or bank lending to micro-savers are indirect or unrelated, and fixing exchange rates doesn't target local input use."
+  },
+  {
+   "n": 30,
+   "topic": "Population and labour",
+   "q": "If a rural town in Kaduna State implements vocational training that raises the labour force participation rate from 60% to 66% while the population aged 15–64 stays at 10,000, how many additional people join the labour force?",
+   "options": [
+    "6,000 additional people",
+    "60 additional people",
+    "1,600 additional people",
+    "600 additional people"
+   ],
+   "answer": 3,
+   "explanation": "Initial labour force = 60% of 10,000 = 6,000. New labour force = 66% of 10,000 = 6,600. Additional = 6,600 − 6,000 = 600. The other options miscalculate percentage changes or confuse levels."
+  },
+  {
+   "n": 31,
+   "topic": "Theory of production",
+   "q": "A firm’s production function is Q = 5L − 0.1L² where L is labour input. For which value of L is marginal product zero?",
+   "options": [
+    "L = 25",
+    "L = 5",
+    "L = 50",
+    "L = 10"
+   ],
+   "answer": 0,
+   "explanation": "Marginal product MP = dQ/dL = 5 − 0.2L. Set MP = 0 → 5 − 0.2L = 0 → 0.2L = 5 → L = 25. Other values do not satisfy this equation."
+  },
+  {
+   "n": 32,
+   "topic": "Money and inflation",
+   "q": "Suppose Nigeria's money supply (M) grows at 12% and real output (Y) grows at 4% while velocity (V) is constant. According to the quantity theory of money, the inflation rate is approximately:",
+   "options": [
+    "12%",
+    "16%",
+    "8%",
+    "4%"
+   ],
+   "answer": 2,
+   "explanation": "Quantity theory: M + V = P + Y (growth rates). With V constant, inflation ≈ growth of M − growth of Y = 12% − 4% = 8%. 16% adds instead of subtracting, 4% confuses with output growth, 12% ignores Y growth."
+  },
+  {
+   "n": 33,
+   "topic": "Agriculture and industry in Nigeria",
+   "q": "A factory in Enugu produces cement and experiences increasing returns to scale. If it doubles all inputs, output will:",
+   "options": [
+    "Less than double, because returns to scale are decreasing",
+    "Remain unchanged, because output does not depend on scale",
+    "Exactly double, because returns to scale are constant",
+    "More than double, due to increasing returns to scale"
+   ],
+   "answer": 3,
+   "explanation": "Increasing returns to scale means proportional increases in all inputs lead to a more than proportional increase in output. The other options describe constant returns, decreasing returns, or deny input–output relation."
+  },
+  {
+   "n": 34,
+   "topic": "Theory of production",
+   "q": "A small palm oil refinery faces the short-run total cost function TC(Q) = 200 + 10Q + 0.5Q² (₦). What is the marginal cost (MC) when Q = 20 litres?",
+   "options": [
+    "MC = ₦40",
+    "MC = ₦20",
+    "MC = ₦200",
+    "MC = ₦30"
+   ],
+   "answer": 3,
+   "explanation": "MC = dTC/dQ = 10 + 1.0Q. At Q = 20 → MC = 10 + 20 = ₦30. ₦20 would be 10 + 0.5×20 (wrong derivative), ₦40 is 10 + 30, ₦200 confuses fixed cost with marginal cost."
+  },
+  {
+   "n": 35,
+   "topic": "Economic development and planning",
+   "q": "Which of the following best describes the Human Development Index (HDI) used to compare development across Nigerian states?",
+   "options": [
+    "An index that measures only access to basic services such as water and electricity.",
+    "A composite index combining life expectancy, education (mean years of schooling and expected years of schooling) and gross national income per capita.",
+    "A ranking based solely on unemployment rate and industrial output.",
+    "A measure of only per capita income adjusted for inflation and purchasing power parity."
+   ],
+   "answer": 1,
+   "explanation": "The HDI is a composite index of three dimensions: health (life expectancy), education (mean and expected years of schooling) and standard of living (GNI per capita). The wrong options either focus only on income, only on unemployment/industry, or only on basic services, which are incomplete descriptions."
+  },
+  {
+   "n": 36,
+   "topic": "Economic development and planning",
+   "q": "A state government in Nigeria wants to encourage long-term industrialisation. Which planning policy would most directly increase local technical skill and labour productivity?",
+   "options": [
+    "Privatise all remaining state-owned enterprises immediately without retraining programmes.",
+    "Introduce import tariffs on all manufactured goods to protect local firms.",
+    "Provide short-term cash transfers to urban households without training components.",
+    "Invest in vocational and technical training centres linked with local industry apprenticeships."
+   ],
+   "answer": 3,
+   "explanation": "Vocational and technical training linked to apprenticeships directly raises workers' skills and productivity needed for industrialisation. Cash transfers without training do not improve skills; tariffs may protect firms but do not build skills; mass privatisation without retraining can lead to unemployment and does not raise human capital."
+  },
+  {
+   "n": 37,
+   "topic": "Economic development and planning",
+   "q": "The poverty gap index measures which aspect of poverty in a region such as northern Nigeria?",
+   "options": [
+    "The average income of the richest 10% relative to the poorest 10%.",
+    "The average shortfall of the incomes of the poor from the poverty line, expressed as a proportion of the poverty line.",
+    "The percentage of the population that lives below the poverty line without considering depth.",
+    "The total value of transfers required to eliminate poverty including administrative costs."
+   ],
+   "answer": 1,
+   "explanation": "The poverty gap index measures the depth of poverty by averaging how far poor people's incomes fall below the poverty line as a fraction of that line. The first wrong option describes poverty headcount ratio; the others describe inequality and a policy cost measure, not the standard poverty gap index."
+  },
+  {
+   "n": 38,
+   "topic": "Elasticity",
+   "q": "A Lagos market shows demand Q = 200 − 4P. If price falls from ₦20 to ₦15 per unit, the arc price elasticity of demand is approximately:",
+   "options": [
+    "−0.54 (inelastic)",
+    "−1.5 (elastic)",
+    "−2.0 (very elastic)",
+    "−0.25 (highly inelastic)"
+   ],
+   "answer": 0,
+   "explanation": "At P1=20, Q1=120; at P2=15, Q2=140. Arc %ΔQ = 20/130 = 0.1538; %ΔP = −5/17.5 = −0.2857. Elasticity = 0.1538/−0.2857 ≈ −0.538 ≈ −0.54, inelastic. The other options are numerically incorrect (they either over- or understate the responsiveness)."
+  },
+  {
+   "n": 39,
+   "topic": "Elasticity",
+   "q": "If a 10% increase in the price of imported rice causes demand for locally produced rice to fall by 5%, the cross-price elasticity is:",
+   "options": [
+    "2.0, indicating strong substitutes.",
+    "0.5, indicating substitutes.",
+    "−2.0, indicating strong complements.",
+    "−0.5, indicating the two goods are complements."
+   ],
+   "answer": 3,
+   "explanation": "Cross-price elasticity = %ΔQx / %ΔPy = −5% / 10% = −0.5. Negative sign shows complements. A positive value would indicate substitutes, and −2.0 is not the calculated value."
+  },
+  {
+   "n": 40,
+   "topic": "Elasticity",
+   "q": "A bakery in Ibadan finds that when local household income rises by 8%, demand for its staple bread falls by 4%. The income elasticity of demand for this bread is:",
+   "options": [
+    "−0.5, so the bread is an inferior good.",
+    "−2.0, so the bread is a luxury inferior good.",
+    "1.6, so the bread is a luxury normal good.",
+    "0.5, so the bread is a normal good."
+   ],
+   "answer": 0,
+   "explanation": "Income elasticity = %ΔQ / %ΔY = −4% / 8% = −0.5, negative indicating an inferior good (consumption falls as income rises). The positive alternatives are wrong; −2.0 and 1.6 are not the computed values."
+  },
+  {
+   "n": 41,
+   "topic": "Market structures",
+   "q": "A monopolist in Abuja faces demand P = 200 − 2Q, has constant marginal cost MC = ₦20 and fixed cost FC = ₦200. What is the monopolist's profit in naira?",
+   "options": [
+    "₦1,800",
+    "₦4,500",
+    "₦3,850",
+    "₦2,500"
+   ],
+   "answer": 2,
+   "explanation": "MR = 200 − 4Q. Set MR = MC: 200 − 4Q = 20 → Q = 45. Price P = 200 − 2(45) = 110. TR = 110×45 = 4,950. TC = FC + MC×Q = 200 + 20×45 = 1,100. Profit = TR − TC = 4,950 − 1,100 = ₦3,850. The other numbers come from incorrect MR=MC solving or arithmetic."
+  },
+  {
+   "n": 42,
+   "topic": "Market structures",
+   "q": "Which feature most clearly distinguishes monopolistic competition from perfect competition in Nigerian retail markets?",
+   "options": [
+    "Product differentiation and some degree of price-setting power by firms.",
+    "Firms producing at the minimum point of average cost in the short run.",
+    "A single firm supplying the entire market.",
+    "Presence of significant barriers to entry preventing new firms."
+   ],
+   "answer": 0,
+   "explanation": "Monopolistic competition is characterised by many firms selling differentiated products with some price-setting power. Barriers to entry are low (not significant), firms do not usually produce at minimum average cost, and single-firm supply describes monopoly, not monopolistic competition."
+  },
+  {
+   "n": 43,
+   "topic": "Basic economic concepts",
+   "q": "If a farmer can either grow 4,000 kg of maize or 2,000 kg of cassava on a plot in Ogun State, the opportunity cost of producing 1,000 kg of maize is:",
+   "options": [
+    "250 kg of cassava",
+    "500 kg of cassava",
+    "2,000 kg of cassava",
+    "1,000 kg of cassava"
+   ],
+   "answer": 1,
+   "explanation": "Opportunity cost: foregone cassava divided by maize gained. The plot trade-off is 2,000 cassava for 4,000 maize → 0.5 cassava per 1 maize. For 1,000 maize the foregone cassava = 1,000×0.5 = 500 kg. Other options misapply the ratio."
+  },
+  {
+   "n": 44,
+   "topic": "Basic economic concepts",
+   "q": "Which statement best illustrates the law of diminishing marginal returns for a small palm garden near Benin City?",
+   "options": [
+    "Adding more capital while holding labour fixed immediately reduces total output.",
+    "Total output falls as more labour is added regardless of other inputs.",
+    "As the farmer adds more labour to a fixed area of palm trees, the additional output from each extra worker eventually falls.",
+    "Returns diminish only when both labour and land are increased together."
+   ],
+   "answer": 2,
+   "explanation": "The law says that with at least one fixed input, adding more of a variable input eventually results in smaller additional output. Total output need not fall (it usually rises but at a decreasing rate), and the law does not require reducing output when adding capital or increasing all inputs together."
+  },
+  {
+   "n": 45,
+   "topic": "Theory of production",
+   "q": "A tomato farmer near Kano uses labour (L) and land fixed in the short run. His short-run total product of labour is given by TP(L) = 10L − 0.2L². What is the marginal product (MP) of the 10th worker, and what does it indicate about marginal returns at that point?",
+   "options": [
+    "MP at L = 10 is 10 − 0.4(10) = 6; increasing marginal returns are present because MP > 0",
+    "MP at L = 10 is 10 − 0.4(10) = 6; positive but falling, so diminishing marginal returns have set in",
+    "MP at L = 10 is 10 − 0.4(10) = 6; negative marginal returns have begun because MP < TP",
+    "MP at L = 10 is 10 − 0.4(10) = 6; this equals average product implying constant returns"
+   ],
+   "answer": 1,
+   "explanation": "MP = dTP/dL = 10 − 0.4L. At L = 10, MP = 10 − 4 = 6. MP is positive but less than MP at lower L, so output still rises when adding the 10th worker but at a decreasing rate — this is diminishing marginal returns. The first wrong option mistakes 'positive' for 'increasing'; the third wrongly equates MP < TP with negative returns."
+  },
+  {
+   "n": 46,
+   "topic": "Theory of production",
+   "q": "A Lagos garment firm can use machines (K) and labour (L). In the long run it doubles both inputs and observes output increases from 5,000 garments to 9,000 garments. This production exhibits:",
+   "options": [
+    "Decreasing returns to scale because output less than doubled",
+    "Increasing returns to scale because total output rose by 4,000 garments",
+    "Constant returns to scale because both inputs were doubled",
+    "Fixed returns to scale because capital and labour are complements"
+   ],
+   "answer": 0,
+   "explanation": "Doubling inputs would produce 10,000 garments under constant returns. Actual output is 9,000 < 10,000, so returns to scale are decreasing. The second option ignores the change in proportion of output; the third confuses the direction of returns with complementarity."
+  },
+  {
+   "n": 47,
+   "topic": "Money and inflation",
+   "q": "If Nigeria's nominal money supply grows by 18% in a year and real GDP grows by 6% with velocity of money constant, according to the quantity theory of money the approximate inflation rate is:",
+   "options": [
+    "6%",
+    "12%",
+    "24%",
+    "0%"
+   ],
+   "answer": 1,
+   "explanation": "Quantity theory: %ΔM + %ΔV = %ΔP + %ΔY. With constant velocity %ΔV = 0, so inflation %ΔP = %ΔM − %ΔY = 18% − 6% = 12%. 24% would be adding instead of subtracting, 6% confuses inflation with real growth, and 0% would imply money growth equals real growth."
+  },
+  {
+   "n": 48,
+   "topic": "Money and inflation",
+   "q": "A commercial bank in Abuja offers a nominal interest rate of 10% per year. Annual inflation is 6%. Using the Fisher approximation, the real interest rate is closest to:",
+   "options": [
+    "≈ 16%",
+    "≈ 6%",
+    "≈ −4%",
+    "≈ 4%"
+   ],
+   "answer": 3,
+   "explanation": "Fisher approximation: real rate ≈ nominal − inflation = 10% − 6% = 4%. 16% reverses subtraction, −4% would be if inflation exceeded nominal rate, and 6% mistakes inflation for the real rate."
+  },
+  {
+   "n": 49,
+   "topic": "Economic development and planning",
+   "q": "A state government in Nigeria wants to reduce regional inequality by using a five-year plan that prioritises rural feeder roads, primary health clinics and microcredit for small farmers. Which immediate development objective does this plan most directly target?",
+   "options": [
+    "Improving access to basic services and promoting inclusive growth",
+    "Achieving full employment through large-scale urban industrialisation",
+    "Eliminating foreign debt by increasing export taxes",
+    "Rapid capital accumulation through heavy import substitution"
+   ],
+   "answer": 0,
+   "explanation": "Investing in roads, clinics and microcredit directly improves access to services and supports inclusive, local growth. Full employment via urban industrialisation is a different strategy; eliminating foreign debt by export taxes and heavy import substitution describe fiscal or macro strategies not targeted by the listed rural interventions."
+  },
+  {
+   "n": 50,
+   "topic": "National income",
+   "q": "In 2023 (base year) Nigeria's nominal GDP was ₦550 billion while real GDP was ₦500 billion. In 2024 nominal GDP rose to ₦616 billion and real GDP to ₦520 billion. What is the approximate rate of inflation between 2023 and 2024 measured by the GDP deflator?",
+   "options": [
+    "12%",
+    "9.5%",
+    "6%",
+    "7.7%"
+   ],
+   "answer": 3,
+   "explanation": "GDP deflator = (Nominal GDP ÷ Real GDP) × 100. For 2023 the deflator = (550 ÷ 500)×100 = 110. For 2024 the deflator = (616 ÷ 520)×100 ≈ 118.46. Inflation = (118.46 − 110) ÷ 110 ≈ 0.07692 ≈ 7.7%. 12% is the nominal GDP growth rate, 6% confuses real GDP growth (520 ÷ 500 − 1 = 4%), and 9.5% is not produced by any standard deflator calculation here."
+  }
+ ]
+}

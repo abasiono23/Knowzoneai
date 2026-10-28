@@ -1,0 +1,791 @@
+{
+ "id": "neco-biology-p1",
+ "exam": "neco",
+ "subject": "biology",
+ "year": null,
+ "number": 1,
+ "source": "ai",
+ "minutes": 60,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Diseases and their control",
+   "q": "Which of the following is the best explanation for why antibiotics are ineffective against the common cold?",
+   "options": [
+    "The common cold occurs in the nose where antibiotics cannot reach",
+    "The common cold is caused by viruses, and antibiotics act only on bacteria",
+    "Antibiotics cause allergic reactions that mask cold symptoms",
+    "Viruses are killed by antibiotics but recover quickly, making treatment seem ineffective"
+   ],
+   "answer": 1,
+   "explanation": "The common cold is caused by viruses (e.g., rhinoviruses) and antibiotics target bacterial cellular processes, so they do not kill viruses. The other options are incorrect: antibiotics can reach nasal tissues, allergic reactions are unrelated, and antibiotics do not kill viruses at all."
+  },
+  {
+   "n": 2,
+   "topic": "Diseases and their control",
+   "q": "A public health team in Kano is planning vaccination to eradicate measles. Which strategy will most effectively achieve herd immunity?",
+   "options": [
+    "Quarantine only those who show rash and fever",
+    "Vaccinate only children under 1 year old",
+    "Vaccinate at least 90–95% of the population including infants and susceptible adults",
+    "Provide antibiotics to all symptomatic people"
+   ],
+   "answer": 2,
+   "explanation": "Measles requires very high coverage (about 90–95%) of vaccination to achieve herd immunity because of its high basic reproduction number. Vaccinating only infants misses susceptible older children/adults; antibiotics do not work against measles virus; quarantine of symptomatic cases alone cannot stop spread due to infectiousness before symptoms."
+  },
+  {
+   "n": 3,
+   "topic": "Diseases and their control",
+   "q": "Which practise would most reduce the incidence of diarrhoeal disease in a rural Nigerian village?",
+   "options": [
+    "Use only herbal remedies for every diarrhoea case",
+    "Avoid immunisation campaigns in children",
+    "Ensure safe drinking water and promote hand washing with soap",
+    "Increase intake of oily foods to reduce dehydration"
+   ],
+   "answer": 2,
+   "explanation": "Diarrhoeal diseases are often spread by contaminated water and poor hygiene; providing safe water and hand washing breaks transmission. Herbal remedies, avoiding immunisation, and oily foods do not prevent transmission and are ineffective or harmful in controlling diarrhoea."
+  },
+  {
+   "n": 4,
+   "topic": "Support and movement",
+   "q": "Which pair of bones form the human forearm and how are they arranged when the palm faces upwards (supination)?",
+   "options": [
+    "Radius and femur, with radius medial to ulna",
+    "Humerus and ulna, with humerus lateral to ulna",
+    "Radius and ulna, with radius lateral and parallel to ulna",
+    "Tibia and fibula, with tibia lateral to fibula"
+   ],
+   "answer": 2,
+   "explanation": "The forearm bones are the radius and ulna. In supination (palm up) the radius and ulna lie parallel with the radius lateral (thumb side). Humerus is upper arm, femur and tibia/fibula are leg bones, so the other options are anatomically wrong."
+  },
+  {
+   "n": 5,
+   "topic": "Support and movement",
+   "q": "A weightlifter in Lagos flexes his forearm at the elbow. Which muscle is the primary agonist and what type of joint action is occurring?",
+   "options": [
+    "Biceps femoris; rotation at a gliding joint",
+    "Biceps brachii; flexion at a hinge joint",
+    "Triceps brachii; extension at a ball-and-socket joint",
+    "Deltoid; abduction at a pivot joint"
+   ],
+   "answer": 1,
+   "explanation": "Flexion of the forearm at the elbow is produced mainly by the biceps brachii; the elbow is a hinge joint allowing flexion/extension. Triceps cause extension, deltoid abducts the shoulder, biceps femoris is a thigh muscle, and pivot/gliding/ball-and-socket joints are incorrect for the elbow action described."
+  },
+  {
+   "n": 6,
+   "topic": "Support and movement",
+   "q": "In a fracture of the femur near the hip, which structure is most important to check for damage because it supplies blood to the femoral head?",
+   "options": [
+    "Femoral vein in the popliteal fossa",
+    "Anterior tibial artery",
+    "Great saphenous vein along the medial thigh",
+    "Branches of the medial circumflex femoral artery"
+   ],
+   "answer": 3,
+   "explanation": "The medial circumflex femoral artery gives key ascending branches that supply the femoral head; damage can cause avascular necrosis. The popliteal/femoral veins and anterior tibial artery do not supply the femoral head directly and are not primary concerns in proximal femur fractures."
+  },
+  {
+   "n": 7,
+   "topic": "Reproduction",
+   "q": "Which statement best describes the role of luteinising hormone (LH) in the human female menstrual cycle?",
+   "options": [
+    "LH surge triggers ovulation and stimulates formation of the corpus luteum",
+    "LH levels fall sharply to cause ovulation",
+    "LH maintains the endometrium for the entire cycle without change",
+    "LH is produced by the ovary and causes menstruation directly"
+   ],
+   "answer": 0,
+   "explanation": "LH from the anterior pituitary surges mid-cycle, causing ovulation and luteinisation of the ruptured follicle into the corpus luteum. LH is not produced by the ovary, it does not alone maintain the endometrium for the whole cycle, and LH rises rather than falls to trigger ovulation."
+  },
+  {
+   "n": 8,
+   "topic": "Reproduction",
+   "q": "A couple in Enugu seeks advice about contraception. Which method provides both high effectiveness and protection against sexually transmitted infections (STIs)?",
+   "options": [
+    "Withdrawal method (coitus interruptus)",
+    "Intrauterine device (IUD) alone",
+    "Oral contraceptive pills used alone",
+    "Use of male condoms correctly and consistently"
+   ],
+   "answer": 3,
+   "explanation": "Male condoms, when used correctly and consistently, are highly effective at preventing pregnancy and also reduce transmission of STIs. Oral pills and IUDs do not protect against STIs, and withdrawal has low effectiveness and no STI protection."
+  },
+  {
+   "n": 9,
+   "topic": "Diffusion, osmosis and active transport",
+   "q": "A plant cell placed in a solution loses water and plasmolyses. Which statement about the solution is correct?",
+   "options": [
+    "The external solution is hypotonic to the cell sap",
+    "The solution must be pure water",
+    "The solution and cell sap are isotonic so no net movement occurs",
+    "The external solution is hypertonic to the cell sap"
+   ],
+   "answer": 3,
+   "explanation": "Plasmolysis occurs when water leaves the cell because the external solution has higher solute concentration (hypertonic). Hypotonic would cause swelling, isotonic causes no net movement, and pure water is hypotonic, not causing plasmolysis."
+  },
+  {
+   "n": 10,
+   "topic": "Diffusion, osmosis and active transport",
+   "q": "A cell membrane transporter pumps 3 Na+ out and 2 K+ in per cycle using ATP. Which statement is true about this pump?",
+   "options": [
+    "It is an electrogenic active transport that contributes to a negative resting membrane potential",
+    "It is passive diffusion because ions move down their concentration gradients",
+    "It makes the inside of the cell more positive than the outside",
+    "It does not use ATP and runs only when Na+ and K+ concentrations are equal"
+   ],
+   "answer": 0,
+   "explanation": "The Na+/K+ pump moves 3 Na+ out and 2 K+ in using ATP, creating unequal charge movement (electrogenic) and contributing to a negative inside membrane potential. This is active transport using ATP, not passive diffusion, and it makes the inside relatively negative, not more positive."
+  },
+  {
+   "n": 11,
+   "topic": "Variation and evolution",
+   "q": "A farmer in Oyo notices some of his maize plants are resistant to a fungal disease that killed neighbouring plants. Which process most likely produced the disease-resistant plants?",
+   "options": [
+    "Mutation in all the plants caused by the fungus that made them resistant",
+    "Acquired immunity passed on to offspring by the parent plants",
+    "Natural selection acting on genetic variation already present in the crop population",
+    "Grafting from a resistant wild species changed the DNA of all plants in the field"
+   ],
+   "answer": 2,
+   "explanation": "Natural selection favours individuals with alleles giving resistance; these survive and reproduce, increasing allele frequency. Acquired characteristics are not inherited, a single fungus cannot cause adaptive mutations in many plants, and grafting does not alter the heritable DNA of the whole population."
+  },
+  {
+   "n": 12,
+   "topic": "Variation and evolution",
+   "q": "Two populations of a freshwater snail are separated by a new dam. After 50 years they show many genetic differences. Which mechanism most likely caused the genetic divergence?",
+   "options": [
+    "Frequent interbreeding preventing any divergence",
+    "Continuous migration between the populations increasing similarity",
+    "Genetic drift and limited gene flow due to the barrier created by the dam",
+    "Identical selection pressures producing the same allele frequencies"
+   ],
+   "answer": 2,
+   "explanation": "The dam restricts gene flow, so random changes (genetic drift) and different selection pressures can cause divergence. The wrong options describe scenarios that would reduce, not increase, genetic differences."
+  },
+  {
+   "n": 13,
+   "topic": "Variation and evolution",
+   "q": "Which observation would provide the strongest evidence that two groups of birds are different species by the biological species concept?",
+   "options": [
+    "They occupy different habitats but produce fertile hybrids where ranges meet",
+    "They have different plumage colours but freely interbreed",
+    "They have different beak shapes but interbreed and produce fertile young",
+    "The two groups do not interbreed in nature and produce no fertile offspring when mated experimentally"
+   ],
+   "answer": 3,
+   "explanation": "The biological species concept defines species by reproductive isolation and lack of fertile offspring. Different appearance or habitat alone does not qualify if interbreeding produces fertile offspring."
+  },
+  {
+   "n": 14,
+   "topic": "Excretion",
+   "q": "A patient in Abuja has a blood urea concentration of 45 mmol/L (normal 2.5–8 mmol/L). Which kidney function is most likely impaired?",
+   "options": [
+    "Glomerular filtration leading to reduced removal of urea from blood",
+    "Synthesis of urea from ammonia in the kidney causing high blood urea",
+    "Renal production of insulin affecting urea metabolism",
+    "Secretion of urea into the collecting duct increasing urea in urine"
+   ],
+   "answer": 0,
+   "explanation": "High blood urea (azotaemia) usually results from reduced glomerular filtration; kidneys normally remove urea. Kidneys do not synthesise urea (liver does), secretion into ducts would lower blood urea, and kidneys do not produce insulin."
+  },
+  {
+   "n": 15,
+   "topic": "Excretion",
+   "q": "Which structure in the nephron is primarily responsible for reabsorption of most glucose and amino acids from the filtrate?",
+   "options": [
+    "Bowman's capsule where selective reabsorption of glucose occurs",
+    "Loop of Henle which secretes glucose into the filtrate",
+    "Distal convoluted tubule which reabsorbs all glucose actively",
+    "Proximal convoluted tubule with many microvilli and carrier proteins"
+   ],
+   "answer": 3,
+   "explanation": "The proximal convoluted tubule has microvilli and transporters for bulk reabsorption of glucose and amino acids. Bowman's capsule collects filtrate but does not reabsorb selectively; distal tubule reabsorbs some ions but not most glucose; Loop of Henle concentrates urine but does not secrete glucose."
+  },
+  {
+   "n": 16,
+   "topic": "Excretion",
+   "q": "Which change would you expect in urine composition after a person drinks 1.5 L of plain water rapidly?",
+   "options": [
+    "Increased urine protein concentration because water increases filtration of proteins",
+    "Decreased urine osmolarity and increased urine volume due to reduced ADH secretion",
+    "Increased urine osmolarity and decreased urine volume due to stimulation of ADH",
+    "No change in urine osmolarity because kidneys cannot adjust rapidly"
+   ],
+   "answer": 1,
+   "explanation": "Rapid water intake lowers plasma osmolarity, reducing ADH, causing kidneys to produce more dilute (lower osmolarity) urine and increase volume. ADH would not increase, kidneys can adjust quickly, and proteins are normally not filtered in significant amounts."
+  },
+  {
+   "n": 17,
+   "topic": "Transport systems",
+   "q": "In human blood, which component carries the majority of oxygen and helps buffer blood pH?",
+   "options": [
+    "White blood cells binding oxygen and regulating pH",
+    "Haemoglobin inside red blood cells",
+    "Platelets carrying oxygen and maintaining acid–base balance",
+    "Plasma albumin transporting most oxygen dissolved in plasma"
+   ],
+   "answer": 1,
+   "explanation": "Haemoglobin in erythrocytes binds most oxygen and buffers H+ (via the bicarbonate equilibrium). Only a small fraction of O2 is dissolved in plasma; WBCs and platelets do not transport oxygen."
+  },
+  {
+   "n": 18,
+   "topic": "Transport systems",
+   "q": "A teacher in Port Harcourt asks why arterial blood pressure is highest in the aorta compared with capillaries. The best explanation is:",
+   "options": [
+    "The aorta receives blood directly from ventricular systole and has elastic walls that maintain high pressure",
+    "Veins pump blood back to the heart increasing aortic pressure",
+    "Blood flow in capillaries is faster causing lower pressure",
+    "Capillaries have thicker walls that reduce pressure more than arteries"
+   ],
+   "answer": 0,
+   "explanation": "The aorta experiences the force of ventricular contraction and its elastic walls help sustain high pressure. Capillaries have thin walls and large total cross-sectional area causing lower pressure; flow in capillaries is slower, and veins do not pump blood to raise aortic pressure."
+  },
+  {
+   "n": 19,
+   "topic": "Respiration",
+   "q": "During heavy exercise, which combination of events increases oxygen delivery to skeletal muscle?",
+   "options": [
+    "Reduced breathing rate with increased arterial CO₂ causing less O₂ delivery",
+    "Increased heart rate, increased stroke volume, and local vasodilation in muscle",
+    "Closure of capillaries in muscle to force blood to other organs",
+    "Decreased cardiac output and vasoconstriction in muscle"
+   ],
+   "answer": 1,
+   "explanation": "Exercise raises cardiac output (heart rate × stroke volume) and causes vasodilation in active muscles, increasing O2 delivery. The wrong options describe changes that would reduce muscle oxygen supply."
+  },
+  {
+   "n": 20,
+   "topic": "Respiration",
+   "q": "If atmospheric pressure at sea level is 101.3 kPa and alveolar partial pressure of O₂ is about 13.3 kPa, what is the % oxygen in alveolar gas by partial pressure (approx)?",
+   "options": [
+    "About 2% because most oxygen is bound to haemoglobin and not measured as gas",
+    "About 21% because alveolar O₂ must equal atmospheric O₂ concentration",
+    "About 13% because % by partial pressure ≈ (partial pressure / total pressure) × 100 = (13.3 / 101.3) × 100",
+    "About 50% because lungs concentrate oxygen during inspiration"
+   ],
+   "answer": 2,
+   "explanation": "Percent by partial pressure is (13.3 / 101.3) × 100 ≈ 13.1%, so roughly 13%. Atmospheric O₂ is ~21% at 21.2 kPa partial pressure; alveolar O₂ is lower due to water vapour and CO₂. Haemoglobin-bound O2 does not change gas-phase partial pressure calculation."
+  },
+  {
+   "n": 21,
+   "topic": "Classification of living things",
+   "q": "A botanist in Ibadan finds two plants. Plant A has parallel leaf venation, fibrous roots and flowers with parts in multiples of three. Plant B has reticulate venation, a tap root and flowers with parts in multiples of four or five. To which groups do they most likely belong?",
+   "options": [
+    "Both are gymnosperms",
+    "Plant A is a monocot and Plant B is a dicot",
+    "Both are bryophytes",
+    "Plant A is a dicot and Plant B is a monocot"
+   ],
+   "answer": 1,
+   "explanation": "Monocots typically have parallel venation, fibrous roots and floral parts in threes, while dicots have reticulate venation, a tap root and floral parts in fours or fives. Gymnosperms and bryophytes do not show these angiosperm flower/venation patterns."
+  },
+  {
+   "n": 22,
+   "topic": "Classification of living things",
+   "q": "Which characteristic would best separate members of Kingdom Fungi from members of Kingdom Plantae?",
+   "options": [
+    "Fungi reproduce only asexually",
+    "Fungi perform photosynthesis and have chlorophyll",
+    "Fungi have cellulose cell walls and store starch",
+    "Fungi obtain nutrients by absorption and have cell walls of chitin"
+   ],
+   "answer": 3,
+   "explanation": "Fungi are heterotrophic absorbers and their cell walls are made of chitin. Plants perform photosynthesis, have cellulose walls and often store starch. Fungi can reproduce both sexually and asexually, so the last option is incorrect."
+  },
+  {
+   "n": 23,
+   "topic": "Genetics",
+   "q": "In a cross between two pea plants heterozygous for height (Tt × Tt), where T (tall) is dominant to t (dwarf), what proportion of the offspring are expected to be homozygous recessive?",
+   "options": [
+    "0",
+    "3/4",
+    "1/4",
+    "1/2"
+   ],
+   "answer": 2,
+   "explanation": "A Tt × Tt Punnett square gives genotypes TT, Tt, Tt, tt — one out of four (1/4) is homozygous recessive (tt). 1/2 would be frequency of heterozygotes, 3/4 is proportion showing the dominant phenotype, and 0 is incorrect."
+  },
+  {
+   "n": 24,
+   "topic": "Ecology",
+   "q": "A farmer near Kano notices his pond had a sudden bloom of blue‑green algae after heavy rains. Which immediate effect is most likely to harm fish in the pond?",
+   "options": [
+    "Algae produce acid that dissolves fish gills instantly",
+    "Algae increase water temperature by 20 °C overnight",
+    "Algae convert all nitrate to nitrogen gas",
+    "Oxygen concentration in water falls dramatically at night due to algal respiration and decomposition"
+   ],
+   "answer": 3,
+   "explanation": "Algal blooms increase respiration and, when they die, decomposition consumes dissolved oxygen causing hypoxia that can kill fish. Algae do not typically dissolve fish gills by acid, cause such large overnight temperature increases, or convert all nitrate to N₂."
+  },
+  {
+   "n": 25,
+   "topic": "Ecology",
+   "q": "Which practice would best increase biodiversity on a cocoa farm in Ondo State?",
+   "options": [
+    "Spraying broad‑spectrum insecticide every week",
+    "Removing all undergrowth and planting only cocoa clones",
+    "Maintaining shade trees and a mosaic of native plants among cocoa trees",
+    "Clearing hedgerows to make larger uniform plots"
+   ],
+   "answer": 2,
+   "explanation": "Preserving shade trees and native plant mosaics provides varied habitats and resources, boosting biodiversity. Removing undergrowth or hedgerows and frequent broad‑spectrum spraying reduce habitat complexity and kill non‑target species, lowering biodiversity."
+  },
+  {
+   "n": 26,
+   "topic": "Cell structure and organisation",
+   "q": "Which structure in an animal cell is the primary site of ATP synthesis?",
+   "options": [
+    "Lysosome",
+    "Mitochondrion",
+    "Ribosome",
+    "Golgi apparatus"
+   ],
+   "answer": 1,
+   "explanation": "Mitochondria perform oxidative phosphorylation to produce most ATP in eukaryotic cells. Ribosomes synthesise protein, the Golgi modifies and packages molecules, and lysosomes digest cellular waste."
+  },
+  {
+   "n": 27,
+   "topic": "Cell structure and organisation",
+   "q": "A student observes plant cells under a microscope before and after adding 0.5 M NaCl solution. After treatment cells show plasmolysis. Which statement explains this observation?",
+   "options": [
+    "The external solution is hypertonic so water moved out of the cells by osmosis",
+    "The external solution is hypotonic so water moved into the cells",
+    "Salt caused increased turgor pressure inside the cells",
+    "NaCl chemically destroyed the cell wall causing plasmolysis"
+   ],
+   "answer": 0,
+   "explanation": "A 0.5 M NaCl solution is hypertonic relative to plant cell sap, causing water to move out by osmosis and the plasma membrane to pull away from the wall (plasmolysis). Hypotonic solution would cause swelling, cell wall destruction is not the mechanism, and turgor pressure would decrease not increase."
+  },
+  {
+   "n": 28,
+   "topic": "Cell structure and organisation",
+   "q": "Which sequence correctly lists levels of biological organisation from smallest to largest?",
+   "options": [
+    "Organelle → cell → tissue → organ → organ system → organism",
+    "Cell → organelle → tissue → organ → organism → organ system",
+    "Tissue → cell → organelle → organ → organ system → organism",
+    "Organ → tissue → cell → organelle → organ system → organism"
+   ],
+   "answer": 0,
+   "explanation": "The correct ascending order is organelle (e.g., mitochondrion), cell, tissue, organ, organ system, organism. The other sequences misorder fundamental hierarchical levels."
+  },
+  {
+   "n": 29,
+   "topic": "Nervous and hormonal coordination",
+   "q": "A motor neuron is stimulated and generates an action potential that travels along its axon. Which event directly causes neurotransmitter release at the neuromuscular junction?",
+   "options": [
+    "Opening of ligand-gated Na⁺ channels on the presynaptic membrane",
+    "Influx of Na⁺ into the postsynaptic muscle fibre",
+    "Outflow of K⁺ from the axon terminal",
+    "Influx of Ca²⁺ into the axon terminal"
+   ],
+   "answer": 3,
+   "explanation": "When an action potential arrives at the axon terminal, voltage-gated Ca²⁺ channels open and Ca²⁺ enters the terminal, triggering vesicle fusion and neurotransmitter release. Outflow of K⁺ repolarises the axon but does not trigger release. Na⁺ influx into the postsynaptic fibre is a consequence of neurotransmitter binding, not the cause of release, and ligand-gated Na⁺ channels are on the postsynaptic, not presynaptic, membrane."
+  },
+  {
+   "n": 30,
+   "topic": "Nervous and hormonal coordination",
+   "q": "A 16-year-old student in Abuja has symptoms of fatigue and weight gain. Blood tests show low thyroid hormone levels and high thyroid-stimulating hormone (TSH). Which diagnosis best fits these results?",
+   "options": [
+    "Normal thyroid function with lab error",
+    "Primary hypothyroidism due to thyroid gland failure",
+    "Secondary hypothyroidism due to pituitary failure",
+    "Primary hyperthyroidism due to Graves disease"
+   ],
+   "answer": 1,
+   "explanation": "Low thyroid hormones with high TSH indicates the pituitary is producing more TSH to stimulate a failing thyroid gland, consistent with primary hypothyroidism. In secondary hypothyroidism both TSH and thyroid hormones would be low. Hyperthyroidism shows high thyroid hormones and low TSH. Lab error is less likely given matching clinical signs."
+  },
+  {
+   "n": 31,
+   "topic": "Nervous and hormonal coordination",
+   "q": "During the fight-or-flight response a farmer in Kano is startled by a snake. Which hormonal change is most responsible for increasing blood glucose quickly?",
+   "options": [
+    "Insulin stimulates glucose uptake into muscle",
+    "Aldosterone increases gluconeogenesis in adipose tissue",
+    "Thyroxine increases immediate glycogen breakdown",
+    "Adrenaline stimulates glycogenolysis in the liver"
+   ],
+   "answer": 3,
+   "explanation": "Adrenaline (epinephrine) released in acute stress activates liver glycogen phosphorylase, causing rapid glycogenolysis and increased blood glucose. Insulin lowers blood glucose by promoting uptake. Thyroxine increases basal metabolism but not rapid glycogenolysis, and aldosterone mainly affects salt/water balance, not immediate glucose production."
+  },
+  {
+   "n": 32,
+   "topic": "Nutrition in plants and animals",
+   "q": "A student measures sugar concentration in the phloem sap of a cassava plant. Which process explains how sucrose moves from leaf mesophyll cells into the phloem against a concentration gradient?",
+   "options": [
+    "Active transport by companion cell proton-sucrose cotransporters",
+    "Facilitated diffusion through sucrose channels",
+    "Simple diffusion through open plasmodesmata",
+    "Bulk flow driven by xylem transpiration pull"
+   ],
+   "answer": 0,
+   "explanation": "Loading of sucrose into phloem sieve elements often uses H⁺-sucrose cotransporters in companion cells, an active secondary transport that moves sucrose against its gradient. Simple diffusion and facilitated diffusion cannot move against a gradient, and xylem transpiration pull moves water in xylem, not sucrose into phloem."
+  },
+  {
+   "n": 33,
+   "topic": "Nutrition in plants and animals",
+   "q": "A goat in Jos eats a large quantity of young leaves high in cellulose. Which part of its digestive system is primarily responsible for microbial fermentation of cellulose into volatile fatty acids?",
+   "options": [
+    "Cecum",
+    "Rumen",
+    "Small intestine",
+    "Abomasum"
+   ],
+   "answer": 1,
+   "explanation": "Ruminants like goats have a rumen where microbes ferment cellulose into volatile fatty acids that the animal absorbs. The abomasum is the true stomach with acidic digestion. The small intestine is for enzymatic digestion and absorption of soluble nutrients. The cecum is important in hindgut fermenters (e.g., horses), but not the primary fermentation chamber in ruminants."
+  },
+  {
+   "n": 34,
+   "topic": "Nutrition in plants and animals",
+   "q": "A nutritionist analyses a meal and finds it contains 20 g of protein (4 kcal/g), 30 g of carbohydrate (4 kcal/g) and 10 g of fat (9 kcal/g). What is the total energy provided by the meal in kilocalories (kcal)?",
+   "options": [
+    "260 kcal",
+    "290 kcal",
+    "310 kcal",
+    "230 kcal"
+   ],
+   "answer": 1,
+   "explanation": "Energy = (20×4) + (30×4) + (10×9) = 80 + 120 + 90 = 290 kcal. 260 kcal would result from miscalculating one component; 230 kcal is too low (perhaps treating fat as 4 kcal/g); 310 kcal would need different numbers."
+  },
+  {
+   "n": 35,
+   "topic": "Diseases and their control",
+   "q": "At a clinic in Ibadan, several children have fever, joint pain and a rash after being bitten by mosquitoes. A rapid test confirms chikungunya virus. Which control measure would best reduce future outbreaks locally?",
+   "options": [
+    "Reducing mosquito breeding sites by eliminating stagnant water around homes",
+    "Isolating confirmed cases for 6 weeks",
+    "Mass antibiotic treatment of the community",
+    "Providing vitamin A supplements to all children"
+   ],
+   "answer": 0,
+   "explanation": "Chikungunya is transmitted by Aedes mosquitoes; controlling breeding sites (stagnant water) reduces vector populations and transmission. Antibiotics do not affect viruses. Vitamin A supplementation does not prevent mosquito-borne viral transmission. While short isolation of febrile patients may help, a 6-week isolation is impractical and unnecessary because mosquitoes, not direct human contact, spread the disease."
+  },
+  {
+   "n": 36,
+   "topic": "Diseases and their control",
+   "q": "A vaccine campaign in Lagos uses an inactivated poliovirus vaccine (IPV). Which statement about this vaccine is correct?",
+   "options": [
+    "IPV induces strong systemic (serum) antibody immunity and prevents paralytic disease",
+    "IPV is a live attenuated vaccine that spreads to contacts",
+    "IPV causes mild poliovirus infection in most recipients",
+    "IPV induces strong gut mucosal immunity equivalent to oral polio vaccine"
+   ],
+   "answer": 0,
+   "explanation": "IPV (inactivated) produces good systemic humoral immunity that prevents paralytic poliomyelitis but induces less mucosal (gut) immunity than oral polio vaccine (OPV). IPV is not live and does not spread to contacts, nor does it cause infection in recipients."
+  },
+  {
+   "n": 37,
+   "topic": "Support and movement",
+   "q": "An x-ray from a fracture clinic in Enugu shows a break through the shaft of the humerus. Which bone cell type is primarily responsible for laying down new bone matrix during repair?",
+   "options": [
+    "Chondrocytes",
+    "Fibroblasts",
+    "Osteoblasts",
+    "Osteoclasts"
+   ],
+   "answer": 2,
+   "explanation": "Osteoblasts synthesise and secrete new bone matrix (osteoid) during bone repair. Osteoclasts resorb bone. Chondrocytes produce cartilage, which may be present during endochondral ossification but are not the main matrix-producing bone cells. Fibroblasts produce connective tissue fibres, not bone matrix."
+  },
+  {
+   "n": 38,
+   "topic": "Reproduction",
+   "q": "A 17-year-old student in Lagos records the length of the menstrual cycle for six months and finds it varies between 26 and 30 days. Which statement about her cycle is most likely correct?",
+   "options": [
+    "Ovulation always occurs on day 14 regardless of cycle length.",
+    "If her cycle length varies, she cannot become pregnant under any circumstances.",
+    "Fertility is highest during menstruation when the uterine lining is shed.",
+    "Ovulation most likely occurs about 12–16 days before the next menstruation, so it may vary between cycles."
+   ],
+   "answer": 3,
+   "explanation": "In human females ovulation typically occurs about 14 days before the next period, so with cycles of 26–30 days ovulation will shift (e.g. day 12–16). Day‑14 fixed ovulation is incorrect for variable cycles; fertility is not highest during menstruation; varying cycle length does not prevent pregnancy."
+  },
+  {
+   "n": 39,
+   "topic": "Reproduction",
+   "q": "Which structure in the male reproductive system is directly responsible for transport and temporary storage of sperm where they may mature?",
+   "options": [
+    "Epididymis",
+    "Seminal vesicle",
+    "Prostate gland",
+    "Vas deferens"
+   ],
+   "answer": 0,
+   "explanation": "Sperm produced in the testes move to the epididymis for maturation and short‑term storage. Seminal vesicles and prostate add fluid to semen but do not store and mature sperm; vas deferens transports sperm during ejaculation but is not the primary site of maturation."
+  },
+  {
+   "n": 40,
+   "topic": "Reproduction",
+   "q": "A couple in Enugu use the contraceptive pill correctly. Which effect of the combined oral contraceptive explains its main mechanism of preventing pregnancy?",
+   "options": [
+    "It destroys sperm directly in the vagina using a chemical spermicidal action.",
+    "It suppresses ovulation by providing steady levels of oestrogen and progestogen that inhibit FSH and LH secretion.",
+    "It prevents implantation by causing permanent changes to the uterine lining.",
+    "It physically blocks sperm from reaching the egg by thickening cervical mucus only."
+   ],
+   "answer": 1,
+   "explanation": "Combined oral contraceptives maintain hormone levels that inhibit pituitary FSH and LH, preventing follicle development and ovulation. While progestogen also thickens cervical mucus, the main mechanism is ovulation suppression. The pill does not permanently alter the uterus nor chemically destroy sperm in the vagina."
+  },
+  {
+   "n": 41,
+   "topic": "Diffusion, osmosis and active transport",
+   "q": "A plant cell in a hypotonic solution will:",
+   "options": [
+    "Remain unchanged because plant cell membranes are impermeable to water.",
+    "Become turgid as water enters by osmosis and the cell wall prevents bursting.",
+    "Shrink (plasmolyse) as water leaves the cell.",
+    "Undergo lysis because plant cells have no cell wall to resist swelling."
+   ],
+   "answer": 1,
+   "explanation": "In a hypotonic external solution water enters the plant cell by osmosis, increasing turgor pressure; the rigid cell wall prevents lysis. Shrinkage occurs in hypertonic conditions. Plant cell membranes are permeable to water via aquaporins, and plant cells do have walls."
+  },
+  {
+   "n": 42,
+   "topic": "Diffusion, osmosis and active transport",
+   "q": "Which process requires metabolic energy and transport proteins to move ions from a lower to a higher concentration across a cell membrane?",
+   "options": [
+    "Facilitated diffusion",
+    "Osmosis",
+    "Active transport",
+    "Simple diffusion"
+   ],
+   "answer": 2,
+   "explanation": "Active transport uses ATP and carrier proteins to move ions against their concentration gradient. Simple diffusion and facilitated diffusion move substances down gradients (facilitated diffusion uses proteins but no energy). Osmosis is the passive movement of water."
+  },
+  {
+   "n": 43,
+   "topic": "Diffusion, osmosis and active transport",
+   "q": "A student measures glucose concentration inside a red blood cell (RBC) as 5.0 mmol/L and in the surrounding plasma as 2.5 mmol/L. Which statement is correct if glucose crosses the RBC membrane by facilitated diffusion?",
+   "options": [
+    "Glucose will move into the RBC because cells always take up glucose regardless of concentration.",
+    "Glucose will move out of the RBC to the plasma until concentrations are equal, using transporters but no energy.",
+    "Glucose movement will require ATP to go from 5.0 to 2.5 mmol/L.",
+    "There will be no net movement because glucose cannot cross cell membranes."
+   ],
+   "answer": 1,
+   "explanation": "Facilitated diffusion moves glucose down its concentration gradient from 5.0 to 2.5 mmol/L until equilibrium is reached; transporters are used but no ATP. Cells do not always take up glucose against a gradient. ATP is needed only for active transport, and glucose can cross membranes via transporters."
+  },
+  {
+   "n": 44,
+   "topic": "Variation and evolution",
+   "q": "In a population of maize in Kaduna, a new allele confers resistance to a fungal disease. After repeated disease outbreaks, the frequency of the resistant allele increases. The best explanation is:",
+   "options": [
+    "Genetic drift is solely responsible because selection cannot change allele frequencies.",
+    "Migration of susceptible plants into the population caused the increase in resistance allele frequency.",
+    "Natural selection favouring individuals with the resistant allele increases its frequency.",
+    "Mutation rates must have increased to produce the resistance repeatedly in the same plants."
+   ],
+   "answer": 2,
+   "explanation": "Natural selection increases the frequency of alleles that confer a survival or reproductive advantage under disease pressure. Genetic drift is random and unlikely to consistently increase a beneficial allele in response to outbreaks; increased mutation rates or migration of susceptible plants would not explain a rise in resistance allele frequency."
+  },
+  {
+   "n": 45,
+   "topic": "Variation and evolution",
+   "q": "A breeder crosses two varieties of yam to combine high yield and pest resistance. Which genetic concept best describes the breeder’s goal?",
+   "options": [
+    "Genetic bottleneck caused by reduced population size",
+    "Independent assortment causing linked genes to always be inherited together",
+    "Artificial selection to combine desirable alleles into progeny",
+    "Speciation by geographic isolation"
+   ],
+   "answer": 2,
+   "explanation": "The breeder uses artificial selection to select offspring carrying alleles for both traits. Speciation and bottlenecks are not the aim here. Independent assortment can separate unlinked genes; 'linked genes always inherited together' is incorrect and not the breeder's concept."
+  },
+  {
+   "n": 46,
+   "topic": "Excretion",
+   "q": "Which structure in the human nephron is primarily responsible for ultrafiltration of blood plasma?",
+   "options": [
+    "Proximal convoluted tubule",
+    "Collecting duct",
+    "Loop of Henle",
+    "Glomerulus (within Bowman's capsule)"
+   ],
+   "answer": 3,
+   "explanation": "Ultrafiltration occurs at the glomerulus where blood pressure forces plasma through a filtration barrier into Bowman's space. Loop of Henle, collecting duct and proximal tubule are involved in reabsorption and secretion, not the initial ultrafiltration."
+  },
+  {
+   "n": 47,
+   "topic": "Excretion",
+   "q": "A patient in Ibadan has low glomerular filtration rate (GFR). Which change in urine would you expect?",
+   "options": [
+    "Complete absence of electrolyte reabsorption in the tubules.",
+    "Immediate replacement of filtration by hepatic excretion so kidneys are unnecessary.",
+    "Reduced urine volume with higher concentration of waste products like urea in blood (azotaemia).",
+    "Increased urine volume and lower blood urea because filtration is independent of GFR."
+   ],
+   "answer": 2,
+   "explanation": "Low GFR reduces filtration, producing low urine output and accumulation of nitrogenous wastes in blood (azotaemia). Increased urine volume is unlikely; electrolyte reabsorption impairment or hepatic compensation as stated are incorrect — kidneys remain primary for filtration."
+  },
+  {
+   "n": 48,
+   "topic": "Transport systems",
+   "q": "Which feature of xylem vessels most directly allows tall oil palm (Elaeis guineensis) trees in Rivers State to transport water from roots to leaves without a pump?",
+   "options": [
+    "Continuous hollow tubes with lignified walls",
+    "Plasmodesmata connecting adjacent vessel elements for exchange",
+    "Thin walls and large cytoplasmic volume that store water",
+    "Living cells with many mitochondria to generate pressure"
+   ],
+   "answer": 0,
+   "explanation": "Xylem vessels are continuous hollow tubes formed by dead cells with lignified walls; this structure provides an unbroken column for cohesive water transport driven by transpiration pull. They are not living so they do not use mitochondrial pumping, nor are they thin-walled storage cells; plasmodesmata are found in living cells and are not the main feature of vessel continuity."
+  },
+  {
+   "n": 49,
+   "topic": "Transport systems",
+   "q": "A student measures the osmotic concentration of potato tuber cells and finds it is hypertonic to the surrounding 0.2 M sucrose solution. What immediate movement will occur and what will happen to the tuber cells?",
+   "options": [
+    "No net movement because cell walls prevent volume change",
+    "Sucrose moves into cells by diffusion and raises internal osmotic concentration",
+    "Water moves out of cells; cells plasmolyse and shrink",
+    "Water moves into cells; cells become turgid and may be firm"
+   ],
+   "answer": 3,
+   "explanation": "If tuber cells are hypertonic (higher solute) compared with 0.2 M sucrose, water enters by osmosis causing turgidity. Sucrose movement by simple diffusion into cells is too slow and often requires transporters; cell walls do not prevent volume change—they limit lysis but allow turgor."
+  },
+  {
+   "n": 50,
+   "topic": "Transport systems",
+   "q": "In the human circulatory system, which change would directly increase the rate of oxygen delivery to muscle cells during exercise in Lagos?",
+   "options": [
+    "Increase in red blood cell size without changing haemoglobin concentration",
+    "Lowering breathing rate while keeping tidal volume constant",
+    "Vasoconstriction of arterioles supplying the exercising muscles",
+    "Increased cardiac output (higher heart rate × stroke volume)"
+   ],
+   "answer": 3,
+   "explanation": "Oxygen delivery depends on cardiac output and blood oxygen content; increasing cardiac output raises the volume of oxygenated blood delivered per minute. Increasing RBC size without more haemoglobin may not raise oxygen-carrying capacity; vasoconstriction to active muscles would reduce flow; lowering breathing rate would likely decrease oxygen uptake."
+  },
+  {
+   "n": 51,
+   "topic": "Respiration",
+   "q": "Which statement best describes why anaerobic respiration in human skeletal muscle yields less ATP than aerobic respiration?",
+   "options": [
+    "Electron transport chain runs faster but produces fewer ATP per NADH",
+    "More ATP is used to remove excess oxygen produced during anaerobic respiration",
+    "Pyruvate is reduced to lactate, preventing entry into the Krebs cycle and oxidative phosphorylation",
+    "Glycolysis is inhibited completely under anaerobic conditions"
+   ],
+   "answer": 2,
+   "explanation": "Under anaerobic conditions pyruvate is converted to lactate, so it cannot enter mitochondria for the Krebs cycle and oxidative phosphorylation that produce most ATP. Glycolysis still runs (producing 2 ATP/glucose). The electron transport chain cannot run without oxygen; anaerobic respiration does not produce oxygen."
+  },
+  {
+   "n": 52,
+   "topic": "Respiration",
+   "q": "A lab exercise compares CO₂ output of germinating maize seeds and dry seeds at 25 °C over 2 hours. Germinating seeds produced 120 μmol CO₂ while dry seeds produced 8 μmol. What does this result indicate?",
+   "options": [
+    "Germinating seeds have high metabolic respiration breaking down starch to release energy",
+    "Dry seeds produce CO₂ only by anaerobic fermentation which is very high",
+    "Germinating seeds are photosynthesising and releasing CO₂ as a waste product",
+    "Dry seeds respire faster because they conserve energy by producing less CO₂"
+   ],
+   "answer": 0,
+   "explanation": "Germinating seeds metabolise stored food by respiration, producing CO₂; the much higher CO₂ shows active aerobic respiration. Dry seeds are dormant with low respiration so low CO₂. Photosynthesis consumes CO₂ rather than release in light, and dry seeds do not have high anaerobic fermentation producing high CO₂."
+  },
+  {
+   "n": 53,
+   "topic": "Respiration",
+   "q": "During a 400 m sprint, which change in muscle cells primarily supports the sudden increase in ATP demand in the first 10 seconds?",
+   "options": [
+    "Switch to using fatty acids as the main fuel for immediate ATP",
+    "Rapid breakdown of creatine phosphate to regenerate ATP from ADP",
+    "Activation of the Krebs cycle to produce ATP via oxidative phosphorylation",
+    "Increased transcription of genes for ATP synthase to make more enzyme"
+   ],
+   "answer": 1,
+   "explanation": "Creatine phosphate provides a rapid phosphate to ADP to regenerate ATP for short, high-intensity activity (seconds). The Krebs cycle and oxidative phosphorylation are slower and limited by oxygen delivery; gene transcription is too slow; fatty acid oxidation is also too slow for immediate ATP needs."
+  },
+  {
+   "n": 54,
+   "topic": "Classification of living things",
+   "q": "A biologist in Ibadan finds a small organism with jointed legs, chitinous exoskeleton, and segmented body. Into which phylum should it be placed?",
+   "options": [
+    "Annelida",
+    "Chordata",
+    "Arthropoda",
+    "Mollusca"
+   ],
+   "answer": 2,
+   "explanation": "Jointed legs, a chitinous exoskeleton and segmented body are diagnostic of arthropods. Annelids have segmented bodies but lack jointed limbs and exoskeleton; molluscs have soft bodies often with shells; chordates have a notochord and usually internal skeleton."
+  },
+  {
+   "n": 55,
+   "topic": "Classification of living things",
+   "q": "Which feature is most useful for classifying flowering plants into monocots and dicots in a field study around Jos?",
+   "options": [
+    "Soil pH where the plant grows",
+    "Colour of the flowers",
+    "Height of the mature plant",
+    "Number of cotyledons in the seed"
+   ],
+   "answer": 3,
+   "explanation": "Monocots have one cotyledon and dicots have two; cotyledon number is a fundamental distinction. Soil pH, plant height and flower colour vary within groups and are not reliable for that classification."
+  },
+  {
+   "n": 56,
+   "topic": "Genetics",
+   "q": "In a cross of two pea plants both heterozygous for round (R) dominant over wrinkled (r) seeds, what proportion of the F1 seeds are expected to be wrinkled?",
+   "options": [
+    "75%",
+    "50%",
+    "25%",
+    "0%"
+   ],
+   "answer": 2,
+   "explanation": "Cross Rr × Rr gives genotype ratio 1 RR : 2 Rr : 1 rr; only rr are wrinkled, so 1/4 or 25%. 50% would be if one parent were homozygous dominant or different cross; 75% refers to proportion of round seeds; 0% would be if both parents were RR."
+  },
+  {
+   "n": 57,
+   "topic": "Genetics",
+   "q": "A hereditary disorder in a Nigerian family is X-linked recessive. A carrier mother and an unaffected father have four children: two sons and two daughters. What is the probability that exactly one son will be affected?",
+   "options": [
+    "50%",
+    "25%",
+    "0%",
+    "100%"
+   ],
+   "answer": 0,
+   "explanation": "Each son has a 50% chance of being affected (mother passes affected X). With two sons, probability exactly one affected = 2 × 0.5 × 0.5 = 0.5 (50%). 25% would be probability both affected or other incorrect calc; 100% and 0% are not correct given carrier mother."
+  },
+  {
+   "n": 58,
+   "topic": "Nutrition in plants and animals",
+   "q": "A cattle farmer near Kano feeds his herd mainly on straw and other high-cellulose crop residues. Which statement best explains how the cattle obtain glucose for body use from this diet?",
+   "options": [
+    "Cellulose is digested by mammalian salivary and pancreatic amylase into glucose in the gut.",
+    "Cellulose molecules are absorbed intact across the rumen wall and then hydrolysed into glucose in the blood.",
+    "Cattle secrete their own cellulase in the small intestine to break cellulose directly into glucose for absorption.",
+    "Microorganisms in the rumen ferment cellulose to volatile fatty acids; propionate is absorbed and converted to glucose by the liver (gluconeogenesis)."
+   ],
+   "answer": 3,
+   "explanation": "Ruminants rely on rumen microbes to ferment cellulose into volatile fatty acids (acetate, propionate, butyrate). Propionate is a key substrate for hepatic gluconeogenesis, supplying glucose. The wrong choices reflect common errors: mammals do not produce cellulase, amylase digests starch not cellulose, and large cellulose molecules are not absorbed intact."
+  },
+  {
+   "n": 59,
+   "topic": "Diffusion, osmosis and active transport",
+   "q": "A school laboratory in Ibadan prepares four solutions to test on human red blood cells (RBCs): 0.9% NaCl, 5% glucose (dextrose), distilled water, and 3% NaCl. Which solution is physiologically isotonic to human blood plasma so that RBCs show no net change in volume on short exposure?",
+   "options": [
+    "5% glucose (dextrose)",
+    "0.9% NaCl (normal saline)",
+    "Distilled water",
+    "3% NaCl"
+   ],
+   "answer": 1,
+   "explanation": "0.9% NaCl is the standard isotonic (≈310 mOsm) solution for human plasma, so RBCs show no net movement of water. Distilled water is strongly hypotonic so RBCs swell and burst. 3% NaCl is hypertonic and causes crenation (shrinking). 5% glucose may appear near isotonic initially but glucose is taken up and metabolised by cells, making the solution effectively hypotonic over time, so it is not ideal as a stable isotonic fluid."
+  },
+  {
+   "n": 60,
+   "topic": "Excretion",
+   "q": "A patient at a clinic in Jos has damage limited to the collecting ducts of both kidneys so the ducts cannot respond to antidiuretic hormone (ADH). Which of the following is the most likely clinical finding?",
+   "options": [
+    "Raised protein concentration in urine (proteinuria)",
+    "Large volume of very dilute urine and risk of dehydration",
+    "Presence of glucose in urine (glycosuria)",
+    "Highly acidic urine (low urine pH)"
+   ],
+   "answer": 1,
+   "explanation": "Collecting ducts normally become permeable to water in response to ADH, allowing concentration of urine. If they cannot respond, the kidneys cannot reabsorb water there, producing large volumes of dilute urine (nephrogenic diabetes insipidus) and risk of dehydration. Proteinuria indicates glomerular damage, glycosuria indicates tubular reabsorption or high blood glucose, and low urine pH is related to acid–base handling, not a direct consequence of collecting duct ADH insensitivity."
+  }
+ ]
+}

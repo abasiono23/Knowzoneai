@@ -1,0 +1,791 @@
+{
+ "id": "neco-mathematics-p2",
+ "exam": "neco",
+ "subject": "mathematics",
+ "year": null,
+ "number": 2,
+ "source": "ai",
+ "minutes": 60,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Statistics",
+   "q": "The marks of 8 students in Mathematics are: 45, 56, 67, 67, 72, 80, 85, 90. What is the median mark?",
+   "options": [
+    "69.5",
+    "70",
+    "67",
+    "72"
+   ],
+   "answer": 0,
+   "explanation": "With 8 data points (even number), median is average of 4th and 5th values when sorted. The 4th = 67 and 5th = 72 so median = (67 + 72) ÷ 2 = 139 ÷ 2 = 69.5. Option 67 is the 3rd/4th confusion; 72 is the 5th alone; 70 is rounding of 69.5 but not exact."
+  },
+  {
+   "n": 2,
+   "topic": "Surds",
+   "q": "Simplify √72 + √50 − √18.",
+   "options": [
+    "4√2",
+    "6√2 + 5√2 − 3√2 = 8√2",
+    "14√2",
+    "2√2"
+   ],
+   "answer": 1,
+   "explanation": "Simplify each: √72 = √(36×2) = 6√2; √50 = √(25×2) = 5√2; √18 = √(9×2) = 3√2. Sum = 6√2 + 5√2 − 3√2 = 8√2. Common mistakes include wrong factorisation (giving 14√2) or subtracting wrong term."
+  },
+  {
+   "n": 3,
+   "topic": "Surds",
+   "q": "Rationalize the denominator of 5/(2 + √3) and simplify.",
+   "options": [
+    "(10 − 5√3)/1 = 10 − 5√3 is incorrect",
+    "5(2 − √3)/5 = 2 − √3",
+    "5(2 − √3)/(4 − 3) = 5(2 − √3) = 10 − 5√3",
+    "5(2 + √3) = 10 + 5√3"
+   ],
+   "answer": 2,
+   "explanation": "Multiply numerator and denominator by (2 − √3): 5(2 − √3)/(4 − 3) = 5(2 − √3)/1 = 10 − 5√3. A common mistake is multiplying by the same sign (giving 10 + 5√3) or incorrectly cancelling to get 2 − √3."
+  },
+  {
+   "n": 4,
+   "topic": "Surds",
+   "q": "Which of the following is equal to √45 − √5?",
+   "options": [
+    "√5(√9 − 1) = √5(3 − 1) = 2√5",
+    "4√5",
+    "√40 = 2√10",
+    "√5"
+   ],
+   "answer": 0,
+   "explanation": "Factor √5: √45 − √5 = √5(√9 − 1) = √5(3 − 1) = 2√5. Mistakes: treating √45 − √5 as √(45−5)=√40 (wrong law), or forgetting to multiply by (3−1)."
+  },
+  {
+   "n": 5,
+   "topic": "Number bases",
+   "q": "Convert the base-7 number 356₇ to decimal.",
+   "options": [
+    "3×7² + 5×7 + 6 = 3×49 + 35 + 6 = 147 + 35 + 6 = 188",
+    "162",
+    "197",
+    "181"
+   ],
+   "answer": 0,
+   "explanation": "Place values: digits 3,5,6 correspond to 7²,7¹,7⁰. So 3×49 + 5×7 + 6 = 147 + 35 + 6 = 188. A common error is treating base as 8 or misplacing digits, producing 197 or 181."
+  },
+  {
+   "n": 6,
+   "topic": "Coordinate geometry",
+   "q": "Find the gradient of the line passing through Lagos (2, 5) and Abuja (8, −1).",
+   "options": [
+    "Change in y ÷ change in x = (−1 − 5) ÷ (8 − 2) = (−6) ÷ 6 = −1",
+    "6",
+    "−6",
+    "1"
+   ],
+   "answer": 0,
+   "explanation": "Gradient m = (y2 − y1)/(x2 − x1) = (−1 − 5)/(8 − 2) = −6/6 = −1. Mistakes include swapping coordinates or forgetting sign giving 1 or −6."
+  },
+  {
+   "n": 7,
+   "topic": "Coordinate geometry",
+   "q": "Find the equation of the line perpendicular to y = 2x − 3 and passing through the point (1, 4). Give your answer in y = mx + c form.",
+   "options": [
+    "y = 1/2 x + 3.5",
+    "Perpendicular gradient = −1/2. Using y − 4 = −1/2(x − 1) gives y = −1/2 x + 4.5",
+    "y = −1/2 x + 3.5",
+    "y = −2x + 6"
+   ],
+   "answer": 1,
+   "explanation": "Gradient of given line is 2, so perpendicular gradient is −1/2. Use point (1,4): y − 4 = −1/2(x − 1) → y = −1/2 x + 1/2 + 4 = −1/2 x + 4.5. Common errors: using reciprocal 1/2 with wrong sign, or arithmetic errors in finding the intercept."
+  },
+  {
+   "n": 8,
+   "topic": "Differentiation",
+   "q": "If y = 3x² − 5x + 7, what is dy/dx at x = 2?",
+   "options": [
+    "1",
+    "7",
+    "17",
+    "11"
+   ],
+   "answer": 1,
+   "explanation": "dy/dx = 6x − 5. At x = 2, dy/dx = 6(2) − 5 = 12 − 5 = 7. A common wrong answer 11 comes from using 3x² differentiation wrongly as 6x +5 or mis-evaluating."
+  },
+  {
+   "n": 9,
+   "topic": "Differentiation",
+   "q": "If f(x) = x²·e^x, what is f'(1)? (e is the base of natural logarithms.)",
+   "options": [
+    "e + 1",
+    "e",
+    "2e",
+    "3e"
+   ],
+   "answer": 3,
+   "explanation": "Use product rule: f' = 2x·e^x + x²·e^x = e^x(2x + x²). At x =1, f'(1) = e(2 +1) = 3e. Mistakes arise from differentiating e^x incorrectly or omitting a term."
+  },
+  {
+   "n": 10,
+   "topic": "Differentiation",
+   "q": "A particle moves along a line with displacement s(t) = 4t³ − 9t² + 2t (s in cm, t in s). What is the acceleration at t = 1 s?",
+   "options": [
+    "6 cm/s²",
+    "12 cm/s²",
+    "3 cm/s²",
+    "1 cm/s²"
+   ],
+   "answer": 0,
+   "explanation": "Velocity v = ds/dt = 12t² − 18t + 2. Acceleration a = dv/dt = 24t − 18. At t =1, a = 24 − 18 = 6 cm/s². A wrong 12 comes from using dv/dt = 12t −18 (forgetting chain on 12t²)."
+  },
+  {
+   "n": 11,
+   "topic": "Angles and circle geometry",
+   "q": "In circle centre O, chord AB subtends angle AOB = 120°. What is the measure of the minor arc AB (in degrees)?",
+   "options": [
+    "60°",
+    "240°",
+    "120°",
+    "30°"
+   ],
+   "answer": 2,
+   "explanation": "Central angle AOB equals the measure of arc AB, so minor arc AB = 120°. A common confusion is between inscribed and central angles; 60° would be half of 120° which applies to an inscribed angle subtending the same arc."
+  },
+  {
+   "n": 12,
+   "topic": "Angles and circle geometry",
+   "q": "Quadrilateral ABCD is cyclic. If angle A = 70° and angle C = x°, what is x?",
+   "options": [
+    "100°",
+    "90°",
+    "110°",
+    "70°"
+   ],
+   "answer": 2,
+   "explanation": "Opposite angles in a cyclic quadrilateral are supplementary, so angle A + angle C = 180°. Thus x = 180° − 70° = 110°. A wrong 70° assumes opposite angles equal instead of supplementary."
+  },
+  {
+   "n": 13,
+   "topic": "Sets",
+   "q": "In a class of 40, 25 students take Biology, 18 take Chemistry and 10 take both. How many take neither Biology nor Chemistry?",
+   "options": [
+    "3",
+    "13",
+    "7",
+    "5"
+   ],
+   "answer": 2,
+   "explanation": "By inclusion-exclusion, number taking at least one = 25 + 18 − 10 = 33. So neither = 40 − 33 = 7. A common error is omitting the subtraction of the overlap, giving 40 − (25 + 18) = −3 (impossible) or using wrong overlap."
+  },
+  {
+   "n": 14,
+   "topic": "Sets",
+   "q": "Let U = {1,2,3,4,5,6,7,8}. A = {2,4,6,8}, B = {1,2,3,4}. What is A Δ B (symmetric difference)?",
+   "options": [
+    "{1,3,6,8}",
+    "{1,2,3,4,6,8}",
+    "{2,4}",
+    "{1,3,5,7}"
+   ],
+   "answer": 0,
+   "explanation": "Symmetric difference A Δ B = (A ∪ B) − (A ∩ B). A ∩ B = {2,4}; A ∪ B = {1,2,3,4,6,8}. Removing intersection gives {1,3,6,8}. A wrong option includes the intersection or other unrelated elements like {5,7}."
+  },
+  {
+   "n": 15,
+   "topic": "Quadratic equations",
+   "q": "Solve 2x² − 7x + 3 = 0. What are the roots?",
+   "options": [
+    "x = 3/2 or x = 1/2",
+    "x = −3 or x = −1/2",
+    "x = 1 or x = 3/2",
+    "x = 3 or x = 1/2"
+   ],
+   "answer": 3,
+   "explanation": "Factor: 2x² −7x +3 = (2x −1)(x −3) so roots x = 1/2 and x = 3. Option with 3/2 and 1/2 stems from mis-factoring or solving by quadratic formula with sign errors."
+  },
+  {
+   "n": 16,
+   "topic": "Integration",
+   "q": "Evaluate ∫ from 0 to 2 of (3x² − 4x + 1) dx. Give the exact value.",
+   "options": [
+    "2",
+    "4",
+    "0",
+    "8"
+   ],
+   "answer": 0,
+   "explanation": "Integrate: ∫(3x²−4x+1) dx = x³ −2x² + x. Evaluate from 0 to 2: (8 − 8 + 2) − 0 = 2. Common wrong answers come from sign errors in the −2x² term or arithmetic mistakes."
+  },
+  {
+   "n": 17,
+   "topic": "Integration",
+   "q": "Find ∫ (2x)/(x² + 1) dx. Give the general antiderivative.",
+   "options": [
+    "(x² + 1) + C",
+    "ln(x² + 1) + C",
+    "2 ln(x + 1) + C",
+    "1/(x² + 1) + C"
+   ],
+   "answer": 1,
+   "explanation": "Let u = x²+1 so du = 2x dx; integral = ∫ du/u = ln|u| + C = ln(x²+1)+C. Options like 1/(x²+1) arise from confusion with derivative of arctan x; (x²+1)+C is from integrating 2x as if denominator absent."
+  },
+  {
+   "n": 18,
+   "topic": "Integration",
+   "q": "If F(x) is an antiderivative of f(x) = 6x + 4, and F(1) = 5, find F(x).",
+   "options": [
+    "3x² + 2x + 1",
+    "3x² + 4x + 2",
+    "6x² + 4x + 1",
+    "3x² + 4x − 2"
+   ],
+   "answer": 3,
+   "explanation": "Antiderivative of 6x+4 is 3x² + 4x + C. With F(1)=5: 3+4+C=5 ⇒ C=−2, so F(x)=3x²+4x−2. Wrong options show sign or coefficient mistakes."
+  },
+  {
+   "n": 19,
+   "topic": "Indices and logarithms",
+   "q": "Simplify: (27)^(2/3) × 9^(−1/2).",
+   "options": [
+    "1",
+    "9",
+    "1/3",
+    "3"
+   ],
+   "answer": 3,
+   "explanation": "27^(2/3) = (3^3)^(2/3) = 3^2 = 9. 9^(−1/2) = (3^2)^(−1/2) = 3^(−1) = 1/3. Product = 9 × 1/3 = 3. A common mistake is mishandling fractional exponents."
+  },
+  {
+   "n": 20,
+   "topic": "Indices and logarithms",
+   "q": "Solve for x: log₃ x + log₃ (x − 2) = 1, with x > 2.",
+   "options": [
+    "1",
+    "2",
+    "4",
+    "3"
+   ],
+   "answer": 3,
+   "explanation": "Combine logs: log₃[x(x−2)] = 1 ⇒ x(x−2) = 3^1 = 3 ⇒ x² −2x −3 = 0 ⇒ (x−3)(x+1)=0. With x>2, x=3. Wrong options show roots excluded by domain or arithmetic slip."
+  },
+  {
+   "n": 21,
+   "topic": "Mensuration",
+   "q": "A triangular field at Ibadan has sides 13 m, 14 m and 15 m. Find its area in m².",
+   "options": [
+    "84√2",
+    "78",
+    "90",
+    "84"
+   ],
+   "answer": 3,
+   "explanation": "Use Heron: s=(13+14+15)/2=21. Area = √[21(21−13)(21−14)(21−15)] = √[21×8×7×6] = √[7056] =84. Mistakes arise from arithmetic or incorrect s value."
+  },
+  {
+   "n": 22,
+   "topic": "Probability",
+   "q": "From a pack of 52 cards a single card is drawn. What is the probability that it is either a heart or a king?",
+   "options": [
+    "1/4",
+    "1/13",
+    "4/13",
+    "1/2"
+   ],
+   "answer": 2,
+   "explanation": "Hearts =13, kings =4, but king of hearts counted twice. So favourable =13 +4 −1 =16. Probability =16/52 =4/13. Common errors omit subtracting overlap or miscount numerator."
+  },
+  {
+   "n": 23,
+   "topic": "Probability",
+   "q": "At a market in Enugu, 3 red balls, 2 blue balls and 5 green balls are placed in a bag. Two balls are drawn at random without replacement. What is the probability both are green?",
+   "options": [
+    "5/8",
+    "25/100",
+    "10/45",
+    "1/9"
+   ],
+   "answer": 2,
+   "explanation": "Total balls =10. Probability first green =5/10 =1/2. Given one green removed, second =4/9. Product = (1/2)×(4/9) =4/18 =2/9 =10/45. Wrong options show confusion with replacement or incorrect multiplication."
+  },
+  {
+   "n": 24,
+   "topic": "Fractions, decimals and percentages",
+   "q": "A shop in Lagos sells a radio for ₦18,900 after a 25% discount on the marked price. What was the marked price?",
+   "options": [
+    "₦24,300",
+    "₦19,650",
+    "₦22,500",
+    "₦25,200"
+   ],
+   "answer": 3,
+   "explanation": "Let marked price = M. After 25% discount the selling price is 0.75M = 18,900, so M = 18,900 ÷ 0.75 = 25,200. The wrong options arise from common mistakes: dividing by 0.85 or subtracting instead of dividing."
+  },
+  {
+   "n": 25,
+   "topic": "Fractions, decimals and percentages",
+   "q": "Express the recurring decimal 0.36̅ (0.3666...) as a fraction in lowest terms.",
+   "options": [
+    "7/19",
+    "1/3",
+    "11/30",
+    "33/90"
+   ],
+   "answer": 2,
+   "explanation": "Let x = 0.3666... Then 10x = 3.666..., and 100x = 36.666... Subtract: 90x = 33 so x = 33/90 = 11/30 in lowest terms. 1/3 = 0.333... is a common wrong guess; 7/19 is unrelated."
+  },
+  {
+   "n": 26,
+   "topic": "Fractions, decimals and percentages",
+   "q": "A contractor received payment of ₦480,000 which is 60% of the total contract sum. What percentage of the total remains unpaid, and how much in naira is unpaid?",
+   "options": [
+    "25% unpaid; ₦160,000 unpaid",
+    "20% unpaid; ₦192,000 unpaid",
+    "30% unpaid; ₦240,000 unpaid",
+    "40% unpaid; ₦320,000 unpaid"
+   ],
+   "answer": 3,
+   "explanation": "If ₦480,000 = 60%, remaining percentage = 100%−60% = 40%. Unpaid amount = 40% of total; total = 480,000 ÷ 0.6 = 800,000, so unpaid = 0.4×800,000 = 320,000. Other options mix up percentages or compute on wrong base."
+  },
+  {
+   "n": 27,
+   "topic": "Trigonometry",
+   "q": "In triangle with vertices at Ibadan, Oyo and Oshogbo, the sides opposite angles A, B, C are 8 cm, 11 cm and 13 cm respectively. Use the cosine rule to find cos C.",
+   "options": [
+    "(8² + 11² − 13²)/(2×8×11) = (64+121−169)/176 = 16/176 = 2/22 = 1/11",
+    "(8 + 11 − 13)/(8×11)",
+    "(8² + 13² − 11²)/(2×8×13)",
+    "(11² + 13² − 8²)/(2×11×13)"
+   ],
+   "answer": 0,
+   "explanation": "Cos C = (a² + b² − c²)/(2ab) where c = 13, a = 8, b = 11, so cos C = (64+121−169)/(176) = 16/176 = 1/11. Other formulas show confusion about which side corresponds to C or misapplied linear subtraction."
+  },
+  {
+   "n": 28,
+   "topic": "Trigonometry",
+   "q": "If tan θ = 3/4 and θ is acute, find sin θ.",
+   "options": [
+    "3/5",
+    "3/4",
+    "4/5",
+    "√(3/4)"
+   ],
+   "answer": 0,
+   "explanation": "For tan θ = opposite/adjacent = 3/4, hypotenuse = 5 by Pythagoras, so sin θ = opposite/hypotenuse = 3/5. 4/5 is cos θ; 3/4 confuses tan with sin; √(3/4) is invalid here."
+  },
+  {
+   "n": 29,
+   "topic": "Matrices and determinants",
+   "q": "Given matrix A = [[2, 3],[5, 7]], find det(A).",
+   "options": [
+    "−29",
+    "1",
+    "−1",
+    "29"
+   ],
+   "answer": 2,
+   "explanation": "det(A) = 2×7 − 3×5 = 14 − 15 = −1. Common mistakes multiply wrong entries or reverse the subtraction sign."
+  },
+  {
+   "n": 30,
+   "topic": "Matrices and determinants",
+   "q": "Solve the simultaneous equations 2x + 3y = 13 and 4x − y = 5 using matrices (2×2). What is x?",
+   "options": [
+    "2",
+    "3",
+    "11/7",
+    "1"
+   ],
+   "answer": 0,
+   "explanation": "Using elimination: multiply second equation by 3 → 12x −3y =15; add to 2x+3y=13 gives 14x =28 so x = 2. Matrix/Cramer's method yields same result. Other options come from arithmetic mistakes."
+  },
+  {
+   "n": 31,
+   "topic": "Variation",
+   "q": "The weight W of a fruit varies directly as the cube of its diameter d. If a mango of diameter 4 cm weighs 200 g, what is the weight of a mango of diameter 6 cm?",
+   "options": [
+    "300 g",
+    "540 g",
+    "450 g",
+    "675 g"
+   ],
+   "answer": 3,
+   "explanation": "W ∝ d³ so W = k d³. From 200 = k×4³ = k×64 so k = 200/64 = 25/8. For d=6, W = (25/8)×216 = (25×27) = 675 g. Wrong options arise from linear scaling or arithmetic errors."
+  },
+  {
+   "n": 32,
+   "topic": "Variation",
+   "q": "If t varies inversely as the square root of m (t ∝ 1/√m) and t = 3 when m = 16, find m when t = 6.",
+   "options": [
+    "8",
+    "4",
+    "64",
+    "2"
+   ],
+   "answer": 1,
+   "explanation": "t = k / √m. From 3 = k/4 so k =12. For t=6, 6 = 12 / √m so √m = 2 and m =4. Common errors include treating variation as inverse linear rather than inverse square-root."
+  },
+  {
+   "n": 33,
+   "topic": "Simultaneous equations and inequalities",
+   "q": "Solve the simultaneous equations 3x − 2y = 7 and x + 4y = 1. Find (x, y).",
+   "options": [
+    "(7/3, −1/4)",
+    "(5, −1)",
+    "(15/7, −2/7)",
+    "(4, −1)"
+   ],
+   "answer": 2,
+   "explanation": "From 3x − 2y = 7, x = (7 + 2y)/3. Substitute in x + 4y = 1: (7 + 2y)/3 + 4y = 1 ⇒ 7 + 2y + 12y = 3 ⇒ 14y = −4 ⇒ y = −2/7. Then x = (7 + 2(−2/7))/3 = (49/7 − 4/7)/3 = (45/7)/3 = 15/7. Other options come from arithmetic or substitution errors."
+  },
+  {
+   "n": 34,
+   "topic": "Simultaneous equations and inequalities",
+   "q": "Solve the system x + y = 5 and x² + y² = 13. What are the ordered-pair solutions?",
+   "options": [
+    "{(−3, 8), (8, −3)}",
+    "{(−2, 7), (7, −2)}",
+    "{(2, 3), (3, 2)}",
+    "{(1, 4), (4, 1)}"
+   ],
+   "answer": 2,
+   "explanation": "From y = 5 − x substitute: x² + (5 − x)² = 13 ⇒ 2x² −10x +12 = 0 ⇒ x² −5x +6 = 0 ⇒ (x − 2)(x − 3) = 0 so x = 2 or 3. Corresponding y = 3 or 2. Other choices come from mistaken algebra or incorrect roots."
+  },
+  {
+   "n": 35,
+   "topic": "Sequences and series",
+   "q": "In an arithmetic progression the first term a₁ = 7 and common difference d = 3. What is the 10th term a₁₀?",
+   "options": [
+    "34",
+    "40",
+    "37",
+    "31"
+   ],
+   "answer": 0,
+   "explanation": "aₙ = a₁ + (n − 1)d so a₁₀ = 7 + 9×3 = 7 + 27 = 34. 37 would be if someone added 3×10 instead of 3×9; 31 is 7 + 8×3 and 40 is 7 + 11×3, typical off-by-one errors."
+  },
+  {
+   "n": 36,
+   "topic": "Sequences and series",
+   "q": "Find the sum of the first five terms of the geometric series with first term 2 and common ratio 3.",
+   "options": [
+    "242",
+    "2420",
+    "121",
+    "364"
+   ],
+   "answer": 0,
+   "explanation": "S₅ = a(1 − r⁵)/(1 − r) = 2(1 − 3⁵)/(1 − 3) = 2(1 − 243)/(−2) = 2(−242)/(−2) = 242. 121 would be half of the correct answer (common division error); 364 and 2420 come from mis-evaluating powers or forgetting the denominator sign."
+  },
+  {
+   "n": 37,
+   "topic": "Sequences and series",
+   "q": "In an arithmetic progression a₃ = 10 and a₈ = 0. Find the first term a₁.",
+   "options": [
+    "16",
+    "14",
+    "4",
+    "−2"
+   ],
+   "answer": 1,
+   "explanation": "Write a₃ = a₁ + 2d = 10 and a₈ = a₁ + 7d = 0. Subtract: 5d = −10 ⇒ d = −2. Then a₁ = 10 − 2d = 10 − 2(−2) = 10 + 4 = 14. Other options come from sign errors or solving incorrectly for d."
+  },
+  {
+   "n": 38,
+   "topic": "Statistics",
+   "q": "At a Lagos market the prices (₦) of tomatoes per crate are: 50, 60, 50, 80, 70, 50. What is the modal price?",
+   "options": [
+    "₦65",
+    "₦70",
+    "₦50",
+    "₦60"
+   ],
+   "answer": 2,
+   "explanation": "Mode is the value occurring most often. ₦50 appears three times, more than any other price. ₦60 and ₦70 occur once each; ₦65 is not present and could be a mistaken average."
+  },
+  {
+   "n": 39,
+   "topic": "Surds",
+   "q": "Simplify √48 + √12 into the form k√3. What is k√3?",
+   "options": [
+    "2√3",
+    "10√3",
+    "8√3",
+    "6√3"
+   ],
+   "answer": 3,
+   "explanation": "√48 = √(16×3) = 4√3 and √12 = √(4×3) = 2√3 so sum = 4√3 + 2√3 = 6√3. 2√3 or 8√3 come from mistakenly simplifying one term; 10√3 is an arithmetic addition error."
+  },
+  {
+   "n": 40,
+   "topic": "Surds",
+   "q": "Rationalise the denominator and simplify: 5/(√3 − 1). What is the result?",
+   "options": [
+    "(5√3 + 5)/2",
+    "(5√3 + 5)/4",
+    "(5√3 − 5)/2",
+    "5(√3 + 1)"
+   ],
+   "answer": 0,
+   "explanation": "Multiply numerator and denominator by (√3 + 1): 5(√3 + 1)/(3 − 1) = 5(√3 + 1)/2 = (5√3 + 5)/2. (5√3 − 5)/2 would be from multiplying by (√3 − 1) again; 5(√3 + 1) misses dividing by 2; (5√3 + 5)/4 divides by the wrong denominator."
+  },
+  {
+   "n": 41,
+   "topic": "Number bases",
+   "q": "Convert the base-7 number 345₇ to its value in base 10.",
+   "options": [
+    "171",
+    "185",
+    "144",
+    "180"
+   ],
+   "answer": 3,
+   "explanation": "Compute 345₇ = 3×7² + 4×7 + 5 = 3×49 + 28 + 5 = 147 + 28 + 5 = 180. Option 171 would come from 3×49 + 4×6 + 5 (wrong place value), 185 is an arithmetic error, and 144 is far too small."
+  },
+  {
+   "n": 42,
+   "topic": "Number bases",
+   "q": "Find the sum A3₁₆ + 2B₁₆ and give the answer in hexadecimal.",
+   "options": [
+    "DE₁₆",
+    "BE₁₆",
+    "CF₁₆",
+    "CE₁₆"
+   ],
+   "answer": 3,
+   "explanation": "A3₁₆ = 163₁₀ and 2B₁₆ = 43₁₀; 163 + 43 = 206. In hex 206 ÷ 16 = 12 remainder 14, so digits are 12 (C) and 14 (E): CE₁₆. CF would be if remainder were 15; DE and BE are other incorrect conversions."
+  },
+  {
+   "n": 43,
+   "topic": "Coordinate geometry",
+   "q": "Find the equation of the perpendicular bisector of the line segment joining P(2, 3) and Q(8, −1). Give your answer in the form y = mx + c.",
+   "options": [
+    "y = (3/2)x + 1",
+    "y = (3/2)x − 13/2",
+    "y = (2/3)x + 1",
+    "y = (−3/2)x + 13/2"
+   ],
+   "answer": 1,
+   "explanation": "Midpoint of P and Q is ((2+8)/2, (3+(−1))/2) = (5,1). Slope PQ = (−1−3)/(8−2) = −4/6 = −2/3, so perpendicular slope = 3/2. Using y−1 = (3/2)(x−5) gives y = (3/2)x −15/2 +1 = (3/2)x −13/2. Other options have wrong slope sign or wrong intercept."
+  },
+  {
+   "n": 44,
+   "topic": "Coordinate geometry",
+   "q": "Calculate the perpendicular distance from the point A(1, −2) to the line 3x − 4y + 5 = 0. Give the exact value.",
+   "options": [
+    "8/5",
+    "16/√29",
+    "16/5",
+    "4"
+   ],
+   "answer": 2,
+   "explanation": "Distance = |3(1) −4(−2) +5| / √(3² + (−4)²) = |3 +8 +5| / √25 = 16 / 5. 8/5 would be half that (a common slip), 4 arises from dividing 16 by 4 instead of 5, and 16/√29 uses wrong denominator."
+  },
+  {
+   "n": 45,
+   "topic": "Differentiation",
+   "q": "If y = x² sin x, find dy/dx.",
+   "options": [
+    "2x sin x + x cos x",
+    "x² cos x",
+    "2x cos x + x² sin x",
+    "2x sin x + x² cos x"
+   ],
+   "answer": 3,
+   "explanation": "Use the product rule: d/dx(x²)·sin x + x²·d/dx(sin x) = 2x·sin x + x²·cos x. 'x² cos x' omits the derivative of x²; the other wrong options mix up terms or differentiate incorrectly."
+  },
+  {
+   "n": 46,
+   "topic": "Differentiation",
+   "q": "A vehicle moves so that its displacement s (m) is s = 5t³ − 9t + 4, where t is time in seconds. What is the acceleration at t = 2 s?",
+   "options": [
+    "30 m/s²",
+    "60 m/s²",
+    "51 m/s²",
+    "120 m/s²"
+   ],
+   "answer": 1,
+   "explanation": "Velocity v = ds/dt = 15t² − 9. Acceleration a = dv/dt = 30t. At t = 2, a = 30×2 = 60 m/s². 30 would be the value of 30t if t = 1, 120 would be 30×4 (t mis-squared), and 51 is an arithmetic error."
+  },
+  {
+   "n": 47,
+   "topic": "Angles and circle geometry",
+   "q": "In a circle with centre O, points A, B, C lie on the circumference and ∠AOB = 120°. What is the measure of angle ACB (the angle subtended by chord AB at point C on the circumference)?",
+   "options": [
+    "90°",
+    "60°",
+    "30°",
+    "120°"
+   ],
+   "answer": 1,
+   "explanation": "An angle subtended at the centre is twice the angle subtended at the circumference on the same chord. So ∠ACB = ½·∠AOB = ½·120° = 60°. 120° would be the central angle itself, 30° is half of 60° (double halving), and 90° is unrelated."
+  },
+  {
+   "n": 48,
+   "topic": "Statistics",
+   "q": "In a class of 40 students in Kano, the number of students who scored ≥70 in Mathematics is 22. If one student is chosen at random, what is the probability that the student scored <70? Express your answer as a fraction in lowest terms.",
+   "options": [
+    "9/20",
+    "11/20",
+    "18/40",
+    "22/40"
+   ],
+   "answer": 0,
+   "explanation": "If 22 scored ≥70, then 40 − 22 = 18 scored <70. Probability = 18/40 which reduces by dividing numerator and denominator by 2 to 9/20. Option 11/20 is the complement probability (for ≥70), 18/40 is unreduced but equivalent to 9/20, and 22/40 is the probability of ≥70."
+  },
+  {
+   "n": 49,
+   "topic": "Statistics",
+   "q": "The monthly incomes (₦) of five traders in Ibadan are: 24,000; 30,000; 18,000; 24,000; 54,000. What is the median income?",
+   "options": [
+    "24,000",
+    "24,600",
+    "30,000",
+    "25,200"
+   ],
+   "answer": 0,
+   "explanation": "Order the incomes: 18,000; 24,000; 24,000; 30,000; 54,000. The middle (3rd) value is 24,000, so the median is ₦24,000. 30,000 is the mean of the top three, 25,200 and 24,600 are distractors from incorrect averaging."
+  },
+  {
+   "n": 50,
+   "topic": "Statistics",
+   "q": "A frequency distribution of ages of workers in a Lagos firm: 20–29: 8 workers; 30–39: 12 workers; 40–49: 5 workers; 50–59: 5 workers. What is the modal class?",
+   "options": [
+    "No mode",
+    "20–29",
+    "30–39",
+    "40–49"
+   ],
+   "answer": 2,
+   "explanation": "The modal class is the class with highest frequency. Frequencies: 8, 12, 5, 5, so 30–39 with 12 workers is modal. 20–29 has lower frequency; 40–49 has 5; 'No mode' is wrong because a clear highest frequency exists."
+  },
+  {
+   "n": 51,
+   "topic": "Surds",
+   "q": "Rationalise and simplify: 3/(√5 − 2). What is the result?",
+   "options": [
+    "(3√5 + 2)",
+    "(√5 + 2)/5",
+    "(3√5 + 6)/1 → 3√5 + 6",
+    "(3√5 − 6)"
+   ],
+   "answer": 2,
+   "explanation": "Multiply numerator and denominator by (√5 + 2): 3(√5 + 2)/(5 − 4) = 3(√5 + 2)/1 = 3√5 + 6. Option with minus is sign error; others are incorrect algebraic manipulations."
+  },
+  {
+   "n": 52,
+   "topic": "Number bases",
+   "q": "Convert the binary number 11011₂ to its value in base 10.",
+   "options": [
+    "27",
+    "29",
+    "25",
+    "23"
+   ],
+   "answer": 0,
+   "explanation": "11011₂ = 1×16 + 1×8 + 0×4 + 1×2 + 1×1 = 16+8+0+2+1 = 27. Options 25 and 29 result from common place-value mistakes (omitting a term or misplacing weights)."
+  },
+  {
+   "n": 53,
+   "topic": "Number bases",
+   "q": "Add the hexadecimal numbers A7₁₆ and 3C₁₆ and give the answer in hexadecimal.",
+   "options": [
+    "E3",
+    "CB",
+    "DF",
+    "8A"
+   ],
+   "answer": 0,
+   "explanation": "A7₁₆ = (10×16)+7 = 167 decimal; 3C₁₆ = (3×16)+12 = 60 decimal; sum = 227 decimal. 227 divided by 16 gives 14 remainder 3, and 14 corresponds to E, so E3₁₆. Other choices come from addition errors in hex digits."
+  },
+  {
+   "n": 54,
+   "topic": "Sets",
+   "q": "In a senior class of 60 students in Enugu, 40 offer Mathematics, 25 offer Physics and 15 offer both Mathematics and Physics. How many students offer neither Mathematics nor Physics?",
+   "options": [
+    "5",
+    "10",
+    "15",
+    "20"
+   ],
+   "answer": 1,
+   "explanation": "By inclusion–exclusion: number who offer at least one = 40 + 25 − 15 = 50. Therefore neither = 60 − 50 = 10. The tempting 15 is just the number taking both, not those taking neither; 20 would result from forgetting to subtract the overlap."
+  },
+  {
+   "n": 55,
+   "topic": "Angles and circle geometry",
+   "q": "A tangent at point T to a circle at Lagos makes an angle of 35° with chord TP. What is angle in the alternate segment (angle between chord TP and the chord joining P to the point Q on the circle so that angle at Q subtends arc TP)?",
+   "options": [
+    "25°",
+    "55°",
+    "35°",
+    "70°"
+   ],
+   "answer": 2,
+   "explanation": "By the tangent–chord theorem, the angle between a tangent and a chord equals the angle in the opposite arc (the alternate segment). Therefore the angle in the alternate segment equals 35°. Other options arise from common mistakes: doubling the angle or subtracting from 90°."
+  },
+  {
+   "n": 56,
+   "topic": "Quadratic equations",
+   "q": "Solve 2x² − 7x − 15 = 0 for x.",
+   "options": [
+    "x = 3 or x = −5/2",
+    "x = 15/2 or x = −1",
+    "x = 5 or x = −3/2",
+    "x = −5 or x = 3/2"
+   ],
+   "answer": 2,
+   "explanation": "Factor: 2x² − 7x −15 = (2x +3)(x −5) so x = −3/2 or 5. Common wrong answers come from sign errors when factoring or dividing."
+  },
+  {
+   "n": 57,
+   "topic": "Quadratic equations",
+   "q": "For what value of k does the quadratic x² − 4x + k = 0 have equal roots?",
+   "options": [
+    "k = 0",
+    "k = −4",
+    "k = 4",
+    "k = 2"
+   ],
+   "answer": 2,
+   "explanation": "Equal roots occur when discriminant Δ = b² − 4ac = 0. Here Δ = (−4)² − 4(1)(k) = 16 − 4k = 0 ⇒ k = 4. Other options ignore discriminant or solve 16 − 4k = 2,0,−something incorrectly."
+  },
+  {
+   "n": 58,
+   "topic": "Integration",
+   "q": "Evaluate the definite integral ∫₀² (3x² − 4x + 5) dx. What is the value?",
+   "options": [
+    "10",
+    "12",
+    "8",
+    "14"
+   ],
+   "answer": 0,
+   "explanation": "Integrate: ∫(3x² − 4x + 5) dx = x³ − 2x² + 5x + C. Evaluate from 0 to 2: (2³ − 2·2² + 5·2) − 0 = (8 − 8 + 10) = 10. A common error gives 12 if one mis-evaluates the cubic term or adds instead of subtracting 2x²."
+  },
+  {
+   "n": 59,
+   "topic": "Indices and logarithms",
+   "q": "Solve for x: log₃(x + 1) + log₃(x − 1) = 2. What is x (give the admissible solution)?",
+   "options": [
+    "3",
+    "-√10",
+    "10",
+    "√10"
+   ],
+   "answer": 3,
+   "explanation": "Combine logs: log₃[(x+1)(x−1)] = 2 so (x² − 1) = 3² = 9. Thus x² = 10 and x = ±√10. But domain requires x − 1 > 0, so x > 1; hence x = √10. The negative root is invalid because log₃(x−1) would be undefined."
+  },
+  {
+   "n": 60,
+   "topic": "Probability",
+   "q": "At a market in Kano a basket contains 5 red tomatoes, 3 green tomatoes and 2 blue tomatoes. Two tomatoes are picked at random without replacement. What is the probability both picked are red?",
+   "options": [
+    "1/5",
+    "1/3",
+    "5/9",
+    "2/9"
+   ],
+   "answer": 3,
+   "explanation": "Probability first red = 5/10 = 1/2. Given first red, second red = 4/9. Multiply: (1/2)×(4/9) = 4/18 = 2/9. A common wrong answer 1/3 comes from (5/10)×(5/10) (replacement assumed) or from adding probabilities instead of multiplying."
+  }
+ ]
+}
