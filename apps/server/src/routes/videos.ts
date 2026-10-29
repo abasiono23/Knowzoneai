@@ -10,18 +10,9 @@ import { AppError, notFound } from '../lib/errors.js';
 import { catalogFor } from '../services/catalog.js';
 import { requestLanguage } from '../services/language.js';
 import { LANGUAGES, type LanguageId } from '../services/personalization.js';
+import { findPhoto, photoQueries } from '../services/real-photos.js';
 import { me, optionalAuth, requireAuth } from '../services/sessions.js';
-import {
-  hasNarration,
-  illustrate,
-  LENGTHS,
-  mapLimit,
-  narrate,
-  secondsFor,
-  writeScript,
-  type Scene,
-  type VideoSettings,
-} from '../services/video-ai.js';
+import { hasNarration, illustrate, LENGTHS, mapLimit, narrate, secondsFor, writeScript, type Scene, type VideoSettings } from '../services/video-ai.js';
 
 export const videosRouter = Router();
 
@@ -79,9 +70,7 @@ function toPublicVideo(v: Video, likes = 0) {
 
 const likesFor = async (ids: string[]) =>
   new Map(
-    (
-      await prisma.videoUserState.groupBy({ by: ['videoId'], where: { videoId: { in: ids }, liked: true }, _count: true })
-    ).map((g) => [g.videoId, g._count]),
+    (await prisma.videoUserState.groupBy({ by: ['videoId'], where: { videoId: { in: ids }, liked: true }, _count: true })).map((g) => [g.videoId, g._count]),
   );
 
 // ─── Making a video ───────────────────────────────────────────────────────────
@@ -93,8 +82,7 @@ async function fail(id: string, code: ErrorCode, retryable: boolean) {
     const v = await tx.video.findUnique({ where: { id }, select: { creditsHeld: true, userId: true } });
     if (!v) return;
     await tx.video.update({ where: { id }, data: { status: 'failed', error: { code, retryable }, creditsHeld: 0 } });
-    if (v.creditsHeld && v.userId)
-      await tx.user.update({ where: { id: v.userId }, data: { aiCredits: { increment: v.creditsHeld } } });
+    if (v.creditsHeld && v.userId) await tx.user.update({ where: { id: v.userId }, data: { aiCredits: { increment: v.creditsHeld } } });
   });
 }
 
@@ -125,9 +113,7 @@ async function sourceText(userId: string | null, source: Source, language: Langu
     if (!lesson) throw new SourceMissing('lesson-missing');
     return { text: `${lesson.title}\n${lesson.summary}\n${lesson.keyPoints.map((k) => `- ${k}`).join('\n')}` };
   }
-  const m = userId
-    ? await prisma.material.findFirst({ where: { id: source.materialId, userId, status: 'READY' } })
-    : null;
+  const m = userId ? await prisma.material.findFirst({ where: { id: source.materialId, userId, status: 'READY' } }) : null;
   if (!m) throw new SourceMissing('material-missing');
   const c = m.content as { summary?: { tldr: string; overview: string[] }; keyPoints?: { text: string }[] } | null;
   const notes = c?.summary ? [c.summary.tldr, ...c.summary.overview, ...(c.keyPoints ?? []).map((p) => `- ${p.text}`)].join('\n') : '';
@@ -135,13 +121,7 @@ async function sourceText(userId: string | null, source: Source, language: Langu
 }
 
 /** Records narration for scenes (all, or just `only`) and stores each MP3; returns the timed scenes. */
-export async function recordScenes(
-  videoId: string,
-  userId: string,
-  scenes: Scene[],
-  settings: VideoSettings,
-  only?: Set<string>,
-) {
+export async function recordScenes(videoId: string, userId: string, scenes: Scene[], settings: VideoSettings, only?: Set<string>) {
   if (!hasNarration(settings.voiceId)) return scenes.map((s) => ({ ...s, audio: undefined, seconds: secondsFor(s.caption) }));
   return mapLimit(scenes, 4, async (s) => {
     if (only && !only.has(s.id)) return s;
@@ -153,27 +133,60 @@ export async function recordScenes(
   });
 }
 
-/** Draws pictures for the scenes that describe one (up to the length's limit) and stores them. */
+/** Real photos (free, credited) for the illustrated scenes where a good one exists; other scenes are unchanged. */
+export async function addPhotos(videoId: string, userId: string, scenes: Scene[]) {
+  const wanted = scenes.filter((s) => s.illustration && s.kind !== 'check');
+  const queries = await photoQueries(
+    userId,
+    wanted.map((s) => s.illustration!),
+  ).catch(() => wanted.map(() => null));
+  const photos = new Map<string, Pick<Scene, 'image' | 'credit'>>();
+  await mapLimit(wanted, 3, async (s, i) => {
+    const photo = queries[i] ? await findPhoto(userId, queries[i]!, s.illustration!) : null;
+    if (!photo) return;
+    const token = newToken();
+    await prisma.videoFile.create({ data: { videoId, token, kind: 'image', mimeType: photo.mimeType, data: new Uint8Array(photo.data) } });
+    photos.set(s.id, { image: fileUrl(token), credit: photo.credit });
+  });
+  return scenes.map((s) => (photos.has(s.id) ? { ...s, ...photos.get(s.id) } : s));
+}
+
+/**
+ * Pictures for the scenes that describe one: a real photo where a good one exists (free, from
+ * Wikimedia Commons, credited), and AI pictures for the rest, up to the length's limit.
+ */
 export async function drawScenes(videoId: string, userId: string, scenes: Scene[], settings: VideoSettings) {
-  const wanted = scenes.filter((s) => s.illustration && s.kind !== 'check').slice(0, LENGTHS[settings.length].images);
-  const drawn = new Map<string, string>();
-  await mapLimit(wanted, 3, async (s) => {
+  // Fresh pictures: any earlier picture and its credit are replaced.
+  const withPhotos = await addPhotos(
+    videoId,
+    userId,
+    scenes.map(({ credit: _credit, ...s }) => s),
+  );
+  const pictures = new Map<string, Pick<Scene, 'image' | 'credit'>>();
+  const wanted = withPhotos.filter((s) => s.illustration && s.kind !== 'check' && !s.credit);
+  const toDraw = wanted.slice(0, LENGTHS[settings.length].images);
+  await mapLimit(toDraw, 3, async (s) => {
     try {
       const jpeg = await illustrate(userId, s.illustration!, settings.styleId);
       const token = newToken();
       await prisma.videoFile.create({ data: { videoId, token, kind: 'image', mimeType: 'image/jpeg', data: new Uint8Array(jpeg) } });
-      drawn.set(s.id, fileUrl(token));
+      pictures.set(s.id, { image: fileUrl(token) });
     } catch (e) {
       // A missing picture isn't worth failing the video: the scene shows its emoji instead.
       console.warn('Scene picture failed', videoId, (e as Error).message);
     }
   });
-  return scenes.map((s) => (drawn.has(s.id) ? { ...s, image: drawn.get(s.id) } : s));
+  return withPhotos.map((s) => (pictures.has(s.id) ? { ...s, ...pictures.get(s.id) } : s));
 }
 
 /** Files no scene points to any more (after a regeneration or edit) are deleted. */
 async function dropUnusedFiles(videoId: string, scenes: Scene[]) {
-  const used = new Set(scenes.flatMap((s) => [s.audio, s.image]).filter(Boolean).map((u) => u!.split('/').pop()!));
+  const used = new Set(
+    scenes
+      .flatMap((s) => [s.audio, s.image])
+      .filter(Boolean)
+      .map((u) => u!.split('/').pop()!),
+  );
   await prisma.videoFile.deleteMany({ where: { videoId, token: { notIn: [...used] } } });
 }
 
@@ -229,8 +242,7 @@ async function holdCredits(userId: string, credits: number) {
     where: { id: userId, aiCredits: { gte: credits } },
     data: { aiCredits: { decrement: credits } },
   });
-  if (!held.count)
-    throw new AppError(402, 'You are out of AI credits. Invite a friend or upgrade to Plus for more.', 'no-credits');
+  if (!held.count) throw new AppError(402, 'You are out of AI credits. Invite a friend or upgrade to Plus for more.', 'no-credits');
 }
 
 // ─── Knowzone Originals feed (88–94) ──────────────────────────────────────────
@@ -300,8 +312,7 @@ videosRouter.post('/videos/mine/:id', aiLimiter, async (req, res) => {
   const user = me(req);
   const id = VideoId.parse(req.params.id);
   const input = Create.parse(req.body);
-  if (await prisma.video.findUnique({ where: { id }, select: { id: true } }))
-    throw new AppError(409, 'This video already exists', 'exists');
+  if (await prisma.video.findUnique({ where: { id }, select: { id: true } })) throw new AppError(409, 'This video already exists', 'exists');
   const credits = LENGTHS[input.settings.length].credits;
   await holdCredits(user.id, credits);
   const video = await prisma.video.create({
@@ -324,8 +335,7 @@ videosRouter.post('/videos/mine/:id', aiLimiter, async (req, res) => {
 videosRouter.post('/videos/mine/:id/retry', aiLimiter, async (req, res) => {
   const user = me(req);
   const v = await ownVideo(String(req.params.id), user.id);
-  if (v.status !== 'failed' || !(v.error as { retryable?: boolean } | null)?.retryable)
-    throw new AppError(409, 'This video can’t be retried', 'not-retryable');
+  if (v.status !== 'failed' || !(v.error as { retryable?: boolean } | null)?.retryable) throw new AppError(409, 'This video can’t be retried', 'not-retryable');
   const credits = v.revision > 1 ? REGENERATE_CREDITS : LENGTHS[(v.settings as VideoSettings).length].credits;
   await holdCredits(user.id, credits);
   const updated = await prisma.video.update({
@@ -393,9 +403,7 @@ videosRouter.patch('/videos/mine/:id', aiLimiter, async (req, res) => {
     const changed = new Set(scenes.filter((s) => byId.get(s.id) && byId.get(s.id)!.caption !== s.caption).map((s) => s.id));
     scenes = scenes.map((s) => {
       const e = byId.get(s.id);
-      return e
-        ? { ...s, heading: e.heading, caption: e.caption, ...(e.body !== undefined && { body: e.body }), ...(e.bullets && { bullets: e.bullets }) }
-        : s;
+      return e ? { ...s, heading: e.heading, caption: e.caption, ...(e.body !== undefined && { body: e.body }), ...(e.bullets && { bullets: e.bullets }) } : s;
     });
     if (changed.size) scenes = await recordScenes(v.id, user.id, scenes, settings, changed);
   }
@@ -412,8 +420,7 @@ videosRouter.delete('/videos/mine/:id', async (req, res) => {
   if (v) {
     await prisma.$transaction(async (tx) => {
       // Deleted while being made: the held credits go back.
-      if (v.creditsHeld && v.userId)
-        await tx.user.update({ where: { id: v.userId }, data: { aiCredits: { increment: v.creditsHeld } } });
+      if (v.creditsHeld && v.userId) await tx.user.update({ where: { id: v.userId }, data: { aiCredits: { increment: v.creditsHeld } } });
       await tx.video.delete({ where: { id: v.id } });
     });
   }
@@ -482,7 +489,14 @@ videosRouter.post('/me/video-collections', async (req, res) => {
 videosRouter.put('/me/videos/:id/progress', async (req, res) => {
   const userId = me(req).id;
   const videoId = AnyVideoId.parse(req.params.id);
-  const { seconds } = z.object({ seconds: z.number().min(0).max(24 * 3600) }).parse(req.body);
+  const { seconds } = z
+    .object({
+      seconds: z
+        .number()
+        .min(0)
+        .max(24 * 3600),
+    })
+    .parse(req.body);
   const prev = await prisma.videoUserState.findUnique({ where: { userId_videoId: { userId, videoId } } });
   await upsertState(userId, videoId, { progress: seconds, viewed: true });
   if (!prev?.viewed)
@@ -527,7 +541,10 @@ videosRouter.get('/videos/files/:token', async (req, res) => {
       res.status(416).set('Content-Range', `bytes */${data.length}`).end();
       return;
     }
-    res.status(206).set('Content-Range', `bytes ${start}-${end}/${data.length}`).send(data.subarray(start, end + 1));
+    res
+      .status(206)
+      .set('Content-Range', `bytes ${start}-${end}/${data.length}`)
+      .send(data.subarray(start, end + 1));
     return;
   }
   res.send(data);

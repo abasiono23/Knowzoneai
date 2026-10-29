@@ -245,6 +245,13 @@ Still to do:
   misspelt), and narration per scene (`OPENAI_MODEL_TTS`, default `gpt-4o-mini-tts`; Ada, Tunde, Grace, Sam
   and Kemi are OpenAI voices with accent instructions). From a topic, a study pack, a lesson or pasted notes.
   Pictures and MP3s are stored in the database (`VideoFile`) and deleted with the video.
+- **Real photos mixed with AI pictures:**
+  - Where a scene shows something real (a cell under a microscope, a volcano, a market), a freely licensed
+    photo from Wikimedia Commons is used. A quick AI look picks one that really shows the scene, or none.
+  - The rest get AI pictures.
+  - Photos show their author and licence under them, as their licences require.
+  - Photos are free; the checks cost a fraction of a cent per video.
+  - `npm run videos:originals -- --photos` adds photos to finished Originals without remaking them.
 - **Credits:** 30 s and 1 min = 1, 3 min = 2, 5 min = 3; held while it's made, returned if it fails.
   Regenerating (106) costs 1: a new voice re-records only the narration; a new length or language rewrites.
   Instant edits (style, captions, script text) are free, and edited lines are re-recorded.
@@ -744,6 +751,12 @@ The dashboard's Study Rooms tile opens a list of rooms where friends study toget
 - **Scheduled sessions:** the host picks a day this week, a time and 25 or 50 minutes. Members get a notification
   at once and a reminder 10 minutes before (a job runs every minute). The session starts by itself when the
   time comes. If nobody opens the room within 30 minutes, it lapses.
+- **Shared whiteboard** (🖌 in the room):
+  - Everyone draws with a finger, with 6 colours, an eraser and 3 pen sizes. Others see each stroke within
+    a second or two.
+  - Drawings land in the same place on every screen size (board units, 1000 × 1333).
+  - Undo takes back your own last stroke. Clear wipes your own drawing, or the whole board for the host.
+  - Up to 1,500 strokes per board.
 - **Room streak and history:**
   - The streak counts days in a row on which the room finished a focus session.
   - The 🔥 chip opens the history: the streak and best streak, total time studied together, minutes per day for
@@ -754,8 +767,9 @@ The dashboard's Study Rooms tile opens a list of rooms where friends study toget
   - `GET/POST /me/study-rooms`, `POST /me/study-rooms/join`, `POST /me/study-rooms/invites/:id/decline`
   - `GET/PATCH/DELETE /me/study-rooms/:id`, `GET /me/study-rooms/:id/history`
   - `POST /me/study-rooms/:id/{invite,messages,timer,goal,kora,quiz,quiz/answer,schedule,leave}`
+  - `GET/POST /me/study-rooms/:id/board`, `POST /me/study-rooms/:id/board/{undo,clear}`
   - `POST /me/study-rooms/:id/messages/:mid/report`, `DELETE /me/study-rooms/:id/members/:userId`
-- **Migrations:** `20261029120000_study_rooms`, `20261029180000_study_room_extras`.
+- **Migrations:** `20261029120000_study_rooms`, `20261029180000_study_room_extras`, `20261030120000_study_room_whiteboard`.
 
 ### Business District: Business, Finance & Economics (Knowzone World)
 

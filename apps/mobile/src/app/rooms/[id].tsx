@@ -242,6 +242,13 @@ export default function RoomScreen() {
           </Pressable>
         </View>
         <Pressable
+          onPress={() => router.push(`/rooms/board/${room.id}` as Href)}
+          accessibilityRole="button"
+          accessibilityLabel={t('board.open')}
+          style={styles.round}>
+          <Ionicons name="brush" size={20} color={Colors.primary} />
+        </Pressable>
+        <Pressable
           onPress={() => setSheet('invite')}
           accessibilityRole="button"
           accessibilityLabel={t('invite')}

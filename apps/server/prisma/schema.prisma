@@ -122,6 +122,7 @@ model User {
   studyRooms        StudyRoomMember[]
   roomMessages      StudyRoomMessage[]
   roomQuizAnswers   StudyRoomQuizAnswer[]
+  roomStrokes       StudyRoomStroke[]
   courseNotes       CourseNote[]
   courseRatings     CourseRating[]
   certificates      Certificate[]
@@ -1163,6 +1164,9 @@ model StudyRoom {
   invites       StudyRoomInvite[]
   history       StudyRoomSession[]
   quizzes       StudyRoomQuiz[]
+  strokes       StudyRoomStroke[]
+  /// Goes up when strokes are removed (undo, clear), so phones reload the whole board.
+  boardVersion  Int                @default(0)
 
   @@index([nextSessionAt])
 
@@ -1261,4 +1265,21 @@ model StudyRoomQuizAnswer {
   createdAt DateTime      @default(now())
 
   @@id([quizId, userId, index])
+}
+
+/// A pen stroke on the room's shared whiteboard. Points are board units (1000 wide, 1333 tall) so
+/// every screen draws it in the same place.
+model StudyRoomStroke {
+  id        String    @id @default(cuid())
+  roomId    String
+  room      StudyRoom @relation(fields: [roomId], references: [id], onDelete: Cascade)
+  userId    String
+  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  color     String
+  width     Int
+  /// [x0, y0, x1, y1, …]
+  points    Json
+  createdAt DateTime  @default(now())
+
+  @@index([roomId, createdAt])
 }

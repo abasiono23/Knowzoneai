@@ -108,6 +108,13 @@ export type RoomHistory = {
   sessions: { endedAt: number; minutes: number; people: number }[];
 };
 
+/** A whiteboard stroke. Points are board units: 1000 wide, 1333 tall, as [x0, y0, x1, y1, …]. */
+export type Stroke = { id: string; color: string; width: number; points: number[]; mine: boolean };
+export type BoardUpdate = { version: number; full: boolean; strokes: Stroke[]; last: number };
+export const BOARD = { width: 1000, height: 1333 };
+/** Pen colours; white is the eraser. */
+export const BOARD_COLORS = ['#1B1F3B', '#7C5CFF', '#E5484D', '#2F80ED', '#22A06B', '#F59E0B', '#FFFFFF'];
+
 /** Where the quiz is at a moment: the countdown before it, a question open, its answer showing, or done. */
 export function quizStage(q: RoomQuiz, now: number) {
   const t = now - q.startedAt - q.leadMs;
@@ -150,6 +157,12 @@ export const roomsApi = {
   schedule: (id: string, at: number | null, minutes?: 25 | 50) =>
     post<RoomState>(`${base}/${id}/schedule`, { at, ...(minutes && { minutes }) }),
   history: (id: string) => request<RoomHistory>(`${base}/${id}/history`),
+  board: (id: string, since?: number, version?: number) =>
+    request<BoardUpdate>(`${base}/${id}/board${since ? `?since=${since}&version=${version ?? 0}` : ''}`),
+  draw: (id: string, stroke: Pick<Stroke, 'color' | 'width' | 'points'>) =>
+    post<{ stroke: Stroke }>(`${base}/${id}/board`, stroke),
+  undo: (id: string) => post<{ ok: true }>(`${base}/${id}/board/undo`),
+  clearBoard: (id: string) => post<{ ok: true; all: boolean }>(`${base}/${id}/board/clear`),
   leave: (id: string) => post<{ ok: true }>(`${base}/${id}/leave`),
   remove: (id: string, userId: string) => request<RoomState>(`${base}/${id}/members/${userId}`, { method: 'DELETE' }),
   close: (id: string) => request<{ ok: true }>(`${base}/${id}`, { method: 'DELETE' }),

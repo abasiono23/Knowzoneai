@@ -44,6 +44,8 @@ export type Scene = {
   image?: string;
   /** What the illustration shows (English, kept so translations can reuse the drawing). */
   illustration?: string;
+  /** When the picture is a real photo (Wikimedia Commons): who took it and its licence, shown with it. */
+  credit?: { author: string; license: string; url: string };
 };
 
 /** Words per second of narration, for scenes without a recording (no narration chosen). */
@@ -57,9 +59,7 @@ const SceneSchema = z.object({
   body: z.string().nullable().describe('Short on-screen text (max 25 words), or null for list and check scenes'),
   bullets: z.array(z.string()).describe('2-4 short bullets for list scenes; empty otherwise'),
   emoji: z.string().describe('One emoji for the scene'),
-  caption: z
-    .string()
-    .describe('What the narrator says in this scene, in natural spoken sentences. In check scenes, the narrator asks the question aloud.'),
+  caption: z.string().describe('What the narrator says in this scene, in natural spoken sentences. In check scenes, the narrator asks the question aloud.'),
   check: z
     .object({
       question: z.string(),
@@ -88,8 +88,7 @@ const scriptSchema = (subjects: [string, ...string[]], count: number) =>
   });
 type Script = z.infer<ReturnType<typeof scriptSchema>>;
 
-const subjectNames = async () =>
-  ['General', ...(await catalogFor('en')).subjects.map((s) => s.name)] as [string, ...string[]];
+const subjectNames = async () => ['General', ...(await catalogFor('en')).subjects.map((s) => s.name)] as [string, ...string[]];
 
 const languageRule = (language: LanguageId) =>
   language === 'en'
@@ -109,10 +108,7 @@ function toScenes(script: Script): Scene[] {
     emoji: s.emoji,
     caption: s.caption,
     seconds: secondsFor(s.caption),
-    ...(s.kind === 'check' &&
-      s.check &&
-      s.check.correctIndex >= 0 &&
-      s.check.correctIndex < s.check.options.length && { check: s.check }),
+    ...(s.kind === 'check' && s.check && s.check.correctIndex >= 0 && s.check.correctIndex < s.check.options.length && { check: s.check }),
     ...(s.illustration && { illustration: s.illustration }),
   }));
 }
@@ -121,11 +117,7 @@ function toScenes(script: Script): Scene[] {
  * The video script from a source (a study pack's or lesson's text, pasted text) or a topic:
  * scenes with on-screen text, narration, a quick check and what each picture should show.
  */
-export async function writeScript(
-  userId: string,
-  src: { text?: string; topic?: string; title?: string },
-  settings: VideoSettings,
-) {
+export async function writeScript(userId: string, src: { text?: string; topic?: string; title?: string }, settings: VideoSettings) {
   const model = config.OPENAI_MODEL_GENERATE;
   const { scenes: count, seconds } = LENGTHS[settings.length];
   // Narration sets the video's length, so each scene gets a word budget.
@@ -143,9 +135,7 @@ export async function writeScript(
       'Write formulas on screen in plain text with Unicode (x², H₂O), not LaTeX.',
       languageRule(settings.language),
     ].join('\n'),
-    input: src.text
-      ? `${src.title ? `Title: ${src.title}\n` : ''}<material>\n${src.text.slice(0, 30_000)}\n</material>`
-      : `Topic: ${src.topic}`,
+    input: src.text ? `${src.title ? `Title: ${src.title}\n` : ''}<material>\n${src.text.slice(0, 30_000)}\n</material>` : `Topic: ${src.topic}`,
     text: { format: zodTextFormat(scriptSchema(await subjectNames(), count), 'video_script') },
     reasoning: { effort: 'low' },
   });
@@ -170,11 +160,7 @@ const TranslatedScenes = z.object({
 });
 
 /** The same video in another language: text and narration translated, pictures kept. */
-export async function translateScript(
-  userId: string,
-  video: { title: string; description: string; scenes: Scene[] },
-  language: LanguageId,
-) {
+export async function translateScript(userId: string, video: { title: string; description: string; scenes: Scene[] }, language: LanguageId) {
   const model = config.OPENAI_MODEL_GENERATE;
   const response = await openaiClient().responses.parse({
     model,

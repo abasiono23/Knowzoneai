@@ -283,6 +283,46 @@ describe('Study Rooms: quiz battles, Kora, scheduled sessions and streaks', () =
     expect((await ada.as.post(`/me/study-rooms/${room.id}/schedule`, { at: null }).expect(200)).body.room.next).toBeNull();
   });
 
+  it('shares a whiteboard: strokes sync to everyone, undo and clear', async () => {
+    const { ada, tobi, room } = await room2();
+    const stranger = await person('s@example.com', 'Sam Lee');
+    const draw = (as: As, color = '#7C5CFF') => as.post(`/me/study-rooms/${room.id}/board`, { color, width: 8, points: [100, 100, 200, 220, 300, 260] });
+    const board = async (as: As, since?: number, version?: number) =>
+      (
+        await as
+          .get(`/me/study-rooms/${room.id}/board`)
+          .query({ ...(since && { since }), ...(version !== undefined && { version }) })
+          .expect(200)
+      ).body;
+
+    await stranger.as.get(`/me/study-rooms/${room.id}/board`).expect(404);
+    expect((await draw(ada.as).expect(201)).body.stroke).toMatchObject({ color: '#7C5CFF', mine: true });
+    await draw(ada.as, '#nope').expect(400);
+    await ada.as.post(`/me/study-rooms/${room.id}/board`, { color: '#1B1F3B', width: 8, points: [1, 2, 3] }).expect(400);
+
+    // Tobi gets everything, then only what's new.
+    const first = await board(tobi.as);
+    expect(first).toMatchObject({ version: 0, full: true, strokes: [{ mine: false, points: [100, 100, 200, 220, 300, 260] }] });
+    await new Promise((r) => setTimeout(r, 5));
+    await draw(tobi.as, '#E5484D').expect(201);
+    const next = await board(ada.as, first.last, first.version);
+    expect(next).toMatchObject({ full: false, strokes: [{ color: '#E5484D', mine: false }] });
+
+    // Undo takes back your own last stroke; everyone reloads the board.
+    await tobi.as.post(`/me/study-rooms/${room.id}/board/undo`).expect(200);
+    const after = await board(ada.as, next.last, next.version);
+    expect(after).toMatchObject({ version: 1, full: true });
+    expect(after.strokes).toHaveLength(1);
+
+    // Not the host: clears only your own. The host clears everything (and the room hears about it).
+    await draw(tobi.as).expect(201);
+    expect((await tobi.as.post(`/me/study-rooms/${room.id}/board/clear`).expect(200)).body.all).toBe(false);
+    expect((await board(ada.as)).strokes).toHaveLength(1);
+    expect((await ada.as.post(`/me/study-rooms/${room.id}/board/clear`).expect(200)).body.all).toBe(true);
+    expect((await board(tobi.as)).strokes).toEqual([]);
+    expect((await state(tobi.as, room.id)).messages.map((m: { text: string }) => m.text)).toContain('boardCleared');
+  });
+
   it('keeps a room streak and history from finished focus sessions', async () => {
     const { ada, tobi, room } = await room2();
     // Studied together yesterday too.

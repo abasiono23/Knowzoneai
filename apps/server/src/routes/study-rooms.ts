@@ -410,6 +410,78 @@ studyRoomsRouter.get('/me/study-rooms/:id/history', async (req, res) => {
   });
 });
 
+// ─── Shared whiteboard ────────────────────────────────────────────────────────
+
+/** Pen colours (white is the eraser on the white board). */
+export const BOARD_COLORS = ['#1B1F3B', '#7C5CFF', '#E5484D', '#2F80ED', '#22A06B', '#F59E0B', '#FFFFFF'] as const;
+const MAX_STROKES = 1500;
+
+/**
+ * The board: every stroke the first time (or after an undo or clear changed it), then only strokes
+ * newer than `since`. Phones with the board open check in every second or two.
+ */
+studyRoomsRouter.get('/me/study-rooms/:id/board', async (req, res) => {
+  const user = me(req);
+  const m = await member(String(req.params.id), user);
+  const since = Number(req.query.since) || 0;
+  const full = !since || Number(req.query.version) !== m.room.boardVersion;
+  const strokes = await prisma.studyRoomStroke.findMany({
+    where: { roomId: m.roomId, ...(!full && { createdAt: { gt: new Date(since) } }) },
+    orderBy: { createdAt: 'asc' },
+    take: MAX_STROKES,
+  });
+  res.json({
+    version: m.room.boardVersion,
+    full,
+    strokes: strokes.map((s) => ({ id: s.id, color: s.color, width: s.width, points: s.points, mine: s.userId === user.id })),
+    last: strokes.at(-1)?.createdAt.getTime() ?? since,
+  });
+});
+
+studyRoomsRouter.post('/me/study-rooms/:id/board', async (req, res) => {
+  const user = me(req);
+  const m = await member(String(req.params.id), user);
+  const body = z
+    .object({
+      color: z.enum(BOARD_COLORS),
+      width: z.number().int().min(2).max(60),
+      // Board units: 1000 wide, 1333 tall (a little past the edge is fine).
+      points: z
+        .array(z.number().int().min(-50).max(1400))
+        .min(2)
+        .max(1200)
+        .refine((p) => p.length % 2 === 0, 'Points come in x, y pairs'),
+    })
+    .parse(req.body);
+  if ((await prisma.studyRoomStroke.count({ where: { roomId: m.roomId } })) >= MAX_STROKES)
+    throw new AppError(409, 'The board is full. Ask the host to clear it.', 'board-full');
+  const s = await prisma.studyRoomStroke.create({ data: { roomId: m.roomId, userId: user.id, ...body } });
+  res.status(201).json({ stroke: { id: s.id, color: s.color, width: s.width, points: s.points, mine: true } });
+});
+
+/** Undo your own last stroke. */
+studyRoomsRouter.post('/me/study-rooms/:id/board/undo', async (req, res) => {
+  const user = me(req);
+  const m = await member(String(req.params.id), user);
+  const last = await prisma.studyRoomStroke.findFirst({ where: { roomId: m.roomId, userId: user.id }, orderBy: { createdAt: 'desc' } });
+  if (last) {
+    await prisma.studyRoomStroke.delete({ where: { id: last.id } });
+    await prisma.studyRoom.update({ where: { id: m.roomId }, data: { boardVersion: { increment: 1 } } });
+  }
+  res.json({ ok: true });
+});
+
+/** The host wipes the board; anyone else wipes their own drawing. */
+studyRoomsRouter.post('/me/study-rooms/:id/board/clear', async (req, res) => {
+  const user = me(req);
+  const m = await member(String(req.params.id), user);
+  const isHost = m.room.hostId === user.id;
+  await prisma.studyRoomStroke.deleteMany({ where: { roomId: m.roomId, ...(!isHost && { userId: user.id }) } });
+  await prisma.studyRoom.update({ where: { id: m.roomId }, data: { boardVersion: { increment: 1 } } });
+  if (isHost) await systemMessage(m.roomId, 'boardCleared', firstName(user));
+  res.json({ ok: true, all: isHost });
+});
+
 studyRoomsRouter.post('/me/study-rooms/:id/leave', async (req, res) => {
   const user = me(req);
   const m = await member(String(req.params.id), user);

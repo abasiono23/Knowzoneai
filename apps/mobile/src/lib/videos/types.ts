@@ -12,9 +12,11 @@ export type Scene = {
   seconds: number;
   /** For "check" scenes: a quick comprehension question. */
   check?: { question: string; options: string[]; correctIndex: number };
-  /** Server-made videos: the recorded narration and an AI illustration for the scene. */
+  /** Server-made videos: the recorded narration and a picture for the scene (AI-made or a real photo). */
   audio?: string;
   image?: string;
+  /** A real photo's author and licence (Wikimedia Commons), shown under it. */
+  credit?: { author: string; license: string; url: string };
 };
 
 export type LengthId = '30s' | '1m' | '3m' | '5m';
@@ -62,12 +64,7 @@ export type GeneratedVideo = Video & {
 };
 
 export type GenerationErrorCode =
-  | 'render-timeout'
-  | 'lesson-missing'
-  | 'material-missing'
-  | 'not-configured'
-  | 'no-credits'
-  | 'upload-failed';
+  'render-timeout' | 'lesson-missing' | 'material-missing' | 'not-configured' | 'no-credits' | 'upload-failed';
 
 export const durationOf = (scenes: Scene[]) => scenes.reduce((n, s) => n + s.seconds, 0);
 

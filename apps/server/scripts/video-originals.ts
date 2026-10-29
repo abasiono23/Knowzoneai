@@ -7,19 +7,25 @@
  *   npm run videos:originals -- --langs=en,fr      # some languages
  *   npm run videos:originals -- --lessons=l1,l4    # some lessons
  *   npm run videos:originals -- --force            # remake even finished ones
+ *   npm run videos:originals -- --photos           # add real photos to finished videos (keeps everything else)
  */
 import 'dotenv/config';
 
 import { prisma } from '../src/db.js';
-import { drawScenes, recordScenes } from '../src/routes/videos.js';
+import { addPhotos, drawScenes, recordScenes } from '../src/routes/videos.js';
 import { catalogFor } from '../src/services/catalog.js';
 import { LANGUAGES, type LanguageId } from '../src/services/personalization.js';
 import { translateScript, writeScript, type Scene, type VideoSettings } from '../src/services/video-ai.js';
 
-const arg = (name: string) => process.argv.find((a) => a.startsWith(`--${name}=`))?.split('=')[1]?.split(',');
+const arg = (name: string) =>
+  process.argv
+    .find((a) => a.startsWith(`--${name}=`))
+    ?.split('=')[1]
+    ?.split(',');
 const force = process.argv.includes('--force');
 const langs = (arg('langs') ?? Object.keys(LANGUAGES)) as LanguageId[];
 const only = arg('lessons');
+const photosOnly = process.argv.includes('--photos');
 
 /** AI usage is logged against this account (it can't sign in; it only owns the cost records). */
 const SYSTEM = { id: 'knowzone-system', email: 'system@knowzone.ai', name: 'Knowzone', referralCode: 'KZSYSTEM' };
@@ -33,6 +39,7 @@ async function main() {
   await prisma.user.upsert({ where: { id: SYSTEM.id }, create: SYSTEM, update: {} });
   const lessons = (await catalogFor('en')).lessons.filter((l) => l.format === 'video' && (!only || only.includes(l.id)));
   console.log(`${lessons.length} lessons × ${langs.length} languages`);
+  if (photosOnly) return addRealPhotos(lessons.map((l) => l.id));
 
   for (const [i, lesson] of lessons.entries()) {
     const base: Omit<VideoSettings, 'language' | 'voiceId'> = {
@@ -46,32 +53,34 @@ async function main() {
     let en = await prisma.video.findUnique({ where: { id: idFor(lesson.id, 'en') } }).catch(() => null);
     if (!en || en.status !== 'ready' || force) {
       try {
-      const t0 = Date.now();
-      const settings: VideoSettings = { ...base, language: 'en', voiceId: voiceFor('en', i) };
-      const row = {
-        origin: 'catalog',
-        lessonId: lesson.id,
-        language: 'en',
-        title: lesson.title,
-        settings,
-        source: { kind: 'lesson', lessonId: lesson.id, label: lesson.title },
-        status: 'generating',
-        views: lesson.views,
-        baseLikes: Math.round(lesson.views * 0.08),
-      };
-      en = await prisma.video.upsert({ where: { id: idFor(lesson.id, 'en') }, create: { id: idFor(lesson.id, 'en'), ...row }, update: row });
-      const script = await writeScript(
-        SYSTEM.id,
-        { title: lesson.title, text: `${lesson.title}\n${lesson.summary}\n${lesson.keyPoints.map((k) => `- ${k}`).join('\n')}` },
-        settings,
-      );
-      let scenes = await drawScenes(en.id, SYSTEM.id, script.scenes, settings);
-      scenes = await recordScenes(en.id, SYSTEM.id, scenes, settings);
-      en = await prisma.video.update({
-        where: { id: en.id },
-        data: { scenes, subject: script.subject, level: lesson.level, description: script.description, status: 'ready', stage: 4 },
-      });
-      console.log(`✓ ${lesson.id} en  "${lesson.title}" ${scenes.length} scenes, ${scenes.filter((s) => s.image).length} pictures (${((Date.now() - t0) / 1000).toFixed(0)}s)`);
+        const t0 = Date.now();
+        const settings: VideoSettings = { ...base, language: 'en', voiceId: voiceFor('en', i) };
+        const row = {
+          origin: 'catalog',
+          lessonId: lesson.id,
+          language: 'en',
+          title: lesson.title,
+          settings,
+          source: { kind: 'lesson', lessonId: lesson.id, label: lesson.title },
+          status: 'generating',
+          views: lesson.views,
+          baseLikes: Math.round(lesson.views * 0.08),
+        };
+        en = await prisma.video.upsert({ where: { id: idFor(lesson.id, 'en') }, create: { id: idFor(lesson.id, 'en'), ...row }, update: row });
+        const script = await writeScript(
+          SYSTEM.id,
+          { title: lesson.title, text: `${lesson.title}\n${lesson.summary}\n${lesson.keyPoints.map((k) => `- ${k}`).join('\n')}` },
+          settings,
+        );
+        let scenes = await drawScenes(en.id, SYSTEM.id, script.scenes, settings);
+        scenes = await recordScenes(en.id, SYSTEM.id, scenes, settings);
+        en = await prisma.video.update({
+          where: { id: en.id },
+          data: { scenes, subject: script.subject, level: lesson.level, description: script.description, status: 'ready', stage: 4 },
+        });
+        console.log(
+          `✓ ${lesson.id} en  "${lesson.title}" ${scenes.length} scenes, ${scenes.filter((s) => s.image).length} pictures (${((Date.now() - t0) / 1000).toFixed(0)}s)`,
+        );
       } catch (e) {
         console.error(`✗ ${lesson.id} en (skipping this lesson):`, (e as Error).message);
         continue;
@@ -110,6 +119,39 @@ async function main() {
         await prisma.video.updateMany({ where: { id }, data: { status: 'failed' } }).catch(() => {});
       }
     }
+  }
+}
+
+/**
+ * Real photos for finished Originals: scenes where a good photo exists get it (credited); the AI
+ * pictures it replaces are deleted. Every language of a lesson shares the English pictures.
+ */
+async function addRealPhotos(lessonIds: string[]) {
+  for (const lessonId of lessonIds) {
+    const en = await prisma.video.findUnique({ where: { id: idFor(lessonId, 'en') } });
+    if (en?.status !== 'ready') continue;
+    const scenes = en.scenes as Scene[];
+    if (scenes.some((s) => s.credit) && !force) continue;
+    const updated = await addPhotos(en.id, SYSTEM.id, scenes);
+    const replaced = scenes.filter((s, i) => s.image && updated[i]!.image !== s.image).map((s) => s.image!.split('/').pop()!);
+    const changed = updated.filter((s, i) => s.image !== scenes[i]!.image).length;
+    if (!changed) {
+      console.log(`· ${lessonId}: no photo fits, keeping the AI pictures`);
+      continue;
+    }
+    await prisma.video.update({ where: { id: en.id }, data: { scenes: updated } });
+    // The same scenes, in the same order, in every other language.
+    const others = await prisma.video.findMany({ where: { origin: 'catalog', lessonId, language: { not: 'en' } } });
+    for (const o of others) {
+      const theirs = o.scenes as Scene[];
+      if (theirs.length !== updated.length) continue;
+      await prisma.video.update({
+        where: { id: o.id },
+        data: { scenes: theirs.map((s, i) => ({ ...s, image: updated[i]!.image, ...(updated[i]!.credit ? { credit: updated[i]!.credit } : {}) })) },
+      });
+    }
+    if (replaced.length) await prisma.videoFile.deleteMany({ where: { token: { in: replaced } } });
+    console.log(`✓ ${lessonId}: ${changed} real photo(s), ${others.length} other languages updated`);
   }
 }
 

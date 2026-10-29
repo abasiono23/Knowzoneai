@@ -111,8 +111,8 @@ export function SceneView({ scene, style: s, answer, onAnswer, compact, scale, i
         ]}
         key={scene.id}>
         {scene.image ? (
-          // The scene's AI illustration (it has no text, so it suits every language).
-          <Animated.View entering={ZoomIn.duration(400)}>
+          // The scene's picture: an AI illustration or a real photo (no text, so it suits every language).
+          <Animated.View entering={ZoomIn.duration(400)} style={{ alignItems: 'center', gap: 4 }}>
             <Image
               source={{ uri: scene.image }}
               style={{ width: 168 * size, height: 168 * size, borderRadius: Radius.lg * size }}
@@ -120,6 +120,15 @@ export function SceneView({ scene, style: s, answer, onAnswer, compact, scale, i
               transition={200}
               accessible={false}
             />
+            {scene.credit && (
+              // Real photos are freely licensed on condition that their author and licence are shown.
+              <Text
+                numberOfLines={1}
+                style={{ maxWidth: 220 * size, fontSize: 9 * Math.max(size, 0.9), opacity: 0.75 }}
+                color={s.text}>
+                📷 {scene.credit.author} · {scene.credit.license} · Wikimedia Commons
+              </Text>
+            )}
           </Animated.View>
         ) : (
           <Animated.Text

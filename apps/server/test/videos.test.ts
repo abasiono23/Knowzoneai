@@ -5,7 +5,23 @@ import type { Scene, VideoSettings } from '../src/services/video-ai.js';
 import { http, signIn } from './helpers.js';
 
 // OpenAI is replaced with fakes: scripts, pictures and narration are instant; everything else is real.
-const ai = vi.hoisted(() => ({ fail: 0, scripts: [] as { text?: string; topic?: string; settings: VideoSettings }[], narrated: [] as string[], drawn: 0 }));
+const ai = vi.hoisted(() => ({
+  fail: 0,
+  scripts: [] as { text?: string; topic?: string; settings: VideoSettings }[],
+  narrated: [] as string[],
+  drawn: 0,
+  // Real photos: off unless a test turns them on (then the first illustrated scene gets one).
+  photos: false,
+}));
+
+vi.mock('../src/services/real-photos.js', () => ({
+  photoQueries: vi.fn(async (_u: string, descriptions: string[]) => descriptions.map((_, i) => (ai.photos && i === 0 ? 'green leaf' : null))),
+  findPhoto: vi.fn(async () => ({
+    data: Buffer.from([0x89, 0x50, 0x4e, 0x47]),
+    mimeType: 'image/png',
+    credit: { author: 'Jane Doe', license: 'CC BY-SA 4.0', url: 'https://commons.wikimedia.org/wiki/File:Leaf.png' },
+  })),
+}));
 
 vi.mock('../src/services/video-ai.js', async (importOriginal) => {
   const real = await importOriginal<typeof import('../src/services/video-ai.js')>();
@@ -46,6 +62,7 @@ const reset = () => {
   ai.scripts.length = 0;
   ai.narrated.length = 0;
   ai.drawn = 0;
+  ai.photos = false;
 };
 
 const SETTINGS: VideoSettings = { length: '1m', voiceId: 'ada', styleId: 'galaxy', captions: true, captionStyle: 'karaoke', language: 'en' };
@@ -66,7 +83,11 @@ describe('generating a video', () => {
     const { as, sub } = await signIn();
     const before = await credits(sub);
     const res = await as
-      .post('/videos/mine/vid00001', { title: 'Photosynthesis in 1 minute', source: { kind: 'topic', topic: 'Photosynthesis' }, settings: { ...SETTINGS, language: 'yo' } })
+      .post('/videos/mine/vid00001', {
+        title: 'Photosynthesis in 1 minute',
+        source: { kind: 'topic', topic: 'Photosynthesis' },
+        settings: { ...SETTINGS, language: 'yo' },
+      })
       .expect(202);
     expect(res.body.video).toMatchObject({ id: 'vid00001', status: 'generating', origin: 'generated', creator: 'You' });
     expect(await credits(sub)).toBe(before - 1);
@@ -88,11 +109,27 @@ describe('generating a video', () => {
     expect(await prisma.creditEntry.count({ where: { userId: sub, reason: 'spend' } })).toBe(1);
   });
 
+  it('mixes real photos (credited) with AI pictures', async () => {
+    reset();
+    ai.photos = true;
+    const { as } = await signIn();
+    await as.post('/videos/mine/photo001', { title: 'Leaves', source: { kind: 'topic', topic: 'Leaves' }, settings: SETTINGS }).expect(202);
+    const v = await settled(as, 'photo001');
+    // A photo for the first scene, and still up to 4 AI pictures for the others.
+    expect(v.scenes[0]).toMatchObject({ credit: { author: 'Jane Doe', license: 'CC BY-SA 4.0' } });
+    expect(ai.drawn).toBe(4);
+    expect(v.scenes.filter((s: Scene) => s.image)).toHaveLength(5);
+    expect(v.scenes.filter((s: Scene) => s.credit)).toHaveLength(1);
+    expect((await http().get(v.scenes[0].image).expect(200)).headers['content-type']).toBe('image/png');
+  });
+
   it('makes silent videos without narration, and charges longer videos more', async () => {
     reset();
     const { as, sub } = await signIn();
     const before = await credits(sub);
-    await as.post('/videos/mine/silent01', { title: 'Quiet', source: { kind: 'topic', topic: 'Gravity' }, settings: { ...SETTINGS, voiceId: 'none', length: '3m' } }).expect(202);
+    await as
+      .post('/videos/mine/silent01', { title: 'Quiet', source: { kind: 'topic', topic: 'Gravity' }, settings: { ...SETTINGS, voiceId: 'none', length: '3m' } })
+      .expect(202);
     const v = await settled(as, 'silent01');
     expect(v.scenes).toHaveLength(14);
     expect(v.scenes.some((s: Scene) => s.audio)).toBe(false);
@@ -104,9 +141,20 @@ describe('generating a video', () => {
     reset();
     const { as, sub } = await signIn();
     await prisma.material.create({
-      data: { id: 'pack0001', userId: sub, title: 'Cells', sourceType: 'text', sourceLabel: 'Pasted text', sourceText: 'Cells are the unit of life.', options: {}, status: 'READY' },
+      data: {
+        id: 'pack0001',
+        userId: sub,
+        title: 'Cells',
+        sourceType: 'text',
+        sourceLabel: 'Pasted text',
+        sourceText: 'Cells are the unit of life.',
+        options: {},
+        status: 'READY',
+      },
     });
-    await as.post('/videos/mine/frompack', { title: 'Cells', source: { kind: 'material', materialId: 'pack0001', label: 'Cells' }, settings: SETTINGS }).expect(202);
+    await as
+      .post('/videos/mine/frompack', { title: 'Cells', source: { kind: 'material', materialId: 'pack0001', label: 'Cells' }, settings: SETTINGS })
+      .expect(202);
     expect((await settled(as, 'frompack')).status).toBe('ready');
     expect(ai.scripts[0].text).toBe('Cells are the unit of life.');
     await as.post('/videos/mine/lesson01', { title: 'Energy', source: { kind: 'lesson', lessonId: 'l1', label: 'Energy' }, settings: SETTINGS }).expect(202);
@@ -169,7 +217,11 @@ describe('generating a video', () => {
     const v = await settled(as, 'edit0001');
     const before = await credits(sub);
     ai.narrated.length = 0;
-    const scenes = v.scenes.map((s: Scene, i: number) => ({ id: s.id, heading: i === 0 ? 'New heading' : s.heading, caption: i === 1 ? 'A clearer line.' : s.caption }));
+    const scenes = v.scenes.map((s: Scene, i: number) => ({
+      id: s.id,
+      heading: i === 0 ? 'New heading' : s.heading,
+      caption: i === 1 ? 'A clearer line.' : s.caption,
+    }));
     const res = await as.patch('/videos/mine/edit0001', { title: 'Atoms, simply', scenes, settings: { styleId: 'chalk', captions: false } }).expect(200);
     expect(res.body.video).toMatchObject({ title: 'Atoms, simply', settings: { styleId: 'chalk', captions: false, voiceId: 'ada' } });
     expect(res.body.video.scenes[0].heading).toBe('New heading');
@@ -205,8 +257,16 @@ describe('watching videos', () => {
   async function original(lang = 'en', id = `o-l1-${lang}`) {
     await prisma.video.create({
       data: {
-        id, origin: 'catalog', lessonId: 'l1', language: lang, title: `Cells (${lang})`, settings: SETTINGS,
-        scenes: [{ id: 's1', kind: 'title', heading: 'Cells', emoji: '🧬', caption: 'Hi', seconds: 4 }], status: 'ready', views: 100, baseLikes: 8,
+        id,
+        origin: 'catalog',
+        lessonId: 'l1',
+        language: lang,
+        title: `Cells (${lang})`,
+        settings: SETTINGS,
+        scenes: [{ id: 's1', kind: 'title', heading: 'Cells', emoji: '🧬', caption: 'Hi', seconds: 4 }],
+        status: 'ready',
+        views: 100,
+        baseLikes: 8,
       },
     });
   }
