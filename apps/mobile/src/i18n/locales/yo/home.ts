@@ -266,6 +266,12 @@ const home: Translation<typeof en> = {
         detail: 'A ti fi ẹ̀kọ́ tuntun kún ọ̀kan lára àwọn ìmọ̀ tí o ń kọ́. Ìṣẹ́jú díẹ̀ péré ni yóò gbà.',
         cta: 'Ṣí ẹ̀kọ́',
       },
+      studyRoomInvite: {
+        title: '{{name}} pè ọ́ wá kẹ́kọ̀ọ́',
+        body: 'Wọ yàrá "{{room}}" kí ẹ jọ kẹ́kọ̀ọ́.',
+        detail: 'Yàrá Ìkẹ́kọ̀ọ́ jẹ́ kí àwọn ọ̀rẹ́ kẹ́kọ̀ọ́ papọ̀ pẹ̀lú aago ìfọkànsí kan, àfojúsùn yàrá àti ìjíròrò.',
+        cta: 'Ṣí yàrá',
+      },
       generic: {
         title: 'Knowzone',
         body: 'O ní ìròyìn tuntun.',

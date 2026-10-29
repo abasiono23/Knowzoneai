@@ -16,7 +16,8 @@ export type Template =
   | 'subscriptionExpired'
   | 'ticketReply'
   | 'friendRequest'
-  | 'friendAccepted';
+  | 'friendAccepted'
+  | 'studyRoomInvite';
 
 export async function notify(
   userId: string,

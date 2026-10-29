@@ -267,6 +267,12 @@ const home: Translation<typeof en> = {
         detail: 'An ƙara sabon darasi a wani fanni da kake karatu. Minti kaɗan kawai zai ɗauka.',
         cta: 'Buɗe darasi',
       },
+      studyRoomInvite: {
+        title: '{{name}} ya gayyace ka karatu',
+        body: 'Shiga ɗakin "{{room}}" ku yi karatu tare.',
+        detail: 'Ɗakunan Karatu suna bai wa abokai damar yin karatu tare da agogon mayar da hankali ɗaya, burin ɗaki da hira.',
+        cta: 'Buɗe ɗaki',
+      },
       generic: {
         title: 'Knowzone',
         body: 'Kana da sabon labari.',

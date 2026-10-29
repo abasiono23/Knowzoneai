@@ -20,14 +20,14 @@ import { reasonText, recommend } from '@/lib/recommend';
 import { useActivity } from '@/lib/rewards/activity';
 import { useSession } from '@/lib/session';
 
-/** The dashboard's quick actions (Study Rooms isn't built yet: it explains that instead of opening). */
+/** The dashboard's quick actions. */
 const QUICK: {
   id: 'rooms' | 'flashcards' | 'videos' | 'challenges' | 'tutor';
   icon: keyof typeof MaterialCommunityIcons.glyphMap;
   colors: readonly [string, string];
-  href?: string;
+  href: string;
 }[] = [
-  { id: 'rooms', icon: 'account-group', colors: ['#9B6BFF', '#6A45FF'] },
+  { id: 'rooms', icon: 'account-group', colors: ['#9B6BFF', '#6A45FF'], href: '/rooms' },
   { id: 'flashcards', icon: 'play-circle', colors: ['#FF6FB5', '#E0459A'], href: '/reels' },
   { id: 'videos', icon: 'video', colors: ['#3BA9FF', '#1F6FE5'], href: '/videos' },
   { id: 'challenges', icon: 'trophy', colors: ['#FFB547', '#FF8A1F'], href: '/world/daily' },
@@ -47,7 +47,6 @@ export default function HomeScreen() {
   const { t: tPlan } = useTranslation('personalize');
   const { t: tExams } = useTranslation('exams');
   const [now] = useState(() => Date.now());
-  const [soon, setSoon] = useState(false);
   const { current: streak } = useActivity(now);
   const lib = useLibrary();
   const { materials: packs } = useMaterials();
@@ -192,7 +191,7 @@ export default function HomeScreen() {
         {QUICK.map((q) => (
           <Pressable
             key={q.id}
-            onPress={() => (q.href ? router.push(q.href as Href) : setSoon((v) => !v))}
+            onPress={() => router.push(q.href as Href)}
             accessibilityRole="button"
             accessibilityLabel={`${t(`home.quickActions.${q.id}.title`)}. ${t(`home.quickActions.${q.id}.body`)}`}
             style={({ pressed }) => [styles.quickItem, pressed && { transform: [{ scale: 0.96 }] }]}>
@@ -213,14 +212,6 @@ export default function HomeScreen() {
           </Pressable>
         ))}
       </View>
-      {soon && (
-        <Card style={{ flexDirection: 'row', alignItems: 'center', gap: Spacing.sm }}>
-          <MaterialCommunityIcons name="account-group" size={22} color={Colors.primary} />
-          <Text variant="small" color={Colors.textSecondary} style={{ flex: 1 }}>
-            {t('home.quickActions.soon')}
-          </Text>
-        </Card>
-      )}
 
       {/* Past Questions: JAMB, WAEC and NECO */}
       <Pressable

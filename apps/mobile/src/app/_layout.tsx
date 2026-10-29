@@ -98,6 +98,7 @@ function RootNavigator() {
             <Stack.Screen name="courses" />
             <Stack.Screen name="exams" />
             <Stack.Screen name="reels" />
+            <Stack.Screen name="rooms" />
             <Stack.Screen name="referrals" />
           </Stack.Protected>
           <Stack.Protected guard={inApp}>

@@ -265,6 +265,12 @@ const home: Translation<typeof en> = {
         detail: 'Agbakwunyela ihe ọmụmụ ọhụrụ n’otu isiokwu ị na-amụ. Ọ na-ewe naanị nkeji ole na ole.',
         cta: 'Meghee ihe ọmụmụ',
       },
+      studyRoomInvite: {
+        title: '{{name}} kpọrọ gị ka unu gụkọọ',
+        body: 'Banye n’ọnụ ụlọ "{{room}}" ka unu gụkọọ akwụkwọ ọnụ.',
+        detail: 'Ọnụ Ụlọ Ọmụmụ na-enye ndị enyi ohere ịgụkọ akwụkwọ ọnụ na otu timer elekwasị anya, ebumnuche ọnụ ụlọ na nkata.',
+        cta: 'Meghee ọnụ ụlọ',
+      },
       generic: {
         title: 'Knowzone',
         body: 'Ị nwere mmelite ọhụrụ.',

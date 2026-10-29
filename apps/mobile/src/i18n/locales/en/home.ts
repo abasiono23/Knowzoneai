@@ -268,6 +268,12 @@ const home = {
         detail: 'A new lesson was added to a subject you study. It takes just a few minutes.',
         cta: 'Open lesson',
       },
+      studyRoomInvite: {
+        title: '{{name}} invited you to study',
+        body: 'Join the room "{{room}}" and study together.',
+        detail: 'Study Rooms let friends study together with a shared focus timer, a room goal and a chat.',
+        cta: 'Open room',
+      },
       generic: {
         title: 'Knowzone',
         body: 'You have a new update.',

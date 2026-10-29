@@ -12,6 +12,7 @@ import tech from './tech';
 import business from './business';
 import exams from './exams';
 import reels from './reels';
+import rooms from './rooms';
 import home from './home';
 import personalize from './personalize';
 import referrals from './referrals';
@@ -24,6 +25,6 @@ import videos from './videos';
 import world from './world';
 
 /** English is the source language: every key exists here, and other languages fall back to it. */
-const en = { common, auth, personalize, home, tutor, study, videos, courses, world, games, lab, space, history, quests, tech, business, exams, reels, rewards, referrals, settings, billing, help, teacher };
+const en = { common, auth, personalize, home, tutor, study, videos, courses, world, games, lab, space, history, quests, tech, business, exams, reels, rooms, rewards, referrals, settings, billing, help, teacher };
 
 export default en;

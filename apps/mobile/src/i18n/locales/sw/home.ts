@@ -267,6 +267,12 @@ const home: Translation<typeof en> = {
         detail: 'Somo jipya limeongezwa katika mojawapo ya masomo unayosoma. Linachukua dakika chache tu.',
         cta: 'Fungua somo',
       },
+      studyRoomInvite: {
+        title: '{{name}} amekualika kusoma',
+        body: 'Jiunge na chumba “{{room}}” msome pamoja.',
+        detail: 'Vyumba vya Kusoma huwawezesha marafiki kusoma pamoja kwa kipima muda kimoja cha umakini, lengo la chumba na gumzo.',
+        cta: 'Fungua chumba',
+      },
       generic: {
         title: 'Knowzone',
         body: 'Una taarifa mpya.',

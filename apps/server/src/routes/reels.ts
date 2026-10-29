@@ -7,8 +7,8 @@ import { z } from 'zod';
 import { prisma } from '../db.js';
 import { AppError, notFound } from '../lib/errors.js';
 import { settingsOf } from '../services/account.js';
-import { openaiClient } from '../services/ai.js';
 import { restrictionOf } from '../services/help.js';
+import { flagged } from '../services/moderation.js';
 import { requestLanguage } from '../services/language.js';
 import { allReels, cardText, feedOrder, reelById, reelsFolder } from '../services/reels.js';
 import { me, optionalAuth, requireAuth } from '../services/sessions.js';
@@ -124,8 +124,7 @@ reelsRouter.post('/me/reels/:id/comments', async (req, res) => {
   const recent = await prisma.reelComment.count({ where: { userId: user.id, createdAt: { gt: new Date(Date.now() - 3_600_000) } } });
   if (recent >= COMMENTS_PER_HOUR) throw new AppError(429, 'You’ve commented a lot this hour. Try again a little later.', 'rate');
   // Screened before anyone sees it (OpenAI's moderation endpoint, free to use).
-  const check = await openaiClient().moderations.create({ model: 'omni-moderation-latest', input: text });
-  if (check.results.some((r) => r.flagged)) throw new AppError(422, 'This comment can’t be posted. Please keep comments kind and on topic.', 'blocked');
+  if (await flagged(text)) throw new AppError(422, 'This comment can’t be posted. Please keep comments kind and on topic.', 'blocked');
   const c = await prisma.reelComment.create({ data: { reelId: reel.id, userId: user.id, text } });
   res.status(201).json({ comment: { id: c.id, text: c.text, createdAt: c.createdAt.getTime(), mine: true, ...author(user) } });
 });

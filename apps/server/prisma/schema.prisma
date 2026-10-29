@@ -119,6 +119,8 @@ model User {
   examAttempts      ExamAttempt[]
   reelLikes         ReelLike[]
   reelComments      ReelComment[]
+  studyRooms        StudyRoomMember[]
+  roomMessages      StudyRoomMessage[]
   courseNotes       CourseNote[]
   courseRatings     CourseRating[]
   certificates      Certificate[]
@@ -1123,3 +1125,81 @@ model ReelComment {
 
   @@index([reelId, createdAt])
 }
+
+/// Study Rooms: small rooms (up to 8) where friends study together with a shared focus timer, chat
+/// and a room goal. The timer lives here: the phase and when it ends; clients count down to it.
+model StudyRoom {
+  id            String             @id @default(cuid())
+  /// Short code friends can type or share (e.g. KZ-7F3Q).
+  code          String             @unique
+  name          String
+  subject       String?
+  /// private (invite or code only) | school (listed for people at the same school)
+  visibility    String             @default("private")
+  /// The host's school, for school rooms.
+  school        String?
+  hostId        String
+  goal          String?
+  /// idle | focus | break
+  phase         String             @default("idle")
+  phaseEndsAt   DateTime?
+  focusMinutes  Int                @default(25)
+  breakMinutes  Int                @default(5)
+  sessions      Int                @default(0)
+  createdAt     DateTime           @default(now())
+  members       StudyRoomMember[]
+  messages      StudyRoomMessage[]
+  invites       StudyRoomInvite[]
+
+  @@index([visibility, school])
+}
+
+model StudyRoomMember {
+  roomId      String
+  room        StudyRoom @relation(fields: [roomId], references: [id], onDelete: Cascade)
+  userId      String
+  user        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  joinedAt    DateTime  @default(now())
+  /// Last time the app checked in from the room (online = recently).
+  lastSeenAt  DateTime  @default(now())
+  goalDone    Boolean   @default(false)
+  /// Focus minutes this person has studied in this room.
+  focusMinutes Int      @default(0)
+
+  @@id([roomId, userId])
+  @@index([userId])
+}
+
+/// Chat: text, a shared item (study pack, reel, lesson, past paper) or a system line. Screened first.
+model StudyRoomMessage {
+  id        String    @id @default(cuid())
+  roomId    String
+  room      StudyRoom @relation(fields: [roomId], references: [id], onDelete: Cascade)
+  userId    String?
+  user      User?     @relation(fields: [userId], references: [id], onDelete: SetNull)
+  /// text | share | system
+  kind      String
+  text      String
+  /// share: { type, id, title }; system: { event, name }
+  data      Json?
+  reports   Int       @default(0)
+  hidden    Boolean   @default(false)
+  createdAt DateTime  @default(now())
+
+  @@index([roomId, createdAt])
+}
+
+model StudyRoomInvite {
+  id        String    @id @default(cuid())
+  roomId    String
+  room      StudyRoom @relation(fields: [roomId], references: [id], onDelete: Cascade)
+  fromId    String
+  toId      String
+  /// pending | accepted | declined
+  status    String    @default("pending")
+  createdAt DateTime  @default(now())
+
+  @@unique([roomId, toId])
+  @@index([toId, status])
+}
+

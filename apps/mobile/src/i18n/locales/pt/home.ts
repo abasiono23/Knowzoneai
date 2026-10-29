@@ -277,6 +277,12 @@ const home: Translation<typeof en> = {
         detail: 'Foi adicionada uma nova lição a uma disciplina que estudas. Demora só alguns minutos.',
         cta: 'Abrir lição',
       },
+      studyRoomInvite: {
+        title: '{{name}} convidou-te para estudar',
+        body: 'Entra na sala «{{room}}» e estudem juntos.',
+        detail: 'As Salas de Estudo permitem estudar com amigos com um temporizador de foco partilhado, um objetivo da sala e um chat.',
+        cta: 'Abrir sala',
+      },
       generic: {
         title: 'Knowzone',
         body: 'Tens uma nova atualização.',

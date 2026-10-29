@@ -693,6 +693,33 @@ The dashboard's Flashcards tile opens a feed like short videos: swipe up for the
   `POST /me/reels/:id/comments`, `DELETE /me/reels/comments/:id`, `POST /me/reels/comments/:id/report`.
 - **Migration:** `20261028120000_fact_reels`.
 
+### Study Rooms
+
+The dashboard's Study Rooms tile opens a list of rooms where friends study together. A room holds up to 8 people.
+
+- **Rooms:**
+  - Private rooms are invite-only. School rooms are also listed for everyone at the creator's school.
+  - Each room has a code (`KZ-7F3Q`) that people can type in or share as a link.
+  - You can be in up to 10 rooms.
+- **Inviting:** hosts invite friends from their friends list. The friend gets a notification and an invitation
+  card at the top of their rooms list, which they can accept or decline.
+- **In the room:**
+  - Who's here: online dots, with the host marked.
+  - A shared focus timer the host starts (25 or 50 minutes, then a break). Everyone in the room when a focus
+    session ends is credited the minutes as study time and XP.
+  - A room goal: the host sets it, and members tick it when they're done.
+  - Chat: screened by OpenAI's moderation endpoint, with a 2-second slow mode. Chat is quiet during focus time.
+    Members can share study packs and Flashcards, and a message is hidden after 2 reports. Messages from
+    people you blocked are hidden.
+- **Host controls:** start or stop the timer, set the goal, rename the room, remove members and close the room.
+  If the host leaves, the longest-standing member becomes host. An empty room is deleted.
+- **Live updates:** the room screen checks in every 3 seconds. The timer moves on when someone checks in, so no
+  background job is needed.
+- **Endpoints:** `GET/POST /me/study-rooms`, `POST /me/study-rooms/join`, `POST /me/study-rooms/invites/:id/decline`,
+  `GET/PATCH/DELETE /me/study-rooms/:id`, `POST /me/study-rooms/:id/{invite,messages,timer,goal,leave}`,
+  `POST /me/study-rooms/:id/messages/:mid/report`, `DELETE /me/study-rooms/:id/members/:userId`.
+- **Migration:** `20261029120000_study_rooms`.
+
 ### Business District: Business, Finance & Economics (Knowzone World)
 
 A sunny city square the entrepreneur (a young woman in an emerald Knowzone blazer; the logo is fed to the image

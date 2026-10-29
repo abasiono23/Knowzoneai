@@ -266,6 +266,12 @@ const home: Translation<typeof en> = {
         detail: 'We don add new lesson to one subject wey you dey study. E go take only small minutes.',
         cta: 'Open lesson',
       },
+      studyRoomInvite: {
+        title: '{{name}} invite you make una study',
+        body: 'Join the room "{{room}}" make una study together.',
+        detail: 'Study Rooms make padi dem study together with one focus timer, room goal and chat.',
+        cta: 'Open room',
+      },
       generic: {
         title: 'Knowzone',
         body: 'You get new update.',
