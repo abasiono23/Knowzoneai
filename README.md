@@ -693,6 +693,23 @@ The dashboard's Flashcards tile opens a feed like short videos: swipe up for the
   `POST /me/reels/:id/comments`, `DELETE /me/reels/comments/:id`, `POST /me/reels/comments/:id/report`.
 - **Migration:** `20261028120000_fact_reels`.
 
+### Videos feed (YouTube)
+
+The dashboard's Videos tile opens the courses' YouTube videos (one per chapter, 177 at the moment) as a feed like
+short videos.
+
+- **Watching:**
+  - Swipe up for the next video; the one you land on starts by itself in YouTube's own player. Videos are never
+    downloaded.
+  - More videos load as you scroll. Without a search, the order is shuffled for each learner each day.
+- **Search:** a plain search field (title, channel, course, chapter) and subject chips.
+- **On each video:** likes, comments (the same screened comments as Flashcards, ids `yt-<YouTube id>`), share,
+  and "Open the lesson" in its course.
+- The top bar keeps "My videos" and "Create" for AI-made videos.
+- **Data:** read from the course lessons, so the monthly YouTube recheck also removes videos that were deleted or
+  made private.
+- **Endpoints:** `GET /watch?q=&subject=&offset=` (8 per page); `/embed/youtube/:id?autoplay=1`.
+
 ### Study Rooms
 
 The dashboard's Study Rooms tile opens a list of rooms where friends study together. A room holds up to 8 people.

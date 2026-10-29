@@ -12,16 +12,25 @@ import { flagged } from '../services/moderation.js';
 import { requestLanguage } from '../services/language.js';
 import { allReels, cardText, feedOrder, reelById, reelsFolder } from '../services/reels.js';
 import { me, optionalAuth, requireAuth } from '../services/sessions.js';
+import { watchVideoById } from '../services/watch.js';
 import type { User } from '../generated/prisma/client.js';
 
 /**
  * "Did you know?" reels (the dashboard's Flashcards): a feed like short videos, where each reel is
  * one fun fact explained in 5 cards. Learners like reels and comment on them; comments are screened
- * by OpenAI moderation before they appear and hidden once several people report them.
+ * by OpenAI moderation before they appear and hidden once several people report them. The Videos
+ * feed (YouTube videos, ids `yt-…`) uses the same likes and comments.
  */
 export const reelsRouter = Router();
 
 const REPORTS_TO_HIDE = 3;
+
+/** A reel, or a video in the Videos feed: anything people can like and comment on. */
+async function feedItem(id: string) {
+  const item = reelById(id) ?? (id.startsWith('yt-') ? await watchVideoById(id) : undefined);
+  if (!item) throw notFound('Not found');
+  return item;
+}
 const COMMENTS_PER_HOUR = 10;
 
 /** "Tobi A." when the learner shows their profile to everyone; otherwise no name. */
@@ -82,8 +91,7 @@ reelsRouter.get('/reels/media/:file', (req, res) => {
 
 /** Comments on a reel, newest first, without hidden ones or people the learner blocked. */
 reelsRouter.get('/reels/:id/comments', optionalAuth, async (req, res) => {
-  const reel = reelById(String(req.params.id));
-  if (!reel) throw notFound('Reel not found');
+  const reel = await feedItem(String(req.params.id));
   const blocked = req.user ? (await prisma.blockedUser.findMany({ where: { userId: req.user.id }, select: { blockedId: true } })).map((b) => b.blockedId) : [];
   const rows = await prisma.reelComment.findMany({
     where: { reelId: reel.id, hidden: false, userId: { notIn: blocked } },
@@ -106,8 +114,7 @@ reelsRouter.use(['/me/reels', '/me/reels/*rest'], requireAuth);
 
 reelsRouter.post('/me/reels/:id/like', async (req, res) => {
   const user = me(req);
-  const reel = reelById(String(req.params.id));
-  if (!reel) throw notFound('Reel not found');
+  const reel = await feedItem(String(req.params.id));
   const { liked } = z.object({ liked: z.boolean() }).parse(req.body);
   if (liked)
     await prisma.reelLike.upsert({ where: { userId_reelId: { userId: user.id, reelId: reel.id } }, create: { userId: user.id, reelId: reel.id }, update: {} });
@@ -117,8 +124,7 @@ reelsRouter.post('/me/reels/:id/like', async (req, res) => {
 
 reelsRouter.post('/me/reels/:id/comments', async (req, res) => {
   const user = me(req);
-  const reel = reelById(String(req.params.id));
-  if (!reel) throw notFound('Reel not found');
+  const reel = await feedItem(String(req.params.id));
   if (restrictionOf(user)?.limits?.includes('comments')) throw new AppError(403, 'Commenting is turned off on your account for now.', 'restricted');
   const text = z.string().trim().min(1).max(300).parse(req.body?.text);
   const recent = await prisma.reelComment.count({ where: { userId: user.id, createdAt: { gt: new Date(Date.now() - 3_600_000) } } });

@@ -10,6 +10,7 @@ import { recordActivity, requestTimeZone } from '../services/progress.js';
 import { confirmReferralIfEligible } from '../services/referrals.js';
 import { me, optionalAuth, requireAuth } from '../services/sessions.js';
 import { toPublicUser } from '../services/users.js';
+import { forgetWatchVideos } from '../services/watch.js';
 
 export const coursesRouter = Router();
 
@@ -67,8 +68,7 @@ async function catalogue() {
     prisma.courseEnrollment.groupBy({ by: ['courseId'], _count: true }),
   ]);
   /** How many learners gave 1, 2, 3, 4 and 5 stars. */
-  const breakdown = (courseId: string) =>
-    [1, 2, 3, 4, 5].map((n) => stars.find((s) => s.courseId === courseId && s.stars === n)?._count ?? 0);
+  const breakdown = (courseId: string) => [1, 2, 3, 4, 5].map((n) => stars.find((s) => s.courseId === courseId && s.stars === n)?._count ?? 0);
   const rating = new Map(ratings.map((r) => [r.courseId, r]));
   const learnerCount = new Map(learners.map((l) => [l.courseId, l._count]));
   const version = String(Math.max(0, ...courses.map((c) => c.updatedAt.getTime())));
@@ -120,6 +120,7 @@ async function catalogue() {
 
 export const invalidateCourses = () => {
   cache = null;
+  forgetWatchVideos();
 };
 
 coursesRouter.get('/courses', optionalAuth, async (req, res) => {
@@ -164,8 +165,7 @@ async function progressOf(userId: string) {
     prisma.courseRating.findMany({ where: { userId } }),
     prisma.certificate.findMany({ where: { userId } }),
   ]);
-  const group = <T,>(rows: T[], key: (r: T) => string) =>
-    rows.reduce<Record<string, T[]>>((acc, r) => ((acc[key(r)] ??= []).push(r), acc), {});
+  const group = <T>(rows: T[], key: (r: T) => string) => rows.reduce<Record<string, T[]>>((acc, r) => ((acc[key(r)] ??= []).push(r), acc), {});
   return {
     enrolled: Object.fromEntries(enrolments.map((e) => [e.courseId, ms(e.enrolledAt)])),
     done: Object.fromEntries(done.map((d) => [d.lessonId, ms(d.completedAt)])),
@@ -183,9 +183,7 @@ async function progressOf(userId: string) {
       ]),
     ),
     ratings: Object.fromEntries(ratings.map((r) => [r.courseId, { stars: r.stars, tags: r.tags, text: r.text, at: ms(r.updatedAt) }])),
-    certificates: Object.fromEntries(
-      certificates.map((c) => [c.courseId, { id: c.id, issuedAt: ms(c.issuedAt), name: c.name, score: c.score }]),
-    ),
+    certificates: Object.fromEntries(certificates.map((c) => [c.courseId, { id: c.id, issuedAt: ms(c.issuedAt), name: c.name, score: c.score }])),
     saved: enrolments.filter((e) => e.saved).map((e) => e.courseId),
     minutes: Object.fromEntries(enrolments.map((e) => [e.courseId, e.minutes])),
   };
@@ -253,10 +251,7 @@ async function finishLesson(userId: string, courseId: string, lessonId: string, 
   let xp = LESSON_XP;
   let coins = 0;
 
-  const [total, done] = await Promise.all([
-    prisma.courseLesson.count({ where: { courseId } }),
-    prisma.lessonCompletion.count({ where: { userId, courseId } }),
-  ]);
+  const [total, done] = await Promise.all([prisma.courseLesson.count({ where: { courseId } }), prisma.lessonCompletion.count({ where: { userId, courseId } })]);
   let certificate = null;
   if (total > 0 && done >= total && !(await prisma.certificate.findUnique({ where: { userId_courseId: { userId, courseId } } }))) {
     const quizzes = await prisma.courseLesson.findMany({ where: { courseId, kind: 'quiz' }, select: { id: true } });
@@ -292,13 +287,25 @@ coursesRouter.post('/me/courses/:id/lessons/:lessonId/complete', async (req, res
   if (lesson.kind === 'quiz') throw new AppError(400, 'Pass the quiz to finish this lesson', 'quiz');
   const out = await finishLesson(userId, courseId, String(req.params.lessonId), lesson.minutes);
   const user = out.xp
-    ? await recordActivity(userId, { xp: out.xp, coins: out.coins, minutes: lesson.minutes }, { reason: out.certificate ? `course:${courseId}` : `course-lesson:${courseId}/${req.params.lessonId}`, tz: requestTimeZone(req) })
+    ? await recordActivity(
+        userId,
+        { xp: out.xp, coins: out.coins, minutes: lesson.minutes },
+        { reason: out.certificate ? `course:${courseId}` : `course-lesson:${courseId}/${req.params.lessonId}`, tz: requestTimeZone(req) },
+      )
     : null;
   if (out.xp) await confirmReferralIfEligible(userId);
   res.json({ certificate: out.certificate, ...(user && { user: toPublicUser(user) }) });
 });
 
-const Attempt = z.object({ answers: z.array(z.number().int().min(-1).max(10)).min(1).max(100), seconds: z.number().int().min(0).max(24 * 3600).default(0) });
+const Attempt = z.object({
+  answers: z.array(z.number().int().min(-1).max(10)).min(1).max(100),
+  seconds: z
+    .number()
+    .int()
+    .min(0)
+    .max(24 * 3600)
+    .default(0),
+});
 
 /** A lesson quiz (120–122), marked by the server. Passing (60%) finishes the lesson. */
 coursesRouter.post('/me/courses/:id/lessons/:lessonId/attempts', async (req, res) => {

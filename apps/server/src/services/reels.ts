@@ -41,7 +41,7 @@ export function useReels(list: Reel[] | null) {
 export const reelById = (id: string) => allReels().find((r) => r.id === id);
 
 /** A different order for each learner each day, so the feed feels fresh. */
-export function feedOrder(list: Reel[], seed: string) {
+export function feedOrder<T extends { id: string }>(list: T[], seed: string) {
   const day = new Date().toISOString().slice(0, 10);
   const key = (id: string) => createHash('sha256').update(`${seed}:${day}:${id}`).digest().readUInt32LE(0);
   return [...list].sort((a, b) => key(a.id) - key(b.id));

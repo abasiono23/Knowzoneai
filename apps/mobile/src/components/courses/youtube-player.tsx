@@ -9,11 +9,11 @@ import { API_URL } from '@/lib/config';
  * embeds on a real web page that sends its address, so the player page comes from our server
  * (`/embed/youtube/:id`) rather than being built inside the app.
  */
-export function YouTubePlayer({ videoId, title }: { videoId: string; title: string }) {
+export function YouTubePlayer({ videoId, title, autoplay }: { videoId: string; title: string; autoplay?: boolean }) {
   return (
     <View style={styles.frame}>
       <WebView
-        source={{ uri: `${API_URL}/embed/youtube/${encodeURIComponent(videoId)}` }}
+        source={{ uri: `${API_URL}/embed/youtube/${encodeURIComponent(videoId)}${autoplay ? '?autoplay=1' : ''}` }}
         allowsInlineMediaPlayback
         allowsFullscreenVideo
         mediaPlaybackRequiresUserAction={false}
@@ -26,5 +26,11 @@ export function YouTubePlayer({ videoId, title }: { videoId: string; title: stri
 }
 
 const styles = StyleSheet.create({
-  frame: { width: '100%', aspectRatio: 16 / 9, borderRadius: Radius.lg, overflow: 'hidden', backgroundColor: Colors.backgroundDeep },
+  frame: {
+    width: '100%',
+    aspectRatio: 16 / 9,
+    borderRadius: Radius.lg,
+    overflow: 'hidden',
+    backgroundColor: Colors.backgroundDeep,
+  },
 });

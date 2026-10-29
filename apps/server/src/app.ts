@@ -11,6 +11,7 @@ import { catalogRouter } from './routes/catalog.js';
 import { coursesRouter } from './routes/courses.js';
 import { examsRouter } from './routes/exams.js';
 import { reelsRouter } from './routes/reels.js';
+import { watchRouter } from './routes/watch.js';
 import { studyRoomsRouter } from './routes/study-rooms.js';
 import { gamesRouter } from './routes/games.js';
 import { questsRouter } from './routes/quests.js';
@@ -53,6 +54,8 @@ export function createApp() {
   app.get('/embed/youtube/:id', (req, res) => {
     const id = String(req.params.id);
     if (!/^[\w-]{11}$/.test(id)) throw notFound('Video not found');
+    // The Videos feed starts the video you swipe to.
+    const autoplay = req.query.autoplay === '1' ? '&autoplay=1' : '';
     res
       .set({
         'Content-Security-Policy': "default-src 'none'; frame-src https://www.youtube-nocookie.com https://www.youtube.com; style-src 'unsafe-inline'",
@@ -61,7 +64,7 @@ export function createApp() {
       })
       .type('html')
       .send(
-        `<!doctype html><html><head><meta name="viewport" content="width=device-width,initial-scale=1"><style>html,body{margin:0;height:100%;background:#000}iframe{border:0;width:100%;height:100%}</style></head><body><iframe src="https://www.youtube-nocookie.com/embed/${id}?playsinline=1&rel=0&modestbranding=1" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></body></html>`,
+        `<!doctype html><html><head><meta name="viewport" content="width=device-width,initial-scale=1"><style>html,body{margin:0;height:100%;background:#000}iframe{border:0;width:100%;height:100%}</style></head><body><iframe src="https://www.youtube-nocookie.com/embed/${id}?playsinline=1&rel=0&modestbranding=1${autoplay}" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></body></html>`,
       );
   });
   app.use(photosRouter);
@@ -81,6 +84,7 @@ export function createApp() {
   app.use(coursesRouter);
   app.use(examsRouter);
   app.use(reelsRouter);
+  app.use(watchRouter);
   app.use(studyRoomsRouter);
   app.use(materialsRouter);
 

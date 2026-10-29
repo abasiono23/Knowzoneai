@@ -72,7 +72,8 @@ const videos: Translation<typeof en> = {
     },
     renderTimeout: {
       title: 'Ta vidéo n’a pas pu être générée',
-      message: 'Notre service vidéo a manqué de temps pendant l’enregistrement de la narration. Aucun crédit n’a été utilisé.',
+      message:
+        'Notre service vidéo a manqué de temps pendant l’enregistrement de la narration. Aucun crédit n’a été utilisé.',
       reasons: {
         busy: 'Nos serveurs étaient surchargés',
         shorter: 'Les longs scripts dépassent parfois le temps limite. Essaie une durée plus courte.',
@@ -156,6 +157,25 @@ const videos: Translation<typeof en> = {
     summary: 'Résumé',
     upNext: 'Glisse vers le haut pour « {{title}} »',
   },
+  watch: {
+    title: 'Vidéos',
+    offline: 'Les vidéos ont besoin d’une connexion internet.',
+    loadFailed: 'Impossible de charger les vidéos. Vérifie ta connexion et réessaie.',
+    retry: 'Réessayer',
+    search: 'Rechercher des vidéos',
+    placeholder: 'Cherche un sujet, ex. photosynthèse',
+    clear: 'Effacer la recherche',
+    results_one: '{{count}} vidéo',
+    results_many: '{{count}} vidéos',
+    results_other: '{{count}} vidéos',
+    watch: 'Regarder',
+    empty: 'Pas encore de vidéo pour « {{q}} ». Essaie un autre mot ou une autre matière.',
+    showAll: 'Voir toutes les vidéos',
+    comments: 'Commentaires',
+    meta: '{{channel}} · {{minutes}} min · YouTube',
+    openLesson: 'Ouvrir la leçon dans {{course}}',
+    shareMessage: '{{title}} : regarde-la sur Knowzone ou YouTube {{url}}',
+  },
   details: {
     meta_one: '{{creator}} · {{views}} vue · {{duration}} · {{level}}',
     meta_many: '{{creator}} · {{views}} vues · {{duration}} · {{level}}',
@@ -201,10 +221,16 @@ const videos: Translation<typeof en> = {
     subtitle: 'Quel est le problème avec « {{title}} » ?',
     send: 'Envoyer le signalement',
     reasons: {
-      incorrect: { label: 'Informations fausses ou trompeuses', description: 'Un fait, une formule ou une réponse est faux' },
+      incorrect: {
+        label: 'Informations fausses ou trompeuses',
+        description: 'Un fait, une formule ou une réponse est faux',
+      },
       inappropriate: { label: 'Contenu inapproprié', description: 'Ne convient pas aux élèves' },
       copyright: { label: 'Droits d’auteur ou propriété', description: 'Utilise du contenu sans autorisation' },
-      quality: { label: 'Son, sous-titres ou images de mauvaise qualité', description: 'Difficile à entendre, à lire ou à suivre' },
+      quality: {
+        label: 'Son, sous-titres ou images de mauvaise qualité',
+        description: 'Difficile à entendre, à lire ou à suivre',
+      },
       other: { label: 'Autre chose', description: 'Dis-nous en plus ci-dessous' },
     },
     incorrectPlaceholder: 'Qu’est-ce qui ne va pas, et que faudrait-il dire ? Un horodatage nous aide.',
@@ -277,7 +303,10 @@ const videos: Translation<typeof en> = {
     generate: 'Générer une nouvelle vidéo',
     generateHint: 'Environ une minute · 1 à 3 crédits',
     steps: {
-      source: { title: 'Choisis un thème ou une source', body: 'Un thème, ton pack de révision, une leçon ou tes notes' },
+      source: {
+        title: 'Choisis un thème ou une source',
+        body: 'Un thème, ton pack de révision, une leçon ou tes notes',
+      },
       length: { title: 'Choisis la durée', body: 'D’un rappel de 30 secondes à une leçon de 5 minutes' },
       voice: { title: 'Choisis une voix et un style', body: 'Narrateurs, thèmes visuels et sous-titres' },
       make: { title: 'On s’occupe du reste', body: 'Script, scènes, narration et sous-titres en une minute environ' },
@@ -431,7 +460,8 @@ const videos: Translation<typeof en> = {
     voice: 'Voix',
     style: 'Style',
     captions: 'Sous-titres activés par défaut',
-    scriptHint: 'Modifie ce qui est dit et affiché dans chaque scène. Idéal pour corriger un fait ou reprendre les mots de ton prof.',
+    scriptHint:
+      'Modifie ce qui est dit et affiché dans chaque scène. Idéal pour corriger un fait ou reprendre les mots de ton prof.',
     scene: 'SCÈNE {{number}} · {{kind}}',
     sceneHeading: 'Titre de la scène {{number}}',
     sceneNarration: 'Narration de la scène {{number}}',

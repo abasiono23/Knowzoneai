@@ -19,7 +19,8 @@ export function CommentsSheet({
   onClose,
   onCount,
 }: {
-  reel: Reel | null;
+  /** A reel, or a video in the Videos feed (they share likes and comments). */
+  reel: Pick<Reel, 'id' | 'comments'> | null;
   onClose: () => void;
   onCount: (id: string, n: number) => void;
 }) {
