@@ -121,6 +121,7 @@ model User {
   reelComments      ReelComment[]
   studyRooms        StudyRoomMember[]
   roomMessages      StudyRoomMessage[]
+  roomQuizAnswers   StudyRoomQuizAnswer[]
   courseNotes       CourseNote[]
   courseRatings     CourseRating[]
   certificates      Certificate[]
@@ -1146,10 +1147,24 @@ model StudyRoom {
   focusMinutes  Int                @default(25)
   breakMinutes  Int                @default(5)
   sessions      Int                @default(0)
+  /// The next scheduled focus session (set by the host); it starts on its own at that time.
+  nextSessionAt      DateTime?
+  nextSessionMinutes Int           @default(25)
+  /// When members were reminded about the next session.
+  remindedAt    DateTime?
+  /// Days in a row (Lagos days) the room finished at least one focus session.
+  streak        Int                @default(0)
+  bestStreak    Int                @default(0)
+  /// YYYY-MM-DD of the last finished focus session.
+  lastStudyDay  String?
   createdAt     DateTime           @default(now())
   members       StudyRoomMember[]
   messages      StudyRoomMessage[]
   invites       StudyRoomInvite[]
+  history       StudyRoomSession[]
+  quizzes       StudyRoomQuiz[]
+
+  @@index([nextSessionAt])
 
   @@index([visibility, school])
 }
@@ -1203,3 +1218,47 @@ model StudyRoomInvite {
   @@index([toId, status])
 }
 
+/// A finished focus session: the room's history.
+model StudyRoomSession {
+  id      String    @id @default(cuid())
+  roomId  String
+  room    StudyRoom @relation(fields: [roomId], references: [id], onDelete: Cascade)
+  endedAt DateTime
+  minutes Int
+  /// How many people were there when it ended.
+  people  Int
+
+  @@index([roomId, endedAt])
+}
+
+/// A quiz battle: 10 past-paper questions everyone answers at the same time.
+model StudyRoomQuiz {
+  id         String                @id @default(cuid())
+  roomId     String
+  room       StudyRoom             @relation(fields: [roomId], references: [id], onDelete: Cascade)
+  /// e.g. { exam: "jamb", subject: "physics" }
+  exam       String
+  subject    String
+  /// The questions (with answers): { q, options, answer, explanation }[]
+  questions  Json
+  startedAt  DateTime
+  /// Set once, when the results are in and XP has been given.
+  finishedAt DateTime?
+  answers    StudyRoomQuizAnswer[]
+
+  @@index([roomId, startedAt])
+}
+
+model StudyRoomQuizAnswer {
+  quizId    String
+  quiz      StudyRoomQuiz @relation(fields: [quizId], references: [id], onDelete: Cascade)
+  userId    String
+  user      User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  index     Int
+  choice    Int
+  correct   Boolean
+  points    Int
+  createdAt DateTime      @default(now())
+
+  @@id([quizId, userId, index])
+}

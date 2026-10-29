@@ -1,15 +1,42 @@
-import { describe, expect, it, vi } from 'vitest';
+import { afterAll, beforeAll, describe, expect, it, vi } from 'vitest';
 
 import { prisma } from '../src/db.js';
+import { usePapers, type Paper } from '../src/services/exams.js';
+import { QUIZ, QUIZ_MS, roomReminders } from '../src/services/study-rooms.js';
 import { signIn } from './helpers.js';
 
-// Moderation: anything containing "nasty" is flagged.
+// Moderation: anything containing "nasty" is flagged. Kora answers with a fixed reply.
+const kora = vi.fn(async (_: { input: string }) => ({ output_text: 'Speed = distance ÷ time.', usage: { input_tokens: 50, output_tokens: 20 } }));
 vi.mock('../src/services/ai.js', async (original) => ({
   ...(await original<typeof import('../src/services/ai.js')>()),
   openaiClient: () => ({
     moderations: { create: async ({ input }: { input: string }) => ({ results: [{ flagged: /nasty/i.test(input) }] }) },
+    responses: { create: kora },
   }),
 }));
+
+// A physics paper for quiz battles: the right answer is always option 2 ("c").
+const PAPERS: Paper[] = [
+  {
+    id: 'jamb-physics-p1',
+    exam: 'jamb',
+    subject: 'physics',
+    year: null,
+    number: 1,
+    source: 'ai',
+    minutes: 40,
+    questions: Array.from({ length: 12 }, (_, i) => ({
+      n: i + 1,
+      topic: 'Motion',
+      q: `Question ${i + 1}?`,
+      options: ['a', 'b', 'c', 'd'],
+      answer: 2,
+      explanation: 'Because c.',
+    })),
+  },
+];
+beforeAll(() => usePapers(PAPERS));
+afterAll(() => usePapers(null));
 
 type As = Awaited<ReturnType<typeof signIn>>['as'];
 const person = (email: string, name: string, school?: string) =>
@@ -145,5 +172,139 @@ describe('Study Rooms', () => {
     await other.as.post('/me/study-rooms/join', { roomId: room.id }).expect(404);
     const noSchool = await person('n@example.com', 'Nia Uche');
     expect((await noSchool.as.post('/me/study-rooms', { name: 'X', visibility: 'school' }).expect(400)).body.reason).toBe('no-school');
+  });
+});
+
+describe('Study Rooms: quiz battles, Kora, scheduled sessions and streaks', () => {
+  const room2 = async () => {
+    const ada = await person('ada@example.com', 'Ada Obi');
+    const tobi = await person('tobi@example.com', 'Tobi Ade');
+    const { room } = (await ada.as.post('/me/study-rooms', { name: 'Physics squad', subject: 'Physics' }).expect(201)).body;
+    await tobi.as.post('/me/study-rooms/join', { code: room.code }).expect(200);
+    return { ada, tobi, room };
+  };
+  /** Moves the quiz back in time so `ms` has passed since it started. */
+  const elapse = (id: string, ms: number) => prisma.studyRoomQuiz.updateMany({ where: { roomId: id }, data: { startedAt: new Date(Date.now() - ms) } });
+  const open = (i: number) => QUIZ.leadMs + i * (QUIZ.questionMs + QUIZ.revealMs);
+
+  it('runs a quiz battle: same questions for everyone, answers hidden until each closes, faster right answers score more', async () => {
+    const { ada, tobi, room } = await room2();
+    expect((await tobi.as.post(`/me/study-rooms/${room.id}/quiz`, { exam: 'jamb', subject: 'physics' }).expect(403)).body.reason).toBe('host');
+    expect((await ada.as.post(`/me/study-rooms/${room.id}/quiz`, { exam: 'waec', subject: 'physics' }).expect(404)).body.reason).toBe('no-questions');
+    const started = (await ada.as.post(`/me/study-rooms/${room.id}/quiz`, { exam: 'jamb', subject: 'physics' }).expect(201)).body;
+    expect(started.quiz.questions).toHaveLength(10);
+    // No answers in what the app gets.
+    expect(JSON.stringify(started.quiz)).not.toContain('Because c');
+    expect(started.quiz.questions[0]).toEqual({ q: expect.stringMatching(/^Question/), options: ['a', 'b', 'c', 'd'] });
+    expect((await ada.as.post(`/me/study-rooms/${room.id}/quiz`, { exam: 'jamb', subject: 'physics' }).expect(409)).body.reason).toBe('running');
+
+    const answer = (as: As, index: number, choice: number) => as.post(`/me/study-rooms/${room.id}/quiz/answer`, { quizId: started.quiz.id, index, choice });
+    // Too early for question 1.
+    expect((await answer(ada.as, 0, 2).expect(409)).body.reason).toBe('closed');
+    await elapse(room.id, open(0) + 1000);
+    await answer(ada.as, 0, 2).expect(200);
+    await answer(tobi.as, 0, 1).expect(200);
+    expect((await answer(ada.as, 0, 1).expect(409)).body.reason).toBe('answered');
+    let s = await state(tobi.as, room.id);
+    expect(s.quiz.reveals).toEqual([]);
+    expect(s.quiz.mine[0]).toBe(1);
+    expect(s.quiz.answered[0]).toBe(2);
+
+    // Question 1 closes: its answer and how people picked show.
+    await elapse(room.id, open(0) + QUIZ.questionMs + 2000);
+    s = await state(tobi.as, room.id);
+    expect(s.quiz.reveals).toEqual([{ answer: 2, explanation: 'Because c.', picks: [0, 1, 1, 0] }]);
+    expect((await answer(tobi.as, 0, 2).expect(409)).body.reason).toBe('closed');
+    await elapse(room.id, open(1) + 10_000);
+    await answer(tobi.as, 1, 2).expect(200);
+
+    // The end: results, the winner in the chat, XP once.
+    await elapse(room.id, QUIZ_MS + 1000);
+    const [end] = await Promise.all([state(ada.as, room.id), state(tobi.as, room.id)]);
+    expect(end.quiz.finished).toBe(true);
+    expect(end.quiz.reveals).toHaveLength(10);
+    // Ada: right after about 1 s (about 148). Tobi: wrong, then right with about 10 s to spare (about 125).
+    const [first, second] = end.quiz.scores;
+    expect(first).toMatchObject({ me: true, name: 'Ada O.', correct: 1 });
+    expect(first.points).toBeGreaterThanOrEqual(145);
+    expect(second).toMatchObject({ me: false, correct: 1 });
+    expect(second.points).toBeGreaterThanOrEqual(120);
+    expect(second.points).toBeLessThanOrEqual(125);
+    expect(end.messages.find((m: { text: string }) => m.text === 'quizWon').data).toMatchObject({ name: 'Ada', points: first.points });
+    expect((await prisma.coinTransaction.findMany({ where: { reason: 'room_quiz' }, orderBy: { xp: 'desc' } })).map((t) => t.xp)).toEqual([13, 3]);
+  });
+
+  it('no quizzes during focus time', async () => {
+    const { ada, room } = await room2();
+    await ada.as.post(`/me/study-rooms/${room.id}/timer`, { action: 'start' }).expect(200);
+    expect((await ada.as.post(`/me/study-rooms/${room.id}/quiz`, { exam: 'jamb', subject: 'physics' }).expect(409)).body.reason).toBe('focus');
+  });
+
+  it('asks Kora in the room: everyone sees the answer, and it uses one of the asker’s tutor questions', async () => {
+    const { ada, tobi, room } = await room2();
+    await ada.as.post(`/me/study-rooms/${room.id}/messages`, { text: 'What is speed?' }).expect(201);
+    const res = (await tobi.as.post(`/me/study-rooms/${room.id}/kora`, { question: 'How do I find speed?' }).expect(201)).body;
+    const [q, a] = res.messages.slice(-2);
+    expect(q).toMatchObject({ kind: 'text', text: 'How do I find speed?', data: { toKora: true }, mine: true });
+    expect(a).toMatchObject({ kind: 'kora', text: 'Speed = distance ÷ time.', data: { replyTo: q.id, askedBy: 'Tobi' } });
+    // Kora got the recent chat as context, without names.
+    expect(kora.mock.calls.at(-1)![0].input).toContain('Student: What is speed?');
+    expect(kora.mock.calls.at(-1)![0].input).not.toContain('Ada');
+    expect(await prisma.usageEvent.count({ where: { userId: tobi.user.id, feature: 'tutor_question' } })).toBe(1);
+    expect((await state(ada.as, room.id)).messages.some((m: { kind: string }) => m.kind === 'kora')).toBe(true);
+    // Screened like chat.
+    expect((await tobi.as.post(`/me/study-rooms/${room.id}/kora`, { question: 'say something nasty' }).expect(422)).body.reason).toBe('blocked');
+  });
+
+  it('schedules a session: members are told and reminded, and it starts on its own', async () => {
+    const { ada, tobi, room } = await room2();
+    const at = Date.now() + 5 * 60_000;
+    expect((await tobi.as.post(`/me/study-rooms/${room.id}/schedule`, { at }).expect(403)).body.reason).toBe('host');
+    expect((await ada.as.post(`/me/study-rooms/${room.id}/schedule`, { at: Date.now() - 1000 }).expect(400)).body.reason).toBe('time');
+    const s = (await ada.as.post(`/me/study-rooms/${room.id}/schedule`, { at, minutes: 50 }).expect(200)).body;
+    expect(s.room.next).toEqual({ at, minutes: 50 });
+    expect(await prisma.notification.count({ where: { userId: tobi.user.id, template: 'studyRoomScheduled' } })).toBe(1);
+    expect((await tobi.as.get('/me/study-rooms').expect(200)).body.rooms[0].next).toBe(at);
+
+    // Reminders go out once, a few minutes before.
+    expect(await roomReminders()).toBe(1);
+    expect(await roomReminders()).toBe(0);
+    expect(await prisma.notification.count({ where: { template: 'studyRoomStarting' } })).toBe(2);
+
+    // The time comes: focus starts by itself.
+    await prisma.studyRoom.update({ where: { id: room.id }, data: { nextSessionAt: new Date(Date.now() - 2000) } });
+    const live = await state(tobi.as, room.id);
+    expect(live.room.timer).toMatchObject({ phase: 'focus', focusMinutes: 50 });
+    expect(live.room.next).toBeNull();
+    expect(live.messages.map((m: { text: string }) => m.text)).toContain('scheduledStarted');
+
+    // Cancelling.
+    await ada.as.post(`/me/study-rooms/${room.id}/schedule`, { at: Date.now() + 3_600_000 }).expect(200);
+    expect((await ada.as.post(`/me/study-rooms/${room.id}/schedule`, { at: null }).expect(200)).body.room.next).toBeNull();
+  });
+
+  it('keeps a room streak and history from finished focus sessions', async () => {
+    const { ada, tobi, room } = await room2();
+    // Studied together yesterday too.
+    const yesterday = new Intl.DateTimeFormat('en-CA', { timeZone: 'Africa/Lagos' }).format(new Date(Date.now() - 86_400_000));
+    await prisma.studyRoom.update({ where: { id: room.id }, data: { streak: 3, bestStreak: 3, lastStudyDay: yesterday } });
+    expect((await state(ada.as, room.id)).room).toMatchObject({ streak: 3, studiedToday: false });
+
+    await ada.as.post(`/me/study-rooms/${room.id}/timer`, { action: 'start' }).expect(200);
+    await state(tobi.as, room.id);
+    await prisma.studyRoom.update({ where: { id: room.id }, data: { phaseEndsAt: new Date(Date.now() - 1000) } });
+    const s = await state(ada.as, room.id);
+    expect(s.room).toMatchObject({ streak: 4, bestStreak: 4, studiedToday: true });
+    expect(s.messages.find((m: { text: string }) => m.text === 'streak').data).toMatchObject({ count: 4 });
+
+    const h = (await tobi.as.get(`/me/study-rooms/${room.id}/history`).expect(200)).body;
+    expect(h).toMatchObject({ streak: 4, totalSessions: 1, totalMinutes: 25, quizzes: 0 });
+    expect(h.days).toHaveLength(7);
+    expect(h.days.at(-1).minutes).toBe(25);
+    expect(h.sessions[0]).toMatchObject({ minutes: 25, people: 2 });
+
+    // A missed day resets what's shown.
+    await prisma.studyRoom.update({ where: { id: room.id }, data: { lastStudyDay: '2020-01-01' } });
+    expect((await state(ada.as, room.id)).room.streak).toBe(0);
   });
 });

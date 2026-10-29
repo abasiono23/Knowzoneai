@@ -713,12 +713,32 @@ The dashboard's Study Rooms tile opens a list of rooms where friends study toget
     people you blocked are hidden.
 - **Host controls:** start or stop the timer, set the goal, rename the room, remove members and close the room.
   If the host leaves, the longest-standing member becomes host. An empty room is deleted.
-- **Live updates:** the room screen checks in every 3 seconds. The timer moves on when someone checks in, so no
-  background job is needed.
-- **Endpoints:** `GET/POST /me/study-rooms`, `POST /me/study-rooms/join`, `POST /me/study-rooms/invites/:id/decline`,
-  `GET/PATCH/DELETE /me/study-rooms/:id`, `POST /me/study-rooms/:id/{invite,messages,timer,goal,leave}`,
-  `POST /me/study-rooms/:id/messages/:mid/report`, `DELETE /me/study-rooms/:id/members/:userId`.
-- **Migration:** `20261029120000_study_rooms`.
+- **Quiz battle** (host, outside focus time):
+  - 10 questions from the Past Questions papers for an exam and subject. Everyone sees each question at the
+    same moment and has 20 seconds; then the answer shows for 6 seconds, with how many people picked each option.
+  - A right answer scores 100 points, plus up to 50 for speed. A whole battle takes about 4½ minutes.
+  - Answers stay on the server until each question closes.
+  - XP: 3 per right answer, and 10 more for the winner. The winner is announced in the chat.
+- **Kora in the room:**
+  - Tap ✨ to ask Kora instead of the room; everyone reads the answer. During focus time, chat is quiet but Kora
+    can still be asked.
+  - Each question uses one of the asker's daily tutor questions. It's screened like chat, one at a time per room.
+  - Kora gets the last few messages as context, without names.
+- **Scheduled sessions:** the host picks a day this week, a time and 25 or 50 minutes. Members get a notification
+  at once and a reminder 10 minutes before (a job runs every minute). The session starts by itself when the
+  time comes. If nobody opens the room within 30 minutes, it lapses.
+- **Room streak and history:**
+  - The streak counts days in a row on which the room finished a focus session.
+  - The 🔥 chip opens the history: the streak and best streak, total time studied together, minutes per day for
+    the last 7 days, and recent sessions.
+- **Live updates:** the room screen checks in every 3 seconds, and right away when a quiz question closes. The
+  timer, scheduled sessions and quiz results move on when someone checks in.
+- **Endpoints:**
+  - `GET/POST /me/study-rooms`, `POST /me/study-rooms/join`, `POST /me/study-rooms/invites/:id/decline`
+  - `GET/PATCH/DELETE /me/study-rooms/:id`, `GET /me/study-rooms/:id/history`
+  - `POST /me/study-rooms/:id/{invite,messages,timer,goal,kora,quiz,quiz/answer,schedule,leave}`
+  - `POST /me/study-rooms/:id/messages/:mid/report`, `DELETE /me/study-rooms/:id/members/:userId`
+- **Migrations:** `20261029120000_study_rooms`, `20261029180000_study_room_extras`.
 
 ### Business District: Business, Finance & Economics (Knowzone World)
 

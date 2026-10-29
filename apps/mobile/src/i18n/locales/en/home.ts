@@ -274,6 +274,18 @@ const home = {
         detail: 'Study Rooms let friends study together with a shared focus timer, a room goal and a chat.',
         cta: 'Open room',
       },
+      studyRoomScheduled: {
+        title: '{{name}} scheduled a study session',
+        body: '{{room}}: {{time}}, {{minutes}} minutes of focus.',
+        detail: 'The session starts on its own in the room. You’ll get a reminder 10 minutes before.',
+        cta: 'Open room',
+      },
+      studyRoomStarting: {
+        title: 'Study session soon',
+        body: '{{room}} starts focusing at {{time}}. Join your friends!',
+        detail: 'Everyone in the room when a focus session ends earns study time and XP.',
+        cta: 'Open room',
+      },
       generic: {
         title: 'Knowzone',
         body: 'You have a new update.',

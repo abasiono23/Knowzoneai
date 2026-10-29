@@ -17,7 +17,9 @@ export type Template =
   | 'ticketReply'
   | 'friendRequest'
   | 'friendAccepted'
-  | 'studyRoomInvite';
+  | 'studyRoomInvite'
+  | 'studyRoomScheduled'
+  | 'studyRoomStarting';
 
 export async function notify(
   userId: string,

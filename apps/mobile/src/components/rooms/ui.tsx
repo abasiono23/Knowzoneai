@@ -1,11 +1,12 @@
 import { Ionicons } from '@expo/vector-icons';
 import { useTranslation } from 'react-i18next';
-import { Pressable, StyleSheet, View } from 'react-native';
+import { Modal, Pressable, StyleSheet, View } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { Avatar } from '@/components/world/avatar';
 import { Card, Text } from '@/components/ui';
 import { Colors, Fonts, Radius, Spacing } from '@/constants/theme';
-import type { RoomMember, RoomSummary } from '@/lib/rooms';
+import { when, type RoomMember, type RoomSummary } from '@/lib/rooms';
 import type { AvatarConfig } from '@/lib/world/types';
 
 /** A member's face: their World avatar, or their initial. */
@@ -57,6 +58,16 @@ export function RoomRow({ room, onPress }: { room: RoomSummary; onPress: () => v
               ● {live}
             </Text>
           )}
+          {(room.streak > 0 || room.next) && (
+            <Text variant="small" color={Colors.textSecondary}>
+              {[
+                room.streak > 0 && `🔥 ${t('streak', { count: room.streak })}`,
+                room.next && `📅 ${when(room.next, { today: t('today'), tomorrow: t('tomorrow') })}`,
+              ]
+                .filter(Boolean)
+                .join('  ·  ')}
+            </Text>
+          )}
         </View>
         <Ionicons name="chevron-forward" size={18} color={Colors.textMuted} />
       </Card>
@@ -64,7 +75,83 @@ export function RoomRow({ room, onPress }: { room: RoomSummary; onPress: () => v
   );
 }
 
+/** A bottom sheet with a title and a close button. */
+export function Sheet({
+  visible,
+  title,
+  onClose,
+  children,
+}: {
+  visible: boolean;
+  title: string;
+  onClose: () => void;
+  children: React.ReactNode;
+}) {
+  return (
+    <Modal visible={visible} transparent animationType="slide" onRequestClose={onClose}>
+      <View style={styles.backdrop}>
+        <Pressable style={{ flex: 1 }} onPress={onClose} accessibilityRole="button" accessibilityLabel={title} />
+        <SafeAreaView edges={['bottom']} style={styles.sheet}>
+          <View style={styles.sheetHead}>
+            <Text variant="heading" style={{ flex: 1 }}>
+              {title}
+            </Text>
+            <Pressable onPress={onClose} accessibilityRole="button" hitSlop={10}>
+              <Ionicons name="close" size={24} color={Colors.text} />
+            </Pressable>
+          </View>
+          {children}
+        </SafeAreaView>
+      </View>
+    </Modal>
+  );
+}
+
+/** A choice chip (exam, subject, day, time…). */
+export function Chip({
+  label,
+  on,
+  disabled,
+  onPress,
+}: {
+  label: string;
+  on: boolean;
+  disabled?: boolean;
+  onPress: () => void;
+}) {
+  return (
+    <Pressable
+      onPress={onPress}
+      disabled={disabled}
+      accessibilityRole="radio"
+      accessibilityState={{ checked: on, disabled }}
+      style={[styles.chip, on && styles.chipOn, disabled && { opacity: 0.35 }]}>
+      <Text variant="small" style={{ fontFamily: Fonts.semibold }} color={on ? Colors.primary : Colors.text}>
+        {label}
+      </Text>
+    </Pressable>
+  );
+}
+
 const styles = StyleSheet.create({
+  backdrop: { flex: 1, backgroundColor: 'rgba(0,0,0,0.4)' },
+  sheet: {
+    gap: Spacing.sm,
+    padding: Spacing.md,
+    borderTopLeftRadius: Radius.lg,
+    borderTopRightRadius: Radius.lg,
+    backgroundColor: Colors.surface,
+  },
+  sheetHead: { flexDirection: 'row', alignItems: 'center', gap: Spacing.sm },
+  chip: {
+    paddingHorizontal: 12,
+    paddingVertical: 8,
+    borderRadius: Radius.pill,
+    borderWidth: 1.5,
+    borderColor: Colors.border,
+    backgroundColor: Colors.surface,
+  },
+  chipOn: { borderColor: Colors.primary, backgroundColor: Colors.primarySoft },
   initial: { alignItems: 'center', justifyContent: 'center', backgroundColor: Colors.primarySoft },
   dot: {
     position: 'absolute',

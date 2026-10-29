@@ -3,27 +3,31 @@ import * as Clipboard from 'expo-clipboard';
 import { router, useFocusEffect, useLocalSearchParams, type Href } from 'expo-router';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import {
-  Modal,
-  Pressable,
-  ScrollView,
-  Share,
-  StyleSheet,
-  TextInput,
-  View,
-  type ScrollViewInstance,
-} from 'react-native';
+import { Pressable, ScrollView, Share, StyleSheet, TextInput, View, type ScrollViewInstance } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { BookBackground } from '@/components/brand/book-background';
 import { LoadError, Loading } from '@/components/exams/ui';
-import { MemberFace } from '@/components/rooms/ui';
+import { HistorySheet } from '@/components/rooms/history';
+import { QuizCard, QuizSheet } from '@/components/rooms/quiz';
+import { ScheduleSheet } from '@/components/rooms/schedule';
+import { MemberFace, Sheet } from '@/components/rooms/ui';
 import { ConfirmDialog } from '@/components/world/overlays';
 import { Button, Card, ProgressBar, Text } from '@/components/ui';
 import { Colors, Fonts, Radius, Spacing } from '@/constants/theme';
 import { errorText } from '@/i18n/errors';
 import { api, type FriendsView } from '@/lib/api';
-import { clock, roomsApi, shareHref, type RoomMessage, type RoomState, type ShareItem } from '@/lib/rooms';
+import {
+  clock,
+  quizStage,
+  roomsApi,
+  shareHref,
+  when,
+  type RoomMessage,
+  type RoomState,
+  type ShareItem,
+  type SystemData,
+} from '@/lib/rooms';
 import { useMaterials } from '@/lib/studio/store';
 
 const POLL_MS = 3000;
@@ -42,7 +46,16 @@ export default function RoomScreen() {
   const [now, setNow] = useState(() => Date.now());
   const [text, setText] = useState('');
   const [note, setNote] = useState<string | null>(null);
-  const [sheet, setSheet] = useState<'invite' | 'people' | 'share' | null>(invite === '1' ? 'invite' : null);
+  const [sheet, setSheet] = useState<'invite' | 'people' | 'share' | 'quiz' | 'schedule' | 'history' | null>(
+    invite === '1' ? 'invite' : null,
+  );
+  const [busy, setBusy] = useState(false);
+  // Questions for Kora instead of the room (always, during focus time).
+  const [koraMode, setKoraMode] = useState(false);
+  const [asking, setAsking] = useState(false);
+  // Quiz answers sent from this phone, until the server's state includes them.
+  const [picked, setPicked] = useState<Record<string, Record<number, number>>>({});
+  const [closedQuiz, setClosedQuiz] = useState<string | null>(null);
   const [confirm, setConfirm] = useState<'leave' | 'close' | null>(null);
   const [goalDraft, setGoalDraft] = useState<string | null>(null);
   const [reported, setReported] = useState<string[]>([]);
@@ -91,6 +104,14 @@ export default function RoomScreen() {
   useEffect(() => {
     scroll.current?.scrollToEnd({ animated: true });
   }, [messages.length]);
+
+  // Check in as soon as a quiz question closes, so the answer shows without waiting for the next poll.
+  const quiz = state?.quiz ?? null;
+  const stage = quiz ? quizStage(quiz, now + offset) : null;
+  const stageKey = stage ? `${quiz!.id}:${stage.stage}:${stage.index}` : '';
+  useEffect(() => {
+    if (stageKey) void poll();
+  }, [stageKey, poll]);
 
   const act = async (fn: () => Promise<RoomState | unknown>) => {
     setNote(null);
@@ -156,12 +177,39 @@ export default function RoomScreen() {
   const done = members.filter((m) => m.goalDone).length;
   const meMember = members.find((m) => m.me);
   const quiet = timer.phase === 'focus';
+  const toKora = koraMode || quiet;
+  const serverNow = now + offset;
+  const quizRunning = !!quiz && !quiz.finished && stage?.stage !== 'done';
+  const labels = { today: t('today'), tomorrow: t('tomorrow') };
+  // Someone asked Kora and the answer isn't in yet.
+  const koraThinking =
+    asking ||
+    messages.some(
+      (m) =>
+        m.data &&
+        'toKora' in m.data &&
+        serverNow - m.createdAt < 60_000 &&
+        !messages.some((r) => r.kind === 'kora' && r.data && 'replyTo' in r.data && r.data.replyTo === m.id),
+    );
 
   const send = async () => {
     const body = text.trim();
     if (!body) return;
     setText('');
-    await act(() => roomsApi.say(room.id, body));
+    if (!toKora) return act(() => roomsApi.say(room.id, body));
+    setAsking(true);
+    await act(() => roomsApi.kora(room.id, body));
+    setAsking(false);
+  };
+  const busyAct = async (fn: () => Promise<unknown>) => {
+    setBusy(true);
+    await act(fn);
+    setBusy(false);
+  };
+  const answer = (index: number, choice: number) => {
+    if (!quiz) return;
+    setPicked((p) => ({ ...p, [quiz.id]: { ...p[quiz.id], [index]: choice } }));
+    void roomsApi.answer(room.id, quiz.id, index, choice).catch((e) => setNote(errorText(e)));
   };
 
   return (
@@ -211,14 +259,42 @@ export default function RoomScreen() {
 
       <ScrollView ref={scroll} contentContainerStyle={styles.body} keyboardShouldPersistTaps="handled">
         {/* Who's here */}
-        <Pressable onPress={() => setSheet('people')} accessibilityRole="button" style={styles.people}>
-          {members.slice(0, 8).map((m) => (
-            <MemberFace key={m.id} m={m} size={36} />
-          ))}
-          <Text variant="small" color={Colors.textSecondary} style={{ marginLeft: 4 }}>
-            {t('here', { count: here })}
-          </Text>
-        </Pressable>
+        <View style={styles.rowBetween}>
+          <Pressable onPress={() => setSheet('people')} accessibilityRole="button" style={styles.people}>
+            {members.slice(0, 8).map((m) => (
+              <MemberFace key={m.id} m={m} size={36} />
+            ))}
+            <Text variant="small" color={Colors.textSecondary} style={{ marginLeft: 4 }}>
+              {t('here', { count: here })}
+            </Text>
+          </Pressable>
+          <Pressable
+            onPress={() => setSheet('history')}
+            accessibilityRole="button"
+            accessibilityLabel={t('history.title')}
+            style={[styles.streak, room.streak > 0 && styles.streakOn]}>
+            {room.streak > 0 ? (
+              <Text style={{ fontFamily: Fonts.extrabold, fontSize: 13 }} color={Colors.onBright}>
+                🔥 {room.streak}
+              </Text>
+            ) : (
+              <Ionicons name="stats-chart" size={16} color={Colors.primary} />
+            )}
+          </Pressable>
+        </View>
+
+        {/* Quiz battle */}
+        {quiz && quiz.id !== closedQuiz && (
+          <QuizCard
+            quiz={quiz}
+            now={serverNow}
+            host={room.host}
+            picked={picked[quiz.id] ?? {}}
+            onAnswer={answer}
+            onAgain={() => setSheet('quiz')}
+            onClose={() => setClosedQuiz(quiz.id)}
+          />
+        )}
 
         {/* The shared timer */}
         <Card
@@ -264,6 +340,36 @@ export default function RoomScreen() {
             <Text variant="small" color={Colors.textMuted} center>
               {t('timer.sessions', { count: timer.sessions })}
             </Text>
+          )}
+          {room.next && (
+            <Pressable
+              onPress={() => room.host && setSheet('schedule')}
+              disabled={!room.host}
+              accessibilityRole="button"
+              style={styles.next}>
+              <Text variant="small" color={Colors.primary} center style={{ fontFamily: Fonts.semibold }}>
+                📅 {t('schedule.next', { time: when(room.next.at, labels), minutes: room.next.minutes })}
+              </Text>
+            </Pressable>
+          )}
+          {room.host && (
+            <View style={{ flexDirection: 'row', gap: Spacing.sm }}>
+              {!room.next && (
+                <View style={{ flex: 1 }}>
+                  <Button
+                    title={t('schedule.button')}
+                    variant="ghost"
+                    icon="calendar"
+                    onPress={() => setSheet('schedule')}
+                  />
+                </View>
+              )}
+              {timer.phase !== 'focus' && !quizRunning && (
+                <View style={{ flex: 1 }}>
+                  <Button title={t('quiz.button')} variant="ghost" icon="trophy" onPress={() => setSheet('quiz')} />
+                </View>
+              )}
+            </View>
           )}
         </Card>
 
@@ -344,6 +450,14 @@ export default function RoomScreen() {
             onReport={() => void act(() => roomsApi.report(room.id, m.id)).then(() => setReported((r) => [...r, m.id]))}
           />
         ))}
+        {koraThinking && (
+          <View style={styles.thinking}>
+            <Ionicons name="sparkles" size={14} color={Colors.primary} />
+            <Text variant="small" color={Colors.primary}>
+              {t('kora.thinking')}
+            </Text>
+          </View>
+        )}
       </ScrollView>
 
       <SafeAreaView edges={['bottom']} style={styles.composer}>
@@ -352,12 +466,13 @@ export default function RoomScreen() {
             {note}
           </Text>
         )}
-        {quiet ? (
+        {quiet && (
           <Text variant="small" color={Colors.textSecondary} center>
-            {t('chatQuiet')}
+            {t('chatQuietKora')}
           </Text>
-        ) : (
-          <View style={styles.inputRow}>
+        )}
+        <View style={styles.inputRow}>
+          {!quiet && (
             <Pressable
               onPress={() => setSheet('share')}
               accessibilityRole="button"
@@ -365,27 +480,36 @@ export default function RoomScreen() {
               style={styles.round}>
               <Ionicons name="attach" size={22} color={Colors.primary} />
             </Pressable>
-            <TextInput
-              value={text}
-              onChangeText={setText}
-              placeholder={t('message')}
-              placeholderTextColor={Colors.textMuted}
-              maxLength={500}
-              accessibilityLabel={t('message')}
-              style={[styles.input, { flex: 1 }]}
-              onSubmitEditing={() => void send()}
-              returnKeyType="send"
-            />
-            <Pressable
-              onPress={() => void send()}
-              disabled={!text.trim()}
-              accessibilityRole="button"
-              accessibilityLabel={t('send')}
-              style={[styles.send, !text.trim() && { opacity: 0.4 }]}>
-              <Ionicons name="send" size={18} color="#fff" />
-            </Pressable>
-          </View>
-        )}
+          )}
+          <Pressable
+            onPress={() => setKoraMode((k) => !k)}
+            disabled={quiet}
+            accessibilityRole="switch"
+            accessibilityState={{ checked: toKora }}
+            accessibilityLabel={t('kora.toggle')}
+            style={[styles.round, toKora && { backgroundColor: Colors.primary }]}>
+            <Ionicons name="sparkles" size={20} color={toKora ? '#fff' : Colors.primary} />
+          </Pressable>
+          <TextInput
+            value={text}
+            onChangeText={setText}
+            placeholder={toKora ? t('kora.placeholder') : t('message')}
+            placeholderTextColor={Colors.textMuted}
+            maxLength={500}
+            accessibilityLabel={toKora ? t('kora.placeholder') : t('message')}
+            style={[styles.input, { flex: 1 }, toKora && { borderColor: Colors.primary }]}
+            onSubmitEditing={() => void send()}
+            returnKeyType="send"
+          />
+          <Pressable
+            onPress={() => void send()}
+            disabled={!text.trim() || asking}
+            accessibilityRole="button"
+            accessibilityLabel={t('send')}
+            style={[styles.send, (!text.trim() || asking) && { opacity: 0.4 }]}>
+            <Ionicons name="send" size={18} color="#fff" />
+          </Pressable>
+        </View>
         <Text variant="small" color={Colors.textMuted} style={{ fontSize: 11 }} center>
           {t('rules')}
         </Text>
@@ -412,6 +536,35 @@ export default function RoomScreen() {
         onClose={() => setSheet(null)}
         onShare={(s) => void act(() => roomsApi.share(room.id, s)).then(() => setSheet(null))}
       />
+      <QuizSheet
+        visible={sheet === 'quiz'}
+        roomSubject={room.subject}
+        busy={busy}
+        onClose={() => setSheet(null)}
+        onStart={(exam, subject) =>
+          void busyAct(async () => {
+            const res = await roomsApi.startQuiz(room.id, exam, subject);
+            setSheet(null);
+            return res;
+          })
+        }
+      />
+      <ScheduleSheet
+        visible={sheet === 'schedule'}
+        now={serverNow}
+        next={room.next}
+        busy={busy}
+        onClose={() => setSheet(null)}
+        onSchedule={(at, minutes) =>
+          void busyAct(async () => {
+            const res = await roomsApi.schedule(room.id, at, minutes);
+            setSheet(null);
+            return res;
+          })
+        }
+        onCancel={() => void act(() => roomsApi.schedule(room.id, null))}
+      />
+      <HistorySheet visible={sheet === 'history'} roomId={room.id} onClose={() => setSheet(null)} />
       <ConfirmDialog
         visible={!!confirm}
         icon="exit-outline"
@@ -451,14 +604,40 @@ function Shell({ children }: { children: React.ReactNode }) {
 function Message({ m, reported, onReport }: { m: RoomMessage; reported: boolean; onReport: () => void }) {
   const { t } = useTranslation('rooms');
   const tx = t as unknown as (key: string, options?: Record<string, unknown>) => string;
+  const te = useTranslation('exams').t as unknown as (key: string) => string;
   if (m.kind === 'system') {
-    const d = m.data as { event: string; name?: string } | undefined;
+    const d = m.data as SystemData | undefined;
     return (
       <Text variant="small" color={Colors.textMuted} center style={{ fontSize: 12 }}>
-        {tx(`system.${d?.event ?? m.text}`, { name: d?.name ?? t('someone') })}
+        {tx(`system.${d?.event ?? m.text}`, {
+          name: d?.name ?? t('someone'),
+          count: d?.count,
+          points: d?.points,
+          minutes: d?.minutes,
+          time: d?.at ? when(d.at, { today: t('today'), tomorrow: t('tomorrow') }) : '',
+          quiz: d?.exam && d.subject ? `${te(`exams.${d.exam}.name`)} ${te(`subjects.${d.subject}`)}` : '',
+        })}
       </Text>
     );
   }
+  if (m.kind === 'kora') {
+    const d = m.data as { askedBy?: string } | undefined;
+    return (
+      <View style={styles.bubbleRow}>
+        <View style={styles.koraFace}>
+          <Ionicons name="sparkles" size={16} color="#fff" />
+        </View>
+        <View style={[styles.bubble, styles.kora]}>
+          <Text style={{ fontFamily: Fonts.bold, fontSize: 12 }} color={Colors.primary}>
+            {t('kora.name')}
+            {d?.askedBy ? ` · ${t('kora.answering', { name: d.askedBy })}` : ''}
+          </Text>
+          <Text variant="body">{m.text}</Text>
+        </View>
+      </View>
+    );
+  }
+  const askedKora = !!m.data && 'toKora' in m.data;
   const who = m.mine ? t('you') : (m.name ?? t('learner'));
   const share = m.kind === 'share' ? (m.data as ShareItem) : null;
   return (
@@ -467,6 +646,13 @@ function Message({ m, reported, onReport }: { m: RoomMessage; reported: boolean;
         {!m.mine && (
           <Text style={{ fontFamily: Fonts.bold, fontSize: 12 }} color={Colors.primary}>
             {who}
+          </Text>
+        )}
+        {askedKora && (
+          <Text
+            style={{ fontFamily: Fonts.semibold, fontSize: 11 }}
+            color={m.mine ? 'rgba(255,255,255,0.85)' : Colors.textSecondary}>
+            ✨ {t('kora.to')}
           </Text>
         )}
         {share ? (
@@ -518,35 +704,6 @@ function Message({ m, reported, onReport }: { m: RoomMessage; reported: boolean;
         )}
       </View>
     </View>
-  );
-}
-
-function Sheet({
-  visible,
-  title,
-  onClose,
-  children,
-}: {
-  visible: boolean;
-  title: string;
-  onClose: () => void;
-  children: React.ReactNode;
-}) {
-  return (
-    <Modal visible={visible} transparent animationType="slide" onRequestClose={onClose}>
-      <View style={styles.backdrop}>
-        <Pressable style={{ flex: 1 }} onPress={onClose} accessibilityRole="button" accessibilityLabel={title} />
-        <SafeAreaView edges={['bottom']} style={styles.sheet}>
-          <View style={styles.rowBetween}>
-            <Text variant="heading">{title}</Text>
-            <Pressable onPress={onClose} accessibilityRole="button" hitSlop={10}>
-              <Ionicons name="close" size={24} color={Colors.text} />
-            </Pressable>
-          </View>
-          {children}
-        </SafeAreaView>
-      </View>
-    </Modal>
   );
 }
 
@@ -806,13 +963,28 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.surfaceRaised,
     minWidth: 220,
   },
-  backdrop: { flex: 1, backgroundColor: 'rgba(0,0,0,0.4)' },
-  sheet: {
-    gap: Spacing.sm,
-    padding: Spacing.md,
-    borderTopLeftRadius: Radius.lg,
-    borderTopRightRadius: Radius.lg,
-    backgroundColor: Colors.surface,
+  streak: {
+    minWidth: 40,
+    height: 32,
+    paddingHorizontal: 10,
+    borderRadius: Radius.pill,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: Colors.surfaceRaised,
   },
+  streakOn: { backgroundColor: Colors.reward },
+  next: { paddingVertical: 6, borderRadius: Radius.md, backgroundColor: Colors.primarySoft },
+  thinking: { flexDirection: 'row', alignItems: 'center', gap: 6, paddingLeft: 40 },
+  koraFace: {
+    width: 32,
+    height: 32,
+    borderRadius: 16,
+    marginRight: 8,
+    alignSelf: 'flex-end',
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: Colors.primary,
+  },
+  kora: { backgroundColor: Colors.primarySoft, borderWidth: 1, borderColor: Colors.primary, borderBottomLeftRadius: 4 },
   personRow: { flexDirection: 'row', alignItems: 'center', gap: Spacing.sm, paddingVertical: Spacing.xs },
 });

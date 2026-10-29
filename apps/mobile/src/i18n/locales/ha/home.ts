@@ -270,7 +270,20 @@ const home: Translation<typeof en> = {
       studyRoomInvite: {
         title: '{{name}} ya gayyace ka karatu',
         body: 'Shiga ɗakin "{{room}}" ku yi karatu tare.',
-        detail: 'Ɗakunan Karatu suna bai wa abokai damar yin karatu tare da agogon mayar da hankali ɗaya, burin ɗaki da hira.',
+        detail:
+          'Ɗakunan Karatu suna bai wa abokai damar yin karatu tare da agogon mayar da hankali ɗaya, burin ɗaki da hira.',
+        cta: 'Buɗe ɗaki',
+      },
+      studyRoomScheduled: {
+        title: '{{name}} ya tsara zaman karatu',
+        body: '{{room}}: {{time}}, minti {{minutes}} na mayar da hankali.',
+        detail: 'Zaman zai fara da kansa a ɗakin. Za ka sami tunatarwa minti 10 kafin lokaci.',
+        cta: 'Buɗe ɗaki',
+      },
+      studyRoomStarting: {
+        title: 'Zaman karatu ya kusa',
+        body: '{{room}} zai fara mayar da hankali da {{time}}. Ka haɗu da abokanka!',
+        detail: 'Duk wanda ke cikin ɗakin lokacin da zaman mayar da hankali ya ƙare yana samun lokacin karatu da XP.',
         cta: 'Buɗe ɗaki',
       },
       generic: {

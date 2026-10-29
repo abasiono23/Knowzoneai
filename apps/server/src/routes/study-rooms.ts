@@ -1,15 +1,36 @@
 import { Router } from 'express';
 import { z } from 'zod';
 
+import { EXAM_SUBJECTS, EXAMS } from '../data/exams.js';
 import { prisma } from '../db.js';
 import { AppError, notFound } from '../lib/errors.js';
+import { localDayKey } from '../lib/time.js';
 import { friendIds } from '../services/friends.js';
 import { restrictionOf } from '../services/help.js';
+import { requestLanguage } from '../services/language.js';
 import { flagged } from '../services/moderation.js';
 import { notify } from '../services/notifications.js';
+import { koraReply } from '../services/room-kora.js';
 import { me, requireAuth } from '../services/sessions.js';
-import { listedFor, MAX_MEMBERS, MAX_ROOMS, newCode, roomState, roomSummary, systemMessage } from '../services/study-rooms.js';
+import {
+  closesAt,
+  drawQuestions,
+  listedFor,
+  liveStreak,
+  MAX_MEMBERS,
+  MAX_ROOMS,
+  newCode,
+  opensAt,
+  points,
+  QUIZ,
+  QUIZ_MS,
+  roomState,
+  roomSummary,
+  systemMessage,
+  type QuizQuestion,
+} from '../services/study-rooms.js';
 import type { User } from '../generated/prisma/client.js';
+import { requireAllowance } from './tutor.js';
 
 /**
  * Study Rooms (Core): create a room, invite friends or share its code, study together with a shared
@@ -20,6 +41,9 @@ export const studyRoomsRouter = Router();
 studyRoomsRouter.use(['/me/study-rooms', '/me/study-rooms/*rest'], requireAuth);
 
 const REPORTS_TO_HIDE = 2;
+const DAY = 86_400_000;
+/** A quiz answer sent just as time runs out still counts. */
+const GRACE_MS = 1500;
 const firstName = (u: Pick<User, 'name'>) => u.name.trim().split(/\s+/)[0] ?? '';
 
 async function member(roomId: string, user: User) {
@@ -255,6 +279,135 @@ studyRoomsRouter.post('/me/study-rooms/:id/goal', async (req, res) => {
   await prisma.studyRoomMember.update({ where: { roomId_userId: { roomId: m.roomId, userId: user.id } }, data: { goalDone: done } });
   if (done && !m.goalDone) await systemMessage(m.roomId, 'goalDone', firstName(user));
   res.json(await roomState(m.roomId, user));
+});
+
+/** Kora answers a question in the room for everyone to read. Uses one of the asker's daily tutor questions. */
+const koraBusy = new Set<string>();
+studyRoomsRouter.post('/me/study-rooms/:id/kora', async (req, res) => {
+  const user = me(req);
+  const m = await member(String(req.params.id), user);
+  const { question } = z.object({ question: z.string().trim().min(2).max(500) }).parse(req.body);
+  if (koraBusy.has(m.roomId)) throw new AppError(429, 'Kora is answering another question. Try again in a moment.', 'kora-busy');
+  await screened(user, question);
+  await requireAllowance(user.id, user.plan);
+  koraBusy.add(m.roomId);
+  try {
+    // The last few messages give Kora the context (without names).
+    const recent = await prisma.studyRoomMessage.findMany({
+      where: { roomId: m.roomId, hidden: false, kind: { in: ['text', 'kora'] } },
+      orderBy: { createdAt: 'desc' },
+      take: 8,
+    });
+    const asked = await prisma.studyRoomMessage.create({ data: { roomId: m.roomId, userId: user.id, kind: 'text', text: question, data: { toKora: true } } });
+    try {
+      const answer = await koraReply(user.id, {
+        question,
+        room: m.room.name,
+        subject: m.room.subject,
+        recent: recent.reverse().map((x) => ({ name: x.kind === 'kora' ? 'Kora' : x.userId === user.id ? 'Asker' : 'Student', text: x.text.slice(0, 300) })),
+        language: requestLanguage(req),
+      });
+      await prisma.studyRoomMessage.create({ data: { roomId: m.roomId, kind: 'kora', text: answer, data: { replyTo: asked.id, askedBy: firstName(user) } } });
+    } catch (e) {
+      await systemMessage(m.roomId, 'koraFailed');
+      throw e;
+    }
+  } finally {
+    koraBusy.delete(m.roomId);
+  }
+  res.status(201).json(await roomState(m.roomId, user));
+});
+
+/** Quiz battle (host): 10 past-paper questions everyone answers at once. For breaks, not focus time. */
+studyRoomsRouter.post('/me/study-rooms/:id/quiz', async (req, res) => {
+  const user = me(req);
+  const m = await host(String(req.params.id), user);
+  const { exam, subject } = z.object({ exam: z.enum(EXAMS), subject: z.enum(EXAM_SUBJECTS) }).parse(req.body);
+  if (m.room.phase === 'focus' && (m.room.phaseEndsAt?.getTime() ?? 0) > Date.now())
+    throw new AppError(409, 'Quizzes are for breaks. Wait until focus time ends.', 'focus');
+  if (await prisma.studyRoomQuiz.findFirst({ where: { roomId: m.roomId, startedAt: { gt: new Date(Date.now() - QUIZ_MS) } } }))
+    throw new AppError(409, 'A quiz is already running.', 'running');
+  const questions = drawQuestions(exam, subject);
+  if (questions.length < QUIZ.count) throw new AppError(404, 'There aren’t enough questions for that subject yet.', 'no-questions');
+  await prisma.studyRoomQuiz.create({ data: { roomId: m.roomId, exam, subject, questions, startedAt: new Date() } });
+  await systemMessage(m.roomId, 'quizStarted', firstName(user), { exam, subject });
+  res.status(201).json(await roomState(m.roomId, user));
+});
+
+/** One answer per question, while it's open. Whether it was right shows when the question closes. */
+studyRoomsRouter.post('/me/study-rooms/:id/quiz/answer', async (req, res) => {
+  const user = me(req);
+  const m = await member(String(req.params.id), user);
+  const body = z
+    .object({
+      quizId: z.string().max(40),
+      index: z
+        .number()
+        .int()
+        .min(0)
+        .max(QUIZ.count - 1),
+      choice: z.number().int().min(0).max(4),
+    })
+    .parse(req.body);
+  const quiz = await prisma.studyRoomQuiz.findFirst({ where: { id: body.quizId, roomId: m.roomId } });
+  if (!quiz) throw notFound('Quiz not found');
+  const now = Date.now();
+  const closes = closesAt(quiz, body.index);
+  if (now < opensAt(quiz, body.index) || now > closes + GRACE_MS) throw new AppError(409, 'Time’s up for that question.', 'closed');
+  const q = (quiz.questions as QuizQuestion[])[body.index];
+  if (!q || body.choice >= q.options.length) throw new AppError(400, 'That isn’t one of the options.', 'option');
+  const correct = body.choice === q.answer;
+  await prisma.studyRoomQuizAnswer
+    .create({ data: { quizId: quiz.id, userId: user.id, index: body.index, choice: body.choice, correct, points: points(correct, now, closes) } })
+    .catch((e: { code?: string }) => Promise.reject(e.code === 'P2002' ? new AppError(409, 'You already answered this one.', 'answered') : e));
+  res.json({ ok: true });
+});
+
+/** Schedule the next focus session (host): members are told now and reminded before it starts. */
+studyRoomsRouter.post('/me/study-rooms/:id/schedule', async (req, res) => {
+  const user = me(req);
+  const m = await host(String(req.params.id), user);
+  const body = z.object({ at: z.number().int().nullable(), minutes: z.union([z.literal(25), z.literal(50)]).default(25) }).parse(req.body);
+  if (body.at === null) {
+    if (m.room.nextSessionAt) {
+      await prisma.studyRoom.update({ where: { id: m.roomId }, data: { nextSessionAt: null } });
+      await systemMessage(m.roomId, 'scheduleCancelled', firstName(user));
+    }
+  } else {
+    if (body.at < Date.now() + 60_000 || body.at > Date.now() + 7 * DAY) throw new AppError(400, 'Pick a time in the next 7 days.', 'time');
+    await prisma.studyRoom.update({ where: { id: m.roomId }, data: { nextSessionAt: new Date(body.at), nextSessionMinutes: body.minutes, remindedAt: null } });
+    await systemMessage(m.roomId, 'scheduled', firstName(user), { at: body.at, minutes: body.minutes });
+    const others = await prisma.studyRoomMember.findMany({ where: { roomId: m.roomId, userId: { not: user.id } }, select: { userId: true } });
+    for (const o of others)
+      await notify(o.userId, {
+        type: 'reminder',
+        template: 'studyRoomScheduled',
+        params: { name: firstName(user), room: m.room.name, at: body.at, minutes: body.minutes },
+        href: `/rooms/${m.roomId}`,
+      });
+  }
+  res.json(await roomState(m.roomId, user));
+});
+
+/** The room's history: streak, totals, minutes on each of the last 7 days and recent sessions. */
+studyRoomsRouter.get('/me/study-rooms/:id/history', async (req, res) => {
+  const m = await member(String(req.params.id), me(req));
+  const since = new Date(Date.now() - 7 * DAY);
+  const [recent, totals, quizzes] = await Promise.all([
+    prisma.studyRoomSession.findMany({ where: { roomId: m.roomId, endedAt: { gte: since } }, orderBy: { endedAt: 'desc' } }),
+    prisma.studyRoomSession.aggregate({ where: { roomId: m.roomId }, _sum: { minutes: true }, _count: { _all: true } }),
+    prisma.studyRoomQuiz.count({ where: { roomId: m.roomId } }),
+  ]);
+  const days = Array.from({ length: 7 }, (_, i) => localDayKey(new Date(Date.now() - (6 - i) * DAY)));
+  res.json({
+    streak: liveStreak(m.room),
+    bestStreak: m.room.bestStreak,
+    totalSessions: totals._count._all,
+    totalMinutes: totals._sum.minutes ?? 0,
+    quizzes,
+    days: days.map((day) => ({ day, minutes: recent.filter((s) => localDayKey(s.endedAt) === day).reduce((n, s) => n + s.minutes, 0) })),
+    sessions: recent.slice(0, 10).map((s) => ({ endedAt: s.endedAt.getTime(), minutes: s.minutes, people: s.people })),
+  });
 });
 
 studyRoomsRouter.post('/me/study-rooms/:id/leave', async (req, res) => {

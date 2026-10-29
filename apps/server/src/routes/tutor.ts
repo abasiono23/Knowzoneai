@@ -44,7 +44,7 @@ async function usageOf(userId: string, plan: Plan) {
   return { limit, used, remaining: Math.max(0, limit - used), resetAt: start.getTime() + DAY };
 }
 
-async function requireAllowance(userId: string, plan: Plan) {
+export async function requireAllowance(userId: string, plan: Plan) {
   const usage = await usageOf(userId, plan);
   if (usage.remaining <= 0)
     throw new AppError(429, `You’ve used all ${usage.limit} tutor questions for today.`, 'tutor-limit');

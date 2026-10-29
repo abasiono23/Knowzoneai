@@ -1,6 +1,7 @@
 import type { Ionicons } from '@expo/vector-icons';
 import type { TFunction } from 'i18next';
 
+import { formatDate, formatTime } from '@/i18n';
 import type home from '@/i18n/locales/en/home';
 
 import type { ServerNotification } from './api';
@@ -71,7 +72,16 @@ export const fromServer = (n: ServerNotification): AppNotification => ({
 
 const isTemplate = (x: string | undefined): x is TemplateId =>
   !!x &&
-  ['welcome', 'referralJoined', 'referralConfirmed', 'newLesson', 'renewalReminder', 'subscriptionExpired', 'ticketReply', 'generic'].includes(x);
+  [
+    'welcome',
+    'referralJoined',
+    'referralConfirmed',
+    'newLesson',
+    'renewalReminder',
+    'subscriptionExpired',
+    'ticketReply',
+    'generic',
+  ].includes(x);
 
 /** A notification's text in the current language. */
 export function notificationText(n: AppNotification, t: TFunction<'home'>) {
@@ -89,6 +99,9 @@ export function notificationText(n: AppNotification, t: TFunction<'home'>) {
   if (lesson) params.lesson = lesson.title;
   const subject = typeof params.subjectId === 'string' ? getSubject(params.subjectId) : undefined;
   if (subject) params.subject = subjectName(subject, t);
+  // Study room sessions: the time in the reader's language and time zone.
+  if (typeof params.at === 'number')
+    params.time = `${formatDate(params.at, { weekday: 'short', day: 'numeric', month: 'short' })}, ${formatTime(params.at)}`;
   const key = isTemplate(n.template) ? n.template : 'generic';
   return {
     title: t(`notifications.templates.${key}.title`, params),

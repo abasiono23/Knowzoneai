@@ -272,6 +272,18 @@ const home: Translation<typeof en> = {
         detail: 'Yàrá Ìkẹ́kọ̀ọ́ jẹ́ kí àwọn ọ̀rẹ́ kẹ́kọ̀ọ́ papọ̀ pẹ̀lú aago ìfọkànsí kan, àfojúsùn yàrá àti ìjíròrò.',
         cta: 'Ṣí yàrá',
       },
+      studyRoomScheduled: {
+        title: '{{name}} ṣètò ìpele ìkẹ́kọ̀ọ́',
+        body: '{{room}}: {{time}}, ìfọkànsí ìṣẹ́jú {{minutes}}.',
+        detail: 'Ìpele náà yóò bẹ̀rẹ̀ fúnra rẹ̀ nínú yàrá. Wàá gba ìránnilétí ìṣẹ́jú 10 ṣáájú.',
+        cta: 'Ṣí yàrá',
+      },
+      studyRoomStarting: {
+        title: 'Ìpele ìkẹ́kọ̀ọ́ ń bọ̀',
+        body: '{{room}} yóò bẹ̀rẹ̀ ìfọkànsí ní {{time}}. Darapọ̀ mọ́ àwọn ọ̀rẹ́ rẹ!',
+        detail: 'Gbogbo ẹni tó wà nínú yàrá nígbà tí ìpele ìfọkànsí bá parí ń gba àkókò ìkẹ́kọ̀ọ́ àti XP.',
+        cta: 'Ṣí yàrá',
+      },
       generic: {
         title: 'Knowzone',
         body: 'O ní ìròyìn tuntun.',

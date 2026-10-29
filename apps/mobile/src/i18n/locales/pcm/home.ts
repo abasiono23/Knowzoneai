@@ -272,6 +272,18 @@ const home: Translation<typeof en> = {
         detail: 'Study Rooms make padi dem study together with one focus timer, room goal and chat.',
         cta: 'Open room',
       },
+      studyRoomScheduled: {
+        title: '{{name}} fix study session',
+        body: '{{room}}: {{time}}, {{minutes}} minutes of focus.',
+        detail: 'The session go start by itself for the room. You go get reminder 10 minutes before.',
+        cta: 'Open room',
+      },
+      studyRoomStarting: {
+        title: 'Study session dey come soon',
+        body: '{{room}} go start focus by {{time}}. Join your padi dem!',
+        detail: 'Everybody wey dey the room when focus session finish go gain study time and XP.',
+        cta: 'Open room',
+      },
       generic: {
         title: 'Knowzone',
         body: 'You get new update.',

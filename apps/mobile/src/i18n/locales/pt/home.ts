@@ -280,7 +280,20 @@ const home: Translation<typeof en> = {
       studyRoomInvite: {
         title: '{{name}} convidou-te para estudar',
         body: 'Entra na sala «{{room}}» e estudem juntos.',
-        detail: 'As Salas de Estudo permitem estudar com amigos com um temporizador de foco partilhado, um objetivo da sala e um chat.',
+        detail:
+          'As Salas de Estudo permitem estudar com amigos com um temporizador de foco partilhado, um objetivo da sala e um chat.',
+        cta: 'Abrir sala',
+      },
+      studyRoomScheduled: {
+        title: '{{name}} marcou uma sessão de estudo',
+        body: '{{room}}: {{time}}, {{minutes}} minutos de foco.',
+        detail: 'A sessão começa sozinha na sala. Vais receber um lembrete 10 minutos antes.',
+        cta: 'Abrir sala',
+      },
+      studyRoomStarting: {
+        title: 'Sessão de estudo em breve',
+        body: '{{room}} começa o foco às {{time}}. Junta-te aos teus amigos!',
+        detail: 'Todos os que estão na sala quando uma sessão de foco termina ganham tempo de estudo e XP.',
         cta: 'Abrir sala',
       },
       generic: {

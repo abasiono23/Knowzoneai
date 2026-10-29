@@ -270,7 +270,20 @@ const home: Translation<typeof en> = {
       studyRoomInvite: {
         title: '{{name}} amekualika kusoma',
         body: 'Jiunge na chumba “{{room}}” msome pamoja.',
-        detail: 'Vyumba vya Kusoma huwawezesha marafiki kusoma pamoja kwa kipima muda kimoja cha umakini, lengo la chumba na gumzo.',
+        detail:
+          'Vyumba vya Kusoma huwawezesha marafiki kusoma pamoja kwa kipima muda kimoja cha umakini, lengo la chumba na gumzo.',
+        cta: 'Fungua chumba',
+      },
+      studyRoomScheduled: {
+        title: '{{name}} amepanga kipindi cha kusoma',
+        body: '{{room}}: {{time}}, dakika {{minutes}} za umakini.',
+        detail: 'Kipindi kitaanza chenyewe chumbani. Utapata kikumbusho dakika 10 kabla.',
+        cta: 'Fungua chumba',
+      },
+      studyRoomStarting: {
+        title: 'Kipindi cha kusoma kinakaribia',
+        body: '{{room}} kitaanza umakini saa {{time}}. Jiunge na marafiki zako!',
+        detail: 'Kila aliye chumbani kipindi cha umakini kinapoisha hupata muda wa kusoma na XP.',
         cta: 'Fungua chumba',
       },
       generic: {
