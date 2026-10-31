@@ -53,8 +53,10 @@ waitlistRouter.post('/waitlist', limiter, async (req, res) => {
   }
   if (!entry) throw new Error('Waitlist entry missing');
   const position = await prisma.waitlistEntry.count({ where: { createdAt: { lte: entry.createdAt } } });
+  // The email goes out in the background: the person sees their place in line straight away, even when
+  // the mail server is slow or can't be reached.
   if (!existing)
-    await sendEmail({ to: entry.email, ...emails.waitlist(entry.name.split(/\s+/)[0]!, position) }).catch((e) =>
+    void sendEmail({ to: entry.email, ...emails.waitlist(entry.name.split(/\s+/)[0]!, position) }).catch((e) =>
       console.warn('Waitlist email failed', (e as Error).message),
     );
   res.status(existing ? 200 : 201).json({ ok: true, position, already: !!existing });

@@ -18,6 +18,10 @@ const smtp =
         port: config.SMTP_PORT,
         secure: config.SMTP_PORT === 465,
         auth: { user: config.SMTP_USER, pass: config.SMTP_PASS },
+        // Give up in seconds, not minutes, when the mail server can't be reached.
+        connectionTimeout: 10_000,
+        greetingTimeout: 10_000,
+        socketTimeout: 20_000,
       })
     : null;
 
