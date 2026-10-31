@@ -12,11 +12,10 @@ import { Card, IconButton, ProgressBar, Screen, SectionHeader, StatPill, Text } 
 import { CoursesRail } from '@/components/courses/courses-rail';
 import { VideosBanner } from '@/components/videos/videos-banner';
 import { Colors, Gradients, Palette, Radius, Spacing } from '@/constants/theme';
-import { getLesson, matchSubject, subjectName, trending, LESSONS } from '@/lib/catalog';
+import { getLesson, matchSubject, subjectName, LESSONS } from '@/lib/catalog';
 import { buildPlan } from '@/lib/learning-plan';
 import { useLibrary } from '@/lib/library-store';
 import { useMaterials } from '@/lib/studio/store';
-import { reasonText, recommend } from '@/lib/recommend';
 import { useActivity } from '@/lib/rewards/activity';
 import { useSession } from '@/lib/session';
 
@@ -63,7 +62,6 @@ export default function HomeScreen() {
   const inProgress = lib.recent
     .map((r) => getLesson(r.id))
     .filter((l): l is NonNullable<typeof l> => !!l && (lib.progress[l.id] ?? 0) > 0 && (lib.progress[l.id] ?? 0) < 1);
-  const recs = useMemo(() => recommend(lib.personalization, lib.progress, 8), [lib.personalization, lib.progress]);
 
   // Today's slot from the personal plan, matched to a catalogue lesson for that subject.
   const today = useMemo(() => {
@@ -330,23 +328,6 @@ export default function HomeScreen() {
       )}
 
       <CoursesRail />
-
-      <Rail title={t('home.recommended')} onSeeAll={() => router.push('/recommended')}>
-        {recs.map((r) => (
-          <LessonCard key={r.lesson.id} lesson={r.lesson} variant="tile" reason={reasonText(r.reason, t)} />
-        ))}
-      </Rail>
-
-      <View style={{ gap: Spacing.xs }}>
-        <SectionHeader
-          title={t('home.trending')}
-          action={t('actions.seeAll', { ns: 'common' })}
-          onAction={() => router.push('/trending')}
-        />
-        {trending(undefined, 3).map((l, i) => (
-          <LessonCard key={l.id} lesson={l} rank={i + 1} />
-        ))}
-      </View>
 
       {packs.length > 0 && (
         <View style={{ gap: Spacing.sm }}>

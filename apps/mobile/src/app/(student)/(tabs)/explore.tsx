@@ -1,16 +1,20 @@
 import { Ionicons } from '@expo/vector-icons';
 import { LinearGradient } from '@/components/ui/gradient';
 import { router } from 'expo-router';
+import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Pressable, ScrollView, StyleSheet, View } from 'react-native';
 
 import { LessonCard } from '@/components/content/lesson-card';
+import { Rail } from '@/components/content/rail';
 import { SubjectTile } from '@/components/content/subject-tile';
 import { SectionHeader, Screen, Text } from '@/components/ui';
 import { CoursesRail } from '@/components/courses/courses-rail';
 import { VideosBanner } from '@/components/videos/videos-banner';
 import { Colors, Radius, Spacing } from '@/constants/theme';
 import { CATEGORIES, categoryName, LESSONS, SUBJECTS, trending } from '@/lib/catalog';
+import { useLibrary } from '@/lib/library-store';
+import { reasonText, recommend } from '@/lib/recommend';
 
 const COLLECTIONS = [
   {
@@ -32,6 +36,8 @@ const COLLECTIONS = [
 
 export default function ExploreScreen() {
   const { t } = useTranslation('home');
+  const lib = useLibrary();
+  const recs = useMemo(() => recommend(lib.personalization, lib.progress, 8), [lib.personalization, lib.progress]);
   return (
     <Screen>
       <View style={{ gap: Spacing.xxs }}>
@@ -85,6 +91,12 @@ export default function ExploreScreen() {
           ))}
         </View>
       </View>
+
+      <Rail title={t('home.recommended')} onSeeAll={() => router.push('/recommended')}>
+        {recs.map((r) => (
+          <LessonCard key={r.lesson.id} lesson={r.lesson} variant="tile" reason={reasonText(r.reason, t)} />
+        ))}
+      </Rail>
 
       <View style={{ gap: Spacing.xs }}>
         <SectionHeader
