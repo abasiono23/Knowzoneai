@@ -13,11 +13,13 @@ import {
   TextInput,
   useWindowDimensions,
   View,
+  type GestureResponderEvent,
 } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { YouTubePlayer } from '@/components/courses/youtube-player';
 import { CommentsSheet } from '@/components/reels/comments-sheet';
+import { HeartBurst, heartAt, tapTime, type Heart } from '@/components/reels/heart-burst';
 import { Text } from '@/components/ui';
 import { Colors, Fonts, Radius, Spacing } from '@/constants/theme';
 import { errorText } from '@/i18n/errors';
@@ -326,6 +328,23 @@ function VideoItem({
   const { user } = useSession();
   const insets = useSafeAreaInsets();
   const subject = getSubject(video.subject);
+  const [hearts, setHearts] = useState<Heart[]>([]);
+  const lastTap = useRef(0);
+
+  // Two quick taps anywhere outside the player like the video, with a heart where you tapped.
+  const doubleTap = (e: GestureResponderEvent) => {
+    const now = tapTime();
+    if (now - lastTap.current >= 300) {
+      lastTap.current = now;
+      return;
+    }
+    lastTap.current = 0;
+    if (!user) return;
+    const heart = heartAt(e);
+    setHearts((h) => [...h, heart]);
+    setTimeout(() => setHearts((h) => h.filter((x) => x.id !== heart.id)), 1000);
+    if (!video.liked) void like();
+  };
 
   const like = async () => {
     if (!user) return;
@@ -379,6 +398,7 @@ function VideoItem({
         blurRadius={40}
       />
       <View style={[StyleSheet.absoluteFill, { backgroundColor: 'rgba(0,0,0,0.6)' }]} />
+      <Pressable style={StyleSheet.absoluteFill} onPress={doubleTap} accessible={false} />
 
       <View style={styles.stage}>
         {active ? (
@@ -431,6 +451,9 @@ function VideoItem({
           </Text>
         </Pressable>
       </View>
+      {hearts.map((h) => (
+        <HeartBurst key={h.id} heart={h} />
+      ))}
     </View>
   );
 }

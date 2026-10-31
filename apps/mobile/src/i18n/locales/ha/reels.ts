@@ -12,6 +12,8 @@ const reels: Translation<typeof en> = {
   card: '{{n}} cikin {{total}}',
   previous: 'Katin baya',
   next: 'Katin gaba',
+  pause: 'Dakata',
+  play: 'Ci gaba',
   like: 'So',
   unlike: 'Cire so',
   comments: 'Sharhi',

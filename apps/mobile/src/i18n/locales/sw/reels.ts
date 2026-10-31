@@ -12,6 +12,8 @@ const reels: Translation<typeof en> = {
   card: '{{n}} kati ya {{total}}',
   previous: 'Kadi iliyopita',
   next: 'Kadi inayofuata',
+  pause: 'Simamisha',
+  play: 'Endelea',
   like: 'Penda',
   unlike: 'Ondoa kupenda',
   comments: 'Maoni',

@@ -12,6 +12,8 @@ const reels: Translation<typeof en> = {
   card: '{{n}} n’ime {{total}}',
   previous: 'Kaadị gara aga',
   next: 'Kaadị ọzọ',
+  pause: 'Kwụsịtụ',
+  play: 'Gaa n’ihu',
   like: 'Hụ n’anya',
   unlike: 'Wepụ mmasị',
   comments: 'Nkọwa',

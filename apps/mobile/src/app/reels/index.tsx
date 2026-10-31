@@ -3,11 +3,30 @@ import { Image } from 'expo-image';
 import { router, useFocusEffect } from 'expo-router';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { ActivityIndicator, FlatList, Pressable, Share, StyleSheet, useWindowDimensions, View } from 'react-native';
-import Animated, { Easing, FadeInDown, useAnimatedStyle, useSharedValue, withTiming } from 'react-native-reanimated';
+import {
+  ActivityIndicator,
+  FlatList,
+  Pressable,
+  Share,
+  StyleSheet,
+  useWindowDimensions,
+  View,
+  type GestureResponderEvent,
+} from 'react-native';
+import Animated, {
+  cancelAnimation,
+  Easing,
+  FadeIn,
+  FadeInDown,
+  FadeOut,
+  useAnimatedStyle,
+  useSharedValue,
+  withTiming,
+} from 'react-native-reanimated';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { CommentsSheet } from '@/components/reels/comments-sheet';
+import { HeartBurst, heartAt, tapTime, type Heart } from '@/components/reels/heart-burst';
 import { LinearGradient } from '@/components/ui/gradient';
 import { Text } from '@/components/ui';
 import { Colors, Fonts, Radius, Spacing } from '@/constants/theme';
@@ -154,32 +173,70 @@ function ReelView({
   const { user } = useSession();
   const insets = useSafeAreaInsets();
   const [k, setK] = useState(0);
+  // Paused with the button, or held down with a finger.
   const [paused, setPaused] = useState(false);
+  const [held, setHeld] = useState(false);
+  const stopped = paused || held;
   const card = reel.cards[k]!;
   const zoom = useSharedValue(1);
   const progress = useSharedValue(0);
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  // How much of the current card has played, so a pause carries on from the same moment.
+  const played = useRef(0);
+  const [hearts, setHearts] = useState<Heart[]>([]);
+  const lastTap = useRef(0);
+  const tapTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  // A new card starts from the beginning.
+  useEffect(() => {
+    played.current = 0;
+    zoom.set(1);
+    progress.set(0);
+  }, [k, reel.id, zoom, progress]);
 
   // Play the current card: narration, the picture's slow zoom, the progress bar, then the next card.
+  // Pausing freezes all three; playing again picks up where they stopped.
   useEffect(() => {
-    if (!active || paused) return;
-    const seconds = cardSeconds(card, sound && !!card.audio);
-    if (sound && card.audio) narrator.speak(card.text, 'ada', 1, media(card.audio));
-    zoom.set(1);
-    zoom.set(withTiming(1.14, { duration: seconds * 1000, easing: Easing.linear }));
-    progress.set(0);
-    progress.set(withTiming(1, { duration: seconds * 1000, easing: Easing.linear }));
-    timer.current = setTimeout(() => setK((n) => (n + 1) % reel.cards.length), seconds * 1000);
+    if (!active || stopped) return;
+    const left = Math.max(0, cardSeconds(card, sound && !!card.audio) * 1000 - played.current);
+    const started = Date.now();
+    if (sound && card.audio) narrator.speak(card.text, 'ada', 1, media(card.audio), played.current / 1000);
+    zoom.set(withTiming(1.14, { duration: left, easing: Easing.linear }));
+    progress.set(withTiming(1, { duration: left, easing: Easing.linear }));
+    timer.current = setTimeout(() => setK((n) => (n + 1) % reel.cards.length), left);
     return () => {
       if (timer.current) clearTimeout(timer.current);
+      played.current += Date.now() - started;
+      cancelAnimation(zoom);
+      cancelAnimation(progress);
       narrator.stop();
     };
-  }, [active, paused, k, sound, card, reel.cards.length, zoom, progress]);
+  }, [active, stopped, k, sound, card, reel.cards.length, zoom, progress]);
 
   const picture = useAnimatedStyle(() => ({
     transform: [{ scale: zoom.get() }, { translateY: (zoom.get() - 1) * -60 }],
   }));
   const bar = useAnimatedStyle(() => ({ width: `${progress.get() * 100}%` }));
+
+  /**
+   * A single tap moves between cards (or plays again when paused); two quick taps like the reel, with a
+   * heart where you tapped. The single tap waits a moment, in case a second tap is coming.
+   */
+  const tap = (e: GestureResponderEvent, single: () => void) => {
+    const now = tapTime();
+    if (now - lastTap.current < 280) {
+      lastTap.current = 0;
+      if (tapTimer.current) clearTimeout(tapTimer.current);
+      if (!user) return;
+      const heart = heartAt(e);
+      setHearts((h) => [...h, heart]);
+      setTimeout(() => setHearts((h) => h.filter((x) => x.id !== heart.id)), 1000);
+      if (!reel.liked) void like();
+      return;
+    }
+    lastTap.current = now;
+    tapTimer.current = setTimeout(() => (paused ? setPaused(false) : single()), 280);
+  };
 
   const like = async () => {
     if (!user) return;
@@ -224,25 +281,38 @@ function ReelView({
         ))}
       </View>
 
-      {/* Tap left for the previous card, right for the next; hold to pause. */}
+      {/* Tap left for the previous card, right for the next; double-tap to like; hold to pause. */}
       <View style={styles.taps}>
         <Pressable
           style={{ flex: 1 }}
-          onPress={() => setK((n) => Math.max(0, n - 1))}
-          onLongPress={() => setPaused(true)}
-          onPressOut={() => setPaused(false)}
+          onPress={(e) => tap(e, () => setK((n) => Math.max(0, n - 1)))}
+          onLongPress={() => setHeld(true)}
+          onPressOut={() => setHeld(false)}
           accessibilityRole="button"
           accessibilityLabel={t('previous')}
         />
         <Pressable
           style={{ flex: 2 }}
-          onPress={() => setK((n) => (n + 1) % reel.cards.length)}
-          onLongPress={() => setPaused(true)}
-          onPressOut={() => setPaused(false)}
+          onPress={(e) => tap(e, () => setK((n) => (n + 1) % reel.cards.length))}
+          onLongPress={() => setHeld(true)}
+          onPressOut={() => setHeld(false)}
           accessibilityRole="button"
           accessibilityLabel={t('next')}
         />
       </View>
+
+      {paused && (
+        <Animated.View
+          entering={FadeIn.duration(150)}
+          exiting={FadeOut.duration(150)}
+          style={styles.paused}
+          pointerEvents="none">
+          <Ionicons name="play" size={44} color="#fff" style={{ marginLeft: 6 }} />
+        </Animated.View>
+      )}
+      {hearts.map((h) => (
+        <HeartBurst key={h.id} heart={h} />
+      ))}
 
       <View style={[styles.words, { bottom: insets.bottom + 40 }]} pointerEvents="none">
         <View style={styles.badge}>
@@ -262,6 +332,12 @@ function ReelView({
       </View>
 
       <View style={[styles.rail, { bottom: insets.bottom + 120 }]}>
+        <RailButton
+          icon={paused ? 'play' : 'pause'}
+          label={paused ? t('play') : t('pause')}
+          a11y={paused ? t('play') : t('pause')}
+          onPress={() => setPaused((p) => !p)}
+        />
         <RailButton
           icon={reel.liked ? 'heart' : 'heart-outline'}
           color={reel.liked ? '#FF4D6D' : '#fff'}
@@ -345,6 +421,17 @@ const styles = StyleSheet.create({
   segment: { flex: 1, height: 3, borderRadius: 2, backgroundColor: 'rgba(255,255,255,0.35)', overflow: 'hidden' },
   segmentFill: { height: 3, backgroundColor: '#fff' },
   taps: { ...StyleSheet.absoluteFill, flexDirection: 'row', top: 110, bottom: 220 },
+  paused: {
+    position: 'absolute',
+    alignSelf: 'center',
+    top: '42%',
+    width: 88,
+    height: 88,
+    borderRadius: 44,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: 'rgba(0,0,0,0.45)',
+  },
   words: { position: 'absolute', left: Spacing.md, right: 84, gap: Spacing.sm },
   badge: {
     flexDirection: 'row',

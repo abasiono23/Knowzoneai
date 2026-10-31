@@ -12,6 +12,8 @@ const reels: Translation<typeof en> = {
   card: '{{n}} de {{total}}',
   previous: 'Tarjeta anterior',
   next: 'Tarjeta siguiente',
+  pause: 'Pausa',
+  play: 'Reproducir',
   like: 'Me gusta',
   unlike: 'Ya no me gusta',
   comments: 'Comentarios',

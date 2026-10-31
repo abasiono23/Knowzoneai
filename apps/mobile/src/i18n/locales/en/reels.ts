@@ -12,6 +12,8 @@ export default {
   card: '{{n}} of {{total}}',
   previous: 'Previous card',
   next: 'Next card',
+  pause: 'Pause',
+  play: 'Play',
   like: 'Like',
   unlike: 'Unlike',
   comments: 'Comments',

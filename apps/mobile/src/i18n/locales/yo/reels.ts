@@ -12,6 +12,8 @@ const reels: Translation<typeof en> = {
   card: '{{n}} nínú {{total}}',
   previous: 'Káàdì tó ṣáájú',
   next: 'Káàdì tó kàn',
+  pause: 'Dá dúró',
+  play: 'Tẹ̀síwájú',
   like: 'Fẹ́ràn',
   unlike: 'Yọ ìfẹ́ràn kúrò',
   comments: 'Ọ̀rọ̀ ìwòye',
