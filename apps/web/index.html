@@ -1,0 +1,529 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Knowzone: the AI study app for JAMB, WAEC, NECO and beyond</title>
+    <meta
+      name="description"
+      content="Knowzone is the AI study app that explains anything step by step, turns your notes into flashcards and quizzes, gives you real exam practice and makes studying feel like a game. Join the waitlist." />
+    <meta name="theme-color" content="#7c5cff" />
+    <meta property="og:title" content="Knowzone: learn anything, ace every exam" />
+    <meta property="og:description" content="An AI tutor, JAMB, WAEC and NECO practice, courses, study rooms and learning games, in 10 languages. Join the waitlist." />
+    <meta property="og:image" content="assets/icon-512.png" />
+    <meta property="og:type" content="website" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Icons (Feather-style line icons) -->
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+      <defs>
+        <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" /></symbol>
+        <symbol id="i-paper" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" /></symbol>
+        <symbol id="i-book" viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" /><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" /></symbol>
+        <symbol id="i-layers" viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2" /><polyline points="2 17 12 22 22 17" /><polyline points="2 12 12 17 22 12" /></symbol>
+        <symbol id="i-play" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /><polygon points="10 8 16 12 10 16 10 8" /></symbol>
+        <symbol id="i-zap" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" /></symbol>
+        <symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" /></symbol>
+        <symbol id="i-users" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></symbol>
+        <symbol id="i-android" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2" /><line x1="12" y1="18" x2="12.01" y2="18" /></symbol>
+      </defs>
+    </svg>
+
+    <div class="progress" aria-hidden="true"></div>
+
+    <header class="nav">
+      <div class="wrap nav-inner">
+        <a class="brand" href="index.html" aria-label="Knowzone home"><img src="assets/logo.png" alt="" width="36" height="36" /><span>Know<b>zone</b></span></a>
+        <button class="menu-btn" aria-label="Menu" aria-expanded="false"><span></span></button>
+        <nav class="nav-links" aria-label="Main">
+          <a href="#features">Features</a>
+          <a href="#world">Knowzone World</a>
+          <a href="#rooms">Study Rooms</a>
+          <a href="about.html">About</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+        <a class="btn btn-primary btn-sm nav-cta" href="waitlist.html">Join the waitlist</a>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section class="hero">
+        <div class="blob b1"></div>
+        <div class="blob b2"></div>
+        <div class="blob b3"></div>
+        <img class="book-bg" src="assets/book-bg.webp" alt="" aria-hidden="true" />
+        <div class="wrap hero-grid">
+          <div class="hero-copy">
+            <span class="eyebrow fade-in"><span class="dot"></span>Launching soon on Android</span>
+            <h1>
+              <span class="line"><span>Learn anything.</span></span>
+              <span class="line"
+                ><span
+                  >Ace
+                  <span class="swap" aria-label="every exam"
+                    ><span>JAMB.</span><span>WAEC.</span><span>NECO.</span><span>university.</span><span>every exam.</span></span
+                  ></span
+                ></span
+              >
+            </h1>
+            <p class="lead fade-in d1">
+              Knowzone is the AI study app that explains anything step by step, turns your notes into flashcards and quizzes, gives you
+              real exam practice and makes studying feel like a game, with your friends, in your language.
+            </p>
+            <div class="hero-cta fade-in d2">
+              <a class="btn btn-primary" href="waitlist.html">Join the waitlist <span class="arrow">→</span></a>
+              <a class="btn btn-ghost" href="#features">See what’s inside</a>
+            </div>
+            <p class="hero-note fade-in d3">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-android" /></svg>
+              Free to start · Android first · No spam, ever
+            </p>
+          </div>
+
+          <div class="hero-visual" aria-label="Screens from the Knowzone app">
+            <span class="sparkle" style="top: 4%; left: 42%" aria-hidden="true">✦</span>
+            <span class="sparkle" style="top: 60%; left: -2%; animation-delay: 1s; color: #7c5cff" aria-hidden="true">✦</span>
+            <span class="sparkle" style="bottom: 8%; right: 10%; animation-delay: 2s; color: #14c8b4" aria-hidden="true">✦</span>
+            <div class="phone p2" data-depth="-14"><img src="assets/screens/tutor.webp" alt="Kora, the AI tutor" loading="eager" /></div>
+            <div class="phone p1" data-depth="10"><img src="assets/screens/home.webp" alt="The Knowzone dashboard" loading="eager" /></div>
+            <div class="phone p3" data-depth="-20"><img src="assets/screens/reels.webp" alt="A Did you know? flashcard reel" loading="eager" /></div>
+            <div class="chip c1" data-depth="26">
+              <i style="background: #fff1d6">🔥</i>
+              <div>7-day streak<small>Keep it going!</small></div>
+            </div>
+            <div class="chip c2" data-depth="30">
+              <i style="background: #dcfaf4">✅</i>
+              <div>Correct! +3 XP<small>Quiz battle with friends</small></div>
+            </div>
+            <div class="chip c3" data-depth="22">
+              <i style="background: #efeaff">✨</i>
+              <div>Kora explained it<small>Step by step, in Yorùbá</small></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Subjects -->
+      <div class="marquee" aria-label="Subjects">
+        <div class="marquee-track">
+          <span>Mathematics</span><span>Physics</span><span>Chemistry</span><span>Biology</span><span>English Language</span><span>Economics</span
+          ><span>Government</span><span>Literature</span><span>Geography</span><span>Commerce</span><span>Statistics</span><span>Python</span
+          ><span>Entrepreneurship</span><span>History</span><span>Space science</span><span>Business</span>
+          <span aria-hidden="true">Mathematics</span><span aria-hidden="true">Physics</span><span aria-hidden="true">Chemistry</span
+          ><span aria-hidden="true">Biology</span><span aria-hidden="true">English Language</span><span aria-hidden="true">Economics</span
+          ><span aria-hidden="true">Government</span><span aria-hidden="true">Literature</span><span aria-hidden="true">Geography</span
+          ><span aria-hidden="true">Commerce</span><span aria-hidden="true">Statistics</span><span aria-hidden="true">Python</span
+          ><span aria-hidden="true">Entrepreneurship</span><span aria-hidden="true">History</span><span aria-hidden="true">Space science</span
+          ><span aria-hidden="true">Business</span>
+        </div>
+      </div>
+
+      <!-- Numbers -->
+      <section class="section" style="padding-bottom: 40px">
+        <div class="wrap">
+          <div class="stats" data-stagger>
+            <div class="stat reveal"><b data-count="3040">0</b><span>past questions</span></div>
+            <div class="stat reveal"><b data-count="177">0</b><span>video lessons</span></div>
+            <div class="stat reveal"><b data-count="60">0</b><span>fun-fact reels</span></div>
+            <div class="stat reveal"><b data-count="8">0</b><span>full courses</span></div>
+            <div class="stat reveal"><b data-count="7">0</b><span>game worlds</span></div>
+            <div class="stat reveal"><b data-count="10">0</b><span>languages</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features -->
+      <section class="section" id="features">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <span class="eyebrow">Everything in one app</span>
+            <h2>One app for all your <span class="grad">studying</span></h2>
+            <p>From your first question to exam day: an AI tutor, real exam practice, courses, games and friends to study with.</p>
+          </div>
+          <div class="cards" data-stagger>
+            <article class="card reveal">
+              <div class="icon i-purple"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-chat" /></svg></div>
+              <h3>Kora, your AI tutor</h3>
+              <p>Ask anything and get clear explanations, step-by-step solutions, exam practice or teach-back, at your level. Snap a photo of a question or upload a page.</p>
+            </article>
+            <article class="card reveal">
+              <div class="icon i-gold"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-paper" /></svg></div>
+              <h3>JAMB, WAEC &amp; NECO practice</h3>
+              <p>Practice papers in every subject, in the real exam format. Study with every answer explained, practise, or sit a timed paper.</p>
+              <span class="tag">3,040 questions</span>
+            </article>
+            <article class="card reveal">
+              <div class="icon i-teal"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-book" /></svg></div>
+              <h3>Full courses</h3>
+              <p>Built from open textbooks: readings, a video for every chapter, interactive practice and quizzes in Biology, Physics, Chemistry, Economics and more.</p>
+            </article>
+            <article class="card reveal">
+              <div class="icon i-indigo"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-layers" /></svg></div>
+              <h3>Study packs in a minute</h3>
+              <p>Turn a PDF, your notes, a photo or a topic into a summary, flashcards, a quiz and a mind map, made for you by AI.</p>
+            </article>
+            <article class="card reveal">
+              <div class="icon i-blue"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-play" /></svg></div>
+              <h3>Videos you can scroll</h3>
+              <p>Swipe through lessons like short videos and search any topic. Or make your own narrated explainer, with real photos and AI pictures.</p>
+            </article>
+            <article class="card reveal">
+              <div class="icon i-pink"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-zap" /></svg></div>
+              <h3>“Did you know?” flashcards</h3>
+              <p>Bite-size fun facts told in five cards, with pictures and narration. Swipe, learn something new, like and comment.</p>
+            </article>
+            <article class="card reveal">
+              <div class="icon i-green"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-compass" /></svg></div>
+              <h3>Knowzone World</h3>
+              <p>Learning games in seven worlds: chemistry labs, space missions, history museums, coding and business. Earn XP, coins and badges.</p>
+            </article>
+            <article class="card reveal">
+              <div class="icon i-coral"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-users" /></svg></div>
+              <h3>Study Rooms</h3>
+              <p>Study with friends: a shared focus timer, quiz battles, a shared whiteboard and Kora on hand to help the whole room.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- A closer look: the phone changes as you scroll -->
+      <section class="section" id="tour" style="padding-top: 40px">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <span class="eyebrow">A closer look</span>
+            <h2>Built for how you <span class="grad">really study</span></h2>
+          </div>
+          <div class="story">
+            <div class="story-steps">
+              <div class="step">
+                <span class="eyebrow">AI tutor</span>
+                <h3>Stuck? Just ask Kora.</h3>
+                <p>Kora explains like a patient teacher, at your level, any time of day.</p>
+                <ul>
+                  <li>Explain, solve step by step, exam practice or teach-back</li>
+                  <li>Snap a photo of your homework or upload a PDF page</li>
+                  <li>Worked examples, key terms and common mistakes</li>
+                  <li>Answers in your language</li>
+                </ul>
+                <img class="mobile-shot" src="assets/screens/tutor.webp" alt="The AI tutor screen" loading="lazy" />
+              </div>
+              <div class="step">
+                <span class="eyebrow">Past questions</span>
+                <h3>Practise like it’s exam day.</h3>
+                <p>JAMB, WAEC and NECO practice papers in ten subjects, in each exam’s real format and timing.</p>
+                <ul>
+                  <li>Study mode with every answer explained</li>
+                  <li>Practice mode, or sit a timed paper</li>
+                  <li>See your scores improve over time</li>
+                </ul>
+                <img class="mobile-shot" src="assets/screens/paper.webp" alt="A past question with its explanation" loading="lazy" />
+              </div>
+              <div class="step">
+                <span class="eyebrow">AI Studio</span>
+                <h3>Turn anything into a study pack.</h3>
+                <p>Upload a PDF, paste your notes, snap a page or just type a topic.</p>
+                <ul>
+                  <li>Summary and detailed notes</li>
+                  <li>Key concepts and important points</li>
+                  <li>Flashcards, a quiz and a mind map</li>
+                  <li>A short narrated video of it, if you like</li>
+                </ul>
+                <img class="mobile-shot" src="assets/screens/studio.webp" alt="The AI Studio" loading="lazy" />
+              </div>
+              <div class="step">
+                <span class="eyebrow">Flashcards</span>
+                <h3>Learn something new in 30 seconds.</h3>
+                <p>“Did you know?” reels explain one amazing fact in five cards, with real-looking pictures and narration.</p>
+                <ul>
+                  <li>Science, space, history, maths, technology and more</li>
+                  <li>Like, comment and share with friends</li>
+                </ul>
+                <img class="mobile-shot" src="assets/screens/reels.webp" alt="A fun-fact reel" loading="lazy" />
+              </div>
+              <div class="step">
+                <span class="eyebrow">Videos</span>
+                <h3>Lessons you’ll actually watch.</h3>
+                <p>Every course video in a feed you can scroll, search and filter by subject, with a link back to the full lesson.</p>
+                <ul>
+                  <li>177 hand-picked video lessons</li>
+                  <li>Search by topic, like “photosynthesis”</li>
+                  <li>Make your own explainer videos with AI</li>
+                </ul>
+                <img class="mobile-shot" src="assets/screens/videos.webp" alt="The video feed" loading="lazy" />
+              </div>
+              <div class="step">
+                <span class="eyebrow">Courses</span>
+                <h3>Go deeper, chapter by chapter.</h3>
+                <p>Full courses built from openly licensed textbooks, with practice and a quiz at the end of every chapter.</p>
+                <ul>
+                  <li>Biology, Physics, Chemistry, Algebra, Economics, Statistics, Python and Entrepreneurship</li>
+                  <li>Track your progress as you go</li>
+                </ul>
+                <img class="mobile-shot" src="assets/screens/courses.webp" alt="Courses" loading="lazy" />
+              </div>
+            </div>
+            <div class="story-stage" aria-hidden="true">
+              <div class="halo"></div>
+              <div class="phone">
+                <div class="spacer"></div>
+                <img src="assets/screens/tutor.webp" alt="" loading="lazy" />
+                <img src="assets/screens/paper.webp" alt="" loading="lazy" />
+                <img src="assets/screens/studio.webp" alt="" loading="lazy" />
+                <img src="assets/screens/reels.webp" alt="" loading="lazy" />
+                <img src="assets/screens/videos.webp" alt="" loading="lazy" />
+                <img src="assets/screens/courses.webp" alt="" loading="lazy" />
+              </div>
+              <div class="story-dots"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Knowzone World -->
+      <section class="section world" id="world">
+        <div class="stars" aria-hidden="true"></div>
+        <div class="wrap world-grid">
+          <div class="world-hero reveal from-left">
+            <div class="orbit" aria-hidden="true">
+              <img class="o1" src="assets/world/saturn.webp" alt="" />
+              <img class="o2" src="assets/world/rocket.webp" alt="" />
+              <img class="o3" src="assets/world/robot.webp" alt="" />
+            </div>
+            <img class="kid" src="assets/world/play-hero.webp" alt="A student learning by playing in Knowzone World" loading="lazy" />
+          </div>
+          <div>
+            <div class="section-head reveal" style="text-align: left; justify-items: start; margin: 0 0 30px">
+              <span class="eyebrow">Knowzone World</span>
+              <h2>Learn by playing</h2>
+              <p>
+                Seven worlds of missions, puzzles, quiz battles and bosses, where every level is real learning from your subjects. Mix
+                chemicals in the lab, launch rockets, run a business and travel through Africa’s history.
+              </p>
+            </div>
+            <div class="worlds" data-stagger>
+              <div class="world-card reveal zoom"><img src="assets/world/chemistry.webp" alt="" loading="lazy" /><div class="cap"><b>Chemistry Lab</b><span>Mix, test and discover</span></div></div>
+              <div class="world-card space contain reveal zoom"><img src="assets/world/saturn.webp" alt="" loading="lazy" /><div class="cap"><b>Space Academy</b><span>Physics among the planets</span></div></div>
+              <div class="world-card history contain reveal zoom"><img src="assets/world/benin.webp" alt="" loading="lazy" /><div class="cap"><b>Museum of Time</b><span>History &amp; geography</span></div></div>
+              <div class="world-card reveal zoom"><img src="assets/world/english.webp" alt="" loading="lazy" /><div class="cap"><b>Language Island</b><span>Word games &amp; battles</span></div></div>
+              <div class="world-card tech contain reveal zoom"><img src="assets/world/robot.webp" alt="" loading="lazy" /><div class="cap"><b>Tech Hub</b><span>Code your first robot</span></div></div>
+              <div class="world-card reveal zoom"><img src="assets/world/business.webp" alt="" loading="lazy" /><div class="cap"><b>Business District</b><span>Money, markets &amp; startups</span></div></div>
+            </div>
+            <div class="world-perks reveal">
+              <span>🧑🏾‍🚀 Your own avatar</span><span>📅 Daily challenges</span><span>🗺️ Quests</span><span>🏆 Leagues</span><span>👫 Friends</span><span>🔥 Streaks</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Study Rooms -->
+      <section class="section" id="rooms">
+        <img class="book-bg" src="assets/book-bg.webp" alt="" aria-hidden="true" style="top: 120px; opacity: 0.35" />
+        <div class="wrap rooms-grid">
+          <div class="rooms-phones reveal from-left" aria-label="Screens from a study room">
+            <div class="phone r1"><img src="assets/screens/room-kora.webp" alt="Kora answering a question in a study room" loading="lazy" /></div>
+            <div class="phone r2"><img src="assets/screens/quiz.webp" alt="A quiz battle question" loading="lazy" /></div>
+            <div class="phone r3"><img src="assets/screens/board.webp" alt="The shared whiteboard" loading="lazy" /></div>
+          </div>
+          <div class="reveal from-right">
+            <span class="eyebrow">Study Rooms</span>
+            <h2 style="font-size: clamp(32px, 4.2vw, 50px); margin-top: 16px">Never study alone</h2>
+            <p style="font-size: 18px; color: var(--ink-2); margin-top: 16px">
+              Make a room, invite your friends or classmates, and study together, up to eight of you, wherever you are.
+            </p>
+            <div class="feature-list" data-stagger>
+              <div class="reveal"><b>⏱️ Shared focus timer</b><span>Focus together, then take a break. Everyone earns study time and XP.</span></div>
+              <div class="reveal"><b>🏆 Quiz battles</b><span>Ten past questions, everyone at once. Fast right answers win.</span></div>
+              <div class="reveal"><b>✨ Kora in the room</b><span>Ask the AI tutor and the whole room sees the answer.</span></div>
+              <div class="reveal"><b>🖌️ Shared whiteboard</b><span>Draw diagrams and work problems out together, live.</span></div>
+              <div class="reveal"><b>🎯 Goals &amp; streaks</b><span>Set a room goal and keep your study streak going.</span></div>
+              <div class="reveal"><b>📅 Scheduled sessions</b><span>Plan the next session; everyone gets a reminder.</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Languages -->
+      <section class="section" id="languages" style="background: var(--tint)">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <span class="eyebrow">10 languages</span>
+            <h2>Learn in <span class="grad">your</span> language</h2>
+            <p>Every screen and every answer from Kora, in the language you think in. Arabic reads right to left, as it should.</p>
+          </div>
+          <div class="hellos" data-stagger>
+            <div class="hello reveal"><b>Hello</b><span>English</span></div>
+            <div class="hello reveal"><b>How far</b><span>Naijá</span></div>
+            <div class="hello reveal"><b>Ẹ n lẹ</b><span>Yorùbá</span></div>
+            <div class="hello reveal"><b>Ndewo</b><span>Igbo</span></div>
+            <div class="hello reveal"><b>Sannu</b><span>Hausa</span></div>
+            <div class="hello reveal"><b>Bonjour</b><span>Français</span></div>
+            <div class="hello reveal"><b dir="rtl">مرحبا</b><span>العربية</span></div>
+            <div class="hello reveal"><b>Habari</b><span>Kiswahili</span></div>
+            <div class="hello reveal"><b>Olá</b><span>Português</span></div>
+            <div class="hello reveal"><b>Hola</b><span>Español</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Plans -->
+      <section class="section" id="plans">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <span class="eyebrow">Plans</span>
+            <h2>Free to start. More when you need it.</h2>
+            <p>Everyone gets the core of Knowzone for free. Upgrade for more AI and full exam papers.</p>
+          </div>
+          <div class="plans" data-stagger>
+            <div class="plan reveal">
+              <h3>Free</h3>
+              <p class="sub">Everything you need to start</p>
+              <ul>
+                <li>10 AI tutor questions a day</li>
+                <li>5 welcome AI credits, plus credits from invites</li>
+                <li>Summaries, flashcards and quizzes from your notes</li>
+                <li>Video lessons and fun-fact reels</li>
+                <li>Knowzone World and Study Rooms</li>
+                <li>Sample JAMB, WAEC and NECO papers</li>
+              </ul>
+            </div>
+            <div class="plan reveal">
+              <h3>Plus</h3>
+              <p class="sub">For steady, everyday studying</p>
+              <ul>
+                <li>100 AI tutor questions a day</li>
+                <li>60 AI credits every month</li>
+                <li>Longer video explainers, up to 5 minutes</li>
+                <li>Everything in Free</li>
+              </ul>
+            </div>
+            <div class="plan featured reveal">
+              <span class="badge">For exam year</span>
+              <h3>Pro</h3>
+              <p class="sub">For serious exam preparation</p>
+              <ul>
+                <li>300 AI tutor questions a day (fair use)</li>
+                <li>200 AI credits every month</li>
+                <li>Every JAMB, WAEC and NECO practice paper</li>
+                <li>Everything in Plus</li>
+              </ul>
+            </div>
+          </div>
+          <p class="plans-note reveal">Prices will be announced at launch, and people on the waitlist hear first.</p>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="section" id="faq" style="padding-top: 40px">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <span class="eyebrow">FAQ</span>
+            <h2>Questions, answered</h2>
+          </div>
+          <div class="faq" data-stagger>
+            <details class="reveal">
+              <summary>When does Knowzone launch?</summary>
+              <div class="answer">
+                We’re putting the finishing touches on the Android app now. Join the waitlist and you’ll be among the first to know the
+                moment it opens.
+              </div>
+            </details>
+            <details class="reveal">
+              <summary>Is Knowzone free?</summary>
+              <div class="answer">
+                Yes. The free plan includes the AI tutor (10 questions a day), study packs from your notes, video lessons, fun-fact reels,
+                Knowzone World, Study Rooms and sample exam papers. Plus and Pro add more AI and every practice paper.
+              </div>
+            </details>
+            <details class="reveal">
+              <summary>Which exams does it cover?</summary>
+              <div class="answer">
+                JAMB UTME, WAEC WASSCE and NECO SSCE, in ten subjects: English, Mathematics, Physics, Chemistry, Biology, Economics,
+                Government, Literature, Geography and Commerce. The practice papers follow each exam’s real format and timing, and every
+                answer is explained. Courses, the AI tutor and study packs work for university and any other subject too.
+              </div>
+            </details>
+            <details class="reveal">
+              <summary>Are the practice papers real past questions?</summary>
+              <div class="answer">
+                They’re practice papers written in each exam’s exact format and checked by a second, independent review for accuracy.
+                We’re adding licensed past papers from previous years as well.
+              </div>
+            </details>
+            <details class="reveal">
+              <summary>Who is Knowzone for?</summary>
+              <div class="answer">
+                Secondary-school students preparing for exams, university students, and anyone who wants to learn something new. Parents
+                and teachers are welcome on the waitlist too.
+              </div>
+            </details>
+            <details class="reveal">
+              <summary>Is it safe for young learners?</summary>
+              <div class="answer">
+                Chat messages and comments are checked before anyone sees them, anyone can report or block, and you control who sees your
+                profile. Study Rooms are private unless you open them to your school.
+              </div>
+            </details>
+            <details class="reveal">
+              <summary>Do I need the internet?</summary>
+              <div class="answer">Yes, for most of the app: the AI tutor, videos and Study Rooms all work online.</div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- Final call -->
+      <section class="wrap">
+        <div class="cta reveal zoom">
+          <span class="ring"></span><span class="ring"></span><span class="ring"></span>
+          <h2>Be first in line.</h2>
+          <p>Join the waitlist and we’ll email you the moment Knowzone opens. It takes 20 seconds.</p>
+          <a class="btn btn-primary" href="waitlist.html">Join the waitlist <span class="arrow">→</span></a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <div class="foot">
+          <div>
+            <a class="brand" href="index.html"><img src="assets/logo.png" alt="" width="36" height="36" /><span>Know<b>zone</b></span></a>
+            <p>The AI study app for exams and beyond. Made for students everywhere, starting in Africa.</p>
+          </div>
+          <div>
+            <h4>Product</h4>
+            <ul>
+              <li><a href="index.html#features">Features</a></li>
+              <li><a href="index.html#world">Knowzone World</a></li>
+              <li><a href="index.html#rooms">Study Rooms</a></li>
+              <li><a href="index.html#plans">Plans</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Company</h4>
+            <ul>
+              <li><a href="about.html">About us</a></li>
+              <li><a href="waitlist.html">Join the waitlist</a></li>
+              <li><a href="index.html#faq">FAQ</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Legal</h4>
+            <ul>
+              <li><a href="privacy.html">Privacy</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="legal"><span>© <span data-year>2026</span> Knowzone AI. All rights reserved.</span><span>Coming soon to Android</span></div>
+      </div>
+    </footer>
+
+    <script src="main.js" defer></script>
+  </body>
+</html>

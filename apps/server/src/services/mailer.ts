@@ -70,6 +70,18 @@ export const emails = {
     subject: 'Your Knowzone account will be deleted',
     text: `We’ve scheduled your account for deletion on ${date}.\n\nChanged your mind? Just sign in before then and we’ll cancel it.`,
   }),
+  waitlist: (name: string, position: number) => ({
+    subject: 'You’re on the Knowzone waitlist 🎉',
+    text: `Hi ${name},
+
+Thanks for joining the Knowzone waitlist! You’re number ${position} in line.
+
+Knowzone is an AI study app for exams and beyond: an AI tutor, JAMB, WAEC and NECO past questions, courses, study rooms with friends and learning games, in 10 languages. We’ll email you as soon as it opens.
+
+If you didn’t sign up, or want to be taken off the list, just reply to this email.
+
+The Knowzone team`,
+  }),
   export: () => ({
     subject: 'Your Knowzone data',
     text: 'Attached is a copy of everything Knowzone holds about your account, as a JSON file.\n\nIf you didn’t ask for this, change your password and sign out your other devices in Settings.',

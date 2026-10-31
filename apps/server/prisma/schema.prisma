@@ -1283,3 +1283,21 @@ model StudyRoomStroke {
 
   @@index([roomId, createdAt])
 }
+
+/// People waiting for the app to launch (from the website's waitlist form).
+model WaitlistEntry {
+  id        String   @id @default(cuid())
+  /// Lower-cased.
+  email     String   @unique
+  name      String
+  /// student | parent | teacher | school | other
+  role      String
+  country   String?
+  /// What they're preparing for: jamb, waec, neco, university, skills…
+  interests String[]
+  /// Where they heard about it, or the campaign link (?ref=…).
+  source    String?
+  createdAt DateTime @default(now())
+
+  @@index([createdAt])
+}

@@ -49,3 +49,27 @@ services:
         sync: false
       - key: APP_URL
         sync: false
+
+  # The website (apps/web): plain HTML, CSS and JavaScript, nothing to build. Its waitlist form posts to
+  # knowzone-api above. If you set CORS_ORIGIN on the API, add this site's address to it.
+  - type: web
+    name: knowzone-web
+    runtime: static
+    rootDir: apps/web
+    buildCommand: echo "Nothing to build"
+    staticPublishPath: .
+    autoDeploy: true
+    headers:
+      - path: /assets/*
+        name: Cache-Control
+        value: public, max-age=604800
+    routes:
+      - type: rewrite
+        source: /about
+        destination: /about.html
+      - type: rewrite
+        source: /waitlist
+        destination: /waitlist.html
+      - type: rewrite
+        source: /privacy
+        destination: /privacy.html

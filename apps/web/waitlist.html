@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Join the Knowzone waitlist</title>
+    <meta name="description" content="Knowzone is launching soon on Android. Join the waitlist to be among the first students in." />
+    <meta name="theme-color" content="#7c5cff" />
+    <meta property="og:title" content="Knowzone: learn anything, ace every exam" />
+    <meta property="og:description" content="An AI tutor, JAMB, WAEC and NECO practice, courses, study rooms and learning games, in 10 languages. Join the waitlist." />
+    <meta property="og:image" content="assets/icon-512.png" />
+    <meta property="og:type" content="website" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="progress" aria-hidden="true"></div>
+
+    <header class="nav">
+      <div class="wrap nav-inner">
+        <a class="brand" href="index.html" aria-label="Knowzone home"><img src="assets/logo.png" alt="" width="36" height="36" /><span>Know<b>zone</b></span></a>
+        <button class="menu-btn" aria-label="Menu" aria-expanded="false"><span></span></button>
+        <nav class="nav-links" aria-label="Main">
+          <a href="index.html#features">Features</a>
+          <a href="index.html#world">Knowzone World</a>
+          <a href="index.html#rooms">Study Rooms</a>
+          <a href="about.html">About</a>
+          <a href="index.html#faq">FAQ</a>
+        </nav>
+        <a class="btn btn-primary btn-sm nav-cta" href="waitlist.html">Join the waitlist</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero" style="padding-bottom: 50px">
+        <div class="blob b1"></div>
+        <div class="blob b2"></div>
+        <div class="blob b3"></div>
+        <img class="book-bg" src="assets/book-bg.webp" alt="" aria-hidden="true" />
+        <div class="wrap inner">
+          <span class="eyebrow fade-in"><span class="dot"></span>Launching soon on Android</span>
+          <h1 class="fade-in d1">Join the <span class="grad">waitlist</span></h1>
+          <p class="fade-in d2">
+            Knowzone is almost ready. Leave your name and email and we’ll tell you the moment it opens, so you’re among the first in.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" style="padding-top: 10px">
+        <div class="wrap waitlist">
+          <div class="perks" data-stagger>
+            <div class="perk reveal">
+              <div class="icon i-purple">🚀</div>
+              <div><b>Early access</b><span>Be one of the first students in when Knowzone opens.</span></div>
+            </div>
+            <div class="perk reveal">
+              <div class="icon i-gold">💬</div>
+              <div><b>Launch news first</b><span>Hear about prices, new subjects and features before anyone else.</span></div>
+            </div>
+            <div class="perk reveal">
+              <div class="icon i-teal">👫</div>
+              <div><b>Bring your friends</b><span>Share the link so your study squad is ready for Study Rooms on day one.</span></div>
+            </div>
+            <div class="perk reveal">
+              <div class="icon i-coral">✉️</div>
+              <div><b>No spam, ever</b><span>We’ll only email you about Knowzone, and you can leave the list any time.</span></div>
+            </div>
+            <img
+              class="reveal"
+              src="assets/hero-learner.webp"
+              alt=""
+              aria-hidden="true"
+              style="width: min(340px, 80%); margin: 10px auto 0"
+              loading="lazy" />
+          </div>
+
+          <div class="form-card reveal from-right">
+            <h2>Save your spot</h2>
+            <p>It takes about 20 seconds.</p>
+            <form id="waitlist-form" novalidate>
+              <div class="field">
+                <label for="name">Your name</label>
+                <input id="name" name="name" type="text" autocomplete="name" maxlength="80" placeholder="e.g. Amara Obi" required />
+              </div>
+              <div class="field">
+                <label for="email">Email address</label>
+                <input id="email" name="email" type="email" autocomplete="email" maxlength="200" placeholder="you@example.com" required />
+              </div>
+              <fieldset class="field">
+                <legend>I am a…</legend>
+                <div class="pills">
+                  <label><input type="radio" name="role" value="student" checked /><span>Student</span></label>
+                  <label><input type="radio" name="role" value="parent" /><span>Parent</span></label>
+                  <label><input type="radio" name="role" value="teacher" /><span>Teacher</span></label>
+                  <label><input type="radio" name="role" value="school" /><span>School</span></label>
+                  <label><input type="radio" name="role" value="other" /><span>Other</span></label>
+                </div>
+              </fieldset>
+              <fieldset class="field">
+                <legend>Preparing for <span class="hint">(optional, pick any)</span></legend>
+                <div class="pills">
+                  <label><input type="checkbox" name="interests" value="jamb" /><span>JAMB</span></label>
+                  <label><input type="checkbox" name="interests" value="waec" /><span>WAEC</span></label>
+                  <label><input type="checkbox" name="interests" value="neco" /><span>NECO</span></label>
+                  <label><input type="checkbox" name="interests" value="university" /><span>University</span></label>
+                  <label><input type="checkbox" name="interests" value="skills" /><span>New skills</span></label>
+                  <label><input type="checkbox" name="interests" value="languages" /><span>Languages</span></label>
+                </div>
+              </fieldset>
+              <div class="field">
+                <label for="country">Country <span class="hint">(optional)</span></label>
+                <select id="country" name="country">
+                  <option value="">Choose your country</option>
+                  <option>Nigeria</option>
+                  <option>Ghana</option>
+                  <option>Kenya</option>
+                  <option>South Africa</option>
+                  <option>Cameroon</option>
+                  <option>Sierra Leone</option>
+                  <option>The Gambia</option>
+                  <option>Liberia</option>
+                  <option>Tanzania</option>
+                  <option>Uganda</option>
+                  <option>Rwanda</option>
+                  <option>Ethiopia</option>
+                  <option>Egypt</option>
+                  <option>Morocco</option>
+                  <option>Senegal</option>
+                  <option>Côte d’Ivoire</option>
+                  <option>United Kingdom</option>
+                  <option>United States</option>
+                  <option>Canada</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <!-- Leave this empty: it catches bots. -->
+              <div class="honey" aria-hidden="true">
+                <label>Website <input name="website" type="text" tabindex="-1" autocomplete="off" /></label>
+              </div>
+              <div class="form-msg" role="status" aria-live="polite"></div>
+              <button class="btn btn-primary" type="submit">Join the waitlist <span class="arrow">→</span></button>
+              <p class="small">By joining, you agree to hear from us about Knowzone’s launch. See our <a href="privacy.html">privacy notice</a>.</p>
+            </form>
+            <div class="done" role="status">
+              <div class="check">✓</div>
+              <h2>You’re in!</h2>
+              <p>Your place in line</p>
+              <div class="place grad">#1</div>
+              <p>We’ve sent you an email, and we’ll let you know the moment Knowzone opens.</p>
+              <p class="small">Studying is better with friends. Share Knowzone with your squad:</p>
+              <div class="share">
+                <a id="share-whatsapp" class="btn btn-primary btn-sm" href="#" target="_blank" rel="noopener">Share on WhatsApp</a>
+                <a id="share-x" class="btn btn-ghost btn-sm" href="#" target="_blank" rel="noopener">Share on X</a>
+                <button id="share-copy" class="btn btn-ghost btn-sm" type="button">Copy link</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <div class="foot">
+          <div>
+            <a class="brand" href="index.html"><img src="assets/logo.png" alt="" width="36" height="36" /><span>Know<b>zone</b></span></a>
+            <p>The AI study app for exams and beyond. Made for students everywhere, starting in Africa.</p>
+          </div>
+          <div>
+            <h4>Product</h4>
+            <ul>
+              <li><a href="index.html#features">Features</a></li>
+              <li><a href="index.html#world">Knowzone World</a></li>
+              <li><a href="index.html#rooms">Study Rooms</a></li>
+              <li><a href="index.html#plans">Plans</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Company</h4>
+            <ul>
+              <li><a href="about.html">About us</a></li>
+              <li><a href="waitlist.html">Join the waitlist</a></li>
+              <li><a href="index.html#faq">FAQ</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Legal</h4>
+            <ul>
+              <li><a href="privacy.html">Privacy</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="legal"><span>© <span data-year>2026</span> Knowzone AI. All rights reserved.</span><span>Coming soon to Android</span></div>
+      </div>
+    </footer>
+
+    <script src="main.js" defer></script>
+  </body>
+</html>

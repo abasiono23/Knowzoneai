@@ -855,6 +855,32 @@ Portuguese and Spanish. Conventions are in [docs/I18N.md](docs/I18N.md).
   speakers review them before launch, especially the legal texts, coined terms and the word typed to confirm
   account deletion.
 
+## Website and waitlist (`apps/web`)
+
+The public website, made before launch to collect a waitlist. Plain HTML, CSS and JavaScript (no build step).
+It uses the app's look: white pages, the purple open book, the K logo and Manrope.
+
+- **Pages:** Home (`index.html`, every feature with real app screenshots), About, Join the waitlist, a waitlist
+  privacy notice and a 404 page.
+- **Motion:**
+  - In the hero, the headline rises in, the exam word changes, and the phones float and follow the pointer.
+  - Sections fade in as you scroll, numbers count up, and feature cards tilt with a glow.
+  - In "A closer look", a sticky phone changes screen as you read, and the World section has stars and orbiting art.
+  - Signing up ends in confetti.
+  - People who turn on "reduce motion" get the same pages without the animation.
+- **Waitlist:**
+  - The form posts to the API's `POST /waitlist`, which stores `WaitlistEntry` (name, email, role, interests,
+    country, source).
+  - Signing up again keeps the first place in line.
+  - A hidden field catches bots, and sign-ups are limited to 10 an hour per IP.
+  - A confirmation email is sent with the person's place in line.
+  - Migration: `20261030180000_waitlist`.
+- **Local:** `cd apps/web && python -m http.server 5500`. The form talks to `http://localhost:4000` locally, and
+  to `https://knowzone-api.onrender.com` everywhere else (set at the top of `main.js`).
+- **Hosting:** the `knowzone-web` static site in `render.yaml` (`/about`, `/waitlist` and `/privacy` work
+  without `.html`). If you set `CORS_ORIGIN` on the API, add the site's address to it.
+- **Screenshots:** `assets/screens/*.webp` are real app screens (600 px wide); replace them as the app changes.
+
 ## What's built (Release 1 core loop)
 
 | Area | Status |
