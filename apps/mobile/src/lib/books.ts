@@ -1,6 +1,9 @@
+import type { Ionicons } from '@expo/vector-icons';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useFocusEffect } from 'expo-router';
 import { useCallback, useState } from 'react';
+
+import { request } from '@/lib/api';
 
 /**
  * "Check out your books": the learner says what they're studying (secondary class and stream, or
@@ -233,3 +236,73 @@ export function booksSummary(p: BooksProfile, t: T) {
   if (p.stage === 'undergraduate') return `${t('level.option', { level: p.level })} · ${courseName(p, t)}`;
   return `${t('masters')} · ${courseName(p, t)}`;
 }
+
+// ─── Secondary school shelves (from the server) ───────────────────────────────
+
+export type SubjectShelf = { id: string; books: number; free: number };
+export type ShelfBook = {
+  id: string;
+  title: string;
+  series?: string | null;
+  authors: string[];
+  publisher: string;
+  edition?: string | null;
+  year?: number | null;
+  cover?: string | null;
+  /** Free, openly licensed: read online. Otherwise bought in the app (later). */
+  free: boolean;
+  readUrl?: string | null;
+  /** The official file to save in the app for offline reading, and its size. */
+  downloadUrl?: string | null;
+  downloadType?: 'pdf' | 'html' | null;
+  downloadBytes?: number | null;
+  provider?: string | null;
+  license?: string | null;
+  classes: SchoolClass[];
+};
+
+export const booksApi = {
+  subjects: (schoolClass: SchoolClass, stream?: Stream) =>
+    request<{ subjects: SubjectShelf[] }>(`/books/secondary?class=${schoolClass}${stream ? `&stream=${stream}` : ''}`),
+  subject: (id: string, schoolClass: SchoolClass) =>
+    request<{ subject: string; books: ShelfBook[] }>(`/books/secondary/${id}?class=${schoolClass}`),
+};
+
+/** Each subject's icon and colours on its card. */
+export const SUBJECT_LOOK: Record<string, { icon: keyof typeof Ionicons.glyphMap; colors: readonly [string, string] }> =
+  {
+    english: { icon: 'text', colors: ['#3BA9FF', '#1F6FE5'] },
+    mathematics: { icon: 'calculator', colors: ['#9B6BFF', '#6A45FF'] },
+    'further-mathematics': { icon: 'infinite', colors: ['#7C5CFF', '#3B2DBF'] },
+    'basic-science': { icon: 'flask', colors: ['#3DDCB0', '#14A88E'] },
+    'basic-technology': { icon: 'construct', colors: ['#FFB547', '#FF8A1F'] },
+    'social-studies': { icon: 'people', colors: ['#FF7A93', '#E5486A'] },
+    'civic-education': { icon: 'flag', colors: ['#2DD4BF', '#0E8F6E'] },
+    'business-studies': { icon: 'briefcase', colors: ['#FFC857', '#D99000'] },
+    'agricultural-science': { icon: 'leaf', colors: ['#7CE38B', '#0E8F6E'] },
+    'home-economics': { icon: 'home', colors: ['#FF9F43', '#FF5A7A'] },
+    'computer-studies': { icon: 'laptop', colors: ['#4CC9FF', '#1663C7'] },
+    'data-processing': { icon: 'server', colors: ['#4CC9FF', '#1663C7'] },
+    'cultural-creative-arts': { icon: 'color-palette', colors: ['#E79BFF', '#B04CFF'] },
+    'fine-arts': { icon: 'brush', colors: ['#E79BFF', '#B04CFF'] },
+    'physical-health-education': { icon: 'fitness', colors: ['#FF7A93', '#FF9F43'] },
+    history: { icon: 'hourglass', colors: ['#C79A4B', '#9C6B1E'] },
+    crs: { icon: 'book', colors: ['#9B82FF', '#5B2BB8'] },
+    irs: { icon: 'moon', colors: ['#2DD4BF', '#0F7C9C'] },
+    french: { icon: 'chatbubbles', colors: ['#5B7CFF', '#3B2DBF'] },
+    yoruba: { icon: 'language', colors: ['#3DDCB0', '#0F7C9C'] },
+    igbo: { icon: 'language', colors: ['#FFB547', '#D9467A'] },
+    hausa: { icon: 'language', colors: ['#7CE38B', '#1663C7'] },
+    physics: { icon: 'magnet', colors: ['#FF9F43', '#E5486A'] },
+    chemistry: { icon: 'flask', colors: ['#2DD4BF', '#14A88E'] },
+    biology: { icon: 'leaf', colors: ['#7CE38B', '#0E8F6E'] },
+    geography: { icon: 'earth', colors: ['#5AD1A0', '#0F7C9C'] },
+    'technical-drawing': { icon: 'pencil', colors: ['#868BAE', '#4A5078'] },
+    literature: { icon: 'library', colors: ['#E79BFF', '#9B6BFF'] },
+    government: { icon: 'business', colors: ['#FF7A93', '#9C3B5E'] },
+    economics: { icon: 'trending-up', colors: ['#FFC857', '#FF8A1F'] },
+    commerce: { icon: 'cart', colors: ['#FF9F43', '#D99000'] },
+    'financial-accounting': { icon: 'cash', colors: ['#3DDCB0', '#0E8F6E'] },
+    'office-practice': { icon: 'document-text', colors: ['#4CC9FF', '#5B7CFF'] },
+    marketing: { icon: 'megaphone', colors: ['#FF7A93', '#B04CFF'] },
+  };

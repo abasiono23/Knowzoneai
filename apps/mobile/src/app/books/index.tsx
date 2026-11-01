@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { ActivityIndicator, Pressable, StyleSheet, TextInput, View } from 'react-native';
 import Animated, { FadeInDown, FadeInRight } from 'react-native-reanimated';
 
+import { SubjectShelves } from '@/components/books/shelves';
 import { Button, Card, ProgressBar, Screen, ScreenHeader, Text } from '@/components/ui';
 import { LinearGradient } from '@/components/ui/gradient';
 import { Colors, Fonts, Gradients, Radius, Spacing } from '@/constants/theme';
@@ -198,17 +199,21 @@ export default function Books() {
                 {booksSummary(profile, tx)}
               </Text>
             </LinearGradient>
-            <Card style={{ alignItems: 'center', gap: Spacing.sm, paddingVertical: Spacing.xl }}>
-              <View style={styles.bookIcon}>
-                <Ionicons name="book" size={34} color={Colors.primary} />
-              </View>
-              <Text variant="heading" center>
-                {t('done.soon')}
-              </Text>
-              <Text variant="small" color={Colors.textSecondary} center>
-                {t('done.soonBody')}
-              </Text>
-            </Card>
+            {profile.stage === 'secondary' ? (
+              <SubjectShelves schoolClass={profile.schoolClass} stream={profile.stream} />
+            ) : (
+              <Card style={{ alignItems: 'center', gap: Spacing.sm, paddingVertical: Spacing.xl }}>
+                <View style={styles.bookIcon}>
+                  <Ionicons name="book" size={34} color={Colors.primary} />
+                </View>
+                <Text variant="heading" center>
+                  {t('done.soon')}
+                </Text>
+                <Text variant="small" color={Colors.textSecondary} center>
+                  {t('done.soonBody')}
+                </Text>
+              </Card>
+            )}
             <Button
               title={t('done.change')}
               variant="secondary"

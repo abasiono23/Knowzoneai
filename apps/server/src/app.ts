@@ -13,6 +13,7 @@ import { examsRouter } from './routes/exams.js';
 import { reelsRouter } from './routes/reels.js';
 import { waitlistRouter } from './routes/waitlist.js';
 import { watchRouter } from './routes/watch.js';
+import { booksRouter } from './routes/books.js';
 import { studyRoomsRouter } from './routes/study-rooms.js';
 import { gamesRouter } from './routes/games.js';
 import { questsRouter } from './routes/quests.js';
@@ -87,6 +88,7 @@ export function createApp() {
   app.use(reelsRouter);
   app.use(watchRouter);
   app.use(waitlistRouter);
+  app.use(booksRouter);
   app.use(studyRoomsRouter);
   app.use(materialsRouter);
 

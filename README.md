@@ -717,6 +717,32 @@ short videos.
   made private.
 - **Endpoints:** `GET /watch?q=&subject=&offset=` (8 per page); `/embed/youtube/:id?autoplay=1`.
 
+### Your books (Explore → "Check out your books")
+
+- **The questions:**
+  - Secondary school: class (JSS 1 to SS 3), then science, art or commercial from SS 1.
+  - Undergraduate: level and course. Master's: course. There are 116 courses in 11 faculties, with search and
+    "my course isn't listed".
+  - Answers are saved on the phone.
+- **Shelves (secondary school):**
+  - Each student gets one card per subject for their class and stream. A card opens the subject's textbooks.
+  - The Summaries and Videos tabs come next.
+- **Books** (`data/books/secondary.json`, served by `GET /books/secondary` and `GET /books/secondary/:subject`):
+  - 355 books in total.
+  - **Prescribed textbooks (307)**, checked against publisher pages, Nigerian school book lists, WAEC's
+    2026–2030 set texts and library catalogues. Each book keeps its sources. These show "Available soon" until
+    there are e-book agreements with publishers.
+  - **Free, openly licensed full textbooks (48)**, from OpenStax, Siyavula and Pressbooks, plus public-domain
+    texts.
+- **Reading:**
+  - Free books open in Knowzone's own reader screen.
+  - **Save** keeps a copy in the app's private storage, to read offline. 26 books are 100 MB or less and can be
+    saved; bigger ones are read online.
+  - Saved PDFs open in a small PDF.js reader page (fetched once from cdnjs) on the page where the reader left off.
+- **Updating the list:** `npx tsx scripts/books-merge.ts <research folder>`, then
+  `npx tsx scripts/books-covers.ts` (Open Library, then Google Books with `BOOKS_API`), then
+  `npx tsx scripts/books-downloads.ts`.
+
 ### Study Rooms
 
 The dashboard's Study Rooms tile opens a list of rooms where friends study together. A room holds up to 8 people.
