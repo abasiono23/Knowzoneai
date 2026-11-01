@@ -9,17 +9,25 @@ import { useFlipStyle } from '@/i18n/provider';
 
 import { Text } from './text';
 
-type Props = { title?: string; eyebrow?: string; eyebrowColor?: string; right?: ReactNode; back?: boolean };
+type Props = {
+  title?: string;
+  eyebrow?: string;
+  eyebrowColor?: string;
+  right?: ReactNode;
+  back?: boolean;
+  /** What the back button does (default: go back a screen). */
+  onBack?: () => void;
+};
 
 /** Back button + title row for stack screens. */
-export function ScreenHeader({ title, eyebrow, eyebrowColor = Colors.primary, right, back = true }: Props) {
+export function ScreenHeader({ title, eyebrow, eyebrowColor = Colors.primary, right, back = true, onBack }: Props) {
   const { t } = useTranslation();
   const flip = useFlipStyle();
   return (
     <View style={styles.row}>
       {back && (
         <Pressable
-          onPress={() => (router.canGoBack() ? router.back() : router.replace('/'))}
+          onPress={onBack ?? (() => (router.canGoBack() ? router.back() : router.replace('/')))}
           hitSlop={12}
           accessibilityRole="button"
           accessibilityLabel={t('actions.goBack')}

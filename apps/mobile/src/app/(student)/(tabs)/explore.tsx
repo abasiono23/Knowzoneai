@@ -1,18 +1,18 @@
 import { Ionicons } from '@expo/vector-icons';
 import { LinearGradient } from '@/components/ui/gradient';
-import { router } from 'expo-router';
+import { router, type Href } from 'expo-router';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Pressable, ScrollView, StyleSheet, View } from 'react-native';
 
 import { LessonCard } from '@/components/content/lesson-card';
 import { Rail } from '@/components/content/rail';
-import { SubjectTile } from '@/components/content/subject-tile';
 import { SectionHeader, Screen, Text } from '@/components/ui';
 import { CoursesRail } from '@/components/courses/courses-rail';
 import { VideosBanner } from '@/components/videos/videos-banner';
 import { Colors, Radius, Spacing } from '@/constants/theme';
-import { CATEGORIES, categoryName, LESSONS, SUBJECTS, trending } from '@/lib/catalog';
+import { booksSummary, useBooksProfile } from '@/lib/books';
+import { CATEGORIES, categoryName, LESSONS, trending } from '@/lib/catalog';
 import { useLibrary } from '@/lib/library-store';
 import { reasonText, recommend } from '@/lib/recommend';
 
@@ -79,18 +79,7 @@ export default function ExploreScreen() {
         ))}
       </ScrollView>
 
-      <View style={{ gap: Spacing.sm }}>
-        <SectionHeader
-          title={t('explore.browseSubjects')}
-          action={t('explore.allSubjects')}
-          onAction={() => router.push('/subjects')}
-        />
-        <View style={styles.grid}>
-          {SUBJECTS.slice(0, 6).map((s) => (
-            <SubjectTile key={s.id} subject={s} />
-          ))}
-        </View>
-      </View>
+      <BooksCard />
 
       <Rail title={t('home.recommended')} onSeeAll={() => router.push('/recommended')}>
         {recs.map((r) => (
@@ -135,7 +124,44 @@ export default function ExploreScreen() {
   );
 }
 
+/** One card instead of subject tiles: "Check out your books" (or, once answered, the learner's books). */
+function BooksCard() {
+  const { t } = useTranslation('books');
+  const tx = t as unknown as (key: string, options?: Record<string, unknown>) => string;
+  const { profile } = useBooksProfile();
+  return (
+    <Pressable
+      onPress={() => router.push('/books' as Href)}
+      accessibilityRole="button"
+      style={({ pressed }) => [pressed && { transform: [{ scale: 0.98 }] }]}>
+      <LinearGradient colors={['#6A45FF', '#B04CFF']} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={styles.books}>
+        <View style={styles.booksIcon}>
+          <Ionicons name="book" size={28} color="#fff" />
+        </View>
+        <View style={{ flex: 1, gap: 4 }}>
+          <Text variant="heading" color="#fff">
+            {t('card.title')}
+          </Text>
+          <Text variant="small" color="rgba(255,255,255,0.9)">
+            {profile ? t('card.yours', { summary: booksSummary(profile, tx) }) : t('card.body')}
+          </Text>
+        </View>
+        <Ionicons name="chevron-forward" size={22} color="#fff" />
+      </LinearGradient>
+    </Pressable>
+  );
+}
+
 const styles = StyleSheet.create({
+  books: { flexDirection: 'row', alignItems: 'center', gap: Spacing.md, padding: Spacing.lg, borderRadius: Radius.lg },
+  booksIcon: {
+    width: 56,
+    height: 56,
+    borderRadius: 18,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: 'rgba(255,255,255,0.18)',
+  },
   search: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -158,6 +184,5 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: Colors.border,
   },
-  grid: { flexDirection: 'row', flexWrap: 'wrap', gap: Spacing.sm },
   collection: { borderRadius: Radius.lg, padding: Spacing.md, gap: 2 },
 });
