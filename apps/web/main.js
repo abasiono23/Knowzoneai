@@ -1,7 +1,8 @@
 // Knowzone website: navigation, scroll animations and the waitlist form. No libraries.
 
-// The Knowzone API (the waitlist is saved there). Local copies of the site talk to a local API.
-const API = /^(localhost|127\.0\.0\.1)$/.test(location.hostname) ? 'http://localhost:4000' : 'https://knowzone-api.onrender.com';
+// Sign-ups go straight to Supabase (settings in config.js): the join_waitlist database function saves
+// them and answers with the person's place in line.
+const { supabaseUrl, supabaseKey } = window.KNOWZONE ?? {};
 
 const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
 const $ = (s, el = document) => el.querySelector(s);
@@ -178,25 +179,38 @@ if (form) {
     button.disabled = true;
     button.innerHTML = '<span class="spinner" aria-hidden="true"></span> Joining…';
     say('');
-    // The server sleeps when nobody has used it for a while; waking it up can take up to a minute.
-    const slow = setTimeout(() => say('Waking up our server, this can take up to a minute…', true), 5000);
     try {
-      const res = await fetch(`${API}/waitlist`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(body),
-      });
-      const out = await res.json().catch(() => ({}));
-      if (!res.ok) throw new Error(out.error || 'Something went wrong. Please try again.');
+      // Bots fill in the hidden field: they're thanked, but nothing is saved.
+      const out = body.website
+        ? { position: 0, already: false }
+        : await joinWaitlist(body);
       success(body.name.split(/\s+/)[0], out.position, out.already);
     } catch (err) {
       say(err instanceof TypeError ? 'We couldn’t reach Knowzone. Check your connection and try again.' : err.message);
     } finally {
-      clearTimeout(slow);
       button.disabled = false;
       button.innerHTML = label;
     }
   });
+
+  async function joinWaitlist(b) {
+    const res = await fetch(`${supabaseUrl}/rest/v1/rpc/join_waitlist`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', apikey: supabaseKey, Authorization: `Bearer ${supabaseKey}` },
+      body: JSON.stringify({
+        p_name: b.name,
+        p_email: b.email,
+        p_role: b.role,
+        p_country: b.country ?? null,
+        p_interests: b.interests,
+        p_source: b.source ?? null,
+      }),
+    });
+    const out = await res.json().catch(() => ({}));
+    // The database explains what's wrong ("Please enter a valid email address.") in `message`.
+    if (!res.ok) throw new Error(/^Please /.test(out.message ?? '') ? out.message : 'Something went wrong. Please try again.');
+    return out;
+  }
 
   function say(text, wait = false) {
     msg.textContent = text;

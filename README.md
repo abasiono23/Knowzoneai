@@ -869,16 +869,18 @@ It uses the app's look: white pages, the purple open book, the K logo and Manrop
   - Signing up ends in confetti.
   - People who turn on "reduce motion" get the same pages without the animation.
 - **Waitlist:**
-  - The form posts to the API's `POST /waitlist`, which stores `WaitlistEntry` (name, email, role, interests,
-    country, source).
-  - Signing up again keeps the first place in line.
-  - A hidden field catches bots, and sign-ups are limited to 10 an hour per IP.
-  - A confirmation email is sent with the person's place in line.
-  - Migration: `20261030180000_waitlist`.
-- **Local:** `cd apps/web && python -m http.server 5500`. The form talks to `http://localhost:4000` locally, and
-  to `https://knowzone-api.onrender.com` everywhere else (set at the top of `main.js`).
-- **Hosting:** the `knowzone-web` static site in `render.yaml` (`/about`, `/waitlist` and `/privacy` work
-  without `.html`). If you set `CORS_ORIGIN` on the API, add the site's address to it.
+  - The form calls Supabase directly: the `join_waitlist` database function, through Supabase's API with the
+    publishable key in `config.js`. It doesn't wait on the API server, so joining takes a moment.
+  - The `WaitlistEntry` table stays closed to the public. The function is the only way in: it checks the
+    details, adds the person once (signing up again keeps the first place in line) and returns their place.
+  - A hidden field catches bots.
+  - Migrations: `20261030180000_waitlist`, `20261101120000_waitlist_join`.
+  - See who joined in Supabase → Table Editor → `WaitlistEntry`.
+  - No confirmation email is sent from the website. The API's `POST /waitlist` (with an email) still
+    exists but the site doesn't use it.
+- **Local:** `cd apps/web && python -m http.server 5500`. Sign-ups made locally go to the real Supabase table.
+- **Hosting:** Vercel. New Project → import the GitHub repo → Root Directory `apps/web` → Framework "Other" →
+  no build command. `vercel.json` makes `/about`, `/waitlist` and `/privacy` work without `.html`.
 - **Screenshots:** `assets/screens/*.webp` are real app screens (600 px wide); replace them as the app changes.
 
 ## What's built (Release 1 core loop)
