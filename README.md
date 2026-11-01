@@ -720,28 +720,51 @@ short videos.
 ### Your books (Explore → "Check out your books")
 
 - **The questions:**
-  - Secondary school: class (JSS 1 to SS 3), then science, art or commercial from SS 1.
-  - Undergraduate: level and course. Master's: course. There are 116 courses in 11 faculties, with search and
-    "my course isn't listed".
-  - Answers are saved on the phone.
+  - First, where you study: Nigeria, Ghana, Kenya, South Africa, UK and international, or somewhere else.
+  - Then what kind of student you are:
+
+    | Student | Questions |
+    |---|---|
+    | Secondary school | Class, then stream where there's a choice. Classes and streams come from the country's file. |
+    | Undergraduate | Level (100–600), then course |
+    | Polytechnic | ND 1, ND 2, HND 1 or HND 2, then course |
+    | College of education | NCE 1–3, then course |
+    | Master's | Course |
+    | Independent learner | Course |
+
+  - There are 116 courses in 11 faculties, with search and "my course isn't listed".
+  - Answers are saved on the phone. Answers saved by the first, Nigeria-only version are upgraded.
 - **Shelves (secondary school):**
   - Each student gets one card per subject for their class and stream. A card opens the subject's textbooks.
   - The Summaries and Videos tabs come next.
-- **Books** (`data/books/secondary.json`, served by `GET /books/secondary` and `GET /books/secondary/:subject`):
-  - 355 books in total.
-  - **Prescribed textbooks (307)**, checked against publisher pages, Nigerian school book lists, WAEC's
-    2026–2030 set texts and library catalogues. Each book keeps its sources. These show "Available soon" until
-    there are e-book agreements with publishers.
-  - **Free, openly licensed full textbooks (48)**, from OpenStax, Siyavula and Pressbooks, plus public-domain
-    texts.
+- **Books:** one file per country, `data/books/<country>.json`, holding its classes, streams, subjects and books.
+
+  | Country | Classes | Books | Free | Sources |
+  |---|---|---|---|---|
+  | Nigeria (`ng`) | JSS 1–SS 3, science/arts/commercial | 355 | 48 | Publisher pages, school book lists, WAEC set texts |
+  | Ghana (`gh`) | JHS 1–SHS 3, SHS learning areas | 304 | 204 | NaCCA approved lists, WAEC set texts, the Ministry's free SHS textbooks |
+  | Kenya (`ke`) | Grades 7–12 (CBE pathways), Forms 3–4 | 856 | 48 | KICD approved lists |
+  | South Africa (`za`) | Grades 8–12 (CAPS) | 754 | 64 | DBE National Catalogue, Siyavula, Mind the Gap |
+  | UK and international (`uk`) | Years 7–13, GCSE / IGCSE / A Level | 133 | 65 | Exam-board-endorsed books, OpenStax, Standard Ebooks |
+
+  - **Prescribed textbooks** show "Available soon" until there are e-book agreements with publishers. Each book keeps the sources it was checked against.
+  - **Free books** are legally free to read: openly licensed or public domain, or free on an official government platform. Free books are placed only in their own country (`countryOnly`).
+  - **Other countries** get "world": the free books from every country, by lower and upper secondary. A country without its own file yet gets this too.
+- **Endpoints:**
+  - `GET /books/countries`
+  - `GET /books/countries/:country` (classes and their streams)
+  - `GET /books/countries/:country/shelves?level=&stream=`
+  - `GET /books/countries/:country/subjects/:subject?level=`
+  - The first app version's `/books/secondary` paths still work, for Nigeria.
 - **Reading:**
   - Free books open in Knowzone's own reader screen.
-  - **Save** keeps a copy in the app's private storage, to read offline. 26 books are 100 MB or less and can be
-    saved; bigger ones are read online.
+  - **Save** keeps a copy in the app's private storage, to read offline. Books of 100 MB or less can be saved; bigger ones are read online.
   - Saved PDFs open in a small PDF.js reader page (fetched once from cdnjs) on the page where the reader left off.
-- **Updating the list:** `npx tsx scripts/books-merge.ts <research folder>`, then
-  `npx tsx scripts/books-covers.ts` (Open Library, then Google Books with `BOOKS_API`), then
-  `npx tsx scripts/books-downloads.ts`.
+- **Adding or updating a country:**
+  1. `npx tsx scripts/books-merge.ts <research file>`. Every book needs sources, and the file is checked the same way the server checks it.
+  2. `npx tsx scripts/books-covers.ts <country>` (Open Library, then Google Books with `BOOKS_API`).
+  3. `npx tsx scripts/books-downloads.ts <country>`.
+  4. Translate any new subject and stream names (`books.subjects`, `books.stream`) in all 10 languages.
 
 ### Study Rooms
 

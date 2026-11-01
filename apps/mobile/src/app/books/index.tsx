@@ -8,39 +8,64 @@ import Animated, { FadeInDown, FadeInRight } from 'react-native-reanimated';
 import { SubjectShelves } from '@/components/books/shelves';
 import { Button, Card, ProgressBar, Screen, ScreenHeader, Text } from '@/components/ui';
 import { LinearGradient } from '@/components/ui/gradient';
-import { Colors, Fonts, Gradients, Radius, Spacing } from '@/constants/theme';
+import { Colors, Fonts, Gradients, Radius, Spacing, WorldGradients } from '@/constants/theme';
+import { errorText } from '@/i18n/errors';
 import { useFlipStyle } from '@/i18n/provider';
 import {
+  booksApi,
   booksSummary,
-  CLASSES,
+  catalogueFor,
+  COUNTRIES,
+  COUNTRY_FLAG,
   coursesFor,
-  hasStream,
+  hasLevels,
+  levelName,
   LEVELS,
   OTHER_COURSE,
-  STREAMS,
+  STAGES,
+  streamName,
   useBooksProfile,
   type BooksProfile,
-  type Level,
-  type SchoolClass,
+  type Country,
+  type SchoolLevel,
   type Stage,
-  type Stream,
 } from '@/lib/books';
 
-type Step = 'stage' | 'schoolClass' | 'stream' | 'level' | 'course' | 'done';
-type Draft = { stage?: Stage; schoolClass?: SchoolClass; level?: Level };
+type Step = 'country' | 'stage' | 'level' | 'stream' | 'course' | 'done';
+type Draft = { country?: Country; stage?: Stage; level?: string };
+/** A country's secondary classes, from the server. */
+type Classes = { catalogue: string; levels: SchoolLevel[] };
+
+const STAGE_LOOK: Record<Stage, { icon: keyof typeof Ionicons.glyphMap; colors: readonly [string, string] }> = {
+  secondary: { icon: 'school', colors: Gradients.reward },
+  undergraduate: { icon: 'library', colors: Gradients.ai },
+  polytechnic: { icon: 'construct', colors: Gradients.streak },
+  college: { icon: 'easel', colors: WorldGradients.code },
+  masters: { icon: 'ribbon', colors: Gradients.mastery },
+  independent: { icon: 'compass', colors: WorldGradients.art },
+};
+const STREAM_LOOK: Record<string, { icon: keyof typeof Ionicons.glyphMap; colors: readonly [string, string] }> = {
+  science: { icon: 'flask', colors: Gradients.mastery },
+  arts: { icon: 'color-palette', colors: Gradients.streak },
+  commercial: { icon: 'briefcase', colors: Gradients.reward },
+};
+const STREAM_COLORS = [Gradients.mastery, Gradients.streak, Gradients.reward, Gradients.ai, WorldGradients.code, WorldGradients.art];
 
 /** The questions each kind of student answers, in order. */
-function stepsFor(d: Draft): Step[] {
-  if (d.stage === 'secondary')
-    return ['stage', 'schoolClass', ...(d.schoolClass && !hasStream(d.schoolClass) ? [] : ['stream' as const])];
-  if (d.stage === 'undergraduate') return ['stage', 'level', 'course'];
-  if (d.stage === 'masters') return ['stage', 'course'];
-  return ['stage', 'schoolClass', 'stream'];
+function stepsFor(d: Draft, classes: Classes | null): Step[] {
+  const start: Step[] = ['country', 'stage'];
+  if (d.stage === 'secondary') {
+    const level = classes?.levels.find((l) => l.id === d.level);
+    return [...start, 'level', ...(level && level.streams.length < 2 ? [] : ['stream' as const])];
+  }
+  if (d.stage === 'masters' || d.stage === 'independent') return [...start, 'course'];
+  return [...start, 'level', 'course'];
 }
 
 /**
- * "Check out your books": secondary students give their class and (from SS 1) science, art or
- * commercial; undergraduates their level and course; master's students their course.
+ * "Check out your books": where the learner studies, then what. Secondary students give their class
+ * and (where there's a choice) their stream; university, polytechnic and college students their level
+ * and course; master's students and independent learners their course.
  */
 export default function Books() {
   const { t } = useTranslation('books');
@@ -49,6 +74,8 @@ export default function Books() {
   const [chosen, setChosen] = useState<Step | null>(null);
   const [history, setHistory] = useState<Step[]>([]);
   const [draft, setDraft] = useState<Draft>({});
+  const [classes, setClasses] = useState<Classes | null>(null);
+  const [classesError, setClassesError] = useState<string | null>(null);
 
   if (profile === undefined)
     return (
@@ -58,8 +85,8 @@ export default function Books() {
     );
 
   // People who've answered before see their books; everyone else starts with the first question.
-  const step: Step = chosen ?? (profile ? 'done' : 'stage');
-  const steps = stepsFor(draft);
+  const step: Step = chosen ?? (profile ? 'done' : 'country');
+  const steps = stepsFor(draft, classes);
   const go = (next: Step) => {
     setHistory((h) => [...h, step]);
     setChosen(next);
@@ -70,10 +97,27 @@ export default function Books() {
     setHistory((h) => h.slice(0, -1));
   };
   const finish = (p: BooksProfile) => {
-    save(p);
+    save({ ...p, country: draft.country });
     setHistory([]);
     setChosen('done');
   };
+  const loadClasses = (country: Country) => {
+    setClasses(null);
+    setClassesError(null);
+    booksApi
+      .classes(catalogueFor(country))
+      .then((r) => setClasses({ catalogue: r.country, levels: r.levels }))
+      .catch((e) => setClassesError(errorText(e, t('shelf.loadFailed'))));
+  };
+  const level = classes?.levels.find((l) => l.id === draft.level);
+  const finishSecondary = (l: SchoolLevel, stream?: { id: string; name: string }) =>
+    finish({
+      stage: 'secondary',
+      catalogue: classes!.catalogue,
+      level: l.id,
+      ...(l.name && { levelName: l.name }),
+      ...(stream && { stream: stream.id, streamName: stream.name }),
+    });
 
   return (
     <Screen withTabBar={false}>
@@ -89,81 +133,109 @@ export default function Books() {
       )}
 
       <Animated.View key={step} entering={FadeInRight.duration(300)} style={{ gap: Spacing.md }}>
-        {step === 'stage' && (
+        {step === 'country' && (
           <>
-            <Text variant="title">{t('stage.question')}</Text>
-            {(['secondary', 'undergraduate', 'masters'] as const).map((s, i) => (
+            <Text variant="title">{t('country.question')}</Text>
+            {COUNTRIES.map((c, i) => (
               <Option
-                key={s}
+                key={c}
                 i={i}
-                icon={s === 'secondary' ? 'school' : s === 'undergraduate' ? 'library' : 'ribbon'}
-                colors={s === 'secondary' ? Gradients.reward : s === 'undergraduate' ? Gradients.ai : Gradients.mastery}
-                title={t(`stage.${s}.title`)}
-                body={t(`stage.${s}.body`)}
-                on={draft.stage === s}
+                emoji={COUNTRY_FLAG[c]}
+                title={t(`country.${c}.title`)}
+                body={t(`country.${c}.body`)}
+                on={draft.country === c}
                 onPress={() => {
-                  setDraft({ stage: s });
-                  go(s === 'secondary' ? 'schoolClass' : s === 'undergraduate' ? 'level' : 'course');
+                  setDraft({ country: c });
+                  setClasses(null);
+                  go('stage');
                 }}
               />
             ))}
           </>
         )}
 
-        {step === 'schoolClass' && (
+        {step === 'stage' && (
           <>
-            <Text variant="title">{t('schoolClass.question')}</Text>
-            {(['junior', 'senior'] as const).map((group) => (
-              <View key={group} style={{ gap: Spacing.sm }}>
-                <Text variant="label" color={Colors.textSecondary}>
-                  {t(`schoolClass.${group}`)}
-                </Text>
-                <View style={styles.grid}>
-                  {CLASSES.filter((c) => c.startsWith(group === 'junior' ? 'jss' : 'ss')).map((c, i) => (
-                    <Tile
-                      key={c}
-                      i={i}
-                      label={t(`schoolClass.${c}`)}
-                      on={draft.schoolClass === c}
-                      onPress={() => {
-                        setDraft((d) => ({ ...d, schoolClass: c }));
-                        if (hasStream(c)) go('stream');
-                        else finish({ stage: 'secondary', schoolClass: c });
-                      }}
-                    />
-                  ))}
-                </View>
-              </View>
-            ))}
-          </>
-        )}
-
-        {step === 'stream' && (
-          <>
-            <Text variant="title">{t('stream.question')}</Text>
-            {STREAMS.map((s, i) => (
+            <Text variant="title">{t('stage.question')}</Text>
+            {STAGES.map((s, i) => (
               <Option
                 key={s}
                 i={i}
-                icon={s === 'science' ? 'flask' : s === 'arts' ? 'color-palette' : 'briefcase'}
-                colors={s === 'science' ? Gradients.mastery : s === 'arts' ? Gradients.streak : Gradients.reward}
-                title={t(`stream.${s}.title`)}
-                body={t(`stream.${s}.body`)}
-                onPress={() => finish({ stage: 'secondary', schoolClass: draft.schoolClass!, stream: s as Stream })}
+                icon={STAGE_LOOK[s].icon}
+                colors={STAGE_LOOK[s].colors}
+                title={t(`stage.${s}.title`)}
+                body={t(`stage.${s}.body`)}
+                on={draft.stage === s}
+                onPress={() => {
+                  setDraft((d) => ({ country: d.country, stage: s }));
+                  if (s === 'secondary' && classes?.catalogue !== catalogueFor(draft.country!)) loadClasses(draft.country!);
+                  go(s === 'masters' || s === 'independent' ? 'course' : 'level');
+                }}
               />
             ))}
           </>
         )}
 
-        {step === 'level' && (
+        {step === 'level' && draft.stage === 'secondary' && (
+          <>
+            <Text variant="title">{t('schoolClass.question')}</Text>
+            {classesError ? (
+              <View style={{ gap: Spacing.sm, alignItems: 'center' }}>
+                <Text variant="small" color={Colors.textSecondary} center>
+                  {classesError}
+                </Text>
+                <Button title={t('shelf.retry')} variant="secondary" onPress={() => loadClasses(draft.country!)} />
+              </View>
+            ) : !classes ? (
+              <ActivityIndicator color={Colors.primary} style={{ marginTop: Spacing.lg }} />
+            ) : (
+              <>
+                {classes.catalogue === 'world' && draft.country !== 'other' && (
+                  <Card style={styles.note}>
+                    <Ionicons name="earth" size={20} color={Colors.primary} />
+                    <Text variant="small" color={Colors.textSecondary} style={{ flex: 1 }}>
+                      {t('country.notYet')}
+                    </Text>
+                  </Card>
+                )}
+                {(['lower', 'upper'] as const).map((group) => (
+                  <View key={group} style={{ gap: Spacing.sm }}>
+                    <Text variant="label" color={Colors.textSecondary}>
+                      {t(group === 'lower' ? 'schoolClass.junior' : 'schoolClass.senior')}
+                    </Text>
+                    <View style={styles.grid}>
+                      {classes.levels
+                        .filter((l) => l.stage === group)
+                        .map((l, i) => (
+                          <Tile
+                            key={l.id}
+                            i={i}
+                            label={levelName(l.id, tx, l.name)}
+                            on={draft.level === l.id}
+                            onPress={() => {
+                              setDraft((d) => ({ ...d, level: l.id }));
+                              if (l.streams.length > 1) go('stream');
+                              else finishSecondary(l, l.streams[0]);
+                            }}
+                          />
+                        ))}
+                    </View>
+                  </View>
+                ))}
+              </>
+            )}
+          </>
+        )}
+
+        {step === 'level' && hasLevels(draft.stage) && (
           <>
             <Text variant="title">{t('level.question')}</Text>
             <View style={styles.grid}>
-              {LEVELS.map((l, i) => (
+              {LEVELS[draft.stage].map((l, i) => (
                 <Tile
                   key={l}
                   i={i}
-                  label={t('level.option', { level: l })}
+                  label={levelName(l, tx)}
                   on={draft.level === l}
                   onPress={() => {
                     setDraft((d) => ({ ...d, level: l }));
@@ -175,16 +247,32 @@ export default function Books() {
           </>
         )}
 
-        {step === 'course' && (
+        {step === 'stream' && level && (
+          <>
+            <Text variant="title">{t(classes?.catalogue === 'ng' ? 'stream.question' : 'stream.questionOther')}</Text>
+            {level.streams.map((s, i) => (
+              <Option
+                key={s.id}
+                i={i}
+                icon={STREAM_LOOK[s.id]?.icon ?? 'git-branch'}
+                colors={STREAM_LOOK[s.id]?.colors ?? STREAM_COLORS[i % STREAM_COLORS.length]!}
+                title={streamName(s.id, tx, s.name)}
+                body={tx(`stream.${s.id}.body`, { defaultValue: '' })}
+                onPress={() => finishSecondary(level, s)}
+              />
+            ))}
+          </>
+        )}
+
+        {step === 'course' && draft.stage && (
           <CoursePicker
-            stage={draft.stage === 'masters' ? 'masters' : 'undergraduate'}
-            onPick={(course, otherCourse) =>
-              finish(
-                draft.stage === 'masters'
-                  ? { stage: 'masters', course, ...(otherCourse && { otherCourse }) }
-                  : { stage: 'undergraduate', level: draft.level!, course, ...(otherCourse && { otherCourse }) },
-              )
-            }
+            stage={draft.stage}
+            onPick={(course, otherCourse) => {
+              const picked = { course, ...(otherCourse && { otherCourse }) };
+              const stage = draft.stage!;
+              if (stage === 'masters' || stage === 'independent') finish({ stage, ...picked });
+              else if (stage !== 'secondary') finish({ stage, level: draft.level!, ...picked });
+            }}
           />
         )}
 
@@ -193,14 +281,14 @@ export default function Books() {
             <LinearGradient colors={Gradients.ai} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={styles.summary}>
               <Ionicons name="checkmark-circle" size={30} color="#fff" />
               <Text variant="label" color="rgba(255,255,255,0.85)">
-                {t('done.title')}
+                {profile.country ? `${COUNTRY_FLAG[profile.country]}  ${t('done.title')}` : t('done.title')}
               </Text>
               <Text variant="title" color="#fff">
                 {booksSummary(profile, tx)}
               </Text>
             </LinearGradient>
             {profile.stage === 'secondary' ? (
-              <SubjectShelves schoolClass={profile.schoolClass} stream={profile.stream} />
+              <SubjectShelves catalogue={profile.catalogue} level={profile.level} stream={profile.stream} />
             ) : (
               <Card style={{ alignItems: 'center', gap: Spacing.sm, paddingVertical: Spacing.xl }}>
                 <View style={styles.bookIcon}>
@@ -221,7 +309,7 @@ export default function Books() {
               onPress={() => {
                 setDraft({});
                 setHistory([]);
-                setChosen('stage');
+                setChosen('country');
               }}
             />
           </>
@@ -231,10 +319,11 @@ export default function Books() {
   );
 }
 
-/** A big answer: icon, title and a short line. */
+/** A big answer: icon (or flag), title and a short line. */
 function Option({
   i,
   icon,
+  emoji,
   colors,
   title,
   body,
@@ -242,8 +331,9 @@ function Option({
   onPress,
 }: {
   i: number;
-  icon: keyof typeof Ionicons.glyphMap;
-  colors: readonly [string, string];
+  icon?: keyof typeof Ionicons.glyphMap;
+  emoji?: string;
+  colors?: readonly [string, string];
   title: string;
   body: string;
   on?: boolean;
@@ -255,16 +345,24 @@ function Option({
       <Pressable
         onPress={onPress}
         accessibilityRole="button"
-        accessibilityLabel={`${title}. ${body}`}
+        accessibilityLabel={body ? `${title}. ${body}` : title}
         style={({ pressed }) => [styles.option, on && styles.optionOn, pressed && { transform: [{ scale: 0.98 }] }]}>
-        <LinearGradient colors={colors} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={styles.optionIcon}>
-          <Ionicons name={icon} size={24} color="#fff" />
-        </LinearGradient>
+        {emoji ? (
+          <View style={[styles.optionIcon, styles.flag]}>
+            <Text style={{ fontSize: 30, lineHeight: 36 }}>{emoji}</Text>
+          </View>
+        ) : (
+          <LinearGradient colors={colors!} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={styles.optionIcon}>
+            <Ionicons name={icon!} size={24} color="#fff" />
+          </LinearGradient>
+        )}
         <View style={{ flex: 1, gap: 2 }}>
           <Text variant="bodyStrong">{title}</Text>
-          <Text variant="small" color={Colors.textSecondary}>
-            {body}
-          </Text>
+          {!!body && (
+            <Text variant="small" color={Colors.textSecondary}>
+              {body}
+            </Text>
+          )}
         </View>
         <Ionicons name="chevron-forward" size={20} color={Colors.textMuted} style={flip} />
       </Pressable>
@@ -293,7 +391,7 @@ function CoursePicker({
   stage,
   onPick,
 }: {
-  stage: 'undergraduate' | 'masters';
+  stage: Stage;
   onPick: (course: string, other?: string) => void;
 }) {
   const { t } = useTranslation('books');
@@ -398,6 +496,8 @@ const styles = StyleSheet.create({
   },
   optionOn: { borderColor: Colors.primary, backgroundColor: Colors.primarySoft },
   optionIcon: { width: 52, height: 52, borderRadius: 16, alignItems: 'center', justifyContent: 'center' },
+  flag: { backgroundColor: Colors.surfaceRaised },
+  note: { flexDirection: 'row', alignItems: 'center', gap: Spacing.sm },
   grid: { flexDirection: 'row', flexWrap: 'wrap', gap: Spacing.sm },
   tileWrap: { width: '31%', flexGrow: 1 },
   tile: {

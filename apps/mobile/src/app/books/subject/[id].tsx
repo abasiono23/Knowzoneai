@@ -10,7 +10,7 @@ import { Button, Card, Screen, ScreenHeader, Text } from '@/components/ui';
 import { LinearGradient } from '@/components/ui/gradient';
 import { Colors, Fonts, Radius, Spacing } from '@/constants/theme';
 import { errorText } from '@/i18n/errors';
-import { booksApi, SUBJECT_LOOK, type SchoolClass, type ShelfBook } from '@/lib/books';
+import { booksApi, levelName, SUBJECT_LOOK, subjectName, type ShelfBook } from '@/lib/books';
 import { megabytes, removeBook, saveBook, savedBook } from '@/lib/reader';
 
 type Tab = 'textbooks' | 'summaries' | 'videos';
@@ -22,17 +22,25 @@ type Tab = 'textbooks' | 'summaries' | 'videos';
 export default function SubjectBooks() {
   const { t } = useTranslation('books');
   const tx = t as unknown as (key: string, options?: Record<string, unknown>) => string;
-  const { id, class: schoolClass } = useLocalSearchParams<{ id: string; class: SchoolClass }>();
+  const params = useLocalSearchParams<{ id: string; catalogue?: string; level?: string; class?: string }>();
+  const { id } = params;
+  // `class`: links from before countries (Nigeria only).
+  const catalogue = params.catalogue ?? 'ng';
+  const level = params.level ?? params.class ?? '';
+  const [name, setName] = useState<string>();
   const [books, setBooks] = useState<ShelfBook[] | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [tab, setTab] = useState<Tab>('textbooks');
 
   const load = useCallback(() => {
     booksApi
-      .subject(id, schoolClass)
-      .then((r) => setBooks(r.books))
+      .subject(catalogue, id, level)
+      .then((r) => {
+        setName(r.name);
+        setBooks(r.books);
+      })
       .catch((e) => setError(errorText(e, t('shelf.loadFailed'))));
-  }, [id, schoolClass, t]);
+  }, [catalogue, id, level, t]);
   useEffect(load, [load]);
 
   const free = books?.filter((b) => b.free) ?? [];
@@ -40,7 +48,7 @@ export default function SubjectBooks() {
 
   return (
     <Screen withTabBar={false}>
-      <ScreenHeader eyebrow={tx(`schoolClass.${schoolClass}`).toUpperCase()} title={tx(`subjects.${id}`)} />
+      <ScreenHeader eyebrow={levelName(level, tx).toUpperCase()} title={subjectName(id, tx, name)} />
 
       <View style={styles.tabs}>
         {(['textbooks', 'summaries', 'videos'] as const).map((k) => (
@@ -163,10 +171,10 @@ function BookRow({ book, i, subject }: { book: ShelfBook; i: number; subject: st
             {[book.publisher, book.edition, book.year].filter(Boolean).join(' · ')}
           </Text>
           <View style={styles.chips}>
-            {book.classes.map((c) => (
+            {book.levels.map((c) => (
               <View key={c} style={styles.chip}>
                 <Text style={{ fontSize: 11, fontFamily: Fonts.bold }} color={Colors.primary}>
-                  {tx(`schoolClass.${c}`)}
+                  {levelName(c, tx)}
                 </Text>
               </View>
             ))}

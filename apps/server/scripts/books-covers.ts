@@ -1,10 +1,10 @@
 /**
- * Finds covers for books in data/books/secondary.json that have none: Open Library by ISBN (no key
+ * Finds covers for books in data/books/<country>.json that have none: Open Library by ISBN (no key
  * needed), then Google Books (GOOGLE_BOOKS_API_KEY or BOOKS_API, or YOUTUBE_API_KEY when it's allowed to use the
  * Books API). A cover is only taken on a strong match (same ISBN, or the same title with a matching
  * publisher or author), so a different book's cover never slips in. Run after books-merge.
  *
- *   npx tsx scripts/books-covers.ts
+ *   npx tsx scripts/books-covers.ts [country, e.g. ng]
  */
 import 'dotenv/config';
 
@@ -13,7 +13,7 @@ import { resolve } from 'node:path';
 
 import type { Book } from '../src/services/books.js';
 
-const file = resolve(import.meta.dirname, '../data/books/secondary.json');
+const file = resolve(import.meta.dirname, `../data/books/${process.argv[2] ?? 'ng'}.json`);
 const data = JSON.parse(readFileSync(file, 'utf8')) as { updated: string; books: Book[] };
 const key = process.env.GOOGLE_BOOKS_API_KEY || process.env.BOOKS_API || process.env.YOUTUBE_API_KEY;
 

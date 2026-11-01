@@ -6,24 +6,50 @@ import { useCallback, useState } from 'react';
 import { request } from '@/lib/api';
 
 /**
- * "Check out your books": the learner says what they're studying (secondary class and stream, or
- * university level and course) so their books can be picked for them. Answers are kept on the phone.
+ * "Check out your books": the learner says where they study and what (secondary class and stream;
+ * university, polytechnic or college level and course; a master's or their own course) so their
+ * books can be picked for them. Answers are kept on the phone.
  */
-export type Stage = 'secondary' | 'undergraduate' | 'masters';
-export type SchoolClass = 'jss1' | 'jss2' | 'jss3' | 'ss1' | 'ss2' | 'ss3';
-export type Stream = 'science' | 'arts' | 'commercial';
-export type Level = '100' | '200' | '300' | '400' | '500' | '600';
+export type Stage = 'secondary' | 'undergraduate' | 'polytechnic' | 'college' | 'masters' | 'independent';
+export const STAGES: Stage[] = ['secondary', 'undergraduate', 'polytechnic', 'college', 'masters', 'independent'];
 
-export type BooksProfile =
-  | { stage: 'secondary'; schoolClass: SchoolClass; stream?: Stream }
-  | { stage: 'undergraduate'; level: Level; course: string; otherCourse?: string }
-  | { stage: 'masters'; course: string; otherCourse?: string };
+/** Countries with their own school books. "other" gets the free books from everywhere. */
+export type Country = 'ng' | 'gh' | 'ke' | 'za' | 'uk' | 'other';
+export const COUNTRIES: Country[] = ['ng', 'gh', 'ke', 'za', 'uk', 'other'];
+export const COUNTRY_FLAG: Record<Country, string> = {
+  ng: '🇳🇬',
+  gh: '🇬🇭',
+  ke: '🇰🇪',
+  za: '🇿🇦',
+  uk: '🇬🇧',
+  other: '🌍',
+};
+/** The server's book list for a country. */
+export const catalogueFor = (c: Country) => (c === 'other' ? 'world' : c);
 
-export const CLASSES: SchoolClass[] = ['jss1', 'jss2', 'jss3', 'ss1', 'ss2', 'ss3'];
-/** Science, art or commercial is chosen from SS 1 (JSS classes all study the same subjects). */
-export const hasStream = (c: SchoolClass) => c.startsWith('ss');
-export const STREAMS: Stream[] = ['science', 'arts', 'commercial'];
-export const LEVELS: Level[] = ['100', '200', '300', '400', '500', '600'];
+/** Levels after secondary school (secondary classes come from the server, per country). */
+export const LEVELS: Record<'undergraduate' | 'polytechnic' | 'college', string[]> = {
+  undergraduate: ['100', '200', '300', '400', '500', '600'],
+  polytechnic: ['nd1', 'nd2', 'hnd1', 'hnd2'],
+  college: ['nce1', 'nce2', 'nce3'],
+};
+export const hasLevels = (s?: Stage): s is keyof typeof LEVELS => !!s && s in LEVELS;
+
+export type BooksProfile = { country?: Country } & (
+  | {
+      stage: 'secondary';
+      /** The server's book list these answers belong to. */
+      catalogue: string;
+      level: string;
+      stream?: string;
+      /** Names from the server, for classes and streams without a translation. */
+      levelName?: string;
+      streamName?: string;
+    }
+  | { stage: 'undergraduate' | 'polytechnic' | 'college'; level: string; course: string; otherCourse?: string }
+  | { stage: 'masters' | 'independent'; course: string; otherCourse?: string }
+);
+
 /** Typed in by the learner when their course isn't on the list. */
 export const OTHER_COURSE = 'other';
 
@@ -196,8 +222,8 @@ export const FACULTIES: { id: string; courses: string[]; mastersOnly?: string[] 
   },
 ];
 
-/** The courses offered at a stage, by faculty (master's adds MBA, MPA, MPH and LL.M). */
-export const coursesFor = (stage: 'undergraduate' | 'masters') =>
+/** The courses to choose from, by faculty (master's adds MBA, MPA, MPH and LL.M). */
+export const coursesFor = (stage: Stage) =>
   FACULTIES.map((f) => ({
     id: f.id,
     courses: stage === 'masters' ? [...f.courses, ...(f.mastersOnly ?? [])] : f.courses,
@@ -212,7 +238,7 @@ export function useBooksProfile() {
   useFocusEffect(
     useCallback(() => {
       AsyncStorage.getItem(KEY)
-        .then((raw) => setProfile(raw ? (JSON.parse(raw) as BooksProfile) : null))
+        .then((raw) => setProfile(raw ? upgrade(JSON.parse(raw) as BooksProfile & { schoolClass?: string }) : null))
         .catch(() => setProfile(null));
     }, []),
   );
@@ -223,33 +249,60 @@ export function useBooksProfile() {
   return { profile, save };
 }
 
+/** Answers saved before countries (Nigerian secondary classes only). */
+function upgrade(p: BooksProfile & { schoolClass?: string }): BooksProfile {
+  if (p.stage !== 'secondary' || !p.schoolClass) return p;
+  const { schoolClass, ...rest } = p;
+  return { ...rest, country: 'ng', catalogue: 'ng', level: schoolClass };
+}
+
 type T = (key: string, options?: Record<string, unknown>) => string;
+
+/** "SS 2", "Grade 10", "Year 12", "ND 1", "300 Level"; else the server's name. */
+export function levelName(id: string, t: T, name?: string) {
+  if (/^\d{3}$/.test(id)) return t('level.option', { level: id });
+  if (id === 'lower' || id === 'upper') return t(`levelName.${id}`);
+  const m = id.match(/^(jss|ss|jhs|shs|grade|year|igcse|form|nd|hnd|nce)(\d+)$/);
+  return m ? t(`levelName.${m[1]}`, { n: m[2] }) : (name ?? id);
+}
+
+/** A stream's name: translated for the ones we know, else the server's. */
+export const streamName = (id: string, t: T, name?: string) => t(`stream.${id}.title`, { defaultValue: name ?? id });
 
 /** A course's name: from the list, or what the learner typed. */
 export const courseName = (p: { course: string; otherCourse?: string }, t: T) =>
   p.course === OTHER_COURSE ? (p.otherCourse ?? '') : t(`courses.${p.course}`);
 
-/** "SS 2 · Science", "300 Level · Computer Science", "Master’s · Public Health". */
+/** "SS 2 · Science", "300 Level · Computer Science", "HND 1 · Accounting", "Master’s · Public Health". */
 export function booksSummary(p: BooksProfile, t: T) {
   if (p.stage === 'secondary')
-    return [t(`schoolClass.${p.schoolClass}`), p.stream && t(`stream.${p.stream}.title`)].filter(Boolean).join(' · ');
-  if (p.stage === 'undergraduate') return `${t('level.option', { level: p.level })} · ${courseName(p, t)}`;
-  return `${t('masters')} · ${courseName(p, t)}`;
+    return [levelName(p.level, t, p.levelName), p.stream && streamName(p.stream, t, p.streamName)]
+      .filter(Boolean)
+      .join(' · ');
+  if ('level' in p) return `${levelName(p.level, t)} · ${courseName(p, t)}`;
+  return `${t(`summary.${p.stage}`)} · ${courseName(p, t)}`;
 }
 
 // ─── Secondary school shelves (from the server) ───────────────────────────────
 
-export type SubjectShelf = { id: string; books: number; free: number };
+export type SchoolLevel = {
+  id: string;
+  name?: string;
+  stage: 'lower' | 'upper';
+  /** What students choose between in this class (science/arts/commercial, pathways, exam routes). */
+  streams: { id: string; name: string }[];
+};
+export type SubjectShelf = { id: string; name: string; books: number; free: number };
 export type ShelfBook = {
   id: string;
   title: string;
   series?: string | null;
   authors: string[];
-  publisher: string;
+  publisher: string | null;
   edition?: string | null;
   year?: number | null;
   cover?: string | null;
-  /** Free, openly licensed: read online. Otherwise bought in the app (later). */
+  /** Free: read in the app. Otherwise bought in the app (later). */
   free: boolean;
   readUrl?: string | null;
   /** The official file to save in the app for offline reading, and its size. */
@@ -258,15 +311,31 @@ export type ShelfBook = {
   downloadBytes?: number | null;
   provider?: string | null;
   license?: string | null;
-  classes: SchoolClass[];
+  levels: string[];
 };
 
 export const booksApi = {
-  subjects: (schoolClass: SchoolClass, stream?: Stream) =>
-    request<{ subjects: SubjectShelf[] }>(`/books/secondary?class=${schoolClass}${stream ? `&stream=${stream}` : ''}`),
-  subject: (id: string, schoolClass: SchoolClass) =>
-    request<{ subject: string; books: ShelfBook[] }>(`/books/secondary/${id}?class=${schoolClass}`),
+  /** A country's classes. Countries without their own books yet answer as "world". */
+  classes: (country: string) =>
+    request<{ country: string; name: string; levels: SchoolLevel[] }>(`/books/countries/${country}`),
+  subjects: (catalogue: string, level: string, stream?: string) =>
+    request<{ subjects: SubjectShelf[] }>(
+      `/books/countries/${catalogue}/shelves?level=${level}${stream ? `&stream=${stream}` : ''}`,
+    ),
+  subject: (catalogue: string, id: string, level: string) =>
+    request<{ subject: string; name: string; books: ShelfBook[] }>(
+      `/books/countries/${catalogue}/subjects/${id}?level=${level}`,
+    ),
 };
+
+/**
+ * A subject's name: translated for the ones we know, else the server's. A country's own name for a
+ * shared subject (Kenya's "Home Science" for Home Economics) is kept as the country says it.
+ */
+export function subjectName(id: string, t: T, name?: string) {
+  const english = t(`subjects.${id}`, { lng: 'en', defaultValue: '' });
+  return name && english && english !== name ? name : t(`subjects.${id}`, { defaultValue: name ?? id });
+}
 
 /** Each subject's icon and colours on its card. */
 export const SUBJECT_LOOK: Record<string, { icon: keyof typeof Ionicons.glyphMap; colors: readonly [string, string] }> =

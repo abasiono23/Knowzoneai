@@ -1,17 +1,17 @@
 /**
- * Finds the official download for each free book in data/books/secondary.json, so students can save
+ * Finds the official download for each free book in data/books/<country>.json, so students can save
  * it in the app and read offline: OpenStax PDFs (from OpenStax's own catalogue), Pressbooks PDF
  * exports, single-page books (Gutenberg, Standard Ebooks) and PDFs linked from the book's own page.
  * Records the size, so the app can say how big a download is. Run after books-merge.
  *
- *   npx tsx scripts/books-downloads.ts
+ *   npx tsx scripts/books-downloads.ts [country, e.g. ng]
  */
 import { readFileSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 
 import type { Book } from '../src/services/books.js';
 
-const file = resolve(import.meta.dirname, '../data/books/secondary.json');
+const file = resolve(import.meta.dirname, `../data/books/${process.argv[2] ?? 'ng'}.json`);
 const data = JSON.parse(readFileSync(file, 'utf8')) as { updated: string; books: Book[] };
 /** The biggest book students can save in the app (100 MB). */
 const MAX_BYTES = 100e6;
@@ -43,7 +43,11 @@ for (const b of data.books.filter((x) => x.free && x.readUrl)) {
   const read = b.readUrl!;
   let result: { url: string; bytes: number | null; type: 'pdf' | 'html' } | null = null;
   const slug = read.match(/openstax\.org\/books\/([^/]+)/)?.[1];
-  if (slug && openstax.has(slug)) {
+  // The official PDF the research found, when it really is one.
+  const given = b.downloadUrl && b.downloadType !== 'html' ? await check(b.downloadUrl, 'pdf') : null;
+  if (given) {
+    result = { ...given, type: 'pdf' };
+  } else if (slug && openstax.has(slug)) {
     const ok = await check(openstax.get(slug)!, 'pdf');
     if (ok) result = { ...ok, type: 'pdf' };
   } else if (/gutenberg\.org\/cache\/epub\/.*\.html$|standardebooks\.org\/.*\/single-page$/.test(read)) {

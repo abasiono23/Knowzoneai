@@ -1,0 +1,5514 @@
+{
+ "country": "uk",
+ "name": "United Kingdom & Cambridge International",
+ "updated": "2026-11-01",
+ "levels": [
+  {
+   "id": "year7",
+   "name": "Year 7",
+   "stage": "lower"
+  },
+  {
+   "id": "year8",
+   "name": "Year 8",
+   "stage": "lower"
+  },
+  {
+   "id": "year9",
+   "name": "Year 9",
+   "stage": "lower"
+  },
+  {
+   "id": "year10",
+   "name": "Year 10",
+   "stage": "upper"
+  },
+  {
+   "id": "year11",
+   "name": "Year 11",
+   "stage": "upper"
+  },
+  {
+   "id": "year12",
+   "name": "Year 12",
+   "stage": "upper"
+  },
+  {
+   "id": "year13",
+   "name": "Year 13",
+   "stage": "upper"
+  },
+  {
+   "id": "igcse1",
+   "name": "Cambridge IGCSE Year 1",
+   "stage": "upper"
+  },
+  {
+   "id": "igcse2",
+   "name": "Cambridge IGCSE Year 2",
+   "stage": "upper"
+  }
+ ],
+ "streams": [
+  {
+   "id": "gcse",
+   "name": "GCSE (AQA / Edexcel / OCR)",
+   "levels": [
+    "year10",
+    "year11"
+   ]
+  },
+  {
+   "id": "igcse",
+   "name": "Cambridge IGCSE",
+   "levels": [
+    "igcse1",
+    "igcse2"
+   ]
+  },
+  {
+   "id": "a-level",
+   "name": "A Level",
+   "levels": [
+    "year12",
+    "year13"
+   ]
+  }
+ ],
+ "subjects": [
+  {
+   "id": "english",
+   "name": "English",
+   "levels": [
+    "year7",
+    "year8",
+    "year9",
+    "igcse1",
+    "igcse2"
+   ],
+   "streams": [
+    "igcse"
+   ]
+  },
+  {
+   "id": "english-language",
+   "name": "English Language",
+   "levels": [
+    "year10",
+    "year11"
+   ],
+   "streams": [
+    "gcse"
+   ]
+  },
+  {
+   "id": "english-literature",
+   "name": "English Literature",
+   "levels": [
+    "year10",
+    "year11",
+    "year12",
+    "year13"
+   ],
+   "streams": [
+    "gcse",
+    "a-level"
+   ]
+  },
+  {
+   "id": "literature",
+   "name": "Literature in English",
+   "levels": [
+    "igcse1",
+    "igcse2"
+   ],
+   "streams": [
+    "igcse"
+   ]
+  },
+  {
+   "id": "mathematics",
+   "name": "Mathematics",
+   "levels": [
+    "year7",
+    "year8",
+    "year9",
+    "year10",
+    "year11",
+    "year12",
+    "year13",
+    "igcse1",
+    "igcse2"
+   ],
+   "streams": [
+    "gcse",
+    "a-level",
+    "igcse"
+   ]
+  },
+  {
+   "id": "further-mathematics",
+   "name": "Further Mathematics / Additional Mathematics",
+   "levels": [
+    "year12",
+    "year13",
+    "igcse1",
+    "igcse2"
+   ],
+   "streams": [
+    "a-level",
+    "igcse"
+   ]
+  },
+  {
+   "id": "science",
+   "name": "Science",
+   "levels": [
+    "year7",
+    "year8",
+    "year9"
+   ],
+   "streams": null
+  },
+  {
+   "id": "combined-science",
+   "name": "Combined Science",
+   "levels": [
+    "year10",
+    "year11"
+   ],
+   "streams": [
+    "gcse"
+   ]
+  },
+  {
+   "id": "biology",
+   "name": "Biology",
+   "levels": [
+    "year10",
+    "year11",
+    "year12",
+    "year13",
+    "igcse1",
+    "igcse2"
+   ],
+   "streams": [
+    "gcse",
+    "a-level",
+    "igcse"
+   ]
+  },
+  {
+   "id": "chemistry",
+   "name": "Chemistry",
+   "levels": [
+    "year10",
+    "year11",
+    "year12",
+    "year13",
+    "igcse1",
+    "igcse2"
+   ],
+   "streams": [
+    "gcse",
+    "a-level",
+    "igcse"
+   ]
+  },
+  {
+   "id": "physics",
+   "name": "Physics",
+   "levels": [
+    "year10",
+    "year11",
+    "year12",
+    "year13",
+    "igcse1",
+    "igcse2"
+   ],
+   "streams": [
+    "gcse",
+    "a-level",
+    "igcse"
+   ]
+  },
+  {
+   "id": "history",
+   "name": "History",
+   "levels": [
+    "year7",
+    "year8",
+    "year9",
+    "year10",
+    "year11",
+    "igcse1",
+    "igcse2"
+   ],
+   "streams": [
+    "gcse",
+    "igcse"
+   ]
+  },
+  {
+   "id": "geography",
+   "name": "Geography",
+   "levels": [
+    "year7",
+    "year8",
+    "year9",
+    "year10",
+    "year11",
+    "year12",
+    "year13",
+    "igcse1",
+    "igcse2"
+   ],
+   "streams": [
+    "gcse",
+    "a-level",
+    "igcse"
+   ]
+  },
+  {
+   "id": "religious-studies",
+   "name": "Religious Studies",
+   "levels": [
+    "year7",
+    "year8",
+    "year9",
+    "year10",
+    "year11"
+   ],
+   "streams": [
+    "gcse"
+   ]
+  },
+  {
+   "id": "french",
+   "name": "French",
+   "levels": [
+    "year7",
+    "year8",
+    "year9",
+    "year10",
+    "year11",
+    "igcse1",
+    "igcse2"
+   ],
+   "streams": [
+    "gcse",
+    "igcse"
+   ]
+  },
+  {
+   "id": "spanish",
+   "name": "Spanish",
+   "levels": [
+    "year7",
+    "year8",
+    "year9",
+    "year10",
+    "year11"
+   ],
+   "streams": [
+    "gcse"
+   ]
+  },
+  {
+   "id": "computer-science",
+   "name": "Computer Science / Computing",
+   "levels": [
+    "year7",
+    "year8",
+    "year9",
+    "year10",
+    "year11",
+    "year12",
+    "year13",
+    "igcse1",
+    "igcse2"
+   ],
+   "streams": [
+    "gcse",
+    "a-level",
+    "igcse"
+   ]
+  },
+  {
+   "id": "business-studies",
+   "name": "Business",
+   "levels": [
+    "year10",
+    "year11",
+    "year12",
+    "year13",
+    "igcse1",
+    "igcse2"
+   ],
+   "streams": [
+    "gcse",
+    "a-level",
+    "igcse"
+   ]
+  },
+  {
+   "id": "economics",
+   "name": "Economics",
+   "levels": [
+    "year12",
+    "year13",
+    "igcse1",
+    "igcse2"
+   ],
+   "streams": [
+    "a-level",
+    "igcse"
+   ]
+  },
+  {
+   "id": "psychology",
+   "name": "Psychology",
+   "levels": [
+    "year12",
+    "year13"
+   ],
+   "streams": [
+    "a-level"
+   ]
+  },
+  {
+   "id": "sociology",
+   "name": "Sociology",
+   "levels": [
+    "year12",
+    "year13"
+   ],
+   "streams": [
+    "a-level"
+   ]
+  },
+  {
+   "id": "art-design",
+   "name": "Art and Design",
+   "levels": [
+    "year7",
+    "year8",
+    "year9",
+    "year10",
+    "year11"
+   ],
+   "streams": [
+    "gcse"
+   ]
+  },
+  {
+   "id": "design-technology",
+   "name": "Design and Technology",
+   "levels": [
+    "year7",
+    "year8",
+    "year9",
+    "year10",
+    "year11"
+   ],
+   "streams": [
+    "gcse"
+   ]
+  },
+  {
+   "id": "physical-health-education",
+   "name": "Physical Education",
+   "levels": [
+    "year7",
+    "year8",
+    "year9",
+    "year10",
+    "year11"
+   ],
+   "streams": [
+    "gcse"
+   ]
+  },
+  {
+   "id": "citizenship",
+   "name": "Citizenship",
+   "levels": [
+    "year7",
+    "year8",
+    "year9",
+    "year10",
+    "year11"
+   ],
+   "streams": [
+    "gcse"
+   ]
+  }
+ ],
+ "books": [
+  {
+   "title": "A Christmas Carol",
+   "series": null,
+   "authors": [
+    "Charles Dickens"
+   ],
+   "publisher": "Standard Ebooks",
+   "edition": null,
+   "year": null,
+   "isbn": null,
+   "cover": "https://books.google.com/books/content?id=gVNNAgAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+   "free": true,
+   "readUrl": "https://standardebooks.org/ebooks/charles-dickens/a-christmas-carol/text/single-page",
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "provider": "Standard Ebooks",
+   "license": "Public domain (Standard Ebooks edition dedicated via CC0 1.0)",
+   "countryOnly": true,
+   "placements": [
+    {
+     "subject": "english-literature",
+     "levels": [
+      "year10",
+      "year11"
+     ]
+    },
+    {
+     "subject": "literature",
+     "levels": [
+      "igcse1",
+      "igcse2"
+     ]
+    }
+   ],
+   "sources": [
+    "https://standardebooks.org/ebooks/charles-dickens/a-christmas-carol",
+    "https://www.aqa.org.uk/subjects/english/gcse/english-literature-8702/specification/subject-content/shakespeare-and-the-19th-century-novel",
+    "https://books.google.com/books?id=gVNNAgAAQBAJ"
+   ],
+   "notes": "Set text: one of AQA GCSE English Literature (8702) Shakespeare / 19th-century novel options. Edexcel and OCR set many of the same texts, and Cambridge IGCSE Literature changes its list each year, so check the current list.",
+   "id": "a-christmas-carol"
+  },
+  {
+   "title": "A Level Chemistry for OCR A: Year 1 and AS",
+   "series": null,
+   "authors": [
+    "Rob Ritchie",
+    "Dave Gent"
+   ],
+   "publisher": "Oxford University Press",
+   "edition": null,
+   "year": 2015,
+   "isbn": "9780198351962",
+   "cover": "https://covers.openlibrary.org/b/isbn/9780198351962-L.jpg?default=false",
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "chemistry",
+     "levels": [
+      "year12"
+     ]
+    }
+   ],
+   "sources": [
+    "https://timesbookshop.co.uk/a-level-chemistry-for-ocr-a-year-1-and-as-9780198351962",
+    "https://backstory.london/products/9780198351962"
+   ],
+   "notes": "OCR AS/A Level Chemistry A (H032/H432).",
+   "id": "a-level-chemistry-for-ocr-a-year-1-and-as"
+  },
+  {
+   "id": "algebra-1",
+   "title": "Algebra 1",
+   "series": null,
+   "authors": [
+    "Lynn Marecek",
+    "MaryAnne Anthony-Smith",
+    "Andrea Honeycutt Mathis",
+    "Jay Abramson",
+    "Sharon North",
+    "Amy Baldwin",
+    "Alyssa Howell"
+   ],
+   "publisher": "OpenStax",
+   "edition": null,
+   "year": 2025,
+   "isbn": null,
+   "cover": "https://assets.openstax.org/oscms-prodcms/media/documents/algebra_1_web_card.svg",
+   "free": true,
+   "readUrl": "https://openstax.org/books/algebra-1/pages/quick-start",
+   "provider": "OpenStax",
+   "license": "CC BY-NC-SA 4.0",
+   "sources": [
+    "https://openstax.org/details/books/algebra-1",
+    "https://openstax.org/apps/cms/api/v2/pages/?type=books.Book&slug=algebra-1&fields=*"
+   ],
+   "notes": "US high-school Algebra 1 (2025): linear equations, inequalities, functions, exponents, quadratics. Good bridge from JSS3 into SS1. OpenStax states the book may not be used to train large language models.",
+   "downloadUrl": "https://assets.openstax.org/oscms-prodcms/media/documents/algebra-1_-_WEB.pdf",
+   "downloadType": "pdf",
+   "downloadBytes": 82715252,
+   "placements": [
+    {
+     "subject": "mathematics",
+     "levels": [
+      "year8",
+      "year9"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Allez 1 Student Book",
+   "series": "Allez",
+   "authors": [
+    "Corinne Dzuilka-Heywood",
+    "Yvonne Kennedy",
+    "Katie Smith",
+    "Geneviève Talon"
+   ],
+   "publisher": "Oxford University Press",
+   "edition": null,
+   "year": 2014,
+   "isbn": "9780198395041",
+   "cover": "https://covers.openlibrary.org/b/isbn/9780198395041-L.jpg?default=false",
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "french",
+     "levels": [
+      "year7"
+     ]
+    }
+   ],
+   "sources": [
+    "https://www.oup.com.au/books/secondary-education/languages/9780198395041"
+   ],
+   "notes": "KS3 French (no exam board).",
+   "id": "allez-1-student-book"
+  },
+  {
+   "id": "antony-and-cleopatra",
+   "title": "Antony and Cleopatra",
+   "series": null,
+   "authors": [
+    "William Shakespeare"
+   ],
+   "publisher": "Standard Ebooks",
+   "edition": null,
+   "year": null,
+   "isbn": null,
+   "cover": "https://standardebooks.org/ebooks/william-shakespeare/antony-and-cleopatra/downloads/cover.jpg",
+   "free": true,
+   "readUrl": "https://standardebooks.org/ebooks/william-shakespeare/antony-and-cleopatra/text/single-page",
+   "provider": "Standard Ebooks",
+   "license": "Public domain (Standard Ebooks edition dedicated via CC0 1.0)",
+   "sources": [
+    "https://standardebooks.org/ebooks/william-shakespeare/antony-and-cleopatra",
+    "https://www.waecnigeria.org/sites/default/files/2023-06/LITERATURE-IN-ENG%202026-2030.pdf"
+   ],
+   "notes": "The Shakespeare set text on the WAEC 2026-2030 Literature-in-English list. Full play text, not a study guide.",
+   "downloadUrl": "https://standardebooks.org/ebooks/william-shakespeare/antony-and-cleopatra/text/single-page",
+   "downloadType": "html",
+   "downloadBytes": null,
+   "placements": [
+    {
+     "subject": "english-literature",
+     "levels": [
+      "year12",
+      "year13"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "AQA A Level Sociology Book One Including AS Level",
+   "series": null,
+   "authors": [
+    "Rob Webb",
+    "Hal Westergaard",
+    "Keith Trobe",
+    "Annie Townend"
+   ],
+   "publisher": "Napier Press",
+   "edition": null,
+   "year": 2015,
+   "isbn": "9780954007911",
+   "cover": "https://books.google.com/books/content?id=8gADrgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "sociology",
+     "levels": [
+      "year12"
+     ]
+    }
+   ],
+   "sources": [
+    "https://bookshop.canterbury.ac.uk/aqa-a-level-sociology-book-one-including-as-level-book-one-3ed_9780954007911",
+    "https://www.notredamecoll.ac.uk/storage/app/media/1c.%20Summer%20Learning/2026/Sociology%20A-level%20Reading%20List.pdf",
+    "https://books.google.com/books?id=8gADrgEACAAJ"
+   ],
+   "notes": "AQA AS/A Level Sociology (7191/7192). Book Two is ISBN 9780954007928.",
+   "id": "aqa-a-level-sociology-book-one-including-as-level"
+  },
+  {
+   "title": "AQA Biology: A Level Year 1 and AS",
+   "series": null,
+   "authors": [
+    "Glenn Toole",
+    "Susan Toole"
+   ],
+   "publisher": "Oxford University Press",
+   "edition": null,
+   "year": 2015,
+   "isbn": "9780198351764",
+   "cover": "https://covers.openlibrary.org/b/isbn/9780198351764-L.jpg?default=false",
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "biology",
+     "levels": [
+      "year12"
+     ]
+    }
+   ],
+   "sources": [
+    "https://www.madeleinelindley.com/9780198351764",
+    "https://imusic.fi/books/9780198351764/glenn-toole-2015-aqa-biology-a-level-year-1-and-as-paperback-book"
+   ],
+   "notes": "AQA AS/A Level Biology (7401/7402). A Year 2 volume completes the course.",
+   "id": "aqa-biology-a-level-year-1-and-as"
+  },
+  {
+   "title": "AQA Chemistry: A Level Year 1 and AS",
+   "series": null,
+   "authors": [
+    "Ted Lister",
+    "Janet Renshaw"
+   ],
+   "publisher": "Oxford University Press",
+   "edition": null,
+   "year": 2015,
+   "isbn": "9780198351818",
+   "cover": "https://books.google.com/books/content?id=rW7ioQEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "chemistry",
+     "levels": [
+      "year12"
+     ]
+    }
+   ],
+   "sources": [
+    "https://www.ebay.co.uk/p/209428716",
+    "https://www.libreriale.es/libro/aqa-chemistry-a-level-year-1-and-as/9780198351818/2292581/",
+    "https://books.google.com/books?id=rW7ioQEACAAJ"
+   ],
+   "notes": "AQA AS/A Level Chemistry (7404/7405). A Year 2 volume completes the course.",
+   "id": "aqa-chemistry-a-level-year-1-and-as"
+  },
+  {
+   "title": "AQA GCSE (9-1) Biology Student Book",
+   "series": null,
+   "authors": [
+    "Ali Hodgson",
+    "Nick Dixon"
+   ],
+   "publisher": "Hodder Education",
+   "edition": null,
+   "year": 2016,
+   "isbn": "9781471851339",
+   "cover": "https://books.google.com/books/content?id=P6sqjgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "biology",
+     "levels": [
+      "year10",
+      "year11"
+     ]
+    }
+   ],
+   "sources": [
+    "https://www.hachette.co.uk/titles/nick-dixon/aqa-gcse-9-1-biology-student-book/9781471851339/",
+    "https://uk.bookshop.org/a/10403/9781471851339",
+    "https://books.google.com/books?id=P6sqjgEACAAJ"
+   ],
+   "notes": "AQA GCSE Biology (8461). AQA approved.",
+   "id": "aqa-gcse-9-1-biology-student-book"
+  },
+  {
+   "title": "AQA GCSE (9-1) Business, Third Edition",
+   "series": null,
+   "authors": [
+    "Malcolm Surridge",
+    "Andrew Gillespie"
+   ],
+   "publisher": "Hodder Education",
+   "edition": "3rd",
+   "year": 2022,
+   "isbn": "9781398356313",
+   "cover": "https://books.google.com/books/content?id=6gWUzgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "business-studies",
+     "levels": [
+      "year10",
+      "year11"
+     ]
+    }
+   ],
+   "sources": [
+    "https://www.hachette.co.uk/titles/malcolm-surridge/aqa-gcse-9-1-business-third-edition/9781398356313/",
+    "https://eld.bl.uk/catalog/020661431",
+    "https://books.google.com/books?id=6gWUzgEACAAJ"
+   ],
+   "notes": "AQA GCSE Business (8132).",
+   "id": "aqa-gcse-9-1-business-third-edition"
+  },
+  {
+   "title": "AQA GCSE (9-1) Chemistry Student Book",
+   "series": null,
+   "authors": [
+    "Richard Grime",
+    "Nora Henry"
+   ],
+   "publisher": "Hodder Education",
+   "edition": null,
+   "year": 2016,
+   "isbn": "9781471851346",
+   "cover": "https://covers.openlibrary.org/b/isbn/9781471851346-L.jpg?default=false",
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "chemistry",
+     "levels": [
+      "year10",
+      "year11"
+     ]
+    }
+   ],
+   "sources": [
+    "https://valsec.barnesandnoble.com/w/aqa-gcse-richard-grime/1124182961",
+    "https://paperplus.co.nz/shop/books/aqa-gcse-9-1-chemistry-student-book",
+    "https://uk.bookshop.org/a/10403/9781471851346"
+   ],
+   "notes": "AQA GCSE Chemistry (8462). AQA approved. Two booksellers credit Richard Grime and Nora Henry; one lists only Nora Henry.",
+   "id": "aqa-gcse-9-1-chemistry-student-book"
+  },
+  {
+   "title": "AQA GCSE (9-1) Combined Science Trilogy Student Book 1",
+   "series": null,
+   "authors": [
+    "Nick Dixon",
+    "Nick England",
+    "Richard Grime",
+    "Nora Henry",
+    "Ali Hodgson",
+    "James Napier",
+    "Steve Witney"
+   ],
+   "publisher": "Hodder Education",
+   "edition": null,
+   "year": 2016,
+   "isbn": "9781471851353",
+   "cover": "https://books.google.com/books/content?id=8X5ajwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "combined-science",
+     "levels": [
+      "year10",
+      "year11"
+     ]
+    }
+   ],
+   "sources": [
+    "https://www.hachette.co.uk/titles/nick-dixon/aqa-gcse-9-1-combined-science-trilogy-student-book-1/9781471851353/",
+    "https://hoddereducation.com/science/aqa-gcse-9-1-combined-science-trilogy-student-book-1",
+    "https://books.google.com/books?id=8X5ajwEACAAJ"
+   ],
+   "notes": "AQA GCSE Combined Science: Trilogy (8464), covers Paper 1 for biology, chemistry and physics. AQA approved. Student Book 2 is ISBN 9781471851360.",
+   "id": "aqa-gcse-9-1-combined-science-trilogy-student-book-1"
+  },
+  {
+   "title": "AQA GCSE (9-1) Combined Science Trilogy Student Book 2",
+   "series": null,
+   "authors": [
+    "Nick Dixon",
+    "Nick England",
+    "Richard Grime",
+    "Nora Henry",
+    "Ali Hodgson",
+    "James Napier",
+    "Steve Witney"
+   ],
+   "publisher": "Hodder Education",
+   "edition": null,
+   "year": 2016,
+   "isbn": "9781471851360",
+   "cover": "https://covers.openlibrary.org/b/isbn/9781471851360-L.jpg?default=false",
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "combined-science",
+     "levels": [
+      "year10",
+      "year11"
+     ]
+    }
+   ],
+   "sources": [
+    "https://hachette.co.uk/titles/nick-dixon/aqa-gcse-9-1-combined-science-trilogy-student-book-2/9781471851360",
+    "https://www.abebooks.com/9781471851360/Aqa-Gcse-9-1-Combined-Science-1471851362/plp"
+   ],
+   "notes": "AQA GCSE Combined Science: Trilogy (8464), covers Paper 2 topics. AQA approved.",
+   "id": "aqa-gcse-9-1-combined-science-trilogy-student-book-2"
+  },
+  {
+   "title": "AQA GCSE (9-1) Geography Second Edition",
+   "series": null,
+   "authors": [
+    "John Widdowson",
+    "Simon Oakes",
+    "Michael Witherick",
+    "Meryl King",
+    "Rebecca Blackshaw",
+    "Sarah Wheeler"
+   ],
+   "publisher": "Hodder Education",
+   "edition": "2nd",
+   "year": 2020,
+   "isbn": "9781510477513",
+   "cover": null,
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "geography",
+     "levels": [
+      "year10",
+      "year11"
+     ]
+    }
+   ],
+   "sources": [
+    "https://www.hachette.co.uk/titles/john-widdowson/aqa-gcse-9%E2%80%931-geography-second-edition/9781510477513/"
+   ],
+   "notes": "AQA GCSE Geography (8035). AQA approved.",
+   "id": "aqa-gcse-9-1-geography-second-edition"
+  },
+  {
+   "title": "AQA GCSE (9-1) Physics Student Book",
+   "series": null,
+   "authors": [
+    "Nick England",
+    "Steve Witney"
+   ],
+   "publisher": "Hodder Education",
+   "edition": null,
+   "year": 2016,
+   "isbn": "9781471851377",
+   "cover": "https://covers.openlibrary.org/b/isbn/9781471851377-L.jpg?default=false",
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "physics",
+     "levels": [
+      "year10",
+      "year11"
+     ]
+    }
+   ],
+   "sources": [
+    "https://eld.bl.uk/catalog/017957586",
+    "https://www.abebooks.com/9781471851377/Physics-Student-Book-Aqa-Gcse-1471851370/plp"
+   ],
+   "notes": "AQA GCSE Physics (8463). AQA approved.",
+   "id": "aqa-gcse-9-1-physics-student-book"
+  },
+  {
+   "title": "AQA GCSE Biology Student Book",
+   "series": "AQA GCSE Sciences",
+   "authors": [
+    "Ann Fullick"
+   ],
+   "publisher": "Oxford University Press",
+   "edition": "3rd",
+   "year": 2016,
+   "isbn": "9780198359371",
+   "cover": null,
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "biology",
+     "levels": [
+      "year10",
+      "year11"
+     ]
+    }
+   ],
+   "sources": [
+    "https://bookshop.canterbury.ac.uk/AQA-GCSE-Biology-Student-Book_9780198359371",
+    "https://www.lavoisier.fr/livre/autre/aqa-gcse-biology-student-book/descriptif_3732111"
+   ],
+   "notes": "AQA GCSE Biology (8461), separate science. AQA approved. Third edition of Oxford's AQA GCSE Sciences series. Oxford has since published 'Oxford Smart AQA GCSE Sciences'.",
+   "id": "aqa-gcse-biology-student-book"
+  },
+  {
+   "title": "AQA GCSE Chemistry Student Book",
+   "series": "AQA GCSE Sciences",
+   "authors": [
+    "Lawrie Ryan"
+   ],
+   "publisher": "Oxford University Press",
+   "edition": "3rd",
+   "year": 2016,
+   "isbn": "9780198359388",
+   "cover": null,
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "chemistry",
+     "levels": [
+      "year10",
+      "year11"
+     ]
+    }
+   ],
+   "sources": [
+    "https://www.abebooks.com/9780198359388/Aqa-GCSE-Chemistry-Student-Book-0198359381/plp",
+    "https://www.lehmanns.de/shop/schulbuch-lexikon-woerterbuch/33422073-9780198359388-aqa-gcse-chemistry-student-book"
+   ],
+   "notes": "AQA GCSE Chemistry (8462), separate science. AQA approved.",
+   "id": "aqa-gcse-chemistry-student-book"
+  },
+  {
+   "title": "AQA GCSE English Language: Student Book 1: Developing the skills for learning and assessment",
+   "series": null,
+   "authors": [
+    "Helen Backhouse",
+    "Beverley Emm",
+    "David Stone"
+   ],
+   "publisher": "Oxford University Press",
+   "edition": null,
+   "year": 2015,
+   "isbn": "9780198340744",
+   "cover": null,
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "english-language",
+     "levels": [
+      "year10",
+      "year11"
+     ]
+    }
+   ],
+   "sources": [
+    "https://www.abebooks.com/9780198340744/AQA-GCSE-English-Language-Student-0198340745/plp",
+    "https://www.lavoisier.fr/livre/autre/aqa-gcse-english-language-student-book-1/descriptif_3729623"
+   ],
+   "notes": "AQA GCSE English Language (8700). AQA approved. Student Book 2 (assessment preparation, ISBN 9780198340751) follows on.",
+   "id": "aqa-gcse-english-language-student-book-1-developing-the-skills-for-learning-and-"
+  },
+  {
+   "title": "AQA GCSE English Literature: Student Book",
+   "series": null,
+   "authors": [
+    "Ken Haworth",
+    "Julia Waines"
+   ],
+   "publisher": "Oxford University Press",
+   "edition": null,
+   "year": 2015,
+   "isbn": "9780198340768",
+   "cover": null,
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "english-literature",
+     "levels": [
+      "year10",
+      "year11"
+     ]
+    }
+   ],
+   "sources": [
+    "https://www.abebooks.com/9780198340768/AQA-GCSE-English-Literature-Student-0198340761/plp",
+    "https://paperplus.co.nz/shop/books/childrens-books/non-fiction/education-reference/aqa-gcse-english-literature-student-book"
+   ],
+   "notes": "AQA GCSE English Literature (8702). Some listings credit only Julia Waines.",
+   "id": "aqa-gcse-english-literature-student-book"
+  },
+  {
+   "title": "AQA GCSE French Higher Student Book",
+   "series": null,
+   "authors": [
+    "Paul Shannon",
+    "Amandine Moores",
+    "Séverine Capjon"
+   ],
+   "publisher": "Oxford University Press",
+   "edition": null,
+   "year": 2024,
+   "isbn": "9781382045780",
+   "cover": null,
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "french",
+     "levels": [
+      "year10",
+      "year11"
+     ]
+    }
+   ],
+   "sources": [
+    "https://www.aqa.org.uk/subjects/languages/gcse/french-8652/teaching-resources",
+    "https://timesbookshop.co.uk/aqa-gcse-french-higher-aqa-approved-gcse-french-higher-student-book-9781382045780/"
+   ],
+   "notes": "AQA GCSE French (8652), new specification taught from 2024, Higher tier. AQA approved. Series editor Christophe Fico. Foundation Student Book: ISBN 9781382045742.",
+   "id": "aqa-gcse-french-higher-student-book"
+  },
+  {
+   "title": "AQA GCSE Maths Higher Student Book",
+   "series": "Collins GCSE Maths",
+   "authors": [
+    "Kevin Evans",
+    "Keith Gordon",
+    "Michael Kent",
+    "Brian Speed"
+   ],
+   "publisher": "Collins",
+   "edition": "4th",
+   "year": 2015,
+   "isbn": "9780007597345",
+   "cover": null,
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "mathematics",
+     "levels": [
+      "year10",
+      "year11"
+     ]
+    }
+   ],
+   "sources": [
+    "https://collins.co.uk/collections/paperback/products/9780007597345",
+    "https://www.ecampus.com/collins-gcse-maths-aqa-gcse-maths-higher/bk/9780007597345&pos=6"
+   ],
+   "notes": "AQA GCSE Mathematics (8300), Higher tier. AQA approved. A 5th edition (ISBN 9780008647322) has since been published.",
+   "id": "aqa-gcse-maths-higher-student-book"
+  },
+  {
+   "title": "AQA GCSE Physics Student Book",
+   "series": "AQA GCSE Sciences",
+   "authors": [
+    "Jim Breithaupt"
+   ],
+   "publisher": "Oxford University Press",
+   "edition": "3rd",
+   "year": 2016,
+   "isbn": "9780198359395",
+   "cover": null,
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "physics",
+     "levels": [
+      "year10",
+      "year11"
+     ]
+    }
+   ],
+   "sources": [
+    "https://www.abebooks.com/9780198359395/AQA-GCSE-Physics-Student-Book-019835939X/plp",
+    "https://uk.bookshop.org/p/books/aqa-gcse-physics-student-book-jim-breithaupt/3997044"
+   ],
+   "notes": "AQA GCSE Physics (8463), separate science. AQA approved.",
+   "id": "aqa-gcse-physics-student-book"
+  },
+  {
+   "title": "AQA GCSE Religious Studies A: Christianity",
+   "series": null,
+   "authors": [
+    "David Worden",
+    "Marianne Fleming",
+    "Peter Smith"
+   ],
+   "publisher": "Oxford University Press",
+   "edition": "Revised",
+   "year": 2025,
+   "isbn": "9781382073486",
+   "cover": null,
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "religious-studies",
+     "levels": [
+      "year10",
+      "year11"
+     ]
+    }
+   ],
+   "sources": [
+    "https://www.bertrand.pt/livro/aqa-gcse-religious-studies-a-christianity-peter-smith/32109898",
+    "https://www.zvab.com/AQA-GCSE-Religious-Studies-Christianity-Worden/32349191871/bd"
+   ],
+   "notes": "AQA GCSE Religious Studies A (8062). Revised edition for exams from 2026; AQA approved per publisher description. Companion Islam book: ISBN 9781382073516.",
+   "id": "aqa-gcse-religious-studies-a-christianity"
+  },
+  {
+   "title": "AQA GCSE Spanish Higher Student Book",
+   "series": null,
+   "authors": [
+    "Tony Weston",
+    "José Antonio García Sánchez",
+    "Viv Halksworth",
+    "John Halksworth"
+   ],
+   "publisher": "Oxford University Press",
+   "edition": null,
+   "year": 2024,
+   "isbn": "9781382046008",
+   "cover": null,
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "spanish",
+     "levels": [
+      "year10",
+      "year11"
+     ]
+    }
+   ],
+   "sources": [
+    "https://timesbookshop.co.uk/aqa-gcse-spanish-higher-aqa-approved-gcse-spanish-higher-student-book-9781382046008",
+    "https://toppsta.com/books/details/1130018/aqa-gcse-spanish-higher-aqa-gcse-spanish-higher-student-book"
+   ],
+   "notes": "AQA GCSE Spanish (8692), new specification taught from 2024, Higher tier. AQA approved.",
+   "id": "aqa-gcse-spanish-higher-student-book"
+  },
+  {
+   "title": "AQA Physics: A Level Year 1 and AS",
+   "series": null,
+   "authors": [
+    "Jim Breithaupt"
+   ],
+   "publisher": "Oxford University Press",
+   "edition": null,
+   "year": 2015,
+   "isbn": "9780198351863",
+   "cover": "https://covers.openlibrary.org/b/isbn/9780198351863-L.jpg?default=false",
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "physics",
+     "levels": [
+      "year12"
+     ]
+    }
+   ],
+   "sources": [
+    "https://www.abebooks.com/9780198351863/AQA-Physics-Level-Year-1-0198351860/plp",
+    "https://backstory.london/products/9780198351863"
+   ],
+   "notes": "AQA AS/A Level Physics (7407/7408). A Year 2 volume completes the course.",
+   "id": "aqa-physics-a-level-year-1-and-as"
+  },
+  {
+   "title": "AQA Psychology for A Level Year 1 & AS Student Book: 2nd Edition",
+   "series": null,
+   "authors": [
+    "Cara Flanagan",
+    "Matt Jarvis",
+    "Rob Liddle"
+   ],
+   "publisher": "Illuminate Publishing",
+   "edition": "2nd",
+   "year": 2020,
+   "isbn": "9781912820429",
+   "cover": "https://covers.openlibrary.org/b/isbn/9781912820429-L.jpg?default=false",
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "psychology",
+     "levels": [
+      "year12"
+     ]
+    }
+   ],
+   "sources": [
+    "https://www.abebooks.com/9781912820429/AQA-Psychology-Level-Year-Student-1912820420/plp",
+    "https://www.virginmegastore.ae/en/books/fiction-books/contemporary-fiction-books/aqa-psychology-for-a-level-year-1-as-student-book-2nd-edition-flanagan-cara---jarvis-matt---liddle-rob/p/1089754"
+   ],
+   "notes": "AQA AS/A Level Psychology (7181/7182). Year 2 Student Book (2nd edition) is ISBN 9781912820467. Illuminate titles are now distributed by Hodder Education.",
+   "id": "aqa-psychology-for-a-level-year-1-as-student-book-2nd-edition"
+  },
+  {
+   "title": "Ben Walsh History: Pearson Edexcel GCSE (9-1): Medicine in Britain, Crime and Punishment in Britain, Anglo-Saxon and Norman England and Early Elizabethan England",
+   "series": null,
+   "authors": [
+    "Ben Walsh",
+    "Sam Slater",
+    "Catherine Flaherty",
+    "Hannah Dalton"
+   ],
+   "publisher": "Hodder Education",
+   "edition": null,
+   "year": 2022,
+   "isbn": "9781510480223",
+   "cover": null,
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "history",
+     "levels": [
+      "year10",
+      "year11"
+     ]
+    }
+   ],
+   "sources": [
+    "https://www.hachette.co.uk/titles/ben-walsh/ben-walsh-history-pearson-edexcel-gcse-9%e2%80%931-medicine-in-britain-crime-and-punishment-in-britain-anglo-saxon-and-norman-england-and-early-elizabethan-england/9781510480223/",
+    "https://blackwells.co.uk/bookshop/product/9781510480223"
+   ],
+   "notes": "Pearson Edexcel GCSE History (1HI0). One volume covering four popular options.",
+   "id": "ben-walsh-history-pearson-edexcel-gcse-9-1-medicine-in-britain-crime-and-punishm"
+  },
+  {
+   "id": "biology-2e",
+   "title": "Biology 2e",
+   "series": null,
+   "authors": [
+    "Mary Ann Clark",
+    "Matthew Douglas",
+    "Jung Choi"
+   ],
+   "publisher": "OpenStax",
+   "edition": null,
+   "year": 2018,
+   "isbn": null,
+   "cover": "https://assets.openstax.org/oscms-prodcms/media/documents/biology_book_card_2e.svg",
+   "free": true,
+   "readUrl": "https://openstax.org/books/biology-2e/pages/1-introduction",
+   "provider": "OpenStax",
+   "license": "CC BY-NC-SA 4.0",
+   "sources": [
+    "https://openstax.org/details/books/biology-2e",
+    "https://openstax.org/apps/cms/api/v2/pages/?type=books.Book&slug=biology-2e&fields=*"
+   ],
+   "notes": "College level. Covers the SS biology syllabus in depth. OpenStax states the book may not be used to train large language models.",
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "placements": [
+    {
+     "subject": "biology",
+     "levels": [
+      "year12",
+      "year13"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "calculus-volume-1",
+   "title": "Calculus Volume 1",
+   "series": null,
+   "authors": [
+    "Gilbert Strang",
+    "Edwin Herman"
+   ],
+   "publisher": "OpenStax",
+   "edition": null,
+   "year": 2016,
+   "isbn": null,
+   "cover": "https://assets.openstax.org/oscms-prodcms/media/documents/calculus-v1.svg",
+   "free": true,
+   "readUrl": "https://openstax.org/books/calculus-volume-1/pages/1-introduction",
+   "provider": "OpenStax",
+   "license": "CC BY-NC-SA 4.0",
+   "sources": [
+    "https://openstax.org/details/books/calculus-volume-1",
+    "https://openstax.org/apps/cms/api/v2/pages/?type=books.Book&slug=calculus-volume-1&fields=*"
+   ],
+   "notes": "College level. Differentiation and integration for the calculus part of Further Mathematics. OpenStax states the book may not be used to train large language models.",
+   "downloadUrl": "https://assets.openstax.org/oscms-prodcms/media/documents/calculus-volume-1_-_WEB.pdf",
+   "downloadType": "pdf",
+   "downloadBytes": 52104540,
+   "placements": [
+    {
+     "subject": "mathematics",
+     "levels": [
+      "year12",
+      "year13"
+     ]
+    },
+    {
+     "subject": "further-mathematics",
+     "levels": [
+      "year12",
+      "year13"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Calculus Volume 2",
+   "series": null,
+   "authors": [],
+   "publisher": "OpenStax (Rice University)",
+   "edition": null,
+   "year": null,
+   "isbn": null,
+   "cover": null,
+   "free": true,
+   "readUrl": "https://openstax.org/books/calculus-volume-2/pages/1-introduction",
+   "downloadUrl": "https://assets.openstax.org/oscms-prodcms/media/documents/calculus-volume-2_-_WEB.pdf",
+   "downloadType": "pdf",
+   "downloadBytes": 47350759,
+   "provider": "OpenStax",
+   "license": "CC BY-NC-SA 4.0",
+   "countryOnly": true,
+   "placements": [
+    {
+     "subject": "further-mathematics",
+     "levels": [
+      "year12",
+      "year13"
+     ]
+    }
+   ],
+   "sources": [
+    "https://openstax.org/details/books/calculus-volume-2",
+    "https://openstax.org/apps/cms/api/v2/pages/?type=books.Book&fields=title,license_name"
+   ],
+   "notes": "Integration techniques, differential equations, series, parametric and polar curves; matches parts of A Level Further Mathematics.",
+   "id": "calculus-volume-2"
+  },
+  {
+   "title": "Cambridge IGCSE and O Level Additional Mathematics Coursebook",
+   "series": null,
+   "authors": [
+    "Sue Pemberton"
+   ],
+   "publisher": "Cambridge University Press",
+   "edition": "2nd",
+   "year": 2018,
+   "isbn": "9781108411660",
+   "cover": null,
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "further-mathematics",
+     "levels": [
+      "igcse1",
+      "igcse2"
+     ]
+    }
+   ],
+   "sources": [
+    "https://prod-drupal.cambridge.org/cx/education/subject/mathematics/cambridge-igcse-and-o-level-additional-mathematics-2nd-edition/cambridge-igcse-and-o-level-additional-mathematics-2nd-edition-coursebook",
+    "https://unioncatalogue.dlp.gov.lk/Record/batt.48936/Description"
+   ],
+   "notes": "Cambridge IGCSE Additional Mathematics (0606). This is the 2nd edition (2018); Cambridge also lists a 3rd edition (2023, with Cambridge Online Mathematics) whose author list I did not confirm.",
+   "id": "cambridge-igcse-and-o-level-additional-mathematics-coursebook"
+  },
+  {
+   "title": "Cambridge IGCSE and O Level Business Studies",
+   "series": null,
+   "authors": [
+    "Karen Borrington",
+    "Peter Stimpson"
+   ],
+   "publisher": "Hodder Education",
+   "edition": "5th",
+   "year": 2018,
+   "isbn": "9781510421233",
+   "cover": "https://covers.openlibrary.org/b/isbn/9781510421233-L.jpg?default=false",
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "business-studies",
+     "levels": [
+      "igcse1",
+      "igcse2"
+     ]
+    }
+   ],
+   "sources": [
+    "https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-igcse-business-studies-0450/endorsed-resources",
+    "https://www.hachette.co.uk/titles/karen-borrington/cambridge-igcse-and-o-level-business-studies-5th-edition/9781510421233/"
+   ],
+   "notes": "Cambridge IGCSE Business Studies (0450/0986/7115), examination from 2020. Student Book endorsed by Cambridge International.",
+   "id": "cambridge-igcse-and-o-level-business-studies"
+  },
+  {
+   "title": "Cambridge IGCSE and O Level Business Studies Revised Coursebook",
+   "series": null,
+   "authors": [
+    "Mark Fisher",
+    "Medi Houghton",
+    "Veenu Jain"
+   ],
+   "publisher": "Cambridge University Press",
+   "edition": "Revised 3rd",
+   "year": 2018,
+   "isbn": "9781108563987",
+   "cover": null,
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "business-studies",
+     "levels": [
+      "igcse1",
+      "igcse2"
+     ]
+    }
+   ],
+   "sources": [
+    "https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-igcse-business-studies-0450/endorsed-resources",
+    "https://cambridgebookshop.co.uk/products/cambridge-igcse-r-and-o-level-business-studies-revised-coursebook"
+   ],
+   "notes": "Cambridge IGCSE Business Studies (0450). Endorsed by Cambridge International.",
+   "id": "cambridge-igcse-and-o-level-business-studies-revised-coursebook"
+  },
+  {
+   "title": "Cambridge IGCSE and O Level Computer Science Coursebook",
+   "series": null,
+   "authors": [
+    "Sarah Lawrey",
+    "Victoria Ellis"
+   ],
+   "publisher": "Cambridge University Press",
+   "edition": "2nd",
+   "year": 2021,
+   "isbn": "9781108915144",
+   "cover": "https://covers.openlibrary.org/b/isbn/9781108915144-L.jpg?default=false",
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "computer-science",
+     "levels": [
+      "igcse1",
+      "igcse2"
+     ]
+    }
+   ],
+   "sources": [
+    "https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-igcse-computer-science-0478/endorsed-resources",
+    "https://www.cambridgebookshop.co.uk/products/cambridge-igcse-and-o-level-computer-science-coursebook-with-digital-access-2-years"
+   ],
+   "notes": "Cambridge IGCSE Computer Science (0478). Endorsed by Cambridge International.",
+   "id": "cambridge-igcse-and-o-level-computer-science-coursebook"
+  },
+  {
+   "title": "Cambridge IGCSE and O Level Economics",
+   "series": null,
+   "authors": [
+    "Paul Hoang",
+    "Margaret Ducie"
+   ],
+   "publisher": "Hodder Education (Hachette Learning)",
+   "edition": "3rd",
+   "year": 2025,
+   "isbn": "9781036010737",
+   "cover": null,
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "economics",
+     "levels": [
+      "igcse1",
+      "igcse2"
+     ]
+    }
+   ],
+   "sources": [
+    "https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-igcse-economics-0455/endorsed-resources",
+    "https://www.hachette.co.uk/titles/paul-hoang/cambridge-igcse-and-o-level-economics-third-edition/9781036010737/"
+   ],
+   "notes": "Cambridge IGCSE Economics (0455). Student's Book endorsed by Cambridge International.",
+   "id": "cambridge-igcse-and-o-level-economics"
+  },
+  {
+   "title": "Cambridge IGCSE and O Level Economics Coursebook",
+   "series": null,
+   "authors": [
+    "Susan Grant"
+   ],
+   "publisher": "Cambridge University Press",
+   "edition": "3rd",
+   "year": 2025,
+   "isbn": "9781009814577",
+   "cover": null,
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "economics",
+     "levels": [
+      "igcse1",
+      "igcse2"
+     ]
+    }
+   ],
+   "sources": [
+    "https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-igcse-economics-0455/endorsed-resources",
+    "https://www.cambridgebookshop.co.uk/products/cambridge-igcse%e2%84%a2-and-o-level-economics-coursebook-with-digital-access-2-years-3rd-edition"
+   ],
+   "notes": "Cambridge IGCSE Economics (0455). Endorsed by Cambridge International.",
+   "id": "cambridge-igcse-and-o-level-economics-coursebook"
+  },
+  {
+   "title": "Cambridge IGCSE and O Level Geography Coursebook",
+   "series": null,
+   "authors": [
+    "Tana Scott",
+    "Paul Thompson",
+    "Helen Young",
+    "James Hickman",
+    "Stuart Colesky"
+   ],
+   "publisher": "Cambridge University Press",
+   "edition": "3rd",
+   "year": 2025,
+   "isbn": "9781009535632",
+   "cover": null,
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "geography",
+     "levels": [
+      "igcse1",
+      "igcse2"
+     ]
+    }
+   ],
+   "sources": [
+    "https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-igcse-geography-0460/endorsed-resources",
+    "https://www.cambridgebookshop.co.uk/products/cambridge-igcse™-and-o-level-geography-coursebook-with-digital-access-2-years-3rd-edition"
+   ],
+   "notes": "Cambridge IGCSE Geography (0460), examination from 2027. Endorsed by Cambridge International.",
+   "id": "cambridge-igcse-and-o-level-geography-coursebook"
+  },
+  {
+   "title": "Cambridge IGCSE and O Level History Option B: The 20th Century",
+   "series": null,
+   "authors": [
+    "Ben Walsh",
+    "Benjamin Harrison"
+   ],
+   "publisher": "Hodder Education (Hachette Learning)",
+   "edition": "3rd",
+   "year": 2022,
+   "isbn": "9781398375055",
+   "cover": "https://covers.openlibrary.org/b/isbn/9781398375055-L.jpg?default=false",
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "history",
+     "levels": [
+      "igcse1",
+      "igcse2"
+     ]
+    }
+   ],
+   "sources": [
+    "https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-igcse-history-0470/endorsed-resources",
+    "https://www.hachettelearning.com/history/cambridge-igcse-and-o-level-history-3rd-edition-option-b-the-20th-century"
+   ],
+   "notes": "Cambridge IGCSE History (0470) Option B. Endorsed by Cambridge International.",
+   "id": "cambridge-igcse-and-o-level-history-option-b-the-20th-century"
+  },
+  {
+   "title": "Cambridge IGCSE Biology",
+   "series": null,
+   "authors": [
+    "D. G. Mackean",
+    "Dave Hayward"
+   ],
+   "publisher": "Hodder Education (Hachette Learning)",
+   "edition": "4th",
+   "year": 2021,
+   "isbn": "9781398310452",
+   "cover": null,
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "biology",
+     "levels": [
+      "igcse1",
+      "igcse2"
+     ]
+    }
+   ],
+   "sources": [
+    "https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-igcse-biology-0610/endorsed-resources",
+    "https://www.hachette.co.uk/titles/d-g-mackean/cambridge-igcse%e2%84%a2-biology-4th-edition/9781398310452/"
+   ],
+   "notes": "Cambridge IGCSE Biology (0610). Student's Book endorsed by Cambridge International.",
+   "id": "cambridge-igcse-biology"
+  },
+  {
+   "title": "Cambridge IGCSE Biology Coursebook",
+   "series": null,
+   "authors": [
+    "Mary Jones",
+    "Geoff Jones"
+   ],
+   "publisher": "Cambridge University Press",
+   "edition": "4th",
+   "year": 2021,
+   "isbn": "9781108936767",
+   "cover": null,
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "biology",
+     "levels": [
+      "igcse1",
+      "igcse2"
+     ]
+    }
+   ],
+   "sources": [
+    "https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-igcse-biology-0610/endorsed-resources",
+    "https://www.cambridge.org/9781108936767",
+    "https://www.cambridgebookshop.co.uk/products/cambridge-igcse%E2%84%A2-biology-coursebook-with-digital-access-2-years"
+   ],
+   "notes": "Cambridge IGCSE Biology (0610). Endorsed by Cambridge International. Sold as Coursebook with Digital Access (2 Years).",
+   "id": "cambridge-igcse-biology-coursebook"
+  },
+  {
+   "title": "Cambridge IGCSE Chemistry",
+   "series": null,
+   "authors": [
+    "Bryan Earl",
+    "Doug Wilford"
+   ],
+   "publisher": "Hodder Education (Hachette Learning)",
+   "edition": "4th",
+   "year": 2021,
+   "isbn": "9781398310506",
+   "cover": null,
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "chemistry",
+     "levels": [
+      "igcse1",
+      "igcse2"
+     ]
+    }
+   ],
+   "sources": [
+    "https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-igcse-chemistry-0620/endorsed-resources",
+    "https://www.hachettelearning.com/chemistry/cambridge-igcse-chemistry-4th-edition"
+   ],
+   "notes": "Cambridge IGCSE Chemistry (0620/0971). Student's Book endorsed by Cambridge International.",
+   "id": "cambridge-igcse-chemistry"
+  },
+  {
+   "title": "Cambridge IGCSE Core and Extended Mathematics",
+   "series": null,
+   "authors": [
+    "Ric Pimentel",
+    "Frankie Pimentel",
+    "Terry Wall"
+   ],
+   "publisher": "Hodder Education (Hachette Learning)",
+   "edition": "5th",
+   "year": 2023,
+   "isbn": "9781398373914",
+   "cover": "https://covers.openlibrary.org/b/isbn/9781398373914-L.jpg?default=false",
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "mathematics",
+     "levels": [
+      "igcse1",
+      "igcse2"
+     ]
+    }
+   ],
+   "sources": [
+    "https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-igcse-mathematics-0580/endorsed-resources",
+    "https://www.hachette.co.uk/titles/ric-pimentel/cambridge-igcse-core-and-extended-mathematics-fifth-edition/9781398373914/"
+   ],
+   "notes": "Cambridge IGCSE Mathematics (0580/0980), examination from 2025. Endorsed by Cambridge International.",
+   "id": "cambridge-igcse-core-and-extended-mathematics"
+  },
+  {
+   "title": "Cambridge IGCSE First Language English Coursebook",
+   "series": null,
+   "authors": [
+    "Graham Elsdon",
+    "Helen Rees-Bidder"
+   ],
+   "publisher": "Cambridge University Press",
+   "edition": "6th",
+   "year": 2025,
+   "isbn": "9781009528795",
+   "cover": null,
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "english",
+     "levels": [
+      "igcse1",
+      "igcse2"
+     ]
+    }
+   ],
+   "sources": [
+    "https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-igcse-english-first-language-0500/endorsed-resources",
+    "https://www.cambridgebookshop.co.uk/products/cambridge-igcse%e2%84%a2-first-language-english-coursebook-with-digital-access-2-years-6th-edition"
+   ],
+   "notes": "Cambridge IGCSE First Language English (0500/0990), examination from 2027. Endorsed by Cambridge International.",
+   "id": "cambridge-igcse-first-language-english-coursebook"
+  },
+  {
+   "title": "Cambridge IGCSE Mathematics Core and Extended Coursebook",
+   "series": "Cambridge IGCSE Mathematics",
+   "authors": [
+    "Karen Morrison",
+    "Nick Hamshaw"
+   ],
+   "publisher": "Cambridge University Press",
+   "edition": "3rd",
+   "year": 2023,
+   "isbn": "9781009343671",
+   "cover": null,
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "mathematics",
+     "levels": [
+      "igcse1",
+      "igcse2"
+     ]
+    }
+   ],
+   "sources": [
+    "https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-igcse-mathematics-0580/endorsed-resources",
+    "https://www.cambridgebookshop.co.uk/products/cambridge-igcse%e2%84%a2-mathematics-core-and-extended-coursebook"
+   ],
+   "notes": "Cambridge IGCSE Mathematics (0580). Endorsed by Cambridge International; supports the full syllabus for examination from 2025.",
+   "id": "cambridge-igcse-mathematics-core-and-extended-coursebook"
+  },
+  {
+   "title": "Cambridge IGCSE Physics",
+   "series": null,
+   "authors": [
+    "Heather Kennett",
+    "Tom Duncan"
+   ],
+   "publisher": "Hodder Education (Hachette Learning)",
+   "edition": "4th",
+   "year": 2021,
+   "isbn": "9781398310544",
+   "cover": null,
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "physics",
+     "levels": [
+      "igcse1",
+      "igcse2"
+     ]
+    }
+   ],
+   "sources": [
+    "https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-igcse-physics-0625/endorsed-resources",
+    "https://www.hachettelearning.com/physics/cambridge-igcse-physics-4th-edition",
+    "https://eld.bl.uk/catalog/020098121"
+   ],
+   "notes": "Cambridge IGCSE Physics (0625). Student's Book endorsed by Cambridge International.",
+   "id": "cambridge-igcse-physics"
+  },
+  {
+   "title": "Cambridge IGCSE Physics Coursebook",
+   "series": null,
+   "authors": [
+    "David Sang",
+    "Mike Follows",
+    "Sheila Tarpey"
+   ],
+   "publisher": "Cambridge University Press",
+   "edition": "3rd",
+   "year": 2021,
+   "isbn": "9781108888073",
+   "cover": null,
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "physics",
+     "levels": [
+      "igcse1",
+      "igcse2"
+     ]
+    }
+   ],
+   "sources": [
+    "https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-igcse-physics-0625/endorsed-resources",
+    "https://www.cambridgebookshop.co.uk/products/cambridge-igcse-physics-coursebook-with-digital-access-2-years"
+   ],
+   "notes": "Cambridge IGCSE Physics (0625). Endorsed by Cambridge International. Sold as Coursebook with Digital Access (2 Years).",
+   "id": "cambridge-igcse-physics-coursebook"
+  },
+  {
+   "title": "Cambridge International AS & A Level Biology Coursebook",
+   "series": null,
+   "authors": [
+    "Mary Jones",
+    "Richard Fosbery",
+    "Dennis Taylor",
+    "Jennifer Gregory"
+   ],
+   "publisher": "Cambridge University Press",
+   "edition": "5th",
+   "year": 2020,
+   "isbn": "9781108859028",
+   "cover": null,
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "biology",
+     "levels": [
+      "year12",
+      "year13"
+     ]
+    }
+   ],
+   "sources": [
+    "https://foxandfablebooksellers.com/products/9781108859028",
+    "https://cambridge.edu.au/education/titles/Cambridge-International-AS-A-Level-Biology-Fifth-Edition-Digital-Coursebook-2-Years%3Aedition-5th-edition"
+   ],
+   "notes": "Cambridge International AS & A Level Biology (9700), for international schools. Sold as Coursebook with Digital Access (2 Years).",
+   "id": "cambridge-international-as-a-level-biology-coursebook"
+  },
+  {
+   "title": "Cambridge International AS & A Level Chemistry Coursebook",
+   "series": null,
+   "authors": [
+    "Lawrie Ryan",
+    "Roger Norris"
+   ],
+   "publisher": "Cambridge University Press",
+   "edition": "3rd",
+   "year": 2020,
+   "isbn": "9781108863193",
+   "cover": null,
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "chemistry",
+     "levels": [
+      "year12",
+      "year13"
+     ]
+    }
+   ],
+   "sources": [
+    "https://cambridgeinternational.org/programmes-and-qualifications/cambridge-international-as-and-a-level-chemistry-9701/endorsed-resources",
+    "https://www.cambridgebookshop.co.uk/products/cambridge-international-as-a-level-chemistry-coursebook-with-digital-access-2-years"
+   ],
+   "notes": "Cambridge International AS & A Level Chemistry (9701), for international schools. Endorsed by Cambridge International.",
+   "id": "cambridge-international-as-a-level-chemistry-coursebook"
+  },
+  {
+   "title": "Cambridge International AS & A Level Physics Coursebook",
+   "series": null,
+   "authors": [
+    "David Sang",
+    "Graham Jones",
+    "Gurinder Chadha",
+    "Richard Woodside"
+   ],
+   "publisher": "Cambridge University Press",
+   "edition": "3rd",
+   "year": 2020,
+   "isbn": "9781108859035",
+   "cover": null,
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "physics",
+     "levels": [
+      "year12",
+      "year13"
+     ]
+    }
+   ],
+   "sources": [
+    "https://cambridgeinternational.org/programmes-and-qualifications/cambridge-international-as-and-a-level-physics-9702/endorsed-resources",
+    "https://psnz.umt.edu.my/seal/Record/0000149510/Details"
+   ],
+   "notes": "Cambridge International AS & A Level Physics (9702), for international schools. Endorsed by Cambridge International.",
+   "id": "cambridge-international-as-a-level-physics-coursebook"
+  },
+  {
+   "id": "chemistry-2e",
+   "title": "Chemistry 2e",
+   "series": null,
+   "authors": [
+    "Paul Flowers",
+    "Klaus Theopold",
+    "Richard Langley",
+    "William R. Robinson"
+   ],
+   "publisher": "OpenStax",
+   "edition": null,
+   "year": 2019,
+   "isbn": null,
+   "cover": "https://assets.openstax.org/oscms-prodcms/media/documents/chemistry_2e_book_card.svg",
+   "free": true,
+   "readUrl": "https://openstax.org/books/chemistry-2e/pages/1-introduction",
+   "provider": "OpenStax",
+   "license": "CC BY-NC-SA 4.0",
+   "sources": [
+    "https://openstax.org/details/books/chemistry-2e",
+    "https://openstax.org/apps/cms/api/v2/pages/?type=books.Book&slug=chemistry-2e&fields=*"
+   ],
+   "notes": "College level. Covers the SS chemistry syllabus and more. OpenStax states the book may not be used to train large language models.",
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "placements": [
+    {
+     "subject": "chemistry",
+     "levels": [
+      "year12",
+      "year13"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Chemistry for Cambridge IGCSE Coursebook",
+   "series": null,
+   "authors": [
+    "Richard Harwood",
+    "Christopher Millington",
+    "Ian Lodge"
+   ],
+   "publisher": "Cambridge University Press",
+   "edition": "5th",
+   "year": 2021,
+   "isbn": "9781108951609",
+   "cover": null,
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "chemistry",
+     "levels": [
+      "igcse1",
+      "igcse2"
+     ]
+    }
+   ],
+   "sources": [
+    "https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-igcse-chemistry-0620/endorsed-resources",
+    "https://cambridge.edu.au/education/titles/Cambridge-IGCSETM-Chemistry-Fifth-Edition-Coursebook-with-Digital-Access-2-Years%3Aedition-5th-edition"
+   ],
+   "notes": "Cambridge IGCSE Chemistry (0620). Endorsed by Cambridge International. Sold as Coursebook with Digital Access (2 Years).",
+   "id": "chemistry-for-cambridge-igcse-coursebook"
+  },
+  {
+   "id": "college-physics-2e",
+   "title": "College Physics 2e",
+   "series": null,
+   "authors": [
+    "Paul Peter Urone",
+    "Roger Hinrichs"
+   ],
+   "publisher": "OpenStax",
+   "edition": null,
+   "year": 2022,
+   "isbn": null,
+   "cover": "https://assets.openstax.org/oscms-prodcms/media/documents/college_physics_2e.svg",
+   "free": true,
+   "readUrl": "https://openstax.org/books/college-physics-2e/pages/1-introduction-to-science-and-the-realm-of-physics-physical-quantities-and-units",
+   "provider": "OpenStax",
+   "license": "CC BY-NC-SA 4.0",
+   "sources": [
+    "https://openstax.org/details/books/college-physics-2e",
+    "https://openstax.org/apps/cms/api/v2/pages/?type=books.Book&slug=college-physics-2e&fields=*"
+   ],
+   "notes": "Algebra-based college physics. Covers the SS syllabus and beyond. OpenStax states the book may not be used to train large language models.",
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "placements": [
+    {
+     "subject": "physics",
+     "levels": [
+      "year12",
+      "year13"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "computer-science-field-guide",
+   "title": "Computer Science Field Guide",
+   "series": null,
+   "authors": [
+    "Computer Science Education Research Group, University of Canterbury"
+   ],
+   "publisher": "University of Canterbury (New Zealand)",
+   "edition": null,
+   "year": null,
+   "isbn": null,
+   "cover": null,
+   "free": true,
+   "readUrl": "https://www.csfieldguide.org.nz/en/chapters/",
+   "provider": "CS Field Guide",
+   "license": "CC BY-SA 4.0",
+   "sources": [
+    "https://www.csfieldguide.org.nz/en/"
+   ],
+   "notes": "Interactive online guide for high-school students: data representation, algorithms, programming languages, networks, human-computer interaction. Does not cover hardware basics or office packages.",
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "placements": [
+    {
+     "subject": "computer-science",
+     "levels": [
+      "year7",
+      "year8",
+      "year9",
+      "year10",
+      "year11",
+      "igcse1",
+      "igcse2"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "concepts-of-biology",
+   "title": "Concepts of Biology",
+   "series": null,
+   "authors": [
+    "Samantha Fowler",
+    "Rebecca Roush",
+    "James Wise"
+   ],
+   "publisher": "OpenStax",
+   "edition": null,
+   "year": 2013,
+   "isbn": null,
+   "cover": "https://assets.openstax.org/oscms-prodcms/media/documents/concpets_biology_eZrc8yQ.svg",
+   "free": true,
+   "readUrl": "https://openstax.org/books/concepts-biology/pages/1-introduction",
+   "provider": "OpenStax",
+   "license": "CC BY-NC-SA 4.0",
+   "sources": [
+    "https://openstax.org/details/books/concepts-biology",
+    "https://openstax.org/apps/cms/api/v2/pages/?type=books.Book&slug=concepts-biology&fields=*"
+   ],
+   "notes": "Introductory (non-majors) college biology. Lighter than Biology 2e and closer to SS level. OpenStax states the book may not be used to train large language models.",
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "placements": [
+    {
+     "subject": "biology",
+     "levels": [
+      "year10",
+      "year11",
+      "igcse1",
+      "igcse2"
+     ]
+    },
+    {
+     "subject": "combined-science",
+     "levels": [
+      "year10",
+      "year11"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "concepts-of-fitness-and-wellness",
+   "title": "Concepts of Fitness and Wellness",
+   "series": null,
+   "authors": [
+    "Scott Flynn",
+    "Lisa Jellum",
+    "Jonathan Howard",
+    "Althea Moser",
+    "David Mathis",
+    "Christian Collins",
+    "Shannon Henderson",
+    "Candice Watkins"
+   ],
+   "publisher": "Georgia Highlands College / University System of Georgia",
+   "edition": null,
+   "year": 2018,
+   "isbn": null,
+   "cover": null,
+   "free": true,
+   "readUrl": "https://alg.manifoldapp.org/projects/concepts-of-fitness-and-wellness",
+   "provider": "Manifold (University System of Georgia)",
+   "license": "CC BY-NC-SA 4.0",
+   "sources": [
+    "https://alg.manifoldapp.org/projects/concepts-of-fitness-and-wellness",
+    "https://oer.galileo.usg.edu/health-textbooks/4"
+   ],
+   "notes": "College fitness and wellness: fitness components, exercise, nutrition, stress, disease prevention. Covers the health and fitness side of PHE, not sports rules or athletics skills. Licence as shown on the Manifold reader; other listings disagree.",
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "placements": [
+    {
+     "subject": "physical-health-education",
+     "levels": [
+      "year7",
+      "year8",
+      "year9",
+      "year10",
+      "year11"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Dynamo 1 Pupil Book (Key Stage 3 French)",
+   "series": "Dynamo",
+   "authors": [
+    "Clive Bell",
+    "Gill Ramage"
+   ],
+   "publisher": "Pearson Education",
+   "edition": null,
+   "year": 2018,
+   "isbn": "9781292226316",
+   "cover": null,
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "french",
+     "levels": [
+      "year7"
+     ]
+    }
+   ],
+   "sources": [
+    "https://pearson.com/international-schools/british-curriculum/secondary-curriculum/ks3-dynamo.html",
+    "https://toppsta.com/books/details/560566/dynamo-1-pupil-book"
+   ],
+   "notes": "KS3 French (no exam board). Dynamo 2 and 3 come in Rouge/Vert versions for Years 8-9.",
+   "id": "dynamo-1-pupil-book-key-stage-3-french"
+  },
+  {
+   "title": "Edexcel A level Economics A Book 1",
+   "series": null,
+   "authors": [
+    "Peter Smith"
+   ],
+   "publisher": "Hodder Education",
+   "edition": null,
+   "year": 2015,
+   "isbn": "9781471830006",
+   "cover": null,
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "economics",
+     "levels": [
+      "year12"
+     ]
+    }
+   ],
+   "sources": [
+    "https://www.hachette.co.uk/titles/peter-smith-3/edexcel-a-level-economics-a-book-1/9781471830006/",
+    "https://www.hachettelearning.com/economics/edexcel-a-level-economics-a-book-1"
+   ],
+   "notes": "Pearson Edexcel AS/A Level Economics A (8EC0/9EC0). Book 2 is ISBN 9781471830051.",
+   "id": "edexcel-a-level-economics-a-book-1"
+  },
+  {
+   "title": "Edexcel GCSE (9-1) Mathematics: Higher Student Book",
+   "series": null,
+   "authors": [],
+   "publisher": "Pearson Education",
+   "edition": null,
+   "year": 2015,
+   "isbn": "9781447980209",
+   "cover": null,
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "mathematics",
+     "levels": [
+      "year10",
+      "year11"
+     ]
+    }
+   ],
+   "sources": [
+    "https://eld.bl.uk/catalog/018586853",
+    "https://toppsta.com/books/details/292798/edexcel-gcse-9-1-mathematics-higher-student-book"
+   ],
+   "notes": "Pearson Edexcel GCSE Mathematics (1MA1), Higher tier. Pearson does not credit a single author on this book (team-written). A Foundation Student Book and a 2020 second edition split into Books 1 and 2 also exist.",
+   "id": "edexcel-gcse-9-1-mathematics-higher-student-book"
+  },
+  {
+   "title": "Edexcel GCSE History (9-1): Medicine in Britain c1250-present with The British sector of the Western Front 1914-18 Student Book",
+   "series": null,
+   "authors": [
+    "James Ball",
+    "Liam Hall"
+   ],
+   "publisher": "Oxford University Press",
+   "edition": null,
+   "year": 2022,
+   "isbn": "9781382029780",
+   "cover": null,
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "history",
+     "levels": [
+      "year10",
+      "year11"
+     ]
+    }
+   ],
+   "sources": [
+    "https://ibs.it/edexcel-gcse-history-9-1-libro-inglese-james-ball-liam-hall/e/9781382029780",
+    "https://mail.toppsta.com/books/details/832271/edexcel-gcse-history-9-1-medicine-in-britain-c1250-present-with-the-british-section-of-the-western-front-1914-18-student-book"
+   ],
+   "notes": "Pearson Edexcel GCSE History (1HI0), thematic study Medicine in Britain.",
+   "id": "edexcel-gcse-history-9-1-medicine-in-britain-c1250-present-with-the-british-sect"
+  },
+  {
+   "title": "Frankenstein",
+   "series": null,
+   "authors": [
+    "Mary Shelley"
+   ],
+   "publisher": "Standard Ebooks",
+   "edition": null,
+   "year": null,
+   "isbn": null,
+   "cover": null,
+   "free": true,
+   "readUrl": "https://standardebooks.org/ebooks/mary-shelley/frankenstein/text/single-page",
+   "downloadUrl": "https://standardebooks.org/ebooks/mary-shelley/frankenstein/text/single-page",
+   "downloadType": "html",
+   "downloadBytes": null,
+   "provider": "Standard Ebooks",
+   "license": "Public domain (Standard Ebooks edition dedicated via CC0 1.0)",
+   "countryOnly": true,
+   "placements": [
+    {
+     "subject": "english-literature",
+     "levels": [
+      "year10",
+      "year11"
+     ]
+    },
+    {
+     "subject": "literature",
+     "levels": [
+      "igcse1",
+      "igcse2"
+     ]
+    }
+   ],
+   "sources": [
+    "https://standardebooks.org/ebooks/mary-shelley/frankenstein",
+    "https://www.aqa.org.uk/subjects/english/gcse/english-literature-8702/specification/subject-content/shakespeare-and-the-19th-century-novel"
+   ],
+   "notes": "Set text: one of AQA GCSE English Literature (8702) Shakespeare / 19th-century novel options. Edexcel and OCR set many of the same texts, and Cambridge IGCSE Literature changes its list each year, so check the current list. AQA specifies the 1831 text; check which text this edition follows.",
+   "id": "frankenstein"
+  },
+  {
+   "title": "French as a Foreign Language for Cambridge IGCSE Coursebook",
+   "series": null,
+   "authors": [
+    "Esther Gagneux",
+    "Chloë McQuarrie",
+    "Emily Wilson"
+   ],
+   "publisher": "Cambridge University Press",
+   "edition": "2nd",
+   "year": 2026,
+   "isbn": "9781009822794",
+   "cover": null,
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "french",
+     "levels": [
+      "igcse1",
+      "igcse2"
+     ]
+    }
+   ],
+   "sources": [
+    "https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-igcse-french-foreign-language-0520/endorsed-resources",
+    "https://www.cambridge.org/9781009822794"
+   ],
+   "notes": "Cambridge IGCSE French as a Foreign Language (0520). Endorsed by Cambridge International.",
+   "id": "french-as-a-foreign-language-for-cambridge-igcse-coursebook"
+  },
+  {
+   "title": "GCSE 9-1 Geography AQA: Student Book",
+   "series": null,
+   "authors": [
+    "Bob Digby",
+    "Nicholas Rowles",
+    "David Holmes"
+   ],
+   "publisher": "Oxford University Press",
+   "edition": "2nd",
+   "year": 2022,
+   "isbn": "9781382029124",
+   "cover": null,
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "geography",
+     "levels": [
+      "year10",
+      "year11"
+     ]
+    }
+   ],
+   "sources": [
+    "https://paperplus.co.nz/shop/books/gcse-9-1-geography-aqa-student-book-second-edition",
+    "https://origin-www.alibris.com/GCSE-9-1-Geography-AQA-Student-Book-Second-Edition-Bob-Digby/book/51064799",
+    "https://backstory.london/products/9781382029124"
+   ],
+   "notes": "AQA GCSE Geography (8035). AQA approved.",
+   "id": "gcse-9-1-geography-aqa-student-book"
+  },
+  {
+   "title": "GCSE Computer Science for OCR Student Book Updated Edition",
+   "series": null,
+   "authors": [
+    "David Waller",
+    "Ann Weidmann"
+   ],
+   "publisher": "Cambridge University Press",
+   "edition": null,
+   "year": null,
+   "isbn": "9781108812542",
+   "cover": null,
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "computer-science",
+     "levels": [
+      "year10",
+      "year11"
+     ]
+    }
+   ],
+   "sources": [
+    "https://cambridgebookshop.co.uk/products/gcse-computer-science-for-ocr-student-book-updated-edition",
+    "https://kulturkaufhaus.de/en/detail/ISBN-9781108812542/Waller-David/GCSE-Computer-Science-for-OCR-Student-Book-Updated-Edition"
+   ],
+   "notes": "OCR GCSE Computer Science (J277), first taught 2020.",
+   "id": "gcse-computer-science-for-ocr-student-book-updated-edition"
+  },
+  {
+   "title": "geog.1 Student Book",
+   "series": "geog.123",
+   "authors": [
+    "RoseMarie Gallagher",
+    "Richard Parish"
+   ],
+   "publisher": "Oxford University Press",
+   "edition": "5th",
+   "year": 2019,
+   "isbn": "9780198446040",
+   "cover": null,
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "geography",
+     "levels": [
+      "year7"
+     ]
+    }
+   ],
+   "sources": [
+    "https://opac.kedahlib.gov.my/bib/193429",
+    "https://ammonralibreria.com/libro/9780198446040-new-geography-1-5e-student-book"
+   ],
+   "notes": "KS3 Geography (no exam board). geog.123 series.",
+   "id": "geog1-student-book"
+  },
+  {
+   "title": "geog.2 Student Book",
+   "series": "geog.123",
+   "authors": [
+    "RoseMarie Gallagher",
+    "Richard Parish"
+   ],
+   "publisher": "Oxford University Press",
+   "edition": "5th",
+   "year": null,
+   "isbn": "9780198489153",
+   "cover": null,
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "geography",
+     "levels": [
+      "year8"
+     ]
+    }
+   ],
+   "sources": [
+    "https://oxford.co.za/shop/resources-and-home-learning/student-book/9780198489153-geog-2-student-book-5e/"
+   ],
+   "notes": "KS3 Geography (no exam board). geog.123 series.",
+   "id": "geog2-student-book"
+  },
+  {
+   "title": "geog.3 Student Book",
+   "series": "geog.123",
+   "authors": [
+    "RoseMarie Gallagher",
+    "Richard Parish"
+   ],
+   "publisher": "Oxford University Press",
+   "edition": "5th",
+   "year": 2021,
+   "isbn": "9780198489917",
+   "cover": null,
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "geography",
+     "levels": [
+      "year9"
+     ]
+    }
+   ],
+   "sources": [
+    "https://oxford.co.za/shop/resources-and-home-learning/student-book/9780198489917-geog-3-student-book-5e/",
+    "https://www.abebooks.com/9780198489917/geog.3-Student-Book-geog.123-Fifth-0198489919/plp"
+   ],
+   "notes": "KS3 Geography (no exam board). geog.123 series.",
+   "id": "geog3-student-book"
+  },
+  {
+   "title": "Great Expectations",
+   "series": null,
+   "authors": [
+    "Charles Dickens"
+   ],
+   "publisher": "Standard Ebooks",
+   "edition": null,
+   "year": null,
+   "isbn": null,
+   "cover": null,
+   "free": true,
+   "readUrl": "https://standardebooks.org/ebooks/charles-dickens/great-expectations/text/single-page",
+   "downloadUrl": "https://standardebooks.org/ebooks/charles-dickens/great-expectations/text/single-page",
+   "downloadType": "html",
+   "downloadBytes": null,
+   "provider": "Standard Ebooks",
+   "license": "Public domain (Standard Ebooks edition dedicated via CC0 1.0)",
+   "countryOnly": true,
+   "placements": [
+    {
+     "subject": "english-literature",
+     "levels": [
+      "year10",
+      "year11"
+     ]
+    },
+    {
+     "subject": "literature",
+     "levels": [
+      "igcse1",
+      "igcse2"
+     ]
+    }
+   ],
+   "sources": [
+    "https://standardebooks.org/ebooks/charles-dickens/great-expectations",
+    "https://www.aqa.org.uk/subjects/english/gcse/english-literature-8702/specification/subject-content/shakespeare-and-the-19th-century-novel"
+   ],
+   "notes": "Set text: one of AQA GCSE English Literature (8702) Shakespeare / 19th-century novel options. Edexcel and OCR set many of the same texts, and Cambridge IGCSE Literature changes its list each year, so check the current list. AQA names the 1867 edition.",
+   "id": "great-expectations"
+  },
+  {
+   "id": "intermediate-algebra-2e",
+   "title": "Intermediate Algebra 2e",
+   "series": null,
+   "authors": [
+    "Lynn Marecek",
+    "Andrea Honeycutt Mathis"
+   ],
+   "publisher": "OpenStax",
+   "edition": null,
+   "year": 2020,
+   "isbn": null,
+   "cover": "https://assets.openstax.org/oscms-prodcms/media/documents/intermediate_algebra_2e_web_card_GzBTGtH.svg",
+   "free": true,
+   "readUrl": "https://openstax.org/books/intermediate-algebra-2e/pages/1-introduction",
+   "provider": "OpenStax",
+   "license": "CC BY-NC-SA 4.0",
+   "sources": [
+    "https://openstax.org/details/books/intermediate-algebra-2e",
+    "https://openstax.org/apps/cms/api/v2/pages/?type=books.Book&slug=intermediate-algebra-2e&fields=*"
+   ],
+   "notes": "College level. Covers SS algebra topics (indices, logarithms, quadratics, functions, sequences). OpenStax states the book may not be used to train large language models.",
+   "downloadUrl": "https://assets.openstax.org/oscms-prodcms/media/documents/intermediate-algebra-2e_-_WEB.pdf",
+   "downloadType": "pdf",
+   "downloadBytes": 80988726,
+   "placements": [
+    {
+     "subject": "mathematics",
+     "levels": [
+      "year10",
+      "year11",
+      "igcse1",
+      "igcse2"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "introduction-to-art-design-context-and-meaning",
+   "title": "Introduction to Art: Design, Context, and Meaning",
+   "series": null,
+   "authors": [
+    "Pamela Sachant",
+    "Peggy Blood",
+    "Jeffery LeMieux",
+    "Rita Tekippe"
+   ],
+   "publisher": "University of North Georgia Press",
+   "edition": null,
+   "year": 2016,
+   "isbn": null,
+   "cover": "https://oer.galileo.usg.edu/arts-textbooks/1002/thumbnail.jpg",
+   "free": true,
+   "readUrl": "https://alg.manifoldapp.org/projects/introduction-to-art",
+   "provider": "Manifold (University System of Georgia)",
+   "license": "CC BY-SA 4.0",
+   "sources": [
+    "https://oer.galileo.usg.edu/arts-textbooks/3/",
+    "https://open.umn.edu/opentextbooks/textbooks/introduction-to-art-design-context-and-meaning"
+   ],
+   "notes": "College art appreciation: elements and principles of design, media and techniques, art history and meaning. Fits SS Fine Arts theory. Covers only the visual-art part of JSS Cultural and Creative Arts (no music, drama or dance).",
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "placements": [
+    {
+     "subject": "art-design",
+     "levels": [
+      "year7",
+      "year8",
+      "year9",
+      "year10",
+      "year11"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "introduction-to-business-2e",
+   "title": "Introduction to Business 2e",
+   "series": null,
+   "authors": [
+    "Lawrence J. Gitman",
+    "Carl McDaniel",
+    "Amit Shah",
+    "Monique Reece",
+    "Linda Koffel",
+    "Bethann Talsma",
+    "James C. Hyatt"
+   ],
+   "publisher": "OpenStax",
+   "edition": null,
+   "year": 2026,
+   "isbn": null,
+   "cover": "https://assets.openstax.org/oscms-prodcms/media/documents/introduction_to_business_2e_web_card.svg",
+   "free": true,
+   "readUrl": "https://openstax.org/books/introduction-business-2e/pages/1-introduction",
+   "provider": "OpenStax",
+   "license": "CC BY-NC-SA 4.0",
+   "sources": [
+    "https://openstax.org/details/books/introduction-business-2e",
+    "https://openstax.org/apps/cms/api/v2/pages/?type=books.Book&slug=introduction-business-2e&fields=*"
+   ],
+   "notes": "College level: business, trade, forms of ownership, marketing, finance, banking. Fits SS Commerce. Heavy for JSS Business Studies; use as a reference there. OpenStax states the book may not be used to train large language models.",
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "placements": [
+    {
+     "subject": "business-studies",
+     "levels": [
+      "year10",
+      "year11",
+      "igcse1",
+      "igcse2",
+      "year12",
+      "year13"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "introduction-to-computer-science",
+   "title": "Introduction to Computer Science",
+   "series": null,
+   "authors": [
+    "Jean-Claude Franchitti"
+   ],
+   "publisher": "OpenStax",
+   "edition": null,
+   "year": 2024,
+   "isbn": null,
+   "cover": "https://assets.openstax.org/oscms-prodcms/media/documents/introduction_to_computer_science_web_card.svg",
+   "free": true,
+   "readUrl": "https://openstax.org/books/introduction-computer-science/pages/1-introduction",
+   "provider": "OpenStax",
+   "license": "CC BY-NC-SA 4.0",
+   "sources": [
+    "https://openstax.org/details/books/introduction-computer-science",
+    "https://openstax.org/apps/cms/api/v2/pages/?type=books.Book&slug=introduction-computer-science&fields=*"
+   ],
+   "notes": "College level: computer systems, data, databases, networks, security. OpenStax states the book may not be used to train large language models.",
+   "downloadUrl": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_To_Computer_Science_-_WEB.pdf",
+   "downloadType": "pdf",
+   "downloadBytes": 56261511,
+   "placements": [
+    {
+     "subject": "computer-science",
+     "levels": [
+      "year12",
+      "year13"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "introduction-to-drafting-and-autocad-2d",
+   "title": "Introduction to Drafting and AutoCAD 2D",
+   "series": null,
+   "authors": [
+    "Wally Baumback"
+   ],
+   "publisher": "BCcampus",
+   "edition": null,
+   "year": 2021,
+   "isbn": null,
+   "cover": "https://opentextbc.ca/autocad2d/wp-content/uploads/sites/375/2022/12/OTB249-02-Introduction-to-Drafting-and-AutoCAD-2D-COVER-STORE-1.jpg",
+   "free": true,
+   "readUrl": "https://opentextbc.ca/autocad2d/",
+   "provider": "BCcampus OpenEd",
+   "license": "CC BY 4.0",
+   "sources": [
+    "https://opentextbc.ca/autocad2d/"
+   ],
+   "notes": "Drafting fundamentals taught through AutoCAD (computer drawing). Useful extension for SS Technical Drawing; WAEC exams are drawn by hand.",
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "placements": [
+    {
+     "subject": "design-technology",
+     "levels": [
+      "year10",
+      "year11"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "introduction-to-political-science",
+   "title": "Introduction to Political Science",
+   "series": null,
+   "authors": [
+    "Mark Carl Rom",
+    "Masaki Hidaka",
+    "Rachel Bzostek Walker"
+   ],
+   "publisher": "OpenStax",
+   "edition": null,
+   "year": 2022,
+   "isbn": null,
+   "cover": "https://assets.openstax.org/oscms-prodcms/media/documents/introduction_to_political_science_webcard.svg",
+   "free": true,
+   "readUrl": "https://openstax.org/books/introduction-political-science/pages/1-introduction",
+   "provider": "OpenStax",
+   "license": "CC BY-NC-SA 4.0",
+   "sources": [
+    "https://openstax.org/details/books/introduction-political-science",
+    "https://openstax.org/apps/cms/api/v2/pages/?type=books.Book&slug=introduction-political-science&fields=*"
+   ],
+   "notes": "College level: the state, constitutions, democracy, the three arms of government, rights, elections and parties. The concepts fit SS Government; partial fit for Civic Education. No Nigeria-specific content. OpenStax states the book may not be used to train large language models.",
+   "downloadUrl": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Political_Science_-_WEB.pdf",
+   "downloadType": "pdf",
+   "downloadBytes": 78449891,
+   "placements": [
+    {
+     "subject": "citizenship",
+     "levels": [
+      "year10",
+      "year11"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Introduction to Python Programming",
+   "series": null,
+   "authors": [],
+   "publisher": "OpenStax (Rice University)",
+   "edition": null,
+   "year": null,
+   "isbn": null,
+   "cover": null,
+   "free": true,
+   "readUrl": "https://openstax.org/books/introduction-python-programming/pages/1-introduction",
+   "downloadUrl": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+   "downloadType": "pdf",
+   "downloadBytes": null,
+   "provider": "OpenStax",
+   "license": "CC BY-NC-SA 4.0",
+   "countryOnly": true,
+   "placements": [
+    {
+     "subject": "computer-science",
+     "levels": [
+      "year10",
+      "year11",
+      "igcse1",
+      "igcse2",
+      "year12",
+      "year13"
+     ]
+    }
+   ],
+   "sources": [
+    "https://openstax.org/details/books/introduction-python-programming",
+    "https://openstax.org/apps/cms/api/v2/pages/?type=books.Book&fields=title,license_name"
+   ],
+   "notes": "Python is the language most UK schools use for GCSE/IGCSE/A Level programming.",
+   "id": "introduction-to-python-programming"
+  },
+  {
+   "title": "Introduction to Sociology 3e",
+   "series": null,
+   "authors": [],
+   "publisher": "OpenStax (Rice University)",
+   "edition": null,
+   "year": null,
+   "isbn": null,
+   "cover": null,
+   "free": true,
+   "readUrl": "https://openstax.org/books/introduction-sociology-3e/pages/1-introduction",
+   "downloadUrl": "https://assets.openstax.org/oscms-prodcms/media/documents/introduction-sociology-3e_-_WEB.pdf",
+   "downloadType": "pdf",
+   "downloadBytes": 48299547,
+   "provider": "OpenStax",
+   "license": "CC BY-NC-SA 4.0",
+   "countryOnly": true,
+   "placements": [
+    {
+     "subject": "sociology",
+     "levels": [
+      "year12",
+      "year13"
+     ]
+    }
+   ],
+   "sources": [
+    "https://openstax.org/details/books/introduction-sociology-3e",
+    "https://openstax.org/apps/cms/api/v2/pages/?type=books.Book&fields=title,license_name"
+   ],
+   "notes": "University intro text; useful background for A Level Sociology (family, education, crime, methods). US examples. Team-written.",
+   "id": "introduction-to-sociology-3e"
+  },
+  {
+   "id": "introduction-to-world-regional-geography",
+   "title": "Introduction to World Regional Geography",
+   "series": null,
+   "authors": [
+    "R. Adam Dastrup"
+   ],
+   "publisher": "Salt Lake Community College (Pressbooks)",
+   "edition": null,
+   "year": 2020,
+   "isbn": null,
+   "cover": null,
+   "free": true,
+   "readUrl": "https://slcc.pressbooks.pub/worldgeography/",
+   "provider": "Pressbooks",
+   "license": "CC BY-NC-SA 4.0",
+   "sources": [
+    "https://slcc.pressbooks.pub/worldgeography/"
+   ],
+   "notes": "College level: population, culture, development, and regional chapters including Sub-Saharan Africa. Covers human and regional geography; nothing Nigeria-specific.",
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "placements": [
+    {
+     "subject": "geography",
+     "levels": [
+      "year10",
+      "year11",
+      "igcse1",
+      "igcse2",
+      "year12",
+      "year13"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Introductory Statistics 2e",
+   "series": null,
+   "authors": [],
+   "publisher": "OpenStax (Rice University)",
+   "edition": null,
+   "year": null,
+   "isbn": null,
+   "cover": null,
+   "free": true,
+   "readUrl": "https://openstax.org/books/introductory-statistics-2e/pages/1-introduction",
+   "downloadUrl": "https://assets.openstax.org/oscms-prodcms/media/documents/introductory-statistics-2e_-_WEB.pdf",
+   "downloadType": "pdf",
+   "downloadBytes": 23503369,
+   "provider": "OpenStax",
+   "license": "CC BY-NC-SA 4.0",
+   "countryOnly": true,
+   "placements": [
+    {
+     "subject": "mathematics",
+     "levels": [
+      "year12",
+      "year13"
+     ]
+    }
+   ],
+   "sources": [
+    "https://openstax.org/details/books/introductory-statistics-2e",
+    "https://openstax.org/apps/cms/api/v2/pages/?type=books.Book&fields=title,license_name"
+   ],
+   "notes": "Covers the statistics strand of A Level Mathematics (distributions, hypothesis testing).",
+   "id": "introductory-statistics-2e"
+  },
+  {
+   "title": "Jane Eyre",
+   "series": null,
+   "authors": [
+    "Charlotte Brontë"
+   ],
+   "publisher": "Standard Ebooks",
+   "edition": null,
+   "year": null,
+   "isbn": null,
+   "cover": null,
+   "free": true,
+   "readUrl": "https://standardebooks.org/ebooks/charlotte-bronte/jane-eyre/text/single-page",
+   "downloadUrl": "https://standardebooks.org/ebooks/charlotte-bronte/jane-eyre/text/single-page",
+   "downloadType": "html",
+   "downloadBytes": null,
+   "provider": "Standard Ebooks",
+   "license": "Public domain (Standard Ebooks edition dedicated via CC0 1.0)",
+   "countryOnly": true,
+   "placements": [
+    {
+     "subject": "english-literature",
+     "levels": [
+      "year10",
+      "year11"
+     ]
+    },
+    {
+     "subject": "literature",
+     "levels": [
+      "igcse1",
+      "igcse2"
+     ]
+    }
+   ],
+   "sources": [
+    "https://standardebooks.org/ebooks/charlotte-bronte/jane-eyre",
+    "https://www.aqa.org.uk/subjects/english/gcse/english-literature-8702/specification/subject-content/shakespeare-and-the-19th-century-novel"
+   ],
+   "notes": "Set text: one of AQA GCSE English Literature (8702) Shakespeare / 19th-century novel options. Edexcel and OCR set many of the same texts, and Cambridge IGCSE Literature changes its list each year, so check the current list.",
+   "id": "jane-eyre"
+  },
+  {
+   "title": "Julius Caesar",
+   "series": null,
+   "authors": [
+    "William Shakespeare"
+   ],
+   "publisher": "Standard Ebooks",
+   "edition": null,
+   "year": null,
+   "isbn": null,
+   "cover": null,
+   "free": true,
+   "readUrl": "https://standardebooks.org/ebooks/william-shakespeare/julius-caesar/text/single-page",
+   "downloadUrl": "https://standardebooks.org/ebooks/william-shakespeare/julius-caesar/text/single-page",
+   "downloadType": "html",
+   "downloadBytes": null,
+   "provider": "Standard Ebooks",
+   "license": "Public domain (Standard Ebooks edition dedicated via CC0 1.0)",
+   "countryOnly": true,
+   "placements": [
+    {
+     "subject": "english-literature",
+     "levels": [
+      "year10",
+      "year11"
+     ]
+    },
+    {
+     "subject": "literature",
+     "levels": [
+      "igcse1",
+      "igcse2"
+     ]
+    }
+   ],
+   "sources": [
+    "https://standardebooks.org/ebooks/william-shakespeare/julius-caesar",
+    "https://www.aqa.org.uk/subjects/english/gcse/english-literature-8702/specification/subject-content/shakespeare-and-the-19th-century-novel"
+   ],
+   "notes": "Set text: one of AQA GCSE English Literature (8702) Shakespeare / 19th-century novel options. Edexcel and OCR set many of the same texts, and Cambridge IGCSE Literature changes its list each year, so check the current list.",
+   "id": "julius-caesar"
+  },
+  {
+   "title": "KS3 History 4th Edition: Invasion, Plague and Murder: Britain 1066-1558 Student Book",
+   "series": "KS3 History",
+   "authors": [
+    "Aaron Wilkes"
+   ],
+   "publisher": "Oxford University Press",
+   "edition": "4th",
+   "year": 2019,
+   "isbn": "9780198494645",
+   "cover": null,
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "history",
+     "levels": [
+      "year7"
+     ]
+    }
+   ],
+   "sources": [
+    "https://india.oup.com/product/ks3-history-4th-edn-invasion-plague-and-murder-britain-1066-1558-stdnt-book-9780198494645",
+    "https://www.teachwire.net/products/product-review-ks3-history-by-aaron-wilkes/"
+   ],
+   "notes": "KS3 History (no exam board). Book 1 of 3; Book 2 'Revolution, Industry and Empire: Britain 1558-1901' and Book 3 'Technology, War and Independence 1901-Present Day'.",
+   "id": "ks3-history-4th-edition-invasion-plague-and-murder-britain-1066-1558-student-boo"
+  },
+  {
+   "title": "KS3 History 4th Edition: Revolution, Industry and Empire: Britain 1558-1901 Student Book",
+   "series": "KS3 History",
+   "authors": [
+    "Aaron Wilkes"
+   ],
+   "publisher": "Oxford University Press",
+   "edition": "4th",
+   "year": 2019,
+   "isbn": null,
+   "cover": null,
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "history",
+     "levels": [
+      "year8"
+     ]
+    }
+   ],
+   "sources": [
+    "https://www.teachwire.net/products/product-review-ks3-history-by-aaron-wilkes/",
+    "https://www.wook.pt/ebook/ks3-history-4th-edition-revolution-industry-and-empire-britain-1558-1901-ebook-2-aaron-wilkes/25496065"
+   ],
+   "notes": "KS3 History (no exam board). Book 2 of 3. ISBN taken from a single retailer listing, so it is left blank.",
+   "id": "ks3-history-4th-edition-revolution-industry-and-empire-britain-1558-1901-student"
+  },
+  {
+   "title": "KS3 History 4th Edition: Technology, War and Independence 1901-Present Day Student Book",
+   "series": "KS3 History",
+   "authors": [
+    "Aaron Wilkes"
+   ],
+   "publisher": "Oxford University Press",
+   "edition": "4th",
+   "year": null,
+   "isbn": null,
+   "cover": null,
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "history",
+     "levels": [
+      "year9"
+     ]
+    }
+   ],
+   "sources": [
+    "https://www.teachwire.net/products/product-review-ks3-history-by-aaron-wilkes/",
+    "https://www.bertrand.pt/ebook/ks3-history-4th-edition-technology-war-and-independence-1901-present-day-ebook-3-aaron-wilkes/25496066"
+   ],
+   "notes": "KS3 History (no exam board). Book 3 of 3. The ISBN found (9780198494690) belongs to a planning guide, so the field is left blank.",
+   "id": "ks3-history-4th-edition-technology-war-and-independence-1901-present-day-student"
+  },
+  {
+   "id": "liberte",
+   "title": "Liberté",
+   "series": null,
+   "authors": [
+    "Gretchen Angelo",
+    "Emmanuelle Remy"
+   ],
+   "publisher": "Gretchen Angelo (lightandmatter.com)",
+   "edition": null,
+   "year": 2017,
+   "isbn": null,
+   "cover": null,
+   "free": true,
+   "readUrl": "https://www.lightandmatter.com/french/",
+   "provider": "Author site (lightandmatter.com)",
+   "license": "CC BY-SA 4.0",
+   "sources": [
+    "http://www.lightandmatter.com/french/",
+    "https://open.umn.edu/opentextbooks/textbooks/liberte"
+   ],
+   "notes": "Complete first-year French course (communicative approach, grammar and exercises). The authors' page links the free PDFs (stored on the Internet Archive), so readers open a PDF rather than an HTML reader. Open Textbook Library lists it as CC BY-NC-SA; the authors' page now shows CC BY-SA 4.0. Suits JSS beginners and SS revision. American setting, not West African.",
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "placements": [
+    {
+     "subject": "french",
+     "levels": [
+      "year7",
+      "year8",
+      "year9"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "life-sciences-grade-10",
+   "title": "Life Sciences Grade 10",
+   "series": null,
+   "authors": [
+    "Siyavula Education"
+   ],
+   "publisher": "Siyavula",
+   "edition": null,
+   "year": null,
+   "isbn": null,
+   "cover": null,
+   "free": true,
+   "readUrl": "https://www.siyavula.com/read/za/life-sciences/grade-10",
+   "provider": "Siyavula",
+   "license": "CC BY 3.0",
+   "sources": [
+    "https://www.siyavula.com/read/za/life-sciences/grade-10"
+   ],
+   "notes": "School biology: chemistry of life, cells, cell division, tissues, support and transport systems, ecosystems, biodiversity and classification. Only Grade 10 is still online; the Grade 11 and 12 links redirect away.",
+   "downloadUrl": "https://www.siyavula.com/downloads/books/life-science/Gr10_LifeSciences_Learner_Eng.pdf",
+   "downloadType": "pdf",
+   "downloadBytes": 18874256,
+   "placements": [
+    {
+     "subject": "biology",
+     "levels": [
+      "year10",
+      "igcse1"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Macbeth",
+   "series": null,
+   "authors": [
+    "William Shakespeare"
+   ],
+   "publisher": "Standard Ebooks",
+   "edition": null,
+   "year": null,
+   "isbn": null,
+   "cover": null,
+   "free": true,
+   "readUrl": "https://standardebooks.org/ebooks/william-shakespeare/macbeth/text/single-page",
+   "downloadUrl": "https://standardebooks.org/ebooks/william-shakespeare/macbeth/text/single-page",
+   "downloadType": "html",
+   "downloadBytes": null,
+   "provider": "Standard Ebooks",
+   "license": "Public domain (Standard Ebooks edition dedicated via CC0 1.0)",
+   "countryOnly": true,
+   "placements": [
+    {
+     "subject": "english-literature",
+     "levels": [
+      "year10",
+      "year11"
+     ]
+    },
+    {
+     "subject": "literature",
+     "levels": [
+      "igcse1",
+      "igcse2"
+     ]
+    }
+   ],
+   "sources": [
+    "https://standardebooks.org/ebooks/william-shakespeare/macbeth",
+    "https://www.aqa.org.uk/subjects/english/gcse/english-literature-8702/specification/subject-content/shakespeare-and-the-19th-century-novel"
+   ],
+   "notes": "Set text: one of AQA GCSE English Literature (8702) Shakespeare / 19th-century novel options. Edexcel and OCR set many of the same texts, and Cambridge IGCSE Literature changes its list each year, so check the current list.",
+   "id": "macbeth"
+  },
+  {
+   "id": "mathematics-grade-10",
+   "title": "Mathematics Grade 10",
+   "series": null,
+   "authors": [
+    "Siyavula Education"
+   ],
+   "publisher": "Siyavula",
+   "edition": null,
+   "year": null,
+   "isbn": null,
+   "cover": null,
+   "free": true,
+   "readUrl": "https://www.siyavula.com/read/za/mathematics/grade-10",
+   "provider": "Siyavula",
+   "license": "CC BY 3.0",
+   "sources": [
+    "https://www.siyavula.com/read/za/mathematics/grade-10"
+   ],
+   "notes": "Full school maths textbook (South African CAPS, Grade 10). Licence as stated on the online reader page (CC BY 3.0). Siyavula-branded print/PDF editions may carry CC BY-ND.",
+   "downloadUrl": "https://www.siyavula.com/downloads/books/maths/Gr10_Mathematics_Learner_Eng_v1.pdf",
+   "downloadType": "pdf",
+   "downloadBytes": 7777090,
+   "placements": [
+    {
+     "subject": "mathematics",
+     "levels": [
+      "year10",
+      "igcse1"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mathematics-grade-11",
+   "title": "Mathematics Grade 11",
+   "series": null,
+   "authors": [
+    "Siyavula Education"
+   ],
+   "publisher": "Siyavula",
+   "edition": null,
+   "year": null,
+   "isbn": null,
+   "cover": null,
+   "free": true,
+   "readUrl": "https://www.siyavula.com/read/za/mathematics/grade-11",
+   "provider": "Siyavula",
+   "license": "CC BY 3.0",
+   "sources": [
+    "https://www.siyavula.com/read/za/mathematics/grade-11"
+   ],
+   "notes": "Full school maths textbook (South African CAPS, Grade 11). Licence as stated on the online reader page (CC BY 3.0). Siyavula-branded print/PDF editions may carry CC BY-ND.",
+   "downloadUrl": "https://www.siyavula.com/downloads/books/maths/Gr11_Mathematics_Learner_Eng.pdf",
+   "downloadType": "pdf",
+   "downloadBytes": 11284036,
+   "placements": [
+    {
+     "subject": "mathematics",
+     "levels": [
+      "year11",
+      "igcse2"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mathematics-grade-12",
+   "title": "Mathematics Grade 12",
+   "series": null,
+   "authors": [
+    "Siyavula Education"
+   ],
+   "publisher": "Siyavula",
+   "edition": null,
+   "year": null,
+   "isbn": null,
+   "cover": null,
+   "free": true,
+   "readUrl": "https://www.siyavula.com/read/za/mathematics/grade-12",
+   "provider": "Siyavula",
+   "license": "CC BY 3.0",
+   "sources": [
+    "https://www.siyavula.com/read/za/mathematics/grade-12"
+   ],
+   "notes": "Full school maths textbook (South African CAPS, Grade 12). Licence as stated on the online reader page (CC BY 3.0). Siyavula-branded print/PDF editions may carry CC BY-ND.",
+   "downloadUrl": "https://www.siyavula.com/downloads/books/maths/Gr12_Mathematics_Learner_Eng.pdf",
+   "downloadType": "pdf",
+   "downloadBytes": 5015777,
+   "placements": [
+    {
+     "subject": "mathematics",
+     "levels": [
+      "year12"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mathematics-grade-7",
+   "title": "Mathematics Grade 7",
+   "series": null,
+   "authors": [
+    "Ukuqonda Institute"
+   ],
+   "publisher": "Ukuqonda Institute / Sasol Inzalo Foundation (hosted by Siyavula)",
+   "edition": null,
+   "year": null,
+   "isbn": null,
+   "cover": null,
+   "free": true,
+   "readUrl": "https://www.siyavula.com/read/za/mathematics/grade-7",
+   "provider": "Siyavula",
+   "license": "CC BY 3.0",
+   "sources": [
+    "https://www.siyavula.com/read/za/mathematics/grade-7"
+   ],
+   "notes": "Full school maths textbook (South African CAPS, Grade 7). Licence as stated on the online reader page (CC BY 3.0). Siyavula-branded print/PDF editions may carry CC BY-ND.",
+   "downloadUrl": "https://www.siyavula.com/downloads/books/maths/Gr7A_Mathematics_Learner_Eng.pdf",
+   "downloadType": "pdf",
+   "downloadBytes": 32791794,
+   "placements": [
+    {
+     "subject": "mathematics",
+     "levels": [
+      "year7"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mathematics-grade-8",
+   "title": "Mathematics Grade 8",
+   "series": null,
+   "authors": [
+    "Ukuqonda Institute"
+   ],
+   "publisher": "Ukuqonda Institute / Sasol Inzalo Foundation (hosted by Siyavula)",
+   "edition": null,
+   "year": null,
+   "isbn": null,
+   "cover": null,
+   "free": true,
+   "readUrl": "https://www.siyavula.com/read/za/mathematics/grade-8",
+   "provider": "Siyavula",
+   "license": "CC BY 3.0",
+   "sources": [
+    "https://www.siyavula.com/read/za/mathematics/grade-8"
+   ],
+   "notes": "Full school maths textbook (South African CAPS, Grade 8). Licence as stated on the online reader page (CC BY 3.0). Siyavula-branded print/PDF editions may carry CC BY-ND.",
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "placements": [
+    {
+     "subject": "mathematics",
+     "levels": [
+      "year8"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mathematics-grade-9",
+   "title": "Mathematics Grade 9",
+   "series": null,
+   "authors": [
+    "Ukuqonda Institute"
+   ],
+   "publisher": "Ukuqonda Institute / Sasol Inzalo Foundation (hosted by Siyavula)",
+   "edition": null,
+   "year": null,
+   "isbn": null,
+   "cover": null,
+   "free": true,
+   "readUrl": "https://www.siyavula.com/read/za/mathematics/grade-9",
+   "provider": "Siyavula",
+   "license": "CC BY 3.0",
+   "sources": [
+    "https://www.siyavula.com/read/za/mathematics/grade-9"
+   ],
+   "notes": "Full school maths textbook (South African CAPS, Grade 9). Licence as stated on the online reader page (CC BY 3.0). Siyavula-branded print/PDF editions may carry CC BY-ND.",
+   "downloadUrl": "https://www.siyavula.com/downloads/books/maths/Gr9A_Mathematics_Learner_Eng.pdf",
+   "downloadType": "pdf",
+   "downloadBytes": 30508282,
+   "placements": [
+    {
+     "subject": "mathematics",
+     "levels": [
+      "year9"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Maths Progress Second Edition Core Textbook 1",
+   "series": "Maths Progress",
+   "authors": [
+    "Katherine Pate",
+    "Naomi Norman"
+   ],
+   "publisher": "Pearson Education",
+   "edition": "2nd",
+   "year": 2019,
+   "isbn": "9781292280059",
+   "cover": null,
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "mathematics",
+     "levels": [
+      "year7"
+     ]
+    }
+   ],
+   "sources": [
+    "https://www.megabooks.cz/p/12893116/maths-progress-second-edition-core-textbook-1",
+    "https://toppsta.com/books/details/629369/maths-progress-core-textbook-1-second-edition"
+   ],
+   "notes": "KS3 Mathematics (no exam board). Core Textbook 2 is ISBN 9781292280042 (Year 8). Earlier edition sold as 'KS3 Maths Progress' Pi/Theta/Delta.",
+   "id": "maths-progress-second-edition-core-textbook-1"
+  },
+  {
+   "title": "Much Ado About Nothing",
+   "series": null,
+   "authors": [
+    "William Shakespeare"
+   ],
+   "publisher": "Standard Ebooks",
+   "edition": null,
+   "year": null,
+   "isbn": null,
+   "cover": null,
+   "free": true,
+   "readUrl": "https://standardebooks.org/ebooks/william-shakespeare/much-ado-about-nothing/text/single-page",
+   "downloadUrl": "https://standardebooks.org/ebooks/william-shakespeare/much-ado-about-nothing/text/single-page",
+   "downloadType": "html",
+   "downloadBytes": null,
+   "provider": "Standard Ebooks",
+   "license": "Public domain (Standard Ebooks edition dedicated via CC0 1.0)",
+   "countryOnly": true,
+   "placements": [
+    {
+     "subject": "english-literature",
+     "levels": [
+      "year10",
+      "year11"
+     ]
+    },
+    {
+     "subject": "literature",
+     "levels": [
+      "igcse1",
+      "igcse2"
+     ]
+    }
+   ],
+   "sources": [
+    "https://standardebooks.org/ebooks/william-shakespeare/much-ado-about-nothing",
+    "https://www.aqa.org.uk/subjects/english/gcse/english-literature-8702/specification/subject-content/shakespeare-and-the-19th-century-novel"
+   ],
+   "notes": "Set text: one of AQA GCSE English Literature (8702) Shakespeare / 19th-century novel options. Edexcel and OCR set many of the same texts, and Cambridge IGCSE Literature changes its list each year, so check the current list.",
+   "id": "much-ado-about-nothing"
+  },
+  {
+   "id": "natural-sciences-grade-7",
+   "title": "Natural Sciences Grade 7",
+   "series": null,
+   "authors": [
+    "Siyavula Education"
+   ],
+   "publisher": "Siyavula / Sasol Inzalo Foundation",
+   "edition": null,
+   "year": null,
+   "isbn": null,
+   "cover": null,
+   "free": true,
+   "readUrl": "https://www.siyavula.com/read/za/natural-sciences/grade-7",
+   "provider": "Siyavula",
+   "license": "CC BY 3.0",
+   "sources": [
+    "https://www.siyavula.com/read/za/natural-sciences/grade-7"
+   ],
+   "notes": "South African CAPS open textbook (life and living, matter and materials, energy and change, Earth and beyond). Close match for Basic Science at this level. The online reader shows the full table of contents and chapters.",
+   "downloadUrl": "https://www.siyavula.com/downloads/books/science/Gr7_A_learner_eng.pdf",
+   "downloadType": "pdf",
+   "downloadBytes": 17170888,
+   "placements": [
+    {
+     "subject": "science",
+     "levels": [
+      "year7"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "natural-sciences-grade-8",
+   "title": "Natural Sciences Grade 8",
+   "series": null,
+   "authors": [
+    "Siyavula Education"
+   ],
+   "publisher": "Siyavula / Sasol Inzalo Foundation",
+   "edition": null,
+   "year": null,
+   "isbn": null,
+   "cover": null,
+   "free": true,
+   "readUrl": "https://www.siyavula.com/read/za/natural-sciences/grade-8",
+   "provider": "Siyavula",
+   "license": "CC BY 3.0",
+   "sources": [
+    "https://www.siyavula.com/read/za/natural-sciences/grade-8"
+   ],
+   "notes": "South African CAPS open textbook (life and living, matter and materials, energy and change, Earth and beyond). Close match for Basic Science at this level. The online reader shows the full table of contents and chapters.",
+   "downloadUrl": "https://www.siyavula.com/downloads/books/science/Gr8_A_learner_eng.pdf",
+   "downloadType": "pdf",
+   "downloadBytes": 17296266,
+   "placements": [
+    {
+     "subject": "science",
+     "levels": [
+      "year8"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "natural-sciences-grade-9",
+   "title": "Natural Sciences Grade 9",
+   "series": null,
+   "authors": [
+    "Siyavula Education"
+   ],
+   "publisher": "Siyavula / Sasol Inzalo Foundation",
+   "edition": null,
+   "year": null,
+   "isbn": null,
+   "cover": null,
+   "free": true,
+   "readUrl": "https://www.siyavula.com/read/za/natural-sciences/grade-9",
+   "provider": "Siyavula",
+   "license": "CC BY 3.0",
+   "sources": [
+    "https://www.siyavula.com/read/za/natural-sciences/grade-9"
+   ],
+   "notes": "South African CAPS open textbook (life and living, matter and materials, energy and change, Earth and beyond). Close match for Basic Science at this level. The online reader shows the full table of contents and chapters.",
+   "downloadUrl": "https://www.siyavula.com/downloads/books/science/Gr9_A_learner_eng.pdf",
+   "downloadType": "pdf",
+   "downloadBytes": 18643940,
+   "placements": [
+    {
+     "subject": "science",
+     "levels": [
+      "year9"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Oak National Academy: Key Stage 3 lessons",
+   "series": null,
+   "authors": [],
+   "publisher": "Oak National Academy",
+   "edition": null,
+   "year": null,
+   "isbn": null,
+   "cover": null,
+   "free": true,
+   "readUrl": "https://www.thenational.academy/pupils/years/year-7/subjects",
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "provider": "Oak National Academy",
+   "license": "Open Government Licence v3.0 (except where otherwise stated; third-party assets excluded)",
+   "countryOnly": true,
+   "placements": [
+    {
+     "subject": "english",
+     "levels": [
+      "year7",
+      "year8",
+      "year9"
+     ]
+    },
+    {
+     "subject": "mathematics",
+     "levels": [
+      "year7",
+      "year8",
+      "year9"
+     ]
+    },
+    {
+     "subject": "science",
+     "levels": [
+      "year7",
+      "year8",
+      "year9"
+     ]
+    },
+    {
+     "subject": "history",
+     "levels": [
+      "year7",
+      "year8",
+      "year9"
+     ]
+    },
+    {
+     "subject": "geography",
+     "levels": [
+      "year7",
+      "year8",
+      "year9"
+     ]
+    },
+    {
+     "subject": "french",
+     "levels": [
+      "year7",
+      "year8",
+      "year9"
+     ]
+    },
+    {
+     "subject": "spanish",
+     "levels": [
+      "year7",
+      "year8",
+      "year9"
+     ]
+    },
+    {
+     "subject": "computer-science",
+     "levels": [
+      "year7",
+      "year8",
+      "year9"
+     ]
+    },
+    {
+     "subject": "religious-studies",
+     "levels": [
+      "year7",
+      "year8",
+      "year9"
+     ]
+    },
+    {
+     "subject": "art-design",
+     "levels": [
+      "year7",
+      "year8",
+      "year9"
+     ]
+    },
+    {
+     "subject": "design-technology",
+     "levels": [
+      "year7",
+      "year8",
+      "year9"
+     ]
+    },
+    {
+     "subject": "physical-health-education",
+     "levels": [
+      "year7",
+      "year8",
+      "year9"
+     ]
+    },
+    {
+     "subject": "citizenship",
+     "levels": [
+      "year7",
+      "year8",
+      "year9"
+     ]
+    }
+   ],
+   "sources": [
+    "https://www.thenational.academy/teachers/key-stages/ks3/subjects",
+    "https://www.thenational.academy/legal/terms-and-conditions"
+   ],
+   "notes": "Lessons, not a textbook: video lessons, slides, worksheets and quizzes for the England national curriculum, free. Change 'year-7' in the URL to year-8 or year-9. Teachers can download lesson resources; there is no single book download.",
+   "id": "oak-national-academy-key-stage-3-lessons"
+  },
+  {
+   "title": "Oak National Academy: Key Stage 4 (GCSE) lessons",
+   "series": null,
+   "authors": [],
+   "publisher": "Oak National Academy",
+   "edition": null,
+   "year": null,
+   "isbn": null,
+   "cover": null,
+   "free": true,
+   "readUrl": "https://www.thenational.academy/pupils/years/year-10/subjects",
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "provider": "Oak National Academy",
+   "license": "Open Government Licence v3.0 (except where otherwise stated; third-party assets excluded)",
+   "countryOnly": true,
+   "placements": [
+    {
+     "subject": "english-language",
+     "levels": [
+      "year10",
+      "year11"
+     ]
+    },
+    {
+     "subject": "english-literature",
+     "levels": [
+      "year10",
+      "year11"
+     ]
+    },
+    {
+     "subject": "mathematics",
+     "levels": [
+      "year10",
+      "year11"
+     ]
+    },
+    {
+     "subject": "combined-science",
+     "levels": [
+      "year10",
+      "year11"
+     ]
+    },
+    {
+     "subject": "biology",
+     "levels": [
+      "year10",
+      "year11"
+     ]
+    },
+    {
+     "subject": "chemistry",
+     "levels": [
+      "year10",
+      "year11"
+     ]
+    },
+    {
+     "subject": "physics",
+     "levels": [
+      "year10",
+      "year11"
+     ]
+    },
+    {
+     "subject": "history",
+     "levels": [
+      "year10",
+      "year11"
+     ]
+    },
+    {
+     "subject": "geography",
+     "levels": [
+      "year10",
+      "year11"
+     ]
+    },
+    {
+     "subject": "french",
+     "levels": [
+      "year10",
+      "year11"
+     ]
+    },
+    {
+     "subject": "spanish",
+     "levels": [
+      "year10",
+      "year11"
+     ]
+    },
+    {
+     "subject": "computer-science",
+     "levels": [
+      "year10",
+      "year11"
+     ]
+    },
+    {
+     "subject": "religious-studies",
+     "levels": [
+      "year10",
+      "year11"
+     ]
+    },
+    {
+     "subject": "citizenship",
+     "levels": [
+      "year10",
+      "year11"
+     ]
+    },
+    {
+     "subject": "physical-health-education",
+     "levels": [
+      "year10",
+      "year11"
+     ]
+    },
+    {
+     "subject": "art-design",
+     "levels": [
+      "year10",
+      "year11"
+     ]
+    },
+    {
+     "subject": "design-technology",
+     "levels": [
+      "year10",
+      "year11"
+     ]
+    }
+   ],
+   "sources": [
+    "https://www.thenational.academy/teachers/key-stages/ks4/subjects",
+    "https://www.thenational.academy/legal/terms-and-conditions"
+   ],
+   "notes": "Lessons, not a textbook. GCSE content in line with AQA/Edexcel/OCR is offered for some subjects (check each one). Change 'year-10' to year-11 in the URL.",
+   "id": "oak-national-academy-key-stage-4-gcse-lessons"
+  },
+  {
+   "title": "OCR AS and A Level Computer Science",
+   "series": null,
+   "authors": [
+    "P. M. Heathcote",
+    "R. S. U. Heathcote"
+   ],
+   "publisher": "PG Online",
+   "edition": null,
+   "year": 2016,
+   "isbn": "9781910523056",
+   "cover": null,
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "computer-science",
+     "levels": [
+      "year12",
+      "year13"
+     ]
+    }
+   ],
+   "sources": [
+    "https://stem.org.uk/node/441818",
+    "https://www.abebooks.com/9781910523056/OCR-Level-Computer-Science-Paperback-1910523054/plp"
+   ],
+   "notes": "OCR AS/A Level Computer Science (H046/H446).",
+   "id": "ocr-as-and-a-level-computer-science"
+  },
+  {
+   "title": "OCR GCSE (9-1) J277 Computer Science",
+   "series": null,
+   "authors": [
+    "S. Robson",
+    "P. M. Heathcote"
+   ],
+   "publisher": "PG Online",
+   "edition": null,
+   "year": null,
+   "isbn": "9781910523216",
+   "cover": null,
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "computer-science",
+     "levels": [
+      "year10",
+      "year11"
+     ]
+    }
+   ],
+   "sources": [
+    "https://www.konastories.com/book/9781910523216",
+    "https://www.alibris.com/OCR-GCSE-9-1-J277-Computer-Science-S-Robson/book/47234652"
+   ],
+   "notes": "OCR GCSE Computer Science (J277), covers Papers 1 and 2.",
+   "id": "ocr-gcse-9-1-j277-computer-science"
+  },
+  {
+   "title": "OCR GCSE Computer Science, Second Edition",
+   "series": null,
+   "authors": [
+    "George Rouse",
+    "Lorne Pearcey",
+    "Gavin Craddock",
+    "Ian Paget"
+   ],
+   "publisher": "Hodder Education",
+   "edition": "2nd",
+   "year": 2020,
+   "isbn": "9781510484160",
+   "cover": null,
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "computer-science",
+     "levels": [
+      "year10",
+      "year11"
+     ]
+    }
+   ],
+   "sources": [
+    "https://hachette.co.uk/titles/george-rouse/ocr-gcse-computer-science-second-edition/9781510484160",
+    "https://eld.bl.uk/catalog/019760406"
+   ],
+   "notes": "OCR GCSE Computer Science (J277).",
+   "id": "ocr-gcse-computer-science-second-edition"
+  },
+  {
+   "title": "Oxford Smart Activate 1 Student Book",
+   "series": "Oxford Smart Activate",
+   "authors": [
+    "Jo Locke",
+    "Helen Reynolds",
+    "Philippa Gardom Hulme"
+   ],
+   "publisher": "Oxford University Press",
+   "edition": null,
+   "year": 2021,
+   "isbn": "9781382021067",
+   "cover": null,
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "science",
+     "levels": [
+      "year7"
+     ]
+    }
+   ],
+   "sources": [
+    "https://emka.si/products/oxford-smart-activate-1-student-book",
+    "https://www.easons.com/activate-1-student-book-jo-locke-9781382021067"
+   ],
+   "notes": "KS3 Science (no exam board). Series editor Andrew Chandler-Grevatt. Kerboodle is the matching online platform.",
+   "id": "oxford-smart-activate-1-student-book"
+  },
+  {
+   "title": "Oxford Smart Activate 2 Student Book",
+   "series": "Oxford Smart Activate",
+   "authors": [
+    "Jo Locke",
+    "Helen Reynolds",
+    "Philippa Gardom Hulme"
+   ],
+   "publisher": "Oxford University Press",
+   "edition": null,
+   "year": null,
+   "isbn": "9781382021074",
+   "cover": null,
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "science",
+     "levels": [
+      "year8"
+     ]
+    }
+   ],
+   "sources": [
+    "https://akademika.no/skoleboker/naturfag/oxford-smart-activate-2-student-book/9781382021074",
+    "https://www.bookfusion.com/books/6133953-oxford-smart-activate-2-student-ebook"
+   ],
+   "notes": "KS3 Science (no exam board). Same author team as Activate 1, per series listings.",
+   "id": "oxford-smart-activate-2-student-book"
+  },
+  {
+   "title": "Oxford Smart Activate 3 Student Book",
+   "series": "Oxford Smart Activate",
+   "authors": [
+    "Jo Locke",
+    "Helen Reynolds",
+    "Philippa Gardom Hulme"
+   ],
+   "publisher": "Oxford University Press",
+   "edition": null,
+   "year": null,
+   "isbn": "9781382021081",
+   "cover": null,
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "science",
+     "levels": [
+      "year9"
+     ]
+    }
+   ],
+   "sources": [
+    "https://akademika.no/skoleboker/naturfag/oxford-smart-activate-3-student-book/9781382021081",
+    "https://www.ibs.it/oxford-smart-activate-3-student-libro-inglese-vari/e/9781382021081"
+   ],
+   "notes": "KS3 Science (no exam board). Same author team as Activate 1, per series listings.",
+   "id": "oxford-smart-activate-3-student-book"
+  },
+  {
+   "title": "Pearson Edexcel A level Mathematics Pure Mathematics Year 2 Textbook + e-book",
+   "series": null,
+   "authors": [
+    "Greg Attwood",
+    "Jack Barraclough",
+    "Ian Bettison",
+    "David Goldberg",
+    "Alistair Macpherson",
+    "Joe Petran",
+    "Keith Pledger",
+    "Harry Smith",
+    "Geoff Staley",
+    "Dave Wilkins"
+   ],
+   "publisher": "Pearson Education",
+   "edition": null,
+   "year": 2017,
+   "isbn": "9781292183404",
+   "cover": null,
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "mathematics",
+     "levels": [
+      "year13"
+     ]
+    }
+   ],
+   "sources": [
+    "https://eld.bl.uk/catalog/020292782",
+    "https://www.abebooks.com/9781292183404/Pure-Mathematics-Year-2-Greg-1292183403/plp"
+   ],
+   "notes": "Pearson Edexcel A Level Mathematics (9MA0). Further contributors are credited in the British Library record.",
+   "id": "pearson-edexcel-a-level-mathematics-pure-mathematics-year-2-textbook-e-book"
+  },
+  {
+   "title": "Pearson Edexcel AS and A level Further Mathematics Core Pure Mathematics Book 1/AS Textbook + e-book",
+   "series": null,
+   "authors": [
+    "Greg Attwood",
+    "Harry Smith"
+   ],
+   "publisher": "Pearson Education",
+   "edition": null,
+   "year": 2017,
+   "isbn": "9781292183336",
+   "cover": null,
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "further-mathematics",
+     "levels": [
+      "year12"
+     ]
+    }
+   ],
+   "sources": [
+    "https://eld.bl.uk/catalog/020399213",
+    "https://www.abebooks.com/9781292183336/Edexcel-level-Mathematics-Core-Pure-1292183330/plp"
+   ],
+   "notes": "Pearson Edexcel AS/A Level Further Mathematics (8FM0/9FM0). Team-written; the British Library lists many more contributors.",
+   "id": "pearson-edexcel-as-and-a-level-further-mathematics-core-pure-mathematics-book-1a"
+  },
+  {
+   "title": "Pearson Edexcel AS and A level Mathematics Pure Mathematics Year 1/AS Textbook + e-book",
+   "series": null,
+   "authors": [
+    "Greg Attwood",
+    "Jack Barraclough",
+    "Ian Bettison"
+   ],
+   "publisher": "Pearson Education",
+   "edition": null,
+   "year": 2017,
+   "isbn": "9781292183398",
+   "cover": null,
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "mathematics",
+     "levels": [
+      "year12"
+     ]
+    }
+   ],
+   "sources": [
+    "https://blackwells.co.uk/bookshop/product/Pure-Mathematics-Year-1AS-by-Greg-Attwood/9781292183398",
+    "https://eld.bl.uk/catalog/020296592"
+   ],
+   "notes": "Pearson Edexcel AS/A Level Mathematics (8MA0/9MA0), first taught 2017. Team-written; Greg Attwood is lead author and further co-authors are credited.",
+   "id": "pearson-edexcel-as-and-a-level-mathematics-pure-mathematics-year-1as-textbook-e-"
+  },
+  {
+   "id": "physical-geography-and-natural-disasters",
+   "title": "Physical Geography and Natural Disasters",
+   "series": null,
+   "authors": [
+    "R. Adam Dastrup"
+   ],
+   "publisher": "Salt Lake Community College (Pressbooks)",
+   "edition": null,
+   "year": 2020,
+   "isbn": null,
+   "cover": "https://slcc.pressbooks.pub/app/uploads/sites/10/2020/06/Large_World_Physical_Map.png",
+   "free": true,
+   "readUrl": "https://slcc.pressbooks.pub/physicalgeography/",
+   "provider": "Pressbooks",
+   "license": "CC BY-NC-SA 4.0",
+   "sources": [
+    "https://slcc.pressbooks.pub/physicalgeography/"
+   ],
+   "notes": "College level: Earth and the solar system, mapping, rocks, plate tectonics, weathering, weather and climate. Covers the physical geography part of SS Geography.",
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "placements": [
+    {
+     "subject": "geography",
+     "levels": [
+      "year10",
+      "year11",
+      "igcse1",
+      "igcse2",
+      "year12",
+      "year13"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "physical-sciences-grade-10",
+   "title": "Physical Sciences Grade 10",
+   "series": null,
+   "authors": [
+    "Siyavula Education"
+   ],
+   "publisher": "Siyavula",
+   "edition": null,
+   "year": null,
+   "isbn": null,
+   "cover": null,
+   "free": true,
+   "readUrl": "https://www.siyavula.com/read/za/physical-sciences/grade-10",
+   "provider": "Siyavula",
+   "license": "CC BY 3.0",
+   "sources": [
+    "https://www.siyavula.com/read/za/physical-sciences/grade-10"
+   ],
+   "notes": "Secondary-school physics and chemistry in one book (South African CAPS Grade 10). Very good level match for SS physics and chemistry.",
+   "downloadUrl": "https://www.siyavula.com/downloads/books/science/Gr10_PhysicalSciences_Learner_Eng.pdf",
+   "downloadType": "pdf",
+   "downloadBytes": 9459685,
+   "placements": [
+    {
+     "subject": "physics",
+     "levels": [
+      "year10",
+      "igcse1"
+     ]
+    },
+    {
+     "subject": "chemistry",
+     "levels": [
+      "year10",
+      "igcse1"
+     ]
+    },
+    {
+     "subject": "combined-science",
+     "levels": [
+      "year10"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "physical-sciences-grade-11",
+   "title": "Physical Sciences Grade 11",
+   "series": null,
+   "authors": [
+    "Siyavula Education"
+   ],
+   "publisher": "Siyavula",
+   "edition": null,
+   "year": null,
+   "isbn": null,
+   "cover": null,
+   "free": true,
+   "readUrl": "https://www.siyavula.com/read/za/physical-sciences/grade-11",
+   "provider": "Siyavula",
+   "license": "CC BY 3.0",
+   "sources": [
+    "https://www.siyavula.com/read/za/physical-sciences/grade-11"
+   ],
+   "notes": "Secondary-school physics and chemistry in one book (South African CAPS Grade 11). Very good level match for SS physics and chemistry.",
+   "downloadUrl": "https://www.siyavula.com/downloads/books/science/Gr11_PhysicalSciences_Learner_Eng.pdf",
+   "downloadType": "pdf",
+   "downloadBytes": 17163778,
+   "placements": [
+    {
+     "subject": "physics",
+     "levels": [
+      "year11",
+      "igcse2"
+     ]
+    },
+    {
+     "subject": "chemistry",
+     "levels": [
+      "year11",
+      "igcse2"
+     ]
+    },
+    {
+     "subject": "combined-science",
+     "levels": [
+      "year11"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "physical-sciences-grade-12",
+   "title": "Physical Sciences Grade 12",
+   "series": null,
+   "authors": [
+    "Siyavula Education"
+   ],
+   "publisher": "Siyavula",
+   "edition": null,
+   "year": null,
+   "isbn": null,
+   "cover": null,
+   "free": true,
+   "readUrl": "https://www.siyavula.com/read/za/physical-sciences/grade-12",
+   "provider": "Siyavula",
+   "license": "CC BY 3.0",
+   "sources": [
+    "https://www.siyavula.com/read/za/physical-sciences/grade-12"
+   ],
+   "notes": "Secondary-school physics and chemistry in one book (South African CAPS Grade 12). Very good level match for SS physics and chemistry.",
+   "downloadUrl": "https://www.siyavula.com/downloads/books/science/Gr12_PhysicalSciences_Learner_Eng.pdf",
+   "downloadType": "pdf",
+   "downloadBytes": 9216605,
+   "placements": [
+    {
+     "subject": "physics",
+     "levels": [
+      "year12"
+     ]
+    },
+    {
+     "subject": "chemistry",
+     "levels": [
+      "year12"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "physics",
+   "title": "Physics",
+   "series": null,
+   "authors": [
+    "Paul Peter Urone",
+    "Roger Hinrichs"
+   ],
+   "publisher": "OpenStax",
+   "edition": null,
+   "year": 2020,
+   "isbn": null,
+   "cover": "https://assets.openstax.org/oscms-prodcms/media/documents/high_school_physics_web_card.svg",
+   "free": true,
+   "readUrl": "https://openstax.org/books/physics/pages/1-introduction",
+   "provider": "OpenStax",
+   "license": "CC BY 4.0",
+   "sources": [
+    "https://openstax.org/details/books/physics",
+    "https://openstax.org/apps/cms/api/v2/pages/?type=books.Book&slug=physics&fields=*"
+   ],
+   "notes": "US high-school physics, CC BY 4.0. Good level match for SS physics.",
+   "downloadUrl": "https://assets.openstax.org/oscms-prodcms/media/documents/Physics_-_WEB.pdf",
+   "downloadType": "pdf",
+   "downloadBytes": 57463331,
+   "placements": [
+    {
+     "subject": "physics",
+     "levels": [
+      "year10",
+      "year11",
+      "igcse1",
+      "igcse2"
+     ]
+    },
+    {
+     "subject": "combined-science",
+     "levels": [
+      "year10",
+      "year11"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "prealgebra-2e",
+   "title": "Prealgebra 2e",
+   "series": null,
+   "authors": [
+    "Lynn Marecek",
+    "MaryAnne Anthony-Smith",
+    "Andrea Honeycutt Mathis"
+   ],
+   "publisher": "OpenStax",
+   "edition": null,
+   "year": 2020,
+   "isbn": null,
+   "cover": "https://assets.openstax.org/oscms-prodcms/media/documents/prealgebra_2e_web_card_FoepHLS.svg",
+   "free": true,
+   "readUrl": "https://openstax.org/books/prealgebra-2e/pages/1-introduction",
+   "provider": "OpenStax",
+   "license": "CC BY-NC-SA 4.0",
+   "sources": [
+    "https://openstax.org/details/books/prealgebra-2e",
+    "https://openstax.org/apps/cms/api/v2/pages/?type=books.Book&slug=prealgebra-2e&fields=*"
+   ],
+   "notes": "US college pre-algebra: whole numbers, fractions, decimals, percent, basic geometry and equations. Fits JSS number and algebra work. OpenStax states the book may not be used to train large language models.",
+   "downloadUrl": "https://assets.openstax.org/oscms-prodcms/media/documents/prealgebra-2e_-_WEB.pdf",
+   "downloadType": "pdf",
+   "downloadBytes": 63194495,
+   "placements": [
+    {
+     "subject": "mathematics",
+     "levels": [
+      "year7",
+      "year8"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "precalculus-2e",
+   "title": "Precalculus 2e",
+   "series": null,
+   "authors": [
+    "Jay Abramson"
+   ],
+   "publisher": "OpenStax",
+   "edition": null,
+   "year": 2021,
+   "isbn": null,
+   "cover": "https://assets.openstax.org/oscms-prodcms/media/documents/precalculus_2e.svg",
+   "free": true,
+   "readUrl": "https://openstax.org/books/precalculus-2e/pages/1-introduction-to-functions",
+   "provider": "OpenStax",
+   "license": "CC BY-NC-SA 4.0",
+   "sources": [
+    "https://openstax.org/details/books/precalculus-2e",
+    "https://openstax.org/apps/cms/api/v2/pages/?type=books.Book&slug=precalculus-2e&fields=*"
+   ],
+   "notes": "College level: functions, trigonometry, conic sections, sequences and series, intro to limits. Matches much of Further Mathematics. OpenStax states the book may not be used to train large language models.",
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "placements": [
+    {
+     "subject": "mathematics",
+     "levels": [
+      "year12",
+      "year13"
+     ]
+    },
+    {
+     "subject": "further-mathematics",
+     "levels": [
+      "igcse1",
+      "igcse2",
+      "year12",
+      "year13"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Pride and Prejudice",
+   "series": null,
+   "authors": [
+    "Jane Austen"
+   ],
+   "publisher": "Standard Ebooks",
+   "edition": null,
+   "year": null,
+   "isbn": null,
+   "cover": null,
+   "free": true,
+   "readUrl": "https://standardebooks.org/ebooks/jane-austen/pride-and-prejudice/text/single-page",
+   "downloadUrl": "https://standardebooks.org/ebooks/jane-austen/pride-and-prejudice/text/single-page",
+   "downloadType": "html",
+   "downloadBytes": null,
+   "provider": "Standard Ebooks",
+   "license": "Public domain (Standard Ebooks edition dedicated via CC0 1.0)",
+   "countryOnly": true,
+   "placements": [
+    {
+     "subject": "english-literature",
+     "levels": [
+      "year10",
+      "year11"
+     ]
+    },
+    {
+     "subject": "literature",
+     "levels": [
+      "igcse1",
+      "igcse2"
+     ]
+    }
+   ],
+   "sources": [
+    "https://standardebooks.org/ebooks/jane-austen/pride-and-prejudice",
+    "https://www.aqa.org.uk/subjects/english/gcse/english-literature-8702/specification/subject-content/shakespeare-and-the-19th-century-novel"
+   ],
+   "notes": "Set text: one of AQA GCSE English Literature (8702) Shakespeare / 19th-century novel options. Edexcel and OCR set many of the same texts, and Cambridge IGCSE Literature changes its list each year, so check the current list.",
+   "id": "pride-and-prejudice"
+  },
+  {
+   "id": "principles-of-economics-3e",
+   "title": "Principles of Economics 3e",
+   "series": null,
+   "authors": [
+    "Steven A. Greenlaw",
+    "David Shapiro",
+    "Daniel MacDonald"
+   ],
+   "publisher": "OpenStax",
+   "edition": null,
+   "year": 2022,
+   "isbn": null,
+   "cover": "https://assets.openstax.org/oscms-prodcms/media/documents/Economics3e_webcard.svg",
+   "free": true,
+   "readUrl": "https://openstax.org/books/principles-economics-3e/pages/1-introduction",
+   "provider": "OpenStax",
+   "license": "CC BY-NC-SA 4.0",
+   "sources": [
+    "https://openstax.org/details/books/principles-economics-3e",
+    "https://openstax.org/apps/cms/api/v2/pages/?type=books.Book&slug=principles-economics-3e&fields=*"
+   ],
+   "notes": "College level micro and macro economics. Examples are mostly American. OpenStax states the book may not be used to train large language models.",
+   "downloadUrl": "https://assets.openstax.org/oscms-prodcms/media/documents/principles-economics-3e_-_WEB.pdf",
+   "downloadType": "pdf",
+   "downloadBytes": 49444584,
+   "placements": [
+    {
+     "subject": "economics",
+     "levels": [
+      "igcse1",
+      "igcse2",
+      "year12",
+      "year13"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "principles-of-marketing",
+   "title": "Principles of Marketing",
+   "series": null,
+   "authors": [
+    "Maria Gomez Albrecht",
+    "Mark Green",
+    "Linda Hoffman"
+   ],
+   "publisher": "OpenStax",
+   "edition": null,
+   "year": 2023,
+   "isbn": null,
+   "cover": "https://assets.openstax.org/oscms-prodcms/media/documents/principles.marketing.web.card.svg",
+   "free": true,
+   "readUrl": "https://openstax.org/books/principles-marketing/pages/1-unit-introduction",
+   "provider": "OpenStax",
+   "license": "CC BY-NC-SA 4.0",
+   "sources": [
+    "https://openstax.org/details/books/principles-marketing",
+    "https://openstax.org/apps/cms/api/v2/pages/?type=books.Book&slug=principles-marketing&fields=*"
+   ],
+   "notes": "College level marketing textbook. OpenStax states the book may not be used to train large language models.",
+   "downloadUrl": "https://assets.openstax.org/oscms-prodcms/media/documents/principles-marketing_-_WEB.pdf",
+   "downloadType": "pdf",
+   "downloadBytes": 62477161,
+   "placements": [
+    {
+     "subject": "business-studies",
+     "levels": [
+      "year12",
+      "year13"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Psychology 2e",
+   "series": null,
+   "authors": [],
+   "publisher": "OpenStax (Rice University)",
+   "edition": null,
+   "year": null,
+   "isbn": null,
+   "cover": null,
+   "free": true,
+   "readUrl": "https://openstax.org/books/psychology-2e/pages/1-introduction",
+   "downloadUrl": "https://assets.openstax.org/oscms-prodcms/media/documents/Psychology2e_WEB.pdf",
+   "downloadType": "pdf",
+   "downloadBytes": 57739919,
+   "provider": "OpenStax",
+   "license": "CC BY-NC-SA 4.0",
+   "countryOnly": true,
+   "placements": [
+    {
+     "subject": "psychology",
+     "levels": [
+      "year12",
+      "year13"
+     ]
+    }
+   ],
+   "sources": [
+    "https://openstax.org/details/books/psychology-2e",
+    "https://openstax.org/apps/cms/api/v2/pages/?type=books.Book&fields=title,license_name"
+   ],
+   "notes": "University intro text; covers most AQA A Level Psychology topics (memory, attachment, psychopathology, research methods) but is not written for the specification. Authors left blank: team-written.",
+   "id": "psychology-2e"
+  },
+  {
+   "title": "Romeo and Juliet",
+   "series": null,
+   "authors": [
+    "William Shakespeare"
+   ],
+   "publisher": "Standard Ebooks",
+   "edition": null,
+   "year": null,
+   "isbn": null,
+   "cover": null,
+   "free": true,
+   "readUrl": "https://standardebooks.org/ebooks/william-shakespeare/romeo-and-juliet/text/single-page",
+   "downloadUrl": "https://standardebooks.org/ebooks/william-shakespeare/romeo-and-juliet/text/single-page",
+   "downloadType": "html",
+   "downloadBytes": null,
+   "provider": "Standard Ebooks",
+   "license": "Public domain (Standard Ebooks edition dedicated via CC0 1.0)",
+   "countryOnly": true,
+   "placements": [
+    {
+     "subject": "english-literature",
+     "levels": [
+      "year10",
+      "year11"
+     ]
+    },
+    {
+     "subject": "literature",
+     "levels": [
+      "igcse1",
+      "igcse2"
+     ]
+    }
+   ],
+   "sources": [
+    "https://standardebooks.org/ebooks/william-shakespeare/romeo-and-juliet",
+    "https://www.aqa.org.uk/subjects/english/gcse/english-literature-8702/specification/subject-content/shakespeare-and-the-19th-century-novel"
+   ],
+   "notes": "Set text: one of AQA GCSE English Literature (8702) Shakespeare / 19th-century novel options. Edexcel and OCR set many of the same texts, and Cambridge IGCSE Literature changes its list each year, so check the current list.",
+   "id": "romeo-and-juliet"
+  },
+  {
+   "id": "statistics",
+   "title": "Statistics",
+   "series": null,
+   "authors": [
+    "Barbara Illowsky",
+    "Susan Dean"
+   ],
+   "publisher": "OpenStax",
+   "edition": null,
+   "year": 2020,
+   "isbn": null,
+   "cover": "https://assets.openstax.org/oscms-prodcms/media/documents/high_school_statistics_web_card.svg",
+   "free": true,
+   "readUrl": "https://openstax.org/books/statistics/pages/1-introduction",
+   "provider": "OpenStax",
+   "license": "CC BY 4.0",
+   "sources": [
+    "https://openstax.org/details/books/statistics",
+    "https://openstax.org/apps/cms/api/v2/pages/?type=books.Book&slug=statistics&fields=*"
+   ],
+   "notes": "US high-school statistics (CC BY 4.0): data, probability, distributions. Fits the statistics and probability topics.",
+   "downloadUrl": "https://assets.openstax.org/oscms-prodcms/media/documents/high-school-statistics_-_WEB.pdf",
+   "downloadType": "pdf",
+   "downloadBytes": 31451137,
+   "placements": [
+    {
+     "subject": "mathematics",
+     "levels": [
+      "year12",
+      "year13"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "technically-drawn",
+   "title": "Technically Drawn",
+   "series": null,
+   "authors": [
+    "New Brunswick Community College",
+    "Camosun College"
+   ],
+   "publisher": "Atlantic OER (Pressbooks)",
+   "edition": null,
+   "year": null,
+   "isbn": null,
+   "cover": "https://pressbooks.atlanticoer-relatlantique.ca/app/uploads/sites/832/2022/09/Technically_Drawn_Webbook_Cover_900x1200-01.jpg",
+   "free": true,
+   "readUrl": "https://pressbooks.atlanticoer-relatlantique.ca/lined/",
+   "provider": "Pressbooks",
+   "license": "CC BY-NC-SA 4.0",
+   "sources": [
+    "https://pressbooks.atlanticoer-relatlantique.ca/lined/",
+    "https://caul-cbua.pressbooks.pub/lined/"
+   ],
+   "notes": "Hand sketching and drawing: lettering, measurement, orthographic views, dimensioning, isometric sketches. Fits SS Technical Drawing and the drawing part of JSS Basic Technology (not materials, woodwork or metalwork).",
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "placements": [
+    {
+     "subject": "design-technology",
+     "levels": [
+      "year7",
+      "year8",
+      "year9",
+      "year10",
+      "year11"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "the-king-james-version-of-the-bible",
+   "title": "The King James Version of the Bible",
+   "series": null,
+   "authors": [],
+   "publisher": "Project Gutenberg",
+   "edition": null,
+   "year": 1611,
+   "isbn": null,
+   "cover": "https://www.gutenberg.org/cache/epub/10/pg10.cover.medium.jpg",
+   "free": true,
+   "readUrl": "https://www.gutenberg.org/cache/epub/10/pg10-images.html",
+   "provider": "Project Gutenberg",
+   "license": "Public domain in the USA",
+   "sources": [
+    "https://www.gutenberg.org/ebooks/10"
+   ],
+   "notes": "The Bible text that CRS passages are studied from. Not a CRS textbook (no lessons or exercises). In the UK the KJV is under Crown letters patent; elsewhere it is public domain.",
+   "downloadUrl": "https://www.gutenberg.org/cache/epub/10/pg10-images.html",
+   "downloadType": "html",
+   "downloadBytes": null,
+   "placements": [
+    {
+     "subject": "religious-studies",
+     "levels": [
+      "year7",
+      "year8",
+      "year9",
+      "year10",
+      "year11"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "The Merchant of Venice",
+   "series": null,
+   "authors": [
+    "William Shakespeare"
+   ],
+   "publisher": "Standard Ebooks",
+   "edition": null,
+   "year": null,
+   "isbn": null,
+   "cover": null,
+   "free": true,
+   "readUrl": "https://standardebooks.org/ebooks/william-shakespeare/the-merchant-of-venice/text/single-page",
+   "downloadUrl": "https://standardebooks.org/ebooks/william-shakespeare/the-merchant-of-venice/text/single-page",
+   "downloadType": "html",
+   "downloadBytes": null,
+   "provider": "Standard Ebooks",
+   "license": "Public domain (Standard Ebooks edition dedicated via CC0 1.0)",
+   "countryOnly": true,
+   "placements": [
+    {
+     "subject": "english-literature",
+     "levels": [
+      "year10",
+      "year11"
+     ]
+    },
+    {
+     "subject": "literature",
+     "levels": [
+      "igcse1",
+      "igcse2"
+     ]
+    }
+   ],
+   "sources": [
+    "https://standardebooks.org/ebooks/william-shakespeare/the-merchant-of-venice",
+    "https://www.aqa.org.uk/subjects/english/gcse/english-literature-8702/specification/subject-content/shakespeare-and-the-19th-century-novel"
+   ],
+   "notes": "Set text: one of AQA GCSE English Literature (8702) Shakespeare / 19th-century novel options. Edexcel and OCR set many of the same texts, and Cambridge IGCSE Literature changes its list each year, so check the current list.",
+   "id": "the-merchant-of-venice"
+  },
+  {
+   "title": "The Sign of the Four",
+   "series": null,
+   "authors": [
+    "Arthur Conan Doyle"
+   ],
+   "publisher": "Standard Ebooks",
+   "edition": null,
+   "year": null,
+   "isbn": null,
+   "cover": null,
+   "free": true,
+   "readUrl": "https://standardebooks.org/ebooks/arthur-conan-doyle/the-sign-of-the-four/text/single-page",
+   "downloadUrl": "https://standardebooks.org/ebooks/arthur-conan-doyle/the-sign-of-the-four/text/single-page",
+   "downloadType": "html",
+   "downloadBytes": null,
+   "provider": "Standard Ebooks",
+   "license": "Public domain (Standard Ebooks edition dedicated via CC0 1.0)",
+   "countryOnly": true,
+   "placements": [
+    {
+     "subject": "english-literature",
+     "levels": [
+      "year10",
+      "year11"
+     ]
+    },
+    {
+     "subject": "literature",
+     "levels": [
+      "igcse1",
+      "igcse2"
+     ]
+    }
+   ],
+   "sources": [
+    "https://standardebooks.org/ebooks/arthur-conan-doyle/the-sign-of-the-four",
+    "https://www.aqa.org.uk/subjects/english/gcse/english-literature-8702/specification/subject-content/shakespeare-and-the-19th-century-novel"
+   ],
+   "notes": "Set text: one of AQA GCSE English Literature (8702) Shakespeare / 19th-century novel options. Edexcel and OCR set many of the same texts, and Cambridge IGCSE Literature changes its list each year, so check the current list. AQA lists it as 'The Sign of Four'.",
+   "id": "the-sign-of-the-four"
+  },
+  {
+   "title": "The Strange Case of Dr. Jekyll and Mr. Hyde",
+   "series": null,
+   "authors": [
+    "Robert Louis Stevenson"
+   ],
+   "publisher": "Standard Ebooks",
+   "edition": null,
+   "year": null,
+   "isbn": null,
+   "cover": null,
+   "free": true,
+   "readUrl": "https://standardebooks.org/ebooks/robert-louis-stevenson/the-strange-case-of-dr-jekyll-and-mr-hyde/text/single-page",
+   "downloadUrl": "https://standardebooks.org/ebooks/robert-louis-stevenson/the-strange-case-of-dr-jekyll-and-mr-hyde/text/single-page",
+   "downloadType": "html",
+   "downloadBytes": null,
+   "provider": "Standard Ebooks",
+   "license": "Public domain (Standard Ebooks edition dedicated via CC0 1.0)",
+   "countryOnly": true,
+   "placements": [
+    {
+     "subject": "english-literature",
+     "levels": [
+      "year10",
+      "year11"
+     ]
+    },
+    {
+     "subject": "literature",
+     "levels": [
+      "igcse1",
+      "igcse2"
+     ]
+    }
+   ],
+   "sources": [
+    "https://standardebooks.org/ebooks/robert-louis-stevenson/the-strange-case-of-dr-jekyll-and-mr-hyde",
+    "https://www.aqa.org.uk/subjects/english/gcse/english-literature-8702/specification/subject-content/shakespeare-and-the-19th-century-novel"
+   ],
+   "notes": "Set text: one of AQA GCSE English Literature (8702) Shakespeare / 19th-century novel options. Edexcel and OCR set many of the same texts, and Cambridge IGCSE Literature changes its list each year, so check the current list.",
+   "id": "the-strange-case-of-dr-jekyll-and-mr-hyde"
+  },
+  {
+   "title": "The Tempest",
+   "series": null,
+   "authors": [
+    "William Shakespeare"
+   ],
+   "publisher": "Standard Ebooks",
+   "edition": null,
+   "year": null,
+   "isbn": null,
+   "cover": null,
+   "free": true,
+   "readUrl": "https://standardebooks.org/ebooks/william-shakespeare/the-tempest/text/single-page",
+   "downloadUrl": "https://standardebooks.org/ebooks/william-shakespeare/the-tempest/text/single-page",
+   "downloadType": "html",
+   "downloadBytes": null,
+   "provider": "Standard Ebooks",
+   "license": "Public domain (Standard Ebooks edition dedicated via CC0 1.0)",
+   "countryOnly": true,
+   "placements": [
+    {
+     "subject": "english-literature",
+     "levels": [
+      "year10",
+      "year11"
+     ]
+    },
+    {
+     "subject": "literature",
+     "levels": [
+      "igcse1",
+      "igcse2"
+     ]
+    }
+   ],
+   "sources": [
+    "https://standardebooks.org/ebooks/william-shakespeare/the-tempest",
+    "https://www.aqa.org.uk/subjects/english/gcse/english-literature-8702/specification/subject-content/shakespeare-and-the-19th-century-novel"
+   ],
+   "notes": "Set text: one of AQA GCSE English Literature (8702) Shakespeare / 19th-century novel options. Edexcel and OCR set many of the same texts, and Cambridge IGCSE Literature changes its list each year, so check the current list.",
+   "id": "the-tempest"
+  },
+  {
+   "title": "Think Python: How to Think Like a Computer Scientist (2nd edition)",
+   "series": null,
+   "authors": [
+    "Allen B. Downey"
+   ],
+   "publisher": "Green Tea Press",
+   "edition": null,
+   "year": null,
+   "isbn": null,
+   "cover": null,
+   "free": true,
+   "readUrl": "https://greenteapress.com/thinkpython2/html/index.html",
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "provider": "Green Tea Press",
+   "license": "CC BY-NC 3.0",
+   "countryOnly": true,
+   "placements": [
+    {
+     "subject": "computer-science",
+     "levels": [
+      "igcse1",
+      "igcse2",
+      "year12",
+      "year13"
+     ]
+    }
+   ],
+   "sources": [
+    "https://greenteapress.com/wp/think-python-2e/"
+   ],
+   "notes": "Free book from the author's site (CC BY-NC 3.0 Unported). Good for the programming parts of IGCSE and A Level Computer Science.",
+   "id": "think-python-how-to-think-like-a-computer-scientist-2nd-edition"
+  },
+  {
+   "id": "three-translations-of-the-koran-al-quran-side-by-side",
+   "title": "Three Translations of the Koran (Al-Qur'an) Side by Side",
+   "series": null,
+   "authors": [
+    "Abdullah Yusuf Ali (translator)",
+    "Marmaduke Pickthall (translator)",
+    "M. H. Shakir (translator)"
+   ],
+   "publisher": "Project Gutenberg",
+   "edition": null,
+   "year": null,
+   "isbn": null,
+   "cover": "https://www.gutenberg.org/cache/epub/16955/pg16955.cover.medium.jpg",
+   "free": true,
+   "readUrl": "https://www.gutenberg.org/cache/epub/16955/pg16955-images.html",
+   "provider": "Project Gutenberg",
+   "license": "Public domain in the USA",
+   "sources": [
+    "https://www.gutenberg.org/ebooks/16955"
+   ],
+   "notes": "English meaning of the Qur'an (Yusuf Ali, Pickthall and Shakir) verse by verse; no Arabic text. Project Gutenberg marks it public domain in the USA. Under Nigeria's life+70 copyright term, Pickthall (d. 1936) and Yusuf Ali (d. 1953) are out of copyright, but Shakir (d. 1959) may not be until 2030, so check before shipping. Not an IRS textbook (no hadith, fiqh or lessons).",
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "placements": [
+    {
+     "subject": "religious-studies",
+     "levels": [
+      "year7",
+      "year8",
+      "year9",
+      "year10",
+      "year11"
+     ]
+    }
+   ]
+  },
+  {
+   "title": "University Physics Volume 1",
+   "series": null,
+   "authors": [],
+   "publisher": "OpenStax (Rice University)",
+   "edition": null,
+   "year": null,
+   "isbn": null,
+   "cover": null,
+   "free": true,
+   "readUrl": "https://openstax.org/books/university-physics-volume-1/pages/1-introduction",
+   "downloadUrl": "https://assets.openstax.org/oscms-prodcms/media/documents/university-physics-volume-1_-_WEB.pdf",
+   "downloadType": "pdf",
+   "downloadBytes": 81497906,
+   "provider": "OpenStax",
+   "license": "CC BY-NC-SA 4.0",
+   "countryOnly": true,
+   "placements": [
+    {
+     "subject": "physics",
+     "levels": [
+      "year12",
+      "year13"
+     ]
+    }
+   ],
+   "sources": [
+    "https://openstax.org/details/books/university-physics-volume-1",
+    "https://openstax.org/apps/cms/api/v2/pages/?type=books.Book&fields=title,license_name"
+   ],
+   "notes": "Calculus-based mechanics, waves and thermodynamics; stretch reading for A Level Physics and Further Maths mechanics.",
+   "id": "university-physics-volume-1"
+  },
+  {
+   "title": "Viva! 1 Segunda Edición Pupil Book",
+   "series": "Viva!",
+   "authors": [
+    "Rachel Hawkes",
+    "Christopher Lillington",
+    "Anneli McLachlan"
+   ],
+   "publisher": "Pearson Education",
+   "edition": "2nd",
+   "year": 2019,
+   "isbn": "9781292290485",
+   "cover": null,
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "spanish",
+     "levels": [
+      "year7"
+     ]
+    }
+   ],
+   "sources": [
+    "https://pearson.com/international-schools/british-curriculum/secondary-curriculum/ks3-viva.html.html",
+    "https://campusbokhandeln.se/b/9781292290485/viva-1-segunda-edicion-pupil-book"
+   ],
+   "notes": "KS3 Spanish (no exam board). One retailer credits two named authors plus one other.",
+   "id": "viva-1-segunda-edicion-pupil-book"
+  },
+  {
+   "id": "world-history-volume-1-to-1500",
+   "title": "World History, Volume 1: to 1500",
+   "series": null,
+   "authors": [
+    "Ann Kordas",
+    "Ryan J. Lynch",
+    "Brooke Nelson",
+    "Julie Tatlock"
+   ],
+   "publisher": "OpenStax",
+   "edition": null,
+   "year": 2023,
+   "isbn": null,
+   "cover": "https://assets.openstax.org/oscms-prodcms/media/documents/World_History_volume_1_WebCard.svg",
+   "free": true,
+   "readUrl": "https://openstax.org/books/world-history-volume-1/pages/1-introduction",
+   "provider": "OpenStax",
+   "license": "CC BY-NC-SA 4.0",
+   "sources": [
+    "https://openstax.org/details/books/world-history-volume-1",
+    "https://openstax.org/apps/cms/api/v2/pages/?type=books.Book&slug=world-history-volume-1&fields=*"
+   ],
+   "notes": "College level, to 1500. Includes early African kingdoms and the spread of Islam. Partial fit. OpenStax states the book may not be used to train large language models.",
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "placements": [
+    {
+     "subject": "history",
+     "levels": [
+      "year7"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "world-history-volume-2-from-1400",
+   "title": "World History, Volume 2: from 1400",
+   "series": null,
+   "authors": [
+    "Ann Kordas",
+    "Ryan J. Lynch",
+    "Brooke Nelson",
+    "Julie Tatlock"
+   ],
+   "publisher": "OpenStax",
+   "edition": null,
+   "year": 2022,
+   "isbn": null,
+   "cover": "https://assets.openstax.org/oscms-prodcms/media/documents/World_History_volume_2_WebCard_uh6dUHf.svg",
+   "free": true,
+   "readUrl": "https://openstax.org/books/world-history-volume-2/pages/1-introduction",
+   "provider": "OpenStax",
+   "license": "CC BY-NC-SA 4.0",
+   "sources": [
+    "https://openstax.org/details/books/world-history-volume-2",
+    "https://openstax.org/apps/cms/api/v2/pages/?type=books.Book&slug=world-history-volume-2&fields=*"
+   ],
+   "notes": "College level, from 1400. Includes chapters on Africa, the Atlantic slave trade, colonialism and independence. Not Nigeria-specific; partial fit for SS History. OpenStax states the book may not be used to train large language models.",
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "placements": [
+    {
+     "subject": "history",
+     "levels": [
+      "year8",
+      "year9",
+      "year10",
+      "year11",
+      "igcse1",
+      "igcse2"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "writing-guide-with-handbook",
+   "title": "Writing Guide with Handbook",
+   "series": null,
+   "authors": [
+    "Michelle Bachelor Robinson",
+    "Maria Jerskey"
+   ],
+   "publisher": "OpenStax",
+   "edition": null,
+   "year": 2021,
+   "isbn": null,
+   "cover": "https://assets.openstax.org/oscms-prodcms/media/documents/writing_guide_with_handbook_web_card.svg",
+   "free": true,
+   "readUrl": "https://openstax.org/books/writing-guide/pages/1-introduction",
+   "provider": "OpenStax",
+   "license": "CC BY-NC-SA 4.0",
+   "sources": [
+    "https://openstax.org/details/books/writing-guide",
+    "https://openstax.org/apps/cms/api/v2/pages/?type=books.Book&slug=writing-guide&fields=*"
+   ],
+   "notes": "College writing guide plus a grammar and usage handbook. Helps with essay writing and grammar; not a WAEC English course. OpenStax states the book may not be used to train large language models.",
+   "downloadUrl": "https://assets.openstax.org/oscms-prodcms/media/documents/WritingGuide-WEB.pdf",
+   "downloadType": "pdf",
+   "downloadBytes": 63546834,
+   "placements": [
+    {
+     "subject": "english-language",
+     "levels": [
+      "year10",
+      "year11"
+     ]
+    },
+    {
+     "subject": "english",
+     "levels": [
+      "igcse1",
+      "igcse2"
+     ]
+    }
+   ]
+  }
+ ]
+}
