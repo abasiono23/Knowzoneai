@@ -2586,3 +2586,73 @@ fieldset {
   font-size: 15px;
   font-weight: 600;
 }
+
+/* ─── About: the founder ───────────────────────────────────────────────────── */
+
+.founder-section {
+  padding-top: 20px;
+}
+
+.founder {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 36px;
+  align-items: start;
+  padding: 40px;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  background: var(--surface);
+  box-shadow: var(--shadow-soft);
+}
+
+.founder-mark {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--ai);
+  color: #fff;
+  font-size: 40px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  box-shadow: var(--shadow);
+}
+
+.founder-text {
+  display: grid;
+  gap: 12px;
+  color: var(--ink-2);
+  font-size: 17px;
+}
+
+.founder-text h2 {
+  color: var(--ink);
+  font-size: clamp(28px, 3.4vw, 38px);
+  margin-top: 6px;
+}
+
+.founder-text .eyebrow {
+  justify-self: start;
+}
+
+.founder-role {
+  margin-top: -8px;
+  font-weight: 700;
+  color: var(--purple);
+}
+
+@media (max-width: 720px) {
+  .founder {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+    padding: 28px 22px;
+  }
+
+  .founder-text .eyebrow {
+    justify-self: center;
+  }
+}
