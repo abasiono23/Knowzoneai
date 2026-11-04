@@ -3,7 +3,7 @@ import * as Haptics from 'expo-haptics';
 import { router, type Href } from 'expo-router';
 import { useTranslation } from 'react-i18next';
 import { Pressable, StyleSheet, View } from 'react-native';
-import Animated, { FadeIn, SlideInDown } from 'react-native-reanimated';
+import Animated, { Easing, FadeIn, SlideInDown } from 'react-native-reanimated';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { Text } from '@/components/ui';
@@ -58,7 +58,8 @@ export default function CreateMenu() {
       </Animated.View>
 
       <Animated.View
-        entering={SlideInDown.springify().damping(18)}
+        // A plain slide up that eases to a stop (no spring, so no bounce).
+        entering={SlideInDown.duration(260).easing(Easing.out(Easing.cubic))}
         style={[styles.sheet, { paddingBottom: insets.bottom + Spacing.md }]}>
         <View style={styles.handle} />
         <View style={styles.titleRow}>
