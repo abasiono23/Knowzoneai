@@ -138,6 +138,8 @@ const books: Translation<typeof en> = {
     readingOnline: 'Ana karantawa ta intanet',
     opening: 'Ana buɗewa…',
     buySoon: 'Za a samu nan ba da daɗewa ba',
+    courseBooks: 'Littattafan kwas ɗinka',
+    courseLevel: { intro: 'Shekara ta farko', core: 'Shekarun gaba', masters: 'Digiri na biyu' },
   },
   subjects: {
     english: 'Harshen Turanci',

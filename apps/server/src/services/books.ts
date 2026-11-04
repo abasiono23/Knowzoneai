@@ -53,11 +53,26 @@ const Country = z
     name: z.string(),
     updated: z.string(),
     /** Classes in order. "lower" is junior secondary, "upper" senior secondary. */
-    levels: z.array(z.object({ id: Id, name: z.string().optional(), stage: z.enum(['lower', 'upper']) })).min(1),
+    levels: z
+      .array(
+        z.object({
+          id: Id,
+          name: z.string().optional(),
+          stage: z.enum(['lower', 'upper']),
+        }),
+      )
+      .min(1),
     /** Choices students make (science/arts/commercial, pathways, exam routes), and from which class. */
     streams: z.array(z.object({ id: Id, name: z.string(), levels: z.array(Id).min(1) })),
     /** `streams: null`: everyone in those classes takes it. Otherwise only those streams (in classes that have streams). */
-    subjects: z.array(z.object({ id: Id, name: z.string(), levels: z.array(Id).min(1), streams: z.array(Id).nullable() })),
+    subjects: z.array(
+      z.object({
+        id: Id,
+        name: z.string(),
+        levels: z.array(Id).min(1),
+        streams: z.array(Id).nullable(),
+      }),
+    ),
     books: z.array(Book),
   })
   .superRefine((c, ctx) => {
@@ -66,7 +81,8 @@ const Country = z
     const streams = new Set(c.streams.map((s) => s.id));
     const subjects = new Set(c.subjects.map((s) => s.id));
     const bad = (message: string) => ctx.addIssue({ code: 'custom', message: `${c.country}: ${message}` });
-    for (const s of c.streams) for (const l of s.levels) if (!levels.has(l)) bad(`stream ${s.id} has unknown class ${l}`);
+    for (const s of c.streams)
+      for (const l of s.levels) if (!levels.has(l)) bad(`stream ${s.id} has unknown class ${l}`);
     for (const s of c.subjects) {
       for (const l of s.levels) if (!levels.has(l)) bad(`subject ${s.id} has unknown class ${l}`);
       for (const st of s.streams ?? []) if (!streams.has(st)) bad(`subject ${s.id} has unknown stream ${st}`);
@@ -120,8 +136,14 @@ function world(list: Country[]): Country {
     const stage = new Map(c.levels.map((l) => [l.id, l.stage]));
     for (const b of c.books) {
       if (!b.free || b.countryOnly) continue;
-      const key = b.title.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
-      const placements = b.placements.map((p) => ({ subject: p.subject, levels: [...new Set(p.levels.map((l) => stage.get(l)!))] }));
+      const key = b.title
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, ' ')
+        .trim();
+      const placements = b.placements.map((p) => ({
+        subject: p.subject,
+        levels: [...new Set(p.levels.map((l) => stage.get(l)!))],
+      }));
       const seen = books.get(key);
       if (seen)
         for (const p of placements) {
@@ -145,14 +167,23 @@ function world(list: Country[]): Country {
   return {
     country: WORLD,
     name: 'Worldwide',
-    updated: list.map((c) => c.updated).sort().at(-1) ?? '',
+    updated:
+      list
+        .map((c) => c.updated)
+        .sort()
+        .at(-1) ?? '',
     levels: [
       { id: 'lower', stage: 'lower' },
       { id: 'upper', stage: 'upper' },
     ],
     streams: [],
     subjects: [...subjects.values()]
-      .map((s) => ({ id: s.id, name: s.name, levels: order.filter((l) => s.levels.has(l)), streams: null }))
+      .map((s) => ({
+        id: s.id,
+        name: s.name,
+        levels: order.filter((l) => s.levels.has(l)),
+        streams: null,
+      }))
       .sort((a, b) => a.name.localeCompare(b.name)),
     books: [...books.values()],
   };
@@ -174,6 +205,63 @@ export function subjectsFor(c: Country, level: string, stream?: string) {
   return c.subjects
     .filter((s) => s.levels.includes(level) && (!stream || core(s) || s.streams!.includes(stream)))
     .sort((a, b) => Number(core(b)) - Number(core(a)));
+}
+
+// ─── University, polytechnic and college courses ──────────────────────────────
+
+/** First year (and ND, NCE), later years (and HND), master's. */
+export const COURSE_LEVELS = ['intro', 'core', 'masters'] as const;
+export type CourseLevel = (typeof COURSE_LEVELS)[number];
+
+const CourseBook = Book.omit({ placements: true, countryOnly: true }).extend({
+  placements: z.array(z.object({ course: Id, levels: z.array(z.enum(COURSE_LEVELS)).min(1) })).min(1),
+});
+export type CourseBook = z.infer<typeof CourseBook>;
+const CourseCatalogue = z.object({
+  updated: z.string(),
+  books: z.array(CourseBook),
+});
+
+let courseBooks: CourseBook[] | null = null;
+/**
+ * Course textbooks (`data/books/courses.json`): the same for every country. Free, openly licensed
+ * university textbooks, and the standard prescribed ones (bought in the app later).
+ */
+export function allCourseBooks(): CourseBook[] {
+  if (courseBooks) return courseBooks;
+  const dir = folder();
+  const f = dir && join(dir, 'courses.json');
+  courseBooks = f && existsSync(f) ? CourseCatalogue.parse(JSON.parse(readFileSync(f, 'utf8'))).books : [];
+  return courseBooks;
+}
+
+/** Tests can put course books in without the file. */
+export function useCourseBooks(list: CourseBook[] | null) {
+  courseBooks = list && CourseCatalogue.parse({ updated: '', books: list }).books;
+}
+
+/** Which books come first for each kind of student. */
+const FIRST: Record<string, CourseLevel> = {
+  undergraduate: 'intro',
+  polytechnic: 'intro',
+  college: 'intro',
+  independent: 'intro',
+  masters: 'masters',
+};
+
+/** A course's books: free first, then the ones for the student's stage, then by title. */
+export function courseBooksFor(course: string, stage?: string) {
+  const first = FIRST[stage ?? ''] ?? 'intro';
+  const levels = (b: CourseBook) => b.placements.find((p) => p.course === course)!.levels;
+  return allCourseBooks()
+    .filter((b) => b.placements.some((p) => p.course === course))
+    .sort(
+      (a, b) =>
+        Number(b.free) - Number(a.free) ||
+        Number(levels(b).includes(first)) - Number(levels(a).includes(first)) ||
+        a.title.localeCompare(b.title),
+    )
+    .map((b) => ({ book: b, levels: levels(b) }));
 }
 
 /** A subject's books for a class: free ones first, then by title. */

@@ -145,6 +145,8 @@ const books: Translation<typeof en> = {
     readingOnline: 'قراءة عبر الإنترنت',
     opening: 'جارٍ الفتح…',
     buySoon: 'متاح قريبًا',
+    courseBooks: 'كتب تخصصك',
+    courseLevel: { intro: 'السنة الأولى', core: 'السنوات اللاحقة', masters: 'الماجستير' },
   },
   subjects: {
     english: 'اللغة الإنجليزية',

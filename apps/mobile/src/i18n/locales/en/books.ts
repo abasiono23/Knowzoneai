@@ -128,6 +128,8 @@ export default {
     readingOnline: 'Reading online',
     opening: 'Opening…',
     buySoon: 'Available soon',
+    courseBooks: 'Your course books',
+    courseLevel: { intro: 'First year', core: 'Later years', masters: 'Master’s' },
   },
   subjects: {
     english: 'English Language',

@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { ActivityIndicator, Pressable, StyleSheet, TextInput, View } from 'react-native';
 import Animated, { FadeInDown, FadeInRight } from 'react-native-reanimated';
 
+import { CourseShelf } from '@/components/books/course-shelf';
 import { SubjectShelves } from '@/components/books/shelves';
 import { Button, Card, ProgressBar, Screen, ScreenHeader, Text } from '@/components/ui';
 import { LinearGradient } from '@/components/ui/gradient';
@@ -290,17 +291,7 @@ export default function Books() {
             {profile.stage === 'secondary' ? (
               <SubjectShelves catalogue={profile.catalogue} level={profile.level} stream={profile.stream} />
             ) : (
-              <Card style={{ alignItems: 'center', gap: Spacing.sm, paddingVertical: Spacing.xl }}>
-                <View style={styles.bookIcon}>
-                  <Ionicons name="book" size={34} color={Colors.primary} />
-                </View>
-                <Text variant="heading" center>
-                  {t('done.soon')}
-                </Text>
-                <Text variant="small" color={Colors.textSecondary} center>
-                  {t('done.soonBody')}
-                </Text>
-              </Card>
+              <CourseShelf course={profile.course} stage={profile.stage} />
             )}
             <Button
               title={t('done.change')}
@@ -538,12 +529,4 @@ const styles = StyleSheet.create({
   },
   divider: { borderTopWidth: 1, borderTopColor: Colors.border },
   summary: { gap: 6, padding: Spacing.lg, borderRadius: Radius.lg },
-  bookIcon: {
-    width: 72,
-    height: 72,
-    borderRadius: 36,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: Colors.primarySoft,
-  },
 });

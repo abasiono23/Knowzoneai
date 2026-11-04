@@ -137,6 +137,8 @@ const books: Translation<typeof en> = {
     readingOnline: 'Ị na-agụ n’ịntanetị',
     opening: 'Ọ na-emeghe…',
     buySoon: 'Ọ ga-adị n’oge na-adịghị anya',
+    courseBooks: 'Akwụkwọ kọs gị',
+    courseLevel: { intro: 'Afọ mbụ', core: 'Afọ ndị ọzọ', masters: 'Master’s' },
   },
   subjects: {
     english: 'Asụsụ Bekee',

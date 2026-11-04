@@ -140,6 +140,8 @@ const books: Translation<typeof en> = {
     readingOnline: 'Lecture en ligne',
     opening: 'Ouverture…',
     buySoon: 'Bientôt disponible',
+    courseBooks: 'Tes manuels de formation',
+    courseLevel: { intro: 'Première année', core: 'Années suivantes', masters: 'Master' },
   },
   subjects: {
     english: 'Langue anglaise',

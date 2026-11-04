@@ -22,8 +22,15 @@ type Tab = 'textbooks' | 'summaries' | 'videos';
 export default function SubjectBooks() {
   const { t } = useTranslation('books');
   const tx = t as unknown as (key: string, options?: Record<string, unknown>) => string;
-  const params = useLocalSearchParams<{ id: string; catalogue?: string; level?: string; class?: string }>();
-  const { id } = params;
+  const params = useLocalSearchParams<{
+    id: string;
+    catalogue?: string;
+    level?: string;
+    class?: string;
+    /** A university, polytechnic or college course (with the student's stage) instead of a school subject. */
+    stage?: string;
+  }>();
+  const { id, stage } = params;
   // `class`: links from before countries (Nigeria only).
   const catalogue = params.catalogue ?? 'ng';
   const level = params.level ?? params.class ?? '';
@@ -33,14 +40,13 @@ export default function SubjectBooks() {
   const [tab, setTab] = useState<Tab>('textbooks');
 
   const load = useCallback(() => {
-    booksApi
-      .subject(catalogue, id, level)
+    (stage ? booksApi.course(id, stage) : booksApi.subject(catalogue, id, level))
       .then((r) => {
-        setName(r.name);
+        if ('name' in r) setName(r.name);
         setBooks(r.books);
       })
       .catch((e) => setError(errorText(e, t('shelf.loadFailed'))));
-  }, [catalogue, id, level, t]);
+  }, [catalogue, id, level, stage, t]);
   useEffect(load, [load]);
 
   const free = books?.filter((b) => b.free) ?? [];
@@ -48,7 +54,10 @@ export default function SubjectBooks() {
 
   return (
     <Screen withTabBar={false}>
-      <ScreenHeader eyebrow={levelName(level, tx).toUpperCase()} title={subjectName(id, tx, name)} />
+      <ScreenHeader
+        eyebrow={(stage ? t('shelf.courseBooks') : levelName(level, tx)).toUpperCase()}
+        title={stage ? tx(`courses.${id}`) : subjectName(id, tx, name)}
+      />
 
       <View style={styles.tabs}>
         {(['textbooks', 'summaries', 'videos'] as const).map((k) => (

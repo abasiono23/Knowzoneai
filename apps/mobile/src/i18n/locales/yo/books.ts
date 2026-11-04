@@ -140,6 +140,8 @@ const books: Translation<typeof en> = {
     readingOnline: 'Ò ń kà á lórí íntánẹ́ẹ̀tì',
     opening: 'Ó ń ṣí…',
     buySoon: 'Yóò wà láìpẹ́',
+    courseBooks: 'Àwọn ìwé kọ́ọ̀sì rẹ',
+    courseLevel: { intro: 'Ọdún kìíní', core: 'Àwọn ọdún tó kù', masters: 'Master’s' },
   },
   subjects: {
     english: 'Èdè Gẹ̀ẹ́sì',

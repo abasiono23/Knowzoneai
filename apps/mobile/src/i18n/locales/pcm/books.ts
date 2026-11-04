@@ -137,6 +137,8 @@ const books: Translation<typeof en> = {
     readingOnline: 'You dey read online',
     opening: 'E dey open…',
     buySoon: 'E go dey soon',
+    courseBooks: 'Your course books',
+    courseLevel: { intro: 'First year', core: 'Later years', masters: 'Master’s' },
   },
   subjects: {
     english: 'English Language',

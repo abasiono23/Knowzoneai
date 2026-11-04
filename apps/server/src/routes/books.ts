@@ -2,7 +2,15 @@ import { Router, type Response } from 'express';
 import { z } from 'zod';
 
 import { notFound } from '../lib/errors.js';
-import { allCountries, booksFor, country, streamsFor, subjectsFor, type Country } from '../services/books.js';
+import {
+  allCountries,
+  booksFor,
+  country,
+  courseBooksFor,
+  streamsFor,
+  subjectsFor,
+  type Country,
+} from '../services/books.js';
 
 /**
  * "Check out your books" (secondary school): a country's classes and streams (for the questions),
@@ -18,7 +26,12 @@ function shelves(res: Response, c: Country, level: string, stream?: string) {
   res.json({
     subjects: subjectsFor(c, level, stream).map((s) => {
       const list = booksFor(c, s.id, level);
-      return { id: s.id, name: s.name, books: list.length, free: list.filter((b) => b.free).length };
+      return {
+        id: s.id,
+        name: s.name,
+        books: list.length,
+        free: list.filter((b) => b.free).length,
+      };
     }),
   });
 }
@@ -31,7 +44,11 @@ function subject(res: Response, c: Country, id: string, level: string) {
     levels: placements.find((p) => p.subject === id)!.levels,
   }));
   // `classes`: what app versions before countries read.
-  res.json({ subject: id, name: s.name, books: books.map((b) => ({ ...b, classes: b.levels })) });
+  res.json({
+    subject: id,
+    name: s.name,
+    books: books.map((b) => ({ ...b, classes: b.levels })),
+  });
 }
 
 /** Which countries have their own books, and how many. */
@@ -52,7 +69,10 @@ booksRouter.get('/books/countries/:country', (req, res) => {
   res.json({
     country: c.country,
     name: c.name,
-    levels: c.levels.map((l) => ({ ...l, streams: streamsFor(c, l.id).map(({ id, name }) => ({ id, name })) })),
+    levels: c.levels.map((l) => ({
+      ...l,
+      streams: streamsFor(c, l.id).map(({ id, name }) => ({ id, name })),
+    })),
   });
 });
 
@@ -72,4 +92,20 @@ booksRouter.get('/books/countries/:country/shelves', (req, res) => {
 });
 booksRouter.get('/books/countries/:country/subjects/:subject', (req, res) => {
   subject(res, country(String(req.params.country)), String(req.params.subject), Query.parse(req.query).level);
+});
+
+/**
+ * A university, polytechnic or college course's textbooks (the same in every country), ordered for
+ * the student's stage. Unknown courses (typed in by the student) simply have none yet.
+ */
+const CourseQuery = z.object({ stage: z.string().optional() });
+booksRouter.get('/books/courses/:course', (req, res) => {
+  const course = String(req.params.course);
+  const books = courseBooksFor(course, CourseQuery.parse(req.query).stage).map(
+    ({ book: { sources: _s, notes: _n, placements: _p, ...b }, levels }) => ({
+      ...b,
+      levels,
+    }),
+  );
+  res.json({ course, books, free: books.filter((b) => b.free).length });
 });

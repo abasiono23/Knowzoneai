@@ -137,6 +137,8 @@ const books: Translation<typeof en> = {
     readingOnline: 'Unasoma mtandaoni',
     opening: 'Inafunguka…',
     buySoon: 'Vitapatikana hivi karibuni',
+    courseBooks: 'Vitabu vya kozi yako',
+    courseLevel: { intro: 'Mwaka wa kwanza', core: 'Miaka inayofuata', masters: 'Uzamili' },
   },
   subjects: {
     english: 'Lugha ya Kiingereza',

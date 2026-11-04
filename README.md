@@ -733,7 +733,7 @@ short videos.
     | Master's | Course |
     | Independent learner | Course |
 
-  - There are 116 courses in 11 faculties, with search and "my course isn't listed".
+  - There are 118 courses (including MBA, MPA, MPH and LL.M) in 11 faculties, with search and "my course isn’t listed".
   - Answers are saved on the phone. Answers saved by the first, Nigeria-only version are upgraded.
 - **Shelves (secondary school):**
   - Each student gets one card per subject for their class and stream. A card opens the subject's textbooks.
@@ -751,7 +751,19 @@ short videos.
   - **Prescribed textbooks** show "Available soon" until there are e-book agreements with publishers. Each book keeps the sources it was checked against.
   - **Free books** are legally free to read: openly licensed or public domain, or free on an official government platform. Free books are placed only in their own country (`countryOnly`).
   - **Other countries** get "world": the free books from every country, by lower and upper secondary. A country without its own file yet gets this too.
+- **Course books** (university, polytechnic, college of education, master's and independent learners):
+  - `data/books/courses.json` holds 498 books for all 118 courses (269 free). They are the same in every country.
+  - Each book is tagged first year (also ND and NCE), later years (also HND) and/or master's. The list shows free books first, then the ones for the student's stage.
+  - **Free books** are openly licensed or public domain, from their official hosts: OpenStax, LibreTexts, Pressbooks, Saylor, TU Delft, Project Gutenberg and others. Each licence was read on the book's own page.
+  - **Paid books** are the standard prescribed texts. Each has its publisher page plus at least one university reading list or syllabus: mostly UK reading lists, also the National Open University of Nigeria course guides and MIT OpenCourseWare.
+  - The "You're all set" screen shows a "Your course books" card that opens the same shelf screen as a school subject. Courses typed in by the student show "Your books are on the way".
+  - **Gaps to fill next:** paid books for music, fine arts and taxation; Nigerian and Ghanaian law books; textbooks specific to Igbo and Hausa; and well-known texts whose publishers blocked automated checks (e.g. Heywood's *Politics*, Frank Wood's *Business Accounting*, Sedra & Smith).
+  - **Updating:**
+    1. `npx tsx scripts/books-courses-merge.ts <folder with courses-*.json>`. It checks course ids against the app's list and leaves out books without sources.
+    2. `npx tsx scripts/books-downloads.ts courses`
+    3. `npx tsx scripts/books-covers.ts courses`
 - **Endpoints:**
+  - `GET /books/courses/:course?stage=`
   - `GET /books/countries`
   - `GET /books/countries/:country` (classes and their streams)
   - `GET /books/countries/:country/shelves?level=&stream=`

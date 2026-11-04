@@ -262,6 +262,8 @@ type T = (key: string, options?: Record<string, unknown>) => string;
 export function levelName(id: string, t: T, name?: string) {
   if (/^\d{3}$/.test(id)) return t('level.option', { level: id });
   if (id === 'lower' || id === 'upper') return t(`levelName.${id}`);
+  // Course books: first year, later years, master's.
+  if (id === 'intro' || id === 'core' || id === 'masters') return t(`shelf.courseLevel.${id}`);
   const m = id.match(/^(jss|ss|jhs|shs|grade|year|igcse|form|nd|hnd|nce)(\d+)$/);
   return m ? t(`levelName.${m[1]}`, { n: m[2] }) : (name ?? id);
 }
@@ -322,6 +324,9 @@ export const booksApi = {
     request<{ subjects: SubjectShelf[] }>(
       `/books/countries/${catalogue}/shelves?level=${level}${stream ? `&stream=${stream}` : ''}`,
     ),
+  /** A university, polytechnic or college course's books, ordered for the student's stage. */
+  course: (id: string, stage: string) =>
+    request<{ course: string; books: ShelfBook[]; free: number }>(`/books/courses/${id}?stage=${stage}`),
   subject: (catalogue: string, id: string, level: string) =>
     request<{ subject: string; name: string; books: ShelfBook[] }>(
       `/books/countries/${catalogue}/subjects/${id}?level=${level}`,
