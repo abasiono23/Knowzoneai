@@ -490,6 +490,8 @@ model Material {
   offline     Boolean        @default(false)
   /// Best quiz score so far, 0–1.
   mastery     Float          @default(0)
+  /// Set when the owner copies a share link: anyone with it can view the notes (never quiz scores).
+  shareToken  String?        @unique
   /// The credit reserved for the current generation, returned if it fails.
   creditHeld  Boolean        @default(false)
   createdAt   DateTime       @default(now())

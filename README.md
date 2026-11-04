@@ -922,8 +922,24 @@ Portuguese and Spanish. Conventions are in [docs/I18N.md](docs/I18N.md).
 The public website, made before launch to collect a waitlist. Plain HTML, CSS and JavaScript (no build step).
 It uses the app's look: white pages, the purple open book, the K logo and Manrope.
 
-- **Pages:** Home (`index.html`, every feature with real app screenshots), About, Join the waitlist, a waitlist
-  privacy notice and a 404 page.
+- **Pages:** Home (`index.html`, every feature with real app screenshots), About, Join the waitlist, Terms of Service, Privacy Policy and a 404 page.
+- **Terms and Privacy** (`terms.html`, `privacy.html`): made from the app's own English legal texts by `npm run web:pages` in `apps/mobile`, so the site and the app say the same thing. The Privacy Policy ends with the waitlist notice. Run it again after changing the legal texts or the home page's header or footer.
+- **Shared links** (`share.html`, filled in by `share.js` from the API; `vercel.json` sends these addresses to it):
+
+  | Link | Page |
+  |---|---|
+  | `/verify/<id>` | Certificate check: confirms a course certificate against Knowzone's records |
+  | `/v/<id>` | A Knowzone video, with its scenes and "Watch in the Knowzone app" |
+  | `/m/<key>` | Study notes the owner chose to share: summary, key points, notes, diagram, concepts and flashcards. View-only, never the quiz or scores |
+  | `/invite/<code>` | An invite: who sent it, the code to copy, and the waitlist with the code as the source |
+
+  Missing or stopped links show a clear message. Text from the API is only ever set as text, never as HTML. The API address is `apiUrl` in `config.js`.
+- **Sharing notes** (study pack → Export → Copy share link):
+  - Nothing is shared until the owner copies the link. That makes a long random key, stored in `Material.shareToken` (migration `20261104120000_material_share`).
+  - Endpoints:
+    - `POST /materials/:id/share` makes or returns the link.
+    - `DELETE /materials/:id/share` stops sharing.
+    - `GET /shared/materials/:key` is public.
 - **Motion:**
   - In the hero, the headline rises in, the exam word changes, and the phones float and follow the pointer.
   - Sections fade in as you scroll, numbers count up, and feature cards tilt with a glow.

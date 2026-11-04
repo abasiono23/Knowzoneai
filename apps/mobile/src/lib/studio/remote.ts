@@ -75,6 +75,9 @@ export const update = (id: string, patch: Partial<Material>) =>
   request(`/materials/${id}`, { method: 'PATCH', body: JSON.stringify(patch) });
 export const remove = (id: string) => request(`/materials/${id}`, { method: 'DELETE' });
 
+/** A view-only link to the pack's notes on the website, made the first time it's shared. */
+export const shareLink = async (id: string) => (await post<{ token: string; url: string }>(`/materials/${id}/share`)).url;
+
 export const recordAttempt = (id: string, a: Omit<Attempt, 'id' | 'createdAt' | 'score' | 'total'>) =>
   post<{ attempt: Attempt; user: User; xpEarned: number; coinsEarned: number }>(`/materials/${id}/attempts`, a);
 

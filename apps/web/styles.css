@@ -2271,3 +2271,318 @@ fieldset {
     transform: none !important;
   }
 }
+
+/* ─── Shared links (share.html, filled in by share.js) ─────────────────────── */
+
+.share-hero {
+  padding-bottom: 30px;
+}
+
+.share-section {
+  padding-top: 10px;
+  padding-bottom: 70px;
+}
+
+.share-body {
+  max-width: 760px;
+  margin: 0 auto;
+  display: grid;
+  gap: 18px;
+}
+
+.share-wait {
+  text-align: center;
+  color: var(--ink-2);
+}
+
+.share-card {
+  display: grid;
+  gap: 14px;
+  padding: 28px;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  background: var(--surface);
+  box-shadow: var(--shadow-soft);
+}
+
+.share-card h2 {
+  font-size: 22px;
+  color: var(--ink);
+}
+
+.share-center {
+  justify-items: center;
+  text-align: center;
+}
+
+.share-status {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 32px;
+  font-weight: 800;
+  color: #fff;
+  justify-self: center;
+}
+
+.share-status.ok {
+  background: linear-gradient(135deg, #2dd4bf, #0e8f6e);
+}
+
+.share-status.bad {
+  background: linear-gradient(135deg, #ff9f43, #ff5a7a);
+}
+
+.share-label {
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: var(--purple);
+}
+
+.share-cert {
+  text-align: center;
+  justify-items: center;
+}
+
+.share-facts {
+  width: 100%;
+  margin: 6px 0 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+  text-align: left;
+}
+
+.share-facts div {
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: var(--tint);
+}
+
+.share-facts dt {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--ink-2);
+}
+
+.share-facts dd {
+  margin: 4px 0 0;
+  font-weight: 800;
+  color: var(--ink);
+  overflow-wrap: anywhere;
+}
+
+.share-picture {
+  width: 100%;
+  border-radius: 16px;
+  background: var(--tint);
+}
+
+.share-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.share-meta .chip {
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: var(--purple-soft);
+  color: var(--purple);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.share-scenes {
+  margin: 8px 0 0;
+  padding-left: 22px;
+  display: grid;
+  gap: 6px;
+  color: var(--ink-2);
+}
+
+.share-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 6px;
+}
+
+.invite-code {
+  font-size: clamp(28px, 7vw, 40px);
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  padding: 10px 24px;
+  border-radius: 16px;
+  border: 2px dashed var(--purple);
+  color: var(--purple);
+  background: var(--purple-soft);
+}
+
+.share-notes {
+  display: grid;
+  gap: 18px;
+}
+
+.notes-part ul {
+  margin: 0;
+  padding-left: 22px;
+  display: grid;
+  gap: 6px;
+  color: var(--ink-2);
+}
+
+.notes-tldr {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.notes-points li.high {
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.notes-section {
+  display: grid;
+  gap: 10px;
+  color: var(--ink-2);
+}
+
+.notes-section + .notes-section {
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+
+.notes-section h3 {
+  font-size: 18px;
+  color: var(--ink);
+}
+
+.notes-section figure {
+  margin: 0;
+}
+
+.notes-section figure img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.notes-section figcaption {
+  font-size: 14px;
+  color: var(--ink-2);
+}
+
+.note-formula {
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: var(--tint);
+  font-weight: 700;
+  color: var(--ink);
+  overflow-x: auto;
+}
+
+.note-box {
+  padding: 12px 14px;
+  border-radius: 12px;
+  border-left: 4px solid var(--purple);
+  background: var(--tint);
+}
+
+.note-box.tip {
+  border-left-color: var(--teal);
+}
+
+.note-box.warn {
+  border-left-color: var(--coral);
+}
+
+.note-code {
+  margin: 0;
+  padding: 14px;
+  border-radius: 12px;
+  background: var(--night);
+  color: #e8e6ff;
+  font-size: 14px;
+  overflow-x: auto;
+}
+
+.notes-concepts {
+  margin: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.notes-concepts dt {
+  font-weight: 800;
+  color: var(--ink);
+}
+
+.notes-concepts dd {
+  margin: 2px 0 0;
+  color: var(--ink-2);
+}
+
+.flashcards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+.flashcard {
+  min-height: 130px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--tint);
+  font: inherit;
+  font-weight: 700;
+  color: var(--ink);
+  cursor: pointer;
+  text-align: center;
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.flashcard:hover {
+  transform: translateY(-2px);
+}
+
+.flashcard .back,
+.flashcard.flipped .front {
+  display: none;
+}
+
+.flashcard.flipped {
+  background: var(--purple-soft);
+  color: var(--purple-deep);
+}
+
+.flashcard.flipped .back {
+  display: block;
+}
+
+/* ─── Legal pages (terms.html, privacy.html) ───────────────────────────────── */
+
+.legal-summary {
+  padding: 22px 24px;
+  border-radius: var(--radius);
+  background: var(--tint);
+  border: 1px solid var(--line);
+}
+
+.legal-summary h2 {
+  margin-top: 0;
+}
+
+.legal-draft {
+  padding: 12px 16px;
+  border-radius: 14px;
+  background: rgba(255, 182, 39, 0.14);
+  color: #8a5a00;
+  font-size: 15px;
+  font-weight: 600;
+}

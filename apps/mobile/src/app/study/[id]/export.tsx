@@ -14,6 +14,7 @@ import { Colors, Palette, Radius, Spacing } from '@/constants/theme';
 import { useFlipStyle } from '@/i18n/provider';
 import { toggleIn } from '@/lib/personalization';
 import { toHtml, toText, type ExportPart } from '@/lib/studio/export';
+import { shareLink } from '@/lib/studio/remote';
 
 // Labels live in the `study` namespace under export.parts.
 const PARTS: ExportPart[] = ['summary', 'notes', 'concepts', 'points', 'flashcards', 'quiz'];
@@ -96,7 +97,7 @@ export default function ExportScreen() {
             body: t('export.link.body'),
             go: () =>
               run('link', async () => {
-                await Clipboard.setStringAsync(`https://knowzoneai.com/m/${m.id}`);
+                await Clipboard.setStringAsync(await shareLink(m.id));
                 flash(t('export.link.done'));
               }),
           },

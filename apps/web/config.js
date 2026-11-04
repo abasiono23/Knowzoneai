@@ -3,4 +3,6 @@
 window.KNOWZONE = {
   supabaseUrl: 'https://eqywwpiopweafabfymac.supabase.co',
   supabaseKey: 'sb_publishable_4slpUTlZ6cNKGNe2MyHuuw_kxmLrzO3',
+  // The Knowzone API, for the pages behind shared links (share.js).
+  apiUrl: 'https://knowzone-api.onrender.com',
 };

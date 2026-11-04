@@ -5,6 +5,7 @@ import rateLimit from 'express-rate-limit';
 import multer from 'multer';
 import { z } from 'zod';
 
+import { config } from '../config.js';
 import { prisma } from '../db.js';
 import { Prisma, type Material, type QuizAttempt } from '../generated/prisma/client.js';
 import { AppError, notFound } from '../lib/errors.js';
@@ -22,7 +23,7 @@ import {
   type Source,
   type StudyContent,
 } from '../services/study-ai.js';
-import { toPublicUser } from '../services/users.js';
+import { shortName, toPublicUser } from '../services/users.js';
 
 export const materialsRouter = Router();
 materialsRouter.use(['/materials', '/materials/*rest'], (req, res, next) =>
@@ -125,7 +126,8 @@ async function fail(id: string, code: StudyError['code'], retryable: boolean) {
       where: { id },
       data: { status: 'FAILED', error: { code, retryable }, creditHeld: false },
     });
-    if (m.creditHeld) await tx.user.update({ where: { id: m.userId }, data: { aiCredits: { increment: PACK_CREDITS } } });
+    if (m.creditHeld)
+      await tx.user.update({ where: { id: m.userId }, data: { aiCredits: { increment: PACK_CREDITS } } });
   });
 }
 
@@ -233,7 +235,10 @@ const Create = z.object({
       .object({
         depth: z.enum(['Quick', 'Standard', 'Deep']).default('Standard'),
         difficulty: z.enum(['Beginner', 'Intermediate', 'Advanced']).default('Intermediate'),
-        outputs: z.array(z.enum(OUTPUTS)).min(1).default([...OUTPUTS]),
+        outputs: z
+          .array(z.enum(OUTPUTS))
+          .min(1)
+          .default([...OUTPUTS]),
       })
       .default({ depth: 'Standard', difficulty: 'Intermediate', outputs: [...OUTPUTS] }),
   ),
@@ -314,7 +319,8 @@ materialsRouter.post('/materials/:id/retry', aiLimiter, async (req, res) => {
   const user = me(req);
   const m = await ownMaterial(String(req.params.id), user.id);
   const error = m.error as { retryable?: boolean } | null;
-  if (m.status !== 'FAILED' || !error?.retryable) throw new AppError(409, 'This study pack can’t be retried', 'not-retryable');
+  if (m.status !== 'FAILED' || !error?.retryable)
+    throw new AppError(409, 'This study pack can’t be retried', 'not-retryable');
   await holdCredit(user.id);
   const updated = await prisma.material.update({
     where: { id: m.id },
@@ -384,11 +390,53 @@ materialsRouter.delete('/materials/:id', async (req, res) => {
   if (m) {
     await prisma.$transaction(async (tx) => {
       // Deleted mid-generation: the held credit goes back.
-      if (m.creditHeld) await tx.user.update({ where: { id: m.userId }, data: { aiCredits: { increment: PACK_CREDITS } } });
+      if (m.creditHeld)
+        await tx.user.update({ where: { id: m.userId }, data: { aiCredits: { increment: PACK_CREDITS } } });
       await tx.material.delete({ where: { id: m.id } });
     });
   }
   res.json({ ok: true });
+});
+
+// ─── Sharing (90) ──────────────────────────────────────────────────────────────
+
+/**
+ * A view-only share link. Made the first time the owner copies it; its long random key is the link,
+ * so only packs their owner chose to share can be seen. Shared again, it's the same link.
+ */
+materialsRouter.post('/materials/:id/share', async (req, res) => {
+  const m = await ownMaterial(String(req.params.id), me(req).id);
+  if (m.status !== 'READY') throw new AppError(409, 'This pack isn’t ready to share yet', 'not-ready');
+  const token = m.shareToken ?? randomBytes(18).toString('base64url');
+  if (!m.shareToken) await prisma.material.update({ where: { id: m.id }, data: { shareToken: token } });
+  res.json({ token, url: `${config.APP_URL.replace(/\/$/, '')}/m/${token}` });
+});
+
+/** Stops sharing: the old link no longer works. */
+materialsRouter.delete('/materials/:id/share', async (req, res) => {
+  const m = await ownMaterial(String(req.params.id), me(req).id);
+  if (m.shareToken) await prisma.material.update({ where: { id: m.id }, data: { shareToken: null } });
+  res.json({ ok: true });
+});
+
+/** A shared pack, for anyone with the link (the website's notes page): the notes, never scores or progress. */
+materialsRouter.get('/shared/materials/:token', async (req, res) => {
+  const m = await prisma.material.findUnique({
+    where: { shareToken: String(req.params.token) },
+    include: { user: { select: { name: true } }, files: { where: { kind: 'diagram' }, select: { token: true } } },
+  });
+  if (!m || m.status !== 'READY' || !m.content) throw notFound('This shared link isn’t available');
+  const { quiz: _quiz, ...content } = m.content as StudyContent;
+  res.json({
+    material: {
+      title: m.title,
+      subject: m.subject,
+      sharedBy: shortName(m.user.name),
+      content,
+      ...(m.files[0] && { image: fileUrl(m.files[0].token) }),
+      createdAt: m.createdAt.getTime(),
+    },
+  });
 });
 
 // ─── Practice (75–81) ─────────────────────────────────────────────────────────
@@ -396,7 +444,12 @@ materialsRouter.delete('/materials/:id', async (req, res) => {
 const AttemptInput = z.object({
   questionIds: z.array(z.string().max(40)).min(1).max(100),
   answers: z.array(z.number().int().min(0).max(10).nullable()),
-  seconds: z.number().int().min(0).max(24 * 3600).default(0),
+  seconds: z
+    .number()
+    .int()
+    .min(0)
+    .max(24 * 3600)
+    .default(0),
   settings: z.object({
     count: z.number().int().min(1).max(100),
     difficulty: z.enum(['mixed', 'easy', 'hard']),
@@ -460,7 +513,11 @@ materialsRouter.post('/materials/:id/cards/:cardId/review', async (req, res) => 
   const box = knewIt ? Math.min(prev.box + 1, BOX_DAYS.length - 1) : 0;
   const card = { box, reviews: prev.reviews + 1, dueAt: Date.now() + BOX_DAYS[box] * DAY };
   await prisma.material.update({ where: { id: m.id }, data: { cards: { ...cards, [cardId]: card } } });
-  await recordActivity(userId, { xp: knewIt ? 2 : 1, coins: 0, minutes: 0.25 }, { reason: `flashcards:${m.id}`, tz: requestTimeZone(req) });
+  await recordActivity(
+    userId,
+    { xp: knewIt ? 2 : 1, coins: 0, minutes: 0.25 },
+    { reason: `flashcards:${m.id}`, tz: requestTimeZone(req) },
+  );
   res.json({ card });
 });
 
@@ -487,7 +544,14 @@ materialsRouter.post('/materials/:id/diagram', aiLimiter, async (req, res) => {
     const token = randomBytes(24).toString('base64url');
     const [, updated] = await prisma.$transaction([
       prisma.materialFile.create({
-        data: { materialId: m.id, kind: 'diagram', token, name: 'diagram.jpg', mimeType: 'image/jpeg', data: new Uint8Array(jpeg) },
+        data: {
+          materialId: m.id,
+          kind: 'diagram',
+          token,
+          name: 'diagram.jpg',
+          mimeType: 'image/jpeg',
+          data: new Uint8Array(jpeg),
+        },
       }),
       prisma.user.update({
         where: { id: user.id },

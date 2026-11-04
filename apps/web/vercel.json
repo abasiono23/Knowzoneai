@@ -5,7 +5,30 @@
   "headers": [
     {
       "source": "/assets/(.*)",
-      "headers": [{ "key": "Cache-Control", "value": "public, max-age=604800" }]
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=604800"
+        }
+      ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/verify/:key",
+      "destination": "/share"
+    },
+    {
+      "source": "/v/:key",
+      "destination": "/share"
+    },
+    {
+      "source": "/m/:key",
+      "destination": "/share"
+    },
+    {
+      "source": "/invite/:key",
+      "destination": "/share"
     }
   ]
 }

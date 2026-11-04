@@ -70,6 +70,7 @@
     "web:preview": "serve dist --single --listen 8080",
     "i18n:catalog": "node scripts/catalog-sync.mjs",
     "i18n:check": "tsx scripts/i18n-check.mts",
+    "web:pages": "tsx scripts/web-pages.mts",
     "i18n:index": "node scripts/i18n-index.mjs",
     "i18n:scan": "node scripts/i18n-scan.mjs"
   },

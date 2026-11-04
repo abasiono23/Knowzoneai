@@ -6,7 +6,10 @@ import { http, signIn } from './helpers.js';
 
 // OpenAI and YouTube are replaced with fakes; reading text and Word files, the background
 // processing, credits and marking are real.
-const ai = vi.hoisted(() => ({ fail: 0, calls: [] as { text: string; topic?: string; opts: GenerateOptions; language: string }[] }));
+const ai = vi.hoisted(() => ({
+  fail: 0,
+  calls: [] as { text: string; topic?: string; opts: GenerateOptions; language: string }[],
+}));
 
 const CONTENT = (): StudyContent => ({
   summary: { tldr: 'Cells make energy in mitochondria.', overview: ['Respiration releases energy.'] },
@@ -18,8 +21,26 @@ const CONTENT = (): StudyContent => ({
     { id: 'card2', front: 'ATP stands for?', back: 'Adenosine triphosphate' },
   ],
   quiz: [
-    { id: 'q1', type: 'mcq', question: 'Where is ATP made?', options: ['Nucleus', 'Mitochondria', 'Wall', 'Ribosome'], correctIndex: 1, explanation: '…', concept: 'Mitochondria', difficulty: 'easy' },
-    { id: 'q2', type: 'tf', question: 'Plants respire.', options: ['True', 'False'], correctIndex: 0, explanation: '…', concept: 'Respiration', difficulty: 'medium' },
+    {
+      id: 'q1',
+      type: 'mcq',
+      question: 'Where is ATP made?',
+      options: ['Nucleus', 'Mitochondria', 'Wall', 'Ribosome'],
+      correctIndex: 1,
+      explanation: '…',
+      concept: 'Mitochondria',
+      difficulty: 'easy',
+    },
+    {
+      id: 'q2',
+      type: 'tf',
+      question: 'Plants respire.',
+      options: ['True', 'False'],
+      correctIndex: 0,
+      explanation: '…',
+      concept: 'Respiration',
+      difficulty: 'medium',
+    },
   ],
   mindMap: { center: 'Cells', branches: [{ label: 'Energy', color: '#9B82FF', children: ['ATP'] }] },
   readingMinutes: 3,
@@ -30,19 +51,28 @@ vi.mock('../src/services/study-ai.js', async (importOriginal) => {
   return {
     ...real,
     readSource: vi.fn(async (userId: string, source: Parameters<typeof real.readSource>[1]) => {
-      if (source.type === 'video') return { text: 'Captions about cells and energy '.repeat(10), title: 'Cells explained' };
+      if (source.type === 'video')
+        return { text: 'Captions about cells and energy '.repeat(10), title: 'Cells explained' };
       if (source.type === 'image') return { text: 'Photo notes about cells '.repeat(10) };
       return real.readSource(userId, source);
     }),
-    generateStudyContent: vi.fn(async (_u: string, src: { text: string; topic?: string }, opts: GenerateOptions, language: string, onStage: (n: number) => Promise<unknown>) => {
-      ai.calls.push({ text: src.text, topic: src.topic, opts, language });
-      for (const s of [1, 2, 3, 4]) await onStage(s);
-      if (ai.fail > 0) {
-        ai.fail--;
-        throw new Error('OpenAI timed out');
-      }
-      return { content: CONTENT(), title: 'How cells make energy', subject: 'Biology' };
-    }),
+    generateStudyContent: vi.fn(
+      async (
+        _u: string,
+        src: { text: string; topic?: string },
+        opts: GenerateOptions,
+        language: string,
+        onStage: (n: number) => Promise<unknown>,
+      ) => {
+        ai.calls.push({ text: src.text, topic: src.topic, opts, language });
+        for (const s of [1, 2, 3, 4]) await onStage(s);
+        if (ai.fail > 0) {
+          ai.fail--;
+          throw new Error('OpenAI timed out');
+        }
+        return { content: CONTENT(), title: 'How cells make energy', subject: 'Biology' };
+      },
+    ),
     studyDiagram: vi.fn(async () => Buffer.from([0xff, 0xd8, 0xff, 0xd9])),
   };
 });
@@ -72,13 +102,27 @@ describe('making a study pack', () => {
     await as.post('/me/personalization', { learnerType: 'school', language: 'ha' }).expect(200);
     const before = await credits(sub);
     const res = await as
-      .post('/materials/pack0001', { type: 'text', text: NOTES, options: { depth: 'Quick', difficulty: 'Beginner', outputs: ['summary', 'flashcards', 'quiz'] } })
+      .post('/materials/pack0001', {
+        type: 'text',
+        text: NOTES,
+        options: { depth: 'Quick', difficulty: 'Beginner', outputs: ['summary', 'flashcards', 'quiz'] },
+      })
       .expect(202);
-    expect(res.body.material).toMatchObject({ id: 'pack0001', status: 'processing', source: { type: 'text', label: 'Pasted text' } });
+    expect(res.body.material).toMatchObject({
+      id: 'pack0001',
+      status: 'processing',
+      source: { type: 'text', label: 'Pasted text' },
+    });
     expect(await credits(sub)).toBe(before - 1);
 
     const m = await settled(as, 'pack0001');
-    expect(m).toMatchObject({ status: 'ready', stage: 4, title: 'How cells make energy', subject: 'Biology', folder: 'Biology' });
+    expect(m).toMatchObject({
+      status: 'ready',
+      stage: 4,
+      title: 'How cells make energy',
+      subject: 'Biology',
+      folder: 'Biology',
+    });
     expect(m.content.flashcards).toHaveLength(2);
     expect(m.options).toEqual({ depth: 'Quick', difficulty: 'Beginner', outputs: ['summary', 'flashcards', 'quiz'] });
     expect(ai.calls[0]).toMatchObject({ language: 'ha', opts: { depth: 'Quick' } });
@@ -94,7 +138,10 @@ describe('making a study pack', () => {
     expect((await settled(as, 'mytitle1')).title).toBe('My biology notes');
     await as.post('/materials/video001', { type: 'video', url: 'https://youtu.be/UPBMG5EYydo' }).expect(202);
     const v = await settled(as, 'video001');
-    expect(v).toMatchObject({ title: 'Cells explained', source: { type: 'video', url: 'https://youtu.be/UPBMG5EYydo' } });
+    expect(v).toMatchObject({
+      title: 'Cells explained',
+      source: { type: 'video', url: 'https://youtu.be/UPBMG5EYydo' },
+    });
     await as.post('/materials/topic001', { type: 'topic', topic: 'Photosynthesis' }).expect(202);
     await settled(as, 'topic001');
     expect(ai.calls.at(-1)).toMatchObject({ topic: 'Photosynthesis', text: '' });
@@ -136,7 +183,10 @@ describe('making a study pack', () => {
 
     ai.fail = 1;
     await as.post('/materials/retry001', { type: 'text', text: NOTES }).expect(202);
-    expect(await settled(as, 'retry001')).toMatchObject({ status: 'failed', error: { code: 'ai-failed', retryable: true } });
+    expect(await settled(as, 'retry001')).toMatchObject({
+      status: 'failed',
+      error: { code: 'ai-failed', retryable: true },
+    });
     expect(await credits(sub)).toBe(before);
     await as.post('/materials/retry001/retry').expect(202);
     expect((await settled(as, 'retry001')).status).toBe('ready');
@@ -162,8 +212,14 @@ describe('making a study pack', () => {
     await prisma.user.update({ where: { id: sub }, data: { aiCredits: { decrement: 1 } } });
     await prisma.material.create({
       data: {
-        id: 'stuck001', userId: sub, title: 'Stuck', sourceType: 'topic', sourceLabel: 'Stuck', options: {},
-        creditHeld: true, status: 'PROCESSING',
+        id: 'stuck001',
+        userId: sub,
+        title: 'Stuck',
+        sourceType: 'topic',
+        sourceLabel: 'Stuck',
+        options: {},
+        creditHeld: true,
+        status: 'PROCESSING',
       },
     });
     await prisma.$executeRaw`UPDATE "Material" SET "updatedAt" = (now() at time zone 'utc') - interval '20 minutes' WHERE id = 'stuck001'`;
@@ -194,7 +250,13 @@ describe('the study library', () => {
     const edited = await as
       .patch('/materials/lib00001', { title: 'Renamed', folder: 'Exams', tags: ['waec'], saved: true, offline: true })
       .expect(200);
-    expect(edited.body.material).toMatchObject({ title: 'Renamed', folder: 'Exams', tags: ['waec'], saved: true, offline: true });
+    expect(edited.body.material).toMatchObject({
+      title: 'Renamed',
+      folder: 'Exams',
+      tags: ['waec'],
+      saved: true,
+      offline: true,
+    });
     const next = (await as.get(`/materials?since=${quiet.serverTime}`).expect(200)).body;
     expect(next.materials.map((m: { id: string }) => m.id)).toEqual(['lib00001']);
 
@@ -256,5 +318,45 @@ describe('the study library', () => {
     // Deleting the pack deletes the drawing.
     await as.delete('/materials/diag0001').expect(200);
     await http().get(drawn.body.image).expect(404);
+  });
+});
+
+describe('sharing a study pack (90)', () => {
+  it('makes a view-only link on request, without quiz or scores, and can stop it', async () => {
+    reset();
+    const { as } = await signIn();
+    await as
+      .post('/materials/share001', {
+        type: 'text',
+        text: NOTES,
+        options: { depth: 'Quick', difficulty: 'Beginner', outputs: ['summary', 'notes', 'quiz'] },
+      })
+      .expect(202);
+    await settled(as, 'share001');
+    // Not shared yet: there is no link to find.
+    expect((await prisma.material.findUniqueOrThrow({ where: { id: 'share001' } })).shareToken).toBeNull();
+
+    const first = (await as.post('/materials/share001/share').expect(200)).body;
+    expect(first.token.length).toBeGreaterThanOrEqual(24);
+    expect(first.url).toMatch(new RegExp(`/m/${first.token}$`));
+    // Sharing again gives the same link.
+    expect((await as.post('/materials/share001/share').expect(200)).body.token).toBe(first.token);
+
+    // Anyone with the link sees the notes, never the quiz, scores or progress.
+    const { body } = await http().get(`/shared/materials/${first.token}`).expect(200);
+    expect(body.material).toMatchObject({ title: 'How cells make energy', subject: 'Biology' });
+    expect(body.material.content.notes[0].heading).toBe('Respiration');
+    expect(body.material.content.quiz).toBeUndefined();
+    expect(body.material.mastery).toBeUndefined();
+    expect(body.material.cards).toBeUndefined();
+
+    // Someone else can't make a link for it.
+    const other = await signIn({ email: 'friend@example.com', metadata: { name: 'Bola', consent: { terms: true, privacy: true, age: true, marketing: false } } });
+    await other.as.post('/materials/share001/share').expect(404);
+
+    // Stopping sharing turns the link off.
+    await as.delete('/materials/share001/share').expect(200);
+    await http().get(`/shared/materials/${first.token}`).expect(404);
+    await http().get('/shared/materials/not-a-real-link').expect(404);
   });
 });
