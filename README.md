@@ -724,7 +724,12 @@ short videos.
   - The cards move on by themselves. Tap the right side to go forward or the left to go back; there is a pause button.
   - The phone's voice reads each card in English, Pidgin, French, Arabic, Swahili, Portuguese and Spanish. Phones have no Yoruba, Igbo or Hausa voice, so those languages show the cards without sound.
   - Finishing the quiz completes the lesson.
-- **Done so far (10 of the 32 lessons):** How cells make energy, Genetics, Human heart and circulation, The mole concept, Ionic vs covalent bonding, Electrolysis, Newton's laws, Quadratic equations, Trigonometry, Demand and supply. The other 22 keep their old format until they're made.
+- **Done so far (20 of the 32 lessons):**
+  - **Sciences:** How cells make energy, Genetics, Human heart and circulation, Food chains and energy flow, The mole concept, Ionic vs covalent bonding, Naming alkanes, Electrolysis, Newton's laws, Ohm's law and simple circuits, Waves.
+  - **Maths:** Quadratic equations, Trigonometry, Mean, median and mode, Angles in circles.
+  - **Economics:** Demand and supply, Inflation.
+  - **Computing and AI:** What is AI, really?; Prompting like a pro; Your first Python program.
+  - The other 12 keep their old format until they're made.
 - **Covers:** lessons with flashcards show their first card's picture instead of an emoji.
 - **Made without AI services:**
   - Claude wrote and checked the cards, quizzes and the translations into all 10 languages.
