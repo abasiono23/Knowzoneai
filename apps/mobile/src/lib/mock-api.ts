@@ -1065,7 +1065,7 @@ export async function mockRequest<T>(path: string, init: RequestInit, token: str
       const inviter = invite && db.users.find((u) => u.id === invite.inviterId);
       return done({
         code: user.referralCode,
-        link: `https://knowzone.ai/invite/${user.referralCode}`,
+        link: `https://knowzoneai.com/invite/${user.referralCode}`,
         rewardCredits: REFERRAL_CREDITS,
         monthlyCap: REFERRAL_MONTHLY_CAP,
         confirmedThisMonth: confirmedThisMonth(db, user.id),

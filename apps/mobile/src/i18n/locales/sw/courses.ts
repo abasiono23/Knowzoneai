@@ -235,7 +235,7 @@ const courses: Translation<typeof en> = {
     instructor: '{{name}}, mkufunzi',
     courseInstructor: 'Mkufunzi wa kozi',
     dateIssued: 'Tarehe ya kutolewa',
-    idLine: 'ID {{id}} · thibitisha kwenye knowzone.ai/verify',
+    idLine: 'ID {{id}} · thibitisha kwenye knowzoneai.com/verify',
     download: 'Pakua PDF',
     copyLink: 'Nakili kiungo',
     shareMessage: 'Nimemaliza “{{title}}” kwenye Knowzone AI! 🎓 Thibitisha cheti changu: {{url}}',

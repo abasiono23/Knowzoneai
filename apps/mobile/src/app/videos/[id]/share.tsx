@@ -28,7 +28,7 @@ export default function ShareVideoScreen() {
     <VideoRoute>
       {(v) => {
         const at = Math.floor(progress[v.id] ?? 0);
-        const link = `https://knowzone.ai/v/${v.id}${fromHere && at > 0 ? `?t=${at}` : ''}`;
+        const link = `https://knowzoneai.com/v/${v.id}${fromHere && at > 0 ? `?t=${at}` : ''}`;
         const message = t('share.message', { title: v.title, subject: subjectLabel(v.subject, t, tHome), link });
         const flash = (m: string) => {
           setDone(m);

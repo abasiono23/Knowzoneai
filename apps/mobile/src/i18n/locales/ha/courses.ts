@@ -237,7 +237,7 @@ const courses: Translation<typeof en> = {
     instructor: '{{name}}, malami',
     courseInstructor: 'Malamin kwas',
     dateIssued: 'Ranar bayarwa',
-    idLine: 'ID {{id}} · tabbatar a knowzone.ai/verify',
+    idLine: 'ID {{id}} · tabbatar a knowzoneai.com/verify',
     download: 'Sauke PDF',
     copyLink: 'Kwafi adireshi',
     shareMessage: 'Yanzu na kammala “{{title}}” a Knowzone AI! 🎓 Tabbatar da satifiket ɗina: {{url}}',

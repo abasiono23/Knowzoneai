@@ -311,7 +311,7 @@ const courses: Translation<typeof en> = {
     instructor: '{{name}}، المدرّب',
     courseInstructor: 'مدرّب الدورة',
     dateIssued: 'تاريخ الإصدار',
-    idLine: 'المعرّف {{id}} · تحقّق منها على knowzone.ai/verify',
+    idLine: 'المعرّف {{id}} · تحقّق منها على knowzoneai.com/verify',
     download: 'نزّل PDF',
     copyLink: 'انسخ الرابط',
     shareMessage: 'أتممت للتو «{{title}}» على Knowzone AI! 🎓 تحقّق من شهادتي: {{url}}',

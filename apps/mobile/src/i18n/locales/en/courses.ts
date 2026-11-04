@@ -235,7 +235,7 @@ const courses = {
     instructor: '{{name}}, instructor',
     courseInstructor: 'Course instructor',
     dateIssued: 'Date issued',
-    idLine: 'ID {{id}} · verify at knowzone.ai/verify',
+    idLine: 'ID {{id}} · verify at knowzoneai.com/verify',
     download: 'Download PDF',
     copyLink: 'Copy link',
     shareMessage: 'I just completed “{{title}}” on Knowzone AI! 🎓 Verify my certificate: {{url}}',

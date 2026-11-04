@@ -11,8 +11,8 @@ export const USE_MOCKS = process.env.EXPO_PUBLIC_USE_MOCKS === 'true';
 export const MOCK_CODE = '123456';
 
 export const LEGAL_URLS = {
-  terms: 'https://knowzone.ai/terms',
-  privacy: 'https://knowzone.ai/privacy',
+  terms: 'https://knowzoneai.com/terms',
+  privacy: 'https://knowzoneai.com/privacy',
 };
 
 export const WELCOME_CREDITS = 5;

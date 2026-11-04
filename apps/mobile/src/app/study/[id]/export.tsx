@@ -96,7 +96,7 @@ export default function ExportScreen() {
             body: t('export.link.body'),
             go: () =>
               run('link', async () => {
-                await Clipboard.setStringAsync(`https://knowzone.ai/m/${m.id}`);
+                await Clipboard.setStringAsync(`https://knowzoneai.com/m/${m.id}`);
                 flash(t('export.link.done'));
               }),
           },

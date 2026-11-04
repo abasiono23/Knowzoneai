@@ -29,7 +29,7 @@ import {
 
 const esc = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 const dateOf = (t: number) => formatDate(t, { day: 'numeric', month: 'long', year: 'numeric' });
-const verifyUrl = (c: Certificate) => `https://knowzone.ai/verify/${c.id}`;
+const verifyUrl = (c: Certificate) => `https://knowzoneai.com/verify/${c.id}`;
 
 /** Screen 125: the certificate, with PDF download, share and a verification link. */
 export default function CertificateScreen() {

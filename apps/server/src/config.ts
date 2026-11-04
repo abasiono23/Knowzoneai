@@ -12,7 +12,7 @@ const Env = z.object({
   SUPABASE_SECRET_KEY: z.string().optional(),
   CORS_ORIGIN: z.string().default('*'),
   /** Public web address, used in invite links and emails. */
-  APP_URL: z.string().default('https://knowzone.ai'),
+  APP_URL: z.string().default('https://knowzoneai.com'),
 
   // AI. Without a key the server still runs; AI endpoints answer 503 "not configured".
   OPENAI_API_KEY: z.string().optional(),
@@ -43,7 +43,7 @@ const Env = z.object({
   SMTP_USER: z.string().optional(),
   SMTP_PASS: z.string().optional(),
   /** With Gmail this must be your Gmail address, e.g. "Knowzone <you@gmail.com>". */
-  EMAIL_FROM: z.string().default('Knowzone <hello@knowzone.ai>'),
+  EMAIL_FROM: z.string().default('Knowzone <info@knowzoneai.com>'),
   /** Where new help requests, reports and copyright notices are emailed for the team. Optional. */
   SUPPORT_EMAIL: z.union([z.literal(''), z.email()]).optional(),
 });

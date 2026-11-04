@@ -235,7 +235,7 @@ const courses: Translation<typeof en> = {
     instructor: '{{name}}, onye nkuzi',
     courseInstructor: 'Onye nkuzi kọọsụ',
     dateIssued: 'Ụbọchị e nyere ya',
-    idLine: 'ID {{id}} · nyochaa na knowzone.ai/verify',
+    idLine: 'ID {{id}} · nyochaa na knowzoneai.com/verify',
     download: 'Budata PDF',
     copyLink: 'Detuo njikọ',
     shareMessage: 'Emechala m “{{title}}” na Knowzone AI! 🎓 Nyochaa asambodo m: {{url}}',

@@ -235,7 +235,7 @@ const courses: Translation<typeof en> = {
     instructor: '{{name}}, olùkọ́',
     courseInstructor: 'Olùkọ́ kọ́ọ̀sì',
     dateIssued: 'Ọjọ́ tí a fún un',
-    idLine: 'ID {{id}} · jẹ́rìísí rẹ̀ ní knowzone.ai/verify',
+    idLine: 'ID {{id}} · jẹ́rìísí rẹ̀ ní knowzoneai.com/verify',
     download: 'Gba PDF sílẹ̀',
     copyLink: 'Da ìjápọ̀ kọ',
     shareMessage: 'Mo ṣẹ̀ṣẹ̀ parí “{{title}}” lórí Knowzone AI! 🎓 Jẹ́rìísí ìwé-ẹ̀rí mi: {{url}}',

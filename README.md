@@ -111,6 +111,7 @@ Done through the Management API and migrations (20 October 2026):
 - ✅ **Email:** custom SMTP through Gmail (`knowzoneai@gmail.com`, app password), with 6-digit code templates for
   sign-up and password reset. Limit 100 emails an hour; Gmail caps sending at about 500 a day, and some mail may
   land in spam. Move to a domain with Resend (or similar) before launch.
+  - The domain is now `knowzoneai.com`, with `info@knowzoneai.com`. To send from it, change Supabase → Authentication → SMTP Settings and the server's `SMTP_*` and `EMAIL_FROM` to the new mailbox's SMTP details. Also add the email provider's SPF and DKIM records to the domain's DNS, so mail doesn't land in spam.
 
 Still to do:
 1. **Apple:** needs a Service ID and key from an Apple Developer account.
@@ -341,7 +342,7 @@ Still to do:
 - **Not real yet:**
   - Badges and part of the streak calendar come from Knowzone World, which still runs on the device.
   - The frame and title you equip are remembered per device, not per account.
-  - The invite link (`knowzone.ai/invite/CODE`) needs a web page on your domain; until then friends type the code.
+  - The invite link (`knowzoneai.com/invite/CODE`) needs a web page on your domain; until then friends type the code.
 
 ### Profile, settings and payments (screens 177–218)
 
@@ -930,6 +931,8 @@ It uses the app's look: white pages, the purple open book, the K logo and Manrop
 - **Local:** `cd apps/web && python -m http.server 5500`. Sign-ups made locally go to the real Supabase table.
 - **Hosting:** Vercel. New Project → import the GitHub repo → Root Directory `apps/web` → Framework "Other" →
   no build command. `vercel.json` makes `/about`, `/waitlist` and `/privacy` work without `.html`.
+- **Domain:** `knowzoneai.com`. To connect it, add `knowzoneai.com` and `www.knowzoneai.com` in the Vercel project's Settings → Domains, then put the DNS records Vercel shows into the registrar's DNS settings. The records are usually an `A` record for `@` and a `CNAME` for `www`. Page addresses and share previews use `https://knowzoneai.com`.
+- **Contact:** `info@knowzoneai.com`, shown in every page footer and in the privacy page.
 - **Screenshots:** `assets/screens/*.webp` are real app screens (600 px wide); replace them as the app changes.
 
 ## What's built (Release 1 core loop)

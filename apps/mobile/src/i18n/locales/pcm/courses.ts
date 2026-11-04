@@ -235,7 +235,7 @@ const courses: Translation<typeof en> = {
     instructor: '{{name}}, instructor',
     courseInstructor: 'Course instructor',
     dateIssued: 'Date wey dem give am',
-    idLine: 'ID {{id}} · verify am for knowzone.ai/verify',
+    idLine: 'ID {{id}} · verify am for knowzoneai.com/verify',
     download: 'Download PDF',
     copyLink: 'Copy link',
     shareMessage: 'I just finish “{{title}}” for Knowzone AI! 🎓 Verify my certificate: {{url}}',
