@@ -45,7 +45,7 @@ const teacher: Translation<typeof en> = {
     submittedCount: '{{submitted}}/{{total}}',
     coursesA11y: 'Duba kwasa-kwasan da za ka ba da shawara',
     coursesTitle: 'Kwasa-kwasan da za ka ba da shawara',
-    coursesBody: 'Kwasa-kwasai masu tsari tare da gwaje-gwaje da satifiket ga ɗalibanka',
+    coursesBody: 'Kwasa-kwasai masu tsari da darussan bidiyo da gwaje-gwaje don ɗalibanka',
   },
   classes: {
     eyebrow: 'AZUZUWA',
@@ -62,7 +62,8 @@ const teacher: Translation<typeof en> = {
     privacy: 'Sirri',
     allSettings: 'Duk saituna',
     upsellTitle: 'Kawo Knowzone ga dukan makarantarka',
-    upsellBody: 'Lasisin makaranta yana ƙara ikon gudanarwa, sarrafa kujeru da rahotannin zangon karatu ga shugabannin sashe.',
+    upsellBody:
+      'Lasisin makaranta yana ƙara ikon gudanarwa, sarrafa kujeru da rahotannin zangon karatu ga shugabannin sashe.',
     logOut: 'Fita',
   },
   newClass: {

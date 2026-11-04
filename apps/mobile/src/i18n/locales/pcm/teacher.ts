@@ -45,7 +45,7 @@ const teacher: Translation<typeof en> = {
     submittedCount: '{{submitted}}/{{total}}',
     coursesA11y: 'Check courses wey you fit recommend',
     coursesTitle: 'Courses to recommend',
-    coursesBody: 'Courses wey get structure, quizzes and certificates for your students',
+    coursesBody: 'Structured courses with video lessons and quizzes for your students',
   },
   classes: {
     eyebrow: 'CLASSES',

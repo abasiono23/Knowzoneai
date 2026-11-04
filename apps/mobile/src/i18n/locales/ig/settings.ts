@@ -74,7 +74,8 @@ const settings: Translation<typeof en> = {
   appearance: {
     title: 'Ọdịdị',
     theme: 'Isiokwu agba',
-    themeFooter: 'E mere Knowzone ka ọ bụrụ ọchịchịrị na mbụ ka ọ ghara ịkpa anya gị nsogbu n’abalị. Isiokwu ìhè na-abịa.',
+    themeFooter:
+      'E mere Knowzone ka ọ bụrụ ọchịchịrị na mbụ ka ọ ghara ịkpa anya gị nsogbu n’abalị. Isiokwu ìhè na-abịa.',
     dark: 'Ọchịchịrị',
     darkHint: 'Acha anụnụ miri emi nwere agba na-egbuke egbuke',
     light: 'Ìhè',
@@ -369,8 +370,8 @@ const settings: Translation<typeof en> = {
       done: 'Enweghị kọọsụ emechara ugbu a',
       saved: 'Ọ dịghị ihe echekwara',
     },
-    emptyDoneBody: 'Mechaa ihe ọmụmụ niile dị na kọọsụ ka ị nweta asambodo ya.',
-    emptyBody: 'Lelee kọọsụ ahaziri ahazi nwere ajụjụ nyocha na asambodo.',
+    emptyDoneBody: 'Mechaa ihe ọmụmụ niile dị na kọs iji hụ ya ebe a.',
+    emptyBody: 'Lelee kọs ahaziri ahazi nwere ihe ọmụmụ vidiyo na ajụjụ nyocha.',
     browse: 'Lelee kọọsụ',
     findAnother: 'Chọta kọọsụ ọzọ',
   },

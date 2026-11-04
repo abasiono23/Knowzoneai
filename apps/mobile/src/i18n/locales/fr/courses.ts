@@ -132,7 +132,7 @@ const courses: Translation<typeof en> = {
     wrongPairings_other: '{{count}} mauvaises associations en chemin. {{feedback}}',
   },
   catalogue: {
-    eyebrow: '{{count}} COURS · CERTIFICATS INCLUS',
+    eyebrow: '{{count}} COURS · LEÇONS VIDÉO',
     title: 'Cours',
     searchPlaceholder: 'Rechercher des cours, thèmes ou examens',
     searchA11y: 'Rechercher des cours',
@@ -141,7 +141,8 @@ const courses: Translation<typeof en> = {
     results_many: '{{count}} cours pour « {{query}} »',
     results_other: '{{count}} cours pour « {{query}} »',
     noResults: 'Aucun cours trouvé',
-    noResultsBody: 'Essaie une matière comme « biologie », un thème comme « second degré » ou un examen comme « WAEC ».',
+    noResultsBody:
+      'Essaie une matière comme « biologie », un thème comme « second degré » ou un examen comme « WAEC ».',
     continueLabel: 'REPRENDS LÀ OÙ TU T’ÉTAIS ARRÊTÉ',
     next: 'Suivant : {{title}} · {{duration}}',
     resume: 'Reprendre le cours',
@@ -245,7 +246,8 @@ const courses: Translation<typeof en> = {
   certificate: {
     eyebrow: 'CERTIFICAT',
     lockedTitle: 'Termine le cours pour débloquer ton certificat',
-    lockedBody: '{{done}} leçons sur {{total}} terminées. Chaque leçon compte, et il faut {{pass}} % pour réussir les quiz.',
+    lockedBody:
+      '{{done}} leçons sur {{total}} terminées. Chaque leçon compte, et il faut {{pass}} % pour réussir les quiz.',
     continue: 'Continuer le cours',
     title: 'Certificat de réussite',
     certifies: 'NOUS CERTIFIONS QUE',
@@ -266,9 +268,9 @@ const courses: Translation<typeof en> = {
   },
   complete: {
     almostTitle: 'Presque fini',
-    almostBody_one: 'Termine encore {{count}} leçon pour finir {{title}} et obtenir ton certificat.',
-    almostBody_many: 'Termine encore {{count}} leçons pour finir {{title}} et obtenir ton certificat.',
-    almostBody_other: 'Termine encore {{count}} leçons pour finir {{title}} et obtenir ton certificat.',
+    almostBody_one: 'Termine encore {{count}} leçon pour finir {{title}}.',
+    almostBody_many: 'Termine encore {{count}} leçons pour finir {{title}}.',
+    almostBody_other: 'Termine encore {{count}} leçons pour finir {{title}}.',
     quizNote: 'Les quiz comptent dès que tu obtiens {{pass}} % ou plus.',
     title: 'Cours terminé !',
     body: 'Tu as terminé {{title}}. C’est un vrai progrès, qui dure.',
@@ -277,7 +279,7 @@ const courses: Translation<typeof en> = {
     lessons: 'leçons',
     studied: 'de travail',
     quizAvg: 'moy. quiz',
-    saved: 'Ton certificat est enregistré sur ton profil et peut être partagé avec tes profs, tes parents ou des écoles.',
+    saved: 'Ta progression, tes XP et tes pièces sont enregistrés sur ton profil.',
   },
   progress: {
     eyebrow: 'PROGRESSION DU COURS',
@@ -383,7 +385,8 @@ const courses: Translation<typeof en> = {
     nicelyDone: 'Bien joué',
     goodPractice: 'Bon entraînement',
     allRight: 'Tu as réussi toutes les activités du premier coup.',
-    mistakes: 'Les erreurs pendant l’entraînement, c’est comme ça que la mémoire se construit. Recommence quand tu veux.',
+    mistakes:
+      'Les erreurs pendant l’entraînement, c’est comme ça que la mémoire se construit. Recommence quand tu veux.',
     stepLine: '{{title}} : {{prompt}}',
     again: 'S’entraîner à nouveau',
     seeHow: 'Voir tes résultats',
@@ -401,7 +404,8 @@ const courses: Translation<typeof en> = {
     thisLesson: 'Cette leçon',
     wholeCourse: 'Tout le cours ({{count}})',
     emptyTitle: 'Pas encore de notes',
-    emptyBody: 'Ajoutes-en une ci-dessus, ou fais un appui long sur un paragraphe d’une leçon de lecture pour l’enregistrer ici.',
+    emptyBody:
+      'Ajoutes-en une ci-dessus, ou fais un appui long sur un paragraphe d’une leçon de lecture pour l’enregistrer ici.',
     highlight: 'Surlignage · {{time}}',
     options: 'Options de la note',
     sheetTitle: 'Note',
@@ -445,7 +449,8 @@ const courses: Translation<typeof en> = {
   },
   resources: {
     eyebrow: 'RESSOURCES DE LA LEÇON',
-    intro: 'Les fiches de synthèse et les séries d’exercices sont créées à partir de cette leçon, elles correspondent donc toujours à ce que tu as étudié.',
+    intro:
+      'Les fiches de synthèse et les séries d’exercices sont créées à partir de cette leçon, elles correspondent donc toujours à ce que tu as étudié.',
     options: 'Options pour {{title}}',
     savePdf: 'Enregistrer en PDF',
     copyText: 'Copier le texte',
@@ -494,7 +499,8 @@ const courses: Translation<typeof en> = {
   },
   video: {
     youtubeMeta: '{{channel}} · {{duration}} · YouTube',
-    youtubeNote: 'Cette vidéo vient de YouTube et se lit dans le lecteur de YouTube. Quand tu l’as regardée, marque la leçon comme terminée.',
+    youtubeNote:
+      'Cette vidéo vient de YouTube et se lit dans le lecteur de YouTube. Quand tu l’as regardée, marque la leçon comme terminée.',
     producing: 'Cette vidéo est encore en production.',
     meta: '{{duration}} · {{chapters}} · narration de {{name}}',
     chapters_one: '{{count}} chapitre',
@@ -507,7 +513,8 @@ const courses: Translation<typeof en> = {
   generated: {
     bigIdea: 'L’idée principale',
     needToKnow: 'Ce que tu dois savoir',
-    teachIt: 'Lis chaque point lentement et essaie de l’expliquer à voix haute sans regarder. Si tu peux l’enseigner, tu le sais.',
+    teachIt:
+      'Lis chaque point lentement et essaie de l’expliquer à voix haute sans regarder. Si tu peux l’enseigner, tu le sais.',
     inExam: 'À l’examen',
     examTip:
       '{{topic}} revient souvent aux examens {{exams}}. Apprends les mots clés par cœur et montre chaque étape dans tes calculs.',
@@ -537,7 +544,8 @@ const courses: Translation<typeof en> = {
     worksheetMeta_other: 'Fiche d’exercices · {{count}} questions',
     pastTitle: 'Annales {{exam}} : {{subject}}',
     pastMeta: 'Annales · 2019–2025',
-    pastBody: 'Les questions d’annales ({{exams}}) sur ce thème apparaîtront ici dès que la banque de questions sera connectée.',
+    pastBody:
+      'Les questions d’annales ({{exams}}) sur ce thème apparaîtront ici dès que la banque de questions sera connectée.',
     askTutor: 'Poser une question au tuteur IA sur cette leçon',
     askTutorMeta: 'Ouvre le tuteur sur ce thème',
     keyIdea: 'Idée clé {{number}} : peux-tu l’expliquer en une phrase avant de regarder ?',

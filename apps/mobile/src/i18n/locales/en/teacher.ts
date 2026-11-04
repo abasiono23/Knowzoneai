@@ -43,7 +43,7 @@ const teacher = {
     submittedCount: '{{submitted}}/{{total}}',
     coursesA11y: 'Browse courses to recommend',
     coursesTitle: 'Courses to recommend',
-    coursesBody: 'Structured courses with quizzes and certificates for your students',
+    coursesBody: 'Structured courses with video lessons and quizzes for your students',
   },
   classes: {
     eyebrow: 'CLASSES',

@@ -98,7 +98,7 @@ const billing: Translation<typeof en> = {
       studyTools: 'الملخصات والبطاقات التعليمية والاختبارات',
       videos: 'فيديوهات الشرح',
       priority: 'معالجة ذات أولوية',
-      courses: 'الدورات والشهادات',
+      courses: 'دورات بدروس فيديو',
       advancedQuizzes: 'اختبارات متقدمة ومراجعة متباعدة',
       studyPlans: 'خطط دراسية مخصّصة',
       examPapers: 'امتحانات تدريبية',

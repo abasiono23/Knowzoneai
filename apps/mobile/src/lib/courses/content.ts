@@ -428,7 +428,7 @@ const BIOLOGY: Course = {
           'Final exam',
           'quiz',
           10,
-          'Eight questions across the whole course. Pass to earn your certificate.',
+          'Eight questions across the whole course. Pass to finish the course.',
           {
             content: {
               quiz: [
@@ -771,7 +771,7 @@ const PYTHON: Course = {
           'Conditions, comparisons and the colon that trips everyone up.',
           { content: { interactive: PY_IF } },
         ),
-        lesson('p8', 'Final project quiz', 'quiz', 8, 'Six questions. Pass to earn your certificate.', {
+        lesson('p8', 'Final project quiz', 'quiz', 8, 'Six questions. Pass to finish the course.', {
           content: {
             quiz: [
               q(
@@ -1092,7 +1092,7 @@ const MATHS: Course = {
         lesson('m9', 'Statistics lab', 'interactive', 7, 'Work out averages and pick the best one.', {
           content: { interactive: STATS_LAB },
         }),
-        lesson('m10', 'Final exam', 'quiz', 10, 'Eight questions across the course. Pass to earn your certificate.', {
+        lesson('m10', 'Final exam', 'quiz', 10, 'Eight questions across the course. Pass to finish the course.', {
           content: {
             quiz: [
               q('Find the mean of 2, 4, 6, 8.', ['4', '5', '6', '20'], 1, 'Sum 20 ÷ 4 = 5.', 'Statistics', 'easy'),
@@ -1232,7 +1232,7 @@ const CHEMISTRY: Course = {
         lesson('c5', 'Electrolysis step by step', 'video', 6, 'Ions, electrodes and what forms where.', {
           catalogId: 'l30',
         }),
-        lesson('c6', 'Final exam', 'quiz', 8, 'Six questions. Pass to earn your certificate.', {
+        lesson('c6', 'Final exam', 'quiz', 8, 'Six questions. Pass to finish the course.', {
           content: {
             quiz: [
               q(
@@ -1437,7 +1437,7 @@ const AI_LITERACY: Course = {
         lesson('a5', 'Fix the prompt', 'interactive', 6, 'Turn weak prompts into great ones.', {
           content: { interactive: AI_PROMPT },
         }),
-        lesson('a6', 'Final quiz', 'quiz', 6, 'Five questions. Pass to earn your certificate.', {
+        lesson('a6', 'Final quiz', 'quiz', 6, 'Five questions. Pass to finish the course.', {
           content: {
             quiz: [
               q(
@@ -1525,7 +1525,7 @@ const PHYSICS: Course = {
         lesson('f1', 'Newton’s three laws', 'video', 5, 'Inertia, F = ma and action–reaction.', { catalogId: 'l7' }),
         lesson('f2', 'Ohm’s law and circuits', 'reading', 6, 'Voltage, current and resistance.', { catalogId: 'l8' }),
         lesson('f3', 'Waves', 'video', 5, 'Frequency, wavelength and speed.', { catalogId: 'l9' }),
-        lesson('f4', 'Final quiz', 'quiz', 6, 'Five questions. Pass to earn your certificate.', {
+        lesson('f4', 'Final quiz', 'quiz', 6, 'Five questions. Pass to finish the course.', {
           content: {
             quiz: [
               q(
@@ -1614,7 +1614,7 @@ const MONEY: Course = {
         lesson('e4', 'Double entry bookkeeping', 'reading', 6, 'Every transaction, recorded twice.', {
           catalogId: 'l20',
         }),
-        lesson('e5', 'Final quiz', 'quiz', 6, 'Five questions. Pass to earn your certificate.', {
+        lesson('e5', 'Final quiz', 'quiz', 6, 'Five questions. Pass to finish the course.', {
           content: {
             quiz: [
               q(
@@ -1708,7 +1708,7 @@ const ENGLISH: Course = {
         lesson('w4', 'Things Fall Apart: themes', 'video', 6, 'Tradition, change and masculinity.', {
           catalogId: 'l17',
         }),
-        lesson('w5', 'Final quiz', 'quiz', 6, 'Five questions. Pass to earn your certificate.', {
+        lesson('w5', 'Final quiz', 'quiz', 6, 'Five questions. Pass to finish the course.', {
           content: {
             quiz: [
               q(

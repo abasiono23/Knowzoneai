@@ -119,7 +119,7 @@ const courses: Translation<typeof en> = {
     wrongPairings_other: 'Uoanishaji {{count}} usio sahihi njiani. {{feedback}}',
   },
   catalogue: {
-    eyebrow: 'KOZI {{count}} · VYETI VIMEJUMUISHWA',
+    eyebrow: 'KOZI {{count}} · MASOMO YA VIDEO',
     title: 'Kozi',
     searchPlaceholder: 'Tafuta kozi, mada au mitihani',
     searchA11y: 'Tafuta kozi',
@@ -226,7 +226,8 @@ const courses: Translation<typeof en> = {
   certificate: {
     eyebrow: 'CHETI',
     lockedTitle: 'Maliza kozi ili kufungua cheti chako',
-    lockedBody: 'Masomo {{done}} kati ya {{total}} yamekamilika. Kila somo linahesabika, na majaribio yanahitaji {{pass}}% ili kufaulu.',
+    lockedBody:
+      'Masomo {{done}} kati ya {{total}} yamekamilika. Kila somo linahesabika, na majaribio yanahitaji {{pass}}% ili kufaulu.',
     continue: 'Endelea na kozi',
     title: 'Cheti cha Kuhitimu',
     certifies: 'HIKI NI KUTHIBITISHA KWAMBA',
@@ -247,8 +248,8 @@ const courses: Translation<typeof en> = {
   },
   complete: {
     almostTitle: 'Umekaribia',
-    almostBody_one: 'Maliza somo {{count}} zaidi ili ukamilishe {{title}} na upate cheti chako.',
-    almostBody_other: 'Maliza masomo {{count}} zaidi ili ukamilishe {{title}} na upate cheti chako.',
+    almostBody_one: 'Maliza somo {{count}} zaidi ili ukamilishe {{title}}.',
+    almostBody_other: 'Maliza masomo {{count}} zaidi ili ukamilishe {{title}}.',
     quizNote: 'Majaribio yanahesabika ukipata {{pass}}% au zaidi.',
     title: 'Kozi imekamilika!',
     body: 'Umemaliza {{title}}. Hayo ni maendeleo halisi na ya kudumu.',
@@ -257,7 +258,7 @@ const courses: Translation<typeof en> = {
     lessons: 'masomo',
     studied: 'muda wa kusoma',
     quizAvg: 'wastani wa majaribio',
-    saved: 'Cheti chako kimehifadhiwa kwenye wasifu wako na kinaweza kushirikiwa na walimu, wazazi au shule.',
+    saved: 'Maendeleo yako, XP na sarafu zako zimehifadhiwa kwenye wasifu wako.',
   },
   progress: {
     eyebrow: 'MAENDELEO YA KOZI',
@@ -417,7 +418,8 @@ const courses: Translation<typeof en> = {
   },
   resources: {
     eyebrow: 'NYENZO ZA SOMO',
-    intro: 'Karatasi za muhtasari na seti za mazoezi zimetengenezwa kutoka somo hili, kwa hiyo daima zinaendana na ulichosoma.',
+    intro:
+      'Karatasi za muhtasari na seti za mazoezi zimetengenezwa kutoka somo hili, kwa hiyo daima zinaendana na ulichosoma.',
     options: 'Chaguo za {{title}}',
     savePdf: 'Hifadhi kama PDF',
     copyText: 'Nakili maandishi',
@@ -464,7 +466,8 @@ const courses: Translation<typeof en> = {
   },
   video: {
     youtubeMeta: '{{channel}} · {{duration}} · YouTube',
-    youtubeNote: 'Video hii inatoka YouTube na inachezwa kwenye kicheza cha YouTube. Ukimaliza kuitazama, weka alama kuwa somo limekamilika.',
+    youtubeNote:
+      'Video hii inatoka YouTube na inachezwa kwenye kicheza cha YouTube. Ukimaliza kuitazama, weka alama kuwa somo limekamilika.',
     producing: 'Video hii bado inatengenezwa.',
     meta: '{{duration}} · {{chapters}} · imesimuliwa na {{name}}',
     chapters_one: 'sura {{count}}',

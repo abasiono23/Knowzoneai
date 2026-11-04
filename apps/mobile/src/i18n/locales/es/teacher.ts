@@ -51,7 +51,7 @@ const teacher: Translation<typeof en> = {
     submittedCount: '{{submitted}}/{{total}}',
     coursesA11y: 'Explorar cursos para recomendar',
     coursesTitle: 'Cursos para recomendar',
-    coursesBody: 'Cursos estructurados con quizzes y certificados para tus estudiantes',
+    coursesBody: 'Cursos estructurados con lecciones en video y quizzes para tus estudiantes',
   },
   classes: {
     eyebrow: 'CLASES',
@@ -68,7 +68,8 @@ const teacher: Translation<typeof en> = {
     privacy: 'Privacidad',
     allSettings: 'Todos los ajustes',
     upsellTitle: 'Lleva Knowzone a todo tu centro',
-    upsellBody: 'Las licencias para centros añaden controles de administración, gestión de plazas e informes trimestrales para jefes de departamento.',
+    upsellBody:
+      'Las licencias para centros añaden controles de administración, gestión de plazas e informes trimestrales para jefes de departamento.',
     logOut: 'Cerrar sesión',
   },
   newClass: {
@@ -108,7 +109,8 @@ const teacher: Translation<typeof en> = {
     shareMessage: 'Únete a "{{name}}" en Knowzone AI con el código {{code}}',
     shareA11y: 'Compartir el código para unirse {{code}}',
     noStudents: 'Aún no hay estudiantes',
-    noStudentsHint: 'Comparte el código {{code}}. Los informes aparecen en cuanto los estudiantes empiezan a practicar.',
+    noStudentsHint:
+      'Comparte el código {{code}}. Los informes aparecen en cuanto los estudiantes empiezan a practicar.',
     gaps: 'Lagunas de conocimiento frecuentes',
     struggling: '{{n}} CON DIFICULTADES',
     assignPractice: 'Asignar práctica de {{topic}}',

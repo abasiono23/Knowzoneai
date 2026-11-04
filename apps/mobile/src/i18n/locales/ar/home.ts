@@ -65,7 +65,7 @@ const home: Translation<typeof en> = {
   explore: {
     eyebrow: 'استكشاف',
     title: 'اعثر على درسك التالي',
-    courses: 'دورات بشهادات',
+    courses: 'تعلّم أكثر مع دروس الفيديو',
     browseSubjects: 'تصفّح المواد',
     allSubjects: 'كل المواد',
     trendingNow: 'الأكثر رواجًا الآن 🔥',
@@ -239,7 +239,7 @@ const home: Translation<typeof en> = {
     askTutor: 'اسأل المدرّس الذكي عن هذا',
     partOfCourseLabel: 'جزء من دورة {{title}}',
     partOfCourse: 'جزء من دورة',
-    courseBody: 'تابع مع القراءات والأنشطة والاختبارات وشهادة في النهاية',
+    courseBody: 'تابع مع القراءات والفيديوهات والأنشطة والاختبارات',
     moreIn: 'المزيد في {{subject}}',
   },
   lessonCard: {

@@ -49,7 +49,7 @@ const home: Translation<typeof en> = {
   explore: {
     eyebrow: 'NYOCHAA',
     title: 'Chọta ihe ọmụmụ gị na-esote',
-    courses: 'Kọọsụ nwere asambodo',
+    courses: 'Mụtakwuo ihe site na ihe ọmụmụ vidiyo',
     browseSubjects: 'Lelee isiokwu ọmụmụ',
     allSubjects: 'Isiokwu niile',
     trendingNow: 'Ndị a ma ama ugbu a 🔥',
@@ -204,7 +204,7 @@ const home: Translation<typeof en> = {
     askTutor: 'Jụọ onye nkuzi AI maka nke a',
     partOfCourseLabel: 'Akụkụ nke kọọsụ {{title}}',
     partOfCourse: 'AKỤKỤ NKE KỌỌSỤ',
-    courseBody: 'Gaa n’ihu na ihe ịgụ, ọrụ, ajụjụ nyocha na asambodo',
+    courseBody: 'Gaa n’ihu na ọgụgụ, vidiyo, ọrụ na ajụjụ nyocha',
     moreIn: 'Ndị ọzọ na {{subject}}',
   },
   lessonCard: {

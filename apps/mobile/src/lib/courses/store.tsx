@@ -1,6 +1,5 @@
 import { createContext, useCallback, useContext, useEffect, useRef, useState, type ReactNode } from 'react';
 
-import i18n from '../../i18n';
 import type { User } from '../api';
 import { USE_MOCKS } from '../config';
 import { useRewards } from '../rewards/store';
@@ -225,7 +224,7 @@ export function CoursesProvider({ children }: { children: ReactNode }) {
     return loading.current.get(k)!;
   }, []);
 
-  /** Marks a lesson done, credits study time and issues the certificate when the course is finished. */
+  /** Marks a lesson done and credits study time. Courses don't issue certificates (only Knowzone's own books will). */
   const markDone = useCallback((s: Persisted, courseId: string, lessonId: string): Persisted => {
     const key = lessonKey(courseId, lessonId);
     const course = getCourse(courseId);
@@ -237,31 +236,16 @@ export function CoursesProvider({ children }: { children: ReactNode }) {
       done: { ...s.done, [key]: Date.now() },
       minutes: { ...s.minutes, [courseId]: (s.minutes[courseId] ?? 0) + (lesson?.minutes ?? 0) },
     };
-    const p = progressFrom(next, course);
-    // Real mode: only the server issues certificates (it checks every lesson and quiz).
-    if (USE_MOCKS && p.complete && !next.certificates[courseId]) {
-      next = {
-        ...next,
-        certificates: {
-          ...next.certificates,
-          [courseId]: {
-            id: `KZ-${courseId.slice(0, 3).toUpperCase()}-${uid().toUpperCase()}`,
-            issuedAt: Date.now(),
-            name: nameRef.current ?? i18n.t('courses:certificate.defaultName'),
-            score: p.average ?? 1,
-          },
-        },
-      };
-    }
     return next;
   }, []);
 
-  /** Learning earns too: XP per lesson, and a coin bonus with every certificate (the server's job in real mode). */
+  /** Learning earns too: XP per lesson, and a bonus for finishing a course (the server's job in real mode). */
   const settle = (before: Persisted, next: Persisted, courseId: string, lessonId: string) => {
     if (!USE_MOCKS) return;
     const key = lessonKey(courseId, lessonId);
     if (next.done[key] && !before.done[key]) grant(10, 0, `course-lesson:${key}`);
-    if (next.certificates[courseId] && !before.certificates[courseId]) grant(100, 50, `course:${courseId}`);
+    const course = getCourse(courseId);
+    if (course && progressFrom(next, course).complete && !progressFrom(before, course).complete) grant(100, 50, `course:${courseId}`);
   };
 
   /** The server's answer to a finished lesson: new XP and coins, and the certificate if that was the last one. */

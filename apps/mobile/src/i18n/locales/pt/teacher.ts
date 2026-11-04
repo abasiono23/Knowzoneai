@@ -51,7 +51,7 @@ const teacher: Translation<typeof en> = {
     submittedCount: '{{submitted}}/{{total}}',
     coursesA11y: 'Ver cursos para recomendar',
     coursesTitle: 'Cursos para recomendar',
-    coursesBody: 'Cursos estruturados com quizzes e certificados para os teus alunos',
+    coursesBody: 'Cursos estruturados com aulas em vídeo e quizzes para os teus alunos',
   },
   classes: {
     eyebrow: 'TURMAS',
@@ -68,7 +68,8 @@ const teacher: Translation<typeof en> = {
     privacy: 'Privacidade',
     allSettings: 'Todas as definições',
     upsellTitle: 'Leva o Knowzone a toda a tua escola',
-    upsellBody: 'As licenças para escolas acrescentam controlos de administração, gestão de lugares e relatórios do período para os coordenadores de departamento.',
+    upsellBody:
+      'As licenças para escolas acrescentam controlos de administração, gestão de lugares e relatórios do período para os coordenadores de departamento.',
     logOut: 'Terminar sessão',
   },
   newClass: {

@@ -67,13 +67,18 @@ export default function ProfileScreen() {
       href: '/me/courses',
       color: Colors.info,
     },
-    {
-      icon: 'ribbon',
-      label: t('profile.tiles.certificates'),
-      meta: t('profile.tiles.earned', { count: certs }),
-      href: '/me/certificates',
-      color: Colors.reward,
-    },
+    // Courses no longer issue certificates: the tile stays only for people who earned one before.
+    ...(certs > 0
+      ? [
+          {
+            icon: 'ribbon' as const,
+            label: t('profile.tiles.certificates'),
+            meta: t('profile.tiles.earned', { count: certs }),
+            href: '/me/certificates',
+            color: Colors.reward,
+          },
+        ]
+      : []),
     {
       icon: 'bookmark',
       label: t('profile.tiles.saved'),

@@ -53,7 +53,7 @@ const home: Translation<typeof en> = {
   explore: {
     eyebrow: 'EXPLORAR',
     title: 'Encuentra tu próxima lección',
-    courses: 'Cursos con certificado',
+    courses: 'Aprende más con lecciones en video',
     browseSubjects: 'Ver asignaturas',
     allSubjects: 'Todas las asignaturas',
     trendingNow: 'Tendencia ahora 🔥',
@@ -213,7 +213,7 @@ const home: Translation<typeof en> = {
     askTutor: 'Pregúntale al tutor de IA sobre esto',
     partOfCourseLabel: 'Parte del curso {{title}}',
     partOfCourse: 'PARTE DE UN CURSO',
-    courseBody: 'Sigue con lecturas, actividades, quizzes y un certificado',
+    courseBody: 'Sigue con lecturas, videos, actividades y quizzes',
     moreIn: 'Más de {{subject}}',
   },
   lessonCard: {

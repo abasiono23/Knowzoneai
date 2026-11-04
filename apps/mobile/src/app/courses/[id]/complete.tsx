@@ -22,7 +22,7 @@ export default function CourseCompleteScreen() {
 
 function Complete({ course }: { course: Course }) {
   const { t } = useTranslation('courses');
-  const { progressOf, minutes, done, ratings } = useCourses();
+  const { progressOf, minutes, done, ratings, certificates } = useCourses();
   const p = progressOf(course);
 
   if (!p.complete) {
@@ -64,11 +64,14 @@ function Complete({ course }: { course: Course }) {
         subtitle={t('complete.body', { title: course.title })}
         footer={
           <>
-            <Button
-              title={t('complete.viewCertificate')}
-              icon="ribbon"
-              onPress={() => router.replace(`/courses/${course.id}/certificate`)}
-            />
+            {/* Courses no longer issue certificates; one earned before still shows. */}
+            {certificates[course.id] && (
+              <Button
+                title={t('complete.viewCertificate')}
+                icon="ribbon"
+                onPress={() => router.replace(`/courses/${course.id}/certificate`)}
+              />
+            )}
             {!ratings[course.id] && (
               <Button
                 variant="secondary"

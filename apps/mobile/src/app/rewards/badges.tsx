@@ -142,7 +142,8 @@ export default function BadgesScreen() {
         </View>
       </LinearGradient>
       <View style={styles.filters}>
-        {GROUPS.map((g) => (
+        {/* Certificate badges come only from certificates earned before courses stopped issuing them. */}
+        {GROUPS.filter((g) => g !== 'courses' || courses.length > 0).map((g) => (
           <ChoiceChip key={g} label={t(`badges.groups.${g}`)} selected={group === g} onPress={() => setGroup(g)} />
         ))}
       </View>

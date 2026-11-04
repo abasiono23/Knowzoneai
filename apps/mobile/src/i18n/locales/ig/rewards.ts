@@ -7,7 +7,10 @@ const rewards: Translation<typeof en> = {
   coinsFootnote: 'Coin bụ naanị maka ihe ọchị ọzọ. Enweghị ike ịgbanwe ha ka ha ghọọ ego ma ọ bụ kredit AI.',
   items: {
     'frame-gold': { name: 'Okpokoro ọlaedo', description: 'Mgbanaka ọlaedo na-enwu gburugburu foto profaịlụ gị.' },
-    'frame-galaxy': { name: 'Okpokoro galaxy', description: 'Odo odo na acha anụnụ-akwụkwọ ndụ, dị ka mbara igwe abalị Knowzone.' },
+    'frame-galaxy': {
+      name: 'Okpokoro galaxy',
+      description: 'Odo odo na acha anụnụ-akwụkwọ ndụ, dị ka mbara igwe abalị Knowzone.',
+    },
     'frame-kente': { name: 'Okpokoro Kente', description: 'Agba West Afrịka siri ike maka ndị kacha amụ ihe.' },
     'frame-independence': {
       name: 'Okpokoro Nnwere Onwe',
@@ -163,9 +166,12 @@ const rewards: Translation<typeof en> = {
         detail: 'Meghee ngwa ahụ ma nara ya otu ugboro kwa ụbọchị. Ụbọchị 7 na-akwụ kacha ukwuu.',
       },
       challenge: { title: 'Ihe ịma aka kwa ụbọchị', detail: 'Ajụjụ ise si n’ụwa Knowzone World ọ bụla.' },
-      levels: { title: 'Ọkwa Knowzone World', detail: 'Coin maka kpakpando ọhụrụ ọ bụla, ihe ndabara maka kpakpando 3.' },
+      levels: {
+        title: 'Ọkwa Knowzone World',
+        detail: 'Coin maka kpakpando ọhụrụ ọ bụla, ihe ndabara maka kpakpando 3.',
+      },
       quests: { title: 'Njem ọchụchọ', detail: 'Ozi kwa ụbọchị na kwa izu, a na-anara ha na Knowzone World.' },
-      course: { title: 'Mechaa kọọsụ', detail: 'Mezue ihe ọmụmụ niile ma nweta asambodo gị.' },
+      course: { title: 'Mechaa kọọsụ', detail: 'Mechaa ihe ọmụmụ niile dị na kọs.' },
       lessons: { title: 'Ihe ọmụmụ kọọsụ', detail: 'Ihe ọmụmụ ọ bụla ị mezuru na-enweta XP.' },
     },
   },

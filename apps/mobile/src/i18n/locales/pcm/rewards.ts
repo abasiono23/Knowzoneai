@@ -165,7 +165,7 @@ const rewards: Translation<typeof en> = {
       challenge: { title: 'Daily challenge', detail: 'Five questions from every Knowzone World.' },
       levels: { title: 'Knowzone World levels', detail: 'Coins for every new star, bonus for 3 stars.' },
       quests: { title: 'Quests', detail: 'Daily and weekly missions, you go collect dem for Knowzone World.' },
-      course: { title: 'Finish course', detail: 'Finish every lesson and collect your certificate.' },
+      course: { title: 'Finish course', detail: 'Finish every lesson for one course.' },
       lessons: { title: 'Course lessons', detail: 'Every lesson wey you finish dey earn XP.' },
     },
   },

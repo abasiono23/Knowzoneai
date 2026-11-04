@@ -45,7 +45,7 @@ const teacher: Translation<typeof en> = {
     submittedCount: '{{submitted}}/{{total}}',
     coursesA11y: 'Vinjari kozi za kupendekeza',
     coursesTitle: 'Kozi za kupendekeza',
-    coursesBody: 'Kozi zilizopangwa zenye majaribio na vyeti kwa wanafunzi wako',
+    coursesBody: 'Kozi zilizopangwa zenye masomo ya video na majaribio kwa wanafunzi wako',
   },
   classes: {
     eyebrow: 'MADARASA',
@@ -62,7 +62,8 @@ const teacher: Translation<typeof en> = {
     privacy: 'Faragha',
     allSettings: 'Mipangilio yote',
     upsellTitle: 'Leta Knowzone kwa shule yako yote',
-    upsellBody: 'Leseni za shule huongeza udhibiti wa msimamizi, usimamizi wa nafasi na ripoti za muhula kwa wakuu wa idara.',
+    upsellBody:
+      'Leseni za shule huongeza udhibiti wa msimamizi, usimamizi wa nafasi na ripoti za muhula kwa wakuu wa idara.',
     logOut: 'Toka',
   },
   newClass: {

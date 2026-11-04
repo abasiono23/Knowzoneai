@@ -91,7 +91,7 @@ const billing: Translation<typeof en> = {
       studyTools: 'Nchịkọta, flashcard na ajụjụ nyocha',
       videos: 'Vidiyo nkọwa',
       priority: 'Nhazi mbụ',
-      courses: 'Kọọsụ na asambodo',
+      courses: 'Kọs nwere ihe ọmụmụ vidiyo',
       advancedQuizzes: 'Ajụjụ nyocha dị elu na ngụgharị nwere oghere',
       studyPlans: 'Atụmatụ ọmụmụ ahaziri maka gị',
       examPapers: 'Akwụkwọ omume ule',

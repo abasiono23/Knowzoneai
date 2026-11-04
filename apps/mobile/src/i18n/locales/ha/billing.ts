@@ -91,7 +91,7 @@ const billing: Translation<typeof en> = {
       studyTools: 'Taƙaitawa, katunan bita da gwaje-gwaje',
       videos: 'Bidiyon bayani',
       priority: 'Fifiko wajen sarrafawa',
-      courses: 'Kwasa-kwasai da takardun shaida',
+      courses: 'Kwasa-kwasai da darussan bidiyo',
       advancedQuizzes: 'Gwaje-gwaje masu zurfi da bita mai tazara',
       studyPlans: 'Tsarin karatu na musamman',
       examPapers: 'Takardun atisayen jarrabawa',

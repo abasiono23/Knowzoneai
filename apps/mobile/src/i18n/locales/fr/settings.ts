@@ -76,7 +76,8 @@ const settings: Translation<typeof en> = {
   appearance: {
     title: 'Apparence',
     theme: 'Thème',
-    themeFooter: 'Knowzone est pensé d’abord en mode sombre pour reposer les yeux le soir. Un thème clair arrive bientôt.',
+    themeFooter:
+      'Knowzone est pensé d’abord en mode sombre pour reposer les yeux le soir. Un thème clair arrive bientôt.',
     dark: 'Sombre',
     darkHint: 'Bleu nuit profond avec des touches vives',
     light: 'Clair',
@@ -90,7 +91,8 @@ const settings: Translation<typeof en> = {
     },
     preview: 'APERÇU',
     previewTitle: 'La photosynthèse en une minute',
-    previewBody: 'Les plantes utilisent la lumière du soleil pour transformer l’eau et le dioxyde de carbone en glucose et en oxygène.',
+    previewBody:
+      'Les plantes utilisent la lumière du soleil pour transformer l’eau et le dioxyde de carbone en glucose et en oxygène.',
     motion: 'Animations et retours',
     reduceMotion: 'Réduire les animations',
     reduceMotionHint: 'Moins d’animations dans toute l’appli',
@@ -150,7 +152,8 @@ const settings: Translation<typeof en> = {
     changedBody: 'Utilise ton nouveau mot de passe la prochaine fois que tu te connectes, sur n’importe quel appareil.',
     addTitle: 'Ajouter un mot de passe',
     changeTitle: 'Changer le mot de passe',
-    addSubtitle: 'Tu te connectes avec {{provider}}. Ajouter un mot de passe te permet aussi de te connecter avec {{email}}.',
+    addSubtitle:
+      'Tu te connectes avec {{provider}}. Ajouter un mot de passe te permet aussi de te connecter avec {{email}}.',
     changeSubtitle: 'Choisis un mot de passe que tu n’utilises nulle part ailleurs.',
     add: 'Ajouter le mot de passe',
     update: 'Mettre à jour le mot de passe',
@@ -159,7 +162,8 @@ const settings: Translation<typeof en> = {
     newHint: 'Au moins 8 caractères, avec des lettres et des chiffres',
     confirm: 'Confirme le nouveau mot de passe',
     mismatch: 'Les mots de passe ne correspondent pas',
-    forgot: 'Tu l’as oublié ? Déconnecte-toi, puis utilise « Mot de passe oublié ? » sur l’écran de connexion pour le réinitialiser par e-mail.',
+    forgot:
+      'Tu l’as oublié ? Déconnecte-toi, puis utilise « Mot de passe oublié ? » sur l’écran de connexion pour le réinitialiser par e-mail.',
   },
   connected: {
     title: 'Comptes connectés',
@@ -178,13 +182,15 @@ const settings: Translation<typeof en> = {
     disconnect: 'Déconnecter',
     onlyMethod:
       'C’est ton seul moyen de connexion, il ne peut donc pas être déconnecté. Ajoute d’abord un mot de passe ou un autre compte.',
-    emailNote: 'Changer d’adresse e-mail n’est pas encore possible dans l’appli. Il faudra vérifier que c’est bien toi.',
+    emailNote:
+      'Changer d’adresse e-mail n’est pas encore possible dans l’appli. Il faudra vérifier que c’est bien toi.',
   },
   devices: {
     title: 'Appareils',
     loadError: 'Impossible de charger tes appareils',
     revokeError: 'Impossible de déconnecter cet appareil',
-    intro: 'Les appareils où ton compte est connecté. Tu n’en reconnais pas un ? Déconnecte-le et change ton mot de passe.',
+    intro:
+      'Les appareils où ton compte est connecté. Tu n’en reconnais pas un ? Déconnecte-le et change ton mot de passe.',
     activeNow: 'Actif maintenant',
     meta: '{{location}} · {{status}}',
     thisDevice: 'Cet appareil',
@@ -264,7 +270,8 @@ const settings: Translation<typeof en> = {
   data: {
     eyebrow: 'CONFIDENTIALITÉ',
     title: 'Télécharger mes données',
-    intro: 'Obtiens une copie de tout ce que Knowzone détient sur toi, dans un format que tu peux ouvrir ou emporter ailleurs.',
+    intro:
+      'Obtiens une copie de tout ce que Knowzone détient sur toi, dans un format que tu peux ouvrir ou emporter ailleurs.',
     whatsIncluded: 'Ce qui est inclus',
     included: {
       profile: 'Ton profil, tes paramètres et tes préférences d’apprentissage',
@@ -364,7 +371,8 @@ const settings: Translation<typeof en> = {
     courses: 'Cours',
     noCourses: 'Pas encore de cours.',
     courseAverage: 'Moyenne aux quiz des cours : {{value}}',
-    packAverage: 'Ta moyenne aux quiz des packs de révision est de {{value}}. Revois tes réponses fausses pour la faire monter.',
+    packAverage:
+      'Ta moyenne aux quiz des packs de révision est de {{value}}. Revois tes réponses fausses pour la faire monter.',
   },
   myCourses: {
     title: 'Mes cours',
@@ -379,15 +387,16 @@ const settings: Translation<typeof en> = {
       done: 'Aucun cours terminé pour l’instant',
       saved: 'Rien d’enregistré',
     },
-    emptyDoneBody: 'Termine toutes les leçons d’un cours pour obtenir son certificat.',
-    emptyBody: 'Parcours des cours structurés avec quiz et certificats.',
+    emptyDoneBody: 'Termine toutes les leçons d’un cours pour le voir ici.',
+    emptyBody: 'Parcours des cours structurés avec leçons vidéo et quiz.',
     browse: 'Parcourir les cours',
     findAnother: 'Trouver un autre cours',
   },
   certificates: {
     title: 'Mes certificats',
     emptyTitle: 'Pas encore de certificats',
-    emptyBody: 'Termine toutes les leçons d’un cours (60 % requis aux quiz) pour obtenir un certificat à télécharger et partager.',
+    emptyBody:
+      'Termine toutes les leçons d’un cours (60 % requis aux quiz) pour obtenir un certificat à télécharger et partager.',
     a11y: 'Certificat pour {{title}}',
     label: 'CERTIFICAT DE RÉUSSITE',
     meta: '{{date}} · {{id}}',
@@ -492,11 +501,13 @@ const settings: Translation<typeof en> = {
       streak7: 'Série de 7 jours',
     },
     inviteTitle: 'Invite des amis, gagne des crédits',
-    inviteBody: 'Vous recevez tous les deux 5 crédits IA quand ton ami termine sa première leçon, son premier quiz ou son premier niveau.',
+    inviteBody:
+      'Vous recevez tous les deux 5 crédits IA quand ton ami termine sa première leçon, son premier quiz ou son premier niveau.',
     shareInvite: 'Partager l’invitation',
     myReferrals: 'Mes parrainages',
     goPlus: 'Passer à Plus',
-    goPlusBody: '10× plus de questions au tuteur, {{credits}} crédits IA par mois et des vidéos explicatives plus longues.',
+    goPlusBody:
+      '10× plus de questions au tuteur, {{credits}} crédits IA par mois et des vidéos explicatives plus longues.',
     manageSubscription: 'Gérer l’abonnement',
     manageBody: 'Gère ton abonnement, tes reçus et ton renouvellement',
     help: 'Aide',

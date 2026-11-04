@@ -7,8 +7,14 @@ const rewards: Translation<typeof en> = {
   coinsFootnote: 'Tsabobi na ƙarin nishaɗi ne kawai. Ba za a iya musanya su da kuɗi ko kiredit na AI ba.',
   items: {
     'frame-gold': { name: 'Firam na zinare', description: 'Zobe na zinare mai sheƙi a kewayen hoton bayananka.' },
-    'frame-galaxy': { name: 'Firam na taurari', description: 'Shunayya da shuɗi-kore, kamar sararin dare na Knowzone.' },
-    'frame-kente': { name: 'Firam na Kente', description: 'Launuka masu ƙarfi na Afirka ta Yamma don gwarazan masu koyo.' },
+    'frame-galaxy': {
+      name: 'Firam na taurari',
+      description: 'Shunayya da shuɗi-kore, kamar sararin dare na Knowzone.',
+    },
+    'frame-kente': {
+      name: 'Firam na Kente',
+      description: 'Launuka masu ƙarfi na Afirka ta Yamma don gwarazan masu koyo.',
+    },
     'frame-independence': {
       name: 'Firam na ’Yancin Kai',
       description: 'Kore da fari, don murnar 1 ga Oktoba. Ana samun sa ne kawai a makon farko na Oktoba.',
@@ -165,7 +171,7 @@ const rewards: Translation<typeof en> = {
       challenge: { title: 'Ƙalubalen yau da kullum', detail: 'Tambayoyi biyar daga kowace duniyar Knowzone World.' },
       levels: { title: 'Matakan Knowzone World', detail: 'Tsabobi don kowane sabon tauraro, ƙari idan taurari 3 ne.' },
       quests: { title: 'Ayyuka', detail: 'Ayyukan yau da kullum da na mako, ana karɓa a Knowzone World.' },
-      course: { title: 'Kammala kwas', detail: 'Kammala kowane darasi ka samu satifiket ɗinka.' },
+      course: { title: 'Kammala kwas', detail: 'Kammala kowane darasi a cikin kwas.' },
       lessons: { title: 'Darussan kwas', detail: 'Kowane darasi da ka kammala yana ba da XP.' },
     },
   },
@@ -294,7 +300,8 @@ const rewards: Translation<typeof en> = {
     balance: 'Ma’auninka',
     cost: 'Farashi',
     after: 'Ma’auni bayan haka',
-    boostNote: 'Ana amfani da ƙarfafawa kai tsaye idan kana buƙatarsu. Ba za a mayar da tsabobi ba da zarar an kashe su.',
+    boostNote:
+      'Ana amfani da ƙarfafawa kai tsaye idan kana buƙatarsu. Ba za a mayar da tsabobi ba da zarar an kashe su.',
     keepNote: 'Wannan naka ne har abada. Ba za a mayar da tsabobi ba da zarar an kashe su.',
   },
   success: {

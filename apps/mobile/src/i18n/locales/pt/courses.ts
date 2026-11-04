@@ -132,7 +132,7 @@ const courses: Translation<typeof en> = {
     wrongPairings_many: '{{count}} pares errados pelo caminho. {{feedback}}',
   },
   catalogue: {
-    eyebrow: '{{count}} CURSOS · CERTIFICADOS INCLUÍDOS',
+    eyebrow: '{{count}} CURSOS · AULAS EM VÍDEO',
     title: 'Cursos',
     searchPlaceholder: 'Pesquisa cursos, temas ou exames',
     searchA11y: 'Pesquisar cursos',
@@ -141,7 +141,8 @@ const courses: Translation<typeof en> = {
     results_other: '{{count}} cursos para “{{query}}”',
     results_many: '{{count}} cursos para “{{query}}”',
     noResults: 'Nenhum curso encontrado',
-    noResultsBody: 'Experimenta uma disciplina como “biologia”, um tema como “equações do segundo grau” ou um exame como “WAEC”.',
+    noResultsBody:
+      'Experimenta uma disciplina como “biologia”, um tema como “equações do segundo grau” ou um exame como “WAEC”.',
     continueLabel: 'CONTINUA ONDE PARASTE',
     next: 'A seguir: {{title}} · {{duration}}',
     resume: 'Retomar curso',
@@ -245,7 +246,8 @@ const courses: Translation<typeof en> = {
   certificate: {
     eyebrow: 'CERTIFICADO',
     lockedTitle: 'Termina o curso para desbloqueares o teu certificado',
-    lockedBody: '{{done}} de {{total}} lições concluídas. Todas as lições contam, e nos quizzes precisas de {{pass}}% para passar.',
+    lockedBody:
+      '{{done}} de {{total}} lições concluídas. Todas as lições contam, e nos quizzes precisas de {{pass}}% para passar.',
     continue: 'Continuar curso',
     title: 'Certificado de Conclusão',
     certifies: 'CERTIFICA-SE QUE',
@@ -266,9 +268,9 @@ const courses: Translation<typeof en> = {
   },
   complete: {
     almostTitle: 'Quase lá',
-    almostBody_one: 'Termina mais {{count}} lição para concluíres {{title}} e ganhares o teu certificado.',
-    almostBody_other: 'Termina mais {{count}} lições para concluíres {{title}} e ganhares o teu certificado.',
-    almostBody_many: 'Termina mais {{count}} lições para concluíres {{title}} e ganhares o teu certificado.',
+    almostBody_one: 'Termina mais {{count}} lição para concluíres {{title}}.',
+    almostBody_other: 'Termina mais {{count}} lições para concluíres {{title}}.',
+    almostBody_many: 'Termina mais {{count}} lições para concluíres {{title}}.',
     quizNote: 'Os quizzes contam assim que tiveres {{pass}}% ou mais.',
     title: 'Curso concluído!',
     body: 'Terminaste {{title}}. Isto é progresso real e duradouro.',
@@ -277,7 +279,7 @@ const courses: Translation<typeof en> = {
     lessons: 'lições',
     studied: 'de estudo',
     quizAvg: 'média quizzes',
-    saved: 'O teu certificado fica guardado no teu perfil e pode ser partilhado com professores, pais ou escolas.',
+    saved: 'O teu progresso, XP e moedas ficam guardados no teu perfil.',
   },
   progress: {
     eyebrow: 'PROGRESSO NO CURSO',
@@ -445,7 +447,8 @@ const courses: Translation<typeof en> = {
   },
   resources: {
     eyebrow: 'RECURSOS DA LIÇÃO',
-    intro: 'As fichas-resumo e os exercícios são feitos a partir desta lição, por isso correspondem sempre ao que estudaste.',
+    intro:
+      'As fichas-resumo e os exercícios são feitos a partir desta lição, por isso correspondem sempre ao que estudaste.',
     options: 'Opções para {{title}}',
     savePdf: 'Guardar como PDF',
     copyText: 'Copiar texto',
@@ -494,7 +497,8 @@ const courses: Translation<typeof en> = {
   },
   video: {
     youtubeMeta: '{{channel}} · {{duration}} · YouTube',
-    youtubeNote: 'Este vídeo é do YouTube e é reproduzido no leitor do YouTube. Quando o vires, marca a lição como concluída.',
+    youtubeNote:
+      'Este vídeo é do YouTube e é reproduzido no leitor do YouTube. Quando o vires, marca a lição como concluída.',
     producing: 'Este vídeo ainda está a ser produzido.',
     meta: '{{duration}} · {{chapters}} · narrado por {{name}}',
     chapters_one: '{{count}} capítulo',
@@ -507,7 +511,8 @@ const courses: Translation<typeof en> = {
   generated: {
     bigIdea: 'A grande ideia',
     needToKnow: 'O que precisas de saber',
-    teachIt: 'Lê cada ponto devagar e tenta explicá-lo em voz alta sem olhar. Se o consegues ensinar, é porque o sabes.',
+    teachIt:
+      'Lê cada ponto devagar e tenta explicá-lo em voz alta sem olhar. Se o consegues ensinar, é porque o sabes.',
     inExam: 'No exame',
     examTip:
       '{{topic}} sai com frequência em {{exams}}. Aprende os termos-chave com exatidão e mostra todos os passos nos cálculos.',
@@ -537,7 +542,8 @@ const courses: Translation<typeof en> = {
     worksheetMeta_many: 'Ficha · {{count}} perguntas',
     pastTitle: 'Perguntas de exames anteriores do {{exam}}: {{subject}}',
     pastMeta: 'Exame anterior · 2019–2025',
-    pastBody: 'As perguntas de exames anteriores do {{exams}} sobre este tema vão aparecer aqui quando o banco de perguntas estiver ligado.',
+    pastBody:
+      'As perguntas de exames anteriores do {{exams}} sobre este tema vão aparecer aqui quando o banco de perguntas estiver ligado.',
     askTutor: 'Pergunta ao tutor de IA sobre esta lição',
     askTutorMeta: 'Abre o tutor com este tema',
     keyIdea: 'Ideia-chave {{number}}: consegues explicá-la numa frase antes de olhares?',

@@ -79,7 +79,7 @@ const help: Translation<typeof en> = {
       start: 'Bíbẹ̀rẹ̀',
       ai: 'Olùkọ́ AI àti irinṣẹ́ ẹ̀kọ́',
       videos: 'Fídíò',
-      courses: 'Kọ́ọ̀sì àti ìwé-ẹ̀rí',
+      courses: 'Àwọn kọ́ọ̀sì',
       world: 'Knowzone World àti ẹ̀bùn',
       account: 'Àkọọ́lẹ̀ àti ìpamọ́',
       payments: 'Ètò àti ìsanwó',
@@ -124,8 +124,8 @@ const help: Translation<typeof en> = {
         a: 'Ṣí i láti Àwọn fídíò mi kí o sì tẹ Tún gbìyànjú. A kò ní gba kírẹ́dìtì lọ́wọ́ rẹ fún fídíò tí kò ṣiṣẹ́.',
       },
       certificate: {
-        q: 'Báwo ni mo ṣe lè gba ìwé-ẹ̀rí?',
-        a: 'Parí gbogbo ẹ̀kọ́ inú kọ́ọ̀sì kan. Ìwé-ẹ̀rí rẹ yóò hàn nínú Profaili → Àwọn ìwé-ẹ̀rí mi, níbi tí o ti lè ṣe ìgbàsílẹ̀ rẹ̀ tàbí pín in.',
+        q: 'Ṣé àwọn kọ́ọ̀sì ní ìwé-ẹ̀rí?',
+        a: 'Rárá. Àwọn kọ́ọ̀sì wà fún ẹ̀kọ́, pẹ̀lú ẹ̀kọ́ fídíò, kíkà àti ìdánwò, o sì máa gba XP àti owó ẹyọ tí o bá parí ọ̀kan. Ìwé-ẹ̀rí yóò wá pẹ̀lú àwọn ìwé Knowzone fúnra rẹ̀.',
       },
       'course-progress': {
         q: 'Ṣé a ń fi ìlọsíwájú kọ́ọ̀sì mi pamọ́?',

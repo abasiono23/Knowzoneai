@@ -124,12 +124,6 @@ function Details({ course }: { course: Course }) {
                 label: t('details.stats.lessons', { count: lessons.length }),
               },
               {
-                id: 'certificate',
-                icon: 'ribbon-outline' as const,
-                value: t('details.stats.certificateValue'),
-                label: t('details.stats.certificate'),
-              },
-              {
                 id: 'paced',
                 icon: 'phone-portrait-outline' as const,
                 value: t('details.stats.self'),
@@ -324,12 +318,21 @@ function Details({ course }: { course: Course }) {
               style={{ flex: 1 }}
               onPress={() => router.push(`/courses/${course.id}/curriculum`)}
             />
-            <Button
-              title={certificates[course.id] ? t('details.certificate') : t('details.finish')}
-              icon="ribbon"
-              style={{ flex: 1.4 }}
-              onPress={() => router.push(`/courses/${course.id}/certificate`)}
-            />
+            {certificates[course.id] ? (
+              <Button
+                title={t('details.certificate')}
+                icon="ribbon"
+                style={{ flex: 1.4 }}
+                onPress={() => router.push(`/courses/${course.id}/certificate`)}
+              />
+            ) : (
+              <Button
+                title={t('complete.findNext')}
+                icon="compass"
+                style={{ flex: 1.4 }}
+                onPress={() => router.push(`/courses/${course.id}/related`)}
+              />
+            )}
           </View>
         ) : (
           <>

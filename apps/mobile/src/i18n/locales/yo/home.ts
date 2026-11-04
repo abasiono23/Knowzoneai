@@ -49,7 +49,7 @@ const home: Translation<typeof en> = {
   explore: {
     eyebrow: 'ṢÀWÁRÍ',
     title: 'Wá ẹ̀kọ́ rẹ tó kàn',
-    courses: 'Kọ́ọ̀sì pẹ̀lú ìwé-ẹ̀rí',
+    courses: 'Kọ́ sí i pẹ̀lú ẹ̀kọ́ fídíò',
     browseSubjects: 'Ṣàwárí àwọn ẹ̀kọ́',
     allSubjects: 'Gbogbo ẹ̀kọ́',
     trendingNow: 'Gbajúmọ̀ báyìí 🔥',
@@ -204,7 +204,7 @@ const home: Translation<typeof en> = {
     askTutor: 'Béèrè lọ́wọ́ olùkọ́ AI nípa èyí',
     partOfCourseLabel: 'Ara kọ́ọ̀sì {{title}}',
     partOfCourse: 'ARA KỌ́Ọ̀SÌ KAN',
-    courseBody: 'Máa bá a lọ pẹ̀lú ìwé kíkà, iṣẹ́, ìdánwò àti ìwé-ẹ̀rí',
+    courseBody: 'Máa bá a lọ pẹ̀lú kíkà, fídíò, iṣẹ́ àṣetiṣe àti ìdánwò',
     moreIn: 'Púpọ̀ sí i nínú {{subject}}',
   },
   lessonCard: {

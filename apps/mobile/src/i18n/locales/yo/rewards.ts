@@ -165,7 +165,7 @@ const rewards: Translation<typeof en> = {
       challenge: { title: 'Ìpèníjà ojoojúmọ́', detail: 'Ìbéèrè márùn-ún láti gbogbo Knowzone World.' },
       levels: { title: 'Àwọn ìpele Knowzone World', detail: 'Owó-ẹyọ fún gbogbo ìràwọ̀ tuntun, àfikún fún ìràwọ̀ 3.' },
       quests: { title: 'Ìrìn àjò', detail: 'Iṣẹ́ àpinfúnni ojoojúmọ́ àti ọ̀sọ̀ọ̀sẹ̀, tí a ń gbà nínú Knowzone World.' },
-      course: { title: 'Parí kọ́ọ̀sì kan', detail: 'Parí gbogbo ẹ̀kọ́ kí o sì jèrè ìwé-ẹ̀rí rẹ.' },
+      course: { title: 'Parí kọ́ọ̀sì kan', detail: 'Parí gbogbo ẹ̀kọ́ inú kọ́ọ̀sì kan.' },
       lessons: { title: 'Ẹ̀kọ́ kọ́ọ̀sì', detail: 'Gbogbo ẹ̀kọ́ tí o parí ń mú XP wá.' },
     },
   },

@@ -86,7 +86,7 @@ const billing: Translation<typeof en> = {
       studyTools: 'Àkópọ̀, káàdì ìrántí àti ìdánwò',
       videos: 'Àlàyé fídíò',
       priority: 'Iṣẹ́ ìṣáájú',
-      courses: 'Kọ́ọ̀sì àti ìwé-ẹ̀rí',
+      courses: 'Àwọn kọ́ọ̀sì pẹ̀lú ẹ̀kọ́ fídíò',
       advancedQuizzes: 'Ìdánwò gíga àti àtúnyẹ̀wò oníàlàfo',
       studyPlans: 'Ètò ẹ̀kọ́ ti ara ẹni',
       examPapers: 'Ìwé ìdánrawò ìdánwò',

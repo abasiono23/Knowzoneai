@@ -72,7 +72,7 @@ the same request and response shapes, errors as `{ error, reason? }` and times a
 | 1d | AI tutor (screens 47–61) with OpenAI: answers, photo and PDF questions, flashcards, quizzes, diagrams, daily limits | ✅ Built and tested (see below) |
 | 1e | AI study packs (screens 62–87) with OpenAI: PDFs, Word, photos, text, topics, YouTube; notes, flashcards, quizzes, mind maps, diagrams | ✅ Built and tested (see below) |
 | 1f | Short videos (screens 88–109) with OpenAI: scripts, scene pictures, narration voices; Originals feed; likes, saves, progress, reports | ✅ Built and tested (see below) |
-| 1g | Courses (screens 110–128): 8 full courses from open textbooks, YouTube videos, AI practice and quizzes, progress, certificates | ✅ Built and tested (see below) |
+| 1g | Courses (screens 110–128): 8 full courses from open textbooks, YouTube videos, AI practice and quizzes, progress (no certificates) | ✅ Built and tested (see below) |
 | 2 | Rewards, XP and coins (155–168) and the referral system (169–176) | ✅ Built and tested (see below) |
 | 2b | Profile and settings (177–197); subscriptions and payments with Flutterwave in naira or dollars (198–218) | ✅ Built and tested (see below) |
 | 2c | Help, safety and legal (219–232): support tickets, bug reports, feedback, reports, blocking, copyright notices, restrictions and appeals | ✅ Built and tested (see below) |
@@ -298,8 +298,7 @@ Still to do:
   Everything AI or YouTube produced is saved in `prisma/seed/courses/generated/` the moment it's made, with a
   running spend total; re-runs (and other databases) reuse it for free, and the budget covers all runs.
 - **Progress** (114–126): enrolment, finished lessons, quiz attempts (marked by the server; 60% to pass),
-  notes, ratings and study time sync to the account. XP is awarded by the server. The **certificate** (125)
-  is issued by the server only when every lesson is done; anyone can verify it at `GET /certificates/:id`.
+  notes, ratings and study time sync to the account. XP is awarded by the server. Courses **don't issue certificates** (decided November 2026): certificates will come only with Knowzone's own books. Finishing a course still earns a bonus (100 XP, 50 coins). Certificates issued before then still show for their owners and can be verified by anyone at `GET /certificates/:id` and on the website at `/verify/<id>`.
 - **Instructor profile** (128): the course provider (OpenStax) and the book's authors.
 - **Endpoints:** `GET /courses`, `GET /courses/:id/lessons/:lessonId`, `GET /certificates/:id`, `GET /me/courses`,
   `POST /me/courses/:id/enroll|open`, `PUT /me/courses/:id/save|rating`,

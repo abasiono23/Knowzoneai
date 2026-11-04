@@ -119,7 +119,7 @@ const courses = {
     wrongPairings_other: '{{count}} wrong pairings along the way. {{feedback}}',
   },
   catalogue: {
-    eyebrow: '{{count}} COURSES · CERTIFICATES INCLUDED',
+    eyebrow: '{{count}} COURSES · VIDEO LESSONS',
     title: 'Courses',
     searchPlaceholder: 'Search courses, topics or exams',
     searchA11y: 'Search courses',
@@ -248,8 +248,8 @@ const courses = {
   },
   complete: {
     almostTitle: 'Almost there',
-    almostBody_one: 'Finish {{count}} more lesson to complete {{title}} and earn your certificate.',
-    almostBody_other: 'Finish {{count}} more lessons to complete {{title}} and earn your certificate.',
+    almostBody_one: 'Finish {{count}} more lesson to complete {{title}}.',
+    almostBody_other: 'Finish {{count}} more lessons to complete {{title}}.',
     quizNote: 'Quizzes count once you score {{pass}}% or more.',
     title: 'Course complete!',
     body: 'You finished {{title}}. That’s real, lasting progress.',
@@ -258,7 +258,7 @@ const courses = {
     lessons: 'lessons',
     studied: 'studied',
     quizAvg: 'quiz avg',
-    saved: 'Your certificate is saved to your profile and can be shared with teachers, parents or schools.',
+    saved: 'Your progress, XP and coins are saved to your profile.',
   },
   progress: {
     eyebrow: 'COURSE PROGRESS',
@@ -465,7 +465,8 @@ const courses = {
   },
   video: {
     youtubeMeta: '{{channel}} · {{duration}} · YouTube',
-    youtubeNote: 'This video is from YouTube and plays in YouTube’s own player. When you’ve watched it, mark the lesson as complete.',
+    youtubeNote:
+      'This video is from YouTube and plays in YouTube’s own player. When you’ve watched it, mark the lesson as complete.',
     producing: 'This video is still being produced.',
     meta: '{{duration}} · {{chapters}} · narrated by {{name}}',
     chapters_one: '{{count}} chapter',

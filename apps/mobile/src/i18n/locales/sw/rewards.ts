@@ -6,8 +6,14 @@ const rewards: Translation<typeof en> = {
   walletEyebrow: 'POCHI YA SARAFU',
   coinsFootnote: 'Sarafu ni kwa ajili ya ziada za kufurahisha tu. Haziwezi kubadilishwa kuwa pesa au krediti za AI.',
   items: {
-    'frame-gold': { name: 'Fremu ya dhahabu', description: 'Pete ya dhahabu inayong’aa kuzunguka picha yako ya wasifu.' },
-    'frame-galaxy': { name: 'Fremu ya galaksi', description: 'Zambarau na kijani-bluu, kama anga la usiku la Knowzone.' },
+    'frame-gold': {
+      name: 'Fremu ya dhahabu',
+      description: 'Pete ya dhahabu inayong’aa kuzunguka picha yako ya wasifu.',
+    },
+    'frame-galaxy': {
+      name: 'Fremu ya galaksi',
+      description: 'Zambarau na kijani-bluu, kama anga la usiku la Knowzone.',
+    },
     'frame-kente': { name: 'Fremu ya Kente', description: 'Rangi angavu za Afrika Magharibi kwa wanafunzi bora.' },
     'frame-independence': {
       name: 'Fremu ya Uhuru',
@@ -165,7 +171,7 @@ const rewards: Translation<typeof en> = {
       challenge: { title: 'Changamoto ya kila siku', detail: 'Maswali matano kutoka kila dunia ya Knowzone World.' },
       levels: { title: 'Viwango vya Knowzone World', detail: 'Sarafu kwa kila nyota mpya, ziada kwa nyota 3.' },
       quests: { title: 'Misheni', detail: 'Misheni za kila siku na kila wiki, zinadaiwa ndani ya Knowzone World.' },
-      course: { title: 'Maliza kozi', detail: 'Kamilisha kila somo na upate cheti chako.' },
+      course: { title: 'Maliza kozi', detail: 'Maliza kila somo katika kozi.' },
       lessons: { title: 'Masomo ya kozi', detail: 'Kila somo unalokamilisha linakupa XP.' },
     },
   },

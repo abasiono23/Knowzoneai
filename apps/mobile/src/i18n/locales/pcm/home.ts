@@ -49,7 +49,7 @@ const home: Translation<typeof en> = {
   explore: {
     eyebrow: 'EXPLORE',
     title: 'Find your next lesson',
-    courses: 'Courses wey get certificate',
+    courses: 'Learn more with video lessons',
     browseSubjects: 'Check subjects',
     allSubjects: 'All subjects',
     trendingNow: 'Wetin dey trend now 🔥',
@@ -204,7 +204,7 @@ const home: Translation<typeof en> = {
     askTutor: 'Ask the AI tutor about this one',
     partOfCourseLabel: 'E dey part of the course {{title}}',
     partOfCourse: 'E DEY PART OF COURSE',
-    courseBody: 'Continue with readings, activities, quizzes and certificate',
+    courseBody: 'Continue with readings, videos, activities and quizzes',
     moreIn: 'More for {{subject}}',
   },
   lessonCard: {

@@ -76,7 +76,8 @@ const settings: Translation<typeof en> = {
   appearance: {
     title: 'Aparência',
     theme: 'Tema',
-    themeFooter: 'O Knowzone foi pensado primeiro em modo escuro, para ser confortável para os olhos à noite. Um tema claro está a caminho.',
+    themeFooter:
+      'O Knowzone foi pensado primeiro em modo escuro, para ser confortável para os olhos à noite. Um tema claro está a caminho.',
     dark: 'Escuro',
     darkHint: 'Azul-marinho profundo com detalhes vivos',
     light: 'Claro',
@@ -159,7 +160,8 @@ const settings: Translation<typeof en> = {
     newHint: 'Pelo menos 8 caracteres, com letras e números',
     confirm: 'Confirmar nova palavra-passe',
     mismatch: 'As palavras-passe não coincidem',
-    forgot: 'Esqueceste-a? Termina a sessão e usa “Esqueceste a palavra-passe?” no ecrã de entrada para a redefinires por email.',
+    forgot:
+      'Esqueceste-a? Termina a sessão e usa “Esqueceste a palavra-passe?” no ecrã de entrada para a redefinires por email.',
   },
   connected: {
     title: 'Contas ligadas',
@@ -264,7 +266,8 @@ const settings: Translation<typeof en> = {
   data: {
     eyebrow: 'PRIVACIDADE',
     title: 'Descarregar os meus dados',
-    intro: 'Recebe uma cópia de tudo o que o Knowzone guarda sobre ti, num formato que podes abrir ou levar para outro lado.',
+    intro:
+      'Recebe uma cópia de tudo o que o Knowzone guarda sobre ti, num formato que podes abrir ou levar para outro lado.',
     whatsIncluded: 'O que está incluído',
     included: {
       profile: 'O teu perfil, definições e preferências de aprendizagem',
@@ -379,15 +382,16 @@ const settings: Translation<typeof en> = {
       done: 'Ainda não terminaste nenhum curso',
       saved: 'Nada guardado',
     },
-    emptyDoneBody: 'Termina todas as lições de um curso para ganhares o certificado.',
-    emptyBody: 'Explora cursos estruturados com quizzes e certificados.',
+    emptyDoneBody: 'Termina todas as lições de um curso para o veres aqui.',
+    emptyBody: 'Explora cursos estruturados com aulas em vídeo e quizzes.',
     browse: 'Ver cursos',
     findAnother: 'Encontrar outro curso',
   },
   certificates: {
     title: 'Os meus certificados',
     emptyTitle: 'Ainda sem certificados',
-    emptyBody: 'Termina todas as lições de um curso (os quizzes precisam de 60%) para ganhares um certificado que podes descarregar e partilhar.',
+    emptyBody:
+      'Termina todas as lições de um curso (os quizzes precisam de 60%) para ganhares um certificado que podes descarregar e partilhar.',
     a11y: 'Certificado de {{title}}',
     label: 'CERTIFICADO DE CONCLUSÃO',
     meta: '{{date}} · {{id}}',

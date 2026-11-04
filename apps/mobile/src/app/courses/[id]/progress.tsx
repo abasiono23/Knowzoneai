@@ -50,11 +50,17 @@ function Progress({ course }: { course: Course }) {
           <Ionicons name="ribbon" size={26} color={Colors.reward} />
           <View style={{ flex: 1 }}>
             <Text variant="bodyStrong">{t('progress.courseComplete')}</Text>
-            <Text variant="small" color={Colors.textSecondary}>
-              {cert ? t('progress.certificateId', { id: cert.id }) : t('progress.certificateReady')}
-            </Text>
+            {cert && (
+              <Text variant="small" color={Colors.textSecondary}>
+                {t('progress.certificateId', { id: cert.id })}
+              </Text>
+            )}
           </View>
-          <Button title={t('progress.view')} onPress={() => router.push(`/courses/${course.id}/certificate`)} />
+          {cert ? (
+            <Button title={t('progress.view')} onPress={() => router.push(`/courses/${course.id}/certificate`)} />
+          ) : (
+            <Button title={t('details.review')} onPress={() => router.push(`/courses/${course.id}/curriculum`)} />
+          )}
         </Card>
       ) : (
         p.next && (

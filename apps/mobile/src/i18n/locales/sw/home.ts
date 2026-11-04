@@ -49,7 +49,7 @@ const home: Translation<typeof en> = {
   explore: {
     eyebrow: 'GUNDUA',
     title: 'Tafuta somo lako linalofuata',
-    courses: 'Kozi zenye vyeti',
+    courses: 'Jifunze zaidi kwa masomo ya video',
     browseSubjects: 'Vinjari masomo',
     allSubjects: 'Masomo yote',
     trendingNow: 'Yanayovuma sasa 🔥',
@@ -204,7 +204,7 @@ const home: Translation<typeof en> = {
     askTutor: 'Muulize mwalimu wa AI kuhusu hili',
     partOfCourseLabel: 'Sehemu ya kozi {{title}}',
     partOfCourse: 'SEHEMU YA KOZI',
-    courseBody: 'Endelea na usomaji, shughuli, majaribio na cheti',
+    courseBody: 'Endelea na usomaji, video, shughuli na majaribio',
     moreIn: 'Zaidi katika {{subject}}',
   },
   lessonCard: {

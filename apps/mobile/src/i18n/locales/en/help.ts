@@ -77,7 +77,7 @@ const help = {
       start: 'Getting started',
       ai: 'AI tutor and study tools',
       videos: 'Videos',
-      courses: 'Courses and certificates',
+      courses: 'Courses',
       world: 'Knowzone World and rewards',
       account: 'Account and privacy',
       payments: 'Plans and payments',
@@ -122,8 +122,8 @@ const help = {
         a: 'Open it from My videos and tap Try again. You aren’t charged credits for a video that fails.',
       },
       certificate: {
-        q: 'How do I get a certificate?',
-        a: 'Finish every lesson in a course. Your certificate appears in Profile → My certificates, where you can download or share it.',
+        q: 'Do courses come with certificates?',
+        a: 'No. Courses are for learning, with video lessons, readings and quizzes, and finishing one earns you XP and coins. Certificates will come with Knowzone’s own books.',
       },
       'course-progress': {
         q: 'Is my course progress saved?',

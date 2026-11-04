@@ -119,7 +119,7 @@ const courses: Translation<typeof en> = {
     wrongPairings_other: '{{count}} wrong pairings along the way. {{feedback}}',
   },
   catalogue: {
-    eyebrow: '{{count}} COURSES · CERTIFICATES DEY INSIDE',
+    eyebrow: '{{count}} COURSES · VIDEO LESSONS',
     title: 'Courses',
     searchPlaceholder: 'Search courses, topics or exams',
     searchA11y: 'Search courses',
@@ -226,7 +226,8 @@ const courses: Translation<typeof en> = {
   certificate: {
     eyebrow: 'CERTIFICATE',
     lockedTitle: 'Finish the course to open your certificate',
-    lockedBody: '{{done}} out of {{total}} lessons don finish. Every lesson count, and you need {{pass}}% to pass quizzes.',
+    lockedBody:
+      '{{done}} out of {{total}} lessons don finish. Every lesson count, and you need {{pass}}% to pass quizzes.',
     continue: 'Continue course',
     title: 'Certificate say you don finish',
     certifies: 'THIS ONE CONFIRM SAY',
@@ -247,8 +248,8 @@ const courses: Translation<typeof en> = {
   },
   complete: {
     almostTitle: 'You don almost reach',
-    almostBody_one: 'Finish {{count}} more lesson to complete {{title}} come earn your certificate.',
-    almostBody_other: 'Finish {{count}} more lessons to complete {{title}} come earn your certificate.',
+    almostBody_one: 'Finish {{count}} more lesson to complete {{title}}.',
+    almostBody_other: 'Finish {{count}} more lessons to complete {{title}}.',
     quizNote: 'Quizzes go count once you score {{pass}}% or pass am.',
     title: 'Course don finish!',
     body: 'You don finish {{title}}. Na real progress wey go last be that.',
@@ -257,7 +258,7 @@ const courses: Translation<typeof en> = {
     lessons: 'lessons',
     studied: 'time wey you study',
     quizAvg: 'quiz average',
-    saved: 'We don save your certificate for your profile, and you fit share am with teachers, parents or schools.',
+    saved: 'Your progress, XP and coins dey saved for your profile.',
   },
   progress: {
     eyebrow: 'COURSE PROGRESS',
@@ -464,7 +465,8 @@ const courses: Translation<typeof en> = {
   },
   video: {
     youtubeMeta: '{{channel}} · {{duration}} · YouTube',
-    youtubeNote: 'Dis video come from YouTube and e dey play for YouTube player. When you don watch am finish, mark the lesson as complete.',
+    youtubeNote:
+      'Dis video come from YouTube and e dey play for YouTube player. When you don watch am finish, mark the lesson as complete.',
     producing: 'Dem still dey produce this video.',
     meta: '{{duration}} · {{chapters}} · na {{name}} do the voice',
     chapters_one: '{{count}} chapter',

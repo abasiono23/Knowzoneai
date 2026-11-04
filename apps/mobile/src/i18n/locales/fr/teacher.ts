@@ -51,7 +51,7 @@ const teacher: Translation<typeof en> = {
     submittedCount: '{{submitted}}/{{total}}',
     coursesA11y: 'Parcourir les cours à recommander',
     coursesTitle: 'Cours à recommander',
-    coursesBody: 'Des cours structurés avec quiz et certificats pour tes élèves',
+    coursesBody: 'Des cours structurés avec leçons vidéo et quiz pour tes élèves',
   },
   classes: {
     eyebrow: 'CLASSES',
@@ -68,7 +68,8 @@ const teacher: Translation<typeof en> = {
     privacy: 'Confidentialité',
     allSettings: 'Tous les paramètres',
     upsellTitle: 'Fais profiter toute ton école de Knowzone',
-    upsellBody: 'Les licences établissement ajoutent des outils d’administration, la gestion des places et des bilans trimestriels pour les chefs de département.',
+    upsellBody:
+      'Les licences établissement ajoutent des outils d’administration, la gestion des places et des bilans trimestriels pour les chefs de département.',
     logOut: 'Se déconnecter',
   },
   newClass: {

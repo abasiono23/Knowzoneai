@@ -171,7 +171,7 @@ const courses: Translation<typeof en> = {
     wrongPairings_other: '{{count}} مطابقة خاطئة أثناء الحل. {{feedback}}',
   },
   catalogue: {
-    eyebrow: '{{count}} دورة · الشهادات مشمولة',
+    eyebrow: '{{count}} دورة · دروس فيديو',
     title: 'الدورات',
     searchPlaceholder: 'ابحث عن دورات أو مواضيع أو امتحانات',
     searchA11y: 'ابحث في الدورات',
@@ -323,12 +323,12 @@ const courses: Translation<typeof en> = {
   },
   complete: {
     almostTitle: 'اقتربت كثيرًا',
-    almostBody_zero: 'أنت جاهز لإتمام {{title}} والحصول على شهادتك.',
-    almostBody_one: 'أنهِ درسًا واحدًا آخر لتتمّ {{title}} وتحصل على شهادتك.',
-    almostBody_two: 'أنهِ درسين آخرين لتتمّ {{title}} وتحصل على شهادتك.',
-    almostBody_few: 'أنهِ {{count}} دروس أخرى لتتمّ {{title}} وتحصل على شهادتك.',
-    almostBody_many: 'أنهِ {{count}} درسًا آخر لتتمّ {{title}} وتحصل على شهادتك.',
-    almostBody_other: 'أنهِ {{count}} درس آخر لتتمّ {{title}} وتحصل على شهادتك.',
+    almostBody_zero: 'أنت جاهز لإتمام {{title}}.',
+    almostBody_one: 'أنهِ درسًا واحدًا آخر لتتمّ {{title}}.',
+    almostBody_two: 'أنهِ درسين آخرين لتتمّ {{title}}.',
+    almostBody_few: 'أنهِ {{count}} دروس أخرى لتتمّ {{title}}.',
+    almostBody_many: 'أنهِ {{count}} درسًا آخر لتتمّ {{title}}.',
+    almostBody_other: 'أنهِ {{count}} درس آخر لتتمّ {{title}}.',
     quizNote: 'تُحتسب الاختبارات عندما تحصل على {{pass}}% أو أكثر.',
     title: 'اكتملت الدورة!',
     body: 'أنهيت {{title}}. هذا تقدّم حقيقي ودائم.',
@@ -337,7 +337,7 @@ const courses: Translation<typeof en> = {
     lessons: 'دروس',
     studied: 'مدة الدراسة',
     quizAvg: 'متوسط الاختبارات',
-    saved: 'شهادتك محفوظة في ملفك الشخصي ويمكنك مشاركتها مع المعلّمين أو الوالدين أو المدارس.',
+    saved: 'تقدّمك ونقاط الخبرة والعملات محفوظة في ملفك الشخصي.',
   },
   progress: {
     eyebrow: 'تقدّم الدورة',
@@ -602,8 +602,7 @@ const courses: Translation<typeof en> = {
     needToKnow: 'ما تحتاج إلى معرفته',
     teachIt: 'اقرأ كل نقطة ببطء وحاول أن تشرحها بصوت عالٍ دون أن تنظر. إذا استطعت أن تعلّمها، فأنت تعرفها.',
     inExam: 'في الامتحان',
-    examTip:
-      'يأتي موضوع {{topic}} كثيرًا في {{exams}}. احفظ المصطلحات الأساسية بدقة، واكتب كل خطوة في الحسابات.',
+    examTip: 'يأتي موضوع {{topic}} كثيرًا في {{exams}}. احفظ المصطلحات الأساسية بدقة، واكتب كل خطوة في الحسابات.',
     revise: 'راجع: {{topics}}',
     understand: 'افهم: {{point}}',
     quizObjectives: {

@@ -82,7 +82,7 @@ const help: Translation<typeof en> = {
       start: 'Primeros pasos',
       ai: 'Tutor de IA y herramientas de estudio',
       videos: 'Videos',
-      courses: 'Cursos y certificados',
+      courses: 'Cursos',
       world: 'Knowzone World y recompensas',
       account: 'Cuenta y privacidad',
       payments: 'Planes y pagos',
@@ -127,8 +127,8 @@ const help: Translation<typeof en> = {
         a: 'Ábrelo desde Mis videos y toca Reintentar. No se te cobran créditos por un video que falla.',
       },
       certificate: {
-        q: '¿Cómo obtengo un certificado?',
-        a: 'Termina todas las lecciones de un curso. Tu certificado aparece en Perfil → Mis certificados, donde puedes descargarlo o compartirlo.',
+        q: '¿Los cursos dan certificado?',
+        a: 'No. Los cursos son para aprender, con lecciones en video, lecturas y quizzes, y terminar uno te da XP y monedas. Los certificados llegarán con los libros propios de Knowzone.',
       },
       'course-progress': {
         q: '¿Se guarda mi progreso en los cursos?',

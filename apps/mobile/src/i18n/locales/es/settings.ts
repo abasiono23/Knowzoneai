@@ -76,7 +76,8 @@ const settings: Translation<typeof en> = {
   appearance: {
     title: 'Apariencia',
     theme: 'Tema',
-    themeFooter: 'Knowzone está diseñado primero en modo oscuro para cuidar tu vista por la noche. Pronto llegará un tema claro.',
+    themeFooter:
+      'Knowzone está diseñado primero en modo oscuro para cuidar tu vista por la noche. Pronto llegará un tema claro.',
     dark: 'Oscuro',
     darkHint: 'Azul marino profundo con acentos brillantes',
     light: 'Claro',
@@ -112,7 +113,8 @@ const settings: Translation<typeof en> = {
     fullName: 'Nombre completo',
     username: 'Nombre de usuario',
     usernamePlaceholder: 'p. ej., amara_aprende',
-    usernameHint: 'De 3 a 20 letras, números o guiones bajos. Se muestra en lugar de tu nombre completo en algunos sitios.',
+    usernameHint:
+      'De 3 a 20 letras, números o guiones bajos. Se muestra en lugar de tu nombre completo en algunos sitios.',
     school: 'Centro educativo',
     schoolTeacher: 'Centro u organización',
     schoolPlaceholder: 'p. ej., Kings College, Lagos',
@@ -150,7 +152,8 @@ const settings: Translation<typeof en> = {
     changedBody: 'Usa tu nueva contraseña la próxima vez que inicies sesión en cualquier dispositivo.',
     addTitle: 'Añadir una contraseña',
     changeTitle: 'Cambiar contraseña',
-    addSubtitle: 'Inicias sesión con {{provider}}. Si añades una contraseña, también podrás iniciar sesión con {{email}}.',
+    addSubtitle:
+      'Inicias sesión con {{provider}}. Si añades una contraseña, también podrás iniciar sesión con {{email}}.',
     changeSubtitle: 'Elige una contraseña que no uses en ningún otro sitio.',
     add: 'Añadir contraseña',
     update: 'Actualizar contraseña',
@@ -159,7 +162,8 @@ const settings: Translation<typeof en> = {
     newHint: 'Al menos 8 caracteres, con letras y números',
     confirm: 'Confirmar contraseña nueva',
     mismatch: 'Las contraseñas no coinciden',
-    forgot: '¿La olvidaste? Cierra sesión y usa «¿Olvidaste tu contraseña?» en la pantalla de inicio de sesión para restablecerla por correo.',
+    forgot:
+      '¿La olvidaste? Cierra sesión y usa «¿Olvidaste tu contraseña?» en la pantalla de inicio de sesión para restablecerla por correo.',
   },
   connected: {
     title: 'Cuentas conectadas',
@@ -178,7 +182,8 @@ const settings: Translation<typeof en> = {
     disconnect: 'Desconectar',
     onlyMethod:
       'Es tu única forma de iniciar sesión, así que no se puede desconectar. Primero añade una contraseña u otra cuenta.',
-    emailNote: 'Aún no se puede cambiar el correo electrónico desde la app. Hará falta comprobar que realmente eres tú.',
+    emailNote:
+      'Aún no se puede cambiar el correo electrónico desde la app. Hará falta comprobar que realmente eres tú.',
   },
   devices: {
     title: 'Dispositivos',
@@ -264,7 +269,8 @@ const settings: Translation<typeof en> = {
   data: {
     eyebrow: 'PRIVACIDAD',
     title: 'Descargar mis datos',
-    intro: 'Obtén una copia de todo lo que Knowzone guarda sobre ti, en un formato que puedes abrir o llevarte a otro sitio.',
+    intro:
+      'Obtén una copia de todo lo que Knowzone guarda sobre ti, en un formato que puedes abrir o llevarte a otro sitio.',
     whatsIncluded: 'Qué incluye',
     included: {
       profile: 'Tu perfil, ajustes y preferencias de aprendizaje',
@@ -277,7 +283,8 @@ const settings: Translation<typeof en> = {
     format: 'Formato: JSON. Los archivos subidos (PDF y fotos) aparecen por su nombre.',
     ready: '{{name}} está listo ({{size}} KB).',
     prepareError: 'No se pudieron preparar tus datos',
-    emailSent: 'Enviaremos un enlace de descarga a {{email}} en un plazo de 48 horas. El enlace funciona durante 7 días.',
+    emailSent:
+      'Enviaremos un enlace de descarga a {{email}} en un plazo de 48 horas. El enlace funciona durante 7 días.',
     requestError: 'No se pudieron solicitar tus datos',
     download: 'Descargar ahora',
     email: 'Enviarme una copia por correo',
@@ -364,7 +371,8 @@ const settings: Translation<typeof en> = {
     courses: 'Cursos',
     noCourses: 'Aún no hay cursos.',
     courseAverage: 'Media en quizzes de cursos: {{value}}',
-    packAverage: 'Tu media en quizzes de paquetes de estudio es {{value}}. Repasa las respuestas incorrectas para subirla.',
+    packAverage:
+      'Tu media en quizzes de paquetes de estudio es {{value}}. Repasa las respuestas incorrectas para subirla.',
   },
   myCourses: {
     title: 'Mis cursos',
@@ -379,15 +387,16 @@ const settings: Translation<typeof en> = {
       done: 'Aún no has terminado ningún curso',
       saved: 'No hay nada guardado',
     },
-    emptyDoneBody: 'Termina todas las lecciones de un curso para obtener su certificado.',
-    emptyBody: 'Explora cursos estructurados con quizzes y certificados.',
+    emptyDoneBody: 'Termina todas las lecciones de un curso para verlo aquí.',
+    emptyBody: 'Explora cursos estructurados con lecciones en video y quizzes.',
     browse: 'Explorar cursos',
     findAnother: 'Buscar otro curso',
   },
   certificates: {
     title: 'Mis certificados',
     emptyTitle: 'Aún no tienes certificados',
-    emptyBody: 'Termina todas las lecciones de un curso (los quizzes requieren un 60 %) para obtener un certificado que puedes descargar y compartir.',
+    emptyBody:
+      'Termina todas las lecciones de un curso (los quizzes requieren un 60 %) para obtener un certificado que puedes descargar y compartir.',
     a11y: 'Certificado de {{title}}',
     label: 'CERTIFICADO DE FINALIZACIÓN',
     meta: '{{date}} · {{id}}',

@@ -9,7 +9,6 @@ import { LessonCard } from '@/components/content/lesson-card';
 import { Rail } from '@/components/content/rail';
 import { SectionHeader, Screen, Text } from '@/components/ui';
 import { CoursesRail } from '@/components/courses/courses-rail';
-import { VideosBanner } from '@/components/videos/videos-banner';
 import { Colors, Radius, Spacing } from '@/constants/theme';
 import { booksSummary, useBooksProfile } from '@/lib/books';
 import { CATEGORIES, categoryName, LESSONS, trending } from '@/lib/catalog';
@@ -55,8 +54,6 @@ export default function ExploreScreen() {
         <Ionicons name="search" size={20} color={Colors.textMuted} />
         <Text color={Colors.textMuted}>{t('search.placeholder')}</Text>
       </Pressable>
-
-      <VideosBanner />
 
       <CoursesRail title={t('explore.courses')} />
 

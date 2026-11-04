@@ -119,7 +119,7 @@ const courses: Translation<typeof en> = {
     wrongPairings_other: 'Njikọ ezighi ezi {{count}} n’ụzọ. {{feedback}}',
   },
   catalogue: {
-    eyebrow: 'KỌỌSỤ {{count}} · ASAMBODO SO NA YA',
+    eyebrow: 'KỌS {{count}} · IHE ỌMỤMỤ VIDIYO',
     title: 'Kọọsụ',
     searchPlaceholder: 'Chọọ kọọsụ, isiokwu ma ọ bụ ule',
     searchA11y: 'Chọọ kọọsụ',
@@ -226,7 +226,8 @@ const courses: Translation<typeof en> = {
   certificate: {
     eyebrow: 'ASAMBODO',
     lockedTitle: 'Mechaa kọọsụ ahụ ka ị meghee asambodo gị',
-    lockedBody: 'Emechaala ihe ọmụmụ {{done}} n’ime {{total}}. Ihe ọmụmụ ọ bụla na-agụ, ajụjụ nyocha chọkwara {{pass}}% iji gafere.',
+    lockedBody:
+      'Emechaala ihe ọmụmụ {{done}} n’ime {{total}}. Ihe ọmụmụ ọ bụla na-agụ, ajụjụ nyocha chọkwara {{pass}}% iji gafere.',
     continue: 'Gaa n’ihu na kọọsụ',
     title: 'Asambodo Mmecha',
     certifies: 'NKE A NA-EGOSI NA',
@@ -247,8 +248,8 @@ const courses: Translation<typeof en> = {
   },
   complete: {
     almostTitle: 'Ị fọrọ nke nta',
-    almostBody_one: 'Mechaa ihe ọmụmụ {{count}} ọzọ ka ị mezue {{title}} ma nweta asambodo gị.',
-    almostBody_other: 'Mechaa ihe ọmụmụ {{count}} ọzọ ka ị mezue {{title}} ma nweta asambodo gị.',
+    almostBody_one: 'Mechaa ihe ọmụmụ {{count}} ọzọ ka ị mezue {{title}}.',
+    almostBody_other: 'Mechaa ihe ọmụmụ {{count}} ọzọ ka ị mezue {{title}}.',
     quizNote: 'Ajụjụ nyocha na-agụ ozugbo i nwetara {{pass}}% ma ọ bụ karịa.',
     title: 'Emechaala kọọsụ!',
     body: 'I mechaala {{title}}. Nke ahụ bụ ezigbo ọganihu ga-adịgide.',
@@ -257,7 +258,7 @@ const courses: Translation<typeof en> = {
     lessons: 'ihe ọmụmụ',
     studied: 'oge ọmụmụ',
     quizAvg: 'nkezi ajụjụ',
-    saved: 'Echekwara asambodo gị na profaịlụ gị, ị nwekwara ike ikesa ya na ndị nkuzi, nne na nna ma ọ bụ ụlọ akwụkwọ.',
+    saved: 'Ọganihu gị, XP na mkpụrụ ego gị echekwara na profaịlụ gị.',
   },
   progress: {
     eyebrow: 'ỌGANIHU KỌỌSỤ',
@@ -464,7 +465,8 @@ const courses: Translation<typeof en> = {
   },
   video: {
     youtubeMeta: '{{channel}} · {{duration}} · YouTube',
-    youtubeNote: 'Vidiyo a si na YouTube, ọ na-akpọ n’ime ihe ọkpụkpọ nke YouTube. Mgbe ị lechara ya, kaa ihe ọmụmụ ahụ akara na i mechaala.',
+    youtubeNote:
+      'Vidiyo a si na YouTube, ọ na-akpọ n’ime ihe ọkpụkpọ nke YouTube. Mgbe ị lechara ya, kaa ihe ọmụmụ ahụ akara na i mechaala.',
     producing: 'A ka na-emepụta vidiyo a.',
     meta: '{{duration}} · {{chapters}} · {{name}} kọwara ya',
     chapters_one: 'isi {{count}}',
@@ -476,10 +478,10 @@ const courses: Translation<typeof en> = {
   generated: {
     bigIdea: 'Nnukwu echiche ahụ',
     needToKnow: 'Ihe ị kwesịrị ịma',
-    teachIt: 'Gụọ isi ihe ọ bụla nwayọọ ma nwaa ịkọwa ya n’olu dara ụda n’elegharịghị anya. Ọ bụrụ na ị nwere ike ịkụzi ya, ị maara ya.',
+    teachIt:
+      'Gụọ isi ihe ọ bụla nwayọọ ma nwaa ịkọwa ya n’olu dara ụda n’elegharịghị anya. Ọ bụrụ na ị nwere ike ịkụzi ya, ị maara ya.',
     inExam: 'N’ule',
-    examTip:
-      '{{topic}} na-apụtakarị na {{exams}}. Mụta okwu ndị bụ isi kpọmkwem, ma gosi nzọụkwụ ọ bụla na mgbakọ.',
+    examTip: '{{topic}} na-apụtakarị na {{exams}}. Mụta okwu ndị bụ isi kpọmkwem, ma gosi nzọụkwụ ọ bụla na mgbakọ.',
     revise: 'Gụgharịa: {{topics}}',
     understand: 'Ghọta: {{point}}',
     quizObjectives: {

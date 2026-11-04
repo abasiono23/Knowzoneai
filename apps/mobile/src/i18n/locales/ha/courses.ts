@@ -121,7 +121,7 @@ const courses: Translation<typeof en> = {
     wrongPairings_other: 'Haɗe-haɗe {{count}} marasa daidai a hanya. {{feedback}}',
   },
   catalogue: {
-    eyebrow: 'KWASA-KWASAI {{count}} · TARE DA SATIFIKET',
+    eyebrow: 'KWASA-KWASAI {{count}} · DARUSSAN BIDIYO',
     title: 'Kwasa-kwasai',
     searchPlaceholder: 'Nemi kwasa-kwasai, maudu’ai ko jarrabawa',
     searchA11y: 'Nemi kwasa-kwasai',
@@ -228,7 +228,8 @@ const courses: Translation<typeof en> = {
   certificate: {
     eyebrow: 'SATIFIKET',
     lockedTitle: 'Kammala kwas ɗin don buɗe satifiket ɗinka',
-    lockedBody: 'An gama darussa {{done}} cikin {{total}}. Kowane darasi yana ƙirguwa, kuma gwaje-gwaje suna buƙatar {{pass}}% don cin nasara.',
+    lockedBody:
+      'An gama darussa {{done}} cikin {{total}}. Kowane darasi yana ƙirguwa, kuma gwaje-gwaje suna buƙatar {{pass}}% don cin nasara.',
     continue: 'Ci gaba da kwas',
     title: 'Satifiket na Kammalawa',
     certifies: 'WANNAN YANA TABBATAR DA CEWA',
@@ -250,8 +251,8 @@ const courses: Translation<typeof en> = {
   },
   complete: {
     almostTitle: 'Ka kusa',
-    almostBody_one: 'Kammala ƙarin darasi {{count}} don kammala {{title}} ka samu satifiket ɗinka.',
-    almostBody_other: 'Kammala ƙarin darussa {{count}} don kammala {{title}} ka samu satifiket ɗinka.',
+    almostBody_one: 'Kammala ƙarin darasi {{count}} don kammala {{title}}.',
+    almostBody_other: 'Kammala ƙarin darussa {{count}} don kammala {{title}}.',
     quizNote: 'Gwaje-gwaje suna ƙirguwa da zarar ka samu {{pass}}% ko fiye.',
     title: 'An kammala kwas!',
     body: 'Ka kammala {{title}}. Wannan ci gaba ne na gaske mai ɗorewa.',
@@ -260,7 +261,7 @@ const courses: Translation<typeof en> = {
     lessons: 'darussa',
     studied: 'lokacin karatu',
     quizAvg: 'matsakaicin gwaji',
-    saved: 'An ajiye satifiket ɗinka a bayanan kanka kuma za a iya raba shi da malamai, iyaye ko makarantu.',
+    saved: 'An adana cigabanka, XP da tsabarka a bayananka.',
   },
   progress: {
     eyebrow: 'CI GABAN KWAS',
@@ -420,7 +421,8 @@ const courses: Translation<typeof en> = {
   },
   resources: {
     eyebrow: 'KAYAN TAIMAKON DARASI',
-    intro: 'Ana yin takardun taƙaitawa da saitin atisaye daga wannan darasi, don haka koyaushe suna dacewa da abin da ka karanta.',
+    intro:
+      'Ana yin takardun taƙaitawa da saitin atisaye daga wannan darasi, don haka koyaushe suna dacewa da abin da ka karanta.',
     options: 'Zaɓuɓɓuka na {{title}}',
     savePdf: 'Ajiye a matsayin PDF',
     copyText: 'Kwafi rubutu',
@@ -467,7 +469,8 @@ const courses: Translation<typeof en> = {
   },
   video: {
     youtubeMeta: '{{channel}} · {{duration}} · YouTube',
-    youtubeNote: 'Wannan bidiyo daga YouTube ne kuma yana kunnawa a cikin na’urar YouTube. Idan ka gama kallo, yi alamar darasin a matsayin an kammala.',
+    youtubeNote:
+      'Wannan bidiyo daga YouTube ne kuma yana kunnawa a cikin na’urar YouTube. Idan ka gama kallo, yi alamar darasin a matsayin an kammala.',
     producing: 'Har yanzu ana yin wannan bidiyo.',
     meta: '{{duration}} · {{chapters}} · muryar {{name}}',
     chapters_one: 'babi {{count}}',
@@ -480,7 +483,8 @@ const courses: Translation<typeof en> = {
   generated: {
     bigIdea: 'Babban ra’ayi',
     needToKnow: 'Abin da ya kamata ka sani',
-    teachIt: 'Karanta kowane batu a hankali kuma ka gwada bayyana shi da baki ba tare da kallo ba. Idan za ka iya koyar da shi, to ka san shi.',
+    teachIt:
+      'Karanta kowane batu a hankali kuma ka gwada bayyana shi da baki ba tare da kallo ba. Idan za ka iya koyar da shi, to ka san shi.',
     inExam: 'A jarrabawa',
     examTip:
       '{{topic}} yana fitowa akai-akai a {{exams}}. Koyi muhimman kalmomi daidai, kuma ka nuna kowane mataki a lissafi.',
@@ -509,7 +513,8 @@ const courses: Translation<typeof en> = {
     worksheetMeta_other: 'Takardar aiki · tambayoyi {{count}}',
     pastTitle: 'Tsofaffin tambayoyin {{exam}}: {{subject}}',
     pastMeta: 'Tsohuwar takarda · 2019–2025',
-    pastBody: 'Tsofaffin tambayoyin {{exams}} a kan wannan maudu’i za su bayyana a nan da zarar an haɗa rumbun tambayoyi.',
+    pastBody:
+      'Tsofaffin tambayoyin {{exams}} a kan wannan maudu’i za su bayyana a nan da zarar an haɗa rumbun tambayoyi.',
     askTutor: 'Tambayi malamin AI game da wannan darasi',
     askTutorMeta: 'Yana buɗe malamin da wannan maudu’i',
     keyIdea: 'Muhimmin ra’ayi {{number}}: za ka iya bayyana shi a jumla ɗaya kafin ka duba?',

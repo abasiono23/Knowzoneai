@@ -47,7 +47,7 @@ const home = {
   explore: {
     eyebrow: 'EXPLORE',
     title: 'Find your next lesson',
-    courses: 'Courses with certificates',
+    courses: 'Learn more with video lessons',
     browseSubjects: 'Browse subjects',
     allSubjects: 'All subjects',
     trendingNow: 'Trending now 🔥',
@@ -202,7 +202,7 @@ const home = {
     askTutor: 'Ask the AI tutor about this',
     partOfCourseLabel: 'Part of the course {{title}}',
     partOfCourse: 'PART OF A COURSE',
-    courseBody: 'Keep going with readings, activities, quizzes and a certificate',
+    courseBody: 'Keep going with readings, videos, activities and quizzes',
     moreIn: 'More in {{subject}}',
   },
   lessonCard: {

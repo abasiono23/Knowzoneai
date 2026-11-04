@@ -4,11 +4,15 @@ import type en from '../en/rewards';
 const rewards: Translation<typeof en> = {
   eyebrow: 'RÉCOMPENSES',
   walletEyebrow: 'PORTE-MONNAIE',
-  coinsFootnote: 'Les pièces servent uniquement à des bonus pour le fun. Elles ne peuvent pas être échangées contre de l’argent ou des crédits IA.',
+  coinsFootnote:
+    'Les pièces servent uniquement à des bonus pour le fun. Elles ne peuvent pas être échangées contre de l’argent ou des crédits IA.',
   items: {
     'frame-gold': { name: 'Cadre doré', description: 'Un anneau doré brillant autour de ta photo de profil.' },
     'frame-galaxy': { name: 'Cadre galaxie', description: 'Violet et turquoise, comme le ciel nocturne de Knowzone.' },
-    'frame-kente': { name: 'Cadre kente', description: 'Les couleurs vives d’Afrique de l’Ouest pour les meilleurs élèves.' },
+    'frame-kente': {
+      name: 'Cadre kente',
+      description: 'Les couleurs vives d’Afrique de l’Ouest pour les meilleurs élèves.',
+    },
     'frame-independence': {
       name: 'Cadre Indépendance',
       description: 'Vert et blanc, pour célébrer le 1er octobre. Disponible uniquement la première semaine d’octobre.',
@@ -165,9 +169,12 @@ const rewards: Translation<typeof en> = {
         detail: 'Ouvre l’appli et récupère-la une fois par jour. Le jour 7 rapporte le plus.',
       },
       challenge: { title: 'Défi du jour', detail: 'Cinq questions venant de chaque monde de Knowzone World.' },
-      levels: { title: 'Niveaux de Knowzone World', detail: 'Des pièces pour chaque nouvelle étoile, un bonus pour 3 étoiles.' },
+      levels: {
+        title: 'Niveaux de Knowzone World',
+        detail: 'Des pièces pour chaque nouvelle étoile, un bonus pour 3 étoiles.',
+      },
       quests: { title: 'Quêtes', detail: 'Missions quotidiennes et hebdomadaires, à récupérer dans Knowzone World.' },
-      course: { title: 'Terminer un cours', detail: 'Termine toutes les leçons et obtiens ton certificat.' },
+      course: { title: 'Terminer un cours', detail: 'Termine toutes les leçons d’un cours.' },
       lessons: { title: 'Leçons de cours', detail: 'Chaque leçon terminée rapporte des XP.' },
     },
   },
@@ -295,7 +302,8 @@ const rewards: Translation<typeof en> = {
     redeemFor_one: 'Échanger contre {{count}} pièce',
     redeemFor_many: 'Échanger contre {{count}} pièces',
     redeemFor_other: 'Échanger contre {{count}} pièces',
-    cosmetic: 'Les récompenses sont des bonus esthétiques. Elles n’affectent ni tes notes, ni tes étoiles, ni ta progression.',
+    cosmetic:
+      'Les récompenses sont des bonus esthétiques. Elles n’affectent ni tes notes, ni tes étoiles, ni ta progression.',
   },
   redeem: {
     title: 'Confirmer l’échange',
@@ -303,7 +311,8 @@ const rewards: Translation<typeof en> = {
     balance: 'Ton solde',
     cost: 'Coût',
     after: 'Solde après',
-    boostNote: 'Les boosts sont utilisés automatiquement quand tu en as besoin. Les pièces dépensées ne sont pas remboursables.',
+    boostNote:
+      'Les boosts sont utilisés automatiquement quand tu en as besoin. Les pièces dépensées ne sont pas remboursables.',
     keepNote: 'C’est à toi pour de bon. Les pièces dépensées ne sont pas remboursables.',
   },
   success: {
@@ -325,7 +334,8 @@ const rewards: Translation<typeof en> = {
     levelTitle: 'Se débloque au niveau {{level}}',
     levelBody: 'Tu es niveau {{level}}. Continue de gagner des XP pour débloquer {{name}}.',
     expiredTitle: 'Cette récompense est terminée',
-    expiredUntil: '{{name}} était disponible jusqu’au {{date}}. Les récompenses saisonnières reviennent autour des dates spéciales.',
+    expiredUntil:
+      '{{name}} était disponible jusqu’au {{date}}. Les récompenses saisonnières reviennent autour des dates spéciales.',
     expiredBody: '{{name}} n’est plus disponible.',
     notYetTitle: 'Bientôt disponible',
     notYetFrom: '{{name}} sera disponible à partir du {{date}}.',

@@ -81,7 +81,7 @@ const help: Translation<typeof en> = {
       start: 'Kuanza',
       ai: 'Mwalimu wa AI na zana za kusoma',
       videos: 'Video',
-      courses: 'Kozi na vyeti',
+      courses: 'Kozi',
       world: 'Knowzone World na zawadi',
       account: 'Akaunti na faragha',
       payments: 'Mipango na malipo',
@@ -126,8 +126,8 @@ const help: Translation<typeof en> = {
         a: 'Ifungue kutoka Video zangu na uguse Jaribu tena. Hutozwi krediti kwa video inayoshindikana.',
       },
       certificate: {
-        q: 'Ninapataje cheti?',
-        a: 'Maliza kila somo katika kozi. Cheti chako kinaonekana katika Wasifu → Vyeti vyangu, ambapo unaweza kukipakua au kukishiriki.',
+        q: 'Je, kozi zinakuja na vyeti?',
+        a: 'Hapana. Kozi ni za kujifunza, zikiwa na masomo ya video, usomaji na majaribio, na ukimaliza moja unapata XP na sarafu. Vyeti vitakuja na vitabu vya Knowzone vyenyewe.',
       },
       'course-progress': {
         q: 'Je, maendeleo yangu ya kozi yanahifadhiwa?',

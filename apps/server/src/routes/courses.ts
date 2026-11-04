@@ -1,4 +1,3 @@
-import { randomBytes } from 'node:crypto';
 
 import { Router } from 'express';
 import { z } from 'zod';
@@ -16,8 +15,9 @@ export const coursesRouter = Router();
 
 export const PASS_MARK = 0.6;
 const LESSON_XP = 10;
-const CERTIFICATE_XP = 100;
-const CERTIFICATE_COINS = 50;
+/** The bonus for finishing a course. Courses don't issue certificates (only Knowzone's own books will). */
+const COURSE_XP = 100;
+const COURSE_COINS = 50;
 
 type Source = { book: string; authors: string; publisher: string; url: string; license: string; licenseUrl: string; attribution: string };
 type Question = { id: string; correctIndex: number; options: string[] };
@@ -233,8 +233,8 @@ coursesRouter.post('/me/courses/:id/open', async (req, res) => {
 });
 
 /**
- * Marks a lesson done (10 XP) and, when it's the course's last, issues the certificate (125):
- * every lesson done and every quiz passed. Returns what changed.
+ * Marks a lesson done (10 XP) and, when it finishes the course, adds the course bonus. Courses no
+ * longer issue certificates; `certificate` stays in the answer (always null) for older app versions.
  */
 async function finishLesson(userId: string, courseId: string, lessonId: string, minutes: number) {
   const key = `${courseId}/${lessonId}`;
@@ -242,35 +242,16 @@ async function finishLesson(userId: string, courseId: string, lessonId: string, 
     .create({ data: { userId, courseId, lessonId: key } })
     .then(() => true)
     .catch(() => false); // Already done.
-  if (!created) return { certificate: null, xp: 0, coins: 0 };
+  if (!created) return { certificate: null, completed: false, xp: 0, coins: 0 };
   await prisma.courseEnrollment.upsert({
     where: { userId_courseId: { userId, courseId } },
     create: { userId, courseId, minutes },
     update: { minutes: { increment: minutes } },
   });
-  let xp = LESSON_XP;
-  let coins = 0;
-
   const [total, done] = await Promise.all([prisma.courseLesson.count({ where: { courseId } }), prisma.lessonCompletion.count({ where: { userId, courseId } })]);
-  let certificate = null;
-  if (total > 0 && done >= total && !(await prisma.certificate.findUnique({ where: { userId_courseId: { userId, courseId } } }))) {
-    const quizzes = await prisma.courseLesson.findMany({ where: { courseId, kind: 'quiz' }, select: { id: true } });
-    const attempts = await prisma.courseQuizAttempt.findMany({ where: { userId, courseId } });
-    const best = quizzes.map((q) => Math.max(0, ...attempts.filter((a) => a.lessonId === q.id).map((a) => a.score / a.total)));
-    const score = best.length ? best.reduce((n, b) => n + b, 0) / best.length : 1;
-    const user = await prisma.user.findUniqueOrThrow({ where: { id: userId }, select: { name: true } });
-    const c = await prisma.certificate
-      .create({
-        data: { id: `KZ-${courseId.slice(0, 3).toUpperCase()}-${randomBytes(4).toString('hex').toUpperCase()}`, userId, courseId, name: user.name, score },
-      })
-      .catch(() => null);
-    if (c) {
-      certificate = { id: c.id, issuedAt: ms(c.issuedAt), name: c.name, score: c.score };
-      xp += CERTIFICATE_XP;
-      coins += CERTIFICATE_COINS;
-    }
-  }
-  return { certificate, xp, coins };
+  // Only the lesson that completes the course gets the bonus, once.
+  const completed = total > 0 && done === total;
+  return { certificate: null, completed, xp: LESSON_XP + (completed ? COURSE_XP : 0), coins: completed ? COURSE_COINS : 0 };
 }
 
 async function lessonOf(courseId: string, lessonId: string) {
@@ -290,7 +271,7 @@ coursesRouter.post('/me/courses/:id/lessons/:lessonId/complete', async (req, res
     ? await recordActivity(
         userId,
         { xp: out.xp, coins: out.coins, minutes: lesson.minutes },
-        { reason: out.certificate ? `course:${courseId}` : `course-lesson:${courseId}/${req.params.lessonId}`, tz: requestTimeZone(req) },
+        { reason: out.completed ? `course:${courseId}` : `course-lesson:${courseId}/${req.params.lessonId}`, tz: requestTimeZone(req) },
       )
     : null;
   if (out.xp) await confirmReferralIfEligible(userId);
@@ -323,12 +304,12 @@ coursesRouter.post('/me/courses/:id/lessons/:lessonId/attempts', async (req, res
     data: { userId, courseId, lessonId: lesson.id, answers, score, total: quiz.length, seconds },
   });
   const passed = score / quiz.length >= PASS_MARK;
-  const out = passed ? await finishLesson(userId, courseId, lessonId, lesson.minutes) : { certificate: null, xp: 0, coins: 0 };
+  const out = passed ? await finishLesson(userId, courseId, lessonId, lesson.minutes) : { certificate: null, completed: false, xp: 0, coins: 0 };
   const user = out.xp
     ? await recordActivity(
         userId,
         { xp: out.xp, coins: out.coins, minutes: Math.max(1, seconds / 60) },
-        { reason: out.certificate ? `course:${courseId}` : `course-lesson:${courseId}/${lessonId}`, tz: requestTimeZone(req) },
+        { reason: out.completed ? `course:${courseId}` : `course-lesson:${courseId}/${lessonId}`, tz: requestTimeZone(req) },
       )
     : null;
   if (out.xp) await confirmReferralIfEligible(userId);

@@ -147,8 +147,7 @@ const rewards: Translation<typeof en> = {
     earnMore: 'اربح المزيد',
     browse: 'تصفّح المكافآت',
     credits: 'أرصدة الذكاء الاصطناعي: {{credits}}',
-    creditsNote:
-      'الأرصدة منفصلة عن العملات. تحصل عليها من خطتك ومن دعوة أصدقائك، ولا تحصل عليها أبدًا بإنفاق العملات.',
+    creditsNote: 'الأرصدة منفصلة عن العملات. تحصل عليها من خطتك ومن دعوة أصدقائك، ولا تحصل عليها أبدًا بإنفاق العملات.',
   },
   history: {
     title: 'السجل',
@@ -173,7 +172,7 @@ const rewards: Translation<typeof en> = {
       challenge: { title: 'التحدي اليومي', detail: 'خمسة أسئلة من كل عوالم Knowzone World.' },
       levels: { title: 'مستويات Knowzone World', detail: 'عملات مقابل كل نجمة جديدة، ومكافأة إضافية على 3 نجوم.' },
       quests: { title: 'المهام', detail: 'مهام يومية وأسبوعية، تُستلم في Knowzone World.' },
-      course: { title: 'أنهِ دورة', detail: 'أكمل كل الدروس واحصل على شهادتك.' },
+      course: { title: 'أنهِ دورة', detail: 'أنهِ كل دروس الدورة.' },
       lessons: { title: 'دروس الدورات', detail: 'كل درس تكمله يمنحك XP.' },
     },
   },

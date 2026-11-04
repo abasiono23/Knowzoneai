@@ -79,7 +79,7 @@ const help: Translation<typeof en> = {
       start: 'How to start',
       ai: 'AI tutor and study tools',
       videos: 'Videos',
-      courses: 'Courses and certificates',
+      courses: 'Courses',
       world: 'Knowzone World and rewards',
       account: 'Account and privacy',
       payments: 'Plans and payments',
@@ -124,8 +124,8 @@ const help: Translation<typeof en> = {
         a: 'Open am from My videos and tap Try again. We no go charge you credits for video wey fail.',
       },
       certificate: {
-        q: 'How I go get certificate?',
-        a: 'Finish every lesson for one course. Your certificate go show for Profile → My certificates, where you fit download or share am.',
+        q: 'Courses dey come with certificate?',
+        a: 'No. Courses na for learning, with video lessons, readings and quizzes, and when you finish one you go get XP and coins. Certificates go come with Knowzone own books.',
       },
       'course-progress': {
         q: 'Una dey save my course progress?',

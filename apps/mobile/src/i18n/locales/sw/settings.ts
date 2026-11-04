@@ -157,7 +157,8 @@ const settings: Translation<typeof en> = {
     newHint: 'Angalau herufi 8, zenye herufi na namba',
     confirm: 'Thibitisha nenosiri jipya',
     mismatch: 'Manenosiri hayalingani',
-    forgot: 'Umelisahau? Toka, kisha tumia “Umesahau nenosiri?” kwenye skrini ya kuingia ili kulibadilisha kupitia barua pepe.',
+    forgot:
+      'Umelisahau? Toka, kisha tumia “Umesahau nenosiri?” kwenye skrini ya kuingia ili kulibadilisha kupitia barua pepe.',
   },
   connected: {
     title: 'Akaunti zilizounganishwa',
@@ -176,7 +177,8 @@ const settings: Translation<typeof en> = {
     disconnect: 'Tenganisha',
     onlyMethod:
       'Hii ndiyo njia yako pekee ya kuingia, kwa hiyo haiwezi kutenganishwa. Ongeza nenosiri au akaunti nyingine kwanza.',
-    emailNote: 'Kubadilisha anwani yako ya barua pepe bado hakupatikani ndani ya programu. Kutahitaji uthibitisho kwamba ni wewe kweli.',
+    emailNote:
+      'Kubadilisha anwani yako ya barua pepe bado hakupatikani ndani ya programu. Kutahitaji uthibitisho kwamba ni wewe kweli.',
   },
   devices: {
     title: 'Vifaa',
@@ -262,7 +264,8 @@ const settings: Translation<typeof en> = {
   data: {
     eyebrow: 'FARAGHA',
     title: 'Pakua data yangu',
-    intro: 'Pata nakala ya kila kitu Knowzone inachohifadhi kukuhusu, katika muundo unaoweza kufungua au kupeleka mahali pengine.',
+    intro:
+      'Pata nakala ya kila kitu Knowzone inachohifadhi kukuhusu, katika muundo unaoweza kufungua au kupeleka mahali pengine.',
     whatsIncluded: 'Kilichojumuishwa',
     included: {
       profile: 'Wasifu wako, mipangilio na mapendeleo ya kujifunza',
@@ -354,7 +357,8 @@ const settings: Translation<typeof en> = {
     courses: 'Kozi',
     noCourses: 'Bado hakuna kozi.',
     courseAverage: 'Wastani wa majaribio ya kozi {{value}}',
-    packAverage: 'Wastani wa majaribio ya vifurushi vyako vya kusoma ni {{value}}. Pitia majibu yasiyo sahihi ili kuupandisha.',
+    packAverage:
+      'Wastani wa majaribio ya vifurushi vyako vya kusoma ni {{value}}. Pitia majibu yasiyo sahihi ili kuupandisha.',
   },
   myCourses: {
     title: 'Kozi zangu',
@@ -369,15 +373,16 @@ const settings: Translation<typeof en> = {
       done: 'Bado hakuna kozi zilizokamilika',
       saved: 'Hakuna kilichohifadhiwa',
     },
-    emptyDoneBody: 'Maliza kila somo katika kozi ili upate cheti chake.',
-    emptyBody: 'Vinjari kozi zilizopangwa zenye majaribio na vyeti.',
+    emptyDoneBody: 'Maliza kila somo katika kozi ili uione hapa.',
+    emptyBody: 'Vinjari kozi zilizopangwa zenye masomo ya video na majaribio.',
     browse: 'Vinjari kozi',
     findAnother: 'Tafuta kozi nyingine',
   },
   certificates: {
     title: 'Vyeti vyangu',
     emptyTitle: 'Bado hakuna vyeti',
-    emptyBody: 'Maliza kila somo katika kozi (majaribio yanahitaji 60%) ili upate cheti unachoweza kupakua na kushiriki.',
+    emptyBody:
+      'Maliza kila somo katika kozi (majaribio yanahitaji 60%) ili upate cheti unachoweza kupakua na kushiriki.',
     a11y: 'Cheti cha {{title}}',
     label: 'CHETI CHA KUHITIMU',
     meta: '{{date}} · {{id}}',
@@ -471,11 +476,13 @@ const settings: Translation<typeof en> = {
       streak7: 'Mfululizo wa siku 7',
     },
     inviteTitle: 'Alika marafiki, pata krediti',
-    inviteBody: 'Nyote wawili mnapata krediti 5 za AI rafiki yako anapomaliza somo, jaribio au kiwango chake cha kwanza.',
+    inviteBody:
+      'Nyote wawili mnapata krediti 5 za AI rafiki yako anapomaliza somo, jaribio au kiwango chake cha kwanza.',
     shareInvite: 'Shiriki mwaliko',
     myReferrals: 'Mialiko yangu',
     goPlus: 'Jiunge na Plus',
-    goPlusBody: 'Maswali mara 10 zaidi kwa mwalimu, krediti {{credits}} za AI kwa mwezi na video ndefu zaidi za maelezo.',
+    goPlusBody:
+      'Maswali mara 10 zaidi kwa mwalimu, krediti {{credits}} za AI kwa mwezi na video ndefu zaidi za maelezo.',
     manageSubscription: 'Simamia usajili',
     manageBody: 'Simamia usajili wako, risiti na usasishaji',
     help: 'Msaada',

@@ -119,7 +119,7 @@ const courses: Translation<typeof en> = {
     wrongPairings_other: 'Ìsopọ̀ tí kò tọ̀nà {{count}} lójú ọ̀nà. {{feedback}}',
   },
   catalogue: {
-    eyebrow: 'KỌ́Ọ̀SÌ {{count}} · PẸ̀LÚ ÌWÉ-Ẹ̀RÍ',
+    eyebrow: 'KỌ́Ọ̀SÌ {{count}} · Ẹ̀KỌ́ FÍDÍÒ',
     title: 'Kọ́ọ̀sì',
     searchPlaceholder: 'Wá kọ́ọ̀sì, àkòrí tàbí ìdánwò',
     searchA11y: 'Wá kọ́ọ̀sì',
@@ -247,8 +247,8 @@ const courses: Translation<typeof en> = {
   },
   complete: {
     almostTitle: 'O ti fẹ́rẹ̀ dé ibẹ̀',
-    almostBody_one: 'Parí ẹ̀kọ́ {{count}} sí i láti parí {{title}} kí o sì jèrè ìwé-ẹ̀rí rẹ.',
-    almostBody_other: 'Parí ẹ̀kọ́ {{count}} sí i láti parí {{title}} kí o sì jèrè ìwé-ẹ̀rí rẹ.',
+    almostBody_one: 'Parí ẹ̀kọ́ {{count}} sí i láti parí {{title}}.',
+    almostBody_other: 'Parí ẹ̀kọ́ {{count}} sí i láti parí {{title}}.',
     quizNote: 'Ìdánwò máa ń ka ní kété tí o bá gba {{pass}}% tàbí jù bẹ́ẹ̀ lọ.',
     title: 'Kọ́ọ̀sì ti parí!',
     body: 'O ti parí {{title}}. Ìlọsíwájú gidi tó máa wà pẹ́ nìyẹn.',
@@ -257,7 +257,7 @@ const courses: Translation<typeof en> = {
     lessons: 'ẹ̀kọ́',
     studied: 'àkókò ẹ̀kọ́',
     quizAvg: 'ìpíndọ́gba ìdánwò',
-    saved: 'A ti fi ìwé-ẹ̀rí rẹ pamọ́ sí profaili rẹ, o sì lè pín in pẹ̀lú olùkọ́, òbí tàbí ilé-ìwé.',
+    saved: 'Ìlọsíwájú rẹ, XP àti owó ẹyọ rẹ wà ní ìpamọ́ sí profaili rẹ.',
   },
   progress: {
     eyebrow: 'ÌLỌSÍWÁJÚ KỌ́Ọ̀SÌ',
@@ -417,7 +417,8 @@ const courses: Translation<typeof en> = {
   },
   resources: {
     eyebrow: 'OHUN ÈLÒ Ẹ̀KỌ́',
-    intro: 'A ṣe àwọn ìwé àkópọ̀ àti àkójọ ìdánrawò láti inú ẹ̀kọ́ yìí, nítorí náà wọ́n máa ń bá ohun tí o kọ́ mu nígbà gbogbo.',
+    intro:
+      'A ṣe àwọn ìwé àkópọ̀ àti àkójọ ìdánrawò láti inú ẹ̀kọ́ yìí, nítorí náà wọ́n máa ń bá ohun tí o kọ́ mu nígbà gbogbo.',
     options: 'Àṣàyàn fún {{title}}',
     savePdf: 'Fi pamọ́ bí PDF',
     copyText: 'Da ọ̀rọ̀ kọ',
@@ -464,7 +465,8 @@ const courses: Translation<typeof en> = {
   },
   video: {
     youtubeMeta: '{{channel}} · {{duration}} · YouTube',
-    youtubeNote: 'Fídíò yìí wá láti YouTube, ó sì ń ṣiṣẹ́ nínú ẹ̀rọ YouTube fúnra rẹ̀. Nígbà tí o bá wò ó tán, sàmì sí ẹ̀kọ́ náà pé o ti parí.',
+    youtubeNote:
+      'Fídíò yìí wá láti YouTube, ó sì ń ṣiṣẹ́ nínú ẹ̀rọ YouTube fúnra rẹ̀. Nígbà tí o bá wò ó tán, sàmì sí ẹ̀kọ́ náà pé o ti parí.',
     producing: 'À ṣì ń ṣe fídíò yìí lọ́wọ́.',
     meta: '{{duration}} · {{chapters}} · {{name}} ló ṣàlàyé',
     chapters_one: 'Orí {{count}}',

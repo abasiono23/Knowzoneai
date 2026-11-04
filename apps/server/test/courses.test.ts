@@ -120,7 +120,7 @@ describe('course catalogue', () => {
 });
 
 describe('learning a course', () => {
-  it('tracks lessons, marks quizzes on the server and issues a certificate at the end (114–125)', async () => {
+  it('tracks lessons, marks quizzes on the server, and gives a bonus (no certificate) at the end (114–125)', async () => {
     await seedCourse();
     const { as, sub } = await signIn();
     await as.post('/me/courses/physics/open', { lessonId: 'c1s1' }).expect(200);
@@ -137,9 +137,13 @@ describe('learning a course', () => {
     expect(failed.body).toMatchObject({ passed: false, certificate: null, attempt: { score: 0, total: 2 } });
     await as.post('/me/courses/physics/lessons/c1quiz/attempts', { answers: [0] }).expect(400);
 
+    const before = (await as.get('/me').expect(200)).body.user;
     const passed = await as.post('/me/courses/physics/lessons/c1quiz/attempts', { answers: [0, 1], seconds: 40 }).expect(201);
     expect(passed.body).toMatchObject({ passed: true, attempt: { score: 2 } });
-    expect(passed.body.certificate).toMatchObject({ id: expect.stringMatching(/^KZ-PHY-[0-9A-F]{8}$/), name: 'Amara Okeke', score: 1 });
+    // Courses don't issue certificates any more (only Knowzone's own books will); finishing still earns the bonus.
+    expect(passed.body.certificate).toBeNull();
+    expect(passed.body.user.xp - before.xp).toBe(110);
+    expect(passed.body.user.coins - before.coins).toBe(50);
 
     const p = (await as.get('/me/courses').expect(200)).body;
     expect(p.enrolled.physics).toEqual(expect.any(Number));
@@ -147,13 +151,14 @@ describe('learning a course', () => {
     expect(p.last.physics).toBe('c1s1');
     expect(p.attempts['physics/c1quiz']).toHaveLength(2);
     expect(p.minutes.physics).toBe(18);
-    expect(p.certificates.physics.id).toBe(passed.body.certificate.id);
+    expect(p.certificates).toEqual({});
+    expect(await prisma.certificate.count({ where: { userId: sub } })).toBe(0);
 
-    // Anyone can verify it.
-    const verify = await http().get(`/certificates/${passed.body.certificate.id}`).expect(200);
+    // A certificate issued before still verifies for anyone.
+    await prisma.certificate.create({ data: { id: 'KZ-PHY-OLD00001', userId: sub, courseId: 'physics', name: 'Amara Okeke', score: 1 } });
+    const verify = await http().get('/certificates/KZ-PHY-OLD00001').expect(200);
     expect(verify.body.certificate).toMatchObject({ name: 'Amara Okeke', course: 'Physics' });
     await http().get('/certificates/KZ-FAKE-0000').expect(404);
-    expect(await prisma.certificate.count({ where: { userId: sub } })).toBe(1);
   });
 
   it('keeps notes, saves courses, and counts ratings and learners (119, 126)', async () => {

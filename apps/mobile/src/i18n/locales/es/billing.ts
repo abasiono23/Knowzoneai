@@ -94,7 +94,7 @@ const billing: Translation<typeof en> = {
       studyTools: 'Resúmenes, tarjetas de memoria y quizzes',
       videos: 'Videos explicativos',
       priority: 'Procesamiento prioritario',
-      courses: 'Cursos y certificados',
+      courses: 'Cursos con lecciones en video',
       advancedQuizzes: 'Quizzes avanzados y repaso espaciado',
       studyPlans: 'Planes de estudio personalizados',
       examPapers: 'Exámenes de práctica',

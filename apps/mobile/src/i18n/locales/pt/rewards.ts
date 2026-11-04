@@ -4,11 +4,15 @@ import type en from '../en/rewards';
 const rewards: Translation<typeof en> = {
   eyebrow: 'RECOMPENSAS',
   walletEyebrow: 'CARTEIRA DE MOEDAS',
-  coinsFootnote: 'As moedas servem só para extras divertidos. Não podem ser trocadas por dinheiro nem por créditos de IA.',
+  coinsFootnote:
+    'As moedas servem só para extras divertidos. Não podem ser trocadas por dinheiro nem por créditos de IA.',
   items: {
     'frame-gold': { name: 'Moldura dourada', description: 'Um anel dourado brilhante à volta da tua foto de perfil.' },
     'frame-galaxy': { name: 'Moldura galáxia', description: 'Roxo e verde-azulado, como o céu noturno do Knowzone.' },
-    'frame-kente': { name: 'Moldura kente', description: 'Cores fortes da África Ocidental para os melhores estudantes.' },
+    'frame-kente': {
+      name: 'Moldura kente',
+      description: 'Cores fortes da África Ocidental para os melhores estudantes.',
+    },
     'frame-independence': {
       name: 'Moldura Independência',
       description: 'Verde e branco, para celebrar o 1 de outubro. Só disponível na primeira semana de outubro.',
@@ -167,7 +171,7 @@ const rewards: Translation<typeof en> = {
       challenge: { title: 'Desafio diário', detail: 'Cinco perguntas de todos os mundos do Knowzone World.' },
       levels: { title: 'Níveis do Knowzone World', detail: 'Moedas por cada nova estrela, bónus por 3 estrelas.' },
       quests: { title: 'Missões', detail: 'Missões diárias e semanais, recebidas no Knowzone World.' },
-      course: { title: 'Terminar um curso', detail: 'Completa todas as lições e ganha o teu certificado.' },
+      course: { title: 'Terminar um curso', detail: 'Termina todas as lições de um curso.' },
       lessons: { title: 'Lições de cursos', detail: 'Cada lição que completas dá XP.' },
     },
   },
@@ -303,7 +307,8 @@ const rewards: Translation<typeof en> = {
     balance: 'O teu saldo',
     cost: 'Custo',
     after: 'Saldo depois',
-    boostNote: 'Os impulsos são usados automaticamente quando precisas deles. As moedas não podem ser devolvidas depois de gastas.',
+    boostNote:
+      'Os impulsos são usados automaticamente quando precisas deles. As moedas não podem ser devolvidas depois de gastas.',
     keepNote: 'Isto fica teu para sempre. As moedas não podem ser devolvidas depois de gastas.',
   },
   success: {

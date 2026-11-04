@@ -49,7 +49,7 @@ const home: Translation<typeof en> = {
   explore: {
     eyebrow: 'BINCIKA',
     title: 'Nemo darasinka na gaba',
-    courses: 'Kwasa-kwasai masu satifiket',
+    courses: 'Ƙara koyo da darussan bidiyo',
     browseSubjects: 'Duba fannoni',
     allSubjects: 'Duk fannoni',
     trendingNow: 'Masu tashe yanzu 🔥',
@@ -204,7 +204,7 @@ const home: Translation<typeof en> = {
     askTutor: 'Tambayi malamin AI game da wannan',
     partOfCourseLabel: 'Wani ɓangare na kwas ɗin {{title}}',
     partOfCourse: 'ƁANGARE NA KWAS',
-    courseBody: 'Ci gaba da karatu, ayyuka, gwaje-gwaje da satifiket',
+    courseBody: 'Ci gaba da karatu, bidiyo, ayyuka da gwaje-gwaje',
     moreIn: 'Ƙari a {{subject}}',
   },
   lessonCard: {

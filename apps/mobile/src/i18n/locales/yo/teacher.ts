@@ -45,7 +45,7 @@ const teacher: Translation<typeof en> = {
     submittedCount: '{{submitted}}/{{total}}',
     coursesA11y: 'Ṣàwárí kọ́ọ̀sì láti dábàá',
     coursesTitle: 'Kọ́ọ̀sì láti dábàá',
-    coursesBody: 'Kọ́ọ̀sì tó wà létòlétò pẹ̀lú ìdánwò àti ìwé-ẹ̀rí fún àwọn akẹ́kọ̀ọ́ rẹ',
+    coursesBody: 'Àwọn kọ́ọ̀sì tí a ṣètò pẹ̀lú ẹ̀kọ́ fídíò àti ìdánwò fún àwọn akẹ́kọ̀ọ́ rẹ',
   },
   classes: {
     eyebrow: 'ÀWỌN KÍLÁÀSÌ',

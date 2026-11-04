@@ -97,8 +97,7 @@ const settings: Translation<typeof en> = {
   },
   language: {
     title: 'Èdè',
-    footer:
-      'Gbogbo áàpù náà, títí kan àlàyé olùkọ́ AI rẹ, yóò lo èdè yìí. Àwọn èdè tí a sàmì sí BETA ṣì ń dára sí i.',
+    footer: 'Gbogbo áàpù náà, títí kan àlàyé olùkọ́ AI rẹ, yóò lo èdè yìí. Àwọn èdè tí a sàmì sí BETA ṣì ń dára sí i.',
   },
   editProfile: {
     title: 'Ṣàtúnṣe profaili',
@@ -369,8 +368,8 @@ const settings: Translation<typeof en> = {
       done: 'Kò tíì sí kọ́ọ̀sì tí o parí',
       saved: 'Kò sí nǹkan tí a fipamọ́',
     },
-    emptyDoneBody: 'Parí gbogbo ẹ̀kọ́ inú kọ́ọ̀sì kan láti jèrè ìwé-ẹ̀rí rẹ̀.',
-    emptyBody: 'Ṣàwárí àwọn kọ́ọ̀sì tó létò pẹ̀lú ìdánwò àti ìwé-ẹ̀rí.',
+    emptyDoneBody: 'Parí gbogbo ẹ̀kọ́ inú kọ́ọ̀sì kan láti rí i níbí.',
+    emptyBody: 'Wo àwọn kọ́ọ̀sì tí a ṣètò pẹ̀lú ẹ̀kọ́ fídíò àti ìdánwò.',
     browse: 'Ṣàwárí kọ́ọ̀sì',
     findAnother: 'Wá kọ́ọ̀sì mìíràn',
   },

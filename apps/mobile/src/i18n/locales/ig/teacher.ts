@@ -45,7 +45,7 @@ const teacher: Translation<typeof en> = {
     submittedCount: '{{submitted}}/{{total}}',
     coursesA11y: 'Lelee kọọsụ ị ga-akwado',
     coursesTitle: 'Kọọsụ ị ga-akwado',
-    coursesBody: 'Kọọsụ hazirila nke ọma nwere ajụjụ nyocha na asambodo maka ụmụ akwụkwọ gị',
+    coursesBody: 'Kọs ahaziri ahazi nwere ihe ọmụmụ vidiyo na ajụjụ nyocha maka ụmụ akwụkwọ gị',
   },
   classes: {
     eyebrow: 'KLAASỊ',

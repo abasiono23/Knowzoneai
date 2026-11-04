@@ -86,7 +86,7 @@ const billing: Translation<typeof en> = {
       studyTools: 'Summaries, flashcards and quizzes',
       videos: 'Video explainers',
       priority: 'Priority processing',
-      courses: 'Courses and certificates',
+      courses: 'Courses with video lessons',
       advancedQuizzes: 'Advanced quizzes and spaced revision',
       studyPlans: 'Study plans wey dey arranged for you',
       examPapers: 'Exam practice papers',

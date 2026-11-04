@@ -8,7 +8,10 @@ const rewards: Translation<typeof en> = {
   items: {
     'frame-gold': { name: 'Marco dorado', description: 'Un brillante aro dorado alrededor de tu foto de perfil.' },
     'frame-galaxy': { name: 'Marco galaxia', description: 'Morado y turquesa, como el cielo nocturno de Knowzone.' },
-    'frame-kente': { name: 'Marco kente', description: 'Colores intensos de África Occidental para los mejores estudiantes.' },
+    'frame-kente': {
+      name: 'Marco kente',
+      description: 'Colores intensos de África Occidental para los mejores estudiantes.',
+    },
     'frame-independence': {
       name: 'Marco de la Independencia',
       description: 'Verde y blanco, para celebrar el 1 de octubre. Solo disponible la primera semana de octubre.',
@@ -165,9 +168,12 @@ const rewards: Translation<typeof en> = {
         detail: 'Abre la app y reclámala una vez al día. El día 7 es el que más da.',
       },
       challenge: { title: 'Reto diario', detail: 'Cinco preguntas de todos los mundos de Knowzone World.' },
-      levels: { title: 'Niveles de Knowzone World', detail: 'Monedas por cada estrella nueva y un extra por 3 estrellas.' },
+      levels: {
+        title: 'Niveles de Knowzone World',
+        detail: 'Monedas por cada estrella nueva y un extra por 3 estrellas.',
+      },
       quests: { title: 'Misiones', detail: 'Misiones diarias y semanales, que se reclaman en Knowzone World.' },
-      course: { title: 'Termina un curso', detail: 'Completa todas las lecciones y obtén tu certificado.' },
+      course: { title: 'Termina un curso', detail: 'Termina todas las lecciones de un curso.' },
       lessons: { title: 'Lecciones de cursos', detail: 'Cada lección que completas te da XP.' },
     },
   },
@@ -303,7 +309,8 @@ const rewards: Translation<typeof en> = {
     balance: 'Tu saldo',
     cost: 'Coste',
     after: 'Saldo después',
-    boostNote: 'Los potenciadores se usan automáticamente cuando los necesitas. Las monedas no se devuelven una vez gastadas.',
+    boostNote:
+      'Los potenciadores se usan automáticamente cuando los necesitas. Las monedas no se devuelven una vez gastadas.',
     keepNote: 'Es tuyo para siempre. Las monedas no se devuelven una vez gastadas.',
   },
   success: {
@@ -325,7 +332,8 @@ const rewards: Translation<typeof en> = {
     levelTitle: 'Se desbloquea en el nivel {{level}}',
     levelBody: 'Estás en el nivel {{level}}. Sigue ganando XP para desbloquear {{name}}.',
     expiredTitle: 'Esta recompensa ha terminado',
-    expiredUntil: '{{name}} estuvo disponible hasta el {{date}}. Las recompensas de temporada vuelven en fechas especiales.',
+    expiredUntil:
+      '{{name}} estuvo disponible hasta el {{date}}. Las recompensas de temporada vuelven en fechas especiales.',
     expiredBody: '{{name}} ya no está disponible.',
     notYetTitle: 'Próximamente',
     notYetFrom: '{{name}} estará disponible a partir del {{date}}.',

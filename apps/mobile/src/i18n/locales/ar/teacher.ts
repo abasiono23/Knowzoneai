@@ -69,7 +69,7 @@ const teacher: Translation<typeof en> = {
     submittedCount: '{{submitted}}/{{total}}',
     coursesA11y: 'تصفّح الدورات لتوصي بها',
     coursesTitle: 'دورات توصي بها',
-    coursesBody: 'دورات منظّمة مع اختبارات وشهادات لطلابك',
+    coursesBody: 'دورات منظّمة فيها دروس فيديو واختبارات لطلابك',
   },
   classes: {
     eyebrow: 'الفصول',
@@ -193,8 +193,7 @@ const teacher: Translation<typeof en> = {
     averageScore: 'متوسط الدرجات',
     questions: 'أسئلة',
     waitingTitle: 'في انتظار التسليمات',
-    waitingBody:
-      'يمكن لطلاب {{className}} رؤية هذا الآن في تطبيق Knowzone. تظهر النتائج والرؤى فور تسليمهم.',
+    waitingBody: 'يمكن لطلاب {{className}} رؤية هذا الآن في تطبيق Knowzone. تظهر النتائج والرؤى فور تسليمهم.',
     tip: 'نصيحة تدريس من الذكاء الاصطناعي',
     breakdown: 'تفصيل الأسئلة',
     commonMistake: 'خطأ شائع: {{mistake}}',

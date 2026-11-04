@@ -80,7 +80,7 @@ const help: Translation<typeof en> = {
       start: 'Farawa',
       ai: 'Malamin AI da kayan karatu',
       videos: 'Bidiyo',
-      courses: 'Kwasa-kwasai da takardun shaida',
+      courses: 'Kwasa-kwasai',
       world: 'Knowzone World da lada',
       account: 'Asusu da sirri',
       payments: 'Tsare-tsare da biyan kuɗi',
@@ -125,8 +125,8 @@ const help: Translation<typeof en> = {
         a: 'Buɗe shi daga Bidiyona ka taɓa Sake gwadawa. Ba a cire maka kiredit don bidiyon da bai yi nasara ba.',
       },
       certificate: {
-        q: 'Ta yaya zan samu takardar shaida?',
-        a: 'Kammala kowane darasi a cikin kwas. Takardar shaidarka za ta bayyana a Bayanan kai → Takardun shaidata, inda za ka iya saukewa ko raba ta.',
+        q: 'Shin kwasa-kwasai suna da satifiket?',
+        a: 'A’a. Kwasa-kwasai na koyo ne, da darussan bidiyo, karatu da gwaje-gwaje, kuma idan ka kammala ɗaya za ka samu XP da tsabar kuɗi. Satifiket za su zo tare da littattafan Knowzone na kanta.',
       },
       'course-progress': {
         q: 'Ana ajiye ci gaban kwas ɗina?',

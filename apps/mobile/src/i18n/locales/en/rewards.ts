@@ -165,7 +165,7 @@ const rewards = {
       challenge: { title: 'Daily challenge', detail: 'Five questions from every Knowzone World.' },
       levels: { title: 'Knowzone World levels', detail: 'Coins for every new star, bonus for 3 stars.' },
       quests: { title: 'Quests', detail: 'Daily and weekly missions, claimed in Knowzone World.' },
-      course: { title: 'Finish a course', detail: 'Complete every lesson and earn your certificate.' },
+      course: { title: 'Finish a course', detail: 'Complete every lesson in a course.' },
       lessons: { title: 'Course lessons', detail: 'Every lesson you complete earns XP.' },
     },
   },

@@ -91,7 +91,7 @@ const billing: Translation<typeof en> = {
       studyTools: 'Muhtasari, kadi za kujifunzia na majaribio',
       videos: 'Video za maelezo',
       priority: 'Kipaumbele cha uchakataji',
-      courses: 'Kozi na vyeti',
+      courses: 'Kozi zenye masomo ya video',
       advancedQuizzes: 'Majaribio ya hali ya juu na marudio ya vipindi',
       studyPlans: 'Mipango binafsi ya kusoma',
       examPapers: 'Karatasi za mazoezi ya mitihani',

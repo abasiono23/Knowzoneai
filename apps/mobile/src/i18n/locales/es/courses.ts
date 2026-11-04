@@ -132,7 +132,7 @@ const courses: Translation<typeof en> = {
     wrongPairings_many: '{{count}} parejas incorrectas por el camino. {{feedback}}',
   },
   catalogue: {
-    eyebrow: '{{count}} CURSOS · CERTIFICADOS INCLUIDOS',
+    eyebrow: '{{count}} CURSOS · LECCIONES EN VIDEO',
     title: 'Cursos',
     searchPlaceholder: 'Busca cursos, temas o exámenes',
     searchA11y: 'Buscar cursos',
@@ -141,7 +141,8 @@ const courses: Translation<typeof en> = {
     results_other: '{{count}} cursos para «{{query}}»',
     results_many: '{{count}} cursos para «{{query}}»',
     noResults: 'No se encontraron cursos',
-    noResultsBody: 'Prueba con una asignatura como «biología», un tema como «ecuaciones de segundo grado» o un examen como «WAEC».',
+    noResultsBody:
+      'Prueba con una asignatura como «biología», un tema como «ecuaciones de segundo grado» o un examen como «WAEC».',
     continueLabel: 'SIGUE DONDE LO DEJASTE',
     next: 'Siguiente: {{title}} · {{duration}}',
     resume: 'Retomar curso',
@@ -245,7 +246,8 @@ const courses: Translation<typeof en> = {
   certificate: {
     eyebrow: 'CERTIFICADO',
     lockedTitle: 'Termina el curso para desbloquear tu certificado',
-    lockedBody: '{{done}} de {{total}} lecciones hechas. Todas las lecciones cuentan y en los quizzes necesitas un {{pass}} % para aprobar.',
+    lockedBody:
+      '{{done}} de {{total}} lecciones hechas. Todas las lecciones cuentan y en los quizzes necesitas un {{pass}} % para aprobar.',
     continue: 'Continuar curso',
     title: 'Certificado de finalización',
     certifies: 'SE CERTIFICA QUE',
@@ -266,9 +268,9 @@ const courses: Translation<typeof en> = {
   },
   complete: {
     almostTitle: 'Ya casi',
-    almostBody_one: 'Termina {{count}} lección más para completar {{title}} y obtener tu certificado.',
-    almostBody_other: 'Termina {{count}} lecciones más para completar {{title}} y obtener tu certificado.',
-    almostBody_many: 'Termina {{count}} lecciones más para completar {{title}} y obtener tu certificado.',
+    almostBody_one: 'Termina {{count}} lección más para completar {{title}}.',
+    almostBody_other: 'Termina {{count}} lecciones más para completar {{title}}.',
+    almostBody_many: 'Termina {{count}} lecciones más para completar {{title}}.',
     quizNote: 'Los quizzes cuentan cuando sacas un {{pass}} % o más.',
     title: '¡Curso completado!',
     body: 'Terminaste {{title}}. Eso es un progreso real y duradero.',
@@ -277,7 +279,7 @@ const courses: Translation<typeof en> = {
     lessons: 'lecciones',
     studied: 'estudiado',
     quizAvg: 'media quizzes',
-    saved: 'Tu certificado se guarda en tu perfil y puedes compartirlo con profesores, familias o centros educativos.',
+    saved: 'Tu progreso, tu XP y tus monedas se guardan en tu perfil.',
   },
   progress: {
     eyebrow: 'PROGRESO DEL CURSO',
@@ -445,7 +447,8 @@ const courses: Translation<typeof en> = {
   },
   resources: {
     eyebrow: 'RECURSOS DE LA LECCIÓN',
-    intro: 'Las fichas de resumen y los ejercicios se crean a partir de esta lección, así que siempre coinciden con lo que estudiaste.',
+    intro:
+      'Las fichas de resumen y los ejercicios se crean a partir de esta lección, así que siempre coinciden con lo que estudiaste.',
     options: 'Opciones de {{title}}',
     savePdf: 'Guardar como PDF',
     copyText: 'Copiar texto',
@@ -494,7 +497,8 @@ const courses: Translation<typeof en> = {
   },
   video: {
     youtubeMeta: '{{channel}} · {{duration}} · YouTube',
-    youtubeNote: 'Este video es de YouTube y se reproduce en el reproductor de YouTube. Cuando lo hayas visto, marca la lección como completada.',
+    youtubeNote:
+      'Este video es de YouTube y se reproduce en el reproductor de YouTube. Cuando lo hayas visto, marca la lección como completada.',
     producing: 'Este video aún se está produciendo.',
     meta: '{{duration}} · {{chapters}} · narrado por {{name}}',
     chapters_one: '{{count}} capítulo',
@@ -537,7 +541,8 @@ const courses: Translation<typeof en> = {
     worksheetMeta_many: 'Ficha · {{count}} preguntas',
     pastTitle: 'Preguntas de exámenes anteriores de {{exam}}: {{subject}}',
     pastMeta: 'Exámenes anteriores · 2019–2025',
-    pastBody: 'Las preguntas de exámenes anteriores de {{exams}} sobre este tema aparecerán aquí cuando se conecte el banco de preguntas.',
+    pastBody:
+      'Las preguntas de exámenes anteriores de {{exams}} sobre este tema aparecerán aquí cuando se conecte el banco de preguntas.',
     askTutor: 'Pregúntale al tutor de IA sobre esta lección',
     askTutorMeta: 'Abre el tutor con este tema',
     keyIdea: 'Idea clave {{number}}: ¿puedes explicarla en una frase antes de mirar?',

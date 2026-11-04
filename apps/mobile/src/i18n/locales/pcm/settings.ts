@@ -176,7 +176,8 @@ const settings: Translation<typeof en> = {
     disconnect: 'Disconnect',
     onlyMethod:
       'Na only this way you get to sign in, so you no fit disconnect am. Add password or another account first.',
-    emailNote: 'You never fit change your email address inside the app yet. E go need check to confirm say na really you.',
+    emailNote:
+      'You never fit change your email address inside the app yet. E go need check to confirm say na really you.',
   },
   devices: {
     title: 'Devices',
@@ -369,15 +370,16 @@ const settings: Translation<typeof en> = {
       done: 'You never finish any course yet',
       saved: 'Nothing dey saved',
     },
-    emptyDoneBody: 'Finish every lesson for one course to collect im certificate.',
-    emptyBody: 'Check courses wey dey arranged well, with quizzes and certificates.',
+    emptyDoneBody: 'Finish every lesson for one course to see am here.',
+    emptyBody: 'Check structured courses with video lessons and quizzes.',
     browse: 'Check courses',
     findAnother: 'Find another course',
   },
   certificates: {
     title: 'My certificates',
     emptyTitle: 'No certificates yet',
-    emptyBody: 'Finish every lesson for one course (quizzes need 60%) to collect certificate wey you fit download and share.',
+    emptyBody:
+      'Finish every lesson for one course (quizzes need 60%) to collect certificate wey you fit download and share.',
     a11y: 'Certificate for {{title}}',
     label: 'CERTIFICATE OF COMPLETION',
     meta: '{{date}} · {{id}}',

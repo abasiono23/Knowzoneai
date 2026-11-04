@@ -80,7 +80,7 @@ const help: Translation<typeof en> = {
       start: 'Ịmalite',
       ai: 'Onye nkuzi AI na ngwaọrụ ọmụmụ',
       videos: 'Vidiyo',
-      courses: 'Kọọsụ na asambodo',
+      courses: 'Kọs',
       world: 'Knowzone World na ihe nrite',
       account: 'Akaụntụ na nzuzo',
       payments: 'Atụmatụ na ịkwụ ụgwọ',
@@ -125,8 +125,8 @@ const help: Translation<typeof en> = {
         a: 'Meghee ya site na Vidiyo m ma pịa Nwaa ọzọ. A naghị ana gị kredit maka vidiyo dara.',
       },
       certificate: {
-        q: 'Olee otú m ga-esi nweta asambodo?',
-        a: 'Mechaa ihe ọmụmụ niile dị na kọọsụ. Asambodo gị ga-apụta na Profaịlụ → Asambodo m, ebe ị nwere ike ibudata ma ọ bụ kesaa ya.',
+        q: 'Kọs ọ na-enye asambodo?',
+        a: 'Mba. Kọs bụ maka mmụta, nwere ihe ọmụmụ vidiyo, ọgụgụ na ajụjụ nyocha, ma ị mechaa otu, ị ga-enweta XP na mkpụrụ ego. Asambodo ga-abịa n’akwụkwọ Knowzone n’onwe ya.',
       },
       'course-progress': {
         q: 'Echekwara ọganihu kọọsụ m?',

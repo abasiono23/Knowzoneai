@@ -178,8 +178,7 @@ const settings: Translation<typeof en> = {
     disconnect: 'Cire haɗi',
     onlyMethod:
       'Wannan ce kaɗai hanyarka ta shiga, don haka ba za a iya cire haɗinta ba. Ka fara ƙara kalmar sirri ko wani asusu.',
-    emailNote:
-      'Canza adireshin imel ɗinka bai samu a manhajar ba tukuna. Zai buƙaci tabbatarwa cewa kai ne da gaske.',
+    emailNote: 'Canza adireshin imel ɗinka bai samu a manhajar ba tukuna. Zai buƙaci tabbatarwa cewa kai ne da gaske.',
   },
   devices: {
     title: 'Na’urori',
@@ -375,8 +374,8 @@ const settings: Translation<typeof en> = {
       done: 'Babu kwas da aka kammala tukuna',
       saved: 'Babu abin da aka ajiye',
     },
-    emptyDoneBody: 'Kammala kowane darasi a kwas don samun takardar shaidarsa.',
-    emptyBody: 'Bincika kwasa-kwasai masu tsari da gwaje-gwaje da takaddun shaida.',
+    emptyDoneBody: 'Kammala kowane darasi a cikin kwas don ganin sa a nan.',
+    emptyBody: 'Duba kwasa-kwasai masu tsari da darussan bidiyo da gwaje-gwaje.',
     browse: 'Bincika kwasa-kwasai',
     findAnother: 'Nemo wani kwas',
   },
@@ -483,8 +482,7 @@ const settings: Translation<typeof en> = {
     shareInvite: 'Raba gayyata',
     myReferrals: 'Gayyatata',
     goPlus: 'Koma Plus',
-    goPlusBody:
-      'Ƙarin tambayoyi ga malami sau 10, kiredit na AI {{credits}} a wata da bidiyon bayani masu tsayi.',
+    goPlusBody: 'Ƙarin tambayoyi ga malami sau 10, kiredit na AI {{credits}} a wata da bidiyon bayani masu tsayi.',
     manageSubscription: 'Sarrafa rajistar biyan kuɗi',
     manageBody: 'Sarrafa rajistar biyan kuɗinka, rasit da sabuntawa',
     help: 'Taimako',
