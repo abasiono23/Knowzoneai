@@ -1,4 +1,5 @@
 import { Ionicons } from '@expo/vector-icons';
+import { Image } from 'expo-image';
 import { LinearGradient } from '@/components/ui/gradient';
 import { router } from 'expo-router';
 import { useTranslation } from 'react-i18next';
@@ -7,6 +8,7 @@ import { Pressable, StyleSheet, View } from 'react-native';
 import { ProgressBar, Text } from '@/components/ui';
 import { Colors, Radius, Spacing } from '@/constants/theme';
 import { FORMAT_META, formatLabel, formatViews, getSubject, levelLabel, subjectName, type Lesson } from '@/lib/catalog';
+import { lessonMedia } from '@/lib/lesson-cards';
 import { useLibrary } from '@/lib/library-store';
 
 type Props = {
@@ -30,9 +32,20 @@ export function LessonThumb({ lesson, size = 'md' }: { lesson: Lesson; size?: 's
       start={{ x: 0, y: 0 }}
       end={{ x: 1, y: 1 }}
       style={[styles.thumb, dims, size === 'sm' && { borderRadius: Radius.md }]}>
-      <Text style={{ fontSize: size === 'sm' ? 26 : 40, lineHeight: size === 'sm' ? 32 : 48, opacity: 0.9 }}>
-        {subject?.emoji}
-      </Text>
+      {lesson.cover ? (
+        // Flashcard lessons show their first card's picture; the subject's colours show while it loads.
+        <Image
+          source={{ uri: lessonMedia(lesson.cover) }}
+          style={StyleSheet.absoluteFill}
+          contentFit="cover"
+          transition={200}
+          accessible={false}
+        />
+      ) : (
+        <Text style={{ fontSize: size === 'sm' ? 26 : 40, lineHeight: size === 'sm' ? 32 : 48, opacity: 0.9 }}>
+          {subject?.emoji}
+        </Text>
+      )}
       {size !== 'sm' && (
         <>
           <View style={styles.formatBadge}>

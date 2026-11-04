@@ -717,6 +717,27 @@ short videos.
   made private.
 - **Endpoints:** `GET /watch?q=&subject=&offset=` (8 per page); `/embed/youtube/:id?autoplay=1`.
 
+### Flashcard lessons (Explore → Recommended for you, More in <subject>)
+
+- **What a lesson is:** 20–22 flashcards, each with a real photo or a drawn illustration and one or two sentences, then a 5-question quiz with explanations. A lesson takes about 4–5 minutes.
+- **Playing:**
+  - The cards move on by themselves. Tap the right side to go forward or the left to go back; there is a pause button.
+  - The phone's voice reads each card in English, Pidgin, French, Arabic, Swahili, Portuguese and Spanish. Phones have no Yoruba, Igbo or Hausa voice, so those languages show the cards without sound.
+  - Finishing the quiz completes the lesson.
+- **Done so far (10 of the 32 lessons):** How cells make energy, Genetics, Human heart and circulation, The mole concept, Ionic vs covalent bonding, Electrolysis, Newton's laws, Quadratic equations, Trigonometry, Demand and supply. The other 22 keep their old format until they're made.
+- **Covers:** lessons with flashcards show their first card's picture instead of an emoji.
+- **Made without AI services:**
+  - Claude wrote and checked the cards, quizzes and the translations into all 10 languages.
+  - Photos come from Wikimedia Commons (CC0, CC BY, CC BY-SA or public domain), and each is credited on its card. Diagrams are drawn as SVG.
+  - Native speakers should review the Yoruba, Igbo and Hausa text.
+- **Files:**
+  - The written lessons are in `data/lessons/source/lesson-<id>.json`.
+  - `npx tsx scripts/lesson-build.ts data/lessons/source` checks each photo's licence again, downloads and crops the photos, renders the drawings, and writes `data/lessons/cards.json` and `img/`.
+- **Endpoints:**
+  - `GET /lessons/:id/cards` returns the cards and quiz in the reader's language.
+  - `GET /lessons/media/:file` serves the pictures.
+  - `GET /catalog` marks these lessons with `format: flashcards`, a `cover` and `cards`.
+
 ### Your books (Explore → "Check out your books")
 
 - **The questions:**

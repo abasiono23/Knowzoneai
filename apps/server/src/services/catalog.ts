@@ -1,6 +1,7 @@
 import { prisma } from '../db.js';
 import type { Category as DbCategory, Lesson as DbLesson, Subject as DbSubject } from '../generated/prisma/client.js';
 import { type LanguageId } from './personalization.js';
+import { cardImage, deckMinutes, lessonDecks } from './lesson-cards.js';
 
 /** API shapes match the app's catalogue types, so the app can swap its built-in copy for these. */
 export type Category = { id: string; name: string; icon: string; color: string };
@@ -27,8 +28,17 @@ export type Lesson = {
   summary: string;
   keyPoints: string[];
   exams: string[];
+  /** Flashcard lessons: the first card's picture, and how many cards. */
+  cover?: string;
+  cards?: number;
 };
-export type Catalog = { version: string; language: LanguageId; categories: Category[]; subjects: Subject[]; lessons: Lesson[] };
+export type Catalog = {
+  version: string;
+  language: LanguageId;
+  categories: Category[];
+  subjects: Subject[];
+  lessons: Lesson[];
+};
 
 type Raw = { categories: DbCategory[]; subjects: DbSubject[]; lessons: DbLesson[]; loadedAt: number };
 
@@ -86,21 +96,26 @@ export async function catalogFor(lang: LanguageId): Promise<Catalog> {
       description: pick(s.i18n, lang, 'description', s.description),
       topics: pick(s.i18n, lang, 'topics', s.topics),
     })),
-    lessons: r.lessons.map((l) => ({
-      id: l.id,
-      title: pick(l.i18n, lang, 'title', l.title),
-      subjectId: l.subjectId,
-      topic: pick(l.i18n, lang, 'topic', l.topic),
-      format: l.format,
-      minutes: l.minutes,
-      level: l.level,
-      views: l.views,
-      rating: Math.round(l.rating * 10) / 10,
-      trend: l.trend,
-      summary: pick(l.i18n, lang, 'summary', l.summary),
-      keyPoints: pick(l.i18n, lang, 'keyPoints', l.keyPoints),
-      exams: l.exams,
-    })),
+    lessons: r.lessons.map((l) => {
+      // A lesson with flashcards made for it is taught as those cards, then a quiz.
+      const deck = lessonDecks().get(l.id);
+      return {
+        id: l.id,
+        title: pick(l.i18n, lang, 'title', l.title),
+        subjectId: l.subjectId,
+        topic: pick(l.i18n, lang, 'topic', l.topic),
+        format: deck ? 'flashcards' : l.format,
+        minutes: deck ? deckMinutes(deck) : l.minutes,
+        level: l.level,
+        views: l.views,
+        rating: Math.round(l.rating * 10) / 10,
+        trend: l.trend,
+        summary: pick(l.i18n, lang, 'summary', l.summary),
+        keyPoints: pick(l.i18n, lang, 'keyPoints', l.keyPoints),
+        exams: l.exams,
+        ...(deck && { cover: cardImage(deck.id, 0), cards: deck.cards.length }),
+      };
+    }),
   };
   localized.set(lang, catalog);
   return catalog;
@@ -113,11 +128,7 @@ export function trendingIn(c: Catalog, subjectId?: string, limit = 20) {
     .slice(0, limit);
 }
 
-const fold = (s: string) =>
-  s
-    .toLowerCase()
-    .normalize('NFD')
-    .replace(/\p{M}/gu, '');
+const fold = (s: string) => s.toLowerCase().normalize('NFD').replace(/\p{M}/gu, '');
 
 /**
  * Searches subjects, topics and lessons in the learner's language and in English (students often

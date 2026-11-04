@@ -1,5 +1,5 @@
 import { Ionicons } from '@expo/vector-icons';
-import { router, useLocalSearchParams } from 'expo-router';
+import { router, useLocalSearchParams, type Href } from 'expo-router';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Pressable, Share, StyleSheet, View } from 'react-native';
@@ -146,15 +146,24 @@ export default function LessonScreen() {
           </Card>
         </Animated.View>
       ) : (
-        <Button
-          title={t(`lesson.start.${lesson.format}`)}
-          icon={f.icon}
-          onPress={() => {
-            if (lesson.format === 'video') return router.push(`/videos/v-${lesson.id}`);
-            setProgress(lesson.id, 1);
-            setDone(true);
-          }}
-        />
+        <View style={{ gap: 6 }}>
+          <Button
+            title={lesson.cards ? t('lesson.start.video') : t(`lesson.start.${lesson.format}`)}
+            icon={lesson.cards ? 'play' : f.icon}
+            onPress={() => {
+              // Flashcard lessons play their cards, then a quiz; finishing the quiz completes the lesson.
+              if (lesson.cards) return router.push(`/learn/${lesson.id}` as Href);
+              if (lesson.format === 'video') return router.push(`/videos/v-${lesson.id}`);
+              setProgress(lesson.id, 1);
+              setDone(true);
+            }}
+          />
+          {!!lesson.cards && (
+            <Text variant="small" color={Colors.textSecondary} center>
+              {t('lesson.flashcardsInfo', { count: lesson.cards })}
+            </Text>
+          )}
+        </View>
       )}
       <Button
         variant="secondary"

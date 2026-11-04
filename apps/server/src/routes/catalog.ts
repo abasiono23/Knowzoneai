@@ -1,8 +1,12 @@
 import { Router } from 'express';
 import { z } from 'zod';
 
+import { createReadStream, existsSync } from 'node:fs';
+import { join } from 'node:path';
+
 import { notFound } from '../lib/errors.js';
 import { catalogFor, searchCatalog, trendingIn } from '../services/catalog.js';
+import { deckFor, lessonCardsFolder, lessonDecks } from '../services/lesson-cards.js';
 import { requestLanguage } from '../services/language.js';
 import { optionalAuth } from '../services/sessions.js';
 
@@ -38,6 +42,30 @@ catalogRouter.get('/lessons/:id', optionalAuth, async (req, res) => {
   const lesson = c.lessons.find((l) => l.id === req.params.id);
   if (!lesson) throw notFound('Lesson not found');
   res.json({ lesson, subject: c.subjects.find((s) => s.id === lesson.subjectId) ?? null });
+});
+
+/** A flashcard lesson's cards and end-of-lesson quiz, in the reader's language. */
+catalogRouter.get('/lessons/:id/cards', optionalAuth, (req, res) => {
+  const deck = lessonDecks().get(String(req.params.id));
+  if (!deck) throw notFound('This lesson has no flashcards yet');
+  res.json({ lesson: deckFor(deck, requestLanguage(req)) });
+});
+
+/** A card's picture or narration. */
+catalogRouter.get('/lessons/media/:file', (req, res) => {
+  const file = String(req.params.file);
+  const m = file.match(/^([a-z0-9-]+)-(\d{1,2})\.(webp|mp3)$/);
+  const dir = lessonCardsFolder();
+  if (!m || !dir) throw notFound('Not found');
+  const path = join(dir, m[3] === 'webp' ? 'img' : 'audio', file);
+  if (!existsSync(path)) throw notFound('Not found');
+  res.set({
+    'Content-Type': m[3] === 'webp' ? 'image/webp' : 'audio/mpeg',
+    'Cache-Control': 'public, max-age=604800, immutable',
+    // The app on the web loads these from another origin.
+    'Cross-Origin-Resource-Policy': 'cross-origin',
+  });
+  createReadStream(path).pipe(res);
 });
 
 const Trending = z.object({

@@ -43,6 +43,9 @@ export type Lesson = {
   summary: string;
   keyPoints: string[];
   exams?: string[];
+  /** Flashcard lessons (from the server): the first card's picture, and how many cards. */
+  cover?: string;
+  cards?: number;
 };
 
 /** Display names live in the `home` namespace: use formatLabel(format, t). */
