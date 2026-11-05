@@ -331,6 +331,37 @@ export const booksApi = {
     request<{ subject: string; name: string; books: ShelfBook[] }>(
       `/books/countries/${catalogue}/subjects/${id}?level=${level}`,
     ),
+  /** A school subject's course summary and topics, with the ones for the student's class first. */
+  summaries: (catalogue: string, id: string, level: string) =>
+    request<SummaryList>(`/books/countries/${catalogue}/subjects/${id}/summaries?level=${level}`),
+  summary: (library: string, topic: string, english?: boolean) =>
+    request<{ summary: Summary }>(`/books/summaries/${library}/${topic}${english ? '?lang=en' : ''}`),
+};
+
+/** Summaries in these languages are AI translations still waiting for native speakers to check them. */
+export const summariesUnderReview = (language: string) => ['yo', 'ig', 'ha'].includes(language.split('-')[0]!);
+
+/** A line in a subject's Summaries tab. A course summary has no `id`. */
+export type SummaryCard = {
+  library: string;
+  libraryName: string;
+  id?: string;
+  yours?: boolean;
+  title: string;
+  short: string;
+  keywords: string[];
+};
+export type SummaryList = { translated: boolean; courses: SummaryCard[]; topics: SummaryCard[] };
+export type Summary = {
+  library: string;
+  libraryName: string;
+  id: string;
+  /** False when this language's translation isn't out yet and the text is English. */
+  translated: boolean;
+  title: string;
+  short: string;
+  sections: { heading: string; text: string }[];
+  keyPoints: string[];
 };
 
 /**

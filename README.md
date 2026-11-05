@@ -759,6 +759,19 @@ The Future skills card opens five subjects: Coding, UI/UX design, Cybersecurity,
   - `npx tsx scripts/skills-build.ts <folder>` merges `picked.json` and `skill-<id>.json` from a working folder, checks every language and requires at least 5 lessons per subject, then writes that file.
 - **Endpoints:** `GET /skills` returns the subject cards and `GET /skills/:id` returns one subject and its lessons, both in the reader's language.
 
+### Subject summaries (a school subject's Summaries tab)
+
+Each of 10 subjects has one long summary of the whole course and a searchable list of topic summaries (about 300 in all). Topics for the student's class come first; the rest stay below for revision.
+
+- **Subjects:** Mathematics, English Language, Biology, Chemistry, Physics, Economics, Geography, Business Studies, Computer Studies and Agricultural Science. One set serves every country, under each country's own subject names: Life Sciences reads Biology, Physical Sciences reads Physics and Chemistry, ICT reads Computer Studies. University and polytechnic courses still show "Coming soon".
+- **How they were made:** written by Claude, not copied, then fact-checked against syllabuses and open textbooks. Reviewers often could only reach third-party copies of WAEC, KCSE and CAPS documents, and many basic definitions were checked from knowledge alone, so a teacher should still review them.
+- **Languages:**
+  - French, Spanish, Portuguese, Arabic, Swahili and Pidgin: all subjects. No native-speaker review yet.
+  - Yoruba, Igbo and Hausa: only subjects listed in `ready.json`, after a proofread. Readers see an "AI translated, being reviewed" note and a Read in English button. A native speaker must check these: proofreads kept finding wrong words. Subjects not ready yet show English with no note.
+- **Arabic:** the build wraps formulas and code in invisible direction marks so they display left to right. Check these on real phones.
+- **Files:** working files are outside the repo (`knowzone-summaries`): `en/<subject>.json`, `<language>/<subject>.json`, `ready.json` and the writing, review, translation and proofreading briefs. `npx tsx scripts/summaries-build.ts <folder> [subject...]` checks them and writes `data/summaries/<subject>.json`.
+- **Endpoints:** `GET /books/countries/:country/subjects/:subject/summaries?level=`; `GET /books/summaries/:library/:topic` (`overview` is the whole course, `?lang=en` is the Read in English button).
+
 ### Your books (Explore → "Check out your books")
 
 - **The questions:**
@@ -778,7 +791,7 @@ The Future skills card opens five subjects: Coding, UI/UX design, Cybersecurity,
   - Answers are saved on the phone. Answers saved by the first, Nigeria-only version are upgraded.
 - **Shelves (secondary school):**
   - Each student gets one card per subject for their class and stream. A card opens the subject's textbooks.
-  - The Summaries and Videos tabs come next.
+  - The Summaries tab is below; the Videos tab comes next.
 - **Books:** one file per country, `data/books/<country>.json`, holding its classes, streams, subjects and books.
 
   | Country | Classes | Books | Free | Sources |

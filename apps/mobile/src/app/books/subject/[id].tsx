@@ -6,6 +6,7 @@ import { useTranslation } from 'react-i18next';
 import { ActivityIndicator, Platform, Pressable, StyleSheet, View } from 'react-native';
 import Animated, { FadeInDown } from 'react-native-reanimated';
 
+import { SummariesTab } from '@/components/books/summaries-tab';
 import { Button, Card, Screen, ScreenHeader, Text } from '@/components/ui';
 import { LinearGradient } from '@/components/ui/gradient';
 import { Colors, Fonts, Radius, Spacing } from '@/constants/theme';
@@ -74,7 +75,9 @@ export default function SubjectBooks() {
         ))}
       </View>
 
-      {tab !== 'textbooks' ? (
+      {tab === 'summaries' && !stage ? (
+        <SummariesTab catalogue={catalogue} subject={id} level={level} />
+      ) : tab !== 'textbooks' ? (
         <Card style={styles.soon}>
           <Ionicons name={tab === 'summaries' ? 'document-text' : 'play-circle'} size={36} color={Colors.primary} />
           <Text variant="heading" center>

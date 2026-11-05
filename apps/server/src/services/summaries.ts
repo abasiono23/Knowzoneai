@@ -1,0 +1,170 @@
+import { existsSync, readFileSync } from 'node:fs';
+import { dirname, join } from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+import { z } from 'zod';
+
+import type { LanguageId } from './personalization.js';
+
+/**
+ * Written summaries for a school subject (the Summaries tab on a subject's shelf): one long summary of
+ * the whole course and many short ones, one per topic, in 10 languages. Syllabuses differ between
+ * countries but these subjects share most topics, so one library serves every country. Written with
+ * scripts/summaries-build.ts into data/summaries/<library>.json and shipped with the server.
+ */
+const Text = z.object({
+  title: z.string().min(1),
+  short: z.string().min(1),
+  keywords: z.array(z.string()),
+  sections: z.array(z.object({ heading: z.string().min(1), text: z.string().min(1) })).min(1),
+  keyPoints: z.array(z.string().min(1)).min(1),
+});
+const Localised = z.record(z.string(), Text);
+const Topic = z.object({
+  id: z.string().regex(/^[a-z0-9-]+$/),
+  stage: z.enum(['lower', 'upper']),
+  text: Localised,
+});
+const Library = z.object({
+  id: z.string().regex(/^[a-z-]+$/),
+  name: z.record(z.string(), z.string()),
+  overview: Localised,
+  topics: z.array(Topic).min(1),
+});
+export type SummaryLibrary = z.infer<typeof Library>;
+
+export const LIBRARIES = [
+  'mathematics',
+  'english',
+  'biology',
+  'chemistry',
+  'physics',
+  'economics',
+  'geography',
+  'business-studies',
+  'computer-studies',
+  'agricultural-science',
+] as const;
+type LibraryId = (typeof LIBRARIES)[number];
+
+const SCIENCE: LibraryId[] = ['biology', 'chemistry', 'physics'];
+const COMPUTING: LibraryId[] = ['computer-studies'];
+const AGRICULTURE: LibraryId[] = ['agricultural-science'];
+
+/**
+ * Which libraries a shelf subject reads. Countries name subjects differently, and some teach several
+ * of these as one subject (South Africa's Physical Sciences, the UK's Combined Science).
+ */
+const FOR_SUBJECT: Record<string, LibraryId[]> = {
+  mathematics: ['mathematics'],
+  'core-mathematics': ['mathematics'],
+  'technical-mathematics': ['mathematics'],
+  english: ['english'],
+  'english-language': ['english'],
+  biology: ['biology'],
+  'life-sciences': ['biology'],
+  chemistry: ['chemistry'],
+  physics: ['physics'],
+  'physical-sciences': ['physics', 'chemistry'],
+  'technical-sciences': ['physics', 'chemistry'],
+  science: SCIENCE,
+  'combined-science': SCIENCE,
+  'general-science': SCIENCE,
+  'basic-science': SCIENCE,
+  'integrated-science': SCIENCE,
+  'natural-sciences': SCIENCE,
+  economics: ['economics'],
+  'economic-management-sciences': ['economics', 'business-studies'],
+  geography: ['geography'],
+  'business-studies': ['business-studies'],
+  'business-management': ['business-studies'],
+  'computer-studies': COMPUTING,
+  computing: COMPUTING,
+  ict: COMPUTING,
+  'computer-science': COMPUTING,
+  'information-technology': COMPUTING,
+  'computer-applications-technology': COMPUTING,
+  'agricultural-science': AGRICULTURE,
+  agriculture: AGRICULTURE,
+  'agricultural-management-practices': AGRICULTURE,
+};
+
+function folder() {
+  // Works from src/ (tsx, tests) and dist/src/ (built server), whatever the working folder.
+  let dir = dirname(fileURLToPath(import.meta.url));
+  for (let i = 0; i < 6; i++) {
+    const f = join(dir, 'data', 'summaries');
+    if (existsSync(f)) return f;
+    dir = dirname(dir);
+  }
+  return null;
+}
+
+const loaded = new Map<string, SummaryLibrary | null>();
+/** A library, loaded the first time it's asked for. A malformed file fails: better than wrong notes. */
+function library(id: string): SummaryLibrary | null {
+  const known = loaded.get(id);
+  if (known !== undefined) return known;
+  const dir = folder();
+  const f = dir && join(dir, `${id}.json`);
+  const lib = f && existsSync(f) ? Library.parse(JSON.parse(readFileSync(f, 'utf8'))) : null;
+  loaded.set(id, lib);
+  return lib;
+}
+
+/** Tests can put libraries in without the files. */
+export function useSummaries(list: SummaryLibrary[] | null) {
+  loaded.clear();
+  for (const lib of list ?? []) loaded.set(lib.id, lib);
+}
+
+function pick<T>(t: Record<string, T>, lang: LanguageId): T {
+  return (t[lang] ?? t.en)!;
+}
+
+const card = ({ title, short, keywords }: z.infer<typeof Text>) => ({ title, short, keywords });
+
+/**
+ * What a shelf subject's Summaries tab lists: its course summaries, then every topic with the ones for
+ * the student's stage (lower or upper secondary) first. Other topics stay, for revising and searching.
+ */
+export function summariesFor(subject: string, stage: string | undefined, lang: LanguageId) {
+  const libs = (FOR_SUBJECT[subject] ?? []).map(library).filter((l): l is SummaryLibrary => !!l);
+  const topics = libs.flatMap((lib) =>
+    lib.topics.map((t) => ({
+      library: lib.id,
+      libraryName: pick(lib.name, lang),
+      id: t.id,
+      stage: t.stage,
+      yours: t.stage === stage,
+      ...card(pick(t.text, lang)),
+    })),
+  );
+  return {
+    /** False when this language's translation isn't out yet and the text is English. */
+    translated: libs.some((lib) => !!lib.overview[lang]),
+    courses: libs.map((lib) => ({
+      library: lib.id,
+      libraryName: pick(lib.name, lang),
+      ...card(pick(lib.overview, lang)),
+    })),
+    topics: [...topics.filter((t) => t.yours), ...topics.filter((t) => !t.yours)],
+  };
+}
+
+export const OVERVIEW = 'overview';
+
+/** One summary to read, in one language. `overview` is the whole course. */
+export function summaryFor(libraryId: string, topic: string, lang: LanguageId) {
+  const lib = (LIBRARIES as readonly string[]).includes(libraryId) || loaded.has(libraryId) ? library(libraryId) : null;
+  if (!lib) return null;
+  const text = topic === OVERVIEW ? lib.overview : lib.topics.find((t) => t.id === topic)?.text;
+  if (!text) return null;
+  return {
+    library: lib.id,
+    libraryName: pick(lib.name, lang),
+    id: topic,
+    translated: !!text[lang],
+    ...pick(text, lang),
+  };
+}
