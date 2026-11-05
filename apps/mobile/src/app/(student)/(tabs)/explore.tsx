@@ -86,26 +86,20 @@ export default function ExploreScreen() {
       </View>
 
       {COLLECTIONS.map((c) => (
-        <View key={c.id} style={{ gap: Spacing.sm }}>
-          <LinearGradient colors={c.colors} start={{ x: 0, y: 0 }} end={{ x: 1, y: 0 }} style={styles.collection}>
-            <Text variant="heading">{t(`explore.collections.${c.id}.title`)}</Text>
-            <Text variant="small" color="rgba(255,255,255,0.9)">
-              {t('explore.collectionMeta', {
-                body: t(`explore.collections.${c.id}.body`),
-                count: c.lessons.length,
-              })}
-            </Text>
-          </LinearGradient>
-          <ScrollView
-            horizontal
-            showsHorizontalScrollIndicator={false}
-            contentContainerStyle={{ gap: Spacing.sm }}
-            style={{ marginRight: -Spacing.md }}>
-            {c.lessons.slice(0, 8).map((l) => (
-              <LessonCard key={l.id} lesson={l} variant="tile" />
-            ))}
-          </ScrollView>
-        </View>
+        <LinearGradient
+          key={c.id}
+          colors={c.colors}
+          start={{ x: 0, y: 0 }}
+          end={{ x: 1, y: 0 }}
+          style={styles.collection}>
+          <Text variant="heading">{t(`explore.collections.${c.id}.title`)}</Text>
+          <Text variant="small" color="rgba(255,255,255,0.9)">
+            {t('explore.collectionMeta', {
+              body: t(`explore.collections.${c.id}.body`),
+              count: c.lessons.length,
+            })}
+          </Text>
+        </LinearGradient>
       ))}
     </Screen>
   );
