@@ -724,20 +724,24 @@ short videos.
   - The cards move on by themselves. Tap the right side to go forward or the left to go back; there is a pause button.
   - The phone's voice reads each card in English, Pidgin, French, Arabic, Swahili, Portuguese and Spanish. Phones have no Yoruba, Igbo or Hausa voice, so those languages show the cards without sound.
   - Finishing the quiz completes the lesson.
-- **Done so far (20 of the 32 lessons):**
+- **All 32 lessons are done:**
   - **Sciences:** How cells make energy, Genetics, Human heart and circulation, Food chains and energy flow, The mole concept, Ionic vs covalent bonding, Naming alkanes, Electrolysis, Newton's laws, Ohm's law and simple circuits, Waves.
-  - **Maths:** Quadratic equations, Trigonometry, Mean, median and mode, Angles in circles.
-  - **Economics:** Demand and supply, Inflation.
-  - **Computing and AI:** What is AI, really?; Prompting like a pro; Your first Python program.
-  - The other 12 keep their old format until they're made.
+  - **Maths:** Quadratic equations, Trigonometry, Mean, median and mode, Angles in circles, Differentiation.
+  - **English and literature:** Essay introductions, Summary writing, Lexis and structure, Things Fall Apart. Example sentences stay in English in every language.
+  - **Business and economics:** Demand and supply, Inflation, Double entry bookkeeping, Pricing your first product.
+  - **Government, history and geography:** Arms of government, Nigerian independence, Reading contour maps.
+  - **Computing and AI:** What is AI, really?; Prompting like a pro; Your first Python program; Algorithms in everyday life.
+  - **French:** Greetings and introductions. The French phrases stay in French in every language.
 - **Covers:** lessons with flashcards show their first card's picture instead of an emoji.
 - **Made without AI services:**
   - Claude wrote and checked the cards, quizzes and the translations into all 10 languages.
   - Photos come from Wikimedia Commons (CC0, CC BY, CC BY-SA or public domain), and each is credited on its card. Diagrams are drawn as SVG.
+  - No recognisable children or private people: check every new photo at full size, not from a thumbnail. Public and historical figures are fine.
   - Native speakers should review the Yoruba, Igbo and Hausa text.
 - **Files:**
   - The written lessons are in `data/lessons/source/lesson-<id>.json`.
   - `npx tsx scripts/lesson-build.ts data/lessons/source` checks each photo's licence again, downloads and crops the photos, renders the drawings, and writes `data/lessons/cards.json` and `img/`.
+  - The build reuses pictures it has already downloaded. After changing a card's photo, delete that card's file in `img/` first. Don't run two builds at once.
 - **Endpoints:**
   - `GET /lessons/:id/cards` returns the cards and quiz in the reader's language.
   - `GET /lessons/media/:file` serves the pictures.

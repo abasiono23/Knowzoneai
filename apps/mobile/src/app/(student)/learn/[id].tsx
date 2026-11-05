@@ -178,7 +178,7 @@ function Cards({ deck, title, onDone }: { deck: LessonDeck; title: string; onDon
           // A drawn illustration (a diagram or a worked example) is shown whole, below the header.
           <Image
             source={{ uri: lessonMedia(card.image) }}
-            style={[styles.illustration, { top: insets.top + 64 }]}
+            style={[styles.illustration, { top: insets.top + 78 }]}
             contentFit="contain"
             contentPosition="top"
             accessible={false}
