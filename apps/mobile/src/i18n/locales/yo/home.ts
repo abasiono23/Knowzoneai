@@ -56,8 +56,6 @@ const home: Translation<typeof en> = {
     collectionMeta_one: '{{body}} · ẹ̀kọ́ {{count}}',
     collectionMeta_other: '{{body}} · ẹ̀kọ́ {{count}}',
     collections: {
-      exam: { title: 'Kókó JAMB & WAEC', body: 'Àwọn àkòrí pàtàkì tí àwọn olùdánwò fẹ́ràn' },
-      quick: { title: 'Àṣeyọrí ìṣẹ́jú 5', body: 'Kọ́ nǹkan kan nígbà ìsinmi kékeré' },
       future: { title: 'Ọgbọ́n ọjọ́ iwájú', body: 'Kíkọ kóòdù, AI àti iṣòwò àdáni' },
     },
   },

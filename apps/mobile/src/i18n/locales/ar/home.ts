@@ -76,8 +76,6 @@ const home: Translation<typeof en> = {
     collectionMeta_many: '{{body}} · {{count}} درسًا',
     collectionMeta_other: '{{body}} · {{count}} درس',
     collections: {
-      exam: { title: 'أساسيات JAMB وWAEC', body: 'مواضيع مهمة يحبها المصحّحون' },
-      quick: { title: 'إنجازات في 5 دقائق', body: 'تعلّم شيئًا خلال استراحة قصيرة' },
       future: { title: 'مهارات المستقبل', body: 'البرمجة والذكاء الاصطناعي وريادة الأعمال' },
     },
   },

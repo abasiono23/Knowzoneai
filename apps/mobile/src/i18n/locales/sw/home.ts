@@ -56,8 +56,6 @@ const home: Translation<typeof en> = {
     collectionMeta_one: '{{body}} · somo {{count}}',
     collectionMeta_other: '{{body}} · masomo {{count}}',
     collections: {
-      exam: { title: 'Muhimu kwa JAMB na WAEC', body: 'Mada zenye alama nyingi ambazo watahini hupenda' },
-      quick: { title: 'Ushindi wa dakika 5', body: 'Jifunze kitu wakati wa mapumziko mafupi' },
       future: { title: 'Ujuzi wa siku zijazo', body: 'Uandishi wa programu, AI na ujasiriamali' },
     },
   },

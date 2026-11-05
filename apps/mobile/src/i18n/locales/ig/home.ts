@@ -56,8 +56,6 @@ const home: Translation<typeof en> = {
     collectionMeta_one: '{{body}} · ihe ọmụmụ {{count}}',
     collectionMeta_other: '{{body}} · ihe ọmụmụ {{count}}',
     collections: {
-      exam: { title: 'Ihe dị mkpa maka JAMB na WAEC', body: 'Isiokwu ndị ndị na-ese ule hụrụ n’anya' },
-      quick: { title: 'Mmeri nkeji 5', body: 'Mụta ihe n’oge izu ike nta' },
       future: { title: 'Ikike maka ọdịnihu', body: 'Koodu, AI na ọchụnta ego' },
     },
   },

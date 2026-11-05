@@ -54,8 +54,6 @@ const home = {
     collectionMeta_one: '{{body}} · {{count}} lesson',
     collectionMeta_other: '{{body}} · {{count}} lessons',
     collections: {
-      exam: { title: 'JAMB & WAEC essentials', body: 'High-yield topics examiners love' },
-      quick: { title: '5-minute wins', body: 'Learn something in a coffee break' },
       future: { title: 'Future skills', body: 'Coding, AI and entrepreneurship' },
     },
   },

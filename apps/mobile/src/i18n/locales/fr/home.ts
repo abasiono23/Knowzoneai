@@ -61,8 +61,6 @@ const home: Translation<typeof en> = {
     collectionMeta_many: '{{body}} · {{count}} leçons',
     collectionMeta_other: '{{body}} · {{count}} leçons',
     collections: {
-      exam: { title: 'L’essentiel du JAMB et du WAEC', body: 'Les sujets clés que les examinateurs adorent' },
-      quick: { title: 'Victoires en 5 minutes', body: 'Apprends quelque chose pendant une pause' },
       future: { title: 'Compétences d’avenir', body: 'Code, IA et entrepreneuriat' },
     },
   },

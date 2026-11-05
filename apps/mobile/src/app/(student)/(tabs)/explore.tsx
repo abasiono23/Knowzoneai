@@ -17,16 +17,6 @@ import { reasonText, recommend } from '@/lib/recommend';
 
 const COLLECTIONS = [
   {
-    id: 'exam' as const,
-    colors: ['#9C6B1E', '#FFC857'] as const,
-    lessons: LESSONS.filter((l) => l.exams?.includes('JAMB')),
-  },
-  {
-    id: 'quick' as const,
-    colors: ['#0E8F6E', '#2DD4BF'] as const,
-    lessons: LESSONS.filter((l) => l.minutes <= 5),
-  },
-  {
     id: 'future' as const,
     colors: ['#6A45FF', '#FF7A93'] as const,
     lessons: LESSONS.filter((l) => ['computer-science', 'ai-literacy', 'entrepreneurship'].includes(l.subjectId)),

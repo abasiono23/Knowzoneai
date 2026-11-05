@@ -61,8 +61,6 @@ const home: Translation<typeof en> = {
     collectionMeta_other: '{{body}} · {{count}} lecciones',
     collectionMeta_many: '{{body}} · {{count}} lecciones',
     collections: {
-      exam: { title: 'Lo esencial de JAMB y WAEC', body: 'Los temas que más preguntan los examinadores' },
-      quick: { title: 'Logros de 5 minutos', body: 'Aprende algo en un descanso' },
       future: { title: 'Habilidades del futuro', body: 'Programación, IA y emprendimiento' },
     },
   },

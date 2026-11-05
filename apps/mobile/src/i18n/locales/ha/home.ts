@@ -56,8 +56,6 @@ const home: Translation<typeof en> = {
     collectionMeta_one: '{{body}} · darasi {{count}}',
     collectionMeta_other: '{{body}} · darussa {{count}}',
     collections: {
-      exam: { title: 'Muhimman abubuwan JAMB da WAEC', body: 'Maudu’an da masu jarrabawa suka fi so' },
-      quick: { title: 'Nasarorin minti 5', body: 'Koyi wani abu a lokacin hutu' },
       future: { title: 'Ƙwarewar gaba', body: 'Rubuta shirin kwamfuta, AI da kasuwanci' },
     },
   },

@@ -56,8 +56,6 @@ const home: Translation<typeof en> = {
     collectionMeta_one: '{{body}} · {{count}} lesson',
     collectionMeta_other: '{{body}} · {{count}} lessons',
     collections: {
-      exam: { title: 'JAMB & WAEC essentials', body: 'Topics wey examiners like well-well' },
-      quick: { title: '5-minute wins', body: 'Learn something for short break time' },
       future: { title: 'Future skills', body: 'Coding, AI and entrepreneurship' },
     },
   },
