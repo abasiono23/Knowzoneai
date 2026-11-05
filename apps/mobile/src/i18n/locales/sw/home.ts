@@ -53,10 +53,11 @@ const home: Translation<typeof en> = {
     browseSubjects: 'Vinjari masomo',
     allSubjects: 'Masomo yote',
     trendingNow: 'Yanayovuma sasa 🔥',
-    collectionMeta_one: '{{body}} · somo {{count}}',
-    collectionMeta_other: '{{body}} · masomo {{count}}',
     collections: {
-      future: { title: 'Ujuzi wa siku zijazo', body: 'Uandishi wa programu, AI na ujasiriamali' },
+      future: {
+        title: 'Ujuzi wa siku zijazo',
+        body: 'Uandishi wa msimbo, usanifu wa UI/UX, usalama wa mtandao, maagizo ya AI na sayansi ya data',
+      },
     },
   },
   play: {
@@ -210,6 +211,18 @@ const home: Translation<typeof en> = {
     done: 'Rudi kwenye somo',
     retryQuiz: 'Jaribu jaribio tena',
     review: 'Pitia kadi tena',
+  },
+  skills: {
+    intro: 'Stadi za vitendo kwa ajili ya dunia ijayo, kupitia masomo ya YouTube yaliyochaguliwa kwa makini.',
+    loadFailed: 'Hatukuweza kupakia masomo haya. Angalia muunganisho wako kisha ujaribu tena.',
+    retry: 'Jaribu tena',
+    summary: 'Muhtasari',
+    minutes: 'dakika {{n}}',
+    lessonOf: 'Somo {{n}} kati ya {{total}}',
+    nextLesson: 'Somo linalofuata',
+    allLessons: 'Rudi kwenye masomo yote',
+    lessons_one: 'somo {{count}}',
+    lessons_other: 'masomo {{count}}',
   },
   lesson: {
     flashcardsInfo: 'Kadi {{count}}, kisha jaribio la maswali 5',

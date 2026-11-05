@@ -11,17 +11,9 @@ import { SectionHeader, Screen, Text } from '@/components/ui';
 import { CoursesRail } from '@/components/courses/courses-rail';
 import { Colors, Radius, Spacing } from '@/constants/theme';
 import { booksSummary, useBooksProfile } from '@/lib/books';
-import { CATEGORIES, categoryName, LESSONS, trending } from '@/lib/catalog';
+import { CATEGORIES, categoryName, trending } from '@/lib/catalog';
 import { useLibrary } from '@/lib/library-store';
 import { reasonText, recommend } from '@/lib/recommend';
-
-const COLLECTIONS = [
-  {
-    id: 'future' as const,
-    colors: ['#6A45FF', '#FF7A93'] as const,
-    lessons: LESSONS.filter((l) => ['computer-science', 'ai-literacy', 'entrepreneurship'].includes(l.subjectId)),
-  },
-];
 
 export default function ExploreScreen() {
   const { t } = useTranslation('home');
@@ -85,22 +77,26 @@ export default function ExploreScreen() {
         ))}
       </View>
 
-      {COLLECTIONS.map((c) => (
+      <Pressable
+        onPress={() => router.push('/skills' as Href)}
+        accessibilityRole="button"
+        style={({ pressed }) => [pressed && { transform: [{ scale: 0.98 }] }]}>
         <LinearGradient
-          key={c.id}
-          colors={c.colors}
+          colors={['#6A45FF', '#FF7A93']}
           start={{ x: 0, y: 0 }}
           end={{ x: 1, y: 0 }}
           style={styles.collection}>
-          <Text variant="heading">{t(`explore.collections.${c.id}.title`)}</Text>
-          <Text variant="small" color="rgba(255,255,255,0.9)">
-            {t('explore.collectionMeta', {
-              body: t(`explore.collections.${c.id}.body`),
-              count: c.lessons.length,
-            })}
-          </Text>
+          <View style={{ flex: 1, gap: 2 }}>
+            <Text variant="heading" color="#fff">
+              {t('explore.collections.future.title')}
+            </Text>
+            <Text variant="small" color="rgba(255,255,255,0.9)">
+              {t('explore.collections.future.body')}
+            </Text>
+          </View>
+          <Ionicons name="chevron-forward" size={22} color="#fff" />
         </LinearGradient>
-      ))}
+      </Pressable>
     </Screen>
   );
 }
@@ -165,5 +161,11 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: Colors.border,
   },
-  collection: { borderRadius: Radius.lg, padding: Spacing.md, gap: 2 },
+  collection: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.sm,
+    borderRadius: Radius.lg,
+    padding: Spacing.md,
+  },
 });

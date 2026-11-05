@@ -57,11 +57,11 @@ const home: Translation<typeof en> = {
     browseSubjects: 'Parcourir les matières',
     allSubjects: 'Toutes les matières',
     trendingNow: 'Tendances du moment 🔥',
-    collectionMeta_one: '{{body}} · {{count}} leçon',
-    collectionMeta_many: '{{body}} · {{count}} leçons',
-    collectionMeta_other: '{{body}} · {{count}} leçons',
     collections: {
-      future: { title: 'Compétences d’avenir', body: 'Code, IA et entrepreneuriat' },
+      future: {
+        title: 'Compétences d’avenir',
+        body: 'Code, design UI/UX, cybersécurité, prompts d’IA et science des données',
+      },
     },
   },
   play: {
@@ -219,6 +219,19 @@ const home: Translation<typeof en> = {
     done: 'Retour à la leçon',
     retryQuiz: 'Refaire le quiz',
     review: 'Repasser les cartes',
+  },
+  skills: {
+    intro: 'Des compétences pratiques pour le monde de demain, avec des leçons YouTube soigneusement choisies.',
+    loadFailed: 'Impossible de charger ces leçons. Vérifie ta connexion et réessaie.',
+    retry: 'Réessayer',
+    summary: 'Résumé',
+    minutes: '{{n}} min',
+    lessonOf: 'Leçon {{n}} sur {{total}}',
+    nextLesson: 'Leçon suivante',
+    allLessons: 'Retour à toutes les leçons',
+    lessons_one: '{{count}} leçon',
+    lessons_many: '{{count}} leçons',
+    lessons_other: '{{count}} leçons',
   },
   lesson: {
     flashcardsInfo: '{{count}} cartes, puis un quiz de 5 questions',

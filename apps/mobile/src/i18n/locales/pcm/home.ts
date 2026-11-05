@@ -53,10 +53,8 @@ const home: Translation<typeof en> = {
     browseSubjects: 'Check subjects',
     allSubjects: 'All subjects',
     trendingNow: 'Wetin dey trend now 🔥',
-    collectionMeta_one: '{{body}} · {{count}} lesson',
-    collectionMeta_other: '{{body}} · {{count}} lessons',
     collections: {
-      future: { title: 'Future skills', body: 'Coding, AI and entrepreneurship' },
+      future: { title: 'Future skills', body: 'Coding, UI/UX design, cybersecurity, AI prompting and data science' },
     },
   },
   play: {
@@ -210,6 +208,18 @@ const home: Translation<typeof en> = {
     done: 'Go back to the lesson',
     retryQuiz: 'Try the quiz again',
     review: 'Go through the cards again',
+  },
+  skills: {
+    intro: 'Skills wey go help you for the world wey dey come, with YouTube lessons wey we pick well well.',
+    loadFailed: 'We no fit load these lessons. Check your network come try again.',
+    retry: 'Try again',
+    summary: 'Summary',
+    minutes: '{{n}} min',
+    lessonOf: 'Lesson {{n}} of {{total}}',
+    nextLesson: 'Next lesson',
+    allLessons: 'Go back to all the lessons',
+    lessons_one: '{{count}} lesson',
+    lessons_other: '{{count}} lessons',
   },
   lesson: {
     flashcardsInfo: '{{count}} flashcards, then quiz wey get 5 questions',

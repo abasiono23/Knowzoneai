@@ -57,11 +57,11 @@ const home: Translation<typeof en> = {
     browseSubjects: 'Ver asignaturas',
     allSubjects: 'Todas las asignaturas',
     trendingNow: 'Tendencia ahora 🔥',
-    collectionMeta_one: '{{body}} · {{count}} lección',
-    collectionMeta_other: '{{body}} · {{count}} lecciones',
-    collectionMeta_many: '{{body}} · {{count}} lecciones',
     collections: {
-      future: { title: 'Habilidades del futuro', body: 'Programación, IA y emprendimiento' },
+      future: {
+        title: 'Habilidades del futuro',
+        body: 'Programación, diseño UI/UX, ciberseguridad, prompts de IA y ciencia de datos',
+      },
     },
   },
   play: {
@@ -219,6 +219,19 @@ const home: Translation<typeof en> = {
     done: 'Volver a la lección',
     retryQuiz: 'Repetir el quiz',
     review: 'Repasar las tarjetas',
+  },
+  skills: {
+    intro: 'Habilidades prácticas para el mundo de mañana, con lecciones de YouTube bien elegidas.',
+    loadFailed: 'No pudimos cargar estas lecciones. Revisa tu conexión e inténtalo de nuevo.',
+    retry: 'Intentar de nuevo',
+    summary: 'Resumen',
+    minutes: '{{n}} min',
+    lessonOf: 'Lección {{n}} de {{total}}',
+    nextLesson: 'Lección siguiente',
+    allLessons: 'Volver a todas las lecciones',
+    lessons_one: '{{count}} lección',
+    lessons_other: '{{count}} lecciones',
+    lessons_many: '{{count}} lecciones',
   },
   lesson: {
     flashcardsInfo: '{{count}} tarjetas y luego un quiz de 5 preguntas',

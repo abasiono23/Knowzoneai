@@ -1,0 +1,747 @@
+[
+ {
+  "id": "coding",
+  "name": {
+   "en": "Coding",
+   "pcm": "Coding",
+   "yo": "Kíkọ kóòdù",
+   "ig": "Ide koodu",
+   "ha": "Rubutun code",
+   "fr": "Programmation",
+   "ar": "البرمجة",
+   "sw": "Uandishi wa msimbo",
+   "pt": "Programação",
+   "es": "Programación"
+  },
+  "tagline": {
+   "en": "Learn how code works, then write your own",
+   "pcm": "Learn how code dey work, then write your own",
+   "yo": "Kọ́ bí kóòdù ṣe ń ṣiṣẹ́, kí o sì kọ tìrẹ",
+   "ig": "Mụta otú koodu si arụ ọrụ, ma dee nke gị",
+   "ha": "Koyi yadda code ke aiki, sannan ka rubuta naka",
+   "fr": "Comprends le code, puis écris le tien",
+   "ar": "افهم كيف يعمل الكود، ثم اكتب كودك الخاص",
+   "sw": "Elewa jinsi msimbo unavyofanya kazi, kisha andika wako",
+   "pt": "Percebe como funciona o código e escreve o teu",
+   "es": "Entiende el código y luego escribe el tuyo"
+  },
+  "summary": {
+   "en": "Coding means writing instructions a computer can follow, using languages such as Python and HTML. It is useful for building websites and apps, automating repetitive tasks and solving problems step by step. These lessons start with how computers read code and how websites are made, practise problem-solving, then build up to writing your own simple web pages and Python programs.",
+   "pcm": "Coding mean to write instructions wey computer fit follow, with languages like Python and HTML. E dey useful to build websites and apps, make computer do repeated work by itself, and solve problems step by step. These lessons start with how computers dey read code and how dem dey make websites, practise problem-solving, then reach where you go write your own simple web pages and Python programs.",
+   "yo": "Kíkọ kóòdù (coding) túmọ̀ sí kíkọ àwọn ìtọ́ni tí kọ̀ǹpútà lè tẹ̀lé, ní lílo àwọn èdè bíi Python àti HTML. Ó wúlò fún ṣíṣe àwọn website àti app, mímú kí kọ̀ǹpútà ṣe àwọn iṣẹ́ tí a ń tún ṣe léraléra fúnra rẹ̀, àti yíyanjú ìṣòro ní ìgbésẹ̀-ní-ìgbésẹ̀. Àwọn ẹ̀kọ́ yìí bẹ̀rẹ̀ pẹ̀lú bí kọ̀ǹpútà ṣe ń ka kóòdù àti bí a ṣe ń ṣe website, wọ́n ń kọ́ ọ ní yíyanjú ìṣòro, títí o fi lè kọ àwọn ojú-ewé web tó rọrùn àti àwọn ètò Python tìrẹ.",
+   "ig": "Ide koodu (coding) pụtara ide ntụziaka kọmputa nwere ike ịgbaso, site n’iji asụsụ dị ka Python na HTML. Ọ bara uru maka iwu websites na apps, ime ka kọmputa n’onwe ya rụọ ọrụ ndị a na-emegharị emegharị, na idozi nsogbu nzọụkwụ n’otu n’otu. Ihe ọmụmụ ndị a na-amalite site n’otú kọmputa si agụ koodu na otú e si ewu websites, mgbe ahụ ha na-eme ka ị mụọ idozi nsogbu, ruo n’ide ibe web dị mfe nke gị na mmemme Python.",
+   "ha": "Rubutun code yana nufin rubuta umarni da kwamfuta za ta iya bi, ta amfani da harsuna kamar Python da HTML. Yana da amfani wajen gina shafukan yanar gizo da manhajoji, sa kwamfuta ta yi ayyuka masu maimaituwa da kanta, da warware matsaloli mataki-mataki. Waɗannan darussan sun fara ne da yadda kwamfuta ke karanta code da yadda ake gina shafukan yanar gizo, sai atisayen warware matsaloli, har zuwa rubuta naka shafukan yanar gizo masu sauƙi da shirye-shiryen Python.",
+   "fr": "Programmer (ou coder), c’est écrire des instructions qu’un ordinateur peut suivre, dans des langages comme Python et HTML. Cela sert à créer des sites web et des applications, à automatiser des tâches répétitives et à résoudre des problèmes étape par étape. Ces leçons commencent par la façon dont les ordinateurs lisent le code et dont les sites web sont faits, font travailler la résolution de problèmes, puis mènent à l’écriture de tes propres pages web simples et programmes Python.",
+   "ar": "البرمجة هي كتابة تعليمات يستطيع الحاسوب اتباعها، باستخدام لغات مثل Python وHTML. وهي مفيدة لإنشاء المواقع والتطبيقات، وأتمتة المهام المتكررة، وحل المشكلات خطوة بخطوة. تبدأ هذه الدروس بكيفية قراءة الحاسوب للكود وكيفية بناء المواقع، ثم تدرّبك على حل المشكلات، وصولًا إلى كتابة صفحات ويب بسيطة وبرامج Python خاصة بك.",
+   "sw": "Uandishi wa msimbo (coding) ni kuandika maagizo ambayo kompyuta inaweza kufuata, kwa kutumia lugha kama Python na HTML. Ni muhimu kwa kutengeneza tovuti na programu, kufanya kazi zinazojirudia kiotomatiki na kutatua matatizo hatua kwa hatua. Masomo haya yanaanza na jinsi kompyuta zinavyosoma msimbo na jinsi tovuti zinavyotengenezwa, yanakupa mazoezi ya kutatua matatizo, na kufikia hatua ya kuandika kurasa zako rahisi za wavuti na programu za Python.",
+   "pt": "Programar é escrever instruções que um computador consegue seguir, em linguagens como Python e HTML. É útil para criar sites e aplicações, automatizar tarefas repetitivas e resolver problemas passo a passo. Estas lições começam por explicar como os computadores leem código e como se fazem os sites, treinam a resolução de problemas e chegam à escrita das tuas próprias páginas web simples e programas em Python.",
+   "es": "Programar consiste en escribir instrucciones que un ordenador puede seguir, con lenguajes como Python y HTML. Sirve para crear sitios web y aplicaciones, automatizar tareas repetitivas y resolver problemas paso a paso. Estas lecciones empiezan por cómo leen el código los ordenadores y cómo se hacen los sitios web, practican la resolución de problemas y llegan hasta escribir tus propias páginas web sencillas y programas en Python."
+  },
+  "videos": [
+   {
+    "youtubeId": "QXjU9qTsYCc",
+    "title": "How do computers read code?",
+    "channel": "Frame of Essence",
+    "seconds": 721,
+    "summary": {
+     "en": "Learn what happens between the code you write and the computer running it. You will see how source code differs from machine code, how a compiler translates one into the other, and how compilers make programming easier.",
+     "pcm": "Learn wetin dey happen between the code wey you write and when computer run am. You go see how source code different from machine code, how compiler dey translate one go the other, and how compilers dey make programming easier.",
+     "yo": "Kọ́ ohun tó ń ṣẹlẹ̀ láàárín kóòdù tí o kọ àti ìgbà tí kọ̀ǹpútà bá ń ṣe é. Wàá rí ìyàtọ̀ láàárín source code àti machine code, bí compiler ṣe ń túmọ̀ ọ̀kan sí èkejì, àti bí àwọn compiler ṣe ń mú kí ìṣètò kóòdù rọrùn.",
+     "ig": "Mụta ihe na-eme n’etiti koodu ị dere na mgbe kọmputa na-agba ya. Ị ga-ahụ ọdịiche dị n’etiti source code na machine code, otú compiler si atụgharị otu n’ime ha gaa na nke ọzọ, na otú compilers si eme ka mmemme dị mfe.",
+     "ha": "Koyi abin da ke faruwa tsakanin code ɗin da ka rubuta da lokacin da kwamfuta ta gudanar da shi. Za ka ga bambanci tsakanin source code da machine code, yadda compiler ke fassara ɗaya zuwa ɗayan, da yadda compilers ke sauƙaƙa shirye-shirye.",
+     "fr": "Apprends ce qui se passe entre le code que tu écris et son exécution par l’ordinateur. Tu verras la différence entre le code source et le code machine, comment un compilateur traduit l’un en l’autre et comment les compilateurs facilitent la programmation.",
+     "ar": "تعلّم ما يحدث بين الكود الذي تكتبه وتشغيله على الحاسوب. سترى الفرق بين الكود المصدري (source code) وكود الآلة (machine code)، وكيف يترجم المترجم (compiler) أحدهما إلى الآخر، وكيف تجعل المترجمات البرمجة أسهل.",
+     "sw": "Jifunze kinachotokea kati ya msimbo unaouandika na kompyuta inapouendesha. Utaona tofauti kati ya source code (msimbo chanzo) na machine code (msimbo wa mashine), jinsi compiler inavyotafsiri mmoja kuwa mwingine, na jinsi compiler zinavyorahisisha upangaji wa programu.",
+     "pt": "Aprende o que acontece entre o código que escreves e o momento em que o computador o executa. Vais ver a diferença entre código-fonte e código-máquina, como um compilador traduz um no outro e como os compiladores facilitam a programação.",
+     "es": "Aprende qué ocurre entre el código que escribes y el momento en que el ordenador lo ejecuta. Verás en qué se diferencia el código fuente del código máquina, cómo un compilador traduce uno al otro y cómo los compiladores facilitan la programación."
+    }
+   },
+   {
+    "youtubeId": "gT0Lh1eYk78",
+    "title": "HTML, CSS, JavaScript Explained [in 4 minutes for beginners]",
+    "channel": "Danielle Thé",
+    "seconds": 238,
+    "summary": {
+     "en": "Learn which three languages are used to build websites: HTML, CSS and JavaScript. This short explainer for beginners shows why you can’t exist online without them, and it is meant to be watched before you start any web development tutorial.",
+     "pcm": "Learn the three languages wey dem dey use build websites: HTML, CSS and JavaScript. This short explainer for beginners show why you no fit exist online without dem, and e good make you watch am before you start any web development tutorial.",
+     "yo": "Kọ́ èdè mẹ́ta tí a fi ń ṣe website: HTML, CSS àti JavaScript. Àlàyé kúkúrú yìí fún àwọn olùbẹ̀rẹ̀ fi hàn ìdí tí o kò fi lè wà lórí ayélujára láìsí wọn, ó sì dára kí o wò ó kí o tó bẹ̀rẹ̀ ẹ̀kọ́ web development èyíkéyìí.",
+     "ig": "Mụta asụsụ atọ e ji ewu websites: HTML, CSS na JavaScript. Nkọwa dị mkpirikpi a maka ndị mbido na-egosi ihe mere na ị pụghị ịdị n’ịntanetị na-enweghị ha, ọ dịkwa mma ikiri ya tupu ịmalite nkuzi ọ bụla gbasara web development.",
+     "ha": "Koyi harsuna uku da ake amfani da su wajen gina shafukan yanar gizo: HTML, CSS da JavaScript. Wannan gajeren bayani ga masu farawa ya nuna dalilin da ya sa ba za ka iya kasancewa a intanet ba tare da su ba, kuma yana da kyau ka kalle shi kafin ka fara kowane darasi na gina yanar gizo.",
+     "fr": "Découvre les trois langages utilisés pour créer des sites web : HTML, CSS et JavaScript. Cette courte explication pour débutants montre pourquoi on ne peut pas exister en ligne sans eux, et elle est à voir avant de commencer tout tutoriel de développement web.",
+     "ar": "تعرّف على اللغات الثلاث المستخدمة لبناء المواقع: HTML وCSS وJavaScript. يوضح هذا الشرح القصير للمبتدئين لماذا لا يمكن الوجود على الإنترنت من دونها، ومن الجيد مشاهدته قبل بدء أي درس في تطوير المواقع.",
+     "sw": "Jifunze lugha tatu zinazotumiwa kutengeneza tovuti: HTML, CSS na JavaScript. Maelezo haya mafupi kwa wanaoanza yanaonyesha kwa nini huwezi kuwepo mtandaoni bila lugha hizi, na ni vizuri kuyatazama kabla ya kuanza mafunzo yoyote ya kutengeneza tovuti.",
+     "pt": "Aprende quais são as três linguagens usadas para criar sites: HTML, CSS e JavaScript. Esta breve explicação para principiantes mostra porque não se pode existir online sem elas, e convém vê-la antes de começares qualquer tutorial de desenvolvimento web.",
+     "es": "Aprende cuáles son los tres lenguajes que se usan para crear sitios web: HTML, CSS y JavaScript. Esta breve explicación para principiantes muestra por qué no se puede existir en internet sin ellos, y conviene verla antes de empezar cualquier tutorial de desarrollo web."
+    }
+   },
+   {
+    "youtubeId": "KFVdHDMcepw",
+    "title": "The Prison Break | Think Like A Coder, Ep 1",
+    "channel": "TED-Ed",
+    "seconds": 411,
+    "summary": {
+     "en": "Learn to think like a programmer through an animated adventure. Ethic wakes up in a mysterious cell, and she and her robot Hedge must solve programming puzzles to escape. It is the first episode of a 10-part TED-Ed series.",
+     "pcm": "Learn to think like programmer through animated adventure. Ethic wake up inside one mysterious cell, and she and her robot Hedge must solve programming puzzles to escape. Na the first episode of TED-Ed series wey get 10 episodes.",
+     "yo": "Kọ́ láti ronú bí olùkọ kóòdù nípasẹ̀ ìrìnàjò eré àwòrán tó ń rìn. Ethic jí nínú yàrá ẹ̀wọ̀n àràmàǹdà kan, òun àti robot rẹ̀ Hedge sì gbọ́dọ̀ yanjú àwọn àlọ́ ìṣètò kóòdù kí wọ́n lè sá àsálà. Èyí ni apá àkọ́kọ́ nínú eré TED-Ed alápá mẹ́wàá.",
+     "ig": "Mụta iche echiche dị ka onye na-ede koodu site n’akụkọ njem eserese na-emegharị ahụ. Ethic tetara n’ime ụlọ mkpọrọ dị omimi, ya na robot ya bụ Hedge ga-edozi ajụjụ mgbagwoju anya nke mmemme iji gbapụ. Nke a bụ akụkụ mbụ nke usoro TED-Ed nwere akụkụ 10.",
+     "ha": "Koyi yin tunani kamar mai rubuta code ta hanyar wani labarin kasada na zane-zane masu motsi. Ethic ta farka a wani ɗakin kurkuku mai ban mamaki, kuma ita da mutum-mutuminta Hedge dole su warware wasanin kwakwalwa na shirye-shirye don su tsere. Wannan shi ne kashi na farko a cikin jerin TED-Ed mai kashi 10.",
+     "fr": "Entraîne-toi à penser comme un programmeur grâce à une aventure animée. Ethic se réveille dans une cellule mystérieuse et doit, avec son robot Hedge, résoudre des énigmes de programmation pour s’échapper. C’est le premier épisode d’une série TED-Ed en 10 épisodes.",
+     "ar": "تعلّم التفكير كمبرمج من خلال مغامرة رسوم متحركة. تستيقظ إيثيك (Ethic) في زنزانة غامضة، وعليها مع روبوتها هيدج (Hedge) حل ألغاز برمجية للهروب. هذه هي الحلقة الأولى من سلسلة من 10 حلقات من TED-Ed.",
+     "sw": "Jifunze kufikiri kama mtengeneza programu kupitia hadithi ya katuni. Ethic anaamka katika seli ya ajabu, na yeye na roboti wake Hedge lazima watatue mafumbo ya programu ili kutoroka. Hiki ni kipindi cha kwanza cha mfululizo wa vipindi 10 wa TED-Ed.",
+     "pt": "Aprende a pensar como um programador através de uma aventura animada. A Ethic acorda numa cela misteriosa e, com o seu robô Hedge, tem de resolver enigmas de programação para escapar. É o primeiro episódio de uma série de 10 episódios do TED-Ed.",
+     "es": "Aprende a pensar como un programador con una aventura animada. Ethic despierta en una celda misteriosa y, junto con su robot Hedge, debe resolver acertijos de programación para escapar. Es el primer episodio de una serie de 10 episodios de TED-Ed."
+    }
+   },
+   {
+    "youtubeId": "Z1Yd7upQsXY",
+    "title": "Python Tutorial for Absolute Beginners #1 - What Are Variables?",
+    "channel": "CS Dojo",
+    "seconds": 1478,
+    "summary": {
+     "en": "Learn what Python is, what you can do with it, and how to set up Python and Jupyter Notebook using Anaconda. You will then use the print() function, find out what variables are, assign one variable to another, and try a practice problem: swapping two variables.",
+     "pcm": "Learn wetin Python be, wetin you fit do with am, and how to set up Python and Jupyter Notebook with Anaconda. After that you go use the print() function, know wetin variables be, assign one variable to another, and try one practice problem: to swap two variables.",
+     "yo": "Kọ́ ohun tí Python jẹ́, ohun tí o lè fi ṣe, àti bí o ṣe lè fi Python àti Jupyter Notebook sórí kọ̀ǹpútà pẹ̀lú Anaconda. Lẹ́yìn náà wàá lo print() function, wàá mọ ohun tí variables jẹ́, wàá fi variable kan sí òmíràn, wàá sì ṣe ìdánrawò kan: pípààrọ̀ variables méjì.",
+     "ig": "Mụta ihe Python bụ, ihe ị nwere ike iji ya mee, na otú ị ga-esi wụnye Python na Jupyter Notebook site n’iji Anaconda. Mgbe ahụ ị ga-eji ọrụ print(), mata ihe variables bụ, kenye otu variable na nke ọzọ, ma mee omume: ịgbanwe ebe variables abụọ.",
+     "ha": "Koyi mene ne Python, abin da za ka iya yi da shi, da yadda za ka saita Python da Jupyter Notebook ta amfani da Anaconda. Bayan haka za ka yi amfani da aikin print(), ka san mene ne variables, ka sanya variable ɗaya a wani, kuma ka yi atisaye: musanya variables biyu.",
+     "fr": "Découvre ce qu’est Python, ce qu’on peut faire avec, et comment installer Python et Jupyter Notebook grâce à Anaconda. Tu utiliseras ensuite la fonction print(), tu verras ce que sont les variables, tu affecteras une variable à une autre et tu feras un exercice : échanger deux variables.",
+     "ar": "تعلّم ما هي Python وما يمكنك فعله بها، وكيف تثبّت Python وJupyter Notebook باستخدام Anaconda. بعد ذلك ستستخدم الدالة print()، وتعرف ما هي المتغيرات (variables)، وتسند متغيرًا إلى متغير آخر، وتحل تمرينًا عمليًا: تبديل قيمتي متغيرين.",
+     "sw": "Jifunze Python ni nini, unaweza kufanya nini nayo, na jinsi ya kusakinisha Python na Jupyter Notebook kwa kutumia Anaconda. Kisha utatumia kitendakazi cha print(), utajua variables (vigezo) ni nini, utakabidhi variable moja kwa nyingine na kufanya zoezi: kubadilishana variables mbili.",
+     "pt": "Aprende o que é o Python, o que se pode fazer com ele e como instalar o Python e o Jupyter Notebook com o Anaconda. Depois vais usar a função print(), descobrir o que são variáveis, atribuir uma variável a outra e fazer um exercício prático: trocar duas variáveis.",
+     "es": "Aprende qué es Python, qué se puede hacer con él y cómo instalar Python y Jupyter Notebook con Anaconda. Después usarás la función print(), descubrirás qué son las variables, asignarás una variable a otra y harás un ejercicio práctico: intercambiar dos variables."
+    }
+   },
+   {
+    "youtubeId": "FQdaUv95mR8",
+    "title": "HTML Tutorial for Beginners",
+    "channel": "Kevin Stratvert",
+    "seconds": 2346,
+    "summary": {
+     "en": "Learn to create a simple web page with HTML, step by step. You will make and edit an HTML file, add headers, paragraphs, lists, links, images, audio, video, tables and forms, and get tips on structuring your page and writing clean, semantic code (tags that describe their content).",
+     "pcm": "Learn how to create simple web page with HTML, step by step. You go make and edit HTML file, add headers, paragraphs, lists, links, images, audio, video, tables and forms, and get tips to arrange your page and write clean, semantic code (tags wey describe wetin dey inside dem).",
+     "yo": "Kọ́ bí a ṣe ń ṣe ojú-ewé web tó rọrùn pẹ̀lú HTML, ní ìgbésẹ̀-ní-ìgbésẹ̀. Wàá ṣẹ̀dá fáìlì HTML, wàá sì ṣàtúnṣe rẹ̀, wàá fi àwọn àkọlé, ìpínrọ̀, àtòjọ, ìjápọ̀, àwòrán, ohùn, fídíò, tábìlì àti fọ́ọ̀mù kún un, wàá sì gba àwọn àmọ̀ràn lórí bí a ṣe ń ṣètò ojú-ewé àti kíkọ kóòdù tó mọ́ tó sì jẹ́ semantic (àwọn tag tó ń ṣàpèjúwe ohun tó wà nínú wọn).",
+     "ig": "Mụta otú e si eke ibe web dị mfe site n’iji HTML, nzọụkwụ n’otu n’otu. Ị ga-eke ma dezie faịlụ HTML, tinye isiokwu, paragraf, ndepụta, njikọ, foto, ụda, vidiyo, tebụl na fọm, ma nweta ndụmọdụ maka ịhazi ibe gị na ide koodu dị ọcha na semantic (tags na-akọwa ihe dị n’ime ha).",
+     "ha": "Koyi yadda ake ƙirƙirar shafin yanar gizo mai sauƙi da HTML, mataki-mataki. Za ka ƙirƙira ka kuma gyara fayil ɗin HTML, ka ƙara kanun rubutu, sakin layi, jeri, hanyoyin haɗi, hotuna, sauti, bidiyo, teburori da fom, ka kuma sami shawarwari kan tsara shafinka da rubuta code mai tsabta da semantic (tags masu bayyana abin da ke cikinsu).",
+     "fr": "Apprends à créer une page web simple en HTML, étape par étape. Tu vas créer et modifier un fichier HTML, ajouter des titres, des paragraphes, des listes, des liens, des images, de l’audio, de la vidéo, des tableaux et des formulaires, et recevoir des conseils pour structurer ta page et écrire un code propre et sémantique (des balises qui décrivent leur contenu).",
+     "ar": "تعلّم إنشاء صفحة ويب بسيطة باستخدام HTML خطوة بخطوة. ستنشئ ملف HTML وتعدّله، وتضيف العناوين والفقرات والقوائم والروابط والصور والصوت والفيديو والجداول والنماذج، وتحصل على نصائح لتنظيم صفحتك وكتابة كود نظيف ودلالي (semantic: وسوم تصف محتواها).",
+     "sw": "Jifunze kutengeneza ukurasa rahisi wa wavuti kwa HTML, hatua kwa hatua. Utaunda na kuhariri faili ya HTML, kuongeza vichwa, aya, orodha, viungo, picha, sauti, video, majedwali na fomu, na kupata vidokezo vya kupanga ukurasa wako na kuandika msimbo safi wa semantic (tagi zinazoeleza maudhui yake).",
+     "pt": "Aprende a criar uma página web simples em HTML, passo a passo. Vais criar e editar um ficheiro HTML, acrescentar cabeçalhos, parágrafos, listas, ligações, imagens, áudio, vídeo, tabelas e formulários, e receber dicas para estruturar a página e escrever código limpo e semântico (etiquetas que descrevem o seu conteúdo).",
+     "es": "Aprende a crear una página web sencilla con HTML, paso a paso. Crearás y editarás un archivo HTML, añadirás encabezados, párrafos, listas, enlaces, imágenes, audio, vídeo, tablas y formularios, y recibirás consejos para estructurar tu página y escribir código limpio y semántico (etiquetas que describen su contenido)."
+    }
+   },
+   {
+    "youtubeId": "b093aqAZiPU",
+    "title": "👩‍💻 Python for Beginners Tutorial",
+    "channel": "Kevin Stratvert",
+    "seconds": 3801,
+    "summary": {
+     "en": "Learn to program in Python from scratch: get Python, run your first code and set up Visual Studio Code. You will then work with numbers, text, variables, if statements, functions, loops and libraries, and learn to troubleshoot syntax, semantic and runtime errors.",
+     "pcm": "Learn Python programming from zero: how to get Python, run your first code and set up Visual Studio Code. After that you go work with numbers, text, variables, if statements, functions, loops and libraries, and learn how to fix syntax, semantic and runtime errors.",
+     "yo": "Kọ́ ètò Python láti ìbẹ̀rẹ̀: bí o ṣe lè rí Python gbà, mú kóòdù àkọ́kọ́ rẹ ṣiṣẹ́, kí o sì ṣètò Visual Studio Code. Lẹ́yìn náà wàá ṣiṣẹ́ pẹ̀lú nọ́ńbà, ọ̀rọ̀, variables, if statements, functions, loops àti libraries, wàá sì kọ́ bí a ṣe ń yanjú àwọn àṣìṣe syntax, semantic àti runtime.",
+     "ig": "Mụta mmemme Python site na mmalite: otú e si enweta Python, gbaa koodu mbụ gị, ma hazie Visual Studio Code. Mgbe ahụ ị ga-arụ ọrụ na nọmba, ederede, variables, if statements, functions, loops na libraries, ma mụta otú e si edozi njehie syntax, semantic na runtime.",
+     "ha": "Koyi shirye-shirye da Python daga farko: yadda ake samun Python, gudanar da code ɗinka na farko da saita Visual Studio Code. Bayan haka za ka yi aiki da lambobi, rubutu, variables, if statements, functions, loops da libraries, ka kuma koyi gyara kurakuran syntax, semantic da runtime.",
+     "fr": "Apprends à programmer en Python depuis zéro : obtenir Python, exécuter ton premier code et configurer Visual Studio Code. Tu travailleras ensuite avec les nombres, le texte, les variables, les instructions if, les fonctions, les boucles et les bibliothèques, et tu apprendras à corriger les erreurs de syntaxe, de sémantique et d’exécution.",
+     "ar": "تعلّم البرمجة بلغة Python من الصفر: الحصول على Python، وتشغيل أول كود لك، وإعداد Visual Studio Code. بعد ذلك ستعمل مع الأرقام والنصوص والمتغيرات وجمل if والدوال والحلقات والمكتبات، وتتعلم معالجة الأخطاء النحوية (syntax) والدلالية (semantic) وأخطاء وقت التشغيل (runtime).",
+     "sw": "Jifunze kupanga programu kwa Python tangu mwanzo: kupata Python, kuendesha msimbo wako wa kwanza na kuweka Visual Studio Code. Kisha utafanya kazi na namba, maandishi, variables, if statements, functions, loops na libraries, na kujifunza kutatua makosa ya syntax, semantic na runtime.",
+     "pt": "Aprende a programar em Python a partir do zero: obter o Python, executar o teu primeiro código e configurar o Visual Studio Code. Depois vais trabalhar com números, texto, variáveis, instruções if, funções, ciclos e bibliotecas, e aprender a resolver erros de sintaxe, semânticos e de execução.",
+     "es": "Aprende a programar en Python desde cero: conseguir Python, ejecutar tu primer código y configurar Visual Studio Code. Después trabajarás con números, texto, variables, sentencias if, funciones, bucles y bibliotecas, y aprenderás a solucionar errores de sintaxis, semánticos y de ejecución."
+    }
+   }
+  ]
+ },
+ {
+  "id": "ui-ux",
+  "name": {
+   "en": "UI/UX design",
+   "pcm": "UI/UX design",
+   "yo": "Ìṣètò UI/UX",
+   "ig": "Nhazi UI/UX",
+   "ha": "Zanen UI/UX",
+   "fr": "Design UI/UX",
+   "ar": "تصميم UI/UX",
+   "sw": "Ubunifu wa UI/UX",
+   "pt": "Design UI/UX",
+   "es": "Diseño UI/UX"
+  },
+  "tagline": {
+   "en": "Design apps and websites that people find easy to use",
+   "pcm": "Design apps and websites wey people go fit use easy-easy",
+   "yo": "Ṣe ìṣètò àwọn app àti website tí ó rọrùn fún ènìyàn láti lò",
+   "ig": "Hazie app na website ndị mmadụ ga-eji n’ụzọ dị mfe",
+   "ha": "Zana manhajoji da shafukan yanar gizo masu sauƙin amfani",
+   "fr": "Concevoir des applis et des sites faciles à utiliser",
+   "ar": "صمّم تطبيقات ومواقع يسهل على الناس استخدامها",
+   "sw": "Buni app na tovuti ambazo watu wanaweza kutumia kwa urahisi",
+   "pt": "Cria aplicações e sites fáceis de utilizar",
+   "es": "Diseña apps y sitios web fáciles de usar"
+  },
+  "summary": {
+   "en": "UI/UX design is about making apps and websites easy and pleasant to use. UX (user experience) covers how a product works for the person using it, while UI (user interface) covers the screens, buttons and layouts they see and touch. It is useful because good design saves people confusion. These lessons build from the basic ideas to design principles, the tool Figma, research with users and how UX designers work in teams.",
+   "pcm": "UI/UX design na to make apps and websites easy and sweet to use. UX (user experience) na how product dey work for the person wey dey use am, while UI (user interface) na the screens, buttons and layouts wey the person dey see and touch. E useful because good design dey save people from confusion. These lessons start from the basic ideas, then go design principles, the tool Figma, research with users, and how UX designers dey work for team.",
+   "yo": "Ìṣètò UI/UX jẹ́ nípa mímú kí àwọn app àti website rọrùn, kí ó sì dùn láti lò. UX (user experience, ìrírí olùlò) ni bí ọjà kan ṣe ń ṣiṣẹ́ fún ẹni tó ń lò ó, nígbà tí UI (user interface, ojú-ìlò) jẹ́ àwọn ojú-ìbòjú, bọ́tìnnì àti ìtò-ojú-ewé tí ó ń rí tí ó sì ń fọwọ́ kàn. Ó wúlò nítorí pé ìṣètò tó dára máa ń gba àwọn ènìyàn lọ́wọ́ ìdàrúdàpọ̀. Àwọn ẹ̀kọ́ wọ̀nyí bẹ̀rẹ̀ láti àwọn èrò ìpìlẹ̀ lọ sí àwọn ìlànà ìṣètò, irinṣẹ́ Figma, ìwádìí pẹ̀lú àwọn olùlò, àti bí àwọn UX designer ṣe ń ṣiṣẹ́ papọ̀ nínú ẹgbẹ́.",
+   "ig": "Nhazi UI/UX bụ ime ka app na website dị mfe ma dị ụtọ iji. UX (user experience, ahụmịhe onye na-eji ya) na-ekwu otú ngwaahịa si arụ ọrụ maka onye na-eji ya, ebe UI (user interface) na-ekwu maka ihuenyo, bọtịnụ na nhazi ihe onye ahụ na-ahụ ma na-emetụ aka. Ọ bara uru n’ihi na nhazi dị mma na-egbochi ndị mmadụ inwe mgbagwoju anya. Ihe ọmụmụ ndị a na-esi n’echiche ndị bụ isi gaa n’ụkpụrụ nhazi, ngwá ọrụ Figma, nchọcha a na-eme n’etiti ndị na-eji ngwaahịa, na otú ndị UX designer si arụkọ ọrụ n’otu.",
+   "ha": "Zanen UI/UX yana nufin sa manhajoji da shafukan yanar gizo su zama masu sauƙi da daɗin amfani. UX (user experience, ƙwarewar mai amfani) ita ce yadda samfur ke aiki ga mutumin da ke amfani da shi, yayin da UI (user interface) su ne fuskoki, maɓallai da tsare-tsaren da mutum ke gani yake taɓawa. Yana da amfani domin zane mai kyau yana kare mutane daga ruɗani. Waɗannan darussa sun fara daga muhimman ra’ayoyi zuwa ƙa’idojin zane, kayan aikin Figma, bincike tare da masu amfani, da yadda UX designers ke aiki a ƙungiya.",
+   "fr": "Le design UI/UX consiste à rendre les applis et les sites web faciles et agréables à utiliser. L’UX (user experience, expérience utilisateur) concerne la façon dont un produit fonctionne pour la personne qui l’utilise, et l’UI (user interface, interface utilisateur) les écrans, boutons et mises en page qu’elle voit et touche. C’est utile, car un bon design évite la confusion. Ces leçons vont des idées de base aux principes de design, à l’outil Figma, à la recherche auprès des utilisateurs et au travail en équipe des designers UX.",
+   "ar": "يهدف تصميم UI/UX إلى جعل التطبيقات والمواقع سهلة وممتعة في الاستخدام. تشير UX (تجربة المستخدم) إلى طريقة عمل المنتج بالنسبة إلى من يستخدمه، بينما تشير UI (واجهة المستخدم) إلى الشاشات والأزرار والتخطيطات التي يراها ويلمسها. وتكمن فائدته في أن التصميم الجيد يجنّب الناس الارتباك. تتدرج هذه الدروس من الأفكار الأساسية إلى مبادئ التصميم وأداة Figma والبحث مع المستخدمين وطريقة عمل مصممي UX ضمن الفرق.",
+   "sw": "Ubunifu wa UI/UX unahusu kufanya app na tovuti ziwe rahisi na za kupendeza kutumia. UX (user experience, uzoefu wa mtumiaji) ni jinsi bidhaa inavyomfanyia kazi mtu anayeitumia, na UI (user interface, kiolesura) ni skrini, vitufe na mipangilio anayoona na kugusa. Ni muhimu kwa sababu ubunifu mzuri huwaepusha watu na mkanganyiko. Masomo haya yanaanzia mawazo ya msingi hadi kanuni za ubunifu, zana ya Figma, utafiti na watumiaji, na jinsi wabunifu wa UX wanavyofanya kazi katika timu.",
+   "pt": "O design UI/UX consiste em tornar aplicações e sites fáceis e agradáveis de utilizar. O UX (user experience, experiência do utilizador) diz respeito à forma como um produto funciona para quem o utiliza, e o UI (user interface, interface do utilizador) aos ecrãs, botões e esquemas que essa pessoa vê e toca. É útil porque um bom design evita confusão. Estas lições vão das ideias básicas aos princípios de design, à ferramenta Figma, à investigação com utilizadores e ao trabalho dos designers de UX em equipa.",
+   "es": "El diseño UI/UX busca que las apps y los sitios web sean fáciles y agradables de usar. La UX (user experience, experiencia de usuario) se refiere a cómo funciona un producto para quien lo usa, y la UI (user interface, interfaz de usuario) a las pantallas, botones y diseños que esa persona ve y toca. Es útil porque un buen diseño evita confusiones. Estas lecciones van de las ideas básicas a los principios de diseño, la herramienta Figma, la investigación con usuarios y el trabajo en equipo de los diseñadores de UX."
+  },
+  "videos": [
+   {
+    "youtubeId": "ziQEqGZB8GE",
+    "title": "What Is UX Design? - An Introduction (Full Guide For 2024)",
+    "channel": "CareerFoundry",
+    "seconds": 504,
+    "summary": {
+     "en": "Learn what UX design means, its key factors and what sits at its core. Examples of good UX, including one from Don Norman, show the ideas in action, then come the five basic steps of UX design and a UX designer’s daily tasks.",
+     "pcm": "You go learn wetin UX design mean, the main things wey dey inside am and wetin be the heart of am. Examples of good UX, including one from Don Norman, go show how the ideas dey work, then you go see the five basic steps of UX design and wetin UX designer dey do every day.",
+     "yo": "Kọ́ ohun tí UX design túmọ̀ sí, àwọn kókó pàtàkì rẹ̀ àti ohun tó wà ní ọkàn rẹ̀. Àwọn àpẹẹrẹ UX tó dára, pẹ̀lú ọ̀kan láti ọ̀dọ̀ Don Norman, fi àwọn èrò náà hàn ní ìṣe, lẹ́yìn náà ni ìgbésẹ̀ ìpìlẹ̀ márùn-ún ti UX design àti àwọn iṣẹ́ ojoojúmọ́ UX designer.",
+     "ig": "Mụta ihe UX design pụtara, ihe ndị bụ isi o nwere na ihe dị ya n’obi. Ihe atụ nke UX dị mma, gụnyere otu sitere n’aka Don Norman, na-egosi otú echiche ndị ahụ si arụ ọrụ, e mesịa, ị ga-ahụ usoro ise bụ isi nke UX design na ọrụ UX designer na-arụ kwa ụbọchị.",
+     "ha": "Koyi ma’anar UX design, muhimman abubuwan da suka shafe shi da kuma ginshiƙinsa. Misalan UX mai kyau, ciki har da ɗaya daga Don Norman, sun nuna yadda ra’ayoyin ke aiki, sannan matakai biyar na asali na UX design da ayyukan yau da kullum na UX designer.",
+     "fr": "Découvre ce qu’est le design UX, ses facteurs clés et ce qui en constitue le cœur. Des exemples de bonne UX, dont un de Don Norman, montrent ces idées en pratique, puis viennent les cinq étapes de base du design UX et les tâches quotidiennes d’un designer UX.",
+     "ar": "تعلّم معنى تصميم UX وعوامله الرئيسية وجوهره. توضّح أمثلة على التصميم الجيد، منها مثال من Don Norman، هذه الأفكار عمليًا، ثم تتعرّف إلى الخطوات الخمس الأساسية لتصميم UX والمهام اليومية لمصمم UX.",
+     "sw": "Jifunze maana ya UX design, mambo yake muhimu na kiini chake. Mifano ya UX nzuri, ukiwemo mmoja kutoka kwa Don Norman, inaonyesha mawazo haya kwa vitendo, kisha hatua tano za msingi za UX design na kazi za kila siku za mbunifu wa UX.",
+     "pt": "Aprende o que é o design de UX, os seus fatores-chave e o que está no seu centro. Exemplos de boa UX, incluindo um de Don Norman, mostram estas ideias na prática, seguidos dos cinco passos básicos do design de UX e das tarefas diárias de um designer de UX.",
+     "es": "Aprende qué es el diseño UX, sus factores clave y cuál es su núcleo. Ejemplos de buena UX, incluido uno de Don Norman, muestran estas ideas en la práctica, y después vienen los cinco pasos básicos del diseño UX y las tareas diarias de un diseñador UX."
+    }
+   },
+   {
+    "youtubeId": "5CxXhyhT6Fc",
+    "title": "UX Design vs UI Design - What's The Difference? (2024)",
+    "channel": "CareerFoundry",
+    "seconds": 608,
+    "summary": {
+     "en": "Learn clear definitions of UX design and UI design, and how the two roles are similar and different. You will compare the tasks each one involves, see an example of a UI designer and think about which might suit you better.",
+     "pcm": "You go learn clear meaning of UX design and UI design, plus how the two work take resemble and how dem take different. You go compare the tasks wey each one get, see example of UI designer, and think about which one fit you pass.",
+     "yo": "Kọ́ ìtumọ̀ tó ṣe kedere fún UX design àti UI design, àti bí iṣẹ́ méjèèjì ṣe jọra tí wọ́n sì yàtọ̀ síra. Wàá fi àwọn iṣẹ́ tí ọ̀kọ̀ọ̀kan ní wé ara wọn, wàá rí àpẹẹrẹ UI designer, wàá sì ronú nípa èyí tó lè bá ọ mu jù.",
+     "ig": "Mụta nkọwa doro anya nke UX design na UI design, na otú ọrụ abụọ ahụ si yie ma dị iche. Ị ga-atụnyere ọrụ ndị dị n’ime nke ọ bụla, hụ ihe atụ nke UI designer, ma chee echiche banyere nke nwere ike ikwekọrọ gị karịa.",
+     "ha": "Koyi ma’anar UX design da UI design a fili, da yadda ayyukan biyu suka yi kama da kuma bambancinsu. Za ka kwatanta ayyukan da kowanne ya ƙunsa, ka ga misalin UI designer, ka kuma yi tunanin wanda zai fi dacewa da kai.",
+     "fr": "Découvre des définitions claires du design UX et du design UI, ainsi que les points communs et les différences entre ces deux métiers. Tu compares les tâches de chacun, tu vois un exemple de designer UI et tu réfléchis à celui qui te conviendrait le mieux.",
+     "ar": "تعلّم تعريفات واضحة لتصميم UX وتصميم UI، وأوجه التشابه والاختلاف بين الدورين. ستقارن بين المهام التي يتضمنها كل منهما، وترى مثالًا على مصمم UI، وتفكّر في أيهما قد يناسبك أكثر.",
+     "sw": "Jifunze maana wazi za UX design na UI design, na jinsi kazi hizi mbili zinavyofanana na kutofautiana. Utalinganisha majukumu ya kila moja, utaona mfano wa mbunifu wa UI, na utafikiria ipi inaweza kukufaa zaidi.",
+     "pt": "Aprende definições claras de design de UX e de design de UI, e em que estas duas funções se parecem e se distinguem. Vais comparar as tarefas de cada uma, ver um exemplo de designer de UI e pensar em qual te poderá servir melhor.",
+     "es": "Aprende definiciones claras del diseño UX y del diseño UI, y en qué se parecen y se diferencian estos dos roles. Compararás las tareas de cada uno, verás un ejemplo de diseñador UI y pensarás cuál podría encajar mejor contigo."
+    }
+   },
+   {
+    "youtubeId": "9EPTM91TBDU",
+    "title": "The Principles of Design | FREE COURSE",
+    "channel": "Envato",
+    "seconds": 1307,
+    "summary": {
+     "en": "Learn the main rules for creating compositions that work well and carry an organised message. The course takes each principle in turn, including balance, unity, contrast, emphasis, pattern, rhythm, movement, proportion, harmony and variety.",
+     "pcm": "You go learn the main rules to arrange design wey dey work well and wey dey carry clear, organised message. The course dey take each principle one by one, including balance, unity, contrast, emphasis, pattern, rhythm, movement, proportion, harmony and variety.",
+     "yo": "Kọ́ àwọn òfin pàtàkì fún ṣíṣe àkójọpọ̀ àwòrán tó dára tí ó sì ń gbé ọ̀rọ̀ tó wà létòlétò jáde. Ẹ̀kọ́ náà ṣàlàyé ìlànà kọ̀ọ̀kan ní ọ̀kọ̀ọ̀kan, pẹ̀lú balance (ìdọ́gba), unity (ìṣọ̀kan), contrast (ìyàtọ̀), emphasis (ìtẹnumọ́), pattern (àpẹẹrẹ), rhythm (ìlù), movement (ìṣípò), proportion (ìwọ̀n), harmony (ìbámu) àti variety (oríṣiríṣi).",
+     "ig": "Mụta iwu ndị bụ isi maka ịhazi ihe e sere ka ọ dị mma ma bute ozi a haziri nke ọma. Ihe ọmụmụ a na-akọwa ụkpụrụ ọ bụla n’otu n’otu, gụnyere balance (nguzozi), unity (ịdị n’otu), contrast (ọdịiche), emphasis (nkwusi ike), pattern (usoro), rhythm (ụda), movement (mmegharị), proportion (nha), harmony (nkwekọ) na variety (ụdị dị iche iche).",
+     "ha": "Koyi manyan ƙa’idojin tsara zane mai kyau wanda ke isar da saƙo cikin tsari. Kwas ɗin yana bayani kan kowace ƙa’ida ɗaya bayan ɗaya, ciki har da balance (daidaito), unity (haɗin kai), contrast (bambanci), emphasis (ƙarfafawa), pattern (tsari mai maimaituwa), rhythm (kari), movement (motsi), proportion (gwargwado), harmony (jituwa) da variety (nau’o’i daban-daban).",
+     "fr": "Apprends les principales règles pour créer des compositions réussies et porteuses d’un message organisé. Le cours aborde chaque principe tour à tour, dont l’équilibre, l’unité, le contraste, l’accent, le motif, le rythme, le mouvement, la proportion, l’harmonie et la variété.",
+     "ar": "تعلّم القواعد الرئيسية لإنشاء تركيبات بصرية ناجحة تنقل رسالة منظّمة. تتناول الدورة كل مبدأ على حدة، ومنها التوازن والوحدة والتباين والتركيز والنمط والإيقاع والحركة والتناسب والانسجام والتنوع.",
+     "sw": "Jifunze kanuni kuu za kutunga miundo inayofanya kazi vizuri na kubeba ujumbe uliopangwa vizuri. Kozi inaeleza kila kanuni kwa zamu, zikiwemo usawa (balance), umoja (unity), utofauti (contrast), msisitizo (emphasis), ruwaza (pattern), mdundo (rhythm), mwendo (movement), uwiano (proportion), upatanifu (harmony) na anuwai (variety).",
+     "pt": "Aprende as principais regras para criar composições que resultam bem e transmitem uma mensagem organizada. O curso trata cada princípio à vez, incluindo equilíbrio, unidade, contraste, ênfase, padrão, ritmo, movimento, proporção, harmonia e variedade.",
+     "es": "Aprende las reglas principales para crear composiciones que funcionen bien y transmitan un mensaje organizado. El curso trata cada principio por turnos, entre ellos equilibrio, unidad, contraste, énfasis, patrón, ritmo, movimiento, proporción, armonía y variedad."
+    }
+   },
+   {
+    "youtubeId": "II-6dDzc-80",
+    "title": "Figma Masterclass for Beginners (2023 Updated)",
+    "channel": "Jesse Showalter",
+    "seconds": 1917,
+    "summary": {
+     "en": "Learn the basics of Figma step by step, starting from downloading and installing it. This beginner tutorial aims to give you what you need to start using Figma for your own web and UI design projects.",
+     "pcm": "You go learn Figma basics step by step, from how to download and install am. This beginner tutorial wan give you wetin you need to start to use Figma for your own web and UI design projects.",
+     "yo": "Kọ́ àwọn ìpìlẹ̀ Figma ní ìgbésẹ̀-ìgbésẹ̀, bẹ̀rẹ̀ láti gbígba á sílẹ̀ àti fífi í sórí ẹ̀rọ. Ẹ̀kọ́ àwọn olùbẹ̀rẹ̀ yìí ní èrò láti fún ọ ní ohun tí o nílò láti bẹ̀rẹ̀ sí í lo Figma fún àwọn iṣẹ́ web àti UI design tìrẹ.",
+     "ig": "Mụta isi ihe gbasara Figma nzọụkwụ n’otu n’otu, malite n’ibudata ya na ịwụnye ya. Nkuzi a maka ndị mbido bu n’obi inye gị ihe ị chọrọ iji malite iji Figma rụọ ọrụ web na UI design nke gị.",
+     "ha": "Koyi tushen Figma mataki-mataki, tun daga saukewa da shigar da shi. Wannan darasi na masu farawa yana nufin ba ka abin da kake buƙata don fara amfani da Figma a ayyukanka na web da UI design.",
+     "fr": "Apprends les bases de Figma pas à pas, à commencer par son téléchargement et son installation. Ce tutoriel pour débutants vise à te donner ce qu’il faut pour commencer à utiliser Figma dans tes propres projets de design web et UI.",
+     "ar": "تعلّم أساسيات Figma خطوة بخطوة، بدءًا من تنزيله وتثبيته. يهدف هذا الدرس للمبتدئين إلى تزويدك بما تحتاج إليه لتبدأ استخدام Figma في مشاريعك الخاصة لتصميم الويب وUI.",
+     "sw": "Jifunze misingi ya Figma hatua kwa hatua, kuanzia kuipakua na kuisakinisha. Mafunzo haya kwa wanaoanza yanalenga kukupa unachohitaji ili uanze kutumia Figma katika miradi yako ya web na UI design.",
+     "pt": "Aprende as bases do Figma passo a passo, desde o descarregar e instalar. Este tutorial para principiantes pretende dar-te o que precisas para começares a usar o Figma nos teus próprios projetos de design web e de UI.",
+     "es": "Aprende lo básico de Figma paso a paso, empezando por descargarlo e instalarlo. Este tutorial para principiantes busca darte lo que necesitas para empezar a usar Figma en tus propios proyectos de diseño web y UI."
+    }
+   },
+   {
+    "youtubeId": "kQ_6faxhyIw",
+    "title": "What is UX Research? | Google UX Design Certificate",
+    "channel": "Grow with Google",
+    "seconds": 1380,
+    "summary": {
+     "en": "Learn how UX research puts the user first and closes the gap between what a business thinks users need and what they actually need, before an expensive product is made. It also covers choosing a research method, each method’s benefits and drawbacks, and types of bias.",
+     "pcm": "You go learn how UX research dey put the user first and close the gap between wetin business think say users need and wetin dem really need, before dem make costly product. E also cover how to choose research method, the good and bad side of each method, and the types of bias (wey fit spoil fair judgement).",
+     "yo": "Kọ́ bí UX research (ìwádìí UX) ṣe ń fi olùlò ṣáájú, tí ó sì ń dí àlàfo láàárín ohun tí ilé-iṣẹ́ rò pé àwọn olùlò nílò àti ohun tí wọ́n nílò ní tòótọ́, kí wọ́n tó ṣe ọjà olówó ńlá. Ó tún ṣàlàyé bí a ṣe ń yan ọ̀nà ìwádìí, àǹfààní àti àléébù ọ̀nà kọ̀ọ̀kan, àti irú bias (ojúsàájú).",
+     "ig": "Mụta otú UX research (nchọcha UX) si ebute onye na-eji ngwaahịa ụzọ, ma mechie ọdịiche dị n’etiti ihe azụmahịa chere na ndị na-eji ya chọrọ na ihe ha chọrọ n’ezie, tupu e mee ngwaahịa dị oké ọnụ. Ọ na-akụziekwa otú e si ahọrọ ụzọ nchọcha, uru na ọghọm nke ụzọ ọ bụla, na ụdị bias (ịkwado otu akụkụ).",
+     "ha": "Koyi yadda UX research (binciken UX) ke fifita mai amfani, yake kuma cike giɓin da ke tsakanin abin da kamfani ke tunanin masu amfani suna buƙata da abin da suke buƙata a zahiri, kafin a yi samfur mai tsada. Ya kuma shafi zaɓen hanyar bincike, amfani da rashin amfanin kowace hanya, da nau’o’in bias (son kai).",
+     "fr": "Découvre comment la recherche UX place l’utilisateur au premier plan et comble l’écart entre ce dont une entreprise pense que les utilisateurs ont besoin et ce dont ils ont réellement besoin, avant de créer un produit coûteux. Tu verras aussi comment choisir une méthode de recherche, les avantages et inconvénients de chacune et les types de biais.",
+     "ar": "تعلّم كيف يضع بحث UX المستخدم في المقام الأول ويردم الفجوة بين ما تظن الشركة أن المستخدمين يحتاجون إليه وما يحتاجون إليه فعلًا، قبل صنع منتج مكلف. ويتناول أيضًا اختيار طريقة البحث، ومزايا كل طريقة وعيوبها، وأنواع التحيّز.",
+     "sw": "Jifunze jinsi UX research (utafiti wa UX) inavyomweka mtumiaji mbele na kuziba pengo kati ya kile biashara inachodhani watumiaji wanahitaji na kile wanachohitaji hasa, kabla ya kutengeneza bidhaa ya gharama kubwa. Pia inahusu kuchagua njia ya utafiti, faida na hasara za kila njia, na aina za bias (upendeleo).",
+     "pt": "Aprende como a investigação em UX coloca o utilizador em primeiro lugar e reduz a distância entre aquilo de que uma empresa pensa que os utilizadores precisam e aquilo de que realmente precisam, antes de se criar um produto caro. Vê também como escolher um método de investigação, as vantagens e desvantagens de cada um e os tipos de enviesamento.",
+     "es": "Aprende cómo la investigación UX pone al usuario en primer lugar y reduce la distancia entre lo que una empresa cree que los usuarios necesitan y lo que de verdad necesitan, antes de crear un producto caro. También verás cómo elegir un método de investigación, las ventajas e inconvenientes de cada uno y los tipos de sesgo."
+    }
+   },
+   {
+    "youtubeId": "2QQQtiFwXjU",
+    "title": "Intro to UX (User Experience) | Google UX Design Certificate",
+    "channel": "Grow with Google",
+    "seconds": 1919,
+    "summary": {
+     "en": "Learn the basics of UX design, what makes a good user experience and what entry-level UX designers do. It also explains specialists, generalists and T-shaped designers, working in a cross-functional team (people with different skills), and UX design at different types of company.",
+     "pcm": "You go learn the basics of UX design, wetin dey make user experience good and wetin entry-level UX designers (people wey just dey start) dey do. E also explain specialists, generalists and T-shaped designers, how to work for cross-functional team (people wey get different skills), and UX design for different types of company.",
+     "yo": "Kọ́ àwọn ìpìlẹ̀ UX design, ohun tó ń mú kí ìrírí olùlò dára àti ohun tí àwọn UX designer tó ṣẹ̀ṣẹ̀ bẹ̀rẹ̀ ń ṣe. Ó tún ṣàlàyé specialist, generalist àti T-shaped designer, ṣíṣiṣẹ́ nínú cross-functional team (ẹgbẹ́ àwọn tó ní ọgbọ́n oríṣiríṣi), àti UX design ní oríṣiríṣi ilé-iṣẹ́.",
+     "ig": "Mụta isi ihe gbasara UX design, ihe na-eme ka ahụmịhe onye na-eji ya dị mma na ihe ndị UX designer na-amalite ọrụ na-eme. Ọ na-akọwakwa specialist, generalist na T-shaped designer, ịrụ ọrụ na cross-functional team (ndị otu nwere nka dị iche iche), na UX design n’ụdị ụlọ ọrụ dị iche iche.",
+     "ha": "Koyi tushen UX design, abin da ke sa ƙwarewar mai amfani ta yi kyau da kuma abin da sababbin UX designers ke yi. Ya kuma bayyana specialist, generalist da T-shaped designer, aiki a cross-functional team (ƙungiyar masu ƙwarewa daban-daban), da UX design a nau’o’in kamfanoni daban-daban.",
+     "fr": "Apprends les bases du design UX, ce qui fait une bonne expérience utilisateur et ce que font les designers UX débutants. Tu découvres aussi les spécialistes, les généralistes et les designers en T, le travail dans une équipe pluridisciplinaire (aux compétences variées) et le design UX selon le type d’entreprise.",
+     "ar": "تعلّم أساسيات تصميم UX، وما الذي يجعل تجربة المستخدم جيدة، وما الذي يفعله مصممو UX المبتدئون. ويشرح أيضًا المتخصصين والعامّين والمصممين على شكل T (T-shaped)، والعمل في فريق متعدد التخصصات، وتصميم UX في أنواع مختلفة من الشركات.",
+     "sw": "Jifunze misingi ya UX design, kinachofanya uzoefu wa mtumiaji uwe mzuri na kazi za wabunifu wa UX wanaoanza. Pia inaeleza specialists, generalists na T-shaped designers, kufanya kazi katika cross-functional team (timu ya watu wenye ujuzi tofauti), na UX design katika aina tofauti za kampuni.",
+     "pt": "Aprende as bases do design de UX, o que faz uma boa experiência do utilizador e o que fazem os designers de UX em início de carreira. Vê também o que são especialistas, generalistas e designers em T, como é trabalhar numa equipa multidisciplinar (com competências diferentes) e o design de UX em vários tipos de empresa.",
+     "es": "Aprende lo básico del diseño UX, qué hace buena una experiencia de usuario y qué hacen los diseñadores UX que empiezan. También verás qué son los especialistas, los generalistas y los diseñadores en T, cómo se trabaja en un equipo multidisciplinar (con habilidades distintas) y el diseño UX en distintos tipos de empresa."
+    }
+   }
+  ]
+ },
+ {
+  "id": "cybersecurity",
+  "name": {
+   "en": "Cybersecurity",
+   "pcm": "Cybersecurity",
+   "yo": "Ààbò orí ayélujára",
+   "ig": "Nchekwa ịntanetị",
+   "ha": "Tsaron intanet",
+   "fr": "Cybersécurité",
+   "ar": "الأمن السيبراني",
+   "sw": "Usalama wa mtandao",
+   "pt": "Cibersegurança",
+   "es": "Ciberseguridad"
+  },
+  "tagline": {
+   "en": "Protect yourself and others from online threats",
+   "pcm": "Protect yourself and other people from online wahala",
+   "yo": "Dáàbò bo ara rẹ àti àwọn ẹlòmíràn lórí ayélujára",
+   "ig": "Chebe onwe gị na ndị ọzọ n’ịntanetị",
+   "ha": "Kare kanka da sauran mutane a intanet",
+   "fr": "Protège-toi et protège les autres en ligne",
+   "ar": "احمِ نفسك والآخرين على الإنترنت",
+   "sw": "Jilinde wewe na wengine mtandaoni",
+   "pt": "Protege-te a ti e aos outros na Internet",
+   "es": "Protégete a ti y a los demás en internet"
+  },
+  "summary": {
+   "en": "Cybersecurity is the practice of keeping people, accounts, devices and data safe from attack, theft and damage. It matters because scams and stolen passwords can affect anyone who goes online. These lessons start with everyday protection, such as spotting phishing and scams, turning on two-factor authentication and guarding your passwords, then build up to how security professionals protect organisations and the people who rely on them.",
+   "pcm": "Cybersecurity na how to keep people, accounts, devices and data safe from attack, theft and damage. E matter because scam and stolen password fit affect anybody wey dey go online. These lessons start with everyday protection, like how to spot phishing and scam, turn on two-factor authentication and guard your password, then dem build up reach how security professionals dey protect organisations and the people wey depend on them.",
+   "yo": "Cybersecurity (ààbò orí ayélujára) ni ọ̀nà tí a fi ń pa àwọn ènìyàn, àkáǹtì, ẹ̀rọ àti data mọ́ kúrò lọ́wọ́ ìkọlù, olè àti ìbàjẹ́. Ó ṣe pàtàkì nítorí pé jìbìtì àti password tí wọ́n jí lè kan ẹnikẹ́ni tó ń lo ayélujára. Àwọn ẹ̀kọ́ wọ̀nyí bẹ̀rẹ̀ pẹ̀lú ààbò ojoojúmọ́, bíi dídá phishing àti jìbìtì mọ̀, títan two-factor authentication àti ṣíṣọ́ password rẹ, lẹ́yìn náà wọ́n dé bí àwọn ògbóǹtarìgì ààbò ṣe ń dáàbò bo àwọn iléeṣẹ́ àti àwọn ènìyàn tó gbẹ́kẹ̀lé wọn.",
+   "ig": "Cybersecurity (nchekwa ịntanetị) bụ ụzọ e si echebe ndị mmadụ, akaụntụ, ngwaọrụ na data pụọ na mwakpo, ohi na mmebi. Ọ dị mkpa n’ihi na aghụghọ na password e zuru nwere ike imetụta onye ọ bụla na-eji ịntanetị. Nkuzi ndị a na-amalite site na nchekwa kwa ụbọchị, dị ka ịmata phishing na aghụghọ, ịgbanye two-factor authentication na ichekwa password gị, wee ruo otú ndị ọkachamara nchekwa si echebe ụlọ ọrụ na ndị na-adabere na ha.",
+   "ha": "Cybersecurity (tsaron intanet) ita ce hanyar kare mutane, asusu, na’urori da data daga hari, sata da lalacewa. Tana da muhimmanci domin damfara da satar password na iya shafar duk wanda ke amfani da intanet. Waɗannan darussa sun fara da kariya ta yau da kullum, kamar gane phishing da damfara, kunna two-factor authentication da kula da password ɗinka, sannan su kai ga yadda ƙwararrun tsaro ke kare ƙungiyoyi da mutanen da suka dogara da su.",
+   "fr": "La cybersécurité consiste à protéger les personnes, les comptes, les appareils et les données contre les attaques, le vol et les dégâts. Elle compte parce que les arnaques et les mots de passe volés peuvent toucher toute personne qui va en ligne. Ces leçons commencent par la protection au quotidien : repérer le phishing et les arnaques, activer l’authentification à deux facteurs et protéger tes mots de passe. Elles montrent ensuite comment les professionnels de la sécurité protègent les organisations et les personnes qui en dépendent.",
+   "ar": "الأمن السيبراني هو حماية الأشخاص والحسابات والأجهزة والبيانات من الهجمات والسرقة والتلف. وهو مهم لأن عمليات الاحتيال وسرقة كلمات المرور قد تطال أي شخص يستخدم الإنترنت. تبدأ هذه الدروس بالحماية اليومية، مثل كشف التصيّد الاحتيالي (phishing) وعمليات الاحتيال، وتفعيل المصادقة الثنائية (two-factor authentication)، وحماية كلمات مرورك، ثم تنتقل إلى كيفية حماية خبراء الأمن للمؤسسات والأشخاص الذين يعتمدون عليها.",
+   "sw": "Cybersecurity (usalama wa mtandao) ni kulinda watu, akaunti, vifaa na data dhidi ya mashambulizi, wizi na uharibifu. Ni muhimu kwa sababu ulaghai na wizi wa password vinaweza kumpata yeyote anayetumia mtandao. Masomo haya yanaanza na ulinzi wa kila siku, kama kutambua phishing na ulaghai, kuwasha two-factor authentication na kulinda password yako, kisha yanafikia jinsi wataalamu wa usalama wanavyolinda mashirika na watu wanaoyategemea.",
+   "pt": "A cibersegurança consiste em proteger pessoas, contas, dispositivos e dados contra ataques, roubo e danos. É importante porque as burlas e as palavras-passe roubadas podem afetar qualquer pessoa que use a Internet. Estas lições começam pela proteção do dia a dia, como reconhecer phishing e burlas, ativar a autenticação de dois fatores e proteger as tuas palavras-passe, e chegam depois à forma como os profissionais de segurança protegem as organizações e as pessoas que delas dependem.",
+   "es": "La ciberseguridad consiste en proteger a las personas, las cuentas, los dispositivos y los datos de ataques, robos y daños. Importa porque las estafas y las contraseñas robadas pueden afectar a cualquiera que use internet. Estas lecciones empiezan por la protección diaria, como reconocer el phishing y las estafas, activar la autenticación de dos factores y cuidar tus contraseñas, y llegan después a cómo los profesionales de la seguridad protegen a las organizaciones y a las personas que dependen de ellas."
+  },
+  "videos": [
+   {
+    "youtubeId": "XsOWczwRVuc",
+    "title": "What Is Phishing? And How to Avoid the Bait",
+    "channel": "iluli by Mike Lamb",
+    "seconds": 261,
+    "summary": {
+     "en": "Learn what phishing is, why convincing fake messages fool so many people, and how spear phishing targets particular people using their personal details. You’ll also pick up habits that protect you: check website addresses carefully, avoid links in emails, and call your bank, friend or relative directly if unsure.",
+     "pcm": "Learn wetin phishing be (fake message wey dey try trick you), why convincing fake messages dey fool plenty people, and how spear phishing dey target particular people with their personal details. You go also learn habits wey go protect you: check website address well, avoid links for email, and call your bank, friend or family member direct if you no sure.",
+     "yo": "Kọ́ ohun tí phishing jẹ́ (àwọn iṣẹ́ ìránṣẹ́ ẹ̀tàn), ìdí tí àwọn iṣẹ́ ìránṣẹ́ ayédèrú tó dà bí òótọ́ fi ń tan ọ̀pọ̀ ènìyàn jẹ, àti bí spear phishing ṣe ń dojú kọ àwọn ènìyàn kan pàtó pẹ̀lú àlàyé ara ẹni wọn. Wàá tún kọ́ àwọn ìwà tó ń dáàbò bò ọ́: ṣàyẹ̀wò àdírẹ́sì wẹ́ẹ̀bù dáadáa, yẹra fún àwọn link inú email, kí o sì pe báńkì, ọ̀rẹ́ tàbí ẹbí rẹ tààrà bí kò bá dá ọ lójú.",
+     "ig": "Mụta ihe phishing bụ (ozi aghụghọ), ihe mere ozi adịgboroja ndị yiri eziokwu ji aghọgbu ọtụtụ mmadụ, na otú spear phishing si elekwasị anya na ndị mmadụ ụfọdụ site n’iji nkọwa onwe ha. Ị ga-amụtakwa omume ga-echebe gị: lelee adreesị weebụsaịtị nke ọma, zere link dị n’email, ma kpọọ ụlọ akụ gị, enyi gị ma ọ bụ onye ezinụlọ gị ozugbo ma ọ bụrụ na o doghị gị anya.",
+     "ha": "Koyi mene ne phishing (saƙonnin yaudara), dalilin da ya sa saƙonnin ƙarya masu kama da gaskiya ke yaudarar mutane da yawa, da yadda spear phishing ke nufar wasu mutane musamman ta amfani da bayanansu na sirri. Za ka kuma koyi ɗabi’un kariya: duba adireshin gidan yanar gizo sosai, ka guji link a cikin email, kuma ka kira bankinka, abokinka ko danginka kai tsaye idan ba ka da tabbas.",
+     "fr": "Apprends ce qu’est le phishing (hameçonnage), pourquoi de faux messages convaincants trompent tant de gens et comment le spear phishing vise des personnes précises grâce à leurs données personnelles. Tu verras aussi les bons réflexes : vérifier les adresses de sites, éviter les liens dans les e-mails et appeler directement ta banque, un ami ou un proche en cas de doute.",
+     "ar": "تعلّم ما هو التصيّد الاحتيالي (phishing)، ولماذا تخدع الرسائل المزيفة المقنعة كثيرًا من الناس، وكيف يستهدف التصيّد الموجّه (spear phishing) أشخاصًا محددين باستخدام بياناتهم الشخصية. وستتعلم أيضًا عادات تحميك: تحقق جيدًا من عناوين المواقع، وتجنب الروابط في رسائل البريد الإلكتروني، واتصل مباشرة بمصرفك أو صديقك أو قريبك إذا لم تكن متأكدًا.",
+     "sw": "Jifunze phishing ni nini (ujumbe wa ulaghai), kwa nini ujumbe bandia unaoshawishi huwadanganya watu wengi, na jinsi spear phishing inavyowalenga watu mahususi kwa kutumia taarifa zao binafsi. Pia utajifunza tabia za kujilinda: kagua vizuri anwani za tovuti, epuka viungo kwenye barua pepe, na mpigie moja kwa moja benki yako, rafiki au ndugu ukiwa na shaka.",
+     "pt": "Aprende o que é o phishing, porque é que mensagens falsas convincentes enganam tanta gente e como o spear phishing visa pessoas específicas com os seus dados pessoais. Vais também ganhar hábitos de proteção: verificar bem os endereços dos sites, evitar links em e-mails e telefonar diretamente ao teu banco, a um amigo ou a um familiar em caso de dúvida.",
+     "es": "Aprende qué es el phishing, por qué los mensajes falsos convincentes engañan a tanta gente y cómo el spear phishing apunta a personas concretas usando sus datos personales. También adquirirás hábitos para protegerte: comprobar bien las direcciones web, evitar los enlaces de los correos electrónicos y llamar directamente a tu banco, a un amigo o a un familiar si tienes dudas."
+    }
+   },
+   {
+    "youtubeId": "hGRii5f_uSc",
+    "title": "Why You Should Turn On Two Factor Authentication",
+    "channel": "Tom Scott",
+    "seconds": 492,
+    "summary": {
+     "en": "Find out why two-factor authentication, a second check on top of your password, makes your accounts more secure and why it is worth turning on. The longer answer, filmed at a computing history museum, even involves Ronald Reagan, the former US president.",
+     "pcm": "Find out why two-factor authentication, one extra check on top your password, dey make your accounts more secure and why e worth it to turn am on. The longer answer, wey dem film for computing history museum, even involve Ronald Reagan, wey be former US president.",
+     "yo": "Mọ̀ ìdí tí two-factor authentication, àyẹ̀wò kejì lórí password rẹ, fi ń mú kí àkáǹtì rẹ ní ààbò sí i àti ìdí tó fi yẹ kí o tan án. Ìdáhùn tó gùn jù, tí wọ́n ya ní ilé ìṣẹ̀ǹbáyé ìtàn kọ̀ǹpútà, tiẹ̀ kan Ronald Reagan, ààrẹ orílẹ̀-èdè Amẹ́ríkà tẹ́lẹ̀.",
+     "ig": "Chọpụta ihe mere two-factor authentication, nlele nke abụọ n’elu password gị, ji eme ka akaụntụ gị dịkwuo nchebe na ihe mere o ji kwesị ka ị gbanye ya. Azịza ka ogologo, nke e sere n’ụlọ ngosi ihe mgbe ochie gbasara kọmputa, metụtakwara Ronald Reagan, onye bụbu onye isi ala United States.",
+     "ha": "Gano dalilin da ya sa two-factor authentication, wato ƙarin bincike na biyu a kan password ɗinka, ke ƙara tsaron asusunka, da kuma dalilin da ya sa ya dace ka kunna shi. Amsar mai tsayi, wadda aka ɗauka a gidan tarihin kwamfuta, ta shafi har da Ronald Reagan, tsohon shugaban Amurka.",
+     "fr": "Découvre pourquoi l’authentification à deux facteurs, une seconde vérification en plus de ton mot de passe, rend tes comptes plus sûrs et pourquoi il vaut la peine de l’activer. La réponse longue, filmée dans un musée d’histoire de l’informatique, fait même intervenir Ronald Reagan, ancien président américain.",
+     "ar": "اكتشف لماذا تجعل المصادقة الثنائية (two-factor authentication)، وهي تحقق ثانٍ إضافة إلى كلمة المرور، حساباتك أكثر أمانًا، ولماذا يستحق الأمر تفعيلها. أما الإجابة المطولة، التي صُوّرت في متحف لتاريخ الحوسبة، فلها صلة حتى بالرئيس الأمريكي الأسبق رونالد ريغان.",
+     "sw": "Gundua kwa nini two-factor authentication, ukaguzi wa pili juu ya password yako, hufanya akaunti zako kuwa salama zaidi na kwa nini inafaa kuiwasha. Jibu refu zaidi, lililorekodiwa katika jumba la makumbusho la historia ya kompyuta, linamhusisha hata Ronald Reagan, rais wa zamani wa Marekani.",
+     "pt": "Descobre porque é que a autenticação de dois fatores, uma segunda verificação além da palavra-passe, torna as tuas contas mais seguras e porque vale a pena ativá-la. A resposta mais longa, filmada num museu de história da informática, envolve até Ronald Reagan, antigo presidente dos Estados Unidos.",
+     "es": "Descubre por qué la autenticación de dos factores, una segunda comprobación además de tu contraseña, hace más seguras tus cuentas y por qué merece la pena activarla. La respuesta larga, grabada en un museo de historia de la informática, incluso tiene que ver con Ronald Reagan, expresidente de Estados Unidos."
+    }
+   },
+   {
+    "youtubeId": "bPVaOlJ6ln0",
+    "title": "Cybersecurity: Crash Course Computer Science #31",
+    "channel": "CrashCourse",
+    "seconds": 750,
+    "summary": {
+     "en": "Learn cybersecurity’s three goals: secrecy, integrity and availability of systems and data. You’ll meet threats such as malware, DDoS (Denial of Service) attacks and brute-force password cracking, and defences that protect you, including strong passwords, biometrics, access privileges and two-factor authentication.",
+     "pcm": "Learn the three goals of cybersecurity: secrecy, integrity and availability of systems and data. You go see threats like malware, DDoS (Denial of Service) attacks and brute-force password cracking, plus the defences wey dey protect you, like strong passwords, biometrics, access privileges and two-factor authentication.",
+     "yo": "Kọ́ àwọn àfojúsùn mẹ́ta tí cybersecurity ń lépa: secrecy (àṣírí), integrity (òtítọ́ data) àti availability (wíwà ní àrọ́wọ́tó) àwọn sístẹ́mù àti data. Wàá rí àwọn ewu bíi malware, ìkọlù DDoS (Denial of Service) àti brute-force password cracking, àti àwọn ààbò bíi password tó lágbára, biometrics, access privileges àti two-factor authentication.",
+     "ig": "Mụta ebumnuche atọ nke cybersecurity: secrecy (nzuzo), integrity (izi ezi nke data) na availability (ịdị njikere maka ojiji) nke sistemu na data. Ị ga-ahụ ihe egwu dị ka malware, mwakpo DDoS (Denial of Service) na brute-force password cracking, yana ihe nchebe dị ka password siri ike, biometrics, access privileges na two-factor authentication.",
+     "ha": "Koyi manufofi uku na cybersecurity: secrecy (sirri), integrity (ingancin data) da availability (samuwa idan ana buƙata) na tsare-tsaren kwamfuta da data. Za ka ga barazana kamar malware, harin DDoS (Denial of Service) da brute-force password cracking, tare da kariya kamar password mai ƙarfi, biometrics, access privileges da two-factor authentication.",
+     "fr": "Apprends les trois objectifs de la cybersécurité : le secret, l’intégrité et la disponibilité des systèmes et des données. Tu découvriras des menaces comme les malwares, les attaques DDoS (déni de service) et le cassage de mots de passe par force brute, ainsi que des protections : mots de passe solides, biométrie, droits d’accès et authentification à deux facteurs.",
+     "ar": "تعلّم الأهداف الثلاثة للأمن السيبراني: سرية الأنظمة والبيانات وسلامتها وتوافرها. ستتعرف إلى تهديدات مثل البرمجيات الخبيثة (malware) وهجمات DDoS (حجب الخدمة) وكسر كلمات المرور بالقوة الغاشمة (brute force)، وإلى وسائل حماية مثل كلمات المرور القوية والقياسات الحيوية وصلاحيات الوصول والمصادقة الثنائية.",
+     "sw": "Jifunze malengo matatu ya cybersecurity: usiri, uadilifu (integrity) na upatikanaji wa mifumo na data. Utaona vitisho kama malware, mashambulizi ya DDoS (Denial of Service) na brute-force password cracking, pamoja na kinga kama password imara, biometrics, ruhusa za kufikia (access privileges) na two-factor authentication.",
+     "pt": "Aprende os três objetivos da cibersegurança: o sigilo, a integridade e a disponibilidade dos sistemas e dos dados. Vais conhecer ameaças como malware, ataques DDoS (negação de serviço) e quebra de palavras-passe por força bruta, e defesas como palavras-passe fortes, biometria, privilégios de acesso e autenticação de dois fatores.",
+     "es": "Aprende los tres objetivos de la ciberseguridad: el secreto, la integridad y la disponibilidad de los sistemas y los datos. Conocerás amenazas como el malware, los ataques DDoS (denegación de servicio) y el descifrado de contraseñas por fuerza bruta, y defensas como las contraseñas seguras, la biometría, los privilegios de acceso y la autenticación de dos factores."
+    }
+   },
+   {
+    "youtubeId": "vKPGZHoHX8k",
+    "title": "How Hackers Steal Passwords: 5 Attack Methods Explained",
+    "channel": "IBM Technology",
+    "seconds": 787,
+    "summary": {
+     "en": "Understand five ways hackers steal passwords, namely guessing, harvesting, cracking, spraying and stuffing, so you can recognise the risks and defend against them. You’ll also learn how to prevent credential theft (stolen login details) using multi-factor authentication, passkeys and rate limiting.",
+     "pcm": "Understand five ways wey hackers dey take steal password: guessing, harvesting, cracking, spraying and stuffing, so you go fit recognise the risk and defend yourself. You go also learn how to stop credential theft (when dem steal your login details) with multi-factor authentication, passkeys and rate limiting.",
+     "yo": "Lóye ọ̀nà márùn-ún tí hackers ń gbà jí password: guessing, harvesting, cracking, spraying àti stuffing, kí o lè dá ewu náà mọ̀ kí o sì dáàbò bo ara rẹ. Wàá tún kọ́ bí a ṣe ń dènà jíjí àlàyé ìwọlé (credential theft) pẹ̀lú multi-factor authentication, passkeys àti rate limiting.",
+     "ig": "Ghọta ụzọ ise hackers si ezu password: guessing, harvesting, cracking, spraying na stuffing, ka i nwee ike ịmata ihe egwu ahụ ma chebe onwe gị. Ị ga-amụtakwa otú e si egbochi izu ozi nbanye (credential theft) site na multi-factor authentication, passkeys na rate limiting.",
+     "ha": "Fahimci hanyoyi biyar da hackers ke satar password: guessing, harvesting, cracking, spraying da stuffing, domin ka gane haɗarin ka kuma kare kanka. Za ka kuma koyi yadda ake hana satar bayanan shiga (credential theft) ta amfani da multi-factor authentication, passkeys da rate limiting.",
+     "fr": "Comprends cinq méthodes utilisées par les hackers pour voler des mots de passe : guessing (deviner), harvesting (récolter), cracking (casser), spraying (pulvériser) et stuffing (bourrer), afin de reconnaître les risques et de t’en défendre. Tu apprendras aussi à empêcher le vol d’identifiants grâce à l’authentification multifacteur, aux passkeys et au rate limiting.",
+     "ar": "افهم خمس طرق يسرق بها القراصنة (hackers) كلمات المرور: التخمين (guessing) والجمع (harvesting) والكسر (cracking) والرش (spraying) والحشو (stuffing)، لتتعرف إلى المخاطر وتدافع عن نفسك. وستتعلم أيضًا منع سرقة بيانات الدخول عبر المصادقة متعددة العوامل ومفاتيح المرور (passkeys) وتحديد عدد المحاولات (rate limiting).",
+     "sw": "Elewa njia tano ambazo hackers hutumia kuiba password: guessing, harvesting, cracking, spraying na stuffing, ili uweze kutambua hatari na kujilinda. Pia utajifunza jinsi ya kuzuia wizi wa taarifa za kuingia (credential theft) kwa kutumia multi-factor authentication, passkeys na rate limiting.",
+     "pt": "Compreende cinco métodos que os hackers usam para roubar palavras-passe: guessing (adivinhar), harvesting (recolher), cracking (quebrar), spraying (pulverizar) e stuffing (encher), para reconheceres os riscos e te defenderes. Vais também aprender a evitar o roubo de credenciais com autenticação multifator, passkeys e rate limiting.",
+     "es": "Comprende cinco métodos que usan los hackers para robar contraseñas: guessing (adivinar), harvesting (recolectar), cracking (descifrar), spraying (rociar) y stuffing (rellenar), para reconocer los riesgos y defenderte. También aprenderás a evitar el robo de credenciales con la autenticación multifactor, las passkeys y el rate limiting."
+    }
+   },
+   {
+    "youtubeId": "CDhAOvsyw2s",
+    "title": "10 Common Internet Scams and How To Avoid Them",
+    "channel": "macmostvideo",
+    "seconds": 829,
+    "summary": {
+     "en": "Learn how 10 common internet scams work, including job posting, lottery, online purchase, tech support and online romance scams. It ends with ways to protect yourself and others, so you can talk about scams with your friends and family before it is too late.",
+     "pcm": "Learn how 10 common internet scams dey work, including job posting, lottery, online purchase, tech support and online romance scams. E end with how to protect yourself and other people, so you fit talk about scams with your friends and family before e too late.",
+     "yo": "Kọ́ bí jìbìtì mẹ́wàá tó wọ́pọ̀ lórí ayélujára ṣe ń ṣiṣẹ́, pẹ̀lú jìbìtì ìpolówó iṣẹ́, lottery, ríra ọjà lórí ayélujára, tech support àti ìfẹ́ orí ayélujára. Ó parí pẹ̀lú bí o ṣe lè dáàbò bo ara rẹ àti àwọn ẹlòmíràn, kí o lè bá àwọn ọ̀rẹ́ àti ẹbí rẹ sọ̀rọ̀ nípa jìbìtì kí ó tó pẹ́ jù.",
+     "ig": "Mụta otú aghụghọ iri a na-ahụkarị n’ịntanetị si arụ ọrụ, gụnyere aghụghọ mgbasa ọkwa ọrụ, lottery, ịzụ ahịa n’ịntanetị, tech support na ịhụnanya n’ịntanetị. Ọ na-ejedebe n’otú ị ga-esi chebe onwe gị na ndị ọzọ, ka i nwee ike ịgwa ndị enyi gị na ezinụlọ gị gbasara aghụghọ tupu oge agafee.",
+     "ha": "Koyi yadda damfara guda 10 da suka zama ruwan dare a intanet ke aiki, ciki har da damfarar tallan aiki, lottery, sayayya ta intanet, tech support da soyayya ta intanet. Ya ƙare da yadda za ka kare kanka da sauran mutane, domin ka iya tattauna damfara da abokai da iyalinka kafin lokaci ya ƙure.",
+     "fr": "Apprends comment fonctionnent 10 arnaques courantes sur Internet, dont celles aux offres d’emploi, à la loterie, aux achats en ligne, au support technique et aux relations amoureuses en ligne. La fin montre comment te protéger et protéger les autres, pour en parler avec tes amis et ta famille avant qu’il ne soit trop tard.",
+     "ar": "تعلّم كيف تعمل 10 عمليات احتيال شائعة على الإنترنت، منها احتيال إعلانات الوظائف واليانصيب والشراء عبر الإنترنت والدعم الفني والعلاقات العاطفية عبر الإنترنت. وينتهي الدرس بطرق حماية نفسك والآخرين، حتى تتحدث عن الاحتيال مع أصدقائك وعائلتك قبل فوات الأوان.",
+     "sw": "Jifunze jinsi ulaghai 10 wa kawaida wa mtandaoni unavyofanya kazi, ikiwemo ulaghai wa matangazo ya kazi, bahati nasibu, ununuzi mtandaoni, tech support na mapenzi mtandaoni. Somo linaishia na njia za kujilinda wewe na wengine, ili uzungumze kuhusu ulaghai na marafiki na familia yako kabla haijachelewa.",
+     "pt": "Aprende como funcionam 10 burlas comuns na Internet, incluindo as de anúncios de emprego, lotaria, compras online, apoio técnico e romance online. No final, vês como te proteger a ti e aos outros, para poderes falar sobre burlas com os teus amigos e a tua família antes que seja tarde demais.",
+     "es": "Aprende cómo funcionan 10 estafas comunes en internet, como las de anuncios de empleo, loterías, compras en línea, soporte técnico y romances por internet. Al final verás cómo protegerte a ti y a los demás, para que puedas hablar de las estafas con tus amigos y tu familia antes de que sea demasiado tarde."
+    }
+   },
+   {
+    "youtubeId": "_DVVNOGYtmU",
+    "title": "Cybersecurity for Beginners | Google Cybersecurity Certificate",
+    "channel": "Grow with Google",
+    "seconds": 4473,
+    "summary": {
+     "en": "Explore, in a beginner course of over an hour, how cybersecurity protects organisations and the people who rely on them: what it is, its history and the eight security domains. You’ll also see core skills, frameworks and controls, ethics, and the tools and programming languages professionals use.",
+     "pcm": "Explore, for one beginner course wey pass one hour, how cybersecurity dey protect organisations and the people wey depend on them: wetin e be, im history and the eight security domains. You go also see core skills, frameworks and controls, ethics, and the tools and programming languages wey professionals dey use.",
+     "yo": "Ṣàwárí, nínú ẹ̀kọ́ àwọn olùbẹ̀rẹ̀ tó ju wákàtí kan lọ, bí cybersecurity ṣe ń dáàbò bo àwọn iléeṣẹ́ àti àwọn ènìyàn tó gbẹ́kẹ̀lé wọn: ohun tí ó jẹ́, ìtàn rẹ̀ àti àwọn ẹ̀ka ààbò mẹ́jọ. Wàá tún rí àwọn ọgbọ́n pàtàkì, frameworks àti controls, ìwà rere (ethics), àti àwọn irinṣẹ́ àti èdè ìṣètò kọ̀ǹpútà tí àwọn ògbóǹtarìgì ń lò.",
+     "ig": "Chọpụta, n’ime nkuzi ndị mbido nke karịrị otu awa, otú cybersecurity si echebe ụlọ ọrụ na ndị na-adabere na ha: ihe ọ bụ, akụkọ ihe mere eme ya na ngalaba nchekwa asatọ. Ị ga-ahụkwa nkà ndị dị mkpa, frameworks na controls, ụkpụrụ omume (ethics), yana ngwá ọrụ na asụsụ mmemme ndị ọkachamara na-eji.",
+     "ha": "Bincika, a cikin darasin masu farawa wanda ya wuce awa ɗaya, yadda cybersecurity ke kare ƙungiyoyi da mutanen da suka dogara da su: mece ce ita, tarihinta da fannonin tsaro guda takwas. Za ka kuma ga muhimman ƙwarewa, frameworks da controls, ɗa’a (ethics), da kayan aiki da harsunan shirye-shirye da ƙwararru ke amfani da su.",
+     "fr": "Explore, dans un cours pour débutants de plus d’une heure, comment la cybersécurité protège les organisations et les personnes qui en dépendent : ce qu’elle est, son histoire et les huit domaines de la sécurité. Tu verras aussi les compétences clés, les cadres et contrôles de sécurité, l’éthique, ainsi que les outils et langages de programmation des professionnels.",
+     "ar": "استكشف، في دورة للمبتدئين تزيد مدتها على ساعة، كيف يحمي الأمن السيبراني المؤسسات والأشخاص الذين يعتمدون عليها: ما هو، وتاريخه، ومجالات الأمن الثمانية. وسترى أيضًا المهارات الأساسية، والأطر والضوابط الأمنية، والأخلاقيات، والأدوات ولغات البرمجة التي يستخدمها المحترفون.",
+     "sw": "Chunguza, katika kozi ya wanaoanza inayozidi saa moja, jinsi cybersecurity inavyolinda mashirika na watu wanaoyategemea: ni nini, historia yake na nyanja nane za usalama. Pia utaona ujuzi muhimu, frameworks na controls, maadili (ethics), pamoja na zana na lugha za programu wanazotumia wataalamu.",
+     "pt": "Explora, num curso para principiantes com mais de uma hora, como a cibersegurança protege as organizações e as pessoas que delas dependem: o que é, a sua história e os oito domínios da segurança. Vais também ver competências essenciais, enquadramentos e controlos de segurança, ética, e as ferramentas e linguagens de programação usadas pelos profissionais.",
+     "es": "Explora, en un curso para principiantes de más de una hora, cómo la ciberseguridad protege a las organizaciones y a las personas que dependen de ellas: qué es, su historia y los ocho dominios de la seguridad. También verás habilidades clave, marcos y controles de seguridad, ética, y las herramientas y lenguajes de programación que usan los profesionales."
+    }
+   }
+  ]
+ },
+ {
+  "id": "ai-prompting",
+  "name": {
+   "en": "AI prompting",
+   "pcm": "AI prompting",
+   "yo": "Kíkọ prompt fún AI",
+   "ig": "Ide prompt maka AI",
+   "ha": "Rubutun prompt don AI",
+   "fr": "Rédiger des prompts pour l’IA",
+   "ar": "كتابة الأوامر (prompts) للذكاء الاصطناعي",
+   "sw": "Kuandika prompt za AI",
+   "pt": "Escrever prompts para IA",
+   "es": "Escribir prompts para IA"
+  },
+  "tagline": {
+   "en": "Ask AI clearly, and check what it gives back",
+   "pcm": "Ask AI clear-clear, and check wetin e give you",
+   "yo": "Béèrè lọ́wọ́ AI ní kedere, kí o sì ṣàyẹ̀wò ìdáhùn rẹ̀",
+   "ig": "Jụọ AI ajụjụ nke ọma, ma lelee ihe o nyere gị",
+   "ha": "Tambayi AI a sarari, kuma ka duba amsar da ya bayar",
+   "fr": "Demande clairement à l’IA, puis vérifie sa réponse",
+   "ar": "اسأل الذكاء الاصطناعي بوضوح، وتحقّق مما يقدّمه لك",
+   "sw": "Uliza AI kwa uwazi, kisha kagua inachokupa",
+   "pt": "Pede à IA com clareza e verifica o que te devolve",
+   "es": "Pregunta a la IA con claridad y revisa lo que te da"
+  },
+  "summary": {
+   "en": "AI prompting is the skill of telling an AI tool clearly what you want: the task, the background and the form the answer should take. Better prompts usually get more useful answers, though AI can still make mistakes, so its work needs checking. These lessons cover how language models work and build up from clear, structured prompts to more advanced methods.",
+   "pcm": "AI prompting na the skill to tell AI tool clear-clear wetin you want: the work, the background and how the answer suppose be. Better prompt dey usually bring answer wey help pass, but AI fit still make mistake, so you gats check wetin e do. These lessons go show you how language models dey work, and dem go carry you from clear, well-arranged prompt reach more advanced methods.",
+   "yo": "AI prompting ni ọgbọ́n láti sọ ohun tí o fẹ́ fún irinṣẹ́ AI ní kedere: iṣẹ́ náà, àlàyé nípa ipò rẹ̀, àti bí ìdáhùn ṣe yẹ kó rí. Prompt tó dára máa ń mú ìdáhùn tó wúlò jù wá, ṣùgbọ́n AI ṣì lè ṣe àṣìṣe, nítorí náà ó yẹ kí a ṣàyẹ̀wò iṣẹ́ rẹ̀. Àwọn ẹ̀kọ́ wọ̀nyí ṣàlàyé bí àwọn language model ṣe ń ṣiṣẹ́, wọ́n sì tẹ̀síwájú láti prompt tó ṣe kedere, tó wà létòlétò, dé àwọn ọ̀nà tó ga jù.",
+   "ig": "AI prompting bụ nkà ịgwa ngwá ọrụ AI nke ọma ihe ịchọrọ: ọrụ ahụ, ihe gbara ya gburugburu, na ụdị azịza kwesịrị ịdị. Prompt ka mma na-enyekarị azịza bara uru karị, mana AI ka nwere ike imehie ihe, ya mere ọ dị mkpa ilele ihe o mere. Ihe ọmụmụ ndị a na-akọwa otú language model si arụ ọrụ, ma na-esi na prompt doro anya ma hazie nke ọma ruo n’ụzọ ndị dị elu karị.",
+   "ha": "AI prompting ƙwarewa ce ta gaya wa kayan aikin AI abin da kake so a sarari: aikin, bayanan da suka shafe shi, da yadda ya kamata amsar ta kasance. Prompt mai kyau yakan kawo amsa mafi amfani, amma AI na iya yin kuskure, don haka ya kamata a duba aikinsa. Waɗannan darussa sun bayyana yadda language model ke aiki, kuma sun tashi daga prompt bayyananne mai tsari zuwa hanyoyin da suka fi ci gaba.",
+   "fr": "Rédiger des prompts, c’est savoir dire clairement à un outil d’IA ce que l’on veut : la tâche, le contexte et la forme attendue de la réponse. De meilleurs prompts donnent généralement des réponses plus utiles, mais l’IA peut quand même se tromper : son travail doit donc être vérifié. Ces leçons expliquent le fonctionnement des modèles de langage et vont des prompts clairs et structurés jusqu’à des méthodes plus avancées.",
+   "ar": "كتابة الأوامر (prompts) هي مهارة إخبار أداة الذكاء الاصطناعي بوضوح بما تريد: المهمة، والخلفية، والشكل الذي ينبغي أن تأتي عليه الإجابة. عادةً ما تؤدي الأوامر الأفضل إلى إجابات أكثر فائدة، لكن الذكاء الاصطناعي قد يخطئ مع ذلك، لذا يجب التحقق من عمله. تشرح هذه الدروس كيف تعمل النماذج اللغوية، وتتدرّج من الأوامر الواضحة والمنظمة إلى أساليب أكثر تقدمًا.",
+   "sw": "Kuandika prompt ni ujuzi wa kuiambia zana ya AI kwa uwazi unachotaka: kazi yenyewe, maelezo ya msingi, na jinsi jibu linavyopaswa kuwa. Prompt bora kwa kawaida huleta majibu yenye manufaa zaidi, lakini AI bado inaweza kukosea, kwa hiyo kazi yake inahitaji kukaguliwa. Masomo haya yanaeleza jinsi language model zinavyofanya kazi, na yanapanda kutoka prompt zilizo wazi na zilizopangwa hadi mbinu za juu zaidi.",
+   "pt": "Escrever prompts é saber dizer claramente a uma ferramenta de IA o que se pretende: a tarefa, o contexto e a forma que a resposta deve ter. Melhores prompts costumam dar respostas mais úteis, mas a IA pode ainda assim errar, por isso o seu trabalho tem de ser verificado. Estas lições explicam como funcionam os modelos de linguagem e progridem dos prompts claros e estruturados até métodos mais avançados.",
+   "es": "Escribir prompts es saber decirle con claridad a una herramienta de IA lo que quieres: la tarea, el contexto y la forma que debe tener la respuesta. Los mejores prompts suelen dar respuestas más útiles, aunque la IA aún puede equivocarse, así que hay que comprobar su trabajo. Estas lecciones explican cómo funcionan los modelos de lenguaje y van desde prompts claros y estructurados hasta métodos más avanzados."
+  },
+  "videos": [
+   {
+    "youtubeId": "QAKtNOWsaHI",
+    "title": "How to write an AI prompt",
+    "channel": "Google",
+    "seconds": 187,
+    "summary": {
+     "en": "Learn how to write clearer prompts for vibe coding, which means creating software by describing it in natural language, through the build of a playable 3D racing game. The strategies are to be specific, guide the choice of technology and add sketches or screenshots as visual references.",
+     "pcm": "Learn how to write clear prompt for vibe coding, wey mean say you dey create software by describing am for normal language, as dem dey build 3D racing game wey person fit play. The strategies na to dey specific, guide which technology dem go use, and add sketch or screenshot as visual reference.",
+     "yo": "Kọ́ bí a ṣe ń kọ prompt tó ṣe kedere fún vibe coding, ìyẹn ṣíṣe software nípa ṣíṣàpèjúwe rẹ̀ ní èdè ojoojúmọ́, bí wọ́n ṣe ń kọ́ eré ìje 3D tí a lè ṣe. Àwọn ọ̀nà náà ni láti sọ ohun tí o fẹ́ ní pàtó, láti tọ́ka sí technology tí a ó lò, àti láti fi sketch tàbí screenshot kún un gẹ́gẹ́ bí àpẹẹrẹ ìrísí.",
+     "ig": "Mụta otú e si ede prompt doro anya maka vibe coding, ya bụ ịmepụta software site n’ịkọwa ya n’asụsụ nkịtị, ka a na-ewu egwuregwu ọsọ 3D a na-egwu egwu. Usoro ndị ahụ bụ ịkọwapụta ihe ịchọrọ kpọmkwem, iduzi nhọrọ teknụzụ, na itinye sketch ma ọ bụ screenshot dị ka ihe ntụaka a na-ahụ anya.",
+     "ha": "Koyi yadda ake rubuta prompt mai bayyane don vibe coding, wato ƙirƙirar software ta hanyar bayyana ta da harshe na yau da kullum, ta hanyar bin yadda ake gina wasan tsere na 3D da za a iya yi. Dabarun su ne fayyace abin da kake so dalla-dalla, jagorantar zaɓin fasaha, da ƙara zane ko screenshot a matsayin abin kwaikwayo na gani.",
+     "fr": "Apprends à écrire des prompts plus clairs pour le vibe coding, qui consiste à créer un logiciel en le décrivant en langage courant, à travers la création d’un jeu de course en 3D jouable. Les stratégies : être précis, orienter le choix de la technologie et ajouter des croquis ou des captures d’écran comme références visuelles.",
+     "ar": "تعلّم كتابة أوامر (prompts) أوضح من أجل vibe coding، أي إنشاء البرامج بوصفها بلغة طبيعية، من خلال بناء لعبة سباق ثلاثية الأبعاد قابلة للعب. وتتمثل الاستراتيجيات في أن تكون محددًا، وأن توجّه اختيار التقنية، وأن تضيف رسومات أو لقطات شاشة كمراجع بصرية.",
+     "sw": "Jifunze kuandika prompt zilizo wazi zaidi kwa ajili ya vibe coding, yaani kutengeneza software kwa kuielezea kwa lugha ya kawaida, kupitia ujenzi wa mchezo wa mbio wa 3D unaoweza kuchezwa. Mbinu ni kuwa mahususi, kuongoza uchaguzi wa teknolojia, na kuongeza michoro au screenshot kama marejeleo ya kuona.",
+     "pt": "Aprende a escrever prompts mais claros para vibe coding, ou seja, criar software descrevendo-o em linguagem natural, através da construção de um jogo de corridas 3D jogável. As estratégias são ser específico, orientar a escolha da tecnologia e juntar esboços ou capturas de ecrã como referências visuais.",
+     "es": "Aprende a escribir prompts más claros para el vibe coding, es decir, crear software describiéndolo en lenguaje natural, mediante la creación de un juego de carreras en 3D jugable. Las estrategias son ser específico, orientar la elección de la tecnología y añadir bocetos o capturas de pantalla como referencias visuales."
+    }
+   },
+   {
+    "youtubeId": "LPZh9BOjkQs",
+    "title": "Large Language Models explained briefly",
+    "channel": "3Blue1Brown",
+    "seconds": 478,
+    "summary": {
+     "en": "Get a short, light introduction to large language models, known as LLMs, along with chatbots, pretraining and transformers. These ideas give you a first picture of the topic, and you can explore it further later.",
+     "pcm": "Get short, easy introduction to large language models, wey people dey call LLMs, plus chatbots, pretraining and transformers. These ideas go give you first picture of the topic, and you fit learn more about am later.",
+     "yo": "Gba ìfihàn kúkúrú, tó rọrùn sí large language models, tí a mọ̀ sí LLMs, pẹ̀lú chatbots, pretraining àti transformers. Àwọn èrò wọ̀nyí yóò fún ọ ní òye àkọ́kọ́ nípa kókó yìí, o sì lè kọ́ sí i nípa rẹ̀ lẹ́yìn náà.",
+     "ig": "Nweta okwu mmalite dị mkpirikpi ma dị mfe gbasara large language models, nke a maara dị ka LLMs, yana chatbots, pretraining na transformers. Echiche ndị a na-enye gị nghọta mbụ gbasara isiokwu a, ị ga-enwekwa ike ịmụtakwu ya ma emechaa.",
+     "ha": "Sami gajeren gabatarwa mai sauƙi kan large language models, waɗanda ake kira LLMs, tare da chatbots, pretraining da transformers. Waɗannan ra’ayoyin za su ba ka hoton farko na wannan batu, kuma za ka iya ƙara koyo game da shi daga baya.",
+     "fr": "Découvre une introduction courte et accessible aux grands modèles de langage (large language models, ou LLM), ainsi qu’aux chatbots, au pré-entraînement (pretraining) et aux transformers. Ces notions te donnent une première idée du sujet, que tu pourras approfondir plus tard.",
+     "ar": "احصل على مقدمة قصيرة وخفيفة عن النماذج اللغوية الكبيرة (LLMs)، إلى جانب روبوتات الدردشة (chatbots) والتدريب المسبق (pretraining) والمحوّلات (transformers). تمنحك هذه الأفكار صورة أولى عن الموضوع، ويمكنك التعمق فيه لاحقًا.",
+     "sw": "Pata utangulizi mfupi na mwepesi wa large language models, zinazojulikana kama LLMs, pamoja na chatbots, pretraining na transformers. Mawazo haya yanakupa picha ya kwanza ya mada hii, na unaweza kujifunza zaidi baadaye.",
+     "pt": "Fica com uma introdução curta e acessível aos grandes modelos de linguagem (large language models, ou LLM), bem como aos chatbots, ao pré-treino (pretraining) e aos transformers. Estas ideias dão-te uma primeira imagem do tema, que podes aprofundar mais tarde.",
+     "es": "Obtén una introducción breve y sencilla a los grandes modelos de lenguaje (large language models, o LLM), junto con los chatbots, el preentrenamiento (pretraining) y los transformers. Estas ideas te dan una primera imagen del tema, en el que puedes profundizar más adelante."
+    }
+   },
+   {
+    "youtubeId": "-Hjw0_PMyfQ",
+    "title": "Learn Better Prompt Engineering in 7 Minutes",
+    "channel": "AWS Developers",
+    "seconds": 441,
+    "summary": {
+     "en": "Learn the basics of prompt engineering through a worked example of a business insights summary, using Amazon Bedrock, an AWS service for building AI applications. Topics include clear instructions, where to place questions, separator characters, output indicators and inference parameters.",
+     "pcm": "Learn the basics of prompt engineering through example of business insights summary, as dem dey use Amazon Bedrock, one AWS service for building AI applications. Topics include clear instructions, where to put question, separator characters, output indicators and inference parameters.",
+     "yo": "Kọ́ àwọn ìpìlẹ̀ prompt engineering nípasẹ̀ àpẹẹrẹ àkópọ̀ business insights, ní lílo Amazon Bedrock, iṣẹ́ AWS kan fún kíkọ́ àwọn ohun èlò AI. Àwọn kókó náà ni ìtọ́ni tó ṣe kedere, ibi tí a ó fi ìbéèrè sí, separator characters, output indicators àti inference parameters.",
+     "ig": "Mụta ihe ndị bụ isi na prompt engineering site n’ihe atụ nke nchịkọta business insights, jiri Amazon Bedrock, ọrụ AWS maka iwu ngwa AI. Isiokwu ndị ahụ gụnyere ntụziaka doro anya, ebe a ga-etinye ajụjụ, separator characters, output indicators na inference parameters.",
+     "ha": "Koyi tushen prompt engineering ta hanyar misalin taƙaitaccen bayanin business insights, ana amfani da Amazon Bedrock, wani sabis na AWS don gina manhajojin AI. Batutuwan sun haɗa da umarni bayyanannu, inda za a sanya tambayoyi, separator characters, output indicators da inference parameters.",
+     "fr": "Apprends les bases du prompt engineering à partir d’un exemple de résumé d’analyses commerciales (business insights), avec Amazon Bedrock, un service AWS pour créer des applications d’IA. Au programme : instructions claires, place des questions, caractères séparateurs, indicateurs de sortie et paramètres d’inférence.",
+     "ar": "تعلّم أساسيات هندسة الأوامر (prompt engineering) من خلال مثال تطبيقي لملخص رؤى الأعمال، باستخدام Amazon Bedrock، وهي خدمة من AWS لبناء تطبيقات الذكاء الاصطناعي. تشمل الموضوعات التعليمات الواضحة، وأين توضع الأسئلة، ورموز الفصل، ومؤشرات المخرجات، ومعاملات الاستدلال (inference parameters).",
+     "sw": "Jifunze misingi ya prompt engineering kupitia mfano wa muhtasari wa business insights, kwa kutumia Amazon Bedrock, huduma ya AWS ya kujenga programu za AI. Mada ni pamoja na maelekezo yaliyo wazi, mahali pa kuweka maswali, separator characters, output indicators na inference parameters.",
+     "pt": "Aprende as bases da engenharia de prompts (prompt engineering) através de um exemplo de resumo de informações de negócio, com o Amazon Bedrock, um serviço da AWS para criar aplicações de IA. Os temas incluem instruções claras, onde colocar as perguntas, caracteres separadores, indicadores de saída e parâmetros de inferência.",
+     "es": "Aprende los fundamentos de la ingeniería de prompts (prompt engineering) con un ejemplo de resumen de información empresarial, usando Amazon Bedrock, un servicio de AWS para crear aplicaciones de IA. Los temas incluyen instrucciones claras, dónde colocar las preguntas, caracteres separadores, indicadores de salida y parámetros de inferencia."
+    }
+   },
+   {
+    "youtubeId": "jC4v5AS4RIM",
+    "title": "Master the Perfect ChatGPT Prompt Formula (in just 8 minutes)!",
+    "channel": "Jeff Su",
+    "seconds": 510,
+    "summary": {
+     "en": "Learn a six-part prompt formula for chatbots such as ChatGPT: task, context, exemplars (examples), persona, format and tone. Real-world examples show how each part helps, and you’ll see tips such as starting the task with an action verb. The lesson ends by comparing outputs from good and bad prompts.",
+     "pcm": "Learn prompt formula wey get six parts for chatbot like ChatGPT: task, context, exemplars (examples), persona, format and tone. Real-world examples go show how each part dey help, and you go see tips like to start the task with action verb. The lesson end by comparing wetin good and bad prompts bring out.",
+     "yo": "Kọ́ àgbékalẹ̀ prompt oníapá mẹ́fà fún chatbot bíi ChatGPT: task, context, exemplars (àwọn àpẹẹrẹ), persona, format àti tone. Àwọn àpẹẹrẹ ojúlówó fi hàn bí apá kọ̀ọ̀kan ṣe ń ṣèrànwọ́, o sì máa rí àwọn àmọ̀ràn bíi bíbẹ̀rẹ̀ task pẹ̀lú ọ̀rọ̀-ìṣe. Ẹ̀kọ́ náà parí pẹ̀lú ìfiwéra èsì prompt rere àti ti búburú.",
+     "ig": "Mụta usoro prompt nwere akụkụ isii maka chatbot dị ka ChatGPT: task, context, exemplars (ihe atụ), persona, format na tone. Ihe atụ sitere n’ezi ndụ na-egosi otú akụkụ ọ bụla si enyere aka, ị ga-ahụkwa ndụmọdụ dị ka ịmalite task site na ngwaa omume. Ihe ọmụmụ a na-ejedebe site n’itule ihe prompt ọma na prompt ọjọọ na-ewepụta.",
+     "ha": "Koyi tsarin prompt mai sassa shida don chatbot kamar ChatGPT: task, context, exemplars (misalai), persona, format da tone. Misalai na zahiri sun nuna yadda kowane sashi ke taimakawa, kuma za ka ga shawarwari kamar fara task da fi’ili mai nuna aiki. Darasin ya ƙare da kwatanta sakamakon prompt mai kyau da mara kyau.",
+     "fr": "Apprends une formule de prompt en six parties pour des chatbots comme ChatGPT : tâche, contexte, exemples (exemplars), persona, format et ton. Des exemples concrets montrent l’utilité de chaque partie, avec des conseils comme commencer la tâche par un verbe d’action. La leçon se termine en comparant les résultats de bons et de mauvais prompts.",
+     "ar": "تعلّم صيغة من ستة أجزاء لكتابة الأوامر (prompts) لروبوتات الدردشة مثل ChatGPT: المهمة، والسياق، والأمثلة (exemplars)، والشخصية (persona)، والتنسيق، والنبرة. توضّح أمثلة واقعية فائدة كل جزء، وسترى نصائح مثل بدء المهمة بفعل يدل على العمل. ويُختتم الدرس بمقارنة نتائج الأوامر الجيدة والسيئة.",
+     "sw": "Jifunze fomula ya prompt yenye sehemu sita kwa chatbot kama ChatGPT: task, context, exemplars (mifano), persona, format na tone. Mifano halisi inaonyesha jinsi kila sehemu inavyosaidia, na utaona vidokezo kama kuanza task kwa kitenzi cha kitendo. Somo linamalizia kwa kulinganisha matokeo ya prompt nzuri na mbaya.",
+     "pt": "Aprende uma fórmula de prompt em seis partes para chatbots como o ChatGPT: tarefa, contexto, exemplos (exemplars), persona, formato e tom. Exemplos reais mostram como cada parte ajuda, com dicas como começar a tarefa com um verbo de ação. A lição termina a comparar os resultados de bons e maus prompts.",
+     "es": "Aprende una fórmula de prompt en seis partes para chatbots como ChatGPT: tarea, contexto, ejemplos (exemplars), persona, formato y tono. Ejemplos reales muestran cómo ayuda cada parte, con consejos como empezar la tarea con un verbo de acción. La lección termina comparando los resultados de prompts buenos y malos."
+    }
+   },
+   {
+    "youtubeId": "1c9iyoVIwDs",
+    "title": "4 Methods of Prompt Engineering",
+    "channel": "IBM Technology",
+    "seconds": 762,
+    "summary": {
+     "en": "Compare four prompt engineering methods: Retrieval Augmented Generation (RAG), Chain-of-Thought (COT), ReACT (Reason + Act) and Directional Stimulus Prompting (DSP). You’ll see an example of each, how they differ, and how they can be best used and even combined.",
+     "pcm": "Compare four prompt engineering methods: Retrieval Augmented Generation (RAG), Chain-of-Thought (COT), ReACT (Reason + Act) and Directional Stimulus Prompting (DSP). You go see example of each one, how dem take different, and the best way to use dem, even to join dem together.",
+     "yo": "Fi ọ̀nà mẹ́rin ti prompt engineering wé ara wọn: Retrieval Augmented Generation (RAG), Chain-of-Thought (COT), ReACT (Reason + Act) àti Directional Stimulus Prompting (DSP). Wàá rí àpẹẹrẹ ọ̀kọ̀ọ̀kan, bí wọ́n ṣe yàtọ̀ síra, àti ọ̀nà tó dára jù láti lò wọ́n, àní láti so wọ́n pọ̀.",
+     "ig": "Tụlee ụzọ anọ nke prompt engineering: Retrieval Augmented Generation (RAG), Chain-of-Thought (COT), ReACT (Reason + Act) na Directional Stimulus Prompting (DSP). Ị ga-ahụ ihe atụ nke ọ bụla, otú ha si dị iche, na otú kacha mma e si eji ha, ọbụna ijikọ ha ọnụ.",
+     "ha": "Kwatanta hanyoyi huɗu na prompt engineering: Retrieval Augmented Generation (RAG), Chain-of-Thought (COT), ReACT (Reason + Act) da Directional Stimulus Prompting (DSP). Za ka ga misalin kowanne, yadda suka bambanta, da yadda za a fi amfani da su, har ma da haɗa su.",
+     "fr": "Compare quatre méthodes de prompt engineering : Retrieval Augmented Generation (RAG), Chain-of-Thought (COT), ReACT (Reason + Act) et Directional Stimulus Prompting (DSP). Tu verras un exemple de chacune, leurs différences, la meilleure façon de les utiliser et même de les combiner.",
+     "ar": "قارن بين أربع طرق في هندسة الأوامر (prompt engineering): Retrieval Augmented Generation (RAG)، وChain-of-Thought (COT)، وReACT (Reason + Act)، وDirectional Stimulus Prompting (DSP). سترى مثالًا على كل طريقة، وكيف تختلف، وأفضل طريقة لاستخدامها، بل والجمع بينها.",
+     "sw": "Linganisha mbinu nne za prompt engineering: Retrieval Augmented Generation (RAG), Chain-of-Thought (COT), ReACT (Reason + Act) na Directional Stimulus Prompting (DSP). Utaona mfano wa kila moja, jinsi zinavyotofautiana, na njia bora ya kuzitumia, hata kuzichanganya.",
+     "pt": "Compara quatro métodos de engenharia de prompts: Retrieval Augmented Generation (RAG), Chain-of-Thought (COT), ReACT (Reason + Act) e Directional Stimulus Prompting (DSP). Vais ver um exemplo de cada um, em que diferem, a melhor forma de os usar e até de os combinar.",
+     "es": "Compara cuatro métodos de ingeniería de prompts: Retrieval Augmented Generation (RAG), Chain-of-Thought (COT), ReACT (Reason + Act) y Directional Stimulus Prompting (DSP). Verás un ejemplo de cada uno, en qué se diferencian, cómo usarlos mejor e incluso cómo combinarlos."
+    }
+   },
+   {
+    "youtubeId": "_ZvnD73m40o",
+    "title": "Prompt Engineering Tutorial – Master ChatGPT and LLM Responses",
+    "channel": "freeCodeCamp.org",
+    "seconds": 2496,
+    "summary": {
+     "en": "Learn prompt engineering techniques for better results from ChatGPT and other LLMs in a longer course. It covers AI, machine learning, linguistics and language models, then the prompt engineering mindset, GPT-4, best practices, zero-shot and few-shot prompts, AI hallucinations (made-up answers) and text embeddings.",
+     "pcm": "Learn prompt engineering techniques to get better results from ChatGPT and other LLMs for this long course. E go pass through AI, machine learning, linguistics and language models, then the prompt engineering mindset, GPT-4, best practices, zero-shot and few-shot prompts, AI hallucinations (when AI make up things) and text embeddings.",
+     "yo": "Kọ́ àwọn ọgbọ́n prompt engineering láti rí èsì tó dára jù láti ọ̀dọ̀ ChatGPT àti àwọn LLM mìíràn nínú ẹ̀kọ́ gígùn yìí. Ó ṣàlàyé AI, machine learning, linguistics àti language models, lẹ́yìn náà prompt engineering mindset, GPT-4, best practices, zero-shot àti few-shot prompts, AI hallucinations (nígbà tí AI bá hùmọ̀ nǹkan) àti text embeddings.",
+     "ig": "Mụta usoro prompt engineering iji nweta nsonaazụ ka mma site na ChatGPT na LLM ndị ọzọ n’ọmụmụ ogologo a. Ọ na-agafe AI, machine learning, linguistics na language models, wee gaa n’echiche prompt engineering (mindset), GPT-4, best practices, zero-shot na few-shot prompts, AI hallucinations (mgbe AI na-echepụta ihe) na text embeddings.",
+     "ha": "Koyi dabarun prompt engineering don samun sakamako mafi kyau daga ChatGPT da sauran LLMs a wannan dogon kwas. Yana bi ta AI, machine learning, linguistics da language models, sannan tunanin prompt engineering (mindset), GPT-4, best practices, zero-shot da few-shot prompts, AI hallucinations (lokacin da AI ya ƙirƙiri abin da ba gaskiya ba) da text embeddings.",
+     "fr": "Apprends des techniques de prompt engineering pour obtenir de meilleurs résultats avec ChatGPT et d’autres LLM dans ce cours plus long. Il aborde l’IA, le machine learning, la linguistique et les modèles de langage, puis l’état d’esprit du prompt engineering, GPT-4, les bonnes pratiques, les prompts zero-shot et few-shot, les hallucinations de l’IA (quand elle invente) et les text embeddings.",
+     "ar": "تعلّم تقنيات هندسة الأوامر (prompt engineering) للحصول على نتائج أفضل من ChatGPT ونماذج LLM الأخرى في هذه الدورة الأطول. تتناول الدورة الذكاء الاصطناعي، وتعلّم الآلة، وعلم اللغة، والنماذج اللغوية، ثم عقلية هندسة الأوامر، وGPT-4، وأفضل الممارسات، وأوامر zero-shot وfew-shot، وهلوسات الذكاء الاصطناعي (عندما يختلق معلومات)، والتضمينات النصية (text embeddings).",
+     "sw": "Jifunze mbinu za prompt engineering ili kupata matokeo bora kutoka ChatGPT na LLM nyingine katika kozi hii ndefu. Inapitia AI, machine learning, isimu (linguistics) na language models, kisha mtazamo wa prompt engineering, GPT-4, mbinu bora, prompt za zero-shot na few-shot, AI hallucinations (AI inapobuni mambo) na text embeddings.",
+     "pt": "Aprende técnicas de engenharia de prompts para obter melhores resultados do ChatGPT e de outros LLM neste curso mais longo. Passa pela IA, machine learning, linguística e modelos de linguagem, e depois pela mentalidade da engenharia de prompts, GPT-4, boas práticas, prompts zero-shot e few-shot, alucinações da IA (quando inventa coisas) e text embeddings.",
+     "es": "Aprende técnicas de ingeniería de prompts para obtener mejores resultados de ChatGPT y otros LLM en este curso más largo. Recorre la IA, el machine learning, la lingüística y los modelos de lenguaje, y luego la mentalidad de la ingeniería de prompts, GPT-4, las buenas prácticas, los prompts zero-shot y few-shot, las alucinaciones de la IA (cuando inventa cosas) y los text embeddings."
+    }
+   }
+  ]
+ },
+ {
+  "id": "data-science",
+  "name": {
+   "en": "Data science",
+   "pcm": "Data science",
+   "yo": "Sáyẹ́ǹsì dátà",
+   "ig": "Sayensị data",
+   "ha": "Kimiyyar data",
+   "fr": "Science des données",
+   "ar": "علم البيانات",
+   "sw": "Sayansi ya data",
+   "pt": "Ciência de dados",
+   "es": "Ciencia de datos"
+  },
+  "tagline": {
+   "en": "Turn raw data into clear answers and better decisions",
+   "pcm": "Turn raw data to clear answers and better decisions",
+   "yo": "Sọ dátà di ìdáhùn tó yéni àti ìpinnu tó dára jù",
+   "ig": "Tụgharịa data ka ọ bụrụ azịza doro anya na mkpebi ka mma",
+   "ha": "Mayar da data zuwa amsoshi bayyanannu da shawarwari masu kyau",
+   "fr": "Des données brutes aux réponses claires et aux bonnes décisions",
+   "ar": "حوّل البيانات الخام إلى إجابات واضحة وقرارات أفضل",
+   "sw": "Geuza data ghafi kuwa majibu wazi na maamuzi bora",
+   "pt": "Transforma dados em bruto em respostas claras e melhores decisões",
+   "es": "Convierte datos en bruto en respuestas claras y mejores decisiones"
+  },
+  "summary": {
+   "en": "Data science combines statistics, computer programming and knowledge of a subject to find useful patterns in data and answer real questions. It helps people in health, business, government and research make better-informed decisions, though results are only as good as the data behind them. These lessons move from what the field is, through statistics and machine learning, to exploring a dataset in Python and organising a data project.",
+   "pcm": "Data science join statistics, computer programming and knowledge of one subject together to find useful patterns for data and answer real questions. E dey help people for health, business, government and research make better decisions wey get correct information, but the result no fit pass the data wey dey behind am. These lessons start from wetin the field be, pass through statistics and machine learning, reach how to explore dataset for Python and how to arrange data project.",
+   "yo": "Sáyẹ́ǹsì dátà so statistics (ìṣirò àkójọpọ̀), ìṣètò kọ̀ǹpútà (programming) àti ìmọ̀ nípa kókó ẹ̀kọ́ kan pọ̀ láti rí àwọn ìlànà tó wúlò nínú dátà àti láti dáhùn àwọn ìbéèrè gidi. Ó ń ran àwọn ènìyàn lọ́wọ́ nínú ìlera, iṣẹ́ òwò, ìjọba àti ìwádìí láti ṣe ìpinnu tó dá lórí ìmọ̀ tó péye, ṣùgbọ́n àbájáde kò lè dára ju dátà tí ó wà lẹ́yìn rẹ̀ lọ. Àwọn ẹ̀kọ́ wọ̀nyí bẹ̀rẹ̀ láti ohun tí pápá ẹ̀kọ́ yìí jẹ́, wọ́n kọjá sí statistics àti machine learning (ẹ̀kọ́ ẹ̀rọ), títí dé ṣíṣe àyẹ̀wò dátà nínú Python àti ṣíṣètò iṣẹ́ àkànṣe dátà.",
+   "ig": "Sayensị data na-ejikọta statistics (ọmụmụ ọnụọgụgụ), mmemme kọmputa (programming) na ihe mmadụ maara banyere otu isiokwu iji chọta usoro bara uru n’ime data ma zaa ajụjụ ndị dị adị. Ọ na-enyere ndị mmadụ aka na ahụike, azụmahịa, gọọmentị na nchọpụta ime mkpebi dabere n’ezi ihe ọmụma, mana nsonaazụ anaghị aka mma karịa data dị n’azụ ya. Ihe ọmụmụ ndị a na-amalite site n’ihe ngalaba a bụ, gafee statistics na machine learning (mmụta igwe), ruo n’inyocha data na Python na ịhazi ọrụ data.",
+   "ha": "Kimiyyar data na haɗa ƙididdiga (statistics), shirye-shiryen kwamfuta (programming) da ilimin wani fanni don gano alamu masu amfani a cikin data (bayanai) da amsa tambayoyi na gaske. Tana taimaka wa mutane a fannin lafiya, kasuwanci, gwamnati da bincike su yanke shawara bisa ingantaccen bayani, amma sakamako ba zai fi data da aka yi amfani da ita kyau ba. Waɗannan darussan sun fara daga ma’anar wannan fanni, suka bi ta ƙididdiga da machine learning (koyon na’ura), har zuwa binciken data da Python da kuma tsara aikin data.",
+   "fr": "La science des données combine les statistiques, la programmation informatique et la connaissance d’un domaine pour trouver des tendances utiles dans les données et répondre à de vraies questions. Elle aide des personnes dans la santé, les entreprises, les administrations et la recherche à prendre des décisions mieux éclairées, mais les résultats ne valent que ce que valent les données utilisées. Ces leçons vont de la découverte de ce domaine aux statistiques et au machine learning (apprentissage automatique), puis à l’exploration d’un jeu de données en Python et à l’organisation d’un projet de données.",
+   "ar": "يجمع علم البيانات بين الإحصاء وبرمجة الحاسوب والمعرفة بمجال معيّن لاكتشاف أنماط مفيدة في البيانات والإجابة عن أسئلة حقيقية. وهو يساعد العاملين في الصحة والأعمال والحكومة والبحث العلمي على اتخاذ قرارات مبنية على معلومات أفضل، لكن جودة النتائج تبقى مرهونة بجودة البيانات التي تستند إليها. تنتقل هذه الدروس من التعريف بهذا المجال، مرورًا بالإحصاء وتعلّم الآلة (machine learning)، وصولًا إلى استكشاف مجموعة بيانات باستخدام Python وتنظيم مشروع بيانات.",
+   "sw": "Sayansi ya data inachanganya takwimu, upangaji programu za kompyuta na ujuzi wa somo fulani ili kupata mifumo yenye manufaa katika data na kujibu maswali halisi. Inasaidia watu katika afya, biashara, serikali na utafiti kufanya maamuzi yenye msingi wa taarifa bora, ingawa ubora wa matokeo hutegemea ubora wa data iliyotumika. Masomo haya yanaanza na maana ya fani hii, yanapitia takwimu na machine learning (ujifunzaji wa mashine), hadi kuchunguza seti ya data kwa Python na kupanga mradi wa data.",
+   "pt": "A ciência de dados combina estatística, programação informática e conhecimento de uma área para encontrar padrões úteis nos dados e responder a perguntas reais. Ajuda pessoas na saúde, nas empresas, na administração pública e na investigação a tomar decisões mais bem informadas, embora os resultados só valham tanto quanto os dados em que assentam. Estas lições vão do que é esta área, passando pela estatística e pelo machine learning (aprendizagem automática), até à exploração de um conjunto de dados em Python e à organização de um projeto de dados.",
+   "es": "La ciencia de datos combina estadística, programación informática y conocimiento de un área para encontrar patrones útiles en los datos y responder a preguntas reales. Ayuda a personas de la salud, las empresas, la administración pública y la investigación a tomar decisiones mejor informadas, aunque los resultados solo son tan buenos como los datos en que se basan. Estas lecciones van desde qué es este campo, pasando por la estadística y el machine learning (aprendizaje automático), hasta explorar un conjunto de datos en Python y organizar un proyecto de datos."
+  },
+  "videos": [
+   {
+    "youtubeId": "RBSUwFGa6Fk",
+    "title": "What is Data Science?",
+    "channel": "IBM Technology",
+    "seconds": 471,
+    "summary": {
+     "en": "Learn what data science is: a blend of computer science, mathematics and business knowledge used to predict, diagnose and solve problems. An IBM engineer explains the basics, including data mining, data cleaning and machine learning, and how they turn data into insights people can act on.",
+     "pcm": "Learn wetin data science be: e join computer science, mathematics and business knowledge together to predict, diagnose and solve problems. One IBM engineer go explain the basics, like data mining, data cleaning and machine learning, and how dem dey turn data to insights wey people fit use take act.",
+     "yo": "Kọ́ ohun tí sáyẹ́ǹsì dátà jẹ́: àpapọ̀ sáyẹ́ǹsì kọ̀ǹpútà, ìṣirò àti ìmọ̀ iṣẹ́ òwò tí a fi ń sọ àsọtẹ́lẹ̀, ṣàwárí ohun tó fa ìṣòro, tí a sì ń yanjú ìṣòro. Onímọ̀-ẹ̀rọ kan láti IBM ṣàlàyé àwọn ìpìlẹ̀ rẹ̀, pẹ̀lú data mining (wíwá ìmọ̀ nínú dátà), data cleaning (títún dátà ṣe) àti machine learning, àti bí wọ́n ṣe ń sọ dátà di ìmọ̀ tí àwọn ènìyàn lè lò láti gbé ìgbésẹ̀.",
+     "ig": "Mụta ihe sayensị data bụ: ngwakọta nke sayensị kọmputa, mgbakọ na mwepụ na ihe ọmụma azụmahịa, nke a na-eji ebu amụma, chọpụta ihe kpatara nsogbu ma dozie nsogbu. Otu injinịa IBM na-akọwa ihe ndị bụ isi, gụnyere data mining (ịchọpụta ihe n’ime data), data cleaning (ihicha data) na machine learning, na otú ha si eme ka data ghọọ nghọta ndị mmadụ nwere ike iji mee ihe.",
+     "ha": "Koyi mene ne kimiyyar data: haɗin kimiyyar kwamfuta, lissafi da ilimin kasuwanci da ake amfani da shi wajen yin hasashe, gano musabbabin matsala da warware matsaloli. Wani injiniya daga IBM ya bayyana tushen abin, ciki har da data mining (haƙo bayanai), data cleaning (tsaftace data) da machine learning, da yadda suke mayar da data fahimtar da mutane za su iya aiki da ita.",
+     "fr": "Découvre ce qu’est la science des données : un mélange d’informatique, de mathématiques et de connaissances en affaires qui sert à prévoir, diagnostiquer et résoudre des problèmes. Un ingénieur d’IBM en explique les bases, dont le data mining (exploration de données), le nettoyage des données et le machine learning, et comment ils transforment les données en informations exploitables.",
+     "ar": "تعرّف على علم البيانات: مزيج من علوم الحاسوب والرياضيات والمعرفة بالأعمال، يُستخدم للتنبؤ بالمشكلات وتشخيصها وحلّها. يشرح مهندس من IBM الأساسيات، ومنها التنقيب في البيانات (data mining) وتنظيف البيانات وتعلّم الآلة (machine learning)، وكيف تحوّل البيانات إلى رؤى يمكن للناس العمل بها.",
+     "sw": "Jifunze sayansi ya data ni nini: mchanganyiko wa sayansi ya kompyuta, hisabati na ujuzi wa biashara unaotumika kutabiri, kuchunguza chanzo cha matatizo na kuyatatua. Mhandisi wa IBM anaeleza misingi yake, ikiwa ni pamoja na data mining (kuchimba taarifa kutoka kwenye data), kusafisha data na machine learning, na jinsi vinavyogeuza data kuwa maarifa ambayo watu wanaweza kuyafanyia kazi.",
+     "pt": "Aprende o que é a ciência de dados: uma mistura de informática, matemática e conhecimento de negócios usada para prever, diagnosticar e resolver problemas. Um engenheiro da IBM explica as bases, incluindo data mining (mineração de dados), limpeza de dados e machine learning, e como transformam dados em conclusões úteis para agir.",
+     "es": "Aprende qué es la ciencia de datos: una mezcla de informática, matemáticas y conocimiento empresarial que se usa para predecir, diagnosticar y resolver problemas. Un ingeniero de IBM explica lo básico, como la minería de datos (data mining), la limpieza de datos y el machine learning, y cómo convierten los datos en conclusiones útiles para actuar."
+    }
+   },
+   {
+    "youtubeId": "dcXqhMqhZUo",
+    "title": "Data Analytics vs Data Science",
+    "channel": "IBM Technology",
+    "seconds": 390,
+    "summary": {
+     "en": "Learn the difference between data science and data analytics, two terms people often use as if they meant the same thing. The lesson looks at the two job roles and compares the tools and practices of data scientists with those of data analysts.",
+     "pcm": "Learn the difference between data science and data analytics, two names wey people dey often use like say na the same thing. The lesson look the two kinds of work and compare the tools and ways of working of data scientists with the ones of data analysts.",
+     "yo": "Kọ́ ìyàtọ̀ tó wà láàárín data science (sáyẹ́ǹsì dátà) àti data analytics (ìtúpalẹ̀ dátà), orúkọ méjì tí àwọn ènìyàn sábà máa ń lò bí ẹni pé ohun kan náà ni wọ́n. Ẹ̀kọ́ yìí wo iṣẹ́ méjèèjì, ó sì fi àwọn irinṣẹ́ àti ọ̀nà iṣẹ́ àwọn data scientist wé ti àwọn data analyst.",
+     "ig": "Mụta ọdịiche dị n’etiti data science (sayensị data) na data analytics (nyocha data), okwu abụọ ndị mmadụ na-ejikarị dị ka a ga-asị na ha bụ otu ihe. Ihe ọmụmụ a na-eleba anya n’ọrụ abụọ ahụ ma tụnyere ngwaọrụ na ụzọ ọrụ nke ndị data scientist na nke ndị data analyst.",
+     "ha": "Koyi bambancin da ke tsakanin data science (kimiyyar data) da data analytics (nazarin data), kalmomi biyu da mutane kan yi amfani da su kamar abu ɗaya ne. Darasin ya duba waɗannan ayyuka biyu, ya kuma kwatanta kayan aiki da hanyoyin aikin data scientist da na data analyst.",
+     "fr": "Apprends la différence entre la science des données et l’analyse de données, deux expressions souvent employées comme si elles signifiaient la même chose. La leçon examine ces deux métiers et compare les outils et les pratiques des data scientists à ceux des data analysts.",
+     "ar": "تعلّم الفرق بين علم البيانات وتحليل البيانات، وهما مصطلحان كثيرًا ما يستخدمهما الناس كأنهما يعنيان الشيء نفسه. يتناول الدرس هذين الدورين الوظيفيين ويقارن بين أدوات وممارسات علماء البيانات وأدوات وممارسات محللي البيانات.",
+     "sw": "Jifunze tofauti kati ya sayansi ya data na uchanganuzi wa data (data analytics), maneno mawili ambayo watu mara nyingi huyatumia kana kwamba yana maana moja. Somo linaangalia kazi hizi mbili na kulinganisha zana na mbinu za wanasayansi wa data na zile za wachanganuzi wa data.",
+     "pt": "Aprende a diferença entre ciência de dados e análise de dados, dois termos que muitas vezes são usados como se significassem o mesmo. A lição analisa as duas funções profissionais e compara as ferramentas e práticas dos cientistas de dados com as dos analistas de dados.",
+     "es": "Aprende la diferencia entre la ciencia de datos y el análisis de datos, dos términos que la gente suele usar como si significaran lo mismo. La lección examina ambos puestos de trabajo y compara las herramientas y prácticas de los científicos de datos con las de los analistas de datos."
+    }
+   },
+   {
+    "youtubeId": "sxQaBpKfDRk",
+    "title": "What Is Statistics: Crash Course Statistics #1",
+    "channel": "CrashCourse",
+    "seconds": 780,
+    "summary": {
+     "en": "Learn what statistics are and why they matter in everyday life, from small daily choices to government policy. It also explains that statistics are tools that cannot give every answer and can be used to misinform, and the series aims to make you a more informed reader of them.",
+     "pcm": "Learn wetin statistics be and why e matter for everyday life, from small choices wey you dey make every day reach government policy. E also explain say statistics na tools wey no fit give every answer and people fit use am take deceive, and the series wan make you understand these numbers well.",
+     "yo": "Kọ́ ohun tí statistics (ìṣirò àkójọpọ̀) jẹ́ àti ìdí tó fi ṣe pàtàkì nínú ìgbésí ayé ojoojúmọ́, láti ìpinnu kéékèèké ojoojúmọ́ dé ìlànà ìjọba. Ó tún ṣàlàyé pé irinṣẹ́ ni statistics, pé kò lè fún wa ní gbogbo ìdáhùn, àti pé a lè fi ṣi àwọn ènìyàn lọ́nà; àfojúsùn ẹ̀ka àwọn fídíò yìí sì ni láti jẹ́ kí o lè fi òye ka irú àwọn nọ́ńbà bẹ́ẹ̀.",
+     "ig": "Mụta ihe statistics (ọmụmụ ọnụọgụgụ) bụ na ihe mere o ji dị mkpa ná ndụ kwa ụbọchị, site na obere nhọrọ kwa ụbọchị ruo na iwu gọọmentị. Ọ na-akọwakwa na statistics bụ ngwaọrụ na-enweghị ike inye azịza niile, na enwere ike iji ya duhie ndị mmadụ, ma usoro vidiyo a chọrọ inyere gị aka ịghọta ọnụọgụgụ ndị dị otú ahụ nke ọma.",
+     "ha": "Koyi mene ne ƙididdiga (statistics) da dalilin da ya sa take da muhimmanci a rayuwar yau da kullum, daga ƙananan zaɓuɓɓukan yau da kullum har zuwa manufofin gwamnati. Darasin ya kuma bayyana cewa ƙididdiga kayan aiki ne da ba za su iya ba da dukkan amsoshi ba, kuma ana iya amfani da su don yaudara, kuma jerin bidiyon yana son ya taimaka maka ka fahimci irin waɗannan alƙaluma sosai.",
+     "fr": "Apprends ce que sont les statistiques et pourquoi elles comptent au quotidien, des petits choix de tous les jours aux politiques publiques. La leçon explique aussi que les statistiques sont des outils qui ne donnent pas toutes les réponses et peuvent servir à désinformer, et la série vise à t’aider à lire ces chiffres avec plus d’esprit critique.",
+     "ar": "تعلّم ما هو الإحصاء ولماذا يهمّ في الحياة اليومية، من الخيارات اليومية الصغيرة إلى السياسات الحكومية. ويوضح الدرس أيضًا أن الإحصاءات أدوات لا يمكنها تقديم كل الإجابات وقد تُستخدم للتضليل، وتهدف السلسلة إلى مساعدتك على قراءة هذه الأرقام بوعي أكبر.",
+     "sw": "Jifunze takwimu ni nini na kwa nini ni muhimu katika maisha ya kila siku, kuanzia maamuzi madogo ya kila siku hadi sera za serikali. Somo pia linaeleza kwamba takwimu ni zana zisizoweza kutoa majibu yote na zinaweza kutumiwa kupotosha, na mfululizo huu unalenga kukusaidia kuelewa namba hizo kwa uangalifu zaidi.",
+     "pt": "Aprende o que é a estatística e porque é importante no dia a dia, desde pequenas escolhas diárias até às políticas do governo. A lição explica também que a estatística é uma ferramenta que não dá todas as respostas e pode ser usada para desinformar, e a série pretende ajudar-te a ler esses números com mais sentido crítico.",
+     "es": "Aprende qué es la estadística y por qué importa en la vida diaria, desde pequeñas decisiones cotidianas hasta las políticas del gobierno. La lección también explica que la estadística es una herramienta que no da todas las respuestas y puede usarse para desinformar, y la serie busca ayudarte a leer esas cifras con más sentido crítico."
+    }
+   },
+   {
+    "youtubeId": "Gv9_4yMHFhI",
+    "title": "A Gentle Introduction to Machine Learning",
+    "channel": "StatQuest with Josh Starmer",
+    "seconds": 765,
+    "summary": {
+     "en": "Learn the most basic ideas behind machine learning, without the hype and confusing terms. Simple, silly examples introduce classification, which sorts things into groups, and regression, which predicts a number, giving you a foundation for learning more.",
+     "pcm": "Learn the most basic ideas wey dey behind machine learning, without the hype and confusing grammar. Simple, funny examples go show you classification, wey dey share things into groups, and regression, wey dey predict number, so you go get foundation to learn more.",
+     "yo": "Kọ́ àwọn èrò ìpìlẹ̀ jùlọ lẹ́yìn machine learning (ẹ̀kọ́ ẹ̀rọ), láìsí àsọdùn àti àwọn ọ̀rọ̀ tó ń dàrú mọ́ni lójú. Àwọn àpẹẹrẹ rírọrùn tó ń pani lẹ́rìn-ín ṣàlàyé classification, tó ń pín nǹkan sí ẹgbẹ́-ẹgbẹ́, àti regression, tó ń sọ àsọtẹ́lẹ̀ nọ́ńbà, èyí sì fún ọ ní ìpìlẹ̀ láti kọ́ sí i.",
+     "ig": "Mụta echiche ndị kacha bụrụ isi n’azụ machine learning (mmụta igwe), na-enweghị ikwubiga okwu ókè na okwu na-agbagwoju anya. Ihe atụ dị mfe ma na-atọ ọchị na-egosi classification, nke na-ekewa ihe n’ìgwè, na regression, nke na-ebu amụma ọnụọgụgụ, iji nye gị ntọala ị ga-eji mụtakwuo.",
+     "ha": "Koyi ainihin ra’ayoyin da ke bayan machine learning (koyon na’ura), ba tare da zuzutawa da kalmomi masu rikitarwa ba. Misalai masu sauƙi da ban dariya sun gabatar da classification, wadda ke rarraba abubuwa zuwa rukuni, da regression, wadda ke hasashen lamba, don ba ka tushen da za ka ƙara koyo a kai.",
+     "fr": "Apprends les idées les plus simples derrière le machine learning (apprentissage automatique), sans le battage ni le jargon déroutant. Des exemples simples et amusants présentent la classification, qui range les choses en groupes, et la régression, qui prédit un nombre, pour te donner une base avant d’aller plus loin.",
+     "ar": "تعلّم أبسط الأفكار التي يقوم عليها تعلّم الآلة (machine learning)، بعيدًا عن التهويل والمصطلحات المربكة. تقدّم أمثلة بسيطة وطريفة التصنيف (classification) الذي يفرز الأشياء إلى مجموعات، والانحدار (regression) الذي يتنبأ بقيمة رقمية، لتمنحك أساسًا لتعلّم المزيد.",
+     "sw": "Jifunze mawazo ya msingi kabisa ya machine learning (ujifunzaji wa mashine), bila kutia chumvi wala maneno yanayochanganya. Mifano rahisi ya kuchekesha inatambulisha classification, inayopanga vitu katika makundi, na regression, inayotabiri namba, ili kukupa msingi wa kujifunza zaidi.",
+     "pt": "Aprende as ideias mais básicas por trás do machine learning (aprendizagem automática), sem exageros nem termos confusos. Exemplos simples e divertidos apresentam a classificação, que separa coisas em grupos, e a regressão, que prevê um número, dando-te uma base para aprenderes mais.",
+     "es": "Aprende las ideas más básicas del machine learning (aprendizaje automático), sin exageraciones ni términos confusos. Ejemplos sencillos y divertidos presentan la clasificación, que separa cosas en grupos, y la regresión, que predice un número, para darte una base con la que seguir aprendiendo."
+    }
+   },
+   {
+    "youtubeId": "xi0vhXFPegw",
+    "title": "Exploratory Data Analysis with Pandas Python",
+    "channel": "Rob Mulla",
+    "seconds": 2422,
+    "summary": {
+     "en": "Learn the basics of exploratory data analysis, using Python and the pandas library to get to know a dataset. Step by step, you see how to read in the data, prepare it, study its features (columns) and the relationships between them, then ask a question of the data.",
+     "pcm": "Learn the basics of exploratory data analysis, wey mean to use Python and the pandas library take sabi one dataset well. Step by step, you go see how to read the data, prepare am, study the features (columns) and how dem relate, then ask the data one question.",
+     "yo": "Kọ́ ìpìlẹ̀ exploratory data analysis (àyẹ̀wò láti mọ dátà), ní lílo Python àti ilé-ìkàwé pandas láti mọ àkójọ dátà kan dáadáa. Ní ìgbésẹ̀-ìgbésẹ̀, wàá rí bí a ṣe ń ka dátà wọlé, bí a ṣe ń pèsè rẹ̀ sílẹ̀, bí a ṣe ń ṣe àyẹ̀wò àwọn feature (ọ̀wọ̀n) àti ìbáṣepọ̀ wọn, lẹ́yìn náà bí a ṣe ń béèrè ìbéèrè lọ́wọ́ dátà náà.",
+     "ig": "Mụta ihe ndị bụ isi na exploratory data analysis (inyocha data iji mata ya), na-eji Python na ọbá akwụkwọ pandas iji mata otu dataset nke ọma. N’otu n’otu, ị ga-ahụ otú e si agụbata data, kwadebe ya, nyochaa features (kọlụm) ya na mmekọrịta dị n’etiti ha, ma jụzie data ahụ ajụjụ.",
+     "ha": "Koyi tushen exploratory data analysis (binciken data don saninta), ta amfani da Python da laburaren pandas don sanin wani dataset sosai. Mataki-mataki, za ka ga yadda ake karanta data, a shirya ta, a yi nazarin features (ginshiƙai) da dangantakar da ke tsakaninsu, sannan a yi wa data tambaya.",
+     "fr": "Apprends les bases de l’analyse exploratoire des données, avec Python et la bibliothèque pandas, pour bien connaître un jeu de données. Étape par étape, tu vois comment charger les données, les préparer, étudier les variables (colonnes) et leurs relations, puis poser une question aux données.",
+     "ar": "تعلّم أساسيات تحليل البيانات الاستكشافي باستخدام Python ومكتبة pandas للتعرّف جيدًا إلى مجموعة بيانات. خطوةً بخطوة، سترى كيف تُقرأ البيانات وتُجهَّز، وكيف تُدرس الخصائص (features أي الأعمدة) والعلاقات بينها، ثم كيف يُطرح سؤال على البيانات.",
+     "sw": "Jifunze misingi ya uchanganuzi wa uchunguzi wa data (exploratory data analysis), ukitumia Python na maktaba ya pandas ili kuifahamu vizuri seti ya data. Hatua kwa hatua, utaona jinsi ya kusoma data, kuiandaa, kuchunguza features (safu wima) na uhusiano kati yake, kisha kuuliza swali kuhusu data hiyo.",
+     "pt": "Aprende as bases da análise exploratória de dados, com Python e a biblioteca pandas, para ficares a conhecer bem um conjunto de dados. Passo a passo, vês como ler os dados, prepará-los, estudar as variáveis (colunas) e as relações entre elas e, por fim, fazer uma pergunta aos dados.",
+     "es": "Aprende los fundamentos del análisis exploratorio de datos, con Python y la biblioteca pandas, para conocer bien un conjunto de datos. Paso a paso, verás cómo leer los datos, prepararlos, estudiar las variables (columnas) y las relaciones entre ellas y, por último, hacerles una pregunta."
+    }
+   },
+   {
+    "youtubeId": "4DlsTsqpY84",
+    "title": "Data Science for Beginners | Google Advanced Data Analytics Certificate",
+    "channel": "Grow with Google",
+    "seconds": 5935,
+    "summary": {
+     "en": "Learn what data professionals do at work and the skills data careers call for, in this long beginner course. It also covers using data analytics for good, how the field has developed, communication, and PACE (Plan, Analyze, Construct, Execute), a workflow for organising data projects.",
+     "pcm": "Learn wetin data professionals dey do for work and the skills wey data careers need, for this long beginner course. E also cover how to use data analytics for good, how the field don grow, communication, and PACE (Plan, Analyze, Construct, Execute), one way to arrange data projects.",
+     "yo": "Kọ́ ohun tí àwọn akọ́ṣẹ́mọṣẹ́ dátà ń ṣe níbi iṣẹ́ àti àwọn ọgbọ́n tí iṣẹ́ dátà ń béèrè, nínú ẹ̀kọ́ gígùn yìí fún àwọn olùbẹ̀rẹ̀. Ó tún sọ̀rọ̀ nípa lílo data analytics fún ire, bí pápá yìí ṣe ti ń lọ, ìbánisọ̀rọ̀, àti PACE (Plan, Analyze, Construct, Execute: ṣètò, ṣàyẹ̀wò, kọ́, ṣe), ọ̀nà kan láti ṣètò iṣẹ́ àkànṣe dátà.",
+     "ig": "Mụta ihe ndị ọkachamara data na-eme n’ebe ọrụ na nka ọrụ data chọrọ, n’ọmụmụ ogologo a maka ndị mmalite. Ọ na-ekwukwa maka iji data analytics mee ihe ọma, otú ngalaba a si aga, nkwurịta okwu, na PACE (Plan, Analyze, Construct, Execute), usoro maka ịhazi ọrụ data.",
+     "ha": "Koyi abin da ƙwararrun data ke yi a wurin aiki da dabarun da ayyukan data ke buƙata, a wannan dogon kwas na masu farawa. Ya kuma tattauna yin amfani da data analytics don alheri, yadda fannin ya bunƙasa, sadarwa, da PACE (Plan, Analyze, Construct, Execute), hanyar tsara ayyukan data.",
+     "fr": "Apprends ce que font les professionnels des données au travail et les compétences que demandent ces métiers, dans ce long cours pour débutants. Il aborde aussi l’analyse de données au service du bien commun, l’évolution du domaine, la communication et PACE (Plan, Analyze, Construct, Execute), une méthode pour organiser les projets de données.",
+     "ar": "تعلّم ما يفعله المتخصصون في البيانات في العمل والمهارات التي تتطلبها وظائف البيانات، في هذه الدورة الطويلة للمبتدئين. وتتناول أيضًا استخدام تحليل البيانات في الخير، ومسار تطوّر هذا المجال، والتواصل، وPACE (Plan, Analyze, Construct, Execute: التخطيط والتحليل والبناء والتنفيذ)، وهي طريقة لتنظيم مشاريع البيانات.",
+     "sw": "Jifunze wataalamu wa data hufanya nini kazini na ujuzi unaohitajika katika kazi za data, katika kozi hii ndefu ya wanaoanza. Pia inagusia kutumia uchanganuzi wa data kwa manufaa ya jamii, mwelekeo wa fani hii, mawasiliano, na PACE (Plan, Analyze, Construct, Execute), njia ya kupanga miradi ya data.",
+     "pt": "Aprende o que fazem os profissionais de dados no trabalho e as competências que estas carreiras exigem, neste longo curso para principiantes. Aborda também o uso da análise de dados para o bem, a evolução da área, a comunicação e o PACE (Plan, Analyze, Construct, Execute), um método para organizar projetos de dados.",
+     "es": "Aprende qué hacen los profesionales de datos en el trabajo y qué habilidades piden estas carreras, en este largo curso para principiantes. También trata el uso del análisis de datos para hacer el bien, la evolución del campo, la comunicación y PACE (Plan, Analyze, Construct, Execute), un método para organizar proyectos de datos."
+    }
+   }
+  ]
+ }
+]

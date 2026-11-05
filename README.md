@@ -747,6 +747,18 @@ short videos.
   - `GET /lessons/media/:file` serves the pictures.
   - `GET /catalog` marks these lessons with `format: flashcards`, a `cover` and `cards`.
 
+### Future skills (Explore → Future skills)
+
+The Future skills card opens five subjects: Coding, UI/UX design, Cybersecurity, AI prompting and Data science. Each has a summary and 6 YouTube lessons (30 in all).
+
+- **A lesson:** the video in YouTube's own player, its length and channel, a written summary, and "Next lesson". Videos are never downloaded and stay in English; everything written around them is in all 10 languages.
+- **Summaries:** written from each video's official title and its creator's description, not its captions. A thin description gives a shorter summary. Native speakers should review the Yoruba, Igbo and Hausa text.
+- **No certificates:** only Knowzone's own books will issue them.
+- **Files:**
+  - `data/skills/skills.json` holds the subjects, lessons and translations.
+  - `npx tsx scripts/skills-build.ts <folder>` merges `picked.json` and `skill-<id>.json` from a working folder, checks every language and requires at least 5 lessons per subject, then writes that file.
+- **Endpoints:** `GET /skills` returns the subject cards and `GET /skills/:id` returns one subject and its lessons, both in the reader's language.
+
 ### Your books (Explore → "Check out your books")
 
 - **The questions:**

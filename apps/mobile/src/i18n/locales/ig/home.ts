@@ -53,10 +53,11 @@ const home: Translation<typeof en> = {
     browseSubjects: 'Lelee isiokwu ọmụmụ',
     allSubjects: 'Isiokwu niile',
     trendingNow: 'Ndị a ma ama ugbu a 🔥',
-    collectionMeta_one: '{{body}} · ihe ọmụmụ {{count}}',
-    collectionMeta_other: '{{body}} · ihe ọmụmụ {{count}}',
     collections: {
-      future: { title: 'Ikike maka ọdịnihu', body: 'Koodu, AI na ọchụnta ego' },
+      future: {
+        title: 'Ikike maka ọdịnihu',
+        body: 'Coding, UI/UX design, cybersecurity, AI prompting na data science',
+      },
     },
   },
   play: {
@@ -210,6 +211,18 @@ const home: Translation<typeof en> = {
     done: 'Laghachi n’ihe ọmụmụ',
     retryQuiz: 'Nwaa ajụjụ nyocha ọzọ',
     review: 'Gafee kaadị ndị a ọzọ',
+  },
+  skills: {
+    intro: 'Nkà bara uru maka ụwa na-abịa, site na ihe ọmụmụ YouTube ahọpụtara nke ọma.',
+    loadFailed: 'Anyị enweghị ike imepe ihe ọmụmụ ndị a. Lelee njikọ gị ma nwaa ọzọ.',
+    retry: 'Nwaa ọzọ',
+    summary: 'Nchịkọta',
+    minutes: 'nkeji {{n}}',
+    lessonOf: 'Ihe ọmụmụ {{n}} n’ime {{total}}',
+    nextLesson: 'Ihe ọmụmụ ọzọ',
+    allLessons: 'Laghachi n’ihe ọmụmụ niile',
+    lessons_one: 'ihe ọmụmụ {{count}}',
+    lessons_other: 'ihe ọmụmụ {{count}}',
   },
   lesson: {
     flashcardsInfo: 'Kaadị {{count}}, wee ajụjụ nyocha nwere ajụjụ 5',

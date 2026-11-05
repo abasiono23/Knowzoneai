@@ -51,10 +51,8 @@ const home = {
     browseSubjects: 'Browse subjects',
     allSubjects: 'All subjects',
     trendingNow: 'Trending now 🔥',
-    collectionMeta_one: '{{body}} · {{count}} lesson',
-    collectionMeta_other: '{{body}} · {{count}} lessons',
     collections: {
-      future: { title: 'Future skills', body: 'Coding, AI and entrepreneurship' },
+      future: { title: 'Future skills', body: 'Coding, UI/UX design, cybersecurity, AI prompting and data science' },
     },
   },
   play: {
@@ -208,6 +206,18 @@ const home = {
     done: 'Back to the lesson',
     retryQuiz: 'Try the quiz again',
     review: 'Go through the cards again',
+  },
+  skills: {
+    intro: 'Practical skills for the world ahead, taught through hand-picked YouTube lessons.',
+    loadFailed: 'We couldn’t load these lessons. Check your connection and try again.',
+    retry: 'Try again',
+    summary: 'Summary',
+    minutes: '{{n}} min',
+    lessonOf: 'Lesson {{n}} of {{total}}',
+    nextLesson: 'Next lesson',
+    allLessons: 'Back to all lessons',
+    lessons_one: '{{count}} lesson',
+    lessons_other: '{{count}} lessons',
   },
   lesson: {
     flashcardsInfo: '{{count}} flashcards, then a 5-question quiz',

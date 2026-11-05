@@ -53,10 +53,8 @@ const home: Translation<typeof en> = {
     browseSubjects: 'Ṣàwárí àwọn ẹ̀kọ́',
     allSubjects: 'Gbogbo ẹ̀kọ́',
     trendingNow: 'Gbajúmọ̀ báyìí 🔥',
-    collectionMeta_one: '{{body}} · ẹ̀kọ́ {{count}}',
-    collectionMeta_other: '{{body}} · ẹ̀kọ́ {{count}}',
     collections: {
-      future: { title: 'Ọgbọ́n ọjọ́ iwájú', body: 'Kíkọ kóòdù, AI àti iṣòwò àdáni' },
+      future: { title: 'Ọgbọ́n ọjọ́ iwájú', body: 'Coding, UI/UX design, cybersecurity, AI prompting àti data science' },
     },
   },
   play: {
@@ -210,6 +208,18 @@ const home: Translation<typeof en> = {
     done: 'Padà sí ẹ̀kọ́ náà',
     retryQuiz: 'Gbìyànjú ìdánwò náà lẹ́ẹ̀kan sí i',
     review: 'Lọ nípasẹ̀ àwọn káàdì lẹ́ẹ̀kan sí i',
+  },
+  skills: {
+    intro: 'Àwọn ọgbọ́n tó wúlò fún ayé tó ń bọ̀, nípasẹ̀ àwọn ẹ̀kọ́ YouTube tí a yàn dáadáa.',
+    loadFailed: 'A kò lè ṣí àwọn ẹ̀kọ́ wọ̀nyí. Ṣàyẹ̀wò ìsopọ̀ rẹ kí o sì gbìyànjú lẹ́ẹ̀kan sí i.',
+    retry: 'Gbìyànjú lẹ́ẹ̀kan sí i',
+    summary: 'Àkótán',
+    minutes: 'ìṣẹ́jú {{n}}',
+    lessonOf: 'Ẹ̀kọ́ {{n}} nínú {{total}}',
+    nextLesson: 'Ẹ̀kọ́ tó kàn',
+    allLessons: 'Padà sí gbogbo ẹ̀kọ́',
+    lessons_one: 'ẹ̀kọ́ {{count}}',
+    lessons_other: 'ẹ̀kọ́ {{count}}',
   },
   lesson: {
     flashcardsInfo: 'Káàdì {{count}}, lẹ́yìn náà ìdánwò ìbéèrè 5',

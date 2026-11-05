@@ -53,10 +53,8 @@ const home: Translation<typeof en> = {
     browseSubjects: 'Duba fannoni',
     allSubjects: 'Duk fannoni',
     trendingNow: 'Masu tashe yanzu 🔥',
-    collectionMeta_one: '{{body}} · darasi {{count}}',
-    collectionMeta_other: '{{body}} · darussa {{count}}',
     collections: {
-      future: { title: 'Ƙwarewar gaba', body: 'Rubuta shirin kwamfuta, AI da kasuwanci' },
+      future: { title: 'Ƙwarewar gaba', body: 'Coding, UI/UX design, cybersecurity, AI prompting da data science' },
     },
   },
   play: {
@@ -210,6 +208,18 @@ const home: Translation<typeof en> = {
     done: 'Koma ga darasin',
     retryQuiz: 'Sake gwada gwajin',
     review: 'Sake bi ta katunan',
+  },
+  skills: {
+    intro: 'Dabarun aiki masu amfani ga duniyar gobe, ta darussan YouTube da aka zaɓa da kyau.',
+    loadFailed: 'Ba mu iya loda waɗannan darussan ba. Duba haɗin intanet ɗinka ka sake gwadawa.',
+    retry: 'Sake gwadawa',
+    summary: 'Taƙaitawa',
+    minutes: 'minti {{n}}',
+    lessonOf: 'Darasi {{n}} cikin {{total}}',
+    nextLesson: 'Darasi na gaba',
+    allLessons: 'Koma ga dukkan darussa',
+    lessons_one: 'darasi {{count}}',
+    lessons_other: 'darussa {{count}}',
   },
   lesson: {
     flashcardsInfo: 'Katuna {{count}}, sannan gwaji mai tambayoyi 5',

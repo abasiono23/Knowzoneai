@@ -57,11 +57,11 @@ const home: Translation<typeof en> = {
     browseSubjects: 'Ver disciplinas',
     allSubjects: 'Todas as disciplinas',
     trendingNow: 'Em alta agora 🔥',
-    collectionMeta_one: '{{body}} · {{count}} lição',
-    collectionMeta_other: '{{body}} · {{count}} lições',
-    collectionMeta_many: '{{body}} · {{count}} lições',
     collections: {
-      future: { title: 'Competências do futuro', body: 'Programação, IA e empreendedorismo' },
+      future: {
+        title: 'Competências do futuro',
+        body: 'Programação, design UI/UX, cibersegurança, prompts de IA e ciência de dados',
+      },
     },
   },
   play: {
@@ -219,6 +219,19 @@ const home: Translation<typeof en> = {
     done: 'Voltar à lição',
     retryQuiz: 'Fazer o quiz de novo',
     review: 'Rever os cartões',
+  },
+  skills: {
+    intro: 'Competências práticas para o mundo de amanhã, com aulas do YouTube bem escolhidas.',
+    loadFailed: 'Não foi possível carregar estas aulas. Verifica a tua ligação e tenta novamente.',
+    retry: 'Tentar novamente',
+    summary: 'Resumo',
+    minutes: '{{n}} min',
+    lessonOf: 'Aula {{n}} de {{total}}',
+    nextLesson: 'Aula seguinte',
+    allLessons: 'Voltar a todas as aulas',
+    lessons_one: '{{count}} lição',
+    lessons_other: '{{count}} lições',
+    lessons_many: '{{count}} lições',
   },
   lesson: {
     flashcardsInfo: '{{count}} cartões e depois um quiz de 5 perguntas',
