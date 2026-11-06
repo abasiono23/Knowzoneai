@@ -23,6 +23,7 @@ import { unfriendOnBlock } from '../services/friends.js';
 import { sendEmail } from '../services/mailer.js';
 import { me, optionalAuth, requireAuth } from '../services/sessions.js';
 import { toPublicUser } from '../services/users.js';
+import { supportInbox } from '../services/app-settings.js';
 
 export const helpRouter = Router();
 helpRouter.use(['/me/help', '/me/help/*rest', '/me/safety', '/me/safety/*rest', '/me/report', '/me/appeal'], requireAuth);
@@ -229,9 +230,9 @@ helpRouter.post('/legal/copyright', copyrightLimiter, optionalAuth, async (req, 
       message: `${input.work}\n\nWhere: ${input.location}`,
       meta: { reference },
     });
-  else if (config.SUPPORT_EMAIL)
+  else if (supportInbox())
     await sendEmail({
-      to: config.SUPPORT_EMAIL,
+      to: supportInbox(),
       subject: `[copyright] ${reference}`,
       text: `From ${input.name} <${input.email}>${input.organisation ? ` (${input.organisation})` : ''}\n\n${input.work}\n\nWhere: ${input.location}`,
     }).catch((e) => console.error('Support alert failed:', e));

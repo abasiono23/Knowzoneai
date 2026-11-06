@@ -8,7 +8,9 @@ import { forbidden, notFound } from '../lib/errors.js';
 import { allCountries, allCourseBooks } from '../services/books.js';
 import { decideAppeal, staffReply, type Restriction } from '../services/help.js';
 import { requireAuth } from '../services/sessions.js';
+import { recordAction, staffRole } from '../services/staff.js';
 import { adminLibraryRouter } from './admin-library.js';
+import { adminSettingsRouter } from './admin-settings.js';
 import { allSkills } from '../services/skills.js';
 import { allVideoTopics } from '../services/subject-videos.js';
 import { allSummaryCards } from '../services/summaries.js';
@@ -23,21 +25,18 @@ export const adminRouter = Router();
 const DAY = 86_400_000;
 const PAGE = 50;
 
-export const adminEmails = () =>
-  config.ADMIN_EMAILS.split(',')
-    .map((e) => e.trim().toLowerCase())
-    .filter(Boolean);
-
-function onlyAdmins(req: Request, _res: Response, next: NextFunction) {
-  if (!adminEmails().includes(req.user!.email.toLowerCase())) throw forbidden('This account is not on the staff list');
+async function onlyStaff(req: Request, res: Response, next: NextFunction) {
+  const role = await staffRole(req.user!.email);
+  if (!role) throw forbidden('This account is not on the staff list');
+  res.locals.staffRole = role;
   next();
 }
 
-adminRouter.use('/admin', requireAuth, onlyAdmins);
+adminRouter.use('/admin', requireAuth, onlyStaff);
 adminRouter.use(adminLibraryRouter);
+adminRouter.use(adminSettingsRouter);
 
-const audit = (req: Request, action: string, target: string) =>
-  console.info(`[admin] ${req.user!.email} ${action} ${target}`);
+const audit = (req: Request, action: string, target: string) => recordAction(req.user!.email, action, target);
 
 const param = (req: Request, name: string) => String(req.params[name]);
 
@@ -50,7 +49,7 @@ const Listing = z.object({
 const paging = (page: number) => ({ skip: (page - 1) * PAGE, take: PAGE });
 
 adminRouter.get('/admin/me', (req, res) => {
-  res.json({ email: req.user!.email, name: req.user!.name });
+  res.json({ email: req.user!.email, name: req.user!.name, role: res.locals.staffRole });
 });
 
 adminRouter.get('/admin/overview', async (_req, res) => {
@@ -99,6 +98,9 @@ adminRouter.get('/admin/overview', async (_req, res) => {
       _sum: { inputTokens: true, outputTokens: true },
     }),
   ]);
+  const signups = await prisma.$queryRaw<{ day: Date; count: number }[]>`
+    SELECT date_trunc('day', "createdAt") AS day, count(*)::int AS count FROM "User"
+    WHERE "createdAt" >= ${new Date(now - 14 * DAY)} GROUP BY 1 ORDER BY 1`;
   const bookTitles = new Set([
     ...[...allCountries().values()].flatMap((c) => c.books.map((b) => b.title.toLowerCase())),
     ...allCourseBooks().map((b) => b.title.toLowerCase()),
@@ -106,6 +108,7 @@ adminRouter.get('/admin/overview', async (_req, res) => {
   res.json({
     users: { total: users, newThisWeek: newUsers, activeThisWeek: activeWeek, restricted },
     plans: plans.map((p) => ({ plan: p.plan, count: p._count })),
+    signups: signups.map((d) => ({ day: d.day.toISOString().slice(0, 10), count: d.count })),
     money: {
       activeSubscriptions: subscriptions,
       last30Days: revenue.map((r) => ({ currency: r.currency, amount: r._sum.amount ?? 0, payments: r._count })),
@@ -215,6 +218,9 @@ adminRouter.post('/admin/users/:id/restriction', async (req, res) => {
   const body = RestrictionBody.parse(req.body);
   const id = param(req, 'id');
   if (id === req.user!.id) throw forbidden('You can’t restrict your own account');
+  const target = await prisma.user.findUnique({ where: { id }, select: { email: true } });
+  if (target && (await staffRole(target.email)) === 'superadmin')
+    throw forbidden('A superadmin can’t be restricted here');
   const now = Date.now();
   const restriction: Restriction = {
     kind: body.kind,
@@ -226,7 +232,7 @@ adminRouter.post('/admin/users/:id/restriction', async (req, res) => {
   await prisma.user.update({ where: { id }, data: { restriction } }).catch(() => {
     throw notFound('No such account');
   });
-  audit(req, body.kind, id);
+  await audit(req, body.kind, id);
   res.json({ ok: true, restriction });
 });
 
@@ -235,7 +241,7 @@ adminRouter.delete('/admin/users/:id/restriction', async (req, res) => {
   await prisma.user.update({ where: { id }, data: { restriction: Prisma.DbNull } }).catch(() => {
     throw notFound('No such account');
   });
-  audit(req, 'lifted restriction on', id);
+  await audit(req, 'lifted restriction on', id);
   res.json({ ok: true });
 });
 
@@ -287,7 +293,7 @@ adminRouter.post('/admin/tickets/:id/reply', async (req, res) => {
   const id = param(req, 'id');
   if (!(await prisma.helpTicket.findUnique({ where: { id }, select: { id: true } }))) throw notFound('No such request');
   await staffReply(id, body.text, { staff: req.user!.email, resolve: body.resolve });
-  audit(req, body.resolve ? 'replied to and resolved' : 'replied to', id);
+  await audit(req, body.resolve ? 'replied to and resolved' : 'replied to', id);
   res.json({ ok: true });
 });
 
@@ -296,7 +302,7 @@ adminRouter.post('/admin/tickets/:id/resolve', async (req, res) => {
   await prisma.helpTicket.update({ where: { id }, data: { status: 'resolved' } }).catch(() => {
     throw notFound('No such request');
   });
-  audit(req, 'resolved', id);
+  await audit(req, 'resolved', id);
   res.json({ ok: true });
 });
 
@@ -307,7 +313,7 @@ adminRouter.post('/admin/tickets/:id/appeal', async (req, res) => {
   const id = param(req, 'id');
   const decided = await decideAppeal(id, body.decision === 'accept', body.text, req.user!.email);
   if (!decided) throw notFound('That isn’t an appeal');
-  audit(req, `${body.decision}ed appeal`, id);
+  await audit(req, `${body.decision}ed appeal`, id);
   res.json({ ok: true });
 });
 
@@ -345,7 +351,7 @@ adminRouter.post('/admin/video-reports/:id', async (req, res) => {
   await prisma.videoReport.update({ where: { id }, data: { status } }).catch(() => {
     throw notFound('No such report');
   });
-  audit(req, `marked report ${status}`, id);
+  await audit(req, `marked report ${status}`, id);
   res.json({ ok: true });
 });
 
@@ -372,7 +378,7 @@ adminRouter.post('/admin/comments/:id', async (req, res) => {
   await prisma.reelComment.update({ where: { id }, data: { hidden } }).catch(() => {
     throw notFound('No such comment');
   });
-  audit(req, hidden ? 'hid comment' : 'restored comment', id);
+  await audit(req, hidden ? 'hid comment' : 'restored comment', id);
   res.json({ ok: true });
 });
 
@@ -394,7 +400,7 @@ adminRouter.post('/admin/copyright/:reference', async (req, res) => {
   await prisma.copyrightNotice.update({ where: { reference }, data: { status } }).catch(() => {
     throw notFound('No such notice');
   });
-  audit(req, `marked notice ${status}`, reference);
+  await audit(req, `marked notice ${status}`, reference);
   res.json({ ok: true });
 });
 
@@ -460,7 +466,7 @@ adminRouter.post('/admin/billing-tickets/:id/resolve', async (req, res) => {
   await prisma.billingTicket.update({ where: { id }, data: { status: 'resolved', resolution } }).catch(() => {
     throw notFound('No such request');
   });
-  audit(req, 'resolved billing request', id);
+  await audit(req, 'resolved billing request', id);
   res.json({ ok: true });
 });
 
@@ -474,7 +480,7 @@ const csvCell = (value: string) => {
 
 adminRouter.get('/admin/waitlist.csv', async (req, res) => {
   const rows = await prisma.waitlistEntry.findMany({ orderBy: { createdAt: 'asc' } });
-  audit(req, 'exported the waitlist', `(${rows.length} people)`);
+  await audit(req, 'exported the waitlist', `(${rows.length} people)`);
   const lines = rows.map((r) =>
     [r.name, r.email, r.role, r.country ?? '', r.interests.join(' '), r.source ?? '', r.createdAt.toISOString()]
       .map(csvCell)

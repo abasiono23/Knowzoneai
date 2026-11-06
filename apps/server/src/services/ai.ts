@@ -3,12 +3,16 @@ import OpenAI from 'openai';
 import { config } from '../config.js';
 import { prisma } from '../db.js';
 import { AppError } from '../lib/errors.js';
+import { appSettings } from './app-settings.js';
 
 let client: OpenAI | null = null;
 /** The OpenAI client, or a 503 the app can explain when no key is configured. */
-export function openaiClient() {
+/** `safety` is for the free moderation checks, which keep running while AI features are paused. */
+export function openaiClient(use: 'features' | 'safety' = 'features') {
   if (!config.OPENAI_API_KEY)
     throw new AppError(503, 'AI features aren’t set up on this server yet', 'not-configured');
+  if (use === 'features' && !appSettings().aiEnabled)
+    throw new AppError(503, 'AI features are paused for now', 'not-configured');
   return (client ??= new OpenAI({ apiKey: config.OPENAI_API_KEY }));
 }
 

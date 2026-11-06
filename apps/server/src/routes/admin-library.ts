@@ -6,6 +6,7 @@ import { allCountries, allCourseBooks, WORLD } from '../services/books.js';
 import { fold } from '../services/search-all.js';
 import { hideContent, listHiddenContent, showContent, summaryKey } from '../services/content-hides.js';
 import { allSkills } from '../services/skills.js';
+import { recordAction } from '../services/staff.js';
 import { allVideoPlaces, isGoneVideo, videoSetsReport } from '../services/subject-videos.js';
 import { allSummaryCards, summaryFor, summaryLibrariesReport } from '../services/summaries.js';
 import { allCourseVideos } from '../services/watch.js';
@@ -256,7 +257,7 @@ const Hide = z.object({
 adminLibraryRouter.post('/admin/library/hide', async (req, res) => {
   const { kind, id, title, reason } = Hide.parse(req.body);
   await hideContent({ kind, id, title, reason, by: req.user!.email });
-  console.info(`[admin] ${req.user!.email} hid ${kind} ${id}: ${reason}`);
+  await recordAction(req.user!.email, `hid ${kind}`, `${title}: ${reason}`);
   res.json({ ok: true });
 });
 
@@ -265,7 +266,7 @@ const Unhide = Hide.pick({ kind: true, id: true });
 adminLibraryRouter.post('/admin/library/unhide', async (req, res) => {
   const { kind, id } = Unhide.parse(req.body);
   await showContent(kind, id);
-  console.info(`[admin] ${req.user!.email} showed ${kind} ${id} again`);
+  await recordAction(req.user!.email, `showed ${kind} again`, id);
   res.json({ ok: true });
 });
 

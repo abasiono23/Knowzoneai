@@ -415,9 +415,12 @@ Still to do:
   ```
 - **Staff dashboard:** `knowzoneai.com/admin` does all of this in a browser, and also shows an overview, people,
   video reports, reported reel comments, payments, billing requests and the waitlist (with a CSV download).
-  - **Who gets in:** only accounts whose email is in `ADMIN_EMAILS` on the server (comma-separated). With none set,
-    nobody does. Create and confirm each person's Knowzone account before adding their email to the list. The check
-    runs on the server for every request, using the email in the token Supabase signed.
+  - **Who gets in:** superadmins are the emails in `ADMIN_EMAILS` on the server (comma-separated), and can't be
+    removed from the dashboard. They add other staff under Settings (`StaffMember`), as admins or superadmins. Admins
+    get everything except Settings. Nobody else gets in. The check runs on the server for every request, using the
+    email in the token Supabase signed, so removing someone takes effect at once.
+  - **Settings (superadmins):** the team, pausing AI for everyone (safety checks keep running), the support inbox,
+    which services are set up (yes or no, never the keys), and the activity record.
   - **Library:** look through every video, book and summary, filter them, preview them, and see what's thin or
     missing (topics with few videos, books without covers, subjects with no books, untranslated summaries).
   - **Hiding:** any video, book or summary can be taken out of the app for everyone, with a reason, and brought back
@@ -425,8 +428,8 @@ Still to do:
     YouTube recheck. A hidden course video leaves its lesson, whose reading and quiz stay. Copies a learner already
     saved for offline stay on their device.
   - **What it leaves out:** learners' chats, notes, uploads and study answers. Refunds and charges stay in Flutterwave.
-  - **Records:** replies are signed with the staff member's email, and every change goes to the server log as
-    `[admin] who did what`. Render's logs don't last, so there's no permanent history of who did what yet.
+  - **Records:** replies are signed with the staff member's email, and every change is kept in `AdminAction`, shown
+    under Settings. Superadmins can't be restricted from the dashboard.
   - **Sign in with Google** needs `https://www.knowzoneai.com/admin` in Supabase's allowed redirect URLs.
   - The page is `apps/web/admin.html`, and the API is `apps/server/src/routes/admin.ts`. It's in English only.
 - **The data download** now also includes payments, help requests, blocked players and hidden content.

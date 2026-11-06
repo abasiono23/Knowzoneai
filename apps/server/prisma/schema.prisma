@@ -1301,6 +1301,34 @@ model HiddenContent {
   @@id([kind, itemId])
 }
 
+/// People on the staff dashboard, besides the superadmins in ADMIN_EMAILS.
+model StaffMember {
+  email     String   @id
+  /// admin | superadmin
+  role      String
+  addedBy   String
+  createdAt DateTime @default(now())
+}
+
+/// Settings superadmins can change without a deploy.
+model AppSetting {
+  key       String   @id
+  value     Json
+  updatedBy String
+  updatedAt DateTime @updatedAt
+}
+
+/// What staff changed in the dashboard, kept for good.
+model AdminAction {
+  id        String   @id @default(cuid())
+  actor     String
+  action    String
+  target    String
+  createdAt DateTime @default(now())
+
+  @@index([createdAt])
+}
+
 model WaitlistEntry {
   id        String   @id @default(cuid())
   /// Lower-cased.

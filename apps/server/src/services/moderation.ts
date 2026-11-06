@@ -6,6 +6,6 @@ import { openaiClient } from './ai.js';
  * violence; anything it flags isn't posted.
  */
 export async function flagged(text: string) {
-  const check = await openaiClient().moderations.create({ model: 'omni-moderation-latest', input: text });
+  const check = await openaiClient('safety').moderations.create({ model: 'omni-moderation-latest', input: text });
   return check.results.some((r) => r.flagged);
 }

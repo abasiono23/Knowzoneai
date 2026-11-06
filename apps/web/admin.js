@@ -63,6 +63,10 @@
     restricted: 'warn',
     hidden: 'bad',
     gone: 'bad',
+    superadmin: 'good',
+    admin: '',
+    'set up': 'good',
+    'not set up': 'warn',
     free: 'good',
     paid: '',
   };
@@ -211,6 +215,7 @@
           }
         },
       },
+      h('img', { src: '/assets/logo.png', alt: '' }),
       h('h1', null, 'Knowzone staff'),
       h('p', { class: 'muted' }, 'For the Knowzone team only.'),
       note,
@@ -250,7 +255,34 @@
     ['billing', 'Billing'],
     ['waitlist', 'Waitlist'],
     ['library', 'Library'],
+    ['settings', 'Settings'],
   ];
+  /** Only superadmins see Settings; the server enforces it too. */
+  const myPages = () => PAGES.filter(([id]) => id !== 'settings' || me?.role === 'superadmin');
+  const ICONS = {
+    overview: 'M4 4h7v7H4zM13 4h7v4h-7zM13 11h7v9h-7zM4 14h7v6H4z',
+    users: 'M16 20v-1a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v1M9.500 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM21 20v-1a4 4 0 0 0-3-3.900M15.500 3.200a4 4 0 0 1 0 7.600',
+    people: 'M16 20v-1a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v1M9.500 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM21 20v-1a4 4 0 0 0-3-3.900M15.500 3.200a4 4 0 0 1 0 7.600',
+    support: 'M21 12a8 8 0 0 1-11.800 7L4 20.500 5.500 15.500A8 8 0 1 1 21 12z',
+    reports: 'M5 21V4M5 4h12l-2 4.500L17 13H5',
+    flag: 'M5 21V4M5 4h12l-2 4.500L17 13H5',
+    billing: 'M3 6h18v12H3zM3 10h18M7 15h4',
+    waitlist: 'M8 6h12M8 12h12M8 18h12M4 6h.010M4 12h.010M4 18h.010',
+    library: 'M4 5a2 2 0 0 1 2-2h13v15H6a2 2 0 0 0-2 2V5zM4 20a2 2 0 0 0 2 2h13v-4',
+    settings: 'M4 7h10M18 7h2M4 17h2M10 17h10M16 4.500v5M8 14.500v5',
+    spark: 'M12 3l1.900 5.600L19.500 10.500l-5.600 1.900L12 18l-1.900-5.600L4.500 10.500l5.600-1.900z',
+    pulse: 'M3 12h4l3-7 4 14 3-7h4',
+    play: 'M6 4l14 8-14 8z',
+  };
+  function iconSvg(name) {
+    const NS = 'http://www.w3.org/2000/svg';
+    const svg = document.createElementNS(NS, 'svg');
+    for (const [k, v] of Object.entries({ viewBox: '0 0 24 24', width: 20, height: 20, fill: 'none', stroke: 'currentColor', 'stroke-width': 2, 'stroke-linecap': 'round', 'stroke-linejoin': 'round', 'aria-hidden': 'true' })) svg.setAttribute(k, v);
+    const path = document.createElementNS(NS, 'path');
+    path.setAttribute('d', ICONS[name]);
+    svg.append(path);
+    return svg;
+  }
   let me = null;
   let main = null;
   let nav = null;
@@ -262,11 +294,12 @@
   function renderNav() {
     fill(
       nav,
-      PAGES.map(([id, name]) => {
+      myPages().map(([id, name]) => {
         const waiting = counts[id];
         return h(
           'button',
           { type: 'button', class: id === current ? 'on' : '', 'aria-current': id === current ? 'page' : undefined, onClick: () => go(id) },
+          iconSvg(id),
           h('span', null, name),
           waiting ? h('span', { class: 'count', 'aria-label': `${waiting} waiting` }, waiting) : null,
         );
@@ -301,65 +334,119 @@
 
   /* ---------- Overview ---------- */
 
-  const stat = (value, label, open) =>
-    open
-      ? h('button', { type: 'button', class: 'stat', onClick: open }, h('b', null, value), h('span', null, label))
-      : h('div', { class: 'stat' }, h('b', null, value), h('span', null, label));
+  const stat = (value, label, icon, tone, open) =>
+    h(
+      open ? 'button' : 'div',
+      { type: open ? 'button' : undefined, class: 'stat', onClick: open },
+      h('div', { class: `chip ${tone ?? ''}` }, iconSvg(icon)),
+      h('div', null, h('b', null, value), h('span', null, label)),
+    );
+
+  /** New accounts per day for two weeks. Days without any are counted too, so the gaps show. */
+  function signupsChart(signups) {
+    const counts_ = new Map(signups.map((d) => [d.day, d.count]));
+    const days = Array.from({ length: 14 }, (_, i) => {
+      const day = new Date(Date.now() - (13 - i) * 86_400_000).toISOString().slice(0, 10);
+      return { day, count: counts_.get(day) ?? 0 };
+    });
+    const label = (day) => new Date(`${day}T12:00:00Z`).toLocaleDateString('en-GB', { day: 'numeric', month: 'short' });
+    const most = Math.max(1, ...days.map((d) => d.count));
+    const total = days.reduce((n, d) => n + d.count, 0);
+    return h(
+      'section',
+      { class: 'card' },
+      h('h3', null, 'New accounts, last 14 days'),
+      h('div', { class: 'headline' }, number(total)),
+      h(
+        'div',
+        { class: 'bars', role: 'img', 'aria-label': `New accounts per day for 14 days: ${number(total)} in all, at most ${number(most)} in a day.` },
+        days.map((d) => {
+          const fill = h('div', { class: 'bar-fill' });
+          fill.style.height = `${d.count ? Math.max(4, (d.count / most) * 100) : 1}%`;
+          return h('div', { class: 'bar-slot', tabindex: 0 }, h('div', { class: 'bar-tip' }, `${label(d.day)}: ${number(d.count)}`), fill);
+        }),
+      ),
+      h('div', { class: 'axis' }, h('span', null, label(days[0].day)), h('span', null, `Most in a day: ${number(most)}`), h('span', null, label(days[13].day))),
+      h(
+        'details',
+        null,
+        h('summary', null, 'See the numbers'),
+        table(['Day', 'New accounts'], days.map((d) => [label(d.day), number(d.count)])),
+      ),
+    );
+  }
 
   async function overviewPage() {
     const d = await api('/admin/overview');
     const q = d.queues;
     setCounts(d);
     const plans = [...d.plans].sort((a, b) => b.count - a.count);
+    const waiting = q.support + q.billing + q.videoReports + q.comments + q.copyright;
+    const hour = new Date().getHours();
+    const hello = hour < 12 ? 'Good morning' : hour < 17 ? 'Good afternoon' : 'Good evening';
+    const first = (me.name ?? '').split(/\s+/)[0];
+    const shortcut = (n, text, page) => n > 0 && h('button', { type: 'button', onClick: () => go(page) }, h('b', null, number(n)), text);
     return [
-      h('h1', null, 'Overview'),
-      h('h2', null, 'Waiting for you'),
       h(
-        'div',
-        { class: 'stats' },
-        stat(number(q.support), 'Support requests', () => go('support')),
-        stat(number(q.billing), 'Billing requests', () => go('billing')),
-        stat(number(q.videoReports), 'Video reports', () => go('reports')),
-        stat(number(q.comments), 'Reported comments', () => go('reports')),
-        stat(number(q.copyright), 'Copyright notices', () => go('reports')),
+        'section',
+        { class: 'hero' },
+        h(
+          'div',
+          null,
+          h('h1', { class: 'wrap' }, `${hello}${first ? `, ${first}` : ''}`),
+          h('p', null, waiting ? `${number(waiting)} ${waiting === 1 ? 'thing needs' : 'things need'} you today.` : 'Nothing is waiting for you. All clear.'),
+        ),
+        waiting > 0 &&
+          h(
+            'div',
+            { class: 'hero-actions' },
+            shortcut(q.support, 'support', 'support'),
+            shortcut(q.billing, 'billing', 'billing'),
+            shortcut(q.videoReports + q.comments + q.copyright, 'reports', 'reports'),
+          ),
       ),
-      h('h2', null, 'People'),
       h(
         'div',
         { class: 'stats' },
-        stat(number(d.users.total), 'Accounts'),
-        stat(number(d.users.newThisWeek), 'New in 7 days'),
-        stat(number(d.users.activeThisWeek), 'Active in 7 days'),
-        stat(number(d.users.restricted), 'Restricted or suspended'),
-        stat(number(d.waitlist.total), 'On the waitlist'),
-        stat(number(d.waitlist.newThisWeek), 'Joined waitlist in 7 days'),
+        stat(number(d.users.total), 'Accounts', 'people'),
+        stat(number(d.users.newThisWeek), 'New in 7 days', 'spark', 'teal'),
+        stat(number(d.users.activeThisWeek), 'Active in 7 days', 'pulse', 'sky'),
+        stat(number(d.waitlist.total), `On the waitlist (${number(d.waitlist.newThisWeek)} this week)`, 'waitlist', 'gold'),
+        stat(number(d.users.restricted), 'Restricted or suspended', 'flag', 'coral'),
       ),
-      h('h2', null, 'Plans and money'),
       h(
         'div',
-        { class: 'stats' },
-        plans.map((p) => stat(number(p.count), `${p.plan} plan`)),
-        stat(number(d.money.activeSubscriptions), 'Active subscriptions'),
-        d.money.last30Days.length
-          ? d.money.last30Days.map((m) => stat(money(m.amount, m.currency), `Paid in 30 days (${number(m.payments)} ${m.payments === 1 ? 'payment' : 'payments'})`))
-          : stat('0', 'Paid in 30 days'),
+        { class: 'columns' },
+        signupsChart(d.signups),
+        h(
+          'section',
+          { class: 'card' },
+          h('h3', null, 'Plans and money'),
+          plans.map((p) => h('div', { class: 'plan-row' }, h('span', null, `${p.plan} plan`), h('b', null, number(p.count)))),
+          h('div', { class: 'plan-row' }, h('span', null, 'Active subscriptions'), h('b', null, number(d.money.activeSubscriptions))),
+          d.money.last30Days.length
+            ? d.money.last30Days.map((m) =>
+                h('div', { class: 'plan-row' }, h('span', null, `Paid in 30 days (${number(m.payments)} ${m.payments === 1 ? 'payment' : 'payments'})`), h('b', null, money(m.amount, m.currency))),
+              )
+            : h('div', { class: 'plan-row' }, h('span', null, 'Paid in 30 days'), h('b', null, '0')),
+        ),
       ),
-      h('h2', null, 'AI use in 30 days'),
+      h('h2', { class: 'section-title' }, 'AI use in 30 days'),
       h(
         'div',
         { class: 'stats' },
-        stat(number(d.ai.requests), 'AI requests'),
-        stat(number(d.ai.inputTokens), 'Tokens read'),
-        stat(number(d.ai.outputTokens), 'Tokens written'),
+        stat(number(d.ai.requests), 'AI requests', 'spark'),
+        stat(number(d.ai.inputTokens), 'Tokens read', 'library', 'sky'),
+        stat(number(d.ai.outputTokens), 'Tokens written', 'support', 'teal'),
       ),
-      h('h2', null, 'In the library'),
+      h('h2', { class: 'section-title' }, 'In the library'),
       h(
         'div',
         { class: 'stats' },
-        stat(number(d.content.subjectVideos), 'Subject videos'),
-        stat(number(d.content.summaries), 'Summaries'),
-        stat(number(d.content.books), 'Books'),
-        stat(number(d.content.futureSkills), 'Future skills'),
+        stat(number(d.content.subjectVideos), 'Subject videos', 'play', 'coral', () => go('library')),
+        stat(number(d.content.summaries), 'Summaries', 'waitlist', 'teal', () => go('library')),
+        stat(number(d.content.books), 'Books', 'library', 'sky', () => go('library')),
+        stat(number(d.content.futureSkills), 'Future skills', 'spark', 'gold'),
       ),
     ];
   }
@@ -1158,6 +1245,163 @@
     ];
   }
 
+  /* ---------- Settings ---------- */
+
+  const activityState = { page: 1 };
+
+  async function settingsPage() {
+    const reload = () => show(settingsPage);
+    const [team, s, activity] = await Promise.all([
+      api('/admin/settings/team'),
+      api('/admin/settings'),
+      api(`/admin/settings/activity?page=${activityState.page}`),
+    ]);
+
+    const teamNote = h('p', { role: 'alert' });
+    const email = h('input', { type: 'email', required: true, placeholder: 'Their Knowzone account email', 'aria-label': 'Email' });
+    let role = 'admin';
+    const add = h(
+      'form',
+      {
+        class: 'add-form',
+        onSubmit: async (e) => {
+          e.preventDefault();
+          teamNote.textContent = '';
+          teamNote.className = '';
+          try {
+            if (role === 'superadmin' && !window.confirm(`Make ${email.value.trim()} a superadmin? They could add and remove staff and change settings.`)) return;
+            await post('/admin/settings/team', { email: email.value.trim(), role });
+            reload();
+          } catch (err) {
+            teamNote.textContent = err.message;
+            teamNote.className = 'error';
+          }
+        },
+      },
+      email,
+      select('Role', role, [['admin', 'Admin'], ['superadmin', 'Superadmin']], (v) => {
+        role = v;
+      }),
+      h('button', { class: 'primary', type: 'submit' }, 'Add to team'),
+    );
+    const mine = me.email.toLowerCase();
+
+    const aiNote = h('p', { role: 'alert' });
+    const aiSwitch = h('input', { type: 'checkbox', checked: s.aiEnabled, 'aria-label': 'AI features' });
+    aiSwitch.addEventListener('change', async () => {
+      const on = aiSwitch.checked;
+      aiNote.textContent = '';
+      aiNote.className = '';
+      if (!on && !window.confirm('Pause AI for every learner? The tutor, AI Studio and other AI features stop until you turn this back on.')) {
+        aiSwitch.checked = true;
+        return;
+      }
+      try {
+        await api('/admin/settings', { method: 'PUT', body: JSON.stringify({ aiEnabled: on }) });
+        reload();
+      } catch (e) {
+        aiSwitch.checked = !on;
+        aiNote.textContent = e.message;
+        aiNote.className = 'error';
+      }
+    });
+
+    const inboxNote = h('p', { role: 'alert' });
+    const inbox = h('input', { type: 'email', value: s.supportEmail ?? '', placeholder: s.supportInbox ? `Server default: ${s.supportInbox}` : 'help@example.com', 'aria-label': 'Support inbox' });
+
+    return [
+      h('h1', null, 'Settings'),
+      h('h2', { class: 'section-title' }, 'Team'),
+      h(
+        'section',
+        { class: 'card' },
+        h('p', { class: 'muted' }, 'Admins can use every section except Settings. Superadmins can also manage the team and settings. People sign in with their normal Knowzone account for that email, so it must be one they can open.'),
+        add,
+        teamNote,
+      ),
+      table(
+        ['Person', 'Role', 'Added by', 'Action'],
+        team.items.map((m) => [
+          [h('div', null, m.email), m.email === mine && h('div', { class: 'muted' }, 'You')],
+          m.role === 'superadmin' ? tag('superadmin') : tag('admin'),
+          m.owner ? 'Set on the server' : `${m.addedBy}, ${date(m.createdAt)}`,
+          m.owner || m.email === mine
+            ? h('span', { class: 'muted' }, '—')
+            : h(
+                'div',
+                { class: 'row' },
+                button(m.role === 'superadmin' ? 'Make admin' : 'Make superadmin', {
+                  note: teamNote,
+                  work: async () => {
+                    await post('/admin/settings/team', { email: m.email, role: m.role === 'superadmin' ? 'admin' : 'superadmin' });
+                    reload();
+                  },
+                }),
+                button('Remove', {
+                  kind: 'danger',
+                  note: teamNote,
+                  work: async () => {
+                    if (!window.confirm(`Remove ${m.email} from the team? They lose access straight away.`)) return;
+                    await api(`/admin/settings/team/${encodeURIComponent(m.email)}`, { method: 'DELETE' });
+                    reload();
+                  },
+                }),
+              ),
+        ]),
+      ),
+      h('h2', { class: 'section-title' }, 'App'),
+      h(
+        'section',
+        { class: 'card' },
+        h(
+          'div',
+          { class: 'setting' },
+          h('div', null, h('b', null, 'AI features'), h('p', { class: 'muted' }, s.aiEnabled ? 'On for every learner.' : 'Paused for every learner. Safety checks on comments and chat keep running.')),
+          h('label', { class: 'switch' }, aiSwitch, h('i')),
+        ),
+        aiNote,
+      ),
+      h(
+        'section',
+        { class: 'card' },
+        h('div', null, h('b', null, 'Support inbox'), h('p', { class: 'muted' }, s.supportInbox ? `New help requests are emailed to ${s.supportInbox}. Leave this empty to use the server’s address.` : 'No address yet, so new help requests aren’t emailed to anyone. They still show under Support.')),
+        h(
+          'div',
+          { class: 'add-form' },
+          inbox,
+          button('Save', {
+            kind: 'primary',
+            note: inboxNote,
+            work: async () => {
+              await api('/admin/settings', { method: 'PUT', body: JSON.stringify({ supportEmail: inbox.value.trim() }) });
+              reload();
+            },
+          }),
+        ),
+        inboxNote,
+      ),
+      h('h2', { class: 'section-title' }, 'Services'),
+      h(
+        'section',
+        { class: 'card' },
+        h('p', { class: 'muted' }, 'Whether each one is set up on the server. Keys never show here; they’re changed on Render.'),
+        h('div', null, s.services.map((x) => h('div', { class: 'service' }, h('span', null, x.name), x.ready ? tag('set up') : tag('not set up')))),
+        h('div', { class: 'service' }, h('span', null, 'Website address used in links'), h('span', { class: 'muted' }, s.appUrl)),
+      ),
+      h('h2', { class: 'section-title' }, 'Activity'),
+      activity.items.length
+        ? table(
+            ['When', 'Who', 'What'],
+            activity.items.map((a) => [time(a.createdAt), a.actor, `${a.action}: ${a.target}`]),
+          )
+        : empty('Nothing yet. Changes staff make will show here.'),
+      pager(activityState.page, activity, (p) => {
+        activityState.page = p;
+        reload();
+      }),
+    ];
+  }
+
   const PAGE_LOADERS = {
     overview: overviewPage,
     users: usersPage,
@@ -1166,6 +1410,7 @@
     billing: billingPage,
     waitlist: waitlistPage,
     library: libraryPage,
+    settings: settingsPage,
   };
 
   /* ---------- Starting up ---------- */
@@ -1199,9 +1444,19 @@
         h(
           'aside',
           { class: 'side' },
-          h('div', { class: 'brand' }, 'Knowzone staff'),
+          h('div', { class: 'brand' }, h('img', { src: '/assets/logo.png', alt: '' }), h('div', null, 'Knowzone', h('small', null, 'Staff dashboard'))),
           nav,
-          h('footer', null, h('span', null, me.email), h('div', null, h('button', { type: 'button', onClick: signOut }, 'Sign out'))),
+          h(
+            'footer',
+            null,
+            h(
+              'div',
+              { class: 'who' },
+              h('div', { class: 'avatar', 'aria-hidden': 'true' }, (me.name || me.email)[0].toUpperCase()),
+              h('div', null, me.email, h('small', null, me.role === 'superadmin' ? 'Superadmin' : 'Admin')),
+            ),
+            h('div', null, h('button', { type: 'button', onClick: signOut }, 'Sign out')),
+          ),
         ),
         main,
       ),

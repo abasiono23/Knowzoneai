@@ -3,6 +3,7 @@ import { randomInt } from 'node:crypto';
 import { config } from '../config.js';
 import { prisma } from '../db.js';
 import { Prisma, type HelpMessage, type HelpTicket, type User } from '../generated/prisma/client.js';
+import { supportInbox } from './app-settings.js';
 import { sendEmail } from './mailer.js';
 import { notify } from './notifications.js';
 
@@ -95,12 +96,13 @@ export async function openTicket(
 
 /** Emails the support inbox about a new request. Never fails the learner's request. */
 async function alertTeam(ticket: TicketWithMessages, user: Pick<User, 'id' | 'email' | 'name'>) {
-  if (!config.SUPPORT_EMAIL) return;
+  const inbox = supportInbox();
+  if (!inbox) return;
   const meta = Object.entries(ticket.meta as Record<string, string>)
     .map(([k, v]) => `${k}: ${v}`)
     .join('\n');
   await sendEmail({
-    to: config.SUPPORT_EMAIL,
+    to: inbox,
     subject: `[${ticket.kind}] ${ticket.id}: ${ticket.subject}`,
     text: `From ${user.name} <${user.email}> (user ${user.id})\n\n${ticket.messages[0]?.text ?? ''}${meta ? `\n\n${meta}` : ''}\n\nReply with: npm run support -- reply ${ticket.id} "…"`,
   }).catch((e) => console.error('Support alert failed:', e));

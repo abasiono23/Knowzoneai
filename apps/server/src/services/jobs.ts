@@ -1,6 +1,7 @@
 import { prisma } from '../db.js';
 import { gamesUpkeep } from '../routes/games.js';
 import { billingUpkeep } from './billing.js';
+import { refreshAppSettings } from './app-settings.js';
 import { refreshHiddenContent } from './content-hides.js';
 import { refreshCourseVideos } from './course-videos.js';
 import { expireReferrals } from './referrals.js';
@@ -42,8 +43,11 @@ export function startJobs() {
       gamesUpkeep(),
     ]).catch((e) => console.error('Scheduled job failed', e));
   run();
-  // What staff took out of the app, from the start and within a minute of any change elsewhere.
-  const hides = () => void refreshHiddenContent().catch((e) => console.error('Hidden content failed', e));
+  // What staff changed, from the start and within a minute of any change elsewhere.
+  const hides = () =>
+    void Promise.all([refreshHiddenContent(), refreshAppSettings()]).catch((e) =>
+      console.error('Staff settings failed', e),
+    );
   hides();
   setInterval(hides, 60_000);
   // Study room reminders need minute accuracy.
