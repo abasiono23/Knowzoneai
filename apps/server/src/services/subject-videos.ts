@@ -6,6 +6,7 @@ import { z } from 'zod';
 
 import { config } from '../config.js';
 import type { LanguageId } from './personalization.js';
+import { isHiddenContent, summaryKey } from './content-hides.js';
 import { allSkills } from './skills.js';
 import { librariesFor, libraryCards, type LibraryId } from './summaries.js';
 
@@ -163,8 +164,9 @@ export async function refreshSubjectVideos(now = Date.now()) {
   refreshedAt = now;
 }
 
-/** A video with its latest details from YouTube, or null if it's gone. */
+/** A video with its latest details from YouTube, or null if it's gone or staff hid it. */
 export function liveVideo<T extends Video>(v: T): T | null {
+  if (isHiddenContent('video', v.youtubeId)) return null;
   const f = fresh.get(v.youtubeId);
   if (f === null) return null;
   return f ? { ...v, ...f } : v;
@@ -226,7 +228,8 @@ export function allVideoPlaces() {
     const { libraryName, topics } = cards(id, lib, 'en');
     return lib.topics.flatMap((t) =>
       t.videos.map((v) => ({
-        ...(liveVideo(v) ?? v),
+        ...v,
+        ...fresh.get(v.youtubeId),
         library: id,
         libraryName,
         topic: t.id,
@@ -269,6 +272,6 @@ export function videoTopic(libraryId: string, topic: string, lang: LanguageId) {
     id: topic,
     title: card?.title ?? topic,
     videos: liveTopic(t).videos,
-    hasSummary: !lib.name,
+    hasSummary: !lib.name && !isHiddenContent('summary', summaryKey(libraryId, topic)),
   };
 }

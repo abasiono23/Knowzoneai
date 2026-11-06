@@ -1,5 +1,5 @@
 import { EXAM_SUBJECTS, EXAMS } from '../data/exams.js';
-import { allCountries, allCourseBooks, WORLD } from './books.js';
+import { allCountries, allCourseBooks, visibleBooks, WORLD } from './books.js';
 import { cardText, allReels } from './reels.js';
 import type { LanguageId } from './personalization.js';
 import { allSkills } from './skills.js';
@@ -127,7 +127,7 @@ export async function searchEverything(lang: LanguageId, query: string, country?
   // A book that's free only for one country's curriculum stays with that country's students.
   const countries = [...allCountries().values()].filter((c) => c.country !== WORLD);
   const schoolBooks = countries.flatMap((c) =>
-    c.books
+    visibleBooks(c.books)
       .filter((b) => !b.countryOnly || c.country === country)
       .map((b) => {
         const place = b.placements[0]!;
@@ -144,7 +144,7 @@ export async function searchEverything(lang: LanguageId, query: string, country?
         };
       }),
   );
-  const courseBooks = allCourseBooks().map((b) => ({
+  const courseBooks = visibleBooks(allCourseBooks()).map((b) => ({
     id: b.id,
     title: b.title,
     authors: b.authors,

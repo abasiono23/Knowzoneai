@@ -1287,6 +1287,20 @@ model StudyRoomStroke {
 }
 
 /// People waiting for the app to launch (from the website's waitlist form).
+/// Content staff took out of the app for everyone (a learner's own choice is HiddenItem).
+model HiddenContent {
+  /// video | book | summary
+  kind      String
+  /// YouTube id, book id, or a summary's library/topic.
+  itemId    String
+  title     String
+  reason    String
+  hiddenBy  String
+  createdAt DateTime @default(now())
+
+  @@id([kind, itemId])
+}
+
 model WaitlistEntry {
   id        String   @id @default(cuid())
   /// Lower-cased.

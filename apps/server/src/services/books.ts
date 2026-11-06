@@ -4,6 +4,8 @@ import { fileURLToPath } from 'node:url';
 
 import { z } from 'zod';
 
+import { isHiddenContent } from './content-hides.js';
+
 /**
  * Textbooks for "Check out your books", secondary school first. Each country has its own file,
  * `data/books/<country>.json` (shipped with the server, so it can be corrected without an app
@@ -190,6 +192,9 @@ function world(list: Country[]): Country {
 }
 
 /** A country's books; countries without their own yet get the worldwide free books. */
+export const visibleBooks = <T extends { id: string }>(books: T[]) =>
+  books.filter((b) => !isHiddenContent('book', b.id));
+
 export const country = (id: string) => allCountries().get(id) ?? allCountries().get(WORLD)!;
 
 /** The streams a student in this class can choose from. */
@@ -253,7 +258,7 @@ const FIRST: Record<string, CourseLevel> = {
 export function courseBooksFor(course: string, stage?: string) {
   const first = FIRST[stage ?? ''] ?? 'intro';
   const levels = (b: CourseBook) => b.placements.find((p) => p.course === course)!.levels;
-  return allCourseBooks()
+  return visibleBooks(allCourseBooks())
     .filter((b) => b.placements.some((p) => p.course === course))
     .sort(
       (a, b) =>
@@ -266,6 +271,6 @@ export function courseBooksFor(course: string, stage?: string) {
 
 /** A subject's books for a class: free ones first, then by title. */
 export const booksFor = (c: Country, subject: string, level: string) =>
-  c.books
+  visibleBooks(c.books)
     .filter((b) => b.placements.some((p) => p.subject === subject && p.levels.includes(level)))
     .sort((a, b) => Number(b.free) - Number(a.free) || a.title.localeCompare(b.title));

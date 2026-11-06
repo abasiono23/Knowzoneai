@@ -4,6 +4,7 @@ import { z } from 'zod';
 import { notFound } from '../lib/errors.js';
 import { allCountries, allCourseBooks, WORLD } from '../services/books.js';
 import { fold } from '../services/search-all.js';
+import { hideContent, listHiddenContent, showContent, summaryKey } from '../services/content-hides.js';
 import { allSkills } from '../services/skills.js';
 import { allVideoPlaces, isGoneVideo, videoSetsReport } from '../services/subject-videos.js';
 import { allSummaryCards, summaryFor, summaryLibrariesReport } from '../services/summaries.js';
@@ -27,7 +28,18 @@ const Query = z.object({
   price: z.enum(['all', 'free', 'paid']).default('all'),
   cover: z.enum(['all', 'missing']).default('all'),
   library: z.string().trim().max(60).optional(),
+  state: z.enum(['all', 'live', 'hidden']).default('all'),
 });
+
+/** Who hid what and why, to mark each row and to filter by. */
+async function hiddenLookup(kind: string) {
+  const rows = (await listHiddenContent()).filter((h) => h.kind === kind);
+  const found = new Map(rows.map((h) => [h.itemId, { reason: h.reason, hiddenBy: h.hiddenBy, at: h.createdAt }]));
+  return {
+    of: (id: string) => found.get(id) ?? null,
+    keep: (state: string, id: string) => state === 'all' || (state === 'hidden') === found.has(id),
+  };
+}
 
 /** Keeps what has every word of the search, and cuts out one page. */
 function page<T>(list: T[], q: string | undefined, hay: (x: T) => string, at: number) {
@@ -92,10 +104,15 @@ adminLibraryRouter.get('/admin/library/videos', async (req, res) => {
   const sets = [...new Map(allVideoPlaces().map((v) => [v.library, v.libraryName])).entries()]
     .map(([id, name]) => ({ id, name }))
     .sort((a, b) => a.name.localeCompare(b.name));
-  const chosen = rows.filter(
-    (r) =>
-      (q.source === 'all' || r.sources.includes(q.source)) && (!q.set || q.set === 'all' || r.sets.includes(q.set)),
-  );
+  const hidden = await hiddenLookup('video');
+  const chosen = rows
+    .filter(
+      (r) =>
+        (q.source === 'all' || r.sources.includes(q.source)) &&
+        (!q.set || q.set === 'all' || r.sets.includes(q.set)) &&
+        hidden.keep(q.state, r.youtubeId),
+    )
+    .map((r) => ({ ...r, hidden: hidden.of(r.youtubeId) }));
   res.json({
     ...page(chosen, q.q, (r) => `${r.title} ${r.channel} ${r.youtubeId} ${r.places.join(' ')}`, q.page),
     sets,
@@ -167,18 +184,22 @@ function bookRows() {
   return [...rows.values()];
 }
 
-adminLibraryRouter.get('/admin/library/books', (req, res) => {
+adminLibraryRouter.get('/admin/library/books', async (req, res) => {
   const q = Query.parse(req.query);
   const countries = [...allCountries().values()]
     .filter((c) => c.country !== WORLD)
     .map((c) => ({ id: c.country, name: c.name }))
     .sort((a, b) => a.name.localeCompare(b.name));
-  const chosen = bookRows().filter(
-    (b) =>
-      (!q.country || q.country === 'all' || b.countries.includes(q.country)) &&
-      (q.price === 'all' || b.free === (q.price === 'free')) &&
-      (q.cover === 'all' || !b.cover),
-  );
+  const hidden = await hiddenLookup('book');
+  const chosen = bookRows()
+    .filter(
+      (b) =>
+        (!q.country || q.country === 'all' || b.countries.includes(q.country)) &&
+        (q.price === 'all' || b.free === (q.price === 'free')) &&
+        (q.cover === 'all' || !b.cover) &&
+        hidden.keep(q.state, b.id),
+    )
+    .map((b) => ({ ...b, hidden: hidden.of(b.id) }));
   res.json({
     ...page(
       chosen,
@@ -190,16 +211,22 @@ adminLibraryRouter.get('/admin/library/books', (req, res) => {
   });
 });
 
-adminLibraryRouter.get('/admin/library/summaries', (req, res) => {
+adminLibraryRouter.get('/admin/library/summaries', async (req, res) => {
   const q = Query.parse(req.query);
-  const cards = allSummaryCards('en');
+  const cards = allSummaryCards('en', true);
+  const hidden = await hiddenLookup('summary');
   const libraries = [...new Map(cards.map((c) => [c.library, c.libraryName])).entries()].map(([id, name]) => ({
     id,
     name,
   }));
   const chosen = cards
-    .filter((c) => !q.library || q.library === 'all' || c.library === q.library)
+    .filter(
+      (c) =>
+        (!q.library || q.library === 'all' || c.library === q.library) &&
+        hidden.keep(q.state, summaryKey(c.library, c.id)),
+    )
     .map(({ library, libraryName, id, title, short, languages }) => ({
+      hidden: hidden.of(summaryKey(library, id)),
       library,
       libraryName,
       id,
@@ -213,9 +240,37 @@ adminLibraryRouter.get('/admin/library/summaries', (req, res) => {
 const Lang = z.object({ lang: z.enum(['en', 'pcm', 'yo', 'ig', 'ha', 'fr', 'ar', 'sw', 'pt', 'es']).default('en') });
 
 adminLibraryRouter.get('/admin/library/summaries/:library/:topic', (req, res) => {
-  const summary = summaryFor(String(req.params.library), String(req.params.topic), Lang.parse(req.query).lang);
+  const summary = summaryFor(String(req.params.library), String(req.params.topic), Lang.parse(req.query).lang, true);
   if (!summary) throw notFound('No such summary');
   res.json(summary);
+});
+
+const Hide = z.object({
+  kind: z.enum(['video', 'book', 'summary']),
+  id: z.string().trim().min(1).max(200),
+  title: z.string().trim().min(1).max(300),
+  reason: z.string().trim().min(3).max(300),
+});
+
+/** Takes something out of the app for everyone. Nothing is deleted, and showing it again is one click. */
+adminLibraryRouter.post('/admin/library/hide', async (req, res) => {
+  const { kind, id, title, reason } = Hide.parse(req.body);
+  await hideContent({ kind, id, title, reason, by: req.user!.email });
+  console.info(`[admin] ${req.user!.email} hid ${kind} ${id}: ${reason}`);
+  res.json({ ok: true });
+});
+
+const Unhide = Hide.pick({ kind: true, id: true });
+
+adminLibraryRouter.post('/admin/library/unhide', async (req, res) => {
+  const { kind, id } = Unhide.parse(req.body);
+  await showContent(kind, id);
+  console.info(`[admin] ${req.user!.email} showed ${kind} ${id} again`);
+  res.json({ ok: true });
+});
+
+adminLibraryRouter.get('/admin/library/hidden', async (_req, res) => {
+  res.json({ items: await listHiddenContent() });
 });
 
 /** What's thin or missing, so the next round of work goes where it's needed. */

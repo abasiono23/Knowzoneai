@@ -419,6 +419,10 @@ Still to do:
     nobody does. Create and confirm each person's Knowzone account before adding their email to the list.
   - **Library:** look through every video, book and summary, filter them, preview them, and see what's thin or
     missing (topics with few videos, books without covers, subjects with no books, untranslated summaries).
+  - **Hiding:** any video, book or summary can be taken out of the app for everyone, with a reason, and brought back
+    with one click (`HiddenContent`). The files stay as they are, so a hide lasts through new builds and the monthly
+    YouTube recheck. A hidden course video leaves its lesson, whose reading and quiz stay. Copies a learner already
+    saved for offline stay on their device.
   - **What it leaves out:** learners' chats, notes, uploads and study answers. Refunds and charges stay in Flutterwave.
   - **Records:** replies are signed with the staff member's email, and every change goes to the server log as
     `[admin] who did what`. Render's logs don't last, so there's no permanent history of who did what yet.

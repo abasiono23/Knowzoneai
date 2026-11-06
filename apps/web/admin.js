@@ -707,6 +707,7 @@
                   { class: 'row' },
                   r.status !== 'reviewed' && button('Reviewed', { note, work: setStatus(`/admin/video-reports/${encodeURIComponent(r.id)}`, { status: 'reviewed' }) }),
                   r.status !== 'dismissed' && button('Dismiss', { note, work: setStatus(`/admin/video-reports/${encodeURIComponent(r.id)}`, { status: 'dismissed' }) }),
+                  r.videoId.startsWith('yt-') && hideControl('video', r.videoId.slice(3), r.videoTitle ?? r.videoId, false, note, reload),
                 ),
               ]),
             )
@@ -932,20 +933,46 @@
 
   /* ---------- Library ---------- */
 
-  const libraryState = { view: 'videos', q: '', page: 1, source: 'all', set: 'all', country: 'all', price: 'all', cover: 'all', library: 'all' };
+  const libraryState = { view: 'videos', q: '', page: 1, source: 'all', set: 'all', country: 'all', price: 'all', cover: 'all', library: 'all', state: 'all' };
 
   const outLink = (url, text) => (/^https:\/\//.test(url ?? '') ? h('a', { href: url, target: '_blank', rel: 'noopener noreferrer' }, text) : null);
   const minutes = (s) => `${Math.max(1, Math.round(s / 60))} min`;
 
+  /** Takes an item out of the app, or puts it back. Asks why first: the reason stays with the record. */
+  function hideControl(kind, id, title, hidden, note, done) {
+    if (hidden)
+      return button('Show again', {
+        note,
+        work: async () => {
+          await post('/admin/library/unhide', { kind, id });
+          done();
+        },
+      });
+    return button('Hide', {
+      kind: 'danger',
+      note,
+      work: async () => {
+        const reason = window.prompt(`Hide “${title}” from all learners? Why? (at least 3 letters)`, '');
+        if (reason === null) return;
+        if (reason.trim().length < 3) throw new Error('Write a reason of at least 3 letters. Nothing was hidden.');
+        await post('/admin/library/hide', { kind, id, title, reason: reason.trim() });
+        done();
+      },
+    });
+  }
+  const hiddenNote = (hidden) => hidden && h('div', { class: 'muted' }, `Hidden by ${hidden.hiddenBy}: ${hidden.reason}`);
+  const stateFilter = (value, onChange) => select('State', value, [['all', 'Hidden and showing'], ['live', 'Showing'], ['hidden', 'Hidden only']], onChange);
+
   async function libraryPage() {
     const s = libraryState;
     const reload = () => show(libraryPage);
+    const note = h('p', { role: 'alert' });
     const set = (key) => (value) => {
       s[key] = value;
       s.page = 1;
       reload();
     };
-    const switcher = select('Show', s.view, [['videos', 'Videos'], ['books', 'Books'], ['summaries', 'Summaries'], ['gaps', 'What’s missing']], (v) => {
+    const switcher = select('Show', s.view, [['videos', 'Videos'], ['books', 'Books'], ['summaries', 'Summaries'], ['gaps', 'What’s missing'], ['hidden', 'Hidden']], (v) => {
       s.view = v;
       s.q = '';
       s.page = 1;
@@ -975,6 +1002,22 @@
         h('button', { type: 'submit' }, 'Find'),
       );
     const intro = h('p', { class: 'muted' }, 'Everything learners can open. New videos and books still arrive through the content sets.');
+
+    if (s.view === 'hidden') {
+      const { items } = await api('/admin/library/hidden');
+      return [
+        h('h1', null, 'Library'),
+        h('div', { class: 'bar' }, switcher),
+        h('p', { class: 'muted' }, 'Taken out of the app for everyone, and still safe to bring back.'),
+        note,
+        items.length
+          ? table(
+              ['Item', 'Kind', 'Why', 'Who', 'Action'],
+              items.map((i) => [i.title, i.kind, i.reason, [h('div', null, i.hiddenBy), h('div', { class: 'muted' }, date(i.createdAt))], hideControl(i.kind, i.itemId, i.title, true, note, reload)]),
+            )
+          : empty('Nothing is hidden.'),
+      ];
+    }
 
     if (s.view === 'gaps') {
       const g = await api('/admin/library/gaps');
@@ -1007,7 +1050,7 @@
     }
 
     if (s.view === 'books') {
-      const params = new URLSearchParams({ page: s.page, country: s.country, price: s.price, cover: s.cover, ...(s.q && { q: s.q }) });
+      const params = new URLSearchParams({ page: s.page, country: s.country, price: s.price, cover: s.cover, state: s.state, ...(s.q && { q: s.q }) });
       const data = await api(`/admin/library/books?${params}`);
       return [
         h('h1', null, 'Library'),
@@ -1016,20 +1059,23 @@
           select('Country', s.country, [['all', 'All countries'], ...data.countries.map((c) => [c.id, c.name]), ['courses', 'University and college']], set('country')),
           select('Price', s.price, [['all', 'Free and paid'], ['free', 'Free'], ['paid', 'Paid']], set('price')),
           select('Cover', s.cover, [['all', 'With or without cover'], ['missing', 'No cover']], set('cover')),
+          stateFilter(s.state, set('state')),
         ),
+        note,
         data.items.length
           ? table(
-              ['Book', 'Price', 'Where', 'Subjects'],
+              ['Book', 'Price', 'Where', 'Subjects', 'Action'],
               data.items.map((b) => [
                 h(
                   'div',
                   { class: 'item' },
                   b.cover ? h('img', { class: 'cover', src: b.cover, alt: '', loading: 'lazy' }) : h('div', { class: 'cover' }),
-                  h('div', null, h('div', null, b.title), h('div', { class: 'muted' }, [b.authors.join(', '), b.publisher].filter(Boolean).join(' · ')), outLink(b.readUrl, 'Open')),
+                  h('div', null, h('div', null, b.title), h('div', { class: 'muted' }, [b.authors.join(', '), b.publisher].filter(Boolean).join(' · ')), outLink(b.readUrl, 'Open'), hiddenNote(b.hidden)),
                 ),
                 b.free ? tag('free') : tag('paid'),
                 b.countries.join(', '),
                 b.subjects.join(', '),
+                hideControl('book', b.id, b.title, b.hidden, note, reload),
               ]),
             )
           : empty('Nothing matches that.'),
@@ -1038,19 +1084,21 @@
     }
 
     if (s.view === 'summaries') {
-      const params = new URLSearchParams({ page: s.page, library: s.library, ...(s.q && { q: s.q }) });
+      const params = new URLSearchParams({ page: s.page, library: s.library, state: s.state, ...(s.q && { q: s.q }) });
       const data = await api(`/admin/library/summaries?${params}`);
       return [
         h('h1', null, 'Library'),
         intro,
-        bar(select('Subject', s.library, [['all', 'All subjects'], ...data.libraries.map((l) => [l.id, l.name])], set('library'))),
+        bar(select('Subject', s.library, [['all', 'All subjects'], ...data.libraries.map((l) => [l.id, l.name])], set('library')), stateFilter(s.state, set('state'))),
+        note,
         data.items.length
           ? table(
-              ['Summary', 'Subject', 'Languages'],
+              ['Summary', 'Subject', 'Languages', 'Action'],
               data.items.map((c) => [
-                [h('button', { type: 'button', class: 'link', onClick: () => show(() => summaryPage(c.library, c.id, 'en')) }, c.title), h('div', { class: 'muted' }, c.short)],
+                [h('button', { type: 'button', class: 'link', onClick: () => show(() => summaryPage(c.library, c.id, 'en')) }, c.title), h('div', { class: 'muted' }, c.short), hiddenNote(c.hidden)],
                 c.libraryName,
                 c.languages.length,
+                hideControl('summary', `${c.library}/${c.id}`, c.title, c.hidden, note, reload),
               ]),
             )
           : empty('Nothing matches that.'),
@@ -1058,7 +1106,7 @@
       ];
     }
 
-    const params = new URLSearchParams({ page: s.page, source: s.source, set: s.set, ...(s.q && { q: s.q }) });
+    const params = new URLSearchParams({ page: s.page, source: s.source, set: s.set, state: s.state, ...(s.q && { q: s.q }) });
     const data = await api(`/admin/library/videos?${params}`);
     return [
       h('h1', null, 'Library'),
@@ -1066,20 +1114,23 @@
       bar(
         select('From', s.source, [['all', 'All videos'], ['subject', 'School subjects'], ['course', 'Courses'], ['skill', 'Future skills']], set('source')),
         select('Set', s.set, [['all', 'All sets'], ...data.sets.map((x) => [x.id, x.name])], set('set')),
+        stateFilter(s.state, set('state')),
       ),
+      note,
       data.items.length
         ? table(
-            ['Video', 'Length', 'Where it appears', 'Status'],
+            ['Video', 'Length', 'Where it appears', 'Status', 'Action'],
             data.items.map((v) => [
               h(
                 'div',
                 { class: 'item' },
                 h('img', { class: 'thumb', src: `https://i.ytimg.com/vi/${encodeURIComponent(v.youtubeId)}/mqdefault.jpg`, alt: '', loading: 'lazy' }),
-                h('div', null, h('div', null, v.title), h('div', { class: 'muted' }, v.channel), outLink(`https://www.youtube.com/watch?v=${encodeURIComponent(v.youtubeId)}`, 'Watch on YouTube')),
+                h('div', null, h('div', null, v.title), h('div', { class: 'muted' }, v.channel), outLink(`https://www.youtube.com/watch?v=${encodeURIComponent(v.youtubeId)}`, 'Watch on YouTube'), hiddenNote(v.hidden)),
               ),
               minutes(v.seconds),
               v.places.join('; '),
-              v.gone ? tag('gone') : tag('active'),
+              v.hidden ? tag('hidden') : v.gone ? tag('gone') : tag('active'),
+              hideControl('video', v.youtubeId, v.title, v.hidden, note, reload),
             ]),
           )
         : empty('Nothing matches that.'),

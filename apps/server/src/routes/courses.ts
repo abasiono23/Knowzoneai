@@ -7,6 +7,7 @@ import type { Course, CourseLesson, CourseModule } from '../generated/prisma/cli
 import { AppError, notFound } from '../lib/errors.js';
 import { recordActivity, requestTimeZone } from '../services/progress.js';
 import { confirmReferralIfEligible } from '../services/referrals.js';
+import { isHiddenContent } from '../services/content-hides.js';
 import { me, optionalAuth, requireAuth } from '../services/sessions.js';
 import { toPublicUser } from '../services/users.js';
 import { forgetWatchVideos } from '../services/watch.js';
@@ -136,7 +137,10 @@ coursesRouter.get('/courses', optionalAuth, async (req, res) => {
 coursesRouter.get('/courses/:id/lessons/:lessonId', optionalAuth, async (req, res) => {
   const l = await prisma.courseLesson.findUnique({ where: { id: `${req.params.id}/${req.params.lessonId}` } });
   if (!l) throw notFound('Lesson not found');
-  res.set('Cache-Control', 'public, max-age=300').json({ content: l.content });
+  // A video staff hid leaves the lesson; its reading, activities and quiz stay.
+  const { video, ...rest } = l.content as { video?: { youtubeId?: string } } & Record<string, unknown>;
+  const content = video?.youtubeId && isHiddenContent('video', video.youtubeId) ? rest : l.content;
+  res.set('Cache-Control', 'public, max-age=300').json({ content });
 });
 
 /** Anyone can check a certificate is real (125). */

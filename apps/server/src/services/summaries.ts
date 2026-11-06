@@ -4,6 +4,7 @@ import { fileURLToPath } from 'node:url';
 
 import { z } from 'zod';
 
+import { isHiddenContent, summaryKey } from './content-hides.js';
 import type { LanguageId } from './personalization.js';
 
 /**
@@ -128,6 +129,7 @@ function pick<T>(t: Record<string, T>, lang: LanguageId): T {
 }
 
 const card = ({ title, short, keywords }: z.infer<typeof Text>) => ({ title, short, keywords });
+const hiddenSummary = (library: string, topic: string) => isHiddenContent('summary', summaryKey(library, topic));
 
 /**
  * What a shelf subject's Summaries tab lists: its course summaries, then every topic with the ones for
@@ -136,23 +138,27 @@ const card = ({ title, short, keywords }: z.infer<typeof Text>) => ({ title, sho
 export function summariesFor(subject: string, stage: string | undefined, lang: LanguageId) {
   const libs = (FOR_SUBJECT[subject] ?? []).map(library).filter((l): l is SummaryLibrary => !!l);
   const topics = libs.flatMap((lib) =>
-    lib.topics.map((t) => ({
-      library: lib.id,
-      libraryName: pick(lib.name, lang),
-      id: t.id,
-      stage: t.stage,
-      yours: t.stage === stage,
-      ...card(pick(t.text, lang)),
-    })),
+    lib.topics
+      .filter((t) => !hiddenSummary(lib.id, t.id))
+      .map((t) => ({
+        library: lib.id,
+        libraryName: pick(lib.name, lang),
+        id: t.id,
+        stage: t.stage,
+        yours: t.stage === stage,
+        ...card(pick(t.text, lang)),
+      })),
   );
   return {
     /** False when this language's translation isn't out yet and the text is English. */
     translated: libs.some((lib) => !!lib.overview[lang]),
-    courses: libs.map((lib) => ({
-      library: lib.id,
-      libraryName: pick(lib.name, lang),
-      ...card(pick(lib.overview, lang)),
-    })),
+    courses: libs
+      .filter((lib) => !hiddenSummary(lib.id, OVERVIEW))
+      .map((lib) => ({
+        library: lib.id,
+        libraryName: pick(lib.name, lang),
+        ...card(pick(lib.overview, lang)),
+      })),
     topics: [...topics.filter((t) => t.yours), ...topics.filter((t) => !t.yours)],
   };
 }
@@ -172,8 +178,8 @@ export function libraryCards(id: LibraryId, lang: LanguageId) {
 export const OVERVIEW = 'overview';
 
 /** Every summary in one language, with its English words for search. */
-export function allSummaryCards(lang: LanguageId) {
-  return LIBRARIES.flatMap((id) => {
+export function allSummaryCards(lang: LanguageId, staff = false) {
+  const cards = LIBRARIES.flatMap((id) => {
     const lib = library(id);
     if (!lib) return [];
     const libraryName = pick(lib.name, lang);
@@ -193,6 +199,7 @@ export function allSummaryCards(lang: LanguageId) {
     };
     return [one(OVERVIEW, lib.overview), ...lib.topics.map((t) => one(t.id, t.text))];
   });
+  return staff ? cards : cards.filter((c) => !hiddenSummary(c.library, c.id));
 }
 
 /** How far each library's translations have got, for the staff dashboard. */
@@ -208,7 +215,8 @@ export function summaryLibrariesReport() {
 }
 
 /** One summary to read, in one language. `overview` is the whole course. */
-export function summaryFor(libraryId: string, topic: string, lang: LanguageId) {
+export function summaryFor(libraryId: string, topic: string, lang: LanguageId, staff = false) {
+  if (!staff && hiddenSummary(libraryId, topic)) return null;
   const lib = (LIBRARIES as readonly string[]).includes(libraryId) || loaded.has(libraryId) ? library(libraryId) : null;
   if (!lib) return null;
   const text = topic === OVERVIEW ? lib.overview : lib.topics.find((t) => t.id === topic)?.text;

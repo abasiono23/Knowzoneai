@@ -62,7 +62,7 @@ export const skillCards = (lang: LanguageId) =>
     id: s.id,
     name: pick(s.name, lang),
     tagline: pick(s.tagline, lang),
-    lessons: s.videos.length,
+    lessons: s.videos.filter((v) => liveVideo(v)).length,
   }));
 
 /** A subject and its lessons, in one language. Video titles stay as their creators wrote them. */

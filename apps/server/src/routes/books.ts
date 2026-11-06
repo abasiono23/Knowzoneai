@@ -9,6 +9,7 @@ import {
   courseBooksFor,
   streamsFor,
   subjectsFor,
+  visibleBooks,
   type Country,
 } from '../services/books.js';
 
@@ -54,12 +55,10 @@ function subject(res: Response, c: Country, id: string, level: string) {
 /** Which countries have their own books, and how many. */
 booksRouter.get('/books/countries', (_req, res) => {
   res.json({
-    countries: [...allCountries().values()].map((c) => ({
-      id: c.country,
-      name: c.name,
-      books: c.books.length,
-      free: c.books.filter((b) => b.free).length,
-    })),
+    countries: [...allCountries().values()].map((c) => {
+      const books = visibleBooks(c.books);
+      return { id: c.country, name: c.name, books: books.length, free: books.filter((b) => b.free).length };
+    }),
   });
 });
 

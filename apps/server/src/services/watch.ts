@@ -1,4 +1,5 @@
 import { prisma } from '../db.js';
+import { isHiddenContent } from './content-hides.js';
 import { feedOrder } from './reels.js';
 
 /**
@@ -27,7 +28,8 @@ const ENTITIES: Record<string, string> = { '&amp;': '&', '&#39;': '’', '&quot;
 export const plain = (s: string) => s.replace(/&(amp|#39|quot|lt|gt);/g, (m) => ENTITIES[m] ?? m);
 let cache: { at: number; videos: WatchVideo[] } | null = null;
 
-export async function watchVideos(): Promise<WatchVideo[]> {
+/** Every course video, including any that staff hid. */
+export async function allCourseVideos(): Promise<WatchVideo[]> {
   if (cache && Date.now() - cache.at < TTL) return cache.videos;
   const lessons = await prisma.courseLesson.findMany({
     where: { kind: 'video', course: { published: true } },
@@ -58,8 +60,8 @@ export async function watchVideos(): Promise<WatchVideo[]> {
   return videos;
 }
 
-/** Every course video, for the staff dashboard. */
-export const allCourseVideos = watchVideos;
+/** The feed. Hides apply straight away, without waiting for the list above to refresh. */
+export const watchVideos = async () => (await allCourseVideos()).filter((v) => !isHiddenContent('video', v.youtubeId));
 
 /** Tests and the course import start from a fresh list. */
 export const forgetWatchVideos = () => {
