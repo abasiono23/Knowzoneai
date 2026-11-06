@@ -416,7 +416,8 @@ Still to do:
 - **Staff dashboard:** `knowzoneai.com/admin` does all of this in a browser, and also shows an overview, people,
   video reports, reported reel comments, payments, billing requests and the waitlist (with a CSV download).
   - **Who gets in:** only accounts whose email is in `ADMIN_EMAILS` on the server (comma-separated). With none set,
-    nobody does. Create and confirm each person's Knowzone account before adding their email to the list.
+    nobody does. Create and confirm each person's Knowzone account before adding their email to the list. The check
+    runs on the server for every request, using the email in the token Supabase signed.
   - **Library:** look through every video, book and summary, filter them, preview them, and see what's thin or
     missing (topics with few videos, books without covers, subjects with no books, untranslated summaries).
   - **Hiding:** any video, book or summary can be taken out of the app for everyone, with a reason, and brought back
@@ -426,7 +427,7 @@ Still to do:
   - **What it leaves out:** learners' chats, notes, uploads and study answers. Refunds and charges stay in Flutterwave.
   - **Records:** replies are signed with the staff member's email, and every change goes to the server log as
     `[admin] who did what`. Render's logs don't last, so there's no permanent history of who did what yet.
-  - **Sign in with Google** needs `https://knowzoneai.com/admin` in Supabase's allowed redirect URLs.
+  - **Sign in with Google** needs `https://www.knowzoneai.com/admin` in Supabase's allowed redirect URLs.
   - The page is `apps/web/admin.html`, and the API is `apps/server/src/routes/admin.ts`. It's in English only.
 - **The data download** now also includes payments, help requests, blocked players and hidden content.
 - **Endpoints:** `GET/POST /me/help/tickets`, `POST /me/help/tickets/reply`, `POST /me/help/tickets/close`,
