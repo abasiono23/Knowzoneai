@@ -67,6 +67,8 @@
     admin: '',
     'set up': 'good',
     'not set up': 'warn',
+    draft: 'warn',
+    published: 'good',
     free: 'good',
     paid: '',
   };
@@ -191,6 +193,7 @@
     return path.endsWith('.csv') ? res.text() : res.json();
   }
   const post = (path, body) => api(path, { method: 'POST', body: JSON.stringify(body ?? {}) });
+  const post_ = post;
 
   function showSignIn(message) {
     const note = h('p', { class: message ? 'error' : '', role: 'alert' }, message);
@@ -255,6 +258,7 @@
     ['billing', 'Billing'],
     ['waitlist', 'Waitlist'],
     ['library', 'Library'],
+    ['blog', 'Blog'],
     ['settings', 'Settings'],
   ];
   /** Only superadmins see Settings; the server enforces it too. */
@@ -270,6 +274,7 @@
     waitlist: 'M8 6h12M8 12h12M8 18h12M4 6h.010M4 12h.010M4 18h.010',
     library: 'M4 5a2 2 0 0 1 2-2h13v15H6a2 2 0 0 0-2 2V5zM4 20a2 2 0 0 0 2 2h13v-4',
     settings: 'M4 7h10M18 7h2M4 17h2M10 17h10M16 4.500v5M8 14.500v5',
+    blog: 'M12 20h9M16.500 3.500a2.100 2.100 0 0 1 3 3L7 19l-4 1 1-4z',
     spark: 'M12 3l1.900 5.600L19.500 10.500l-5.600 1.900L12 18l-1.900-5.600L4.500 10.500l5.600-1.900z',
     pulse: 'M3 12h4l3-7 4 14 3-7h4',
     play: 'M6 4l14 8-14 8z',
@@ -1245,6 +1250,227 @@
     ];
   }
 
+  /* ---------- Blog ---------- */
+
+  /** Inline formatting: **bold** and [text](https://…). Built from text, never from HTML. */
+  function inlineText(text) {
+    const parts = [];
+    const pattern = /\*\*([^*]+)\*\*|\[([^\]]+)\]\((https:\/\/[^\s)]+)\)/g;
+    let at = 0;
+    for (const m of text.matchAll(pattern)) {
+      parts.push(text.slice(at, m.index));
+      parts.push(m[1] ? h('strong', null, m[1]) : h('a', { href: m[3], target: '_blank', rel: 'noopener noreferrer' }, m[2]));
+      at = m.index + m[0].length;
+    }
+    parts.push(text.slice(at));
+    return parts;
+  }
+
+  /** Blank lines separate blocks. "## " is a heading, and "- " starts a list. */
+  function postBody(text) {
+    return text
+      .split(/\n\s*\n/)
+      .map((block) => block.trim())
+      .filter(Boolean)
+      .map((block) => {
+        if (block.startsWith('## ')) return h('h3', null, block.slice(3));
+        const lines = block.split('\n');
+        if (lines.every((l) => l.trim().startsWith('- '))) return h('ul', null, lines.map((l) => h('li', null, inlineText(l.trim().slice(2)))));
+        return h('p', { class: 'wrap' }, inlineText(block));
+      });
+  }
+
+  async function blogPage() {
+    const { items } = await api('/admin/blog');
+    const note = h('p', { role: 'alert' });
+    return [
+      h(
+        'div',
+        { class: 'row between' },
+        h('div', null, h('h1', null, 'Blog'), h('p', { class: 'muted' }, 'Write here. Published posts appear on the website’s blog page.')),
+        h('button', { type: 'button', class: 'primary', onClick: () => show(() => blogEditor(null)) }, 'New post'),
+      ),
+      note,
+      items.length
+        ? table(
+            ['Post', 'Status', 'Updated', 'Action'],
+            items.map((p) => [
+              [h('button', { type: 'button', class: 'link', onClick: () => show(() => blogEditor(p.id)) }, p.title), h('div', { class: 'muted' }, p.author)],
+              tag(p.status),
+              date(p.updatedAt),
+              h(
+                'div',
+                { class: 'row' },
+                h('button', { type: 'button', onClick: () => show(() => blogEditor(p.id)) }, 'Edit'),
+                button('Delete', {
+                  kind: 'danger',
+                  note,
+                  work: async () => {
+                    if (!window.confirm(`Delete “${p.title}” for good? This can’t be undone.`)) return;
+                    await api(`/admin/blog/${encodeURIComponent(p.id)}`, { method: 'DELETE' });
+                    show(blogPage);
+                  },
+                }),
+              ),
+            ]),
+          )
+        : empty('No posts yet. Write your first one.'),
+    ];
+  }
+
+  async function blogEditor(id) {
+    const post = id
+      ? (await api(`/admin/blog/${encodeURIComponent(id)}`)).post
+      : { title: '', excerpt: '', body: '', author: 'The Knowzone team', coverImage: null, status: 'draft' };
+    let postId = id;
+    let cover = post.coverImage;
+    let status = post.status;
+    let saved = true;
+
+    const note = h('p', { role: 'alert' });
+    const title = h('input', { value: post.title, maxlength: 160, placeholder: 'A clear title' });
+    const excerpt = h('input', { value: post.excerpt, maxlength: 300, placeholder: 'One sentence that shows on the blog page' });
+    const author = h('input', { value: post.author, maxlength: 80 });
+    const body = h('textarea', { class: 'post-input', value: post.body, maxlength: 60000, placeholder: 'Start writing…', 'aria-label': 'The post' });
+    body.value = post.body;
+    const preview = h('article', { class: 'post-preview' });
+    const coverView = h('div', { class: 'cover-pick' });
+    const statusTag = h('span');
+
+    const drawPreview = () =>
+      fill(
+        preview,
+        cover && h('img', { src: `${apiUrl}${cover}`, alt: '' }),
+        h('h2', { class: 'wrap' }, title.value || 'Your title'),
+        excerpt.value && h('p', { class: 'muted' }, excerpt.value),
+        postBody(body.value),
+      );
+    const changed = () => {
+      saved = false;
+      drawPreview();
+    };
+    [title, excerpt, body].forEach((f) => f.addEventListener('input', changed));
+    author.addEventListener('input', () => {
+      saved = false;
+    });
+
+    const insert = (before, after = '', sample = '') => {
+      const { selectionStart: a, selectionEnd: b, value } = body;
+      const chosen = value.slice(a, b) || sample;
+      body.value = `${value.slice(0, a)}${before}${chosen}${after}${value.slice(b)}`;
+      body.focus();
+      body.setSelectionRange(a + before.length, a + before.length + chosen.length);
+      changed();
+    };
+
+    const fileInput = h('input', { type: 'file', accept: 'image/png,image/jpeg,image/webp', class: 'sr' });
+    const drawCover = () =>
+      fill(
+        coverView,
+        cover && h('img', { src: `${apiUrl}${cover}`, alt: 'Cover' }),
+        h('label', { class: 'file-btn' }, cover ? 'Change cover picture' : 'Add a cover picture', fileInput),
+        cover &&
+          h(
+            'button',
+            {
+              type: 'button',
+              onClick: () => {
+                cover = null;
+                changed();
+                drawCover();
+              },
+            },
+            'Remove',
+          ),
+      );
+    fileInput.addEventListener('change', () => {
+      const file = fileInput.files[0];
+      if (!file) return;
+      note.textContent = '';
+      note.className = '';
+      if (file.size > 1_400_000) {
+        note.textContent = 'That picture is too big. Use one under 1.4 MB.';
+        note.className = 'error';
+        return;
+      }
+      const reader = new FileReader();
+      reader.onload = async () => {
+        try {
+          ({ coverImage: cover } = await post_('/admin/blog/images', { data: reader.result }));
+          changed();
+          drawCover();
+        } catch (e) {
+          note.textContent = e.message;
+          note.className = 'error';
+        }
+      };
+      reader.readAsDataURL(file);
+    });
+
+    const save = async (nextStatus) => {
+      if (nextStatus === 'published' && status !== 'published' && !window.confirm('Publish this post on the website now?')) return;
+      const payload = { title: title.value.trim(), excerpt: excerpt.value.trim(), body: body.value, author: author.value.trim() || 'The Knowzone team', coverImage: cover, status: nextStatus };
+      const { post: done } = postId
+        ? await api(`/admin/blog/${encodeURIComponent(postId)}`, { method: 'PUT', body: JSON.stringify(payload) })
+        : await post_('/admin/blog', payload);
+      postId = done.id;
+      status = done.status;
+      saved = true;
+      draw();
+      note.textContent = status === 'published' ? 'Published.' : 'Saved as a draft.';
+      note.className = 'saved';
+    };
+
+    const actions = h('div', { class: 'row' });
+    const draw = () => {
+      fill(statusTag, tag(status));
+      fill(
+        actions,
+        status === 'published'
+          ? [button('Save changes', { kind: 'primary', note, work: () => save('published') }), button('Take down', { kind: 'danger', note, work: () => save('draft') })]
+          : [button('Publish', { kind: 'primary', note, work: () => save('published') }), button('Save draft', { note, work: () => save('draft') })],
+      );
+    };
+    draw();
+    drawCover();
+    drawPreview();
+
+    const back = () => {
+      if (!saved && !window.confirm('Leave without saving your changes?')) return;
+      show(blogPage);
+    };
+    const tool = (text, label, ...args) => h('button', { type: 'button', 'aria-label': label, onClick: () => insert(...args) }, text);
+
+    return [
+      h('div', null, h('button', { type: 'button', class: 'link', onClick: back }, '← Blog')),
+      h('div', { class: 'row between' }, h('div', { class: 'row' }, h('h1', null, id ? 'Edit post' : 'New post'), statusTag), actions),
+      note,
+      h(
+        'div',
+        { class: 'editor' },
+        h(
+          'section',
+          { class: 'card' },
+          h('label', null, 'Title', title),
+          h('label', null, 'Short description', excerpt),
+          h('label', null, 'Written by', author),
+          coverView,
+          h(
+            'div',
+            { class: 'post-tools', role: 'toolbar', 'aria-label': 'Formatting' },
+            tool('Heading', 'Add a heading', '\n\n## ', '\n\n', 'Heading'),
+            tool('Bold', 'Make bold', '**', '**', 'bold text'),
+            tool('List', 'Add a list', '\n\n- ', '\n- Next item\n\n', 'First item'),
+            tool('Link', 'Add a link', '[', '](https://)', 'link text'),
+          ),
+          body,
+          h('p', { class: 'muted' }, 'Leave a blank line between paragraphs.'),
+        ),
+        h('section', { class: 'card preview-card' }, h('h3', null, 'Preview'), preview),
+      ),
+    ];
+  }
+
   /* ---------- Settings ---------- */
 
   const activityState = { page: 1 };
@@ -1410,6 +1636,7 @@
     billing: billingPage,
     waitlist: waitlistPage,
     library: libraryPage,
+    blog: blogPage,
     settings: settingsPage,
   };
 

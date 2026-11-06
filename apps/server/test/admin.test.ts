@@ -6,6 +6,7 @@ import { prisma } from '../src/db.js';
 import { adminRouter } from '../src/routes/admin.js';
 import { adminLibraryRouter } from '../src/routes/admin-library.js';
 import { adminSettingsRouter } from '../src/routes/admin-settings.js';
+import { adminBlogRouter } from '../src/routes/blog.js';
 import { CONSENT, http, signIn, supabaseToken } from './helpers.js';
 
 const unique = () => `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
@@ -51,7 +52,7 @@ describe('who gets in', () => {
 
 describe('a normal account can’t get in', () => {
   /** Every route the staff dashboard has, read from the routers, so a new one can't be missed. */
-  const routes = [adminRouter, adminLibraryRouter, adminSettingsRouter].flatMap((router) =>
+  const routes = [adminRouter, adminLibraryRouter, adminSettingsRouter, adminBlogRouter].flatMap((router) =>
     (router.stack as { route?: { path: string; methods: Record<string, boolean> } }[]).flatMap((layer) =>
       layer.route
         ? Object.keys(layer.route.methods).map((method) => ({

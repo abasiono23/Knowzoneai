@@ -11,6 +11,7 @@ import { requireAuth } from '../services/sessions.js';
 import { recordAction, staffRole } from '../services/staff.js';
 import { adminLibraryRouter } from './admin-library.js';
 import { adminSettingsRouter } from './admin-settings.js';
+import { adminBlogRouter } from './blog.js';
 import { allSkills } from '../services/skills.js';
 import { allVideoTopics } from '../services/subject-videos.js';
 import { allSummaryCards } from '../services/summaries.js';
@@ -35,6 +36,7 @@ async function onlyStaff(req: Request, res: Response, next: NextFunction) {
 adminRouter.use('/admin', requireAuth, onlyStaff);
 adminRouter.use(adminLibraryRouter);
 adminRouter.use(adminSettingsRouter);
+adminRouter.use(adminBlogRouter);
 
 const audit = (req: Request, action: string, target: string) => recordAction(req.user!.email, action, target);
 

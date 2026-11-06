@@ -427,6 +427,8 @@ Still to do:
     with one click (`HiddenContent`). The files stay as they are, so a hide lasts through new builds and the monthly
     YouTube recheck. A hidden course video leaves its lesson, whose reading and quiz stay. Copies a learner already
     saved for offline stay on their device.
+  - **Blog:** staff write posts with a cover picture, and save drafts or publish them to the website. Posts use `##`
+    headings, `-` lists, `**bold**` and `[links](https://…)`, and are shown as text, so they can't carry HTML.
   - **What it leaves out:** learners' chats, notes, uploads and study answers. Refunds and charges stay in Flutterwave.
   - **Records:** replies are signed with the staff member's email, and every change is kept in `AdminAction`, shown
     under Settings. Superadmins can't be restricted from the dashboard.

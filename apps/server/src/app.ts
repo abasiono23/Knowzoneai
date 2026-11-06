@@ -8,6 +8,7 @@ import { AppError, notFound } from './lib/errors.js';
 import { accountRouter } from './routes/account.js';
 import { adminRouter } from './routes/admin.js';
 import { billingRouter } from './routes/billing.js';
+import { blogRouter } from './routes/blog.js';
 import { catalogRouter } from './routes/catalog.js';
 import { coursesRouter } from './routes/courses.js';
 import { examsRouter } from './routes/exams.js';
@@ -96,6 +97,7 @@ export function createApp() {
   app.use(subjectVideosRouter);
   app.use(watchRouter);
   app.use(waitlistRouter);
+  app.use(blogRouter);
   app.use(adminRouter);
   app.use(booksRouter);
   app.use(studyRoomsRouter);

@@ -1329,6 +1329,32 @@ model AdminAction {
   @@index([createdAt])
 }
 
+/// A post on the website's blog, written in the staff dashboard.
+model BlogPost {
+  id          String    @id @default(cuid())
+  slug        String    @unique
+  title       String
+  excerpt     String    @default("")
+  body        String    @default("")
+  author      String    @default("The Knowzone team")
+  /// Path of an uploaded BlogImage.
+  coverImage  String?
+  /// draft | published
+  status      String    @default("draft")
+  publishedAt DateTime?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  @@index([status, publishedAt])
+}
+
+model BlogImage {
+  id        String   @id
+  mimeType  String
+  data      Bytes
+  createdAt DateTime @default(now())
+}
+
 model WaitlistEntry {
   id        String   @id @default(cuid())
   /// Lower-cased.
