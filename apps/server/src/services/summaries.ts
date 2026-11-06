@@ -188,9 +188,22 @@ export function allSummaryCards(lang: LanguageId) {
         short: t.short,
         keywords: t.keywords,
         english: en ? `${en.title} ${en.keywords.join(' ')}` : '',
+        languages: Object.keys(text),
       };
     };
     return [one(OVERVIEW, lib.overview), ...lib.topics.map((t) => one(t.id, t.text))];
+  });
+}
+
+/** How far each library's translations have got, for the staff dashboard. */
+export function summaryLibrariesReport() {
+  return LIBRARIES.flatMap((id) => {
+    const lib = library(id);
+    if (!lib) return [];
+    const missing = ['en', 'pcm', 'yo', 'ig', 'ha', 'fr', 'ar', 'sw', 'pt', 'es']
+      .map((language) => ({ language, topics: lib.topics.filter((t) => !t.text[language]).length }))
+      .filter((m) => m.topics > 0);
+    return [{ id, name: pick(lib.name, 'en'), topics: lib.topics.length, missing }];
   });
 }
 

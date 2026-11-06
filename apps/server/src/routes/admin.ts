@@ -8,6 +8,7 @@ import { forbidden, notFound } from '../lib/errors.js';
 import { allCountries, allCourseBooks } from '../services/books.js';
 import { decideAppeal, staffReply, type Restriction } from '../services/help.js';
 import { requireAuth } from '../services/sessions.js';
+import { adminLibraryRouter } from './admin-library.js';
 import { allSkills } from '../services/skills.js';
 import { allVideoTopics } from '../services/subject-videos.js';
 import { allSummaryCards } from '../services/summaries.js';
@@ -33,6 +34,7 @@ function onlyAdmins(req: Request, _res: Response, next: NextFunction) {
 }
 
 adminRouter.use('/admin', requireAuth, onlyAdmins);
+adminRouter.use(adminLibraryRouter);
 
 const audit = (req: Request, action: string, target: string) =>
   console.info(`[admin] ${req.user!.email} ${action} ${target}`);

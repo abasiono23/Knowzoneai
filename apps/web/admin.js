@@ -62,6 +62,9 @@
     suspended: 'bad',
     restricted: 'warn',
     hidden: 'bad',
+    gone: 'bad',
+    free: 'good',
+    paid: '',
   };
   const tag = (text) => h('span', { class: `tag ${STATUS_LOOK[text] ?? ''}` }, text);
 
@@ -246,6 +249,7 @@
     ['reports', 'Reports'],
     ['billing', 'Billing'],
     ['waitlist', 'Waitlist'],
+    ['library', 'Library'],
   ];
   let me = null;
   let main = null;
@@ -926,6 +930,183 @@
     ];
   }
 
+  /* ---------- Library ---------- */
+
+  const libraryState = { view: 'videos', q: '', page: 1, source: 'all', set: 'all', country: 'all', price: 'all', cover: 'all', library: 'all' };
+
+  const outLink = (url, text) => (/^https:\/\//.test(url ?? '') ? h('a', { href: url, target: '_blank', rel: 'noopener noreferrer' }, text) : null);
+  const minutes = (s) => `${Math.max(1, Math.round(s / 60))} min`;
+
+  async function libraryPage() {
+    const s = libraryState;
+    const reload = () => show(libraryPage);
+    const set = (key) => (value) => {
+      s[key] = value;
+      s.page = 1;
+      reload();
+    };
+    const switcher = select('Show', s.view, [['videos', 'Videos'], ['books', 'Books'], ['summaries', 'Summaries'], ['gaps', 'What’s missing']], (v) => {
+      s.view = v;
+      s.q = '';
+      s.page = 1;
+      reload();
+    });
+    const paging = (data) =>
+      pager(s.page, data, (p) => {
+        s.page = p;
+        reload();
+      });
+    const search = h('input', { type: 'search', value: s.q, placeholder: 'Search', 'aria-label': 'Search the library' });
+    const bar = (...filters) =>
+      h(
+        'form',
+        {
+          class: 'bar',
+          onSubmit: (e) => {
+            e.preventDefault();
+            s.q = search.value.trim();
+            s.page = 1;
+            reload();
+          },
+        },
+        switcher,
+        filters,
+        search,
+        h('button', { type: 'submit' }, 'Find'),
+      );
+    const intro = h('p', { class: 'muted' }, 'Everything learners can open. New videos and books still arrive through the content sets.');
+
+    if (s.view === 'gaps') {
+      const g = await api('/admin/library/gaps');
+      const thin = g.videos.filter((v) => v.thinTopics.length);
+      return [
+        h('h1', null, 'Library'),
+        h('div', { class: 'bar' }, switcher),
+        h('h2', null, 'Video sets with thin topics'),
+        h('p', { class: 'muted' }, 'A thin topic has fewer than two videos.'),
+        thin.length
+          ? table(
+              ['Set', 'Videos', 'Topics', 'Thin topics'],
+              thin.map((v) => [v.name, number(v.videos), number(v.topics), `${v.thinTopics.length}: ${v.thinTopics.join(', ')}`]),
+            )
+          : empty('Every topic has at least two videos.'),
+        h('h2', null, 'Books by country'),
+        table(
+          ['Country', 'Books', 'Free', 'No cover', 'Subjects with no books'],
+          [
+            ...g.books.countries.map((c) => [c.name, number(c.books), number(c.free), number(c.noCover), c.emptySubjects.join(', ') || '—']),
+            ['University and college courses', number(g.books.courses.books), number(g.books.courses.free), number(g.books.courses.noCover), '—'],
+          ],
+        ),
+        h('h2', null, 'Summary translations'),
+        table(
+          ['Subject', 'Topics', 'Topics still missing a language'],
+          g.summaries.map((l) => [l.name, number(l.topics), l.missing.map((m) => `${m.language}: ${m.topics}`).join(', ') || 'All 10 languages done']),
+        ),
+      ];
+    }
+
+    if (s.view === 'books') {
+      const params = new URLSearchParams({ page: s.page, country: s.country, price: s.price, cover: s.cover, ...(s.q && { q: s.q }) });
+      const data = await api(`/admin/library/books?${params}`);
+      return [
+        h('h1', null, 'Library'),
+        intro,
+        bar(
+          select('Country', s.country, [['all', 'All countries'], ...data.countries.map((c) => [c.id, c.name]), ['courses', 'University and college']], set('country')),
+          select('Price', s.price, [['all', 'Free and paid'], ['free', 'Free'], ['paid', 'Paid']], set('price')),
+          select('Cover', s.cover, [['all', 'With or without cover'], ['missing', 'No cover']], set('cover')),
+        ),
+        data.items.length
+          ? table(
+              ['Book', 'Price', 'Where', 'Subjects'],
+              data.items.map((b) => [
+                h(
+                  'div',
+                  { class: 'item' },
+                  b.cover ? h('img', { class: 'cover', src: b.cover, alt: '', loading: 'lazy' }) : h('div', { class: 'cover' }),
+                  h('div', null, h('div', null, b.title), h('div', { class: 'muted' }, [b.authors.join(', '), b.publisher].filter(Boolean).join(' · ')), outLink(b.readUrl, 'Open')),
+                ),
+                b.free ? tag('free') : tag('paid'),
+                b.countries.join(', '),
+                b.subjects.join(', '),
+              ]),
+            )
+          : empty('Nothing matches that.'),
+        paging(data),
+      ];
+    }
+
+    if (s.view === 'summaries') {
+      const params = new URLSearchParams({ page: s.page, library: s.library, ...(s.q && { q: s.q }) });
+      const data = await api(`/admin/library/summaries?${params}`);
+      return [
+        h('h1', null, 'Library'),
+        intro,
+        bar(select('Subject', s.library, [['all', 'All subjects'], ...data.libraries.map((l) => [l.id, l.name])], set('library'))),
+        data.items.length
+          ? table(
+              ['Summary', 'Subject', 'Languages'],
+              data.items.map((c) => [
+                [h('button', { type: 'button', class: 'link', onClick: () => show(() => summaryPage(c.library, c.id, 'en')) }, c.title), h('div', { class: 'muted' }, c.short)],
+                c.libraryName,
+                c.languages.length,
+              ]),
+            )
+          : empty('Nothing matches that.'),
+        paging(data),
+      ];
+    }
+
+    const params = new URLSearchParams({ page: s.page, source: s.source, set: s.set, ...(s.q && { q: s.q }) });
+    const data = await api(`/admin/library/videos?${params}`);
+    return [
+      h('h1', null, 'Library'),
+      intro,
+      bar(
+        select('From', s.source, [['all', 'All videos'], ['subject', 'School subjects'], ['course', 'Courses'], ['skill', 'Future skills']], set('source')),
+        select('Set', s.set, [['all', 'All sets'], ...data.sets.map((x) => [x.id, x.name])], set('set')),
+      ),
+      data.items.length
+        ? table(
+            ['Video', 'Length', 'Where it appears', 'Status'],
+            data.items.map((v) => [
+              h(
+                'div',
+                { class: 'item' },
+                h('img', { class: 'thumb', src: `https://i.ytimg.com/vi/${encodeURIComponent(v.youtubeId)}/mqdefault.jpg`, alt: '', loading: 'lazy' }),
+                h('div', null, h('div', null, v.title), h('div', { class: 'muted' }, v.channel), outLink(`https://www.youtube.com/watch?v=${encodeURIComponent(v.youtubeId)}`, 'Watch on YouTube')),
+              ),
+              minutes(v.seconds),
+              v.places.join('; '),
+              v.gone ? tag('gone') : tag('active'),
+            ]),
+          )
+        : empty('Nothing matches that.'),
+      paging(data),
+    ];
+  }
+
+  const SUMMARY_LANGUAGES = [['en', 'English'], ['pcm', 'Pidgin'], ['yo', 'Yoruba'], ['ig', 'Igbo'], ['ha', 'Hausa'], ['fr', 'French'], ['ar', 'Arabic'], ['sw', 'Swahili'], ['pt', 'Portuguese'], ['es', 'Spanish']];
+
+  async function summaryPage(library, topic, lang) {
+    const d = await api(`/admin/library/summaries/${encodeURIComponent(library)}/${encodeURIComponent(topic)}?lang=${lang}`);
+    return [
+      h('div', null, h('button', { type: 'button', class: 'link', onClick: () => show(libraryPage) }, '← Library')),
+      h('h1', { class: 'wrap' }, d.title),
+      h('div', { class: 'bar' }, select('Language', lang, SUMMARY_LANGUAGES, (l) => show(() => summaryPage(library, topic, l)))),
+      !d.translated && h('p', { class: 'muted' }, 'Not translated into this language yet, so this is the English.'),
+      h(
+        'section',
+        { class: 'card summary-text', dir: d.translated && lang === 'ar' ? 'rtl' : undefined },
+        h('p', { class: 'muted' }, d.short),
+        d.sections.map((x) => [h('h3', null, x.heading), h('p', { class: 'wrap' }, x.text)]),
+        h('h3', null, 'Key points'),
+        h('ul', null, d.keyPoints.map((k) => h('li', null, k))),
+      ),
+    ];
+  }
+
   const PAGE_LOADERS = {
     overview: overviewPage,
     users: usersPage,
@@ -933,6 +1114,7 @@
     reports: reportsPage,
     billing: billingPage,
     waitlist: waitlistPage,
+    library: libraryPage,
   };
 
   /* ---------- Starting up ---------- */

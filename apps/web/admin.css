@@ -52,6 +52,11 @@ p {
   margin: 0;
 }
 
+a {
+  color: var(--purple-deep);
+  font-weight: 700;
+}
+
 button,
 input,
 select,
@@ -335,6 +340,44 @@ tr:last-child td {
   border-bottom: 0;
 }
 
+/* The library */
+.thumb {
+  display: block;
+  width: 112px;
+  height: 63px;
+  border-radius: 8px;
+  background: var(--page);
+  object-fit: cover;
+}
+.cover {
+  display: block;
+  width: 48px;
+  height: 66px;
+  border-radius: 6px;
+  background: var(--page);
+  object-fit: contain;
+}
+.item {
+  display: flex;
+  gap: 12px;
+  min-width: 240px;
+}
+.summary-text {
+  display: grid;
+  gap: 10px;
+}
+.summary-text h3 {
+  margin-top: 8px;
+  color: var(--ink);
+  font-size: 15px;
+  letter-spacing: 0;
+  text-transform: none;
+}
+.summary-text ul {
+  margin: 0;
+  padding-inline-start: 20px;
+}
+
 /* A support thread */
 .thread {
   display: grid;
@@ -428,5 +471,8 @@ tr:last-child td {
   }
   .message {
     max-width: 100%;
+  }
+  .item {
+    min-width: 0;
   }
 }

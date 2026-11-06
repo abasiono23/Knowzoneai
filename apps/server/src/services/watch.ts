@@ -37,7 +37,8 @@ export async function watchVideos(): Promise<WatchVideo[]> {
   const seen = new Set<string>();
   const videos: WatchVideo[] = [];
   for (const l of lessons) {
-    const v = (l.content as { video?: { youtubeId?: string; title?: string; channel?: string; seconds?: number } }).video;
+    const v = (l.content as { video?: { youtubeId?: string; title?: string; channel?: string; seconds?: number } })
+      .video;
     if (!v?.youtubeId || seen.has(v.youtubeId)) continue;
     seen.add(v.youtubeId);
     videos.push({
@@ -56,6 +57,9 @@ export async function watchVideos(): Promise<WatchVideo[]> {
   cache = { at: Date.now(), videos };
   return videos;
 }
+
+/** Every course video, for the staff dashboard. */
+export const allCourseVideos = watchVideos;
 
 /** Tests and the course import start from a fresh list. */
 export const forgetWatchVideos = () => {

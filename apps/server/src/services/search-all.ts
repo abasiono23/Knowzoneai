@@ -14,7 +14,7 @@ import { watchVideos } from './watch.js';
  */
 const LIMIT = 20;
 
-const fold = (s: string) =>
+export const fold = (s: string) =>
   s
     .toLowerCase()
     .normalize('NFD')
@@ -70,7 +70,7 @@ export async function searchEverything(lang: LanguageId, query: string, country?
     words,
     (s) => s.title,
     (s) => `${s.title} ${s.short} ${s.libraryName} ${s.keywords.join(' ')} ${s.english}`,
-  ).map(({ keywords: _k, english: _e, ...s }) => s);
+  ).map(({ keywords: _k, english: _e, languages: _l, ...s }) => s);
 
   const course = await watchVideos();
   const skillVideos = allSkills().flatMap((s) => {

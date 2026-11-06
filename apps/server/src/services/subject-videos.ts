@@ -215,6 +215,46 @@ export function allVideoTopics(lang: LanguageId) {
   });
 }
 
+/** True once YouTube says a video was deleted, made private or can't be embedded. */
+export const isGoneVideo = (youtubeId: string) => fresh.get(youtubeId) === null;
+
+/** Every chosen video where it appears, including any that are gone, for the staff dashboard. */
+export function allVideoPlaces() {
+  return allSets().flatMap((id) => {
+    const lib = library(id);
+    if (!lib) return [];
+    const { libraryName, topics } = cards(id, lib, 'en');
+    return lib.topics.flatMap((t) =>
+      t.videos.map((v) => ({
+        ...(liveVideo(v) ?? v),
+        library: id,
+        libraryName,
+        topic: t.id,
+        topicTitle: topics.find((c) => c.id === t.id)?.title ?? t.id,
+      })),
+    );
+  });
+}
+
+/** How full each video set is. A topic with fewer than two videos counts as thin. */
+export function videoSetsReport() {
+  return allSets().flatMap((id) => {
+    const lib = library(id);
+    if (!lib) return [];
+    const { libraryName, topics } = cards(id, lib, 'en');
+    const name = (topic: string) => topics.find((c) => c.id === topic)?.title ?? topic;
+    return [
+      {
+        id,
+        name: libraryName,
+        topics: lib.topics.length,
+        videos: lib.topics.reduce((n, t) => n + t.videos.length, 0),
+        thinTopics: lib.topics.filter((t) => t.videos.length < 2).map((t) => name(t.id)),
+      },
+    ];
+  });
+}
+
 /** One topic's videos, for the lesson screen's "next video". */
 export function videoTopic(libraryId: string, topic: string, lang: LanguageId) {
   if (!/^[a-z-]+$/.test(libraryId)) return null;
