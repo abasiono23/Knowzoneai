@@ -68,12 +68,14 @@ export default function SubjectVideo() {
               onPress={() => router.replace(`/books/video/${library}/${topic}/${next.youtubeId}` as Href)}
             />
           )}
-          <Button
-            title={t('shelf.videoSummary')}
-            icon="document-text"
-            variant="secondary"
-            onPress={() => router.push(`/books/summary/${library}/${topic}` as Href)}
-          />
+          {detail.hasSummary && (
+            <Button
+              title={t('shelf.videoSummary')}
+              icon="document-text"
+              variant="secondary"
+              onPress={() => router.push(`/books/summary/${library}/${topic}` as Href)}
+            />
+          )}
         </>
       )}
     </Screen>

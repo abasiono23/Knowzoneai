@@ -130,7 +130,7 @@ export default {
     videosReelsBody: 'Swipe through fun facts from this subject',
     videosNone: 'Nothing matches that. Try another word.',
     videosLoadFailed: 'We couldn’t load the videos. Check your connection and try again.',
-    videosEnglish: 'Videos are in English and play in YouTube’s player.',
+    videosEnglish: 'Most videos are in English and play in YouTube’s player.',
     videoMinutes: '{{n}} min',
     videoNext: 'Next video',
     videoSummary: 'Read the summary',

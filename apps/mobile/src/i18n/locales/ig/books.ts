@@ -139,7 +139,7 @@ const books: Translation<typeof en> = {
     videosReelsBody: 'Lelee ihe ndị na-atọ ụtọ gbasara ọmụmụ a',
     videosNone: 'Ọ dịghị ihe dabara na nke ahụ. Nwaa okwu ọzọ.',
     videosLoadFailed: 'Anyị enweghị ike imepe vidiyo ndị a. Lelee njikọ gị ma nwaa ọzọ.',
-    videosEnglish: 'Vidiyo ndị a dị n’asụsụ Bekee, ha na-egwu na YouTube.',
+    videosEnglish: 'Ihe ka ọtụtụ n’ime vidiyo ndị a dị n’asụsụ Bekee, ha na-egwu na YouTube.',
     videoMinutes: 'nkeji {{n}}',
     videoNext: 'Vidiyo na-esote',
     videoSummary: 'Gụọ nchịkọta ya',

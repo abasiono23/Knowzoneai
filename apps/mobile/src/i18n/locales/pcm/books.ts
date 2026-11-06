@@ -139,7 +139,7 @@ const books: Translation<typeof en> = {
     videosReelsBody: 'Swipe through fun facts from this subject',
     videosNone: 'Nothing match that one. Try another word.',
     videosLoadFailed: 'We no fit load the videos. Check your network come try again.',
-    videosEnglish: 'The videos dey for English and dem dey play for YouTube player.',
+    videosEnglish: 'Most of the videos dey for English and dem dey play for YouTube player.',
     videoMinutes: '{{n}} min',
     videoNext: 'Next video',
     videoSummary: 'Read the summary',

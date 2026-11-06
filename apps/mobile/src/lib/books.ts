@@ -361,6 +361,7 @@ export type VideoTopicDetail = {
   id: string;
   title: string;
   videos: SubjectVideo[];
+  hasSummary: boolean;
 };
 
 /** Summaries in these languages are AI translations still waiting for native speakers to check them. */

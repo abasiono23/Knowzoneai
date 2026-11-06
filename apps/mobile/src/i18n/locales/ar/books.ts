@@ -147,7 +147,7 @@ const books: Translation<typeof en> = {
     videosReelsBody: 'تصفّح معلومات ممتعة عن هذه المادة',
     videosNone: 'لا توجد نتائج مطابقة. جرّب كلمة أخرى.',
     videosLoadFailed: 'تعذّر تحميل الفيديوهات. تحقّق من اتصالك وحاول مجددًا.',
-    videosEnglish: 'الفيديوهات باللغة الإنجليزية وتعمل في مشغّل يوتيوب.',
+    videosEnglish: 'معظم الفيديوهات باللغة الإنجليزية وتعمل في مشغّل يوتيوب.',
     videoMinutes: '{{n}} دقيقة',
     videoNext: 'الفيديو التالي',
     videoSummary: 'اقرأ الملخّص',

@@ -79,6 +79,41 @@ describe('subject videos', () => {
     expect(body.reels).toEqual(['biology', 'human body', 'animals']);
   });
 
+  it('serves a set with its own topic names, for subjects without summaries', async () => {
+    useSubjectVideos(
+      [
+        videos('mathematics'),
+        videos('biology'),
+        {
+          id: 'history',
+          name: { en: 'History', fr: 'Histoire' },
+          topics: [
+            {
+              id: 'empires',
+              stage: 'upper',
+              title: { en: 'Empires', fr: 'Empires (fr)' },
+              videos: [video(4)],
+              flashcards: [],
+            },
+            { id: 'trade', stage: 'lower', title: { en: 'Trade', fr: 'Commerce' }, videos: [video(5)], flashcards: [] },
+          ],
+        },
+      ],
+      { 'history-government': ['history'] },
+    );
+    const { body } = await http()
+      .get('/books/countries/ng/subjects/history-government/videos?level=jss1')
+      .set('X-Language', 'fr')
+      .expect(200);
+    expect(body.topics.map((t: { id: string }) => t.id)).toEqual(['trade', 'empires']);
+    expect(body.topics[0]).toMatchObject({ title: 'Commerce', libraryName: 'Histoire', yours: true });
+    const one = await http().get('/books/videos/history/trade').expect(200);
+    expect(one.body.topic).toMatchObject({ title: 'Trade', hasSummary: false });
+    const math = await http().get('/books/videos/mathematics/first').expect(200);
+    expect(math.body.topic.hasSummary).toBe(true);
+    useSubjectVideos([videos('mathematics'), videos('biology')]);
+  });
+
   it('has nothing for other subjects', async () => {
     const { body } = await http().get('/books/countries/ng/subjects/yoruba/videos?level=ss1').expect(200);
     expect(body).toEqual({ reels: [], topics: [] });

@@ -142,7 +142,7 @@ const books: Translation<typeof en> = {
     videosReelsBody: 'Wo àwọn òtítọ́ tó dùn nípa ìmọ̀ yìí',
     videosNone: 'Kò sí ohun tó bá ìyẹn mu. Gbìyànjú ọ̀rọ̀ mìíràn.',
     videosLoadFailed: 'A kò lè ṣí àwọn fídíò náà. Ṣàyẹ̀wò ìsopọ̀ rẹ kí o sì gbìyànjú lẹ́ẹ̀kan sí i.',
-    videosEnglish: 'Èdè Gẹ̀ẹ́sì ni àwọn fídíò náà wà, inú ẹ̀rọ YouTube ni wọ́n sì ti ń ṣeré.',
+    videosEnglish: 'Èdè Gẹ̀ẹ́sì ni èyí tó pọ̀ jù nínú àwọn fídíò náà wà, inú ẹ̀rọ YouTube ni wọ́n sì ti ń ṣeré.',
     videoMinutes: 'ìṣẹ́jú {{n}}',
     videoNext: 'Fídíò tó kàn',
     videoSummary: 'Ka àkótán rẹ̀',

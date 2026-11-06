@@ -1,4 +1,4 @@
-import { existsSync, readFileSync } from 'node:fs';
+import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -7,7 +7,7 @@ import { z } from 'zod';
 import { config } from '../config.js';
 import type { LanguageId } from './personalization.js';
 import { allSkills } from './skills.js';
-import { librariesFor, libraryCards, type LibraryId, LIBRARIES } from './summaries.js';
+import { librariesFor, libraryCards, type LibraryId } from './summaries.js';
 
 /**
  * A school subject's Videos tab: YouTube lessons sorted by the same topics as its summaries, mixed with
@@ -20,8 +20,20 @@ const Video = z.object({
   channel: z.string().min(1),
   seconds: z.number().int().positive(),
 });
-const Topic = z.object({ id: z.string(), videos: z.array(Video), flashcards: z.array(z.string()) });
-const Library = z.object({ id: z.string(), topics: z.array(Topic) });
+const Localised = z.record(z.string(), z.string());
+const Topic = z.object({
+  id: z.string(),
+  videos: z.array(Video),
+  flashcards: z.array(z.string()),
+  // Sets without summaries bring their own topic names.
+  stage: z.string().optional(),
+  title: Localised.optional(),
+});
+const Library = z.object({
+  id: z.string().regex(/^[a-z-]+$/),
+  name: Localised.optional(),
+  topics: z.array(Topic),
+});
 export type VideoLibrary = z.infer<typeof Library>;
 type Video = z.infer<typeof Video>;
 
@@ -59,12 +71,43 @@ function library(id: string): VideoLibrary | null {
   return lib;
 }
 
+/** Which video sets each shelf subject reads, beyond the summaries' subjects (data/videos/subjects.json). */
+let shelves: Record<string, string[]> | null = null;
+function shelfSets(subject: string): string[] {
+  if (!shelves) {
+    const dir = folder();
+    const f = dir && join(dir, 'subjects.json');
+    shelves =
+      f && existsSync(f) ? z.record(z.string(), z.array(z.string())).parse(JSON.parse(readFileSync(f, 'utf8'))) : {};
+  }
+  return shelves[subject] ?? [];
+}
+
 /** Tests can put libraries in without the files. */
-export function useSubjectVideos(list: VideoLibrary[] | null) {
+export function useSubjectVideos(list: VideoLibrary[] | null, subjects: Record<string, string[]> = {}) {
   loaded.clear();
   fresh.clear();
   refreshedAt = 0;
+  shelves = list ? subjects : null;
   for (const lib of list ?? []) loaded.set(lib.id, lib);
+}
+
+function allSets() {
+  const dir = folder();
+  const files = dir ? readdirSync(dir).filter((f) => f.endsWith('.json') && f !== 'subjects.json') : [];
+  return [...new Set([...files.map((f) => f.slice(0, -5)), ...loaded.keys()])];
+}
+
+const pick = (t: Record<string, string>, lang: LanguageId) => t[lang] ?? t.en ?? '';
+
+/** A set's name and topics in one language: its own, or those of the summaries it shares topics with. */
+function cards(id: string, lib: VideoLibrary, lang: LanguageId) {
+  if (lib.name)
+    return {
+      libraryName: pick(lib.name, lang),
+      topics: lib.topics.map((t) => ({ id: t.id, stage: t.stage ?? '', title: pick(t.title ?? {}, lang) })),
+    };
+  return libraryCards(id as LibraryId, lang);
 }
 
 /**
@@ -85,7 +128,7 @@ export async function refreshSubjectVideos(now = Date.now()) {
   const key = config.YOUTUBE_API_KEY;
   if (!key || now - refreshedAt < REFRESH_AFTER) return;
   const ids = new Set<string>();
-  for (const id of LIBRARIES) for (const t of library(id)?.topics ?? []) for (const v of t.videos) ids.add(v.youtubeId);
+  for (const id of allSets()) for (const t of library(id)?.topics ?? []) for (const v of t.videos) ids.add(v.youtubeId);
   for (const s of allSkills()) for (const v of s.videos) ids.add(v.youtubeId);
   const list = [...ids];
   for (let i = 0; i < list.length; i += 50) {
@@ -137,12 +180,12 @@ const liveTopic = (t: VideoLibrary['topics'][number]) => ({
  * the student's stage first. Other topics stay, for revising and searching.
  */
 export function videosFor(subject: string, stage: string | undefined, lang: LanguageId) {
-  const libs = librariesFor(subject);
+  const libs = [...new Set<string>([...librariesFor(subject), ...shelfSets(subject)])];
   const topics = libs.flatMap((id) => {
     const lib = library(id);
     if (!lib) return [];
-    const { libraryName, topics: cards } = libraryCards(id, lang);
-    return cards.flatMap((card) => {
+    const { libraryName, topics: list } = cards(id, lib, lang);
+    return list.flatMap((card) => {
       const t = lib.topics.find((x) => x.id === card.id);
       if (!t) return [];
       const { videos, flashcards } = liveTopic(t);
@@ -151,17 +194,25 @@ export function videosFor(subject: string, stage: string | undefined, lang: Lang
     });
   });
   return {
-    reels: libs.flatMap((id) => REELS[id] ?? []),
+    reels: libs.flatMap((id) => REELS[id as LibraryId] ?? []),
     topics: [...topics.filter((t) => t.yours), ...topics.filter((t) => !t.yours)],
   };
 }
 
 /** One topic's videos, for the lesson screen's "next video". */
 export function videoTopic(libraryId: string, topic: string, lang: LanguageId) {
-  if (!(LIBRARIES as readonly string[]).includes(libraryId) && !loaded.has(libraryId)) return null;
-  const t = library(libraryId)?.topics.find((x) => x.id === topic);
-  if (!t) return null;
-  const { libraryName, topics } = libraryCards(libraryId as LibraryId, lang);
+  if (!/^[a-z-]+$/.test(libraryId)) return null;
+  const lib = library(libraryId);
+  const t = lib?.topics.find((x) => x.id === topic);
+  if (!lib || !t) return null;
+  const { libraryName, topics } = cards(libraryId, lib, lang);
   const card = topics.find((c) => c.id === topic);
-  return { library: libraryId, libraryName, id: topic, title: card?.title ?? topic, videos: liveTopic(t).videos };
+  return {
+    library: libraryId,
+    libraryName,
+    id: topic,
+    title: card?.title ?? topic,
+    videos: liveTopic(t).videos,
+    hasSummary: !lib.name,
+  };
 }

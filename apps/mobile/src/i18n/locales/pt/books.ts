@@ -142,7 +142,7 @@ const books: Translation<typeof en> = {
     videosReelsBody: 'Vê curiosidades sobre esta disciplina',
     videosNone: 'Nada corresponde. Tenta outra palavra.',
     videosLoadFailed: 'Não foi possível carregar os vídeos. Verifica a tua ligação e tenta novamente.',
-    videosEnglish: 'Os vídeos estão em inglês e são reproduzidos no YouTube.',
+    videosEnglish: 'A maioria dos vídeos está em inglês e é reproduzida no YouTube.',
     videoMinutes: '{{n}} min',
     videoNext: 'Vídeo seguinte',
     videoSummary: 'Ler o resumo',

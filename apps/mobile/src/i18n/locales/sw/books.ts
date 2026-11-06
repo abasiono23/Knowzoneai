@@ -139,7 +139,7 @@ const books: Translation<typeof en> = {
     videosReelsBody: 'Pitia mambo ya kuvutia kuhusu somo hili',
     videosNone: 'Hakuna kinacholingana. Jaribu neno lingine.',
     videosLoadFailed: 'Hatukuweza kupakia video. Angalia muunganisho wako kisha ujaribu tena.',
-    videosEnglish: 'Video ziko kwa Kiingereza na zinacheza kwenye YouTube.',
+    videosEnglish: 'Video nyingi ziko kwa Kiingereza na zinacheza kwenye YouTube.',
     videoMinutes: 'dakika {{n}}',
     videoNext: 'Video inayofuata',
     videoSummary: 'Soma muhtasari',

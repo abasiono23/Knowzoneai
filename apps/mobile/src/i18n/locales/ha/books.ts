@@ -140,7 +140,7 @@ const books: Translation<typeof en> = {
     videosReelsBody: 'Duba abubuwan ban sha’awa game da wannan darasi',
     videosNone: 'Babu abin da ya dace da wannan. Gwada wata kalma.',
     videosLoadFailed: 'Ba mu iya loda bidiyon ba. Duba haɗin intanet ɗinka ka sake gwadawa.',
-    videosEnglish: 'Bidiyon da Turanci suke, kuma suna kunnawa a YouTube.',
+    videosEnglish: 'Yawancin bidiyon da Turanci suke, kuma suna kunnawa a YouTube.',
     videoMinutes: 'minti {{n}}',
     videoNext: 'Bidiyo na gaba',
     videoSummary: 'Karanta taƙaitawa',
