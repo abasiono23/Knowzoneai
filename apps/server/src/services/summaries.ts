@@ -45,7 +45,7 @@ export const LIBRARIES = [
   'computer-studies',
   'agricultural-science',
 ] as const;
-type LibraryId = (typeof LIBRARIES)[number];
+export type LibraryId = (typeof LIBRARIES)[number];
 
 const SCIENCE: LibraryId[] = ['biology', 'chemistry', 'physics'];
 const COMPUTING: LibraryId[] = ['computer-studies'];
@@ -149,6 +149,18 @@ export function summariesFor(subject: string, stage: string | undefined, lang: L
       ...card(pick(lib.overview, lang)),
     })),
     topics: [...topics.filter((t) => t.yours), ...topics.filter((t) => !t.yours)],
+  };
+}
+
+/** The libraries a shelf subject reads, whatever its country calls it. */
+export const librariesFor = (subject: string): LibraryId[] => FOR_SUBJECT[subject] ?? [];
+
+/** A library's name and topics in one language, for the Videos tab. */
+export function libraryCards(id: LibraryId, lang: LanguageId) {
+  const lib = library(id);
+  return {
+    libraryName: lib ? pick(lib.name, lang) : id,
+    topics: (lib?.topics ?? []).map((t) => ({ id: t.id, stage: t.stage, title: pick(t.text, lang).title })),
   };
 }
 

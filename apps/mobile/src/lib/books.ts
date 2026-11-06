@@ -334,8 +334,33 @@ export const booksApi = {
   /** A school subject's course summary and topics, with the ones for the student's class first. */
   summaries: (catalogue: string, id: string, level: string) =>
     request<SummaryList>(`/books/countries/${catalogue}/subjects/${id}/summaries?level=${level}`),
+  /** A school subject's videos and flashcard lessons by topic, with the student's class first. */
+  videos: (catalogue: string, id: string, level: string) =>
+    request<VideoList>(`/books/countries/${catalogue}/subjects/${id}/videos?level=${level}`),
+  videoTopic: (library: string, topic: string) =>
+    request<{ topic: VideoTopicDetail }>(`/books/videos/${library}/${topic}`),
   summary: (library: string, topic: string, english?: boolean) =>
     request<{ summary: Summary }>(`/books/summaries/${library}/${topic}${english ? '?lang=en' : ''}`),
+};
+
+export type SubjectVideo = { youtubeId: string; title: string; channel: string; seconds: number };
+export type VideoTopic = {
+  library: string;
+  libraryName: string;
+  id: string;
+  stage: string;
+  title: string;
+  yours: boolean;
+  videos: SubjectVideo[];
+  flashcards: { id: string; title: string; cover?: string }[];
+};
+export type VideoList = { reels: string[]; topics: VideoTopic[] };
+export type VideoTopicDetail = {
+  library: string;
+  libraryName: string;
+  id: string;
+  title: string;
+  videos: SubjectVideo[];
 };
 
 /** Summaries in these languages are AI translations still waiting for native speakers to check them. */

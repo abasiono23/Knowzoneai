@@ -12,6 +12,7 @@ import { coursesRouter } from './routes/courses.js';
 import { examsRouter } from './routes/exams.js';
 import { reelsRouter } from './routes/reels.js';
 import { skillsRouter } from './routes/skills.js';
+import { subjectVideosRouter } from './routes/subject-videos.js';
 import { summariesRouter } from './routes/summaries.js';
 import { waitlistRouter } from './routes/waitlist.js';
 import { watchRouter } from './routes/watch.js';
@@ -62,7 +63,8 @@ export function createApp() {
     const autoplay = req.query.autoplay === '1' ? '&autoplay=1' : '';
     res
       .set({
-        'Content-Security-Policy': "default-src 'none'; frame-src https://www.youtube-nocookie.com https://www.youtube.com; style-src 'unsafe-inline'",
+        'Content-Security-Policy':
+          "default-src 'none'; frame-src https://www.youtube-nocookie.com https://www.youtube.com; style-src 'unsafe-inline'",
         'Referrer-Policy': 'strict-origin-when-cross-origin',
         'Cache-Control': 'public, max-age=86400',
       })
@@ -90,6 +92,7 @@ export function createApp() {
   app.use(reelsRouter);
   app.use(skillsRouter);
   app.use(summariesRouter);
+  app.use(subjectVideosRouter);
   app.use(watchRouter);
   app.use(waitlistRouter);
   app.use(booksRouter);

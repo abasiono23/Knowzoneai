@@ -5,6 +5,7 @@ import { fileURLToPath } from 'node:url';
 import { z } from 'zod';
 
 import type { LanguageId } from './personalization.js';
+import { liveVideo } from './subject-videos.js';
 
 /**
  * Future skills (Explore): coding, UI/UX design, cybersecurity, AI prompting and data science. Each is
@@ -72,6 +73,9 @@ export function skillFor(id: string, lang: LanguageId) {
     id: s.id,
     name: pick(s.name, lang),
     summary: pick(s.summary, lang),
-    videos: s.videos.map((v) => ({ ...v, summary: pick(v.summary, lang) })),
+    videos: s.videos.flatMap((v) => {
+      const live = liveVideo(v);
+      return live ? [{ ...live, summary: pick(v.summary, lang) }] : [];
+    }),
   };
 }

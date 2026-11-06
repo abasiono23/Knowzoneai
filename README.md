@@ -772,6 +772,16 @@ Each of 10 subjects has one long summary of the whole course and a searchable li
 - **Files:** working files are outside the repo (`knowzone-summaries`): `en/<subject>.json`, `<language>/<subject>.json`, `ready.json` and the writing, review, translation and proofreading briefs. `npx tsx scripts/summaries-build.ts <folder> [subject...]` checks them and writes `data/summaries/<subject>.json`.
 - **Endpoints:** `GET /books/countries/:country/subjects/:subject/summaries?level=`; `GET /books/summaries/:library/:topic` (`overview` is the whole course, `?lang=en` is the Read in English button).
 
+### Subject videos (a school subject's Videos tab)
+
+About 1,025 YouTube lessons sorted by the same topics as the summaries, across the same 10 subjects and country subject names, mixed with Knowzone's own flashcards.
+
+- **On the tab:** search; All, Quick (up to 10 minutes), Full lessons and Flashcards filters; a "Did you know?" link to that subject's reels; and topics that open to show their videos and flashcard lessons, with the student's class first. A topic stays closed until tapped, so a long list doesn't load every thumbnail at once. A lesson has the player, Next video and Read the summary.
+- **How they were chosen:** through the official YouTube Data API, never by scraping. `scripts/videos-harvest.ts` reads the uploads of trusted education channels, then searches for short topics. `scripts/videos-gapfill.ts` runs a search written for each topic still short. Reviewers picked 2–4 per topic from titles, channels, lengths and descriptions, without watching the videos, so a teacher should sample them. `scripts/videos-build.ts` checks every id and writes `data/videos/<subject>.json`. Working files are outside the repo (`knowzone-videos`).
+- **Nothing is downloaded:** videos play in YouTube's own player, and are in English. Titles stay as their creators wrote them, while topic names, filters and flashcard titles follow the app language.
+- **Kept current:** YouTube's policies require API data to be refreshed within 30 days. `refreshSubjectVideos` rechecks these and the Future skills videos every 25 days and at server start (about 25 quota units), and hides any that were deleted, made private or can't be embedded. It needs `YOUTUBE_API_KEY` on the server.
+- **Endpoints:** `GET /books/countries/:country/subjects/:subject/videos?level=`; `GET /books/videos/:library/:topic`. `GET /reels?subject=` takes several subjects, comma separated.
+
 ### Your books (Explore → "Check out your books")
 
 - **The questions:**
@@ -791,7 +801,7 @@ Each of 10 subjects has one long summary of the whole course and a searchable li
   - Answers are saved on the phone. Answers saved by the first, Nigeria-only version are upgraded.
 - **Shelves (secondary school):**
   - Each student gets one card per subject for their class and stream. A card opens the subject's textbooks.
-  - The Summaries tab is below; the Videos tab comes next.
+  - The Summaries and Videos tabs are described above.
 - **Books:** one file per country, `data/books/<country>.json`, holding its classes, streams, subjects and books.
 
   | Country | Classes | Books | Free | Sources |

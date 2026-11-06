@@ -38,7 +38,10 @@ function author(u: Pick<User, 'name' | 'photo' | 'settings'>) {
   if (settingsOf(u as User).privacy.profileVisibility !== 'everyone') return { name: null };
   const [first, last] = u.name.trim().split(/\s+/);
   const photo = u.photo as { kind?: string; uri?: string } | null;
-  return { name: `${first}${last ? ` ${last[0]}.` : ''}`, ...(photo?.kind === 'photo' && photo.uri && { photo: photo.uri }) };
+  return {
+    name: `${first}${last ? ` ${last[0]}.` : ''}`,
+    ...(photo?.kind === 'photo' && photo.uri && { photo: photo.uri }),
+  };
 }
 
 /** The feed: every reel in the learner's language, with likes and comment counts. */
@@ -46,16 +49,23 @@ reelsRouter.get('/reels', optionalAuth, async (req, res) => {
   const lang = requestLanguage(req);
   const subject = typeof req.query.subject === 'string' ? req.query.subject : null;
   const list = feedOrder(
-    allReels().filter((r) => !subject || r.subject === subject),
+    allReels().filter((r) => !subject || subject.split(',').includes(r.subject)),
     req.user?.id ?? 'guest',
   );
   const ids = list.map((r) => r.id);
   const [likes, comments, mine] = await Promise.all([
     prisma.reelLike.groupBy({ by: ['reelId'], where: { reelId: { in: ids } }, _count: { _all: true } }),
-    prisma.reelComment.groupBy({ by: ['reelId'], where: { reelId: { in: ids }, hidden: false }, _count: { _all: true } }),
-    req.user ? prisma.reelLike.findMany({ where: { userId: req.user.id, reelId: { in: ids } }, select: { reelId: true } }) : [],
+    prisma.reelComment.groupBy({
+      by: ['reelId'],
+      where: { reelId: { in: ids }, hidden: false },
+      _count: { _all: true },
+    }),
+    req.user
+      ? prisma.reelLike.findMany({ where: { userId: req.user.id, reelId: { in: ids } }, select: { reelId: true } })
+      : [],
   ]);
-  const count = (rows: { reelId: string; _count: { _all: number } }[], id: string) => rows.find((x) => x.reelId === id)?._count._all ?? 0;
+  const count = (rows: { reelId: string; _count: { _all: number } }[], id: string) =>
+    rows.find((x) => x.reelId === id)?._count._all ?? 0;
   res.json({
     reels: list.map((r) => ({
       id: r.id,
@@ -92,7 +102,11 @@ reelsRouter.get('/reels/media/:file', (req, res) => {
 /** Comments on a reel, newest first, without hidden ones or people the learner blocked. */
 reelsRouter.get('/reels/:id/comments', optionalAuth, async (req, res) => {
   const reel = await feedItem(String(req.params.id));
-  const blocked = req.user ? (await prisma.blockedUser.findMany({ where: { userId: req.user.id }, select: { blockedId: true } })).map((b) => b.blockedId) : [];
+  const blocked = req.user
+    ? (await prisma.blockedUser.findMany({ where: { userId: req.user.id }, select: { blockedId: true } })).map(
+        (b) => b.blockedId,
+      )
+    : [];
   const rows = await prisma.reelComment.findMany({
     where: { reelId: reel.id, hidden: false, userId: { notIn: blocked } },
     orderBy: { createdAt: 'desc' },
@@ -117,7 +131,11 @@ reelsRouter.post('/me/reels/:id/like', async (req, res) => {
   const reel = await feedItem(String(req.params.id));
   const { liked } = z.object({ liked: z.boolean() }).parse(req.body);
   if (liked)
-    await prisma.reelLike.upsert({ where: { userId_reelId: { userId: user.id, reelId: reel.id } }, create: { userId: user.id, reelId: reel.id }, update: {} });
+    await prisma.reelLike.upsert({
+      where: { userId_reelId: { userId: user.id, reelId: reel.id } },
+      create: { userId: user.id, reelId: reel.id },
+      update: {},
+    });
   else await prisma.reelLike.deleteMany({ where: { userId: user.id, reelId: reel.id } });
   res.json({ liked, likes: await prisma.reelLike.count({ where: { reelId: reel.id } }) });
 });
@@ -125,14 +143,21 @@ reelsRouter.post('/me/reels/:id/like', async (req, res) => {
 reelsRouter.post('/me/reels/:id/comments', async (req, res) => {
   const user = me(req);
   const reel = await feedItem(String(req.params.id));
-  if (restrictionOf(user)?.limits?.includes('comments')) throw new AppError(403, 'Commenting is turned off on your account for now.', 'restricted');
+  if (restrictionOf(user)?.limits?.includes('comments'))
+    throw new AppError(403, 'Commenting is turned off on your account for now.', 'restricted');
   const text = z.string().trim().min(1).max(300).parse(req.body?.text);
-  const recent = await prisma.reelComment.count({ where: { userId: user.id, createdAt: { gt: new Date(Date.now() - 3_600_000) } } });
-  if (recent >= COMMENTS_PER_HOUR) throw new AppError(429, 'You’ve commented a lot this hour. Try again a little later.', 'rate');
+  const recent = await prisma.reelComment.count({
+    where: { userId: user.id, createdAt: { gt: new Date(Date.now() - 3_600_000) } },
+  });
+  if (recent >= COMMENTS_PER_HOUR)
+    throw new AppError(429, 'You’ve commented a lot this hour. Try again a little later.', 'rate');
   // Screened before anyone sees it (OpenAI's moderation endpoint, free to use).
-  if (await flagged(text)) throw new AppError(422, 'This comment can’t be posted. Please keep comments kind and on topic.', 'blocked');
+  if (await flagged(text))
+    throw new AppError(422, 'This comment can’t be posted. Please keep comments kind and on topic.', 'blocked');
   const c = await prisma.reelComment.create({ data: { reelId: reel.id, userId: user.id, text } });
-  res.status(201).json({ comment: { id: c.id, text: c.text, createdAt: c.createdAt.getTime(), mine: true, ...author(user) } });
+  res
+    .status(201)
+    .json({ comment: { id: c.id, text: c.text, createdAt: c.createdAt.getTime(), mine: true, ...author(user) } });
 });
 
 reelsRouter.delete('/me/reels/comments/:id', async (req, res) => {

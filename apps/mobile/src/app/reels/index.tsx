@@ -1,6 +1,6 @@
 import { Ionicons } from '@expo/vector-icons';
 import { Image } from 'expo-image';
-import { router, useFocusEffect } from 'expo-router';
+import { router, useFocusEffect, useLocalSearchParams } from 'expo-router';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import {
@@ -53,13 +53,15 @@ export default function Reels() {
   // Narration is English: on by default in English, off (tap to hear) in other languages.
   const [sound, setSound] = useState(i18n.language === 'en');
 
+  // From a subject's Videos tab: only that subject's reels.
+  const { subject } = useLocalSearchParams<{ subject?: string }>();
   const load = useCallback(() => {
     if (USE_MOCKS) return;
     reelsApi
-      .feed()
+      .feed(subject)
       .then((r) => setReels(r.reels))
       .catch((e) => setError(errorText(e, t('loadFailed'))));
-  }, [t]);
+  }, [subject, t]);
   useEffect(load, [load]);
 
   useFocusEffect(

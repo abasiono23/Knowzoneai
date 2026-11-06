@@ -28,7 +28,9 @@ export type ReelComment = {
 export const media = (path: string) => `${API_URL}${path}`;
 
 export const reelsApi = {
-  feed: () => request<{ reels: Reel[] }>('/reels'),
+  /** `subject`: one or more subjects, comma separated. */
+  feed: (subject?: string) =>
+    request<{ reels: Reel[] }>(subject ? `/reels?subject=${encodeURIComponent(subject)}` : '/reels'),
   like: (id: string, liked: boolean) => post<{ liked: boolean; likes: number }>(`/me/reels/${id}/like`, { liked }),
   comments: (id: string) => request<{ comments: ReelComment[] }>(`/reels/${id}/comments`),
   comment: (id: string, text: string) => post<{ comment: ReelComment }>(`/me/reels/${id}/comments`, { text }),
