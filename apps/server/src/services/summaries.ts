@@ -171,6 +171,29 @@ export function libraryCards(id: LibraryId, lang: LanguageId) {
 
 export const OVERVIEW = 'overview';
 
+/** Every summary in one language, with its English words for search. */
+export function allSummaryCards(lang: LanguageId) {
+  return LIBRARIES.flatMap((id) => {
+    const lib = library(id);
+    if (!lib) return [];
+    const libraryName = pick(lib.name, lang);
+    const one = (topic: string, text: Record<string, z.infer<typeof Text>>) => {
+      const t = pick(text, lang);
+      const en = text.en;
+      return {
+        library: id,
+        libraryName,
+        id: topic,
+        title: t.title,
+        short: t.short,
+        keywords: t.keywords,
+        english: en ? `${en.title} ${en.keywords.join(' ')}` : '',
+      };
+    };
+    return [one(OVERVIEW, lib.overview), ...lib.topics.map((t) => one(t.id, t.text))];
+  });
+}
+
 /** One summary to read, in one language. `overview` is the whole course. */
 export function summaryFor(libraryId: string, topic: string, lang: LanguageId) {
   const lib = (LIBRARIES as readonly string[]).includes(libraryId) || loaded.has(libraryId) ? library(libraryId) : null;

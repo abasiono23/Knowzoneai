@@ -465,7 +465,7 @@ const home: Translation<typeof en> = {
     },
   },
   search: {
-    placeholder: 'ابحث عن مواضيع أو مواد أو امتحانات',
+    placeholder: 'ابحث عن فيديوهات وملخّصات وكتب والمزيد',
     clear: 'مسح البحث',
     subject: 'مادة',
     seeAllFor: 'عرض كل النتائج لـ «{{query}}»',
@@ -476,6 +476,10 @@ const home: Translation<typeof en> = {
   },
   results: {
     tabs: {
+      videos: 'الفيديوهات',
+      summaries: 'الملخّصات',
+      books: 'الكتب',
+      more: 'المزيد',
       all: 'الكل',
       lessons: 'الدروس',
       subjects: 'المواد',
@@ -484,6 +488,11 @@ const home: Translation<typeof en> = {
     noResults: 'لا توجد نتائج لـ «{{query}}»',
     noResultsBody: 'جرّب كلمة أعم، أو تحقّق من التهجئة، أو حوّل ملاحظاتك إلى درس باستخدام AI Studio.',
     openStudio: 'افتح AI Studio',
+    videos: 'الفيديوهات',
+    summaries: 'الملخّصات',
+    books: 'الكتب',
+    more: 'المزيد',
+    pastQuestions: 'أسئلة الامتحانات السابقة',
     allFormats: 'كل الصيغ',
     subjects: 'المواد',
     topics: 'المواضيع',

@@ -407,7 +407,7 @@ const home = {
     },
   },
   search: {
-    placeholder: 'Search topics, subjects or exams',
+    placeholder: 'Search videos, summaries, books and more',
     clear: 'Clear search',
     subject: 'Subject',
     seeAllFor: 'See all results for “{{query}}”',
@@ -418,6 +418,10 @@ const home = {
   },
   results: {
     tabs: {
+      videos: 'Videos',
+      summaries: 'Summaries',
+      books: 'Books',
+      more: 'More',
       all: 'All',
       lessons: 'Lessons',
       subjects: 'Subjects',
@@ -426,6 +430,11 @@ const home = {
     noResults: 'No results for “{{query}}”',
     noResultsBody: 'Try a broader word, check the spelling, or turn your own notes into a lesson with AI Studio.',
     openStudio: 'Open AI Studio',
+    videos: 'VIDEOS',
+    summaries: 'SUMMARIES',
+    books: 'BOOKS',
+    more: 'MORE',
+    pastQuestions: 'Past questions',
     allFormats: 'All formats',
     subjects: 'SUBJECTS',
     topics: 'TOPICS',

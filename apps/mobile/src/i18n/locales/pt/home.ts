@@ -424,7 +424,7 @@ const home: Translation<typeof en> = {
     },
   },
   search: {
-    placeholder: 'Pesquisa temas, disciplinas ou exames',
+    placeholder: 'Procura vídeos, resumos, livros e mais',
     clear: 'Limpar pesquisa',
     subject: 'Disciplina',
     seeAllFor: 'Ver todos os resultados para “{{query}}”',
@@ -435,6 +435,10 @@ const home: Translation<typeof en> = {
   },
   results: {
     tabs: {
+      videos: 'Vídeos',
+      summaries: 'Resumos',
+      books: 'Livros',
+      more: 'Mais',
       all: 'Tudo',
       lessons: 'Lições',
       subjects: 'Disciplinas',
@@ -444,6 +448,11 @@ const home: Translation<typeof en> = {
     noResultsBody:
       'Experimenta uma palavra mais geral, confirma a ortografia ou transforma os teus apontamentos numa lição com o AI Studio.',
     openStudio: 'Abrir o AI Studio',
+    videos: 'VÍDEOS',
+    summaries: 'RESUMOS',
+    books: 'LIVROS',
+    more: 'MAIS',
+    pastQuestions: 'Provas anteriores',
     allFormats: 'Todos os formatos',
     subjects: 'DISCIPLINAS',
     topics: 'TEMAS',

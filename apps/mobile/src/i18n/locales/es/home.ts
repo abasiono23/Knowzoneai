@@ -425,7 +425,7 @@ const home: Translation<typeof en> = {
     },
   },
   search: {
-    placeholder: 'Busca temas, asignaturas o exámenes',
+    placeholder: 'Busca vídeos, resúmenes, libros y más',
     clear: 'Borrar búsqueda',
     subject: 'Asignatura',
     seeAllFor: 'Ver todos los resultados de «{{query}}»',
@@ -436,6 +436,10 @@ const home: Translation<typeof en> = {
   },
   results: {
     tabs: {
+      videos: 'Vídeos',
+      summaries: 'Resúmenes',
+      books: 'Libros',
+      more: 'Más',
       all: 'Todo',
       lessons: 'Lecciones',
       subjects: 'Asignaturas',
@@ -445,6 +449,11 @@ const home: Translation<typeof en> = {
     noResultsBody:
       'Prueba con una palabra más general, revisa la ortografía o convierte tus propios apuntes en una lección con AI Studio.',
     openStudio: 'Abrir AI Studio',
+    videos: 'VÍDEOS',
+    summaries: 'RESÚMENES',
+    books: 'LIBROS',
+    more: 'MÁS',
+    pastQuestions: 'Exámenes anteriores',
     allFormats: 'Todos los formatos',
     subjects: 'ASIGNATURAS',
     topics: 'TEMAS',

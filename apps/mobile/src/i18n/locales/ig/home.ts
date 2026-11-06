@@ -408,7 +408,7 @@ const home: Translation<typeof en> = {
     },
   },
   search: {
-    placeholder: 'Chọọ isiokwu, isiokwu ọmụmụ ma ọ bụ ule',
+    placeholder: 'Chọọ vidiyo, nchịkọta, akwụkwọ na ndị ọzọ',
     clear: 'Hichaa ọchụchọ',
     subject: 'Isiokwu ọmụmụ',
     seeAllFor: 'Hụ nsonaazụ niile maka “{{query}}”',
@@ -419,6 +419,10 @@ const home: Translation<typeof en> = {
   },
   results: {
     tabs: {
+      videos: 'Vidiyo',
+      summaries: 'Nchịkọta',
+      books: 'Akwụkwọ',
+      more: 'Ndị ọzọ',
       all: 'Niile',
       lessons: 'Ihe ọmụmụ',
       subjects: 'Isiokwu ọmụmụ',
@@ -427,6 +431,11 @@ const home: Translation<typeof en> = {
     noResults: 'Enweghị nsonaazụ maka “{{query}}”',
     noResultsBody: 'Nwaa okwu sara mbara karịa, lelee nsụpe ya, ma ọ bụ jiri AI Studio mee ka ndetu gị ghọọ ihe ọmụmụ.',
     openStudio: 'Meghee AI Studio',
+    videos: 'VIDIYO',
+    summaries: 'NCHỊKỌTA',
+    books: 'AKWỤKWỌ',
+    more: 'NDỊ ỌZỌ',
+    pastQuestions: 'Ajụjụ ule ochie',
     allFormats: 'Ụdị niile',
     subjects: 'ISIOKWU ỌMỤMỤ',
     topics: 'ISIOKWU',

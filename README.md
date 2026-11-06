@@ -150,6 +150,9 @@ Still to do:
   - `GET /catalog` (whole catalogue, with a version so the app can skip unchanged downloads), `/subjects/:id`,
     `/lessons/:id`, `/trending` (34, 37, 38, 39).
   - `GET /search?q=` (35, 36): matches the reader's language and English, ignoring accents and tone marks.
+  - `GET /search/all?q=&country=`: the dashboard search beyond lessons, returning videos, summaries, books, reels,
+    courses, past-question subjects and Future skills. Words like "video" or "summary" are ignored when other words
+    are given, each book appears once, and a book that's free for one country only shows for that country.
   - `GET /me/library`, `POST /me/lessons/:id/view`, `PUT /me/lessons/:id/progress`, `PUT|DELETE /me/saved/:id`,
     `POST|DELETE /me/searches` (41, 42, 43, recent searches). Progress never goes backwards; a learner's first
     view counts towards a lesson's popularity; finishing a first lesson confirms a pending invite.

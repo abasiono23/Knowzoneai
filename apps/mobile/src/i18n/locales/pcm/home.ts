@@ -405,7 +405,7 @@ const home: Translation<typeof en> = {
     },
   },
   search: {
-    placeholder: 'Search topics, subjects or exams',
+    placeholder: 'Search videos, summaries, books and more',
     clear: 'Clear search',
     subject: 'Subject',
     seeAllFor: 'See all results for “{{query}}”',
@@ -416,6 +416,10 @@ const home: Translation<typeof en> = {
   },
   results: {
     tabs: {
+      videos: 'Videos',
+      summaries: 'Summaries',
+      books: 'Books',
+      more: 'More',
       all: 'All',
       lessons: 'Lessons',
       subjects: 'Subjects',
@@ -424,6 +428,11 @@ const home: Translation<typeof en> = {
     noResults: 'Nothing show for “{{query}}”',
     noResultsBody: 'Try word wey wide pass, check the spelling, or turn your own notes to lesson with AI Studio.',
     openStudio: 'Open AI Studio',
+    videos: 'VIDEOS',
+    summaries: 'SUMMARIES',
+    books: 'BOOKS',
+    more: 'MORE',
+    pastQuestions: 'Past questions',
     allFormats: 'All formats',
     subjects: 'SUBJECTS',
     topics: 'TOPICS',

@@ -425,7 +425,7 @@ const home: Translation<typeof en> = {
     },
   },
   search: {
-    placeholder: 'Rechercher des thèmes, matières ou examens',
+    placeholder: 'Cherche des vidéos, résumés, livres et plus',
     clear: 'Effacer la recherche',
     subject: 'Matière',
     seeAllFor: 'Voir tous les résultats pour « {{query}} »',
@@ -436,6 +436,10 @@ const home: Translation<typeof en> = {
   },
   results: {
     tabs: {
+      videos: 'Vidéos',
+      summaries: 'Résumés',
+      books: 'Livres',
+      more: 'Plus',
       all: 'Tout',
       lessons: 'Leçons',
       subjects: 'Matières',
@@ -445,6 +449,11 @@ const home: Translation<typeof en> = {
     noResultsBody:
       'Essaie un mot plus général, vérifie l’orthographe, ou transforme tes propres notes en leçon avec AI Studio.',
     openStudio: 'Ouvrir AI Studio',
+    videos: 'VIDÉOS',
+    summaries: 'RÉSUMÉS',
+    books: 'LIVRES',
+    more: 'PLUS',
+    pastQuestions: 'Sujets d’annales',
     allFormats: 'Tous les formats',
     subjects: 'MATIÈRES',
     topics: 'THÈMES',

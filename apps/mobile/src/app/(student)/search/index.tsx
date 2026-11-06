@@ -1,16 +1,19 @@
 import { Ionicons } from '@expo/vector-icons';
-import { router } from 'expo-router';
-import { useMemo, useState } from 'react';
+import { router, type Href } from 'expo-router';
+import { useEffect, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Pressable, StyleSheet, View } from 'react-native';
 
 import { LessonThumb } from '@/components/content/lesson-card';
 import { SearchBar } from '@/components/content/search-bar';
 import { ChoiceChip, ChipWrap } from '@/components/personalize/choice-chip';
+import { BookResult, TextResult, VideoResult } from '@/components/search/everything';
 import { Screen, SectionHeader, Text } from '@/components/ui';
 import { Colors, Radius, Spacing } from '@/constants/theme';
+import { catalogueFor, useBooksProfile } from '@/lib/books';
 import { search, subjectName, SUBJECTS, TRENDING_SEARCHES } from '@/lib/catalog';
 import { useLibrary } from '@/lib/library-store';
+import { searchAll, type SearchResults } from '@/lib/search-all';
 
 /** Screen 35: global search with recent and trending searches and live suggestions. */
 export default function SearchScreen() {
@@ -18,6 +21,25 @@ export default function SearchScreen() {
   const { t } = useTranslation('home');
   const [q, setQ] = useState('');
   const live = useMemo(() => (q.trim().length > 1 ? search(q) : null), [q]);
+  const { profile } = useBooksProfile();
+  const country = profile?.country ? catalogueFor(profile.country) : undefined;
+  // Waits for a pause in typing, so each letter doesn't ask the server.
+  const [found, setFound] = useState<{ q: string; results: SearchResults } | null>(null);
+  useEffect(() => {
+    const query = q.trim();
+    if (query.length < 2) return;
+    let stale = false;
+    const timer = setTimeout(() => {
+      searchAll(query, country)
+        .then((r) => !stale && setFound({ q: query, results: r }))
+        .catch(() => undefined);
+    }, 300);
+    return () => {
+      stale = true;
+      clearTimeout(timer);
+    };
+  }, [q, country]);
+  const all = found?.q === q.trim() ? found.results : null;
 
   const submit = (query: string) => {
     addSearch(query);
@@ -29,7 +51,22 @@ export default function SearchScreen() {
       <SearchBar value={q} onChangeText={setQ} onSubmit={submit} />
 
       {live ? (
-        <View style={{ gap: 2 }}>
+        <View style={{ gap: Spacing.xs }}>
+          {all?.videos.slice(0, 2).map((v) => (
+            <VideoResult key={v.youtubeId} video={v} />
+          ))}
+          {all?.summaries.slice(0, 2).map((s) => (
+            <TextResult
+              key={`${s.library}/${s.id}`}
+              icon="document-text"
+              title={s.title}
+              body={s.libraryName}
+              onPress={() => router.push(`/books/summary/${s.library}/${s.id}` as Href)}
+            />
+          ))}
+          {all?.books.slice(0, 2).map((b) => (
+            <BookResult key={b.id} book={b} />
+          ))}
           {live.subjects.slice(0, 3).map((s) => (
             <Suggestion
               key={s.id}

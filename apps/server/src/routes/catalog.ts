@@ -6,6 +6,7 @@ import { join } from 'node:path';
 
 import { notFound } from '../lib/errors.js';
 import { catalogFor, searchCatalog, trendingIn } from '../services/catalog.js';
+import { searchEverything } from '../services/search-all.js';
 import { deckFor, lessonCardsFolder, lessonDecks } from '../services/lesson-cards.js';
 import { requestLanguage } from '../services/language.js';
 import { optionalAuth } from '../services/sessions.js';
@@ -81,6 +82,13 @@ catalogRouter.get('/trending', optionalAuth, async (req, res) => {
 const Search = z.object({ q: z.string().trim().max(100).default('') });
 
 /** Search results (35, 36). Saving the query to the learner's history is a separate call. */
+/** The dashboard's search: everything beyond lessons, subjects and topics. */
+catalogRouter.get('/search/all', async (req, res) => {
+  const q = typeof req.query.q === 'string' ? req.query.q.slice(0, 80) : '';
+  const country = typeof req.query.country === 'string' ? req.query.country : undefined;
+  res.json(await searchEverything(requestLanguage(req), q, country));
+});
+
 catalogRouter.get('/search', optionalAuth, async (req, res) => {
   const { q } = Search.parse(req.query);
   res.json({ query: q, ...(await searchCatalog(requestLanguage(req), q)) });

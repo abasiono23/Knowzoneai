@@ -407,7 +407,7 @@ const home: Translation<typeof en> = {
     },
   },
   search: {
-    placeholder: 'Nemi maudu’ai, fannoni ko jarrabawa',
+    placeholder: 'Nemo bidiyo, taƙaitawa, littattafai da sauransu',
     clear: 'Goge bincike',
     subject: 'Fanni',
     seeAllFor: 'Duba duk sakamakon “{{query}}”',
@@ -418,6 +418,10 @@ const home: Translation<typeof en> = {
   },
   results: {
     tabs: {
+      videos: 'Bidiyo',
+      summaries: 'Taƙaitawa',
+      books: 'Littattafai',
+      more: 'Sauran',
       all: 'Duka',
       lessons: 'Darussa',
       subjects: 'Fannoni',
@@ -426,6 +430,11 @@ const home: Translation<typeof en> = {
     noResults: 'Babu sakamako ga “{{query}}”',
     noResultsBody: 'Gwada kalma mafi faɗi, duba rubutun, ko ka mayar da bayananka darasi da AI Studio.',
     openStudio: 'Buɗe AI Studio',
+    videos: 'BIDIYO',
+    summaries: 'TAƘAITAWA',
+    books: 'LITTATTAFAI',
+    more: 'SAURAN',
+    pastQuestions: 'Tambayoyin jarabawa na baya',
     allFormats: 'Duk nau’o’i',
     subjects: 'FANNONI',
     topics: 'MAUDU’AI',

@@ -405,7 +405,7 @@ const home: Translation<typeof en> = {
     },
   },
   search: {
-    placeholder: 'Wá àkòrí, ẹ̀kọ́ tàbí ìdánwò',
+    placeholder: 'Wá fídíò, àkótán, ìwé àti àwọn mìíràn',
     clear: 'Pa ìwákiri rẹ́',
     subject: 'Ẹ̀kọ́',
     seeAllFor: 'Wo gbogbo èsì fún “{{query}}”',
@@ -416,6 +416,10 @@ const home: Translation<typeof en> = {
   },
   results: {
     tabs: {
+      videos: 'Fídíò',
+      summaries: 'Àkótán',
+      books: 'Ìwé',
+      more: 'Míràn',
       all: 'Gbogbo',
       lessons: 'Ẹ̀kọ́',
       subjects: 'Ẹ̀ka ẹ̀kọ́',
@@ -424,6 +428,11 @@ const home: Translation<typeof en> = {
     noResults: 'Kò sí èsì fún “{{query}}”',
     noResultsBody: 'Gbìyànjú ọ̀rọ̀ tó gbòòrò jù, ṣàyẹ̀wò bí o ṣe kọ ọ́, tàbí sọ àkọsílẹ̀ rẹ di ẹ̀kọ́ pẹ̀lú AI Studio.',
     openStudio: 'Ṣí AI Studio',
+    videos: 'FÍDÍÒ',
+    summaries: 'ÀKÓTÁN',
+    books: 'ÌWÉ',
+    more: 'ÀWỌN MÌÍRÀN',
+    pastQuestions: 'Àwọn ìbéèrè ìdánwò àtijọ́',
     allFormats: 'Gbogbo ọ̀nà',
     subjects: 'Ẹ̀KA Ẹ̀KỌ́',
     topics: 'ÀKÒRÍ',

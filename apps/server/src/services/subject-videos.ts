@@ -199,6 +199,22 @@ export function videosFor(subject: string, stage: string | undefined, lang: Lang
   };
 }
 
+/** Every topic with its live videos, in one language, for search. */
+export function allVideoTopics(lang: LanguageId) {
+  return allSets().flatMap((id) => {
+    const lib = library(id);
+    if (!lib) return [];
+    const { libraryName, topics } = cards(id, lib, lang);
+    return lib.topics.map((t) => ({
+      library: id,
+      libraryName,
+      id: t.id,
+      title: topics.find((c) => c.id === t.id)?.title ?? t.id,
+      videos: liveTopic(t).videos,
+    }));
+  });
+}
+
 /** One topic's videos, for the lesson screen's "next video". */
 export function videoTopic(libraryId: string, topic: string, lang: LanguageId) {
   if (!/^[a-z-]+$/.test(libraryId)) return null;

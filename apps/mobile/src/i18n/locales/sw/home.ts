@@ -410,7 +410,7 @@ const home: Translation<typeof en> = {
     },
   },
   search: {
-    placeholder: 'Tafuta mada, masomo au mitihani',
+    placeholder: 'Tafuta video, muhtasari, vitabu na zaidi',
     clear: 'Futa utafutaji',
     subject: 'Somo',
     seeAllFor: 'Ona matokeo yote ya “{{query}}”',
@@ -421,6 +421,10 @@ const home: Translation<typeof en> = {
   },
   results: {
     tabs: {
+      videos: 'Video',
+      summaries: 'Muhtasari',
+      books: 'Vitabu',
+      more: 'Zaidi',
       all: 'Yote',
       lessons: 'Masomo',
       subjects: 'Masomo ya shule',
@@ -429,6 +433,11 @@ const home: Translation<typeof en> = {
     noResults: 'Hakuna matokeo ya “{{query}}”',
     noResultsBody: 'Jaribu neno pana zaidi, hakiki tahajia, au geuza madokezo yako mwenyewe kuwa somo kwa AI Studio.',
     openStudio: 'Fungua AI Studio',
+    videos: 'VIDEO',
+    summaries: 'MUHTASARI',
+    books: 'VITABU',
+    more: 'ZAIDI',
+    pastQuestions: 'Maswali ya mitihani iliyopita',
     allFormats: 'Miundo yote',
     subjects: 'MASOMO YA SHULE',
     topics: 'MADA',
