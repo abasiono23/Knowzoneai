@@ -15,10 +15,13 @@ export type TicketKind = 'support' | 'bug' | 'feedback' | 'report' | 'copyright'
 export const ACK: Record<TicketKind, string> = {
   support: 'Thanks for getting in touch. A member of the Knowzone team will reply here, usually within 1 working day.',
   bug: 'Thanks for the report. Our engineers review every bug. We’ll update this ticket if we need more details or once it’s fixed.',
-  feedback: 'Thank you! Every suggestion is read by the product team. We don’t reply to each one, but it shapes what we build.',
-  report: 'Thanks for helping keep Knowzone safe. A moderator reviews reports within 24 hours. The person you reported isn’t told who reported them.',
+  feedback:
+    'Thank you! Every suggestion is read by the product team. We don’t reply to each one, but it shapes what we build.',
+  report:
+    'Thanks for helping keep Knowzone safe. A moderator reviews reports within 24 hours. The person you reported isn’t told who reported them.',
   copyright: 'We’ve received your notice and will review it within 3 working days.',
-  appeal: 'We’ve received your appeal. A different moderator from the one who made the decision will review it within 3 working days.',
+  appeal:
+    'We’ve received your appeal. A different moderator from the one who made the decision will review it within 3 working days.',
 };
 
 /** Requests a learner can open in an hour; reports and appeals count too. Stops floods, not real use. */
@@ -117,13 +120,36 @@ export async function staffReply(ticketId: string, text: string, opts: { staff: 
     },
     include: withMessages,
   });
-  await notify(ticket.userId, { type: 'system', template: 'ticketReply', params: { id: ticket.id }, href: `/help/ticket/${ticket.id}` });
+  await notify(ticket.userId, {
+    type: 'system',
+    template: 'ticketReply',
+    params: { id: ticket.id },
+    href: `/help/ticket/${ticket.id}`,
+  });
   return ticket;
 }
 
 export const newCopyrightReference = () => shortId('CR');
 
 // ─── Account restrictions (232) ───────────────────────────────────────────────
+
+/** Decides an appeal and tells the learner. Accepting lifts the restriction. False if it isn't an appeal. */
+export async function decideAppeal(ticketId: string, accept: boolean, text: string, staff: string) {
+  const ticket = await prisma.helpTicket.findUnique({ where: { id: ticketId }, include: { user: true } });
+  if (!ticket || ticket.kind !== 'appeal') return false;
+  const current = restrictionOf(ticket.user);
+  await prisma.user.update({
+    where: { id: ticket.userId },
+    data: {
+      restriction:
+        accept || !current
+          ? Prisma.DbNull
+          : { ...current, appeal: { ...(current.appeal ?? { ticketId, at: Date.now() }), status: 'rejected' } },
+    },
+  });
+  await staffReply(ticketId, text, { staff, resolve: true });
+  return true;
+}
 
 export type Restriction = {
   kind: 'restricted' | 'suspended';
@@ -145,6 +171,15 @@ export function allowedWhileSuspended(path: string) {
     path === '/me' ||
     path.startsWith('/me/help/') ||
     path.startsWith('/auth/') ||
-    ['/me/logout', '/me/appeal', '/me/export', '/me/export/email', '/me/settings', '/me/sessions', '/me/sessions/revoke', '/me/delete'].includes(path)
+    [
+      '/me/logout',
+      '/me/appeal',
+      '/me/export',
+      '/me/export/email',
+      '/me/settings',
+      '/me/sessions',
+      '/me/sessions/revoke',
+      '/me/delete',
+    ].includes(path)
   );
 }

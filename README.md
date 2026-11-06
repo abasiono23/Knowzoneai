@@ -413,12 +413,20 @@ Still to do:
   npm run support -- appeal KZ-123456 accept "…"   # or reject
   npm run support -- copyright                  # notices; `copyright CR-123456 actioned`
   ```
+- **Staff dashboard:** `knowzoneai.com/admin` does all of this in a browser, and also shows an overview, people,
+  video reports, reported reel comments, payments, billing requests and the waitlist (with a CSV download).
+  - **Who gets in:** only accounts whose email is in `ADMIN_EMAILS` on the server (comma-separated). With none set,
+    nobody does. Create and confirm each person's Knowzone account before adding their email to the list.
+  - **What it leaves out:** learners' chats, notes, uploads and study answers. Refunds and charges stay in Flutterwave.
+  - **Records:** replies are signed with the staff member's email, and every change goes to the server log as
+    `[admin] who did what`. Render's logs don't last, so there's no permanent history of who did what yet.
+  - **Sign in with Google** needs `https://knowzoneai.com/admin` in Supabase's allowed redirect URLs.
+  - The page is `apps/web/admin.html`, and the API is `apps/server/src/routes/admin.ts`. It's in English only.
 - **The data download** now also includes payments, help requests, blocked players and hidden content.
 - **Endpoints:** `GET/POST /me/help/tickets`, `POST /me/help/tickets/reply`, `POST /me/help/tickets/close`,
   `POST /me/help/attachments`, `GET /me/safety`, `POST /me/report`, `POST /me/safety/block`,
   `POST /me/safety/unblock`, `POST /me/safety/unhide`, `POST /legal/copyright`, `POST /me/appeal`.
 - **Not real yet:**
-  - There's no web dashboard for staff; the `support` command is the tool for now.
   - A restricted account's limits (leaderboards, battles, invites, sharing) are shown in the app, but those
     features belong to Knowzone World, which still runs on the device, so the server doesn't enforce them yet.
 

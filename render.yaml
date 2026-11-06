@@ -45,6 +45,8 @@ services:
         sync: false
       - key: FLW_SECRET_HASH
         sync: false
+      - key: ADMIN_EMAILS
+        sync: false
       - key: SUPPORT_EMAIL
         sync: false
       - key: APP_URL

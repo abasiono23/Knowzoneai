@@ -19,7 +19,7 @@ import { userInfo } from 'node:os';
 
 import { prisma } from '../src/db.js';
 import { Prisma } from '../src/generated/prisma/client.js';
-import { restrictionOf, staffReply, type Restriction } from '../src/services/help.js';
+import { decideAppeal, staffReply, type Restriction } from '../src/services/help.js';
 
 const DAY = 86_400_000;
 const staff = process.env.STAFF_NAME || userInfo().username;
@@ -112,16 +112,7 @@ async function main() {
     case 'appeal': {
       const [id, decision, text] = args;
       if (!id || !['accept', 'reject'].includes(decision ?? '') || !text) fail('Usage: appeal KZ-123456 accept|reject "Text"');
-      const t = await prisma.helpTicket.findUnique({ where: { id: id! }, include: { user: true } });
-      if (!t || t.kind !== 'appeal') fail('That isn’t an appeal');
-      const r = restrictionOf(t!.user);
-      if (decision === 'accept' || !r) await prisma.user.update({ where: { id: t!.userId }, data: { restriction: Prisma.DbNull } });
-      else
-        await prisma.user.update({
-          where: { id: t!.userId },
-          data: { restriction: { ...r, appeal: { ...(r.appeal ?? { ticketId: id!, at: Date.now() }), status: 'rejected' } } },
-        });
-      await staffReply(id!, text!, { staff, resolve: true });
+      if (!(await decideAppeal(id!, decision === 'accept', text!, staff))) fail('That isn’t an appeal');
       console.log(`Appeal ${decision === 'accept' ? 'accepted: restriction lifted' : 'rejected'}. The learner has been notified.`);
       break;
     }

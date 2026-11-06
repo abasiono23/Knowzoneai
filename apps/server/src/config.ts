@@ -11,6 +11,8 @@ const Env = z.object({
   /** Optional server-only key. Needed to delete Supabase sign-in records when an account is purged. */
   SUPABASE_SECRET_KEY: z.string().optional(),
   CORS_ORIGIN: z.string().default('*'),
+  /** Comma-separated emails allowed into the staff dashboard (knowzoneai.com/admin). Empty: nobody. */
+  ADMIN_EMAILS: z.string().default(''),
   /** Public web address, used in invite links and emails. */
   APP_URL: z.string().default('https://knowzoneai.com'),
 
