@@ -1,7 +1,7 @@
 {
  "country": "ng",
  "name": "Nigeria",
- "updated": "2026-11-01",
+ "updated": "2026-11-06",
  "levels": [
   {
    "id": "jss1",
@@ -663,7 +663,7 @@
    "edition": null,
    "year": null,
    "isbn": null,
-   "cover": null,
+   "cover": "https://covers.openlibrary.org/b/id/6625383-L.jpg",
    "free": false,
    "readUrl": null,
    "provider": null,
@@ -5319,7 +5319,7 @@
    "edition": null,
    "year": 1985,
    "isbn": null,
-   "cover": null,
+   "cover": "https://covers.openlibrary.org/b/id/14976518-L.jpg",
    "free": false,
    "readUrl": null,
    "provider": null,
@@ -5327,7 +5327,8 @@
    "sources": [
     "https://www.waecnigeria.org/sites/default/files/2023-06/HAUSA%202026-2030.pdf",
     "https://www.waecnigeria.org/node/82",
-    "https://isi.ui.edu.ng/wp-content/uploads/2026/08/LIST-OF-BOOKS-FOR-SENIOR-2026-2027-SESSION.pdf"
+    "https://isi.ui.edu.ng/wp-content/uploads/2026/08/LIST-OF-BOOKS-FOR-SENIOR-2026-2027-SESSION.pdf",
+    "https://openlibrary.org/works/OL7063678W"
    ],
    "notes": "WAEC prescribed culture text for 2026-2030 (WAEC writes 'Hausa Custom'; NNPC, Zaria, 1985).",
    "placements": [
@@ -6374,13 +6375,14 @@
    "edition": null,
    "year": 2020,
    "isbn": null,
-   "cover": null,
+   "cover": "https://covers.openlibrary.org/b/id/12751964-L.jpg",
    "free": true,
    "readUrl": "https://slcc.pressbooks.pub/worldgeography/",
    "provider": "Pressbooks",
    "license": "CC BY-NC-SA 4.0",
    "sources": [
-    "https://slcc.pressbooks.pub/worldgeography/"
+    "https://slcc.pressbooks.pub/worldgeography/",
+    "https://openlibrary.org/works/OL27777909W"
    ],
    "notes": "College level: population, culture, development, and regional chapters including Sub-Saharan Africa. Covers human and regional geography; nothing Nigeria-specific.",
    "downloadUrl": null,
@@ -11008,7 +11010,7 @@
    "edition": null,
    "year": 1975,
    "isbn": null,
-   "cover": null,
+   "cover": "https://covers.openlibrary.org/b/id/4460172-L.jpg",
    "free": false,
    "readUrl": null,
    "provider": null,
@@ -11532,6 +11534,1371 @@
      ]
     }
    ]
+  },
+  {
+   "id": "ntoala-usoroasusu-igbo",
+   "title": "Ǹtọàla Ùsòròasụ̀sụ Ìgbò",
+   "series": null,
+   "authors": [
+    "Àsòònye Ụba-Mgbemena"
+   ],
+   "publisher": "Gold Press",
+   "edition": null,
+   "year": 2006,
+   "isbn": "9789783772786",
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "igbo",
+     "levels": [
+      "ss2",
+      "ss3"
+     ]
+    }
+   ],
+   "sources": [
+    "https://openlibrary.org/works/OL18684559W",
+    "https://studentship.com.ng/jamb-syllabus-for-igbo/"
+   ],
+   "notes": "On the JAMB list; written in Igbo."
+  },
+  {
+   "id": "ndezu-utoasusu-igbo",
+   "title": "Ndezu Ụtọasụsụ Igbo",
+   "series": null,
+   "authors": [
+    "C. E. Ọfọmata"
+   ],
+   "publisher": "Format Publishers (Nig) Ltd, Enugu",
+   "edition": null,
+   "year": null,
+   "isbn": null,
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "igbo",
+     "levels": [
+      "ss1",
+      "ss2",
+      "ss3"
+     ]
+    }
+   ],
+   "sources": [
+    "https://studentship.com.ng/jamb-syllabus-for-igbo/",
+    "https://alma.matrix.msu.edu/assets/uploads/2019/12/NdezuSeniorJoinedandComplete2019NEwithcover.pdf"
+   ],
+   "notes": "On the JAMB list. Year left null: the syllabus says 2005, the title page 2007. A PDF is on an MSU site, but its rights are unclear, so it is marked paid."
+  },
+  {
+   "id": "fonoloji-na-grama-igbo",
+   "title": "Fọnọlọji na Grama Igbo",
+   "series": null,
+   "authors": [
+    "C. Ikekeonwu",
+    "P. A. Ezikeojiaku",
+    "A. Ubani",
+    "J. Ugoji"
+   ],
+   "publisher": "University Press Plc",
+   "edition": null,
+   "year": 1999,
+   "isbn": null,
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "igbo",
+     "levels": [
+      "ss2",
+      "ss3"
+     ]
+    }
+   ],
+   "sources": [
+    "https://studentship.com.ng/jamb-syllabus-for-igbo/",
+    "https://myeduvantage.com/?p=354"
+   ],
+   "notes": "On the JAMB list. Only exam-guide sites confirm it; no library record found."
+  },
+  {
+   "id": "omenala-ndi-igbo",
+   "title": "Omenala Ndị Igbo",
+   "series": null,
+   "authors": [
+    "J. U. T. Nzeakọ"
+   ],
+   "publisher": "Longman Nigeria",
+   "edition": null,
+   "year": 1972,
+   "isbn": "9780582636132",
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "igbo",
+     "levels": [
+      "ss1",
+      "ss2",
+      "ss3"
+     ]
+    }
+   ],
+   "sources": [
+    "https://openlibrary.org/works/OL33508293W",
+    "https://studentship.com.ng/jamb-syllabus-for-igbo/"
+   ],
+   "notes": "Culture text on the JAMB list. Year is from the syllabus; the record shows 1986. Open Library gives the author as Tagbo Nzeakọ."
+  },
+  {
+   "id": "ndi-igbo-na-omenala-ha",
+   "title": "Ndị Igbo na Omenala Ha",
+   "series": null,
+   "authors": [
+    "Bertram I. N. Osuagwụ"
+   ],
+   "publisher": "Macmillan Nigeria",
+   "edition": null,
+   "year": 1979,
+   "isbn": "9789781325144",
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "igbo",
+     "levels": [
+      "ss1",
+      "ss2",
+      "ss3"
+     ]
+    }
+   ],
+   "sources": [
+    "https://openlibrary.org/works/OL32031705W",
+    "https://studentship.com.ng/jamb-syllabus-for-igbo/"
+   ],
+   "notes": "Culture text on the JAMB list."
+  },
+  {
+   "id": "odinala-ndi-igbo",
+   "title": "Ọdịnala Ndị Igbo",
+   "series": null,
+   "authors": [
+    "Tony Uchenna Ubesie"
+   ],
+   "publisher": "Oxford University Press",
+   "edition": null,
+   "year": 1978,
+   "isbn": null,
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "igbo",
+     "levels": [
+      "ss1",
+      "ss2",
+      "ss3"
+     ]
+    }
+   ],
+   "sources": [
+    "https://openlibrary.org/works/OL42307647W",
+    "https://studentship.com.ng/jamb-syllabus-for-igbo/"
+   ],
+   "notes": "Culture text on the JAMB list."
+  },
+  {
+   "id": "igbo-kwenu-akuko-na-omenala-ndi-igbo",
+   "title": "Igbo Kwenụ: Akụkọ na Omenala Ndị Igbo",
+   "series": null,
+   "authors": [
+    "Christian Chukwudị Anọzie"
+   ],
+   "publisher": "Computer Edge Publishers",
+   "edition": null,
+   "year": 2003,
+   "isbn": "9789788032502",
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "igbo",
+     "levels": [
+      "ss1",
+      "ss2",
+      "ss3"
+     ]
+    }
+   ],
+   "sources": [
+    "https://openlibrary.org/works/OL13739658W",
+    "https://studentship.com.ng/jamb-syllabus-for-igbo/"
+   ],
+   "notes": "History and culture text on the JAMB list."
+  },
+  {
+   "id": "an-introduction-to-hausa-grammar",
+   "title": "An Introduction to Hausa Grammar",
+   "series": null,
+   "authors": [
+    "Muhammad Kabir Mahmud Galadanci"
+   ],
+   "publisher": "Longman Nigeria",
+   "edition": null,
+   "year": 1976,
+   "isbn": "9780582635142",
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "hausa",
+     "levels": [
+      "ss1",
+      "ss2",
+      "ss3"
+     ]
+    }
+   ],
+   "sources": [
+    "https://openlibrary.org/works/OL6775455W",
+    "https://studentship.com.ng/jamb-hausa-syllabus/",
+    "https://ulearngo.com/blog/ng/jamb-syllabus-hausa"
+   ],
+   "notes": "On the JAMB list.",
+   "cover": "https://covers.openlibrary.org/b/id/4430179-L.jpg"
+  },
+  {
+   "id": "rayayyen-nahawun-hausa",
+   "title": "Rayayyen Nahawun Hausa",
+   "series": null,
+   "authors": [
+    "Muhammadu Hambali Jinju"
+   ],
+   "publisher": "Northern Nigerian Publishing Company",
+   "edition": null,
+   "year": 1980,
+   "isbn": "9789781690068",
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "hausa",
+     "levels": [
+      "ss1",
+      "ss2",
+      "ss3"
+     ]
+    }
+   ],
+   "sources": [
+    "https://openlibrary.org/works/OL32056854W",
+    "https://studentship.com.ng/jamb-hausa-syllabus/",
+    "https://ulearngo.com/blog/ng/jamb-syllabus-hausa"
+   ],
+   "notes": "On the JAMB list; written in Hausa."
+  },
+  {
+   "id": "a-grammar-of-hausa-with-answers-for-nigerian-secondary-schoo",
+   "title": "A Grammar of Hausa, with Answers, for Nigerian Secondary Schools and Colleges",
+   "series": null,
+   "authors": [
+    "Neil Skinner"
+   ],
+   "publisher": "Northern Nigerian Publishing Company",
+   "edition": null,
+   "year": 1977,
+   "isbn": "9789781692116",
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "hausa",
+     "levels": [
+      "ss1",
+      "ss2",
+      "ss3"
+     ]
+    }
+   ],
+   "sources": [
+    "https://openlibrary.org/works/OL2781321W",
+    "https://studentship.com.ng/jamb-hausa-syllabus/"
+   ],
+   "notes": "On the JAMB list. Year is from the syllabus; ISBN from the 1982 printing."
+  },
+  {
+   "id": "darussan-hausa-1-3",
+   "title": "Darussan Hausa 1-3",
+   "series": null,
+   "authors": [
+    "I. Y. Yahaya"
+   ],
+   "publisher": "University Press Plc",
+   "edition": null,
+   "year": 1992,
+   "isbn": null,
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "hausa",
+     "levels": [
+      "ss1",
+      "ss2",
+      "ss3"
+     ]
+    }
+   ],
+   "sources": [
+    "https://studentship.com.ng/jamb-hausa-syllabus/",
+    "https://ulearngo.com/blog/ng/jamb-syllabus-hausa"
+   ],
+   "notes": "On the JAMB list, with co-authors not named there. It may be three separate volumes."
+  },
+  {
+   "id": "exam-focus-hausa-language",
+   "title": "Exam Focus: Hausa Language",
+   "series": null,
+   "authors": [
+    "M. A. Z. Sani"
+   ],
+   "publisher": "University Press Plc",
+   "edition": null,
+   "year": 2000,
+   "isbn": null,
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "hausa",
+     "levels": [
+      "ss3"
+     ]
+    }
+   ],
+   "sources": [
+    "https://studentship.com.ng/jamb-hausa-syllabus/",
+    "https://ulearngo.com/blog/ng/jamb-syllabus-hausa"
+   ],
+   "notes": "Exam preparation, on the JAMB list, with co-authors not named there."
+  },
+  {
+   "id": "wa-o-in-bikin-aure",
+   "title": "Waƙoƙin Bikin Aure",
+   "series": null,
+   "authors": [
+    "Abdu Yahaya Bichi"
+   ],
+   "publisher": "Thomas Nelson",
+   "edition": null,
+   "year": 1979,
+   "isbn": "9789781260049",
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "hausa",
+     "levels": [
+      "ss1",
+      "ss2",
+      "ss3"
+     ]
+    }
+   ],
+   "sources": [
+    "https://openlibrary.org/works/OL31711795W",
+    "https://studentship.com.ng/jamb-hausa-syllabus/"
+   ],
+   "notes": "Literature and culture text on the JAMB list."
+  },
+  {
+   "id": "an-maraya-jos-da-wa-o-insa",
+   "title": "Ɗan Maraya Jos da Waƙoƙinsa",
+   "series": null,
+   "authors": [
+    "Muhammad Balarabe Umar"
+   ],
+   "publisher": "University Press Limited",
+   "edition": null,
+   "year": 1985,
+   "isbn": "9789781541124",
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "hausa",
+     "levels": [
+      "ss1",
+      "ss2",
+      "ss3"
+     ]
+    }
+   ],
+   "sources": [
+    "https://openlibrary.org/works/OL4706428W",
+    "https://studentship.com.ng/jamb-hausa-syllabus/"
+   ],
+   "notes": "Literature text on the JAMB list, which dates it 1976 (OUP)."
+  },
+  {
+   "id": "rabe-raben-adabin-baka-da-muhimmancinsa-ga-rayuwar-hausawa",
+   "title": "Rabe-Raben Adabin Baka da Muhimmancinsa ga Rayuwar Hausawa",
+   "series": null,
+   "authors": [
+    "A. Dangambo"
+   ],
+   "publisher": "T.P.C., Kano",
+   "edition": null,
+   "year": 1984,
+   "isbn": null,
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "hausa",
+     "levels": [
+      "ss1",
+      "ss2",
+      "ss3"
+     ]
+    }
+   ],
+   "sources": [
+    "https://studentship.com.ng/jamb-hausa-syllabus/",
+    "https://ulearngo.com/blog/ng/jamb-syllabus-hausa"
+   ],
+   "notes": "On oral literature; on the JAMB list, which gives the publisher only as \"T.P.C.\". No library record found."
+  },
+  {
+   "id": "kome-nisan-dare",
+   "title": "Kome Nisan Dare",
+   "series": null,
+   "authors": [
+    "M. B. Bambale"
+   ],
+   "publisher": "Northern Nigerian Publishing Company",
+   "edition": null,
+   "year": 2009,
+   "isbn": null,
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "hausa",
+     "levels": [
+      "ss1",
+      "ss2",
+      "ss3"
+     ]
+    }
+   ],
+   "sources": [
+    "https://studentship.com.ng/jamb-hausa-syllabus/",
+    "https://myeduvantage.com/jamb-textbooks-for-hausa/"
+   ],
+   "notes": "JAMB prose set text on some lists; another copy of the syllabus names different set texts, so check the current year."
+  },
+  {
+   "id": "wa-o-in-mu-azu-ha-eja",
+   "title": "Waƙoƙin Mu'azu Haɗeja",
+   "series": null,
+   "authors": [
+    "Mu'azu Haɗeja"
+   ],
+   "publisher": "Northern Nigerian Publishing Company",
+   "edition": null,
+   "year": 1980,
+   "isbn": null,
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "hausa",
+     "levels": [
+      "ss1",
+      "ss2",
+      "ss3"
+     ]
+    }
+   ],
+   "sources": [
+    "https://studentship.com.ng/jamb-hausa-syllabus/",
+    "https://myeduvantage.com/jamb-textbooks-for-hausa/",
+    "https://fridaydiscourse.blogspot.com/2018/01/the-return-of-our-priceless-nnpc.html"
+   ],
+   "notes": "JAMB poetry set text on some lists; check the current year."
+  },
+  {
+   "id": "kul-a-na-arna",
+   "title": "Kulɓa Na Ɓarna",
+   "series": null,
+   "authors": [
+    "Umaru Ɗanjuma Katsina"
+   ],
+   "publisher": "Northern Nigerian Publishing Company",
+   "edition": null,
+   "year": 2011,
+   "isbn": null,
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "hausa",
+     "levels": [
+      "ss1",
+      "ss2",
+      "ss3"
+     ]
+    }
+   ],
+   "sources": [
+    "https://openlibrary.org/works/OL31650823W",
+    "https://studentship.com.ng/jamb-hausa-syllabus/",
+    "https://myeduvantage.com/jamb-textbooks-for-hausa/"
+   ],
+   "notes": "JAMB drama set text on some lists; check the current year. Open Library has a 1979 NNPC edition titled Kulɓa na Ɓarna Ana."
+  },
+  {
+   "id": "amusun-hausa-na-jami-ar-bayero",
+   "title": "Ƙamusun Hausa na Jami'ar Bayero",
+   "series": null,
+   "authors": [
+    "B. Sa'id",
+    "M. Ƙaraye",
+    "L. Ɗ. Yalwa"
+   ],
+   "publisher": "Centre for the Study of Nigerian Languages, Bayero University Kano",
+   "edition": null,
+   "year": 2006,
+   "isbn": null,
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "hausa",
+     "levels": [
+      "ss1",
+      "ss2",
+      "ss3"
+     ]
+    }
+   ],
+   "sources": [
+    "https://studentship.com.ng/jamb-hausa-syllabus/",
+    "https://lexikos.journals.ac.za/pub/article/view/501/195",
+    "https://salc.uw.edu.pl/index.php/SALC/article/view/360"
+   ],
+   "notes": "Hausa-only dictionary, on the JAMB list. PDFs circulate, but no clear licence was found, so it is marked paid."
+  },
+  {
+   "id": "sabon-amus-na-hausa-zuwa-turanci",
+   "title": "Sabon Ƙamus na Hausa zuwa Turanci",
+   "series": null,
+   "authors": [
+    "Paul Newman",
+    "Roxana Ma Newman"
+   ],
+   "publisher": "Oxford University Press / University Press",
+   "edition": null,
+   "year": 1977,
+   "isbn": "9780195753035",
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "hausa",
+     "levels": [
+      "ss1",
+      "ss2",
+      "ss3"
+     ]
+    }
+   ],
+   "sources": [
+    "https://openlibrary.org/works/OL119344W",
+    "https://studentship.com.ng/jamb-hausa-syllabus/"
+   ],
+   "notes": "School-friendly Hausa-English dictionary, on the JAMB list.",
+   "cover": "https://covers.openlibrary.org/b/id/1130278-L.jpg"
+  },
+  {
+   "id": "essentials-of-yoruba-grammar",
+   "title": "Essentials of Yoruba Grammar",
+   "series": null,
+   "authors": [
+    "Oladele Awobuluyi"
+   ],
+   "publisher": "Oxford University Press Nigeria",
+   "edition": null,
+   "year": 1978,
+   "isbn": "9780195753004",
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "yoruba",
+     "levels": [
+      "ss2",
+      "ss3"
+     ]
+    }
+   ],
+   "sources": [
+    "https://openlibrary.org/works/OL5648397W",
+    "https://studentship.com.ng/jamb-yoruba-syllabus/"
+   ],
+   "notes": "On the JAMB list.",
+   "cover": "https://covers.openlibrary.org/b/id/128329-L.jpg"
+  },
+  {
+   "id": "fonoloji-ati-girama-yoruba",
+   "title": "Fọnọ́lọ́jì àti Gírámà Yorùbá",
+   "series": null,
+   "authors": [
+    "Ayọ Bamgboṣe"
+   ],
+   "publisher": "University Press Limited",
+   "edition": null,
+   "year": 1990,
+   "isbn": "9789782491558",
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "yoruba",
+     "levels": [
+      "ss2",
+      "ss3"
+     ]
+    }
+   ],
+   "sources": [
+    "https://openlibrary.org/works/OL7289869W",
+    "https://studentship.com.ng/jamb-yoruba-syllabus/"
+   ],
+   "notes": "On the JAMB list; written in Yoruba."
+  },
+  {
+   "id": "ijinle-fonoloji-ati-girama-ede-yoruba",
+   "title": "Ìjìnlẹ̀ Fọnọ́lọ́jì àti Gírámà Èdè Yorùbá",
+   "series": null,
+   "authors": [
+    "Olabode Oyadeyi"
+   ],
+   "publisher": "Heinemann Educational Books",
+   "edition": null,
+   "year": 1998,
+   "isbn": null,
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "yoruba",
+     "levels": [
+      "ss2",
+      "ss3"
+     ]
+    }
+   ],
+   "sources": [
+    "https://openlibrary.org/works/OL43773683W",
+    "https://studentship.com.ng/jamb-yoruba-syllabus/"
+   ],
+   "notes": "On the JAMB list; written in Yoruba."
+  },
+  {
+   "id": "ijinle-itupale-ede-yoruba-1-fonetiki-ati-fonoloji",
+   "title": "Ìjìnlẹ̀ Ìtúpalẹ̀ Èdè Yorùbá (1): Fónẹ́tíkì àti Fọnọ́lọ́jì",
+   "series": null,
+   "authors": [
+    "Kọ́lá Owólabí"
+   ],
+   "publisher": "Onibọnoje Press",
+   "edition": null,
+   "year": 1989,
+   "isbn": "9789781450648",
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "yoruba",
+     "levels": [
+      "ss3"
+     ]
+    }
+   ],
+   "sources": [
+    "https://openlibrary.org/works/OL4575283W",
+    "https://studentship.com.ng/jamb-yoruba-syllabus/"
+   ],
+   "notes": "On the JAMB list; written in Yoruba."
+  },
+  {
+   "id": "iwe-imodotun-yoruba",
+   "title": "Ìwé Ìmọ́dọ̀tun Yorùbá",
+   "series": null,
+   "authors": [
+    "S. A. Babalọlá"
+   ],
+   "publisher": "Longman Nigeria",
+   "edition": null,
+   "year": 1991,
+   "isbn": "9789781398926",
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "yoruba",
+     "levels": [
+      "ss1",
+      "ss2",
+      "ss3"
+     ]
+    }
+   ],
+   "sources": [
+    "https://openlibrary.org/works/OL42381937W",
+    "https://studentship.com.ng/jamb-yoruba-syllabus/"
+   ],
+   "notes": "Senior secondary course on the JAMB list. It may be separate volumes for SS1-3."
+  },
+  {
+   "id": "eko-ede-yoruba-ode-oni",
+   "title": "Èkọ́ Èdè Yorùbá Òde-Òní",
+   "series": null,
+   "authors": [
+    "O. Mustapha"
+   ],
+   "publisher": "Macmillan",
+   "edition": null,
+   "year": 1988,
+   "isbn": null,
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "yoruba",
+     "levels": [
+      "ss1",
+      "ss2",
+      "ss3"
+     ]
+    }
+   ],
+   "sources": [
+    "https://studentship.com.ng/jamb-yoruba-syllabus/"
+   ],
+   "notes": "Senior secondary course on the JAMB list, the only source found. It may be separate volumes."
+  },
+  {
+   "id": "aroko-ati-aayan-ogbufo",
+   "title": "Àròkọ àti Aáyan Ògbufọ̀",
+   "series": null,
+   "authors": [
+    "Jíbọ́là Abíọ́dún"
+   ],
+   "publisher": "MAJAB Publishers",
+   "edition": null,
+   "year": 1995,
+   "isbn": null,
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "yoruba",
+     "levels": [
+      "ss1",
+      "ss2",
+      "ss3"
+     ]
+    }
+   ],
+   "sources": [
+    "https://studentship.com.ng/jamb-yoruba-syllabus/"
+   ],
+   "notes": "Composition and translation, on the JAMB list, the only source found."
+  },
+  {
+   "id": "exam-focus-yoruba-language-for-wassce-ssce",
+   "title": "Exam Focus: Yorùbá Language for WASSCE/SSCE",
+   "series": null,
+   "authors": [
+    "L. O. Adéwọlé"
+   ],
+   "publisher": "University Press Plc",
+   "edition": null,
+   "year": 2000,
+   "isbn": null,
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "yoruba",
+     "levels": [
+      "ss3"
+     ]
+    }
+   ],
+   "sources": [
+    "https://studentship.com.ng/jamb-yoruba-syllabus/"
+   ],
+   "notes": "Exam preparation, on the JAMB list, the only source found. Co-authors not named there."
+  },
+  {
+   "id": "asa-ati-ise-yoruba",
+   "title": "Àṣà àti Ìṣe Yorùbá",
+   "series": null,
+   "authors": [
+    "C. L. Adeoye"
+   ],
+   "publisher": "Oxford University Press with University Press Ltd",
+   "edition": null,
+   "year": 1979,
+   "isbn": "9780195756098",
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "yoruba",
+     "levels": [
+      "ss1",
+      "ss2",
+      "ss3"
+     ]
+    }
+   ],
+   "sources": [
+    "https://openlibrary.org/works/OL37004351W",
+    "https://studentship.com.ng/jamb-yoruba-syllabus/"
+   ],
+   "notes": "Culture text on the JAMB list."
+  },
+  {
+   "id": "igbagbo-ati-esin-yoruba",
+   "title": "Ìgbàgbọ́ àti Ẹ̀sìn Yorùbá",
+   "series": null,
+   "authors": [
+    "C. L. Adeoye"
+   ],
+   "publisher": "Evans Brothers (Nigeria Publishers)",
+   "edition": null,
+   "year": 1985,
+   "isbn": "9789781675096",
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "yoruba",
+     "levels": [
+      "ss1",
+      "ss2",
+      "ss3"
+     ]
+    }
+   ],
+   "sources": [
+    "https://openlibrary.org/works/OL4575329W",
+    "https://studentship.com.ng/jamb-yoruba-syllabus/"
+   ],
+   "notes": "Culture text on the JAMB list, which gives Onibonoje Press as publisher. Publisher here is from the library record."
+  },
+  {
+   "id": "akojopo-iwadii-ijinle-asa-yoruba",
+   "title": "Àkójọpọ̀ Ìwádìí Ìjìnlẹ̀ Àṣà Yorùbá",
+   "series": null,
+   "authors": [
+    "T. A. A. Ladele"
+   ],
+   "publisher": "Macmillan Nigeria",
+   "edition": null,
+   "year": 1986,
+   "isbn": "9789781325632",
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "yoruba",
+     "levels": [
+      "ss1",
+      "ss2",
+      "ss3"
+     ]
+    }
+   ],
+   "sources": [
+    "https://openlibrary.org/works/OL19199298W",
+    "https://studentship.com.ng/jamb-yoruba-syllabus/"
+   ],
+   "notes": "Culture text on the JAMB list."
+  },
+  {
+   "id": "integrated-visual-arts-for-secondary-schools",
+   "title": "Integrated Visual Arts for Secondary Schools",
+   "series": null,
+   "authors": [
+    "Bayo Okunlola"
+   ],
+   "publisher": "Bounty Press / NERDC",
+   "edition": null,
+   "year": null,
+   "isbn": null,
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "fine-arts",
+     "levels": [
+      "ss1",
+      "ss2",
+      "ss3"
+     ]
+    }
+   ],
+   "sources": [
+    "https://isi.ui.edu.ng/wp-content/uploads/2026/08/LIST-OF-BOOKS-FOR-SENIOR-2026-2027-SESSION.pdf",
+    "https://syllabus.ng/ss3-scheme-of-work/visual-arts"
+   ],
+   "notes": "Main book on the 2026/27 University of Ibadan International School list; recommended in the Lagos State scheme of work. Listed as \"Bayo Okunlola et al\"."
+  },
+  {
+   "id": "guide-to-visual-art-examination",
+   "title": "Guide to Visual Art Examination",
+   "series": null,
+   "authors": [
+    "Bayo Okunlola"
+   ],
+   "publisher": "Sea Publishers",
+   "edition": null,
+   "year": null,
+   "isbn": null,
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "fine-arts",
+     "levels": [
+      "ss1",
+      "ss2",
+      "ss3"
+     ]
+    }
+   ],
+   "sources": [
+    "https://isi.ui.edu.ng/wp-content/uploads/2026/08/LIST-OF-BOOKS-FOR-SENIOR-2026-2027-SESSION.pdf",
+    "https://syllabus.ng/ss3-scheme-of-work/visual-arts"
+   ],
+   "notes": "Exam guide; the Lagos scheme calls it \"NERDC Guide to Visual Art Examination\"."
+  },
+  {
+   "id": "art-of-the-millennium-for-senior-secondary-schools",
+   "title": "Art of the Millennium for Senior Secondary Schools",
+   "series": null,
+   "authors": [
+    "S. J. Nahab"
+   ],
+   "publisher": "Ehindero (Nig.) Ltd",
+   "edition": null,
+   "year": 2003,
+   "isbn": null,
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "fine-arts",
+     "levels": [
+      "ss1",
+      "ss2",
+      "ss3"
+     ]
+    }
+   ],
+   "sources": [
+    "https://allschool.ng/wp-content/uploads/2019/02/jamb-syllabus-for-art.pdf"
+   ],
+   "notes": "JAMB Art recommended text. Seen only there; availability uncertain."
+  },
+  {
+   "id": "art-for-senior-secondary-schools",
+   "title": "Art for Senior Secondary Schools",
+   "series": null,
+   "authors": [
+    "B. K. Olurukooba"
+   ],
+   "publisher": "ABU",
+   "edition": null,
+   "year": 1991,
+   "isbn": null,
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "fine-arts",
+     "levels": [
+      "ss1",
+      "ss2",
+      "ss3"
+     ]
+    }
+   ],
+   "sources": [
+    "https://allschool.ng/wp-content/uploads/2019/02/jamb-syllabus-for-art.pdf"
+   ],
+   "notes": "JAMB Art recommended text; publisher printed there only as \"ABU\". Dated; availability uncertain."
+  },
+  {
+   "id": "a-textbook-on-art-for-junior-and-senior-secondary-schools",
+   "title": "A Textbook on Art for Junior and Senior Secondary Schools",
+   "series": null,
+   "authors": [
+    "I. N. Wangboje"
+   ],
+   "publisher": "Evans Publishers",
+   "edition": null,
+   "year": 1982,
+   "isbn": null,
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "fine-arts",
+     "levels": [
+      "ss1",
+      "ss2",
+      "ss3"
+     ]
+    }
+   ],
+   "sources": [
+    "https://allschool.ng/wp-content/uploads/2019/02/jamb-syllabus-for-art.pdf"
+   ],
+   "notes": "JAMB Art recommended text. Dated; availability uncertain."
+  },
+  {
+   "id": "african-art-a-contemporary-source-book",
+   "title": "African Art: A Contemporary Source Book",
+   "series": null,
+   "authors": [
+    "O. D. Egonwa"
+   ],
+   "publisher": "Osasu Publishers",
+   "edition": null,
+   "year": 1991,
+   "isbn": null,
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "fine-arts",
+     "levels": [
+      "ss2",
+      "ss3"
+     ]
+    }
+   ],
+   "sources": [
+    "https://allschool.ng/wp-content/uploads/2019/02/jamb-syllabus-for-art.pdf"
+   ],
+   "notes": "JAMB Art recommended text. Dated; availability uncertain."
+  },
+  {
+   "id": "creative-arts-crafts-custom-and-traditions-in-nigeria",
+   "title": "Creative Arts, Crafts, Custom and Traditions in Nigeria",
+   "series": null,
+   "authors": [
+    "Bayo Okunlola"
+   ],
+   "publisher": "Sea Publishers",
+   "edition": null,
+   "year": 2019,
+   "isbn": null,
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "cultural-creative-arts",
+     "levels": [
+      "jss1",
+      "jss2"
+     ]
+    }
+   ],
+   "sources": [
+    "https://isi.ui.edu.ng/wp-content/uploads/2023/07/LIST-OF-BOOKS-FOR-2023_2024-JUNIOR-SECONDARY-SCHOOL.pdf"
+   ],
+   "notes": "Basic 7 (JS1) and Basic 8 (JS2) books on the University of Ibadan International School list, under Visual Arts. Listed as \"Okunlola Bayo et al\"."
+  },
+  {
+   "id": "cultural-and-creative-arts-books-1-3",
+   "title": "Cultural and Creative Arts Books 1-3",
+   "series": null,
+   "authors": [
+    "T. Sola Ayodele"
+   ],
+   "publisher": "Beulah Land Books",
+   "edition": null,
+   "year": null,
+   "isbn": null,
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "cultural-creative-arts",
+     "levels": [
+      "jss1",
+      "jss2",
+      "jss3"
+     ]
+    }
+   ],
+   "sources": [
+    "https://isi.ui.edu.ng/wp-content/uploads/2023/07/LIST-OF-BOOKS-FOR-2023_2024-JUNIOR-SECONDARY-SCHOOL.pdf"
+   ],
+   "notes": "Three books, listed there for JS music. Listed as \"T. Sola Ayodele et al\"."
+  },
+  {
+   "id": "cultural-and-creative-arts-made-easy",
+   "title": "Cultural and Creative Arts Made Easy",
+   "series": null,
+   "authors": [
+    "Ibrahim Banjoko"
+   ],
+   "publisher": "Movic Publishing Company Ltd",
+   "edition": "Revised",
+   "year": null,
+   "isbn": null,
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "cultural-creative-arts",
+     "levels": [
+      "jss1",
+      "jss2",
+      "jss3"
+     ]
+    }
+   ],
+   "sources": [
+    "https://whitesands.org.ng/wp-content/uploads/2023/07/Whitesands-Senior-School-2023-2024-list-of-books.pdf"
+   ],
+   "notes": "DOUBT: found on a SENIOR school list, so the JSS placement is my judgement from the subject name. The PDF was seen only through search (direct download refused)."
+  },
+  {
+   "id": "creative-arts-and-crafts-for-j-s-s",
+   "title": "Creative Arts and Crafts for J.S.S.",
+   "series": null,
+   "authors": [
+    "U. O. Erese",
+    "E. D. Ogunsina"
+   ],
+   "publisher": "Onibonoje Press",
+   "edition": null,
+   "year": 1989,
+   "isbn": null,
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "cultural-creative-arts",
+     "levels": [
+      "jss1",
+      "jss2",
+      "jss3"
+     ]
+    }
+   ],
+   "sources": [
+    "https://allschool.ng/wp-content/uploads/2019/02/jamb-syllabus-for-art.pdf"
+   ],
+   "notes": "JAMB Art recommended text. Dated; availability uncertain."
+  },
+  {
+   "id": "cultural-and-creative-arts",
+   "title": "Cultural and Creative Arts",
+   "series": null,
+   "authors": [
+    "W. A. Olaosebikan"
+   ],
+   "publisher": "Evans",
+   "edition": null,
+   "year": 1982,
+   "isbn": null,
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "cultural-creative-arts",
+     "levels": [
+      "jss1",
+      "jss2",
+      "jss3"
+     ]
+    }
+   ],
+   "sources": [
+    "https://allschool.ng/wp-content/uploads/2019/02/jamb-syllabus-for-art.pdf"
+   ],
+   "notes": "JAMB Art recommended text. Older than the Evans JSS series already in the app; may be its predecessor."
+  },
+  {
+   "id": "cultural-and-creative-arts-for-junior-secondary-schools-in-n",
+   "title": "Cultural and Creative Arts for Junior Secondary Schools in Nigeria",
+   "series": null,
+   "authors": [
+    "Olufemi Oke"
+   ],
+   "publisher": "Melrose Publishing Company",
+   "edition": null,
+   "year": 2012,
+   "isbn": null,
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "provider": null,
+   "license": null,
+   "placements": [
+    {
+     "subject": "cultural-creative-arts",
+     "levels": [
+      "jss1",
+      "jss2",
+      "jss3"
+     ]
+    }
+   ],
+   "sources": [
+    "https://www.researchgate.net/publication/312154076_Cultural_and_Creative_Arts_for_Junior_Secondary_Schools_in_Nigeria"
+   ],
+   "notes": "DOUBT: the only source is a ResearchGate listing seen through search, weaker than the rest."
   }
  ]
 }

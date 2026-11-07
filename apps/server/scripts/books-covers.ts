@@ -1,6 +1,6 @@
 /**
- * Finds covers for books in data/books/<country>.json that have none: Open Library by ISBN (no key
- * needed), then Google Books (GOOGLE_BOOKS_API_KEY or BOOKS_API, or YOUTUBE_API_KEY when it's allowed to use the
+ * Finds covers for books in data/books/<country or courses>.json that have none: Open Library by ISBN or
+ * by title and author (no key needed), then Google Books (GOOGLE_BOOKS_API_KEY or BOOKS_API, or YOUTUBE_API_KEY when it's allowed to use the
  * Books API). A cover is only taken on a strong match (same ISBN, or the same title with a matching
  * publisher or author), so a different book's cover never slips in. Run after books-merge.
  *
@@ -17,14 +17,14 @@ const file = resolve(import.meta.dirname, `../data/books/${process.argv[2] ?? 'n
 const data = JSON.parse(readFileSync(file, 'utf8')) as { updated: string; books: Book[] };
 const key = process.env.GOOGLE_BOOKS_API_KEY || process.env.BOOKS_API || process.env.YOUTUBE_API_KEY;
 
-const words = (s: string) =>
-  s
+const words = (s: string | null) =>
+  (s ?? '')
     .toLowerCase()
     .replace(/[^a-z0-9 ]/g, ' ')
     .split(/\s+/)
     .filter((w) => w.length > 2 && !['the', 'for', 'and', 'schools', 'school', 'secondary', 'senior', 'junior', 'book'].includes(w));
 /** Share of the title's words that the candidate title also has. */
-const overlap = (a: string, b: string) => {
+const overlap = (a: string | null, b: string) => {
   const A = words(a);
   const B = new Set(words(b));
   return A.length ? A.filter((w) => B.has(w)).length / A.length : 0;
@@ -32,10 +32,34 @@ const overlap = (a: string, b: string) => {
 /** Volume numbers must agree ("…Schools 1" is not "…Schools 2"). */
 const volume = (s: string) => s.match(/\b(?:book\s*)?([1-3])\b(?!\d)/i)?.[1] ?? null;
 
-async function openLibrary(isbn: string) {
-  const url = `https://covers.openlibrary.org/b/isbn/${isbn}-L.jpg?default=false`;
-  const res = await fetch(url, { method: 'HEAD' }).catch(() => null);
-  return res?.ok ? url : null;
+const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
+
+/** Open Library's search, about one request a second as they ask. Its covers by id aren't rate limited. */
+async function openLibrarySearch(params: Record<string, string>) {
+  await sleep(1100);
+  const url = `https://openlibrary.org/search.json?${new URLSearchParams({ ...params, limit: '5', fields: 'title,subtitle,author_name,publisher,cover_i,key' })}`;
+  const res = await fetch(url, { headers: { 'User-Agent': 'KnowzoneBooks/1.0' } }).catch(() => null);
+  if (!res?.ok) return [];
+  return ((await res.json()) as { docs?: { title?: string; subtitle?: string; author_name?: string[]; publisher?: string[]; cover_i?: number; key?: string }[] }).docs ?? [];
+}
+const coverById = (id: number) => `https://covers.openlibrary.org/b/id/${id}-L.jpg`;
+
+async function openLibrary(b: Book) {
+  if (b.isbn) {
+    const doc = (await openLibrarySearch({ isbn: b.isbn.replace(/-/g, '') })).find((d) => d.cover_i);
+    if (doc?.cover_i) return { cover: coverById(doc.cover_i), key: doc.key };
+  }
+  // Without a known author or publisher to compare, a title match isn't enough.
+  if (!b.authors.length && !b.publisher) return null;
+  for (const d of await openLibrarySearch({ title: b.title.slice(0, 120) })) {
+    if (!d.cover_i) continue;
+    const title = `${d.title ?? ''} ${d.subtitle ?? ''}`;
+    const sameTitle = overlap(b.title, title) >= 0.85 && overlap(title, b.title) >= 0.6 && volume(b.title) === volume(title);
+    const samePublisher = (d.publisher ?? []).some((x) => overlap(b.publisher, x) >= 0.5);
+    const sameAuthor = b.authors.some((a) => (d.author_name ?? []).some((x) => x.toLowerCase().includes(a.split(/\s+/).pop()!.toLowerCase())));
+    if (sameTitle && (samePublisher || sameAuthor)) return { cover: coverById(d.cover_i), key: d.key };
+  }
+  return null;
 }
 
 async function google(b: Book) {
@@ -43,11 +67,14 @@ async function google(b: Book) {
   const q = b.isbn ? `isbn:${b.isbn}` : `intitle:"${b.title.replace(/"/g, '')}"`;
   const url = `https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(q)}&maxResults=5&key=${key}`;
   // Google Books often answers "temporarily unavailable": wait and try again a few times.
-  let res = await fetch(url);
-  for (let tries = 1; (res.status === 429 || res.status >= 500) && tries <= 5; tries++) {
+  const get = () => fetch(url).catch(() => null);
+  let res = await get();
+  for (let tries = 1; (!res || res.status === 429 || res.status >= 500) && tries <= 5; tries++) {
     await new Promise((r) => setTimeout(r, 2000 * tries));
-    res = await fetch(url);
+    res = await get();
   }
+  // A network failure that won't clear only costs this book; a refusal (such as the daily quota) stops the search.
+  if (!res) return null;
   if (!res.ok) throw new Error(`Google Books ${res.status}: ${(await res.text()).slice(0, 160)}`);
   const items =
     (
@@ -82,14 +109,16 @@ async function google(b: Book) {
 let ol = 0;
 let gb = 0;
 let googleError: string | null = null;
+let done = 0;
+const save = () => writeFileSync(file, JSON.stringify(data, null, 1));
 for (const b of data.books.filter((x) => !x.cover)) {
-  if (b.isbn) {
-    const url = await openLibrary(b.isbn);
-    if (url) {
-      b.cover = url;
-      ol++;
-      continue;
-    }
+  if (++done % 25 === 0) save(); // A long run keeps what it found if it's stopped.
+  const open = await openLibrary(b);
+  if (open) {
+    b.cover = open.cover;
+    if (open.key) b.sources = [...new Set([...b.sources, `https://openlibrary.org${open.key}`])];
+    ol++;
+    continue;
   }
   if (key && !googleError) {
     try {
@@ -105,7 +134,7 @@ for (const b of data.books.filter((x) => !x.cover)) {
     await new Promise((r) => setTimeout(r, 120));
   }
 }
-writeFileSync(file, JSON.stringify(data, null, 1));
+save();
 console.log(`Covers added: ${ol} from Open Library, ${gb} from Google Books.`);
 console.log(`Still without a cover: ${data.books.filter((x) => !x.cover).length} of ${data.books.length}.`);
 if (!key) console.log('No Google key: set GOOGLE_BOOKS_API_KEY (or allow YOUTUBE_API_KEY to use the Books API).');
