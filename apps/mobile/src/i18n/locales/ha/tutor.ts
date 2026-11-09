@@ -69,6 +69,10 @@ const tutor: Translation<typeof en> = {
     failed: 'Kora ba ta iya amsawa yanzu ba. Don Allah a sake gwadawa.',
     wakeToggle: 'Saurari “Hey Kora”',
     wakeOn: 'Ina sauraron “Hey Kora”…',
+    heard: 'Na ji: “{{text}}”',
+    noMic: 'Ba a sami makirufo ba. Saka ɗaya, ko ka rubuta tambayarka.',
+    network: 'Kora tana buƙatar intanet mai ƙarfi don jin ka. Duba naka ka sake gwadawa.',
+    language: 'Burauzarka ba ta iya saurare a wannan harshe ba tukuna. Rubuta tambayarka maimakon haka.',
   },
   landing: {
     eyebrow: 'MALAMIN AI NA KNOWZONE',

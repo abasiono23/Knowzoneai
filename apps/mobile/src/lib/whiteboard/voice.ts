@@ -42,17 +42,85 @@ const LOCALES: Record<string, string> = {
 };
 export const speechLocale = (language: string) => LOCALES[language.split('-')[0]!] ?? 'en-NG';
 
-/** "Kora" as browsers tend to hear it. */
-const WAKE = /\b(?:hey|hi|okay|ok)?[\s,]*(?:kora|cora|korra|corra|kor a)\b[\s,.!?]*/i;
+/**
+ * "Kora" as speech recognition actually writes it, especially in Nigerian and other African accents:
+ * the browser picks the nearest real word it knows.
+ */
+const KORA = new Set([
+  'kora',
+  'cora',
+  'korra',
+  'corra',
+  'koura',
+  'kura',
+  'kola',
+  'cola',
+  'korea',
+  'kara',
+  'cara',
+  'carra',
+  'quora',
+  'gora',
+  'goura',
+  'koora',
+  'kohra',
+  'coral',
+  'kraa',
+  'krah',
+  'kore',
+  'core',
+  'corah',
+  'korah',
+  'kurra',
+  'chora',
+]);
+/** Everyday words among those: they only count straight after a greeting ("hey cola", not "the core"). */
+const EVERYDAY = new Set(['cola', 'korea', 'core', 'coral', 'quora', 'cara']);
+const GREETING = new Set(['hey', 'hi', 'hay', 'hei', 'he', 'a', 'eh', 'okay', 'ok', 'o', 'yo', 'hello']);
+/** The same word written together with the greeting: "heykora", "akora", "hakora". */
+const JOINED = /^(?:hey|hi|hay|ha|a|eh|ok)(kora|cora|kola|cola|korra|kara|cara)$/;
 
-/** Splits a heard sentence at the wake word: what came after it, or null if Kora wasn't called. */
+const letters = (w: string) => w.toLowerCase().replace(/[^a-z]/g, '');
+
+/** Edit distance, for spellings not in the list ("korra", "kooraa"). */
+function distance(a: string, b: string) {
+  const row = Array.from({ length: b.length + 1 }, (_, i) => i);
+  for (let i = 1; i <= a.length; i++) {
+    let prev = row[0]!;
+    row[0] = i;
+    for (let j = 1; j <= b.length; j++) {
+      const keep = row[j]!;
+      row[j] = Math.min(row[j]! + 1, row[j - 1]! + 1, prev + (a[i - 1] === b[j - 1] ? 0 : 1));
+      prev = keep;
+    }
+  }
+  return row[b.length]!;
+}
+const soundsLikeKora = (w: string) => KORA.has(w) || (/^[kcgq]/.test(w) && w.length <= 6 && distance(w, 'kora') <= 1);
+
+/**
+ * Splits a heard sentence at "Kora": what came after it, or null if Kora wasn't called. "Kora" counts
+ * after a greeting ("hey Kora"), or as one of the first two words, so a question that happens to
+ * mention cola isn't taken as a call.
+ */
 export function afterWake(text: string): string | null {
-  const m = WAKE.exec(text);
-  return m ? text.slice(m.index + m[0].length).trim() : null;
+  const words = text.trim().split(/\s+/);
+  for (let i = 0; i < words.length; i++) {
+    const w = letters(words[i]!);
+    const greeted = i > 0 && GREETING.has(letters(words[i - 1]!));
+    if (JOINED.test(w) || (soundsLikeKora(w) && (greeted || (i < 2 && !EVERYDAY.has(w)))))
+      return words
+        .slice(i + 1)
+        .join(' ')
+        .replace(/^[\s,.!?]+/, '')
+        .trim();
+  }
+  return null;
 }
 
 /** "Open a whiteboard" and the like, so the command itself isn't sent as a question. */
-export const isOpenBoard = (text: string) => /^(?:please\s+)?(?:open|show|start|bring)\b.*\bboard\b/i.test(text.trim());
+export const isOpenBoard = (text: string) =>
+  /^(?:please\s+)?(?:open|show|start|bring|give)\b.{0,20}\b(?:white\s?board|board)\b/i.test(text.trim());
 
 export type Listener = { stop: () => void };
 
@@ -72,9 +140,11 @@ export function listen(
   if (!Ctor) return null;
   let stopped = false;
   let rec: Recognition | null = null;
+  // Browsers that can't listen in a language (often Yoruba, Igbo or Hausa) fall back to Nigerian English.
+  let locale = speechLocale(language);
   const begin = () => {
     rec = new Ctor();
-    rec.lang = speechLocale(language);
+    rec.lang = locale;
     rec.continuous = true;
     rec.interimResults = true;
     rec.onresult = (e) => {
@@ -86,12 +156,22 @@ export function listen(
       }
       onPartial?.(partial.trim());
     };
+    // Problems are reported as blocked, noMic, network or language. "no-speech" and "aborted" just
+    // mean a quiet moment, and the restart below handles them.
     rec.onerror = (e) => {
-      // "no-speech" and "aborted" just mean a quiet moment; the restart below handles them.
       if (e.error === 'not-allowed' || e.error === 'service-not-allowed') {
         stopped = true;
         onError?.('blocked');
-      } else if (e.error !== 'no-speech' && e.error !== 'aborted') onError?.(e.error);
+      } else if (e.error === 'audio-capture') {
+        stopped = true;
+        onError?.('noMic');
+      } else if (e.error === 'language-not-supported') {
+        if (locale !== 'en-NG') locale = 'en-NG';
+        else {
+          stopped = true;
+          onError?.('language');
+        }
+      } else if (e.error === 'network') onError?.('network');
     };
     rec.onend = () => {
       if (!stopped) setTimeout(() => !stopped && begin(), 250);

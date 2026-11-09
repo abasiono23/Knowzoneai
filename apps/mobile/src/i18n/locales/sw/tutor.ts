@@ -67,6 +67,10 @@ const tutor: Translation<typeof en> = {
     failed: 'Kora hakuweza kujibu sasa hivi. Tafadhali jaribu tena.',
     wakeToggle: 'Sikiliza “Hey Kora”',
     wakeOn: 'Ninasikiliza “Hey Kora”…',
+    heard: 'Nimesikia: “{{text}}”',
+    noMic: 'Hakuna maikrofoni. Unganisha moja, au andika swali lako.',
+    network: 'Kora anahitaji intaneti thabiti ili akusikie. Angalia yako ujaribu tena.',
+    language: 'Kivinjari chako hakiwezi kusikiliza lugha hii bado. Andika swali lako badala yake.',
   },
   landing: {
     eyebrow: 'MWALIMU WA AI WA KNOWZONE',

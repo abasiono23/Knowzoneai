@@ -67,6 +67,10 @@ const tutor: Translation<typeof en> = {
     failed: 'Kora no ha podido responder ahora. Inténtalo de nuevo.',
     wakeToggle: 'Escuchar “Hey Kora”',
     wakeOn: 'Escuchando “Hey Kora”…',
+    heard: 'Te oí: “{{text}}”',
+    noMic: 'No se encontró ningún micrófono. Conecta uno o escribe tu pregunta.',
+    network: 'Para oírte, Kora necesita una conexión estable. Revisa la tuya e inténtalo de nuevo.',
+    language: 'Tu navegador todavía no puede escuchar en este idioma. Escribe tu pregunta.',
   },
   landing: {
     eyebrow: 'TUTOR DE IA DE KNOWZONE',

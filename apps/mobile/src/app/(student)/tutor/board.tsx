@@ -25,7 +25,8 @@ type Phase = 'idle' | 'thinking' | 'writing';
  */
 export default function KoraBoard() {
   const { t } = useTranslation('tutor');
-  const { q } = useLocalSearchParams<{ q?: string }>();
+  // `q`: a question said on the tutor page. `listen`: opened by "Hey Kora", so listen for the question.
+  const { q, listen: listenNow } = useLocalSearchParams<{ q?: string; listen?: string }>();
   const { language } = useLanguage();
   const [fontsLoaded] = useFonts({ PatrickHand_400Regular });
   const tutor = useTutor();
@@ -36,13 +37,13 @@ export default function KoraBoard() {
   const [script, setScript] = useState<{ n: number; lines: BoardLine[] }>({ n: 0, lines: [] });
   const [typed, setTyped] = useState('');
   const [voice, setVoice] = useState(true);
-  const [listening, setListening] = useState(false);
+  const [listening, setListening] = useState(listenNow === '1' && voiceSupported);
   const [heard, setHeard] = useState('');
   const [status, setStatus] = useState<string | null>(null);
 
   const listener = useRef<Listener | null>(null);
   /** After the mic is pressed, or after a bare "Hey Kora", the next sentence is the question. */
-  const awaiting = useRef(false);
+  const awaiting = useRef(listenNow === '1');
   const asked = useRef<{ question: string; before: number } | null>(null);
   const autoAsked = useRef(false);
 
@@ -113,10 +114,18 @@ export default function KoraBoard() {
         void askRef.current(question);
       },
       onError: (code) => {
-        if (code === 'blocked') {
-          setListening(false);
-          setStatus(t('board.blocked'));
-        }
+        if (code !== 'network') setListening(false);
+        setStatus(
+          t(
+            code === 'blocked'
+              ? 'board.blocked'
+              : code === 'noMic'
+                ? 'board.noMic'
+                : code === 'language'
+                  ? 'board.language'
+                  : 'board.network',
+          ),
+        );
       },
     });
   };

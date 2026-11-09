@@ -67,6 +67,10 @@ const tutor: Translation<typeof en> = {
     failed: 'Kora n’a pas pu répondre pour l’instant. Réessaie.',
     wakeToggle: 'Écouter « Hey Kora »',
     wakeOn: 'J’écoute « Hey Kora »…',
+    heard: 'Entendu : « {{text}} »',
+    noMic: 'Aucun micro trouvé. Branches-en un, ou écris ta question.',
+    network: 'Pour t’entendre, Kora a besoin d’une connexion stable. Vérifie la tienne et réessaie.',
+    language: 'Ton navigateur ne peut pas encore écouter dans cette langue. Écris plutôt ta question.',
   },
   landing: {
     eyebrow: 'TUTEUR IA KNOWZONE',

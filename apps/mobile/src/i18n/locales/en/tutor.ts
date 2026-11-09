@@ -67,6 +67,10 @@ const tutor = {
     failed: 'Kora couldn’t answer just now. Please try again.',
     wakeToggle: 'Listen for “Hey Kora”',
     wakeOn: 'Listening for “Hey Kora”…',
+    heard: 'Heard: “{{text}}”',
+    noMic: 'No microphone found. Plug one in, or type your question.',
+    network: 'Kora’s hearing needs a steady internet connection. Check yours and try again.',
+    language: 'Your browser can’t listen in this language yet. Type your question instead.',
   },
   landing: {
     eyebrow: 'KNOWZONE AI TUTOR',

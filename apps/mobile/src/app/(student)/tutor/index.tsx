@@ -181,23 +181,33 @@ function BoardCard() {
   const { t } = useTranslation('tutor');
   const { language } = useLanguage();
   const [wake, setWake] = useState(false);
-  const [blocked, setBlocked] = useState(false);
+  /** A listening problem to show: blocked, noMic, network or language. */
+  const [problem, setProblem] = useState<string | null>(null);
+  /** What the browser is hearing right now, so students can see whether "Kora" came through. */
+  const [heard, setHeard] = useState('');
   const [fontsLoaded] = useFonts({ PatrickHand_400Regular });
 
   useEffect(() => {
     if (!wake) return;
     const l = listen(language, {
+      onPartial: (text) => {
+        if (text) setHeard(text);
+      },
       onFinal: (text) => {
+        setHeard(text);
         const rest = afterWake(text);
         if (rest === null) return;
         setWake(false);
-        router.push({ pathname: '/tutor/board', params: rest && !isOpenBoard(rest) ? { q: rest } : {} });
+        setHeard('');
+        // With a question, the board asks it; with just "Hey Kora", it opens listening for one.
+        router.push({
+          pathname: '/tutor/board',
+          params: rest && !isOpenBoard(rest) ? { q: rest } : { listen: '1' },
+        });
       },
       onError: (code) => {
-        if (code === 'blocked') {
-          setWake(false);
-          setBlocked(true);
-        }
+        setProblem(code);
+        if (code !== 'network') setWake(false);
       },
     });
     return () => l?.stop();
@@ -235,17 +245,36 @@ function BoardCard() {
       {canListen() && (
         <Pressable
           onPress={() => {
-            setBlocked(false);
+            setProblem(null);
+            setHeard('');
             setWake((w) => !w);
           }}
           accessibilityRole="switch"
           accessibilityState={{ checked: wake }}
           style={styles.wake}>
           <Ionicons name={wake ? 'mic' : 'mic-outline'} size={16} color={wake ? Colors.danger : Colors.primary} />
-          <Text variant="small" color={blocked ? Colors.danger : wake ? Colors.text : Colors.primary}>
-            {blocked ? t('board.blocked') : wake ? t('board.wakeOn') : t('board.wakeToggle')}
+          <Text variant="small" color={wake ? Colors.text : Colors.primary}>
+            {wake ? t('board.wakeOn') : t('board.wakeToggle')}
           </Text>
         </Pressable>
+      )}
+      {wake && !!heard && (
+        <Text variant="small" color={Colors.textSecondary} center>
+          {t('board.heard', { text: heard })}
+        </Text>
+      )}
+      {!!problem && (
+        <Text variant="small" color={Colors.danger} center>
+          {t(
+            problem === 'blocked'
+              ? 'board.blocked'
+              : problem === 'noMic'
+                ? 'board.noMic'
+                : problem === 'language'
+                  ? 'board.language'
+                  : 'board.network',
+          )}
+        </Text>
       )}
     </View>
   );

@@ -67,6 +67,10 @@ const tutor: Translation<typeof en> = {
     failed: 'Kora no fit answer now. Abeg try again.',
     wakeToggle: 'Listen for “Hey Kora”',
     wakeOn: 'I dey listen for “Hey Kora”…',
+    heard: 'I hear: “{{text}}”',
+    noMic: 'No microphone dey. Connect one, or type your question.',
+    network: 'Kora hearing need better internet. Check your network and try again.',
+    language: 'Your browser no fit listen for this language yet. Type your question instead.',
   },
   landing: {
     eyebrow: 'KNOWZONE AI TUTOR',

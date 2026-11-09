@@ -67,6 +67,10 @@ const tutor: Translation<typeof en> = {
     failed: 'Kora enweghị ike ịza ugbu a. Biko nwaa ọzọ.',
     wakeToggle: 'Gee ntị maka “Hey Kora”',
     wakeOn: 'A na m ege ntị maka “Hey Kora”…',
+    heard: 'Anụrụ m: “{{text}}”',
+    noMic: 'Achọtaghị igwe okwu. Jikọọ otu, ma ọ bụ dee ajụjụ gị.',
+    network: 'Kora chọrọ ịntanetị kwụsiri ike iji nụ gị. Lelee nke gị wee nwaa ọzọ.',
+    language: 'Ihe nchọgharị gị enweghị ike ige ntị n’asụsụ a ugbu a. Dee ajụjụ gị kama.',
   },
   landing: {
     eyebrow: 'ONYE NKUZI KNOWZONE AI',

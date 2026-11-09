@@ -67,6 +67,10 @@ const tutor: Translation<typeof en> = {
     failed: 'Kora kò lè dáhùn báyìí. Jọ̀wọ́ gbìyànjú lẹ́ẹ̀kan sí i.',
     wakeToggle: 'Fetí sí “Hey Kora”',
     wakeOn: 'Mo ń fetí sí “Hey Kora”…',
+    heard: 'Mo gbọ́: “{{text}}”',
+    noMic: 'Kò sí máíkì. So ọ̀kan pọ̀, tàbí tẹ ìbéèrè rẹ.',
+    network: 'Kora nílò ẹ̀rọ ayélujára tó dúró ṣinṣin láti gbọ́ ọ. Ṣàyẹ̀wò rẹ kí o sì gbìyànjú lẹ́ẹ̀kan sí i.',
+    language: 'Ẹ̀rọ aṣàwákiri rẹ kò lè fetí sí èdè yìí síbẹ̀. Tẹ ìbéèrè rẹ dípò.',
   },
   landing: {
     eyebrow: 'OLÙKỌ́ AI KNOWZONE',
