@@ -4,6 +4,7 @@
  * scenes, text overlays and narration rather than fully AI-generated footage.
  */
 import { getSubject, type Lesson } from '../catalog';
+import { firstSentence } from '../sentences';
 import type { StudyContent } from '../studio/types';
 import { LENGTHS } from './options';
 import type { LengthId, Scene } from './types';
@@ -19,8 +20,6 @@ const scene = (s: Omit<Scene, 'id' | 'seconds'>): Scene => ({
   id: sid(),
   seconds: secondsFor(s.caption),
 });
-
-const firstSentence = (t: string) => t.split(/(?<=[.!?])\s/)[0];
 
 export function scenesFromLesson(lesson: Lesson): Scene[] {
   const emoji = getSubject(lesson.subjectId)?.emoji ?? '📘';

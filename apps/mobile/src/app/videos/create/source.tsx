@@ -9,6 +9,7 @@ import { WizardStep } from '@/components/videos/wizard-step';
 import { Text } from '@/components/ui';
 import { Colors, Fonts, NoWebOutline, Radius, Spacing } from '@/constants/theme';
 import { LESSONS, getSubject, subjectName } from '@/lib/catalog';
+import { firstSentence } from '@/lib/sentences';
 import { useMaterials } from '@/lib/studio/store';
 import { useVideoDraft } from '@/lib/videos/draft';
 import { subjectLabel } from '@/lib/videos/options';
@@ -61,10 +62,7 @@ export default function VideoSourceScreen() {
       });
     }
     if (kind === 'text') {
-      const first = text
-        .trim()
-        .split(/(?<=[.!?])\s/)[0]
-        .slice(0, 60);
+      const first = firstSentence(text.trim()).slice(0, 60);
       draft.set({
         title: first,
         source: { kind: 'text', text: text.trim(), label: 'Your notes' },

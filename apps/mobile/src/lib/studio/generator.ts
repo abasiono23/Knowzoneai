@@ -6,6 +6,7 @@
  */
 import i18n from '@/i18n';
 
+import { firstSentence, splitSentences } from '../sentences';
 import { generateAnswer } from '../tutor/brain';
 import type { Block, TutorAnswer } from '../tutor/types';
 import type { Concept, Difficulty, GenerateOptions, KeyPoint, MindMapNode, Question, StudyContent } from './types';
@@ -21,9 +22,7 @@ const shuffle = <T>(xs: T[], seed: number) =>
     .map((o) => o.x);
 
 function sentencesOf(text: string) {
-  return text
-    .replace(/\s+/g, ' ')
-    .split(/(?<=[.!?])\s+(?=[A-Z0-9])/)
+  return splitSentences(text.replace(/\s+/g, ' '))
     .map((s) => s.trim())
     .filter((s) => s.length > 25 && s.length < 400);
 }
@@ -239,7 +238,7 @@ export function suggestTitle(input: { text?: string; topic?: string; fileName?: 
   if (input.fileName) return titleCase(input.fileName);
   // The first line, or failing that the first sentence, if it's short enough to be a title.
   const text = input.text?.trim() ?? '';
-  for (const candidate of [text.split('\n')[0], text.split(/(?<=[.!?])\s/)[0]]) {
+  for (const candidate of [text.split('\n')[0], firstSentence(text)]) {
     const c = (candidate ?? '').trim().replace(/[.:]$/, '');
     if (c.length > 3 && c.length <= 60) return c;
   }

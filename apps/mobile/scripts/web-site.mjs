@@ -15,6 +15,14 @@ const DIST = resolve(here, '../dist');
 if (!existsSync(join(DIST, 'index.html'))) throw new Error('Run expo export --platform web first');
 if (existsSync(join(DIST, 'app.html'))) throw new Error('dist already has the site; export again first');
 
+// iPhones before iOS 16.4 can't parse a regex lookbehind ("(?<=…)" or "(?<!…)"): one anywhere in the
+// app's code stops the whole web app loading on them. Use src/lib/sentences.ts or rewrite the pattern.
+const JS = join(DIST, '_expo', 'static', 'js', 'web');
+for (const f of readdirSync(JS).filter((n) => n.endsWith('.js'))) {
+  const hit = /\/\(\?<[=!]/.exec(readFileSync(join(JS, f), 'utf8'));
+  if (hit) throw new Error(`${f} has a regex lookbehind, which breaks the web app on older iPhones`);
+}
+
 // The app's page becomes app.html, so the homepage can be index.html. It gets a loading screen that
 // shows at once, in the student's language: the app is a large download, and on a phone on mobile data
 // the page would otherwise stay blank white until it arrives. The app removes it once it's ready.

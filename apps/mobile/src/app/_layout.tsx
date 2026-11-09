@@ -8,7 +8,7 @@ import {
 import { DarkTheme, Stack, ThemeProvider } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
 import { StatusBar } from 'expo-status-bar';
-import { Fragment, useEffect, type ReactNode } from 'react';
+import { Fragment, useEffect, useState, type ReactNode } from 'react';
 import { Platform, View } from 'react-native';
 
 import '@/i18n';
@@ -58,15 +58,28 @@ const navTheme = {
   },
 };
 
+/** The longest the app waits for its fonts before showing anyway. */
+const FONT_WAIT_MS = 4000;
+
 function RootNavigator() {
   const { user, loading } = useSession();
   const desktop = useDesktop();
-  const [fontsLoaded] = useFonts({
+  const [fontsDone, fontError] = useFonts({
     Manrope_500Medium,
     Manrope_600SemiBold,
     Manrope_700Bold,
     Manrope_800ExtraBold,
   });
+  // Fonts never hold the app back for long. In Safari (every iPhone browser) expo-font's load check fails,
+  // or never answers, even though the fonts have arrived, and waiting for it left iPhones on the loading
+  // screen for good. So the app goes ahead on an error or after a few seconds; the fonts still apply once
+  // they're in, or the browser's own font stands in.
+  const [fontWaitOver, setFontWaitOver] = useState(false);
+  useEffect(() => {
+    const timer = setTimeout(() => setFontWaitOver(true), FONT_WAIT_MS);
+    return () => clearTimeout(timer);
+  }, []);
+  const fontsLoaded = fontsDone || !!fontError || fontWaitOver;
 
   const { ready: languageReady } = useLanguage();
 
