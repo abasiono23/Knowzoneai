@@ -152,7 +152,7 @@ export function Thinking() {
         {[0, 1, 2].map((i) => (
           <Dot key={i} i={i} />
         ))}
-        <Text variant="small" color={Colors.textSecondary} style={{ marginStart: 6 }}>
+        <Text variant="small" color={Colors.textSecondary} style={{ marginStart: 6 }} numberOfLines={1}>
           {t('messages.thinking')}
         </Text>
       </View>
@@ -234,11 +234,13 @@ const styles = StyleSheet.create({
   },
   source: { flexDirection: 'row', gap: 4, alignItems: 'center' },
   error: { borderColor: Colors.danger + '66', backgroundColor: Colors.dangerSoft },
-  // flexGrow (not flex: 0) so web keeps an auto width instead of collapsing to zero.
+  // Sized to its content: flexGrow (not flex: 0) so web keeps an auto width, and no shrinking, because
+  // on Android a shrinkable bubble collapsed to a thin bar with "Thinking…" wrapped a letter per line.
   thinking: {
     flexGrow: 0,
-    flexShrink: 1,
+    flexShrink: 0,
     flexBasis: 'auto',
+    maxWidth: '85%',
     flexDirection: 'row',
     alignItems: 'center',
     gap: 4,

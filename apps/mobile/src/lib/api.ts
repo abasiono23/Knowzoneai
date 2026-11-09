@@ -1370,7 +1370,7 @@ export const api = {
   getMaterial: (id: string) => request<{ material: Material }>(`/materials/${id}`),
   createFromText: (input: { title?: string; text: string; depth: string; difficulty: string }) =>
     post<{ material: Material }>('/materials', input),
-  createFromFile: (form: FormData) => request<{ material: Material }>('/materials', { method: 'POST', body: form }),
+  createFromFile: (form: FormData) => uploadForm<{ material: Material }>('/materials', form, () => {}),
   submitQuiz: (id: string, answers: number[]) => post<QuizResult>(`/materials/${id}/quiz-attempts`, { answers }),
   reviewFlashcard: (cardId: string, remembered: boolean) =>
     post<{ dueAt: string }>(`/flashcards/${cardId}/review`, { remembered }),

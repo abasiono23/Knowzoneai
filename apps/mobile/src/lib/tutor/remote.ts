@@ -1,6 +1,6 @@
 import { Platform } from 'react-native';
 
-import { post, request } from '../api';
+import { post, request, uploadForm } from '../api';
 import { API_URL } from '../config';
 import type {
   AssistantMessage,
@@ -23,7 +23,8 @@ type ServerConversation = Omit<Conversation, 'messages'> & { messages?: (UserMes
 export const fileUri = (path: string) => (path.startsWith('/') ? `${API_URL}${path}` : path);
 
 function withFileUris<T extends UserMessage | AssistantMessage>(m: T): T {
-  if (m.role === 'user' && m.attachment?.uri) return { ...m, attachment: { ...m.attachment, uri: fileUri(m.attachment.uri) } };
+  if (m.role === 'user' && m.attachment?.uri)
+    return { ...m, attachment: { ...m.attachment, uri: fileUri(m.attachment.uri) } };
   if (m.role === 'assistant' && m.image) return { ...m, image: fileUri(m.image) };
   return m;
 }
@@ -47,7 +48,12 @@ async function filePart(a: Attachment): Promise<Blob> {
 export type NewConversation = Pick<Conversation, 'mode' | 'level' | 'subject' | 'context'>;
 type AskResponse = { conversation: ServerConversation; question: UserMessage; reply: AssistantMessage; usage: Usage };
 
-export async function ask(conversationId: string, text: string, attachment: Attachment | undefined, meta: NewConversation) {
+export async function ask(
+  conversationId: string,
+  text: string,
+  attachment: Attachment | undefined,
+  meta: NewConversation,
+) {
   const conversation = {
     mode: meta.mode,
     level: meta.level,
@@ -62,7 +68,8 @@ export async function ask(conversationId: string, text: string, attachment: Atta
     form.append('conversation', JSON.stringify(conversation));
     if (attachment.page) form.append('page', String(attachment.page));
     form.append('file', await filePart(attachment), attachment.name);
-    r = await request<AskResponse>(path, { method: 'POST', body: form });
+    // XMLHttpRequest, not fetch: Expo's fetch can't send a { uri } file part and fails before sending.
+    r = await uploadForm<AskResponse>(path, form, () => {});
   } else {
     r = await post<AskResponse>(path, { text, conversation });
   }
@@ -82,7 +89,10 @@ export const listConversations = async () =>
   );
 
 export const getConversation = async (id: string) =>
-  toConversation((await request<{ conversation: ServerConversation }>(`/tutor/conversations/${id}`)).conversation, true);
+  toConversation(
+    (await request<{ conversation: ServerConversation }>(`/tutor/conversations/${id}`)).conversation,
+    true,
+  );
 
 export const setPinned = (id: string, pinned: boolean) =>
   request(`/tutor/conversations/${id}`, { method: 'PATCH', body: JSON.stringify({ pinned }) });
@@ -99,6 +109,8 @@ export async function drawDiagram(messageId: string) {
 }
 
 export const getNotes = () => request<{ notes: Note[]; decks: Deck[] }>('/tutor/notes');
-export const createNote = async (n: Omit<Note, 'id' | 'createdAt'>) => (await post<{ note: Note }>('/tutor/notes', n)).note;
+export const createNote = async (n: Omit<Note, 'id' | 'createdAt'>) =>
+  (await post<{ note: Note }>('/tutor/notes', n)).note;
 export const deleteNote = (id: string) => request(`/tutor/notes/${id}`, { method: 'DELETE' });
-export const createDeck = async (d: Omit<Deck, 'id' | 'createdAt'>) => (await post<{ deck: Deck }>('/tutor/decks', d)).deck;
+export const createDeck = async (d: Omit<Deck, 'id' | 'createdAt'>) =>
+  (await post<{ deck: Deck }>('/tutor/decks', d)).deck;
