@@ -2,13 +2,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { router, useLocalSearchParams } from 'expo-router';
 import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import {
-  Pressable,
-  ScrollView,
-  StyleSheet,
-  View,
-  type ScrollViewInstance,
-} from 'react-native';
+import { Pressable, ScrollView, StyleSheet, View, type ScrollViewInstance } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { Backdrop } from '@/components/brand/backdrop';
@@ -40,11 +34,14 @@ export default function TutorChat() {
     if (result === 'limit') router.push('/tutor/limit');
   };
 
-  // Chats from the history list arrive without their messages.
+  // Chats from the history list arrive without their messages. A chat opened by its address (a web
+  // link or a refresh) can appear only once the list comes from the server, so load it then too.
   const { open, ready } = tutor;
+  const listed = !!conv;
+  const loaded = !!conv?.loaded;
   useEffect(() => {
-    if (ready) open(id);
-  }, [id, ready, open]);
+    if (ready && listed && !loaded) open(id);
+  }, [id, ready, open, listed, loaded]);
 
   // A question passed in from the landing page or New conversation is sent once.
   useEffect(() => {

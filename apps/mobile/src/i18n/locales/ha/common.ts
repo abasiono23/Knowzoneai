@@ -46,6 +46,18 @@ const common: Translation<typeof en> = {
     aiStudio: 'AI Studio',
     newAssignment: 'Sabon aikin gida',
   },
+  /** The sidebar on wide screens (the web version on a computer). */
+  desktop: {
+    newChat: 'Sabuwar tattaunawa',
+    books: 'Littattafai',
+    noChats: 'Tattaunawarka da malami za su bayyana a nan.',
+    upgrade: 'Haɓaka zuwa Plus',
+    upgradeBody: 'Ƙarin tambayoyi kowace rana',
+    menu: 'Babban menu',
+    planFree: 'Tsarin kyauta',
+    planPlus: 'Tsarin Plus',
+    planPro: 'Tsarin Pro',
+  },
   status: {
     loading: 'Ana lodawa…',
     offline: 'Ba ka da intanet',

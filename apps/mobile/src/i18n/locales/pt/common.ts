@@ -46,6 +46,18 @@ const common: Translation<typeof en> = {
     aiStudio: 'AI Studio',
     newAssignment: 'Nova tarefa',
   },
+  /** The sidebar on wide screens (the web version on a computer). */
+  desktop: {
+    newChat: 'Nova conversa',
+    books: 'Livros',
+    noChats: 'As tuas conversas com o tutor vão aparecer aqui.',
+    upgrade: 'Mudar para o Plus',
+    upgradeBody: 'Mais perguntas ao tutor todos os dias',
+    menu: 'Menu principal',
+    planFree: 'Plano gratuito',
+    planPlus: 'Plano Plus',
+    planPro: 'Plano Pro',
+  },
   status: {
     loading: 'A carregar…',
     offline: 'Estás offline',

@@ -46,6 +46,18 @@ const common: Translation<typeof en> = {
     aiStudio: 'AI Studio',
     newAssignment: 'Ọrụ ụlọ ọhụrụ',
   },
+  /** The sidebar on wide screens (the web version on a computer). */
+  desktop: {
+    newChat: 'Mkparịta ụka ọhụrụ',
+    books: 'Akwụkwọ',
+    noChats: 'Mkparịta ụka gị na onye nkuzi ga-apụta ebe a.',
+    upgrade: 'Kwalite gaa na Plus',
+    upgradeBody: 'Ajụjụ ndị ọzọ kwa ụbọchị',
+    menu: 'Menu isi',
+    planFree: 'Atụmatụ efu',
+    planPlus: 'Atụmatụ Plus',
+    planPro: 'Atụmatụ Pro',
+  },
   status: {
     loading: 'Na-ebu…',
     offline: 'Ị nọghị n’ịntanetị',

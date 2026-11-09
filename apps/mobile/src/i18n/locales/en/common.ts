@@ -44,6 +44,18 @@ const common = {
     aiStudio: 'AI Studio',
     newAssignment: 'New assignment',
   },
+  /** The sidebar on wide screens (the web version on a computer). */
+  desktop: {
+    newChat: 'New chat',
+    books: 'Books',
+    noChats: 'Your chats with the tutor will show here.',
+    upgrade: 'Upgrade to Plus',
+    upgradeBody: 'More tutor questions every day',
+    menu: 'Main menu',
+    planFree: 'Free plan',
+    planPlus: 'Plus plan',
+    planPro: 'Pro plan',
+  },
   status: {
     loading: 'Loading…',
     offline: 'You’re offline',

@@ -46,6 +46,18 @@ const common: Translation<typeof en> = {
     aiStudio: 'AI Studio',
     newAssignment: 'Kazi mpya',
   },
+  /** The sidebar on wide screens (the web version on a computer). */
+  desktop: {
+    newChat: 'Mazungumzo mapya',
+    books: 'Vitabu',
+    noChats: 'Mazungumzo yako na mwalimu yataonekana hapa.',
+    upgrade: 'Pandisha hadi Plus',
+    upgradeBody: 'Maswali zaidi kwa mwalimu kila siku',
+    menu: 'Menyu kuu',
+    planFree: 'Mpango wa bure',
+    planPlus: 'Mpango wa Plus',
+    planPro: 'Mpango wa Pro',
+  },
   status: {
     loading: 'Inapakia…',
     offline: 'Haupo mtandaoni',
