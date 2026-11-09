@@ -70,7 +70,14 @@ function RootNavigator() {
 
   // The native splash hands over to the animated one as soon as fonts are ready.
   useEffect(() => {
-    if (fontsLoaded) SplashScreen.hideAsync();
+    if (!fontsLoaded) return;
+    SplashScreen.hideAsync();
+    // The web version's loading screen (put in app.html by scripts/web-site.mjs) fades out.
+    const boot = Platform.OS === 'web' && typeof document !== 'undefined' ? document.getElementById('kz-boot') : null;
+    if (boot) {
+      boot.style.opacity = '0';
+      setTimeout(() => boot.remove(), 400);
+    }
   }, [fontsLoaded]);
   if (!fontsLoaded) return null;
 
