@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Knowzone</title>
+    <meta name="robots" content="noindex" />
+    <meta name="theme-color" content="#1a0d57" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="dashboard.css" />
+  </head>
+  <body>
+    <div class="app">
+      <aside class="side" id="side" aria-label="Sidebar">
+        <div class="side-top">
+          <a class="brand" href="index.html"><img src="assets/logo.png" alt="" />Knowzone</a>
+          <button class="icon-btn close" id="close-side" type="button" aria-label="Close menu">✕</button>
+        </div>
+        <button class="new" id="new-chat" type="button"><span aria-hidden="true">＋</span>New chat</button>
+        <nav class="tools" id="tools" aria-label="Study tools"></nav>
+        <div class="recent">
+          <h2>Recent</h2>
+          <div id="recent"></div>
+        </div>
+        <div class="me">
+          <a class="upgrade" href="pricing.html"><span aria-hidden="true">⚡</span><span><b>Upgrade to Plus</b><small>More Kora every day</small></span></a>
+          <div class="who"><span class="avatar" aria-hidden="true">A</span><span><b>Your name</b><small>Free plan</small></span></div>
+        </div>
+      </aside>
+      <div class="scrim" id="scrim"></div>
+      <main class="main">
+        <header class="bar">
+          <button class="icon-btn menu" id="open-side" type="button" aria-label="Open menu">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h10M4 17h16" /></svg>
+          </button>
+          <label class="mode"><span class="kora" aria-hidden="true">K</span><span class="sr">How Kora helps</span>
+            <select id="mode"><option>Kora · Explain</option><option>Kora · Solve step by step</option><option>Kora · Exam practice</option><option>Kora · Teach-back</option></select>
+          </label>
+          <div class="streak" title="Your streak"><span aria-hidden="true">🔥</span>7</div>
+        </header>
+        <div class="view" id="view"></div>
+        <form class="composer-wrap" id="composer">
+          <div class="composer">
+            <button class="icon-btn attach" type="button" aria-label="Add a photo or file">＋</button>
+            <textarea id="prompt" rows="1" placeholder="Ask Kora anything" aria-label="Ask Kora anything"></textarea>
+            <button class="send" id="send" type="submit" aria-label="Send" disabled>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6" /></svg>
+            </button>
+          </div>
+          <p class="hint">Kora can make mistakes. Check important answers.</p>
+        </form>
+      </main>
+    </div>
+    <script src="dashboard.js"></script>
+  </body>
+</html>

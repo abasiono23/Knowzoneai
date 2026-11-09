@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pricing: Knowzone</title>
+    <meta name="description" content="Knowzone is free to start. Plus and Pro add more AI, offline downloads and full practice papers." />
+    <meta name="theme-color" content="#2a1290" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="site.css" />
+  </head>
+  <body>
+    <header class="top" id="top"></header>
+    <section class="stage page-head"><div class="blob a"></div><div class="blob b"></div><div class="blob c"></div><canvas id="stars" aria-hidden="true"></canvas>
+      <div class="wrap reveal"><h1>Simple plans for every student</h1><p>The basics are free for everyone. Paid plans add more AI for students who want it.</p></div>
+    </section>
+    <section class="section tint" data-pricing>
+      <div class="wrap">
+        <div class="switch">
+          <div class="seg" role="group" aria-label="Billing period"><button type="button" data-set="period:month">Monthly</button><button type="button" data-set="period:term">School term</button><button type="button" data-set="period:year">Yearly</button></div>
+          <div class="seg" role="group" aria-label="Currency"><button type="button" data-set="currency:NGN">₦ Naira</button><button type="button" data-set="currency:USD">$ Dollars</button></div>
+        </div>
+        <div class="plans">
+          <article class="plan"><h3>Free</h3><p>The core of Knowzone, for everyone.</p><div class="price">0 <small>forever</small></div><ul><li>10 AI tutor questions a day</li><li>5 welcome AI credits, plus credits from invites</li><li>Summaries, flashcards and quizzes from your notes</li><li>Short-video feed and selected lessons</li><li>Knowzone World, daily missions and rewards</li><li>Basic progress tracking</li></ul><a class="btn outline" href="signup.html">Start free</a></article>
+          <article class="plan best"><span class="badge">Recommended</span><h3>Knowzone Plus</h3><p>More AI for students who study most days.</p><div class="price" data-plan="PLUS"></div><ul><li>100 AI tutor questions a day</li><li>60 AI credits every month</li><li>More video explainers, up to 5 minutes long</li><li>Advanced quizzes and spaced revision</li><li>Offline downloads</li><li>Personalised study plans</li><li>Richer progress insights</li></ul><a class="btn light" href="signup.html">Choose Plus</a></article>
+          <article class="plan"><h3>Knowzone Pro</h3><p>For daily practice before a big exam.</p><div class="price" data-plan="PRO"></div><ul><li>300 AI tutor questions a day (fair use)</li><li>200 AI credits every month</li><li>Full WAEC, NECO and JAMB practice papers</li><li>Bigger study library and folders</li><li>Priority processing when it’s busy</li><li>Everything in Plus</li></ul><a class="btn" href="signup.html">Choose Pro</a></article>
+        </div>
+        <p class="fine">Fair use applies to Pro’s daily questions. Your first payment is fully refundable within 7 days, and you can cancel any time.</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="wrap">
+        <div class="head reveal"><h2>Questions about plans</h2></div>
+        <div class="faq"><details class="reveal"><summary>What are AI credits?</summary><p>Credits pay for big AI jobs. A study pack from your notes costs 1, and a video explainer costs 1 to 5. Unused credits don’t expire.</p></details><details class="reveal"><summary>Can I cancel a paid plan?</summary><p>Yes, any time. You keep your plan until the end of the period you paid for. Your first payment is fully refundable within 7 days.</p></details><details class="reveal"><summary>Is Knowzone free?</summary><p>Yes. The core of Knowzone is free for everyone: 10 AI tutor questions a day, study tools, videos and games. Paid plans add more AI for students who want it, never the basics.</p></details></div>
+      </div>
+    </section>
+    <section class="stage end"><div class="blob a"></div><div class="blob b"></div><div class="blob c"></div><canvas id="stars" aria-hidden="true"></canvas>
+      <div class="wrap reveal">
+        <h2>Come learn with us.</h2>
+        <p>Start free, ask Kora your first question, and see how much easier studying feels.</p>
+        <a class="btn light" href="signup.html">Sign up free →</a>
+      </div>
+    </section>
+    <footer id="foot"></footer>
+    <script src="config.js"></script>
+    <script src="site.js"></script>
+  </body>
+</html>
