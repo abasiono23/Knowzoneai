@@ -6,6 +6,7 @@ import { Pressable, ScrollView, StyleSheet, View } from 'react-native';
 
 import { LogoMark } from '@/components/brand/logo';
 import { Text } from '@/components/ui';
+import { WakeSwitch } from '@/components/whiteboard/wake-switch';
 import { LinearGradient } from '@/components/ui/gradient';
 import { Radius, Spacing } from '@/constants/theme';
 import { USE_MOCKS } from '@/lib/config';
@@ -155,6 +156,7 @@ export function DesktopSidebar() {
         </View>
       </ScrollView>
 
+      <WakeSwitch dark />
       {plan === 'FREE' && (
         <Pressable onPress={() => go('/billing')} accessibilityRole="link">
           <LinearGradient

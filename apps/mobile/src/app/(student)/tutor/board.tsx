@@ -15,6 +15,7 @@ import { useLanguage } from '@/i18n/provider';
 import { useTutor } from '@/lib/tutor/store';
 import { boardScript, type BoardLine } from '@/lib/whiteboard/script';
 import { afterWake, canListen, isOpenBoard, listen, type Listener } from '@/lib/whiteboard/voice';
+import { useWake } from '@/lib/whiteboard/wake';
 
 type Phase = 'idle' | 'thinking' | 'writing';
 
@@ -37,7 +38,9 @@ export default function KoraBoard() {
   const [script, setScript] = useState<{ n: number; lines: BoardLine[] }>({ n: 0, lines: [] });
   const [typed, setTyped] = useState('');
   const [voice, setVoice] = useState(true);
-  const [listening, setListening] = useState(listenNow === '1' && voiceSupported);
+  // Listening from the start when opened by "Hey Kora", or while "Hey Kora" is on across the site.
+  const wake = useWake();
+  const [listening, setListening] = useState((listenNow === '1' || wake.on) && voiceSupported);
   const [heard, setHeard] = useState('');
   const [status, setStatus] = useState<string | null>(null);
 

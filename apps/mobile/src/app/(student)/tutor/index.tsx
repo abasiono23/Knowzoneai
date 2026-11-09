@@ -1,7 +1,6 @@
 import { PatrickHand_400Regular, useFonts } from '@expo-google-fonts/patrick-hand';
 import { Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
 import { router } from 'expo-router';
-import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Pressable, StyleSheet, View } from 'react-native';
 import Animated, { FadeInDown } from 'react-native-reanimated';
@@ -10,13 +9,13 @@ import { LogoMark } from '@/components/brand/logo';
 import { SoftGlow } from '@/components/brand/soft-glow';
 import { AskCard } from '@/components/tutor/messages';
 import { MARKER_FONT } from '@/components/whiteboard/board';
+import { WakeSwitch } from '@/components/whiteboard/wake-switch';
 import { UsageMeter } from '@/components/tutor/usage-meter';
 import { Card, Screen, ScreenHeader, SectionHeader, Text } from '@/components/ui';
 import { Colors, Palette, Radius, Spacing } from '@/constants/theme';
 import { useFlipStyle, useLanguage } from '@/i18n/provider';
 import { conversationTitle, subjectLabel, timeAgoMs } from '@/lib/tutor/format';
 import { useTutor } from '@/lib/tutor/store';
-import { afterWake, canListen, isOpenBoard, listen } from '@/lib/whiteboard/voice';
 
 /** Starter questions; the text is `tutor:landing.starters.<id>`, the subject is a catalogue name. */
 const STARTERS = [
@@ -174,44 +173,13 @@ export default function TutorLanding() {
 }
 
 /**
- * Kora's whiteboard, and (in browsers that can listen) a switch to open it hands-free: "Hey Kora"
- * opens the board, and anything said after it ("Hey Kora, how do I…") is asked straight away.
+ * Kora's whiteboard, and (in browsers that can listen) the "Listen for Hey Kora" switch, which then
+ * works on every page until the student leaves the website (see WakeProvider).
  */
 function BoardCard() {
   const { t } = useTranslation('tutor');
   const { language } = useLanguage();
-  const [wake, setWake] = useState(false);
-  /** A listening problem to show: blocked, noMic, network or language. */
-  const [problem, setProblem] = useState<string | null>(null);
-  /** What the browser is hearing right now, so students can see whether "Kora" came through. */
-  const [heard, setHeard] = useState('');
   const [fontsLoaded] = useFonts({ PatrickHand_400Regular });
-
-  useEffect(() => {
-    if (!wake) return;
-    const l = listen(language, {
-      onPartial: (text) => {
-        if (text) setHeard(text);
-      },
-      onFinal: (text) => {
-        setHeard(text);
-        const rest = afterWake(text);
-        if (rest === null) return;
-        setWake(false);
-        setHeard('');
-        // With a question, the board asks it; with just "Hey Kora", it opens listening for one.
-        router.push({
-          pathname: '/tutor/board',
-          params: rest && !isOpenBoard(rest) ? { q: rest } : { listen: '1' },
-        });
-      },
-      onError: (code) => {
-        setProblem(code);
-        if (code !== 'network') setWake(false);
-      },
-    });
-    return () => l?.stop();
-  }, [wake, language]);
 
   return (
     <View style={{ gap: Spacing.xs }}>
@@ -242,40 +210,7 @@ function BoardCard() {
           </View>
         )}
       </Pressable>
-      {canListen() && (
-        <Pressable
-          onPress={() => {
-            setProblem(null);
-            setHeard('');
-            setWake((w) => !w);
-          }}
-          accessibilityRole="switch"
-          accessibilityState={{ checked: wake }}
-          style={styles.wake}>
-          <Ionicons name={wake ? 'mic' : 'mic-outline'} size={16} color={wake ? Colors.danger : Colors.primary} />
-          <Text variant="small" color={wake ? Colors.text : Colors.primary}>
-            {wake ? t('board.wakeOn') : t('board.wakeToggle')}
-          </Text>
-        </Pressable>
-      )}
-      {wake && !!heard && (
-        <Text variant="small" color={Colors.textSecondary} center>
-          {t('board.heard', { text: heard })}
-        </Text>
-      )}
-      {!!problem && (
-        <Text variant="small" color={Colors.danger} center>
-          {t(
-            problem === 'blocked'
-              ? 'board.blocked'
-              : problem === 'noMic'
-                ? 'board.noMic'
-                : problem === 'language'
-                  ? 'board.language'
-                  : 'board.network',
-          )}
-        </Text>
-      )}
+      <WakeSwitch />
     </View>
   );
 }
@@ -370,5 +305,4 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     backgroundColor: '#ffe9ec',
   },
-  wake: { flexDirection: 'row', alignItems: 'center', gap: 6, alignSelf: 'center', paddingVertical: 6 },
 });
