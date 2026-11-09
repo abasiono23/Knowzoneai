@@ -23,7 +23,8 @@ const Text = z.object({
 const Localised = z.record(z.string(), Text);
 const Topic = z.object({
   id: z.string().regex(/^[a-z0-9-]+$/),
-  stage: z.enum(['lower', 'upper']),
+  /** School topics: lower or upper secondary. Course topics: intro, core or masters. */
+  stage: z.enum(['lower', 'upper', 'intro', 'core', 'masters']),
   text: Localised,
 });
 const Library = z.object({
@@ -45,8 +46,34 @@ export const LIBRARIES = [
   'business-studies',
   'computer-studies',
   'agricultural-science',
+  'history',
+  'government',
+  'commerce',
+  'accounting',
+  'literature',
+  'further-maths',
 ] as const;
 export type LibraryId = (typeof LIBRARIES)[number];
+
+/**
+ * University, polytechnic and college courses with summaries, each in data/summaries/uni-<course>.json.
+ * English only for now: readers of other languages see the English, with a notice.
+ */
+export const COURSES = [
+  'accounting',
+  'business-administration',
+  'civil-engineering',
+  'computer-science',
+  'economics',
+  'law',
+  'mass-communication',
+  'medicine',
+  'nursing',
+  'political-science',
+] as const;
+export const courseLibrary = (course: string) => `uni-${course}`;
+/** Every library a reader can open or search: the school subjects' and the courses'. */
+const ALL_LIBRARIES: string[] = [...LIBRARIES, ...COURSES.map(courseLibrary)];
 
 const SCIENCE: LibraryId[] = ['biology', 'chemistry', 'physics'];
 const COMPUTING: LibraryId[] = ['computer-studies'];
@@ -93,6 +120,18 @@ const FOR_SUBJECT: Record<string, LibraryId[]> = {
   'marine-fisheries': AGRICULTURE,
   agriculture: AGRICULTURE,
   'agricultural-management-practices': AGRICULTURE,
+  history: ['history'],
+  'history-government': ['history', 'government'],
+  government: ['government'],
+  // Government's lower-stage topics cover citizenship, rights and national values.
+  'civic-education': ['government'],
+  citizenship: ['government'],
+  commerce: ['commerce'],
+  accounting: ['accounting'],
+  'financial-accounting': ['accounting'],
+  literature: ['literature'],
+  'english-literature': ['literature'],
+  'further-mathematics': ['further-maths'],
 };
 
 function folder() {
@@ -163,6 +202,34 @@ export function summariesFor(subject: string, stage: string | undefined, lang: L
   };
 }
 
+/**
+ * What a course's Summaries tab lists: its course summary, then its topics, with the ones for the
+ * student's stage first (master's topics for master's students, intro and core otherwise).
+ * Courses without summaries, including ones students type in, have none.
+ */
+export function courseSummaries(course: string, stage: string | undefined, lang: LanguageId) {
+  const lib = (COURSES as readonly string[]).includes(course) ? library(courseLibrary(course)) : null;
+  if (!lib) return { translated: false, courses: [], topics: [] };
+  const mine = (topicStage: string) => (stage === 'masters' ? topicStage === 'masters' : topicStage !== 'masters');
+  const topics = lib.topics
+    .filter((t) => !hiddenSummary(lib.id, t.id))
+    .map((t) => ({
+      library: lib.id,
+      libraryName: pick(lib.name, lang),
+      id: t.id,
+      stage: t.stage,
+      yours: mine(t.stage),
+      ...card(pick(t.text, lang)),
+    }));
+  return {
+    translated: !!lib.overview[lang],
+    courses: hiddenSummary(lib.id, OVERVIEW)
+      ? []
+      : [{ library: lib.id, libraryName: pick(lib.name, lang), ...card(pick(lib.overview, lang)) }],
+    topics: [...topics.filter((t) => t.yours), ...topics.filter((t) => !t.yours)],
+  };
+}
+
 /** The libraries a shelf subject reads, whatever its country calls it. */
 export const librariesFor = (subject: string): LibraryId[] => FOR_SUBJECT[subject] ?? [];
 
@@ -179,7 +246,7 @@ export const OVERVIEW = 'overview';
 
 /** Every summary in one language, with its English words for search. */
 export function allSummaryCards(lang: LanguageId, staff = false) {
-  const cards = LIBRARIES.flatMap((id) => {
+  const cards = ALL_LIBRARIES.flatMap((id) => {
     const lib = library(id);
     if (!lib) return [];
     const libraryName = pick(lib.name, lang);
@@ -204,7 +271,7 @@ export function allSummaryCards(lang: LanguageId, staff = false) {
 
 /** How far each library's translations have got, for the staff dashboard. */
 export function summaryLibrariesReport() {
-  return LIBRARIES.flatMap((id) => {
+  return ALL_LIBRARIES.flatMap((id) => {
     const lib = library(id);
     if (!lib) return [];
     const missing = ['en', 'pcm', 'yo', 'ig', 'ha', 'fr', 'ar', 'sw', 'pt', 'es']
@@ -217,7 +284,7 @@ export function summaryLibrariesReport() {
 /** One summary to read, in one language. `overview` is the whole course. */
 export function summaryFor(libraryId: string, topic: string, lang: LanguageId, staff = false) {
   if (!staff && hiddenSummary(libraryId, topic)) return null;
-  const lib = (LIBRARIES as readonly string[]).includes(libraryId) || loaded.has(libraryId) ? library(libraryId) : null;
+  const lib = ALL_LIBRARIES.includes(libraryId) || loaded.has(libraryId) ? library(libraryId) : null;
   if (!lib) return null;
   const text = topic === OVERVIEW ? lib.overview : lib.topics.find((t) => t.id === topic)?.text;
   if (!text) return null;

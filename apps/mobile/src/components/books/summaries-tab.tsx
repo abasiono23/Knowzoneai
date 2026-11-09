@@ -21,19 +21,24 @@ const matches = (c: SummaryCard, words: string[]) => {
   return words.every((w) => hay.includes(w));
 };
 
-/** A subject's summaries: the whole course, then a topic for everything in it, all searchable. */
-export function SummariesTab({ catalogue, subject, level }: { catalogue: string; subject: string; level: string }) {
+type Source =
+  /** A school subject's shelf. */
+  | { catalogue: string; subject: string; level: string; course?: undefined; stage?: undefined }
+  /** A university, polytechnic or college course, with the student's stage. */
+  | { course: string; stage: string; catalogue?: undefined; subject?: undefined; level?: undefined };
+
+/** A subject's or course's summaries: the whole course, then a topic for everything in it, all searchable. */
+export function SummariesTab({ catalogue, subject, level, course, stage }: Source) {
   const { t, i18n } = useTranslation('books');
   const [list, setList] = useState<SummaryList | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [q, setQ] = useState('');
 
   const load = useCallback(() => {
-    booksApi
-      .summaries(catalogue, subject, level)
+    (course ? booksApi.courseSummaries(course, stage) : booksApi.summaries(catalogue!, subject!, level!))
       .then(setList)
       .catch((e) => setError(errorText(e, t('shelf.summaryLoadFailed'))));
-  }, [catalogue, subject, level, t]);
+  }, [catalogue, subject, level, course, stage, t]);
   useEffect(load, [load]);
 
   const words = useMemo(() => plain(q).split(/\s+/).filter(Boolean), [q]);
@@ -90,6 +95,11 @@ export function SummariesTab({ catalogue, subject, level }: { catalogue: string;
       {list.translated && summariesUnderReview(i18n.language) && (
         <Text variant="small" color={Colors.textSecondary}>
           {t('shelf.summaryReviewing')}
+        </Text>
+      )}
+      {!list.translated && !i18n.language.startsWith('en') && (
+        <Text variant="small" color={Colors.textSecondary}>
+          {t('shelf.summaryEnglishOnly')}
         </Text>
       )}
 

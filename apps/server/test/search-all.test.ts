@@ -21,7 +21,7 @@ const library: SummaryLibrary = {
     {
       id: 'quadratics',
       stage: 'upper',
-      text: { en: text('Quadratic equations', 'parabola'), fr: text('Équations du second degré', 'parabole') },
+      text: { en: text('Quadratic equations', 'zyloparabola'), fr: text('Équations du second degré', 'parabole') },
     },
   ],
 };
@@ -55,7 +55,7 @@ beforeAll(() => {
         {
           id: 'quadratics',
           flashcards: [],
-          videos: [{ youtubeId: 'aaaaaaaaaa1', title: 'Solving a parabola', channel: 'A Channel', seconds: 300 }],
+          videos: [{ youtubeId: 'aaaaaaaaaa1', title: 'Solving a zyloparabola', channel: 'A Channel', seconds: 300 }],
         },
       ],
     },
@@ -76,7 +76,7 @@ afterAll(() => {
 
 describe('searching everything', () => {
   it('finds summaries by title and keyword, and links to the right one', async () => {
-    const { body } = await http().get('/search/all?q=parabola').expect(200);
+    const { body } = await http().get('/search/all?q=zyloparabola').expect(200);
     expect(body.summaries).toEqual([
       expect.objectContaining({ library: 'mathematics', id: 'quadratics', title: 'Quadratic equations' }),
     ]);
@@ -84,7 +84,7 @@ describe('searching everything', () => {
   });
 
   it('finds videos with the topic they belong to', async () => {
-    const { body } = await http().get('/search/all?q=parabola').expect(200);
+    const { body } = await http().get('/search/all?q=zyloparabola').expect(200);
     expect(body.videos).toEqual([
       expect.objectContaining({ kind: 'shelf', youtubeId: 'aaaaaaaaaa1', library: 'mathematics', topic: 'quadratics' }),
     ]);
@@ -96,9 +96,9 @@ describe('searching everything', () => {
   });
 
   it('ignores words that only say what kind of thing is wanted', async () => {
-    expect(searchWords('video on parabola')).toEqual(['parabola']);
+    expect(searchWords('video on zyloparabola')).toEqual(['zyloparabola']);
     expect(searchWords('summary')).toEqual(['summary']);
-    const { body } = await http().get('/search/all?q=summary%20of%20parabola').expect(200);
+    const { body } = await http().get('/search/all?q=summary%20of%20zyloparabola').expect(200);
     expect(body.summaries).toHaveLength(1);
   });
 

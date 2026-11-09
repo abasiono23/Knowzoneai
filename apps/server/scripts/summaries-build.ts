@@ -7,11 +7,16 @@
  * ({ "yo": ["mathematics"], ... }). Until then readers of those languages get the English.
  *
  *   npx tsx scripts/summaries-build.ts <folder> [library...]
+ *
+ * University, polytechnic and college courses are English only for now, from <folder>/university/en/<course>.json
+ * (topics with a `level` of intro, core or masters), into data/summaries/uni-<course>.json:
+ *
+ *   npx tsx scripts/summaries-build.ts <folder> --courses [course...]
  */
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 
-import { LIBRARIES, OVERVIEW, type SummaryLibrary } from '../src/services/summaries.js';
+import { COURSES, LIBRARIES, OVERVIEW, courseLibrary, type SummaryLibrary } from '../src/services/summaries.js';
 
 const [dir, ...only] = process.argv.slice(2);
 if (!dir) throw new Error('Usage: npx tsx scripts/summaries-build.ts <folder> [library...]');
@@ -79,7 +84,40 @@ const ready = (existsSync(readyFile) ? JSON.parse(readFileSync(readyFile, 'utf8'
 const out = resolve(import.meta.dirname, '../data/summaries');
 mkdirSync(out, { recursive: true });
 
-for (const id of only.length ? only : LIBRARIES) {
+type Course = { id: string; name: string; overview: Text; topics: (Text & { id: string; level: string })[] };
+const LEVELS = ['intro', 'core', 'masters'];
+const courses = only[0] === '--courses' ? only.slice(1) : null;
+
+for (const course of courses ? (courses.length ? courses : COURSES) : []) {
+  if (!(COURSES as readonly string[]).includes(course)) throw new Error(`${course}: not in COURSES`);
+  const file = join(dir, 'university', 'en', `${course}.json`);
+  if (!existsSync(file)) {
+    console.log(`${course}: not written yet`);
+    continue;
+  }
+  const en = JSON.parse(readFileSync(file, 'utf8')) as Course;
+  if (en.id !== course) throw new Error(`${course}: the file says ${en.id}`);
+  if (en.topics.length < MIN_TOPICS) throw new Error(`${course}: only ${en.topics.length} topics`);
+  if (new Set(en.topics.map((t) => t.id)).size !== en.topics.length) throw new Error(`${course}: repeated topic id`);
+  if (en.topics.some((t) => t.id === OVERVIEW)) throw new Error(`${course}: a topic can't be called ${OVERVIEW}`);
+  if (!en.name?.trim()) throw new Error(`${course}: no name`);
+  sameShape(en.overview, en.overview, `${course} overview`);
+  const lib: SummaryLibrary = {
+    id: courseLibrary(course),
+    name: { en: en.name },
+    overview: { en: en.overview },
+    topics: en.topics.map(({ id, level, title, short, keywords, sections, keyPoints }) => {
+      if (!LEVELS.includes(level)) throw new Error(`${course} ${id}: level ${level}`);
+      const text = { title, short, keywords, sections, keyPoints };
+      sameShape(text, text, `${course} ${id}`);
+      return { id, stage: level as 'intro' | 'core' | 'masters', text: { en: text } };
+    }),
+  };
+  writeFileSync(join(out, `${lib.id}.json`), JSON.stringify(lib));
+  console.log(`${lib.id}: ${lib.topics.length} topics in English`);
+}
+
+for (const id of courses ? [] : only.length ? only : LIBRARIES) {
   if (!existsSync(join(dir, 'en', `${id}.json`))) {
     console.log(`${id}: not written yet`);
     continue;

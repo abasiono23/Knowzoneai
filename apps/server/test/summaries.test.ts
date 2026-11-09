@@ -95,6 +95,46 @@ describe('subject summaries', () => {
     expect(body).toEqual({ translated: false, courses: [], topics: [] });
   });
 
+  it('serves a university course in English, with the topics for the student’s stage first', async () => {
+    const en = (title: string) => ({ en: text(title) });
+    useSummaries([
+      lib('mathematics', 'Mathematics'),
+      {
+        id: 'uni-law',
+        name: { en: 'Law' },
+        overview: en('All of Law'),
+        topics: [
+          { id: 'contract', stage: 'intro', text: en('Contract') },
+          { id: 'torts', stage: 'core', text: en('Torts') },
+          { id: 'theory', stage: 'masters', text: en('Legal theory') },
+        ],
+      },
+    ]);
+    const ids = (body: { topics: { id: string; yours: boolean }[] }) => body.topics.map((t) => [t.id, t.yours]);
+    const ug = await http().get('/books/courses/law/summaries?stage=undergraduate').set('X-Language', 'fr').expect(200);
+    expect(ug.body.translated).toBe(false);
+    expect(ug.body.courses[0]).toMatchObject({ library: 'uni-law', title: 'All of Law', libraryName: 'Law' });
+    expect(ids(ug.body)).toEqual([
+      ['contract', true],
+      ['torts', true],
+      ['theory', false],
+    ]);
+    const ms = await http().get('/books/courses/law/summaries?stage=masters').expect(200);
+    expect(ids(ms.body)[0]).toEqual(['theory', true]);
+    const one = await http().get('/books/summaries/uni-law/torts').set('X-Language', 'fr').expect(200);
+    expect(one.body.summary).toMatchObject({ title: 'Torts', translated: false });
+    // Courses with no summaries yet, and odd names, have none; school shelves never read a course.
+    for (const c of ['mechanical-engineering', '..%2Fsecret'])
+      expect((await http().get(`/books/courses/${c}/summaries?stage=college`).expect(200)).body).toEqual({
+        translated: false,
+        courses: [],
+        topics: [],
+      });
+    const school = await http().get('/books/countries/ng/subjects/law/summaries?level=ss1').expect(200);
+    expect(school.body.topics).toEqual([]);
+    useSummaries([lib('mathematics', 'Mathematics'), lib('physics', 'Physics'), lib('chemistry', 'Chemistry')]);
+  });
+
   it('opens one summary, or the whole course', async () => {
     const topic = await http().get('/books/summaries/mathematics/second').expect(200);
     expect(topic.body.summary).toMatchObject({

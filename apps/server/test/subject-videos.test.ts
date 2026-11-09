@@ -99,10 +99,10 @@ describe('subject videos', () => {
           ],
         },
       ],
-      { 'history-government': ['history'] },
+      { 'zylo-history': ['history'] },
     );
     const { body } = await http()
-      .get('/books/countries/ng/subjects/history-government/videos?level=jss1')
+      .get('/books/countries/ng/subjects/zylo-history/videos?level=jss1')
       .set('X-Language', 'fr')
       .expect(200);
     expect(body.topics.map((t: { id: string }) => t.id)).toEqual(['trade', 'empires']);

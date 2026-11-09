@@ -144,6 +144,7 @@ const books: Translation<typeof en> = {
     videoNext: 'Vidiyo na-esote',
     videoSummary: 'Gụọ nchịkọta ya',
     summaryReviewing: 'Ọ bụ AI mere ntụgharị a, a ka na-enyocha ya. Ọ bụrụ na ihe adịghị mma, lelee nke Bekee.',
+    summaryEnglishOnly: 'Nchịkọta ndị a dị n’asụsụ Bekee ugbu a. Ntụgharị na-abịa.',
     summaryReadEnglish: 'Gụọ ya n’asụsụ Bekee',
     summaryReadTranslated: 'Laghachi n’asụsụ m',
     empty: 'Anyị ka na-enyocha akwụkwọ ọmụmụ kwesịrị maka ọmụmụ a. Ha ga-apụta ebe a n’oge na-adịghị anya.',

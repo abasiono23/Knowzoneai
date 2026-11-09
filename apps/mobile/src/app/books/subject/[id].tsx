@@ -76,24 +76,18 @@ export default function SubjectBooks() {
         ))}
       </View>
 
-      {tab === 'summaries' && !stage ? (
-        <SummariesTab catalogue={catalogue} subject={id} level={level} />
+      {tab === 'summaries' ? (
+        stage ? (
+          <SummariesTab course={id} stage={stage} />
+        ) : (
+          <SummariesTab catalogue={catalogue} subject={id} level={level} />
+        )
       ) : tab === 'videos' ? (
         stage ? (
           <VideosTab course={id} stage={stage} />
         ) : (
           <VideosTab catalogue={catalogue} subject={id} level={level} />
         )
-      ) : tab !== 'textbooks' ? (
-        <Card style={styles.soon}>
-          <Ionicons name={tab === 'summaries' ? 'document-text' : 'play-circle'} size={36} color={Colors.primary} />
-          <Text variant="heading" center>
-            {t('shelf.soon')}
-          </Text>
-          <Text variant="small" color={Colors.textSecondary} center>
-            {t(tab === 'summaries' ? 'shelf.soonSummaries' : 'shelf.soonVideos')}
-          </Text>
-        </Card>
       ) : error ? (
         <View style={{ gap: Spacing.sm, alignItems: 'center' }}>
           <Text variant="small" color={Colors.textSecondary} center>

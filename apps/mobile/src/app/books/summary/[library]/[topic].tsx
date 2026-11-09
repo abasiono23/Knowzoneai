@@ -59,6 +59,11 @@ export default function SummaryScreen() {
               />
             </Card>
           )}
+          {!summary.translated && !english && !i18n.language.startsWith('en') && (
+            <Text variant="small" color={Colors.textSecondary}>
+              {t('shelf.summaryEnglishOnly')}
+            </Text>
+          )}
           {summary.sections.map((s) => (
             <View key={s.heading} style={{ gap: Spacing.xs }}>
               <Text variant="heading">{s.heading}</Text>

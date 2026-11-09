@@ -144,6 +144,7 @@ const books: Translation<typeof en> = {
     videoNext: 'Video inayofuata',
     videoSummary: 'Soma muhtasari',
     summaryReviewing: 'Tafsiri hii imefanywa kwa AI na bado inakaguliwa. Kitu kikionekana si sahihi, angalia Kiingereza.',
+    summaryEnglishOnly: 'Muhtasari huu uko kwa Kiingereza kwa sasa. Tafsiri zinakuja.',
     summaryReadEnglish: 'Soma kwa Kiingereza',
     summaryReadTranslated: 'Rudi kwa lugha yangu',
     empty: 'Bado tunakagua vitabu sahihi vya kiada kwa somo hili. Vitaonekana hapa hivi karibuni.',

@@ -145,6 +145,7 @@ const books: Translation<typeof en> = {
     videoNext: 'Bidiyo na gaba',
     videoSummary: 'Karanta taƙaitawa',
     summaryReviewing: 'AI ne ya yi wannan fassara, kuma ana kan duba ta. Idan wani abu bai yi daidai ba, duba ta Turanci.',
+    summaryEnglishOnly: 'Waɗannan taƙaitattun bayanai suna cikin Turanci a yanzu. Fassara na tafe.',
     summaryReadEnglish: 'Karanta da Turanci',
     summaryReadTranslated: 'Koma harshena',
     empty: 'Har yanzu muna duba littattafan karatu da suka dace da wannan darasi. Za su bayyana a nan ba da daɗewa ba.',

@@ -144,6 +144,7 @@ const books: Translation<typeof en> = {
     videoNext: 'Next video',
     videoSummary: 'Read the summary',
     summaryReviewing: 'Na AI do this translation and people still dey check am. If anything no clear, check the English.',
+    summaryEnglishOnly: 'These summaries dey for English for now. Translation dey come.',
     summaryReadEnglish: 'Read am for English',
     summaryReadTranslated: 'Go back to my language',
     empty: 'We still dey check the correct textbooks for this subject. Dem go show for here soon.',

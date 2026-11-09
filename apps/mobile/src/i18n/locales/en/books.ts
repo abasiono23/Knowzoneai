@@ -135,6 +135,7 @@ export default {
     videoNext: 'Next video',
     videoSummary: 'Read the summary',
     summaryReviewing: 'This translation was made with AI and is still being reviewed. If something seems wrong, check the English.',
+    summaryEnglishOnly: 'These summaries are in English for now. Translations are coming.',
     summaryReadEnglish: 'Read in English',
     summaryReadTranslated: 'Back to my language',
     empty: 'We’re still checking the right textbooks for this subject. They’ll appear here soon.',

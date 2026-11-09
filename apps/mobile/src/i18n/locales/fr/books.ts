@@ -147,6 +147,7 @@ const books: Translation<typeof en> = {
     videoNext: 'Vidéo suivante',
     videoSummary: 'Lire le résumé',
     summaryReviewing: 'Cette traduction a été faite avec l’IA et est encore en cours de relecture. Si quelque chose te semble faux, vérifie l’anglais.',
+    summaryEnglishOnly: 'Ces résumés sont en anglais pour l’instant. Les traductions arrivent bientôt.',
     summaryReadEnglish: 'Lire en anglais',
     summaryReadTranslated: 'Revenir à ma langue',
     empty: 'Nous vérifions encore les bons manuels pour cette matière. Ils apparaîtront ici bientôt.',

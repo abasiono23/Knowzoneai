@@ -147,6 +147,7 @@ const books: Translation<typeof en> = {
     videoNext: 'Fídíò tó kàn',
     videoSummary: 'Ka àkótán rẹ̀',
     summaryReviewing: 'AI ni ó ṣe ìtúmọ̀ yìí, a sì ń ṣàyẹ̀wò rẹ̀ lọ́wọ́. Bí nǹkan kan kò bá dára, wo ti Gẹ̀ẹ́sì.',
+    summaryEnglishOnly: 'Àwọn àkópọ̀ yìí wà ní èdè Gẹ̀ẹ́sì fún báyìí. Ìtúmọ̀ ń bọ̀.',
     summaryReadEnglish: 'Kà á ní Gẹ̀ẹ́sì',
     summaryReadTranslated: 'Padà sí èdè mi',
     empty: 'A ṣì ń ṣàyẹ̀wò àwọn ìwé ẹ̀kọ́ tó yẹ fún ìmọ̀ yìí. Wọn yóò hàn níbí láìpẹ́.',
