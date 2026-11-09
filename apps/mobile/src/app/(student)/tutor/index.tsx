@@ -1,5 +1,7 @@
-import { Ionicons } from '@expo/vector-icons';
+import { PatrickHand_400Regular, useFonts } from '@expo-google-fonts/patrick-hand';
+import { Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
 import { router } from 'expo-router';
+import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Pressable, StyleSheet, View } from 'react-native';
 import Animated, { FadeInDown } from 'react-native-reanimated';
@@ -7,12 +9,14 @@ import Animated, { FadeInDown } from 'react-native-reanimated';
 import { LogoMark } from '@/components/brand/logo';
 import { SoftGlow } from '@/components/brand/soft-glow';
 import { AskCard } from '@/components/tutor/messages';
+import { MARKER_FONT } from '@/components/whiteboard/board';
 import { UsageMeter } from '@/components/tutor/usage-meter';
 import { Card, Screen, ScreenHeader, SectionHeader, Text } from '@/components/ui';
 import { Colors, Palette, Radius, Spacing } from '@/constants/theme';
-import { useFlipStyle } from '@/i18n/provider';
+import { useFlipStyle, useLanguage } from '@/i18n/provider';
 import { conversationTitle, subjectLabel, timeAgoMs } from '@/lib/tutor/format';
 import { useTutor } from '@/lib/tutor/store';
+import { afterWake, canListen, isOpenBoard, listen } from '@/lib/whiteboard/voice';
 
 /** Starter questions; the text is `tutor:landing.starters.<id>`, the subject is a catalogue name. */
 const STARTERS = [
@@ -87,6 +91,8 @@ export default function TutorLanding() {
           onPress={() => router.push('/tutor/upload')}
         />
       </View>
+
+      <BoardCard />
 
       <UsageMeter remaining={remaining} limit={limit} />
 
@@ -167,6 +173,84 @@ export default function TutorLanding() {
   );
 }
 
+/**
+ * Kora's whiteboard, and (in browsers that can listen) a switch to open it hands-free: "Hey Kora"
+ * opens the board, and anything said after it ("Hey Kora, how do I…") is asked straight away.
+ */
+function BoardCard() {
+  const { t } = useTranslation('tutor');
+  const { language } = useLanguage();
+  const [wake, setWake] = useState(false);
+  const [blocked, setBlocked] = useState(false);
+  const [fontsLoaded] = useFonts({ PatrickHand_400Regular });
+
+  useEffect(() => {
+    if (!wake) return;
+    const l = listen(language, {
+      onFinal: (text) => {
+        const rest = afterWake(text);
+        if (rest === null) return;
+        setWake(false);
+        router.push({ pathname: '/tutor/board', params: rest && !isOpenBoard(rest) ? { q: rest } : {} });
+      },
+      onError: (code) => {
+        if (code === 'blocked') {
+          setWake(false);
+          setBlocked(true);
+        }
+      },
+    });
+    return () => l?.stop();
+  }, [wake, language]);
+
+  return (
+    <View style={{ gap: Spacing.xs }}>
+      <Pressable
+        onPress={() => router.push('/tutor/board')}
+        accessibilityRole="button"
+        accessibilityLabel={t('board.title')}>
+        {({ pressed }) => (
+          <View style={[styles.board, { transform: [{ scale: pressed ? 0.98 : 1 }] }]}>
+            <View style={styles.boardIcon}>
+              <MaterialCommunityIcons name="draw-pen" size={26} color="#d6293b" />
+            </View>
+            <View style={{ flex: 1, gap: 2 }}>
+              <Text
+                variant="bodyStrong"
+                style={
+                  fontsLoaded && language !== 'ar'
+                    ? { fontFamily: MARKER_FONT, fontSize: 22, color: '#1f5fd1' }
+                    : { color: '#1f5fd1' }
+                }>
+                {t('board.title')}
+              </Text>
+              <Text variant="small" color="#5b5876">
+                {t('board.cardBody')}
+              </Text>
+            </View>
+            <Ionicons name="chevron-forward" size={20} color="#5b5876" />
+          </View>
+        )}
+      </Pressable>
+      {canListen() && (
+        <Pressable
+          onPress={() => {
+            setBlocked(false);
+            setWake((w) => !w);
+          }}
+          accessibilityRole="switch"
+          accessibilityState={{ checked: wake }}
+          style={styles.wake}>
+          <Ionicons name={wake ? 'mic' : 'mic-outline'} size={16} color={wake ? Colors.danger : Colors.primary} />
+          <Text variant="small" color={blocked ? Colors.danger : wake ? Colors.text : Colors.primary}>
+            {blocked ? t('board.blocked') : wake ? t('board.wakeOn') : t('board.wakeToggle')}
+          </Text>
+        </Pressable>
+      )}
+    </View>
+  );
+}
+
 function Tile({
   icon,
   color,
@@ -239,4 +323,23 @@ const styles = StyleSheet.create({
     borderColor: Colors.border,
   },
   recent: { flexDirection: 'row', alignItems: 'center', gap: Spacing.sm },
+  board: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.sm,
+    padding: Spacing.md,
+    borderRadius: Radius.lg,
+    backgroundColor: '#fdfdfb',
+    borderWidth: 6,
+    borderColor: '#d5d8e0',
+  },
+  boardIcon: {
+    width: 48,
+    height: 48,
+    borderRadius: Radius.sm,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#ffe9ec',
+  },
+  wake: { flexDirection: 'row', alignItems: 'center', gap: 6, alignSelf: 'center', paddingVertical: 6 },
 });
