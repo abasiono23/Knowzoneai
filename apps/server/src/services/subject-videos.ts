@@ -201,6 +201,27 @@ export function videosFor(subject: string, stage: string | undefined, lang: Lang
   };
 }
 
+/**
+ * What a university, polytechnic or college course's Videos tab lists: its set (uni-<course>), with the
+ * topics for the student's stage first (master's topics for master's students, intro and core otherwise).
+ * Courses without a set, including ones students type in, have none.
+ */
+export function courseVideos(course: string, stage: string | undefined, lang: LanguageId) {
+  const id = `uni-${course}`;
+  const lib = /^[a-z0-9-]{1,60}$/.test(course) ? library(id) : null;
+  if (!lib) return { reels: [], topics: [] };
+  const { libraryName, topics: list } = cards(id, lib, lang);
+  const mine = (topicStage: string) => (stage === 'masters' ? topicStage === 'masters' : topicStage !== 'masters');
+  const topics = list.flatMap((card) => {
+    const t = lib.topics.find((x) => x.id === card.id);
+    if (!t) return [];
+    const { videos } = liveTopic(t);
+    if (!videos.length) return [];
+    return [{ library: id, libraryName, ...card, yours: mine(card.stage), videos, flashcards: [] as string[] }];
+  });
+  return { reels: [], topics: [...topics.filter((t) => t.yours), ...topics.filter((t) => !t.yours)] };
+}
+
 /** Every topic with its live videos, in one language, for search. */
 export function allVideoTopics(lang: LanguageId) {
   return allSets().flatMap((id) => {

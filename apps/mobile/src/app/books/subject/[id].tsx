@@ -78,8 +78,12 @@ export default function SubjectBooks() {
 
       {tab === 'summaries' && !stage ? (
         <SummariesTab catalogue={catalogue} subject={id} level={level} />
-      ) : tab === 'videos' && !stage ? (
-        <VideosTab catalogue={catalogue} subject={id} level={level} />
+      ) : tab === 'videos' ? (
+        stage ? (
+          <VideosTab course={id} stage={stage} />
+        ) : (
+          <VideosTab catalogue={catalogue} subject={id} level={level} />
+        )
       ) : tab !== 'textbooks' ? (
         <Card style={styles.soon}>
           <Ionicons name={tab === 'summaries' ? 'document-text' : 'play-circle'} size={36} color={Colors.primary} />

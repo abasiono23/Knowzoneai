@@ -114,6 +114,48 @@ describe('subject videos', () => {
     useSubjectVideos([videos('mathematics'), videos('biology')]);
   });
 
+  it('serves a university course’s set, with the topics for the student’s stage first', async () => {
+    const course = (stage: string, n: number) => ({
+      id: `t-${stage}`,
+      stage,
+      title: { en: `Topic ${stage}` },
+      videos: [video(n)],
+      flashcards: [],
+    });
+    useSubjectVideos([
+      videos('mathematics'),
+      {
+        id: 'uni-economics',
+        name: { en: 'Economics' },
+        topics: [
+          course('intro', 6),
+          course('core', 7),
+          course('masters', 8),
+          { ...course('core', 9), id: 'empty', videos: [] },
+        ],
+      },
+    ]);
+    const ids = (body: { topics: { id: string; yours: boolean }[] }) => body.topics.map((t) => [t.id, t.yours]);
+    const ug = await http().get('/books/courses/economics/videos?stage=undergraduate').expect(200);
+    expect(ids(ug.body)).toEqual([
+      ['t-intro', true],
+      ['t-core', true],
+      ['t-masters', false],
+    ]);
+    expect(ug.body.topics[0]).toMatchObject({ library: 'uni-economics', libraryName: 'Economics', flashcards: [] });
+    const ms = await http().get('/books/courses/economics/videos?stage=masters').expect(200);
+    expect(ids(ms.body)[0]).toEqual(['t-masters', true]);
+    // School subjects never pick up a course's set, and unknown or odd course names have none.
+    const school = await http().get('/books/countries/ng/subjects/economics/videos?level=ss1').expect(200);
+    expect(school.body.topics.some((t: { library: string }) => t.library.startsWith('uni-'))).toBe(false);
+    for (const c of ['mechanical-engineering', '..%2Fsubjects'])
+      expect((await http().get(`/books/courses/${c}/videos?stage=college`).expect(200)).body).toEqual({
+        reels: [],
+        topics: [],
+      });
+    useSubjectVideos([videos('mathematics'), videos('biology')]);
+  });
+
   it('has nothing for other subjects', async () => {
     const { body } = await http().get('/books/countries/ng/subjects/yoruba/videos?level=ss1').expect(200);
     expect(body).toEqual({ reels: [], topics: [] });

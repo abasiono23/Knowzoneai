@@ -25,8 +25,14 @@ const plain = (s: string) =>
     .replace(/[̀-ًͯ-ٟ⁦-⁩]/g, '')
     .toLowerCase();
 
-/** A subject's videos by topic, mixed with its flashcard lessons and "Did you know?" reels. */
-export function VideosTab({ catalogue, subject, level }: { catalogue: string; subject: string; level: string }) {
+type Source =
+  /** A school subject's shelf. */
+  | { catalogue: string; subject: string; level: string; course?: undefined; stage?: undefined }
+  /** A university, polytechnic or college course, with the student's stage. */
+  | { course: string; stage: string; catalogue?: undefined; subject?: undefined; level?: undefined };
+
+/** A subject's or course's videos by topic, mixed with its flashcard lessons and "Did you know?" reels. */
+export function VideosTab({ catalogue, subject, level, course, stage }: Source) {
   const { t } = useTranslation('books');
   const [list, setList] = useState<VideoList | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -35,11 +41,10 @@ export function VideosTab({ catalogue, subject, level }: { catalogue: string; su
   const [open, setOpen] = useState<string | null>(null);
 
   const load = useCallback(() => {
-    booksApi
-      .videos(catalogue, subject, level)
+    (course ? booksApi.courseVideos(course, stage) : booksApi.videos(catalogue!, subject!, level!))
       .then(setList)
       .catch((e) => setError(errorText(e, t('shelf.videosLoadFailed'))));
-  }, [catalogue, subject, level, t]);
+  }, [catalogue, subject, level, course, stage, t]);
   useEffect(load, [load]);
 
   const words = useMemo(() => plain(q).split(/\s+/).filter(Boolean), [q]);

@@ -337,6 +337,9 @@ export const booksApi = {
   /** A school subject's videos and flashcard lessons by topic, with the student's class first. */
   videos: (catalogue: string, id: string, level: string) =>
     request<VideoList>(`/books/countries/${catalogue}/subjects/${id}/videos?level=${level}`),
+  /** A university, polytechnic or college course's videos by topic, with the student's stage first. */
+  courseVideos: (id: string, stage: string) =>
+    request<VideoList>(`/books/courses/${encodeURIComponent(id)}/videos?stage=${stage}`),
   videoTopic: (library: string, topic: string) =>
     request<{ topic: VideoTopicDetail }>(`/books/videos/${library}/${topic}`),
   summary: (library: string, topic: string, english?: boolean) =>

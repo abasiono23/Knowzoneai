@@ -5,7 +5,7 @@ import { notFound } from '../lib/errors.js';
 import { country } from '../services/books.js';
 import { catalogFor } from '../services/catalog.js';
 import { requestLanguage } from '../services/language.js';
-import { videoTopic, videosFor } from '../services/subject-videos.js';
+import { courseVideos, videoTopic, videosFor } from '../services/subject-videos.js';
 
 /** Videos on a school subject's shelf. Public, like the shelves themselves. */
 export const subjectVideosRouter = Router();
@@ -30,6 +30,13 @@ subjectVideosRouter.get('/books/countries/:country/subjects/:subject/videos', as
       }),
     })),
   });
+});
+
+/** A university, polytechnic or college course's videos, with the topics for the student's stage first. */
+const CourseQuery = z.object({ stage: z.string().max(20).optional() });
+subjectVideosRouter.get('/books/courses/:course/videos', (req, res) => {
+  const { stage } = CourseQuery.parse(req.query);
+  res.json(courseVideos(String(req.params.course), stage, requestLanguage(req)));
 });
 
 /** One topic's videos. */
