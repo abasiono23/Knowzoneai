@@ -1,8 +1,9 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "buildCommand": "npx expo export --platform web",
+  "buildCommand": "npx expo export --platform web && node scripts/web-site.mjs",
   "outputDirectory": "dist",
-  "rewrites": [{ "source": "/((?!_expo/|assets/|favicon).*)", "destination": "/index.html" }],
+  "cleanUrls": true,
+  "rewrites": [{ "source": "/((?!_expo/|assets/|site/|favicon).*)", "destination": "/app.html" }],
   "headers": [
     {
       "source": "/(.*)",
