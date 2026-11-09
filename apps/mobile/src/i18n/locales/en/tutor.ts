@@ -55,6 +55,7 @@ const tutor = {
     stop: 'Stop listening',
     listening: 'Listening… say “Hey Kora”, then your question.',
     askNow: 'I’m listening. Ask your question.',
+    followUp: 'Ask a follow-up question, or say “Hey Kora” for something new.',
     thinking: 'Kora is thinking…',
     placeholder: 'Type a question for the board',
     write: 'Write it',

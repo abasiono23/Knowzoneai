@@ -55,6 +55,7 @@ const tutor: Translation<typeof en> = {
     stop: 'Acha kusikiliza',
     listening: 'Ninasikiliza… sema “Hey Kora”, kisha swali lako.',
     askNow: 'Ninasikiliza. Uliza swali lako.',
+    followUp: 'Uliza swali la ziada kuhusu hili, au sema “Hey Kora” kwa jambo jipya.',
     thinking: 'Kora anafikiri…',
     placeholder: 'Andika swali la ubao',
     write: 'Liandike',

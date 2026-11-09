@@ -42,11 +42,16 @@ export default function KoraBoard() {
   const wake = useWake();
   const [listening, setListening] = useState((listenNow === '1' || wake.on) && voiceSupported);
   const [heard, setHeard] = useState('');
+  /** A problem (shown in red): a failed answer or a microphone that can't be used. */
   const [status, setStatus] = useState<string | null>(null);
+  /** A prompt (shown plainly): "I'm listening" or "ask a follow-up". */
+  const [prompt, setPrompt] = useState<string | null>(null);
 
   const listener = useRef<Listener | null>(null);
   /** After the mic is pressed, or after a bare "Hey Kora", the next sentence is the question. */
   const awaiting = useRef(listenNow === '1');
+  /** Until this time (after an answer), anything said is taken as a follow-up, without "Hey Kora". */
+  const followUntil = useRef(0);
   const asked = useRef<{ question: string; before: number } | null>(null);
   const autoAsked = useRef(false);
 
@@ -63,6 +68,8 @@ export default function KoraBoard() {
     setTyped('');
     setHeard('');
     setStatus(null);
+    setPrompt(null);
+    followUntil.current = 0;
     setPhase('thinking');
     const result = await tutor.send(id, question);
     if (result === 'limit') {
@@ -106,11 +113,12 @@ export default function KoraBoard() {
       onFinal: (text) => {
         setHeard('');
         const rest = afterWake(text);
-        if (rest === null && !awaiting.current) return;
+        const followUp = Date.now() < followUntil.current;
+        if (rest === null && !awaiting.current && !followUp) return;
         const question = rest ?? text;
         if (!question || isOpenBoard(question)) {
           awaiting.current = true;
-          setStatus(t('board.askNow'));
+          setPrompt(t('board.askNow'));
           return;
         }
         awaiting.current = false;
@@ -151,8 +159,25 @@ export default function KoraBoard() {
   const toggleMic = () => {
     awaiting.current = !listening;
     setStatus(null);
+    setPrompt(null);
     setListening((l) => !l);
   };
+  // After an answer, the student can just ask the next thing, as in a lesson. The window closes after
+  // a while, so later chatter isn't sent; "Hey Kora" always works.
+  const FOLLOW_UP_MS = 45_000;
+  const finished = () => {
+    if (listening) {
+      followUntil.current = Date.now() + FOLLOW_UP_MS;
+      setPrompt(t('board.followUp'));
+    }
+    setPhase('idle');
+  };
+  useEffect(() => {
+    if (prompt !== t('board.followUp')) return;
+    const timer = setTimeout(() => setPrompt(null), FOLLOW_UP_MS);
+    return () => clearTimeout(timer);
+  }, [prompt, t]);
+
   const clear = () => {
     setScript((s) => ({ n: s.n + 1, lines: [] }));
     setPhase('idle');
@@ -163,7 +188,9 @@ export default function KoraBoard() {
       ? t('board.thinking')
       : heard
         ? `“${heard}”`
-        : (status ?? (listening ? t('board.listening') : voiceSupported ? t('board.hint') : t('board.hintNoVoice')));
+        : (status ??
+          prompt ??
+          (listening ? t('board.listening') : voiceSupported ? t('board.hint') : t('board.hintNoVoice')));
 
   return (
     <View style={{ flex: 1 }}>
@@ -198,7 +225,7 @@ export default function KoraBoard() {
           voice={voice}
           language={language}
           font={font}
-          onDone={() => setPhase('idle')}
+          onDone={finished}
           empty={
             <View style={styles.empty}>
               <Text style={{ fontFamily: font, fontSize: 30, color: '#1f5fd1' }}>{t('board.title')}</Text>

@@ -55,6 +55,7 @@ const tutor: Translation<typeof en> = {
     stop: 'Kwụsị ige ntị',
     listening: 'A na m ege ntị… kwuo “Hey Kora”, wee jụọ ajụjụ gị.',
     askNow: 'A na m ege ntị. Jụọ ajụjụ gị.',
+    followUp: 'Jụọ ajụjụ ọzọ gbasara ya, ma ọ bụ kwuo “Hey Kora” maka ihe ọhụrụ.',
     thinking: 'Kora na-eche echiche…',
     placeholder: 'Dee ajụjụ maka bọọdụ',
     write: 'Dee ya',
