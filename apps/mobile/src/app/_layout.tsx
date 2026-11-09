@@ -68,17 +68,22 @@ function RootNavigator() {
     Manrope_800ExtraBold,
   });
 
+  const { ready: languageReady } = useLanguage();
+
   // The native splash hands over to the animated one as soon as fonts are ready.
   useEffect(() => {
-    if (!fontsLoaded) return;
-    SplashScreen.hideAsync();
-    // The web version's loading screen (put in app.html by scripts/web-site.mjs) fades out.
+    if (fontsLoaded) SplashScreen.hideAsync();
+  }, [fontsLoaded]);
+  // The web version's loading screen (put in app.html by scripts/web-site.mjs) fades out once the fonts
+  // and the student's language have arrived, so the app never flashes up in English first.
+  useEffect(() => {
+    if (!fontsLoaded || !languageReady) return;
     const boot = Platform.OS === 'web' && typeof document !== 'undefined' ? document.getElementById('kz-boot') : null;
     if (boot) {
       boot.style.opacity = '0';
       setTimeout(() => boot.remove(), 400);
     }
-  }, [fontsLoaded]);
+  }, [fontsLoaded, languageReady]);
   if (!fontsLoaded) return null;
 
   const inApp = !!user?.onboardingComplete;

@@ -1,9 +1,4 @@
-import {
-  Cairo_500Medium,
-  Cairo_600SemiBold,
-  Cairo_700Bold,
-  Cairo_800ExtraBold,
-} from '@expo-google-fonts/cairo';
+import { Cairo_500Medium, Cairo_600SemiBold, Cairo_700Bold, Cairo_800ExtraBold } from '@expo-google-fonts/cairo';
 import * as Font from 'expo-font';
 import { getLocales } from 'expo-localization';
 import i18next from 'i18next';
@@ -12,8 +7,8 @@ import { I18nManager, Platform } from 'react-native';
 
 import { storage } from '@/lib/storage';
 
+import { initialResources, loadLanguage } from './bundles';
 import { INTL_LOCALE, isLanguage, isRtl, type LanguageId } from './languages';
-import { resources } from './resources';
 
 export { LANGUAGES, isLanguage, type LanguageId } from './languages';
 
@@ -32,7 +27,8 @@ function deviceLanguage(): LanguageId {
 const i18n = i18next;
 
 i18n.use(initReactI18next).init({
-  resources,
+  // Every language on phones; English only on the web, where others load on demand (ensureLanguage).
+  resources: initialResources,
   lng: deviceLanguage(),
   fallbackLng: 'en',
   defaultNS: 'common',
@@ -72,11 +68,27 @@ async function ensureFonts(lang: LanguageId) {
 }
 
 /**
+ * Makes sure a language's words are loaded (on the web they're downloaded the first time). If the
+ * download fails, the app stays in its current language rather than switching to missing words.
+ */
+async function ensureLanguage(lang: LanguageId) {
+  if (i18n.hasResourceBundle(lang, 'common')) return true;
+  try {
+    const bundle = await loadLanguage(lang);
+    for (const [ns, words] of Object.entries(bundle)) i18n.addResourceBundle(lang, ns, words, true, true);
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+/**
  * Switches the whole app to a language and remembers it on this device. Returns true when the
  * layout direction changed on iOS/Android, where the app must restart to mirror it.
  */
 export async function setLanguage(lang: LanguageId) {
-  await ensureFonts(lang);
+  const [, loaded] = await Promise.all([ensureFonts(lang), ensureLanguage(lang)]);
+  if (!loaded) return false;
   await i18n.changeLanguage(lang);
   await storage.set(KEY, lang);
   return applyDirection(lang);
@@ -86,10 +98,12 @@ export async function setLanguage(lang: LanguageId) {
 export async function restoreLanguage() {
   const saved = await storage.get(KEY);
   const lang = isLanguage(saved) ? saved : deviceLanguage();
-  await ensureFonts(lang);
-  if (lang !== i18n.language) await i18n.changeLanguage(lang);
-  applyDirection(lang);
-  return lang;
+  const [, loaded] = await Promise.all([ensureFonts(lang), ensureLanguage(lang)]);
+  const use = loaded ? lang : 'en';
+  // Reapplied even when i18next already has this language: on the web its words may only just have arrived.
+  await i18n.changeLanguage(use);
+  applyDirection(use);
+  return use;
 }
 
 /** The language someone explicitly picked on this device, if any (not the phone's default). */
@@ -104,8 +118,10 @@ export const currentLanguage = (): LanguageId => (isLanguage(i18n.language) ? i1
 export const formatDate = (t: number | Date, options: Intl.DateTimeFormatOptions) =>
   new Date(t).toLocaleDateString(INTL_LOCALE[currentLanguage()], options);
 
-export const formatTime = (t: number | Date, options: Intl.DateTimeFormatOptions = { hour: 'numeric', minute: '2-digit' }) =>
-  new Date(t).toLocaleTimeString(INTL_LOCALE[currentLanguage()], options);
+export const formatTime = (
+  t: number | Date,
+  options: Intl.DateTimeFormatOptions = { hour: 'numeric', minute: '2-digit' },
+) => new Date(t).toLocaleTimeString(INTL_LOCALE[currentLanguage()], options);
 
 export const formatNumber = (n: number, options?: Intl.NumberFormatOptions) =>
   n.toLocaleString(INTL_LOCALE[currentLanguage()], options);

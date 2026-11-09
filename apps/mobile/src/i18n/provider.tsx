@@ -18,6 +18,8 @@ import { isRtl } from './languages';
 
 type Ctx = {
   language: LanguageId;
+  /** The saved language is loaded (on the web its words are downloaded first). */
+  ready: boolean;
   /** Switches the whole app and, when signed in, the account's app and learning language. */
   changeLanguage: (lang: LanguageId) => Promise<void>;
 };
@@ -29,12 +31,15 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   const { user } = useSession();
   const { i18n: instance } = useTranslation();
   const [language, setState] = useState<LanguageId>(currentLanguage());
+  const [ready, setReady] = useState(false);
 
   // Follow i18next, so every screen re-renders in the new language.
   useEffect(() => {
     const onChange = (lng: string) => isLanguage(lng) && setState(lng);
     instance.on('languageChanged', onChange);
-    restoreLanguage().then(setState);
+    restoreLanguage()
+      .then(setState)
+      .finally(() => setReady(true));
     return () => instance.off('languageChanged', onChange);
   }, [instance]);
 
@@ -74,7 +79,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     [userId],
   );
 
-  return <LanguageContext.Provider value={{ language, changeLanguage }}>{children}</LanguageContext.Provider>;
+  return <LanguageContext.Provider value={{ language, ready, changeLanguage }}>{children}</LanguageContext.Provider>;
 }
 
 /** True when the current language reads right to left (Arabic). Use it to mirror arrows and chevrons. */
