@@ -37,6 +37,10 @@ type Props = {
   empty?: React.ReactNode;
   /** Smaller writing, for the board in a side panel. */
   small?: boolean;
+  /** Stopped by the student: Kora goes quiet and the rest of the answer is written out at once. */
+  stopped?: boolean;
+  /** Told each sentence as Kora starts saying it, so her own voice isn't taken for the student's. */
+  onSay?: (text: string) => void;
 };
 
 /**
@@ -44,19 +48,28 @@ type Props = {
  * while Kora says it. The next line starts once both the writing and the voice have finished.
  * Give it a new `key` for a new script.
  */
-export function Whiteboard({ lines, voice, language, font, onDone, empty, small }: Props) {
+export function Whiteboard({ lines, voice, language, font, onDone, empty, small, stopped = false, onSay }: Props) {
   const { width } = useWindowDimensions();
   const [line, setLine] = useState(0);
   const [chars, setChars] = useState(0);
   const scroll = useRef<ScrollViewInstance>(null);
   // A new script gets a new board (the parent changes its key), so this one only ever moves forward.
   const done = useRef(onDone);
+  const say = useRef(onSay);
   useEffect(() => {
     done.current = onDone;
+    say.current = onSay;
   });
+  // Once stopped, every line shows in full.
+  const at = stopped ? lines.length : line;
 
   // Write the current line, and say it, then move on when both are finished.
   useEffect(() => {
+    if (stopped) {
+      void Speech.stop();
+      if (lines.length) done.current?.();
+      return;
+    }
     if (line >= lines.length) {
       if (lines.length) done.current?.();
       return;
@@ -91,6 +104,7 @@ export function Whiteboard({ lines, voice, language, font, onDone, empty, small 
     // moves on after about as long as the sentence takes to say.
     let guard: ReturnType<typeof setTimeout> | undefined;
     if (!spoke) {
+      say.current?.(l.say);
       Speech.speak(l.say, {
         language: speechLocale(language),
         rate: 0.98,
@@ -105,7 +119,7 @@ export function Whiteboard({ lines, voice, language, font, onDone, empty, small 
       clearInterval(timer);
       clearTimeout(guard);
     };
-  }, [line, lines, voice, language]);
+  }, [line, lines, voice, language, stopped]);
 
   // Stop talking when the board closes or the voice is switched off.
   useEffect(() => () => void Speech.stop(), []);
@@ -124,9 +138,9 @@ export function Whiteboard({ lines, voice, language, font, onDone, empty, small 
         contentContainerStyle={[styles.content, small && { padding: 16 }]}
         onContentSizeChange={() => scroll.current?.scrollToEnd({ animated: true })}>
         {!lines.length && empty}
-        {lines.slice(0, line + 1).map((l, i) => {
-          const shown = i < line ? l.text : [...l.text].slice(0, chars).join('');
-          const writing = i === line && line < lines.length;
+        {lines.slice(0, at + 1).map((l, i) => {
+          const shown = i < at ? l.text : [...l.text].slice(0, chars).join('');
+          const writing = i === at && at < lines.length;
           return (
             <View
               key={i}
@@ -146,7 +160,7 @@ export function Whiteboard({ lines, voice, language, font, onDone, empty, small 
                   <MaterialCommunityIcons name="lead-pencil" size={22} color={MARKERS[l.kind]} style={styles.pen} />
                 )}
               </RNText>
-              {l.kind === 'question' && i < line && <View style={styles.underline} />}
+              {l.kind === 'question' && i < at && <View style={styles.underline} />}
             </View>
           );
         })}

@@ -122,6 +122,55 @@ export function afterWake(text: string): string | null {
 export const isOpenBoard = (text: string) =>
   /^(?:please\s+)?(?:open|show|start|bring|give)\b.{0,20}\b(?:white\s?board|board)\b/i.test(text.trim());
 
+/** Lower case, without accents, tone marks or punctuation, so "Ó tó!" and "o to" compare equal. */
+const plain = (text: string) =>
+  text
+    .normalize('NFD')
+    .replace(/\p{M}/gu, '')
+    .toLowerCase()
+    .replace(/[^\p{L}\p{N}\s]/gu, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+
+/** What students say to make Kora stop talking, in each of the app's languages (all heard everywhere). */
+const STOP = new Set(
+  [
+    // English and Pidgin
+    'ok', 'okay', 'ok ok', 'okay okay', 'okay thanks', 'ok thanks', 'okay thank you', 'stop', 'stop it', 'please stop',
+    'wait', 'hold on', 'enough', 'thats enough', 'thats fine', 'alright', 'all right', 'got it', 'i got it',
+    'thanks', 'thank you', 'e don do', 'e do', 'abeg stop', 'no wahala',
+    // French, Spanish, Portuguese
+    'd accord', 'arrete', 'arrete toi', 'ca suffit', 'merci', 'vale', 'para', 'basta', 'gracias', 'de acuerdo',
+    'pare', 'chega', 'obrigado', 'obrigada', 'ta bom', 'esta bem', 'certo',
+    // Swahili, Arabic
+    'sawa', 'acha', 'simama', 'asante', 'inatosha', 'حسنا', 'توقف', 'كفى', 'شكرا',
+    // Yoruba, Hausa, Igbo
+    'o da', 'o to', 'duro', 'e se', 'to', 'ya isa', 'tsaya', 'na gode', 'o di mma', 'kwusi', 'daalu',
+  ].map(plain),
+);
+
+/** "Okay", "stop", "thank you" and the like, said on their own (with or without "Kora"). */
+export function isStopPhrase(text: string) {
+  const words = plain(text)
+    .split(' ')
+    .filter((w) => !soundsLikeKora(letters(w)) && w !== 'hey' && w !== 'hi');
+  return words.length > 0 && words.length <= 4 && STOP.has(words.join(' '));
+}
+
+/**
+ * Whether something heard is just Kora's own voice coming back through the microphone: most of its
+ * words are in what she has just said. (Browsers cancel most echo themselves; this catches the rest.)
+ */
+export function isEcho(heard: string, said: string) {
+  const all = plain(heard).split(' ').filter(Boolean);
+  if (!all.length) return true;
+  // Short everyday words ("what", "is", "the") are in everything she says, so only longer words count.
+  const long = all.filter((w) => w.length >= 5);
+  const words = long.length ? long : all;
+  const hers = new Set(plain(said).split(' '));
+  return words.filter((w) => hers.has(w)).length / words.length >= 0.6;
+}
+
 export type Listener = { stop: () => void };
 
 /**

@@ -58,6 +58,8 @@ const tutor: Translation<typeof en> = {
     listening: 'Ina saurare… faɗi “Hey Kora”, sannan tambayarka.',
     askNow: 'Ina saurare. Yi tambayarka.',
     followUp: 'Yi wata tambaya a kai, ko ka faɗi “Hey Kora” don sabon abu.',
+    quiet: 'Tsayar da Kora',
+    talkOver: 'Faɗi “to” don Kora ta tsaya, ko ka yi sabuwar tambaya kawai.',
     thinking: 'Kora tana tunani…',
     placeholder: 'Rubuta tambaya don allo',
     write: 'Rubuta',

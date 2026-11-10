@@ -12,7 +12,7 @@ import { Colors, Fonts, Gradients, Radius, Spacing } from '@/constants/theme';
 import { useLanguage } from '@/i18n/provider';
 import { useTutor } from '@/lib/tutor/store';
 import { boardScript, type BoardLine } from '@/lib/whiteboard/script';
-import { afterWake, canListen, isOpenBoard, listen, type Listener } from '@/lib/whiteboard/voice';
+import { afterWake, canListen, isEcho, isOpenBoard, isStopPhrase, listen, type Listener } from '@/lib/whiteboard/voice';
 
 type Phase = 'idle' | 'thinking' | 'writing';
 
@@ -44,8 +44,26 @@ export function KoraBoard({ question: q, listenNow = false, listenFromStart = fa
   const panel = !!onClose;
 
   const [convId, setConvId] = useState<string | null>(null);
-  const [phase, setPhase] = useState<Phase>('idle');
+  const [phase, setPhaseState] = useState<Phase>('idle');
+  /** Read by the microphone's callbacks, and set at once (the board's "done" can arrive in the same render). */
+  const phaseRef = useRef<Phase>('idle');
+  const setPhase = (p: Phase) => {
+    phaseRef.current = p;
+    setPhaseState(p);
+  };
   const [script, setScript] = useState<{ n: number; lines: BoardLine[] }>({ n: 0, lines: [] });
+  const scriptN = useRef(0);
+  useEffect(() => {
+    scriptN.current = script.n;
+  }, [script.n]);
+  /** The script the student stopped: Kora goes quiet and the rest is written out at once. */
+  const [stoppedN, setStoppedN] = useState(-1);
+  /** What Kora said last, so her own voice coming back through the microphone isn't taken as the student. */
+  const said = useRef('');
+  /** Echo is checked while she talks and for a moment after (the last words can arrive late). */
+  const echoUntil = useRef(0);
+  /** The student started talking over Kora: what they finish saying is their next question. */
+  const bargedIn = useRef(false);
   const [typed, setTyped] = useState('');
   const [voice, setVoice] = useState(true);
   const [listening, setListening] = useState((listenNow || listenFromStart) && voiceSupported);
@@ -66,9 +84,16 @@ export function KoraBoard({ question: q, listenNow = false, listenFromStart = fa
   const conv = tutor.conversations.find((c) => c.id === convId);
   const font = language === 'ar' ? Fonts.semibold : fontsLoaded ? MARKER_FONT : Fonts.semibold;
 
+  /** Stops Kora mid-answer, like talking over someone: she goes quiet and the answer is written out. */
+  const interrupt = () => {
+    if (phaseRef.current === 'writing') setStoppedN(scriptN.current);
+  };
+
   const ask = async (raw: string) => {
     const question = raw.trim();
-    if (!question || phase !== 'idle') return;
+    if (!question || phaseRef.current === 'thinking') return;
+    // Asking while she's still answering cuts her off, as in a conversation.
+    interrupt();
     if (tutor.remaining <= 0) return router.push('/tutor/limit');
     const id = convId ?? tutor.createConversation({ mode: 'steps', level: 'beginner' });
     setConvId(id);
@@ -108,18 +133,45 @@ export function KoraBoard({ question: q, listenNow = false, listenFromStart = fa
     setPhase('writing');
   }, [phase, conv, last, t]);
 
-  // Kora doesn't listen while she talks, so she never hears herself.
+  // Kora keeps listening while she talks, so the student can stop her ("okay", "stop") or just talk over
+  // her with a new question, as in a conversation. She pauses only while thinking.
   const stopListening = () => {
     listener.current?.stop();
     listener.current = null;
   };
+  const echo = (text: string) => Date.now() < echoUntil.current && isEcho(text, said.current);
   const startListening = (expectQuestion: boolean) => {
     stopListening();
     awaiting.current = expectQuestion;
     listener.current = listen(language, {
-      onPartial: setHeard,
+      onPartial: (text) => {
+        if (echo(text)) return;
+        setHeard(text);
+        // A few words of the student's own while Kora talks: she stops at once, without waiting for the end.
+        if (phaseRef.current === 'writing' && text.split(/\s+/).length >= 3 && !isStopPhrase(text)) {
+          bargedIn.current = true;
+          interrupt();
+        }
+      },
       onFinal: (text) => {
         setHeard('');
+        if (echo(text)) return;
+        if (isStopPhrase(text)) {
+          bargedIn.current = false;
+          interrupt();
+          return;
+        }
+        if (phaseRef.current === 'writing' || bargedIn.current) {
+          bargedIn.current = false;
+          interrupt();
+          const question = afterWake(text) ?? text;
+          if (question.split(/\s+/).length >= 2 && !isOpenBoard(question)) void askRef.current(question);
+          else {
+            awaiting.current = true;
+            setPrompt(t('board.askNow'));
+          }
+          return;
+        }
         const rest = afterWake(text);
         const followUp = Date.now() < followUntil.current;
         if (rest === null && !awaiting.current && !followUp) return;
@@ -148,12 +200,13 @@ export function KoraBoard({ question: q, listenNow = false, listenFromStart = fa
       },
     });
   };
+  const thinking = phase === 'thinking';
   useEffect(() => {
-    if (listening && phase === 'idle') startListening(awaiting.current);
+    if (listening && !thinking) startListening(awaiting.current);
     else stopListening();
     return stopListening;
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [listening, phase, language]);
+  }, [listening, thinking, language]);
 
   // A question said elsewhere ("Hey Kora, …") arrives here and is asked once.
   useEffect(() => {
@@ -174,11 +227,19 @@ export function KoraBoard({ question: q, listenNow = false, listenFromStart = fa
   // a while, so later chatter isn't sent; "Hey Kora" always works.
   const FOLLOW_UP_MS = 45_000;
   const finished = () => {
-    if (listening) {
+    echoUntil.current = Date.now() + 2500;
+    // A board that was stopped because a new question was asked has nothing more to do.
+    if (phaseRef.current !== 'writing') return;
+    if (listening && !bargedIn.current) {
       followUntil.current = Date.now() + FOLLOW_UP_MS;
       setPrompt(t('board.followUp'));
     }
     setPhase('idle');
+  };
+  const saying = (text: string) => {
+    // The last few sentences, as an echo can come back a little late.
+    said.current = `${said.current.split(' ').slice(-40).join(' ')} ${text}`;
+    echoUntil.current = Number.POSITIVE_INFINITY;
   };
   useEffect(() => {
     if (prompt !== t('board.followUp')) return;
@@ -198,6 +259,7 @@ export function KoraBoard({ question: q, listenNow = false, listenFromStart = fa
         ? `“${heard}”`
         : (status ??
           prompt ??
+          (phase === 'writing' && listening ? t('board.talkOver') : null) ??
           (listening ? t('board.listening') : voiceSupported ? t('board.hint') : t('board.hintNoVoice')));
 
   const tools = (
@@ -249,6 +311,8 @@ export function KoraBoard({ question: q, listenNow = false, listenFromStart = fa
         language={language}
         font={font}
         onDone={finished}
+        onSay={saying}
+        stopped={stoppedN === script.n}
         small={panel}
         empty={
           <View style={[styles.empty, panel && { paddingVertical: 24 }]}>
@@ -286,17 +350,27 @@ export function KoraBoard({ question: q, listenNow = false, listenFromStart = fa
             placeholder={t('board.placeholder')}
             placeholderTextColor={Colors.textMuted}
             accessibilityLabel={t('board.placeholder')}
-            editable={phase === 'idle'}
             style={[styles.input, panel && { paddingVertical: 10 }]}
           />
-          <Pressable
-            onPress={() => void ask(typed)}
-            disabled={!typed.trim() || phase !== 'idle'}
-            accessibilityRole="button"
-            accessibilityLabel={t('board.write')}
-            style={[styles.send, panel && styles.sendSmall, (!typed.trim() || phase !== 'idle') && { opacity: 0.45 }]}>
-            <Ionicons name="create" size={panel ? 17 : 20} color="#fff" />
-          </Pressable>
+          {phase === 'writing' && !typed.trim() ? (
+            // While Kora talks, the button stops her (as saying "okay" does).
+            <Pressable
+              onPress={interrupt}
+              accessibilityRole="button"
+              accessibilityLabel={t('board.quiet')}
+              style={[styles.send, panel && styles.sendSmall, { backgroundColor: Colors.danger }]}>
+              <Ionicons name="stop" size={panel ? 15 : 18} color="#fff" />
+            </Pressable>
+          ) : (
+            <Pressable
+              onPress={() => void ask(typed)}
+              disabled={!typed.trim() || thinking}
+              accessibilityRole="button"
+              accessibilityLabel={t('board.write')}
+              style={[styles.send, panel && styles.sendSmall, (!typed.trim() || thinking) && { opacity: 0.45 }]}>
+              <Ionicons name="create" size={panel ? 17 : 20} color="#fff" />
+            </Pressable>
+          )}
         </View>
       </View>
     </View>

@@ -56,6 +56,8 @@ const tutor: Translation<typeof en> = {
     listening: 'أستمع… قل «Hey Kora» ثم سؤالك.',
     askNow: 'أنا أستمع. اطرح سؤالك.',
     followUp: 'اطرح سؤالًا متابعًا، أو قل «Hey Kora» لموضوع جديد.',
+    quiet: 'أوقف كورا',
+    talkOver: 'قل «حسنًا» لإيقاف كورا، أو اسأل سؤالًا جديدًا مباشرة.',
     thinking: 'كورا تفكر…',
     placeholder: 'اكتب سؤالًا للسبورة',
     write: 'اكتبه',
