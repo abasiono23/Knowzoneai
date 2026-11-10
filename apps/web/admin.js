@@ -1532,6 +1532,26 @@
       }
     });
 
+    const freeNote = h('p', { role: 'alert' });
+    const freeSwitch = h('input', { type: 'checkbox', checked: s.allFree, 'aria-label': 'Everything is free' });
+    freeSwitch.addEventListener('change', async () => {
+      const on = freeSwitch.checked;
+      freeNote.textContent = '';
+      freeNote.className = '';
+      if (!on && !window.confirm('Turn on paid plans? Learners on Free and Plus lose what their plan doesn’t include, such as full past papers.')) {
+        freeSwitch.checked = true;
+        return;
+      }
+      try {
+        await api('/admin/settings', { method: 'PUT', body: JSON.stringify({ allFree: on }) });
+        reload();
+      } catch (e) {
+        freeSwitch.checked = !on;
+        freeNote.textContent = e.message;
+        freeNote.className = 'error';
+      }
+    });
+
     const inboxNote = h('p', { role: 'alert' });
     const inbox = h('input', { type: 'email', value: s.supportEmail ?? '', placeholder: s.supportInbox ? `Server default: ${s.supportInbox}` : 'help@example.com', 'aria-label': 'Support inbox' });
 
@@ -1586,6 +1606,17 @@
           h('label', { class: 'switch' }, aiSwitch, h('i')),
         ),
         aiNote,
+      ),
+      h(
+        'section',
+        { class: 'card' },
+        h(
+          'div',
+          { class: 'setting' },
+          h('div', null, h('b', null, 'Everything is free (before launch)'), h('p', { class: 'muted' }, s.allFree ? 'Every learner can use everything, including Pro past papers. AI daily allowances still apply.' : 'Paid plans are on: learners get what their plan includes.')),
+          h('label', { class: 'switch' }, freeSwitch, h('i')),
+        ),
+        freeNote,
       ),
       h(
         'section',

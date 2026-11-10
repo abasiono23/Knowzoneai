@@ -5,6 +5,7 @@ import { fileURLToPath } from 'node:url';
 import { z } from 'zod';
 
 import { EXAM_SUBJECTS, EXAMS, paperFormat, type Exam, type ExamSubject } from '../data/exams.js';
+import { appSettings } from './app-settings.js';
 
 /**
  * Past Questions papers. Each paper is one JSON file in `data/exams/` (shipped with the server, so no
@@ -90,11 +91,12 @@ export function papersFor(exam: Exam, subject: ExamSubject) {
 }
 
 /**
- * Who may open a paper. Pro opens everything; on Free and Plus, each subject's first practice paper
- * is the free sample (as the plans say: samples on Free and Plus, full papers on Pro).
+ * Who may open a paper. While "everything is free" is on (before launch, set in the dashboard), anyone.
+ * Otherwise Pro opens everything; on Free and Plus, each subject's first practice paper is the free
+ * sample (as the plans say: samples on Free and Plus, full papers on Pro).
  */
 export function canOpen(plan: 'FREE' | 'PLUS' | 'PRO' | undefined, p: Paper) {
-  return plan === 'PRO' || (p.source === 'ai' && p.number === 1);
+  return appSettings().allFree || plan === 'PRO' || (p.source === 'ai' && p.number === 1);
 }
 
 export { paperFormat };

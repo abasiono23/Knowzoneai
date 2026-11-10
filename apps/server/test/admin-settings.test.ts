@@ -3,7 +3,7 @@ import { afterAll, beforeEach, describe, expect, it } from 'vitest';
 import { config } from '../src/config.js';
 import { prisma } from '../src/db.js';
 import { openaiClient } from '../src/services/ai.js';
-import { refreshAppSettings, supportInbox } from '../src/services/app-settings.js';
+import { appSettings, refreshAppSettings, supportInbox } from '../src/services/app-settings.js';
 import { CONSENT, signIn } from './helpers.js';
 
 const OWNER = 'owner@example.com';
@@ -90,6 +90,19 @@ describe('settings', () => {
     expect(() => openaiClient()).toThrow(/paused/i);
     await owner.as.put('/admin/settings', { aiEnabled: true }).expect(200);
     expect(() => openaiClient()).not.toThrow();
+  });
+
+  it('makes everything free before launch, and turns paid plans on', async () => {
+    expect(appSettings().allFree).toBe(true);
+    const off = await owner.as.put('/admin/settings', { allFree: false }).expect(200);
+    expect(off.body.allFree).toBe(false);
+    await refreshAppSettings();
+    expect(appSettings().allFree).toBe(false);
+    const actions = await prisma.adminAction.findMany({ where: { action: 'turned on paid plans' } });
+    expect(actions).toHaveLength(1);
+    await owner.as.put('/admin/settings', { allFree: true }).expect(200);
+    expect(appSettings().allFree).toBe(true);
+    await owner.as.put('/admin/settings', { allFree: 'yes' }).expect(400);
   });
 
   it('changes where help requests are emailed, and goes back to the server’s', async () => {

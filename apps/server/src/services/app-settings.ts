@@ -6,12 +6,25 @@ import { prisma } from '../db.js';
  * can't wait for the database, and refreshed every minute. If the table can't be read, the last known values
  * stay, and before the first read everything works as it does without settings.
  */
-const Defaults = { aiEnabled: true, supportEmail: null as string | null };
+const Defaults = {
+  aiEnabled: true,
+  supportEmail: null as string | null,
+  /**
+   * Before launch everything is open to everyone, whatever their plan (Pro past papers included).
+   * Switched off in the dashboard when Knowzone starts selling plans. AI allowances still apply.
+   */
+  allFree: true,
+};
 export type AppSettings = typeof Defaults;
 
 let current: AppSettings = { ...Defaults };
 
 export const appSettings = () => current;
+
+/** Tests can set settings without the table; null goes back to the defaults. */
+export function useAppSettings(settings: Partial<AppSettings> | null) {
+  current = { ...Defaults, ...settings };
+}
 
 /** Where new help requests are emailed: the one set in the dashboard, or the server's. */
 export const supportInbox = () => current.supportEmail ?? config.SUPPORT_EMAIL ?? '';

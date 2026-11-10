@@ -81,14 +81,16 @@ const Changes = z
   .object({
     aiEnabled: z.boolean(),
     supportEmail: z.union([z.literal(''), z.string().trim().toLowerCase().email().max(200)]),
+    allFree: z.boolean(),
   })
   .partial();
 
 adminSettingsRouter.put('/admin/settings', async (req, res) => {
-  const { aiEnabled, supportEmail } = Changes.parse(req.body);
+  const { aiEnabled, supportEmail, allFree } = Changes.parse(req.body);
   await saveAppSettings(
     {
       ...(aiEnabled !== undefined && { aiEnabled }),
+      ...(allFree !== undefined && { allFree }),
       // Empty goes back to the address set on the server.
       ...(supportEmail !== undefined && { supportEmail: supportEmail || null }),
     },
@@ -98,6 +100,8 @@ adminSettingsRouter.put('/admin/settings', async (req, res) => {
     await recordAction(req.user!.email, aiEnabled ? 'turned on' : 'turned off', 'AI features');
   if (supportEmail !== undefined)
     await recordAction(req.user!.email, 'changed the support inbox to', supportEmail || 'the server’s');
+  if (allFree !== undefined)
+    await recordAction(req.user!.email, allFree ? 'made everything free' : 'turned on paid plans', 'for all learners');
   res.json(settingsNow());
 });
 

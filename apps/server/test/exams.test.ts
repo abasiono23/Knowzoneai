@@ -1,6 +1,7 @@
 import { afterAll, beforeAll, describe, expect, it } from 'vitest';
 
 import { prisma } from '../src/db.js';
+import { useAppSettings } from '../src/services/app-settings.js';
 import { usePapers, type Paper } from '../src/services/exams.js';
 import { http, signIn } from './helpers.js';
 
@@ -37,10 +38,27 @@ const PAPERS: Paper[] = [
   },
 ];
 
-beforeAll(() => usePapers(PAPERS));
-afterAll(() => usePapers(null));
+// These tests check the paid plans, so "everything is free" (the pre-launch default) is off.
+beforeAll(() => {
+  usePapers(PAPERS);
+  useAppSettings({ allFree: false });
+});
+afterAll(() => {
+  usePapers(null);
+  useAppSettings(null);
+});
 
 describe('Past Questions', () => {
+  it('opens every paper to everyone while everything is free', async () => {
+    useAppSettings({ allFree: true });
+    const list = await http().get('/exams/jamb/physics').expect(200);
+    expect(list.body.papers.every((p: { locked: boolean }) => !p.locked)).toBe(true);
+    const { as } = await signIn();
+    await as.get('/exams/papers/jamb-physics-2019').expect(200);
+    await as.get('/exams/papers/jamb-physics-p2').expect(200);
+    useAppSettings({ allFree: false });
+  });
+
   it('lists exams and subjects with paper counts and years, signed in or not', async () => {
     const res = await http().get('/exams').expect(200);
     const physics = res.body.exams.find((e: { id: string }) => e.id === 'jamb').subjects.find((s: { id: string }) => s.id === 'physics');
