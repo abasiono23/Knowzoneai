@@ -57,6 +57,8 @@ const common: Translation<typeof en> = {
     planFree: 'Atụmatụ efu',
     planPlus: 'Atụmatụ Plus',
     planPro: 'Atụmatụ Pro',
+    collapse: 'Mechie mmanya akụkụ',
+    expand: 'Gbasaa mmanya akụkụ',
   },
   status: {
     loading: 'Na-ebu…',

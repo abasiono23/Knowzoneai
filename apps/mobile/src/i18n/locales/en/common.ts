@@ -55,6 +55,8 @@ const common = {
     planFree: 'Free plan',
     planPlus: 'Plus plan',
     planPro: 'Pro plan',
+    collapse: 'Collapse sidebar',
+    expand: 'Expand sidebar',
   },
   status: {
     loading: 'Loading…',

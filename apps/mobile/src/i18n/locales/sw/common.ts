@@ -57,6 +57,8 @@ const common: Translation<typeof en> = {
     planFree: 'Mpango wa bure',
     planPlus: 'Mpango wa Plus',
     planPro: 'Mpango wa Pro',
+    collapse: 'Kunja upau wa pembeni',
+    expand: 'Panua upau wa pembeni',
   },
   status: {
     loading: 'Inapakia…',

@@ -57,6 +57,8 @@ const common: Translation<typeof en> = {
     planFree: 'Tsarin kyauta',
     planPlus: 'Tsarin Plus',
     planPro: 'Tsarin Pro',
+    collapse: 'Rage gefen menu',
+    expand: 'Faɗaɗa gefen menu',
   },
   status: {
     loading: 'Ana lodawa…',

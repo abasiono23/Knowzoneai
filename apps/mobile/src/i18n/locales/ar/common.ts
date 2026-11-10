@@ -57,6 +57,8 @@ const common: Translation<typeof en> = {
     planFree: 'الخطة المجانية',
     planPlus: 'خطة Plus',
     planPro: 'خطة Pro',
+    collapse: 'طيّ الشريط الجانبي',
+    expand: 'توسيع الشريط الجانبي',
   },
   status: {
     loading: 'جارٍ التحميل…',

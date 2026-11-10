@@ -57,6 +57,8 @@ const common: Translation<typeof en> = {
     planFree: 'Ètò ọ̀fẹ́',
     planPlus: 'Ètò Plus',
     planPro: 'Ètò Pro',
+    collapse: 'Ká ọ̀pá ẹ̀gbẹ́ kéré',
+    expand: 'Ṣí ọ̀pá ẹ̀gbẹ́',
   },
   status: {
     loading: 'Ó ń gbé e wá…',

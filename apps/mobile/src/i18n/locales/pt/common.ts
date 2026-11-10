@@ -57,6 +57,8 @@ const common: Translation<typeof en> = {
     planFree: 'Plano gratuito',
     planPlus: 'Plano Plus',
     planPro: 'Plano Pro',
+    collapse: 'Recolher a barra lateral',
+    expand: 'Expandir a barra lateral',
   },
   status: {
     loading: 'A carregar…',
