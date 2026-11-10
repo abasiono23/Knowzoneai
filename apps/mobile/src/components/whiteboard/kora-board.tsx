@@ -12,7 +12,7 @@ import { Colors, Fonts, Gradients, Radius, Spacing } from '@/constants/theme';
 import { useLanguage } from '@/i18n/provider';
 import { useTutor } from '@/lib/tutor/store';
 import { boardScript, type BoardLine } from '@/lib/whiteboard/script';
-import { afterWake, canListen, isEcho, isOpenBoard, isStopPhrase, listen, type Listener } from '@/lib/whiteboard/voice';
+import { afterWake, canListen, isEcho, isOpenBoard, isStopPhrase, listen, problemKey, type Listener } from '@/lib/whiteboard/voice';
 
 type Phase = 'idle' | 'thinking' | 'writing';
 
@@ -186,17 +186,7 @@ export function KoraBoard({ question: q, listenNow = false, listenFromStart = fa
       },
       onError: (code) => {
         if (code !== 'network') setListening(false);
-        setStatus(
-          t(
-            code === 'blocked'
-              ? 'board.blocked'
-              : code === 'noMic'
-                ? 'board.noMic'
-                : code === 'language'
-                  ? 'board.language'
-                  : 'board.network',
-          ),
-        );
+        setStatus(t(problemKey(code) as 'board.network'));
       },
     });
   };

@@ -74,6 +74,9 @@ const tutor: Translation<typeof en> = {
     noMic: 'No microphone dey. Connect one, or type your question.',
     network: 'Kora hearing need better internet. Check your network and try again.',
     language: 'Your browser no fit listen for this language yet. Type your question instead.',
+    blockedApp: 'Knowzone no fit use the microphone. Allow am for your phone Settings, or type your question.',
+    languageApp: 'Your phone no fit hear dis language yet. Type your question instead.',
+    noService: 'Speech recognition no dey for dis phone. On the Google app (or Speech Services by Google), or type your question.',
   },
   landing: {
     eyebrow: 'KNOWZONE AI TUTOR',

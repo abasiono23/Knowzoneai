@@ -74,6 +74,9 @@ const tutor: Translation<typeof en> = {
     noMic: 'Kò sí máíkì. So ọ̀kan pọ̀, tàbí tẹ ìbéèrè rẹ.',
     network: 'Kora nílò ẹ̀rọ ayélujára tó dúró ṣinṣin láti gbọ́ ọ. Ṣàyẹ̀wò rẹ kí o sì gbìyànjú lẹ́ẹ̀kan sí i.',
     language: 'Ẹ̀rọ aṣàwákiri rẹ kò lè fetí sí èdè yìí síbẹ̀. Tẹ ìbéèrè rẹ dípò.',
+    blockedApp: 'Knowzone kò lè lo máíkírófóònù. Gbà á láàyè nínú Settings fóònù rẹ, tàbí tẹ ìbéèrè rẹ.',
+    languageApp: 'Fóònù rẹ kò tíì lè gbọ́ èdè yìí. Tẹ ìbéèrè rẹ dípò bẹ́ẹ̀.',
+    noService: 'Ìdámọ̀ ohùn kò sí lórí fóònù yìí. Tan ohun èlò Google (tàbí Speech Services by Google), tàbí tẹ ìbéèrè rẹ.',
   },
   landing: {
     eyebrow: 'OLÙKỌ́ AI KNOWZONE',

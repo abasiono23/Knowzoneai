@@ -8,7 +8,8 @@ import { problemKey, useWake } from '@/lib/whiteboard/wake';
 
 /**
  * The "Listen for Hey Kora" switch, with what Kora is hearing and any problem underneath. `dark` is for
- * the sidebar. Shown only where listening can work (the web version in Chrome or Edge).
+ * the sidebar. Shown only where listening can work: the web version in Chrome, Edge or Safari, and the
+ * phone app where the phone has speech recognition.
  */
 export function WakeSwitch({ dark = false, compact = false }: { dark?: boolean; compact?: boolean }) {
   const { t } = useTranslation('tutor');

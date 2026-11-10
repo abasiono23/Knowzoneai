@@ -74,6 +74,9 @@ const tutor: Translation<typeof en> = {
     noMic: 'Nenhum microfone encontrado. Liga um ou escreve a tua pergunta.',
     network: 'Para te ouvir, a Kora precisa de uma ligação estável. Verifica a tua e tenta outra vez.',
     language: 'O teu navegador ainda não consegue ouvir nesta língua. Escreve a tua pergunta.',
+    blockedApp: 'O Knowzone não consegue usar o microfone. Permite-o nas Definições do telemóvel, ou escreve a tua pergunta.',
+    languageApp: 'O teu telemóvel ainda não consegue ouvir nesta língua. Escreve antes a tua pergunta.',
+    noService: 'O reconhecimento de voz não está disponível neste telemóvel. Ativa a app Google (ou Speech Services by Google), ou escreve a tua pergunta.',
   },
   landing: {
     eyebrow: 'TUTOR DE IA KNOWZONE',

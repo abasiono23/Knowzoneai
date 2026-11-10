@@ -114,7 +114,7 @@ function RootNavigator() {
         // "Hey Kora" works on every page of the web version, for students who switch it on, and opens the
         // board beside the page (to the right on a computer, below on a phone).
         <TutorProvider enabled={active && !teacher}>
-          <WakeProvider enabled={Platform.OS === 'web' && active && !teacher}>
+          <WakeProvider enabled={active && !teacher}>
             <View style={{ flex: 1, flexDirection: desktop ? 'row' : 'column' }}>
               {desktop && active && !teacher && <DesktopSidebar />}
               <View style={{ flex: 1 }}>

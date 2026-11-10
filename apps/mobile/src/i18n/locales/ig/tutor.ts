@@ -74,6 +74,9 @@ const tutor: Translation<typeof en> = {
     noMic: 'Achọtaghị igwe okwu. Jikọọ otu, ma ọ bụ dee ajụjụ gị.',
     network: 'Kora chọrọ ịntanetị kwụsiri ike iji nụ gị. Lelee nke gị wee nwaa ọzọ.',
     language: 'Ihe nchọgharị gị enweghị ike ige ntị n’asụsụ a ugbu a. Dee ajụjụ gị kama.',
+    blockedApp: 'Knowzone enweghị ike iji igwe okwu. Kwe ya na Settings ekwentị gị, ma ọ bụ pịnye ajụjụ gị.',
+    languageApp: 'Ekwentị gị enweghị ike ịnụ asụsụ a ugbu a. Pịnye ajụjụ gị kama.',
+    noService: 'Nghọta olu adịghị na ekwentị a. Gbanye ngwa Google (ma ọ bụ Speech Services by Google), ma ọ bụ pịnye ajụjụ gị.',
   },
   landing: {
     eyebrow: 'ONYE NKUZI KNOWZONE AI',

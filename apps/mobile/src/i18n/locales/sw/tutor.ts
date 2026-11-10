@@ -74,6 +74,9 @@ const tutor: Translation<typeof en> = {
     noMic: 'Hakuna maikrofoni. Unganisha moja, au andika swali lako.',
     network: 'Kora anahitaji intaneti thabiti ili akusikie. Angalia yako ujaribu tena.',
     language: 'Kivinjari chako hakiwezi kusikiliza lugha hii bado. Andika swali lako badala yake.',
+    blockedApp: 'Knowzone haiwezi kutumia maikrofoni. Iruhusu kwenye Mipangilio ya simu yako, au andika swali lako.',
+    languageApp: 'Simu yako bado haiwezi kusikiliza lugha hii. Andika swali lako badala yake.',
+    noService: 'Utambuzi wa sauti haupatikani kwenye simu hii. Washa programu ya Google (au Speech Services by Google), au andika swali lako.',
   },
   landing: {
     eyebrow: 'MWALIMU WA AI WA KNOWZONE',

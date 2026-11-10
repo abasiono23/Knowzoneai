@@ -173,8 +173,8 @@ export default function TutorLanding() {
 }
 
 /**
- * Kora's whiteboard, and (in browsers that can listen) the "Listen for Hey Kora" switch, which then
- * works on every page until the student leaves the website (see WakeProvider).
+ * Kora's whiteboard, and (where the browser or phone can listen) the "Listen for Hey Kora" switch, which
+ * then works on every page until the student leaves the website or closes the app (see WakeProvider).
  */
 function BoardCard() {
   const { t } = useTranslation('tutor');

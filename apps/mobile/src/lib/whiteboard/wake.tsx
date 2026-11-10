@@ -2,7 +2,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { usePathname } from 'expo-router';
 import { createContext, useContext, useEffect, useState, type ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Platform, Pressable, StyleSheet, View } from 'react-native';
+import { AppState, Platform, Pressable, StyleSheet, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { Text } from '@/components/ui';
@@ -14,20 +14,21 @@ import { useDesktop } from '@/lib/use-desktop';
 import { afterWake, canListen, isOpenBoard, listen } from './voice';
 
 /**
- * "Hey Kora" on every page of the web version. A student switches it on (the browser asks for the
- * microphone that first time), and from then on saying "Hey Kora" anywhere opens the whiteboard, and
+ * "Hey Kora" on every page, on the web and in the phone app. A student switches it on (the browser or the
+ * phone asks for the microphone that first time), and from then on saying "Hey Kora" anywhere opens the whiteboard, and
  * "Hey Kora, …" asks the question too. The board opens in a panel beside the page (below it on a phone),
- * so the student can still see the past question or lesson they're asking about. It stays on while the student moves between pages, and is never
- * saved: leaving the website (or reloading it) switches it off, so every visit starts with it off.
- * It pauses while the tab is hidden, and on the whiteboard, which listens for itself.
+ * so the student can still see the past question or lesson they're asking about. It stays on while the
+ * student moves between pages, and is never saved: leaving the website (or reloading it, or closing the
+ * app) switches it off, so every visit starts with it off. It pauses while the tab is hidden or the app is
+ * in the background (the phone locked, another app open), and on the whiteboard, which listens for itself.
  */
 type Wake = {
-  /** Listening can work here (a browser that supports it, for a signed-in student). */
+  /** Listening can work here (a browser or phone that supports it, for a signed-in student). */
   available: boolean;
   on: boolean;
-  /** What the browser is hearing, so students can see whether "Kora" came through. */
+  /** What the browser or phone is hearing, so students can see whether "Kora" came through. */
   heard: string;
-  /** blocked, noMic, network or language. */
+  /** blocked, noMic, noService, network or language. */
   problem: string | null;
   setOn: (on: boolean) => void;
   /** The board panel, while it's open: a question to ask, or listening for one. */
@@ -48,14 +49,7 @@ const WakeContext = createContext<Wake>({
 export const useWake = () => useContext(WakeContext);
 
 /** The message key for a listening problem. */
-export const problemKey = (problem: string) =>
-  problem === 'blocked'
-    ? 'board.blocked'
-    : problem === 'noMic'
-      ? 'board.noMic'
-      : problem === 'language'
-        ? 'board.language'
-        : 'board.network';
+export { problemKey } from './voice';
 
 export function WakeProvider({ enabled, children }: { enabled: boolean; children: ReactNode }) {
   const available = enabled && canListen();
@@ -75,9 +69,14 @@ export function WakeProvider({ enabled, children }: { enabled: boolean; children
     setOnState(next);
   };
 
-  // Paused while the tab is in the background, to save data and battery.
+  // Paused while the tab or the app is in the background, to save data and battery (and phones don't
+  // allow listening from the background anyway).
   useEffect(() => {
-    if (Platform.OS !== 'web' || typeof document === 'undefined') return;
+    if (Platform.OS !== 'web') {
+      const sub = AppState.addEventListener('change', (state) => setVisible(state === 'active'));
+      return () => sub.remove();
+    }
+    if (typeof document === 'undefined') return;
     const update = () => setVisible(document.visibilityState === 'visible');
     document.addEventListener('visibilitychange', update);
     return () => document.removeEventListener('visibilitychange', update);

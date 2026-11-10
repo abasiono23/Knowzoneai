@@ -74,6 +74,9 @@ const tutor = {
     noMic: 'No microphone found. Plug one in, or type your question.',
     network: 'Kora’s hearing needs a steady internet connection. Check yours and try again.',
     language: 'Your browser can’t listen in this language yet. Type your question instead.',
+    blockedApp: 'Knowzone can’t use the microphone. Allow it in your phone’s Settings, or type your question.',
+    languageApp: 'Your phone can’t listen in this language yet. Type your question instead.',
+    noService: 'Speech recognition isn’t available on this phone. Turn on the Google app (or Speech Services by Google), or type your question.',
   },
   landing: {
     eyebrow: 'KNOWZONE AI TUTOR',

@@ -76,6 +76,9 @@ const tutor: Translation<typeof en> = {
     noMic: 'Ba a sami makirufo ba. Saka ɗaya, ko ka rubuta tambayarka.',
     network: 'Kora tana buƙatar intanet mai ƙarfi don jin ka. Duba naka ka sake gwadawa.',
     language: 'Burauzarka ba ta iya saurare a wannan harshe ba tukuna. Rubuta tambayarka maimakon haka.',
+    blockedApp: 'Knowzone ba za ta iya amfani da makirufo ba. Ba da izini a Settings na wayarka, ko ka rubuta tambayarka.',
+    languageApp: 'Wayarka ba ta iya sauraron wannan harshe tukuna. Ka rubuta tambayarka maimakon haka.',
+    noService: 'Gane murya babu a wannan wayar. Kunna manhajar Google (ko Speech Services by Google), ko ka rubuta tambayarka.',
   },
   landing: {
     eyebrow: 'MALAMIN AI NA KNOWZONE',
