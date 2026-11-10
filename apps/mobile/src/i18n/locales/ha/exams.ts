@@ -32,6 +32,7 @@ const exams: Translation<typeof en> = {
     commerce: 'Kasuwanci',
   },
   pickExam: 'Zaɓi jarabawarka',
+  carryOn: 'Ci gaba daga inda ka tsaya',
   pickSubject: 'Zaɓi darasi',
   subjectMeta_one: 'Takarda {{count}} · tambayoyi {{questions}}',
   subjectMeta_other: 'Takardu {{count}} · tambayoyi {{questions}}',

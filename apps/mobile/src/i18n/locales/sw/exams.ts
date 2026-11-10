@@ -32,6 +32,7 @@ const exams: Translation<typeof en> = {
     commerce: 'Biashara',
   },
   pickExam: 'Chagua mtihani wako',
+  carryOn: 'Endelea ulipoishia',
   pickSubject: 'Chagua somo',
   subjectMeta_one: 'Karatasi {{count}} · maswali {{questions}}',
   subjectMeta_other: 'Karatasi {{count}} · maswali {{questions}}',

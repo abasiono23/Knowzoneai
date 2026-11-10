@@ -33,6 +33,7 @@ export default {
     commerce: 'Commerce',
   },
   pickExam: 'Choose your exam',
+  carryOn: 'Carry on where you stopped',
   pickSubject: 'Choose a subject',
   subjectMeta_one: '{{count}} paper · {{questions}} questions',
   subjectMeta_other: '{{count}} papers · {{questions}} questions',

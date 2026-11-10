@@ -1,5 +1,5 @@
 import { Ionicons } from '@expo/vector-icons';
-import { router, useLocalSearchParams, type Href } from 'expo-router';
+import { router, useFocusEffect, useLocalSearchParams, type Href } from 'expo-router';
 import { useCallback, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Pressable, StyleSheet, View } from 'react-native';
@@ -10,8 +10,9 @@ import { Colors, Fonts, Radius, Spacing } from '@/constants/theme';
 import { errorText } from '@/i18n/errors';
 import { USE_MOCKS } from '@/lib/config';
 import { EXAM_IDS, examsApi, SUBJECT_ICONS, type ExamId, type ExamsOverview } from '@/lib/exams';
+import { openSittings, sitHref, type OpenSitting } from '@/lib/exams-progress';
 
-/** Past Questions: choose JAMB, WAEC or NECO, then a subject. */
+/** Past Questions: papers in progress first, then choose JAMB, WAEC or NECO, then a subject. */
 export default function ExamsHome() {
   const { t } = useTranslation('exams');
   const params = useLocalSearchParams<{ exam?: string }>();
@@ -32,11 +33,59 @@ export default function ExamsHome() {
     load();
   };
 
+  // Papers the student is in the middle of, refreshed each time they come back to this page.
+  const [open, setOpen] = useState<OpenSitting[]>([]);
+  useFocusEffect(
+    useCallback(() => {
+      let live = true;
+      void openSittings().then((list) => live && setOpen(list.slice(0, 3)));
+      return () => {
+        live = false;
+      };
+    }, []),
+  );
+
   const subjects = data?.exams.find((e) => e.id === exam)?.subjects ?? [];
 
   return (
     <Screen withTabBar={false}>
       <ScreenHeader eyebrow={t('eyebrow')} title={t('title')} />
+
+      {open.length > 0 && (
+        <View style={{ gap: Spacing.sm }}>
+          <Text variant="label" color={Colors.textSecondary}>
+            {t('carryOn')}
+          </Text>
+          {open.map((p) => {
+            const look = SUBJECT_ICONS[p.subject];
+            const exam = t(`exams.${p.exam}.name`);
+            const paper = p.year ? t('paperYear', { exam, year: p.year }) : t('paperNumber', { number: p.number });
+            return (
+              <Pressable
+                key={`${p.id}.${p.mode}`}
+                onPress={() => router.push(sitHref(p) as Href)}
+                accessibilityRole="button"
+                style={({ pressed }) => [pressed && { opacity: 0.85 }]}>
+                <Card style={[styles.subject, styles.carryOn]}>
+                  <View style={[styles.icon, { backgroundColor: `${look.color}22` }]}>
+                    <Ionicons name={look.icon as keyof typeof Ionicons.glyphMap} size={22} color={look.color} />
+                  </View>
+                  <View style={{ flex: 1, gap: 2 }}>
+                    <Text variant="bodyStrong">
+                      {t(`subjects.${p.subject}`)} · {paper}
+                    </Text>
+                    <Text variant="small" color={Colors.textSecondary}>
+                      {exam} · {t(`paper.modeName.${p.mode}`)} · {t('sit.question', { n: p.i + 1, total: p.total })}
+                    </Text>
+                  </View>
+                  <Ionicons name="play-circle" size={30} color={Colors.primary} />
+                </Card>
+              </Pressable>
+            );
+          })}
+        </View>
+      )}
+
 
       <Text variant="label" color={Colors.textSecondary}>
         {t('pickExam')}
@@ -119,6 +168,7 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.surface,
   },
   examOn: { backgroundColor: Colors.primary, borderColor: Colors.primary },
+  carryOn: { borderWidth: 1.5, borderColor: Colors.primary },
   subject: { flexDirection: 'row', alignItems: 'center', gap: Spacing.md },
   icon: { width: 44, height: 44, borderRadius: Radius.md, alignItems: 'center', justifyContent: 'center' },
 });

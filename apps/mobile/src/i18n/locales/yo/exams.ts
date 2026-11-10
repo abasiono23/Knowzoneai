@@ -32,6 +32,7 @@ const exams: Translation<typeof en> = {
     commerce: 'Ìṣòwò',
   },
   pickExam: 'Yan ìdánwò rẹ',
+  carryOn: 'Máa bá a lọ láti ibi tí o dúró sí',
   pickSubject: 'Yan ẹ̀kọ́ kan',
   subjectMeta_one: 'Ìwé {{count}} · ìbéèrè {{questions}}',
   subjectMeta_other: 'Ìwé {{count}} · ìbéèrè {{questions}}',

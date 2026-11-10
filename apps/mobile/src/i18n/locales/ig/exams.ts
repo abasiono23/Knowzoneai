@@ -32,6 +32,7 @@ const exams: Translation<typeof en> = {
     commerce: 'Azụmahịa',
   },
   pickExam: 'Họrọ ule gị',
+  carryOn: 'Gaa n’ihu site n’ebe ị kwụsịrị',
   pickSubject: 'Họrọ otu isiokwu',
   subjectMeta_one: 'Akwụkwọ {{count}} · ajụjụ {{questions}}',
   subjectMeta_other: 'Akwụkwọ {{count}} · ajụjụ {{questions}}',

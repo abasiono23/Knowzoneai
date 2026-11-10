@@ -32,6 +32,7 @@ const exams: Translation<typeof en> = {
     commerce: 'Comércio',
   },
   pickExam: 'Escolhe o teu exame',
+  carryOn: 'Continua onde paraste',
   pickSubject: 'Escolhe uma disciplina',
   subjectMeta_one: '{{count}} prova · {{questions}} perguntas',
   subjectMeta_many: '{{count}} provas · {{questions}} perguntas',

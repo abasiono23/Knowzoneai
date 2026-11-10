@@ -19,7 +19,14 @@ import { Button, Card, ProgressBar, Text } from '@/components/ui';
 import { Colors, Fonts, Radius, Spacing } from '@/constants/theme';
 import { errorText } from '@/i18n/errors';
 import { clock, examsApi, LETTERS, loadPaper, type ExamAttempt, type Paper, type TopicScore } from '@/lib/exams';
-import { clearSitting, loadSitting, saveSitting, type Sitting as SavedSitting } from '@/lib/exams-progress';
+import {
+  clearSitting,
+  loadSitting,
+  saveSitting,
+  setCurrentPaper,
+  sitHref,
+  type Sitting as SavedSitting,
+} from '@/lib/exams-progress';
 
 type Mode = 'practice' | 'timed';
 
@@ -101,23 +108,27 @@ function Sitting({ paper, mode, saved }: { paper: Paper; mode: Mode; saved: Save
 
   // Keep the student's place: on every move, every few seconds (for the clock), and on leaving.
   const place = useRef<SavedSitting | null>(null);
+  // "Past Questions" in the sidebar brings the student back here until they hand it in or close it.
+  useEffect(() => {
+    if (!handedIn.current) setCurrentPaper(sitHref({ id: paper.id, mode }));
+  }, [paper.id, mode]);
   useEffect(() => {
     if (handedIn.current) return;
     place.current = { i, answers, checked, seconds: Math.round((Date.now() - startedAt) / 1000) };
-    saveSitting(paper.id, mode, place.current);
-  }, [i, answers, checked, result, paper.id, mode, startedAt]);
+    saveSitting(paper, mode, place.current);
+  }, [i, answers, checked, result, paper, mode, startedAt]);
   useEffect(() => {
     const keep = () => {
       if (handedIn.current || !place.current) return;
       place.current = { ...place.current, seconds: Math.round((Date.now() - startedAt) / 1000) };
-      saveSitting(paper.id, mode, place.current);
+      saveSitting(paper, mode, place.current);
     };
     const timer = setInterval(keep, 5000);
     return () => {
       clearInterval(timer);
       keep();
     };
-  }, [paper.id, mode, startedAt]);
+  }, [paper, mode, startedAt]);
 
   // The clock (timed papers only); time running out hands the paper in.
   useEffect(() => {
@@ -284,7 +295,9 @@ function Sitting({ paper, mode, saved }: { paper: Paper; mode: Mode; saved: Save
         cancelLabel={t('sit.keepGoing')}
         onConfirm={() => {
           setConfirm(null);
-          router.back();
+          setCurrentPaper(null);
+          if (router.canGoBack()) router.back();
+          else router.replace(`/exams/paper/${paper.id}` as Href);
         }}
         onCancel={() => setConfirm(null)}
       />
@@ -366,7 +379,10 @@ function Result({
             />
           </View>
           <View style={{ flex: 1 }}>
-            <Button title={t('result.back')} onPress={() => router.back()} />
+            <Button
+              title={t('result.back')}
+              onPress={() => (router.canGoBack() ? router.back() : router.replace(`/exams/paper/${paper.id}` as Href))}
+            />
           </View>
         </View>
 

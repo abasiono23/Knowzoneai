@@ -11,6 +11,7 @@ import { WakeSwitch } from '@/components/whiteboard/wake-switch';
 import { Radius, Spacing } from '@/constants/theme';
 import { useFlipStyle } from '@/i18n/provider';
 import { USE_MOCKS } from '@/lib/config';
+import { currentPaper } from '@/lib/exams-progress';
 import { useSession } from '@/lib/session';
 import { listConversations } from '@/lib/tutor/remote';
 
@@ -160,7 +161,8 @@ export function DesktopSidebar() {
             return (
               <Pressable
                 key={s.id}
-                onPress={() => go(s.href)}
+                // Past Questions goes back to the paper the student is in the middle of, if there is one.
+                onPress={() => go(s.id === 'exams' ? (currentPaper() ?? s.href) : s.href)}
                 accessibilityRole="link"
                 accessibilityLabel={label[s.id]}
                 accessibilityState={{ selected: active }}
