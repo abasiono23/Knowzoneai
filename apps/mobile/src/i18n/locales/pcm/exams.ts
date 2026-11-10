@@ -80,7 +80,7 @@ const exams: Translation<typeof en> = {
     submitConfirm: 'Submit',
     keepGoing: 'Continue',
     leaveTitle: 'You wan comot from dis paper?',
-    leaveBody: 'Your answers no go save.',
+    leaveBody: 'We go keep your answers. Come back anytime to continue from dis question.',
     leave: 'Comot',
     timeUp: 'Time don finish! We don submit your paper.',
     map: 'QUESTION MAP',

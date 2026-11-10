@@ -81,7 +81,7 @@ const exams: Translation<typeof en> = {
     submitConfirm: 'Rendre',
     keepGoing: 'Continuer',
     leaveTitle: 'Quitter cette épreuve ?',
-    leaveBody: 'Tes réponses ne seront pas enregistrées.',
+    leaveBody: 'Tes réponses sont gardées. Reviens quand tu veux pour reprendre à cette question.',
     leave: 'Quitter',
     timeUp: 'Temps écoulé ! Ta copie a été rendue.',
     map: 'CARTE DES QUESTIONS',

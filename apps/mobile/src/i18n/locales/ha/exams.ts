@@ -83,7 +83,7 @@ const exams: Translation<typeof en> = {
     submitConfirm: 'Miƙa',
     keepGoing: 'Ci gaba',
     leaveTitle: 'Ka bar wannan takarda?',
-    leaveBody: 'Ba za a adana amsoshinka ba.',
+    leaveBody: 'Za a adana amsoshinka. Dawo kowane lokaci don ci gaba daga wannan tambayar.',
     leave: 'Bari',
     timeUp: 'Lokaci ya ƙare! An miƙa takardarka.',
     map: 'TASWIRAR TAMBAYOYI',

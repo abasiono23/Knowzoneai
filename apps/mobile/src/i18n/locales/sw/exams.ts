@@ -80,7 +80,7 @@ const exams: Translation<typeof en> = {
     submitConfirm: 'Wasilisha',
     keepGoing: 'Endelea kujibu',
     leaveTitle: 'Ondoka kwenye karatasi hii?',
-    leaveBody: 'Majibu yako hayatahifadhiwa.',
+    leaveBody: 'Majibu yako yatahifadhiwa. Rudi wakati wowote kuendelea kutoka swali hili.',
     leave: 'Ondoka',
     timeUp: 'Muda umekwisha! Karatasi yako imewasilishwa.',
     map: 'RAMANI YA MASWALI',

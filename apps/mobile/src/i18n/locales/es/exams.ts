@@ -81,7 +81,7 @@ const exams: Translation<typeof en> = {
     submitConfirm: 'Entregar',
     keepGoing: 'Seguir',
     leaveTitle: '¿Salir de este examen?',
-    leaveBody: 'Tus respuestas no se guardarán.',
+    leaveBody: 'Tus respuestas se guardan. Vuelve cuando quieras para seguir desde esta pregunta.',
     leave: 'Salir',
     timeUp: '¡Se acabó el tiempo! Tu examen fue entregado.',
     map: 'MAPA DE PREGUNTAS',

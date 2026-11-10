@@ -16,7 +16,8 @@ import '@/i18n';
 import { AnimatedSplash } from '@/components/brand/animated-splash';
 import { DesktopSidebar } from '@/components/navigation/desktop-sidebar';
 import { useDesktop } from '@/lib/use-desktop';
-import { WakeProvider } from '@/lib/whiteboard/wake';
+import { TutorProvider } from '@/lib/tutor/store';
+import { KoraPanel, WakeProvider } from '@/lib/whiteboard/wake';
 import { ReminderSync } from '@/components/reminder-sync';
 import { Colors } from '@/constants/theme';
 import { CatalogProvider, useCatalogVersion } from '@/lib/catalog-provider';
@@ -110,47 +111,51 @@ function RootNavigator() {
       {!loading && (
         // On a computer the web version keeps a sidebar beside every screen. The Stack stays in the same
         // place in the tree either way, so resizing the window never resets navigation.
-        // "Hey Kora" works on every page of the web version, for students who switch it on.
-        <WakeProvider enabled={Platform.OS === 'web' && active && !teacher}>
-          <View style={{ flex: 1, flexDirection: 'row' }}>
-            {desktop && active && !teacher && <DesktopSidebar />}
-            <View style={{ flex: 1 }}>
-              <Stack
-                screenOptions={{ headerShown: false, contentStyle: { backgroundColor: Colors.background } }}
-                screenLayout={({ children }) => <RedrawOnLanguageChange>{children}</RedrawOnLanguageChange>}>
-                <Stack.Screen name="index" options={{ animation: 'none' }} />
-                <Stack.Screen name="legal" />
-                <Stack.Protected guard={active && !teacher}>
-                  <Stack.Screen name="(student)" />
-                  <Stack.Screen name="world" />
-                  <Stack.Screen name="rewards" />
-                  <Stack.Screen name="billing" />
-                </Stack.Protected>
-                <Stack.Protected guard={active && teacher}>
-                  <Stack.Screen name="(teacher)" />
-                </Stack.Protected>
-                <Stack.Protected guard={active}>
-                  <Stack.Screen name="study" />
-                  <Stack.Screen name="videos" />
-                  <Stack.Screen name="courses" />
-                  <Stack.Screen name="exams" />
-                  <Stack.Screen name="reels" />
-                  <Stack.Screen name="rooms" />
-                  <Stack.Screen name="books" />
-                  <Stack.Screen name="referrals" />
-                </Stack.Protected>
-                <Stack.Protected guard={inApp}>
-                  <Stack.Screen name="settings" />
-                  <Stack.Screen name="help" />
-                  <Stack.Screen name="account-status" />
-                </Stack.Protected>
-                <Stack.Protected guard={!inApp}>
-                  <Stack.Screen name="(auth)" />
-                </Stack.Protected>
-              </Stack>
+        // "Hey Kora" works on every page of the web version, for students who switch it on, and opens the
+        // board beside the page (to the right on a computer, below on a phone).
+        <TutorProvider enabled={active && !teacher}>
+          <WakeProvider enabled={Platform.OS === 'web' && active && !teacher}>
+            <View style={{ flex: 1, flexDirection: desktop ? 'row' : 'column' }}>
+              {desktop && active && !teacher && <DesktopSidebar />}
+              <View style={{ flex: 1 }}>
+                <Stack
+                  screenOptions={{ headerShown: false, contentStyle: { backgroundColor: Colors.background } }}
+                  screenLayout={({ children }) => <RedrawOnLanguageChange>{children}</RedrawOnLanguageChange>}>
+                  <Stack.Screen name="index" options={{ animation: 'none' }} />
+                  <Stack.Screen name="legal" />
+                  <Stack.Protected guard={active && !teacher}>
+                    <Stack.Screen name="(student)" />
+                    <Stack.Screen name="world" />
+                    <Stack.Screen name="rewards" />
+                    <Stack.Screen name="billing" />
+                  </Stack.Protected>
+                  <Stack.Protected guard={active && teacher}>
+                    <Stack.Screen name="(teacher)" />
+                  </Stack.Protected>
+                  <Stack.Protected guard={active}>
+                    <Stack.Screen name="study" />
+                    <Stack.Screen name="videos" />
+                    <Stack.Screen name="courses" />
+                    <Stack.Screen name="exams" />
+                    <Stack.Screen name="reels" />
+                    <Stack.Screen name="rooms" />
+                    <Stack.Screen name="books" />
+                    <Stack.Screen name="referrals" />
+                  </Stack.Protected>
+                  <Stack.Protected guard={inApp}>
+                    <Stack.Screen name="settings" />
+                    <Stack.Screen name="help" />
+                    <Stack.Screen name="account-status" />
+                  </Stack.Protected>
+                  <Stack.Protected guard={!inApp}>
+                    <Stack.Screen name="(auth)" />
+                  </Stack.Protected>
+                </Stack>
+              </View>
+              <KoraPanel />
             </View>
-          </View>
-        </WakeProvider>
+          </WakeProvider>
+        </TutorProvider>
       )}
       <AnimatedSplash ready={!loading} />
     </>

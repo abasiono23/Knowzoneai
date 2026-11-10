@@ -79,7 +79,7 @@ const exams: Translation<typeof en> = {
     submitConfirm: 'Fi sílẹ̀',
     keepGoing: 'Máa bá a lọ',
     leaveTitle: 'Ṣé o fẹ́ fi ìwé yìí sílẹ̀?',
-    leaveBody: 'A kò ní fi àwọn ìdáhùn rẹ pamọ́.',
+    leaveBody: 'A ó fi àwọn ìdáhùn rẹ pamọ́. Padà wá nígbàkúùgbà láti máa bá a lọ láti ìbéèrè yìí.',
     leave: 'Kúrò',
     timeUp: 'Àkókò ti tán! A ti fi ìwé rẹ sílẹ̀.',
     map: 'MÁÀPÙ ÌBÉÈRÈ',

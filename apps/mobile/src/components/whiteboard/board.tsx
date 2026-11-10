@@ -35,6 +35,8 @@ type Props = {
   onDone?: () => void;
   /** Shown on an empty board. */
   empty?: React.ReactNode;
+  /** Smaller writing, for the board in a side panel. */
+  small?: boolean;
 };
 
 /**
@@ -42,7 +44,7 @@ type Props = {
  * while Kora says it. The next line starts once both the writing and the voice have finished.
  * Give it a new `key` for a new script.
  */
-export function Whiteboard({ lines, voice, language, font, onDone, empty }: Props) {
+export function Whiteboard({ lines, voice, language, font, onDone, empty, small }: Props) {
   const { width } = useWindowDimensions();
   const [line, setLine] = useState(0);
   const [chars, setChars] = useState(0);
@@ -112,14 +114,14 @@ export function Whiteboard({ lines, voice, language, font, onDone, empty }: Prop
   }, [voice]);
 
   // Smaller writing on phones, so a line of working fits across the board.
-  const zoom = width < 700 ? 0.75 : 1;
+  const zoom = small ? 0.68 : width < 700 ? 0.75 : 1;
 
   return (
     <View style={styles.frame}>
       <ScrollView
         ref={scroll}
         style={styles.board}
-        contentContainerStyle={styles.content}
+        contentContainerStyle={[styles.content, small && { padding: 16 }]}
         onContentSizeChange={() => scroll.current?.scrollToEnd({ animated: true })}>
         {!lines.length && empty}
         {lines.slice(0, line + 1).map((l, i) => {

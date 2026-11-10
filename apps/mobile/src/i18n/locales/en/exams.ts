@@ -81,7 +81,7 @@ export default {
     submitConfirm: 'Submit',
     keepGoing: 'Keep going',
     leaveTitle: 'Leave this paper?',
-    leaveBody: 'Your answers won’t be saved.',
+    leaveBody: 'Your answers are kept. Come back any time to carry on from this question.',
     leave: 'Leave',
     timeUp: 'Time’s up! Your paper was handed in.',
     map: 'QUESTION MAP',

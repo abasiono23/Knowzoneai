@@ -87,7 +87,11 @@ const Ctx = createContext<Tutor | null>(null);
  * Real mode: answers come from the server (OpenAI), which also keeps the history, usage, notes and
  * decks; this device keeps a copy for offline reading. Mock mode: answers come from the demo brain.
  */
-export function TutorProvider({ children }: { children: ReactNode }) {
+/**
+ * Mounted once at the root, so the tutor and Kora's board (which opens beside any page) share the same chats.
+ * `enabled` is false until a student is signed in, so nothing is loaded for anyone else.
+ */
+export function TutorProvider({ enabled = true, children }: { enabled?: boolean; children: ReactNode }) {
   const { user, setUser } = useSession();
   // One copy per account, so a shared device never shows someone else's chats.
   const key = USE_MOCKS || !user ? KEY : `${KEY}.${user.id}`;
@@ -117,6 +121,7 @@ export function TutorProvider({ children }: { children: ReactNode }) {
   );
 
   useEffect(() => {
+    if (!enabled) return;
     let cancelled = false;
     storage.get(key).then(async (raw) => {
       let saved = EMPTY;
@@ -164,7 +169,7 @@ export function TutorProvider({ children }: { children: ReactNode }) {
     return () => {
       cancelled = true;
     };
-  }, [key, mutate]);
+  }, [key, mutate, enabled]);
 
   const limit = serverUsage?.limit ?? DAILY_LIMITS[user?.plan ?? 'FREE'];
   const used = serverUsage?.used ?? (state.usage.date === today() ? state.usage.used : 0);

@@ -1,10 +1,12 @@
 import { Ionicons } from '@expo/vector-icons';
-import { router, usePathname } from 'expo-router';
+import { usePathname } from 'expo-router';
 import { createContext, useContext, useEffect, useState, type ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Platform, Pressable, StyleSheet, View } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { Text } from '@/components/ui';
+import { KoraBoard } from '@/components/whiteboard/kora-board';
 import { Colors, Radius, Spacing, TabBarHeight } from '@/constants/theme';
 import { useLanguage } from '@/i18n/provider';
 import { useDesktop } from '@/lib/use-desktop';
@@ -14,7 +16,8 @@ import { afterWake, canListen, isOpenBoard, listen } from './voice';
 /**
  * "Hey Kora" on every page of the web version. A student switches it on (the browser asks for the
  * microphone that first time), and from then on saying "Hey Kora" anywhere opens the whiteboard, and
- * "Hey Kora, …" asks the question too. It stays on while the student moves between pages, and is never
+ * "Hey Kora, …" asks the question too. The board opens in a panel beside the page (below it on a phone),
+ * so the student can still see the past question or lesson they're asking about. It stays on while the student moves between pages, and is never
  * saved: leaving the website (or reloading it) switches it off, so every visit starts with it off.
  * It pauses while the tab is hidden, and on the whiteboard, which listens for itself.
  */
@@ -27,9 +30,21 @@ type Wake = {
   /** blocked, noMic, network or language. */
   problem: string | null;
   setOn: (on: boolean) => void;
+  /** The board panel, while it's open: a question to ask, or listening for one. */
+  panel: Panel | null;
+  closePanel: () => void;
 };
+type Panel = { n: number; question?: string; listen: boolean };
 
-const WakeContext = createContext<Wake>({ available: false, on: false, heard: '', problem: null, setOn: () => {} });
+const WakeContext = createContext<Wake>({
+  available: false,
+  on: false,
+  heard: '',
+  problem: null,
+  setOn: () => {},
+  panel: null,
+  closePanel: () => {},
+});
 export const useWake = () => useContext(WakeContext);
 
 /** The message key for a listening problem. */
@@ -50,7 +65,9 @@ export function WakeProvider({ enabled, children }: { enabled: boolean; children
   const [visible, setVisible] = useState(true);
   const path = usePathname();
   const { language } = useLanguage();
-  const onBoard = path === '/tutor/board';
+  const [panel, setPanel] = useState<Panel | null>(null);
+  // The board listens for itself, so "Hey Kora" here pauses while it's open.
+  const onBoard = path === '/tutor/board' || !!panel;
 
   const setOn = (next: boolean) => {
     setProblem(null);
@@ -78,7 +95,8 @@ export function WakeProvider({ enabled, children }: { enabled: boolean; children
         if (rest === null) return;
         setHeard('');
         // With a question the board asks it; with just "Hey Kora" it opens listening for one.
-        router.push({ pathname: '/tutor/board', params: rest && !isOpenBoard(rest) ? { q: rest } : { listen: '1' } });
+        const question = rest && !isOpenBoard(rest) ? rest : undefined;
+        setPanel({ n: Date.now(), question, listen: !question });
       },
       onError: (code) => {
         setProblem(code);
@@ -88,7 +106,17 @@ export function WakeProvider({ enabled, children }: { enabled: boolean; children
     return () => l?.stop();
   }, [on, available, visible, onBoard, language]);
 
-  const value: Wake = { available, on: on && available, heard, problem, setOn };
+  // Signing out (or anything that turns this off for the account) closes the board too.
+  if (!available && panel) setPanel(null);
+  const value: Wake = {
+    available,
+    on: on && available,
+    heard,
+    problem,
+    setOn,
+    panel,
+    closePanel: () => setPanel(null),
+  };
   return (
     <WakeContext.Provider value={value}>
       {children}
@@ -106,7 +134,8 @@ function ListeningPill() {
   const { on, heard, setOn } = useWake();
   const desktop = useDesktop();
   const path = usePathname();
-  if (!on || desktop || path === '/tutor/board') return null;
+  const { panel } = useWake();
+  if (!on || desktop || panel || path === '/tutor/board') return null;
   return (
     <View style={styles.pill} pointerEvents="box-none">
       <View style={styles.pillInner}>
@@ -126,7 +155,31 @@ function ListeningPill() {
   );
 }
 
+/**
+ * The board opened by "Hey Kora", placed by the root layout beside the page: a column on the right on a
+ * computer, the lower half of the screen on a phone. The page shrinks to make room, so nothing is hidden.
+ */
+export function KoraPanel() {
+  const { panel, closePanel, on } = useWake();
+  const desktop = useDesktop();
+  const insets = useSafeAreaInsets();
+  if (!panel) return null;
+  return (
+    <View style={desktop ? styles.side : [styles.below, { paddingBottom: insets.bottom }]}>
+      <KoraBoard
+        key={panel.n}
+        question={panel.question}
+        listenNow={panel.listen}
+        listenFromStart={on}
+        onClose={closePanel}
+      />
+    </View>
+  );
+}
+
 const styles = StyleSheet.create({
+  side: { width: 440, borderLeftWidth: 1, borderLeftColor: Colors.border, backgroundColor: Colors.background },
+  below: { height: '50%', borderTopWidth: 1, borderTopColor: Colors.border, backgroundColor: Colors.background },
   // Just above the tab bar, clear of page headings.
   pill: { position: 'absolute', bottom: TabBarHeight + Spacing.sm, left: 0, right: 0, alignItems: 'center' },
   pillInner: {

@@ -19,6 +19,7 @@ import { Button, Card, ProgressBar, Text } from '@/components/ui';
 import { Colors, Fonts, Radius, Spacing } from '@/constants/theme';
 import { errorText } from '@/i18n/errors';
 import { clock, examsApi, LETTERS, loadPaper, type ExamAttempt, type Paper, type TopicScore } from '@/lib/exams';
+import { clearSitting, loadSitting, saveSitting, type Sitting as SavedSitting } from '@/lib/exams-progress';
 
 type Mode = 'practice' | 'timed';
 
@@ -31,13 +32,17 @@ export default function SitPaper() {
   const { id, mode: m } = useLocalSearchParams<{ id: string; mode?: string }>();
   const mode: Mode = m === 'timed' ? 'timed' : 'practice';
   const [paper, setPaper] = useState<Paper | null>(null);
+  const [saved, setSaved] = useState<SavedSitting | null>(null);
   const [error, setError] = useState<string | null>(null);
 
   const load = useCallback(() => {
     loadPaper(id)
-      .then(setPaper)
+      .then(async (p) => {
+        setSaved(await loadSitting(p.id, mode, p.questions.length));
+        setPaper(p);
+      })
       .catch((e) => setError(errorText(e, t('loadFailed'))));
-  }, [id, t]);
+  }, [id, mode, t]);
   useEffect(load, [load]);
   const retry = () => {
     setError(null);
@@ -50,22 +55,26 @@ export default function SitPaper() {
         <View style={{ padding: Spacing.md }}>{error ? <LoadError text={error} onRetry={retry} /> : <Loading />}</View>
       </SafeAreaView>
     );
-  return <Sitting paper={paper} mode={mode} />;
+  return <Sitting key={`${paper.id}-${mode}`} paper={paper} mode={mode} saved={saved} />;
 }
 
-function Sitting({ paper, mode }: { paper: Paper; mode: Mode }) {
+function Sitting({ paper, mode, saved }: { paper: Paper; mode: Mode; saved: SavedSitting | null }) {
   const { t } = useTranslation('exams');
   const total = paper.questions.length;
-  const [i, setI] = useState(0);
-  const [answers, setAnswers] = useState<number[]>(() => paper.questions.map(() => -1));
-  const [checked, setChecked] = useState<boolean[]>(() => paper.questions.map(() => false));
-  const [startedAt] = useState(() => Date.now());
-  const [left, setLeft] = useState(paper.minutes * 60);
+  // Carries on from where the student left off, if they've been here before.
+  const [i, setI] = useState(saved?.i ?? 0);
+  const [answers, setAnswers] = useState<number[]>(() => saved?.answers ?? paper.questions.map(() => -1));
+  const [checked, setChecked] = useState<boolean[]>(() => saved?.checked ?? paper.questions.map(() => false));
+  // Counted from the time already spent, so the clock was paused while they were away.
+  const [startedAt] = useState(() => Date.now() - (saved?.seconds ?? 0) * 1000);
+  const [left, setLeft] = useState(Math.max(0, paper.minutes * 60 - (saved?.seconds ?? 0)));
   const [confirm, setConfirm] = useState<'submit' | 'leave' | null>(null);
   const [note, setNote] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
   const [result, setResult] = useState<{ attempt: ExamAttempt; topics: TopicScore[]; timeUp: boolean } | null>(null);
   const scroll = useRef<ScrollViewInstance | null>(null);
+  /** Set once the paper is handed in, so its saved place isn't written back. */
+  const handedIn = useRef(false);
 
   const q = paper.questions[i]!;
   const answered = answers.filter((a) => a >= 0).length;
@@ -76,6 +85,8 @@ function Sitting({ paper, mode }: { paper: Paper; mode: Mode }) {
     setConfirm(null);
     try {
       const res = await examsApi.submit(paper.id, mode, answers, Math.round((Date.now() - startedAt) / 1000));
+      handedIn.current = true;
+      clearSitting(paper.id, mode);
       setResult({ ...res, timeUp });
     } catch (e) {
       setNote(errorText(e, t('loadFailed')));
@@ -87,6 +98,26 @@ function Sitting({ paper, mode }: { paper: Paper; mode: Mode }) {
   useEffect(() => {
     submitRef.current = submit;
   });
+
+  // Keep the student's place: on every move, every few seconds (for the clock), and on leaving.
+  const place = useRef<SavedSitting | null>(null);
+  useEffect(() => {
+    if (handedIn.current) return;
+    place.current = { i, answers, checked, seconds: Math.round((Date.now() - startedAt) / 1000) };
+    saveSitting(paper.id, mode, place.current);
+  }, [i, answers, checked, result, paper.id, mode, startedAt]);
+  useEffect(() => {
+    const keep = () => {
+      if (handedIn.current || !place.current) return;
+      place.current = { ...place.current, seconds: Math.round((Date.now() - startedAt) / 1000) };
+      saveSitting(paper.id, mode, place.current);
+    };
+    const timer = setInterval(keep, 5000);
+    return () => {
+      clearInterval(timer);
+      keep();
+    };
+  }, [paper.id, mode, startedAt]);
 
   // The clock (timed papers only); time running out hands the paper in.
   useEffect(() => {

@@ -79,7 +79,7 @@ const exams: Translation<typeof en> = {
     submitConfirm: 'Nyefee',
     keepGoing: 'Gaa n’ihu',
     leaveTitle: 'Ị ga-ahapụ akwụkwọ a?',
-    leaveBody: 'A gaghị echekwa azịza gị.',
+    leaveBody: 'A ga-echekwa azịza gị. Lọghachi mgbe ọ bụla ka ị gaa n’ihu site n’ajụjụ a.',
     leave: 'Pụọ',
     timeUp: 'Oge agwụla! E nyefeela akwụkwọ gị.',
     map: 'MAPỤ AJỤJỤ',
