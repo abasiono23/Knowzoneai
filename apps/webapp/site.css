@@ -689,6 +689,34 @@ h3 {
   color: var(--ink-2);
   font-size: 16px;
 }
+/* Big numbers (About): what Knowzone holds today. */
+.stats {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+.stat {
+  display: grid;
+  gap: 6px;
+  padding: 26px 28px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+}
+.stat b {
+  background: linear-gradient(100deg, var(--purple), var(--magenta) 60%, var(--coral));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 46px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+}
+.stat span {
+  color: var(--ink-2);
+  font-size: 16px;
+}
 .icon {
   display: grid;
   width: 52px;
