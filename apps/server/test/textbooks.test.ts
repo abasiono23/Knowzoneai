@@ -3,6 +3,7 @@ import { describe, expect, it, vi } from 'vitest';
 import { prisma } from '../src/db.js';
 import type { GenerateOptions } from '../src/services/study-ai.js';
 import type { VideoSettings } from '../src/services/video-ai.js';
+import { tidyTopics, unshout } from '../src/services/textbooks.js';
 import { http, signIn } from './helpers.js';
 
 // OpenAI is replaced with a fake: reading the PDF, the background processing, topic search,
@@ -420,5 +421,26 @@ describe('studying one topic of a textbook', () => {
       .expect(404);
     expect(missing.body.reason).toBe('topic-not-found');
     expect(await prisma.video.count()).toBe(1);
+  });
+});
+
+describe('tidying the AI’s topic list', () => {
+  it('keeps the first section, not the chapter heading on the same page, and un-capitalises headings', () => {
+    const topics = tidyTopics(
+      [
+        { title: 'CHAPTER 2: DIFFUSION AND OSMOSIS', chapter: null, startPage: 7 },
+        { title: '2.1 Diffusion', chapter: 'CHAPTER 2: DIFFUSION AND OSMOSIS', startPage: 7 },
+        { title: '2.2 Osmosis', chapter: 'CHAPTER 2: DIFFUSION AND OSMOSIS', startPage: 8 },
+        { title: 'Genetics', chapter: null, startPage: 10 },
+      ],
+      12,
+    );
+    expect(topics.map((t) => [t.title, t.chapter, t.startPage, t.endPage])).toEqual([
+      ['2.1 Diffusion', 'Chapter 2: Diffusion and osmosis', 7, 7],
+      ['2.2 Osmosis', 'Chapter 2: Diffusion and osmosis', 8, 9],
+      ['Genetics', undefined, 10, 12],
+    ]);
+    expect(unshout('DNA')).toBe('DNA');
+    expect(unshout('Photosynthesis')).toBe('Photosynthesis');
   });
 });
