@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-06",
+ "updated": "2026-11-11",
  "books": [
   {
    "id": "a-first-course-in-abstract-algebra",
@@ -25370,6 +25370,230 @@
    ],
    "notes": "Advanced.",
    "cover": "https://covers.openlibrary.org/b/id/13206146-L.jpg"
+  },
+  {
+   "id": "engineering-mathematics-stroud",
+   "title": "Engineering Mathematics",
+   "series": null,
+   "publisher": "Red Globe Press (Bloomsbury)",
+   "year": 2020,
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "provider": null,
+   "license": null,
+   "authors": [
+    "K. A. Stroud",
+    "Dexter J. Booth"
+   ],
+   "edition": "8th",
+   "isbn": "9781352010275",
+   "cover": "https://covers.openlibrary.org/b/id/10176805-L.jpg",
+   "placements": [
+    {
+     "course": "aerospace-engineering",
+     "levels": [
+      "intro"
+     ]
+    },
+    {
+     "course": "agricultural-engineering",
+     "levels": [
+      "intro"
+     ]
+    },
+    {
+     "course": "biomedical-engineering",
+     "levels": [
+      "intro"
+     ]
+    },
+    {
+     "course": "chemical-engineering",
+     "levels": [
+      "intro"
+     ]
+    },
+    {
+     "course": "civil-engineering",
+     "levels": [
+      "intro"
+     ]
+    },
+    {
+     "course": "computer-engineering",
+     "levels": [
+      "intro"
+     ]
+    },
+    {
+     "course": "electrical-engineering",
+     "levels": [
+      "intro"
+     ]
+    },
+    {
+     "course": "marine-engineering",
+     "levels": [
+      "intro"
+     ]
+    },
+    {
+     "course": "mechanical-engineering",
+     "levels": [
+      "intro"
+     ]
+    },
+    {
+     "course": "metallurgical-engineering",
+     "levels": [
+      "intro"
+     ]
+    },
+    {
+     "course": "petroleum-engineering",
+     "levels": [
+      "intro"
+     ]
+    },
+    {
+     "course": "production-engineering",
+     "levels": [
+      "intro"
+     ]
+    },
+    {
+     "course": "telecommunications-engineering",
+     "levels": [
+      "intro"
+     ]
+    },
+    {
+     "course": "mathematics",
+     "levels": [
+      "intro"
+     ]
+    }
+   ],
+   "sources": [
+    "https://openlibrary.org/isbn/9781352010275",
+    "https://www.bloomsbury.com/uk/engineering-mathematics-9781352010275/"
+   ],
+   "notes": "The step-by-step \"programmes\" book used for first-year engineering mathematics in Nigeria, the UK and beyond."
+  },
+  {
+   "id": "advanced-engineering-mathematics-stroud",
+   "title": "Advanced Engineering Mathematics",
+   "series": null,
+   "publisher": "Red Globe Press (Bloomsbury)",
+   "year": 2020,
+   "free": false,
+   "readUrl": null,
+   "downloadUrl": null,
+   "downloadType": null,
+   "downloadBytes": null,
+   "provider": null,
+   "license": null,
+   "authors": [
+    "K. A. Stroud",
+    "Dexter J. Booth"
+   ],
+   "edition": "6th",
+   "isbn": "9781352010251",
+   "cover": "https://covers.openlibrary.org/b/id/10245670-L.jpg",
+   "placements": [
+    {
+     "course": "aerospace-engineering",
+     "levels": [
+      "core"
+     ]
+    },
+    {
+     "course": "agricultural-engineering",
+     "levels": [
+      "core"
+     ]
+    },
+    {
+     "course": "biomedical-engineering",
+     "levels": [
+      "core"
+     ]
+    },
+    {
+     "course": "chemical-engineering",
+     "levels": [
+      "core"
+     ]
+    },
+    {
+     "course": "civil-engineering",
+     "levels": [
+      "core"
+     ]
+    },
+    {
+     "course": "computer-engineering",
+     "levels": [
+      "core"
+     ]
+    },
+    {
+     "course": "electrical-engineering",
+     "levels": [
+      "core"
+     ]
+    },
+    {
+     "course": "marine-engineering",
+     "levels": [
+      "core"
+     ]
+    },
+    {
+     "course": "mechanical-engineering",
+     "levels": [
+      "core"
+     ]
+    },
+    {
+     "course": "metallurgical-engineering",
+     "levels": [
+      "core"
+     ]
+    },
+    {
+     "course": "petroleum-engineering",
+     "levels": [
+      "core"
+     ]
+    },
+    {
+     "course": "production-engineering",
+     "levels": [
+      "core"
+     ]
+    },
+    {
+     "course": "telecommunications-engineering",
+     "levels": [
+      "core"
+     ]
+    },
+    {
+     "course": "mathematics",
+     "levels": [
+      "core"
+     ]
+    }
+   ],
+   "sources": [
+    "https://openlibrary.org/isbn/9781352010251",
+    "https://www.bloomsbury.com/uk/advanced-engineering-mathematics-9781352010251/"
+   ],
+   "notes": "The follow-on to Engineering Mathematics: Laplace and Fourier transforms, matrices, vector analysis, differential equations, for second and third years."
   }
  ]
 }
