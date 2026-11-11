@@ -371,6 +371,10 @@ describe('textbook video summaries', () => {
     const v = await settled(as, 'tbfree01');
     expect(v.status).toBe('ready');
     expect(ai.clips).toBe(0);
+    // Every scene but the quiz has a picture (other 1-minute videos stop at 4).
+    expect(ai.scripts[0]).toMatchObject({ pictureEveryScene: true });
+    expect(ai.drawn).toBe(6);
+    expect(v.scenes.filter((s: Scene) => s.image)).toHaveLength(6);
     expect(v.scenes.some((s: Scene) => s.clip)).toBe(false);
   });
 

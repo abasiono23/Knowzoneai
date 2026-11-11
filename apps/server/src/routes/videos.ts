@@ -175,7 +175,13 @@ export async function addPhotos(videoId: string, userId: string, scenes: Scene[]
  * Pictures for the scenes that describe one: a real photo where a good one exists (free, from
  * Wikimedia Commons, credited), and AI pictures for the rest, up to the length's limit.
  */
-export async function drawScenes(videoId: string, userId: string, scenes: Scene[], settings: VideoSettings) {
+export async function drawScenes(
+  videoId: string,
+  userId: string,
+  scenes: Scene[],
+  settings: VideoSettings,
+  maxPictures = LENGTHS[settings.length].images,
+) {
   // Fresh pictures: any earlier picture and its credit are replaced.
   const withPhotos = await addPhotos(
     videoId,
@@ -184,7 +190,7 @@ export async function drawScenes(videoId: string, userId: string, scenes: Scene[
   );
   const pictures = new Map<string, Pick<Scene, 'image' | 'credit'>>();
   const wanted = withPhotos.filter((s) => s.illustration && s.kind !== 'check' && !s.credit);
-  const toDraw = wanted.slice(0, LENGTHS[settings.length].images);
+  const toDraw = wanted.slice(0, maxPictures);
   await mapLimit(toDraw, 3, async (s) => {
     try {
       const jpeg = await illustrate(userId, s.illustration!, settings.styleId);
@@ -249,12 +255,18 @@ export async function processVideo(id: string, opts: { voiceOnly?: boolean } = {
     let clip: Promise<string | null> = Promise.resolve(null);
     if (!opts.voiceOnly || !scenes.length) {
       await stage(0);
-      const script = await writeScript(userId, await sourceText(userId, v.source as Source, settings.language), settings);
+      // Textbook summaries have a picture on every scene (but the quiz), not just the main ones: about 1-2 cents more.
+      const everyScene = (v.source as Source | null)?.kind === 'textbook';
+      const script = await writeScript(
+        userId,
+        { ...(await sourceText(userId, v.source as Source, settings.language)), pictureEveryScene: everyScene },
+        settings,
+      );
       meta = { subject: script.subject, level: script.level, description: script.description };
       // The moving opening clip takes a few minutes, so it's made while the pictures and voice are.
       if (await wantsClip(userId, v.source as Source)) clip = openingClip(id, userId, v.title, script.scenes[0], settings);
       await stage(1);
-      scenes = await drawScenes(id, userId, script.scenes, settings);
+      scenes = await drawScenes(id, userId, script.scenes, settings, everyScene ? script.scenes.length : undefined);
     }
     await stage(2);
     scenes = await recordScenes(id, userId, scenes, settings);
