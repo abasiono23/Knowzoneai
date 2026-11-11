@@ -62,8 +62,8 @@ export const LEGAL_DOCS: Record<LegalDocId, LegalDocDef> = {
   privacy: {
     id: 'privacy',
     icon: 'lock-closed',
-    // YouTube videos in courses (YouTube API Services) added.
-    updated: new Date(2026, 9, 23),
+    // Talking to Kora (speech turned into text by the phone or browser) added.
+    updated: new Date(2026, 10, 11),
     summaryIcons: ['eye-off', 'school', 'sparkles', 'download'],
     sections: [
       { id: 'scope' },

@@ -570,6 +570,7 @@ const help = {
             title: '4. AI processing',
             body: [
               'To generate study material and tutor answers, the relevant text is sent to our AI provider (OpenAI) for processing. It is not used to train their models.',
+              'When you talk to Kora, your phone or browser turns your voice into text with its own speech service (from Google or Apple). Knowzone receives only the text, never the recording. Kora listens only while you have Listen for “Hey Kora” switched on or are using the whiteboard microphone, and listening is off again every time you open Knowzone.',
               'Your content is only used to improve Knowzone’s own AI features if you turn on “Help improve Knowzone AI” in Settings → Privacy. It’s off by default, and you can turn it off at any time.',
             ],
           },

@@ -577,6 +577,7 @@ const help: Translation<typeof en> = {
             title: '4. Sarrafawa ta AI',
             body: [
               'Don samar da kayan karatu da amsoshin malami, ana aika rubutun da ya dace zuwa ga mai samar mana da AI (OpenAI) don sarrafawa. Ba a amfani da shi don horar da samfuransu.',
+              'Idan kana magana da Kora, wayarka ko burauzarka tana mayar da muryarka zuwa rubutu ta amfani da sabis ɗin gane murya nata (daga Google ko Apple). Rubutun kawai Knowzone ke karɓa, ba rikodin ba. Kora tana saurare ne kawai lokacin da ka kunna Saurari “Hey Kora” ko kake amfani da makirufon allo, kuma sauraro yana kashewa duk lokacin da ka buɗe Knowzone.',
               'Ana amfani da abun cikinka don inganta fasalolin AI na Knowzone ne kawai idan ka kunna “Taimaka inganta Knowzone AI” a Saituna → Sirri. A kashe yake tun farko, kuma za ka iya kashe shi a kowane lokaci.',
             ],
           },

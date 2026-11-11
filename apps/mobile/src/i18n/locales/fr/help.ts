@@ -581,6 +581,7 @@ const help: Translation<typeof en> = {
             title: '4. Traitement par l’IA',
             body: [
               'Pour générer le matériel de révision et les réponses du tuteur, le texte concerné est envoyé à notre fournisseur d’IA (OpenAI) pour être traité. Il n’est pas utilisé pour entraîner ses modèles.',
+              'Quand tu parles à Kora, ton téléphone ou ton navigateur transforme ta voix en texte avec son propre service de reconnaissance vocale (de Google ou d’Apple). Knowzone ne reçoit que le texte, jamais l’enregistrement. Kora n’écoute que lorsque tu as activé Écouter « Hey Kora » ou que tu utilises le micro du tableau, et l’écoute est de nouveau coupée chaque fois que tu ouvres Knowzone.',
               'Ton contenu ne sert à améliorer les fonctions d’IA propres à Knowzone que si tu actives « Aider à améliorer Knowzone AI » dans Paramètres → Confidentialité. C’est désactivé par défaut, et tu peux le désactiver à tout moment.',
             ],
           },

@@ -575,6 +575,7 @@ const help: Translation<typeof en> = {
             title: '4. Uchakataji wa AI',
             body: [
               'Ili kutengeneza vifaa vya kusoma na majibu ya mwalimu, maandishi husika hutumwa kwa mtoa huduma wetu wa AI (OpenAI) kwa ajili ya kuchakatwa. Hayatumiki kufunza miundo yao.',
+              'Unapozungumza na Kora, simu au kivinjari chako hugeuza sauti yako kuwa maandishi kwa huduma yake ya utambuzi wa sauti (kutoka Google au Apple). Knowzone hupokea maandishi pekee, kamwe si rekodi. Kora husikiliza tu ukiwa umewasha Sikiliza “Hey Kora” au unatumia maikrofoni ya ubao, na usikilizaji huzimwa tena kila unapofungua Knowzone.',
               'Maudhui yako hutumika kuboresha vipengele vya AI vya Knowzone yenyewe tu ukiwasha “Saidia kuboresha Knowzone AI” katika Mipangilio → Faragha. Kimezimwa kwa chaguo-msingi, na unaweza kukizima wakati wowote.',
             ],
           },

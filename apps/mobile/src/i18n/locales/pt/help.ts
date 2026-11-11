@@ -576,6 +576,7 @@ const help: Translation<typeof en> = {
             title: '4. Processamento por IA',
             body: [
               'Para gerar material de estudo e respostas do tutor, o texto relevante é enviado ao nosso fornecedor de IA (OpenAI) para ser processado. Não é usado para treinar os modelos deles.',
+              'Quando falas com a Kora, o teu telemóvel ou navegador transforma a tua voz em texto com o seu próprio serviço de reconhecimento de voz (da Google ou da Apple). O Knowzone recebe apenas o texto, nunca a gravação. A Kora só ouve quando tens Ouvir “Hey Kora” ligado ou estás a usar o microfone do quadro, e a escuta volta a estar desligada sempre que abres o Knowzone.',
               'O teu conteúdo só é usado para melhorar as funcionalidades de IA do próprio Knowzone se ligares “Ajudar a melhorar o Knowzone AI” em Definições → Privacidade. Está desligado por defeito e podes desligá-lo a qualquer momento.',
             ],
           },

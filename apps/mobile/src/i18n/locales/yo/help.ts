@@ -570,6 +570,7 @@ const help: Translation<typeof en> = {
             title: '4. Iṣẹ́ AI',
             body: [
               'Láti ṣẹ̀dá ohun èlò ẹ̀kọ́ àti ìdáhùn olùkọ́, a ń fi ọ̀rọ̀ tó yẹ ránṣẹ́ sí olùpèsè AI wa (OpenAI) fún ìṣiṣẹ́. A kò lò ó láti kọ́ àwọn àwòṣe wọn.',
+              'Tí o bá ń bá Kora sọ̀rọ̀, fóònù tàbí aṣàwákiri rẹ ń sọ ohùn rẹ di ọ̀rọ̀ kíkọ pẹ̀lú iṣẹ́ ìdámọ̀ ohùn tirẹ̀ (láti ọ̀dọ̀ Google tàbí Apple). Ọ̀rọ̀ kíkọ nìkan ni Knowzone ń gbà, kì í ṣe ohùn tí a gbà sílẹ̀. Kora ń fetí sílẹ̀ nìkan nígbà tí o bá tan Fetí sí “Hey Kora” tàbí tí o ń lo máíkírófóònù pátákó, ìfetísílẹ̀ sì máa ń pa ní gbogbo ìgbà tí o bá ṣí Knowzone.',
               'A ń lo àkóónú rẹ láti mú àwọn ẹ̀yà AI ti Knowzone fúnra rẹ̀ dára sí i kìkì bí o bá tan “Ràn wá lọ́wọ́ láti mú Knowzone AI dára sí i” nínú Ètò → Ìpamọ́. Ó wà ní pípa ní àtilẹ̀wá, o sì lè pa á nígbàkígbà.',
             ],
           },

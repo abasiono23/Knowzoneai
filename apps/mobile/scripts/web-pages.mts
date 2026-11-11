@@ -28,8 +28,16 @@ const docs = unwrap(helpModule).legal.docs;
 const plans = readFileSync(resolve(root, 'src/lib/billing/plans.ts'), 'utf8');
 const legal = readFileSync(resolve(root, 'src/lib/legal/documents.ts'), 'utf8');
 const VALUES: Record<string, string> = { tutorFree: plans.match(/TUTOR_DAILY[^=]*=\s*\{\s*FREE:\s*(\d+)/)![1]! };
-const [, y, m, d] = legal.match(/const UPDATED = new Date\((\d+), (\d+), (\d+)\)/)!;
-const UPDATED = new Date(Number(y), Number(m), Number(d)).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+const dateText = (args: string) => {
+  const [y, m, d] = args.split(',').map(Number);
+  return new Date(y!, m!, d!).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+};
+const UPDATED = legal.match(/const UPDATED = new Date\(([\d, ]+)\)/)![1]!;
+/** When a text last changed: its own date in LEGAL_DOCS, or the shared one. */
+const updated = (id: string) => {
+  const own = legal.match(new RegExp(`\\n  ${id}: \\{[^}]*?updated: new Date\\(([\\d, ]+)\\)`));
+  return dateText(own?.[1] ?? UPDATED);
+};
 const DRAFT = /export const LEGAL_DRAFT = true/.test(legal);
 
 const esc = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
@@ -95,7 +103,7 @@ ${HEADER}
         <div class="prose reveal">
           ${DRAFT ? '<p class="legal-draft">This text is a draft. It is being reviewed by a lawyer before Knowzone launches, and may change.</p>' : ''}
           ${o.content}
-          <p class="small">Last updated: ${UPDATED}.</p>
+          <p class="small">Last updated: ${updated(o.path.slice(1))}.</p>
         </div>
       </section>
     </main>

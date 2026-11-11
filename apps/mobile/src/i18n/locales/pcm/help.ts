@@ -573,6 +573,7 @@ const help: Translation<typeof en> = {
             title: '4. AI processing',
             body: [
               'To generate study material and tutor answers, we dey send the text wey concern am to our AI provider (OpenAI) to process am. Dem no dey use am train their models.',
+              'When you talk to Kora, your phone or browser dey turn your voice to text with im own speech service (from Google or Apple). Na only the text Knowzone dey get, never the recording. Kora dey listen only when you on Listen for “Hey Kora” or you dey use the whiteboard microphone, and listening dey off again every time you open Knowzone.',
               'We dey use your content to improve Knowzone own AI features only if you on “Help improve Knowzone AI” for Settings → Privacy. E dey off by default, and you fit off am any time.',
             ],
           },

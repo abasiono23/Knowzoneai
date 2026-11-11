@@ -573,6 +573,7 @@ const help: Translation<typeof en> = {
             title: '4. Nhazi AI',
             body: [
               'Iji mepụta ihe ọmụmụ na azịza onye nkuzi, a na-ezigara onye na-enye anyị AI (OpenAI) ederede metụtara ya ka ọ hazie ya. A naghị eji ya azụ ụdị AI ha.',
+              'Mgbe ị na-agwa Kora okwu, ekwentị gị ma ọ bụ ihe nchọgharị gị na-eji ọrụ nghọta olu nke ya (site na Google ma ọ bụ Apple) atụgharị olu gị ka ọ bụrụ ederede. Ọ bụ naanị ederede ahụ ka Knowzone na-anata, ọ bụghị ihe e dekọrọ. Kora na-ege ntị naanị mgbe ị gbanyere Gee ntị maka “Hey Kora” ma ọ bụ mgbe ị na-eji igwe okwu nke bọọdụ, a na-agbanyụkwa ige ntị oge ọ bụla i mepere Knowzone.',
               'A na-eji ọdịnaya gị kwalite njirimara AI nke Knowzone naanị ma ọ bụrụ na ị gbanyere “Nyere aka mee ka Knowzone AI ka mma” na Ntọala → Nzuzo. Ọ na-agbanyụ na mbụ, ị nwekwara ike ịgbanyụ ya mgbe ọ bụla.',
             ],
           },
