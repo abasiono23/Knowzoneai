@@ -36,6 +36,7 @@ const study: Translation<typeof en> = {
       topic: 'Isiokwu',
       video: 'Vidiyo',
       image: 'Foto',
+      textbook: 'Akwụkwọ ọgụgụ',
     },
     fromSource: {
       pdf: 'Site na PDF',
@@ -44,6 +45,7 @@ const study: Translation<typeof en> = {
       topic: 'Site n’isiokwu',
       video: 'Site na vidiyo',
       image: 'Site na foto',
+      textbook: 'Site n’akwụkwọ ọgụgụ gị',
     },
     quizTypes: {
       mcq: 'Nhọrọ ọtụtụ',
@@ -115,6 +117,18 @@ const study: Translation<typeof en> = {
       noCredits: {
         title: 'Kredit AI gị agwụla',
         body: 'Ngwugwu ọmụmụ ọ bụla na-eji kredit AI 1. Kpọọ enyi ma ọ bụ kwalite gaa Plus ka ị nweta ọzọ.',
+      },
+      scannedBook: {
+        title: 'Akwụkwọ ọgụgụ a bụ peeji e sere foto',
+        body: 'PDF ahụ nwere foto peeji mana ọ nweghị ederede anyị nwere ike ịgụ. See foto peeji ole na ole site n’onye nkuzi kama, ma ọ bụ chọta PDF nwere ezigbo ederede.',
+      },
+      topicNotFound: {
+        title: 'Anyị achọtaghị isiokwu a n’akwụkwọ ahụ',
+        body: 'Nwaa aha isiokwu ahụ dị ka akwụkwọ ahụ si dee ya, họrọ otu site na ndepụta, ma ọ bụ mee ya site n’ihe ọmụma izugbe kama.',
+      },
+      textbookMissing: {
+        title: 'Anyị achọtaghị akwụkwọ ọgụgụ ahụ',
+        body: 'Enwere ike ihichapụ ya. Bulite ya ọzọ ka ị họrọ isiokwu.',
       },
     },
     timeoutTitle: 'Anyị enweghị ike imecha ngwugwu ọmụmụ gị',

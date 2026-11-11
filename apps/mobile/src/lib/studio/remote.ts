@@ -15,6 +15,8 @@ export type Upload = {
   text?: string;
   topic?: string;
   url?: string;
+  /** With type `textbook`: the uploaded book the topic comes from. */
+  textbookId?: string;
   file?: { uri: string; name: string; mimeType?: string };
   options: GenerateOptions;
 };
@@ -38,6 +40,7 @@ export async function create(id: string, input: Upload, onProgress: (p: number) 
     ...(input.text && { text: input.text }),
     ...(input.topic && { topic: input.topic }),
     ...(input.url && { url: input.url }),
+    ...(input.textbookId && { textbookId: input.textbookId }),
   };
   if (!input.file) {
     const r = await post<{ material: Material }>(`/materials/${id}`, { ...fields, options: input.options });

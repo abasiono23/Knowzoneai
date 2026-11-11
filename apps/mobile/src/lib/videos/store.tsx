@@ -201,8 +201,9 @@ export function VideosProvider({ children }: { children: ReactNode }) {
           description: m.content.summary.tldr,
         };
       }
+      // The demo has no book to read, so a textbook topic is explained like any other topic.
       const g = generate(
-        src.kind === 'topic'
+        src.kind === 'topic' || src.kind === 'textbook'
           ? { type: 'topic', topic: src.topic, title: v.title }
           : { type: 'text', text: src.text, title: v.title },
         {
@@ -233,7 +234,7 @@ export function VideosProvider({ children }: { children: ReactNode }) {
           () => {
             const v = ref.current.generated.find((x) => x.id === id);
             if (!v) return;
-            const label = v.source?.kind === 'topic' ? v.source.topic : v.title;
+            const label = v.source?.kind === 'topic' || v.source?.kind === 'textbook' ? v.source.topic : v.title;
             // Test hook: titles or topics mentioning "simulate fail" fail on the first attempt.
             if (/simulate fail/i.test(label) && !failedOnce.current.has(id)) {
               failedOnce.current.add(id);

@@ -25,6 +25,8 @@ export type NewMaterial = {
   text?: string;
   topic?: string;
   url?: string;
+  /** With type `textbook`: the uploaded book the topic comes from. */
+  textbookId?: string;
   fileName?: string;
   size?: number;
   /** The picked file (real mode uploads it). */
@@ -281,6 +283,7 @@ export function MaterialsProvider({ children }: { children: ReactNode }) {
         url: input.url,
         fileName: input.fileName,
         size: input.size,
+        textbookId: input.textbookId,
       },
       options: input.options,
       status: isFile ? 'uploading' : 'processing',
@@ -304,6 +307,7 @@ export function MaterialsProvider({ children }: { children: ReactNode }) {
       text: input.text,
       topic: input.topic,
       url: input.url,
+      textbookId: input.textbookId,
       ...(isFile && input.uri && { file: { uri: input.uri, name: input.fileName ?? 'file', mimeType: input.mimeType } }),
       options: input.options,
     });

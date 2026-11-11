@@ -9,6 +9,7 @@ const videos: Translation<typeof en> = {
     yourNotes: 'Àkọsílẹ̀ rẹ',
     yourMaterial: 'Ohun èlò rẹ',
     topic: 'Àkòrí: {{topic}}',
+    textbook: '{{title}} · {{topic}}',
     noNarration: 'Kò sí ohùn àlàyé',
   },
   units: {
@@ -83,6 +84,15 @@ const videos: Translation<typeof en> = {
     materialMissing: {
       title: 'A kò lè ṣe fídíò yìí',
       message: 'A kò rí àpò ẹ̀kọ́ yẹn. Ó ṣeé ṣe kí a ti pa á rẹ́.',
+    },
+    textbookMissing: {
+      title: 'A kò lè ṣe àkópọ̀ fídíò yìí',
+      message: 'A kò rí ìwé ẹ̀kọ́ yẹn. Ó ṣeé ṣe kí a ti pa á rẹ́.',
+    },
+    topicNotFound: {
+      title: 'A kò rí àkòrí yìí nínú ìwé náà',
+      message: 'Ó dàbí pé ìwé náà kò sọ̀rọ̀ nípa rẹ̀, nítorí náà kò sí ohun tí a lè ṣe àkópọ̀ rẹ̀.',
+      reason: 'Yan àkòrí kan nínú àtòjọ ìwé náà, tàbí ṣe fídíò náà láti inú ìmọ̀ gbogbogbò dípò',
     },
     differentSource: 'Gbìyànjú orísun mìíràn',
   },
@@ -368,6 +378,9 @@ const videos: Translation<typeof en> = {
     keepStudying: 'Máa kẹ́kọ̀ọ́ lọ, a ó fi tó ọ létí',
     ready: 'Fídíò rẹ ti ṣetán!',
     making: 'À ń ṣe fídíò rẹ…',
+    summaryMaking: 'À ń ṣe àkópọ̀ fídíò rẹ lórí “{{topic}}”…',
+    summaryReady: 'Àkópọ̀ fídíò rẹ lórí “{{topic}}” ti ṣetán!',
+    summaryBody: 'Láti inú {{book}}. À ń ka àwọn ojú-ìwé lórí àkòrí yìí, a sì ń sọ wọ́n di fídíò kúkúrú tí a ń sọ̀rọ̀ pẹ̀lú àkọlé ọ̀rọ̀. Ó sábà máa ń gba bí ìṣẹ́jú kan.',
     retry: 'Tún gbìyànjú',
     adjust: 'Ṣàtúnṣe ètò',
     discard: 'Jù ú sílẹ̀ kí o sì tún bẹ̀rẹ̀',

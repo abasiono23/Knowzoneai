@@ -15,6 +15,8 @@ export type Scene = {
   /** Server-made videos: the recorded narration and a picture for the scene (AI-made or a real photo). */
   audio?: string;
   image?: string;
+  /** A moving AI clip (MP4) for the opening scene of a textbook summary on a paid plan; shown muted and looping. */
+  clip?: string;
   /** A real photo's author and licence (Wikimedia Commons), shown under it. */
   credit?: { author: string; license: string; url: string };
 };
@@ -35,7 +37,9 @@ export type VideoSource =
   | { kind: 'topic'; topic: string }
   | { kind: 'material'; materialId: string; label: string }
   | { kind: 'lesson'; lessonId: string; label: string }
-  | { kind: 'text'; text: string; label: string };
+  | { kind: 'text'; text: string; label: string }
+  /** One topic of an uploaded textbook (lib/textbooks); `label` is the book's title. */
+  | { kind: 'textbook'; textbookId: string; topic: string; label: string };
 
 export type Video = {
   id: string;
@@ -64,7 +68,14 @@ export type GeneratedVideo = Video & {
 };
 
 export type GenerationErrorCode =
-  'render-timeout' | 'lesson-missing' | 'material-missing' | 'not-configured' | 'no-credits' | 'upload-failed';
+  | 'render-timeout'
+  | 'lesson-missing'
+  | 'material-missing'
+  | 'textbook-missing'
+  | 'topic-not-found'
+  | 'not-configured'
+  | 'no-credits'
+  | 'upload-failed';
 
 export const durationOf = (scenes: Scene[]) => scenes.reduce((n, s) => n + s.seconds, 0);
 

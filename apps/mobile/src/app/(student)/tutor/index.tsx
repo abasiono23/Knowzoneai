@@ -12,7 +12,8 @@ import { MARKER_FONT } from '@/components/whiteboard/board';
 import { WakeSwitch } from '@/components/whiteboard/wake-switch';
 import { UsageMeter } from '@/components/tutor/usage-meter';
 import { Card, Screen, ScreenHeader, SectionHeader, Text } from '@/components/ui';
-import { Colors, Palette, Radius, Spacing } from '@/constants/theme';
+import { LinearGradient } from '@/components/ui/gradient';
+import { Colors, Gradients, Palette, Radius, Spacing } from '@/constants/theme';
 import { useFlipStyle, useLanguage } from '@/i18n/provider';
 import { conversationTitle, subjectLabel, timeAgoMs } from '@/lib/tutor/format';
 import { useTutor } from '@/lib/tutor/store';
@@ -90,6 +91,8 @@ export default function TutorLanding() {
           onPress={() => router.push('/tutor/upload')}
         />
       </View>
+
+      <TextbookCard />
 
       <BoardCard />
 
@@ -169,6 +172,54 @@ export default function TutorLanding() {
         </Card>
       </Pressable>
     </Screen>
+  );
+}
+
+/**
+ * The way into textbooks: upload a PDF, the AI lists its topics, and any topic becomes flashcards
+ * or a video summary (screens under tutor/textbook).
+ */
+function TextbookCard() {
+  const { t } = useTranslation('tutor');
+  const flip = useFlipStyle();
+  return (
+    <Pressable
+      onPress={() => router.push('/tutor/textbook')}
+      accessibilityRole="button"
+      accessibilityLabel={t('textbook.cardTitle')}>
+      {({ pressed }) => (
+        <LinearGradient
+          colors={Gradients.aiGlow}
+          start={{ x: 0, y: 0 }}
+          end={{ x: 1, y: 1 }}
+          style={[styles.textbook, { transform: [{ scale: pressed ? 0.98 : 1 }] }]}>
+          <View style={styles.textbookIcon}>
+            <Ionicons name="book" size={26} color={Colors.textOnAccent} />
+          </View>
+          <View style={{ flex: 1, gap: 6 }}>
+            <Text variant="heading">{t('textbook.cardTitle')}</Text>
+            <Text variant="small" color="rgba(255,255,255,0.88)">
+              {t('textbook.cardBody')}
+            </Text>
+            <View style={styles.textbookPills}>
+              <View style={styles.textbookPill}>
+                <Ionicons name="albums" size={13} color={Colors.textOnAccent} />
+                <Text variant="label" style={{ fontSize: 11 }}>
+                  {t('textbook.cardFlashcards')}
+                </Text>
+              </View>
+              <View style={styles.textbookPill}>
+                <Ionicons name="film" size={13} color={Colors.textOnAccent} />
+                <Text variant="label" style={{ fontSize: 11 }}>
+                  {t('textbook.cardVideo')}
+                </Text>
+              </View>
+            </View>
+          </View>
+          <Ionicons name="chevron-forward" size={20} color={Colors.textOnAccent} style={flip} />
+        </LinearGradient>
+      )}
+    </Pressable>
   );
 }
 
@@ -287,6 +338,31 @@ const styles = StyleSheet.create({
     borderColor: Colors.border,
   },
   recent: { flexDirection: 'row', alignItems: 'center', gap: Spacing.sm },
+  textbook: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.sm,
+    padding: Spacing.md,
+    borderRadius: Radius.lg,
+  },
+  textbookIcon: {
+    width: 48,
+    height: 48,
+    borderRadius: Radius.sm,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: 'rgba(255,255,255,0.18)',
+  },
+  textbookPills: { flexDirection: 'row', flexWrap: 'wrap', gap: 6, marginTop: 2 },
+  textbookPill: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 4,
+    paddingHorizontal: 8,
+    paddingVertical: 3,
+    borderRadius: Radius.pill,
+    backgroundColor: 'rgba(255,255,255,0.18)',
+  },
   board: {
     flexDirection: 'row',
     alignItems: 'center',

@@ -12,6 +12,8 @@ const ai = vi.hoisted(() => ({
   drawn: 0,
   // Real photos: off unless a test turns them on (then the first illustrated scene gets one).
   photos: false,
+  clips: 0,
+  clipFail: false,
 }));
 
 vi.mock('../src/services/real-photos.js', () => ({
@@ -50,6 +52,12 @@ vi.mock('../src/services/video-ai.js', async (importOriginal) => {
       ai.drawn++;
       return Buffer.from([0xff, 0xd8, 0xff, 0xd9]);
     }),
+    clipsOn: () => true,
+    makeClip: vi.fn(async () => {
+      ai.clips++;
+      if (ai.clipFail) throw new Error('Sora is busy');
+      return Buffer.from('fakemp4');
+    }),
     narrate: vi.fn(async (_u: string, text: string) => {
       ai.narrated.push(text);
       return { mp3: Buffer.from('ID3fake'), seconds: 5.2 };
@@ -63,6 +71,8 @@ const reset = () => {
   ai.narrated.length = 0;
   ai.drawn = 0;
   ai.photos = false;
+  ai.clips = 0;
+  ai.clipFail = false;
 };
 
 const SETTINGS: VideoSettings = { length: '1m', voiceId: 'ada', styleId: 'galaxy', captions: true, captionStyle: 'karaoke', language: 'en' };
@@ -318,5 +328,67 @@ describe('watching videos', () => {
     await as.post('/me/videos/v-l1/report', { reason: 'incorrect', details: 'The formula is wrong' }).expect(201);
     expect(await prisma.videoReport.findFirst({ where: { userId: sub } })).toMatchObject({ videoId: 'v-l1', reason: 'incorrect', status: 'open' });
     await as.post('/me/videos/v-l1/report', { reason: '' }).expect(400);
+  });
+});
+
+describe('textbook video summaries', () => {
+  const book = (id: string, userId: string) =>
+    prisma.textbook.create({
+      data: {
+        id,
+        userId,
+        title: 'Senior Biology',
+        fileName: 'senior-biology.pdf',
+        status: 'ready',
+        pageCount: 2,
+        pages: ['Osmosis is the movement of water across a membrane. '.repeat(6), 'Diffusion and osmosis compared. '.repeat(6)],
+        topics: [{ id: 't1', title: 'Osmosis', startPage: 1, endPage: 2 }],
+      },
+    });
+  const source = (textbookId: string) => ({ kind: 'textbook', textbookId, topic: 'Osmosis', label: 'Osmosis · Senior Biology' });
+
+  it('opens with a moving AI clip on a paid plan, made from the topic’s pages', async () => {
+    reset();
+    const { as, sub } = await signIn();
+    await prisma.user.update({ where: { id: sub }, data: { plan: 'PLUS' } });
+    await book('bookv001', sub);
+    await as.post('/videos/mine/tbclip01', { title: 'Osmosis', source: source('bookv001'), settings: SETTINGS }).expect(202);
+    const v = await settled(as, 'tbclip01');
+    expect(v.status).toBe('ready');
+    expect(ai.scripts[0].text).toContain('Osmosis is the movement of water');
+    expect(ai.clips).toBe(1);
+    expect(v.scenes[0].clip).toMatch(/^\/videos\/files\//);
+    expect(v.scenes.slice(1).some((s: Scene) => s.clip)).toBe(false);
+    const clip = await http().get(v.scenes[0].clip).expect(200);
+    expect(clip.headers['content-type']).toBe('video/mp4');
+  });
+
+  it('keeps the clip for paid plans even while everything else is free', async () => {
+    reset();
+    const { as, sub } = await signIn();
+    await book('bookv002', sub);
+    await as.post('/videos/mine/tbfree01', { title: 'Osmosis', source: source('bookv002'), settings: SETTINGS }).expect(202);
+    const v = await settled(as, 'tbfree01');
+    expect(v.status).toBe('ready');
+    expect(ai.clips).toBe(0);
+    expect(v.scenes.some((s: Scene) => s.clip)).toBe(false);
+  });
+
+  it('makes no clip for other videos, and a failed clip doesn’t fail the video', async () => {
+    reset();
+    const { as, sub } = await signIn();
+    await prisma.user.update({ where: { id: sub }, data: { plan: 'PRO' } });
+    await as.post('/videos/mine/topic901', { title: 'Leaves', source: { kind: 'topic', topic: 'Leaves' }, settings: SETTINGS }).expect(202);
+    expect((await settled(as, 'topic901')).status).toBe('ready');
+    expect(ai.clips).toBe(0);
+
+    ai.clipFail = true;
+    await book('bookv003', sub);
+    await as.post('/videos/mine/tbfail01', { title: 'Osmosis', source: source('bookv003'), settings: SETTINGS }).expect(202);
+    const v = await settled(as, 'tbfail01');
+    expect(v.status).toBe('ready');
+    expect(ai.clips).toBe(1);
+    expect(v.scenes[0].clip).toBeUndefined();
+    expect(v.scenes[0].image).toBeTruthy();
   });
 });

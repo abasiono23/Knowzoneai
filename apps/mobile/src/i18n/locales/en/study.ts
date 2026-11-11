@@ -39,6 +39,7 @@ const study = {
       topic: 'Topic',
       video: 'Video',
       image: 'Photo',
+      textbook: 'Textbook',
     },
     fromSource: {
       pdf: 'From PDF',
@@ -47,6 +48,7 @@ const study = {
       topic: 'From topic',
       video: 'From video',
       image: 'From photo',
+      textbook: 'From your textbook',
     },
     quizTypes: {
       mcq: 'Multiple choice',
@@ -119,6 +121,18 @@ const study = {
       noCredits: {
         title: 'You’re out of AI credits',
         body: 'Each study pack uses 1 AI credit. Invite a friend or upgrade to Plus to get more.',
+      },
+      scannedBook: {
+        title: 'This textbook is scanned pages',
+        body: 'The PDF has pictures of pages but no text we can read. Snap a few pages with the tutor instead, or find a PDF with real text.',
+      },
+      topicNotFound: {
+        title: 'We couldn’t find this topic in the book',
+        body: 'Try the topic’s name as the book writes it, pick one from the list, or make it from general knowledge instead.',
+      },
+      textbookMissing: {
+        title: 'We couldn’t find that textbook',
+        body: 'It may have been deleted. Upload it again to pick a topic.',
       },
     },
     timeoutTitle: 'We couldn’t finish your study pack',

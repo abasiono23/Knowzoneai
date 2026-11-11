@@ -27,6 +27,9 @@ const Env = z.object({
   YOUTUBE_API_KEY: z.string().optional(),
   // Narration for videos (voices and accents are set per narrator).
   OPENAI_MODEL_TTS: z.string().default('gpt-4o-mini-tts'),
+  // The moving clip that opens a textbook video summary on a paid plan (about $0.80 for 8 seconds).
+  // Set to "off" to stop making clips without a new release.
+  OPENAI_MODEL_VIDEO: z.string().default('sora-2'),
 
   // Payments (Flutterwave). Without a secret key the server runs, and checkout answers 503 "not configured".
   /** FLWSECK_TEST-… for testing, FLWSECK-… for real payments. */

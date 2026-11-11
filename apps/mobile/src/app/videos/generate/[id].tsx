@@ -46,6 +46,8 @@ export default function GenerateProgressScreen() {
 
   const done = v.status === 'ready';
   const pct = done ? 1 : (v.stage + 0.5) / GENERATION_STAGES.length;
+  // A textbook topic's video summary says so: the student asked for a summary, not "a video".
+  const book = v.source?.kind === 'textbook' ? v.source : null;
   const R = 70;
   const C = 2 * Math.PI * R;
 
@@ -79,10 +81,18 @@ export default function GenerateProgressScreen() {
         </View>
       </View>
       <Text variant="title" center>
-        {done ? t('generate.ready') : t('generate.making')}
+        {book
+          ? done
+            ? t('generate.summaryReady', { topic: book.topic })
+            : t('generate.summaryMaking', { topic: book.topic })
+          : done
+            ? t('generate.ready')
+            : t('generate.making')}
       </Text>
-      <Text color={Colors.textSecondary} center numberOfLines={2}>
-        {v.title} · {voiceName(v.settings.voiceId, t)} · {styleName(v.settings.styleId, t)}
+      <Text color={Colors.textSecondary} center numberOfLines={3}>
+        {book
+          ? t('generate.summaryBody', { book: book.label })
+          : `${v.title} · ${voiceName(v.settings.voiceId, t)} · ${styleName(v.settings.styleId, t)}`}
       </Text>
       <Card style={{ gap: Spacing.sm }}>
         {GENERATION_STAGES.map((stage, i) => {
@@ -130,7 +140,8 @@ function Failed({ v, onRetry, onDiscard }: { v: GeneratedVideo; onRetry: () => v
             title={t('generate.discard')}
             onPress={() => {
               onDiscard();
-              router.replace('/videos/create');
+              // A textbook summary goes back to the book, to pick the topic again or another one.
+              router.replace(v.source?.kind === 'textbook' ? `/tutor/textbook/${v.source.textbookId}` : '/videos/create');
             }}
           />
         </>

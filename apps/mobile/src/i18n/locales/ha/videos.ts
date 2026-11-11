@@ -10,6 +10,7 @@ const videos: Translation<typeof en> = {
     yourNotes: 'Bayananka',
     yourMaterial: 'Kayan karatunka',
     topic: 'Maudu’i: {{topic}}',
+    textbook: '{{title}} · {{topic}}',
     noNarration: 'Babu murya',
   },
   units: {
@@ -86,6 +87,15 @@ const videos: Translation<typeof en> = {
     materialMissing: {
       title: 'Ba mu iya yin wannan bidiyo ba',
       message: 'Ba mu sami wannan fakitin karatu ba. Wataƙila an share shi.',
+    },
+    textbookMissing: {
+      title: 'Ba mu iya yin wannan taƙaitaccen bidiyo ba',
+      message: 'Ba mu sami wannan littafin karatu ba. Wataƙila an share shi.',
+    },
+    topicNotFound: {
+      title: 'Ba mu sami wannan maudu’i a cikin littafin ba',
+      message: 'Da alama littafin bai tattauna shi ba, don haka babu abin da za a taƙaita.',
+      reason: 'Zaɓi maudu’i daga jerin littafin, ko yi bidiyon daga ilimin gama-gari a maimakon haka',
     },
     differentSource: 'Gwada wani tushe',
   },
@@ -371,6 +381,9 @@ const videos: Translation<typeof en> = {
     keepStudying: 'Ci gaba da karatu, za mu sanar da kai',
     ready: 'Bidiyonka ya shirya!',
     making: 'Ana yin bidiyonka…',
+    summaryMaking: 'Ana shirya taƙaitaccen bidiyonka na “{{topic}}”…',
+    summaryReady: 'Taƙaitaccen bidiyonka na “{{topic}}” ya shirya!',
+    summaryBody: 'Daga {{book}}. Muna karanta shafukan wannan maudu’i muna mayar da su gajeren bidiyo mai ba da labari da rubutun magana. Yawanci yakan ɗauki kusan minti ɗaya.',
     retry: 'Sake gwadawa',
     adjust: 'Gyara saituna',
     discard: 'Watsar ka sake farawa',

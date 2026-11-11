@@ -12,7 +12,20 @@ import { requestLanguage } from '../services/language.js';
 import { LANGUAGES, type LanguageId } from '../services/personalization.js';
 import { findPhoto, photoQueries } from '../services/real-photos.js';
 import { me, optionalAuth, requireAuth } from '../services/sessions.js';
-import { hasNarration, illustrate, LENGTHS, mapLimit, narrate, secondsFor, writeScript, type Scene, type VideoSettings } from '../services/video-ai.js';
+import { textbookTopic } from '../services/textbooks.js';
+import {
+  clipsOn,
+  hasNarration,
+  illustrate,
+  LENGTHS,
+  makeClip,
+  mapLimit,
+  narrate,
+  secondsFor,
+  writeScript,
+  type Scene,
+  type VideoSettings,
+} from '../services/video-ai.js';
 
 export const videosRouter = Router();
 
@@ -75,7 +88,7 @@ const likesFor = async (ids: string[]) =>
 
 // ─── Making a video ───────────────────────────────────────────────────────────
 
-type ErrorCode = 'render-timeout' | 'lesson-missing' | 'material-missing' | 'not-configured';
+type ErrorCode = 'render-timeout' | 'lesson-missing' | 'material-missing' | 'textbook-missing' | 'not-configured';
 
 async function fail(id: string, code: ErrorCode, retryable: boolean) {
   await prisma.$transaction(async (tx) => {
@@ -93,7 +106,7 @@ async function failIfStale(v: Video): Promise<Video> {
 }
 
 class SourceMissing extends Error {
-  constructor(public code: 'lesson-missing' | 'material-missing') {
+  constructor(public code: 'lesson-missing' | 'material-missing' | 'textbook-missing') {
     super(code);
   }
 }
@@ -102,12 +115,19 @@ type Source =
   | { kind: 'topic'; topic: string }
   | { kind: 'material'; materialId: string; label: string }
   | { kind: 'lesson'; lessonId: string; label: string }
-  | { kind: 'text'; text: string; label: string };
+  | { kind: 'text'; text: string; label: string }
+  | { kind: 'textbook'; textbookId: string; topic: string; label: string };
 
 /** What the script is written from. */
 async function sourceText(userId: string | null, source: Source, language: LanguageId) {
   if (source.kind === 'topic') return { topic: source.topic };
   if (source.kind === 'text') return { text: source.text };
+  if (source.kind === 'textbook') {
+    // Just the topic's pages of the learner's textbook; gone (or the topic isn't in it) fails for good.
+    const found = userId ? await textbookTopic(userId, source.textbookId, source.topic).catch(() => null) : null;
+    if (!found) throw new SourceMissing('textbook-missing');
+    return { text: found.text };
+  }
   if (source.kind === 'lesson') {
     const lesson = (await catalogFor(language)).lessons.find((l) => l.id === source.lessonId);
     if (!lesson) throw new SourceMissing('lesson-missing');
@@ -179,11 +199,34 @@ export async function drawScenes(videoId: string, userId: string, scenes: Scene[
   return withPhotos.map((s) => (pictures.has(s.id) ? { ...s, ...pictures.get(s.id) } : s));
 }
 
+/**
+ * Textbook video summaries open with a moving AI clip, but only on a paid plan: at about $0.80 each
+ * it stays paid even while "everything is free" is on before launch.
+ */
+async function wantsClip(userId: string, source: Source) {
+  if (source.kind !== 'textbook' || !clipsOn()) return false;
+  const user = await prisma.user.findUnique({ where: { id: userId }, select: { plan: true } });
+  return !!user && user.plan !== 'FREE';
+}
+
+/** Makes and stores the opening clip; null if it fails (the video still opens with its picture). */
+async function openingClip(videoId: string, userId: string, title: string, first: Scene | undefined, settings: VideoSettings) {
+  try {
+    const mp4 = await makeClip(userId, title, first?.illustration, settings.styleId);
+    const token = newToken();
+    await prisma.videoFile.create({ data: { videoId, token, kind: 'clip', mimeType: 'video/mp4', data: new Uint8Array(mp4) } });
+    return fileUrl(token);
+  } catch (e) {
+    console.warn('Opening clip failed', videoId, (e as Error).message);
+    return null;
+  }
+}
+
 /** Files no scene points to any more (after a regeneration or edit) are deleted. */
 async function dropUnusedFiles(videoId: string, scenes: Scene[]) {
   const used = new Set(
     scenes
-      .flatMap((s) => [s.audio, s.image])
+      .flatMap((s) => [s.audio, s.image, s.clip])
       .filter(Boolean)
       .map((u) => u!.split('/').pop()!),
   );
@@ -203,15 +246,20 @@ export async function processVideo(id: string, opts: { voiceOnly?: boolean } = {
   try {
     let scenes = v.scenes as Scene[];
     let meta: Partial<Pick<Video, 'subject' | 'level' | 'description'>> = {};
+    let clip: Promise<string | null> = Promise.resolve(null);
     if (!opts.voiceOnly || !scenes.length) {
       await stage(0);
       const script = await writeScript(userId, await sourceText(userId, v.source as Source, settings.language), settings);
       meta = { subject: script.subject, level: script.level, description: script.description };
+      // The moving opening clip takes a few minutes, so it's made while the pictures and voice are.
+      if (await wantsClip(userId, v.source as Source)) clip = openingClip(id, userId, v.title, script.scenes[0], settings);
       await stage(1);
       scenes = await drawScenes(id, userId, script.scenes, settings);
     }
     await stage(2);
     scenes = await recordScenes(id, userId, scenes, settings);
+    const clipUrl = await clip;
+    if (clipUrl && scenes[0]) scenes = [{ ...scenes[0], clip: clipUrl }, ...scenes.slice(1)];
     await stage(3);
     await stage(4);
 
@@ -280,6 +328,12 @@ const SourceSchema = z.discriminatedUnion('kind', [
   z.object({ kind: z.literal('material'), materialId: z.string().max(40), label: z.string().max(120) }),
   z.object({ kind: z.literal('lesson'), lessonId: z.string().max(40), label: z.string().max(120) }),
   z.object({ kind: z.literal('text'), text: z.string().trim().min(100).max(100_000), label: z.string().max(120) }),
+  z.object({
+    kind: z.literal('textbook'),
+    textbookId: z.string().max(40),
+    topic: z.string().trim().min(1).max(200),
+    label: z.string().max(120),
+  }),
 ]);
 const Create = z.object({ title: z.string().trim().min(1).max(120), source: SourceSchema, settings: Settings });
 
@@ -313,6 +367,8 @@ videosRouter.post('/videos/mine/:id', aiLimiter, async (req, res) => {
   const id = VideoId.parse(req.params.id);
   const input = Create.parse(req.body);
   if (await prisma.video.findUnique({ where: { id }, select: { id: true } })) throw new AppError(409, 'This video already exists', 'exists');
+  // A textbook topic that isn't there is answered now (404 with a code), before any credit is held.
+  if (input.source.kind === 'textbook') await textbookTopic(user.id, input.source.textbookId, input.source.topic);
   const credits = LENGTHS[input.settings.length].credits;
   await holdCredits(user.id, credits);
   const video = await prisma.video.create({

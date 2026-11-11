@@ -9,6 +9,7 @@ const videos: Translation<typeof en> = {
     yourNotes: 'Tes notes',
     yourMaterial: 'Ton support',
     topic: 'Thème : {{topic}}',
+    textbook: '{{title}} · {{topic}}',
     noNarration: 'Sans narration',
   },
   units: {
@@ -86,6 +87,15 @@ const videos: Translation<typeof en> = {
     materialMissing: {
       title: 'Impossible de créer cette vidéo',
       message: 'Impossible de trouver ce pack de révision. Il a peut-être été supprimé.',
+    },
+    textbookMissing: {
+      title: 'Impossible de créer ce résumé vidéo',
+      message: 'Impossible de trouver ce manuel. Il a peut-être été supprimé.',
+    },
+    topicNotFound: {
+      title: 'Nous n’avons pas trouvé ce thème dans le livre',
+      message: 'Le livre ne semble pas l’aborder, il n’y avait donc rien à résumer.',
+      reason: 'Choisis un thème dans la liste du livre, ou crée la vidéo à partir de connaissances générales',
     },
     differentSource: 'Essayer une autre source',
   },
@@ -388,6 +398,9 @@ const videos: Translation<typeof en> = {
     keepStudying: 'Continue à réviser, on te préviendra',
     ready: 'Ta vidéo est prête !',
     making: 'Création de ta vidéo…',
+    summaryMaking: 'Ton résumé vidéo de « {{topic}} » est en cours de création…',
+    summaryReady: 'Ton résumé vidéo de « {{topic}} » est prêt !',
+    summaryBody: 'À partir de {{book}}. Nous lisons les pages sur ce thème et les transformons en une courte vidéo commentée et sous-titrée. Compte environ une minute.',
     retry: 'Réessayer',
     adjust: 'Modifier les réglages',
     discard: 'Abandonner et recommencer',

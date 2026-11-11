@@ -33,7 +33,7 @@ export class StudyError extends Error {
 // ─── Reading the source (stage 0) ─────────────────────────────────────────────
 
 /** ~15k tokens of source keeps generation fast and affordable. */
-const MAX_SOURCE_CHARS = 60_000;
+export const MAX_SOURCE_CHARS = 60_000;
 const MIN_SOURCE_CHARS = 120;
 /** About two hours of captions. */
 const MAX_VIDEO_SECONDS = 2 * 60 * 60;

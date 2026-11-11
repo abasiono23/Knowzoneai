@@ -28,6 +28,7 @@ import { CoursesProvider, useCourses } from '@/lib/courses/store';
 import { LanguageProvider, useLanguage } from '@/i18n/provider';
 import { RewardsProvider } from '@/lib/rewards/store';
 import { SafetyProvider } from '@/lib/safety/store';
+import { TextbooksProvider } from '@/lib/textbooks/store';
 import { VideosProvider } from '@/lib/videos/store';
 import { WorldProvider } from '@/lib/world/store';
 
@@ -176,9 +177,11 @@ export default function RootLayout() {
                       <CatalogProvider>
                         {/* Inside the catalogue so built-in videos follow the language. */}
                         <VideosProvider>
-                          <ReminderSync />
-                          <StatusBar style="light" />
-                          <RootNavigator />
+                          <TextbooksProvider>
+                            <ReminderSync />
+                            <StatusBar style="light" />
+                            <RootNavigator />
+                          </TextbooksProvider>
                         </VideosProvider>
                       </CatalogProvider>
                     </LanguageProvider>

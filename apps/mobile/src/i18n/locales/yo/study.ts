@@ -36,6 +36,7 @@ const study: Translation<typeof en> = {
       topic: 'Àkòrí',
       video: 'Fídíò',
       image: 'Fọ́tò',
+      textbook: 'Ìwé ẹ̀kọ́',
     },
     fromSource: {
       pdf: 'Láti inú PDF',
@@ -44,6 +45,7 @@ const study: Translation<typeof en> = {
       topic: 'Láti inú àkòrí',
       video: 'Láti inú fídíò',
       image: 'Láti inú fọ́tò',
+      textbook: 'Láti inú ìwé ẹ̀kọ́ rẹ',
     },
     quizTypes: {
       mcq: 'Àṣàyàn púpọ̀',
@@ -115,6 +117,18 @@ const study: Translation<typeof en> = {
       noCredits: {
         title: 'Kírẹ́dìtì AI rẹ ti tán',
         body: 'Àpò ẹ̀kọ́ kọ̀ọ̀kan ń lo Kírẹ́dìtì AI 1. Pe ọ̀rẹ́ kan tàbí gòkè sí Plus láti rí sí i.',
+      },
+      scannedBook: {
+        title: 'Ìwé ẹ̀kọ́ yìí jẹ́ ojú-ìwé tí a ya fọ́tò',
+        body: 'PDF náà ní àwòrán ojú-ìwé ṣùgbọ́n kò ní ọ̀rọ̀ tí a lè kà. Ya fọ́tò ojú-ìwé díẹ̀ pẹ̀lú olùkọ́ dípò, tàbí wá PDF tó ní ọ̀rọ̀ gidi.',
+      },
+      topicNotFound: {
+        title: 'A kò rí àkòrí yìí nínú ìwé náà',
+        body: 'Gbìyànjú orúkọ àkòrí náà bí ìwé ṣe kọ ọ́, yan ọ̀kan nínú àtòjọ, tàbí ṣe é láti inú ìmọ̀ gbogbogbò dípò.',
+      },
+      textbookMissing: {
+        title: 'A kò rí ìwé ẹ̀kọ́ yẹn',
+        body: 'Ó ṣeé ṣe kí a ti pa á rẹ́. Tún gbé e sókè láti yan àkòrí kan.',
       },
     },
     timeoutTitle: 'A kò lè parí àpò ẹ̀kọ́ rẹ',

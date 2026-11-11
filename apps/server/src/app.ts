@@ -16,6 +16,7 @@ import { reelsRouter } from './routes/reels.js';
 import { skillsRouter } from './routes/skills.js';
 import { subjectVideosRouter } from './routes/subject-videos.js';
 import { summariesRouter } from './routes/summaries.js';
+import { textbooksRouter } from './routes/textbooks.js';
 import { waitlistRouter } from './routes/waitlist.js';
 import { watchRouter } from './routes/watch.js';
 import { booksRouter } from './routes/books.js';
@@ -102,6 +103,7 @@ export function createApp() {
   app.use(booksRouter);
   app.use(studyRoomsRouter);
   app.use(materialsRouter);
+  app.use(textbooksRouter);
 
   app.use((_req, res) => {
     res.status(404).json({ error: 'Not found' });

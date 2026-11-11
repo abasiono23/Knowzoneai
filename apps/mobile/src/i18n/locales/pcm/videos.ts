@@ -9,6 +9,7 @@ const videos: Translation<typeof en> = {
     yourNotes: 'Your notes',
     yourMaterial: 'Your material',
     topic: 'Topic: {{topic}}',
+    textbook: '{{title}} · {{topic}}',
     noNarration: 'No voice',
   },
   units: {
@@ -83,6 +84,15 @@ const videos: Translation<typeof en> = {
     materialMissing: {
       title: 'We no fit make this video',
       message: 'We no see that study pack. Maybe dem don delete am.',
+    },
+    textbookMissing: {
+      title: 'We no fit make this video summary',
+      message: 'We no see that textbook. Maybe dem don delete am.',
+    },
+    topicNotFound: {
+      title: 'We no see this topic inside the book',
+      message: 'E be like say the book no cover am, so nothing dey to summarise.',
+      reason: 'Pick topic from the book list, or make the video from general knowledge instead',
     },
     differentSource: 'Try another source',
   },
@@ -368,6 +378,9 @@ const videos: Translation<typeof en> = {
     keepStudying: 'Continue to study, we go let you know',
     ready: 'Your video don ready!',
     making: 'We dey make your video…',
+    summaryMaking: 'Your video summary of “{{topic}}” dey generate…',
+    summaryReady: 'Your video summary of “{{topic}}” don ready!',
+    summaryBody: 'From {{book}}. We dey read the pages about this topic turn am to short video wey get voice and captions. E dey normally take like one minute.',
     retry: 'Try again',
     adjust: 'Change settings',
     discard: 'Throw am away come start again',

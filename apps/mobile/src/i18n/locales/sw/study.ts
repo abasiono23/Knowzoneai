@@ -36,6 +36,7 @@ const study: Translation<typeof en> = {
       topic: 'Mada',
       video: 'Video',
       image: 'Picha',
+      textbook: 'Kitabu cha kiada',
     },
     fromSource: {
       pdf: 'Kutoka PDF',
@@ -44,6 +45,7 @@ const study: Translation<typeof en> = {
       topic: 'Kutoka mada',
       video: 'Kutoka video',
       image: 'Kutoka picha',
+      textbook: 'Kutoka kitabu chako cha kiada',
     },
     quizTypes: {
       mcq: 'Chaguo nyingi',
@@ -115,6 +117,18 @@ const study: Translation<typeof en> = {
       noCredits: {
         title: 'Krediti zako za AI zimeisha',
         body: 'Kila kifurushi cha kusoma kinatumia krediti 1 ya AI. Mwalike rafiki au panda hadi Plus upate zaidi.',
+      },
+      scannedBook: {
+        title: 'Kitabu hiki ni kurasa zilizoskaniwa',
+        body: 'PDF ina picha za kurasa lakini haina maandishi tunayoweza kusoma. Piga picha za kurasa chache na mwalimu badala yake, au tafuta PDF yenye maandishi halisi.',
+      },
+      topicNotFound: {
+        title: 'Hatukupata mada hii kwenye kitabu',
+        body: 'Jaribu jina la mada kama kitabu kinavyoliandika, chagua moja kutoka orodha, au itengeneze kutoka kwa maarifa ya jumla badala yake.',
+      },
+      textbookMissing: {
+        title: 'Hatukupata kitabu hicho cha kiada',
+        body: 'Huenda kilifutwa. Kipakie tena ili uchague mada.',
       },
     },
     timeoutTitle: 'Imeshindikana kukamilisha kifurushi chako cha kusoma',

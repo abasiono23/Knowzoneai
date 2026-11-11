@@ -93,6 +93,7 @@ model User {
 
   sessions          Session[]
   materials         Material[]
+  textbooks         Textbook[]
   quizAttempts      QuizAttempt[]
   usageEvents       UsageEvent[]
   coinTransactions  CoinTransaction[]
@@ -456,7 +457,7 @@ model TutorDeck {
 
 // ─── Study packs (screens 62–87) ──────────────────────────────────────────────
 
-/// A study pack made with AI from a PDF, document, photo, pasted text, topic or video.
+/// A study pack made with AI from a PDF, document, photo, pasted text, topic, video or textbook topic (stored as text).
 model Material {
   /// Made by the app (so it can show upload progress before the server replies), unique per account.
   id          String         @id
@@ -519,6 +520,33 @@ model MaterialFile {
   @@index([materialId])
 }
 
+/**
+ * A whole textbook the learner uploaded as a PDF. Only the text of each page is kept (not the
+ * file); the AI lists its topics with page ranges, and study packs and videos are made from one
+ * topic's pages.
+ */
+model Textbook {
+  /// Made by the app, unique per account (same rules as Material ids).
+  id        String   @id
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  title     String
+  fileName  String
+  pageCount Int      @default(0)
+  /// Text of each PDF page; index 0 is page 1.
+  pages     String[] @default([])
+  /// Topic[]: { id, title, chapter?, startPage, endPage } in book order (PDF pages, 1-based).
+  topics    Json     @default("[]")
+  /// reading | ready | failed
+  status    String   @default("reading")
+  /// { code, retryable } when failed; the app shows text for the code.
+  error     Json?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([userId, createdAt])
+}
+
 model QuizAttempt {
   id           String   @id @default(cuid())
   userId       String
@@ -562,7 +590,7 @@ model Video {
   description String      @default("")
   /// { length, voiceId, styleId, captions, captionStyle, language }
   settings    Json
-  /// What it was made from: { kind: 'topic' | 'material' | 'lesson' | 'text', ... }
+  /// What it was made from: { kind: 'topic' | 'material' | 'lesson' | 'text' | 'textbook', ... }
   source      Json?
   /// The scenes the app plays (Scene[]), with audio and image links.
   scenes      Json        @default("[]")
@@ -591,7 +619,7 @@ model VideoFile {
   token     String   @unique
   videoId   String
   video     Video    @relation(fields: [videoId], references: [id], onDelete: Cascade)
-  /// audio | image
+  /// audio | image | clip (the moving opening clip, MP4)
   kind      String
   mimeType  String
   data      Bytes

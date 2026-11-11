@@ -36,6 +36,7 @@ const study: Translation<typeof en> = {
       topic: 'Tema',
       video: 'Vídeo',
       image: 'Foto',
+      textbook: 'Manual',
     },
     fromSource: {
       pdf: 'De um PDF',
@@ -44,6 +45,7 @@ const study: Translation<typeof en> = {
       topic: 'De um tema',
       video: 'De um vídeo',
       image: 'De uma foto',
+      textbook: 'Do teu manual',
     },
     quizTypes: {
       mcq: 'Escolha múltipla',
@@ -115,6 +117,18 @@ const study: Translation<typeof en> = {
       noCredits: {
         title: 'Ficaste sem créditos de IA',
         body: 'Cada pacote de estudo usa 1 crédito de IA. Convida um amigo ou passa para o Plus para obteres mais.',
+      },
+      scannedBook: {
+        title: 'Este manual são páginas digitalizadas',
+        body: 'O PDF tem imagens das páginas mas nenhum texto que consigamos ler. Fotografa algumas páginas com o tutor em vez disso, ou procura um PDF com texto real.',
+      },
+      topicNotFound: {
+        title: 'Não encontrámos este tema no livro',
+        body: 'Tenta o nome do tema tal como o livro o escreve, escolhe um da lista, ou cria-o a partir de conhecimento geral.',
+      },
+      textbookMissing: {
+        title: 'Não encontrámos esse manual',
+        body: 'Pode ter sido eliminado. Carrega-o de novo para escolher um tema.',
       },
     },
     timeoutTitle: 'Não conseguimos terminar o teu pacote de estudo',

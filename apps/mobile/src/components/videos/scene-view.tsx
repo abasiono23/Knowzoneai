@@ -1,4 +1,5 @@
 import { Image } from 'expo-image';
+import { useVideoPlayer, VideoView } from 'expo-video';
 import { LinearGradient } from '@/components/ui/gradient';
 import { useTranslation } from 'react-i18next';
 import { Pressable, StyleSheet, View } from 'react-native';
@@ -80,6 +81,20 @@ function Texture({ s }: { s: VisualStyle }) {
   );
 }
 
+/** The opening scene's moving AI clip: muted and looping, under the narration. */
+function SceneClip({ uri, size }: { uri: string; size: number }) {
+  const player = useVideoPlayer(uri, (p) => {
+    p.muted = true;
+    p.loop = true;
+    p.play();
+  });
+  return (
+    <View style={{ width: 300 * size, height: 169 * size, borderRadius: Radius.lg * size, overflow: 'hidden' }}>
+      <VideoView player={player} style={StyleSheet.absoluteFill} contentFit="cover" nativeControls={false} />
+    </View>
+  );
+}
+
 type Props = {
   scene: Scene;
   style: VisualStyle;
@@ -110,7 +125,12 @@ export function SceneView({ scene, style: s, answer, onAnswer, compact, scale, i
           },
         ]}
         key={scene.id}>
-        {scene.image ? (
+        {scene.clip && !compact && scale === undefined ? (
+          // Thumbnails and small previews keep the still picture; the full player shows the clip.
+          <Animated.View entering={FadeIn.duration(400)}>
+            <SceneClip uri={scene.clip} size={size} />
+          </Animated.View>
+        ) : scene.image ? (
           // The scene's picture: an AI illustration or a real photo (no text, so it suits every language).
           <Animated.View entering={ZoomIn.duration(400)} style={{ alignItems: 'center', gap: 4 }}>
             <Image

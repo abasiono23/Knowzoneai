@@ -9,6 +9,7 @@ const videos: Translation<typeof en> = {
     yourNotes: 'Ndetu gị',
     yourMaterial: 'Ihe ọmụmụ gị',
     topic: 'Isiokwu: {{topic}}',
+    textbook: '{{title}} · {{topic}}',
     noNarration: 'Enweghị olu nkọwa',
   },
   units: {
@@ -83,6 +84,15 @@ const videos: Translation<typeof en> = {
     materialMissing: {
       title: 'Anyị enweghị ike ime vidiyo a',
       message: 'Anyị achọtaghị ngwugwu ọmụmụ ahụ. Enwere ike ihichapụ ya.',
+    },
+    textbookMissing: {
+      title: 'Anyị enweghị ike ime nchịkọta vidiyo a',
+      message: 'Anyị achọtaghị akwụkwọ ọgụgụ ahụ. Enwere ike ihichapụ ya.',
+    },
+    topicNotFound: {
+      title: 'Anyị achọtaghị isiokwu a n’akwụkwọ ahụ',
+      message: 'O yiri ka akwụkwọ ahụ ekwughị banyere ya, ya mere ọ dịghị ihe a ga-achịkọta.',
+      reason: 'Họrọ isiokwu site na ndepụta akwụkwọ ahụ, ma ọ bụ mee vidiyo ahụ site n’ihe ọmụma izugbe kama',
     },
     differentSource: 'Nwaa ebe ọzọ',
   },
@@ -374,6 +384,9 @@ const videos: Translation<typeof en> = {
     keepStudying: 'Gaa n’ihu na-amụ ihe, anyị ga-agwa gị',
     ready: 'Vidiyo gị adịla njikere!',
     making: 'Na-eme vidiyo gị…',
+    summaryMaking: 'Nchịkọta vidiyo gị maka “{{topic}}” na-emepụta…',
+    summaryReady: 'Nchịkọta vidiyo gị maka “{{topic}}” adịla njikere!',
+    summaryBody: 'Site na {{book}}. Anyị na-agụ peeji ndị gbasara isiokwu a ma na-eme ka ha bụrụ vidiyo dị mkpirikpi a na-akọwa, nwere okwu ederede. Ọ na-ewekarị ihe dị ka otu nkeji.',
     retry: 'Nwaa ọzọ',
     adjust: 'Gbanwee ntọala',
     discard: 'Tụfuo ya ma malite ọzọ',

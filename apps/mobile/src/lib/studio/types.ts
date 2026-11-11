@@ -1,6 +1,7 @@
 import type { Block } from '../tutor/types';
 
-export type SourceType = 'pdf' | 'doc' | 'text' | 'topic' | 'video' | 'image';
+/** `textbook`: one topic of an uploaded textbook (lib/textbooks), made into a flashcard-centred pack. */
+export type SourceType = 'pdf' | 'doc' | 'text' | 'topic' | 'video' | 'image' | 'textbook';
 export type Depth = 'Quick' | 'Standard' | 'Deep';
 export type Difficulty = 'Beginner' | 'Intermediate' | 'Advanced';
 export type Output = 'summary' | 'notes' | 'concepts' | 'points' | 'flashcards' | 'quiz' | 'mindmap';
@@ -67,7 +68,16 @@ export type Material = {
   subject: string;
   folder: string;
   tags: string[];
-  source: { type: SourceType; label: string; text?: string; url?: string; fileName?: string; size?: number };
+  source: {
+    type: SourceType;
+    label: string;
+    text?: string;
+    url?: string;
+    fileName?: string;
+    size?: number;
+    /** The uploaded book a `textbook` pack was made from. */
+    textbookId?: string;
+  };
   options: GenerateOptions;
   status: 'uploading' | 'processing' | 'ready' | 'failed';
   /** 0–1 for uploads; stage index while processing. */
@@ -106,3 +116,10 @@ export const DEFAULT_OPTIONS: GenerateOptions = {
 };
 
 export const MAX_UPLOAD_BYTES = 20 * 1024 * 1024;
+
+/** A textbook topic's pack is centred on flashcards; the summary and key terms give the hub its header. */
+export const TEXTBOOK_OPTIONS: GenerateOptions = {
+  depth: 'Standard',
+  difficulty: 'Intermediate',
+  outputs: ['flashcards', 'summary', 'concepts', 'quiz'],
+};

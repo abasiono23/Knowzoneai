@@ -20,7 +20,8 @@ import { STAGES } from '@/lib/studio/types';
 /** Screens 68 (upload progress), 69 (processing status) and 70 (failed / retry) for one material. */
 export default function StatusScreen() {
   const { t } = useTranslation('study');
-  const { id } = useLocalSearchParams<{ id: string }>();
+  // `next=flashcards`: a textbook topic made for its cards opens on them rather than the hub.
+  const { id, next } = useLocalSearchParams<{ id: string; next?: string }>();
   const { material: m, ready } = useMaterial(id);
   const { retry, cancel } = useMaterials();
 
@@ -28,10 +29,13 @@ export default function StatusScreen() {
   useEffect(() => {
     if (m?.status === 'ready') {
       Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success).catch(() => {});
-      const timer = setTimeout(() => router.replace(`/study/${m.id}`), 700);
+      const timer = setTimeout(
+        () => router.replace(next === 'flashcards' ? `/study/${m.id}/flashcards` : `/study/${m.id}`),
+        700,
+      );
       return () => clearTimeout(timer);
     }
-  }, [m?.status, m?.id]);
+  }, [m?.status, m?.id, next]);
 
   if (!ready) return null;
   if (!m) {

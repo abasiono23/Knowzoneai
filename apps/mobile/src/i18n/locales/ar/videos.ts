@@ -9,6 +9,7 @@ const videos: Translation<typeof en> = {
     yourNotes: 'ملاحظاتك',
     yourMaterial: 'موادك',
     topic: 'الموضوع: {{topic}}',
+    textbook: '{{title}} · {{topic}}',
     noNarration: 'دون تعليق صوتي',
   },
   units: {
@@ -91,6 +92,15 @@ const videos: Translation<typeof en> = {
     materialMissing: {
       title: 'تعذّر إنشاء هذا الفيديو',
       message: 'لم نجد تلك الحزمة الدراسية. ربما حُذفت.',
+    },
+    textbookMissing: {
+      title: 'تعذّر إنشاء ملخص الفيديو هذا',
+      message: 'لم نجد ذلك الكتاب. ربما حُذف.',
+    },
+    topicNotFound: {
+      title: 'لم نجد هذا الموضوع في الكتاب',
+      message: 'يبدو أن الكتاب لا يتناوله، فلم يكن هناك ما نلخّصه.',
+      reason: 'اختر موضوعًا من قائمة الكتاب، أو أنشئ الفيديو من المعرفة العامة بدلًا من ذلك',
     },
     differentSource: 'جرّب مصدرًا آخر',
   },
@@ -416,6 +426,9 @@ const videos: Translation<typeof en> = {
     keepStudying: 'تابع الدراسة، وسنُعلمك',
     ready: 'فيديوك جاهز!',
     making: 'نصنع فيديوك…',
+    summaryMaking: 'جارٍ إنشاء ملخص الفيديو لموضوع «{{topic}}»…',
+    summaryReady: 'ملخص الفيديو لموضوع «{{topic}}» جاهز!',
+    summaryBody: 'من {{book}}. نقرأ صفحات هذا الموضوع ونحوّلها إلى فيديو قصير بتعليق صوتي وترجمة نصية. يستغرق ذلك عادةً نحو دقيقة.',
     retry: 'حاول مرة أخرى',
     adjust: 'عدّل الإعدادات',
     discard: 'تجاهل وابدأ من جديد',

@@ -9,6 +9,7 @@ const videos: Translation<typeof en> = {
     yourNotes: 'Tus apuntes',
     yourMaterial: 'Tu material',
     topic: 'Tema: {{topic}}',
+    textbook: '{{title}} · {{topic}}',
     noNarration: 'Sin narración',
   },
   units: {
@@ -85,6 +86,15 @@ const videos: Translation<typeof en> = {
     materialMissing: {
       title: 'No pudimos crear este video',
       message: 'No encontramos ese paquete de estudio. Puede que se haya eliminado.',
+    },
+    textbookMissing: {
+      title: 'No pudimos crear este resumen en video',
+      message: 'No encontramos ese libro de texto. Puede que se haya eliminado.',
+    },
+    topicNotFound: {
+      title: 'No encontramos este tema en el libro',
+      message: 'Parece que el libro no lo trata, así que no había nada que resumir.',
+      reason: 'Elige un tema de la lista del libro o crea el video a partir de conocimiento general',
     },
     differentSource: 'Prueba con otra fuente',
   },
@@ -384,6 +394,9 @@ const videos: Translation<typeof en> = {
     keepStudying: 'Sigue estudiando, te avisaremos',
     ready: '¡Tu video está listo!',
     making: 'Creando tu video…',
+    summaryMaking: 'Tu resumen en video de “{{topic}}” se está generando…',
+    summaryReady: '¡Tu resumen en video de “{{topic}}” está listo!',
+    summaryBody: 'De {{book}}. Estamos leyendo las páginas sobre este tema y convirtiéndolas en un video corto narrado y con subtítulos. Suele tardar alrededor de un minuto.',
     retry: 'Intentar de nuevo',
     adjust: 'Ajustar opciones',
     discard: 'Descartar y empezar de nuevo',

@@ -36,6 +36,7 @@ const study: Translation<typeof en> = {
       topic: 'Tema',
       video: 'Video',
       image: 'Foto',
+      textbook: 'Libro de texto',
     },
     fromSource: {
       pdf: 'Desde un PDF',
@@ -44,6 +45,7 @@ const study: Translation<typeof en> = {
       topic: 'Desde un tema',
       video: 'Desde un video',
       image: 'Desde una foto',
+      textbook: 'Desde tu libro de texto',
     },
     quizTypes: {
       mcq: 'Opción múltiple',
@@ -115,6 +117,18 @@ const study: Translation<typeof en> = {
       noCredits: {
         title: 'Te quedaste sin créditos de IA',
         body: 'Cada paquete de estudio usa 1 crédito de IA. Invita a un amigo o pásate a Plus para conseguir más.',
+      },
+      scannedBook: {
+        title: 'Este libro son páginas escaneadas',
+        body: 'El PDF tiene imágenes de las páginas pero ningún texto que podamos leer. Fotografía algunas páginas con el tutor en su lugar, o busca un PDF con texto real.',
+      },
+      topicNotFound: {
+        title: 'No encontramos este tema en el libro',
+        body: 'Prueba el nombre del tema tal como lo escribe el libro, elige uno de la lista, o créalo a partir de conocimiento general.',
+      },
+      textbookMissing: {
+        title: 'No encontramos ese libro',
+        body: 'Puede que se haya eliminado. Súbelo de nuevo para elegir un tema.',
       },
     },
     timeoutTitle: 'No pudimos terminar tu paquete de estudio',

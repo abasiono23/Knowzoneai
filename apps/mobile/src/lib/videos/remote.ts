@@ -7,7 +7,7 @@ import type { GeneratedVideo, Scene, Video, VideoSettings, VideoSource } from '.
 const full = (path?: string) => (path?.startsWith('/') ? `${API_URL}${path}` : path);
 const withFiles = <T extends Video>(v: T): T => ({
   ...v,
-  scenes: v.scenes.map((s) => ({ ...s, audio: full(s.audio), image: full(s.image) })),
+  scenes: v.scenes.map((s) => ({ ...s, audio: full(s.audio), image: full(s.image), clip: full(s.clip) })),
 });
 
 /** Knowzone Originals in the app's language (ids are v-<lessonId>). */

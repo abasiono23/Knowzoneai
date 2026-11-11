@@ -23,6 +23,7 @@ import {
   type Source,
   type StudyContent,
 } from '../services/study-ai.js';
+import { textbookTopic } from '../services/textbooks.js';
 import { shortName, toPublicUser } from '../services/users.js';
 
 export const materialsRouter = Router();
@@ -225,11 +226,13 @@ const jsonField = <T extends z.ZodType>(schema: T) =>
 
 const OUTPUTS = ['summary', 'notes', 'concepts', 'points', 'flashcards', 'quiz', 'mindmap'] as const;
 const Create = z.object({
-  type: z.enum(['pdf', 'doc', 'text', 'topic', 'video', 'image']),
+  type: z.enum(['pdf', 'doc', 'text', 'topic', 'video', 'image', 'textbook']),
   title: z.string().trim().max(120).optional(),
   text: z.string().max(200_000).optional(),
   topic: z.string().trim().max(200).optional(),
   url: z.string().trim().max(500).optional(),
+  /** With type 'textbook': the book, and `topic` names the chapter (listed, or typed). */
+  textbookId: z.string().max(40).optional(),
   options: jsonField(
     z
       .object({
@@ -245,8 +248,8 @@ const Create = z.object({
 });
 
 /**
- * Starts a study pack. JSON for text, topics and video links; multipart with `file` for PDFs,
- * Word documents and photos. Answers 202 at once; poll GET /materials/:id for progress.
+ * Starts a study pack. JSON for text, topics, video links and textbook topics; multipart with
+ * `file` for PDFs, Word documents and photos. Answers 202 at once; poll GET /materials/:id for progress.
  */
 materialsRouter.post('/materials/:id', aiLimiter, upload.single('file'), async (req, res) => {
   const user = me(req);
@@ -273,6 +276,13 @@ materialsRouter.post('/materials/:id', aiLimiter, upload.single('file'), async (
   if (input.type === 'topic' && !input.topic) throw new AppError(400, 'Enter a topic', 'invalid');
   if (input.type === 'video' && !youtubeId(input.url ?? ''))
     throw new AppError(400, 'Paste a YouTube link', 'not-youtube');
+  // A textbook topic becomes a text pack made from just that topic's pages.
+  let fromBook: Awaited<ReturnType<typeof textbookTopic>> | undefined;
+  if (input.type === 'textbook') {
+    if (!input.textbookId || !input.topic) throw new AppError(400, 'Choose a textbook and a topic', 'invalid');
+    fromBook = await textbookTopic(user.id, input.textbookId, input.topic);
+    if (fromBook.text.length < 120) throw new AppError(400, 'There isn’t enough text on those pages', 'not-enough-text');
+  }
 
   await holdCredit(user.id);
   const label =
@@ -280,20 +290,22 @@ materialsRouter.post('/materials/:id', aiLimiter, upload.single('file'), async (
       ? input.topic!
       : input.type === 'video'
         ? input.url!
-        : isFile
-          ? file!.originalname.slice(0, 120)
-          : 'Pasted text';
+        : fromBook
+          ? `${fromBook.topic.title} · ${fromBook.book.title}`.slice(0, 200)
+          : isFile
+            ? file!.originalname.slice(0, 120)
+            : 'Pasted text';
   const created = await prisma.material.create({
     data: {
       id,
       userId: user.id,
-      title: input.title || (input.type === 'topic' ? input.topic! : label),
-      sourceType: input.type,
+      title: input.title || (input.type === 'topic' ? input.topic! : fromBook ? fromBook.topic.title : label),
+      sourceType: fromBook ? 'text' : input.type,
       sourceLabel: label,
       sourceUrl: input.type === 'video' ? input.url : null,
       fileName: isFile ? file!.originalname.slice(0, 120) : null,
       fileSize: isFile ? file!.size : null,
-      sourceText: input.type === 'text' ? input.text!.slice(0, 200_000) : '',
+      sourceText: input.type === 'text' ? input.text!.slice(0, 200_000) : fromBook ? fromBook.text : '',
       options: { ...input.options, titleSet: !!input.title },
       creditHeld: true,
       ...(isFile && {

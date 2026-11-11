@@ -9,6 +9,7 @@ const videos: Translation<typeof en> = {
     yourNotes: 'Madokezo yako',
     yourMaterial: 'Maudhui yako',
     topic: 'Mada: {{topic}}',
+    textbook: '{{title}} · {{topic}}',
     noNarration: 'Bila sauti ya msimulizi',
   },
   units: {
@@ -83,6 +84,15 @@ const videos: Translation<typeof en> = {
     materialMissing: {
       title: 'Imeshindikana kutengeneza video hii',
       message: 'Hatukupata kifurushi hicho cha kusoma. Huenda kimefutwa.',
+    },
+    textbookMissing: {
+      title: 'Imeshindikana kutengeneza muhtasari huu wa video',
+      message: 'Hatukupata kitabu hicho cha kiada. Huenda kilifutwa.',
+    },
+    topicNotFound: {
+      title: 'Hatukupata mada hii kwenye kitabu',
+      message: 'Inaonekana kitabu hakiizungumzii, kwa hivyo hakukuwa na cha kufupisha.',
+      reason: 'Chagua mada kutoka orodha ya kitabu, au tengeneza video kutoka kwa maarifa ya jumla badala yake',
     },
     differentSource: 'Jaribu chanzo kingine',
   },
@@ -368,6 +378,9 @@ const videos: Translation<typeof en> = {
     keepStudying: 'Endelea kusoma, tutakujulisha',
     ready: 'Video yako iko tayari!',
     making: 'Tunatengeneza video yako…',
+    summaryMaking: 'Muhtasari wako wa video wa “{{topic}}” unatengenezwa…',
+    summaryReady: 'Muhtasari wako wa video wa “{{topic}}” uko tayari!',
+    summaryBody: 'Kutoka {{book}}. Tunasoma kurasa za mada hii na kuzigeuza kuwa video fupi yenye masimulizi na manukuu. Kwa kawaida huchukua takriban dakika moja.',
     retry: 'Jaribu tena',
     adjust: 'Rekebisha mipangilio',
     discard: 'Itupe na uanze upya',

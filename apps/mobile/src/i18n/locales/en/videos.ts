@@ -8,6 +8,7 @@ const videos = {
     yourNotes: 'Your notes',
     yourMaterial: 'Your material',
     topic: 'Topic: {{topic}}',
+    textbook: '{{title}} · {{topic}}',
     noNarration: 'No narration',
   },
   units: {
@@ -84,6 +85,15 @@ const videos = {
     materialMissing: {
       title: 'We couldn’t make this video',
       message: 'We couldn’t find that study pack. It may have been deleted.',
+    },
+    textbookMissing: {
+      title: 'We couldn’t make this video summary',
+      message: 'We couldn’t find that textbook. It may have been deleted.',
+    },
+    topicNotFound: {
+      title: 'We couldn’t find this topic in the book',
+      message: 'The book doesn’t seem to cover it, so there was nothing to summarise.',
+      reason: 'Pick a topic from the book’s list, or make the video from general knowledge instead',
     },
     differentSource: 'Try a different source',
   },
@@ -367,6 +377,10 @@ const videos = {
     keepStudying: 'Keep studying, we’ll notify you',
     ready: 'Your video is ready!',
     making: 'Making your video…',
+    /** A textbook topic's video summary (tutor → textbook). */
+    summaryMaking: 'Your video summary of “{{topic}}” is generating…',
+    summaryReady: 'Your video summary of “{{topic}}” is ready!',
+    summaryBody: 'From {{book}}. We’re reading the pages on this topic and turning them into a short narrated video with captions. Usually about a minute.',
     retry: 'Try again',
     adjust: 'Adjust settings',
     discard: 'Discard and start over',

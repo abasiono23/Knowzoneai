@@ -37,6 +37,7 @@ const study: Translation<typeof en> = {
       topic: 'Maudu’i',
       video: 'Bidiyo',
       image: 'Hoto',
+      textbook: 'Littafin karatu',
     },
     fromSource: {
       pdf: 'Daga PDF',
@@ -45,6 +46,7 @@ const study: Translation<typeof en> = {
       topic: 'Daga maudu’i',
       video: 'Daga bidiyo',
       image: 'Daga hoto',
+      textbook: 'Daga littafin karatunka',
     },
     quizTypes: {
       mcq: 'Zaɓi daga amsoshi',
@@ -117,6 +119,18 @@ const study: Translation<typeof en> = {
       noCredits: {
         title: 'Kiredit ɗinka na AI ya ƙare',
         body: 'Kowane fakitin karatu yana amfani da kiredit na AI 1. Gayyaci aboki ko haɓaka zuwa Plus don samun ƙari.',
+      },
+      scannedBook: {
+        title: 'Wannan littafi hotunan shafuka ne',
+        body: 'PDF ɗin yana da hotunan shafuka amma babu rubutun da za mu iya karantawa. Ɗauki hoton ’yan shafuka tare da malamin a maimakon haka, ko nemo PDF mai rubutu na gaske.',
+      },
+      topicNotFound: {
+        title: 'Ba mu sami wannan maudu’i a cikin littafin ba',
+        body: 'Gwada sunan maudu’in kamar yadda littafin ya rubuta shi, zaɓi ɗaya daga jerin, ko yi shi daga ilimin gama-gari a maimakon haka.',
+      },
+      textbookMissing: {
+        title: 'Ba mu sami wannan littafin karatu ba',
+        body: 'Wataƙila an share shi. Sake ɗora shi don zaɓar maudu’i.',
       },
     },
     timeoutTitle: 'Ba mu iya kammala fakitin karatunka ba',

@@ -18,6 +18,7 @@ export const SOURCE_META: Record<SourceType, { icon: keyof typeof Ionicons.glyph
   topic: { icon: 'bulb', color: '#FFC857' },
   video: { icon: 'logo-youtube', color: '#FF5A7A' },
   image: { icon: 'image', color: '#2DD4BF' },
+  textbook: { icon: 'book', color: '#7C5CFF' },
 };
 
 export function openMaterial(m: Material) {

@@ -42,6 +42,8 @@ export type Scene = {
   /** Narration and illustration links (filled in after recording and drawing). */
   audio?: string;
   image?: string;
+  /** A short moving AI clip (MP4) shown instead of the picture, muted and looping, under the narration. */
+  clip?: string;
   /** What the illustration shows (English, kept so translations can reuse the drawing). */
   illustration?: string;
   /** When the picture is a real photo (Wikimedia Commons): who took it and its licence, shown with it. */
@@ -235,6 +237,46 @@ export async function illustrate(userId: string, description: string, styleId: s
   const b64 = result.data?.[0]?.b64_json;
   if (!b64) throw new Error('The AI returned no image');
   return Buffer.from(b64, 'base64');
+}
+
+// ─── Opening clip ─────────────────────────────────────────────────────────────
+
+export const CLIP_SECONDS = 8;
+const CLIP_WAIT_MS = 10 * 60 * 1000;
+const CLIP_POLL_MS = 10_000;
+export const clipsOn = () => !!config.OPENAI_API_KEY && config.OPENAI_MODEL_VIDEO !== 'off';
+
+/**
+ * An 8-second moving clip of the topic (Sora), as an MP4. It's the costly part of a video (about
+ * $0.80), so it's only made for textbook summaries on a paid plan. Waits for OpenAI to finish it.
+ */
+export async function makeClip(userId: string, topic: string, picture: string | undefined, styleId: string) {
+  const model = config.OPENAI_MODEL_VIDEO;
+  const client = openaiClient();
+  let job = await client.videos.create({
+    model,
+    prompt: [
+      `A short, calm educational opening shot for a student video about "${topic.slice(0, 200)}".`,
+      picture ? `Show: ${picture.slice(0, 500)}.` : 'Show the topic itself clearly, as a teacher would picture it.',
+      `Look: ${STYLE_LOOK[styleId] ?? STYLE_LOOK.galaxy}. Smooth, slow camera movement; accurate science; one clear subject.`,
+      'No people speaking, no text, letters, numbers, labels, logos or watermarks anywhere.',
+    ].join('\n'),
+    seconds: String(CLIP_SECONDS) as '8',
+    size: '1280x720',
+  });
+  const until = Date.now() + CLIP_WAIT_MS;
+  while (job.status === 'queued' || job.status === 'in_progress') {
+    if (Date.now() > until) throw new Error('The clip took too long');
+    await new Promise((r) => setTimeout(r, CLIP_POLL_MS));
+    job = await client.videos.retrieve(job.id);
+  }
+  if (job.status !== 'completed') throw new Error(`The clip failed: ${job.error?.message ?? job.status}`);
+  const res = await client.videos.downloadContent(job.id);
+  const mp4 = Buffer.from(await res.arrayBuffer());
+  await logUsage(userId, 'video_clip', model);
+  // OpenAI keeps a copy only for a while; ours is in the database, so theirs can go now.
+  await client.videos.delete(job.id).catch(() => {});
+  return mp4;
 }
 
 // ─── Narration ────────────────────────────────────────────────────────────────

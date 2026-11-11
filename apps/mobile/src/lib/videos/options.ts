@@ -204,6 +204,7 @@ export function sourceLabel(src: VideoSource | undefined, t: VideosT) {
   if (!src) return '—';
   if (src.kind === 'topic') return t('labels.topic', { topic: src.topic });
   if (src.kind === 'text') return t('labels.yourNotes');
+  if (src.kind === 'textbook') return t('labels.textbook', { title: src.label, topic: src.topic });
   return src.label;
 }
 
@@ -227,6 +228,18 @@ export function generationError(error: NonNullable<GeneratedVideo['error']>, t: 
         title: t('errors.materialMissing.title'),
         message: t('errors.materialMissing.message'),
         reasons: [t('errors.differentSource')],
+      };
+    case 'textbook-missing':
+      return {
+        title: t('errors.textbookMissing.title'),
+        message: t('errors.textbookMissing.message'),
+        reasons: [t('errors.differentSource')],
+      };
+    case 'topic-not-found':
+      return {
+        title: t('errors.topicNotFound.title'),
+        message: t('errors.topicNotFound.message'),
+        reasons: [t('errors.topicNotFound.reason')],
       };
     case 'not-configured':
     case 'no-credits':

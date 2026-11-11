@@ -45,6 +45,10 @@ const ERROR_KEYS = {
   'not-configured': 'notConfigured',
   'upload-failed': 'uploadFailed',
   'no-credits': 'noCredits',
+  // Packs made from an uploaded textbook (lib/textbooks).
+  'scanned-book': 'scannedBook',
+  'topic-not-found': 'topicNotFound',
+  'textbook-missing': 'textbookMissing',
 } as const;
 
 /** Why a pack failed, in the current language (the server sends a code; the demo sends text). */

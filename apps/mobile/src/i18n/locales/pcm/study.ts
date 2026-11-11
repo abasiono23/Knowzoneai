@@ -36,6 +36,7 @@ const study: Translation<typeof en> = {
       topic: 'Topic',
       video: 'Video',
       image: 'Photo',
+      textbook: 'Textbook',
     },
     fromSource: {
       pdf: 'From PDF',
@@ -44,6 +45,7 @@ const study: Translation<typeof en> = {
       topic: 'From topic',
       video: 'From video',
       image: 'From photo',
+      textbook: 'From your textbook',
     },
     quizTypes: {
       mcq: 'Multiple choice',
@@ -115,6 +117,18 @@ const study: Translation<typeof en> = {
       noCredits: {
         title: 'Your AI credits don finish',
         body: 'Each study pack dey use 1 AI credit. Invite your padi or upgrade to Plus to get more.',
+      },
+      scannedBook: {
+        title: 'This textbook na scanned pages',
+        body: 'The PDF get picture of pages but no text wey we fit read. Snap some pages with the tutor instead, or find PDF wey get real text.',
+      },
+      topicNotFound: {
+        title: 'We no see this topic inside the book',
+        body: 'Try the topic name as the book write am, pick one from the list, or make am from general knowledge instead.',
+      },
+      textbookMissing: {
+        title: 'We no see that textbook',
+        body: 'Maybe dem don delete am. Upload am again make you pick topic.',
       },
     },
     timeoutTitle: 'We no fit finish your study pack',

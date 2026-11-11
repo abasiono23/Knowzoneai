@@ -36,6 +36,7 @@ const study: Translation<typeof en> = {
       topic: 'Thème',
       video: 'Vidéo',
       image: 'Photo',
+      textbook: 'Manuel',
     },
     fromSource: {
       pdf: 'À partir d’un PDF',
@@ -44,6 +45,7 @@ const study: Translation<typeof en> = {
       topic: 'À partir d’un thème',
       video: 'À partir d’une vidéo',
       image: 'À partir d’une photo',
+      textbook: 'À partir de ton manuel',
     },
     quizTypes: {
       mcq: 'Choix multiple',
@@ -115,6 +117,18 @@ const study: Translation<typeof en> = {
       noCredits: {
         title: 'Tu n’as plus de crédits IA',
         body: 'Chaque pack de révision utilise 1 crédit IA. Invite un ami ou passe à Plus pour en obtenir davantage.',
+      },
+      scannedBook: {
+        title: 'Ce manuel est un scan de pages',
+        body: 'Le PDF contient des images de pages mais aucun texte lisible. Photographie quelques pages avec le tuteur à la place, ou trouve un PDF avec du vrai texte.',
+      },
+      topicNotFound: {
+        title: 'Nous n’avons pas trouvé ce thème dans le livre',
+        body: 'Essaie le nom du thème tel que le livre l’écrit, choisis-en un dans la liste, ou crée-le à partir de connaissances générales.',
+      },
+      textbookMissing: {
+        title: 'Manuel introuvable',
+        body: 'Il a peut-être été supprimé. Importe-le à nouveau pour choisir un thème.',
       },
     },
     timeoutTitle: 'Impossible de terminer ton pack de révision',
