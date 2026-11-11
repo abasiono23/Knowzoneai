@@ -133,13 +133,26 @@ export function SceneView({ scene, style: s, answer, onAnswer, compact, scale, i
         ) : scene.image ? (
           // The scene's picture: an AI illustration or a real photo (no text, so it suits every language).
           <Animated.View entering={ZoomIn.duration(400)} style={{ alignItems: 'center', gap: 4 }}>
-            <Image
-              source={{ uri: scene.image }}
-              style={{ width: 168 * size, height: 168 * size, borderRadius: Radius.lg * size }}
-              contentFit="cover"
-              transition={200}
-              accessible={false}
-            />
+            {scene.credit ? (
+              // Real photos and diagrams come in every shape: a wide frame, shown whole (a diagram's
+              // edges and labels are never cut off), on white so transparent drawings stay readable.
+              <Image
+                source={{ uri: scene.image }}
+                style={{ width: 300 * size, maxWidth: '100%', height: 190 * size, borderRadius: Radius.lg * size, backgroundColor: '#fff' }}
+                contentFit="contain"
+                transition={200}
+                accessible={false}
+              />
+            ) : (
+              // AI pictures are square, so a square frame shows all of them.
+              <Image
+                source={{ uri: scene.image }}
+                style={{ width: 190 * size, height: 190 * size, borderRadius: Radius.lg * size }}
+                contentFit="cover"
+                transition={200}
+                accessible={false}
+              />
+            )}
             {scene.credit && (
               // Real photos are freely licensed on condition that their author and licence are shown.
               <Text
