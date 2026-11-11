@@ -7,6 +7,7 @@ import { Pressable, StyleSheet, View } from 'react-native';
 import Animated, { useAnimatedStyle, useSharedValue, withTiming } from 'react-native-reanimated';
 
 import { AuthScreen } from '@/components/auth/auth-screen';
+import { CardPicture } from '@/components/materials/card-picture';
 import { ReadyMaterial } from '@/components/materials/ready-material';
 import { Celebration } from '@/components/onboarding/celebration';
 import { SuccessBadge } from '@/components/onboarding/success-badge';
@@ -133,12 +134,15 @@ function Session({ m }: { m: Material & { content: StudyContent } }) {
         accessibilityRole="button"
         accessibilityLabel={flipped ? card.back : card.front}
         accessibilityHint={t('session.flipHint')}>
-        <View style={styles.stage}>
+        {/* A card with a picture is taller; both faces share the stage, so the question side grows too. */}
+        <View style={[styles.stage, !!card.image && styles.stageWithPicture]}>
           <Animated.View style={[StyleSheet.absoluteFill, front]}>
             <LinearGradient colors={Gradients.ai} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={styles.card}>
               <Text variant="label" color="rgba(255,255,255,0.8)">
                 {t('session.question')}
               </Text>
+              {/* Only a picture that doesn't give the answer away is shown with the question. */}
+              {card.image && card.imageSide === 'front' && <CardPicture card={card} height={150} onLight />}
               <Text variant="title" center>
                 {card.front}
               </Text>
@@ -152,6 +156,7 @@ function Session({ m }: { m: Material & { content: StudyContent } }) {
               <Text variant="label" color="rgba(255,255,255,0.8)">
                 {t('session.answer')}
               </Text>
+              {card.image && <CardPicture card={card} height={150} onLight />}
               <Text variant="title" center>
                 {card.back}
               </Text>
@@ -169,6 +174,7 @@ function Session({ m }: { m: Material & { content: StudyContent } }) {
 const styles = StyleSheet.create({
   rowBetween: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' },
   stage: { height: 340 },
+  stageWithPicture: { height: 470 },
   card: {
     flex: 1,
     borderRadius: Radius.xl,

@@ -415,6 +415,8 @@ const study: Translation<typeof en> = {
       mastered: 'DOMINADA',
     },
     reveal: 'Toca para descubrir',
+    photoCredit: '📷 {{author}} · {{license}} · Wikimedia Commons',
+    pictureA11y: 'Imagen de esta tarjeta. Toca para verla más grande.',
   },
   mindmap: {
     eyebrow: 'MAPA MENTAL',

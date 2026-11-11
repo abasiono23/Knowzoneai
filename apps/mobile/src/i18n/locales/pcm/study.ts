@@ -395,6 +395,8 @@ const study: Translation<typeof en> = {
       mastered: 'MASTERED',
     },
     reveal: 'Tap to open am',
+    photoCredit: '📷 {{author}} · {{license}} · Wikimedia Commons',
+    pictureA11y: 'Picture for this card. Tap am make e big.',
   },
   mindmap: {
     eyebrow: 'MIND MAP',

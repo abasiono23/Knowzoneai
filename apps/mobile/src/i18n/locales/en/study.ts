@@ -400,6 +400,8 @@ const study = {
       mastered: 'MASTERED',
     },
     reveal: 'Tap to reveal',
+    photoCredit: '📷 {{author}} · {{license}} · Wikimedia Commons',
+    pictureA11y: 'Picture for this card. Tap to see it larger.',
   },
   mindmap: {
     eyebrow: 'MIND MAP',

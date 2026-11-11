@@ -6,8 +6,14 @@ import type { Attempt, CardProgress, GenerateOptions, Material, SourceType } fro
 
 /** The study-pack API (real mode). The server makes packs with OpenAI and keeps the library. */
 
-/** Files (diagrams) come back as server paths; images need a full address. */
-const withFileUris = (m: Material): Material => (m.image?.startsWith('/') ? { ...m, image: `${API_URL}${m.image}` } : m);
+/** Files (the diagram, card pictures) come back as server paths; images need a full address. */
+const absolute = (link: string) => (link.startsWith('/') ? `${API_URL}${link}` : link);
+function withFileUris(m: Material): Material {
+  const content = m.content?.flashcards.some((c) => c.image?.startsWith('/'))
+    ? { ...m.content, flashcards: m.content.flashcards.map((c) => (c.image ? { ...c, image: absolute(c.image) } : c)) }
+    : m.content;
+  return { ...m, ...(m.image && { image: absolute(m.image) }), ...(content && { content }) };
+}
 
 export type Upload = {
   type: SourceType;

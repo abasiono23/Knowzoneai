@@ -510,7 +510,7 @@ model MaterialFile {
   token      String   @unique
   materialId String
   material   Material @relation(fields: [materialId], references: [id], onDelete: Cascade)
-  /// source | diagram
+  /// source | diagram | card (a flashcard's picture)
   kind       String
   name       String
   mimeType   String

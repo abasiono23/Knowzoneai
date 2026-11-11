@@ -395,6 +395,8 @@ const study: Translation<typeof en> = {
       mastered: 'GHỌTARA NKE ỌMA',
     },
     reveal: 'Pịa ka ị gosi ya',
+    photoCredit: '📷 {{author}} · {{license}} · Wikimedia Commons',
+    pictureA11y: 'Foto maka kaadị a. Pịa ka ị hụ ya ka ọ buru ibu.',
   },
   mindmap: {
     eyebrow: 'MIND MAP',

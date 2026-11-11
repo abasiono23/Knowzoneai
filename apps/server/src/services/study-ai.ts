@@ -203,12 +203,23 @@ const practiceSchema = (size: (typeof SIZES)[Depth]) =>
       ),
   });
 
+/** A card; textbook packs give some cards a picture (a link to a MaterialFile), credited when it's a real one. */
+export type Flashcard = {
+  id: string;
+  front: string;
+  back: string;
+  image?: string;
+  /** Which side the picture belongs with: with the question, or only with the answer (it would give it away). */
+  imageSide?: 'front' | 'back';
+  credit?: { author: string; license: string; url: string };
+};
+
 export type StudyContent = {
   summary: { tldr: string; overview: string[] };
   notes: { heading: string; blocks: ({ type: 'p' | 'h' | 'formula' | 'tip' | 'warning'; text: string } | { type: 'list'; items: string[] })[] }[];
   concepts: { term: string; definition: string; example?: string }[];
   keyPoints: { text: string; importance: 'high' | 'medium' }[];
-  flashcards: { id: string; front: string; back: string }[];
+  flashcards: Flashcard[];
   quiz: {
     id: string;
     type: 'mcq' | 'tf';

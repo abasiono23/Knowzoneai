@@ -1,6 +1,6 @@
 import { afterEach, describe, expect, it, vi } from 'vitest';
 
-import { findPhoto } from '../src/services/real-photos.js';
+import { findPhoto, findPicture } from '../src/services/real-photos.js';
 
 // The AI picks photo number `ai.best` (or none).
 const ai = vi.hoisted(() => ({ best: 0, images: 0 }));
@@ -49,6 +49,7 @@ function commons(pages: Record<string, unknown>) {
 afterEach(() => {
   vi.unstubAllGlobals();
   ai.best = 0;
+  ai.images = 0;
 });
 
 describe('real photos for videos', () => {
@@ -75,5 +76,35 @@ describe('real photos for videos', () => {
     expect(await findPhoto('u1', 'green leaf', 'a green leaf')).toBeNull();
     commons({});
     expect(await findPhoto('u1', 'nothing', 'nothing')).toBeNull();
+  });
+});
+
+describe('labelled diagrams for textbook material', () => {
+  it('accepts SVG diagrams as the PNG thumbnail Commons renders, and smaller bitmaps', async () => {
+    const calls = commons({
+      1: page(1, 'Plant_cell', 'CC BY-SA 3.0', {
+        mime: 'image/svg+xml',
+        thumburl: 'https://upload.wikimedia.org/thumb/Plant_cell.svg/1024px-Plant_cell.svg.png',
+        thumbmime: 'image/png',
+        width: 300,
+        height: 200,
+      }),
+      2: page(2, 'Small', 'CC0', { mime: 'image/png', width: 450, height: 450 }),
+      3: page(3, 'Tiny', 'CC0', { mime: 'image/png', width: 350, height: 350 }),
+      4: page(4, 'Doc', 'CC0', { mime: 'application/pdf' }),
+    });
+    const diagram = await findPicture('u1', { query: 'plant cell diagram', kind: 'diagram' }, 'a labelled plant cell');
+    expect(diagram).toMatchObject({ mimeType: 'image/png', credit: { license: 'CC BY-SA 3.0', url: 'https://commons.wikimedia.org/wiki/File:Plant_cell.jpg' } });
+    // The SVG and the smaller PNG were shown to the AI; the tiny one and the PDF weren't.
+    expect(ai.images).toBe(2);
+    // Diagrams aren't limited to bitmaps.
+    expect(calls[0]).toContain('gsrsearch=plant+cell+diagram&');
+    expect(calls[1]).toBe('https://upload.wikimedia.org/thumb/Plant_cell.svg/1024px-Plant_cell.svg.png');
+  });
+
+  it('still rejects drawings when a photo is wanted', async () => {
+    commons({ 1: page(1, 'Svg', 'CC0', { mime: 'image/svg+xml', thumbmime: 'image/png' }) });
+    expect(await findPicture('u1', { query: 'leaf', kind: 'photo' }, 'a leaf')).toBeNull();
+    expect(ai.images).toBe(0);
   });
 });

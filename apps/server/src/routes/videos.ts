@@ -10,7 +10,7 @@ import { AppError, notFound } from '../lib/errors.js';
 import { catalogFor } from '../services/catalog.js';
 import { requestLanguage } from '../services/language.js';
 import { LANGUAGES, type LanguageId } from '../services/personalization.js';
-import { findPhoto, photoQueries } from '../services/real-photos.js';
+import { findPicture, photoQueries, pictureQueries, type PictureQuery } from '../services/real-photos.js';
 import { me, optionalAuth, requireAuth } from '../services/sessions.js';
 import { textbookTopic } from '../services/textbooks.js';
 import {
@@ -21,6 +21,7 @@ import {
   makeClip,
   mapLimit,
   narrate,
+  REALISTIC_STYLE,
   secondsFor,
   writeScript,
   type Scene,
@@ -153,16 +154,20 @@ export async function recordScenes(videoId: string, userId: string, scenes: Scen
   });
 }
 
-/** Real photos (free, credited) for the illustrated scenes where a good one exists; other scenes are unchanged. */
-export async function addPhotos(videoId: string, userId: string, scenes: Scene[]) {
+/**
+ * Real photos (free, credited) for the illustrated scenes where a good one exists; other scenes are
+ * unchanged. Textbook summaries (`diagrams`) can take an accurate labelled diagram from Commons too.
+ */
+export async function addPhotos(videoId: string, userId: string, scenes: Scene[], opts: { diagrams?: boolean } = {}) {
   const wanted = scenes.filter((s) => s.illustration && s.kind !== 'check');
-  const queries = await photoQueries(
-    userId,
-    wanted.map((s) => s.illustration!),
+  const descriptions = wanted.map((s) => s.illustration!);
+  const queries: (PictureQuery | null)[] = await (opts.diagrams
+    ? pictureQueries(userId, descriptions)
+    : photoQueries(userId, descriptions).then((qs) => qs.map((q) => (q ? { query: q, kind: 'photo' as const } : null)))
   ).catch(() => wanted.map(() => null));
   const photos = new Map<string, Pick<Scene, 'image' | 'credit'>>();
   await mapLimit(wanted, 3, async (s, i) => {
-    const photo = queries[i] ? await findPhoto(userId, queries[i]!, s.illustration!) : null;
+    const photo = queries[i] ? await findPicture(userId, queries[i]!, s.illustration!) : null;
     if (!photo) return;
     const token = newToken();
     await prisma.videoFile.create({ data: { videoId, token, kind: 'image', mimeType: photo.mimeType, data: new Uint8Array(photo.data) } });
@@ -173,7 +178,8 @@ export async function addPhotos(videoId: string, userId: string, scenes: Scene[]
 
 /**
  * Pictures for the scenes that describe one: a real photo where a good one exists (free, from
- * Wikimedia Commons, credited), and AI pictures for the rest, up to the length's limit.
+ * Wikimedia Commons, credited), and AI pictures for the rest, up to the length's limit. Textbook
+ * summaries (`realistic`) take labelled diagrams too, and their AI pictures look real, not drawn.
  */
 export async function drawScenes(
   videoId: string,
@@ -181,19 +187,23 @@ export async function drawScenes(
   scenes: Scene[],
   settings: VideoSettings,
   maxPictures = LENGTHS[settings.length].images,
+  opts: { realistic?: boolean } = {},
 ) {
   // Fresh pictures: any earlier picture and its credit are replaced.
   const withPhotos = await addPhotos(
     videoId,
     userId,
     scenes.map(({ credit: _credit, ...s }) => s),
+    { diagrams: opts.realistic },
   );
   const pictures = new Map<string, Pick<Scene, 'image' | 'credit'>>();
   const wanted = withPhotos.filter((s) => s.illustration && s.kind !== 'check' && !s.credit);
   const toDraw = wanted.slice(0, maxPictures);
   await mapLimit(toDraw, 3, async (s) => {
     try {
-      const jpeg = await illustrate(userId, s.illustration!, settings.styleId);
+      const jpeg = opts.realistic
+        ? await illustrate(userId, s.illustration!, REALISTIC_STYLE, 'medium')
+        : await illustrate(userId, s.illustration!, settings.styleId);
       const token = newToken();
       await prisma.videoFile.create({ data: { videoId, token, kind: 'image', mimeType: 'image/jpeg', data: new Uint8Array(jpeg) } });
       pictures.set(s.id, { image: fileUrl(token) });
@@ -255,18 +265,21 @@ export async function processVideo(id: string, opts: { voiceOnly?: boolean } = {
     let clip: Promise<string | null> = Promise.resolve(null);
     if (!opts.voiceOnly || !scenes.length) {
       await stage(0);
-      // Textbook summaries have a picture on every scene (but the quiz), not just the main ones: about 1-2 cents more.
-      const everyScene = (v.source as Source | null)?.kind === 'textbook';
+      // Textbook summaries have a picture on every scene (but the quiz), not just the main ones, and
+      // the pictures look real (photos, labelled diagrams, realistic AI pictures), whatever style
+      // the video has: the student didn't choose one. About 5-7 cents more a video.
+      const fromTextbook = (v.source as Source | null)?.kind === 'textbook';
       const script = await writeScript(
         userId,
-        { ...(await sourceText(userId, v.source as Source, settings.language)), pictureEveryScene: everyScene },
+        { ...(await sourceText(userId, v.source as Source, settings.language)), pictureEveryScene: fromTextbook },
         settings,
       );
       meta = { subject: script.subject, level: script.level, description: script.description };
       // The moving opening clip takes a few minutes, so it's made while the pictures and voice are.
-      if (await wantsClip(userId, v.source as Source)) clip = openingClip(id, userId, v.title, script.scenes[0], settings);
+      if (await wantsClip(userId, v.source as Source))
+        clip = openingClip(id, userId, v.title, script.scenes[0], fromTextbook ? { ...settings, styleId: REALISTIC_STYLE } : settings);
       await stage(1);
-      scenes = await drawScenes(id, userId, script.scenes, settings, everyScene ? script.scenes.length : undefined);
+      scenes = await drawScenes(id, userId, script.scenes, settings, fromTextbook ? script.scenes.length : undefined, { realistic: fromTextbook });
     }
     await stage(2);
     scenes = await recordScenes(id, userId, scenes, settings);

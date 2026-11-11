@@ -12,6 +12,7 @@ import { AppError, notFound } from '../lib/errors.js';
 import { learningLanguageOf } from '../services/personalization.js';
 import { recordActivity, requestTimeZone } from '../services/progress.js';
 import { confirmReferralIfEligible } from '../services/referrals.js';
+import { makeCardPicture, planCardPictures } from '../services/card-pictures.js';
 import { me, requireAuth } from '../services/sessions.js';
 import {
   generateStudyContent,
@@ -19,12 +20,14 @@ import {
   StudyError,
   studyDiagram,
   youtubeId,
+  type Flashcard,
   type GenerateOptions,
   type Source,
   type StudyContent,
 } from '../services/study-ai.js';
 import { textbookTopic } from '../services/textbooks.js';
 import { shortName, toPublicUser } from '../services/users.js';
+import { mapLimit } from '../services/video-ai.js';
 
 export const materialsRouter = Router();
 materialsRouter.use(['/materials', '/materials/*rest'], (req, res, next) =>
@@ -54,10 +57,12 @@ const DOCX = 'application/vnd.openxmlformats-officedocument.wordprocessingml.doc
 
 // ─── Shapes the app reads ─────────────────────────────────────────────────────
 
-type Options = GenerateOptions & { titleSet?: boolean };
+/** `cardPictures`: textbook packs, whose flashcards get real pictures (set by the server, not the app). */
+type Options = GenerateOptions & { titleSet?: boolean; cardPictures?: boolean };
 type MaterialWith = Material & { quizAttempts?: QuizAttempt[]; files?: { kind: string; token: string }[] };
 
 const fileUrl = (token: string) => `/materials/files/${token}`;
+const newToken = () => randomBytes(24).toString('base64url');
 
 function toPublicAttempt(a: QuizAttempt) {
   return {
@@ -73,7 +78,7 @@ function toPublicAttempt(a: QuizAttempt) {
 }
 
 function toPublicMaterial(m: MaterialWith) {
-  const { titleSet: _t, ...options } = m.options as Options;
+  const { titleSet: _t, cardPictures: _p, ...options } = m.options as Options;
   const diagram = m.files?.find((f) => f.kind === 'diagram');
   return {
     id: m.id,
@@ -132,6 +137,43 @@ async function fail(id: string, code: StudyError['code'], retryable: boolean) {
   });
 }
 
+/**
+ * Pictures for the cards where one really helps (at most 6): a real photo or labelled diagram from
+ * Wikimedia Commons, else a realistic AI picture, each stored as a 'card' file. Nothing here can fail
+ * the pack: a card whose picture fails simply has none.
+ */
+export async function addCardPictures(materialId: string, userId: string, title: string, cards: Flashcard[]): Promise<Flashcard[]> {
+  try {
+    // Pictures from an earlier, failed try are replaced.
+    await prisma.materialFile.deleteMany({ where: { materialId, kind: 'card' } });
+    const plans = await planCardPictures(userId, title, cards);
+    const pictures = new Map<number, Pick<Flashcard, 'image' | 'imageSide' | 'credit'>>();
+    await mapLimit(plans, 3, async (plan) => {
+      try {
+        const picture = await makeCardPicture(userId, plan);
+        const token = newToken();
+        await prisma.materialFile.create({
+          data: {
+            materialId,
+            kind: 'card',
+            token,
+            name: `card-${plan.index + 1}.${picture.mimeType === 'image/png' ? 'png' : 'jpg'}`,
+            mimeType: picture.mimeType,
+            data: new Uint8Array(picture.data),
+          },
+        });
+        pictures.set(plan.index, { image: fileUrl(token), imageSide: plan.side, ...(picture.credit && { credit: picture.credit }) });
+      } catch (e) {
+        console.warn('Card picture failed', materialId, (e as Error).message);
+      }
+    });
+    return cards.map((c, i) => (pictures.has(i) ? { ...c, ...pictures.get(i) } : c));
+  } catch (e) {
+    console.warn('Card pictures failed', materialId, (e as Error).message);
+    return cards;
+  }
+}
+
 /** A generation interrupted by a restart is shown as failed (retryable) instead of spinning forever. */
 async function failIfStale<T extends Material>(m: T): Promise<T> {
   if (m.status !== 'PROCESSING' || Date.now() - m.updatedAt.getTime() < STALE_MS) return m;
@@ -173,6 +215,9 @@ export async function processMaterial(id: string) {
       learningLanguageOf(m.user),
       (stage) => prisma.material.update({ where: { id }, data: { stage } }),
     );
+    // Textbook flashcards get their pictures before the pack shows as ready (20-40 s more), so no card ever shows a missing one.
+    if (options.cardPictures && content.flashcards.length)
+      content.flashcards = await addCardPictures(id, m.userId, options.titleSet ? m.title : title, content.flashcards);
 
     await prisma.$transaction(async (tx) => {
       const cur = await tx.material.findUnique({ where: { id } });
@@ -306,7 +351,8 @@ materialsRouter.post('/materials/:id', aiLimiter, upload.single('file'), async (
       fileName: isFile ? file!.originalname.slice(0, 120) : null,
       fileSize: isFile ? file!.size : null,
       sourceText: input.type === 'text' ? input.text!.slice(0, 200_000) : fromBook ? fromBook.text : '',
-      options: { ...input.options, titleSet: !!input.title },
+      // Textbook packs are the ones whose flashcards get real pictures.
+      options: { ...input.options, titleSet: !!input.title, ...(fromBook && { cardPictures: true }) },
       creditHeld: true,
       ...(isFile && {
         files: {
@@ -553,7 +599,7 @@ materialsRouter.post('/materials/:id/diagram', aiLimiter, async (req, res) => {
     throw new AppError(402, 'You are out of AI credits. Invite a friend or upgrade to Plus for more.', 'no-credits');
   try {
     const jpeg = await studyDiagram(user.id, m.title, m.content as StudyContent);
-    const token = randomBytes(24).toString('base64url');
+    const token = newToken();
     const [, updated] = await prisma.$transaction([
       prisma.materialFile.create({
         data: {

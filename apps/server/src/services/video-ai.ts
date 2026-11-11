@@ -217,26 +217,41 @@ export async function translateScript(userId: string, video: { title: string; de
 
 // ─── Pictures ─────────────────────────────────────────────────────────────────
 
+/**
+ * Textbook material (video summaries, flashcards) isn't drawn in the chosen cartoon style but as
+ * realistic pictures, like a modern textbook's: students want to see the real thing.
+ */
+export const REALISTIC_STYLE = 'real';
+
 const STYLE_LOOK: Record<string, string> = {
   galaxy: 'deep purple and navy colours with soft glowing highlights',
   chalk: 'a chalk drawing on a dark green chalkboard',
   paper: 'a clean pencil-and-watercolour sketch on cream paper',
   blueprint: 'white technical line art on a blue blueprint background',
   sunset: 'bold flat shapes in pink, purple and gold',
+  [REALISTIC_STYLE]: 'a realistic, high-quality photograph or photorealistic scientific illustration, natural colours and lighting, like a modern textbook photo',
 };
 
-/** One scene's illustration as a JPEG. No text in the picture, so nothing can be misspelt. */
-export async function illustrate(userId: string, description: string, styleId: string) {
+export type ImageQuality = 'low' | 'medium';
+
+/**
+ * One scene's illustration as a JPEG. No text in the picture, so nothing can be misspelt. Realistic
+ * pictures need 'medium' quality (about 1 cent each) not to look like plastic.
+ */
+export async function illustrate(userId: string, description: string, styleId: string, quality: ImageQuality = 'low') {
   const model = config.OPENAI_MODEL_IMAGE;
+  const realistic = styleId === REALISTIC_STYLE;
   const result = await openaiClient().images.generate({
     model,
     prompt: [
-      `A simple, accurate educational illustration for a student video: ${description.slice(0, 500)}.`,
-      `Style: ${STYLE_LOOK[styleId] ?? STYLE_LOOK.galaxy}. Friendly, uncluttered, one clear subject in the centre.`,
+      realistic
+        ? `An accurate, realistic picture for a student's textbook: ${description.slice(0, 500)}.`
+        : `A simple, accurate educational illustration for a student video: ${description.slice(0, 500)}.`,
+      `Style: ${STYLE_LOOK[styleId] ?? STYLE_LOOK.galaxy}. ${realistic ? 'Scientifically accurate, uncluttered' : 'Friendly, uncluttered'}, one clear subject in the centre.`,
       'Absolutely no text, letters, numbers, labels or watermarks anywhere in the image.',
     ].join('\n'),
     size: '1024x1024',
-    quality: 'low',
+    quality,
     output_format: 'jpeg',
     output_compression: 75,
   });

@@ -10,7 +10,18 @@ export type GenerateOptions = { depth: Depth; difficulty: Difficulty; outputs: O
 
 export type Concept = { term: string; definition: string; example?: string };
 export type KeyPoint = { text: string; importance: 'high' | 'medium' };
-export type Card = { id: string; front: string; back: string };
+/** Who made a real picture (Wikimedia Commons) and under which licence: shown with it, as the licence requires. */
+export type PictureCredit = { author: string; license: string; url: string };
+export type Card = {
+  id: string;
+  front: string;
+  back: string;
+  /** Textbook packs give some cards a picture: a real photo or labelled diagram, or a realistic AI picture. */
+  image?: string;
+  /** Which side the picture belongs with: the question, or only the answer (it would give it away). Back when unset. */
+  imageSide?: 'front' | 'back';
+  credit?: PictureCredit;
+};
 export type Question = {
   id: string;
   type: 'mcq' | 'tf';

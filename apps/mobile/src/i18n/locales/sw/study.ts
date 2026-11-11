@@ -395,6 +395,8 @@ const study: Translation<typeof en> = {
       mastered: 'UMEBOBEA',
     },
     reveal: 'Gusa ili kufunua',
+    photoCredit: '📷 {{author}} · {{license}} · Wikimedia Commons',
+    pictureA11y: 'Picha ya kadi hii. Gusa ili kuiona kwa ukubwa zaidi.',
   },
   mindmap: {
     eyebrow: 'RAMANI YA MAWAZO',

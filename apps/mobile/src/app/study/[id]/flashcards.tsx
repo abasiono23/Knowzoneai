@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Pressable, StyleSheet, View } from 'react-native';
 
+import { CardPicture } from '@/components/materials/card-picture';
 import { ReadyMaterial } from '@/components/materials/ready-material';
 import { Button, Card, ProgressBar, Screen, ScreenHeader, Text } from '@/components/ui';
 import { Colors, Radius, Spacing } from '@/constants/theme';
@@ -71,6 +72,8 @@ export default function FlashcardsScreen() {
                       </View>
                     </View>
                     <Text variant="bodyStrong">{c.front}</Text>
+                    {/* A picture that would give the answer away waits for the reveal. */}
+                    {c.image && (c.imageSide === 'front' || open) && <CardPicture card={c} />}
                     {open ? (
                       <Text color={Colors.success}>{c.back}</Text>
                     ) : (

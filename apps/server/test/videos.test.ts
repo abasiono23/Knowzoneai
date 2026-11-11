@@ -10,20 +10,37 @@ const ai = vi.hoisted(() => ({
   scripts: [] as { text?: string; topic?: string; settings: VideoSettings }[],
   narrated: [] as string[],
   drawn: 0,
+  /** The style and quality of each AI picture, e.g. "galaxy/low". */
+  looks: [] as string[],
   // Real photos: off unless a test turns them on (then the first illustrated scene gets one).
   photos: false,
+  // Labelled diagrams (textbook summaries only): the second illustrated scene gets one.
+  diagrams: false,
+  /** What the picture search was asked for: "photo" or "diagram" queries. */
+  searched: [] as string[],
   clips: 0,
+  clipStyles: [] as string[],
   clipFail: false,
 }));
 
-vi.mock('../src/services/real-photos.js', () => ({
-  photoQueries: vi.fn(async (_u: string, descriptions: string[]) => descriptions.map((_, i) => (ai.photos && i === 0 ? 'green leaf' : null))),
-  findPhoto: vi.fn(async () => ({
+vi.mock('../src/services/real-photos.js', () => {
+  const picture = (kind: 'photo' | 'diagram') => ({
     data: Buffer.from([0x89, 0x50, 0x4e, 0x47]),
     mimeType: 'image/png',
-    credit: { author: 'Jane Doe', license: 'CC BY-SA 4.0', url: 'https://commons.wikimedia.org/wiki/File:Leaf.png' },
-  })),
-}));
+    credit: { author: kind === 'photo' ? 'Jane Doe' : 'LadyofHats', license: 'CC BY-SA 4.0', url: `https://commons.wikimedia.org/wiki/File:Leaf-${kind}.png` },
+  });
+  return {
+    photoQueries: vi.fn(async (_u: string, descriptions: string[]) => descriptions.map((_, i) => (ai.photos && i === 0 ? 'green leaf' : null))),
+    pictureQueries: vi.fn(async (_u: string, descriptions: string[]) =>
+      descriptions.map((_, i) => (ai.photos && i === 0 ? { query: 'green leaf', kind: 'photo' } : ai.diagrams && i === 1 ? { query: 'leaf structure diagram', kind: 'diagram' } : null)),
+    ),
+    findPhoto: vi.fn(async () => picture('photo')),
+    findPicture: vi.fn(async (_u: string, want: { query: string; kind: 'photo' | 'diagram' }) => {
+      ai.searched.push(`${want.kind}:${want.query}`);
+      return picture(want.kind);
+    }),
+  };
+});
 
 vi.mock('../src/services/video-ai.js', async (importOriginal) => {
   const real = await importOriginal<typeof import('../src/services/video-ai.js')>();
@@ -48,13 +65,15 @@ vi.mock('../src/services/video-ai.js', async (importOriginal) => {
       }));
       return { title: 'Photosynthesis', subject: 'Biology', level: 'Beginner', description: 'How plants make food.', scenes };
     }),
-    illustrate: vi.fn(async () => {
+    illustrate: vi.fn(async (_u: string, _d: string, styleId: string, quality = 'low') => {
       ai.drawn++;
+      ai.looks.push(`${styleId}/${quality}`);
       return Buffer.from([0xff, 0xd8, 0xff, 0xd9]);
     }),
     clipsOn: () => true,
-    makeClip: vi.fn(async () => {
+    makeClip: vi.fn(async (_u: string, _t: string, _p: string | undefined, styleId: string) => {
       ai.clips++;
+      ai.clipStyles.push(styleId);
       if (ai.clipFail) throw new Error('Sora is busy');
       return Buffer.from('fakemp4');
     }),
@@ -70,8 +89,12 @@ const reset = () => {
   ai.scripts.length = 0;
   ai.narrated.length = 0;
   ai.drawn = 0;
+  ai.looks.length = 0;
   ai.photos = false;
+  ai.diagrams = false;
+  ai.searched.length = 0;
   ai.clips = 0;
+  ai.clipStyles.length = 0;
   ai.clipFail = false;
 };
 
@@ -125,9 +148,10 @@ describe('generating a video', () => {
     const { as } = await signIn();
     await as.post('/videos/mine/photo001', { title: 'Leaves', source: { kind: 'topic', topic: 'Leaves' }, settings: SETTINGS }).expect(202);
     const v = await settled(as, 'photo001');
-    // A photo for the first scene, and still up to 4 AI pictures for the others.
+    // A photo for the first scene, and still up to 4 AI pictures for the others, in the chosen style.
     expect(v.scenes[0]).toMatchObject({ credit: { author: 'Jane Doe', license: 'CC BY-SA 4.0' } });
     expect(ai.drawn).toBe(4);
+    expect(ai.looks).toEqual(['galaxy/low', 'galaxy/low', 'galaxy/low', 'galaxy/low']);
     expect(v.scenes.filter((s: Scene) => s.image)).toHaveLength(5);
     expect(v.scenes.filter((s: Scene) => s.credit)).toHaveLength(1);
     expect((await http().get(v.scenes[0].image).expect(200)).headers['content-type']).toBe('image/png');
@@ -376,6 +400,31 @@ describe('textbook video summaries', () => {
     expect(ai.drawn).toBe(6);
     expect(v.scenes.filter((s: Scene) => s.image)).toHaveLength(6);
     expect(v.scenes.some((s: Scene) => s.clip)).toBe(false);
+  });
+
+  it('looks real: realistic AI pictures, and labelled diagrams from Commons as well as photos', async () => {
+    reset();
+    ai.photos = true;
+    ai.diagrams = true;
+    const { as, sub } = await signIn();
+    await prisma.user.update({ where: { id: sub }, data: { plan: 'PLUS' } });
+    await book('bookv004', sub);
+    await as.post('/videos/mine/tbreal01', { title: 'Osmosis', source: source('bookv004'), settings: SETTINGS }).expect(202);
+    const v = await settled(as, 'tbreal01');
+    expect(v.status).toBe('ready');
+    // The search may answer with photos or diagrams; both are credited.
+    expect(ai.searched).toEqual(['photo:green leaf', 'diagram:leaf structure diagram']);
+    expect(v.scenes[0].credit).toMatchObject({ author: 'Jane Doe' });
+    expect(v.scenes[1].credit).toMatchObject({ author: 'LadyofHats', license: 'CC BY-SA 4.0' });
+    // The other 4 pictures are AI, realistic at medium quality whatever the video's style; the clip too.
+    expect(ai.looks).toEqual(['real/medium', 'real/medium', 'real/medium', 'real/medium']);
+    expect(v.scenes.filter((s: Scene) => s.image)).toHaveLength(6);
+    expect(ai.clipStyles).toEqual(['real']);
+    // Other videos never search for diagrams.
+    await as.post('/videos/mine/topic902', { title: 'Leaves', source: { kind: 'topic', topic: 'Leaves' }, settings: SETTINGS }).expect(202);
+    await settled(as, 'topic902');
+    expect(ai.searched).toEqual(['photo:green leaf', 'diagram:leaf structure diagram', 'photo:green leaf']);
+    expect(ai.looks.slice(4)).toEqual(['galaxy/low', 'galaxy/low', 'galaxy/low', 'galaxy/low']);
   });
 
   it('makes no clip for other videos, and a failed clip doesn’t fail the video', async () => {

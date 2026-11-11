@@ -77,6 +77,18 @@ vi.mock('../src/services/study-ai.js', async (importOriginal) => {
   };
 });
 
+// Only textbook packs get card pictures (test/textbooks.test.ts); here the chooser must never run.
+const cardPictures = vi.hoisted(() => ({ plans: 0 }));
+vi.mock('../src/services/card-pictures.js', () => ({
+  planCardPictures: vi.fn(async () => {
+    cardPictures.plans++;
+    return [];
+  }),
+  makeCardPicture: vi.fn(async () => {
+    throw new Error('never');
+  }),
+}));
+
 const reset = () => {
   ai.fail = 0;
   ai.calls.length = 0;
@@ -124,6 +136,9 @@ describe('making a study pack', () => {
       folder: 'Biology',
     });
     expect(m.content.flashcards).toHaveLength(2);
+    // Pictures on cards are for textbook packs only.
+    expect(m.content.flashcards.some((c: { image?: string }) => c.image)).toBe(false);
+    expect(cardPictures.plans).toBe(0);
     expect(m.options).toEqual({ depth: 'Quick', difficulty: 'Beginner', outputs: ['summary', 'flashcards', 'quiz'] });
     expect(ai.calls[0]).toMatchObject({ language: 'ha', opts: { depth: 'Quick' } });
     expect(ai.calls[0].text).toContain('Mitochondria');

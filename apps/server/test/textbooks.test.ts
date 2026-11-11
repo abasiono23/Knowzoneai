@@ -8,12 +8,24 @@ import { http, signIn } from './helpers.js';
 
 // OpenAI is replaced with a fake: reading the PDF, the background processing, topic search,
 // study packs and videos are real. No test ever reaches the real API.
+type CardPlan = { card: number; shows: string; kind: 'photo' | 'diagram'; query: string; side: 'front' | 'back' };
+
 const ai = vi.hoisted(() => ({
   /** ok: lists topics; fail: the call throws; off: no key configured (503 not-configured). */
   mode: 'ok' as 'ok' | 'fail' | 'off',
   topics: [] as { title: string; chapter: string | null; startPage: number }[],
   inputs: [] as string[],
   packs: [] as { text: string; topic?: string }[],
+  /** The flashcards every pack gets. */
+  flashcards: [] as { front: string; back: string }[],
+  /** What the card-picture call answers (or throws). */
+  plans: [] as CardPlan[],
+  planFail: false,
+  /** Commons answers a diagram for diagram searches and nothing for photos; each search is noted. */
+  searched: [] as string[],
+  /** The style and quality of each AI picture, e.g. "real/medium"; the first `drawFail` calls throw. */
+  looks: [] as string[],
+  drawFail: 0,
   scripts: [] as { text?: string; topic?: string }[],
 }));
 
@@ -26,9 +38,13 @@ vi.mock('../src/services/ai.js', async (importOriginal) => {
       if (ai.mode === 'off') throw new AppError(503, 'AI features aren’t set up on this server yet', 'not-configured');
       return {
         responses: {
-          parse: async (req: { input: string }) => {
+          parse: async (req: { input: string; text: { format: { name: string } } }) => {
             ai.inputs.push(req.input);
             if (ai.mode === 'fail') throw new Error('OpenAI timed out');
+            if (req.text.format.name === 'card_pictures') {
+              if (ai.planFail) throw new Error('OpenAI timed out');
+              return { output_parsed: { pictures: ai.plans }, usage: { input_tokens: 500, output_tokens: 100 } };
+            }
             return { output_parsed: { topics: ai.topics }, usage: { input_tokens: 1000, output_tokens: 100 } };
           },
         },
@@ -45,10 +61,36 @@ vi.mock('../src/services/study-ai.js', async (importOriginal) => {
       ai.packs.push({ text: src.text, topic: src.topic });
       for (const s of [1, 2, 3, 4]) await onStage(s);
       return {
-        content: { summary: { tldr: 'x', overview: [] }, notes: [], concepts: [], keyPoints: [], flashcards: [], quiz: [], mindMap: { center: 'x', branches: [] }, readingMinutes: 1 },
+        content: {
+          summary: { tldr: 'x', overview: [] },
+          notes: [],
+          concepts: [],
+          keyPoints: [],
+          flashcards: ai.flashcards.map((c, i) => ({ id: `card${i + 1}`, ...c })),
+          quiz: [],
+          mindMap: { center: 'x', branches: [] },
+          readingMinutes: 1,
+        },
         title: 'Photosynthesis notes',
         subject: 'Biology',
       };
+    }),
+  };
+});
+
+vi.mock('../src/services/real-photos.js', () => {
+  const diagram = {
+    data: Buffer.from([0x89, 0x50, 0x4e, 0x47]),
+    mimeType: 'image/png',
+    credit: { author: 'LadyofHats', license: 'Public domain', url: 'https://commons.wikimedia.org/wiki/File:Plant_cell.svg' },
+  };
+  return {
+    photoQueries: vi.fn(async (_u: string, descriptions: string[]) => descriptions.map(() => null)),
+    pictureQueries: vi.fn(async (_u: string, descriptions: string[]) => descriptions.map(() => null)),
+    findPhoto: vi.fn(async () => null),
+    findPicture: vi.fn(async (_u: string, want: { query: string; kind: 'photo' | 'diagram' }) => {
+      ai.searched.push(`${want.kind}:${want.query}`);
+      return want.kind === 'diagram' ? diagram : null;
     }),
   };
 });
@@ -64,10 +106,17 @@ vi.mock('../src/services/video-ai.js', async (importOriginal) => {
         subject: 'Biology',
         level: 'Beginner',
         description: 'How cells release energy.',
-        scenes: [{ id: 'sc1', kind: 'title', heading: 'Respiration', emoji: '🔥', caption: 'Cells release energy.', seconds: 4 }],
+        scenes: [{ id: 'sc1', kind: 'title', heading: 'Respiration', emoji: '🔥', caption: 'Cells release energy.', seconds: 4, illustration: 'a mitochondrion' }],
       };
     }),
-    illustrate: vi.fn(async () => Buffer.from([0xff, 0xd8, 0xff, 0xd9])),
+    illustrate: vi.fn(async (_u: string, _d: string, styleId: string, quality = 'low') => {
+      ai.looks.push(`${styleId}/${quality}`);
+      if (ai.drawFail > 0) {
+        ai.drawFail--;
+        throw new Error('The image model is busy');
+      }
+      return Buffer.from([0xff, 0xd8, 0xff, 0xd9]);
+    }),
     narrate: vi.fn(async () => ({ mp3: Buffer.from('ID3fake'), seconds: 3 })),
   };
 });
@@ -77,6 +126,12 @@ const reset = () => {
   ai.topics = [];
   ai.inputs.length = 0;
   ai.packs.length = 0;
+  ai.flashcards = [];
+  ai.plans = [];
+  ai.planFail = false;
+  ai.searched.length = 0;
+  ai.looks.length = 0;
+  ai.drawFail = 0;
   ai.scripts.length = 0;
 };
 
@@ -396,7 +451,65 @@ describe('studying one topic of a textbook', () => {
     expect((await prisma.user.findUniqueOrThrow({ where: { id: sub } })).aiCredits).toBe(credits);
   });
 
-  it('makes a video from just the topic’s pages', async () => {
+  it('gives the flashcards real pictures: Commons first, a realistic AI picture otherwise, at most 6', async () => {
+    reset();
+    const { as } = await readyBook();
+    ai.flashcards = [
+      { front: 'Which organelle holds chlorophyll?', back: 'The chloroplast' },
+      { front: 'What are the parts of a plant cell?', back: 'Cell wall, membrane, cytoplasm, nucleus, chloroplasts, vacuole' },
+      { front: 'Where does photosynthesis mostly happen?', back: 'In the leaves' },
+      { front: 'What gas do leaves take in?', back: 'Carbon dioxide' },
+      { front: 'What do farmers raise in greenhouses?', back: 'Carbon dioxide' },
+      { front: 'What does a leaf look like?', back: 'Thin and broad' },
+      { front: 'Which pigment absorbs light?', back: 'Chlorophyll' },
+      { front: 'Is oxygen a waste product?', back: 'Yes' },
+    ];
+    // The AI's choices: a diagram, then photos; a duplicate, an unknown card and a 7th are dropped.
+    const photo = (card: number, query: string): CardPlan => ({ card, shows: query, kind: 'photo', query, side: 'back' });
+    ai.plans = [
+      { card: 1, shows: 'a labelled plant cell', kind: 'diagram', query: 'plant cell diagram', side: 'front' },
+      photo(0, 'chloroplast micrograph'),
+      photo(2, 'green leaves sunlight'),
+      photo(1, 'plant cell again'),
+      photo(99, 'nothing'),
+      photo(3, 'leaf stomata'),
+      photo(4, 'greenhouse crops'),
+      photo(5, 'broad leaf'),
+      photo(6, 'chlorophyll extract'),
+    ];
+    // One AI picture fails: that card simply has none.
+    ai.drawFail = 1;
+    await as.post('/materials/pics0001', { type: 'textbook', textbookId: 'book0001', topic: 'photosynthesis' }).expect(202);
+    const pack = await settledPack(as, 'pics0001');
+    expect(pack.status).toBe('ready');
+    expect(pack.options.cardPictures).toBeUndefined();
+    const cards = pack.content.flashcards as { id: string; image?: string; imageSide?: string; credit?: { author: string } }[];
+    expect(cards).toHaveLength(8);
+    // Commons was searched for all 6 chosen cards; only the diagram was found there.
+    expect(ai.searched).toHaveLength(6);
+    expect(ai.searched).toContain('diagram:plant cell diagram');
+    expect(cards[1]).toMatchObject({ image: expect.stringMatching(/^\/materials\/files\//), imageSide: 'front', credit: { author: 'LadyofHats', license: 'Public domain' } });
+    expect((await http().get(cards[1].image!).expect(200)).headers['content-type']).toBe('image/png');
+    // The 5 others were drawn realistically (one failed), so 4 cards have an uncredited AI picture.
+    expect(ai.looks).toEqual(['real/medium', 'real/medium', 'real/medium', 'real/medium', 'real/medium']);
+    const drawn = cards.filter((c) => c.image && !c.credit);
+    expect(drawn).toHaveLength(4);
+    expect(drawn.every((c) => c.imageSide === 'back')).toBe(true);
+    expect((await http().get(drawn[0].image!).expect(200)).headers['content-type']).toBe('image/jpeg');
+    expect(cards[6].image).toBeUndefined();
+    expect(cards[7].image).toBeUndefined();
+    expect(await prisma.materialFile.count({ where: { materialId: 'pics0001', kind: 'card' } })).toBe(5);
+    expect(await prisma.usageEvent.count({ where: { feature: 'card_pictures' } })).toBe(1);
+
+    // The choosing call failing doesn't fail the pack either: it just has no pictures.
+    ai.planFail = true;
+    await as.post('/materials/pics0002', { type: 'textbook', textbookId: 'book0001', topic: 'cells' }).expect(202);
+    const plain = await settledPack(as, 'pics0002');
+    expect(plain.status).toBe('ready');
+    expect(plain.content.flashcards.some((c: { image?: string }) => c.image)).toBe(false);
+  });
+
+  it('makes a video from just the topic’s pages, with realistic pictures', async () => {
     reset();
     const { as } = await readyBook();
     const settings: VideoSettings = { length: '30s', voiceId: 'none', styleId: 'galaxy', captions: true, captionStyle: 'classic', language: 'en' };
@@ -415,6 +528,9 @@ describe('studying one topic of a textbook', () => {
     expect(ai.scripts[0].text).toContain('lactic acid');
     expect(ai.scripts[0].text).not.toContain('Chlorophyll');
     expect(ai.scripts[0].text).not.toContain('--- Page 12 ---');
+    // The galaxy style the app sent is ignored for the pictures: they look real.
+    expect(ai.looks).toEqual(['real/medium']);
+    expect(video.scenes[0].image).toMatch(/^\/videos\/files\//);
 
     const missing = await as
       .post('/videos/mine/vid00002', { title: 'X', source: { kind: 'textbook', textbookId: 'book0001', topic: 'quantum chromodynamics', label: 'x' }, settings })

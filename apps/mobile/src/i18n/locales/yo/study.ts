@@ -395,6 +395,8 @@ const study: Translation<typeof en> = {
       mastered: 'O TI MỌ̀ Ọ́ DÁADÁA',
     },
     reveal: 'Tẹ̀ ẹ́ láti ṣí i',
+    photoCredit: '📷 {{author}} · {{license}} · Wikimedia Commons',
+    pictureA11y: 'Àwòrán fún káàdì yìí. Tẹ̀ ẹ́ láti rí i ní títóbi.',
   },
   mindmap: {
     eyebrow: 'MÁÀPÙ ÈRÒ',

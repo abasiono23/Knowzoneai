@@ -475,6 +475,8 @@ const study: Translation<typeof en> = {
       mastered: 'متقنة',
     },
     reveal: 'اضغط للكشف',
+    photoCredit: '📷 {{author}} · {{license}} · ويكيميديا كومنز',
+    pictureA11y: 'صورة هذه البطاقة. اضغط لعرضها بحجم أكبر.',
   },
   mindmap: {
     eyebrow: 'خريطة ذهنية',

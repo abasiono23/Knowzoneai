@@ -415,6 +415,8 @@ const study: Translation<typeof en> = {
       mastered: 'MAÎTRISÉES',
     },
     reveal: 'Appuie pour révéler',
+    photoCredit: '📷 {{author}} · {{license}} · Wikimedia Commons',
+    pictureA11y: 'Image de cette carte. Appuie pour l’agrandir.',
   },
   mindmap: {
     eyebrow: 'CARTE MENTALE',

@@ -398,6 +398,8 @@ const study: Translation<typeof en> = {
       mastered: 'AN ƘWARE',
     },
     reveal: 'Taɓa don buɗewa',
+    photoCredit: '📷 {{author}} · {{license}} · Wikimedia Commons',
+    pictureA11y: 'Hoton wannan kati. Taɓa don ganinsa a babba.',
   },
   mindmap: {
     eyebrow: 'TASWIRAR TUNANI',
