@@ -202,6 +202,7 @@ h3 {
   gap: 10px;
 }
 .actions .btn {
+  white-space: nowrap;
   min-height: 44px;
   padding: 8px 20px;
   font-size: 15px;
@@ -1181,6 +1182,35 @@ h3 {
   font-weight: 800;
 }
 
+/* Home page: links to the study pages anyone can read */
+.study-free {
+  padding: 26px 0;
+}
+.study-free .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px 10px;
+  color: var(--ink-2);
+  font-size: 15px;
+}
+.study-free b {
+  margin-inline-end: 6px;
+  color: var(--ink);
+}
+.study-free a {
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: var(--soft);
+  color: var(--purple);
+  font-weight: 700;
+  text-decoration: none;
+}
+.study-free a:hover {
+  background: var(--lilac);
+}
+
 /* End band and footer */
 .end {
   padding: 96px 0;
@@ -1200,7 +1230,7 @@ footer {
 .foot {
   display: grid;
   gap: 32px;
-  grid-template-columns: 1.6fr repeat(3, 1fr);
+  grid-template-columns: 1.6fr repeat(4, 1fr);
 }
 .foot .logo {
   color: #fff;
@@ -1239,6 +1269,44 @@ footer {
   transform: none;
 }
 
+/* The bar's eight links need this much room; below it they fold into the menu. */
+@media (max-width: 1120px) {
+  .links,
+  .actions {
+    display: none;
+  }
+  .menu-btn {
+    display: grid;
+  }
+  .top.open {
+    background: var(--night);
+  }
+  .top.open .top-in {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 15px 0 20px;
+  }
+  .top.open .links {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    order: 3;
+    margin: 0;
+  }
+  .top.open .links a {
+    padding: 12px 14px;
+    font-size: 17px;
+  }
+  .top.open .actions {
+    display: flex;
+    flex-basis: 100%;
+    order: 4;
+  }
+  .top.open .actions .btn {
+    flex: 1;
+  }
+}
+
 @media (max-width: 980px) {
   .hero {
     display: block;
@@ -1274,40 +1342,6 @@ footer {
   }
   .rooms {
     padding: 64px 0;
-  }
-  .links,
-  .actions {
-    display: none;
-  }
-  .menu-btn {
-    display: grid;
-  }
-  .top.open {
-    background: var(--night);
-  }
-  .top.open .top-in {
-    flex-wrap: wrap;
-    height: auto;
-    padding: 15px 0 20px;
-  }
-  .top.open .links {
-    display: flex;
-    flex-direction: column;
-    flex-basis: 100%;
-    order: 3;
-    margin: 0;
-  }
-  .top.open .links a {
-    padding: 12px 14px;
-    font-size: 17px;
-  }
-  .top.open .actions {
-    display: flex;
-    flex-basis: 100%;
-    order: 4;
-  }
-  .top.open .actions .btn {
-    flex: 1;
   }
   .foot {
     grid-template-columns: repeat(2, minmax(0, 1fr));

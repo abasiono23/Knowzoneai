@@ -2,10 +2,15 @@
 (() => {
   document.documentElement.classList.add('js');
   const here = location.pathname.split('/').pop().replace('.html', '') || 'index';
+  // The study pages are folders (/practice-questions/jamb/biology): their first part names the section.
+  const section = location.pathname.split('/')[1];
   const quiet = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   const LINKS = [
     ['features', 'Features'],
+    ['practice-questions', 'Practice'],
+    ['study-notes', 'Learn'],
+    ['textbooks', 'Books'],
     ['pricing', 'Pricing'],
     ['about', 'About'],
     ['blog', 'Blog'],
@@ -16,7 +21,7 @@
     <div class="top-in">
       <a class="logo" href="index.html"><img src="assets/logo.png" alt="" />Knowzone</a>
       <nav class="links" aria-label="Main">
-        ${LINKS.map(([id, name]) => `<a href="${id}.html"${here === id || (here === 'post' && id === 'blog') ? ' aria-current="page"' : ''}>${name}</a>`).join('')}
+        ${LINKS.map(([id, name]) => `<a href="${id}.html"${here === id || section === id || (here === 'post' && id === 'blog') ? ' aria-current="page"' : ''}>${name}</a>`).join('')}
       </nav>
       <div class="actions">
         <a class="btn ghost" href="signup.html?mode=login">Log in</a>
@@ -34,6 +39,7 @@
       <div class="foot">
         <div><a class="logo" href="index.html"><img src="assets/logo.png" alt="" />Knowzone</a><p>The AI study app for exams and beyond. Made for students everywhere, starting in Africa.</p><p class="foot-soon">Android app coming soon</p></div>
         <div><h4>Product</h4><a href="features.html">Features</a><a href="pricing.html">Pricing</a><a href="signup.html">Sign up</a></div>
+        <div><h4>Study free</h4><a href="practice-questions.html">Practice questions</a><a href="study-notes.html">Study notes</a><a href="textbooks.html">Textbooks</a><a href="course-guides.html">Course guides</a></div>
         <div><h4>Company</h4><a href="about.html">About</a><a href="blog.html">Blog</a><a href="faq.html">FAQ</a></div>
         <div><h4>Legal</h4><a href="https://www.knowzoneai.com/privacy">Privacy</a><a href="https://www.knowzoneai.com/terms">Terms</a><a href="mailto:info@knowzoneai.com">info@knowzoneai.com</a></div>
       </div>

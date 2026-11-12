@@ -4,10 +4,14 @@
 //
 //   /             the homepage (signed-in visitors go straight to /home)
 //   /features …   the other site pages
+//   /practice-questions, /study-notes, /textbooks, /course-guides
+//                 the study pages made from Knowzone's data, for search engines (scripts/seo/build.mjs)
 //   /login, /sign-up, /home, /tutor …   the app
 import { copyFileSync, cpSync, existsSync, mkdirSync, readFileSync, readdirSync, rmSync, writeFileSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+
+import { studyPages } from './seo/build.mjs';
 
 const here = dirname(fileURLToPath(import.meta.url));
 const SITE = resolve(here, '../../webapp');
@@ -91,14 +95,26 @@ for (const page of pages) {
 }
 writeFileSync(join(DIST, 'app.html'), readFileSync(join(DIST, 'app.html'), 'utf8').replace('</head>', `${ANALYTICS}</head>`));
 
-// The site pages are for search engines; the app's own pages (sign-in, home, tutor …) are for signed-in students.
+writeFileSync(join(DIST, 'site', 'site.js'), relink(readFileSync(join(DIST, 'site', 'site.js'), 'utf8')));
+
+// The study pages: practice questions, study notes, textbooks and course guides, as plain pages with the
+// site's bar and footer. They take the bar from site/site.js, so that file is relinked first.
+const study = studyPages({ dist: DIST, analytics: ANALYTICS });
+
+// The site pages and the study pages are for search engines; the app's own pages (sign-in, home, tutor …)
+// are for signed-in students.
 const today = new Date().toISOString().slice(0, 10);
+const urls = [
+  ...listed.map((p) => ({ path: address(p), lastmod: today })),
+  // A study page carries its data's date where the data has one, never today's: that would claim a change at every deploy.
+  ...study,
+];
+if (urls.length > 45000) throw new Error('sitemap.xml is close to its limit of 50,000 addresses: write a sitemap index with several files');
 writeFileSync(
   join(DIST, 'sitemap.xml'),
-  `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${listed
-    .map((p) => `  <url><loc>${ORIGIN}${address(p)}</loc><lastmod>${today}</lastmod></url>`)
+  `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls
+    .map((u) => `  <url><loc>${ORIGIN}${u.path}</loc>${u.lastmod ? `<lastmod>${u.lastmod}</lastmod>` : ''}</url>`)
     .join('\n')}\n</urlset>\n`,
 );
 writeFileSync(join(DIST, 'robots.txt'), `User-agent: *\nAllow: /\n\nSitemap: ${ORIGIN}/sitemap.xml\n`);
-writeFileSync(join(DIST, 'site', 'site.js'), relink(readFileSync(join(DIST, 'site', 'site.js'), 'utf8')));
-console.log(`site: ${pages.length} pages around the app (${pages.join(', ')})`);
+console.log(`site: ${pages.length} pages around the app (${pages.join(', ')}), and ${study.length} study pages`);

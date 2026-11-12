@@ -1,0 +1,456 @@
+/* The study pages built from Knowzone's data (/practice-questions, /study-notes, /textbooks,
+   /course-guides), on top of site.css. Made by apps/mobile/scripts/seo; nothing here needs a script. */
+
+/* ─── Page header ───────────────────────────────────────────────────────────── */
+
+.kz-head {
+  padding: 104px 0 40px;
+  text-align: start;
+}
+.kz-head .wrap {
+  display: grid;
+  gap: 12px;
+  justify-items: start;
+}
+.kz-head h1 {
+  max-width: 900px;
+  font-size: clamp(28px, 4.2vw, 46px);
+  letter-spacing: -0.025em;
+  line-height: 1.12;
+  overflow-wrap: anywhere;
+}
+.kz-head p {
+  max-width: 760px;
+  margin: 0;
+  font-size: 17.5px;
+}
+.kz-eyebrow {
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.14);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.kz-crumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: #cfc7f7;
+  font-size: 14px;
+  font-weight: 700;
+}
+.kz-crumbs li + li::before {
+  content: '›';
+  margin-inline-end: 8px;
+  opacity: 0.7;
+}
+.kz-crumbs a {
+  color: #e9e3ff;
+  text-decoration: none;
+}
+.kz-crumbs a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* ─── Body ──────────────────────────────────────────────────────────────────── */
+
+.kz-main {
+  padding: 40px 0 72px;
+}
+.kz-body {
+  display: grid;
+  gap: 36px;
+  max-width: 860px;
+  color: #38345c;
+}
+.kz-body.kz-wide {
+  max-width: var(--max);
+}
+.kz-body > *,
+.kz-section > * {
+  min-width: 0;
+}
+.kz-body a {
+  color: var(--purple);
+}
+.kz-section {
+  display: grid;
+  gap: 14px;
+}
+.kz-section h2 {
+  color: var(--ink);
+  font-size: clamp(22px, 3vw, 28px);
+  letter-spacing: -0.02em;
+}
+.kz-section h3 {
+  margin-top: 10px;
+  color: var(--ink);
+  font-size: 18px;
+}
+.kz-text,
+.kz-lead,
+.kz-points,
+.kz-note {
+  max-width: 760px;
+}
+.kz-small,
+.kz-note {
+  color: var(--ink-2);
+  font-size: 14.5px;
+}
+.kz-note {
+  padding: 14px 18px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--soft);
+}
+.kz-points,
+.kz-uses {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding-inline-start: 22px;
+}
+
+/* Link tiles and chips */
+.kz-tiles {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr));
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.kz-tile {
+  display: grid;
+  align-content: start;
+  gap: 4px;
+  height: 100%;
+  padding: 16px 18px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #fff;
+  text-decoration: none;
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+.kz-tile:hover {
+  border-color: var(--purple);
+  box-shadow: 0 14px 30px -18px rgba(106, 69, 255, 0.6);
+  transform: translateY(-2px);
+}
+.kz-tile b {
+  color: var(--ink);
+  font-size: 16.5px;
+  font-weight: 800;
+  line-height: 1.3;
+}
+.kz-tile span {
+  color: var(--ink-2);
+  font-size: 14.5px;
+  line-height: 1.45;
+}
+.kz-tile em,
+.kz-book-tags em {
+  justify-self: start;
+  padding: 2px 10px;
+  border-radius: 999px;
+  background: var(--soft);
+  color: var(--purple);
+  font-size: 12.5px;
+  font-style: normal;
+  font-weight: 800;
+}
+.kz-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.kz-chips a {
+  display: block;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: var(--soft);
+  font-size: 14.5px;
+  font-weight: 700;
+  text-decoration: none;
+}
+.kz-chips a:hover {
+  background: var(--lilac);
+}
+
+/* ─── Practice questions ────────────────────────────────────────────────────── */
+
+.kz-questions {
+  display: grid;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.kz-q {
+  display: grid;
+  gap: 12px;
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: #fff;
+  scroll-margin-top: 92px;
+}
+.kz-q > * {
+  min-width: 0;
+}
+.kz-q-from {
+  color: var(--ink-3);
+  font-size: 13.5px;
+  font-weight: 700;
+}
+.kz-q-text {
+  display: grid;
+  gap: 8px;
+  color: var(--ink);
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+.kz-passage {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 12px 16px;
+  border-inline-start: 3px solid var(--purple);
+  border-radius: 0 12px 12px 0;
+  background: var(--soft);
+  font-size: 16px;
+}
+.kz-options {
+  display: grid;
+  gap: 6px;
+  margin: 0;
+  padding-inline-start: 28px;
+  overflow-wrap: anywhere;
+}
+.kz-options li::marker {
+  color: var(--purple);
+  font-weight: 800;
+}
+.kz-answer {
+  border-radius: 12px;
+  background: var(--soft);
+}
+.kz-answer summary {
+  padding: 10px 14px;
+  color: var(--purple);
+  font-weight: 800;
+  cursor: pointer;
+}
+.kz-answer[open] summary {
+  border-bottom: 1px solid var(--line);
+}
+.kz-answer p {
+  padding: 10px 14px 0;
+  font-size: 16px;
+}
+.kz-answer p:last-child {
+  padding-bottom: 14px;
+}
+.kz-answer b {
+  color: var(--ink);
+}
+.kz-callout {
+  display: grid;
+  gap: 12px;
+  justify-items: start;
+  padding: 24px;
+  border: 1.5px dashed var(--purple);
+  border-radius: 18px;
+  background: var(--soft);
+}
+.kz-callout h2 {
+  color: var(--ink);
+  font-size: clamp(21px, 3vw, 26px);
+}
+.kz-body .btn {
+  color: #fff;
+}
+.kz-body .btn.outline {
+  color: var(--deep);
+}
+
+/* ─── Books ─────────────────────────────────────────────────────────────────── */
+
+.kz-books {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr));
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.kz-book {
+  display: grid;
+  align-items: start;
+  gap: 14px;
+  grid-template-columns: 56px 1fr;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #fff;
+}
+.kz-book > div {
+  display: grid;
+  gap: 3px;
+  min-width: 0;
+  font-size: 14.5px;
+  line-height: 1.4;
+}
+.kz-body .kz-book-title {
+  color: var(--ink);
+  font-size: 16px;
+  font-weight: 800;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+.kz-body .kz-book-title:hover {
+  color: var(--purple);
+}
+.kz-book-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 4px;
+}
+.kz-book-tags .kz-free {
+  background: rgba(34, 211, 189, 0.16);
+  color: #0a7d70;
+}
+.kz-cover {
+  display: block;
+  width: 56px;
+  height: 84px;
+  border-radius: 6px;
+  background: var(--soft);
+  box-shadow: 0 6px 14px -8px rgba(27, 23, 64, 0.5);
+  object-fit: contain;
+}
+/* A drawn cover for books without a picture: the title on a coloured board. */
+.kz-drawn {
+  display: grid;
+  align-content: center;
+  padding: 6px 5px 6px 9px;
+  overflow: hidden;
+  border-inline-start: 4px solid rgba(255, 255, 255, 0.28);
+  background: linear-gradient(135deg, hsl(var(--hue) 55% 46%), hsl(calc(var(--hue) + 40) 60% 34%));
+  color: #fff;
+  font-size: 7.5px;
+  font-weight: 800;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+}
+.kz-bookpage {
+  display: grid;
+  align-items: start;
+  gap: 28px;
+  grid-template-columns: 200px 1fr;
+}
+.kz-bookpage > div {
+  display: grid;
+  gap: 16px;
+  min-width: 0;
+}
+.kz-bookpage .kz-cover {
+  width: 200px;
+  height: 300px;
+  border-radius: 12px;
+}
+.kz-bookpage .kz-drawn {
+  padding: 22px 18px 22px 26px;
+  border-inline-start-width: 10px;
+  font-size: 20px;
+}
+.kz-facts {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+}
+.kz-facts div {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 96px 1fr;
+}
+.kz-facts dt {
+  padding-top: 2px;
+  color: var(--ink-3);
+  font-size: 14px;
+  font-weight: 800;
+}
+.kz-facts dd {
+  margin: 0;
+  color: var(--ink);
+  overflow-wrap: anywhere;
+}
+.kz-read {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.kz-uses span {
+  color: var(--ink-3);
+  font-size: 14.5px;
+}
+
+/* ─── The closing band ──────────────────────────────────────────────────────── */
+
+.kz-end {
+  padding: 64px 0;
+}
+.kz-end h2 {
+  font-size: clamp(26px, 3.6vw, 38px);
+}
+.kz-end-alt {
+  display: block;
+  width: fit-content;
+  margin: 16px auto 0;
+  color: #e4dcff;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+@media (max-width: 620px) {
+  .kz-head {
+    padding: 92px 0 30px;
+  }
+  .kz-main {
+    padding: 28px 0 56px;
+  }
+  .kz-body {
+    gap: 30px;
+  }
+  .kz-q {
+    padding: 16px;
+  }
+  .kz-bookpage {
+    gap: 20px;
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .kz-bookpage .kz-cover {
+    width: 150px;
+    height: 225px;
+  }
+  .kz-bookpage .kz-drawn {
+    padding: 16px 12px 16px 18px;
+    border-inline-start-width: 8px;
+    font-size: 16px;
+  }
+  .kz-facts div {
+    grid-template-columns: 84px 1fr;
+  }
+}
