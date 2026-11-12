@@ -10,16 +10,51 @@
     <meta name="theme-color" content="#7c5cff" />
     <meta property="og:title" content="Knowzone: learn anything, ace every exam" />
     <meta property="og:description" content="An AI tutor, JAMB, WAEC and NECO practice, courses, study rooms and learning games, in 10 languages. Join the waitlist." />
-    <meta property="og:image" content="https://knowzoneai.com/assets/icon-512.png" />
+    <meta property="og:image" content="https://www.knowzoneai.com/assets/icon-512.png" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://knowzoneai.com/" />
-    <link rel="canonical" href="https://knowzoneai.com/" />
+    <meta property="og:url" content="https://www.knowzoneai.com/" />
+    <link rel="canonical" href="https://www.knowzoneai.com/" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
     <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
+    <!-- What Knowzone is, for search engines (schema.org). The FAQ's version is made from the page by main.js. -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://www.knowzoneai.com/#organization",
+            "name": "Knowzone AI",
+            "url": "https://www.knowzoneai.com/",
+            "logo": "https://www.knowzoneai.com/assets/icon-512.png",
+            "email": "info@knowzoneai.com"
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://www.knowzoneai.com/#website",
+            "name": "Knowzone",
+            "url": "https://www.knowzoneai.com/",
+            "publisher": { "@id": "https://www.knowzoneai.com/#organization" },
+            "inLanguage": "en"
+          },
+          {
+            "@type": "MobileApplication",
+            "name": "Knowzone",
+            "operatingSystem": "Android",
+            "applicationCategory": "EducationalApplication",
+            "description": "The AI study app for JAMB, WAEC, NECO and university: an AI tutor, exam practice, flashcards and video summaries from your own textbooks, in 10 languages.",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "NGN" },
+            "publisher": { "@id": "https://www.knowzoneai.com/#organization" }
+          }
+        ]
+      }
+    </script>
+    <!-- Visit counts (Vercel Web Analytics): no cookies, nothing that identifies anyone. -->
+    <script defer src="/_vercel/insights/script.js"></script>
   </head>
   <body>
     <!-- Icons (Feather-style line icons) -->

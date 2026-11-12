@@ -72,11 +72,33 @@ function relink(text) {
 /** Visitors who are already signed in skip the homepage, as in a chat app. */
 const SIGNED_IN = `<script>try{for(var k in localStorage)if(/^sb-.*-auth-token$/.test(k)&&localStorage.getItem(k)){location.replace('/home');break}}catch(e){}</script>`;
 
+// ─── Search engines and visit counts ──────────────────────────────────────────
+
+const ORIGIN = 'https://app.knowzoneai.com';
+/** Visit counts (Vercel Web Analytics): no cookies, nothing that identifies anyone. Follows the app's page changes too. */
+const ANALYTICS = '<script defer src="/_vercel/insights/script.js"></script>';
+const address = (page) => (page === 'index.html' ? '/' : `/${page.replace(/\.html$/, '')}`);
+
 const pages = readdirSync(SITE).filter((f) => f.endsWith('.html') && !['dashboard.html', 'signup.html'].includes(f));
+// post.html shows whichever blog post its address names, so it has no single address to give search engines.
+const listed = pages.filter((p) => p !== 'post.html');
 for (const page of pages) {
   let html = relink(readFileSync(join(SITE, page), 'utf8'));
   if (page === 'index.html') html = html.replace('</head>', `${SIGNED_IN}</head>`);
+  const canonical = listed.includes(page) && !html.includes('rel="canonical"') ? `<link rel="canonical" href="${ORIGIN}${address(page)}">` : '';
+  html = html.replace('</head>', `${canonical}${ANALYTICS}</head>`);
   writeFileSync(join(DIST, page), html);
 }
+writeFileSync(join(DIST, 'app.html'), readFileSync(join(DIST, 'app.html'), 'utf8').replace('</head>', `${ANALYTICS}</head>`));
+
+// The site pages are for search engines; the app's own pages (sign-in, home, tutor …) are for signed-in students.
+const today = new Date().toISOString().slice(0, 10);
+writeFileSync(
+  join(DIST, 'sitemap.xml'),
+  `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${listed
+    .map((p) => `  <url><loc>${ORIGIN}${address(p)}</loc><lastmod>${today}</lastmod></url>`)
+    .join('\n')}\n</urlset>\n`,
+);
+writeFileSync(join(DIST, 'robots.txt'), `User-agent: *\nAllow: /\n\nSitemap: ${ORIGIN}/sitemap.xml\n`);
 writeFileSync(join(DIST, 'site', 'site.js'), relink(readFileSync(join(DIST, 'site', 'site.js'), 'utf8')));
 console.log(`site: ${pages.length} pages around the app (${pages.join(', ')})`);

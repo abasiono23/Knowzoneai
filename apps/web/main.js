@@ -282,3 +282,21 @@ function confetti() {
   };
   requestAnimationFrame(frame);
 }
+
+// ─── FAQ for search engines ───────────────────────────────────────────────────
+
+// Google can show the homepage's questions and answers in search results. The FAQPage data is made
+// from the questions on the page, so it always says exactly what visitors read.
+const faq = $$('.faq details')
+  .map((d) => ({ q: $('summary', d)?.textContent.trim(), a: $('.answer', d)?.textContent.replace(/\s+/g, ' ').trim() }))
+  .filter((x) => x.q && x.a);
+if (faq.length) {
+  const data = document.createElement('script');
+  data.type = 'application/ld+json';
+  data.textContent = JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faq.map((x) => ({ '@type': 'Question', name: x.q, acceptedAnswer: { '@type': 'Answer', text: x.a } })),
+  });
+  document.head.append(data);
+}

@@ -74,16 +74,18 @@ function page(o: { path: string; title: string; description: string; eyebrow: st
     <meta name="theme-color" content="#7c5cff" />
     <meta property="og:title" content="${o.title}" />
     <meta property="og:description" content="${o.description}" />
-    <meta property="og:image" content="https://knowzoneai.com/assets/icon-512.png" />
+    <meta property="og:image" content="https://www.knowzoneai.com/assets/icon-512.png" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://knowzoneai.com${o.path}" />
-    <link rel="canonical" href="https://knowzoneai.com${o.path}" />
+    <meta property="og:url" content="https://www.knowzoneai.com${o.path}" />
+    <link rel="canonical" href="https://www.knowzoneai.com${o.path}" />
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png" />
     <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="/styles.css" />
+    <!-- Visit counts (Vercel Web Analytics): no cookies, nothing that identifies anyone. -->
+    <script defer src="/_vercel/insights/script.js"></script>
   </head>
   <body>
     <!-- Made by apps/mobile/scripts/web-pages.mts from the app's legal texts. Edit those, not this file. -->
@@ -169,7 +171,7 @@ writeFileSync(
     <meta name="theme-color" content="#7c5cff" />
     <meta property="og:title" content="Shared from Knowzone" />
     <meta property="og:description" content="Knowzone is the AI study app for exams and beyond. Open the link to see what was shared." />
-    <meta property="og:image" content="https://knowzoneai.com/assets/icon-512.png" />
+    <meta property="og:image" content="https://www.knowzoneai.com/assets/icon-512.png" />
     <meta property="og:type" content="website" />
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png" />
     <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
@@ -177,6 +179,8 @@ writeFileSync(
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="/styles.css" />
+    <!-- Visit counts (Vercel Web Analytics): no cookies, nothing that identifies anyone. -->
+    <script defer src="/_vercel/insights/script.js"></script>
   </head>
   <body>
     <!-- Made by apps/mobile/scripts/web-pages.mts. The content comes from share.js. -->

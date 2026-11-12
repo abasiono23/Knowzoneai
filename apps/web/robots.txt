@@ -1,0 +1,6 @@
+# Knowzone's public website. Search engines are welcome everywhere except the staff dashboard.
+# Shared-link pages (/v/…, /m/…, /verify/…, /invite/…) carry their own "noindex".
+User-agent: *
+Disallow: /admin
+
+Sitemap: https://www.knowzoneai.com/sitemap.xml
