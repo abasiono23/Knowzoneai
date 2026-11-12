@@ -177,7 +177,12 @@ ${o.body}
         <h2>${esc(o.cta.title)}</h2>
         <p>${esc(o.cta.text)}</p>
         <a class="btn light" href="${esc(o.cta.href)}">${esc(o.cta.label)} →</a>
-        ${o.cta.alt === false ? '' : `<a class="kz-end-alt" href="${APP.signUp}">New here? Sign up free</a>`}
+        ${
+          o.cta.alt === false
+            ? ''
+            : // After signing up, the app opens the page the button points to (src/lib/return-to.ts).
+              `<a class="kz-end-alt" href="${esc(o.cta.href.startsWith('/') ? `${APP.signUp}?next=${encodeURIComponent(o.cta.href)}` : APP.signUp)}">New here? Sign up free</a>`
+        }
       </div>
     </section>
     <footer id="foot">${chrome.footer}</footer>

@@ -7,10 +7,6 @@
 import { EXAMS, EXAM_SUBJECTS } from '../lib/data.mjs';
 import { APP, ORG, ORIGIN, PATHS, chips, clip, esc, list, page, pageTitle, paragraphs, plural, section, tiles } from '../lib/html.mjs';
 
-/** What every practice page says about where the questions come from. */
-const origin = (exam) =>
-  `These are practice questions written by Knowzone with AI in ${exam ? `the exact ${EXAMS[exam].name} format` : 'each exam’s exact format'}, and checked by a second, independent review. They are not taken from previous years’ exam papers.`;
-const note = (exam) => `        <p class="kz-note">${esc(origin(exam))}</p>`;
 
 const LETTERS = 'ABCDEFGH';
 const ROOT = PATHS.practice;
@@ -102,7 +98,6 @@ export function practicePages({ groups, libraries, notesFor, books }) {
         ...Object.keys(EXAMS)
           .filter((exam) => byExam(exam).length)
           .map((exam) => section(`${EXAMS[exam].full} practice questions`, `<p class="kz-lead"><a href="${ROOT}/${exam}">All ${EXAMS[exam].name} subjects</a></p>${tiles(byExam(exam).map(subjectTile))}`)),
-        note(),
       ].join('\n'),
     }),
   });
@@ -139,7 +134,6 @@ export function practicePages({ groups, libraries, notesFor, books }) {
         body: [
           section('Choose a subject', `<p class="kz-lead">Each ${E.name} objective paper here has ${list(formats)}. Every question has its answer and an explanation.</p>${tiles(own.map(subjectTile))}`),
           section('Other exams', chips(Object.keys(EXAMS).filter((e) => e !== exam && byExam(e).length).map((e) => ({ href: `${ROOT}/${e}`, name: `${EXAMS[e].name} practice questions` })))),
-          note(exam),
         ].join('\n'),
       }),
     });
@@ -198,7 +192,6 @@ export function practicePages({ groups, libraries, notesFor, books }) {
           ),
           section('Questions by topic', tiles(g.topics.map((t) => ({ href: `${base}/${t.id}`, title: t.name, text: plural(t.questions.length, 'question') })))),
           section(`More for ${S}`, chips([notesLink, bookList(g.subject), ...sameSubject.map((o) => ({ href: subjectPath(o), name: `${label(o)} practice questions` }))].filter(Boolean))),
-          note(g.exam),
         ].join('\n'),
       }),
     });
@@ -233,7 +226,6 @@ export function practicePages({ groups, libraries, notesFor, books }) {
             `        <ol class="kz-questions">
           ${t.questions.map((q) => question(q, { from: `From <a href="${paperPath(q.paper)}#q${q.n}">practice paper ${q.paper.number}, question ${q.n}</a>` })).join('\n          ')}
         </ol>`,
-            note(g.exam),
             notes.length
               ? section(`Study notes on ${t.name}`, chips(notes.map((n) => ({ href: `${PATHS.learn}/${library.id}/${n.id}`, name: n.title }))))
               : notesLink
@@ -293,7 +285,6 @@ export function practicePages({ groups, libraries, notesFor, books }) {
           <a class="btn" href="${APP.paper(p.id)}">Open this paper in the app →</a>
         </aside>`
               : '',
-            note(g.exam),
             section(
               `More ${label(g)} practice`,
               chips([...g.papers.filter((o) => o !== p).map((o) => ({ href: paperPath(o), name: `Practice paper ${o.number}` })), { href: base, name: `${label(g)} questions by topic` }, notesLink, bookList(g.subject)].filter(Boolean)),

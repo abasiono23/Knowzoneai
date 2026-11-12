@@ -31,6 +31,8 @@ import { SafetyProvider } from '@/lib/safety/store';
 import { TextbooksProvider } from '@/lib/textbooks/store';
 import { VideosProvider } from '@/lib/videos/store';
 import { WorldProvider } from '@/lib/world/store';
+// Notes the page a signed-out visitor opened, before the sign-in guard sends them to the welcome screen.
+import '@/lib/return-to';
 
 SplashScreen.preventAutoHideAsync();
 
