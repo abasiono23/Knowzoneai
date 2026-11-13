@@ -10,6 +10,7 @@ import { Colors, Gradients, Spacing } from '@/constants/theme';
 import { errorText } from '@/i18n/errors';
 import { api } from '@/lib/api';
 import { PLANS } from '@/lib/billing/plans';
+import { STORE_PURCHASES, STORE_UI, StoreError, ownedPurchases } from '@/lib/billing/store';
 import { fmtDate } from '@/lib/billing/use-billing';
 import { useSession } from '@/lib/session';
 
@@ -29,14 +30,25 @@ export default function RestorePurchasesScreen() {
     setBusy(true);
     setError(null);
     try {
-      const r = await api.restorePurchases();
+      // Android: what the phone's Google account owns is checked with Google by the server.
+      const r =
+        STORE_UI && STORE_PURCHASES
+          ? await api.restoreGooglePurchases(
+              (await ownedPurchases()).map(({ purchaseToken, productId, packageName }) => ({
+                purchaseToken,
+                productId,
+                packageName,
+              })),
+            )
+          : { ...(await api.restorePurchases()), otherAccount: false };
       setUser(r.user);
+      if (!r.restored && r.otherAccount) setError(t('store.errors.otherAccount', { store }));
       const sub = r.billing.subscription;
       setResult(
         r.restored && sub ? { restored: true, plan: sub.plan, until: sub.currentPeriodEnd } : { restored: false },
       );
     } catch (e) {
-      setError(errorText(e, t('restore.unreachable')));
+      setError(e instanceof StoreError ? t('restore.unreachable') : errorText(e, t('restore.unreachable')));
     } finally {
       setBusy(false);
     }

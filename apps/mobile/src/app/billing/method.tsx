@@ -8,6 +8,7 @@ import { Button, Card, Chip, Screen, ScreenHeader, Text } from '@/components/ui'
 import { Colors, Spacing } from '@/constants/theme';
 import type { PaymentMethodType } from '@/lib/api';
 import { useCheckout } from '@/lib/billing/checkout';
+import { STORE_UI } from '@/lib/billing/store';
 import { USE_MOCKS } from '@/lib/config';
 import { goBack } from '@/lib/navigation';
 
@@ -43,7 +44,8 @@ export default function PaymentMethodScreen() {
           title: STORE,
           body: t('method.storeBody', { store: STORE }),
         },
-    ...(naira
+    // On Android the plan is a Google Play subscription: Google requires its billing for in-app plans.
+    ...(naira && !STORE_UI
       ? ([
           {
             type: 'transfer',
@@ -83,7 +85,7 @@ export default function PaymentMethodScreen() {
         />
       ))}
 
-      {!naira && (
+      {!naira && !STORE_UI && (
         <Text variant="small" color={Colors.textMuted}>
           {t('currency.cardOnly')}
         </Text>

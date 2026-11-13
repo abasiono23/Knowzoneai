@@ -45,6 +45,11 @@ services:
         sync: false
       - key: FLW_SECRET_HASH
         sync: false
+      # Google Play Billing for the Android app (docs/play-billing-setup.md). GOOGLE_PLAY_PACKAGE defaults to ai.knowzone.app.
+      - key: GOOGLE_PLAY_SERVICE_ACCOUNT
+        sync: false
+      - key: GOOGLE_PLAY_WEBHOOK_SECRET
+        sync: false
       - key: ADMIN_EMAILS
         sync: false
       - key: SUPPORT_EMAIL

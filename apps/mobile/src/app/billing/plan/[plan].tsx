@@ -14,8 +14,6 @@ import {
   PLANS,
   TUTOR_DAILY,
   money,
-  perMonth,
-  priceOf,
   type PaidPlan,
   type PlanId,
 } from '@/lib/billing/plans';
@@ -60,10 +58,10 @@ export default function PlanDetailScreen() {
           {p.tagline}
         </Text>
         {plan === 'FREE' ? (
-          <Text variant="display">{money(0, checkout.currency)}</Text>
+          <Text variant="display">{money(0, checkout.shownCurrency)}</Text>
         ) : (
           <View style={{ flexDirection: 'row', alignItems: 'flex-end', gap: 4 }}>
-            <Text variant="display">{money(priceOf(plan, checkout.period, checkout.currency), checkout.currency)}</Text>
+            <Text variant="display">{checkout.priceText(plan, checkout.period)}</Text>
             <Text variant="body" style={{ paddingBottom: 4 }}>
               {PERIOD[checkout.period].short}
             </Text>
@@ -82,7 +80,7 @@ export default function PlanDetailScreen() {
           {checkout.period !== 'month' && (
             <Text variant="small" color={Colors.success} center>
               {t('plan.perMonthNote', {
-                price: money(perMonth(plan, checkout.period, checkout.currency), checkout.currency),
+                price: checkout.perMonthText(plan, checkout.period),
                 note: PERIOD[checkout.period].note,
               })}
             </Text>
@@ -140,7 +138,7 @@ export default function PlanDetailScreen() {
           </View>
           <Button
             title={t(plan === 'PLUS' ? 'plan.continuePlus' : 'plan.continuePro', {
-              price: money(priceOf(plan, checkout.period, checkout.currency), checkout.currency),
+              price: checkout.priceText(plan, checkout.period),
             })}
             onPress={() => {
               checkout.set({ plan });

@@ -20,7 +20,8 @@
       },
       "predictiveBackGestureEnabled": false,
       "softwareKeyboardLayoutMode": "resize",
-      "package": "ai.knowzone.app"
+      "package": "ai.knowzone.app",
+      "permissions": ["com.android.vending.BILLING"]
     },
     "web": {
       "output": "single",
@@ -55,7 +56,8 @@
           "speechRecognitionPermission": "Knowzone turns what you say to Kora into text, so she can answer your question."
         }
       ],
-      "expo-video"
+      "expo-video",
+      "expo-iap"
     ],
     "experiments": {
       "typedRoutes": true,

@@ -38,6 +38,15 @@ const Env = z.object({
   FLW_SECRET_HASH: z.string().optional(),
   FLW_BASE_URL: z.string().default('https://api.flutterwave.com'),
 
+  // Google Play Billing (the Android app). Without the service account the server runs, and Play purchases
+  // answer 503 "not configured". Setup steps: docs/play-billing-setup.md.
+  /** The service account's JSON key: the whole file pasted as one line, or base64 of it. */
+  GOOGLE_PLAY_SERVICE_ACCOUNT: z.string().optional(),
+  /** The Android app's package name (apps/mobile/app.json → android.package). */
+  GOOGLE_PLAY_PACKAGE: z.string().default('ai.knowzone.app'),
+  /** A long random string. Google's notifications must carry it (…/webhooks/google-play?token=…) or they're ignored. */
+  GOOGLE_PLAY_WEBHOOK_SECRET: z.string().optional(),
+
   // Emails the API sends itself (data exports, deletion notices). Sign-up and reset codes are sent by Supabase.
   // Sent through Resend (needs your own domain) or SMTP, e.g. Gmail with an app password. Without either,
   // emails are printed to the server log (development only).

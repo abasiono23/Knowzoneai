@@ -8,7 +8,8 @@ import { CurrencyToggle, FeatureList, PeriodToggle, PlanBadge, TrustRow } from '
 import { Button, Card, Screen, ScreenHeader, Text } from '@/components/ui';
 import { Colors, Radius, Spacing } from '@/constants/theme';
 import { useCheckout } from '@/lib/billing/checkout';
-import { PERIOD, PLANS, money, perMonth, priceOf, type PaidPlan, type PlanId } from '@/lib/billing/plans';
+import { PERIOD, PLANS, money, type PaidPlan, type PlanId } from '@/lib/billing/plans';
+import { STORE_NAME, STORE_UI } from '@/lib/billing/store';
 import { useBilling } from '@/lib/billing/use-billing';
 import { useSession } from '@/lib/session';
 
@@ -47,7 +48,7 @@ export default function PricingScreen() {
       )}
 
       <PeriodToggle value={period} onChange={(p) => checkout.set({ period: p })} />
-      <CurrencyToggle />
+      {!STORE_UI && <CurrencyToggle />}
 
       {(['PLUS', 'PRO'] as PaidPlan[]).map((plan) => {
         const p = PLANS[plan];
@@ -71,7 +72,7 @@ export default function PricingScreen() {
                   </Text>
                 </View>
                 <View style={{ alignItems: 'flex-end' }}>
-                  <Text variant="title">{money(priceOf(plan, period, checkout.currency), checkout.currency)}</Text>
+                  <Text variant="title">{checkout.priceText(plan, period)}</Text>
                   <Text variant="small" color="rgba(255,255,255,0.85)">
                     {PERIOD[period].short}
                   </Text>
@@ -81,7 +82,7 @@ export default function PricingScreen() {
                 {period !== 'month' && (
                   <Text variant="small" color={Colors.success}>
                     {t('pricing.perMonthNote', {
-                      price: money(perMonth(plan, period, checkout.currency), checkout.currency),
+                      price: checkout.perMonthText(plan, period),
                       note: PERIOD[period].note,
                     })}
                   </Text>
@@ -124,8 +125,8 @@ export default function PricingScreen() {
             <Text variant="bodyStrong">{PLANS.FREE.name}</Text>
             <Text variant="small" color={Colors.textSecondary}>
               {current === 'FREE'
-                ? t('pricing.freeCurrent', { price: money(0, checkout.currency) })
-                : t('pricing.freeNoCard', { price: money(0, checkout.currency) })}
+                ? t('pricing.freeCurrent', { price: money(0, checkout.shownCurrency) })
+                : t('pricing.freeNoCard', { price: money(0, checkout.shownCurrency) })}
             </Text>
           </View>
           <Ionicons name="chevron-forward" size={18} color={Colors.textMuted} />
@@ -141,9 +142,12 @@ export default function PricingScreen() {
       <TrustRow />
 
       <View style={styles.links}>
-        <Text variant="small" color={Colors.primary} onPress={() => router.push('/billing/promo')}>
-          {t('pricing.havePromo')}
-        </Text>
+        {/* Our promo codes don't exist in the app store, which sets its own prices. */}
+        {!STORE_UI && (
+          <Text variant="small" color={Colors.primary} onPress={() => router.push('/billing/promo')}>
+            {t('pricing.havePromo')}
+          </Text>
+        )}
         {Platform.OS !== 'web' && (
           <Text variant="small" color={Colors.primary} onPress={() => router.push('/billing/restore')}>
             {t('actions.restore')}
@@ -154,7 +158,7 @@ export default function PricingScreen() {
         </Text>
       </View>
       <Text variant="small" color={Colors.textMuted} center style={{ fontSize: 12 }}>
-        {t('pricing.footer')}
+        {STORE_UI ? t('store.footer', { store: STORE_NAME }) : t('pricing.footer')}
       </Text>
     </Screen>
   );

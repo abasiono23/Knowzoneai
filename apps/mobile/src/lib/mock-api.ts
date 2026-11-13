@@ -404,7 +404,7 @@ function billingOf(db: Db, user: MockUser): Billing {
   if (sub && sub.status !== 'expired' && Date.now() > sub.currentPeriodEnd) {
     if (sub.status === 'active' && sub.autoRenew) {
       const currency = b.payments.find((p) => p.status === 'paid')?.currency ?? 'NGN';
-      const amount = PRICES[currency][sub.plan][sub.period];
+      const amount = PRICES[currency === 'USD' ? 'USD' : 'NGN'][sub.plan][sub.period];
       b.payments.unshift({
         id: mockId(),
         at: sub.currentPeriodEnd,

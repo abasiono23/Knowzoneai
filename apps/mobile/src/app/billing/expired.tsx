@@ -8,7 +8,7 @@ import { Button, Card, Screen, ScreenHeader, Text } from '@/components/ui';
 import { Colors, Spacing } from '@/constants/theme';
 import { formatNumber } from '@/i18n';
 import { useCheckout } from '@/lib/billing/checkout';
-import { MONTHLY_CREDITS, PERIOD, PLANS, TUTOR_DAILY, money, priceOf } from '@/lib/billing/plans';
+import { MONTHLY_CREDITS, PERIOD, PLANS, TUTOR_DAILY } from '@/lib/billing/plans';
 import { fmtDate, useBilling } from '@/lib/billing/use-billing';
 import { useSession } from '@/lib/session';
 
@@ -79,7 +79,7 @@ export default function SubscriptionExpiredScreen() {
       </Card>
       <Button
         title={t('expired.renew', {
-          price: money(priceOf(sub.plan, sub.period, checkout.currency), checkout.currency),
+          price: checkout.priceText(sub.plan, sub.period),
           period: PERIOD[sub.period].short,
         })}
         icon="refresh"

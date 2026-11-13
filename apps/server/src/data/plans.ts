@@ -33,6 +33,15 @@ export const PERIOD_DAYS: Record<BillingPeriod, number> = {
 /** AI credits added each month of a paid plan (fair use). */
 export const MONTHLY_CREDITS: Record<PaidPlan, number> = { PLUS: 60, PRO: 200 };
 
+/**
+ * Google Play (the Android app): one subscription product per plan, each with three base plans, one per
+ * period. The ids are typed into Play Console by hand (docs/play-billing-setup.md) and can't be renamed
+ * there, so change them here and in apps/mobile/src/lib/billing/play-products.ts only before launch.
+ */
+export const PLAY_PRODUCTS: Record<string, PaidPlan> = { knowzone_plus: 'PLUS', knowzone_pro: 'PRO' };
+/** Base plan id → period: monthly bills every month (P1M), term every 3 months (P3M), yearly every year (P1Y). */
+export const PLAY_BASE_PLANS: Record<string, BillingPeriod> = { monthly: 'month', term: 'term', yearly: 'year' };
+
 /** Promo codes: `months` limits a code to some periods; one use per account. */
 export const PROMOS: Record<
   string,

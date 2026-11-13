@@ -8,7 +8,7 @@ import { Button, Card, ProgressBar, Screen, Text } from '@/components/ui';
 import { Colors, Gradients, Spacing } from '@/constants/theme';
 import { formatNumber } from '@/i18n';
 import { useCheckout } from '@/lib/billing/checkout';
-import { MONTHLY_CREDITS, PLANS, money, priceOf } from '@/lib/billing/plans';
+import { MONTHLY_CREDITS, PLANS } from '@/lib/billing/plans';
 import { fmtDate, useBilling } from '@/lib/billing/use-billing';
 import { goBack } from '@/lib/navigation';
 import { useSession } from '@/lib/session';
@@ -74,7 +74,7 @@ export default function UsageLimitScreen() {
           <Text variant="small" color={Colors.textSecondary}>
             {t('limit.about', {
               count: MONTHLY_CREDITS[next],
-              price: money(priceOf(next, 'month', checkout.currency), checkout.currency),
+              price: checkout.priceText(next, 'month'),
             })}
           </Text>
           <Button

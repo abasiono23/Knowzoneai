@@ -7,7 +7,8 @@ import { Button, Card, Screen, ScreenHeader, Text } from '@/components/ui';
 import { Colors, Gradients, Spacing } from '@/constants/theme';
 import { api } from '@/lib/api';
 import { useCheckout } from '@/lib/billing/checkout';
-import { MONTHLY_CREDITS, PERIOD, PLANS, money, priceOf } from '@/lib/billing/plans';
+import { MONTHLY_CREDITS, PERIOD, PLANS } from '@/lib/billing/plans';
+import { openStoreSubscriptions, storeManaged } from '@/lib/billing/store';
 import { daysUntil, fmtDate, useBilling } from '@/lib/billing/use-billing';
 import { goBack } from '@/lib/navigation';
 
@@ -32,7 +33,12 @@ export default function RenewalReminderScreen() {
 
   const p = PLANS[sub.plan];
   const days = daysUntil(sub.currentPeriodEnd, now);
-  const price = priceOf(sub.plan, sub.period, checkout.currency);
+  const price = checkout.priceText(sub.plan, sub.period);
+  // A Google Play subscription is cancelled and resumed in Google Play.
+  const inStore = storeManaged(sub);
+  const openStore = () => {
+    openStoreSubscriptions(sub.plan);
+  };
   const autoRenewing = sub.status === 'active' && sub.autoRenew;
   const method = methodLabel(sub.method, t);
   const date = fmtDate(sub.currentPeriodEnd);
@@ -65,7 +71,7 @@ export default function RenewalReminderScreen() {
         title={title}
         body={
           autoRenewing
-            ? t('renewal.bodyAuto', { price: money(price, checkout.currency), method, date })
+            ? t('renewal.bodyAuto', { price, method, date })
             : sub.status === 'cancelled'
               ? t('renewal.bodyCancelled', { date })
               : t('renewal.bodyManual', { method, date, plan: p.name })
@@ -81,7 +87,7 @@ export default function RenewalReminderScreen() {
         <Divider />
         <SummaryRow
           label={autoRenewing ? t('labels.nextCharge') : t('labels.toRenew')}
-          value={money(price, checkout.currency)}
+          value={price}
           strong
         />
         <Text variant="small" color={Colors.textMuted}>
@@ -93,17 +99,26 @@ export default function RenewalReminderScreen() {
         <>
           <Button title={t('actions.gotIt', { ns: 'common' })} onPress={() => goBack('/billing/manage')} />
           <Button variant="secondary" title={t('renewal.changePlan')} onPress={() => router.push('/billing')} />
-          <Button variant="ghost" title={t('renewal.turnOff')} onPress={() => router.push('/billing/cancel')} />
+          <Button
+            variant="ghost"
+            title={t('renewal.turnOff')}
+            onPress={inStore ? openStore : () => router.push('/billing/cancel')}
+          />
         </>
-      ) : sub.status === 'cancelled' && (sub.method.type === 'card' || sub.method.type === 'store') ? (
+      ) : sub.status === 'cancelled' && (sub.method.type === 'card' || inStore) ? (
         <>
-          <Button title={t('actions.keepPlan', { plan: p.name })} icon="refresh" loading={busy} onPress={resume} />
+          <Button
+            title={t('actions.keepPlan', { plan: p.name })}
+            icon={inStore ? 'open-outline' : 'refresh'}
+            loading={busy}
+            onPress={inStore ? openStore : resume}
+          />
           <Button variant="ghost" title={t('renewal.letEnd')} onPress={() => goBack('/billing/manage')} />
         </>
       ) : (
         <>
           <Button
-            title={t('renewal.renewNow', { price: money(price, checkout.currency) })}
+            title={t('renewal.renewNow', { price })}
             icon="refresh"
             onPress={renewManually}
           />

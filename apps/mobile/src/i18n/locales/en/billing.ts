@@ -574,6 +574,38 @@ const billing = {
     open: 'OPEN',
     common: 'Common questions',
   },
+  /** Buying through the phone’s app store (Google Play on Android). {{store}} is the store’s name. */
+  store: {
+    billed: 'Billed through {{store}}. Renews automatically until you cancel in {{store}}.',
+    subscribe: 'Subscribe · {{price}}',
+    terms:
+      'By subscribing you agree to the Terms of Service. {{store}} takes the payment and renews the plan; Knowzone never sees your card.',
+    footer:
+      'Prices come from {{store}} for your country and include tax. Plans renew automatically until you cancel in {{store}}.',
+    replaces:
+      'You already have {{plan}} until {{date}}, paid outside {{store}}. Subscribing here starts a new plan today and replaces it.',
+    manage: 'Manage in {{store}}',
+    resubscribe: 'Resubscribe in {{store}}',
+    promoNote:
+      'In this app, plans are bought through {{store}}, so Knowzone promo codes can’t be used here. They work on the Knowzone website. {{store}} has its own codes.',
+    redeem: 'Redeem a {{store}} code',
+    pendingTitle: 'Waiting for {{store}}',
+    pendingBody:
+      '{{store}} is still waiting for your payment. Your plan unlocks by itself as soon as it goes through. You don’t need to pay again.',
+    unconfirmedTitle: 'Almost there',
+    unconfirmedBody:
+      '{{store}} has your purchase, but we couldn’t confirm it yet. Try again. You won’t be charged twice.',
+    errors: {
+      unavailable:
+        '{{store}} isn’t available on this phone right now. Check that you’re signed in to {{store}}, then try again.',
+      network: 'Couldn’t reach {{store}}. Check your connection and try again.',
+      product: 'This plan isn’t available on {{store}} yet. Please try again later.',
+      failed: '{{store}} couldn’t complete the purchase. You weren’t charged.',
+      otherAccount:
+        'This {{store}} subscription belongs to another Knowzone account. Sign in to that account, or use a different {{store}} account.',
+      inactive: '{{store}} says this subscription has ended or its payment failed. Open {{store}} to check it.',
+    },
+  },
 };
 
 export default billing;

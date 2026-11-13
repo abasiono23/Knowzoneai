@@ -592,6 +592,37 @@ const billing: Translation<typeof en> = {
     open: 'WAZI',
     common: 'Maswali ya kawaida',
   },
+  store: {
+    billed: 'Unatozwa kupitia {{store}}. Inajisasisha yenyewe hadi ughairi kwenye {{store}}.',
+    subscribe: 'Jisajili · {{price}}',
+    terms:
+      'Kwa kujisajili unakubali Masharti ya Huduma. {{store}} ndiyo hupokea malipo na kusasisha mpango; Knowzone haioni kadi yako kamwe.',
+    footer:
+      'Bei hupangwa na {{store}} kwa nchi yako na zinajumuisha kodi. Mipango hujisasisha yenyewe hadi ughairi kwenye {{store}}.',
+    replaces:
+      'Tayari una {{plan}} hadi {{date}}, uliyolipia nje ya {{store}}. Kujisajili hapa kunaanzisha mpango mpya leo na kuchukua nafasi yake.',
+    manage: 'Simamia kwenye {{store}}',
+    resubscribe: 'Jisajili tena kwenye {{store}}',
+    promoNote:
+      'Katika programu hii, mipango hununuliwa kupitia {{store}}, kwa hivyo misimbo ya ofa ya Knowzone haiwezi kutumika hapa. Inafanya kazi kwenye tovuti ya Knowzone. {{store}} ina misimbo yake yenyewe.',
+    redeem: 'Tumia msimbo wa {{store}}',
+    pendingTitle: 'Tunasubiri {{store}}',
+    pendingBody:
+      '{{store}} bado inasubiri malipo yako. Mpango wako utafunguka wenyewe mara malipo yatakapokamilika. Huhitaji kulipa tena.',
+    unconfirmedTitle: 'Karibu tumalize',
+    unconfirmedBody:
+      '{{store}} imepokea ununuzi wako, lakini bado hatujaweza kuuthibitisha. Jaribu tena. Hutatozwa mara mbili.',
+    errors: {
+      unavailable:
+        '{{store}} haipatikani kwenye simu hii kwa sasa. Hakikisha umeingia kwenye {{store}}, kisha ujaribu tena.',
+      network: 'Hatukuweza kufikia {{store}}. Angalia muunganisho wako kisha ujaribu tena.',
+      product: 'Mpango huu bado haupatikani kwenye {{store}}. Tafadhali jaribu tena baadaye.',
+      failed: '{{store}} haikuweza kukamilisha ununuzi. Hukutozwa.',
+      otherAccount:
+        'Usajili huu wa {{store}} ni wa akaunti nyingine ya Knowzone. Ingia kwenye akaunti hiyo, au tumia akaunti nyingine ya {{store}}.',
+      inactive: '{{store}} inasema usajili huu umeisha au malipo yake yameshindikana. Fungua {{store}} ili kuuangalia.',
+    },
+  },
 };
 
 export default billing;

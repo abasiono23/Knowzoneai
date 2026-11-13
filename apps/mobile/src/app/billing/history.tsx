@@ -14,12 +14,13 @@ export default function BillingHistoryScreen() {
   const { t } = useTranslation('billing');
   const { billing, error } = useBilling();
   const payments = billing?.payments ?? [];
-  // Naira and dollar payments are totalled separately ("₦9,000 + $4.99").
+  // Each currency is totalled separately ("₦9,000 + $4.99"); Google Play can charge in others too.
   const paidTotal =
-    CURRENCIES.map((c) => {
-      const sum = payments.filter((p) => p.status === 'paid' && p.currency === c).reduce((s, p) => s + p.amount, 0);
-      return sum ? money(sum, c) : '';
-    })
+    [...new Set<string>([...CURRENCIES, ...payments.map((p) => p.currency)])]
+      .map((c) => {
+        const sum = payments.filter((p) => p.status === 'paid' && p.currency === c).reduce((s, p) => s + p.amount, 0);
+        return sum ? money(sum, c) : '';
+      })
       .filter(Boolean)
       .join(' + ') || money(0, payments[0]?.currency ?? 'NGN');
 

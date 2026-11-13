@@ -130,6 +130,7 @@ model User {
   subscription      Subscription?
   payments          Payment[]
   billingTickets    BillingTicket[]
+  googlePurchases   GooglePlayPurchase[]
   profilePhoto      ProfilePhoto?
   helpTickets       HelpTicket[]
   helpFiles         HelpFile[]
@@ -850,6 +851,10 @@ model Subscription {
   nextCreditAt     DateTime
   /// Renewal reminders already sent for this period: '7d', '1d'.
   remindersSent    String[] @default([])
+  /// Who manages the plan: flutterwave (prepaid, on the web) | google_play (a Play subscription, in the Android app).
+  provider         String   @default("flutterwave")
+  /// The Google Play purchase token the plan currently comes from (google_play only).
+  providerToken    String?
   updatedAt        DateTime @updatedAt
 }
 
@@ -881,12 +886,38 @@ model Payment {
   promo         String?
   failureReason String?
   renewal       Boolean   @default(false)
+  /// flutterwave | google_play. For Google Play, `reference` and `providerRef` are Google's order id (GPA.…).
+  provider      String    @default("flutterwave")
   paidAt        DateTime?
   refundedAt    DateTime?
   createdAt     DateTime  @default(now())
 
   @@index([userId, createdAt])
   @@index([status, createdAt])
+}
+
+/// A Google Play subscription purchase and the one account it belongs to. Google names a purchase by its
+/// token; an upgrade or a re-subscribe gets a new token that points back at the old one (`linkedToken`).
+model GooglePlayPurchase {
+  purchaseToken String    @id
+  userId        String
+  user          User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  /// knowzone_plus | knowzone_pro
+  productId     String
+  /// monthly | term | yearly
+  basePlanId    String
+  /// Google's subscription state when last checked (SUBSCRIPTION_STATE_ACTIVE, …), or REPLACED.
+  state         String
+  expiresAt     DateTime?
+  autoRenew     Boolean   @default(false)
+  /// The latest order Google charged for this purchase.
+  orderId       String?
+  linkedToken   String?
+  acknowledged  Boolean   @default(false)
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  @@index([userId])
 }
 
 /// Refund and payment support requests (218).

@@ -41,7 +41,7 @@ function receiptHtml(p: Payment, user: User, t: TFunction<'billing'>) {
     <table>
     ${row(t('labels.planPeriod', { plan: PLANS[p.plan].name, period: PERIOD[p.period].label }), money(p.amount + p.discount, p.currency))}
     ${p.discount ? row(t('labels.promoLine', { code: p.promo ?? '' }), `−${money(p.discount, p.currency)}`) : ''}
-    ${row(t('labels.vat'), money(vatOf(p.amount), p.currency))}
+    ${p.provider === 'google_play' ? '' : row(t('labels.vat'), money(vatOf(p.amount), p.currency))}
     ${row(t('labels.total'), money(p.amount, p.currency), true)}
     ${row(t('labels.paidWith'), methodLabel(p.method, t))}
     ${row(t('labels.servicePeriod'), `${fmtDate(p.at)} – ${fmtDate(p.at + PERIOD[p.period].days * DAY)}`)}
@@ -116,7 +116,10 @@ export default function ReceiptScreen() {
             color={Colors.success}
           />
         )}
-        <SummaryRow label={t('labels.vat')} value={money(vatOf(p.amount), p.currency)} />
+        {/* Google Play works out and collects tax per country itself; the 7.5% line is for our own payments. */}
+        {p.provider !== 'google_play' && (
+          <SummaryRow label={t('labels.vat')} value={money(vatOf(p.amount), p.currency)} />
+        )}
         <Divider />
         <SummaryRow label={t('labels.total')} value={money(p.amount, p.currency)} strong />
       </Card>

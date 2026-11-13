@@ -46,13 +46,16 @@ workflows:
         script: npx expo prebuild --platform android --no-install --clean
       - name: Use the Codemagic keystore for release builds
         script: node scripts/ci-android-signing.mjs
-      - name: Build the APK
+      # The APK installs straight onto phones; the AAB (app bundle) is what the Play Console takes,
+      # including the internal testing track that Google Play Billing needs (docs/play-billing-setup.md).
+      - name: Build the APK and the Play app bundle
         script: |
           cd android
           chmod +x gradlew
-          ./gradlew assembleRelease --no-daemon
+          ./gradlew assembleRelease bundleRelease --no-daemon
     artifacts:
       - android/app/build/outputs/apk/release/*.apk
+      - android/app/build/outputs/bundle/release/*.aab
     publishing:
       email:
         recipients:

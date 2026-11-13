@@ -10,6 +10,7 @@ import { errorText } from '@/i18n/errors';
 import { api } from '@/lib/api';
 import { useCheckout } from '@/lib/billing/checkout';
 import { PERIOD, PLANS, money, promoLabel } from '@/lib/billing/plans';
+import { STORE_NAME, STORE_UI, openStoreRedeem } from '@/lib/billing/store';
 import { USE_MOCKS } from '@/lib/config';
 import { goBack } from '@/lib/navigation';
 
@@ -39,6 +40,23 @@ export default function PromoCodeScreen() {
 
   // Back to checkout if it's open; from pricing or settings, carry on to it so the discount is visible.
   const done = () => router.dismissTo('/billing/checkout');
+
+  // In the Android app plans are Google Play subscriptions: Play sets the price, so our codes can't apply.
+  if (STORE_UI)
+    return (
+      <Screen withTabBar={false}>
+        <ScreenHeader eyebrow={t('checkout.eyebrow')} title={t('promo.title')} />
+        <Text variant="body" color={Colors.textSecondary}>
+          {t('store.promoNote', { store: STORE_NAME })}
+        </Text>
+        <Button title={t('store.redeem', { store: STORE_NAME })} icon="open-outline" onPress={openStoreRedeem} />
+        <Button
+          variant="secondary"
+          title={t('actions.goBack', { ns: 'common' })}
+          onPress={() => goBack('/billing')}
+        />
+      </Screen>
+    );
 
   return (
     <Screen withTabBar={false}>

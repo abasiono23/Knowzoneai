@@ -2,8 +2,10 @@ import { Stack } from 'expo-router';
 
 import { Colors } from '@/constants/theme';
 import { CheckoutProvider } from '@/lib/billing/checkout';
+import { useStoreSync } from '@/lib/billing/use-store-sync';
 
 export default function BillingLayout() {
+  useStoreSync();
   return (
     <CheckoutProvider>
       <Stack

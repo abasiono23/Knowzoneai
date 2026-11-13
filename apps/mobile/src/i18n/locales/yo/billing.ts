@@ -577,6 +577,38 @@ const billing: Translation<typeof en> = {
     open: 'Ó ṢÌ ṢÍ',
     common: 'Àwọn ìbéèrè tó wọ́pọ̀',
   },
+  store: {
+    billed: '{{store}} ni yóò gba owó náà. Yóò máa sọdọ̀tun fúnra rẹ̀ títí tí o fi fagilé e nínú {{store}}.',
+    subscribe: 'Forúkọ sílẹ̀ · {{price}}',
+    terms:
+      'Bí o bá forúkọ sílẹ̀, o gbà sí Àwọn Òfin Iṣẹ́. {{store}} ni ó ń gba owó tí ó sì ń sọ ètò náà dọ̀tun; Knowzone kì í rí káàdì rẹ rárá.',
+    footer:
+      '{{store}} ni ó ń pinnu iye owó fún orílẹ̀-èdè rẹ, owó-orí sì wà nínú rẹ̀. Àwọn ètò ń sọdọ̀tun fúnra wọn títí tí o fi fagilé wọn nínú {{store}}.',
+    replaces:
+      'O ti ní {{plan}} títí di {{date}}, èyí tí o sanwó fún níta {{store}}. Bí o bá forúkọ sílẹ̀ níbí, ètò tuntun yóò bẹ̀rẹ̀ lónìí yóò sì rọ́pò rẹ̀.',
+    manage: 'Ṣàkóso rẹ̀ nínú {{store}}',
+    resubscribe: 'Tún forúkọ sílẹ̀ nínú {{store}}',
+    promoNote:
+      'Nínú áàpù yìí, {{store}} ni a fi ń ra ètò, nítorí náà kóòdù ẹ̀dínwó Knowzone kò ṣiṣẹ́ níbí. Wọ́n ń ṣiṣẹ́ lórí ojú-òpó wẹ́ẹ̀bù Knowzone. {{store}} ní àwọn kóòdù tirẹ̀.',
+    redeem: 'Lo kóòdù {{store}}',
+    pendingTitle: 'À ń dúró de {{store}}',
+    pendingBody:
+      '{{store}} ṣì ń dúró de ìsanwó rẹ. Ètò rẹ yóò ṣí fúnra rẹ̀ ní kété tí owó bá wọlé. O kò nílò láti sanwó lẹ́ẹ̀kan sí i.',
+    unconfirmedTitle: 'Ó kù díẹ̀',
+    unconfirmedBody:
+      '{{store}} ti gba ohun tí o rà, ṣùgbọ́n a kò tíì lè jẹ́rìí sí i. Gbìyànjú lẹ́ẹ̀kan sí i. A kò ní gba owó lọ́wọ́ rẹ lẹ́ẹ̀mejì.',
+    errors: {
+      unavailable:
+        '{{store}} kò sí lórí fóònù yìí báyìí. Rí i dájú pé o ti wọlé sí {{store}}, lẹ́yìn náà gbìyànjú lẹ́ẹ̀kan sí i.',
+      network: 'A kò lè dé {{store}}. Ṣàyẹ̀wò ìsopọ̀ rẹ kí o sì gbìyànjú lẹ́ẹ̀kan sí i.',
+      product: 'Ètò yìí kò tíì sí lórí {{store}}. Jọ̀wọ́ gbìyànjú nígbà mìíràn.',
+      failed: '{{store}} kò lè parí ìrajà náà. A kò gba owó lọ́wọ́ rẹ.',
+      otherAccount:
+        'Ìforúkọsílẹ̀ ìsanwó {{store}} yìí jẹ́ ti àkọọ́lẹ̀ Knowzone mìíràn. Wọlé sí àkọọ́lẹ̀ yẹn, tàbí lo àkọọ́lẹ̀ {{store}} mìíràn.',
+      inactive:
+        '{{store}} sọ pé ìforúkọsílẹ̀ ìsanwó yìí ti parí tàbí pé ìsanwó rẹ̀ kò lọ. Ṣí {{store}} láti ṣàyẹ̀wò rẹ̀.',
+    },
+  },
 };
 
 export default billing;

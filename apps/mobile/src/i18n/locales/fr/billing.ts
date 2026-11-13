@@ -626,6 +626,38 @@ const billing: Translation<typeof en> = {
     open: 'OUVERT',
     common: 'Questions fréquentes',
   },
+  store: {
+    billed: 'Facturé via {{store}}. Renouvellement automatique jusqu’à ce que tu annules dans {{store}}.',
+    subscribe: 'S’abonner · {{price}}',
+    terms:
+      'En t’abonnant, tu acceptes les Conditions d’utilisation. {{store}} encaisse le paiement et renouvelle l’abonnement ; Knowzone ne voit jamais ta carte.',
+    footer:
+      'Les prix sont fixés par {{store}} pour ton pays, taxes comprises. Les abonnements se renouvellent automatiquement jusqu’à ce que tu annules dans {{store}}.',
+    replaces:
+      'Tu as déjà {{plan}} jusqu’au {{date}}, payé en dehors de {{store}}. T’abonner ici démarre un nouvel abonnement aujourd’hui et le remplace.',
+    manage: 'Gérer dans {{store}}',
+    resubscribe: 'Se réabonner dans {{store}}',
+    promoNote:
+      'Dans cette appli, les abonnements s’achètent via {{store}} : les codes promo Knowzone ne peuvent donc pas être utilisés ici. Ils fonctionnent sur le site web de Knowzone. {{store}} a ses propres codes.',
+    redeem: 'Utiliser un code {{store}}',
+    pendingTitle: 'En attente de {{store}}',
+    pendingBody:
+      '{{store}} attend encore ton paiement. Ton abonnement se débloquera tout seul dès qu’il sera validé. Tu n’as pas besoin de payer à nouveau.',
+    unconfirmedTitle: 'On y est presque',
+    unconfirmedBody:
+      '{{store}} a bien ton achat, mais nous n’avons pas encore pu le confirmer. Réessaie. Tu ne seras pas débité deux fois.',
+    errors: {
+      unavailable:
+        '{{store}} n’est pas disponible sur ce téléphone pour le moment. Vérifie que tu es connecté à {{store}}, puis réessaie.',
+      network: 'Impossible de joindre {{store}}. Vérifie ta connexion et réessaie.',
+      product: 'Cet abonnement n’est pas encore disponible sur {{store}}. Réessaie plus tard.',
+      failed: '{{store}} n’a pas pu finaliser l’achat. Tu n’as pas été débité.',
+      otherAccount:
+        'Cet abonnement {{store}} appartient à un autre compte Knowzone. Connecte-toi à ce compte, ou utilise un autre compte {{store}}.',
+      inactive:
+        '{{store}} indique que cet abonnement est terminé ou que son paiement a échoué. Ouvre {{store}} pour vérifier.',
+    },
+  },
 };
 
 export default billing;

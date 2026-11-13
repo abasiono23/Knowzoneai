@@ -994,6 +994,8 @@ export type Subscription = {
   currentPeriodEnd: number;
   autoRenew: boolean;
   method: PaymentMethodInfo;
+  /** Who manages the plan: Knowzone's own payments (Flutterwave) or the Google Play subscription behind it. */
+  provider?: 'flutterwave' | 'google_play';
   cancelReason?: string;
 };
 export type Payment = {
@@ -1003,10 +1005,12 @@ export type Payment = {
   period: 'month' | 'term' | 'year';
   amount: number;
   discount: number;
-  currency: 'NGN' | 'USD';
+  /** NGN or USD for our own payments; Google Play charges in the buyer's country's currency. */
+  currency: string;
   status: 'paid' | 'failed' | 'pending' | 'refunded';
   method: PaymentMethodInfo;
   reference: string;
+  provider?: 'flutterwave' | 'google_play';
   promo?: string;
   failureReason?: string;
   /** Real mode: Flutterwave's secure payment page (cards, or transfer/USSD on the page), while pending. */
@@ -1045,6 +1049,7 @@ export type ServerNotification = {
 };
 
 export type Billing = { subscription: Subscription | null; payments: Payment[]; tickets: SupportTicket[] };
+export type GooglePurchase = { purchaseToken: string; productId: string; packageName?: string };
 
 export type CreditEntry = {
   id: string;
@@ -1227,6 +1232,24 @@ export const api = {
   cancelSubscription: (reason: string) => post<{ billing: Billing }>('/me/billing/cancel', { reason }),
   resumeSubscription: () => post<{ billing: Billing }>('/me/billing/resume'),
   restorePurchases: () => post<{ restored: boolean; billing: Billing; user: User }>('/me/billing/restore'),
+  /**
+   * Android: a Google Play purchase to check and unlock. `active` means the plan is on; `pending` that Google
+   * is still waiting for the money; `inactive` that the purchase has no paid time left.
+   */
+  verifyGooglePurchase: (purchase: GooglePurchase) =>
+    post<{
+      status: 'active' | 'pending' | 'inactive';
+      /** False if the server couldn't tell Google the purchase was delivered; the app does it then. */
+      acknowledged: boolean;
+      payment: Payment | null;
+      billing: Billing;
+      user: User;
+    }>('/me/billing/google/verify', purchase),
+  /** Android "Restore purchases": checks what the phone's Google account owns. */
+  restoreGooglePurchases: (purchases: GooglePurchase[]) =>
+    post<{ restored: boolean; otherAccount: boolean; billing: Billing; user: User }>('/me/billing/google/restore', {
+      purchases,
+    }),
   contactBillingSupport: (input: { topic: SupportTicket['topic']; paymentId?: string; message: string }) =>
     post<{ ticket: SupportTicket; billing: Billing; user: User }>('/me/billing/support', input),
   spendCredits: (credits: number, reason: string) => post<{ user: User }>('/me/credits/spend', { credits, reason }),

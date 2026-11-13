@@ -8,7 +8,7 @@ import { Button, Card, Screen, ScreenHeader, Text } from '@/components/ui';
 import { Colors, Spacing } from '@/constants/theme';
 import { formatNumber } from '@/i18n';
 import { useCheckout } from '@/lib/billing/checkout';
-import { PERIOD, TUTOR_DAILY, comparison, money, priceOf, type PlanId } from '@/lib/billing/plans';
+import { PERIOD, TUTOR_DAILY, comparison, money, type PlanId } from '@/lib/billing/plans';
 import { useSession } from '@/lib/session';
 
 const COLS: PlanId[] = ['FREE', 'PLUS', 'PRO'];
@@ -42,8 +42,8 @@ export default function CompareScreen() {
               <PlanBadge plan={c} small />
               <Text variant="bodyStrong" style={{ fontSize: 13 }}>
                 {c === 'FREE'
-                  ? money(0, checkout.currency)
-                  : money(priceOf(c, period, checkout.currency), checkout.currency)}
+                  ? money(0, checkout.shownCurrency)
+                  : checkout.priceText(c, period)}
               </Text>
               <Text variant="small" color={Colors.textMuted} style={{ fontSize: 11 }}>
                 {c === 'FREE' ? t('compare.forever') : PERIOD[period].short}

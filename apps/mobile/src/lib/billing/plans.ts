@@ -232,11 +232,16 @@ export function promoLabel(promo: { code: string; label: string }, t: TFunction<
   return i18n.exists(`billing:${key}`) ? t(key) : promo.label;
 }
 
-/** An amount with its currency symbol (₦3,500, $4.99); digits and grouping follow the current language. */
-export const money = (n: number, currency: Currency) =>
+/**
+ * An amount with its currency symbol (₦3,500, $4.99); digits and grouping follow the current language.
+ * Google Play can charge in other currencies; those show their code (KES 650, GHS 49.99).
+ */
+export const money = (n: number, currency: string) =>
   currency === 'USD'
     ? `$${formatNumber(n, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`
-    : `₦${formatNumber(Math.round(n))}`;
+    : currency === 'NGN'
+      ? `₦${formatNumber(Math.round(n))}`
+      : `${currency} ${formatNumber(n, { minimumFractionDigits: 0, maximumFractionDigits: 2 })}`;
 export const priceOf = (plan: PaidPlan, period: BillingPeriod, currency: Currency) => PRICES[currency][plan][period];
 /** Monthly equivalent, for comparing periods. */
 export const perMonth = (plan: PaidPlan, period: BillingPeriod, currency: Currency) =>

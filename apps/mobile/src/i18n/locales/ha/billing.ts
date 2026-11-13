@@ -586,6 +586,37 @@ const billing: Translation<typeof en> = {
     open: 'A BUƊE',
     common: 'Tambayoyin da aka saba yi',
   },
+  store: {
+    billed: '{{store}} ne zai karɓi kuɗin. Zai riƙa sabuntawa kai tsaye har sai ka soke shi a {{store}}.',
+    subscribe: 'Yi rajista · {{price}}',
+    terms:
+      'Ta hanyar yin rajista ka amince da Sharuɗɗan Sabis. {{store}} ne ke karɓar kuɗin kuma yake sabunta tsarin; Knowzone ba ya ganin katinka ko kaɗan.',
+    footer:
+      '{{store}} ne ke saka farashi na ƙasarka, kuma haraji yana ciki. Tsare-tsare suna sabuntawa kai tsaye har sai ka soke su a {{store}}.',
+    replaces:
+      'Kana da {{plan}} har zuwa {{date}}, wanda ka biya a wajen {{store}}. Idan ka yi rajista a nan, sabon tsari zai fara yau kuma zai maye gurbinsa.',
+    manage: 'Sarrafa shi a {{store}}',
+    resubscribe: 'Sake yin rajista a {{store}}',
+    promoNote:
+      'A wannan manhaja, ana sayen tsare-tsare ta {{store}}, don haka lambobin rangwame na Knowzone ba sa aiki a nan. Suna aiki a shafin yanar gizon Knowzone. {{store}} yana da nasa lambobin.',
+    redeem: 'Yi amfani da lambar {{store}}',
+    pendingTitle: 'Ana jiran {{store}}',
+    pendingBody:
+      '{{store}} yana jiran biyan kuɗinka har yanzu. Tsarinka zai buɗe da kansa da zarar kuɗin ya shiga. Ba sai ka sake biya ba.',
+    unconfirmedTitle: 'An kusa gamawa',
+    unconfirmedBody:
+      '{{store}} ya karɓi sayayyarka, amma ba mu iya tabbatar da ita ba tukuna. Sake gwadawa. Ba za a caje ka sau biyu ba.',
+    errors: {
+      unavailable: '{{store}} ba ya samuwa a wannan waya a yanzu. Tabbatar ka shiga {{store}}, sannan ka sake gwadawa.',
+      network: 'Ba mu iya kaiwa ga {{store}} ba. Duba haɗin intanet ɗinka sannan ka sake gwadawa.',
+      product: 'Wannan tsarin bai samu a {{store}} ba tukuna. Da fatan za ka sake gwadawa daga baya.',
+      failed: '{{store}} bai iya kammala sayayyar ba. Ba a caje ka ba.',
+      otherAccount:
+        'Wannan rajistar biyan kuɗi ta {{store}} ta wani asusun Knowzone ce. Shiga wancan asusun, ko ka yi amfani da wani asusun {{store}}.',
+      inactive:
+        '{{store}} ya ce wannan rajistar biyan kuɗi ta ƙare ko biyan kuɗinta bai yi nasara ba. Buɗe {{store}} don dubawa.',
+    },
+  },
 };
 
 export default billing;

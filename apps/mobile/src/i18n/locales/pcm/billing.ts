@@ -577,6 +577,37 @@ const billing: Translation<typeof en> = {
     open: 'E STILL DEY OPEN',
     common: 'Questions wey people dey ask',
   },
+  store: {
+    billed: 'Na {{store}} go collect the money. E go renew by itself until you cancel am for {{store}}.',
+    subscribe: 'Subscribe · {{price}}',
+    terms:
+      'If you subscribe, e mean say you gree to the Terms of Service. Na {{store}} dey collect the payment and renew the plan; Knowzone no dey ever see your card.',
+    footer:
+      'Na {{store}} dey set the price for your country, and tax dey inside. Plan go renew by itself until you cancel am for {{store}}.',
+    replaces:
+      'You don get {{plan}} till {{date}}, wey you pay for outside {{store}}. If you subscribe here, new plan go start today and e go replace am.',
+    manage: 'Manage am for {{store}}',
+    resubscribe: 'Subscribe again for {{store}}',
+    promoNote:
+      'For this app, na {{store}} you dey use buy plan, so Knowzone promo code no fit work here. E dey work for Knowzone website. {{store}} get im own codes.',
+    redeem: 'Use {{store}} code',
+    pendingTitle: 'We dey wait for {{store}}',
+    pendingBody:
+      '{{store}} still dey wait for your payment. Your plan go open by itself once the money enter. You no need to pay again.',
+    unconfirmedTitle: 'E don nearly finish',
+    unconfirmedBody:
+      '{{store}} don get your purchase, but we never fit confirm am. Try again. Dem no go charge you two times.',
+    errors: {
+      unavailable:
+        '{{store}} no dey available for this phone now. Check say you don sign in to {{store}}, then try again.',
+      network: 'We no fit reach {{store}}. Check your network and try again.',
+      product: 'This plan never dey {{store}} yet. Abeg try again later.',
+      failed: '{{store}} no fit complete the purchase. Dem no charge you.',
+      otherAccount:
+        'This {{store}} subscription na for another Knowzone account. Sign in to that account, or use another {{store}} account.',
+      inactive: '{{store}} talk say this subscription don end or the payment fail. Open {{store}} to check am.',
+    },
+  },
 };
 
 export default billing;

@@ -622,6 +622,37 @@ const billing: Translation<typeof en> = {
     open: 'ABIERTA',
     common: 'Preguntas frecuentes',
   },
+  store: {
+    billed: 'Se cobra a través de {{store}}. Se renueva automáticamente hasta que canceles en {{store}}.',
+    subscribe: 'Suscribirme · {{price}}',
+    terms:
+      'Al suscribirte aceptas los Términos del Servicio. {{store}} cobra el pago y renueva el plan; Knowzone nunca ve tu tarjeta.',
+    footer:
+      'Los precios los fija {{store}} para tu país e incluyen impuestos. Los planes se renuevan automáticamente hasta que canceles en {{store}}.',
+    replaces:
+      'Ya tienes {{plan}} hasta el {{date}}, pagado fuera de {{store}}. Suscribirte aquí inicia un plan nuevo hoy y lo reemplaza.',
+    manage: 'Gestionar en {{store}}',
+    resubscribe: 'Volver a suscribirme en {{store}}',
+    promoNote:
+      'En esta app los planes se compran a través de {{store}}, así que los códigos promocionales de Knowzone no se pueden usar aquí. Funcionan en el sitio web de Knowzone. {{store}} tiene sus propios códigos.',
+    redeem: 'Canjear un código de {{store}}',
+    pendingTitle: 'Esperando a {{store}}',
+    pendingBody:
+      '{{store}} todavía está esperando tu pago. Tu plan se desbloqueará solo en cuanto se complete. No necesitas pagar otra vez.',
+    unconfirmedTitle: 'Ya casi está',
+    unconfirmedBody:
+      '{{store}} tiene tu compra, pero aún no hemos podido confirmarla. Inténtalo de nuevo. No se te cobrará dos veces.',
+    errors: {
+      unavailable:
+        '{{store}} no está disponible en este teléfono ahora mismo. Comprueba que has iniciado sesión en {{store}} e inténtalo de nuevo.',
+      network: 'No se pudo conectar con {{store}}. Revisa tu conexión e inténtalo de nuevo.',
+      product: 'Este plan todavía no está disponible en {{store}}. Inténtalo más tarde.',
+      failed: '{{store}} no pudo completar la compra. No se te ha cobrado.',
+      otherAccount:
+        'Esta suscripción de {{store}} pertenece a otra cuenta de Knowzone. Inicia sesión en esa cuenta o usa otra cuenta de {{store}}.',
+      inactive: '{{store}} indica que esta suscripción terminó o que su pago falló. Abre {{store}} para comprobarlo.',
+    },
+  },
 };
 
 export default billing;

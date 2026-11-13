@@ -584,6 +584,37 @@ const billing: Translation<typeof en> = {
     open: 'Ọ KA MEGHERE',
     common: 'Ajụjụ a na-ajụkarị',
   },
+  store: {
+    billed: '{{store}} ga-anara ụgwọ ahụ. Ọ ga na-emeghari ọhụrụ n’onwe ya ruo mgbe ị kagburu ya na {{store}}.',
+    subscribe: 'Denye aha · {{price}}',
+    terms:
+      'Site na ide aha, ị kwenyere na Usoro Ọrụ. {{store}} na-anara ụgwọ ma na-emeghari atụmatụ ahụ; Knowzone anaghị ahụ kaadị gị ma ọlị.',
+    footer:
+      '{{store}} na-ekpebi ọnụahịa maka obodo gị, ụtụ isi dịkwa n’ime ya. Atụmatụ na-emeghari ọhụrụ n’onwe ha ruo mgbe ị kagburu ha na {{store}}.',
+    replaces:
+      'Ị nweela {{plan}} ruo {{date}}, nke ị kwụrụ ụgwọ ya na-abụghị na {{store}}. Ọ bụrụ na i denye aha ebe a, atụmatụ ọhụrụ ga-amalite taa ma dochie ya.',
+    manage: 'Jikwaa ya na {{store}}',
+    resubscribe: 'Denye aha ọzọ na {{store}}',
+    promoNote:
+      'N’ngwa a, a na-azụ atụmatụ site na {{store}}, ya mere koodu mbelata Knowzone anaghị arụ ọrụ ebe a. Ha na-arụ ọrụ na weebụsaịtị Knowzone. {{store}} nwere koodu nke ya.',
+    redeem: 'Jiri koodu {{store}}',
+    pendingTitle: 'Anyị na-eche {{store}}',
+    pendingBody:
+      '{{store}} ka na-eche ụgwọ gị. Atụmatụ gị ga-emeghe n’onwe ya ozugbo ego ahụ batara. Ọ dịghị mkpa ka ị kwụọ ụgwọ ọzọ.',
+    unconfirmedTitle: 'Ọ fọrọ ntakịrị',
+    unconfirmedBody:
+      '{{store}} enwetala ihe ị zụrụ, mana anyị enwebeghị ike ikwenye ya. Nwaa ọzọ. A gaghị ana gị ego ugboro abụọ.',
+    errors: {
+      unavailable: '{{store}} adịghị na ekwentị a ugbu a. Lelee na ị banyela na {{store}}, wee nwaa ọzọ.',
+      network: 'Anyị enweghị ike iru {{store}}. Lelee njikọ gị ma nwaa ọzọ.',
+      product: 'Atụmatụ a adịbeghị na {{store}}. Biko nwaa ọzọ ma e mechaa.',
+      failed: '{{store}} enweghị ike imecha ịzụ ahịa ahụ. A naghị gị ego.',
+      otherAccount:
+        'Ndenye aha {{store}} a bụ nke akaụntụ Knowzone ọzọ. Banye na akaụntụ ahụ, ma ọ bụ jiri akaụntụ {{store}} ọzọ.',
+      inactive:
+        '{{store}} na-ekwu na ndenye aha a agwụla ma ọ bụ na ịkwụ ụgwọ ya agaghị. Meghee {{store}} ka ị lelee ya.',
+    },
+  },
 };
 
 export default billing;

@@ -8,7 +8,7 @@ import { FeatureList, TrustRow } from '@/components/billing/billing-ui';
 import { Button, Screen, Text } from '@/components/ui';
 import { Colors, Radius, Spacing } from '@/constants/theme';
 import { useCheckout } from '@/lib/billing/checkout';
-import { PLANS, money, priceOf } from '@/lib/billing/plans';
+import { PLANS } from '@/lib/billing/plans';
 import { goBack } from '@/lib/navigation';
 
 type Icon = keyof typeof Ionicons.glyphMap;
@@ -53,7 +53,7 @@ export default function UpgradePromptScreen() {
         <FeatureList features={PLANS.PLUS.features.slice(0, 5)} color={Colors.primary} />
       </View>
       <Button
-        title={t('upgrade.getPlus', { price: money(priceOf('PLUS', 'month', checkout.currency), checkout.currency) })}
+        title={t('upgrade.getPlus', { price: checkout.priceText('PLUS', 'month') })}
         icon="rocket"
         onPress={() => {
           checkout.set({ plan: 'PLUS', period: 'month' });

@@ -2,7 +2,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Linking, Platform, TextInput, View } from 'react-native';
+import { TextInput, View } from 'react-native';
 
 import { ChoiceRow, ResultHero, methodLabel } from '@/components/billing/billing-ui';
 import { Button, Card, Screen, ScreenHeader, Text } from '@/components/ui';
@@ -10,7 +10,8 @@ import { Colors, Fonts, NoWebOutline, Radius, Spacing } from '@/constants/theme'
 import { errorText } from '@/i18n/errors';
 import { api } from '@/lib/api';
 import { useCheckout } from '@/lib/billing/checkout';
-import { MONTHLY_CREDITS, PLANS, TUTOR_DAILY, money, perMonth } from '@/lib/billing/plans';
+import { MONTHLY_CREDITS, PLANS, TUTOR_DAILY } from '@/lib/billing/plans';
+import { openStoreSubscriptions, storeManaged } from '@/lib/billing/store';
 import { fmtDate, useBilling } from '@/lib/billing/use-billing';
 import { goBack } from '@/lib/navigation';
 import { useSession } from '@/lib/session';
@@ -90,7 +91,7 @@ export default function CancelSubscriptionScreen() {
     sub.plan === 'PRO'
       ? {
           title: t('cancel.switchPlus', {
-            price: money(perMonth('PLUS', 'month', checkout.currency), checkout.currency),
+            price: checkout.perMonthText('PLUS', 'month'),
           }),
           plan: 'PLUS' as const,
           period: 'month' as const,
@@ -98,7 +99,7 @@ export default function CancelSubscriptionScreen() {
       : sub.period === 'month'
         ? {
             title: t('cancel.payByTerm', {
-              price: money(perMonth('PLUS', 'term', checkout.currency), checkout.currency),
+              price: checkout.perMonthText('PLUS', 'term'),
             }),
             plan: 'PLUS' as const,
             period: 'term' as const,
@@ -134,7 +135,7 @@ export default function CancelSubscriptionScreen() {
         </View>
       </Card>
 
-      {cheaper && sub.method.type !== 'store' && (
+      {cheaper && !storeManaged(sub) && (
         <Card style={{ gap: Spacing.sm, borderColor: Colors.primary + '66' }}>
           <Text variant="bodyStrong">{t('cancel.payLess')}</Text>
           <Button
@@ -184,19 +185,13 @@ export default function CancelSubscriptionScreen() {
         </Text>
       )}
       <Button title={t('actions.keepPlan', { plan: p.name })} onPress={() => goBack('/billing/manage')} />
-      {sub.method.type === 'store' ? (
+      {storeManaged(sub) ? (
         <>
           <Button
             variant="danger"
             title={t('cancel.cancelInStore', { store })}
             icon="open-outline"
-            onPress={() =>
-              Linking.openURL(
-                Platform.OS === 'ios'
-                  ? 'https://apps.apple.com/account/subscriptions'
-                  : 'https://play.google.com/store/account/subscriptions',
-              )
-            }
+            onPress={() => openStoreSubscriptions(sub.plan)}
           />
           <Text variant="small" color={Colors.textMuted} center style={{ fontSize: 12 }}>
             {t('cancel.storeNote', { store })}

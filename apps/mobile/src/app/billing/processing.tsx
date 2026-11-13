@@ -1,37 +1,43 @@
-import { Ionicons } from '@expo/vector-icons';
 import * as Linking from 'expo-linking';
-import { LinearGradient } from '@/components/ui/gradient';
 import { router } from 'expo-router';
 import * as WebBrowser from 'expo-web-browser';
 import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Platform, StyleSheet, View } from 'react-native';
-import Animated, { Easing, useAnimatedStyle, useSharedValue, withRepeat, withTiming } from 'react-native-reanimated';
+import { Platform } from 'react-native';
 
+import { ProcessingView } from '@/components/billing/processing-view';
+import { StorePurchase } from '@/components/billing/store-purchase';
 import { Screen, Text } from '@/components/ui';
-import { Colors, Gradients, Spacing } from '@/constants/theme';
 import { errorText } from '@/i18n/errors';
 import { api } from '@/lib/api';
 import { useCheckout } from '@/lib/billing/checkout';
 import { money } from '@/lib/billing/plans';
+import { STORE_PURCHASES, STORE_UI } from '@/lib/billing/store';
 import { useSession } from '@/lib/session';
 
 const wait = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
-/** Screen 205: payment processing. Sends the order and routes to success, failed or pending. */
 /** Where Flutterwave's payment page sends the learner back: this app's pending screen. */
 const returnUrl = () =>
   Platform.OS === 'web'
     ? `${window.location.origin}/billing/pending?id={id}`
     : Linking.createURL('/billing/pending', { queryParams: { id: '{id}' } }).replace('%7Bid%7D', '{id}');
 
+/**
+ * Screen 205: payment processing. On Android the plan is bought through Google Play; everywhere else
+ * the order goes to the server (Flutterwave) and the screen routes to success, failed or pending.
+ */
 export default function PaymentProcessingScreen() {
+  // Fixed for the life of the app, so each platform always renders the same component.
+  return STORE_UI && STORE_PURCHASES ? <StorePurchase /> : <ServerPayment />;
+}
+
+function ServerPayment() {
   const { t } = useTranslation('billing');
   const c = useCheckout();
   const { setUser } = useSession();
   const [step, setStep] = useState(0);
   const started = useRef(false);
-  const spin = useSharedValue(0);
 
   const steps =
     c.method?.type === 'card'
@@ -39,10 +45,6 @@ export default function PaymentProcessingScreen() {
       : c.method?.type === 'store'
         ? [t('processing.steps.storeOpen'), t('processing.steps.storeConfirm'), t('processing.steps.activating')]
         : [t('processing.steps.creating'), t('processing.steps.almost')];
-
-  useEffect(() => {
-    spin.set(withRepeat(withTiming(1, { duration: 1100, easing: Easing.linear }), -1));
-  }, [spin]);
 
   useEffect(() => {
     // Effects can run twice in development; never send the payment twice.
@@ -94,8 +96,6 @@ export default function PaymentProcessingScreen() {
     })();
   }, [c.currency, c.method, c.outcome, c.period, c.plan, c.promo?.code, setUser, t]);
 
-  const ring = useAnimatedStyle(() => ({ transform: [{ rotate: `${spin.get() * 360}deg` }] }));
-
   if (!c.method)
     return (
       <Screen withTabBar={false}>
@@ -106,52 +106,11 @@ export default function PaymentProcessingScreen() {
     );
 
   return (
-    <Screen withTabBar={false} scroll={false}>
-      <View style={styles.center}>
-        <View style={styles.spinner}>
-          <Animated.View style={[StyleSheet.absoluteFill, ring]}>
-            <LinearGradient colors={Gradients.aiGlow} style={styles.ring} />
-          </Animated.View>
-          <View style={styles.inner}>
-            <Ionicons name="lock-closed" size={32} color={Colors.text} />
-          </View>
-        </View>
-        <Text variant="title" center>
-          {t('processing.title', { amount: money(c.total, c.currency) })}
-        </Text>
-        <Text variant="body" color={Colors.textSecondary} center>
-          {t('processing.body')}
-        </Text>
-        <View style={{ gap: Spacing.sm, alignSelf: 'stretch', paddingHorizontal: Spacing.lg }}>
-          {steps.map((s, i) => (
-            <View key={s} style={styles.step}>
-              <Ionicons
-                name={i < step ? 'checkmark-circle' : i === step ? 'ellipse' : 'ellipse-outline'}
-                size={18}
-                color={i < step ? Colors.success : i === step ? Colors.primary : Colors.textMuted}
-              />
-              <Text variant="small" color={i <= step ? Colors.text : Colors.textMuted}>
-                {s}
-              </Text>
-            </View>
-          ))}
-        </View>
-      </View>
-    </Screen>
+    <ProcessingView
+      title={t('processing.title', { amount: money(c.total, c.currency) })}
+      body={t('processing.body')}
+      steps={steps}
+      step={step}
+    />
   );
 }
-
-const styles = StyleSheet.create({
-  center: { flex: 1, justifyContent: 'center', alignItems: 'center', gap: Spacing.md },
-  spinner: { width: 120, height: 120, alignItems: 'center', justifyContent: 'center', marginBottom: Spacing.md },
-  ring: { flex: 1, borderRadius: 60 },
-  inner: {
-    width: 108,
-    height: 108,
-    borderRadius: 54,
-    backgroundColor: Colors.background,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  step: { flexDirection: 'row', alignItems: 'center', gap: Spacing.xs },
-});

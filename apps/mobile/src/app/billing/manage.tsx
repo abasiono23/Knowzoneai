@@ -12,7 +12,8 @@ import { Colors, Radius, Spacing } from '@/constants/theme';
 import { formatNumber } from '@/i18n';
 import { api } from '@/lib/api';
 import { useCheckout } from '@/lib/billing/checkout';
-import { MONTHLY_CREDITS, PERIOD, PLANS, money, priceOf } from '@/lib/billing/plans';
+import { MONTHLY_CREDITS, PERIOD, PLANS, money } from '@/lib/billing/plans';
+import { STORE_UI, openStoreSubscriptions, storeManaged } from '@/lib/billing/store';
 import { daysUntil, fmtDate, useBilling } from '@/lib/billing/use-billing';
 import { useSession } from '@/lib/session';
 
@@ -20,7 +21,7 @@ import { useSession } from '@/lib/session';
 export default function ManageSubscriptionScreen() {
   const { t } = useTranslation('billing');
   const { user } = useSession();
-  const { currency } = useCheckout();
+  const checkout = useCheckout();
   const { billing, error, setBilling } = useBilling();
   const [now] = useState(() => Date.now());
   const [resuming, setResuming] = useState(false);
@@ -41,6 +42,11 @@ export default function ManageSubscriptionScreen() {
   );
   const days = live ? daysUntil(live.currentPeriodEnd, now) : 0;
   const ending = live && (live.status === 'cancelled' || !live.autoRenew);
+  // A Google Play subscription is cancelled, resumed and changed in Google Play, which then tells the server.
+  const inStore = !!live && storeManaged(live);
+  const openStore = () => {
+    openStoreSubscriptions(live?.plan);
+  };
 
   const resume = async () => {
     setResuming(true);
@@ -80,7 +86,7 @@ export default function ManageSubscriptionScreen() {
           </View>
           <Text variant="body">
             {t('manage.priceLine', {
-              price: money(priceOf(live.plan, live.period, currency), currency),
+              price: checkout.priceText(live.plan, live.period),
               period: PERIOD[live.period].short,
               method: methodLabel(live.method, t),
             })}
@@ -174,7 +180,15 @@ export default function ManageSubscriptionScreen() {
           <Text variant="small">
             {t('manage.cancelledNote', { plan: PLANS[live.plan].name, date: fmtDate(live.currentPeriodEnd) })}
           </Text>
-          <Button title={t('manage.keepMyPlan')} icon="refresh" loading={resuming} onPress={resume} />
+          {inStore ? (
+            <Button
+              title={t('store.resubscribe', { store: live.method.label })}
+              icon="open-outline"
+              onPress={openStore}
+            />
+          ) : (
+            <Button title={t('manage.keepMyPlan')} icon="refresh" loading={resuming} onPress={resume} />
+          )}
         </Card>
       )}
 
@@ -202,8 +216,24 @@ export default function ManageSubscriptionScreen() {
           label={live ? t('manage.changePlan') : t('actions.seePlans')}
           onPress={go('/billing')}
         />
-        <SettingsLink icon="grid-outline" label={t('actions.comparePlans')} onPress={go('/billing/compare')} />
-        <SettingsLink icon="pricetag-outline" label={t('labels.promoCode')} onPress={go('/billing/promo')} last />
+        <SettingsLink
+          icon="grid-outline"
+          label={t('actions.comparePlans')}
+          onPress={go('/billing/compare')}
+          last={STORE_UI && !inStore}
+        />
+        {inStore && (
+          <SettingsLink
+            icon="open-outline"
+            label={t('store.manage', { store: live.method.label })}
+            onPress={openStore}
+            last={STORE_UI}
+          />
+        )}
+        {/* Our promo codes don't exist in the app store, which sets its own prices. */}
+        {!STORE_UI && (
+          <SettingsLink icon="pricetag-outline" label={t('labels.promoCode')} onPress={go('/billing/promo')} last />
+        )}
       </SettingsSection>
 
       <SettingsSection title={t('manage.sectionPayments')}>
@@ -233,13 +263,13 @@ export default function ManageSubscriptionScreen() {
           <SettingsLink
             icon="close-circle-outline"
             label={t('manage.cancel')}
-            onPress={go('/billing/cancel')}
+            onPress={inStore ? openStore : go('/billing/cancel')}
             danger
             last
           />
         )}
       </SettingsSection>
-      {live?.method.type === 'store' && (
+      {live && inStore && (
         <Text variant="small" color={Colors.textMuted} style={{ fontSize: 12 }}>
           {t('manage.storeNote', { store: live.method.label })}
         </Text>
