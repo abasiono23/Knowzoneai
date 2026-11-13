@@ -295,8 +295,8 @@
   const plans = document.querySelector('[data-pricing]');
   if (plans) {
     const PRICES = {
-      NGN: { PLUS: { month: 3500, term: 9000, year: 30000 }, PRO: { month: 7500, term: 19500, year: 66000 } },
-      USD: { PLUS: { month: 4.99, term: 12.99, year: 44.99 }, PRO: { month: 9.99, term: 26.99, year: 89.99 } },
+      NGN: { PLUS: { month: 5000, term: 13000, year: 43000 }, PRO: { month: 9000, term: 23500, year: 77000 } },
+      USD: { PLUS: { month: 3.99, term: 10.49, year: 34.49 }, PRO: { month: 7.49, term: 18.99, year: 61.49 } },
     };
     const PER = { month: '/ month', term: '/ term', year: '/ year' };
     const state = { currency: 'NGN', period: 'month' };

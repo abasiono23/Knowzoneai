@@ -89,7 +89,7 @@ describe('checkout and payment', () => {
     const res = await checkout(as).expect(201);
     expect(res.body.payment).toMatchObject({
       status: 'pending',
-      amount: 3500,
+      amount: 5000,
       currency: 'NGN',
       plan: 'PLUS',
       checkoutUrl: expect.stringContaining('flutterwave'),
@@ -126,16 +126,16 @@ describe('checkout and payment', () => {
       period: 'year',
       promo: 'EXAM25',
     }).expect(201);
-    // $44.99 less 25% = $33.74 (the discount rounded to the cent).
+    // $34.49 less 25% = $25.87 (the discount, $8.62, rounded to the cent).
     expect(usd.body.payment).toMatchObject({
       currency: 'USD',
-      amount: 33.74,
-      discount: 11.25,
+      amount: 25.87,
+      discount: 8.62,
       checkoutUrl: expect.any(String),
     });
     const { hostedPayment } = await import('../src/services/flutterwave.js');
     expect(vi.mocked(hostedPayment).mock.calls.at(-1)![0]).toMatchObject({
-      amount: 33.74,
+      amount: 25.87,
       currency: 'USD',
     });
     expect(
@@ -201,7 +201,7 @@ describe('checkout and payment', () => {
     await checkout(as, { currency: 'EUR' }).expect(400);
     await checkout(as, { amount: 1 })
       .expect(201)
-      .then((r) => expect(r.body.payment.amount).toBe(3500));
+      .then((r) => expect(r.body.payment.amount).toBe(5000));
     flw.failInit = true;
     const down = await checkout(as).expect(502);
     expect(down.body.reason).toBe('provider');
@@ -248,8 +248,8 @@ describe('promo codes, renewals and cancellation', () => {
 
     const res = await checkout(as, { promo: 'EXAM25' }).expect(201);
     expect(res.body.payment).toMatchObject({
-      amount: 2625,
-      discount: 875,
+      amount: 3750,
+      discount: 1250,
       promo: 'EXAM25',
     });
     pay(res.body.payment.reference);
@@ -330,7 +330,7 @@ describe('support and refunds (212, 218)', () => {
     });
     expect(flw.refunds.at(-1)).toEqual({
       id: flw.tx.get(res.body.payment.reference)!.id,
-      amount: 3500,
+      amount: 5000,
     });
     expect(r.body.user.plan).toBe('FREE');
     expect(r.body.billing.payments[0].status).toBe('refunded');
