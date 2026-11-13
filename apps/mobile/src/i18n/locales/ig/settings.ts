@@ -260,6 +260,23 @@ const settings: Translation<typeof en> = {
     improveAiHint: 'Agbanyụrụ na mbụ. Ọ na-ekwe ka anyị nyochaa ajụjụ ewepụrụ aha iji mee ka azịza ka mma',
     yourData: 'Data gị',
   },
+  cookies: {
+    title: 'Kuki na nchekwa',
+    notice:
+      'Knowzone na-edebe ihe ole na ole na ihe nchọgharị gị ka mbanye na asụsụ gị wee na-arụ ọrụ. Ọ bụrụ na i kwere, anyị na-agụkwa nleta, na-ejighị kuki, na-amaghịkwa onye ị bụ.',
+    acceptAll: 'Nabata ha niile',
+    onlyEssential: 'Naanị ndị dị mkpa',
+    settings: 'Ntọala kuki',
+    policy: 'Iwu kuki',
+    essential: 'Ndị dị mkpa',
+    essentialHint: 'Mbanye, asụsụ gị na ọrụ i chekwara',
+    alwaysOn: 'Ọ na-agbanye mgbe niile',
+    analytics: 'Ọnụọgụ nleta',
+    analyticsHint: 'Mmadụ ole na-eleta peeji ọ bụla. Enweghị kuki, enweghị ihe na-egosi onye ị bụ',
+    save: 'Chekwaa nhọrọ m',
+    section: 'Kuki',
+    sectionFooter: 'A na-edebe nhọrọ a na ihe nchọgharị a, ọ bụghị na akaụntụ gị.',
+  },
   data: {
     eyebrow: 'NZUZO',
     title: 'Budata data m',

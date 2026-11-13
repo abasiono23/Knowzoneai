@@ -261,6 +261,23 @@ const settings: Translation<typeof en> = {
     improveAiHint: 'Imezimwa kwa chaguo-msingi. Inaturuhusu kupitia maswali yasiyo na utambulisho ili kuboresha majibu',
     yourData: 'Data yako',
   },
+  cookies: {
+    title: 'Vidakuzi na hifadhi',
+    notice:
+      'Knowzone huweka vitu vichache kwenye kivinjari chako ili kuingia na lugha yako vifanye kazi. Ukikubali, pia tunahesabu matembeleo, bila vidakuzi na bila kukutambua.',
+    acceptAll: 'Kubali vyote',
+    onlyEssential: 'Vya lazima pekee',
+    settings: 'Mipangilio ya vidakuzi',
+    policy: 'Sera ya vidakuzi',
+    essential: 'Vya lazima',
+    essentialHint: 'Kuingia, lugha yako na kazi uliyohifadhi',
+    alwaysOn: 'Vimewashwa kila wakati',
+    analytics: 'Hesabu ya matembeleo',
+    analyticsHint: 'Watu wangapi hutembelea kila ukurasa. Hakuna vidakuzi, hakuna kinachokutambulisha',
+    save: 'Hifadhi chaguo langu',
+    section: 'Vidakuzi',
+    sectionFooter: 'Chaguo hili huwekwa kwenye kivinjari hiki, si kwenye akaunti yako.',
+  },
   data: {
     eyebrow: 'FARAGHA',
     title: 'Pakua data yangu',

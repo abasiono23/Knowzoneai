@@ -260,6 +260,23 @@ const settings: Translation<typeof en> = {
     improveAiHint: 'E dey off by default. E go allow us check questions wey no get your name to make answers better',
     yourData: 'Your data',
   },
+  cookies: {
+    title: 'Cookies and storage',
+    notice:
+      'Knowzone dey keep small things for your browser so sign-in and your language go work. If you gree, we go still count visits, without cookies and without knowing who you be.',
+    acceptAll: 'Accept all',
+    onlyEssential: 'Only wetin dey needed',
+    settings: 'Cookie settings',
+    policy: 'Cookie policy',
+    essential: 'Wetin dey needed',
+    essentialHint: 'Sign-in, your language and the work wey you save',
+    alwaysOn: 'E dey on always',
+    analytics: 'Visit counts',
+    analyticsHint: 'How many people dey visit each page. No cookies, nothing wey go show who you be',
+    save: 'Save my choice',
+    section: 'Cookies',
+    sectionFooter: 'Na for this browser this choice dey, e no dey your account.',
+  },
   data: {
     eyebrow: 'PRIVACY',
     title: 'Download my data',

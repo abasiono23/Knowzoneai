@@ -257,6 +257,23 @@ const settings = {
     improveAiHint: 'Off by default. Lets us review anonymised questions to make answers better',
     yourData: 'Your data',
   },
+  cookies: {
+    title: 'Cookies and storage',
+    notice:
+      'Knowzone keeps a few things in your browser so signing in and your language work. If you agree, we also count visits, without cookies and without identifying you.',
+    acceptAll: 'Accept all',
+    onlyEssential: 'Only essential',
+    settings: 'Cookie settings',
+    policy: 'Cookie policy',
+    essential: 'Essential',
+    essentialHint: 'Signing in, your language and your saved work',
+    alwaysOn: 'Always on',
+    analytics: 'Visit counts',
+    analyticsHint: 'How many people visit each page. No cookies, nothing that identifies you',
+    save: 'Save my choice',
+    section: 'Cookies',
+    sectionFooter: 'This choice is kept in this browser, not in your account.',
+  },
   data: {
     eyebrow: 'PRIVACY',
     title: 'Download my data',

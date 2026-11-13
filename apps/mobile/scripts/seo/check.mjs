@@ -10,6 +10,7 @@
 import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 
+import { ANALYTICS_MARK, ANALYTICS_SRC } from '../analytics-loader.mjs';
 import { ORIGIN, PATHS } from './lib/html.mjs';
 
 const DIST = resolve(import.meta.dirname, '../../dist');
@@ -68,7 +69,9 @@ for (const root of roots) {
     const canonical = html.match(/<link rel="canonical" href="([^"]*)"/g) ?? [];
     if (canonical.length !== 1 || !canonical[0].includes(`href="${ORIGIN}${path}"`)) bad(path, `canonical is ${canonical.join(' ') || 'missing'}`);
     if (!html.includes(`<meta property="og:url" content="${ORIGIN}${path}"`)) bad(path, 'og:url is missing or wrong');
-    if (!html.includes('/_vercel/insights/script.js')) bad(path, 'no analytics tag');
+    // Visits are counted only after the visitor agrees: the loader is there, and no tag that loads the script by itself.
+    if (!html.includes(`<script ${ANALYTICS_MARK}>`) || !html.includes(ANALYTICS_SRC)) bad(path, 'no analytics loader');
+    if (html.includes(`src="${ANALYTICS_SRC}"`)) bad(path, 'loads analytics without asking');
 
     const data = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map((m) => m[1]);
     if (!data.length) bad(path, 'no schema.org data');

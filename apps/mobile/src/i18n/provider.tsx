@@ -2,6 +2,7 @@ import { createContext, useCallback, useContext, useEffect, useState, type React
 import { useTranslation } from 'react-i18next';
 import { Alert, Platform } from 'react-native';
 
+import { CookieNotice } from '@/components/cookie-notice';
 import { api } from '@/lib/api';
 import { EMPTY_PROFILE } from '@/lib/personalization';
 import { useSession } from '@/lib/session';
@@ -79,7 +80,13 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     [userId],
   );
 
-  return <LanguageContext.Provider value={{ language, ready, changeLanguage }}>{children}</LanguageContext.Provider>;
+  return (
+    <LanguageContext.Provider value={{ language, ready, changeLanguage }}>
+      {children}
+      {/* The web version's cookie notice, once its words are in the visitor's language. Nothing in the phone apps. */}
+      {ready && <CookieNotice />}
+    </LanguageContext.Provider>
+  );
 }
 
 /** True when the current language reads right to left (Arabic). Use it to mirror arrows and chevrons. */

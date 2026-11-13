@@ -550,6 +550,7 @@ const help: Translation<typeof en> = {
             title: '1. À propos de cette politique',
             body: [
               'Cette politique explique quelles données personnelles Knowzone collecte, pourquoi, et quels sont tes droits en vertu du Nigeria Data Protection Act 2023 (NDPA) et des autres lois qui s’appliquent à toi.',
+              'Sur app.knowzoneai.com, Knowzone garde quelques éléments dans ton navigateur et ne compte les visites que si tu es d’accord. Notre Politique relative aux cookies (app.knowzoneai.com/legal/cookies) explique de quoi il s’agit et comment changer ton choix.',
             ],
           },
           collect: {
@@ -626,6 +627,75 @@ const help: Translation<typeof en> = {
             body: [
               'Pour toute question ou demande liée à la confidentialité, utilise Aide → Contacter le support dans l’app et choisis « Compte et confidentialité ».',
             ],
+          },
+        },
+      },
+      cookies: {
+        title: 'Politique relative aux cookies',
+        eyebrow: 'MENTIONS LÉGALES',
+        summary: [
+          'Knowzone garde dans ton navigateur ce qu’il lui faut pour que tu restes connecté, dans ta langue.',
+          'Nous ne comptons les visites que si tu es d’accord, sans cookies et sans t’identifier.',
+          'Les vidéos YouTube sont lues dans le lecteur de YouTube, selon les règles de Google.',
+          'Tu peux changer ton choix à tout moment dans les Paramètres des cookies.',
+        ],
+        sections: {
+          about: {
+            title: '1. À propos de cette politique',
+            body: [
+              'Cette politique concerne Knowzone dans un navigateur web (app.knowzoneai.com). Elle explique ce que Knowzone garde dans ton navigateur, pourquoi, et les choix que tu as. Notre Politique de confidentialité explique comment nous utilisons les données personnelles en général.',
+              'Un cookie est un petit fichier qu’un site web garde dans ton navigateur. Les navigateurs ont aussi un « stockage local », qui fonctionne de façon similaire. Knowzone ne dépose qu’un seul cookie à lui et garde tout le reste dans le stockage local.',
+            ],
+          },
+          essential: {
+            title: '2. Ce dont Knowzone a besoin pour fonctionner',
+            body: [
+              'Ces éléments sont toujours actifs, car Knowzone ne peut pas fonctionner sans eux. Nous n’en utilisons aucun pour la publicité ni pour te suivre sur d’autres sites :',
+            ],
+            bullets: [
+              'Ta connexion : une session gardée dans le stockage local (son nom commence par « sb- »), pour que tu restes connecté jusqu’à ta déconnexion',
+              'Ta langue, la taille du texte et d’autres choix d’affichage (des noms qui commencent par « knowzone. », comme knowzone.language)',
+              'Ton travail sur cet appareil : les épreuves en cours, et des copies de tes packs d’étude, de tes discussions avec le tuteur, de ta progression dans les cours et dans les jeux, pour que les pages s’ouvrent vite',
+              'La page que tu ouvrais avant de te connecter, pour t’y ramener ensuite. Elle est oubliée quand tu fermes l’onglet',
+              'Ton choix de cookies : un cookie appelé kz_consent (voir la section 3)',
+            ],
+          },
+          choice: {
+            title: '3. Ton choix de cookies',
+            body: [
+              'À ta première visite, nous te demandons ce que tu acceptes. Ta réponse est gardée dans un seul cookie, appelé kz_consent, pendant 12 mois, pour ne pas te reposer la question à chaque page. Il ne contient que ta réponse, rien sur toi.',
+              'Quel que soit ton choix, les éléments de la section 2 restent, car Knowzone en a besoin pour fonctionner.',
+            ],
+          },
+          analytics: {
+            title: '4. Comptage des visites',
+            body: [
+              'Si tu choisis « Tout accepter », ou si tu actives « Comptage des visites », nous utilisons Vercel Web Analytics pour compter combien de personnes visitent chaque page, la page qui les a amenées chez nous, ainsi que le pays, le navigateur et le type d’appareil qu’elles utilisent. Il n’utilise aucun cookie, ne t’identifie pas et ne te suit pas sur d’autres sites. Nous ne voyons que des totaux, qui nous montrent quelles pages sont utiles.',
+              'Tant que tu n’as pas accepté, il n’est pas chargé du tout. Si tu choisis « Essentiels uniquement », il reste désactivé.',
+            ],
+          },
+          others: {
+            title: '5. YouTube et autres services',
+            body: ['Certaines parties de Knowzone viennent d’autres entreprises, qui suivent leurs propres règles :'],
+            bullets: [
+              'YouTube : les leçons vidéo sont lues dans le lecteur de YouTube, en mode de confidentialité avancée (youtube-nocookie.com). YouTube peut garder des données dans ton navigateur quand tu lances une vidéo. Les Règles de confidentialité de Google (policies.google.com/privacy) s’appliquent',
+              'Connexion avec Google ou Apple : elle se fait sur leur page, qui utilise leurs propres cookies',
+              'Paiement sur le web : tu paies sur la page sécurisée de Flutterwave, qui utilise ses propres cookies',
+              'Livres gratuits : certains s’ouvrent depuis le site de leur éditeur à l’intérieur de Knowzone, et ce site peut déposer ses propres cookies',
+            ],
+          },
+          change: {
+            title: '6. Changer ton choix',
+            body: ['C’est toi qui décides :'],
+            bullets: [
+              'Change ton choix à tout moment : « Cookie settings » en bas des pages de notre site, ou Paramètres → Confidentialité → Paramètres des cookies dans Knowzone sur le web',
+              'Te déconnecter : cela retire ta connexion de ce navigateur',
+              'Tout effacer : dans les réglages de ton navigateur, efface les cookies et les données de site de knowzoneai.com. Cela te déconnecte sur cet appareil et supprime le travail qui n’était enregistré qu’ici. Nous te redemanderons ton choix de cookies',
+            ],
+          },
+          contact: {
+            title: '7. Contact',
+            body: ['Des questions ? Utilise Aide → Contacter le support dans l’app, ou écris à info@knowzoneai.com.'],
           },
         },
       },

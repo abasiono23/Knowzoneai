@@ -1,7 +1,7 @@
 import Constants from 'expo-constants';
 import { router, type Href } from 'expo-router';
 import { useTranslation } from 'react-i18next';
-import { View } from 'react-native';
+import { Platform, View } from 'react-native';
 
 import { ProfileAvatar } from '@/components/rewards/reward-ui';
 import { SettingsLink, SettingsSection } from '@/components/settings/rows';
@@ -233,6 +233,15 @@ export default function AccountSettingsScreen() {
           onPress={go('/legal/privacy')}
           color={Colors.textSecondary}
         />
+        {/* About the web version only: what it keeps in the browser. */}
+        {Platform.OS === 'web' && (
+          <SettingsLink
+            icon="options-outline"
+            label={t('cookies.policy')}
+            onPress={go('/legal/cookies')}
+            color={Colors.textSecondary}
+          />
+        )}
         <SettingsLink
           icon="sparkles-outline"
           label={t('home.aiLimits')}

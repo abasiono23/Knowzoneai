@@ -41,7 +41,7 @@
         <div><h4>Product</h4><a href="features.html">Features</a><a href="pricing.html">Pricing</a><a href="signup.html">Sign up</a></div>
         <div><h4>Study free</h4><a href="practice-questions.html">Practice questions</a><a href="study-notes.html">Study notes</a><a href="textbooks.html">Textbooks</a><a href="course-guides.html">Course guides</a></div>
         <div><h4>Company</h4><a href="about.html">About</a><a href="blog.html">Blog</a><a href="faq.html">FAQ</a></div>
-        <div><h4>Legal</h4><a href="https://www.knowzoneai.com/privacy">Privacy</a><a href="https://www.knowzoneai.com/terms">Terms</a><a href="mailto:info@knowzoneai.com">info@knowzoneai.com</a></div>
+        <div><h4>Legal</h4><a href="https://www.knowzoneai.com/privacy">Privacy</a><a href="https://www.knowzoneai.com/terms">Terms</a><a href="/legal/cookies">Cookies</a><button type="button" class="foot-btn" data-cookie-open>Cookie settings</button><a href="mailto:info@knowzoneai.com">info@knowzoneai.com</a></div>
       </div>
       <p class="copy">© ${new Date().getFullYear()} Knowzone AI. All rights reserved.</p>
     </div>`;
@@ -56,6 +56,106 @@
     const open = top.classList.toggle('open');
     menu.setAttribute('aria-expanded', String(open));
   });
+
+  // The cookie notice. The visitor's choice is kept in the kz_consent cookie ("analytics=1&v=1"), shared
+  // by www and app.knowzoneai.com; the web app reads the same cookie (src/lib/cookie-consent.ts there).
+  // Visit counts load only after "Accept all": the loader in each page's <head> waits for the kz-consent
+  // event (apps/mobile/scripts/analytics-loader.mjs).
+  const POLICY = '/legal/cookies';
+  const readChoice = () => {
+    try {
+      const m = document.cookie.match(/(?:^|; )kz_consent=([^;]*)/);
+      return m ? { analytics: /(?:^|&)analytics=1(?:&|$)/.test(m[1]) } : null;
+    } catch {
+      return null;
+    }
+  };
+  let choice = readChoice();
+  const saveChoice = (analytics) => {
+    const host = location.hostname;
+    const shared = host === 'knowzoneai.com' || host.endsWith('.knowzoneai.com') ? '; Domain=.knowzoneai.com' : '';
+    const secure = location.protocol === 'https:' ? '; Secure' : '';
+    try {
+      document.cookie = `kz_consent=analytics=${analytics ? 1 : 0}&v=1; Max-Age=31536000; Path=/; SameSite=Lax${shared}${secure}`;
+    } catch {
+      /* Cookies are blocked: the choice lasts for this page. */
+    }
+    choice = { analytics };
+    if (analytics) dispatchEvent(new CustomEvent('kz-consent', { detail: { analytics: true } }));
+    // Counting that had already started stops with a fresh page.
+    else if (window.__kzAnalytics) location.reload();
+  };
+
+  // On a phone the notice says less, to stay small: what is always kept is in the settings and the policy.
+  const notice = document.createElement('section');
+  notice.className = 'cookie';
+  notice.id = 'cookie';
+  notice.setAttribute('aria-label', 'Cookie notice');
+  notice.hidden = true;
+  notice.innerHTML = `
+    <div class="cookie-in">
+      <p class="cookie-text"><strong>Cookies and storage.</strong> <span class="cookie-wide">Knowzone keeps a few things in your browser so signing in and your language work. If you agree, we also count visits, without cookies and without identifying you.</span><span class="cookie-narrow">May we count visits? No cookies, nothing that identifies you.</span> <span class="cookie-links"><a href="${POLICY}">Cookie policy</a><button type="button" class="cookie-link" data-cookie="settings" aria-expanded="false" aria-controls="cookie-panel">Cookie settings</button></span></p>
+      <div class="cookie-panel" id="cookie-panel" hidden>
+        <label class="cookie-row"><input type="checkbox" checked disabled /><span><b>Essential</b> Signing in, your language and your saved work. Always on.</span></label>
+        <label class="cookie-row"><input type="checkbox" id="cookie-analytics" /><span><b>Visit counts</b> How many people visit each page. No cookies, nothing that identifies you.</span></label>
+        <button type="button" class="cookie-btn" data-cookie="save">Save my choice</button>
+      </div>
+      <div class="cookie-actions">
+        <button type="button" class="cookie-btn" data-cookie="essential">Only essential</button>
+        <button type="button" class="cookie-btn" data-cookie="all">Accept all</button>
+      </div>
+    </div>`;
+  // First on the page, so it is the first stop for keyboards and screen readers; it is drawn at the bottom.
+  document.body.prepend(notice);
+  const panel = notice.querySelector('#cookie-panel');
+  const settingsLink = notice.querySelector('[data-cookie=settings]');
+  const analyticsBox = notice.querySelector('#cookie-analytics');
+  let opener = null;
+  // The footer keeps clear of the notice, so nothing at the end of the page sits under it.
+  const room = () => document.documentElement.style.setProperty('--cookie-room', notice.hidden ? '0px' : `${notice.offsetHeight + 16}px`);
+  const showPanel = (open) => {
+    panel.hidden = !open;
+    settingsLink.setAttribute('aria-expanded', String(open));
+    notice.classList.toggle('with-panel', open);
+    if (open) analyticsBox.checked = !!choice?.analytics;
+    room();
+  };
+  const showNotice = (open, withPanel = false) => {
+    notice.hidden = !open;
+    showPanel(open && withPanel);
+    if (!open && opener) opener.focus();
+    if (!open) opener = null;
+  };
+  notice.addEventListener('click', (e) => {
+    const act = e.target.closest('[data-cookie]')?.dataset.cookie;
+    if (!act) return;
+    if (act === 'settings') {
+      showPanel(panel.hidden);
+      if (!panel.hidden) analyticsBox.focus();
+      return;
+    }
+    showNotice(false);
+    saveChoice(act === 'all' || (act === 'save' && analyticsBox.checked));
+  });
+  // Escape closes the settings; the notice itself stays until a choice has been made.
+  notice.addEventListener('keydown', (e) => {
+    if (e.key !== 'Escape') return;
+    if (choice) showNotice(false);
+    else if (!panel.hidden) {
+      showPanel(false);
+      settingsLink.focus();
+    }
+  });
+  // "Cookie settings" in the footer opens it again.
+  document.addEventListener('click', (e) => {
+    const again = e.target.closest('[data-cookie-open]');
+    if (!again) return;
+    opener = again;
+    showNotice(true, true);
+    analyticsBox.focus();
+  });
+  addEventListener('resize', room);
+  if (!choice) showNotice(true);
 
   // Things rise into view as you reach them.
   const seen = new IntersectionObserver(

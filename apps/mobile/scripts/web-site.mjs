@@ -11,6 +11,7 @@ import { copyFileSync, cpSync, existsSync, mkdirSync, readFileSync, readdirSync,
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
+import { ANALYTICS } from './analytics-loader.mjs';
 import { studyPages } from './seo/build.mjs';
 
 const here = dirname(fileURLToPath(import.meta.url));
@@ -79,8 +80,7 @@ const SIGNED_IN = `<script>try{for(var k in localStorage)if(/^sb-.*-auth-token$/
 // ─── Search engines and visit counts ──────────────────────────────────────────
 
 const ORIGIN = 'https://app.knowzoneai.com';
-/** Visit counts (Vercel Web Analytics): no cookies, nothing that identifies anyone. Follows the app's page changes too. */
-const ANALYTICS = '<script defer src="/_vercel/insights/script.js"></script>';
+// Visit counts follow the app's page changes too, and only start once the visitor has agreed (ANALYTICS, from analytics-loader.mjs).
 const address = (page) => (page === 'index.html' ? '/' : `/${page.replace(/\.html$/, '')}`);
 
 const pages = readdirSync(SITE).filter((f) => f.endsWith('.html') && !['dashboard.html', 'signup.html'].includes(f));

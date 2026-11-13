@@ -544,6 +544,7 @@ const help: Translation<typeof en> = {
             title: '1. Kuhusu sera hii',
             body: [
               'Sera hii inaeleza ni data binafsi gani Knowzone inakusanya, kwa nini, na haki zako chini ya Nigeria Data Protection Act 2023 (NDPA) na sheria nyingine zinazokuhusu.',
+              'Kwenye app.knowzoneai.com, Knowzone huweka vitu vichache kwenye kivinjari chako, na huhesabu matembeleo tu ukikubali. Sera yetu ya Vidakuzi (app.knowzoneai.com/legal/cookies) inaeleza ni vitu gani na jinsi ya kubadilisha chaguo lako.',
             ],
           },
           collect: {
@@ -619,6 +620,77 @@ const help: Translation<typeof en> = {
             title: '10. Mawasiliano',
             body: [
               'Kwa maswali au maombi kuhusu faragha, tumia Msaada → Wasiliana na huduma kwa wateja ndani ya programu na uchague “Akaunti na faragha”.',
+            ],
+          },
+        },
+      },
+      cookies: {
+        title: 'Sera ya Vidakuzi',
+        eyebrow: 'KISHERIA',
+        summary: [
+          'Knowzone huweka kinachohitaji kwenye kivinjari chako ili ubaki umeingia, kwa lugha yako.',
+          'Tunahesabu matembeleo tu ukikubali, bila vidakuzi na bila kukutambua.',
+          'Video za YouTube huchezwa kwenye kichezaji cha YouTube chenyewe, chini ya kanuni za Google.',
+          'Unaweza kubadilisha chaguo lako wakati wowote kwenye Mipangilio ya vidakuzi.',
+        ],
+        sections: {
+          about: {
+            title: '1. Kuhusu sera hii',
+            body: [
+              'Sera hii inahusu Knowzone kwenye kivinjari cha wavuti (app.knowzoneai.com). Inaeleza Knowzone huweka nini kwenye kivinjari chako, kwa nini, na machaguo uliyo nayo. Sera yetu ya Faragha inaeleza jinsi tunavyotumia data binafsi kwa ujumla.',
+              'Kidakuzi ni faili ndogo ambayo tovuti huweka kwenye kivinjari chako. Vivinjari pia vina “local storage”, inayofanya kazi kwa njia inayofanana. Knowzone huweka kidakuzi kimoja tu chake, na huweka kila kitu kingine kwenye local storage.',
+            ],
+          },
+          essential: {
+            title: '2. Kile Knowzone inachohitaji ili kufanya kazi',
+            body: [
+              'Hivi vimewashwa kila wakati, kwa sababu Knowzone haiwezi kufanya kazi bila hivyo. Hatutumii chochote kati ya hivyo kwa matangazo wala kukufuatilia kwenye tovuti nyingine:',
+            ],
+            bullets: [
+              'Kuingia kwako: kipindi kinachowekwa kwenye local storage (jina lake huanza na “sb-”), ili ubaki umeingia hadi utakapotoka',
+              'Lugha yako, ukubwa wa maandishi na machaguo mengine ya mwonekano (majina yanayoanza na “knowzone.”, kama knowzone.language)',
+              'Kazi yako kwenye kifaa hiki: mitihani ambayo hujamaliza, na nakala za vifurushi vyako vya masomo, mazungumzo na mkufunzi, maendeleo ya kozi na maendeleo ya michezo, ili kurasa zifunguke haraka',
+              'Ukurasa uliokuwa ukifungua kabla ya kuingia, ili tukurudishe hapo. Husahaulika unapofunga kichupo',
+              'Chaguo lako la vidakuzi: kidakuzi kinachoitwa kz_consent (tazama sehemu ya 3)',
+            ],
+          },
+          choice: {
+            title: '3. Chaguo lako la vidakuzi',
+            body: [
+              'Mara ya kwanza unapotembelea, tunakuuliza unakubali nini. Jibu lako huwekwa kwenye kidakuzi kimoja, kinachoitwa kz_consent, kwa miezi 12, ili tusiulize tena kwenye kila ukurasa. Kina jibu lako tu, hakuna chochote kukuhusu.',
+              'Chochote utakachochagua, vitu vilivyo katika sehemu ya 2 hubaki, kwa sababu Knowzone inavihitaji ili kufanya kazi.',
+            ],
+          },
+          analytics: {
+            title: '4. Hesabu ya matembeleo',
+            body: [
+              'Ukichagua “Kubali vyote”, au ukiwasha “Hesabu ya matembeleo”, tunatumia Vercel Web Analytics kuhesabu watu wangapi hutembelea kila ukurasa, ukurasa uliowaleta kwetu, na nchi, kivinjari na aina ya kifaa wanachotumia. Haitumii vidakuzi, na haikutambui wala kukufuatilia kwenye tovuti nyingine. Tunaona jumla pekee, zinazotuonyesha kurasa zipi zinafaa.',
+              'Hadi utakapokubali, haipakiwi kabisa. Ukichagua “Vya lazima pekee”, hubaki imezimwa.',
+            ],
+          },
+          others: {
+            title: '5. YouTube na huduma nyingine',
+            body: ['Baadhi ya sehemu za Knowzone hutoka kwa kampuni nyingine, zinazofuata kanuni zao zenyewe:'],
+            bullets: [
+              'YouTube: masomo ya video huchezwa kwenye kichezaji cha YouTube chenyewe, katika hali yake ya faragha iliyoimarishwa (youtube-nocookie.com). YouTube inaweza kuweka data kwenye kivinjari chako unapocheza video. Sera ya Faragha ya Google (policies.google.com/privacy) inatumika',
+              'Kuingia kwa Google au Apple: unafanya hivyo kwenye ukurasa wao, unaotumia vidakuzi vyao wenyewe',
+              'Kulipa kwenye wavuti: unalipa kwenye ukurasa salama wa Flutterwave, unaotumia vidakuzi vyake wenyewe',
+              'Vitabu vya bure: baadhi hufunguka kutoka kwenye tovuti ya mchapishaji mwenyewe ndani ya Knowzone, na tovuti hiyo inaweza kuweka vidakuzi vyake',
+            ],
+          },
+          change: {
+            title: '6. Kubadilisha chaguo lako',
+            body: ['Uamuzi ni wako:'],
+            bullets: [
+              'Badilisha chaguo lako wakati wowote: “Cookie settings” chini ya kurasa za tovuti yetu, au Mipangilio → Faragha → Mipangilio ya vidakuzi katika Knowzone kwenye wavuti',
+              'Toka: hii huondoa kuingia kwako kwenye kivinjari hiki',
+              'Futa kila kitu: katika mipangilio ya kivinjari chako, futa vidakuzi na data ya tovuti ya knowzoneai.com. Hii itakutoa kwenye kifaa hiki na kuondoa kazi iliyohifadhiwa hapa pekee. Tutakuuliza tena chaguo lako la vidakuzi',
+            ],
+          },
+          contact: {
+            title: '7. Mawasiliano',
+            body: [
+              'Una maswali? Tumia Msaada → Wasiliana na huduma kwa wateja ndani ya programu, au tuma barua pepe kwa info@knowzoneai.com.',
             ],
           },
         },

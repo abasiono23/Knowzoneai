@@ -258,6 +258,23 @@ const settings: Translation<typeof en> = {
     improveAiHint: 'Ó wà ní pípa ní àtilẹ̀wá. Ó ń jẹ́ ká ṣàyẹ̀wò àwọn ìbéèrè aláìlórúkọ láti mú ìdáhùn dára sí i',
     yourData: 'Dátà rẹ',
   },
+  cookies: {
+    title: 'Kúkì àti ibi ìpamọ́',
+    notice:
+      'Knowzone ń tọ́jú àwọn nǹkan díẹ̀ sínú aṣàwákiri rẹ kí ìwọlé àti èdè rẹ lè ṣiṣẹ́. Bí o bá gbà, a tún ń ka iye àbẹ̀wò, láìlo kúkì àti láìmọ ẹni tí o jẹ́.',
+    acceptAll: 'Gba gbogbo rẹ̀',
+    onlyEssential: 'Àwọn tó pọn dandan nìkan',
+    settings: 'Ètò kúkì',
+    policy: 'Ìlànà kúkì',
+    essential: 'Àwọn tó pọn dandan',
+    essentialHint: 'Ìwọlé, èdè rẹ àti iṣẹ́ tí o ti fipamọ́',
+    alwaysOn: 'Ó wà ní títàn nígbà gbogbo',
+    analytics: 'Kíka àbẹ̀wò',
+    analyticsHint: 'Iye ènìyàn tó ń ṣàbẹ̀wò sí ojú-ìwé kọ̀ọ̀kan. Kò sí kúkì, kò sí ohun tó ń fi ẹni tí o jẹ́ hàn',
+    save: 'Fi yíyàn mi pamọ́',
+    section: 'Kúkì',
+    sectionFooter: 'Inú aṣàwákiri yìí ni yíyàn yìí wà, kì í ṣe inú àkọọ́lẹ̀ rẹ.',
+  },
   data: {
     eyebrow: 'ÌPAMỌ́',
     title: 'Ṣe ìgbàsílẹ̀ dátà mi',

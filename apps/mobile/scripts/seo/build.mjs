@@ -23,6 +23,7 @@ import { join, resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import vm from 'node:vm';
 
+import { ANALYTICS } from '../analytics-loader.mjs';
 import { EXAMS, EXAM_SUBJECTS, loadBooks, loadCourses, loadLibraries, loadPapers } from './lib/data.mjs';
 import { PATHS, setChrome } from './lib/html.mjs';
 import { notesFor } from './lib/match.mjs';
@@ -166,6 +167,6 @@ export function studyPages({ dist, analytics }) {
 if (import.meta.url === pathToFileURL(process.argv[1] ?? '').href) {
   const dist = resolve(MOBILE, 'dist');
   if (!existsSync(join(dist, 'site', 'site.js'))) throw new Error('Build the site first: npx expo export --platform web && node scripts/web-site.mjs');
-  studyPages({ dist, analytics: '<script defer src="/_vercel/insights/script.js"></script>' });
+  studyPages({ dist, analytics: ANALYTICS });
   console.log('seo: sitemap.xml was left as it is; scripts/web-site.mjs writes it');
 }

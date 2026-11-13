@@ -1,10 +1,12 @@
 import { router } from 'expo-router';
 import { useTranslation } from 'react-i18next';
+import { Platform } from 'react-native';
 
 import { SettingsChoice, SettingsLink, SettingsSection, SettingsToggle } from '@/components/settings/rows';
 import { Screen, ScreenHeader, Text } from '@/components/ui';
 import { Colors } from '@/constants/theme';
 import type { AppSettings } from '@/lib/api';
+import { openCookieSettings } from '@/lib/cookie-consent';
 import { useSession } from '@/lib/session';
 import { useSettings } from '@/lib/settings';
 import { useWorld } from '@/lib/world/store';
@@ -95,6 +97,19 @@ export default function PrivacyScreen() {
           last
         />
       </SettingsSection>
+
+      {/* The web version only: the choice lives in this browser, not in the account. */}
+      {Platform.OS === 'web' && (
+        <SettingsSection title={t('cookies.section')} footer={t('cookies.sectionFooter')}>
+          <SettingsLink icon="options-outline" label={t('cookies.settings')} onPress={openCookieSettings} />
+          <SettingsLink
+            icon="document-text-outline"
+            label={t('cookies.policy')}
+            onPress={() => router.push('/legal/cookies')}
+            last
+          />
+        </SettingsSection>
+      )}
 
       <SettingsSection title={t('privacy.yourData')}>
         <SettingsLink

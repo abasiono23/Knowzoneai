@@ -539,6 +539,7 @@ const help: Translation<typeof en> = {
             title: '1. Nípa ìlànà yìí',
             body: [
               'Ìlànà yìí ṣàlàyé dátà ara ẹni tí Knowzone ń gbà, ìdí rẹ̀, àti ẹ̀tọ́ rẹ lábẹ́ Nigeria Data Protection Act 2023 (NDPA) àti àwọn òfin mìíràn tó kàn ọ́.',
+              'Lórí app.knowzoneai.com, Knowzone ń tọ́jú àwọn nǹkan díẹ̀ sínú aṣàwákiri rẹ, ó sì ń ka iye àbẹ̀wò kìkì bí o bá gbà. Ìlànà Kúkì wa (app.knowzoneai.com/legal/cookies) ṣàlàyé ohun tí wọ́n jẹ́ àti bí o ṣe lè yí yíyàn rẹ padà.',
             ],
           },
           collect: {
@@ -614,6 +615,77 @@ const help: Translation<typeof en> = {
             title: '10. Ìkànsí',
             body: [
               'Fún ìbéèrè tàbí ìbéèrè ìpamọ́, lo Ìrànlọ́wọ́ → Kàn sí ẹgbẹ́ ìrànlọ́wọ́ nínú áàpù kí o sì yan “Àkọọ́lẹ̀ àti ìpamọ́”.',
+            ],
+          },
+        },
+      },
+      cookies: {
+        title: 'Ìlànà Kúkì',
+        eyebrow: 'ÒFIN',
+        summary: [
+          'Knowzone ń tọ́jú ohun tó nílò sínú aṣàwákiri rẹ kí o lè wà ní ìwọlé, ní èdè rẹ.',
+          'A ń ka iye àbẹ̀wò kìkì bí o bá gbà, láìlo kúkì àti láìmọ ẹni tí o jẹ́.',
+          'Àwọn fídíò YouTube ń ṣeré nínú ẹ̀rọ ìṣeré YouTube fúnra rẹ̀, lábẹ́ àwọn òfin Google.',
+          'O lè yí yíyàn rẹ padà nígbàkígbà nínú Ètò kúkì.',
+        ],
+        sections: {
+          about: {
+            title: '1. Nípa ìlànà yìí',
+            body: [
+              'Ìlànà yìí dá lórí Knowzone nínú aṣàwákiri wẹ́ẹ̀bù (app.knowzoneai.com). Ó ṣàlàyé ohun tí Knowzone ń tọ́jú sínú aṣàwákiri rẹ, ìdí rẹ̀, àti àwọn yíyàn tí o ní. Ìlànà Ìpamọ́ wa ṣàlàyé bí a ṣe ń lo dátà ara ẹni lápapọ̀.',
+              'Kúkì jẹ́ fáìlì kékeré tí ojúlé wẹ́ẹ̀bù ń tọ́jú sínú aṣàwákiri rẹ. Àwọn aṣàwákiri tún ní “local storage”, tó ń ṣiṣẹ́ lọ́nà tó jọ ọ́. Kúkì kan ṣoṣo ni Knowzone fúnra rẹ̀ ń fi síbẹ̀, ó sì ń tọ́jú gbogbo ohun yòókù sínú local storage.',
+            ],
+          },
+          essential: {
+            title: '2. Ohun tí Knowzone nílò láti ṣiṣẹ́',
+            body: [
+              'Àwọn wọ̀nyí wà ní títàn nígbà gbogbo, nítorí Knowzone kò lè ṣiṣẹ́ láìsí wọn. A kì í lo èyíkéyìí nínú wọn fún ìpolówó tàbí láti tẹ̀lé ọ lọ sí àwọn ojúlé wẹ́ẹ̀bù mìíràn:',
+            ],
+            bullets: [
+              'Ìwọlé rẹ: àkókò ìwọlé tí a tọ́jú sínú local storage (orúkọ rẹ̀ bẹ̀rẹ̀ pẹ̀lú “sb-”), kí o lè wà ní ìwọlé títí tí o fi jáde',
+              'Èdè rẹ, ìwọ̀n ọ̀rọ̀ àti àwọn yíyàn ìfihàn mìíràn (àwọn orúkọ tó bẹ̀rẹ̀ pẹ̀lú “knowzone.”, bíi knowzone.language)',
+              'Iṣẹ́ rẹ lórí ẹ̀rọ yìí: àwọn ìdánwò tí o kò tíì parí, àti ẹ̀dà àwọn àkójọ ẹ̀kọ́ rẹ, ìjíròrò pẹ̀lú olùkọ́ AI, ìlọsíwájú kọ́ọ̀sì àti ìlọsíwájú eré, kí àwọn ojú-ìwé lè ṣí kíákíá',
+              'Ojú-ìwé tí o ń ṣí kí o tó wọlé, kí a lè mú ọ padà síbẹ̀. A máa ń gbàgbé rẹ̀ nígbà tí o bá pa táàbù náà',
+              'Yíyàn kúkì rẹ: kúkì tí a ń pè ní kz_consent (wo apá 3)',
+            ],
+          },
+          choice: {
+            title: '3. Yíyàn kúkì rẹ',
+            body: [
+              'Nígbà àkọ́kọ́ tí o bá ṣàbẹ̀wò, a ó béèrè ohun tí o gbà. A ń tọ́jú ìdáhùn rẹ sínú kúkì kan, tí a ń pè ní kz_consent, fún oṣù 12, kí a má bàa tún béèrè lórí gbogbo ojú-ìwé. Ìdáhùn rẹ nìkan ló wà nínú rẹ̀, kò sí nǹkan kan nípa rẹ.',
+              'Ohunkóhun tí o bá yàn, àwọn nǹkan tó wà ní apá 2 yóò wà síbẹ̀, nítorí Knowzone nílò wọn láti ṣiṣẹ́.',
+            ],
+          },
+          analytics: {
+            title: '4. Kíka àbẹ̀wò',
+            body: [
+              'Bí o bá yan “Gba gbogbo rẹ̀”, tàbí o tan “Kíka àbẹ̀wò”, a ń lo Vercel Web Analytics láti ka iye ènìyàn tó ṣàbẹ̀wò sí ojú-ìwé kọ̀ọ̀kan, ojú-ìwé tó mú wọn wá sọ́dọ̀ wa, àti orílẹ̀-èdè, aṣàwákiri àti irú ẹ̀rọ tí wọ́n ń lò. Kì í lo kúkì, kì í sì í fi ẹni tí o jẹ́ hàn tàbí tẹ̀lé ọ lọ sí àwọn ojúlé wẹ́ẹ̀bù mìíràn. Àpapọ̀ nìkan la ń rí, èyí tó ń fi àwọn ojú-ìwé tó wúlò hàn wá.',
+              'Títí tí o fi gbà, a kì í gbé e wọlé rárá. Bí o bá yan “Àwọn tó pọn dandan nìkan”, yóò wà ní pípa.',
+            ],
+          },
+          others: {
+            title: '5. YouTube àti àwọn iṣẹ́ mìíràn',
+            body: ['Àwọn apá kan nínú Knowzone wá láti ọ̀dọ̀ àwọn ilé-iṣẹ́ mìíràn, tó ń tẹ̀lé òfin tiwọn:'],
+            bullets: [
+              'YouTube: àwọn ẹ̀kọ́ fídíò ń ṣeré nínú ẹ̀rọ ìṣeré YouTube fúnra rẹ̀, ní ipò ìpamọ́ tó ga rẹ̀ (youtube-nocookie.com). YouTube lè tọ́jú dátà sínú aṣàwákiri rẹ nígbà tí o bá ṣeré fídíò. Ìlànà Ìpamọ́ Google (policies.google.com/privacy) ló kàn án',
+              'Wíwọlé pẹ̀lú Google tàbí Apple: orí ojú-ìwé tiwọn ni o ti ń ṣe é, tó ń lo kúkì tiwọn',
+              'Sísanwó lórí wẹ́ẹ̀bù: orí ojú-ìwé ààbò Flutterwave ni o ti ń sanwó, tó ń lo kúkì tirẹ̀',
+              'Àwọn ìwé ọ̀fẹ́: àwọn kan ń ṣí láti ojúlé wẹ́ẹ̀bù olùtẹ̀wé fúnra rẹ̀ nínú Knowzone, ojúlé náà sì lè fi kúkì tirẹ̀ síbẹ̀',
+            ],
+          },
+          change: {
+            title: '6. Yíyí yíyàn rẹ padà',
+            body: ['Ìwọ lo ní àṣẹ:'],
+            bullets: [
+              'Yí yíyàn rẹ padà nígbàkígbà: “Cookie settings” ní ìsàlẹ̀ àwọn ojú-ìwé ojúlé wẹ́ẹ̀bù wa, tàbí Ètò → Ìpamọ́ → Ètò kúkì nínú Knowzone lórí wẹ́ẹ̀bù',
+              'Jáde: èyí ń yọ ìwọlé rẹ kúrò nínú aṣàwákiri yìí',
+              'Pa gbogbo rẹ̀ rẹ́: nínú ètò aṣàwákiri rẹ, pa àwọn kúkì àti dátà ojúlé knowzoneai.com rẹ́. Èyí yóò mú ọ jáde lórí ẹ̀rọ yìí, yóò sì yọ iṣẹ́ tí a fipamọ́ síbí nìkan kúrò. A ó tún béèrè yíyàn kúkì rẹ',
+            ],
+          },
+          contact: {
+            title: '7. Ìkànsí',
+            body: [
+              'Ṣé o ní ìbéèrè? Lo Ìrànlọ́wọ́ → Kàn sí ẹgbẹ́ ìrànlọ́wọ́ nínú áàpù, tàbí fi ímeèlì ránṣẹ́ sí info@knowzoneai.com.',
             ],
           },
         },

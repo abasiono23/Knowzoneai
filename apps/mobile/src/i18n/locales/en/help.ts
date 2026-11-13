@@ -539,6 +539,7 @@ const help = {
             title: '1. About this policy',
             body: [
               'This policy explains what personal data Knowzone collects, why, and your rights under the Nigeria Data Protection Act 2023 (NDPA) and other laws that apply to you.',
+              'On app.knowzoneai.com, Knowzone keeps a few things in your browser, and counts visits only if you agree. Our Cookie Policy (app.knowzoneai.com/legal/cookies) explains what they are and how to change your choice.',
             ],
           },
           collect: {
@@ -615,6 +616,75 @@ const help = {
             body: [
               'For privacy questions or requests, use Help → Contact support in the app and choose “Account and privacy”.',
             ],
+          },
+        },
+      },
+      cookies: {
+        title: 'Cookie Policy',
+        eyebrow: 'LEGAL',
+        summary: [
+          'Knowzone keeps what it needs in your browser so you stay signed in, in your language.',
+          'We count visits only if you agree, without cookies and without identifying you.',
+          'YouTube videos play in YouTube’s own player, under Google’s rules.',
+          'You can change your choice at any time in Cookie settings.',
+        ],
+        sections: {
+          about: {
+            title: '1. About this policy',
+            body: [
+              'This policy is about Knowzone in a web browser (app.knowzoneai.com). It explains what Knowzone keeps in your browser, why, and the choices you have. Our Privacy Policy explains how we use personal data in general.',
+              'A cookie is a small file that a website keeps in your browser. Browsers also have “local storage”, which works in a similar way. Knowzone sets one cookie of its own and keeps everything else in local storage.',
+            ],
+          },
+          essential: {
+            title: '2. What Knowzone needs to work',
+            body: [
+              'These are always on, because Knowzone can’t work without them. We don’t use any of them for advertising or to follow you around other websites:',
+            ],
+            bullets: [
+              'Your sign-in: a session kept in local storage (its name starts with “sb-”), so you stay signed in until you log out',
+              'Your language, text size and other display choices (names that start with “knowzone.”, such as knowzone.language)',
+              'Your work on this device: exam sittings in progress, and copies of your study packs, tutor chats, course progress and game progress, so pages open quickly',
+              'The page you were opening before you signed in, so we can take you back to it. It is forgotten when you close the tab',
+              'Your cookie choice: a cookie called kz_consent (see section 3)',
+            ],
+          },
+          choice: {
+            title: '3. Your cookie choice',
+            body: [
+              'The first time you visit, we ask what you are happy with. Your answer is kept in one cookie, called kz_consent, for 12 months, so we don’t ask again on every page. It holds only your answer, nothing about you.',
+              'Whatever you choose, the items in section 2 stay, because Knowzone needs them to work.',
+            ],
+          },
+          analytics: {
+            title: '4. Visit counts',
+            body: [
+              'If you choose “Accept all”, or switch on “Visit counts”, we use Vercel Web Analytics to count how many people visit each page, the page that led them to us, and the country, browser and kind of device they use. It uses no cookies, and it doesn’t identify you or follow you to other websites. We only see totals, which show us which pages are useful.',
+              'Until you agree, it isn’t loaded at all. If you choose “Only essential”, it stays off.',
+            ],
+          },
+          others: {
+            title: '5. YouTube and other services',
+            body: ['Some parts of Knowzone come from other companies, which follow their own rules:'],
+            bullets: [
+              'YouTube: video lessons play in YouTube’s own player, in its privacy-enhanced mode (youtube-nocookie.com). YouTube may keep data in your browser when you play a video. Google’s Privacy Policy (policies.google.com/privacy) applies',
+              'Signing in with Google or Apple: you do this on their page, which uses their own cookies',
+              'Paying on the web: you pay on Flutterwave’s secure page, which uses its own cookies',
+              'Free books: some open from the publisher’s own website inside Knowzone, and that website may set its own cookies',
+            ],
+          },
+          change: {
+            title: '6. Changing your choice',
+            body: ['You are in control:'],
+            bullets: [
+              'Change your choice at any time: “Cookie settings” at the bottom of our website’s pages, or Settings → Privacy → Cookie settings in Knowzone on the web',
+              'Log out: this removes your sign-in from this browser',
+              'Clear everything: in your browser’s settings, clear the cookies and site data for knowzoneai.com. This signs you out on this device and removes work that was only saved here. We will ask for your cookie choice again',
+            ],
+          },
+          contact: {
+            title: '7. Contact',
+            body: ['Questions? Use Help → Contact support in the app, or email info@knowzoneai.com.'],
           },
         },
       },

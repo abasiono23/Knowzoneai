@@ -261,6 +261,23 @@ const settings: Translation<typeof en> = {
     improveAiHint: 'A kashe yake tun farko. Yana ba mu damar duba tambayoyi marasa suna don inganta amsoshi',
     yourData: 'Bayananka',
   },
+  cookies: {
+    title: 'Kukis da ma’ajiya',
+    notice:
+      'Knowzone yana ajiye wasu abubuwa kaɗan a burauzarka domin shiga da harshenka su yi aiki. Idan ka yarda, muna kuma ƙirga ziyarce-ziyarce, ba tare da kukis ba, kuma ba tare da gane ko kai wane ne ba.',
+    acceptAll: 'Karɓi duka',
+    onlyEssential: 'Na wajibi kawai',
+    settings: 'Saitunan kukis',
+    policy: 'Manufar kukis',
+    essential: 'Na wajibi',
+    essentialHint: 'Shiga, harshenka da aikin da ka ajiye',
+    alwaysOn: 'A kunne koyaushe',
+    analytics: 'Ƙirga ziyara',
+    analyticsHint: 'Mutane nawa ke ziyartar kowane shafi. Babu kukis, babu abin da ke nuna ko kai wane ne',
+    save: 'Ajiye zaɓina',
+    section: 'Kukis',
+    sectionFooter: 'Ana ajiye wannan zaɓin a wannan burauzar ne, ba a asusunka ba.',
+  },
   data: {
     eyebrow: 'SIRRI',
     title: 'Sauke bayanaina',

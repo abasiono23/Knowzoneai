@@ -542,6 +542,7 @@ const help: Translation<typeof en> = {
             title: '1. About this policy',
             body: [
               'This policy dey explain the personal data wey Knowzone dey collect, why, and your rights under the Nigeria Data Protection Act 2023 (NDPA) and other laws wey concern you.',
+              'For app.knowzoneai.com, Knowzone dey keep small things for your browser, and e dey count visits only if you gree. Our Cookie Policy (app.knowzoneai.com/legal/cookies) explain wetin dem be and how you fit change your choice.',
             ],
           },
           collect: {
@@ -618,6 +619,75 @@ const help: Translation<typeof en> = {
             body: [
               'For privacy questions or requests, use Help → Contact support inside the app and choose “Account and privacy”.',
             ],
+          },
+        },
+      },
+      cookies: {
+        title: 'Cookie Policy',
+        eyebrow: 'LEGAL',
+        summary: [
+          'Knowzone dey keep wetin e need for your browser so you go remain signed in, for your language.',
+          'We dey count visits only if you gree, without cookies and without knowing who you be.',
+          'YouTube videos dey play for YouTube own player, under Google rules.',
+          'You fit change your choice any time for Cookie settings.',
+        ],
+        sections: {
+          about: {
+            title: '1. About this policy',
+            body: [
+              'This policy na about Knowzone for web browser (app.knowzoneai.com). E explain wetin Knowzone dey keep for your browser, why, and the choices wey you get. Our Privacy Policy explain how we dey use personal data generally.',
+              'Cookie na small file wey website dey keep for your browser. Browsers still get “local storage”, wey dey work like am. Knowzone dey set only one cookie of im own, and e dey keep everything else for local storage.',
+            ],
+          },
+          essential: {
+            title: '2. Wetin Knowzone need to work',
+            body: [
+              'These ones dey on always, because Knowzone no fit work without dem. We no dey use any of dem for advert or to follow you go other websites:',
+            ],
+            bullets: [
+              'Your sign-in: session wey dey local storage (im name dey start with “sb-”), so you go remain signed in until you log out',
+              'Your language, text size and other display choices (names wey start with “knowzone.”, like knowzone.language)',
+              'Your work for this device: exam sittings wey you never finish, and copies of your study packs, tutor chats, course progress and game progress, so pages go open quick',
+              'The page wey you dey open before you sign in, so we fit carry you go back there. E dey forget am when you close the tab',
+              'Your cookie choice: cookie wey dem dey call kz_consent (see section 3)',
+            ],
+          },
+          choice: {
+            title: '3. Your cookie choice',
+            body: [
+              'The first time wey you visit, we go ask wetin you gree to. We dey keep your answer for one cookie, wey dem dey call kz_consent, for 12 months, so we no go dey ask again for every page. Na only your answer e hold, nothing about you.',
+              'Anything wey you choose, the things for section 2 go remain, because Knowzone need dem to work.',
+            ],
+          },
+          analytics: {
+            title: '4. Visit counts',
+            body: [
+              'If you choose “Accept all”, or you on “Visit counts”, we dey use Vercel Web Analytics to count how many people visit each page, the page wey bring dem come, and the country, browser and kind of device wey dem dey use. E no dey use cookies, and e no dey show who you be or follow you go other websites. Na only totals we dey see, and dem dey show us which pages dey useful.',
+              'Until you gree, e no dey load at all. If you choose “Only wetin dey needed”, e go remain off.',
+            ],
+          },
+          others: {
+            title: '5. YouTube and other services',
+            body: ['Some parts of Knowzone dey come from other companies, wey dey follow their own rules:'],
+            bullets: [
+              'YouTube: video lessons dey play for YouTube own player, for im privacy-enhanced mode (youtube-nocookie.com). YouTube fit keep data for your browser when you play video. Na Google Privacy Policy (policies.google.com/privacy) dey apply',
+              'To sign in with Google or Apple: you dey do am for their page, wey dey use their own cookies',
+              'To pay for web: you dey pay for Flutterwave secure page, wey dey use im own cookies',
+              'Free books: some dey open from the publisher own website inside Knowzone, and that website fit set im own cookies',
+            ],
+          },
+          change: {
+            title: '6. To change your choice',
+            body: ['Na you dey control am:'],
+            bullets: [
+              'Change your choice any time: “Cookie settings” for the bottom of our website pages, or Settings → Privacy → Cookie settings for Knowzone for web',
+              'Log out: this one dey remove your sign-in from this browser',
+              'Clear everything: for your browser settings, clear the cookies and site data for knowzoneai.com. This one go sign you out for this device and remove work wey dey saved only here. We go ask for your cookie choice again',
+            ],
+          },
+          contact: {
+            title: '7. Contact',
+            body: ['You get question? Use Help → Contact support inside the app, or email info@knowzoneai.com.'],
           },
         },
       },

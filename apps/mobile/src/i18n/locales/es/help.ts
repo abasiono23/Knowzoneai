@@ -548,6 +548,7 @@ const help: Translation<typeof en> = {
             title: '1. Sobre esta política',
             body: [
               'Esta política explica qué datos personales recoge Knowzone, para qué y cuáles son tus derechos según la Nigeria Data Protection Act 2023 (NDPA, Ley de Protección de Datos de Nigeria) y otras leyes que se te apliquen.',
+              'En app.knowzoneai.com, Knowzone guarda algunas cosas en tu navegador y solo cuenta las visitas si estás de acuerdo. Nuestra Política de cookies (app.knowzoneai.com/legal/cookies) explica qué son y cómo cambiar tu elección.',
             ],
           },
           collect: {
@@ -624,6 +625,75 @@ const help: Translation<typeof en> = {
             body: [
               'Para preguntas o solicitudes sobre privacidad, usa Ayuda → Contactar con soporte en la app y elige «Cuenta y privacidad».',
             ],
+          },
+        },
+      },
+      cookies: {
+        title: 'Política de cookies',
+        eyebrow: 'LEGAL',
+        summary: [
+          'Knowzone guarda en tu navegador lo que necesita para que sigas con la sesión iniciada, en tu idioma.',
+          'Solo contamos las visitas si estás de acuerdo, sin cookies y sin identificarte.',
+          'Los vídeos de YouTube se reproducen en el reproductor del propio YouTube, según las normas de Google.',
+          'Puedes cambiar tu elección en cualquier momento en Configuración de cookies.',
+        ],
+        sections: {
+          about: {
+            title: '1. Sobre esta política',
+            body: [
+              'Esta política trata de Knowzone en un navegador web (app.knowzoneai.com). Explica qué guarda Knowzone en tu navegador, por qué, y qué opciones tienes. Nuestra Política de privacidad explica cómo usamos los datos personales en general.',
+              'Una cookie es un pequeño archivo que un sitio web guarda en tu navegador. Los navegadores también tienen «almacenamiento local», que funciona de forma parecida. Knowzone solo pone una cookie propia y guarda todo lo demás en el almacenamiento local.',
+            ],
+          },
+          essential: {
+            title: '2. Lo que Knowzone necesita para funcionar',
+            body: [
+              'Estas están siempre activas, porque Knowzone no puede funcionar sin ellas. No usamos ninguna para publicidad ni para seguirte en otros sitios web:',
+            ],
+            bullets: [
+              'Tu inicio de sesión: una sesión guardada en el almacenamiento local (su nombre empieza por «sb-»), para que sigas con la sesión iniciada hasta que la cierres',
+              'Tu idioma, el tamaño del texto y otras opciones de visualización (nombres que empiezan por «knowzone.», como knowzone.language)',
+              'Tu trabajo en este dispositivo: exámenes en curso, y copias de tus packs de estudio, chats con el tutor, progreso en los cursos y en los juegos, para que las páginas se abran rápido',
+              'La página que estabas abriendo antes de iniciar sesión, para llevarte de vuelta a ella. Se olvida cuando cierras la pestaña',
+              'Tu elección de cookies: una cookie llamada kz_consent (mira la sección 3)',
+            ],
+          },
+          choice: {
+            title: '3. Tu elección de cookies',
+            body: [
+              'La primera vez que nos visitas, te preguntamos qué aceptas. Tu respuesta se guarda en una sola cookie, llamada kz_consent, durante 12 meses, para no volver a preguntar en cada página. Solo contiene tu respuesta, nada sobre ti.',
+              'Elijas lo que elijas, los elementos de la sección 2 se mantienen, porque Knowzone los necesita para funcionar.',
+            ],
+          },
+          analytics: {
+            title: '4. Recuento de visitas',
+            body: [
+              'Si eliges «Aceptar todo», o activas «Recuento de visitas», usamos Vercel Web Analytics para contar cuántas personas visitan cada página, la página que las trajo hasta nosotros, y el país, el navegador y el tipo de dispositivo que usan. No usa cookies, y no te identifica ni te sigue en otros sitios web. Solo vemos totales, que nos muestran qué páginas son útiles.',
+              'Hasta que aceptes, no se carga en absoluto. Si eliges «Solo las esenciales», sigue desactivado.',
+            ],
+          },
+          others: {
+            title: '5. YouTube y otros servicios',
+            body: ['Algunas partes de Knowzone vienen de otras empresas, que siguen sus propias normas:'],
+            bullets: [
+              'YouTube: las lecciones en vídeo se reproducen en el reproductor del propio YouTube, en su modo de privacidad mejorada (youtube-nocookie.com). YouTube puede guardar datos en tu navegador cuando reproduces un vídeo. Se aplica la Política de Privacidad de Google (policies.google.com/privacy)',
+              'Iniciar sesión con Google o Apple: lo haces en su página, que usa sus propias cookies',
+              'Pagar en la web: pagas en la página segura de Flutterwave, que usa sus propias cookies',
+              'Libros gratuitos: algunos se abren desde el sitio web de la propia editorial dentro de Knowzone, y ese sitio puede poner sus propias cookies',
+            ],
+          },
+          change: {
+            title: '6. Cambiar tu elección',
+            body: ['Tú decides:'],
+            bullets: [
+              'Cambia tu elección en cualquier momento: «Cookie settings» al final de las páginas de nuestro sitio web, o Ajustes → Privacidad → Configuración de cookies en Knowzone en la web',
+              'Cerrar sesión: esto quita tu inicio de sesión de este navegador',
+              'Borrar todo: en los ajustes de tu navegador, borra las cookies y los datos del sitio knowzoneai.com. Esto cierra tu sesión en este dispositivo y elimina el trabajo que solo estaba guardado aquí. Volveremos a preguntarte por tu elección de cookies',
+            ],
+          },
+          contact: {
+            title: '7. Contacto',
+            body: ['¿Tienes preguntas? Usa Ayuda → Contactar con soporte en la app, o escribe a info@knowzoneai.com.'],
           },
         },
       },

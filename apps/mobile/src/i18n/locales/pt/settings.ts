@@ -263,6 +263,23 @@ const settings: Translation<typeof en> = {
     improveAiHint: 'Desligado por defeito. Permite-nos rever perguntas anonimizadas para melhorar as respostas',
     yourData: 'Os teus dados',
   },
+  cookies: {
+    title: 'Cookies e armazenamento',
+    notice:
+      'O Knowzone guarda algumas coisas no teu navegador para que o início de sessão e o teu idioma funcionem. Se concordares, também contamos as visitas, sem cookies e sem te identificar.',
+    acceptAll: 'Aceitar tudo',
+    onlyEssential: 'Só os essenciais',
+    settings: 'Definições de cookies',
+    policy: 'Política de cookies',
+    essential: 'Essenciais',
+    essentialHint: 'O início de sessão, o teu idioma e o teu trabalho guardado',
+    alwaysOn: 'Sempre ativos',
+    analytics: 'Contagem de visitas',
+    analyticsHint: 'Quantas pessoas visitam cada página. Sem cookies, nada que te identifique',
+    save: 'Guardar a minha escolha',
+    section: 'Cookies',
+    sectionFooter: 'Esta escolha fica guardada neste navegador, não na tua conta.',
+  },
   data: {
     eyebrow: 'PRIVACIDADE',
     title: 'Descarregar os meus dados',

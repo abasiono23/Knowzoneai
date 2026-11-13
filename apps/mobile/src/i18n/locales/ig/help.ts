@@ -542,6 +542,7 @@ const help: Translation<typeof en> = {
             title: '1. Banyere iwu a',
             body: [
               'Iwu a na-akọwa data nkeonwe Knowzone na-anakọta, ihe kpatara ya, na ikike gị n’okpuru Nigeria Data Protection Act 2023 (NDPA) na iwu ndị ọzọ metụtara gị.',
+              'Na app.knowzoneai.com, Knowzone na-edebe ihe ole na ole na ihe nchọgharị gị, ọ na-agụkwa nleta naanị ma i kwere. Iwu Kuki anyị (app.knowzoneai.com/legal/cookies) na-akọwa ihe ha bụ na otu ị ga-esi gbanwee nhọrọ gị.',
             ],
           },
           collect: {
@@ -617,6 +618,77 @@ const help: Translation<typeof en> = {
             title: '10. Kọntaktị',
             body: [
               'Maka ajụjụ ma ọ bụ arịrịọ gbasara nzuzo, jiri Enyemaka → Kpọtụrụ ndị enyemaka na ngwa ahụ ma họrọ “Akaụntụ na nzuzo”.',
+            ],
+          },
+        },
+      },
+      cookies: {
+        title: 'Iwu Kuki',
+        eyebrow: 'IWU',
+        summary: [
+          'Knowzone na-edebe ihe ọ chọrọ na ihe nchọgharị gị ka ị nọgide na mbanye, n’asụsụ gị.',
+          'Anyị na-agụ nleta naanị ma i kwere, na-ejighị kuki, na-amaghịkwa onye ị bụ.',
+          'Vidiyo YouTube na-akpọ n’ime ihe ọkpụkpọ nke YouTube n’onwe ya, n’okpuru iwu Google.',
+          'Ị nwere ike ịgbanwe nhọrọ gị mgbe ọ bụla na Ntọala kuki.',
+        ],
+        sections: {
+          about: {
+            title: '1. Gbasara iwu a',
+            body: [
+              'Iwu a bụ maka Knowzone n’ime ihe nchọgharị weebụ (app.knowzoneai.com). Ọ na-akọwa ihe Knowzone na-edebe na ihe nchọgharị gị, ihe kpatara ya, na nhọrọ ndị i nwere. Iwu Nzuzo anyị na-akọwa otu anyị si eji data onwe onye n’ozuzu.',
+              'Kuki bụ obere faịlụ nke weebụsaịtị na-edebe na ihe nchọgharị gị. Ihe nchọgharị nwekwara “local storage”, nke na-arụ ọrụ n’ụzọ yiri ya. Knowzone na-etinye naanị otu kuki nke ya, ọ na-edebekwa ihe ndị ọzọ niile na local storage.',
+            ],
+          },
+          essential: {
+            title: '2. Ihe Knowzone chọrọ iji rụọ ọrụ',
+            body: [
+              'Ndị a na-agbanye mgbe niile, n’ihi na Knowzone enweghị ike ịrụ ọrụ ma ha anọghị. Anyị anaghị eji nke ọ bụla n’ime ha maka mgbasa ozi ma ọ bụ iji soro gị gaa na weebụsaịtị ndị ọzọ:',
+            ],
+            bullets: [
+              'Mbanye gị: oge mbanye e debere na local storage (aha ya na-amalite na “sb-”), ka ị nọgide na mbanye ruo mgbe ị pụrụ',
+              'Asụsụ gị, nha ederede na nhọrọ ngosi ndị ọzọ (aha ndị na-amalite na “knowzone.”, dị ka knowzone.language)',
+              'Ọrụ gị na ngwaọrụ a: ule ndị ị na-emechabeghị, na oyiri nke ngwugwu ọmụmụ gị, mkparịta ụka gị na onye nkuzi AI, ọganihu kọọsụ na ọganihu egwuregwu, ka peeji na-emepe ngwa ngwa',
+              'Peeji ị na-emepe tupu ị banye, ka anyị nwee ike iweghachi gị na ya. A na-echefu ya mgbe i mechiri taabụ ahụ',
+              'Nhọrọ kuki gị: kuki a na-akpọ kz_consent (lee nkebi 3)',
+            ],
+          },
+          choice: {
+            title: '3. Nhọrọ kuki gị',
+            body: [
+              'Oge mbụ ị bịara, anyị na-ajụ ihe i kwere. A na-edebe azịza gị n’otu kuki, a na-akpọ kz_consent, ruo ọnwa 12, ka anyị ghara ịjụ ọzọ na peeji ọ bụla. Naanị azịza gị dị n’ime ya, ọ dịghị ihe ọ bụla gbasara gị.',
+              'Ihe ọ bụla ị họọrọ, ihe ndị dị na nkebi 2 ga-adịgide, n’ihi na Knowzone chọrọ ha iji rụọ ọrụ.',
+            ],
+          },
+          analytics: {
+            title: '4. Ọnụọgụ nleta',
+            body: [
+              'Ọ bụrụ na ị họrọ “Nabata ha niile”, ma ọ bụ gbanye “Ọnụọgụ nleta”, anyị na-eji Vercel Web Analytics agụ mmadụ ole letara peeji ọ bụla, peeji nke butere ha n’ebe anyị nọ, na obodo, ihe nchọgharị na ụdị ngwaọrụ ha na-eji. Ọ naghị eji kuki, ọ naghịkwa egosi onye ị bụ ma ọ bụ soro gị gaa na weebụsaịtị ndị ọzọ. Naanị mkpokọta ka anyị na-ahụ, nke na-egosi anyị peeji ndị bara uru.',
+              'Ruo mgbe i kwere, a naghị ebudata ya ma ọlị. Ọ bụrụ na ị họrọ “Naanị ndị dị mkpa”, ọ ga-anọgide na-agbanyụ.',
+            ],
+          },
+          others: {
+            title: '5. YouTube na ọrụ ndị ọzọ',
+            body: ['Akụkụ ụfọdụ nke Knowzone si n’ụlọ ọrụ ndị ọzọ, ndị na-agbaso iwu nke ha:'],
+            bullets: [
+              'YouTube: nkuzi vidiyo na-akpọ n’ime ihe ọkpụkpọ nke YouTube n’onwe ya, n’ọnọdụ nzuzo ya ka mma (youtube-nocookie.com). YouTube nwere ike idebe data na ihe nchọgharị gị mgbe ị kpọrọ vidiyo. Iwu Nzuzo Google (policies.google.com/privacy) na-emetụta ya',
+              'Iji Google ma ọ bụ Apple banye: ị na-eme nke a na peeji ha, nke na-eji kuki nke ha',
+              'Ịkwụ ụgwọ na weebụ: ị na-akwụ ụgwọ na peeji nchekwa nke Flutterwave, nke na-eji kuki nke ya',
+              'Akwụkwọ n’efu: ụfọdụ na-emepe site na weebụsaịtị nke onye bipụtara ha n’ime Knowzone, weebụsaịtị ahụ nwekwara ike itinye kuki nke ya',
+            ],
+          },
+          change: {
+            title: '6. Ịgbanwe nhọrọ gị',
+            body: ['Ọ dị gị n’aka:'],
+            bullets: [
+              'Gbanwee nhọrọ gị mgbe ọ bụla: “Cookie settings” na ala peeji nke weebụsaịtị anyị, ma ọ bụ Ntọala → Nzuzo → Ntọala kuki na Knowzone na weebụ',
+              'Pụọ: nke a na-ewepụ mbanye gị na ihe nchọgharị a',
+              'Hichapụ ihe niile: na ntọala ihe nchọgharị gị, hichapụ kuki na data saịtị maka knowzoneai.com. Nke a ga-eme ka ị pụọ na ngwaọrụ a, wepụkwa ọrụ e chekwara naanị ebe a. Anyị ga-ajụ maka nhọrọ kuki gị ọzọ',
+            ],
+          },
+          contact: {
+            title: '7. Kọntaktị',
+            body: [
+              'Ị nwere ajụjụ? Jiri Enyemaka → Kpọtụrụ ndị enyemaka na ngwa ahụ, ma ọ bụ zipu ozi-e na info@knowzoneai.com.',
             ],
           },
         },

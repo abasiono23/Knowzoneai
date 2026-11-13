@@ -546,6 +546,7 @@ const help: Translation<typeof en> = {
             title: '1. Game da wannan manufa',
             body: [
               'Wannan manufa tana bayyana irin bayanan sirri da Knowzone ke tattarawa, dalilin haka, da haƙƙoƙinka ƙarƙashin Nigeria Data Protection Act 2023 (NDPA) da sauran dokokin da suka shafe ka.',
+              'A app.knowzoneai.com, Knowzone yana ajiye wasu abubuwa kaɗan a burauzarka, kuma yana ƙirga ziyarce-ziyarce ne kawai idan ka yarda. Manufar Kukis ɗinmu (app.knowzoneai.com/legal/cookies) ta bayyana abin da suke da yadda za ka canza zaɓinka.',
             ],
           },
           collect: {
@@ -621,6 +622,77 @@ const help: Translation<typeof en> = {
             title: '10. Tuntuɓa',
             body: [
               'Don tambayoyi ko buƙatu game da sirri, yi amfani da Taimako → Tuntuɓi tallafi a cikin manhajar ka zaɓi “Asusu da sirri”.',
+            ],
+          },
+        },
+      },
+      cookies: {
+        title: 'Manufar Kukis',
+        eyebrow: 'DOKA',
+        summary: [
+          'Knowzone yana ajiye abin da yake buƙata a burauzarka domin ka ci gaba da kasancewa a shige, a harshenka.',
+          'Muna ƙirga ziyarce-ziyarce ne kawai idan ka yarda, ba tare da kukis ba, kuma ba tare da gane ko kai wane ne ba.',
+          'Bidiyon YouTube suna kunnawa a cikin na’urar kunna bidiyo ta YouTube da kanta, ƙarƙashin dokokin Google.',
+          'Za ka iya canza zaɓinka a kowane lokaci a Saitunan kukis.',
+        ],
+        sections: {
+          about: {
+            title: '1. Game da wannan manufa',
+            body: [
+              'Wannan manufa tana magana ne kan Knowzone a burauzar yanar gizo (app.knowzoneai.com). Tana bayyana abin da Knowzone yake ajiyewa a burauzarka, dalilin haka, da zaɓuɓɓukan da kake da su. Manufar Sirrinmu tana bayyana yadda muke amfani da bayanan sirri gaba ɗaya.',
+              'Kuki ƙaramin fayil ne da shafin yanar gizo yake ajiyewa a burauzarka. Burauza kuma suna da “local storage”, wanda yake aiki ta irin wannan hanya. Knowzone yana saka kuki ɗaya tak nasa, kuma yana ajiye sauran komai a local storage.',
+            ],
+          },
+          essential: {
+            title: '2. Abin da Knowzone yake buƙata don yin aiki',
+            body: [
+              'Waɗannan a kunne suke koyaushe, saboda Knowzone ba zai iya aiki ba tare da su ba. Ba ma amfani da ko ɗaya daga cikinsu don talla ko don bin ka zuwa wasu shafukan yanar gizo:',
+            ],
+            bullets: [
+              'Shigarka: zaman shiga da ake ajiyewa a local storage (sunansa yana farawa da “sb-”), domin ka ci gaba da kasancewa a shige har sai ka fita',
+              'Harshenka, girman rubutu da sauran zaɓuɓɓukan nuni (sunayen da suke farawa da “knowzone.”, kamar knowzone.language)',
+              'Aikinka a wannan na’ura: jarrabawar da ba ka gama ba, da kwafin fakitin karatunka, hirarrakinka da malamin AI, ci gaban kwas da ci gaban wasa, domin shafuka su buɗe da sauri',
+              'Shafin da kake buɗewa kafin ka shiga, domin mu mayar da kai gare shi. Ana mantawa da shi idan ka rufe tab ɗin',
+              'Zaɓinka na kukis: kuki da ake kira kz_consent (duba sashe na 3)',
+            ],
+          },
+          choice: {
+            title: '3. Zaɓinka na kukis',
+            body: [
+              'A karo na farko da ka ziyarta, muna tambayar abin da ka yarda da shi. Ana ajiye amsarka a kuki ɗaya, da ake kira kz_consent, na tsawon watanni 12, domin kada mu sake tambaya a kowane shafi. Amsarka kawai yake ɗauke da ita, babu wani abu game da kai.',
+              'Duk abin da ka zaɓa, abubuwan da ke sashe na 2 za su ci gaba da kasancewa, saboda Knowzone yana buƙatar su don yin aiki.',
+            ],
+          },
+          analytics: {
+            title: '4. Ƙirga ziyara',
+            body: [
+              'Idan ka zaɓi “Karɓi duka”, ko ka kunna “Ƙirga ziyara”, muna amfani da Vercel Web Analytics don ƙirga mutane nawa suka ziyarci kowane shafi, shafin da ya kawo su gare mu, da ƙasa, burauza da irin na’urar da suke amfani da ita. Ba ya amfani da kukis, kuma ba ya gane ko kai wane ne ko bin ka zuwa wasu shafukan yanar gizo. Jimla kawai muke gani, wadda take nuna mana shafukan da suke da amfani.',
+              'Har sai ka yarda, ba a loda shi kwata-kwata. Idan ka zaɓi “Na wajibi kawai”, zai ci gaba da kasancewa a kashe.',
+            ],
+          },
+          others: {
+            title: '5. YouTube da sauran sabis',
+            body: ['Wasu sassan Knowzone suna zuwa ne daga wasu kamfanoni, waɗanda suke bin nasu dokokin:'],
+            bullets: [
+              'YouTube: darussan bidiyo suna kunnawa a cikin na’urar kunna bidiyo ta YouTube da kanta, a yanayinta na ƙarin sirri (youtube-nocookie.com). YouTube na iya ajiye bayanai a burauzarka idan ka kunna bidiyo. Manufar Sirri ta Google (policies.google.com/privacy) ce take aiki',
+              'Shiga da Google ko Apple: kana yin haka ne a shafinsu, wanda yake amfani da nasu kukis',
+              'Biyan kuɗi a yanar gizo: kana biya ne a shafin Flutterwave mai tsaro, wanda yake amfani da nasa kukis',
+              'Littattafai na kyauta: wasu suna buɗewa ne daga shafin yanar gizon mawallafin da kansa a cikin Knowzone, kuma wannan shafin na iya saka nasa kukis',
+            ],
+          },
+          change: {
+            title: '6. Canza zaɓinka',
+            body: ['Kai ne mai iko:'],
+            bullets: [
+              'Canza zaɓinka a kowane lokaci: “Cookie settings” a ƙasan shafukan gidan yanar gizonmu, ko Saituna → Sirri → Saitunan kukis a cikin Knowzone a yanar gizo',
+              'Fita: wannan yana cire shigarka daga wannan burauzar',
+              'Goge komai: a saitunan burauzarka, goge kukis da bayanan shafi na knowzoneai.com. Wannan zai fitar da kai a wannan na’ura kuma ya cire aikin da aka ajiye a nan kawai. Za mu sake tambayar zaɓinka na kukis',
+            ],
+          },
+          contact: {
+            title: '7. Tuntuɓa',
+            body: [
+              'Kana da tambaya? Yi amfani da Taimako → Tuntuɓi tallafi a cikin manhajar, ko aika imel zuwa info@knowzoneai.com.',
             ],
           },
         },

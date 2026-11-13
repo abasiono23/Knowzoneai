@@ -5,7 +5,7 @@ import { TUTOR_DAILY } from '../billing/plans';
 
 type Icon = keyof typeof Ionicons.glyphMap;
 
-export type LegalDocId = 'terms' | 'privacy' | 'guidelines' | 'ai';
+export type LegalDocId = 'terms' | 'privacy' | 'cookies' | 'guidelines' | 'ai';
 /** A section's structure: does it open with paragraphs, and does it have a bullet list? */
 export type LegalSectionDef = { id: string; body?: false; bullets?: true };
 export type LegalDocDef = {
@@ -62,8 +62,8 @@ export const LEGAL_DOCS: Record<LegalDocId, LegalDocDef> = {
   privacy: {
     id: 'privacy',
     icon: 'lock-closed',
-    // Talking to Kora (speech turned into text by the phone or browser) added.
-    updated: new Date(2026, 10, 11),
+    // A pointer to the cookie policy added.
+    updated: new Date(2026, 10, 13),
     summaryIcons: ['eye-off', 'school', 'sparkles', 'download'],
     sections: [
       { id: 'scope' },
@@ -75,6 +75,22 @@ export const LEGAL_DOCS: Record<LegalDocId, LegalDocDef> = {
       { id: 'keep' },
       { id: 'rights', bullets: true },
       { id: 'security' },
+      { id: 'contact' },
+    ],
+  },
+  // What the web version keeps in the browser, and the choice about visit counts (src/lib/cookie-consent.ts).
+  cookies: {
+    id: 'cookies',
+    icon: 'options',
+    updated: new Date(2026, 10, 13),
+    summaryIcons: ['key', 'analytics', 'logo-youtube', 'options'],
+    sections: [
+      { id: 'about' },
+      { id: 'essential', bullets: true },
+      { id: 'choice' },
+      { id: 'analytics' },
+      { id: 'others', bullets: true },
+      { id: 'change', bullets: true },
       { id: 'contact' },
     ],
   },

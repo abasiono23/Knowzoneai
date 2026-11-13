@@ -1257,6 +1257,152 @@ footer {
   font-size: 14px;
 }
 
+/* Cookie notice: a small bar at the bottom until the visitor chooses (site.js). */
+.foot-btn {
+  display: block;
+  padding: 3px 0;
+  border: 0;
+  background: none;
+  color: #cfc7f7;
+  font: inherit;
+  text-align: start;
+  cursor: pointer;
+}
+.foot-btn:hover {
+  color: #fff;
+}
+footer {
+  padding-bottom: calc(34px + var(--cookie-room, 0px));
+}
+.cookie {
+  position: fixed;
+  z-index: 60;
+  inset: auto 12px 12px;
+  max-width: 980px;
+  margin: 0 auto;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+  box-shadow: 0 24px 60px -20px rgba(22, 10, 77, 0.55);
+  color: var(--ink-2);
+  font-size: 14.5px;
+  line-height: 1.5;
+}
+.cookie[hidden],
+.cookie-panel[hidden] {
+  display: none;
+}
+.cookie-in {
+  display: grid;
+  gap: 12px 24px;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  max-height: calc(100vh - 24px);
+  max-height: calc(100dvh - 24px);
+  padding: 16px 20px;
+  overflow-y: auto;
+}
+.cookie-text strong,
+.cookie-row b {
+  color: var(--ink);
+}
+.cookie a,
+.cookie-link {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--deep);
+  font: inherit;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+.cookie-narrow {
+  display: none;
+}
+.cookie-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px 18px;
+  margin-top: 2px;
+}
+.cookie-actions {
+  display: flex;
+  gap: 10px;
+}
+/* Both answers look the same: neither is the "right" one. */
+.cookie-btn {
+  flex: 1;
+  min-height: 46px;
+  padding: 10px 20px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--deep);
+  color: #fff;
+  font: inherit;
+  font-weight: 800;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.cookie-btn:hover {
+  background: var(--night);
+}
+.cookie-panel {
+  display: grid;
+  gap: 10px;
+  grid-column: 1 / -1;
+  grid-row: 2;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+}
+.cookie-panel .cookie-btn {
+  justify-self: start;
+}
+/* With the settings open, "Save my choice" is the one answer. */
+.cookie.with-panel .cookie-actions {
+  display: none;
+}
+.cookie-row {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  cursor: pointer;
+}
+.cookie-row b {
+  display: block;
+}
+.cookie-row input {
+  flex: none;
+  width: 20px;
+  height: 20px;
+  margin: 1px 0 0;
+  accent-color: var(--purple);
+}
+@media (max-width: 760px) {
+  .cookie {
+    inset: auto 8px 8px;
+    font-size: 13.5px;
+  }
+  .cookie-in {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 14px 14px 12px;
+  }
+  .cookie-panel {
+    grid-row: auto;
+  }
+  .cookie-wide {
+    display: none;
+  }
+  .cookie-narrow {
+    display: inline;
+  }
+  .cookie-btn {
+    min-height: 44px;
+    padding: 8px 12px;
+  }
+}
+
 /* Things that rise into view */
 .js .reveal {
   opacity: 0;

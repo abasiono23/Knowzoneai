@@ -15,12 +15,13 @@ import { useSession } from '@/lib/session';
 
 const RELATED: Record<LegalDocId, LegalDocId[]> = {
   terms: ['privacy', 'guidelines', 'ai'],
-  privacy: ['terms', 'ai'],
+  privacy: ['cookies', 'terms', 'ai'],
+  cookies: ['privacy', 'terms'],
   guidelines: ['terms', 'ai'],
   ai: ['guidelines', 'privacy'],
 };
 
-/** Screens 226–229: community guidelines, terms of service, privacy policy, AI limitations. */
+/** Screens 226–229: community guidelines, terms of service, privacy policy, AI limitations; and the cookie policy. */
 export default function LegalDocScreen() {
   const { doc: raw } = useLocalSearchParams<{ doc: string }>();
   const { user } = useSession();
