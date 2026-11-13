@@ -460,6 +460,7 @@ const tutor = {
     flashcardsBody: 'Key facts from these pages as cards you can review. Uses 1 AI credit.',
     videoTitle: 'Video summary',
     videoBody: 'A short narrated video of this topic, with captions. Uses 1 AI credit.',
+    videoBodyClip: 'A short narrated video of this topic that opens with a moving AI clip, with captions. Uses 5 AI credits.',
     errors: {
       scannedBook: {
         title: 'This PDF is scanned pages',

@@ -458,6 +458,7 @@ const tutor: Translation<typeof en> = {
     flashcardsBody: 'Key facts from these pages as cards wey you fit review. E dey use 1 AI credit.',
     videoTitle: 'Video summary',
     videoBody: 'Short video wey dem narrate about this topic, with captions. E dey use 1 AI credit.',
+    videoBodyClip: 'Short video wey dem narrate about this topic, e go start with moving AI clip, with captions. E dey use 5 AI credits.',
     errors: {
       scannedBook: {
         title: 'This PDF na scanned pages',

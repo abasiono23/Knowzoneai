@@ -374,7 +374,7 @@ describe('textbook video summaries', () => {
   it('opens with a moving AI clip on a paid plan, made from the topic’s pages', async () => {
     reset();
     const { as, sub } = await signIn();
-    await prisma.user.update({ where: { id: sub }, data: { plan: 'PLUS' } });
+    await prisma.user.update({ where: { id: sub }, data: { plan: 'PLUS', aiCredits: 20 } });
     await book('bookv001', sub);
     await as.post('/videos/mine/tbclip01', { title: 'Osmosis', source: source('bookv001'), settings: SETTINGS }).expect(202);
     const v = await settled(as, 'tbclip01');
@@ -385,6 +385,37 @@ describe('textbook video summaries', () => {
     expect(v.scenes.slice(1).some((s: Scene) => s.clip)).toBe(false);
     const clip = await http().get(v.scenes[0].clip).expect(200);
     expect(clip.headers['content-type']).toBe('video/mp4');
+  });
+
+  it('charges 5 credits for a video with the clip, and a remake never buys another clip', async () => {
+    reset();
+    const { as, sub } = await signIn();
+    await prisma.user.update({ where: { id: sub }, data: { plan: 'PLUS', aiCredits: 20 } });
+    await book('bookv101', sub);
+    await as.post('/videos/mine/tbcost01', { title: 'Osmosis', source: source('bookv101'), settings: SETTINGS }).expect(202);
+    const first = await settled(as, 'tbcost01');
+    expect(await credits(sub)).toBe(15);
+    expect(ai.clips).toBe(1);
+    // A new language writes a new script for 1 credit, and shows the same clip again.
+    await as.post('/videos/mine/tbcost01/regenerate', { settings: { ...SETTINGS, language: 'fr' } }).expect(202);
+    const again = await settled(as, 'tbcost01');
+    expect(again.status).toBe('ready');
+    expect(ai.clips).toBe(1);
+    expect(again.scenes[0].clip).toBe(first.scenes[0].clip);
+    expect(await credits(sub)).toBe(14);
+  });
+
+  it('makes the video without the clip, for 1 credit, when there aren’t enough credits for it', async () => {
+    reset();
+    const { as, sub } = await signIn();
+    await prisma.user.update({ where: { id: sub }, data: { plan: 'PRO', aiCredits: 3 } });
+    await book('bookv102', sub);
+    await as.post('/videos/mine/tbcost02', { title: 'Osmosis', source: source('bookv102'), settings: SETTINGS }).expect(202);
+    const v = await settled(as, 'tbcost02');
+    expect(v.status).toBe('ready');
+    expect(ai.clips).toBe(0);
+    expect(v.scenes.some((s: Scene) => s.clip)).toBe(false);
+    expect(await credits(sub)).toBe(2);
   });
 
   it('keeps the clip for paid plans even while everything else is free', async () => {
@@ -407,7 +438,7 @@ describe('textbook video summaries', () => {
     ai.photos = true;
     ai.diagrams = true;
     const { as, sub } = await signIn();
-    await prisma.user.update({ where: { id: sub }, data: { plan: 'PLUS' } });
+    await prisma.user.update({ where: { id: sub }, data: { plan: 'PLUS', aiCredits: 20 } });
     await book('bookv004', sub);
     await as.post('/videos/mine/tbreal01', { title: 'Osmosis', source: source('bookv004'), settings: SETTINGS }).expect(202);
     const v = await settled(as, 'tbreal01');
@@ -430,7 +461,7 @@ describe('textbook video summaries', () => {
   it('makes no clip for other videos, and a failed clip doesn’t fail the video', async () => {
     reset();
     const { as, sub } = await signIn();
-    await prisma.user.update({ where: { id: sub }, data: { plan: 'PRO' } });
+    await prisma.user.update({ where: { id: sub }, data: { plan: 'PRO', aiCredits: 20 } });
     await as.post('/videos/mine/topic901', { title: 'Leaves', source: { kind: 'topic', topic: 'Leaves' }, settings: SETTINGS }).expect(202);
     expect((await settled(as, 'topic901')).status).toBe('ready');
     expect(ai.clips).toBe(0);

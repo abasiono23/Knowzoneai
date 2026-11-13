@@ -458,6 +458,7 @@ const tutor: Translation<typeof en> = {
     flashcardsBody: 'Isi eziokwu sitere na peeji ndị a dị ka kaadị ị nwere ike nyochaa. Ọ na-eji kredit AI 1.',
     videoTitle: 'Nchịkọta vidiyo',
     videoBody: 'Vidiyo dị mkpirikpi a na-akọwa banyere isiokwu a, nwere okwu ederede. Ọ na-eji kredit AI 1.',
+    videoBodyClip: 'Vidiyo dị mkpirikpi a na-akọwa banyere isiokwu a, nke na-amalite na obere vidiyo AI na-emegharị ahụ, nwere okwu ederede. Ọ na-eji kredit AI 5.',
     errors: {
       scannedBook: {
         title: 'PDF a bụ peeji e sere foto',

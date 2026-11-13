@@ -467,6 +467,7 @@ const tutor: Translation<typeof en> = {
     flashcardsBody: 'Les points essentiels de ces pages, sous forme de cartes à réviser. Utilise 1 crédit IA.',
     videoTitle: 'Résumé vidéo',
     videoBody: 'Une courte vidéo commentée sur ce thème, avec sous-titres. Utilise 1 crédit IA.',
+    videoBodyClip: 'Une courte vidéo commentée sur ce thème, qui commence par un extrait animé créé par IA, avec sous-titres. Utilise 5 crédits IA.',
     errors: {
       scannedBook: {
         title: 'Ce PDF est un scan de pages',

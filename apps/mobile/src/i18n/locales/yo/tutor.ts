@@ -458,6 +458,7 @@ const tutor: Translation<typeof en> = {
     flashcardsBody: 'Àwọn kókó pàtàkì láti inú ojú-ìwé wọ̀nyí gẹ́gẹ́ bí káàdì tí o lè tún wò. Ó ń lo kírẹ́dìtì AI 1.',
     videoTitle: 'Àkópọ̀ fídíò',
     videoBody: 'Fídíò kúkúrú tí a ń sọ̀rọ̀ lórí àkòrí yìí, pẹ̀lú àkọlé ọ̀rọ̀. Ó ń lo kírẹ́dìtì AI 1.',
+    videoBodyClip: 'Fídíò kúkúrú tí a ń sọ̀rọ̀ lórí àkòrí yìí, tí ó bẹ̀rẹ̀ pẹ̀lú àgékúrú AI tó ń rìn, pẹ̀lú àkọlé ọ̀rọ̀. Ó ń lo kírẹ́dìtì AI 5.',
     errors: {
       scannedBook: {
         title: 'PDF yìí jẹ́ ojú-ìwé tí a ya fọ́tò',

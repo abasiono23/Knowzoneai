@@ -461,6 +461,7 @@ const tutor: Translation<typeof en> = {
     flashcardsBody: 'Muhimman bayanai daga waɗannan shafuka a matsayin katunan da za ka iya bita. Yana amfani da kiredit na AI 1.',
     videoTitle: 'Taƙaitaccen bidiyo',
     videoBody: 'Gajeren bidiyo mai ba da labari game da wannan maudu’i, tare da rubutun magana. Yana amfani da kiredit na AI 1.',
+    videoBodyClip: 'Gajeren bidiyo mai ba da labari game da wannan maudu’i, wanda ke farawa da gajeren bidiyon AI mai motsi, tare da rubutun magana. Yana amfani da kiredit na AI 5.',
     errors: {
       scannedBook: {
         title: 'Wannan PDF hotunan shafuka ne',

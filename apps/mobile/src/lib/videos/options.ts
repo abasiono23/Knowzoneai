@@ -8,6 +8,9 @@ import { GENERATION_STAGES, type CaptionStyle, type GeneratedVideo, type LengthI
 type VoiceId = keyof (typeof videos)['options']['voices'];
 type StyleId = keyof (typeof videos)['options']['styles'];
 
+/** Extra AI credits for the moving AI clip that opens a textbook video on a paid plan (the server's CLIP_CREDITS). */
+export const CLIP_CREDITS = 4;
+
 export const LENGTHS: {
   id: LengthId;
   scenes: number;

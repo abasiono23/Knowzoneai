@@ -15,13 +15,14 @@ import { Colors, Gradients, Palette, Radius, Spacing } from '@/constants/theme';
 import { currentLanguage } from '@/i18n';
 import { useFlipStyle } from '@/i18n/provider';
 import { useCreditGate } from '@/lib/billing/credits';
+import { useSession } from '@/lib/session';
 import { fileSize, percentLabel } from '@/lib/studio/labels';
 import { useMaterials } from '@/lib/studio/store';
 import { TEXTBOOK_OPTIONS } from '@/lib/studio/types';
 import { pageRange, textbookError } from '@/lib/textbooks/labels';
 import { useTextbook, useTextbooks } from '@/lib/textbooks/store';
 import type { Textbook, Topic } from '@/lib/textbooks/types';
-import { LENGTHS } from '@/lib/videos/options';
+import { CLIP_CREDITS, LENGTHS } from '@/lib/videos/options';
 import { DEFAULT_VIDEO_SETTINGS, useVideos } from '@/lib/videos/store';
 
 /** The video summary's length: short, one credit. */
@@ -363,7 +364,12 @@ function ChoicePanel({
   const canSpend = useCreditGate();
   const fromBook = choice.from === 'book';
   const settled = fromBook || choice.from === 'general';
-  const videoCredits = LENGTHS.find((l) => l.id === SUMMARY_LENGTH)?.credits ?? 1;
+  const { user } = useSession();
+  const baseCredits = LENGTHS.find((l) => l.id === SUMMARY_LENGTH)?.credits ?? 1;
+  // On a paid plan a textbook video opens with a moving AI clip, for CLIP_CREDITS more; without enough
+  // credits for it the server makes the video without the clip, for the usual price (routes/videos.ts).
+  const withClip = fromBook && !!user && user.plan !== 'FREE' && user.aiCredits >= baseCredits + CLIP_CREDITS;
+  const videoCredits = baseCredits + (withClip ? CLIP_CREDITS : 0);
 
   const makeFlashcards = () => {
     if (!canSpend(1, 'study pack')) return;
@@ -466,7 +472,7 @@ function ChoicePanel({
             icon="film"
             color={Palette.sky400}
             title={t('textbook.videoTitle')}
-            body={t('textbook.videoBody')}
+            body={withClip ? t('textbook.videoBodyClip') : t('textbook.videoBody')}
             tag={fromBook ? t('textbook.fromBook') : t('textbook.fromGeneral')}
             onPress={makeVideo}
           />

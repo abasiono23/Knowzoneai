@@ -458,6 +458,7 @@ const tutor: Translation<typeof en> = {
     flashcardsBody: 'Mambo muhimu kutoka kurasa hizi kama kadi unazoweza kupitia. Inatumia krediti 1 ya AI.',
     videoTitle: 'Muhtasari wa video',
     videoBody: 'Video fupi yenye masimulizi kuhusu mada hii, pamoja na manukuu. Inatumia krediti 1 ya AI.',
+    videoBodyClip: 'Video fupi yenye masimulizi kuhusu mada hii inayoanza na klipu ya AI inayosonga, pamoja na manukuu. Inatumia krediti 5 za AI.',
     errors: {
       scannedBook: {
         title: 'PDF hii ni kurasa zilizoskaniwa',

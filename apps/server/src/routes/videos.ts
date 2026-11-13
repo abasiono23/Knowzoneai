@@ -117,7 +117,7 @@ type Source =
   | { kind: 'material'; materialId: string; label: string }
   | { kind: 'lesson'; lessonId: string; label: string }
   | { kind: 'text'; text: string; label: string }
-  | { kind: 'textbook'; textbookId: string; topic: string; label: string };
+  | { kind: 'textbook'; textbookId: string; topic: string; label: string; clip?: boolean };
 
 /** What the script is written from. */
 async function sourceText(userId: string | null, source: Source, language: LanguageId) {
@@ -216,13 +216,24 @@ export async function drawScenes(
 }
 
 /**
- * Textbook video summaries open with a moving AI clip, but only on a paid plan: at about $0.80 each
- * it stays paid even while "everything is free" is on before launch.
+ * Textbook video summaries open with a moving AI clip, but only on a paid plan, and the clip costs
+ * CLIP_CREDITS more: at about $0.80 each it stays paid even while "everything is free" is on before
+ * launch. Decided when the video is ordered (and kept on its source), so a remake never buys another.
  */
-async function wantsClip(userId: string, source: Source) {
+export const CLIP_CREDITS = 4;
+const wantsClip = (source: Source) => source.kind === 'textbook' && source.clip === true && clipsOn();
+
+/** Whether a new textbook video gets the clip: a paid plan with enough credits for it too. */
+async function orderClip(userId: string, source: Source, baseCredits: number) {
   if (source.kind !== 'textbook' || !clipsOn()) return false;
-  const user = await prisma.user.findUnique({ where: { id: userId }, select: { plan: true } });
-  return !!user && user.plan !== 'FREE';
+  const user = await prisma.user.findUnique({ where: { id: userId }, select: { plan: true, aiCredits: true } });
+  return !!user && user.plan !== 'FREE' && user.aiCredits >= baseCredits + CLIP_CREDITS;
+}
+
+/** The clip a video already has (made once; a remake shows it again), or null. */
+async function existingClip(videoId: string) {
+  const f = await prisma.videoFile.findFirst({ where: { videoId, kind: 'clip' }, select: { token: true } });
+  return f ? fileUrl(f.token) : null;
 }
 
 /** Makes and stores the opening clip; null if it fails (the video still opens with its picture). */
@@ -276,8 +287,11 @@ export async function processVideo(id: string, opts: { voiceOnly?: boolean } = {
       );
       meta = { subject: script.subject, level: script.level, description: script.description };
       // The moving opening clip takes a few minutes, so it's made while the pictures and voice are.
-      if (await wantsClip(userId, v.source as Source))
-        clip = openingClip(id, userId, v.title, script.scenes[0], fromTextbook ? { ...settings, styleId: REALISTIC_STYLE } : settings);
+      // A clip is bought once, with the first try; a remake (1 credit) shows the same clip again.
+      if (wantsClip(v.source as Source))
+        clip = existingClip(id).then((made) =>
+          made ?? (v.revision === 1 ? openingClip(id, userId, v.title, script.scenes[0], fromTextbook ? { ...settings, styleId: REALISTIC_STYLE } : settings) : null),
+        );
       await stage(1);
       scenes = await drawScenes(id, userId, script.scenes, settings, fromTextbook ? script.scenes.length : undefined, { realistic: fromTextbook });
     }
@@ -394,7 +408,9 @@ videosRouter.post('/videos/mine/:id', aiLimiter, async (req, res) => {
   if (await prisma.video.findUnique({ where: { id }, select: { id: true } })) throw new AppError(409, 'This video already exists', 'exists');
   // A textbook topic that isn't there is answered now (404 with a code), before any credit is held.
   if (input.source.kind === 'textbook') await textbookTopic(user.id, input.source.textbookId, input.source.topic);
-  const credits = LENGTHS[input.settings.length].credits;
+  const base = LENGTHS[input.settings.length].credits;
+  const clip = await orderClip(user.id, input.source, base);
+  const credits = base + (clip ? CLIP_CREDITS : 0);
   await holdCredits(user.id, credits);
   const video = await prisma.video.create({
     data: {
@@ -404,7 +420,7 @@ videosRouter.post('/videos/mine/:id', aiLimiter, async (req, res) => {
       language: input.settings.language,
       title: input.title,
       settings: input.settings,
-      source: input.source,
+      source: clip ? { ...input.source, clip: true } : input.source,
       creditsHeld: credits,
     },
   });
@@ -417,7 +433,9 @@ videosRouter.post('/videos/mine/:id/retry', aiLimiter, async (req, res) => {
   const user = me(req);
   const v = await ownVideo(String(req.params.id), user.id);
   if (v.status !== 'failed' || !(v.error as { retryable?: boolean } | null)?.retryable) throw new AppError(409, 'This video can’t be retried', 'not-retryable');
-  const credits = v.revision > 1 ? REGENERATE_CREDITS : LENGTHS[(v.settings as VideoSettings).length].credits;
+  // A first try that failed is ordered again, clip included (its credits came back when it failed).
+  const clip = v.revision === 1 && wantsClip(v.source as Source) && !(await existingClip(v.id));
+  const credits = v.revision > 1 ? REGENERATE_CREDITS : LENGTHS[(v.settings as VideoSettings).length].credits + (clip ? CLIP_CREDITS : 0);
   await holdCredits(user.id, credits);
   const updated = await prisma.video.update({
     where: { id: v.id },
