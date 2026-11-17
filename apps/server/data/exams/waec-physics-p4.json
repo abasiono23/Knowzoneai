@@ -1,0 +1,661 @@
+{
+ "id": "waec-physics-p4",
+ "exam": "waec",
+ "subject": "physics",
+ "year": null,
+ "number": 4,
+ "source": "ai",
+ "minutes": 60,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Sound",
+   "q": "An open pipe in a physics laboratory in Ilorin has a fundamental frequency of 330 Hz. If one end of the pipe is closed while its length remains unchanged, what is the new fundamental frequency?",
+   "options": [
+    "660 Hz",
+    "82.5 Hz",
+    "165 Hz",
+    "330 Hz"
+   ],
+   "answer": 2,
+   "explanation": "For the same length, an open pipe has fundamental wavelength 2L and a closed pipe has 4L. Closing one end halves the fundamental frequency, so the new fundamental is 330 ÷ 2 = 165 Hz."
+  },
+  {
+   "n": 2,
+   "topic": "Sound",
+   "q": "A loudspeaker in a factory in Aba emits sound uniformly in all directions. The sound intensity at a distance of 5.0 m from the loudspeaker is 8.0 × 10⁻³ W/m². What is the sound intensity at a distance of 10.0 m, assuming no absorption?",
+   "options": [
+    "8.0 × 10⁻³ W/m²",
+    "1.6 × 10⁻² W/m²",
+    "2.0 × 10⁻³ W/m²",
+    "4.0 × 10⁻³ W/m²"
+   ],
+   "answer": 2,
+   "explanation": "Intensity obeys the inverse-square law: I₂ = I₁(r₁/r₂)² = 8.0 × 10⁻³ × (5.0/10.0)² = 2.0 × 10⁻³ W/m². Doubling the distance reduces the intensity to one quarter."
+  },
+  {
+   "n": 3,
+   "topic": "Atomic and nuclear physics",
+   "q": "A radioactive isotope used to sterilise medical equipment in Onitsha has a half-life of 8.0 days. What fraction of its original activity remains after 32 days?",
+   "options": [
+    "1/16",
+    "1/8",
+    "1/4",
+    "1/32"
+   ],
+   "answer": 0,
+   "explanation": "32 days is 32 ÷ 8.0 = 4 half-lives. The fraction remaining is (1/2)⁴ = 1/16."
+  },
+  {
+   "n": 4,
+   "topic": "Heat and temperature",
+   "q": "A student in Kaduna uses an electric kettle rated 1500 W to heat 2.0 kg of water from 30°C to 80°C. Assuming all the electrical energy is transferred to the water and no heat is lost, how long does it take? [Specific heat capacity of water = 4200 J kg⁻¹ K⁻¹]",
+   "options": [
+    "280 s",
+    "420 s",
+    "140 s",
+    "560 s"
+   ],
+   "answer": 0,
+   "explanation": "Heat needed is mcΔT = 2.0 × 4200 × (80 − 30) = 420000 J. Since 1 W = 1 J/s, time = 420000 ÷ 1500 = 280 s."
+  },
+  {
+   "n": 5,
+   "topic": "Heat and temperature",
+   "q": "A brass rod in a workshop in Ogbomoso is 1.50 m long at 30°C. If the linear expansivity of brass is 1.9 × 10⁻⁵ K⁻¹, by how much does the rod expand when heated to 130°C?",
+   "options": [
+    "2.85 × 10⁻⁴ m",
+    "1.90 × 10⁻³ m",
+    "2.85 × 10⁻³ m",
+    "2.85 × 10⁻² m"
+   ],
+   "answer": 2,
+   "explanation": "ΔL = LαΔT = 1.50 × 1.9 × 10⁻⁵ × (130 − 30) = 2.85 × 10⁻³ m. Omitting the original length gives 1.90 × 10⁻³ m."
+  },
+  {
+   "n": 6,
+   "topic": "Waves",
+   "q": "Light from a laser in a laboratory in Lagos has a frequency of 5.0 × 10¹⁴ Hz. Taking the speed of light in vacuum as 3.0 × 10⁸ m/s, what is its wavelength in vacuum?",
+   "options": [
+    "6.0 × 10⁻⁶ m",
+    "1.5 × 10⁻⁷ m",
+    "6.0 × 10⁻⁷ m",
+    "1.5 × 10⁶ m"
+   ],
+   "answer": 2,
+   "explanation": "For an electromagnetic wave, v = fλ. Hence λ = (3.0 × 10⁸) ÷ (5.0 × 10¹⁴) = 6.0 × 10⁻⁷ m."
+  },
+  {
+   "n": 7,
+   "topic": "Waves",
+   "q": "In a stationary wave on a string in a laboratory in Minna, the distance between two successive nodes is 0.15 m. What is the wavelength of the wave producing the stationary wave?",
+   "options": [
+    "0.60 m",
+    "0.075 m",
+    "0.30 m",
+    "0.15 m"
+   ],
+   "answer": 2,
+   "explanation": "In a stationary wave, the distance between successive nodes is half a wavelength. Therefore λ = 2 × 0.15 = 0.30 m."
+  },
+  {
+   "n": 8,
+   "topic": "Waves",
+   "q": "In a Young’s double-slit experiment performed in Ibadan, light of wavelength 6.0 × 10⁻⁷ m falls on two slits separated by 0.30 mm. The screen is 1.5 m from the slits. What is the separation between adjacent bright fringes?",
+   "options": [
+    "1.5 mm",
+    "3.0 mm",
+    "6.0 mm",
+    "0.30 mm"
+   ],
+   "answer": 1,
+   "explanation": "Fringe separation β = λD/d. Convert d to 3.0 × 10⁻⁴ m: β = (6.0 × 10⁻⁷ × 1.5) ÷ (3.0 × 10⁻⁴) = 3.0 × 10⁻³ m = 3.0 mm."
+  },
+  {
+   "n": 9,
+   "topic": "Scalars and vectors",
+   "q": "At a junction in Kaduna, two perpendicular forces of magnitudes 14 N and F act at a point. Their resultant is 50 N. What is F?",
+   "options": [
+    "64 N",
+    "36 N",
+    "52 N",
+    "48 N"
+   ],
+   "answer": 3,
+   "explanation": "For perpendicular forces, R² = F₁² + F₂², so F = √(50² − 14²) = √(2500 − 196) = √2304 = 48 N. Subtracting 14 N from 50 N gives 36 N, but that ignores the perpendicular vector addition."
+  },
+  {
+   "n": 10,
+   "topic": "Gas laws",
+   "q": "A fixed mass of gas at 27°C and 750 mmHg occupies 500 cm³. What volume will it occupy at 77°C and 600 mmHg?",
+   "options": [
+    "729 cm³",
+    "625 cm³",
+    "583 cm³",
+    "467 cm³"
+   ],
+   "answer": 0,
+   "explanation": "Use P₁V₁/T₁ = P₂V₂/T₂. Thus V₂ = 500 × (750/600) × (350/300) = 729 cm³ approximately. Ignoring pressure gives 583 cm³, while ignoring the temperature change gives 625 cm³."
+  },
+  {
+   "n": 11,
+   "topic": "Light and optics",
+   "q": "An object is placed 30.0 cm from a convex mirror of focal length 15.0 cm. At what distance from the mirror is its image formed?",
+   "options": [
+    "30.0 cm behind the mirror",
+    "10.0 cm behind the mirror",
+    "7.5 cm behind the mirror",
+    "10.0 cm in front of the mirror"
+   ],
+   "answer": 1,
+   "explanation": "For a convex mirror, f is negative. Using 1/f = 1/u + 1/v with f = −15.0 cm and u = 30.0 cm gives 1/v = −1/15.0 − 1/30.0 = −1/10.0, so v = −10.0 cm. The negative sign means the image is virtual and 10.0 cm behind the mirror."
+  },
+  {
+   "n": 12,
+   "topic": "Light and optics",
+   "q": "A converging lens of focal length 10.0 cm produces a virtual image that is twice the height of the object. What is the object distance from the lens?",
+   "options": [
+    "20.0 cm",
+    "15.0 cm",
+    "10.0 cm",
+    "5.0 cm"
+   ],
+   "answer": 3,
+   "explanation": "A virtual image is erect and on the same side as the object, so the image distance is negative in the lens formula. With magnification magnitude 2, v = −2u; hence 1/10.0 = 1/u + 1/v = 1/u − 1/(2u) = 1/(2u), giving u = 5.0 cm. An object at 15.0 cm would form a real magnified image, not a virtual one."
+  },
+  {
+   "n": 13,
+   "topic": "Work, energy and power",
+   "q": "Ngozi, whose mass is 30 kg, runs up a flight of 20 steps, each 15 cm high, in 5.0 s. Taking g = 10 m/s², what is her average power output?",
+   "options": [
+    "90 W",
+    "180 W",
+    "45 W",
+    "900 W"
+   ],
+   "answer": 1,
+   "explanation": "The total vertical height climbed is 20 × 0.15 m = 3.0 m. Useful work = mgh = 30 × 10 × 3.0 = 900 J, so average power = 900/5.0 = 180 W. The 900 W value mistakes the total work for power."
+  },
+  {
+   "n": 14,
+   "topic": "Work, energy and power",
+   "q": "A lorry of mass 2000 kg travelling at 10 m/s is brought to rest over a distance of 50 m. Calculate the average braking force.",
+   "options": [
+    "4000 N",
+    "2000 N",
+    "500 N",
+    "1000 N"
+   ],
+   "answer": 1,
+   "explanation": "The kinetic energy lost is ½mv² = ½ × 2000 × 10² = 100000 J. This equals braking force × distance, so F = 100000/50 = 2000 N. Omitting the ½ gives the incorrect 4000 N."
+  },
+  {
+   "n": 15,
+   "topic": "Measurement and units",
+   "q": "A rectangular metal plate has length (12.0 ± 0.1) cm and width (5.0 ± 0.1) cm. What is the percentage uncertainty in its area?",
+   "options": [
+    "0.83%",
+    "2.0%",
+    "2.8%",
+    "5.0%"
+   ],
+   "answer": 2,
+   "explanation": "For a product, the percentage uncertainties add: (0.1 ÷ 12.0 × 100%) + (0.1 ÷ 5.0 × 100%) = 0.83% + 2.0% ≈ 2.8%. Using only one dimension’s uncertainty or simply adding the absolute errors gives a different result."
+  },
+  {
+   "n": 16,
+   "topic": "Measurement and units",
+   "q": "The dimension of pressure is",
+   "options": [
+    "M L⁻² T⁻²",
+    "M L⁻¹ T⁻²",
+    "M L⁻¹ T⁻¹",
+    "M L T⁻²"
+   ],
+   "answer": 1,
+   "explanation": "Pressure is force divided by area. Force has dimension M L T⁻² and area has dimension L², so pressure has dimension M L T⁻² ÷ L² = M L⁻¹ T⁻²."
+  },
+  {
+   "n": 17,
+   "topic": "Elasticity and pressure",
+   "q": "A steel rod of length 2.50 m and cross-sectional area 5.0 × 10⁻⁷ m² stretches by 0.50 mm when a force of 200 N is applied. Calculate Young’s modulus of the steel.",
+   "options": [
+    "2.0 × 10⁹ Pa",
+    "1.0 × 10¹² Pa",
+    "2.0 × 10¹² Pa",
+    "5.0 × 10¹¹ Pa"
+   ],
+   "answer": 2,
+   "explanation": "The extension is 0.50 mm = 5.0 × 10⁻⁴ m. Young’s modulus E = (F L)/(A e) = (200 × 2.50)/(5.0 × 10⁻⁷ × 5.0 × 10⁻⁴) = 2.0 × 10¹² Pa."
+  },
+  {
+   "n": 18,
+   "topic": "Elasticity and pressure",
+   "q": "A vertical cylindrical tank in Port Harcourt contains oil of density 850 kg/m³ to a height of 6.0 m. Taking g = 10 m/s², what is the gauge pressure at the bottom of the tank?",
+   "options": [
+    "5.1 Pa",
+    "5.1 × 10⁵ Pa",
+    "5.1 × 10⁴ Pa",
+    "5.1 × 10³ Pa"
+   ],
+   "answer": 2,
+   "explanation": "Gauge pressure depends only on the oil column: P = ρgh = 850 × 10 × 6.0 = 51,000 Pa = 5.1 × 10⁴ Pa. Adding atmospheric pressure would give total pressure, not gauge pressure."
+  },
+  {
+   "n": 19,
+   "topic": "Current electricity",
+   "q": "A 100 W bulb in Ibadan is used for 6.0 hours each day for 30 days. If electrical energy costs ₦45 per kWh, what is the cost of running the bulb?",
+   "options": [
+    "₦270",
+    "₦810",
+    "₦1,620",
+    "₦405"
+   ],
+   "answer": 1,
+   "explanation": "The energy used is (100 ÷ 1000) kW × 6.0 h/day × 30 days = 18 kWh. The cost is 18 × ₦45 = ₦810."
+  },
+  {
+   "n": 20,
+   "topic": "Electrostatics and capacitors",
+   "q": "The electric field strength between two parallel plates is 1.5 × 10⁴ V/m and the plates are 2.0 mm apart. What is the potential difference between the plates?",
+   "options": [
+    "7.5 V",
+    "75 V",
+    "3.0 × 10³ V",
+    "30 V"
+   ],
+   "answer": 3,
+   "explanation": "For a uniform field, V = Ed = (1.5 × 10⁴ V/m)(2.0 × 10⁻³ m) = 30 V. Using 2.0 mm directly as 2.0 m would make the answer much too large."
+  },
+  {
+   "n": 21,
+   "topic": "Magnetism and electromagnetic induction",
+   "q": "A straight copper rod of length 0.60 m moves at 3.5 m/s perpendicular to a uniform magnetic field of flux density 0.80 T. Calculate the e.m.f. induced across the rod.",
+   "options": [
+    "2.1 V",
+    "1.68 V",
+    "0.48 V",
+    "2.8 V"
+   ],
+   "answer": 1,
+   "explanation": "The induced e.m.f. is 0.80 × 0.60 × 3.5 = 1.68 V. The value 0.48 V comes from multiplying only the flux density and the length, leaving out the speed."
+  },
+  {
+   "n": 22,
+   "topic": "Magnetism and electromagnetic induction",
+   "q": "A coil of 150 turns has the magnetic flux through each turn increasing uniformly from 1.5 × 10⁻³ Wb to 4.5 × 10⁻³ Wb in 0.30 s. Calculate the average e.m.f. induced in the coil.",
+   "options": [
+    "0.010 V",
+    "0.45 V",
+    "1.5 V",
+    "0.75 V"
+   ],
+   "answer": 2,
+   "explanation": "The change in flux through each turn is 4.5 × 10⁻³ − 1.5 × 10⁻³ = 3.0 × 10⁻³ Wb. Hence average e.m.f. = 150 × 3.0 × 10⁻³ ÷ 0.30 = 1.5 V. Using only the initial flux gives 0.75 V, which ignores that the flux is increasing."
+  },
+  {
+   "n": 23,
+   "topic": "Magnetism and electromagnetic induction",
+   "q": "A student in Benin City pushes the south pole of a bar magnet quickly into a coil connected to a galvanometer and observes a larger deflection than when the same magnet is pushed in slowly. Which statement best explains the observation?",
+   "options": [
+    "The induced e.m.f. depends only on the number of turns and not on how fast the magnet moves.",
+    "A steady current is induced when the magnet is held stationary inside the coil.",
+    "The induced e.m.f. increases as the rate of change of magnetic flux through the coil increases.",
+    "The magnet attracts the coil more strongly when it is moved faster, producing current directly."
+   ],
+   "answer": 2,
+   "explanation": "According to Faraday’s law, the induced e.m.f. is proportional to the rate of change of magnetic flux linkage. Moving the magnet faster changes the flux more rapidly, so a larger e.m.f. and current are induced. Holding the magnet stationary produces no change in flux and therefore no steady induced current."
+  },
+  {
+   "n": 24,
+   "topic": "Simple machines",
+   "q": "A crowbar 1.20 m long is used as a first-class lever to lift a load. The pivot is 0.20 m from the load, and the effort is applied at the other end. Neglecting friction, what load can be lifted by an effort of 250 N?",
+   "options": [
+    "1250 N",
+    "1500 N",
+    "300 N",
+    "50 N"
+   ],
+   "answer": 0,
+   "explanation": "The effort arm is 1.20 − 0.20 = 1.00 m, while the load arm is 0.20 m. For a lever in equilibrium, load = effort × (effort arm ÷ load arm) = 250 × (1.00 ÷ 0.20) = 1250 N. Using 1.20 m as the effort arm gives 1500 N, but that length includes the load arm."
+  },
+  {
+   "n": 25,
+   "topic": "Simple machines",
+   "q": "In a hydraulic lift at a motor park in Onitsha, the small piston has an area of 12 cm² and the large piston has an area of 600 cm². A force of 80 N is applied to the small piston. What maximum force can the large piston exert, assuming no friction?",
+   "options": [
+    "4000 N",
+    "400 N",
+    "1.6 N",
+    "48 000 N"
+   ],
+   "answer": 0,
+   "explanation": "Pressure is the same on both pistons: 80 ÷ 12 = force ÷ 600, so force = 80 × (600 ÷ 12) = 4000 N. Inverting the area ratio gives 1.6 N, and omitting the division by the small-piston area gives 48 000 N."
+  },
+  {
+   "n": 26,
+   "topic": "Simple machines",
+   "q": "A simple machine has a velocity ratio of 6.0 and an efficiency of 60%. What effort is required to raise a load of 900 N at constant speed?",
+   "options": [
+    "250 N",
+    "9000 N",
+    "150 N",
+    "90 N"
+   ],
+   "answer": 0,
+   "explanation": "Efficiency = mechanical advantage ÷ velocity ratio × 100%, so mechanical advantage = 0.60 × 6.0 = 3.6. Effort = load ÷ mechanical advantage = 900 ÷ 3.6 = 250 N. Ignoring the 60% efficiency would give 150 N."
+  },
+  {
+   "n": 27,
+   "topic": "Newton’s laws and momentum",
+   "q": "A 0.15 kg ball moving horizontally at 8.0 m/s strikes a wall and rebounds along the same line with a speed of 6.0 m/s. If the contact time with the wall is 0.020 s, calculate the magnitude of the average force exerted by the wall on the ball.",
+   "options": [
+    "45 N",
+    "105 N",
+    "15 N",
+    "60 N"
+   ],
+   "answer": 1,
+   "explanation": "The momentum change has magnitude 0.15 × (8.0 + 6.0) = 2.1 kg m/s because the velocity reverses. Hence average force = 2.1 ÷ 0.020 = 105 N. Taking the velocity change as only 8.0 − 6.0 gives 15 N, but it neglects the reversal of direction."
+  },
+  {
+   "n": 28,
+   "topic": "Motion",
+   "q": "A minibus in Kaduna covers 15 m during the 3rd second and 23 m during the 5th second of uniformly accelerated motion. What is its acceleration?",
+   "options": [
+    "4.0 m/s²",
+    "4.5 m/s²",
+    "2.0 m/s²",
+    "8.0 m/s²"
+   ],
+   "answer": 0,
+   "explanation": "Distance covered in the nth second is u + a(n − 0.5). Thus s₅ − s₃ = 23 − 15 = 2a, giving a = 4.0 m/s². The value 8.0 m/s² comes from not halving the difference."
+  },
+  {
+   "n": 29,
+   "topic": "Sound",
+   "q": "Two tuning forks sounded together in a music class in Kaduna produce frequencies of 440 Hz and 448 Hz. What is the time interval between successive loud sounds?",
+   "options": [
+    "8.00 s",
+    "0.250 s",
+    "0.125 s",
+    "0.0625 s"
+   ],
+   "answer": 2,
+   "explanation": "The beat frequency is 448 − 440 = 8 Hz. Successive loud sounds occur once per beat cycle, so the time interval is 1/8 = 0.125 s. A value of 8.00 s wrongly treats the beat frequency as a period."
+  },
+  {
+   "n": 30,
+   "topic": "Sound",
+   "q": "At a quiet room in Enugu, the intensity of a whisper is 1.0 × 10⁻¹⁰ W/m². If the threshold of hearing is 1.0 × 10⁻¹² W/m², what is the intensity level of the whisper?",
+   "options": [
+    "100 dB",
+    "10 dB",
+    "20 dB",
+    "2 dB"
+   ],
+   "answer": 2,
+   "explanation": "The intensity ratio is (1.0 × 10⁻¹⁰)/(1.0 × 10⁻¹²) = 100. The intensity level is 10 log₁₀(100) = 10 × 2 = 20 dB. The value 2 dB results if the factor 10 in the decibel formula is omitted."
+  },
+  {
+   "n": 31,
+   "topic": "Sound",
+   "q": "A loudspeaker in a hall in Makurdi emits a sound wave of period 2.5 × 10⁻³ s. If the speed of sound in air is 340 m/s, what is the wavelength?",
+   "options": [
+    "1.36 × 10⁵ m",
+    "0.85 m",
+    "0.085 m",
+    "8.50 m"
+   ],
+   "answer": 1,
+   "explanation": "The frequency is f = 1/T = 1/(2.5 × 10⁻³) = 400 Hz, so the wavelength is λ = v/f = 340/400 = 0.85 m. The value 1.36 × 10⁵ m comes from dividing 340 by the period as if the period were the frequency."
+  },
+  {
+   "n": 32,
+   "topic": "Atomic and nuclear physics",
+   "q": "A bone sample from an archaeological site in Jos contains one-eighth of the expected amount of carbon-14. If the half-life of carbon-14 is 5 730 years, estimate the age of the bone.",
+   "options": [
+    "45 840 years",
+    "5 730 years",
+    "17 190 years",
+    "11 460 years"
+   ],
+   "answer": 2,
+   "explanation": "One-eighth remaining means the sample has passed through three half-lives because (1/2)³ = 1/8. The age is 3 × 5 730 = 17 190 years. The value 11 460 years would correspond to one-quarter remaining."
+  },
+  {
+   "n": 33,
+   "topic": "Atomic and nuclear physics",
+   "q": "In the fission reaction ²³⁵₉₂U + ¹₀n → ¹⁴⁴₅₆Ba + X + 3¹₀n, which nucleus is represented by X?",
+   "options": [
+    "⁹³₃₈Sr",
+    "⁸⁹₃₆Kr",
+    "⁸⁹₃₈Sr",
+    "⁹²₃₆Kr"
+   ],
+   "answer": 1,
+   "explanation": "Balancing mass numbers gives 235 + 1 = 144 + A + 3, so A = 89. Balancing atomic numbers gives 92 = 56 + Z, so Z = 36, which corresponds to krypton-89, ⁸⁹₃₆Kr. The nucleus ⁸⁹₃₈Sr has the correct mass number but does not balance atomic number."
+  },
+  {
+   "n": 34,
+   "topic": "Heat and temperature",
+   "q": "A student in Benin City supplies 33 600 J of heat to some ice at 0°C. If the specific latent heat of fusion of ice is 3.36 × 10⁵ J kg⁻¹, what mass of ice melts?",
+   "options": [
+    "1.00 kg",
+    "0.100 kg",
+    "10.0 kg",
+    "0.010 kg"
+   ],
+   "answer": 1,
+   "explanation": "Using Q = mL gives m = Q/L = 33 600/(3.36 × 10⁵) = 0.100 kg. A result of 1.00 kg comes from misplacing the decimal in the latent heat value."
+  },
+  {
+   "n": 35,
+   "topic": "Heat and temperature",
+   "q": "A square aluminium plate in a workshop in Kano has side 0.50 m at 20°C. It is heated to 120°C. If the linear expansivity of aluminium is 2.4 × 10⁻⁵ K⁻¹, what is the increase in area of the plate?",
+   "options": [
+    "6.0 × 10⁻⁴ m²",
+    "2.4 × 10⁻³ m²",
+    "4.8 × 10⁻³ m²",
+    "1.2 × 10⁻³ m²"
+   ],
+   "answer": 3,
+   "explanation": "Initial area is A₀ = 0.50² = 0.25 m², and the area expansivity is 2α = 4.8 × 10⁻⁵ K⁻¹. Thus ΔA = A₀(2α)ΔT = 0.25 × 4.8 × 10⁻⁵ × 100 = 1.2 × 10⁻³ m². The value 6.0 × 10⁻⁴ m² arises from using linear expansivity instead of area expansivity."
+  },
+  {
+   "n": 36,
+   "topic": "Waves",
+   "q": "A water wave in a ripple tank has intensity 4.0 W/m² when its amplitude is 0.020 m. If the amplitude is increased to 0.060 m while the frequency is kept constant, what is the new intensity?",
+   "options": [
+    "36 W/m²",
+    "72 W/m²",
+    "12 W/m²",
+    "24 W/m²"
+   ],
+   "answer": 0,
+   "explanation": "For a wave, intensity is proportional to the square of the amplitude, so the intensity increases by (0.060/0.020)² = 9. Therefore the new intensity is 4.0 × 9 = 36 W/m². The value 12 W/m² treats intensity as proportional to amplitude rather than to amplitude squared."
+  },
+  {
+   "n": 37,
+   "topic": "Waves",
+   "q": "A stretched string in a physics laboratory in Lagos has length 1.00 m and mass 4.0 g. It is under a tension of 160 N. What is the speed of a transverse wave along the string?",
+   "options": [
+    "0.80 m/s",
+    "200 m/s",
+    "4.00 × 10⁴ m/s",
+    "6.32 m/s"
+   ],
+   "answer": 1,
+   "explanation": "The mass per unit length is μ = (4.0 × 10⁻³ kg)/1.00 m = 4.0 × 10⁻³ kg/m. Hence v = √(T/μ) = √(160/(4.0 × 10⁻³)) = √(4.0 × 10⁴) = 200 m/s. Using 4.0 g/m without converting to kg gives about 6.32 m/s, while 4.00 × 10⁴ m/s is T/μ before taking the square root."
+  },
+  {
+   "n": 38,
+   "topic": "Scalars and vectors",
+   "q": "A metal ring in an Enugu workshop is acted upon by a 9.0 N force due east and a 12.0 N force due north. What is the magnitude of the third force required to keep the ring in equilibrium?",
+   "options": [
+    "15.0 N",
+    "3.0 N",
+    "25.0 N",
+    "21.0 N"
+   ],
+   "answer": 0,
+   "explanation": "The resultant of the two perpendicular forces is √(9.0² + 12.0²) = √(81 + 144) = 15.0 N. For equilibrium the third force must have the same magnitude as this resultant and act in the opposite direction, so its magnitude is 15.0 N."
+  },
+  {
+   "n": 39,
+   "topic": "Scalars and vectors",
+   "q": "A cyclist in Jos rides 8.0 km due north, then 6.0 km due east, and finally 8.0 km due south. What is the resultant displacement?",
+   "options": [
+    "22.0 km",
+    "10.0 km due north-east",
+    "6.0 km due east",
+    "8.0 km due south"
+   ],
+   "answer": 2,
+   "explanation": "The 8.0 km due north and 8.0 km due south displacements cancel because they are equal and opposite. The only remaining displacement is 6.0 km due east. The total distance travelled is 22.0 km, but displacement is not total distance."
+  },
+  {
+   "n": 40,
+   "topic": "Scalars and vectors",
+   "q": "A force of 20.0 N is resolved into two perpendicular components. If one component is 12.0 N, what is the magnitude of the other component?",
+   "options": [
+    "12.0 N",
+    "8.0 N",
+    "16.0 N",
+    "32.0 N"
+   ],
+   "answer": 2,
+   "explanation": "The two perpendicular components and the original force form a right-angled triangle, so the other component F satisfies 12.0² + F² = 20.0². Hence F = √(400 - 144) = √256 = 16.0 N. Ordinary subtraction of 12.0 from 20.0 gives 8.0 N, but vector components are combined using Pythagoras."
+  },
+  {
+   "n": 41,
+   "topic": "Gas laws",
+   "q": "A gas in a cylinder fitted with a movable piston in Kano has a pressure of 2.0 × 10⁵ Pa at 27 °C. It is heated to 57 °C and the piston moves so that the volume becomes 10% greater. Calculate the new pressure of the gas.",
+   "options": [
+    "2.4 × 10⁵ Pa",
+    "2.2 × 10⁵ Pa",
+    "2.0 × 10⁵ Pa",
+    "1.8 × 10⁵ Pa"
+   ],
+   "answer": 2,
+   "explanation": "Convert the temperatures to kelvin: 27 °C = 300 K and 57 °C = 330 K. Using P₁V₁/T₁ = P₂V₂/T₂, P₂ = 2.0 × 10⁵ × (V × 330)/(300 × 1.10V) = 2.0 × 10⁵ Pa. The temperature rise and the 10% volume increase cancel exactly."
+  },
+  {
+   "n": 42,
+   "topic": "Gas laws",
+   "q": "A fixed mass of gas in a laboratory in Kaduna occupies 180 cm³ at 27 °C. At what temperature will it occupy 240 cm³ at constant pressure?",
+   "options": [
+    "400 °C",
+    "127 °C",
+    "200 °C",
+    "36 °C"
+   ],
+   "answer": 1,
+   "explanation": "At constant pressure, V/T is constant. Thus T₂ = T₁V₂/V₁ = 300 × 240/180 = 400 K, which is 400 - 273 = 127 °C. Using degrees Celsius directly gives an incorrect result because gas-law calculations require kelvin."
+  },
+  {
+   "n": 43,
+   "topic": "Light and optics",
+   "q": "A student in Ilorin uses a convex lens to form a real image four times the size of an object placed 15.0 cm from the lens. Calculate the focal length of the lens.",
+   "options": [
+    "3.75 cm",
+    "60.0 cm",
+    "20.0 cm",
+    "12.0 cm"
+   ],
+   "answer": 3,
+   "explanation": "For a real image, magnification m = v/u = 4, so v = 4 × 15.0 = 60.0 cm. Using 1/f = 1/u + 1/v gives 1/f = 1/15.0 + 1/60.0 = 5/60.0, hence f = 12.0 cm. The image distance itself is 60.0 cm, not the focal length."
+  },
+  {
+   "n": 44,
+   "topic": "Light and optics",
+   "q": "In a Lagos laboratory, light travels from water of refractive index 4/3 into air. Calculate the critical angle for the water-air boundary.",
+   "options": [
+    "48.6°",
+    "41.8°",
+    "75.0°",
+    "56.3°"
+   ],
+   "answer": 0,
+   "explanation": "At the critical angle C, the refracted ray grazes along the boundary, so sin C = n_air/n_water = 1/(4/3) = 3/4 = 0.750. Therefore C = sin⁻¹(0.750) ≈ 48.6°."
+  },
+  {
+   "n": 45,
+   "topic": "Light and optics",
+   "q": "In a physics laboratory in Owerri, a ray of light travelling in air strikes the surface of a transparent liquid at an angle of incidence of 45°. The refracted ray makes an angle of 30° with the normal. Calculate the refractive index of the liquid.",
+   "options": [
+    "1.41",
+    "2.00",
+    "0.71",
+    "1.00"
+   ],
+   "answer": 0,
+   "explanation": "Snell's law gives n = sin i/sin r = sin 45°/sin 30°. This is (√2/2)/(1/2) = √2 ≈ 1.41. Using the inverse ratio gives 0.71, but light passing from air into the liquid bends towards the normal, so the refractive index is greater than 1."
+  },
+  {
+   "n": 46,
+   "topic": "Work, energy and power",
+   "q": "An electric motor in Aba lifts a 40.0 kg load through a vertical height of 15.0 m in 10.0 s. If the input power to the motor is 800 W, calculate the efficiency of the motor. [g = 10.0 m/s²]",
+   "options": [
+    "80%",
+    "133%",
+    "60%",
+    "75%"
+   ],
+   "answer": 3,
+   "explanation": "Useful power output = mgh/t = (40.0 × 10.0 × 15.0)/10.0 = 600 W. Efficiency = (useful power/input power) × 100% = (600/800) × 100% = 75%. A motor cannot have an efficiency above 100% because it cannot create energy."
+  },
+  {
+   "n": 47,
+   "topic": "Work, energy and power",
+   "q": "A car of mass 1.50 × 10³ kg travelling at 20.0 m/s on the Lagos-Ibadan expressway is brought to rest over a distance of 50.0 m. Calculate the average braking force.",
+   "options": [
+    "3000 N",
+    "15000 N",
+    "6000 N",
+    "12000 N"
+   ],
+   "answer": 2,
+   "explanation": "Initial kinetic energy = ½ × 1.50 × 10³ × (20.0)² = 300 000 J. The work done by the braking force over 50.0 m equals this kinetic energy, so F × 50.0 = 300 000, giving F = 6000 N. Omitting the ½ in the kinetic-energy formula gives 12 000 N, which is a common error."
+  },
+  {
+   "n": 48,
+   "topic": "Measurement and units",
+   "q": "A student in Jos uses a stopwatch to time 20 complete oscillations of a pendulum and records 36.40 s. If the uncertainty in this recorded total time is ±0.20 s, what is the percentage uncertainty in the period of the pendulum?",
+   "options": [
+    "0.010%",
+    "11%",
+    "0.20%",
+    "0.55%"
+   ],
+   "answer": 3,
+   "explanation": "The period is 36.40/20 = 1.82 s, and the uncertainty in each period is 0.20/20 = 0.010 s. The percentage uncertainty is (0.010/1.82) × 100 ≈ 0.55%. Dividing the 0.20 s uncertainty by 1.82 s instead of by the total time would wrongly give about 11%."
+  },
+  {
+   "n": 49,
+   "topic": "Measurement and units",
+   "q": "A mechanic in Aba pours 2.50 × 10⁴ mm³ of oil into a small container. Express this volume in cm³.",
+   "options": [
+    "25.0 cm³",
+    "2.50 cm³",
+    "0.250 cm³",
+    "250 cm³"
+   ],
+   "answer": 0,
+   "explanation": "Since 1 cm = 10 mm, 1 cm³ = 10³ mm³ = 1000 mm³. Therefore 2.50 × 10⁴ mm³ ÷ 1000 = 25.0 cm³. The result keeps three significant figures, matching the given 2.50 × 10⁴."
+  },
+  {
+   "n": 50,
+   "topic": "Elasticity and pressure",
+   "q": "A rectangular concrete block in Abeokuta has dimensions 20 cm × 10 cm × 5 cm and a mass of 2.0 kg. What pressure does it exert on the ground when resting on its smallest face? (Take g = 10 m/s²)",
+   "options": [
+    "4.0 × 10³ Pa",
+    "1.0 × 10³ Pa",
+    "2.0 × 10³ Pa",
+    "8.0 × 10³ Pa"
+   ],
+   "answer": 0,
+   "explanation": "The smallest face has area 10 cm × 5 cm = 50 cm² = 0.0050 m². The weight is mg = 2.0 × 10 = 20 N, so pressure = 20/0.0050 = 4000 Pa = 4.0 × 10³ Pa. Using the largest face would give 1.0 × 10³ Pa, but the question asks for the smallest face."
+  }
+ ]
+}

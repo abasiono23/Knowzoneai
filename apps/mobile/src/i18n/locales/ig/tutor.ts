@@ -146,6 +146,10 @@ const tutor: Translation<typeof en> = {
     genericError: 'Ihe adịghị mma mere.',
     thinking: 'Na-atụgharị uche…',
   },
+  related: {
+    title: 'Site na ndetu Knowzone gị',
+    openLabel: 'Mepee: {{title}}',
+  },
   followUps: {
     title: 'JỤỌ NKE A ỌZỌ',
     askLabel: 'Jụọ: {{question}}',

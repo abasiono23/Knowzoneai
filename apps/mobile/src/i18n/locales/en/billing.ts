@@ -68,6 +68,8 @@ const billing = {
     studyPlans: 'Personalised study plans',
     insights: 'Richer progress insights',
     examPapers: 'Full WAEC, NECO and JAMB practice papers',
+    examPapersFor: 'Full {{exams}} practice papers',
+    examPapersAny: 'Full exam practice papers',
     library: 'Bigger study library and folders',
     priority: 'Priority processing when it’s busy',
     everythingPlus: 'Everything in Plus',
@@ -184,6 +186,8 @@ const billing = {
       PRO: {
         whoQ: 'Who is Pro for?',
         whoA: 'Students preparing for WAEC, NECO or JAMB who practise every day and want full past-style papers.',
+        whoAFor: 'Students preparing for {{exams}} who practise every day and want the full practice papers.',
+        whoAAny: 'Students who practise every day and want the most from the AI tutor, with priority when it’s busy.',
         fairQ: 'What does “fair use” mean?',
         fairA:
           'Up to {{questions}} tutor questions a day covers heavy studying. It stops automated or shared-account use.',

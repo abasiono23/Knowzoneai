@@ -22,6 +22,7 @@ import type { AssistantMessage, UserMessage } from '@/lib/tutor/types';
 
 import { AnswerActions } from './answer-actions';
 import { AnswerBlocks } from './answer-blocks';
+import { RelatedLinks } from './related-links';
 
 export function UserBubble({ message }: { message: UserMessage }) {
   const { t } = useTranslation('tutor');
@@ -95,6 +96,7 @@ export function AssistantCard({ message, conversationId }: { message: AssistantM
             {t('messages.continues')}
           </Text>
         )}
+        <RelatedLinks items={a.related} />
         <AnswerActions conversationId={conversationId} messageId={message.id} answer={a} />
       </View>
     </Animated.View>

@@ -17,11 +17,88 @@ export const pick = (localised) => localised?.[LANG] ?? localised?.en;
 
 // ─── Practice papers ──────────────────────────────────────────────────────────
 
-/** Same order and names as apps/server/src/data/exams.ts and the app's exam screens. */
+/**
+ * Same order and names as apps/server/src/data/exams.ts and the app's exam screens.
+ *
+ * - `family`: exams that share subjects and syllabuses link to each other's pages (JAMB, WAEC, NECO).
+ * - `books`: the country whose textbook lists go with the exam.
+ * - `label`: how the practice is named when the exam's own name would claim too much. GCSE, A-level,
+ *   KCSE and Matric papers are mostly written answers, so ours are "GCSE-style", never plain "GCSE papers".
+ * - `quiz`: topic quizzes, not the exam's format: nothing says "timed like the real exam".
+ * - `practise`: what follows "Practise" in a heading ("Practise for the ACT in the app").
+ * - `timed`: how sitting a paper in the app is described, where "like the real exam" would claim too much.
+ * - `note`: what the practice is and isn't, shown on that exam's pages. (It never says "past papers",
+ *   even to deny it: check.mjs keeps that phrase off these pages altogether.)
+ */
 export const EXAMS = {
-  jamb: { name: 'JAMB', full: 'JAMB UTME', about: 'the computer-based Unified Tertiary Matriculation Examination' },
-  waec: { name: 'WAEC', full: 'WAEC WASSCE', about: 'the West African Senior School Certificate Examination' },
-  neco: { name: 'NECO', full: 'NECO SSCE', about: 'the Senior School Certificate Examination' },
+  jamb: { name: 'JAMB', full: 'JAMB UTME', about: 'the computer-based Unified Tertiary Matriculation Examination', family: 'ssce', books: 'ng', real: true },
+  waec: { name: 'WAEC', full: 'WAEC WASSCE', about: 'the West African Senior School Certificate Examination', family: 'ssce', books: 'ng', real: true },
+  neco: { name: 'NECO', full: 'NECO SSCE', about: 'the Senior School Certificate Examination', family: 'ssce', books: 'ng', real: true },
+  sat: {
+    name: 'SAT',
+    full: 'Digital SAT',
+    about: 'the digital SAT’s two sections, Reading and Writing, and Math',
+    timing: 'minutes, as in the SAT section',
+    note: 'Knowzone wrote these questions with AI, and a second AI review checked every one. They follow the digital SAT’s sections and timing, but they are multiple choice only (the real Math section also has questions where you enter your own answer), and none of them comes from a real SAT.',
+  },
+  act: {
+    name: 'ACT',
+    full: 'ACT',
+    about: 'the ACT’s four sections: English, Math, Reading and Science',
+    timing: 'minutes, as in the ACT section',
+    note: 'Knowzone wrote these questions with AI, and a second AI review checked every one. They follow the sections, question counts and timing of the enhanced ACT, and none of them comes from a real ACT.',
+  },
+  ap: {
+    name: 'AP',
+    full: 'AP exams',
+    about: 'the multiple-choice section of six AP exams',
+    practise: 'for AP exams',
+    timing: 'minutes, as in the exam’s multiple-choice section',
+    timed: 'timed like the exam’s multiple-choice section',
+    note: 'Knowzone wrote these questions with AI, and a second AI review checked every one. They practise the multiple-choice section of each AP exam only (the real exams also have a free-response section), and none of them comes from a real AP exam.',
+  },
+  gcse: {
+    name: 'GCSE',
+    full: 'GCSE',
+    label: 'GCSE-style',
+    about: 'GCSE revision by topic, for students in England, Wales and Northern Ireland',
+    books: 'uk',
+    timing: 'minutes',
+    quiz: true,
+    note: 'Knowzone wrote these questions with AI, and a second AI review checked every one. Real GCSE papers are mostly written answers, so these multiple-choice quizzes are for revising each topic: they are not in the exam’s format, and none of them comes from a real GCSE paper.',
+  },
+  alevel: {
+    name: 'A-level',
+    full: 'A-level',
+    label: 'A-level-style',
+    about: 'A-level revision by topic, for students in England, Wales and Northern Ireland',
+    practise: 'for A-levels',
+    books: 'uk',
+    timing: 'minutes',
+    quiz: true,
+    note: 'Knowzone wrote these questions with AI, and a second AI review checked every one. Real A-level papers are mostly written answers, so these multiple-choice quizzes are for revising each topic: they are not in the exam’s format, and none of them comes from a real A-level paper.',
+  },
+  kcse: {
+    name: 'KCSE',
+    full: 'KCSE',
+    label: 'KCSE-style',
+    about: 'KCSE revision by topic, for secondary-school students in Kenya',
+    books: 'ke',
+    timing: 'minutes',
+    quiz: true,
+    note: 'Knowzone wrote these questions with AI, and a second AI review checked every one. Real KCSE papers are mostly written answers, so these multiple-choice quizzes are for revising each topic: they are not in the exam’s format, and none of them comes from a real KCSE paper.',
+  },
+  nsc: {
+    name: 'Matric',
+    full: 'Matric (NSC)',
+    label: 'Matric (NSC)-style',
+    about: 'National Senior Certificate revision by topic, for Grade 10 to 12 learners in South Africa',
+    practise: 'for Matric',
+    books: 'za',
+    timing: 'minutes',
+    quiz: true,
+    note: 'Knowzone wrote these questions with AI, and a second AI review checked every one. Real NSC papers are mostly written answers, so these multiple-choice quizzes are for revising each topic: they are not in the exam’s format, and none of them comes from a real NSC paper.',
+  },
 };
 export const EXAM_SUBJECTS = {
   english: 'English Language',
@@ -34,7 +111,50 @@ export const EXAM_SUBJECTS = {
   literature: 'Literature in English',
   geography: 'Geography',
   commerce: 'Commerce',
+  'reading-writing': 'Reading and Writing',
+  math: 'Math',
+  maths: 'Maths',
+  'english-language': 'English Language',
+  reading: 'Reading',
+  science: 'Science',
+  'calculus-ab': 'Calculus AB',
+  'physics-1': 'Physics 1',
+  'us-history': 'US History',
+  'physical-sciences': 'Physical Sciences',
+  'life-sciences': 'Life Sciences',
+  accounting: 'Accounting',
 };
+const SSCE = ['english', 'mathematics', 'physics', 'chemistry', 'biology', 'economics', 'government', 'literature', 'geography', 'commerce'];
+/** Each exam's own subjects, in the app's order. */
+export const SUBJECTS_OF = {
+  jamb: SSCE,
+  waec: SSCE,
+  neco: SSCE,
+  sat: ['reading-writing', 'math'],
+  act: ['english', 'math', 'reading', 'science'],
+  ap: ['calculus-ab', 'biology', 'chemistry', 'physics-1', 'us-history', 'english-language'],
+  gcse: ['maths', 'english-language', 'biology', 'chemistry', 'physics'],
+  alevel: ['maths', 'biology', 'chemistry', 'physics', 'economics'],
+  kcse: ['mathematics', 'english', 'biology', 'chemistry', 'physics'],
+  nsc: ['mathematics', 'physical-sciences', 'life-sciences', 'accounting', 'geography'],
+};
+/** "JAMB Biology", "SAT Math", "GCSE-style Biology": the name of one subject's practice. */
+export const practiceLabel = (g) => `${EXAMS[g.exam].label ?? EXAMS[g.exam].name} ${EXAM_SUBJECTS[g.subject]}`;
+/** The study notes and book lists that go with an exam subject, where they have another id. */
+const SAME_SUBJECT = {
+  math: 'mathematics',
+  maths: 'mathematics',
+  'english-language': 'english',
+  'calculus-ab': 'mathematics',
+  'physics-1': 'physics',
+  'physical-sciences': 'physics',
+  'life-sciences': 'biology',
+};
+/** Skills sections with no school subject behind them. */
+const NO_NOTES = ['reading-writing', 'reading', 'science', 'us-history', 'accounting'];
+export const notesSubject = (g) => (NO_NOTES.includes(g.subject) ? null : (SAME_SUBJECT[g.subject] ?? g.subject));
+/** A country's exams, for linking its textbook lists to practice. */
+export const COUNTRY_EXAMS = { ng: ['jamb', 'waec', 'neco'], gh: ['waec'], uk: ['gcse', 'alevel'], ke: ['kcse'], za: ['nsc'] };
 /** Questions of a paid paper that anyone may see. */
 export const PREVIEW = 10;
 
@@ -45,9 +165,9 @@ export const PREVIEW = 10;
  */
 export function loadPapers() {
   const papers = readdirSync(resolve(SERVER, 'exams'))
-    .filter((f) => /^[a-z]+-[a-z-]+-p\d+\.json$/.test(f))
+    .filter((f) => /^[a-z]+-[a-z0-9-]+-p\d+\.json$/.test(f))
     .map((f) => json('exams', f))
-    .filter((p) => EXAMS[p.exam] && EXAM_SUBJECTS[p.subject] && Array.isArray(p.questions));
+    .filter((p) => SUBJECTS_OF[p.exam]?.includes(p.subject) && Array.isArray(p.questions));
   for (const p of papers) {
     p.questions = p.questions
       .filter((q) => q.q && Array.isArray(q.options) && q.options.length > 1 && q.options[q.answer] !== undefined)
@@ -58,7 +178,7 @@ export function loadPapers() {
   }
   const groups = [];
   for (const exam of Object.keys(EXAMS))
-    for (const subject of Object.keys(EXAM_SUBJECTS)) {
+    for (const subject of SUBJECTS_OF[exam]) {
       const own = papers.filter((p) => p.exam === exam && p.subject === subject).sort((a, b) => a.number - b.number);
       if (!own.length) continue;
       // Topics, in the order they first appear, with the questions that may be shown.

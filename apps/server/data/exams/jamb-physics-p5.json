@@ -1,0 +1,531 @@
+{
+ "id": "jamb-physics-p5",
+ "exam": "jamb",
+ "subject": "physics",
+ "year": null,
+ "number": 5,
+ "source": "ai",
+ "minutes": 27,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Scalars and vectors",
+   "q": "Two tugboats at Apapa pull a barge with equal forces of 800 N each. The angle between the two cables is 120°. What is the magnitude of the resultant force on the barge?",
+   "options": [
+    "1 386 N",
+    "1 600 N",
+    "400 N",
+    "800 N"
+   ],
+   "answer": 3,
+   "explanation": "For equal forces 800 N inclined at 120°, R² = 800² + 800² + 2(800)(800)cos120° = 640000 + 640000 − 640000 = 640000, so R = 800 N. Adding the magnitudes would be wrong because the forces are not in the same direction."
+  },
+  {
+   "n": 2,
+   "topic": "Scalars and vectors",
+   "q": "Two forces of magnitudes 7.0 N and 4.0 N act at a point. What are the maximum and minimum possible magnitudes of their resultant?",
+   "options": [
+    "11.0 N and 3.0 N",
+    "9.0 N and 3.0 N",
+    "7.0 N and 4.0 N",
+    "11.0 N and 1.0 N"
+   ],
+   "answer": 0,
+   "explanation": "The resultant is maximum when the forces act in the same direction, giving 7.0 + 4.0 = 11.0 N. It is minimum when they act in opposite directions, giving 7.0 − 4.0 = 3.0 N."
+  },
+  {
+   "n": 3,
+   "topic": "Sound",
+   "q": "A public address speaker in a hall in Abeokuta is 51 m from a listener. If sound travels at 340 m/s, how long after the speaker starts does the listener hear the sound?",
+   "options": [
+    "0.15 s",
+    "0.30 s",
+    "1.5 s",
+    "0.015 s"
+   ],
+   "answer": 0,
+   "explanation": "Using t = distance/speed, t = 51/340 = 0.15 s. The sound is not travelling to a reflector and back, so the time is not doubled."
+  },
+  {
+   "n": 4,
+   "topic": "Sound",
+   "q": "A student standing behind the corner of a building in Ilesa can hear a conversation going on along the street but cannot see the speakers. The sound reaches the student mainly by",
+   "options": [
+    "diffraction",
+    "reflection",
+    "interference",
+    "refraction"
+   ],
+   "answer": 0,
+   "explanation": "Sound waves bend around the edge of the building and reach the student, an effect called diffraction. Seeing around the corner is not possible because light has a much shorter wavelength and diffracts far less."
+  },
+  {
+   "n": 5,
+   "topic": "Heat and temperature",
+   "q": "A patient in Ibadan has a body temperature of 39°C. Express this temperature on the Kelvin scale.",
+   "options": [
+    "312 K",
+    "351 K",
+    "234 K",
+    "273 K"
+   ],
+   "answer": 0,
+   "explanation": "Kelvin temperature = Celsius temperature + 273 = 39 + 273 = 312 K. Subtracting 39 from 273 is wrong because the conversion always adds 273."
+  },
+  {
+   "n": 6,
+   "topic": "Heat and temperature",
+   "q": "A bimetallic strip is made by bonding a brass strip to an iron strip. Brass has a greater linear expansivity than iron. When the strip is heated, why does it bend?",
+   "options": [
+    "Iron expands more than brass, so the strip curves with the iron on the outer side.",
+    "The two metals soften equally and the strip bends due to its weight.",
+    "Brass expands more than iron, so the strip curves with the brass on the outer side.",
+    "Both metals expand equally, but brass conducts heat faster."
+   ],
+   "answer": 2,
+   "explanation": "Brass has the greater linear expansivity, so it expands more than iron when heated. Since the two metals are bonded, the strip bends with the longer brass side on the outer curve."
+  },
+  {
+   "n": 7,
+   "topic": "Newton’s laws and momentum",
+   "q": "A 5.0 kg box is pulled along a horizontal floor in Enugu by a horizontal force of 25 N. A constant frictional force of 10 N opposes the motion. What is the acceleration of the box?",
+   "options": [
+    "7.0 m/s²",
+    "2.0 m/s²",
+    "3.0 m/s²",
+    "5.0 m/s²"
+   ],
+   "answer": 2,
+   "explanation": "The net horizontal force is 25 N − 10 N = 15 N. From F = ma, a = F/m = 15/5.0 = 3.0 m/s²."
+  },
+  {
+   "n": 8,
+   "topic": "Newton’s laws and momentum",
+   "q": "When a boy in Kano jumps forward from a stationary small boat, he pushes the boat backward while the boat pushes him forward with an equal force. This statement is a direct illustration of",
+   "options": [
+    "Newton’s first law of motion",
+    "the law of conservation of energy",
+    "Newton’s second law of motion",
+    "Newton’s third law of motion"
+   ],
+   "answer": 3,
+   "explanation": "The boy’s backward push on the boat and the boat’s forward push on the boy are an action–reaction pair, equal in magnitude and opposite in direction. This is Newton’s third law of motion."
+  },
+  {
+   "n": 9,
+   "topic": "Magnetism and electromagnetic induction",
+   "q": "A flat circular coil of area 0.025 m² is placed in a uniform magnetic field of flux density 0.40 T. If the plane of the coil is parallel to the field, what is the magnetic flux through the coil?",
+   "options": [
+    "0 Wb",
+    "0.020 Wb",
+    "0.0050 Wb",
+    "0.010 Wb"
+   ],
+   "answer": 0,
+   "explanation": "With the plane of the coil parallel to the field, the field lines do not pass normally through the coil; the angle between the field and the normal to the plane is 90°. Thus Φ = BA cos 90° = 0. The value BA = 0.010 Wb would apply only if the plane were perpendicular to the field."
+  },
+  {
+   "n": 10,
+   "topic": "Magnetism and electromagnetic induction",
+   "q": "A solenoid of length 0.50 m has 1000 turns and carries a current of 2.0 A. Taking μ₀ = 4π × 10⁻⁷ T m/A, calculate the magnetic flux density near the centre of the solenoid.",
+   "options": [
+    "1.0 × 10⁻² T",
+    "2.5 × 10⁻³ T",
+    "5.0 × 10⁻³ T",
+    "5.0 × 10⁻⁴ T"
+   ],
+   "answer": 2,
+   "explanation": "For a long solenoid, B = μ₀NI/l. Substituting gives B = (4π × 10⁻⁷ × 1000 × 2.0)/0.50 ≈ 5.0 × 10⁻³ T."
+  },
+  {
+   "n": 11,
+   "topic": "Magnetism and electromagnetic induction",
+   "q": "An electron moves horizontally in the same direction as a uniform horizontal magnetic field. What is the magnetic force on the electron?",
+   "options": [
+    "Maximum and directed opposite to its velocity",
+    "Zero",
+    "Maximum and directed vertically upward",
+    "Maximum and directed vertically downward"
+   ],
+   "answer": 1,
+   "explanation": "The magnetic force on a moving charge is F = qvB sin θ, where θ is the angle between the velocity and the magnetic field. Here θ = 0°, so sin 0° = 0 and the force is zero."
+  },
+  {
+   "n": 12,
+   "topic": "Motion",
+   "q": "A car in Kaduna travels the first half of the distance of a journey at 30 km/h and the second half at 60 km/h. Calculate its average speed for the whole journey.",
+   "options": [
+    "36 km/h",
+    "50 km/h",
+    "45 km/h",
+    "40 km/h"
+   ],
+   "answer": 3,
+   "explanation": "For equal distances, average speed = total distance/total time. Taking each half-distance as d, total time = d/30 + d/60, so average speed = 2d ÷ (d/30 + d/60) = 40 km/h. The arithmetic mean 45 km/h is not correct because the times for the two halves are different."
+  },
+  {
+   "n": 13,
+   "topic": "Motion",
+   "q": "A stone is projected from level ground at 20 m/s at an angle of 30° to the horizontal. Taking g = 10 m/s² and neglecting air resistance, calculate the time of flight.",
+   "options": [
+    "3.5 s",
+    "2.0 s",
+    "4.0 s",
+    "1.0 s"
+   ],
+   "answer": 1,
+   "explanation": "For projectile motion over level ground, time of flight T = 2u sin θ/g. Thus T = (2 × 20 × sin 30°)/10 = 2.0 s. The time to reach maximum height alone is 1.0 s."
+  },
+  {
+   "n": 14,
+   "topic": "Motion",
+   "q": "A train travelling at 72 km/h is brought to rest uniformly in 20 s. Calculate the distance it travels before stopping.",
+   "options": [
+    "200 m",
+    "100 m",
+    "1440 m",
+    "400 m"
+   ],
+   "answer": 0,
+   "explanation": "First convert the speed: 72 km/h = 20 m/s. The average speed while stopping uniformly is (20 + 0)/2 = 10 m/s, so distance = 10 × 20 = 200 m. Using 72 × 20 without converting units gives the tempting but incorrect value 1440 m."
+  },
+  {
+   "n": 15,
+   "topic": "Atomic and nuclear physics",
+   "q": "The nucleus ²²²₈₆Rn emits an alpha particle. Which nucleus is formed?",
+   "options": [
+    "²¹⁸₈₄Po",
+    "²¹⁸₈₃Bi",
+    "²²⁶₈₈Ra",
+    "²¹⁸₈₅At"
+   ],
+   "answer": 0,
+   "explanation": "An alpha particle is a helium nucleus, ⁴₂He. Alpha emission reduces the mass number by 4 and the atomic number by 2, so the daughter has mass number 218 and atomic number 84. Element 84 is polonium, Po."
+  },
+  {
+   "n": 16,
+   "topic": "Atomic and nuclear physics",
+   "q": "A sample of a radioactive mineral from a mine in Plateau State has a half-life of 6 days. What fraction of its original radioactive atoms remains after 24 days?",
+   "options": [
+    "1/32",
+    "1/8",
+    "1/4",
+    "1/16"
+   ],
+   "answer": 3,
+   "explanation": "The number of half-lives is 24 ÷ 6 = 4. After four half-lives, the fraction remaining is (1/2)⁴ = 1/16 of the original radioactive atoms."
+  },
+  {
+   "n": 17,
+   "topic": "Work, energy and power",
+   "q": "A minibus of mass 1500 kg travelling at 12 m/s is brought to rest. Calculate the kinetic energy lost by the minibus.",
+   "options": [
+    "1.08 × 10⁵ J",
+    "2.16 × 10⁵ J",
+    "1.80 × 10⁴ J",
+    "9.00 × 10³ J"
+   ],
+   "answer": 0,
+   "explanation": "The kinetic energy lost equals the initial kinetic energy: KE = ½mv² = ½ × 1500 × 12² = 108000 J = 1.08 × 10⁵ J. The value 2.16 × 10⁵ J would result from omitting the factor ½."
+  },
+  {
+   "n": 18,
+   "topic": "Elasticity and pressure",
+   "q": "A steel wire extends by 0.80 mm when a load of 50 N is applied. Assuming Hooke's law is obeyed, calculate the elastic potential energy stored in the wire.",
+   "options": [
+    "0.040 J",
+    "0.010 J",
+    "20 J",
+    "0.020 J"
+   ],
+   "answer": 3,
+   "explanation": "The extension is 0.80 mm = 8.0 × 10⁻⁴ m, so the elastic potential energy is ½ × 50 × 8.0 × 10⁻⁴ = 0.020 J. Omitting the factor ½ gives 0.040 J, while treating 0.80 mm as 0.80 m gives a much larger value."
+  },
+  {
+   "n": 19,
+   "topic": "Elasticity and pressure",
+   "q": "A bag of rice in a store in Kano weighs 900 N and rests on a square base of side 0.50 m. Calculate the average pressure it exerts on the floor.",
+   "options": [
+    "225 Pa",
+    "450 Pa",
+    "3600 Pa",
+    "1800 Pa"
+   ],
+   "answer": 2,
+   "explanation": "The contact area is (0.50)² = 0.25 m², so pressure = 900 ÷ 0.25 = 3600 Pa. Using the side length itself as the area gives 1800 Pa, while multiplying the weight by the area gives 225 Pa."
+  },
+  {
+   "n": 20,
+   "topic": "Elasticity and pressure",
+   "q": "A wire obeys Hooke's law and extends by 0.40 mm when the tension in it is 40 N. What is the force constant of the wire?",
+   "options": [
+    "1.0 × 10³ N/m",
+    "1.0 × 10⁵ N/m",
+    "1.0 × 10⁴ N/m",
+    "1.0 × 10² N/m"
+   ],
+   "answer": 1,
+   "explanation": "Using e = 0.40 mm = 4.0 × 10⁻⁴ m, k = F ÷ e = 40 ÷ (4.0 × 10⁻⁴) = 1.0 × 10⁵ N/m. Converting 0.40 mm wrongly to 0.004 m or 0.04 m gives values such as 1.0 × 10⁴ N/m or 1.0 × 10³ N/m."
+  },
+  {
+   "n": 21,
+   "topic": "Electrostatics and capacitors",
+   "q": "Three capacitors of capacitance 2 μF, 3 μF and 6 μF are connected in parallel across a 12 V battery. What total charge is stored?",
+   "options": [
+    "12 μC",
+    "72 μC",
+    "36 μC",
+    "132 μC"
+   ],
+   "answer": 3,
+   "explanation": "In parallel, the equivalent capacitance is 2 + 3 + 6 = 11 μF, so Q = CV = 11 μF × 12 V = 132 μC. Treating them as series gives 1 μF and 12 μC, while using only the 6 μF capacitor gives 72 μC."
+  },
+  {
+   "n": 22,
+   "topic": "Simple machines",
+   "q": "A wheel and axle in a well in Kaduna has a wheel of radius 40 cm and an axle of radius 8 cm. What is its velocity ratio?",
+   "options": [
+    "32.0",
+    "0.20",
+    "5.0",
+    "6.0"
+   ],
+   "answer": 2,
+   "explanation": "For a wheel and axle, velocity ratio = radius of wheel ÷ radius of axle = 40 ÷ 8 = 5.0. Inverting the ratio gives 0.20, while adding the radii before dividing gives (40 + 8) ÷ 8 = 6.0."
+  },
+  {
+   "n": 23,
+   "topic": "Simple machines",
+   "q": "In a block and tackle arrangement, four sections of rope support the movable block. What is its velocity ratio?",
+   "options": [
+    "4.0",
+    "8.0",
+    "5.0",
+    "2.0"
+   ],
+   "answer": 0,
+   "explanation": "For a block and tackle, the velocity ratio equals the number of rope sections supporting the movable block, which is 4.0. Counting the fixed pulleys or adding an extra section gives an incorrect value."
+  },
+  {
+   "n": 24,
+   "topic": "Light and optics",
+   "q": "Two plane mirrors in a tailor's shop in Kano are inclined at 60° to each other. How many images of a button placed between them are formed?",
+   "options": [
+    "4",
+    "6",
+    "5",
+    "3"
+   ],
+   "answer": 2,
+   "explanation": "The number of images is 360° ÷ 60° - 1 = 6 - 1 = 5. Forgetting to subtract the object position would give 6."
+  },
+  {
+   "n": 25,
+   "topic": "Light and optics",
+   "q": "An object is placed 20 cm from a concave mirror of focal length 15 cm. The image formed is real. What is the magnitude of the linear magnification?",
+   "options": [
+    "1/3",
+    "0.75",
+    "4",
+    "3"
+   ],
+   "answer": 3,
+   "explanation": "Using 1/f = 1/u + 1/v gives 1/15 = 1/20 + 1/v, so v = 60 cm. The magnitude of magnification is v/u = 60/20 = 3; using u/(u - f) would wrongly give 4."
+  },
+  {
+   "n": 26,
+   "topic": "Light and optics",
+   "q": "An astronomical telescope in normal adjustment has an objective of focal length 80 cm and an eyepiece of focal length 5 cm. What is its angular magnification?",
+   "options": [
+    "75",
+    "16",
+    "85",
+    "0.0625"
+   ],
+   "answer": 1,
+   "explanation": "For a telescope in normal adjustment, angular magnification = objective focal length ÷ eyepiece focal length = 80 ÷ 5 = 16. Inverting the ratio gives 0.0625, while adding the focal lengths gives 85."
+  },
+  {
+   "n": 27,
+   "topic": "Waves",
+   "q": "A radio station in Ibadan transmits waves of wavelength 3.0 m. If radio waves travel at 3.0 × 10⁸ m/s, calculate the frequency of the waves.",
+   "options": [
+    "1.0 × 10⁸ Hz",
+    "1.0 × 10⁶ Hz",
+    "3.0 × 10⁸ Hz",
+    "9.0 × 10⁸ Hz"
+   ],
+   "answer": 0,
+   "explanation": "Using v = fλ, f = v/λ = (3.0 × 10⁸)/3.0 = 1.0 × 10⁸ Hz. The value 3.0 × 10⁸ Hz wrongly treats the wave speed as the frequency."
+  },
+  {
+   "n": 28,
+   "topic": "Gas laws",
+   "q": "A fixed mass of gas in a cylinder in Ibadan occupies 120 cm³ at a pressure of 1.5 × 10⁵ Pa. If it is compressed at constant temperature until its volume is 80 cm³, what is its new pressure?",
+   "options": [
+    "1.0 × 10⁵ Pa",
+    "2.0 × 10⁵ Pa",
+    "4.5 × 10⁵ Pa",
+    "2.25 × 10⁵ Pa"
+   ],
+   "answer": 3,
+   "explanation": "At constant temperature, Boyle’s law gives P₁V₁ = P₂V₂. Thus P₂ = (1.5 × 10⁵ × 120)/80 = 2.25 × 10⁵ Pa. The value 1.0 × 10⁵ Pa arises from inverting the volume ratio."
+  },
+  {
+   "n": 29,
+   "topic": "Measurement and units",
+   "q": "The dimension of impulse is",
+   "options": [
+    "[M L T⁻²]",
+    "[M L T⁻¹]",
+    "[M L² T⁻¹]",
+    "[M L² T⁻²]"
+   ],
+   "answer": 1,
+   "explanation": "Impulse is force × time, so its dimension is (M L T⁻²) × T = M L T⁻¹. The expression [M L T⁻²] is the dimension of force, not impulse."
+  },
+  {
+   "n": 30,
+   "topic": "Current electricity",
+   "q": "A student in Benin connects a 6 Ω resistor and a 3 Ω resistor in parallel across a 12 V battery of negligible internal resistance. Calculate the current through the 3 Ω resistor.",
+   "options": [
+    "2 A",
+    "1.33 A",
+    "6 A",
+    "4 A"
+   ],
+   "answer": 3,
+   "explanation": "For parallel resistors, the 12 V is across each resistor. The current through the 3 Ω resistor is I = 12/3 = 4 A. The total current drawn from the battery is 6 A, not the current through the 3 Ω resistor."
+  },
+  {
+   "n": 31,
+   "topic": "Waves",
+   "q": "In a ripple tank experiment in Enugu, two points on a water wave are 0.15 m apart along the direction of travel. If the wavelength is 0.60 m, what is the phase difference between the two points?",
+   "options": [
+    "π rad",
+    "π/2 rad",
+    "2π rad",
+    "π/4 rad"
+   ],
+   "answer": 1,
+   "explanation": "The phase difference is 2π × (path difference/wavelength) = 2π × (0.15/0.60) = π/2 rad. A separation of half a wavelength would give π rad, but here the separation is a quarter wavelength."
+  },
+  {
+   "n": 32,
+   "topic": "Gas laws",
+   "q": "A fixed mass of gas occupies 250 cm³ at 27 °C. At what temperature in °C will it occupy 350 cm³ at constant pressure?",
+   "options": [
+    "147 K",
+    "273 °C",
+    "420 °C",
+    "147 °C"
+   ],
+   "answer": 3,
+   "explanation": "Using V/T = constant, T₂ = 300 × (350/250) = 420 K. Converting to degrees Celsius gives 420 − 273 = 147 °C. The value 420 °C mistakes the kelvin result for degrees Celsius."
+  },
+  {
+   "n": 33,
+   "topic": "Measurement and units",
+   "q": "A rectangular plot in Abuja has length 0.040 km and width 2500 cm. Calculate its area in square metres.",
+   "options": [
+    "10,000 m²",
+    "2,500 m²",
+    "100 m²",
+    "1000 m²"
+   ],
+   "answer": 3,
+   "explanation": "The length is 0.040 km = 40 m and the width is 2500 cm = 25 m. Hence area = 40 × 25 = 1000 m². The value 100 m² would result from wrongly taking 0.040 km as 4 m."
+  },
+  {
+   "n": 34,
+   "topic": "Current electricity",
+   "q": "An electric iron rated 800 W is used in a home in Ibadan for 3.0 hours each day for 20 days. If electrical energy costs ₦60 per kWh, calculate the total cost of the energy consumed.",
+   "options": [
+    "₦2,880",
+    "₦4,320",
+    "₦144",
+    "₦1,440"
+   ],
+   "answer": 0,
+   "explanation": "The power is 0.8 kW, so energy = 0.8 × 3.0 × 20 = 48 kWh. The total cost is 48 × ₦60 = ₦2,880. The amount ₦144 is the cost for only one day."
+  },
+  {
+   "n": 35,
+   "topic": "Gas laws",
+   "q": "A fixed mass of gas in Kano occupies 300 cm³ at 27 °C and a pressure of 1.2 × 10⁵ Pa. It is heated to 77 °C while its pressure falls to 1.0 × 10⁵ Pa. Calculate its new volume.",
+   "options": [
+    "420 cm³",
+    "350 cm³",
+    "480 cm³",
+    "360 cm³"
+   ],
+   "answer": 0,
+   "explanation": "Using the combined gas law, V₂ = V₁ × (P₁/P₂) × (T₂/T₁) = 300 × (1.2 × 10⁵/1.0 × 10⁵) × (350/300) = 420 cm³. The value 350 cm³ ignores the pressure change, while 360 cm³ ignores the temperature change."
+  },
+  {
+   "n": 36,
+   "topic": "Scalars and vectors",
+   "q": "In a physics lesson in Minna, two vectors are p = 3i − 4j and q = −i + 2j. What is p − q?",
+   "options": [
+    "2i + 6j",
+    "4i + 6j",
+    "2i − 2j",
+    "4i − 6j"
+   ],
+   "answer": 3,
+   "explanation": "Subtract corresponding components: p − q = (3 − (−1))i + (−4 − 2)j = 4i − 6j. The expression 2i − 2j comes from adding the two vectors instead of subtracting them."
+  },
+  {
+   "n": 37,
+   "topic": "Scalars and vectors",
+   "q": "A delivery boy in Onitsha walks 5 m due east and then 12 m due south. What is the ratio of the total distance he has walked to the magnitude of his displacement?",
+   "options": [
+    "17 : 13",
+    "1 : 1",
+    "12 : 5",
+    "13 : 17"
+   ],
+   "answer": 0,
+   "explanation": "The total distance is 5 m + 12 m = 17 m. The displacement magnitude is √(5² + 12²) = √169 = 13 m, so the ratio is 17 : 13."
+  },
+  {
+   "n": 38,
+   "topic": "Sound",
+   "q": "Two sound waves from a radio in Jos have frequencies 250 Hz and 500 Hz and travel through the same air at the same temperature. Which quantity is the same for the two waves?",
+   "options": [
+    "Speed",
+    "Pitch",
+    "Period",
+    "Wavelength"
+   ],
+   "answer": 0,
+   "explanation": "The speed of sound in air depends on the medium and its temperature, not on frequency, so both waves have the same speed. Their wavelengths and periods differ because these depend on frequency, and their pitches also differ."
+  },
+  {
+   "n": 39,
+   "topic": "Sound",
+   "q": "A student in Lokoja claps once facing a high wall. If the speed of sound is 340 m/s and the minimum time needed for a distinct echo is 0.10 s, what is the least distance from the student to the wall?",
+   "options": [
+    "170 m",
+    "17 m",
+    "34 m",
+    "3.4 m"
+   ],
+   "answer": 1,
+   "explanation": "For an echo, the sound travels to the wall and back, so 2d = v t. Thus d = (340 × 0.10) ÷ 2 = 17 m. Using 34 m omits the division by 2."
+  },
+  {
+   "n": 40,
+   "topic": "Sound",
+   "q": "At a live show in Calabar, a singer raises the loudness of a sustained note without changing its pitch. What changes in the sound wave?",
+   "options": [
+    "Speed of the wave",
+    "Amplitude of the wave",
+    "Frequency of the wave",
+    "Wavelength of the wave"
+   ],
+   "answer": 1,
+   "explanation": "Loudness depends on the amplitude or intensity of the sound wave. Pitch depends mainly on frequency, so keeping the pitch unchanged means the frequency remains the same."
+  }
+ ]
+}

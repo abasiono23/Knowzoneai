@@ -1,0 +1,401 @@
+{
+ "id": "gcse-physics-p3",
+ "exam": "gcse",
+ "subject": "physics",
+ "year": null,
+ "number": 3,
+ "source": "ai",
+ "minutes": 35,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Electricity",
+   "q": "A lamp carries a steady current of 0.25 A for 4.0 minutes. What charge flows through the lamp in this time?",
+   "options": [
+    "240 C",
+    "1.0 C",
+    "15 C",
+    "60 C"
+   ],
+   "answer": 3,
+   "explanation": "4.0 minutes is 4.0 × 60 = 240 s. Using Q = It gives Q = 0.25 × 240 = 60 C. Using 4.0 instead of 240 s gives 1.0 C, which is a common unit-conversion mistake."
+  },
+  {
+   "n": 2,
+   "topic": "Electricity",
+   "q": "An LED and a 100 Ω resistor are connected in series to a 5.0 V supply. The potential difference across the LED is 2.0 V. What is the current through the resistor?",
+   "options": [
+    "0.030 A",
+    "0.020 A",
+    "0.070 A",
+    "0.050 A"
+   ],
+   "answer": 0,
+   "explanation": "The potential difference across the resistor is 5.0 V − 2.0 V = 3.0 V. Using I = V/R gives I = 3.0/100 = 0.030 A. Using the full 5.0 V gives 0.050 A, which ignores the potential difference across the LED."
+  },
+  {
+   "n": 3,
+   "topic": "Electricity",
+   "q": "A 4.0 Ω resistor carries a current of 2.0 A. What is the power dissipated by the resistor?",
+   "options": [
+    "16 W",
+    "32 W",
+    "8.0 W",
+    "4.0 W"
+   ],
+   "answer": 0,
+   "explanation": "Power = I²R = (2.0)² × 4.0 = 16 W. The value 8.0 W comes from multiplying I × R, which gives the potential difference (8.0 V), not the power. Using P = I × R² gives 32 W and is incorrect."
+  },
+  {
+   "n": 4,
+   "topic": "Particle model of matter",
+   "q": "0.20 kg of ice at 0 °C is melted to water at 0 °C. The specific latent heat of fusion of ice is 3.3 × 10⁵ J/kg. How much energy is needed?",
+   "options": [
+    "6.6 × 10⁴ J",
+    "1.65 × 10⁶ J",
+    "3.3 × 10⁵ J",
+    "6.6 × 10⁵ J"
+   ],
+   "answer": 0,
+   "explanation": "Energy = mass × specific latent heat = 0.20 × 3.3 × 10⁵ = 6.6 × 10⁴ J. Using 2.0 kg instead of 0.20 kg would give 6.6 × 10⁵ J. Omitting the mass gives 3.3 × 10⁵ J."
+  },
+  {
+   "n": 5,
+   "topic": "Particle model of matter",
+   "q": "A sealed syringe contains a fixed mass of gas. The plunger is slowly pushed in until the gas volume is halved, while the temperature stays constant. What happens to the gas pressure, and why?",
+   "options": [
+    "It doubles because the particles collide with the walls more frequently per unit area.",
+    "It stays the same because the temperature is constant.",
+    "It doubles because the particles gain kinetic energy and move faster.",
+    "It halves because there is less space for the particles to move in."
+   ],
+   "answer": 0,
+   "explanation": "At constant temperature the average speed and kinetic energy of the particles do not change. Halving the volume doubles the number of particles per unit volume, so collisions with the walls occur twice as often per unit area and the pressure doubles. A temperature rise would increase particle speed, but that is not happening here."
+  },
+  {
+   "n": 6,
+   "topic": "Atomic structure and radioactivity",
+   "q": "In the alpha-particle scattering experiment, which observation showed that the positive charge and most of the mass are concentrated in a tiny central region of the atom?",
+   "options": [
+    "Only a small fraction of alpha particles were deflected through very large angles.",
+    "Most alpha particles passed straight through the foil with little deflection.",
+    "The alpha particles were attracted to a negative electrode.",
+    "All alpha particles were absorbed by the foil."
+   ],
+   "answer": 0,
+   "explanation": "The few alpha particles deflected through very large angles were repelled by a concentrated positive charge, showing that this charge and most of the mass are in a tiny nucleus. Most alpha particles passing straight through mainly shows that the atom is mostly empty space. Alpha particles are positively charged and are repelled by a positive nucleus."
+  },
+  {
+   "n": 7,
+   "topic": "Atomic structure and radioactivity",
+   "q": "A source emits alpha, beta and gamma radiation. The radiation enters a region between two horizontal plates, with the upper plate positive and the lower plate negative. Which radiation is attracted towards the positive plate, and why?",
+   "options": [
+    "Alpha radiation, because alpha particles are positively charged.",
+    "Gamma radiation, because gamma rays have no charge.",
+    "Beta radiation, because beta particles are negatively charged.",
+    "Beta radiation, because beta particles are positively charged."
+   ],
+   "answer": 2,
+   "explanation": "Beta particles are fast-moving electrons, so they have a negative charge and are attracted towards the positive plate. Alpha particles are positively charged and would be attracted towards the negative plate. Gamma rays have no charge, so they are not deflected by the electric field."
+  },
+  {
+   "n": 8,
+   "topic": "Atomic structure and radioactivity",
+   "q": "A nucleus emits a gamma ray. What happens to the proton number and mass number of the nucleus?",
+   "options": [
+    "The proton number decreases by 1 and the mass number stays the same.",
+    "The proton number increases by 1 and the mass number stays the same.",
+    "The proton number stays the same and the mass number decreases by 4.",
+    "Both stay the same, but the nucleus loses some energy."
+   ],
+   "answer": 3,
+   "explanation": "Gamma radiation is high-energy electromagnetic radiation, so emitting it does not change the numbers of protons or neutrons in the nucleus. The nucleus moves to a lower energy state, but its proton number and mass number remain unchanged. Alpha emission would decrease the mass number by 4 and proton number by 2, while beta emission would increase the proton number by 1."
+  },
+  {
+   "n": 9,
+   "topic": "Forces and motion",
+   "q": "A cyclist starts from rest and accelerates uniformly to 8.0 m/s in 4.0 s. She then cycles at a constant 8.0 m/s for 6.0 s. What is the total distance travelled during these 10 s?",
+   "options": [
+    "32 m",
+    "80 m",
+    "48 m",
+    "64 m"
+   ],
+   "answer": 3,
+   "explanation": "During the acceleration, the average speed is (0 + 8.0)/2 = 4.0 m/s, so the distance is 4.0 × 4.0 = 16 m. During the constant-speed part, the distance is 8.0 × 6.0 = 48 m. The total distance is 16 + 48 = 64 m; using 8.0 m/s for the whole 10 s would give 80 m."
+  },
+  {
+   "n": 10,
+   "topic": "Space physics",
+   "q": "A main-sequence star much more massive than the Sun uses up the hydrogen in its core. Which sequence correctly describes its later evolution?",
+   "options": [
+    "red supergiant → supernova → neutron star or black hole",
+    "red giant → planetary nebula → white dwarf",
+    "protostar → main sequence → white dwarf → black hole",
+    "red supergiant → white dwarf → supernova"
+   ],
+   "answer": 0,
+   "explanation": "A much more massive star expands into a red supergiant after its main-sequence stage, then explodes as a supernova and leaves a neutron star or a black hole. A Sun-like star follows the red giant → white dwarf route, so that sequence is not correct for a much more massive star. The sequence with a white dwarf before a supernova has the stages in the wrong order."
+  },
+  {
+   "n": 11,
+   "topic": "Magnetism and electromagnetism",
+   "q": "A student makes an electromagnet by winding insulated wire around an iron nail and connecting it to a battery. Which change would make the electromagnet weaker?",
+   "options": [
+    "Reversing the battery connections",
+    "Increasing the number of turns of wire",
+    "Reducing the current through the coil",
+    "Increasing the current through the coil"
+   ],
+   "answer": 2,
+   "explanation": "The strength of the magnetic field of an electromagnet increases with the current and with the number of turns of wire. Reversing the battery connections swaps the north and south poles but does not reduce the field strength. Therefore, reducing the current makes the electromagnet weaker."
+  },
+  {
+   "n": 12,
+   "topic": "Magnetism and electromagnetism",
+   "q": "A straight wire is at right angles to a uniform magnetic field. The magnetic field points from left to right across the page. The conventional current in the wire flows directly into the page. In which direction does the magnetic force on the wire act?",
+   "options": [
+    "Downwards towards the bottom of the page",
+    "Upwards towards the top of the page",
+    "Out of the page towards the reader",
+    "From left to right across the page"
+   ],
+   "answer": 0,
+   "explanation": "Using Fleming's left-hand rule, point the first finger in the field direction (left to right) and the second finger in the current direction (into the page). The thumb then points downwards, so the force is towards the bottom of the page. The force is perpendicular to both the field and the current, not along the field."
+  },
+  {
+   "n": 13,
+   "topic": "Magnetism and electromagnetism",
+   "q": "A magnet is pushed into a coil connected to a sensitive centre-zero meter, and the meter deflects. The magnet is then pulled out of the coil. Which change would make a larger induced potential difference while the magnet is moving?",
+   "options": [
+    "Keep the magnet still inside the coil.",
+    "Use a weaker magnet.",
+    "Move the magnet in and out more quickly.",
+    "Use a coil with fewer turns."
+   ],
+   "answer": 2,
+   "explanation": "A larger induced potential difference is produced when the magnetic flux through the coil changes more quickly, for example by moving the magnet faster. More turns on the coil or a stronger magnet would also increase the induced potential difference, whereas fewer turns or a weaker magnet would reduce it. A stationary magnet inside the coil produces no change in flux once it is still, so no induced potential difference."
+  },
+  {
+   "n": 14,
+   "topic": "Energy",
+   "q": "Nia uses a 1.5 kW electric heater for 2.0 hours. Electricity costs 20p per kilowatt-hour (kWh). What is the cost of using the heater?",
+   "options": [
+    "£1.50",
+    "£3.00",
+    "£0.30",
+    "£0.60"
+   ],
+   "answer": 3,
+   "explanation": "Energy transferred = power × time = 1.5 kW × 2.0 h = 3.0 kWh. At 20p per kWh, the cost is 3.0 × 20p = 60p = £0.60. The value £3.00 is the energy in kWh, not the cost in pounds."
+  },
+  {
+   "n": 15,
+   "topic": "Waves",
+   "q": "During an ultrasound scan, a pulse reflects from a boundary and returns to the detector after 0.10 ms. The speed of ultrasound in the tissue is 1540 m/s. How far below the surface is the boundary?",
+   "options": [
+    "3.85 cm",
+    "15.4 cm",
+    "0.077 cm",
+    "7.7 cm"
+   ],
+   "answer": 3,
+   "explanation": "The time is the time for the pulse to travel to the boundary and back, so the total distance is 1540 × 0.00010 = 0.154 m. The depth is half of this, 0.077 m, which is 7.7 cm. Using the full 0.154 m as the depth gives 15.4 cm and is too large."
+  },
+  {
+   "n": 16,
+   "topic": "Waves",
+   "q": "Water waves travel from deep water into shallower water. Their frequency stays the same. What happens to their speed and wavelength?",
+   "options": [
+    "The speed decreases and the wavelength increases.",
+    "The speed decreases and the wavelength decreases.",
+    "The speed stays the same and the wavelength decreases.",
+    "The speed increases and the wavelength increases."
+   ],
+   "answer": 1,
+   "explanation": "Water waves travel more slowly in shallower water, so their speed decreases. Since frequency stays the same and speed = frequency × wavelength, a smaller speed means a smaller wavelength. A change in speed alone would not keep the wavelength the same."
+  },
+  {
+   "n": 17,
+   "topic": "Waves",
+   "q": "Which list places three regions of the electromagnetic spectrum in order of increasing wavelength?",
+   "options": [
+    "ultraviolet, infrared, visible light",
+    "visible light, ultraviolet, infrared",
+    "infrared, visible light, ultraviolet",
+    "ultraviolet, visible light, infrared"
+   ],
+   "answer": 3,
+   "explanation": "In order of increasing wavelength, the electromagnetic spectrum runs from gamma rays through X-rays, ultraviolet, visible light, infrared, microwaves and radio waves. So ultraviolet has a shorter wavelength than visible light, and visible light has a shorter wavelength than infrared. The reverse order, infrared then visible then ultraviolet, is decreasing wavelength."
+  },
+  {
+   "n": 18,
+   "topic": "Electricity",
+   "q": "A battery transfers 1800 C of charge through a lamp in 5.0 minutes. What is the average current in the lamp?",
+   "options": [
+    "0.30 A",
+    "360 A",
+    "30 A",
+    "6.0 A"
+   ],
+   "answer": 3,
+   "explanation": "Current is charge flow per second, so convert 5.0 minutes to 300 s. Using I = Q ÷ t gives 1800 C ÷ 300 s = 6.0 A. Dividing 1800 C by 5.0 instead of 300 s gives 360 A, which is incorrect."
+  },
+  {
+   "n": 19,
+   "topic": "Electricity",
+   "q": "A 12 Ω resistor and a 4.0 Ω resistor are connected in parallel. What is the total resistance of the parallel combination?",
+   "options": [
+    "0.33 Ω",
+    "3.0 Ω",
+    "16 Ω",
+    "8.0 Ω"
+   ],
+   "answer": 1,
+   "explanation": "For parallel resistors, 1/R = 1/12 + 1/4 = 1/12 + 3/12 = 4/12. This gives R = 3.0 Ω, which is less than either resistor. Adding the resistances to get 16 Ω would apply to a series circuit, not a parallel one."
+  },
+  {
+   "n": 20,
+   "topic": "Electricity",
+   "q": "A 230 V kettle has a power rating of 2.3 kW. What is the current in the kettle when it is operating normally?",
+   "options": [
+    "1.0 A",
+    "0.10 A",
+    "100 A",
+    "10 A"
+   ],
+   "answer": 3,
+   "explanation": "Use I = P ÷ V, with 2.3 kW = 2300 W. The current is 2300 W ÷ 230 V = 10 A. A decimal place error gives values such as 1.0 A or 100 A."
+  },
+  {
+   "n": 21,
+   "topic": "Atomic structure and radioactivity",
+   "q": "A Geiger–Muller tube records a background count rate of 20 counts per minute. When a radioactive source is brought near, the tube records 140 counts per minute. What is the corrected count rate from the source?",
+   "options": [
+    "140 counts per minute",
+    "7.0 counts per minute",
+    "120 counts per minute",
+    "160 counts per minute"
+   ],
+   "answer": 2,
+   "explanation": "The background count must be subtracted from the count with the source present. The corrected count rate is 140 − 20 = 120 counts per minute. Adding the background would give 160 counts per minute, which is incorrect."
+  },
+  {
+   "n": 22,
+   "topic": "Forces and motion",
+   "q": "A runner accelerates uniformly from 4.0 m/s to 16 m/s in 5.0 s. What distance does the runner travel during this time?",
+   "options": [
+    "100 m",
+    "60 m",
+    "50 m",
+    "80 m"
+   ],
+   "answer": 2,
+   "explanation": "The distance is average speed × time. The average speed is (4.0 + 16) ÷ 2 = 10 m/s, so the distance is 10 m/s × 5.0 s = 50 m. Using the final speed for the whole time would give 80 m, which overestimates the distance."
+  },
+  {
+   "n": 23,
+   "topic": "Forces and motion",
+   "q": "An astronaut has a mass of 75 kg. The gravitational field strength on the Moon is 1.6 N/kg. What are the astronaut's weight on the Moon and mass on the Moon?",
+   "options": [
+    "Weight = 75 N; mass = 120 kg",
+    "Weight = 120 N; mass = 75 kg",
+    "Weight = 750 N; mass = 75 kg",
+    "Weight = 120 N; mass = 120 kg"
+   ],
+   "answer": 1,
+   "explanation": "Weight is calculated using W = m × g, so W = 75 kg × 1.6 N/kg = 120 N. Mass is a measure of the amount of matter and does not change when the astronaut goes to the Moon. Using g ≈ 10 N/kg would give 750 N, which is the weight on Earth, not on the Moon."
+  },
+  {
+   "n": 24,
+   "topic": "Forces and motion",
+   "q": "A spring stretches by 4.0 cm when a force of 6.0 N is applied. Assuming it obeys Hooke's law, what is its spring constant?",
+   "options": [
+    "15 N/m",
+    "150 N/m",
+    "0.24 N/m",
+    "1.5 N/m"
+   ],
+   "answer": 1,
+   "explanation": "Hooke's law gives F = k × x, so k = F ÷ x. The extension must be in metres: 4.0 cm = 0.040 m, so k = 6.0 N ÷ 0.040 m = 150 N/m. Using 4.0 cm directly as the extension gives 1.5 N/m, which is incorrect."
+  },
+  {
+   "n": 25,
+   "topic": "Space physics",
+   "q": "The Hubble Space Telescope moves in a circular orbit with orbital radius 6.98 × 10⁶ m and orbital period 5.46 × 10³ s. Use π = 3.14 and v = 2πr ÷ T. What is its orbital speed?",
+   "options": [
+    "1.28 × 10³ m/s",
+    "8.03 × 10³ m/s",
+    "4.02 × 10³ m/s",
+    "4.38 × 10⁷ m/s"
+   ],
+   "answer": 1,
+   "explanation": "The circumference is 2 × 3.14 × 6.98 × 10⁶ = 4.38 × 10⁷ m, and dividing by 5.46 × 10³ s gives 8.03 × 10³ m/s. The value 4.02 × 10³ m/s omits the factor of 2, while 1.28 × 10³ m/s uses r ÷ T instead of 2πr ÷ T."
+  },
+  {
+   "n": 26,
+   "topic": "Space physics",
+   "q": "A star called Altair is 16.7 light-years from Earth. Approximately how long does light from Altair take to travel to Earth?",
+   "options": [
+    "16.7 months",
+    "16.7 seconds",
+    "16.7 million years",
+    "16.7 years"
+   ],
+   "answer": 3,
+   "explanation": "A light-year is the distance light travels in one year, so a distance of 16.7 light-years means the light takes 16.7 years to reach Earth. It is a distance unit, not a time unit, and it is much larger than the distance light travels in a month or a second."
+  },
+  {
+   "n": 27,
+   "topic": "Space physics",
+   "q": "Which sequence correctly describes the later stages of a star with about the same mass as the Sun?",
+   "options": [
+    "Red giant, then white dwarf",
+    "Main sequence, then red giant, then black hole",
+    "White dwarf, then red giant, then planetary nebula",
+    "Red supergiant, then supernova, then neutron star"
+   ],
+   "answer": 0,
+   "explanation": "A Sun-like star expands into a red giant after the main sequence and later sheds its outer layers, leaving a white dwarf. Supernovae, neutron stars and black holes are end stages for much more massive stars."
+  },
+  {
+   "n": 28,
+   "topic": "Magnetism and electromagnetism",
+   "q": "Nia looks at one end of a solenoid. The conventional current in the wire at that end appears to flow anticlockwise. Which magnetic pole is at that end?",
+   "options": [
+    "South pole",
+    "North pole",
+    "No magnetic pole because the current is steady",
+    "A north pole at both ends"
+   ],
+   "answer": 1,
+   "explanation": "Using the right-hand grip rule, curling the fingers in the anticlockwise current direction makes the thumb point out of that end, so it is the north pole. The opposite end is a south pole; a steady current still produces a magnetic field."
+  },
+  {
+   "n": 29,
+   "topic": "Magnetism and electromagnetism",
+   "q": "In a simple d.c. motor, what is the main purpose of the split-ring commutator?",
+   "options": [
+    "It changes the direction of the magnetic field every half-turn.",
+    "It increases the current so that the motor turns faster.",
+    "It reverses the current in the coil every half-turn so the coil keeps turning in the same direction.",
+    "It breaks the circuit when the coil is vertical so that the coil stops."
+   ],
+   "answer": 2,
+   "explanation": "The split-ring commutator swaps the connections to the coil every half-turn, reversing the current and keeping the turning force in the same direction. Increasing the current or changing the magnetic field direction is not its purpose."
+  },
+  {
+   "n": 30,
+   "topic": "Magnetism and electromagnetism",
+   "q": "A magnet is pushed into a coil and then held still inside it. What is the induced potential difference across the coil while the magnet is held still?",
+   "options": [
+    "The same as while the magnet was moving.",
+    "Zero only if the coil is part of an open circuit.",
+    "Zero, because the magnetic flux through the coil is not changing.",
+    "A steady maximum value, because the magnet is inside the coil."
+   ],
+   "answer": 2,
+   "explanation": "A potential difference is induced only while the magnetic flux through the coil changes. Holding the magnet still keeps the flux constant, so the induced potential difference falls to zero even if the coil is connected in a circuit."
+  }
+ ]
+}

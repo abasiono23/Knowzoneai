@@ -50,6 +50,7 @@ const settings: Translation<typeof en> = {
     activeCount_one: '{{count}} kinafanya kazi',
     activeCount_other: '{{count}} vinafanya kazi',
     language: 'Lugha',
+    region: 'Nchi ya masomo',
     appearance: 'Mwonekano',
     privacy: 'Faragha',
     downloadData: 'Pakua data yangu',
@@ -94,6 +95,11 @@ const settings: Translation<typeof en> = {
     reduceMotionHint: 'Michoro michache inayosonga kwenye programu',
     haptics: 'Mtetemo katika michezo',
     hapticsHint: 'Mrejesho wa mtetemo katika Knowzone World',
+  },
+  region: {
+    title: 'Nchi ya masomo',
+    intro: 'Chagua nchi unayosomea. Knowzone itaonyesha kwanza mazoezi ya mitihani ya nchi hiyo, na mwalimu wako wa AI atafuata mitihani yake.',
+    footer: 'Alama zako zinabaki unapobadilisha nchi, na unaweza kufungua karatasi za nchi nyingine kutoka ukurasa wa mazoezi ya mitihani.',
   },
   language: {
     title: 'Lugha',

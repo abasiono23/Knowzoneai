@@ -1,0 +1,583 @@
+{
+ "id": "sat-math-p2",
+ "exam": "sat",
+ "subject": "math",
+ "year": null,
+ "number": 2,
+ "source": "ai",
+ "minutes": 70,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Lines, angles and triangles",
+   "q": "A line passes through the points (2, 5) and (6, 13). What is the equation of the line in slope-intercept form y = mx + b?",
+   "options": [
+    "y = 2x + 1",
+    "y = 2x - 1",
+    "y = 3x - 1",
+    "y = 4x - 3"
+   ],
+   "answer": 0,
+   "explanation": "Slope = (13 − 5)/(6 − 2) = 8/4 = 2. Use point (2,5): 5 = 2·2 + b so b = 1. Thus y = 2x + 1. The choice y = 2x − 1 has the correct slope but wrong intercept, and y = 4x − 3 and y = 3x − 1 have incorrect slopes."
+  },
+  {
+   "n": 2,
+   "topic": "Lines, angles and triangles",
+   "q": "Two lines in the plane have equations 3x − 2y = 6 and kx + 6y = 9. For what value of k are the two lines perpendicular?",
+   "options": [
+    "k = −3",
+    "k = 4",
+    "k = 3",
+    "k = −4"
+   ],
+   "answer": 1,
+   "explanation": "Rewrite first line in slope form: 3x − 2y = 6 → y = (3/2)x − 3 so its slope is 3/2. A perpendicular line must have slope −2/3. For kx + 6y = 9 → y = (−k/6)x + 3/2, so slope = −k/6. Set −k/6 = −2/3 → k/6 = 2/3 → k = 4. k = −4 would give slope 4/6 = 2/3, parallel rather than perpendicular."
+  },
+  {
+   "n": 3,
+   "topic": "Percentages",
+   "q": "A sweater priced at $80 is marked down 25% and then a sales tax of 8% is added to the reduced price. What is the final price (nearest cent)?",
+   "options": [
+    "$64.80",
+    "$69.12",
+    "$70.40",
+    "$60.00"
+   ],
+   "answer": 0,
+   "explanation": "After 25% markdown, price = 0.75×$80 = $60. Sales tax 8% on $60 gives tax $4.80, so final price = $60 + $4.80 = $64.80. The $69.12 value mistakenly applies tax then discount or compounds differently; $60 is before tax, and $70.40 is incorrect arithmetic."
+  },
+  {
+   "n": 4,
+   "topic": "Percentages",
+   "q": "A population of bacteria increases by 12% each hour. After 5 hours, the population is approximately 1.7623 million. What was the initial population (to the nearest thousand)?",
+   "options": [
+    "1,000,000",
+    "900,000",
+    "1,200,000",
+    "1,500,000"
+   ],
+   "answer": 0,
+   "explanation": "Let initial population P. After 5 hours P·(1.12)^5 = 1.7623 million. Compute (1.12)^5 ≈ 1.12^2=1.2544, ^4≈1.5735, times 1.12 ≈1.7635 (close). So P ≈ 1.7623/1.7623 ≈ 1.0 million. Thus initial ≈ 1,000,000. The other choices are off by significant factors."
+  },
+  {
+   "n": 5,
+   "topic": "Right triangles and trigonometry",
+   "q": "A ladder leans against a vertical wall. The ladder is 13 ft long and makes an angle θ with the ground. The top of the ladder reaches a point 5 ft above the ground on the wall. What is cos(θ)?",
+   "options": [
+    "12/13",
+    "5/13",
+    "12/5",
+    "3/5"
+   ],
+   "answer": 0,
+   "explanation": "The ladder (hypotenuse) is 13, vertical rise is 5, so horizontal distance from wall is √(13² − 5²) = √(169 − 25) = √144 = 12. cos(θ) = adjacent/hypotenuse = 12/13. The 5/13 is sin(θ); 3/5 and 12/5 are invalid for cosine here."
+  },
+  {
+   "n": 6,
+   "topic": "Circles",
+   "q": "A circle has center at (3, −2) and passes through the point (7, 2). What is the equation of the circle in standard form (x − h)² + (y − k)² = r²?",
+   "options": [
+    "(x − 3)² + (y + 2)² = 16",
+    "(x − 3)² + (y + 2)² = 32",
+    "(x − 3)² + (y − 2)² = 32",
+    "(x + 3)² + (y − 2)² = 32"
+   ],
+   "answer": 1,
+   "explanation": "Radius squared r² = distance² between (3, −2) and (7, 2) = (7−3)² + (2−(−2))² = 4² + 4² = 16+16 = 32. Center (h,k) = (3, −2) so standard form is (x − 3)² + (y + 2)² = 32. The tempting wrong choice with r² = 16 comes from using only one coordinate difference; the choices that change signs misplace the center."
+  },
+  {
+   "n": 7,
+   "topic": "Probability and conditional probability",
+   "q": "A deck contains 20 cards numbered 1 through 20. Two cards are drawn at random without replacement. What is the probability that the second card drawn is greater than the first card drawn?",
+   "options": [
+    "1/2",
+    "11/20",
+    "10/19",
+    "9/19"
+   ],
+   "answer": 0,
+   "explanation": "For any unordered pair of distinct numbers, exactly one ordering has the second greater than the first, and with no replacement all orderings are equally likely. Ties can't occur, so probability = 1/2. The value 10/19 = probability the second is greater given some conditional mistake; 9/19 and 11/20 are incorrect fractions from miscounting."
+  },
+  {
+   "n": 8,
+   "topic": "One-variable data: center and spread",
+   "q": "A statistics teacher records the times (in minutes) her six students spent on a quiz: 12, 15, 18, 20, 20, 25. What are the mean and median of these times?",
+   "options": [
+    "Mean = 17.67, median = 18",
+    "Mean = 18, median = 18",
+    "Mean = 18.33, median = 18",
+    "Mean = 18.33, median = 19"
+   ],
+   "answer": 3,
+   "explanation": "Mean = (12+15+18+20+20+25)/6 = 110/6 = 18.333... Median is average of the middle two values (the 3rd and 4th) = (18+20)/2 = 19. The wrong mean 18 comes from rounding too early; median 18 or 18.33 with median 18 arise from misidentifying the middle positions."
+  },
+  {
+   "n": 9,
+   "topic": "Probability and conditional probability",
+   "q": "A bag contains 3 red, 4 blue, and 5 green marbles. Sam draws one marble, records its color, and then draws a second marble without replacing the first. Given that the first marble was blue, what is the probability the second marble is green?",
+   "options": [
+    "5/11",
+    "5/12",
+    "1/3",
+    "4/11"
+   ],
+   "answer": 0,
+   "explanation": "After one blue is removed, remaining marbles = 3 red, 3 blue, 5 green → total 11. Probability second is green = 5/11. The 5/12 mistake treats total as 12 (not subtracting the first draw); 4/11 confuses numbers of blues; 1/3 approximates 5/15 or similar miscount."
+  },
+  {
+   "n": 10,
+   "topic": "One-variable data: center and spread",
+   "q": "The test scores for a class are: 72, 78, 85, 85, 90, 96. What is the interquartile range (IQR) of these scores?",
+   "options": [
+    "10",
+    "12",
+    "8",
+    "14"
+   ],
+   "answer": 1,
+   "explanation": "With six data points, Q1 is median of lower three values (72,78,85) → Q1 = 78. Q3 is median of upper three values (85,90,96) → Q3 = 90. IQR = Q3 − Q1 = 90 − 78 = 12. Common mistakes come from including the overall median or using different conventions to compute quartiles."
+  },
+  {
+   "n": 11,
+   "topic": "Linear equations in two variables",
+   "q": "Line L passes through (1, −2) and has slope 5. Which equation represents line L in standard form Ax + By = C with integer coefficients and A positive?",
+   "options": [
+    "5x + y = 3",
+    "x − 5y = 11",
+    "5x − y = 7",
+    "−5x + y = −7"
+   ],
+   "answer": 2,
+   "explanation": "Point-slope: y + 2 = 5(x − 1) → y + 2 = 5x − 5 → bring terms: 5x − y = 7. Coefficients are integers and A = 5 is positive. The other forms either don't pass through (1, −2) or have incorrect signs."
+  },
+  {
+   "n": 12,
+   "topic": "Nonlinear functions",
+   "q": "f(t) = 3t² − 12t + 11. For what value of t (in real numbers) does f(t) achieve its minimum, and what is that minimum value?",
+   "options": [
+    "Minimum at t = 2; minimum value = −1",
+    "Minimum at t = −2; minimum value = 35",
+    "Minimum at t = 2; minimum value = 1",
+    "Minimum at t = 6; minimum value = 35"
+   ],
+   "answer": 0,
+   "explanation": "For a quadratic at² + bt + c with a > 0, vertex t = −b/(2a) = 12/(6) = 2. f(2) = 3(4) − 24 + 11 = 12 − 24 + 11 = −1. Other choices give wrong vertex or wrong evaluation."
+  },
+  {
+   "n": 13,
+   "topic": "Two-variable data: models and scatterplots",
+   "q": "A scatterplot comparing daily temperature (°F) x and daily ice-cream sales (dollars) y has a correlation r ≈ 0.9 and regression line y = 5x − 60. If one day the temperature was 30°F, what does the regression line predict for sales, and how should you interpret the prediction given the correlation?",
+   "options": [
+    "Predicted sales $90; prediction is reasonably reliable because r ≈ 0.9 indicates a strong positive linear association",
+    "Predicted sales $90; prediction is unreliable because r ≈ 0.9 is weak",
+    "Predicted sales $90; prediction is exact for every day because a regression line fits all points",
+    "Predicted sales $−150; prediction is reasonable because r ≈ 0.9"
+   ],
+   "answer": 0,
+   "explanation": "Plug x = 30 into y = 5x − 60 to get y = 150 − 60 = 90 dollars. A correlation r ≈ 0.9 indicates a strong positive linear relationship, so the linear prediction is reasonably reliable though not exact for every individual day. The negative value option and claims of exact fit are incorrect."
+  },
+  {
+   "n": 14,
+   "topic": "Linear equations in two variables",
+   "q": "A taxi charges a flat fee of $3 plus $2.25 per mile. Which equation models the total fare F (in dollars) for m miles, and what is the slope interpreted as?",
+   "options": [
+    "F = 2.25m + 3; slope 2.25 is dollars per mile",
+    "F = 2.25 + 3m; slope 3 is dollars per mile",
+    "F = 3 + 2.25m; slope 3 is dollars per mile",
+    "F = 3m + 2.25; slope 3 is miles per dollar"
+   ],
+   "answer": 0,
+   "explanation": "Total fare = flat fee + (rate × miles) = 3 + 2.25m, commonly written F = 2.25m + 3. The slope 2.25 represents dollars per mile. The options that swap coefficients or misinterpret slope give wrong units or wrong equations."
+  },
+  {
+   "n": 15,
+   "topic": "Nonlinear equations and systems",
+   "q": "(REVISED) Solve the system: x² + y² = 25 and y = x − 1. What are the real solutions (x, y)?",
+   "options": [
+    "(5, 0) and (−5, 0)",
+    "(3, 2) and (−4, −5)",
+    "(3, −2) and (−4, 5)",
+    "(4, 3) and (−3, −4)"
+   ],
+   "answer": 3,
+   "explanation": "Substitute y = x − 1 into x² + (x − 1)² = 25 → x² + x² − 2x + 1 = 25 → 2x² − 2x − 24 = 0 → x² − x − 12 = 0 → (x − 4)(x + 3) = 0 so x = 4 or x = −3. Then y = x − 1 gives (4, 3) and (−3, −4), which both satisfy the circle equation."
+  },
+  {
+   "n": 16,
+   "topic": "Nonlinear functions",
+   "q": "A spherical water tank has radius r (in meters). The volume V (in cubic meters) of water when the tank is full is V = 4/3 π r³. If a tank's radius is doubled, by what factor does the full volume increase?",
+   "options": [
+    "2",
+    "4",
+    "8",
+    "16"
+   ],
+   "answer": 2,
+   "explanation": "Volume depends on r³, so doubling r multiplies volume by 2³ = 8. The factor 4 would come from area scaling (r²), 2 from linear scaling, and 16 is 2^4 and not relevant."
+  },
+  {
+   "n": 17,
+   "topic": "Ratios, rates, proportions and units",
+   "q": "A recipe for lemonade uses 3 cups of water for every 2 tablespoons of sugar. If Elena wants to make 12 cups of lemonade using the same ratio, how many tablespoons of sugar should she use?",
+   "options": [
+    "6 tablespoons",
+    "7 tablespoons",
+    "9 tablespoons",
+    "8 tablespoons"
+   ],
+   "answer": 3,
+   "explanation": "The ratio water:sugar = 3 cups : 2 tbsp. For 12 cups, scale factor is 12 ÷ 3 = 4, so sugar = 2 × 4 = 8 tablespoons. A common mistake would be using 12 ÷ 2 = 6 (giving 6 tablespoons) or mis-scaling and getting 9 or 7."
+  },
+  {
+   "n": 18,
+   "topic": "Ratios, rates, proportions and units",
+   "q": "A car travels 150 miles on 5 gallons of gas. At that same rate, how many gallons are needed for a 420-mile trip? (Assume the car's fuel efficiency stays constant.)",
+   "options": [
+    "12 gallons",
+    "14 gallons",
+    "15 gallons",
+    "13 gallons"
+   ],
+   "answer": 1,
+   "explanation": "Fuel efficiency is 150 miles ÷ 5 gallons = 30 miles per gallon. For 420 miles, gallons = 420 ÷ 30 = 14. A distractor like 12 comes from dividing 150 by 5 then dividing incorrectly; 15 comes from 150/10 × 5 or similar mis-scaling."
+  },
+  {
+   "n": 19,
+   "topic": "Ratios, rates, proportions and units",
+   "q": "A contractor estimates that 8 workers can paint a house exterior in 15 hours working at the same constant rate. How many workers are needed to complete the same job in 6 hours, assuming all workers work at the same rate and fractional workers are allowed?",
+   "options": [
+    "20 workers",
+    "10 workers",
+    "16 workers",
+    "18 workers"
+   ],
+   "answer": 0,
+   "explanation": "Work is proportional to workers × time. Let W be workers: 8 × 15 = W × 6 so W = (8×15)/6 = 20. Common errors include dividing instead of multiplying or using 8×6/15 = 3.2 (leading to wrong small numbers)."
+  },
+  {
+   "n": 20,
+   "topic": "Linear inequalities",
+   "q": "A clothing store will allow returns within t days of purchase only if t ≤ 30 and t ≥ 5. Which of the following describes the set of allowed values using inequality notation?",
+   "options": [
+    "t ≥ 5",
+    "t ≤ 30",
+    "t < 30",
+    "5 ≤ t ≤ 30"
+   ],
+   "answer": 3,
+   "explanation": "The store accepts returns for days at least 5 and at most 30, which is written 5 ≤ t ≤ 30. The other choices represent only one of the two bounds or a strict inequality missing the lower bound."
+  },
+  {
+   "n": 21,
+   "topic": "Lines, angles and triangles",
+   "q": "In triangle ABC, angle A = 40° and angle B = 65°. What is the measure of angle C?",
+   "options": [
+    "60°",
+    "75°",
+    "55°",
+    "95°"
+   ],
+   "answer": 1,
+   "explanation": "The sum of interior angles in a triangle is 180°, so angle C = 180° − 40° − 65° = 75°. Common mistakes include reversing subtraction or subtracting only one angle from 180°."
+  },
+  {
+   "n": 22,
+   "topic": "Lines, angles and triangles",
+   "q": "A line passes through the points (−2, 7) and (4, −5). What is the slope of that line?",
+   "options": [
+    "−12",
+    "−2",
+    "1/2",
+    "2"
+   ],
+   "answer": 1,
+   "explanation": "Slope = (change in y)/(change in x) = (−5 − 7)/(4 − (−2)) = (−12)/6 = −2. A common slip is swapping numerator signs or miscomputing the differences leading to 2 or −12."
+  },
+  {
+   "n": 23,
+   "topic": "Percentages",
+   "q": "A jacket has a price of $120. The store first applies a 15% discount to the price, and then applies an additional 10% discount to the reduced price. What is the jacket's final price, rounded to the nearest cent?",
+   "options": [
+    "$102.00",
+    "$91.80",
+    "$108.00",
+    "$90.00"
+   ],
+   "answer": 1,
+   "explanation": "Apply the discounts multiplicatively: after 15% off the price is 120 × 0.85 = 102. Then an additional 10% off gives 102 × 0.90 = 91.80. The $90.00 answer comes from incorrectly subtracting 15% and 10% as 25% of the original ($120 × 0.75 = $90). $102.00 and $108.00 are results of applying only one of the discounts."
+  },
+  {
+   "n": 24,
+   "topic": "Percentages",
+   "q": "A $1,000 investment earns 6% interest compounded annually. What is the account balance after 3 years, rounded to the nearest cent?",
+   "options": [
+    "$1,191.02",
+    "$1,180.00",
+    "$3,180.00",
+    "$1,123.60"
+   ],
+   "answer": 0,
+   "explanation": "Compounded annually means multiply by 1.06 each year: 1,000 × (1.06)^3 = 1,000 × 1.191016 = 1,191.016, which rounds to $1,191.02. $1,180.00 is the simple interest result (1,000 × (1 + 3×0.06)), $1,123.60 is after two years (1,000 × (1.06)^2), and $3,180.00 is an incorrect arithmetic error."
+  },
+  {
+   "n": 25,
+   "topic": "Percentages",
+   "q": "After an item is marked down 20%, a sales tax of 8% is applied to the discounted price. A customer pays $86.40 in total. What was the item’s original (pre-discount, pre-tax) price?",
+   "options": [
+    "$80.00",
+    "$100.00",
+    "$105.00",
+    "$95.00"
+   ],
+   "answer": 1,
+   "explanation": "Let original price be P. After a 20% discount the price is 0.8P, and after 8% tax it becomes 0.8P × 1.08 = 0.864P. Set 0.864P = 86.40 → P = 86.40 ÷ 0.864 = 100. The other numbers come from incorrect inverses of the percentage operations."
+  },
+  {
+   "n": 26,
+   "topic": "Right triangles and trigonometry",
+   "q": "In a right triangle, the two legs measure 9 and 12. What is the length of the hypotenuse?",
+   "options": [
+    "21",
+    "9",
+    "15",
+    "13"
+   ],
+   "answer": 2,
+   "explanation": "Use the Pythagorean theorem: hypotenuse = √(9² + 12²) = √(81 + 144) = √225 = 15. 13 and 21 are common distractors; 9 is one of the legs, not the hypotenuse."
+  },
+  {
+   "n": 27,
+   "topic": "Right triangles and trigonometry",
+   "q": "In right triangle ABC, angle C is the right angle. If tan A = 3/4 and the hypotenuse has length 10, what is the length of the side opposite angle A?",
+   "options": [
+    "8",
+    "10",
+    "6",
+    "4.8"
+   ],
+   "answer": 2,
+   "explanation": "tan A = opposite/adjacent = 3/4, so sides are proportional to 3k, 4k, 5k. The hypotenuse 5k = 10 gives k = 2, so opposite = 3k = 6. 4.8 would be 3 × 1.6 (wrong scale), 8 is 4k (the adjacent), and 10 is the hypotenuse."
+  },
+  {
+   "n": 28,
+   "topic": "Right triangles and trigonometry",
+   "q": "An observer measures the angle of elevation to the top of a tree. From a point 15 ft from the tree base the angle is 60°, and from a point 30 ft farther away (45 ft from the tree base) the angle is 30°. What is the height of the tree, expressed exactly?",
+   "options": [
+    "15√3 ft",
+    "30 ft",
+    "45 ft",
+    "20 ft"
+   ],
+   "answer": 0,
+   "explanation": "Let x be the closer horizontal distance. Given distances x = 15 and x+30 = 45. Using tan: height = x·tan60 = 15·√3 = 15√3. Alternatively solve x·√3 = (x+30)·(1/√3) → 3x = x+30 → x = 15, height = 15√3. The numeric choices 30 and 45 are not equal to 15√3, and 20 is incorrect."
+  },
+  {
+   "n": 29,
+   "topic": "Linear equations in one variable",
+   "q": "Solve for x: 3(x − 2) = 9.",
+   "options": [
+    "11",
+    "3",
+    "5",
+    "−1"
+   ],
+   "answer": 2,
+   "explanation": "Distribute or divide: 3(x − 2) = 9 → x − 2 = 3 → x = 5. −1 would come from 3x − 2 = 9 (misplacing parentheses), 3 comes from forgetting to add 2 after dividing, and 11 is an arithmetic error."
+  },
+  {
+   "n": 30,
+   "topic": "Linear equations in one variable",
+   "q": "A phone plan charges a monthly base fee of $25 plus $0.15 per minute of talk time. If a customer's bill for a month is $70, how many minutes did they use that month?",
+   "options": [
+    "300 minutes",
+    "100 minutes",
+    "450 minutes",
+    "250 minutes"
+   ],
+   "answer": 0,
+   "explanation": "Set up 25 + 0.15x = 70. Subtract 25 to get 0.15x = 45, so x = 45 ÷ 0.15 = 300 minutes. 250 and 450 reflect common calculation or division errors; 100 comes from treating the per-minute charge as $0.45 instead of $0.15."
+  },
+  {
+   "n": 31,
+   "topic": "Inference from samples and margin of error",
+   "q": "A survey of 100 students finds 56% prefer online tutoring to in-person tutoring. The reported margin of error is ±4 percentage points. Which interval gives the range of plausible population proportions based on this sample and margin of error?",
+   "options": [
+    "48% to 64%",
+    "56% to 60%",
+    "52% to 60%",
+    "50% to 62%"
+   ],
+   "answer": 2,
+   "explanation": "Margin of error ±4 percentage points around the sample percentage 56% gives 56% − 4% = 52% up to 56% + 4% = 60%. 50% to 62% and 48% to 64% are too wide; 56% to 60% is missing the lower side."
+  },
+  {
+   "n": 32,
+   "topic": "Inference from samples and margin of error",
+   "q": "A small study measured time spent on a task; the sample mean is 42 minutes. The population standard deviation is known to be 6 minutes and the sample size is 36. Using a 95% confidence level with z = 1.96, what is the 95% confidence interval for the population mean (rounded to two decimal places)?",
+   "options": [
+    "39.08 to 44.92 minutes",
+    "36.00 to 48.00 minutes",
+    "40.04 to 43.96 minutes",
+    "41.04 to 42.96 minutes"
+   ],
+   "answer": 2,
+   "explanation": "Margin of error = z·σ/√n = 1.96 × 6 / √36 = 1.96 × 1 = 1.96. So the interval is 42 ± 1.96 → (42 − 1.96, 42 + 1.96) = (40.04, 43.96). The other intervals come from using incorrect z-values or incorrect calculations of the standard error."
+  },
+  {
+   "n": 33,
+   "topic": "Equivalent expressions",
+   "q": "The expression (x² − 9)/(x − 3) simplifies to which of the following for x ≠ 3?",
+   "options": [
+    "x + 3",
+    "1",
+    "x² + 3x + 9",
+    "x − 3"
+   ],
+   "answer": 0,
+   "explanation": "Factor the numerator as (x − 3)(x + 3) and cancel the (x − 3) factor (x ≠ 3), leaving x + 3. The other choices are common factoring or cancellation errors."
+  },
+  {
+   "n": 34,
+   "topic": "Linear functions",
+   "q": "A line in the xy-plane passes through (2, 5) and has y-intercept 1. What is the slope of the line?",
+   "options": [
+    "4",
+    "−2",
+    "2",
+    "1/2"
+   ],
+   "answer": 2,
+   "explanation": "Slope = (change in y)/(change in x) = (5 − 1)/(2 − 0) = 4/2 = 2. Negative or fractional values are typical mistakes from sign or denominator errors."
+  },
+  {
+   "n": 35,
+   "topic": "Circles",
+   "q": "A circle has center at (−2, 3) and passes through the point (1, 7). What is the equation of the circle in the form (x − h)² + (y − k)² = r² ?",
+   "options": [
+    "(x + 2)² + (y − 3)² = 25",
+    "(x − 2)² + (y + 3)² = 25",
+    "(x + 2)² + (y − 3)² = 20",
+    "(x + 2)² + (y − 3)² = 16"
+   ],
+   "answer": 0,
+   "explanation": "Radius² = distance² between (−2,3) and (1,7): (1 − (−2))² + (7 − 3)² = 3² + 4² = 9 + 16 = 25. Center (h,k) = (−2,3) gives (x + 2)² + (y − 3)² = 25. The other choices have wrong radii or incorrect sign placement."
+  },
+  {
+   "n": 36,
+   "topic": "Systems of two linear equations",
+   "q": "A farmer sells chickens and rabbits. Together there are 20 animals and 56 legs. Let c be chickens and r be rabbits (chickens 2 legs, rabbits 4 legs). Which ordered pair (c, r) solves the system?",
+   "options": [
+    "(8, 12)",
+    "(12, 8)",
+    "(14, 6)",
+    "(10, 10)"
+   ],
+   "answer": 1,
+   "explanation": "Equations: c + r = 20 and 2c + 4r = 56. From first, c = 20 − r. Substitute: 2(20 − r) + 4r = 56 → 40 + 2r = 56 → 2r = 16 → r = 8, so c = 12. Other choices swap counts or mis-solve the totals."
+  },
+  {
+   "n": 37,
+   "topic": "One-variable data: center and spread",
+   "q": "A teacher records five quiz scores: 72, 75, 78, 80, and 98. Which measure of center is least affected by the unusually high score of 98?",
+   "options": [
+    "Median",
+    "Mean",
+    "Mode",
+    "Range"
+   ],
+   "answer": 0,
+   "explanation": "The median (the middle value when data are ordered) is 78 and is not affected by how large the highest score is beyond its position. The mean would increase noticeably because it uses all values; the mode is not relevant here (there is no repeated score), and the range is affected by the outlier because it equals 98 − 72 = 26."
+  },
+  {
+   "n": 38,
+   "topic": "Nonlinear equations and systems",
+   "q": "Solve the system of equations: y = x² − 4 and y = 2x − 1. What are the x-values of the solutions?",
+   "options": [
+    "x = 1 and x = −3",
+    "x = 3 and x = −1",
+    "x = 4 and x = −1",
+    "x = 2 and x = −2"
+   ],
+   "answer": 1,
+   "explanation": "Set x² − 4 = 2x − 1, which gives x² − 2x − 3 = 0. Factoring yields (x − 3)(x + 1) = 0, so x = 3 or x = −1. Plugging back gives y = 5 and y = −3 respectively. The other options come from incorrect factoring or arithmetic errors."
+  },
+  {
+   "n": 39,
+   "topic": "Ratios, rates, proportions and units",
+   "q": "A laboratory has a 12% saline stock solution. To prepare 10 liters of a 4% saline solution, the technician will mix some of the stock solution with pure water (0% saline). How many liters of the 12% stock solution should be used?",
+   "options": [
+    "2.5 liters",
+    "6 liters",
+    "3.75 liters",
+    "3 1/3 liters"
+   ],
+   "answer": 3,
+   "explanation": "Let x be liters of 12% solution. Then 0.12x = 0.04×10 (since final solution has 4% of 10 L). So 0.12x = 0.4, hence x = 0.4/0.12 = 40/12 = 10/3 = 3 1/3 liters. The other answers come from common errors (for example, 3.75 is 0.4/0.1067 from a misdivision, 2.5 and 6 come from incorrect set-ups)."
+  },
+  {
+   "n": 40,
+   "topic": "Probability and conditional probability",
+   "q": "A jar contains 10 marbles: 5 red, 3 blue, and 2 green. Two marbles are drawn at random without replacement. Given that the first marble drawn is red, what is the probability that the second marble drawn is blue?",
+   "options": [
+    "1/3",
+    "1/5",
+    "1/2",
+    "3/10"
+   ],
+   "answer": 0,
+   "explanation": "If the first marble is red, one red is removed and 9 marbles remain, of which 3 are blue, so the probability the second is blue is 3/9 = 1/3. A common error is to use the original total (3/10) or to confuse conditional probability with the probability both draws are blue (which would be smaller)."
+  },
+  {
+   "n": 41,
+   "topic": "One-variable data: center and spread",
+   "q": "A teacher recorded five quiz scores: 68, 72, 75, 88, and 97. Which measure of center is least affected by a single unusually high score, and what is its value for these five scores?",
+   "options": [
+    "Range, 29",
+    "Median, 75",
+    "Mode, 75",
+    "Mean, 80"
+   ],
+   "answer": 1,
+   "explanation": "The median is least affected by an outlier; for the ordered list 68, 72, 75, 88, 97 the middle value is 75. The mean (which is affected by the high 97) equals (68+72+75+88+97)/5 = 400/5 = 80, the mode doesn't exist (no repeated score), and the range is 97−68 = 29."
+  },
+  {
+   "n": 42,
+   "topic": "Nonlinear equations and systems",
+   "q": "Solve the system of equations: y = x^2 − 5 and x + y = 1. What are the x-values of the solutions?",
+   "options": [
+    "1 and −6",
+    "Only x = 2",
+    "-3 and 2",
+    "-2 and 3"
+   ],
+   "answer": 2,
+   "explanation": "Substitute y = 1 − x into y = x^2 − 5 to get 1 − x = x^2 − 5, so x^2 + x − 6 = 0. Factor to (x + 3)(x − 2) = 0, so x = −3 or x = 2. The other choices come from sign or arithmetic mistakes in forming or factoring the quadratic."
+  },
+  {
+   "n": 43,
+   "topic": "Two-variable data: models and scatterplots",
+   "q": "A scatterplot of x and y has correlation r = 0.80. The mean of x is 10 with standard deviation 2; the mean of y is 40 with standard deviation 5. Using the least-squares regression line y − mean(y) = slope × (x − mean(x)), what is the predicted value of y when x = 12?",
+   "options": [
+    "42",
+    "40",
+    "46",
+    "44"
+   ],
+   "answer": 3,
+   "explanation": "Slope = r × (SD_y / SD_x) = 0.80 × (5/2) = 2. So y − 40 = 2(x − 10). For x = 12, y − 40 = 2×2 = 4, so predicted y = 44. The other values come from using incorrect slopes or forgetting to add the mean of y."
+  },
+  {
+   "n": 44,
+   "topic": "Ratios, rates, proportions and units",
+   "q": "A delivery driver travels 30 miles at 40 mph and then 45 miles at 60 mph. What is the driver’s average speed for the entire trip, in miles per hour?",
+   "options": [
+    "48",
+    "52",
+    "56",
+    "50"
+   ],
+   "answer": 3,
+   "explanation": "Total distance is 30 + 45 = 75 miles. Time for the first part is 30/40 = 0.75 hour and for the second part is 45/60 = 0.75 hour, so total time = 1.5 hours. Average speed = total distance ÷ total time = 75 ÷ 1.5 = 50 mph, so \"50\" is correct. \"52\" (the value (40·30 + 60·45)/75) incorrectly weights speeds by distance in a way that doesn't produce the overall average speed; \"48\" and \"56\" come from other arithmetic mistakes in combining times and distances and are not equal to 75 divided by the correct total time."
+  }
+ ]
+}

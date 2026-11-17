@@ -1,0 +1,401 @@
+{
+ "id": "alevel-maths-p2",
+ "exam": "alevel",
+ "subject": "maths",
+ "year": null,
+ "number": 2,
+ "source": "ai",
+ "minutes": 40,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Trigonometry",
+   "q": "Solve tan(2x) = 1 for 0° ≤ x < 180°.",
+   "options": [
+    "22.5° and 112.5°",
+    "45° and 225°",
+    "22.5° and 202.5°",
+    "22.5° only"
+   ],
+   "answer": 0,
+   "explanation": "Write 2x = 45° + 180°k, so x = 22.5° + 90°k. The values in the required interval are 22.5° and 112.5°; adding 180° to x instead of 90° would give the invalid value 202.5°."
+  },
+  {
+   "n": 2,
+   "topic": "Kinematics",
+   "q": "Ayesha throws a ball vertically upwards from ground level with an initial speed of 14 m/s. The ball is modelled as a particle moving under gravity only. Taking g = 9.8 m/s², what is the greatest height reached by the ball?",
+   "options": [
+    "9.8 m",
+    "10/7 m",
+    "20 m",
+    "10 m"
+   ],
+   "answer": 3,
+   "explanation": "At the greatest height the velocity is zero, so using v² = u² − 2gs gives 0 = 14² − 2 × 9.8 × s, hence s = 196 ÷ 19.6 = 10 m. Omitting the factor 2 in 2gs gives 20 m. The value 10/7 m is the time taken to reach the top, not the height."
+  },
+  {
+   "n": 3,
+   "topic": "Proof",
+   "q": "The statement 'For all integers n, n² + n + 17 is prime' is false. Which value of n is a counterexample?",
+   "options": [
+    "16",
+    "4",
+    "1",
+    "0"
+   ],
+   "answer": 0,
+   "explanation": "Substituting n = 16 gives 16² + 16 + 17 = 256 + 16 + 17 = 289 = 17², so the value is not prime. The other listed values give 17, 19 and 37, all of which are prime."
+  },
+  {
+   "n": 4,
+   "topic": "Trigonometry",
+   "q": "For sin 2θ ≠ 0, which expression is identical to (1 − cos 2θ) ÷ sin 2θ?",
+   "options": [
+    "tan 2θ",
+    "tan θ",
+    "cot θ",
+    "sin θ"
+   ],
+   "answer": 1,
+   "explanation": "Using cos 2θ = 1 − 2sin²θ and sin 2θ = 2sinθ cosθ gives (1 − cos 2θ) ÷ sin 2θ = (2sin²θ) ÷ (2sinθ cosθ) = sinθ ÷ cosθ = tan θ. The condition sin 2θ ≠ 0 ensures the denominator is not zero and tan θ is defined."
+  },
+  {
+   "n": 5,
+   "topic": "Kinematics",
+   "q": "A particle moves in a straight line. Its acceleration is a = (6 − 2t) m/s² for 0 ≤ t ≤ 4. When t = 0 its velocity is 4 m/s. What is its velocity when t = 3?",
+   "options": [
+    "9 m/s",
+    "4 m/s",
+    "31 m/s",
+    "13 m/s"
+   ],
+   "answer": 3,
+   "explanation": "Integrating acceleration gives v = 4 + ∫₀³ (6 − 2t) dt = 4 + [6t − t²]₀³ = 4 + 9 = 13 m/s. The value 9 m/s omits the initial velocity, and 4 m/s incorrectly assumes that zero acceleration at t = 3 means the velocity has not changed."
+  },
+  {
+   "n": 6,
+   "topic": "Proof",
+   "q": "Let a be a rational number and b an irrational number. Which argument correctly proves by contradiction that a + b is irrational?",
+   "options": [
+    "Assume a + b is rational. Then (a + b) − a is rational, because the difference of two rational numbers is rational. But (a + b) − a = b, so b is rational, contradicting the assumption that b is irrational. Therefore a + b is irrational.",
+    "Assume b is rational. Then a + b is rational because it is the sum of two rational numbers, which contradicts b being irrational. Therefore a + b is irrational.",
+    "Assume a + b is rational. Then b = (a + b) + a, which is rational because the sum of two rational numbers is rational. This contradicts b being irrational.",
+    "Assume a + b is irrational. Then subtracting the rational number a gives b, which is irrational. This agrees with the given information, so a + b must be irrational."
+   ],
+   "answer": 0,
+   "explanation": "If a + b were rational, subtracting the rational number a would make b rational, contradicting the fact that b is irrational. The step writing b = (a + b) + a is a sign error; the correct rearrangement is b = (a + b) − a. The other arguments assume the wrong statement or use the conclusion as part of the reasoning."
+  },
+  {
+   "n": 7,
+   "topic": "Coordinate geometry",
+   "q": "The tangent to the circle x² + y² = 25 at the point (3, −4) has equation",
+   "options": [
+    "3x − 4y = −25",
+    "4x − 3y = 25",
+    "3x − 4y = 25",
+    "3x + 4y = 25"
+   ],
+   "answer": 2,
+   "explanation": "The radius from (0, 0) to (3, −4) has gradient −4/3, so the tangent has gradient 3/4. Using y + 4 = (3/4)(x − 3) and rearranging gives 3x − 4y = 25."
+  },
+  {
+   "n": 8,
+   "topic": "Trigonometry",
+   "q": "The greatest possible value of 5 sin x + 12 cos x is",
+   "options": [
+    "17",
+    "7",
+    "13",
+    "12"
+   ],
+   "answer": 2,
+   "explanation": "Write 5 sin x + 12 cos x = R sin(x + α), where R = √(5² + 12²) = 13. The greatest value is therefore 13; adding the coefficients to get 17 ignores that sine and cosine do not reach their maximum values for the same x."
+  },
+  {
+   "n": 9,
+   "topic": "Kinematics",
+   "q": "A car is travelling along a straight road in Leeds at 20 m/s. The driver applies the brakes and the car slows uniformly to rest in 5 s. How far does the car travel while braking?",
+   "options": [
+    "25 m",
+    "50 m",
+    "100 m",
+    "40 m"
+   ],
+   "answer": 1,
+   "explanation": "The average speed while slowing uniformly from 20 m/s to rest is (20 + 0) ÷ 2 = 10 m/s, so the distance is 10 × 5 = 50 m. Using 20 × 5 = 100 m incorrectly treats the speed as constant at 20 m/s throughout the braking."
+  },
+  {
+   "n": 10,
+   "topic": "Exponentials and logarithms",
+   "q": "Solve 2^(x+1) = 5, giving x to 3 significant figures.",
+   "options": [
+    "1.32",
+    "3.32",
+    "2.32",
+    "0.322"
+   ],
+   "answer": 0,
+   "explanation": "Taking logarithms gives (x + 1)ln 2 = ln 5, so x = ln 5/ln 2 − 1 = 1.3219... = 1.32 to 3 significant figures. Forgetting to subtract 1 gives 2.32, and adding 1 instead of subtracting gives 3.32."
+  },
+  {
+   "n": 11,
+   "topic": "Exponentials and logarithms",
+   "q": "Simplify (log₃ 8)(log₂ 9).",
+   "options": [
+    "6",
+    "log₆ 17",
+    "12",
+    "log₃ 72"
+   ],
+   "answer": 0,
+   "explanation": "Using change of base, (log₃ 8)(log₂ 9) = (ln 8 ÷ ln 3)(ln 9 ÷ ln 2) = (3 ln 2 ÷ ln 3)(2 ln 3 ÷ ln 2) = 6. Combining the arguments as log₃ 72 is invalid because the two logarithms have different bases."
+  },
+  {
+   "n": 12,
+   "topic": "Exponentials and logarithms",
+   "q": "Given log_a 2 = p and log_a 5 = q, express log_a 50 in terms of p and q.",
+   "options": [
+    "p + 2q",
+    "2p + q",
+    "p + q²",
+    "2(p + q)"
+   ],
+   "answer": 0,
+   "explanation": "Since 50 = 2 × 5², log_a 50 = log_a 2 + 2 log_a 5 = p + 2q. The expression 2p + q would give log_a 20, not log_a 50."
+  },
+  {
+   "n": 13,
+   "topic": "Forces and Newton’s laws",
+   "q": "A lift of total mass 800 kg accelerates upwards at 1.5 m/s². Taking g = 9.8 m/s², what is the tension in the lift cable? Ignore air resistance and friction.",
+   "options": [
+    "7840 N",
+    "1200 N",
+    "6640 N",
+    "9040 N"
+   ],
+   "answer": 3,
+   "explanation": "Taking upwards as positive, T − 800 × 9.8 = 800 × 1.5. Hence T = 7840 + 1200 = 9040 N. Using mg − ma instead of mg + ma would give 6640 N."
+  },
+  {
+   "n": 14,
+   "topic": "Forces and Newton’s laws",
+   "q": "Kirsty applies a horizontal force of 18 N to a 4 kg block on a rough horizontal floor. The block remains at rest. What is the magnitude and direction of the friction force acting on the block?",
+   "options": [
+    "0 N because the block is at rest",
+    "39.2 N opposite to the applied force",
+    "18 N opposite to the applied force",
+    "18 N in the same direction as the applied force"
+   ],
+   "answer": 2,
+   "explanation": "Since the block is at rest, the horizontal forces must balance, so friction is 18 N opposite to the applied force. The weight is 4 × 9.8 = 39.2 N, but the friction force is not equal to the weight."
+  },
+  {
+   "n": 15,
+   "topic": "Forces and Newton’s laws",
+   "q": "Two particles of masses 3 kg and 5 kg are connected by a light inextensible string passing over a smooth fixed pulley. The 5 kg particle is released from rest. Taking g = 9.8 m/s², what is the acceleration of the 5 kg particle?",
+   "options": [
+    "2.45 m/s² downwards",
+    "1.96 m/s² downwards",
+    "3.27 m/s² upwards",
+    "4.9 m/s² downwards"
+   ],
+   "answer": 0,
+   "explanation": "For the 5 kg particle, 5g − T = 5a, and for the 3 kg particle, T − 3g = 3a. Adding gives 2g = 8a, so a = g/4 = 2.45 m/s²; the 5 kg particle accelerates downwards."
+  },
+  {
+   "n": 16,
+   "topic": "Statistical sampling and data presentation",
+   "q": "At a health centre in Leeds, a researcher numbers a list of 1200 registered patients. They choose a random starting number between 1 and 20 and then select every 20th patient on the list. Which type of sample is being taken?",
+   "options": [
+    "A stratified sample",
+    "A simple random sample",
+    "A systematic sample",
+    "A quota sample"
+   ],
+   "answer": 2,
+   "explanation": "Choosing a random start and then taking every 20th patient is a systematic sample. A simple random sample would choose 60 patients independently at random with no fixed interval, while a stratified sample would first divide the population into strata."
+  },
+  {
+   "n": 17,
+   "topic": "Statistical sampling and data presentation",
+   "q": "A histogram shows the masses, m grams, of apples from an orchard in Kent. The class 120 < m ≤ 150 has frequency density 0.8. What is the frequency of this class?",
+   "options": [
+    "24",
+    "30.8",
+    "0.027 (to 3 d.p.)",
+    "37.5"
+   ],
+   "answer": 0,
+   "explanation": "In a histogram, frequency is represented by area, so frequency = frequency density × class width. The class width is 150 − 120 = 30, so the frequency is 0.8 × 30 = 24. Dividing by the width instead of multiplying would incorrectly give 0.027 to 3 d.p."
+  },
+  {
+   "n": 18,
+   "topic": "Numerical methods",
+   "q": "Hassan uses the Newton–Raphson method to estimate a root of x³ − x − 1 = 0. Taking x₀ = 1, what is x₁?",
+   "options": [
+    "1.25",
+    "1.5",
+    "2.0",
+    "0.5"
+   ],
+   "answer": 1,
+   "explanation": "Here f(1) = 1³ − 1 − 1 = −1 and f′(x) = 3x² − 1, so f′(1) = 2. Newton–Raphson gives x₁ = 1 − (−1)/2 = 1.5. Subtracting the derivative instead of dividing by it would not give this value."
+  },
+  {
+   "n": 19,
+   "topic": "Numerical methods",
+   "q": "Zainab uses the bisection method on f(x) = x³ + x − 4. She knows a root lies between x = 1 and x = 2. She calculates f(1.5) = 0.875. Which interval is the next interval used in the bisection method?",
+   "options": [
+    "1.5 < x < 2",
+    "1 < x < 1.5",
+    "1 < x < 2",
+    "1.25 < x < 1.5"
+   ],
+   "answer": 1,
+   "explanation": "Now f(1) = 1³ + 1 − 4 = −2, which is negative, while f(1.5) = 0.875 is positive. The sign change lies between x = 1 and x = 1.5, so the bisection method keeps the interval 1 < x < 1.5."
+  },
+  {
+   "n": 20,
+   "topic": "Vectors",
+   "q": "The vectors p = 2i + λj − k and q = i − j + 3k are perpendicular. Find the value of λ.",
+   "options": [
+    "−5",
+    "5",
+    "1",
+    "−1"
+   ],
+   "answer": 3,
+   "explanation": "The dot product is (2)(1) + (λ)(−1) + (−1)(3) = −1 − λ. For perpendicular vectors this equals zero, so λ = −1."
+  },
+  {
+   "n": 21,
+   "topic": "Vectors",
+   "q": "The line L has equation r = (2i + j − k) + t(i − j + 2k). The point P on L is such that OP is perpendicular to the direction vector of L. Find the position vector of P.",
+   "options": [
+    "(13/6)i + (5/6)j − (2/3)k",
+    "3i + k",
+    "(11/6)i + (7/6)j − (4/3)k",
+    "(5/2)i + (1/2)j"
+   ],
+   "answer": 0,
+   "explanation": "Let r = (2 + t)i + (1 − t)j + (−1 + 2t)k. The condition r · (i − j + 2k) = 0 gives −1 + 6t = 0, so t = 1/6. Substituting t = 1/6 gives (13/6)i + (5/6)j − (2/3)k."
+  },
+  {
+   "n": 22,
+   "topic": "Vectors",
+   "q": "Given a = 3i − 2j + k and b = i + 4j − 2k, find |2a − b|.",
+   "options": [
+    "√125",
+    "√105",
+    "√65",
+    "√89"
+   ],
+   "answer": 1,
+   "explanation": "2a − b = 2(3i − 2j + k) − (i + 4j − 2k) = 5i − 8j + 4k. Its magnitude is √(5² + (−8)² + 4²) = √105."
+  },
+  {
+   "n": 23,
+   "topic": "Moments",
+   "q": "A uniform plank AB is 5 m long and weighs 300 N. It rests horizontally on two supports at A and at C, where AC = 3 m. A box of weight 120 N is placed on the plank at a point 2 m from A. Find the vertical reaction at A.",
+   "options": [
+    "50 N",
+    "120 N",
+    "90 N",
+    "270 N"
+   ],
+   "answer": 2,
+   "explanation": "Taking moments about C, the clockwise moment of the reaction at A balances the anticlockwise moments of the two weights: R_A × 3 = 300 × 0.5 + 120 × 1. Hence R_A = 270 ÷ 3 = 90 N."
+  },
+  {
+   "n": 24,
+   "topic": "Moments",
+   "q": "A force of 50 N acts at the end of a spanner of length 0.40 m. The direction of the force makes 30° with the handle. Taking the pivot at the nut, what is the magnitude of the moment about the nut?",
+   "options": [
+    "10√3 N m",
+    "25 N m",
+    "10 N m",
+    "20 N m"
+   ],
+   "answer": 2,
+   "explanation": "The perpendicular component of the force is 50 sin 30° = 25 N, so the moment is 25 × 0.40 = 10 N m. Using the full 50 N gives 20 N m, which ignores the angle."
+  },
+  {
+   "n": 25,
+   "topic": "Integration",
+   "q": "Evaluate ∫₀^(π/2) sin x cos²x dx.",
+   "options": [
+    "2/3",
+    "1",
+    "−1/3",
+    "1/3"
+   ],
+   "answer": 3,
+   "explanation": "Let u = cos x, so du = −sin x dx. The limits change from x = 0, π/2 to u = 1, 0, giving ∫₀^(π/2) sin x cos²x dx = ∫₀¹ u² du = 1/3."
+  },
+  {
+   "n": 26,
+   "topic": "Integration",
+   "q": "Evaluate ∫₀^(π/4) x cos 2x dx.",
+   "options": [
+    "1/4 − π/8",
+    "π/8 − 1/4",
+    "π/4 − 1/2",
+    "π/8 + 1/4"
+   ],
+   "answer": 1,
+   "explanation": "Integrating by parts with u = x and dv = cos 2x dx gives (x/2)sin 2x + (1/4)cos 2x. Evaluating from 0 to π/4 gives π/8 − 1/4."
+  },
+  {
+   "n": 27,
+   "topic": "Integration",
+   "q": "Evaluate ∫₀¹ (3x + 5)/((x + 1)(x + 2)) dx.",
+   "options": [
+    "ln(3/2)",
+    "ln 12",
+    "ln 6",
+    "ln(9/2)"
+   ],
+   "answer": 2,
+   "explanation": "The partial fractions are 2/(x + 1) + 1/(x + 2). Integrating gives [2ln(x + 1) + ln(x + 2)] from 0 to 1, which is (2ln 2 + ln 3) − ln 2 = ln 6."
+  },
+  {
+   "n": 28,
+   "topic": "Probability and statistical distributions",
+   "q": "At a college in Leeds, 60% of students are female. Among female students, 50% study mathematics; among male students, 20% study mathematics. A student who studies mathematics is selected at random. What is the probability that the student is female?",
+   "options": [
+    "15/19",
+    "3/5",
+    "1/2",
+    "4/19"
+   ],
+   "answer": 0,
+   "explanation": "P(female and mathematics) = 0.60 × 0.50 = 0.30 and P(male and mathematics) = 0.40 × 0.20 = 0.08. So P(female | mathematics) = 0.30/(0.30 + 0.08) = 15/19."
+  },
+  {
+   "n": 29,
+   "topic": "Probability and statistical distributions",
+   "q": "The masses of apples from an orchard in Kent are normally distributed with mean 150 g and standard deviation 10 g. What is the probability that a randomly chosen apple has mass between 145 g and 160 g? Give your answer to 4 decimal places.",
+   "options": [
+    "0.8413",
+    "0.5328",
+    "0.1498",
+    "0.6826"
+   ],
+   "answer": 1,
+   "explanation": "Standardising gives z = (145 − 150)/10 = −0.5 and z = (160 − 150)/10 = 1. Hence the probability is Φ(1) − Φ(−0.5) = 0.8413 − 0.3085 = 0.5328."
+  },
+  {
+   "n": 30,
+   "topic": "Sequences and series",
+   "q": "An arithmetic series has first term 7 and common difference −3. What is the sum of the first 20 terms?",
+   "options": [
+    "430",
+    "−430",
+    "−420",
+    "−440"
+   ],
+   "answer": 1,
+   "explanation": "Using Sₙ = n/2[2a + (n − 1)d] with a = 7, d = −3 and n = 20 gives S₂₀ = 10(14 − 57) = −430. The twentieth term is 7 + 19 × (−3) = −50, and 20/2 × (7 − 50) also gives −430."
+  }
+ ]
+}

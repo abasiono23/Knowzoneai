@@ -1,0 +1,401 @@
+{
+ "id": "nsc-mathematics-p2",
+ "exam": "nsc",
+ "subject": "mathematics",
+ "year": null,
+ "number": 2,
+ "source": "ai",
+ "minutes": 35,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Analytical geometry",
+   "q": "The equation x² + y² + 10x − 4y + 13 = 0 represents a circle. What are its centre and radius?",
+   "options": [
+    "Centre (−5, 2) and radius √13",
+    "Centre (5, −2) and radius 4",
+    "Centre (−5, 2) and radius 4",
+    "Centre (−5, 2) and radius 16"
+   ],
+   "answer": 2,
+   "explanation": "Complete the square: x² + 10x + 25 + y² − 4y + 4 = 16, so (x + 5)² + (y − 2)² = 16. Thus the centre is (−5, 2) and the radius is √16 = 4. The option with radius 16 mistakes the radius squared for the radius."
+  },
+  {
+   "n": 2,
+   "topic": "Analytical geometry",
+   "q": "Determine the equation of the straight line that is perpendicular to 2x − 3y + 6 = 0 and passes through the point (4, −1).",
+   "options": [
+    "2x − 3y − 11 = 0",
+    "3x + 2y + 10 = 0",
+    "2x + 3y − 5 = 0",
+    "3x + 2y − 10 = 0"
+   ],
+   "answer": 3,
+   "explanation": "The given line has gradient 2/3, so a perpendicular line has gradient −3/2. Using y + 1 = −3/2(x − 4) gives 2y + 2 = −3x + 12, hence 3x + 2y − 10 = 0. The equation 2x − 3y − 11 = 0 is parallel to the given line, not perpendicular."
+  },
+  {
+   "n": 3,
+   "topic": "Analytical geometry",
+   "q": "A circle has a diameter with endpoints D(−3, 2) and E(5, 8). Which equation represents this circle?",
+   "options": [
+    "(x − 1)² + (y − 5)² = 100",
+    "(x − 1)² + (y − 5)² = 5",
+    "(x − 1)² + (y − 5)² = 25",
+    "(x + 1)² + (y + 5)² = 25"
+   ],
+   "answer": 2,
+   "explanation": "The centre is the midpoint of DE: ((−3 + 5)/2, (2 + 8)/2) = (1, 5). The diameter length is √((8)² + (6)²) = 10, so the radius is 5 and the equation is (x − 1)² + (y − 5)² = 25. Using 100 for the right-hand side treats the diameter as the radius."
+  },
+  {
+   "n": 4,
+   "topic": "Algebra, equations and inequalities",
+   "q": "Solve for x: 2^(2x) − 5·2^x + 4 = 0.",
+   "options": [
+    "x = 1 or x = 4",
+    "x = 2 only",
+    "x = 0 only",
+    "x = 0 or x = 2"
+   ],
+   "answer": 3,
+   "explanation": "Let t = 2^x. Then t² − 5t + 4 = 0, so (t − 1)(t − 4) = 0 and t = 1 or t = 4. Therefore 2^x = 1 gives x = 0, and 2^x = 4 gives x = 2."
+  },
+  {
+   "n": 5,
+   "topic": "Algebra, equations and inequalities",
+   "q": "Solve for x: √(2x + 7) = x + 2.",
+   "options": [
+    "no real solution",
+    "x = 1",
+    "x = −3 or x = 1",
+    "x = −3"
+   ],
+   "answer": 1,
+   "explanation": "Squaring both sides gives 2x + 7 = x² + 4x + 4, so x² + 2x − 3 = 0 and (x + 3)(x − 1) = 0. Checking in the original equation, x = −3 gives left-hand side 1 and right-hand side −1, so it is extraneous; only x = 1 works."
+  },
+  {
+   "n": 6,
+   "topic": "Algebra, equations and inequalities",
+   "q": "Solve for x: (x + 3)/(x − 1) ≥ 0.",
+   "options": [
+    "−3 < x < 1",
+    "x ≤ −3 or x > 1",
+    "x ≤ −3 or x ≥ 1",
+    "−3 ≤ x ≤ 1"
+   ],
+   "answer": 1,
+   "explanation": "The critical values are x = −3, where the numerator is zero, and x = 1, where the expression is undefined. Testing the intervals gives positive values for x < −3 and x > 1; at x = −3 the expression equals 0, but x = 1 must be excluded."
+  },
+  {
+   "n": 7,
+   "topic": "Probability and the counting principle",
+   "q": "A committee of 3 learners is chosen at random from a group of 5 boys and 4 girls. What is the probability that the committee contains exactly 2 girls?",
+   "options": [
+    "10/21",
+    "1/21",
+    "5/14",
+    "5/42"
+   ],
+   "answer": 2,
+   "explanation": "There are C(9, 3) = 84 possible committees. The number with exactly 2 girls is C(4, 2) × C(5, 1) = 6 × 5 = 30, so the probability is 30/84 = 5/14. The value 10/21 would be the probability of exactly 2 boys instead."
+  },
+  {
+   "n": 8,
+   "topic": "Probability and the counting principle",
+   "q": "The probability that Ayanda's bus arrives on time is 0,8 and the probability that Bongani's bus arrives on time is 0,5. The two events are independent. What is the probability that exactly one of the two buses arrives on time?",
+   "options": [
+    "0,5",
+    "0,9",
+    "0,1",
+    "0,4"
+   ],
+   "answer": 0,
+   "explanation": "Exactly one arrives on time when Ayanda is on time and Bongani is late, or Ayanda is late and Bongani is on time. This probability is (0,8 × 0,5) + (0,2 × 0,5) = 0,4 + 0,1 = 0,5. The value 0,9 is the probability that at least one bus arrives on time."
+  },
+  {
+   "n": 9,
+   "topic": "Finance, growth and decay",
+   "q": "Lindiwe invests R15 000 at 9% per annum compounded monthly. What is the effective annual interest rate, correct to two decimal places?",
+   "options": [
+    "9,00% per annum",
+    "9,31% per annum",
+    "0,75% per annum",
+    "9,38% per annum"
+   ],
+   "answer": 3,
+   "explanation": "The effective annual rate is (1 + 0,09/12)^12 − 1 = (1,0075)^12 − 1 ≈ 0,0938. This is 9,38% per annum. The value 9,31% would come from compounding quarterly instead of monthly, and 0,75% is only the monthly rate."
+  },
+  {
+   "n": 10,
+   "topic": "Statistics",
+   "q": "The ages, in years, of eight learners at a homework club in Gqeberha are: 12, 15, 17, 20, 22, 22, 27, 33. Calculate the interquartile range.",
+   "options": [
+    "10.5 years",
+    "21 years",
+    "8.5 years",
+    "8 years"
+   ],
+   "answer": 2,
+   "explanation": "With eight ordered values, the lower half is 12, 15, 17, 20, so Q1 = (15 + 17) ÷ 2 = 16 years. The upper half is 22, 22, 27, 33, so Q3 = (22 + 27) ÷ 2 = 24.5 years. Therefore the interquartile range is Q3 − Q1 = 24.5 − 16 = 8.5 years; 21 years is the range, not the IQR."
+  },
+  {
+   "n": 11,
+   "topic": "Statistics",
+   "q": "A Grade 12 learner in Polokwane records the number of hours spent playing video games and the percentage achieved in a Mathematics test for 10 classmates. Her calculator gives a correlation coefficient of r = −0.87. Which statement best describes the relationship?",
+   "options": [
+    "There is a strong negative linear correlation between the number of hours playing video games and the test percentage.",
+    "There is a strong positive linear correlation between the two variables.",
+    "There is a weak negative linear correlation because −0.87 is less than 0.",
+    "About 87% of the variation in test percentage is explained by the number of hours playing video games."
+   ],
+   "answer": 0,
+   "explanation": "A correlation coefficient close to −1 shows a strong negative linear correlation, so higher video-game hours are associated with lower test percentages. The value r² = (−0.87)² = 0.7569, so about 75.7%, not 87%, of the variation is explained. A value of −0.87 is not weak and does not represent a positive correlation."
+  },
+  {
+   "n": 12,
+   "topic": "Statistics",
+   "q": "The waiting times of 20 patients at a clinic in Umlazi are summarised below. Waiting time t (minutes) | 0 ≤ t < 10 | 10 ≤ t < 20 | 20 ≤ t < 30 | 30 ≤ t < 40; Frequency | 4 | 7 | 6 | 3. Calculate the estimated mean waiting time.",
+   "options": [
+    "24 minutes",
+    "20 minutes",
+    "19 minutes",
+    "18 minutes"
+   ],
+   "answer": 2,
+   "explanation": "Use the class midpoints 5, 15, 25 and 35 minutes: 4×5 + 7×15 + 6×25 + 3×35 = 20 + 105 + 150 + 105 = 380. Divide by the total frequency 20 to get 380 ÷ 20 = 19 minutes. Using the upper class limits instead of midpoints gives 24 minutes, which is a common error."
+  },
+  {
+   "n": 13,
+   "topic": "Euclidean geometry",
+   "q": "A, B, C and D lie on a circle in that order. Chords AC and BD intersect at E inside the circle. If ∠BAC = 35° and ∠ABD = 42°, determine ∠AED.",
+   "options": [
+    "103°",
+    "7°",
+    "38.5°",
+    "77°"
+   ],
+   "answer": 3,
+   "explanation": "∠ABD = 42° subtends arc AD, so arc AD = 2 × 42° = 84°. ∠BAC = 35° subtends arc BC, so arc BC = 2 × 35° = 70°. For two chords intersecting inside a circle, ∠AED = ½(arc AD + arc BC) = ½(84° + 70°) = 77°."
+  },
+  {
+   "n": 14,
+   "topic": "Euclidean geometry",
+   "q": "In triangle PQR, S lies on PQ and T lies on PR such that ST ∥ QR. If PS : SQ = 3 : 2, determine the ratio of the area of triangle PST to the area of trapezium SQRT.",
+   "options": [
+    "9 : 16",
+    "3 : 2",
+    "9 : 25",
+    "3 : 5"
+   ],
+   "answer": 0,
+   "explanation": "Since ST ∥ QR, triangles PST and PQR are similar. Also PS : PQ = 3 : (3 + 2) = 3 : 5, so area ΔPST : area ΔPQR = 3² : 5² = 9 : 25. The trapezium has area 25 − 9 = 16 parts, so ΔPST : trapezium SQRT = 9 : 16."
+  },
+  {
+   "n": 15,
+   "topic": "Euclidean geometry",
+   "q": "TA is a tangent to a circle at A. Chord AB is drawn. C is a point on the circle such that C and T lie on opposite sides of chord AB. If ∠TAB = 58°, determine ∠ACB.",
+   "options": [
+    "58°",
+    "122°",
+    "116°",
+    "29°"
+   ],
+   "answer": 0,
+   "explanation": "By the tangent-chord theorem, the angle between tangent TA and chord AB equals the angle in the alternate segment. Since C lies on the opposite side of chord AB from T, ∠ACB is in that alternate segment, so ∠ACB = ∠TAB = 58°. The supplementary angle 122° lies in the other segment, not the alternate one."
+  },
+  {
+   "n": 16,
+   "topic": "Exponents and surds",
+   "q": "Simplify completely, where a and b are nonzero: [(3a²b³)³ ÷ (9a⁴b)] × a⁻²b⁻¹.",
+   "options": [
+    "3b⁷",
+    "3b⁸",
+    "27b⁷",
+    "3a⁴b⁸"
+   ],
+   "answer": 0,
+   "explanation": "First compute (3a²b³)³ = 27a⁶b⁹. Dividing by 9a⁴b gives 3a²b⁸, and multiplying by a⁻²b⁻¹ gives 3a⁰b⁷ = 3b⁷. Applying the exponents by adding instead of subtracting produces a different power."
+  },
+  {
+   "n": 17,
+   "topic": "Trigonometry",
+   "q": "Solve for θ in the interval 0° ≤ θ < 360°: 2 cos²θ − cos θ − 1 = 0.",
+   "options": [
+    "60°, 120°, 240°",
+    "120°, 240°",
+    "0°, 60°, 300°",
+    "0°, 120°, 240°"
+   ],
+   "answer": 3,
+   "explanation": "Factor the equation as (2cos θ + 1)(cos θ − 1) = 0. Thus cos θ = −½ or cos θ = 1. In 0° ≤ θ < 360°, these give θ = 120°, 240° and 0° respectively."
+  },
+  {
+   "n": 18,
+   "topic": "Trigonometry",
+   "q": "For all values of x for which the expression is defined, simplify: [cos(180° − x) × tan(180° + x)] ÷ sin(90° + x).",
+   "options": [
+    "tan x",
+    "−tan x",
+    "−cot x",
+    "cot x"
+   ],
+   "answer": 1,
+   "explanation": "Use reductions: cos(180° − x) = −cos x, tan(180° + x) = tan x, and sin(90° + x) = cos x. The expression becomes (−cos x × tan x) ÷ cos x = −tan x, where cos x ≠ 0. A sign error in cos(180° − x) gives tan x instead."
+  },
+  {
+   "n": 19,
+   "topic": "Functions and graphs",
+   "q": "The graph of g is obtained by reflecting the graph of y = √(x − 3) in the line y = x. Which formula and domain describe g?",
+   "options": [
+    "g(x) = x² + 3 for x ≥ 0",
+    "g(x) = x² − 3 for x ≥ 0",
+    "g(x) = (x − 3)² for x ≥ 0",
+    "g(x) = x² + 3 for x ≥ 3"
+   ],
+   "answer": 0,
+   "explanation": "Reflecting in y = x swaps x and y, so x = √(y − 3). Squaring gives y = x² + 3. The original range y ≥ 0 becomes the new domain x ≥ 0, not the original domain x ≥ 3."
+  },
+  {
+   "n": 20,
+   "topic": "Functions and graphs",
+   "q": "Consider g(x) = 2·3^(x + 1) − 4. What are the horizontal asymptote and the y-intercept of g?",
+   "options": [
+    "Horizontal asymptote y = −4; y-intercept (0, 2)",
+    "Horizontal asymptote y = −4; y-intercept (0, −2)",
+    "Horizontal asymptote y = 4; y-intercept (0, 2)",
+    "Horizontal asymptote y = −4; y-intercept (0, 6)"
+   ],
+   "answer": 0,
+   "explanation": "As x → −∞, 3^(x + 1) → 0, so g(x) → −4; hence the horizontal asymptote is y = −4. At x = 0, g(0) = 2·3¹ − 4 = 6 − 4 = 2, so the y-intercept is (0, 2)."
+  },
+  {
+   "n": 21,
+   "topic": "Functions and graphs",
+   "q": "Where x is measured in degrees, the function f(x) = −2 cos(3x) + 1 has:",
+   "options": [
+    "amplitude 2, period 60° and range [−1, 3]",
+    "amplitude 2, period 120° and range [1, 3]",
+    "amplitude −2, period 120° and range [−3, 1]",
+    "amplitude 2, period 120° and range [−1, 3]"
+   ],
+   "answer": 3,
+   "explanation": "The amplitude is |−2| = 2. The period is 360°/3 = 120°. Since cos(3x) ranges from −1 to 1, −2 cos(3x) ranges from −2 to 2, and adding 1 gives the range [−1, 3]."
+  },
+  {
+   "n": 22,
+   "topic": "Number patterns, sequences and series",
+   "q": "Thandi saves R450 in the first month and increases the amount she saves by R35 each month thereafter. How much does she save in the 18th month?",
+   "options": [
+    "R1 080",
+    "R1 035",
+    "R1 010",
+    "R1 045"
+   ],
+   "answer": 3,
+   "explanation": "This is an arithmetic sequence with first term 450 and common difference 35. The amount in month 18 is T₁₈ = 450 + (18 − 1)×35 = 450 + 595 = R1 045. Using 18 increases instead of 17 gives R1 080."
+  },
+  {
+   "n": 23,
+   "topic": "Number patterns, sequences and series",
+   "q": "Determine the sum of the first six terms of the geometric sequence 3; −6; 12; …",
+   "options": [
+    "63",
+    "−63",
+    "189",
+    "33"
+   ],
+   "answer": 1,
+   "explanation": "Here a = 3 and r = −2. The sum of six terms is S₆ = 3(1 − (−2)⁶)/(1 − (−2)) = 3(1 − 64)/3 = −63. Treating r as 2 would give 189, which ignores the alternating signs."
+  },
+  {
+   "n": 24,
+   "topic": "Number patterns, sequences and series",
+   "q": "For the geometric series 2 + 2(x − 1) + 2(x − 1)² + ⋯, for which values of x does the series converge, and what is its sum to infinity?",
+   "options": [
+    "−1 < x < 1, and the sum is 2/(2 − x)",
+    "0 < x < 2, and the sum is 2/(2 − x)",
+    "x < 2, and the sum is 2/(2 − x)",
+    "0 < x < 2, and the sum is 2/x"
+   ],
+   "answer": 1,
+   "explanation": "The common ratio is r = x − 1. Convergence requires |x − 1| < 1, which gives 0 < x < 2. The sum is 2/(1 − r) = 2/(1 − (x − 1)) = 2/(2 − x)."
+  },
+  {
+   "n": 25,
+   "topic": "Differential calculus",
+   "q": "If f(x) = (3x² − 2)⁴, determine f′(x).",
+   "options": [
+    "4(3x² − 2)³",
+    "24x(3x² − 2)⁴",
+    "6x(3x² − 2)³",
+    "24x(3x² − 2)³"
+   ],
+   "answer": 3,
+   "explanation": "Using the chain rule, f′(x) = 4(3x² − 2)³ × 6x. This simplifies to 24x(3x² − 2)³. Omitting the inner derivative 6x gives 4(3x² − 2)³."
+  },
+  {
+   "n": 26,
+   "topic": "Differential calculus",
+   "q": "The stationary points of f(x) = x³ − 6x² + 9x + 2 occur at x = 1 and x = 3. Which statement correctly classifies them?",
+   "options": [
+    "x = 1 gives a local minimum and x = 3 gives a local maximum",
+    "x = 1 gives a local maximum and x = 3 gives a local minimum",
+    "both x = 1 and x = 3 give local maxima",
+    "both x = 1 and x = 3 give local minima"
+   ],
+   "answer": 1,
+   "explanation": "Differentiating gives f′(x) = 3x² − 12x + 9 = 3(x − 1)(x − 3). The second derivative is f″(x) = 6x − 12, so f″(1) = −6 < 0 and f″(3) = 6 > 0. Hence x = 1 is a local maximum and x = 3 is a local minimum."
+  },
+  {
+   "n": 27,
+   "topic": "Analytical geometry",
+   "q": "The line y = 2x + k is a tangent to the circle x² + y² = 20. Determine the possible values of k.",
+   "options": [
+    "k = 10 or k = −10",
+    "k = 20 or k = −20",
+    "k = 5 or k = −5",
+    "k = √20 or k = −√20"
+   ],
+   "answer": 0,
+   "explanation": "The centre of x² + y² = 20 is the origin and the radius is √20 = 2√5. Rewriting the line as 2x − y + k = 0, its distance from the origin is |k|/√(2² + (−1)²) = |k|/√5. Tangency requires |k|/√5 = 2√5, so |k| = 10 and k = ±10."
+  },
+  {
+   "n": 28,
+   "topic": "Analytical geometry",
+   "q": "Determine the coordinates of the point on the line 2x − y + 3 = 0 that is closest to the origin.",
+   "options": [
+    "(−6/5, 3/5)",
+    "(−6/5, −3/5)",
+    "(6/5, −3/5)",
+    "(−3/5, 6/5)"
+   ],
+   "answer": 0,
+   "explanation": "The closest point is the foot of the perpendicular from the origin to the line. The line has gradient 2, so the perpendicular through the origin has gradient −1/2 and equation y = −x/2. Solving −x/2 = 2x + 3 gives x = −6/5, and then y = 3/5."
+  },
+  {
+   "n": 29,
+   "topic": "Algebra, equations and inequalities",
+   "q": "Solve for x: 3x² + 5x − 2 = 0.",
+   "options": [
+    "x = 1 or x = −2/3",
+    "x = 2 or x = −1/3",
+    "x = −2 or x = 1/3",
+    "x = 5/3 or x = −1"
+   ],
+   "answer": 2,
+   "explanation": "Factorising gives (3x − 1)(x + 2) = 0, so 3x − 1 = 0 or x + 2 = 0. Hence x = 1/3 or x = −2. Substituting x = 2 into the original equation gives 20, not 0, so x = 2 is not a root."
+  },
+  {
+   "n": 30,
+   "topic": "Probability and the counting principle",
+   "q": "Sipho designs a 4-digit PIN using the digits 0 to 9. No digit may be repeated and the first digit may not be 0. How many different PINs can he make?",
+   "options": [
+    "4 536",
+    "9 000",
+    "3 024",
+    "5 040"
+   ],
+   "answer": 0,
+   "explanation": "Choose the first digit in 9 ways, then arrange three of the remaining 9 digits in the next positions: 9 × 9 × 8 × 7 = 4 536. Equivalently, 10P4 − 9P3 = 5 040 − 504 = 4 536."
+  }
+ ]
+}

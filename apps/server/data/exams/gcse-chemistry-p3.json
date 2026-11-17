@@ -1,0 +1,401 @@
+{
+ "id": "gcse-chemistry-p3",
+ "exam": "gcse",
+ "subject": "chemistry",
+ "year": null,
+ "number": 3,
+ "source": "ai",
+ "minutes": 35,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Organic chemistry",
+   "q": "The repeating unit of an addition polymer is –CH₂–CH(CH₃)–. Which monomer produces this polymer?",
+   "options": [
+    "ethene",
+    "but-1-ene",
+    "propene",
+    "but-2-ene"
+   ],
+   "answer": 2,
+   "explanation": "The repeat unit has a two-carbon backbone with a –CH₃ side group, so the monomer must be propene, CH₂=CH–CH₃. Ethene would give a repeat unit with no side group, while but-1-ene and but-2-ene would each contain four carbon atoms in the repeat unit."
+  },
+  {
+   "n": 2,
+   "topic": "Organic chemistry",
+   "q": "Which statement about cracking a long-chain alkane is correct?",
+   "options": [
+    "It breaks larger alkane molecules into smaller, more useful molecules including an alkene.",
+    "It removes hydrogen from an alkane, producing only a shorter alkane.",
+    "It reacts an alkane with oxygen to produce carbon dioxide and water.",
+    "It joins small alkane molecules to make a long-chain alkane."
+   ],
+   "answer": 0,
+   "explanation": "Cracking is thermal decomposition that breaks long-chain alkanes into shorter, more useful molecules, including alkenes. Joining small molecules would be polymerisation or addition, and burning with oxygen is combustion."
+  },
+  {
+   "n": 3,
+   "topic": "Organic chemistry",
+   "q": "When ethanol is warmed with acidified potassium dichromate(VI), the mixture changes from orange to green. What is the organic product and what type of reaction has occurred?",
+   "options": [
+    "ethene, formed by dehydration",
+    "ethane, formed by reduction",
+    "ethanoic acid, formed by oxidation",
+    "carbon dioxide and water, formed by combustion"
+   ],
+   "answer": 2,
+   "explanation": "Acidified potassium dichromate(VI) is an oxidising agent, so warming ethanol with it oxidises ethanol to ethanoic acid. The orange dichromate(VI) ions are reduced to green chromium(III) ions; dehydration to ethene would need a different reagent such as concentrated sulfuric acid."
+  },
+  {
+   "n": 4,
+   "topic": "Atomic structure and the periodic table",
+   "q": "An atom of potassium (atomic number 19) forms a K⁺ ion. How are the electrons arranged in the K⁺ ion?",
+   "options": [
+    "2,8,8,1",
+    "2,8,8",
+    "2,8,6",
+    "2,8,8,2"
+   ],
+   "answer": 1,
+   "explanation": "A neutral potassium atom has 19 electrons, arranged 2,8,8,1, and a K⁺ ion has lost its single outer-shell electron. Therefore the K⁺ ion has 18 electrons, arranged 2,8,8."
+  },
+  {
+   "n": 5,
+   "topic": "Atomic structure and the periodic table",
+   "q": "An element is in Group 6 and Period 3 of the periodic table. Which electron configuration does an atom of this element have?",
+   "options": [
+    "2,6,8",
+    "2,8,7",
+    "2,8,4",
+    "2,8,6"
+   ],
+   "answer": 3,
+   "explanation": "Period 3 means the atom has electrons in three occupied shells, and Group 6 means it has six electrons in its outer shell. The configuration is therefore 2,8,6."
+  },
+  {
+   "n": 6,
+   "topic": "Atomic structure and the periodic table",
+   "q": "Carbon-12 and carbon-14 are two atoms of carbon. Which statement about them is correct?",
+   "options": [
+    "They have the same mass number but different numbers of neutrons.",
+    "They have different chemical properties because they have different numbers of protons.",
+    "They are different elements because they have different numbers of neutrons.",
+    "They are isotopes of carbon and have the same electron configuration."
+   ],
+   "answer": 3,
+   "explanation": "Carbon-12 and carbon-14 are isotopes: both have six protons and six electrons, but they have different numbers of neutrons. Isotopes of the same element have the same electron configuration and therefore very similar chemical properties."
+  },
+  {
+   "n": 7,
+   "topic": "Quantitative chemistry",
+   "q": "Calcium carbonate decomposes on heating: CaCO₃ → CaO + CO₂. What mass of calcium oxide is produced when 10.0 g of calcium carbonate decomposes completely? (CaCO₃ = 100, CaO = 56)",
+   "options": [
+    "5.60 g",
+    "10.0 g",
+    "56.0 g",
+    "4.40 g"
+   ],
+   "answer": 0,
+   "explanation": "Amount of calcium carbonate = 10.0 ÷ 100 = 0.100 mol. The equation shows a 1:1 mole ratio, so 0.100 mol of calcium oxide forms; mass = 0.100 × 56 = 5.60 g. The value 4.40 g is the mass of carbon dioxide formed, not calcium oxide."
+  },
+  {
+   "n": 8,
+   "topic": "Quantitative chemistry",
+   "q": "What mass of sodium chloride is needed to make 500 cm³ of a 0.200 mol dm⁻³ sodium chloride solution? (Mr of NaCl = 58.5)",
+   "options": [
+    "0.100 g",
+    "58.5 g",
+    "11.7 g",
+    "5.85 g"
+   ],
+   "answer": 3,
+   "explanation": "500 cm³ = 0.500 dm³. Amount of sodium chloride = 0.200 × 0.500 = 0.100 mol, so mass = 0.100 × 58.5 = 5.85 g. The value 11.7 g would be needed for 1 dm³ of the same solution."
+  },
+  {
+   "n": 9,
+   "topic": "Chemistry of the atmosphere",
+   "q": "Which gas is produced by the complete combustion of a hydrocarbon and is a greenhouse gas?",
+   "options": [
+    "carbon monoxide",
+    "nitrogen",
+    "sulfur dioxide",
+    "carbon dioxide"
+   ],
+   "answer": 3,
+   "explanation": "Complete combustion in a plentiful supply of oxygen produces carbon dioxide and water from a hydrocarbon. Carbon dioxide is a greenhouse gas, whereas carbon monoxide is formed by incomplete combustion and sulfur dioxide comes from burning sulfur impurities."
+  },
+  {
+   "n": 10,
+   "topic": "Chemistry of the atmosphere",
+   "q": "Which human activity is a major cause of acid rain because it releases sulfur dioxide?",
+   "options": [
+    "using nitrogen-rich fertilisers",
+    "adding chlorine to drinking water",
+    "raising cattle",
+    "burning fossil fuels that contain sulfur impurities"
+   ],
+   "answer": 3,
+   "explanation": "Burning fossil fuels containing sulfur impurities releases sulfur dioxide, which can form sulfuric acid in the atmosphere and contribute to acid rain. The other activities do not release significant sulfur dioxide."
+  },
+  {
+   "n": 11,
+   "topic": "Using resources",
+   "q": "A community centre in Birmingham collects used iron food cans. The cans are recycled instead of being sent to landfill. Which statement gives a direct environmental benefit of recycling the iron rather than extracting more iron ore?",
+   "options": [
+    "Less land is damaged by mining for iron ore, and less iron waste is buried in landfill.",
+    "Recycling iron uses no energy, so no carbon dioxide is released.",
+    "Recycling iron makes the world's supply of iron ore unlimited.",
+    "Recycling iron prevents all rusting of iron objects."
+   ],
+   "answer": 0,
+   "explanation": "Recycling iron conserves finite iron ore, so less mining damages land, and it reduces the amount of waste sent to landfill. It does not make iron ore unlimited, use zero energy, or stop rusting."
+  },
+  {
+   "n": 12,
+   "topic": "Using resources",
+   "q": "A bag of fertiliser contains pure ammonium nitrate, NH₄NO₃. What is the percentage by mass of nitrogen in ammonium nitrate? (Aᵣ: H = 1, N = 14, O = 16)",
+   "options": [
+    "35.0%",
+    "80.0%",
+    "28.0%",
+    "17.5%"
+   ],
+   "answer": 0,
+   "explanation": "The relative formula mass of NH₄NO₃ is 14 + 4 + 14 + (3 × 16) = 80. The total mass of nitrogen is 2 × 14 = 28, so the percentage is (28 ÷ 80) × 100 = 35.0%."
+  },
+  {
+   "n": 13,
+   "topic": "Using resources",
+   "q": "A coastal town in Pembrokeshire needs drinking water from seawater. Which process would remove dissolved salts so the water is suitable to drink?",
+   "options": [
+    "Distillation",
+    "Filtration",
+    "Sedimentation",
+    "Chlorination"
+   ],
+   "answer": 0,
+   "explanation": "Distillation evaporates water and then condenses the vapour, leaving dissolved salts behind. Filtration removes insoluble solids, chlorination kills microorganisms, and sedimentation lets solids settle, so none of these removes dissolved salts."
+  },
+  {
+   "n": 14,
+   "topic": "Chemical changes",
+   "q": "Iron is extracted from iron oxide in a blast furnace using carbon. Which statement explains why carbon can reduce iron oxide but cannot reduce magnesium oxide?",
+   "options": [
+    "Carbon is more reactive than both iron and magnesium.",
+    "Iron is more reactive than carbon, but magnesium is less reactive than carbon.",
+    "Carbon is more reactive than iron but less reactive than magnesium.",
+    "Carbon can reduce magnesium oxide because magnesium is less reactive than carbon."
+   ],
+   "answer": 2,
+   "explanation": "Carbon can reduce iron oxide because carbon is above iron in the reactivity series. Magnesium is above carbon, so carbon cannot take oxygen from magnesium oxide."
+  },
+  {
+   "n": 15,
+   "topic": "Chemical changes",
+   "q": "Hydrochloric acid and ethanoic acid solutions each have a concentration of 0.10 mol dm⁻³. The hydrochloric acid has pH 1 and the ethanoic acid has pH 3. Why is the ethanoic acid less acidic at the same concentration?",
+   "options": [
+    "Hydrochloric acid is only partially ionised, so it contains fewer hydrogen ions.",
+    "Ethanoic acid releases hydroxide ions, which neutralise the acid.",
+    "Ethanoic acid is more dilute, so it contains fewer hydrogen ions.",
+    "Ethanoic acid is only partially ionised, so it has a lower concentration of hydrogen ions."
+   ],
+   "answer": 3,
+   "explanation": "At the same concentration, a weak acid such as ethanoic acid is only partly ionised, giving a lower concentration of H⁺ than a strong acid such as hydrochloric acid. A lower H⁺ concentration gives the higher pH."
+  },
+  {
+   "n": 16,
+   "topic": "The rate and extent of chemical change",
+   "q": "A student called Priya measures the volume of carbon dioxide collected when dilute hydrochloric acid reacts with excess marble chips. The volume is 26 cm³ at 20 s and 71 cm³ at 50 s. Calculate the mean rate from 20 s to 50 s. Give the unit cm³ s⁻¹.",
+   "options": [
+    "1.42 cm³ s⁻¹",
+    "1.5 cm³ s⁻¹",
+    "2.25 cm³ s⁻¹",
+    "0.90 cm³ s⁻¹"
+   ],
+   "answer": 1,
+   "explanation": "The volume change is 71 − 26 = 45 cm³. The time interval is 50 − 20 = 30 s, so the mean rate is 45 ÷ 30 = 1.5 cm³ s⁻¹. Using 71 ÷ 50 would be the mean rate from the start, not from 20 s to 50 s."
+  },
+  {
+   "n": 17,
+   "topic": "The rate and extent of chemical change",
+   "q": "In a school laboratory in Swansea, equal masses of large marble chips and powdered calcium carbonate react with the same volume and concentration of hydrochloric acid. The powdered carbonate reacts faster. Which statement best explains why?",
+   "options": [
+    "The powder dissolves in the acid and increases the concentration of hydrogen ions.",
+    "The powder has a larger total surface area, so acid particles collide with the calcium carbonate more frequently.",
+    "The powder has a lower activation energy, so every collision is successful.",
+    "The powder contains more particles, so the concentration of calcium carbonate is higher."
+   ],
+   "answer": 1,
+   "explanation": "Breaking the same mass into powder increases the surface area exposed to the acid, so there are more frequent collisions between acid particles and carbonate particles. The activation energy is not lowered by increasing surface area."
+  },
+  {
+   "n": 18,
+   "topic": "The rate and extent of chemical change",
+   "q": "A reversible reaction in a closed container reaches dynamic equilibrium. Which statement is correct at equilibrium?",
+   "options": [
+    "The rates of the forward and reverse reactions are equal, and the concentrations remain constant.",
+    "The forward reaction has stopped, so the concentrations are fixed.",
+    "The reaction has gone to completion, so no reactants remain.",
+    "The amounts of reactants and products are equal."
+   ],
+   "answer": 0,
+   "explanation": "At dynamic equilibrium both reactions continue at equal rates, so the concentrations stay constant but are not necessarily equal. The reaction has not stopped or gone to completion."
+  },
+  {
+   "n": 19,
+   "topic": "Bonding, structure and the properties of matter",
+   "q": "Brass is an alloy of copper and zinc. Why is brass usually harder than pure copper?",
+   "options": [
+    "Brass contains strong ionic bonds between copper and zinc ions.",
+    "The different-sized atoms of copper and zinc disrupt the layers of metal atoms, so the layers cannot slide over each other as easily.",
+    "The zinc atoms fill the spaces between copper atoms and make the structure a giant covalent lattice.",
+    "Zinc atoms form covalent bonds between the layers of copper atoms."
+   ],
+   "answer": 1,
+   "explanation": "In a metal or alloy, atoms are held in a regular lattice by metallic bonding, with delocalised electrons. In an alloy, different-sized atoms distort the layers and stop them sliding as easily, making the alloy harder."
+  },
+  {
+   "n": 20,
+   "topic": "Bonding, structure and the properties of matter",
+   "q": "A company in Manchester uses a nanoparticulate catalyst. For the same mass, the nanoparticulate catalyst has a much larger surface area than a coarse powder of the same catalyst. Why does this make it more effective?",
+   "options": [
+    "The nanoparticles are ionic, so they conduct electricity through the reaction mixture.",
+    "The larger surface area allows more reacting particles to collide with the catalyst surface per second.",
+    "The nanoparticles have a lower melting point, so they provide more energy for the reaction.",
+    "The nanoparticles have a higher activation energy, so the reaction is faster."
+   ],
+   "answer": 1,
+   "explanation": "A catalyst speeds up a reaction by providing an alternative pathway with lower activation energy. A nanoparticulate catalyst has a very large surface area for its mass, so more reactant particles can reach active sites and react per second."
+  },
+  {
+   "n": 21,
+   "topic": "Chemical analysis",
+   "q": "Amina carries out a flame test on a sample and sees a lilac flame. Which metal ion is present?",
+   "options": [
+    "Copper(II) ion",
+    "Calcium ion",
+    "Potassium ion",
+    "Sodium ion"
+   ],
+   "answer": 2,
+   "explanation": "Potassium ions give a lilac flame in a flame test. Sodium ions give a yellow flame, calcium ions give an orange-red flame and copper(II) ions give a blue-green flame."
+  },
+  {
+   "n": 22,
+   "topic": "Chemical analysis",
+   "q": "Ravi uses paper chromatography. The solvent front moves 8.0 cm from the origin and a coloured spot moves 6.0 cm from the origin. What is the Rf value of the spot?",
+   "options": [
+    "0.25",
+    "0.75",
+    "0.80",
+    "1.33"
+   ],
+   "answer": 1,
+   "explanation": "Rf = distance moved by spot ÷ distance moved by solvent front = 6.0 cm ÷ 8.0 cm = 0.75. The Rf value has no units and cannot be greater than 1 when the spot is below the solvent front."
+  },
+  {
+   "n": 23,
+   "topic": "Chemical analysis",
+   "q": "At a school in Cardiff, a white solid reacts with dilute hydrochloric acid to produce a gas that turns limewater milky. Which ion is most likely present in the solid?",
+   "options": [
+    "Chloride (Cl⁻)",
+    "Ammonium (NH₄⁺)",
+    "Sulfate (SO₄²⁻)",
+    "Carbonate (CO₃²⁻)"
+   ],
+   "answer": 3,
+   "explanation": "Carbonate ions react with dilute acid to form carbon dioxide, which turns limewater milky. Chloride and sulfate ions do not produce carbon dioxide with dilute hydrochloric acid; ammonium ions are tested using sodium hydroxide, which produces ammonia gas."
+  },
+  {
+   "n": 24,
+   "topic": "Energy changes",
+   "q": "A catalyst speeds up a chemical reaction. Which statement explains how a catalyst does this?",
+   "options": [
+    "It increases the energy released by the reaction.",
+    "It changes the overall energy change of the reaction.",
+    "It provides an alternative reaction pathway with a lower activation energy.",
+    "It raises the activation energy so more particles collide."
+   ],
+   "answer": 2,
+   "explanation": "A catalyst gives a different pathway with lower activation energy, so a greater proportion of collisions have enough energy to react. It does not change the overall energy change or get used up in the reaction."
+  },
+  {
+   "n": 25,
+   "topic": "Energy changes",
+   "q": "The bond energies are H–H = 436 kJ mol⁻¹, Cl–Cl = 243 kJ mol⁻¹ and H–Cl = 431 kJ mol⁻¹. For H₂ + Cl₂ → 2HCl, what is the overall energy change?",
+   "options": [
+    "−248 kJ mol⁻¹",
+    "+183 kJ mol⁻¹",
+    "+248 kJ mol⁻¹",
+    "−183 kJ mol⁻¹"
+   ],
+   "answer": 3,
+   "explanation": "Breaking the bonds in H₂ and Cl₂ requires 436 + 243 = 679 kJ mol⁻¹. Forming two H–Cl bonds releases 2 × 431 = 862 kJ mol⁻¹, so the overall energy change is 679 − 862 = −183 kJ mol⁻¹; the negative sign shows the reaction is exothermic."
+  },
+  {
+   "n": 26,
+   "topic": "Organic chemistry",
+   "q": "Priya reacts ethene with bromine, Br₂, in an addition reaction. Which product is formed?",
+   "options": [
+    "Ethane",
+    "Bromoethane",
+    "Ethanol",
+    "1,2-dibromoethane"
+   ],
+   "answer": 3,
+   "explanation": "In the addition reaction, one bromine atom adds to each carbon of the C=C double bond, producing C₂H₄Br₂, which is 1,2-dibromoethane. No atoms are removed, so the product is not bromoethane or ethane."
+  },
+  {
+   "n": 27,
+   "topic": "Atomic structure and the periodic table",
+   "q": "A magnesium atom has atomic number 12. What is the electronic configuration of the Mg²⁺ ion?",
+   "options": [
+    "2,8,8",
+    "2,8,2",
+    "2,6",
+    "2,8"
+   ],
+   "answer": 3,
+   "explanation": "A magnesium atom has the configuration 2,8,2, and the Mg²⁺ ion has lost its two outer-shell electrons, leaving 2,8. Gaining electrons to fill more shells would not give a 2+ ion."
+  },
+  {
+   "n": 28,
+   "topic": "Atomic structure and the periodic table",
+   "q": "Why do lithium and sodium have similar chemical properties?",
+   "options": [
+    "They both have one electron in their outer shell.",
+    "They have the same number of neutrons.",
+    "They have the same atomic mass.",
+    "They both have full outer shells."
+   ],
+   "answer": 0,
+   "explanation": "Lithium and sodium are in Group 1, so each has one electron in its outer shell and forms ions with a 1+ charge. Elements with full outer shells are in Group 0 and are unreactive noble gases."
+  },
+  {
+   "n": 29,
+   "topic": "Atomic structure and the periodic table",
+   "q": "Why did Mendeleev leave gaps in his periodic table?",
+   "options": [
+    "To keep elements with similar properties in the same group and allow properties of undiscovered elements to be predicted.",
+    "To separate all metals from all non-metals completely.",
+    "To make the table fit exactly on one page.",
+    "Because he did not know the atomic masses of any elements."
+   ],
+   "answer": 0,
+   "explanation": "Mendeleev left gaps so that elements with similar properties stayed together and he could predict the properties of elements not yet discovered. When those elements were found, their properties matched his predictions."
+  },
+  {
+   "n": 30,
+   "topic": "Quantitative chemistry",
+   "q": "Aisha adds excess calcium chloride solution to 20.0 cm³ of 0.150 mol dm⁻³ sodium carbonate solution. A precipitate of calcium carbonate forms: Na₂CO₃ + CaCl₂ → CaCO₃ + 2NaCl. Use Mr(CaCO₃) = 100. What is the maximum mass of calcium carbonate that can be formed?",
+   "options": [
+    "0.00300 g",
+    "0.600 g",
+    "0.300 g",
+    "0.150 g"
+   ],
+   "answer": 2,
+   "explanation": "The amount of sodium carbonate is 0.150 mol dm⁻³ × (20.0 ÷ 1000) dm³ = 0.00300 mol. The equation shows that 1 mol of sodium carbonate gives 1 mol of calcium carbonate, so the mass is 0.00300 × 100 = 0.300 g. Doubling the amount would give 0.600 g, but the carbonate-to-calcium carbonate ratio is 1:1."
+  }
+ ]
+}

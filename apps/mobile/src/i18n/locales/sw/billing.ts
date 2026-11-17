@@ -75,6 +75,8 @@ const billing: Translation<typeof en> = {
     studyPlans: 'Mipango binafsi ya kusoma',
     insights: 'Uchambuzi wa kina wa maendeleo',
     examPapers: 'Karatasi kamili za mazoezi za WAEC, NECO na JAMB',
+    examPapersFor: 'Karatasi kamili za mazoezi za {{exams}}',
+    examPapersAny: 'Karatasi kamili za mazoezi ya mitihani',
     library: 'Maktaba kubwa zaidi ya kusoma na folda',
     priority: 'Kipaumbele cha uchakataji wakati wa msongamano',
     everythingPlus: 'Kila kitu kilicho katika Plus',
@@ -193,6 +195,8 @@ const billing: Translation<typeof en> = {
       PRO: {
         whoQ: 'Pro ni kwa ajili ya nani?',
         whoA: 'Wanafunzi wanaojiandaa kwa WAEC, NECO au JAMB wanaofanya mazoezi kila siku na wanaotaka karatasi kamili za mtindo wa mitihani iliyopita.',
+        whoAFor: 'Wanafunzi wanaojiandaa kwa {{exams}} wanaofanya mazoezi kila siku na wanaotaka karatasi kamili za mazoezi.',
+        whoAAny: 'Wanafunzi wanaofanya mazoezi kila siku na wanaotaka kunufaika zaidi na mwalimu wa AI, wakipewa kipaumbele wakati wa shughuli nyingi.',
         fairQ: '“Matumizi ya haki” yanamaanisha nini?',
         fairA:
           'Hadi maswali {{questions}} kwa mwalimu kwa siku yanatosha kwa kusoma kwa bidii kubwa. Inazuia matumizi ya kiotomatiki au ya akaunti inayoshirikiwa.',

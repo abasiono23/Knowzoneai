@@ -1,0 +1,791 @@
+{
+ "id": "neco-chemistry-p5",
+ "exam": "neco",
+ "subject": "chemistry",
+ "year": null,
+ "number": 5,
+ "source": "ai",
+ "minutes": 60,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Acids, bases and salts",
+   "q": "A teacher in Ibadan needs to prepare 250 cm³ of 0.20 mol/dm³ sodium trioxocarbonate(IV) solution. What mass of the anhydrous salt is required? (Na = 23, C = 12, O = 16)",
+   "options": [
+    "53.0 g",
+    "10.6 g",
+    "2.65 g",
+    "5.3 g"
+   ],
+   "answer": 3,
+   "explanation": "Number of moles required = 0.250 dm³ × 0.20 mol/dm³ = 0.050 mol. The molar mass of Na₂CO₃ is (2 × 23) + 12 + (3 × 16) = 106 g/mol, so mass = 0.050 × 106 = 5.3 g."
+  },
+  {
+   "n": 2,
+   "topic": "Acids, bases and salts",
+   "q": "A student in Makurdi titrates 20.0 cm³ of ethanoic acid solution against 0.080 mol/dm³ sodium hydroxide solution. If 25.0 cm³ of the alkali is required for complete neutralisation, what is the concentration of the ethanoic acid? (CH₃COOH + NaOH → CH₃COONa + H₂O)",
+   "options": [
+    "0.125 mol/dm³",
+    "0.080 mol/dm³",
+    "0.100 mol/dm³",
+    "0.064 mol/dm³"
+   ],
+   "answer": 2,
+   "explanation": "Moles of NaOH used = 0.0250 dm³ × 0.080 mol/dm³ = 0.00200 mol. The equation shows a 1:1 mole ratio, so the acid solution contains 0.00200 mol in 0.0200 dm³, giving 0.00200 ÷ 0.0200 = 0.100 mol/dm³."
+  },
+  {
+   "n": 3,
+   "topic": "Metals and their compounds",
+   "q": "At the aluminium smelter in Ikot Abasi, alumina is dissolved in molten cryolite before electrolysis. What is the main purpose of using cryolite?",
+   "options": [
+    "To convert bauxite directly into aluminium metal",
+    "To prevent the carbon anodes from burning away",
+    "To lower the temperature needed to melt the alumina",
+    "To provide extra aluminium ions for discharge at the cathode"
+   ],
+   "answer": 2,
+   "explanation": "Pure alumina has a very high melting point, so dissolving it in cryolite lowers the operating temperature and makes electrolysis more economical. Cryolite does not supply the aluminium that is deposited, nor does it convert bauxite into the metal."
+  },
+  {
+   "n": 4,
+   "topic": "Metals and their compounds",
+   "q": "A craftsman in Bida is making a bronze ornament. Bronze is mainly an alloy of copper with which metal?",
+   "options": [
+    "Lead",
+    "Tin",
+    "Zinc",
+    "Nickel"
+   ],
+   "answer": 1,
+   "explanation": "Bronze is an alloy of copper and tin. The alloy of copper and zinc is brass, so zinc is a common but incorrect choice."
+  },
+  {
+   "n": 5,
+   "topic": "Chemical bonding",
+   "q": "The boiling point of water is much higher than that of hydrogen sulphide. Which statement best explains this?",
+   "options": [
+    "Hydrogen bonds between water molecules are stronger than the intermolecular forces between hydrogen sulphide molecules",
+    "The O—H covalent bond is stronger than the S—H covalent bond",
+    "Water molecules are held together by ionic bonds",
+    "Hydrogen sulphide has stronger van der Waals forces because it has more electrons"
+   ],
+   "answer": 0,
+   "explanation": "Boiling requires overcoming forces between molecules, not breaking covalent bonds. Water molecules form hydrogen bonds, whereas hydrogen sulphide molecules are held by weaker dipole–dipole and van der Waals forces."
+  },
+  {
+   "n": 6,
+   "topic": "Chemical bonding",
+   "q": "Which pair of elements is most likely to combine by transfer of electrons to form an ionic compound?",
+   "options": [
+    "Calcium and oxygen",
+    "Nitrogen and hydrogen",
+    "Carbon and oxygen",
+    "Hydrogen and chlorine"
+   ],
+   "answer": 0,
+   "explanation": "Calcium is a metal that can lose electrons, while oxygen is a non-metal that can gain them, so electron transfer gives calcium oxide, an ionic compound. The other pairs are non-metal combinations that form covalent molecules."
+  },
+  {
+   "n": 7,
+   "topic": "Non-metals and their compounds",
+   "q": "When 6.4 g of ammonium nitrite, NH₄NO₂, is warmed, it decomposes completely to nitrogen and water. What volume of nitrogen, measured at s.t.p., is produced? (H = 1, N = 14, O = 16; molar volume at s.t.p. = 22.4 dm³/mol)",
+   "options": [
+    "4.48 dm³",
+    "2.24 dm³",
+    "22.4 dm³",
+    "1.12 dm³"
+   ],
+   "answer": 1,
+   "explanation": "The molar mass of NH₄NO₂ is 14 + 4 + 14 + 32 = 64 g/mol, so 6.4 g is 0.10 mol. One mole of ammonium nitrite gives one mole of nitrogen, and 0.10 × 22.4 dm³ = 2.24 dm³ at s.t.p."
+  },
+  {
+   "n": 8,
+   "topic": "Non-metals and their compounds",
+   "q": "A student in Port Harcourt passes dry nitrogen over strongly heated magnesium powder. Which compound is formed?",
+   "options": [
+    "Magnesium hydroxide",
+    "Magnesium nitrate",
+    "Magnesium oxide",
+    "Magnesium nitride"
+   ],
+   "answer": 3,
+   "explanation": "At high temperature, magnesium combines directly with nitrogen to form magnesium nitride, Mg₃N₂. The other compounds require oxygen, water, or acidic conditions for their formation and would not be produced in dry nitrogen."
+  },
+  {
+   "n": 9,
+   "topic": "Oxidation, reduction and electrolysis",
+   "q": "What is the oxidation number of sulphur in sodium thiosulphate, Na₂S₂O₃?",
+   "options": [
+    "+2",
+    "+6",
+    "−2",
+    "+4"
+   ],
+   "answer": 0,
+   "explanation": "Let the oxidation number of sulphur be x. Using Na = +1 and O = −2 gives 2(+1) + 2x + 3(−2) = 0, so 2x − 4 = 0 and x = +2. This is the average oxidation number of the two sulphur atoms in the thiosulphate ion."
+  },
+  {
+   "n": 10,
+   "topic": "Oxidation, reduction and electrolysis",
+   "q": "An aluminium smelting plant in Ikot Abasi electrolyses molten alumina. What mass of aluminium is deposited at the cathode when a charge of 0.600 faraday is passed? [Al = 27]",
+   "options": [
+    "10.8 g",
+    "16.2 g",
+    "5.4 g",
+    "1.8 g"
+   ],
+   "answer": 2,
+   "explanation": "The cathode reaction is Al³⁺ + 3e⁻ → Al. A charge of 0.600 F supplies 0.600 mol of electrons, giving 0.600 ÷ 3 = 0.200 mol Al, and mass = 0.200 × 27 = 5.4 g. Using 0.600 mol of aluminium directly would incorrectly give 16.2 g."
+  },
+  {
+   "n": 11,
+   "topic": "Oxidation, reduction and electrolysis",
+   "q": "In the reaction 2FeCl₂ + Cl₂ → 2FeCl₃, which species is oxidised?",
+   "options": [
+    "Fe³⁺",
+    "Fe²⁺",
+    "Cl₂",
+    "Cl⁻"
+   ],
+   "answer": 1,
+   "explanation": "Fe²⁺ changes to Fe³⁺ by losing an electron, so it is oxidised. Cl₂ gains electrons to form Cl⁻ and is reduced, while Fe³⁺ is the product formed after oxidation rather than the species oxidised."
+  },
+  {
+   "n": 12,
+   "topic": "Energy changes",
+   "q": "A student in Bauchi burns 0.500 g of butane, C₄H₁₀ (molar mass = 58.0 g mol⁻¹), and the heat released raises the temperature of 500 g of water by 12.0 °C. If all the heat is absorbed by the water, what is the enthalpy of combustion of butane? [c = 4.2 J g⁻¹ °C⁻¹]",
+   "options": [
+    "−5.84 × 10³ kJ mol⁻¹",
+    "−2.92 × 10³ kJ mol⁻¹",
+    "−1.46 × 10³ kJ mol⁻¹",
+    "−25.2 kJ mol⁻¹"
+   ],
+   "answer": 1,
+   "explanation": "Heat absorbed by the water = 500 × 4.2 × 12.0 = 25 200 J = 25.2 kJ. Moles of butane burned = 0.500 ÷ 58.0 = 0.00862 mol. The enthalpy of combustion = −25.2 ÷ 0.00862 = −2.92 × 10³ kJ mol⁻¹."
+  },
+  {
+   "n": 13,
+   "topic": "Rates of reaction and equilibrium",
+   "q": "What is the equilibrium constant expression for the reaction C(s) + CO₂(g) ⇌ 2CO(g)?",
+   "options": [
+    "Kc = [CO₂]/[CO]²",
+    "Kc = [CO]²/[CO₂]",
+    "Kc = [C][CO]²/[CO₂]",
+    "Kc = [CO]²/([C][CO₂])"
+   ],
+   "answer": 1,
+   "explanation": "The concentration of the pure solid carbon is constant and is omitted from the equilibrium expression. Only gaseous species are included, with products over reactants, giving Kc = [CO]²/[CO₂]."
+  },
+  {
+   "n": 14,
+   "topic": "Rates of reaction and equilibrium",
+   "q": "Solid calcium carbonate decomposes in a closed vessel: CaCO₃(s) ⇌ CaO(s) + CO₂(g), ΔH = +178 kJ mol⁻¹. Which change will increase the amount of CO₂ at equilibrium?",
+   "options": [
+    "Adding more solid calcium carbonate",
+    "Increasing the volume of the vessel",
+    "Adding a catalyst",
+    "Increasing the pressure by compressing the gas"
+   ],
+   "answer": 1,
+   "explanation": "The forward reaction produces carbon dioxide gas while no gaseous reactant is present; increasing the volume lowers the pressure and shifts equilibrium towards CO₂. Adding calcium carbonate solid or a catalyst does not change the equilibrium position, while compressing the gas shifts equilibrium to the left."
+  },
+  {
+   "n": 15,
+   "topic": "Water and solubility",
+   "q": "At 50 °C, a saturated solution of potassium trioxonitrate(V) is prepared by dissolving 22.5 g of the salt in 90.0 g of water. What is the solubility of the salt at this temperature?",
+   "options": [
+    "30.0 g per 100 g of water",
+    "22.5 g per 100 g of water",
+    "25.0 g per 100 g of water",
+    "20.0 g per 100 g of water"
+   ],
+   "answer": 2,
+   "explanation": "Solubility is the mass of solute that dissolves in 100 g of water to form a saturated solution, so 22.5/90.0 × 100 = 25.0 g per 100 g of water. Using the mass of solution instead of the mass of water gives an incorrect value."
+  },
+  {
+   "n": 16,
+   "topic": "Water and solubility",
+   "q": "A water treatment operator in Kano adds washing soda to a hard-water supply. The washing soda softens the water mainly by",
+   "options": [
+    "removing dissolved oxygen from the water",
+    "increasing the concentration of calcium ions",
+    "precipitating calcium and magnesium ions as carbonates",
+    "coagulating suspended clay particles"
+   ],
+   "answer": 2,
+   "explanation": "Carbonate ions from washing soda combine with calcium and magnesium ions to form insoluble carbonates, which settle out. Coagulation of suspended clay is brought about by substances such as alum, not by washing soda."
+  },
+  {
+   "n": 17,
+   "topic": "Hydrocarbons",
+   "q": "How many structural isomers exist for the hydrocarbon with molecular formula C₄H₁₀?",
+   "options": [
+    "1",
+    "3",
+    "4",
+    "2"
+   ],
+   "answer": 3,
+   "explanation": "The two structural isomers are butane, CH₃CH₂CH₂CH₃, and 2-methylpropane, CH₃CH(CH₃)CH₃. The straight-chain formula alone gives only one of these isomers."
+  },
+  {
+   "n": 18,
+   "topic": "Hydrocarbons",
+   "q": "A gaseous hydrocarbon has empirical formula CH₂ and relative molecular mass 42. What is its molecular formula?",
+   "options": [
+    "C₄H₈",
+    "C₃H₈",
+    "C₃H₆",
+    "C₂H₄"
+   ],
+   "answer": 2,
+   "explanation": "Let the molecular formula be (CH₂)ₙ. Then 14n = 42, so n = 3, giving C₃H₆. Using a formula such as C₂H₄ would give relative molecular mass 28, not 42."
+  },
+  {
+   "n": 19,
+   "topic": "Functional groups in organic chemistry",
+   "q": "Which reagent gives effervescence with ethanoic acid but not with ethanol?",
+   "options": [
+    "Sodium trioxocarbonate(IV) solution",
+    "Sodium chloride solution",
+    "Acidified potassium dichromate(VI) solution",
+    "Fehling's solution"
+   ],
+   "answer": 0,
+   "explanation": "Ethanoic acid reacts with sodium trioxocarbonate(IV) to liberate carbon dioxide gas, producing effervescence. Ethanol does not react with the carbonate to produce a gas, although acidified dichromate can oxidise ethanol without effervescence."
+  },
+  {
+   "n": 20,
+   "topic": "Functional groups in organic chemistry",
+   "q": "Which of the following compounds is a tertiary alkanol?",
+   "options": [
+    "CH₃CH₂CH₂OH",
+    "CH₃CH₂CH₂CH₂OH",
+    "(CH₃)₃COH",
+    "CH₃CH(OH)CH₃"
+   ],
+   "answer": 2,
+   "explanation": "In (CH₃)₃COH, the carbon atom carrying the hydroxyl group is bonded to three other carbon atoms, so it is a tertiary alkanol. The other structures have the hydroxyl-bearing carbon attached to one or two carbon atoms."
+  },
+  {
+   "n": 21,
+   "topic": "Separation of mixtures",
+   "q": "A student in Ibadan pours a mixture of kerosene and water into a separating funnel. Which property of the liquids makes this method suitable?",
+   "options": [
+    "One of them dissolves completely in the other.",
+    "They have different boiling points and are both volatile.",
+    "They are immiscible and form two separate layers.",
+    "They have different particle sizes and can be sieved."
+   ],
+   "answer": 2,
+   "explanation": "A separating funnel works when two liquids do not mix and form layers, so the lower layer can be run off. If the liquids dissolved in each other, a single layer would form and the funnel would not separate them."
+  },
+  {
+   "n": 22,
+   "topic": "Separation of mixtures",
+   "q": "Mrs Okafor in Zaria has a hot saturated solution of copper(II) sulfate containing a little soluble impurity. Which procedure will give pure copper(II) sulfate crystals?",
+   "options": [
+    "Cool the solution, filter off the crystals and wash them with cold water.",
+    "Evaporate the solution to dryness and collect the solid.",
+    "Pour the solution into a separating funnel and run off the lower layer.",
+    "Filter the hot solution immediately and dry the residue."
+   ],
+   "answer": 0,
+   "explanation": "Cooling makes copper(II) sulfate crystallise while the small amount of soluble impurity remains in the solution. The crystals are then collected by filtration and washed; evaporating to dryness would leave the impurity mixed with the solid."
+  },
+  {
+   "n": 23,
+   "topic": "Mole concept and stoichiometry",
+   "q": "How many oxygen atoms are present in 0.050 mol of oxygen gas, O₂? (Avogadro constant = 6.02 × 10²³ mol⁻¹)",
+   "options": [
+    "6.02 × 10²³",
+    "6.02 × 10²²",
+    "1.20 × 10²³",
+    "3.01 × 10²²"
+   ],
+   "answer": 1,
+   "explanation": "The number of O₂ molecules is 0.050 × 6.02 × 10²³ = 3.01 × 10²². Each O₂ molecule has two oxygen atoms, so the number of oxygen atoms is 2 × 3.01 × 10²² = 6.02 × 10²²."
+  },
+  {
+   "n": 24,
+   "topic": "Mole concept and stoichiometry",
+   "q": "Mrs Okonkwo in Abeokuta neutralises 25.0 cm³ of 0.200 mol dm⁻³ sodium hydroxide solution with excess dilute sulfuric acid: 2NaOH(aq) + H₂SO₄(aq) → Na₂SO₄(aq) + 2H₂O(l). What mass of sodium sulfate is formed? (Na₂SO₄ = 142 g mol⁻¹)",
+   "options": [
+    "0.355 g",
+    "0.142 g",
+    "0.071 g",
+    "0.710 g"
+   ],
+   "answer": 0,
+   "explanation": "Moles of NaOH = 0.0250 × 0.200 = 0.00500 mol. From the equation, 2 mol NaOH gives 1 mol Na₂SO₄, so 0.00500 mol NaOH gives 0.00250 mol Na₂SO₄. The mass formed is 0.00250 × 142 = 0.355 g."
+  },
+  {
+   "n": 25,
+   "topic": "Periodic table",
+   "q": "Going down Group I from lithium to caesium, which property increases?",
+   "options": [
+    "Reactivity with water",
+    "Electronegativity",
+    "Melting point",
+    "First ionisation energy"
+   ],
+   "answer": 0,
+   "explanation": "Down Group I, the atomic radius increases and the single outer electron is lost more readily, so reactivity with water increases. Electronegativity, first ionisation energy and melting point decrease down the group."
+  },
+  {
+   "n": 26,
+   "topic": "Acids, bases and salts",
+   "q": "At 25 °C, a solution has a hydrogen ion concentration of 5.0 × 10⁻⁵ mol/dm³. What is the pH of the solution? (log₁₀ 5 = 0.699)",
+   "options": [
+    "5.30",
+    "9.70",
+    "4.30",
+    "4.70"
+   ],
+   "answer": 2,
+   "explanation": "pH = −log[H⁺] = −log(5.0 × 10⁻⁵) = 5 − 0.699 = 4.30. The value 9.70 is the pOH for the same solution, not the pH, and 4.70 is obtained if 5.0 × 10⁻⁵ is incorrectly treated as 2.0 × 10⁻⁵."
+  },
+  {
+   "n": 27,
+   "topic": "Acids, bases and salts",
+   "q": "25.0 cm³ of 0.120 mol/dm³ sodium hydroxide solution is completely neutralised by 20.0 cm³ of dilute tetraoxosulphate(VI) acid. What is the concentration of the acid?",
+   "options": [
+    "0.060 mol/dm³",
+    "0.075 mol/dm³",
+    "0.150 mol/dm³",
+    "0.100 mol/dm³"
+   ],
+   "answer": 1,
+   "explanation": "Using H₂SO₄ + 2NaOH → Na₂SO₄ + 2H₂O, moles of NaOH = 0.120 × 25.0/1000 = 0.00300 mol, so moles of acid = 0.00150 mol. Concentration of acid = 0.00150 ÷ (20.0/1000) = 0.075 mol/dm³; using a 1:1 ratio without the equation gives the incorrect 0.150 mol/dm³."
+  },
+  {
+   "n": 28,
+   "topic": "Metals and their compounds",
+   "q": "In a small workshop in Nnewi, hydrogen gas is passed over heated copper(II) oxide and a reddish-brown solid is formed. Which substance acts as the reducing agent in this reaction?",
+   "options": [
+    "Water",
+    "Hydrogen",
+    "Copper(II) oxide",
+    "Copper"
+   ],
+   "answer": 1,
+   "explanation": "Hydrogen removes oxygen from copper(II) oxide and converts it to copper, so hydrogen is oxidised and acts as the reducing agent. Copper(II) oxide supplies the oxygen and is the oxidising agent."
+  },
+  {
+   "n": 29,
+   "topic": "Chemical bonding",
+   "q": "Which substance consists of simple molecules held together by weak intermolecular forces?",
+   "options": [
+    "Sodium chloride",
+    "Solid carbon(IV) oxide",
+    "Silicon(IV) oxide",
+    "Magnesium oxide"
+   ],
+   "answer": 1,
+   "explanation": "Solid carbon(IV) oxide is made up of discrete CO₂ molecules held together by weak van der Waals forces. Sodium chloride and magnesium oxide form ionic lattices, while silicon(IV) oxide forms a giant covalent structure."
+  },
+  {
+   "n": 30,
+   "topic": "Chemical bonding",
+   "q": "Diamond is extremely hard. Which statement best explains this property?",
+   "options": [
+    "It contains mobile electrons that bind the carbon atoms tightly.",
+    "Each carbon atom is covalently bonded to four other carbon atoms in a giant three-dimensional lattice.",
+    "It contains layers of carbon atoms held together by weak forces.",
+    "It contains positive and negative ions held together by strong electrostatic attraction."
+   ],
+   "answer": 1,
+   "explanation": "Diamond has a giant covalent lattice in which every carbon atom is joined to four others by strong covalent bonds, so a large amount of energy is needed to distort or break the lattice. The description involving layers held by weak forces applies to graphite, not diamond."
+  },
+  {
+   "n": 31,
+   "topic": "Non-metals and their compounds",
+   "q": "A student in Uyo burns a small piece of sulphur in oxygen and dissolves the product in distilled water. The resulting solution turns blue litmus paper red. Which oxide is formed?",
+   "options": [
+    "Sulphur(IV) oxide",
+    "Hydrogen sulphide",
+    "Sulphur(VI) oxide",
+    "Carbon(IV) oxide"
+   ],
+   "answer": 0,
+   "explanation": "Sulphur burns in oxygen to form sulphur(IV) oxide, SO₂, which dissolves in water to give an acidic solution. Sulphur(VI) oxide is not formed by simple burning of sulphur in oxygen; it requires a catalyst in the contact process."
+  },
+  {
+   "n": 32,
+   "topic": "Environmental chemistry",
+   "q": "A farmer near Ogbomoso applies excess nitrate fertiliser to a field. Rain washes the nitrate into a pond. Which sequence best explains the fall in dissolved oxygen in the pond?",
+   "options": [
+    "Rapid growth of algae is followed by decay by aerobic bacteria, which use up dissolved oxygen.",
+    "Nitrate reacts directly with water to form oxygen, which then escapes from the pond.",
+    "Algae absorb dissolved oxygen and store it as carbohydrate, so less oxygen remains in the water.",
+    "The fertiliser raises the temperature of the pond, making oxygen less soluble and preventing photosynthesis."
+   ],
+   "answer": 0,
+   "explanation": "Excess nitrate causes eutrophication: algae grow rapidly, then die and are decomposed by aerobic bacteria. The bacteria use up dissolved oxygen, so the oxygen level in the pond falls."
+  },
+  {
+   "n": 33,
+   "topic": "Environmental chemistry",
+   "q": "A small waste incinerator in Aba releases hydrogen chloride gas. The flue gas is passed through a slurry of calcium hydroxide before release. What is the main chemical reason this treatment reduces pollution?",
+   "options": [
+    "The hydrogen chloride is oxidised to chlorine, which is harmless in small amounts.",
+    "Hydrogen chloride is converted into calcium carbonate, which is collected as a solid.",
+    "The acidic hydrogen chloride is neutralised to form calcium chloride and water.",
+    "Calcium hydroxide catalyses the decomposition of hydrogen chloride into hydrogen and oxygen."
+   ],
+   "answer": 2,
+   "explanation": "Calcium hydroxide is a base and hydrogen chloride is an acidic gas. They react in a neutralisation reaction: Ca(OH)₂ + 2HCl → CaCl₂ + 2H₂O, so the acidic gas is removed before the flue gas is released."
+  },
+  {
+   "n": 34,
+   "topic": "Oxidation, reduction and electrolysis",
+   "q": "During the electrolysis of aqueous nickel(II) sulphate using inert electrodes, a current of 0.500 A is passed for 1930 s. What mass of nickel is deposited at the cathode? (Ni = 58.7 g mol⁻¹; 1 F = 96500 C mol⁻¹)",
+   "options": [
+    "0.294 g",
+    "0.147 g",
+    "0.587 g",
+    "1.17 g"
+   ],
+   "answer": 0,
+   "explanation": "Quantity of electricity Q = It = 0.500 × 1930 = 965 C. Moles of electrons = 965 ÷ 96500 = 0.0100 mol. Since Ni²⁺ + 2e⁻ → Ni, moles of nickel = 0.00500 mol, so mass = 0.00500 × 58.7 = 0.294 g."
+  },
+  {
+   "n": 35,
+   "topic": "Oxidation, reduction and electrolysis",
+   "q": "A student in Warri electrolyses concentrated sodium chloride solution using carbon electrodes. Which product is formed at the anode?",
+   "options": [
+    "Oxygen",
+    "Hydrogen",
+    "Sodium",
+    "Chlorine"
+   ],
+   "answer": 3,
+   "explanation": "In concentrated sodium chloride solution, chloride ions are preferentially discharged at the anode. They are oxidised to chlorine: 2Cl⁻ → Cl₂ + 2e⁻. Oxygen is formed at the anode mainly when the solution is dilute."
+  },
+  {
+   "n": 36,
+   "topic": "Energy changes",
+   "q": "The standard enthalpies of formation are: CaCO₃(s) = −1207 kJ mol⁻¹, CaO(s) = −635 kJ mol⁻¹ and CO₂(g) = −394 kJ mol⁻¹. Calculate ΔH for the decomposition CaCO₃(s) → CaO(s) + CO₂(g).",
+   "options": [
+    "−2 236 kJ mol⁻¹",
+    "+178 kJ mol⁻¹",
+    "−178 kJ mol⁻¹",
+    "+1 029 kJ mol⁻¹"
+   ],
+   "answer": 1,
+   "explanation": "For the reaction, ΔH = [ΔHf(CaO) + ΔHf(CO₂)] − ΔHf(CaCO₃). This gives [−635 + (−394)] − (−1207) = −1029 + 1207 = +178 kJ mol⁻¹."
+  },
+  {
+   "n": 37,
+   "topic": "Rates of reaction and equilibrium",
+   "q": "For a reaction, the rate equation is rate = k[X]²[Y]. If the concentration of X is tripled and the concentration of Y is halved while the temperature is kept constant, by what factor does the initial rate change?",
+   "options": [
+    "4.5",
+    "1.5",
+    "3.0",
+    "9.0"
+   ],
+   "answer": 0,
+   "explanation": "The rate is proportional to [X]²[Y]. The new rate factor is (3)² × (1/2) = 9/2 = 4.5, so the initial rate becomes 4.5 times its original value."
+  },
+  {
+   "n": 38,
+   "topic": "Rates of reaction and equilibrium",
+   "q": "At equilibrium in a 5.0 dm³ vessel at 700 K, a mixture contains 0.60 mol H₂, 0.40 mol I₂ and 1.80 mol HI for the reaction H₂(g) + I₂(g) ⇌ 2HI(g). What is Kc?",
+   "options": [
+    "3.67",
+    "0.0741",
+    "37.5",
+    "13.5"
+   ],
+   "answer": 3,
+   "explanation": "The equilibrium concentrations are [H₂] = 0.60/5.0 = 0.12 mol dm⁻³, [I₂] = 0.40/5.0 = 0.08 mol dm⁻³ and [HI] = 1.80/5.0 = 0.36 mol dm⁻³. Thus Kc = (0.36)² ÷ (0.12 × 0.08) = 0.1296 ÷ 0.0096 = 13.5."
+  },
+  {
+   "n": 39,
+   "topic": "Water and solubility",
+   "q": "A student in Kaduna prepares a saturated solution of potassium chloride at 40 °C. At this temperature, 40.0 g of potassium chloride dissolves in 100 g of water. What mass of potassium chloride is contained in 280 g of the saturated solution?",
+   "options": [
+    "80.0 g",
+    "112 g",
+    "40.0 g",
+    "100 g"
+   ],
+   "answer": 0,
+   "explanation": "The saturated solution contains 40.0 g of potassium chloride in 140 g of solution (40.0 g solute + 100 g water). Therefore, 280 g of the saturated solution contains (280 × 40.0/140) g = 80.0 g of potassium chloride. Using 40.0 g per 100 g of solution gives 112 g, which is a common mistake."
+  },
+  {
+   "n": 40,
+   "topic": "Water and solubility",
+   "q": "A sample of borehole water in Enugu contains both calcium hydrogencarbonate and calcium sulphate. Which method will remove both types of hardness from the water?",
+   "options": [
+    "Filtration",
+    "Boiling",
+    "Addition of alum",
+    "Distillation"
+   ],
+   "answer": 3,
+   "explanation": "Boiling removes temporary hardness by decomposing calcium hydrogencarbonate, but it does not remove permanent hardness caused by calcium sulphate. Filtration removes suspended solids, and alum aids coagulation rather than removing dissolved calcium salts. Distillation vaporises the water and condenses it, leaving the dissolved salts behind."
+  },
+  {
+   "n": 41,
+   "topic": "Water and solubility",
+   "q": "At constant temperature, a student in Jos adds 5.0 g of sodium chloride to 100 cm³ of a saturated sodium chloride solution and stirs. Which observation is correct?",
+   "options": [
+    "The added sodium chloride reacts with water to form sodium hydroxide.",
+    "All the sodium chloride dissolves because the solution becomes unsaturated.",
+    "The sodium chloride dissolves and the solution becomes more concentrated.",
+    "Some sodium chloride remains undissolved because the solution is saturated."
+   ],
+   "answer": 3,
+   "explanation": "A saturated solution at constant temperature cannot dissolve more of the same solute, so the excess solid remains undissolved. The dissolved and undissolved sodium chloride are in dynamic equilibrium. Adding solid does not make the solution unsaturated or more concentrated."
+  },
+  {
+   "n": 42,
+   "topic": "Atomic structure",
+   "q": "An ion represented as X²⁻ contains 18 electrons. What is the atomic number of element X?",
+   "options": [
+    "20",
+    "14",
+    "16",
+    "18"
+   ],
+   "answer": 2,
+   "explanation": "The ion X²⁻ has gained two electrons, so the neutral atom has 18 − 2 = 16 electrons. The atomic number equals the number of protons in the neutral atom, which is 16. Treating the given 18 as the atomic number ignores the charge."
+  },
+  {
+   "n": 43,
+   "topic": "Atomic structure",
+   "q": "Chlorine exists as two isotopes, ³⁵Cl and ³⁷Cl. If the relative atomic mass of chlorine is 35.5, what is the percentage abundance of ³⁵Cl?",
+   "options": [
+    "75%",
+    "50%",
+    "80%",
+    "25%"
+   ],
+   "answer": 0,
+   "explanation": "Let the percentage abundance of ³⁵Cl be x. Then [35x + 37(100 − x)]/100 = 35.5, which gives x = 75%. The value 25% is the abundance of ³⁷Cl, not ³⁵Cl."
+  },
+  {
+   "n": 44,
+   "topic": "Hydrocarbons",
+   "q": "Which pair of hydrocarbons are members of the same homologous series?",
+   "options": [
+    "Propene and propyne",
+    "Ethene and propene",
+    "Ethene and ethyne",
+    "Methane and ethene"
+   ],
+   "answer": 1,
+   "explanation": "Ethene is C₂H₄ and propene is C₃H₆; both are alkenes with general formula CₙH₂ₙ and differ by one CH₂ unit, so they are homologues. The other pairs contain compounds from different homologous series, such as an alkene and an alkyne or an alkane and an alkene."
+  },
+  {
+   "n": 45,
+   "topic": "Hydrocarbons",
+   "q": "Which hydrocarbon requires two molecules of hydrogen for complete hydrogenation of one molecule?",
+   "options": [
+    "Ethyne",
+    "Ethene",
+    "Benzene",
+    "Methane"
+   ],
+   "answer": 0,
+   "explanation": "Ethyne contains a triple bond and adds two molecules of hydrogen to form ethane. Ethene adds one molecule, methane is already saturated, and benzene adds three molecules under suitable conditions."
+  },
+  {
+   "n": 46,
+   "topic": "Functional groups in organic chemistry",
+   "q": "What is the IUPAC name of the compound CH₃CH₂COOCH₃?",
+   "options": [
+    "Ethyl propanoate",
+    "Methyl propanoate",
+    "Propyl methanoate",
+    "Ethyl ethanoate"
+   ],
+   "answer": 1,
+   "explanation": "The acid part CH₃CH₂COO– has three carbon atoms and is propanoate, while the alcohol part is methoxy, giving methyl propanoate. Ethyl ethanoate would have the formula CH₃COOCH₂CH₃, which has a different arrangement."
+  },
+  {
+   "n": 47,
+   "topic": "Separation of mixtures",
+   "q": "A student in Uyo carries out paper chromatography to separate ink dyes. Which component acts as the mobile phase?",
+   "options": [
+    "The paper fibres alone",
+    "Water held in the pores of the paper",
+    "The mixture being separated",
+    "The solvent moving up the paper"
+   ],
+   "answer": 3,
+   "explanation": "In paper chromatography, the solvent moving up the paper is the mobile phase; it carries the dye components at different rates. The water held in the paper is normally the stationary phase, while the paper itself is only the support. The mixture is the material being separated, not the mobile phase."
+  },
+  {
+   "n": 48,
+   "topic": "Separation of mixtures",
+   "q": "A student in Owerri has iodine dissolved in water. Which procedure will use tetrachloromethane to extract the iodine from the solution?",
+   "options": [
+    "Add sand and then decant the liquid",
+    "Shake the solution with tetrachloromethane and separate the layers in a separating funnel",
+    "Filter the solution through filter paper",
+    "Evaporate the water to dryness"
+   ],
+   "answer": 1,
+   "explanation": "Iodine is much more soluble in tetrachloromethane than in water, so shaking the two liquids transfers iodine into the organic layer. The layers are then separated using a separating funnel. Filtration does not remove dissolved iodine, and evaporation does not use the tetrachloromethane for extraction."
+  },
+  {
+   "n": 49,
+   "topic": "Mole concept and stoichiometry",
+   "q": "In a factory in Onitsha, 100 kg of calcium carbonate is heated strongly and gives 44.8 kg of calcium oxide. What is the percentage yield of calcium oxide? (CaCO₃ = 100; CaO = 56)",
+   "options": [
+    "44.8%",
+    "80.0%",
+    "56.0%",
+    "89.6%"
+   ],
+   "answer": 1,
+   "explanation": "100 kg of CaCO₃ is 100000/100 = 1000 mol, and it should give 1000 mol of CaO. The theoretical mass of CaO is 1000 × 56 = 56000 g = 56 kg. Hence percentage yield = (44.8/56.0) × 100 = 80.0%."
+  },
+  {
+   "n": 50,
+   "topic": "Mole concept and stoichiometry",
+   "q": "A student in Makurdi heats 5.72 g of hydrated sodium carbonate, Na₂CO₃·xH₂O, to constant mass and obtains 2.12 g of anhydrous sodium carbonate. What is the value of x? (Na₂CO₃ = 106; H₂O = 18)",
+   "options": [
+    "7",
+    "12",
+    "5",
+    "10"
+   ],
+   "answer": 3,
+   "explanation": "Mass of water lost = 5.72 − 2.12 = 3.60 g. Moles of anhydrous Na₂CO₃ = 2.12/106 = 0.0200 mol; moles of water = 3.60/18 = 0.200 mol. Therefore x = 0.200/0.0200 = 10."
+  },
+  {
+   "n": 51,
+   "topic": "Periodic table",
+   "q": "An element has the electronic configuration 1s² 2s² 2p⁶ 3s² 3p⁶ 4s². Which statement about the element is correct?",
+   "options": [
+    "It is a halogen.",
+    "It is in Period 3 of the Periodic Table.",
+    "It has seven electrons in its outermost shell.",
+    "It loses two electrons to form a stable ion."
+   ],
+   "answer": 3,
+   "explanation": "The configuration has 20 electrons, so the element is calcium, a Group II element in Period 4. It loses the two 4s electrons to form a stable 2+ ion. The element is not a halogen, is not in Period 3, and has only two outermost electrons."
+  },
+  {
+   "n": 52,
+   "topic": "Gas laws",
+   "q": "A diver in Lagos Lagoon releases a bubble of volume 2.0 cm³ at a depth where the pressure is 3.0 × 10⁵ Pa. If the pressure at the surface is 1.0 × 10⁵ Pa, what is the volume of the bubble at the surface? Assume temperature remains constant.",
+   "options": [
+    "2.0 cm³",
+    "0.67 cm³",
+    "9.0 cm³",
+    "6.0 cm³"
+   ],
+   "answer": 3,
+   "explanation": "Using Boyle's law, P₁V₁ = P₂V₂ because temperature is constant. Thus V₂ = (3.0 × 10⁵ × 2.0)/(1.0 × 10⁵) = 6.0 cm³. A decrease in pressure causes the bubble volume to increase, not decrease."
+  },
+  {
+   "n": 53,
+   "topic": "Gas laws",
+   "q": "A 3.0 dm³ vessel at 27 °C contains 0.10 mol of an ideal gas. What pressure does the gas exert? (R = 8.31 J K⁻¹ mol⁻¹)",
+   "options": [
+    "831 kPa",
+    "8.31 kPa",
+    "7.48 kPa",
+    "83.1 kPa"
+   ],
+   "answer": 3,
+   "explanation": "Convert 3.0 dm³ to 3.0 × 10⁻³ m³ and 27 °C to 300 K. Using P = nRT/V gives P = (0.10 × 8.31 × 300)/(3.0 × 10⁻³) = 83100 Pa = 83.1 kPa. Using 27 directly instead of 300 K would give about 7.48 kPa."
+  },
+  {
+   "n": 54,
+   "topic": "Acids, bases and salts",
+   "q": "A laboratory technician in Ilesa wants to prepare 500 cm³ of 0.250 mol/dm³ sodium hydroxide solution. What mass of sodium hydroxide is required? (NaOH = 40 g/mol)",
+   "options": [
+    "20.0 g",
+    "2.50 g",
+    "5.00 g",
+    "10.0 g"
+   ],
+   "answer": 2,
+   "explanation": "The amount required is 0.500 dm³ × 0.250 mol/dm³ = 0.125 mol. The mass is therefore 0.125 mol × 40 g/mol = 5.00 g. Using 250 cm³ instead of 500 cm³ would give 2.50 g."
+  },
+  {
+   "n": 55,
+   "topic": "Acids, bases and salts",
+   "q": "A student in Minna titrates 25.0 cm³ of 0.150 mol/dm³ tetraoxosulphate(VI) acid with 0.250 mol/dm³ potassium hydroxide solution. What volume of the potassium hydroxide solution is required for complete neutralisation?",
+   "options": [
+    "15.0 cm³",
+    "60.0 cm³",
+    "30.0 cm³",
+    "45.0 cm³"
+   ],
+   "answer": 2,
+   "explanation": "The amount of H₂SO₄ is 0.0250 dm³ × 0.150 mol/dm³ = 0.00375 mol. Neutralisation requires twice this amount of KOH, that is 0.00750 mol. The volume of KOH is 0.00750 mol ÷ 0.250 mol/dm³ = 0.0300 dm³ = 30.0 cm³."
+  },
+  {
+   "n": 56,
+   "topic": "Metals and their compounds",
+   "q": "A laboratory assistant in Oshogbo adds sodium hydroxide solution dropwise to iron(II) sulphate solution and then adds excess. Which observation is correct?",
+   "options": [
+    "A reddish-brown precipitate is formed which dissolves in excess sodium hydroxide.",
+    "A blue precipitate is formed which remains in excess sodium hydroxide.",
+    "A white precipitate is formed which dissolves in excess sodium hydroxide.",
+    "A green precipitate is formed which is insoluble in excess sodium hydroxide."
+   ],
+   "answer": 3,
+   "explanation": "Iron(II) ions react with hydroxide ions to form iron(II) hydroxide, a green precipitate. This precipitate is not soluble in excess sodium hydroxide. A reddish-brown precipitate would indicate iron(III) ions, while a white precipitate soluble in excess alkali is typical of zinc or lead ions."
+  },
+  {
+   "n": 57,
+   "topic": "Metals and their compounds",
+   "q": "New aluminium roofing sheets in Onitsha remain shiny for some time although aluminium is a reactive metal. Which statement best explains this?",
+   "options": [
+    "Aluminium is coated with zinc during manufacture.",
+    "Aluminium does not combine with oxygen at ordinary temperatures.",
+    "A thin, adherent oxide layer protects the metal beneath.",
+    "Aluminium is below hydrogen in the reactivity series."
+   ],
+   "answer": 2,
+   "explanation": "Aluminium reacts readily with oxygen to form a thin, continuous layer of aluminium oxide. This layer sticks firmly to the surface and protects the metal beneath from further attack. The zinc-coating statement describes galvanising iron, not aluminium."
+  },
+  {
+   "n": 58,
+   "topic": "Chemical bonding",
+   "q": "An element X has atomic number 12 and an element Y has atomic number 17. Which formula and type of bonding are expected for the compound formed between X and Y?",
+   "options": [
+    "XY₂, ionic",
+    "X₂Y, ionic",
+    "XY, ionic",
+    "XY₂, covalent"
+   ],
+   "answer": 0,
+   "explanation": "X has atomic number 12 and two outer electrons, while Y has atomic number 17 and seven outer electrons. X loses two electrons and each of two Y atoms gains one electron, giving the ionic formula XY₂."
+  },
+  {
+   "n": 59,
+   "topic": "Chemical bonding",
+   "q": "Why is hydrogen chloride a gas at room temperature while sodium chloride is a solid with a high melting point?",
+   "options": [
+    "Hydrogen chloride consists of simple molecules with weak forces between molecules, while sodium chloride has a giant ionic lattice with strong electrostatic attraction between ions.",
+    "The covalent bonds in hydrogen chloride are weaker than the ionic bonds in sodium chloride, so less heat is needed to break them.",
+    "Hydrogen chloride is ionic, while sodium chloride is covalent.",
+    "Sodium chloride has weak van der Waals forces between its molecules, which require more energy to overcome."
+   ],
+   "answer": 0,
+   "explanation": "Hydrogen chloride boils by overcoming weak intermolecular forces between its simple molecules, not by breaking its covalent bonds. Sodium chloride melts only when its strong ionic lattice is broken down, so it has a much higher melting point."
+  },
+  {
+   "n": 60,
+   "topic": "Non-metals and their compounds",
+   "q": "A chemical plant in Ilorin manufactures sulphuric acid by the Contact process. Which catalyst is used in the conversion of sulphur(IV) oxide to sulphur(VI) oxide?",
+   "options": [
+    "Iron",
+    "Vanadium(V) oxide",
+    "Manganese(IV) oxide",
+    "Nickel"
+   ],
+   "answer": 1,
+   "explanation": "The Contact process uses vanadium(V) oxide as the catalyst for oxidising sulphur(IV) oxide to sulphur(VI) oxide. Iron is used in the Haber process, nickel is used in hydrogenation, and manganese(IV) oxide is used in the decomposition of hydrogen peroxide."
+  }
+ ]
+}

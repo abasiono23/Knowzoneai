@@ -146,6 +146,10 @@ const tutor: Translation<typeof en> = {
     genericError: 'Kuna hitilafu.',
     thinking: 'Ninalifikiria…',
   },
+  related: {
+    title: 'Kutoka kwenye maelezo yako ya Knowzone',
+    openLabel: 'Fungua: {{title}}',
+  },
   followUps: {
     title: 'ULIZA KINACHOFUATA',
     askLabel: 'Uliza: {{question}}',

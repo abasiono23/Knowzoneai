@@ -1,0 +1,401 @@
+{
+ "id": "nsc-life-sciences-p2",
+ "exam": "nsc",
+ "subject": "life-sciences",
+ "year": null,
+ "number": 2,
+ "source": "ai",
+ "minutes": 35,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Animal nutrition and gaseous exchange",
+   "q": "A school nutrition programme in Soweto serves maize porridge with beans. Which statement best explains why this meal has a better protein quality than maize porridge eaten alone?",
+   "options": [
+    "Beans supply lysine, which is limiting in maize, while maize supplies methionine, which is limiting in beans.",
+    "Combining maize and beans increases the total amount of protein without changing the amino acid pattern.",
+    "Maize protein is complete, but beans add carbohydrates that spare the body from using protein.",
+    "Beans contain all the essential amino acids, so they make up for the lack of amino acids in maize."
+   ],
+   "answer": 0,
+   "explanation": "Maize protein is low in lysine, while legumes such as beans are low in methionine. Eating them together gives a complementary mixture of essential amino acids, improving protein quality. Beans do not contain all essential amino acids in adequate amounts, so they cannot make an incomplete protein complete on their own."
+  },
+  {
+   "n": 2,
+   "topic": "Animal nutrition and gaseous exchange",
+   "q": "A learner at the Two Oceans Aquarium in Cape Town observes a fish in well-aerated water. Which statement best explains why the countercurrent arrangement in the gills improves oxygen uptake?",
+   "options": [
+    "Water and blood flow at right angles, so oxygen is actively pumped from water into the blood.",
+    "Water and blood flow in opposite directions, so an oxygen diffusion gradient is maintained along most of the gill lamella.",
+    "Water and blood flow in the same direction, so oxygen diffuses rapidly from water to blood along the whole gill.",
+    "The arrangement increases the surface area of the gills, but does not affect the oxygen diffusion gradient."
+   ],
+   "answer": 1,
+   "explanation": "In countercurrent flow, water and blood move in opposite directions across the gill lamellae. This keeps the water oxygen concentration higher than that of the adjacent blood along most of the gill, maintaining a diffusion gradient. Same-direction flow would allow the concentrations to equalise early, reducing oxygen uptake."
+  },
+  {
+   "n": 3,
+   "topic": "Animal nutrition and gaseous exchange",
+   "q": "During quiet inhalation in a healthy person, which set of changes causes air to move into the lungs?",
+   "options": [
+    "The diaphragm contracts and flattens while the external intercostal muscles raise the ribs, increasing thoracic volume and lowering pressure.",
+    "The diaphragm relaxes and becomes dome-shaped while the ribs move downwards, decreasing thoracic volume.",
+    "The internal intercostal muscles contract to lift the ribs while the diaphragm relaxes, increasing pressure in the lungs.",
+    "The thoracic volume decreases and the pressure in the lungs falls below atmospheric pressure."
+   ],
+   "answer": 0,
+   "explanation": "Quiet inhalation is active: the diaphragm contracts and flattens, and the external intercostal muscles raise the ribs. This increases the volume of the thoracic cavity, lowering the pressure inside the lungs below atmospheric pressure so air flows in. The option describing a dome-shaped diaphragm with falling ribs describes expiration, not inhalation."
+  },
+  {
+   "n": 4,
+   "topic": "Plant hormones and responses",
+   "q": "A gardener in Mbombela prunes off the shoot tips of a rose bush. After a few weeks, many lateral buds grow into branches. Which explanation best accounts for this response?",
+   "options": [
+    "Auxin produced by the shoot tip usually suppresses lateral buds, so removing the tip lowers auxin and releases apical dominance.",
+    "Pruning removes abscisic acid from the lateral buds, allowing them to grow because abscisic acid normally promotes bud growth.",
+    "The shoot tip usually produces gibberellin, which suppresses lateral buds, so removing it increases gibberellin in the side branches.",
+    "Cytokinins produced in the shoot tip normally inhibit lateral buds, and their removal allows the buds to grow."
+   ],
+   "answer": 0,
+   "explanation": "Auxin from the apical bud inhibits the growth of lateral buds, producing apical dominance. Removing the shoot tip lowers the auxin concentration and allows lateral buds to grow. Abscisic acid is generally inhibitory, while cytokinins promote lateral bud growth and are produced mainly in roots."
+  },
+  {
+   "n": 5,
+   "topic": "Plant hormones and responses",
+   "q": "In a practical investigation in a Johannesburg school, root and shoot segments from bean seedlings are exposed to a range of auxin concentrations. Which result is expected?",
+   "options": [
+    "Auxin inhibits both root and shoot elongation at all concentrations.",
+    "Low auxin concentrations stimulate root elongation, while higher concentrations inhibit roots and stimulate shoot elongation.",
+    "High auxin concentrations stimulate roots more than shoots because root tissue is less sensitive to auxin.",
+    "Root and shoot segments show the same growth response at every auxin concentration tested."
+   ],
+   "answer": 1,
+   "explanation": "Root tissue is more sensitive to auxin than shoot tissue. Very low auxin concentrations can stimulate root elongation, but higher concentrations inhibit roots and may stimulate shoot elongation. The claim that roots are less sensitive to auxin is a common misconception."
+  },
+  {
+   "n": 6,
+   "topic": "Genetics and inheritance",
+   "q": "A maize breeder in Potchefstroom crosses a heterozygous purple-kernelled plant with a yellow-kernelled plant. Purple kernels (P) are dominant to yellow kernels (p). What percentage of the offspring is expected to have yellow kernels?",
+   "options": [
+    "25%",
+    "75%",
+    "50%",
+    "0%"
+   ],
+   "answer": 2,
+   "explanation": "The cross is Pp × pp, which gives Pp and pp offspring in a 1:1 ratio. Yellow kernels are pp, so half of the offspring are expected to be yellow, which is 50%. A 25% yellow result would require a cross between two heterozygous parents."
+  },
+  {
+   "n": 7,
+   "topic": "Genetics and inheritance",
+   "q": "In a tomato breeding trial in eThekwini, two plants heterozygous for two independently assorting genes are crossed: RrYy × RrYy. R and Y show complete dominance. What fraction of the offspring is expected to be homozygous recessive for both genes (rryy)?",
+   "options": [
+    "1/16",
+    "1/4",
+    "1/8",
+    "9/16"
+   ],
+   "answer": 0,
+   "explanation": "The probability of rr from Rr × Rr is 1/4, and the probability of yy from Yy × Yy is also 1/4. Because the genes assort independently, multiply the probabilities: 1/4 × 1/4 = 1/16. The value 9/16 would be the fraction showing both dominant phenotypes."
+  },
+  {
+   "n": 8,
+   "topic": "Human evolution",
+   "q": "Which statement describes a general trend in hominin evolution from early Australopithecus species to Homo sapiens?",
+   "options": [
+    "The canines become larger and more pointed as meat eating increases.",
+    "The jaw and molar teeth become larger and more robust to cope with a tougher diet.",
+    "The big toe moves away from the other toes and the foot becomes more ape-like.",
+    "The face becomes less protruding and the braincase becomes larger."
+   ],
+   "answer": 3,
+   "explanation": "Hominin evolution shows a trend toward reduced prognathism, a larger braincase, smaller teeth and a more fully bipedal foot. Larger canines, more robust jaws and an ape-like foot with an opposable big toe are contrary to the general trend toward Homo sapiens."
+  },
+  {
+   "n": 9,
+   "topic": "Human evolution",
+   "q": "A matric class in Kimberley compares casts of Homo habilis and Australopithecus africanus. Which statement is the most reliable distinction based on fossil evidence?",
+   "options": [
+    "Both fossil species have the same cranial capacity, but Homo habilis has a more protruding face.",
+    "Homo habilis has a more ape-like pelvis than Australopithecus africanus, showing less bipedalism.",
+    "Homo habilis has a larger cranial capacity and is associated with Oldowan stone tools.",
+    "Australopithecus africanus had a larger brain and made fire, while Homo habilis lacked a precision grip."
+   ],
+   "answer": 2,
+   "explanation": "Homo habilis had a larger cranial capacity than Australopithecus africanus and is associated with simple Oldowan stone tools. Both species show evidence of bipedalism, so a more ape-like pelvis in Homo habilis is not a reliable distinction. Australopithecus africanus did not have a larger brain or make fire."
+  },
+  {
+   "n": 10,
+   "topic": "Excretion in humans",
+   "q": "A patient with kidney failure in a Cape Town hospital is treated with dialysis. The dialysis fluid contains glucose and dissolved salts but no urea. Why does urea move from the patient's blood into the dialysis fluid?",
+   "options": [
+    "Urea is actively transported from the dialysis fluid into the blood.",
+    "The dialysis fluid has a higher urea concentration than the blood.",
+    "Blood cells and large proteins are filtered out by the dialysis membrane.",
+    "Urea diffuses down its concentration gradient from the blood into the dialysis fluid."
+   ],
+   "answer": 3,
+   "explanation": "The dialysis fluid has no urea, so the urea concentration is higher in the blood than in the fluid. Urea therefore diffuses through the partially permeable dialysis membrane from the blood into the dialysis fluid. Glucose and salts are present in the fluid at suitable concentrations to limit their net loss from the blood."
+  },
+  {
+   "n": 11,
+   "topic": "Excretion in humans",
+   "q": "A patient in a Bloemfontein clinic has large protein molecules such as albumin in the urine. In a healthy kidney, these proteins are too large to pass into the filtrate. Which part of the nephron is most likely damaged?",
+   "options": [
+    "Collecting duct",
+    "Loop of Henle",
+    "Proximal convoluted tubule",
+    "Glomerulus and Bowman's capsule"
+   ],
+   "answer": 3,
+   "explanation": "Large plasma proteins such as albumin are normally held back by the filtration membrane in the glomerulus and Bowman's capsule. If this barrier is damaged, protein leaks into the filtrate and appears in the urine. The proximal tubule, loop of Henle and collecting duct mainly reabsorb useful materials or adjust water and salt content rather than acting as the main protein filter."
+  },
+  {
+   "n": 12,
+   "topic": "Excretion in humans",
+   "q": "Excess amino acids are deaminated in the liver. The amino group is converted into a nitrogenous waste that is later excreted by the kidneys. Which substance is this final nitrogenous waste?",
+   "options": [
+    "Urea",
+    "Glucose",
+    "Carbon dioxide",
+    "Bile pigments"
+   ],
+   "answer": 0,
+   "explanation": "In the liver, the amino group of excess amino acids is removed and converted to ammonia, which is then converted to urea. Urea is transported in the blood and excreted by the kidneys. Carbon dioxide is excreted by the lungs, while bile pigments are excreted in bile."
+  },
+  {
+   "n": 13,
+   "topic": "Evolution by natural selection",
+   "q": "In a population of Cape sugarbirds, beak length varies. During a drought, birds with longer beaks obtain more nectar from deep flowers and leave more offspring. Which statement best explains why the average beak length can increase over several generations?",
+   "options": [
+    "Individual birds stretch their beaks while feeding and pass the stretched beaks to their offspring.",
+    "Birds with longer beaks obtain more food and leave more offspring, so alleles for longer beaks become more common.",
+    "The drought causes a mutation for longer beaks in every bird.",
+    "Beak length changes because the birds need to adapt during their lifetime."
+   ],
+   "answer": 1,
+   "explanation": "Natural selection occurs when heritable variation affects survival and reproduction. Longer-beaked birds can feed more successfully, so they tend to produce more offspring, increasing the frequency of alleles for longer beaks in later generations. Stretching the beak during life does not change the genes passed on, and mutations are not directed by need."
+  },
+  {
+   "n": 14,
+   "topic": "Evolution by natural selection",
+   "q": "In a population of springbok in the Karoo, a recessive allele causes a harmless coat pattern. The population is in Hardy-Weinberg equilibrium and 4% of the animals show the recessive phenotype. What percentage of the population are heterozygous carriers?",
+   "options": [
+    "32%",
+    "16%",
+    "64%",
+    "4%"
+   ],
+   "answer": 0,
+   "explanation": "The recessive phenotype frequency is q² = 0.04, so q = √0.04 = 0.20. Therefore p = 0.80, and the heterozygous carrier frequency is 2pq = 2 × 0.80 × 0.20 = 0.32, or 32%. A value of 4% is the recessive phenotype frequency, not the carrier frequency."
+  },
+  {
+   "n": 15,
+   "topic": "Evolution by natural selection",
+   "q": "Two populations of a Drakensberg orchid are found in the same valley, but one flowers in November and the other flowers in February. Bees visit only the flowers available at each time, so no pollen moves between the populations. Which type of reproductive isolation is described?",
+   "options": [
+    "Temporal isolation",
+    "Geographical isolation",
+    "Behavioural isolation",
+    "Mechanical isolation"
+   ],
+   "answer": 0,
+   "explanation": "Temporal isolation occurs when populations cannot interbreed because they breed or flower at different times. Here the two orchid populations share the same valley but their flowering seasons do not overlap, so gene flow between them is prevented. Geographical isolation would require a physical barrier separating the populations."
+  },
+  {
+   "n": 16,
+   "topic": "Biodiversity and classification",
+   "q": "A Grade 10 class studies micro-organisms in a freshwater pond in Limpopo. One organism is unicellular, has no membrane-bound nucleus, and reproduces by binary fission. To which kingdom should it be assigned in the five-kingdom system?",
+   "options": [
+    "Monera",
+    "Plantae",
+    "Protista",
+    "Fungi"
+   ],
+   "answer": 0,
+   "explanation": "The organism is prokaryotic because it has no membrane-bound nucleus and reproduces by binary fission. In the five-kingdom system, prokaryotes are placed in the kingdom Monera. Protista, Fungi and Plantae all have eukaryotic cells."
+  },
+  {
+   "n": 17,
+   "topic": "Biodiversity and classification",
+   "q": "Four mammals are listed with their scientific names.\nanimal | scientific name\nlion | Panthera leo\nleopard | Panthera pardus\ncheetah | Acinonyx jubatus\ndomestic cat | Felis catus\nWhich two are classified in the same genus?",
+   "options": [
+    "leopard and domestic cat",
+    "lion and leopard",
+    "lion and cheetah",
+    "cheetah and domestic cat"
+   ],
+   "answer": 1,
+   "explanation": "The genus is the first part of the scientific name. Both the lion and leopard have the genus name Panthera, so they belong to the same genus. The other pairs share only a higher taxonomic grouping such as family, not the same genus."
+  },
+  {
+   "n": 18,
+   "topic": "The nervous system and the senses",
+   "q": "A person accidentally touches a hot stove and quickly withdraws the hand. Which sequence correctly describes the path of the nerve impulse in this reflex action?",
+   "options": [
+    "Effector → motor neuron → spinal cord → sensory neuron → receptor",
+    "Receptor → sensory neuron → spinal cord → motor neuron → effector",
+    "Receptor → motor neuron → spinal cord → sensory neuron → effector",
+    "Receptor → sensory neuron → brain → motor neuron → effector"
+   ],
+   "answer": 1,
+   "explanation": "A withdrawal reflex uses a reflex arc that passes through the spinal cord without first going to the brain. The correct route is receptor → sensory neuron → spinal cord → motor neuron → effector. This allows a rapid response to a harmful stimulus such as a hot stove."
+  },
+  {
+   "n": 19,
+   "topic": "The nervous system and the senses",
+   "q": "During a bright sunny day in Durban, Sipho walks from the beach into a dark tunnel. Which change in his eyes helps him see in the dim light?",
+   "options": [
+    "The lens becomes more convex as the ciliary muscles relax.",
+    "The pupils dilate as the radial muscles of the iris contract.",
+    "The rods become less sensitive and stop functioning.",
+    "The pupils constrict as the circular muscles of the iris contract."
+   ],
+   "answer": 1,
+   "explanation": "In dim light, the radial muscles of the iris contract while the circular muscles relax, enlarging the pupil. A wider pupil lets more light enter the eye so that the retina can be stimulated more effectively. Constriction of the pupil is the response to bright light, not to a dark tunnel."
+  },
+  {
+   "n": 20,
+   "topic": "The chemistry of life and cells",
+   "q": "Thandi in Polokwane examines a micrograph of an onion epidermal cell. The image of the cell is 75 mm long, while the actual cell is 0.025 mm long. What is the magnification of the micrograph?",
+   "options": [
+    "×300",
+    "×1 875",
+    "×0.00033",
+    "×3 000"
+   ],
+   "answer": 3,
+   "explanation": "Magnification is the image length divided by the actual length: 75 mm ÷ 0.025 mm = 3 000. The value is written as ×3 000 and has no units."
+  },
+  {
+   "n": 21,
+   "topic": "The endocrine system and homeostasis",
+   "q": "A 27-year-old man from Pietermaritzburg visits a clinic because his hands, feet and jaw have become unusually enlarged. His long bones have stopped lengthening, but his soft tissues are still thickening. Blood tests show constantly high growth hormone levels. Which condition best fits these observations?",
+   "options": [
+    "Gigantism caused by excess growth hormone before the epiphyseal plates have closed.",
+    "Acromegaly caused by excess growth hormone after the epiphyseal plates have closed.",
+    "Dwarfism caused by a deficiency of growth hormone during childhood.",
+    "Diabetes insipidus caused by a deficiency of ADH."
+   ],
+   "answer": 1,
+   "explanation": "Excess growth hormone after the epiphyseal plates have closed causes acromegaly, with thickening of bones such as the jaw and enlargement of soft tissues. Gigantism occurs when excess growth hormone is present before the epiphyseal plates close, producing unusually tall stature."
+  },
+  {
+   "n": 22,
+   "topic": "Reproduction in vertebrates and human reproduction",
+   "q": "A man from eMalahleni has a vasectomy. Which statement best explains why he still produces semen but is infertile?",
+   "options": [
+    "Sperm ducts are cut and tied, so sperm cannot reach the urethra, while the seminal vesicles and prostate still add fluid to semen.",
+    "The testes stop producing sperm and testosterone, so the semen contains no sperm.",
+    "The prostate gland stops secreting fluid, so no semen is formed.",
+    "The epididymis stops storing sperm, so sperm are released directly into the bladder."
+   ],
+   "answer": 0,
+   "explanation": "A vasectomy blocks the sperm ducts, preventing sperm from entering the urethra during ejaculation. The testes still produce sperm and testosterone, and the accessory glands still secrete fluid, so semen is produced but contains no sperm."
+  },
+  {
+   "n": 23,
+   "topic": "Reproduction in vertebrates and human reproduction",
+   "q": "A Grade 12 learner in Mbombela asks how a combined oral contraceptive containing oestrogen and progestogen mainly prevents pregnancy. Which explanation is correct for the main action of the pill?",
+   "options": [
+    "It kills sperm in the vagina before they can reach the cervix.",
+    "It inhibits the secretion of FSH and LH, so ovulation does not occur.",
+    "It causes the endometrium to break down every week, so implantation cannot occur.",
+    "It blocks the fallopian tubes so that sperm cannot meet the ovum."
+   ],
+   "answer": 1,
+   "explanation": "The hormones in the pill exert negative feedback on the hypothalamus and anterior pituitary, reducing FSH and LH secretion. This prevents follicle maturation and ovulation, which is the main contraceptive effect."
+  },
+  {
+   "n": 24,
+   "topic": "Photosynthesis and cellular respiration",
+   "q": "A leaf is sealed in a transparent chamber containing air with 0.0500% carbon dioxide. After 30 minutes in bright light, the carbon dioxide concentration is 0.0350%. In a dark control chamber of the same volume, the carbon dioxide concentration increases by 0.0060% over the same 30 minutes. Assuming the rate of respiration in the light equals the rate measured in the dark, what percentage of carbon dioxide is fixed by photosynthesis in the light chamber during the 30 minutes?",
+   "options": [
+    "0.0150%",
+    "0.0090%",
+    "0.0060%",
+    "0.0210%"
+   ],
+   "answer": 3,
+   "explanation": "The concentration in the light chamber fell by 0.0500% − 0.0350% = 0.0150%, which is the net carbon dioxide uptake. Photosynthesis must also have replaced the carbon dioxide released by respiration, so the gross amount fixed is 0.0150% + 0.0060% = 0.0210%."
+  },
+  {
+   "n": 25,
+   "topic": "Photosynthesis and cellular respiration",
+   "q": "A muscle cell in a cyclist's leg has enough oxygen. After the complete aerobic breakdown of one glucose molecule, which process produces the greatest number of ATP molecules?",
+   "options": [
+    "The electron transport chain and oxidative phosphorylation.",
+    "The Krebs cycle in the mitochondrial matrix.",
+    "The conversion of pyruvate to lactic acid.",
+    "Glycolysis in the cytoplasm."
+   ],
+   "answer": 0,
+   "explanation": "Under aerobic conditions, most ATP is produced by oxidative phosphorylation as electrons from NADH and FADH₂ pass along the electron transport chain. Glycolysis and the Krebs cycle produce only small direct amounts of ATP, while lactic acid fermentation yields only 2 ATP per glucose."
+  },
+  {
+   "n": 26,
+   "topic": "Photosynthesis and cellular respiration",
+   "q": "In the Calvin cycle of a spinach leaf, carbon dioxide combines with a five-carbon molecule called RuBP. Which product is the first stable product formed?",
+   "options": [
+    "One six-carbon molecule of glucose",
+    "Two two-carbon molecules of acetyl CoA",
+    "Two three-carbon molecules of 3-phosphoglycerate",
+    "One five-carbon molecule of ribulose bisphosphate containing oxygen"
+   ],
+   "answer": 2,
+   "explanation": "Carbon dioxide combines with RuBP, and the unstable six-carbon intermediate immediately splits into two molecules of 3-phosphoglycerate. Glucose is formed later from these three-carbon products."
+  },
+  {
+   "n": 27,
+   "topic": "Cell division: mitosis and meiosis",
+   "q": "A Nguni cow has 60 chromosomes in each somatic cell. At metaphase II of meiosis, one of its secondary oocytes contains chromosomes that each consist of two chromatids. How many chromatids are present in that secondary oocyte?",
+   "options": [
+    "15 chromatids",
+    "60 chromatids",
+    "120 chromatids",
+    "30 chromatids"
+   ],
+   "answer": 1,
+   "explanation": "The cow is diploid with 2n = 60. Meiosis I reduces the chromosome number to 30 in the secondary oocyte, but each chromosome still has two chromatids, so 30 × 2 = 60 chromatids."
+  },
+  {
+   "n": 28,
+   "topic": "Cell division: mitosis and meiosis",
+   "q": "Which event occurs during anaphase I of meiosis but not during anaphase of mitosis?",
+   "options": [
+    "Chromosomes replicate to form two chromatids each.",
+    "Sister chromatids separate and move to opposite poles.",
+    "Homologous chromosomes separate, while sister chromatids remain attached at their centromeres.",
+    "Spindle fibres disappear and a nuclear envelope reforms."
+   ],
+   "answer": 2,
+   "explanation": "In anaphase I, homologous chromosomes are pulled to opposite poles, but the centromeres holding sister chromatids together do not split. Separation of sister chromatids occurs in anaphase II and in mitosis, not in anaphase I."
+  },
+  {
+   "n": 29,
+   "topic": "Cell division: mitosis and meiosis",
+   "q": "In a healthy bull, 25 primary spermatocytes complete meiosis and all resulting sperm mature. How many sperm are produced?",
+   "options": [
+    "50 sperm",
+    "25 sperm",
+    "200 sperm",
+    "100 sperm"
+   ],
+   "answer": 3,
+   "explanation": "Each primary spermatocyte undergoes meiosis I and meiosis II to form four haploid spermatids, which mature into sperm. Therefore 25 × 4 = 100 sperm are produced."
+  },
+  {
+   "n": 30,
+   "topic": "Population ecology and human impact on the environment",
+   "q": "Game rangers in a Limpopo reserve capture and mark 80 impala. After the marked animals mix randomly with the herd, they later capture 60 impala, of which 12 are marked. Using the Lincoln index, what is the estimated size of the impala population?",
+   "options": [
+    "128 impala",
+    "400 impala",
+    "480 impala",
+    "16 impala"
+   ],
+   "answer": 1,
+   "explanation": "The Lincoln index estimate is (number marked × total in second sample) ÷ number marked in second sample. This gives (80 × 60) ÷ 12 = 400 impala. Adding the sample numbers gives 128, which is not the population estimate."
+  }
+ ]
+}

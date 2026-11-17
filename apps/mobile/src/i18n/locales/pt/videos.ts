@@ -475,6 +475,33 @@ const videos: Translation<typeof en> = {
     sceneHeading: 'Título da cena {{number}}',
     sceneNarration: 'Narração da cena {{number}}',
   },
+  kora: {
+    title: 'Aulas com a Kora',
+    subtitle: 'Aulas de três minutos dadas pela Kora, cada uma com uma pergunta rápida.',
+    name: 'Kora',
+    role: 'a tua tutora de IA',
+    english: 'Inglês',
+    minutes: '{{n}} min',
+    watched: 'Vista',
+    open: 'Abrir a aula: {{title}}',
+    groups: {
+      exam: 'Para {{exams}}',
+      cyber: 'Cibersegurança',
+      skills: 'Técnicas de estudo',
+    },
+    start: 'Começar a aula',
+    loading: 'A carregar a aula…',
+    loadFailed: 'Esta aula não carregou. Verifica a tua ligação e tenta de novo.',
+    listFailed: 'Não foi possível carregar as aulas. Verifica a tua ligação e tenta de novo.',
+    part: 'Parte {{n}} de {{total}}: {{title}}',
+    pauseAndTry: 'Pausa e tenta',
+    continuesIn: 'A Kora continua daqui a {{n}} s',
+    continue: 'Continuar',
+    back10: 'Recuar 10 segundos',
+    finishedTitle: 'Aula concluída',
+    finishedBody: 'Bom trabalho. Experimenta outra aula, ou pergunta à Kora o que não ficou claro.',
+    moreLessons: 'Mais aulas',
+  },
 };
 
 export default videos;

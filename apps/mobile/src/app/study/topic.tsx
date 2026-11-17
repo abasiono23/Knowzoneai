@@ -10,6 +10,8 @@ import { ChoiceChip, ChipWrap } from '@/components/personalize/choice-chip';
 import { Button, Text } from '@/components/ui';
 import { Colors, Gradients } from '@/constants/theme';
 import { useCreditGate } from '@/lib/billing/credits';
+import { exampleExam, regionOf } from '@/lib/region';
+import { useSession } from '@/lib/session';
 import { useMaterials } from '@/lib/studio/store';
 import { DEFAULT_OPTIONS } from '@/lib/studio/types';
 
@@ -19,6 +21,7 @@ const IDEAS = ['photosynthesis', 'mole', 'quadratic', 'newton', 'demand'] as con
 /** Screen 66: enter a topic and let the AI write the material. */
 export default function TopicScreen() {
   const { t } = useTranslation('study');
+  const { user } = useSession();
   const { create } = useMaterials();
   const canSpend = useCreditGate();
   const [topic, setTopic] = useState('');
@@ -50,7 +53,7 @@ export default function TopicScreen() {
       <TextField
         label={t('topic.focusLabel')}
         icon="funnel-outline"
-        placeholder={t('topic.focusPlaceholder')}
+        placeholder={t('topic.focusPlaceholder', { exam: exampleExam(regionOf(user)) })}
         value={focus}
         onChangeText={setFocus}
       />

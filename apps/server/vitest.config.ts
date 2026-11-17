@@ -8,6 +8,7 @@ export default defineConfig({
         process.env.TEST_DATABASE_URL ?? 'postgresql://knowzone:knowzone@localhost:5433/knowzone_testing',
       SUPABASE_URL: 'https://test-project.supabase.co',
       OPENAI_API_KEY: '',
+      VULTR_INFERENCE_API_KEY: '',
       RESEND_API_KEY: '',
     },
     globalSetup: './test/global-setup.ts',

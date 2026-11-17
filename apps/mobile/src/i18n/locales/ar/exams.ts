@@ -4,6 +4,8 @@ import type en from '../en/exams';
 
 const exams: Translation<typeof en> = {
   title: 'أسئلة الامتحانات السابقة',
+  /** The same page for SAT and GCSE students: those papers are practice, never "past questions". */
+  practiceTitle: 'التدريب على الامتحانات',
   eyebrow: 'JAMB · WAEC · NECO',
   offline: 'تحتاج أسئلة الامتحانات السابقة إلى اتصال بالإنترنت.',
   loadFailed: 'تعذّر تحميل الأوراق. تحقّق من اتصالك وحاول مرة أخرى.',
@@ -13,11 +15,30 @@ const exams: Translation<typeof en> = {
     title: 'أسئلة JAMB وWAEC وNECO السابقة',
     body: 'تدرّب على كل مادة بصيغة الامتحان الحقيقي، وشاهد شرح كل إجابة، وأدِّ أوراقًا محددة الوقت.',
     action: 'ابدأ التدريب',
+    /** One exam (the WAEC countries outside Nigeria). */
+    titleOne: 'أسئلة {{exam}} السابقة',
+    titlePractice: 'تدريب {{exams}}',
+    bodyPractice: 'تدريب بأسئلة الاختيار من متعدد حسب الامتحان والمادة، مع شرح كل إجابة. كتبها الذكاء الاصطناعي وروجعت مرتين، وليست أوراقًا سابقة.',
+    sat: {
+      title: 'أوراق تدريب SAT',
+      body: 'تدريب بأسئلة الاختيار من متعدد وفق أقسام اختبار SAT الرقمي وتوقيته، مع شرح كل إجابة. كتبها الذكاء الاصطناعي وروجعت مرتين، وليست أوراقًا سابقة.',
+    },
+    gcse: {
+      title: 'تدريب على نمط GCSE',
+      body: 'تدريب بأسئلة الاختيار من متعدد حسب الموضوع في Maths وEnglish Language وBiology وChemistry وPhysics، مع شرح كل إجابة. كتبها الذكاء الاصطناعي وروجعت مرتين، وليست أوراقًا سابقة.',
+    },
   },
   exams: {
     jamb: { name: 'JAMB', full: 'JAMB UTME', about: 'اختبار حاسوبي · Use of English وثلاث مواد أخرى' },
     waec: { name: 'WAEC', full: 'WAEC WASSCE', about: 'شهادة المرحلة الثانوية · أسئلة اختيار من متعدد' },
     neco: { name: 'NECO', full: 'NECO SSCE', about: 'شهادة المرحلة الثانوية · أسئلة اختيار من متعدد' },
+    sat: { name: 'SAT', full: 'تدريب SAT الرقمي', about: 'Reading and Writing · Math · اختيار من متعدد فقط' },
+    act: { name: 'ACT', full: 'تدريب ACT', about: 'English · Math · Reading · Science' },
+    ap: { name: 'AP', full: 'تدريب الاختيار من متعدد لاختبارات AP', about: 'Calculus AB · Biology · Chemistry · Physics 1 · US History · English Language' },
+    gcse: { name: 'GCSE', full: 'تدريب على نمط GCSE', about: 'تدريب بالاختيار من متعدد حسب الموضوع' },
+    alevel: { name: 'A-level', full: 'تدريب على نمط A-level', about: 'تدريب بالاختيار من متعدد حسب الموضوع' },
+    kcse: { name: 'KCSE', full: 'تدريب على نمط KCSE', about: 'تدريب بالاختيار من متعدد حسب الموضوع' },
+    nsc: { name: 'Matric', full: 'تدريب على نمط Matric (NSC)', about: 'تدريب بالاختيار من متعدد حسب الموضوع' },
   },
   subjects: {
     english: 'اللغة الإنجليزية',
@@ -30,7 +51,37 @@ const exams: Translation<typeof en> = {
     literature: 'الأدب الإنجليزي',
     geography: 'الجغرافيا',
     commerce: 'التجارة',
+    'reading-writing': 'Reading and Writing',
+    math: 'Math',
+    maths: 'Maths',
+    'english-language': 'English Language',
+    reading: 'Reading',
+    science: 'Science',
+    'calculus-ab': 'Calculus AB',
+    'physics-1': 'Physics 1',
+    'us-history': 'US History',
+    'physical-sciences': 'Physical Sciences',
+    'life-sciences': 'Life Sciences',
+    accounting: 'Accounting',
   },
+  /** What SAT and GCSE practice is and isn't, shown wherever those papers are listed. */
+  notes: {
+    sat: 'هذه أسئلة تدريبية كتبها الذكاء الاصطناعي وتحقّقت منها مراجعة ثانية بالذكاء الاصطناعي، وليست أوراق SAT سابقة. تتبع أقسام اختبار SAT الرقمي وتوقيته، لكنها اختيار من متعدد فقط: قسم Math الحقيقي يتضمن أيضًا أسئلة تكتب فيها إجابتك بنفسك.',
+    act: 'هذه أسئلة تدريبية كتبها الذكاء الاصطناعي وتحقّقت منها مراجعة ثانية بالذكاء الاصطناعي، وليست أوراق ACT سابقة. تتبع أقسام اختبار ACT وعدد أسئلته وتوقيته.',
+    ap: 'هذه أسئلة تدريبية كتبها الذكاء الاصطناعي وتحقّقت منها مراجعة ثانية بالذكاء الاصطناعي، وليست أوراق AP سابقة. تدرّبك على قسم الاختيار من متعدد فقط في كل اختبار AP: الاختبارات الحقيقية تتضمن أيضًا قسمًا للإجابات المكتوبة.',
+    gcse: 'هذه أسئلة تدريبية كتبها الذكاء الاصطناعي وتحقّقت منها مراجعة ثانية بالذكاء الاصطناعي، وليست أوراقًا سابقة. أغلب أوراق GCSE الحقيقية إجابات مكتوبة، لذا استخدم اختبارات الاختيار من متعدد هذه لمراجعة كل موضوع، لا كنسخة من الامتحان.',
+    alevel: 'هذه أسئلة تدريبية كتبها الذكاء الاصطناعي وتحقّقت منها مراجعة ثانية بالذكاء الاصطناعي، وليست أوراقًا سابقة. أغلب أوراق A-level الحقيقية إجابات مكتوبة، لذا استخدم اختبارات الاختيار من متعدد هذه لمراجعة كل موضوع، لا كنسخة من الامتحان.',
+    kcse: 'هذه أسئلة تدريبية كتبها الذكاء الاصطناعي وتحقّقت منها مراجعة ثانية بالذكاء الاصطناعي، وليست أوراقًا سابقة. أغلب أوراق KCSE الحقيقية إجابات مكتوبة، لذا استخدم اختبارات الاختيار من متعدد هذه لمراجعة كل موضوع، لا كنسخة من الامتحان.',
+    nsc: 'هذه أسئلة تدريبية كتبها الذكاء الاصطناعي وتحقّقت منها مراجعة ثانية بالذكاء الاصطناعي، وليست أوراقًا سابقة. أغلب أوراق Matric (NSC) الحقيقية إجابات مكتوبة، لذا استخدم اختبارات الاختيار من متعدد هذه لمراجعة كل موضوع، لا كنسخة من الامتحان.',
+  },
+  /** A study region we have no papers for. */
+  none: {
+    title: 'لا توجد أوراق امتحانات لـ{{country}}',
+    body: 'مدرّسك الذكي وكتبك الدراسية والدورات تعمل مع أي منهج. ويمكنك مع ذلك التدرّب على أوراق بلدان أخرى أدناه.',
+  },
+  otherExams: 'امتحانات أخرى',
+  region: 'بلد الدراسة: {{country}}',
+  change: 'تغيير',
   pickExam: 'اختر امتحانك',
   carryOn: 'أكمل من حيث توقفت',
   pickSubject: 'اختر مادة',
@@ -62,6 +113,8 @@ const exams: Translation<typeof en> = {
     study: { title: 'ادرس', body: 'شاهد كل سؤال مع إجابته وشرحها.' },
     practice: { title: 'تدرّب', body: 'أجب بالسرعة التي تناسبك واعرف إن كنت محقًا بعد كل سؤال.' },
     timed: { title: 'امتحان محدد الوقت', body: 'كالامتحان الحقيقي: {{minutes}} دقيقة، والنتائج في النهاية.' },
+    /** GCSE practice isn't in the exam's format, so its timed mode doesn't say "like the real exam". */
+    timedQuiz: { title: 'اختبار قصير محدد الوقت', body: 'سباق مع الوقت: {{minutes}} دقيقة، والنتائج في النهاية.' },
     history: 'درجاتك',
     historyRow: '{{score}}/{{total}} · {{mode}} · {{date}}',
     modeName: { practice: 'تدريب', timed: 'محدد الوقت' },

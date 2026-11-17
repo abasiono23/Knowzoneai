@@ -87,7 +87,7 @@ async function profile(): Promise<SignedIn> {
 
 export const auth = {
   /** Mock mode signs in straight away; Supabase emails a 6-digit code first. */
-  async signUp(input: { name: string; email: string; password: string; consent: Consent }) {
+  async signUp(input: { name: string; email: string; password: string; consent: Consent; region?: string }) {
     if (USE_MOCKS) {
       const res = await api.register(input);
       return { kind: 'signed-in' as const, ...res };
@@ -96,8 +96,8 @@ export const auth = {
     const { data, error } = await supabase.auth.signUp({
       email: input.email,
       password: input.password,
-      // Read by the API when it creates the profile, so consent is recorded from the start.
-      options: { data: { name: input.name, consent: input.consent } },
+      // Read by the API when it creates the profile, so consent and the study region are recorded from the start.
+      options: { data: { name: input.name, consent: input.consent, ...(input.region && { region: input.region }) } },
     });
     if (error) throw friendly(error);
     // With confirmations on, Supabase hides existing accounts by returning a user with no identities.

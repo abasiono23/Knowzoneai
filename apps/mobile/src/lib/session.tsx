@@ -3,6 +3,7 @@ import { createContext, useCallback, useContext, useEffect, useState, type React
 import { api, ApiError, setSuspendedHandler, TOKEN_KEY, type User } from './api';
 import { auth, isRecovering } from './auth';
 import { USE_MOCKS } from './config';
+import { setCurrentRegion } from './region';
 import { storage } from './storage';
 import { supabase } from './supabase';
 
@@ -20,6 +21,8 @@ const SessionContext = createContext<Session | null>(null);
 export function SessionProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
+  // Plan features and invite messages are built outside React and name the region's exams.
+  setCurrentRegion(user?.region);
 
   const refresh = useCallback(async () => {
     try {

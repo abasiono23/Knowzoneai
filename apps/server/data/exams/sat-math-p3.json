@@ -1,0 +1,583 @@
+{
+ "id": "sat-math-p3",
+ "exam": "sat",
+ "subject": "math",
+ "year": null,
+ "number": 3,
+ "source": "ai",
+ "minutes": 70,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Linear equations in two variables",
+   "q": "The equation 7x − 4y = 28 is graphed in the xy-plane. What is the y-coordinate of the point where the graph crosses the y-axis?",
+   "options": [
+    "4",
+    "−7",
+    "−4",
+    "7"
+   ],
+   "answer": 1,
+   "explanation": "At the y-axis, x = 0, so 7(0) − 4y = 28, which gives −4y = 28 and y = −7. An answer of 7 comes from dropping the negative sign."
+  },
+  {
+   "n": 2,
+   "topic": "Linear equations in two variables",
+   "q": "Line p has equation 3x + 4y = 12. Line q is parallel to line p and passes through the point (8, −1). What is the equation of line q in slope-intercept form?",
+   "options": [
+    "y = −3/4 x + 6",
+    "y = 4/3 x − 35/3",
+    "y = 3/4 x − 7",
+    "y = −3/4 x + 5"
+   ],
+   "answer": 3,
+   "explanation": "The slope of line p is −3/4, so line q also has slope −3/4. Using the point (8, −1), y + 1 = −3/4(x − 8), which simplifies to y = −3/4 x + 5. The form with +6 results from not subtracting 1 after distributing."
+  },
+  {
+   "n": 3,
+   "topic": "Linear equations in two variables",
+   "q": "The system of equations 2x + ky = 10 and 5x − 3y = 12 has no solution, where k is a constant. What is the value of k?",
+   "options": [
+    "−5/6",
+    "−6/5",
+    "6/5",
+    "−15/2"
+   ],
+   "answer": 1,
+   "explanation": "For no solution, the lines must be parallel and distinct. The slopes are −2/k and 5/3, so −2/k = 5/3, which gives k = −6/5. With this value, the two lines are parallel but not the same line."
+  },
+  {
+   "n": 4,
+   "topic": "Lines, angles and triangles",
+   "q": "In triangle PQR, the measure of angle P is 46°, and an exterior angle at vertex Q measures 112°. What is the measure of angle R?",
+   "options": [
+    "134°",
+    "66°",
+    "22°",
+    "68°"
+   ],
+   "answer": 1,
+   "explanation": "An exterior angle of a triangle equals the sum of the two remote interior angles, so 112° = 46° + measure of angle R. Therefore, angle R = 66°. The value 68° is the interior angle at Q, not angle R."
+  },
+  {
+   "n": 5,
+   "topic": "Lines, angles and triangles",
+   "q": "Lines m and n are parallel and are cut by a transversal. A pair of same-side interior angles measures (3x + 10)° and (5x − 30)°. What is the value of x?",
+   "options": [
+    "20",
+    "30",
+    "25",
+    "13.75"
+   ],
+   "answer": 2,
+   "explanation": "Same-side interior angles formed by parallel lines are supplementary, so (3x + 10) + (5x − 30) = 180. This gives 8x − 20 = 180, so 8x = 200 and x = 25. Setting the two angle expressions equal would incorrectly treat them as congruent angles."
+  },
+  {
+   "n": 6,
+   "topic": "Lines, angles and triangles",
+   "q": "In right triangle ABC, angle C is a right angle. The length of hypotenuse AB is 13, and the length of leg BC is 5. Point D lies on AB such that CD is perpendicular to AB. What is the length of CD?",
+   "options": [
+    "60/13",
+    "5",
+    "65/12",
+    "12/5"
+   ],
+   "answer": 0,
+   "explanation": "The other leg has length √(13² − 5²) = √(169 − 25) = 12. The area of the triangle is (1/2)(5)(12) = 30, and also equals (1/2)(13)(CD). Thus 30 = (13/2)(CD), so CD = 60/13."
+  },
+  {
+   "n": 7,
+   "topic": "One-variable data: center and spread",
+   "q": "The ages, in years, of 9 children in a reading club are 7, 8, 8, 9, 10, 11, 11, 12, and 14. What is the median age?",
+   "options": [
+    "12 years",
+    "10 years",
+    "9 years",
+    "11 years"
+   ],
+   "answer": 1,
+   "explanation": "The values are already ordered, and there are 9 values, so the median is the 5th value. The 5th value is 10, so the median age is 10 years."
+  },
+  {
+   "n": 8,
+   "topic": "One-variable data: center and spread",
+   "q": "The numbers of books read by 10 students during summer are 3, 5, 5, 6, 7, 8, 9, 10, 10, and 12. What is the interquartile range of the data?",
+   "options": [
+    "9 books",
+    "5 books",
+    "3 books",
+    "7 books"
+   ],
+   "answer": 1,
+   "explanation": "With 10 ordered values, the lower half is 3, 5, 5, 6, 7, whose median is 5, so Q1 = 5. The upper half is 8, 9, 10, 10, 12, whose median is 10, so Q3 = 10. The interquartile range is 10 − 5 = 5 books; 9 books is the range, not the interquartile range."
+  },
+  {
+   "n": 9,
+   "topic": "Linear functions",
+   "q": "The function f(x) = 2400 − 150x gives the elevation, in feet, of a hiker above sea level x hours after starting a descent. What is the best interpretation of the x-intercept of the graph of y = f(x) in this context?",
+   "options": [
+    "The rate at which the hiker’s elevation decreases",
+    "The hiker’s elevation at the start of the descent",
+    "The hiker’s elevation 1 hour after starting the descent",
+    "The number of hours until the hiker reaches sea level"
+   ],
+   "answer": 3,
+   "explanation": "The x-intercept occurs when f(x) = 0, so 2400 − 150x = 0 and x = 16. This means the hiker reaches sea level after 16 hours, so the x-intercept represents the number of hours until that happens. The starting elevation is the y-intercept, 2400 feet."
+  },
+  {
+   "n": 10,
+   "topic": "Linear functions",
+   "q": "The function f is linear, f(2) = 7, and f(6) = −5. What is the x-coordinate of the x-intercept of the graph of y = f(x)?",
+   "options": [
+    "−3",
+    "−13/3",
+    "13",
+    "13/3"
+   ],
+   "answer": 3,
+   "explanation": "The slope is (−5 − 7)/(6 − 2) = −12/4 = −3. Using f(2) = 7 gives f(x) = −3(x − 2) + 7 = −3x + 13. Setting f(x) = 0 gives 0 = −3x + 13, so x = 13/3; the value 13 is the y-intercept, not the x-intercept."
+  },
+  {
+   "n": 11,
+   "topic": "Linear equations in one variable",
+   "q": "At a bakery, a loaf of bread costs $4.50 and a muffin costs $2.25. Lena buys 3 loaves of bread and some muffins. She spends $22.50 in total. How many muffins does she buy?",
+   "options": [
+    "4",
+    "3",
+    "5",
+    "6"
+   ],
+   "answer": 0,
+   "explanation": "Let m be the number of muffins. Then 3(4.50) + 2.25m = 22.50, so 13.50 + 2.25m = 22.50. Subtracting 13.50 gives 2.25m = 9, and m = 4."
+  },
+  {
+   "n": 12,
+   "topic": "Linear equations in one variable",
+   "q": "Solve for x: 5(x − 3) + 2x = 4(x + 6) − 3",
+   "options": [
+    "2",
+    "12",
+    "18",
+    "8"
+   ],
+   "answer": 1,
+   "explanation": "Distributing gives 5x − 15 + 2x = 4x + 24 − 3, so 7x − 15 = 4x + 21. Subtracting 4x and adding 15 gives 3x = 36, so x = 12. A distribution error such as writing 5x − 3 can lead to 8."
+  },
+  {
+   "n": 13,
+   "topic": "Linear equations in one variable",
+   "q": "A chemist mixes 80 milliliters of a 12% saline solution with x milliliters of a 30% saline solution. The resulting mixture is a 20% saline solution. What is x?",
+   "options": [
+    "48",
+    "64",
+    "80",
+    "32"
+   ],
+   "answer": 1,
+   "explanation": "The 80 mL of 12% solution contains 0.12(80) = 9.6 mL of salt. The equation is 9.6 + 0.30x = 0.20(80 + x). This simplifies to 9.6 + 0.30x = 16 + 0.20x, so 0.10x = 6.4 and x = 64."
+  },
+  {
+   "n": 14,
+   "topic": "Nonlinear functions",
+   "q": "A bacteria population is modeled by P(t) = 250(1.2)ᵗ, where t is the number of hours since the start of an experiment. What is the modeled population after 3 hours?",
+   "options": [
+    "480",
+    "400",
+    "360",
+    "432"
+   ],
+   "answer": 3,
+   "explanation": "Substitute t = 3: P(3) = 250(1.2)³ = 250(1.728) = 432. The value 400 would come from adding the same amount each hour, which is linear growth rather than exponential growth."
+  },
+  {
+   "n": 15,
+   "topic": "Nonlinear functions",
+   "q": "The graph of y = 2(x − 3)² − 8 intersects the x-axis at two points. What is the sum of the x-coordinates of these two points?",
+   "options": [
+    "5",
+    "6",
+    "2",
+    "4"
+   ],
+   "answer": 1,
+   "explanation": "Set y = 0: 2(x − 3)² − 8 = 0, so 2(x − 3)² = 8 and (x − 3)² = 4. Thus x − 3 = 2 or x − 3 = −2, giving x = 5 or x = 1. Their sum is 1 + 5 = 6."
+  },
+  {
+   "n": 16,
+   "topic": "Nonlinear functions",
+   "q": "The function f is defined by f(x) = √(2x + 7). If f(f(x)) = 5, what is x?",
+   "options": [
+    "9",
+    "25",
+    "37",
+    "81"
+   ],
+   "answer": 2,
+   "explanation": "Squaring f(f(x)) = 5 gives 2f(x) + 7 = 25, so 2f(x) = 18 and f(x) = 9. Then √(2x + 7) = 9, so 2x + 7 = 81 and x = 37. Checking gives f(37) = 9 and f(9) = 5."
+  },
+  {
+   "n": 17,
+   "topic": "Circles",
+   "q": "A circle in the xy-plane has a diameter with endpoints (−2, 4) and (6, −2). Which equation represents this circle?",
+   "options": [
+    "(x − 2)² + (y − 1)² = 50",
+    "(x − 2)² + (y − 1)² = 25",
+    "(x − 4)² + (y + 1)² = 25",
+    "(x + 2)² + (y − 4)² = 25"
+   ],
+   "answer": 1,
+   "explanation": "The center is the midpoint of the diameter: ((−2 + 6)/2, (4 + (−2))/2) = (2, 1). The diameter length is √(8² + (−6)²) = 10, so the radius is 5 and the radius squared is 25. Therefore the equation is (x − 2)² + (y − 1)² = 25."
+  },
+  {
+   "n": 18,
+   "topic": "Circles",
+   "q": "The equation x² + y² − 8x + 6y = 24 represents a circle in the xy-plane. What is the radius of the circle?",
+   "options": [
+    "49",
+    "12",
+    "7",
+    "5"
+   ],
+   "answer": 2,
+   "explanation": "Complete the square: x² − 8x = (x − 4)² − 16 and y² + 6y = (y + 3)² − 9. The equation becomes (x − 4)² + (y + 3)² − 25 = 24, so (x − 4)² + (y + 3)² = 49. The radius is √49 = 7."
+  },
+  {
+   "n": 19,
+   "topic": "Equivalent expressions",
+   "q": "Which expression is equivalent to (12x⁴ − 18x³ + 6x²)/(6x²), for x ≠ 0?",
+   "options": [
+    "2x² − 3x + 1",
+    "2x² − 3x + 6",
+    "2x³ − 3x² + x",
+    "2x² − 3x"
+   ],
+   "answer": 0,
+   "explanation": "Divide each term by 6x²: 12x⁴/(6x²) = 2x², −18x³/(6x²) = −3x, and 6x²/(6x²) = 1. The equivalent expression is 2x² − 3x + 1. Omitting the final 1 would lose the constant term."
+  },
+  {
+   "n": 20,
+   "topic": "Equivalent expressions",
+   "q": "Which expression is equivalent to (2a⁻³b²)⁻² for a ≠ 0 and b ≠ 0?",
+   "options": [
+    "a⁶/(4b⁴)",
+    "b⁴/(4a⁶)",
+    "1/(4a⁶b⁴)",
+    "4b⁴/a⁶"
+   ],
+   "answer": 0,
+   "explanation": "Use exponent rules: (2a⁻³b²)⁻² = 2⁻² · a⁶ · b⁻⁴. Since 2⁻² = 1/4 and b⁻⁴ = 1/b⁴, this equals a⁶/(4b⁴). A sign error can incorrectly place b⁴ in the numerator."
+  },
+  {
+   "n": 21,
+   "topic": "Ratios, rates, proportions and units",
+   "q": "A smoothie recipe uses 3 cups of mango chunks for every 5 cups of yogurt. If Priya uses 12 cups of mango chunks, how many cups of yogurt should she use to keep the same ratio?",
+   "options": [
+    "7.2 cups",
+    "24 cups",
+    "20 cups",
+    "15 cups"
+   ],
+   "answer": 2,
+   "explanation": "The ratio of mango to yogurt is 3:5, so 12/3 = 4 batches, and 4 × 5 = 20 cups of yogurt are needed. Multiplying 12 by 3/5 instead gives 7.2 cups, which reverses the ratio."
+  },
+  {
+   "n": 22,
+   "topic": "Ratios, rates, proportions and units",
+   "q": "A shuttle bus travels 8 miles in 12 minutes. At this rate, how many miles will it travel in 45 minutes?",
+   "options": [
+    "24 miles",
+    "67.5 miles",
+    "32 miles",
+    "30 miles"
+   ],
+   "answer": 3,
+   "explanation": "The bus travels 8/12 = 2/3 mile per minute, so in 45 minutes it travels (2/3) × 45 = 30 miles. Using 8 miles per 15 minutes would give 24 miles, but the given rate is 8 miles per 12 minutes."
+  },
+  {
+   "n": 23,
+   "topic": "Ratios, rates, proportions and units",
+   "q": "A train travels at a constant speed of 88 feet per second. How many miles does it travel in 25 minutes? Use 1 mile = 5,280 feet.",
+   "options": [
+    "25 miles",
+    "1,500 miles",
+    "26.4 miles",
+    "15 miles"
+   ],
+   "answer": 0,
+   "explanation": "Since 88 feet per second equals 5,280 feet per minute, the train travels 1 mile each minute, so in 25 minutes it travels 25 miles. Using 5,000 feet per mile would produce 26.4 miles."
+  },
+  {
+   "n": 24,
+   "topic": "Nonlinear equations and systems",
+   "q": "The function f is defined by f(x) = x² − 6x + 5. What are the x-intercepts of the graph of y = f(x) in the xy-plane?",
+   "options": [
+    "-1 and -5",
+    "-1 and 5",
+    "1 and 5",
+    "1 and -5"
+   ],
+   "answer": 2,
+   "explanation": "Set f(x) = 0: x² − 6x + 5 factors as (x − 1)(x − 5) = 0, so the x-intercepts are 1 and 5. The signs of the factors are easy to mishandle, giving -1 or -5 incorrectly."
+  },
+  {
+   "n": 25,
+   "topic": "Nonlinear equations and systems",
+   "q": "What is the solution to the equation √(2x + 7) = x + 2?",
+   "options": [
+    "x = -3",
+    "x = -1",
+    "x = 3",
+    "x = 1"
+   ],
+   "answer": 3,
+   "explanation": "Squaring both sides gives 2x + 7 = x² + 4x + 4, so x² + 2x − 3 = 0 and (x + 3)(x − 1) = 0. Checking in the original equation rejects x = -3, because its right side is negative, leaving x = 1."
+  },
+  {
+   "n": 26,
+   "topic": "Nonlinear equations and systems",
+   "q": "The system of equations x + y = 7 and x² + y² = 25 has two real solutions. What is the value of xy?",
+   "options": [
+    "12",
+    "24",
+    "6",
+    "-12"
+   ],
+   "answer": 0,
+   "explanation": "Use (x + y)² = x² + y² + 2xy. Substituting gives 49 = 25 + 2xy, so 2xy = 24 and xy = 12."
+  },
+  {
+   "n": 27,
+   "topic": "Probability and conditional probability",
+   "q": "A middle school has 240 students. Of these, 90 play a musical instrument, and 60 of the students who play an instrument also play a sport. What is the probability that a student chosen at random from the students who play an instrument also plays a sport?",
+   "options": [
+    "2/3",
+    "3/8",
+    "1/3",
+    "1/4"
+   ],
+   "answer": 0,
+   "explanation": "The condition restricts the sample to the 90 students who play an instrument. Of those, 60 also play a sport, so the probability is 60/90 = 2/3. The fraction 1/4 would come from using all 240 students instead of the instrument players."
+  },
+  {
+   "n": 28,
+   "topic": "Probability and conditional probability",
+   "q": "At a community center, 180 members were surveyed about whether they volunteer. Of the 70 high school students, 40 volunteer and 30 do not. Of the 110 members who are not high school students, 30 volunteer and 80 do not. What is the probability that a member chosen at random from those who volunteer is a high school student?",
+   "options": [
+    "3/7",
+    "4/7",
+    "7/18",
+    "2/9"
+   ],
+   "answer": 1,
+   "explanation": "There are 40 + 30 = 70 volunteers in total, and 40 of them are high school students. Therefore the conditional probability is 40/70 = 4/7. Using 40/180 would count all members rather than only volunteers."
+  },
+  {
+   "n": 29,
+   "topic": "Area and volume",
+   "q": "A rectangular garden measures 18 feet by 12 feet. A 3-foot-wide walkway is placed around the outside of the garden along all four sides. What is the total area, in square feet, of the garden and walkway together?",
+   "options": [
+    "315 square feet",
+    "324 square feet",
+    "216 square feet",
+    "432 square feet"
+   ],
+   "answer": 3,
+   "explanation": "A 3-foot walkway on all four sides adds 6 feet to both the length and width, giving outside dimensions 24 feet by 18 feet. The total area is 24 × 18 = 432 square feet. Adding only 3 feet to each outer dimension gives 21 × 15 = 315, which accounts for the walkway on only two sides in each direction."
+  },
+  {
+   "n": 30,
+   "topic": "Area and volume",
+   "q": "A concrete block is a right rectangular prism with dimensions 18 inches by 12 inches by 8 inches. A cylindrical hole with diameter 6 inches is drilled through the block from top to bottom, with height equal to the block's height of 8 inches. What is the volume of the remaining block, in cubic inches? Use π ≈ 3.14.",
+   "options": [
+    "226.08 cubic inches",
+    "1,954.08 cubic inches",
+    "823.68 cubic inches",
+    "1,501.92 cubic inches"
+   ],
+   "answer": 3,
+   "explanation": "The block volume is 18 × 12 × 8 = 1,728 cubic inches. The cylindrical hole has radius 3 inches and height 8 inches, so its volume is π × 3² × 8 = 72π ≈ 226.08 cubic inches. Subtract to get 1,728 − 226.08 = 1,501.92 cubic inches."
+  },
+  {
+   "n": 31,
+   "topic": "Linear inequalities",
+   "q": "An online store offers free shipping when the order total after a $15 coupon is at least $60. If the original order total is d dollars and free shipping is available after the coupon, which inequality represents all possible values of d?",
+   "options": [
+    "d ≤ 75",
+    "d ≥ 60",
+    "d ≥ 45",
+    "d ≥ 75"
+   ],
+   "answer": 3,
+   "explanation": "The coupon reduces the order total by $15, so the condition is d − 15 ≥ 60. Adding 15 to both sides gives d ≥ 75. The inequality d ≥ 45 comes from subtracting 15 from 60 instead of adding 15 to both sides, and d ≤ 75 reverses the inequality sign."
+  },
+  {
+   "n": 32,
+   "topic": "Linear inequalities",
+   "q": "A phone plan has a monthly fee of $9.50 plus $0.12 for each minute of calls. Kim wants her monthly bill to be no more than $22.50. What is the greatest whole number of minutes she can use?",
+   "options": [
+    "109 minutes",
+    "187 minutes",
+    "188 minutes",
+    "108 minutes"
+   ],
+   "answer": 3,
+   "explanation": "The inequality is 9.50 + 0.12m ≤ 22.50. Subtracting 9.50 gives 0.12m ≤ 13.00, so m ≤ 108.333..., and the greatest whole number of minutes is 108. The value 187 minutes comes from ignoring the monthly fee."
+  },
+  {
+   "n": 33,
+   "topic": "Linear inequalities",
+   "q": "For an experiment, a solution’s temperature T, in degrees Celsius, must satisfy −12 ≤ 3(T − 4) < 18. Which inequality represents all possible values of T?",
+   "options": [
+    "0 ≤ T < 10",
+    "−8 ≤ T < 2",
+    "−4 ≤ T < 6",
+    "0 ≤ T ≤ 10"
+   ],
+   "answer": 0,
+   "explanation": "Distribute to get −12 ≤ 3T − 12 < 18. Adding 12 to all parts gives 0 ≤ 3T < 30, and dividing by 3 gives 0 ≤ T < 10. Including the endpoint 10 would give 0 ≤ T ≤ 10, which is not correct because the original upper bound is strict."
+  },
+  {
+   "n": 34,
+   "topic": "Inference from samples and margin of error",
+   "q": "A random sample of 250 commuters in a city found a mean daily commute time of 34 minutes. The margin of error for a 95% confidence interval is 2.5 minutes. Which statement is best supported by this interval?",
+   "options": [
+    "We can be 95% confident that the mean daily commute time for all commuters in the city is between 31.5 and 36.5 minutes.",
+    "A randomly selected commuter has a 95% chance of having a commute time between 31.5 and 36.5 minutes.",
+    "The true mean commute time for all commuters is exactly 34 minutes.",
+    "Exactly 95% of commuters in the city have commute times between 31.5 and 36.5 minutes."
+   ],
+   "answer": 0,
+   "explanation": "The interval is 34 − 2.5 to 34 + 2.5, or 31.5 to 36.5 minutes, and it estimates the population mean rather than individual commute times. Therefore, we are 95% confident that the mean commute time for all commuters in the city is in this interval. Statements about 95% of individual commuters misinterpret the confidence interval."
+  },
+  {
+   "n": 35,
+   "topic": "Inference from samples and margin of error",
+   "q": "A poll using a random sample of 600 voters reports a margin of error of 4 percentage points at 95% confidence. A similar poll uses a random sample of 2,400 voters, with the same confidence level and about the same sample proportion. What margin of error is expected?",
+   "options": [
+    "4 percentage points",
+    "1 percentage point",
+    "8 percentage points",
+    "2 percentage points"
+   ],
+   "answer": 3,
+   "explanation": "For a sample proportion, margin of error is proportional to 1/√n. Since 2,400 is 4 × 600, the margin of error is divided by √4 = 2, so 4 ÷ 2 = 2 percentage points. Dividing by 4 instead would give 1 percentage point, which is too small."
+  },
+  {
+   "n": 36,
+   "topic": "Systems of two linear equations",
+   "q": "At a school concert, adult tickets cost $12 each and student tickets cost $7 each. A total of 90 tickets were sold for $815. How many adult tickets were sold?",
+   "options": [
+    "42",
+    "45",
+    "37",
+    "53"
+   ],
+   "answer": 2,
+   "explanation": "Using a + s = 90 and 12a + 7s = 815, substitute s = 90 − a: 12a + 7(90 − a) = 815. This simplifies to 5a + 630 = 815, so a = 37. The value 53 is the number of student tickets, not adult tickets."
+  },
+  {
+   "n": 37,
+   "topic": "Systems of two linear equations",
+   "q": "At a bakery, 3 bagels and 2 muffins cost $11.50. At the same prices, 5 bagels and 4 muffins cost $20.50. What is the cost of one bagel?",
+   "options": [
+    "$2.75",
+    "$2.00",
+    "$3.00",
+    "$2.50"
+   ],
+   "answer": 3,
+   "explanation": "Doubling 3b + 2m = 11.50 gives 6b + 4m = 23.00. Subtracting 5b + 4m = 20.50 gives b = 2.50, so one bagel costs $2.50. The $2.00 value is the cost of one muffin."
+  },
+  {
+   "n": 38,
+   "topic": "Systems of two linear equations",
+   "q": "The system of equations 3x − 5y = 12 and ax + by = 36, where a and b are constants, has infinitely many solutions. What is a + b?",
+   "options": [
+    "−6",
+    "−24",
+    "24",
+    "6"
+   ],
+   "answer": 0,
+   "explanation": "For infinitely many solutions, ax + by = 36 must be a multiple of 3x − 5y = 12. Multiplying by 3 gives 9x − 15y = 36, so a = 9 and b = −15; therefore a + b = −6. Using b = 15 by mistake gives 24."
+  },
+  {
+   "n": 39,
+   "topic": "Right triangles and trigonometry",
+   "q": "In a right triangle, the two legs have lengths 8 and 15. What is the value of sin θ, where θ is the smaller acute angle of the triangle?",
+   "options": [
+    "8/17",
+    "15/8",
+    "8/15",
+    "15/17"
+   ],
+   "answer": 0,
+   "explanation": "The hypotenuse is √(8² + 15²) = √289 = 17. The smaller acute angle is opposite the shorter leg, so sin θ = 8/17. The value 15/17 would be the sine of the larger acute angle."
+  },
+  {
+   "n": 40,
+   "topic": "Right triangles and trigonometry",
+   "q": "A security camera is mounted 75 feet above the ground. A gate is 100 feet horizontally from the point on the ground directly below the camera. What is the angle of depression from the camera to the gate, to the nearest degree?",
+   "options": [
+    "49°",
+    "31°",
+    "37°",
+    "53°"
+   ],
+   "answer": 2,
+   "explanation": "The angle of depression is measured below the horizontal, so the opposite side is 75 ft and the adjacent side is 100 ft. Thus tan θ = 75/100 = 0.75, and θ ≈ 36.9°, which rounds to 37°. The angle 53° is the complement and is not the angle with the horizontal."
+  },
+  {
+   "n": 41,
+   "topic": "Percentages",
+   "q": "At a food drive, 640 cans were collected on Saturday. This was 80% of the total number of cans collected over the weekend. What was the total number of cans collected over the weekend?",
+   "options": [
+    "768",
+    "800",
+    "720",
+    "512"
+   ],
+   "answer": 1,
+   "explanation": "Since 640 is 80% of the weekend total T, the equation is 0.80T = 640, so T = 800. The value 512 comes from taking 80% of 640, which reverses the relationship, and 768 comes from increasing 640 by 20% instead of solving for the original total."
+  },
+  {
+   "n": 42,
+   "topic": "Percentages",
+   "q": "The number of members at a community gym decreased by 20% from January to February and then increased by 30% from February to March. If there were 520 members in March, how many members were there in January?",
+   "options": [
+    "400",
+    "520",
+    "500",
+    "650"
+   ],
+   "answer": 2,
+   "explanation": "Let J be the January membership. February had 0.8J members, and March had 1.3(0.8J) = 1.04J members. Because 1.04J = 520, J = 500; the value 650 results from undoing only the 20% decrease and ignoring the 30% increase."
+  },
+  {
+   "n": 43,
+   "topic": "Percentages",
+   "q": "A museum’s annual attendance increased by 30% from 2022 to 2023 and then decreased by 25% from 2023 to 2024. If attendance in 2024 was 195,000, what was the attendance in 2022?",
+   "options": [
+    "200,000",
+    "150,000",
+    "260,000",
+    "170,625"
+   ],
+   "answer": 0,
+   "explanation": "If P is the 2022 attendance, then the 2024 attendance is P(1.30)(0.75) = 0.975P. Solving 0.975P = 195,000 gives P = 200,000. The value 150,000 comes from undoing only the 30% increase, and 260,000 comes from undoing only the 25% decrease."
+  },
+  {
+   "n": 44,
+   "topic": "Two-variable data: models and scatterplots",
+   "q": "A scatterplot shows the value y, in dollars, of a delivery van x years after it was purchased. A linear model for the data is y = 28,000 − 3,500x. Which statement best describes the meaning of 3,500 in this model?",
+   "options": [
+    "The model predicts that the van’s value increases by $3,500 each year.",
+    "The model predicts that the van’s value decreases by $3,500 each year.",
+    "The model predicts that the van’s value decreases by $28,000 each year.",
+    "The model predicts that the van’s value when new is $3,500."
+   ],
+   "answer": 1,
+   "explanation": "In y = 28,000 − 3,500x, the coefficient of x gives the predicted change in y for each 1-unit increase in x. Since x is years and y is dollars, the van’s predicted value drops by $3,500 per year. The value 28,000 is the predicted value when the van is new, not 3,500."
+  }
+ ]
+}

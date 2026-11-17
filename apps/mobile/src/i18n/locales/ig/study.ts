@@ -199,7 +199,7 @@ const study: Translation<typeof en> = {
     topicLabel: 'Isiokwu',
     topicPlaceholder: 'dịka Otú ọgwụ mgbochi si arụ ọrụ',
     focusLabel: 'Ihe ọ bụla kpọmkwem? (ọ bụghị iwu)',
-    focusPlaceholder: 'dịka maka WAEC, lekwasị anya na mgbakọ',
+    focusPlaceholder: 'dịka maka {{exam}}, lekwasị anya na mgbakọ',
     popular: 'NDỊ A MA AMA UGBU A',
     ideas: {
       photosynthesis: 'Photosynthesis',
@@ -337,7 +337,7 @@ const study: Translation<typeof en> = {
     subject: 'Isiokwu ọmụmụ',
     folderName: 'Aha folda',
     tags: 'Mkpado',
-    tagsPlaceholder: 'dịka WAEC, term 2, ngụgharị',
+    tagsPlaceholder: 'dịka {{exam}}, term 2, ngụgharị',
     tagsHint: 'Jiri rikoma kewaa mkpado',
     created: 'E mepụtara ya {{date}} site na {{source}}',
   },

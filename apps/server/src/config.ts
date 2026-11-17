@@ -30,6 +30,9 @@ const Env = z.object({
   // The moving clip that opens a textbook video summary on a paid plan (about $0.80 for 8 seconds).
   // Set to "off" to stop making clips without a new release.
   OPENAI_MODEL_VIDEO: z.string().default('sora-2'),
+  // Vultr Serverless Inference (open models, OpenAI-compatible), used for content written in bulk and stored
+  // in the backend, such as course summaries. Without a key the server runs; Vultr features answer 503 "not configured".
+  VULTR_INFERENCE_API_KEY: z.string().optional(),
 
   // Payments (Flutterwave). Without a secret key the server runs, and checkout answers 503 "not configured".
   /** FLWSECK_TEST-… for testing, FLWSECK-… for real payments. */

@@ -1,7 +1,10 @@
+import { readFileSync, readdirSync } from 'node:fs';
+import { join, resolve } from 'node:path';
+
 import { afterAll, beforeAll, describe, expect, it } from 'vitest';
 
 import { useCountries } from '../src/services/books.js';
-import { useSummaries, type SummaryLibrary } from '../src/services/summaries.js';
+import { COURSES, LIBRARIES, OVERVIEW, SummaryLibrarySchema, courseLibrary, useSummaries, type SummaryLibrary } from '../src/services/summaries.js';
 import { http } from './helpers.js';
 
 const text = (title: string) => ({
@@ -123,8 +126,8 @@ describe('subject summaries', () => {
     expect(ids(ms.body)[0]).toEqual(['theory', true]);
     const one = await http().get('/books/summaries/uni-law/torts').set('X-Language', 'fr').expect(200);
     expect(one.body.summary).toMatchObject({ title: 'Torts', translated: false });
-    // Courses with no summaries yet, and odd names, have none; school shelves never read a course.
-    for (const c of ['mechanical-engineering', '..%2Fsecret'])
+    // Courses that aren't on the list, and odd names, have none; school shelves never read a course.
+    for (const c of ['underwater-basket-weaving', '..%2Fsecret'])
       expect((await http().get(`/books/courses/${c}/summaries?stage=college`).expect(200)).body).toEqual({
         translated: false,
         courses: [],
@@ -145,5 +148,44 @@ describe('subject summaries', () => {
     expect(course.body.summary.title).toBe('All of Mathematics');
     await http().get('/books/summaries/mathematics/nope').expect(404);
     await http().get('/books/summaries/..%2Fsecret/overview').expect(404);
+  });
+});
+
+describe('the summary files shipped with the server', () => {
+  const dir = resolve(import.meta.dirname, '../data/summaries');
+  const files = readdirSync(dir).filter((f) => f.endsWith('.json'));
+
+  it('all load with the schema the server reads them with', () => {
+    expect(files.length).toBeGreaterThanOrEqual(LIBRARIES.length);
+    for (const file of files) {
+      const lib = SummaryLibrarySchema.parse(JSON.parse(readFileSync(join(dir, file), 'utf8')));
+      const where = (what: string) => `${file}: ${what}`;
+      expect(`${lib.id}.json`, where('id')).toBe(file);
+      const course = lib.id.startsWith('uni-');
+      // Every file is one the server serves: a school subject's library or a course on the app's list.
+      if (course) expect(COURSES.map(courseLibrary), where('course')).toContain(lib.id);
+      else expect(LIBRARIES, where('library')).toContain(lib.id);
+      expect(lib.name.en, where('English name')).toBeTruthy();
+      expect(lib.overview.en, where('English overview')).toBeTruthy();
+      expect(lib.topics.length, where('topics')).toBeGreaterThanOrEqual(15);
+      const ids = lib.topics.map((t) => t.id);
+      expect(new Set(ids).size, where('repeated topic id')).toBe(ids.length);
+      expect(ids, where('topic id')).not.toContain(OVERVIEW);
+      for (const t of lib.topics) {
+        expect(t.text.en, where(`${t.id} in English`)).toBeTruthy();
+        expect(course ? ['intro', 'core', 'masters'] : ['lower', 'upper'], where(`${t.id} stage`)).toContain(t.stage);
+      }
+    }
+  });
+
+  it('serves a course from its file', async () => {
+    useSummaries(null);
+    try {
+      const { body } = await http().get('/books/courses/law/summaries?stage=undergraduate').expect(200);
+      expect(body.courses[0]).toMatchObject({ library: 'uni-law', libraryName: 'Law' });
+      expect(body.topics.length).toBeGreaterThanOrEqual(15);
+    } finally {
+      useSummaries([lib('mathematics', 'Mathematics'), lib('physics', 'Physics'), lib('chemistry', 'Chemistry')]);
+    }
   });
 });

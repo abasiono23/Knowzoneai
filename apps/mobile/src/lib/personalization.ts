@@ -1,6 +1,8 @@
 import type { Ionicons } from '@expo/vector-icons';
 import i18n, { formatDate } from '@/i18n';
 
+import { DEFAULT_REGION, examNames } from './region';
+
 type Icon = keyof typeof Ionicons.glyphMap;
 
 export type LearnerType = 'school' | 'university' | 'exam' | 'professional' | 'lifelong';
@@ -23,6 +25,8 @@ export type Personalization = {
   goals: string[];
   formats: string[];
   language: string;
+  /** Study region (ISO country code, "ZZ" = another country); null until the region step is answered. */
+  region: string | null;
   dailyMinutes: number;
   reminders: {
     enabled: boolean;
@@ -50,6 +54,7 @@ export const EMPTY_PROFILE: Personalization = {
   goals: [],
   formats: [],
   language: 'en',
+  region: null,
   dailyMinutes: 15,
   reminders: { enabled: true, time: '19:00', days: [1, 2, 3, 4, 5, 6, 0], types: ['daily', 'streak', 'exam'] },
   teacherRole: null,
@@ -58,9 +63,13 @@ export const EMPTY_PROFILE: Personalization = {
   firstClass: null,
 };
 
-/** Learner wizard order for screens 18–30. Review is the last numbered step. */
+/**
+ * Learner wizard order for screens 18–30. Review is the last numbered step. The study region comes
+ * early because the exams offered later depend on it.
+ */
 const LEARNER_STEPS = [
   'learner-type',
+  'region',
   'age',
   'education',
   'pathway',
@@ -78,6 +87,7 @@ const LEARNER_STEPS = [
 /** Educator branch: who they teach and what they need, then their first class. */
 const TEACHER_STEPS = [
   'learner-type',
+  'region',
   'teacher-role',
   'teach-levels',
   'subjects',
@@ -90,11 +100,18 @@ const TEACHER_STEPS = [
 
 export type Step = (typeof LEARNER_STEPS)[number] | (typeof TEACHER_STEPS)[number];
 
-export const stepsFor = (type: UserType | null): readonly Step[] =>
-  type === 'teacher' ? TEACHER_STEPS : LEARNER_STEPS;
-export const stepNumber = (step: Step, type: UserType | null) => stepsFor(type).indexOf(step) + 1;
-export const nextStep = (step: Step, type: UserType | null): Step | 'plan' => {
-  const steps = stepsFor(type);
+/**
+ * `askRegion` is false for accounts that already chose their country on the sign-up form: they skip
+ * the region step. Google and Apple sign-ups never saw that form, so they get it.
+ */
+export const stepsFor = (type: UserType | null, askRegion = true): readonly Step[] => {
+  const steps: readonly Step[] = type === 'teacher' ? TEACHER_STEPS : LEARNER_STEPS;
+  return askRegion ? steps : steps.filter((s) => s !== 'region');
+};
+export const stepNumber = (step: Step, type: UserType | null, askRegion = true) =>
+  stepsFor(type, askRegion).indexOf(step) + 1;
+export const nextStep = (step: Step, type: UserType | null, askRegion = true): Step | 'plan' => {
+  const steps = stepsFor(type, askRegion);
   return steps[steps.indexOf(step) + 1] ?? 'plan';
 };
 
@@ -293,49 +310,129 @@ export const PATHWAYS: Record<LearnerType, { tracks: Option[] }> = {
 export const NO_EXAM = 'none';
 
 /** Exam names (with `label`) stay as written; descriptive options are translated. */
-const exams = (items: { id: string; label?: string }[]): Option[] =>
-  localized(items, (o) => `examOptions.${o.id}`, true);
+type ExamOption = { id: string; label?: string };
+const exams = (items: ExamOption[]): Option[] => localized(items, (o) => `examOptions.${o.id}`, true);
 
-export const EXAMS: Record<LearnerType, Option[]> = {
-  school: exams([
-    { id: 'bece', label: 'BECE' },
-    { id: 'waec', label: 'WAEC (WASSCE)' },
-    { id: 'neco', label: 'NECO' },
-    { id: 'jamb', label: 'JAMB (UTME)' },
-    { id: 'igcse', label: 'IGCSE' },
-    { id: 'sat', label: 'SAT' },
-    { id: 'school-exams' },
-  ]),
-  exam: exams([
-    { id: 'jamb', label: 'JAMB (UTME)' },
-    { id: 'waec', label: 'WAEC (WASSCE)' },
-    { id: 'neco', label: 'NECO' },
-    { id: 'post-utme', label: 'Post-UTME' },
-    { id: 'gce', label: 'GCE' },
-    { id: 'ielts', label: 'IELTS' },
-    { id: 'toefl', label: 'TOEFL' },
-    { id: 'sat', label: 'SAT' },
-    { id: 'a-levels', label: 'A-Levels / JUPEB' },
-  ]),
-  university: exams([
+const X = {
+  bece: { id: 'bece', label: 'BECE' },
+  waec: { id: 'waec', label: 'WAEC (WASSCE)' },
+  neco: { id: 'neco', label: 'NECO' },
+  jamb: { id: 'jamb', label: 'JAMB (UTME)' },
+  postUtme: { id: 'post-utme', label: 'Post-UTME' },
+  gce: { id: 'gce', label: 'GCE' },
+  igcse: { id: 'igcse', label: 'IGCSE' },
+  sat: { id: 'sat', label: 'SAT' },
+  act: { id: 'act', label: 'ACT' },
+  ap: { id: 'ap', label: 'AP exams' },
+  ged: { id: 'ged', label: 'GED' },
+  gcse: { id: 'gcse', label: 'GCSE' },
+  aLevels: { id: 'a-levels', label: 'A-levels' },
+  aLevelsJupeb: { id: 'a-levels', label: 'A-Levels / JUPEB' },
+  kcse: { id: 'kcse', label: 'KCSE' },
+  nsc: { id: 'nsc', label: 'NSC (Matric)' },
+  ib: { id: 'ib', label: 'IB Diploma' },
+  ielts: { id: 'ielts', label: 'IELTS' },
+  toefl: { id: 'toefl', label: 'TOEFL' },
+  gre: { id: 'gre', label: 'GRE' },
+  gmat: { id: 'gmat', label: 'GMAT' },
+  schoolExams: { id: 'school-exams' },
+} satisfies Record<string, ExamOption>;
+
+/**
+ * The exams school pupils and exam candidates choose from, by study region: each country's own
+ * exams first, then the international ones students there commonly sit. Nigeria's lists are the
+ * ones the app has always had. `other` is every region that isn't named.
+ */
+const WASSCE_SCHOOL = [X.bece, X.waec, X.igcse, X.sat, X.schoolExams];
+const WASSCE_EXAM = [X.waec, X.gce, X.ielts, X.toefl, X.sat, X.aLevels];
+const SCHOOL_EXAMS: Record<string, ExamOption[]> = {
+  NG: [X.bece, X.waec, X.neco, X.jamb, X.igcse, X.sat, X.schoolExams],
+  GH: WASSCE_SCHOOL,
+  SL: WASSCE_SCHOOL,
+  LR: WASSCE_SCHOOL,
+  GM: WASSCE_SCHOOL,
+  US: [X.sat, X.act, X.ap, X.schoolExams],
+  GB: [X.gcse, X.aLevels, X.schoolExams],
+  KE: [X.kcse, X.igcse, X.sat, X.schoolExams],
+  ZA: [X.nsc, X.igcse, X.sat, X.schoolExams],
+  other: [X.igcse, X.ib, X.sat, X.schoolExams],
+};
+const CANDIDATE_EXAMS: Record<string, ExamOption[]> = {
+  NG: [X.jamb, X.waec, X.neco, X.postUtme, X.gce, X.ielts, X.toefl, X.sat, X.aLevelsJupeb],
+  GH: WASSCE_EXAM,
+  SL: WASSCE_EXAM,
+  LR: WASSCE_EXAM,
+  GM: WASSCE_EXAM,
+  US: [X.sat, X.act, X.ap, X.ged, X.toefl],
+  GB: [X.gcse, X.aLevels, X.ielts, X.sat],
+  KE: [X.kcse, X.ielts, X.toefl, X.sat, X.aLevels],
+  ZA: [X.nsc, X.ielts, X.toefl, X.sat],
+  other: [X.igcse, X.aLevels, X.ib, X.sat, X.ielts, X.toefl],
+};
+/** Professional bodies: ICAN and CIPM are Nigeria's; the rest are sat everywhere. */
+const PROFESSIONAL_EXAMS = (region: string): ExamOption[] => [
+  ...(region === DEFAULT_REGION
+    ? [{ id: 'ican', label: 'ICAN' }]
+    : region === 'US'
+      ? [{ id: 'cpa', label: 'CPA' }]
+      : []),
+  { id: 'acca', label: 'ACCA' },
+  { id: 'cfa', label: 'CFA' },
+  { id: 'pmp', label: 'PMP' },
+  { id: 'cloud' },
+  ...(region === DEFAULT_REGION ? [{ id: 'cipm', label: 'CIPM (HR)' }] : []),
+  X.ielts,
+];
+
+const examLists = new Map<string, Option[]>();
+/** The exams to offer a learner of this type in this study region (no region = Nigeria, as before regions). */
+export function examsFor(type: LearnerType, region: string | null | undefined): Option[] {
+  const r = region ?? DEFAULT_REGION;
+  const key = `${type}.${r}`;
+  let list = examLists.get(key);
+  if (!list) {
+    list = exams(
+      type === 'school'
+        ? (SCHOOL_EXAMS[r] ?? SCHOOL_EXAMS.other!)
+        : type === 'exam'
+          ? (CANDIDATE_EXAMS[r] ?? CANDIDATE_EXAMS.other!)
+          : type === 'university'
+            ? [{ id: 'semester' }, { id: 'professional' }, X.ielts, X.toefl, X.gre, X.gmat]
+            : type === 'professional'
+              ? PROFESSIONAL_EXAMS(r)
+              : [X.ielts, { id: 'language-cert' }, { id: 'online-cert' }],
+    );
+    examLists.set(key, list);
+  }
+  return list;
+}
+
+/** Every exam option there is, to name one chosen under another type or region. */
+const ALL_EXAMS = exams(
+  [
+    ...Object.values(X),
+    ...PROFESSIONAL_EXAMS(DEFAULT_REGION),
+    ...PROFESSIONAL_EXAMS('US'),
     { id: 'semester' },
     { id: 'professional' },
-    { id: 'ielts', label: 'IELTS' },
-    { id: 'toefl', label: 'TOEFL' },
-    { id: 'gre', label: 'GRE' },
-    { id: 'gmat', label: 'GMAT' },
-  ]),
-  professional: exams([
-    { id: 'ican', label: 'ICAN' },
-    { id: 'acca', label: 'ACCA' },
-    { id: 'cfa', label: 'CFA' },
-    { id: 'pmp', label: 'PMP' },
-    { id: 'cloud' },
-    { id: 'cipm', label: 'CIPM (HR)' },
-    { id: 'ielts', label: 'IELTS' },
-  ]),
-  lifelong: exams([{ id: 'ielts', label: 'IELTS' }, { id: 'language-cert' }, { id: 'online-cert' }]),
-};
+    { id: 'language-cert' },
+    { id: 'online-cert' },
+  ].filter((o, i, all) => all.findIndex((x) => x.id === o.id) === i),
+);
+/** An exam goal's name: as this learner's own list writes it, else as any list does. */
+export const examLabel = (id: string, type: LearnerType, region: string | null | undefined) =>
+  (examsFor(type, region).find((e) => e.id === id) ?? ALL_EXAMS.find((e) => e.id === id))?.label ?? id;
+
+/**
+ * Two or three exams to name in a line like "Preparing for JAMB, WAEC, IELTS and more", for the
+ * region (the device's guess before the student has chosen one).
+ */
+export function examExamples(region: string | null | undefined) {
+  const r = region ?? DEFAULT_REGION;
+  if (r === DEFAULT_REGION) return 'JAMB, WAEC, IELTS';
+  const own = examNames(r);
+  return [...(own.length ? own.slice(0, 2) : ['IGCSE', 'SAT']), 'IELTS'].join(', ');
+}
 
 const SUBJECTS_BY_TRACK: Record<string, string[]> = {
   science: [

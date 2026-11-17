@@ -770,7 +770,7 @@ const help: Translation<typeof en> = {
             body: ['Matokeo ya AI yanaweza:'],
             bullets: [
               'Kuwa na makosa ya ukweli, hasa katika hesabu, tarehe na takwimu',
-              'Kukosa maelezo ya mtaala wako mahususi au bodi ya mitihani (WAEC, NECO, JAMB)',
+              'Kukosa maelezo ya mtaala wako mahususi au bodi ya mitihani (WAEC, SAT, GCSE…)',
               'Kusoma vibaya mwandiko wa mkono, picha zisizo wazi au michoro tata',
               'Kutojua kuhusu matukio ya hivi karibuni sana au mabadiliko ya mtaala',
               'Kuonekana na uhakika hata ikiwa imekosea',

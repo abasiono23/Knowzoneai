@@ -70,6 +70,8 @@ const billing: Translation<typeof en> = {
     studyPlans: 'Ètò ẹ̀kọ́ ti ara ẹni',
     insights: 'Òye ìlọsíwájú tó jinlẹ̀ sí i',
     examPapers: 'Ìwé ìdánrawò WAEC, NECO àti JAMB kíkún',
+    examPapersFor: 'Ìwé ìdánrawò {{exams}} kíkún',
+    examPapersAny: 'Ìwé ìdánrawò ìdánwò kíkún',
     library: 'Ibi ìkàwé ẹ̀kọ́ àti fódà tó tóbi jù',
     priority: 'Iṣẹ́ ìṣáájú nígbà tí ọwọ́ bá dí',
     everythingPlus: 'Gbogbo ohun tó wà nínú Plus',
@@ -187,6 +189,8 @@ const billing: Translation<typeof en> = {
       PRO: {
         whoQ: 'Ta ni Pro wà fún?',
         whoA: 'Àwọn akẹ́kọ̀ọ́ tó ń múra fún WAEC, NECO tàbí JAMB tí wọ́n ń dánrawò lójoojúmọ́ tí wọ́n sì fẹ́ ìwé ìdánwò kíkún bí ti àtijọ́.',
+        whoAFor: 'Àwọn akẹ́kọ̀ọ́ tó ń múra fún {{exams}} tí wọ́n ń dánrawò lójoojúmọ́ tí wọ́n sì fẹ́ àwọn ìwé ìdánrawò kíkún.',
+        whoAAny: 'Àwọn akẹ́kọ̀ọ́ tó ń dánrawò lójoojúmọ́ tí wọ́n sì fẹ́ lo olùkọ́ AI dé ibi tó ga jù, pẹ̀lú àkọ́kọ́ nígbà tí ọwọ́ rẹ̀ bá dí.',
         fairQ: 'Kí ni “ìlò tó tọ́” túmọ̀ sí?',
         fairA:
           'Ìbéèrè olùkọ́ tó tó {{questions}} lójoojúmọ́ tó fún ẹ̀kọ́ líle. Ó ń dènà lílo ẹ̀rọ aládàáṣe tàbí pínpín àkọọ́lẹ̀.',

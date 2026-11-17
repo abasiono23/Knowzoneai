@@ -28,6 +28,7 @@ import {
   type ShareItem,
   type SystemData,
 } from '@/lib/rooms';
+import { goalExampleExam } from '@/lib/region';
 import { useMaterials } from '@/lib/studio/store';
 
 const POLL_MS = 3000;
@@ -397,7 +398,7 @@ export default function RoomScreen() {
               <TextInput
                 value={goalDraft}
                 onChangeText={setGoalDraft}
-                placeholder={t('goalPlaceholder')}
+                placeholder={t('goalPlaceholder', { exam: goalExampleExam() })}
                 placeholderTextColor={Colors.textMuted}
                 maxLength={120}
                 accessibilityLabel={t('goal')}

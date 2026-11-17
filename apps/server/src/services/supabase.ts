@@ -17,6 +17,8 @@ export type SupabaseClaims = {
     email_verified?: boolean;
     /** Sent at sign-up so consent is recorded the moment the account exists. */
     consent?: { terms?: boolean; privacy?: boolean; age?: boolean; marketing?: boolean };
+    /** The country chosen on the sign-up form (ISO code), so the study region is stored with the new account. */
+    region?: string;
   };
 };
 

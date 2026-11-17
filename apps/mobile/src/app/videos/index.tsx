@@ -163,6 +163,7 @@ export default function VideoFeed() {
       )}
       {more && <ActivityIndicator color="#fff" style={styles.more} />}
       <TopBar searching={searching} onSearch={() => setSearching((s) => !s)} />
+      {!searching && <KoraLessonsLink />}
       {searching && (
         <SearchPanel
           filter={filter}
@@ -220,6 +221,36 @@ function TopBar({ searching, onSearch }: { searching: boolean; onSearch: () => v
         <Ionicons name="add" size={24} color="#fff" />
       </Pressable>
     </View>
+  );
+}
+
+/** The way in to Lessons with Kora: three-minute lessons she teaches herself (app/kora). */
+function KoraLessonsLink() {
+  const insets = useSafeAreaInsets();
+  const { t } = useTranslation('videos');
+  const flip = useFlipStyle();
+  return (
+    <Pressable
+      onPress={() => router.push('/kora')}
+      accessibilityRole="button"
+      style={{
+        position: 'absolute',
+        top: insets.top + 58,
+        left: Spacing.md,
+        flexDirection: 'row',
+        alignItems: 'center',
+        gap: 6,
+        paddingHorizontal: 12,
+        paddingVertical: 7,
+        borderRadius: Radius.pill,
+        backgroundColor: '#FFD84D',
+      }}>
+      <Ionicons name="school" size={15} color="#160A4D" />
+      <Text variant="small" color="#160A4D" style={{ fontFamily: Fonts.bold }}>
+        {t('kora.title')}
+      </Text>
+      <Ionicons name="chevron-forward" size={14} color="#160A4D" style={flip} />
+    </Pressable>
   );
 }
 

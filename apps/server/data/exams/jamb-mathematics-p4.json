@@ -1,0 +1,531 @@
+{
+ "id": "jamb-mathematics-p4",
+ "exam": "jamb",
+ "subject": "mathematics",
+ "year": null,
+ "number": 4,
+ "source": "ai",
+ "minutes": 27,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Integration",
+   "q": "Evaluate ∫₀¹ (6x² − 2x + 3) dx.",
+   "options": [
+    "1",
+    "6",
+    "3",
+    "4"
+   ],
+   "answer": 3,
+   "explanation": "The antiderivative is 2x³ − x² + 3x. Evaluating from 0 to 1 gives 2 − 1 + 3 = 4. A result of 6 can arise if the −2x term is integrated as +x²."
+  },
+  {
+   "n": 2,
+   "topic": "Integration",
+   "q": "If dy/dx = 3x² − 8x and y = 10 when x = 1, find the value of y when x = 2.",
+   "options": [
+    "−5",
+    "8",
+    "5",
+    "2"
+   ],
+   "answer": 2,
+   "explanation": "Integrating gives y = x³ − 4x² + C. Using y = 10 at x = 1 gives 1 − 4 + C = 10, so C = 13. Thus at x = 2, y = 8 − 16 + 13 = 5."
+  },
+  {
+   "n": 3,
+   "topic": "Coordinate geometry",
+   "q": "On a coordinate map of Nsukka, a straight road passes through the point (4, −2) and has gradient 3. Find its equation in the form y = mx + c.",
+   "options": [
+    "y = 3x − 14",
+    "y = 3x + 10",
+    "y = 3x + 14",
+    "y = 3x − 10"
+   ],
+   "answer": 0,
+   "explanation": "Using y − y₁ = m(x − x₁), we get y + 2 = 3(x − 4). Expanding gives y + 2 = 3x − 12, so y = 3x − 14."
+  },
+  {
+   "n": 4,
+   "topic": "Coordinate geometry",
+   "q": "The points A(−2, 3) and B(4, 7) are the ends of a diameter of a circle. Find the equation of the circle.",
+   "options": [
+    "(x − 1)² + (y − 5)² = 26",
+    "(x − 1)² + (y − 5)² = 52",
+    "(x − 1)² + (y − 5)² = 13",
+    "(x + 1)² + (y + 5)² = 13"
+   ],
+   "answer": 2,
+   "explanation": "The centre is the midpoint of AB, which is (1, 5). The squared diameter is 6² + 4² = 52, so the squared radius is 52 ÷ 4 = 13. Hence the circle is (x − 1)² + (y − 5)² = 13."
+  },
+  {
+   "n": 5,
+   "topic": "Mensuration",
+   "q": "A conical heap of maize in Zaria has base diameter 14 m and vertical height 9 m. Calculate its volume in m³, taking π = 22/7.",
+   "options": [
+    "462 m³",
+    "1,848 m³",
+    "1,386 m³",
+    "154 m³"
+   ],
+   "answer": 0,
+   "explanation": "The radius is 14 ÷ 2 = 7 m. Volume = (1/3) × (22/7) × 7² × 9 = 462 m³. The value 1,386 m³ comes from using the cylinder formula πr²h and omitting the factor 1/3."
+  },
+  {
+   "n": 6,
+   "topic": "Mensuration",
+   "q": "A sector of a circle has radius 14 cm and angle 45°. Find its area. Take π = 22/7.",
+   "options": [
+    "38.5 cm²",
+    "616 cm²",
+    "77 cm²",
+    "154 cm²"
+   ],
+   "answer": 2,
+   "explanation": "The area is (45/360) × (22/7) × 14². Since 45/360 = 1/8 and the whole circle area is 616 cm², the sector area is 616 ÷ 8 = 77 cm²."
+  },
+  {
+   "n": 7,
+   "topic": "Mensuration",
+   "q": "A right pyramid has a square base of side 12 cm and vertical height 8 cm. Calculate its total surface area.",
+   "options": [
+    "240 cm²",
+    "336 cm²",
+    "480 cm²",
+    "384 cm²"
+   ],
+   "answer": 3,
+   "explanation": "The slant height is √(8² + 6²) = 10 cm. The base area is 12² = 144 cm², and the four triangular faces have total area 4 × (1/2 × 12 × 10) = 240 cm². Hence the total surface area is 144 + 240 = 384 cm²."
+  },
+  {
+   "n": 8,
+   "topic": "Indices and logarithms",
+   "q": "Solve 3^(2x + 1) = 27^(x − 2).",
+   "options": [
+    "x = 1",
+    "x = −5",
+    "x = 5",
+    "x = 7"
+   ],
+   "answer": 3,
+   "explanation": "Since 27 = 3³, the equation becomes 3^(2x + 1) = 3^(3x − 6). Equating exponents gives 2x + 1 = 3x − 6, so x = 7."
+  },
+  {
+   "n": 9,
+   "topic": "Indices and logarithms",
+   "q": "Given that log₁₀ 3 = 0.4771, evaluate log₁₀ 3000.",
+   "options": [
+    "2.4771",
+    "3.4771",
+    "3.5229",
+    "4.4771"
+   ],
+   "answer": 1,
+   "explanation": "Write 3000 = 3 × 10³. Then log₁₀ 3000 = log₁₀ 3 + log₁₀ 10³ = 0.4771 + 3 = 3.4771."
+  },
+  {
+   "n": 10,
+   "topic": "Coordinate geometry",
+   "q": "The distance between points A(−3, 2) and B(5, y) is 10 units. Find the positive value of y.",
+   "options": [
+    "14",
+    "8",
+    "6",
+    "4"
+   ],
+   "answer": 1,
+   "explanation": "Using the distance formula, (5 + 3)² + (y − 2)² = 10², so 64 + (y − 2)² = 100. Thus (y − 2)² = 36, giving y = 8 or y = −4; the positive value is 8."
+  },
+  {
+   "n": 11,
+   "topic": "Sets",
+   "q": "In a school in Jos, 36 students were asked whether they belong to the Science Club or the Arts Club. If 20 belong to the Science Club, 18 belong to the Arts Club, and 6 belong to neither club, how many belong to both clubs?",
+   "options": [
+    "2",
+    "8",
+    "4",
+    "14"
+   ],
+   "answer": 1,
+   "explanation": "The number of students in at least one club is 36 − 6 = 30. Using the addition rule gives 20 + 18 − both = 30, so both = 8. The value 2 comes from taking all 36 students as belonging to at least one club and ignoring the 6 who belong to neither."
+  },
+  {
+   "n": 12,
+   "topic": "Sets",
+   "q": "If A = {x : x is an integer, 1 ≤ x ≤ 20, x is a multiple of 4} and B = {x : x is an integer, 1 ≤ x ≤ 20, x is a multiple of 6}, how many elements are in A ∪ B?",
+   "options": [
+    "8",
+    "6",
+    "7",
+    "5"
+   ],
+   "answer": 2,
+   "explanation": "A = {4, 8, 12, 16, 20}, which has 5 elements, while B = {6, 12, 18}, which has 3 elements. Their only common element is 12, so n(A ∪ B) = 5 + 3 − 1 = 7. The value 8 comes from adding 5 and 3 without subtracting the common element."
+  },
+  {
+   "n": 13,
+   "topic": "Sequences and series",
+   "q": "The sum of the first 12 terms of an arithmetic progression is 222 and its first term is 2. Find the common difference.",
+   "options": [
+    "2",
+    "5",
+    "4",
+    "3"
+   ],
+   "answer": 3,
+   "explanation": "Using S_n = n/2[2a + (n − 1)d], we have 222 = 12/2[2(2) + 11d] = 6(4 + 11d). This gives 4 + 11d = 37, so 11d = 33 and d = 3."
+  },
+  {
+   "n": 14,
+   "topic": "Sequences and series",
+   "q": "The second term of a geometric progression is 15 and the fifth term is 405. Find the common ratio.",
+   "options": [
+    "1/3",
+    "27",
+    "9",
+    "3"
+   ],
+   "answer": 3,
+   "explanation": "The second term is ar = 15 and the fifth term is ar⁴ = 405. Dividing gives r³ = 405/15 = 27, so r = 3. The value 27 is r³, not r."
+  },
+  {
+   "n": 15,
+   "topic": "Sequences and series",
+   "q": "The sum to infinity of a geometric progression is 18 and its first term is 6. Find the common ratio.",
+   "options": [
+    "−2/3",
+    "3/2",
+    "2/3",
+    "1/3"
+   ],
+   "answer": 2,
+   "explanation": "For an infinite geometric series with |r| < 1, S∞ = a/(1 − r). Thus 18 = 6/(1 − r), so 1 − r = 1/3 and r = 2/3. The value 3/2 cannot be the common ratio because such a series would not have a finite sum to infinity."
+  },
+  {
+   "n": 16,
+   "topic": "Simultaneous equations and inequalities",
+   "q": "A trader in Kano bought 4 bags of rice and 3 bags of beans for ₦20,000. If 2 bags of rice cost ₦1,000 more than 3 bags of beans, find the cost of one bag of rice.",
+   "options": [
+    "₦4,000",
+    "₦3,000",
+    "₦2,000",
+    "₦3,500"
+   ],
+   "answer": 3,
+   "explanation": "Let a bag of rice cost r and a bag of beans cost b. Then 4r + 3b = 20,000 and 2r = 3b + 1,000. Solving gives b = ₦2,000 and r = ₦3,500. The value ₦2,000 is the cost of a bag of beans, not rice."
+  },
+  {
+   "n": 17,
+   "topic": "Simultaneous equations and inequalities",
+   "q": "Find the integer values of x that satisfy both 3x + 2 ≤ 17 and 2x − 3 > 1.",
+   "options": [
+    "3, 4",
+    "2, 3, 4",
+    "3, 4, 5",
+    "2, 3, 4, 5"
+   ],
+   "answer": 2,
+   "explanation": "From 3x + 2 ≤ 17, x ≤ 5. From 2x − 3 > 1, x > 2. The integer values greater than 2 and at most 5 are 3, 4 and 5. The value 2 is excluded because the second inequality is strict."
+  },
+  {
+   "n": 18,
+   "topic": "Probability",
+   "q": "A ticket is selected at random from tickets numbered 1 to 20 in a raffle in Ibadan. What is the probability that the number on the ticket is a multiple of 3 or a multiple of 5?",
+   "options": [
+    "1/5",
+    "9/20",
+    "1/2",
+    "3/10"
+   ],
+   "answer": 1,
+   "explanation": "There are 6 multiples of 3 and 4 multiples of 5, but 15 is counted in both, so the number of favourable tickets is 6 + 4 − 1 = 9. The probability is therefore 9/20. The value 1/2 comes from adding 6 and 4 without removing the double-counted multiple 15."
+  },
+  {
+   "n": 19,
+   "topic": "Probability",
+   "q": "In a town in Niger State, 60% of adults own a bicycle, 45% own a motorcycle, and 25% own both. An adult is chosen at random. What is the probability that the adult owns at least one of the two?",
+   "options": [
+    "4/5",
+    "13/20",
+    "21/20",
+    "1/5"
+   ],
+   "answer": 0,
+   "explanation": "The probability of owning at least one is 60% + 45% − 25% = 80%, which is 4/5. The value 1/5 is the probability of owning neither, while 21/20 comes from adding 60% and 45% without subtracting the overlap."
+  },
+  {
+   "n": 20,
+   "topic": "Probability",
+   "q": "A fair six-sided die is rolled twice. What is the probability that the product of the two numbers obtained is even?",
+   "options": [
+    "2/3",
+    "1/2",
+    "1/4",
+    "3/4"
+   ],
+   "answer": 3,
+   "explanation": "The product is odd only when both rolls are odd. There are 3 odd numbers on a die, so there are 3 × 3 = 9 odd-odd outcomes out of 36. Hence the probability of an even product is 1 − 9/36 = 3/4. The value 1/4 is the complementary probability that the product is odd."
+  },
+  {
+   "n": 21,
+   "topic": "Surds",
+   "q": "Rationalise and simplify: 8/(3√2 − √10).",
+   "options": [
+    "3√2 − √10",
+    "(3√2 + √10)/4",
+    "3√2 + √10",
+    "(3√2 + √10)/8"
+   ],
+   "answer": 2,
+   "explanation": "Multiplying numerator and denominator by the conjugate 3√2 + √10 gives denominator (3√2)² − (√10)² = 18 − 10 = 8. The factor 8 cancels, leaving 3√2 + √10."
+  },
+  {
+   "n": 22,
+   "topic": "Surds",
+   "q": "Simplify (√75 − √27)/(√12 + √3).",
+   "options": [
+    "2√3/3",
+    "2/3",
+    "3/2",
+    "1/3"
+   ],
+   "answer": 1,
+   "explanation": "Write √75 = 5√3, √27 = 3√3 and √12 = 2√3. Then the numerator is 2√3 and the denominator is 3√3, so the quotient is 2/3."
+  },
+  {
+   "n": 23,
+   "topic": "Differentiation",
+   "q": "Given y = (x + 4)/(2x − 1), where x ≠ 1/2, find dy/dx.",
+   "options": [
+    "-9/(2x − 1)²",
+    "9/(2x − 1)²",
+    "-9/(2x + 1)²",
+    "-1/(2x − 1)²"
+   ],
+   "answer": 0,
+   "explanation": "By the quotient rule, dy/dx = [(1)(2x − 1) − (x + 4)(2)]/(2x − 1)². The numerator simplifies to (2x − 1) − (2x + 8) = −9, so dy/dx = −9/(2x − 1)²."
+  },
+  {
+   "n": 24,
+   "topic": "Differentiation",
+   "q": "If y = (x² − 3x + 5)(x + 2), find the gradient of the curve at x = 2.",
+   "options": [
+    "5",
+    "7",
+    "11",
+    "3"
+   ],
+   "answer": 1,
+   "explanation": "Using the product rule, dy/dx = (2x − 3)(x + 2) + (x² − 3x + 5). At x = 2 this is (1)(4) + (4 − 6 + 5) = 7."
+  },
+  {
+   "n": 25,
+   "topic": "Differentiation",
+   "q": "A circular patch of oil spilled at a depot in Warri has radius r cm after t minutes given by r = 2t² + t. Find the rate at which its area is increasing when t = 2 minutes. (Leave the answer in terms of π.)",
+   "options": [
+    "90π cm²/min",
+    "360π cm²/min",
+    "200π cm²/min",
+    "180π cm²/min"
+   ],
+   "answer": 3,
+   "explanation": "The area is A = πr², so dA/dt = 2πr dr/dt. At t = 2, r = 2(2)² + 2 = 10 cm and dr/dt = 4t + 1 = 9 cm/min, hence dA/dt = 2π(10)(9) = 180π cm²/min."
+  },
+  {
+   "n": 26,
+   "topic": "Quadratic equations",
+   "q": "Form the quadratic equation whose roots are 3 + √2 and 3 − √2.",
+   "options": [
+    "x² + 6x + 7 = 0",
+    "x² − 6x + 7 = 0",
+    "x² − 7x + 6 = 0",
+    "x² − 6x − 7 = 0"
+   ],
+   "answer": 1,
+   "explanation": "The sum of the roots is (3 + √2) + (3 − √2) = 6, and the product is (3 + √2)(3 − √2) = 9 − 2 = 7. Hence the equation is x² − (sum)x + product = 0, that is x² − 6x + 7 = 0."
+  },
+  {
+   "n": 27,
+   "topic": "Quadratic equations",
+   "q": "The roots of x² − 8x + q = 0 differ by 2. Find the positive value of q.",
+   "options": [
+    "12",
+    "15",
+    "16",
+    "20"
+   ],
+   "answer": 1,
+   "explanation": "For roots α and β, α + β = 8 and (α − β)² = 64 − 4q. Since they differ by 2, (α − β)² = 4, so 64 − 4q = 4 and q = 15."
+  },
+  {
+   "n": 28,
+   "topic": "Variation",
+   "q": "The cost P naira of printing x booklets at a business centre in Ibadan varies directly as the square root of x. If 25 booklets cost ₦1,500, how much will 100 booklets cost?",
+   "options": [
+    "₦1,200",
+    "₦4,500",
+    "₦6,000",
+    "₦3,000"
+   ],
+   "answer": 3,
+   "explanation": "Since P varies directly as √x, P = k√x. From 1500 = k√25 = 5k, k = 300; at x = 100, P = 300√100 = 300 × 10 = ₦3,000. Treating the variation as direct with x would wrongly give ₦6,000."
+  },
+  {
+   "n": 29,
+   "topic": "Variation",
+   "q": "At a hall in Uyo, the cost C naira of decorating a hall with n chairs varies jointly as n and the square of the hall length l metres. If 20 chairs in a 3 m length cost ₦18,000, find the cost for 30 chairs in a 4 m length.",
+   "options": [
+    "₦72,000",
+    "₦54,000",
+    "₦48,000",
+    "₦36,000"
+   ],
+   "answer": 2,
+   "explanation": "The variation gives C = knl². Using 18000 = k(20)(3²) gives k = 100; for n = 30 and l = 4, C = 100(30)(4²) = ₦48,000. Using l instead of l² would give ₦36,000."
+  },
+  {
+   "n": 30,
+   "topic": "Matrices and determinants",
+   "q": "If A = [[2, −1], [3, 0]] and B = [[1, 4], [2, 5]], find AB.",
+   "options": [
+    "[[4, 3], [3, 12]]",
+    "[[0, 13], [3, 12]]",
+    "[[3, 12], [0, 3]]",
+    "[[0, 3], [3, 12]]"
+   ],
+   "answer": 3,
+   "explanation": "Multiply rows of A by columns of B. The entries are (2)(1)+(−1)(2)=0, (2)(4)+(−1)(5)=3, (3)(1)+(0)(2)=3, and (3)(4)+(0)(5)=12, giving [[0, 3], [3, 12]]."
+  },
+  {
+   "n": 31,
+   "topic": "Matrices and determinants",
+   "q": "Given that [[x, 2], [3, y]] + [[4, −1], [−2, 5]] = [[7, 1], [1, 9]], find x + y.",
+   "options": [
+    "7",
+    "3",
+    "4",
+    "1"
+   ],
+   "answer": 0,
+   "explanation": "Equating corresponding entries gives x + 4 = 7 and y + 5 = 9, so x = 3 and y = 4. Therefore x + y = 3 + 4 = 7."
+  },
+  {
+   "n": 32,
+   "topic": "Angles and circle geometry",
+   "q": "In a circle of radius 10 cm, two parallel chords of lengths 12 cm and 16 cm lie on opposite sides of the centre. Find the distance between the chords.",
+   "options": [
+    "14 cm",
+    "6 cm",
+    "2 cm",
+    "8 cm"
+   ],
+   "answer": 0,
+   "explanation": "For the 12 cm chord, half the chord is 6 cm, so its distance from the centre is √(10² − 6²) = 8 cm. For the 16 cm chord, half the chord is 8 cm, so its distance from the centre is √(10² − 8²) = 6 cm. Since the chords are on opposite sides, the distance between them is 8 + 6 = 14 cm."
+  },
+  {
+   "n": 33,
+   "topic": "Angles and circle geometry",
+   "q": "In a circle with centre O, A and B are points on the circumference. If ∠OAB = 28°, find ∠AOB.",
+   "options": [
+    "62°",
+    "56°",
+    "28°",
+    "124°"
+   ],
+   "answer": 3,
+   "explanation": "OA and OB are radii, so OA = OB and triangle AOB is isosceles. Thus ∠OBA = ∠OAB = 28°, and ∠AOB = 180° − 28° − 28° = 124°."
+  },
+  {
+   "n": 34,
+   "topic": "Number bases",
+   "q": "If 42ₙ = 34₁₀, find the value of n.",
+   "options": [
+    "9",
+    "6",
+    "7",
+    "8"
+   ],
+   "answer": 3,
+   "explanation": "In base n, 42ₙ means 4 × n + 2. So 4n + 2 = 34, giving 4n = 32 and n = 8. The base must be greater than the digit 4, and 8 satisfies this."
+  },
+  {
+   "n": 35,
+   "topic": "Number bases",
+   "q": "Simplify 10010₂ − 1101₂, giving your answer in base 2.",
+   "options": [
+    "111₂",
+    "1001₂",
+    "1101₂",
+    "101₂"
+   ],
+   "answer": 3,
+   "explanation": "10010₂ = 18 and 1101₂ = 13 in decimal. Their difference is 5, and 5₁₀ = 101₂."
+  },
+  {
+   "n": 36,
+   "topic": "Statistics",
+   "q": "A pie chart represents the distribution of 720 students in a college in Enugu by faculty. If the sector for Science is 120°, how many students are in Science?",
+   "options": [
+    "240",
+    "120",
+    "360",
+    "180"
+   ],
+   "answer": 0,
+   "explanation": "The sector angle 120° is 120 ÷ 360 = 1/3 of the whole circle. Thus the number of Science students is (1/3) × 720 = 240."
+  },
+  {
+   "n": 37,
+   "topic": "Statistics",
+   "q": "The scores of 20 students in a test are summarised as follows: 2 students scored 4, 5 scored 6, 8 scored 8, 3 scored 10 and 2 scored 12. Find the median score.",
+   "options": [
+    "10",
+    "8",
+    "9",
+    "6"
+   ],
+   "answer": 1,
+   "explanation": "The cumulative frequencies are 2, 7, 15, 18 and 20. Since there are 20 scores, the median is the average of the 10th and 11th scores, both of which lie in the group that scored 8. Hence the median is 8."
+  },
+  {
+   "n": 38,
+   "topic": "Statistics",
+   "q": "The heights, in cm, of five students in a school in Abeokuta are 148, 152, 150, 155 and 145. Calculate the variance of the heights.",
+   "options": [
+    "10.0 cm²",
+    "11.6 cm²",
+    "58.0 cm²",
+    "14.5 cm²"
+   ],
+   "answer": 1,
+   "explanation": "The mean is (148 + 152 + 150 + 155 + 145) ÷ 5 = 150. The squared deviations from the mean sum to (−2)² + 2² + 0² + 5² + (−5)² = 58, so the variance is 58 ÷ 5 = 11.6 cm²."
+  },
+  {
+   "n": 39,
+   "topic": "Fractions, decimals and percentages",
+   "q": "At a market in Akure, a trader reduces the price of a basket of tomatoes by 12% and later increases the reduced price by 5%. If the final price is ₦2,772, what was the original price?",
+   "options": [
+    "₦3,150",
+    "₦3,300",
+    "₦2,970",
+    "₦3,000"
+   ],
+   "answer": 3,
+   "explanation": "Let the original price be P. After a 12% reduction and a 5% increase, the final price is 1.05 × 0.88P = 0.924P. Thus P = 2,772 ÷ 0.924 = 3,000, so the original price was ₦3,000."
+  },
+  {
+   "n": 40,
+   "topic": "Trigonometry",
+   "q": "In triangle ABC, ∠A = 30°, ∠B = 45°, and BC = 8 cm. Find AC in surd form.",
+   "options": [
+    "4√2 cm",
+    "8 cm",
+    "8√2 cm",
+    "8√3 cm"
+   ],
+   "answer": 2,
+   "explanation": "Using the sine rule, AC/sin45° = 8/sin30°. Hence AC = 8 sin45°/sin30° = 8(√2/2) ÷ (1/2) = 8√2 cm."
+  }
+ ]
+}

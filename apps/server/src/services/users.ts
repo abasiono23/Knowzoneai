@@ -2,6 +2,7 @@ import { randomBytes } from 'node:crypto';
 
 import type { User } from '../generated/prisma/client.js';
 import { dayKey } from '../lib/time.js';
+import { chosenRegion, regionOf } from './account.js';
 
 export const WELCOME_CREDITS = 5;
 
@@ -45,6 +46,10 @@ export function toPublicUser(u: User) {
     aiCredits: u.aiCredits,
     plan: u.plan,
     referralCode: u.referralCode,
+    /** Study region (ISO country code); Nigeria for accounts made before regions. */
+    region: regionOf(u),
+    /** False until the account picks a region (sign-up form, onboarding or Settings): onboarding asks those who haven't. */
+    regionChosen: chosenRegion(u) !== null,
     ...(u.username && { username: u.username }),
     ...(u.school && { school: u.school }),
     ...(u.grade && { grade: u.grade }),

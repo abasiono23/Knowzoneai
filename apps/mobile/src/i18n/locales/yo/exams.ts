@@ -4,6 +4,8 @@ import type en from '../en/exams';
 
 const exams: Translation<typeof en> = {
   title: 'Ìbéèrè Àtijọ́',
+  /** The same page for SAT and GCSE students: those papers are practice, never "past questions". */
+  practiceTitle: 'Ìdánrawò ìdánwò',
   eyebrow: 'JAMB · WAEC · NECO',
   offline: 'Ìbéèrè Àtijọ́ nílò íntánẹ́ẹ̀tì.',
   loadFailed: 'A kò lè gbé àwọn ìwé ìbéèrè wá. Ṣàyẹ̀wò íntánẹ́ẹ̀tì rẹ kí o sì tún gbìyànjú.',
@@ -13,11 +15,30 @@ const exams: Translation<typeof en> = {
     title: 'Ìbéèrè àtijọ́ JAMB, WAEC & NECO',
     body: 'Ṣe ìdánrawò gbogbo ẹ̀kọ́ ní ọ̀nà ìdánwò gidi, wo àlàyé gbogbo ìdáhùn, kí o sì jókòó fún ìwé ìbéèrè onígbà.',
     action: 'Bẹ̀rẹ̀ ìdánrawò',
+    /** One exam (the WAEC countries outside Nigeria). */
+    titleOne: 'Ìbéèrè àtijọ́ {{exam}}',
+    titlePractice: 'Ìdánrawò {{exams}}',
+    bodyPractice: 'Ìdánrawò àṣàyàn púpọ̀ fún ìdánwò àti ẹ̀kọ́ kọ̀ọ̀kan, pẹ̀lú àlàyé gbogbo ìdáhùn. AI ló kọ ọ́, a sì tún yẹ̀ ẹ́ wò; kì í ṣe ìbéèrè àtijọ́.',
+    sat: {
+      title: 'Ìwé ìdánrawò SAT',
+      body: 'Ìdánrawò àṣàyàn púpọ̀ ní ọ̀nà àwọn apá àti àkókò SAT onídíjítà, pẹ̀lú àlàyé gbogbo ìdáhùn. AI ló kọ ọ́, a sì tún yẹ̀ ẹ́ wò; kì í ṣe ìbéèrè àtijọ́.',
+    },
+    gcse: {
+      title: 'Ìdánrawò bíi ti GCSE',
+      body: 'Ìdánrawò àṣàyàn púpọ̀ lórí àkòrí kọ̀ọ̀kan nínú Maths, English Language, Biology, Chemistry àti Physics, pẹ̀lú àlàyé gbogbo ìdáhùn. AI ló kọ ọ́, a sì tún yẹ̀ ẹ́ wò; kì í ṣe ìbéèrè àtijọ́.',
+    },
   },
   exams: {
     jamb: { name: 'JAMB', full: 'JAMB UTME', about: 'Ìdánwò lórí kọ̀ǹpútà · Use of English pẹ̀lú ẹ̀kọ́ mẹ́ta' },
     waec: { name: 'WAEC', full: 'WAEC WASSCE', about: 'Ìwé-ẹ̀rí ilé-ẹ̀kọ́ girama · ìbéèrè aláṣàyàn' },
     neco: { name: 'NECO', full: 'NECO SSCE', about: 'Ìwé-ẹ̀rí ilé-ẹ̀kọ́ girama · ìbéèrè aláṣàyàn' },
+    sat: { name: 'SAT', full: 'Ìdánrawò SAT onídíjítà', about: 'Reading and Writing · Math · àṣàyàn púpọ̀ nìkan' },
+    act: { name: 'ACT', full: 'Ìdánrawò ACT', about: 'English · Math · Reading · Science' },
+    ap: { name: 'AP', full: 'Ìdánrawò àṣàyàn púpọ̀ AP', about: 'Calculus AB · Biology · Chemistry · Physics 1 · US History · English Language' },
+    gcse: { name: 'GCSE', full: 'Ìdánrawò bíi ti GCSE', about: 'Ìdánrawò àṣàyàn púpọ̀ lórí àkòrí kọ̀ọ̀kan' },
+    alevel: { name: 'A-level', full: 'Ìdánrawò bíi ti A-level', about: 'Ìdánrawò àṣàyàn púpọ̀ lórí àkòrí kọ̀ọ̀kan' },
+    kcse: { name: 'KCSE', full: 'Ìdánrawò bíi ti KCSE', about: 'Ìdánrawò àṣàyàn púpọ̀ lórí àkòrí kọ̀ọ̀kan' },
+    nsc: { name: 'Matric', full: 'Ìdánrawò bíi ti Matric (NSC)', about: 'Ìdánrawò àṣàyàn púpọ̀ lórí àkòrí kọ̀ọ̀kan' },
   },
   subjects: {
     english: 'Èdè Gẹ̀ẹ́sì',
@@ -30,7 +51,37 @@ const exams: Translation<typeof en> = {
     literature: 'Lítíréṣọ̀ ní Èdè Gẹ̀ẹ́sì',
     geography: 'Jọ́gíráfì',
     commerce: 'Ìṣòwò',
+    'reading-writing': 'Reading and Writing',
+    math: 'Math',
+    maths: 'Maths',
+    'english-language': 'English Language',
+    reading: 'Reading',
+    science: 'Science',
+    'calculus-ab': 'Calculus AB',
+    'physics-1': 'Physics 1',
+    'us-history': 'US History',
+    'physical-sciences': 'Physical Sciences',
+    'life-sciences': 'Life Sciences',
+    accounting: 'Accounting',
   },
+  /** What SAT and GCSE practice is and isn't, shown wherever those papers are listed. */
+  notes: {
+    sat: 'Àwọn ìbéèrè ìdánrawò yìí jẹ́ èyí tí AI kọ, tí àyẹ̀wò AI kejì sì yẹ̀ wò; kì í ṣe ìwé ìbéèrè SAT àtijọ́. Wọ́n tẹ̀lé àwọn apá àti àkókò SAT onídíjítà, ṣùgbọ́n àṣàyàn púpọ̀ nìkan ni wọ́n: apá Math gidi tún ní àwọn ìbéèrè tí o máa kọ ìdáhùn tìrẹ sí.',
+    act: 'Àwọn ìbéèrè ìdánrawò yìí jẹ́ èyí tí AI kọ, tí àyẹ̀wò AI kejì sì yẹ̀ wò; kì í ṣe ìwé ìbéèrè ACT àtijọ́. Wọ́n tẹ̀lé àwọn apá, iye ìbéèrè àti àkókò ACT.',
+    ap: 'Àwọn ìbéèrè ìdánrawò yìí jẹ́ èyí tí AI kọ, tí àyẹ̀wò AI kejì sì yẹ̀ wò; kì í ṣe ìwé ìbéèrè AP àtijọ́. Apá àṣàyàn púpọ̀ ti ìdánwò AP kọ̀ọ̀kan nìkan ni wọ́n ń dánrawò: àwọn ìdánwò gidi tún ní apá ìdáhùn kíkọ.',
+    gcse: 'Àwọn ìbéèrè ìdánrawò yìí jẹ́ èyí tí AI kọ, tí àyẹ̀wò AI kejì sì yẹ̀ wò; kì í ṣe ìbéèrè àtijọ́. Ìdáhùn kíkọ ló pọ̀ jù nínú ìwé ìdánwò GCSE gidi, nítorí náà lo àwọn ìdánwò àṣàyàn púpọ̀ yìí láti ṣe àtúnyẹ̀wò àkòrí kọ̀ọ̀kan, kì í ṣe gẹ́gẹ́ bí ẹ̀dà ìdánwò náà.',
+    alevel: 'Àwọn ìbéèrè ìdánrawò yìí jẹ́ èyí tí AI kọ, tí àyẹ̀wò AI kejì sì yẹ̀ wò; kì í ṣe ìbéèrè àtijọ́. Ìdáhùn kíkọ ló pọ̀ jù nínú ìwé ìdánwò A-level gidi, nítorí náà lo àwọn ìdánwò àṣàyàn púpọ̀ yìí láti ṣe àtúnyẹ̀wò àkòrí kọ̀ọ̀kan, kì í ṣe gẹ́gẹ́ bí ẹ̀dà ìdánwò náà.',
+    kcse: 'Àwọn ìbéèrè ìdánrawò yìí jẹ́ èyí tí AI kọ, tí àyẹ̀wò AI kejì sì yẹ̀ wò; kì í ṣe ìbéèrè àtijọ́. Ìdáhùn kíkọ ló pọ̀ jù nínú ìwé ìdánwò KCSE gidi, nítorí náà lo àwọn ìdánwò àṣàyàn púpọ̀ yìí láti ṣe àtúnyẹ̀wò àkòrí kọ̀ọ̀kan, kì í ṣe gẹ́gẹ́ bí ẹ̀dà ìdánwò náà.',
+    nsc: 'Àwọn ìbéèrè ìdánrawò yìí jẹ́ èyí tí AI kọ, tí àyẹ̀wò AI kejì sì yẹ̀ wò; kì í ṣe ìbéèrè àtijọ́. Ìdáhùn kíkọ ló pọ̀ jù nínú ìwé ìdánwò Matric (NSC) gidi, nítorí náà lo àwọn ìdánwò àṣàyàn púpọ̀ yìí láti ṣe àtúnyẹ̀wò àkòrí kọ̀ọ̀kan, kì í ṣe gẹ́gẹ́ bí ẹ̀dà ìdánwò náà.',
+  },
+  /** A study region we have no papers for. */
+  none: {
+    title: 'Kò sí ìwé ìdánwò fún {{country}}',
+    body: 'Olùkọ́ AI rẹ, àwọn ìwé ẹ̀kọ́ àti àwọn kọ́ọ̀sì ń ṣiṣẹ́ pẹ̀lú syllabus èyíkéyìí. O ṣì lè ṣe ìdánrawò pẹ̀lú ìwé àwọn orílẹ̀-èdè mìíràn nísàlẹ̀.',
+  },
+  otherExams: 'Àwọn ìdánwò mìíràn',
+  region: 'Orílẹ̀-èdè ẹ̀kọ́: {{country}}',
+  change: 'Yí padà',
   pickExam: 'Yan ìdánwò rẹ',
   carryOn: 'Máa bá a lọ láti ibi tí o dúró sí',
   pickSubject: 'Yan ẹ̀kọ́ kan',
@@ -58,6 +109,8 @@ const exams: Translation<typeof en> = {
     study: { title: 'Kà á', body: 'Wo gbogbo ìbéèrè pẹ̀lú ìdáhùn àti àlàyé rẹ̀.' },
     practice: { title: 'Ìdánrawò', body: 'Dáhùn ní ìrọ̀rùn rẹ kí o sì rí bóyá o tọ̀nà lẹ́yìn ìbéèrè kọ̀ọ̀kan.' },
     timed: { title: 'Ìdánwò onígbà', body: 'Ṣe é bí ìdánwò gidi: ìṣẹ́jú {{minutes}}, èsì ní ìparí.' },
+    /** GCSE practice isn't in the exam's format, so its timed mode doesn't say "like the real exam". */
+    timedQuiz: { title: 'Ìdánwò kékeré onígbà', body: 'Pẹ̀lú aago: ìṣẹ́jú {{minutes}}, èsì ní ìparí.' },
     history: 'ÀWỌN MÁÀKÌ RẸ',
     historyRow: '{{score}}/{{total}} · {{mode}} · {{date}}',
     modeName: { practice: 'Ìdánrawò', timed: 'Onígbà' },

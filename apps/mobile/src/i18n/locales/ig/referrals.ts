@@ -20,6 +20,9 @@ const referrals: Translation<typeof en> = {
     exams: {
       label: 'Nkwado ule',
       text: 'Nkwado WAEC/JAMB dị mfe nke ukwuu na Knowzone AI: ajụjụ omume, onye nkuzi AI na obere vidiyo ihe ọmụmụ. Jiri koodu m {{code}} nweta kredit AI {{credits}} ọzọ: {{link}}',
+      /** The same invite for other study regions: their exams, or none named. */
+      textFor: 'Nkwado {{exams}} dị mfe nke ukwuu na Knowzone AI: ajụjụ omume, onye nkuzi AI na obere vidiyo ihe ọmụmụ. Jiri koodu m {{code}} nweta kredit AI {{credits}} ọzọ: {{link}}',
+      textAny: 'Nkwado ule dị mfe nke ukwuu na Knowzone AI: ajụjụ omume, onye nkuzi AI na obere vidiyo ihe ọmụmụ. Jiri koodu m {{code}} nweta kredit AI {{credits}} ọzọ: {{link}}',
     },
     game: {
       label: 'Knowzone World',

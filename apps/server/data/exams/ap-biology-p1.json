@@ -1,0 +1,791 @@
+{
+ "id": "ap-biology-p1",
+ "exam": "ap",
+ "subject": "biology",
+ "year": null,
+ "number": 1,
+ "source": "ai",
+ "minutes": 90,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Gene expression and regulation",
+   "q": "A strain of E. coli carries a mutation in the lac operator that prevents the lac repressor from binding. The strain is grown in a medium lacking glucose and lactose. Which best predicts lacZ expression?",
+   "options": [
+    "Low, because lactose is absent and therefore cannot remove the repressor from the operator.",
+    "Low, because glucose is absent and CAP cannot bind to the promoter.",
+    "High only after lactose is added, because lactose is required as an inducer for lacZ.",
+    "High, because the repressor cannot bind the operator and CAP-cAMP can activate transcription without lactose."
+   ],
+   "answer": 3,
+   "explanation": "In this mutant, the operator cannot be occupied by repressor, so repression is abolished even without lactose. Low glucose raises cAMP, allowing CAP-cAMP to activate transcription, so adding lactose is not required. The other low-expression predictions incorrectly assume either that lactose must remove the repressor or that CAP is inactive when glucose is absent."
+  },
+  {
+   "n": 2,
+   "topic": "Gene expression and regulation",
+   "q": "Researchers compared two types of human cells. Both types contain the same gene for protein X, and both produce similar amounts of the mRNA for protein X. However, cell type P contains large amounts of protein X, whereas cell type Q contains almost none. Which is the most likely explanation?",
+   "options": [
+    "The gene for protein X has been deleted from the DNA of cell type Q.",
+    "Cell type Q transcribes the gene for protein X at a much higher rate than cell type P.",
+    "Protein X is regulated after transcription, for example by differences in translation or protein degradation.",
+    "Cell type P has more copies of the gene for protein X than cell type Q."
+   ],
+   "answer": 2,
+   "explanation": "Similar mRNA levels but very different protein levels indicate regulation after transcription, such as differences in translation efficiency or protein stability. Differences in gene copy number, gene deletion, or transcription rate would be expected to change mRNA levels, which are similar in these cells."
+  },
+  {
+   "n": 3,
+   "topic": "Natural selection",
+   "q": "In a population of Galápagos finches, the mean beak depth before a drought was 9.0 mm. After the drought, surviving birds had a mean beak depth of 10.2 mm. The offspring of these survivors had a mean beak depth of 10.0 mm. Which conclusion is best supported by these observations?",
+   "options": [
+    "Individual birds deepened their beaks to crack hard seeds, and this acquired change was inherited by the offspring.",
+    "No evolution occurred because the offspring mean beak depth was not identical to the survivor mean.",
+    "The drought caused directional selection for deeper beaks, and beak depth is heritable.",
+    "The drought caused stabilizing selection, because the offspring mean was close to the pre-drought mean."
+   ],
+   "answer": 2,
+   "explanation": "The population mean shifted toward deeper beaks after the drought, and offspring resembled the survivors, indicating heritable variation in beak depth. Stabilizing selection would tend to maintain the original mean, and acquired changes from use or need are not inherited in this way. The slight difference between survivors and offspring does not negate the observed shift."
+  },
+  {
+   "n": 4,
+   "topic": "Natural selection",
+   "q": "In an agricultural area, a population of insects is exposed to a new pesticide each year. Before spraying began, the frequency of a resistance allele (R) was 0.05. After 8 years of spraying, the frequency of R in the sprayed population was 0.60, while it remained near 0.05 in nearby unsprayed populations. Which explanation best accounts for these observations?",
+   "options": [
+    "The resistance allele became more common because the sprayed population experienced no selection and only genetic drift.",
+    "Pesticide exposure selected for insects carrying the resistance allele, so they survived and reproduced more successfully.",
+    "Pesticide exposure caused susceptible insects to develop the resistance allele, which they passed to their offspring.",
+    "The resistance allele became more common because insects in unsprayed fields migrated into sprayed fields and replaced the population."
+   ],
+   "answer": 1,
+   "explanation": "The pesticide acts as a selective pressure: resistant individuals survive and leave more offspring, increasing the allele's frequency in sprayed fields. Pesticides do not induce specific beneficial mutations, and the stable frequency in unsprayed populations supports selection rather than drift alone. Migration from unsprayed fields, where the allele remains near 0.05, would not explain an increase to 0.60."
+  },
+  {
+   "n": 5,
+   "topic": "Heredity",
+   "q": "In a plant species, flower color is controlled by an autosomal gene with alleles P (purple) and p (white), and seed shape is controlled by a different autosomal gene with alleles R (round) and r (wrinkled). The P and R alleles are completely dominant, and the genes assort independently. A cross is made between two plants that are heterozygous for both genes (PpRr × PpRr). What fraction of the offspring is expected to have white flowers and wrinkled seeds?",
+   "options": [
+    "3/16",
+    "9/16",
+    "1/4",
+    "1/16"
+   ],
+   "answer": 3,
+   "explanation": "White flowers require the pp genotype, which has probability 1/2 × 1/2 = 1/4 from a Pp × Pp cross. Wrinkled seeds require rr, also with probability 1/4. Because the genes assort independently, the combined probability is 1/4 × 1/4 = 1/16."
+  },
+  {
+   "n": 6,
+   "topic": "Heredity",
+   "q": "A woman’s father has an X-linked recessive form of color blindness. The woman does not have color blindness and has a child with a man who does not have color blindness. What is the probability that their son will have color blindness?",
+   "options": [
+    "1",
+    "1/2",
+    "1/4",
+    "0"
+   ],
+   "answer": 1,
+   "explanation": "The woman inherited the color-blindness allele from her affected father, and because she is unaffected, her other X chromosome carries the normal allele; she is a carrier. A son receives a Y chromosome from his father and one X chromosome from his mother, with a 1/2 chance of receiving the color-blindness allele."
+  },
+  {
+   "n": 7,
+   "topic": "Heredity",
+   "q": "Two genes in Drosophila, body color and wing shape, are linked on the same autosome. A female heterozygous for both genes is testcrossed with a homozygous recessive male. The offspring phenotypes appear in the table.\nPhenotype | Number\nwild-type body, wild-type wings | 360\nmutant body, mutant wings | 360\nwild-type body, mutant wings | 40\nmutant body, wild-type wings | 40\nWhat is the recombination frequency between the body color and wing shape genes?",
+   "options": [
+    "5%",
+    "80%",
+    "10%",
+    "20%"
+   ],
+   "answer": 2,
+   "explanation": "The recombinant offspring are the two less frequent classes: 40 + 40 = 80. The total number of offspring is 360 + 360 + 40 + 40 = 800. The recombination frequency is 80/800 = 0.10, or 10%."
+  },
+  {
+   "n": 8,
+   "topic": "Cell structure and function",
+   "q": "Animal cells normally maintain a higher K⁺ concentration inside than outside. A drug that prevents ATP synthesis is added, and the intracellular K⁺ concentration decreases over time. Which best explains this decrease?",
+   "options": [
+    "Active transport of K⁺ into the cell requires ATP, so K⁺ leaks out down its concentration gradient when ATP is unavailable.",
+    "K⁺ is moved out of the cell by facilitated diffusion because ATP is needed for channel proteins to open.",
+    "K⁺ diffuses out through the lipid bilayer because ion movement always requires ATP.",
+    "Water enters the cell by osmosis, diluting K⁺ without any K⁺ movement."
+   ],
+   "answer": 0,
+   "explanation": "Maintaining a high intracellular K⁺ concentration requires ATP-driven active transport. Without ATP, K⁺ moves out through channels down its concentration gradient. Ions cross membranes poorly through the lipid bilayer, and facilitated diffusion through channel proteins does not directly require ATP."
+  },
+  {
+   "n": 9,
+   "topic": "Cell structure and function",
+   "q": "Researchers label newly synthesized proteins by briefly supplying cultured cells with radioactive amino acids. In untreated cells, radioactivity moves from the rough ER at 30 minutes to the Golgi apparatus at 2 hours and then outside the cell at 4 hours. Which result would be expected after 4 hours if a drug blocks transport vesicles from the rough ER to the Golgi apparatus?",
+   "options": [
+    "Most radioactivity is outside the cell.",
+    "Most radioactivity is in the nucleus.",
+    "Most radioactivity remains in the rough ER.",
+    "Most radioactivity is in the Golgi apparatus."
+   ],
+   "answer": 2,
+   "explanation": "Secretory proteins are synthesized in the rough ER and must travel by vesicles to the Golgi apparatus before being secreted. Blocking transport from the rough ER to the Golgi traps these labeled proteins in the rough ER. Therefore, they would not reach the Golgi or the outside of the cell in large amounts."
+  },
+  {
+   "n": 10,
+   "topic": "Cell structure and function",
+   "q": "A plant cell has a solute potential of −0.6 MPa and a pressure potential of 0.3 MPa. It is placed in pure water at 0 MPa and atmospheric pressure. What is the cell’s initial water potential, and in which direction will water move?",
+   "options": [
+    "−0.3 MPa; water leaves the cell.",
+    "−0.3 MPa; water enters the cell.",
+    "0.3 MPa; water enters the cell.",
+    "−0.9 MPa; water leaves the cell."
+   ],
+   "answer": 1,
+   "explanation": "Water potential is the sum of solute potential and pressure potential: −0.6 + 0.3 = −0.3 MPa. Pure water has a water potential of 0 MPa, so water moves from higher water potential (0 MPa) to lower water potential (−0.3 MPa) and enters the cell."
+  },
+  {
+   "n": 11,
+   "topic": "Cellular energetics",
+   "q": "Students place equal-sized sprigs of Elodea in sealed tubes of water containing a carbon dioxide source and expose each tube to one color of light for 10 minutes. They measure oxygen bubbles released per minute. The results are shown.\nLight color | O₂ bubbles/min\nBlue | 18\nGreen | 3\nRed | 16\nDark | 0\nWhich conclusion is best supported by the data?",
+   "options": [
+    "Green light is used most efficiently because it is not absorbed by chlorophyll.",
+    "Oxygen production is independent of light wavelength as long as light is present.",
+    "Red light produces more oxygen than blue light because it has more energy per photon.",
+    "Chlorophyll absorbs blue and red light more effectively than green light, so the light reactions produce more oxygen under blue and red light."
+   ],
+   "answer": 3,
+   "explanation": "Oxygen production by Elodea reflects the rate of the light reactions, and the data show much more O₂ release under blue and red light than under green light. Chlorophyll absorbs red and blue wavelengths and reflects or transmits much of the green light. The low rate under green light does not mean green light is used most efficiently."
+  },
+  {
+   "n": 12,
+   "topic": "Cellular energetics",
+   "q": "Mitochondria are isolated from a culture of human cells and incubated in a buffered solution containing pyruvate, ADP, Pi, and O₂. Oxygen consumption and ATP synthesis are measured. After cyanide is added, electron transport through the electron transport chain stops. Which of the following is the most direct expected result?",
+   "options": [
+    "Substrate-level phosphorylation in the citric acid cycle increases to compensate.",
+    "The proton gradient across the inner mitochondrial membrane decreases, and ATP synthase stops producing ATP.",
+    "Pyruvate is no longer converted to acetyl-CoA because that step directly requires O₂.",
+    "Glycolysis immediately stops because glucose can no longer be oxidized."
+   ],
+   "answer": 1,
+   "explanation": "Cyanide blocks the final electron transfer to O₂ in the electron transport chain, so protons are no longer pumped into the intermembrane space. The proton gradient dissipates, and ATP synthase stops making ATP. Glycolysis and the conversion of pyruvate to acetyl-CoA do not directly require O₂, although their continuation in intact cells depends on regenerating NAD⁺."
+  },
+  {
+   "n": 13,
+   "topic": "Cellular energetics",
+   "q": "Phosphofructokinase (PFK) is a glycolytic enzyme. In an in vitro assay, researchers measure PFK activity at several ATP concentrations while fructose-6-phosphate is kept at a saturating concentration. The results are shown.\nATP concentration (mM) | PFK activity (µmol/min)\n0.2 | 12\n0.5 | 35\n1.0 | 60\n2.0 | 55\n4.0 | 20\nWhich explanation best fits the data?",
+   "options": [
+    "ATP competes with fructose-6-phosphate at the active site, and the inhibition can be overcome by adding more fructose-6-phosphate.",
+    "At high ATP concentrations, ATP binds an allosteric site and inhibits PFK, reducing flux through glycolysis when ATP is abundant.",
+    "ATP is the substrate, so increasing ATP should always increase PFK activity until the enzyme is saturated.",
+    "High ATP denatures PFK irreversibly, so activity cannot recover when ATP decreases."
+   ],
+   "answer": 1,
+   "explanation": "PFK activity rises as ATP increases from 0.2 mM to 1.0 mM, but it falls at higher ATP concentrations even though ATP is also a substrate. This pattern is consistent with ATP binding an allosteric inhibitory site when cellular ATP is high, providing negative feedback on glycolysis. The fructose-6-phosphate concentration is already saturating, so the decline is not explained by simple substrate limitation."
+  },
+  {
+   "n": 14,
+   "topic": "Cell communication and cell cycle",
+   "q": "In a cell-signaling experiment, a hormone normally increases cAMP concentration in cultured liver cells. Researchers use mutant cells with a G protein that cannot hydrolyze GTP. After the hormone is added and then removed, cAMP remains elevated much longer than in normal cells. Which statement best explains this result?",
+   "options": [
+    "The hormone receptor remains permanently bound to the hormone and continues signaling from the cell surface.",
+    "The mutant G protein cannot bind GTP and therefore fails to activate adenylyl cyclase.",
+    "The mutant G protein directly produces cAMP, so the amount of cAMP continues to increase after the hormone is removed.",
+    "The mutant G protein remains in its active GTP-bound state, so it continues stimulating adenylyl cyclase after the hormone is removed."
+   ],
+   "answer": 3,
+   "explanation": "G proteins are activated when bound to GTP and inactivated when they hydrolyze GTP to GDP. If hydrolysis is blocked, the G protein stays active and keeps stimulating adenylyl cyclase, so cAMP production continues after the hormone is gone. The mutation is in the G protein, not in the receptor or in adenylyl cyclase itself."
+  },
+  {
+   "n": 15,
+   "topic": "Cell communication and cell cycle",
+   "q": "A drug is added to an asynchronous culture of human cells. After 24 hours, the cells are analyzed by flow cytometry to determine the percentage in each stage of the cell cycle. The results are shown.\nStage | Control cells (%) | Treated cells (%)\nG₁ | 55 | 15\nS | 30 | 25\nG₂/M | 15 | 60\nWhich is the most likely effect of the drug?",
+   "options": [
+    "It causes cells to skip S phase and enter G₂/M prematurely without replicating DNA.",
+    "It stimulates cytokinesis, causing more cells to divide and increasing the percentage in G₁.",
+    "It slows progression through G₂ or M, causing cells to accumulate in G₂/M.",
+    "It blocks DNA replication, causing cells to arrest in G₁."
+   ],
+   "answer": 2,
+   "explanation": "The treated culture has a much larger percentage of cells in G₂/M and a smaller percentage in G₁ than the control. This pattern is expected when cells enter G₂/M but are slowed or blocked from completing mitosis and returning to G₁. A block in DNA replication would increase the proportion of cells in G₁ or S, not mainly in G₂/M."
+  },
+  {
+   "n": 16,
+   "topic": "Cell communication and cell cycle",
+   "q": "Researchers study a hormone that activates a target gene in cultured cells. They set up three cultures. In the first, hormone alone causes target gene expression to increase. In the second, hormone plus an inhibitor of adenylyl cyclase causes no increase in target gene expression. In the third, the adenylyl cyclase inhibitor plus a membrane-permeable analog of cAMP causes target gene expression to increase. Which conclusion is best supported?",
+   "options": [
+    "The hormone increases gene expression by activating adenylyl cyclase and raising intracellular cAMP.",
+    "The hormone must enter the cell and bind directly to the target gene.",
+    "The inhibitor blocks the hormone receptor, preventing all signaling.",
+    "cAMP acts outside the cell to activate the hormone receptor."
+   ],
+   "answer": 0,
+   "explanation": "The adenylyl cyclase inhibitor prevents the hormone response, while a membrane-permeable cAMP analog restores the response even when adenylyl cyclase is inhibited. This shows that cAMP is downstream of adenylyl cyclase and is sufficient to activate the gene-expression response. The results do not support direct hormone binding to DNA or an extracellular role for cAMP."
+  },
+  {
+   "n": 17,
+   "topic": "Ecology",
+   "q": "A student team led by Maya Patel captured 120 deer mice in a grassland, marked them, and released them. One week later, the team captured 150 mice, of which 30 had marks. Assuming the marked mice mixed randomly with the population and no births, deaths, immigration, or emigration occurred, what is the best estimate of the population size?",
+   "options": [
+    "900",
+    "600",
+    "240",
+    "1200"
+   ],
+   "answer": 1,
+   "explanation": "The mark-recapture estimate is (number marked × number recaptured) ÷ number of marked recaptured, which is (120 × 150) ÷ 30 = 600. This estimate assumes the marked and unmarked mice were equally likely to be captured in the second sample."
+  },
+  {
+   "n": 18,
+   "topic": "Ecology",
+   "q": "In a California grassland, researchers compared 10 plots where large mammalian herbivores were excluded for five years with 10 similar plots that remained grazed. The ungrazed plots averaged 6 plant species per square meter, while grazed plots averaged 12. The dominant grass in ungrazed plots formed a dense mat that shaded smaller plants. Which best explains why grazed plots had greater plant species richness?",
+   "options": [
+    "Grazing increases nitrogen fixation by all plants, which directly increases species richness.",
+    "Grazing reduces the dominant grass, allowing less competitive plant species to persist.",
+    "Herbivores increase species richness because they eliminate all plant predators.",
+    "Ungrazed plots have more species because taller plants create more habitats."
+   ],
+   "answer": 1,
+   "explanation": "In the ungrazed plots, the dominant grass formed a dense mat that likely excluded smaller plants through competition for light and space. Grazing reduced that dominant competitor, allowing other plant species to persist and increasing richness. The data do not indicate that herbivores eliminate plant predators or directly increase nitrogen fixation by all plants."
+  },
+  {
+   "n": 19,
+   "topic": "Chemistry of life",
+   "q": "Students heat 100 g samples of water and ethanol with the same amount of energy. The temperature of the water rises by 9 °C, while the temperature of the ethanol rises by 20 °C. Which property of water best explains this difference?",
+   "options": [
+    "Water is an excellent solvent because it is polar and can form hydrogen bonds with ions.",
+    "Water has a high heat of vaporization because hydrogen bonds must be broken for evaporation.",
+    "Solid water is less dense than liquid water because of its hydrogen-bonded lattice.",
+    "Water has a high specific heat because hydrogen bonds absorb energy with only small temperature changes."
+   ],
+   "answer": 3,
+   "explanation": "Specific heat is the energy needed to raise the temperature of a substance, and water's hydrogen bonds make its specific heat unusually high. Therefore, the same energy input produces a smaller temperature rise in water than in ethanol. Heat of vaporization, solvent ability, and the density of ice involve other properties of water and do not directly explain the temperature change during heating."
+  },
+  {
+   "n": 20,
+   "topic": "Chemistry of life",
+   "q": "A buffer solution contains carbonic acid (H₂CO₃) and bicarbonate (HCO₃⁻). When a small amount of HCl is added, the pH decreases only slightly. Which statement best explains the small pH change?",
+   "options": [
+    "HCl reacts with water to produce OH⁻, which neutralizes the acid.",
+    "Carbonic acid releases H⁺ to neutralize the added HCl.",
+    "The buffer prevents any change in the concentration of H⁺, so the pH stays exactly constant.",
+    "Bicarbonate ions accept H⁺ from HCl to form carbonic acid, reducing the increase in free H⁺ concentration."
+   ],
+   "answer": 3,
+   "explanation": "In a buffer, the conjugate base component can combine with added H⁺, while the weak acid component can donate H⁺ to added base. Here, added HCl increases H⁺, and HCO₃⁻ accepts some of that H⁺ to form H₂CO₃, so the rise in free H⁺ is small and the pH changes only slightly. The pH is not completely unchanged, and carbonic acid does not neutralize HCl by releasing more H⁺."
+  },
+  {
+   "n": 21,
+   "topic": "Gene expression and regulation",
+   "q": "A researcher treats human cells with hormone H. Within 2 hours, the amount of mRNA transcribed from gene X increases from 50 to 600 copies per cell. When a transcription inhibitor is added together with hormone H, the mRNA amount stays near 50 copies per cell. When a translation inhibitor is added together with hormone H, the mRNA amount rises to 700 copies per cell. Which conclusion is best supported by these results?",
+   "options": [
+    "Hormone H increases translation of gene X mRNA.",
+    "Transcription of gene X occurs only when translation is inhibited.",
+    "Gene X mRNA is degraded when translation is inhibited.",
+    "Hormone H increases transcription of gene X."
+   ],
+   "answer": 3,
+   "explanation": "The rise in gene X mRNA is blocked by a transcription inhibitor, so the hormone increases transcription. The translation inhibitor does not prevent the rise in mRNA, so the data do not show an effect on translation. The result with the translation inhibitor may reflect loss of a feedback effect, but it does not mean transcription occurs only when translation is inhibited."
+  },
+  {
+   "n": 22,
+   "topic": "Natural selection",
+   "q": "Researchers release 250 brown beetles and 250 green beetles onto a plot of brown soil. Birds are the main predator. After 3 days, 180 brown beetles and 60 green beetles remain. Which conclusion is best supported by these data?",
+   "options": [
+    "Green beetles survive better because their color helps them hide on brown soil.",
+    "The beetles choose their color based on the background.",
+    "Birds cause green beetles to mutate into brown beetles.",
+    "Brown coloration is favored on brown soil because brown beetles had higher survival."
+   ],
+   "answer": 3,
+   "explanation": "The brown beetles had a survival rate of 180/250 = 72%, while the green beetles had a survival rate of 60/250 = 24%. This is consistent with natural selection favoring brown coloration on brown soil. The data do not support directed mutation, better survival of green beetles, or color choice by the beetles."
+  },
+  {
+   "n": 23,
+   "topic": "Heredity",
+   "q": "In a species of plant, genes A and B are on different chromosomes. A plant with genotype AaBb is crossed with a plant with genotype aabb. Of 400 offspring, how many are expected to have genotype Aabb?",
+   "options": [
+    "25",
+    "50",
+    "200",
+    "100"
+   ],
+   "answer": 3,
+   "explanation": "The cross Aa × aa gives Aa with probability 1/2, and Bb × bb gives bb with probability 1/2. Because the genes are on different chromosomes, the probabilities are independent: 1/2 × 1/2 = 1/4. Of 400 offspring, 400 × 1/4 = 100 are expected to have genotype Aabb."
+  },
+  {
+   "n": 24,
+   "topic": "Cell structure and function",
+   "q": "In an experiment with isolated mitochondria supplied with pyruvate and O₂, adding drug X increases O₂ consumption but decreases ATP synthesis. Which explanation is most likely?",
+   "options": [
+    "Drug X prevents pyruvate from entering mitochondria, so ATP is made only by glycolysis.",
+    "Drug X blocks the electron transport chain, so O₂ consumption increases as a backup pathway.",
+    "Drug X allows H⁺ to cross the inner mitochondrial membrane without passing through ATP synthase, reducing the proton gradient used to make ATP.",
+    "Drug X directly inhibits ATP synthase, causing O₂ consumption to increase because electron transport speeds up."
+   ],
+   "answer": 2,
+   "explanation": "An uncoupling drug lets protons leak across the inner membrane, so the proton gradient is reduced and less ATP is made by ATP synthase. Electron transport can continue faster and consume more O₂ as it tries to restore the gradient. Blocking the electron transport chain or pyruvate entry would generally decrease O₂ consumption."
+  },
+  {
+   "n": 25,
+   "topic": "Gene expression and regulation",
+   "q": "A regulatory DNA sequence R is located 2,000 base pairs upstream of the transcription start site of gene S and does not overlap the coding region. In isolated nuclei, the rate of transcription of gene S is 25 times higher when R is present than when R is deleted. Which conclusion is best supported?",
+   "options": [
+    "Sequence R promotes transcription of gene S.",
+    "Sequence R encodes part of the protein produced from gene S.",
+    "Sequence R prevents degradation of gene S mRNA after transcription.",
+    "Sequence R is required for translation of gene S mRNA."
+   ],
+   "answer": 0,
+   "explanation": "The measured transcription rate is much higher when the upstream sequence R is present, so R promotes transcription. Because R is upstream and does not overlap the coding region, it does not encode protein. The experiment measures transcription in nuclei, not translation or mRNA degradation."
+  },
+  {
+   "n": 26,
+   "topic": "Natural selection",
+   "q": "A population of bacteria is exposed to an antibiotic. Most cells die, but a few survive and multiply. After several days, the population grows in the presence of the antibiotic. Which explanation is best supported by natural selection?",
+   "options": [
+    "The antibiotic caused susceptible bacteria to mutate and become resistant during the exposure.",
+    "The antibiotic killed only the bacteria that were already resistant, leaving susceptible cells to reproduce.",
+    "The bacteria learned to pump out the antibiotic and passed this learned ability to their offspring.",
+    "Some bacteria already had alleles that made them resistant; the antibiotic increased the proportion of resistant cells by killing susceptible cells."
+   ],
+   "answer": 3,
+   "explanation": "Natural selection acts on variation that already exists in a population. The antibiotic kills susceptible cells, allowing resistant cells to survive and reproduce, so resistance becomes more common. The antibiotic does not direct mutations or cause inherited learned traits, and it does not kill only resistant cells."
+  },
+  {
+   "n": 27,
+   "topic": "Heredity",
+   "q": "In a fruit fly, two genes are on the same chromosome. A heterozygous female with genotype AaBb is testcrossed with an aabb male. The offspring phenotypes from the heterozygous parent are A B = 420; a b = 410; A b = 90; a B = 80. What is the estimated distance between the two genes?",
+   "options": [
+    "34 map units",
+    "17 map units",
+    "83 map units",
+    "8.5 map units"
+   ],
+   "answer": 1,
+   "explanation": "The recombinant offspring are A b and a B, totaling 90 + 80 = 170. The total offspring number is 420 + 410 + 90 + 80 = 1000, so the recombination frequency is 170/1000 = 0.17, or 17%. Because 1% recombination equals 1 map unit, the estimated distance is 17 map units."
+  },
+  {
+   "n": 28,
+   "topic": "Cell structure and function",
+   "q": "A researcher measures glucose uptake by intestinal epithelial cells. Uptake is low when Na⁺ is absent from the outside solution. When Na⁺ is present and ATP is available, uptake is high. Adding ouabain, which inhibits the Na⁺/K⁺ ATPase, greatly reduces glucose uptake. Which conclusion is best supported?",
+   "options": [
+    "Glucose enters the cells by simple diffusion because uptake requires no carrier.",
+    "Ouabain directly blocks the glucose transporter in the membrane.",
+    "Glucose uptake is coupled to a Na⁺ gradient that is maintained by active transport.",
+    "Glucose uptake is driven directly by ATP hydrolysis at the glucose transporter."
+   ],
+   "answer": 2,
+   "explanation": "The need for Na⁺ and the effect of inhibiting the Na⁺/K⁺ ATPase indicate that glucose uptake depends on a Na⁺ gradient maintained by active transport. This pattern fits secondary active transport, in which Na⁺ movement drives glucose uptake through a cotransporter. The data do not support simple diffusion, direct blockage of the glucose transporter, or direct ATP hydrolysis at the glucose transporter."
+  },
+  {
+   "n": 29,
+   "topic": "Gene expression and regulation",
+   "q": "In a bacterium, a repressor protein controls genes needed to digest sugar X. Wild-type cells produce the digestive enzymes only when sugar X is present. A mutant strain produces the enzymes even when sugar X is absent. Which mutation best explains the mutant phenotype?",
+   "options": [
+    "A mutation that prevents RNA polymerase from binding to the promoter.",
+    "A mutation that removes the start codon from the digestive enzyme mRNA.",
+    "A mutation that prevents the repressor from binding to the operator DNA.",
+    "A mutation that makes the repressor bind more tightly to the operator."
+   ],
+   "answer": 2,
+   "explanation": "The repressor normally blocks transcription when sugar X is absent; if it cannot bind the operator, the genes are expressed even without sugar X. Preventing RNA polymerase binding or removing the start codon would reduce enzyme production rather than make it constitutive. A repressor that binds more tightly would repress the genes even more strongly."
+  },
+  {
+   "n": 30,
+   "topic": "Cell structure and function",
+   "q": "A neuron extends a long axon, and vesicles containing neurotransmitters must be transported from the cell body to the axon terminal. A drug that inhibits motor proteins but does not disrupt microtubules is applied. Which outcome is most likely?",
+   "options": [
+    "Vesicle transport is unaffected because small vesicles can move by diffusion along the axon.",
+    "Vesicles move in the opposite direction because motor proteins normally prevent reverse movement.",
+    "Vesicles continue to move because microtubules themselves generate the force for transport.",
+    "Vesicles fail to move along the axon because motor proteins cannot carry them along microtubules."
+   ],
+   "answer": 3,
+   "explanation": "Motor proteins use ATP to move cargo along microtubules, so inhibiting them blocks vesicle transport along the axon. Microtubules provide tracks but do not themselves generate the transport force. Diffusion is not an effective mechanism for moving vesicles over the long distance of an axon."
+  },
+  {
+   "n": 31,
+   "topic": "Cellular energetics",
+   "q": "Mitochondria are isolated in a buffer with pyruvate and ADP. The rate of O₂ consumption is measured under three conditions: pyruvate + ADP, 18 nmol/min; pyruvate + ADP + oligomycin, 4 nmol/min; pyruvate + ADP + oligomycin + an uncoupler, 24 nmol/min. Oligomycin blocks ATP synthase, and the uncoupler allows H⁺ to cross the inner mitochondrial membrane without passing through ATP synthase. Which best explains why O₂ consumption is higher with the uncoupler than with oligomycin alone?",
+   "options": [
+    "The uncoupler directly transfers electrons from NADH to O₂, bypassing the electron transport chain.",
+    "Oligomycin increases the proton gradient so much that O₂ consumption is inhibited, and the uncoupler restores the gradient.",
+    "The proton gradient is dissipated, so electron transport and O₂ consumption can proceed rapidly even though ATP synthesis is blocked.",
+    "The uncoupler inhibits the citric acid cycle, causing more pyruvate to be oxidized directly by O₂."
+   ],
+   "answer": 2,
+   "explanation": "With oligomycin, ATP synthase is blocked, so the proton gradient builds and electron transport slows. An uncoupler lets H⁺ leak back and dissipates the gradient, allowing electron transport and O₂ consumption to resume even though ATP is not made. The uncoupler does not donate electrons to O₂."
+  },
+  {
+   "n": 32,
+   "topic": "Cellular energetics",
+   "q": "During a sprint, a runner's leg muscle cells have insufficient O₂. The cells convert pyruvate to lactate. Which statement best explains the advantage of this conversion for the muscle cells?",
+   "options": [
+    "It converts lactate into glucose, which directly enters the citric acid cycle.",
+    "It produces most of the ATP used during the sprint through the electron transport chain.",
+    "It regenerates NAD⁺, allowing glycolysis to continue producing ATP without O₂.",
+    "It increases the proton gradient across the inner mitochondrial membrane."
+   ],
+   "answer": 2,
+   "explanation": "In anaerobic conditions, conversion of pyruvate to lactate oxidizes NADH to NAD⁺. This lets glycolysis continue, producing a small amount of ATP without O₂. It does not produce most ATP or feed the electron transport chain."
+  },
+  {
+   "n": 33,
+   "topic": "Cellular energetics",
+   "q": "A student measures net O₂ production by an aquatic plant at several light intensities. Light intensity | 0 | 100 | 200 | 400 | 600 | 800 μmol photons·m⁻²·s⁻¹. Net O₂ production | −2.0 | 0.0 | 4.0 | 8.0 | 10.0 | 10.0 μmol O₂/min. Respiration is assumed constant. What is the gross O₂ production at 400 μmol photons·m⁻²·s⁻¹?",
+   "options": [
+    "2.0 μmol O₂/min",
+    "8.0 μmol O₂/min",
+    "6.0 μmol O₂/min",
+    "10.0 μmol O₂/min"
+   ],
+   "answer": 3,
+   "explanation": "At 0 light, net O₂ production is −2.0 μmol/min, so respiration consumes 2.0 μmol O₂/min. At 400, gross = net + respiration = 8.0 + 2.0 = 10.0 μmol O₂/min. The 8.0 value is net production, not gross."
+  },
+  {
+   "n": 34,
+   "topic": "Cell communication and cell cycle",
+   "q": "A mutation in the α subunit of a G protein prevents GTP hydrolysis but does not affect GTP binding. Cells with this mutation are briefly exposed to the signaling ligand. What is the most likely effect on the signaling pathway?",
+   "options": [
+    "The ligand is unable to bind the receptor, so no signal is initiated.",
+    "The receptor cannot activate the G protein because GTP hydrolysis is required for activation.",
+    "The G protein is permanently inactive because it remains bound to GDP.",
+    "The Gα subunit remains active longer than normal, prolonging the downstream response after ligand removal."
+   ],
+   "answer": 3,
+   "explanation": "GTP binding activates the Gα subunit, and GTP hydrolysis turns it off. Preventing hydrolysis keeps Gα active longer, so the downstream response is prolonged after the ligand is removed. GTP hydrolysis is not required for activation."
+  },
+  {
+   "n": 35,
+   "topic": "Cell communication and cell cycle",
+   "q": "A drug is added to a culture of dividing cells. Phase | Before treatment | After 12 hours. G1 | 60% | 80%. S | 20% | 5%. G2-M | 20% | 15%. Which conclusion is best supported by the data?",
+   "options": [
+    "The drug prevents cells from progressing from G1 into S, causing accumulation in G1.",
+    "The drug stimulates cells to re-enter S phase from G1.",
+    "The drug blocks cells in G2-M, preventing mitosis.",
+    "The drug causes cells to skip G1 and arrest in S."
+   ],
+   "answer": 0,
+   "explanation": "After treatment, the percentage of G1 cells increases while the percentage of S cells decreases, consistent with a block before DNA replication. A G2-M block would increase G2-M cells, and an S-phase arrest would increase S cells rather than reduce them."
+  },
+  {
+   "n": 36,
+   "topic": "Cell communication and cell cycle",
+   "q": "A mutation removes the phosphorylation sites on the Rb protein. In normal cells, active CDK complexes phosphorylate Rb, which releases E2F. What is the most likely consequence of this mutation in cells that are stimulated to divide?",
+   "options": [
+    "E2F is active even without growth signals, causing uncontrolled entry into S phase.",
+    "CDK complexes cannot become active because they require Rb phosphorylation to function.",
+    "Cells arrest in G2-M because Rb directly controls chromosome separation.",
+    "Rb remains bound to E2F, so the cells are less likely to progress from G1 to S."
+   ],
+   "answer": 3,
+   "explanation": "Unphosphorylated Rb binds E2F and inhibits G1-to-S progression. If the phosphorylation sites are removed, CDK cannot release E2F, so the cells are less likely to enter S phase. Rb phosphorylation is a consequence, not a requirement, for CDK activity."
+  },
+  {
+   "n": 37,
+   "topic": "Ecology",
+   "q": "A deer population has 100 individuals at the start of a year. During the year, the per capita birth rate is 0.12 and the per capita death rate is 0.04. Fifteen deer emigrate, and five immigrate. What is the net change in population size after one year?",
+   "options": [
+    "increase of 8 deer",
+    "decrease of 2 deer",
+    "decrease of 10 deer",
+    "increase of 10 deer"
+   ],
+   "answer": 1,
+   "explanation": "The population adds 0.12 × 100 = 12 births and loses 0.04 × 100 = 4 deaths, for a natural increase of 8. Immigration adds 5 and emigration removes 15, for a net movement of −10. The total change is 8 − 10 = −2 deer."
+  },
+  {
+   "n": 38,
+   "topic": "Ecology",
+   "q": "In a lake ecosystem, phytoplankton have a net primary production of 20,000 kJ·m⁻²·yr⁻¹. Zooplankton assimilate 2,500 kJ·m⁻²·yr⁻¹ from phytoplankton, and small fish assimilate 300 kJ·m⁻²·yr⁻¹ from zooplankton. What is the trophic transfer efficiency from phytoplankton to zooplankton?",
+   "options": [
+    "1.25%",
+    "1.5%",
+    "12.5%",
+    "12.0%"
+   ],
+   "answer": 2,
+   "explanation": "Trophic transfer efficiency is the energy assimilated at one level divided by the energy available at the level below. Here, 2,500 ÷ 20,000 × 100% = 12.5%. The small fish value describes the next transfer and is not used."
+  },
+  {
+   "n": 39,
+   "topic": "Chemistry of life",
+   "q": "A buffer made of a weak acid and its conjugate base is added to a solution. A student then adds a small amount of HCl. Compared with adding the same amount of HCl to pure water, what is the most likely effect in the buffered solution?",
+   "options": [
+    "The pH increases because the buffer releases H⁺ into the solution.",
+    "The HCl is converted into a weak acid, so it no longer affects pH.",
+    "The pH decreases less because the conjugate base accepts some of the added H⁺.",
+    "The pH remains exactly unchanged because buffers prevent all pH changes."
+   ],
+   "answer": 2,
+   "explanation": "A buffer contains a weak acid and its conjugate base. Added H⁺ is partly taken up by the conjugate base, so the pH decreases less than it would in unbuffered water. Buffers reduce pH changes but do not prevent all changes."
+  },
+  {
+   "n": 40,
+   "topic": "Chemistry of life",
+   "q": "A soluble protein normally has a valine (a nonpolar amino acid) in its interior. A mutation changes this valine to glutamate, which is negatively charged at physiological pH. What is the most likely effect on the protein?",
+   "options": [
+    "The protein's folding may be destabilized because a charged amino acid is placed in a hydrophobic interior.",
+    "The peptide bonds in the protein will break because of the charge.",
+    "The mutation will have no effect because all amino acids have the same chemical properties.",
+    "The protein will necessarily be transported to the plasma membrane because glutamate is charged."
+   ],
+   "answer": 0,
+   "explanation": "A soluble protein's interior is typically hydrophobic, so placing a charged glutamate there is energetically unfavorable and can disrupt folding. The mutation changes an amino acid side chain; it does not break peptide bonds or automatically target the protein to the membrane."
+  },
+  {
+   "n": 41,
+   "topic": "Gene expression and regulation",
+   "q": "In a species of soil bacteria, the genes that allow the use of compound X are transcribed only when compound X is absent. These genes are controlled by a repressor protein that binds to the operator and blocks transcription when compound X is present. A mutant strain produces the enzymes for using compound X whether compound X is present or absent. Which mutation would most directly explain this mutant phenotype?",
+   "options": [
+    "A mutation that allows the repressor to bind the operator even when compound X is absent",
+    "A mutation that causes the digestive enzymes to be degraded more rapidly after they are made",
+    "A change in the operator sequence that prevents the repressor protein from binding",
+    "A change in the promoter that prevents RNA polymerase from binding"
+   ],
+   "answer": 2,
+   "explanation": "The repressor blocks transcription when it binds the operator in the presence of compound X, so losing repressor binding allows continuous expression. A promoter change that prevents RNA polymerase binding or a repressor that binds even without compound X would reduce expression. More rapid enzyme degradation would affect enzyme levels after translation, not make transcription constitutive."
+  },
+  {
+   "n": 42,
+   "topic": "Gene expression and regulation",
+   "q": "In a eukaryotic organism, the same gene is transcribed at similar levels in liver cells and muscle cells, and the mRNA molecules in both cell types have the same sequence and length. However, the encoded protein is detected only in liver cells. Which explanation is best supported by these observations?",
+   "options": [
+    "Translation of the mRNA is blocked in muscle cells by a regulatory RNA or protein.",
+    "The gene is deleted from the genome of muscle cells.",
+    "The mRNA is spliced differently in muscle cells, producing a different protein.",
+    "RNA polymerase binds the promoter but cannot elongate the mRNA in muscle cells."
+   ],
+   "answer": 0,
+   "explanation": "The mRNA is present at similar levels and has the same sequence in both cell types, so regulation occurs after transcription. Protein production only in liver cells indicates translational control, such as a microRNA blocking translation in muscle. Gene deletion, alternative splicing, or a transcription elongation defect would alter mRNA presence or sequence."
+  },
+  {
+   "n": 43,
+   "topic": "Gene expression and regulation",
+   "q": "Two groups of genetically identical mice are raised in different environments. Mice raised with access to a running wheel have more mRNA for a muscle protein in leg muscle cells than mice without a wheel. In the active mice, the promoter region of the gene has fewer methylated cytosines. Which conclusion is best supported?",
+   "options": [
+    "Increased DNA methylation directly increases the rate of translation of existing mRNA.",
+    "Exercise changes the DNA sequence of the gene so that it produces a different protein.",
+    "The gene is completely inactive in the mice without wheels because it is absent from their genome.",
+    "Decreased DNA methylation at the promoter is associated with increased transcription of the muscle protein gene."
+   ],
+   "answer": 3,
+   "explanation": "The active mice have both more mRNA and less promoter methylation, supporting an association between lower methylation and higher transcription. DNA methylation can influence transcription rather than directly changing translation of existing mRNA. The mice are genetically identical, so a change in DNA sequence or gene absence is not supported."
+  },
+  {
+   "n": 44,
+   "topic": "Natural selection",
+   "q": "A population of bacteria lives in a hospital sink. Before an antibiotic is used, about 10% of the bacteria carry an allele that gives resistance to the antibiotic, and the rest do not. After several weeks of regular antibiotic use, about 70% carry the resistance allele. Which statement best explains this change?",
+   "options": [
+    "The nonresistant bacteria reproduce faster because they are less costly to maintain.",
+    "Bacteria with the resistance allele survive and reproduce more often than bacteria without it when the antibiotic is present.",
+    "The antibiotic causes individual bacteria to make the resistance allele when they are exposed.",
+    "The antibiotic directly changes the resistance allele into a nonresistance allele."
+   ],
+   "answer": 1,
+   "explanation": "The resistance allele was already present at low frequency before antibiotic exposure, and its frequency rose after exposure. This is consistent with natural selection: resistant bacteria survive and reproduce more often when the antibiotic is present. The antibiotic does not create the allele in individual cells, and faster reproduction of nonresistant bacteria would decrease the resistance allele's frequency."
+  },
+  {
+   "n": 45,
+   "topic": "Natural selection",
+   "q": "A student placed equal numbers of light-colored and dark-colored beetles in enclosures with light-colored sand and insect-eating birds. After four weeks, the proportion of light-colored beetles had increased from 0.50 to 0.75. Which prediction is best supported if the same experiment is repeated with dark-colored soil and birds?",
+   "options": [
+    "Both colors will remain equally common because birds cannot see color.",
+    "The proportion of dark-colored beetles will increase because they are less visible to birds on dark soil.",
+    "The proportion of light-colored beetles will increase because light color is always favored by natural selection.",
+    "Dark-colored beetles will become lighter during their lifetime to match the dark soil."
+   ],
+   "answer": 1,
+   "explanation": "On light sand, light-colored beetles survived better, consistent with birds preying more on the more visible dark beetles. On dark soil, the same selection pressure should favor dark-colored beetles. Individual beetles do not change color to match the environment during their lifetime."
+  },
+  {
+   "n": 46,
+   "topic": "Natural selection",
+   "q": "Researchers studied survival of birds with different beak depths during a year when only large seeds and very small seeds were abundant but medium seeds were scarce. The table shows the percentage of birds with each beak depth that survived to adulthood. Beak depth (mm) | Survival (%): 6 | 48; 8 | 16; 10 | 50. Which pattern of natural selection is best supported by these data?",
+   "options": [
+    "Artificial selection, because the birds chose mates with extreme beak depths.",
+    "Directional selection, because the mean beak depth increased.",
+    "Stabilizing selection, because intermediate beak depth had the highest survival.",
+    "Disruptive selection, because birds with small and large beaks survived better than birds with intermediate beaks."
+   ],
+   "answer": 3,
+   "explanation": "The small and large beak classes had roughly similar, higher survival than the intermediate class, which is the pattern of disruptive selection. Directional selection would favor one extreme, and stabilizing selection would favor the intermediate phenotype. The data describe survival, not mate choice by humans or birds."
+  },
+  {
+   "n": 47,
+   "topic": "Heredity",
+   "q": "Maya and Dev both have normal hearing. Maya's father is deaf due to an autosomal recessive allele, and Dev's mother is deaf due to the same condition. Neither Maya nor Dev has the condition. Assuming no other mutations and no other affected relatives affect these genotypes, what is the probability that their first child will be deaf?",
+   "options": [
+    "1/4",
+    "1/2",
+    "3/4",
+    "0"
+   ],
+   "answer": 0,
+   "explanation": "Maya must be a carrier because she inherited the recessive allele from her affected father and is unaffected. Dev must also be a carrier because he inherited the recessive allele from his affected mother and is unaffected. A cross of two carriers has a 1/4 chance of producing an affected homozygous recessive child."
+  },
+  {
+   "n": 48,
+   "topic": "Heredity",
+   "q": "In a species of fruit fly, two genes, A and B, are located on the same autosome. A heterozygous female with alleles AB on one homolog and ab on the other is testcrossed with a homozygous recessive male. The offspring are counted by phenotype: AB 820, Ab 180, aB 220, ab 780. Which estimate of the recombination frequency between the two genes is most consistent with these data?",
+   "options": [
+    "80%",
+    "20%",
+    "10%",
+    "40%"
+   ],
+   "answer": 1,
+   "explanation": "The recombinant offspring are the Ab and aB classes, totaling 180 + 220 = 400. The total offspring number is 820 + 180 + 220 + 780 = 2000, so the recombination frequency is (400 ÷ 2000) × 100 = 20%. The AB and ab classes are parental types and are not counted as recombinants."
+  },
+  {
+   "n": 49,
+   "topic": "Cell structure and function",
+   "q": "A scientist uses a fluorescent dye that becomes brightly concentrated inside acidic compartments of living cells. In a mutant cell line, the dye is spread throughout the cytoplasm instead of being concentrated in small vesicles. The mutant cells also fail to digest material taken up by endocytosis. Which organelle is most directly affected in these cells?",
+   "options": [
+    "Nuclei",
+    "Lysosomes",
+    "Ribosomes",
+    "Mitochondria"
+   ],
+   "answer": 1,
+   "explanation": "Lysosomes are acidic vesicles that contain hydrolytic enzymes and digest material taken up by endocytosis. A failure to concentrate dye in acidic vesicles and to digest endocytosed material points to defective lysosomes. Nuclei, ribosomes, and mitochondria have different primary roles and would not directly account for both observations."
+  },
+  {
+   "n": 50,
+   "topic": "Cell structure and function",
+   "q": "A student measured the mean volume of red blood cells after 30 minutes in NaCl solutions of different concentrations. Before treatment, the mean cell volume was 1.00 relative unit. NaCl concentration (M) | Mean cell volume (relative units): 0.00 | 1.60; 0.10 | 1.35; 0.15 | 1.10; 0.20 | 0.85; 0.30 | 0.70. Which NaCl concentration is closest to being isotonic to the red blood cells?",
+   "options": [
+    "0.17 M",
+    "0.20 M",
+    "0.15 M",
+    "0.10 M"
+   ],
+   "answer": 0,
+   "explanation": "An isotonic solution would leave the cells near their original volume of 1.00 relative unit. Interpolating between 0.15 M (volume 1.10) and 0.20 M (volume 0.85) gives 0.15 M + (0.10 ÷ 0.25) × 0.05 M = 0.17 M. At lower concentrations the cells swell, and at higher concentrations they shrink, consistent with osmosis."
+  },
+  {
+   "n": 51,
+   "topic": "Cellular energetics",
+   "q": "Isolated mitochondria are incubated with succinate, ADP, and inorganic phosphate in a buffered solution. Oxygen consumption is measured. A small amount of a compound that makes the inner mitochondrial membrane permeable to protons is then added. Which change is most likely to occur immediately after the compound is added?",
+   "options": [
+    "Oxygen consumption decreases, but the rate of ATP synthesis increases.",
+    "Oxygen consumption increases, and the rate of ATP synthesis increases.",
+    "Oxygen consumption decreases, and the rate of ATP synthesis decreases.",
+    "Oxygen consumption increases, but the rate of ATP synthesis decreases."
+   ],
+   "answer": 3,
+   "explanation": "The proton gradient normally slows electron transport by back-pressure; allowing protons to cross the membrane dissipates the gradient, so electron transport and oxygen consumption speed up. ATP synthase has less proton motive force, so ATP synthesis decreases. Protons still cross by the added route, not through ATP synthase."
+  },
+  {
+   "n": 52,
+   "topic": "Cellular energetics",
+   "q": "Researchers measure net CO₂ uptake by leaves of a C₃ plant at 25°C and saturating light. At a low intercellular CO₂ concentration of 50 µL/L, net CO₂ uptake is 4 µmol m⁻² s⁻¹ in air containing 21% O₂ but 12 µmol m⁻² s⁻¹ in air containing 2% O₂. At 400 µL/L CO₂, uptake is 22 and 24 µmol m⁻² s⁻¹, respectively. Which best explains the difference between the two O₂ treatments at 50 µL/L CO₂?",
+   "options": [
+    "High O₂ causes stomata to close, preventing all CO₂ entry.",
+    "At low CO₂, O₂ competes with CO₂ for rubisco and increases photorespiration.",
+    "Low O₂ reduces the amount of rubisco present in chloroplasts.",
+    "High O₂ directly inhibits the light reactions and stops ATP production."
+   ],
+   "answer": 1,
+   "explanation": "Rubisco can fix either CO₂ or O₂, and the competition becomes more important when CO₂ is low. Greater O₂ increases the oxygenase (photorespiratory) reaction, lowering net CO₂ uptake. At high CO₂, CO₂ outcompetes O₂, so the difference is small."
+  },
+  {
+   "n": 53,
+   "topic": "Cellular energetics",
+   "q": "A suspension of muscle cells is supplied with glucose and kept in a sealed chamber. In one trial, O₂ is absent; the cells consume 30 µmol glucose and produce 60 µmol lactate per minute. In a second trial, O₂ is present; the cells consume 2 µmol glucose and produce no detectable lactate per minute, while the total rate of ATP production is about the same. Which best explains these observations?",
+   "options": [
+    "Aerobic oxidation of each glucose molecule yields more ATP than anaerobic fermentation, so less glucose is needed when O₂ is present.",
+    "ATP production is coupled to oxygen consumption directly, so oxygen replaces glucose as the energy source.",
+    "Oxygen is used as the final electron donor in the electron transport chain, increasing ATP yield per glucose.",
+    "Lactate contains more usable energy than glucose, so fermenting cells must consume more glucose."
+   ],
+   "answer": 0,
+   "explanation": "In the presence of O₂, complete oxidation of glucose through cellular respiration captures much more ATP per molecule than lactate fermentation does. Therefore, cells need to consume less glucose to maintain a similar ATP output. Oxygen is the final electron acceptor, not an electron donor."
+  },
+  {
+   "n": 54,
+   "topic": "Cell communication and cell cycle",
+   "q": "In a cell line, binding of a growth factor to its receptor normally causes an increase in intracellular cAMP, activation of protein kinase A (PKA), and entry into the cell cycle. A mutant line has a receptor that is expressed at normal levels on the cell surface but lacks kinase activity, and it shows no cAMP increase after growth factor treatment. Adding a cell-permeable analog of cAMP to the mutant line restores PKA activation and cell-cycle entry. Which conclusion is best supported?",
+   "options": [
+    "The mutant receptor cannot be inserted into the plasma membrane.",
+    "cAMP is the extracellular ligand that binds the receptor.",
+    "PKA directly phosphorylates the receptor to activate the receptor.",
+    "The receptor's kinase activity is needed to generate the cAMP signal upstream of PKA."
+   ],
+   "answer": 3,
+   "explanation": "Because adding cAMP analog bypasses the receptor and restores downstream responses, the defect is in generating cAMP, which requires receptor kinase activity. PKA is downstream of cAMP, not upstream of the receptor. The mutant receptor is already stated to be present on the cell surface at normal levels."
+  },
+  {
+   "n": 55,
+   "topic": "Cell communication and cell cycle",
+   "q": "Cultured human cells are exposed to radiation that damages DNA. Normal cells show a rapid increase in p53 protein and p21 protein, a temporary decrease in DNA synthesis, and later repair. Cells with a p53 mutation show no p21 increase and continue DNA synthesis at nearly the normal rate. Which best explains the normal response?",
+   "options": [
+    "p53 directly repairs broken DNA strands by rejoining nucleotides.",
+    "p21 promotes progression through the G₁ checkpoint by activating cyclin-dependent kinases.",
+    "DNA damage immediately destroys cyclin proteins, preventing mitosis in all cells.",
+    "p53 is activated by DNA damage and increases p21, which helps pause the cell cycle before DNA is replicated."
+   ],
+   "answer": 3,
+   "explanation": "The data link functional p53 to increased p21 and a pause in DNA synthesis. p21 is a cyclin-dependent kinase inhibitor, so it slows progress through the cell cycle and allows time for repair. p53 regulates the response; it does not directly rejoin DNA strands."
+  },
+  {
+   "n": 56,
+   "topic": "Ecology",
+   "q": "A wildlife biologist in Montana wants to estimate the size of a closed population of deer mice in a grassland. She captures 90 mice, marks them, and releases them. After allowing time for mixing, she captures 120 mice; 18 have marks. Assuming the marked and unmarked mice are equally likely to be captured, what is the best estimate of the population size?",
+   "options": [
+    "600 mice",
+    "150 mice",
+    "720 mice",
+    "216 mice"
+   ],
+   "answer": 0,
+   "explanation": "The marked fraction in the second sample is 18/120 = 0.15, which should estimate the marked fraction in the whole population, 90/N. Solving 90/N = 0.15 gives N = 600 mice."
+  },
+  {
+   "n": 57,
+   "topic": "Ecology",
+   "q": "In a lake ecosystem, phytoplankton contain 20,000 kJ m⁻² yr⁻¹ of assimilated energy. Zooplankton assimilate 2,400 kJ m⁻² yr⁻¹, small fish assimilate 260 kJ m⁻² yr⁻¹, and large fish assimilate 22 kJ m⁻² yr⁻¹. Approximately what percentage of the energy assimilated by zooplankton is assimilated by small fish, and what primarily explains the loss between these two trophic levels?",
+   "options": [
+    "About 1.1%, because small fish use nearly all assimilated energy for growth.",
+    "About 11%, because energy is destroyed when small fish eat zooplankton.",
+    "About 89%, because most energy in zooplankton is passed to predators as biomass.",
+    "About 11%, because most energy is used in metabolism and lost as heat."
+   ],
+   "answer": 3,
+   "explanation": "The transfer from zooplankton to small fish is 260/2,400 × 100 = 10.8%, or about 11%. At each trophic transfer, much energy is used in cellular respiration and released as heat, and some is not consumed or is excreted, so only a fraction becomes predator biomass. Energy is not destroyed; it is transformed."
+  },
+  {
+   "n": 58,
+   "topic": "Ecology",
+   "q": "Two grassland plant species are grown in greenhouse plots. In monoculture with low soil nitrogen, species X produces a mean biomass of 40 g per plot and species Y produces 25 g. In mixed plots with the same low nitrogen, species X produces 38 g and species Y produces 8 g. When extra nitrogen is added to mixed plots, both species produce about 35 g. Which conclusion is best supported?",
+   "options": [
+    "At high nitrogen, competitive exclusion prevents both species from growing.",
+    "At low nitrogen, species X is a stronger competitor for nitrogen, reducing growth of species Y.",
+    "Species X and Y have identical fundamental niches with respect to nitrogen.",
+    "Species Y benefits from a mutualistic relationship with species X when nitrogen is low."
+   ],
+   "answer": 1,
+   "explanation": "At low nitrogen, the presence of species X strongly reduces species Y biomass, while extra nitrogen removes much of the difference, consistent with competition for nitrogen. Species X does not suffer much when mixed at low nitrogen, suggesting it is the stronger competitor. Mutualism and identical niches are not supported; high nitrogen allows both to grow."
+  },
+  {
+   "n": 59,
+   "topic": "Chemistry of life",
+   "q": "A buffer solution contains lactic acid and sodium lactate. When a small amount of hydrochloric acid is added, the pH decreases only slightly. Which best explains the buffering action?",
+   "options": [
+    "Lactic acid donates H⁺ to the added hydrochloric acid, increasing acidity.",
+    "The buffer prevents added H⁺ from reacting with any molecule in solution.",
+    "Lactate ions combine with added H⁺ to form lactic acid, reducing the change in H⁺ concentration.",
+    "Hydrochloric acid is neutralized by converting lactate ions into hydroxide ions."
+   ],
+   "answer": 2,
+   "explanation": "The lactate ion is the conjugate base of lactic acid and accepts added H⁺, forming more lactic acid; this keeps free H⁺ concentration from rising much. A buffer does not prevent reactions entirely, and the added acid is not neutralized by forming hydroxide."
+  },
+  {
+   "n": 60,
+   "topic": "Chemistry of life",
+   "q": "An enzyme normally functions best at pH 2 in the stomach. When the same enzyme is placed in a pH 7 buffer, its catalytic activity drops to nearly zero, although its primary amino acid sequence is unchanged. Which best explains the loss of activity?",
+   "options": [
+    "Changes in ionization of amino acid side chains disrupt ionic bonds and the active site's shape.",
+    "Peptide bonds are rapidly hydrolyzed at pH 7, breaking the enzyme into amino acids.",
+    "The primary sequence is altered, changing the order of amino acids.",
+    "At pH 7, the enzyme becomes a substrate for its own reaction."
+   ],
+   "answer": 0,
+   "explanation": "A shift from pH 2 to pH 7 changes which acidic and basic side chains carry charge, disrupting ionic interactions and hydrogen bonding that maintain tertiary structure. The active site can lose its shape, lowering activity. The primary sequence is not changed, and peptide bonds are not rapidly hydrolyzed under these conditions."
+  }
+ ]
+}

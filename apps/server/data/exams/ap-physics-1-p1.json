@@ -1,0 +1,557 @@
+{
+ "id": "ap-physics-1-p1",
+ "exam": "ap",
+ "subject": "physics-1",
+ "year": null,
+ "number": 1,
+ "source": "ai",
+ "minutes": 85,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Work, energy and power",
+   "q": "Diego releases a 2.0 kg block from rest at the top of a 3.0 m high frictionless ramp. At the bottom, the block moves onto a rough horizontal surface where the coefficient of kinetic friction between the block and the surface is 0.25. The transition is smooth. How far does the block slide on the rough horizontal surface before coming to rest? Use g = 10 m/s².",
+   "options": [
+    "12 m",
+    "24 m",
+    "3.0 m",
+    "6.0 m"
+   ],
+   "answer": 0,
+   "explanation": "The block has mgh = (2.0)(10)(3.0) = 60 J of gravitational potential energy at the top, which becomes kinetic energy at the bottom. Friction does work μmgd = (0.25)(2.0)(10)d = 5d. Setting 5d = 60 J gives d = 12 m."
+  },
+  {
+   "n": 2,
+   "topic": "Work, energy and power",
+   "q": "On a frictionless straight track, a 4.0 kg cart starts from rest at position x = 0. A horizontal force is applied in the direction of the cart's motion. From x = 0 to x = 3.0 m, the force is a constant 8.0 N. From x = 3.0 m to x = 5.0 m, the force decreases linearly from 8.0 N to 0 N. What is the cart's speed at x = 5.0 m?",
+   "options": [
+    "4.0 m/s",
+    "2.0 m/s",
+    "8.0 m/s",
+    "5.7 m/s"
+   ],
+   "answer": 0,
+   "explanation": "The work is the area under the force-position description: 8.0 N × 3.0 m = 24 J, plus the triangular area ½ × 8.0 N × 2.0 m = 8 J, for 32 J total. Then 32 J = ½(4.0 kg)v², so v² = 16 and v = 4.0 m/s."
+  },
+  {
+   "n": 3,
+   "topic": "Oscillations",
+   "q": "Maya attaches a 0.50 kg block to a vertical spring and measures an oscillation period of 0.80 s. The block is replaced with another block, and the new period is 1.6 s. Assuming the spring remains ideal, what is the mass of the replacement block?",
+   "options": [
+    "0.25 kg",
+    "2.0 kg",
+    "4.0 kg",
+    "1.0 kg"
+   ],
+   "answer": 1,
+   "explanation": "For a mass-spring oscillator, T = 2π√(m/k), so period is proportional to √m. Doubling the period requires quadrupling the mass: 4 × 0.50 kg = 2.0 kg."
+  },
+  {
+   "n": 4,
+   "topic": "Oscillations",
+   "q": "A 0.20 kg block attached to an ideal spring of spring constant 80 N/m oscillates on a frictionless horizontal surface with amplitude 0.10 m. What is the speed of the block when its displacement from equilibrium is 0.060 m?",
+   "options": [
+    "0.80 m/s",
+    "2.0 m/s",
+    "1.6 m/s",
+    "1.2 m/s"
+   ],
+   "answer": 2,
+   "explanation": "Using v = √[(k/m)(A² − x²)] gives v = √[(80/0.20)((0.10)² − (0.060)²)] = √[400(0.0064)] = √2.56 = 1.6 m/s. Equivalently, the total energy is 0.40 J, and the potential energy at 0.060 m is 0.144 J."
+  },
+  {
+   "n": 5,
+   "topic": "Force and translational dynamics",
+   "q": "An elevator is moving downward and slowing down at 2.0 m/s². A 60 kg student stands on a scale inside the elevator. What does the scale read? Use g = 10 m/s².",
+   "options": [
+    "480 N",
+    "600 N",
+    "840 N",
+    "720 N"
+   ],
+   "answer": 3,
+   "explanation": "Moving downward while slowing down means the acceleration is upward. For the student, N − mg = ma, so N = m(g + a) = 60(10 + 2.0) = 720 N. A reading of 480 N would result from incorrectly taking the acceleration as downward."
+  },
+  {
+   "n": 6,
+   "topic": "Force and translational dynamics",
+   "q": "Two blocks, one with mass 2.0 kg and the other with mass 3.0 kg, are connected by a light string that passes over a frictionless, massless pulley. The blocks are released from rest and move vertically. What is the tension in the string? Use g = 10 m/s².",
+   "options": [
+    "20 N",
+    "50 N",
+    "30 N",
+    "24 N"
+   ],
+   "answer": 3,
+   "explanation": "The acceleration is a = (3.0 − 2.0)(10)/(3.0 + 2.0) = 2.0 m/s². For the 2.0 kg block, T − (2.0)(10) = (2.0)(2.0), so T = 20 + 4.0 = 24 N."
+  },
+  {
+   "n": 7,
+   "topic": "Force and translational dynamics",
+   "q": "A horizontal 12 N force is exerted on a 4.0 kg box, which pushes a 2.0 kg box ahead of it on a frictionless horizontal floor. The boxes stay in contact and move together. What is the magnitude of the force that the 4.0 kg box exerts on the 2.0 kg box?",
+   "options": [
+    "4.0 N",
+    "2.0 N",
+    "8.0 N",
+    "6.0 N"
+   ],
+   "answer": 0,
+   "explanation": "The two boxes accelerate together with a = 12 N ÷ (4.0 kg + 2.0 kg) = 2.0 m/s². The only horizontal force on the 2.0 kg box is the contact force, so F = ma = (2.0)(2.0) = 4.0 N."
+  },
+  {
+   "n": 8,
+   "topic": "Linear momentum",
+   "q": "A 2.0 kg cart moving to the right at 3.0 m/s collides with a stationary 1.0 kg cart on a frictionless track. The carts stick together after the collision. How much kinetic energy is lost during the collision?",
+   "options": [
+    "1.5 J",
+    "9.0 J",
+    "6.0 J",
+    "3.0 J"
+   ],
+   "answer": 3,
+   "explanation": "Momentum conservation gives (2.0)(3.0) = (2.0 + 1.0)v, so v = 2.0 m/s. Initial kinetic energy is ½(2.0)(3.0)² = 9.0 J, and final kinetic energy is ½(3.0)(2.0)² = 6.0 J, so the loss is 3.0 J."
+  },
+  {
+   "n": 9,
+   "topic": "Linear momentum",
+   "q": "A 0.50 kg ball initially at rest is struck by a force directed along its motion. A force sensor records that the force increases linearly from 0 N to 20 N during 0.10 s and then decreases linearly from 20 N to 0 N during the next 0.10 s. What is the ball's final speed?",
+   "options": [
+    "2.0 m/s",
+    "10 m/s",
+    "4.0 m/s",
+    "8.0 m/s"
+   ],
+   "answer": 2,
+   "explanation": "The impulse is the area under the force-time description: ½ × 0.20 s × 20 N = 2.0 N·s. This equals Δp = mΔv, so Δv = 2.0 N·s ÷ 0.50 kg = 4.0 m/s. Since the ball starts from rest, its final speed is 4.0 m/s."
+  },
+  {
+   "n": 10,
+   "topic": "Linear momentum",
+   "q": "A 3.0 kg object is initially at rest on a frictionless surface. It breaks into two pieces. A 1.0 kg piece moves east at 6.0 m/s. What is the velocity of the other 2.0 kg piece?",
+   "options": [
+    "3.0 m/s west",
+    "2.0 m/s west",
+    "3.0 m/s east",
+    "6.0 m/s west"
+   ],
+   "answer": 0,
+   "explanation": "The total momentum before the break is zero, so the final momenta must sum to zero. Taking east as positive, (1.0)(6.0) + (2.0)v = 0, giving v = −3.0 m/s. Thus the 2.0 kg piece moves 3.0 m/s west."
+  },
+  {
+   "n": 11,
+   "topic": "Kinematics",
+   "q": "A toy car starts from rest and accelerates uniformly at 3.0 m/s² for 4.0 s. It then immediately travels at the constant speed it has reached for another 6.0 s. What is the total displacement of the car during these 10.0 s?",
+   "options": [
+    "120 m",
+    "48 m",
+    "96 m",
+    "72 m"
+   ],
+   "answer": 2,
+   "explanation": "During the acceleration phase, the final speed is (3.0)(4.0)=12 m/s, and the displacement is (0+12)/2×4.0=24 m. During the constant-speed phase, the displacement is (12)(6.0)=72 m. The total displacement is 24+72=96 m; the 120 m choice comes from using 12 m/s for the entire 10.0 s."
+  },
+  {
+   "n": 12,
+   "topic": "Kinematics",
+   "q": "An object P moves along a straight line. Its velocity increases uniformly from 0 to 8.0 m/s during the first 4.0 s, then remains constant at 8.0 m/s for the next 4.0 s. Object Q moves at a constant velocity of 4.0 m/s for the entire 8.0 s. How much farther does object P travel than object Q during these 8.0 s?",
+   "options": [
+    "8 m",
+    "32 m",
+    "16 m",
+    "0 m"
+   ],
+   "answer": 2,
+   "explanation": "Object P travels (1/2)(8.0)(4.0)+(8.0)(4.0)=16+32=48 m. Object Q travels (4.0)(8.0)=32 m. Thus P travels 48−32=16 m farther; the 32 m choice is only Q's total displacement."
+  },
+  {
+   "n": 13,
+   "topic": "Fluids",
+   "q": "A rectangular block floats in a tank of fresh water with 60% of its volume below the water surface. The block's total volume is 0.0040 m³, and the density of fresh water is 1000 kg/m³. What is the mass of the block?",
+   "options": [
+    "4.0 kg",
+    "2.4 kg",
+    "1.6 kg",
+    "0.0024 kg"
+   ],
+   "answer": 1,
+   "explanation": "For a floating object, the buoyant force equals the block's weight, so the block's mass equals the mass of displaced water. The submerged volume is 0.60×0.0040=0.0024 m³, and its water mass is (1000)(0.0024)=2.4 kg. The 4.0 kg value would result from treating the entire block volume as submerged."
+  },
+  {
+   "n": 14,
+   "topic": "Fluids",
+   "q": "Water flows steadily through a horizontal pipe. At a section with cross-sectional area 0.020 m², the water speed is 1.5 m/s. The pipe narrows to a section with cross-sectional area 0.0050 m². What is the water speed in the narrower section?",
+   "options": [
+    "0.30 m/s",
+    "1.5 m/s",
+    "0.38 m/s",
+    "6.0 m/s"
+   ],
+   "answer": 3,
+   "explanation": "For steady, incompressible flow, continuity gives A₁v₁ = A₂v₂. Thus v₂ = (0.020×1.5)/0.0050 = 6.0 m/s. The 0.38 m/s value comes from using the area ratio A₂/A₁ instead of A₁/A₂."
+  },
+  {
+   "n": 15,
+   "topic": "Energy and momentum of rotating systems",
+   "q": "A hoop of mass 2.0 kg and radius 0.50 m rolls without slipping along a level floor with its center of mass moving at 3.0 m/s. The moment of inertia of a hoop about its center is MR². What is the total kinetic energy of the hoop?",
+   "options": [
+    "9.0 J",
+    "13.5 J",
+    "18 J",
+    "36 J"
+   ],
+   "answer": 2,
+   "explanation": "Rolling without slipping means ω = v/R. The total kinetic energy is 1/2 Mv² + 1/2(MR²)(v/R)² = Mv² = (2.0)(3.0)² = 18 J. The 9.0 J value is only the translational kinetic energy and omits the rotational part."
+  },
+  {
+   "n": 16,
+   "topic": "Energy and momentum of rotating systems",
+   "q": "A disk with moment of inertia 0.50 kg·m² is rotating freely at 12 rad/s about a frictionless vertical axis. A second, initially stationary disk is dropped onto the first and sticks to it. The two-disk system then has a combined moment of inertia of 0.80 kg·m². What is the final angular speed of the system?",
+   "options": [
+    "12 rad/s",
+    "7.5 rad/s",
+    "4.8 rad/s",
+    "19.2 rad/s"
+   ],
+   "answer": 1,
+   "explanation": "With no net external torque about the vertical axis, angular momentum is conserved: I_iω_i = I_fω_f. So (0.50)(12)=(0.80)ω_f, giving ω_f=7.5 rad/s. The 19.2 rad/s value comes from multiplying by 0.80/0.50 instead of dividing."
+  },
+  {
+   "n": 17,
+   "topic": "Torque and rotational dynamics",
+   "q": "A uniform 2.0 m plank is pivoted at its center and is initially at rest. The plank's mass is negligible. Maya, whose mass is 40 kg, sits 0.50 m to the left of the pivot. Luis sits on the right side 0.80 m from the pivot, and the plank remains horizontal and balanced. What is the mass of Luis? Use g = 10 m/s².",
+   "options": [
+    "20 kg",
+    "25 kg",
+    "32 kg",
+    "64 kg"
+   ],
+   "answer": 1,
+   "explanation": "For rotational equilibrium, the clockwise and counterclockwise torques have equal magnitudes. Thus m_Luis g(0.80) = (40)g(0.50), so m_Luis = (40×0.50)/0.80 = 25 kg. The 64 kg value comes from arranging the distances incorrectly as 40×0.80/0.50."
+  },
+  {
+   "n": 18,
+   "topic": "Torque and rotational dynamics",
+   "q": "A bicycle wheel can be modeled as a hoop of mass 2.0 kg and radius 0.40 m. The wheel rotates about a frictionless axle through its center. A constant force of 5.0 N is applied tangentially to the rim. What is the angular acceleration of the wheel?",
+   "options": [
+    "12.5 rad/s²",
+    "25 rad/s²",
+    "6.25 rad/s²",
+    "3.13 rad/s²"
+   ],
+   "answer": 2,
+   "explanation": "The torque about the axle is τ = Fr = (5.0)(0.40)=2.0 N·m. The hoop's moment of inertia is I = MR² = (2.0)(0.40)² = 0.32 kg·m², so α = τ/I = 2.0/0.32 = 6.25 rad/s². The 12.5 rad/s² value would result from treating the wheel as a solid disk with I = MR²/2."
+  },
+  {
+   "n": 19,
+   "topic": "Torque and rotational dynamics",
+   "q": "A 0.20 kg block hangs from a light string wrapped around a solid cylindrical pulley of mass 0.40 kg and radius 0.10 m. The pulley rotates on a frictionless axle, and the string does not slip on the pulley. The block is released from rest. What is the initial acceleration of the block? Use g = 10 m/s².",
+   "options": [
+    "5.0 m/s²",
+    "3.3 m/s²",
+    "10 m/s²",
+    "2.5 m/s²"
+   ],
+   "answer": 0,
+   "explanation": "For the block, mg − T = ma. For the pulley, TR = Iα with α = a/R and I = 1/2 MR², so T = Ma/2 = 0.20a. Combining gives 2.0 − 0.20a = 0.20a, so a = 5.0 m/s². The 10 m/s² value would be the acceleration only if the pulley had no rotational inertia."
+  },
+  {
+   "n": 20,
+   "topic": "Work, energy and power",
+   "q": "Maya pushes a 2.0 kg box from rest across a horizontal floor with a constant horizontal force of 12 N. The floor exerts a constant kinetic friction force of 4.0 N on the box, and the box moves 3.0 m. What is the speed of the box after it has moved 3.0 m?",
+   "options": [
+    "2.4 m/s",
+    "6.0 m/s",
+    "4.9 m/s",
+    "3.5 m/s"
+   ],
+   "answer": 2,
+   "explanation": "The net work done on the box is (12 N − 4.0 N)(3.0 m) = 24 J. Using K = 1/2 m v² gives 24 J = 1/2(2.0 kg)v², so v = √24 m/s ≈ 4.9 m/s. Ignoring friction would give 6.0 m/s by using 36 J of work."
+  },
+  {
+   "n": 21,
+   "topic": "Oscillations",
+   "q": "A 0.50 kg block attached to a horizontal spring of spring constant 200 N/m oscillates on a frictionless surface with amplitude 0.10 m. At what displacement from equilibrium is the block's kinetic energy equal to the elastic potential energy of the spring?",
+   "options": [
+    "0.050 m",
+    "0.10 m",
+    "0.071 m",
+    "0.087 m"
+   ],
+   "answer": 2,
+   "explanation": "At the point where kinetic and potential energies are equal, the total energy is twice the spring potential energy: 1/2 k A² = 2(1/2 k x²). Thus x² = A²/2, so x = 0.10/√2 m ≈ 0.071 m. At x = A, all the energy is potential, so the kinetic energy is not equal to the potential energy there."
+  },
+  {
+   "n": 22,
+   "topic": "Force and translational dynamics",
+   "q": "Jordan, whose mass is 60 kg, stands on a bathroom scale in an elevator. The elevator accelerates upward at 2.0 m/s². Use g = 9.8 m/s². What does the scale read?",
+   "options": [
+    "588 N",
+    "120 N",
+    "468 N",
+    "708 N"
+   ],
+   "answer": 3,
+   "explanation": "The upward normal force from the scale must exceed the student's weight to produce upward acceleration, so N − mg = ma. Thus N = m(g + a) = (60 kg)(9.8 m/s² + 2.0 m/s²) = 708 N. The 588 N value is just the student's weight when the elevator's acceleration is zero."
+  },
+  {
+   "n": 23,
+   "topic": "Linear momentum",
+   "q": "Cart P of mass 1.0 kg moves at 4.0 m/s to the right on a frictionless track and collides with stationary cart Q of mass 3.0 kg. The two carts stick together. What is the decrease in the total kinetic energy of the two-cart system during the collision?",
+   "options": [
+    "2.0 J",
+    "6.0 J",
+    "4.0 J",
+    "8.0 J"
+   ],
+   "answer": 1,
+   "explanation": "Conservation of momentum gives (1.0 kg)(4.0 m/s) = (1.0 kg + 3.0 kg)v, so v = 1.0 m/s. The initial kinetic energy is 1/2(1.0)(4.0)² = 8.0 J, and the final kinetic energy is 1/2(4.0)(1.0)² = 2.0 J, so the decrease is 6.0 J. The 8.0 J value is the initial kinetic energy, not the decrease."
+  },
+  {
+   "n": 24,
+   "topic": "Work, energy and power",
+   "q": "A 75 kg student climbs a vertical flight of stairs that is 4.0 m high in 5.0 s at a constant speed. Use g = 10 m/s². What is the student's average power output against gravity?",
+   "options": [
+    "1500 W",
+    "300 W",
+    "600 W",
+    "3000 W"
+   ],
+   "answer": 2,
+   "explanation": "The work done against gravity is mgh = (75 kg)(10 m/s²)(4.0 m) = 3000 J. Dividing by 5.0 s gives P = 3000 J / 5.0 s = 600 W. The 3000 W value confuses work in joules with power in watts."
+  },
+  {
+   "n": 25,
+   "topic": "Oscillations",
+   "q": "A student measures the period of a simple pendulum for several lengths. The results are: length (m): 0.20, 0.80, 1.80; period (s): 0.90, 1.80, 2.70. Based on these data, what length would give a period of 3.60 s?",
+   "options": [
+    "3.2 m",
+    "1.6 m",
+    "7.2 m",
+    "0.80 m"
+   ],
+   "answer": 0,
+   "explanation": "For a simple pendulum, T is proportional to √L, so quadrupling the period requires multiplying the length by 16. The period 3.60 s is four times 0.90 s, so the length is 16 × 0.20 m = 3.2 m. Treating T as proportional to L would incorrectly give 0.80 m."
+  },
+  {
+   "n": 26,
+   "topic": "Force and translational dynamics",
+   "q": "A 0.50 kg puck on a frictionless horizontal table is attached to one end of a string of length 0.80 m. The other end is fixed, and the puck moves in a horizontal circle at a constant speed of 4.0 m/s. What is the tension in the string?",
+   "options": [
+    "20 N",
+    "2.5 N",
+    "5.0 N",
+    "10 N"
+   ],
+   "answer": 3,
+   "explanation": "The tension provides the centripetal force, so T = m v²/r = (0.50 kg)(4.0 m/s)²/(0.80 m) = 10 N. Omitting the mass gives 20 N, and using v instead of v² with the mass gives 2.5 N."
+  },
+  {
+   "n": 27,
+   "topic": "Linear momentum",
+   "q": "A 0.20 kg ball moving horizontally at 10 m/s strikes a wall and rebounds horizontally at 6.0 m/s. The ball is in contact with the wall for 0.040 s. What is the magnitude of the average force exerted by the wall on the ball during the contact?",
+   "options": [
+    "20 N",
+    "80 N",
+    "30 N",
+    "50 N"
+   ],
+   "answer": 1,
+   "explanation": "Take the initial direction as positive. The change in momentum is (0.20 kg)(−6.0 m/s) − (0.20 kg)(10 m/s) = −3.2 kg·m/s, with magnitude 3.2 kg·m/s. The average force magnitude is (3.2 kg·m/s)/(0.040 s) = 80 N. Subtracting the speeds without accounting for the reversal incorrectly gives 20 N."
+  },
+  {
+   "n": 28,
+   "topic": "Work, energy and power",
+   "q": "A spring of spring constant 800 N/m is compressed 0.10 m. It launches a 0.20 kg dart horizontally from rest on a frictionless track. What is the dart's speed when it leaves the spring?",
+   "options": [
+    "20 m/s",
+    "6.3 m/s",
+    "40 m/s",
+    "4.0 m/s"
+   ],
+   "answer": 1,
+   "explanation": "The spring potential energy is 1/2 k x² = 1/2(800 N/m)(0.10 m)² = 4.0 J, which becomes the dart's kinetic energy. Thus 4.0 J = 1/2(0.20 kg)v², giving v² = 40 m²/s² and v ≈ 6.3 m/s. The value 40 m/s results from forgetting the square root."
+  },
+  {
+   "n": 29,
+   "topic": "Force and translational dynamics",
+   "q": "A 2.0 kg block hanging from a light string is connected over a frictionless pulley to a 6.0 kg block sliding on a frictionless horizontal table. The blocks are released from rest. Use g = 10 m/s². What is the tension in the string while the blocks accelerate?",
+   "options": [
+    "20 N",
+    "15 N",
+    "60 N",
+    "5.0 N"
+   ],
+   "answer": 1,
+   "explanation": "The net force on the two-block system is the hanging block's weight, (2.0 kg)(10 m/s²) = 20 N, and the total mass is 8.0 kg, so a = 20 N / 8.0 kg = 2.5 m/s². For the 6.0 kg block on the table, tension is the only horizontal force, so T = (6.0 kg)(2.5 m/s²) = 15 N. The 20 N value is the hanging weight, not the tension."
+  },
+  {
+   "n": 30,
+   "topic": "Kinematics",
+   "q": "A ball is launched straight upward from the ground with an initial speed of 20 m/s. Air resistance is negligible, and g = 10 m/s². Taking upward as positive, what is the ball's displacement during the time interval from t = 1 s to t = 3 s?",
+   "options": [
+    "−5 m",
+    "0 m",
+    "10 m",
+    "−20 m"
+   ],
+   "answer": 1,
+   "explanation": "Using y(t) = 20t − 5t² gives y(1 s) = 15 m and y(3 s) = 15 m, so the displacement is 15 m − 15 m = 0 m. The ball travels a total distance of 10 m between these times, but displacement is zero."
+  },
+  {
+   "n": 31,
+   "topic": "Kinematics",
+   "q": "A cart moves along a straight line. Its velocity as a function of time is v(t) = 6.0 − 2.0t, where v is in m/s and t is in s. The cart is at x = 0 when t = 0. Where is the cart when it momentarily comes to rest before reversing direction?",
+   "options": [
+    "3.0 m",
+    "9.0 m",
+    "18 m",
+    "27 m"
+   ],
+   "answer": 1,
+   "explanation": "The cart comes to rest when 6.0 − 2.0t = 0, so t = 3.0 s. Integrating velocity gives x(t) = 6t − t², so x(3.0 s) = 18 − 9 = 9.0 m."
+  },
+  {
+   "n": 32,
+   "topic": "Kinematics",
+   "q": "A cyclist starts from rest and accelerates uniformly at 3.0 m/s² for 4.0 s. The cyclist then travels at constant velocity for 5.0 s. What is the cyclist's total displacement during the 9.0 s?",
+   "options": [
+    "84 m",
+    "24 m",
+    "60 m",
+    "144 m"
+   ],
+   "answer": 0,
+   "explanation": "During acceleration, displacement is ½(3.0)(4.0)² = 24 m and final speed is 12 m/s. During constant velocity, displacement is (12)(5.0) = 60 m. The total displacement is 24 m + 60 m = 84 m."
+  },
+  {
+   "n": 33,
+   "topic": "Fluids",
+   "q": "A 2.0 kg block with volume 3.0 × 10⁻³ m³ is held completely submerged in water by a string tied to the bottom of the container. The density of water is 1000 kg/m³, and g = 10 m/s². What is the tension in the string?",
+   "options": [
+    "50 N",
+    "20 N",
+    "10 N",
+    "30 N"
+   ],
+   "answer": 2,
+   "explanation": "The buoyant force is (1000)(3.0 × 10⁻³)(10) = 30 N upward, and the block's weight is (2.0)(10) = 20 N downward. Because the buoyant force is larger, the string must pull downward with 30 N − 20 N = 10 N."
+  },
+  {
+   "n": 34,
+   "topic": "Fluids",
+   "q": "Water flows steadily through a horizontal pipe whose radius changes from 2.0 cm in a wide section to 1.0 cm in a narrow section. The speed in the wide section is 1.0 m/s. The density of water is 1000 kg/m³. What is the magnitude of the pressure difference between the wide and narrow sections?",
+   "options": [
+    "15000 Pa",
+    "7500 Pa",
+    "3000 Pa",
+    "1500 Pa"
+   ],
+   "answer": 1,
+   "explanation": "By continuity, the narrow-section speed is (2.0/1.0)²(1.0) = 4.0 m/s. For a horizontal pipe, Bernoulli's equation gives ΔP = ½ρ(v_narrow² − v_wide²) = ½(1000)(16 − 1) = 7500 Pa."
+  },
+  {
+   "n": 35,
+   "topic": "Torque and rotational dynamics",
+   "q": "A uniform 4.0 m board is pivoted at its center. Maya, whose mass is 30 kg, sits 1.5 m to the left of the pivot. Jordan, whose mass is 45 kg, sits on the right side. At what distance from the pivot must Jordan sit so that the board remains balanced horizontally?",
+   "options": [
+    "1.5 m",
+    "2.0 m",
+    "0.75 m",
+    "1.0 m"
+   ],
+   "answer": 3,
+   "explanation": "Balancing torques about the pivot requires (30 kg)(1.5 m) = (45 kg)d, so d = 45/45 = 1.0 m. The board's weight produces no torque because its center of mass is at the pivot."
+  },
+  {
+   "n": 36,
+   "topic": "Torque and rotational dynamics",
+   "q": "A solid disk of mass 2.0 kg and radius 0.20 m can rotate about a frictionless axle through its center. A string wrapped around the rim is pulled with a constant tangential force of 6.0 N. What is the magnitude of the disk's angular acceleration?",
+   "options": [
+    "15 rad/s²",
+    "75 rad/s²",
+    "30 rad/s²",
+    "60 rad/s²"
+   ],
+   "answer": 2,
+   "explanation": "For a solid disk, I = ½MR² = ½(2.0)(0.20)² = 0.040 kg·m². The torque is τ = RF = (0.20)(6.0) = 1.2 N·m, so α = τ/I = 1.2/0.040 = 30 rad/s²."
+  },
+  {
+   "n": 37,
+   "topic": "Torque and rotational dynamics",
+   "q": "A uniform rod of length 1.2 m is hinged at one end and released from rest in a horizontal position. What is the magnitude of the rod's angular acceleration just after release? Use g = 10 m/s².",
+   "options": [
+    "18.8 rad/s²",
+    "25 rad/s²",
+    "12.5 rad/s²",
+    "8.3 rad/s²"
+   ],
+   "answer": 2,
+   "explanation": "The gravitational torque about the hinge is mg(L/2), and the rod's rotational inertia about the hinge is (1/3)mL². Thus α = [mg(L/2)]/[(1/3)mL²] = 3g/(2L) = 30/(2.4) = 12.5 rad/s²."
+  },
+  {
+   "n": 38,
+   "topic": "Energy and momentum of rotating systems",
+   "q": "A solid disk of mass 2.0 kg and radius 0.50 m rotates at 12 rad/s about a frictionless vertical axle through its center. A second identical disk, initially not rotating, is dropped onto the first and sticks coaxially with it. What is the final angular speed of the two-disk system?",
+   "options": [
+    "3.0 rad/s",
+    "12 rad/s",
+    "6.0 rad/s",
+    "24 rad/s"
+   ],
+   "answer": 2,
+   "explanation": "The initial rotational inertia is I = ½MR² = ½(2.0)(0.50)² = 0.25 kg·m², so initial angular momentum is (0.25)(12) = 3.0 kg·m²/s. The two disks together have I = 0.50 kg·m², and angular momentum conservation gives ω = 3.0/0.50 = 6.0 rad/s."
+  },
+  {
+   "n": 39,
+   "topic": "Energy and momentum of rotating systems",
+   "q": "A solid sphere of mass 0.50 kg and radius 0.10 m rolls without slipping along a horizontal surface with a center-of-mass speed of 4.0 m/s. The rotational inertia of a solid sphere about its center is (2/5)MR². What is the total kinetic energy of the sphere?",
+   "options": [
+    "5.6 J",
+    "4.0 J",
+    "8.0 J",
+    "6.4 J"
+   ],
+   "answer": 0,
+   "explanation": "The translational kinetic energy is ½(0.50)(4.0)² = 4.0 J. Since ω = v/R = 40 rad/s and I = (2/5)(0.50)(0.10)² = 0.0020 kg·m², the rotational kinetic energy is ½(0.0020)(40)² = 1.6 J. The total is 4.0 J + 1.6 J = 5.6 J."
+  },
+  {
+   "n": 40,
+   "topic": "Work, energy and power",
+   "q": "A 2.0 kg block is released from rest at the top of a 3.0 m long ramp inclined at 30° above the horizontal. The block reaches the bottom with a speed of 4.0 m/s. What is the magnitude of the average frictional force exerted on the block along the ramp? Use g = 10 m/s².",
+   "options": [
+    "10 N",
+    "4.7 N",
+    "14 N",
+    "3.3 N"
+   ],
+   "answer": 1,
+   "explanation": "The height dropped is (3.0 m) sin 30° = 1.5 m, so the decrease in gravitational potential energy is (2.0 kg)(10 m/s²)(1.5 m) = 30 J. The final kinetic energy is ½(2.0 kg)(4.0 m/s)² = 16 J, so 14 J is dissipated by friction. Dividing this work by the 3.0 m ramp length gives an average frictional force of 14 J ÷ 3.0 m ≈ 4.7 N."
+  },
+  {
+   "n": 41,
+   "topic": "Work, energy and power",
+   "q": "A 3.0 kg cart starts from rest on a straight horizontal track. A force directed along the track is exerted on the cart. The force is 10 N while the cart moves from x = 0 m to x = 2.0 m, then decreases linearly to 0 N from x = 2.0 m to x = 4.0 m. Friction and air resistance are negligible. What is the cart's speed at x = 4.0 m?",
+   "options": [
+    "6.3 m/s",
+    "3.7 m/s",
+    "4.5 m/s",
+    "5.2 m/s"
+   ],
+   "answer": 2,
+   "explanation": "The work done by the force is the area under the force-displacement graph: a 10 N × 2.0 m rectangle plus a triangle of area ½(2.0 m)(10 N), for a total of 30 J. Using work-energy, 30 J = ½(3.0 kg)v², so v = √20 m/s ≈ 4.5 m/s. Using only an average force of 5 N over the full 4.0 m gives too little work and the 3.7 m/s result."
+  },
+  {
+   "n": 42,
+   "topic": "Work, energy and power",
+   "q": "A pump lifts 120 kg of water from a well 8.0 m deep and delivers it at ground level with a speed of 3.0 m/s. The process takes 20 s. What is the average useful power output of the pump? Use g = 10 m/s².",
+   "options": [
+    "5.3 × 10² W",
+    "4.8 × 10² W",
+    "5.1 × 10² W",
+    "1.0 × 10³ W"
+   ],
+   "answer": 2,
+   "explanation": "The useful energy change is the gain in gravitational potential energy plus kinetic energy: (120 kg)(10 m/s²)(8.0 m) + ½(120 kg)(3.0 m/s)² = 9600 J + 540 J = 10,140 J. Dividing by 20 s gives about 507 W, or 5.1 × 10² W. Ignoring the kinetic energy would give 4.8 × 10² W, which is too small."
+  }
+ ]
+}

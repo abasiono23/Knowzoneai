@@ -9,6 +9,8 @@ import { Button, Text } from '@/components/ui';
 import { Colors, Spacing } from '@/constants/theme';
 import { nextStep, stepNumber, stepsFor, type Step } from '@/lib/personalization';
 import { usePersonalization } from '@/lib/personalization-store';
+import { chosenRegion } from '@/lib/region';
+import { useSession } from '@/lib/session';
 
 type Props = {
   step: Step;
@@ -43,9 +45,11 @@ export function StepScreen({
   const editing = edit === '1';
   const { profile } = usePersonalization();
   const type = profile.learnerType;
-  const total = stepsFor(type).length;
-  const number = stepNumber(step, type);
-  const next = `/personalize/${nextStep(step, type)}` as Href;
+  // The country was asked on the sign-up form; only accounts without one (Google, Apple) get the region step.
+  const askRegion = !chosenRegion(useSession().user);
+  const total = stepsFor(type, askRegion).length;
+  const number = stepNumber(step, type, askRegion);
+  const next = `/personalize/${nextStep(step, type, askRegion)}` as Href;
 
   const go = () => {
     Haptics.selectionAsync().catch(() => {});

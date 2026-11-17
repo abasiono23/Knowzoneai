@@ -68,6 +68,10 @@ const personalize: Translation<typeof en> = {
     title: '¿Cómo te gusta aprender?',
     subtitle: 'Elige tus favoritos. Empezaremos con estos y añadiremos el resto.',
   },
+  region: {
+    title: '¿Dónde estudias?',
+    subtitle: 'Te mostraremos los exámenes y la práctica de tu país. Puedes cambiarlo cuando quieras en Ajustes.',
+  },
   language: {
     title: 'Elige tu idioma',
     subtitle: 'Toda la app, tus lecciones y tu tutor de IA usarán este idioma desde ya.',
@@ -119,6 +123,7 @@ const personalize: Translation<typeof en> = {
       teachLevels: 'Estudiantes',
       age: 'Grupo de edad',
       education: 'Nivel',
+      region: 'País de estudio',
       pathway: 'Itinerario',
       exams: 'Exámenes',
       subjects: 'Asignaturas',
@@ -265,7 +270,7 @@ const personalize: Translation<typeof en> = {
   learnerTypes: {
     school: { label: 'Estudiante escolar', description: 'Primaria o secundaria' },
     university: { label: 'Universidad o instituto superior', description: 'Grado, diploma o ND/HND' },
-    exam: { label: 'Candidato a examen', description: 'Preparando JAMB, WAEC, IELTS y más' },
+    exam: { label: 'Candidato a examen', description: 'Preparando JAMB, WAEC, IELTS y más', descriptionFor: 'Preparando {{exams}} y más' },
     professional: { label: 'Profesional en activo', description: 'Mejorando habilidades o certificándome' },
     lifelong: { label: 'Mente curiosa', description: 'Aprendiendo algo nuevo por diversión' },
     teacher: { label: 'Profesor o tutor', description: 'Crea clases, asigna prácticas y sigue el progreso' },
@@ -274,7 +279,7 @@ const personalize: Translation<typeof en> = {
     'school-teacher': { label: 'Profesor escolar', description: 'Primaria o secundaria' },
     lecturer: { label: 'Profesor universitario', description: 'Universidad, politécnico o instituto superior' },
     'private-tutor': { label: 'Tutor particular', description: 'Clases individuales o en grupos pequeños' },
-    'exam-coach': { label: 'Preparador de exámenes', description: 'JAMB, WAEC, IELTS y más' },
+    'exam-coach': { label: 'Preparador de exámenes', description: 'JAMB, WAEC, IELTS y más', descriptionFor: '{{exams}} y más' },
     parent: { label: 'Padre, madre o educación en casa', description: 'Guiando a mis propios hijos' },
   },
   teachLevelOptions: {

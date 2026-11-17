@@ -61,7 +61,7 @@ const rooms: Translation<typeof en> = {
   },
   goal: 'BURIN ƊAKI',
   goalEmpty: 'Babu buri tukuna.',
-  goalPlaceholder: 'misali Gama JAMB Physics paper 1',
+  goalPlaceholder: 'misali Gama {{exam}} Physics paper 1',
   setGoal: 'Saita buri',
   editGoal: 'Canza',
   goalProgress: '{{done}} cikin {{total}} sun gama',

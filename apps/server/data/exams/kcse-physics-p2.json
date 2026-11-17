@@ -1,0 +1,401 @@
+{
+ "id": "kcse-physics-p2",
+ "exam": "kcse",
+ "subject": "physics",
+ "year": null,
+ "number": 2,
+ "source": "ai",
+ "minutes": 35,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Thin lenses",
+   "q": "A learner directs a convex lens towards a very distant tree and focuses its image on a white screen. The sharp image is formed when the screen is 18 cm from the lens. What is the approximate focal length of the lens?",
+   "options": [
+    "9.0 cm",
+    "It cannot be estimated unless the distance of the tree is measured",
+    "36 cm",
+    "18 cm"
+   ],
+   "answer": 3,
+   "explanation": "For a very distant object, incident rays are almost parallel, so the image forms at the principal focus. The screen distance is therefore approximately the focal length, 18 cm. The tree distance is large enough to be taken as infinity for this standard experiment."
+  },
+  {
+   "n": 2,
+   "topic": "Thin lenses",
+   "q": "A convex lens of focal length 15 cm forms a real image with magnification 2.0 on a screen. What is the object distance?",
+   "options": [
+    "30 cm",
+    "7.5 cm",
+    "22.5 cm",
+    "45 cm"
+   ],
+   "answer": 2,
+   "explanation": "For a real image, magnification m = v/u = 2, so v = 2u. The lens formula gives 1/15 = 1/u + 1/(2u) = 3/(2u), hence u = 22.5 cm. Using v = u/2 instead would lead to 45 cm and would not give magnification 2."
+  },
+  {
+   "n": 3,
+   "topic": "Thin lenses",
+   "q": "Which statement is always true of the image formed by a diverging lens when the object is real?",
+   "options": [
+    "It is virtual, upright and magnified.",
+    "It is real, inverted and magnified.",
+    "It is virtual, upright and diminished.",
+    "It is real, upright and the same size."
+   ],
+   "answer": 2,
+   "explanation": "A diverging lens spreads rays, so for a real object it always produces a virtual, upright and diminished image on the same side as the object. A real inverted image cannot be formed by a single diverging lens with a real object."
+  },
+  {
+   "n": 4,
+   "topic": "Hooke’s law",
+   "q": "Otieno finds that a spring is 25.0 cm long when supporting a 2.0 N load and 29.0 cm long when supporting a 6.0 N load. Assuming Hooke’s law is obeyed, what is the spring constant?",
+   "options": [
+    "100 N/m",
+    "50 N/m",
+    "25 N/m",
+    "200 N/m"
+   ],
+   "answer": 0,
+   "explanation": "The extra load is 6.0 − 2.0 = 4.0 N and the extra extension is 29.0 − 25.0 = 4.0 cm = 0.040 m. From Hooke’s law, k = F/e = 4.0 ÷ 0.040 = 100 N/m."
+  },
+  {
+   "n": 5,
+   "topic": "Hooke’s law",
+   "q": "Two identical springs, each of spring constant 80 N/m, are fixed side by side so that a single 4.0 kg mass hangs from both and stretches them equally. Taking g = 10 N/kg, by how much does each spring extend?",
+   "options": [
+    "50 cm",
+    "5.0 cm",
+    "12.5 cm",
+    "25 cm"
+   ],
+   "answer": 3,
+   "explanation": "The total weight is 4.0 × 10 = 40 N, so each spring supports 20 N because they stretch equally. Its extension is e = F/k = 20 ÷ 80 = 0.25 m = 25 cm. Equivalently, two identical springs side by side give an effective spring constant of 160 N/m."
+  },
+  {
+   "n": 6,
+   "topic": "Heat transfer and quantity of heat",
+   "q": "An electric kettle rated 1500 W heats 0.50 kg of water from 20 °C to 100 °C. Taking the specific heat capacity of water as 4200 J kg⁻¹ K⁻¹ and assuming no heat losses, how long does it take?",
+   "options": [
+    "224 s",
+    "56 s",
+    "84 s",
+    "112 s"
+   ],
+   "answer": 3,
+   "explanation": "Heat needed is Q = mcΔT = 0.50 × 4200 × (100 − 20) = 168 000 J. Since power = energy ÷ time, t = Q ÷ P = 168 000 ÷ 1500 = 112 s. The 84 s value would use a temperature change of 60 K instead of 80 K."
+  },
+  {
+   "n": 7,
+   "topic": "Heat transfer and quantity of heat",
+   "q": "A metal spoon and a wooden spoon are left with their bowls in hot tea. The handle of the metal spoon soon feels much hotter. Which property mainly accounts for this difference?",
+   "options": [
+    "The higher density of the metal",
+    "The higher thermal conductivity of the metal",
+    "The higher specific heat capacity of the metal",
+    "The larger thermal capacity of the wood"
+   ],
+   "answer": 1,
+   "explanation": "Thermal conductivity measures how quickly heat is conducted through a material. Metals conduct heat much faster than wood, so heat reaches the metal handle quickly; specific heat capacity, thermal capacity and density are not the main reason for the rate of heat flow."
+  },
+  {
+   "n": 8,
+   "topic": "Heat transfer and quantity of heat",
+   "q": "A refrigerator has its freezing unit fitted near the top of the cabinet rather than at the bottom. What is the best reason?",
+   "options": [
+    "Air cooled by the unit becomes denser and sinks, setting up convection currents that cool the cabinet.",
+    "The unit at the top stops warm air entering the cabinet through the door.",
+    "Heat is conducted upward through the cabinet walls, so the unit must be at the top.",
+    "Cool air is less dense, so it rises to the top and spreads downwards."
+   ],
+   "answer": 0,
+   "explanation": "Cooled air contracts, becomes denser and sinks, while warmer air rises to replace it, setting up a convection current that cools the cabinet. Cool air is not less dense than warm air, and conduction through the walls or door sealing is not the main reason for placing the unit at the top."
+  },
+  {
+   "n": 9,
+   "topic": "Cathode rays, X-rays and the photoelectric effect",
+   "q": "Which statement about cathode rays is correct?",
+   "options": [
+    "They are electromagnetic waves like X-rays and are not deflected by an electric field.",
+    "They are streams of electrons that travel in straight lines and are deflected towards the positive plate.",
+    "They are produced when fast electrons strike a heavy metal target.",
+    "They are positively charged particles attracted towards the negative plate."
+   ],
+   "answer": 1,
+   "explanation": "Cathode rays consist of fast-moving electrons emitted by the cathode, so they are negatively charged and are deflected towards a positive plate. X-rays are produced when fast electrons strike a heavy target; positively charged canal rays would be deflected towards a negative plate."
+  },
+  {
+   "n": 10,
+   "topic": "Cathode rays, X-rays and the photoelectric effect",
+   "q": "Light of frequency 1.0 × 10¹⁵ Hz shines on a metal surface whose work function is 2.6 × 10⁻¹⁹ J. Taking Planck’s constant h = 6.6 × 10⁻³⁴ J s, what is the maximum kinetic energy of the emitted photoelectrons?",
+   "options": [
+    "2.6 × 10⁻¹⁹ J",
+    "6.6 × 10⁻¹⁹ J",
+    "4.0 × 10⁻¹⁹ J",
+    "9.2 × 10⁻¹⁹ J"
+   ],
+   "answer": 2,
+   "explanation": "Photon energy is E = hf = 6.6 × 10⁻³⁴ × 1.0 × 10¹⁵ = 6.6 × 10⁻¹⁹ J. From the photoelectric equation, maximum kinetic energy = hf − work function = 6.6 × 10⁻¹⁹ − 2.6 × 10⁻¹⁹ = 4.0 × 10⁻¹⁹ J. The 9.2 × 10⁻¹⁹ J value would come from adding the work function instead of subtracting it."
+  },
+  {
+   "n": 11,
+   "topic": "Reflection and refraction of light",
+   "q": "A ray of light strikes a plane mirror at 30° to the mirror surface. What is the angle of reflection?",
+   "options": [
+    "45°",
+    "30°",
+    "120°",
+    "60°"
+   ],
+   "answer": 3,
+   "explanation": "The angle of incidence is measured from the normal, so it is 90° − 30° = 60°. By the law of reflection, the angle of reflection equals the angle of incidence, so the angle is 60°."
+  },
+  {
+   "n": 12,
+   "topic": "Reflection and refraction of light",
+   "q": "The refractive index of glass is 1.5. Taking the speed of light in air as 3.0 × 10⁸ m/s, what is the speed of light in the glass?",
+   "options": [
+    "1.5 × 10⁸ m/s",
+    "3.0 × 10⁸ m/s",
+    "4.5 × 10⁸ m/s",
+    "2.0 × 10⁸ m/s"
+   ],
+   "answer": 3,
+   "explanation": "For light entering glass from air, the refractive index is n = c ÷ v, where c is the speed in air and v is the speed in the glass. Therefore v = c ÷ n = (3.0 × 10⁸) ÷ 1.5 = 2.0 × 10⁸ m/s."
+  },
+  {
+   "n": 13,
+   "topic": "Reflection and refraction of light",
+   "q": "A transparent plastic material has a critical angle of 30° when used in air. What is its refractive index?",
+   "options": [
+    "1.73",
+    "1.15",
+    "0.50",
+    "2.0"
+   ],
+   "answer": 3,
+   "explanation": "At the critical angle c, sin c = 1 ÷ n. Thus n = 1 ÷ sin 30° = 1 ÷ 0.50 = 2.0."
+  },
+  {
+   "n": 14,
+   "topic": "Linear motion and Newton’s laws of motion",
+   "q": "A 900 kg pick-up on Thika Road increases its speed from 10 m/s to 25 m/s in 5.0 s. What resultant force acts on it?",
+   "options": [
+    "13 500 N",
+    "2 700 N",
+    "1 800 N",
+    "4 500 N"
+   ],
+   "answer": 1,
+   "explanation": "The acceleration is (25 − 10) ÷ 5.0 = 3.0 m/s². Using F = ma, the resultant force is 900 × 3.0 = 2 700 N."
+  },
+  {
+   "n": 15,
+   "topic": "Linear motion and Newton’s laws of motion",
+   "q": "A 2.0 kg parcel hangs from a spring balance fixed inside a lift in a Nairobi office building. The lift accelerates upwards at 2.0 m/s². Taking g = 10 m/s², what is the reading of the balance?",
+   "options": [
+    "20 N",
+    "16 N",
+    "4 N",
+    "24 N"
+   ],
+   "answer": 3,
+   "explanation": "For upward acceleration, T − mg = ma, so T = m(g + a) = 2.0 × (10 + 2.0) = 24 N. The balance reads this tension, not just the parcel’s weight."
+  },
+  {
+   "n": 16,
+   "topic": "Linear motion and Newton’s laws of motion",
+   "q": "A matatu moving at 20 m/s decelerates uniformly and stops after travelling 50 m. What is the magnitude of its deceleration?",
+   "options": [
+    "4.0 m/s²",
+    "8.0 m/s²",
+    "10.0 m/s²",
+    "2.0 m/s²"
+   ],
+   "answer": 0,
+   "explanation": "Using v² = u² + 2as: 0 = 20² + 2a(50), so 100a = −400 and a = −4.0 m/s². The magnitude of the deceleration is therefore 4.0 m/s²."
+  },
+  {
+   "n": 17,
+   "topic": "Radioactivity and electronics",
+   "q": "A radioactive sample in a Nairobi laboratory has a half-life of 8 days. Its initial count rate is 640 counts per minute. What is the count rate after 24 days?",
+   "options": [
+    "80 counts per minute",
+    "40 counts per minute",
+    "160 counts per minute",
+    "320 counts per minute"
+   ],
+   "answer": 0,
+   "explanation": "24 days is 24 ÷ 8 = 3 half-lives. After each half-life the count rate halves: 640 → 320 → 160 → 80 counts per minute."
+  },
+  {
+   "n": 18,
+   "topic": "Radioactivity and electronics",
+   "q": "In a simple half-wave rectifier circuit using a diode, what is the main reason the diode allows current through the load during only one half of each a.c. cycle?",
+   "options": [
+    "It stores charge and releases it during the reverse half-cycle.",
+    "It converts the whole alternating current into a steady direct current.",
+    "It emits electrons only when its filament is heated.",
+    "It conducts easily when forward biased and blocks current when reverse biased."
+   ],
+   "answer": 3,
+   "explanation": "A junction diode has low resistance in forward bias and very high resistance in reverse bias, so it conducts for one half-cycle only. A capacitor can smooth the rectified output, but it does not itself perform the one-way conduction."
+  },
+  {
+   "n": 19,
+   "topic": "Uniform circular motion",
+   "q": "A wheel of radius 0.35 m rotates at 5.0 revolutions per second. Taking π = 22/7, what is the speed of a point on the rim?",
+   "options": [
+    "1.1 m/s",
+    "22 m/s",
+    "5.5 m/s",
+    "11 m/s"
+   ],
+   "answer": 3,
+   "explanation": "The circumference is 2πr = 2 × (22/7) × 0.35 = 2.2 m. In one second the point travels 5 × 2.2 = 11 m, so its speed is 11 m/s."
+  },
+  {
+   "n": 20,
+   "topic": "Uniform circular motion",
+   "q": "A car of mass 800 kg travels round a flat circular bend of radius 50 m at a constant speed of 10 m/s. What is the magnitude of the centripetal force on the car?",
+   "options": [
+    "1 600 N",
+    "800 N",
+    "160 N",
+    "3 200 N"
+   ],
+   "answer": 0,
+   "explanation": "The centripetal force is F = mv² ÷ r = (800 × 10²) ÷ 50 = 1 600 N. It acts towards the centre of the circular path; the outward centrifugal push is not an additional real force."
+  },
+  {
+   "n": 21,
+   "topic": "Work, energy, power and machines",
+   "q": "A crane at a construction site in Mombasa lifts a 150 kg bucket of concrete through a vertical height of 12 m in 20 s. Taking g = 10 N/kg, what is the average useful power developed by the crane?",
+   "options": [
+    "300 W",
+    "90 W",
+    "18 000 W",
+    "900 W"
+   ],
+   "answer": 3,
+   "explanation": "Useful work done = mgh = 150 × 10 × 12 = 18 000 J. Average power = work ÷ time = 18 000 ÷ 20 = 900 W. The value 18 000 W is the work in joules treated as power, while 90 W omits g."
+  },
+  {
+   "n": 22,
+   "topic": "Work, energy, power and machines",
+   "q": "A wheel and axle in a water-lifting machine at a school in Kisumu has a wheel radius of 40 cm and an axle radius of 8 cm. Its efficiency is 80%. What effort is required on the wheel to raise a load of 240 N?",
+   "options": [
+    "300 N",
+    "48 N",
+    "38.4 N",
+    "60 N"
+   ],
+   "answer": 3,
+   "explanation": "The velocity ratio is 40 ÷ 8 = 5. From efficiency = mechanical advantage ÷ velocity ratio, the mechanical advantage is 0.8 × 5 = 4, so effort = load ÷ mechanical advantage = 240 ÷ 4 = 60 N. Dividing only by the efficiency gives 300 N, which ignores the machine's velocity ratio."
+  },
+  {
+   "n": 23,
+   "topic": "Gas laws",
+   "q": "A fixed mass of gas occupies 2.0 litres at 27 °C and 100 kPa. It is compressed to 1.0 litre while its temperature rises to 327 °C. What is the new pressure?",
+   "options": [
+    "200 kPa",
+    "50 kPa",
+    "100 kPa",
+    "400 kPa"
+   ],
+   "answer": 3,
+   "explanation": "Using P₁V₁/T₁ = P₂V₂/T₂, first convert to kelvin: 300 K and 600 K. Thus P₂ = 100 × 2.0 × 600 ÷ (1.0 × 300) = 400 kPa. The 200 kPa value ignores the temperature rise, while 100 kPa results from dividing by the volume ratio instead of multiplying."
+  },
+  {
+   "n": 24,
+   "topic": "Gas laws",
+   "q": "According to the kinetic theory, why does the pressure of a fixed mass of gas increase when it is heated at constant volume?",
+   "options": [
+    "The molecules move closer together and become heavier.",
+    "The molecules strike the container walls more frequently and with greater change of momentum because their average speed increases.",
+    "The gas molecules expand and occupy more space.",
+    "The number of gas molecules inside the container increases."
+   ],
+   "answer": 1,
+   "explanation": "Heating raises the average kinetic energy and speed of the gas molecules. At constant volume, they hit the walls more often and each collision produces a larger momentum change, so the pressure rises. A fixed mass means the number of molecules stays constant, and the molecules themselves do not expand."
+  },
+  {
+   "n": 25,
+   "topic": "Electromagnetic induction and mains electricity",
+   "q": "A bar magnet is pushed quickly into a coil of insulated wire connected to a galvanometer and then held stationary inside the coil. Which observation is correct while the magnet is held stationary?",
+   "options": [
+    "The pointer shows a steady non-zero reading because the magnet remains inside the coil.",
+    "The pointer deflects in the opposite direction and stays there.",
+    "The galvanometer pointer returns to zero because the magnetic flux through the coil is not changing.",
+    "The pointer reading keeps increasing as the magnetic field is stored in the coil."
+   ],
+   "answer": 2,
+   "explanation": "An emf is induced only while the magnetic flux linking the coil changes. Once the magnet is stationary, the flux is constant, so no current is induced after the initial deflection has ended. A steady reading would wrongly suggest that a stationary magnet keeps generating electricity."
+  },
+  {
+   "n": 26,
+   "topic": "Electromagnetic induction and mains electricity",
+   "q": "A transformer used in a phone charger has 1200 turns in the primary coil and 60 turns in the secondary coil. It is connected to the 240 V mains. Assuming the transformer is ideal, what is the output voltage?",
+   "options": [
+    "24 V",
+    "4 800 V",
+    "12 V",
+    "240 V"
+   ],
+   "answer": 2,
+   "explanation": "For an ideal transformer, Vs/Vp = Ns/Np. Thus Vs = 240 × 60 ÷ 1200 = 12 V. Using the turns ratio upside down gives 4 800 V, which is the common error of reversing the ratio."
+  },
+  {
+   "n": 27,
+   "topic": "Particulate nature of matter and thermal expansion",
+   "q": "A crystal of potassium permanganate is placed at the bottom of a beaker of water in a laboratory in Eldoret. After some hours, the water is uniformly purple even without stirring. Which statement best explains this observation?",
+   "options": [
+    "Random movement of the permanganate particles spreads them from where they are concentrated to where they are less concentrated.",
+    "The purple particles expand until they are the same size as water molecules.",
+    "The crystal melts and the heavy purple liquid flows upward through the water.",
+    "The water molecules react chemically with the crystal to make the whole liquid purple."
+   ],
+   "answer": 0,
+   "explanation": "The colour spreads by diffusion because particles move randomly from a region of higher concentration to one of lower concentration. It is not a chemical reaction, and the particles themselves do not expand. Heavy purple liquid flowing upward would not explain uniform colour throughout the beaker."
+  },
+  {
+   "n": 28,
+   "topic": "Particulate nature of matter and thermal expansion",
+   "q": "A steel railway line in Nairobi is 40.0 m long at 20 °C. The linear expansivity of steel is 1.2 × 10⁻⁵ K⁻¹. What is the increase in length when the temperature rises to 50 °C?",
+   "options": [
+    "1.44 m",
+    "0.0240 m",
+    "0.0144 m",
+    "0.000480 m"
+   ],
+   "answer": 2,
+   "explanation": "The temperature rise is 50 − 20 = 30 K. Increase in length = LαΔT = 40.0 × 1.2 × 10⁻⁵ × 30 = 0.0144 m. Using 50 instead of the 30 K rise gives 0.0240 m, which is a common mistake."
+  },
+  {
+   "n": 29,
+   "topic": "Particulate nature of matter and thermal expansion",
+   "q": "A bimetallic strip used in a fire alarm is made by joining brass and iron together. Brass has a higher linear expansivity than iron. When the strip is heated, which description is correct?",
+   "options": [
+    "The brass forms the outside of the curve because it expands more than the iron.",
+    "The iron forms the outside of the curve because it expands more than the brass.",
+    "The strip stays straight because both metals expand when heated.",
+    "The brass forms the inside of the curve because it contracts when heated."
+   ],
+   "answer": 0,
+   "explanation": "Brass has a greater linear expansivity, so for the same temperature rise it expands more than iron. Because the two metals are joined, the longer brass side forms the outside of the bend. The strip curves rather than remaining straight because the two metals expand by different amounts."
+  },
+  {
+   "n": 30,
+   "topic": "Measurement",
+   "q": "A rectangular plot in Kitale measures 0.25 km by 0.40 km. What is its area in square metres?",
+   "options": [
+    "1 000 000 m²",
+    "1 000 m²",
+    "10 000 m²",
+    "100 000 m²"
+   ],
+   "answer": 3,
+   "explanation": "Convert both lengths to metres: 0.25 km = 250 m and 0.40 km = 400 m. The area is 250 m × 400 m = 100 000 m². Multiplying 0.25 by 0.40 and attaching square metres without converting the kilometre units leads to the much smaller wrong values."
+  }
+ ]
+}

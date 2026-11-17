@@ -11,7 +11,7 @@ import { api } from '@/lib/api';
 import {
   DAILY_TARGETS,
   EMPTY_PROFILE,
-  EXAMS,
+  examsFor,
   GOALS,
   learnerKey,
   NO_EXAM,
@@ -20,11 +20,12 @@ import {
   upcomingMonths,
   type Personalization,
 } from '@/lib/personalization';
+import { regionOf } from '@/lib/region';
 import { useSession } from '@/lib/session';
 
 /** Screen 185: learning goals: daily target, exams, subjects and what you want from Knowzone. */
 export default function LearningGoalsScreen() {
-  const { setUser } = useSession();
+  const { user, setUser } = useSession();
   const { t } = useTranslation('settings');
   const [saved, setSaved] = useState<Personalization | null>(null);
   const [draft, setDraft] = useState<Personalization | null>(null);
@@ -61,7 +62,8 @@ export default function LearningGoalsScreen() {
     set({
       [key]: draft[key].includes(id) ? draft[key].filter((x) => x !== id) : [...draft[key], id],
     } as Partial<Personalization>);
-  const exams = EXAMS[learnerKey(draft.learnerType)];
+  // Goals saved before regions have none: the account's region decides (Nigeria for older accounts).
+  const exams = examsFor(learnerKey(draft.learnerType), draft.region ?? regionOf(user));
   const { suggested } = subjectCatalog(draft.track);
   const subjects = [...new Set([...draft.subjects, ...suggested])];
   const changed = JSON.stringify(draft) !== JSON.stringify(saved);
@@ -72,8 +74,8 @@ export default function LearningGoalsScreen() {
   const save = async () => {
     setBusy(true);
     try {
-      const { user } = await api.savePersonalization(draft);
-      setUser(user);
+      const { user: updated } = await api.savePersonalization(draft);
+      setUser(updated);
       setSaved(draft);
       setMsg({ ok: true, text: t('goals.saved') });
     } catch (e) {

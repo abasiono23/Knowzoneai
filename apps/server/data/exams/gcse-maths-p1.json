@@ -1,0 +1,401 @@
+{
+ "id": "gcse-maths-p1",
+ "exam": "gcse",
+ "subject": "maths",
+ "year": null,
+ "number": 1,
+ "source": "ai",
+ "minutes": 35,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Pythagoras’ theorem and trigonometry",
+   "q": "In triangle ABC, angle A = 35°, side AC (adjacent to angle A) = 8 cm. Find length of side AB (the hypotenuse) to 3 significant figures.",
+   "options": [
+    "8 × cos 35° ≈ 6.56 cm",
+    "8 × sin 35° ≈ 4.59 cm",
+    "8 ÷ cos 35° ≈ 9.80 cm",
+    "8 ÷ sin 35° ≈ 14.03 cm"
+   ],
+   "answer": 2,
+   "explanation": "With angle A and adjacent side AC = 8, hypotenuse AB = adjacent ÷ cos A = 8 ÷ cos 35°. cos 35° ≈ 0.81915 so AB ≈ 9.797 ≈ 9.80 cm. The other choices confuse sine and cosine or use the wrong ratio."
+  },
+  {
+   "n": 2,
+   "topic": "Indices, standard form and surds",
+   "q": "Write 0.000732 in standard form (scientific notation).",
+   "options": [
+    "73.2 × 10⁻⁶",
+    "7.32 × 10⁻⁴",
+    "732 × 10⁻⁶",
+    "0.732 × 10⁻³"
+   ],
+   "answer": 1,
+   "explanation": "Move the decimal 4 places right to get 7.32, so 0.000732 = 7.32 × 10⁻⁴. The other options are equivalent to different placements of the decimal and are not in standard form with a number between 1 and 10."
+  },
+  {
+   "n": 3,
+   "topic": "Fractions, decimals and percentages",
+   "q": "A jacket originally costs £80. During a sale the price is reduced by 25% and then a further 10% at the till. What is the final price? Give your answer to the nearest penny.",
+   "options": [
+    "£54.60",
+    "£46.80",
+    "£62.00",
+    "£54.00"
+   ],
+   "answer": 3,
+   "explanation": "First reduction: 25% off £80 → price becomes £80 × 0.75 = £60. Then 10% off gives £60 × 0.90 = £54.00. The option £54.60 would be if percentages were applied in the wrong order or calculated incorrectly; £62.00 is 25% taken only, and £46.80 is 40% off, not the sequential reductions."
+  },
+  {
+   "n": 4,
+   "topic": "Fractions, decimals and percentages",
+   "q": "Express 7/12 as a percentage to 3 significant figures.",
+   "options": [
+    "5.83%",
+    "0.583%",
+    "58.3%",
+    "58.33%"
+   ],
+   "answer": 2,
+   "explanation": "7 ÷ 12 = 0.583333... As a percentage this is 58.333...% and to 3 significant figures is 58.3%. The option \"58.33%\" is to 4 significant figures, while the others misplace the decimal point."
+  },
+  {
+   "n": 5,
+   "topic": "Ratio and proportion",
+   "q": "A recipe uses flour and sugar in the ratio 5:2 by mass. If you have 750 g of flour, how much sugar should you use to keep the same ratio?",
+   "options": [
+    "150 g",
+    "375 g",
+    "200 g",
+    "300 g"
+   ],
+   "answer": 3,
+   "explanation": "Ratio 5:2 means for every 5 parts flour there are 2 parts sugar. If 5 parts = 750 g then 1 part = 150 g, so sugar = 2 × 150 g = 300 g. 150 g would be one part, 375 g would be half the flour (5/2 not used correctly), and 200 g comes from dividing 750 by 3.75 which is not relevant."
+  },
+  {
+   "n": 6,
+   "topic": "Ratio and proportion",
+   "q": "A map scale is 1:50 000. Two towns are 3.6 cm apart on the map. What is the actual distance in kilometres?",
+   "options": [
+    "180 km",
+    "18 km",
+    "0.18 km",
+    "1.8 km"
+   ],
+   "answer": 3,
+   "explanation": "1 cm on the map represents 50 000 cm in reality. So 3.6 cm represents 3.6 × 50 000 cm = 180 000 cm = 1 800 m = 1.8 km. 18 km or 180 km are too large; 0.18 km is too small by factor 10."
+  },
+  {
+   "n": 7,
+   "topic": "Angles and polygons",
+   "q": "The exterior angles of a regular polygon add to 360°. If each interior angle is 156°, how many sides does the polygon have?",
+   "options": [
+    "12",
+    "10",
+    "15",
+    "18"
+   ],
+   "answer": 2,
+   "explanation": "Each exterior angle = 180° − interior angle = 24°. Number of sides = 360° ÷ 24° = 15. 12 or 18 would come from dividing 360 by 30 or 20 respectively, and 10 corresponds to 36° exterior angle, none of which match 156° interior."
+  },
+  {
+   "n": 8,
+   "topic": "Angles and polygons",
+   "q": "In triangle ABC, angle A and angle B are equal and angle C is 48°. What is the size of angle A?",
+   "options": [
+    "66°",
+    "72°",
+    "48°",
+    "66.5°"
+   ],
+   "answer": 0,
+   "explanation": "Sum of angles is 180°, so angles A and B together = 180° − 48° = 132°. Since A = B, angle A = 132° ÷ 2 = 66°. 48° would mean all three equal (not true), 66.5° is a rounding error, and 72° comes from dividing 144 by 2 which is incorrect subtraction."
+  },
+  {
+   "n": 9,
+   "topic": "Angles and polygons",
+   "q": "A regular star-shaped polygon is not drawn; instead, consider a regular hexagon. A line is drawn from one vertex to the vertex three places clockwise. What is the angle inside the hexagon at that vertex between the edge and that line? (Describe the hexagon as convex regular with internal angles 120°.)",
+   "options": [
+    "90°",
+    "120°",
+    "60°",
+    "30°"
+   ],
+   "answer": 2,
+   "explanation": "In a regular hexagon, connecting a vertex to the vertex three places away goes to the opposite vertex and forms a straight line through the centre. The angle between the side and that diagonal equals the central angle 60°. So the interior angle between edge and that line is 60°. 120° is the internal angle of a side-to-side, 90° and 30° are incorrect for this geometry."
+  },
+  {
+   "n": 10,
+   "topic": "Graphs of functions",
+   "q": "A linear function is y = −2x + 5. What is the x-intercept (the x-value where the graph meets the x-axis)?",
+   "options": [
+    "5",
+    "−2.5",
+    "−5",
+    "2.5"
+   ],
+   "answer": 3,
+   "explanation": "At the x-intercept y = 0, so 0 = −2x + 5 ⇒ 2x = 5 ⇒ x = 2.5. −2.5 would be the sign reversed, 5 is the y-intercept, and −5 is incorrect."
+  },
+  {
+   "n": 11,
+   "topic": "Graphs of functions",
+   "q": "A graph shows the quadratic function y = x² − 4x + 3. Without plotting, what are the x-coordinates of the points where the graph crosses the x-axis?",
+   "options": [
+    "−1 and −3",
+    "0 and 3",
+    "−1 and 3",
+    "1 and 3"
+   ],
+   "answer": 3,
+   "explanation": "Solve x² − 4x + 3 = 0 which factors as (x − 1)(x − 3) = 0, so x = 1 or x = 3. The other pairs are from incorrect factorings or sign mistakes."
+  },
+  {
+   "n": 12,
+   "topic": "Statistics",
+   "q": "A survey of 40 students shows mean number of books read is 6 and the mean for boys (20 students) is 5. What is the mean number of books read by the girls (20 students)?",
+   "options": [
+    "6",
+    "8",
+    "7",
+    "5"
+   ],
+   "answer": 2,
+   "explanation": "Total books = 6 × 40 = 240. Boys total = 5 × 20 = 100. Girls total = 240 − 100 = 140. Girls mean = 140 ÷ 20 = 7. Options 8, 6, 5 are inconsistent with these totals."
+  },
+  {
+   "n": 13,
+   "topic": "Sequences",
+   "q": "The sequence 6, 11, 16, 21, ... is arithmetic. What is the 30th term?",
+   "options": [
+    "176",
+    "150",
+    "186",
+    "151"
+   ],
+   "answer": 3,
+   "explanation": "This is an arithmetic sequence with first term 6 and common difference 5. The nth term is 6 + (n−1)×5, so the 30th term is 6 + 29×5 = 6 + 145 = 151. A common mistake is using 30×5 or miscounting the first term."
+  },
+  {
+   "n": 14,
+   "topic": "Algebraic expressions and formulae",
+   "q": "Expand and simplify 3(2x − 5) − 4(x + 1). What is the result?",
+   "options": [
+    "2x − 19",
+    "6x − 1",
+    "−x − 11",
+    "6x − 23"
+   ],
+   "answer": 0,
+   "explanation": "Expand: 3(2x − 5) = 6x − 15 and −4(x + 1) = −4x − 4. Add: (6x − 15) + (−4x − 4) = 2x − 19. A common error is failing to distribute the negative sign or misadding constants."
+  },
+  {
+   "n": 15,
+   "topic": "Algebraic expressions and formulae",
+   "q": "A cylinder has volume V = πr²h. Given V = 1000 cm³ and h = 20 cm, find r to 2 decimal places (use π ≈ 3.14159265).",
+   "options": [
+    "r ≈ 1.99 cm",
+    "r ≈ 4.00 cm",
+    "r ≈ 2.52 cm",
+    "r ≈ 3.99 cm"
+   ],
+   "answer": 3,
+   "explanation": "Rearrange r = √(V/(πh)). So r = √(1000/(π×20)) = √(1000/(62.831853)) ≈ √(15.91549) ≈ 3.9919, so r ≈ 3.99 cm. 4.00 is close but slightly too large when rounded to 2 dp you'd write 3.99."
+  },
+  {
+   "n": 16,
+   "topic": "Simultaneous equations",
+   "q": "Two numbers have sum 13 and difference 1. Let the numbers be x and y with x > y. Which pair (x, y) satisfies this?",
+   "options": [
+    "(6.5, 6.5)",
+    "(6, 7)",
+    "(7, 6)",
+    "(8, 5)"
+   ],
+   "answer": 2,
+   "explanation": "Solve x + y = 13 and x − y = 1. Adding: 2x = 14 so x = 7; then y = 13 − 7 = 6. (6, 7) has the numbers swapped, (8, 5) gives difference 3, and (6.5, 6.5) has difference 0."
+  },
+  {
+   "n": 17,
+   "topic": "Circle theorems",
+   "q": "In a circle, two chords AB and CD meet at point E on the circumference (so E is on the circle and A, B, C, D are other points on the circle). Angle AEC is an angle in the circle that subtends arc AC. If angle ABC (an angle at the circumference subtending arc AC) is 42°, what is angle AEC?",
+   "options": [
+    "21°",
+    "138°",
+    "42°",
+    "84°"
+   ],
+   "answer": 2,
+   "explanation": "Angles at the circumference that subtend the same arc are equal. Angle ABC and angle AEC both subtend arc AC, so they are equal: angle AEC = 42°. Doubling to 84° would be for a central angle, halving to 21° is incorrect, and 138° is unrelated."
+  },
+  {
+   "n": 18,
+   "topic": "Perimeter, area and volume",
+   "q": "A cylindrical water tank is 2.4 m high with radius 0.8 m. Water is poured in until the depth is 1.5 m. Give the volume of water in litres, correct to the nearest litre.",
+   "options": [
+    "3016 L",
+    "1508 L",
+    "301 L",
+    "30160 L"
+   ],
+   "answer": 0,
+   "explanation": "Volume = πr²h = π × 0.8² × 1.5 = π × 0.64 × 1.5 = 0.96π m³ ≈ 3.0159 m³. 1 m³ = 1000 L so ≈ 3015.9 L, rounded to 3016 L. 301 L is ten times too small, 30160 L is ten times too large, 1508 L is about half the correct value."
+  },
+  {
+   "n": 19,
+   "topic": "Probability",
+   "q": "A bag contains 5 red counters, 3 blue counters and 2 green counters. Two counters are drawn at random without replacement. What is the probability both are blue? Give your answer as a fraction in simplest form.",
+   "options": [
+    "1/5",
+    "3/45 = 1/15",
+    "3/10",
+    "6/45 = 2/15"
+   ],
+   "answer": 1,
+   "explanation": "Probability first is blue = 3/10. Then second blue = 2/9. Multiply: (3/10)×(2/9) = 6/90 = 1/15. 3/10 and 1/5 are mistakes treating draws as independent or miscounting; 6/45 is not simplified and also equals 2/15 which is too large."
+  },
+  {
+   "n": 20,
+   "topic": "Probability",
+   "q": "A fair six-sided die is rolled twice. What is the probability that the second roll is strictly greater than the first roll?",
+   "options": [
+    "6/36 = 1/6",
+    "21/36 = 7/12",
+    "15/36 = 5/12",
+    "1/2"
+   ],
+   "answer": 2,
+   "explanation": "Count favourable ordered pairs (a,b) with b>a. For each first roll a from 1 to 6 there are (6−a) possibilities for b. Sum = 5+4+3+2+1+0 = 15 out of 36 equally likely pairs, so 15/36 = 5/12. 1/2 would be true if ties were impossible; 7/12 and 1/6 are incorrect counts."
+  },
+  {
+   "n": 21,
+   "topic": "Transformations and vectors",
+   "q": "A triangle with vertices at (1, 2), (4, 2) and (1, 5) is translated by the vector (−2, 3). What are the coordinates of the image of the vertex originally at (4, 2)?",
+   "options": [
+    "(−1, 5)",
+    "(2, 5)",
+    "(2, −1)",
+    "(6, −1)"
+   ],
+   "answer": 1,
+   "explanation": "Add the translation vector (−2, 3) to (4, 2): (4 + (−2), 2 + 3) = (2, 5). The wrong answers come from sign errors or swapping additions and subtractions."
+  },
+  {
+   "n": 22,
+   "topic": "Transformations and vectors",
+   "q": "A shape is reflected in the line y = x. Which of these describes the effect on a point (a, b)?",
+   "options": [
+    "It maps to (a, −b).",
+    "It maps to (−a, −b).",
+    "It maps to (−b, −a).",
+    "It maps to (b, a)."
+   ],
+   "answer": 3,
+   "explanation": "Reflection in the line y = x swaps x and y coordinates, so (a, b) → (b, a). (−a, −b) is a rotation by 180°, (a, −b) is reflection in the x-axis, and (−b, −a) is reflection in y = −x."
+  },
+  {
+   "n": 23,
+   "topic": "Quadratic equations",
+   "q": "A ball is thrown so its height in metres after t seconds is given by h(t) = −5t² + 20t + 3. After how many seconds does the ball reach its maximum height? Give your answer to 2 decimal places if necessary.",
+   "options": [
+    "0.30 s",
+    "4.00 s",
+    "5.00 s",
+    "2.00 s"
+   ],
+   "answer": 3,
+   "explanation": "For a quadratic −5t² + 20t + 3, the t-coordinate of the vertex is at −b/(2a) = −20/(2×(−5)) = 20/10 = 2. So the maximum occurs at t = 2.00 s. 4.00 s would be the time when height returns near start depending on roots; 0.30 s and 5.00 s are incorrect computations."
+  },
+  {
+   "n": 24,
+   "topic": "Linear equations and inequalities",
+   "q": "Solve the inequality 3x − 7 ≤ 2x + 5. Give the solution in the form x ...",
+   "options": [
+    "x < 12",
+    "x ≥ 12",
+    "x ≤ −12",
+    "x ≤ 12"
+   ],
+   "answer": 3,
+   "explanation": "Subtract 2x from both sides to get x − 7 ≤ 5, then add 7 to get x ≤ 12. The common mistake 'x < 12' loses the equality from '≤', 'x ≥ 12' reverses the inequality sign, and 'x ≤ −12' is an arithmetic error when combining terms."
+  },
+  {
+   "n": 25,
+   "topic": "Pythagoras’ theorem and trigonometry",
+   "q": "A right-angled triangle has hypotenuse 13 cm and one shorter side 5 cm. Find the length of the other shorter side in cm.",
+   "options": [
+    "10 cm",
+    "8 cm",
+    "√194 cm",
+    "12 cm"
+   ],
+   "answer": 3,
+   "explanation": "Use Pythagoras: other² = 13² − 5² = 169 − 25 = 144, so other = √144 = 12 cm. √194 is from incorrectly adding squares, 8 or 10 are common arithmetic guesses but do not satisfy 5² + 8² = 89 or 5² + 10² = 125 (neither equals 169)."
+  },
+  {
+   "n": 26,
+   "topic": "Indices, standard form and surds",
+   "q": "Simplify (8x³) ÷ (2x^(−2)) and write the answer with positive indices only.",
+   "options": [
+    "4x",
+    "4x^(−5)",
+    "4x⁵",
+    "16x⁵"
+   ],
+   "answer": 2,
+   "explanation": "Divide coefficients: 8 ÷ 2 = 4. For the powers of x, x³ ÷ x^(−2) = x^(3 − (−2)) = x⁵, so 4x⁵. '4x' would be from subtracting powers incorrectly as 3 − 2, '4x^(−5)' has the wrong sign, and '16x⁵' mistakes the coefficient multiplication instead of division."
+  },
+  {
+   "n": 27,
+   "topic": "Fractions, decimals and percentages",
+   "q": "A concert ticket costs £48. The price is increased by 15%. What is the new price, to the nearest penny?",
+   "options": [
+    "£62.40",
+    "£55.20",
+    "£50.40",
+    "£55.02"
+   ],
+   "answer": 1,
+   "explanation": "An increase of 15% means multiply by 1.15: £48 × 1.15 = £55.20. £62.40 would be a 30% rise (or doubling then extra), £55.02 is a misplaced decimal, and £50.40 is a 5% increase (48 × 1.05)."
+  },
+  {
+   "n": 28,
+   "topic": "Linear equations and inequalities",
+   "q": "Solve the inequality 3(x − 2) + 5 ≤ 2x + 1. Give the solution in the form x ...",
+   "options": [
+    "x < 2",
+    "x ≤ 2",
+    "x ≤ −2",
+    "x ≥ 2"
+   ],
+   "answer": 1,
+   "explanation": "Expand and simplify: 3x − 6 + 5 ≤ 2x + 1 → 3x − 1 ≤ 2x + 1. Subtract 2x: x − 1 ≤ 1 → x ≤ 2. The answer x < 2 misses the equality, x ≥ 2 is the reverse sign, and x ≤ −2 is an arithmetic error."
+  },
+  {
+   "n": 29,
+   "topic": "Pythagoras’ theorem and trigonometry",
+   "q": "In a right-angled triangle, angle A is 37° and the side adjacent to angle A is 9 cm. Find the length of the hypotenuse, correct to 1 decimal place.",
+   "options": [
+    "15.0 cm",
+    "11.3 cm",
+    "7.2 cm",
+    "6.8 cm"
+   ],
+   "answer": 1,
+   "explanation": "For angle A, cos 37° = adjacent ÷ hypotenuse so hypotenuse = adjacent ÷ cos 37° = 9 ÷ cos 37° ≈ 9 ÷ 0.798635 ≈ 11.27 → 11.3 cm. 7.2 cm is 9 × cos 37° (finding adjacent from hypotenuse), 6.8 cm is 9 × tan 37° (wrong ratio), and 15.0 cm is 9 ÷ sin 37° (using the sine instead of cosine)."
+  },
+  {
+   "n": 30,
+   "topic": "Indices, standard form and surds",
+   "q": "Simplify fully and write with positive indices: (2√50 × x^(−2) × √8) ÷ (4√2 × x^3). Give your answer in simplest surd form.",
+   "options": [
+    "5√2 × x^5",
+    "5√2 ÷ x^5",
+    "20 ÷ x^5",
+    "(5 ÷ √2) ÷ x^5"
+   ],
+   "answer": 1,
+   "explanation": "√50 = 5√2 and √8 = 2√2, so numerator = 2×5√2×x^(−2)×2√2 = 40 x^(−2) because √2×√2 = 2. Divide by 4√2 x^3 gives (40 x^(−2))/(4√2 x^3) = (10 x^(−5))/√2. Rationalising: (10 x^(−5)√2)/2 = 5√2 x^(−5) = 5√2 ÷ x^5. The other answers come from sign errors on the index, failing to rationalise, or losing the √2 factor."
+  }
+ ]
+}

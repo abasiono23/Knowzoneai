@@ -766,7 +766,7 @@ const help: Translation<typeof en> = {
             body: ['Wetin AI produce fit:'],
             bullets: [
               'Get facts wey no correct, especially for calculations, dates and figures',
-              'Miss details from your own syllabus or exam board (WAEC, NECO, JAMB)',
+              'Miss details from your own syllabus or exam board (WAEC, SAT, GCSE…)',
               'Read handwriting, blurry photos or complex diagrams wrong',
               'No know about things wey just happen or syllabus changes wey just come',
               'Sound confident even when e wrong',

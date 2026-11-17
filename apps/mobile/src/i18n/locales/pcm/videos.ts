@@ -459,6 +459,33 @@ const videos: Translation<typeof en> = {
     sceneHeading: 'Scene {{number}} heading',
     sceneNarration: 'Scene {{number}} voice',
   },
+  kora: {
+    title: 'Lessons with Kora',
+    subtitle: 'Three-minute lessons wey Kora dey teach, with one quick check inside each one.',
+    name: 'Kora',
+    role: 'your AI tutor',
+    english: 'English',
+    minutes: '{{n}} min',
+    watched: 'You don watch am',
+    open: 'Open lesson: {{title}}',
+    groups: {
+      exam: 'For {{exams}}',
+      cyber: 'Cybersecurity',
+      skills: 'How to study',
+    },
+    start: 'Start lesson',
+    loading: 'Lesson dey load…',
+    loadFailed: 'Dis lesson no load. Check your network, try again.',
+    listFailed: 'We no fit load the lessons. Check your network, try again.',
+    part: 'Part {{n}} of {{total}}: {{title}}',
+    pauseAndTry: 'Pause, try am',
+    continuesIn: 'Kora go continue for {{n}} s',
+    continue: 'Continue',
+    back10: 'Go back 10 seconds',
+    finishedTitle: 'You don finish the lesson',
+    finishedBody: 'Well done. Try another lesson, or ask Kora anything wey never clear.',
+    moreLessons: 'More lessons',
+  },
 };
 
 export default videos;

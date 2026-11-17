@@ -1,0 +1,596 @@
+{
+ "id": "act-math-p1",
+ "exam": "act",
+ "subject": "math",
+ "year": null,
+ "number": 1,
+ "source": "ai",
+ "minutes": 50,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Algebra: expressions and equations",
+   "q": "If x = −2, what is the value of 3x² − 5x + 1?",
+   "options": [
+    "23",
+    "−1",
+    "47",
+    "3"
+   ],
+   "answer": 0,
+   "explanation": "Substitute −2 for x: 3(−2)² − 5(−2) + 1 = 3(4) + 10 + 1 = 23. Squaring only x, not the whole 3x, is important; treating −5x as −10 gives 3, which is not correct."
+  },
+  {
+   "n": 2,
+   "topic": "Algebra: expressions and equations",
+   "q": "For what value of x is (2x − 3)/5 = (x + 4)/2?",
+   "options": [
+    "−26",
+    "−10",
+    "−7",
+    "26"
+   ],
+   "answer": 0,
+   "explanation": "Cross-multiplying gives 2(2x − 3) = 5(x + 4), so 4x − 6 = 5x + 20. Subtracting 4x from both sides gives −6 = x + 20, and then x = −26. A sign error at the end could produce 26, but checking in the original equation shows that −26 is the solution."
+  },
+  {
+   "n": 3,
+   "topic": "Algebra: expressions and equations",
+   "q": "The function f is defined by f(x) = x² − 6x + 5. For what value of x does f(x) = −4?",
+   "options": [
+    "No real value",
+    "3",
+    "−3",
+    "1 and 5"
+   ],
+   "answer": 1,
+   "explanation": "Set f(x) = −4: x² − 6x + 5 = −4, so x² − 6x + 9 = 0. This factors as (x − 3)² = 0, giving x = 3. The values 1 and 5 make f(x) = 0, not f(x) = −4."
+  },
+  {
+   "n": 4,
+   "topic": "Rates, ratios, proportions and percentages",
+   "q": "At a produce stand, 3 pounds of apples cost $4.50. At this rate, how much do 5 pounds of apples cost?",
+   "options": [
+    "$6.00",
+    "$2.70",
+    "$9.00",
+    "$7.50"
+   ],
+   "answer": 3,
+   "explanation": "The unit rate is $4.50 ÷ 3 = $1.50 per pound, so 5 pounds cost 5 × $1.50 = $7.50. Multiplying $4.50 by 3/5 gives $2.70, which reverses the proportion."
+  },
+  {
+   "n": 5,
+   "topic": "Rates, ratios, proportions and percentages",
+   "q": "At Northside High School, the ratio of juniors to seniors is 5 to 4. On a field trip, 60% of the juniors and 25% of the seniors attend. A total of 220 juniors and seniors attend the trip. How many seniors are enrolled at Northside High School?",
+   "options": [
+    "495",
+    "55",
+    "275",
+    "220"
+   ],
+   "answer": 3,
+   "explanation": "Let the number of juniors be 5k and the number of seniors be 4k. The number attending is 0.60(5k) + 0.25(4k) = 3k + k = 4k, so 4k = 220 and k = 55. Therefore the number of seniors enrolled is 4k = 220; the value 55 is only the number of seniors who attended."
+  },
+  {
+   "n": 6,
+   "topic": "Area, surface area and volume",
+   "q": "A model of a rectangular park is built using a scale of 1 inch to 4 feet. The area of the rectangular base of the model is 36 square inches. What is the area, in square feet, of the actual park's rectangular base?",
+   "options": [
+    "576",
+    "144",
+    "2,304",
+    "36"
+   ],
+   "answer": 0,
+   "explanation": "Because 1 inch represents 4 feet, 1 square inch on the model represents 4² = 16 square feet. Thus the actual area is 36 × 16 = 576 square feet. Multiplying 36 by only 4 gives 144, which incorrectly treats area as a length."
+  },
+  {
+   "n": 7,
+   "topic": "Area, surface area and volume",
+   "q": "A cylindrical water tank has a radius of 3 feet and a height of 10 feet. If the tank is 80% full of water, how many cubic feet of water are in the tank?",
+   "options": [
+    "72π",
+    "90π",
+    "18π",
+    "48π"
+   ],
+   "answer": 0,
+   "explanation": "The full volume of the cylinder is π(3²)(10) = 90π cubic feet. Since the tank is 80% full, the water volume is 0.8 × 90π = 72π cubic feet. The value 18π is the empty portion, not the water present."
+  },
+  {
+   "n": 8,
+   "topic": "Linear equations, inequalities and systems",
+   "q": "If 5 − 2x ≤ 11, which of the following describes all possible values of x?",
+   "options": [
+    "x ≥ 3",
+    "x ≥ −3",
+    "x ≤ −3",
+    "x ≤ 3"
+   ],
+   "answer": 1,
+   "explanation": "Subtract 5 from both sides to get −2x ≤ 6. Dividing by −2 reverses the inequality, so x ≥ −3. Failing to reverse the inequality would give x ≤ −3."
+  },
+  {
+   "n": 9,
+   "topic": "Linear equations, inequalities and systems",
+   "q": "At a community theater, adult tickets cost $8 each and child tickets cost $5 each. A total of 250 tickets were sold for $1,610. How many adult tickets were sold?",
+   "options": [
+    "150",
+    "100",
+    "130",
+    "120"
+   ],
+   "answer": 3,
+   "explanation": "Let a be the number of adult tickets; then 250 − a child tickets were sold. The total revenue is 8a + 5(250 − a) = 1,610, which simplifies to 3a + 1,250 = 1,610, so 3a = 360 and a = 120. The value 130 is the number of child tickets sold, not adult tickets."
+  },
+  {
+   "n": 10,
+   "topic": "Plane geometry: angles, triangles and circles",
+   "q": "Javier is designing a triangular banner. The angle measures of the triangle are (2x + 10)°, (3x − 5)°, and 75°. What is the value of x?",
+   "options": [
+    "16",
+    "20",
+    "18",
+    "24"
+   ],
+   "answer": 1,
+   "explanation": "The three angles of a triangle sum to 180°, so (2x+10)+(3x−5)+75=180. Combining terms gives 5x+80=180, so 5x=100 and x=20. The resulting angles are 50°, 55°, and 75°."
+  },
+  {
+   "n": 11,
+   "topic": "Statistics and data",
+   "q": "The table shows how many books 20 students read during a summer reading program.\nNumber of books | 0 | 1 | 2 | 3 | 4\nNumber of students | 4 | 6 | 5 | 3 | 2\nWhat is the mean number of books read per student?",
+   "options": [
+    "1.65",
+    "2",
+    "1.75",
+    "1.5"
+   ],
+   "answer": 0,
+   "explanation": "The total number of books is 0(4)+1(6)+2(5)+3(3)+4(2)=33. There are 20 students, so the mean is 33 ÷ 20 = 1.65 books per student. The value 1.5 is the median, not the mean."
+  },
+  {
+   "n": 12,
+   "topic": "Probability",
+   "q": "A bag contains 5 red, 3 blue, and 7 green marbles. If one marble is selected at random, what is the probability that it is not blue?",
+   "options": [
+    "2/5",
+    "4/5",
+    "7/15",
+    "1/5"
+   ],
+   "answer": 1,
+   "explanation": "There are 5+3+7=15 marbles total, and 12 are not blue. The probability is 12/15 = 4/5. The value 1/5 is the probability of selecting a blue marble, not a non-blue marble."
+  },
+  {
+   "n": 13,
+   "topic": "Quadratics, polynomials and exponents",
+   "q": "The polynomial p(x) = x² − 5x − 24 can be written as (x − 8)(x + k). What is the value of k?",
+   "options": [
+    "3",
+    "8",
+    "−3",
+    "−8"
+   ],
+   "answer": 0,
+   "explanation": "Expanding (x − 8)(x + k) gives x² + (k − 8)x − 8k. Matching the constant term to −24 gives k=3, and the x-coefficient is then 3−8=−5. Thus the other factor is x+3."
+  },
+  {
+   "n": 14,
+   "topic": "Plane geometry: angles, triangles and circles",
+   "q": "A circular pizza has a radius of 12 inches. A slice is cut with a central angle of 45°. What is the area of the slice, in square inches?",
+   "options": [
+    "24π",
+    "18π",
+    "9π",
+    "36π"
+   ],
+   "answer": 1,
+   "explanation": "The slice is 45/360=1/8 of the whole pizza. The whole circle has area π(12)²=144π square inches, so the slice has area (1/8)(144π)=18π square inches. Using the diameter instead of the radius in the area formula would give a different value."
+  },
+  {
+   "n": 15,
+   "topic": "Probability",
+   "q": "Two fair six-sided dice are rolled. What is the probability that the sum of the numbers shown is at least 10?",
+   "options": [
+    "1/6",
+    "1/12",
+    "1/4",
+    "5/36"
+   ],
+   "answer": 0,
+   "explanation": "Sums of at least 10 are 10, 11, or 12. They occur in 3 + 2 + 1 = 6 of the 36 equally likely outcomes. Thus the probability is 6/36 = 1/6."
+  },
+  {
+   "n": 16,
+   "topic": "Quadratics, polynomials and exponents",
+   "q": "For x ≠ 0 and y ≠ 0, which expression is equivalent to (x⁵ y³)/(x² y)?",
+   "options": [
+    "x⁷y⁴",
+    "x³y²",
+    "x⁷y²",
+    "x³y³"
+   ],
+   "answer": 1,
+   "explanation": "Subtract the exponent of x in the denominator from the exponent in the numerator: 5−2=3. Subtract the exponent of y: 3−1=2. So the expression simplifies to x³y²."
+  },
+  {
+   "n": 17,
+   "topic": "Statistics and data",
+   "q": "A data set has mean 50 and standard deviation 4. Every value is multiplied by 3, and then 10 is added to each result. What is the standard deviation of the new data set?",
+   "options": [
+    "4",
+    "12",
+    "14",
+    "22"
+   ],
+   "answer": 1,
+   "explanation": "Multiplying every value by 3 multiplies the standard deviation by 3, so 4 × 3 = 12. Adding 10 to every value shifts the data but does not change the spread. The new mean would be (50 × 3) + 10 = 160, but the standard deviation is 12."
+  },
+  {
+   "n": 18,
+   "topic": "Quadratics, polynomials and exponents",
+   "q": "A rectangular garden has a length that is 3 feet more than twice its width. The area of the garden is 90 square feet. What is the width of the garden, in feet?",
+   "options": [
+    "8",
+    "15",
+    "6",
+    "9"
+   ],
+   "answer": 2,
+   "explanation": "Let w be the width; the length is 2w+3, so w(2w+3)=90. This gives 2w²+3w−90=0, which factors as (2w+15)(w−6)=0. The positive width is 6 ft; 15 ft is the length, not the width."
+  },
+  {
+   "n": 19,
+   "topic": "Plane geometry: angles, triangles and circles",
+   "q": "In triangle ABC, AB = 7 inches, AC = 10 inches, and angle A measures 60°. What is the length of BC, in inches?",
+   "options": [
+    "13",
+    "√219",
+    "√79",
+    "√149"
+   ],
+   "answer": 2,
+   "explanation": "Use the Law of Cosines: BC² = 7² + 10² − 2(7)(10)cos 60°. Since cos 60° = 1/2, BC² = 49 + 100 − 70 = 79, so BC = √79 inches. Using plus instead of minus would lead to √219, which is too large for a triangle with sides 7 and 10 around a 60° angle."
+  },
+  {
+   "n": 20,
+   "topic": "Number and quantity",
+   "q": "Maya is buying a bicycle regularly priced at $180. It is on sale for 25% off, and sales tax of 6% is added to the sale price. What is the total cost of the bicycle including tax?",
+   "options": [
+    "$148.50",
+    "$135.00",
+    "$145.80",
+    "$143.10"
+   ],
+   "answer": 3,
+   "explanation": "The discount makes the sale price $180 × 0.75 = $135. Adding 6% tax gives $135 × 1.06 = $143.10. Choosing $135.00 ignores the tax."
+  },
+  {
+   "n": 21,
+   "topic": "Functions",
+   "q": "Let f(x) = 2x² − 5x + 1. What is f(a + 1) − f(a)?",
+   "options": [
+    "4a − 8",
+    "4a − 3",
+    "2a − 3",
+    "4a + 3"
+   ],
+   "answer": 1,
+   "explanation": "First, f(a+1)=2(a+1)²−5(a+1)+1=2a²−a−2. Then f(a)=2a²−5a+1. Subtracting gives (2a²−a−2)−(2a²−5a+1)=4a−3."
+  },
+  {
+   "n": 22,
+   "topic": "Coordinate geometry",
+   "q": "In the standard (x,y) coordinate plane, line ℓ passes through the points (−2, 5) and (4, −1). What is the slope of line ℓ?",
+   "options": [
+    "1",
+    "2",
+    "−1",
+    "−1/2"
+   ],
+   "answer": 2,
+   "explanation": "The slope is the change in y divided by the change in x: (−1−5)/(4−(−2))=−6/6=−1. A slope of 1 would result from reversing the sign of one coordinate difference."
+  },
+  {
+   "n": 23,
+   "topic": "Trigonometry",
+   "q": "In right triangle ABC, angle C is a right angle. If AB = 13 and BC = 5, what is sin A?",
+   "options": [
+    "12/13",
+    "5/12",
+    "5/13",
+    "12/5"
+   ],
+   "answer": 2,
+   "explanation": "Since angle C is a right angle, AB is the hypotenuse. Side BC is opposite angle A, so sin A=BC/AB=5/13. The value 12/13 would be cos A."
+  },
+  {
+   "n": 24,
+   "topic": "Number and quantity",
+   "q": "If 3^(2x) = 27^(x−2), what is the value of x?",
+   "options": [
+    "6",
+    "2",
+    "9",
+    "4"
+   ],
+   "answer": 0,
+   "explanation": "Write 27 as 3³, so the equation becomes 3^(2x)=3^(3x−6). Therefore 2x=3x−6, which gives x=6."
+  },
+  {
+   "n": 25,
+   "topic": "Functions",
+   "q": "A ball thrown by Andre has height h(t), in feet, above the ground t seconds after it is thrown given by h(t) = −16t² + 64t + 5. For how many seconds is the ball at a height of at least 53 feet?",
+   "options": [
+    "1",
+    "3",
+    "4",
+    "2"
+   ],
+   "answer": 3,
+   "explanation": "Solve −16t²+64t+5 ≥ 53 by subtracting 53: −16t²+64t−48 ≥ 0. Dividing by −16 and reversing the inequality gives t²−4t+3 ≤ 0, or (t−1)(t−3) ≤ 0. Thus 1 ≤ t ≤ 3, a duration of 3−1=2 seconds."
+  },
+  {
+   "n": 26,
+   "topic": "Coordinate geometry",
+   "q": "The circle with equation x² + y² − 6x + 8y − 11 = 0 has center (h, k) and radius r. What is h + k + r?",
+   "options": [
+    "13",
+    "6",
+    "5",
+    "−1"
+   ],
+   "answer": 2,
+   "explanation": "Complete the square: x²−6x+y²+8y=11 becomes (x−3)²+(y+4)²=36. The center is (3,−4) and the radius is 6, so h+k+r=3+(−4)+6=5. The value −1 comes from omitting the radius after using the center coordinates."
+  },
+  {
+   "n": 27,
+   "topic": "Trigonometry",
+   "q": "An angle measures 5π/6 radians. What is the measure of the angle in degrees?",
+   "options": [
+    "120°",
+    "210°",
+    "150°",
+    "135°"
+   ],
+   "answer": 2,
+   "explanation": "Multiply radians by 180/π to convert to degrees: (5π/6)(180/π)=5×30=150. So the angle is 150°."
+  },
+  {
+   "n": 28,
+   "topic": "Functions",
+   "q": "In a science lab, a bacteria population doubles every 3 hours. The population P(t) after t hours is given by P(t) = 500(2)^(t/3). What is the population after 12 hours?",
+   "options": [
+    "2,000",
+    "8,000",
+    "16,000",
+    "4,000"
+   ],
+   "answer": 1,
+   "explanation": "After 12 hours, the population has doubled 12÷3=4 times. Thus P(12)=500×2⁴=500×16=8,000."
+  },
+  {
+   "n": 29,
+   "topic": "Trigonometry",
+   "q": "In triangle DEF, DE = 7, EF = 10, and angle E = 60°. What is the length DF?",
+   "options": [
+    "√149",
+    "√219",
+    "3",
+    "√79"
+   ],
+   "answer": 3,
+   "explanation": "Use the law of cosines: DF²=7²+10²−2(7)(10)cos 60°=49+100−140(1/2)=79. Therefore DF=√79. Using 7²+10² without the cosine term would give √149."
+  },
+  {
+   "n": 30,
+   "topic": "Rates, ratios, proportions and percentages",
+   "q": "Lena buys a jacket that regularly costs $80. The jacket is on sale for 25% off, and 6% sales tax is applied to the sale price. What is the total cost of the jacket, including tax?",
+   "options": [
+    "$64.80",
+    "$60.00",
+    "$68.00",
+    "$63.60"
+   ],
+   "answer": 3,
+   "explanation": "The sale price is $80 × 0.75 = $60.00. Sales tax is $60.00 × 0.06 = $3.60, so the total is $63.60. The value $64.80 results from adding 6% of the original $80 to the sale price instead of taking tax on the sale price."
+  },
+  {
+   "n": 31,
+   "topic": "Algebra: expressions and equations",
+   "q": "If 3(2x + 5) − 4x = 23, what is the value of x?",
+   "options": [
+    "−4",
+    "9",
+    "19",
+    "4"
+   ],
+   "answer": 3,
+   "explanation": "Distributing gives 6x + 15 − 4x = 23, so 2x + 15 = 23 and x = 4. The value 9 comes from not multiplying the 5 in 2x + 5 by 3."
+  },
+  {
+   "n": 32,
+   "topic": "Area, surface area and volume",
+   "q": "A rectangular storage box has a length of 6 feet, a width of 4 feet, and a height of 2 feet. What is the total surface area of the box, in square feet?",
+   "options": [
+    "44",
+    "48",
+    "64",
+    "88"
+   ],
+   "answer": 3,
+   "explanation": "The surface area is 2(6 × 4) + 2(6 × 2) + 2(4 × 2) = 48 + 24 + 16 = 88 square feet. The value 48 is the volume of the box, not its surface area."
+  },
+  {
+   "n": 33,
+   "topic": "Rates, ratios, proportions and percentages",
+   "q": "A store increases the price of a tablet by 20%. Later, the store marks down the increased price by 25%. The final price is what percent of the original price?",
+   "options": [
+    "95%",
+    "96%",
+    "90%",
+    "105%"
+   ],
+   "answer": 2,
+   "explanation": "Using an original price of $100, a 20% increase gives $120. A 25% markdown of $120 is $30, so the final price is $90, which is 90% of $100. The percent 95% comes from treating the changes as +20% − 25% = −5%."
+  },
+  {
+   "n": 34,
+   "topic": "Algebra: expressions and equations",
+   "q": "If x = 3 and y = −2, what is the value of 2x² − 3xy + y²?",
+   "options": [
+    "36",
+    "40",
+    "22",
+    "4"
+   ],
+   "answer": 1,
+   "explanation": "Substitute x = 3 and y = −2: 2(3²) − 3(3)(−2) + (−2)² = 18 + 18 + 4 = 40. The value 4 results from treating xy as 6 rather than −6."
+  },
+  {
+   "n": 35,
+   "topic": "Linear equations, inequalities and systems",
+   "q": "A movie theater sells adult tickets for $11 each and child tickets for $7 each. A total of 120 tickets were sold for $1,060. How many adult tickets were sold?",
+   "options": [
+    "70",
+    "65",
+    "45",
+    "55"
+   ],
+   "answer": 3,
+   "explanation": "Let a be adult tickets and c be child tickets. Then a + c = 120 and 11a + 7c = 1,060. Substituting c = 120 − a gives 11a + 840 − 7a = 1,060, so 4a = 220 and a = 55. The value 65 is the number of child tickets."
+  },
+  {
+   "n": 36,
+   "topic": "Area, surface area and volume",
+   "q": "A triangular banner has two sides measuring 10 inches and 14 inches. The angle between those two sides measures 30°. What is the area of the banner, in square inches?",
+   "options": [
+    "70",
+    "35√3",
+    "70√3",
+    "35"
+   ],
+   "answer": 3,
+   "explanation": "Area = ½ × 10 × 14 × sin 30° = 70 × 0.5 = 35 square inches. The value 70 is obtained if the factor ½ from the triangle area formula is omitted."
+  },
+  {
+   "n": 37,
+   "topic": "Linear equations, inequalities and systems",
+   "q": "A cell phone plan A costs $25 per month plus $0.05 per text message. Plan B costs $10 per month plus $0.08 per text message. For what numbers of text messages t is the monthly cost of Plan B less than the monthly cost of Plan A?",
+   "options": [
+    "t < 300",
+    "t > 500",
+    "t > 300",
+    "t < 500"
+   ],
+   "answer": 3,
+   "explanation": "Set 10 + 0.08t < 25 + 0.05t. Subtracting 10 and 0.05t from both sides gives 0.03t < 15, so t < 500. At t = 500 the two plans cost the same, and Plan B is cheaper for fewer than 500 text messages."
+  },
+  {
+   "n": 38,
+   "topic": "Rates, ratios, proportions and percentages",
+   "q": "At Northside High School, 30% of the students choose math as their favorite subject. Of the remaining students, 45% choose science as their favorite subject. The other 462 students choose another subject. How many students attend Northside High School?",
+   "options": [
+    "1,320",
+    "1,848",
+    "840",
+    "1,200"
+   ],
+   "answer": 3,
+   "explanation": "Let T be the total number of students. After 30% choose math, 70% remain; 45% of those choose science, so 55% of the remaining 70% choose another subject. Thus 0.55 × 0.70 × T = 462, so T = 462 ÷ 0.385 = 1,200. The value 1,848 comes from subtracting 30% and 45% directly from 100%, but the 45% applies only to the remaining students."
+  },
+  {
+   "n": 39,
+   "topic": "Algebra: expressions and equations",
+   "q": "If f(x) = 2x² − 5x + 1, and f(a) = 3, what is the sum of all possible values of a?",
+   "options": [
+    "5",
+    "2",
+    "5/2",
+    "−5/2"
+   ],
+   "answer": 2,
+   "explanation": "Set f(a) = 3: 2a² − 5a + 1 = 3, so 2a² − 5a − 2 = 0. For a quadratic Ax² + Bx + C = 0, the sum of the roots is −B/A, so here it is −(−5)/2 = 5/2. The constant −2 affects the product of the roots, not their sum."
+  },
+  {
+   "n": 40,
+   "topic": "Plane geometry: angles, triangles and circles",
+   "q": "A triangular garden bed has interior angles measuring 38° and 67°. What is the measure of the third interior angle?",
+   "options": [
+    "85°",
+    "95°",
+    "75°",
+    "105°"
+   ],
+   "answer": 2,
+   "explanation": "The interior angles of a triangle sum to 180°, so the third angle is 180° − 38° − 67° = 75°. An answer such as 105° comes from adding the two given angles instead of subtracting them from 180°."
+  },
+  {
+   "n": 41,
+   "topic": "Plane geometry: angles, triangles and circles",
+   "q": "Anika is making a circular tabletop with a circumference of 10π inches. What is the area of the tabletop, in square inches?",
+   "options": [
+    "100π",
+    "50π",
+    "25π",
+    "10π"
+   ],
+   "answer": 2,
+   "explanation": "The circumference is 2πr, so 2πr = 10π and r = 5 inches. The area is πr² = π(5)² = 25π square inches."
+  },
+  {
+   "n": 42,
+   "topic": "Plane geometry: angles, triangles and circles",
+   "q": "In a circle, a central angle measures (3x + 5)° and an inscribed angle that intercepts the same arc measures (x + 30)°. What is the measure of the central angle?",
+   "options": [
+    "160°",
+    "170°",
+    "85°",
+    "55°"
+   ],
+   "answer": 1,
+   "explanation": "A central angle is twice an inscribed angle that intercepts the same arc, so 3x + 5 = 2(x + 30). Solving gives x = 55, and the central angle is 3(55) + 5 = 170°."
+  },
+  {
+   "n": 43,
+   "topic": "Quadratics, polynomials and exponents",
+   "q": "Which expression is equivalent to (2x³)(5x⁴) for all real values of x?",
+   "options": [
+    "7x⁷",
+    "10x¹²",
+    "10x⁸",
+    "10x⁷"
+   ],
+   "answer": 3,
+   "explanation": "Multiply the coefficients: 2 × 5 = 10. When multiplying powers with the same base, add the exponents: x³ · x⁴ = x⁷, so the expression is 10x⁷."
+  },
+  {
+   "n": 44,
+   "topic": "Quadratics, polynomials and exponents",
+   "q": "The graph of y = x² + bx + c passes through the points (2, 0) and (5, 0). What is the value of b + c?",
+   "options": [
+    "7",
+    "10",
+    "−3",
+    "3"
+   ],
+   "answer": 3,
+   "explanation": "Since the x-intercepts are 2 and 5, the quadratic is y = (x − 2)(x − 5) = x² − 7x + 10. Thus b = −7 and c = 10, so b + c = 3."
+  },
+  {
+   "n": 45,
+   "topic": "Probability",
+   "q": "At Madison High School, 60 students are in the band, 45 are in the orchestra, and 25 are in both. If a student is selected at random from the students in at least one of these two groups, what is the probability that the student is in the band but not in the orchestra?",
+   "options": [
+    "5/16",
+    "7/12",
+    "3/4",
+    "7/16"
+   ],
+   "answer": 3,
+   "explanation": "The number of students in at least one group is 60 + 45 − 25 = 80. The number in the band but not the orchestra is 60 − 25 = 35, so the probability is 35/80 = 7/16. The fraction 3/4 would include the 25 students in both groups."
+  }
+ ]
+}

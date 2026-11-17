@@ -75,6 +75,8 @@ const billing: Translation<typeof en> = {
     studyPlans: 'Atụmatụ ọmụmụ ahaziri maka gị',
     insights: 'Nghọta ọganihu bara ụba karị',
     examPapers: 'Akwụkwọ omume WAEC, NECO na JAMB zuru oke',
+    examPapersFor: 'Akwụkwọ omume {{exams}} zuru oke',
+    examPapersAny: 'Akwụkwọ omume ule zuru oke',
     library: 'Ọbá akwụkwọ ọmụmụ na folda buru ibu karị',
     priority: 'Nhazi mbụ mgbe ọ jupụtara',
     everythingPlus: 'Ihe niile dị na Plus',
@@ -191,6 +193,8 @@ const billing: Translation<typeof en> = {
       PRO: {
         whoQ: 'Onye ka Pro dịịrị?',
         whoA: 'Ụmụ akwụkwọ na-akwado maka WAEC, NECO ma ọ bụ JAMB ndị na-eme omume kwa ụbọchị ma chọọ akwụkwọ ule zuru oke dị ka nke gara aga.',
+        whoAFor: 'Ụmụ akwụkwọ na-akwado maka {{exams}} ndị na-eme omume kwa ụbọchị ma chọọ akwụkwọ omume zuru oke.',
+        whoAAny: 'Ụmụ akwụkwọ na-eme omume kwa ụbọchị ma chọọ iji onye nkuzi AI nke ọma, na-ebu ụzọ mgbe ọ na-ekwo ekwo.',
         fairQ: 'Gịnị ka “ojiji ziri ezi” pụtara?',
         fairA:
           'Ruo ajụjụ onye nkuzi {{questions}} kwa ụbọchị na-ezu maka ọmụmụ siri ike. Ọ na-egbochi ojiji akpaka ma ọ bụ akaụntụ a na-ekerịta.',

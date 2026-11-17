@@ -17,6 +17,7 @@ import { formatViews, getSubject, levelLabel, subjectName } from '@/lib/catalog'
 import { relatedCourses } from '@/lib/courses/catalog';
 import { getInstructor } from '@/lib/courses/instructors';
 import { useCourses } from '@/lib/courses/store';
+import { ownExamTags } from '@/lib/region';
 import {
   allLessons,
   courseMinutes,
@@ -84,7 +85,7 @@ function Details({ course }: { course: Course }) {
           <View style={{ gap: Spacing.xs }}>
             <Text variant="label" color={Colors.primary}>
               {(subject ? subjectName(subject, th) : '').toUpperCase()} · {levelLabel(course.level, th).toUpperCase()}
-              {course.exams ? ` · ${course.exams.join(' / ')}` : ''}
+              {ownExamTags(course.exams).length ? ` · ${ownExamTags(course.exams).join(' / ')}` : ''}
             </Text>
             <Text variant="display" style={{ fontSize: 28, lineHeight: 34 }}>
               {course.title}

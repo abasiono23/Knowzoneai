@@ -4,6 +4,8 @@ import type en from '../en/exams';
 
 const exams: Translation<typeof en> = {
   title: 'Past Questions',
+  /** The same page for SAT and GCSE students: those papers are practice, never "past questions". */
+  practiceTitle: 'Exam practice',
   eyebrow: 'JAMB · WAEC · NECO',
   offline: 'Past Questions need internet connection.',
   loadFailed: 'We no fit load the papers. Check your connection come try again.',
@@ -13,11 +15,30 @@ const exams: Translation<typeof en> = {
     title: 'JAMB, WAEC & NECO past questions',
     body: 'Practise every subject for the real exam format, see how every answer take work, and sit timed papers.',
     action: 'Start to practise',
+    /** One exam (the WAEC countries outside Nigeria). */
+    titleOne: '{{exam}} past questions',
+    titlePractice: '{{exams}} practice',
+    bodyPractice: 'Multiple-choice practice by exam and subject, with every answer explained. Na AI write am and we double-check am; no be past papers.',
+    sat: {
+      title: 'SAT practice papers',
+      body: 'Multiple-choice practice wey follow the digital SAT sections and timing, with every answer explained. Na AI write am and we double-check am; no be past papers.',
+    },
+    gcse: {
+      title: 'GCSE-style practice',
+      body: 'Multiple-choice practice by topic for Maths, English Language, Biology, Chemistry and Physics, with every answer explained. Na AI write am and we double-check am; no be past papers.',
+    },
   },
   exams: {
     jamb: { name: 'JAMB', full: 'JAMB UTME', about: 'Computer-based test · Use of English plus three subjects' },
     waec: { name: 'WAEC', full: 'WAEC WASSCE', about: 'Senior school certificate · objective papers' },
     neco: { name: 'NECO', full: 'NECO SSCE', about: 'Senior school certificate · objective papers' },
+    sat: { name: 'SAT', full: 'Digital SAT practice', about: 'Reading and Writing · Math · multiple choice only' },
+    act: { name: 'ACT', full: 'ACT practice', about: 'English · Math · Reading · Science' },
+    ap: { name: 'AP', full: 'AP multiple-choice practice', about: 'Calculus AB · Biology · Chemistry · Physics 1 · US History · English Language' },
+    gcse: { name: 'GCSE', full: 'GCSE-style practice', about: 'Multiple-choice practice by topic' },
+    alevel: { name: 'A-level', full: 'A-level-style practice', about: 'Multiple-choice practice by topic' },
+    kcse: { name: 'KCSE', full: 'KCSE-style practice', about: 'Multiple-choice practice by topic' },
+    nsc: { name: 'Matric', full: 'Matric (NSC)-style practice', about: 'Multiple-choice practice by topic' },
   },
   subjects: {
     english: 'English Language',
@@ -30,7 +51,37 @@ const exams: Translation<typeof en> = {
     literature: 'Literature in English',
     geography: 'Geography',
     commerce: 'Commerce',
+    'reading-writing': 'Reading and Writing',
+    math: 'Math',
+    maths: 'Maths',
+    'english-language': 'English Language',
+    reading: 'Reading',
+    science: 'Science',
+    'calculus-ab': 'Calculus AB',
+    'physics-1': 'Physics 1',
+    'us-history': 'US History',
+    'physical-sciences': 'Physical Sciences',
+    'life-sciences': 'Life Sciences',
+    accounting: 'Accounting',
   },
+  /** What SAT and GCSE practice is and isn't, shown wherever those papers are listed. */
+  notes: {
+    sat: 'Na AI write these practice questions and second AI review check them; no be past SAT papers. Dem follow the digital SAT sections and timing, but na multiple choice only: the real Math section still get questions wey you go type your own answer.',
+    act: 'Na AI write these practice questions and second AI review check them; no be past ACT papers. Dem follow the ACT sections, number of questions and timing.',
+    ap: 'Na AI write these practice questions and second AI review check them; no be past AP papers. Dem dey practise only the multiple-choice section of each AP exam: the real exams still get free-response section.',
+    gcse: 'Na AI write these practice questions and second AI review check them; no be past papers. Real GCSE papers na mostly written answers, so use these multiple-choice quizzes take revise each topic, no be as copy of the exam.',
+    alevel: 'Na AI write these practice questions and second AI review check them; no be past papers. Real A-level papers na mostly written answers, so use these multiple-choice quizzes take revise each topic, no be as copy of the exam.',
+    kcse: 'Na AI write these practice questions and second AI review check them; no be past papers. Real KCSE papers na mostly written answers, so use these multiple-choice quizzes take revise each topic, no be as copy of the exam.',
+    nsc: 'Na AI write these practice questions and second AI review check them; no be past papers. Real Matric (NSC) papers na mostly written answers, so use these multiple-choice quizzes take revise each topic, no be as copy of the exam.',
+  },
+  /** A study region we have no papers for. */
+  none: {
+    title: 'No exam papers for {{country}}',
+    body: 'Your AI tutor, textbooks and courses dey work with any syllabus. You fit still practise with other countries’ papers for down.',
+  },
+  otherExams: 'Other exams',
+  region: 'Study region: {{country}}',
+  change: 'Change',
   pickExam: 'Choose your exam',
   carryOn: 'Continue from where you stop',
   pickSubject: 'Choose one subject',
@@ -59,6 +110,8 @@ const exams: Translation<typeof en> = {
     study: { title: 'Study', body: 'See every question with im answer and explanation.' },
     practice: { title: 'Practice', body: 'Answer for your own pace, see if you correct after every question.' },
     timed: { title: 'Timed exam', body: 'Sit am like the real exam: {{minutes}} minutes, results for the end.' },
+    /** GCSE practice isn't in the exam's format, so its timed mode doesn't say "like the real exam". */
+    timedQuiz: { title: 'Timed quiz', body: 'Race the clock: {{minutes}} minutes, results for the end.' },
     history: 'YOUR SCORES',
     historyRow: '{{score}}/{{total}} · {{mode}} · {{date}}',
     modeName: { practice: 'Practice', timed: 'Timed' },

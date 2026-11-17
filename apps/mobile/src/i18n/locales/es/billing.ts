@@ -78,6 +78,8 @@ const billing: Translation<typeof en> = {
     studyPlans: 'Planes de estudio personalizados',
     insights: 'Análisis de progreso más completos',
     examPapers: 'Exámenes de práctica completos de WAEC, NECO y JAMB',
+    examPapersFor: 'Exámenes de práctica completos de {{exams}}',
+    examPapersAny: 'Exámenes de práctica completos',
     library: 'Biblioteca de estudio más grande y carpetas',
     priority: 'Procesamiento prioritario en horas de mucha demanda',
     everythingPlus: 'Todo lo de Plus',
@@ -197,6 +199,8 @@ const billing: Translation<typeof en> = {
       PRO: {
         whoQ: '¿Para quién es Pro?',
         whoA: 'Para estudiantes que preparan WAEC, NECO o JAMB, practican todos los días y quieren exámenes completos al estilo de los anteriores.',
+        whoAFor: 'Para estudiantes que preparan {{exams}}, practican todos los días y quieren los exámenes de práctica completos.',
+        whoAAny: 'Para estudiantes que practican todos los días y quieren sacar el máximo partido al tutor de IA, con prioridad en las horas punta.',
         fairQ: '¿Qué significa «uso razonable»?',
         fairA:
           'Hasta {{questions}} preguntas al tutor al día cubren un estudio intenso. Evita el uso automatizado o de cuentas compartidas.',

@@ -1,0 +1,531 @@
+{
+ "id": "jamb-physics-p4",
+ "exam": "jamb",
+ "subject": "physics",
+ "year": null,
+ "number": 4,
+ "source": "ai",
+ "minutes": 27,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Light and optics",
+   "q": "In a laboratory in Owerri, a ray of light travelling in kerosene of refractive index 1.44 strikes the kerosene–air boundary at an angle of 25.0° to the normal. Calculate the angle of refraction in air, correct to one decimal place.",
+   "options": [
+    "17.1°",
+    "37.5°",
+    "25.0°",
+    "44.0°"
+   ],
+   "answer": 1,
+   "explanation": "Using Snell’s law, 1.44 sin25.0° = 1.00 sin r, so sin r = 0.6086 and r = 37.5°. Dividing sin25.0° by 1.44 would give 17.1°, which is the common mistake of using the refractive index the wrong way round."
+  },
+  {
+   "n": 2,
+   "topic": "Scalars and vectors",
+   "q": "Two forces of 6.0 N and 8.0 N act at a point with an angle of 60° between them. Calculate the magnitude of their resultant, correct to one decimal place.",
+   "options": [
+    "10.0 N",
+    "14.0 N",
+    "2.0 N",
+    "12.2 N"
+   ],
+   "answer": 3,
+   "explanation": "For two forces at an angle θ, R² = P² + Q² + 2PQ cos θ. Here R² = 6.0² + 8.0² + 2(6.0)(8.0)cos60° = 36 + 64 + 48 = 148, so R = √148 = 12.2 N. The value 10.0 N would be obtained if the forces were perpendicular."
+  },
+  {
+   "n": 3,
+   "topic": "Sound",
+   "q": "A hunter in Oyo claps his hands and hears the echo from a cliff 1.6 s later. If the speed of sound in air is 340 m/s, how far is the hunter from the cliff?",
+   "options": [
+    "136 m",
+    "544 m",
+    "212.5 m",
+    "272 m"
+   ],
+   "answer": 3,
+   "explanation": "The sound travels to the cliff and back, so the total distance is speed × time = 340 × 1.6 = 544 m. The one-way distance is half of this, 544 ÷ 2 = 272 m; using 544 m forgets the return journey."
+  },
+  {
+   "n": 4,
+   "topic": "Motion",
+   "q": "A tricycle in Aba starts from rest and accelerates uniformly to 15 m/s in 5.0 s. It then travels at a constant speed of 15 m/s for 12 s. Calculate the total distance travelled.",
+   "options": [
+    "180.0 m",
+    "217.5 m",
+    "255.0 m",
+    "37.5 m"
+   ],
+   "answer": 1,
+   "explanation": "During acceleration, s = ((0 + 15)/2) × 5.0 = 37.5 m. At constant speed, s = 15 × 12 = 180 m, giving a total of 37.5 + 180 = 217.5 m. Ignoring the acceleration stage gives 180 m."
+  },
+  {
+   "n": 5,
+   "topic": "Light and optics",
+   "q": "A converging lens of focal length 15.0 cm is used as a magnifying glass to view a small print placed 10.0 cm from the lens. Calculate the magnitude of the magnification produced.",
+   "options": [
+    "0.60",
+    "1.5",
+    "3.0",
+    "2.0"
+   ],
+   "answer": 2,
+   "explanation": "Using 1/f = 1/v + 1/u gives 1/v = 1/15 − 1/10 = −1/30, so v = −30 cm. The magnification magnitude is |v|/u = 30/10 = 3.0. The value 0.60 arises if 1/15 and 1/10 are added instead of subtracted."
+  },
+  {
+   "n": 6,
+   "topic": "Sound",
+   "q": "An open pipe in a music class in Ilorin has an effective length of 0.40 m. If the speed of sound in air is 340 m/s, what is the fundamental frequency of the pipe?",
+   "options": [
+    "425 Hz",
+    "850 Hz",
+    "212.5 Hz",
+    "340 Hz"
+   ],
+   "answer": 0,
+   "explanation": "For an open pipe, the fundamental wavelength is λ = 2L = 2 × 0.40 = 0.80 m. Therefore f = v/λ = 340/0.80 = 425 Hz; a closed pipe of the same length would have half this frequency."
+  },
+  {
+   "n": 7,
+   "topic": "Motion",
+   "q": "A minibus in Kaduna covers 10 m during the 2nd second of its motion and 20 m during the 4th second while accelerating uniformly. Calculate its acceleration.",
+   "options": [
+    "10.0 m/s²",
+    "5.0 m/s²",
+    "4.0 m/s²",
+    "2.5 m/s²"
+   ],
+   "answer": 1,
+   "explanation": "The distance covered in the nth second is sₙ = u + (a/2)(2n − 1). For the 2nd second, u + 3a/2 = 10; for the 4th second, u + 7a/2 = 20. Subtracting gives 2a = 10, so a = 5.0 m/s²."
+  },
+  {
+   "n": 8,
+   "topic": "Light and optics",
+   "q": "In a physics demonstration in Ibadan, a plane mirror is turned through 10° while the incident ray remains fixed. Through what angle does the reflected ray turn?",
+   "options": [
+    "20°",
+    "30°",
+    "10°",
+    "5°"
+   ],
+   "answer": 0,
+   "explanation": "When a plane mirror turns through an angle θ, its normal also turns through θ. For a fixed incident ray, the reflected ray turns through 2θ, so here the angle is 2 × 10° = 20°."
+  },
+  {
+   "n": 9,
+   "topic": "Motion",
+   "q": "A stone is projected horizontally with a speed of 15 m/s from the top of a tower 45 m high. Taking g = 10 m/s², how far from the foot of the tower does the stone land?",
+   "options": [
+    "30 m",
+    "60 m",
+    "45 m",
+    "15 m"
+   ],
+   "answer": 2,
+   "explanation": "The time of fall depends on the vertical motion: h = ½gt², so 45 = ½ × 10 × t², giving t = √9 = 3 s. The horizontal distance is speed × time = 15 × 3 = 45 m."
+  },
+  {
+   "n": 10,
+   "topic": "Simple machines",
+   "q": "A pulley system in a rice mill in Uyo has velocity ratio 5.0. An effort of 240 N raises a load of 900 N. What is the efficiency of the system?",
+   "options": [
+    "133%",
+    "26.7%",
+    "80%",
+    "75%"
+   ],
+   "answer": 3,
+   "explanation": "Mechanical advantage = load ÷ effort = 900 N ÷ 240 N = 3.75. Efficiency = (mechanical advantage ÷ velocity ratio) × 100% = (3.75 ÷ 5.0) × 100% = 75%. Using effort ÷ load instead gives about 26.7%, which is not the efficiency."
+  },
+  {
+   "n": 11,
+   "topic": "Gas laws",
+   "q": "A fixed mass of gas in a sealed syringe in Ibadan occupies 250 cm³ at a pressure of 1.20 × 10⁵ Pa. If the pressure is reduced to 0.80 × 10⁵ Pa at constant temperature, what volume does the gas occupy?",
+   "options": [
+    "250 cm³",
+    "167 cm³",
+    "500 cm³",
+    "375 cm³"
+   ],
+   "answer": 3,
+   "explanation": "At constant temperature, P₁V₁ = P₂V₂, so V₂ = (1.20 × 10⁵ × 250) ÷ (0.80 × 10⁵) = 375 cm³. The pressure falls, so the volume must rise; 167 cm³ results from using the pressure ratio upside down."
+  },
+  {
+   "n": 12,
+   "topic": "Gas laws",
+   "q": "A balloon contains 500 cm³ of air at 27°C in Jos. It is cooled to -3°C at constant pressure. What is its new volume?",
+   "options": [
+    "270 cm³",
+    "556 cm³",
+    "450 cm³",
+    "500 cm³"
+   ],
+   "answer": 2,
+   "explanation": "Convert the temperatures to kelvin: T₁ = 27 + 273 = 300 K and T₂ = -3 + 273 = 270 K. At constant pressure, V₂ = V₁T₂ ÷ T₁ = 500 × 270 ÷ 300 = 450 cm³. Inverting the temperature ratio gives about 556 cm³, not the new volume."
+  },
+  {
+   "n": 13,
+   "topic": "Gas laws",
+   "q": "A gas at 27 °C and 1.0 × 10⁵ Pa is heated to 127 °C while its volume is doubled. Calculate its final pressure.",
+   "options": [
+    "8.00 × 10⁴ Pa",
+    "1.33 × 10⁵ Pa",
+    "6.67 × 10⁴ Pa",
+    "5.00 × 10⁴ Pa"
+   ],
+   "answer": 2,
+   "explanation": "Using P₁V₁ ÷ T₁ = P₂V₂ ÷ T₂, with T₁ = 300 K, T₂ = 400 K and V₂ = 2V₁, gives P₂ = 1.0 × 10⁵ × 400 ÷ (300 × 2) = 6.67 × 10⁴ Pa. If the doubling of volume is ignored, the result would be 1.33 × 10⁵ Pa."
+  },
+  {
+   "n": 14,
+   "topic": "Magnetism and electromagnetic induction",
+   "q": "An electron moving at 2.0 × 10⁶ m/s enters a uniform magnetic field of flux density 0.30 T perpendicular to the field. Calculate the magnetic force on the electron. (Take e = 1.6 × 10⁻¹⁹ C.)",
+   "options": [
+    "3.2 × 10⁻¹³ N",
+    "9.6 × 10⁻¹⁴ N",
+    "1.6 × 10⁻¹³ N",
+    "4.8 × 10⁻²⁰ N"
+   ],
+   "answer": 1,
+   "explanation": "For motion perpendicular to the field, magnetic force F = qvB = (1.6 × 10⁻¹⁹)(2.0 × 10⁶)(0.30) = 9.6 × 10⁻¹⁴ N. Multiplying only the charge by the flux density gives 4.8 × 10⁻²⁰ N, which omits the speed."
+  },
+  {
+   "n": 15,
+   "topic": "Magnetism and electromagnetic induction",
+   "q": "A coil of 80 turns has the magnetic flux through each turn changing uniformly from 2.0 × 10⁻³ Wb to 8.0 × 10⁻³ Wb in 0.20 s. Calculate the induced emf.",
+   "options": [
+    "24 V",
+    "0.24 V",
+    "2.4 V",
+    "0.030 V"
+   ],
+   "answer": 2,
+   "explanation": "The change in flux per turn is (8.0 − 2.0) × 10⁻³ = 6.0 × 10⁻³ Wb. For 80 turns, the rate of change of flux linkage is 80 × 6.0 × 10⁻³ ÷ 0.20 = 2.4 V. Omitting the number of turns gives 0.030 V."
+  },
+  {
+   "n": 16,
+   "topic": "Measurement and units",
+   "q": "A micrometer screw gauge in a workshop in Sokoto has a zero error of −0.02 mm. When it is used to measure the diameter of a wire, the reading is 5.48 mm. What is the correct diameter of the wire?",
+   "options": [
+    "5.50 mm",
+    "5.46 mm",
+    "5.52 mm",
+    "5.48 mm"
+   ],
+   "answer": 0,
+   "explanation": "A negative zero error means the gauge reads 0.02 mm less than the true value, so the correction is added. Correct diameter = 5.48 + 0.02 = 5.50 mm. Subtracting instead gives 5.46 mm and treats the negative zero error with the wrong sign."
+  },
+  {
+   "n": 17,
+   "topic": "Measurement and units",
+   "q": "A technician in Aba measures the diameter of a fine wire as 2.5 × 10⁻⁵ m. Express this diameter in micrometres (μm).",
+   "options": [
+    "2.5 μm",
+    "0.25 μm",
+    "25 μm",
+    "250 μm"
+   ],
+   "answer": 2,
+   "explanation": "Since 1 μm = 1 × 10⁻⁶ m, divide the length in metres by 1 × 10⁻⁶: (2.5 × 10⁻⁵) ÷ (1 × 10⁻⁶) = 25. Therefore the diameter is 25 μm. A common power-of-ten slip gives 2.5 μm instead."
+  },
+  {
+   "n": 18,
+   "topic": "Current electricity",
+   "q": "A cell of e.m.f. 1.5 V and internal resistance 0.30 Ω is connected to a 2.7 Ω resistor. What is the terminal potential difference of the cell?",
+   "options": [
+    "1.50 V",
+    "1.20 V",
+    "0.50 V",
+    "1.35 V"
+   ],
+   "answer": 3,
+   "explanation": "The current is I = 1.5 ÷ (2.7 + 0.30) = 0.50 A. The terminal potential difference is V = IR = 0.50 × 2.7 = 1.35 V, which is also e.m.f. minus lost volts. A value of 1.50 V would be obtained only if the internal resistance were ignored."
+  },
+  {
+   "n": 19,
+   "topic": "Atomic and nuclear physics",
+   "q": "When ²⁷₁₃Al is bombarded with an alpha particle and emits a neutron, the product nucleus formed is",
+   "options": [
+    "³⁰₁₄Si",
+    "³⁰₁₅P",
+    "³¹₁₅P",
+    "³⁰₁₆S"
+   ],
+   "answer": 1,
+   "explanation": "For the reaction, mass number balance gives 27 + 4 = A + 1, so A = 30. Atomic number balance gives 13 + 2 = Z + 0, so Z = 15; the element with atomic number 15 is phosphorus, ³⁰₁₅P."
+  },
+  {
+   "n": 20,
+   "topic": "Waves",
+   "q": "In a ripple tank experiment in Enugu, a transverse water wave is represented by y = 0.04 sin(60πt − 3πx), where y is in metres, t in seconds and x in metres. What is the speed of the wave?",
+   "options": [
+    "60π m/s",
+    "0.05 m/s",
+    "180 m/s",
+    "20 m/s"
+   ],
+   "answer": 3,
+   "explanation": "Comparing with y = A sin(ωt − kx), ω = 60π rad/s and k = 3π rad/m. The wave speed is v = ω/k = 60π ÷ 3π = 20 m/s."
+  },
+  {
+   "n": 21,
+   "topic": "Waves",
+   "q": "A guitar string in Tunde's room is sounded together with a tuning fork of frequency 384 Hz. Five beats per second are heard. When the tension of the string is slightly increased, the beat frequency decreases to 2 Hz. What is the original frequency of the string?",
+   "options": [
+    "382 Hz",
+    "386 Hz",
+    "389 Hz",
+    "379 Hz"
+   ],
+   "answer": 3,
+   "explanation": "The original string frequency differs from 384 Hz by 5 Hz, so it is either 379 Hz or 389 Hz. Increasing the tension raises the string frequency; only starting from 379 Hz can the beat frequency fall from 5 Hz to 2 Hz, namely when the string rises to 382 Hz."
+  },
+  {
+   "n": 22,
+   "topic": "Elasticity and pressure",
+   "q": "A copper wire of original length 1.50 m and cross-sectional area 4.0 × 10⁻⁷ m² is stretched by a tensile force of 20 N. If the Young modulus of copper is 1.2 × 10¹¹ Pa, what is the extension produced?",
+   "options": [
+    "1.25 × 10⁻³ m",
+    "4.17 × 10⁻⁴ m",
+    "6.25 × 10⁻⁴ m",
+    "2.50 × 10⁻⁴ m"
+   ],
+   "answer": 2,
+   "explanation": "Stress = F/A = 20 ÷ (4.0 × 10⁻⁷) = 5.0 × 10⁷ Pa. Strain = stress ÷ Young modulus = (5.0 × 10⁷) ÷ (1.2 × 10¹¹) = 4.17 × 10⁻⁴, so extension = strain × original length = 4.17 × 10⁻⁴ × 1.50 = 6.25 × 10⁻⁴ m."
+  },
+  {
+   "n": 23,
+   "topic": "Elasticity and pressure",
+   "q": "A mercury barometer in Calabar reads 750 mmHg. Taking the density of mercury as 1.36 × 10⁴ kg/m³ and g = 10 m/s², what atmospheric pressure does this correspond to?",
+   "options": [
+    "7.50 × 10⁴ Pa",
+    "1.36 × 10⁵ Pa",
+    "1.02 × 10⁵ Pa",
+    "9.80 × 10⁴ Pa"
+   ],
+   "answer": 2,
+   "explanation": "The height is 750 mm = 0.750 m. Atmospheric pressure is p = ρgh = 1.36 × 10⁴ × 10 × 0.750 = 1.02 × 10⁵ Pa."
+  },
+  {
+   "n": 24,
+   "topic": "Electrostatics and capacitors",
+   "q": "A 12 μF capacitor is charged to 50 V and then disconnected from the battery. It is connected across an uncharged 6.0 μF capacitor. What is the common potential difference across the capacitors?",
+   "options": [
+    "25.0 V",
+    "33.3 V",
+    "16.7 V",
+    "50.0 V"
+   ],
+   "answer": 1,
+   "explanation": "The charge before connection is Q = CV = 12 μF × 50 V = 600 μC. After connection the total capacitance is 12 μF + 6.0 μF = 18 μF, so the common voltage is V = Q/C = 600 μC ÷ 18 μF = 33.3 V."
+  },
+  {
+   "n": 25,
+   "topic": "Light and optics",
+   "q": "A step-index optical fibre has a core of refractive index 1.60 and a cladding of refractive index 1.40. Calculate, to the nearest degree, the critical angle at the core–cladding boundary.",
+   "options": [
+    "56°",
+    "61°",
+    "49°",
+    "29°"
+   ],
+   "answer": 1,
+   "explanation": "For total internal reflection at the core–cladding boundary, sin c = n_cladding/n_core = 1.40/1.60 = 0.875. Thus c = sin⁻¹(0.875) ≈ 61°, to the nearest degree. Using the ratio upside down would give a value greater than 1, which is impossible for a sine."
+  },
+  {
+   "n": 26,
+   "topic": "Light and optics",
+   "q": "A stamp is placed 6.0 cm from a converging lens of focal length 8.0 cm. Determine the nature and position of the image.",
+   "options": [
+    "24 cm from the lens on the same side as the stamp, virtual and erect",
+    "3.4 cm from the lens on the opposite side, real and inverted",
+    "24 cm from the lens on the opposite side, real and inverted",
+    "48 cm from the lens on the same side as the stamp, virtual and erect"
+   ],
+   "answer": 0,
+   "explanation": "Using 1/f = 1/u + 1/v gives 1/v = 1/8.0 − 1/6.0 = −1/24, so v = −24 cm. The negative sign means the image is virtual and on the same side of the lens as the stamp, at 24 cm from the lens."
+  },
+  {
+   "n": 27,
+   "topic": "Light and optics",
+   "q": "A ray of white light enters a glass prism. Which colour travels fastest through the glass?",
+   "options": [
+    "Blue",
+    "Red",
+    "Violet",
+    "Green"
+   ],
+   "answer": 1,
+   "explanation": "In glass, the refractive index is least for red light because red has the longest wavelength. Since speed in the medium is v = c/n, the colour with the smallest refractive index travels fastest, so red travels fastest. Violet is deviated most but is slowed most."
+  },
+  {
+   "n": 28,
+   "topic": "Scalars and vectors",
+   "q": "Two forces of magnitude 40 N and 30 N act at a point with an angle of 120° between them. Calculate the magnitude of their resultant.",
+   "options": [
+    "36.1 N",
+    "50.0 N",
+    "70.0 N",
+    "60.8 N"
+   ],
+   "answer": 0,
+   "explanation": "For two forces at an angle θ, R² = P² + Q² + 2PQ cos θ. Here R² = 40² + 30² + 2(40)(30) cos 120° = 1600 + 900 − 1200 = 1300, so R = √1300 ≈ 36.1 N. Treating the forces as perpendicular would wrongly give 50.0 N."
+  },
+  {
+   "n": 29,
+   "topic": "Scalars and vectors",
+   "q": "Which of the following groups contains only vector quantities?",
+   "options": [
+    "work, energy, power",
+    "speed, velocity, acceleration",
+    "displacement, impulse, electric field intensity",
+    "mass, weight, force"
+   ],
+   "answer": 2,
+   "explanation": "A vector has both magnitude and direction. Displacement, impulse and electric field intensity all have direction, so that group contains only vectors. Speed is a scalar, mass is a scalar, and work, energy and power are all scalars."
+  },
+  {
+   "n": 30,
+   "topic": "Sound",
+   "q": "A car sounding a horn of frequency 480 Hz moves directly away from a stationary observer at 24 m/s. If the speed of sound in air is 336 m/s, calculate the frequency heard by the observer.",
+   "options": [
+    "480 Hz",
+    "517 Hz",
+    "448 Hz",
+    "450 Hz"
+   ],
+   "answer": 2,
+   "explanation": "For a source moving away from a stationary observer, f′ = f v/(v + v_s). Thus f′ = 480 × 336/(336 + 24) = 480 × 336/360 = 448 Hz. The observer hears a lower frequency, as expected when the source recedes."
+  },
+  {
+   "n": 31,
+   "topic": "Sound",
+   "q": "A sound wave of frequency 425 Hz travels in air with speed 340 m/s. It then enters water, where its speed is 1360 m/s. What is its wavelength in water?",
+   "options": [
+    "3.20 m",
+    "5.44 m",
+    "1.70 m",
+    "0.80 m"
+   ],
+   "answer": 0,
+   "explanation": "When sound passes from one medium to another, its frequency remains unchanged. λ = v/f = 1360/425 = 3.20 m in water. The wavelength in air would be 340/425 = 0.80 m, but the question asks for water."
+  },
+  {
+   "n": 32,
+   "topic": "Motion",
+   "q": "A ball is rolled horizontally from the top of a table 1.25 m high with speed 4.0 m/s. How far from the foot of the table does it land? (Take g = 10 m/s²)",
+   "options": [
+    "1.0 m",
+    "2.0 m",
+    "5.0 m",
+    "4.0 m"
+   ],
+   "answer": 1,
+   "explanation": "The vertical fall time is found from h = ½gt², so t = √(2h/g) = √(2 × 1.25/10) = √0.25 = 0.50 s. The horizontal distance is x = ut = 4.0 × 0.50 = 2.0 m, because horizontal velocity stays constant."
+  },
+  {
+   "n": 33,
+   "topic": "Motion",
+   "q": "A tricycle in Kano travelling at 20 m/s decelerates uniformly to rest in 10 s. Calculate the distance it travels during the first 4 s of braking.",
+   "options": [
+    "64 m",
+    "36 m",
+    "100 m",
+    "80 m"
+   ],
+   "answer": 0,
+   "explanation": "The deceleration is a = (0 − 20)/10 = −2.0 m/s². For the first 4 s, s = ut + ½at² = 20(4) + ½(−2)(4²) = 80 − 16 = 64 m. Equivalently, the speed after 4 s is 12 m/s, and average speed is (20 + 12)/2 = 16 m/s over 4 s."
+  },
+  {
+   "n": 34,
+   "topic": "Gas laws",
+   "q": "An ideal gas occupies 300 cm³ at 27°C and a pressure of 1.0 × 10⁵ Pa. What volume will it occupy at 327°C and a pressure of 1.5 × 10⁵ Pa?",
+   "options": [
+    "200 cm³",
+    "600 cm³",
+    "900 cm³",
+    "400 cm³"
+   ],
+   "answer": 3,
+   "explanation": "Using V₂ = P₁V₁T₂ ÷ (P₂T₁), convert the temperatures to kelvin: 300 K and 600 K. Thus V₂ = (1.0 × 10⁵ × 300 × 600) ÷ (1.5 × 10⁵ × 300) = 400 cm³. Ignoring the pressure change would give 600 cm³."
+  },
+  {
+   "n": 35,
+   "topic": "Gas laws",
+   "q": "A sealed gas cylinder contains gas at a pressure of 2.4 × 10⁵ Pa at 27°C. It is taken into a cold store where the temperature is -23°C. Assuming the volume remains constant, what is the new pressure?",
+   "options": [
+    "1.6 × 10⁵ Pa",
+    "2.88 × 10⁵ Pa",
+    "2.4 × 10⁵ Pa",
+    "2.0 × 10⁵ Pa"
+   ],
+   "answer": 3,
+   "explanation": "For a fixed mass at constant volume, P₂ = P₁T₂ ÷ T₁. The temperatures are 300 K and 250 K, so P₂ = 2.4 × 10⁵ × 250 ÷ 300 = 2.0 × 10⁵ Pa. Inverting the temperature ratio would wrongly give 2.88 × 10⁵ Pa."
+  },
+  {
+   "n": 36,
+   "topic": "Measurement and units",
+   "q": "The density of a metal sample is 8.0 g/cm³. What is this density in kg/m³?",
+   "options": [
+    "8000 kg/m³",
+    "8 kg/m³",
+    "80 kg/m³",
+    "800 kg/m³"
+   ],
+   "answer": 0,
+   "explanation": "Since 1 g/cm³ = 1000 kg/m³, because 1 g = 10⁻³ kg and 1 cm³ = 10⁻⁶ m³, then 8.0 g/cm³ = 8.0 × 1000 = 8000 kg/m³."
+  },
+  {
+   "n": 37,
+   "topic": "Measurement and units",
+   "q": "A micrometer screw gauge has a zero error of +0.003 cm. The reading obtained when measuring the thickness of a metal sheet is 0.248 cm. What is the corrected thickness?",
+   "options": [
+    "0.251 cm",
+    "0.245 cm",
+    "0.242 cm",
+    "0.253 cm"
+   ],
+   "answer": 1,
+   "explanation": "A positive zero error means the gauge reads greater than the true value by 0.003 cm. The corrected thickness is therefore 0.248 − 0.003 = 0.245 cm. Adding the zero error would overcorrect the reading."
+  },
+  {
+   "n": 38,
+   "topic": "Magnetism and electromagnetic induction",
+   "q": "A coil of 200 turns and area 0.030 m² is placed with its plane perpendicular to a uniform magnetic field. The flux density is reduced uniformly from 0.80 T to 0.20 T in 0.12 s. Calculate the average induced emf in the coil.",
+   "options": [
+    "50 V",
+    "3.0 V",
+    "30 V",
+    "0.15 V"
+   ],
+   "answer": 2,
+   "explanation": "The change in flux density is 0.80 − 0.20 = 0.60 T, so the flux change per turn is 0.030 × 0.60 = 0.018 Wb. For 200 turns the total flux change is 200 × 0.018 = 3.6 Wb, and dividing by 0.12 s gives 30 V. Using only one turn would give 0.15 V."
+  },
+  {
+   "n": 39,
+   "topic": "Magnetism and electromagnetic induction",
+   "q": "A straight wire of length 0.25 m carrying a current of 2.0 A is placed at 30° to a uniform magnetic field of flux density 0.40 T. Calculate the magnetic force on the wire.",
+   "options": [
+    "0.10 N",
+    "0.20 N",
+    "0.05 N",
+    "0.17 N"
+   ],
+   "answer": 0,
+   "explanation": "The force is F = BIL sin θ = 0.40 × 2.0 × 0.25 × sin 30° = 0.10 N. Omitting the sine factor gives 0.20 N, which is too large."
+  },
+  {
+   "n": 40,
+   "topic": "Simple machines",
+   "q": "A screw jack used in an auto workshop in Uyo has a pitch of 0.50 cm. Its handle is 35 cm long, measured from the axis. Taking π = 22/7, what is its velocity ratio?",
+   "options": [
+    "880",
+    "440",
+    "110",
+    "220"
+   ],
+   "answer": 1,
+   "explanation": "The velocity ratio of a screw jack is VR = 2πL ÷ p, where L is the handle length and p is the pitch. Thus VR = 2 × (22/7) × 35 ÷ 0.50 = 440. Omitting the factor 2 gives 220."
+  }
+ ]
+}

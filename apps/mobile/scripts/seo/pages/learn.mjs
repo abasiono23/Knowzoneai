@@ -2,7 +2,7 @@
  * Study notes: Knowzone's written summaries, a whole-course overview and one page per topic, for
  * school subjects and university courses.
  */
-import { EXAMS, STAGES } from '../lib/data.mjs';
+import { notesSubject, practiceLabel, STAGES } from '../lib/data.mjs';
 import { APP, ORG, ORIGIN, PATHS, chips, esc, list, page, pageTitle, paragraphs, plural, section, tiles } from '../lib/html.mjs';
 
 const ROOT = PATHS.learn;
@@ -43,7 +43,7 @@ export function learnPages({ libraries, groups, practiceFor, books, courses }) {
         label: 'Open your books in the app',
       },
       body: [
-        section('School subjects', `<p class="kz-lead">For junior and senior secondary school, including WAEC, NECO and JAMB subjects.</p>${tiles(school.map(tile))}`, 'school'),
+        section('School subjects', `<p class="kz-lead">For junior and senior secondary school, including WAEC, NECO and JAMB subjects, and useful for GCSE and SAT revision too.</p>${tiles(school.map(tile))}`, 'school'),
         section('University courses', `<p class="kz-lead">For university, polytechnic and college students, from first year to master’s.</p>${tiles(uni.map(tile))}`, 'university'),
       ].join('\n'),
     }),
@@ -54,7 +54,7 @@ export function learnPages({ libraries, groups, practiceFor, books, courses }) {
     const base = `${ROOT}/${l.id}`;
     const crumbs = [HOME, HUB, { name, path: base }];
     const stages = STAGE_ORDER.filter((s) => l.topics.some((t) => t.stage === s));
-    const exams = groups.filter((g) => g.subject === l.id).map((g) => ({ href: `${PATHS.practice}/${g.exam}/${g.subject}`, name: `${EXAMS[g.exam].name} ${l.name} practice questions` }));
+    const exams = groups.filter((g) => notesSubject(g) === l.id).map((g) => ({ href: `${PATHS.practice}/${g.exam}/${g.subject}`, name: `${practiceLabel(g)} practice questions` }));
     const reading = l.course
       ? [courses.has(l.course) && { href: `${PATHS.courses}/${l.course}`, name: `${name} course guide` }, books.coursePath(l.course) && { href: books.coursePath(l.course), name: `${name} textbooks` }].filter(Boolean)
       : books.schoolLists(l.id).map((s) => ({ href: s.href, name: `${s.subject} textbooks (${s.country})` }));

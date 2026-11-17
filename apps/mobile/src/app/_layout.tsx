@@ -138,6 +138,7 @@ function RootNavigator() {
                   <Stack.Protected guard={active}>
                     <Stack.Screen name="study" />
                     <Stack.Screen name="videos" />
+                    <Stack.Screen name="kora" />
                     <Stack.Screen name="courses" />
                     <Stack.Screen name="exams" />
                     <Stack.Screen name="reels" />

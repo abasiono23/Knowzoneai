@@ -1,0 +1,596 @@
+{
+ "id": "act-math-p2",
+ "exam": "act",
+ "subject": "math",
+ "year": null,
+ "number": 2,
+ "source": "ai",
+ "minutes": 50,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Coordinate geometry",
+   "q": "On a coordinate map of Northside High School, the library is at (3, −2) and the gym is at (9, 6). Each unit represents 1 meter. What is the straight-line distance, in meters, between the library and the gym?",
+   "options": [
+    "14 meters",
+    "12 meters",
+    "8 meters",
+    "10 meters"
+   ],
+   "answer": 3,
+   "explanation": "The horizontal difference is 9 − 3 = 6 and the vertical difference is 6 − (−2) = 8. The straight-line distance is √(6² + 8²) = √100 = 10 meters. Adding the differences gives 14 meters, but that is not the straight-line distance."
+  },
+  {
+   "n": 2,
+   "topic": "Area, surface area and volume",
+   "q": "A rectangular garden bed in Mr. Okafor’s backyard measures 12 feet by 7.5 feet. What is the area of the garden bed in square yards? (1 yard = 3 feet)",
+   "options": [
+    "67.5 square yards",
+    "90 square yards",
+    "10 square yards",
+    "30 square yards"
+   ],
+   "answer": 2,
+   "explanation": "The area is 12 × 7.5 = 90 square feet. Since 1 square yard = 9 square feet, the area is 90 ÷ 9 = 10 square yards. The value 90 square yards ignores that square units must be converted using 9 square feet per square yard."
+  },
+  {
+   "n": 3,
+   "topic": "Trigonometry",
+   "q": "A wheelchair ramp at the Eastside Community Center rises 3 feet over a horizontal run of 12 feet. What is the angle the ramp makes with the horizontal, to the nearest degree?",
+   "options": [
+    "18°",
+    "15°",
+    "76°",
+    "14°"
+   ],
+   "answer": 3,
+   "explanation": "The angle θ satisfies tan θ = rise/run = 3/12 = 0.25. Thus θ = tan⁻¹(0.25) ≈ 14.036°, which is 14° to the nearest degree. The 76° value is the complement of this angle, not the angle with the horizontal."
+  },
+  {
+   "n": 4,
+   "topic": "Coordinate geometry",
+   "q": "In the standard (x,y) coordinate plane, line m is perpendicular to the line 3x + 4y = 12 and passes through the point (6, −2). What is the y-intercept of line m?",
+   "options": [
+    "5/2",
+    "−10",
+    "−8",
+    "10"
+   ],
+   "answer": 1,
+   "explanation": "The given line has slope −3/4, so line m has perpendicular slope 4/3. Using the point-slope form, y + 2 = (4/3)(x − 6), so y = (4/3)x − 10, and the y-intercept is −10. Using the original slope instead gives 5/2."
+  },
+  {
+   "n": 5,
+   "topic": "Area, surface area and volume",
+   "q": "A cylindrical can has a radius of 4 centimeters and a height of 10 centimeters. What is the total surface area of the can, in square centimeters?",
+   "options": [
+    "96π",
+    "112π",
+    "80π",
+    "160π"
+   ],
+   "answer": 1,
+   "explanation": "Total surface area is 2πr² + 2πrh = 2π(4²) + 2π(4)(10) = 32π + 80π = 112π square centimeters. The 80π value includes only the lateral surface, and 96π includes only one circular base plus the lateral surface."
+  },
+  {
+   "n": 6,
+   "topic": "Number and quantity",
+   "q": "For i = √(−1), what is (3 − 2i)/(1 + i) expressed in the form a + bi?",
+   "options": [
+    "(5/2) − (1/2)i",
+    "1/2 − (5/2)i",
+    "1/2 + (5/2)i",
+    "−1 + 5i"
+   ],
+   "answer": 1,
+   "explanation": "Multiply numerator and denominator by 1 − i: (3 − 2i)(1 − i) = 1 − 5i and (1 + i)(1 − i) = 2. So the quotient is (1 − 5i)/2 = 1/2 − (5/2)i."
+  },
+  {
+   "n": 7,
+   "topic": "Trigonometry",
+   "q": "Priya surveys a triangular lot. Two sides measure 18 meters and 24 meters, and the angle between those sides measures 125°. What is the length of the third side to the nearest meter?",
+   "options": [
+    "29 meters",
+    "37 meters",
+    "42 meters",
+    "31 meters"
+   ],
+   "answer": 1,
+   "explanation": "By the Law of Cosines, c² = 18² + 24² − 2(18)(24)cos 125° ≈ 900 + 495.57 = 1395.57, so c ≈ √1395.57 ≈ 37.36 meters. To the nearest meter, the length is 37 meters; using a plus sign instead of the cosine term would incorrectly give about 42 meters."
+  },
+  {
+   "n": 8,
+   "topic": "Area, surface area and volume",
+   "q": "A right circular cone has volume 96π cubic inches and a height of 8 inches. What is the total surface area of the cone, in square inches?",
+   "options": [
+    "96π",
+    "60π",
+    "120π",
+    "36π"
+   ],
+   "answer": 0,
+   "explanation": "From V = (1/3)πr²h, 96π = (1/3)πr²(8), so r² = 36 and r = 6. The slant height is √(6² + 8²) = 10, so total surface area is πr² + πrl = 36π + 60π = 96π square inches; the 60π value is only the lateral area."
+  },
+  {
+   "n": 9,
+   "topic": "Statistics and data",
+   "q": "Coach Rivera's volleyball team has 6 players whose heights, in inches, are 68, 70, 72, 65, 69, and 74. A seventh player joins the team, and the mean height of all 7 players is 70 inches. What is the height, in inches, of the seventh player?",
+   "options": [
+    "70",
+    "73",
+    "74",
+    "72"
+   ],
+   "answer": 3,
+   "explanation": "The total height of 7 players with mean 70 inches is 7 × 70 = 490 inches. The first 6 heights add to 418 inches, so the seventh player's height is 490 − 418 = 72 inches. A height of 70 inches would make the total 488 inches, not 490."
+  },
+  {
+   "n": 10,
+   "topic": "Statistics and data",
+   "q": "The table shows survey results for 60 students. In 9th grade, 12 students play an instrument and 18 do not. In 10th grade, 20 students play an instrument and 10 do not. If a student who does not play an instrument is selected at random from these students, what is the probability that the student is in 10th grade?",
+   "options": [
+    "1/3",
+    "5/14",
+    "7/15",
+    "1/6"
+   ],
+   "answer": 1,
+   "explanation": "There are 18 + 10 = 28 students who do not play an instrument, and 10 of those students are in 10th grade. Therefore the probability is 10/28 = 5/14. The value 7/15 is the probability that a randomly selected student from all 60 does not play an instrument, not the probability among nonplayers."
+  },
+  {
+   "n": 11,
+   "topic": "Linear equations, inequalities and systems",
+   "q": "In the standard (x, y) coordinate plane, the graph of 4x + 3y = 24 crosses the x-axis at what point?",
+   "options": [
+    "(−6, 0)",
+    "(6, 0)",
+    "(0, 8)",
+    "(8, 0)"
+   ],
+   "answer": 1,
+   "explanation": "To find the x-intercept, set y = 0: 4x = 24, so x = 6, giving the point (6, 0). The point (0, 8) is the y-intercept because setting x = 0 gives 3y = 24, or y = 8."
+  },
+  {
+   "n": 12,
+   "topic": "Linear equations, inequalities and systems",
+   "q": "At a bakery, muffins cost $2.50 each and cookies cost $1.75 each. Priya buys 34 items and spends $75.25. How many muffins does she buy?",
+   "options": [
+    "21",
+    "13",
+    "23",
+    "20"
+   ],
+   "answer": 0,
+   "explanation": "Let m be the number of muffins and c the number of cookies. Then m + c = 34 and 2.50m + 1.75c = 75.25. Substituting c = 34 − m gives 2.50m + 1.75(34 − m) = 75.25, which simplifies to 0.75m + 59.50 = 75.25, so m = 21. The value 13 is the number of cookies, not muffins."
+  },
+  {
+   "n": 13,
+   "topic": "Linear equations, inequalities and systems",
+   "q": "Line ℓ is perpendicular to the line y = (2/3)x − 4 and passes through the point (6, −1). What is the equation of line ℓ?",
+   "options": [
+    "y = −(2/3)x + 3",
+    "y = −(3/2)x + 8",
+    "y = (2/3)x − 5",
+    "y = −(3/2)x − 10"
+   ],
+   "answer": 1,
+   "explanation": "The perpendicular slope is the negative reciprocal of 2/3, which is −3/2. Using y = mx + b with the point (6, −1): −1 = −(3/2)(6) + b = −9 + b, so b = 8, giving y = −(3/2)x + 8. Using slope 2/3 with the same point would give b = −5, not the perpendicular line."
+  },
+  {
+   "n": 14,
+   "topic": "Functions",
+   "q": "Let f(x) = x² − 3x and g(x) = 2x + 1. What is f(g(1))?",
+   "options": [
+    "9",
+    "−2",
+    "0",
+    "6"
+   ],
+   "answer": 2,
+   "explanation": "First compute g(1) = 2(1) + 1 = 3. Then f(3) = 3² − 3(3) = 9 − 9 = 0. The value 6 results from computing 3² − 3 instead of subtracting 3(3)."
+  },
+  {
+   "n": 15,
+   "topic": "Functions",
+   "q": "In right triangle ABC, angle C is a right angle. If cos A = 7/25 and AB = 50, what is the length of BC?",
+   "options": [
+    "14",
+    "24",
+    "48",
+    "50"
+   ],
+   "answer": 2,
+   "explanation": "Since C is the right angle, AB is the hypotenuse. cos A = AC/AB, so AC = 50(7/25) = 14. By the Pythagorean theorem, BC² = 50² − 14² = 2500 − 196 = 2304, so BC = 48. The value 14 is the length of AC, not BC."
+  },
+  {
+   "n": 16,
+   "topic": "Quadratics, polynomials and exponents",
+   "q": "Which expression is equivalent to (3x² − 2x + 5) − (x² + 4x − 7)?",
+   "options": [
+    "2x² − 6x + 12",
+    "2x² + 2x − 2",
+    "2x² − 6x − 2",
+    "4x² + 2x − 2"
+   ],
+   "answer": 0,
+   "explanation": "Subtract each term in the second polynomial: 3x² − 2x + 5 − x² − 4x + 7 = (3 − 1)x² + (−2 − 4)x + (5 + 7) = 2x² − 6x + 12. The expression 2x² + 2x − 2 comes from subtracting x² but not subtracting the other terms correctly."
+  },
+  {
+   "n": 17,
+   "topic": "Quadratics, polynomials and exponents",
+   "q": "The graph of y = x² + bx + c has its vertex at (3, −4). What is the value of c?",
+   "options": [
+    "−6",
+    "9",
+    "5",
+    "−4"
+   ],
+   "answer": 2,
+   "explanation": "The vertex form is y = (x − 3)² − 4 = x² − 6x + 9 − 4 = x² − 6x + 5, so c = 5. The value −6 is b, and −4 is the vertex's y-coordinate, not c."
+  },
+  {
+   "n": 18,
+   "topic": "Quadratics, polynomials and exponents",
+   "q": "A rectangular garden has a perimeter of 44 feet and an area of 112 square feet. What is the length, in feet, of the longer side of the garden?",
+   "options": [
+    "14",
+    "22",
+    "11",
+    "8"
+   ],
+   "answer": 0,
+   "explanation": "Let the side lengths be x and y. The perimeter gives x + y = 22, and the area gives xy = 112. Thus x and y are roots of t² − 22t + 112 = 0 = (t − 14)(t − 8), so the side lengths are 14 feet and 8 feet; the longer side is 14 feet. The value 8 is the shorter side."
+  },
+  {
+   "n": 19,
+   "topic": "Algebra: expressions and equations",
+   "q": "If 4(x − 3) = 3x + 8, what is the value of x?",
+   "options": [
+    "20",
+    "11",
+    "−4",
+    "4"
+   ],
+   "answer": 0,
+   "explanation": "Distribute to get 4x − 12 = 3x + 8. Subtract 3x and add 12 to both sides, giving x = 20. The value 11 comes from mistakenly distributing 4(x − 3) as 4x − 3."
+  },
+  {
+   "n": 20,
+   "topic": "Algebra: expressions and equations",
+   "q": "The function f is defined by f(x) = 3x² + bx − 4. If f(2) = 18, what is the value of b?",
+   "options": [
+    "3",
+    "5",
+    "1",
+    "10"
+   ],
+   "answer": 1,
+   "explanation": "Substitute x = 2: 3(2²) + 2b − 4 = 18, so 12 + 2b − 4 = 18. This simplifies to 2b = 10, giving b = 5. The value 3 results from ignoring the −4 term."
+  },
+  {
+   "n": 21,
+   "topic": "Algebra: expressions and equations",
+   "q": "If x² − 6x + 3 = 0, what is the value of (x − 3)²?",
+   "options": [
+    "9",
+    "3",
+    "6",
+    "12"
+   ],
+   "answer": 2,
+   "explanation": "Rewrite (x − 3)² as x² − 6x + 9. The given equation implies x² − 6x = −3, so (x − 3)² = −3 + 9 = 6."
+  },
+  {
+   "n": 22,
+   "topic": "Plane geometry: angles, triangles and circles",
+   "q": "In triangle ABC, the measure of an exterior angle at vertex C is 125°, and the measure of angle A is 62°. What is the measure of angle B?",
+   "options": [
+    "117°",
+    "7°",
+    "55°",
+    "63°"
+   ],
+   "answer": 3,
+   "explanation": "An exterior angle of a triangle equals the sum of the two remote interior angles, so 125° = 62° + angle B. Thus angle B = 63°. The measure 55° is the interior angle at C, not angle B."
+  },
+  {
+   "n": 23,
+   "topic": "Plane geometry: angles, triangles and circles",
+   "q": "A circle has a radius of 9 centimeters. What is the length, in centimeters, of an arc with a central angle of 80°?",
+   "options": [
+    "4π",
+    "8π",
+    "18π",
+    "2π"
+   ],
+   "answer": 0,
+   "explanation": "Arc length is (80/360)(2π × 9) = (2/9)(18π) = 4π centimeters. The value 18π would be the area of the 80° sector, not the arc length."
+  },
+  {
+   "n": 24,
+   "topic": "Plane geometry: angles, triangles and circles",
+   "q": "In triangle ABC inscribed in a circle, angle A measures 65° and angle B measures 55°. What is the measure, in degrees, of the minor arc AB that does not contain point C?",
+   "options": [
+    "60°",
+    "130°",
+    "120°",
+    "240°"
+   ],
+   "answer": 2,
+   "explanation": "Angle C measures 180° − 65° − 55° = 60°. An inscribed angle measures half its intercepted arc, so the arc AB not containing C has measure 2 × 60° = 120°."
+  },
+  {
+   "n": 25,
+   "topic": "Probability",
+   "q": "A spinner has 8 equal sections numbered 1 through 8. What is the probability that a single spin lands on a number that is a multiple of 3 or an even number?",
+   "options": [
+    "5/8",
+    "3/4",
+    "7/8",
+    "1/2"
+   ],
+   "answer": 0,
+   "explanation": "The favorable outcomes are 2, 3, 4, 6, and 8, which are 5 of the 8 sections. So the probability is 5/8. The value 3/4 comes from adding 2/8 and 4/8 without subtracting the overlap at 6."
+  },
+  {
+   "n": 26,
+   "topic": "Probability",
+   "q": "A box contains 5 strawberry, 3 lemon, and 2 mint candies. Maya randomly selects two candies without replacement. What is the probability that both are strawberry?",
+   "options": [
+    "1/2",
+    "4/9",
+    "1/4",
+    "2/9"
+   ],
+   "answer": 3,
+   "explanation": "The probability the first candy is strawberry is 5/10, and then the probability the second is strawberry is 4/9. Thus the probability is (5/10)(4/9) = 20/90 = 2/9. The value 1/4 would apply if the first candy were replaced before the second draw."
+  },
+  {
+   "n": 27,
+   "topic": "Rates, ratios, proportions and percentages",
+   "q": "A bicycle regularly costs $240. During a sale, its price is reduced by 15%. What is the sale price, in dollars?",
+   "options": [
+    "204",
+    "216",
+    "36",
+    "225"
+   ],
+   "answer": 0,
+   "explanation": "A 15% reduction means the sale price is 85% of $240. Since 0.85 × 240 = 204, the sale price is $204. The value 36 is the amount of the discount, not the sale price."
+  },
+  {
+   "n": 28,
+   "topic": "Rates, ratios, proportions and percentages",
+   "q": "A train travels at an average speed of 60 miles per hour for 2.5 hours, then at an average speed of 80 miles per hour for 1.5 hours. What is the average speed for the entire trip, in miles per hour?",
+   "options": [
+    "70",
+    "67.5",
+    "72",
+    "65"
+   ],
+   "answer": 1,
+   "explanation": "The total distance is 60 × 2.5 + 80 × 1.5 = 150 + 120 = 270 miles. The total time is 2.5 + 1.5 = 4 hours, so the average speed is 270 ÷ 4 = 67.5 miles per hour. The value 70 is the unweighted average of the two speeds."
+  },
+  {
+   "n": 29,
+   "topic": "Trigonometry",
+   "q": "At a community center, a wheelchair ramp rises 2 feet over a horizontal distance of 15 feet. What is the tangent of the angle the ramp makes with the horizontal?",
+   "options": [
+    "15/√229",
+    "2/15",
+    "15/2",
+    "2/√229"
+   ],
+   "answer": 1,
+   "explanation": "Tangent is opposite over adjacent, so tan θ = vertical rise ÷ horizontal run = 2/15. The hypotenuse is √(2² + 15²) = √229, so 2/√229 would be sine, not tangent."
+  },
+  {
+   "n": 30,
+   "topic": "Trigonometry",
+   "q": "If sin θ = 3/5 and 90° < θ < 180°, what is the value of tan θ?",
+   "options": [
+    "−3/4",
+    "−4/3",
+    "4/5",
+    "3/4"
+   ],
+   "answer": 0,
+   "explanation": "In quadrant II, sine is positive and cosine is negative. Since sin θ = 3/5, take cos θ = −√(1 − (3/5)²) = −4/5. Then tan θ = sin θ/cos θ = (3/5)/(−4/5) = −3/4. The value 3/4 results from ignoring the quadrant sign, and −4/3 is the reciprocal of the correct tangent."
+  },
+  {
+   "n": 31,
+   "topic": "Number and quantity",
+   "q": "Luis is making cookies using a recipe that uses 3 cups of flour to make 18 cookies. At this rate, how many cups of flour are needed to make 30 cookies?",
+   "options": [
+    "7.5",
+    "4.5",
+    "5",
+    "6"
+   ],
+   "answer": 2,
+   "explanation": "The unit rate is 3/18 = 1/6 cup per cookie, so 30 cookies require 30(1/6) = 5 cups. Equivalently, 3/18 = c/30 gives c = 5."
+  },
+  {
+   "n": 32,
+   "topic": "Number and quantity",
+   "q": "For positive real numbers x and y, the expression (x⁵y⁻²)/(x²y³) is equivalent to which of the following?",
+   "options": [
+    "x³/y⁵",
+    "1/(x³y⁵)",
+    "x³y⁵",
+    "x⁷/y⁵"
+   ],
+   "answer": 0,
+   "explanation": "When dividing powers with the same base, subtract exponents: x^(5−2)y^(−2−3) = x³y⁻⁵. This equals x³/y⁵. The expression x³y⁵ results from mishandling the negative exponent on y."
+  },
+  {
+   "n": 33,
+   "topic": "Number and quantity",
+   "q": "If i² = −1, which of the following is equal to (3 + 2i)(1 − 4i)?",
+   "options": [
+    "11 − 10i",
+    "11 + 10i",
+    "3 − 8i",
+    "−5 − 10i"
+   ],
+   "answer": 0,
+   "explanation": "Use the distributive property: (3 + 2i)(1 − 4i) = 3 − 12i + 2i − 8i². Since i² = −1, this becomes 3 − 10i + 8 = 11 − 10i. The expression −5 − 10i results from incorrectly using i² = 1."
+  },
+  {
+   "n": 34,
+   "topic": "Coordinate geometry",
+   "q": "In the standard (x,y) coordinate plane, what is the midpoint of the line segment with endpoints (4, −6) and (10, 8)?",
+   "options": [
+    "(5, −7)",
+    "(7, 1)",
+    "(6, 14)",
+    "(14, 2)"
+   ],
+   "answer": 1,
+   "explanation": "The midpoint coordinates are the averages of the endpoint coordinates: ((4 + 10)/2, (−6 + 8)/2) = (7, 1). Adding without dividing by 2 gives (14, 2), which is not the midpoint."
+  },
+  {
+   "n": 35,
+   "topic": "Coordinate geometry",
+   "q": "In the standard (x,y) coordinate plane, what is an equation of the line that passes through (2, −1) and is perpendicular to the line 2x + 3y = 6?",
+   "options": [
+    "2x + 3y = 1",
+    "3x + 2y = 4",
+    "2x − 3y = 7",
+    "3x − 2y = 8"
+   ],
+   "answer": 3,
+   "explanation": "The given line has slope −2/3, so a perpendicular line has slope 3/2. Through (2, −1), y + 1 = (3/2)(x − 2), which rearranges to 3x − 2y = 8. The equation 2x + 3y = 1 has the same slope as the given line, not a perpendicular slope."
+  },
+  {
+   "n": 36,
+   "topic": "Area, surface area and volume",
+   "q": "Aisha’s triangular garden has two sides that measure 12 feet and 15 feet. The angle between those two sides measures 30°. What is the area of the garden, in square feet?",
+   "options": [
+    "180",
+    "45√3",
+    "90",
+    "45"
+   ],
+   "answer": 3,
+   "explanation": "The area of a triangle with two sides a and b and included angle C is (1/2)ab sin C. Thus the area is (1/2)(12)(15)sin 30° = 90(1/2) = 45 square feet. Using 12×15×sin 30° without the factor 1/2 gives 90."
+  },
+  {
+   "n": 37,
+   "topic": "Area, surface area and volume",
+   "q": "A construction crew is pouring a right circular cylinder with a diameter of 1.5 feet and a height of 6 feet. What is the volume of the cylinder, in cubic feet?",
+   "options": [
+    "27π/2",
+    "27π/4",
+    "27π/8",
+    "9π/16"
+   ],
+   "answer": 2,
+   "explanation": "The diameter is 1.5 feet, so the radius is 0.75 = 3/4 foot. The volume is πr²h = π(3/4)²(6) = 27π/8 cubic feet. Using 1.5 as the radius gives 27π/2, which is too large."
+  },
+  {
+   "n": 38,
+   "topic": "Statistics and data",
+   "q": "A high school surveyed 120 students about their preferred after-school activity. The results are shown.\nGrade | Music | Sports | Drama | Total\n9th | 12 | 18 | 10 | 40\n10th | 15 | 20 | 15 | 50\n11th | 8 | 12 | 10 | 30\nTotal | 35 | 50 | 35 | 120\nWhat is the probability that a student selected at random from the 10th-grade students prefers sports?",
+   "options": [
+    "3/10",
+    "2/5",
+    "1/6",
+    "1/2"
+   ],
+   "answer": 1,
+   "explanation": "There are 50 tenth-grade students, and 20 of them prefer sports, so the conditional probability is 20/50 = 2/5. The fraction 1/6 is obtained by dividing by all 120 students instead of only the 10th graders."
+  },
+  {
+   "n": 39,
+   "topic": "Statistics and data",
+   "q": "Amina’s 20 quiz scores have a mean of 45 points. When one score is removed, the mean of the remaining 19 scores is 46 points. What is the removed score, in points?",
+   "options": [
+    "65",
+    "46",
+    "26",
+    "1"
+   ],
+   "answer": 2,
+   "explanation": "The original sum is 20 × 45 = 900 points, and the sum after removal is 19 × 46 = 874 points. The removed score is 900 − 874 = 26 points. Reversing the two means gives 20 × 46 − 19 × 45 = 65, which is not the removed score."
+  },
+  {
+   "n": 40,
+   "topic": "Statistics and data",
+   "q": "Ms. Chen recorded the number of hours 12 students volunteered at a food bank last month. The results are shown.\nNumber of hours | 4 | 5 | 6 | 7 | 8\nNumber of students | 2 | 3 | 1 | 4 | 2\nWhat is the median number of hours volunteered by the 12 students?",
+   "options": [
+    "7",
+    "7.5",
+    "6.5",
+    "6"
+   ],
+   "answer": 2,
+   "explanation": "There are 12 values, so the median is the average of the 6th and 7th values. In order, the 6th value is 6 and the 7th value is 7, giving (6 + 7) ÷ 2 = 6.5. The value 7 is the mode, not the median."
+  },
+  {
+   "n": 41,
+   "topic": "Linear equations, inequalities and systems",
+   "q": "Leila is comparing two delivery companies for her online store. Company A charges a flat fee of $8 plus $0.60 per mile. Company B charges $15 plus $0.40 per mile. For what number of miles do the two companies charge the same amount?",
+   "options": [
+    "25 miles",
+    "35 miles",
+    "30 miles",
+    "40 miles"
+   ],
+   "answer": 1,
+   "explanation": "Let m be the number of miles. The charges are equal when 8 + 0.60m = 15 + 0.40m, so 0.20m = 7 and m = 35. Substituting 35 miles gives $29 for each company."
+  },
+  {
+   "n": 42,
+   "topic": "Functions",
+   "q": "At a county fair, the height above the ground of a seat on a Ferris wheel, in feet, is modeled by h(t) = 38 + 35 sin(πt/20), where t is the number of seconds after the wheel starts moving. What is the height of the seat 10 seconds after it starts moving?",
+   "options": [
+    "108 feet",
+    "73 feet",
+    "35 feet",
+    "38 feet"
+   ],
+   "answer": 1,
+   "explanation": "At t = 10, πt/20 = π/2, and sin(π/2) = 1. Thus h(10) = 38 + 35(1) = 73 feet. The value 38 feet is the center height and occurs when the sine term is 0."
+  },
+  {
+   "n": 43,
+   "topic": "Quadratics, polynomials and exponents",
+   "q": "Diego is building a right triangular brace. The two legs have lengths x feet and x + 7 feet, and the hypotenuse has length 13 feet. What is the value of x?",
+   "options": [
+    "8",
+    "5",
+    "12",
+    "6"
+   ],
+   "answer": 1,
+   "explanation": "By the Pythagorean theorem, x² + (x + 7)² = 13². This expands to 2x² + 14x + 49 = 169, so x² + 7x − 60 = 0, which factors as (x + 12)(x − 5) = 0. The only positive solution is x = 5; the value 12 is the length of the longer leg, not x."
+  },
+  {
+   "n": 44,
+   "topic": "Quadratics, polynomials and exponents",
+   "q": "For x ≠ 0 and y ≠ 0, which expression is equivalent to (4x⁴y²)²/(2x³y⁵)?",
+   "options": [
+    "8x⁵/y",
+    "8x⁷/y",
+    "16x⁵/y",
+    "8x⁵y"
+   ],
+   "answer": 0,
+   "explanation": "Square the numerator: (4x⁴y²)² = 16x⁸y⁴. Dividing by 2x³y⁵ gives coefficient 8, x⁵ from x⁸ ÷ x³, and y⁻¹ from y⁴ ÷ y⁵, so the expression is 8x⁵/y. Keeping y in the numerator instead gives the incorrect expression 8x⁵y."
+  },
+  {
+   "n": 45,
+   "topic": "Quadratics, polynomials and exponents",
+   "q": "If x − 3 is a factor of p(x) = x³ − 2x² + kx + 9, what is the value of k?",
+   "options": [
+    "−3",
+    "6",
+    "−6",
+    "3"
+   ],
+   "answer": 2,
+   "explanation": "By the factor theorem, p(3) = 0 because x − 3 is a factor. Substitute x = 3: 27 − 18 + 3k + 9 = 18 + 3k = 0, so 3k = −18 and k = −6. The value 6 would give p(3) = 36, not 0."
+  }
+ ]
+}

@@ -1,15 +1,18 @@
 import { Router } from 'express';
 import { z } from 'zod';
 
-import { EXAM_SUBJECTS, EXAMS, SYLLABUS } from '../data/exams.js';
+import { EXAM_SUBJECTS, EXAM_SUBJECTS_OF, EXAMS, examsForRegion, hasSubject, isRegion, syllabusOf } from '../data/exams.js';
 import { prisma } from '../db.js';
-import { AppError, notFound } from '../lib/errors.js';
+import { AppError, badRequest, notFound } from '../lib/errors.js';
+import { regionOf } from '../services/account.js';
 import { allPapers, canOpen, paperById, papersFor, type Paper } from '../services/exams.js';
 import { me, optionalAuth, requireAuth } from '../services/sessions.js';
 
 /**
- * Past Questions (JAMB, WAEC, NECO): browse by exam, subject and paper; open a paper to study it,
- * practise or sit it timed; scores are kept per paper. Papers are files (see services/exams.ts).
+ * Past Questions (JAMB, WAEC, NECO) and exam practice (SAT, ACT, AP, GCSE, A-level, KCSE, Matric): browse by exam, subject and paper;
+ * open a paper to study it, practise or sit it timed; scores are kept per paper. Papers are files
+ * (see services/exams.ts). Every exam is open to everyone; the student's study region only decides
+ * which ones the app shows first.
  */
 export const examsRouter = Router();
 
@@ -30,13 +33,19 @@ const summary = (p: Paper, plan: 'FREE' | 'PLUS' | 'PRO' | undefined) => ({
   locked: !canOpen(plan, p),
 });
 
-/** Every exam's subjects with how many papers and which years each has. */
-examsRouter.get('/exams', optionalAuth, (_req, res) => {
+/**
+ * Every exam's subjects with how many papers and which years each has, and which exams belong to the
+ * student's study region (`?region=GB` asks about another one; signed out, Nigeria's).
+ */
+examsRouter.get('/exams', optionalAuth, (req, res) => {
   const papers = allPapers();
+  const region = isRegion(req.query.region) ? req.query.region : req.user ? regionOf(req.user) : 'NG';
   res.json({
+    region,
+    regionExams: examsForRegion(region),
     exams: EXAMS.map((exam) => ({
       id: exam,
-      subjects: EXAM_SUBJECTS.map((subject) => {
+      subjects: EXAM_SUBJECTS_OF[exam].map((subject) => {
         const list = papers.filter((p) => p.exam === exam && p.subject === subject);
         return {
           id: subject,
@@ -128,6 +137,7 @@ examsRouter.get('/me/exams/attempts', async (req, res) => {
 examsRouter.get('/exams/:exam/:subject', optionalAuth, async (req, res) => {
   const exam = Exam.parse(req.params.exam);
   const subject = Subject.parse(req.params.subject);
+  if (!hasSubject(exam, subject)) throw badRequest('That exam doesn’t have that subject.');
   const list = papersFor(exam, subject);
   const attempts = req.user
     ? await prisma.examAttempt.groupBy({
@@ -140,7 +150,7 @@ examsRouter.get('/exams/:exam/:subject', optionalAuth, async (req, res) => {
   res.json({
     exam,
     subject,
-    topics: SYLLABUS[subject],
+    topics: syllabusOf(exam, subject),
     papers: list.map((p) => {
       const a = attempts.find((x) => x.paperId === p.id);
       return { ...summary(p, req.user?.plan), best: a?._max.score ?? null, attempts: a?._count._all ?? 0 };

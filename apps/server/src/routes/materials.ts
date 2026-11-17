@@ -9,6 +9,7 @@ import { config } from '../config.js';
 import { prisma } from '../db.js';
 import { Prisma, type Material, type QuizAttempt } from '../generated/prisma/client.js';
 import { AppError, notFound } from '../lib/errors.js';
+import { regionOf } from '../services/account.js';
 import { learningLanguageOf } from '../services/personalization.js';
 import { recordActivity, requestTimeZone } from '../services/progress.js';
 import { confirmReferralIfEligible } from '../services/referrals.js';
@@ -211,7 +212,7 @@ export async function processMaterial(id: string) {
     const { content, title, subject } = await generateStudyContent(
       m.userId,
       { text: read.text, pdf: read.pdf, topic: m.sourceType === 'topic' ? m.sourceLabel : undefined },
-      options,
+      { ...options, region: regionOf(m.user) },
       learningLanguageOf(m.user),
       (stage) => prisma.material.update({ where: { id }, data: { stage } }),
     );

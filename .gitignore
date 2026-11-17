@@ -9,3 +9,9 @@ apps/server/scripts/.*.ts
 .expo/
 *.log
 docs/design/
+# Work folder of apps/server/scripts/course-summaries.ts (drafts, reviews, usage log)
+apps/server/.course-summaries/
+# Work folder of apps/server/scripts/exam-papers.ts (half-made papers, per-paper numbers)
+apps/server/.exam-papers/
+# Work folder of apps/server/scripts/kora-lessons.ts (drafts, voice clips, cost ledger)
+apps/server/.kora-lessons/

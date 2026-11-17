@@ -61,7 +61,7 @@ const rooms: Translation<typeof en> = {
   },
   goal: 'LENGO LA CHUMBA',
   goalEmpty: 'Bado hakuna lengo.',
-  goalPlaceholder: 'mf. Maliza JAMB Fizikia karatasi 1',
+  goalPlaceholder: 'mf. Maliza {{exam}} Fizikia karatasi 1',
   setGoal: 'Weka lengo',
   editGoal: 'Badilisha',
   goalProgress: '{{done}} kati ya {{total}} wamemaliza',

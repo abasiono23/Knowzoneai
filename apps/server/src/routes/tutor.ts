@@ -9,7 +9,9 @@ import { prisma } from '../db.js';
 import { Prisma, type Plan, type TutorConversation, type TutorMessage } from '../generated/prisma/client.js';
 import { AppError, notFound } from '../lib/errors.js';
 import { catalogFor } from '../services/catalog.js';
+import { regionOf } from '../services/account.js';
 import { learningLanguageOf } from '../services/personalization.js';
+import { tutorReferences } from '../services/semantic-search.js';
 import { me, requireAuth } from '../services/sessions.js';
 import {
   answerAsText,
@@ -246,17 +248,30 @@ async function reply(
 
   let data: Pick<TutorMessage, 'status'> & { answer?: TutorAnswer; error?: { kind: string; message: string } };
   try {
-    const answer = await tutorAnswer(user.id, {
+    const grounding = await groundingFor(user.id, context, language);
+    // A typed question on its own gets what Knowzone's notes say about it. One about a photo, a document,
+    // a lesson or a study pack already has its material. Finding nothing, or failing, changes nothing.
+    const references =
+      !a && !grounding
+        ? await tutorReferences(question.text, language, user.id).catch((e) => {
+            console.warn('Tutor references failed:', e instanceof Error ? e.message : e);
+            return null;
+          })
+        : null;
+    const answered = await tutorAnswer(user.id, {
       question: question.text,
       history,
       mode: conversation.mode as TutorInput['mode'],
       level: conversation.level as TutorInput['level'],
       language,
+      region: regionOf(user),
       ...(file && a?.kind === 'image' && { image: { data: Buffer.from(file.data), mimeType: file.mimeType } }),
       ...(file && a?.kind === 'pdf' && { pdf: { data: Buffer.from(file.data), name: a.name, page: a.page } }),
-      grounding: await groundingFor(user.id, context, language),
+      grounding,
+      ...(references && { references: references.material }),
       sources,
     });
+    const answer: TutorAnswer = references?.related.length ? { ...answered, related: references.related } : answered;
     data = { status: 'ok', answer };
   } catch (err) {
     if (!(err instanceof AppError)) console.error('Tutor answer failed', err);

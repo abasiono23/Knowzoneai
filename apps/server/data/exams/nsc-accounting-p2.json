@@ -1,0 +1,401 @@
+{
+ "id": "nsc-accounting-p2",
+ "exam": "nsc",
+ "subject": "accounting",
+ "year": null,
+ "number": 2,
+ "source": "ai",
+ "minutes": 35,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Accounting concepts, GAAP and ethics",
+   "q": "The owner of Dlamini Stores used the business bank account to pay the business electricity bill of R2 850 by EFT. The payment included R850 for the owner's private home electricity. How should the R850 be recorded in the business books?",
+   "options": [
+    "As electricity expense, because the payment was made from the business bank account",
+    "As a loan from the owner to the business",
+    "As sundry income, because the owner used business funds for a private purpose",
+    "As drawings, because it is a private expense paid from the business bank account"
+   ],
+   "answer": 3,
+   "explanation": "The business entity rule separates the owner’s private affairs from the business. The private R850 must be debited to Drawings and credited to Bank, while only the business portion is treated as electricity expense. Recording it as electricity expense would overstate business expenses and understate drawings."
+  },
+  {
+   "n": 2,
+   "topic": "Accounting concepts, GAAP and ethics",
+   "q": "Nkosi Traders has a 31 December year-end. The December wages of R18 000 were only paid on 3 January of the next year, but the employees had already worked during December. According to the accrual basis, what should be recorded on 31 December?",
+   "options": [
+    "No entry, because the wages were only paid in January",
+    "Prepaid wages of R18 000",
+    "Drawings of R18 000, because the payment was made after year-end",
+    "Wages expense and an accrued expense liability of R18 000"
+   ],
+   "answer": 3,
+   "explanation": "The accrual basis records expenses in the period in which the service is used, not when cash is paid. Since the employees worked in December, wages expense must be increased and an accrued expense liability recognised for R18 000. Waiting for the January payment would understate the year's expenses and liabilities."
+  },
+  {
+   "n": 3,
+   "topic": "Companies: financial statements",
+   "q": "Buhle Ltd had 400 000 ordinary shares in issue on 1 January 2025. On 1 July 2025 the company issued another 100 000 ordinary shares. Profit after tax for the year ended 31 December 2025 was R1 350 000. What is the basic earnings per ordinary share, rounded to the nearest cent?",
+   "options": [
+    "R2,70",
+    "R3,00",
+    "R3,38",
+    "R0,30"
+   ],
+   "answer": 1,
+   "explanation": "For basic earnings per share, use the weighted-average number of ordinary shares: (400 000 × 6/12) + (500 000 × 6/12) = 450 000 shares. Earnings per share is R1 350 000 ÷ 450 000 = R3,00. Using the closing number of shares gives R2,70, which ignores the date of the issue."
+  },
+  {
+   "n": 4,
+   "topic": "Companies: financial statements",
+   "q": "Kopano Ltd had retained income of R480 000 on 1 March 2024. Profit after tax for the year ended 28 February 2025 was R620 000. Interim ordinary dividends of R90 000 were paid, and a final ordinary dividend of R120 000 was declared on 25 February 2025. What is the closing retained income on 28 February 2025?",
+   "options": [
+    "R980 000",
+    "R1 100 000",
+    "R1 010 000",
+    "R890 000"
+   ],
+   "answer": 3,
+   "explanation": "Closing retained income is opening retained income plus profit after tax less ordinary dividends. The calculation is R480 000 + R620 000 − R90 000 − R120 000 = R890 000. The final dividend declared before year-end must also be deducted; omitting it gives R1 010 000."
+  },
+  {
+   "n": 5,
+   "topic": "Companies: financial statements",
+   "q": "The following balances appear in the books of Naledi Ltd on 30 June 2025:\nOrdinary share capital: R3 200 000\nRetained income: R640 000\nOrdinary dividends payable: R150 000\nLoan from director: R500 000\nWhat is the total ordinary shareholders' equity?",
+   "options": [
+    "R3 200 000",
+    "R4 490 000",
+    "R3 840 000",
+    "R3 990 000"
+   ],
+   "answer": 2,
+   "explanation": "Ordinary shareholders' equity consists of ordinary share capital plus retained income: R3 200 000 + R640 000 = R3 840 000. Ordinary dividends payable and the loan from the director are liabilities, not equity, so they are excluded. Adding the dividends payable would give R3 990 000."
+  },
+  {
+   "n": 6,
+   "topic": "Internal control and auditing",
+   "q": "Thabo Traders wants to reduce the risk that the same creditor's invoice is paid twice. Which control is most effective?",
+   "options": [
+    "Cancel or stamp each creditor's invoice as paid and match it to the payment before filing",
+    "Allow the creditors clerk to approve and record all payments without review",
+    "Reconcile the bank account every month",
+    "Use pre-numbered receipt books for all cash sales"
+   ],
+   "answer": 0,
+   "explanation": "Cancelling each invoice when it is paid prevents that same document from being processed for a second payment. A monthly bank reconciliation can reveal an overpayment only after the duplicate payment has left the bank, while cash-sales receipt books do not control creditor payments. Unreviewed approval by one clerk also weakens internal control through lack of segregation of duties."
+  },
+  {
+   "n": 7,
+   "topic": "Journals, ledgers and the accounting equation",
+   "q": "Nomsa Traders received R12 000 by EFT from a debtor, Thandiwe, in full settlement of an account of R12 600 after allowing a discount of R600. What is the correct double entry?",
+   "options": [
+    "Debit Bank R12 000; credit Debtors Control R12 000",
+    "Debit Bank R12 000 and Discount received R600; credit Debtors Control R12 600",
+    "Debit Debtors Control R12 600; credit Bank R12 000 and Discount allowed R600",
+    "Debit Bank R12 000 and Discount allowed R600; credit Debtors Control R12 600"
+   ],
+   "answer": 3,
+   "explanation": "The business receives R12 000 in the bank and grants a discount of R600, so the debtor's account must be reduced by R12 600. Discount allowed is an expense and is debited, while Debtors Control is credited. Discount received arises on payments to creditors, not on amounts received from debtors."
+  },
+  {
+   "n": 8,
+   "topic": "Journals, ledgers and the accounting equation",
+   "q": "Maseko Stores is registered for VAT at 15%. It returns damaged merchandise to a creditor, Sithole Wholesalers. The original purchase was R4 600 including VAT at 15%. Which entry correctly records the return in the books of Maseko Stores?",
+   "options": [
+    "Debit Creditors Control R4 600; credit VAT input R600 and Trading stock R4 000",
+    "Debit Creditors Control R4 600; credit VAT output R600 and Trading stock R4 000",
+    "Debit Trading stock R4 000 and VAT input R600; credit Creditors Control R4 600",
+    "Debit Creditors Control R4 600; credit Trading stock R4 600"
+   ],
+   "answer": 0,
+   "explanation": "The VAT included in R4 600 is R4 600 × 15 ÷ 115 = R600, and the cost of the goods excluding VAT is R4 000. On a return to a creditor, Creditors Control is debited, Trading stock is credited at cost, and VAT input, which is claimable from SARS, is credited to reverse it. Recording VAT output would be appropriate for a sale, not for a purchase return."
+  },
+  {
+   "n": 9,
+   "topic": "Journals, ledgers and the accounting equation",
+   "q": "The trial balance of Maseko Traders at 31 August 2025 had a credit column R1 500 larger than the debit column. Investigation showed that rent of R1 500 paid by EFT had been entered correctly in the Bank column of the Cash Journals but was not posted to the Rent Expense account. Which General Journal entry corrects this?",
+   "options": [
+    "Debit Rent Expense R1 500; credit Bank R1 500",
+    "Debit Suspense R1 500; credit Rent Expense R1 500",
+    "Debit Bank R1 500; credit Rent Expense R1 500",
+    "Debit Rent Expense R1 500; credit Suspense R1 500"
+   ],
+   "answer": 3,
+   "explanation": "The trial balance credit column is larger, so the debit total is R1 500 short and a debit balance of R1 500 is needed in the Suspense account. The omitted posting is corrected by debiting Rent Expense and crediting Suspense with R1 500. The bank entry is already correct, so Bank must not be adjusted."
+  },
+  {
+   "n": 10,
+   "topic": "Partnerships",
+   "q": "Amahle and Sipho are partners sharing profits and losses in the ratio 2:1. On 1 March 2025 their capital accounts were Amahle R180 000 and Sipho R120 000. Interest on capital is 8% per year. Sipho earns an annual salary of R72 000. The opening balances of their current accounts were Amahle credit R15 000 and Sipho debit R6 000. Drawings for the year were Amahle R36 000 and Sipho R42 000. Profit before appropriations was R210 000. What is Sipho's current account balance at year end?",
+   "options": [
+    "R71 600 credit",
+    "R113 600 credit",
+    "R62 000 credit",
+    "R77 600 credit"
+   ],
+   "answer": 0,
+   "explanation": "Interest on capital is R14 400 for Amahle and R9 600 for Sipho, and Sipho also receives his R72 000 salary. The remaining profit is R114 000, of which Sipho's one-third share is R38 000. His current account is calculated as: debit R6 000 + interest R9 600 + salary R72 000 + profit share R38 000 − drawings R42 000 = R71 600 credit. The R77 600 credit figure ignores the opening debit balance."
+  },
+  {
+   "n": 11,
+   "topic": "Partnerships",
+   "q": "Lindiwe and Kagiso share profits and losses in the ratio 3:2. Their capital balances are R150 000 and R100 000 respectively. They admit Thabo for a one-fifth interest in the partnership. Thabo contributes R80 000 cash. No revaluation is made and no goodwill account is raised; any excess paid by Thabo over the capital credited to him is treated as a bonus to the existing partners in their old profit-sharing ratio. What is Lindiwe's capital balance immediately after Thabo's admission?",
+   "options": [
+    "R158 400",
+    "R164 000",
+    "R150 000",
+    "R168 000"
+   ],
+   "answer": 0,
+   "explanation": "Total capital after admission is R150 000 + R100 000 + R80 000 = R330 000, so Thabo is credited with one-fifth, R66 000. The excess contribution is R80 000 − R66 000 = R14 000, shared in the old ratio 3:2, giving Lindiwe R8 400. Her capital becomes R150 000 + R8 400 = R158 400. Giving the whole R14 000 bonus to Lindiwe would produce R164 000, which is not the agreed sharing."
+  },
+  {
+   "n": 12,
+   "topic": "Partnerships",
+   "q": "Nomsa and Peter share profits and losses in the ratio 3:2. They dissolve their partnership. The book value of the partnership's assets (excluding the bank balance) was R540 000, and these assets realised R480 000. The bank balance before dissolution was R25 000. External creditors amounted to R90 000, and dissolution costs of R10 000 were paid. The capital balances were Nomsa R285 000 and Peter R190 000. What final amount of cash will be paid to Nomsa?",
+   "options": [
+    "R243 000",
+    "R249 000",
+    "R257 000",
+    "R285 000"
+   ],
+   "answer": 0,
+   "explanation": "The loss on realisation is the book value R540 000 less proceeds R480 000, plus dissolution costs R10 000, giving R70 000. Nomsa's share is 3/5 × R70 000 = R42 000. Her final capital and cash payment is R285 000 − R42 000 = R243 000. The R249 000 figure deducts only the loss on the asset sale and ignores the R10 000 costs."
+  },
+  {
+   "n": 13,
+   "topic": "Inventory systems and stock valuation",
+   "q": "Senzo's Sports uses the perpetual inventory system and is registered for VAT at 15%. A debtor returns goods that had been sold on credit for R6 900 including VAT. The cost of the returned goods was R4 500. Which amount should be debited to the Trading Stock account when the return is recorded?",
+   "options": [
+    "R6 000",
+    "R5 175",
+    "R4 500",
+    "R6 900"
+   ],
+   "answer": 2,
+   "explanation": "Under the perpetual inventory system, returned stock is restored to Trading Stock at its cost price of R4 500. The selling price of R6 900 includes VAT, so only R6 000 affects Sales Returns and R900 affects VAT output. The R5 175 figure adds VAT to the cost, which is not the amount recorded for the stock return."
+  },
+  {
+   "n": 14,
+   "topic": "Inventory systems and stock valuation",
+   "q": "Drakensberg Hardware uses the FIFO method for a particular stock item. It had 20 units on hand at R80 each. It then bought 30 units at R90 each and later 25 units at R100 each. During the period, 45 units were sold. What is the value of the closing stock of this item under FIFO?",
+   "options": [
+    "R2 720",
+    "R2 950",
+    "R2 500",
+    "R3 000"
+   ],
+   "answer": 1,
+   "explanation": "There are 75 units available and 45 are sold, leaving 30 units. Under FIFO the 45 sold come from the 20 units at R80 and 25 of the 30 units at R90, so the closing stock is 5 units at R90 plus 25 units at R100. Closing value = (5 × R90) + (25 × R100) = R450 + R2 500 = R2 950. The R2 720 figure uses the weighted-average method, not FIFO."
+  },
+  {
+   "n": 15,
+   "topic": "Inventory systems and stock valuation",
+   "q": "Mabopane Stationers has 500 identical folders in stock at year end. Each folder cost R18. The normal selling price is R30 per folder excluding VAT, and selling expenses are R3 per folder. Of the 500 folders, 80 are slightly damaged; these can be sold for R16 each excluding VAT, and the same selling expenses of R3 per folder will be incurred. At what amount should the closing stock be valued, applying the lower of cost and net realisable value?",
+   "options": [
+    "R8 840",
+    "R8 760",
+    "R9 000",
+    "R8 600"
+   ],
+   "answer": 3,
+   "explanation": "For the 420 undamaged folders, net realisable value is R30 − R3 = R27, which is above cost, so they are valued at R18 each: 420 × R18 = R7 560. For the 80 damaged folders, net realisable value is R16 − R3 = R13, which is below cost, so they are valued at R13 each: 80 × R13 = R1 040. Total closing stock = R7 560 + R1 040 = R8 600. Valuing the damaged folders at R16 each without deducting selling expenses gives R8 840, which is too high."
+  },
+  {
+   "n": 16,
+   "topic": "Budgeting",
+   "q": "Thandeka's Boutique in Durban budgeted total sales of R120 000 for August, R150 000 for September and R180 000 for October. Cash sales are 25% of total sales. Credit sales are collected as follows: 60% in the month after the sale, 30% two months after the sale, and 10% are written off as bad debts. What amount is budgeted to be received from debtors during October?",
+   "options": [
+    "R126 000",
+    "R139 500",
+    "R94 500",
+    "R67 500"
+   ],
+   "answer": 2,
+   "explanation": "Credit sales are 75% of total sales: August R90 000 and September R112 500. October receipts from debtors are 30% of August credit sales, collected two months later, plus 60% of September credit sales, collected one month later. Receipts = (30% × R90 000) + (60% × R112 500) = R27 000 + R67 500 = R94 500. Adding October cash sales would be incorrect because the question asks for receipts from debtors."
+  },
+  {
+   "n": 17,
+   "topic": "Budgeting",
+   "q": "Khumalo Furnishers in Pietermaritzburg is a VAT vendor. Budgeted purchases on credit, excluding VAT, are R80 000 for March, R100 000 for April and R120 000 for May. Creditors are paid as follows: 70% in the month of purchase, 25% in the following month and 5% two months after purchase. Payments are made for the invoice amount including VAT at 15%. What is the budgeted payment to creditors for May?",
+   "options": [
+    "R125 350",
+    "R113 000",
+    "R129 950",
+    "R129 350"
+   ],
+   "answer": 2,
+   "explanation": "Invoice amounts including VAT are March R92 000, April R115 000 and May R138 000. May payments are 5% of March, 25% of April and 70% of May invoice amounts. Payment = (5% × R92 000) + (25% × R115 000) + (70% × R138 000) = R4 600 + R28 750 + R96 600 = R129 950. The R113 000 figure uses the VAT-exclusive purchase amounts, so it omits VAT."
+  },
+  {
+   "n": 18,
+   "topic": "Cost accounting: manufacturing",
+   "q": "Kgosi Manufacturers provides the following for the year ended 28 February 2026: Direct materials used R250 000; direct labour R180 000; factory overheads R90 000; opening work-in-progress R40 000; closing work-in-progress R55 000. What is the cost of goods manufactured?",
+   "options": [
+    "R505 000",
+    "R535 000",
+    "R430 000",
+    "R520 000"
+   ],
+   "answer": 0,
+   "explanation": "Cost of goods manufactured is direct materials R250 000 + direct labour R180 000 + factory overheads R90 000 + opening work-in-progress R40 000 − closing work-in-progress R55 000. This equals R505 000. The R520 000 figure ignores the work-in-progress adjustment. The R535 000 figure subtracts opening rather than adding it and adds closing rather than subtracting it."
+  },
+  {
+   "n": 19,
+   "topic": "Cost accounting: manufacturing",
+   "q": "Ekurhuleni Glassworks absorbs factory overheads on machine hours. Budgeted factory overheads were R360 000 and budgeted machine hours were 12 000. Actual factory overheads were R378 000 and actual machine hours were 12 500. What is the over- or under-absorbed factory overhead for the year?",
+   "options": [
+    "R3 000 under-absorbed",
+    "R15 000 over-absorbed",
+    "R18 000 under-absorbed",
+    "R3 000 over-absorbed"
+   ],
+   "answer": 0,
+   "explanation": "The predetermined absorption rate is R360 000 ÷ 12 000 = R30 per machine hour. Absorbed overhead is 12 500 actual machine hours × R30 = R375 000. Actual overhead R378 000 is greater than absorbed overhead, so overhead is under-absorbed by R3 000. Comparing only budgeted and actual overheads would wrongly give R18 000 under-absorbed because it ignores the actual machine hours worked."
+  },
+  {
+   "n": 20,
+   "topic": "Bank, debtors and creditors reconciliations",
+   "q": "On 31 July 2025 the bank statement of Sipho Traders showed a favourable balance of R18 640. The cash journals had already been posted, except for bank charges of R180 and a direct deposit of R2 500 that appeared on the statement. Outstanding EFT payments were R4 250 and an outstanding deposit was R6 100. What is the correct balance of the Bank account in the general ledger after all necessary entries are recorded?",
+   "options": [
+    "R20 670 debit",
+    "R22 810 debit",
+    "R18 170 debit",
+    "R20 490 debit"
+   ],
+   "answer": 3,
+   "explanation": "Start with the statement balance: R18 640 + R6 100 outstanding deposit − R4 250 outstanding EFT payments = R20 490. The bank charges and direct deposit update the unadjusted ledger balance, but they are already included in the statement and must not be added or deducted again when the final reconciled bank balance is calculated. Adding the direct deposit and deducting the bank charges again leads incorrectly to R22 810."
+  },
+  {
+   "n": 21,
+   "topic": "Bank, debtors and creditors reconciliations",
+   "q": "On 31 May 2025 the Creditors Control account of Zanele Distributors showed a credit balance of R47 900, while the creditors list totalled R49 100. The following were discovered: an invoice for R2 100 was entered in the individual creditor’s account but omitted from the Creditors Control account; a payment of R900 to a creditor was entered twice in that creditor’s account; and a credit note for R350 was omitted from both the Creditors Control account and the creditor’s account. What is the correct balance of the Creditors Control account after all corrections?",
+   "options": [
+    "R50 550 credit",
+    "R47 550 credit",
+    "R49 650 credit",
+    "R50 000 credit"
+   ],
+   "answer": 2,
+   "explanation": "The omitted invoice increases the amount owed and must be added to the control balance, while the omitted credit note reduces the amount owed. R47 900 + R2 100 − R350 = R49 650 credit. The double payment in the creditor’s account affects the creditors list and that individual account, not the Creditors Control account."
+  },
+  {
+   "n": 22,
+   "topic": "Bank, debtors and creditors reconciliations",
+   "q": "On 30 June 2025, P. Ndlovu’s account in the Debtors Ledger of Sibusiso Stores showed a debit balance of R6 780. After this balance was calculated, the following were discovered: goods returned by P. Ndlovu, R450, had not yet been recorded by Sibusiso Stores; a direct EFT payment of R1 200 by P. Ndlovu was shown on the bank statement but not yet recorded in the Debtors Ledger; and a discount allowed of R250 had been correctly recorded in the Debtors Ledger. What is the corrected balance of P. Ndlovu’s account?",
+   "options": [
+    "R5 130 debit",
+    "R5 580 debit",
+    "R6 330 debit",
+    "R4 880 debit"
+   ],
+   "answer": 0,
+   "explanation": "Goods returned and the direct EFT payment reduce the debtor’s debit balance: R6 780 − R450 − R1 200 = R5 130. The discount allowed has already been recorded correctly, so deducting it again would understate the balance. Recording only the goods returned would leave R6 330, which ignores the EFT payment."
+  },
+  {
+   "n": 23,
+   "topic": "Value-added tax (VAT)",
+   "q": "Lerato’s Bakery in Soweto is a VAT vendor. During June 2025 it made standard-rated sales of R92 000 including VAT at 15% and zero-rated sales of R23 000. What is the output VAT for June?",
+   "options": [
+    "R12 000",
+    "R17 250",
+    "R15 000",
+    "R13 800"
+   ],
+   "answer": 0,
+   "explanation": "For VAT-inclusive standard-rated sales, the VAT portion is R92 000 × 15 ÷ 115 = R12 000. Zero-rated sales carry VAT at 0%, so no output VAT is calculated on the R23 000. Applying 15% directly to R92 000 gives R13 800, which incorrectly treats the VAT-inclusive amount as VAT-exclusive."
+  },
+  {
+   "n": 24,
+   "topic": "Value-added tax (VAT)",
+   "q": "Thandiwe Traders in Mbombela is a VAT vendor. For the period it had standard-rated sales of R69 000 excluding VAT and standard-rated purchases of R46 000 including VAT at 15%. What is the amount of VAT payable to or refundable by SARS for the period?",
+   "options": [
+    "R4 350 payable to SARS",
+    "R10 350 payable to SARS",
+    "R3 450 payable to SARS",
+    "R6 000 refundable from SARS"
+   ],
+   "answer": 0,
+   "explanation": "Output VAT is R69 000 × 15% = R10 350. Input VAT on the VAT-inclusive purchases is R46 000 × 15 ÷ 115 = R6 000. The net amount is R10 350 − R6 000 = R4 350 payable to SARS; applying 15% directly to the purchases wrongly gives R6 900 input VAT and a payable amount of R3 450."
+  },
+  {
+   "n": 25,
+   "topic": "Analysis and interpretation of financial statements",
+   "q": "Limpopo Ltd reported profit after tax of R420 000 for the year ended 31 December 2024. Ordinary shareholders’ equity was R2 600 000 on 1 January 2024 and R3 400 000 on 31 December 2024. What is the return on average ordinary shareholders’ equity for the year?",
+   "options": [
+    "15.0%",
+    "14.0%",
+    "12.35%",
+    "16.15%"
+   ],
+   "answer": 1,
+   "explanation": "Average ordinary shareholders’ equity is (R2 600 000 + R3 400 000) ÷ 2 = R3 000 000. The return is R420 000 ÷ R3 000 000 × 100 = 14.0%. Using only closing equity gives 12.35%, while using only opening equity gives 16.15%; both ignore the averaging required."
+  },
+  {
+   "n": 26,
+   "topic": "Analysis and interpretation of financial statements",
+   "q": "The debt-equity ratio of Karoo Ltd changed from 0.75:1 at the beginning of the year to 0.45:1 at the end. Which interpretation is most appropriate?",
+   "options": [
+    "Karoo Ltd has increased its long-term borrowings by 30%.",
+    "Karoo Ltd is less reliant on borrowed funds relative to shareholders’ equity than before.",
+    "Karoo Ltd’s ability to pay its short-term debts has improved.",
+    "Karoo Ltd’s shareholders have received a higher return on their investment."
+   ],
+   "answer": 1,
+   "explanation": "A lower debt-equity ratio means that borrowings are smaller in relation to shareholders’ equity, indicating lower gearing and less reliance on debt finance. The ratio does not measure short-term liquidity or profitability, and the decrease could have resulted from either lower debt or higher equity. It also does not show that borrowings increased."
+  },
+  {
+   "n": 27,
+   "topic": "Cash flow statement",
+   "q": "The following figures relate to Nkosi Ltd for the year ended 28 February 2025: profit before tax R624 000; depreciation R84 000; interest expense R36 000; increase in inventories R22 000; decrease in debtors R18 000; increase in creditors R15 000. What is the cash generated from operations?",
+   "options": [
+    "R755 000",
+    "R737 000",
+    "R719 000",
+    "R799 000"
+   ],
+   "answer": 0,
+   "explanation": "Cash generated from operations is R624 000 + R36 000 + R84 000 + R18 000 − R22 000 + R15 000 = R755 000. Interest expense and depreciation are added back, a decrease in debtors and an increase in creditors are sources of cash, while an increase in inventories uses cash. Omitting the R18 000 decrease in debtors gives R737 000, which understates cash generated from operations."
+  },
+  {
+   "n": 28,
+   "topic": "Cash flow statement",
+   "q": "The Equipment account of Drakensberg Ltd showed a cost of R1 000 000 on 1 March 2024 and R1 250 000 on 28 February 2025. During the year, equipment with a cost price of R200 000 was sold. No other changes in the cost of equipment occurred, and all purchases are paid in cash. What amount was paid in cash for new equipment during the year?",
+   "options": [
+    "R250 000",
+    "R50 000",
+    "R450 000",
+    "R1 050 000"
+   ],
+   "answer": 2,
+   "explanation": "Opening cost plus cash purchases minus the cost of equipment sold equals the closing cost. Rearranging gives cash purchases = R1 250 000 − R1 000 000 + R200 000 = R450 000. Ignoring the sold asset gives R250 000, which understates the cash used in investing activities."
+  },
+  {
+   "n": 29,
+   "topic": "Cash flow statement",
+   "q": "Equipment that originally cost R180 000 and had accumulated depreciation of R72 000 at the date of sale was sold at a loss of R12 000. What amount will appear as proceeds from the sale of equipment in the cash flow statement?",
+   "options": [
+    "R168 000",
+    "R120 000",
+    "R96 000",
+    "R108 000"
+   ],
+   "answer": 2,
+   "explanation": "Carrying value at the date of sale is R180 000 − R72 000 = R108 000. A loss of R12 000 means the equipment was sold for R108 000 − R12 000 = R96 000. Adding the loss to carrying value would incorrectly increase the proceeds to R120 000."
+  },
+  {
+   "n": 30,
+   "topic": "Fixed assets",
+   "q": "Tshwane Delivery Services bought a delivery vehicle on 1 July 2024 for R480 000. The financial year ends on 28 February 2025. Depreciation is calculated at 20% per annum on cost using the straight-line method, with no residual value. Calculate the depreciation expense for the year ended 28 February 2025.",
+   "options": [
+    "R64 000",
+    "R72 000",
+    "R96 000",
+    "R48 000"
+   ],
+   "answer": 0,
+   "explanation": "The vehicle was owned for 8 months, from 1 July 2024 to 28 February 2025. Depreciation is R480 000 × 20% × 8/12 = R64 000. A full-year charge of R96 000 would ignore that the vehicle was owned for only part of the year."
+  }
+ ]
+}

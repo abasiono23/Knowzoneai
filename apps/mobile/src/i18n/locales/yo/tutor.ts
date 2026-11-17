@@ -146,6 +146,10 @@ const tutor: Translation<typeof en> = {
     genericError: 'Nǹkan kan ṣàṣìṣe.',
     thinking: 'Ó ń ronú lé e lórí…',
   },
+  related: {
+    title: 'Láti inú àkọsílẹ̀ Knowzone rẹ',
+    openLabel: 'Ṣí: {{title}}',
+  },
   followUps: {
     title: 'BÉÈRÈ ÈYÍ TÓ KÀN',
     askLabel: 'Béèrè: {{question}}',

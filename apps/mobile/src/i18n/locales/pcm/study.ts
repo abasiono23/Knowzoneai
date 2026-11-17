@@ -199,7 +199,7 @@ const study: Translation<typeof en> = {
     topicLabel: 'Topic',
     topicPlaceholder: 'e.g. How vaccines dey work',
     focusLabel: 'Any particular thing? (if you like)',
-    focusPlaceholder: 'e.g. for WAEC, focus on calculations',
+    focusPlaceholder: 'e.g. for {{exam}}, focus on calculations',
     popular: 'WETIN PEOPLE LIKE NOW',
     ideas: {
       photosynthesis: 'Photosynthesis',
@@ -337,7 +337,7 @@ const study: Translation<typeof en> = {
     subject: 'Subject',
     folderName: 'Folder name',
     tags: 'Tags',
-    tagsPlaceholder: 'e.g. WAEC, term 2, revise',
+    tagsPlaceholder: 'e.g. {{exam}}, term 2, revise',
     tagsHint: 'Use comma to separate tags',
     created: 'You create am {{date}} from {{source}}',
   },

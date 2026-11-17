@@ -7,13 +7,17 @@ import { OptionCard } from '@/components/personalize/option-card';
 import { StepScreen } from '@/components/personalize/step-screen';
 import { Text } from '@/components/ui';
 import { Colors, Spacing } from '@/constants/theme';
-import { EXAMS, NO_EXAM, toggleIn, upcomingMonths, learnerKey } from '@/lib/personalization';
+import { examsFor, NO_EXAM, toggleIn, upcomingMonths, learnerKey } from '@/lib/personalization';
 import { usePersonalization } from '@/lib/personalization-store';
+import { chosenRegion } from '@/lib/region';
+import { useSession } from '@/lib/session';
 
 export default function ExamsScreen() {
   const { profile, update } = usePersonalization();
   const { t } = useTranslation('personalize');
-  const exams = EXAMS[learnerKey(profile.learnerType)];
+  // The exams of the country chosen on the sign-up form or the region step (Nigeria's when there isn't one).
+  const { user } = useSession();
+  const exams = examsFor(learnerKey(profile.learnerType), profile.region ?? chosenRegion(user));
   const noExam = profile.examGoals.includes(NO_EXAM);
   const hasExam = profile.examGoals.length > 0 && !noExam;
 

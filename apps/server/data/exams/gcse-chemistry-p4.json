@@ -1,0 +1,401 @@
+{
+ "id": "gcse-chemistry-p4",
+ "exam": "gcse",
+ "subject": "chemistry",
+ "year": null,
+ "number": 4,
+ "source": "ai",
+ "minutes": 35,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Energy changes",
+   "q": "Aisha, a student in Cardiff, heats 100.0 g of water from 18.5 °C to 36.5 °C. The specific heat capacity of water is 4.2 J g⁻¹ °C⁻¹. What is the energy absorbed by the water? Use q = mcΔT.",
+   "options": [
+    "75.6 kJ",
+    "756 kJ",
+    "7.56 kJ",
+    "0.756 kJ"
+   ],
+   "answer": 2,
+   "explanation": "ΔT = 36.5 − 18.5 = 18.0 °C. q = 100.0 × 4.2 × 18.0 = 7560 J = 7.56 kJ, so the water absorbs 7.56 kJ. The value 75.6 kJ would result from using a temperature change ten times too large."
+  },
+  {
+   "n": 2,
+   "topic": "Energy changes",
+   "q": "Use these bond energies: N≡N = 941 kJ mol⁻¹, H–H = 436 kJ mol⁻¹ and N–H = 391 kJ mol⁻¹. What is the enthalpy change for N₂ + 3H₂ → 2NH₃?",
+   "options": [
+    "+97 kJ mol⁻¹",
+    "+1 076 kJ mol⁻¹",
+    "−97 kJ mol⁻¹",
+    "−969 kJ mol⁻¹"
+   ],
+   "answer": 2,
+   "explanation": "Bonds broken: 941 + 3 × 436 = 2 249 kJ mol⁻¹. Bonds formed: 6 × 391 = 2 346 kJ mol⁻¹. Energy change = 2 249 − 2 346 = −97 kJ mol⁻¹, so the reaction is exothermic."
+  },
+  {
+   "n": 3,
+   "topic": "Energy changes",
+   "q": "A reaction profile has energy plotted against reaction progress. The reactants are at 120 kJ mol⁻¹, the products are at 80 kJ mol⁻¹, and the highest point of the curve is at 210 kJ mol⁻¹. Which statement is correct?",
+   "options": [
+    "The activation energy is 90 kJ mol⁻¹ and the reaction is exothermic with ΔH = −40 kJ mol⁻¹.",
+    "The activation energy is 130 kJ mol⁻¹ and the reaction is endothermic with ΔH = +40 kJ mol⁻¹.",
+    "The activation energy is 90 kJ mol⁻¹ and the reaction is endothermic with ΔH = +40 kJ mol⁻¹.",
+    "The activation energy is 40 kJ mol⁻¹ and the reaction is exothermic with ΔH = −90 kJ mol⁻¹."
+   ],
+   "answer": 0,
+   "explanation": "Activation energy = highest point − reactants = 210 − 120 = 90 kJ mol⁻¹. The products are lower in energy than the reactants by 40 kJ mol⁻¹, so ΔH = 80 − 120 = −40 kJ mol⁻¹ and the reaction is exothermic."
+  },
+  {
+   "n": 4,
+   "topic": "Chemical changes",
+   "q": "Priya in Leicester reacts strontium hydroxide solution with dilute nitric acid. Which products are formed?",
+   "options": [
+    "Strontium chloride and water",
+    "Strontium nitrate and water",
+    "Strontium nitrite and hydrogen",
+    "Strontium sulfate and water"
+   ],
+   "answer": 1,
+   "explanation": "This is a neutralisation reaction between a metal hydroxide and an acid. Strontium hydroxide reacts with nitric acid to form the salt strontium nitrate and water: Sr(OH)₂ + 2HNO₃ → Sr(NO₃)₂ + 2H₂O."
+  },
+  {
+   "n": 5,
+   "topic": "Chemical changes",
+   "q": "Yusuf, a technician in Bradford, places a clean copper strip in silver nitrate solution. A reaction occurs. Which observation best shows that a displacement reaction has taken place?",
+   "options": [
+    "A silvery solid forms on the copper and the solution becomes blue.",
+    "A colourless gas is given off and the copper dissolves completely.",
+    "The copper strip becomes coated in a white solid and the solution stays colourless.",
+    "The solution becomes warmer only, with no change to the copper or solution colour."
+   ],
+   "answer": 0,
+   "explanation": "Copper is more reactive than silver, so it displaces silver from silver nitrate solution. Silver metal forms on the copper, and blue copper(II) ions enter the solution, turning it blue."
+  },
+  {
+   "n": 6,
+   "topic": "Chemical changes",
+   "q": "Nia in Swansea electrolyses molten calcium chloride using inert electrodes. What forms at the cathode?",
+   "options": [
+    "Calcium chloride molecules",
+    "Calcium metal",
+    "Hydrogen gas",
+    "Chlorine gas"
+   ],
+   "answer": 1,
+   "explanation": "The cathode is negative, so positive calcium ions gain electrons and are reduced to calcium metal: Ca²⁺ + 2e⁻ → Ca. Chlorine gas forms at the anode because chloride ions lose electrons there."
+  },
+  {
+   "n": 7,
+   "topic": "Atomic structure and the periodic table",
+   "q": "An ion has 13 protons, 14 neutrons and 10 electrons. Which description of the ion is correct?",
+   "options": [
+    "Mg²⁺ with mass number 27",
+    "Al³⁺ with mass number 14",
+    "Al³⁺ with mass number 27",
+    "Na⁺ with mass number 27"
+   ],
+   "answer": 2,
+   "explanation": "The atomic number is the number of protons, so 13 protons means aluminium. There are 10 electrons for 13 protons, giving a charge of 3+, and the mass number is 13 + 14 = 27."
+  },
+  {
+   "n": 8,
+   "topic": "Atomic structure and the periodic table",
+   "q": "Which statement best explains why the atomic radius decreases from sodium to chlorine across Period 3?",
+   "options": [
+    "The nuclear charge increases while electrons are added to the same shell, so the outer electrons are attracted more strongly.",
+    "The number of neutrons increases more than the number of protons, which pulls the shells inwards.",
+    "The number of electron shells increases, so the outer electrons are further from the nucleus.",
+    "Shielding increases faster than nuclear charge, so the outer electrons are held more tightly."
+   ],
+   "answer": 0,
+   "explanation": "Across Period 3, the number of protons increases and electrons are added to the same outer shell. The greater nuclear charge attracts the outer electrons more strongly, so the atomic radius decreases."
+  },
+  {
+   "n": 9,
+   "topic": "Bonding, structure and the properties of matter",
+   "q": "Why does graphite conduct electricity but diamond does not?",
+   "options": [
+    "Graphite is a metal because it has a sea of electrons; diamond is a simple molecular substance.",
+    "Graphite contains free carbon ions that carry charge; diamond contains only neutral molecules.",
+    "In graphite, each carbon atom is bonded to three others, leaving one delocalised electron per atom; in diamond all outer electrons are used in covalent bonds.",
+    "Graphite has weak covalent bonds between carbon atoms, so electrons can move; diamond has strong ionic bonds."
+   ],
+   "answer": 2,
+   "explanation": "Graphite has delocalised electrons between its layers, and these can move and carry charge. In diamond, each carbon atom is covalently bonded to four others, so there are no free electrons to conduct electricity."
+  },
+  {
+   "n": 10,
+   "topic": "Bonding, structure and the properties of matter",
+   "q": "A student in Belfast is told that iodine is a simple molecular solid at room temperature. Which statement explains why it has a low melting point?",
+   "options": [
+    "Only weak forces between the iodine molecules need to be overcome, not the covalent bonds within each molecule.",
+    "Iodine is a giant covalent structure with layers that slide over each other.",
+    "The covalent bonds between the iodine atoms are weak and break easily on heating.",
+    "Iodine has a giant ionic lattice, which has weak electrostatic attractions."
+   ],
+   "answer": 0,
+   "explanation": "Iodine consists of small I₂ molecules held together by weak intermolecular forces. Melting overcomes these weak forces, while the strong covalent bonds within each I₂ molecule remain intact."
+  },
+  {
+   "n": 11,
+   "topic": "The rate and extent of chemical change",
+   "q": "At a school in Southampton, 0.080 mol of oxygen gas is produced in 40 s. What is the mean rate of production of oxygen in mol/s?",
+   "options": [
+    "0.020 mol/s",
+    "3.2 mol/s",
+    "0.50 mol/s",
+    "0.0020 mol/s"
+   ],
+   "answer": 3,
+   "explanation": "Mean rate is amount divided by time: 0.080 ÷ 40 = 0.0020 mol/s. Multiplying the amount by the time gives 3.2, which is not a rate in mol/s."
+  },
+  {
+   "n": 12,
+   "topic": "The rate and extent of chemical change",
+   "q": "In a reversible reaction that has not yet reached equilibrium, what effect does adding a catalyst have?",
+   "options": [
+    "It does not change the equilibrium position, but equilibrium is reached faster.",
+    "It shifts the equilibrium position towards the reactants.",
+    "It shifts the equilibrium position towards the products.",
+    "It increases the equilibrium yield of the products."
+   ],
+   "answer": 0,
+   "explanation": "A catalyst increases the rates of both the forward and reverse reactions by providing an alternative pathway with lower activation energy. It therefore reduces the time taken to reach equilibrium but does not change the position of equilibrium or the equilibrium yield."
+  },
+  {
+   "n": 13,
+   "topic": "Chemical analysis",
+   "q": "Nia adds sodium hydroxide solution to a pale green solution and a green precipitate forms. Which metal ion is present?",
+   "options": [
+    "Iron(III), Fe³⁺",
+    "Copper(II), Cu²⁺",
+    "Iron(II), Fe²⁺",
+    "Zinc(II), Zn²⁺"
+   ],
+   "answer": 2,
+   "explanation": "Iron(II) ions form a green precipitate of iron(II) hydroxide with sodium hydroxide solution. Iron(III) gives a brown precipitate, copper(II) gives a blue precipitate, and zinc ions give a white precipitate."
+  },
+  {
+   "n": 14,
+   "topic": "Chemical analysis",
+   "q": "A gas is tested with damp red litmus paper. The litmus turns blue. Which gas is present?",
+   "options": [
+    "Carbon dioxide, CO₂",
+    "Hydrogen, H₂",
+    "Chlorine, Cl₂",
+    "Ammonia, NH₃"
+   ],
+   "answer": 3,
+   "explanation": "Ammonia is alkaline, so it turns damp red litmus blue. Chlorine bleaches damp litmus, hydrogen has no effect on litmus, and carbon dioxide is acidic so it does not turn red litmus blue."
+  },
+  {
+   "n": 15,
+   "topic": "Quantitative chemistry",
+   "q": "What amount, in mol, of calcium carbonate is present in 25.0 g of calcium carbonate? The relative formula mass of CaCO₃ is 100.",
+   "options": [
+    "0.0250 mol",
+    "0.250 mol",
+    "2500 mol",
+    "4.00 mol"
+   ],
+   "answer": 1,
+   "explanation": "Amount of substance is mass divided by relative formula mass: 25.0 ÷ 100 = 0.250 mol. Dividing 100 by 25.0 gives 4.00, but that is the inverse calculation, not the amount in mol."
+  },
+  {
+   "n": 16,
+   "topic": "Quantitative chemistry",
+   "q": "Haroon, a student in Leicester, dissolves 0.075 mol of potassium nitrate in water and makes the solution up to 250 cm³. What is the concentration of the solution?",
+   "options": [
+    "0.00030 mol/dm³",
+    "0.60 mol/dm³",
+    "0.019 mol/dm³",
+    "0.30 mol/dm³"
+   ],
+   "answer": 3,
+   "explanation": "Convert the volume to dm³: 250 cm³ = 0.250 dm³. Concentration = amount ÷ volume = 0.075 ÷ 0.250 = 0.30 mol/dm³. Multiplying the amount by the volume instead of dividing gives about 0.019."
+  },
+  {
+   "n": 17,
+   "topic": "Quantitative chemistry",
+   "q": "Zinc reacts with sulfur: Zn + S → ZnS. A mixture contains 0.10 mol of zinc and 0.15 mol of sulfur. Which statement about the reactants is correct?",
+   "options": [
+    "Sulfur is in excess by 0.15 mol.",
+    "Zinc is in excess by 0.050 mol.",
+    "Sulfur is in excess by 0.050 mol.",
+    "Neither is in excess because the equation has a 1:1 ratio."
+   ],
+   "answer": 2,
+   "explanation": "The equation shows that 1 mol of zinc reacts with 1 mol of sulfur. The 0.10 mol of zinc needs 0.10 mol of sulfur, but 0.15 mol of sulfur is present, so sulfur is in excess by 0.15 − 0.10 = 0.050 mol. Zinc is the limiting reactant."
+  },
+  {
+   "n": 18,
+   "topic": "Using resources",
+   "q": "Which statement best describes a life cycle assessment (LCA) of a product?",
+   "options": [
+    "It considers only the energy used by the customer when using the product.",
+    "It considers only the cost to customers, such as £2 per item.",
+    "It considers only the mass of waste left after disposal.",
+    "It considers environmental impacts at each stage: obtaining raw materials, manufacture, use, and disposal or recycling."
+   ],
+   "answer": 3,
+   "explanation": "A life cycle assessment evaluates environmental impacts across the whole life of a product, not just one stage. Focusing only on cost, customer energy use, or waste after disposal would miss most of the product's life cycle."
+  },
+  {
+   "n": 19,
+   "topic": "Using resources",
+   "q": "At a water treatment works in Belfast, which process is used to kill microorganisms in the water supply?",
+   "options": [
+    "Adding chlorine.",
+    "Sedimentation.",
+    "Filtration.",
+    "Distillation."
+   ],
+   "answer": 0,
+   "explanation": "Chlorine is added in small amounts to kill bacteria and other microorganisms in public water supplies. Filtration and sedimentation remove insoluble particles, while distillation is not the normal method used to treat drinking water."
+  },
+  {
+   "n": 20,
+   "topic": "Organic chemistry",
+   "q": "A student makes ethanol by fermenting a sugar solution with yeast. Which set of conditions is most suitable for fermentation to produce ethanol?",
+   "options": [
+    "Heat the solution with yeast at about 80 °C and bubble air through it.",
+    "Warm the solution with yeast at about 30 °C and bubble air through it.",
+    "Keep the solution cold with yeast at about 5 °C and keep air out.",
+    "Warm the solution with yeast at about 30 °C and keep air out."
+   ],
+   "answer": 3,
+   "explanation": "Yeast ferments glucose anaerobically to ethanol and carbon dioxide. The mixture should be warm, around 30 °C, but not hot because high temperatures kill yeast; bubbling air would favour aerobic respiration and reduce ethanol production."
+  },
+  {
+   "n": 21,
+   "topic": "Organic chemistry",
+   "q": "Ethanoic acid reacts with methanol in the presence of an acid catalyst. Which ester is formed?",
+   "options": [
+    "Ethyl ethanoate",
+    "Methyl methanoate",
+    "Ethyl methanoate",
+    "Methyl ethanoate"
+   ],
+   "answer": 3,
+   "explanation": "The alcohol part, methanol, gives the first part of the name methyl, and the acid part, ethanoic acid, gives ethanoate. Making the ester also produces water; ethyl ethanoate would be made from ethanol and ethanoic acid."
+  },
+  {
+   "n": 22,
+   "topic": "Organic chemistry",
+   "q": "A student has two colourless liquids, hexane and hex-1-ene. Which test would distinguish them at room temperature?",
+   "options": [
+    "Add limewater; hex-1-ene turns it milky, but hexane does not.",
+    "Add sodium hydroxide solution; hex-1-ene gives a white precipitate, but hexane does not.",
+    "Add Universal indicator; hex-1-ene turns it red, but hexane does not.",
+    "Add bromine water; hex-1-ene decolourises it, but hexane does not."
+   ],
+   "answer": 3,
+   "explanation": "Hex-1-ene is unsaturated and reacts quickly with bromine water, making it colourless; hexane is saturated and does not decolourise bromine water under these conditions. Limewater tests carbon dioxide, and alkenes are not acidic."
+  },
+  {
+   "n": 23,
+   "topic": "Chemistry of the atmosphere",
+   "q": "Dry air is approximately 78% nitrogen and 21% oxygen by volume. Which gas makes up most of the remaining 1%?",
+   "options": [
+    "Argon",
+    "Methane",
+    "Carbon dioxide",
+    "Water vapour"
+   ],
+   "answer": 0,
+   "explanation": "Dry air contains about 0.9% argon by volume, which is much more than the roughly 0.04% carbon dioxide. Water vapour is not present in dry air, and methane is only present in trace amounts."
+  },
+  {
+   "n": 24,
+   "topic": "Chemistry of the atmosphere",
+   "q": "Which statement best explains how methane in the atmosphere contributes to global warming?",
+   "options": [
+    "It absorbs ultraviolet radiation from the Sun and stops it reaching the Earth's surface.",
+    "It absorbs infrared radiation given out by the Earth's surface and re-emits some of it back towards the Earth.",
+    "It reacts with oxygen in the air to release heat directly into the atmosphere.",
+    "It forms a solid layer high in the atmosphere that traps warm air near the Earth."
+   ],
+   "answer": 1,
+   "explanation": "Methane is a greenhouse gas: it absorbs infrared radiation emitted by the warm Earth and re-emits radiation in all directions, including back to the surface. This increases average global temperature; it does not work mainly by absorbing ultraviolet radiation or by reacting with oxygen to release heat."
+  },
+  {
+   "n": 25,
+   "topic": "Energy changes",
+   "q": "A student burns a fuel and uses the heat released to warm 200 g of water. The water temperature rises from 18.0 °C to 31.0 °C. The specific heat capacity of water is 4.2 J g⁻¹ °C⁻¹. What is the energy taken in by the water? Use Q = m × c × ΔT.",
+   "options": [
+    "5 460 J",
+    "10 920 J",
+    "54.6 J",
+    "26 040 J"
+   ],
+   "answer": 1,
+   "explanation": "The temperature change is 31.0 − 18.0 = 13.0 °C. Using Q = m × c × ΔT gives Q = 200 × 4.2 × 13.0 = 10 920 J, which is 10.92 kJ."
+  },
+  {
+   "n": 26,
+   "topic": "Chemical changes",
+   "q": "Concentrated aqueous sodium chloride is electrolysed using inert electrodes. Which products are formed at the negative electrode (cathode) and the positive electrode (anode)?",
+   "options": [
+    "Sodium at the cathode and oxygen at the anode.",
+    "Hydrogen at the cathode and chlorine at the anode.",
+    "Sodium at the cathode and chlorine at the anode.",
+    "Hydrogen at the cathode and oxygen at the anode."
+   ],
+   "answer": 1,
+   "explanation": "In aqueous sodium chloride, hydrogen ions are reduced at the cathode more readily than sodium ions, giving hydrogen. In concentrated solution, chloride ions are oxidised at the anode to give chlorine rather than oxygen."
+  },
+  {
+   "n": 27,
+   "topic": "Chemical changes",
+   "q": "Magnesium ribbon is added to iron(II) sulfate solution. A grey solid forms. Which statement correctly describes the electron transfer in this displacement reaction?",
+   "options": [
+    "Iron(II) ions lose electrons and magnesium atoms gain electrons.",
+    "Electrons are transferred from iron atoms to magnesium ions.",
+    "Magnesium atoms lose electrons and iron(II) ions gain electrons.",
+    "Magnesium ions gain electrons and iron atoms lose electrons."
+   ],
+   "answer": 2,
+   "explanation": "Magnesium is more reactive than iron, so magnesium atoms are oxidised to Mg²⁺ by losing electrons. The Fe²⁺ ions are reduced to iron atoms by gaining those electrons."
+  },
+  {
+   "n": 28,
+   "topic": "Chemical changes",
+   "q": "A student prepares copper(II) sulfate crystals by adding copper(II) oxide to warm dilute sulfuric acid a little at a time until no more dissolves. What should the student do next to obtain pure crystals?",
+   "options": [
+    "Filter off the excess copper(II) oxide, then add sodium hydroxide solution and evaporate to dryness.",
+    "Electrolyse the mixture with inert electrodes, then evaporate the solution.",
+    "Add more dilute sulfuric acid until all the solid has dissolved, then evaporate to dryness.",
+    "Filter off the excess copper(II) oxide, then gently evaporate the filtrate until crystals form."
+   ],
+   "answer": 3,
+   "explanation": "Adding excess copper(II) oxide ensures that all the acid is used up, and the unreacted solid is removed by filtration. The copper(II) sulfate solution can then be crystallised by gentle evaporation; adding sodium hydroxide or extra acid would contaminate the crystals."
+  },
+  {
+   "n": 29,
+   "topic": "Atomic structure and the periodic table",
+   "q": "A particle contains 16 protons, 18 neutrons and 18 electrons. Which particle is it?",
+   "options": [
+    "Ar atom",
+    "Cl⁻ ion",
+    "S²⁻ ion",
+    "S²⁺ ion"
+   ],
+   "answer": 2,
+   "explanation": "Sulfur has atomic number 16, so 16 protons identifies it as sulfur. The particle has 18 electrons, which is two more than the number of protons, giving a 2− charge, so it is S²⁻. An argon atom would have 18 protons, and a chloride ion would have 17 protons."
+  },
+  {
+   "n": 30,
+   "topic": "Atomic structure and the periodic table",
+   "q": "As you go down Group 7 (the halogens), what happens to reactivity, and why?",
+   "options": [
+    "Reactivity increases because the atoms have more electron shells and can gain electrons more easily.",
+    "Reactivity decreases because the outer shell is further from the nucleus, so attraction for an incoming electron is weaker.",
+    "Reactivity stays the same because all the atoms have seven electrons in their outer shell.",
+    "Reactivity decreases because the atoms have fewer outer-shell electrons as the group is descended."
+   ],
+   "answer": 1,
+   "explanation": "The halogens react by gaining one electron. Going down the group adds shells, increasing atomic radius and shielding, so the force of attraction between the nucleus and an incoming electron is weaker and reactivity decreases. The number of outer-shell electrons remains seven, not fewer."
+  }
+ ]
+}

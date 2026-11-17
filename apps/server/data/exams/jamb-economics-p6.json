@@ -1,0 +1,531 @@
+{
+ "id": "jamb-economics-p6",
+ "exam": "jamb",
+ "subject": "economics",
+ "year": null,
+ "number": 6,
+ "source": "ai",
+ "minutes": 27,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Basic economic concepts",
+   "q": "At a shoe market in Aba, the quantity of shoes demanded rises from 200 to 260 pairs when the price falls from ₦5,000 to ₦4,000. Using the midpoint method, the price elasticity of demand is approximately...",
+   "options": [
+    "1.50",
+    "0.85",
+    "0.92",
+    "1.17"
+   ],
+   "answer": 3,
+   "explanation": "Using the midpoint method, elasticity = (60 ÷ 230) ÷ (1,000 ÷ 4,500) ≈ 1.17 in absolute value. The figure 1.50 comes from using the original quantity and price rather than the averages."
+  },
+  {
+   "n": 2,
+   "topic": "Market structures",
+   "q": "A tomato seller in a perfectly competitive market sells at ₦400 per basket. Her average variable cost is ₦450 at every level of output, and her total fixed cost is ₦2,000. In the short run, the seller should...",
+   "options": [
+    "shut down because the price is below average variable cost",
+    "raise her price above ₦450 to cover variable cost",
+    "continue producing because fixed cost is already incurred",
+    "increase output to spread fixed cost over more baskets"
+   ],
+   "answer": 0,
+   "explanation": "In the short run, a firm should shut down when price is below average variable cost. At ₦400 per basket, each sale contributes less than the variable cost of ₦450, so producing adds to the loss; shutting down limits the loss to the fixed cost. Keeping on only to pay fixed cost is not minimizing loss here."
+  },
+  {
+   "n": 3,
+   "topic": "Theory of production",
+   "q": "A poultry farm in Ogun State observes that the average product of labour is rising as more workers are hired. It follows that the marginal product of labour is...",
+   "options": [
+    "negative at every level of employment",
+    "equal to the average product of labour",
+    "less than the average product of labour",
+    "greater than the average product of labour"
+   ],
+   "answer": 3,
+   "explanation": "The average product rises only when the marginal product is above it, since the new worker adds more than the existing average. If marginal product were below average product, the average would fall. When the two are equal, average product is at its maximum."
+  },
+  {
+   "n": 4,
+   "topic": "Theory of production",
+   "q": "A firm's short-run average total cost curve is U-shaped mainly because...",
+   "options": [
+    "total fixed cost rises as output increases",
+    "all factors of production are variable in the short run",
+    "average fixed cost falls continuously while diminishing returns eventually make marginal cost rise",
+    "marginal cost is constant at every level of output"
+   ],
+   "answer": 2,
+   "explanation": "In the short run, average fixed cost falls as output expands, which pulls average total cost down at first. As more variable inputs are added to fixed inputs, diminishing returns eventually raise marginal cost, and average total cost begins to rise. This combination produces the U-shaped ATC curve."
+  },
+  {
+   "n": 5,
+   "topic": "Money and inflation",
+   "q": "During a period of unanticipated inflation, which group in Nigeria is most likely to gain?",
+   "options": [
+    "Workers whose wages are fixed by long-term contracts",
+    "Pensioners living on fixed monthly incomes",
+    "Creditors who lent money at a fixed interest rate",
+    "Borrowers repaying loans fixed in naira terms"
+   ],
+   "answer": 3,
+   "explanation": "Unanticipated inflation reduces the real value of money repayments. A borrower repaying a loan fixed in naira benefits because the naira repaid is worth less than when the loan was taken, while fixed-income earners and creditors lose."
+  },
+  {
+   "n": 6,
+   "topic": "Public finance",
+   "q": "Which document formally authorises the Federal Government of Nigeria to withdraw money from the Consolidated Revenue Fund for approved recurrent and capital spending?",
+   "options": [
+    "Treasury Circular",
+    "Fiscal Responsibility Act",
+    "Appropriation Act",
+    "Finance Act"
+   ],
+   "answer": 2,
+   "explanation": "The Appropriation Act gives legal authority for withdrawals from the Consolidated Revenue Fund for the spending approved in the annual budget. A Finance Act deals mainly with tax changes, and circulars or fiscal responsibility legislation do not by themselves authorise the budgeted withdrawals."
+  },
+  {
+   "n": 7,
+   "topic": "Elasticity",
+   "q": "When the price of a sachet of pure water rises from ₦50 to ₦60, a trader's weekly quantity demanded falls from 300 to 240 sachets. Using the initial-value formula, the demand is",
+   "options": [
+    "inelastic",
+    "perfectly inelastic",
+    "unitary elastic",
+    "elastic"
+   ],
+   "answer": 2,
+   "explanation": "Percentage fall in quantity is (300 − 240)/300 × 100 = 20%, and percentage rise in price is (60 − 50)/50 × 100 = 20%. Hence price elasticity of demand has magnitude 1, which means unitary elastic demand."
+  },
+  {
+   "n": 8,
+   "topic": "Elasticity",
+   "q": "When the average monthly income of workers in a town rises from ₦40,000 to ₦50,000, the quantity demanded of a good increases from 500 to 600 units. The income elasticity of demand is",
+   "options": [
+    "0.25",
+    "1.25",
+    "0.8",
+    "0.2"
+   ],
+   "answer": 2,
+   "explanation": "Income elasticity = percentage change in quantity demanded ÷ percentage change in income = (100/500 × 100%) ÷ (₦10,000/₦40,000 × 100%) = 20% ÷ 25% = 0.8. The value 1.25 results from reversing the division."
+  },
+  {
+   "n": 9,
+   "topic": "Demand and supply",
+   "q": "The demand and supply functions for a commodity are Qd = 300 − 4P and Qs = 60 + 2P, where price is in naira. What are the equilibrium price and quantity?",
+   "options": [
+    "Price ₦40 and quantity 140 units",
+    "Price ₦50 and quantity 100 units",
+    "Price ₦30 and quantity 180 units",
+    "Price ₦60 and quantity 180 units"
+   ],
+   "answer": 0,
+   "explanation": "At equilibrium Qd = Qs, so 300 − 4P = 60 + 2P. This gives 240 = 6P, hence P = ₦40; substituting gives Q = 300 − 4(40) = 140 units."
+  },
+  {
+   "n": 10,
+   "topic": "Demand and supply",
+   "q": "A government subsidy paid to maize farmers in Kaduna for each bag of maize harvested will, other things being equal, lead to",
+   "options": [
+    "a decrease in supply, a rise in equilibrium price and a fall in quantity",
+    "a movement along the supply curve with no shift in supply",
+    "an increase in demand, a rise in equilibrium price and quantity",
+    "an increase in supply, a fall in equilibrium price and a rise in equilibrium quantity"
+   ],
+   "answer": 3,
+   "explanation": "A subsidy lowers the cost of production, so maize farmers supply more at every price and the supply curve shifts to the right. The resulting surplus at the old price pushes the equilibrium price down and raises the equilibrium quantity; demand itself does not shift."
+  },
+  {
+   "n": 11,
+   "topic": "Costs and revenue",
+   "q": "A small firm in Ilesa produces 200 units of a good. Its total fixed cost is ₦40,000 and average variable cost is ₦150. What is its average total cost?",
+   "options": [
+    "₦350",
+    "₦200",
+    "₦700",
+    "₦150"
+   ],
+   "answer": 0,
+   "explanation": "Average fixed cost is ₦40,000 ÷ 200 = ₦200, so average total cost is average fixed cost plus average variable cost: ₦200 + ₦150 = ₦350. Using only the average variable cost or only the average fixed cost gives an incomplete cost per unit."
+  },
+  {
+   "n": 12,
+   "topic": "Costs and revenue",
+   "q": "A furniture workshop in Uyo has total cost of ₦96,000 when it produces 500 chairs. When output rises to 600 chairs, total cost becomes ₦126,000. What is the marginal cost per chair?",
+   "options": [
+    "₦300",
+    "₦30,000",
+    "₦210",
+    "₦192"
+   ],
+   "answer": 0,
+   "explanation": "Marginal cost is the change in total cost divided by the change in output: (₦126,000 - ₦96,000) ÷ (600 - 500) = ₦30,000 ÷ 100 = ₦300. The figure ₦210 is average total cost at the new output, while ₦30,000 is the total increase in cost and must be divided by the extra 100 chairs."
+  },
+  {
+   "n": 13,
+   "topic": "Costs and revenue",
+   "q": "A bag maker in Onitsha has total fixed cost of ₦36,000. He sells each bag at ₦2,400 and has an average variable cost of ₦1,200. How many bags must he sell to break even?",
+   "options": [
+    "20 bags",
+    "15 bags",
+    "60 bags",
+    "30 bags"
+   ],
+   "answer": 3,
+   "explanation": "Contribution per bag is ₦2,400 - ₦1,200 = ₦1,200, and break-even output is fixed cost divided by contribution: ₦36,000 ÷ ₦1,200 = 30 bags. Dividing fixed cost by the selling price alone gives 15 bags, but that ignores the variable cost of each bag."
+  },
+  {
+   "n": 14,
+   "topic": "Agriculture and industry in Nigeria",
+   "q": "A tomato paste factory is established close to irrigation farms in Kano State. The most likely reason for this location is to",
+   "options": [
+    "avoid the use of modern storage facilities",
+    "reduce losses and transport costs on perishable raw materials",
+    "enjoy lower company income tax in rural areas",
+    "secure a market for imported tomato paste"
+   ],
+   "answer": 1,
+   "explanation": "Locating a tomato paste factory near irrigation farms reduces the time and cost of moving bulky, perishable tomatoes, lowering losses and raw-material costs. Rural areas do not generally offer a special company income tax exemption or cheaper electricity to justify the location."
+  },
+  {
+   "n": 15,
+   "topic": "Agriculture and industry in Nigeria",
+   "q": "A common effect of the weak linkage between agriculture and industry in Nigeria is",
+   "options": [
+    "overproduction of local processed foods",
+    "underutilization of agro-processing plants because of inadequate raw material supply",
+    "reduction in post-harvest losses",
+    "rapid increase in manufactured exports"
+   ],
+   "answer": 1,
+   "explanation": "When agriculture supplies too little raw material to agro-based industries, processing plants operate below their installed capacity. This weak linkage limits output and employment rather than leading to rapid manufactured exports or overproduction of processed foods."
+  },
+  {
+   "n": 16,
+   "topic": "International trade",
+   "q": "In a given year, a country's export price index is 120 while its import price index is 150. What is the country's terms of trade?",
+   "options": [
+    "80",
+    "150",
+    "30",
+    "120"
+   ],
+   "answer": 0,
+   "explanation": "Terms of trade = (export price index ÷ import price index) × 100 = (120 ÷ 150) × 100 = 80. A value below 100 means the country's exports buy relatively fewer imports than in the base year."
+  },
+  {
+   "n": 17,
+   "topic": "International trade",
+   "q": "Which of the following transactions is recorded as a debit item in Nigeria's current account?",
+   "options": [
+    "Proceeds from the export of cocoa to Europe",
+    "Money sent home by Nigerians working abroad",
+    "Payment by a Nigerian bank to a British consulting firm for a feasibility study",
+    "Fees paid by foreign students studying at a Nigerian university"
+   ],
+   "answer": 2,
+   "explanation": "A payment to a foreign consulting firm is an import of services, so it is entered as a debit in the current account. Export proceeds, workers' remittances from abroad, and fees paid by foreign students are credits because they bring foreign exchange into Nigeria."
+  },
+  {
+   "n": 18,
+   "topic": "International trade",
+   "q": "A Nigerian exporter in Kano is paid $40,000 for goods sold abroad. The exchange rate changes from ₦1,500 = $1 to ₦1,400 = $1 before the payment is converted to naira. What is the change in the exporter's naira receipt?",
+   "options": [
+    "A decrease of ₦4,000,000",
+    "A decrease of ₦1,000,000",
+    "No change in the naira receipt",
+    "An increase of ₦4,000,000"
+   ],
+   "answer": 0,
+   "explanation": "The exporter receives $40,000. At ₦1,500 per dollar this converts to ₦60,000,000, but at ₦1,400 per dollar it converts to ₦56,000,000, a fall of ₦4,000,000. The naira appreciation reduces the naira value of a fixed dollar receipt."
+  },
+  {
+   "n": 19,
+   "topic": "Banking and financial institutions",
+   "q": "The institution established in Nigeria to provide wholesale long-term financing to micro, small and medium enterprises through participating financial institutions is the",
+   "options": [
+    "Bank of Industry",
+    "Development Bank of Nigeria",
+    "National Pension Commission",
+    "Nigerian Exchange Limited"
+   ],
+   "answer": 1,
+   "explanation": "The Development Bank of Nigeria was set up to provide wholesale and long-term finance to micro, small and medium enterprises through participating financial institutions. The Bank of Industry tends to finance industrial projects more directly, while the other institutions perform different regulatory or market functions."
+  },
+  {
+   "n": 20,
+   "topic": "Banking and financial institutions",
+   "q": "Which body is primarily responsible for licensing and supervising microfinance banks in Nigeria?",
+   "options": [
+    "Central Bank of Nigeria",
+    "Nigeria Deposit Insurance Corporation",
+    "Securities and Exchange Commission",
+    "Federal Inland Revenue Service"
+   ],
+   "answer": 0,
+   "explanation": "The Central Bank of Nigeria licenses and supervises microfinance banks as part of its mandate over banks and other financial institutions. The Nigeria Deposit Insurance Corporation insures deposits, the Securities and Exchange Commission regulates the capital market, and the Federal Inland Revenue Service handles tax collection."
+  },
+  {
+   "n": 21,
+   "topic": "Basic economic concepts",
+   "q": "An improvement in technology used only in cassava production, with resources and maize technology unchanged, will cause a production possibility curve for cassava and maize to",
+   "options": [
+    "shift inward along the maize axis while the cassava intercept remains unchanged",
+    "shift outward equally along both axes",
+    "remain unchanged because the curve shows only opportunity cost",
+    "pivot outward along the cassava axis while the maximum maize output remains unchanged"
+   ],
+   "answer": 3,
+   "explanation": "Better technology in cassava production raises the maximum cassava output obtainable with the same resources, so the cassava intercept moves outward. The maximum maize output is unchanged because maize technology and total resources are unchanged, so the maize intercept stays fixed."
+  },
+  {
+   "n": 22,
+   "topic": "National income",
+   "q": "Ngozi's monthly money income remains ₦150,000 while the general price level rises by 20%. Her real income is approximately",
+   "options": [
+    "₦120,000",
+    "₦150,000",
+    "₦125,000",
+    "₦180,000"
+   ],
+   "answer": 2,
+   "explanation": "Real income is money income divided by the new price index relative to the base: ₦150,000 ÷ 1.20 = ₦125,000. Deducting 20% directly from ₦150,000 gives ₦120,000, but that wrongly applies the percentage to money income instead of adjusting by the price index."
+  },
+  {
+   "n": 23,
+   "topic": "Population and labour",
+   "q": "A graduate who accepts a part-time job as a dispatch rider while continuing to search for full-time employment in banking is best described as",
+   "options": [
+    "outside the labour force",
+    "openly unemployed",
+    "frictionally unemployed",
+    "underemployed"
+   ],
+   "answer": 3,
+   "explanation": "The graduate is working but is not fully using her skills or working full time, which is underemployment. She is not openly unemployed because she has a job, and she is in the labour force because she is working and still seeking better employment."
+  },
+  {
+   "n": 24,
+   "topic": "Population and labour",
+   "q": "Which of the following is a push factor encouraging rural-to-urban migration in Nigeria?",
+   "options": [
+    "higher wages in urban industries",
+    "insecurity and low farm incomes in rural areas",
+    "more universities in the city",
+    "better hospitals in the city"
+   ],
+   "answer": 1,
+   "explanation": "Push factors drive people away from rural areas, and insecurity plus low farm incomes make rural life less attractive. Better hospitals, more universities and higher urban wages are pull factors that attract migrants to cities."
+  },
+  {
+   "n": 25,
+   "topic": "Market structures",
+   "q": "A maize farmer in Gombe operates in a perfectly competitive market. If the market price of maize falls below the minimum average variable cost, the farmer should, in the short run,",
+   "options": [
+    "increase output to spread fixed costs over more units",
+    "raise the price above the market price",
+    "shut down temporarily to avoid variable costs that cannot be covered",
+    "continue producing because fixed costs must be covered"
+   ],
+   "answer": 2,
+   "explanation": "When price is below minimum average variable cost, revenue does not cover even the variable costs of production, so continuing increases the loss beyond fixed costs. A perfectly competitive farmer is also a price taker and cannot set a higher price. Temporary shutdown minimises short-run loss."
+  },
+  {
+   "n": 26,
+   "topic": "Market structures",
+   "q": "A barbershop in Lagos introduces a popular new hairstyle and earns supernormal profit. In the long run, as other barbers imitate the style and enter the market, the original firm's economic profit will most likely",
+   "options": [
+    "become permanently negative because costs will rise",
+    "rise because new entrants increase the market demand facing the firm",
+    "remain permanently supernormal because the hairstyle is unique",
+    "fall to normal profit as demand for its service decreases"
+   ],
+   "answer": 3,
+   "explanation": "In monopolistic competition, supernormal profit attracts imitators and new entrants. Their products reduce demand for the original firm's service until economic profit falls to normal profit in long-run equilibrium. Product differentiation does not permanently prevent this entry and imitation."
+  },
+  {
+   "n": 27,
+   "topic": "Theory of production",
+   "q": "A bread-making firm in Akure operates in the short run with one fixed oven. Which statement best describes its total fixed cost as output increases?",
+   "options": [
+    "It is zero when output is zero.",
+    "It falls steadily as output increases.",
+    "It remains unchanged as output increases.",
+    "It changes in direct proportion to the number of loaves produced."
+   ],
+   "answer": 2,
+   "explanation": "In the short run, fixed cost is the cost of fixed inputs such as the oven and does not vary with output. It is incurred even when output is zero, so it cannot be zero at zero output. The cost that changes with output is total variable cost."
+  },
+  {
+   "n": 28,
+   "topic": "Theory of production",
+   "q": "A cassava-processing firm in Benue increases all its inputs by 50%, and its output rises by 32%. This situation illustrates",
+   "options": [
+    "constant returns to scale",
+    "diminishing returns to a variable factor",
+    "increasing returns to scale",
+    "decreasing returns to scale"
+   ],
+   "answer": 3,
+   "explanation": "Returns to scale describe what happens when all inputs change together. Since output rises by a smaller percentage than the increase in all inputs, the firm experiences decreasing returns to scale. Diminishing returns to a variable factor applies when only one input is varied while others are fixed."
+  },
+  {
+   "n": 29,
+   "topic": "Money and inflation",
+   "q": "If the general price level doubles while a civil servant's nominal salary remains unchanged, the civil servant's real salary",
+   "options": [
+    "remains exactly the same",
+    "rises to twice its former value",
+    "falls to half its former value",
+    "falls by one-quarter of its former value"
+   ],
+   "answer": 2,
+   "explanation": "Real salary measures purchasing power, so it is nominal salary adjusted for the price level. If prices double while nominal salary stays the same, the same salary can buy only half as much as before. Hence the real salary falls to half its former value."
+  },
+  {
+   "n": 30,
+   "topic": "Money and inflation",
+   "q": "The Central Bank of Nigeria lowers the cash reserve ratio of commercial banks. The most immediate effect is that banks' capacity to create credit",
+   "options": [
+    "remains unchanged while inflation rises",
+    "decreases",
+    "is transferred to the federal government",
+    "increases"
+   ],
+   "answer": 3,
+   "explanation": "A lower cash reserve ratio means commercial banks are required to keep a smaller proportion of deposits as reserves. They therefore have more funds available for lending, which increases their capacity to create credit. A higher reserve ratio would reduce lending capacity."
+  },
+  {
+   "n": 31,
+   "topic": "Money and inflation",
+   "q": "A shopper in Lagos uses a debit card to pay instantly for a bag of rice. In this transaction, money is mainly performing the function of a",
+   "options": [
+    "medium of exchange",
+    "store of value",
+    "standard of deferred payment",
+    "unit of account"
+   ],
+   "answer": 0,
+   "explanation": "Money acts as a medium of exchange when it is used to settle a purchase immediately. A unit of account is used to express prices, while a store of value is used to hold purchasing power over time."
+  },
+  {
+   "n": 32,
+   "topic": "Public finance",
+   "q": "Which of the following is an indirect tax in Nigeria?",
+   "options": [
+    "Personal income tax",
+    "Capital gains tax",
+    "Value added tax",
+    "Company income tax"
+   ],
+   "answer": 2,
+   "explanation": "Indirect taxes are levied on goods and services and are collected through sellers, with value added tax being a clear example. Personal income tax, company income tax, and capital gains tax are direct taxes imposed on income or gains. They are paid directly by the person or firm on whom the tax is legally imposed."
+  },
+  {
+   "n": 33,
+   "topic": "Elasticity",
+   "q": "When the price of a sachet of water in Ibadan rose from ₦20 to ₦25, the quantity demanded of bottled water rose from 100 to 140 bottles per day. The cross elasticity of demand between the two goods is",
+   "options": [
+    "0.625",
+    "−1.6",
+    "1.6",
+    "0.4"
+   ],
+   "answer": 2,
+   "explanation": "The percentage change in quantity demanded of bottled water is (40/100) × 100 = 40%, while the percentage change in the price of sachet water is (5/20) × 100 = 25%. Cross elasticity of demand is 40/25 = 1.6. The positive value shows that the two goods are substitutes; 0.625 is the reciprocal of the correct ratio."
+  },
+  {
+   "n": 34,
+   "topic": "Elasticity",
+   "q": "When the price of a bag of cocoa rises from ₦50,000 to ₦60,000, the quantity supplied by farmers in Ondo State increases from 800 bags to 1,000 bags. The price elasticity of supply is",
+   "options": [
+    "0.8",
+    "0.2",
+    "1.25",
+    "0.25"
+   ],
+   "answer": 2,
+   "explanation": "The percentage change in quantity supplied is (200/800) × 100 = 25%, while the percentage change in price is (10,000/50,000) × 100 = 20%. Price elasticity of supply is therefore 25/20 = 1.25. Since this is greater than one, supply is elastic."
+  },
+  {
+   "n": 35,
+   "topic": "Demand and supply",
+   "q": "The demand for rice falls at the same time as a flood reduces the supply of rice. Which outcome is certain in the market for rice?",
+   "options": [
+    "Equilibrium price will rise and quantity will fall.",
+    "Both equilibrium price and quantity will rise.",
+    "Equilibrium price will fall and quantity will rise.",
+    "Equilibrium quantity will fall, while price may rise, fall or remain unchanged."
+   ],
+   "answer": 3,
+   "explanation": "A fall in demand reduces both price and quantity, while a reduction in supply raises price and reduces quantity. Quantity therefore definitely falls, but the price effect depends on the relative sizes of the two shifts."
+  },
+  {
+   "n": 36,
+   "topic": "Costs and revenue",
+   "q": "A firm in Aba produces 500 units of footwear at a total cost of ₦80,000. When output rises to 600 units, total cost becomes ₦92,000. The marginal cost per unit between these output levels is",
+   "options": [
+    "₦100 per unit",
+    "₦12,000 per unit",
+    "₦153.33 per unit",
+    "₦120 per unit"
+   ],
+   "answer": 3,
+   "explanation": "Marginal cost is the change in total cost divided by the change in output: (₦92,000 − ₦80,000)/(600 − 500) = ₦12,000/100 = ₦120 per unit."
+  },
+  {
+   "n": 37,
+   "topic": "Costs and revenue",
+   "q": "A small shoe factory in Onitsha has total fixed cost of ₦12,000. It sells each pair of shoes for ₦40, while the variable cost per pair is ₦25. The break-even quantity is",
+   "options": [
+    "800 pairs",
+    "300 pairs",
+    "480 pairs",
+    "1,200 pairs"
+   ],
+   "answer": 0,
+   "explanation": "At break-even, total revenue equals total cost: 40Q = 12,000 + 25Q. This gives 15Q = 12,000, so Q = 800 pairs. The figure of 300 pairs comes from dividing fixed cost by selling price and ignoring variable cost."
+  },
+  {
+   "n": 38,
+   "topic": "Costs and revenue",
+   "q": "A water bottling factory in Osogbo has total fixed cost of ₦40,000. At an output of 500 crates, its total variable cost is ₦60,000. The average total cost per crate is",
+   "options": [
+    "₦40",
+    "₦200",
+    "₦80",
+    "₦120"
+   ],
+   "answer": 1,
+   "explanation": "Total cost is ₦40,000 + ₦60,000 = ₦100,000. Average total cost is ₦100,000 ÷ 500 = ₦200 per crate. The average fixed cost is ₦80 and the average variable cost is ₦120, which sum to ₦200."
+  },
+  {
+   "n": 39,
+   "topic": "International trade",
+   "q": "Which of the following transactions would improve Nigeria's balance of trade?",
+   "options": [
+    "More Nigerians travelling to Dubai for holidays",
+    "An increase in the value of cassava flour exported to Europe",
+    "An increase in the value of rice imported from Asia",
+    "Payment of dividends to foreign investors in Nigeria"
+   ],
+   "answer": 1,
+   "explanation": "The balance of trade covers visible exports and visible imports. Higher earnings from exported cassava flour raise visible exports and therefore improve the balance of trade, while rice imports worsen it; holiday spending abroad and dividend payments are invisible current-account items rather than merchandise trade."
+  },
+  {
+   "n": 40,
+   "topic": "Banking and financial institutions",
+   "q": "A commercial bank in Ibadan has total deposit liabilities of ₦50 million. If the cash reserve ratio is 10% and the bank currently holds ₦8 million as reserves with the Central Bank, its excess reserves are",
+   "options": [
+    "₦3 million",
+    "₦2 million",
+    "₦5 million",
+    "₦8 million"
+   ],
+   "answer": 0,
+   "explanation": "Required reserves are 10% of ₦50 million, which is ₦5 million. Excess reserves are actual reserves minus required reserves: ₦8 million − ₦5 million = ₦3 million."
+  }
+ ]
+}

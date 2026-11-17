@@ -1,0 +1,531 @@
+{
+ "id": "jamb-economics-p5",
+ "exam": "jamb",
+ "subject": "economics",
+ "year": null,
+ "number": 5,
+ "source": "ai",
+ "minutes": 27,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Economic development and planning",
+   "q": "A state government in Nigeria wants to compare the level of human welfare in its state with that of other states using a single composite measure that covers health, education and income. Which measure is most appropriate?",
+   "options": [
+    "Gross domestic product per capita",
+    "Human Development Index",
+    "Balance of trade",
+    "Consumer price index"
+   ],
+   "answer": 1,
+   "explanation": "The Human Development Index combines life expectancy, education and income, so it is the best composite measure of human welfare among the choices. Gross domestic product per capita measures only average income and does not directly reflect health or education."
+  },
+  {
+   "n": 2,
+   "topic": "Economic development and planning",
+   "q": "A country's real gross domestic product rises by 6% in a year while its population rises by 2%. By approximately what percentage does real income per head rise?",
+   "options": [
+    "3%",
+    "8%",
+    "4%",
+    "12%"
+   ],
+   "answer": 2,
+   "explanation": "Real income per head rises by approximately (1.06 ÷ 1.02 − 1) × 100, which is about 3.9%, or roughly 4%. Subtracting the population growth rate from the output growth rate gives the same close estimate in this case."
+  },
+  {
+   "n": 3,
+   "topic": "International trade",
+   "q": "The balance of trade is best defined as the",
+   "options": [
+    "sum of a country's current and capital account balances",
+    "ratio of export prices to import prices multiplied by 100",
+    "difference between the value of total exports and total imports of goods and services",
+    "difference between the value of a country's visible exports and its visible imports"
+   ],
+   "answer": 3,
+   "explanation": "The balance of trade refers specifically to trade in visible goods, that is, visible exports minus visible imports. The ratio of export prices to import prices is the terms of trade, while including services goes beyond the visible trade balance."
+  },
+  {
+   "n": 4,
+   "topic": "International trade",
+   "q": "Which of the following will worsen Nigeria's terms of trade, other things being equal?",
+   "options": [
+    "A rise in the volume of Nigeria's oil exports with prices unchanged",
+    "A fall in the price of Nigeria's crude oil relative to the price of imported machinery",
+    "A fall in the price of Nigeria's imported machinery with export prices unchanged",
+    "A rise in the price of Nigeria's exports with import prices unchanged"
+   ],
+   "answer": 1,
+   "explanation": "The terms of trade improve when export prices rise relative to import prices, and worsen when export prices fall relative to import prices. A change in the volume of exports does not directly change the price index used to measure the terms of trade."
+  },
+  {
+   "n": 5,
+   "topic": "Population and labour",
+   "q": "The labour-force participation rate is calculated as the",
+   "options": [
+    "labour force divided by the total population, multiplied by 100",
+    "number unemployed divided by the labour force, multiplied by 100",
+    "number employed divided by the total population, multiplied by 100",
+    "labour force divided by the working-age population, multiplied by 100"
+   ],
+   "answer": 3,
+   "explanation": "The labour-force participation rate expresses the labour force as a percentage of the working-age population. The number unemployed divided by the labour force gives the unemployment rate, not the participation rate."
+  },
+  {
+   "n": 6,
+   "topic": "Agriculture and industry in Nigeria",
+   "q": "Agriculture contributes to industrial development in Nigeria mainly by",
+   "options": [
+    "providing machinery for factory production",
+    "supplying raw materials for processing industries",
+    "providing skilled labour for manufacturing",
+    "providing foreign loans to industrialists"
+   ],
+   "answer": 1,
+   "explanation": "Agro-allied industries such as flour mills, sugar refineries and textile mills depend on agricultural raw materials. Machinery, skilled manufacturing labour and foreign loans are not normally supplied by the agricultural sector."
+  },
+  {
+   "n": 7,
+   "topic": "Agriculture and industry in Nigeria",
+   "q": "Which of the following is a major challenge facing smallholder farmers in Nigeria?",
+   "options": [
+    "Limited access to credit and modern farm inputs",
+    "Guaranteed minimum prices for every crop",
+    "Overabundance of storage facilities in rural areas",
+    "Excessive mechanisation of farm operations"
+   ],
+   "answer": 0,
+   "explanation": "Many smallholder farmers lack adequate credit to buy improved seeds, fertiliser and equipment, which limits productivity. Nigerian smallholder farming is generally characterised by low mechanisation and poor storage facilities, not excessive mechanisation or guaranteed prices for all crops."
+  },
+  {
+   "n": 8,
+   "topic": "Agriculture and industry in Nigeria",
+   "q": "The concentration of many manufacturing firms in Lagos and its environs is mainly explained by",
+   "options": [
+    "the nearness of Lagos to major mineral deposits",
+    "a government ban on manufacturing in other states",
+    "the absence of transport facilities in other regions",
+    "the availability of infrastructure, a large market and skilled labour"
+   ],
+   "answer": 3,
+   "explanation": "Manufacturers are attracted to Lagos by advantages such as ports, power and transport infrastructure, a large market and a pool of skilled labour. The other factors do not correctly explain the industrial concentration in Lagos."
+  },
+  {
+   "n": 9,
+   "topic": "Market structures",
+   "q": "Kaduna Fabrics Ltd operates in an industry with many sellers, product differentiation, and easy entry and exit. In long-run equilibrium, the firm is most likely to",
+   "options": [
+    "produce at the minimum point of its average total cost curve",
+    "earn only normal profit because price settles at average total cost",
+    "earn supernormal profit because its product is differentiated",
+    "face a perfectly elastic demand curve at the market price"
+   ],
+   "answer": 1,
+   "explanation": "A monopolistically competitive firm has differentiated products and easy entry, so short-run supernormal profit attracts new firms. In the long run, demand facing each existing firm falls until price is tangent to average total cost, leaving only normal profit. Producing at minimum average total cost and facing perfectly elastic demand are features of perfect competition, not monopolistic competition."
+  },
+  {
+   "n": 10,
+   "topic": "Market structures",
+   "q": "A perfectly competitive firm sells its output at ₦25 per unit. At its present output, marginal cost is ₦20 and rising, while average variable cost is ₦18. To maximise profit, the firm should",
+   "options": [
+    "keep output unchanged because marginal cost is below average variable cost",
+    "increase output because price exceeds marginal cost",
+    "reduce output because price exceeds average variable cost",
+    "shut down immediately because fixed costs must be covered"
+   ],
+   "answer": 1,
+   "explanation": "For a perfectly competitive firm, price equals marginal revenue, so marginal revenue is ₦25 while marginal cost is ₦20. Since marginal revenue exceeds marginal cost, expanding output adds more to revenue than to cost and raises profit. The firm should continue expanding until marginal cost rises to equal price, provided price covers average variable cost."
+  },
+  {
+   "n": 11,
+   "topic": "Market structures",
+   "q": "Three cement producers in Ogun State form a cartel and agree to restrict total output and share the market. The agreement is most likely to break down because",
+   "options": [
+    "each member has an incentive to increase output secretly and gain a larger share of the high price",
+    "the government will always set price below the cartel price",
+    "cement has no close substitutes for builders",
+    "new firms will immediately be prevented from entering by the cartel"
+   ],
+   "answer": 0,
+   "explanation": "A cartel raises profit by restricting output and keeping price high, but each member can gain by secretly producing more than its quota. Such cheating increases the cheater's sales while the high cartel price remains, so the agreement is difficult to enforce. Entry by new firms or government action may also undermine a cartel, but the internal incentive to cheat is the central instability."
+  },
+  {
+   "n": 12,
+   "topic": "Public finance",
+   "q": "Kwara State Government obtains a loan from a development bank to build a new specialist hospital. In public finance, the loan is a ______ and the construction of the hospital is a ______.",
+   "options": [
+    "capital receipt; capital expenditure",
+    "recurrent revenue; capital expenditure",
+    "recurrent revenue; recurrent expenditure",
+    "capital receipt; recurrent expenditure"
+   ],
+   "answer": 0,
+   "explanation": "Government borrowing from a development bank is a capital receipt because it creates a liability and is used for capital formation. Constructing a hospital is capital expenditure since it adds to public capital assets. Recurrent expenditure covers day-to-day running costs such as salaries and stationery."
+  },
+  {
+   "n": 13,
+   "topic": "Public finance",
+   "q": "Which of the following taxes is progressive in effect in Nigeria?",
+   "options": [
+    "Value added tax charged at the same rate on all taxable goods",
+    "A fixed fee of ₦500 paid by every market trader",
+    "Personal income tax with higher percentage rates on higher income bands",
+    "A flat annual levy of ₦2,000 paid by every adult in a local government"
+   ],
+   "answer": 2,
+   "explanation": "A progressive tax takes a larger percentage of income from higher-income earners, which is true of graduated personal income tax bands. A flat levy on every adult or trader takes a larger proportion of lower incomes and is regressive, while a single-rate VAT is proportional in rate."
+  },
+  {
+   "n": 14,
+   "topic": "Money and inflation",
+   "q": "A bank offers a fixed deposit with a nominal interest rate of 12% per annum. If the inflation rate is 15% per annum, the real interest rate is approximately",
+   "options": [
+    "3%",
+    "27%",
+    "−3%",
+    "20%"
+   ],
+   "answer": 2,
+   "explanation": "Using the approximate Fisher relationship, real interest rate = nominal interest rate − inflation rate = 12% − 15% = −3%. This means the purchasing power of the deposit falls by about 3% over the year. Adding the rates or ignoring the negative sign gives incorrect results."
+  },
+  {
+   "n": 15,
+   "topic": "Basic economic concepts",
+   "q": "Amina has ₦25,000 and must choose between paying for a professional examination and buying a smartphone. She decides to pay for the examination. In economics, the forgone smartphone best represents",
+   "options": [
+    "the value of the next best alternative forgone",
+    "the marginal utility of the examination",
+    "the money cost of the examination",
+    "her accounting profit"
+   ],
+   "answer": 0,
+   "explanation": "Opportunity cost is the value of the next best alternative forgone when a choice is made. By choosing the professional examination, Amina gives up the smartphone she could have bought. The money cost of the examination and utility are different concepts."
+  },
+  {
+   "n": 16,
+   "topic": "Basic economic concepts",
+   "q": "A cooperative in Kaduna can produce either maize or yam. When it moves resources from producing 300 bags of maize and 20 tonnes of yam to producing 200 bags of maize and 40 tonnes of yam, what is the opportunity cost of one additional tonne of yam?",
+   "options": [
+    "100 bags of maize",
+    "2 bags of maize",
+    "5 bags of maize",
+    "20 bags of maize"
+   ],
+   "answer": 2,
+   "explanation": "The move increases yam output by 40 − 20 = 20 tonnes and reduces maize output by 300 − 200 = 100 bags. The opportunity cost per additional tonne of yam is therefore 100 ÷ 20 = 5 bags of maize. The other figures either omit the per-unit division or use the total maize loss without dividing."
+  },
+  {
+   "n": 17,
+   "topic": "Elasticity",
+   "q": "A trader in Uyo buys garri for resale. When the price of a basin of garri rises from ₦400 to ₦500, the quantity supplied to the market rises from 800 basins to 1,000 basins. The price elasticity of supply is",
+   "options": [
+    "1.25",
+    "0.25",
+    "1.0",
+    "0.80"
+   ],
+   "answer": 2,
+   "explanation": "Percentage change in price is (₦500 − ₦400)/₦400 × 100 = 25%. Percentage change in quantity supplied is (1,000 − 800)/800 × 100 = 25%, so elasticity of supply is 25% ÷ 25% = 1.0."
+  },
+  {
+   "n": 18,
+   "topic": "Elasticity",
+   "q": "The demand for a particular brand of detergent in Abuja is relatively elastic, while its supply is relatively inelastic. If a tax is imposed on the brand, the larger share of the tax burden will fall on",
+   "options": [
+    "consumers",
+    "the government",
+    "producers",
+    "retailers only"
+   ],
+   "answer": 2,
+   "explanation": "When demand is elastic, buyers can readily switch to substitutes, so sellers cannot pass most of the tax to them. With relatively inelastic supply, producers bear the larger share of the tax burden."
+  },
+  {
+   "n": 19,
+   "topic": "Elasticity",
+   "q": "Which of the following goods is most likely to have an inelastic demand?",
+   "options": [
+    "Table salt",
+    "A particular brand of soft drink",
+    "Foreign holiday travel",
+    "Gold necklace"
+   ],
+   "answer": 0,
+   "explanation": "Table salt is a necessity with few close substitutes and takes a small part of household income, so its demand is likely to be inelastic. A particular brand of soft drink has close substitutes, while gold necklaces and foreign holidays are luxuries with more elastic demand."
+  },
+  {
+   "n": 20,
+   "topic": "Banking and financial institutions",
+   "q": "A trader in Port Harcourt pays a supplier by cheque drawn on another bank. In the cheque-clearing process, the bank on which the cheque is drawn is called the",
+   "options": [
+    "collecting bank",
+    "payee",
+    "drawer",
+    "drawee bank"
+   ],
+   "answer": 3,
+   "explanation": "The drawee bank is the bank ordered by the drawer to pay the amount on the cheque. The collecting bank is the bank that presents the cheque for payment, while the payee is the person to be paid."
+  },
+  {
+   "n": 21,
+   "topic": "Banking and financial institutions",
+   "q": "The main function of the Nigerian Exchange Limited in the financial system is to provide a market for",
+   "options": [
+    "trading in long-term securities such as shares and debentures",
+    "issuing Nigerian currency",
+    "granting overdrafts to business customers",
+    "discounting short-term commercial bills"
+   ],
+   "answer": 0,
+   "explanation": "The Nigerian Exchange Limited is a capital market institution where long-term securities such as shares and debentures are bought and sold. Short-term bills are handled in the money market, while currency issuance and overdraft facilities are functions of other institutions."
+  },
+  {
+   "n": 22,
+   "topic": "National income",
+   "q": "A Nigerian engineering firm receives rent from a factory it owns in Ghana. In Nigeria's national income accounting, this rent forms part of",
+   "options": [
+    "gross national product at market prices",
+    "domestic factor income",
+    "net domestic product at factor cost",
+    "gross domestic product at market prices"
+   ],
+   "answer": 0,
+   "explanation": "The rent is income earned abroad by a Nigerian-owned factor of production, so it is included in Nigeria's gross national product through net factor income from abroad. Gross domestic product covers output produced within Nigeria's borders, so this rent is not part of it."
+  },
+  {
+   "n": 23,
+   "topic": "National income",
+   "q": "A country's nominal GDP is ₦960 billion and its GDP deflator is 120. Its real GDP is",
+   "options": [
+    "₦960 billion",
+    "₦800 billion",
+    "₦840 billion",
+    "₦1,152 billion"
+   ],
+   "answer": 1,
+   "explanation": "Real GDP = nominal GDP ÷ GDP deflator × 100 = ₦960 billion ÷ 120 × 100 = ₦800 billion. A deflator of 120 means prices are above the base-year level, so real GDP is lower than nominal GDP."
+  },
+  {
+   "n": 24,
+   "topic": "Theory of production",
+   "q": "A garment producer in Kano wants to identify all the combinations of labour and capital that can produce exactly 500 shirts. The curve showing these combinations is",
+   "options": [
+    "an isocost line",
+    "a production possibility curve",
+    "an isoquant",
+    "an average product curve"
+   ],
+   "answer": 2,
+   "explanation": "An isoquant shows the various combinations of inputs that yield the same level of output. An isocost line instead shows combinations of inputs that cost the same total amount."
+  },
+  {
+   "n": 25,
+   "topic": "Costs and revenue",
+   "q": "A sachet water producer in Ibadan sells each sachet at ₦20. Her total fixed cost is ₦60,000 and her variable cost is ₦12 per sachet. How many sachets must she sell to break even, assuming all sachets produced are sold?",
+   "options": [
+    "5,000 sachets",
+    "3,000 sachets",
+    "12,000 sachets",
+    "7,500 sachets"
+   ],
+   "answer": 3,
+   "explanation": "Contribution per sachet is ₦20 − ₦12 = ₦8. Break-even output is fixed cost divided by contribution, that is ₦60,000 ÷ ₦8 = 7,500 sachets. Dividing fixed cost by the selling price gives 3,000, but that ignores the variable cost of each sachet."
+  },
+  {
+   "n": 26,
+   "topic": "Costs and revenue",
+   "q": "A trader in Kano has total revenue of ₦2,400,000 and explicit costs of ₦1,750,000. He could earn ₦50,000 interest per year if he invested his business capital elsewhere. What is his economic profit?",
+   "options": [
+    "₦650,000",
+    "₦700,000",
+    "₦600,000",
+    "₦550,000"
+   ],
+   "answer": 2,
+   "explanation": "Accounting profit is ₦2,400,000 − ₦1,750,000 = ₦650,000. Economic profit subtracts the implicit cost of ₦50,000, giving ₦650,000 − ₦50,000 = ₦600,000. The figure ₦650,000 is accounting profit, not economic profit."
+  },
+  {
+   "n": 27,
+   "topic": "Costs and revenue",
+   "q": "A small bakery in Abeokuta has total fixed cost of ₦24,000. When it produces 300 loaves, its average total cost is ₦150. What is its average variable cost at that output?",
+   "options": [
+    "₦120",
+    "₦80",
+    "₦70",
+    "₦150"
+   ],
+   "answer": 2,
+   "explanation": "Total cost at 300 loaves is 300 × ₦150 = ₦45,000. Total variable cost is ₦45,000 − ₦24,000 = ₦21,000, so average variable cost is ₦21,000 ÷ 300 = ₦70. The value ₦80 is average fixed cost, while ₦150 is average total cost."
+  },
+  {
+   "n": 28,
+   "topic": "Demand and supply",
+   "q": "The demand and supply functions for a market are Qd = 600 − 15P and Qs = 60 + 5P. What is the equilibrium price?",
+   "options": [
+    "₦30",
+    "₦27",
+    "₦24",
+    "₦20"
+   ],
+   "answer": 1,
+   "explanation": "At equilibrium, Qd = Qs, so 600 − 15P = 60 + 5P. This gives 540 = 20P, hence P = ₦27. At this price, quantity demanded and quantity supplied both equal 195 units."
+  },
+  {
+   "n": 29,
+   "topic": "Demand and supply",
+   "q": "When a consumer's monthly income rose from ₦50,000 to ₦60,000, her quantity demanded of garri fell from 20 bags to 18 bags. Using the initial-value method, calculate the income elasticity of demand.",
+   "options": [
+    "2.0",
+    "−2.0",
+    "0.5",
+    "−0.5"
+   ],
+   "answer": 3,
+   "explanation": "The percentage change in quantity demanded is (18 − 20) ÷ 20 × 100 = −10%. The percentage change in income is (₦60,000 − ₦50,000) ÷ ₦50,000 × 100 = 20%. Therefore, income elasticity is −10% ÷ 20% = −0.5, and the negative value shows that garri is an inferior good for this consumer."
+  },
+  {
+   "n": 30,
+   "topic": "Demand and supply",
+   "q": "A new storage facility enables tomato traders in Kano to reduce losses. At the same time, a health campaign increases consumers' preference for tomatoes. What is the most likely combined effect on the market for tomatoes?",
+   "options": [
+    "Equilibrium quantity increases, but the direction of the price change cannot be determined without knowing the relative shifts.",
+    "Equilibrium price falls while equilibrium quantity increases.",
+    "Equilibrium price rises while equilibrium quantity remains unchanged.",
+    "Both equilibrium price and equilibrium quantity increase."
+   ],
+   "answer": 0,
+   "explanation": "Improved storage increases the supply of tomatoes, tending to lower price and raise quantity. The health campaign increases demand, tending to raise both price and quantity. Quantity definitely rises, but the final price depends on the relative sizes of the two shifts."
+  },
+  {
+   "n": 31,
+   "topic": "International trade",
+   "q": "The practice of selling a country's goods in another country at a price below that charged in the home market is known as",
+   "options": [
+    "export promotion",
+    "dumping",
+    "trade liberalisation",
+    "balance of trade"
+   ],
+   "answer": 1,
+   "explanation": "Dumping occurs when a producer sells goods abroad at a lower price than in the domestic market, often to dispose of surplus output or to capture a foreign market. Export promotion is a policy of encouraging exports, while trade liberalisation is the removal of trade restrictions."
+  },
+  {
+   "n": 32,
+   "topic": "Population and labour",
+   "q": "In a community in Ekiti State, 18,000 persons are below 15 years, 6,000 are aged 65 years and above, and 36,000 are aged 15–64. What is the dependency ratio?",
+   "options": [
+    "About 50 dependants per 100 people of working age",
+    "About 67 dependants per 100 people of working age",
+    "About 33 dependants per 100 people of working age",
+    "About 150 dependants per 100 people of working age"
+   ],
+   "answer": 1,
+   "explanation": "Dependency ratio = (18,000 + 6,000) ÷ 36,000 × 100 ≈ 66.7, so there are about 67 dependants for every 100 people of working age. The figure of about 150 comes from dividing the working-age population by the dependent population, which reverses the intended ratio."
+  },
+  {
+   "n": 33,
+   "topic": "Population and labour",
+   "q": "Which of the following measures is most likely to increase the labour force participation rate in Nigeria?",
+   "options": [
+    "Raising the compulsory retirement age for public servants",
+    "Extending paid maternity leave for working mothers",
+    "Increasing the number of years spent in tertiary institutions",
+    "Paying higher monthly allowances to full-time students"
+   ],
+   "answer": 0,
+   "explanation": "Raising the compulsory retirement age keeps older workers in the labour force and therefore raises the participation rate. Longer time in tertiary institutions, longer maternity leave and higher allowances for full-time students tend to keep more people out of the labour force."
+  },
+  {
+   "n": 34,
+   "topic": "Population and labour",
+   "q": "Which of the following situations best illustrates disguised unemployment?",
+   "options": [
+    "Four workers cultivate a small farm that needs only two, yet total output does not fall when two of them leave",
+    "A graduate in Ilorin stops searching for work after two years without a job",
+    "A trader in Onitsha works only on market days because of low demand",
+    "A factory worker loses her job after her tasks are taken over by machines"
+   ],
+   "answer": 0,
+   "explanation": "Disguised unemployment exists when extra workers add nothing to output and can be removed without reducing output. Workers replaced by machines are technologically unemployed, while a person who has stopped searching is a discouraged worker outside the labour force."
+  },
+  {
+   "n": 35,
+   "topic": "Agriculture and industry in Nigeria",
+   "q": "In economics, which of the following is a backward linkage of a textile mill located in Kaduna?",
+   "options": [
+    "Purchase of cotton lint from farmers in Katsina for use in production",
+    "Use of clothing made by the mill by civil servants in Kaduna",
+    "Payment of wages and allowances to the mill's factory workers",
+    "Sale of finished fabrics to tailoring firms in Lagos"
+   ],
+   "answer": 0,
+   "explanation": "A backward linkage arises when an industry creates demand for inputs from an earlier stage of production; cotton lint is an agricultural input for textiles. Selling fabrics to tailoring firms is a forward linkage, while wage payments and final consumption are not production linkages."
+  },
+  {
+   "n": 36,
+   "topic": "Agriculture and industry in Nigeria",
+   "q": "Which policy measure is most likely to strengthen the link between agriculture and manufacturing in Nigeria?",
+   "options": [
+    "Encouraging farmers to export more unprocessed produce",
+    "Granting tax concessions to firms that process locally produced raw materials",
+    "Restricting rural farmers from selling to processing firms",
+    "Removing import duties on finished manufactured goods"
+   ],
+   "answer": 1,
+   "explanation": "Tax concessions for local raw-material processing encourage manufacturers to buy from Nigerian farmers and add value locally. Removing duties on finished imports and promoting raw exports weaken the agriculture-manufacturing link."
+  },
+  {
+   "n": 37,
+   "topic": "Market structures",
+   "q": "A monopolist in Port Harcourt faces the demand curve P = 72 − 4Q and has total cost TC = 8Q + 30. At the profit-maximising level of output, the firm produces",
+   "options": [
+    "16 units",
+    "8 units",
+    "40 units",
+    "9 units"
+   ],
+   "answer": 1,
+   "explanation": "Profit is maximised where marginal revenue equals marginal cost. Marginal revenue is 72 − 8Q and marginal cost is 8, so 72 − 8Q = 8 gives Q = 8 units. Equating price with marginal cost instead gives 16 units, which is the socially optimal rather than profit-maximising output."
+  },
+  {
+   "n": 38,
+   "topic": "Market structures",
+   "q": "In the long run, firms in monopolistic competition operate with excess capacity because they",
+   "options": [
+    "face a horizontal demand curve while selling identical products",
+    "earn positive economic profit, which attracts new firms",
+    "produce where price equals marginal cost as in perfect competition",
+    "produce an output lower than the minimum-average-cost level due to differentiated products"
+   ],
+   "answer": 3,
+   "explanation": "In long-run monopolistic competition, free entry removes supernormal profit, but differentiated products make demand downward-sloping. The demand curve is tangent to average cost to the left of the minimum average cost, so firms carry excess capacity."
+  },
+  {
+   "n": 39,
+   "topic": "Public finance",
+   "q": "A state government charges tax such that a person earning ₦200,000 per month pays ₦20,000, while a person earning ₦500,000 per month pays ₦75,000. This tax structure is",
+   "options": [
+    "proportional",
+    "indirect",
+    "regressive",
+    "progressive"
+   ],
+   "answer": 3,
+   "explanation": "The average tax rate rises from 10% (₦20,000 out of ₦200,000) to 15% (₦75,000 out of ₦500,000), so the tax takes a larger proportion from higher incomes. A regressive tax would take a smaller proportion from higher incomes, while a proportional tax would apply the same average rate."
+  },
+  {
+   "n": 40,
+   "topic": "Public finance",
+   "q": "The Federal Government of Nigeria sells treasury bills to banks and individuals in Nigeria to finance a budget deficit. This method of financing is best described as",
+   "options": [
+    "domestic borrowing",
+    "external borrowing",
+    "seigniorage",
+    "direct taxation"
+   ],
+   "answer": 0,
+   "explanation": "Treasury bills sold to banks and individuals within Nigeria are domestic debt instruments, so the issue is domestic borrowing. External borrowing involves foreign lenders, taxation is compulsory, and seigniorage is financing through central-bank money creation."
+  }
+ ]
+}

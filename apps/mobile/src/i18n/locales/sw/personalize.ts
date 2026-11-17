@@ -65,6 +65,10 @@ const personalize: Translation<typeof en> = {
     title: 'Unapenda kujifunza vipi?',
     subtitle: 'Chagua unavyovipenda. Tutaanza navyo na kuchanganya vingine.',
   },
+  region: {
+    title: 'Unasoma wapi?',
+    subtitle: 'Tutakuonyesha mitihani na mazoezi ya mitihani ya nchi yako. Unaweza kubadilisha wakati wowote kwenye Mipangilio.',
+  },
   language: {
     title: 'Chagua lugha yako',
     subtitle: 'Programu nzima, masomo yako na mwalimu wako wa AI vitatumia lugha hii mara moja.',
@@ -113,6 +117,7 @@ const personalize: Translation<typeof en> = {
       teachLevels: 'Wanafunzi',
       age: 'Kundi la umri',
       education: 'Kiwango',
+      region: 'Nchi ya masomo',
       pathway: 'Njia',
       exams: 'Mitihani',
       subjects: 'Masomo',
@@ -256,7 +261,7 @@ const personalize: Translation<typeof en> = {
   learnerTypes: {
     school: { label: 'Mwanafunzi wa shule', description: 'Shule ya msingi au sekondari' },
     university: { label: 'Chuo kikuu au chuo', description: 'Shahada, stashahada au ND/HND' },
-    exam: { label: 'Mtahiniwa', description: 'Anajiandaa kwa JAMB, WAEC, IELTS na mingineyo' },
+    exam: { label: 'Mtahiniwa', description: 'Anajiandaa kwa JAMB, WAEC, IELTS na mingineyo', descriptionFor: 'Anajiandaa kwa {{exams}} na mingineyo' },
     professional: { label: 'Mfanyakazi', description: 'Kuongeza ujuzi au kupata cheti' },
     lifelong: { label: 'Mpenda kujifunza', description: 'Kujifunza kitu kipya kwa kujifurahisha' },
     teacher: { label: 'Mwalimu au mkufunzi', description: 'Unda madarasa, toa mazoezi, fuatilia maendeleo' },
@@ -265,7 +270,7 @@ const personalize: Translation<typeof en> = {
     'school-teacher': { label: 'Mwalimu wa shule', description: 'Shule ya msingi au sekondari' },
     lecturer: { label: 'Mhadhiri', description: 'Chuo kikuu, chuo cha ufundi au chuo' },
     'private-tutor': { label: 'Mkufunzi binafsi', description: 'Mmoja kwa mmoja au vikundi vidogo' },
-    'exam-coach': { label: 'Mkufunzi wa maandalizi ya mtihani', description: 'JAMB, WAEC, IELTS na mingineyo' },
+    'exam-coach': { label: 'Mkufunzi wa maandalizi ya mtihani', description: 'JAMB, WAEC, IELTS na mingineyo', descriptionFor: '{{exams}} na mingineyo' },
     parent: { label: 'Mzazi au anayefundisha nyumbani', description: 'Kuwaongoza watoto wangu mwenyewe' },
   },
   teachLevelOptions: {

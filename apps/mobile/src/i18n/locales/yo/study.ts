@@ -199,7 +199,7 @@ const study: Translation<typeof en> = {
     topicLabel: 'Àkòrí',
     topicPlaceholder: 'àpẹẹrẹ: Bí abẹ́rẹ́ àjẹsára ṣe ń ṣiṣẹ́',
     focusLabel: 'Ṣé nǹkan pàtó kan wà? (kò pọn dandan)',
-    focusPlaceholder: 'àpẹẹrẹ: fún WAEC, gbájú mọ́ ìṣirò',
+    focusPlaceholder: 'àpẹẹrẹ: fún {{exam}}, gbájú mọ́ ìṣirò',
     popular: 'GBAJÚMỌ̀ BÁYÌÍ',
     ideas: {
       photosynthesis: 'Photosynthesis',
@@ -337,7 +337,7 @@ const study: Translation<typeof en> = {
     subject: 'Ẹ̀kọ́',
     folderName: 'Orúkọ fódà',
     tags: 'Àmì',
-    tagsPlaceholder: 'àpẹẹrẹ: WAEC, sáà 2, àtúnyẹ̀wò',
+    tagsPlaceholder: 'àpẹẹrẹ: {{exam}}, sáà 2, àtúnyẹ̀wò',
     tagsHint: 'Fi kọ́mà ya àwọn àmì sọ́tọ̀',
     created: 'A ṣẹ̀dá rẹ̀ ní {{date}} láti {{source}}',
   },

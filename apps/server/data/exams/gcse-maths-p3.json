@@ -1,0 +1,401 @@
+{
+ "id": "gcse-maths-p3",
+ "exam": "gcse",
+ "subject": "maths",
+ "year": null,
+ "number": 3,
+ "source": "ai",
+ "minutes": 35,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Simultaneous equations",
+   "q": "Amara buys 3 notebooks and 2 pens for £4.60. Callum buys 2 notebooks and 5 pens for £4.90. Notebooks all cost the same and pens all cost the same. Work out the cost of one notebook and one pen.",
+   "options": [
+    "Notebook £1.10, pen £0.65",
+    "Notebook £1.20, pen £0.50",
+    "Notebook £1.40, pen £0.20",
+    "Notebook £0.90, pen £0.95"
+   ],
+   "answer": 1,
+   "explanation": "Let n and p be the costs in pounds. Then 3n + 2p = 4.60 and 2n + 5p = 4.90. Multiplying the first equation by 5 and the second by 2 gives 15n + 10p = 23.00 and 4n + 10p = 9.80, so 11n = 13.20 and n = 1.20; substituting gives p = 0.50. Therefore a notebook costs £1.20 and a pen costs £0.50."
+  },
+  {
+   "n": 2,
+   "topic": "Simultaneous equations",
+   "q": "Two positive numbers x and y satisfy x − y = 3 and xy = 40. Work out the value of x + y.",
+   "options": [
+    "12",
+    "13",
+    "11",
+    "15"
+   ],
+   "answer": 1,
+   "explanation": "Use (x + y)² = (x − y)² + 4xy. This gives (x + y)² = 3² + 4 × 40 = 169, and since x and y are positive, x + y = 13. Solving y² + 3y − 40 = 0 also gives y = 5 and x = 8, so the sum is 13."
+  },
+  {
+   "n": 3,
+   "topic": "Simultaneous equations",
+   "q": "Solve the simultaneous equations 5x + 2y = 11 and 3x − y = 5. Give x and y exactly as fractions in their simplest form.",
+   "options": [
+    "x = 21/11, y = −8/11",
+    "x = 21/11, y = 8/11",
+    "x = −1, y = 8",
+    "x = 16/11, y = −7/11"
+   ],
+   "answer": 1,
+   "explanation": "Rearrange 3x − y = 5 to get y = 3x − 5. Substituting into 5x + 2y = 11 gives 5x + 2(3x − 5) = 11, so 11x − 10 = 11 and x = 21/11. Then y = 3(21/11) − 5 = 63/11 − 55/11 = 8/11. Using y = 5 − 3x reverses the sign of the y-term and gives the invalid pair x = −1, y = 8."
+  },
+  {
+   "n": 4,
+   "topic": "Angles and polygons",
+   "q": "The sum of the interior angles of a polygon is 1440°. How many sides does the polygon have?",
+   "options": [
+    "12",
+    "9",
+    "8",
+    "10"
+   ],
+   "answer": 3,
+   "explanation": "A polygon with n sides has interior angle sum (n − 2) × 180°. So (n − 2) × 180 = 1440, giving n − 2 = 8 and n = 10. The value 8 is n − 2, not the number of sides."
+  },
+  {
+   "n": 5,
+   "topic": "Angles and polygons",
+   "q": "In triangle PQR, angle P = (2x + 5)°, angle Q = (3x − 10)°. The exterior angle at R is 110°. Work out the value of x.",
+   "options": [
+    "23",
+    "37",
+    "51",
+    "15"
+   ],
+   "answer": 0,
+   "explanation": "The interior angle at R is 180° − 110° = 70°. Summing the interior angles gives (2x + 5) + (3x − 10) + 70 = 180, so 5x + 65 = 180 and x = 23. Using 110° as the interior angle instead gives x = 15, but 110° is the exterior angle."
+  },
+  {
+   "n": 6,
+   "topic": "Fractions, decimals and percentages",
+   "q": "Work out 2 1/3 ÷ 5/6. Give your answer as a mixed number in its simplest form.",
+   "options": [
+    "2 3/5",
+    "2 4/5",
+    "3 1/5",
+    "1 17/18"
+   ],
+   "answer": 1,
+   "explanation": "Write 2 1/3 as 7/3. Dividing by 5/6 is the same as multiplying by 6/5, so 7/3 × 6/5 = 42/15 = 14/5 = 2 4/5. Multiplying by 5/6 instead gives 35/18 = 1 17/18, which is not correct."
+  },
+  {
+   "n": 7,
+   "topic": "Fractions, decimals and percentages",
+   "q": "In a sale, the price of a bicycle is reduced by 18%. The sale price is £492. Work out the original price of the bicycle.",
+   "options": [
+    "£416.95",
+    "£600",
+    "£474.00",
+    "£580.56"
+   ],
+   "answer": 1,
+   "explanation": "A reduction of 18% means the sale price is 82% of the original, so 0.82 × original = 492. Hence original = 492 ÷ 0.82 = 600, so the original price is £600. Adding 18% to £492 gives £580.56, which increases the sale price instead of reversing the reduction."
+  },
+  {
+   "n": 8,
+   "topic": "Circle theorems",
+   "q": "ABCD is a cyclic quadrilateral. Angle ABC = (3x + 20)° and angle ADC = (2x + 30)°. Work out the value of x.",
+   "options": [
+    "62",
+    "26",
+    "10",
+    "46"
+   ],
+   "answer": 1,
+   "explanation": "In a cyclic quadrilateral, opposite angles add to 180°. Therefore (3x + 20) + (2x + 30) = 180, so 5x + 50 = 180 and x = 26. Setting the two opposite angles equal would give x = 10, but opposite angles in a cyclic quadrilateral are supplementary, not generally equal."
+  },
+  {
+   "n": 9,
+   "topic": "Circle theorems",
+   "q": "In a circle with centre O, A and B are points on the circumference. C is a point on the major arc AB. Angle ACB = 37°. Work out the size of the reflex angle AOB.",
+   "options": [
+    "74°",
+    "323°",
+    "286°",
+    "143°"
+   ],
+   "answer": 2,
+   "explanation": "The angle at the centre subtended by the minor arc AB is twice angle ACB, so the smaller angle AOB is 2 × 37° = 74°. The reflex angle AOB is the rest of a full turn: 360° − 74° = 286°. Subtracting 37° instead of 74° would give 323°, but the angle at the centre is double the angle at the circumference."
+  },
+  {
+   "n": 10,
+   "topic": "Pythagoras’ theorem and trigonometry",
+   "q": "A rectangular garden gate is 2.4 m high and 1.8 m wide. A diagonal brace runs from one corner to the opposite corner. How long is the brace?",
+   "options": [
+    "0.6 m",
+    "4.2 m",
+    "3.0 m",
+    "9.0 m"
+   ],
+   "answer": 2,
+   "explanation": "The brace is the hypotenuse of a right-angled triangle with legs 2.4 m and 1.8 m, so its length is √(2.4² + 1.8²) = √9.0 = 3.0 m. The value 4.2 m comes from adding the two sides, while 9.0 m comes from forgetting to take the square root."
+  },
+  {
+   "n": 11,
+   "topic": "Pythagoras’ theorem and trigonometry",
+   "q": "In a right-angled triangle, one angle is 60°. The side adjacent to this angle, but not the hypotenuse, is 7 cm. Work out the length of the hypotenuse.",
+   "options": [
+    "7√3 cm",
+    "3.5 cm",
+    "14 cm",
+    "7/√3 cm"
+   ],
+   "answer": 2,
+   "explanation": "Using the cosine ratio, cos 60° = adjacent ÷ hypotenuse = 1/2, so 1/2 = 7 ÷ hypotenuse and the hypotenuse is 14 cm. The value 7√3 cm is the length of the opposite side, and 3.5 cm comes from multiplying by cos 60° instead of dividing."
+  },
+  {
+   "n": 12,
+   "topic": "Pythagoras’ theorem and trigonometry",
+   "q": "In a right-angled triangle, the hypotenuse is 12 cm and one angle is 45°. Work out the exact length of the side opposite the 45° angle.",
+   "options": [
+    "6√2 cm",
+    "6 cm",
+    "12√2 cm",
+    "6√3 cm"
+   ],
+   "answer": 0,
+   "explanation": "The opposite side is hypotenuse × sin 45° = 12 × √2/2 = 6√2 cm. Using 1/2 for sin 45° gives 6 cm, which is a common error; the adjacent side also has length 6√2 cm because the triangle is isosceles."
+  },
+  {
+   "n": 13,
+   "topic": "Statistics",
+   "q": "The Leicester Hawks hockey team scored the following numbers of goals in 25 matches. Goals per match: 0, 1, 2, 3, 4; Number of matches: 6, 8, 7, 3, 1. Work out the mean number of goals per match.",
+   "options": [
+    "1.4 goals",
+    "35 goals",
+    "2 goals",
+    "1.75 goals"
+   ],
+   "answer": 0,
+   "explanation": "The total number of goals is 0×6 + 1×8 + 2×7 + 3×3 + 4×1 = 35, and there are 25 matches in total. The mean is 35 ÷ 25 = 1.4 goals. The value 2 goals is the unweighted mean of the possible scores 0 to 4, ignoring the match frequencies."
+  },
+  {
+   "n": 14,
+   "topic": "Statistics",
+   "q": "Nine students at a college in Swansea recorded the times, in minutes, they took to travel to college: 2, 3, 5, 7, 8, 10, 12, 14, 15. Work out the interquartile range.",
+   "options": [
+    "17 minutes",
+    "8 minutes",
+    "13 minutes",
+    "9 minutes"
+   ],
+   "answer": 3,
+   "explanation": "The data are already in order. The lower quartile is 4 minutes and the upper quartile is 13 minutes, so the interquartile range is 13 − 4 = 9 minutes. The value 13 minutes is the range (15 − 2), not the interquartile range."
+  },
+  {
+   "n": 15,
+   "topic": "Linear equations and inequalities",
+   "q": "Solve 4(x + 3) = 2x + 18.",
+   "options": [
+    "x = 15",
+    "x = −3",
+    "x = 1.5",
+    "x = 3"
+   ],
+   "answer": 3,
+   "explanation": "Expanding the bracket gives 4x + 12 = 2x + 18. Subtracting 2x and then 12 gives 2x = 6, so x = 3. The solution x = 15 comes from a sign error when collecting terms."
+  },
+  {
+   "n": 16,
+   "topic": "Linear equations and inequalities",
+   "q": "Solve 7 − 3x > 1. Give the solution in the form x ...",
+   "options": [
+    "x > −2",
+    "x < −2",
+    "x < 2",
+    "x > 2"
+   ],
+   "answer": 2,
+   "explanation": "Subtracting 7 gives −3x > −6. Dividing by −3 reverses the inequality, so x < 2. The answer x > 2 is obtained if the inequality is not reversed after dividing by a negative number."
+  },
+  {
+   "n": 17,
+   "topic": "Linear equations and inequalities",
+   "q": "Amina has £3 more than twice the amount Yusuf has. Together they have £30. How much does Yusuf have?",
+   "options": [
+    "£13.50",
+    "£9",
+    "£10",
+    "£21"
+   ],
+   "answer": 1,
+   "explanation": "Let Yusuf have y pounds, so Amina has 2y + 3 pounds. Then y + (2y + 3) = 30, giving 3y = 27 and y = 9. Amina has £21, while £10 results from ignoring the extra £3."
+  },
+  {
+   "n": 18,
+   "topic": "Graphs of functions",
+   "q": "For the graph of y = x² − 6x + 5, what is the equation of the line of symmetry and the coordinates of the turning point?",
+   "options": [
+    "x = 3 and the minimum is (3, −4)",
+    "x = 3 and the maximum is (3, −4)",
+    "x = −3 and the maximum is (−3, 4)",
+    "x = −3 and the minimum is (−3, −4)"
+   ],
+   "answer": 0,
+   "explanation": "Completing the square gives y = (x − 3)² − 4, so the line of symmetry is x = 3 and the minimum point is (3, −4). The parabola opens upwards because the coefficient of x² is positive, so the turning point is a minimum rather than a maximum."
+  },
+  {
+   "n": 19,
+   "topic": "Graphs of functions",
+   "q": "A straight line has equation 2y + 6x = 8. What is its gradient and its y-intercept?",
+   "options": [
+    "gradient −3, y-intercept 4",
+    "gradient 3, y-intercept 4",
+    "gradient −6, y-intercept 8",
+    "gradient −3, y-intercept 8"
+   ],
+   "answer": 0,
+   "explanation": "Rearrange the equation: 2y = −6x + 8, then y = −3x + 4. The gradient is the coefficient of x, −3, and the y-intercept is 4. The values −6 and 8 are the coefficients before dividing the whole equation by 2."
+  },
+  {
+   "n": 20,
+   "topic": "Perimeter, area and volume",
+   "q": "A rectangular paving slab is 0.6 m long, 0.45 m wide and 0.08 m thick. What is its volume in cm³?",
+   "options": [
+    "21.6 cm³",
+    "21 600 cm³",
+    "2 160 cm³",
+    "216 000 cm³"
+   ],
+   "answer": 1,
+   "explanation": "0.6 m = 60 cm, 0.45 m = 45 cm and 0.08 m = 8 cm. Multiplying gives 60 × 45 × 8 = 21 600 cm³. Multiplying the volume in m³ by 1 000 instead of 1 000 000 would give 21.6 cm³."
+  },
+  {
+   "n": 21,
+   "topic": "Transformations and vectors",
+   "q": "In a coordinate plane, a = (3, −2) and b = (−1, 5) are column vectors giving the positions of two points from the origin. What is the column vector for the journey from the first point to the second point?",
+   "options": [
+    "(2, −3)",
+    "(4, −7)",
+    "(−4, 7)",
+    "(−2, 3)"
+   ],
+   "answer": 2,
+   "explanation": "The vector for the journey is b − a = (−1, 5) − (3, −2) = (−4, 7). Adding the position vectors instead gives (2, 3), which is not the journey between the two points."
+  },
+  {
+   "n": 22,
+   "topic": "Sequences",
+   "q": "The first four terms of a linear sequence are 9, 15, 21, 27. Which expression gives the nth term?",
+   "options": [
+    "6n − 3",
+    "6n + 3",
+    "3n + 6",
+    "6n + 9"
+   ],
+   "answer": 1,
+   "explanation": "The common difference is 6, so the nth term has the form 6n + c. For n = 1, 6 × 1 + c = 9, so c = 3, giving 6n + 3. Using 6n + 9 gives 15 for the first term, which is the second term rather than the first."
+  },
+  {
+   "n": 23,
+   "topic": "Ratio and proportion",
+   "q": "At a badminton club, the ratio of members aged under 18 to members aged 18 or over is 7:4. There are 96 members aged 18 or over. How many members are aged under 18?",
+   "options": [
+    "168",
+    "264",
+    "24",
+    "96"
+   ],
+   "answer": 0,
+   "explanation": "The 4 parts for members aged 18 or over equal 96, so each part is 96 ÷ 4 = 24. The under-18 group has 7 parts: 7 × 24 = 168. The total number of members would be 11 × 24 = 264, not the under-18 number."
+  },
+  {
+   "n": 24,
+   "topic": "Perimeter, area and volume",
+   "q": "A garden lawn is a semicircle with its straight edge 16 m long. Taking π = 3.14, what is the area of the lawn?",
+   "options": [
+    "401.92 m²",
+    "100.48 m²",
+    "200.96 m²",
+    "50.24 m²"
+   ],
+   "answer": 1,
+   "explanation": "The straight edge is the diameter, so the radius is 16 ÷ 2 = 8 m. The full circle area is π × 8² = 3.14 × 64 = 200.96 m², and a semicircle is half of that: 100.48 m². Using the straight edge as the radius leads to a much larger value, while forgetting to halve the full circle gives 200.96 m²."
+  },
+  {
+   "n": 25,
+   "topic": "Transformations and vectors",
+   "q": "The point P has coordinates (5, −2). It is rotated 90° clockwise about the origin. What are the coordinates of the image of P?",
+   "options": [
+    "(−2, 5)",
+    "(−5, 2)",
+    "(−2, −5)",
+    "(2, 5)"
+   ],
+   "answer": 2,
+   "explanation": "A 90° clockwise rotation about the origin maps (x, y) to (y, −x). So (5, −2) becomes (−2, −5). A 90° anticlockwise rotation would give (2, 5)."
+  },
+  {
+   "n": 26,
+   "topic": "Sequences",
+   "q": "A geometric sequence begins 80, 40, 20, 10. What is the 7th term?",
+   "options": [
+    "5",
+    "1.25",
+    "0.625",
+    "2.5"
+   ],
+   "answer": 1,
+   "explanation": "The sequence halves each time. Continuing gives 80, 40, 20, 10, 5, 2.5, 1.25, so the 7th term is 1.25. Choosing 2.5 gives the 6th term, not the 7th."
+  },
+  {
+   "n": 27,
+   "topic": "Ratio and proportion",
+   "q": "A map has scale 1:25 000. A nature reserve is shown as an area of 12 cm² on the map. What is the actual area of the reserve in km²?",
+   "options": [
+    "75 km²",
+    "3 km²",
+    "0.075 km²",
+    "0.75 km²"
+   ],
+   "answer": 3,
+   "explanation": "The scale means 1 cm represents 25 000 cm = 0.25 km. For areas, square the scale factor: 1 cm² represents 0.25² = 0.0625 km². Therefore 12 cm² represents 12 × 0.0625 = 0.75 km²; using 12 × 0.25 gives 3 km², which treats the scale as applying to length rather than area."
+  },
+  {
+   "n": 28,
+   "topic": "Perimeter, area and volume",
+   "q": "A fish tank is a cuboid with internal dimensions 50 cm by 30 cm by 40 cm. It is filled with water to 5 cm below the top. How many litres of water does it contain?",
+   "options": [
+    "55 litres",
+    "52.5 litres",
+    "60 litres",
+    "45 litres"
+   ],
+   "answer": 1,
+   "explanation": "The water depth is 40 − 5 = 35 cm. Its volume is 50 × 30 × 35 = 52 500 cm³, and since 1 000 cm³ = 1 litre this is 52.5 litres. Subtracting 5 litres from the full 60 litres gives 55 litres, but the 5 cm depth does not equal 5 litres of volume."
+  },
+  {
+   "n": 29,
+   "topic": "Transformations and vectors",
+   "q": "A shape is enlarged by scale factor −2 about the origin. A vertex of the original shape is at (3, −1). What are the coordinates of the corresponding vertex of the image?",
+   "options": [
+    "(6, −2)",
+    "(−3, 2)",
+    "(−6, −2)",
+    "(−6, 2)"
+   ],
+   "answer": 3,
+   "explanation": "Enlargement about the origin with scale factor −2 maps (x, y) to (−2x, −2y). So (3, −1) maps to (−6, 2). Using scale factor 2 without the negative sign would give (6, −2)."
+  },
+  {
+   "n": 30,
+   "topic": "Quadratic equations",
+   "q": "Solve x² + 2x − 15 = 0. Give the values of x.",
+   "options": [
+    "x = −5 or x = −3",
+    "x = −5 or x = 3",
+    "x = 5 or x = −3",
+    "x = 5 or x = 3"
+   ],
+   "answer": 1,
+   "explanation": "The expression factorises as (x + 5)(x − 3) = 0, so x = −5 or x = 3. The values 5 and −3 come from changing the signs of both factors, while 5 and 3 keep the wrong signs in both factors."
+  }
+ ]
+}

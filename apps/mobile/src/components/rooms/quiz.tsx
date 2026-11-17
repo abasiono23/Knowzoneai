@@ -6,10 +6,10 @@ import { Pressable, ScrollView, StyleSheet, View } from 'react-native';
 import { Chip, Sheet } from '@/components/rooms/ui';
 import { Button, Card, ProgressBar, Text } from '@/components/ui';
 import { Colors, Fonts, Radius, Spacing } from '@/constants/theme';
-import { EXAM_IDS, LETTERS, pretty, SUBJECT_ICONS, type ExamId, type ExamSubjectId } from '@/lib/exams';
+import { EXAM_IDS, EXAM_SUBJECTS, LETTERS, pretty, type ExamId, type ExamSubjectId } from '@/lib/exams';
+import { currentRegion, examsForRegion } from '@/lib/region';
 import { quizStage, type RoomQuiz } from '@/lib/rooms';
 
-const SUBJECTS = Object.keys(SUBJECT_ICONS) as ExamSubjectId[];
 const MEDALS = ['🥇', '🥈', '🥉'];
 
 /**
@@ -202,11 +202,22 @@ export function QuizSheet({
 }) {
   const { t } = useTranslation('rooms');
   const te = useTranslation('exams').t as unknown as (key: string) => string;
-  const [exam, setExam] = useState<ExamId>('jamb');
+  // The host's own exams first (JAMB in Nigeria, SAT in the US…), then everyone else's.
+  const [exams] = useState(() => {
+    const mine = examsForRegion(currentRegion());
+    return [...mine, ...EXAM_IDS.filter((e) => !mine.includes(e))];
+  });
+  const [exam, setExam] = useState<ExamId>(exams[0]!);
+  const subjects = EXAM_SUBJECTS[exam];
   // Start on the room's subject when it matches one ("Maths" → Mathematics).
-  const [subject, setSubject] = useState<ExamSubjectId>(
-    () => SUBJECTS.find((s) => roomSubject?.toLowerCase().includes(s.slice(0, 4))) ?? 'mathematics',
+  const [chosen, setSubject] = useState<ExamSubjectId>(
+    () =>
+      subjects.find((s) => roomSubject?.toLowerCase().includes(s.slice(0, 4))) ??
+      subjects.find((s) => s.startsWith('math')) ??
+      subjects[0]!,
   );
+  // Each exam has its own subjects: one the new exam doesn't have falls back to its first.
+  const subject = subjects.includes(chosen) ? chosen : subjects[0]!;
   return (
     <Sheet visible={visible} title={t('quiz.start')} onClose={onClose}>
       <Text variant="small" color={Colors.textSecondary}>
@@ -216,7 +227,7 @@ export function QuizSheet({
         {t('quiz.exam')}
       </Text>
       <View style={styles.chips}>
-        {EXAM_IDS.map((e) => (
+        {exams.map((e) => (
           <Chip key={e} label={te(`exams.${e}.name`)} on={exam === e} onPress={() => setExam(e)} />
         ))}
       </View>
@@ -225,7 +236,7 @@ export function QuizSheet({
       </Text>
       <ScrollView style={{ maxHeight: 220 }}>
         <View style={styles.chips}>
-          {SUBJECTS.map((s) => (
+          {subjects.map((s) => (
             <Chip key={s} label={te(`subjects.${s}`)} on={subject === s} onPress={() => setSubject(s)} />
           ))}
         </View>

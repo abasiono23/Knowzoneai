@@ -52,6 +52,7 @@ const settings: Translation<typeof en> = {
     activeCount_other: '{{count}} ativos',
     activeCount_many: '{{count}} ativos',
     language: 'Idioma',
+    region: 'País de estudo',
     appearance: 'Aparência',
     privacy: 'Privacidade',
     downloadData: 'Descarregar os meus dados',
@@ -97,6 +98,11 @@ const settings: Translation<typeof en> = {
     reduceMotionHint: 'Menos animações em toda a app',
     haptics: 'Vibração nos jogos',
     hapticsHint: 'Resposta tátil no Knowzone World',
+  },
+  region: {
+    title: 'País de estudo',
+    intro: 'Escolhe o país onde estudas. O Knowzone mostra primeiro o treino para os exames desse país, e o teu tutor de IA segue os exames de lá.',
+    footer: 'As tuas pontuações mantêm-se quando mudas de país, e podes abrir as provas de outros países na página de treino para exames.',
   },
   language: {
     title: 'Idioma',

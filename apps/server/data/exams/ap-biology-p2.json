@@ -1,0 +1,791 @@
+{
+ "id": "ap-biology-p2",
+ "exam": "ap",
+ "subject": "biology",
+ "year": null,
+ "number": 2,
+ "source": "ai",
+ "minutes": 90,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Ecology",
+   "q": "Salt-marsh producers assimilate 48,000 kJ·m⁻²·yr⁻¹ of energy. Primary consumers in the same marsh assimilate 4,800 kJ·m⁻²·yr⁻¹, and secondary consumers assimilate 600 kJ·m⁻²·yr⁻¹. What is the trophic efficiency from primary consumers to secondary consumers?",
+   "options": [
+    "20%",
+    "10%",
+    "1.25%",
+    "12.5%"
+   ],
+   "answer": 3,
+   "explanation": "Trophic efficiency between these levels is (600 ÷ 4,800) × 100% = 12.5%. The 10% value is a common average, not the value calculated for these data; 20% would result from using a different numerator or denominator."
+  },
+  {
+   "n": 2,
+   "topic": "Cell structure and function",
+   "q": "In an experiment with cultured animal cells, leucine uptake is measured under four conditions. When Na⁺ and ATP are both available, uptake is 12 µmol·mg⁻¹·min⁻¹. When Na⁺ is replaced by choline but ATP is available, uptake is 1.4. When Na⁺ is present but ATP synthesis is blocked, uptake is 0.8. At 4°C with Na⁺ and ATP, uptake is 0.2. Which conclusion is best supported by these data?",
+   "options": [
+    "Na⁺ has little effect because the small uptake remaining in choline shows that leucine enters freely.",
+    "Leucine crosses mainly by simple diffusion, and ATP increases membrane fluidity.",
+    "Leucine uptake is powered by a channel that opens only when ATP hydrolysis occurs, with no role for Na⁺.",
+    "Leucine uptake is strongly enhanced by Na⁺ and requires ATP, consistent with secondary active transport powered by the Na⁺ gradient."
+   ],
+   "answer": 3,
+   "explanation": "The high uptake requires both extracellular Na⁺ and ATP; replacing Na⁺ or blocking ATP production greatly reduces leucine uptake, as expected for secondary active transport driven by a Na⁺ gradient maintained by ATP. The small residual uptake does not support simple diffusion or an ATP-gated channel as the main mechanism."
+  },
+  {
+   "n": 3,
+   "topic": "Heredity",
+   "q": "In tomato plants, the genes for fruit shape and stem color are linked on the same autosome. A plant heterozygous for the dominant alleles R (round fruit) and G (green stem), with R and G on one homolog and r and g on the other, is testcrossed. The progeny are: round green 395; oval purple 405; round purple 95; oval green 105. Which is the best estimate of the recombination frequency between these genes?",
+   "options": [
+    "20%",
+    "50%",
+    "10%",
+    "5%"
+   ],
+   "answer": 0,
+   "explanation": "The recombinant progeny are the round purple and oval green classes: 95 + 105 = 200. Dividing by the total 1,000 progeny gives 0.20, or 20% recombination; the two large classes are parental types."
+  },
+  {
+   "n": 4,
+   "topic": "Natural selection",
+   "q": "In a population of grasshoppers, a locus has two alleles, M and m. Before a drought, genotype frequencies are MM 0.36, Mm 0.48, and mm 0.16. During the drought, birds eat all mm grasshoppers before reproduction, while MM and Mm individuals survive equally and mate randomly. What is the frequency of the M allele among the survivors that reproduce?",
+   "options": [
+    "0.71",
+    "1.00",
+    "0.84",
+    "0.60"
+   ],
+   "answer": 0,
+   "explanation": "After mm individuals are removed, the surviving genotypes are MM 0.36 and Mm 0.48 out of a total surviving frequency of 0.84. The M allele frequency is (2 × 0.36 + 0.48)/(2 × 0.84) = 1.20/1.68 = 0.714, approximately 0.71."
+  },
+  {
+   "n": 5,
+   "topic": "Ecology",
+   "q": "Wildlife biologists monitor a prairie dog colony in New Mexico. The yearly population counts are: Year 0 | 40; Year 1 | 60; Year 2 | 88; Year 3 | 120; Year 4 | 152; Year 5 | 170; Year 6 | 174; Year 7 | 176. Which conclusion is best supported by these data?",
+   "options": [
+    "The population is growing logistically, with carrying capacity near 176.",
+    "The population is growing exponentially because the number of individuals added each year is positive.",
+    "The population is experiencing density-independent growth because it continues to increase.",
+    "The carrying capacity is exactly 120 because growth slows after year 3."
+   ],
+   "answer": 0,
+   "explanation": "Growth is rapid at first but the yearly increase falls from 32 individuals between years 2 and 3 to about 2 between years 6 and 7, while the population levels near 176. This pattern fits logistic growth approaching a carrying capacity; positive growth alone does not imply exponential growth."
+  },
+  {
+   "n": 6,
+   "topic": "Cell structure and function",
+   "q": "An enzyme-catalyzed reaction is studied alone and with two inhibitors, X and Y. With inhibitor X, the reaction reaches the same maximum velocity at very high substrate concentration as the uninhibited reaction, but a higher substrate concentration is needed to reach half of that maximum velocity. With inhibitor Y, the maximum velocity is lower than in the uninhibited reaction, but the substrate concentration needed for half-maximum velocity is unchanged. Which conclusion is best supported?",
+   "options": [
+    "Inhibitor X is noncompetitive, while inhibitor Y is competitive.",
+    "Both inhibitors increase the enzyme's affinity for substrate.",
+    "Inhibitor X is competitive, while inhibitor Y is noncompetitive.",
+    "Both inhibitors compete with the substrate for the active site."
+   ],
+   "answer": 2,
+   "explanation": "In competitive inhibition, inhibitor X can be overcome by high substrate, so Vmax is unchanged while the apparent Km increases. Inhibitor Y lowers Vmax without changing apparent Km, which is characteristic of noncompetitive inhibition."
+  },
+  {
+   "n": 7,
+   "topic": "Heredity",
+   "q": "Jamal and Lin are both healthy, and each has a biological sibling with an autosomal recessive condition. Neither Jamal nor Lin has an affected parent, and the condition is rare outside their families. They are planning a child. Assuming no other relevant mutations, what is the probability that their child will have the condition?",
+   "options": [
+    "1/9",
+    "1/6",
+    "1/4",
+    "2/3"
+   ],
+   "answer": 0,
+   "explanation": "For a rare autosomal recessive condition, an unaffected sibling of an affected child with unaffected parents has probability 2/3 of being a carrier. The chance that both Jamal and Lin are carriers is (2/3) × (2/3) = 4/9, and if both are carriers the chance of an affected child is 1/4, giving (4/9) × (1/4) = 1/9."
+  },
+  {
+   "n": 8,
+   "topic": "Natural selection",
+   "q": "A researcher studies house sparrows after a severe winter storm. Before the storm, wing length averages 82 mm with high variance. Among birds that survive the storm, the mean wing length is still about 82 mm, but very short and very long wings are much less common than before. Which mode of natural selection best describes the storm's effect on wing length?",
+   "options": [
+    "Disruptive selection",
+    "Stabilizing selection",
+    "Directional selection",
+    "Frequency-dependent selection"
+   ],
+   "answer": 1,
+   "explanation": "Stabilizing selection favors intermediate phenotypes and reduces extreme variation while keeping the mean roughly the same. Directional selection would shift the mean, and disruptive selection would favor both extremes rather than reduce them."
+  },
+  {
+   "n": 9,
+   "topic": "Cell structure and function",
+   "q": "In cultured human cells, compound Z increases the fraction of cells in mitosis from 8% to 42%. Microscopy shows condensed chromosomes arranged at the metaphase plate, but sister chromatids remain attached and do not separate. Which process is most directly blocked by compound Z?",
+   "options": [
+    "The mitotic spindle fails to move chromatids to opposite poles during anaphase.",
+    "Cyclin-dependent kinases cannot initiate the G1-to-S transition.",
+    "DNA replication cannot begin at origins of replication.",
+    "The cell cannot re-form a nuclear envelope after telophase."
+   ],
+   "answer": 0,
+   "explanation": "Condensed chromosomes aligned at the metaphase plate indicate the cells have reached mitosis, so DNA replication and the G1-to-S transition are not the direct block. Failure to separate chromatids after metaphase points to defective spindle function during anaphase."
+  },
+  {
+   "n": 10,
+   "topic": "Ecology",
+   "q": "Researchers in Oregon compare rocky intertidal plots with and without a predatory sea star. In plots with sea stars, mussels cover about 30% of the rock and 12 invertebrate species are present. In plots where sea stars are removed, mussels cover 85% of the rock and species richness falls to 5. Which conclusion is best supported?",
+   "options": [
+    "Mussel dominance increases species richness because mussels create habitat for other invertebrates.",
+    "The sea star is a primary producer that supplies energy to the intertidal community.",
+    "Removing the sea star increased the carrying capacity of the intertidal community.",
+    "The sea star acts as a keystone predator that helps maintain species diversity by limiting mussel dominance."
+   ],
+   "answer": 3,
+   "explanation": "Removing the predator allows mussels, a dominant competitor, to cover most of the rock and exclude other species. A predator that has a disproportionately large effect on community structure relative to its abundance is a keystone species."
+  },
+  {
+   "n": 11,
+   "topic": "Chemistry of life",
+   "q": "Students place equal volumes of two solutions on opposite sides of a membrane that is permeable only to water. Solution X has a solute potential of –0.34 MPa and a pressure potential of 0.10 MPa. Solution Y has a solute potential of –0.22 MPa and a pressure potential of 0.04 MPa. At the same temperature, which statement describes net water movement across the membrane?",
+   "options": [
+    "Net water moves from solution X to solution Y because solution X has the higher pressure potential.",
+    "Net water moves from solution X to solution Y because solution X has the more negative solute potential.",
+    "Net water moves from solution Y to solution X because solution Y has the higher water potential.",
+    "No net water movement occurs because both solutions have positive pressure potentials."
+   ],
+   "answer": 2,
+   "explanation": "Water potential is Ψ = Ψs + Ψp, so X is –0.24 MPa and Y is –0.18 MPa. Water moves toward lower water potential, from Y to X. The positive pressure potential of X is already included in that calculation and is not enough to reverse the direction."
+  },
+  {
+   "n": 12,
+   "topic": "Chemistry of life",
+   "q": "Researchers study an enzyme that converts substrate S to product P. In the absence of inhibitor, the enzyme has Vmax = 120 μmol·min⁻¹ and Km = 3 mM. With a fixed concentration of compound Q present, Vmax remains 120 μmol·min⁻¹ but the apparent Km increases to 12 mM. Which statement best explains how compound Q affects the enzyme?",
+   "options": [
+    "Compound Q binds only to the enzyme–substrate complex and prevents the release of product, lowering the maximal rate.",
+    "Compound Q competes with substrate S for the active site, so a higher substrate concentration is needed to reach half-maximal velocity.",
+    "Compound Q binds outside the active site and permanently reduces the number of functional enzyme molecules.",
+    "Compound Q denatures the enzyme so that its affinity for substrate decreases and its maximal rate falls."
+   ],
+   "answer": 1,
+   "explanation": "A competitive inhibitor increases the apparent Km without changing Vmax because it can be overcome by adding more substrate. The unchanged Vmax rules out mechanisms that reduce the amount of active enzyme or block the enzyme–substrate complex from turning over. The data therefore fit competition at the active site."
+  },
+  {
+   "n": 13,
+   "topic": "Chemistry of life",
+   "q": "A purified enzyme normally has high activity. After the enzyme is treated with 8 M urea, which disrupts hydrogen bonds and hydrophobic interactions, activity falls to nearly zero. When urea is removed, activity returns to nearly the original level. If β-mercaptoethanol, which reduces disulfide bonds, is also present during refolding, more than 90% of the original activity still returns. Which conclusion is best supported by these observations?",
+   "options": [
+    "Urea permanently changes the primary structure of the enzyme, but the original structure is restored by disulfide bonds.",
+    "β-Mercaptoethanol restores activity by forming new peptide bonds between amino acids.",
+    "The enzyme can refold into an active conformation without disulfide bonds, so noncovalent interactions are sufficient to maintain the active shape under these conditions.",
+    "Disulfide bonds are required for enzyme activity because β-mercaptoethanol prevents all folding."
+   ],
+   "answer": 2,
+   "explanation": "Activity returns after urea is removed, showing that the primary sequence can specify the active conformation. Activity also returns when disulfide bonds are reduced, so those covalent cross-links are not required in this assay. Urea disrupts noncovalent interactions rather than the peptide bonds that define primary structure."
+  },
+  {
+   "n": 14,
+   "topic": "Cell communication and cell cycle",
+   "q": "Human fibroblasts express a receptor tyrosine kinase that responds to a growth factor. Normally, growth factor binding causes receptor dimerization, autophosphorylation, and activation of the Ras–MAPK pathway. A mutant cell line produces a receptor that still binds the growth factor but lacks intracellular kinase activity. After growth factor is added to these mutant cells, which outcome is most likely?",
+   "options": [
+    "MAPK is activated constitutively because the growth factor still binds to the receptor.",
+    "Transcription of growth-response genes increases because the mutant receptor phosphorylates itself more efficiently.",
+    "MAPK activation is reduced because the receptor cannot autophosphorylate or create docking sites for downstream signaling proteins.",
+    "cAMP concentration decreases because the mutant receptor activates a G protein coupled to adenylyl cyclase."
+   ],
+   "answer": 2,
+   "explanation": "RTK signaling requires ligand-induced dimerization followed by autophosphorylation, which creates binding sites for adaptor proteins that activate Ras and MAPK. A receptor that binds ligand but lacks kinase activity cannot propagate this signal. Growth factor binding alone does not make the pathway constitutively active, and RTKs do not act through cAMP in this pathway."
+  },
+  {
+   "n": 15,
+   "topic": "Cellular energetics",
+   "q": "Isolated chloroplasts are illuminated in the presence of an artificial electron acceptor that is blue when oxidized and colorless when reduced by electrons from photosystem I. Without a herbicide, the blue color fades rapidly. With a herbicide that blocks electron transfer from photosystem II to plastoquinone, the color fades much more slowly. Which explanation is best supported?",
+   "options": [
+    "The herbicide blocks electron flow from photosystem II, so fewer electrons reach photosystem I and less of the artificial acceptor is reduced.",
+    "Cyclic electron flow around photosystem I continues normally, so the artificial acceptor is reduced at the same rate as in untreated chloroplasts.",
+    "The herbicide blocks ATP synthase, preventing the proton gradient from being used to reduce the artificial acceptor.",
+    "The herbicide removes electrons from the artificial acceptor, keeping it oxidized and blue."
+   ],
+   "answer": 0,
+   "explanation": "The artificial acceptor becomes colorless when reduced by electrons reaching photosystem I. Blocking electron transfer out of photosystem II reduces electron flow to photosystem I, so more acceptor stays oxidized and blue. ATP synthase is not involved in reducing the acceptor, and the herbicide does not directly oxidize the acceptor."
+  },
+  {
+   "n": 16,
+   "topic": "Cellular energetics",
+   "q": "Chloroplasts are suspended in a buffered solution with light, CO₂, ADP, Pi, and NADP⁺. A compound is added that makes the thylakoid membrane permeable to H⁺ but does not affect electron transport or ATP synthase. Which immediate effect is most likely?",
+   "options": [
+    "CO₂ fixation is unaffected because the Calvin cycle uses protons directly instead of ATP and NADPH.",
+    "NADPH production stops immediately because photosystem I requires a proton gradient to transfer electrons.",
+    "ATP synthesis increases because protons can pass through ATP synthase more rapidly.",
+    "ATP synthesis decreases because the proton gradient across the thylakoid membrane is reduced."
+   ],
+   "answer": 3,
+   "explanation": "ATP synthase uses the proton motive force across the thylakoid membrane to make ATP. If H⁺ can leak across the membrane, the gradient is dissipated and less ATP is synthesized. Electron flow and NADPH production can continue initially because they do not directly require ATP synthase, and the Calvin cycle requires both ATP and NADPH."
+  },
+  {
+   "n": 17,
+   "topic": "Gene expression and regulation",
+   "q": "A eukaryotic gene contains four exons and three introns. The same pre-mRNA is transcribed in liver cells and muscle cells, and the pre-mRNA sequences are identical. In liver cells, the mature mRNA contains exons 1, 2, 3, and 4. In muscle cells, the mature mRNA contains exons 1, 2, and 4. Which mechanism best explains this difference?",
+   "options": [
+    "Different promoters in the two cell types produce mRNAs with different exon sequences.",
+    "RNA editing deletes exon 3 from the DNA in muscle cells before transcription.",
+    "Alternative splicing removes different exon combinations from the pre-mRNA in the two cell types.",
+    "DNA rearrangement in muscle cells permanently removes exon 3 from the gene."
+   ],
+   "answer": 2,
+   "explanation": "Both cell types produce the same pre-mRNA, so differences in mature mRNA arise during RNA processing. Alternative splicing can include or exclude particular exons, explaining why exon 3 is present in liver mRNA but absent in muscle mRNA. DNA rearrangements and RNA editing would not be the usual explanation for stable differences in exon inclusion between tissues."
+  },
+  {
+   "n": 18,
+   "topic": "Gene expression and regulation",
+   "q": "In a line of human cancer cells, the promoter of a tumor-suppressor gene is heavily methylated at CpG sites, and the gene is transcribed at very low levels. When the cells are treated with a drug that inhibits DNA methylation, transcription of the gene increases substantially. Which conclusion is best supported?",
+   "options": [
+    "DNA methylation in the promoter helps repress transcription, and reducing methylation can increase expression of the gene.",
+    "Methylation of the promoter increases transcription by making the DNA more available to RNA polymerase.",
+    "Methylation of the promoter changes the amino acid sequence of the tumor-suppressor protein.",
+    "The drug increases transcription because it causes a mutation that activates the promoter."
+   ],
+   "answer": 0,
+   "explanation": "Promoter methylation is associated with repressed chromatin and reduced transcription. A demethylating treatment that restores expression supports a repressive role for methylation at this promoter. Methylation does not change the coding sequence, and the drug's effect is best explained by altered regulation rather than a promoter mutation."
+  },
+  {
+   "n": 19,
+   "topic": "Ecology",
+   "q": "In a lake, largemouth bass eat minnows, minnows eat Daphnia, and Daphnia graze on algae. Researchers removed most bass from two experimental lakes but left bass in three control lakes. After one summer, experimental lakes had many minnows, few Daphnia, and high algal chlorophyll, while control lakes had few minnows, many Daphnia, and low algal chlorophyll. Which statement best explains the high algal chlorophyll in the experimental lakes?",
+   "options": [
+    "Removing bass allowed minnows to increase, which reduced Daphnia grazing and allowed algae to increase.",
+    "Daphnia increased after bass removal and released nutrients that stimulated algal growth.",
+    "Minnows increased and grazed heavily on algae, reducing competition between algae and Daphnia.",
+    "Removing bass directly released nutrients from bass carcasses, which was the main cause of algal growth."
+   ],
+   "answer": 0,
+   "explanation": "Bass are top predators, so removing them releases minnows from predation. More minnows eat more Daphnia, so grazing pressure on algae falls and algae increase. The experimental lakes had few Daphnia, so explanations that require many Daphnia are not supported."
+  },
+  {
+   "n": 20,
+   "topic": "Ecology",
+   "q": "A yeast population is growing logistically in a 1 L culture with carrying capacity K = 1.0 × 10⁷ cells and intrinsic growth rate r = 0.35 per hour. At the moment when the population size is 2.0 × 10⁶ cells, what is the instantaneous population growth rate, dN/dt, according to dN/dt = rN(1 − N/K)?",
+   "options": [
+    "1.4 × 10⁵ cells per hour",
+    "5.6 × 10⁵ cells per hour",
+    "8.75 × 10⁵ cells per hour",
+    "7.0 × 10⁵ cells per hour"
+   ],
+   "answer": 1,
+   "explanation": "N/K = 2.0 × 10⁶ / 1.0 × 10⁷ = 0.20, so 1 − N/K = 0.80. Then dN/dt = 0.35 × 2.0 × 10⁶ × 0.80 = 5.6 × 10⁵ cells per hour. Ignoring the carrying-capacity term gives 7.0 × 10⁵ cells per hour, a common mistake."
+  },
+  {
+   "n": 21,
+   "topic": "Ecology",
+   "q": "Two adjacent ponds have similar temperature and light. Pond A receives fertilizer runoff rich in nitrogen and phosphorus; Pond B does not. During the summer, Pond A has a dense algal bloom, low dissolved oxygen just before dawn, and many dead fish, while Pond B has clear water and higher dawn oxygen. Which explanation best accounts for the fish deaths in Pond A?",
+   "options": [
+    "Fertilizer directly poisons the fish, and the algal bloom has no role in oxygen depletion.",
+    "Bacteria decomposing the algae release carbon dioxide, which directly blocks fish gills from using oxygen.",
+    "Excess nutrients stimulate algae; when algae die, bacterial decomposition consumes oxygen and can lower dissolved oxygen enough to kill fish.",
+    "Algae increase oxygen during the day, so fish die from oxygen toxicity."
+   ],
+   "answer": 2,
+   "explanation": "Fertilizer runoff increases nutrients, causing algal growth. When algae die, heterotrophic bacteria decompose them and use dissolved oxygen, often making oxygen lowest before dawn after nighttime respiration. The combination of a bloom and low dawn oxygen is best explained by oxygen depletion, not direct fertilizer poisoning or oxygen toxicity."
+  },
+  {
+   "n": 22,
+   "topic": "Cell structure and function",
+   "q": "Two spherical animal cells have diameters of 10 µm and 20 µm. Both rely on diffusion across the plasma membrane. Which statement correctly compares their surface area-to-volume ratios and the likely consequence?",
+   "options": [
+    "The 20 µm cell has twice the surface area-to-volume ratio, so it can exchange materials more efficiently per unit volume.",
+    "The 10 µm cell has twice the surface area-to-volume ratio of the 20 µm cell, so it can exchange materials by diffusion more efficiently per unit of cell volume.",
+    "The 10 µm cell has half the surface area-to-volume ratio, so it must rely more on active transport than the larger cell.",
+    "The two cells have the same surface area-to-volume ratio because both are spheres."
+   ],
+   "answer": 1,
+   "explanation": "For a sphere, surface area is 4πr² and volume is (4/3)πr³, so SA/V = 3/r. The smaller cell has r = 5 µm and ratio 0.6 µm⁻¹, while the larger cell has r = 10 µm and ratio 0.3 µm⁻¹, twice as high in the smaller cell. Greater surface area-to-volume ratio supports faster diffusion per unit volume."
+  },
+  {
+   "n": 23,
+   "topic": "Heredity",
+   "q": "A couple, both unaffected, each has a brother affected by an autosomal recessive metabolic disorder. Their parents are unaffected, and there is no other family history. What is the probability that their first child will be affected by the disorder?",
+   "options": [
+    "1/2",
+    "1/9",
+    "1/16",
+    "1/4"
+   ],
+   "answer": 1,
+   "explanation": "Each partner has an affected sibling and unaffected parents, so each partner's parents must both be carriers. An unaffected sibling of an affected child has a 2/3 chance of being a carrier. Both partners must be carriers and both must transmit the recessive allele: (2/3)(2/3)(1/4) = 1/9. The value 1/4 would be correct only if both partners were already known carriers."
+  },
+  {
+   "n": 24,
+   "topic": "Heredity",
+   "q": "In a beetle species, pigment production requires a dominant allele P. Beetles with genotype pp are white regardless of other genes. Among pigmented beetles, allele D produces dark brown color and dd produces light brown color. Two dark brown beetles heterozygous at both genes (PpDd × PpDd) are crossed. What fraction of the offspring is expected to be white?",
+   "options": [
+    "1/16",
+    "1/4",
+    "3/16",
+    "9/16"
+   ],
+   "answer": 1,
+   "explanation": "White offspring must be pp, and the probability of receiving p from both heterozygous parents is 1/2 × 1/2 = 1/4. Because pp masks the D/d locus, the D genotype does not change the white fraction. Requiring both pp and dd would give 1/16, but dd matters only among pigmented beetles."
+  },
+  {
+   "n": 25,
+   "topic": "Natural selection",
+   "q": "In a lizard population, leg length varies continuously. After a predator that catches lizards with shorter legs is introduced, researchers find that the mean relative leg length increases from 1.2 to 1.6 over eight generations. Leg length is heritable, the population remains single-peaked, and both extremely short and extremely long lizards are present each generation. Which mode of natural selection best explains the change in mean leg length?",
+   "options": [
+    "Stabilizing selection favoring average leg length.",
+    "Disruptive selection favoring both short and long legs.",
+    "Directional selection favoring longer legs.",
+    "Genetic drift, because the population mean changed between generations."
+   ],
+   "answer": 2,
+   "explanation": "A consistent shift in the population mean toward longer legs with a single-peaked distribution indicates directional selection. Stabilizing selection would reduce extremes without shifting the mean, and disruptive selection would favor both extremes and produce a bimodal distribution. Genetic drift does not best explain a consistent relationship with predation on short-legged lizards."
+  },
+  {
+   "n": 26,
+   "topic": "Natural selection",
+   "q": "In a population of 500 beetles, body color is controlled by one gene with two alleles. The spotted phenotype appears only in homozygous recessive individuals. A scientist finds that 36% of the beetles are spotted. Assuming the population is in Hardy–Weinberg equilibrium, how many beetles are expected to be heterozygous?",
+   "options": [
+    "240 beetles",
+    "360 beetles",
+    "120 beetles",
+    "200 beetles"
+   ],
+   "answer": 0,
+   "explanation": "The spotted phenotype is homozygous recessive, so q² = 0.36, giving q = 0.6 and p = 1 − 0.6 = 0.4. The expected heterozygote frequency is 2pq = 2(0.4)(0.6) = 0.48, which is 0.48 × 500 = 240 beetles."
+  },
+  {
+   "n": 27,
+   "topic": "Natural selection",
+   "q": "In a lake, snails are preyed on by fish. Snails with very thin shells can hide in rock crevices, while snails with very thick shells are difficult for fish to crush. Snails with intermediate shell thickness are neither good at hiding nor hard enough to resist crushing. Over many generations, the shell-thickness distribution becomes strongly bimodal, with most snails having either very thin or very thick shells. Which type of selection best explains this pattern?",
+   "options": [
+    "Disruptive selection, because both extreme phenotypes have higher fitness than the intermediate phenotype.",
+    "Artificial selection, because fish are choosing which snails survive.",
+    "Directional selection, because the mean shell thickness moves toward one extreme.",
+    "Stabilizing selection, because the intermediate phenotype is favored."
+   ],
+   "answer": 0,
+   "explanation": "When both extremes survive better than the intermediate phenotype, the population can split into two peaks, which is disruptive selection. Directional selection would shift one tail, and stabilizing selection would favor the intermediate shell thickness. Fish predation is a natural selective pressure, not artificial selection by humans."
+  },
+  {
+   "n": 28,
+   "topic": "Chemistry of life",
+   "q": "A student mixes 100. mL of 0.10 M acetic acid (pKa = 4.76) with 50. mL of 0.10 M NaOH. Assuming the volumes are additive, which best predicts the pH of the resulting solution?",
+   "options": [
+    "pH ≈ 5.36",
+    "pH ≈ 4.76",
+    "pH ≈ 2.88",
+    "pH ≈ 9.24"
+   ],
+   "answer": 1,
+   "explanation": "The NaOH neutralizes half of the acetic acid: 0.010 mol acid initially and 0.0050 mol base added, leaving 0.0050 mol acetic acid and forming 0.0050 mol acetate. With equimolar weak acid and conjugate base, pH = pKa + log(1) ≈ 4.76. The pH values 2.88 and 5.36 would not result from this half-neutralization; 9.24 would be expected for a basic solution with little acid remaining."
+  },
+  {
+   "n": 29,
+   "topic": "Chemistry of life",
+   "q": "A double-stranded DNA molecule from a newly discovered bacterium contains adenine at 32% of its nitrogenous bases. Which of the following is the percentage of guanine bases in this DNA?",
+   "options": [
+    "36%",
+    "18%",
+    "64%",
+    "32%"
+   ],
+   "answer": 1,
+   "explanation": "In double-stranded DNA, adenine pairs with thymine, so thymine is also 32%. Together A + T = 64%, leaving 36% for G + C; since G and C are equal, guanine is 18%. Choosing 36% would count both guanine and cytosine rather than guanine alone."
+  },
+  {
+   "n": 30,
+   "topic": "Cell communication and cell cycle",
+   "q": "In a cell line, adding growth factor G to wild-type cells causes a rapid increase in phosphorylated ERK (pERK), an intracellular signaling protein. Cells expressing a mutant G receptor that can bind G normally but lacks key autophosphorylation sites show no pERK increase. When a constitutively active form of Ras is introduced into these mutant cells, pERK increases after G addition. Which conclusion is best supported?",
+   "options": [
+    "The mutant receptor is unable to activate Ras, but Ras signaling downstream of the receptor is intact.",
+    "The mutant receptor cannot bind growth factor G.",
+    "Ras acts upstream of the G receptor in this signaling pathway.",
+    "ERK directly phosphorylates the G receptor to produce pERK."
+   ],
+   "answer": 0,
+   "explanation": "The mutant receptor binds G normally but cannot autophosphorylate, and pERK fails to rise, indicating a defect in transmitting the signal to Ras. Adding active Ras restores pERK, showing that the downstream Ras-to-ERK pathway still works. A receptor that could not bind G would not fit the normal binding result, and active Ras bypassing the receptor places Ras downstream of the receptor, not upstream."
+  },
+  {
+   "n": 31,
+   "topic": "Cell communication and cell cycle",
+   "q": "A population of asynchronously dividing animal cells is treated with a drug. At 0 h, the percentages of cells in stages are G1 55%, S 25%, G2 12%, and M 8%. After 18 h of treatment, the percentages are G1 8%, S 12%, G2 75%, and M 5%. Which best explains the effect of the drug?",
+   "options": [
+    "The drug prevents DNA replication, causing cells to accumulate in S phase.",
+    "The drug causes cells to skip G2 and enter mitosis prematurely.",
+    "The drug prevents cytokinesis, causing cells to accumulate in M phase.",
+    "The drug prevents cells from progressing from G2 into mitosis after DNA replication."
+   ],
+   "answer": 3,
+   "explanation": "The treated population accumulates in G2, while G1, S, and M are lower, consistent with a block before entry into mitosis after replication is complete. A DNA replication block would increase the S-phase fraction, and a cytokinesis block would increase the M-phase fraction. Skipping G2 would not produce a large G2 accumulation."
+  },
+  {
+   "n": 32,
+   "topic": "Gene expression and regulation",
+   "q": "A gene encoding a peptide hormone is expressed at high levels in certain pituitary cells and at very low levels in skin cells. Both cell types contain the gene and the same general transcription factors. A transcription factor called Ptx is present in both cell types, but only in pituitary cells is it phosphorylated and able to bind an enhancer near the gene. Which best explains the cell-type-specific expression?",
+   "options": [
+    "Skin cells lack RNA polymerase II, so they cannot transcribe any protein-coding genes.",
+    "Phosphorylation of Ptx enables enhancer binding and increased transcription in pituitary cells.",
+    "The gene is rearranged or deleted in skin cells, preventing transcription.",
+    "The peptide hormone mRNA is translated only in pituitary cells, so transcription is equal in both cell types."
+   ],
+   "answer": 1,
+   "explanation": "The question states that both cell types contain the gene, and Ptx is active only after phosphorylation in pituitary cells. Enhancer-bound Ptx can increase transcription in pituitary cells while the gene remains relatively inactive in skin cells. Equal transcription with pituitary-specific translation would not explain why the gene is expressed at very low levels in skin cells."
+  },
+  {
+   "n": 33,
+   "topic": "Gene expression and regulation",
+   "q": "Researchers make three reporter constructs with the same coding sequence for green fluorescent protein (GFP) under different upstream regulatory sequences. Construct 1 has promoter P only; construct 2 has promoter P plus enhancer E; construct 3 has promoter P plus a mutant enhancer E with one base-pair change. Equal amounts of each construct are introduced into the same cell type, and GFP fluorescence is measured: promoter P only, 5 units; promoter P plus enhancer E, 80 units; promoter P plus mutant enhancer E, 6 units. Which conclusion is best supported?",
+   "options": [
+    "Enhancer E increases transcription, and the mutation reduces that enhancement.",
+    "Promoter P cannot drive transcription without enhancer E.",
+    "Enhancer E is translated together with GFP to increase fluorescence.",
+    "The mutation changes the GFP protein so that it no longer fluoresces."
+   ],
+   "answer": 0,
+   "explanation": "The promoter-only construct produces some fluorescence, but adding enhancer E raises fluorescence greatly; a one-base change in E returns fluorescence to near baseline. This supports E as a transcriptional enhancer whose activity is reduced by the mutation. Because the GFP coding sequence is the same in all constructs, the mutation is not changing the GFP protein itself, and enhancers are not translated."
+  },
+  {
+   "n": 34,
+   "topic": "Ecology",
+   "q": "A population of rabbits in an enclosed meadow has 200 individuals, an intrinsic rate of increase of 0.50 per year, and an environment that can support 1,000 rabbits. Assuming logistic growth, what is the approximate change in population size over the next year (dN/dt)?",
+   "options": [
+    "80 rabbits per year",
+    "400 rabbits per year",
+    "20 rabbits per year",
+    "100 rabbits per year"
+   ],
+   "answer": 0,
+   "explanation": "Using dN/dt = rN(1 − N/K), dN/dt = 0.50 × 200 × (1 − 200/1,000) = 100 × 0.80 = 80 rabbits per year. The value 100 rabbits per year comes from rN alone and ignores the effect of carrying capacity."
+  },
+  {
+   "n": 35,
+   "topic": "Ecology",
+   "q": "In a forested watershed, stream nitrate concentration was 0.20 mg/L before a 10-hectare plot was clear-cut. One year after all trees in the plot were cut, stream nitrate in the same drainage rose to 2.0 mg/L. Which explanation best accounts for this increase?",
+   "options": [
+    "Photosynthesis by stream algae began producing nitrate directly.",
+    "Atmospheric nitrogen fixation by the cleared trees stopped, so nitrate accumulated.",
+    "Reduced uptake by plants allowed more nitrate from the soil to leach into the stream.",
+    "Denitrification in the soil released nitrate into the stream."
+   ],
+   "answer": 2,
+   "explanation": "Clear-cutting removes trees that were taking up nitrate, so nitrate is more likely to leach from soil into streams. Denitrification converts nitrate to nitrogen gas rather than releasing nitrate, and algae do not produce nitrate directly by photosynthesis."
+  },
+  {
+   "n": 36,
+   "topic": "Ecology",
+   "q": "In a California grassland, plots invaded by a nitrogen-fixing shrub have about twice the soil nitrate concentration and only 10% native wildflower cover, whereas nearby uninvaded plots have 40% native wildflower cover. Which hypothesis is most consistent with these data?",
+   "options": [
+    "Higher soil nitrate always increases native plant diversity, so wildflower cover will soon rise.",
+    "The shrub is associated with higher soil nitrate and lower wildflower cover, possibly because faster-growing grasses outcompete wildflowers.",
+    "The shrub cannot affect wildflowers because it fixes nitrogen only for its own roots.",
+    "The data prove the shrub produces a toxin that directly kills all wildflowers."
+   ],
+   "answer": 1,
+   "explanation": "The data show an association between the nitrogen-fixing shrub, higher soil nitrate, and lower wildflower cover, but they do not by themselves prove a toxin. A likely explanation is that added nitrogen favors fast-growing competitors, reducing wildflower abundance."
+  },
+  {
+   "n": 37,
+   "topic": "Cell structure and function",
+   "q": "Contractile vacuoles in Paramecium expel excess water. A student measures contractile vacuole contraction rates: about 20 contractions per minute in freshwater, about 5 per minute in 0.5% salt solution, and no contractions in 1.5% salt solution. Which statement best explains these observations?",
+   "options": [
+    "The contractile vacuole uses ATP to pump water into the cell faster in freshwater.",
+    "In freshwater, water enters the cell by osmosis, so the contractile vacuole must expel more water; in more concentrated salt solutions, net water entry is reduced or reversed, so the vacuole contracts less or stops.",
+    "In the 1.5% salt solution, water enters faster, so the vacuole stops contracting to avoid swelling.",
+    "In freshwater, salts enter by active transport, causing the vacuole to contract more often."
+   ],
+   "answer": 1,
+   "explanation": "A Paramecium in freshwater is hypertonic to its surroundings, so water enters by osmosis and the contractile vacuole expels it. In saltier water, the osmotic gradient for water entry is smaller or reversed, so the vacuole contracts less often or stops."
+  },
+  {
+   "n": 38,
+   "topic": "Cell structure and function",
+   "q": "A cultured mammalian cell is engineered to produce a normally secreted enzyme. The modified gene encodes the same enzyme but lacks the N-terminal signal peptide. Where would the enzyme most likely accumulate?",
+   "options": [
+    "In the cytosol, because it cannot enter the rough endoplasmic reticulum.",
+    "In the rough ER lumen, because signal peptides are removed after the protein enters.",
+    "In the Golgi apparatus, because proteins without signal peptides are sorted there by default.",
+    "Outside the cell, because all proteins are secreted unless they contain a retention signal."
+   ],
+   "answer": 0,
+   "explanation": "The N-terminal signal peptide directs the growing polypeptide to the rough ER. Without it, the enzyme is completed by free ribosomes in the cytosol and does not enter the secretory pathway."
+  },
+  {
+   "n": 39,
+   "topic": "Heredity",
+   "q": "In a plant species, broad leaves (A) are dominant to narrow leaves (a), and red stems (B) are dominant to green stems (b). The two genes are on different autosomes. A plant heterozygous for both traits is self-pollinated. What fraction of the offspring is expected to have narrow leaves and green stems?",
+   "options": [
+    "9/16",
+    "1/4",
+    "1/8",
+    "1/16"
+   ],
+   "answer": 3,
+   "explanation": "Narrow leaves require aa, with probability 1/4 in a self-cross of Aa, and green stems require bb, also with probability 1/4. Because the genes assort independently, the combined probability is 1/4 × 1/4 = 1/16."
+  },
+  {
+   "n": 40,
+   "topic": "Heredity",
+   "q": "In chickens, males are ZZ and females are ZW. Silver feathering is controlled by a Z-linked gene, and the silver allele (S) is dominant to the non-silver allele (s). A silver hen is crossed with a non-silver rooster. What proportion of all offspring are expected to be non-silver females?",
+   "options": [
+    "3/4",
+    "1/4",
+    "0",
+    "1/2"
+   ],
+   "answer": 3,
+   "explanation": "The non-silver rooster passes Z^s to all offspring, and the silver hen passes W to half of the offspring. Those offspring are Z^sW non-silver females, so the expected proportion is 1/2; the other half are Z^S Z^s silver males."
+  },
+  {
+   "n": 41,
+   "topic": "Natural selection",
+   "q": "On an island, a lizard population varies in leg length. After a severe drought, researchers find that lizards with longer legs survived and reproduced at higher rates than short-legged lizards. The survivors' mean leg length is 2.0 cm greater than the pre-drought mean, and leg length is heritable. Which conclusion is best supported?",
+   "options": [
+    "No evolution occurred because short-legged lizards were still present after the drought.",
+    "Individual lizards that needed longer legs developed them during the drought and passed the change to offspring.",
+    "Directional selection occurred, so the mean leg length in the next generation is likely to increase.",
+    "The drought caused new mutations for longer legs, which were inherited immediately by offspring."
+   ],
+   "answer": 2,
+   "explanation": "Longer-legged lizards had higher survival and reproduction, and leg length is heritable, so the population experienced directional selection. Individuals do not acquire longer legs because they need them, and the environment does not direct mutations to meet a need."
+  },
+  {
+   "n": 42,
+   "topic": "Natural selection",
+   "q": "In a human population where malaria is common, researchers estimate survival to reproductive age for hemoglobin genotypes: HbAA, 0.60; HbAS, 0.90; HbSS, 0.20. Which statement best explains why the HbS allele remains at a relatively stable frequency in this population?",
+   "options": [
+    "The HbS allele is maintained mainly because people with HbAA migrate into the population.",
+    "The HbS allele is harmful in all genotypes, so its frequency should approach zero.",
+    "HbAS heterozygotes have the highest survival, so balancing selection maintains both alleles.",
+    "Malaria causes mutations in the hemoglobin gene, producing new HbS alleles each generation."
+   ],
+   "answer": 2,
+   "explanation": "The survival data show the highest fitness for HbAS heterozygotes, which can maintain the HbS allele despite low survival of HbSS homozygotes. This heterozygote advantage is a form of balancing selection rather than selection against the allele in every genotype."
+  },
+  {
+   "n": 43,
+   "topic": "Chemistry of life",
+   "q": "At pH 7, serine is much more soluble in water than valine is. Both amino acids have an amino group and a carboxyl group that can interact with water. Which best explains the greater solubility of serine?",
+   "options": [
+    "Both side chains are hydrophilic, but serine has a higher molecular mass.",
+    "Serine is nonpolar and therefore dissolves more readily in water.",
+    "Valine has a larger amino group that repels water molecules.",
+    "Serine has a polar hydroxyl side chain that can form hydrogen bonds with water, whereas valine has a nonpolar side chain."
+   ],
+   "answer": 3,
+   "explanation": "Serine's side chain contains a hydroxyl group, making it polar and able to hydrogen bond with water. Valine's side chain is nonpolar and does not interact favorably with water, so the difference in solubility is due mainly to the side chains, not the shared amino and carboxyl groups. The molecular mass does not determine whether an amino acid is hydrophilic."
+  },
+  {
+   "n": 44,
+   "topic": "Chemistry of life",
+   "q": "A digestive enzyme consists of a single polypeptide chain with a disulfide bond between two cysteine residues far apart in the sequence. Treatment with a reducing agent breaks this disulfide bond, and the enzyme loses activity, although its amino acid sequence is unchanged. Which level of protein structure is most directly disrupted?",
+   "options": [
+    "Secondary structure",
+    "Primary structure",
+    "Tertiary structure",
+    "Quaternary structure"
+   ],
+   "answer": 2,
+   "explanation": "Disulfide bonds between distant cysteine residues help stabilize the folded three-dimensional shape of a single polypeptide, which is tertiary structure. The primary sequence is unchanged by breaking the bond, and quaternary structure involves multiple polypeptide chains. Secondary structure refers mainly to local α-helices and β-sheets, not the overall fold held by this disulfide bond."
+  },
+  {
+   "n": 45,
+   "topic": "Cell communication and cell cycle",
+   "q": "In cultured smooth muscle cells, a hormone binds a cell-surface receptor and activates phospholipase C, producing IP3. IP3 then binds receptors on the endoplasmic reticulum and causes Ca²⁺ release into the cytosol, leading to contraction. A drug is added that blocks the IP3 receptors on the endoplasmic reticulum. Which is the most likely immediate result of adding the hormone?",
+   "options": [
+    "Cytosolic Ca²⁺ will not increase, and the contraction response will be reduced.",
+    "The hormone will not bind to its cell-surface receptor.",
+    "cAMP will increase instead and cause the cells to contract.",
+    "Ca²⁺ will enter the cytosol directly through the cell-surface hormone receptor."
+   ],
+   "answer": 0,
+   "explanation": "IP3 receptors on the endoplasmic reticulum are the channels that release stored Ca²⁺ into the cytosol. Blocking them prevents the Ca²⁺ signal needed for contraction, even if the hormone still binds its receptor and phospholipase C is activated. The cell-surface receptor is not an IP3-gated Ca²⁺ channel, and this pathway does not switch to cAMP simply because IP3 receptors are blocked."
+  },
+  {
+   "n": 46,
+   "topic": "Cell communication and cell cycle",
+   "q": "In a culture of synchronized cells, mitotic cyclin levels rise during G2 and fall abruptly after anaphase. A drug prevents the ubiquitin-mediated degradation of mitotic cyclin. Which transition is most likely impaired?",
+   "options": [
+    "S to G2 transition",
+    "Exit from mitosis",
+    "G1 to S transition",
+    "Prophase to metaphase"
+   ],
+   "answer": 1,
+   "explanation": "Mitotic cyclin forms active CDK complexes that promote entry into and progression through mitosis. Its degradation after anaphase inactivates the CDK, allowing the cell to exit mitosis. If mitotic cyclin is not degraded, the cell is likely to remain in a mitotic state rather than proceeding through the G1-to-S transition or another interphase transition."
+  },
+  {
+   "n": 47,
+   "topic": "Cell communication and cell cycle",
+   "q": "Vibrio fischeri produces light only when the population density is high. The bacteria release an autoinducer that diffuses into cells and activates the lux genes when its intracellular concentration exceeds a threshold. Which best explains why light production is low at low density but high at high density?",
+   "options": [
+    "The autoinducer accumulates as cell density increases and reaches the threshold that activates lux gene expression.",
+    "At high density, each cell produces more autoinducer because nutrients become limiting.",
+    "The autoinducer is broken down more rapidly at high density, releasing energy for light production.",
+    "Light is produced by individual cells at all densities but is visible only when many cells are present."
+   ],
+   "answer": 0,
+   "explanation": "Quorum sensing depends on the concentration of a secreted signal, which rises with population density. Once the autoinducer reaches a threshold, it activates the lux genes and the population produces light. The response is regulated by signal accumulation, not simply by the visual addition of light from many cells or by a nutrient-limitation response."
+  },
+  {
+   "n": 48,
+   "topic": "Cellular energetics",
+   "q": "Chloroplasts are isolated and illuminated in a buffer containing NADP⁺, ADP, Pi, and CO₂. An herbicide is added that blocks electron transfer from photosystem II to the electron transport chain. Which immediate change is expected?",
+   "options": [
+    "ATP synthesis increases because protons can no longer enter ATP synthase.",
+    "The rate of O₂ production decreases because water splitting at photosystem II cannot pass electrons down the chain.",
+    "CO₂ fixation increases because the Calvin cycle no longer requires ATP.",
+    "NADPH production increases because NADP⁺ accepts electrons directly from water."
+   ],
+   "answer": 1,
+   "explanation": "Photosystem II normally splits water, releases O₂, and transfers electrons into the electron transport chain. Blocking that electron transfer prevents NADPH production and reduces the proton gradient used for ATP synthesis. ATP synthesis would not increase, and the Calvin cycle requires both ATP and NADPH."
+  },
+  {
+   "n": 49,
+   "topic": "Cellular energetics",
+   "q": "Yeast cells are incubated in sealed tubes with glucose. Tube 1 contains air, while tube 2 is prepared without oxygen. After 30 minutes, tube 1 has consumed 3.0 µmol of glucose and produced 0.2 µmol of ethanol; tube 2 has consumed 1.5 µmol of glucose and produced 2.6 µmol of ethanol. Which best explains the difference in ethanol production?",
+   "options": [
+    "With oxygen present, oxidative phosphorylation yields more ATP per glucose, so less glucose is routed to fermentation.",
+    "Oxygen is used directly to convert ethanol back into glucose in tube 1.",
+    "Without oxygen, oxidative phosphorylation produces more ATP, which increases fermentation.",
+    "With oxygen present, glucose is converted directly to CO₂ without glycolysis."
+   ],
+   "answer": 0,
+   "explanation": "Aerobic respiration uses O₂ as the final electron acceptor and produces much more ATP per glucose than fermentation does. Yeast therefore rely less on fermentation for ATP when O₂ is available, producing little ethanol. Without O₂, yeast cannot carry out oxidative phosphorylation and instead regenerate NAD⁺ by converting pyruvate to ethanol and CO₂."
+  },
+  {
+   "n": 50,
+   "topic": "Gene expression and regulation",
+   "q": "In eukaryotic cells, a drug prevents the addition of the 5′ cap to newly synthesized mRNA. Which is the most likely direct consequence?",
+   "options": [
+    "The mRNA will be less stable and less efficiently translated.",
+    "Introns will not be removed from the pre-mRNA.",
+    "The mRNA will be translated into a protein with a different amino acid sequence.",
+    "RNA polymerase will not transcribe the gene."
+   ],
+   "answer": 0,
+   "explanation": "The 5′ cap helps protect mRNA from degradation and is recognized by factors that promote translation initiation. Without the cap, the mRNA is typically less stable and translated less efficiently. Capping does not control transcription initiation or splicing directly, and it does not change the mRNA's codon sequence."
+  },
+  {
+   "n": 51,
+   "topic": "Ecology",
+   "q": "In a laboratory experiment, two species of flour beetle, species X and species Y, were grown in jars at 30°C and at 34°C. When grown separately, each species could maintain a population at both temperatures. In mixed cultures after 10 weeks at 30°C, species X reached 420 individuals and species Y reached 35; at 34°C, species X reached 30 and species Y reached 390. Which conclusion is best supported by the data?",
+   "options": [
+    "Species Y cannot survive at 30°C because its population is smaller than that of species X.",
+    "The two species are mutualists at 30°C because both persist when grown together.",
+    "Species X is always the superior competitor because it reaches the larger population when grown alone.",
+    "The outcome of competition between the two species depends on temperature."
+   ],
+   "answer": 3,
+   "explanation": "At 30°C, species X greatly reduces species Y, whereas at 34°C species Y greatly reduces species X; both species can persist alone at both temperatures. This shows that the competitive outcome changes with an abiotic condition, temperature. Persistence of both species together does not demonstrate mutualism, and species Y still survives at 30°C, so the conclusion that it cannot survive there is not supported."
+  },
+  {
+   "n": 52,
+   "topic": "Ecology",
+   "q": "A study of a caterpillar species finds that larvae consume 12,000 kJ of leaf tissue. They assimilate 3,000 kJ of that energy. Of the assimilated energy, 2,400 kJ is lost as respiration and 600 kJ is incorporated into larval biomass. What is the production efficiency of these caterpillars?",
+   "options": [
+    "80%",
+    "5%",
+    "25%",
+    "20%"
+   ],
+   "answer": 3,
+   "explanation": "Production efficiency is biomass production divided by assimilated energy: 600 kJ ÷ 3,000 kJ × 100 = 20%. The 25% value is assimilation efficiency (3,000 kJ ÷ 12,000 kJ), and 5% is biomass production as a fraction of total ingestion, not production efficiency."
+  },
+  {
+   "n": 53,
+   "topic": "Ecology",
+   "q": "The age distribution of a human population is as follows: ages 0–14 make up 44% of the population; ages 15–44 make up 38%; ages 45–64 make up 13%; ages 65 and older make up 5%. If fertility and mortality rates remain unchanged, which prediction is best supported?",
+   "options": [
+    "The population will likely increase in future decades because a large proportion of individuals are below reproductive age.",
+    "The population is at its carrying capacity because the age classes are uneven.",
+    "The population will remain stable because the 15–44 age class is large and includes reproductive individuals.",
+    "The population will immediately decline because the percentage of older adults is the smallest."
+   ],
+   "answer": 0,
+   "explanation": "A broad base of young individuals means that many will soon enter reproductive age and produce offspring, which tends to drive future population growth. A stable age distribution would have more nearly equal age classes, and a small older-adult percentage does not by itself cause an immediate decline."
+  },
+  {
+   "n": 54,
+   "topic": "Cell structure and function",
+   "q": "A student places Elodea leaf cells in 0.5 M sucrose solution. After several minutes, the plasma membrane has pulled away from the cell wall in many cells. The student then transfers the cells to distilled water, and the plasma membrane again presses tightly against the cell wall. Which statement best explains these observations?",
+   "options": [
+    "Water moved out of the cells in sucrose by osmosis and then into the cells in distilled water.",
+    "Active transport of water out of the cells caused plasmolysis in sucrose.",
+    "Sucrose moved into the cells in sucrose, causing the cells to swell.",
+    "The cell wall shrank more than the cytoplasm in sucrose and expanded in distilled water."
+   ],
+   "answer": 0,
+   "explanation": "The sucrose solution is hypertonic to the Elodea cells, so water leaves the cells by osmosis and the plasma membrane pulls away from the wall. In distilled water, the surroundings are hypotonic, so water enters and turgor pressure presses the membrane against the wall. Sucrose does not enter rapidly enough to explain the shrinking, and water movement is passive osmosis rather than active transport."
+  },
+  {
+   "n": 55,
+   "topic": "Cell structure and function",
+   "q": "A purified bacterial enzyme is incubated for 10 minutes in buffers at different pH values. Each sample is then adjusted to pH 7.0 and assayed with excess substrate. Activity is 0% after incubation at pH 2.0, 85% after pH 5.0, 100% after pH 7.0, and 15% after pH 10.0. Which best explains the very low activity after incubation at pH 2.0?",
+   "options": [
+    "The low pH increased the enzyme concentration so much that the substrate was consumed too quickly.",
+    "The low pH changed the enzyme's tertiary structure and active site, reducing its activity.",
+    "The low pH used up the substrate before the assay was performed.",
+    "The low pH changed only the enzyme's primary sequence, leaving the active site intact."
+   ],
+   "answer": 1,
+   "explanation": "Extreme pH alters the ionization of side chains and disrupts hydrogen and ionic bonds that maintain tertiary structure, which can alter the active site and lower activity. Because substrate was added in excess only during the assay, substrate depletion before the assay cannot explain the result. Buffer pH affects folding and interactions rather than changing the primary sequence itself."
+  },
+  {
+   "n": 56,
+   "topic": "Cell structure and function",
+   "q": "Lysosomal hydrolases are normally modified in the Golgi with mannose-6-phosphate (M6P), which directs them to lysosomes. A cultured human cell has a mutation that prevents M6P addition to one hydrolase but does not affect the enzyme's catalytic activity or its signal peptide for the rough ER. Where is this hydrolase most likely to be found in largest amounts?",
+   "options": [
+    "Inside lysosomes",
+    "Secreted into the extracellular medium",
+    "In the mitochondrial matrix",
+    "In the cytosol"
+   ],
+   "answer": 1,
+   "explanation": "The hydrolase still enters the rough ER because its ER signal peptide is present, and it moves through the secretory pathway. Without the M6P tag, it is not efficiently sorted to lysosomes and instead follows the default secretory pathway out of the cell. It would not remain in the cytosol because it has already entered the ER, and it is not targeted to mitochondria."
+  },
+  {
+   "n": 57,
+   "topic": "Heredity",
+   "q": "Marcus has an X-linked recessive form of muscular dystrophy. Elena does not have the condition and is homozygous for the typical allele. They are planning to have children. Assuming no new mutations, which prediction about their children is correct?",
+   "options": [
+    "All children will be affected because Marcus has the condition.",
+    "Half of the daughters will be affected, and half of the sons will be unaffected.",
+    "No daughters will carry the allele because Elena is homozygous for the typical allele.",
+    "All daughters will be carriers, and all sons will be unaffected."
+   ],
+   "answer": 3,
+   "explanation": "Marcus has genotype X^dY, where X^d carries the recessive allele, and Elena has genotype X^DX^D. A daughter receives X^d from Marcus and X^D from Elena, so every daughter is an unaffected carrier. A son receives Y from Marcus and X^D from Elena, so every son is unaffected and does not carry the allele."
+  },
+  {
+   "n": 58,
+   "topic": "Heredity",
+   "q": "In corn, two genes are on the same autosome: A/a controls kernel color and B/b controls plant height. A heterozygous plant (AB/ab) is crossed with a homozygous recessive plant (ab/ab). The offspring are: AB 430, ab 430, Ab 70, and aB 70. What is the recombination frequency between the two genes?",
+   "options": [
+    "86%",
+    "14%",
+    "28%",
+    "7%"
+   ],
+   "answer": 1,
+   "explanation": "The recombinant offspring are the Ab and aB classes: 70 + 70 = 140 out of 1,000 total offspring. Recombination frequency is 140 ÷ 1,000 × 100 = 14%. The 7% value would count only one recombinant class, and 86% represents the parental classes rather than the recombination frequency."
+  },
+  {
+   "n": 59,
+   "topic": "Natural selection",
+   "q": "Researchers collect seeds from a large population of a weed before any herbicide is applied. They grow a large greenhouse population and apply an herbicide. Most plants die, but a few survive. When the survivors are crossed with each other and their offspring are exposed to the same herbicide, a much larger fraction survive than in the original population. Which statement best explains this result?",
+   "options": [
+    "The herbicide caused resistant mutations in the survivors during exposure.",
+    "The survivors learned to detoxify the herbicide and passed the learned ability to their offspring.",
+    "The original population had no genetic variation, but the herbicide created variation for resistance.",
+    "Herbicide-resistant alleles were already present in the original population and increased in frequency because resistant plants survived and reproduced."
+   ],
+   "answer": 3,
+   "explanation": "Natural selection acts on heritable variation that is already present; the herbicide changes survival and reproduction rather than directing new mutations. Surviving plants pass resistance alleles to their offspring, increasing the frequency of those alleles in the next generation. Acquired physiological changes are not inherited as genetic resistance, and this result depends on preexisting genetic variation."
+  },
+  {
+   "n": 60,
+   "topic": "Natural selection",
+   "q": "In a frog species, males call at different pitches. Females prefer lower-pitched calls, and lower-pitched males father more offspring. However, lower-pitched calls also attract a predatory bat. Over 10 years, the average call pitch in the population decreases, even though bat predation on calling males increases. Which process is most likely responsible?",
+   "options": [
+    "Natural selection directly favors higher-pitched calls because those males are less conspicuous to bats.",
+    "Gene flow from nearby populations prevents adaptation to bat predation.",
+    "Genetic drift causes call pitch to decrease randomly because the population is small.",
+    "Sexual selection by female choice favors lower-pitched calls strongly enough to outweigh the survival cost from bat predation."
+   ],
+   "answer": 3,
+   "explanation": "Lower-pitched males have greater reproductive success because females prefer them, so sexual selection can increase lower-pitch alleles even if the trait also raises predation risk. The observed directional change supports a reproductive advantage outweighing the survival disadvantage. Natural selection alone would favor higher-pitched calls, and there is no information indicating a small population or strong gene flow."
+  }
+ ]
+}

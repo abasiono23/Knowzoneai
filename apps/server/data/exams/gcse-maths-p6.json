@@ -1,0 +1,401 @@
+{
+ "id": "gcse-maths-p6",
+ "exam": "gcse",
+ "subject": "maths",
+ "year": null,
+ "number": 6,
+ "source": "ai",
+ "minutes": 35,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Probability",
+   "q": "A letter is chosen at random from the word MATHEMATICS. What is the probability that the chosen letter is a vowel?",
+   "options": [
+    "5/11",
+    "4/7",
+    "3/11",
+    "4/11"
+   ],
+   "answer": 3,
+   "explanation": "The word has 11 letters: M, A, T, H, E, M, A, T, I, C, S. There are four vowels, A, E, A and I, so the probability is 4/11. Counting the distinct vowel letters only would give 3/11."
+  },
+  {
+   "n": 2,
+   "topic": "Simultaneous equations",
+   "q": "Solve the simultaneous equations 3x + 4y = 18 and 2x − y = 1.",
+   "options": [
+    "x = 2, y = −3",
+    "x = 3, y = 2",
+    "x = 2, y = 3",
+    "x = −2, y = −3"
+   ],
+   "answer": 2,
+   "explanation": "Using the second equation gives y = 2x − 1. Substituting into the first equation: 3x + 4(2x − 1) = 18, so 11x = 22 and x = 2; then y = 3. The pair x = 3, y = 2 swaps the two values and does not satisfy 2x − y = 1."
+  },
+  {
+   "n": 3,
+   "topic": "Pythagoras’ theorem and trigonometry",
+   "q": "A ladder 6.5 m long leans against a vertical wall. The foot of the ladder is 2.5 m from the base of the wall. Work out the vertical height reached by the ladder.",
+   "options": [
+    "√48.5 m",
+    "6 m",
+    "4 m",
+    "9 m"
+   ],
+   "answer": 1,
+   "explanation": "The wall and ground are perpendicular, so the ladder is the hypotenuse. Using Pythagoras: height² + 2.5² = 6.5², so height² = 42.25 − 6.25 = 36 and height = 6 m. Adding the squares instead of subtracting them would give √48.5 m."
+  },
+  {
+   "n": 4,
+   "topic": "Transformations and vectors",
+   "q": "The point with coordinates (6, −2) is reflected in the line x = 2. What are the coordinates of its image?",
+   "options": [
+    "(2, −2)",
+    "(−2, −2)",
+    "(4, −2)",
+    "(−6, −2)"
+   ],
+   "answer": 1,
+   "explanation": "Reflecting in the vertical line x = 2 keeps the y-coordinate the same and places the image the same distance on the other side of x = 2. The horizontal distance from 6 to 2 is 4, so 4 units to the left of 2 is −2, giving (−2, −2). Reflecting in the y-axis instead would give (−6, −2)."
+  },
+  {
+   "n": 5,
+   "topic": "Probability",
+   "q": "A card is chosen at random from a standard pack of 52 playing cards. What is the probability that it is a heart or a king? Give your answer as a fraction in its simplest form.",
+   "options": [
+    "17/52",
+    "1/13",
+    "4/13",
+    "1/4"
+   ],
+   "answer": 2,
+   "explanation": "There are 13 hearts and 4 kings, but the king of hearts has been counted twice. So there are 13 + 4 − 1 = 16 favourable cards, and 16/52 simplifies to 4/13. Adding 13/52 and 4/52 without subtracting the overlap gives 17/52."
+  },
+  {
+   "n": 6,
+   "topic": "Simultaneous equations",
+   "q": "Amina buys 4 loaves of bread and 3 cartons of milk for £10.20. Bilal buys 2 loaves of bread and 5 cartons of milk for £8.60. Work out the cost of one loaf and one carton of milk.",
+   "options": [
+    "A loaf costs £1.80 and a carton costs £1.00",
+    "A loaf costs £1.00 and a carton costs £1.80",
+    "A loaf costs £2.00 and a carton costs £0.80",
+    "A loaf costs £1.60 and a carton costs £1.20"
+   ],
+   "answer": 0,
+   "explanation": "Let a loaf cost l pounds and a carton cost m pounds. The equations are 4l + 3m = 10.20 and 2l + 5m = 8.60. Doubling the second equation and subtracting gives 7m = 7.00, so m = 1.00; then 2l + 5 = 8.60 gives l = 1.80. Swapping the two prices would not satisfy the first purchase."
+  },
+  {
+   "n": 7,
+   "topic": "Pythagoras’ theorem and trigonometry",
+   "q": "In a right-angled triangle, angle θ = 30°. The side adjacent to θ is 9 cm. Work out the length of the hypotenuse. Give your answer as a surd in its simplest form.",
+   "options": [
+    "18 cm",
+    "3√3 cm",
+    "6√3 cm",
+    "9√3/2 cm"
+   ],
+   "answer": 2,
+   "explanation": "For the 30° angle, cos 30° = adjacent ÷ hypotenuse. So hypotenuse = 9 ÷ (√3/2) = 18/√3 = 6√3 cm. Multiplying 9 by cos 30° instead of dividing gives 9√3/2 cm."
+  },
+  {
+   "n": 8,
+   "topic": "Simultaneous equations",
+   "q": "Solve the simultaneous equations 5x + 2y = 9 and 3x + 4y = 19.",
+   "options": [
+    "x = 1/7, y = 29/7",
+    "x = −1/7, y = 34/7",
+    "x = −1/7, y = 17/7",
+    "x = 1/7, y = 34/7"
+   ],
+   "answer": 1,
+   "explanation": "Doubling the first equation gives 10x + 4y = 18. Subtracting the second equation gives 7x = −1, so x = −1/7. Substituting into 5x + 2y = 9 gives 2y = 68/7, so y = 34/7."
+  },
+  {
+   "n": 9,
+   "topic": "Pythagoras’ theorem and trigonometry",
+   "q": "In triangle PQR, PQ = 7 cm, PR = 8 cm and angle QPR = 60°. Work out the length QR. Give your answer as a surd in its simplest form.",
+   "options": [
+    "√113 cm",
+    "√57 cm",
+    "13 cm",
+    "√85 cm"
+   ],
+   "answer": 1,
+   "explanation": "Use the cosine rule with the two sides 7 cm and 8 cm and included angle 60°: QR² = 7² + 8² − 2 × 7 × 8 × cos 60° = 49 + 64 − 56 = 57. Therefore QR = √57 cm. Using 7² + 8² without the cosine term would give √113 cm."
+  },
+  {
+   "n": 10,
+   "topic": "Transformations and vectors",
+   "q": "The vectors a = (4, −1) and b = (−2, 3) are column vectors. Work out the vector 2a − b.",
+   "options": [
+    "(10, 1)",
+    "(−10, 5)",
+    "(6, 1)",
+    "(10, −5)"
+   ],
+   "answer": 3,
+   "explanation": "Double a: 2a = (8, −2). Then 2a − b = (8, −2) − (−2, 3) = (8 + 2, −2 − 3) = (10, −5). Adding b instead of subtracting it would give (6, 1)."
+  },
+  {
+   "n": 11,
+   "topic": "Ratio and proportion",
+   "q": "A model railway carriage is made to a scale of 1:20. The length of the model is 18 cm. What is the actual length of the carriage in metres?",
+   "options": [
+    "360 m",
+    "36 m",
+    "3.6 m",
+    "0.9 m"
+   ],
+   "answer": 2,
+   "explanation": "The actual length is 18 × 20 = 360 cm. Since 100 cm = 1 m, this is 3.6 m. Dividing by the scale factor gives 0.9 m, which is the common error of reversing the scale calculation."
+  },
+  {
+   "n": 12,
+   "topic": "Ratio and proportion",
+   "q": "A 750 g pack of rice costs £1.80. A 1.5 kg pack of the same rice costs £3.30. How much cheaper per kilogram is the larger pack?",
+   "options": [
+    "30p per kg",
+    "£1.50 per kg",
+    "15p per kg",
+    "20p per kg"
+   ],
+   "answer": 3,
+   "explanation": "The 750 g pack costs £1.80 ÷ 0.75 = £2.40 per kg. The 1.5 kg pack costs £3.30 ÷ 1.5 = £2.20 per kg. The difference is £0.20 per kg, or 20p per kg. The £1.50 is just the difference in pack prices, but the packs have different masses."
+  },
+  {
+   "n": 13,
+   "topic": "Algebraic expressions and formulae",
+   "q": "Make x the subject of the formula 3(x + 2) = 5x − y.",
+   "options": [
+    "x = (6 − y) ÷ 2",
+    "x = (y + 6) ÷ 2",
+    "x = (y − 6) ÷ 2",
+    "x = y + 6"
+   ],
+   "answer": 1,
+   "explanation": "Expanding gives 3x + 6 = 5x − y. Rearranging gives y + 6 = 2x, so x = (y + 6) ÷ 2. Forgetting to divide by 2 leaves x = y + 6."
+  },
+  {
+   "n": 14,
+   "topic": "Quadratic equations",
+   "q": "How many real roots does the equation x² + 4x + 7 = 0 have?",
+   "options": [
+    "Infinitely many real roots",
+    "Two distinct real roots",
+    "No real roots",
+    "Exactly one real root"
+   ],
+   "answer": 2,
+   "explanation": "The discriminant is 4² − 4 × 1 × 7 = −12. Since the discriminant is negative, the quadratic has no real roots. When the discriminant is positive, the quadratic has two distinct real roots."
+  },
+  {
+   "n": 15,
+   "topic": "Statistics",
+   "q": "The ages, in years, of seven runners in a club are 14, 16, 16, 18, 19, 21, 23. Another runner aged 25 joins. What is the median age of the eight runners?",
+   "options": [
+    "18 years",
+    "16 years",
+    "19 years",
+    "18.5 years"
+   ],
+   "answer": 3,
+   "explanation": "With eight values, the median is the mean of the 4th and 5th values when ordered: the ordered ages are 14, 16, 16, 18, 19, 21, 23, 25, so (18 + 19) ÷ 2 = 18.5 years. Choosing the 4th value gives 18 years, which ignores the need to average the two middle values."
+  },
+  {
+   "n": 16,
+   "topic": "Statistics",
+   "q": "At a school in Birmingham, 12 students each play two rounds of a quiz. The mean score in Round 1 is 7 and the mean score in Round 2 is 10 for these students. Each student’s total score is their Round 1 score plus their Round 2 score. What is the mean of the 12 total scores?",
+   "options": [
+    "7",
+    "10",
+    "17",
+    "8.5"
+   ],
+   "answer": 2,
+   "explanation": "The total of the 12 Round 1 scores is 12 × 7 = 84, and the total of the 12 Round 2 scores is 12 × 10 = 120. The 12 total scores add to 204, so their mean is 204 ÷ 12 = 17. Averaging the two round means gives 8.5, but that is the mean of all 24 individual scores, not the mean of the per-student totals."
+  },
+  {
+   "n": 17,
+   "topic": "Sequences",
+   "q": "An arithmetic sequence has 4th term 18 and 10th term 48. Work out the first term.",
+   "options": [
+    "9",
+    "3",
+    "−2",
+    "13"
+   ],
+   "answer": 1,
+   "explanation": "There are 6 steps from the 4th term to the 10th term, so the common difference is (48 − 18) ÷ 6 = 5. The 4th term is first term + 3 × 5, so 18 = first term + 15 and the first term is 3. Using 4 × 5 instead gives −2."
+  },
+  {
+   "n": 18,
+   "topic": "Sequences",
+   "q": "Here are the first four terms of a quadratic sequence: 4, 11, 22, 37. What is the next term?",
+   "options": [
+    "60",
+    "71",
+    "52",
+    "56"
+   ],
+   "answer": 3,
+   "explanation": "The first differences are 7, 11 and 15, so the second difference is constant at 4. The next first difference is 15 + 4 = 19, and the next term is 37 + 19 = 56. Reusing 15 as the next difference leads to 52."
+  },
+  {
+   "n": 19,
+   "topic": "Circle theorems",
+   "q": "Points A, B, C and D lie on a circle. B and D are on the same side of the chord AC. Angle ABC = 34°. Work out angle ADC.",
+   "options": [
+    "34°",
+    "68°",
+    "17°",
+    "146°"
+   ],
+   "answer": 0,
+   "explanation": "Angles subtended by the same chord at the circumference in the same segment are equal. Since B and D are on the same side of chord AC, angle ADC = angle ABC = 34°. The value 146° would be used if the two points were on opposite sides of the chord."
+  },
+  {
+   "n": 20,
+   "topic": "Circle theorems",
+   "q": "A tangent PT touches a circle at T. O is the centre of the circle. Angle TOP = 28°. Work out angle TPO.",
+   "options": [
+    "118°",
+    "28°",
+    "56°",
+    "62°"
+   ],
+   "answer": 3,
+   "explanation": "A tangent is perpendicular to the radius at the point of contact, so angle OTP = 90°. In triangle OPT, angle TPO = 180° − 90° − 28° = 62°."
+  },
+  {
+   "n": 21,
+   "topic": "Angles and polygons",
+   "q": "A regular polygon has 24 sides. Work out the size of each interior angle.",
+   "options": [
+    "165°",
+    "156°",
+    "15°",
+    "150°"
+   ],
+   "answer": 0,
+   "explanation": "The exterior angle of a regular 24-sided polygon is 360° ÷ 24 = 15°. Each interior angle is 180° − 15° = 165°."
+  },
+  {
+   "n": 22,
+   "topic": "Angles and polygons",
+   "q": "In an isosceles triangle, each of the two equal angles is twice the third angle. Work out the size of the third angle.",
+   "options": [
+    "45°",
+    "60°",
+    "36°",
+    "72°"
+   ],
+   "answer": 2,
+   "explanation": "Let the third angle be x. Each equal angle is 2x, so x + 2x + 2x = 180°, giving 5x = 180° and x = 36°. The equal angles are 72°, not the third angle."
+  },
+  {
+   "n": 23,
+   "topic": "Angles and polygons",
+   "q": "A straight line crosses two parallel lines. The two co-interior angles formed between the parallel lines on one side of the crossing line are (3x + 15)° and (7x − 35)°. Work out the value of x.",
+   "options": [
+    "16",
+    "13",
+    "20",
+    "12.5"
+   ],
+   "answer": 2,
+   "explanation": "Co-interior angles between parallel lines sum to 180°. So (3x + 15) + (7x − 35) = 180, which gives 10x − 20 = 180 and x = 20. Setting the expressions equal would give 12.5, but that is for alternate angles."
+  },
+  {
+   "n": 24,
+   "topic": "Graphs of functions",
+   "q": "A straight line has equation 3x − 4y = 12. Work out its gradient and y-intercept.",
+   "options": [
+    "gradient −3/4, y-intercept 3",
+    "gradient 3, y-intercept −4",
+    "gradient 4/3, y-intercept −3",
+    "gradient 3/4, y-intercept −3"
+   ],
+   "answer": 3,
+   "explanation": "Rearrange 3x − 4y = 12 to make y the subject: 4y = 3x − 12, so y = (3/4)x − 3. The coefficient of x is the gradient and the constant term is the y-intercept."
+  },
+  {
+   "n": 25,
+   "topic": "Graphs of functions",
+   "q": "The graph of y = x³ − 4x crosses the x-axis at three points. Work out the distance between the two outer crossing points.",
+   "options": [
+    "4",
+    "2",
+    "6",
+    "8"
+   ],
+   "answer": 0,
+   "explanation": "Factorise x³ − 4x as x(x − 2)(x + 2), so the graph crosses the x-axis at −2, 0 and 2. The two outer crossings are at −2 and 2, and their distance is 2 − (−2) = 4."
+  },
+  {
+   "n": 26,
+   "topic": "Perimeter, area and volume",
+   "q": "A rectangular garden in Swansea is 12.5 metres long and 8 metres wide. A path 1.5 metres wide runs inside the garden all the way round the edge. The rest of the garden is lawn. Work out the area of the path.",
+   "options": [
+    "28.5 m²",
+    "52.5 m²",
+    "47.5 m²",
+    "61.5 m²"
+   ],
+   "answer": 1,
+   "explanation": "The whole garden has area 12.5 × 8 = 100 m². The lawn inside the path measures (12.5 − 2 × 1.5) = 9.5 m by (8 − 2 × 1.5) = 5 m, so its area is 9.5 × 5 = 47.5 m². Therefore the path area is 100 − 47.5 = 52.5 m². Using the perimeter multiplied by 1.5 gives 61.5 m², but that counts the four corners twice."
+  },
+  {
+   "n": 27,
+   "topic": "Perimeter, area and volume",
+   "q": "A cone has perpendicular height 10 cm and base radius 6 cm. Taking π = 3.14, calculate its volume. Use volume = 1/3 × π × r² × h.",
+   "options": [
+    "62.8 cm³",
+    "376.8 cm³",
+    "565.2 cm³",
+    "1130.4 cm³"
+   ],
+   "answer": 1,
+   "explanation": "Substitute r = 6 and h = 10: volume = 1/3 × 3.14 × 6² × 10. This gives 1/3 × 3.14 × 36 × 10 = 376.8 cm³. The value 1130.4 cm³ comes from leaving out the factor 1/3, while 62.8 cm³ comes from not squaring the radius."
+  },
+  {
+   "n": 28,
+   "topic": "Perimeter, area and volume",
+   "q": "The total surface area of a solid cube is 150 cm². Work out the volume of the cube.",
+   "options": [
+    "150 cm³",
+    "125 cm³",
+    "625 cm³",
+    "25 cm³"
+   ],
+   "answer": 1,
+   "explanation": "A cube has 6 equal square faces, so each face has area 150 ÷ 6 = 25 cm². The edge length is √25 = 5 cm, and the volume is 5³ = 125 cm³. The value 25 cm³ is just the area of one face, not the volume."
+  },
+  {
+   "n": 29,
+   "topic": "Linear equations and inequalities",
+   "q": "Amara solves the equation 5(x − 3) = 2x + 6. What is the value of x?",
+   "options": [
+    "x = −3",
+    "x = 7",
+    "x = 3",
+    "x = 21"
+   ],
+   "answer": 1,
+   "explanation": "Expand the left side: 5x − 15 = 2x + 6. Subtracting 2x from both sides gives 3x − 15 = 6, so 3x = 21 and x = 7. The value x = −3 can arise from subtracting the terms on the wrong sides."
+  },
+  {
+   "n": 30,
+   "topic": "Linear equations and inequalities",
+   "q": "Solve the inequality 5 − 3x ≥ 20.",
+   "options": [
+    "x ≤ 5",
+    "x ≤ −5",
+    "x ≥ 5",
+    "x ≥ −5"
+   ],
+   "answer": 1,
+   "explanation": "Subtract 5 from both sides to get −3x ≥ 15. Dividing by −3 reverses the inequality sign, so x ≤ −5. The answer x ≥ −5 comes from forgetting to reverse the inequality when dividing by a negative number."
+  }
+ ]
+}

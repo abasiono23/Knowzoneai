@@ -772,7 +772,7 @@ const help: Translation<typeof en> = {
             body: ['Abin da AI ya samar na iya:'],
             bullets: [
               'Ƙunshi kurakurai na gaskiya, musamman a lissafi, kwanan wata da alƙaluma',
-              'Rasa bayanai daga takamaiman manhajarka ko hukumar jarrabawarka (WAEC, NECO, JAMB)',
+              'Rasa bayanai daga takamaiman manhajarka ko hukumar jarrabawarka (WAEC, SAT, GCSE…)',
               'Kasa karanta rubutun hannu daidai, hotuna masu duhu-duhu ko zane-zane masu sarƙaƙiya',
               'Rashin sanin abubuwan da suka faru kwanan nan ko canje-canjen manhaja',
               'Yin magana da ƙarfin gwiwa ko da ba daidai ba ne',

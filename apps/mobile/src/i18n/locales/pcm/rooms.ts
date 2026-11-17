@@ -61,7 +61,7 @@ const rooms: Translation<typeof en> = {
   },
   goal: 'ROOM GOAL',
   goalEmpty: 'No goal yet.',
-  goalPlaceholder: 'like Finish JAMB Physics paper 1',
+  goalPlaceholder: 'like Finish {{exam}} Physics paper 1',
   setGoal: 'Set goal',
   editGoal: 'Change',
   goalProgress: '{{done}} of {{total}} don finish',

@@ -1,0 +1,401 @@
+{
+ "id": "kcse-chemistry-p1",
+ "exam": "kcse",
+ "subject": "chemistry",
+ "year": null,
+ "number": 1,
+ "source": "ai",
+ "minutes": 35,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Water and hydrogen",
+   "q": "A sample of water from Lake Naivasha contains temporary hardness only. Which statement explains why boiling the water removes this hardness?",
+   "options": [
+    "Boiling increases the solubility of calcium hydrogencarbonate so it no longer causes hardness.",
+    "Boiling decomposes calcium hydrogencarbonate to insoluble calcium carbonate, which settles out.",
+    "Boiling converts calcium sulphate into soluble calcium hydrogencarbonate.",
+    "Boiling precipitates all dissolved sodium salts as insoluble carbonates."
+   ],
+   "answer": 1,
+   "explanation": "Temporary hardness is caused by dissolved calcium and magnesium hydrogencarbonates. On boiling, calcium hydrogencarbonate decomposes to insoluble calcium carbonate, so the calcium ions responsible for hardness are removed from solution. Permanent hardness due to sulphates or chlorides is not removed by boiling."
+  },
+  {
+   "n": 2,
+   "topic": "Water and hydrogen",
+   "q": "In the electrolysis of acidified water, 15 cm³ of oxygen is collected at the anode under certain conditions. What volume of hydrogen is collected at the cathode under the same conditions?",
+   "options": [
+    "7.5 cm³",
+    "15 cm³",
+    "30 cm³",
+    "45 cm³"
+   ],
+   "answer": 2,
+   "explanation": "The equation for the electrolysis is 2H₂O(l) → 2H₂(g) + O₂(g). The mole ratio of hydrogen to oxygen is 2:1, and under the same conditions the volume ratio is also 2:1. Therefore, 15 cm³ of oxygen corresponds to 15 × 2 = 30 cm³ of hydrogen."
+  },
+  {
+   "n": 3,
+   "topic": "Water and hydrogen",
+   "q": "A student prepares hydrogen by reacting zinc granules with dilute hydrochloric acid. The gas is first passed through water and then through concentrated sulphuric acid. Why is the gas passed through water?",
+   "options": [
+    "To dissolve and remove hydrogen chloride gas from the hydrogen.",
+    "To remove water vapour from the hydrogen.",
+    "To test whether the gas is hydrogen.",
+    "To oxidise any unreacted zinc particles."
+   ],
+   "answer": 0,
+   "explanation": "Hydrogen prepared from zinc and dilute hydrochloric acid contains hydrogen chloride gas and water vapour. Hydrogen chloride is very soluble in water, so passing the gas through water removes it; the concentrated sulphuric acid then dries the hydrogen."
+  },
+  {
+   "n": 4,
+   "topic": "The mole: formulae and chemical equations",
+   "q": "A gaseous oxide of nitrogen contains 30.4% nitrogen by mass. Using N = 14 and O = 16, what is its empirical formula?",
+   "options": [
+    "N₂O₅",
+    "NO₂",
+    "NO",
+    "N₂O"
+   ],
+   "answer": 1,
+   "explanation": "In 100 g of the oxide, there are 30.4 g of nitrogen and 69.6 g of oxygen. Moles of N = 30.4 ÷ 14 ≈ 2.17 mol; moles of O = 69.6 ÷ 16 = 4.35 mol. Dividing by the smaller value gives N:O ≈ 1:2, so the empirical formula is NO₂."
+  },
+  {
+   "n": 5,
+   "topic": "The mole: formulae and chemical equations",
+   "q": "Zinc reacts with dilute hydrochloric acid according to: Zn(s) + 2HCl(aq) → ZnCl₂(aq) + H₂(g). What mass of zinc is needed to produce 240 cm³ of hydrogen at s.t.p.? (Zn = 65; molar gas volume at s.t.p. = 24 dm³)",
+   "options": [
+    "1.30 g",
+    "0.65 g",
+    "6.50 g",
+    "0.325 g"
+   ],
+   "answer": 1,
+   "explanation": "240 cm³ = 0.240 dm³. Moles of hydrogen = 0.240 ÷ 24 = 0.0100 mol. From the equation, 1 mol Zn produces 1 mol H₂, so moles of Zn = 0.0100 mol. Mass of Zn = 0.0100 × 65 = 0.65 g."
+  },
+  {
+   "n": 6,
+   "topic": "The mole: formulae and chemical equations",
+   "q": "25.0 cm³ of 0.100 mol/dm³ sodium hydroxide is exactly neutralised by 20.0 cm³ of dilute hydrochloric acid. What is the concentration of the hydrochloric acid?",
+   "options": [
+    "0.200 mol/dm³",
+    "0.0800 mol/dm³",
+    "0.250 mol/dm³",
+    "0.125 mol/dm³"
+   ],
+   "answer": 3,
+   "explanation": "Moles of sodium hydroxide = 25.0 ÷ 1000 × 0.100 = 0.00250 mol. The equation NaOH + HCl → NaCl + H₂O shows a 1:1 mole ratio, so moles of HCl = 0.00250 mol. Concentration of HCl = 0.00250 ÷ (20.0 ÷ 1000) = 0.125 mol/dm³."
+  },
+  {
+   "n": 7,
+   "topic": "Energy changes in chemical and physical processes",
+   "q": "When solid ammonium nitrate is dissolved in water in a beaker, the temperature of the mixture falls. Which statement about the process is correct?",
+   "options": [
+    "It is endothermic, and heat energy is taken from the surroundings.",
+    "It is endothermic, and heat energy is released to the surroundings.",
+    "It is exothermic, and heat energy is released to the surroundings.",
+    "It is exothermic, and heat energy is taken from the surroundings."
+   ],
+   "answer": 0,
+   "explanation": "A fall in temperature means the process takes in heat energy from the surroundings, so the dissolving is endothermic. Endothermic changes absorb heat, while exothermic changes release heat and would make the mixture warmer."
+  },
+  {
+   "n": 8,
+   "topic": "Energy changes in chemical and physical processes",
+   "q": "For the reaction H₂(g) + Cl₂(g) → 2HCl(g), use the bond energies: H–H = 436 kJ/mol, Cl–Cl = 243 kJ/mol, H–Cl = 431 kJ/mol. What is the enthalpy change of the reaction?",
+   "options": [
+    "−183 kJ/mol",
+    "−248 kJ/mol",
+    "+248 kJ/mol",
+    "+183 kJ/mol"
+   ],
+   "answer": 0,
+   "explanation": "Energy absorbed to break bonds = 436 + 243 = 679 kJ. Energy released when bonds form = 2 × 431 = 862 kJ. Enthalpy change = 679 − 862 = −183 kJ/mol. The value +248 kJ/mol would be obtained if only one H–Cl bond were counted, but two moles of HCl are formed."
+  },
+  {
+   "n": 9,
+   "topic": "Structure of the atom and the periodic table",
+   "q": "A sample of chlorine contains only the isotopes Cl-35 and Cl-37 and has relative atomic mass 35.5. What is the percentage abundance of Cl-37?",
+   "options": [
+    "25%",
+    "50%",
+    "75%",
+    "12.5%"
+   ],
+   "answer": 0,
+   "explanation": "Let x be the percentage abundance of Cl-37, so Cl-35 has abundance 100 − x. Relative atomic mass = [35(100 − x) + 37x] ÷ 100 = 35.5. This gives 3500 + 2x = 3550, so x = 25. The percentage of Cl-35 is therefore 75%."
+  },
+  {
+   "n": 10,
+   "topic": "Structure of the atom and the periodic table",
+   "q": "An ion X²⁺ has the electron configuration 2,8,8. Which statement about element X is correct?",
+   "options": [
+    "It has atomic number 22 and is in Group II and Period 4.",
+    "It has atomic number 18 and is in Group VIII and Period 3.",
+    "It has atomic number 20 and is in Group II and Period 3.",
+    "It has atomic number 20 and is in Group II and Period 4."
+   ],
+   "answer": 3,
+   "explanation": "The ion X²⁺ has gained a 2+ charge by losing two electrons, so a neutral atom of X has 18 + 2 = 20 electrons and atomic number 20. Its electron arrangement is 2,8,8,2, which has four occupied shells and two outer electrons, placing X in Group II and Period 4."
+  },
+  {
+   "n": 11,
+   "topic": "Air and combustion",
+   "q": "In an experiment in Kisumu, 100 cm³ of air is trapped over moist iron filings. After several days, the volume of gas remaining is 79 cm³. What is the approximate percentage by volume of the component of air that was used up by rusting?",
+   "options": [
+    "21%",
+    "20%",
+    "1%",
+    "79%"
+   ],
+   "answer": 0,
+   "explanation": "The volume used up is 100 − 79 = 21 cm³. This is 21/100 × 100% = 21%, which is about the percentage of oxygen in air, and oxygen is the component used up during rusting."
+  },
+  {
+   "n": 12,
+   "topic": "Air and combustion",
+   "q": "During incomplete combustion of petrol in a badly tuned car engine in Nairobi, a poisonous gas is produced. Which gas is produced and is dangerous because it competes with oxygen for haemoglobin?",
+   "options": [
+    "Carbon dioxide",
+    "Nitrogen dioxide",
+    "Sulphur dioxide",
+    "Carbon monoxide"
+   ],
+   "answer": 3,
+   "explanation": "Incomplete combustion forms carbon monoxide when there is insufficient oxygen. Carbon monoxide binds strongly to haemoglobin and reduces the blood’s ability to carry oxygen, unlike carbon dioxide, which is normally transported in blood and is not poisonous by this mechanism."
+  },
+  {
+   "n": 13,
+   "topic": "Air and combustion",
+   "q": "Which set of percentages is closest to the composition by volume of clean dry air?",
+   "options": [
+    "Nitrogen about 21%, oxygen about 78%, carbon dioxide about 1%, noble gases about 0.03%",
+    "Nitrogen about 78%, oxygen about 21%, noble gases about 1%, carbon dioxide about 0.03%",
+    "Oxygen about 50%, nitrogen about 49%, carbon dioxide about 1%, noble gases about traces",
+    "Nitrogen about 78%, oxygen about 21%, carbon dioxide about 1%, noble gases about 0.03%"
+   ],
+   "answer": 1,
+   "explanation": "Clean dry air is approximately 78% nitrogen and 21% oxygen by volume, with about 1% noble gases and a much smaller amount, about 0.03%, of carbon dioxide. Swapping the noble gas and carbon dioxide percentages is a common mistake."
+  },
+  {
+   "n": 14,
+   "topic": "Chemical families and patterns in properties",
+   "q": "An element has atomic number 17. In which group of the Periodic Table is it placed, and what ion does it commonly form?",
+   "options": [
+    "Group II; it forms a 2− ion",
+    "Group I; it forms a 1+ ion",
+    "Group VII; it forms a 7+ ion",
+    "Group VII; it forms a 1− ion"
+   ],
+   "answer": 3,
+   "explanation": "Atomic number 17 is chlorine, with electron arrangement 2,8,7. It is in Group VII and gains one electron to complete its outer shell, forming the chloride ion Cl⁻, a 1− ion."
+  },
+  {
+   "n": 15,
+   "topic": "Chemical families and patterns in properties",
+   "q": "A Group I metal M reacts with water according to 2M + 2H₂O → 2MOH + H₂. When 0.46 g of M reacts completely, 224 cm³ of hydrogen gas is produced at s.t.p. (Molar gas volume at s.t.p. = 22.4 dm³). Which Group I metal is M? (Li=7, Na=23, K=39)",
+   "options": [
+    "Lithium (Li)",
+    "Potassium (K)",
+    "Sodium (Na)",
+    "Calcium (Ca)"
+   ],
+   "answer": 2,
+   "explanation": "Moles of hydrogen = 0.224 ÷ 22.4 = 0.0100 mol. The equation shows 2 mol M give 1 mol H₂, so moles of M = 0.0200 mol. Molar mass of M = 0.46 ÷ 0.0200 = 23 g/mol, which is sodium."
+  },
+  {
+   "n": 16,
+   "topic": "Organic chemistry",
+   "q": "A sample of an alkane X containing 0.10 mol was burned completely in excess oxygen. It produced 0.30 mol of carbon dioxide and 0.40 mol of water. Which alkane is X?",
+   "options": [
+    "Butane (C₄H₁₀)",
+    "Methane (CH₄)",
+    "Propane (C₃H₈)",
+    "Ethane (C₂H₆)"
+   ],
+   "answer": 2,
+   "explanation": "From 0.10 mol of X, the 0.30 mol CO₂ gives 0.30 ÷ 0.10 = 3 carbon atoms per molecule. The 0.40 mol water contains 0.80 mol H atoms, so hydrogen atoms per molecule = 0.80 ÷ 0.10 = 8. Thus X is C₃H₈, propane."
+  },
+  {
+   "n": 17,
+   "topic": "Organic chemistry",
+   "q": "Ethene gas is bubbled into bromine water at room temperature. Which statement describes the expected observation and product?",
+   "options": [
+    "The orange-brown colour remains because ethene is saturated and unreactive.",
+    "The orange-brown colour of bromine water is decolourised and 1,2-dibromoethane is formed.",
+    "A white precipitate of silver bromide forms and ethane is formed.",
+    "The orange colour changes to green and ethanoic acid is formed."
+   ],
+   "answer": 1,
+   "explanation": "Ethene is an unsaturated alkene with a C=C double bond, so bromine adds across the double bond to form 1,2-dibromoethane and the bromine colour disappears. A saturated alkane would not decolourise bromine water in this way."
+  },
+  {
+   "n": 18,
+   "topic": "Nitrogen, sulphur and chlorine and their compounds",
+   "q": "A farmer in Kitale uses ammonium nitrate, NH₄NO₃, as a nitrogen fertiliser. What is the percentage by mass of nitrogen in ammonium nitrate? (N=14, H=1, O=16)",
+   "options": [
+    "35%",
+    "28%",
+    "17.5%",
+    "60%"
+   ],
+   "answer": 0,
+   "explanation": "Molar mass of NH₄NO₃ = 14 + 4 + 14 + 48 = 80 g/mol. There are two nitrogen atoms, with total mass 28 g, so percentage nitrogen = 28/80 × 100% = 35%. Using only one nitrogen atom gives the common wrong value of 17.5%."
+  },
+  {
+   "n": 19,
+   "topic": "Nitrogen, sulphur and chlorine and their compounds",
+   "q": "A factory in Thika converts sulphur to sulphuric acid by the Contact process. Assuming 100% conversion, what mass of sulphuric acid is obtained from 32 g of sulphur? (S=32, H=1, O=16)",
+   "options": [
+    "64 g",
+    "80 g",
+    "98 g",
+    "49 g"
+   ],
+   "answer": 2,
+   "explanation": "32 g of sulphur is 1 mol. In the Contact process, one mole of sulphur is converted through SO₂ and SO₃ to one mole of H₂SO₄. Molar mass of H₂SO₄ = 2 + 32 + 64 = 98 g/mol, so the mass obtained is 98 g."
+  },
+  {
+   "n": 20,
+   "topic": "Nitrogen, sulphur and chlorine and their compounds",
+   "q": "Chlorine reacts with cold dilute sodium hydroxide solution according to Cl₂ + 2NaOH → NaCl + X + H₂O. What is X?",
+   "options": [
+    "NaClO₄ (sodium perchlorate)",
+    "NaClO (sodium chlorate(I))",
+    "NaClO₃ (sodium chlorate(V))",
+    "NaClO₂ (sodium chlorite)"
+   ],
+   "answer": 1,
+   "explanation": "In cold dilute alkali, chlorine disproportionates: one chlorine atom becomes chloride ion Cl⁻ and the other becomes the chlorate(I) ion ClO⁻. Balancing the equation gives X = NaClO, sodium chlorate(I)."
+  },
+  {
+   "n": 21,
+   "topic": "Acids, bases and indicators",
+   "q": "A solution of limewater has a pH of about 12. Which colour would methyl orange show in this solution?",
+   "options": [
+    "Red",
+    "Yellow",
+    "Orange",
+    "Colourless"
+   ],
+   "answer": 1,
+   "explanation": "Methyl orange is yellow in alkaline solutions, and limewater is alkaline with a pH of about 12. Red or orange would show in acidic conditions, while colourless is not the alkaline colour of methyl orange."
+  },
+  {
+   "n": 22,
+   "topic": "Acids, bases and indicators",
+   "q": "25.0 cm³ of 0.10 M sodium hydroxide solution is exactly neutralised by 20.0 cm³ of dilute hydrochloric acid. What is the concentration of the hydrochloric acid?",
+   "options": [
+    "0.250 M",
+    "0.200 M",
+    "0.125 M",
+    "0.080 M"
+   ],
+   "answer": 2,
+   "explanation": "The reaction is HCl + NaOH → NaCl + H₂O, so the mole ratio is 1:1. Moles of sodium hydroxide = 0.0250 × 0.10 = 0.00250 mol; the acid also has 0.00250 mol, so its concentration is 0.00250 ÷ 0.0200 = 0.125 M."
+  },
+  {
+   "n": 23,
+   "topic": "Acids, bases and indicators",
+   "q": "A bee sting injects methanoic acid into the skin. Which substance would act as a base to neutralise it?",
+   "options": [
+    "Dilute ethanoic acid",
+    "Sodium chloride",
+    "Sodium hydrogencarbonate",
+    "Lemon juice"
+   ],
+   "answer": 2,
+   "explanation": "Methanoic acid is an acid, so it is neutralised by a base such as sodium hydrogencarbonate. Ethanoic acid and lemon juice are themselves acidic and would not neutralise it, while sodium chloride is neutral salt."
+  },
+  {
+   "n": 24,
+   "topic": "Metals",
+   "q": "Which oxide is amphoteric?",
+   "options": [
+    "Sodium oxide",
+    "Aluminium oxide",
+    "Copper(II) oxide",
+    "Magnesium oxide"
+   ],
+   "answer": 1,
+   "explanation": "Aluminium oxide reacts with both acids and alkalis to form salts, so it is amphoteric. Sodium oxide and magnesium oxide are basic oxides, and copper(II) oxide is also a basic oxide."
+  },
+  {
+   "n": 25,
+   "topic": "Metals",
+   "q": "A metal is obtained industrially by electrolysis of its oxide dissolved in molten cryolite. Which metal is this?",
+   "options": [
+    "Iron",
+    "Aluminium",
+    "Copper",
+    "Sodium"
+   ],
+   "answer": 1,
+   "explanation": "Aluminium is extracted by electrolysis of alumina dissolved in molten cryolite. Sodium is obtained from molten sodium chloride, iron is extracted in a blast furnace, and copper is commonly obtained by reduction or refining methods."
+  },
+  {
+   "n": 26,
+   "topic": "Structure and bonding",
+   "q": "Graphite conducts electricity but diamond does not. What is the best explanation?",
+   "options": [
+    "Graphite contains mobile ions between its layers.",
+    "In graphite, delocalised electrons can move along the layers, while in diamond all outer electrons are used in covalent bonds.",
+    "Graphite has weaker covalent bonds, so its electrons escape when a voltage is applied.",
+    "Diamond has free electrons but they cannot move."
+   ],
+   "answer": 1,
+   "explanation": "Graphite has delocalised electrons that are free to move and carry charge. Diamond has a rigid three-dimensional covalent network in which the outer electrons are localised in bonds, so it does not conduct electricity."
+  },
+  {
+   "n": 27,
+   "topic": "Structure and bonding",
+   "q": "An element X has electron arrangement 2,8,1. Another element Y has electron arrangement 2,7. What is the formula of the compound formed between X and Y?",
+   "options": [
+    "X₃Y",
+    "XY₂",
+    "X₂Y",
+    "XY"
+   ],
+   "answer": 3,
+   "explanation": "X loses one electron to form X⁺, while Y gains one electron to form Y⁻. One X⁺ ion combines with one Y⁻ ion, giving the formula XY."
+  },
+  {
+   "n": 28,
+   "topic": "Structure and bonding",
+   "q": "Sodium chloride does not conduct electricity when solid but conducts when molten. Why is this?",
+   "options": [
+    "The ions are fixed in the solid but become mobile when molten.",
+    "The solid contains no ions, but the molten liquid does.",
+    "Free electrons are produced when it melts.",
+    "Covalent bonds break on melting to release ions."
+   ],
+   "answer": 0,
+   "explanation": "Solid sodium chloride contains ions held in fixed positions in a giant ionic lattice, so they cannot move to carry current. When molten, the lattice breaks down and the ions become free to move."
+  },
+  {
+   "n": 29,
+   "topic": "Reaction rates and reversible reactions",
+   "q": "Nitrogen and hydrogen react reversibly: N₂(g) + 3H₂(g) ⇌ 2NH₃(g), with a negative ΔH for the forward reaction. Which change would increase the equilibrium yield of ammonia?",
+   "options": [
+    "Decreasing the concentration of nitrogen",
+    "Adding an iron catalyst",
+    "Increasing the pressure",
+    "Increasing the temperature"
+   ],
+   "answer": 2,
+   "explanation": "The forward reaction produces fewer gas molecules, from 4 moles to 2 moles, so increasing pressure shifts the equilibrium to the right and increases the yield of ammonia. Adding a catalyst speeds up both directions equally but does not change the equilibrium position, and increasing temperature favours the endothermic reverse reaction."
+  },
+  {
+   "n": 30,
+   "topic": "Reaction rates and reversible reactions",
+   "q": "Equal masses of powdered calcium carbonate and marble chips are added separately to equal volumes of the same excess dilute hydrochloric acid at the same temperature. Which statement is correct?",
+   "options": [
+    "The powder reacts faster, and both forms produce the same total volume of carbon dioxide.",
+    "The chips react faster because they have a larger surface area.",
+    "The powder produces a larger total volume of carbon dioxide.",
+    "Both react at the same rate because the same mass of calcium carbonate is used."
+   ],
+   "answer": 0,
+   "explanation": "The powder has a larger surface area, so acid particles collide with it more frequently and carbon dioxide is produced faster. Since the same mass of calcium carbonate is used and the acid is in excess, the same total amount of carbon dioxide is finally produced."
+  }
+ ]
+}

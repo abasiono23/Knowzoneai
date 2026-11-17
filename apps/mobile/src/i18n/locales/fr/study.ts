@@ -203,7 +203,7 @@ const study: Translation<typeof en> = {
     topicLabel: 'Thème',
     topicPlaceholder: 'ex. Comment fonctionnent les vaccins',
     focusLabel: 'Quelque chose de précis ? (facultatif)',
-    focusPlaceholder: 'ex. pour le WAEC, insiste sur les calculs',
+    focusPlaceholder: 'ex. pour le {{exam}}, insiste sur les calculs',
     popular: 'POPULAIRE EN CE MOMENT',
     ideas: {
       photosynthesis: 'La photosynthèse',
@@ -354,7 +354,7 @@ const study: Translation<typeof en> = {
     subject: 'Matière',
     folderName: 'Nom du dossier',
     tags: 'Étiquettes',
-    tagsPlaceholder: 'ex. WAEC, 2e trimestre, à réviser',
+    tagsPlaceholder: 'ex. {{exam}}, 2e trimestre, à réviser',
     tagsHint: 'Sépare les étiquettes par des virgules',
     created: 'Créé le {{date}} à partir de {{source}}',
   },

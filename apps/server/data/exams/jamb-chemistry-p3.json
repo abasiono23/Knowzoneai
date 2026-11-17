@@ -1,0 +1,531 @@
+{
+ "id": "jamb-chemistry-p3",
+ "exam": "jamb",
+ "subject": "chemistry",
+ "year": null,
+ "number": 3,
+ "source": "ai",
+ "minutes": 27,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Non-metals and their compounds",
+   "q": "Which pair of oxides consists only of acidic oxides?",
+   "options": [
+    "CO and CO₂",
+    "SO₂ and P₂O₅",
+    "NO and NO₂",
+    "Na₂O and SO₃"
+   ],
+   "answer": 1,
+   "explanation": "SO₂ and P₂O₅ are non-metal oxides that react with alkalis to form salts, so they are acidic. CO is neutral, Na₂O is basic, and NO is neutral even though NO₂ is acidic."
+  },
+  {
+   "n": 2,
+   "topic": "Energy changes",
+   "q": "In a school calorimetry experiment in Enugu, 50.0 cm³ of 0.500 mol dm⁻³ HCl is mixed with 50.0 cm³ of 0.500 mol dm⁻³ NaOH. The temperature rises by 6.00 °C. Assuming the mixture has density 1.00 g cm⁻³ and specific heat capacity 4.18 J g⁻¹ K⁻¹, what is the enthalpy change of neutralisation per mole of water formed?",
+   "options": [
+    "−50.2 kJ mol⁻¹",
+    "+100.3 kJ mol⁻¹",
+    "−100.3 kJ mol⁻¹",
+    "−2.51 kJ mol⁻¹"
+   ],
+   "answer": 2,
+   "explanation": "Moles of water formed = 0.0500 dm³ × 0.500 mol dm⁻³ = 0.0250 mol. Heat evolved = 100.0 g × 4.18 J g⁻¹ K⁻¹ × 6.00 K = 2508 J = 2.508 kJ, so ΔH = −2.508 kJ ÷ 0.0250 mol = −100.3 kJ mol⁻¹. The rise in temperature makes the value negative."
+  },
+  {
+   "n": 3,
+   "topic": "Energy changes",
+   "q": "Use the bond energies H–H = 436 kJ mol⁻¹, Cl–Cl = 242 kJ mol⁻¹ and H–Cl = 431 kJ mol⁻¹. What is the enthalpy change for H₂(g) + Cl₂(g) → 2HCl(g)?",
+   "options": [
+    "−862 kJ mol⁻¹",
+    "+184 kJ mol⁻¹",
+    "−184 kJ mol⁻¹",
+    "−247 kJ mol⁻¹"
+   ],
+   "answer": 2,
+   "explanation": "Bonds broken = 436 + 242 = 678 kJ mol⁻¹; bonds formed = 2 × 431 = 862 kJ mol⁻¹. ΔH = bonds broken − bonds formed = 678 − 862 = −184 kJ mol⁻¹."
+  },
+  {
+   "n": 4,
+   "topic": "Mole concept and stoichiometry",
+   "q": "A student in Abuja dissolves 5.85 g of sodium chloride in distilled water and makes the solution up to 500.0 cm³. What is the concentration of chloride ions in the solution? (NaCl = 58.5)",
+   "options": [
+    "0.200 mol dm⁻³",
+    "0.100 mol dm⁻³",
+    "0.0500 mol dm⁻³",
+    "0.400 mol dm⁻³"
+   ],
+   "answer": 0,
+   "explanation": "Moles of NaCl = 5.85/58.5 = 0.100 mol. Concentration = 0.100 mol ÷ 0.500 dm³ = 0.200 mol dm⁻³, and each NaCl unit gives one chloride ion."
+  },
+  {
+   "n": 5,
+   "topic": "Mole concept and stoichiometry",
+   "q": "13.0 g of zinc granules (Zn = 65.0) is added to 250.0 cm³ of 0.800 mol dm⁻³ hydrochloric acid. Zn + 2HCl → ZnCl₂ + H₂. What mass of zinc remains unreacted?",
+   "options": [
+    "6.50 g",
+    "0.00 g",
+    "13.0 g",
+    "3.25 g"
+   ],
+   "answer": 0,
+   "explanation": "Moles of Zn = 13.0/65.0 = 0.200 mol; moles of HCl = 0.250 × 0.800 = 0.200 mol. Since 2 mol HCl react with 1 mol Zn, the 0.200 mol HCl reacts with only 0.100 mol Zn, equivalent to 6.50 g. The unreacted Zn is 13.0 − 6.50 = 6.50 g."
+  },
+  {
+   "n": 6,
+   "topic": "Mole concept and stoichiometry",
+   "q": "A hydrated salt has the formula MSO₄·xH₂O and molar mass 250 g mol⁻¹. When 12.5 g of the salt is heated strongly, 8.00 g of anhydrous MSO₄ remains. What is the value of x? (H₂O = 18)",
+   "options": [
+    "6",
+    "5",
+    "4",
+    "10"
+   ],
+   "answer": 1,
+   "explanation": "Moles of hydrated salt = 12.5/250 = 0.0500 mol. Water lost = 12.5 − 8.00 = 4.50 g, so moles of water = 4.50/18 = 0.250 mol. Thus x = 0.250/0.0500 = 5."
+  },
+  {
+   "n": 7,
+   "topic": "Gas laws",
+   "q": "A fixed mass of gas occupies 300 cm³ at 27 °C and 90 kPa. What volume will it occupy at 127 °C and 120 kPa?",
+   "options": [
+    "300 cm³",
+    "225 cm³",
+    "533 cm³",
+    "169 cm³"
+   ],
+   "answer": 0,
+   "explanation": "Using V₂ = V₁ × (P₁/P₂) × (T₂/T₁), convert temperatures to kelvin: T₁ = 300 K and T₂ = 400 K. V₂ = 300 × (90/120) × (400/300) = 300 cm³. The pressure increase and temperature increase cancel in this case."
+  },
+  {
+   "n": 8,
+   "topic": "Gas laws",
+   "q": "Under the same conditions, 20 cm³ of methane diffuses through a porous plug in 10 s. How long will 20 cm³ of sulfur(IV) oxide take to diffuse through the same plug? (CH₄ = 16, SO₂ = 64)",
+   "options": [
+    "40 s",
+    "20 s",
+    "5.0 s",
+    "2.5 s"
+   ],
+   "answer": 1,
+   "explanation": "Graham’s law gives t(SO₂)/t(CH₄) = √(M(SO₂)/M(CH₄)) = √(64/16) = 2. Therefore t(SO₂) = 10 s × 2 = 20 s; the heavier gas takes longer."
+  },
+  {
+   "n": 9,
+   "topic": "Chemical bonding",
+   "q": "Solid magnesium chloride is brittle. Which statement best explains this property?",
+   "options": [
+    "Weak forces between molecules allow layers to slide over one another.",
+    "Hydrogen bonds between ions break suddenly under stress.",
+    "Mobile electrons make the solid break easily when struck.",
+    "Stress displaces layers of ions so that like charges come together and repel."
+   ],
+   "answer": 3,
+   "explanation": "Solid magnesium chloride is an ionic lattice made of Mg²⁺ and Cl⁻ ions. When struck, layers can shift so that ions of the same charge are brought next to each other, causing strong repulsion and shattering. Weak intermolecular forces and mobile electrons describe molecular and metallic solids, not this ionic solid."
+  },
+  {
+   "n": 10,
+   "topic": "Acids, bases and salts",
+   "q": "A student in Sokoto titrates 1.25 g of impure sodium carbonate with 0.500 mol/dm³ hydrochloric acid. The acid required for complete reaction is 40.0 cm³. What is the percentage purity of the sodium carbonate? (Mr of Na₂CO₃ = 106; Na₂CO₃ + 2HCl → 2NaCl + H₂O + CO₂)",
+   "options": [
+    "84.8%",
+    "100.0%",
+    "42.4%",
+    "15.2%"
+   ],
+   "answer": 0,
+   "explanation": "Moles of HCl used = 0.500 × 0.0400 = 0.0200 mol. From the equation, 1 mol Na₂CO₃ reacts with 2 mol HCl, so Na₂CO₃ present = 0.0100 mol. Mass of pure Na₂CO₃ = 0.0100 × 106 = 1.06 g, giving purity = (1.06 ÷ 1.25) × 100 = 84.8%. The value 15.2% is the impurity percentage."
+  },
+  {
+   "n": 11,
+   "topic": "Atomic structure",
+   "q": "The maximum number of electrons that can occupy a d subshell is",
+   "options": [
+    "6",
+    "2",
+    "10",
+    "14"
+   ],
+   "answer": 2,
+   "explanation": "A d subshell has five orbitals, and each orbital can hold a maximum of two electrons. Therefore, the maximum number of electrons in a d subshell is 5 × 2 = 10. The values 2, 6 and 14 correspond to the maximum capacities of s, p and f subshells respectively."
+  },
+  {
+   "n": 12,
+   "topic": "Metals and their compounds",
+   "q": "A laboratory technician in Abuja adds aqueous sodium hydroxide to separate solutions of iron(II) sulfate and iron(III) chloride. Which observation identifies the solution containing iron(II) ions?",
+   "options": [
+    "A white precipitate that dissolves in excess sodium hydroxide is formed.",
+    "A blue precipitate is formed.",
+    "A green precipitate is formed.",
+    "A reddish-brown precipitate is formed."
+   ],
+   "answer": 2,
+   "explanation": "Iron(II) ions react with hydroxide ions to form iron(II) hydroxide, Fe(OH)₂, which is a green precipitate. Iron(III) ions give a reddish-brown precipitate of Fe(OH)₃, while a blue precipitate is characteristic of copper(II) ions."
+  },
+  {
+   "n": 13,
+   "topic": "Chemical bonding",
+   "q": "In the formation of the ammonium ion, NH₄⁺, a coordinate (dative) covalent bond is formed when",
+   "options": [
+    "a hydrogen atom donates a lone pair to the nitrogen atom.",
+    "the nitrogen atom transfers an electron completely to a hydrogen ion.",
+    "the nitrogen atom in ammonia donates its lone pair to a hydrogen ion.",
+    "a hydrogen ion shares its own pair of electrons with nitrogen."
+   ],
+   "answer": 2,
+   "explanation": "Ammonia has a lone pair of electrons on nitrogen. When it reacts with H⁺, nitrogen donates this lone pair to form a coordinate covalent bond, producing NH₄⁺. A hydrogen ion has no electron pair of its own, and complete electron transfer would produce ions, not a covalent bond."
+  },
+  {
+   "n": 14,
+   "topic": "Acids, bases and salts",
+   "q": "Which species is the conjugate base of the hydrogen sulfate ion, HSO₄⁻?",
+   "options": [
+    "H₂SO₄",
+    "H₃O⁺",
+    "SO₄²⁻",
+    "OH⁻"
+   ],
+   "answer": 2,
+   "explanation": "A conjugate base is formed when an acid loses a proton. Removing H⁺ from HSO₄⁻ leaves SO₄²⁻. H₂SO₄ is the conjugate acid of HSO₄⁻, not its conjugate base."
+  },
+  {
+   "n": 15,
+   "topic": "Atomic structure",
+   "q": "Which species has the same electron configuration as an argon atom? (Ar = 18, S = 16, Cl = 17, Na = 11, Mg = 12)",
+   "options": [
+    "Mg²⁺",
+    "S²⁻",
+    "Cl",
+    "Na⁺"
+   ],
+   "answer": 1,
+   "explanation": "An argon atom has 18 electrons. The sulfide ion, S²⁻, has 16 + 2 = 18 electrons, so it has the same configuration as Ar. A chlorine atom has 17 electrons, while Na⁺ and Mg²⁺ each have 10 electrons."
+  },
+  {
+   "n": 16,
+   "topic": "Acids, bases and salts",
+   "q": "Which indicator is most suitable for the titration of ethanoic acid with aqueous sodium hydroxide?",
+   "options": [
+    "Methyl orange",
+    "Methyl red",
+    "Litmus",
+    "Phenolphthalein"
+   ],
+   "answer": 3,
+   "explanation": "Ethanoic acid is a weak acid and sodium hydroxide is a strong base, so the equivalence point is above pH 7. Phenolphthalein changes colour in the alkaline range and is suitable for this titration. Methyl orange and methyl red change in acidic ranges, so they would give an early end-point."
+  },
+  {
+   "n": 17,
+   "topic": "Chemical bonding",
+   "q": "Which molecule has a trigonal planar shape?",
+   "options": [
+    "BF₃",
+    "H₂O",
+    "CH₄",
+    "NH₃"
+   ],
+   "answer": 0,
+   "explanation": "In BF₃, boron has three bonding pairs and no lone pair, so the electron pairs arrange trigonal planar at about 120°. CH₄ is tetrahedral, NH₃ is trigonal pyramidal, and H₂O is bent."
+  },
+  {
+   "n": 18,
+   "topic": "Water and solubility",
+   "q": "A student in Ibadan dissolves 4.0 g of sodium hydroxide (Mr = 40.0) in water and makes the solution up to 250 cm³. Assuming complete dissociation, what is the concentration of hydroxide ions in the solution?",
+   "options": [
+    "0.10 mol/dm³",
+    "0.40 mol/dm³",
+    "0.80 mol/dm³",
+    "0.04 mol/dm³"
+   ],
+   "answer": 1,
+   "explanation": "Moles of NaOH = 4.0 ÷ 40.0 = 0.10 mol. The volume is 250 cm³ = 0.250 dm³, so the concentration is 0.10 ÷ 0.250 = 0.40 mol/dm³. Since each NaOH unit gives one OH⁻ ion, the hydroxide ion concentration is also 0.40 mol/dm³. Dividing by 2.5 instead of 0.250 gives the mistaken value 0.04 mol/dm³."
+  },
+  {
+   "n": 19,
+   "topic": "Water and solubility",
+   "q": "A bottle of carbonated drink made in Lagos is opened on a warm day and fizzes more than a similar bottle opened from a cold refrigerator. Which statement best explains this observation?",
+   "options": [
+    "The solubility of carbon dioxide in water decreases when the temperature rises and the pressure falls, so more gas escapes.",
+    "Cooling water always increases the pressure inside the bottle and forces carbon dioxide out.",
+    "The solubility of carbon dioxide in water increases with temperature, so more gas is released.",
+    "Carbon dioxide reacts more readily with water at higher temperature, producing more gas."
+   ],
+   "answer": 0,
+   "explanation": "The fizzing is due to dissolved carbon dioxide escaping from the drink. Its solubility falls as temperature increases and as the pressure above the liquid falls when the bottle is opened. The statement that solubility increases with temperature is the opposite of the correct trend for most gases."
+  },
+  {
+   "n": 20,
+   "topic": "Environmental chemistry",
+   "q": "A leather factory in Kano discharges wastewater containing dissolved chromium(III) ions. Which treatment is most suitable for removing these ions before the water is released?",
+   "options": [
+    "Add lime to precipitate the chromium(III) ions as insoluble chromium(III) hydroxide.",
+    "Boil the wastewater so that the chromium(III) ions evaporate with the steam.",
+    "Add excess sodium chloride so that the chromium(III) ions dissolve completely.",
+    "Filter the wastewater through ordinary filter paper to remove the dissolved ions."
+   ],
+   "answer": 0,
+   "explanation": "Dissolved heavy-metal ions can be removed by converting them into an insoluble compound. Adding lime raises the pH and precipitates chromium(III) as chromium(III) hydroxide, which can then be filtered off. Ordinary filter paper does not remove dissolved ions, and metal ions are not removed by evaporation with water."
+  },
+  {
+   "n": 21,
+   "topic": "Environmental chemistry",
+   "q": "A metal smelter in Jos roasts sulfide ores, and rainwater nearby has a pH of 3.8. Which gas is chiefly responsible for the extra acidity of this rainwater?",
+   "options": [
+    "Ammonia",
+    "Sulfur dioxide",
+    "Methane",
+    "Carbon dioxide"
+   ],
+   "answer": 1,
+   "explanation": "Roasting sulfide ores releases sulfur dioxide, which can dissolve in rainwater and be oxidised to sulfurous and sulfuric acids, lowering the pH. Carbon dioxide also makes rainwater slightly acidic but not usually to pH 3.8. Ammonia is basic and would tend to reduce acidity instead of causing it."
+  },
+  {
+   "n": 22,
+   "topic": "Hydrocarbons",
+   "q": "Which compound is a structural isomer of pentane?",
+   "options": [
+    "butane",
+    "2-methylpropene",
+    "2-methylbutane",
+    "pent-1-ene"
+   ],
+   "answer": 2,
+   "explanation": "Pentane has molecular formula C₅H₁₂, and 2-methylbutane also has molecular formula C₅H₁₂ but a branched carbon skeleton. Butane has formula C₄H₁₀, while 2-methylpropene and pent-1-ene are alkenes with formulas C₄H₈ and C₅H₁₀ respectively. Therefore only 2-methylbutane has the same molecular formula as pentane."
+  },
+  {
+   "n": 23,
+   "topic": "Hydrocarbons",
+   "q": "At STP, what volume of hydrogen is required to convert completely 0.10 mol of but-1-ene to butane?",
+   "options": [
+    "2.24 dm³",
+    "1.12 dm³",
+    "22.4 dm³",
+    "4.48 dm³"
+   ],
+   "answer": 0,
+   "explanation": "The reaction is C₄H₈ + H₂ → C₄H₁₀, so one mole of hydrogen is needed per mole of but-1-ene. For 0.10 mol of but-1-ene, hydrogen required = 0.10 mol, and volume at STP = 0.10 × 22.4 = 2.24 dm³. The value 1.12 dm³ would arise from using 0.050 mol, while 4.48 dm³ would arise from assuming two moles of hydrogen per mole of alkene."
+  },
+  {
+   "n": 24,
+   "topic": "Periodic table",
+   "q": "An element has electronic configuration 1s² 2s² 2p⁶ 3s² 3p⁶ 4s¹. Which statement about the element is correct?",
+   "options": [
+    "It is in Group 1 and Period 4.",
+    "It is in Group 2 and Period 4.",
+    "It is in Group 1 and Period 3.",
+    "It is a transition metal in Period 4."
+   ],
+   "answer": 0,
+   "explanation": "The highest principal quantum number is 4, so the element is in Period 4. Its outer-shell configuration is 4s¹, giving one valence electron, so it belongs to Group 1. It is not a transition metal because the 3d subshell has not begun to fill in this calcium-preceding shell arrangement; the simple period-group location is Period 4 Group 1."
+  },
+  {
+   "n": 25,
+   "topic": "Periodic table",
+   "q": "Across Period 3 from sodium to argon, which property generally increases?",
+   "options": [
+    "Metallic character",
+    "Atomic radius",
+    "Number of occupied electron shells",
+    "First ionisation energy"
+   ],
+   "answer": 3,
+   "explanation": "Across a period, nuclear charge increases while the outer electrons remain in the same principal shell, so they are held more strongly and first ionisation energy generally increases. Atomic radius and metallic character generally decrease across the period. The number of occupied electron shells stays at three across Period 3, so it does not increase."
+  },
+  {
+   "n": 26,
+   "topic": "Oxidation, reduction and electrolysis",
+   "q": "A current of 0.800 A is passed through acidified water for 1500 s using inert electrodes. What volume of oxygen, measured at s.t.p., is evolved at the anode? (F = 96500 C/mol; molar volume at s.t.p. = 22.4 dm³/mol)",
+   "options": [
+    "34.8 cm³",
+    "139 cm³",
+    "278 cm³",
+    "69.6 cm³"
+   ],
+   "answer": 3,
+   "explanation": "The anode reaction is 2H₂O → O₂ + 4H⁺ + 4e⁻, so 1 mol O₂ needs 4 mol electrons. Charge = 0.800 × 1500 = 1200 C, and moles of electrons = 1200 ÷ 96500 = 0.01244 mol. Hence n(O₂) = 0.01244 ÷ 4 = 0.00311 mol, and volume = 0.00311 × 22400 = 69.6 cm³; omitting the division by 4 gives 278 cm³, while using 2 mol electrons per O₂ gives 139 cm³."
+  },
+  {
+   "n": 27,
+   "topic": "Oxidation, reduction and electrolysis",
+   "q": "During the electrolysis of molten zinc chloride with inert electrodes, a current of 2.00 A is passed for 965 s. What mass of zinc is deposited at the cathode? (Zn = 65; F = 96500 C/mol)",
+   "options": [
+    "0.325 g",
+    "1.30 g",
+    "0.433 g",
+    "0.650 g"
+   ],
+   "answer": 3,
+   "explanation": "Charge = 2.00 × 965 = 1930 C, so moles of electrons = 1930 ÷ 96500 = 0.0200 mol. The cathode reaction Zn²⁺ + 2e⁻ → Zn uses two electrons per zinc atom, so n(Zn) = 0.0200 ÷ 2 = 0.0100 mol and mass = 0.0100 × 65 = 0.650 g. Omitting the division by 2 gives 1.30 g."
+  },
+  {
+   "n": 28,
+   "topic": "Oxidation, reduction and electrolysis",
+   "q": "In the reaction 2FeCl₃ + SnCl₂ → 2FeCl₂ + SnCl₄, which species is oxidised?",
+   "options": [
+    "Sn²⁺",
+    "Cl⁻",
+    "Fe³⁺",
+    "Fe²⁺"
+   ],
+   "answer": 0,
+   "explanation": "Tin changes from +2 in SnCl₂ to +4 in SnCl₄, so Sn²⁺ loses electrons and is oxidised. Iron changes from +3 to +2 and is reduced. Chloride ions remain at −1, and Fe²⁺ is a product ion rather than the species oxidised."
+  },
+  {
+   "n": 29,
+   "topic": "Functional groups in organic chemistry",
+   "q": "The compound CH₃CH₂CONH₂ contains which functional group?",
+   "options": [
+    "Amide",
+    "Carboxylic acid",
+    "Ester",
+    "Amine"
+   ],
+   "answer": 0,
+   "explanation": "The group −CONH₂ is an amide group, formed by a carbonyl carbon attached to nitrogen. An amine has nitrogen attached to carbon but no C=O, while a carboxylic acid has −COOH and an ester has −COOC−."
+  },
+  {
+   "n": 30,
+   "topic": "Functional groups in organic chemistry",
+   "q": "Which compound gives a positive iodoform test when warmed with alkaline iodine solution?",
+   "options": [
+    "Methanol",
+    "Propan-1-ol",
+    "Propan-2-ol",
+    "Butan-1-ol"
+   ],
+   "answer": 2,
+   "explanation": "The iodoform test is positive for compounds containing the CH₃CH(OH)– group or a CH₃CO– group. Propan-2-ol contains the CH₃CH(OH)– arrangement and forms a yellow precipitate of triiodomethane. Propan-1-ol, methanol and butan-1-ol do not contain the required group."
+  },
+  {
+   "n": 31,
+   "topic": "Functional groups in organic chemistry",
+   "q": "Which of the following compounds is a secondary alcohol?",
+   "options": [
+    "2-Methylpropan-1-ol",
+    "Butan-1-ol",
+    "Butan-2-one",
+    "Butan-2-ol"
+   ],
+   "answer": 3,
+   "explanation": "A secondary alcohol has the carbon bearing −OH attached to two other carbon atoms. In butan-2-ol, the OH-bearing carbon is bonded to a methyl group and an ethyl group, so it is secondary. Butan-1-ol and 2-methylpropan-1-ol are primary alcohols, while butan-2-one is a ketone."
+  },
+  {
+   "n": 32,
+   "topic": "Rates of reaction and equilibrium",
+   "q": "For the reaction 2NO(g) + O₂(g) → 2NO₂(g), the rate equation is rate = k[NO]²[O₂]. If [NO] is halved while [O₂] is doubled at constant temperature, by what factor does the initial rate change?",
+   "options": [
+    "It increases fourfold.",
+    "It remains unchanged.",
+    "It halves.",
+    "It doubles."
+   ],
+   "answer": 2,
+   "explanation": "Substituting the new concentrations gives new rate = k(½[NO])²(2[O₂]) = ½ k[NO]²[O₂], so the rate becomes half of the original. Doubling only the NO concentration would quadruple the rate, which is not the combined change here."
+  },
+  {
+   "n": 33,
+   "topic": "Rates of reaction and equilibrium",
+   "q": "At equilibrium, a 2.0 dm³ vessel contains 0.40 mol N₂O₄(g) and 0.80 mol NO₂(g). Calculate Kc for N₂O₄(g) ⇌ 2NO₂(g).",
+   "options": [
+    "1.60 mol/dm³",
+    "0.40 mol/dm³",
+    "0.80 mol/dm³",
+    "0.20 mol/dm³"
+   ],
+   "answer": 2,
+   "explanation": "Concentrations are [N₂O₄] = 0.40 ÷ 2.0 = 0.20 mol/dm³ and [NO₂] = 0.80 ÷ 2.0 = 0.40 mol/dm³. For Kc = [NO₂]² ÷ [N₂O₄] = (0.40)² ÷ 0.20 = 0.16 ÷ 0.20 = 0.80 mol/dm³. Using undivided mole values or omitting the square on NO₂ gives the other values."
+  },
+  {
+   "n": 34,
+   "topic": "Separation of mixtures",
+   "q": "A student in Jos has a mixture of three coloured dyes that are soluble in ethanol. Which method is most suitable for separating and identifying the dyes?",
+   "options": [
+    "Filtration",
+    "Use of a separating funnel",
+    "Simple distillation",
+    "Paper chromatography"
+   ],
+   "answer": 3,
+   "explanation": "The dyes are soluble and move at different rates on chromatography paper because of differing adsorption and solubility, so they separate into coloured spots. Filtration separates an insoluble solid from a liquid, distillation separates liquids by boiling point, and a separating funnel separates immiscible liquids."
+  },
+  {
+   "n": 35,
+   "topic": "Separation of mixtures",
+   "q": "Kerosene is accidentally mixed with water in a container. Which apparatus is most suitable for separating the two liquids after they have been allowed to stand?",
+   "options": [
+    "Round-bottomed flask with a thermometer",
+    "Filter funnel and filter paper",
+    "Evaporating basin",
+    "Separating funnel"
+   ],
+   "answer": 3,
+   "explanation": "Kerosene and water are immiscible and form two layers, with kerosene floating on water. A separating funnel allows the lower water layer to be run off and the kerosene layer to be collected separately. Filter paper does not separate two liquid layers, and heating in a basin would not be the appropriate first method."
+  },
+  {
+   "n": 36,
+   "topic": "Non-metals and their compounds",
+   "q": "When solid ammonium nitrite is warmed gently, the gas evolved is",
+   "options": [
+    "ammonia",
+    "oxygen",
+    "nitrogen",
+    "nitrogen(IV) oxide"
+   ],
+   "answer": 2,
+   "explanation": "Ammonium nitrite decomposes on gentle warming according to NH₄NO₂ → N₂ + 2H₂O, so the gas evolved is nitrogen. Ammonia is normally evolved when an ammonium salt is heated with an alkali."
+  },
+  {
+   "n": 37,
+   "topic": "Energy changes",
+   "q": "A student in Ibadan mixes 50.0 cm³ of 1.00 mol dm⁻³ hydrochloric acid with 50.0 cm³ of 1.00 mol dm⁻³ sodium hydroxide in a calorimeter. The temperature rises by 6.00 °C. Assuming the density of the mixture is 1.00 g cm⁻³ and its specific heat capacity is 4.20 J g⁻¹ K⁻¹, calculate the enthalpy change of neutralisation in kJ mol⁻¹.",
+   "options": [
+    "−2.52 kJ mol⁻¹",
+    "−100.8 kJ mol⁻¹",
+    "−50.4 kJ mol⁻¹",
+    "+50.4 kJ mol⁻¹"
+   ],
+   "answer": 2,
+   "explanation": "The mass of the mixture is 100.0 g, so heat evolved = 100.0 × 4.20 × 6.00 = 2520 J = 2.52 kJ. The amount of water formed is 0.0500 dm³ × 1.00 mol dm⁻³ = 0.0500 mol, hence ΔH = −2.52 ÷ 0.0500 = −50.4 kJ mol⁻¹. The positive value ignores that the reaction is exothermic."
+  },
+  {
+   "n": 38,
+   "topic": "Energy changes",
+   "q": "For a reaction, the activation energy of the forward reaction is 80 kJ mol⁻¹ and the enthalpy change is +20 kJ mol⁻¹. What is the activation energy of the reverse reaction?",
+   "options": [
+    "20 kJ mol⁻¹",
+    "100 kJ mol⁻¹",
+    "60 kJ mol⁻¹",
+    "80 kJ mol⁻¹"
+   ],
+   "answer": 2,
+   "explanation": "The forward reaction is endothermic, so the products lie 20 kJ mol⁻¹ above the reactants. The reverse activation energy is the energy from the products to the transition state: 80 − 20 = 60 kJ mol⁻¹. Adding the enthalpy change instead gives the value expected for an exothermic forward reaction."
+  },
+  {
+   "n": 39,
+   "topic": "Energy changes",
+   "q": "The reaction C(s) + O₂(g) → CO₂(g) has ΔH = −394 kJ mol⁻¹. Which statement about the reaction is correct?",
+   "options": [
+    "It absorbs heat, and the products have higher enthalpy than the reactants.",
+    "It releases heat, but the products have higher enthalpy than the reactants.",
+    "It releases heat, and the products have lower enthalpy than the reactants.",
+    "It absorbs heat, but the products have lower enthalpy than the reactants."
+   ],
+   "answer": 2,
+   "explanation": "A negative ΔH means the reaction is exothermic, so heat is released to the surroundings and the products have lower enthalpy than the reactants. The magnitude, 394 kJ mol⁻¹, is the enthalpy decrease per mole of carbon burned."
+  },
+  {
+   "n": 40,
+   "topic": "Mole concept and stoichiometry",
+   "q": "A hydrocarbon contains 85.7% carbon and 14.3% hydrogen by mass. If its relative molecular mass is 56, what is its molecular formula? (C = 12, H = 1)",
+   "options": [
+    "C₂H₄",
+    "C₄H₈",
+    "C₃H₆",
+    "C₅H₁₀"
+   ],
+   "answer": 1,
+   "explanation": "Mole ratio C:H = 85.7/12 : 14.3/1 ≈ 7.14 : 14.3 = 1:2, so the empirical formula is CH₂ with empirical mass 14. Since the molecular mass is 56, the molecular formula is (CH₂)₄ = C₄H₈."
+  }
+ ]
+}

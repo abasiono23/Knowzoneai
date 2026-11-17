@@ -1,0 +1,401 @@
+{
+ "id": "nsc-mathematics-p1",
+ "exam": "nsc",
+ "subject": "mathematics",
+ "year": null,
+ "number": 1,
+ "source": "ai",
+ "minutes": 35,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Analytical geometry",
+   "q": "Circle with centre C(2, −3) passes through P(5, 1). Determine the equation of the tangent to the circle at P.",
+   "options": [
+    "4x + 3y = 23",
+    "4x − 3y = 17",
+    "3x − 4y = 11",
+    "3x + 4y = 19"
+   ],
+   "answer": 3,
+   "explanation": "The gradient of the radius CP is (1 − (−3))/(5 − 2) = 4/3, so the tangent gradient is the negative reciprocal −3/4. Using y − 1 = −3/4(x − 5) simplifies to 3x + 4y = 19. The equation 4x − 3y = 17 has gradient 4/3 and describes the radius line, not the tangent."
+  },
+  {
+   "n": 2,
+   "topic": "Analytical geometry",
+   "q": "Points A(−2, 5) and B(4, −1) are given. Determine the equation of the perpendicular bisector of AB.",
+   "options": [
+    "y = x − 1",
+    "y = −x + 1",
+    "y = x + 1",
+    "y = −x + 3"
+   ],
+   "answer": 2,
+   "explanation": "The midpoint of AB is ((−2 + 4)/2, (5 + (−1))/2) = (1, 2). The gradient of AB is (−1 − 5)/(4 − (−2)) = −1, so the perpendicular bisector has gradient 1. Hence y − 2 = 1(x − 1), which simplifies to y = x + 1. The line y = −x + 3 is the original line AB, not its perpendicular bisector."
+  },
+  {
+   "n": 3,
+   "topic": "Analytical geometry",
+   "q": "Determine the angle of inclination of the line 3x + 4y = 12, measured anticlockwise from the positive x-axis and rounded to the nearest degree.",
+   "options": [
+    "143°",
+    "37°",
+    "127°",
+    "53°"
+   ],
+   "answer": 0,
+   "explanation": "Rearrange 3x + 4y = 12 to y = −3/4 x + 3, so tan θ = −3/4. Because the angle of inclination is between 0° and 180° and the gradient is negative, θ = 180° − arctan(3/4) ≈ 180° − 36.87° = 143.13°. Rounded to the nearest degree, θ = 143°. The value 37° ignores the negative gradient and the required quadrant."
+  },
+  {
+   "n": 4,
+   "topic": "Euclidean geometry",
+   "q": "In cyclic quadrilateral ABCD, ∠A = (2x + 10)° and ∠C = (x + 50)°. Determine x.",
+   "options": [
+    "40",
+    "80",
+    "60",
+    "30"
+   ],
+   "answer": 0,
+   "explanation": "The opposite angles of a cyclic quadrilateral are supplementary, so (2x + 10)° + (x + 50)° = 180°. This gives 3x + 60 = 180, hence 3x = 120 and x = 40. Substituting back gives ∠A = 90° and ∠C = 90°, which are indeed supplementary."
+  },
+  {
+   "n": 5,
+   "topic": "Euclidean geometry",
+   "q": "Triangle ABC has D on AB and E on AC with DE ∥ BC. AD = 4 cm, DB = 6 cm and AE = 5 cm. Determine EC.",
+   "options": [
+    "7.5 cm",
+    "12.5 cm",
+    "6 cm",
+    "10/3 cm"
+   ],
+   "answer": 0,
+   "explanation": "Since DE ∥ BC, the triangle proportionality theorem gives AD/DB = AE/EC. Thus 4/6 = 5/EC, so 4 × EC = 30 and EC = 7.5 cm. Using AD/AB = AE/EC would incorrectly treat EC as part of the whole side and give 12.5 cm."
+  },
+  {
+   "n": 6,
+   "topic": "Exponents and surds",
+   "q": "Simplify (2√3 − √2)(2√3 + √2).",
+   "options": [
+    "14",
+    "10",
+    "12 − 2√6",
+    "2√6"
+   ],
+   "answer": 1,
+   "explanation": "Use the difference of squares: (2√3 − √2)(2√3 + √2) = (2√3)² − (√2)². That is 12 − 2 = 10, since (2√3)² = 4 × 3 = 12 and (√2)² = 2. The value 14 comes from adding the squares instead of subtracting them."
+  },
+  {
+   "n": 7,
+   "topic": "Exponents and surds",
+   "q": "Solve for x: 3^(x+1) + 3^x = 108.",
+   "options": [
+    "x = 3",
+    "x = 9",
+    "x = 4",
+    "x = 2"
+   ],
+   "answer": 0,
+   "explanation": "Rewrite 3^(x+1) as 3 × 3^x, so the left-hand side becomes 4 × 3^x. Hence 4 × 3^x = 108, so 3^x = 27 = 3^3. Therefore x = 3."
+  },
+  {
+   "n": 8,
+   "topic": "Exponents and surds",
+   "q": "Simplify by rationalising the denominator: (√5 + √2)/(√5 − √2).",
+   "options": [
+    "7 + 2√10",
+    "(7 − 2√10)/3",
+    "(7 + 2√10)/3",
+    "(3 + 2√10)/3"
+   ],
+   "answer": 2,
+   "explanation": "Multiply numerator and denominator by √5 + √2. The denominator becomes (√5)² − (√2)² = 5 − 2 = 3. The numerator becomes (√5 + √2)² = 5 + 2√10 + 2 = 7 + 2√10. Therefore the simplified expression is (7 + 2√10)/3; the negative sign in (7 − 2√10)/3 would arise from a sign error in the expansion."
+  },
+  {
+   "n": 9,
+   "topic": "Number patterns, sequences and series",
+   "q": "Consider the geometric series 5 + 2.5 + 1.25 + ⋯. Determine its sum to infinity.",
+   "options": [
+    "10",
+    "10/3",
+    "5",
+    "8.75"
+   ],
+   "answer": 0,
+   "explanation": "The first term is a = 5 and the ratio is r = 2.5/5 = 0.5, so the series converges. Its sum to infinity is S∞ = a/(1 − r) = 5/(1 − 0.5) = 10. The value 8.75 is only the sum of the first three terms, while 10/3 would come from the incorrect formula a/(1 + r)."
+  },
+  {
+   "n": 10,
+   "topic": "Number patterns, sequences and series",
+   "q": "Determine the general term T_n of the quadratic sequence 3; 8; 17; 30; …",
+   "options": [
+    "T_n = 2n² − n + 1",
+    "T_n = 2n² + n",
+    "T_n = 2n² + n + 2",
+    "T_n = 2n² − n + 2"
+   ],
+   "answer": 3,
+   "explanation": "The first differences are 5, 9, 13, so the second difference is constant at 4. For a quadratic T_n = an² + bn + c, 2a = 4 gives a = 2. Using T₁ = 3 and T₂ = 8 gives b + c = 1 and 2b + c = 0, hence b = −1 and c = 2. Therefore T_n = 2n² − n + 2."
+  },
+  {
+   "n": 11,
+   "topic": "Statistics",
+   "q": "Twenty learners in a Grade 12 class in Soweto wrote a Mathematics test. Their mean mark was 64. It was later found that one learner’s mark of 15 had been recorded incorrectly; the correct mark was 35. What is the correct mean mark?",
+   "options": [
+    "64",
+    "65",
+    "80",
+    "66"
+   ],
+   "answer": 1,
+   "explanation": "The original total was 20 × 64 = 1280. Correcting 15 to 35 increases the total by 20, so the correct total is 1300 and the correct mean is 1300 ÷ 20 = 65. The value 66 would arise from an increase of 40 in the total, not 20."
+  },
+  {
+   "n": 12,
+   "topic": "Statistics",
+   "q": "Each value in a data set of daily maximum temperatures is increased by 5 °C. Which statement about the transformed data set is correct?",
+   "options": [
+    "The mean increases by 5 °C and the standard deviation stays the same.",
+    "Both the mean and the standard deviation increase by 5 °C.",
+    "The mean increases by 5 °C and the standard deviation is multiplied by 5.",
+    "The mean stays the same and the standard deviation increases by 5 °C."
+   ],
+   "answer": 0,
+   "explanation": "Adding the same constant to every value shifts all values and the mean by 5 °C. The distances of the values from the mean are unchanged, so the standard deviation remains the same."
+  },
+  {
+   "n": 13,
+   "topic": "Statistics",
+   "q": "The five-number summary for monthly household water use, in kilolitres, is: minimum 6; lower quartile 9; median 12; upper quartile 16; maximum 28. What is the interquartile range?",
+   "options": [
+    "4 kL",
+    "22 kL",
+    "7 kL",
+    "10 kL"
+   ],
+   "answer": 2,
+   "explanation": "The interquartile range is Q3 − Q1 = 16 − 9 = 7 kL. The value 22 kL is the range, 28 − 6, not the interquartile range."
+  },
+  {
+   "n": 14,
+   "topic": "Probability and the counting principle",
+   "q": "Lerato designs a security code that consists of 3 different letters chosen from M, A, T, R, I, followed by 2 different digits chosen from 0 to 9. The order of the letters and the order of the digits both matter. How many different codes can she design?",
+   "options": [
+    "5 400",
+    "12 500",
+    "450",
+    "6 000"
+   ],
+   "answer": 0,
+   "explanation": "There are 5 × 4 × 3 = 60 ordered choices for the letters and 10 × 9 = 90 ordered choices for the digits. Hence the number of codes is 60 × 90 = 5 400. The value 6 000 would be obtained by allowing the second digit to be chosen in 10 ways, which permits repetition."
+  },
+  {
+   "n": 15,
+   "topic": "Probability and the counting principle",
+   "q": "In a survey of 100 Grade 12 learners at a school in Polokwane, 30 use a taxi to school, 50 use a bus, and 15 use both a taxi and a bus. What is the probability that a learner chosen at random uses neither a taxi nor a bus?",
+   "options": [
+    "13/20",
+    "7/20",
+    "3/20",
+    "1/2"
+   ],
+   "answer": 1,
+   "explanation": "The number using a taxi or a bus is 30 + 50 − 15 = 65, so 100 − 65 = 35 use neither. Therefore the probability is 35/100 = 7/20. The value 13/20 is the probability of using a taxi or a bus."
+  },
+  {
+   "n": 16,
+   "topic": "Algebra, equations and inequalities",
+   "q": "Solve for x: x² − x − 6 ≤ 0.",
+   "options": [
+    "x ≤ −2 or x ≥ 3",
+    "−2 ≤ x ≤ 3",
+    "−3 ≤ x ≤ 2",
+    "x < −2 or x > 3"
+   ],
+   "answer": 1,
+   "explanation": "Factorising gives (x − 3)(x + 2) ≤ 0. The product is negative or zero between the roots −2 and 3, so −2 ≤ x ≤ 3. The union x ≤ −2 or x ≥ 3 would solve x² − x − 6 ≥ 0."
+  },
+  {
+   "n": 17,
+   "topic": "Algebra, equations and inequalities",
+   "q": "For which value of k does the equation x² + 4x + k = 0 have equal roots?",
+   "options": [
+    "4",
+    "8",
+    "0",
+    "−4"
+   ],
+   "answer": 0,
+   "explanation": "Equal roots occur when the discriminant is zero: 4² − 4(1)(k) = 0. Thus 16 − 4k = 0, giving k = 4."
+  },
+  {
+   "n": 18,
+   "topic": "Algebra, equations and inequalities",
+   "q": "Solve for x: 2^(x + 1) = 8^(x − 1).",
+   "options": [
+    "2",
+    "1",
+    "4",
+    "3"
+   ],
+   "answer": 0,
+   "explanation": "Write 8 as 2³, so the right-hand side is 2^(3x − 3). Equating exponents gives x + 1 = 3x − 3, hence 4 = 2x and x = 2. Checking gives 2³ = 8¹."
+  },
+  {
+   "n": 19,
+   "topic": "Trigonometry",
+   "q": "If sin θ = 3/5 and θ lies in the second quadrant, what is tan θ?",
+   "options": [
+    "4/3",
+    "−4/3",
+    "3/4",
+    "−3/4"
+   ],
+   "answer": 3,
+   "explanation": "In the second quadrant sine is positive and cosine is negative. Using the 3-4-5 triangle, cos θ = −4/5, so tan θ = sin θ ÷ cos θ = (3/5) ÷ (−4/5) = −3/4. The value 3/4 ignores the negative sign of cosine in the second quadrant."
+  },
+  {
+   "n": 20,
+   "topic": "Trigonometry",
+   "q": "For all values of x for which the expression is defined, (sin 2x)/(1 + cos 2x) simplifies to:",
+   "options": [
+    "tan x",
+    "2 tan x",
+    "cos x",
+    "sin x"
+   ],
+   "answer": 0,
+   "explanation": "Using sin 2x = 2 sin x cos x and 1 + cos 2x = 2 cos² x gives (2 sin x cos x)/(2 cos² x). Cancelling 2 cos x, where the expression is defined, leaves sin x/cos x = tan x. The expression 2 tan x would require an extra factor of 2 that cancels."
+  },
+  {
+   "n": 21,
+   "topic": "Finance, growth and decay",
+   "q": "Thabo in Polokwane invests R10 000 in a savings account that pays 8% per annum compounded quarterly for 2 years. Interest is credited every quarter. What is the value of the investment at the end of 2 years, rounded to the nearest cent?",
+   "options": [
+    "R10 824,32",
+    "R11 664,00",
+    "R11 600,00",
+    "R11 716,59"
+   ],
+   "answer": 3,
+   "explanation": "The quarterly rate is 0,08 ÷ 4 = 0,02 and there are 4 × 2 = 8 quarters. Hence A = R10 000(1,02)^8 = R11 716,5938..., which rounds to R11 716,59. The amount R11 664,00 uses yearly compounding, while R11 600,00 is simple interest over 2 years."
+  },
+  {
+   "n": 22,
+   "topic": "Finance, growth and decay",
+   "q": "A construction company bought a bakkie for R420 000. The value depreciates at 12% per annum on a reducing-balance basis. What is the book value of the bakkie after 4 years, rounded to the nearest rand?",
+   "options": [
+    "R218 400",
+    "R251 872",
+    "R660 878",
+    "R369 600"
+   ],
+   "answer": 1,
+   "explanation": "On the reducing-balance method the value is multiplied by 1 - 0,12 = 0,88 each year. Thus value = R420 000 × (0,88)^4 = R251 872,0512..., which rounds to R251 872. The amount R218 400 comes from straight-line depreciation using 12% of the original cost each year."
+  },
+  {
+   "n": 23,
+   "topic": "Finance, growth and decay",
+   "q": "Nomsa invests R8 000 at 7,2% per annum compounded monthly. After how many complete months will the investment first exceed R9 000?",
+   "options": [
+    "19 months",
+    "21 months",
+    "20 months",
+    "18 months"
+   ],
+   "answer": 2,
+   "explanation": "Solve 8 000(1 + 0,072/12)^n > 9 000, so (1,006)^n > 1,125. Hence n > log(1,125) ÷ log(1,006) ≈ 19,69, so the first whole number of completed months is 20. After 19 months the amount is about R8 962,96, while after 20 months it is about R9 016,74."
+  },
+  {
+   "n": 24,
+   "topic": "Functions and graphs",
+   "q": "Given f(x) = 2^x. The graph of g is obtained by shifting the graph of f 3 units to the right and 1 unit downwards. Which equation represents g(x)?",
+   "options": [
+    "g(x) = 2^(x + 3) - 1",
+    "g(x) = 2^(x - 3) - 1",
+    "g(x) = 2^(x - 3) + 1",
+    "g(x) = 2^(x - 1) - 3"
+   ],
+   "answer": 1,
+   "explanation": "A shift 3 units to the right replaces x by x - 3, and a shift 1 unit down subtracts 1 from the function value. Therefore g(x) = 2^(x - 3) - 1. The equation g(x) = 2^(x + 3) - 1 would shift the graph 3 units to the left instead."
+  },
+  {
+   "n": 25,
+   "topic": "Functions and graphs",
+   "q": "If f(x) = 3x - 5, what is f⁻¹(x)?",
+   "options": [
+    "f⁻¹(x) = 1/(3x - 5)",
+    "f⁻¹(x) = (x + 5)/3",
+    "f⁻¹(x) = (x - 5)/3",
+    "f⁻¹(x) = x/3 + 5"
+   ],
+   "answer": 1,
+   "explanation": "Let y = 3x - 5. Interchanging x and y gives x = 3y - 5, so y = (x + 5)/3. The expression (x - 5)/3 comes from incorrectly changing the sign of the constant when solving."
+  },
+  {
+   "n": 26,
+   "topic": "Functions and graphs",
+   "q": "Which statement is true for the graph of f(x) = x² - 6x + 5?",
+   "options": [
+    "Minimum turning point at (3, 4) and range y ≥ 4",
+    "Minimum turning point at (-3, -4) and range y ≥ -4",
+    "Maximum turning point at (3, -4) and range y ≤ -4",
+    "Minimum turning point at (3, -4) and range y ≥ -4"
+   ],
+   "answer": 3,
+   "explanation": "Completing the square gives f(x) = (x - 3)² - 4. Since the coefficient of x² is positive, the graph has a minimum at (3, -4), and then the range is y ≥ -4. A maximum at (3, -4) would require a negative coefficient of x²."
+  },
+  {
+   "n": 27,
+   "topic": "Differential calculus",
+   "q": "Determine the equation of the tangent to the curve y = x³ - 3x² + 4 at the point where x = 2.",
+   "options": [
+    "x = 2",
+    "y = 4",
+    "y = 12x - 24",
+    "y = 0"
+   ],
+   "answer": 3,
+   "explanation": "At x = 2, y = 2³ - 3(2)² + 4 = 0, so the point is (2, 0). The derivative is y' = 3x² - 6x, giving y'(2) = 12 - 12 = 0, so the tangent is horizontal through (2, 0): y = 0. The line y = 12x - 24 would arise if the -6x term were ignored when differentiating."
+  },
+  {
+   "n": 28,
+   "topic": "Differential calculus",
+   "q": "Sipho uses 40 m of fencing to enclose a rectangular vegetable garden against a straight wall. No fence is needed along the wall, and fencing is used for the other three sides. What is the maximum possible area of the garden?",
+   "options": [
+    "177,8 m²",
+    "400 m²",
+    "200 m²",
+    "100 m²"
+   ],
+   "answer": 2,
+   "explanation": "Let x be each side perpendicular to the wall and y the side parallel to the wall, so 2x + y = 40 and y = 40 - 2x. The area is A = x(40 - 2x) = 40x - 2x², and A' = 40 - 4x; setting A' = 0 gives x = 10, y = 20, and area = 200 m². The value 100 m² is the maximum area if all four sides had to be fenced with the same 40 m of fencing."
+  },
+  {
+   "n": 29,
+   "topic": "Analytical geometry",
+   "q": "Which statement describes the circle x² + y² - 6x + 4y - 12 = 0?",
+   "options": [
+    "Centre (-3, 2), radius 25",
+    "Centre (3, -2), radius 5",
+    "Centre (3, -2), radius 25",
+    "Centre (-3, 2), radius 5"
+   ],
+   "answer": 1,
+   "explanation": "Group and complete the squares: (x² - 6x) + (y² + 4y) = 12, so (x - 3)² - 9 + (y + 2)² - 4 = 12. Thus (x - 3)² + (y + 2)² = 25, giving centre (3, -2) and radius √25 = 5. The value 25 is the square of the radius, not the radius itself."
+  },
+  {
+   "n": 30,
+   "topic": "Analytical geometry",
+   "q": "Determine the equation of the straight line through K(-2, 5) and L(4, -1).",
+   "options": [
+    "y = -x + 3",
+    "y = x + 7",
+    "y = x - 3",
+    "y = -x - 3"
+   ],
+   "answer": 0,
+   "explanation": "The gradient is (-1 - 5) ÷ (4 - (-2)) = -6 ÷ 6 = -1. Using K(-2, 5): y - 5 = -1(x + 2), so y = -x + 3. The line y = x + 7 has the wrong gradient and does not pass through L(4, -1)."
+  }
+ ]
+}

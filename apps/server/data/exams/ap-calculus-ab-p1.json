@@ -1,0 +1,557 @@
+{
+ "id": "ap-calculus-ab-p1",
+ "exam": "ap",
+ "subject": "calculus-ab",
+ "year": null,
+ "number": 1,
+ "source": "ai",
+ "minutes": 100,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Analytical applications of differentiation",
+   "q": "Let f be a differentiable function with f′(x) = (x² − 4)/(x² + 1) for all real x. On which intervals is f increasing?",
+   "options": [
+    "(-∞, -2) and (2, ∞)",
+    "(-∞, -2) only",
+    "(2, ∞) only",
+    "(-2, 2)"
+   ],
+   "answer": 0,
+   "explanation": "The denominator x² + 1 is always positive, so f′(x) has the same sign as x² − 4. Thus f′(x) > 0 when x < -2 or x > 2, so f is increasing on (-∞, -2) and (2, ∞). On (-2, 2), f′(x) < 0, so f is decreasing there."
+  },
+  {
+   "n": 2,
+   "topic": "Analytical applications of differentiation",
+   "q": "The derivative of a differentiable function f is given by f′(x) = x²(x − 3)(x + 1). At which value of x does f have a local minimum?",
+   "options": [
+    "x = -1",
+    "x = -3",
+    "x = 3",
+    "x = 0"
+   ],
+   "answer": 2,
+   "explanation": "The critical points are x = -1, 0, and 3. The sign of f′ changes from negative to positive only at x = 3, so f has a local minimum there. At x = -1, f′ changes from positive to negative, giving a local maximum, and at x = 0 there is no sign change."
+  },
+  {
+   "n": 3,
+   "topic": "Analytical applications of differentiation",
+   "q": "Let f be a twice-differentiable function with f″(x) = (x − 1)(x + 3) for all real x. On which intervals is the graph of f concave up?",
+   "options": [
+    "(-∞, -3) and (1, ∞)",
+    "(-3, 1)",
+    "(-1, 3)",
+    "(-∞, 1) and (3, ∞)"
+   ],
+   "answer": 0,
+   "explanation": "The graph is concave up when f″(x) > 0. Since (x − 1)(x + 3) is positive outside its zeros at x = -3 and x = 1, the concavity is upward on (-∞, -3) and (1, ∞). It is concave down on (-3, 1)."
+  },
+  {
+   "n": 4,
+   "topic": "Contextual applications of differentiation",
+   "q": "Diego is pulling a 13-foot ladder away from a vertical wall at a constant rate of 2 feet per second. At the instant the bottom of the ladder is 5 feet from the wall, at what rate is the top of the ladder moving downward?",
+   "options": [
+    "5/12 foot per second",
+    "5/6 foot per second",
+    "6/5 feet per second",
+    "13/5 feet per second"
+   ],
+   "answer": 1,
+   "explanation": "Let x be the distance from the wall and y be the height of the top. Since x² + y² = 13², differentiating gives 2x dx/dt + 2y dy/dt = 0. At x = 5, y = 12 and dx/dt = 2, so dy/dt = -(5/12)(2) = -5/6. The top moves downward at 5/6 foot per second."
+  },
+  {
+   "n": 5,
+   "topic": "Contextual applications of differentiation",
+   "q": "A particle moves along a straight line with position s(t) = t³ − 6t² + 9t for 0 ≤ t ≤ 4, where s is in meters and t is in seconds. On which intervals is the speed of the particle increasing?",
+   "options": [
+    "(0, 1) and (2, 3)",
+    "(0, 2) and (3, 4)",
+    "(1, 2) and (3, 4)",
+    "(1, 3)"
+   ],
+   "answer": 2,
+   "explanation": "The velocity is v(t) = 3(t − 1)(t − 3) and the acceleration is a(t) = 6(t − 2). Speed increases when velocity and acceleration have the same sign, which occurs on (1, 2) and (3, 4). On (0, 1) and (2, 3), they have opposite signs, so the speed is decreasing."
+  },
+  {
+   "n": 6,
+   "topic": "Contextual applications of differentiation",
+   "q": "Maya is watching a circular puddle spread on a sidewalk. The radius of the puddle is increasing at a constant rate of 1.5 inches per minute. At the instant the radius is 8 inches, at what rate is the area of the puddle increasing?",
+   "options": [
+    "12π square inches per minute",
+    "24π square inches per minute",
+    "36π square inches per minute",
+    "16π square inches per minute"
+   ],
+   "answer": 1,
+   "explanation": "For a circle, A = πr², so dA/dt = 2πr dr/dt. At r = 8 and dr/dt = 1.5, dA/dt = 2π(8)(1.5) = 24π. The choice 12π square inches per minute results from omitting the factor 2 in the derivative."
+  },
+  {
+   "n": 7,
+   "topic": "Applications of integration",
+   "q": "Find the area of the region bounded by the graphs of y = x² and y = 4x.",
+   "options": [
+    "32",
+    "16/3",
+    "64/3",
+    "32/3"
+   ],
+   "answer": 3,
+   "explanation": "The curves intersect where x² = 4x, so x = 0 and x = 4. On (0, 4), 4x is above x², so the area is ∫ from 0 to 4 of (4x − x²) dx = [2x² − x³/3] from 0 to 4 = 32/3."
+  },
+  {
+   "n": 8,
+   "topic": "Applications of integration",
+   "q": "The region bounded by y = √x, the x-axis, and x = 4 is rotated about the x-axis. What is the volume of the resulting solid?",
+   "options": [
+    "8π",
+    "16π/3",
+    "16π",
+    "32π/3"
+   ],
+   "answer": 0,
+   "explanation": "Using disks perpendicular to the x-axis, the volume is π∫ from 0 to 4 of (√x)² dx = π∫ from 0 to 4 of x dx = 8π. The value 16π/3 would result from integrating √x instead of squaring the radius."
+  },
+  {
+   "n": 9,
+   "topic": "Integration and accumulation of change",
+   "q": "Which definite integral is equal to lim n→∞ ∑ from k=1 to n of (1/n)√(1 + k/n)?",
+   "options": [
+    "∫ from 1 to 2 of √x dx",
+    "∫ from 0 to 1 of √x dx",
+    "∫ from 1 to 2 of √(1 + x) dx",
+    "∫ from 0 to 2 of √x dx"
+   ],
+   "answer": 0,
+   "explanation": "The sum uses Δx = 1/n and the right endpoint x_k = 1 + k/n on the interval [1, 2]. Therefore the limit is the definite integral of √x from 1 to 2. The integrand is √x, not √(1 + x), and the interval is not [0, 1] or [0, 2]."
+  },
+  {
+   "n": 10,
+   "topic": "Limits and continuity",
+   "q": "What is lim x→3 of (x² − 9)/(x² − 5x + 6)?",
+   "options": [
+    "6",
+    "3",
+    "0",
+    "does not exist"
+   ],
+   "answer": 0,
+   "explanation": "Factor the numerator as (x − 3)(x + 3) and the denominator as (x − 3)(x − 2). After canceling the common factor x − 3 for x ≠ 3, the expression approaches (3 + 3)/(3 − 2) = 6. The denominator is 0 at x = 3 before cancellation, but the limit still exists."
+  },
+  {
+   "n": 11,
+   "topic": "Limits and continuity",
+   "q": "Let f(x) = (x² − 4)/(x − 2) for x ≠ 2, and let f(2) = k. For what value of k is f continuous at x = 2?",
+   "options": [
+    "0",
+    "6",
+    "2",
+    "4"
+   ],
+   "answer": 3,
+   "explanation": "For continuity at x = 2, k must equal lim x→2 of (x² − 4)/(x − 2). Factoring gives (x − 2)(x + 2)/(x − 2) = x + 2 for x ≠ 2, so the limit is 4."
+  },
+  {
+   "n": 12,
+   "topic": "Differentiation: definition and basic rules",
+   "q": "For f(x) = √(x + 3), what is f′(1)?",
+   "options": [
+    "2",
+    "1/8",
+    "1/4",
+    "1/2"
+   ],
+   "answer": 2,
+   "explanation": "Rewrite f(x) = (x + 3)^(1/2). Then f′(x) = 1/(2√(x + 3)). At x = 1, this is 1/(2√4) = 1/4."
+  },
+  {
+   "n": 13,
+   "topic": "Differentiation: definition and basic rules",
+   "q": "Let f(x) = (2x + 1)(x² − 3). What is f′(1)?",
+   "options": [
+    "2",
+    "6",
+    "0",
+    "−4"
+   ],
+   "answer": 0,
+   "explanation": "Using the product rule, f′(x) = 2(x² − 3) + (2x + 1)(2x). At x = 1, f′(1) = 2(1 − 3) + (3)(2) = −4 + 6 = 2."
+  },
+  {
+   "n": 14,
+   "topic": "Differentiation: definition and basic rules",
+   "q": "An equation of the tangent line to the graph of f(x) = x³ − 4x at x = 1 is",
+   "options": [
+    "y = −x − 4",
+    "y = x − 4",
+    "y = −x − 2",
+    "y = −x + 2"
+   ],
+   "answer": 2,
+   "explanation": "The point of tangency is (1, f(1)) = (1, −3). Since f′(x) = 3x² − 4, the slope is f′(1) = −1. Point-slope form gives y + 3 = −(x − 1), which simplifies to y = −x − 2."
+  },
+  {
+   "n": 15,
+   "topic": "Differentiation: composite, implicit and inverse functions",
+   "q": "Let f(x) = (x² + 1)⁵. What is f′(1)?",
+   "options": [
+    "10",
+    "80",
+    "32",
+    "160"
+   ],
+   "answer": 3,
+   "explanation": "By the chain rule, f′(x) = 5(x² + 1)⁴ · 2x = 10x(x² + 1)⁴. At x = 1, f′(1) = 10 · 1 · 2⁴ = 160."
+  },
+  {
+   "n": 16,
+   "topic": "Differentiation: composite, implicit and inverse functions",
+   "q": "Given x² + xy + y² = 7, what is dy/dx at the point (1, 2)?",
+   "options": [
+    "4/5",
+    "−4/5",
+    "−1",
+    "−2"
+   ],
+   "answer": 1,
+   "explanation": "Differentiate implicitly: 2x + y + x(dy/dx) + 2y(dy/dx) = 0. Substitute x = 1 and y = 2 to get 2 + 2 + (dy/dx) + 4(dy/dx) = 0, so 5(dy/dx) = −4 and dy/dx = −4/5."
+  },
+  {
+   "n": 17,
+   "topic": "Differentiation: composite, implicit and inverse functions",
+   "q": "Let f be a differentiable function such that f(2) = 5 and f′(2) = 3. If f has an inverse function, what is the value of (f⁻¹)′(5)?",
+   "options": [
+    "1/3",
+    "3",
+    "1/5",
+    "5/3"
+   ],
+   "answer": 0,
+   "explanation": "Since f(2) = 5, the inverse function satisfies f⁻¹(5) = 2. The derivative of the inverse at 5 is 1 divided by f′ at 2, so (f⁻¹)′(5) = 1/f′(2) = 1/3."
+  },
+  {
+   "n": 18,
+   "topic": "Differential equations",
+   "q": "An initial value problem is given by dy/dx = 3y with y(0) = 5. What is y(2)?",
+   "options": [
+    "5e^3",
+    "15e^2",
+    "5 + 6e",
+    "5e^6"
+   ],
+   "answer": 3,
+   "explanation": "Separate variables to get (1/y) dy = 3 dx, and integrate: ln|y| = 3x + C. Using y(0) = 5 gives y = 5e^(3x). Therefore y(2) = 5e^6."
+  },
+  {
+   "n": 19,
+   "topic": "Differential equations",
+   "q": "Consider the differential equation dy/dx = x/y with initial condition y(0) = 2. If y is the solution, what is y(√5)?",
+   "options": [
+    "√10",
+    "√5",
+    "3",
+    "9"
+   ],
+   "answer": 2,
+   "explanation": "Separate variables: y dy = x dx. Integrating gives y²/2 = x²/2 + C, so y² = x² + K. Since y(0) = 2, K = 4, and the positive solution is y = √(x² + 4). At x = √5, y = √(5 + 4) = 3."
+  },
+  {
+   "n": 20,
+   "topic": "Analytical applications of differentiation",
+   "q": "Let f be a differentiable function defined for all real numbers, with f′(x) = (x−1)²(x+2). At which value of x does f have a local minimum?",
+   "options": [
+    "2",
+    "0",
+    "1",
+    "−2"
+   ],
+   "answer": 3,
+   "explanation": "The sign of f′(x) is negative for x < −2 and positive for x > −2, except at x = 1 where the derivative is zero. Thus f′ changes from negative to positive at x = −2, so f has a local minimum there; at x = 1 the sign does not change."
+  },
+  {
+   "n": 21,
+   "topic": "Analytical applications of differentiation",
+   "q": "Let f be the function defined by f(x) = x e^x. On what interval is the graph of f concave up?",
+   "options": [
+    "(0, ∞)",
+    "(−∞, −2)",
+    "(−2, ∞)",
+    "(−∞, 0)"
+   ],
+   "answer": 2,
+   "explanation": "First, f′(x) = (x+1)e^x, so f″(x) = (x+2)e^x. Since e^x is always positive, f″(x) > 0 exactly when x > −2."
+  },
+  {
+   "n": 22,
+   "topic": "Analytical applications of differentiation",
+   "q": "Let f be differentiable on [0,3] with f(0)=5 and f(3)=14. Which of the following is guaranteed by the Mean Value Theorem?",
+   "options": [
+    "There is a number c in (0,3) such that f(c)=3.",
+    "There is a number c in (0,3) such that f′(c)=0.",
+    "There is a number c in (0,3) such that f′(c)=3.",
+    "The function f is increasing on (0,3)."
+   ],
+   "answer": 2,
+   "explanation": "The Mean Value Theorem guarantees a point c in (0,3) where f′(c) equals the average rate of change, which is (14−5)/(3−0)=3. The theorem gives no guarantee that f′(c)=0, that f(c)=3, or that f is increasing everywhere on the interval."
+  },
+  {
+   "n": 23,
+   "topic": "Contextual applications of differentiation",
+   "q": "A spherical weather balloon is being inflated so that its volume increases at a constant rate of 12 cubic inches per minute. At the instant when its radius is 3 inches, at what rate is the radius increasing, in inches per minute?",
+   "options": [
+    "1/π inches per minute",
+    "4/(3π) inches per minute",
+    "1/(3π) inches per minute",
+    "36π inches per minute"
+   ],
+   "answer": 2,
+   "explanation": "The volume of a sphere is V = (4/3)πr³, so dV/dt = 4πr² dr/dt. Substituting 12 = 4π(3²) dr/dt gives 12 = 36π dr/dt, hence dr/dt = 1/(3π). Using r instead of r² can lead to the tempting value 1/π."
+  },
+  {
+   "n": 24,
+   "topic": "Contextual applications of differentiation",
+   "q": "A car moves along a straight road so that its position after t hours is s(t)=t³−6t²+9t miles, for 0≤t≤4. At what time(s) is the car momentarily stopped?",
+   "options": [
+    "t = 3 only",
+    "t = 1 only",
+    "t = 0 and t = 4",
+    "t = 1 and t = 3"
+   ],
+   "answer": 3,
+   "explanation": "The car is stopped when its velocity is zero. Since v(t)=s′(t)=3t²−12t+9=3(t−1)(t−3), the velocity is zero at t=1 and t=3, both of which lie in the given interval."
+  },
+  {
+   "n": 25,
+   "topic": "Contextual applications of differentiation",
+   "q": "A cup of coffee is placed in a room. Its temperature after t minutes is modeled by T(t)=70+120e^(−0.2t) degrees Fahrenheit. At t=5 minutes, what is T′(5)?",
+   "options": [
+    "−24e^(−5) degrees Fahrenheit per minute",
+    "−24/e degrees Fahrenheit per minute",
+    "−120/e degrees Fahrenheit per minute",
+    "−24e degrees Fahrenheit per minute"
+   ],
+   "answer": 1,
+   "explanation": "Differentiating gives T′(t)=120(−0.2)e^(−0.2t)=−24e^(−0.2t). At t=5, T′(5)=−24e^(−1)=−24/e, so the temperature is decreasing at 24/e degrees Fahrenheit per minute."
+  },
+  {
+   "n": 26,
+   "topic": "Applications of integration",
+   "q": "Let R be the region in the xy-plane bounded by the graphs of y=x² and y=4−3x. What is the area of R?",
+   "options": [
+    "125/3 square units",
+    "13/6 square units",
+    "56/3 square units",
+    "125/6 square units"
+   ],
+   "answer": 3,
+   "explanation": "The graphs intersect where x²=4−3x, so x²+3x−4=0 and x=−4 or x=1. The area is ∫ from −4 to 1 of (4−3x−x²) dx = [4x−(3/2)x²−(1/3)x³] from −4 to 1, which equals 13/6−(−56/3)=125/6."
+  },
+  {
+   "n": 27,
+   "topic": "Applications of integration",
+   "q": "Let R be the region bounded by y=√x, the x-axis, and x=4. What is the volume of the solid generated when R is revolved about the x-axis?",
+   "options": [
+    "16π/3 cubic units",
+    "8π cubic units",
+    "8 cubic units",
+    "16π cubic units"
+   ],
+   "answer": 1,
+   "explanation": "Using disks, the volume is π∫ from 0 to 4 of (√x)² dx = π∫ from 0 to 4 of x dx. This equals π[x²/2] from 0 to 4 = π(16/2)=8π."
+  },
+  {
+   "n": 28,
+   "topic": "Integration and accumulation of change",
+   "q": "Let F be defined by F(x)=∫ from 1 to x of (t²−4)/(t²+1) dt. What is F′(2)?",
+   "options": [
+    "−3/5",
+    "1",
+    "4/5",
+    "0"
+   ],
+   "answer": 3,
+   "explanation": "By the Fundamental Theorem of Calculus, F′(x)=(x²−4)/(x²+1). At x=2, F′(2)=(4−4)/(4+1)=0."
+  },
+  {
+   "n": 29,
+   "topic": "Integration and accumulation of change",
+   "q": "Water flows into a tank at a rate r(t) measured in gallons per minute. Selected values of r(t) are shown in the table.\nt | 0 | 2 | 4 | 6\nr(t) | 4 | 6 | 10 | 14\nUsing a left Riemann sum with the three subintervals indicated by the table, what is the estimated total amount of water that flows into the tank from t=0 to t=6 minutes?",
+   "options": [
+    "40 gallons",
+    "64 gallons",
+    "50 gallons",
+    "60 gallons"
+   ],
+   "answer": 0,
+   "explanation": "The subintervals each have width 2, and the left Riemann sum uses r(0), r(2), and r(4). Thus the estimate is 2(4)+2(6)+2(10)=8+12+20=40 gallons."
+  },
+  {
+   "n": 30,
+   "topic": "Limits and continuity",
+   "q": "Let f(x) = (x² - 9)/(x - 3) for x ≠ 3, and let f(3) = k. Which value of k makes f continuous at x = 3?",
+   "options": [
+    "3",
+    "9",
+    "0",
+    "6"
+   ],
+   "answer": 3,
+   "explanation": "For x ≠ 3, (x² - 9)/(x - 3) = x + 3, so lim x→3 f(x) = 6. To make f continuous at 3, f(3) must equal this limit, so k = 6. The value 9 comes from evaluating x² at x = 3 and does not account for the cancellation."
+  },
+  {
+   "n": 31,
+   "topic": "Limits and continuity",
+   "q": "What is lim x→0 sin(3x)/(5x)?",
+   "options": [
+    "1",
+    "3/5",
+    "0",
+    "5/3"
+   ],
+   "answer": 1,
+   "explanation": "Use sin(3x)/(5x) = (3/5) · sin(3x)/(3x). As x→0, sin(3x)/(3x)→1, so the limit is 3/5. The value 5/3 comes from inverting the ratio of the coefficients."
+  },
+  {
+   "n": 32,
+   "topic": "Differentiation: definition and basic rules",
+   "q": "If f(x) = x²(3x - 5), what is f′(x)?",
+   "options": [
+    "9x² - 5",
+    "9x² - 10x",
+    "3x²",
+    "6x² - 10x"
+   ],
+   "answer": 1,
+   "explanation": "Using the product rule, f′(x) = 2x(3x - 5) + x²·3 = 9x² - 10x. Expanding first gives 3x³ - 5x², whose derivative is also 9x² - 10x. The expression 6x² - 10x omits the term x²·3 when applying the product rule."
+  },
+  {
+   "n": 33,
+   "topic": "Differentiation: definition and basic rules",
+   "q": "If f(x) = x/(x + 1), what is f′(2)?",
+   "options": [
+    "1/4",
+    "-1/9",
+    "1/9",
+    "1/3"
+   ],
+   "answer": 2,
+   "explanation": "By the quotient rule, f′(x) = [(x + 1)·1 - x·1]/(x + 1)² = 1/(x + 1)². At x = 2, this is 1/9. The value 1/3 comes from using x + 1 in the denominator rather than its square."
+  },
+  {
+   "n": 34,
+   "topic": "Differentiation: definition and basic rules",
+   "q": "What is the equation of the line tangent to the graph of f(x) = ln x + x at x = 1?",
+   "options": [
+    "y = 2x",
+    "y = x",
+    "y = 2x + 1",
+    "y = 2x - 1"
+   ],
+   "answer": 3,
+   "explanation": "The point of tangency is (1, 1), since ln 1 + 1 = 1. Also f′(x) = 1/x + 1, so the slope at x = 1 is 2. Therefore y - 1 = 2(x - 1), which simplifies to y = 2x - 1. The line y = 2x would pass through (0, 0) and not the point (1, 1)."
+  },
+  {
+   "n": 35,
+   "topic": "Differentiation: composite, implicit and inverse functions",
+   "q": "If y = sin(√x), what is dy/dx for x > 0?",
+   "options": [
+    "cos(√x)/√x",
+    "cos(√x)",
+    "cos(√x)/(2√x)",
+    "-cos(√x)/(2√x)"
+   ],
+   "answer": 2,
+   "explanation": "With u = √x, the chain rule gives dy/dx = cos(√x) · 1/(2√x). The factor 1/(2√x) is the derivative of √x; omitting it gives just cos(√x). A sign error in differentiating √x would produce the expression with -cos(√x)/(2√x)."
+  },
+  {
+   "n": 36,
+   "topic": "Differentiation: composite, implicit and inverse functions",
+   "q": "The curve x² + xy + y² = 7 passes through (1, 2). What is dy/dx at that point?",
+   "options": [
+    "-4/5",
+    "-1",
+    "-2/5",
+    "4/5"
+   ],
+   "answer": 0,
+   "explanation": "Differentiating both sides with respect to x gives 2x + y + x(dy/dx) + 2y(dy/dx) = 0. At (1, 2), this becomes 2 + 2 + dy/dx + 4(dy/dx) = 0, so 4 + 5(dy/dx) = 0 and dy/dx = -4/5. A sign error when moving the non-derivative terms produces 4/5."
+  },
+  {
+   "n": 37,
+   "topic": "Differentiation: composite, implicit and inverse functions",
+   "q": "Let f(x) = x³ + 2x + 1. What is (f⁻¹)′(4)?",
+   "options": [
+    "1/5",
+    "1/3",
+    "1/4",
+    "5"
+   ],
+   "answer": 0,
+   "explanation": "Since f(1) = 1³ + 2(1) + 1 = 4, the inverse function sends 4 to 1. Also f′(x) = 3x² + 2, so f′(1) = 5. Therefore (f⁻¹)′(4) = 1/f′(1) = 1/5."
+  },
+  {
+   "n": 38,
+   "topic": "Differential equations",
+   "q": "What is the particular solution to dy/dx = 2xy with initial condition y(0) = 3?",
+   "options": [
+    "y = e^(3x²)",
+    "y = 3e^(x²)",
+    "y = 3e^(2x)",
+    "y = 3x² + 3"
+   ],
+   "answer": 1,
+   "explanation": "Separate variables: dy/y = 2x dx, so ln|y| = x² + C and y = C e^(x²). Using y(0) = 3 gives C = 3, hence y = 3e^(x²). The expression y = 3e^(2x) treats the integral of 2x as 2x instead of x²."
+  },
+  {
+   "n": 39,
+   "topic": "Differential equations",
+   "q": "The rate of change of a population P is proportional to P. If P(0) = 200 and P(2) = 800, which expression gives P(t)?",
+   "options": [
+    "P(t) = 200·4^t",
+    "P(t) = 200 + 600t",
+    "P(t) = 200e^(2t)",
+    "P(t) = 200·2^t"
+   ],
+   "answer": 3,
+   "explanation": "The equation dP/dt = kP has solution P(t) = P(0)e^(kt). From P(0) = 200 and P(2) = 800, 800 = 200e^(2k), so e^(2k) = 4 and k = (ln 4)/2 = ln 2. Thus P(t) = 200e^(t ln 2) = 200·2^t. The expression 200·4^t would give P(2) = 3200, not 800."
+  },
+  {
+   "n": 40,
+   "topic": "Analytical applications of differentiation",
+   "q": "Let f be the function defined by f(x) = x³ - 3x² + 4. On which interval is the graph of f decreasing?",
+   "options": [
+    "(0, ∞)",
+    "(2, ∞)",
+    "(-∞, 0)",
+    "(0, 2)"
+   ],
+   "answer": 3,
+   "explanation": "f′(x)=3x²-6x=3x(x-2), so f′ is negative exactly on (0,2). Thus f is decreasing on (0,2); on (-∞,0) and (2,∞) the derivative is positive, so those intervals do not describe where f is decreasing."
+  },
+  {
+   "n": 41,
+   "topic": "Analytical applications of differentiation",
+   "q": "Let f be a differentiable function with f′(x) = (x-1)²(x+2) for all real x. Which statement about f at x = 1 must be true?",
+   "options": [
+    "f has neither a local maximum nor a local minimum at x = 1.",
+    "f has a local minimum at x = 1.",
+    "f has a local maximum at x = 1.",
+    "f is not differentiable at x = 1."
+   ],
+   "answer": 0,
+   "explanation": "At x=1, f′(1)=0, but (x-1)² is nonnegative and x+2 is positive near 1, so f′ is positive on both sides of x=1. Therefore f continues increasing through x=1 and has neither a local maximum nor a local minimum there. The function is differentiable because f′ is explicitly given."
+  },
+  {
+   "n": 42,
+   "topic": "Analytical applications of differentiation",
+   "q": "Let f(x) = x e^x. At what value of x does the graph of f have a point of inflection?",
+   "options": [
+    "x = -2",
+    "x = -1",
+    "x = 2",
+    "x = 0"
+   ],
+   "answer": 0,
+   "explanation": "f′(x)=e^x(x+1), so f″(x)=e^x(x+2). Since e^x>0, f″ changes sign only at x=-2, giving a point of inflection there. The zero of f′ occurs elsewhere and does not give the inflection point."
+  }
+ ]
+}

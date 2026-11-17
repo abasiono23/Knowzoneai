@@ -50,6 +50,7 @@ const settings: Translation<typeof en> = {
     activeCount_one: '{{count}} na aiki',
     activeCount_other: '{{count}} na aiki',
     language: 'Harshe',
+    region: 'Ƙasar karatu',
     appearance: 'Kamanni',
     privacy: 'Sirri',
     downloadData: 'Sauke bayanaina',
@@ -95,6 +96,11 @@ const settings: Translation<typeof en> = {
     reduceMotionHint: 'Ƙarancin rayarwa masu motsi a cikin manhajar',
     haptics: 'Girgiza a wasanni',
     hapticsHint: 'Martanin girgiza a Knowzone World',
+  },
+  region: {
+    title: 'Ƙasar karatu',
+    intro: 'Zaɓi ƙasar da kake karatu. Knowzone zai fara nuna gwajin jarabawa na wannan ƙasar, kuma malamin AI ɗinka zai bi jarabawowinta.',
+    footer: 'Makinka za su ci gaba da kasancewa idan ka canza ƙasa, kuma za ka iya buɗe takardun wasu ƙasashe daga shafin gwajin jarabawa.',
   },
   language: {
     title: 'Harshe',

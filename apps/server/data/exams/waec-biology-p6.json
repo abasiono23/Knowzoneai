@@ -1,0 +1,661 @@
+{
+ "id": "waec-biology-p6",
+ "exam": "waec",
+ "subject": "biology",
+ "year": null,
+ "number": 6,
+ "source": "ai",
+ "minutes": 60,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Transport systems",
+   "q": "A patient in Kaduna has a cut that stops bleeding after a few minutes. Which substance released by platelets initiates the clotting process?",
+   "options": [
+    "Fibrin",
+    "Thromboplastin",
+    "Thrombin",
+    "Heparin"
+   ],
+   "answer": 1,
+   "explanation": "Platelets release thromboplastin, which helps convert prothrombin to thrombin in the clotting cascade. Thrombin then converts fibrinogen to fibrin, while heparin is an anticoagulant that prevents clotting."
+  },
+  {
+   "n": 2,
+   "topic": "Transport systems",
+   "q": "A man in Ibadan has a swollen leg because lymph vessels in the leg are blocked by filarial worms. The swelling is mainly due to",
+   "options": [
+    "escape of red blood cells from capillaries into the tissue spaces",
+    "increased absorption of water from the large intestine into the leg tissues",
+    "excess glucose accumulating in the tissue fluid",
+    "accumulation of tissue fluid because lymph drainage is obstructed"
+   ],
+   "answer": 3,
+   "explanation": "Lymph vessels normally return excess tissue fluid to the blood circulation. When they are blocked, tissue fluid collects in the leg and causes swelling, while red cells and glucose are not the main cause."
+  },
+  {
+   "n": 3,
+   "topic": "Ecology",
+   "q": "A student in Ilorin captured 30 land snails in a garden, marked their shells and released them. Later, she captured 40 land snails, of which 6 were marked. What is the best estimate of the snail population in the garden?",
+   "options": [
+    "240 land snails",
+    "70 land snails",
+    "120 land snails",
+    "200 land snails"
+   ],
+   "answer": 3,
+   "explanation": "The proportion of marked snails in the second sample is 6/40, which should represent the 30 marked snails in the whole population. Using the mark-recapture formula gives (30 × 40) ÷ 6 = 200 land snails."
+  },
+  {
+   "n": 4,
+   "topic": "Ecology",
+   "q": "In a maize field near Zaria, ammonia from decaying plants is converted to nitrates that the maize can absorb. Which group of microorganisms carries out this conversion?",
+   "options": [
+    "Nitrifying bacteria",
+    "Decomposing fungi",
+    "Nitrogen-fixing bacteria",
+    "Denitrifying bacteria"
+   ],
+   "answer": 0,
+   "explanation": "Nitrifying bacteria such as Nitrosomonas and Nitrobacter convert ammonia to nitrites and then nitrates in the soil. Denitrifying bacteria do the reverse, releasing nitrogen gas, while nitrogen-fixing bacteria convert atmospheric nitrogen to ammonia."
+  },
+  {
+   "n": 5,
+   "topic": "Ecology",
+   "q": "In a maize field near Kontagora, hawks feed on grasshoppers, and grasshoppers feed on young maize. If all the hawks are removed, what is the most likely immediate effect?",
+   "options": [
+    "The grasshopper population will decrease because there will be less food",
+    "The hawks will be replaced immediately by another predator, leaving grasshoppers unaffected",
+    "The maize population will increase because fewer hawks will feed on maize",
+    "The grasshopper population will increase and more maize will be damaged"
+   ],
+   "answer": 3,
+   "explanation": "Removing the hawks removes an important predator of the grasshoppers, so more grasshoppers survive and reproduce. With more grasshoppers feeding on young maize, greater damage to the maize is expected."
+  },
+  {
+   "n": 6,
+   "topic": "Diseases and their control",
+   "q": "A public health officer in Abeokuta advises families to store food in rat-proof containers. This advice is most directly aimed at preventing Lassa fever because the virus is spread mainly through",
+   "options": [
+    "the bite of infected Anopheles mosquitoes",
+    "the bite of a tsetse fly",
+    "contact with food or household surfaces contaminated with urine or faeces of infected rats",
+    "walking barefoot on soil containing hookworm larvae"
+   ],
+   "answer": 2,
+   "explanation": "Lassa fever is spread mainly when food or utensils are contaminated by the urine or faeces of infected rats, especially Mastomys rodents. Mosquito bites cause malaria, while hookworm larvae enter through bare feet."
+  },
+  {
+   "n": 7,
+   "topic": "Respiration",
+   "q": "A small mammal in a respirometer at a laboratory in Zaria uses 40 cm³ of oxygen and releases 32 cm³ of carbon dioxide in 15 minutes. What is its respiratory quotient?",
+   "options": [
+    "0.20",
+    "0.80",
+    "1.25",
+    "0.75"
+   ],
+   "answer": 1,
+   "explanation": "Respiratory quotient is calculated as volume of carbon dioxide released divided by volume of oxygen used, so 32 ÷ 40 = 0.80. The value 1.25 would be obtained by inverting the ratio, while 0.20 comes from using the difference between the two gas volumes in relation to oxygen."
+  },
+  {
+   "n": 8,
+   "topic": "Respiration",
+   "q": "A tomato plant in a waterlogged plot in Ogoja is deprived of oxygen in its root cells. Which set of products is formed by the main anaerobic respiration pathway in these plant cells?",
+   "options": [
+    "Ethanol and oxygen",
+    "Pyruvic acid and water",
+    "Lactic acid and carbon dioxide",
+    "Ethanol and carbon dioxide"
+   ],
+   "answer": 3,
+   "explanation": "In the usual anaerobic pathway in plant cells, pyruvic acid is converted to ethanol and carbon dioxide, releasing a small amount of energy. Lactic acid is the main product in animal muscle during anaerobic respiration, while oxygen is not produced in anaerobic respiration."
+  },
+  {
+   "n": 9,
+   "topic": "Respiration",
+   "q": "During vigorous exercise, a man in Ogbomoso respires anaerobically in his skeletal muscles. What is the net yield of ATP from anaerobic respiration of one glucose molecule in these muscle cells?",
+   "options": [
+    "4 ATP",
+    "2 ATP",
+    "38 ATP",
+    "18 ATP"
+   ],
+   "answer": 1,
+   "explanation": "Anaerobic respiration in skeletal muscle begins with glycolysis, which gives a net gain of 2 ATP per glucose molecule. The conversion of pyruvic acid to lactic acid produces no additional ATP; 38 ATP is associated with complete aerobic respiration, and 4 ATP is the total ATP produced in glycolysis before subtracting the ATP used."
+  },
+  {
+   "n": 10,
+   "topic": "Cell structure and organisation",
+   "q": "A biology student in Ede reads that the cell membrane is described as a fluid bilayer of phospholipids with protein molecules embedded in it or attached to its surface. This description is called the",
+   "options": [
+    "protein sandwich model",
+    "fluid mosaic model",
+    "unit membrane model",
+    "selectively permeable model"
+   ],
+   "answer": 1,
+   "explanation": "The fluid mosaic model describes the membrane as a fluid phospholipid bilayer with proteins arranged in a mosaic-like pattern. The model emphasises both the fluid nature of the lipid bilayer and the scattered arrangement of proteins, rather than a rigid sandwich or a simple unit membrane."
+  },
+  {
+   "n": 11,
+   "topic": "Cell structure and organisation",
+   "q": "During mitosis in an animal cell from the skin of a rat in Zaria, which organelle organises the spindle fibres that pull the chromosomes to opposite poles?",
+   "options": [
+    "Smooth endoplasmic reticulum",
+    "Ribosome",
+    "Centriole",
+    "Lysosome"
+   ],
+   "answer": 2,
+   "explanation": "Centrioles move to opposite poles of the animal cell during mitosis and organise the spindle fibres used in chromosome movement. Ribosomes are concerned with protein synthesis, lysosomes with digestion of materials, and smooth endoplasmic reticulum with lipid synthesis and transport."
+  },
+  {
+   "n": 12,
+   "topic": "Classification of living things",
+   "q": "A student in Ilorin finds a microscopic organism in pond water. It is unicellular, has a nucleus, moves by pseudopodia and forms food vacuoles around food particles. The organism is best classified as",
+   "options": [
+    "a bacterium",
+    "a fungus",
+    "an alga",
+    "a protozoan"
+   ],
+   "answer": 3,
+   "explanation": "The organism described has a nucleus and obtains food heterotrophically by engulfing particles, features typical of amoeba-like protozoans. Bacteria lack a true nucleus, algae are photosynthetic, and fungi typically have cell walls and do not move by pseudopodia."
+  },
+  {
+   "n": 13,
+   "topic": "Nutrition in plants and animals",
+   "q": "A student in Ibadan supplies a water weed in bright sunlight with dissolved carbon dioxide. Which process uses the carbon dioxide most directly during photosynthesis?",
+   "options": [
+    "Transport of water through xylem vessels",
+    "Absorption of mineral salts by the roots",
+    "Splitting of water to release oxygen",
+    "Combination with hydrogen to form sugar"
+   ],
+   "answer": 3,
+   "explanation": "Carbon dioxide is used in the light-independent reactions of photosynthesis, where it is reduced and combined with hydrogen to form carbohydrate. The splitting of water occurs in the light-dependent reactions and supplies hydrogen and oxygen, but it is not the direct use of carbon dioxide."
+  },
+  {
+   "n": 14,
+   "topic": "Variation and evolution",
+   "q": "Two stem cuttings from the same cassava plant are planted in Ibadan. One is grown in rich loam while the other is grown in poor sandy soil. After several weeks, the cutting in loam is taller. The height difference is best described as...",
+   "options": [
+    "environmental variation",
+    "hereditary variation",
+    "discontinuous variation",
+    "mutation"
+   ],
+   "answer": 0,
+   "explanation": "The cuttings are genetically identical, so the difference in height is caused by the different soil conditions. This is environmental variation; hereditary variation and mutation have genetic bases, while discontinuous variation involves distinct categories rather than a continuous height difference."
+  },
+  {
+   "n": 15,
+   "topic": "Variation and evolution",
+   "q": "The early embryos of fish, reptiles and humans show similar gill slits and tail structures. This observation is best used as...",
+   "options": [
+    "biochemical evidence for evolution",
+    "evidence of continuous variation",
+    "fossil evidence for evolution",
+    "embryological evidence for evolution"
+   ],
+   "answer": 3,
+   "explanation": "Similar early embryonic features across different vertebrates suggest a shared evolutionary ancestry and are classified as embryological evidence. Fossil evidence comes from remains in rocks, while biochemical evidence compares molecules such as DNA or proteins."
+  },
+  {
+   "n": 16,
+   "topic": "Diffusion, osmosis and active transport",
+   "q": "Which feature best distinguishes active transport from simple diffusion?",
+   "options": [
+    "It moves substances down a concentration gradient without using energy.",
+    "It involves water molecules moving through a membrane from a dilute solution to a concentrated solution.",
+    "It depends on a selectively permeable membrane and occurs only in gases.",
+    "It requires energy from respiration and can move substances against a concentration gradient."
+   ],
+   "answer": 3,
+   "explanation": "Active transport uses energy released by respiration and can move ions or molecules against their concentration gradient. Simple diffusion is passive and down the gradient, while osmosis is the movement of water across a membrane rather than active transport."
+  },
+  {
+   "n": 17,
+   "topic": "Diffusion, osmosis and active transport",
+   "q": "In the lungs, oxygen passes from the alveoli into the blood capillaries mainly by...",
+   "options": [
+    "osmosis",
+    "diffusion",
+    "phagocytosis",
+    "active transport"
+   ],
+   "answer": 1,
+   "explanation": "Oxygen moves down a concentration gradient from the alveoli into the blood through the thin alveolar and capillary walls. This passive movement is diffusion; osmosis applies to water, while active transport requires energy."
+  },
+  {
+   "n": 18,
+   "topic": "Diffusion, osmosis and active transport",
+   "q": "A plant cell has a water potential of −400 kPa. It is placed in a sucrose solution with a water potential of −200 kPa. Which statement describes the net movement of water?",
+   "options": [
+    "Water moves from the cell into the sucrose solution.",
+    "Water moves from the sucrose solution into the cell.",
+    "Water moves equally in both directions, giving no net movement.",
+    "Water is actively transported from the cell into the sucrose solution."
+   ],
+   "answer": 1,
+   "explanation": "Water moves from the higher water potential of −200 kPa in the sucrose solution to the lower water potential of −400 kPa in the cell. Therefore water enters the cell, and active transport is not the mechanism for water movement here."
+  },
+  {
+   "n": 19,
+   "topic": "Genetics",
+   "q": "In a test cross, a pea plant heterozygous for flower colour and seed shape (RrSs) is crossed with a plant recessive for both characters (rrss). R = red (dominant), r = white; S = smooth (dominant), s = wrinkled. What fraction of the offspring is expected to be red-flowered and wrinkled-seeded?",
+   "options": [
+    "1/4",
+    "1/16",
+    "1/2",
+    "1/8"
+   ],
+   "answer": 0,
+   "explanation": "RrSs forms four gametes, RS, Rs, rS and rs, in equal proportions, while rrss forms only rs. Red-flowered and wrinkled-seeded offspring (Rrss) arise when the Rs gamete meets the rs gamete, which is one out of four combinations; therefore the fraction is 1/4."
+  },
+  {
+   "n": 20,
+   "topic": "Excretion",
+   "q": "In a grasshopper, nitrogenous waste is removed from the haemolymph and passed into the hindgut by the",
+   "options": [
+    "nephridia",
+    "Malpighian tubules",
+    "contractile vacuoles",
+    "flame cells"
+   ],
+   "answer": 1,
+   "explanation": "Malpighian tubules absorb nitrogenous wastes from the haemolymph and empty them into the hindgut for removal with faeces. Nephridia occur in earthworms, flame cells in flatworms, and contractile vacuoles in freshwater protists."
+  },
+  {
+   "n": 21,
+   "topic": "Excretion",
+   "q": "Which of the following is not a function of the mammalian kidney?",
+   "options": [
+    "Regulation of water content",
+    "Production of bile",
+    "Regulation of blood pH",
+    "Excretion of urea"
+   ],
+   "answer": 1,
+   "explanation": "The kidney excretes urea, regulates blood pH, and adjusts the water content of the blood. Bile is produced by the liver and stored in the gall bladder, not by the kidney."
+  },
+  {
+   "n": 22,
+   "topic": "Nervous and hormonal coordination",
+   "q": "The gap between two adjacent neurons across which impulses are transmitted by chemical substances is called a",
+   "options": [
+    "synapse",
+    "neurilemma",
+    "cyton",
+    "dendrite"
+   ],
+   "answer": 0,
+   "explanation": "A synapse is the junction or gap between neurons where a neurotransmitter carries the impulse across. A dendrite is a short process that receives impulses, and a cyton is the cell body of a neuron."
+  },
+  {
+   "n": 23,
+   "topic": "Nervous and hormonal coordination",
+   "q": "A child in Kano has stunted growth and mental retardation caused by insufficient secretion of thyroxine from early childhood. The condition is",
+   "options": [
+    "goitre",
+    "cretinism",
+    "diabetes mellitus",
+    "acromegaly"
+   ],
+   "answer": 1,
+   "explanation": "Cretinism results from deficiency of thyroxine during childhood and leads to poor growth and mental development. Goitre is swelling of the thyroid due to iodine deficiency, diabetes mellitus is caused by insulin deficiency, and acromegaly results from excess growth hormone in adults."
+  },
+  {
+   "n": 24,
+   "topic": "Transport systems",
+   "q": "In a flowering plant, which cells are mainly responsible for transporting dissolved sucrose from the leaves to other parts?",
+   "options": [
+    "Root hair cells",
+    "Xylem vessels",
+    "Sieve tube elements",
+    "Companion cells"
+   ],
+   "answer": 2,
+   "explanation": "Sieve tube elements form the main conducting tubes of the phloem and transport dissolved sucrose and other organic substances. Xylem vessels transport water and mineral salts, while root hair cells absorb water and mineral salts. Companion cells assist in loading sucrose but are not the main conducting elements."
+  },
+  {
+   "n": 25,
+   "topic": "Transport systems",
+   "q": "Which component of blood is chiefly responsible for clot formation when a blood vessel is cut?",
+   "options": [
+    "Serum",
+    "Red blood cells",
+    "Platelets",
+    "White blood cells"
+   ],
+   "answer": 2,
+   "explanation": "Platelets help form blood clots by releasing substances that convert fibrinogen to fibrin at the wound. Red blood cells transport oxygen, white blood cells defend against infection, and serum is plasma without clotting factors."
+  },
+  {
+   "n": 26,
+   "topic": "Ecology",
+   "q": "A factory near Ijebu-Ode discharges warm water into a fish pond. Which immediate effect is most likely to reduce the amount of dissolved oxygen available to the fish?",
+   "options": [
+    "Oxygen dissolves less readily as the water becomes warmer.",
+    "Fish begin to use carbon dioxide in place of oxygen.",
+    "Water plants at once stop releasing oxygen when the temperature rises.",
+    "Warm water increases the solubility of oxygen in the pond."
+   ],
+   "answer": 0,
+   "explanation": "Oxygen is less soluble in warm water, so the amount of dissolved oxygen available to fish decreases. Warmer water also tends to raise fish metabolism, increasing their oxygen demand and worsening the shortage. The idea that warming increases oxygen solubility is the reverse of the actual relationship."
+  },
+  {
+   "n": 27,
+   "topic": "Ecology",
+   "q": "A farmer in Ogbomosho grows egusi melon. After spraying insecticide, fewer bees visit the flowers, and fruit formation decreases. This is mainly because bees normally",
+   "options": [
+    "remove excess nectar that would otherwise rot the flowers.",
+    "add nitrogen to the soil through their waste.",
+    "transfer pollen from male flowers to female flowers.",
+    "feed on pests that damage the melon pods."
+   ],
+   "answer": 2,
+   "explanation": "Bees are pollinators: they transfer pollen from the male parts to the female parts of flowers, allowing fertilisation and fruit formation. Without enough visits, fewer melon flowers are pollinated, so fewer fruits develop. Bees do not add nitrogen to the soil or remove rotting nectar as their main role."
+  },
+  {
+   "n": 28,
+   "topic": "Ecology",
+   "q": "Which factor is density-independent in a population of lizards living on a rock near Abeokuta?",
+   "options": [
+    "A bush fire that sweeps across the habitat.",
+    "The spread of a skin disease as the lizards become crowded.",
+    "Competition for basking sites among the lizards.",
+    "Shortage of insects as the lizard population increases."
+   ],
+   "answer": 0,
+   "explanation": "A bush fire affects both crowded and sparse lizard populations according to its spread, not according to population density. Competition, disease spread and food shortage become more severe as numbers increase, so they are density-dependent."
+  },
+  {
+   "n": 29,
+   "topic": "Diseases and their control",
+   "q": "A primary health centre in Gombe wants to reduce the number of children bitten by mosquitoes that transmit malaria. Which measure acts most directly?",
+   "options": [
+    "Boiling drinking water before use.",
+    "Giving children iron tablets every day.",
+    "Clearing blocked drains to destroy snail hosts.",
+    "Sleeping under insecticide-treated mosquito nets."
+   ],
+   "answer": 3,
+   "explanation": "Sleeping under insecticide-treated nets directly prevents mosquitoes from biting children and also kills many mosquitoes. Clearing drains to destroy snail hosts would target schistosomiasis rather than the malaria mosquito, while boiling drinking water and giving iron tablets do not reduce mosquito contact."
+  },
+  {
+   "n": 30,
+   "topic": "Respiration",
+   "q": "Which feature of the alveoli in a person living in Jos most directly increases the rate of gaseous exchange between air and blood?",
+   "options": [
+    "Presence of cartilage rings to keep the alveoli open.",
+    "A very large total surface area.",
+    "A thick wall that holds the air securely.",
+    "A small supply of blood in the surrounding capillaries."
+   ],
+   "answer": 1,
+   "explanation": "Alveoli provide a very large total surface area for diffusion of oxygen and carbon dioxide. Their walls are also thin and richly supplied with blood, which further speeds gaseous exchange. Thick walls, a poor blood supply or cartilage rings in the alveoli would not improve diffusion."
+  },
+  {
+   "n": 31,
+   "topic": "Cell structure and organisation",
+   "q": "A student in Oyo examines a young maize plant. The main structural material of the cell wall is",
+   "options": [
+    "cellulose.",
+    "protein.",
+    "glycogen.",
+    "chitin."
+   ],
+   "answer": 0,
+   "explanation": "The main structural material of plant cell walls is cellulose. Chitin is found in fungal cell walls and the exoskeleton of arthropods, glycogen is a storage carbohydrate, and protein is not the main structural material of maize cell walls."
+  },
+  {
+   "n": 32,
+   "topic": "Cell structure and organisation",
+   "q": "A student in Ibadan examines a chloroplast from a cassava leaf under a microscope. The stacks of thylakoid membranes inside the chloroplast are called",
+   "options": [
+    "cisternae.",
+    "cristae.",
+    "grana.",
+    "lysosomes."
+   ],
+   "answer": 2,
+   "explanation": "Grana are stacks of thylakoid membranes in a chloroplast, where the light-dependent reactions of photosynthesis occur. Cristae are folds of the inner mitochondrial membrane, while cisternae are flattened membrane sacs of the endoplasmic reticulum or Golgi apparatus. Lysosomes are separate membrane-bound organelles."
+  },
+  {
+   "n": 33,
+   "topic": "Nutrition in plants and animals",
+   "q": "A maize plant grown by Musa in Zaria in a nutrient solution shows stunted growth, poor root development and a purple colour on the stems and leaves. Which mineral ion is most likely deficient?",
+   "options": [
+    "Nitrate ion",
+    "Calcium ion",
+    "Phosphate ion",
+    "Magnesium ion"
+   ],
+   "answer": 2,
+   "explanation": "Phosphorus is needed for ATP, nucleic acids and membrane phospholipids, and its deficiency in maize often causes stunted growth, poor roots and purplish leaves and stems. Nitrate deficiency commonly causes pale leaves, while magnesium deficiency causes yellowing between the veins of older leaves."
+  },
+  {
+   "n": 34,
+   "topic": "Nutrition in plants and animals",
+   "q": "Amina in Sokoto has a disease that greatly reduces the surface area of the ileum. Which process will be most directly affected?",
+   "options": [
+    "Absorption of digested nutrients",
+    "Chewing of food",
+    "Production of bile",
+    "Swallowing of food"
+   ],
+   "answer": 0,
+   "explanation": "The ileum is the main region for absorption of digested nutrients, and its villi greatly increase the surface area for this process. Chewing, swallowing and bile production occur elsewhere in the digestive system and would not be directly affected."
+  },
+  {
+   "n": 35,
+   "topic": "Diffusion, osmosis and active transport",
+   "q": "Binta in Sokoto rubs dry salt on fresh fish to preserve it. The salt helps to preserve the fish mainly because it causes water to leave the cells of bacteria and fungi by which process?",
+   "options": [
+    "Active transport",
+    "Osmosis",
+    "Egestion",
+    "Evaporation"
+   ],
+   "answer": 1,
+   "explanation": "High salt concentration outside the microbial cells lowers the external water potential, so water moves out of the cells through their semipermeable membranes by osmosis. This dehydrates the microorganisms and prevents them from multiplying. Active transport requires energy and moves substances against a gradient, while egestion is the removal of undigested waste."
+  },
+  {
+   "n": 36,
+   "topic": "Diffusion, osmosis and active transport",
+   "q": "A freshwater fish in Lake Kainji lives in water with a lower salt concentration than its body fluids. It absorbs some mineral salts through its gills using energy from ATP. Which process is involved?",
+   "options": [
+    "Plasmolysis",
+    "Active transport",
+    "Diffusion",
+    "Osmosis"
+   ],
+   "answer": 1,
+   "explanation": "The fish is taking in mineral salts from a region of lower concentration into a region of higher concentration, and the process uses ATP, so it is active transport. Osmosis involves the movement of water only, diffusion moves substances down a concentration gradient, and plasmolysis is the shrinking of plant cells in concentrated solutions."
+  },
+  {
+   "n": 37,
+   "topic": "Support and movement",
+   "q": "In a mammalian skeleton, which vertebrae carry the ribs?",
+   "options": [
+    "Thoracic vertebrae",
+    "Lumbar vertebrae",
+    "Cervical vertebrae",
+    "Sacral vertebrae"
+   ],
+   "answer": 0,
+   "explanation": "In mammals, ribs articulate with the thoracic vertebrae and protect the heart and lungs. Cervical vertebrae occur in the neck, lumbar vertebrae in the lower back, and sacral vertebrae fuse to form part of the pelvis."
+  },
+  {
+   "n": 38,
+   "topic": "Reproduction",
+   "q": "A student in Lokoja examines a male reproductive system. In which structure do spermatozoa complete their maturation and become motile before being moved to the vas deferens?",
+   "options": [
+    "Seminiferous tubule",
+    "Epididymis",
+    "Prostate gland",
+    "Seminal vesicle"
+   ],
+   "answer": 1,
+   "explanation": "Spermatozoa are produced in the seminiferous tubules and then pass to the epididymis, where they mature and become motile. The prostate gland and seminal vesicles secrete fluids that form part of semen."
+  },
+  {
+   "n": 39,
+   "topic": "Genetics",
+   "q": "A poultry farmer in Abeokuta wants to identify the sex chromosome constitution of a female chick. Which combination should be present in the cells of the female chick?",
+   "options": [
+    "ZW",
+    "XY",
+    "XX",
+    "ZZ"
+   ],
+   "answer": 0,
+   "explanation": "In birds, unlike mammals, the female is the heterogametic sex with sex chromosomes ZW, while the male is ZZ. The XY and XX combinations describe mammalian sex chromosomes, not those of poultry."
+  },
+  {
+   "n": 40,
+   "topic": "Excretion",
+   "q": "A patient with kidney failure in Ibadan is treated with a dialysis machine. The dialysis fluid contains glucose and dissolved salts at concentrations similar to normal blood plasma but contains no urea. Why is no urea included in the dialysis fluid?",
+   "options": [
+    "To cause water to move from the fluid into the blood",
+    "To prevent glucose from diffusing out of the blood",
+    "To allow plasma proteins to pass from the blood into the fluid",
+    "To maintain a concentration gradient so that urea can diffuse from the blood into the dialysis fluid"
+   ],
+   "answer": 3,
+   "explanation": "The absence of urea in the dialysis fluid creates a steep concentration gradient, so urea diffuses out of the patient’s blood through the partially permeable membrane. Matching the concentrations of glucose and salts prevents excessive loss of these useful substances from the blood."
+  },
+  {
+   "n": 41,
+   "topic": "Nervous and hormonal coordination",
+   "q": "A woman in Benin City takes a combined oral contraceptive pill daily as directed. This mainly prevents pregnancy by inhibiting the secretion of which pituitary hormones?",
+   "options": [
+    "adrenaline and insulin",
+    "oestrogen and progesterone",
+    "antidiuretic hormone and oxytocin",
+    "follicle-stimulating hormone and luteinising hormone"
+   ],
+   "answer": 3,
+   "explanation": "The pill raises the levels of oestrogen and progesterone in the body, and this inhibits the pituitary gland from releasing follicle-stimulating hormone and luteinising hormone. Without adequate follicle-stimulating hormone and luteinising hormone, ovulation is prevented. Oestrogen and progesterone are the hormones contained in the pill, not the pituitary hormones whose secretion is reduced."
+  },
+  {
+   "n": 42,
+   "topic": "Nervous and hormonal coordination",
+   "q": "A man in Ilorin suffers an injury at the base of the brain and can no longer control his heartbeat and breathing properly. Which part of the brain is most likely damaged?",
+   "options": [
+    "cerebrum",
+    "hypothalamus",
+    "cerebellum",
+    "medulla oblongata"
+   ],
+   "answer": 3,
+   "explanation": "The medulla oblongata contains the centres that control heart rate and breathing. The cerebellum coordinates muscular movement and balance, the hypothalamus regulates temperature and water balance, and the cerebrum is concerned mainly with higher mental functions."
+  },
+  {
+   "n": 43,
+   "topic": "Transport systems",
+   "q": "A patient in Aba is given an intravenous drip containing a solution more concentrated than his blood plasma. What immediate effect will this have on his red blood cells?",
+   "options": [
+    "They gain water and burst.",
+    "They lose water and become shrunken.",
+    "They remain unchanged in size.",
+    "They increase in size but do not burst."
+   ],
+   "answer": 1,
+   "explanation": "The drip solution is hypertonic to the red blood cells, so it has a lower water potential than the cytoplasm. Water therefore leaves the cells by osmosis and the cells shrink. A solution with the same concentration as the plasma would leave the cells unchanged, but a more concentrated solution causes water loss."
+  },
+  {
+   "n": 44,
+   "topic": "Ecology",
+   "q": "Which of the following factors is most clearly density-dependent in a population of rats living in a grain store in Lagos?",
+   "options": [
+    "An outbreak of a contagious disease among the rats",
+    "A flood that covers the floor of the store",
+    "A sudden fire that burns the store",
+    "A severe drought outside the store"
+   ],
+   "answer": 0,
+   "explanation": "Density-dependent factors have a greater effect as the population becomes more crowded; a contagious disease spreads more easily when many rats are close together. Fire, drought and flood act regardless of the population density of the rats."
+  },
+  {
+   "n": 45,
+   "topic": "Diseases and their control",
+   "q": "A woman in Ibadan is treated for malaria with artemisinin-based combination therapy instead of a single antimalarial drug. What is the main reason for using a combination?",
+   "options": [
+    "It reduces the chance of the malaria parasite developing resistance to the drug.",
+    "It kills the mosquito vector as well as the parasite.",
+    "It treats the parasite in the liver only and not in the blood.",
+    "It gives the patient permanent immunity to malaria."
+   ],
+   "answer": 0,
+   "explanation": "Using two antimalarial drugs with different modes of action makes it harder for the Plasmodium parasite to survive and develop resistance. The combination does not kill mosquitoes, provide permanent immunity, or act only in the liver; it attacks the parasite in the body."
+  },
+  {
+   "n": 46,
+   "topic": "Diseases and their control",
+   "q": "A boy in Kano is bitten on the hand by a stray dog. Which action is most important to prevent rabies?",
+   "options": [
+    "Wash the wound thoroughly with soap and water and seek anti-rabies vaccination immediately.",
+    "Apply palm oil to the wound and cover it tightly.",
+    "Take paracetamol and continue playing as usual.",
+    "Wait for fever to develop before visiting a hospital."
+   ],
+   "answer": 0,
+   "explanation": "Rabies virus can be present in the saliva of an infected dog, and prompt washing reduces contamination of the wound. Anti-rabies vaccination given immediately after exposure helps prevent the virus from causing disease. Waiting for symptoms is very dangerous because rabies is almost always fatal once symptoms appear."
+  },
+  {
+   "n": 47,
+   "topic": "Respiration",
+   "q": "A baker in Awka ferments 1 mole of glucose with yeast under anaerobic conditions. What volume of carbon dioxide is produced at standard temperature and pressure? (Molar volume of gas at s.t.p. = 22.4 dm³)",
+   "options": [
+    "22.4 dm³",
+    "11.2 dm³",
+    "67.2 dm³",
+    "44.8 dm³"
+   ],
+   "answer": 3,
+   "explanation": "The equation for anaerobic respiration in yeast is C₆H₁₂O₆ → 2C₂H₅OH + 2CO₂, so 1 mole of glucose produces 2 moles of carbon dioxide. At s.t.p., 2 moles occupy 2 × 22.4 dm³ = 44.8 dm³. Using 22.4 dm³ ignores the coefficient 2 in the balanced equation."
+  },
+  {
+   "n": 48,
+   "topic": "Respiration",
+   "q": "A frog is kept in a moist container in Ibadan and can exchange gases through its skin even when its lungs are not active. Which feature of the skin makes this possible?",
+   "options": [
+    "It is thick and impermeable to gases.",
+    "It contains many air sacs and cartilaginous rings.",
+    "It is thin, moist and has a rich supply of blood capillaries.",
+    "It is covered with dry scales and keratin."
+   ],
+   "answer": 2,
+   "explanation": "The frog's skin is thin, kept moist, and has many blood capillaries, so dissolved oxygen and carbon dioxide can diffuse quickly between the surroundings and the blood. Dry, thick or keratinized surfaces would hinder gaseous exchange. Air sacs and cartilaginous rings are features of lungs or tracheae, not amphibian skin."
+  },
+  {
+   "n": 49,
+   "topic": "Nutrition in plants and animals",
+   "q": "A pupil in Abeokuta chews a piece of boiled yam for several minutes and it begins to taste sweet. Which enzyme is responsible for this change?",
+   "options": [
+    "Lipase",
+    "Salivary amylase",
+    "Pepsin",
+    "Trypsin"
+   ],
+   "answer": 1,
+   "explanation": "Salivary amylase in saliva begins the digestion of starch in the yam to maltose, and maltose is sweet. Pepsin and trypsin digest proteins, while lipase digests fats. Boiled yam supplies mainly starch, so the change in taste results from amylase action."
+  },
+  {
+   "n": 50,
+   "topic": "Diffusion, osmosis and active transport",
+   "q": "A tomato plant in Ilorin wilts after heavy rain waterlogs the soil. Which explanation best accounts for the wilting?",
+   "options": [
+    "Oxygen shortage in the soil reduces active ion uptake, so water absorption by osmosis is reduced.",
+    "Water is taken up by active transport, which stops when the roots are waterlogged.",
+    "Water moves out of the root hairs by osmosis because the soil solution is more concentrated than the cell sap.",
+    "Excess water causes the root hair cells to burst, so the plant cannot absorb water."
+   ],
+   "answer": 0,
+   "explanation": "In waterlogged soil, air spaces are filled with water, so root cells receive little oxygen and cannot respire sufficiently to supply energy for active ion uptake. This reduces the movement of ions into the root hair cells, so water uptake by osmosis is lowered and the plant wilts. Waterlogged soil is dilute, so water does not normally move out of the root hairs in this situation."
+  }
+ ]
+}

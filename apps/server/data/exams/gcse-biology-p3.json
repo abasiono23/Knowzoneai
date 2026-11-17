@@ -1,0 +1,401 @@
+{
+ "id": "gcse-biology-p3",
+ "exam": "gcse",
+ "subject": "biology",
+ "year": null,
+ "number": 3,
+ "source": "ai",
+ "minutes": 35,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Infection and response",
+   "q": "Which defence is a physical barrier that helps prevent pathogens entering the body through the airways?",
+   "options": [
+    "Antibodies in the blood bind to antigens on pathogens",
+    "Hydrochloric acid in the stomach kills swallowed bacteria",
+    "White blood cells in the blood engulf pathogens",
+    "Mucus and cilia lining the trachea trap and sweep out microbes"
+   ],
+   "answer": 3,
+   "explanation": "Mucus in the airways traps microbes, and cilia sweep the mucus away from the lungs. This is a physical first-line defence, whereas engulfing pathogens and antibody binding are cellular or chemical immune responses."
+  },
+  {
+   "n": 2,
+   "topic": "Infection and response",
+   "q": "Which statement correctly compares bacteria and viruses?",
+   "options": [
+    "Antibiotics kill viruses by breaking down their cell walls",
+    "Viruses are larger than bacteria and are made of many cells",
+    "Bacteria have a nucleus but viruses do not",
+    "Viruses need a living host cell to reproduce, whereas bacteria can reproduce outside cells if conditions are suitable"
+   ],
+   "answer": 3,
+   "explanation": "Viruses are not cells and must use a host cell's machinery to replicate, while bacteria can reproduce by binary fission when they have suitable conditions. Bacteria are prokaryotes and do not have a nucleus, and antibiotics do not treat viral infections."
+  },
+  {
+   "n": 3,
+   "topic": "Cell biology",
+   "q": "A student draws a mitochondrion 20 mm long. Its actual length is 0.5 μm. What is the magnification of the drawing?",
+   "options": [
+    "×40,000",
+    "×4,000",
+    "×40",
+    "×400"
+   ],
+   "answer": 0,
+   "explanation": "Convert 20 mm to micrometres: 20 × 1,000 = 20,000 μm. Magnification = image size ÷ actual size = 20,000 ÷ 0.5 = 40,000, so the drawing is ×40,000. Not converting millimetres to micrometres gives ×40."
+  },
+  {
+   "n": 4,
+   "topic": "Cell biology",
+   "q": "A root hair cell takes up nitrate ions from soil even when the nitrate concentration in the soil is lower than inside the cell. Which process is used, and what supplies the energy?",
+   "options": [
+    "Osmosis, because nitrate ions are dissolved in water",
+    "Diffusion, using energy released by respiration",
+    "Active transport, using energy released by respiration",
+    "Active transport, using energy transferred from sunlight"
+   ],
+   "answer": 2,
+   "explanation": "Moving nitrate ions against their concentration gradient requires active transport. The carrier proteins use energy released by respiration, not sunlight or random particle movement."
+  },
+  {
+   "n": 5,
+   "topic": "Cell biology",
+   "q": "Which statement correctly describes the function of the large permanent vacuole in a plant cell?",
+   "options": [
+    "It is the site of aerobic respiration",
+    "It controls which dissolved substances enter and leave the cell",
+    "It contains chlorophyll and carries out photosynthesis",
+    "It stores cell sap and helps keep the cell turgid"
+   ],
+   "answer": 3,
+   "explanation": "The large permanent vacuole is filled with cell sap and pushes against the cell wall to help keep the plant cell turgid. Respiration occurs in mitochondria, and photosynthesis occurs in chloroplasts."
+  },
+  {
+   "n": 6,
+   "topic": "Inheritance, variation and evolution",
+   "q": "A human sperm cell is produced by meiosis. What is the probability that it carries an X chromosome?",
+   "options": [
+    "100%",
+    "75%",
+    "50%",
+    "25%"
+   ],
+   "answer": 2,
+   "explanation": "Human males have sex chromosomes XY, so meiosis produces roughly equal numbers of X-bearing and Y-bearing sperm. Therefore the chance that a sperm carries an X chromosome is 1 in 2, or 50%."
+  },
+  {
+   "n": 7,
+   "topic": "Inheritance, variation and evolution",
+   "q": "A gene for human insulin is transferred into a bacterium. The bacterium can make human insulin because...",
+   "options": [
+    "The bacterium converts the human gene directly into insulin without transcription or translation",
+    "The bacterium uses the human gene as an antibiotic to kill other bacteria",
+    "The genetic code is shared, so the bacterium translates the human gene into the correct protein",
+    "The human gene makes the bacterium produce human antibodies instead of insulin"
+   ],
+   "answer": 2,
+   "explanation": "The human gene is transcribed and translated by the bacterium. Because the genetic code is shared, bacterial ribosomes put the amino acids in the correct order to make human insulin."
+  },
+  {
+   "n": 8,
+   "topic": "Homeostasis and response",
+   "q": "A person suddenly sees a dog running towards them and feels frightened. Which response is caused by adrenaline?",
+   "options": [
+    "Heart rate increases and more glucose is released into the blood",
+    "Pupils narrow and urine production increases",
+    "Breathing rate falls and blood glucose concentration falls",
+    "Digestion speeds up and the heart rate decreases"
+   ],
+   "answer": 0,
+   "explanation": "Adrenaline prepares the body for fight or flight by increasing heart rate, breathing rate and blood glucose concentration. It also reduces digestion, so the opposite changes described in the other options would not help prepare for action."
+  },
+  {
+   "n": 9,
+   "topic": "Homeostasis and response",
+   "q": "Which hormone causes ovulation in the human menstrual cycle?",
+   "options": [
+    "Progesterone",
+    "Luteinising hormone (LH)",
+    "Oestrogen",
+    "Follicle-stimulating hormone (FSH)"
+   ],
+   "answer": 1,
+   "explanation": "A rise in luteinising hormone triggers ovulation, when an egg is released from a mature follicle. FSH helps follicles mature, while progesterone and oestrogen have other roles in the cycle."
+  },
+  {
+   "n": 10,
+   "topic": "Bioenergetics: photosynthesis and respiration",
+   "q": "A plant in a transparent chamber exposed to light increases in dry mass by 0.72 g over a day. If dry plant material stores 17 kJ of energy per gram, how much energy is stored in the new dry mass through photosynthesis?",
+   "options": [
+    "122.4 kJ",
+    "1.224 kJ",
+    "0.042 kJ",
+    "12.24 kJ"
+   ],
+   "answer": 3,
+   "explanation": "Dry mass increase of 0.72 g stores 0.72 × 17 = 12.24 kJ. The value 0.042 kJ comes from dividing by 17 instead of multiplying, so it is not the energy stored."
+  },
+  {
+   "n": 11,
+   "topic": "Bioenergetics: photosynthesis and respiration",
+   "q": "Which statement best compares anaerobic respiration in human muscle cells with aerobic respiration?",
+   "options": [
+    "Anaerobic respiration produces carbon dioxide and water.",
+    "Anaerobic respiration produces ethanol and carbon dioxide.",
+    "Anaerobic respiration releases more energy per glucose molecule because it does not need oxygen.",
+    "Anaerobic respiration releases less energy per glucose molecule and produces lactate."
+   ],
+   "answer": 3,
+   "explanation": "Aerobic respiration uses oxygen and releases more energy per glucose molecule than anaerobic respiration. In human muscle cells, anaerobic respiration produces lactate; ethanol and carbon dioxide are produced in yeast, not human muscles."
+  },
+  {
+   "n": 12,
+   "topic": "Bioenergetics: photosynthesis and respiration",
+   "q": "A student measures oxygen production by pondweed over 1 minute at 15 °C. At light intensity 20 arbitrary units, oxygen production is 12 cm³/min. When the light intensity is increased to 40 arbitrary units, oxygen production remains 12 cm³/min. When carbon dioxide concentration is raised from 0.03% to 0.1% at light intensity 40 arbitrary units, oxygen production rises to 18 cm³/min. Which factor limited photosynthesis at light intensity 40 arbitrary units before the carbon dioxide was increased?",
+   "options": [
+    "Light intensity",
+    "Temperature",
+    "Carbon dioxide concentration",
+    "Oxygen concentration"
+   ],
+   "answer": 2,
+   "explanation": "Increasing light intensity from 20 to 40 arbitrary units did not change oxygen production, so light was no longer limiting. Raising carbon dioxide from 0.03% to 0.1% increased oxygen production, showing carbon dioxide concentration was limiting before it was raised."
+  },
+  {
+   "n": 13,
+   "topic": "Ecology",
+   "q": "A student counts daisies in ten randomly placed 0.25 m² quadrats in an 80 m² field. The counts are 5, 7, 6, 8, 4, 7, 6, 5, 9 and 7. What is the best estimate of the total number of daisies in the field?",
+   "options": [
+    "2048",
+    "25.6",
+    "64",
+    "512"
+   ],
+   "answer": 0,
+   "explanation": "The total count is 64 daisies in 10 quadrats, so the mean is 6.4 per 0.25 m². This equals 6.4 ÷ 0.25 = 25.6 daisies per m², and 25.6 × 80 = 2048 daisies in the field. The 512 result comes from multiplying the mean per quadrat by the field area without allowing for the quadrat size."
+  },
+  {
+   "n": 14,
+   "topic": "Ecology",
+   "q": "A patch of forest is cut down and the wood is burned. Which pair of effects best explains why atmospheric carbon dioxide may rise?",
+   "options": [
+    "Burning wood releases carbon dioxide, and fewer trees remove carbon dioxide by photosynthesis.",
+    "Burning wood increases decomposition, and fewer trees absorb carbon dioxide through respiration.",
+    "Burning wood releases nitrogen, and fewer trees absorb nitrogen through roots.",
+    "Burning wood releases oxygen, and fewer trees release carbon dioxide by respiration."
+   ],
+   "answer": 0,
+   "explanation": "Burning wood releases carbon stored in the trees as carbon dioxide. Removing the trees also reduces photosynthesis, so less carbon dioxide is removed from the atmosphere."
+  },
+  {
+   "n": 15,
+   "topic": "Organisation: tissues, organs and systems",
+   "q": "Which structure is most directly adapted for absorbing digested glucose into the blood in the small intestine?",
+   "options": [
+    "A villus with a thin surface and a dense capillary network.",
+    "A kidney tubule lined with cells that reabsorb water.",
+    "A trachea lined with cartilage rings and cilia.",
+    "A stomach wall with strong muscles and glands that release acid."
+   ],
+   "answer": 0,
+   "explanation": "Villi in the small intestine have a thin surface and a rich capillary network, which shortens the diffusion distance and carries absorbed glucose away. Strong stomach muscles and kidney tubules have other roles and are not sites of glucose absorption in the small intestine."
+  },
+  {
+   "n": 16,
+   "topic": "Organisation: tissues, organs and systems",
+   "q": "In a leafy shoot, which statement correctly describes the main function of xylem tissue?",
+   "options": [
+    "It allows gases to enter the leaf through stomata.",
+    "It transports sucrose and amino acids from the leaves to the roots.",
+    "It carries out most photosynthesis in the stem.",
+    "It transports water and mineral ions from the roots to the leaves."
+   ],
+   "answer": 3,
+   "explanation": "Xylem tissue carries water and dissolved mineral ions upward from the roots to the leaves. Transport of sucrose and amino acids is the role of phloem tissue, not xylem."
+  },
+  {
+   "n": 17,
+   "topic": "Infection and response",
+   "q": "Which process describes a white blood cell engulfing and digesting a bacterium?",
+   "options": [
+    "Antibiotic resistance",
+    "Antibody production",
+    "Vaccination",
+    "Phagocytosis"
+   ],
+   "answer": 3,
+   "explanation": "Phagocytosis is the process in which a white blood cell surrounds, engulfs and digests a pathogen such as a bacterium. Antibodies are produced by lymphocytes and bind antigens, but they do not engulf and digest whole bacteria in this way."
+  },
+  {
+   "n": 18,
+   "topic": "Infection and response",
+   "q": "A hospital finds more infections caused by bacteria resistant to penicillin than ten years ago. Which statement best explains this increase?",
+   "options": [
+    "Patients became immune to penicillin, so their bacteria survived longer.",
+    "Bacteria deliberately changed their DNA because they needed to survive penicillin.",
+    "Penicillin caused viral mutations that then infected bacteria.",
+    "Random mutations produced some penicillin-resistant bacteria; these survived and reproduced when penicillin was used."
+   ],
+   "answer": 3,
+   "explanation": "Antibiotic resistance spreads by natural selection: random mutations can give some bacteria resistance, and these survive and reproduce when the antibiotic is used. The bacteria do not deliberately change their DNA in response to the antibiotic."
+  },
+  {
+   "n": 19,
+   "topic": "Infection and response",
+   "q": "A person is infected by a pathogen. Which response is specific to that pathogen?",
+   "options": [
+    "Skin forms a waterproof barrier.",
+    "Phagocytes engulf a range of microbes.",
+    "Lymphocytes produce antibodies that bind to the pathogen's antigens.",
+    "Mucus traps particles in the airways."
+   ],
+   "answer": 2,
+   "explanation": "Antibodies are specific: lymphocytes make antibodies that bind to antigens on a particular pathogen. Skin, mucus and phagocytosis act against many pathogens and are not specific to one pathogen."
+  },
+  {
+   "n": 20,
+   "topic": "Cell biology",
+   "q": "Priya views a palisade cell with a light microscope. The image of the cell is 30 mm long, while the actual cell is 75 μm long. What is the magnification of the image?",
+   "options": [
+    "400×",
+    "0.4×",
+    "40×",
+    "4000×"
+   ],
+   "answer": 0,
+   "explanation": "Magnification = image size ÷ actual size. Convert 30 mm to 30,000 μm, then 30,000 ÷ 75 = 400, so the magnification is 400×; the 0.4× result comes from dividing 30 by 75 without converting units."
+  },
+  {
+   "n": 21,
+   "topic": "Cell biology",
+   "q": "A root hair cell absorbs mineral ions from the soil. Which feature most directly increases the rate at which these ions can enter the cell?",
+   "options": [
+    "A large central vacuole that stores water",
+    "A long, thin extension that gives a large surface area",
+    "Many chloroplasts that trap light energy",
+    "A thick waterproof layer on the cell wall"
+   ],
+   "answer": 1,
+   "explanation": "The long, thin extension increases the surface area of the cell membrane, allowing faster absorption of mineral ions. A waterproof layer would reduce exchange, and the vacuole and chloroplasts are not mainly responsible for increasing ion uptake."
+  },
+  {
+   "n": 22,
+   "topic": "Cell biology",
+   "q": "A student measures how quickly amylase breaks down starch at pH 3, pH 7 and pH 11. The rate is high at pH 7 and much lower at both pH 3 and pH 11. What is the best explanation?",
+   "options": [
+    "The amylase is used up more quickly at pH 3 and pH 11",
+    "Extreme pH makes the substrate fit the active site more tightly",
+    "Extreme pH changes the shape of the active site, so fewer enzyme–substrate complexes form",
+    "The starch is denatured at every pH except pH 7"
+   ],
+   "answer": 2,
+   "explanation": "Enzymes have an optimum pH, and extreme pH values can change the shape of the active site so the substrate no longer fits well. Enzymes are not used up by the reaction in the way described, and it is the enzyme rather than the starch that is said to denature."
+  },
+  {
+   "n": 23,
+   "topic": "Inheritance, variation and evolution",
+   "q": "In cats, the allele for black fur (B) is dominant to the allele for brown fur (b). A heterozygous black cat is crossed with a brown cat. What is the probability that a kitten will have brown fur?",
+   "options": [
+    "1/2",
+    "3/4",
+    "0",
+    "1/4"
+   ],
+   "answer": 0,
+   "explanation": "The black cat has genotype Bb and the brown cat has genotype bb. The possible offspring are Bb, Bb, bb and bb, so 2 out of 4, or 1/2, are expected to be brown."
+  },
+  {
+   "n": 24,
+   "topic": "Homeostasis and response",
+   "q": "After eating a carbohydrate-rich meal, blood glucose concentration rises. Which sequence correctly describes a normal homeostatic response?",
+   "options": [
+    "The pancreas releases glucagon, and liver cells convert glucose to glycogen",
+    "The pancreas releases insulin, and liver cells convert glucose to glycogen",
+    "The pancreas releases glucagon, and liver cells convert glycogen to glucose",
+    "The pancreas releases insulin, and liver cells convert glycogen to glucose"
+   ],
+   "answer": 1,
+   "explanation": "After a carbohydrate-rich meal, blood glucose rises. Insulin is released by the pancreas and causes liver cells to take up glucose and convert it to glycogen. Glucagon has the opposite effect when blood glucose is low."
+  },
+  {
+   "n": 25,
+   "topic": "Homeostasis and response",
+   "q": "Which statement best explains why the control of blood glucose concentration is an example of negative feedback?",
+   "options": [
+    "Blood glucose is kept exactly constant at every moment by a single hormone",
+    "A change from the normal level triggers responses that move the concentration back towards normal",
+    "A change from the normal level triggers responses that make the change larger",
+    "Insulin and glucagon are released at equal rates regardless of the blood glucose concentration"
+   ],
+   "answer": 1,
+   "explanation": "Negative feedback detects a deviation from the normal level and brings about responses that correct it. For blood glucose, high glucose causes insulin to lower it, while low glucose causes glucagon to raise it; it is not held exactly constant by one hormone."
+  },
+  {
+   "n": 26,
+   "topic": "Bioenergetics: photosynthesis and respiration",
+   "q": "Which word equation represents anaerobic respiration in a human muscle cell during vigorous exercise?",
+   "options": [
+    "glucose → lactic acid",
+    "glucose + oxygen → carbon dioxide + water",
+    "glucose → ethanol + carbon dioxide",
+    "glucose → carbon dioxide + water"
+   ],
+   "answer": 0,
+   "explanation": "Anaerobic respiration in human muscle cells breaks down glucose to lactic acid, releasing less energy than aerobic respiration. Ethanol and carbon dioxide are produced by anaerobic respiration in yeast, and carbon dioxide plus water is the aerobic equation."
+  },
+  {
+   "n": 27,
+   "topic": "Bioenergetics: photosynthesis and respiration",
+   "q": "In bright light, a pondweed releases 18 cm³ of oxygen in 5 minutes. In darkness, the same pondweed takes in 6 cm³ of oxygen in 5 minutes. What is the total rate at which oxygen is produced by photosynthesis per minute in bright light?",
+   "options": [
+    "1.2 cm³/min",
+    "3.6 cm³/min",
+    "2.4 cm³/min",
+    "4.8 cm³/min"
+   ],
+   "answer": 3,
+   "explanation": "The oxygen released in bright light is the net amount after the plant has used some oxygen for respiration. Respiration uses 6 ÷ 5 = 1.2 cm³/min, and net oxygen release is 18 ÷ 5 = 3.6 cm³/min, so total oxygen production is 3.6 + 1.2 = 4.8 cm³/min."
+  },
+  {
+   "n": 28,
+   "topic": "Ecology",
+   "q": "Amina uses capture–recapture to estimate the population of pond snails in Cardiff. She catches and marks 50 snails, then releases them. Later, she catches 80 snails and finds that 10 are marked. Which calculation gives the best estimate of the snail population?",
+   "options": [
+    "(80 × 10) ÷ 50",
+    "50 + 80 + 10",
+    "(50 × 10) ÷ 80",
+    "(50 × 80) ÷ 10"
+   ],
+   "answer": 3,
+   "explanation": "The estimate is (number in first sample × number in second sample) ÷ number of marked individuals in the second sample, so (50 × 80) ÷ 10 = 400. Using (50 × 10) ÷ 80 mixes up the marked and recaptured numbers, while adding the counts does not use the recapture proportion."
+  },
+  {
+   "n": 29,
+   "topic": "Ecology",
+   "q": "In a woodland near Belfast, dead leaves are broken down by soil microorganisms. Which process in these microorganisms releases carbon dioxide back into the atmosphere?",
+   "options": [
+    "combustion of the leaves",
+    "aerobic respiration",
+    "transpiration",
+    "photosynthesis"
+   ],
+   "answer": 1,
+   "explanation": "Decomposers break down carbon compounds in dead leaves and respire aerobically, releasing carbon dioxide. Photosynthesis removes carbon dioxide, transpiration releases water vapour, and combustion is burning rather than microbial breakdown."
+  },
+  {
+   "n": 30,
+   "topic": "Organisation: tissues, organs and systems",
+   "q": "Which statement best explains why the muscular wall of the left ventricle is thicker than that of the right ventricle?",
+   "options": [
+    "The left ventricle receives oxygenated blood, so its muscle contracts more often.",
+    "The left ventricle contains more valves, which need extra muscle to support them.",
+    "The left ventricle pumps blood to the whole body, so it must generate a higher pressure.",
+    "The left ventricle pumps blood to the lungs, so it has a shorter route."
+   ],
+   "answer": 2,
+   "explanation": "The left ventricle pumps oxygenated blood into the aorta and around the body, so its thicker muscle generates the higher pressure needed. The right ventricle pumps blood only to the lungs, and both ventricles contract at the same rate in a normal heart."
+  }
+ ]
+}

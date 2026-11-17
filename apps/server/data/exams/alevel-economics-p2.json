@@ -1,0 +1,401 @@
+{
+ "id": "alevel-economics-p2",
+ "exam": "alevel",
+ "subject": "economics",
+ "year": null,
+ "number": 2,
+ "source": "ai",
+ "minutes": 40,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Inflation and unemployment",
+   "q": "Priya has a fixed-rate mortgage. Which household is most likely to gain in real terms from an unexpected rise in inflation?",
+   "options": [
+    "A saver holding most wealth in a current account, because cash gains purchasing power",
+    "A lender receiving a fixed nominal interest rate, because the real value of the interest received rises",
+    "Priya, because the real value of her fixed nominal mortgage debt falls",
+    "A pensioner with a fixed nominal pension, because the pension buys more goods and services"
+   ],
+   "answer": 2,
+   "explanation": "Unexpected inflation transfers real wealth from lenders and cash savers to borrowers when debts are fixed in nominal terms. Priya’s nominal repayments stay the same while money is worth less, so the real burden of her mortgage falls. Fixed pensions and cash savings lose purchasing power rather than gain."
+  },
+  {
+   "n": 2,
+   "topic": "Inflation and unemployment",
+   "q": "A one-year bond pays a nominal interest rate of 5.0%. Inflation over the year is 2.0%. Using the exact Fisher relationship, (1 + real interest rate) = (1 + nominal interest rate) ÷ (1 + inflation rate), what is the real interest rate approximately?",
+   "options": [
+    "2.94%",
+    "3.00%",
+    "7.00%",
+    "1.50%"
+   ],
+   "answer": 0,
+   "explanation": "(1.05 ÷ 1.02) − 1 = 0.029411..., so the real interest rate is about 2.94%. The approximate Fisher rule (5.0% − 2.0% = 3.00%) is close but not exact, and adding the rates would be incorrect."
+  },
+  {
+   "n": 3,
+   "topic": "Inflation and unemployment",
+   "q": "In the short run, an unexpected fall in aggregate demand is most likely to lead to which combination of inflation and unemployment?",
+   "options": [
+    "Lower inflation and lower unemployment",
+    "Lower inflation and higher unemployment",
+    "Higher inflation and higher unemployment",
+    "Higher inflation and lower unemployment"
+   ],
+   "answer": 1,
+   "explanation": "A fall in aggregate demand creates spare capacity, reducing inflationary pressure and increasing cyclical unemployment, other things equal. This is shown as a movement down along the short-run Phillips curve, not a shift to a more favourable long-run trade-off."
+  },
+  {
+   "n": 4,
+   "topic": "The labour market",
+   "q": "In a local labour market in Middlesbrough, one large employer is the dominant buyer of laboratory technicians. Compared with a competitive labour market, what is the most likely outcome of this monopsony, assuming upward-sloping labour supply and no trade union?",
+   "options": [
+    "The same wage and lower employment",
+    "A higher wage and lower employment",
+    "A lower wage and lower employment",
+    "A lower wage and higher employment"
+   ],
+   "answer": 2,
+   "explanation": "A monopsonist faces an upward-sloping supply of labour, so the marginal cost of labour is above the wage required to attract each worker. It maximises profit where marginal revenue product equals marginal cost of labour and then pays the wage from the supply curve, giving lower pay and employment than under competition."
+  },
+  {
+   "n": 5,
+   "topic": "The labour market",
+   "q": "In a competitive labour market, which change causes a movement along a firm’s demand curve for labour rather than a shift of the demand curve?",
+   "options": [
+    "A rise in the price of the firm’s product",
+    "An increase in labour productivity",
+    "A fall in the price of capital that substitutes for labour",
+    "A fall in the wage rate, with product price and labour productivity unchanged"
+   ],
+   "answer": 3,
+   "explanation": "The demand for labour is derived from marginal revenue product, and a change in the wage rate changes the quantity of labour demanded at each wage, so it is a movement along the curve. Product price, labour productivity and the price of substitute capital change the marginal revenue product and therefore shift the demand curve."
+  },
+  {
+   "n": 6,
+   "topic": "Demand, supply and price determination",
+   "q": "In Newport, the price of tea rises from £2.00 to £2.40 per box. As a result, the quantity of coffee demanded rises from 800 to 880 boxes per week. Using the initial-value method, what is the cross elasticity of demand for coffee with respect to the price of tea?",
+   "options": [
+    "2.0, so tea demand is price elastic",
+    "−0.5, so coffee and tea are complements",
+    "0.5, so coffee and tea are substitutes",
+    "0.25, so coffee has inelastic income demand"
+   ],
+   "answer": 2,
+   "explanation": "The price of tea rises by (0.40 ÷ 2.00) × 100 = 20%, and the quantity of coffee demanded rises by (80 ÷ 800) × 100 = 10%. Cross elasticity = +10% ÷ 20% = +0.5. A positive value indicates substitutes."
+  },
+  {
+   "n": 7,
+   "topic": "Demand, supply and price determination",
+   "q": "A maximum rent is set below the equilibrium rent in a city’s rental housing market. Which outcome is most likely in the long run?",
+   "options": [
+    "A surplus of rental housing develops because landlords supply more property",
+    "The quantity of rental housing traded rises as tenants demand more at the lower rent",
+    "A shortage of rental housing may worsen because supply becomes more elastic over time",
+    "The deadweight loss is eliminated because landlords build more housing to meet demand"
+   ],
+   "answer": 2,
+   "explanation": "A binding maximum price below equilibrium creates excess demand, and over time landlords can reduce supply by selling, converting or not maintaining properties. As supply becomes more elastic in the long run, the quantity supplied responds more strongly to the lower rent, so the shortage can worsen."
+  },
+  {
+   "n": 8,
+   "topic": "National income and economic growth",
+   "q": "Nominal GDP rises from £500 billion to £540 billion. The GDP deflator rises from 100 to 108. Assuming the deflator is based at 100 in the first year, what happens to real GDP?",
+   "options": [
+    "It rises by 8% to £540 billion",
+    "It falls by 8% to £460 billion",
+    "It rises by 4% to £520 billion",
+    "It is unchanged at £500 billion"
+   ],
+   "answer": 3,
+   "explanation": "Real GDP in the first year is £500bn ÷ (100 ÷ 100) = £500bn. In the second year it is £540bn ÷ (108 ÷ 100) = £540bn ÷ 1.08 = £500bn, so real GDP is unchanged. The 8% rise in nominal GDP is matched by an 8% rise in the deflator."
+  },
+  {
+   "n": 9,
+   "topic": "National income and economic growth",
+   "q": "An economy is initially producing below its potential output. Its actual GDP grows by 2% over a year while potential GDP grows by 3%. What is the most likely effect on the output gap?",
+   "options": [
+    "The output gap becomes zero, because both actual and potential GDP are increasing",
+    "The negative output gap widens, because actual GDP is growing more slowly than potential GDP",
+    "The negative output gap narrows, because actual GDP is rising",
+    "The positive output gap widens, because actual GDP is below potential GDP"
+   ],
+   "answer": 1,
+   "explanation": "Potential GDP is growing faster than actual GDP, so the shortfall between actual and potential output increases. Since the economy began below potential, the negative output gap widens even though actual GDP is rising."
+  },
+  {
+   "n": 10,
+   "topic": "Costs, revenue and profit",
+   "q": "Amina runs a clothing business in Manchester. Annual total revenue is £84,000, explicit costs are £52,000, and the opportunity cost of her own labour and capital is £20,000. What is her economic profit and what does it indicate?",
+   "options": [
+    "£32,000; the business is earning normal profit.",
+    "£32,000; the business is earning supernormal profit.",
+    "£12,000; the business is only earning normal profit.",
+    "£12,000; the business is earning supernormal profit."
+   ],
+   "answer": 3,
+   "explanation": "Economic profit subtracts both explicit and implicit opportunity costs: £84,000 − £52,000 − £20,000 = £12,000. A positive economic profit means revenue exceeds all opportunity costs, so supernormal profit is earned; zero economic profit would be normal profit. Accounting profit would be £32,000 because it ignores the £20,000 implicit cost."
+  },
+  {
+   "n": 11,
+   "topic": "Costs, revenue and profit",
+   "q": "A firm has total fixed cost of £24. Its total variable cost is £12 at 1 unit, £20 at 2 units, £30 at 3 units, £44 at 4 units and £62 at 5 units. What is the marginal cost of increasing output from 3 units to 4 units?",
+   "options": [
+    "£14",
+    "£11",
+    "£18",
+    "£17"
+   ],
+   "answer": 0,
+   "explanation": "Marginal cost is the change in total cost from producing one more unit, and fixed cost does not change. At 3 units total cost is £24 + £30 = £54; at 4 units it is £24 + £44 = £68; so MC = £68 − £54 = £14. The £11 value is average variable cost at 4 units, while £17 is average total cost at 4 units."
+  },
+  {
+   "n": 12,
+   "topic": "Costs, revenue and profit",
+   "q": "A café in Leeds has weekly total revenue of £9,600, variable costs of £7,500 and fixed costs of £3,000. In the short run, what is its best course of action?",
+   "options": [
+    "Continue producing, because revenue covers variable costs and contributes £2,100 towards fixed costs.",
+    "Shut down immediately, because total revenue is less than total variable costs.",
+    "Shut down immediately, because fixed costs are £3,000 and cannot be avoided in the short run.",
+    "Shut down immediately, because the café is making a £900 loss."
+   ],
+   "answer": 0,
+   "explanation": "The café’s loss is £9,600 − £7,500 − £3,000 = −£900. Revenue exceeds variable costs by £9,600 − £7,500 = £2,100, so it contributes £2,100 towards fixed costs; shutting down would mean losing the whole £3,000 of fixed costs. In the short run, producing is therefore better than immediately shutting down."
+  },
+  {
+   "n": 13,
+   "topic": "Market failure and government intervention",
+   "q": "A vaccination programme creates a marginal external benefit of £6 per dose. In a market without government intervention, output is below the socially optimal level. According to standard externality theory, what per-unit subsidy would move output towards the social optimum?",
+   "options": [
+    "No intervention, because positive externalities mean the market already produces the socially optimal quantity.",
+    "A subsidy of £6 per dose, equal to the marginal external benefit.",
+    "A tax of £6 per dose, equal to the marginal external benefit.",
+    "A subsidy of £12 per dose, because both the private and external benefits must be subsidised."
+   ],
+   "answer": 1,
+   "explanation": "A positive externality in consumption means marginal social benefit exceeds marginal private benefit by the marginal external benefit. A specific subsidy equal to that external benefit shifts private demand towards the social benefit curve and raises output towards the social optimum. A tax would reduce output further, and there is no reason to subsidise the entire private benefit or the marginal social cost."
+  },
+  {
+   "n": 14,
+   "topic": "Market failure and government intervention",
+   "q": "A government requires restaurants to display calorie information on menus. Which market failure is this policy chiefly intended to reduce?",
+   "options": [
+    "A public good problem, because menu information is non-rival and non-excludable.",
+    "Monopoly power, because larger restaurant chains have more information than small cafés.",
+    "Negative externalities in production, because calorie labels reduce the firm’s private costs.",
+    "Imperfect information, which can lead consumers to undervalue the health costs of unhealthy food and overconsume demerit goods."
+   ],
+   "answer": 3,
+   "explanation": "Calorie labels aim to correct imperfect information: consumers may underestimate the health costs of unhealthy food and consume more of a demerit good than they would with better information. The policy is not mainly aimed at a production externality, a public good or monopoly power. It addresses the information available to consumers rather than directly changing firms’ private costs."
+  },
+  {
+   "n": 15,
+   "topic": "International trade and exchange rates",
+   "q": "A country imposes a specific tariff of £2 on each imported T-shirt. Before the tariff, imports were 500,000 T-shirts per year. After the tariff, imports fall to 400,000 T-shirts per year. What is the annual tariff revenue collected?",
+   "options": [
+    "£200,000",
+    "£600,000",
+    "£800,000",
+    "£1,000,000"
+   ],
+   "answer": 2,
+   "explanation": "Tariff revenue is the specific tariff per unit multiplied by the quantity of imports after the tariff. Here it is £2 × 400,000 = £800,000. Using the original 500,000 imports would overstate the revenue because imports fall after the tariff is imposed."
+  },
+  {
+   "n": 16,
+   "topic": "International trade and exchange rates",
+   "q": "A hotel in Manchester charges £120 per room per night. The exchange rate changes from £1 = €1.15 to £1 = €1.25. What is the new euro price of a room, and what is the likely effect on the hotel’s competitiveness for eurozone tourists, all else unchanged?",
+   "options": [
+    "The euro price falls from €138 to €96, making the hotel more price-competitive for eurozone tourists.",
+    "The euro price rises from €138 to €150, making the hotel less price-competitive for eurozone tourists.",
+    "The euro price rises from €138 to €150, making the hotel more price-competitive for eurozone tourists.",
+    "The euro price stays at €138, because the sterling price is unchanged."
+   ],
+   "answer": 1,
+   "explanation": "At £1 = €1.15, £120 is €120 × 1.15 = €138; at £1 = €1.25, it is €120 × 1.25 = €150. A higher euro price for eurozone tourists makes the Manchester hotel less competitive, all else unchanged. The pound has appreciated, so foreign buyers need more euros to buy the same sterling price."
+  },
+  {
+   "n": 17,
+   "topic": "Elasticity",
+   "q": "A gym in Leicester reduces its monthly membership price from £40 to £36. The number of members rises from 500 to 600. Using the initial-value formula for price elasticity of demand, what is the value and interpretation?",
+   "options": [
+    "−2, so demand is price elastic.",
+    "−2, so demand is price inelastic.",
+    "−0.2, so demand is price elastic.",
+    "−0.5, so demand is price inelastic."
+   ],
+   "answer": 0,
+   "explanation": "Using initial values, %ΔQ = (600 − 500) ÷ 500 × 100 = 20% and %ΔP = (36 − 40) ÷ 40 × 100 = −10%. Therefore PED = 20% ÷ (−10%) = −2. The absolute value is greater than 1, so demand is price elastic; a price fall raises total revenue here from £20,000 to £21,600."
+  },
+  {
+   "n": 18,
+   "topic": "Elasticity",
+   "q": "In a café chain in Birmingham, the price of coffee rises from £2.00 to £2.20 per cup, and sales of tea rise from 800 to 816 cups per day. Using initial values, what is the cross elasticity of demand for tea with respect to the price of coffee, and what does it suggest?",
+   "options": [
+    "−0.2, so tea and coffee are weak complements.",
+    "+5.0, so tea and coffee are strong substitutes.",
+    "−5.0, so tea and coffee are strong complements.",
+    "+0.2, so tea and coffee are weak substitutes."
+   ],
+   "answer": 3,
+   "explanation": "Using initial values, %ΔQ for tea = 16 ÷ 800 × 100 = 2% and %ΔP for coffee = 0.20 ÷ 2.00 × 100 = 10%. Therefore XED = 2% ÷ 10% = +0.2. A positive cross elasticity means the goods are substitutes, and a value below 1 indicates a weak substitute relationship; a negative value would indicate complements."
+  },
+  {
+   "n": 19,
+   "topic": "Aggregate demand and aggregate supply",
+   "q": "An economy is initially in short-run equilibrium with an upward-sloping short-run aggregate supply curve and some spare capacity. The government raises its spending on flood defences, financed by borrowing from the private sector. Other things being equal, what is the most likely short-run effect?",
+   "options": [
+    "Aggregate demand shifts right; real output rises and the price level also rises.",
+    "Aggregate demand shifts right, but the price level stays unchanged because there is some spare capacity.",
+    "Short-run aggregate supply shifts right; real output rises and the price level falls.",
+    "Aggregate demand shifts left because borrowing reduces private spending by more than the government spends."
+   ],
+   "answer": 0,
+   "explanation": "Government spending on flood defences is a component of aggregate demand, so the AD curve shifts to the right. With an upward-sloping short-run aggregate supply curve, this raises both real output and the price level; borrowing may cause some crowding out, but not a complete offset when there is spare capacity."
+  },
+  {
+   "n": 20,
+   "topic": "Aggregate demand and aggregate supply",
+   "q": "An improvement in production technology raises the productive potential of firms across the economy. The long-run aggregate supply curve is vertical and aggregate demand is unchanged. What is the most likely long-run effect?",
+   "options": [
+    "Long-run aggregate supply shifts right, but real output is unchanged because output is determined only by aggregate demand in the long run.",
+    "Aggregate demand shifts right, raising both real output and the price level in the long run.",
+    "Long-run aggregate supply shifts right, raising real output and lowering the price level.",
+    "Long-run aggregate supply shifts left, raising the price level and reducing real output."
+   ],
+   "answer": 2,
+   "explanation": "An improvement in technology raises productive capacity, so the vertical long-run aggregate supply curve shifts right. With aggregate demand unchanged, the new long-run equilibrium has higher real output and a lower price level as costs per unit fall."
+  },
+  {
+   "n": 21,
+   "topic": "Fiscal, monetary and supply-side policy",
+   "q": "A central bank conducts an open market sale by selling a large quantity of government bonds to commercial banks and pension funds. Under conventional monetary policy, what is the most likely immediate effect?",
+   "options": [
+    "The money supply tends to fall and short-term interest rates tend to rise.",
+    "Commercial bank reserves rise, so banks can create more credit and interest rates fall.",
+    "The central bank's balance sheet expands, so the money supply rises.",
+    "The money supply tends to rise and short-term interest rates tend to fall."
+   ],
+   "answer": 0,
+   "explanation": "Selling government bonds by the central bank withdraws reserves from the banking system, reducing the money supply and tending to raise short-term interest rates. Buying bonds would have the opposite effect."
+  },
+  {
+   "n": 22,
+   "topic": "Fiscal, monetary and supply-side policy",
+   "q": "The UK government raises the personal income tax allowance so that low-paid workers pay less income tax. The affected households receive £5 billion of extra disposable income in total. They spend 80p of every additional £1 of disposable income and save the rest. Assuming all spending is on domestic output, there is spare capacity, and the multiplier process works fully, what is the total eventual increase in consumption spending?",
+   "options": [
+    "£9 billion",
+    "£20 billion",
+    "£25 billion",
+    "£4 billion"
+   ],
+   "answer": 1,
+   "explanation": "The initial extra consumption is 0.8 × £5 billion = £4 billion. With an MPC of 0.8, the multiplier is 1 ÷ (1 − 0.8) = 5, so total eventual consumption spending rises by £4 billion × 5 = £20 billion."
+  },
+  {
+   "n": 23,
+   "topic": "Fiscal, monetary and supply-side policy",
+   "q": "A government increases funding for apprenticeships that train workers in engineering skills. Which best explains how this can increase an economy's long-run aggregate supply?",
+   "options": [
+    "It raises aggregate demand immediately, so the long-run aggregate supply curve shifts right by the same amount.",
+    "It guarantees that every apprentice will be employed after training, so actual output automatically equals potential output.",
+    "It improves human capital, raising labour productivity and shifting long-run aggregate supply to the right.",
+    "It increases the size of the labour force by requiring apprentices to withdraw from paid work."
+   ],
+   "answer": 2,
+   "explanation": "Apprenticeships raise human capital, making workers more productive, which shifts long-run aggregate supply to the right. A higher immediate aggregate demand or guaranteed employment after training would not by itself increase the economy’s productive potential in this way."
+  },
+  {
+   "n": 24,
+   "topic": "Scarcity, choice and opportunity cost",
+   "q": "A farm run by Priya in Cumbria can produce either 120 tonnes of potatoes or 30 tonnes of wheat on its fixed land. Its production possibility frontier is a straight line. It is currently producing on the frontier at 80 tonnes of potatoes and 10 tonnes of wheat. What is the opportunity cost of producing one additional tonne of wheat?",
+   "options": [
+    "0.25 tonnes of potatoes",
+    "8 tonnes of potatoes",
+    "4 tonnes of potatoes",
+    "30 tonnes of potatoes"
+   ],
+   "answer": 2,
+   "explanation": "The straight-line PPF has intercepts of 120 tonnes of potatoes and 30 tonnes of wheat, so 30 tonnes of wheat cost 120 tonnes of potatoes. Therefore one tonne of wheat costs 120 ÷ 30 = 4 tonnes of potatoes, and the current point lies on the PPF."
+  },
+  {
+   "n": 25,
+   "topic": "Scarcity, choice and opportunity cost",
+   "q": "A charity in Leicester has a hall it can use for only one event on a Saturday. The net benefits, meaning benefit minus cost, are: children's concert £600, wedding reception £850, training day £500. The charity chooses the wedding reception. What is the opportunity cost of this choice?",
+   "options": [
+    "£1,100, the combined net benefit of the children's concert and training day",
+    "£250, the difference between the net benefit of the wedding reception and the children's concert",
+    "£850, the net benefit of the wedding reception",
+    "£600, the net benefit of the children's concert"
+   ],
+   "answer": 3,
+   "explanation": "Opportunity cost is the value of the next best alternative forgone. The wedding reception is chosen, but the best forgone alternative is the children's concert with a net benefit of £600; the £250 difference is the extra net gain from choosing the wedding instead."
+  },
+  {
+   "n": 26,
+   "topic": "Development and globalisation",
+   "q": "Country J has a higher GNI per capita at purchasing power parity than Country K, but a lower Human Development Index. Which explanation is most consistent with the construction of the HDI?",
+   "options": [
+    "The HDI ignores income and uses only health and education indicators.",
+    "The HDI uses GDP per capita at market exchange rates rather than GNI at purchasing power parity.",
+    "Country J has lower life expectancy and/or lower education indicators, which offset its higher income in the HDI.",
+    "The HDI includes the Gini coefficient directly, so income inequality can lower Country J's rank."
+   ],
+   "answer": 2,
+   "explanation": "The HDI combines indicators of life expectancy, education and GNI per capita at PPP. A country with higher income can still have a lower HDI if its health and education indicators are sufficiently weaker."
+  },
+  {
+   "n": 27,
+   "topic": "Development and globalisation",
+   "q": "In one year, a country's export price index is 120 and its import price index is 110, with the previous year equal to 100 for both indices. What is the country's terms of trade in that year?",
+   "options": [
+    "91.7",
+    "110.0",
+    "120.0",
+    "109.1, to one decimal place"
+   ],
+   "answer": 3,
+   "explanation": "The terms of trade index is (export price index ÷ import price index) × 100. Here it is (120 ÷ 110) × 100 = 109.09, or 109.1 to one decimal place."
+  },
+  {
+   "n": 28,
+   "topic": "Development and globalisation",
+   "q": "A UK clothing retailer relocates production to a lower-wage country and imports finished garments back to the UK. Which statement best reflects a common economic analysis of globalisation in this case, other things being equal?",
+   "options": [
+    "The lower-wage country cannot gain because its workers are paid less than UK workers, so its real national income must fall.",
+    "The retailer gains from lower production costs and UK consumers may benefit from lower prices, while some UK clothing workers may face structural unemployment and reallocation costs.",
+    "The UK necessarily loses overall because the value of imported clothes exceeds the value of any profits repatriated.",
+    "Globalisation eliminates structural unemployment because workers can instantly move to new industries."
+   ],
+   "answer": 1,
+   "explanation": "Relocation can lower costs for the firm and benefit consumers through lower prices, while imposing adjustment costs on UK workers in the affected industry. The lower-wage host country can also gain through employment, income and technology transfer, so low wages alone do not imply a welfare loss."
+  },
+  {
+   "n": 29,
+   "topic": "Market structures",
+   "q": "Which situation best describes a natural monopoly?",
+   "options": [
+    "A single firm owns all the essential raw materials needed to produce the good.",
+    "A group of firms agrees to restrict output and raise price.",
+    "One firm can supply the whole market at a lower average cost than two or more firms because fixed costs are very large relative to demand.",
+    "A firm holds a patent that legally prevents other firms from producing the same good."
+   ],
+   "answer": 2,
+   "explanation": "A natural monopoly occurs where economies of scale mean long-run average cost continues to fall over the relevant range of market demand, so one firm is the least-cost producer. Patents, resource ownership and cartel agreements can create monopoly power, but they are not the source of a natural monopoly."
+  },
+  {
+   "n": 30,
+   "topic": "Inflation and unemployment",
+   "q": "Amir's hourly nominal wage rises from £20.00 to £22.00. Over the same period, the consumer prices index rises from 100 to 125. Which statement best describes the change in his real hourly wage?",
+   "options": [
+    "It is unchanged, because the nominal wage has increased.",
+    "It rises by 10%.",
+    "It falls by 15%.",
+    "It falls by 12%."
+   ],
+   "answer": 3,
+   "explanation": "His real wage after the change is £22.00 ÷ 1.25 = £17.60. Compared with the original £20.00, this is a fall of £2.40, which is 12% of £20.00; the 10% nominal rise is smaller than 25% inflation."
+  }
+ ]
+}

@@ -146,6 +146,10 @@ const tutor: Translation<typeof en> = {
     genericError: 'حدث خطأ ما.',
     thinking: 'أفكّر في الأمر…',
   },
+  related: {
+    title: 'من ملاحظاتك في Knowzone',
+    openLabel: 'فتح: {{title}}',
+  },
   followUps: {
     title: 'اسأل بعد ذلك',
     askLabel: 'اسأل: {{question}}',

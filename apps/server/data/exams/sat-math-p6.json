@@ -1,0 +1,583 @@
+{
+ "id": "sat-math-p6",
+ "exam": "sat",
+ "subject": "math",
+ "year": null,
+ "number": 6,
+ "source": "ai",
+ "minutes": 70,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Probability and conditional probability",
+   "q": "A community center surveyed 200 members about whether they swim and whether they use the weight room. The results were: 45 swim and use the weight room; 55 swim and do not use the weight room; 30 do not swim and use the weight room; and 70 do not swim and do not use the weight room. Given that a randomly selected member uses the weight room, what is the probability that the member swims?",
+   "options": [
+    "2/5",
+    "9/40",
+    "3/5",
+    "9/20"
+   ],
+   "answer": 2,
+   "explanation": "There are 45 + 30 = 75 weight-room users total. Of these, 45 swim, so the conditional probability is 45/75 = 3/5. The value 2/5 would be the probability that a weight-room user does not swim, since 30/75 = 2/5."
+  },
+  {
+   "n": 2,
+   "topic": "Probability and conditional probability",
+   "q": "A raffle box contains 7 winning tickets and 5 non-winning tickets. Two tickets are drawn at random without replacement. Given that at least one drawn ticket is winning, what is the probability that both drawn tickets are winning?",
+   "options": [
+    "7/22",
+    "5/28",
+    "3/8",
+    "6/11"
+   ],
+   "answer": 2,
+   "explanation": "There are C(12,2) = 66 possible pairs and C(7,2) = 21 all-winning pairs. The condition “at least one winning” leaves 66 − C(5,2) = 66 − 10 = 56 equally likely pairs, so the probability is 21/56 = 3/8. Using 21/66 gives the unconditional probability 7/22, which ignores the given condition."
+  },
+  {
+   "n": 3,
+   "topic": "Probability and conditional probability",
+   "q": "A bin contains 6 green buttons, 4 orange buttons, and 2 purple buttons. One button is selected at random. What is the probability that the selected button is not purple?",
+   "options": [
+    "1/6",
+    "5/6",
+    "1/3",
+    "2/3"
+   ],
+   "answer": 1,
+   "explanation": "There are 6 + 4 + 2 = 12 buttons, and 6 + 4 = 10 are not purple. Therefore the probability is 10/12 = 5/6. The value 1/6 is the probability of choosing a purple button."
+  },
+  {
+   "n": 4,
+   "topic": "Equivalent expressions",
+   "q": "Which expression is equivalent to (3x − 5)(2x + 7)?",
+   "options": [
+    "6x² + 31x − 35",
+    "6x² − 35",
+    "6x² + 11x + 35",
+    "6x² + 11x − 35"
+   ],
+   "answer": 3,
+   "explanation": "Using the distributive property gives (3x)(2x) + (3x)(7) + (−5)(2x) + (−5)(7) = 6x² + 21x − 10x − 35 = 6x² + 11x − 35. The expression 6x² + 31x − 35 results from adding 21x and 10x instead of subtracting 10x."
+  },
+  {
+   "n": 5,
+   "topic": "Equivalent expressions",
+   "q": "Which expression is equivalent to (x² + 2x − 15)/(x² − 25) for x ≠ ±5?",
+   "options": [
+    "(x + 3)/(x − 5)",
+    "(x − 3)/(x + 5)",
+    "(x − 5)/(x − 3)",
+    "(x − 3)/(x − 5)"
+   ],
+   "answer": 3,
+   "explanation": "Factor the numerator as (x + 5)(x − 3) and the denominator as (x + 5)(x − 5). Canceling the common factor x + 5 for x ≠ −5 gives (x − 3)/(x − 5). The expression (x + 3)/(x − 5) would come from incorrectly factoring the numerator."
+  },
+  {
+   "n": 6,
+   "topic": "Equivalent expressions",
+   "q": "Which expression is equivalent to (16x⁸y⁻⁴)^(3/4) for x > 0 and y > 0?",
+   "options": [
+    "12x⁶/y³",
+    "8x⁶y³",
+    "8x⁶/y⁴",
+    "8x⁶/y³"
+   ],
+   "answer": 3,
+   "explanation": "Raise each factor to the 3/4 power: 16^(3/4) = 8, x^(8·3/4) = x⁶, and y^(−4·3/4) = y⁻³ = 1/y³. Thus the expression is 8x⁶/y³. The expression 8x⁶y³ treats the negative exponent as positive."
+  },
+  {
+   "n": 7,
+   "topic": "Linear equations in two variables",
+   "q": "At a farmers market, apples cost $1.75 per pound and pears cost $2.25 per pound. Maya buys x pounds of apples and y pounds of pears. Her total cost is $16.50. Which equation represents this situation?",
+   "options": [
+    "x + y = 16.50",
+    "2.25x + 1.75y = 16.50",
+    "1.75x + 2.25y = 16.50",
+    "1.75x + 2.25y = 4.00"
+   ],
+   "answer": 2,
+   "explanation": "Each pound of apples costs $1.75, contributing 1.75x dollars, and each pound of pears costs $2.25, contributing 2.25y dollars. The total cost is $16.50, so the equation is 1.75x + 2.25y = 16.50. Reversing the coefficients would apply if x represented pounds of pears and y represented pounds of apples."
+  },
+  {
+   "n": 8,
+   "topic": "Linear equations in two variables",
+   "q": "A laboratory technician mixes a 20% saline solution with a 45% saline solution to make 300 milliliters of a 30% saline solution. How many milliliters of the 45% saline solution are used?",
+   "options": [
+    "180",
+    "150",
+    "90",
+    "120"
+   ],
+   "answer": 3,
+   "explanation": "Let x be the milliliters of 20% solution and y be the milliliters of 45% solution. Then x + y = 300 and 0.20x + 0.45y = 0.30(300) = 90. Substituting x = 300 − y gives 60 − 0.20y + 0.45y = 90, so 0.25y = 30 and y = 120. The value 180 is the amount of the 20% solution, not the 45% solution."
+  },
+  {
+   "n": 9,
+   "topic": "Lines, angles and triangles",
+   "q": "In triangle RST, an exterior angle at vertex R measures (5x + 12)°, and the two remote interior angles at S and T measure (2x + 8)° and (x + 20)°, respectively. What is the measure, in degrees, of the exterior angle at vertex R?",
+   "options": [
+    "28°",
+    "24°",
+    "128°",
+    "52°"
+   ],
+   "answer": 3,
+   "explanation": "An exterior angle of a triangle equals the sum of the two remote interior angles, so 5x + 12 = (2x + 8) + (x + 20) = 3x + 28. Solving gives 2x = 16, so x = 8, and the exterior angle is 5(8) + 12 = 52°. The value 128° is the interior angle at R, since 180° − 52° = 128°."
+  },
+  {
+   "n": 10,
+   "topic": "Lines, angles and triangles",
+   "q": "A right triangle has legs of lengths x inches and x + 7 inches. The hypotenuse is 17 inches. What is the area of the triangle, in square inches?",
+   "options": [
+    "120",
+    "40",
+    "60",
+    "30"
+   ],
+   "answer": 2,
+   "explanation": "By the Pythagorean theorem, x² + (x + 7)² = 17², so 2x² + 14x + 49 = 289, which simplifies to x² + 7x − 120 = 0. Factoring gives (x + 15)(x − 8) = 0, so x = 8; the legs are 8 and 15. The area is (1/2)(8)(15) = 60 square inches, while 120 is the product of the legs without taking half."
+  },
+  {
+   "n": 11,
+   "topic": "Two-variable data: models and scatterplots",
+   "q": "A linear model predicts the selling price P, in dollars, of a used motorcycle based on its age a, in years: P = 9,600 − 850a. Which statement best describes the meaning of the number −850 in this model?",
+   "options": [
+    "The motorcycle is predicted to have no value after 850 years.",
+    "The predicted selling price of a new motorcycle is $850.",
+    "For each additional year of age, the predicted selling price decreases by $850.",
+    "For each additional $850 in selling price, the predicted age decreases by 1 year."
+   ],
+   "answer": 2,
+   "explanation": "In a linear model P = b + ma, the slope m is the predicted change in P for each 1-unit increase in a. Here, −850 means that each additional year of age lowers the predicted selling price by $850. The intercept 9,600 would be the predicted price for a 0-year-old motorcycle, not 850."
+  },
+  {
+   "n": 12,
+   "topic": "Two-variable data: models and scatterplots",
+   "q": "A line of best fit for a set of data is y = 1.8x + 6.5, where x is the age in years of a used delivery van and y is the predicted annual maintenance cost in hundreds of dollars. One van in the data set is 4 years old and had annual maintenance costs of $1,900. What is the residual, actual value minus predicted value, for this van?",
+   "options": [
+    "−$530",
+    "$1,370",
+    "$2,430",
+    "$530"
+   ],
+   "answer": 3,
+   "explanation": "The predicted cost in hundreds of dollars is 1.8(4) + 6.5 = 13.7, which is $1,370. The residual is actual minus predicted: 1,900 − 1,370 = $530. The value $1,370 is the predicted cost, not the residual."
+  },
+  {
+   "n": 13,
+   "topic": "Linear functions",
+   "q": "A moving company charges a base fee plus an hourly rate. A 3-hour job costs $185, and a 5-hour job costs $275. If the total charge C, in dollars, is a linear function of the number of hours h, what is the base fee?",
+   "options": [
+    "$45",
+    "$135",
+    "$90",
+    "$50"
+   ],
+   "answer": 3,
+   "explanation": "The extra 2 hours cost 275 − 185 = $90, so the hourly rate is $45 per hour. The base fee is 185 − 3(45) = 185 − 135 = $50. The base fee is the charge for 0 hours, not the hourly rate."
+  },
+  {
+   "n": 14,
+   "topic": "Linear functions",
+   "q": "The linear function f satisfies f(3x − 2) = 12x + 5 for all values of x. What is f(10)?",
+   "options": [
+    "41",
+    "45",
+    "53",
+    "65"
+   ],
+   "answer": 2,
+   "explanation": "Set 3x − 2 = 10, which gives 3x = 12 and x = 4. Then f(10) = 12(4) + 5 = 48 + 5 = 53. Substituting x = 3 instead of x = 4 would give an incorrect result."
+  },
+  {
+   "n": 15,
+   "topic": "Systems of two linear equations",
+   "q": "The system of equations 4x + ky = 11 and 12x + 9y = 33, where k is a constant, has infinitely many solutions. What is the value of k?",
+   "options": [
+    "12",
+    "3",
+    "−3",
+    "9"
+   ],
+   "answer": 1,
+   "explanation": "For infinitely many solutions, the two equations must represent the same line. Multiplying 4x + ky = 11 by 3 gives 12x + 3ky = 33, which must match 12x + 9y = 33, so 3k = 9 and k = 3."
+  },
+  {
+   "n": 16,
+   "topic": "Systems of two linear equations",
+   "q": "A kayak travels 12 miles downstream in 1.5 hours. It travels the same 12 miles upstream in 3 hours. Assuming the kayak's speed in still water and the current's speed are constant, what is the kayak's speed in still water, in miles per hour?",
+   "options": [
+    "4",
+    "6",
+    "8",
+    "2"
+   ],
+   "answer": 1,
+   "explanation": "The downstream speed is 12 ÷ 1.5 = 8 miles per hour, and the upstream speed is 12 ÷ 3 = 4 miles per hour. If k is the kayak's speed in still water and c is the current's speed, then k + c = 8 and k − c = 4. Adding the equations gives 2k = 12, so k = 6 miles per hour."
+  },
+  {
+   "n": 17,
+   "topic": "Nonlinear equations and systems",
+   "q": "The system of equations y = x² − 5x + 7 and y = 3x − 5 has two intersection points. What is the sum of the x-coordinates of the intersection points?",
+   "options": [
+    "5",
+    "8",
+    "6",
+    "12"
+   ],
+   "answer": 1,
+   "explanation": "Set the expressions for y equal: x² − 5x + 7 = 3x − 5. This simplifies to x² − 8x + 12 = 0, which factors as (x − 2)(x − 6) = 0. The x-coordinates are 2 and 6, so their sum is 8."
+  },
+  {
+   "n": 18,
+   "topic": "Nonlinear equations and systems",
+   "q": "What is the solution to the equation √(2x + 15) = x?",
+   "options": [
+    "−3",
+    "5",
+    "3",
+    "5 and −3"
+   ],
+   "answer": 1,
+   "explanation": "Squaring both sides gives 2x + 15 = x², or x² − 2x − 15 = 0. This factors as (x − 5)(x + 3) = 0, so the potential values are 5 and −3. Checking in the original equation, x = 5 works because √25 = 5, but x = −3 gives √9 = 3, not −3, so only 5 is a solution."
+  },
+  {
+   "n": 19,
+   "topic": "Percentages",
+   "q": "A concert ticket has a listed price of $75. An online service fee equal to 8% of the listed price is added, and then a 10% city tax is applied to the total including the service fee. What is the final amount the customer pays?",
+   "options": [
+    "$89.10",
+    "$82.50",
+    "$81.00",
+    "$88.50"
+   ],
+   "answer": 0,
+   "explanation": "The service fee makes the total 75(1.08) = $81.00, and applying the city tax gives 81(1.10) = $89.10. The value $88.50 comes from adding 8% and 10% of $75 separately, which ignores that the tax applies to the total including the service fee."
+  },
+  {
+   "n": 20,
+   "topic": "Percentages",
+   "q": "A town's population increased by 12% from 2018 to 2019 and then decreased by 12% from 2019 to 2020. By what percent did the 2020 population differ from the 2018 population?",
+   "options": [
+    "It increased by 1.44%.",
+    "It decreased by 1%.",
+    "It decreased by 1.44%.",
+    "It did not change."
+   ],
+   "answer": 2,
+   "explanation": "If the 2018 population is P, then after a 12% increase it is 1.12P, and after a 12% decrease it is 0.88(1.12P) = 0.9856P. Thus the 2020 population is 98.56% of the 2018 population, a decrease of 1.44%. A common mistake is assuming equal percent increase and decrease cancel."
+  },
+  {
+   "n": 21,
+   "topic": "Inference from samples and margin of error",
+   "q": "A random sample of 800 registered voters in a town found that 54% support a proposal. The report gives a margin of error of 3.5 percentage points at the 95% confidence level. Which conclusion is best supported?",
+   "options": [
+    "Exactly 54% of all registered voters in the town support the proposal.",
+    "The proportion of all registered voters in the town who support the proposal is guaranteed to be between 50.5% and 57.5%.",
+    "The sample proportion has a 95% chance of being between 50.5% and 57.5%.",
+    "The proportion of all registered voters in the town who support the proposal is plausibly between 50.5% and 57.5%."
+   ],
+   "answer": 3,
+   "explanation": "The 95% confidence interval is 54% ± 3.5%, or from 50.5% to 57.5%. This interval estimates the population proportion, not the fixed sample proportion. The confidence level describes the method, so the interval is not a guarantee and does not give a 95% chance to the sample proportion."
+  },
+  {
+   "n": 22,
+   "topic": "Area and volume",
+   "q": "A right rectangular prism has length 9 centimeters, width 4 centimeters, and height 5 centimeters. What is its surface area?",
+   "options": [
+    "180 square centimeters",
+    "160 square centimeters",
+    "101 square centimeters",
+    "202 square centimeters"
+   ],
+   "answer": 3,
+   "explanation": "The surface area is 2(lw + lh + wh) = 2(9×4 + 9×5 + 4×5) = 2(36 + 45 + 20) = 202 square centimeters. The value 180 square centimeters is the volume, not the surface area."
+  },
+  {
+   "n": 23,
+   "topic": "Area and volume",
+   "q": "A cylindrical can has a radius of 4 inches and a height of 10 inches. What is the total surface area of the can, including the top and bottom? Express the answer in square inches in terms of π.",
+   "options": [
+    "80π square inches",
+    "112π square inches",
+    "128π square inches",
+    "96π square inches"
+   ],
+   "answer": 1,
+   "explanation": "The total surface area is 2πr² + 2πrh. Substituting r = 4 and h = 10 gives 2π(4²) + 2π(4)(10) = 32π + 80π = 112π square inches. The expression 80π square inches is only the lateral area and omits the top and bottom."
+  },
+  {
+   "n": 24,
+   "topic": "Area and volume",
+   "q": "A rectangular tank is 8 feet long and 5 feet wide. It contains water to a depth of 2 feet. A solid rectangular block measuring 2 feet by 1 foot by 2 feet is completely submerged in the water, and no water spills out. What is the new depth of the water, in feet?",
+   "options": [
+    "4.0 feet",
+    "2.1 feet",
+    "2.05 feet",
+    "2.2 feet"
+   ],
+   "answer": 1,
+   "explanation": "The block adds 2×1×2 = 4 cubic feet of volume below the waterline. The tank's base area is 8×5 = 40 square feet, so the water rises 4/40 = 0.1 foot; the new depth is 2 + 0.1 = 2.1 feet. Adding the block's height to the water depth incorrectly ignores that the block displaces only its volume, not its full height throughout the whole tank."
+  },
+  {
+   "n": 25,
+   "topic": "Nonlinear functions",
+   "q": "The function h(t) = 25(0.8)ᵗ models the amount of medicine, in milligrams, remaining in a patient's bloodstream t hours after a dose. To the nearest tenth of an hour, how long will it take for the amount to decrease to 10 milligrams?",
+   "options": [
+    "5.0 hours",
+    "2.5 hours",
+    "3.4 hours",
+    "4.1 hours"
+   ],
+   "answer": 3,
+   "explanation": "Set 10 = 25(0.8)ᵗ, so 0.4 = 0.8ᵗ. Taking logarithms gives t = log(0.4)/log(0.8) ≈ 4.106, which rounds to 4.1 hours. Substituting 4.1 gives about 25(0.8)⁴·¹ ≈ 10 milligrams."
+  },
+  {
+   "n": 26,
+   "topic": "Nonlinear functions",
+   "q": "In the xy-plane, the graph of y = 2x² − 12x + 13 has a vertex at (h, k). What is the value of h + k?",
+   "options": [
+    "3",
+    "−2",
+    "8",
+    "−5"
+   ],
+   "answer": 1,
+   "explanation": "Complete the square: 2x² − 12x + 13 = 2(x² − 6x) + 13 = 2((x − 3)² − 9) + 13 = 2(x − 3)² − 5. Thus the vertex is (3, −5), so h + k = 3 + (−5) = −2. The value −5 is only k, not h + k."
+  },
+  {
+   "n": 27,
+   "topic": "One-variable data: center and spread",
+   "q": "The quiz scores of six students are 14, 18, 18, 22, 25, and 29. What is the median of the scores?",
+   "options": [
+    "22",
+    "21",
+    "20",
+    "18"
+   ],
+   "answer": 2,
+   "explanation": "There are six scores, so the median is the average of the third and fourth values in order: (18 + 22) ÷ 2 = 20. The value 21 is the mean, not the median."
+  },
+  {
+   "n": 28,
+   "topic": "One-variable data: center and spread",
+   "q": "A data set contains the values 9, 12, 12, 15, 18, 21, 24, and 24. What is the interquartile range of the data set?",
+   "options": [
+    "10.5",
+    "15",
+    "22.5",
+    "12"
+   ],
+   "answer": 0,
+   "explanation": "The lower half is 9, 12, 12, and 15, so Q1 = (12 + 12) ÷ 2 = 12. The upper half is 18, 21, 24, and 24, so Q3 = (21 + 24) ÷ 2 = 22.5. Thus the interquartile range is 22.5 − 12 = 10.5; 22.5 is just Q3, not the IQR."
+  },
+  {
+   "n": 29,
+   "topic": "One-variable data: center and spread",
+   "q": "A data set has a mean of 14 and a median of 11. Each value in the data set is multiplied by 3, and then 5 is added to each result. What are the mean and median of the new data set?",
+   "options": [
+    "mean = 47 and median = 33",
+    "mean = 42 and median = 33",
+    "mean = 42 and median = 38",
+    "mean = 47 and median = 38"
+   ],
+   "answer": 3,
+   "explanation": "Multiplying every value by 3 multiplies both the mean and the median by 3, giving 42 and 33. Adding 5 to every value then adds 5 to both, giving a new mean of 47 and a new median of 38."
+  },
+  {
+   "n": 30,
+   "topic": "Right triangles and trigonometry",
+   "q": "In a right triangle, one acute angle measures 37°, and the hypotenuse has length 20 centimeters. Which expression gives the length, in centimeters, of the side opposite the 37° angle?",
+   "options": [
+    "20 sin 37°",
+    "20/sin 37°",
+    "20 cos 37°",
+    "20 tan 37°"
+   ],
+   "answer": 0,
+   "explanation": "The side opposite the 37° angle is the opposite leg. In a right triangle, opposite = hypotenuse × sin(angle), so its length is 20 sin 37° centimeters. Using cos would give the adjacent leg, and tan would require an adjacent-leg length."
+  },
+  {
+   "n": 31,
+   "topic": "Ratios, rates, proportions and units",
+   "q": "A 12.5-ounce bottle of juice costs $3.00. At this rate, what is the cost, in dollars, of a 30-ounce bottle?",
+   "options": [
+    "$6.00",
+    "$7.50",
+    "$7.20",
+    "$6.75"
+   ],
+   "answer": 2,
+   "explanation": "The unit cost is $3.00 ÷ 12.5 = $0.24 per ounce. Multiplying by 30 ounces gives 30 × $0.24 = $7.20."
+  },
+  {
+   "n": 32,
+   "topic": "Ratios, rates, proportions and units",
+   "q": "A cargo conveyor moves at a constant speed of 3.6 kilometers per hour. What is this speed in meters per second?",
+   "options": [
+    "6 meters per second",
+    "0.6 meters per second",
+    "1 meter per second",
+    "10 meters per second"
+   ],
+   "answer": 2,
+   "explanation": "Convert kilometers to meters and hours to seconds: 3.6 km/h = 3.6 × 1,000 ÷ 3,600 = 1 meter per second. The value 3.6 would incorrectly keep the numerical part unchanged while changing units."
+  },
+  {
+   "n": 33,
+   "topic": "Ratios, rates, proportions and units",
+   "q": "A crew of 4 workers can assemble 6 identical desks in 5 hours. At this constant rate, how many hours will it take 10 workers to assemble 45 desks?",
+   "options": [
+    "15 hours",
+    "22.5 hours",
+    "18 hours",
+    "12 hours"
+   ],
+   "answer": 0,
+   "explanation": "The crew's rate is 6 desks ÷ (4 workers × 5 hours) = 0.3 desk per worker-hour. With 10 workers, the rate is 10 × 0.3 = 3 desks per hour, so 45 desks take 45 ÷ 3 = 15 hours."
+  },
+  {
+   "n": 34,
+   "topic": "Linear equations in one variable",
+   "q": "Solve for x: 4x − 9 = 2x + 7.",
+   "options": [
+    "−8",
+    "8",
+    "2",
+    "16"
+   ],
+   "answer": 1,
+   "explanation": "Subtract 2x from both sides to get 2x − 9 = 7, then add 9 to get 2x = 16. Dividing by 2 gives x = 8."
+  },
+  {
+   "n": 35,
+   "topic": "Linear equations in one variable",
+   "q": "Solve for x: 3(2x − 5) − 4 = 2(x + 6) + 5x.",
+   "options": [
+    "5",
+    "−31",
+    "−3",
+    "31"
+   ],
+   "answer": 1,
+   "explanation": "Distribute and combine: 3(2x − 5) − 4 = 6x − 19 and 2(x + 6) + 5x = 7x + 12. Solving 6x − 19 = 7x + 12 gives −x = 31, so x = −31. The value 31 comes from a sign error when combining the variable terms."
+  },
+  {
+   "n": 36,
+   "topic": "Linear inequalities",
+   "q": "At a school supply store, notebooks cost $4 each and pens cost $2.50 each. Diego has at most $30. He buys 5 notebooks. Which inequality gives all possible numbers p of pens he can buy?",
+   "options": [
+    "4p + 12.5 ≤ 30",
+    "20 + 2.5p ≥ 30",
+    "20 + 2.5p ≤ 30",
+    "20 + 2.5p < 30"
+   ],
+   "answer": 2,
+   "explanation": "Five notebooks cost 5 × $4 = $20, and p pens cost $2.50p. The total must be at most $30, so 20 + 2.5p ≤ 30. Using < would incorrectly exclude p = 4, for which the total is exactly $30."
+  },
+  {
+   "n": 37,
+   "topic": "Linear inequalities",
+   "q": "A catering company charges a $350 setup fee plus $28 per guest. A host wants the total cost to be less than $2,000. What is the greatest number of guests the host can invite while keeping the total cost under $2,000?",
+   "options": [
+    "57",
+    "59",
+    "60",
+    "58"
+   ],
+   "answer": 3,
+   "explanation": "Set 350 + 28g < 2,000, which gives 28g < 1,650 and g < 58.93. The number of guests must be a whole number, so the greatest possible value is 58. Inviting 59 guests costs $2,002, which is not under $2,000."
+  },
+  {
+   "n": 38,
+   "topic": "Linear inequalities",
+   "q": "A community fund starts with $1,200. It spends $35 each day on supplies and receives a $20 donation each day. After how many whole days will the fund’s balance first be less than $900?",
+   "options": [
+    "9",
+    "21",
+    "20",
+    "22"
+   ],
+   "answer": 1,
+   "explanation": "After d days, the balance is 1,200 − 35d + 20d = 1,200 − 15d. The balance first falls below $900 when 1,200 − 15d < 900, so d > 20. After 20 days the balance is exactly $900, so the first whole day with a balance below $900 is day 21."
+  },
+  {
+   "n": 39,
+   "topic": "Circles",
+   "q": "A circle in the xy-plane has equation (x + 5)² + (y − 7)² = 49. What are the center and radius of the circle?",
+   "options": [
+    "Center (5, −7), radius 49",
+    "Center (5, −7), radius 7",
+    "Center (−5, 7), radius 49",
+    "Center (−5, 7), radius 7"
+   ],
+   "answer": 3,
+   "explanation": "The standard form is (x − h)² + (y − k)² = r², so the center is (h, k) = (−5, 7). Since r² = 49, the radius is √49 = 7, not 49."
+  },
+  {
+   "n": 40,
+   "topic": "Circles",
+   "q": "A circle in the xy-plane has center (2, −1) and passes through the point (−3, 11). What is the area of the circle?",
+   "options": [
+    "144π square units",
+    "169π square units",
+    "13π square units",
+    "26π square units"
+   ],
+   "answer": 1,
+   "explanation": "The radius is the distance from (2, −1) to (−3, 11): √((−3 − 2)² + (11 − (−1))²) = √(25 + 144) = 13. The area is πr² = π × 13² = 169π square units. Using 13π or 26π confuses the radius or diameter with the area."
+  },
+  {
+   "n": 41,
+   "topic": "Circles",
+   "q": "In the xy-plane, the circle with equation x² + y² = 169 intersects the horizontal line y = 5 at two points. What is the distance between those two points?",
+   "options": [
+    "24",
+    "26",
+    "12",
+    "13"
+   ],
+   "answer": 0,
+   "explanation": "Substituting y = 5 gives x² + 25 = 169, so x² = 144 and x = 12 or x = −12. The intersection points are (−12, 5) and (12, 5), whose distance is 12 − (−12) = 24. The value 12 is only the distance from the y-axis to one intersection point."
+  },
+  {
+   "n": 42,
+   "topic": "Probability and conditional probability",
+   "q": "A single card is selected at random from a standard deck of 52 cards. What is the probability that the card is a heart or an ace?",
+   "options": [
+    "17/52",
+    "1/13",
+    "4/13",
+    "1/4"
+   ],
+   "answer": 2,
+   "explanation": "There are 13 hearts and 3 aces that are not hearts, for a total of 16 favorable cards. Thus the probability is 16/52 = 4/13. Adding 13 hearts and 4 aces without removing the double-counted ace of hearts gives the incorrect 17/52."
+  },
+  {
+   "n": 43,
+   "topic": "Probability and conditional probability",
+   "q": "At a community college, 240 students were surveyed. Of the 150 students who work part time, 90 own a car. Of the 90 students who do not work part time, 30 own a car. Given that a randomly selected student owns a car, what is the probability that the student works part time?",
+   "options": [
+    "1/3",
+    "3/4",
+    "3/5",
+    "1/4"
+   ],
+   "answer": 1,
+   "explanation": "Among the surveyed students, 90 + 30 = 120 own a car, and 90 of those car owners work part time. The conditional probability is 90/120 = 3/4. The fraction 3/5 would be the probability of owning a car among students who work part time, not the reverse conditional probability."
+  },
+  {
+   "n": 44,
+   "topic": "Equivalent expressions",
+   "q": "Which expression is equivalent to (x + 5)² − (x − 2)(x + 3)?",
+   "options": [
+    "11x + 19",
+    "9x + 19",
+    "11x + 31",
+    "9x + 31"
+   ],
+   "answer": 3,
+   "explanation": "(x + 5)² = x² + 10x + 25 and (x − 2)(x + 3) = x² + x − 6. Subtracting gives x² + 10x + 25 − x² − x + 6 = 9x + 31. The expression 11x + 19 results from not distributing the subtraction correctly across all terms of x² + x − 6."
+  }
+ ]
+}

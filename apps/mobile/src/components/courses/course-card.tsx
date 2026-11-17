@@ -11,6 +11,7 @@ import { Colors, Radius, Spacing } from '@/constants/theme';
 import { formatViews, getSubject, levelLabel, subjectName } from '@/lib/catalog';
 import { getInstructor } from '@/lib/courses/instructors';
 import { useCourses } from '@/lib/courses/store';
+import { ownExamTags } from '@/lib/region';
 import { allLessons, courseMinutes, formatDuration, formatRating, type Course } from '@/lib/courses/types';
 
 /** Gradient cover with the course emoji and a soft ring pattern. */
@@ -158,10 +159,11 @@ export function CourseCard({ course, variant = 'tile' }: { course: Course; varia
                 </Text>
               </View>
             )}
-            {course.exams?.[0] && (
+            {/* Only the exams this student's country sits: a WAEC badge means nothing in the US. */}
+            {ownExamTags(course.exams)[0] && (
               <View style={[styles.badge, { backgroundColor: 'rgba(0,0,0,0.35)' }]}>
                 <Text variant="label" style={{ fontSize: 10 }}>
-                  {course.exams.join(' · ')}
+                  {ownExamTags(course.exams).join(' · ')}
                 </Text>
               </View>
             )}

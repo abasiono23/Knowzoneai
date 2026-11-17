@@ -1,0 +1,791 @@
+{
+ "id": "ap-chemistry-p2",
+ "exam": "ap",
+ "subject": "chemistry",
+ "year": null,
+ "number": 2,
+ "source": "ai",
+ "minutes": 90,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Chemical reactions",
+   "q": "Solutions are mixed: 50.0 mL of 0.120 M Ba(NO₃)₂(aq) and 40.0 mL of 0.250 M Na₂SO₄(aq). The reaction is Ba²⁺(aq) + SO₄²⁻(aq) → BaSO₄(s). What mass of BaSO₄ forms? (Molar mass BaSO₄ = 233.4 g/mol)",
+   "options": [
+    "2.33 g",
+    "0.700 g",
+    "1.40 g",
+    "1.17 g"
+   ],
+   "answer": 2,
+   "explanation": "The available Ba²⁺ is 0.0500 L × 0.120 M = 6.00 × 10⁻³ mol, and SO₄²⁻ is 0.0400 L × 0.250 M = 1.00 × 10⁻² mol, so Ba²⁺ is limiting. The mass of BaSO₄ is 6.00 × 10⁻³ mol × 233.4 g/mol = 1.40 g. Using all of the sulfate incorrectly would give 2.33 g."
+  },
+  {
+   "n": 2,
+   "topic": "Chemical reactions",
+   "q": "When aqueous iron(III) chloride is mixed with aqueous sodium hydroxide, a reddish-brown solid forms. Which net ionic equation represents the reaction?",
+   "options": [
+    "FeCl₃(aq) + 3 NaOH(aq) → Fe(OH)₃(s) + 3 NaCl(aq)",
+    "Fe³⁺(aq) + 3 Cl⁻(aq) → FeCl₃(s)",
+    "Na⁺(aq) + Cl⁻(aq) → NaCl(s)",
+    "Fe³⁺(aq) + 3 OH⁻(aq) → Fe(OH)₃(s)"
+   ],
+   "answer": 3,
+   "explanation": "The precipitate is Fe(OH)₃(s), while Na⁺(aq) and Cl⁻(aq) remain dissolved as spectator ions. The net ionic equation includes only the species that form the solid."
+  },
+  {
+   "n": 3,
+   "topic": "Chemical reactions",
+   "q": "A 0.400 g sample of a pure monoprotic acid, HA, is dissolved in water and titrated with 0.150 M NaOH. The equivalence point is reached after 26.7 mL of NaOH. What is the molar mass of HA?",
+   "options": [
+    "66.7 g/mol",
+    "99.9 g/mol",
+    "24.0 g/mol",
+    "149 g/mol"
+   ],
+   "answer": 1,
+   "explanation": "At the equivalence point, moles of HA equal moles of OH⁻ added: 0.150 mol/L × 0.0267 L = 4.01 × 10⁻³ mol. The molar mass is 0.400 g ÷ 4.01 × 10⁻³ mol = 99.9 g/mol."
+  },
+  {
+   "n": 4,
+   "topic": "Kinetics",
+   "q": "For the reaction X + Y → products, initial rates were measured at constant temperature. Trial | [X]₀ (M) | [Y]₀ (M) | initial rate (M/s)\n1 | 0.100 | 0.100 | 2.0 × 10⁻⁴\n2 | 0.200 | 0.100 | 4.0 × 10⁻⁴\n3 | 0.100 | 0.200 | 1.6 × 10⁻³\nWhat is the rate law for the reaction?",
+   "options": [
+    "rate = k[X][Y]²",
+    "rate = k[X][Y]³",
+    "rate = k[X]³[Y]",
+    "rate = k[X]²[Y]"
+   ],
+   "answer": 1,
+   "explanation": "Doubling [X] while holding [Y] constant doubles the rate, so the reaction is first order in X. Doubling [Y] increases the rate by a factor of 1.6 × 10⁻³ ÷ 2.0 × 10⁻⁴ = 8 = 2³, so the reaction is third order in Y."
+  },
+  {
+   "n": 5,
+   "topic": "Kinetics",
+   "q": "The decomposition of a pesticide in water is first order with a half-life of 36.0 days at 20°C. What is the rate constant for this decomposition at 20°C?",
+   "options": [
+    "1.93 × 10⁻² day⁻¹",
+    "3.60 × 10⁻¹ day⁻¹",
+    "2.78 × 10⁻² day⁻¹",
+    "5.18 × 10⁻² day⁻¹"
+   ],
+   "answer": 0,
+   "explanation": "For a first-order reaction, k = ln 2 ÷ t₁/₂ = 0.693 ÷ 36.0 days = 1.93 × 10⁻² day⁻¹. Using 1 ÷ t₁/₂ instead of ln 2 ÷ t₁/₂ gives the incorrect value 2.78 × 10⁻² day⁻¹."
+  },
+  {
+   "n": 6,
+   "topic": "Thermodynamics and electrochemistry",
+   "q": "Given ΔH°f[NH₃(g)] = −46.1 kJ/mol, ΔH°f[HCl(g)] = −92.3 kJ/mol, and ΔH°f[NH₄Cl(s)] = −314.4 kJ/mol, what is ΔH° for NH₃(g) + HCl(g) → NH₄Cl(s)?",
+   "options": [
+    "−360.6 kJ/mol",
+    "+176.0 kJ/mol",
+    "−176.0 kJ/mol",
+    "−452.8 kJ/mol"
+   ],
+   "answer": 2,
+   "explanation": "Use products minus reactants: (−314.4 kJ/mol) − [(−46.1 kJ/mol) + (−92.3 kJ/mol)] = −176.0 kJ/mol. Reversing the subtraction gives the sign error +176.0 kJ/mol."
+  },
+  {
+   "n": 7,
+   "topic": "Thermodynamics and electrochemistry",
+   "q": "A galvanic cell is constructed with an Al(s) electrode in 1.0 M Al(NO₃)₃(aq) and a Cu(s) electrode in 1.0 M Cu(NO₃)₂(aq). Standard reduction potentials are Al³⁺(aq) + 3 e⁻ → Al(s), E° = −1.66 V, and Cu²⁺(aq) + 2 e⁻ → Cu(s), E° = +0.34 V. What is the standard cell potential?",
+   "options": [
+    "1.32 V",
+    "−1.32 V",
+    "2.00 V",
+    "−2.00 V"
+   ],
+   "answer": 2,
+   "explanation": "Cu²⁺ is reduced at the cathode and Al is oxidized at the anode, so E°cell = E°cathode − E°anode = +0.34 V − (−1.66 V) = +2.00 V. The coefficients in the balanced equation do not change the standard potential."
+  },
+  {
+   "n": 8,
+   "topic": "Thermodynamics and electrochemistry",
+   "q": "For a reaction, ΔH° = +58.0 kJ and ΔS° = +150. J/K. What is ΔG° at 320 K, and is the reaction spontaneous under standard conditions?",
+   "options": [
+    "+13.3 kJ; the reaction is nonspontaneous",
+    "+10.0 kJ; the reaction is nonspontaneous",
+    "−0.0 kJ; the reaction is at equilibrium",
+    "−10.0 kJ; the reaction is spontaneous"
+   ],
+   "answer": 1,
+   "explanation": "ΔG° = ΔH° − TΔS° = 58.0 kJ − (320 K)(0.150 kJ/K) = 58.0 kJ − 48.0 kJ = +10.0 kJ. A positive ΔG° means the reaction is nonspontaneous under standard conditions."
+  },
+  {
+   "n": 9,
+   "topic": "Properties of substances and mixtures",
+   "q": "A 1.50 g sample of an unknown gas occupies 0.500 L at 1.00 atm and 300 K. What is the molar mass of the gas? (R = 0.08206 L·atm/(mol·K))",
+   "options": [
+    "36.9 g/mol",
+    "147.8 g/mol",
+    "24.6 g/mol",
+    "73.9 g/mol"
+   ],
+   "answer": 3,
+   "explanation": "Using PV = nRT, n = (1.00 atm)(0.500 L) ÷ [(0.08206 L·atm/(mol·K))(300 K)] = 2.03 × 10⁻² mol. The molar mass is 1.50 g ÷ 2.03 × 10⁻² mol = 73.9 g/mol."
+  },
+  {
+   "n": 10,
+   "topic": "Properties of substances and mixtures",
+   "q": "A solution is prepared by dissolving 9.00 g of glucose (C₆H₁₂O₆, molar mass 180.16 g/mol) in 150.0 g of water. What is the freezing point of the solution? (Kf for water = 1.86°C·kg/mol; assume ideal behavior.)",
+   "options": [
+    "−0.310°C",
+    "−0.620°C",
+    "−1.86°C",
+    "−5.58°C"
+   ],
+   "answer": 1,
+   "explanation": "Glucose is a nonelectrolyte, so the molality is (9.00 g ÷ 180.16 g/mol) ÷ 0.1500 kg = 0.333 mol/kg. The freezing-point depression is 1.86°C·kg/mol × 0.333 mol/kg = 0.620°C, so the freezing point is −0.620°C."
+  },
+  {
+   "n": 11,
+   "topic": "Equilibrium",
+   "q": "At 700 K, carbon monoxide and water vapor react in a rigid 2.00 L vessel according to CO(g) + H₂O(g) ⇌ CO₂(g) + H₂(g), for which Kc = 4.00. Initially, 0.200 mol CO and 0.200 mol H₂O are placed in the vessel. What is the equilibrium amount of H₂, in moles?",
+   "options": [
+    "0.133 mol",
+    "0.0667 mol",
+    "0.100 mol",
+    "0.200 mol"
+   ],
+   "answer": 0,
+   "explanation": "Let x be the equilibrium concentration of H₂. Kc = x²/(0.100 − x)² = 4.00, so x/(0.100 − x) = 2.00 and x = 0.0667 M. In 2.00 L this gives 2.00 L × 0.0667 mol/L = 0.133 mol H₂."
+  },
+  {
+   "n": 12,
+   "topic": "Equilibrium",
+   "q": "The reaction C(s) + CO₂(g) ⇌ 2 CO(g) has ΔH° = +172 kJ at a certain high temperature. A mixture of solid carbon, CO₂, and CO is at equilibrium in a cylinder fitted with a piston. Which change will increase the equilibrium amount of CO(g)?",
+   "options": [
+    "Increasing the temperature",
+    "Adding argon gas while keeping the volume constant",
+    "Adding a small amount of solid carbon",
+    "Decreasing the volume by moving the piston inward"
+   ],
+   "answer": 0,
+   "explanation": "The forward reaction is endothermic, so increasing the temperature shifts the equilibrium to the right and increases CO. Decreasing the volume favors the side with fewer gas moles, which is the reactant side because 1 mol of gas gives 2 mol of gas. Adding solid carbon or argon at constant volume does not change the reaction quotient."
+  },
+  {
+   "n": 13,
+   "topic": "Equilibrium",
+   "q": "At 500 K, Kp = 4.0 × 10⁴ for H₂(g) + Cl₂(g) ⇌ 2 HCl(g). A 1.00 L flask at 500 K contains H₂, Cl₂, and HCl with partial pressures P(H₂) = 0.020 atm, P(Cl₂) = 0.020 atm, and P(HCl) = 1.0 atm. Which statement describes the net change as the system approaches equilibrium?",
+   "options": [
+    "Qp = 4.0 × 10⁴, so the system is already at equilibrium",
+    "Qp = 2.5 × 10³, so HCl decomposes and H₂ and Cl₂ form",
+    "Qp = 2.5 × 10³, so HCl forms and H₂ and Cl₂ are consumed",
+    "Qp = 2.5 × 10⁴, so HCl decomposes and H₂ and Cl₂ form"
+   ],
+   "answer": 2,
+   "explanation": "Qp = (1.0)²/((0.020)(0.020)) = 2.5 × 10³. Because Qp is less than Kp = 4.0 × 10⁴, the reaction proceeds in the forward direction, forming HCl and consuming H₂ and Cl₂."
+  },
+  {
+   "n": 14,
+   "topic": "Thermochemistry",
+   "q": "Priya mixes 50.0 mL of 0.200 M HCl(aq) with 50.0 mL of 0.200 M NaOH(aq) in an insulated coffee-cup calorimeter. The temperature of the mixture rises by 1.30°C. Assume the mixture has a density of 1.00 g/mL and a specific heat capacity of 4.18 J/(g·°C), and that no heat is lost. What is the enthalpy change of neutralization per mole of H₂O formed, in kJ/mol?",
+   "options": [
+    "−5.43 kJ/mol",
+    "+54.3 kJ/mol",
+    "−543 kJ/mol",
+    "−54.3 kJ/mol"
+   ],
+   "answer": 3,
+   "explanation": "Moles of H⁺ and OH⁻ are each (0.0500 L)(0.200 M) = 0.0100 mol, so 0.0100 mol H₂O forms. The heat absorbed by the mixture is q = (100.0 g)(4.18 J/(g·°C))(1.30°C) = 543 J, so the reaction releases 543 J. Thus ΔH = −543 J / 0.0100 mol = −54,300 J/mol = −54.3 kJ/mol."
+  },
+  {
+   "n": 15,
+   "topic": "Thermochemistry",
+   "q": "Use the following thermochemical equations to determine ΔH° for C₂H₄(g) + H₂(g) → C₂H₆(g).\nC₂H₄(g) + 3 O₂(g) → 2 CO₂(g) + 2 H₂O(l), ΔH° = −1411 kJ\nC₂H₆(g) + 7/2 O₂(g) → 2 CO₂(g) + 3 H₂O(l), ΔH° = −1560 kJ\nH₂(g) + 1/2 O₂(g) → H₂O(l), ΔH° = −286 kJ",
+   "options": [
+    "−3.26 × 10³ kJ",
+    "−137 kJ",
+    "+137 kJ",
+    "−1.70 × 10³ kJ"
+   ],
+   "answer": 1,
+   "explanation": "Reverse the C₂H₆ combustion equation and add it to the C₂H₄ combustion equation and the H₂ combustion equation: (−1411 kJ) + (+1560 kJ) + (−286 kJ) = −137 kJ. The CO₂, H₂O, and O₂ species cancel to leave C₂H₄(g) + H₂(g) → C₂H₆(g)."
+  },
+  {
+   "n": 16,
+   "topic": "Acids and bases",
+   "q": "A 0.0500 M aqueous solution of methylamine, CH₃NH₂, has Kb = 4.4 × 10⁻⁴ at 25°C. What is the pH of the solution?",
+   "options": [
+    "2.35",
+    "11.35",
+    "12.00",
+    "11.65"
+   ],
+   "answer": 3,
+   "explanation": "Let x = [OH⁻]. Then Kb = x²/(0.0500 − x) = 4.4 × 10⁻⁴, which gives x = 0.00448 M; the small-x approximation fails because x is about 9% of the initial concentration. Thus pOH = −log(0.00448) = 2.35 and pH = 14.00 − 2.35 = 11.65."
+  },
+  {
+   "n": 17,
+   "topic": "Acids and bases",
+   "q": "A buffer solution is made by dissolving 0.100 mol of benzoic acid, C₆H₅COOH, and 0.100 mol of sodium benzoate, NaC₆H₅COO, in enough water to make 1.00 L. For benzoic acid, Ka = 6.3 × 10⁻⁵ at 25°C. After 0.0100 mol HCl(g) is added and the solution is mixed, what is the pH? Assume the volume remains 1.00 L and HCl reacts completely with the benzoate ion.",
+   "options": [
+    "4.29",
+    "4.11",
+    "3.80",
+    "4.20"
+   ],
+   "answer": 1,
+   "explanation": "Adding HCl converts benzoate ion to benzoic acid: Bz⁻ + H⁺ → HBz. The amounts become 0.110 mol HBz and 0.0900 mol Bz⁻ in 1.00 L, so pH = pKa + log([Bz⁻]/[HBz]). pKa = −log(6.3 × 10⁻⁵) = 4.20, giving pH = 4.20 + log(0.0900/0.110) = 4.11."
+  },
+  {
+   "n": 18,
+   "topic": "Acids and bases",
+   "q": "Four 0.10 M aqueous solutions are prepared at 25°C: NaCN, KNO₃, NH₄NO₃, and NaF. At 25°C, Ka(HCN) = 4.9 × 10⁻¹⁰, Ka(HF) = 6.8 × 10⁻⁴, and Kb(NH₃) = 1.8 × 10⁻⁵. Which solution has the highest pH?",
+   "options": [
+    "KNO₃, because neither ion reacts with water and the solution is neutral",
+    "NaF, because F⁻ is the conjugate base of a weak acid and reacts with water to produce OH⁻",
+    "NH₄NO₃, because NH₄⁺ reacts with water to produce OH⁻",
+    "NaCN, because CN⁻ is the conjugate base of a weak acid and reacts with water to produce OH⁻"
+   ],
+   "answer": 3,
+   "explanation": "The basic salt is NaCN because CN⁻ is the conjugate base of the weak acid HCN. Its Kb is Kw/Ka(HCN) = 1.0 × 10⁻¹⁴/(4.9 × 10⁻¹⁰) ≈ 2.0 × 10⁻⁵, which is much larger than Kb for F⁻ = 1.5 × 10⁻¹¹, so CN⁻ produces the most OH⁻ and the highest pH. NH₄NO₃ is acidic by hydrolysis of NH₄⁺, and KNO₃ is essentially neutral."
+  },
+  {
+   "n": 19,
+   "topic": "Compound structure and properties",
+   "q": "The acetate ion, CH₃COO⁻, has two carbon–oxygen bond lengths that are equal and intermediate between a typical C–O single and C=O double bond. Which statement best explains this observation?",
+   "options": [
+    "Hydrogen bonding between acetate ions shortens both carbon–oxygen bonds equally",
+    "The negative charge is localized on the carbon atom, allowing both C–O bonds to become single bonds",
+    "The negative charge and π electrons are delocalized over both oxygen atoms by resonance",
+    "Rapid rotation about the carbon–carbon bond makes the two oxygen atoms equivalent"
+   ],
+   "answer": 2,
+   "explanation": "The two oxygen atoms share the negative charge and the π bond through resonance, so both C–O bonds have the same bond order and length. The other choices invoke motions or interactions that do not delocalize the π electrons or negative charge."
+  },
+  {
+   "n": 20,
+   "topic": "Compound structure and properties",
+   "q": "cis-1,2-dichloroethene and trans-1,2-dichloroethene are planar isomers with the same molecular formula. The cis isomer has a noticeably higher boiling point than the trans isomer. Which statement best explains this difference?",
+   "options": [
+    "Both isomers are nonpolar, but the cis isomer has greater London dispersion forces because it is more compact",
+    "The trans isomer has a net dipole moment, so dipole–dipole attractions between its molecules are stronger",
+    "The trans isomer forms hydrogen bonds between chlorine and hydrogen atoms",
+    "The cis isomer has a net dipole moment, so dipole–dipole attractions between its molecules are stronger"
+   ],
+   "answer": 3,
+   "explanation": "In the cis isomer, the two C–Cl bond dipoles do not cancel, giving a net molecular dipole and stronger dipole–dipole attractions; in the trans isomer they cancel, leaving a nonpolar molecule. Stronger intermolecular attractions in the cis isomer require more energy to vaporize the liquid, so its boiling point is higher."
+  },
+  {
+   "n": 21,
+   "topic": "Atomic structure and properties",
+   "q": "A neutral atom in its ground state has the electron configuration 1s²2s²2p⁶3s²3p⁴. Which of the following correctly orders the atomic radii of this element and the Period 3 elements with one fewer proton and one more proton?",
+   "options": [
+    "Phosphorus > sulfur > chlorine",
+    "Sulfur > chlorine > phosphorus",
+    "Sulfur > phosphorus > chlorine",
+    "Chlorine > sulfur > phosphorus"
+   ],
+   "answer": 0,
+   "explanation": "The configuration corresponds to sulfur. Across Period 3 from phosphorus to sulfur to chlorine, effective nuclear charge increases while the valence shell remains the same, so atomic radius decreases."
+  },
+  {
+   "n": 22,
+   "topic": "Atomic structure and properties",
+   "q": "A fictitious element Q consists of three isotopes with the following masses and abundances: Q-20 has mass 20.000 amu and abundance 75.0%; Q-21 has mass 21.000 amu and abundance 15.0%; Q-22 has mass 22.000 amu and abundance 10.0%. What is the average atomic mass of Q?",
+   "options": [
+    "20.35 amu",
+    "20.50 amu",
+    "20.20 amu",
+    "21.00 amu"
+   ],
+   "answer": 0,
+   "explanation": "The average mass is (0.750 × 20.000 amu) + (0.150 × 21.000 amu) + (0.100 × 22.000 amu) = 15.00 + 3.15 + 2.20 = 20.35 amu. The value 21.00 amu is the mass of one isotope, not the abundance-weighted average."
+  },
+  {
+   "n": 23,
+   "topic": "Chemical reactions",
+   "q": "Excess calcium carbonate is added to 100.0 mL of hydrochloric acid. The carbon dioxide produced is collected at STP and occupies 44.8 mL. The reaction is CaCO₃(s) + 2 HCl(aq) → CaCl₂(aq) + CO₂(g) + H₂O(l). What is the concentration of the hydrochloric acid? (Molar volume of a gas at STP = 22.4 L/mol.)",
+   "options": [
+    "0.0200 M",
+    "0.0800 M",
+    "0.0400 M",
+    "0.200 M"
+   ],
+   "answer": 2,
+   "explanation": "The CO₂ amount is 0.0448 L ÷ 22.4 L/mol = 0.00200 mol. The balanced equation requires 2 mol HCl per mol CO₂, so 0.00400 mol HCl reacted. Dividing by 0.1000 L gives 0.0400 M."
+  },
+  {
+   "n": 24,
+   "topic": "Kinetics",
+   "q": "For a reaction A → products, a plot of [A] versus time is linear with a slope of −3.0 × 10⁻³ M/s. The initial concentration of A is 0.120 M. What is the concentration of A after 25 s?",
+   "options": [
+    "0.045 M",
+    "0.030 M",
+    "0.060 M",
+    "0.075 M"
+   ],
+   "answer": 0,
+   "explanation": "A linear plot of [A] versus time indicates zero-order kinetics, for which [A] = [A]₀ − kt. The decrease is (3.0 × 10⁻³ M/s)(25 s) = 0.075 M, leaving 0.120 M − 0.075 M = 0.045 M."
+  },
+  {
+   "n": 25,
+   "topic": "Kinetics",
+   "q": "A reaction is second order in a single reactant and has a rate constant of 0.025 M⁻¹ s⁻¹ at 298 K. If the initial concentration of the reactant is 0.20 M, what is the half-life of the reaction?",
+   "options": [
+    "2.0 × 10² s",
+    "4.0 × 10¹ s",
+    "1.0 × 10² s",
+    "4.0 × 10² s"
+   ],
+   "answer": 0,
+   "explanation": "For a second-order reaction, t₁/₂ = 1/(k[A]₀). Substituting gives t₁/₂ = 1/[(0.025 M⁻¹ s⁻¹)(0.20 M)] = 200 s = 2.0 × 10² s."
+  },
+  {
+   "n": 26,
+   "topic": "Kinetics",
+   "q": "A proposed mechanism for the reaction of X and Y is Step 1: X + X ⇌ X₂ (fast equilibrium); Step 2: X₂ + Y → products (slow). Which rate law is consistent with this mechanism?",
+   "options": [
+    "rate = k[X]²",
+    "rate = k[X₂][Y]",
+    "rate = k[X][Y]",
+    "rate = k[X]²[Y]"
+   ],
+   "answer": 3,
+   "explanation": "The slow step determines the rate, so the initial rate is proportional to [X₂][Y]. Because the fast equilibrium has K = [X₂]/[X]², [X₂] can be replaced by K[X]², giving rate = k[X]²[Y]."
+  },
+  {
+   "n": 27,
+   "topic": "Thermodynamics and electrochemistry",
+   "q": "A 2.00 g sample of a compound with molar mass 100.0 g/mol is burned completely in a bomb calorimeter. The temperature of the calorimeter, which has a heat capacity of 4.00 kJ/°C, rises by 5.00°C. Assuming all heat is absorbed by the calorimeter, what is the molar enthalpy of combustion of the compound?",
+   "options": [
+    "−1.00 × 10³ kJ/mol",
+    "−2.00 × 10¹ kJ/mol",
+    "−5.00 × 10² kJ/mol",
+    "+1.00 × 10³ kJ/mol"
+   ],
+   "answer": 0,
+   "explanation": "The calorimeter absorbs (4.00 kJ/°C)(5.00°C) = 20.0 kJ, so combustion releases 20.0 kJ. The sample contains 2.00 g ÷ 100.0 g/mol = 0.0200 mol, giving a molar enthalpy of combustion of −20.0 kJ ÷ 0.0200 mol = −1.00 × 10³ kJ/mol."
+  },
+  {
+   "n": 28,
+   "topic": "Thermodynamics and electrochemistry",
+   "q": "For a certain reaction, ΔH° = +58.0 kJ/mol and ΔS° = +125 J/(mol·K). Assuming ΔH° and ΔS° do not change with temperature, above what approximate temperature does the reaction become thermodynamically favorable under standard conditions?",
+   "options": [
+    "2.15 K",
+    "7.30 × 10⁴ K",
+    "0.464 K",
+    "464 K"
+   ],
+   "answer": 3,
+   "explanation": "Favorability requires ΔG° = ΔH° − TΔS° < 0. With positive ΔH° and ΔS°, this occurs when T > ΔH°/ΔS° = 58,000 J/mol ÷ 125 J/(mol·K) = 464 K."
+  },
+  {
+   "n": 29,
+   "topic": "Properties of substances and mixtures",
+   "q": "An aqueous solution is made by dissolving 5.00 g of a nonvolatile, nonelectrolyte unknown compound in 100.0 g of water. The solution freezes at −0.930°C. For water, Kf = 1.86°C·kg/mol. What is the molar mass of the unknown compound?",
+   "options": [
+    "100. g/mol",
+    "200. g/mol",
+    "10.0 g/mol",
+    "50.0 g/mol"
+   ],
+   "answer": 0,
+   "explanation": "The freezing-point depression is 0.930°C, so molality = 0.930/1.86 = 0.500 mol/kg. For 100.0 g, or 0.1000 kg, of water, this is 0.0500 mol of solute. The molar mass is 5.00 g / 0.0500 mol = 100. g/mol."
+  },
+  {
+   "n": 30,
+   "topic": "Properties of substances and mixtures",
+   "q": "A 0.250 g sample of a volatile compound is placed in a 125 mL flask, all air is removed, and the compound is completely vaporized. At 100°C the vapor exerts a pressure of 1.00 atm. What is the molar mass of the compound? Use R = 0.08206 L·atm·mol⁻¹·K⁻¹.",
+   "options": [
+    "122 g/mol",
+    "15.3 g/mol",
+    "30.6 g/mol",
+    "61.2 g/mol"
+   ],
+   "answer": 3,
+   "explanation": "Use the ideal gas law to find moles: n = PV/(RT) = (1.00 atm)(0.125 L)/[(0.08206 L·atm·mol⁻¹·K⁻¹)(373 K)] = 4.08 × 10⁻³ mol. Then molar mass = 0.250 g / 4.08 × 10⁻³ mol = 61.2 g/mol. Using 0.250 L for the volume would give 30.6 g/mol."
+  },
+  {
+   "n": 31,
+   "topic": "Equilibrium",
+   "q": "At a certain temperature, Kc = 0.020 for A(g) ⇌ 2 B(g). A rigid flask initially contains only A(g) at a concentration of 0.100 M. What is [B] at equilibrium?",
+   "options": [
+    "0.040 M",
+    "0.080 M",
+    "0.020 M",
+    "0.036 M"
+   ],
+   "answer": 0,
+   "explanation": "Let x be the decrease in [A]. At equilibrium [A] = 0.100 − x and [B] = 2x, so (2x)²/(0.100 − x) = 0.020. Solving gives x = 0.020, and therefore [B] = 2(0.020) = 0.040 M. Using [B] = x instead of 2x would incorrectly give about 0.036 M."
+  },
+  {
+   "n": 32,
+   "topic": "Equilibrium",
+   "q": "At 500 K, Kp = 0.250 for PCl₅(g) ⇌ PCl₃(g) + Cl₂(g). What is Kc at this temperature? Use R = 0.08206 L·atm·mol⁻¹·K⁻¹.",
+   "options": [
+    "6.09 × 10⁻³",
+    "0.250",
+    "10.3",
+    "1.49 × 10⁻⁴"
+   ],
+   "answer": 0,
+   "explanation": "For PCl₅(g) ⇌ PCl₃(g) + Cl₂(g), Δn = (1 + 1) − 1 = 1. Thus Kp = Kc(RT), so Kc = 0.250 / [(0.08206)(500)] = 6.09 × 10⁻³. Multiplying by RT instead of dividing would give about 10.3."
+  },
+  {
+   "n": 33,
+   "topic": "Thermochemistry",
+   "q": "Given the enthalpy changes 2 Fe(s) + 3/2 O₂(g) → Fe₂O₃(s), ΔH° = −824.2 kJ; CO(g) + 1/2 O₂(g) → CO₂(g), ΔH° = −283.0 kJ. What is ΔH° for Fe₂O₃(s) + 3 CO(g) → 2 Fe(s) + 3 CO₂(g)?",
+   "options": [
+    "+541.2 kJ",
+    "−24.8 kJ",
+    "+24.8 kJ",
+    "−1673.2 kJ"
+   ],
+   "answer": 1,
+   "explanation": "Reverse the Fe₂O₃ formation reaction to obtain ΔH° = +824.2 kJ, and add three times the CO oxidation reaction, 3(−283.0) = −849.0 kJ. The sum is 824.2 − 849.0 = −24.8 kJ. Using the Fe₂O₃ reaction without reversing it gives −1673.2 kJ."
+  },
+  {
+   "n": 34,
+   "topic": "Thermochemistry",
+   "q": "A 0.500 g sample of a snack food is burned in a bomb calorimeter that has a heat capacity of 3.20 kJ/°C. The temperature rises from 24.00°C to 26.50°C. What is the energy released per gram of the food sample, assuming all heat is absorbed by the calorimeter?",
+   "options": [
+    "16.0 kJ/g",
+    "4.00 kJ/g",
+    "32.0 kJ/g",
+    "8.00 kJ/g"
+   ],
+   "answer": 0,
+   "explanation": "The heat absorbed by the calorimeter is q = CΔT = (3.20 kJ/°C)(2.50°C) = 8.00 kJ. This is the total energy released by the 0.500 g sample, so the energy per gram is 8.00 kJ / 0.500 g = 16.0 kJ/g. The value 8.00 kJ/g would describe the total heat, not the heat per gram."
+  },
+  {
+   "n": 35,
+   "topic": "Acids and bases",
+   "q": "At 25°C, a 0.100 M aqueous solution of a weak base B has Kb = 1.0 × 10⁻⁵. What is the pH of the solution?",
+   "options": [
+    "3.00",
+    "9.00",
+    "11.00",
+    "12.00"
+   ],
+   "answer": 2,
+   "explanation": "For the weak base, [OH⁻] ≈ √(Kb[B]) = √[(1.0×10⁻⁵)(0.100)] = 1.0×10⁻³ M. Thus pOH = 3.00 and pH = 14.00 − 3.00 = 11.00. The concentration 1.0×10⁻³ M is for hydroxide ion, not hydronium ion."
+  },
+  {
+   "n": 36,
+   "topic": "Acids and bases",
+   "q": "What is the pH at 25°C of the solution formed by mixing 25.0 mL of 0.100 M HCl with 35.0 mL of 0.0800 M NaOH?",
+   "options": [
+    "7.00",
+    "2.30",
+    "11.70",
+    "12.00"
+   ],
+   "answer": 2,
+   "explanation": "Moles of H⁺ = (0.0250 L)(0.100 M) = 0.00250 mol, and moles of OH⁻ = (0.0350 L)(0.0800 M) = 0.00280 mol. After neutralization, 0.000300 mol OH⁻ remains in 0.0600 L, so [OH⁻] = 0.00500 M. Then pOH = 2.30 and pH = 14.00 − 2.30 = 11.70."
+  },
+  {
+   "n": 37,
+   "topic": "Acids and bases",
+   "q": "At 25°C, a 0.0500 M aqueous solution of the sodium salt NaA of a weak monoprotic acid HA has pH 8.50. What is Ka for HA? Use Kw = 1.0 × 10⁻¹⁴.",
+   "options": [
+    "5.0 × 10⁻⁵",
+    "2.0 × 10⁻¹⁰",
+    "3.2 × 10⁻⁶",
+    "2.0 × 10⁻⁵"
+   ],
+   "answer": 0,
+   "explanation": "The salt NaA supplies A⁻, which hydrolyzes as A⁻ + H₂O ⇌ HA + OH⁻. At pH 8.50, pOH = 5.50 and [OH⁻] = 10^(−5.50) = 3.16×10⁻⁶ M. Then Kb ≈ (3.16×10⁻⁶)² / 0.0500 = 2.0×10⁻¹⁰, so Ka = Kw/Kb = 1.0×10⁻¹⁴ / 2.0×10⁻¹⁰ = 5.0×10⁻⁵."
+  },
+  {
+   "n": 38,
+   "topic": "Compound structure and properties",
+   "q": "The compound xenon difluoride, XeF₂, has a central Xe atom bonded to two F atoms and three lone pairs of electrons on Xe. Which statement best describes the molecular geometry and polarity of XeF₂?",
+   "options": [
+    "XeF₂ is linear and nonpolar because the two Xe–F bond dipoles are equal and point in opposite directions.",
+    "XeF₂ is linear and polar because each Xe–F bond is polar and the molecule lacks a mirror plane.",
+    "XeF₂ is bent and polar because the lone pairs on Xe push the F atoms out of a linear arrangement.",
+    "XeF₂ is trigonal planar and nonpolar because the three lone pairs occupy equatorial positions around Xe."
+   ],
+   "answer": 0,
+   "explanation": "XeF₂ has five electron domains around Xe: two bonding pairs and three lone pairs. The lone pairs occupy equatorial positions in the trigonal-bipyramidal electron-domain geometry, placing the two F atoms 180° apart in a linear molecular geometry. The equal Xe–F bond dipoles cancel by symmetry, so the molecule is nonpolar."
+  },
+  {
+   "n": 39,
+   "topic": "Compound structure and properties",
+   "q": "cis-1,2-dichloroethene and trans-1,2-dichloroethene have the same molecular formula and molar mass. The cis isomer has a nonzero molecular dipole moment, while the trans isomer has a molecular dipole moment of zero. Which statement best accounts for this difference?",
+   "options": [
+    "The C–Cl bonds in the trans isomer are nonpolar because the molecule has a center of symmetry.",
+    "The trans isomer has sp³-hybridized carbon atoms, while the cis isomer has sp²-hybridized carbon atoms, changing the polarity.",
+    "The cis isomer has stronger C–Cl bonds, which makes its molecular dipole moment larger than that of the trans isomer.",
+    "In the cis isomer, the two C–Cl bond dipoles have components that add, while in the trans isomer the bond dipoles are oppositely directed and cancel."
+   ],
+   "answer": 3,
+   "explanation": "Both isomers contain polar C–Cl bonds and trigonal-planar sp² carbons. In the trans isomer, the two C–Cl bond dipoles point in opposite directions and cancel by symmetry; in the cis isomer, their components point toward the same side, giving a nonzero resultant dipole. Bond strengths and hybridization are essentially the same in the two isomers."
+  },
+  {
+   "n": 40,
+   "topic": "Atomic structure and properties",
+   "q": "A neutral element has these first four ionization energies: first, 738 kJ/mol; second, 1,451 kJ/mol; third, 7,733 kJ/mol; fourth, 10,540 kJ/mol. The very large increase between the second and third ionization energies indicates that the element most likely belongs to which group of the periodic table?",
+   "options": [
+    "Group 2",
+    "Group 13",
+    "Group 16",
+    "Group 1"
+   ],
+   "answer": 0,
+   "explanation": "The jump after the second ionization means the first two electrons are removed relatively easily, but the third electron must be removed from a much more stable inner shell. This indicates two valence electrons, which is characteristic of Group 2 elements such as magnesium. A Group 1 element would show its large jump after the first ionization."
+  },
+  {
+   "n": 41,
+   "topic": "Atomic structure and properties",
+   "q": "The mass spectrum of a pure sample of an element shows two peaks: one at m/z 69 with a relative abundance of 60.1%, and one at m/z 71 with a relative abundance of 39.9%. Using the masses of the peaks as the isotope masses, what is the average atomic mass of the element in atomic mass units?",
+   "options": [
+    "70.20 u",
+    "70.00 u",
+    "70.40 u",
+    "69.80 u"
+   ],
+   "answer": 3,
+   "explanation": "Average atomic mass = (69 × 0.601) + (71 × 0.399) = 41.469 + 28.329 = 69.798 u, which rounds to 69.80 u. The other values would result from using abundances that do not match the spectrum."
+  },
+  {
+   "n": 42,
+   "topic": "Chemical reactions",
+   "q": "A 0.2500 g sample containing sodium oxalate, Na₂C₂O₄, is dissolved in acid and titrated with 0.0200 M KMnO₄. The titration requires 22.50 mL of the KMnO₄ solution to reach the endpoint. In acidic solution, the net ionic equation is 2 MnO₄⁻ + 5 C₂O₄²⁻ + 16 H⁺ → 2 Mn²⁺ + 10 CO₂ + 8 H₂O. What is the mass percent of Na₂C₂O₄ in the sample? (Molar mass of Na₂C₂O₄ = 134.00 g/mol.)",
+   "options": [
+    "120.6%",
+    "24.1%",
+    "60.3%",
+    "9.65%"
+   ],
+   "answer": 2,
+   "explanation": "Moles of MnO₄⁻ = (0.0200 mol/L)(0.02250 L) = 4.50 × 10⁻⁴ mol. From the equation, oxalate is 5/2 times the amount of permanganate: (5/2)(4.50 × 10⁻⁴) = 1.125 × 10⁻³ mol. This gives (1.125 × 10⁻³ mol)(134.00 g/mol) = 0.15075 g Na₂C₂O₄, so the mass percent is (0.15075 g / 0.2500 g) × 100% = 60.3%."
+  },
+  {
+   "n": 43,
+   "topic": "Chemical reactions",
+   "q": "A 0.412 g sample of an unknown diprotic acid, H₂A, is dissolved in water and titrated to the second equivalence point with 32.5 mL of 0.100 M NaOH. The reaction is H₂A + 2 NaOH → Na₂A + 2 H₂O. What is the molar mass of the acid?",
+   "options": [
+    "63.4 g/mol",
+    "127 g/mol",
+    "254 g/mol",
+    "508 g/mol"
+   ],
+   "answer": 2,
+   "explanation": "Moles of NaOH = (0.100 mol/L)(0.0325 L) = 3.25 × 10⁻³ mol. Because one H₂A reacts with two NaOH, moles of acid = 3.25 × 10⁻³/2 = 1.625 × 10⁻³ mol. Molar mass = 0.412 g / (1.625 × 10⁻³ mol) = 254 g/mol; forgetting the 1:2 ratio would give 127 g/mol."
+  },
+  {
+   "n": 44,
+   "topic": "Kinetics",
+   "q": "At a certain temperature, the rate law for a reaction is rate = k[NO]²[O₂]. In an experiment, the initial concentration of NO is tripled while the initial concentration of O₂ is halved. By what factor does the initial rate change?",
+   "options": [
+    "4.5 times the original rate",
+    "9.0 times the original rate",
+    "1.5 times the original rate",
+    "3.0 times the original rate"
+   ],
+   "answer": 0,
+   "explanation": "The rate depends on the square of [NO] and the first power of [O₂], so the new rate is k(3[NO])²(½[O₂]) = 9/2 times the original rate. The factor is 9 × 1/2 = 4.5."
+  },
+  {
+   "n": 45,
+   "topic": "Kinetics",
+   "q": "The reaction 2 NO(g) + 2 H₂(g) → N₂(g) + 2 H₂O(g) is proposed to occur by this mechanism: Step 1: 2 NO(g) ⇌ N₂O₂(g) (fast equilibrium); Step 2: N₂O₂(g) + H₂(g) → N₂O(g) + H₂O(g) (slow); Step 3: N₂O(g) + H₂(g) → N₂(g) + H₂O(g) (fast). Which rate law is predicted by this mechanism?",
+   "options": [
+    "Rate = k[H₂]²",
+    "Rate = k[NO]²[H₂]",
+    "Rate = k[NO]²[H₂]²",
+    "Rate = k[NO][H₂]"
+   ],
+   "answer": 1,
+   "explanation": "The slow step determines the rate: rate = k₂[N₂O₂][H₂]. From the fast equilibrium, [N₂O₂] = K[NO]², so substituting gives rate = k₂K[NO]²[H₂] = k[NO]²[H₂]. The intermediate N₂O₂ does not appear in the final rate law."
+  },
+  {
+   "n": 46,
+   "topic": "Kinetics",
+   "q": "For a reaction, the rate constant is 2.5 × 10⁻³ s⁻¹ at 300 K and 5.0 × 10⁻³ s⁻¹ at 310 K. Using the Arrhenius equation, what is the activation energy for the reaction? (R = 8.314 J/(mol·K).)",
+   "options": [
+    "107 kJ/mol",
+    "5.36 kJ/mol",
+    "53.6 kJ/mol",
+    "26.8 kJ/mol"
+   ],
+   "answer": 2,
+   "explanation": "Use ln(k₂/k₁) = (Eₐ/R)(1/T₁ − 1/T₂). Here ln(2.00) = (Eₐ/8.314)(1/300 − 1/310). Solving gives Eₐ = (8.314)(0.693)/(1.075 × 10⁻⁴) = 5.36 × 10⁴ J/mol = 53.6 kJ/mol. Using a temperature difference of 10 K instead of reciprocal temperatures leads to a very different value."
+  },
+  {
+   "n": 47,
+   "topic": "Thermodynamics and electrochemistry",
+   "q": "A voltaic cell is constructed from a Cr(s)|Cr³⁺(aq) half-cell (E° = −0.74 V for Cr³⁺ + 3e⁻ → Cr) and a Cu(s)|Cu²⁺(aq) half-cell (E° = +0.34 V for Cu²⁺ + 2e⁻ → Cu). What are the standard cell potential and the standard Gibbs free energy change for the spontaneous overall reaction? (Use F = 96,500 C/mol.)",
+   "options": [
+    "E°cell = +0.40 V; ΔG° = −232 kJ per mole of reaction",
+    "E°cell = −1.08 V; ΔG° = +625 kJ per mole of reaction",
+    "E°cell = +1.08 V; ΔG° = −625 kJ per mole of reaction",
+    "E°cell = +1.08 V; ΔG° = −208 kJ per mole of reaction"
+   ],
+   "answer": 2,
+   "explanation": "The copper half-cell has the higher reduction potential, so Cu²⁺ is reduced and Cr is oxidized. E°cell = 0.34 V − (−0.74 V) = 1.08 V. For the balanced reaction, n = 6, so ΔG° = −nFE°cell = −(6)(96,500 C/mol)(1.08 V) ≈ −625,000 J = −625 kJ per mole of reaction."
+  },
+  {
+   "n": 48,
+   "topic": "Thermodynamics and electrochemistry",
+   "q": "For a reaction at 298 K, ΔH° = −150 kJ·mol⁻¹ and ΔS° = −300 J·K⁻¹·mol⁻¹. Which statement best describes the spontaneity of the reaction under standard conditions?",
+   "options": [
+    "The reaction is nonspontaneous at both 298 K and 600 K.",
+    "The reaction is nonspontaneous at 298 K but spontaneous at 600 K.",
+    "The reaction is spontaneous at 298 K but nonspontaneous at 600 K.",
+    "The reaction is spontaneous at both 298 K and 600 K."
+   ],
+   "answer": 2,
+   "explanation": "Using ΔG° = ΔH° − TΔS°, at 298 K: ΔG° = −150,000 J − (298 K)(−300 J/K) ≈ −60,600 J, so the reaction is spontaneous. At 600 K: ΔG° = −150,000 J − (600 K)(−300 J/K) = +30,000 J, so the reaction is nonspontaneous."
+  },
+  {
+   "n": 49,
+   "topic": "Thermodynamics and electrochemistry",
+   "q": "For the voltaic cell Zn(s) | Zn²⁺(aq) || Cu²⁺(aq) | Cu(s), E°cell = 1.10 V. At 298 K, the cell is prepared with [Zn²⁺] = 1.00 M and [Cu²⁺] = 0.010 M. What is the cell potential? (Use the Nernst equation E = E° − (0.0592/n) log Q.)",
+   "options": [
+    "1.10 V",
+    "0.98 V",
+    "1.16 V",
+    "1.04 V"
+   ],
+   "answer": 3,
+   "explanation": "The reaction is Zn + Cu²⁺ → Zn²⁺ + Cu, so Q = [Zn²⁺]/[Cu²⁺] = 1.00/0.010 = 100 and n = 2. Substitution gives E = 1.10 − (0.0592/2) log 100 = 1.10 − 0.0592 ≈ 1.04 V. The larger reaction quotient makes the cell potential smaller than the standard value."
+  },
+  {
+   "n": 50,
+   "topic": "Properties of substances and mixtures",
+   "q": "Four 1.00 kg water samples are prepared using 0.100 mol of glucose (C₆H₁₂O₆), 0.100 mol NaCl, 0.100 mol CaCl₂, and 0.100 mol Al(NO₃)₃. Assuming complete dissociation of the ionic compounds and ideal solution behavior, which sample has the lowest freezing point?",
+   "options": [
+    "The glucose sample, because undissociated molecules lower the freezing point more than ions do.",
+    "The NaCl sample, because chloride ions interact strongly with water.",
+    "The Al(NO₃)₃ sample, because it produces the largest total molality of dissolved particles.",
+    "All samples have the same freezing point because each contains 0.100 mol of solute."
+   ],
+   "answer": 2,
+   "explanation": "Freezing-point lowering depends on the total molality of dissolved particles. The samples produce approximately 0.100 m, 0.200 m, 0.300 m, and 0.400 m particles for glucose, NaCl, CaCl₂, and Al(NO₃)₃, respectively. Al(NO₃)₃ gives the greatest particle concentration and therefore the lowest freezing point."
+  },
+  {
+   "n": 51,
+   "topic": "Equilibrium",
+   "q": "At a certain temperature, Kc = 0.250 for the reaction PCl₅(g) ⇌ PCl₃(g) + Cl₂(g). A rigid 1.00 L vessel initially contains 0.500 mol PCl₅ and no PCl₃ or Cl₂. What is [Cl₂] after the system reaches equilibrium?",
+   "options": [
+    "0.125 M",
+    "0.500 M",
+    "0.250 M",
+    "0.354 M"
+   ],
+   "answer": 2,
+   "explanation": "Let x = [Cl₂] = [PCl₃] at equilibrium. Then [PCl₅] = 0.500 − x and Kc = x²/(0.500 − x) = 0.250. Solving gives x² + 0.250x − 0.125 = 0, which yields x = 0.250 M. Substitution confirms (0.250)²/(0.500 − 0.250) = 0.250."
+  },
+  {
+   "n": 52,
+   "topic": "Equilibrium",
+   "q": "The reaction 2 CO(g) + O₂(g) ⇌ 2 CO₂(g) has ΔH° = −566 kJ·mol⁻¹. The system is at equilibrium in a cylinder fitted with a movable piston. Which change will increase the amount of CO₂ at the new equilibrium?",
+   "options": [
+    "Decreasing the volume at constant temperature",
+    "Adding a catalyst",
+    "Adding helium gas at constant volume",
+    "Increasing the temperature"
+   ],
+   "answer": 0,
+   "explanation": "Decreasing the volume increases the pressure, so the equilibrium shifts toward the side with fewer gas molecules. There are 3 mol of gas on the reactant side and 2 mol of gas on the product side, so more CO₂ forms. Increasing temperature shifts an exothermic reaction toward reactants, a catalyst does not change the equilibrium position, and adding helium at constant volume does not change the partial pressures of the reacting gases."
+  },
+  {
+   "n": 53,
+   "topic": "Equilibrium",
+   "q": "A buffer solution contains a weak monoprotic acid HA (Ka = 4.0 × 10⁻⁵) and its conjugate base A⁻. The pH of the buffer is 5.00. What is the ratio [A⁻]/[HA]?",
+   "options": [
+    "1.0",
+    "0.25",
+    "4.0",
+    "10"
+   ],
+   "answer": 2,
+   "explanation": "For a weak acid, Ka = [H⁺][A⁻]/[HA], so [A⁻]/[HA] = Ka/[H⁺]. At pH 5.00, [H⁺] = 1.0 × 10⁻⁵ M. Therefore the ratio is (4.0 × 10⁻⁵)/(1.0 × 10⁻⁵) = 4.0."
+  },
+  {
+   "n": 54,
+   "topic": "Thermochemistry",
+   "q": "Dylan mixes 50.0 mL of 1.00 M HCl(aq) with 50.0 mL of 1.00 M NaOH(aq) in a coffee-cup calorimeter. Both solutions are initially at 22.3°C, and the final temperature is 29.1°C. The density of the mixed solution is 1.00 g/mL and its specific heat capacity is 4.18 J·g⁻¹·°C⁻¹. Assuming no heat loss, what is the enthalpy change of neutralization per mole of H₂O formed?",
+   "options": [
+    "−56.8 kJ·mol⁻¹",
+    "−2.84 kJ·mol⁻¹",
+    "−28.4 kJ·mol⁻¹",
+    "+56.8 kJ·mol⁻¹"
+   ],
+   "answer": 0,
+   "explanation": "The solution mass is 100.0 g and ΔT = 29.1°C − 22.3°C = 6.8°C. The heat absorbed by the solution is q = (100.0 g)(4.18 J·g⁻¹·°C⁻¹)(6.8°C) = 2842 J, so the reaction releases about 2.842 kJ. The limiting reactant produces 0.0500 mol H₂O, giving ΔH = −2.842 kJ/0.0500 mol ≈ −56.8 kJ·mol⁻¹."
+  },
+  {
+   "n": 55,
+   "topic": "Thermochemistry",
+   "q": "The standard enthalpy of combustion of ethanol can be calculated from standard enthalpies of formation. Use ΔH°f[C₂H₅OH(l)] = −278 kJ·mol⁻¹, ΔH°f[CO₂(g)] = −394 kJ·mol⁻¹, and ΔH°f[H₂O(l)] = −286 kJ·mol⁻¹. What is ΔH° for C₂H₅OH(l) + 3 O₂(g) → 2 CO₂(g) + 3 H₂O(l)?",
+   "options": [
+    "−1924 kJ·mol⁻¹",
+    "−1646 kJ·mol⁻¹",
+    "−1368 kJ·mol⁻¹",
+    "+1368 kJ·mol⁻¹"
+   ],
+   "answer": 2,
+   "explanation": "Using Hess’s law with formation enthalpies: ΔH°rxn = [2(−394) + 3(−286)] − [−278 + 3(0)] = −1646 + 278 = −1368 kJ·mol⁻¹. Oxygen has ΔH°f = 0 because it is an element in its standard state."
+  },
+  {
+   "n": 56,
+   "topic": "Acids and bases",
+   "q": "A buffer is prepared by mixing 50.0 mL of 0.200 M HBrO(aq) with 50.0 mL of 0.100 M NaBrO(aq). For HBrO, Ka = 1.0 × 10⁻⁹ at 25°C. What is the pH of the resulting buffer?",
+   "options": [
+    "9.00",
+    "7.00",
+    "8.70",
+    "9.30"
+   ],
+   "answer": 2,
+   "explanation": "The buffer contains 0.0100 mol HBrO and 0.00500 mol BrO⁻, so [BrO⁻]/[HBrO] = 0.00500/0.0100 = 0.500. Because pKa = −log(1.0 × 10⁻⁹) = 9.00, pH = 9.00 + log(0.500) = 9.00 − 0.30 = 8.70."
+  },
+  {
+   "n": 57,
+   "topic": "Acids and bases",
+   "q": "A 40.0 mL sample of 0.100 M formic acid, HCHO₂, is titrated with 0.100 M KOH. What is the pH after 50.0 mL of KOH has been added? Assume the volumes are additive and the contribution of the conjugate base to the pH is negligible.",
+   "options": [
+    "1.95",
+    "11.00",
+    "12.30",
+    "12.05"
+   ],
+   "answer": 3,
+   "explanation": "The acid sample contains 4.00 mmol HCHO₂, and 50.0 mL of 0.100 M KOH contains 5.00 mmol OH⁻. After neutralization, 1.00 mmol OH⁻ remains in a total volume of 90.0 mL, so [OH⁻] = 1.00 mmol/90.0 mL = 0.0111 M. Thus pOH = −log(0.0111) = 1.95 and pH = 14.00 − 1.95 = 12.05."
+  },
+  {
+   "n": 58,
+   "topic": "Compound structure and properties",
+   "q": "The molecule allene has the structure H₂C=C=CH₂. In this molecule, the central carbon atom is bonded to each of the two terminal carbon atoms by a double bond and has no other bonded atoms. What is the hybridization of the central carbon atom?",
+   "options": [
+    "sp³",
+    "sp³d",
+    "sp",
+    "sp²"
+   ],
+   "answer": 2,
+   "explanation": "The central carbon atom has two electron domains because each double bond counts as one domain in the VSEPR model. Two electron domains correspond to sp hybridization and a linear arrangement around that carbon atom; the terminal carbons are sp² hybridized."
+  },
+  {
+   "n": 59,
+   "topic": "Compound structure and properties",
+   "q": "The dipole moment of CH₂F₂ is 1.97 D, whereas the dipole moment of CF₄ is 0 D. Both molecules have a central carbon atom. Which statement best explains the difference?",
+   "options": [
+    "The C–F bonds in CF₄ are nonpolar, while the C–H bonds in CH₂F₂ are highly polar.",
+    "In CF₄, the four polar C–F bonds are arranged tetrahedrally and their bond dipoles cancel, while in CH₂F₂ the C–F and C–H bond dipoles do not cancel completely.",
+    "CF₄ is square planar, so its bond dipoles cancel, but CH₂F₂ has a tetrahedral shape that prevents cancellation.",
+    "In CH₂F₂, carbon has two lone pairs that create a net dipole moment, whereas carbon in CF₄ has no lone pairs."
+   ],
+   "answer": 1,
+   "explanation": "The four C–F bond dipoles in tetrahedral CF₄ are equal and arranged symmetrically, so their vector sum is zero. In CH₂F₂, the C–F and C–H bonds point in different directions and have different dipole magnitudes, so the bond dipoles do not completely cancel and the molecule is polar."
+  },
+  {
+   "n": 60,
+   "topic": "Atomic structure and properties",
+   "q": "The first ionization energies of nitrogen and oxygen are 1402 kJ/mol and 1314 kJ/mol, respectively. Which statement best explains why oxygen has the lower first ionization energy even though it has one more proton than nitrogen?",
+   "options": [
+    "Nitrogen's half-filled 2p subshell is less stable than oxygen's paired 2p electrons, so nitrogen loses an electron more readily.",
+    "Oxygen has a larger atomic radius than nitrogen, so its outermost electrons are farther from the nucleus and easier to remove.",
+    "Oxygen has one pair of electrons in a 2p orbital; the electron–electron repulsion in that pair makes one electron easier to remove than from the half-filled 2p subshell of nitrogen.",
+    "The additional proton in oxygen increases the shielding by inner electrons, reducing the effective nuclear charge felt by the 2p electrons."
+   ],
+   "answer": 2,
+   "explanation": "Nitrogen has the electron configuration 1s²2s²2p³, with three unpaired 2p electrons, while oxygen is 1s²2s²2p⁴, with one paired set of 2p electrons. The increased electron–electron repulsion in oxygen's paired 2p orbital outweighs the increase in nuclear charge, making it easier to remove one electron from oxygen."
+  }
+ ]
+}

@@ -1,0 +1,531 @@
+{
+ "id": "jamb-geography-p3",
+ "exam": "jamb",
+ "subject": "geography",
+ "year": null,
+ "number": 3,
+ "source": "ai",
+ "minutes": 27,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Settlements",
+   "q": "Farmers from several villages bring yam, maize and sorghum to Rijiyar Lemo, where traders buy in bulk and transport the produce to Kano. Rijiyar Lemo is best described as",
+   "options": [
+    "a dormitory settlement",
+    "a collecting centre",
+    "a resort settlement",
+    "a mining settlement"
+   ],
+   "answer": 1,
+   "explanation": "The settlement collects produce from surrounding villages in bulk and sends it to Kano, which is the function of a collecting centre. A dormitory settlement mainly supplies labour to a nearby city, while mining and resort settlements depend on mineral extraction or tourism."
+  },
+  {
+   "n": 2,
+   "topic": "Settlements",
+   "q": "To check the continuous outward spread of a fast-growing city into surrounding farmland, the most appropriate planning measure is to",
+   "options": [
+    "relocate the central market to the city edge",
+    "designate a green belt around the built-up area",
+    "build more radial roads into the countryside",
+    "convert farmland in the suburbs to residential plots"
+   ],
+   "answer": 1,
+   "explanation": "A green belt is land kept open around a city to limit continuous building and protect farmland. Radial roads and converting suburban farmland to housing would encourage more outward growth rather than contain it."
+  },
+  {
+   "n": 3,
+   "topic": "Settlements",
+   "q": "An early settlement in the middle Benue Valley was sited on a raised river terrace rather than on the floodplain mainly because the terrace",
+   "options": [
+    "was closer to permanent surface water in the dry season",
+    "reduced the danger of seasonal flooding",
+    "had more fertile alluvial soil for farming",
+    "gave easier access to river transport"
+   ],
+   "answer": 1,
+   "explanation": "A river terrace lies above the floodplain, so it gives dry ground during seasonal floods while still being near the river. The floodplain, not the terrace, usually has the most fertile alluvium and is closer to the river."
+  },
+  {
+   "n": 4,
+   "topic": "Rocks and minerals",
+   "q": "A geologist examines a specimen from a quarry near Abeokuta. The rock is coarse-grained and contains visible crystals of quartz, feldspar and mica. The rock most likely formed by",
+   "options": [
+    "rapid cooling of lava at the Earth's surface",
+    "compaction and cementation of river sediments",
+    "slow cooling of magma below the Earth's surface",
+    "alteration of limestone by heat and pressure"
+   ],
+   "answer": 2,
+   "explanation": "Visible crystals and a coarse-grained texture indicate slow cooling of magma at depth, producing intrusive igneous rock. Rapid cooling at the surface gives fine-grained rock, while compaction and cementation or heat and pressure form sedimentary and metamorphic rocks, respectively."
+  },
+  {
+   "n": 5,
+   "topic": "Rocks and minerals",
+   "q": "Which ore is mined around Itakpe and supplied to the Ajaokuta steel complex for iron production?",
+   "options": [
+    "iron ore",
+    "bauxite",
+    "cassiterite",
+    "limestone"
+   ],
+   "answer": 0,
+   "explanation": "Itakpe is known for iron ore, which supplies iron to the Ajaokuta steel complex. Bauxite is an aluminium ore, cassiterite is a tin ore, and limestone is used as a flux rather than as the iron-bearing ore."
+  },
+  {
+   "n": 6,
+   "topic": "Map reading and scale",
+   "q": "On a map with scale 1:25,000, the straight-line distance between two villages is 5.6 cm. What is the ground distance in kilometres?",
+   "options": [
+    "1.4 km",
+    "0.14 km",
+    "2.24 km",
+    "14 km"
+   ],
+   "answer": 0,
+   "explanation": "Multiply the map distance by the scale denominator: 5.6 × 25,000 = 140,000 cm. Dividing by 100,000 gives 1.4 km."
+  },
+  {
+   "n": 7,
+   "topic": "Map reading and scale",
+   "q": "On a 1:50,000 map, a rectangular farm measures 5.0 cm by 3.2 cm. What is the actual area of the farm?",
+   "options": [
+    "4.0 km²",
+    "16 km²",
+    "40 km²",
+    "0.4 km²"
+   ],
+   "answer": 0,
+   "explanation": "Convert each side to ground distance: 5.0 cm × 50,000 = 250,000 cm = 2.5 km, and 3.2 cm × 50,000 = 160,000 cm = 1.6 km. Then 2.5 km × 1.6 km = 4.0 km²."
+  },
+  {
+   "n": 8,
+   "topic": "Map reading and scale",
+   "q": "On a 1:50,000 map, point P is on the 140 m contour and point Q is on the 260 m contour. The straight-line distance between P and Q on the map is 4.8 cm. What is the average gradient between P and Q?",
+   "options": [
+    "1 in 24",
+    "1 in 10",
+    "1 in 40",
+    "1 in 20"
+   ],
+   "answer": 3,
+   "explanation": "The rise is 260 m − 140 m = 120 m. The horizontal ground distance is 4.8 cm × 50,000 = 240,000 cm = 2,400 m, so the gradient is 120:2,400 = 1:20, or 1 in 20."
+  },
+  {
+   "n": 9,
+   "topic": "Population",
+   "q": "A satellite town near Abuja has a population of 60,000 and grows at 4% per year. Using the rule of 70, in approximately how many years will its population double?",
+   "options": [
+    "14 years",
+    "28 years",
+    "35 years",
+    "17.5 years"
+   ],
+   "answer": 3,
+   "explanation": "Using the rule of 70, doubling time is approximately 70 divided by the annual growth rate. Thus 70 ÷ 4 = 17.5 years."
+  },
+  {
+   "n": 10,
+   "topic": "Population",
+   "q": "A local government area in Oyo State covers 1,250 km² and has a population of 375,000. What is its population density?",
+   "options": [
+    "3,000 persons per km²",
+    "30 persons per km²",
+    "300 persons per km²",
+    "250 persons per km²"
+   ],
+   "answer": 2,
+   "explanation": "Population density is total population divided by land area. Here 375,000 ÷ 1,250 = 300 persons per km²."
+  },
+  {
+   "n": 11,
+   "topic": "Latitude, longitude and time",
+   "q": "When Greenwich Mean Time is 14:00, what is the local solar time at a town on longitude 45°W?",
+   "options": [
+    "11:00",
+    "17:00",
+    "10:00",
+    "13:15"
+   ],
+   "answer": 0,
+   "explanation": "45° of longitude corresponds to 3 hours, and places west of Greenwich are behind GMT. Subtracting 3 hours from 14:00 gives 11:00; treating 45° as 45 minutes would wrongly give 13:15."
+  },
+  {
+   "n": 12,
+   "topic": "Latitude, longitude and time",
+   "q": "Two towns lie on the same meridian. One is at latitude 12°N and the other at 4°S. Using 1° of latitude ≈ 111 km, what is the approximate distance between them along the meridian?",
+   "options": [
+    "1,332 km",
+    "1,776 km",
+    "888 km",
+    "1,998 km"
+   ],
+   "answer": 1,
+   "explanation": "From 12°N to the equator is 12°, and from the equator to 4°S is 4°, giving 16°. Multiplying by 111 km gives 1,776 km; using only the 8° gap between the latitude figures gives 888 km, which is incorrect."
+  },
+  {
+   "n": 13,
+   "topic": "Latitude, longitude and time",
+   "q": "A flight leaves Lagos (GMT+1) at 08:00 and arrives in Cairo (GMT+2) after 4 hours. What is the local arrival time in Cairo?",
+   "options": [
+    "11:00",
+    "14:00",
+    "13:00",
+    "12:00"
+   ],
+   "answer": 2,
+   "explanation": "Lagos is GMT+1 and Cairo is GMT+2, so Cairo is one hour ahead. A 08:00 departure plus 4 hours is 12:00 Lagos time, which is 13:00 in Cairo."
+  },
+  {
+   "n": 14,
+   "topic": "Transport and trade",
+   "q": "At a Nigerian seaport, imported goods are placed in a bonded warehouse before customs duty is paid. The main function of the bonded warehouse is to",
+   "options": [
+    "provide temporary accommodation for clearing agents and port workers",
+    "repair and service cargo ships before departure",
+    "store goods under customs control until duties are paid or the goods are re-exported",
+    "manufacture goods for export within the port area"
+   ],
+   "answer": 2,
+   "explanation": "A bonded warehouse keeps imported goods under customs supervision while duty is pending or while they await re-export. It is not a hostel for workers, a factory, or a ship-repair yard."
+  },
+  {
+   "n": 15,
+   "topic": "Transport and trade",
+   "q": "Crude oil is to be moved continuously in large volumes from an oilfield in the Niger Delta to a nearby coastal export terminal on land. Which mode of transport is generally most suitable?",
+   "options": [
+    "Air freight",
+    "Rail wagon",
+    "Pipeline",
+    "Road tanker"
+   ],
+   "answer": 2,
+   "explanation": "Pipelines are designed for continuous, large-volume movement of liquids such as crude oil and reduce road congestion and spill risk. Road tankers and rail wagons are better for smaller or more flexible deliveries, while air freight is far too costly for bulk oil."
+  },
+  {
+   "n": 16,
+   "topic": "Transport and trade",
+   "q": "A Nigerian leather-goods exporter sends goods to Accra without paying customs duty because both countries belong to ECOWAS. This arrangement is best described as",
+   "options": [
+    "trade liberalisation",
+    "import substitution",
+    "balance of payments",
+    "a trade embargo"
+   ],
+   "answer": 0,
+   "explanation": "Removing customs duty on goods traded between ECOWAS members reduces trade barriers and is a form of trade liberalisation. Import substitution restricts imports, an embargo bans trade, and balance of payments records transactions."
+  },
+  {
+   "n": 17,
+   "topic": "Environmental hazards and conservation",
+   "q": "A local government in Katsina State encourages farmers to plant rows of drought-resistant trees across fields. The main purpose is to reduce",
+   "options": [
+    "soil leaching and acidification",
+    "wind erosion and desert encroachment",
+    "river flooding and gully expansion",
+    "coastal erosion and saltwater intrusion"
+   ],
+   "answer": 1,
+   "explanation": "Rows of trees reduce wind speed at ground level and trap moving sand, helping to check wind erosion and desert encroachment. They do not primarily control coastal erosion, river flooding or soil leaching."
+  },
+  {
+   "n": 18,
+   "topic": "Environmental hazards and conservation",
+   "q": "In a hilly area of Anambra State, expanding roads and poor drainage have produced a deep gully that is destroying farmland. Which combination of measures is most appropriate to stabilize the gully?",
+   "options": [
+    "Channel all surface runoff directly into the gully",
+    "Remove vegetation and fill the gully with refuse",
+    "Construct contour drains and check dams, then plant vegetation cover",
+    "Build houses close to the gully edge to compact the soil"
+   ],
+   "answer": 2,
+   "explanation": "Contour drains and check dams slow runoff and trap sediment, while vegetation roots bind the soil and reduce further gully expansion. Directing all runoff into the gully or filling it with refuse would worsen instability."
+  },
+  {
+   "n": 19,
+   "topic": "Geography of Nigeria",
+   "q": "The highest point in Nigeria, Chappal Waddi, is located in which state?",
+   "options": [
+    "Taraba State",
+    "Cross River State",
+    "Plateau State",
+    "Adamawa State"
+   ],
+   "answer": 0,
+   "explanation": "Chappal Waddi is on the Mambilla Plateau in Taraba State, close to the Cameroon border. Plateau State contains the Jos Plateau, while Cross River State is known for the Obudu Plateau."
+  },
+  {
+   "n": 20,
+   "topic": "Geography of Nigeria",
+   "q": "The elongated sedimentary basin that runs northeast from the Niger Delta area and is drained by the River Benue is known as the",
+   "options": [
+    "Chad Basin",
+    "Bida Basin",
+    "Sokoto Basin",
+    "Benue Trough"
+   ],
+   "answer": 3,
+   "explanation": "The Benue Trough is the elongated sedimentary basin extending northeastwards from the Niger Delta area and drained by the Benue River. The Chad, Sokoto and Bida basins lie in other parts of Nigeria."
+  },
+  {
+   "n": 21,
+   "topic": "Agriculture",
+   "q": "A farmer in Gboko applies 250 kg of NPK fertilizer with the grade 20:10:10 to a 0.5-hectare plot of maize. How much actual nitrogen (N) is applied per hectare?",
+   "options": [
+    "50 kg N/ha",
+    "20 kg N/ha",
+    "100 kg N/ha",
+    "25 kg N/ha"
+   ],
+   "answer": 2,
+   "explanation": "The fertilizer grade shows that 20% of its mass is nitrogen. Thus 250 kg of fertilizer contains 250 × 0.20 = 50 kg N. Since this quantity is for 0.5 ha, the nitrogen rate per hectare is 50 ÷ 0.5 = 100 kg N/ha. The value 50 kg N/ha is only the total nitrogen in the quantity applied to the plot."
+  },
+  {
+   "n": 22,
+   "topic": "Agriculture",
+   "q": "Which advantage of mixed cropping is most important to a smallholder farmer in Oyo State who depends on one growing season?",
+   "options": [
+    "Making full use of large tractors and combine harvesters",
+    "Spreading the risk of crop failure and supplying food over a longer period",
+    "Guaranteeing a higher yield of each individual crop than sole cropping",
+    "Eliminating the need for crop rotation in subsequent seasons"
+   ],
+   "answer": 1,
+   "explanation": "Mixed cropping reduces the danger that one pest, disease or dry spell will destroy the farmer's whole harvest, and crops maturing at different times can supply food over a longer period. It does not guarantee a higher yield of every crop, nor does it make large-scale mechanization easier. Intercropping also does not remove the need for crop rotation in later seasons."
+  },
+  {
+   "n": 23,
+   "topic": "Agriculture",
+   "q": "A poultry farmer in Ilorin keeps 1,500 laying hens and collects 1,200 eggs in one day. What is the laying percentage for that day?",
+   "options": [
+    "133%",
+    "125%",
+    "80%",
+    "75%"
+   ],
+   "answer": 2,
+   "explanation": "Laying percentage is eggs collected divided by number of hens, multiplied by 100. So 1,200 ÷ 1,500 × 100 = 80%. Dividing the number of hens by the number of eggs gives 125%, which reverses the calculation."
+  },
+  {
+   "n": 24,
+   "topic": "Industry and natural resources",
+   "q": "A gas-processing company in Delta State produces 2,500 tonnes of liquefied petroleum gas (LPG) in a month and sells it at ₦180,000 per tonne. What is the monthly sales revenue?",
+   "options": [
+    "₦4,500,000",
+    "₦450,000",
+    "₦45,000,000",
+    "₦450,000,000"
+   ],
+   "answer": 3,
+   "explanation": "Revenue is quantity sold multiplied by unit price. The calculation is 2,500 × ₦180,000 = ₦450,000,000. Values such as ₦45,000,000 or ₦4,500,000 arise from shifting the decimal place incorrectly."
+  },
+  {
+   "n": 25,
+   "topic": "Industry and natural resources",
+   "q": "Which combination best explains the concentration of crude-oil refining and related industries around Port Harcourt and Warri?",
+   "options": [
+    "Nearness to iron ore deposits and abundant limestone",
+    "Nearness to crude oil supplies and access to ports for imported equipment and exports",
+    "Cool highland climate and cheap hydro-electricity from Jos",
+    "Large coal reserves and a dry climate suitable for smelting"
+   ],
+   "answer": 1,
+   "explanation": "Oil refining and allied industries benefit from being close to crude oil and from port facilities for bringing in equipment and exporting products. Iron ore, limestone, coal and highland climate are not the main locational forces for these oil-based industries. The Port Harcourt–Warri area is chiefly associated with petroleum and port access."
+  },
+  {
+   "n": 26,
+   "topic": "Industry and natural resources",
+   "q": "Which mineral is the principal ore used in the production of aluminium?",
+   "options": [
+    "Gypsum",
+    "Cassiterite",
+    "Columbite",
+    "Bauxite"
+   ],
+   "answer": 3,
+   "explanation": "Bauxite is refined into alumina and then smelted to produce aluminium. Cassiterite is the main ore of tin, while columbite is a source of niobium and tantalum. Gypsum is used mainly in cement and plaster production."
+  },
+  {
+   "n": 27,
+   "topic": "Weather and climate",
+   "q": "A weather balloon records a temperature of 26°C at ground level and 14°C at a height of 2,000 m. Assuming a steady decrease, what is the lapse rate per 1,000 m?",
+   "options": [
+    "8°C per 1,000 m",
+    "6°C per 1,000 m",
+    "12°C per 1,000 m",
+    "3°C per 1,000 m"
+   ],
+   "answer": 1,
+   "explanation": "The temperature falls by 26 − 14 = 12°C over 2,000 m. For each 1,000 m, the fall is 12 ÷ 2 = 6°C, so the lapse rate is 6°C per 1,000 m. The value 12°C is the total decrease over 2,000 m, not the rate per 1,000 m."
+  },
+  {
+   "n": 28,
+   "topic": "Landforms and processes",
+   "q": "An area underlain by limestone in which sinkholes, caves and disappearing streams are the dominant features is best described as",
+   "options": [
+    "laterite topography",
+    "deltaic topography",
+    "Karst topography",
+    "periglacial topography"
+   ],
+   "answer": 2,
+   "explanation": "Karst topography develops where limestone is dissolved by water, forming sinkholes, caves, underground drainage and disappearing streams. Deltaic topography is built by river deposition, periglacial topography is shaped by freeze–thaw action, and laterite topography is linked to tropical weathering and iron-rich crusts. The described features are therefore characteristic of karst."
+  },
+  {
+   "n": 29,
+   "topic": "Landforms and processes",
+   "q": "After heavy rain, a coherent block of soil and rock moves a short distance downslope along a curved slip surface. Which mass-movement process is this?",
+   "options": [
+    "Sheet erosion",
+    "Soil creep",
+    "Slump",
+    "Rockfall"
+   ],
+   "answer": 2,
+   "explanation": "A slump is a mass movement in which a relatively coherent block slides along a curved slip plane, often after rain increases the weight and pore-water pressure of the material. Soil creep is very slow and gradual, rockfall involves free fall from a cliff, and sheet erosion removes a thin layer of soil by running water. The curved slip surface and coherent block distinguish the process as a slump."
+  },
+  {
+   "n": 30,
+   "topic": "The earth and the solar system",
+   "q": "Which planet in the solar system has the highest surface temperature, although it is not the closest to the Sun?",
+   "options": [
+    "Jupiter",
+    "Mars",
+    "Mercury",
+    "Venus"
+   ],
+   "answer": 3,
+   "explanation": "Venus has a thick carbon dioxide atmosphere that produces a strong greenhouse effect, making its surface hotter than Mercury's. Mercury is nearest the Sun but lacks a comparable atmosphere."
+  },
+  {
+   "n": 31,
+   "topic": "The earth and the solar system",
+   "q": "On 21 June, which area experiences 24 hours of daylight?",
+   "options": [
+    "Areas north of the Arctic Circle",
+    "The Equator",
+    "Areas south of the Antarctic Circle",
+    "Areas between the Tropics"
+   ],
+   "answer": 0,
+   "explanation": "On 21 June the Northern Hemisphere is tilted toward the Sun, so the region north of the Arctic Circle receives continuous daylight. Areas south of the Antarctic Circle experience polar night at that time."
+  },
+  {
+   "n": 32,
+   "topic": "Vegetation and soils",
+   "q": "Which vegetation belt in Nigeria is characterised by short grasses, scattered acacia and thorny shrubs, and occurs in the far north-east near Lake Chad?",
+   "options": [
+    "Mangrove swamp forest",
+    "Sudan savanna",
+    "Sahel savanna",
+    "Guinea savanna"
+   ],
+   "answer": 2,
+   "explanation": "The Sahel savanna lies in the far north-east of Nigeria and is drier than the Sudan savanna, with short grasses, acacia and thorny shrubs. The Guinea savanna receives more rainfall and has taller grasses and more trees."
+  },
+  {
+   "n": 33,
+   "topic": "Vegetation and soils",
+   "q": "Along many rivers in the Nigerian savanna, a narrow strip of evergreen forest with taller trees remains green even when the surrounding land is dry. This vegetation is best described as...",
+   "options": [
+    "gallery forest",
+    "derived savanna",
+    "montane forest",
+    "mangrove forest"
+   ],
+   "answer": 0,
+   "explanation": "Gallery forest grows along river valleys in the savanna where moisture is available during the dry season. Mangrove forest occurs in saline coastal swamps, while montane forest is found on highlands."
+  },
+  {
+   "n": 34,
+   "topic": "Vegetation and soils",
+   "q": "A farmer in Ogun State observes that rainwater drains very rapidly through a soil and applied fertilizer is easily washed below the root zone. Which soil texture is most likely responsible?",
+   "options": [
+    "Silty soil",
+    "Clayey soil",
+    "Loamy soil",
+    "Sandy soil"
+   ],
+   "answer": 3,
+   "explanation": "Sandy soil has large pore spaces, so water passes through quickly and dissolved nutrients are easily leached downward. Clayey soil has small pore spaces and holds water much longer."
+  },
+  {
+   "n": 35,
+   "topic": "Settlements",
+   "q": "In many rural communities in Enugu State, compounds and farmsteads are widely separated, with farmland between them. This settlement pattern is best described as...",
+   "options": [
+    "Nucleated settlement",
+    "Linear settlement",
+    "Conurbation",
+    "Dispersed settlement"
+   ],
+   "answer": 3,
+   "explanation": "A dispersed settlement has houses and farmsteads spread out over the countryside rather than clustered together. A nucleated settlement is grouped around a centre, while a conurbation is a merged urban area."
+  },
+  {
+   "n": 36,
+   "topic": "Settlements",
+   "q": "Many young people leave rural communities in Ebonyi State for Lagos and Abuja in search of paid jobs and better education. This movement is best described as...",
+   "options": [
+    "Counter-urbanisation",
+    "Transhumance",
+    "Rural-urban migration",
+    "Urban-rural migration"
+   ],
+   "answer": 2,
+   "explanation": "Rural-urban migration is the movement of people from rural areas to towns and cities in search of jobs, education and better services. Transhumance is the seasonal movement of livestock, not people moving to cities."
+  },
+  {
+   "n": 37,
+   "topic": "Rocks and minerals",
+   "q": "Which rock is formed when limestone is subjected to great heat and pressure?",
+   "options": [
+    "Slate",
+    "Granite",
+    "Marble",
+    "Shale"
+   ],
+   "answer": 2,
+   "explanation": "Marble is a metamorphic rock formed from limestone under heat and pressure. Shale is a sedimentary rock, while slate forms from shale and granite is igneous."
+  },
+  {
+   "n": 38,
+   "topic": "Rocks and minerals",
+   "q": "Enugu is historically associated with the mining of which mineral used mainly as fuel in electricity generation?",
+   "options": [
+    "Limestone",
+    "Coal",
+    "Petroleum",
+    "Tin"
+   ],
+   "answer": 1,
+   "explanation": "Enugu is known for coal mining, and coal has been used as fuel for power generation and industry. Tin is mined mainly around Jos, while petroleum comes chiefly from the Niger Delta."
+  },
+  {
+   "n": 39,
+   "topic": "Map reading and scale",
+   "q": "On a topographic map with scale 1:20,000, a rectangular cocoa farm near Nsukka measures 5.5 cm by 4.0 cm. What is the actual area of the farm in hectares?",
+   "options": [
+    "88 hectares",
+    "0.88 hectares",
+    "44 hectares",
+    "880 hectares"
+   ],
+   "answer": 0,
+   "explanation": "The scale means 1 cm represents 20,000 cm, or 0.2 km, on the ground. The dimensions are 5.5 × 0.2 = 1.1 km and 4.0 × 0.2 = 0.8 km, so the area is 0.88 km² = 88 hectares."
+  },
+  {
+   "n": 40,
+   "topic": "Map reading and scale",
+   "q": "On a 1:25,000 map, two points are 6 cm apart along a slope. The lower point is on the 180 m contour and the upper point is on the 240 m contour. What is the average gradient between the points?",
+   "options": [
+    "1 in 15",
+    "1 in 60",
+    "1 in 40",
+    "1 in 25"
+   ],
+   "answer": 3,
+   "explanation": "The horizontal distance is 6 cm × 25,000 = 150,000 cm = 1,500 m, and the vertical rise is 240 − 180 = 60 m. The average gradient is 60/1,500 = 1/25, written as 1 in 25."
+  }
+ ]
+}

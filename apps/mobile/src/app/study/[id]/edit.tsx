@@ -10,6 +10,8 @@ import { Button, Text } from '@/components/ui';
 import { Colors } from '@/constants/theme';
 import { formatDate } from '@/i18n';
 import { englishSubjectName, SUBJECTS } from '@/lib/catalog';
+import { exampleExam, regionOf } from '@/lib/region';
+import { useSession } from '@/lib/session';
 import { folderLabel, materialSubject, sourceText } from '@/lib/studio/labels';
 import { useMaterials } from '@/lib/studio/store';
 import type { Material } from '@/lib/studio/types';
@@ -21,6 +23,7 @@ export default function EditMaterialScreen() {
 
 function Form({ m }: { m: Material }) {
   const { t } = useTranslation('study');
+  const { user } = useSession();
   const { update, folders } = useMaterials();
   const [title, setTitle] = useState(m.title);
   const [subject, setSubject] = useState(m.subject);
@@ -79,7 +82,7 @@ function Form({ m }: { m: Material }) {
         icon="pricetags-outline"
         value={tags}
         onChangeText={setTags}
-        placeholder={t('edit.tagsPlaceholder')}
+        placeholder={t('edit.tagsPlaceholder', { exam: exampleExam(regionOf(user)) })}
         hint={t('edit.tagsHint')}
       />
       <Text variant="small" color={Colors.textMuted}>

@@ -77,7 +77,7 @@ const rooms: Translation<typeof en> = {
   },
   goal: 'هدف الغرفة',
   goalEmpty: 'لا يوجد هدف بعد.',
-  goalPlaceholder: 'مثل إنهاء JAMB فيزياء الورقة 1',
+  goalPlaceholder: 'مثل إنهاء {{exam}} فيزياء الورقة 1',
   setGoal: 'حدّد الهدف',
   editGoal: 'تغيير',
   goalProgress: 'أنهى {{done}} من {{total}}',

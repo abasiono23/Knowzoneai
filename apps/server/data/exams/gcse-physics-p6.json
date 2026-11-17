@@ -1,0 +1,401 @@
+{
+ "id": "gcse-physics-p6",
+ "exam": "gcse",
+ "subject": "physics",
+ "year": null,
+ "number": 6,
+ "source": "ai",
+ "minutes": 35,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Atomic structure and radioactivity",
+   "q": "A hospital stores a radioactive tracer containing 64 mg of a radioisotope with a half-life of 6 hours. After 24 hours, what mass of that radioisotope remains, assuming none is lost except by radioactive decay?",
+   "options": [
+    "8 mg",
+    "4 mg",
+    "16 mg",
+    "2 mg"
+   ],
+   "answer": 1,
+   "explanation": "24 hours is four half-lives because 24 ÷ 6 = 4. After each half-life the mass of the radioisotope halves, so the remaining mass is 64 mg ÷ 2⁴ = 64 ÷ 16 = 4 mg. After two half-lives the mass would be 16 mg, so that does not match the full 24 hours."
+  },
+  {
+   "n": 2,
+   "topic": "Waves",
+   "q": "A wave on a string has a wavelength of 1.5 m and a speed of 4.5 m/s. What is its frequency?",
+   "options": [
+    "0.33 Hz",
+    "4.5 Hz",
+    "6.75 Hz",
+    "3.0 Hz"
+   ],
+   "answer": 3,
+   "explanation": "The wave equation is speed = frequency × wavelength, so frequency = speed ÷ wavelength. Substituting gives 4.5 m/s ÷ 1.5 m = 3.0 Hz. Multiplying the speed by the wavelength gives 6.75, which is not the frequency."
+  },
+  {
+   "n": 3,
+   "topic": "Waves",
+   "q": "Which statement best explains why sound travels faster through steel than through air?",
+   "options": [
+    "Sound has a higher frequency in steel, and a higher frequency always means a higher speed.",
+    "In steel, the particles move all the way from the source to the listener.",
+    "Sound travels through steel as an electromagnetic wave, which is faster than a mechanical wave.",
+    "The particles in steel are closer together, so vibrations are passed from particle to particle more quickly."
+   ],
+   "answer": 3,
+   "explanation": "Sound is a mechanical wave, so it needs particles to transfer vibrations. In steel the particles are packed closely and interact strongly, allowing energy to pass between them faster than in air. The particles vibrate about fixed positions; they do not travel all the way to the listener."
+  },
+  {
+   "n": 4,
+   "topic": "Forces and motion",
+   "q": "A lift and its passengers have a total mass of 800 kg. The lift accelerates upwards at 1.5 m/s². Take g = 10 N/kg. What is the tension in the lifting cable?",
+   "options": [
+    "6800 N",
+    "8000 N",
+    "9200 N",
+    "1200 N"
+   ],
+   "answer": 2,
+   "explanation": "The weight of the lift is mg = 800 kg × 10 N/kg = 8000 N downwards. To accelerate upwards, the resultant force must be ma = 800 kg × 1.5 m/s² = 1200 N upwards. The cable tension must balance the weight and provide this extra upward resultant force, so tension = 8000 N + 1200 N = 9200 N."
+  },
+  {
+   "n": 5,
+   "topic": "Forces and motion",
+   "q": "Lucas cycles 1.8 km in 6.0 minutes. What is his average speed in metres per second?",
+   "options": [
+    "18 m/s",
+    "0.30 m/s",
+    "5.0 m/s",
+    "300 m/s"
+   ],
+   "answer": 2,
+   "explanation": "Convert the distance to metres and the time to seconds: 1.8 km = 1800 m and 6.0 minutes = 360 s. Average speed = distance ÷ time = 1800 m ÷ 360 s = 5.0 m/s. Leaving the time as 6.0 minutes would give a value in metres per minute, not metres per second."
+  },
+  {
+   "n": 6,
+   "topic": "Forces and motion",
+   "q": "A hockey puck slides across ice and gradually slows down because of a small friction force. Which statement best explains the puck's motion?",
+   "options": [
+    "The puck slows because there is no forward force pushing it, and an object always needs a force to keep moving.",
+    "Only gravity acts on the puck, so it must slow down as it falls.",
+    "The friction force is the resultant force opposing the puck's motion, and it causes the puck to decelerate.",
+    "The puck has no resultant force because it is moving, so its speed decreases by itself."
+   ],
+   "answer": 2,
+   "explanation": "The puck slows because friction is a resultant force in the opposite direction to its motion, so it decelerates. Newton's first law says that with no resultant force an object continues at constant velocity, not that it needs a continuous forward force. Gravity acts downwards and is not the horizontal force slowing the puck."
+  },
+  {
+   "n": 7,
+   "topic": "Magnetism and electromagnetism",
+   "q": "A metal rod is connected to a sensitive voltmeter and moved between the poles of a strong magnet so that it cuts magnetic field lines. Which change would not increase the potential difference shown by the voltmeter?",
+   "options": [
+    "Increasing the length of rod that moves through the field",
+    "Using a stronger magnet",
+    "Moving the rod more slowly through the same magnetic field",
+    "Moving the rod faster at right angles to the field"
+   ],
+   "answer": 2,
+   "explanation": "Induced potential difference increases when the magnetic field is stronger, the conductor moves faster, or more conductor length cuts the field lines. Moving the rod more slowly through the same field reduces the rate at which it cuts field lines, so the potential difference does not increase. It decreases instead."
+  },
+  {
+   "n": 8,
+   "topic": "Magnetism and electromagnetism",
+   "q": "Which statement about the magnetic field around a bar magnet is correct?",
+   "options": [
+    "Magnetic field lines cross where the field is strongest.",
+    "Outside the magnet, field lines go from the south pole to the north pole and are closest at the centre of the magnet.",
+    "Outside the magnet, field lines go from the north pole to the south pole, and closer lines show a stronger field.",
+    "Field lines are equally spaced everywhere around the magnet."
+   ],
+   "answer": 2,
+   "explanation": "Outside a bar magnet, magnetic field lines run from the north pole to the south pole. Where the lines are closer together, the magnetic field is stronger. Field lines never cross, and they are not equally spaced everywhere around the magnet."
+  },
+  {
+   "n": 9,
+   "topic": "Energy",
+   "q": "Zainab is on a swing. She is pulled to one side and released. Ignoring air resistance and friction, which statement describes the energy transfer as she moves from the highest point to the lowest point of the swing?",
+   "options": [
+    "Kinetic energy is transferred to thermal energy stores, so the child slows down.",
+    "Gravitational potential energy is destroyed and converted into a force that pushes the child forward.",
+    "Gravitational potential energy increases and kinetic energy decreases, because the child moves faster.",
+    "Gravitational potential energy decreases and kinetic energy increases, while the total energy stays constant."
+   ],
+   "answer": 3,
+   "explanation": "As Zainab descends, her height decreases, so the gravitational potential energy store decreases. This energy is transferred to the kinetic energy store as her speed increases. Neglecting air resistance and friction, the total energy remains constant."
+  },
+  {
+   "n": 10,
+   "topic": "Energy",
+   "q": "Freya uses a tumble dryer that transfers 600 kJ of energy from the mains electricity supply. It transfers 180 kJ usefully to the thermal energy store of the clothes. The rest is wasted. What is the efficiency of the tumble dryer?",
+   "options": [
+    "70%",
+    "0.30%",
+    "30%",
+    "33%"
+   ],
+   "answer": 2,
+   "explanation": "Efficiency = useful energy transferred ÷ total energy supplied × 100%. So 180 kJ ÷ 600 kJ × 100% = 30%. The 70% value is the fraction wasted, because 600 kJ − 180 kJ = 420 kJ is wasted."
+  },
+  {
+   "n": 11,
+   "topic": "Energy",
+   "q": "Callum holds a 50 kg barbell stationary above his head for 10 s. The gravitational field strength is 9.8 N/kg. What is the work done by the upward force from his hands on the barbell while it is held stationary?",
+   "options": [
+    "0 J, because there is no movement in the direction of the upward force.",
+    "4 900 J, because the upward force acts for 10 s.",
+    "490 J, because the upward force on the barbell is 490 N.",
+    "49 000 J, because mass × gravitational field strength × time gives the work done."
+   ],
+   "answer": 0,
+   "explanation": "Work done = force × distance moved in the direction of the force. The barbell is stationary, so it moves no distance and the work done by the upward force is 0 J. The weight is 50 kg × 9.8 N/kg = 490 N, but force alone is not work."
+  },
+  {
+   "n": 12,
+   "topic": "Electricity",
+   "q": "Two identical lamps are connected in parallel to a 6.0 V battery. Each lamp has a resistance of 12 Ω. What is the total current drawn from the battery?",
+   "options": [
+    "1.0 A",
+    "0.50 A",
+    "0.25 A",
+    "2.0 A"
+   ],
+   "answer": 0,
+   "explanation": "For parallel components, the potential difference across each lamp is 6.0 V. The current through each lamp is I = V ÷ R = 6.0 V ÷ 12 Ω = 0.50 A, and two branches give a total current of 0.50 A + 0.50 A = 1.0 A."
+  },
+  {
+   "n": 13,
+   "topic": "Electricity",
+   "q": "A 6.0 V battery transfers 90 J of energy to a small electric motor. How much charge flows through the battery?",
+   "options": [
+    "0.067 C",
+    "540 C",
+    "96 C",
+    "15 C"
+   ],
+   "answer": 3,
+   "explanation": "Energy transferred is given by E = QV, so Q = E ÷ V = 90 J ÷ 6.0 V = 15 C. Multiplying 90 J by 6.0 V gives 540, which is not a valid rearrangement; charge is energy divided by potential difference."
+  },
+  {
+   "n": 14,
+   "topic": "Electricity",
+   "q": "Which statement about the neutral wire in a working three-core mains cable is correct?",
+   "options": [
+    "It contains the fuse, which melts when the current is too large.",
+    "It has no current in it because it is connected to earth.",
+    "It is always at a high potential, so touching it can give an electric shock even when the appliance is switched off.",
+    "It is normally at a potential close to earth potential, and it carries current when the appliance is switched on."
+   ],
+   "answer": 3,
+   "explanation": "The neutral wire completes the circuit, so it normally carries current while the appliance is working. It is held at a potential close to earth potential, while the live wire alternates at about 230 V relative to earth. The fuse is in the live wire, not in the neutral wire."
+  },
+  {
+   "n": 15,
+   "topic": "Particle model of matter",
+   "q": "Which statement best explains why a gas can be compressed easily, while a liquid cannot?",
+   "options": [
+    "The particles in a gas are far apart with large spaces between them, but the particles in a liquid are close together with little empty space.",
+    "Gas particles are much smaller than liquid particles, so there is more space for them to fit into.",
+    "Gas particles move more slowly than liquid particles, so they can be pushed closer together.",
+    "Gas particles are held in fixed positions, whereas liquid particles can slide past each other."
+   ],
+   "answer": 0,
+   "explanation": "In a gas, particles are widely separated, so reducing the volume mainly reduces the empty space between particles. In a liquid, particles are already close together, leaving little empty space to compress. Particle size does not change, and gas particles generally move faster than liquid particles at the same temperature."
+  },
+  {
+   "n": 16,
+   "topic": "Particle model of matter",
+   "q": "Ice floats on water. Which statement best explains this in terms of the particle model?",
+   "options": [
+    "The particles in ice have more kinetic energy, so they spread out and make ice less dense.",
+    "The particles in ice have a greater mass than the particles in liquid water.",
+    "In ice, the particles are arranged in a regular lattice with more space between them than in liquid water, so ice has a lower density.",
+    "The particles in ice are closer together than in liquid water, making ice less dense."
+   ],
+   "answer": 2,
+   "explanation": "When water freezes, its particles form an open regular lattice. The same mass occupies a larger volume, so density = mass ÷ volume decreases below that of liquid water. The mass of the particles does not change, and closer particles would mean a higher density."
+  },
+  {
+   "n": 17,
+   "topic": "Space physics",
+   "q": "Which process is the main source of energy in a main-sequence star like the Sun?",
+   "options": [
+    "Gravitational potential energy being converted to light as the core contracts steadily.",
+    "Nuclear fission of heavy nuclei in the star's core.",
+    "Nuclear fusion of hydrogen nuclei to form helium in the star's core, releasing energy.",
+    "Chemical burning of hydrogen and oxygen in the star's core."
+   ],
+   "answer": 2,
+   "explanation": "Main-sequence stars are powered by nuclear fusion, mainly hydrogen nuclei combining to form helium, which releases large amounts of energy. Chemical burning cannot supply energy for millions of years, and fission of heavy nuclei is not the main process in the Sun. Gravitational contraction releases energy earlier in a star's life, but it is not the steady main-sequence energy source."
+  },
+  {
+   "n": 18,
+   "topic": "Space physics",
+   "q": "Two satellites are in circular orbits around Earth. The satellite closer to Earth has a smaller orbital radius than the other satellite. Which statement about their orbital speeds is correct?",
+   "options": [
+    "The satellite closer to Earth has the greater orbital speed, because a smaller orbital radius requires a greater centripetal acceleration.",
+    "Both satellites have the same orbital speed because they are both in orbit around Earth.",
+    "The satellite further from Earth has the greater orbital speed because it travels a longer path in one orbit.",
+    "The satellite further from Earth has the greater orbital speed because Earth's gravity is stronger there."
+   ],
+   "answer": 0,
+   "explanation": "For a circular orbit, Earth's gravitational force provides the centripetal force. Closer to Earth, the gravitational field is stronger, so the satellite must have a greater orbital speed to stay in a circular orbit of that smaller radius. Larger orbital radii correspond to slower orbital speeds."
+  },
+  {
+   "n": 19,
+   "topic": "Atomic structure and radioactivity",
+   "q": "A sample contains 80 g of a radioactive isotope with a half-life of 5 years. What mass of that isotope remains after 20 years?",
+   "options": [
+    "10 g",
+    "40 g",
+    "20 g",
+    "5 g"
+   ],
+   "answer": 3,
+   "explanation": "20 years is four half-lives (20 ÷ 5 = 4). The mass halves four times: 80 g → 40 g → 20 g → 10 g → 5 g. The value 40 g would be the mass remaining after only one half-life."
+  },
+  {
+   "n": 20,
+   "topic": "Atomic structure and radioactivity",
+   "q": "An alpha-emitting source is usually more dangerous if the material is swallowed or breathed in than if it stays outside the body. Which statement best explains this?",
+   "options": [
+    "Alpha particles are strongly ionising but are stopped by the outer layer of skin, so they can damage living cells when inside the body.",
+    "Alpha particles are weakly ionising but can pass easily through skin and damage cells deep inside the body.",
+    "Alpha particles are uncharged, so they can enter cells easily but cannot ionise them.",
+    "Alpha particles travel a very long distance in air and can reach internal organs from outside the body."
+   ],
+   "answer": 0,
+   "explanation": "Alpha particles are highly ionising and have a short range in matter, being stopped by paper or the outer layer of skin. If inhaled or swallowed, they are in contact with living cells and can cause significant damage."
+  },
+  {
+   "n": 21,
+   "topic": "Atomic structure and radioactivity",
+   "q": "In Rutherford’s alpha scattering experiment, most alpha particles passed straight through the gold foil, while a small number were deflected by large angles. Which conclusion about atoms is best supported by this observation?",
+   "options": [
+    "Alpha particles are uncharged particles emitted by gold atoms.",
+    "The nucleus of a gold atom is about half the diameter of the whole atom.",
+    "Atoms contain electrons spread evenly throughout a positive sphere.",
+    "Atoms are mostly empty space with a tiny, positively charged central nucleus."
+   ],
+   "answer": 3,
+   "explanation": "Most alpha particles passing straight through shows that atoms are mostly empty space. The small number deflected by large angles indicates a tiny, dense, positively charged nucleus that repels alpha particles strongly."
+  },
+  {
+   "n": 22,
+   "topic": "Waves",
+   "q": "A ray of light strikes a plane mirror at a point. The angle between the incident ray and the mirror surface is 35°. What is the angle between the reflected ray and the normal?",
+   "options": [
+    "35°",
+    "55°",
+    "110°",
+    "70°"
+   ],
+   "answer": 1,
+   "explanation": "Angles for reflection are measured from the normal. The incident angle to the normal is 90° − 35° = 55°, and the reflected ray makes the same angle with the normal, so it is 55°. Choosing 35° confuses the angle to the mirror with the angle to the normal."
+  },
+  {
+   "n": 23,
+   "topic": "Waves",
+   "q": "A sound wave travelling in air has a speed of 330 m/s and a wavelength of 0.75 m. What is its frequency?",
+   "options": [
+    "330.75 Hz",
+    "247.5 Hz",
+    "440 Hz",
+    "0.0023 Hz"
+   ],
+   "answer": 2,
+   "explanation": "Using v = f × λ gives f = v ÷ λ = 330 ÷ 0.75 = 440 Hz. Multiplying speed by wavelength gives 247.5, which is a common incorrect rearrangement."
+  },
+  {
+   "n": 24,
+   "topic": "Forces and motion",
+   "q": "A car is travelling along a straight, level road at a constant speed. What is the resultant force acting on the car?",
+   "options": [
+    "A downward force equal to the weight of the car",
+    "Zero",
+    "A backward force equal to the driving force",
+    "A forward force equal to the driving force"
+   ],
+   "answer": 1,
+   "explanation": "At constant velocity the acceleration is zero, so by Newton’s first law the forces on the car are balanced and the resultant force is zero. The driving force is balanced by resistive forces rather than being an additional resultant force."
+  },
+  {
+   "n": 25,
+   "topic": "Forces and motion",
+   "q": "A cyclist travels 60 m in 5 s, waits stationary for 3 s, then travels 120 m in 12 s. What is the average speed for the whole journey?",
+   "options": [
+    "9.0 m/s",
+    "7.5 m/s",
+    "18 m/s",
+    "12 m/s"
+   ],
+   "answer": 0,
+   "explanation": "Total distance = 60 + 120 = 180 m. Total time = 5 + 3 + 12 = 20 s, so average speed = 180 ÷ 20 = 9.0 m/s. The stationary waiting time must be included in the total time."
+  },
+  {
+   "n": 26,
+   "topic": "Forces and motion",
+   "q": "A ball is thrown vertically upwards. Ignore air resistance. At the highest point of its motion, what is the acceleration of the ball? Take g = 10 m/s².",
+   "options": [
+    "Zero",
+    "10 m/s² downwards",
+    "20 m/s² downwards",
+    "10 m/s² upwards"
+   ],
+   "answer": 1,
+   "explanation": "At the highest point the velocity is zero, but the weight still acts downwards, so the acceleration due to gravity remains 10 m/s² downwards. Zero is a common mistake from confusing zero velocity with zero acceleration."
+  },
+  {
+   "n": 27,
+   "topic": "Magnetism and electromagnetism",
+   "q": "Soft iron is often used as the core of an electromagnet rather than steel. Which property of soft iron makes it suitable for this use?",
+   "options": [
+    "It is an electrical insulator, so it prevents current in the coil from overheating.",
+    "It is easily magnetised and easily demagnetised when the current is switched off.",
+    "It is a permanent magnet that keeps its magnetism after the current is switched off.",
+    "It has a high resistance, so it reduces the current in the coil."
+   ],
+   "answer": 1,
+   "explanation": "An electromagnet needs a core that becomes magnetic while current flows and loses most magnetism when switched off. Soft iron is easily magnetised and demagnetised, whereas steel tends to stay magnetised."
+  },
+  {
+   "n": 28,
+   "topic": "Energy",
+   "q": "A cyclist freewheels down a hill and then uses the brakes to stop at the bottom. Which statement best describes the main energy changes?",
+   "options": [
+    "Chemical energy in the cyclist is the only source of energy, and braking destroys the kinetic energy.",
+    "Gravitational potential energy is transferred to kinetic energy as the cyclist goes downhill; when braking, kinetic energy is transferred to thermal energy by friction.",
+    "Gravitational potential energy is used up as the cyclist moves downhill, and the brakes create new energy to stop the cyclist.",
+    "Kinetic energy is transferred to gravitational potential energy as the cyclist goes downhill; braking stores energy in the brakes as elastic potential energy."
+   ],
+   "answer": 1,
+   "explanation": "As the cyclist goes downhill, the gravitational potential energy store decreases and the kinetic energy store increases. When the brakes are used, friction does work and transfers energy to thermal energy stores, heating the brakes and surroundings. The total energy is conserved, so energy is not created or destroyed."
+  },
+  {
+   "n": 29,
+   "topic": "Energy",
+   "q": "A porter pushes a trolley with a steady horizontal force of 80 N through a distance of 12 m along a station platform. The force is in the direction of motion. How much work is done by the porter on the trolley?",
+   "options": [
+    "960 J",
+    "6.7 J",
+    "80 J",
+    "92 J"
+   ],
+   "answer": 0,
+   "explanation": "Work done is force multiplied by the distance moved in the direction of the force: 80 N × 12 m = 960 J. Dividing the force by the distance or adding the numbers does not give the work done."
+  },
+  {
+   "n": 30,
+   "topic": "Energy",
+   "q": "Which statement describes a disadvantage of using wind turbines to generate electricity compared with a coal-fired power station?",
+   "options": [
+    "Carbon dioxide is released by the turbines while they generate electricity.",
+    "The turbines cannot be connected to the National Grid.",
+    "Long-lived radioactive waste is produced by the turbines.",
+    "The electrical output is not constant because it depends on the wind speed."
+   ],
+   "answer": 3,
+   "explanation": "Wind turbines rely on the wind, so their output varies and may not match demand at all times. Coal-fired power stations can be controlled to produce a steady output. Wind turbines do not release carbon dioxide while operating and do not produce long-lived radioactive waste."
+  }
+ ]
+}

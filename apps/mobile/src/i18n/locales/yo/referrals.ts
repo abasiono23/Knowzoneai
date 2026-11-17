@@ -20,6 +20,9 @@ const referrals: Translation<typeof en> = {
     exams: {
       label: 'Ìmúrasílẹ̀ ìdánwò',
       text: 'Ìmúrasílẹ̀ WAEC/JAMB rọrùn gan-an pẹ̀lú Knowzone AI: ìdánwò ìdánrawò, olùkọ́ AI àti ẹ̀kọ́ fídíò kúkúrú. Lo kóòdù mi {{code}} fún kírẹ́dìtì AI àfikún {{credits}}: {{link}}',
+      /** The same invite for other study regions: their exams, or none named. */
+      textFor: 'Ìmúrasílẹ̀ {{exams}} rọrùn gan-an pẹ̀lú Knowzone AI: ìdánwò ìdánrawò, olùkọ́ AI àti ẹ̀kọ́ fídíò kúkúrú. Lo kóòdù mi {{code}} fún kírẹ́dìtì AI àfikún {{credits}}: {{link}}',
+      textAny: 'Ìmúrasílẹ̀ ìdánwò rọrùn gan-an pẹ̀lú Knowzone AI: ìdánwò ìdánrawò, olùkọ́ AI àti ẹ̀kọ́ fídíò kúkúrú. Lo kóòdù mi {{code}} fún kírẹ́dìtì AI àfikún {{credits}}: {{link}}',
     },
     game: {
       label: 'Knowzone World',

@@ -1,0 +1,791 @@
+{
+ "id": "neco-geography-p5",
+ "exam": "neco",
+ "subject": "geography",
+ "year": null,
+ "number": 5,
+ "source": "ai",
+ "minutes": 60,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Map reading and scale",
+   "q": "On a topographic map with scale 1:100,000, the side of each grid square is 3 cm. What is the ground area of one grid square?",
+   "options": [
+    "3 km²",
+    "0.9 km²",
+    "9 km²",
+    "6 km²"
+   ],
+   "answer": 2,
+   "explanation": "Each side represents 3 cm × 100,000 = 300,000 cm, which is 3 km. The area of the square is therefore 3 km × 3 km = 9 km². Treating the result as 3 km² would give a length rather than an area."
+  },
+  {
+   "n": 2,
+   "topic": "Map reading and scale",
+   "q": "A hill summit on a map is 480 m above sea level and its foot is 360 m. If the horizontal distance between the two points is 3 km, what is the average gradient?",
+   "options": [
+    "1 in 120",
+    "1 in 25",
+    "1 in 40",
+    "1 in 12"
+   ],
+   "answer": 1,
+   "explanation": "The vertical rise is 480 m − 360 m = 120 m, and the horizontal distance is 3 km = 3000 m. The gradient is 120/3000 = 1/25, or 1 in 25. Using 3 m instead of 3000 m gives the tempting but incorrect 1 in 40."
+  },
+  {
+   "n": 3,
+   "topic": "Landforms and processes",
+   "q": "In the limestone area around Odukpani, streams disappear through swallow holes and flow in underground channels. This type of landscape is best described as",
+   "options": [
+    "an alluvial plain",
+    "a glacial trough",
+    "karst topography",
+    "a volcanic plateau"
+   ],
+   "answer": 2,
+   "explanation": "Karst topography develops on soluble rocks such as limestone, producing swallow holes, caves and underground drainage. An alluvial plain is formed by river deposition, not by solution of limestone."
+  },
+  {
+   "n": 4,
+   "topic": "Landforms and processes",
+   "q": "A narrow ridge of sand and shingle that projects from the coast into the sea is called a",
+   "options": [
+    "stack",
+    "bay bar",
+    "tombolo",
+    "spit"
+   ],
+   "answer": 3,
+   "explanation": "A spit is a depositional ridge of sand and shingle extending into the sea from the coast. A tombolo joins an island to the mainland, while a stack is an erosional feature."
+  },
+  {
+   "n": 5,
+   "topic": "Rocks and minerals",
+   "q": "A fine-grained sedimentary rock made mainly of hardened clay particles that easily splits into thin layers is",
+   "options": [
+    "limestone",
+    "sandstone",
+    "granite",
+    "shale"
+   ],
+   "answer": 3,
+   "explanation": "Shale is formed from compacted clay and mud and splits readily into thin layers. Sandstone is made of cemented sand grains, while granite is an igneous rock."
+  },
+  {
+   "n": 6,
+   "topic": "Rocks and minerals",
+   "q": "A dark mineral found in the iron-ore deposits near Itakpe is strongly attracted by a magnet. The mineral is most likely",
+   "options": [
+    "bauxite",
+    "haematite",
+    "magnetite",
+    "galena"
+   ],
+   "answer": 2,
+   "explanation": "Magnetite is a magnetic iron ore and is strongly attracted by a magnet. Haematite is also an iron ore but is not strongly magnetic, while galena is mainly a lead ore."
+  },
+  {
+   "n": 7,
+   "topic": "Industry and natural resources",
+   "q": "The development of hydro-electric power at Kainji is favoured mainly by",
+   "options": [
+    "large coal seams close to the river",
+    "a large river with a steep fall and a suitable dam site",
+    "a wide, gently sloping flood plain with low rainfall",
+    "abundant natural gas near the river"
+   ],
+   "answer": 1,
+   "explanation": "Hydro-electric power requires a dependable flow of water and a fall that can be used to turn turbines; Kainji has the River Niger and a suitable dam site. Coal and natural gas are used in thermal stations, while a gentle flood plain with low rainfall does not provide the required head of water."
+  },
+  {
+   "n": 8,
+   "topic": "Industry and natural resources",
+   "q": "The concentration of many manufacturing industries in the Apapa–Ikeja area of Lagos is explained mainly by",
+   "options": [
+    "presence of large limestone and tin deposits",
+    "availability of iron ore and coal",
+    "nearness to port facilities and a large market",
+    "a dry climate and sparse population"
+   ],
+   "answer": 2,
+   "explanation": "The Apapa–Ikeja industrial belt is close to Lagos port, which aids the import of raw materials and export of goods, and it has a very large urban market. Iron ore, coal, limestone and tin are not the main resources supporting industries in that area."
+  },
+  {
+   "n": 9,
+   "topic": "Agriculture",
+   "q": "A farmer in Kaduna State harvested 3,600 kg of maize from a 1.5-hectare farm. What was the yield per hectare?",
+   "options": [
+    "5,400 kg/ha",
+    "2,400 kg/ha",
+    "3,600 kg/ha",
+    "1,800 kg/ha"
+   ],
+   "answer": 1,
+   "explanation": "Yield per hectare is total output divided by the area cultivated: 3,600 kg ÷ 1.5 ha = 2,400 kg/ha. Using the area as a multiplier or halving the output gives the incorrect values."
+  },
+  {
+   "n": 10,
+   "topic": "Agriculture",
+   "q": "A farmer in Sokoto State uses water pumped from a river to grow vegetables on the floodplain during the dry season. This type of farming is best described as",
+   "options": [
+    "Fadama farming",
+    "Plantation agriculture",
+    "Transhumance",
+    "Shifting cultivation"
+   ],
+   "answer": 0,
+   "explanation": "Fadama farming is the use of floodplain land and irrigation for crops, especially vegetables, in the dry season. Plantation agriculture is large-scale estate farming, and transhumance is the seasonal movement of livestock."
+  },
+  {
+   "n": 11,
+   "topic": "Population",
+   "q": "Which factor best explains the high population density in the Lagos area compared with most rural parts of Nigeria?",
+   "options": [
+    "Availability of extensive grazing land",
+    "Concentration of industries and commercial activities",
+    "Very low level of transport development",
+    "High altitude and cool climate"
+   ],
+   "answer": 1,
+   "explanation": "Lagos attracts many people because it has a large concentration of industries, trade and commercial services that provide employment. Extensive grazing and high cool altitudes are more associated with rural or plateau areas, not with this high density."
+  },
+  {
+   "n": 12,
+   "topic": "The earth and the solar system",
+   "q": "A place on longitude 15°E has local time 10:00 a.m. What is the local time at longitude 45°W?",
+   "options": [
+    "12:00 noon",
+    "6:00 a.m.",
+    "6:00 p.m.",
+    "2:00 p.m."
+   ],
+   "answer": 1,
+   "explanation": "The longitude difference is 15°E to 45°W, a total of 60°. At 15° per hour, this is 60 ÷ 15 = 4 hours; since 45°W is west, its local time is 4 hours earlier than 10:00 a.m., giving 6:00 a.m."
+  },
+  {
+   "n": 13,
+   "topic": "Latitude, longitude and time",
+   "q": "A town lies on longitude 24°W. Its local solar time is 08:48. What is Greenwich Mean Time?",
+   "options": [
+    "09:24",
+    "10:24",
+    "07:12",
+    "10:48"
+   ],
+   "answer": 1,
+   "explanation": "At 15° per hour, 24° corresponds to 1 hour 36 minutes. Since the town is west of Greenwich, its local solar time is behind GMT, so GMT = 08:48 + 1:36 = 10:24. The time 07:12 results from subtracting 1 hour 36 minutes instead of adding it."
+  },
+  {
+   "n": 14,
+   "topic": "Latitude, longitude and time",
+   "q": "On 22 December, the Sun is vertically overhead at the Tropic of Capricorn, about 23.5°S. What is the approximate altitude of the noon Sun at a place on latitude 10°N?",
+   "options": [
+    "33.5°",
+    "76.5°",
+    "66.5°",
+    "56.5°"
+   ],
+   "answer": 3,
+   "explanation": "The noon altitude is 90° minus the angular distance between the place's latitude and the Sun's declination. Here the angular distance is 10° + 23.5° = 33.5°, so the altitude is 90° − 33.5° = 56.5°. The value 33.5° is the zenith angle, not the altitude."
+  },
+  {
+   "n": 15,
+   "topic": "Latitude, longitude and time",
+   "q": "Nigerian standard time is GMT+1. Which longitude is used as the standard meridian for this time?",
+   "options": [
+    "15°E",
+    "0°",
+    "30°E",
+    "7°E"
+   ],
+   "answer": 0,
+   "explanation": "Time zones are based on longitude intervals of 15°, and each 15° represents one hour. GMT+1 is one hour ahead of Greenwich, so the standard meridian is 15°E. The longitude 7°E lies near Abuja but is not the meridian used for Nigerian standard time."
+  },
+  {
+   "n": 16,
+   "topic": "Environmental hazards and conservation",
+   "q": "A gas flow station near Warri flares gas continuously. Which environmental problem is most directly associated with this practice?",
+   "options": [
+    "Air pollution and acid rain",
+    "Soil salinisation from irrigation",
+    "Coastal erosion by ocean waves",
+    "Landsliding on steep slopes"
+   ],
+   "answer": 0,
+   "explanation": "Gas flaring releases smoke, particulate matter, sulphur dioxide and nitrogen oxides, which reduce air quality. The acidic gases can later return to the ground as acid rain. Soil salinisation, landslides and coastal erosion are caused mainly by other processes such as poor irrigation, slope failure and wave action."
+  },
+  {
+   "n": 17,
+   "topic": "Environmental hazards and conservation",
+   "q": "A local government in Kano State plans to spend ₦250 million on reducing the quantity of solid waste reaching its landfill. Which action is most suitable?",
+   "options": [
+    "Discharging waste into seasonal streams",
+    "Encouraging open dumping at the outskirts of the town",
+    "Burning all household refuse in the open at night",
+    "Separating recyclable materials at source and composting organic waste"
+   ],
+   "answer": 3,
+   "explanation": "Source separation recovers reusable materials and allows food and plant waste to be composted, reducing the volume that reaches the landfill. Open burning pollutes the air, while dumping waste in streams blocks drainage and can worsen flooding."
+  },
+  {
+   "n": 18,
+   "topic": "Environmental hazards and conservation",
+   "q": "What is the most likely result of overgrazing on the sandy rangeland near Sokoto?",
+   "options": [
+    "Loss of vegetation cover and accelerated wind erosion",
+    "Denser growth of grasses and shrubs",
+    "Formation of a deep, fertile topsoil",
+    "Increased infiltration and higher soil moisture"
+   ],
+   "answer": 0,
+   "explanation": "Overgrazing removes grasses and shrubs, exposing dry sandy soil to wind action. Infiltration then falls and runoff may increase, not rise as claimed. Denser vegetation and fertile topsoil are the opposite of what overgrazing produces."
+  },
+  {
+   "n": 19,
+   "topic": "Settlements",
+   "q": "A settlement develops along the road and river in a narrow highland valley where flat land is limited. Which settlement pattern is it most likely to show?",
+   "options": [
+    "Linear pattern",
+    "Nucleated pattern",
+    "Radial pattern",
+    "Dispersed pattern"
+   ],
+   "answer": 0,
+   "explanation": "Limited flat land forces buildings to line up along the valley road or river, producing a linear pattern. A dispersed pattern would scatter buildings over farmland, while a radial pattern would spread outwards from a central point."
+  },
+  {
+   "n": 20,
+   "topic": "Settlements",
+   "q": "Which feature is most characteristic of the central business district of a Nigerian city?",
+   "options": [
+    "Large industrial estates with very little traffic",
+    "Low-rise housing only, with no commercial activity",
+    "Extensive farmland and scattered farmsteads",
+    "High land values and a concentration of shops, banks and offices"
+   ],
+   "answer": 3,
+   "explanation": "Competition for accessible central plots raises land values and attracts commercial and administrative activities such as shops, banks and offices. Residential and heavy industrial uses are usually found farther from the city centre, where land is cheaper and traffic is lighter."
+  },
+  {
+   "n": 21,
+   "topic": "Geography of Nigeria",
+   "q": "Which is the highest point in Nigeria?",
+   "options": [
+    "Shere Hills",
+    "Obudu Plateau",
+    "Zuma Rock",
+    "Chappal Waddi"
+   ],
+   "answer": 3,
+   "explanation": "Chappal Waddi, in Taraba State near the Cameroon border, rises to about 2,419 m and is Nigeria's highest peak. Shere Hills and Obudu Plateau are notable highlands but are lower, while Zuma Rock is a prominent inselberg rather than the country's highest point."
+  },
+  {
+   "n": 22,
+   "topic": "Transport and trade",
+   "q": "A transporter charges ₦8,500 per tonne to move onions from Kano to Lagos. For a consignment of 40 tonnes, a 5% fuel surcharge is added. What is the total cost?",
+   "options": [
+    "₦357,000",
+    "₦323,000",
+    "₦374,000",
+    "₦340,000"
+   ],
+   "answer": 0,
+   "explanation": "The basic charge is 40 × ₦8,500 = ₦340,000. A 5% surcharge adds ₦17,000, giving ₦340,000 + ₦17,000 = ₦357,000. ₦340,000 omits the surcharge, while ₦323,000 subtracts the surcharge instead of adding it."
+  },
+  {
+   "n": 23,
+   "topic": "Map reading and scale",
+   "q": "A rectangular school field measures 12 cm by 8 cm on a map with scale 1:25,000. What is its actual area in hectares?",
+   "options": [
+    "240 hectares",
+    "60 hectares",
+    "6,000 hectares",
+    "600 hectares"
+   ],
+   "answer": 3,
+   "explanation": "Each centimetre represents 250 m, so the field is 3,000 m by 2,000 m, or 6,000,000 m². Since 1 hectare is 10,000 m², the area is 600 hectares. Confusing area conversion with linear conversion may give 60 or 6,000 hectares."
+  },
+  {
+   "n": 24,
+   "topic": "Vegetation and soils",
+   "q": "A farmer in the Udi Hills cultivates a steep slope. Which practice is most suitable for reducing soil erosion on the farm?",
+   "options": [
+    "Constructing terraces along the contour",
+    "Burning the vegetation before each planting season",
+    "Allowing cattle to graze freely on the slope",
+    "Ploughing straight down the slope"
+   ],
+   "answer": 0,
+   "explanation": "Contour terraces break the slope and slow runoff, allowing water to infiltrate and reducing soil loss. Ploughing downslope and burning expose the soil to rapid erosion, while uncontrolled grazing compacts and loosens the surface."
+  },
+  {
+   "n": 25,
+   "topic": "Map reading and scale",
+   "q": "On a topographic map, a contour line bends upstream to form a V-shape. What does this indicate?",
+   "options": [
+    "The valley floor is level with the surrounding plateau",
+    "A spur extends across the valley at that point",
+    "The stream flows towards the point of the V",
+    "The land rises in the direction in which the V points"
+   ],
+   "answer": 3,
+   "explanation": "When a contour crosses a valley, it bends upstream so the point of the V indicates the higher ground upstream. The stream flows away from the point of the V, down the valley. A spur would produce a bend pointing downslope, not upstream."
+  },
+  {
+   "n": 26,
+   "topic": "Vegetation and soils",
+   "q": "Which soil condition is most suitable for the commercial cultivation of oil palm in southern Nigeria?",
+   "options": [
+    "Waterlogged saline soil",
+    "Shallow sandy soil over a hardpan",
+    "Deep, well-drained loamy soil",
+    "Thin stony soil on steep slopes"
+   ],
+   "answer": 2,
+   "explanation": "Oil palm grows best where roots can penetrate deeply and drainage is adequate, so a deep, well-drained loam is suitable. Shallow, saline-waterlogged or thin stony soils restrict root development and yield. These poor conditions are common limitations rather than requirements."
+  },
+  {
+   "n": 27,
+   "topic": "Rocks and minerals",
+   "q": "A geologist examines a rock near Lokoja and finds that it consists of rounded pebbles held together by a finer-grained cement. The rock is best described as",
+   "options": [
+    "shale",
+    "granite",
+    "conglomerate",
+    "marble"
+   ],
+   "answer": 2,
+   "explanation": "Conglomerate is a sedimentary rock made of rounded pebbles cemented together by finer material. Shale is formed from compacted clay, while granite is an igneous rock and marble is a metamorphic rock, so those names do not fit the pebbly texture."
+  },
+  {
+   "n": 28,
+   "topic": "Rocks and minerals",
+   "q": "Which ore mineral is the chief source of lead and is mined together with zinc in the Abakaliki area?",
+   "options": [
+    "Bauxite",
+    "Galena",
+    "Cassiterite",
+    "Sphalerite"
+   ],
+   "answer": 1,
+   "explanation": "Galena is lead sulphide and the main lead ore; it occurs with sphalerite, the zinc ore, in the Abakaliki lead-zinc field. Cassiterite is a tin ore, sphalerite is mainly a zinc ore, and bauxite is an aluminium ore, so they do not answer the lead-source part."
+  },
+  {
+   "n": 29,
+   "topic": "Industry and natural resources",
+   "q": "The textile mill in Kaduna was originally attracted mainly by the availability of",
+   "options": [
+    "iron ore from Itakpe",
+    "cotton from the surrounding region",
+    "crude oil from the Niger Delta",
+    "limestone from Ewekoro"
+   ],
+   "answer": 1,
+   "explanation": "Textile production needs large amounts of cotton fibre, and the Kaduna area drew on cotton grown in northern Nigeria. Crude oil, iron ore and limestone are linked to other industries and are not the main raw material for textile manufacture."
+  },
+  {
+   "n": 30,
+   "topic": "Agriculture",
+   "q": "A maize farmer in Ogbomoso plans to store his grain for six months. Which practice will best reduce damage by weevils?",
+   "options": [
+    "Treat the grain with an approved insecticide and store it in airtight containers",
+    "Mix the grain with fresh maize leaves during storage",
+    "Moisten the grain slightly before bagging",
+    "Store the grain in open baskets in a dark room"
+   ],
+   "answer": 0,
+   "explanation": "Drying maize well and using approved storage insecticide in airtight containers limits weevil attack and mould growth. Open baskets allow insects and moisture in, wetting the grain encourages mould, and fresh leaves add moisture that spoils stored grain."
+  },
+  {
+   "n": 31,
+   "topic": "Agriculture",
+   "q": "A poultry farmer in Ilorin notices that the eggshells from his layers are thin and easily broken. Which mineral is most needed in the feed to correct this?",
+   "options": [
+    "Nitrogen",
+    "Calcium",
+    "Sodium",
+    "Iron"
+   ],
+   "answer": 1,
+   "explanation": "Layers need calcium, usually supplied as limestone or oyster shell, to form strong eggshells. Nitrogen supports protein growth, iron is needed for blood, and sodium is part of common salt; none is the main eggshell mineral."
+  },
+  {
+   "n": 32,
+   "topic": "Population",
+   "q": "At a rural settlement in Niger State, 1,800 people are aged 0–14 years, 3,000 are aged 15–64 years and 600 are aged 65 years and above. What is the dependency ratio per 100 people in the working-age group?",
+   "options": [
+    "40 dependants per 100 working-age people",
+    "125 dependants per 100 working-age people",
+    "80 dependants per 100 working-age people",
+    "180 dependants per 100 working-age people"
+   ],
+   "answer": 2,
+   "explanation": "The dependent population is 1,800 + 600 = 2,400, while the working-age population is 3,000. The dependency ratio is (2,400 ÷ 3,000) × 100 = 80 dependants per 100 working-age people."
+  },
+  {
+   "n": 33,
+   "topic": "Population",
+   "q": "A district in Kaduna State had a mid-year population of 250,000. During the year, it recorded 7,500 births, 3,000 deaths, 2,000 immigrants and 1,500 emigrants. What was the natural increase of the district?",
+   "options": [
+    "3,000 people",
+    "500 people",
+    "5,000 people",
+    "4,500 people"
+   ],
+   "answer": 3,
+   "explanation": "Natural increase is births minus deaths, which is 7,500 − 3,000 = 4,500 people. The net migration of 2,000 − 1,500 = 500 people affects total population change but is not part of natural increase."
+  },
+  {
+   "n": 34,
+   "topic": "Population",
+   "q": "In a rural community in Katsina State, which measure is most likely to reduce the birth rate over time?",
+   "options": [
+    "Expanding girls' secondary education and access to reproductive health information",
+    "Providing more farmland for large households",
+    "Encouraging early marriage to increase family size",
+    "Offering cash rewards for families with many children"
+   ],
+   "answer": 0,
+   "explanation": "Girls' education and reproductive health information are associated with later marriage, wider use of family planning and lower fertility. Encouraging early marriage or rewarding large families would tend to maintain or raise the birth rate."
+  },
+  {
+   "n": 35,
+   "topic": "The earth and the solar system",
+   "q": "Which planet takes a longer time to rotate once on its axis than to complete one revolution around the Sun?",
+   "options": [
+    "Mars",
+    "Venus",
+    "Mercury",
+    "Jupiter"
+   ],
+   "answer": 1,
+   "explanation": "Venus rotates very slowly, taking about 243 Earth days for one rotation, while it completes one orbit around the Sun in about 225 Earth days. Its day is therefore longer than its year."
+  },
+  {
+   "n": 36,
+   "topic": "Latitude, longitude and time",
+   "q": "On 22 December, the noon Sun is directly overhead at which latitude?",
+   "options": [
+    "23.5°N",
+    "23.5°S",
+    "66.5°S",
+    "0°"
+   ],
+   "answer": 1,
+   "explanation": "On 22 December, the Sun is overhead at the Tropic of Capricorn, which is about 23.5°S. The equator has overhead noon Sun at the equinoxes, while 23.5°N is the position at the June solstice."
+  },
+  {
+   "n": 37,
+   "topic": "Latitude, longitude and time",
+   "q": "Which pair of longitudes has a difference of 2 hours in local solar time?",
+   "options": [
+    "20°E and 10°W",
+    "50°E and 30°E",
+    "35°E and 20°E",
+    "40°W and 25°W"
+   ],
+   "answer": 0,
+   "explanation": "The Earth rotates through 15° per hour, so 2 hours correspond to a longitude difference of 30°. The pair 20°E and 10°W differs by 20° + 10° = 30°, while the other pairs differ by 15°, 15° and 20°."
+  },
+  {
+   "n": 38,
+   "topic": "Latitude, longitude and time",
+   "q": "A radio programme is broadcast live from Lagos at 09:00 Nigerian time (GMT+1). At what time will it be received in Nairobi, which uses GMT+3?",
+   "options": [
+    "13:00",
+    "11:00",
+    "10:00",
+    "07:00"
+   ],
+   "answer": 1,
+   "explanation": "Lagos time is one hour ahead of GMT, so 09:00 there is 08:00 GMT. Nairobi is three hours ahead of GMT, giving 08:00 + 3 hours = 11:00."
+  },
+  {
+   "n": 39,
+   "topic": "Settlements",
+   "q": "The main reason why some pre-colonial settlements in Nigeria were built on hilltops was to",
+   "options": [
+    "have easy access to fertile farmland",
+    "be close to sources of drinking water",
+    "obtain protection from enemy attacks",
+    "have a clear view of the surrounding area"
+   ],
+   "answer": 2,
+   "explanation": "Hilltop sites provided natural defence against invaders and wild animals, which was a major consideration in the choice of settlement sites in pre-colonial times. Farmland and water were usually more readily available on the plains below, so these were not the main reasons for choosing hilltops. A clear view of the surroundings was a secondary advantage rather than the primary reason."
+  },
+  {
+   "n": 40,
+   "topic": "Settlements",
+   "q": "A country has one city that is several times larger than the second-largest city and dominates the country's economic and political life. Such a city is best described as",
+   "options": [
+    "a satellite town",
+    "a dormitory settlement",
+    "a conurbation",
+    "a primate city"
+   ],
+   "answer": 3,
+   "explanation": "A primate city is disproportionately large compared with other cities in the same country and exerts dominant economic and political influence. A conurbation, by contrast, is formed when several separate towns grow and merge into one continuous built-up area."
+  },
+  {
+   "n": 41,
+   "topic": "Settlements",
+   "q": "The dispersed settlement pattern commonly found in parts of south-eastern Nigeria developed mainly because",
+   "options": [
+    "each family lived close to its own farmland",
+    "the colonial government resettled people in scattered groups",
+    "the area had many large rivers",
+    "people needed to live together for defence"
+   ],
+   "answer": 0,
+   "explanation": "In much of south-eastern Nigeria, families traditionally built their homes on or near their farm plots, so settlements were scattered rather than concentrated in one place. The need for defence would have encouraged people to live close together in nucleated settlements, not in dispersed groups."
+  },
+  {
+   "n": 42,
+   "topic": "Geography of Nigeria",
+   "q": "The Federal Capital Territory was moved from Lagos to Abuja mainly because Abuja",
+   "options": [
+    "is centrally located and has a healthier climate",
+    "is closer to the main oil-producing areas",
+    "lies on the coast and has a natural harbour",
+    "has large deposits of coal and iron ore"
+   ],
+   "answer": 0,
+   "explanation": "Abuja was chosen because of its central location, which makes it more accessible from all parts of the country, and its higher, healthier climate compared with the hot, crowded coastal city of Lagos. Abuja is landlocked and has no harbour, so the coastal option is incorrect."
+  },
+  {
+   "n": 43,
+   "topic": "Vegetation and soils",
+   "q": "Which vegetation belt in Nigeria is most seriously affected by desertification?",
+   "options": [
+    "Mangrove swamp",
+    "Tropical rainforest",
+    "Derived savanna",
+    "Sahel savanna"
+   ],
+   "answer": 3,
+   "explanation": "The Sahel savanna lies in the far north, close to the Sahara, and receives very little rainfall, so it is highly vulnerable to desertification. The tropical rainforest and mangrove swamp are wet environments and are not affected by desertification."
+  },
+  {
+   "n": 44,
+   "topic": "Vegetation and soils",
+   "q": "Soil structure refers to the",
+   "options": [
+    "amount of water the soil can hold",
+    "arrangement of soil particles into aggregates or crumbs",
+    "relative proportions of sand, silt and clay in the soil",
+    "number of horizons in the soil profile"
+   ],
+   "answer": 1,
+   "explanation": "Soil structure describes how individual soil particles are grouped together into aggregates or crumbs, which affects drainage and root growth. The relative proportions of sand, silt and clay are called soil texture, not structure."
+  },
+  {
+   "n": 45,
+   "topic": "Vegetation and soils",
+   "q": "Which of the following is a characteristic of laterite soils in Nigeria?",
+   "options": [
+    "They are the most fertile soils for growing cocoa",
+    "They contain a high proportion of humus throughout the profile",
+    "They are formed mainly from volcanic ash",
+    "They become hard and impermeable when exposed and dry"
+   ],
+   "answer": 3,
+   "explanation": "Laterite soils harden on exposure to air and sun, forming a hard crust that water cannot easily pass through. They are usually leached and low in humus, so they are not the most fertile soils for cocoa."
+  },
+  {
+   "n": 46,
+   "topic": "Transport and trade",
+   "q": "A tax imposed by a government on goods imported into the country is called",
+   "options": [
+    "a subsidy",
+    "a tariff",
+    "a quota",
+    "an embargo"
+   ],
+   "answer": 1,
+   "explanation": "A tariff is a tax on imported goods, usually imposed to protect domestic industries or raise revenue. A quota limits the quantity of goods that may be imported, while an embargo is a complete ban on trade with a country."
+  },
+  {
+   "n": 47,
+   "topic": "Landforms and processes",
+   "q": "The zigzag movement of water along a coast that moves beach materials gradually in one direction is called",
+   "options": [
+    "wave refraction",
+    "longshore drift",
+    "tidal range",
+    "backwash"
+   ],
+   "answer": 1,
+   "explanation": "Longshore drift occurs when waves approach the shore obliquely, carrying sediment up the beach and returning it at right angles so that material moves along the coast. Wave refraction is the bending of waves, while backwash is the seaward return of water down the beach."
+  },
+  {
+   "n": 48,
+   "topic": "Landforms and processes",
+   "q": "A waterfall is most likely to form where a river crosses",
+   "options": [
+    "a gently sloping delta",
+    "a band of resistant rock",
+    "a meander neck",
+    "a wide flood plain"
+   ],
+   "answer": 1,
+   "explanation": "A waterfall commonly forms where a river crosses resistant rock that is eroded more slowly than nearby weaker rock, producing a steep step in the river course. Flood plains and deltas are lowland depositional features, not resistant rock barriers."
+  },
+  {
+   "n": 49,
+   "topic": "Landforms and processes",
+   "q": "The removal of loose sand and dust by wind from a bare surface is known as",
+   "options": [
+    "deflation",
+    "abrasion",
+    "deposition",
+    "attrition"
+   ],
+   "answer": 0,
+   "explanation": "Deflation is the lifting and removal of loose surface material by wind. Abrasion is the wearing away of rock by wind-borne particles, while deposition is the dropping of transported material."
+  },
+  {
+   "n": 50,
+   "topic": "Industry and natural resources",
+   "q": "The cement factory at Obajana in Kogi State is best explained by the nearby availability of which raw material?",
+   "options": [
+    "Tin ore",
+    "Natural gas",
+    "Crude oil",
+    "Limestone"
+   ],
+   "answer": 3,
+   "explanation": "Cement production depends mainly on limestone, which is bulky and costly to transport, so the factory is located near limestone deposits. Crude oil and tin ore are not the main raw materials for cement, although natural gas may be used to supply energy."
+  },
+  {
+   "n": 51,
+   "topic": "Agriculture",
+   "q": "A cattle rearer in Sokoto moves his herd southwards during the dry season and returns north with the rains. This practice is known as",
+   "options": [
+    "Stall feeding",
+    "Transhumance",
+    "Ranching",
+    "Mixed farming"
+   ],
+   "answer": 1,
+   "explanation": "Transhumance is the seasonal movement of livestock between grazing areas in response to rainfall and pasture availability. Ranching is organised grazing on fixed land, stall feeding is confined feeding, and mixed farming combines crop and livestock production."
+  },
+  {
+   "n": 52,
+   "topic": "Population",
+   "q": "A situation in which the number of people in an area is greater than the resources available to support them is called",
+   "options": [
+    "Underpopulation",
+    "Overpopulation",
+    "Optimum population",
+    "Population density"
+   ],
+   "answer": 1,
+   "explanation": "Overpopulation occurs when the population exceeds the resources available for adequate living. Population density is only the number of people per unit area, while optimum population is the ideal number for available resources."
+  },
+  {
+   "n": 53,
+   "topic": "Weather and climate",
+   "q": "Most weather changes such as cloud formation and rainfall take place in the",
+   "options": [
+    "Thermosphere",
+    "Mesosphere",
+    "Troposphere",
+    "Stratosphere"
+   ],
+   "answer": 2,
+   "explanation": "The troposphere contains most of the atmosphere's water vapour and is where air rises, cools and forms clouds. The stratosphere is comparatively stable, while the mesosphere and thermosphere are too thin and cold or hot for ordinary weather processes."
+  },
+  {
+   "n": 54,
+   "topic": "Population",
+   "q": "Which factor best explains the sparse population in the Sahel part of northern Nigeria?",
+   "options": [
+    "Low and unreliable rainfall",
+    "Very fertile alluvial soils",
+    "Extensive flat relief",
+    "High annual rainfall"
+   ],
+   "answer": 0,
+   "explanation": "The Sahel has low and unreliable rainfall, with frequent drought, which limits crop farming and water supply. Fertile alluvial soils and high rainfall would normally attract settlement, while flat relief alone does not explain sparse population."
+  },
+  {
+   "n": 55,
+   "topic": "Agriculture",
+   "q": "Which of the following is the main reason for using improved varieties of maize by farmers in Nigeria?",
+   "options": [
+    "To obtain higher yields and better resistance to pests and diseases",
+    "To eliminate completely the use of fertilizer on the farm",
+    "To make the grain dry faster than local varieties under all conditions",
+    "To remove the need for rainfall during the growing season"
+   ],
+   "answer": 0,
+   "explanation": "Improved maize varieties are developed mainly for higher yield potential and better tolerance of pests and diseases. They still require water and nutrients, and their storage depends on proper drying rather than an automatic ability to dry under all conditions."
+  },
+  {
+   "n": 56,
+   "topic": "Latitude, longitude and time",
+   "q": "An aircraft leaves a town on longitude 20°W at 08:00 local solar time and flies westwards for 6 hours to a town on longitude 65°W. What is the local solar time at the destination on arrival?",
+   "options": [
+    "05:00",
+    "17:00",
+    "11:00",
+    "14:00"
+   ],
+   "answer": 2,
+   "explanation": "The longitude difference is 45°, which equals 3 hours of solar time. Since 65°W is west of 20°W, its local solar time is 3 hours behind; at the moment of departure it is 05:00, and after the 6-hour flight it is 11:00. Adding the 3-hour correction instead of subtracting it gives 17:00."
+  },
+  {
+   "n": 57,
+   "topic": "Environmental hazards and conservation",
+   "q": "Oil spills have damaged mangroves and reduced fishing in a coastal community in Delta State. Which measure best combines environmental restoration with support for local livelihoods?",
+   "options": [
+    "Spraying chemical dispersants over the entire creek without monitoring",
+    "Converting the mangrove area to permanent building land",
+    "Burning the oil-soaked mangrove to speed up recovery",
+    "Replanting mangroves while promoting sustainable fishing and spill monitoring"
+   ],
+   "answer": 3,
+   "explanation": "Replanting mangroves restores the habitat and shoreline, while sustainable fishing and spill monitoring protect both incomes and future spill detection. Burning the oil-soaked vegetation or applying dispersants indiscriminately can worsen damage."
+  },
+  {
+   "n": 58,
+   "topic": "Environmental hazards and conservation",
+   "q": "A town in Borno State suffers seasonal floods that damage houses and roads each rainy season. Which measure is most sustainable in reducing the flood risk?",
+   "options": [
+    "Clearing all vegetation along the river channel to speed up runoff",
+    "Sinking extra boreholes throughout the town to lower the water table",
+    "Constructing drainage channels and enforcing setbacks from flood-prone areas",
+    "Building more houses on the flood plain to raise tax revenue"
+   ],
+   "answer": 2,
+   "explanation": "Drainage channels increase the safe removal of floodwater, and setbacks keep people and property out of the most flood-prone land. Building on the flood plain or clearing riverbank vegetation would increase runoff and exposure to floods."
+  },
+  {
+   "n": 59,
+   "topic": "Settlements",
+   "q": "The growth of a settlement around government offices such as a local government secretariat, a courthouse and a police headquarters is best explained by its function as a",
+   "options": [
+    "resort centre",
+    "administrative centre",
+    "industrial centre",
+    "market centre"
+   ],
+   "answer": 1,
+   "explanation": "Government offices, courts and police headquarters are administrative functions, so such a settlement grows as an administrative centre. A market centre depends mainly on trading, while industrial and resort centres depend on manufacturing and recreation."
+  },
+  {
+   "n": 60,
+   "topic": "Settlements",
+   "q": "Which factor best explains the growth of a town located at the only bridge across a major river for many kilometres, where roads from surrounding areas converge?",
+   "options": [
+    "Its high relief for defence",
+    "Its nearby cool climate for recreation",
+    "Its nodal position at a river crossing",
+    "Its location on a mineral-bearing rock"
+   ],
+   "answer": 2,
+   "explanation": "The single bridge forces traffic from several roads to converge there, making the town a nodal settlement that attracts trade and services. High relief, minerals or climate are not indicated by the bridge and converging roads."
+  }
+ ]
+}

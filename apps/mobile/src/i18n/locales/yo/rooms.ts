@@ -61,7 +61,7 @@ const rooms: Translation<typeof en> = {
   },
   goal: 'ÀFOJÚSÙN YÀRÁ',
   goalEmpty: 'Kò sí àfojúsùn síbẹ̀.',
-  goalPlaceholder: 'bí Parí JAMB Physics paper 1',
+  goalPlaceholder: 'bí Parí {{exam}} Physics paper 1',
   setGoal: 'Ṣètò àfojúsùn',
   editGoal: 'Yí i padà',
   goalProgress: '{{done}} nínú {{total}} ti parí',

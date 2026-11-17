@@ -39,6 +39,9 @@ services:
         sync: false
       - key: OPENAI_API_KEY
         sync: false
+      # Optional: Vultr Serverless Inference, a second AI provider for content written in bulk.
+      - key: VULTR_INFERENCE_API_KEY
+        sync: false
       - key: YOUTUBE_API_KEY
         sync: false
       - key: FLW_SECRET_KEY

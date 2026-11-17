@@ -66,6 +66,10 @@ const personalize: Translation<typeof en> = {
     title: 'Ta yaya kake son koyo?',
     subtitle: 'Zaɓi waɗanda ka fi so. Za mu fara da su, mu haɗa da sauran.',
   },
+  region: {
+    title: 'A ina kake karatu?',
+    subtitle: 'Za mu nuna maka jarabawa da gwajin jarabawa na ƙasarka. Za ka iya canza shi kowane lokaci a Saituna.',
+  },
   language: {
     title: 'Zaɓi harshenka',
     subtitle: 'Gaba ɗaya manhajar, darussanka da malamin AI ɗinka za su yi amfani da wannan harshe nan take.',
@@ -114,6 +118,7 @@ const personalize: Translation<typeof en> = {
       teachLevels: 'Ɗalibai',
       age: 'Rukunin shekaru',
       education: 'Mataki',
+      region: 'Ƙasar karatu',
       pathway: 'Hanya',
       exams: 'Jarrabawoyi',
       subjects: 'Fannoni',
@@ -259,7 +264,7 @@ const personalize: Translation<typeof en> = {
   learnerTypes: {
     school: { label: 'Ɗalibin makaranta', description: 'Makarantar firamare ko sakandare' },
     university: { label: 'Jami’a ko kwaleji', description: 'Digiri, difloma ko ND/HND' },
-    exam: { label: 'Mai shirin jarrabawa', description: 'Shiri don JAMB, WAEC, IELTS da sauransu' },
+    exam: { label: 'Mai shirin jarrabawa', description: 'Shiri don JAMB, WAEC, IELTS da sauransu', descriptionFor: 'Shiri don {{exams}} da sauransu' },
     professional: { label: 'Ma’aikaci', description: 'Ƙara ƙwarewa ko samun takardar shaida' },
     lifelong: { label: 'Mai son koyo', description: 'Koyon sabon abu don nishaɗi' },
     teacher: { label: 'Malami ko mai koyarwa', description: 'Ƙirƙiri azuzuwa, ba da atisaye, bibiyi ci gaba' },
@@ -268,7 +273,7 @@ const personalize: Translation<typeof en> = {
     'school-teacher': { label: 'Malamin makaranta', description: 'Makarantar firamare ko sakandare' },
     lecturer: { label: 'Malamin jami’a', description: 'Jami’a, kwalejin fasaha ko kwaleji' },
     'private-tutor': { label: 'Malami mai zaman kansa', description: 'Mutum ɗaya ko ƙananan rukunoni' },
-    'exam-coach': { label: 'Mai horar da jarrabawa', description: 'JAMB, WAEC, IELTS da sauransu' },
+    'exam-coach': { label: 'Mai horar da jarrabawa', description: 'JAMB, WAEC, IELTS da sauransu', descriptionFor: '{{exams}} da sauransu' },
     parent: { label: 'Iyaye ko mai koyarwa a gida', description: 'Ina jagorantar ’ya’yana' },
   },
   teachLevelOptions: {

@@ -4,6 +4,8 @@ import type en from '../en/exams';
 
 const exams: Translation<typeof en> = {
   title: 'Mitihani Iliyopita',
+  /** The same page for SAT and GCSE students: those papers are practice, never "past questions". */
+  practiceTitle: 'Mazoezi ya mitihani',
   eyebrow: 'JAMB · WAEC · NECO',
   offline: 'Mitihani Iliyopita inahitaji intaneti.',
   loadFailed: 'Hatukuweza kupakia mitihani. Angalia intaneti yako kisha ujaribu tena.',
@@ -13,11 +15,30 @@ const exams: Translation<typeof en> = {
     title: 'Mitihani iliyopita ya JAMB, WAEC na NECO',
     body: 'Fanya mazoezi ya kila somo kwa muundo halisi, ona maelezo ya kila jibu, na ufanye mitihani yenye muda.',
     action: 'Anza mazoezi',
+    /** One exam (the WAEC countries outside Nigeria). */
+    titleOne: 'Mitihani iliyopita ya {{exam}}',
+    titlePractice: 'Mazoezi ya {{exams}}',
+    bodyPractice: 'Mazoezi ya maswali ya chaguo nyingi kwa mtihani na somo, kila jibu likiwa na maelezo. Yameandikwa na AI na kukaguliwa mara mbili; si mitihani iliyopita.',
+    sat: {
+      title: 'Karatasi za mazoezi za SAT',
+      body: 'Mazoezi ya maswali ya chaguo nyingi yanayofuata sehemu na muda wa SAT ya kidijitali, kila jibu likiwa na maelezo. Yameandikwa na AI na kukaguliwa mara mbili; si mitihani iliyopita.',
+    },
+    gcse: {
+      title: 'Mazoezi ya mtindo wa GCSE',
+      body: 'Mazoezi ya maswali ya chaguo nyingi kwa mada katika Maths, English Language, Biology, Chemistry na Physics, kila jibu likiwa na maelezo. Yameandikwa na AI na kukaguliwa mara mbili; si mitihani iliyopita.',
+    },
   },
   exams: {
     jamb: { name: 'JAMB', full: 'JAMB UTME', about: 'Mtihani wa kompyuta · Use of English na masomo matatu' },
     waec: { name: 'WAEC', full: 'WAEC WASSCE', about: 'Cheti cha sekondari · maswali ya kuchagua' },
     neco: { name: 'NECO', full: 'NECO SSCE', about: 'Cheti cha sekondari · maswali ya kuchagua' },
+    sat: { name: 'SAT', full: 'Mazoezi ya SAT ya kidijitali', about: 'Reading and Writing · Math · chaguo nyingi pekee' },
+    act: { name: 'ACT', full: 'Mazoezi ya ACT', about: 'English · Math · Reading · Science' },
+    ap: { name: 'AP', full: 'Mazoezi ya chaguo nyingi ya AP', about: 'Calculus AB · Biology · Chemistry · Physics 1 · US History · English Language' },
+    gcse: { name: 'GCSE', full: 'Mazoezi ya mtindo wa GCSE', about: 'Mazoezi ya chaguo nyingi kwa mada' },
+    alevel: { name: 'A-level', full: 'Mazoezi ya mtindo wa A-level', about: 'Mazoezi ya chaguo nyingi kwa mada' },
+    kcse: { name: 'KCSE', full: 'Mazoezi ya mtindo wa KCSE', about: 'Mazoezi ya chaguo nyingi kwa mada' },
+    nsc: { name: 'Matric', full: 'Mazoezi ya mtindo wa Matric (NSC)', about: 'Mazoezi ya chaguo nyingi kwa mada' },
   },
   subjects: {
     english: 'Lugha ya Kiingereza',
@@ -30,7 +51,37 @@ const exams: Translation<typeof en> = {
     literature: 'Fasihi ya Kiingereza',
     geography: 'Jiografia',
     commerce: 'Biashara',
+    'reading-writing': 'Reading and Writing',
+    math: 'Math',
+    maths: 'Maths',
+    'english-language': 'English Language',
+    reading: 'Reading',
+    science: 'Science',
+    'calculus-ab': 'Calculus AB',
+    'physics-1': 'Physics 1',
+    'us-history': 'US History',
+    'physical-sciences': 'Physical Sciences',
+    'life-sciences': 'Life Sciences',
+    accounting: 'Accounting',
   },
+  /** What SAT and GCSE practice is and isn't, shown wherever those papers are listed. */
+  notes: {
+    sat: 'Haya ni maswali ya mazoezi yaliyoandikwa na AI na kukaguliwa na ukaguzi wa pili wa AI; si karatasi za SAT zilizopita. Yanafuata sehemu na muda wa SAT ya kidijitali, lakini ni ya chaguo nyingi pekee: sehemu halisi ya Math ina pia maswali ambapo unaandika jibu lako mwenyewe.',
+    act: 'Haya ni maswali ya mazoezi yaliyoandikwa na AI na kukaguliwa na ukaguzi wa pili wa AI; si karatasi za ACT zilizopita. Yanafuata sehemu, idadi ya maswali na muda wa ACT.',
+    ap: 'Haya ni maswali ya mazoezi yaliyoandikwa na AI na kukaguliwa na ukaguzi wa pili wa AI; si karatasi za AP zilizopita. Yanafanyia mazoezi sehemu ya chaguo nyingi pekee ya kila mtihani wa AP: mitihani halisi ina pia sehemu ya majibu ya kuandika.',
+    gcse: 'Haya ni maswali ya mazoezi yaliyoandikwa na AI na kukaguliwa na ukaguzi wa pili wa AI; si mitihani iliyopita. Karatasi halisi za GCSE zina zaidi majibu ya kuandika, kwa hiyo tumia majaribio haya ya chaguo nyingi kurudia kila mada, si kama nakala ya mtihani.',
+    alevel: 'Haya ni maswali ya mazoezi yaliyoandikwa na AI na kukaguliwa na ukaguzi wa pili wa AI; si mitihani iliyopita. Karatasi halisi za A-level zina zaidi majibu ya kuandika, kwa hiyo tumia majaribio haya ya chaguo nyingi kurudia kila mada, si kama nakala ya mtihani.',
+    kcse: 'Haya ni maswali ya mazoezi yaliyoandikwa na AI na kukaguliwa na ukaguzi wa pili wa AI; si mitihani iliyopita. Karatasi halisi za KCSE zina zaidi majibu ya kuandika, kwa hiyo tumia majaribio haya ya chaguo nyingi kurudia kila mada, si kama nakala ya mtihani.',
+    nsc: 'Haya ni maswali ya mazoezi yaliyoandikwa na AI na kukaguliwa na ukaguzi wa pili wa AI; si mitihani iliyopita. Karatasi halisi za Matric (NSC) zina zaidi majibu ya kuandika, kwa hiyo tumia majaribio haya ya chaguo nyingi kurudia kila mada, si kama nakala ya mtihani.',
+  },
+  /** A study region we have no papers for. */
+  none: {
+    title: 'Hakuna karatasi za mitihani za {{country}}',
+    body: 'Mwalimu wako wa AI, vitabu vya kiada na kozi hufanya kazi na mtaala wowote. Bado unaweza kufanya mazoezi kwa karatasi za nchi nyingine hapa chini.',
+  },
+  otherExams: 'Mitihani mingine',
+  region: 'Nchi ya masomo: {{country}}',
+  change: 'Badilisha',
   pickExam: 'Chagua mtihani wako',
   carryOn: 'Endelea ulipoishia',
   pickSubject: 'Chagua somo',
@@ -59,6 +110,8 @@ const exams: Translation<typeof en> = {
     study: { title: 'Soma', body: 'Ona kila swali pamoja na jibu na maelezo yake.' },
     practice: { title: 'Mazoezi', body: 'Jibu kwa kasi yako na uone kama uko sahihi baada ya kila swali.' },
     timed: { title: 'Mtihani wenye muda', body: 'Kama mtihani halisi: dakika {{minutes}}, matokeo mwishoni.' },
+    /** GCSE practice isn't in the exam's format, so its timed mode doesn't say "like the real exam". */
+    timedQuiz: { title: 'Jaribio lenye muda', body: 'Kushindana na saa: dakika {{minutes}}, matokeo mwishoni.' },
     history: 'ALAMA ZAKO',
     historyRow: '{{score}}/{{total}} · {{mode}} · {{date}}',
     modeName: { practice: 'Mazoezi', timed: 'Wenye muda' },

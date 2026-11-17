@@ -1,0 +1,531 @@
+{
+ "id": "jamb-chemistry-p4",
+ "exam": "jamb",
+ "subject": "chemistry",
+ "year": null,
+ "number": 4,
+ "source": "ai",
+ "minutes": 27,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Atomic structure",
+   "q": "Which electron configuration represents the ground-state Zn²⁺ ion? (Zinc has atomic number 30.)",
+   "options": [
+    "[Ar]3d⁹4s¹",
+    "[Ar]3d¹⁰4s²",
+    "[Ar]3d¹⁰",
+    "[Ar]3d⁸"
+   ],
+   "answer": 2,
+   "explanation": "A neutral zinc atom has the configuration [Ar]3d¹⁰4s². In forming Zn²⁺, the two 4s electrons are removed before any 3d electrons, so the ion is [Ar]3d¹⁰."
+  },
+  {
+   "n": 2,
+   "topic": "Atomic structure",
+   "q": "The series of lines in the hydrogen emission spectrum that lies in the visible region is the",
+   "options": [
+    "Brackett series",
+    "Paschen series",
+    "Lyman series",
+    "Balmer series"
+   ],
+   "answer": 3,
+   "explanation": "The Balmer series arises from electron transitions ending at n = 2, and its main lines fall in the visible region. Lyman transitions end at n = 1 and are ultraviolet, while Paschen and Brackett transitions lie in the infrared."
+  },
+  {
+   "n": 3,
+   "topic": "Acids, bases and salts",
+   "q": "20.0 cm³ of 0.20 mol/dm³ H₂SO₄ is completely neutralized by 0.40 mol/dm³ NaOH. What volume of NaOH is required?",
+   "options": [
+    "80.0 cm³",
+    "20.0 cm³",
+    "40.0 cm³",
+    "10.0 cm³"
+   ],
+   "answer": 1,
+   "explanation": "The equation is H₂SO₄ + 2NaOH → Na₂SO₄ + 2H₂O. Moles of H₂SO₄ = 0.0200 dm³ × 0.20 mol/dm³ = 0.00400 mol, so NaOH required = 2 × 0.00400 = 0.00800 mol. Volume of NaOH = 0.00800 mol ÷ 0.40 mol/dm³ = 0.0200 dm³ = 20.0 cm³."
+  },
+  {
+   "n": 4,
+   "topic": "Acids, bases and salts",
+   "q": "Which salt is formed when excess carbon dioxide is bubbled through sodium hydroxide solution?",
+   "options": [
+    "Sodium oxide",
+    "Sodium carbonate",
+    "Sodium chloride",
+    "Sodium hydrogencarbonate"
+   ],
+   "answer": 3,
+   "explanation": "Carbon dioxide first reacts with sodium hydroxide to form sodium carbonate, but when carbon dioxide is in excess the carbonate is converted to the hydrogencarbonate. The final salt is therefore sodium hydrogencarbonate, NaHCO₃."
+  },
+  {
+   "n": 5,
+   "topic": "Acids, bases and salts",
+   "q": "A mixture of ethanoic acid and sodium ethanoate acts as a buffer mainly because it contains",
+   "options": [
+    "a weak acid and its conjugate base",
+    "a strong acid and its salt",
+    "two strong electrolytes",
+    "a weak base and its conjugate acid"
+   ],
+   "answer": 0,
+   "explanation": "Ethanoic acid is a weak acid and ethanoate ions from sodium ethanoate are its conjugate base. The mixture resists pH change because the acid neutralizes added base and the conjugate base neutralizes added acid."
+  },
+  {
+   "n": 6,
+   "topic": "Chemical bonding",
+   "q": "In which of the following substances are hydrogen bonds the main intermolecular forces between molecules?",
+   "options": [
+    "Sodium chloride",
+    "Methane",
+    "Hydrogen chloride",
+    "Water"
+   ],
+   "answer": 3,
+   "explanation": "Water molecules form hydrogen bonds because hydrogen is covalently bonded to the highly electronegative oxygen atom. Methane and hydrogen chloride do not have H bonded to O, N or F, and sodium chloride is an ionic lattice."
+  },
+  {
+   "n": 7,
+   "topic": "Chemical bonding",
+   "q": "How many sigma and pi bonds are present in a molecule of ethyne (C₂H₂)?",
+   "options": [
+    "3 sigma and 3 pi",
+    "2 sigma and 2 pi",
+    "3 sigma and 2 pi",
+    "5 sigma and 0 pi"
+   ],
+   "answer": 2,
+   "explanation": "In H–C≡C–H there are two C–H sigma bonds and one C–C sigma bond, giving three sigma bonds. The triple bond also contains two pi bonds, so ethyne has 3 sigma and 2 pi bonds."
+  },
+  {
+   "n": 8,
+   "topic": "Hydrocarbons",
+   "q": "When propene reacts with hydrogen bromide in the presence of an organic peroxide, the major product is",
+   "options": [
+    "propane",
+    "1-bromopropane",
+    "1,2-dibromopropane",
+    "2-bromopropane"
+   ],
+   "answer": 1,
+   "explanation": "An organic peroxide initiates a free-radical addition of HBr to propene. The bromine radical adds to the terminal carbon to give the more stable secondary radical, so the major product after hydrogen abstraction is 1-bromopropane. Without peroxide, the Markovnikov product would be 2-bromopropane."
+  },
+  {
+   "n": 9,
+   "topic": "Hydrocarbons",
+   "q": "The reaction between ethane and chlorine in diffused sunlight is best described as",
+   "options": [
+    "catalytic hydrogenation",
+    "nucleophilic substitution",
+    "electrophilic addition",
+    "free-radical substitution"
+   ],
+   "answer": 3,
+   "explanation": "Diffused sunlight splits chlorine molecules into chlorine radicals, which substitute hydrogen atoms in ethane. This is a free-radical substitution reaction, not an addition, because ethane is a saturated alkane."
+  },
+  {
+   "n": 10,
+   "topic": "Gas laws",
+   "q": "A sample of oxygen diffuses through a porous plug in 40 s. Under the same conditions, how long will the same volume of hydrogen take to diffuse through the plug? (H = 1, O = 16)",
+   "options": [
+    "5 s",
+    "10 s",
+    "20 s",
+    "160 s"
+   ],
+   "answer": 1,
+   "explanation": "For equal volumes under the same conditions, diffusion time is proportional to √M. Thus time for hydrogen = 40 × √(2/32) = 10 s; using the inverse ratio would give 160 s."
+  },
+  {
+   "n": 11,
+   "topic": "Gas laws",
+   "q": "A sample of nitrogen is collected over water at 27 °C. The total pressure of the gas mixture is 756 mmHg and the vapour pressure of water at 27 °C is 27 mmHg. What is the partial pressure of the dry nitrogen?",
+   "options": [
+    "27 mmHg",
+    "729 mmHg",
+    "756 mmHg",
+    "783 mmHg"
+   ],
+   "answer": 1,
+   "explanation": "By Dalton's law, the total pressure is the sum of the partial pressures: P(N₂) = 756 − 27 = 729 mmHg. The 756 mmHg value is the total pressure, not the dry gas pressure."
+  },
+  {
+   "n": 12,
+   "topic": "Gas laws",
+   "q": "What volume is occupied by 0.200 mol of an ideal gas at 27 °C and 8.31 × 10⁴ Pa? (R = 8.31 J K⁻¹ mol⁻¹)",
+   "options": [
+    "6.00 dm³",
+    "60.0 dm³",
+    "0.600 dm³",
+    "0.540 dm³"
+   ],
+   "answer": 0,
+   "explanation": "Convert 27 °C to 300 K and use V = nRT/P: V = (0.200 × 8.31 × 300)/(8.31 × 10⁴) = 0.00600 m³ = 6.00 dm³. Using 27 K instead of 300 K gives 0.540 dm³."
+  },
+  {
+   "n": 13,
+   "topic": "Metals and their compounds",
+   "q": "During the electrolytic refining of copper, which change occurs at the anode?",
+   "options": [
+    "Impure copper is oxidised and dissolves as Cu²⁺ ions.",
+    "Chlorine gas is evolved because chloride ions are oxidised.",
+    "Copper(II) ions are reduced and deposited as copper.",
+    "Oxygen gas is liberated while the anode remains unchanged."
+   ],
+   "answer": 0,
+   "explanation": "At the impure copper anode, copper is oxidised to Cu²⁺ ions, which enter the electrolyte; pure copper is deposited at the cathode. Reduction of Cu²⁺ occurs at the cathode, not at the anode."
+  },
+  {
+   "n": 14,
+   "topic": "Metals and their compounds",
+   "q": "A green solid X is heated strongly in a dry test tube. It turns black and the gas evolved turns limewater milky. X is most likely",
+   "options": [
+    "Calcium carbonate",
+    "Copper(II) sulphate",
+    "Zinc carbonate",
+    "Copper(II) carbonate"
+   ],
+   "answer": 3,
+   "explanation": "Copper(II) carbonate is green and decomposes on heating to black copper(II) oxide and carbon dioxide, which turns limewater milky. Zinc carbonate and calcium carbonate are white and would not give a green-to-black colour change."
+  },
+  {
+   "n": 15,
+   "topic": "Metals and their compounds",
+   "q": "An aqueous solution of iron(III) chloride is treated with excess aqueous sodium hydroxide. Which precipitate is formed?",
+   "options": [
+    "Pale green iron(II) hydroxide",
+    "Reddish-brown iron(III) hydroxide",
+    "Blue copper(II) hydroxide",
+    "White aluminium hydroxide"
+   ],
+   "answer": 1,
+   "explanation": "Iron(III) chloride reacts with sodium hydroxide to form reddish-brown iron(III) hydroxide. The precipitate does not dissolve in excess sodium hydroxide."
+  },
+  {
+   "n": 16,
+   "topic": "Functional groups in organic chemistry",
+   "q": "The compound CH₃CH₂COCH₂CH₃ contains which functional group?",
+   "options": [
+    "Ester",
+    "Aldehyde",
+    "Ketone",
+    "Carboxylic acid"
+   ],
+   "answer": 2,
+   "explanation": "The carbonyl group in CH₃CH₂COCH₂CH₃ is joined to two carbon atoms, which is the ketone functional group. An aldehyde carbonyl group would be at the end of a carbon chain and joined to at least one hydrogen atom."
+  },
+  {
+   "n": 17,
+   "topic": "Functional groups in organic chemistry",
+   "q": "What is the IUPAC name of the compound CH₃CH₂CH₂CHO?",
+   "options": [
+    "Butan-1-ol",
+    "Butan-2-one",
+    "Butanoic acid",
+    "Butanal"
+   ],
+   "answer": 3,
+   "explanation": "The structure has a four-carbon chain ending in –CHO, so the aldehyde is butanal. The –CHO group at the end makes it an aldehyde, not a ketone, alcohol or carboxylic acid."
+  },
+  {
+   "n": 18,
+   "topic": "Environmental chemistry",
+   "q": "A cement factory near Shagamu releases fine dust that settles on leaves in a nearby village. Which environmental effect is most directly caused by the dust on the leaves?",
+   "options": [
+    "Addition of nutrients that directly increases leaf growth",
+    "Cooling of the leaf surface so that photosynthesis stops",
+    "Increase in the rate of transpiration through the leaves",
+    "Blocking of stomata, which reduces gaseous exchange and photosynthesis"
+   ],
+   "answer": 3,
+   "explanation": "The dust coats the leaf surface and blocks stomata, reducing gaseous exchange and the light reaching the chloroplasts, so photosynthesis is reduced. It does not directly increase transpiration or supply nutrients for rapid leaf growth."
+  },
+  {
+   "n": 19,
+   "topic": "Environmental chemistry",
+   "q": "A wastewater sample from an electroplating workshop in Kaduna contains 0.040 g of mercury in 2.0 L of solution. What is the concentration of mercury in mg/L?",
+   "options": [
+    "20 mg/L",
+    "0.020 mg/L",
+    "80 mg/L",
+    "40 mg/L"
+   ],
+   "answer": 0,
+   "explanation": "0.040 g = 40 mg. Dividing 40 mg by 2.0 L gives 20 mg/L. The value 0.020 mg/L comes from failing to convert grams to milligrams, while 40 mg/L comes from ignoring the volume."
+  },
+  {
+   "n": 20,
+   "topic": "Environmental chemistry",
+   "q": "A farmer near Makurdi applies excess nitrogenous fertiliser to a maize field beside a stream. Which process best explains the resulting dense growth of algae in the stream?",
+   "options": [
+    "Leached nitrate ions act as nutrients, causing eutrophication",
+    "Nitrate ions precipitate clay particles that algae feed on",
+    "Nitrate ions neutralise the water, making it alkaline",
+    "Nitrate ions increase dissolved oxygen and encourage algae"
+   ],
+   "answer": 0,
+   "explanation": "Excess fertiliser nitrate is washed into the stream and acts as a nutrient, leading to rapid algal growth or eutrophication. The algae and their decomposition later reduce dissolved oxygen; nitrate does not simply neutralise the water or precipitate food for algae."
+  },
+  {
+   "n": 21,
+   "topic": "Water and solubility",
+   "q": "At 25°C, the solubility of potassium nitrate is 38 g per 100 g of water. What mass of a saturated solution contains 19 g of potassium nitrate?",
+   "options": [
+    "50 g",
+    "69 g",
+    "119 g",
+    "138 g"
+   ],
+   "answer": 1,
+   "explanation": "A saturated solution at 25°C contains 38 g KNO₃ plus 100 g water, giving 138 g of solution. Since 19 g is half of 38 g, the required mass is half of 138 g = 69 g. Subtracting 19 g from 138 g is incorrect because the 100 g water already remains part of the solution mass."
+  },
+  {
+   "n": 22,
+   "topic": "Water and solubility",
+   "q": "A saturated solution of oxygen in water in a covered beaker is warmed from 20°C to 40°C at constant pressure. Which statement describes what happens to the dissolved oxygen?",
+   "options": [
+    "Its solubility remains unchanged because the beaker is covered",
+    "It reacts with water to form hydrogen peroxide",
+    "Its solubility increases, so the solution can dissolve more oxygen",
+    "Its solubility decreases, so some oxygen is released from the solution into the space above it"
+   ],
+   "answer": 3,
+   "explanation": "The solubility of most gases in water decreases as temperature rises at constant pressure. When a saturated oxygen solution is warmed, some dissolved oxygen leaves the solution. The cover limits escape from the beaker but does not prevent oxygen leaving the liquid."
+  },
+  {
+   "n": 23,
+   "topic": "Water and solubility",
+   "q": "A sample of hard water from a borehole in Ibadan forms a white scum with soap. Which ion is most likely present in the water to cause this scum?",
+   "options": [
+    "Nitrate(V) ion",
+    "Calcium ion",
+    "Sodium ion",
+    "Chloride ion"
+   ],
+   "answer": 1,
+   "explanation": "Hard water contains calcium and magnesium ions, which react with soap to form an insoluble scum. Sodium ions do not cause hardness, while chloride and nitrate(V) ions do not form the scum."
+  },
+  {
+   "n": 24,
+   "topic": "Periodic table",
+   "q": "Which statement best explains why the first ionisation energy of magnesium is higher than that of sodium?",
+   "options": [
+    "Sodium has a more stable outer shell than magnesium",
+    "Magnesium has a greater effective nuclear charge, so its outer electron is more strongly attracted",
+    "Magnesium has a completely filled d subshell that lowers its energy",
+    "Magnesium has one more electron shell than sodium"
+   ],
+   "answer": 1,
+   "explanation": "Magnesium has atomic number 12 and sodium has atomic number 11; the outer electron removed is in the n = 3 shell for both. The extra proton in magnesium gives a greater effective nuclear charge and a smaller atomic radius, so the outer electron is more strongly attracted and the first ionisation energy is higher. Extra electron shells and d-subshell filling do not explain this trend."
+  },
+  {
+   "n": 25,
+   "topic": "Non-metals and their compounds",
+   "q": "A colourless gas extinguishes a burning splint and turns limewater milky. Which gas is being tested?",
+   "options": [
+    "Chlorine",
+    "Hydrogen",
+    "Oxygen",
+    "Carbon dioxide"
+   ],
+   "answer": 3,
+   "explanation": "Carbon dioxide turns limewater milky because it forms insoluble calcium carbonate, and it extinguishes a burning splint because it does not support combustion. Oxygen supports combustion, hydrogen itself burns, and chlorine is a greenish-yellow gas."
+  },
+  {
+   "n": 26,
+   "topic": "Non-metals and their compounds",
+   "q": "When chlorine gas is bubbled into cold dilute sodium hydroxide solution, sodium chloride, sodium chlorate(I) and water are formed. Which type of reaction is this?",
+   "options": [
+    "Precipitation",
+    "Neutralisation",
+    "Dehydration",
+    "Disproportionation"
+   ],
+   "answer": 3,
+   "explanation": "In this reaction chlorine is simultaneously reduced to chloride and oxidised to chlorate(I), so the same element undergoes both oxidation and reduction. Such a reaction is called disproportionation. It is not simple neutralisation, precipitation or dehydration."
+  },
+  {
+   "n": 27,
+   "topic": "Rates of reaction and equilibrium",
+   "q": "For an equilibrium mixture of X(g) ⇌ Y(g), what is the effect of adding a catalyst at constant temperature?",
+   "options": [
+    "Only the forward reaction is catalysed, so more Y is formed.",
+    "The equilibrium shifts towards Y, giving a larger yield of Y.",
+    "The equilibrium is reached more quickly but its position remains unchanged.",
+    "The equilibrium constant increases while the position stays unchanged."
+   ],
+   "answer": 2,
+   "explanation": "A catalyst lowers the activation energy for both the forward and reverse reactions. Equilibrium is therefore reached faster, but the equilibrium constant and equilibrium composition are unchanged."
+  },
+  {
+   "n": 28,
+   "topic": "Rates of reaction and equilibrium",
+   "q": "In the reaction 2N₂O₅(g) → 4NO₂(g) + O₂(g), the concentration of N₂O₅ fell from 0.600 mol dm⁻³ to 0.300 mol dm⁻³ in 25.0 s. What is the average rate of disappearance of N₂O₅?",
+   "options": [
+    "0.00600 mol dm⁻³ s⁻¹",
+    "0.300 mol dm⁻³ s⁻¹",
+    "0.0240 mol dm⁻³ s⁻¹",
+    "0.0120 mol dm⁻³ s⁻¹"
+   ],
+   "answer": 3,
+   "explanation": "Average rate of disappearance = change in concentration ÷ time = (0.600 − 0.300) mol dm⁻³ ÷ 25.0 s = 0.0120 mol dm⁻³ s⁻¹. Dividing by 2 would give the rate of reaction, not the rate of disappearance of N₂O₅."
+  },
+  {
+   "n": 29,
+   "topic": "Separation of mixtures",
+   "q": "A sample of impure sugar from a shop in Minna is contaminated with a little sodium chloride. Which procedure is most suitable for obtaining pure sugar crystals?",
+   "options": [
+    "Evaporate the mixture to dryness and pick out the sugar crystals.",
+    "Add water, stir, and filter immediately to collect the sugar crystals.",
+    "Dissolve in the minimum volume of hot water, cool to crystallise, then filter off and wash the sugar crystals.",
+    "Heat the mixture until sodium chloride sublimes, leaving sugar."
+   ],
+   "answer": 2,
+   "explanation": "Sugar is much more soluble in hot water than in cold water, so it crystallises on cooling while the small amount of sodium chloride remains largely in solution. The crystals are then filtered off and washed to remove soluble impurity."
+  },
+  {
+   "n": 30,
+   "topic": "Mole concept and stoichiometry",
+   "q": "Calcium carbonate decomposes on strong heating: CaCO₃(s) → CaO(s) + CO₂(g). What volume of carbon(IV) oxide at s.t.p. is obtained when 10.0 g of calcium carbonate is completely decomposed? (Ca=40, C=12, O=16; molar volume at s.t.p. = 22.4 dm³ mol⁻¹)",
+   "options": [
+    "2.24 dm³",
+    "1.12 dm³",
+    "4.48 dm³",
+    "22.4 dm³"
+   ],
+   "answer": 0,
+   "explanation": "M_r of CaCO₃ = 40 + 12 + 3(16) = 100. Thus 10.0 g CaCO₃ is 0.100 mol and gives 0.100 mol CO₂. Volume at s.t.p. = 0.100 × 22.4 = 2.24 dm³."
+  },
+  {
+   "n": 31,
+   "topic": "Mole concept and stoichiometry",
+   "q": "What volume of 0.50 mol dm⁻³ H₂SO₄ is required to neutralize 25.0 cm³ of 0.20 mol dm⁻³ NaOH? H₂SO₄ + 2NaOH → Na₂SO₄ + 2H₂O",
+   "options": [
+    "2.50 cm³",
+    "5.00 cm³",
+    "10.0 cm³",
+    "25.0 cm³"
+   ],
+   "answer": 1,
+   "explanation": "Moles of NaOH = 0.200 × 25.0/1000 = 0.00500 mol. This requires 0.00250 mol H₂SO₄, so volume = 0.00250 ÷ 0.50 = 0.00500 dm³ = 5.00 cm³."
+  },
+  {
+   "n": 32,
+   "topic": "Mole concept and stoichiometry",
+   "q": "How many oxygen atoms are present in 4.40 g of carbon(IV) oxide? (C=12, O=16; Avogadro constant = 6.02 × 10²³ mol⁻¹)",
+   "options": [
+    "6.02 × 10²² oxygen atoms",
+    "1.204 × 10²² oxygen atoms",
+    "2.408 × 10²³ oxygen atoms",
+    "1.204 × 10²³ oxygen atoms"
+   ],
+   "answer": 3,
+   "explanation": "M_r of CO₂ = 12 + 2(16) = 44, so 4.40 g is 0.100 mol CO₂. This contains 0.200 mol oxygen atoms, giving 0.200 × 6.02 × 10²³ = 1.204 × 10²³ oxygen atoms."
+  },
+  {
+   "n": 33,
+   "topic": "Oxidation, reduction and electrolysis",
+   "q": "What is the oxidation number of chromium in potassium dichromate, K₂Cr₂O₇?",
+   "options": [
+    "+3",
+    "+6",
+    "+12",
+    "+7"
+   ],
+   "answer": 1,
+   "explanation": "Let the oxidation number of chromium be x. For K₂Cr₂O₇: 2(+1) + 2x + 7(−2) = 0, so 2x − 12 = 0 and x = +6."
+  },
+  {
+   "n": 34,
+   "topic": "Oxidation, reduction and electrolysis",
+   "q": "Calculate the mass of zinc deposited at the cathode when 0.100 F of electricity is passed through aqueous zinc sulphate. (Zn=65; 1 F = 96500 C)",
+   "options": [
+    "13.0 g",
+    "6.50 g",
+    "1.63 g",
+    "3.25 g"
+   ],
+   "answer": 3,
+   "explanation": "The cathode reaction is Zn²⁺ + 2e⁻ → Zn. Therefore 0.100 mol of electrons deposits 0.0500 mol Zn, and mass = 0.0500 × 65 = 3.25 g."
+  },
+  {
+   "n": 35,
+   "topic": "Oxidation, reduction and electrolysis",
+   "q": "During the electrolysis of dilute sodium sulphate solution using platinum electrodes, which products are formed?",
+   "options": [
+    "Hydrogen at the cathode and sulphur at the anode.",
+    "Oxygen at the cathode and hydrogen at the anode.",
+    "Sodium at the cathode and oxygen at the anode.",
+    "Hydrogen at the cathode and oxygen at the anode."
+   ],
+   "answer": 3,
+   "explanation": "Sodium ions and sulphate ions are not preferentially discharged under these conditions. Water is reduced at the cathode to hydrogen and oxidised at the anode to oxygen."
+  },
+  {
+   "n": 36,
+   "topic": "Atomic structure",
+   "q": "An aluminium atom has 13 protons and 14 neutrons. How many neutrons and electrons are present in the Al³⁺ ion?",
+   "options": [
+    "14 neutrons and 10 electrons",
+    "14 neutrons and 13 electrons",
+    "27 neutrons and 10 electrons",
+    "14 neutrons and 16 electrons"
+   ],
+   "answer": 0,
+   "explanation": "Aluminium has atomic number 13, so a neutral atom has 13 electrons. The Al³⁺ ion has lost 3 electrons, leaving 10 electrons, while the number of neutrons remains 27 − 13 = 14."
+  },
+  {
+   "n": 37,
+   "topic": "Acids, bases and salts",
+   "q": "A technician in Jos dilutes 5.00 cm³ of 0.100 mol/dm³ hydrochloric acid to a final volume of 500 cm³. What is the pH of the diluted solution? (Assume complete ionisation.)",
+   "options": [
+    "2.00",
+    "3.00",
+    "2.70",
+    "4.00"
+   ],
+   "answer": 1,
+   "explanation": "Amount of HCl = (5.00 ÷ 1000) × 0.100 = 5.00 × 10⁻⁴ mol. After dilution, concentration = 5.00 × 10⁻⁴ ÷ 0.500 = 1.00 × 10⁻³ mol/dm³, so pH = −log(1.00 × 10⁻³) = 3.00."
+  },
+  {
+   "n": 38,
+   "topic": "Hydrocarbons",
+   "q": "Which hydrocarbon does not decolourise acidified potassium manganate(VII) solution at room temperature?",
+   "options": [
+    "But-2-ene",
+    "Propene",
+    "Propane",
+    "Ethene"
+   ],
+   "answer": 2,
+   "explanation": "Alkenes such as ethene, propene and but-2-ene are readily oxidised by acidified potassium manganate(VII), causing the purple colour to disappear. Propane is a saturated alkane and is not easily oxidised under these conditions."
+  },
+  {
+   "n": 39,
+   "topic": "Atomic structure",
+   "q": "Which set of quantum numbers is not allowed for an electron in an atom?",
+   "options": [
+    "n = 2, ℓ = 1, mℓ = −1, ms = +½",
+    "n = 1, ℓ = 0, mℓ = 0, ms = +½",
+    "n = 2, ℓ = 2, mℓ = 0, ms = +½",
+    "n = 3, ℓ = 0, mℓ = 0, ms = −½"
+   ],
+   "answer": 2,
+   "explanation": "For a given principal quantum number n, the allowed values of ℓ are 0 to n − 1. When n = 2, ℓ can only be 0 or 1, so ℓ = 2 is impossible; the other sets obey the quantum-number rules."
+  },
+  {
+   "n": 40,
+   "topic": "Acids, bases and salts",
+   "q": "A student in Abeokuta tests four salt solutions with universal indicator. Which solution is expected to have pH less than 7?",
+   "options": [
+    "Sodium carbonate solution",
+    "Potassium nitrate solution",
+    "Sodium chloride solution",
+    "Ammonium chloride solution"
+   ],
+   "answer": 3,
+   "explanation": "Ammonium chloride is a salt of a weak base and a strong acid. The ammonium ion hydrolyses in water to release hydrogen ions, making the solution acidic. Sodium carbonate solution is basic, while sodium chloride and potassium nitrate solutions are approximately neutral."
+  }
+ ]
+}

@@ -1,12 +1,16 @@
 import { Router } from 'express';
+import rateLimit, { ipKeyGenerator } from 'express-rate-limit';
 import { z } from 'zod';
 
 import { createReadStream, existsSync } from 'node:fs';
 import { join } from 'node:path';
 
+import { isRegion } from '../data/exams.js';
 import { notFound } from '../lib/errors.js';
 import { catalogFor, searchCatalog, trendingIn } from '../services/catalog.js';
 import { searchEverything } from '../services/search-all.js';
+import { SEARCH_KINDS, type SearchKind } from '../services/search-index.js';
+import { smartSearch } from '../services/semantic-search.js';
 import { deckFor, lessonCardsFolder, lessonDecks } from '../services/lesson-cards.js';
 import { requestLanguage } from '../services/language.js';
 import { optionalAuth } from '../services/sessions.js';
@@ -86,7 +90,39 @@ const Search = z.object({ q: z.string().trim().max(100).default('') });
 catalogRouter.get('/search/all', async (req, res) => {
   const q = typeof req.query.q === 'string' ? req.query.q.slice(0, 80) : '';
   const country = typeof req.query.country === 'string' ? req.query.country : undefined;
-  res.json(await searchEverything(requestLanguage(req), q, country));
+  const region = typeof req.query.region === 'string' && isRegion(req.query.region) ? req.query.region : undefined;
+  res.json(await searchEverything(requestLanguage(req), q, country, region));
+});
+
+// Each smart search asks Vultr for one embedding: cheap, but not free, and open to people not signed in.
+const smartLimiter = rateLimit({
+  windowMs: 60_000,
+  limit: 40,
+  keyGenerator: (req) => req.userId ?? ipKeyGenerator(req.ip ?? ''),
+  skip: () => process.env.NODE_ENV === 'test',
+  message: { error: 'Slow down a little — try again in a minute.', reason: 'rate-limited' },
+});
+
+const Smart = z.object({
+  q: z.string().trim().max(200).default(''),
+  /** `notes,questions,books`, or any of them. All three when left out. */
+  kinds: z
+    .string()
+    .optional()
+    .transform((k) => (k ?? '').split(',').filter((x): x is SearchKind => (SEARCH_KINDS as string[]).includes(x))),
+  limit: z.coerce.number().int().min(1).max(30).default(12),
+  country: z.string().max(10).optional(),
+});
+
+/**
+ * Smart search: notes, practice questions and books by meaning as well as by words, best first, each
+ * with the app link that opens it. `semantic` is false when only words were used (no index or key yet).
+ */
+catalogRouter.get('/search/semantic', optionalAuth, smartLimiter, async (req, res) => {
+  const { q, kinds, limit, country } = Smart.parse(req.query);
+  const region = typeof req.query.region === 'string' && isRegion(req.query.region) ? req.query.region : undefined;
+  const found = await smartSearch({ q, kinds, limit, country, region, lang: requestLanguage(req), userId: req.user?.id });
+  res.json({ query: q, ...found });
 });
 
 catalogRouter.get('/search', optionalAuth, async (req, res) => {

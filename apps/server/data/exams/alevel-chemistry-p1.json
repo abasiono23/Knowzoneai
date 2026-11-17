@@ -1,0 +1,401 @@
+{
+ "id": "alevel-chemistry-p1",
+ "exam": "alevel",
+ "subject": "chemistry",
+ "year": null,
+ "number": 1,
+ "source": "ai",
+ "minutes": 40,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Polymers, amino acids and proteins",
+   "q": "In a solution of glycine at pH 1, which form of glycine predominates?",
+   "options": [
+    "H₃N⁺–CH₂–COOH",
+    "H₃N⁺–CH₂–COO⁻",
+    "H₂N–CH₂–COOH",
+    "H₂N–CH₂–COO⁻"
+   ],
+   "answer": 0,
+   "explanation": "At pH 1 the hydrogen ion concentration is high, so both the amino group and the carboxyl group are protonated. The zwitterionic form, H₃N⁺–CH₂–COO⁻, predominates only near the isoelectric point rather than in strongly acidic solution."
+  },
+  {
+   "n": 2,
+   "topic": "Polymers, amino acids and proteins",
+   "q": "A polyamide is formed by condensation polymerisation of H₂N–(CH₂)₆–NH₂ with HOOC–(CH₂)₄–COOH. What is the molecular formula of the repeating unit after the elimination of water?",
+   "options": [
+    "C₁₂H₂₆N₂O₄",
+    "C₁₂H₂₂N₂O₂",
+    "C₁₂H₂₄N₂O₃",
+    "C₁₂H₂₂N₂O₄"
+   ],
+   "answer": 1,
+   "explanation": "Adding the two monomer formulae gives C₁₂H₂₆N₂O₄. Two amide linkages form in each repeat unit, so two molecules of H₂O are eliminated: C₁₂H₂₆N₂O₄ − 2H₂O = C₁₂H₂₂N₂O₂. A common error is to remove only one water molecule, which gives C₁₂H₂₄N₂O₃."
+  },
+  {
+   "n": 3,
+   "topic": "Chemical equilibria",
+   "q": "At equilibrium in a 2.00 dm³ vessel at temperature T, a mixture contains 0.30 mol PCl₅(g), 0.60 mol PCl₃(g) and 0.60 mol Cl₂(g). For PCl₅(g) ⇌ PCl₃(g) + Cl₂(g), what is Kc at T?",
+   "options": [
+    "1.67 mol dm⁻³",
+    "1.20 mol dm⁻³",
+    "0.300 mol dm⁻³",
+    "0.600 mol dm⁻³"
+   ],
+   "answer": 3,
+   "explanation": "The equilibrium concentrations are [PCl₅] = 0.30 ÷ 2.00 = 0.150 mol dm⁻³ and [PCl₃] = [Cl₂] = 0.60 ÷ 2.00 = 0.300 mol dm⁻³. Therefore Kc = (0.300 × 0.300) ÷ 0.150 = 0.600 mol dm⁻³. Using moles directly instead of concentrations gives 1.20, which is a common mistake."
+  },
+  {
+   "n": 4,
+   "topic": "Chemical equilibria",
+   "q": "For an exothermic reversible reaction, which statement about the equilibrium constant Kc is correct?",
+   "options": [
+    "Increasing the temperature increases Kc because more collisions have energy above the activation energy.",
+    "Adding a catalyst increases Kc by lowering the activation energy.",
+    "Increasing the temperature decreases Kc because the reverse reaction is endothermic and is favoured.",
+    "Changing the temperature does not change Kc, although the equilibrium position shifts."
+   ],
+   "answer": 2,
+   "explanation": "For an exothermic forward reaction, raising the temperature favours the reverse, endothermic direction. The ratio of products to reactants at equilibrium therefore decreases, so Kc decreases. A catalyst speeds up both directions equally and does not change Kc."
+  },
+  {
+   "n": 5,
+   "topic": "Chemical equilibria",
+   "q": "For the equilibrium N₂(g) + 3H₂(g) ⇌ 2NH₃(g), ΔH = −92 kJ mol⁻¹ at constant temperature, which statement is correct?",
+   "options": [
+    "Adding a catalyst increases the equilibrium yield of ammonia by lowering the activation energy.",
+    "Increasing the pressure increases the value of the equilibrium constant because the equilibrium shifts to fewer gas molecules.",
+    "Increasing the temperature increases both the rate and the equilibrium yield of ammonia.",
+    "Increasing the pressure increases the equilibrium yield of ammonia, but does not change the equilibrium constant."
+   ],
+   "answer": 3,
+   "explanation": "Increasing pressure shifts the position of equilibrium towards the side with fewer moles of gas, which is ammonia, but Kc depends only on temperature. The forward reaction is exothermic, so raising the temperature lowers the ammonia yield. A catalyst has no effect on the position of equilibrium."
+  },
+  {
+   "n": 6,
+   "topic": "Periodicity, Group 2 and Group 7",
+   "q": "Which statement best explains why the atomic radius decreases across Period 3 from sodium to chlorine?",
+   "options": [
+    "Atoms lose outer electrons more readily, and the resulting ions have smaller radii.",
+    "Increased shielding by inner electrons outweighs the increase in nuclear charge.",
+    "The nuclear charge increases while outer electrons are added to the same shell, so the outer electrons are attracted more strongly.",
+    "The outer electrons are promoted to a new shell that is closer to the nucleus."
+   ],
+   "answer": 2,
+   "explanation": "Across Period 3, protons are added to the nucleus and electrons enter the same principal shell. The number of inner shielding electrons is essentially unchanged, so the greater nuclear attraction pulls the outer electrons closer and the atomic radius decreases. The other statements describe effects that would increase the radius or refer to ions rather than atoms."
+  },
+  {
+   "n": 7,
+   "topic": "Periodicity, Group 2 and Group 7",
+   "q": "Which statement about Group 2 compounds is correct?",
+   "options": [
+    "Barium carbonate is more thermally stable than magnesium carbonate.",
+    "Barium sulfate is more soluble in water than magnesium sulfate.",
+    "The thermal stability of the Group 2 carbonates decreases down the group.",
+    "Magnesium hydroxide is more soluble in water than barium hydroxide."
+   ],
+   "answer": 0,
+   "explanation": "Down Group 2 the cations become larger and have lower charge density, so they polarise the carbonate ion less. This makes the carbonate more thermally stable, so barium carbonate decomposes only at a higher temperature than magnesium carbonate. Sulfate solubility decreases down the group, while hydroxide solubility increases."
+  },
+  {
+   "n": 8,
+   "topic": "Periodicity, Group 2 and Group 7",
+   "q": "Chlorine reacts with cold, dilute aqueous sodium hydroxide in a disproportionation reaction. Which equation represents the main reaction?",
+   "options": [
+    "Cl₂ + 2NaOH → 2NaClO + H₂",
+    "Cl₂ + 2NaOH → 2NaCl + H₂O₂",
+    "3Cl₂ + 6NaOH → 5NaCl + NaClO₃ + 3H₂O",
+    "Cl₂ + 2NaOH → NaCl + NaClO + H₂O"
+   ],
+   "answer": 3,
+   "explanation": "In cold, dilute alkali, chlorine forms chloride ions and chlorate(I) ions: chlorine is reduced from 0 to −1 and oxidised from 0 to +1. The equation Cl₂ + 2NaOH → NaCl + NaClO + H₂O represents this disproportionation. Hot concentrated alkali favours formation of chlorate(V), as in the equation containing NaClO₃."
+  },
+  {
+   "n": 9,
+   "topic": "Acids, bases and buffers",
+   "q": "A buffer is made by mixing 0.100 dm³ of 0.200 mol dm⁻³ ethanoic acid (Ka = 1.70 × 10⁻⁵ mol dm⁻³) with 0.100 dm³ of 0.100 mol dm⁻³ sodium ethanoate. Assuming the volumes are additive, what is the pH at 298 K?",
+   "options": [
+    "2.88",
+    "4.77",
+    "5.07",
+    "4.47"
+   ],
+   "answer": 3,
+   "explanation": "The amounts are 0.0200 mol of ethanoic acid and 0.0100 mol of ethanoate ions in a total volume of 0.200 dm³, giving [HA] = 0.100 mol dm⁻³ and [A⁻] = 0.0500 mol dm⁻³. Using [H⁺] = Ka[HA] ÷ [A⁻] gives [H⁺] = 3.40 × 10⁻⁵ mol dm⁻³, so pH = −log₁₀(3.40 × 10⁻⁵) = 4.47. The value 4.77 would result from using a 1:1 ratio instead of the actual 2:1 acid-to-salt ratio."
+  },
+  {
+   "n": 10,
+   "topic": "Acids, bases and buffers",
+   "q": "A buffer solution contains ethanoic acid and sodium ethanoate. Which statement explains how it resists a small addition of hydrochloric acid?",
+   "options": [
+    "Ethanoate ions react with the added hydrogen ions to form more ethanoic acid.",
+    "Sodium ions neutralise the added chloride ions, removing the hydrochloric acid.",
+    "Ethanoic acid molecules react with the added hydrogen ions to form oxonium ions.",
+    "The value of Ka increases to keep the hydrogen ion concentration almost constant."
+   ],
+   "answer": 0,
+   "explanation": "Hydrochloric acid adds H⁺ ions, which are removed by the ethanoate ions: CH₃COO⁻ + H⁺ → CH₃COOH. This shifts the buffer equilibrium and keeps the hydrogen ion concentration almost unchanged. Ka remains constant at a fixed temperature and is not changed by adding acid."
+  },
+  {
+   "n": 11,
+   "topic": "Energetics",
+   "q": "Aisha, a student in Leicester, burns 0.230 g of ethanol (Mr = 46.0) in a calorimetry experiment. The heat released raises the temperature of 50.0 g of water by 16.0 °C. The specific heat capacity of water is 4.18 J g⁻¹ °C⁻¹. Assuming no heat loss, what is the enthalpy of combustion of ethanol in kJ mol⁻¹?",
+   "options": [
+    "−669 kJ mol⁻¹",
+    "−1340 kJ mol⁻¹",
+    "+669 kJ mol⁻¹",
+    "−334 kJ mol⁻¹"
+   ],
+   "answer": 0,
+   "explanation": "The heat gained by the water is q = mcΔT = 50.0 × 4.18 × 16.0 = 3344 J = 3.344 kJ. The amount of ethanol burned is 0.230 ÷ 46.0 = 0.00500 mol, so the energy released per mole is 3.344 ÷ 0.00500 = 669 kJ mol⁻¹. Enthalpy of combustion is negative because heat is released, giving −669 kJ mol⁻¹."
+  },
+  {
+   "n": 12,
+   "topic": "Energetics",
+   "q": "Use the standard enthalpies of combustion: C(s) −393.5 kJ mol⁻¹; H₂(g) −285.8 kJ mol⁻¹; ethanol(l) −1367 kJ mol⁻¹. What is the standard enthalpy of formation of ethanol(l)?",
+   "options": [
+    "−277.4 kJ mol⁻¹",
+    "+277.4 kJ mol⁻¹",
+    "−1644.4 kJ mol⁻¹",
+    "−3011.4 kJ mol⁻¹"
+   ],
+   "answer": 0,
+   "explanation": "Write formation as 2C(s) + 3H₂(g) + ½O₂(g) → C₂H₅OH(l). By Hess's law, ΔHf = [2(−393.5) + 3(−285.8)] − (−1367) = −1644.4 + 1367 = −277.4 kJ mol⁻¹. The combustion enthalpy of ethanol is subtracted because ethanol is the product of the formation equation."
+  },
+  {
+   "n": 13,
+   "topic": "Energetics",
+   "q": "For the gas-phase reaction H₂(g) + Cl₂(g) → 2HCl(g), mean bond enthalpies are H–H 436 kJ mol⁻¹, Cl–Cl 243 kJ mol⁻¹ and H–Cl 432 kJ mol⁻¹. What is ΔH for the reaction?",
+   "options": [
+    "+247 kJ mol⁻¹",
+    "−185 kJ mol⁻¹",
+    "−247 kJ mol⁻¹",
+    "+185 kJ mol⁻¹"
+   ],
+   "answer": 1,
+   "explanation": "Bonds broken = 436 + 243 = 679 kJ mol⁻¹; bonds formed = 2 × 432 = 864 kJ mol⁻¹. ΔH = bonds broken − bonds formed = 679 − 864 = −185 kJ mol⁻¹. Using only one H–Cl bond would give +247 kJ mol⁻¹, which is incorrect because two HCl molecules are formed."
+  },
+  {
+   "n": 14,
+   "topic": "Thermodynamics: enthalpy, entropy and free energy",
+   "q": "Ravi, a student in Bradford, is calculating ΔG for a reaction with ΔH = +85.0 kJ mol⁻¹ and ΔS = +300 J K⁻¹ mol⁻¹. Using ΔG = ΔH − TΔS, what is ΔG at 298 K and what does it imply about feasibility?",
+   "options": [
+    "+4.4 kJ mol⁻¹, so the reaction is not feasible",
+    "−4.4 kJ mol⁻¹, so the reaction is feasible",
+    "+85.0 kJ mol⁻¹, so the reaction is not feasible",
+    "−89.4 kJ mol⁻¹, so the reaction is feasible"
+   ],
+   "answer": 1,
+   "explanation": "Convert ΔS to kJ K⁻¹ mol⁻¹: 300 J K⁻¹ mol⁻¹ = 0.300 kJ K⁻¹ mol⁻¹. TΔS = 298 × 0.300 = 89.4 kJ mol⁻¹, so ΔG = 85.0 − 89.4 = −4.4 kJ mol⁻¹. A negative ΔG indicates that the forward reaction is thermodynamically feasible."
+  },
+  {
+   "n": 15,
+   "topic": "Thermodynamics: enthalpy, entropy and free energy",
+   "q": "For a reaction, ΔH = −120 kJ mol⁻¹ and ΔS = −300 J K⁻¹ mol⁻¹. Assuming these values are independent of temperature, over what temperature range is the reaction feasible?",
+   "options": [
+    "Below 400 K",
+    "At all temperatures",
+    "Above 400 K",
+    "At no temperature"
+   ],
+   "answer": 0,
+   "explanation": "Use ΔG = ΔH − TΔS with ΔS = −0.300 kJ K⁻¹ mol⁻¹, so ΔG = −120 + 0.300T. The reaction is feasible when ΔG < 0, which requires 0.300T < 120, so T < 400 K. Above 400 K, ΔG becomes positive and the forward reaction is not feasible."
+  },
+  {
+   "n": 16,
+   "topic": "Redox and electrode potentials",
+   "q": "The reduction of dichromate(VI) ions in acidic solution can be represented as Cr₂O₇²⁻ + 14H⁺ + ?e⁻ → 2Cr³⁺ + 7H₂O. What number of electrons balances both atoms and charge?",
+   "options": [
+    "14",
+    "12",
+    "3",
+    "6"
+   ],
+   "answer": 3,
+   "explanation": "In dichromate(VI), each chromium is +6; in Cr³⁺ each chromium is +3, so the two chromium atoms gain a total of 6 electrons. Charge balance also confirms this: left-hand charge with 6e⁻ is −2 + 14 − 6 = +6, matching two Cr³⁺ ions."
+  },
+  {
+   "n": 17,
+   "topic": "Redox and electrode potentials",
+   "q": "Cerys, a technician in Swansea, compares the standard electrode potentials Zn²⁺(aq) + 2e⁻ ⇌ Zn(s), E° = −0.76 V, and Cu²⁺(aq) + 2e⁻ ⇌ Cu(s), E° = +0.34 V. For the reaction Zn(s) + Cu²⁺(aq) → Zn²⁺(aq) + Cu(s), which statement is correct?",
+   "options": [
+    "E°cell = +1.10 V, and the reaction is feasible under standard conditions",
+    "E°cell = +0.42 V, and the reaction is feasible under standard conditions",
+    "E°cell = −1.10 V, and the reaction is not feasible under standard conditions",
+    "E°cell = −0.42 V, and the reaction is not feasible under standard conditions"
+   ],
+   "answer": 0,
+   "explanation": "The copper half-cell is the positive electrode where reduction occurs, so E°cell = E°(Cu²⁺/Cu) − E°(Zn²⁺/Zn) = +0.34 − (−0.76) = +1.10 V. A positive E°cell means the reaction has a negative ΔG under standard conditions and is feasible. Subtracting the potentials in the wrong order gives the negative value."
+  },
+  {
+   "n": 18,
+   "topic": "Alcohols, carbonyls and carboxylic acids",
+   "q": "Nia heats propan-1-ol with excess acidified potassium dichromate(VI) under reflux. What is the main organic product?",
+   "options": [
+    "Propanal",
+    "Propanone",
+    "Propanoic acid",
+    "Propan-2-ol"
+   ],
+   "answer": 2,
+   "explanation": "Propan-1-ol is a primary alcohol, so acidified dichromate(VI) first oxidises it to propanal and then to propanoic acid. Heating under reflux with excess oxidising agent favours complete oxidation to the carboxylic acid; distillation would be used to isolate propanal."
+  },
+  {
+   "n": 19,
+   "topic": "Alcohols, carbonyls and carboxylic acids",
+   "q": "In the reaction of propanone with HCN, catalysed by a small amount of KCN and acid, what is the first organic species formed after the cyanide ion attacks the carbonyl group?",
+   "options": [
+    "A protonated ketone with a positive charge on the carbonyl oxygen formed before cyanide attacks",
+    "An ester formed by attack of cyanide on a methyl group",
+    "A carbocation at the carbonyl carbon formed when the C=O π bond breaks",
+    "A tetrahedral alkoxide intermediate in which the former carbonyl oxygen carries a negative charge"
+   ],
+   "answer": 3,
+   "explanation": "The carbonyl carbon is δ+ and the cyanide ion is a nucleophile, so CN⁻ attacks the carbon of the C=O bond. The π electrons move to oxygen, forming a tetrahedral alkoxide intermediate that is then protonated to give a cyanohydrin. A carbocation at the carbonyl carbon is not formed in this addition mechanism."
+  },
+  {
+   "n": 20,
+   "topic": "Alcohols, carbonyls and carboxylic acids",
+   "q": "Which statement best explains why ethanoic acid is more acidic than ethanol in aqueous solution?",
+   "options": [
+    "Ethanoic acid is more acidic because its O–H bond is less polar, so the proton is released more easily.",
+    "Ethanol is less acidic because it cannot form hydrogen bonds with water.",
+    "The ethanoate ion is stabilised because the methyl group donates electron density to the negative carboxylate ion.",
+    "The ethanoate ion is stabilised by delocalisation of the negative charge over two oxygen atoms."
+   ],
+   "answer": 3,
+   "explanation": "The ethanoate ion has the negative charge delocalised over both oxygen atoms of the carboxylate group, which stabilises the conjugate base. In the ethoxide ion, the negative charge is localised on one oxygen and is destabilised by the electron-donating ethyl group. Hydrogen bonding with water occurs for both ethanol and ethanoic acid, so it does not explain the difference."
+  },
+  {
+   "n": 21,
+   "topic": "Organic analysis: spectroscopy and chromatography",
+   "q": "An infrared spectrum of a pure liquid shows a strong, sharp absorption at about 1710 cm⁻¹ and a very broad absorption between about 2500 cm⁻¹ and 3300 cm⁻¹. There is no absorption at about 3500–3750 cm⁻¹. Which functional group is most strongly indicated by these absorptions?",
+   "options": [
+    "a carboxylic acid",
+    "an aldehyde",
+    "a ketone and an alcohol",
+    "an ester"
+   ],
+   "answer": 0,
+   "explanation": "The strong absorption near 1710 cm⁻¹ is due to a C=O bond, while the very broad O–H stretch around 2500–3300 cm⁻¹ is characteristic of the hydrogen-bonded O–H group in a carboxylic acid. An alcohol O–H would normally be found at higher wavenumber and would not give this very broad absorption extending down to 2500 cm⁻¹."
+  },
+  {
+   "n": 22,
+   "topic": "Organic analysis: spectroscopy and chromatography",
+   "q": "In thin-layer chromatography, a spot of compound X travels 3.6 cm from the origin and the solvent front travels 8.0 cm. A spot of compound Y has Rf = 0.30 under the same conditions. Which statement is correct?",
+   "options": [
+    "X has Rf = 0.45 and is more strongly adsorbed on the stationary phase than Y.",
+    "X has Rf = 0.55 and is less strongly adsorbed on the stationary phase than Y.",
+    "X has Rf = 0.45 and is less strongly adsorbed on the stationary phase than Y.",
+    "X has Rf = 2.2 and is more strongly adsorbed on the stationary phase than Y."
+   ],
+   "answer": 2,
+   "explanation": "Rf is calculated as distance moved by the spot divided by distance moved by the solvent front, so Rf = 3.6 ÷ 8.0 = 0.45. A higher Rf value means the compound spends proportionally more time in the mobile phase and is less strongly adsorbed on the stationary phase than a compound with Rf = 0.30."
+  },
+  {
+   "n": 23,
+   "topic": "Organic analysis: spectroscopy and chromatography",
+   "q": "How many different proton environments are present in 1-bromopropane, CH₃CH₂CH₂Br, in a low-resolution ¹H NMR spectrum? Ignore any effects caused by the bromine atom on chemical shifts.",
+   "options": [
+    "four",
+    "six",
+    "three",
+    "two"
+   ],
+   "answer": 2,
+   "explanation": "The molecule has three distinguishable types of proton environment: the CH₃ group, the middle CH₂ group, and the CH₂Br group. Within each CH₂ group the two hydrogens are chemically equivalent in an achiral environment, so they do not create additional low-resolution proton environments."
+  },
+  {
+   "n": 24,
+   "topic": "Alkanes, alkenes and halogenoalkanes",
+   "q": "In the free-radical bromination of ethane, which pair of equations represents the two propagation steps?",
+   "options": [
+    "Br• + C₂H₆ → C₂H₅Br + H• and H• + Br₂ → HBr + Br•",
+    "Br• + C₂H₆ → C₂H₅• + HBr and C₂H₅• + Br₂ → C₂H₅Br + Br•",
+    "C₂H₅• + Br• → C₂H₅Br and Br• + Br• → Br₂",
+    "Br₂ → 2Br• and C₂H₅• + Br₂ → C₂H₅Br + Br•"
+   ],
+   "answer": 1,
+   "explanation": "Propagation steps consume one radical and regenerate another radical, allowing a chain reaction to continue. The step Br₂ → 2Br• is initiation because it creates radicals by homolytic fission, while C₂H₅• + Br• → C₂H₅Br is a termination step because radicals are removed."
+  },
+  {
+   "n": 25,
+   "topic": "Alkanes, alkenes and halogenoalkanes",
+   "q": "But-1-ene reacts with hydrogen bromide by electrophilic addition in the absence of peroxides. Which organic product is formed in the greater amount?",
+   "options": [
+    "2-bromobutane",
+    "2,3-dibromobutane",
+    "butane",
+    "1-bromobutane"
+   ],
+   "answer": 0,
+   "explanation": "The hydrogen ion adds to the terminal carbon so that the more stable secondary carbocation forms at carbon-2. Bromide then attacks this carbocation to give 2-bromobutane as the major product; forming the primary carbocation needed for 1-bromobutane is less favourable."
+  },
+  {
+   "n": 26,
+   "topic": "Alkanes, alkenes and halogenoalkanes",
+   "q": "2-bromopropane is heated under reflux with ethanolic potassium hydroxide. Which organic product is formed mainly?",
+   "options": [
+    "propene",
+    "propane",
+    "propan-2-ol",
+    "propan-1-ol"
+   ],
+   "answer": 0,
+   "explanation": "Ethanolic potassium hydroxide favours elimination of hydrogen bromide from the halogenoalkane, producing the alkene propene. Aqueous potassium hydroxide would instead favour nucleophilic substitution and give propan-2-ol as the main organic product."
+  },
+  {
+   "n": 27,
+   "topic": "Amount of substance",
+   "q": "A 25.0 cm³ sample of hydrochloric acid is titrated with 0.100 mol dm⁻³ sodium hydroxide solution. The mean titre is 22.5 cm³. The equation is HCl + NaOH → NaCl + H₂O. What is the concentration of the hydrochloric acid?",
+   "options": [
+    "0.0900 mol dm⁻³",
+    "0.111 mol dm⁻³",
+    "0.225 mol dm⁻³",
+    "0.0450 mol dm⁻³"
+   ],
+   "answer": 0,
+   "explanation": "Moles of sodium hydroxide used = 0.100 × 22.5 ÷ 1000 = 0.00225 mol. The equation shows a 1:1 reaction, so 0.00225 mol of HCl is present in 25.0 cm³, giving concentration = 0.00225 ÷ 0.0250 = 0.0900 mol dm⁻³."
+  },
+  {
+   "n": 28,
+   "topic": "Amount of substance",
+   "q": "A 5.72 g sample of hydrated sodium carbonate, Na₂CO₃·xH₂O, is heated to constant mass. The mass of water lost is 3.60 g. What is the value of x? (M(Na₂CO₃) = 106.0 g mol⁻¹; M(H₂O) = 18.0 g mol⁻¹)",
+   "options": [
+    "10",
+    "5",
+    "7",
+    "12"
+   ],
+   "answer": 0,
+   "explanation": "The mass of anhydrous sodium carbonate left is 5.72 − 3.60 = 2.12 g, so moles of Na₂CO₃ = 2.12 ÷ 106.0 = 0.0200 mol. Moles of water lost = 3.60 ÷ 18.0 = 0.200 mol, so x = 0.200 ÷ 0.0200 = 10."
+  },
+  {
+   "n": 29,
+   "topic": "Kinetics",
+   "q": "For the reaction A + B → products, the table gives initial concentrations and initial rates. Experiment 1: [A] = 0.10 mol dm⁻³, [B] = 0.10 mol dm⁻³, initial rate = 2.0 × 10⁻³ mol dm⁻³ s⁻¹; Experiment 2: [A] = 0.20 mol dm⁻³, [B] = 0.10 mol dm⁻³, initial rate = 8.0 × 10⁻³ mol dm⁻³ s⁻¹; Experiment 3: [A] = 0.20 mol dm⁻³, [B] = 0.20 mol dm⁻³, initial rate = 1.6 × 10⁻² mol dm⁻³ s⁻¹. Which rate equation is consistent with these data?",
+   "options": [
+    "rate = k[A]²[B]²",
+    "rate = k[A][B]",
+    "rate = k[A][B]²",
+    "rate = k[A]²[B]"
+   ],
+   "answer": 3,
+   "explanation": "Comparing experiment 1 with experiment 2, doubling [A] while [B] is constant increases the rate from 2.0 × 10⁻³ to 8.0 × 10⁻³ mol dm⁻³ s⁻¹, a factor of 4, so the order with respect to A is 2. Comparing experiment 2 with experiment 3, doubling [B] while [A] is constant doubles the rate, so the order with respect to B is 1. Therefore rate = k[A]²[B]."
+  },
+  {
+   "n": 30,
+   "topic": "Kinetics",
+   "q": "The decomposition of a substance follows first-order kinetics with a half-life of 120 s. Starting with a concentration of 0.80 mol dm⁻³, what concentration remains after 6.0 minutes?",
+   "options": [
+    "0.20 mol dm⁻³",
+    "0.10 mol dm⁻³",
+    "0.067 mol dm⁻³",
+    "0.40 mol dm⁻³"
+   ],
+   "answer": 1,
+   "explanation": "6.0 minutes is 360 s, which is 360 ÷ 120 = 3 half-lives. For a first-order reaction, the concentration halves in each half-life: 0.80 → 0.40 → 0.20 → 0.10 mol dm⁻³. The value 0.067 mol dm⁻³ would arise from an incorrect division rather than three successive halvings."
+  }
+ ]
+}

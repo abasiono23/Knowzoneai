@@ -1,0 +1,791 @@
+{
+ "id": "neco-biology-p5",
+ "exam": "neco",
+ "subject": "biology",
+ "year": null,
+ "number": 5,
+ "source": "ai",
+ "minutes": 60,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Genetics",
+   "q": "In a dihybrid cross between two pea plants heterozygous for seed shape and seed colour (RrYy × RrYy), where R = round, r = wrinkled, Y = yellow and y = green, the gene pairs assort independently. What fraction of the offspring is expected to be wrinkled and green?",
+   "options": [
+    "1/16",
+    "9/16",
+    "1/8",
+    "1/4"
+   ],
+   "answer": 0,
+   "explanation": "For each gene pair, the probability of the recessive phenotype is 1/4. Since the gene pairs assort independently, the combined probability is 1/4 × 1/4 = 1/16."
+  },
+  {
+   "n": 2,
+   "topic": "Transport systems",
+   "q": "A student in Ibadan examined mature mammalian red blood cells under a microscope. Which feature makes them efficient in transporting oxygen?",
+   "options": [
+    "many mitochondria that use oxygen rapidly",
+    "large nucleus that controls oxygen uptake",
+    "thick cellulose wall that protects haemoglobin",
+    "biconcave shape that increases surface area to volume ratio"
+   ],
+   "answer": 3,
+   "explanation": "The biconcave shape gives red blood cells a large surface area for rapid diffusion of oxygen and a short distance to the centre of the cell. Mature mammalian red blood cells have no nucleus, no cellulose wall and no mitochondria, so those descriptions are incorrect."
+  },
+  {
+   "n": 3,
+   "topic": "Transport systems",
+   "q": "A gardener in Osogbo removes a ring of bark from the stem of a young mango tree. After some weeks, the stem above the ring becomes swollen. This is mainly because...",
+   "options": [
+    "organic solutes accumulate above the ring after phloem transport is blocked",
+    "water accumulates above the ring after xylem transport is blocked",
+    "mineral salts are absorbed faster by the roots",
+    "the cambium produces extra xylem below the ring"
+   ],
+   "answer": 0,
+   "explanation": "Removing a complete ring of bark interrupts the phloem, which normally carries organic solutes from the leaves towards the roots. These solutes therefore accumulate in the tissue above the ring, causing swelling. The xylem lies deeper in the stem and still transports water upward."
+  },
+  {
+   "n": 4,
+   "topic": "Excretion",
+   "q": "A freshwater bony fish in a pond in Benin excretes its main nitrogenous waste directly into water. Which compound is this waste?",
+   "options": [
+    "Creatinine",
+    "Uric acid",
+    "Urea",
+    "Ammonia"
+   ],
+   "answer": 3,
+   "explanation": "Freshwater bony fish are ammonotelic: they excrete ammonia, which is very soluble and can be removed rapidly through the gills into the surrounding water. Urea and uric acid are more typical of other groups of animals."
+  },
+  {
+   "n": 5,
+   "topic": "Nutrition in plants and animals",
+   "q": "A farmer in Kaduna grows maize in a nutrient solution that lacks nitrogen. Which observation is most likely?",
+   "options": [
+    "stunted growth with yellowing of older leaves",
+    "poor root growth with purple leaves",
+    "weak stems with yellowing of leaf margins",
+    "death of young growing points"
+   ],
+   "answer": 0,
+   "explanation": "Nitrogen is needed for making chlorophyll and proteins; when it is deficient, growth is stunted and older leaves turn yellow as nitrogen is moved to younger tissues. Poor root growth with purple leaves suggests phosphorus deficiency, while death of growing points suggests calcium or boron deficiency."
+  },
+  {
+   "n": 6,
+   "topic": "Nutrition in plants and animals",
+   "q": "A boy in Ibadan ate a meal containing fish. The enzyme that begins protein digestion in his stomach is most active at about pH...",
+   "options": [
+    "5",
+    "9",
+    "7",
+    "2"
+   ],
+   "answer": 3,
+   "explanation": "The stomach secretes hydrochloric acid, making the contents strongly acidic, and pepsin is the enzyme that begins protein digestion there. Pepsin works best at about pH 2; at pH 5, 7 or 9 its activity is much reduced or absent."
+  },
+  {
+   "n": 7,
+   "topic": "Classification of living things",
+   "q": "A farmer in Enugu finds a plant with needle-like leaves and seeds produced on cones. The plant is best classified as a",
+   "options": [
+    "bryophyte",
+    "pteridophyte",
+    "angiosperm",
+    "gymnosperm"
+   ],
+   "answer": 3,
+   "explanation": "Gymnosperms are seed plants whose seeds are not enclosed in fruits and are often borne on cones. Bryophytes and pteridophytes do not produce seeds, while angiosperms produce seeds enclosed within fruits."
+  },
+  {
+   "n": 8,
+   "topic": "Nervous and hormonal coordination",
+   "q": "After a road accident, a patient in Ibadan has difficulty maintaining balance and walking steadily. Which part of the brain is most likely injured?",
+   "options": [
+    "Medulla oblongata",
+    "Hypothalamus",
+    "Cerebrum",
+    "Cerebellum"
+   ],
+   "answer": 3,
+   "explanation": "The cerebellum coordinates balance, posture and smooth muscular movement. The medulla oblongata controls involuntary activities such as breathing, the cerebrum controls conscious activities, and the hypothalamus regulates homeostasis."
+  },
+  {
+   "n": 9,
+   "topic": "Nervous and hormonal coordination",
+   "q": "A patient in Enugu is given a drug that prevents acetylcholine from binding to receptors at the neuromuscular junction. Which effect is most likely?",
+   "options": [
+    "The spinal cord will be unable to conduct impulses.",
+    "The muscles supplied by the affected nerves will fail to contract.",
+    "The sensory nerves will not detect stimuli.",
+    "The heart will stop receiving impulses from the medulla."
+   ],
+   "answer": 1,
+   "explanation": "Acetylcholine is the neurotransmitter released at the neuromuscular junction; if it cannot bind to receptors, the muscle fibre is not stimulated and contraction fails. The drug acts at the neuromuscular junction, so sensory receptors and spinal conduction are not directly blocked."
+  },
+  {
+   "n": 10,
+   "topic": "Support and movement",
+   "q": "A student in Aba studies a long bone from a goat. Which function is performed by the yellow marrow in the medullary cavity?",
+   "options": [
+    "Secretion of synovial fluid",
+    "Storage of fat",
+    "Production of red blood cells",
+    "Formation of cartilage at the joint"
+   ],
+   "answer": 1,
+   "explanation": "Yellow marrow consists largely of fat and serves as a fat store. Red marrow produces blood cells, synovial fluid is secreted by the synovial membrane, and cartilage at joints is formed from cartilage-forming cells."
+  },
+  {
+   "n": 11,
+   "topic": "Variation and evolution",
+   "q": "Which pair of human characteristics is an example of continuous variation?",
+   "options": [
+    "Sickle-cell trait and colour blindness",
+    "Tongue rolling and earlobe attachment",
+    "Height and body mass",
+    "ABO blood group and sex"
+   ],
+   "answer": 2,
+   "explanation": "Height and body mass show a gradual range of values rather than distinct categories, so they are examples of continuous variation. Blood groups, sex, tongue rolling, earlobe attachment and sickle-cell trait are discontinuous because individuals fall into clear categories."
+  },
+  {
+   "n": 12,
+   "topic": "Variation and evolution",
+   "q": "A farmer in Kano sprays the same insecticide on a field for several years. The number of resistant grasshoppers increases. Which explanation is correct?",
+   "options": [
+    "Some grasshoppers already possessed resistance and survived to pass the trait to their offspring.",
+    "The insecticide caused each grasshopper to develop resistance during its lifetime.",
+    "All grasshoppers became resistant at the same time because they were exposed equally.",
+    "The grasshoppers learned to avoid the insecticide and passed the knowledge to their offspring."
+   ],
+   "answer": 0,
+   "explanation": "Natural selection acts on variation already present in a population; resistant grasshoppers survive the insecticide and reproduce, so the resistance trait becomes more common. The insecticide does not deliberately cause useful resistance, and learned avoidance is not inherited in this way."
+  },
+  {
+   "n": 13,
+   "topic": "Cell structure and organisation",
+   "q": "A student in Ibadan observes an organelle enclosed by a single membrane and containing digestive enzymes that break down worn-out organelles. Which organelle is described?",
+   "options": [
+    "Ribosome",
+    "Lysosome",
+    "Golgi apparatus",
+    "Mitochondrion"
+   ],
+   "answer": 1,
+   "explanation": "The lysosome is a single-membrane organelle containing hydrolytic enzymes that digest worn-out organelles and materials taken into the cell. Ribosomes make proteins and have no membrane, while the Golgi apparatus modifies and packages materials. Mitochondria are double-membrane organelles mainly concerned with energy release."
+  },
+  {
+   "n": 14,
+   "topic": "Cell structure and organisation",
+   "q": "A bacterium from a wound in a patient in Zaria is examined under the microscope. Which structure is absent from the bacterium?",
+   "options": [
+    "A membrane-bound nucleus",
+    "A cell membrane",
+    "Ribosomes",
+    "Cytoplasm"
+   ],
+   "answer": 0,
+   "explanation": "Bacteria are prokaryotes, so their genetic material is not enclosed in a membrane-bound nucleus. They still have cytoplasm, a cell membrane and ribosomes for protein synthesis. The absence of a nuclear membrane is a key difference from eukaryotic cells."
+  },
+  {
+   "n": 15,
+   "topic": "Diseases and their control",
+   "q": "A barber in Onitsha repeatedly uses unsterilised clippers on different customers. Which infection is most likely to be spread through this practice?",
+   "options": [
+    "Malaria",
+    "Cholera",
+    "Tuberculosis",
+    "Hepatitis B"
+   ],
+   "answer": 3,
+   "explanation": "Hepatitis B is a blood-borne infection that can be transmitted when contaminated instruments break the skin. Reusing unsterilised clippers may transfer small amounts of infected blood between customers. Malaria is spread by mosquitoes, cholera mainly by contaminated food or water, and tuberculosis by airborne droplets."
+  },
+  {
+   "n": 16,
+   "topic": "Diseases and their control",
+   "q": "A health officer in a village near Ogoja tells children that larvae of a parasite in damp soil can enter through the skin between the toes. Which disease is caused by this parasite?",
+   "options": [
+    "Hookworm infection",
+    "Sleeping sickness",
+    "Cholera",
+    "Malaria"
+   ],
+   "answer": 0,
+   "explanation": "Hookworm larvae can penetrate bare skin, especially between the toes, when people walk on contaminated damp soil. Wearing shoes therefore helps prevent hookworm infection. Malaria is transmitted by mosquitoes, sleeping sickness by tsetse flies, and cholera mainly through contaminated food or water."
+  },
+  {
+   "n": 17,
+   "topic": "Respiration",
+   "q": "A student in Minna calculates the oxygen needed for complete aerobic respiration of 0.5 mole of glucose. How many moles of oxygen are required?",
+   "options": [
+    "3 moles",
+    "0.5 mole",
+    "6 moles",
+    "12 moles"
+   ],
+   "answer": 0,
+   "explanation": "The equation for aerobic respiration is C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O. One mole of glucose requires 6 moles of oxygen, so 0.5 mole of glucose requires 0.5 × 6 = 3 moles of oxygen. The value 6 moles would be correct for a full mole of glucose, not half a mole."
+  },
+  {
+   "n": 18,
+   "topic": "Respiration",
+   "q": "In aerobic respiration in a cell from a cow in Maiduguri, which statement correctly describes the role of oxygen?",
+   "options": [
+    "It directly combines with glucose to form carbon dioxide",
+    "It accepts hydrogen at the end of the respiratory chain to form water",
+    "It acts as an enzyme that speeds up glycolysis",
+    "It is converted to lactic acid when oxygen is plentiful"
+   ],
+   "answer": 1,
+   "explanation": "Oxygen is the final hydrogen acceptor in aerobic respiration, combining with hydrogen to form water. Carbon dioxide is produced during the breakdown of respiratory intermediates, not by oxygen combining directly with glucose. Lactic acid forms when oxygen is insufficient, and oxygen is not an enzyme."
+  },
+  {
+   "n": 19,
+   "topic": "Reproduction",
+   "q": "A flowering plant in a garden in Calabar has small green petals, long feathery stigmas and anthers that hang outside the flower. Which agent most likely carries out pollination in this plant?",
+   "options": [
+    "Water",
+    "Insects",
+    "Wind",
+    "Birds"
+   ],
+   "answer": 2,
+   "explanation": "Feathery stigmas are adapted to trap pollen carried in the air, and hanging anthers release pollen that can be blown away by wind. Small green petals are not attractive to animal pollinators. Water pollination is characteristic of certain aquatic plants, not this set of flower features."
+  },
+  {
+   "n": 20,
+   "topic": "Diffusion, osmosis and active transport",
+   "q": "A student in Minna places three cubes of clear agar, of different sizes, in a beaker of potassium permanganate solution. The smallest cube becomes completely purple first. Which statement best explains this?",
+   "options": [
+    "The smaller cube produces more heat, which increases the speed of diffusion.",
+    "The potassium permanganate is actively transported into the smaller cube using energy from the agar.",
+    "The smaller cube contains less water, so osmosis carries the purple substance inward faster.",
+    "The smaller cube has a larger surface-area-to-volume ratio, so the purple substance reaches its centre more quickly relative to its volume."
+   ],
+   "answer": 3,
+   "explanation": "Diffusion into a cube depends on surface area and distance to the centre. A smaller cube has a larger surface-area-to-volume ratio and a shorter diffusion distance, so it becomes coloured throughout sooner. Osmosis and active transport are not responsible for the movement of the purple substance through agar."
+  },
+  {
+   "n": 21,
+   "topic": "Ecology",
+   "q": "A farmer in Katsina wants to increase the nitrogen content of a maize field without buying artificial fertilizer. Which practice is most suitable?",
+   "options": [
+    "Rotating maize with cowpea, which has nitrogen-fixing bacteria in its root nodules.",
+    "Burning the previous crop residues on the field before planting.",
+    "Planting maize continuously for several seasons.",
+    "Flooding the field to encourage nitrogen-fixing bacteria."
+   ],
+   "answer": 0,
+   "explanation": "Cowpea is a legume and can form root nodules containing nitrogen-fixing bacteria that convert atmospheric nitrogen into nitrogen compounds usable by plants. Rotating it with maize adds nitrogen to the soil. Burning residues and continuous maize cropping reduce soil nitrogen, while flooding encourages denitrification."
+  },
+  {
+   "n": 22,
+   "topic": "Ecology",
+   "q": "A pond near Epe is treated with a chemical that kills all bacteria and fungi in the water and mud. Which effect is most likely?",
+   "options": [
+    "Producers will make more food because fewer nutrients are used.",
+    "Oxygen in the water will increase because bacteria are gone.",
+    "Dead plants and animals will accumulate and mineral nutrients will not be recycled efficiently.",
+    "Fish will grow larger because they no longer compete with bacteria."
+   ],
+   "answer": 2,
+   "explanation": "Bacteria and fungi include decomposers that break down dead organic matter and release mineral nutrients. If they are killed, dead remains accumulate and nutrient recycling slows down. Their removal would not directly increase food production or oxygen supply in the pond."
+  },
+  {
+   "n": 23,
+   "topic": "Genetics",
+   "q": "In guinea pigs, black coat (B) is dominant to white coat (b). A heterozygous black guinea pig is mated with a white guinea pig. If 24 offspring are produced, how many are expected to be white?",
+   "options": [
+    "6",
+    "18",
+    "24",
+    "12"
+   ],
+   "answer": 3,
+   "explanation": "A heterozygous black guinea pig has genotype Bb, while a white guinea pig has genotype bb. The cross Bb × bb gives Bb and bb offspring in equal numbers, so about half of the 24 offspring are expected to be white: 24 ÷ 2 = 12."
+  },
+  {
+   "n": 24,
+   "topic": "Transport systems",
+   "q": "Which chamber of the mammalian heart has the thickest muscular wall?",
+   "options": [
+    "Right ventricle",
+    "Right atrium",
+    "Left ventricle",
+    "Left atrium"
+   ],
+   "answer": 2,
+   "explanation": "The left ventricle pumps oxygenated blood at high pressure to the whole body through the aorta. Its thick muscular wall is needed to generate this pressure. The right ventricle pumps blood to the lungs at a lower pressure."
+  },
+  {
+   "n": 25,
+   "topic": "Excretion",
+   "q": "A student in Owerri observes contractile vacuoles in a freshwater Amoeba under the microscope. What is the main function of these vacuoles?",
+   "options": [
+    "Digesting food particles inside the cell",
+    "Getting rid of excess water and dissolved waste from the cell",
+    "Storing reserve food material for the cell",
+    "Carrying out gaseous exchange with the surrounding water"
+   ],
+   "answer": 1,
+   "explanation": "The contractile vacuole collects excess water and some dissolved wastes and discharges them outside the Amoeba, so it mainly functions in osmoregulation and excretion. Food digestion is carried out in food vacuoles, while gaseous exchange occurs across the cell membrane."
+  },
+  {
+   "n": 26,
+   "topic": "Nutrition in plants and animals",
+   "q": "During photosynthesis in a water weed such as Elodea, the oxygen released comes directly from",
+   "options": [
+    "Chlorophyll",
+    "Water",
+    "Carbon dioxide",
+    "Glucose"
+   ],
+   "answer": 1,
+   "explanation": "In photosynthesis, light energy splits water during photolysis, and the oxygen released comes from water. Carbon dioxide supplies carbon and oxygen atoms for glucose formation, but its oxygen is not the gas released."
+  },
+  {
+   "n": 27,
+   "topic": "Nutrition in plants and animals",
+   "q": "A child in Onitsha eats mainly polished rice for several months and develops beri-beri. The diet is most likely deficient in",
+   "options": [
+    "Thiamine (vitamin B1)",
+    "Ascorbic acid (vitamin C)",
+    "Retinol (vitamin A)",
+    "Cobalamin (vitamin B12)"
+   ],
+   "answer": 0,
+   "explanation": "Polished rice lacks thiamine because the vitamin-rich outer layers are removed during milling, and prolonged deficiency causes beri-beri. Vitamin C deficiency causes scurvy, while retinol deficiency causes night blindness."
+  },
+  {
+   "n": 28,
+   "topic": "Nutrition in plants and animals",
+   "q": "A farmer in Ibadan applies urea fertiliser to a maize field. The nutrient chiefly supplied to the maize plants is",
+   "options": [
+    "Calcium",
+    "Phosphorus",
+    "Nitrogen",
+    "Potassium"
+   ],
+   "answer": 2,
+   "explanation": "Urea fertiliser is rich in nitrogen, which the maize plant needs for making proteins and chlorophyll. Phosphorus mainly supports root development and energy transfer, while potassium is important in enzyme action and water regulation."
+  },
+  {
+   "n": 29,
+   "topic": "Classification of living things",
+   "q": "A boy in Ibadan is found to be infected with a flat, ribbon-like worm that has hooks and suckers on its head. The worm belongs to the phylum",
+   "options": [
+    "Nematoda",
+    "Annelida",
+    "Platyhelminthes",
+    "Mollusca"
+   ],
+   "answer": 2,
+   "explanation": "A flat, ribbon-like worm with hooks and suckers is a tapeworm, which is a flatworm in the phylum Platyhelminthes. Nematodes are cylindrical roundworms, annelids are segmented, and molluscs are soft-bodied animals, often with a shell."
+  },
+  {
+   "n": 30,
+   "topic": "Nervous and hormonal coordination",
+   "q": "A woman in Ibadan is breastfeeding. When the baby suckles, milk is released because oxytocin is secreted by the",
+   "options": [
+    "Anterior pituitary gland",
+    "Posterior pituitary gland",
+    "Adrenal cortex",
+    "Thyroid gland"
+   ],
+   "answer": 1,
+   "explanation": "Oxytocin that causes milk release is produced by neurosecretory cells of the hypothalamus and released from the posterior pituitary gland. The anterior pituitary secretes several other hormones but not oxytocin."
+  },
+  {
+   "n": 31,
+   "topic": "Nervous and hormonal coordination",
+   "q": "After spinning several times in a school field in Jos, Uche feels dizzy and has difficulty keeping his balance. The part of the brain mainly responsible for balance and coordination is the",
+   "options": [
+    "Cerebrum",
+    "Medulla oblongata",
+    "Cerebellum",
+    "Hypothalamus"
+   ],
+   "answer": 2,
+   "explanation": "The cerebellum coordinates voluntary movements and maintains balance and posture, so disturbance can cause dizziness and poor balance. The medulla oblongata controls vital reflexes such as breathing, while the hypothalamus regulates temperature, hunger and water balance."
+  },
+  {
+   "n": 32,
+   "topic": "Support and movement",
+   "q": "A footballer in Onitsha injures the knee joint, and the doctor finds damage to the membrane that produces the fluid lubricating the joint. Which structure is damaged?",
+   "options": [
+    "Tendon",
+    "Ligament",
+    "Synovial membrane",
+    "Articular cartilage"
+   ],
+   "answer": 2,
+   "explanation": "The synovial membrane secretes synovial fluid into the joint cavity, reducing friction during movement. Articular cartilage covers the ends of bones and reduces friction, but it does not produce the lubricating fluid."
+  },
+  {
+   "n": 33,
+   "topic": "Support and movement",
+   "q": "Musa, a student in Warri, rises from a squatting position. Which muscle group contracts to straighten the leg at the knee?",
+   "options": [
+    "Quadriceps femoris",
+    "Hamstrings",
+    "Gastrocnemius",
+    "Biceps brachii"
+   ],
+   "answer": 0,
+   "explanation": "The quadriceps femoris is on the front of the thigh and contracts to extend the knee. The hamstrings flex the knee and act as antagonists during this movement."
+  },
+  {
+   "n": 34,
+   "topic": "Variation and evolution",
+   "q": "A biology teacher in Keffi explains that natural selection acts on a population. Which condition is essential for natural selection to occur?",
+   "options": [
+    "All individuals have identical genes.",
+    "Resources are unlimited.",
+    "Mutation never occurs in the population.",
+    "There is inherited variation among individuals."
+   ],
+   "answer": 3,
+   "explanation": "Natural selection requires heritable differences among individuals so that some variants leave more offspring than others. If all individuals are genetically identical or resources are unlimited, selection is not expected to change the population in the same way."
+  },
+  {
+   "n": 35,
+   "topic": "Cell structure and organisation",
+   "q": "A laboratory rat in Zaria is exposed to alcohol and drugs over a long period. Which organelle is expected to become abundant because it helps detoxify these substances?",
+   "options": [
+    "Rough endoplasmic reticulum",
+    "Smooth endoplasmic reticulum",
+    "Lysosome",
+    "Ribosome"
+   ],
+   "answer": 1,
+   "explanation": "The smooth endoplasmic reticulum contains enzymes that detoxify drugs and alcohol. The rough endoplasmic reticulum is mainly involved in protein synthesis because it bears ribosomes."
+  },
+  {
+   "n": 36,
+   "topic": "Cell structure and organisation",
+   "q": "A student in Makurdi observes a plant cell with a large central vacuole. Which statement best describes the main role of this vacuole?",
+   "options": [
+    "It is the main site of ATP production.",
+    "It controls the entry and exit of all substances.",
+    "It contains the chromosomes and controls cell division.",
+    "It stores cell sap and helps maintain turgidity."
+   ],
+   "answer": 3,
+   "explanation": "The large central vacuole stores cell sap and helps maintain turgor pressure, keeping the plant cell firm. The nucleus contains chromosomes, while mitochondria are the main site of ATP production."
+  },
+  {
+   "n": 37,
+   "topic": "Cell structure and organisation",
+   "q": "Which sequence correctly shows the levels of organisation in a multicellular animal, from simplest to most complex?",
+   "options": [
+    "Tissues → cells → organ systems → organs",
+    "Cells → tissues → organs → organ systems",
+    "Organs → tissues → cells → organ systems",
+    "Cells → organs → tissues → organ systems"
+   ],
+   "answer": 1,
+   "explanation": "In a multicellular animal, cells with similar functions form tissues, tissues form organs, and organs work together as organ systems. The other sequences place the levels in the wrong order."
+  },
+  {
+   "n": 38,
+   "topic": "Diseases and their control",
+   "q": "A mother in Bauchi keeps her child who has measles away from other children. This is mainly because the measles virus is spread through",
+   "options": [
+    "the bites of mosquitoes.",
+    "contaminated food and water.",
+    "contact with damp soil.",
+    "droplets released when the patient coughs or sneezes."
+   ],
+   "answer": 3,
+   "explanation": "Measles spreads mainly by droplet infection from coughing or sneezing, so isolating the child reduces transmission. Contaminated food and water and mosquito bites are associated with other diseases, not measles."
+  },
+  {
+   "n": 39,
+   "topic": "Diseases and their control",
+   "q": "A primary health centre in Zaria is organising a campaign to protect children against diphtheria. Which measure should be included?",
+   "options": [
+    "Providing insecticide-treated nets",
+    "Draining stagnant water around homes",
+    "Giving children the diphtheria vaccine",
+    "Boiling drinking water before use"
+   ],
+   "answer": 2,
+   "explanation": "Diphtheria is prevented mainly by routine vaccination, which protects children before they are infected. Draining stagnant water and using insecticide-treated nets help control malaria, while boiling water helps prevent waterborne diseases."
+  },
+  {
+   "n": 40,
+   "topic": "Respiration",
+   "q": "After the oxygen in a sealed bottle of glucose and yeast has been used up, bubbles of a gas that turns limewater milky continue to form. The gas is produced mainly by",
+   "options": [
+    "aerobic respiration of glucose by yeast",
+    "photosynthesis by yeast",
+    "anaerobic respiration of glucose by yeast",
+    "active transport of carbon dioxide by yeast"
+   ],
+   "answer": 2,
+   "explanation": "Yeast breaks down glucose anaerobically to ethanol and carbon dioxide, and carbon dioxide turns limewater milky. Aerobic respiration would require oxygen and would stop once the oxygen in the sealed bottle is exhausted."
+  },
+  {
+   "n": 41,
+   "topic": "Reproduction",
+   "q": "A farmer in Jos wants to produce many banana suckers that are genetically identical to a parent plant with desirable fruit. Which method should he use?",
+   "options": [
+    "Vegetative propagation using suckers",
+    "Cross-pollination of the parent with a different variety",
+    "Hybridisation with a wild banana",
+    "Sowing seeds collected from the parent plant"
+   ],
+   "answer": 0,
+   "explanation": "Vegetative propagation uses mitosis, so the suckers produced have the same genotype as the parent plant. Seeds from sexual reproduction and hybridisation introduce genetic variation through meiosis and fertilisation."
+  },
+  {
+   "n": 42,
+   "topic": "Diffusion, osmosis and active transport",
+   "q": "A student in Enugu removes the shell of a hen's egg by soaking it in dilute hydrochloric acid, leaving the inner membrane intact. The egg is then placed in distilled water. Which change is expected and why?",
+   "options": [
+    "The egg remains the same because distilled water has no solutes.",
+    "The egg swells because water enters through the membrane by osmosis.",
+    "The egg shrinks because solutes leave the egg by osmosis.",
+    "The egg swells because the membrane actively pumps water inward."
+   ],
+   "answer": 1,
+   "explanation": "The egg contents have a higher solute concentration and lower water potential than distilled water, so water enters by osmosis. Osmosis is passive movement of water and is not brought about by active pumping of water."
+  },
+  {
+   "n": 43,
+   "topic": "Ecology",
+   "q": "A farmer in Enugu notices that maize plants grown after a legume crop are greener and need less nitrogen fertiliser. Which organisms most directly enrich the soil with nitrogen in this situation?",
+   "options": [
+    "Nitrogen-fixing bacteria in the root nodules of the legume",
+    "Nitrifying bacteria converting nitrate to nitrogen gas",
+    "Denitrifying bacteria in the waterlogged soil",
+    "Decomposers converting nitrogen gas to ammonia"
+   ],
+   "answer": 0,
+   "explanation": "Nitrogen-fixing bacteria such as Rhizobium live in legume root nodules and convert atmospheric nitrogen into nitrogen compounds usable by plants. Denitrifying bacteria remove nitrogen from the soil as nitrogen gas, and nitrifying bacteria mainly convert ammonia to nitrites and nitrates."
+  },
+  {
+   "n": 44,
+   "topic": "Ecology",
+   "q": "A bare rock surface near a quarry in Abeokuta is gradually colonised. Which sequence of plant forms is most likely during primary succession?",
+   "options": [
+    "Lichens → mosses → grasses → shrubs",
+    "Shrubs → grasses → mosses → lichens",
+    "Mosses → lichens → shrubs → grasses",
+    "Grasses → shrubs → lichens → mosses"
+   ],
+   "answer": 0,
+   "explanation": "Lichens are pioneer organisms that can grow on bare rock and help to form a thin soil layer. They are followed by mosses, then grasses and shrubs as the soil deepens and can support larger plants."
+  },
+  {
+   "n": 45,
+   "topic": "Genetics",
+   "q": "A child in Kaduna is found to have an extra chromosome 21 in each somatic cell. Which condition does the child have?",
+   "options": [
+    "Sickle-cell anaemia",
+    "Klinefelter syndrome",
+    "Down syndrome",
+    "Turner syndrome"
+   ],
+   "answer": 2,
+   "explanation": "An extra chromosome 21 is trisomy 21, which causes Down syndrome. Turner syndrome is XO, Klinefelter syndrome is XXY, and sickle-cell anaemia is caused by a single gene mutation."
+  },
+  {
+   "n": 46,
+   "topic": "Transport systems",
+   "q": "In a young bean root from Jos, water and dissolved salts moving from the cortex into the xylem must pass through the endodermis. What is the main role of the Casparian strip in the endodermis?",
+   "options": [
+    "It forces water and dissolved salts to pass through living cells before entering the xylem.",
+    "It stores starch for root growth.",
+    "It allows free movement of water through the cell walls into the xylem.",
+    "It increases the surface area for absorption of water."
+   ],
+   "answer": 0,
+   "explanation": "The Casparian strip is a waxy, impermeable band in the endodermal cell walls. It blocks the apoplastic pathway, forcing water and dissolved salts to pass through the living cytoplasm before entering the xylem; it does not allow free wall movement."
+  },
+  {
+   "n": 47,
+   "topic": "Transport systems",
+   "q": "Which valve prevents blood from flowing back from the left ventricle into the left atrium of a mammalian heart?",
+   "options": [
+    "Aortic semilunar valve",
+    "Bicuspid valve",
+    "Pulmonary semilunar valve",
+    "Tricuspid valve"
+   ],
+   "answer": 1,
+   "explanation": "The bicuspid valve lies between the left atrium and left ventricle and closes to prevent backflow during ventricular systole. The tricuspid valve is on the right side, while semilunar valves guard the exits to the aorta and pulmonary artery."
+  },
+  {
+   "n": 48,
+   "topic": "Nutrition in plants and animals",
+   "q": "A student in Makurdi examines a transverse section of a leaf. In which tissue are most chloroplasts found, making it the main site of photosynthesis?",
+   "options": [
+    "Palisade mesophyll",
+    "Epidermis",
+    "Spongy mesophyll",
+    "Xylem"
+   ],
+   "answer": 0,
+   "explanation": "Palisade mesophyll cells are packed near the upper leaf surface and contain many chloroplasts for light absorption. Spongy mesophyll has fewer chloroplasts, the epidermis is mostly transparent, and xylem mainly transports water."
+  },
+  {
+   "n": 49,
+   "topic": "Support and movement",
+   "q": "Which bones form the pectoral girdle in a human being?",
+   "options": [
+    "Humerus and radius",
+    "Ilium and ischium",
+    "Femur and tibia",
+    "Clavicle and scapula"
+   ],
+   "answer": 3,
+   "explanation": "The pectoral girdle attaches the upper limb to the trunk and consists of the clavicle and scapula on each side. The ilium and ischium are parts of the pelvic girdle, while the humerus and radius are bones of the arm and forearm. The femur and tibia are bones of the hind limb."
+  },
+  {
+   "n": 50,
+   "topic": "Variation and evolution",
+   "q": "A student in Minna observes that some snails in the same garden have plain brown shells while others have yellow shells with dark bands. This difference is best described as",
+   "options": [
+    "adaptive radiation",
+    "discontinuous variation",
+    "continuous variation",
+    "natural selection"
+   ],
+   "answer": 1,
+   "explanation": "Shell colour in these snails occurs in distinct classes rather than a gradual range, so it is an example of discontinuous variation. Continuous variation involves features such as height or body mass that grade smoothly from one value to another. Adaptive radiation and natural selection are evolutionary processes, not the name for a single variable trait."
+  },
+  {
+   "n": 51,
+   "topic": "Variation and evolution",
+   "q": "In a dry region near Sokoto, a population of seed-eating birds shows variation in beak size. After a long drought, only birds with large, strong beaks can crack the few hard seeds available. What is the most likely result after many generations?",
+   "options": [
+    "The proportion of birds with large, strong beaks in the population increases.",
+    "Small-beaked birds survive better because they need less food.",
+    "Each bird's beak grows larger because it must crack hard seeds.",
+    "All birds develop exactly the same beak size to avoid competition."
+   ],
+   "answer": 0,
+   "explanation": "Birds with inherited large, strong beaks are better able to obtain food during the drought and are more likely to survive and reproduce. Their offspring inherit the genes for larger beaks, so the proportion of large-beaked birds increases over generations. A beak growing larger during an individual bird's lifetime is not an inherited change and does not explain the population change."
+  },
+  {
+   "n": 52,
+   "topic": "Support and movement",
+   "q": "The cartilage at the ends of bones in a movable joint is important because it",
+   "options": [
+    "stores fat for energy",
+    "reduces friction between the bones",
+    "produces red blood cells",
+    "secretes synovial fluid into the joint cavity"
+   ],
+   "answer": 1,
+   "explanation": "Smooth cartilage covers the ends of bones, cushions them and reduces friction when the joint moves. Synovial fluid also lubricates the joint, but it is secreted by the synovial membrane, not by the cartilage. Red marrow produces blood cells, and yellow marrow stores fat."
+  },
+  {
+   "n": 53,
+   "topic": "Cell structure and organisation",
+   "q": "A biology student in Ibadan views a slide using a microscope with a ×10 eyepiece and a ×40 objective lens. What is the total magnification of the image?",
+   "options": [
+    "×400",
+    "×50",
+    "×4",
+    "×4000"
+   ],
+   "answer": 0,
+   "explanation": "Total magnification is the product of the eyepiece and objective magnifications: 10 × 40 = 400. Adding the figures to get 10 + 40 = 50 or using only the objective lens does not give the total magnification."
+  },
+  {
+   "n": 54,
+   "topic": "Cell structure and organisation",
+   "q": "A leaf cell from a cassava plant in Abeokuta contains both chloroplasts and mitochondria. Which statement correctly compares these two organelles?",
+   "options": [
+    "Both release carbon dioxide during photosynthesis.",
+    "Both are found in mature human red blood cells.",
+    "Both contain DNA and can multiply within the cell.",
+    "Both are enclosed by a single membrane."
+   ],
+   "answer": 2,
+   "explanation": "Chloroplasts and mitochondria are double-membraned organelles that contain their own DNA and ribosomes; they can grow and divide within the cell. They are not single-membraned, and mature human red blood cells lack both. Carbon dioxide is used by chloroplasts in photosynthesis, not released by both during it."
+  },
+  {
+   "n": 55,
+   "topic": "Diseases and their control",
+   "q": "Residents of a community near Epe notice that discarded tins and old tyres around their houses collect rain water and many mosquito larvae are found in them. Which measure will most directly reduce the breeding of the malaria vector?",
+   "options": [
+    "Emptying or removing all containers that hold stagnant water.",
+    "Boiling drinking water before use.",
+    "Covering pit latrines with dry leaves.",
+    "Spraying houseflies with insecticide."
+   ],
+   "answer": 0,
+   "explanation": "The malaria parasite is transmitted by Anopheles mosquitoes, whose larvae develop in stagnant water. Removing or emptying such containers destroys the breeding sites, unlike measures aimed at houseflies, pit latrines or drinking water."
+  },
+  {
+   "n": 56,
+   "topic": "Diseases and their control",
+   "q": "A veterinary officer in Katsina Ala reports cases of cattle with intermittent fever, anaemia and swollen lymph nodes. The disease is spread by tsetse flies. Which disease is most likely involved?",
+   "options": [
+    "Ringworm",
+    "Trypanosomiasis",
+    "Malaria",
+    "Bilharziasis"
+   ],
+   "answer": 1,
+   "explanation": "Tsetse flies transmit Trypanosoma parasites, which cause trypanosomiasis, known as nagana in cattle and sleeping sickness in humans. Malaria is transmitted by female Anopheles mosquitoes, bilharziasis by water snails, and ringworm by fungal contact."
+  },
+  {
+   "n": 57,
+   "topic": "Respiration",
+   "q": "A student in Ilorin compares a sample of inspired air with a sample of expired air from the same person. Which difference is expected?",
+   "options": [
+    "Expired air contains no water vapour.",
+    "Inspired air contains a higher percentage of carbon dioxide.",
+    "Expired air contains a higher percentage of oxygen.",
+    "Expired air contains a higher percentage of carbon dioxide."
+   ],
+   "answer": 3,
+   "explanation": "Respiration in body tissues uses oxygen and produces carbon dioxide, so expired air has more carbon dioxide and less oxygen than inspired air. It is also warmer and carries more water vapour, not less."
+  },
+  {
+   "n": 58,
+   "topic": "Respiration",
+   "q": "A footballer in Kaduna sprints for a long distance and later complains of muscle fatigue. Which substance most likely accumulates in her muscles during the sprint because oxygen supply is insufficient?",
+   "options": [
+    "Carbon dioxide",
+    "Ethanol",
+    "Lactic acid",
+    "Glucose"
+   ],
+   "answer": 2,
+   "explanation": "When oxygen supply cannot meet the energy demand, human muscle cells respire anaerobically and convert glucose to lactic acid, which contributes to fatigue. Ethanol is produced in yeast, carbon dioxide is not produced in this lactic acid fermentation, and glucose is the substrate consumed rather than accumulated."
+  },
+  {
+   "n": 59,
+   "topic": "Reproduction",
+   "q": "A health worker in Aba explains to a group of women that in a normal human pregnancy, fertilisation of the egg by a sperm usually takes place in the",
+   "options": [
+    "ovary",
+    "uterus",
+    "vagina",
+    "oviduct"
+   ],
+   "answer": 3,
+   "explanation": "The sperm meets and fertilises the egg in the oviduct, also called the fallopian tube. The fertilised egg then moves to the uterus, where implantation occurs, not in the ovary or vagina."
+  },
+  {
+   "n": 60,
+   "topic": "Ecology",
+   "q": "A few rabbits are introduced onto an island near Lagos where there is plenty of food and no predators. During the first few years, the population is most likely to",
+   "options": [
+    "increase rapidly at first because food is plentiful and there are few limiting factors",
+    "increase and then stop immediately because the island is small",
+    "decrease steadily until the rabbits become extinct",
+    "remain exactly at the carrying capacity of the island"
+   ],
+   "answer": 0,
+   "explanation": "With plenty of food and no predators, the rabbits experience little environmental resistance at first, so the population increases rapidly. Later, competition for food and space may slow the growth."
+  }
+ ]
+}

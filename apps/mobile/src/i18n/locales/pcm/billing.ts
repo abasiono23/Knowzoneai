@@ -70,6 +70,8 @@ const billing: Translation<typeof en> = {
     studyPlans: 'Study plans wey dey arranged for you',
     insights: 'Better progress insights',
     examPapers: 'Full WAEC, NECO and JAMB practice papers',
+    examPapersFor: 'Full {{exams}} practice papers',
+    examPapersAny: 'Full exam practice papers',
     library: 'Bigger study library and folders',
     priority: 'We go do your own first when e busy',
     everythingPlus: 'Everything wey dey Plus',
@@ -187,6 +189,8 @@ const billing: Translation<typeof en> = {
       PRO: {
         whoQ: 'Who Pro dey for?',
         whoA: 'Students wey dey prepare for WAEC, NECO or JAMB, wey dey practise every day and want full papers like past questions.',
+        whoAFor: 'Students wey dey prepare for {{exams}}, wey dey practise every day and want the full practice papers.',
+        whoAAny: 'Students wey dey practise every day and want the most from the AI tutor, with priority when e busy.',
         fairQ: 'Wetin “fair use” mean?',
         fairA:
           'Reach {{questions}} tutor questions every day go cover heavy studying. E dey stop automated use or when people dey share one account.',

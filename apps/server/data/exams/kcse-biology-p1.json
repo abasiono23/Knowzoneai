@@ -1,0 +1,401 @@
+{
+ "id": "kcse-biology-p1",
+ "exam": "kcse",
+ "subject": "biology",
+ "year": null,
+ "number": 1,
+ "source": "ai",
+ "minutes": 35,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Transport in plants and animals",
+   "q": "A potometer with a leafy shoot records an uptake of 18 cm³ of water in 30 minutes. What is the rate of water uptake in cm³ per hour?",
+   "options": [
+    "36 cm³ per hour",
+    "0.6 cm³ per hour",
+    "9 cm³ per hour",
+    "54 cm³ per hour"
+   ],
+   "answer": 0,
+   "explanation": "30 minutes is 0.5 hour, so the rate is 18 cm³ ÷ 0.5 hour = 36 cm³ per hour. The value 0.6 comes from dividing 18 by 30, but that gives cm³ per minute, not cm³ per hour."
+  },
+  {
+   "n": 2,
+   "topic": "Transport in plants and animals",
+   "q": "After some lymph vessels in a person's leg are blocked, fluid accumulates and the leg swells. Which function of the lymphatic system has been directly affected?",
+   "options": [
+    "Production of red blood cells in bone marrow",
+    "Transport of oxygen from the lungs to body tissues",
+    "Filtration of urea from blood in the kidney",
+    "Return of tissue fluid to the blood"
+   ],
+   "answer": 3,
+   "explanation": "Blocked lymph vessels prevent tissue fluid from being returned to the blood, so fluid collects and causes swelling. Oxygen transport is a function of blood, while urea filtration and red blood cell production occur in the kidney and bone marrow respectively."
+  },
+  {
+   "n": 3,
+   "topic": "Transport in plants and animals",
+   "q": "A tomato plant in a school garden in Machakos wilts around midday but becomes upright again in the evening. Which explanation is most likely?",
+   "options": [
+    "Transpiration exceeds water absorption, reducing turgor in leaf cells.",
+    "Stomata close at midday, causing carbon dioxide to leave the leaf cells.",
+    "Water absorption stops completely because photosynthesis stops at midday.",
+    "Too much water enters the leaf cells at midday, making them flaccid."
+   ],
+   "answer": 0,
+   "explanation": "At midday transpiration is high, and if water lost is faster than uptake, leaf cells lose turgor and the plant wilts. Recovery in the evening shows that water is available and reduced transpiration allows turgor to return; it is not caused by photosynthesis stopping or excess water entry."
+  },
+  {
+   "n": 4,
+   "topic": "The cell",
+   "q": "Which organelle contains hydrolytic enzymes used to digest bacteria inside a white blood cell?",
+   "options": [
+    "Mitochondrion",
+    "Ribosome",
+    "Chloroplast",
+    "Lysosome"
+   ],
+   "answer": 3,
+   "explanation": "Lysosomes contain hydrolytic enzymes that break down engulfed bacteria. Ribosomes make proteins and mitochondria release energy, while chloroplasts are for photosynthesis and are not abundant in white blood cells."
+  },
+  {
+   "n": 5,
+   "topic": "The cell",
+   "q": "A goat somatic cell has 60 chromosomes. How many chromosomes are in each gamete formed after meiosis?",
+   "options": [
+    "30",
+    "15",
+    "120",
+    "60"
+   ],
+   "answer": 0,
+   "explanation": "Meiosis halves the chromosome number, so gametes receive 60 ÷ 2 = 30 chromosomes. The number 60 would remain after mitosis, while 120 is a doubling and 15 would require two halving divisions."
+  },
+  {
+   "n": 6,
+   "topic": "The cell",
+   "q": "A student draws an onion epidermal cell that is actually 0.20 mm long. The drawing is 60 mm long. What is the magnification of the drawing?",
+   "options": [
+    "×120",
+    "×300",
+    "×600",
+    "×30"
+   ],
+   "answer": 1,
+   "explanation": "Magnification = drawing length ÷ actual length = 60 mm ÷ 0.20 mm = 300, so the drawing is ×300. The values ×30 and ×600 come from shifting the decimal point incorrectly."
+  },
+  {
+   "n": 7,
+   "topic": "Excretion and homeostasis",
+   "q": "Which part of the nephron is mainly responsible for selective reabsorption of glucose from the filtrate?",
+   "options": [
+    "Glomerulus",
+    "Collecting duct",
+    "Proximal convoluted tubule",
+    "Loop of Henle"
+   ],
+   "answer": 2,
+   "explanation": "Glucose is selectively reabsorbed by active transport in the proximal convoluted tubule. The glomerulus filters blood, the loop of Henle mainly recovers water and salts, and the collecting duct mainly reabsorbs water under ADH control."
+  },
+  {
+   "n": 8,
+   "topic": "Excretion and homeostasis",
+   "q": "On a hot sunny day in Mombasa, a person's body temperature is kept near normal. Which response helps to lose heat?",
+   "options": [
+    "Increased metabolic rate and vasoconstriction of skin arterioles",
+    "Vasoconstriction of skin arterioles and shivering",
+    "Decreased sweating and contraction of hair erector muscles",
+    "Vasodilation of skin arterioles and increased sweating"
+   ],
+   "answer": 3,
+   "explanation": "Vasodilation brings more blood near the skin surface and sweating increases evaporation, both increasing heat loss. Vasoconstriction, shivering and increased metabolic rate are responses that conserve or generate heat on a cold day."
+  },
+  {
+   "n": 9,
+   "topic": "Evolution",
+   "q": "In Kilifi, mosquitoes were sprayed with an insecticide for several years. Before spraying, a few mosquitoes already carried a gene for resistance. After repeated spraying, most surviving mosquitoes were resistant. Which statement best explains this?",
+   "options": [
+    "The insecticide selected mosquitoes with the resistance gene, and these survived and reproduced.",
+    "Each mosquito learned to avoid the insecticide and passed the learned behaviour to its offspring.",
+    "Resistance spread because all mosquitoes changed their genes in the same way during spraying.",
+    "The insecticide caused mosquitoes to develop the resistance gene when they were sprayed."
+   ],
+   "answer": 0,
+   "explanation": "Natural selection acts on variation already present: resistant mosquitoes survive spraying and pass on the resistance gene. The insecticide does not create the resistance gene in response to need, and learned avoidance is not inherited as a gene-based adaptation."
+  },
+  {
+   "n": 10,
+   "topic": "Evolution",
+   "q": "The forelimbs of a human, a bat and a whale have similar bone arrangement but are used for different functions. Which conclusion is best supported?",
+   "options": [
+    "They have identical DNA in all their cells.",
+    "They show convergent evolution because the forelimbs have similar bone arrangement.",
+    "They are not related because the forelimbs perform different functions.",
+    "The organisms share a common ancestor."
+   ],
+   "answer": 3,
+   "explanation": "Similar bone arrangement despite different functions is evidence of homologous structures, which indicate common ancestry and divergent evolution. Convergent evolution would produce analogous structures with different basic plans, while different functions do not rule out relationship."
+  },
+  {
+   "n": 11,
+   "topic": "Ecology",
+   "q": "In a food chain in Lake Victoria, phytoplankton → zooplankton → omena (small fish) → Nile perch → fish eagle, phytoplankton trap 500,000 kJ m⁻² year⁻¹. If 10% of the energy is transferred from one trophic level to the next, how much energy from this chain is incorporated into Nile perch?",
+   "options": [
+    "5,000 kJ m⁻² year⁻¹",
+    "50,000 kJ m⁻² year⁻¹",
+    "50 kJ m⁻² year⁻¹",
+    "500 kJ m⁻² year⁻¹"
+   ],
+   "answer": 3,
+   "explanation": "Energy transfer is 10% at each step: 500,000 → 50,000 (zooplankton) → 5,000 (omena) → 500 (Nile perch). The value 50 kJ m⁻² year⁻¹ would be the energy passed on to the fish eagle, not the energy incorporated into Nile perch."
+  },
+  {
+   "n": 12,
+   "topic": "Ecology",
+   "q": "A student surveying tree seedlings in a 20 m × 50 m grassland in Narok counts 8, 10, 12, 9 and 11 seedlings in five randomly placed 1 m² quadrats. Using the mean density, what is the best estimate of the total number of seedlings in the grassland?",
+   "options": [
+    "10,000 seedlings",
+    "2,000 seedlings",
+    "100 seedlings",
+    "50 seedlings"
+   ],
+   "answer": 0,
+   "explanation": "The total sampled count is 50 seedlings, so the mean density is 50 ÷ 5 = 10 seedlings per m². The grassland area is 20 m × 50 m = 1,000 m², so the estimate is 10 × 1,000 = 10,000 seedlings. The figure 50 seedlings is only the number counted in the five quadrats, not the whole grassland."
+  },
+  {
+   "n": 13,
+   "topic": "Ecology",
+   "q": "In the nitrogen cycle, which process converts nitrogen in dead plants and animals into ammonium compounds in the soil?",
+   "options": [
+    "Nitrification by Nitrosomonas and Nitrobacter",
+    "Denitrification by denitrifying bacteria",
+    "Nitrogen fixation by Rhizobium",
+    "Ammonification by decomposers"
+   ],
+   "answer": 3,
+   "explanation": "Decomposers break down proteins and amino acids in dead organic matter, releasing ammonium compounds in a process called ammonification. Nitrification then converts ammonium compounds to nitrites and nitrates, while denitrification returns nitrogen gas to the atmosphere."
+  },
+  {
+   "n": 14,
+   "topic": "Support and movement",
+   "q": "During a PE lesson in Kisumu, a student bends the elbow by contracting the biceps muscle. Which statement correctly describes the lever system at the elbow?",
+   "options": [
+    "A wheel-and-axle system, with no fulcrum at the elbow",
+    "First-class lever, with the fulcrum between the effort and the load",
+    "Third-class lever, with the effort between the fulcrum and the load",
+    "Second-class lever, with the load between the fulcrum and the effort"
+   ],
+   "answer": 2,
+   "explanation": "The elbow joint acts as the fulcrum, the biceps provides the effort at its insertion, and the hand carries the load. Because the effort lies between the fulcrum and the load, the forearm acts as a third-class lever."
+  },
+  {
+   "n": 15,
+   "topic": "Support and movement",
+   "q": "Which statement best explains why skeletal muscles such as the biceps and triceps are arranged in antagonistic pairs?",
+   "options": [
+    "One muscle supplies glucose to the other during contraction.",
+    "A muscle can only contract and pull, so another muscle is needed to move the bone in the opposite direction.",
+    "The pair prevents the joint from producing any movement.",
+    "Skeletal muscles can both pull and push bones when they contract."
+   ],
+   "answer": 1,
+   "explanation": "Skeletal muscles contract to pull on bones but cannot actively lengthen or push. When one muscle contracts, its antagonist relaxes and is stretched, then contracts to reverse the movement."
+  },
+  {
+   "n": 16,
+   "topic": "Support and movement",
+   "q": "Which plant tissue is living at maturity and provides flexible mechanical support to young herbaceous stems?",
+   "options": [
+    "Xylem",
+    "Collenchyma",
+    "Sclerenchyma",
+    "Parenchyma"
+   ],
+   "answer": 1,
+   "explanation": "Collenchyma cells are living at maturity and have unevenly thickened cellulose walls at their corners, giving flexible support to young herbaceous stems. Sclerenchyma also supports plants but is usually dead at maturity and has lignified walls."
+  },
+  {
+   "n": 17,
+   "topic": "Cell physiology",
+   "q": "A potato strip of initial mass 4.0 g is placed in a sucrose solution. After 30 minutes, its mass is 3.6 g. What is the percentage decrease in mass, and what does the result show about the sucrose solution?",
+   "options": [
+    "10%; the solution was hypotonic to the potato cells.",
+    "11.1%; the solution was hypertonic to the potato cells.",
+    "10%; the solution was hypertonic to the potato cells.",
+    "90%; the solution was hypertonic to the potato cells."
+   ],
+   "answer": 2,
+   "explanation": "The mass lost is 4.0 − 3.6 = 0.4 g, so the percentage decrease is (0.4 ÷ 4.0) × 100 = 10%. Mass loss means water left the potato cells by osmosis, so the sucrose solution had a lower water potential and was hypertonic to the cell sap."
+  },
+  {
+   "n": 18,
+   "topic": "Cell physiology",
+   "q": "A student in Nakuru tests the action of catalase on hydrogen peroxide. At 37 °C a lot of oxygen is produced, but at 60 °C no oxygen is produced. Which explanation is correct?",
+   "options": [
+    "The enzyme has been used up, so all of it is permanently changed into hydrogen peroxide.",
+    "At 60 °C the enzyme molecules move too slowly to collide with the substrate.",
+    "The enzyme at 60 °C has been denatured, so its active site can no longer bind the substrate.",
+    "The substrate at 60 °C has been denatured, so it cannot fit the enzyme."
+   ],
+   "answer": 2,
+   "explanation": "Catalase is a protein enzyme, and high temperature changes the shape of its active site so it loses catalytic function. Enzymes are not used up in reactions, and it is the enzyme rather than the substrate that is described as denatured."
+  },
+  {
+   "n": 19,
+   "topic": "Classification",
+   "q": "The Nile perch is written scientifically as Lates niloticus. Which statement about this name is correct?",
+   "options": [
+    "Both words should begin with capital letters because the name is scientific.",
+    "The name is a trinomial that shows a subspecies of Nile perch.",
+    "Lates is the genus name and niloticus is the specific name, written as a binomial.",
+    "Lates is the specific name and niloticus is the genus name."
+   ],
+   "answer": 2,
+   "explanation": "In binomial nomenclature the genus name (Lates) starts with a capital letter and the specific name (niloticus) is lower case. Both words are italicised or underlined when handwritten or typed, and a trinomial would contain three words."
+  },
+  {
+   "n": 20,
+   "topic": "Classification",
+   "q": "Which sequence of taxonomic groups is arranged from the least inclusive to the most inclusive?",
+   "options": [
+    "Genus → species → family → order",
+    "Family → order → species → genus",
+    "Order → family → genus → species",
+    "Species → genus → family → order"
+   ],
+   "answer": 3,
+   "explanation": "A species contains the fewest organisms and is the least inclusive group; each higher group listed contains more organisms in the order genus, family, then order. The sequence order → family → genus → species would run from most inclusive to least inclusive."
+  },
+  {
+   "n": 21,
+   "topic": "Reception, response and coordination",
+   "q": "A potted bean plant is placed near a window in a classroom in Kisumu. After several days, the shoot bends towards the light. Which explanation best accounts for this observation?",
+   "options": [
+    "Water accumulates on the shaded side of the shoot and causes the cells there to swell, making the shoot bend towards the light.",
+    "Auxin concentrates on the shaded side and inhibits cell elongation there, so the shoot bends away from the light.",
+    "Auxin concentrates on the shaded side and promotes greater cell elongation there, so the shoot bends towards the light.",
+    "Auxin concentrates on the illuminated side and promotes greater cell elongation there, so the shoot bends away from the light."
+   ],
+   "answer": 2,
+   "explanation": "In positive phototropism, auxin produced at the shoot tip moves away from light and accumulates on the shaded side. The higher auxin concentration stimulates greater elongation of cells on the shaded side, making the shoot bend towards the light; water accumulation is not the main mechanism."
+  },
+  {
+   "n": 22,
+   "topic": "Reception, response and coordination",
+   "q": "A learner in Nakuru accidentally touches a hot sufuria and quickly withdraws the hand. Which sequence correctly describes the reflex arc involved?",
+   "options": [
+    "Receptor → motor neurone → relay neurone in the spinal cord → sensory neurone → effector",
+    "Receptor → sensory neurone → relay neurone in the spinal cord → motor neurone → effector",
+    "Receptor → sensory neurone → brain → motor neurone → effector",
+    "Receptor → relay neurone → sensory neurone → motor neurone → effector"
+   ],
+   "answer": 1,
+   "explanation": "A reflex action is a rapid, automatic response coordinated through the spinal cord without first involving the brain. The impulse travels from the receptor along a sensory neurone to a relay neurone in the spinal cord, then along a motor neurone to the effector; the brain may become aware of the pain afterwards."
+  },
+  {
+   "n": 23,
+   "topic": "Reception, response and coordination",
+   "q": "A student in Garissa drinks several glasses of water after a long walk. Which change in hormone secretion and urine formation is expected?",
+   "options": [
+    "More insulin is released, so glucose is removed from the blood and urine becomes more concentrated.",
+    "More antidiuretic hormone is released, so more water is reabsorbed and concentrated urine is produced.",
+    "Less antidiuretic hormone is released, so less water is reabsorbed in the kidney tubules and more dilute urine is produced.",
+    "More adrenaline is released, causing the kidney to excrete more water and salts."
+   ],
+   "answer": 2,
+   "explanation": "Drinking much water lowers blood osmotic pressure, so the pituitary releases less antidiuretic hormone. The collecting ducts become less permeable to water, more water remains in urine, and dilute urine is produced. Antidiuretic hormone causes increased water reabsorption, so its increase would occur after dehydration, not after drinking much water."
+  },
+  {
+   "n": 24,
+   "topic": "Nutrition in plants and animals",
+   "q": "A farmer in Kitui notices that older leaves of maize plants have yellow tissue between the veins, while the veins remain green. The young leaves are still green. Which mineral deficiency best explains these symptoms?",
+   "options": [
+    "Magnesium",
+    "Iron",
+    "Phosphorus",
+    "Nitrogen"
+   ],
+   "answer": 0,
+   "explanation": "Magnesium is needed for chlorophyll and is mobile in plants, so deficiency causes interveinal chlorosis in older leaves as magnesium is moved to young leaves. Nitrogen deficiency causes more general yellowing of older leaves, while iron deficiency affects young leaves first. Phosphorus deficiency often causes purple or reddish leaves and poor root growth."
+  },
+  {
+   "n": 25,
+   "topic": "Nutrition in plants and animals",
+   "q": "A student in Mombasa eats a meal rich in starch. Digestion of the starch begins in the mouth. Which enzyme is responsible, and into which product is the starch first broken down?",
+   "options": [
+    "Trypsin; starch is broken down to glucose.",
+    "Salivary amylase; starch is broken down to maltose.",
+    "Pepsin; starch is broken down to amino acids.",
+    "Lipase; starch is broken down to glycerol and fatty acids."
+   ],
+   "answer": 1,
+   "explanation": "Salivary amylase acts on cooked starch in the mouth, hydrolysing it to maltose. Pepsin digests proteins in the stomach, lipase digests fats, and trypsin digests proteins in the small intestine."
+  },
+  {
+   "n": 26,
+   "topic": "Nutrition in plants and animals",
+   "q": "In an experiment, a student in Kisii measures the rate of photosynthesis of a water plant at different light intensities. Carbon dioxide concentration is kept high and non-limiting, and the temperature is constant at 25 °C. The rate increases at low light intensities but stops increasing at very high light intensity. What is the most likely limiting factor at the very high light intensity?",
+   "options": [
+    "Water, because water is used as a raw material in photosynthesis.",
+    "Light intensity, because photosynthesis cannot continue when light is very strong.",
+    "Carbon dioxide concentration, because it is used up as light intensity increases.",
+    "Temperature, because the enzyme-controlled reactions reach a maximum rate at 25 °C."
+   ],
+   "answer": 3,
+   "explanation": "At very high light intensity, light is no longer limiting, so another factor controls the rate. Since carbon dioxide was non-limiting, the constant temperature of 25 °C limits the enzyme-controlled reactions, so the rate levels off. Carbon dioxide would be limiting only if its supply were low."
+  },
+  {
+   "n": 27,
+   "topic": "Growth and development",
+   "q": "A learner in Meru measured the height of a bean seedling every two days. The results were: Day: 0 | 2 | 4 | 6 | 8 | 10. Height/cm: 1.0 | 2.5 | 4.0 | 7.0 | 12.0 | 13.0. Which two-day interval had the highest mean growth rate?",
+   "options": [
+    "Day 2 to day 4",
+    "Day 0 to day 2",
+    "Day 6 to day 8",
+    "Day 4 to day 6"
+   ],
+   "answer": 2,
+   "explanation": "Mean growth rates are: day 0–2 = (2.5 - 1.0)/2 = 0.75 cm/day; day 2–4 = (4.0 - 2.5)/2 = 0.75 cm/day; day 4–6 = (7.0 - 4.0)/2 = 1.5 cm/day; day 6–8 = (12.0 - 7.0)/2 = 2.5 cm/day; day 8–10 = (13.0 - 12.0)/2 = 0.5 cm/day. The interval day 6 to day 8 therefore has the highest mean growth rate."
+  },
+  {
+   "n": 28,
+   "topic": "Growth and development",
+   "q": "A gardener in Kericho removes the terminal bud from a young tea plant. Which result is most likely, and why?",
+   "options": [
+    "The plant stops growing because the only region of mitosis has been removed.",
+    "Lateral buds grow into branches because the auxin supply from the terminal bud is reduced.",
+    "Root growth stops immediately because auxin is no longer produced anywhere in the plant.",
+    "The plant starts flowering at once because gibberellins are released from the cut surface."
+   ],
+   "answer": 1,
+   "explanation": "The terminal bud produces auxin, which suppresses the growth of lateral buds, a phenomenon called apical dominance. Removing the terminal bud lowers the auxin concentration reaching the lateral buds, so they grow into side branches. Roots can continue growing and other parts of the shoot can produce auxin."
+  },
+  {
+   "n": 29,
+   "topic": "Genetics",
+   "q": "In a herd of cattle at Nakuru, black coat colour is controlled by a dominant allele B and red coat colour by the recessive allele b. A heterozygous black bull is crossed with a red cow. What is the expected probability that a calf from this cross is red?",
+   "options": [
+    "1/2",
+    "3/4",
+    "1/4",
+    "0"
+   ],
+   "answer": 0,
+   "explanation": "The cross is Bb × bb. The possible offspring genotypes are Bb, Bb, bb and bb, so two of the four equally likely outcomes are bb, which is red. The probability of a red calf is therefore 2/4 = 1/2. A probability of 1/4 would require two heterozygotes, which is not the cross described."
+  },
+  {
+   "n": 30,
+   "topic": "Genetics",
+   "q": "In a family in Kisumu, the mother has blood group A with genotype I^A i, and the father has blood group B with genotype I^B i. Which blood groups can their children have?",
+   "options": [
+    "Only blood group AB",
+    "Blood group A, blood group B, blood group AB and blood group O",
+    "Blood group A, blood group B and blood group AB, but not blood group O",
+    "Only blood group A and blood group B"
+   ],
+   "answer": 1,
+   "explanation": "The mother can pass on I^A or i, and the father can pass on I^B or i. The possible offspring genotypes are I^A I^B, I^A i, I^B i and ii, which correspond to blood groups AB, A, B and O respectively. Since both parents carry i, a child with blood group O is possible."
+  }
+ ]
+}

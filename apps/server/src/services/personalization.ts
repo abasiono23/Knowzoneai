@@ -1,7 +1,8 @@
 import { z } from 'zod';
 
+import { DEFAULT_REGION, REGION_EXAM_NAMES } from '../data/exams.js';
 import type { User } from '../generated/prisma/client.js';
-import { settingsOf, type AppSettings } from './account.js';
+import { hasSettings, Region, settingsOf, type AppSettings } from './account.js';
 
 /** Languages Knowzone teaches in (screen 27). Ids match the app's LANGUAGES list. */
 export const LANGUAGES = {
@@ -45,6 +46,8 @@ export const Personalization = z.object({
   goals: Ids(10),
   formats: Ids(10),
   language: z.enum(LANGUAGE_IDS).default('en'),
+  /** Study region: the country whose exams the learner prepares for (ISO code, "ZZ" = another country). Null = not asked. */
+  region: Region.nullable().default(null),
   dailyMinutes: z.number().int().min(5).max(240).default(15),
   reminders: z
     .object({
@@ -72,8 +75,8 @@ export const learningLanguageOf = (user: Pick<User, 'personalization'>): Languag
 
 /**
  * Keeps settings in step with onboarding answers: the first reminder follows the chosen time and
- * days, notification categories follow the chosen reminder types, and a first-time app language
- * follows the learning language.
+ * days, notification categories follow the chosen reminder types, a first-time app language follows
+ * the learning language, and the study region follows the country chosen (when one was).
  */
 export function settingsFromPersonalization(user: User, p: Personalization): AppSettings {
   const current = settingsOf(user);
@@ -88,7 +91,8 @@ export function settingsFromPersonalization(user: User, p: Personalization): App
   return {
     ...current,
     reminders: [firstReminder, ...rest],
-    appLanguage: user.settings ? current.appLanguage : p.language,
+    appLanguage: hasSettings(user) ? current.appLanguage : p.language,
+    region: p.region ?? current.region,
     notifications: {
       ...current.notifications,
       categories: {
@@ -104,12 +108,14 @@ export function settingsFromPersonalization(user: User, p: Personalization): App
  * Prompt instruction for the student's learning language. Quiz questions stay in English when the
  * student studies for English-language exams, so practice matches the real paper.
  */
-export function languageInstruction(language: LanguageId) {
+export function languageInstruction(language: LanguageId, region: string = DEFAULT_REGION) {
+  // Two of the region's exam names as examples (Nigeria's wording is the one this prompt always had).
+  const exams = region === DEFAULT_REGION ? 'WAEC, JAMB' : REGION_EXAM_NAMES[region]?.split('/').slice(0, 2).join(', ');
   if (language === 'en') return 'Write in clear, simple English.';
   const name = LANGUAGES[language];
   return [
     `Write summaries, explanations, key concepts and flashcards in ${name}.`,
-    'Keep formulas, units, scientific names and exam names (WAEC, JAMB…) in their standard form.',
+    `Keep formulas, units, scientific names and exam names${exams ? ` (${exams}…)` : ''} in their standard form.`,
     'Write quiz questions and options in English, because the student’s exams are in English; write the answer explanations in ' +
       `${name}.`,
     language === 'pcm' ? 'Use friendly, natural Nigerian Pidgin, not broken English.' : '',

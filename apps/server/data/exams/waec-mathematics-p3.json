@@ -1,0 +1,661 @@
+{
+ "id": "waec-mathematics-p3",
+ "exam": "waec",
+ "subject": "mathematics",
+ "year": null,
+ "number": 3,
+ "source": "ai",
+ "minutes": 60,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Quadratic equations",
+   "q": "The sum of the roots of the equation 3x² − 12x + 7 = 0 is",
+   "options": [
+    "4",
+    "−4",
+    "7/3",
+    "12"
+   ],
+   "answer": 0,
+   "explanation": "For ax² + bx + c = 0, the sum of roots is −b/a. Here a = 3 and b = −12, so the sum is −(−12)/3 = 4. The value 7/3 is the product of the roots, not their sum."
+  },
+  {
+   "n": 2,
+   "topic": "Trigonometry",
+   "q": "In right-angled triangle ABC, angle B = 90°, AB = 7 cm and BC = 24 cm. Find sin A.",
+   "options": [
+    "7/25",
+    "24/25",
+    "7/24",
+    "24/7"
+   ],
+   "answer": 1,
+   "explanation": "By Pythagoras' theorem, AC = √(7² + 24²) = 25 cm. Since the side opposite angle A is BC and the hypotenuse is AC, sin A = 24/25. The value 7/25 is cos A because AB is adjacent to angle A."
+  },
+  {
+   "n": 3,
+   "topic": "Simultaneous equations and inequalities",
+   "q": "Solve the simultaneous equations 4x + y = 14 and 2x − y = 4. Find x + y.",
+   "options": [
+    "5",
+    "3",
+    "7",
+    "2"
+   ],
+   "answer": 0,
+   "explanation": "Adding the equations gives 6x = 18, so x = 3. Substituting into 4x + y = 14 gives y = 2, hence x + y = 5. Choosing 3 or 2 only gives one of the unknowns, not their sum."
+  },
+  {
+   "n": 4,
+   "topic": "Quadratic equations",
+   "q": "If x = 2 is one root of x² + px − 6 = 0, find the other root.",
+   "options": [
+    "−2",
+    "6",
+    "−3",
+    "3"
+   ],
+   "answer": 2,
+   "explanation": "Substitute x = 2: 4 + 2p − 6 = 0, so p = 1. Thus the equation is x² + x − 6 = (x − 2)(x + 3), giving the other root −3. The root 3 arises if the sign in the factor is taken wrongly."
+  },
+  {
+   "n": 5,
+   "topic": "Trigonometry",
+   "q": "In triangle PQR, PQ = 9 cm, QR = 12 cm and angle PQR = 60°. Find PR in simplest surd form.",
+   "options": [
+    "3√13 cm",
+    "15 cm",
+    "9√3 cm",
+    "3√37 cm"
+   ],
+   "answer": 0,
+   "explanation": "Using the cosine rule, PR² = 9² + 12² − 2(9)(12)cos 60° = 81 + 144 − 108 = 117. Thus PR = √117 = 3√13 cm. The value 15 cm comes from ignoring the −2ab cos 60° term, since 9² + 12² = 225."
+  },
+  {
+   "n": 6,
+   "topic": "Simultaneous equations and inequalities",
+   "q": "Find the range of values of x satisfying 2(x − 3) < x + 5 and 3x − 1 ≥ 2x + 4.",
+   "options": [
+    "x ≥ 11",
+    "x < 5",
+    "5 < x ≤ 11",
+    "5 ≤ x < 11"
+   ],
+   "answer": 3,
+   "explanation": "The first inequality simplifies to 2x − 6 < x + 5, so x < 11. The second gives x ≥ 5. Combining these gives 5 ≤ x < 11; the form 5 < x ≤ 11 uses the wrong endpoints' inclusion."
+  },
+  {
+   "n": 7,
+   "topic": "Trigonometry",
+   "q": "Given that cos θ = 5/13 and θ is acute, find tan θ.",
+   "options": [
+    "5/12",
+    "13/12",
+    "12/5",
+    "12/13"
+   ],
+   "answer": 2,
+   "explanation": "An acute angle with cos θ = 5/13 belongs to a 5–12–13 right triangle, where the side opposite θ is 12 and the adjacent side is 5. Therefore tan θ = opposite/adjacent = 12/5. The value 5/12 is the cotangent, obtained by inverting the ratio."
+  },
+  {
+   "n": 8,
+   "topic": "Simultaneous equations and inequalities",
+   "q": "At Oja Oba Market in Ibadan, 3 exercise books and 2 pens cost ₦950, while 5 exercise books and 4 pens cost ₦1,650. Find the cost of one exercise book.",
+   "options": [
+    "₦100",
+    "₦300",
+    "₦250",
+    "₦200"
+   ],
+   "answer": 2,
+   "explanation": "Let an exercise book cost b naira and a pen cost p naira. Then 3b + 2p = 950 and 5b + 4p = 1650. Doubling the first equation gives 6b + 4p = 1900; subtracting the second gives b = 250, so one exercise book costs ₦250. The value ₦100 is the cost of one pen."
+  },
+  {
+   "n": 9,
+   "topic": "Differentiation",
+   "q": "If y = x²(2x − 5), find dy/dx.",
+   "options": [
+    "6x² − 10x",
+    "6x² − 5",
+    "6x − 10",
+    "4x − 5"
+   ],
+   "answer": 0,
+   "explanation": "Expanding gives y = 2x³ − 5x², so dy/dx = 6x² − 10x. Differentiating only the bracket or losing the square term gives an incorrect expression."
+  },
+  {
+   "n": 10,
+   "topic": "Integration",
+   "q": "Find ∫(6x² − 4/x²) dx.",
+   "options": [
+    "2x³ − 4/x + C",
+    "2x³ + 4x + C",
+    "3x³ + 4/x + C",
+    "2x³ + 4/x + C"
+   ],
+   "answer": 3,
+   "explanation": "∫6x² dx = 2x³ and ∫−4x⁻² dx = 4/x, so the integral is 2x³ + 4/x + C. Keeping the negative sign after integrating −4x⁻² gives 2x³ − 4/x + C, which is incorrect."
+  },
+  {
+   "n": 11,
+   "topic": "Variation",
+   "q": "The time t hours for a boat to travel a fixed distance varies inversely as its speed v km/h. If it takes 5 hours at 12 km/h, how long will it take at 15 km/h?",
+   "options": [
+    "3 hours",
+    "4 hours",
+    "4.8 hours",
+    "6.25 hours"
+   ],
+   "answer": 1,
+   "explanation": "Since t varies inversely as v, tv is constant. The constant is 5 × 12 = 60, so at 15 km/h, t = 60/15 = 4 hours. Using the speed ratio in the wrong direction gives 6.25 hours, which is incorrect."
+  },
+  {
+   "n": 12,
+   "topic": "Sets",
+   "q": "In a class of 50 students in Ilorin, 30 play football, 22 play basketball and 8 play both games. How many students play neither game?",
+   "options": [
+    "2",
+    "6",
+    "14",
+    "8"
+   ],
+   "answer": 1,
+   "explanation": "The number who play at least one game is 30 + 22 − 8 = 44. Therefore, the number who play neither is 50 − 44 = 6. Adding the two counts without subtracting the overlap gives 52 and leads to an incorrect answer."
+  },
+  {
+   "n": 13,
+   "topic": "Differentiation",
+   "q": "Find dy/dx if y = (x² + 1)/(x − 2).",
+   "options": [
+    "(3x² − 4x + 1)/(x − 2)²",
+    "(x² − 4x − 1)/(x − 2)²",
+    "(x² − 4x − 1)/(x − 2)",
+    "(x² − 4x + 1)/(x − 2)²"
+   ],
+   "answer": 1,
+   "explanation": "Using the quotient rule, dy/dx = [2x(x − 2) − (x² + 1)]/(x − 2)² = (x² − 4x − 1)/(x − 2)². Omitting the square in the denominator or changing the sign in the numerator gives an incorrect expression."
+  },
+  {
+   "n": 14,
+   "topic": "Integration",
+   "q": "Evaluate ∫₀^{π/3} 3 cos x dx.",
+   "options": [
+    "3√3",
+    "3",
+    "3/2",
+    "3√3/2"
+   ],
+   "answer": 3,
+   "explanation": "∫3 cos x dx = 3 sin x. Evaluating from 0 to π/3 gives 3(√3/2 − 0) = 3√3/2. The value 3√3 results from omitting the factor 1/2 after using sin(π/3)."
+  },
+  {
+   "n": 15,
+   "topic": "Variation",
+   "q": "A solar lamp in Jos produces illumination I lux that varies inversely as the square of the distance d metres from it. If I = 80 lux when d = 3 m, find I when d = 4 m.",
+   "options": [
+    "30 lux",
+    "60 lux",
+    "135 lux",
+    "45 lux"
+   ],
+   "answer": 3,
+   "explanation": "For inverse-square variation, I d² is constant. Thus 80 × 3² = I × 4², so I = 720/16 = 45 lux. Using inverse proportionality to d rather than to d² gives 60 lux, which is incorrect."
+  },
+  {
+   "n": 16,
+   "topic": "Sets",
+   "q": "In a survey of 70 traders in Onitsha, 38 sell rice, 35 sell beans and 27 sell garri. Also, 15 sell rice and beans, 12 sell beans and garri and 10 sell rice and garri; these pair counts include the 5 who sell all three. How many traders sell none of the three food items?",
+   "options": [
+    "2",
+    "12",
+    "4",
+    "8"
+   ],
+   "answer": 0,
+   "explanation": "By inclusion–exclusion, the number selling at least one item is 38 + 35 + 27 − 15 − 12 − 10 + 5 = 68. Hence 70 − 68 = 2 traders sell none. Subtracting the all-three group instead of adding it gives 12, which is incorrect."
+  },
+  {
+   "n": 17,
+   "topic": "Differentiation",
+   "q": "A circular puddle in Kaduna is expanding so that its radius increases at 0.5 cm/s. Find the rate at which its area is increasing when the radius is 4 cm.",
+   "options": [
+    "2π cm²/s",
+    "16π cm²/s",
+    "4π cm²/s",
+    "8π cm²/s"
+   ],
+   "answer": 2,
+   "explanation": "A = πr², so dA/dt = 2πr dr/dt. Substituting r = 4 cm and dr/dt = 0.5 cm/s gives dA/dt = 2π × 4 × 0.5 = 4π cm²/s."
+  },
+  {
+   "n": 18,
+   "topic": "Integration",
+   "q": "Evaluate ∫₁² (2x + 3/x²) dx.",
+   "options": [
+    "3/2",
+    "9/2",
+    "11/2",
+    "5/2"
+   ],
+   "answer": 1,
+   "explanation": "An antiderivative is x² − 3/x. Substituting the limits gives (4 − 3/2) − (1 − 3) = 5/2 + 2 = 9/2. Using x² + 3/x instead gives 3/2, which is incorrect."
+  },
+  {
+   "n": 19,
+   "topic": "Angles and circle geometry",
+   "q": "In a circle with centre O, a chord PQ has length 24 cm. If the radius of the circle is 13 cm, find the perpendicular distance from O to the chord PQ.",
+   "options": [
+    "12 cm",
+    "5 cm",
+    "17 cm",
+    "7 cm"
+   ],
+   "answer": 1,
+   "explanation": "The perpendicular from the centre to a chord bisects the chord, so half of PQ is 12 cm. Using the right-angled triangle formed, distance² = 13² − 12² = 169 − 144 = 25, so the distance is 5 cm. The value 12 cm is the half-chord, not the perpendicular distance."
+  },
+  {
+   "n": 20,
+   "topic": "Angles and circle geometry",
+   "q": "ABCD is a cyclic quadrilateral. If ∠ABC = (3x + 10)° and ∠ADC = (2x − 5)°, find the value of x.",
+   "options": [
+    "37",
+    "45",
+    "31",
+    "35"
+   ],
+   "answer": 3,
+   "explanation": "Opposite angles of a cyclic quadrilateral are supplementary, so (3x + 10) + (2x − 5) = 180. This gives 5x + 5 = 180, hence 5x = 175 and x = 35."
+  },
+  {
+   "n": 21,
+   "topic": "Angles and circle geometry",
+   "q": "From an external point P, a tangent PT and a secant PAB are drawn to a circle with centre O. The points P, A, B are collinear with A between P and B, and the line PAB passes through O. If PT = 12 cm and PA = 4 cm, find the radius of the circle.",
+   "options": [
+    "10 cm",
+    "20 cm",
+    "32 cm",
+    "16 cm"
+   ],
+   "answer": 3,
+   "explanation": "The tangent is perpendicular to the radius, so in the right-angled triangle OPT, OP = radius + 4. Thus 12² + r² = (r + 4)². Expanding gives 144 + r² = r² + 8r + 16, so 128 = 8r and r = 16 cm. The value 32 cm arises if the whole diameter is mistaken for a single radius."
+  },
+  {
+   "n": 22,
+   "topic": "Mensuration",
+   "q": "A cone has base radius 7 cm and vertical height 24 cm. Find its total surface area. Take π = 22/7.",
+   "options": [
+    "682 cm²",
+    "704 cm²",
+    "550 cm²",
+    "154 cm²"
+   ],
+   "answer": 1,
+   "explanation": "The slant height is √(7² + 24²) = √(49 + 576) = 25 cm. Total surface area = πr(l + r) = (22/7) × 7 × (25 + 7) = 22 × 32 = 704 cm². The value 550 cm² is only the curved surface area, while 154 cm² is only the base area."
+  },
+  {
+   "n": 23,
+   "topic": "Mensuration",
+   "q": "A solid rectangular pyramid in Jos has a rectangular base 9 cm by 6 cm and vertical height 10 cm. Calculate its volume.",
+   "options": [
+    "270 cm³",
+    "180 cm³",
+    "540 cm³",
+    "90 cm³"
+   ],
+   "answer": 1,
+   "explanation": "The base area is 9 × 6 = 54 cm². Volume of a pyramid = 1/3 × base area × height = 1/3 × 54 × 10 = 180 cm³. The value 540 cm³ omits the factor 1/3."
+  },
+  {
+   "n": 24,
+   "topic": "Mensuration",
+   "q": "A sector of a circle of radius 21 cm has angle 120°. Find the length of its arc. Take π = 22/7.",
+   "options": [
+    "44 cm",
+    "132 cm",
+    "66 cm",
+    "88 cm"
+   ],
+   "answer": 0,
+   "explanation": "The circumference is 2 × (22/7) × 21 = 132 cm. The arc length is 120/360 of the circumference, that is 1/3 × 132 = 44 cm. The value 132 cm is the whole circumference, not the required arc."
+  },
+  {
+   "n": 25,
+   "topic": "Probability",
+   "q": "Ngozi tosses a fair coin three times. What is the probability that she gets at least two heads?",
+   "options": [
+    "1/8",
+    "5/8",
+    "1/2",
+    "3/8"
+   ],
+   "answer": 2,
+   "explanation": "There are 8 equally likely outcomes. Getting exactly two heads can happen in 3 ways, and getting three heads in 1 way, giving 4 favourable outcomes. The probability is 4/8 = 1/2; the value 3/8 corresponds to exactly two heads only."
+  },
+  {
+   "n": 26,
+   "topic": "Probability",
+   "q": "A box in Ibadan contains 6 white and 4 black balls. Two balls are drawn without replacement. What is the probability that both are white?",
+   "options": [
+    "3/5",
+    "1/3",
+    "5/9",
+    "9/25"
+   ],
+   "answer": 1,
+   "explanation": "The probability the first ball is white is 6/10. If the first is white, 5 white balls remain out of 9, so the second is white with probability 5/9. Therefore the required probability is 6/10 × 5/9 = 1/3. The value 9/25 would arise if the first ball were replaced."
+  },
+  {
+   "n": 27,
+   "topic": "Coordinate geometry",
+   "q": "The midpoint of the line segment joining P(3, −4) and Q(a, b) is M(5, 2). Find the coordinates of Q.",
+   "options": [
+    "(1, −10)",
+    "(7, 8)",
+    "(7, 0)",
+    "(13, 0)"
+   ],
+   "answer": 1,
+   "explanation": "Using the midpoint formula, Q = 2M − P = (2 × 5 − 3, 2 × 2 − (−4)) = (7, 8). The value (7, 0) arises if the y-coordinates are added instead of subtracting the point P from 2M."
+  },
+  {
+   "n": 28,
+   "topic": "Coordinate geometry",
+   "q": "Find the coordinates of the point where the line joining A(−1, 4) and B(5, −2) meets the x-axis.",
+   "options": [
+    "(3, 0)",
+    "(0, −3)",
+    "(0, 3)",
+    "(−3, 0)"
+   ],
+   "answer": 0,
+   "explanation": "The gradient is (−2 − 4)/(5 − (−1)) = −6/6 = −1. Using (−1, 4), the line is y − 4 = −1(x + 1), so y = −x + 3. Setting y = 0 gives x = 3, hence the point is (3, 0). The point (0, 3) is the y-intercept, not the x-axis crossing."
+  },
+  {
+   "n": 29,
+   "topic": "Fractions, decimals and percentages",
+   "q": "Ngozi bought a phone in Onitsha for ₦54,000 and later sold it for ₦60,750. Find her percentage profit, correct to one decimal place.",
+   "options": [
+    "12.5%",
+    "11.1%",
+    "13.5%",
+    "10.0%"
+   ],
+   "answer": 0,
+   "explanation": "Profit = ₦60,750 − ₦54,000 = ₦6,750. Percentage profit = (6,750 ÷ 54,000) × 100% = 12.5%. Using the selling price as the base gives about 11.1%, which is a common mistake."
+  },
+  {
+   "n": 30,
+   "topic": "Fractions, decimals and percentages",
+   "q": "Express 0.4375 as a fraction in its lowest terms.",
+   "options": [
+    "7/16",
+    "13/30",
+    "4/9",
+    "11/25"
+   ],
+   "answer": 0,
+   "explanation": "0.4375 = 4375/10000. Dividing the numerator and denominator by 625 gives 7/16. The other fractions have decimal values close to 0.4375 but are not equal to it."
+  },
+  {
+   "n": 31,
+   "topic": "Fractions, decimals and percentages",
+   "q": "A school in Ibadan has 35% of its students as boys. If there are 520 girls, how many students are in the school?",
+   "options": [
+    "1,040",
+    "800",
+    "1,486",
+    "702"
+   ],
+   "answer": 1,
+   "explanation": "Girls make up 100% − 35% = 65% of the students. The total number of students is 520 ÷ 0.65 = 800. Dividing by 0.35 gives about 1,486, which wrongly treats 35% as the proportion of girls."
+  },
+  {
+   "n": 32,
+   "topic": "Indices and logarithms",
+   "q": "Simplify (27^(2/3) × 16^(3/4)) ÷ 8^(2/3).",
+   "options": [
+    "24",
+    "36",
+    "18",
+    "12"
+   ],
+   "answer": 2,
+   "explanation": "27^(2/3) = 9, 16^(3/4) = 8 and 8^(2/3) = 4. Hence (9 × 8) ÷ 4 = 72 ÷ 4 = 18."
+  },
+  {
+   "n": 33,
+   "topic": "Indices and logarithms",
+   "q": "Given that log₁₀ 2 = 0.3010, evaluate log₁₀ 0.08.",
+   "options": [
+    "-0.9030",
+    "-0.6990",
+    "-1.0970",
+    "1.0970"
+   ],
+   "answer": 2,
+   "explanation": "0.08 = 8/100 = 2³/10², so log₁₀ 0.08 = 3 log₁₀ 2 − 2 = 3(0.3010) − 2 = 0.9030 − 2 = -1.0970. A sign slip gives 1.0970, which is incorrect because 0.08 is less than 1."
+  },
+  {
+   "n": 34,
+   "topic": "Indices and logarithms",
+   "q": "If 4^(x − 1) = 8^(x + 1), find x.",
+   "options": [
+    "-5",
+    "1",
+    "-1",
+    "5"
+   ],
+   "answer": 0,
+   "explanation": "Write both sides with base 2: 4^(x − 1) = 2^(2x − 2) and 8^(x + 1) = 2^(3x + 3). Equating the powers gives 2x − 2 = 3x + 3, so x = -5."
+  },
+  {
+   "n": 35,
+   "topic": "Sequences and series",
+   "q": "The 5th term of an arithmetic progression is 19 and the 12th term is 47. Find the common difference.",
+   "options": [
+    "4",
+    "7",
+    "5",
+    "3"
+   ],
+   "answer": 0,
+   "explanation": "Using aₙ = a + (n − 1)d, we have a + 4d = 19 and a + 11d = 47. Subtracting gives 7d = 28, so d = 4."
+  },
+  {
+   "n": 36,
+   "topic": "Sequences and series",
+   "q": "The second term of a geometric progression is 6 and the fifth term is 48. Find the sum of the first four terms.",
+   "options": [
+    "48",
+    "57",
+    "90",
+    "45"
+   ],
+   "answer": 3,
+   "explanation": "Let the terms be arⁿ⁻¹. Then ar = 6 and ar⁴ = 48. Dividing gives r³ = 8, so r = 2 and a = 3. The first four terms are 3, 6, 12, 24, whose sum is 45."
+  },
+  {
+   "n": 37,
+   "topic": "Matrices and determinants",
+   "q": "If A = [[4, k], [3, 2]] and det(A) = 5, find k.",
+   "options": [
+    "1",
+    "-1",
+    "3",
+    "13/3"
+   ],
+   "answer": 0,
+   "explanation": "For a 2 × 2 matrix, det(A) = (4)(2) − (k)(3) = 8 − 3k. Setting 8 − 3k = 5 gives 3k = 3, so k = 1. Reversing the determinant order gives 13/3, a common sign error."
+  },
+  {
+   "n": 38,
+   "topic": "Matrices and determinants",
+   "q": "For M = [[1, 2, 0], [3, -1, 4], [2, 0, 5]], find det(M).",
+   "options": [
+    "19",
+    "-5",
+    "9",
+    "-19"
+   ],
+   "answer": 3,
+   "explanation": "Expanding along the first row: det(M) = 1[(-1)(5) − (4)(0)] − 2[(3)(5) − (4)(2)] + 0 = -5 − 2(7) = -19. Adding the second minor instead of subtracting gives 9, which is incorrect."
+  },
+  {
+   "n": 39,
+   "topic": "Statistics",
+   "q": "The daily sales, in thousands of naira, made by a shop in Uyo for one week are 8, 12, 15, 10, 18, 14 and 20. Find the range of the sales.",
+   "options": [
+    "₦14,000",
+    "₦8,000",
+    "₦12,000",
+    "₦20,000"
+   ],
+   "answer": 2,
+   "explanation": "The highest daily sale is ₦20,000 and the lowest is ₦8,000. The range is ₦20,000 − ₦8,000 = ₦12,000."
+  },
+  {
+   "n": 40,
+   "topic": "Number bases",
+   "q": "Convert 231₄ to base 6.",
+   "options": [
+    "113₆",
+    "131₆",
+    "121₆",
+    "111₆"
+   ],
+   "answer": 0,
+   "explanation": "231₄ = 2 × 4² + 3 × 4 + 1 = 32 + 12 + 1 = 45 in base 10. Now 45 = 1 × 6² + 1 × 6 + 3, so the base-6 result is 113₆."
+  },
+  {
+   "n": 41,
+   "topic": "Trigonometry",
+   "q": "In a triangular plot in Jos, two sides are 7 m and 8 m, and the side opposite the included angle is 5 m. Find the cosine of the included angle.",
+   "options": [
+    "3/7",
+    "13/14",
+    "5/14",
+    "11/14"
+   ],
+   "answer": 3,
+   "explanation": "By the cosine rule, if θ is the included angle, then 5² = 7² + 8² − 2 × 7 × 8 cos θ. Hence cos θ = (7² + 8² − 5²) ÷ (2 × 7 × 8) = 88/112 = 11/14."
+  },
+  {
+   "n": 42,
+   "topic": "Statistics",
+   "q": "The numbers of goals scored by 10 teams in a local league in Kaduna are: 0 goals for 2 teams, 1 goal for 3 teams, 2 goals for 4 teams and 3 goals for 1 team. Calculate the mean number of goals per team.",
+   "options": [
+    "2 goals",
+    "1.4 goals",
+    "1.2 goals",
+    "1.5 goals"
+   ],
+   "answer": 1,
+   "explanation": "The total number of goals is (0 × 2) + (1 × 3) + (2 × 4) + (3 × 1) = 0 + 3 + 8 + 3 = 14. Since there are 10 teams, the mean is 14 ÷ 10 = 1.4 goals per team."
+  },
+  {
+   "n": 43,
+   "topic": "Number bases",
+   "q": "Simplify 231₅ + 144₅, giving your answer in base 5.",
+   "options": [
+    "420₅",
+    "430₅",
+    "330₅",
+    "1030₅"
+   ],
+   "answer": 1,
+   "explanation": "Add in base 5: in the units column, 1 + 4 = 5 = 10₅, write 0 and carry 1. In the fives column, 3 + 4 + 1 = 8 = 13₅, write 3 and carry 1. In the twenty-fives column, 2 + 1 + 1 = 4, giving 430₅."
+  },
+  {
+   "n": 44,
+   "topic": "Trigonometry",
+   "q": "Find the values of θ in the interval 0° ≤ θ < 360° for which cos θ = −√3/2.",
+   "options": [
+    "150° and 210°",
+    "120° and 240°",
+    "30° and 330°",
+    "60° and 300°"
+   ],
+   "answer": 0,
+   "explanation": "The reference angle for cos θ = √3/2 is 30°. Since cosine is negative in the second and third quadrants, the angles are 180° − 30° = 150° and 180° + 30° = 210°."
+  },
+  {
+   "n": 45,
+   "topic": "Simultaneous equations and inequalities",
+   "q": "Find the values of x satisfying both inequalities 4 − 3x ≤ 10 and 2x − 1 < 7.",
+   "options": [
+    "−2 < x ≤ 4",
+    "x ≥ −2",
+    "x < 4",
+    "−2 ≤ x < 4"
+   ],
+   "answer": 3,
+   "explanation": "From 4 − 3x ≤ 10, we get −3x ≤ 6, so x ≥ −2. From 2x − 1 < 7, we get 2x < 8, so x < 4. Combining both gives −2 ≤ x < 4."
+  },
+  {
+   "n": 46,
+   "topic": "Statistics",
+   "q": "The mean of the numbers 8, 11, x, 15 and 19 is 14. Find x.",
+   "options": [
+    "14",
+    "16",
+    "20",
+    "17"
+   ],
+   "answer": 3,
+   "explanation": "The total of the five numbers is 14 × 5 = 70. The known numbers sum to 8 + 11 + 15 + 19 = 53, so x = 70 − 53 = 17."
+  },
+  {
+   "n": 47,
+   "topic": "Simultaneous equations and inequalities",
+   "q": "At a tailoring shop in Aba, 4 shirts and 3 trousers cost ₦13,500, while 2 shirts and 5 trousers cost ₦15,500. Find the cost of one shirt and one trouser respectively.",
+   "options": [
+    "Shirt ₦1,000; trouser ₦3,000",
+    "Shirt ₦1,800; trouser ₦2,100",
+    "Shirt ₦2,500; trouser ₦1,500",
+    "Shirt ₦1,500; trouser ₦2,500"
+   ],
+   "answer": 3,
+   "explanation": "Let a shirt cost s naira and a trouser cost t naira. Then 4s + 3t = 13,500 and 2s + 5t = 15,500. Doubling the second equation gives 4s + 10t = 31,000; subtracting the first gives 7t = 17,500, so t = 2,500. Then 4s + 7,500 = 13,500, so s = 1,500."
+  },
+  {
+   "n": 48,
+   "topic": "Quadratic equations",
+   "q": "Ngozi's rectangular plot in Jos has a length that is 3 m more than twice its width. If the area of the plot is 65 m², what is its width?",
+   "options": [
+    "13 m",
+    "4 m",
+    "5 m",
+    "6.5 m"
+   ],
+   "answer": 2,
+   "explanation": "Let the width be w m, then the length is (2w + 3) m, so w(2w + 3) = 65, which gives 2w² + 3w − 65 = 0. This factorises as (2w + 13)(w − 5) = 0, so the positive width is 5 m; 13 m is the length, not the width."
+  },
+  {
+   "n": 49,
+   "topic": "Surds",
+   "q": "Express (√6 + √2)/(√6 − √2) in simplest surd form.",
+   "options": [
+    "3 + 2√3",
+    "1 + √3",
+    "2 − √3",
+    "2 + √3"
+   ],
+   "answer": 3,
+   "explanation": "Multiplying numerator and denominator by √6 + √2 gives (√6 + √2)²/(6 − 2) = (8 + 4√3)/4 = 2 + √3. A sign error in rationalising or expanding can lead to expressions involving 2 − √3."
+  },
+  {
+   "n": 50,
+   "topic": "Differentiation",
+   "q": "Differentiate y = (x² + 3x − 1)/x, where x ≠ 0, with respect to x.",
+   "options": [
+    "1 − 1/x²",
+    "(2x + 3)/x",
+    "2x + 3",
+    "1 + 1/x²"
+   ],
+   "answer": 3,
+   "explanation": "Separate the quotient as y = x + 3 − 1/x. Differentiating gives dy/dx = 1 + 1/x², since d/dx(−x⁻¹) = x⁻². The expression 1 − 1/x² comes from a sign error when differentiating the reciprocal term."
+  }
+ ]
+}

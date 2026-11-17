@@ -1,0 +1,791 @@
+{
+ "id": "neco-chemistry-p4",
+ "exam": "neco",
+ "subject": "chemistry",
+ "year": null,
+ "number": 4,
+ "source": "ai",
+ "minutes": 60,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Atomic structure",
+   "q": "A sample of neon contains 90.0% of ²⁰Ne and 10.0% of ²²Ne by abundance. Calculate its relative atomic mass.",
+   "options": [
+    "20.2",
+    "22.0",
+    "20.0",
+    "21.0"
+   ],
+   "answer": 0,
+   "explanation": "Relative atomic mass = (90.0 × 20 + 10.0 × 22) ÷ 100 = (1800 + 220) ÷ 100 = 20.2. The value 20.0 would be obtained only if all atoms were ²⁰Ne."
+  },
+  {
+   "n": 2,
+   "topic": "Acids, bases and salts",
+   "q": "A student in Ibadan adds excess zinc oxide to dilute hydrochloric acid and filters the mixture. Which salt is present in the filtrate?",
+   "options": [
+    "Zinc carbonate",
+    "Zinc sulfate",
+    "Zinc hydroxide",
+    "Zinc chloride"
+   ],
+   "answer": 3,
+   "explanation": "Zinc oxide reacts with hydrochloric acid: ZnO + 2HCl → ZnCl₂ + H₂O. The excess zinc oxide is filtered off, leaving zinc chloride in the filtrate."
+  },
+  {
+   "n": 3,
+   "topic": "Acids, bases and salts",
+   "q": "25.0 cm³ of 0.10 mol/dm³ Na₂CO₃ solution is completely neutralised by 0.20 mol/dm³ HCl. What volume of HCl is required?",
+   "options": [
+    "25.0 cm³",
+    "12.5 cm³",
+    "50.0 cm³",
+    "100.0 cm³"
+   ],
+   "answer": 0,
+   "explanation": "1 mol Na₂CO₃ reacts with 2 mol HCl. Moles of Na₂CO₃ = (25.0 ÷ 1000) × 0.10 = 0.00250 mol, so HCl required = 0.00500 mol. Volume = 0.00500 ÷ 0.20 = 0.0250 dm³ = 25.0 cm³."
+  },
+  {
+   "n": 4,
+   "topic": "Rates of reaction and equilibrium",
+   "q": "During a lesson in Kano, a student wants to slow down the reaction between marble chips and excess dilute hydrochloric acid without changing the amounts of reactants. Which change will decrease the rate of reaction?",
+   "options": [
+    "Cooling the reaction mixture",
+    "Warming the reaction mixture",
+    "Using hydrochloric acid of higher concentration",
+    "Powdering the marble chips before adding them"
+   ],
+   "answer": 0,
+   "explanation": "The rate decreases when the temperature is lowered because the reacting particles have less kinetic energy and fewer collisions exceed the activation energy. Powdering the chips increases surface area, higher acid concentration increases collision frequency, and warming increases the rate."
+  },
+  {
+   "n": 5,
+   "topic": "Rates of reaction and equilibrium",
+   "q": "In the Haber process, nitrogen and hydrogen equilibrate as follows: N₂(g) + 3H₂(g) ⇌ 2NH₃(g), ΔH = −92 kJ mol⁻¹. Which combination of conditions favours the formation of ammonia at equilibrium?",
+   "options": [
+    "High pressure and low temperature",
+    "High pressure and high temperature",
+    "Low pressure and high temperature",
+    "Low pressure and low temperature"
+   ],
+   "answer": 0,
+   "explanation": "There are 4 mol of gas on the left and 2 mol on the right, so an increase in pressure shifts the equilibrium towards ammonia. The forward reaction is exothermic, so a decrease in temperature also favours ammonia formation."
+  },
+  {
+   "n": 6,
+   "topic": "Metals and their compounds",
+   "q": "A chemical plant in Calabar is to produce sodium metal from sodium chloride. Which method should be used?",
+   "options": [
+    "Electrolysis of molten sodium chloride",
+    "Reduction of molten sodium chloride with carbon",
+    "Electrolysis of aqueous sodium chloride",
+    "Heating sodium chloride with hydrogen"
+   ],
+   "answer": 0,
+   "explanation": "Sodium is too reactive to be extracted by carbon reduction. Electrolysis of molten sodium chloride gives sodium at the cathode and chlorine at the anode, whereas aqueous sodium chloride gives hydrogen rather than sodium at the cathode."
+  },
+  {
+   "n": 7,
+   "topic": "Non-metals and their compounds",
+   "q": "A student in Aba passes chlorine gas into water and uses the resulting solution to bleach damp blue litmus paper. Which species in the solution is mainly responsible for the bleaching action?",
+   "options": [
+    "hydrochloric acid, HCl",
+    "oxygen gas, O₂",
+    "hypochlorous acid, HOCl",
+    "chloride ions, Cl⁻"
+   ],
+   "answer": 2,
+   "explanation": "Chlorine reacts with water to form hydrochloric acid and hypochlorous acid. The hypochlorous acid oxidises the dye, while hydrochloric acid and chloride ions do not bleach in this way."
+  },
+  {
+   "n": 8,
+   "topic": "Non-metals and their compounds",
+   "q": "A student in Jos bubbles carbon dioxide into limewater continuously until the milkiness first formed disappears. What causes the disappearance?",
+   "options": [
+    "soluble calcium hydrogencarbonate is formed",
+    "calcium carbonate becomes soluble in excess water",
+    "carbon dioxide turns calcium hydroxide into calcium oxide",
+    "calcium carbonate is oxidised to calcium sulphate"
+   ],
+   "answer": 0,
+   "explanation": "The initial milkiness is due to insoluble calcium carbonate. With excess carbon dioxide, calcium carbonate is converted to soluble calcium hydrogencarbonate, so the milkiness disappears."
+  },
+  {
+   "n": 9,
+   "topic": "Non-metals and their compounds",
+   "q": "A student in Ibadan warms copper turnings with dilute nitric acid and notices a colourless gas that turns brown at the mouth of the test tube. Which gas is it?",
+   "options": [
+    "dinitrogen(I) oxide, N₂O",
+    "nitrogen(II) oxide, NO",
+    "nitrogen(IV) oxide, NO₂",
+    "ammonia, NH₃"
+   ],
+   "answer": 1,
+   "explanation": "Dilute nitric acid reacts with copper to produce mainly colourless nitrogen(II) oxide, NO. At the mouth of the tube, NO combines with oxygen in air to form brown nitrogen(IV) oxide, NO₂."
+  },
+  {
+   "n": 10,
+   "topic": "Chemical bonding",
+   "q": "In solid ammonium chloride, the bond between the NH₄⁺ ion and the Cl⁻ ion is best described as",
+   "options": [
+    "an ionic bond",
+    "a dative covalent bond",
+    "a hydrogen bond",
+    "a non-polar covalent bond"
+   ],
+   "answer": 0,
+   "explanation": "NH₄⁺ and Cl⁻ are oppositely charged ions held together by strong electrostatic attraction, which is ionic bonding. The dative covalent bond in ammonium chloride occurs within the NH₄⁺ ion, not between NH₄⁺ and Cl⁻."
+  },
+  {
+   "n": 11,
+   "topic": "Hydrocarbons",
+   "q": "At room temperature, but-2-ene is shaken with bromine dissolved in tetrachloromethane. Which organic product is formed?",
+   "options": [
+    "1,3-dibromobutane",
+    "2,3-dibromobutane",
+    "1,2-dibromobutane",
+    "butan-2-ol"
+   ],
+   "answer": 1,
+   "explanation": "Bromine adds across the carbon-carbon double bond of but-2-ene. The double bond is between carbon-2 and carbon-3, so the product has bromine atoms on those two carbons, giving 2,3-dibromobutane."
+  },
+  {
+   "n": 12,
+   "topic": "Hydrocarbons",
+   "q": "A hydrocarbon with molecular formula C₄H₈ decolourises bromine water. On treatment with hot concentrated acidified potassium manganate(VII), it gives two moles of ethanoic acid per mole of hydrocarbon. The hydrocarbon is",
+   "options": [
+    "2-methylpropene",
+    "cyclobutane",
+    "but-1-ene",
+    "but-2-ene"
+   ],
+   "answer": 3,
+   "explanation": "Hot concentrated acidified potassium manganate(VII) cleaves the carbon-carbon double bond. But-2-ene is symmetrical, so cleavage gives two molecules of ethanoic acid. Cyclobutane would not decolourise bromine water because it has no carbon-carbon double bond."
+  },
+  {
+   "n": 13,
+   "topic": "Functional groups in organic chemistry",
+   "q": "What is the IUPAC name of CH₃COOCH₂CH₃?",
+   "options": [
+    "ethyl methanoate",
+    "propyl methanoate",
+    "ethyl ethanoate",
+    "methyl propanoate"
+   ],
+   "answer": 2,
+   "explanation": "The structure contains CH₃COO⁻, which is the ethanoate part, joined to CH₂CH₃, which is the ethyl part. Therefore, its IUPAC name is ethyl ethanoate."
+  },
+  {
+   "n": 14,
+   "topic": "Functional groups in organic chemistry",
+   "q": "Ethanal is warmed with Fehling's solution. Which observation is expected?",
+   "options": [
+    "a yellow precipitate is formed",
+    "a silver mirror is deposited",
+    "no visible change occurs",
+    "a brick-red precipitate is formed"
+   ],
+   "answer": 3,
+   "explanation": "Ethanal is an aldehyde, and aldehydes reduce Fehling's solution to copper(I) oxide. Copper(I) oxide appears as a brick-red precipitate. A silver mirror would be expected with Tollens' reagent, not Fehling's solution."
+  },
+  {
+   "n": 15,
+   "topic": "Energy changes",
+   "q": "A student in Ibadan burns 0.500 g of methanol, CH₃OH (molar mass = 32.0 g mol⁻¹), and all the heat released is used to warm 200 g of water. The water temperature rises by 12.0 °C. Assuming the specific heat capacity of water is 4.2 J g⁻¹ °C⁻¹, what is the approximate molar enthalpy of combustion of methanol?",
+   "options": [
+    "−1290 kJ mol⁻¹",
+    "−322 kJ mol⁻¹",
+    "−20.2 kJ mol⁻¹",
+    "−645 kJ mol⁻¹"
+   ],
+   "answer": 3,
+   "explanation": "The heat absorbed = 200 × 4.2 × 12.0 = 10 080 J = 10.08 kJ. Moles = 0.500/32.0 = 0.015625 mol, so ΔH = −10.08/0.015625 = −645 kJ mol⁻¹. The value −322 kJ mol⁻¹ would arise from using only 100 g of water."
+  },
+  {
+   "n": 16,
+   "topic": "Energy changes",
+   "q": "For a certain reaction, the activation energy for the forward reaction is 70 kJ mol⁻¹ and the enthalpy change of reaction is −40 kJ mol⁻¹. What is the activation energy for the reverse reaction?",
+   "options": [
+    "30 kJ mol⁻¹",
+    "70 kJ mol⁻¹",
+    "40 kJ mol⁻¹",
+    "110 kJ mol⁻¹"
+   ],
+   "answer": 3,
+   "explanation": "On an energy profile, ΔH = Ea(forward) − Ea(reverse). Therefore Ea(reverse) = 70 − (−40) = 110 kJ mol⁻¹. Subtracting 40 instead of allowing for the negative sign gives 30 kJ mol⁻¹."
+  },
+  {
+   "n": 17,
+   "topic": "Energy changes",
+   "q": "Which equation represents the standard enthalpy change of formation of ethane, C₂H₆(g)?",
+   "options": [
+    "2C(graphite) + 3H₂(g) → C₂H₆(g)",
+    "2C(graphite) + 6H(g) → C₂H₆(g)",
+    "C₂H₄(g) + H₂(g) → C₂H₆(g)",
+    "2C(diamond) + 3H₂(g) → C₂H₆(g)"
+   ],
+   "answer": 0,
+   "explanation": "Standard enthalpy of formation is the enthalpy change when one mole of a compound is formed from its elements in their standard states. For ethane this requires graphite and H₂(g), not diamond, atomic hydrogen or ethene as starting materials."
+  },
+  {
+   "n": 18,
+   "topic": "Separation of mixtures",
+   "q": "A technician in Ilorin has a mixture of two miscible volatile liquids whose boiling points differ by about 5 °C. Which technique is most suitable for obtaining both liquids in fairly pure form?",
+   "options": [
+    "Separating funnel",
+    "Simple distillation",
+    "Crystallisation",
+    "Fractional distillation"
+   ],
+   "answer": 3,
+   "explanation": "Fractional distillation is used when the boiling points of miscible liquids are close, because the fractionating column gives repeated condensation and vaporisation. Simple distillation is not effective enough for liquids differing by only about 5 °C."
+  },
+  {
+   "n": 19,
+   "topic": "Water and solubility",
+   "q": "At 40 °C, the solubility of copper(II) sulfate is 30.0 g per 100 g of water. What mass of a saturated copper(II) sulfate solution at 40 °C contains 45.0 g of the dissolved salt?",
+   "options": [
+    "45.0 g",
+    "150 g",
+    "130 g",
+    "195 g"
+   ],
+   "answer": 3,
+   "explanation": "In a saturated solution, 30.0 g of salt is dissolved in 100 g of water, giving 130 g of solution. For 45.0 g of salt, the water needed is 100 × 45.0/30.0 = 150 g, so the solution mass is 45.0 + 150 = 195 g; the 150 g value is only the water."
+  },
+  {
+   "n": 20,
+   "topic": "Water and solubility",
+   "q": "A sealed bottle of carbonated soft drink is opened at room temperature in Abuja. The drink fizzes because the solubility of carbon dioxide in water decreases when the",
+   "options": [
+    "pressure above the liquid falls",
+    "temperature of the liquid falls",
+    "amount of water in the liquid increases",
+    "concentration of dissolved salts increases"
+   ],
+   "answer": 0,
+   "explanation": "Carbon dioxide is dissolved under pressure in the sealed bottle. Opening the bottle lowers the pressure above the liquid, so the solubility of carbon dioxide falls and gas escapes, causing fizzing."
+  },
+  {
+   "n": 21,
+   "topic": "Gas laws",
+   "q": "What volume is occupied by 4.40 g of carbon dioxide at 27 °C and 1.00 × 10⁵ Pa? (C = 12, O = 16; R = 8.31 J K⁻¹ mol⁻¹)",
+   "options": [
+    "24.9 dm³",
+    "4.98 dm³",
+    "0.249 dm³",
+    "2.49 dm³"
+   ],
+   "answer": 3,
+   "explanation": "Molar mass of CO₂ is 44 g mol⁻¹, so n = 4.40/44 = 0.100 mol. Using V = nRT/P with T = 27 + 273 = 300 K gives V = (0.100 × 8.31 × 300)/(1.00 × 10⁵) = 2.49 × 10⁻³ m³ = 2.49 dm³."
+  },
+  {
+   "n": 22,
+   "topic": "Gas laws",
+   "q": "A sealed rigid can in Kano contains air at 27 °C and a pressure of 90 kPa. If the can is warmed to 87 °C without change in volume, what is the new pressure?",
+   "options": [
+    "108 kPa",
+    "290 kPa",
+    "75 kPa",
+    "120 kPa"
+   ],
+   "answer": 0,
+   "explanation": "At constant volume, pressure is directly proportional to absolute temperature, so P₂ = P₁ × T₂/T₁. Converting to kelvin gives T₁ = 300 K and T₂ = 360 K, hence P₂ = 90 × 360/300 = 108 kPa; inverting the temperature ratio gives 75 kPa."
+  },
+  {
+   "n": 23,
+   "topic": "Mole concept and stoichiometry",
+   "q": "Mrs Eze in Enugu heats a sample of sodium hydrogen carbonate until it decomposes completely: 2NaHCO₃(s) → Na₂CO₃(s) + H₂O(g) + CO₂(g). What mass of sodium hydrogen carbonate is needed to produce 2.24 dm³ of carbon(IV) oxide at s.t.p.? (Na=23, H=1, C=12, O=16; molar volume at s.t.p. = 22.4 dm³)",
+   "options": [
+    "8.40 g",
+    "33.6 g",
+    "4.20 g",
+    "16.8 g"
+   ],
+   "answer": 3,
+   "explanation": "2.24 dm³ of CO₂ at s.t.p. is 2.24/22.4 = 0.100 mol. The equation shows 2 mol NaHCO₃ give 1 mol CO₂, so 0.200 mol NaHCO₃ is required. Its molar mass is 23+1+12+3×16 = 84 g mol⁻¹, hence mass = 0.200 × 84 = 16.8 g."
+  },
+  {
+   "n": 24,
+   "topic": "Mole concept and stoichiometry",
+   "q": "A student in Ilorin dissolves 12.0 g of impure sodium hydroxide in water and makes the solution up to 500 cm³. 25.0 cm³ of this solution exactly neutralises 20.0 cm³ of 0.50 mol dm⁻³ hydrochloric acid. NaOH + HCl → NaCl + H₂O. Assuming the impurity is inert, what is the percentage purity of the sodium hydroxide sample? (Na=23, O=16, H=1)",
+   "options": [
+    "66.7%",
+    "80.0%",
+    "75.0%",
+    "33.3%"
+   ],
+   "answer": 0,
+   "explanation": "Moles of HCl used = 0.0200 dm³ × 0.50 mol dm⁻³ = 0.0100 mol. Since NaOH and HCl react in a 1:1 ratio, the 25.0 cm³ portion contains 0.0100 mol NaOH; the 500 cm³ solution therefore contains 0.0100 × (500/25) = 0.200 mol. Pure NaOH mass = 0.200 × 40 = 8.00 g, so percentage purity = (8.00/12.0) × 100 = 66.7%."
+  },
+  {
+   "n": 25,
+   "topic": "Mole concept and stoichiometry",
+   "q": "Mr Ade in Akure burns 3.20 g of methane in 8.00 g of oxygen: CH₄(g) + 2O₂(g) → CO₂(g) + 2H₂O(g). What volume of carbon(IV) oxide is produced at s.t.p.? (C=12, H=1, O=16; molar volume at s.t.p. = 22.4 dm³)",
+   "options": [
+    "2.80 dm³",
+    "4.48 dm³",
+    "5.60 dm³",
+    "1.40 dm³"
+   ],
+   "answer": 0,
+   "explanation": "Moles CH₄ = 3.20/16 = 0.200 mol and moles O₂ = 8.00/32 = 0.250 mol. O₂ is the limiting reactant because 0.250 mol O₂ can react with only 0.125 mol CH₄. From the equation, 2 mol O₂ give 1 mol CO₂, so CO₂ produced = 0.250/2 = 0.125 mol; volume = 0.125 × 22.4 = 2.80 dm³."
+  },
+  {
+   "n": 26,
+   "topic": "Oxidation, reduction and electrolysis",
+   "q": "A student in Owerri sets up a zinc–copper cell: Zn(s) | Zn²⁺(aq) || Cu²⁺(aq) | Cu(s). Which change occurs at the copper electrode when the cell is discharging?",
+   "options": [
+    "Cu²⁺ ions lose electrons and are oxidised.",
+    "Cu²⁺ ions gain electrons and are reduced.",
+    "Copper atoms gain electrons and are reduced.",
+    "Copper atoms lose electrons and are oxidised."
+   ],
+   "answer": 1,
+   "explanation": "In the zinc–copper cell, copper is the positive electrode (cathode), where reduction occurs. Cu²⁺ ions from solution accept electrons and are deposited as copper metal: Cu²⁺ + 2e⁻ → Cu. Oxidation occurs at the zinc electrode as Zn → Zn²⁺ + 2e⁻."
+  },
+  {
+   "n": 27,
+   "topic": "Oxidation, reduction and electrolysis",
+   "q": "A current of 1.93 A is passed through aqueous silver nitrate for 1000 s using inert electrodes. What mass of silver is deposited at the cathode? (Ag=108; Faraday constant = 96,500 C mol⁻¹)",
+   "options": [
+    "1.08 g",
+    "2.16 g",
+    "0.216 g",
+    "4.32 g"
+   ],
+   "answer": 1,
+   "explanation": "Quantity of charge Q = It = 1.93 × 1000 = 1930 C. Moles of electrons = 1930/96,500 = 0.0200 mol. Since Ag⁺ + e⁻ → Ag, 0.0200 mol of silver is deposited; mass = 0.0200 × 108 = 2.16 g."
+  },
+  {
+   "n": 28,
+   "topic": "Oxidation, reduction and electrolysis",
+   "q": "In acidic solution, permanganate ions are reduced to manganese(II) ions: MnO₄⁻ + 8H⁺ + 5e⁻ → Mn²⁺ + 4H₂O. How many faradays of charge are required to reduce 0.250 mol of MnO₄⁻?",
+   "options": [
+    "2.50 F",
+    "5.00 F",
+    "0.250 F",
+    "1.25 F"
+   ],
+   "answer": 3,
+   "explanation": "The half-equation shows that 1 mol MnO₄⁻ accepts 5 mol electrons. Therefore 0.250 mol MnO₄⁻ accepts 0.250 × 5 = 1.25 mol electrons. One mole of electrons carries 1 faraday, so the charge required is 1.25 F."
+  },
+  {
+   "n": 29,
+   "topic": "Periodic table",
+   "q": "An atom of an element in the first transition series has the electronic configuration 1s² 2s² 2p⁶ 3s² 3p⁶ 3d⁵ 4s¹. Which element is it?",
+   "options": [
+    "Chromium",
+    "Iron",
+    "Manganese",
+    "Vanadium"
+   ],
+   "answer": 0,
+   "explanation": "Counting the electrons gives a total of 24, and for chromium the half-filled 3d⁵ and 4s¹ arrangement is particularly stable. Manganese would have 3d⁵ 4s², iron 3d⁶ 4s², and vanadium 3d³ 4s², so the given configuration identifies chromium."
+  },
+  {
+   "n": 30,
+   "topic": "Atomic structure",
+   "q": "An atom of element X has atomic number 16. The ion X²⁻ has the same electron configuration as an atom of which element? (Atomic numbers: Ne = 10, Ar = 18, K = 19, Ca = 20)",
+   "options": [
+    "K",
+    "Ca",
+    "Ne",
+    "Ar"
+   ],
+   "answer": 3,
+   "explanation": "An atom with atomic number 16 has 16 electrons, so the X²⁻ ion has 16 + 2 = 18 electrons. The neutral argon atom also has 18 electrons, giving the configuration 1s² 2s² 2p⁶ 3s² 3p⁶."
+  },
+  {
+   "n": 31,
+   "topic": "Atomic structure",
+   "q": "The ground-state electron configuration of calcium ends with 4s². In the ground-state configuration of scandium, which subshell receives the next electron?",
+   "options": [
+    "4d",
+    "3d",
+    "3p",
+    "4p"
+   ],
+   "answer": 1,
+   "explanation": "After the 4s subshell is filled, the next electrons enter the 3d subshell, which is lower in energy than 4p. Scandium therefore has one electron in the 3d subshell in its ground state."
+  },
+  {
+   "n": 32,
+   "topic": "Atomic structure",
+   "q": "A science teacher in Kano writes the symbol M²⁺ for an ion with 10 electrons and mass number 24. How many neutrons are present in the nucleus?",
+   "options": [
+    "12",
+    "14",
+    "10",
+    "22"
+   ],
+   "answer": 0,
+   "explanation": "The M²⁺ ion has lost 2 electrons, so the neutral atom has 10 + 2 = 12 protons. The number of neutrons is 24 − 12 = 12."
+  },
+  {
+   "n": 33,
+   "topic": "Acids, bases and salts",
+   "q": "A solution contains ammonium chloride and aqueous ammonia. It resists a change in pH when small amounts of acid or base are added mainly because",
+   "options": [
+    "NH₄⁺ donates protons to added base while NH₃ accepts protons from added acid",
+    "water ionises to replace every hydrogen ion or hydroxide ion removed",
+    "the salt completely neutralizes any acid or base added",
+    "hydrogen ions and hydroxide ions are always present in equal amounts"
+   ],
+   "answer": 0,
+   "explanation": "A buffer works through a reversible equilibrium: NH₄⁺ ⇌ NH₃ + H⁺. Added acid is neutralized by NH₃ accepting protons, while added base is neutralized by NH₄⁺ donating protons."
+  },
+  {
+   "n": 34,
+   "topic": "Acids, bases and salts",
+   "q": "A student in Enugu titrates 25.0 cm³ of 0.100 mol/dm³ sodium trioxocarbonate(IV) solution with 0.125 mol/dm³ hydrochloric acid. What volume of the acid is required for complete reaction? Na₂CO₃ + 2HCl → 2NaCl + H₂O + CO₂",
+   "options": [
+    "40.0 cm³",
+    "20.0 cm³",
+    "50.0 cm³",
+    "25.0 cm³"
+   ],
+   "answer": 0,
+   "explanation": "Moles of Na₂CO₃ = 0.0250 dm³ × 0.100 mol/dm³ = 0.00250 mol. This requires 2 × 0.00250 = 0.00500 mol HCl, so volume = 0.00500/0.125 = 0.0400 dm³ = 40.0 cm³."
+  },
+  {
+   "n": 35,
+   "topic": "Acids, bases and salts",
+   "q": "Which method is most suitable for preparing a pure sample of lead(II) sulphate?",
+   "options": [
+    "mixing aqueous lead(II) nitrate with aqueous sodium sulphate and filtering the precipitate",
+    "adding excess lead(II) carbonate to dilute sulphuric acid",
+    "neutralizing lead(II) oxide with dilute sulphuric acid and crystallizing",
+    "reacting lead metal with dilute sulphuric acid and evaporating the solution"
+   ],
+   "answer": 0,
+   "explanation": "Lead(II) sulphate is insoluble in water, so it is best prepared by precipitation from two soluble salts. The precipitate can then be filtered, washed and dried to obtain a pure sample."
+  },
+  {
+   "n": 36,
+   "topic": "Rates of reaction and equilibrium",
+   "q": "For the reaction A(g) + B(g) → C(g), the rate equation is rate = k[A][B]. If the concentrations of both A and B are doubled at constant temperature, by what factor is the rate increased?",
+   "options": [
+    "4",
+    "unchanged",
+    "8",
+    "2"
+   ],
+   "answer": 0,
+   "explanation": "The new rate is k(2[A])(2[B]) = 4k[A][B], so the rate becomes four times the original rate. Doubling only one reactant would double the rate, but doubling both gives a factor of four."
+  },
+  {
+   "n": 37,
+   "topic": "Metals and their compounds",
+   "q": "A steel tank buried in the soil at Aba is protected from rusting by attaching blocks of a more reactive metal to it. Which metal is suitable for this purpose?",
+   "options": [
+    "silver",
+    "copper",
+    "zinc",
+    "tin"
+   ],
+   "answer": 2,
+   "explanation": "Zinc is more reactive than iron, so it corrodes in preference to the iron in a sacrificial-protection process. Copper and silver are less reactive than iron, and tin is not sufficiently more reactive to protect the steel in this way."
+  },
+  {
+   "n": 38,
+   "topic": "Metals and their compounds",
+   "q": "At the Ajaokuta steel plant, which substance reduces iron(III) oxide to iron in the blast furnace?",
+   "options": [
+    "carbon(IV) oxide",
+    "oxygen",
+    "calcium carbonate",
+    "carbon monoxide"
+   ],
+   "answer": 3,
+   "explanation": "Coke burns to form carbon monoxide, and carbon monoxide reduces iron(III) oxide to iron. Calcium carbonate is added to remove silica as slag, while carbon(IV) oxide and oxygen do not act as the reducing agent."
+  },
+  {
+   "n": 39,
+   "topic": "Non-metals and their compounds",
+   "q": "A student in Jos bubbles chlorine gas into colourless potassium bromide solution. Which observation is correct?",
+   "options": [
+    "Hydrogen gas is evolved and the solution becomes alkaline.",
+    "A white precipitate of potassium bromide is formed.",
+    "The solution turns orange-brown.",
+    "The solution remains colourless because bromide ions are more reactive than chlorine."
+   ],
+   "answer": 2,
+   "explanation": "Chlorine is more reactive than bromine and displaces it from potassium bromide: Cl₂ + 2KBr → 2KCl + Br₂. The liberated bromine gives an orange-brown colour in solution; no white precipitate or hydrogen gas is formed."
+  },
+  {
+   "n": 40,
+   "topic": "Hydrocarbons",
+   "q": "But-2-ene is treated with hydrogen chloride at room temperature. Which compound is formed?",
+   "options": [
+    "1-chlorobutane",
+    "butane",
+    "1,2-dichlorobutane",
+    "2-chlorobutane"
+   ],
+   "answer": 3,
+   "explanation": "Hydrogen chloride adds across the carbon-carbon double bond of but-2-ene. The symmetrical structure gives 2-chlorobutane as the product, not 1,2-dichlorobutane, which would require chlorine addition."
+  },
+  {
+   "n": 41,
+   "topic": "Functional groups in organic chemistry",
+   "q": "A student in Abeokuta adds a small piece of sodium metal to ethanol. Which gas is evolved?",
+   "options": [
+    "Ethene",
+    "Oxygen",
+    "Carbon(IV) oxide",
+    "Hydrogen"
+   ],
+   "answer": 3,
+   "explanation": "Ethanol reacts with sodium to form sodium ethoxide and hydrogen gas. Ethene would be formed by dehydration of ethanol, not by reaction with sodium metal."
+  },
+  {
+   "n": 42,
+   "topic": "Hydrocarbons",
+   "q": "Which process is used industrially to break large alkane molecules into smaller alkanes and alkenes?",
+   "options": [
+    "Esterification",
+    "Fermentation",
+    "Cracking",
+    "Polymerisation"
+   ],
+   "answer": 2,
+   "explanation": "Cracking breaks long-chain alkanes into smaller, more useful alkanes and alkenes. Fermentation forms ethanol, esterification forms esters, and polymerisation joins small molecules into larger ones."
+  },
+  {
+   "n": 43,
+   "topic": "Functional groups in organic chemistry",
+   "q": "A student in Enugu warms ethanoic acid with methanol in the presence of concentrated sulphuric acid. Which compound is formed?",
+   "options": [
+    "Ethanol",
+    "Ethyl ethanoate",
+    "Methyl ethanoate",
+    "Methyl methanoate"
+   ],
+   "answer": 2,
+   "explanation": "The reaction is esterification: ethanoic acid supplies the ethanoate part and methanol supplies the methyl group, forming methyl ethanoate. Concentrated sulphuric acid catalyses the reaction and helps remove water."
+  },
+  {
+   "n": 44,
+   "topic": "Non-metals and their compounds",
+   "q": "Concentrated sulphuric acid is used to dry carbon(IV) oxide but not ammonia. Which statement best explains this?",
+   "options": [
+    "It is reduced by carbon(IV) oxide to sulphur(IV) oxide.",
+    "It dissolves carbon(IV) oxide but not ammonia.",
+    "It reacts with ammonia but does not react with carbon(IV) oxide.",
+    "It reacts with carbon(IV) oxide but not with ammonia."
+   ],
+   "answer": 2,
+   "explanation": "Ammonia is basic and reacts with concentrated sulphuric acid to form a salt, so it cannot be dried by this acid. Carbon(IV) oxide is acidic and is not attacked by concentrated sulphuric acid."
+  },
+  {
+   "n": 45,
+   "topic": "Functional groups in organic chemistry",
+   "q": "A student in Ilorin tests four liquids with blue litmus paper. Which liquid will turn the paper red?",
+   "options": [
+    "Ethanol",
+    "Propanone",
+    "Ethanoic acid",
+    "Ethyl ethanoate"
+   ],
+   "answer": 2,
+   "explanation": "Ethanoic acid is a carboxylic acid and ionises in water to give hydrogen ions, so it turns blue litmus red. Ethanol, ethyl ethanoate and propanone are neutral under these conditions."
+  },
+  {
+   "n": 46,
+   "topic": "Energy changes",
+   "q": "The standard enthalpy of combustion of carbon is −393 kJ mol⁻¹. What mass of carbon, C (molar mass 12.0 g mol⁻¹), must burn completely to release 196.5 kJ of heat?",
+   "options": [
+    "24.0 g",
+    "12.0 g",
+    "3.0 g",
+    "6.0 g"
+   ],
+   "answer": 3,
+   "explanation": "The number of moles of carbon needed is 196.5 ÷ 393 = 0.500 mol. Using mass = moles × molar mass gives 0.500 × 12.0 = 6.0 g. The value 12.0 g would release twice this amount of heat."
+  },
+  {
+   "n": 47,
+   "topic": "Separation of mixtures",
+   "q": "A student in Jos is given a mixture of solid ammonium chloride and sand. Which method is most suitable for obtaining pure ammonium chloride from the mixture?",
+   "options": [
+    "Sublimation",
+    "Magnetic separation",
+    "Filtration of the dry mixture",
+    "Decantation"
+   ],
+   "answer": 0,
+   "explanation": "Ammonium chloride sublimes on heating, changing directly to vapour, which can be cooled and collected as a pure solid, leaving the sand behind. Filtration of the dry mixture would not separate the two solids, and sand is not magnetic."
+  },
+  {
+   "n": 48,
+   "topic": "Water and solubility",
+   "q": "Which compound is a common cause of permanent hardness in water?",
+   "options": [
+    "Calcium carbonate",
+    "Magnesium sulphate",
+    "Calcium hydrogencarbonate",
+    "Sodium chloride"
+   ],
+   "answer": 1,
+   "explanation": "Permanent hardness is caused by dissolved calcium or magnesium sulphates and chlorides, such as magnesium sulphate. Calcium hydrogencarbonate causes temporary hardness, sodium chloride does not cause hardness, and calcium carbonate is insoluble in water."
+  },
+  {
+   "n": 49,
+   "topic": "Water and solubility",
+   "q": "A saturated sugar solution at 30°C is made by dissolving 90.0 g of sugar in 150.0 g of water. What is the solubility of sugar at 30°C?",
+   "options": [
+    "60.0 g per 100 g of water",
+    "90.0 g per 100 g of water",
+    "37.5 g per 100 g of water",
+    "45.0 g per 100 g of water"
+   ],
+   "answer": 0,
+   "explanation": "Solubility is expressed as mass of solute per 100 g of water, so it is (90.0 ÷ 150.0) × 100 = 60.0 g per 100 g water. Using the total solution mass instead of the water mass would give 37.5 g per 100 g, which is incorrect."
+  },
+  {
+   "n": 50,
+   "topic": "Gas laws",
+   "q": "A fixed mass of gas occupies 300 cm³ at 27°C and 100 kPa. What volume will it occupy at 127°C and 200 kPa?",
+   "options": [
+    "150 cm³",
+    "600 cm³",
+    "200 cm³",
+    "400 cm³"
+   ],
+   "answer": 2,
+   "explanation": "Using V₂ = V₁ × (P₁/P₂) × (T₂/T₁), with T₁ = 300 K and T₂ = 400 K, gives V₂ = 300 × (100/200) × (400/300) = 200 cm³. Ignoring the temperature change would wrongly leave 150 cm³."
+  },
+  {
+   "n": 51,
+   "topic": "Gas laws",
+   "q": "What volume is occupied by 3.20 g of sulfur(IV) oxide, SO₂, at s.t.p.? (Molar volume at s.t.p. = 22.4 dm³; S = 32, O = 16)",
+   "options": [
+    "1.12 dm³",
+    "0.560 dm³",
+    "4.48 dm³",
+    "2.24 dm³"
+   ],
+   "answer": 0,
+   "explanation": "The molar mass of SO₂ is 32 + (2 × 16) = 64 g mol⁻¹, so 3.20 g contains 3.20 ÷ 64 = 0.0500 mol. At s.t.p., 0.0500 mol occupies 0.0500 × 22.4 = 1.12 dm³. A mass of 6.40 g would occupy 2.24 dm³."
+  },
+  {
+   "n": 52,
+   "topic": "Mole concept and stoichiometry",
+   "q": "Mr Bello in Port Harcourt mixes 8.4 g of nitrogen with 3.0 g of hydrogen to produce ammonia: N₂(g) + 3H₂(g) → 2NH₃(g). Which statement about the reaction mixture is correct? (N = 14, H = 1)",
+   "options": [
+    "Nitrogen is in excess by 0.30 mol.",
+    "Hydrogen is in excess by 0.90 mol.",
+    "Hydrogen is in excess by 0.60 mol.",
+    "Nitrogen is in excess by 0.60 mol."
+   ],
+   "answer": 2,
+   "explanation": "8.4 g of N₂ is 8.4 ÷ 28 = 0.30 mol, while 3.0 g of H₂ is 3.0 ÷ 2 = 1.50 mol. The equation requires 3 mol of H₂ for every 1 mol of N₂, so 0.30 mol of N₂ needs 0.90 mol of H₂. The hydrogen present is therefore in excess by 1.50 − 0.90 = 0.60 mol."
+  },
+  {
+   "n": 53,
+   "topic": "Mole concept and stoichiometry",
+   "q": "Ada in Ibadan prepares 500 cm³ of 0.250 mol dm⁻³ copper(II) sulfate solution using hydrated copper(II) sulfate, CuSO₄·5H₂O. What mass of the hydrated salt is needed? (Cu = 64, S = 32, O = 16, H = 1)",
+   "options": [
+    "62.50 g",
+    "50.00 g",
+    "31.25 g",
+    "15.63 g"
+   ],
+   "answer": 2,
+   "explanation": "The required amount of CuSO₄·5H₂O is 0.250 mol dm⁻³ × 0.500 dm³ = 0.125 mol. Its molar mass is 64 + 32 + (4 × 16) + 5(18) = 250 g mol⁻¹. The mass needed is 0.125 × 250 = 31.25 g."
+  },
+  {
+   "n": 54,
+   "topic": "Oxidation, reduction and electrolysis",
+   "q": "What is the oxidation number of phosphorus in H₃PO₄?",
+   "options": [
+    "+3",
+    "+1",
+    "−3",
+    "+5"
+   ],
+   "answer": 3,
+   "explanation": "Let the oxidation number of phosphorus be x. The sum is 3(+1) + x + 4(−2) = 0, so 3 + x − 8 = 0 and x = +5. Oxygen is taken as −2 and hydrogen as +1 in this compound."
+  },
+  {
+   "n": 55,
+   "topic": "Oxidation, reduction and electrolysis",
+   "q": "In the electrolysis of molten lead(II) bromide using inert electrodes, which half-equation represents the reaction at the cathode?",
+   "options": [
+    "2H₂O + 2e⁻ → H₂ + 2OH⁻",
+    "Pb → Pb²⁺ + 2e⁻",
+    "Pb²⁺ + 2e⁻ → Pb",
+    "2Br⁻ → Br₂ + 2e⁻"
+   ],
+   "answer": 2,
+   "explanation": "In molten lead(II) bromide, the cathode attracts positive lead(II) ions and reduces them. The reduction half-equation is Pb²⁺ + 2e⁻ → Pb. Bromide ions are oxidised at the anode, not at the cathode."
+  },
+  {
+   "n": 56,
+   "topic": "Periodic table",
+   "q": "An atom of element Q has the electronic configuration 1s² 2s² 2p⁶ 3s² 3p¹. Which formula is most likely for its oxide?",
+   "options": [
+    "Q₂O",
+    "Q₂O₃",
+    "QO₂",
+    "QO"
+   ],
+   "answer": 1,
+   "explanation": "The configuration 1s² 2s² 2p⁶ 3s² 3p¹ corresponds to an element with three valence electrons, aluminium. It loses three electrons to form Q³⁺, and the oxide formed with O²⁻ has the formula Q₂O₃. The formula QO₂ would require an element with oxidation state +4."
+  },
+  {
+   "n": 57,
+   "topic": "Environmental chemistry",
+   "q": "Many households in a densely populated area of Kano burn firewood in poorly ventilated kitchens. Which gas is most dangerous in this situation because it combines strongly with haemoglobin in the blood?",
+   "options": [
+    "Carbon dioxide",
+    "Sulphur(IV) oxide",
+    "Nitrogen",
+    "Carbon monoxide"
+   ],
+   "answer": 3,
+   "explanation": "Carbon monoxide is produced by incomplete combustion of firewood and binds strongly to haemoglobin, reducing the oxygen-carrying capacity of blood. Carbon dioxide is a normal product of complete combustion and is not strongly bound by haemoglobin, while sulphur(IV) oxide is mainly an irritant gas."
+  },
+  {
+   "n": 58,
+   "topic": "Environmental chemistry",
+   "q": "A workshop in Kaduna discharges wastewater containing dissolved copper(II) ions into a stream. Which treatment is most suitable for removing the copper ions before the water is released?",
+   "options": [
+    "Add lime or sodium hydroxide solution to precipitate copper(II) hydroxide, then filter.",
+    "Add more water to dilute the copper(II) ions.",
+    "Filter the wastewater through a fine cloth.",
+    "Boil the wastewater for a long time."
+   ],
+   "answer": 0,
+   "explanation": "Dissolved copper(II) ions can be removed by adding lime or sodium hydroxide solution to precipitate insoluble copper(II) hydroxide. The precipitate is then removed by filtration. Boiling, ordinary cloth filtration, or dilution does not remove the dissolved metal ions."
+  },
+  {
+   "n": 59,
+   "topic": "Acids, bases and salts",
+   "q": "Which of the following compounds is an acid salt?",
+   "options": [
+    "Sodium tetraoxosulphate(VI)",
+    "Sodium hydroxide",
+    "Sodium hydrogen trioxocarbonate(IV)",
+    "Sodium trioxocarbonate(IV)"
+   ],
+   "answer": 2,
+   "explanation": "An acid salt still contains a replaceable hydrogen atom; sodium hydrogen trioxocarbonate(IV), NaHCO₃, is formed when carbonic acid is only partly neutralised. Sodium trioxocarbonate(IV) and sodium tetraoxosulphate(VI) are normal salts, while sodium hydroxide is a base, not an acid salt."
+  },
+  {
+   "n": 60,
+   "topic": "Rates of reaction and equilibrium",
+   "q": "For the equilibrium 2SO₂(g) + O₂(g) ⇌ 2SO₃(g), ΔH = −197 kJ mol⁻¹, which change would shift the equilibrium position to the right?",
+   "options": [
+    "Adding a catalyst",
+    "Increasing the temperature",
+    "Removing some sulphur(VI) oxide from the mixture",
+    "Decreasing the total pressure"
+   ],
+   "answer": 2,
+   "explanation": "Removing sulphur(VI) oxide reduces the concentration of a product, so the equilibrium shifts to the right to replace it. The forward reaction is exothermic, so increasing temperature favours the reverse reaction; decreasing pressure favours the side with more gaseous moles, which is the left side. A catalyst speeds both directions equally and does not change the equilibrium position."
+  }
+ ]
+}

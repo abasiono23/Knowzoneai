@@ -1,0 +1,561 @@
+{
+ "id": "act-science-p2",
+ "exam": "act",
+ "subject": "science",
+ "year": null,
+ "number": 2,
+ "source": "ai",
+ "minutes": 40,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Data representation: reading tables and graphs",
+   "passage": "Students investigated how exposed surface area affects the evaporation of water. They placed 50.0 mL of water in each of four shallow plastic trays of similar material but with different exposed surface areas. The exposed water surface areas were 25, 50, 75, and 100 cm². All trays were placed on the same table in a room kept at 24.0°C with 45% relative humidity. No fan was used. After 3.0 h, the students measured the mass lost from each tray with a balance accurate to 0.1 g. They repeated the experiment three times and calculated the mean mass lost and mean evaporation rate. The results are shown in Table 1.\n\nTable 1\nExposed area (cm²) | Mean mass lost in 3.0 h (g) | Mean evaporation rate (g/h)\n25 | 3.0 | 1.0\n50 | 5.9 | 2.0\n75 | 8.7 | 2.9\n100 | 11.4 | 3.8\n\nThe students also noted that the trays with larger surface areas had shallower water at the start because the same volume was added to each tray. They wondered whether water depth affected the results in addition to surface area.",
+   "q": "According to Table 1, which exposed area had a mean evaporation rate closest to 3.0 g/h?",
+   "options": [
+    "25 cm²",
+    "75 cm²",
+    "50 cm²",
+    "100 cm²"
+   ],
+   "answer": 1,
+   "explanation": "The mean evaporation rate for 75 cm² is 2.9 g/h, which is only 0.1 g/h from 3.0 g/h. The other rates are 1.0, 2.0, and 3.8 g/h, so they are farther from 3.0 g/h."
+  },
+  {
+   "n": 2,
+   "topic": "Scientific models, hypotheses and predictions",
+   "passage": "Students investigated how exposed surface area affects the evaporation of water. They placed 50.0 mL of water in each of four shallow plastic trays of similar material but with different exposed surface areas. The exposed water surface areas were 25, 50, 75, and 100 cm². All trays were placed on the same table in a room kept at 24.0°C with 45% relative humidity. No fan was used. After 3.0 h, the students measured the mass lost from each tray with a balance accurate to 0.1 g. They repeated the experiment three times and calculated the mean mass lost and mean evaporation rate. The results are shown in Table 1.\n\nTable 1\nExposed area (cm²) | Mean mass lost in 3.0 h (g) | Mean evaporation rate (g/h)\n25 | 3.0 | 1.0\n50 | 5.9 | 2.0\n75 | 8.7 | 2.9\n100 | 11.4 | 3.8\n\nThe students also noted that the trays with larger surface areas had shallower water at the start because the same volume was added to each tray. They wondered whether water depth affected the results in addition to surface area.",
+   "q": "A student claims that, over the range tested, the mean mass lost in 3.0 h is directly proportional to exposed area. Using the 25 cm² result to set the proportional model, what mass lost is predicted for an exposed area of 125 cm²?",
+   "options": [
+    "15.0 g",
+    "12.0 g",
+    "14.3 g",
+    "18.0 g"
+   ],
+   "answer": 0,
+   "explanation": "The proportional model uses 3.0 g ÷ 25 cm² = 0.12 g/cm², so 125 cm² predicts 0.12 × 125 = 15.0 g. A value such as 12.0 g would be predicted for only 100 cm² under the same model."
+  },
+  {
+   "n": 3,
+   "topic": "Research summaries: experimental design",
+   "passage": "Students investigated how exposed surface area affects the evaporation of water. They placed 50.0 mL of water in each of four shallow plastic trays of similar material but with different exposed surface areas. The exposed water surface areas were 25, 50, 75, and 100 cm². All trays were placed on the same table in a room kept at 24.0°C with 45% relative humidity. No fan was used. After 3.0 h, the students measured the mass lost from each tray with a balance accurate to 0.1 g. They repeated the experiment three times and calculated the mean mass lost and mean evaporation rate. The results are shown in Table 1.\n\nTable 1\nExposed area (cm²) | Mean mass lost in 3.0 h (g) | Mean evaporation rate (g/h)\n25 | 3.0 | 1.0\n50 | 5.9 | 2.0\n75 | 8.7 | 2.9\n100 | 11.4 | 3.8\n\nThe students also noted that the trays with larger surface areas had shallower water at the start because the same volume was added to each tray. They wondered whether water depth affected the results in addition to surface area.",
+   "q": "Which change to the students’ setup would best control for the possible effect of water depth while still comparing different exposed surface areas?",
+   "options": [
+    "Use the same 50.0 mL volume in every tray, as in the original setup.",
+    "Keep all trays in a single location but vary the room temperature.",
+    "Add different volumes of water so that all trays begin with the same water depth.",
+    "Place a lid over each tray during the 3.0 h period."
+   ],
+   "answer": 2,
+   "explanation": "Because each tray had a different exposed area, equal volumes produced different depths. Making the starting depth equal isolates surface area as the intended variable; covering the trays or changing temperature would alter evaporation rather than control depth."
+  },
+  {
+   "n": 4,
+   "topic": "Research summaries: interpreting results",
+   "passage": "Students investigated how exposed surface area affects the evaporation of water. They placed 50.0 mL of water in each of four shallow plastic trays of similar material but with different exposed surface areas. The exposed water surface areas were 25, 50, 75, and 100 cm². All trays were placed on the same table in a room kept at 24.0°C with 45% relative humidity. No fan was used. After 3.0 h, the students measured the mass lost from each tray with a balance accurate to 0.1 g. They repeated the experiment three times and calculated the mean mass lost and mean evaporation rate. The results are shown in Table 1.\n\nTable 1\nExposed area (cm²) | Mean mass lost in 3.0 h (g) | Mean evaporation rate (g/h)\n25 | 3.0 | 1.0\n50 | 5.9 | 2.0\n75 | 8.7 | 2.9\n100 | 11.4 | 3.8\n\nThe students also noted that the trays with larger surface areas had shallower water at the start because the same volume was added to each tray. They wondered whether water depth affected the results in addition to surface area.",
+   "q": "The results in Table 1 best support which statement?",
+   "options": [
+    "The mean evaporation rate decreased as exposed area increased.",
+    "The mean evaporation rate was exactly proportional to exposed area at all four areas tested.",
+    "Changing exposed area from 25 to 100 cm² had no consistent effect on mean evaporation rate.",
+    "Increasing the exposed area from 25 to 50 cm² increased the mean evaporation rate by a larger amount than increasing it from 75 to 100 cm²."
+   ],
+   "answer": 3,
+   "explanation": "From 25 to 50 cm², the rate rises by 1.0 g/h; from 75 to 100 cm², it rises by 3.8 − 2.9 = 0.9 g/h. The ratios of rate to area are close but not exactly constant, so the data are not exactly proportional."
+  },
+  {
+   "n": 5,
+   "topic": "Scientific models, hypotheses and predictions",
+   "passage": "Students investigated how exposed surface area affects the evaporation of water. They placed 50.0 mL of water in each of four shallow plastic trays of similar material but with different exposed surface areas. The exposed water surface areas were 25, 50, 75, and 100 cm². All trays were placed on the same table in a room kept at 24.0°C with 45% relative humidity. No fan was used. After 3.0 h, the students measured the mass lost from each tray with a balance accurate to 0.1 g. They repeated the experiment three times and calculated the mean mass lost and mean evaporation rate. The results are shown in Table 1.\n\nTable 1\nExposed area (cm²) | Mean mass lost in 3.0 h (g) | Mean evaporation rate (g/h)\n25 | 3.0 | 1.0\n50 | 5.9 | 2.0\n75 | 8.7 | 2.9\n100 | 11.4 | 3.8\n\nThe students also noted that the trays with larger surface areas had shallower water at the start because the same volume was added to each tray. They wondered whether water depth affected the results in addition to surface area.",
+   "q": "If the mean evaporation rate continues to increase by about 0.9 g/h for each additional 25 cm² beyond 100 cm², what rate is predicted for an exposed area of 125 cm²?",
+   "options": [
+    "3.8 g/h",
+    "4.7 g/h",
+    "5.0 g/h",
+    "4.2 g/h"
+   ],
+   "answer": 1,
+   "explanation": "The predicted rate is the 100 cm² rate plus one additional 0.9 g/h increase: 3.8 + 0.9 = 4.7 g/h. Keeping the same rate as at 100 cm² would give 3.8 g/h, but that ignores the predicted increase."
+  },
+  {
+   "n": 6,
+   "topic": "Data representation: reading tables and graphs",
+   "q": "The table shows the density of four liquids at 20°C.\n\nLiquid | Density (g/mL)\nW | 0.79\nX | 0.92\nY | 1.00\nZ | 1.26\n\nA 10.0 mL sample of which liquid has a mass closest to 9.2 g?",
+   "options": [
+    "Liquid X",
+    "Liquid W",
+    "Liquid Z",
+    "Liquid Y"
+   ],
+   "answer": 0,
+   "explanation": "Mass equals density × volume. For liquid X, 0.92 g/mL × 10.0 mL = 9.2 g, so liquid X is closest. The other samples would have masses of 7.9 g, 10.0 g, and 12.6 g."
+  },
+  {
+   "n": 7,
+   "topic": "Scientific models, hypotheses and predictions",
+   "q": "A model predicts the volume V, in liters, of water in a tank after t minutes as V = 40 − 3t, for 0 ≤ t ≤ 12. According to the model, after how many minutes is the volume 19 L?",
+   "options": [
+    "5 min",
+    "8 min",
+    "6 min",
+    "7 min"
+   ],
+   "answer": 3,
+   "explanation": "Set 40 − 3t = 19, so 3t = 21 and t = 7 min. At 6 min the model gives 22 L, and at 8 min it gives 16 L."
+  },
+  {
+   "n": 8,
+   "topic": "Research summaries: experimental design",
+   "q": "A student wants to test whether a new paper towel brand absorbs more water than an older brand. The student soaks one sheet of each brand in 200 mL of water for 10 s, hangs the sheets to drip for 1 min, and measures the water retained. Which change would best reduce the effect of variation among individual paper towels?",
+   "options": [
+    "Use only the thickest sheet from each brand.",
+    "Let one brand drip for 1 min and the other brand drip for 2 min.",
+    "Use a larger volume of water for each sheet.",
+    "Test several sheets of each brand and compare the mean water retained."
+   ],
+   "answer": 3,
+   "explanation": "Variation among individual sheets is best handled by averaging multiple sheets from each brand. Using only one selected sheet, changing water volume, or giving brands different drip times would introduce new differences rather than control variation."
+  },
+  {
+   "n": 9,
+   "topic": "Research summaries: interpreting results",
+   "q": "The table shows results from an experiment measuring carbon dioxide produced by yeast in three sugar solutions.\n\nSolution | Mean CO₂ produced (mL) | Range (mL)\nGlucose | 34 | 33–35\nFructose | 31 | 25–37\nSucrose | 28 | 26–30\n\nWhich statement is best supported by the table?",
+   "options": [
+    "All three sugar solutions produced equally variable results.",
+    "Sucrose produced more carbon dioxide on average than glucose.",
+    "Glucose produced a higher mean volume than sucrose, and its range was narrower than fructose's range.",
+    "Fructose produced the highest mean volume of carbon dioxide."
+   ],
+   "answer": 2,
+   "explanation": "The mean for glucose is 34 mL, greater than the 28 mL mean for sucrose, and glucose's range is 2 mL while fructose's range is 12 mL. Fructose did not have the highest mean, and sucrose did not exceed glucose."
+  },
+  {
+   "n": 10,
+   "topic": "Data representation: reading tables and graphs",
+   "q": "A student recorded the mass of a crystal every 2 minutes: 10.0 g at 0 min, 12.5 g at 2 min, 15.0 g at 4 min, 16.8 g at 6 min, and 18.0 g at 8 min. Between which two consecutive times did the mass increase by the smallest amount?",
+   "options": [
+    "Between 0 min and 2 min",
+    "Between 2 min and 4 min",
+    "Between 4 min and 6 min",
+    "Between 6 min and 8 min"
+   ],
+   "answer": 3,
+   "explanation": "The increases are 2.5 g from 0 to 2 min, 2.5 g from 2 to 4 min, 1.8 g from 4 to 6 min, and 1.2 g from 6 to 8 min. The smallest increase is 1.2 g, between 6 and 8 min."
+  },
+  {
+   "n": 11,
+   "topic": "Conflicting viewpoints",
+   "passage": "Two researchers studied four ponds near a small farm. Dr. Rivera proposed that dissolved oxygen (DO) is mainly controlled by water temperature: warmer water holds less oxygen. Dr. Patel proposed that algae abundance is more important: algae produce oxygen during daylight but use oxygen at night, and dense algal growth can cause large daily changes in DO. On the same morning, the researchers measured DO at 6 a.m. (before sunrise) and at 2 p.m., along with mean water temperature and algae cover. Table 1 summarizes the results.\n\nPond | Mean water temperature (°C) | Algae cover (%) | DO at 6 a.m. (mg/L) | DO at 2 p.m. (mg/L)\n1 | 18 | 10 | 7.8 | 8.1\n2 | 22 | 70 | 4.9 | 9.8\n3 | 22 | 5 | 7.0 | 7.3\n4 | 26 | 30 | 4.6 | 5.7\n\nDr. Rivera notes that Pond 4 has both the warmest water and the lowest 6 a.m. DO. Dr. Patel notes that Ponds 2 and 3 have the same temperature but very different algae cover and DO changes. Neither researcher claims that only one factor is involved.",
+   "q": "The disagreement between Dr. Rivera and Dr. Patel centers most directly on whether:",
+   "options": [
+    "Pond 4 is warmer than Ponds 2 and 3.",
+    "water temperature or algae cover has the greater influence on dissolved oxygen in the ponds.",
+    "dissolved oxygen concentrations can differ between morning and afternoon.",
+    "algae in ponds can affect dissolved oxygen during daylight."
+   ],
+   "answer": 1,
+   "explanation": "Dr. Rivera emphasizes temperature as the main control on dissolved oxygen, while Dr. Patel emphasizes algae cover as more important. The other statements are observations or common ground, not the main conflict."
+  },
+  {
+   "n": 12,
+   "topic": "Data representation: reading tables and graphs",
+   "passage": "Two researchers studied four ponds near a small farm. Dr. Rivera proposed that dissolved oxygen (DO) is mainly controlled by water temperature: warmer water holds less oxygen. Dr. Patel proposed that algae abundance is more important: algae produce oxygen during daylight but use oxygen at night, and dense algal growth can cause large daily changes in DO. On the same morning, the researchers measured DO at 6 a.m. (before sunrise) and at 2 p.m., along with mean water temperature and algae cover. Table 1 summarizes the results.\n\nPond | Mean water temperature (°C) | Algae cover (%) | DO at 6 a.m. (mg/L) | DO at 2 p.m. (mg/L)\n1 | 18 | 10 | 7.8 | 8.1\n2 | 22 | 70 | 4.9 | 9.8\n3 | 22 | 5 | 7.0 | 7.3\n4 | 26 | 30 | 4.6 | 5.7\n\nDr. Rivera notes that Pond 4 has both the warmest water and the lowest 6 a.m. DO. Dr. Patel notes that Ponds 2 and 3 have the same temperature but very different algae cover and DO changes. Neither researcher claims that only one factor is involved.",
+   "q": "At 2 p.m., which pond had a dissolved oxygen concentration that was greater than its 6 a.m. value by the largest amount?",
+   "options": [
+    "Pond 1",
+    "Pond 3",
+    "Pond 2",
+    "Pond 4"
+   ],
+   "answer": 2,
+   "explanation": "Pond 2 rose from 4.9 to 9.8 mg/L, an increase of 4.9 mg/L. The increases for Ponds 1, 3, and 4 were 0.3, 0.3, and 1.1 mg/L, so Pond 2 had the largest increase."
+  },
+  {
+   "n": 13,
+   "topic": "Data representation: trends, interpolation and extrapolation",
+   "passage": "Two researchers studied four ponds near a small farm. Dr. Rivera proposed that dissolved oxygen (DO) is mainly controlled by water temperature: warmer water holds less oxygen. Dr. Patel proposed that algae abundance is more important: algae produce oxygen during daylight but use oxygen at night, and dense algal growth can cause large daily changes in DO. On the same morning, the researchers measured DO at 6 a.m. (before sunrise) and at 2 p.m., along with mean water temperature and algae cover. Table 1 summarizes the results.\n\nPond | Mean water temperature (°C) | Algae cover (%) | DO at 6 a.m. (mg/L) | DO at 2 p.m. (mg/L)\n1 | 18 | 10 | 7.8 | 8.1\n2 | 22 | 70 | 4.9 | 9.8\n3 | 22 | 5 | 7.0 | 7.3\n4 | 26 | 30 | 4.6 | 5.7\n\nDr. Rivera notes that Pond 4 has both the warmest water and the lowest 6 a.m. DO. Dr. Patel notes that Ponds 2 and 3 have the same temperature but very different algae cover and DO changes. Neither researcher claims that only one factor is involved.",
+   "q": "A fifth pond has a mean water temperature of 24°C. If the 6 a.m. dissolved oxygen value is linearly interpolated between the values for Ponds 3 and 4, the predicted value is closest to:",
+   "options": [
+    "6.4 mg/L",
+    "7.0 mg/L",
+    "5.2 mg/L",
+    "5.8 mg/L"
+   ],
+   "answer": 3,
+   "explanation": "Pond 3 has 7.0 mg/L at 22°C, and Pond 4 has 4.6 mg/L at 26°C. A temperature of 24°C is halfway between them, so the interpolated value is (7.0 + 4.6) ÷ 2 = 5.8 mg/L."
+  },
+  {
+   "n": 14,
+   "topic": "Scientific models, hypotheses and predictions",
+   "passage": "Two researchers studied four ponds near a small farm. Dr. Rivera proposed that dissolved oxygen (DO) is mainly controlled by water temperature: warmer water holds less oxygen. Dr. Patel proposed that algae abundance is more important: algae produce oxygen during daylight but use oxygen at night, and dense algal growth can cause large daily changes in DO. On the same morning, the researchers measured DO at 6 a.m. (before sunrise) and at 2 p.m., along with mean water temperature and algae cover. Table 1 summarizes the results.\n\nPond | Mean water temperature (°C) | Algae cover (%) | DO at 6 a.m. (mg/L) | DO at 2 p.m. (mg/L)\n1 | 18 | 10 | 7.8 | 8.1\n2 | 22 | 70 | 4.9 | 9.8\n3 | 22 | 5 | 7.0 | 7.3\n4 | 26 | 30 | 4.6 | 5.7\n\nDr. Rivera notes that Pond 4 has both the warmest water and the lowest 6 a.m. DO. Dr. Patel notes that Ponds 2 and 3 have the same temperature but very different algae cover and DO changes. Neither researcher claims that only one factor is involved.",
+   "q": "If Dr. Patel's hypothesis is correct, which pattern would be expected for a pond with high algae cover compared with a nearby pond at the same water temperature but low algae cover?",
+   "options": [
+    "lower DO before sunrise and higher DO in the afternoon",
+    "lower DO both before sunrise and in the afternoon",
+    "higher DO both before sunrise and in the afternoon",
+    "the same DO at both times"
+   ],
+   "answer": 0,
+   "explanation": "Algae produce oxygen in daylight and consume oxygen at night, so high algae cover should increase DO by afternoon and decrease it before sunrise. The comparison of Ponds 2 and 3 shows this pattern: Pond 2 has more algae, lower 6 a.m. DO, and higher 2 p.m. DO."
+  },
+  {
+   "n": 15,
+   "topic": "Data representation: reading tables and graphs",
+   "passage": "Two researchers studied four ponds near a small farm. Dr. Rivera proposed that dissolved oxygen (DO) is mainly controlled by water temperature: warmer water holds less oxygen. Dr. Patel proposed that algae abundance is more important: algae produce oxygen during daylight but use oxygen at night, and dense algal growth can cause large daily changes in DO. On the same morning, the researchers measured DO at 6 a.m. (before sunrise) and at 2 p.m., along with mean water temperature and algae cover. Table 1 summarizes the results.\n\nPond | Mean water temperature (°C) | Algae cover (%) | DO at 6 a.m. (mg/L) | DO at 2 p.m. (mg/L)\n1 | 18 | 10 | 7.8 | 8.1\n2 | 22 | 70 | 4.9 | 9.8\n3 | 22 | 5 | 7.0 | 7.3\n4 | 26 | 30 | 4.6 | 5.7\n\nDr. Rivera notes that Pond 4 has both the warmest water and the lowest 6 a.m. DO. Dr. Patel notes that Ponds 2 and 3 have the same temperature but very different algae cover and DO changes. Neither researcher claims that only one factor is involved.",
+   "q": "Which statement is best supported by the results in Table 1?",
+   "options": [
+    "Ponds with more algae cover always had lower DO at 2 p.m.",
+    "Ponds 2 and 3 had the same mean water temperature, but Pond 2 had more algae cover and a larger increase in DO from 6 a.m. to 2 p.m.",
+    "Pond 4 had the greatest algae cover and the highest 2 p.m. DO.",
+    "In every pond, DO at 6 a.m. was greater than DO at 2 p.m."
+   ],
+   "answer": 1,
+   "explanation": "Ponds 2 and 3 both have a mean water temperature of 22°C, but Pond 2 has 70% algae cover and a DO increase of 4.9 mg/L, while Pond 3 has 5% algae cover and an increase of 0.3 mg/L. The other statements conflict with the table."
+  },
+  {
+   "n": 16,
+   "topic": "Data representation: trends, interpolation and extrapolation",
+   "q": "A student measured the volume of a gas as its temperature changed at constant pressure. The data are shown in the table.\n\nTemperature (°C) | Volume (mL)\n0 | 100\n20 | 107\n40 | 115\n60 | 122\n\nUsing linear interpolation between 20°C and 40°C, what volume would be predicted at 30°C?",
+   "options": [
+    "108 mL",
+    "114 mL",
+    "111 mL",
+    "122 mL"
+   ],
+   "answer": 2,
+   "explanation": "The 30°C point is halfway between 20°C and 40°C, so the predicted volume is halfway between 107 mL and 115 mL: (107 + 115) ÷ 2 = 111 mL."
+  },
+  {
+   "n": 17,
+   "topic": "Conflicting viewpoints",
+   "q": "Two students discuss why a metal spoon feels colder than a wooden spoon at room temperature. Maya says the metal must be at a lower temperature. Devin says both are at room temperature, but metal transfers heat away from the hand faster. Which observation would best support Devin's explanation?",
+   "options": [
+    "The metal spoon is shinier than the wooden spoon.",
+    "Both spoons have the same mass and volume.",
+    "A thermometer reads the same temperature for both spoons, and the metal spoon warms a cold block faster.",
+    "The metal spoon has a lower reading on a thermometer than the wooden spoon."
+   ],
+   "answer": 2,
+   "explanation": "Devin claims the spoons are at the same temperature but differ in heat transfer. Equal thermometer readings support equal temperature, and the metal spoon warming a cold block faster supports faster heat transfer. A lower thermometer reading for metal would instead support Maya's claim."
+  },
+  {
+   "n": 18,
+   "topic": "Data representation: reading tables and graphs",
+   "q": "Students recorded the number of gas bubbles produced per minute by yeast at several sugar concentrations. The data are shown in the table.\n\nSugar concentration (%) | Bubbles per minute\n0 | 2\n2 | 8\n4 | 17\n6 | 23\n8 | 22\n10 | 14\n\nBetween which two sugar concentrations is the average increase in bubbles per minute greatest per 1% increase in sugar concentration?",
+   "options": [
+    "4% to 6%",
+    "6% to 8%",
+    "2% to 4%",
+    "0% to 2%"
+   ],
+   "answer": 2,
+   "explanation": "The average increase per 1% is (17 − 8) ÷ 2 = 4.5 bubbles per minute from 2% to 4%. The values for 0% to 2% and 4% to 6% are both 3, and from 6% to 8% the number decreases, so 2% to 4% is the greatest increase."
+  },
+  {
+   "n": 19,
+   "topic": "Scientific models, hypotheses and predictions",
+   "q": "A model predicts the temperature of a cup of water after it is placed in a 20°C room: T = 20 + 60(0.85)^m, where T is temperature in °C and m is time in minutes. According to the model, what is the predicted decrease in temperature from minute 1 to minute 2?",
+   "options": [
+    "7.65°C",
+    "51.00°C",
+    "10.20°C",
+    "8.50°C"
+   ],
+   "answer": 0,
+   "explanation": "At minute 1, T = 20 + 60(0.85) = 71°C. At minute 2, T = 20 + 60(0.85²) = 20 + 60(0.7225) = 63.35°C. The decrease is 71 − 63.35 = 7.65°C."
+  },
+  {
+   "n": 20,
+   "topic": "Data representation: trends, interpolation and extrapolation",
+   "q": "A diver recorded the total pressure at several depths in a lake, as shown in the table.\n\nDepth (m) | Total pressure (kPa)\n0 | 101\n5 | 151\n10 | 201\n15 | 251\n\nIf the linear trend continues, what total pressure would be predicted at 22 m?",
+   "options": [
+    "341 kPa",
+    "321 kPa",
+    "311 kPa",
+    "301 kPa"
+   ],
+   "answer": 1,
+   "explanation": "The pressure increases by 50 kPa every 5 m, which is 10 kPa per meter. At 22 m, the predicted pressure is 101 + 22 × 10 = 321 kPa."
+  },
+  {
+   "n": 21,
+   "topic": "Research summaries: experimental design",
+   "passage": "Maya, Jordan, and Priya investigated how dissolved table salt affects the time needed for an ice cube to melt in water. They prepared 200 mL of distilled water at 22°C in a 400 mL beaker. To each beaker they added sodium chloride to make solutions of 0, 10, 20, 30, or 40 g/L and stirred until no crystals remained. For each concentration, they placed one 25.0 g ice cube made in the same mold into the beaker and recorded the time until no solid ice remained. The water was not stirred during melting. Each concentration was run in three trials, and a new ice cube and fresh solution were used each time. They recorded the solution temperature at the start and end of each trial; it remained between 21°C and 23°C. The table shows the mean time and range for each concentration.\nConcentration (g/L) | Mean melting time (s) | Range (s)\n0 | 210 | 204–216\n10 | 186 | 181–191\n20 | 158 | 152–164\n30 | 137 | 132–142\n40 | 119 | 114–124",
+   "q": "Which variable was the independent variable in the students' experiment?",
+   "options": [
+    "The mass of the ice cube",
+    "The concentration of sodium chloride in the water",
+    "The starting temperature of the water",
+    "The time required for the ice cube to melt completely"
+   ],
+   "answer": 1,
+   "explanation": "The independent variable is the one the students deliberately changed, which was the sodium chloride concentration. Melting time was the measured dependent variable, while starting water temperature and ice-cube mass were held constant."
+  },
+  {
+   "n": 22,
+   "topic": "Research summaries: experimental design",
+   "passage": "Maya, Jordan, and Priya investigated how dissolved table salt affects the time needed for an ice cube to melt in water. They prepared 200 mL of distilled water at 22°C in a 400 mL beaker. To each beaker they added sodium chloride to make solutions of 0, 10, 20, 30, or 40 g/L and stirred until no crystals remained. For each concentration, they placed one 25.0 g ice cube made in the same mold into the beaker and recorded the time until no solid ice remained. The water was not stirred during melting. Each concentration was run in three trials, and a new ice cube and fresh solution were used each time. They recorded the solution temperature at the start and end of each trial; it remained between 21°C and 23°C. The table shows the mean time and range for each concentration.\nConcentration (g/L) | Mean melting time (s) | Range (s)\n0 | 210 | 204–216\n10 | 186 | 181–191\n20 | 158 | 152–164\n30 | 137 | 132–142\n40 | 119 | 114–124",
+   "q": "The students used a new ice cube and fresh solution for each trial. Which change would best improve the reliability of the mean melting times?",
+   "options": [
+    "Use a larger ice cube at higher concentrations.",
+    "Run five additional trials at each concentration and recalculate the mean.",
+    "Keep only the fastest trial at each concentration.",
+    "Use a different beaker size for each concentration."
+   ],
+   "answer": 1,
+   "explanation": "Running more trials improves reliability by reducing the effect of random variation in each measurement. Changing ice mass or beaker size would introduce new variables, and keeping only the fastest trial would bias the results rather than improve reliability."
+  },
+  {
+   "n": 23,
+   "topic": "Research summaries: interpreting results",
+   "passage": "Maya, Jordan, and Priya investigated how dissolved table salt affects the time needed for an ice cube to melt in water. They prepared 200 mL of distilled water at 22°C in a 400 mL beaker. To each beaker they added sodium chloride to make solutions of 0, 10, 20, 30, or 40 g/L and stirred until no crystals remained. For each concentration, they placed one 25.0 g ice cube made in the same mold into the beaker and recorded the time until no solid ice remained. The water was not stirred during melting. Each concentration was run in three trials, and a new ice cube and fresh solution were used each time. They recorded the solution temperature at the start and end of each trial; it remained between 21°C and 23°C. The table shows the mean time and range for each concentration.\nConcentration (g/L) | Mean melting time (s) | Range (s)\n0 | 210 | 204–216\n10 | 186 | 181–191\n20 | 158 | 152–164\n30 | 137 | 132–142\n40 | 119 | 114–124",
+   "q": "Based on the table, as the sodium chloride concentration increased from 0 g/L to 40 g/L, the mean melting time:",
+   "options": [
+    "decreased by 119 s.",
+    "increased by 91 s.",
+    "decreased by 91 s.",
+    "decreased by 67 s."
+   ],
+   "answer": 2,
+   "explanation": "At 0 g/L the mean time was 210 s, and at 40 g/L it was 119 s, so the mean time decreased by 210 − 119 = 91 s. The mean time did not increase, and neither 67 s nor 119 s is the correct difference between the endpoints."
+  },
+  {
+   "n": 24,
+   "topic": "Data representation: trends, interpolation and extrapolation",
+   "passage": "Maya, Jordan, and Priya investigated how dissolved table salt affects the time needed for an ice cube to melt in water. They prepared 200 mL of distilled water at 22°C in a 400 mL beaker. To each beaker they added sodium chloride to make solutions of 0, 10, 20, 30, or 40 g/L and stirred until no crystals remained. For each concentration, they placed one 25.0 g ice cube made in the same mold into the beaker and recorded the time until no solid ice remained. The water was not stirred during melting. Each concentration was run in three trials, and a new ice cube and fresh solution were used each time. They recorded the solution temperature at the start and end of each trial; it remained between 21°C and 23°C. The table shows the mean time and range for each concentration.\nConcentration (g/L) | Mean melting time (s) | Range (s)\n0 | 210 | 204–216\n10 | 186 | 181–191\n20 | 158 | 152–164\n30 | 137 | 132–142\n40 | 119 | 114–124",
+   "q": "Using linear interpolation between the 20 g/L and 30 g/L trials, what mean melting time would be predicted for a concentration of 25 g/L?",
+   "options": [
+    "148.0 s",
+    "147.5 s",
+    "158.0 s",
+    "147.0 s"
+   ],
+   "answer": 1,
+   "explanation": "A concentration of 25 g/L is halfway between 20 g/L and 30 g/L. Linear interpolation gives (158 + 137) ÷ 2 = 147.5 s."
+  },
+  {
+   "n": 25,
+   "topic": "Data representation: trends, interpolation and extrapolation",
+   "passage": "Maya, Jordan, and Priya investigated how dissolved table salt affects the time needed for an ice cube to melt in water. They prepared 200 mL of distilled water at 22°C in a 400 mL beaker. To each beaker they added sodium chloride to make solutions of 0, 10, 20, 30, or 40 g/L and stirred until no crystals remained. For each concentration, they placed one 25.0 g ice cube made in the same mold into the beaker and recorded the time until no solid ice remained. The water was not stirred during melting. Each concentration was run in three trials, and a new ice cube and fresh solution were used each time. They recorded the solution temperature at the start and end of each trial; it remained between 21°C and 23°C. The table shows the mean time and range for each concentration.\nConcentration (g/L) | Mean melting time (s) | Range (s)\n0 | 210 | 204–216\n10 | 186 | 181–191\n20 | 158 | 152–164\n30 | 137 | 132–142\n40 | 119 | 114–124",
+   "q": "If the mean melting time continued to change linearly from the 30 g/L trial to the 40 g/L trial, what time would be predicted for a concentration of 50 g/L?",
+   "options": [
+    "101 s",
+    "128 s",
+    "110 s",
+    "99.5 s"
+   ],
+   "answer": 0,
+   "explanation": "From 30 g/L to 40 g/L, the mean time decreases by 137 − 119 = 18 s for each 10 g/L increase. Extending this rate another 10 g/L to 50 g/L gives 119 − 18 = 101 s."
+  },
+  {
+   "n": 26,
+   "topic": "Conflicting viewpoints",
+   "passage": "Two ecologists studied bee visits along a 60 m wildflower strip beside a paved road. At distances of 5, 15, 25, 35, and 45 m from the road, they counted bees visiting flowers for 1 hour on each of six warm afternoons. They also measured flower density at each distance. Dr. Nguyen claims that vehicle exhaust near the road reduces bee activity, so bee visits should increase steadily with distance from the road. Dr. Alvarez claims that bee visits are driven mainly by flower density rather than by vehicle exhaust. All counts were made between 10:00 a.m. and 2:00 p.m., when air temperature was 23°C–27°C and wind speed was below 3 m/s. No pesticides were applied to the strip during the study. The table shows the mean values.\nDistance from road (m) | Mean bee visits per hour | Flower density (flowers/m²)\n5 | 12 | 18\n15 | 17 | 26\n25 | 22 | 34\n35 | 20 | 30\n45 | 15 | 22",
+   "q": "Which statement best supports Dr. Alvarez's claim that flower density mainly determines bee visits?",
+   "options": [
+    "Mean bee visits were lowest at 5 m, the distance closest to the road.",
+    "Mean bee visits increased consistently as flower density increased across the five distances.",
+    "Mean bee visits increased steadily with distance from the road.",
+    "Mean bee visits were highest at 25 m, while air temperature remained within a narrow range."
+   ],
+   "answer": 1,
+   "explanation": "Across the five distances, mean bee visits were highest where flower density was highest and lower where density was lower, so the visits track flower density. A pattern tied only to distance from the road would not explain the decline in visits beyond 25 m."
+  },
+  {
+   "n": 27,
+   "topic": "Conflicting viewpoints",
+   "passage": "Two ecologists studied bee visits along a 60 m wildflower strip beside a paved road. At distances of 5, 15, 25, 35, and 45 m from the road, they counted bees visiting flowers for 1 hour on each of six warm afternoons. They also measured flower density at each distance. Dr. Nguyen claims that vehicle exhaust near the road reduces bee activity, so bee visits should increase steadily with distance from the road. Dr. Alvarez claims that bee visits are driven mainly by flower density rather than by vehicle exhaust. All counts were made between 10:00 a.m. and 2:00 p.m., when air temperature was 23°C–27°C and wind speed was below 3 m/s. No pesticides were applied to the strip during the study. The table shows the mean values.\nDistance from road (m) | Mean bee visits per hour | Flower density (flowers/m²)\n5 | 12 | 18\n15 | 17 | 26\n25 | 22 | 34\n35 | 20 | 30\n45 | 15 | 22",
+   "q": "Which comparison most weakens Dr. Nguyen's claim that vehicle exhaust reduces bee activity near the road?",
+   "options": [
+    "The study included five distances and six afternoons.",
+    "Bee visits fell from 22 per hour at 25 m to 15 per hour at 45 m, even though 45 m was farther from the road.",
+    "Flower density was 34 flowers/m² at 25 m and 18 flowers/m² at 5 m.",
+    "Bee visits rose from 12 per hour at 5 m to 17 per hour at 15 m."
+   ],
+   "answer": 1,
+   "explanation": "If exhaust near the road were the main cause, bee visits should generally rise as distance from the road increases. Instead, visits fell from 25 m to 45 m, where exhaust should be lower, which weakens the claim that exhaust is the main driver."
+  },
+  {
+   "n": 28,
+   "topic": "Data representation: trends, interpolation and extrapolation",
+   "passage": "Two ecologists studied bee visits along a 60 m wildflower strip beside a paved road. At distances of 5, 15, 25, 35, and 45 m from the road, they counted bees visiting flowers for 1 hour on each of six warm afternoons. They also measured flower density at each distance. Dr. Nguyen claims that vehicle exhaust near the road reduces bee activity, so bee visits should increase steadily with distance from the road. Dr. Alvarez claims that bee visits are driven mainly by flower density rather than by vehicle exhaust. All counts were made between 10:00 a.m. and 2:00 p.m., when air temperature was 23°C–27°C and wind speed was below 3 m/s. No pesticides were applied to the strip during the study. The table shows the mean values.\nDistance from road (m) | Mean bee visits per hour | Flower density (flowers/m²)\n5 | 12 | 18\n15 | 17 | 26\n25 | 22 | 34\n35 | 20 | 30\n45 | 15 | 22",
+   "q": "Using linear interpolation between the 25 m and 35 m data, what mean number of bee visits per hour would be expected at 30 m?",
+   "options": [
+    "30 visits per hour",
+    "20 visits per hour",
+    "22 visits per hour",
+    "21 visits per hour"
+   ],
+   "answer": 3,
+   "explanation": "The distance 30 m is halfway between 25 m and 35 m, so interpolate halfway between 22 and 20 visits per hour. The halfway value is (22 + 20) ÷ 2 = 21 visits per hour."
+  },
+  {
+   "n": 29,
+   "topic": "Research summaries: interpreting results",
+   "passage": "Two ecologists studied bee visits along a 60 m wildflower strip beside a paved road. At distances of 5, 15, 25, 35, and 45 m from the road, they counted bees visiting flowers for 1 hour on each of six warm afternoons. They also measured flower density at each distance. Dr. Nguyen claims that vehicle exhaust near the road reduces bee activity, so bee visits should increase steadily with distance from the road. Dr. Alvarez claims that bee visits are driven mainly by flower density rather than by vehicle exhaust. All counts were made between 10:00 a.m. and 2:00 p.m., when air temperature was 23°C–27°C and wind speed was below 3 m/s. No pesticides were applied to the strip during the study. The table shows the mean values.\nDistance from road (m) | Mean bee visits per hour | Flower density (flowers/m²)\n5 | 12 | 18\n15 | 17 | 26\n25 | 22 | 34\n35 | 20 | 30\n45 | 15 | 22",
+   "q": "Between 25 m and 45 m from the road, how did mean bee visits and flower density change?",
+   "options": [
+    "Bee visits increased while flower density decreased.",
+    "Both decreased as distance from the road increased.",
+    "Both remained constant.",
+    "Bee visits decreased, but flower density increased."
+   ],
+   "answer": 1,
+   "explanation": "At 25 m, 35 m, and 45 m, bee visits were 22, 20, and 15 per hour, while flower density was 34, 30, and 22 flowers/m². Both quantities decreased between 25 m and 45 m."
+  },
+  {
+   "n": 30,
+   "topic": "Research summaries: experimental design",
+   "passage": "Two ecologists studied bee visits along a 60 m wildflower strip beside a paved road. At distances of 5, 15, 25, 35, and 45 m from the road, they counted bees visiting flowers for 1 hour on each of six warm afternoons. They also measured flower density at each distance. Dr. Nguyen claims that vehicle exhaust near the road reduces bee activity, so bee visits should increase steadily with distance from the road. Dr. Alvarez claims that bee visits are driven mainly by flower density rather than by vehicle exhaust. All counts were made between 10:00 a.m. and 2:00 p.m., when air temperature was 23°C–27°C and wind speed was below 3 m/s. No pesticides were applied to the strip during the study. The table shows the mean values.\nDistance from road (m) | Mean bee visits per hour | Flower density (flowers/m²)\n5 | 12 | 18\n15 | 17 | 26\n25 | 22 | 34\n35 | 20 | 30\n45 | 15 | 22",
+   "q": "To test directly whether proximity to the road affects bee visits independent of flower density, which additional comparison is best?",
+   "options": [
+    "Compare the number of flowers of different colors at each distance.",
+    "Replace the 1-hour counts with a single 5-minute count at each distance.",
+    "Compare bee visits per 100 flowers at each distance rather than visits per hour.",
+    "Count only the bees seen on the six warmest afternoons."
+   ],
+   "answer": 2,
+   "explanation": "Bee visits per hour can be influenced by how many flowers are present, so comparing visits per 100 flowers controls for flower density. This would help isolate any effect of proximity to the road itself."
+  },
+  {
+   "n": 31,
+   "topic": "Data representation: reading tables and graphs",
+   "passage": "Students investigated how salt concentration in water affects radish seed germination. They placed 50 radish seeds on filter paper in separate beakers and added 20 mL of a NaCl solution at 0, 2, 4, or 8 g/L. Half of the beakers were kept in a growth chamber at 15°C and half at 25°C. Each treatment was repeated three times. After 7 days, the students counted the seeds that had germinated and measured the mean shoot length of the germinated seedlings. The table shows the means for each treatment.\n\nSalt concentration (g/L) | Temperature (°C) | Mean germination (%) | Mean shoot length (mm)\n0 | 15 | 92 | 38\n2 | 15 | 84 | 33\n4 | 15 | 70 | 24\n8 | 15 | 41 | 11\n0 | 25 | 95 | 45\n2 | 25 | 88 | 40\n4 | 25 | 76 | 31\n8 | 25 | 52 | 18",
+   "q": "At 25°C, the mean shoot length at 4 g/L was how many millimeters less than the mean shoot length at 0 g/L?",
+   "options": [
+    "14 mm",
+    "13 mm",
+    "7 mm",
+    "17 mm"
+   ],
+   "answer": 0,
+   "explanation": "At 25°C, the mean shoot length was 45 mm at 0 g/L and 31 mm at 4 g/L, so the difference is 45 − 31 = 14 mm. The value 13 mm comes from comparing 4 g/L and 8 g/L at 25°C, not 0 g/L and 4 g/L."
+  },
+  {
+   "n": 32,
+   "topic": "Data representation: reading tables and graphs",
+   "passage": "Students investigated how salt concentration in water affects radish seed germination. They placed 50 radish seeds on filter paper in separate beakers and added 20 mL of a NaCl solution at 0, 2, 4, or 8 g/L. Half of the beakers were kept in a growth chamber at 15°C and half at 25°C. Each treatment was repeated three times. After 7 days, the students counted the seeds that had germinated and measured the mean shoot length of the germinated seedlings. The table shows the means for each treatment.\n\nSalt concentration (g/L) | Temperature (°C) | Mean germination (%) | Mean shoot length (mm)\n0 | 15 | 92 | 38\n2 | 15 | 84 | 33\n4 | 15 | 70 | 24\n8 | 15 | 41 | 11\n0 | 25 | 95 | 45\n2 | 25 | 88 | 40\n4 | 25 | 76 | 31\n8 | 25 | 52 | 18",
+   "q": "At 15°C, the mean germination at 4 g/L is approximately what percent less than the mean germination at 0 g/L?",
+   "options": [
+    "24%",
+    "22%",
+    "30%",
+    "76%"
+   ],
+   "answer": 0,
+   "explanation": "The difference is 92% − 70% = 22 percentage points. As a percent decrease from 92%, this is (22 ÷ 92) × 100% ≈ 24%. The value 22% is the difference in percentage points, not the relative decrease."
+  },
+  {
+   "n": 33,
+   "topic": "Research summaries: interpreting results",
+   "passage": "Students investigated how salt concentration in water affects radish seed germination. They placed 50 radish seeds on filter paper in separate beakers and added 20 mL of a NaCl solution at 0, 2, 4, or 8 g/L. Half of the beakers were kept in a growth chamber at 15°C and half at 25°C. Each treatment was repeated three times. After 7 days, the students counted the seeds that had germinated and measured the mean shoot length of the germinated seedlings. The table shows the means for each treatment.\n\nSalt concentration (g/L) | Temperature (°C) | Mean germination (%) | Mean shoot length (mm)\n0 | 15 | 92 | 38\n2 | 15 | 84 | 33\n4 | 15 | 70 | 24\n8 | 15 | 41 | 11\n0 | 25 | 95 | 45\n2 | 25 | 88 | 40\n4 | 25 | 76 | 31\n8 | 25 | 52 | 18",
+   "q": "Which statement best describes how changing temperature affected the results?",
+   "options": [
+    "At 4 g/L, changing temperature had no effect on mean shoot length.",
+    "Increasing temperature from 15°C to 25°C decreased mean shoot length at every salt concentration shown.",
+    "Increasing temperature from 15°C to 25°C increased mean germination at every salt concentration shown.",
+    "At 8 g/L, mean germination was lower at 25°C than at 15°C."
+   ],
+   "answer": 2,
+   "explanation": "For each salt concentration, germination was higher at 25°C than at 15°C: 92% to 95%, 84% to 88%, 70% to 76%, and 41% to 52%. The other statements contradict entries in the table, such as the 8 g/L germination increasing from 41% at 15°C to 52% at 25°C."
+  },
+  {
+   "n": 34,
+   "topic": "Scientific models, hypotheses and predictions",
+   "passage": "Students investigated how salt concentration in water affects radish seed germination. They placed 50 radish seeds on filter paper in separate beakers and added 20 mL of a NaCl solution at 0, 2, 4, or 8 g/L. Half of the beakers were kept in a growth chamber at 15°C and half at 25°C. Each treatment was repeated three times. After 7 days, the students counted the seeds that had germinated and measured the mean shoot length of the germinated seedlings. The table shows the means for each treatment.\n\nSalt concentration (g/L) | Temperature (°C) | Mean germination (%) | Mean shoot length (mm)\n0 | 15 | 92 | 38\n2 | 15 | 84 | 33\n4 | 15 | 70 | 24\n8 | 15 | 41 | 11\n0 | 25 | 95 | 45\n2 | 25 | 88 | 40\n4 | 25 | 76 | 31\n8 | 25 | 52 | 18",
+   "q": "A student predicted that at 25°C, each additional 4 g/L of salt would lower mean shoot length by about the same amount. Which statement best evaluates this prediction using the table?",
+   "options": [
+    "It is not supported, because the mean shoot length drops by 14 mm from 0 to 4 g/L and by 27 mm from 4 to 8 g/L at 25°C.",
+    "It is not supported, because at 25°C mean shoot length rises from 31 mm to 45 mm as salt concentration increases.",
+    "It is supported, because increasing salt from 0 to 8 g/L lowers mean shoot length by only 1 mm at 25°C.",
+    "It is supported, because the mean shoot length drops by 14 mm from 0 to 4 g/L and by 13 mm from 4 to 8 g/L at 25°C."
+   ],
+   "answer": 3,
+   "explanation": "At 25°C, mean shoot length is 45 mm at 0 g/L, 31 mm at 4 g/L, and 18 mm at 8 g/L. The drops are 45 − 31 = 14 mm and 31 − 18 = 13 mm, which are nearly equal. The 27 mm figure is the total drop from 0 to 8 g/L, not the drop from 4 to 8 g/L."
+  },
+  {
+   "n": 35,
+   "topic": "Data representation: reading tables and graphs",
+   "passage": "Two scientists studied algal blooms in four coves of Clearwater Lake. Dr. Vela proposed that blooms are mainly controlled by phosphorus entering the lake in runoff. Dr. Nwosu proposed that blooms are mainly controlled by water temperature. During one summer, a research team measured total phosphorus, mean water temperature, and chlorophyll a in each cove. Chlorophyll a is used as a measure of algae abundance. The coves had similar depth and light exposure, and none received direct sewage discharge. The team sampled each cove three times in July and averaged the measurements. The table shows the results.\n\nCove | Total phosphorus (µg/L) | Mean water temperature (°C) | Chlorophyll a (µg/L)\nNorth | 18 | 21 | 8\nEast | 45 | 20 | 25\nSouth | 20 | 27 | 19\nWest | 50 | 28 | 38",
+   "q": "According to the table, which cove had the greatest chlorophyll a concentration?",
+   "options": [
+    "East",
+    "West",
+    "North",
+    "South"
+   ],
+   "answer": 1,
+   "explanation": "The chlorophyll a values are 8 µg/L in North, 25 µg/L in East, 19 µg/L in South, and 38 µg/L in West. The greatest value is 38 µg/L, which occurred in West."
+  },
+  {
+   "n": 36,
+   "topic": "Scientific models, hypotheses and predictions",
+   "passage": "Two scientists studied algal blooms in four coves of Clearwater Lake. Dr. Vela proposed that blooms are mainly controlled by phosphorus entering the lake in runoff. Dr. Nwosu proposed that blooms are mainly controlled by water temperature. During one summer, a research team measured total phosphorus, mean water temperature, and chlorophyll a in each cove. Chlorophyll a is used as a measure of algae abundance. The coves had similar depth and light exposure, and none received direct sewage discharge. The team sampled each cove three times in July and averaged the measurements. The table shows the results.\n\nCove | Total phosphorus (µg/L) | Mean water temperature (°C) | Chlorophyll a (µg/L)\nNorth | 18 | 21 | 8\nEast | 45 | 20 | 25\nSouth | 20 | 27 | 19\nWest | 50 | 28 | 38",
+   "q": "Which comparison provides the strongest support for Dr. Vela's proposal that phosphorus mainly controls algal blooms?",
+   "options": [
+    "South and North, because their phosphorus levels were similar but South had warmer water and more chlorophyll a.",
+    "West and East, because West had more phosphorus and more chlorophyll a but also warmer water.",
+    "East and North, because their temperatures were similar but East had more phosphorus and more chlorophyll a.",
+    "South and West, because West had more phosphorus and more chlorophyll a but also warmer water."
+   ],
+   "answer": 2,
+   "explanation": "East and North had nearly the same mean water temperature, 20°C and 21°C. East had much more phosphorus than North, 45 µg/L versus 18 µg/L, and also more chlorophyll a, 25 µg/L versus 8 µg/L. Because temperature was similar, this comparison supports phosphorus as a major influence."
+  },
+  {
+   "n": 37,
+   "topic": "Scientific models, hypotheses and predictions",
+   "passage": "Two scientists studied algal blooms in four coves of Clearwater Lake. Dr. Vela proposed that blooms are mainly controlled by phosphorus entering the lake in runoff. Dr. Nwosu proposed that blooms are mainly controlled by water temperature. During one summer, a research team measured total phosphorus, mean water temperature, and chlorophyll a in each cove. Chlorophyll a is used as a measure of algae abundance. The coves had similar depth and light exposure, and none received direct sewage discharge. The team sampled each cove three times in July and averaged the measurements. The table shows the results.\n\nCove | Total phosphorus (µg/L) | Mean water temperature (°C) | Chlorophyll a (µg/L)\nNorth | 18 | 21 | 8\nEast | 45 | 20 | 25\nSouth | 20 | 27 | 19\nWest | 50 | 28 | 38",
+   "q": "Dr. Nwosu claims that water temperature is the main control on algal blooms. Which observation most directly challenges this claim?",
+   "options": [
+    "West was warmer than South and had more chlorophyll a.",
+    "North had the lowest temperature and the lowest chlorophyll a.",
+    "South was warmer than North and had more chlorophyll a.",
+    "East had a slightly lower mean temperature than North but more than three times the chlorophyll a."
+   ],
+   "answer": 3,
+   "explanation": "If temperature were the main control, the cooler cove should not have much more algae. East was slightly cooler than North, 20°C versus 21°C, but had 25 µg/L chlorophyll a compared with 8 µg/L in North. This weakens the claim that temperature is the main control."
+  },
+  {
+   "n": 38,
+   "topic": "Research summaries: experimental design",
+   "passage": "Two scientists studied algal blooms in four coves of Clearwater Lake. Dr. Vela proposed that blooms are mainly controlled by phosphorus entering the lake in runoff. Dr. Nwosu proposed that blooms are mainly controlled by water temperature. During one summer, a research team measured total phosphorus, mean water temperature, and chlorophyll a in each cove. Chlorophyll a is used as a measure of algae abundance. The coves had similar depth and light exposure, and none received direct sewage discharge. The team sampled each cove three times in July and averaged the measurements. The table shows the results.\n\nCove | Total phosphorus (µg/L) | Mean water temperature (°C) | Chlorophyll a (µg/L)\nNorth | 18 | 21 | 8\nEast | 45 | 20 | 25\nSouth | 20 | 27 | 19\nWest | 50 | 28 | 38",
+   "q": "To test directly whether phosphorus causes increased algae, which experimental design would be best?",
+   "options": [
+    "Add phosphorus to an entire cove and compare it with the other coves.",
+    "Use tanks at different temperatures and add different amounts of phosphorus to each.",
+    "Measure phosphorus and chlorophyll a in the same four coves each week for another summer.",
+    "Fill identical tanks with lake water, keep them at the same temperature, add different amounts of phosphorus to some tanks and none to others, and measure chlorophyll a."
+   ],
+   "answer": 3,
+   "explanation": "A direct test requires manipulating phosphorus while holding other factors, especially temperature, constant. Identical tanks at the same temperature with some receiving no added phosphorus provide a control and reduce confounding. The cove observations and whole-cove addition would not separate phosphorus effects from other variables, and tanks at different temperatures would confound temperature with phosphorus."
+  },
+  {
+   "n": 39,
+   "topic": "Research summaries: interpreting results",
+   "passage": "Two scientists studied algal blooms in four coves of Clearwater Lake. Dr. Vela proposed that blooms are mainly controlled by phosphorus entering the lake in runoff. Dr. Nwosu proposed that blooms are mainly controlled by water temperature. During one summer, a research team measured total phosphorus, mean water temperature, and chlorophyll a in each cove. Chlorophyll a is used as a measure of algae abundance. The coves had similar depth and light exposure, and none received direct sewage discharge. The team sampled each cove three times in July and averaged the measurements. The table shows the results.\n\nCove | Total phosphorus (µg/L) | Mean water temperature (°C) | Chlorophyll a (µg/L)\nNorth | 18 | 21 | 8\nEast | 45 | 20 | 25\nSouth | 20 | 27 | 19\nWest | 50 | 28 | 38",
+   "q": "Which conclusion is best supported by the table?",
+   "options": [
+    "Temperature alone controls chlorophyll a because South was warmer than North and had more chlorophyll a.",
+    "Both higher phosphorus and warmer water are associated with greater chlorophyll a, but the data do not show which factor is more important.",
+    "Neither phosphorus nor temperature is associated with chlorophyll a because North had the lowest values of both.",
+    "Phosphorus alone controls chlorophyll a because West had the highest chlorophyll a."
+   ],
+   "answer": 1,
+   "explanation": "North had low phosphorus, low temperature, and low chlorophyll a, while West had high values of all three. East had high phosphorus but low temperature and still had elevated chlorophyll a, and South had low phosphorus but high temperature and also had elevated chlorophyll a. Thus both factors are associated with algae, but the observational data are confounded and cannot show which is more important."
+  },
+  {
+   "n": 40,
+   "topic": "Data representation: reading tables and graphs",
+   "passage": "Two students, Maya and Luis, studied how pH affects the breakdown of starch by amylase extracted from barley. For each trial, they mixed 2.0 mL of amylase solution with 10.0 mL of 1.0% starch solution in a buffer at 25°C. Every 10 s, they removed a drop, added iodine, and stopped timing when the blue-black starch color no longer appeared. Shorter times indicate greater starch breakdown. Each pH was tested twice and the times were averaged. Maya predicted that the amylase would be most active near pH 6.0, close to the pH of barley cytoplasm. Luis predicted that it would be most active near pH 4.0, like the acidic conditions in germinating seeds. Table 1 shows the average times.\npH | Average time (s)\n4.0 | 92\n5.0 | 48\n6.0 | 22\n7.0 | 36\n8.0 | 71\n9.0 | 110",
+   "q": "According to Table 1, at which pH did the starch color disappear most quickly?",
+   "options": [
+    "pH 6.0",
+    "pH 9.0",
+    "pH 4.0",
+    "pH 7.0"
+   ],
+   "answer": 0,
+   "explanation": "The shortest average time in Table 1 is 22 s, which occurs at pH 6.0. A shorter time means the starch color disappeared more quickly, so that pH had the greatest starch breakdown."
+  }
+ ]
+}

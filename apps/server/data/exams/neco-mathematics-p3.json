@@ -1,0 +1,791 @@
+{
+ "id": "neco-mathematics-p3",
+ "exam": "neco",
+ "subject": "mathematics",
+ "year": null,
+ "number": 3,
+ "source": "ai",
+ "minutes": 60,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Variation",
+   "q": "An engineer finds that the safe load W kg a beam can carry varies jointly as its breadth b cm and the square of its depth d cm. A beam with breadth 10 cm and depth 6 cm can carry 360 kg. What load can a similar beam with breadth 15 cm and depth 8 cm carry?",
+   "options": [
+    "720 kg",
+    "640 kg",
+    "960 kg",
+    "1,080 kg"
+   ],
+   "answer": 2,
+   "explanation": "The relation is W = kbd². From the first beam, 360 = k × 10 × 6², so k = 1. Thus W = 1 × 15 × 8² = 960 kg. Using d instead of d² would wrongly give 720 kg."
+  },
+  {
+   "n": 2,
+   "topic": "Variation",
+   "q": "The resistance R ohms of a uniform wire varies inversely as the square of its diameter d mm. A wire of diameter 2 mm has resistance 45 Ω. Find the resistance of another wire of the same material and length with diameter 3 mm.",
+   "options": [
+    "80 Ω",
+    "45 Ω",
+    "20 Ω",
+    "30 Ω"
+   ],
+   "answer": 2,
+   "explanation": "For inverse-square variation, R × d² is constant. The constant is 45 × 2² = 180, so for d = 3 mm, R = 180 ÷ 3² = 20 Ω. Treating R as inversely proportional to d instead of d² gives a different, incorrect value."
+  },
+  {
+   "n": 3,
+   "topic": "Variation",
+   "q": "A caterer in Enugu charges a fee C naira for a feast, and C varies directly as the square of the number n of guests. She charges ₦72,000 for 60 guests. How much will she charge for 80 guests?",
+   "options": [
+    "₦128,000",
+    "₦96,000",
+    "₦144,000",
+    "₦108,000"
+   ],
+   "answer": 0,
+   "explanation": "Direct square variation gives C = kn². Here k = 72,000 ÷ 60² = 20, hence C = 20 × 80² = ₦128,000. Using direct proportion with n alone instead of n² gives ₦96,000, which is not correct."
+  },
+  {
+   "n": 4,
+   "topic": "Angles and circle geometry",
+   "q": "In a circle, chords AB and CD intersect at E inside the circle. AE = 5 cm, EB = 8 cm and CE = 4 cm. Find ED.",
+   "options": [
+    "12 cm",
+    "6 cm",
+    "9 cm",
+    "10 cm"
+   ],
+   "answer": 3,
+   "explanation": "By the intersecting chords theorem, AE × EB = CE × ED. Thus 5 × 8 = 4 × ED, giving ED = 40 ÷ 4 = 10 cm. The value 9 cm would result from an arithmetic slip."
+  },
+  {
+   "n": 5,
+   "topic": "Angles and circle geometry",
+   "q": "XY is a tangent to a circle at A. Chord AB makes an angle of 34° with the tangent at A, so that ∠XAB = 34°. C is a point on the major arc AB. Find ∠ACB.",
+   "options": [
+    "146°",
+    "34°",
+    "68°",
+    "56°"
+   ],
+   "answer": 1,
+   "explanation": "By the tangent–chord theorem, the angle between the tangent and chord AB equals the angle in the alternate segment. Since C lies on the major arc AB, ∠ACB subtends the minor arc AB and is 34°. The angle 68° is the central angle subtending the same minor arc."
+  },
+  {
+   "n": 6,
+   "topic": "Angles and circle geometry",
+   "q": "P, Q, R and S are points on a circle. R and S lie on the same side of chord PQ. If ∠PRQ = 35°, find ∠PSQ.",
+   "options": [
+    "145°",
+    "70°",
+    "35°",
+    "55°"
+   ],
+   "answer": 2,
+   "explanation": "Angles subtended by the same chord in the same segment are equal. Therefore ∠PSQ = ∠PRQ = 35°. The value 145° would be the angle subtended from the opposite segment."
+  },
+  {
+   "n": 7,
+   "topic": "Integration",
+   "q": "Evaluate ∫₀² (4x − x²) dx.",
+   "options": [
+    "16/3",
+    "8/3",
+    "4",
+    "32/3"
+   ],
+   "answer": 0,
+   "explanation": "Integrating gives 2x² − x³/3. Substituting the limits: (2 × 2² − 2³/3) − 0 = 8 − 8/3 = 16/3. Omitting a coefficient while integrating leads to an incorrect result."
+  },
+  {
+   "n": 8,
+   "topic": "Integration",
+   "q": "Evaluate ∫₀³ (x + 1)(x − 2) dx.",
+   "options": [
+    "−9/2",
+    "9/2",
+    "3/2",
+    "−3/2"
+   ],
+   "answer": 3,
+   "explanation": "Expanding gives x² − x − 2, whose integral is x³/3 − x²/2 − 2x. At x = 3 this is 9 − 9/2 − 6 = −3/2; at x = 0 it is 0."
+  },
+  {
+   "n": 9,
+   "topic": "Quadratic equations",
+   "q": "If α and β are the roots of 2x² − 9x + 4 = 0, find 1/α + 1/β.",
+   "options": [
+    "9/4",
+    "9/2",
+    "2",
+    "4/9"
+   ],
+   "answer": 0,
+   "explanation": "The sum of roots is α + β = 9/2 and the product is αβ = 4/2 = 2. Hence 1/α + 1/β = (α + β)/(αβ) = (9/2)/2 = 9/4. Using the sum of roots alone gives 9/2, which is not the required expression."
+  },
+  {
+   "n": 10,
+   "topic": "Fractions, decimals and percentages",
+   "q": "A trader in Ibadan bought a generator for ₦96,000 and later sold it at a loss of 12.5%. What was the selling price?",
+   "options": [
+    "₦108,000",
+    "₦84,000",
+    "₦85,500",
+    "₦12,000"
+   ],
+   "answer": 1,
+   "explanation": "The loss is 12.5% of ₦96,000, which is ₦12,000. The selling price is therefore ₦96,000 − ₦12,000 = ₦84,000. The amount ₦108,000 would result from adding the loss instead of subtracting it."
+  },
+  {
+   "n": 11,
+   "topic": "Fractions, decimals and percentages",
+   "q": "Amina spends 2/5 of her monthly allowance on transport and 1/3 of the remainder on books. If she is left with ₦16,000, what is her monthly allowance?",
+   "options": [
+    "₦32,000",
+    "₦60,000",
+    "₦40,000",
+    "₦48,000"
+   ],
+   "answer": 2,
+   "explanation": "After spending 2/5 on transport, 3/5 of the allowance remains. Spending 1/3 of this remainder leaves 2/3 × 3/5 = 2/5 of the allowance. Thus 2/5 of the allowance is ₦16,000, so the allowance is ₦40,000."
+  },
+  {
+   "n": 12,
+   "topic": "Fractions, decimals and percentages",
+   "q": "In a school in Enugu, 55% of the students are boys. If there are 330 boys, how many students are in the school?",
+   "options": [
+    "550",
+    "660",
+    "600",
+    "270"
+   ],
+   "answer": 2,
+   "explanation": "Since 55% of the total number of students is 330, the total is 330 ÷ 0.55 = 600. The number 270 is the number of girls, not the total number of students."
+  },
+  {
+   "n": 13,
+   "topic": "Mensuration",
+   "q": "A rectangular playing field in Owerri is 45 m long and 30 m wide. A path 2 m wide is constructed round it outside. Find the area of the path.",
+   "options": [
+    "300 m²",
+    "316 m²",
+    "154 m²",
+    "332 m²"
+   ],
+   "answer": 1,
+   "explanation": "The outer dimensions are 45 + 2 + 2 = 49 m and 30 + 2 + 2 = 34 m. The path area is 49 × 34 − 45 × 30 = 1666 − 1350 = 316 m². The value 300 m² is obtained by counting only the side strips and omitting the corner squares."
+  },
+  {
+   "n": 14,
+   "topic": "Mensuration",
+   "q": "A sector of a circle has radius 14 cm and angle 90°. Calculate the perimeter of the sector. Take π = 22/7.",
+   "options": [
+    "44 cm",
+    "22 cm",
+    "50 cm",
+    "36 cm"
+   ],
+   "answer": 2,
+   "explanation": "The arc length is 90/360 × 2 × 22/7 × 14 = 22 cm. The perimeter of the sector is the arc plus the two radii: 22 + 14 + 14 = 50 cm. The value 22 cm is only the arc length."
+  },
+  {
+   "n": 15,
+   "topic": "Mensuration",
+   "q": "Find the volume of a square pyramid whose base side is 9 cm and vertical height is 14 cm.",
+   "options": [
+    "1,134 cm³",
+    "168 cm³",
+    "378 cm³",
+    "588 cm³"
+   ],
+   "answer": 2,
+   "explanation": "The base area is 9 × 9 = 81 cm². The volume is 1/3 × 81 × 14 = 378 cm³. The value 1,134 cm³ comes from omitting the factor 1/3."
+  },
+  {
+   "n": 16,
+   "topic": "Surds",
+   "q": "Express (4 + √2)/(2 − √2) in the form a + b√2, where a and b are rational numbers.",
+   "options": [
+    "5 + √2",
+    "2 + 3√2",
+    "5 + 3√2",
+    "3 + 2√2"
+   ],
+   "answer": 2,
+   "explanation": "Multiply numerator and denominator by 2 + √2. This gives (10 + 6√2)/(4 − 2) = 5 + 3√2. An incomplete multiplication of the surd terms gives one of the incorrect expressions."
+  },
+  {
+   "n": 17,
+   "topic": "Surds",
+   "q": "If √(x + 7) = √5 + √2, find x.",
+   "options": [
+    "0",
+    "√10",
+    "7 + 2√10",
+    "2√10"
+   ],
+   "answer": 3,
+   "explanation": "Squaring both sides gives x + 7 = 5 + 2 + 2√10 = 7 + 2√10. Subtracting 7 gives x = 2√10. If the cross term is ignored, the incorrect value 0 is obtained."
+  },
+  {
+   "n": 18,
+   "topic": "Matrices and determinants",
+   "q": "Given that A = [[2, −1], [3, 4]] and A + B = [[5, 0], [1, 7]], find B.",
+   "options": [
+    "[[3, 1], [−2, −3]]",
+    "[[3, 1], [2, 3]]",
+    "[[3, −1], [−2, 3]]",
+    "[[3, 1], [−2, 3]]"
+   ],
+   "answer": 3,
+   "explanation": "Subtract corresponding entries of A from A + B: B = [[5 − 2, 0 − (−1)], [1 − 3, 7 − 4]]. This gives [[3, 1], [−2, 3]]. Sign errors in the top-right, bottom-left or bottom-right entries give the other results."
+  },
+  {
+   "n": 19,
+   "topic": "Matrices and determinants",
+   "q": "If A = [[2, 3], [4, 5]] and B = [[1, 2], [0, 3]], find det(AB).",
+   "options": [
+    "3",
+    "−2",
+    "6",
+    "−6"
+   ],
+   "answer": 3,
+   "explanation": "det(A) = 2 × 5 − 3 × 4 = −2 and det(B) = 1 × 3 − 2 × 0 = 3. Therefore det(AB) = det(A) × det(B) = −2 × 3 = −6. Multiplying the matrices directly also gives determinant 2 × 23 − 13 × 4 = −6."
+  },
+  {
+   "n": 20,
+   "topic": "Statistics",
+   "q": "The weekly savings (₦) of 8 traders in Uyo are 4,000; 6,500; 3,500; 8,000; 5,000; 7,000; 6,500; 9,000. What is the median saving?",
+   "options": [
+    "₦6,000",
+    "₦5,750",
+    "₦6,500",
+    "₦7,250"
+   ],
+   "answer": 2,
+   "explanation": "Arranging the savings in order gives 3,500; 4,000; 5,000; 6,500; 6,500; 7,000; 8,000; 9,000. With 8 values, the median is the average of the 4th and 5th values: (6,500 + 6,500) ÷ 2 = ₦6,500."
+  },
+  {
+   "n": 21,
+   "topic": "Statistics",
+   "q": "A survey of the number of books read in a month by 10 students in Jos gave: 2 students read 3 books, 3 students read 4 books, 4 students read 5 books and 1 student read 6 books. Calculate the mean number of books read.",
+   "options": [
+    "4.4 books",
+    "4.2 books",
+    "4.5 books",
+    "4.0 books"
+   ],
+   "answer": 0,
+   "explanation": "Total books read = (2 × 3) + (3 × 4) + (4 × 5) + (1 × 6) = 6 + 12 + 20 + 6 = 44. The mean is 44 ÷ 10 = 4.4 books."
+  },
+  {
+   "n": 22,
+   "topic": "Statistics",
+   "q": "The test scores of 8 pupils in a school in Abeokuta are 5, 7, 7, 8, 9, 10, 10, 12. What is the interquartile range?",
+   "options": [
+    "4",
+    "2.5",
+    "7",
+    "3"
+   ],
+   "answer": 3,
+   "explanation": "The lower half is 5, 7, 7, 8, so Q1 = (7 + 7) ÷ 2 = 7. The upper half is 9, 10, 10, 12, so Q3 = (10 + 10) ÷ 2 = 10. Therefore, the interquartile range is 10 − 7 = 3."
+  },
+  {
+   "n": 23,
+   "topic": "Probability",
+   "q": "A numbered cube has faces labelled 1, 2, 2, 3, 3 and 3. If the cube is rolled once, what is the probability of obtaining a number greater than 1?",
+   "options": [
+    "5/6",
+    "1/2",
+    "1/6",
+    "2/3"
+   ],
+   "answer": 0,
+   "explanation": "Only the face labelled 1 is not greater than 1. Thus 5 of the 6 equally likely faces give a number greater than 1, so the probability is 5/6."
+  },
+  {
+   "n": 24,
+   "topic": "Probability",
+   "q": "The probabilities that two independent events E and F occur are 0.4 and 0.3 respectively. What is the probability that exactly one of them occurs?",
+   "options": [
+    "0.58",
+    "0.70",
+    "0.46",
+    "0.12"
+   ],
+   "answer": 2,
+   "explanation": "Exactly one occurs when E occurs and F does not, or F occurs and E does not. This gives 0.4 × 0.7 + 0.6 × 0.3 = 0.28 + 0.18 = 0.46. The value 0.12 is the probability that both occur."
+  },
+  {
+   "n": 25,
+   "topic": "Coordinate geometry",
+   "q": "Find the equation of the straight line that is perpendicular to 3x + 4y = 12 and passes through the point (2, −1).",
+   "options": [
+    "4x + 3y − 5 = 0",
+    "4x − 3y − 11 = 0",
+    "3x + 4y − 2 = 0",
+    "4x − 3y + 11 = 0"
+   ],
+   "answer": 1,
+   "explanation": "The line 3x + 4y = 12 has gradient −3/4, so a perpendicular line has gradient 4/3. Using y + 1 = (4/3)(x − 2) and rearranging gives 4x − 3y − 11 = 0."
+  },
+  {
+   "n": 26,
+   "topic": "Coordinate geometry",
+   "q": "Find the radius of the circle x² + y² − 8x + 6y − 5 = 0.",
+   "options": [
+    "√30 units",
+    "√5 units",
+    "30 units",
+    "5 units"
+   ],
+   "answer": 0,
+   "explanation": "Completing the square gives (x − 4)² + (y + 3)² = 30. Comparing with (x − h)² + (y − k)² = r², r² = 30, so r = √30 units."
+  },
+  {
+   "n": 27,
+   "topic": "Simultaneous equations and inequalities",
+   "q": "Which of the following points satisfies both inequalities 2x − y ≥ 5 and x + y < 4?",
+   "options": [
+    "(3, −2)",
+    "(3, 1)",
+    "(4, 0)",
+    "(1, −2)"
+   ],
+   "answer": 0,
+   "explanation": "For the point (3, −2), 2x − y = 8 and x + y = 1, so both conditions hold. At (4, 0) or (3, 1), x + y = 4, which is not less than 4; at (1, −2), 2x − y = 4, which is not at least 5."
+  },
+  {
+   "n": 28,
+   "topic": "Sets",
+   "q": "In a school in Kano, 50 pupils were asked about the subjects they offer. 28 offer Mathematics, 23 offer Physics, 18 offer Chemistry, 10 offer Mathematics and Physics, 8 offer Mathematics and Chemistry, 6 offer Physics and Chemistry, while 4 offer all three subjects. How many offer exactly one of the three subjects?",
+   "options": [
+    "33",
+    "12",
+    "45",
+    "49"
+   ],
+   "answer": 0,
+   "explanation": "The numbers in exactly one subject are Mathematics only: 28 − 10 − 8 + 4 = 14; Physics only: 23 − 10 − 6 + 4 = 11; Chemistry only: 18 − 8 − 6 + 4 = 8. Their sum is 14 + 11 + 8 = 33. The value 49 is the number offering at least one subject, while 12 is the number offering exactly two."
+  },
+  {
+   "n": 29,
+   "topic": "Indices and logarithms",
+   "q": "Simplify (8^(2/3) × 4^(3/2)) ÷ 16^(3/4).",
+   "options": [
+    "4",
+    "2",
+    "16",
+    "8"
+   ],
+   "answer": 0,
+   "explanation": "8^(2/3) = 4 and 4^(3/2) = 8, so the numerator is 32. Also 16^(3/4) = 8, hence the quotient is 32 ÷ 8 = 4."
+  },
+  {
+   "n": 30,
+   "topic": "Trigonometry",
+   "q": "In a right-angled triangle in Kaduna, the side adjacent to an acute angle θ is 8 cm and the hypotenuse is 17 cm. Find tan θ.",
+   "options": [
+    "15/17",
+    "15/8",
+    "8/17",
+    "8/15"
+   ],
+   "answer": 1,
+   "explanation": "The opposite side is √(17² − 8²) = √225 = 15 cm. Therefore tan θ = opposite/adjacent = 15/8. The value 8/17 is cos θ, not tan θ."
+  },
+  {
+   "n": 31,
+   "topic": "Differentiation",
+   "q": "Differentiate y = (2x² − 3x + 1)(x + 4) with respect to x.",
+   "options": [
+    "6x² + 10x − 11",
+    "4x² + 13x − 12",
+    "6x² + 13x − 12",
+    "6x² + 5x − 11"
+   ],
+   "answer": 0,
+   "explanation": "Expanding gives y = 2x³ + 5x² − 11x + 4, so dy/dx = 6x² + 10x − 11. Alternatively, applying the product rule gives (4x − 3)(x + 4) + (2x² − 3x + 1), which simplifies to the same result."
+  },
+  {
+   "n": 32,
+   "topic": "Sets",
+   "q": "Let U = {1, 2, 3, …, 15}. If A = {x : x is a factor of 12} and B = {x : x is a prime number}, find n(A′ ∩ B).",
+   "options": [
+    "4",
+    "2",
+    "6",
+    "3"
+   ],
+   "answer": 0,
+   "explanation": "A = {1, 2, 3, 4, 6, 12} and B = {2, 3, 5, 7, 11, 13}. Removing elements of A from U before intersecting with B leaves {5, 7, 11, 13}, so n(A′ ∩ B) = 4."
+  },
+  {
+   "n": 33,
+   "topic": "Indices and logarithms",
+   "q": "Solve for x: log₂(x + 5) − log₂(x − 1) = 3.",
+   "options": [
+    "13/7",
+    "7/13",
+    "−13/7",
+    "1"
+   ],
+   "answer": 0,
+   "explanation": "Using the log law gives log₂((x + 5)/(x − 1)) = 3, so (x + 5)/(x − 1) = 8. Solving gives x + 5 = 8x − 8, hence 7x = 13 and x = 13/7. This value satisfies x > 1."
+  },
+  {
+   "n": 34,
+   "topic": "Trigonometry",
+   "q": "Solve for θ in the interval 0° ≤ θ < 360°: 2cos²θ + cosθ − 1 = 0.",
+   "options": [
+    "30°, 180° and 330°",
+    "120°, 180° and 240°",
+    "60°, 180° and 300°",
+    "60°, 120° and 300°"
+   ],
+   "answer": 2,
+   "explanation": "Put c = cos θ; then 2c² + c − 1 = (2c − 1)(c + 1) = 0. Thus c = 1/2 or c = −1. In the given interval these give θ = 60°, 180°, 300°."
+  },
+  {
+   "n": 35,
+   "topic": "Differentiation",
+   "q": "The displacement s metres of a particle moving in a straight line after t seconds is s = 2t³ − 9t² + 12t + 5. Find its acceleration when t = 2 s.",
+   "options": [
+    "12 m/s²",
+    "6 m/s²",
+    "−6 m/s²",
+    "0 m/s²"
+   ],
+   "answer": 1,
+   "explanation": "Differentiate s = 2t³ − 9t² + 12t + 5 to get velocity s′ = 6t² − 18t + 12, then acceleration s″ = 12t − 18. At t = 2, s″ = 24 − 18 = 6 m/s². The value 0 m/s² is the velocity at t = 2, not the acceleration."
+  },
+  {
+   "n": 36,
+   "topic": "Sets",
+   "q": "In a hostel in Zaria, 40 students were asked about three meals. 20 eat rice, 18 eat beans, 12 eat yam; 8 eat rice and beans, 6 eat rice and yam, 5 eat beans and yam, while 3 eat all three meals. How many eat exactly two of the meals?",
+   "options": [
+    "19",
+    "10",
+    "7",
+    "13"
+   ],
+   "answer": 1,
+   "explanation": "Subtract the 3 students who eat all three meals from each pairwise intersection: rice and beans only = 8 − 3 = 5, rice and yam only = 6 − 3 = 3, beans and yam only = 5 − 3 = 2. Therefore exactly two meals are eaten by 5 + 3 + 2 = 10 students. The total 19 comes from adding the pairwise intersections without removing the all-three group."
+  },
+  {
+   "n": 37,
+   "topic": "Indices and logarithms",
+   "q": "If 5^(2x − 1) = 1/25, find x.",
+   "options": [
+    "−3/2",
+    "1/2",
+    "−1/2",
+    "3/2"
+   ],
+   "answer": 2,
+   "explanation": "Write 1/25 as 5^(−2). Then 2x − 1 = −2, so 2x = −1 and x = −1/2."
+  },
+  {
+   "n": 38,
+   "topic": "Number bases",
+   "q": "Convert 190₁₀ to base 4.",
+   "options": [
+    "3232₄",
+    "2323₄",
+    "2312₄",
+    "2332₄"
+   ],
+   "answer": 3,
+   "explanation": "Starting from the right, 190 = 2×64 + 3×16 + 3×4 + 2, so the base-4 numeral is 2332₄. Shifting or omitting a place value produces one of the other options."
+  },
+  {
+   "n": 39,
+   "topic": "Number bases",
+   "q": "Simplify 143₅ + 212₅, giving your answer in base 5.",
+   "options": [
+    "2410₅",
+    "400₅",
+    "420₅",
+    "410₅"
+   ],
+   "answer": 3,
+   "explanation": "In base 5, 3 + 2 = 10₅, so write 0 and carry 1; then 4 + 1 + 1 = 11₅, so write 1 and carry 1; finally 1 + 2 + 1 = 4. The result is 410₅. Treating the numerals as decimal before converting gives 2410₅, which is not the result of addition in base 5."
+  },
+  {
+   "n": 40,
+   "topic": "Sequences and series",
+   "q": "The first three terms of an arithmetic progression are 2x + 1, x + 7 and 4x − 3. Find x.",
+   "options": [
+    "5",
+    "4",
+    "3",
+    "2"
+   ],
+   "answer": 1,
+   "explanation": "For three consecutive terms of an arithmetic progression, twice the middle term equals the sum of the first and third: 2(x + 7) = (2x + 1) + (4x − 3). Solving gives 2x + 14 = 6x − 2, so x = 4."
+  },
+  {
+   "n": 41,
+   "topic": "Sequences and series",
+   "q": "How many terms are there in the arithmetic progression 7, 12, 17, ..., 107?",
+   "options": [
+    "25",
+    "21",
+    "20",
+    "22"
+   ],
+   "answer": 1,
+   "explanation": "Using aₙ = a + (n − 1)d, we have 107 = 7 + 5(n − 1). Thus n − 1 = 20 and n = 21. Counting only the intervals gives 20, but the number of terms is one more."
+  },
+  {
+   "n": 42,
+   "topic": "Sequences and series",
+   "q": "The sum of the first two terms of a geometric progression is 18, and the sum of the first three terms is 42. If the common ratio is positive, find the first term.",
+   "options": [
+    "6",
+    "9",
+    "4",
+    "3"
+   ],
+   "answer": 0,
+   "explanation": "The difference between the sum of the first three terms and the first two terms is the third term: ar² = 42 − 18 = 24. Also a + ar = 18, so a(1 + r) = 18; dividing gives r²/(1 + r) = 4/3. This leads to r = 2 since r is positive, and then a(1 + 2) = 18, so a = 6."
+  },
+  {
+   "n": 43,
+   "topic": "Variation",
+   "q": "The load L (in kg) a wooden beam can safely carry varies inversely as the square of its length l (in m). A 3 m beam in a workshop in Ibadan safely carries 400 kg. What load will a similar 5 m beam safely carry?",
+   "options": [
+    "400 kg",
+    "144 kg",
+    "100 kg",
+    "240 kg"
+   ],
+   "answer": 1,
+   "explanation": "L = k/l². From 400 = k/3², we get k = 3600. When l = 5, L = 3600/25 = 144 kg."
+  },
+  {
+   "n": 44,
+   "topic": "Variation",
+   "q": "A quantity q varies jointly as r and the cube of s, and inversely as t. If q = 54 when r = 3, s = 2 and t = 4, find q when r = 5, s = 3 and t = 9.",
+   "options": [
+    "81",
+    "45",
+    "135",
+    "180"
+   ],
+   "answer": 2,
+   "explanation": "Write q = krs³/t. Substituting gives 54 = k×3×2³/4 = 6k, so k = 9. Then q = 9×5×3³/9 = 135."
+  },
+  {
+   "n": 45,
+   "topic": "Angles and circle geometry",
+   "q": "PT is a tangent to a circle with centre O at T. If ∠TOP = 32° and P is an external point, find ∠OPT.",
+   "options": [
+    "32°",
+    "148°",
+    "90°",
+    "58°"
+   ],
+   "answer": 3,
+   "explanation": "The radius OT is perpendicular to the tangent PT, so ∠OTP = 90°. In triangle OTP, ∠OPT = 180° − 90° − 32° = 58°."
+  },
+  {
+   "n": 46,
+   "topic": "Integration",
+   "q": "Evaluate ∫₁³ (x² − 2x + 4) dx.",
+   "options": [
+    "28/3",
+    "26/3",
+    "10",
+    "8"
+   ],
+   "answer": 1,
+   "explanation": "The antiderivative is x³/3 − x² + 4x. Substituting the upper limit 3 gives 12, and the lower limit 1 gives 10/3; the integral is 12 − 10/3 = 26/3."
+  },
+  {
+   "n": 47,
+   "topic": "Integration",
+   "q": "Find ∫(5x⁴ − 3/x² + 2√x) dx.",
+   "options": [
+    "x⁵ + 3/x + (2/3)x^(3/2) + C",
+    "x⁵ + 3/x + (4/3)x^(1/2) + C",
+    "x⁵ − 3/x + (4/3)x^(3/2) + C",
+    "x⁵ + 3/x + (4/3)x^(3/2) + C"
+   ],
+   "answer": 3,
+   "explanation": "Integrate term by term: ∫5x⁴ dx = x⁵, ∫−3/x² dx = 3/x, and ∫2√x dx = (4/3)x^(3/2), plus C. Changing the sign of 3/x or integrating 2√x with a wrong coefficient is incorrect."
+  },
+  {
+   "n": 48,
+   "topic": "Quadratic equations",
+   "q": "Determine the nature of the roots of 2x² − 5x + 6 = 0.",
+   "options": [
+    "Two rational real roots",
+    "Two equal real roots",
+    "No real roots",
+    "Two distinct real roots"
+   ],
+   "answer": 2,
+   "explanation": "The discriminant is b² − 4ac = (−5)² − 4(2)(6) = 25 − 48 = −23. A negative discriminant means the equation has no real roots. Taking the equation to have equal roots would require the discriminant to be zero."
+  },
+  {
+   "n": 49,
+   "topic": "Fractions, decimals and percentages",
+   "q": "A trader in Owerri marks a generator at ₦80,000. She allows a discount of 15% and still makes a profit of 25% on the cost price. What is the cost price of the generator?",
+   "options": [
+    "₦57,800",
+    "₦51,000",
+    "₦54,400",
+    "₦68,000"
+   ],
+   "answer": 2,
+   "explanation": "After the 15% discount, the selling price is 0.85 × ₦80,000 = ₦68,000. Since this is 125% of the cost price, the cost price is ₦68,000 ÷ 1.25 = ₦54,400. Subtracting 25% from the selling price gives ₦51,000, which is a common mistake."
+  },
+  {
+   "n": 50,
+   "topic": "Fractions, decimals and percentages",
+   "q": "Arrange the following in ascending order: 3/8, 0.35, 37%, 2/5.",
+   "options": [
+    "0.35, 37%, 3/8, 2/5",
+    "37%, 0.35, 3/8, 2/5",
+    "0.35, 3/8, 37%, 2/5",
+    "0.35, 37%, 2/5, 3/8"
+   ],
+   "answer": 0,
+   "explanation": "Convert each to a decimal: 3/8 = 0.375, 0.35 = 0.35, 37% = 0.37, and 2/5 = 0.4. In ascending order they are 0.35, 37%, 3/8, 2/5. Mistaking 3/8 for 0.38 would place it after 37%."
+  },
+  {
+   "n": 51,
+   "topic": "Mensuration",
+   "q": "A water tank in Kaduna is in the shape of a cuboid with internal dimensions 2.1 m by 1.5 m by 80 cm. How many litres of water can it hold when full?",
+   "options": [
+    "252 L",
+    "25,200 L",
+    "252,000 L",
+    "2,520 L"
+   ],
+   "answer": 3,
+   "explanation": "Convert 80 cm to 0.8 m, then volume = 2.1 × 1.5 × 0.8 = 2.52 m³. Since 1 m³ = 1,000 L, the capacity is 2.52 × 1,000 = 2,520 L. Treating 80 cm as 0.08 m or as 8 m gives an incorrect value."
+  },
+  {
+   "n": 52,
+   "topic": "Mensuration",
+   "q": "A regular hexagonal paving slab in Enugu has side length 7 cm. Find its area.",
+   "options": [
+    "49√3/4 cm²",
+    "147√3 cm²",
+    "49√3 cm²",
+    "147√3/2 cm²"
+   ],
+   "answer": 3,
+   "explanation": "A regular hexagon consists of six equilateral triangles of side 7 cm. Its area is 6 × (√3/4 × 7²) = 147√3/2 cm². Using just one equilateral triangle gives 49√3/4 cm², not the whole hexagon."
+  },
+  {
+   "n": 53,
+   "topic": "Surds",
+   "q": "Simplify √75 − 2√12 + √27.",
+   "options": [
+    "6√3",
+    "4√3",
+    "√3",
+    "2√3"
+   ],
+   "answer": 1,
+   "explanation": "√75 = 5√3, 2√12 = 2(2√3) = 4√3, and √27 = 3√3. Therefore the expression is 5√3 − 4√3 + 3√3 = 4√3. The value 2√3 comes from mishandling the coefficient of 2√12."
+  },
+  {
+   "n": 54,
+   "topic": "Surds",
+   "q": "Rationalise the denominator and simplify: 6/(3√2 − √3).",
+   "options": [
+    "(3√2 + √3)/5",
+    "(6√2 + 2√3)/5",
+    "(6√2 + 2√3)/3",
+    "(6√2 − 2√3)/5"
+   ],
+   "answer": 1,
+   "explanation": "Multiply numerator and denominator by 3√2 + √3. The denominator becomes (3√2)² − (√3)² = 18 − 3 = 15, so the expression is 6(3√2 + √3)/15 = (6√2 + 2√3)/5. Keeping the minus sign in the numerator is incorrect because the conjugate used for the denominator contains a plus sign."
+  },
+  {
+   "n": 55,
+   "topic": "Surds",
+   "q": "Simplify (√5 + 2√3)(√5 − 2√3) + (√2 + 1)².",
+   "options": [
+    "−4 + √2",
+    "−4 + 2√2",
+    "−10 + 2√2",
+    "4 + 2√2"
+   ],
+   "answer": 1,
+   "explanation": "The product of the conjugate pair is (√5)² − (2√3)² = 5 − 12 = −7. Also, (√2 + 1)² = 2 + 2√2 + 1 = 3 + 2√2, so the total is −7 + 3 + 2√2 = −4 + 2√2. The expression −4 + √2 omits the 2 in 2√2 from squaring the binomial."
+  },
+  {
+   "n": 56,
+   "topic": "Matrices and determinants",
+   "q": "If A = [[3, −2], [4, 1]] and B = [[−1, 2], [5, −3]], find A + 2B.",
+   "options": [
+    "[[1, 2], [14, −5]]",
+    "[[1, 2], [14, 5]]",
+    "[[1, 0], [14, −5]]",
+    "[[1, 2], [−6, −5]]"
+   ],
+   "answer": 0,
+   "explanation": "Twice matrix B is [[−2, 4], [10, −6]]. Adding this to A gives [[3−2, −2+4], [4+10, 1−6]] = [[1, 2], [14, −5]]. The bottom-right entry 5 would arise from treating 1−6 as 1+6 or losing the negative sign."
+  },
+  {
+   "n": 57,
+   "topic": "Matrices and determinants",
+   "q": "If A = [[4, k], [2, 3]] and det(A) = 10, find k.",
+   "options": [
+    "1",
+    "2",
+    "−1",
+    "11"
+   ],
+   "answer": 0,
+   "explanation": "For [[4, k], [2, 3]], det(A) = 4×3 − k×2 = 12 − 2k. Setting 12 − 2k = 10 gives 2k = 2, so k = 1. The value −1 results from an incorrect sign when solving 12 − 2k = 10."
+  },
+  {
+   "n": 58,
+   "topic": "Matrices and determinants",
+   "q": "Find the inverse of M = [[2, −1], [3, 5]].",
+   "options": [
+    "1/7 [[5, 1], [−3, 2]]",
+    "1/13 [[5, 1], [3, 2]]",
+    "1/13 [[5, 1], [−3, 2]]",
+    "1/13 [[5, −1], [3, 2]]"
+   ],
+   "answer": 2,
+   "explanation": "For M = [[a, b], [c, d]], the inverse is 1/(ad − bc) [[d, −b], [−c, a]]. Here ad − bc = 2×5 − (−1)×3 = 13, and −b = 1, giving 1/13 [[5, 1], [−3, 2]]. Using determinant 7 suggests calculating 10 − 3 after mistaking the sign of (−1)×3."
+  },
+  {
+   "n": 59,
+   "topic": "Statistics",
+   "q": "The marks scored by 9 students in a test are 12, 17, 9, 14, 20, 17, 11, 15 and 18. Find the median mark.",
+   "options": [
+    "14",
+    "15",
+    "17",
+    "16"
+   ],
+   "answer": 1,
+   "explanation": "Arranging the marks in ascending order gives 9, 11, 12, 14, 15, 17, 17, 18, 20. The median is the middle value, which is the fifth mark, so it is 15. Choosing 17 mistakes the mode for the median."
+  },
+  {
+   "n": 60,
+   "topic": "Statistics",
+   "q": "The mean score of 12 pupils in a test in Lokoja is 15. When one pupil's score is removed, the mean of the remaining 11 scores is 14. Find the removed score.",
+   "options": [
+    "26",
+    "24",
+    "22",
+    "28"
+   ],
+   "answer": 0,
+   "explanation": "The total score of the 12 pupils is 12 × 15 = 180, and the total of the remaining 11 is 11 × 14 = 154. The removed score is 180 − 154 = 26. Subtracting the two means, 15 − 14 = 1, does not give the removed score because the groups have different sizes."
+  }
+ ]
+}

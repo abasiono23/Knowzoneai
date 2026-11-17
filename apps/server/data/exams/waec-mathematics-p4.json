@@ -1,0 +1,661 @@
+{
+ "id": "waec-mathematics-p4",
+ "exam": "waec",
+ "subject": "mathematics",
+ "year": null,
+ "number": 4,
+ "source": "ai",
+ "minutes": 60,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Simultaneous equations and inequalities",
+   "q": "At a stationery shop in Jos, 3 rulers and 2 pencils cost ₦1,200, while 5 rulers and 4 pencils cost ₦2,100. What is the cost of one ruler?",
+   "options": [
+    "₦150",
+    "₦300",
+    "₦250",
+    "₦450"
+   ],
+   "answer": 1,
+   "explanation": "Twice the first cost is 6 rulers and 4 pencils for ₦2,400. Subtracting the second cost gives 1 ruler = ₦300, and then 3(300) + 2p = 1,200 gives p = ₦150. The value ₦150 is the cost of a pencil, not a ruler."
+  },
+  {
+   "n": 2,
+   "topic": "Simultaneous equations and inequalities",
+   "q": "A trader in Kano packs x bags of rice and y bags of beans under the conditions 2x + 3y ≤ 18, x ≥ 1 and y ≥ 2. What is the greatest possible integer value of x?",
+   "options": [
+    "8",
+    "6",
+    "5",
+    "7"
+   ],
+   "answer": 1,
+   "explanation": "Since y is at least 2, 2x ≤ 18 − 3(2) = 12, so x ≤ 6. Taking x = 6 with y = 2 satisfies all conditions, so the greatest integer value of x is 6. Values such as 7 or 8 would make 2x + 3y greater than 18 even when y = 2."
+  },
+  {
+   "n": 3,
+   "topic": "Simultaneous equations and inequalities",
+   "q": "Solve the simultaneous equations 3x + 2y = 16 and 5x − 3y = 14. What is x + y?",
+   "options": [
+    "2",
+    "10",
+    "6",
+    "4"
+   ],
+   "answer": 2,
+   "explanation": "Multiplying the first equation by 3 and the second by 2 gives 9x + 6y = 48 and 10x − 6y = 28; adding gives 19x = 76, so x = 4. Then 3(4) + 2y = 16 gives y = 2, and x + y = 6. The values 4 and 2 are the separate unknowns, not their sum."
+  },
+  {
+   "n": 4,
+   "topic": "Matrices and determinants",
+   "q": "Given P = [[3, 1], [−2, 4]] and Q = [[0, 5], [3, −1]], find 2P − Q.",
+   "options": [
+    "[[−6, 3], [7, −9]]",
+    "[[6, −3], [−7, 9]]",
+    "[[6, 2], [−4, 8]]",
+    "[[6, 7], [−1, 7]]"
+   ],
+   "answer": 1,
+   "explanation": "Multiply P by 2 to get [[6, 2], [−4, 8]], then subtract Q entry by entry: [[6−0, 2−5], [−4−3, 8−(−1)]] = [[6, −3], [−7, 9]]. Adding Q instead of subtracting it would give the matrix with 7 in the top-right entry, which is not the required result."
+  },
+  {
+   "n": 5,
+   "topic": "Matrices and determinants",
+   "q": "If N = [[5, −2], [3, k]] and det(N) = 21, find k.",
+   "options": [
+    "3",
+    "27/5",
+    "15",
+    "−3"
+   ],
+   "answer": 0,
+   "explanation": "For a 2×2 matrix [[a, b], [c, d]], det = ad − bc, so det(N) = 5k − (−2×3) = 5k + 6. Thus 5k + 6 = 21, giving k = 3. The value 27/5 comes from using 5k − 6 = 21, an error with the sign of bc."
+  },
+  {
+   "n": 6,
+   "topic": "Matrices and determinants",
+   "q": "Find the inverse of T = [[3, 4], [2, 3]].",
+   "options": [
+    "[[3, −4], [−2, 3]]",
+    "[[3, 4], [2, 3]]",
+    "[[−3, 4], [2, −3]]",
+    "[[1/3, 1/4], [1/2, 1/3]]"
+   ],
+   "answer": 0,
+   "explanation": "The determinant is (3×3) − (4×2) = 1. For [[a, b], [c, d]], the inverse is (1/(ad−bc))[[d, −b], [−c, a]], giving [[3, −4], [−2, 3]]. The original matrix itself is not its inverse because multiplying it by itself does not give the identity matrix."
+  },
+  {
+   "n": 7,
+   "topic": "Surds",
+   "q": "Given that √12 × √18 = m√6, where m is a positive integer, find m.",
+   "options": [
+    "6",
+    "3",
+    "12",
+    "36"
+   ],
+   "answer": 0,
+   "explanation": "√12 × √18 = √(12×18) = √216 = √(36×6) = 6√6. Therefore m = 6. The value 36 is m², not m, and comes from squaring by mistake."
+  },
+  {
+   "n": 8,
+   "topic": "Number bases",
+   "q": "Evaluate 1011₂ × 11₂, giving your answer in base 2.",
+   "options": [
+    "11001₂",
+    "10001₂",
+    "100001₂",
+    "11111₂"
+   ],
+   "answer": 2,
+   "explanation": "1011₂ = 11 and 11₂ = 3, so the product is 33 in base 10. Since 33 = 32 + 1 = 2⁵ + 1, it is 100001₂. The value 11001₂ equals 25, which comes from an incorrect multiplication rather than the required product."
+  },
+  {
+   "n": 9,
+   "topic": "Sequences and series",
+   "q": "In an arithmetic progression, the 6th term is 23 and the 10th term is 39. Find the sum of the first 15 terms.",
+   "options": [
+    "450",
+    "300",
+    "465",
+    "480"
+   ],
+   "answer": 2,
+   "explanation": "Let the first term be a and the common difference be d. From a + 5d = 23 and a + 9d = 39, subtract to get 4d = 16, so d = 4 and a = 3. Thus S₁₅ = 15/2[2(3) + 14(4)] = 465. The value 300 is the sum of the first 12 terms, not the first 15."
+  },
+  {
+   "n": 10,
+   "topic": "Sequences and series",
+   "q": "The second term of a geometric progression is 12 and the fourth term is 27/4. If the common ratio is positive, find the third term.",
+   "options": [
+    "8",
+    "27/4",
+    "9",
+    "12"
+   ],
+   "answer": 2,
+   "explanation": "Let the first term be a and the common ratio be r. Then ar = 12 and ar³ = 27/4, so r² = (27/4) ÷ 12 = 9/16, giving r = 3/4 and a = 16. The third term is ar² = 16 × 9/16 = 9. The value 27/4 is the fourth term, not the third."
+  },
+  {
+   "n": 11,
+   "topic": "Sequences and series",
+   "q": "A man in Ibadan saves ₦500 in the first month and increases his monthly savings by ₦75 each month. What is the total amount he saves in the first 12 months?",
+   "options": [
+    "₦10,200",
+    "₦11,400",
+    "₦9,600",
+    "₦10,950"
+   ],
+   "answer": 3,
+   "explanation": "This is an arithmetic series with first term 500 and common difference 75. S₁₂ = 12/2[2(500) + 11(75)] = 6(1000 + 825) = ₦10,950."
+  },
+  {
+   "n": 12,
+   "topic": "Fractions, decimals and percentages",
+   "q": "A trader in Awka marked a bag at ₦24,000. She allowed a discount of 12.5% and still made a profit of 20% on the cost price. Find the cost price.",
+   "options": [
+    "₦17,500",
+    "₦16,800",
+    "₦21,000",
+    "₦18,000"
+   ],
+   "answer": 0,
+   "explanation": "After a 12.5% discount, the selling price is ₦24,000 × 7/8 = ₦21,000. Since this gives a 20% profit on cost, cost = ₦21,000 ÷ 1.20 = ₦17,500. The amount ₦21,000 is only the discounted selling price, not the cost price."
+  },
+  {
+   "n": 13,
+   "topic": "Fractions, decimals and percentages",
+   "q": "In a school in Abeokuta, 45% of 720 students are girls. If 5/9 of the boys study science, how many boys study science?",
+   "options": [
+    "396",
+    "180",
+    "220",
+    "176"
+   ],
+   "answer": 2,
+   "explanation": "The boys form 55% of 720, so there are 0.55 × 720 = 396 boys. The number of boys studying science is 5/9 × 396 = 220. The value 180 is obtained by mistakenly taking 5/9 of the number of girls."
+  },
+  {
+   "n": 14,
+   "topic": "Coordinate geometry",
+   "q": "Find the equation of the straight line that is parallel to x + 2y = 7 and passes through the point (4, −1).",
+   "options": [
+    "x + 2y = 3",
+    "x + 2y = 2",
+    "x − 2y = 6",
+    "2x − y = 9"
+   ],
+   "answer": 1,
+   "explanation": "A line parallel to x + 2y = 7 has the form x + 2y = c. Substituting x = 4 and y = −1 gives c = 4 + 2(−1) = 2, so the line is x + 2y = 2. The equation 2x − y = 9 describes a perpendicular line through the same point, not a parallel line."
+  },
+  {
+   "n": 15,
+   "topic": "Coordinate geometry",
+   "q": "A circle has diameter with endpoints A(−2, 3) and B(6, 1). Find its equation.",
+   "options": [
+    "x² + y² − 4x − 4y + 13 = 0",
+    "x² + y² − 4x − 4y − 9 = 0",
+    "x² + y² + 4x + 4y − 9 = 0",
+    "x² + y² − 8x − 2y + 8 = 0"
+   ],
+   "answer": 1,
+   "explanation": "The centre is the midpoint of AB: ((−2 + 6)/2, (3 + 1)/2) = (2, 2). The square of the radius is (−2 − 2)² + (3 − 2)² = 17, so (x − 2)² + (y − 2)² = 17. Expanding gives x² + y² − 4x − 4y − 9 = 0."
+  },
+  {
+   "n": 16,
+   "topic": "Mensuration",
+   "q": "A cylindrical water drum in Kano has radius 35 cm and height 1.2 m. Find its capacity in litres. Take π = 22/7.",
+   "options": [
+    "4,620 L",
+    "46.2 L",
+    "462 L",
+    "132 L"
+   ],
+   "answer": 2,
+   "explanation": "Convert the height to centimetres: 1.2 m = 120 cm. Volume = 22/7 × 35² × 120 = 462,000 cm³, and since 1,000 cm³ = 1 L, the capacity is 462 L. The value 46.2 L results from shifting the decimal point incorrectly."
+  },
+  {
+   "n": 17,
+   "topic": "Mensuration",
+   "q": "A solid metal sphere of radius 6 cm is melted and recast into a cylinder of base radius 4 cm. Find the height of the cylinder.",
+   "options": [
+    "24 cm",
+    "27 cm",
+    "18 cm",
+    "12 cm"
+   ],
+   "answer": 2,
+   "explanation": "The volume of the sphere is 4/3 × π × 6³ = 288π cm³. For the cylinder, π × 4² × h = 288π, so h = 288 ÷ 16 = 18 cm."
+  },
+  {
+   "n": 18,
+   "topic": "Mensuration",
+   "q": "A trapezium-shaped farm in Jos has parallel sides 48 m and 32 m, and the perpendicular distance between them is 20 m. Find its area in hectares.",
+   "options": [
+    "0.8 hectares",
+    "0.08 hectares",
+    "8 hectares",
+    "0.008 hectares"
+   ],
+   "answer": 1,
+   "explanation": "The area of the trapezium is 1/2 × (48 + 32) × 20 = 800 m². Since 1 hectare = 10,000 m², the area is 800 ÷ 10,000 = 0.08 hectares."
+  },
+  {
+   "n": 19,
+   "topic": "Quadratic equations",
+   "q": "A quadratic equation has roots −3 and 5. Form the equation whose roots are each 2 greater than these roots.",
+   "options": [
+    "x² − 6x + 7 = 0",
+    "x² + 6x − 7 = 0",
+    "x² − 2x − 15 = 0",
+    "x² − 6x − 7 = 0"
+   ],
+   "answer": 3,
+   "explanation": "The new roots are −3 + 2 = −1 and 5 + 2 = 7. Their sum is 6 and their product is −7, so the equation is x² − 6x − 7 = 0. The equation x² − 2x − 15 = 0 uses the original roots instead of the increased roots."
+  },
+  {
+   "n": 20,
+   "topic": "Trigonometry",
+   "q": "Solve 2 sin θ + 1 = 0 for θ in the interval 90° < θ < 270°.",
+   "options": [
+    "210°",
+    "120°",
+    "300°",
+    "240°"
+   ],
+   "answer": 0,
+   "explanation": "2 sin θ + 1 = 0 gives sin θ = −1/2. The only angle in 90° < θ < 270° with this sine value is 210°, since 180° + 30° = 210°. At 240°, sin 240° = −√3/2, not −1/2, and 300° lies outside the given interval."
+  },
+  {
+   "n": 21,
+   "topic": "Probability",
+   "q": "An exercise-book seller in Kano has 12 books, 3 of which are defective. Two books are selected at random without replacement. What is the probability that neither book is defective?",
+   "options": [
+    "6/11",
+    "3/11",
+    "9/22",
+    "5/11"
+   ],
+   "answer": 0,
+   "explanation": "There are 9 non-defective books. The probability is (9/12) × (8/11) = 72/132 = 6/11. The value 9/22 is the probability of getting exactly one defective book, while 5/11 is the probability of getting at least one defective book."
+  },
+  {
+   "n": 22,
+   "topic": "Integration",
+   "q": "Evaluate ∫₀¹ (x + 1)² dx.",
+   "options": [
+    "5/3",
+    "8/3",
+    "7/3",
+    "4/3"
+   ],
+   "answer": 2,
+   "explanation": "Expand: (x + 1)² = x² + 2x + 1. Integrating gives x³/3 + x² + x; substituting 1 and 0 gives 1/3 + 1 + 1 = 7/3. Omitting the 2x term leads to 4/3, which is not the full value."
+  },
+  {
+   "n": 23,
+   "topic": "Quadratic equations",
+   "q": "Find the values of k for which x² + (k − 2)x + 9 = 0 has equal roots.",
+   "options": [
+    "−4 only",
+    "4 or −8",
+    "8 or −4",
+    "8 only"
+   ],
+   "answer": 2,
+   "explanation": "Equal roots require the discriminant to be zero: (k − 2)² − 4 × 1 × 9 = 0. Thus (k − 2)² = 36, so k − 2 = ±6, giving k = 8 or k = −4. Taking only 8 omits the negative solution."
+  },
+  {
+   "n": 24,
+   "topic": "Probability",
+   "q": "The probability that Chidi passes Mathematics is 2/3 and passes Physics is 3/5. If the two events are independent, find the probability that he passes at least one of the two subjects.",
+   "options": [
+    "4/15",
+    "2/5",
+    "13/15",
+    "14/15"
+   ],
+   "answer": 2,
+   "explanation": "P(passes at least one) = 1 − P(fails both) = 1 − (1/3)(2/5) = 1 − 2/15 = 13/15. The value 2/5 is the probability of passing both subjects, not of passing at least one."
+  },
+  {
+   "n": 25,
+   "topic": "Integration",
+   "q": "Find the equation of the curve whose gradient is 6x² − 8x + 1 and which passes through the point (1, 4).",
+   "options": [
+    "y = 2x³ − 4x² + x − 5",
+    "y = 2x³ − 4x² + x + 4",
+    "y = 2x³ − 4x² + x + 5",
+    "y = 2x³ − 4x² + x + 3"
+   ],
+   "answer": 2,
+   "explanation": "Integrating 6x² − 8x + 1 gives y = 2x³ − 4x² + x + C. Substituting x = 1 and y = 4 gives 4 = 2 − 4 + 1 + C, so C = 5. Using C = 4 ignores the value −1 of the integrated terms at x = 1."
+  },
+  {
+   "n": 26,
+   "topic": "Quadratic equations",
+   "q": "If α and β are the roots of 2x² − 7x + 3 = 0, find α² + β².",
+   "options": [
+    "13/4",
+    "25/4",
+    "49/4",
+    "37/4"
+   ],
+   "answer": 3,
+   "explanation": "For 2x² − 7x + 3 = 0, α + β = 7/2 and αβ = 3/2. Hence α² + β² = (α + β)² − 2αβ = 49/4 − 3 = 37/4. The value 49/4 is only (α + β)², forgetting to subtract 2αβ."
+  },
+  {
+   "n": 27,
+   "topic": "Trigonometry",
+   "q": "A ladder 25 m long leans against a vertical wall. If the foot of the ladder is 7 m from the wall, find the sine of the angle the ladder makes with the ground.",
+   "options": [
+    "7/25",
+    "24/25",
+    "24/7",
+    "7/24"
+   ],
+   "answer": 1,
+   "explanation": "The wall height reached is √(25² − 7²) = √576 = 24 m. For the angle with the ground, the opposite side is 24 m and the hypotenuse is 25 m, so sine = 24/25. The value 7/25 is the cosine of the angle, not the sine."
+  },
+  {
+   "n": 28,
+   "topic": "Sets",
+   "q": "In a survey of 120 traders in Aba, 55 sell shoes, 45 sell bags and 40 sell clothes. The numbers who sell shoes and bags, bags and clothes, and shoes and clothes are 20, 15 and 10 respectively; these counts include those who sell all three goods, while 5 sell all three. How many sell none of the three?",
+   "options": [
+    "25",
+    "15",
+    "20",
+    "30"
+   ],
+   "answer": 2,
+   "explanation": "By inclusion–exclusion, at least one of the three goods is sold by 55 + 45 + 40 − 20 − 15 − 10 + 5 = 100 traders. Hence the number selling none is 120 − 100 = 20. Omitting the addition of the 5 who sell all three gives 25, which is a common error."
+  },
+  {
+   "n": 29,
+   "topic": "Sets",
+   "q": "Let U = {1, 2, 3, …, 30}. If P is the set of multiples of 3 in U and Q is the set of multiples of 5 in U, find n(P′ ∩ Q).",
+   "options": [
+    "5",
+    "2",
+    "6",
+    "4"
+   ],
+   "answer": 3,
+   "explanation": "The multiples of 5 in U are 5, 10, 15, 20, 25 and 30. Those not divisible by 3 are 5, 10, 20 and 25, so there are 4 such numbers."
+  },
+  {
+   "n": 30,
+   "topic": "Sets",
+   "q": "In a class of 45 students in Ogbomoso, 22 like rice, 20 like beans and 18 like yam. The numbers who like rice and beans, beans and yam, and rice and yam are 8, 7 and 5 respectively; these counts include those who like all three foods. If every student likes at least one of the three foods, how many like exactly two of the three foods?",
+   "options": [
+    "8",
+    "5",
+    "15",
+    "10"
+   ],
+   "answer": 1,
+   "explanation": "Let the number who like all three be x. Inclusion–exclusion gives 45 = 22 + 20 + 18 − 8 − 7 − 5 + x, so x = 5. The pair totals count the five all-three students three times, so exactly two is 8 + 7 + 5 − 3 × 5 = 5."
+  },
+  {
+   "n": 31,
+   "topic": "Variation",
+   "q": "A technician in Ikeja finds that the current I (in amperes) in a wire varies directly as the voltage V and inversely as the resistance R. If I = 0.6 A when V = 12 V and R = 40 Ω, find I when V = 18 V and R = 45 Ω.",
+   "options": [
+    "1.5 A",
+    "1.2 A",
+    "0.6 A",
+    "0.8 A"
+   ],
+   "answer": 3,
+   "explanation": "For joint variation, I = kV/R. Using I = 0.6 when V = 12 and R = 40 gives k = IR/V = 0.6 × 40 ÷ 12 = 2. Thus for V = 18 and R = 45, I = 2 × 18 ÷ 45 = 0.8 A."
+  },
+  {
+   "n": 32,
+   "topic": "Variation",
+   "q": "The volume V of a cone varies jointly as the square of the radius r and the height h. A cone with radius 3 cm and height 8 cm has volume 24π cm³. Find the volume of a cone with radius 4 cm and height 9 cm.",
+   "options": [
+    "36π cm³",
+    "64π cm³",
+    "54π cm³",
+    "48π cm³"
+   ],
+   "answer": 3,
+   "explanation": "Write V = k r²h. From 24π = k × 3² × 8, k = 24π ÷ 72 = π/3. Therefore V = (π/3) × 4² × 9 = 48π cm³."
+  },
+  {
+   "n": 33,
+   "topic": "Statistics",
+   "q": "The numbers of goals scored by 12 teams in a local league in Kaduna are 0, 1, 1, 2, 2, 2, 3, 3, 3, 3, 4, 5. Find the median number of goals.",
+   "options": [
+    "2",
+    "2.5",
+    "3.5",
+    "3"
+   ],
+   "answer": 1,
+   "explanation": "With 12 values, the median is the average of the 6th and 7th values. In the ordered list these are 2 and 3, so the median is (2 + 3) ÷ 2 = 2.5."
+  },
+  {
+   "n": 34,
+   "topic": "Statistics",
+   "q": "In a class in Minna, the mean score of 30 students in a test is 52. The 20 boys in the class have a mean score of 50. What is the mean score of the 10 girls?",
+   "options": [
+    "56",
+    "55",
+    "54",
+    "58"
+   ],
+   "answer": 0,
+   "explanation": "Total score for all 30 students is 30 × 52 = 1560. The 20 boys scored a total of 20 × 50 = 1000, leaving 560 for the 10 girls. Their mean score is 560 ÷ 10 = 56."
+  },
+  {
+   "n": 35,
+   "topic": "Indices and logarithms",
+   "q": "If 9^(x + 1) = 27^(2x − 3), find x.",
+   "options": [
+    "4",
+    "5/2",
+    "11/4",
+    "11/2"
+   ],
+   "answer": 2,
+   "explanation": "Write both sides to base 3: 9^(x + 1) = 3^(2x + 2) and 27^(2x − 3) = 3^(6x − 9). Equating powers gives 2x + 2 = 6x − 9, so 4x = 11 and x = 11/4."
+  },
+  {
+   "n": 36,
+   "topic": "Indices and logarithms",
+   "q": "Evaluate log₃ 81 − log₅ (1/25).",
+   "options": [
+    "−6",
+    "−2",
+    "2",
+    "6"
+   ],
+   "answer": 3,
+   "explanation": "Since 3⁴ = 81, log₃ 81 = 4. Also 1/25 = 5⁻², so log₅(1/25) = −2. Thus the value is 4 − (−2) = 6."
+  },
+  {
+   "n": 37,
+   "topic": "Differentiation",
+   "q": "Differentiate y = (x² + 2x)(3x − 1) with respect to x.",
+   "options": [
+    "9x² + 2x − 2",
+    "9x² + 10x + 2",
+    "6x² + 10x − 2",
+    "9x² + 10x − 2"
+   ],
+   "answer": 3,
+   "explanation": "Expanding gives y = 3x³ + 5x² − 2x, so dy/dx = 9x² + 10x − 2. The expression 9x² + 2x − 2 comes from omitting part of the product-rule expansion."
+  },
+  {
+   "n": 38,
+   "topic": "Differentiation",
+   "q": "A particle moves in a straight line such that its displacement s metres after t seconds is s = 4t³ − 6t² + 5t. Find its acceleration when t = 2 s.",
+   "options": [
+    "12 m/s²",
+    "36 m/s²",
+    "48 m/s²",
+    "29 m/s²"
+   ],
+   "answer": 1,
+   "explanation": "Differentiating displacement gives velocity v = 12t² − 12t + 5, and differentiating again gives acceleration a = 24t − 12. At t = 2, a = 48 − 12 = 36 m/s². The value 29 m/s² is the velocity at that instant, not the acceleration."
+  },
+  {
+   "n": 39,
+   "topic": "Differentiation",
+   "q": "Differentiate y = (2x + 5)/(x − 1) with respect to x, where x ≠ 1.",
+   "options": [
+    "−7/(x − 1)",
+    "7/(x − 1)²",
+    "2/(x − 1)²",
+    "−7/(x − 1)²"
+   ],
+   "answer": 3,
+   "explanation": "Using the quotient rule, the numerator of the derivative is 2(x − 1) − (2x + 5) = −7, while the denominator is squared. Therefore dy/dx = −7/(x − 1)². The expression −7/(x − 1) is obtained if the denominator is not squared."
+  },
+  {
+   "n": 40,
+   "topic": "Angles and circle geometry",
+   "q": "In a circle with centre O, chord AB subtends an angle of 96° at O. If C is a point on the major arc AB, find ∠ACB.",
+   "options": [
+    "96°",
+    "132°",
+    "48°",
+    "24°"
+   ],
+   "answer": 2,
+   "explanation": "The angle at the circumference is half the angle subtended by the same arc at the centre. Since C lies on the major arc, ∠ACB intercepts the minor arc AB, so ∠ACB = 96° ÷ 2 = 48°. The value 132° would arise if the arc not containing C were the major arc."
+  },
+  {
+   "n": 41,
+   "topic": "Angles and circle geometry",
+   "q": "In cyclic quadrilateral ABCD, side BC is produced to E so that ∠DCE = 76°. Find ∠BAD.",
+   "options": [
+    "14°",
+    "76°",
+    "38°",
+    "104°"
+   ],
+   "answer": 1,
+   "explanation": "For a cyclic quadrilateral, an exterior angle is equal to the interior opposite angle. Since ∠DCE is the exterior angle at C, ∠BAD = ∠DCE = 76°. The value 104° is the supplementary interior angle at C."
+  },
+  {
+   "n": 42,
+   "topic": "Simultaneous equations and inequalities",
+   "q": "At a bookshop in Ibadan, 2 calculators and 3 geometry sets cost ₦8,500, while 5 calculators and 4 geometry sets cost ₦16,000. Find the cost of one calculator.",
+   "options": [
+    "₦2,500",
+    "₦3,000",
+    "₦1,500",
+    "₦2,000"
+   ],
+   "answer": 3,
+   "explanation": "Let c and g be the costs of a calculator and a geometry set. Solving 2c + 3g = 8500 and 5c + 4g = 16000 gives c = ₦2,000 and g = ₦1,500. The value ₦1,500 is the cost of a geometry set, not a calculator."
+  },
+  {
+   "n": 43,
+   "topic": "Simultaneous equations and inequalities",
+   "q": "Given that x is an integer, which set of values satisfies both 3x + 2 ≥ x + 8 and 5 − 2x > −3?",
+   "options": [
+    "{2, 3}",
+    "{3}",
+    "{4}",
+    "{3, 4}"
+   ],
+   "answer": 1,
+   "explanation": "The first inequality simplifies to x ≥ 3, while the second gives x < 4. Thus the only integer satisfying both is x = 3. The set {3, 4} fails because x = 4 does not make 5 − 2x > −3 true."
+  },
+  {
+   "n": 44,
+   "topic": "Matrices and determinants",
+   "q": "If A = [[3, 1], [k, 2]] and A² = [[10, 5], [5, 5]], find the value of k.",
+   "options": [
+    "−1",
+    "1",
+    "2",
+    "5"
+   ],
+   "answer": 1,
+   "explanation": "Multiplying A by itself gives A² = [[9 + k, 5], [5k, k + 4]]. Comparing the entries with [[10, 5], [5, 5]] yields 9 + k = 10 and 5k = 5, so k = 1. Using k = −1 would make the top-left entry 8, so it does not satisfy the given matrix."
+  },
+  {
+   "n": 45,
+   "topic": "Matrices and determinants",
+   "q": "Find the determinant of M = [[2, 1, 0], [3, −1, 2], [1, 4, 1]].",
+   "options": [
+    "−19",
+    "−11",
+    "19",
+    "5"
+   ],
+   "answer": 0,
+   "explanation": "Expanding along the first row gives 2[(-1)(1) − (2)(4)] − 1[(3)(1) − (2)(1)] = 2(−9) − 1 = −19. The value 19 has the correct magnitude but the wrong sign."
+  },
+  {
+   "n": 46,
+   "topic": "Surds",
+   "q": "Simplify √80 − √45 + √20.",
+   "options": [
+    "5√5",
+    "3√5",
+    "9√5",
+    "√5"
+   ],
+   "answer": 1,
+   "explanation": "√80 = 4√5, √45 = 3√5, and √20 = 2√5. Hence the expression is (4 − 3 + 2)√5 = 3√5. The value 5√5 comes from adding the coefficients incorrectly as 4 + 3 − 2."
+  },
+  {
+   "n": 47,
+   "topic": "Surds",
+   "q": "Simplify (√5 + 1)/(√5 − 1).",
+   "options": [
+    "(3 + √5)/2",
+    "3 + √5",
+    "(√5 + 1)/2",
+    "(3 − √5)/2"
+   ],
+   "answer": 0,
+   "explanation": "Multiply numerator and denominator by (√5 + 1). The numerator becomes (√5 + 1)² = 6 + 2√5, and the denominator becomes 5 − 1 = 4, giving (3 + √5)/2. The expression 3 + √5 is incomplete because the factor 2 in the numerator and denominator was not cancelled out."
+  },
+  {
+   "n": 48,
+   "topic": "Surds",
+   "q": "Solve √(x + 6) + √(x + 1) = 5.",
+   "options": [
+    "6",
+    "2",
+    "10",
+    "3"
+   ],
+   "answer": 3,
+   "explanation": "Let A = √(x + 6) and B = √(x + 1). Since A + B = 5 and A² − B² = 5, we get (A − B)(A + B) = 5, so A − B = 1. Thus A = 3 and B = 2, and x + 6 = 9 gives x = 3."
+  },
+  {
+   "n": 49,
+   "topic": "Number bases",
+   "q": "Convert 173₁₀ to base 6.",
+   "options": [
+    "445₆",
+    "541₆",
+    "345₆",
+    "454₆"
+   ],
+   "answer": 0,
+   "explanation": "173 = 4 × 36 + 4 × 6 + 5 = 4 × 6² + 4 × 6 + 5, so the base-6 representation is 445₆. The arrangement 454₆ would represent 4 × 36 + 5 × 6 + 4 = 178, not 173."
+  },
+  {
+   "n": 50,
+   "topic": "Number bases",
+   "q": "Simplify 402₈ − 137₈, giving your answer in base 8.",
+   "options": [
+    "235₈",
+    "343₈",
+    "243₈",
+    "265₈"
+   ],
+   "answer": 2,
+   "explanation": "Subtracting in base 8 gives 402₈ − 137₈ = 243₈. Checking in decimal, 402₈ = 258 and 137₈ = 95, and 258 − 95 = 163 = 243₈."
+  }
+ ]
+}

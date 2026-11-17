@@ -3,7 +3,7 @@ import type { TFunction } from 'i18next';
 import type home from '@/i18n/locales/en/home';
 
 import { LESSONS, getSubject, matchSubject, subjectName, type Format, type Lesson } from './catalog';
-import { EXAMS, learnerKey, type Personalization } from './personalization';
+import { examLabel, learnerKey, type Personalization } from './personalization';
 
 /** Why a lesson was picked. Turn it into text with reasonText(reason, t). */
 export type RecommendationReason =
@@ -66,7 +66,7 @@ export function recommend(p: Personalization | null, progress: Record<string, nu
   (p?.interests ?? []).forEach((i) => (SUBJECTS_FOR_INTEREST[i] ?? []).forEach((s) => interestSubjects.set(s, i)));
   const formats = new Set((p?.formats ?? []).map((f) => FORMAT_FROM_PREF[f]).filter(Boolean));
   const examLabels = (p?.examGoals ?? [])
-    .map((id) => EXAMS[learnerKey(p?.learnerType ?? null)].find((e) => e.id === id)?.label.split(' ')[0])
+    .map((id) => examLabel(id, learnerKey(p?.learnerType ?? null), p?.region).split(' ')[0])
     .filter(Boolean) as string[];
 
   return LESSONS.filter((l) => (progress[l.id] ?? 0) < 1)

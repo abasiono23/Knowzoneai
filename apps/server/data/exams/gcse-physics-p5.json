@@ -1,0 +1,401 @@
+{
+ "id": "gcse-physics-p5",
+ "exam": "gcse",
+ "subject": "physics",
+ "year": null,
+ "number": 5,
+ "source": "ai",
+ "minutes": 35,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Particle model of matter",
+   "q": "Maya heats a 0.75 kg sample of a solid at its melting point. The solid completely melts after absorbing 1.8 × 10⁵ J of energy. What is the specific latent heat of fusion of the solid?",
+   "options": [
+    "2.4 × 10⁴ J/kg",
+    "1.35 × 10⁵ J/kg",
+    "2.4 × 10⁵ J/kg",
+    "3.6 × 10⁵ J/kg"
+   ],
+   "answer": 2,
+   "explanation": "While melting, the energy supplied is used to overcome forces between particles rather than to raise the temperature, so L = Q ÷ m = (1.8 × 10⁵ J) ÷ 0.75 kg = 2.4 × 10⁵ J/kg. Multiplying by the mass instead of dividing gives 1.35 × 10⁵ J/kg, which is not the specific latent heat."
+  },
+  {
+   "n": 2,
+   "topic": "Particle model of matter",
+   "q": "A fixed mass of gas is slowly compressed at a constant temperature. Which description is correct?",
+   "options": [
+    "The average distance between the gas molecules stays the same, and their average speed increases.",
+    "The average distance between the gas molecules decreases, and their average speed increases.",
+    "The average distance between the gas molecules decreases, and their average speed stays the same.",
+    "The average distance between the gas molecules decreases, and their average speed decreases."
+   ],
+   "answer": 2,
+   "explanation": "Compressing the gas reduces its volume, so the molecules are on average closer together. Since the temperature is constant, the average kinetic energy and average speed of the molecules stay the same, although more frequent collisions with the walls increase the pressure."
+  },
+  {
+   "n": 3,
+   "topic": "Particle model of matter",
+   "q": "Rohan heats a 2.0 kg block of aluminium from 18 °C to 68 °C. The block absorbs 9.0 × 10⁴ J of energy. What is the specific heat capacity of the aluminium?",
+   "options": [
+    "450 J/(kg °C)",
+    "900 J/(kg °C)",
+    "1 800 J/(kg °C)",
+    "4.5 × 10⁴ J/(kg °C)"
+   ],
+   "answer": 1,
+   "explanation": "The temperature rise is 68 °C − 18 °C = 50 °C. Using E = mcΔθ gives c = E ÷ (mΔθ) = (9.0 × 10⁴ J) ÷ (2.0 kg × 50 °C) = 900 J/(kg °C). Leaving out the mass gives 1 800 J/(kg °C), while using a 100 °C rise gives 450 J/(kg °C)."
+  },
+  {
+   "n": 4,
+   "topic": "Atomic structure and radioactivity",
+   "q": "A neutral atom of fluorine-19 has atomic number 9. How many neutrons are in its nucleus and how many electrons orbit the nucleus?",
+   "options": [
+    "19 neutrons and 9 electrons",
+    "10 neutrons and 10 electrons",
+    "9 neutrons and 10 electrons",
+    "10 neutrons and 9 electrons"
+   ],
+   "answer": 3,
+   "explanation": "The atomic number is the number of protons, so fluorine-19 has 9 protons and a neutral atom has 9 electrons. The mass number is protons plus neutrons, so neutrons = 19 − 9 = 10."
+  },
+  {
+   "n": 5,
+   "topic": "Atomic structure and radioactivity",
+   "q": "A smoke detector contains a small amount of americium-241, which emits alpha particles. Why is an alpha emitter suitable for this use?",
+   "options": [
+    "The alpha particles are uncharged, so they do not affect the smoke or the air.",
+    "The alpha particles ionise the air over a short range, and smoke reduces the ion current so the alarm sounds.",
+    "The alpha particles travel many metres through air, allowing one detector to cover a whole building.",
+    "The alpha particles pass easily through smoke and reach a sensor on the other side of the room."
+   ],
+   "answer": 1,
+   "explanation": "Alpha particles are strongly ionising but have a very short range in air, so they ionise air inside the detector and are stopped by the casing. Smoke reduces the ionisation current, which triggers the alarm; if alpha radiation travelled many metres or were uncharged, it would not work in this way."
+  },
+  {
+   "n": 6,
+   "topic": "Magnetism and electromagnetism",
+   "q": "An ideal step-down transformer is connected to an alternating current supply. Which statement about the transformer is correct?",
+   "options": [
+    "It increases the potential difference and decreases the current, so it acts as a step-up transformer.",
+    "It changes the frequency of the alternating current from 50 Hz to a lower value.",
+    "It decreases the potential difference and increases the current, so the output power equals the input power.",
+    "It decreases the potential difference and decreases the current, so the output power is less than the input power."
+   ],
+   "answer": 2,
+   "explanation": "For an ideal transformer, input power equals output power, so P = VI means that a smaller output potential difference must come with a larger output current. A step-down transformer reduces potential difference; it does not change the frequency of the alternating current."
+  },
+  {
+   "n": 7,
+   "topic": "Magnetism and electromagnetism",
+   "q": "A loudspeaker is connected to an alternating current signal. Which statement best explains how the loudspeaker produces sound?",
+   "options": [
+    "A changing magnetic field induces a current in the cone, which makes the cone vibrate.",
+    "The coil heats the air and creates pressure waves by thermal expansion.",
+    "The permanent magnet attracts the cone in time with the current, producing sound.",
+    "The alternating current in the coil experiences a repeatedly reversing magnetic force in the permanent magnetic field, making the cone vibrate."
+   ],
+   "answer": 3,
+   "explanation": "The coil carries an alternating current and sits in a magnetic field, so the motor effect produces a force on it. As the current reverses, the force reverses, making the coil and attached cone vibrate and create sound waves in the air. The electromagnetic induction description is the reverse process used in a microphone."
+  },
+  {
+   "n": 8,
+   "topic": "Forces and motion",
+   "q": "A book rests on a table. The Earth pulls the book downwards with a gravitational force. Which force is the Newton's third-law pair to this force?",
+   "options": [
+    "The book pulls the Earth upwards with a gravitational force.",
+    "The book pushes the table downwards with a normal force.",
+    "The table pushes the Earth downwards with a normal force.",
+    "The table pushes the book upwards with a normal force."
+   ],
+   "answer": 0,
+   "explanation": "Newton's third-law forces act on different objects and are the same type of force. The Earth pulls the book downwards by gravity, so the pair is the book pulling the Earth upwards by gravity; the normal forces between the book and table form separate pairs and balance the book's weight in this situation."
+  },
+  {
+   "n": 9,
+   "topic": "Forces and motion",
+   "q": "A van of mass 1 500 kg has a forward driving force of 6 000 N. The total resistive force acting on it is 1 500 N. What is the acceleration of the van?",
+   "options": [
+    "1.0 m/s²",
+    "3.0 m/s²",
+    "4.0 m/s²",
+    "5.0 m/s²"
+   ],
+   "answer": 1,
+   "explanation": "The resultant force is 6 000 N − 1 500 N = 4 500 N. Using F = ma gives a = F ÷ m = 4 500 N ÷ 1 500 kg = 3.0 m/s². Using only the driving force gives 4.0 m/s², and using only the resistive force gives 1.0 m/s²."
+  },
+  {
+   "n": 10,
+   "topic": "Forces and motion",
+   "q": "For a car with the same braking force, its braking distance at 20 m/s is 30 m. What is its braking distance at 30 m/s?",
+   "options": [
+    "90 m",
+    "67.5 m",
+    "45 m",
+    "60 m"
+   ],
+   "answer": 1,
+   "explanation": "The kinetic energy to be removed is proportional to speed squared, and for the same braking force the braking distance is proportional to the kinetic energy. So the distance becomes 30 m × (30 ÷ 20)² = 30 × 2.25 = 67.5 m. Using a simple ratio of speeds would wrongly give 45 m."
+  },
+  {
+   "n": 11,
+   "topic": "Energy",
+   "q": "A student lifts a box of mass 2.5 kg at constant speed from the floor onto a shelf 1.8 m above the floor. Gravitational field strength is 10 N/kg. How much work is done against gravity in lifting the box?",
+   "options": [
+    "450 J",
+    "45 J",
+    "18 J",
+    "4.5 J"
+   ],
+   "answer": 1,
+   "explanation": "The force needed to lift the box at constant speed is its weight, 2.5 × 10 = 25 N. Work = force × distance = 25 × 1.8 = 45 J. Multiplying mass by height only gives 4.5 J, and using only gravitational field strength × height gives 18 J."
+  },
+  {
+   "n": 12,
+   "topic": "Energy",
+   "q": "A ball is released from rest. By a certain point in its fall, its gravitational potential energy store has decreased by 30 J and its kinetic energy store has increased by 18 J. How much energy has been transferred to the surroundings by air resistance?",
+   "options": [
+    "12 J",
+    "30 J",
+    "18 J",
+    "48 J"
+   ],
+   "answer": 0,
+   "explanation": "Energy conservation gives: decrease in gravitational potential energy = increase in kinetic energy + energy transferred by air resistance. So 30 = 18 + energy transferred, giving 12 J. Adding the values would give 48 J and would wrongly create energy."
+  },
+  {
+   "n": 13,
+   "topic": "Energy",
+   "q": "Which energy resource is renewable and generates electricity directly from light using photovoltaic cells?",
+   "options": [
+    "Wind",
+    "Coal",
+    "Solar energy",
+    "Uranium"
+   ],
+   "answer": 2,
+   "explanation": "Photovoltaic cells in solar panels convert light directly into electrical energy, and sunlight is renewable. Wind is renewable but drives turbines rather than photovoltaic cells, while coal and uranium are non-renewable."
+  },
+  {
+   "n": 14,
+   "topic": "Electricity",
+   "q": "A torch bulb is connected to a 3.0 V battery. In 2.0 minutes, 18 C of charge flows through the bulb. What is the average power of the bulb?",
+   "options": [
+    "54 W",
+    "27 W",
+    "0.45 W",
+    "0.15 W"
+   ],
+   "answer": 2,
+   "explanation": "Energy transferred = charge × potential difference = 18 × 3.0 = 54 J. The time is 2.0 minutes = 120 s, so average power = 54 ÷ 120 = 0.45 W. Using 2.0 s instead of 120 s gives 27 W, and 18 ÷ 120 gives the current 0.15 A, not the power."
+  },
+  {
+   "n": 15,
+   "topic": "Electricity",
+   "q": "A student wants to measure the current through a resistor and the potential difference across it while the resistor is in a circuit. Which arrangement is correct?",
+   "options": [
+    "An ammeter in series with the resistor and a voltmeter in series with the resistor",
+    "An ammeter in parallel with the resistor and a voltmeter in parallel with the resistor",
+    "An ammeter in series with the resistor and a voltmeter in parallel with the resistor",
+    "An ammeter in parallel with the resistor and a voltmeter in series with the resistor"
+   ],
+   "answer": 2,
+   "explanation": "An ammeter measures current, so it must be connected in series so the current passes through it. A voltmeter measures potential difference, so it must be connected in parallel across the component. Connecting an ammeter in parallel can allow a large current and is not correct."
+  },
+  {
+   "n": 16,
+   "topic": "Space physics",
+   "q": "A rover has a mass of 370 kg on Mars. The gravitational field strength on Mars is 3.7 N/kg. What is the weight of the rover on Mars?",
+   "options": [
+    "1 369 N",
+    "370 N",
+    "100 N",
+    "3.7 N"
+   ],
+   "answer": 0,
+   "explanation": "Weight is the gravitational force on the object: weight = mass × gravitational field strength = 370 × 3.7 = 1 369 N. Mass stays 370 kg on Mars, but it is not the weight. Dividing 370 by 3.7 gives 100, which is not the correct operation."
+  },
+  {
+   "n": 17,
+   "topic": "Space physics",
+   "q": "Which statement describes the cosmic microwave background radiation?",
+   "options": [
+    "Visible light from distant galaxies that has been stretched to microwave wavelengths by the Sun",
+    "Microwave radiation received from all directions, interpreted as leftover radiation from the early Universe",
+    "Radio waves produced by black holes as they form",
+    "Microwaves emitted only by stars in the Milky Way"
+   ],
+   "answer": 1,
+   "explanation": "Evidence for the Big Bang includes a faint microwave signal coming from every direction. It is interpreted as radiation from the hot early Universe stretched into microwaves as the Universe expanded. It is not emitted only by stars, and it is not produced by the Sun or black holes in the ways listed."
+  },
+  {
+   "n": 18,
+   "topic": "Waves",
+   "q": "Two sound waves reach a student. They have the same frequency, but the second has a larger amplitude. What is different about the second sound?",
+   "options": [
+    "It is louder.",
+    "It has a higher pitch.",
+    "It has a longer wavelength.",
+    "It travels faster through the air."
+   ],
+   "answer": 0,
+   "explanation": "The amplitude of a sound wave determines its loudness. Frequency determines pitch, and because both sounds have the same frequency in the same medium, their pitch, speed and wavelength are unchanged."
+  },
+  {
+   "n": 19,
+   "topic": "Waves",
+   "q": "Ultraviolet radiation can damage living cells. Which property of ultraviolet radiation best explains this?",
+   "options": [
+    "It is a longitudinal wave, so it can vibrate cells more strongly.",
+    "It can ionise atoms by removing electrons from them.",
+    "It has a longer wavelength than visible light, so it carries more energy.",
+    "It is the only electromagnetic wave that travels at the speed of light."
+   ],
+   "answer": 1,
+   "explanation": "Ultraviolet radiation can damage living cells because it is ionising: its photons have enough energy to remove electrons from atoms or molecules. All electromagnetic waves travel at the speed of light in a vacuum, ultraviolet has a shorter wavelength than visible light, and electromagnetic waves are transverse, not longitudinal."
+  },
+  {
+   "n": 20,
+   "topic": "Particle model of matter",
+   "q": "A 0.50 kg sample of steam at 100 °C condenses to water at 100 °C. The specific latent heat of vaporisation of water is 2.3 × 10⁶ J/kg. How much energy is released by the steam?",
+   "options": [
+    "2.30 × 10⁶ J",
+    "1.15 × 10⁵ J",
+    "4.60 × 10⁶ J",
+    "1.15 × 10⁶ J"
+   ],
+   "answer": 3,
+   "explanation": "Use Q = m × L = 0.50 × 2.3 × 10⁶ = 1.15 × 10⁶ J. The value 2.30 × 10⁶ J is the energy per kilogram, not the energy for 0.50 kg, so the mass must be included."
+  },
+  {
+   "n": 21,
+   "topic": "Particle model of matter",
+   "q": "A copper block has a specific heat capacity of 390 J/(kg °C). An iron block has a specific heat capacity of 450 J/(kg °C). The blocks have equal mass and each absorbs the same amount of thermal energy, with no energy lost to the surroundings. Which statement explains which block has the greater temperature rise?",
+   "options": [
+    "The copper block, because its lower specific heat capacity means less energy is needed to raise 1 kg by 1 °C.",
+    "The iron block, because its higher specific heat capacity means it stores more thermal energy.",
+    "The copper block, because copper is a better thermal conductor than iron.",
+    "Neither block, because equal mass and equal energy absorbed always give equal temperature rise."
+   ],
+   "answer": 0,
+   "explanation": "Rearranging Q = m × c × ΔT gives ΔT = Q ÷ (m × c). For the same energy Q and mass m, the smaller specific heat capacity of copper gives the larger temperature rise; thermal conductivity affects the rate of heating rather than the final rise for the same energy absorbed."
+  },
+  {
+   "n": 22,
+   "topic": "Atomic structure and radioactivity",
+   "q": "Chlorine-35 and chlorine-37 are two isotopes of chlorine. Which statement about a neutral atom of each isotope is correct?",
+   "options": [
+    "They have the same number of neutrons but different numbers of protons.",
+    "They have the same number of protons and the same number of neutrons.",
+    "They have the same number of protons but different numbers of neutrons.",
+    "They have different numbers of protons but the same mass number."
+   ],
+   "answer": 2,
+   "explanation": "Isotopes of the same element have the same proton number, so neutral atoms have the same number of electrons as each other. Chlorine-35 has 18 neutrons and chlorine-37 has 20 neutrons, while both have 17 protons."
+  },
+  {
+   "n": 23,
+   "topic": "Atomic structure and radioactivity",
+   "q": "The activity of a sample of radon-222 is 800 Bq. Its half-life is 3.8 days. What is the expected activity after 11.4 days?",
+   "options": [
+    "267 Bq",
+    "100 Bq",
+    "200 Bq",
+    "50 Bq"
+   ],
+   "answer": 1,
+   "explanation": "11.4 days is 3.0 half-lives because 11.4 ÷ 3.8 = 3. The activity halves three times: 800 → 400 → 200 → 100 Bq, so 267 Bq is the result of dividing by 3 instead of halving repeatedly."
+  },
+  {
+   "n": 24,
+   "topic": "Atomic structure and radioactivity",
+   "q": "A uranium-238 nucleus, with atomic number 92 and mass number 238, emits an alpha particle. Which nucleus is produced?",
+   "options": [
+    "thorium-234, with atomic number 90 and mass number 234",
+    "radium-234, with atomic number 88 and mass number 234",
+    "uranium-234, with atomic number 92 and mass number 234",
+    "thorium-238, with atomic number 90 and mass number 238"
+   ],
+   "answer": 0,
+   "explanation": "An alpha particle has mass number 4 and atomic number 2. Alpha emission reduces the mass number by 4 and the atomic number by 2: 238 − 4 = 234 and 92 − 2 = 90, giving thorium-234."
+  },
+  {
+   "n": 25,
+   "topic": "Magnetism and electromagnetism",
+   "q": "Two bar magnets are placed with the north pole of one facing the south pole of the other, with a small gap between them. Which description of the magnetic field in the gap is correct?",
+   "options": [
+    "The field lines run from the north pole towards the south pole and are close together, showing a strong field.",
+    "There is no magnetic field in the gap because the poles attract each other.",
+    "The field lines run from the south pole towards the north pole and are close together, showing a strong field.",
+    "The field lines run from the north pole towards the south pole and are widely spaced, showing a weak field."
+   ],
+   "answer": 0,
+   "explanation": "Outside a magnet, magnetic field lines run from north to south. Unlike poles attract, and the field is strongest where the lines are closest together, so the lines are close together in the gap."
+  },
+  {
+   "n": 26,
+   "topic": "Magnetism and electromagnetism",
+   "q": "A relay uses an electromagnet to close a switch. Which property of an electromagnet makes it suitable for this job?",
+   "options": [
+    "It can attract only non-magnetic materials.",
+    "Its magnetic field strength is not affected by the size of the current.",
+    "Its magnetic field can be switched on and off by controlling the current.",
+    "Its magnetic field is always present without a current."
+   ],
+   "answer": 2,
+   "explanation": "A relay needs a magnetic field only when the circuit is switched on, and an electromagnet provides a magnetic field when current flows. Reversing or changing the current can change the field, and the field is stronger with a larger current."
+  },
+  {
+   "n": 27,
+   "topic": "Forces and motion",
+   "q": "A distance–time graph for a runner is a straight line from 0 s, 0 m to 8 s, 40 m, then a horizontal line from 8 s to 12 s. What is her speed from 0 s to 8 s and what is she doing between 8 s and 12 s?",
+   "options": [
+    "0.20 m/s and stationary",
+    "8 m/s and stationary",
+    "5 m/s and moving at a constant 5 m/s",
+    "5 m/s and stationary"
+   ],
+   "answer": 3,
+   "explanation": "Speed is distance ÷ time, so 40 m ÷ 8 s = 5 m/s. A horizontal distance–time line means the distance is not changing, so the runner is stationary between 8 s and 12 s."
+  },
+  {
+   "n": 28,
+   "topic": "Forces and motion",
+   "q": "A cyclist and bicycle have a combined mass of 80 kg. They travel at a constant speed of 6.0 m/s. What is their kinetic energy?",
+   "options": [
+    "1 440 J",
+    "480 J",
+    "2 880 J",
+    "240 J"
+   ],
+   "answer": 0,
+   "explanation": "Use kinetic energy = ½ × mass × speed² = ½ × 80 × 6.0² = 1 440 J. Multiplying mass by speed only gives 480 J, but the speed must be squared and the result halved."
+  },
+  {
+   "n": 29,
+   "topic": "Forces and motion",
+   "q": "A ball is dropped from rest from a height of 3.2 m. Ignore air resistance. Take g = 10 N/kg. What is the speed of the ball just before it hits the ground?",
+   "options": [
+    "64 m/s",
+    "8.0 m/s",
+    "5.7 m/s",
+    "32 m/s"
+   ],
+   "answer": 1,
+   "explanation": "The gravitational potential energy lost equals the kinetic energy gained: m × g × h = ½ × m × v². Cancelling mass gives v = √(2 × 10 × 3.2) = √64 = 8.0 m/s; 64 m/s is the value of v² before taking the square root."
+  },
+  {
+   "n": 30,
+   "topic": "Energy",
+   "q": "A 0.40 kg aluminium block cools from 80 °C to 20 °C. The specific heat capacity of aluminium is 900 J/(kg °C). How much thermal energy is transferred to the surroundings as the block cools?",
+   "options": [
+    "7.2 kJ",
+    "21.6 kJ",
+    "28.8 kJ",
+    "2.16 kJ"
+   ],
+   "answer": 1,
+   "explanation": "Temperature change = 80 °C − 20 °C = 60 °C. Energy transferred = mass × specific heat capacity × temperature change = 0.40 × 900 × 60 = 21 600 J = 21.6 kJ. The value 28.8 kJ comes from using the initial temperature of 80 °C instead of the fall of 60 °C."
+  }
+ ]
+}

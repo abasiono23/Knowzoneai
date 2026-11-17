@@ -48,6 +48,7 @@ const settings = {
     activeCount_one: '{{count}} active',
     activeCount_other: '{{count}} active',
     language: 'Language',
+    region: 'Study region',
     appearance: 'Appearance',
     privacy: 'Privacy',
     downloadData: 'Download my data',
@@ -92,6 +93,11 @@ const settings = {
     reduceMotionHint: 'Fewer moving animations across the app',
     haptics: 'Vibration in games',
     hapticsHint: 'Haptic feedback in Knowzone World',
+  },
+  region: {
+    title: 'Study region',
+    intro: 'Choose the country you study in. Knowzone shows that country’s exam practice first, and your AI tutor follows its exams.',
+    footer: 'Your scores stay when you change country, and you can open other countries’ papers from the exam practice page.',
   },
   language: {
     title: 'Language',

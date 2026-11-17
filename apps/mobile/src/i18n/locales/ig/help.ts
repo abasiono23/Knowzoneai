@@ -768,7 +768,7 @@ const help: Translation<typeof en> = {
             body: ['Ihe AI mepụtara nwere ike:'],
             bullets: [
               'Inwe mmejọ n’eziokwu, karịsịa na mgbakọ, ụbọchị na ọnụọgụ',
-              'Ịhapụ nkọwa sitere n’usoro ọmụmụ gị kpọmkwem ma ọ bụ ndị na-ese ule (WAEC, NECO, JAMB)',
+              'Ịhapụ nkọwa sitere n’usoro ọmụmụ gị kpọmkwem ma ọ bụ ndị na-ese ule (WAEC, SAT, GCSE…)',
               'Ịgụhie aka ọdịde, foto na-edoghị anya ma ọ bụ eserese siri ike',
               'Ghara ịmata ihe mere n’oge na-adịbeghị anya ma ọ bụ mgbanwe usoro ọmụmụ',
               'Ịda ka o nwere obi ike ọbụna mgbe ọ hiere ụzọ',

@@ -1,12 +1,26 @@
 import { post, request } from '@/lib/api';
 
 /**
- * Past Questions (JAMB, WAEC, NECO). Papers come from the server: AI practice papers in each exam's
- * format (numbered, never given a year) and licensed real papers under the year they were set.
+ * Past Questions (JAMB, WAEC, NECO) and exam practice (SAT, ACT, AP, GCSE, A-level, KCSE, Matric). Papers come from the server: AI
+ * practice papers (numbered, never given a year) and licensed real papers under the year they were
+ * set. Which exams a student sees first follows their study region (lib/region.ts).
  */
-export type ExamId = 'jamb' | 'waec' | 'neco';
-export const EXAM_IDS: ExamId[] = ['jamb', 'waec', 'neco'];
+export type ExamId = 'jamb' | 'waec' | 'neco' | 'sat' | 'act' | 'ap' | 'gcse' | 'alevel' | 'kcse' | 'nsc';
+export const EXAM_IDS: ExamId[] = ['jamb', 'waec', 'neco', 'sat', 'act', 'ap', 'gcse', 'alevel', 'kcse', 'nsc'];
+export const isExamId = (id: unknown): id is ExamId => EXAM_IDS.includes(id as ExamId);
+/**
+ * Every exam but the West African ones is our own practice, never "past questions". SAT and ACT
+ * papers follow the test's sections and timing; AP ones practise the multiple-choice section only;
+ * GCSE, A-level, KCSE and Matric ones are topic quizzes (those exams are mostly written answers).
+ */
+export const isPracticeOnly = (exam: ExamId) => exam !== 'jamb' && exam !== 'waec' && exam !== 'neco';
+/** Topic quizzes: practice that isn't in the exam's own format, so nothing may say "like the real exam". */
+export const isTopicQuiz = (exam: ExamId) => exam === 'gcse' || exam === 'alevel' || exam === 'kcse' || exam === 'nsc';
 export type ExamSubjectId =
+  | 'reading-writing'
+  | 'math'
+  | 'maths'
+  | 'english-language'
   | 'english'
   | 'mathematics'
   | 'physics'
@@ -16,7 +30,15 @@ export type ExamSubjectId =
   | 'government'
   | 'literature'
   | 'geography'
-  | 'commerce';
+  | 'commerce'
+  | 'reading'
+  | 'science'
+  | 'calculus-ab'
+  | 'physics-1'
+  | 'us-history'
+  | 'physical-sciences'
+  | 'life-sciences'
+  | 'accounting';
 
 export const SUBJECT_ICONS: Record<ExamSubjectId, { icon: string; color: string }> = {
   english: { icon: 'text', color: '#4CC9FF' },
@@ -29,9 +51,38 @@ export const SUBJECT_ICONS: Record<ExamSubjectId, { icon: string; color: string 
   literature: { icon: 'book', color: '#E79BFF' },
   geography: { icon: 'earth', color: '#5AD1A0' },
   commerce: { icon: 'cart', color: '#FFB86B' },
+  'reading-writing': { icon: 'book', color: '#4CC9FF' },
+  math: { icon: 'calculator', color: '#9B82FF' },
+  maths: { icon: 'calculator', color: '#9B82FF' },
+  'english-language': { icon: 'text', color: '#4CC9FF' },
+  reading: { icon: 'book', color: '#E79BFF' },
+  science: { icon: 'flask', color: '#2DD4BF' },
+  'calculus-ab': { icon: 'calculator', color: '#9B82FF' },
+  'physics-1': { icon: 'magnet', color: '#FF9F43' },
+  'us-history': { icon: 'business', color: '#FF7A93' },
+  'physical-sciences': { icon: 'magnet', color: '#FF9F43' },
+  'life-sciences': { icon: 'leaf', color: '#7CE38B' },
+  accounting: { icon: 'trending-up', color: '#FFC857' },
+};
+/** The subjects of each exam, in the server's order (the quiz battle picker needs them offline). */
+const SSCE: ExamSubjectId[] = ['english', 'mathematics', 'physics', 'chemistry', 'biology', 'economics', 'government', 'literature', 'geography', 'commerce'];
+export const EXAM_SUBJECTS: Record<ExamId, ExamSubjectId[]> = {
+  jamb: SSCE,
+  waec: SSCE,
+  neco: SSCE,
+  sat: ['reading-writing', 'math'],
+  act: ['english', 'math', 'reading', 'science'],
+  ap: ['calculus-ab', 'biology', 'chemistry', 'physics-1', 'us-history', 'english-language'],
+  gcse: ['maths', 'english-language', 'biology', 'chemistry', 'physics'],
+  alevel: ['maths', 'biology', 'chemistry', 'physics', 'economics'],
+  kcse: ['mathematics', 'english', 'biology', 'chemistry', 'physics'],
+  nsc: ['mathematics', 'physical-sciences', 'life-sciences', 'accounting', 'geography'],
 };
 
 export type ExamsOverview = {
+  /** The study region the server answered for, and that region's exams (servers before regions send neither). */
+  region?: string;
+  regionExams?: ExamId[];
   exams: {
     id: ExamId;
     subjects: { id: ExamSubjectId; papers: number; years: number[]; questions: number }[];

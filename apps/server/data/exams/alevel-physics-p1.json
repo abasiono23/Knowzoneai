@@ -1,0 +1,401 @@
+{
+ "id": "alevel-physics-p1",
+ "exam": "alevel",
+ "subject": "physics",
+ "year": null,
+ "number": 1,
+ "source": "ai",
+ "minutes": 40,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Magnetic fields and electromagnetic induction",
+   "q": "Ciarán rotates a rectangular coil of 200 turns and area 2.5 × 10⁻³ m² at 50 revolutions per second in a uniform magnetic field of flux density 0.040 T. The axis of rotation is perpendicular to the field. What is the peak induced emf in the coil?",
+   "options": [
+    "2π V",
+    "100π V",
+    "20π V",
+    "π V"
+   ],
+   "answer": 0,
+   "explanation": "For a coil rotating in a uniform field, the peak emf is NABω. The angular frequency is ω = 2πf = 2π × 50 = 100π rad s⁻¹, so ε₀ = 200 × 0.040 × 2.5 × 10⁻³ × 100π = 2π V. The maximum emf occurs when the flux through the coil is changing most rapidly."
+  },
+  {
+   "n": 2,
+   "topic": "Magnetic fields and electromagnetic induction",
+   "q": "Two long straight parallel wires in air are 10 cm apart. Wire P carries 5.0 A and wire Q carries 2.0 A in the opposite direction. What is the force per unit length on wire P, and is it attractive or repulsive? Use μ₀ = 4π × 10⁻⁷ N A⁻².",
+   "options": [
+    "2.0 × 10⁻⁵ N m⁻¹, repulsive",
+    "2.0 × 10⁻⁵ N m⁻¹, attractive",
+    "2.0 × 10⁻⁴ N m⁻¹, repulsive",
+    "4.0 × 10⁻⁵ N m⁻¹, attractive"
+   ],
+   "answer": 0,
+   "explanation": "The force per unit length between parallel currents is F/L = μ₀I₁I₂/(2πd). With d = 0.10 m, F/L = (4π × 10⁻⁷ × 5.0 × 2.0)/(2π × 0.10) = 2.0 × 10⁻⁵ N m⁻¹. Wires carrying currents in opposite directions repel each other."
+  },
+  {
+   "n": 3,
+   "topic": "Nuclear physics",
+   "q": "A freshly prepared sample in a Birmingham hospital contains 4.8 × 10¹⁴ nuclei of a radionuclide with half-life 13.0 hours. Using λ = ln 2 / T₁/₂, what is the initial activity? Take ln 2 = 0.693 and 1 hour = 3600 s.",
+   "options": [
+    "2.6 × 10¹³ Bq",
+    "1.0 × 10¹⁰ Bq",
+    "3.6 × 10⁹ Bq",
+    "7.1 × 10⁹ Bq"
+   ],
+   "answer": 3,
+   "explanation": "The half-life in seconds is 13.0 × 3600 = 46800 s, so λ = 0.693/46800 = 1.48 × 10⁻⁵ s⁻¹. Activity is A = λN = 1.48 × 10⁻⁵ × 4.8 × 10¹⁴ = 7.1 × 10⁹ Bq. Omitting ln 2 gives about 1.0 × 10¹⁰ Bq, while using hours as if they were seconds gives about 2.6 × 10¹³ Bq."
+  },
+  {
+   "n": 4,
+   "topic": "Nuclear physics",
+   "q": "The mass of a helium-4 nucleus is 4.0015 u. A proton has mass 1.0073 u and a neutron has mass 1.0087 u. Using 1 u = 931.5 MeV, what is the binding energy per nucleon of helium-4?",
+   "options": [
+    "0.0305 MeV",
+    "14.2 MeV",
+    "7.10 MeV",
+    "28.4 MeV"
+   ],
+   "answer": 2,
+   "explanation": "The mass defect is (2 × 1.0073 + 2 × 1.0087) − 4.0015 = 0.0305 u. The total binding energy is 0.0305 × 931.5 = 28.4 MeV. Helium-4 has four nucleons, so the binding energy per nucleon is 28.4/4 = 7.10 MeV."
+  },
+  {
+   "n": 5,
+   "topic": "Waves and optics",
+   "q": "In a Young’s double-slit experiment, monochromatic light of wavelength 590 nm is used. The slit separation is 0.30 mm and the screen is 2.4 m from the slits. What is the spacing between adjacent bright fringes?",
+   "options": [
+    "4.7 cm",
+    "0.47 mm",
+    "9.4 mm",
+    "4.7 mm"
+   ],
+   "answer": 3,
+   "explanation": "The fringe spacing is w = λD/s. Converting to SI units gives w = (590 × 10⁻⁹ × 2.4)/(0.30 × 10⁻³) = 4.72 × 10⁻³ m, which is 4.7 mm. A separation of 9.4 mm corresponds to twice the adjacent-fringe spacing."
+  },
+  {
+   "n": 6,
+   "topic": "Waves and optics",
+   "q": "Light travels along a step-index optical fibre with core refractive index 1.50 and cladding refractive index 1.45. What is the critical angle at the core–cladding boundary, to 3 significant figures?",
+   "options": [
+    "75.2°",
+    "14.8°",
+    "65.4°",
+    "41.8°"
+   ],
+   "answer": 0,
+   "explanation": "At the critical angle, n_core sin C = n_cladding sin 90°, so sin C = 1.45/1.50 = 0.9667. Therefore C = sin⁻¹(0.9667) = 75.2°. The critical angle is measured from the normal; 14.8° is the complementary angle to the boundary."
+  },
+  {
+   "n": 7,
+   "topic": "Waves and optics",
+   "q": "A string of length 1.20 m is fixed at both ends. It has mass per unit length 2.5 × 10⁻³ kg m⁻¹ and is under tension 36 N. What is the frequency of its second harmonic?",
+   "options": [
+    "100 Hz",
+    "50 Hz",
+    "150 Hz",
+    "200 Hz"
+   ],
+   "answer": 0,
+   "explanation": "The wave speed is v = √(T/μ) = √(36/2.5 × 10⁻³) = √14400 = 120 m s⁻¹. For the second harmonic on a string fixed at both ends, the wavelength is λ = 2L/2 = L = 1.20 m, so f = v/λ = 120/1.20 = 100 Hz. The 50 Hz value is the fundamental frequency."
+  },
+  {
+   "n": 8,
+   "topic": "Measurements and uncertainties",
+   "q": "Priya measures a rectangular metal block. Its mass is 150.0 g ± 0.1 g and its side lengths are 2.00 cm ± 0.01 cm, 3.00 cm ± 0.01 cm and 5.00 cm ± 0.01 cm. What is the percentage uncertainty in the calculated density?",
+   "options": [
+    "1.1%",
+    "0.64%",
+    "1.0%",
+    "1.5%"
+   ],
+   "answer": 0,
+   "explanation": "Density is mass divided by the product of the three side lengths, so the percentage uncertainties add. These are 0.067% for mass, 0.5%, 0.333% and 0.2% for the sides, giving a total of about 1.1%. Combining the percentage uncertainties in quadrature would give about 0.64%, but that is not the method used here."
+  },
+  {
+   "n": 9,
+   "topic": "Measurements and uncertainties",
+   "q": "Nia plots a graph of log₁₀ T against log₁₀ m to test the relationship T = k m^p. The line of best fit is straight with gradient 0.50 and intercept 0.30 on the log₁₀ T axis. Which equation is consistent with the graph?",
+   "options": [
+    "T = 0.30 m^0.50",
+    "T = 2.0 m^0.50",
+    "T = 2.0 m^0.30",
+    "T = 0.30 m^2.0"
+   ],
+   "answer": 1,
+   "explanation": "Taking logarithms gives log₁₀ T = p log₁₀ m + log₁₀ k. The gradient is p = 0.50 and the intercept is log₁₀ k = 0.30, so k = 10^0.30 ≈ 2.0. Therefore T = 2.0 m^0.50; using 0.30 as the coefficient would confuse log₁₀ k with k."
+  },
+  {
+   "n": 10,
+   "topic": "Materials",
+   "q": "In a laboratory in Swansea, a metal wire obeys Hooke’s law and has a force–extension graph that is a straight line through the origin. When the extension is 4.0 mm, the tension is 120 N. How much elastic strain energy is stored in the wire at this extension?",
+   "options": [
+    "0.48 J",
+    "0.24 J",
+    "240 J",
+    "0.12 J"
+   ],
+   "answer": 1,
+   "explanation": "The energy stored is the area under the force–extension graph: 1/2 × 120 N × 4.0 × 10⁻³ m = 0.24 J. The value 0.48 J comes from forgetting the factor of one half, and 240 J comes from using 4.0 m rather than 4.0 mm."
+  },
+  {
+   "n": 11,
+   "topic": "Materials",
+   "q": "Two wires are made from the same metal. One wire has twice the length and twice the diameter of the other. For small extensions, the force constant k, where F = kx, of the thicker and longer wire divided by that of the other wire is",
+   "options": [
+    "8",
+    "1/2",
+    "2",
+    "4"
+   ],
+   "answer": 2,
+   "explanation": "For a wire, k = EA/L. Doubling the diameter makes the cross-sectional area four times larger, while doubling the length makes the length twice as large, so the force constant is multiplied by 4/2 = 2."
+  },
+  {
+   "n": 12,
+   "topic": "Electricity",
+   "q": "Kai measures a metal wire of length 2.00 m, diameter 0.500 mm and resistance 3.40 Ω. What is the resistivity of the metal?",
+   "options": [
+    "6.68 × 10⁻⁷ Ω m",
+    "3.34 × 10⁻⁷ Ω m",
+    "1.34 × 10⁻⁶ Ω m",
+    "1.67 × 10⁻⁷ Ω m"
+   ],
+   "answer": 1,
+   "explanation": "The cross-sectional area is πd²/4 = π(5.00 × 10⁻⁴)²/4 = 1.96 × 10⁻⁷ m². Then ρ = RA/L = (3.40 × 1.96 × 10⁻⁷)/2.00 = 3.34 × 10⁻⁷ Ω m. The value 1.34 × 10⁻⁶ Ω m comes from omitting the division by 4 in the area formula."
+  },
+  {
+   "n": 13,
+   "topic": "Electricity",
+   "q": "Rhys connects a battery of electromotive force 12.0 V and internal resistance 0.80 Ω in series with a 4.00 Ω resistor. What is the terminal potential difference of the battery?",
+   "options": [
+    "12.0 V",
+    "2.0 V",
+    "10.0 V",
+    "9.6 V"
+   ],
+   "answer": 2,
+   "explanation": "The current is I = 12.0/(4.00 + 0.80) = 2.50 A. The terminal potential difference is E − Ir = 12.0 − 2.50 × 0.80 = 10.0 V. The value 2.0 V is the lost volts across the internal resistance, not the terminal potential difference."
+  },
+  {
+   "n": 14,
+   "topic": "Electric fields and capacitance",
+   "q": "Priya charges a 220 μF capacitor to 12.0 V and then disconnects it from the supply. She connects it across an uncharged 110 μF capacitor. Assuming no charge is lost to the surroundings, what is the final potential difference across the capacitors?",
+   "options": [
+    "12.0 V",
+    "4.0 V",
+    "6.0 V",
+    "8.0 V"
+   ],
+   "answer": 3,
+   "explanation": "The initial charge is Q = 220 × 10⁻⁶ × 12.0 = 2.64 × 10⁻³ C. The total capacitance after connection is 220 μF + 110 μF = 330 μF, so the final potential difference is Q/C = 2.64 × 10⁻³/330 × 10⁻⁶ = 8.0 V. The value 4.0 V would arise from using only the 110 μF capacitance in the charge-sharing fraction."
+  },
+  {
+   "n": 15,
+   "topic": "Electric fields and capacitance",
+   "q": "A point charge of +4.0 × 10⁻⁹ C is isolated in a vacuum. Taking the electric potential to be zero at infinity and 1/(4πε₀) = 8.99 × 10⁹ N m² C⁻², what is the electric potential at a distance 0.30 m from the charge?",
+   "options": [
+    "3.60 × 10¹ V",
+    "1.20 × 10³ V",
+    "1.20 × 10² V",
+    "3.99 × 10² V"
+   ],
+   "answer": 2,
+   "explanation": "The potential is V = Q/(4πε₀r) = (8.99 × 10⁹ × 4.0 × 10⁻⁹)/0.30 = 1.20 × 10² V. The value 3.99 × 10² V is the electric field magnitude in V m⁻¹, not the electric potential."
+  },
+  {
+   "n": 16,
+   "topic": "Electric fields and capacitance",
+   "q": "A parallel-plate capacitor has plates of area 0.025 m² separated by 1.5 mm of air. Taking ε₀ = 8.85 × 10⁻¹² F m⁻¹, what is its capacitance?",
+   "options": [
+    "1.48 × 10⁻¹⁰ F",
+    "5.31 × 10⁻¹³ F",
+    "1.48 × 10⁻¹³ F",
+    "2.21 × 10⁻¹⁰ F"
+   ],
+   "answer": 0,
+   "explanation": "The capacitance is C = ε₀A/d = (8.85 × 10⁻¹² × 0.025)/(1.5 × 10⁻³) = 1.48 × 10⁻¹⁰ F. Using 1.5 m instead of 1.5 mm for the separation gives 1.48 × 10⁻¹³ F."
+  },
+  {
+   "n": 17,
+   "topic": "Quantum phenomena",
+   "q": "Aisha investigates a metal surface with work function 3.2 eV. Light of frequency 1.0 × 10¹⁵ Hz is incident on it. Taking h = 6.63 × 10⁻³⁴ J s and 1 eV = 1.60 × 10⁻¹⁹ J, what is the maximum kinetic energy of an emitted photoelectron?",
+   "options": [
+    "1.5 × 10⁻¹⁹ J",
+    "5.1 × 10⁻¹⁹ J",
+    "6.6 × 10⁻¹⁹ J",
+    "1.2 × 10⁻¹⁸ J"
+   ],
+   "answer": 0,
+   "explanation": "The photon energy is hf = 6.63 × 10⁻³⁴ × 1.0 × 10¹⁵ = 6.63 × 10⁻¹⁹ J. The work function is 3.2 × 1.60 × 10⁻¹⁹ = 5.12 × 10⁻¹⁹ J. Maximum kinetic energy = 6.63 × 10⁻¹⁹ − 5.12 × 10⁻¹⁹ = 1.51 × 10⁻¹⁹ J, which rounds to 1.5 × 10⁻¹⁹ J."
+  },
+  {
+   "n": 18,
+   "topic": "Quantum phenomena",
+   "q": "Callum accelerates an electron from rest through a potential difference of 200 V. Taking the electron mass as 9.11 × 10⁻³¹ kg, electron charge magnitude as 1.60 × 10⁻¹⁹ C and h = 6.63 × 10⁻³⁴ J s, what is the de Broglie wavelength of the electron? Assume non-relativistic speeds.",
+   "options": [
+    "8.7 × 10⁻¹¹ m",
+    "1.2 × 10⁻¹⁰ m",
+    "4.3 × 10⁻¹¹ m",
+    "2.0 × 10⁻¹² m"
+   ],
+   "answer": 0,
+   "explanation": "Kinetic energy = eV = 1.60 × 10⁻¹⁹ × 200 = 3.20 × 10⁻¹⁷ J. Momentum p = √(2mE) = √(2 × 9.11 × 10⁻³¹ × 3.20 × 10⁻¹⁷) = 7.64 × 10⁻²⁴ kg m s⁻¹, so λ = h/p = 8.7 × 10⁻¹¹ m. The value 1.2 × 10⁻¹⁰ m comes from omitting the factor 2 in p = √(2mE)."
+  },
+  {
+   "n": 19,
+   "topic": "Particles and radiation",
+   "q": "A metal surface is illuminated with monochromatic light of frequency above the threshold frequency. The intensity of the light is doubled while its frequency is kept the same. Which statement describes the effect on the emitted photoelectrons, assuming the same fraction of incident photons cause emission?",
+   "options": [
+    "The maximum kinetic energy is unchanged, but the number of photoelectrons emitted per second increases.",
+    "The maximum kinetic energy increases, but the number emitted per second is unchanged.",
+    "No photoelectrons are emitted because doubling the intensity does not change the photon energy.",
+    "Both the maximum kinetic energy and the number emitted per second double."
+   ],
+   "answer": 0,
+   "explanation": "Increasing intensity means more photons arrive per second, not that each photon has more energy. The maximum kinetic energy is hf − φ, so it is unchanged when the frequency is unchanged. With the same emission probability, the number of photoelectrons emitted per second increases."
+  },
+  {
+   "n": 20,
+   "topic": "Particles and radiation",
+   "q": "An electron is accelerated from rest through a potential difference of 200 V. Calculate its de Broglie wavelength. Use h = 6.63 × 10⁻³⁴ J s, e = 1.60 × 10⁻¹⁹ C and mₑ = 9.11 × 10⁻³¹ kg. Ignore relativistic effects.",
+   "options": [
+    "6.2 × 10⁻⁹ m",
+    "8.7 × 10⁻¹¹ m",
+    "4.3 × 10⁻¹¹ m",
+    "1.2 × 10⁻¹⁰ m"
+   ],
+   "answer": 1,
+   "explanation": "The kinetic energy gained is eV = 1.60 × 10⁻¹⁹ × 200 = 3.20 × 10⁻¹⁷ J. The momentum is p = √(2mₑEₖ) = √(2 × 9.11 × 10⁻³¹ × 3.20 × 10⁻¹⁷) = 7.64 × 10⁻²⁴ kg m s⁻¹, so λ = h/p = 8.7 × 10⁻¹¹ m. Treating the electron as a photon of the same energy gives a much larger wavelength of 6.2 × 10⁻⁹ m, which is incorrect."
+  },
+  {
+   "n": 21,
+   "topic": "Particles and radiation",
+   "q": "An atom has energy levels at −13.6 eV, −3.40 eV and −1.51 eV. An electron makes a transition from the −1.51 eV level to the −3.40 eV level. What is the wavelength of the emitted photon? Use hc = 1240 eV nm.",
+   "options": [
+    "6.56 × 10⁻⁷ m",
+    "1.03 × 10⁻⁷ m",
+    "3.65 × 10⁻⁷ m",
+    "8.21 × 10⁻⁷ m"
+   ],
+   "answer": 0,
+   "explanation": "The photon energy equals the energy difference: 1.89 eV. Using λ = hc/ΔE gives λ = 1240/1.89 = 656 nm = 6.56 × 10⁻⁷ m. Using 3.40 eV or 1.51 eV alone is wrong because the emitted photon energy is the difference between the two levels."
+  },
+  {
+   "n": 22,
+   "topic": "Mechanics",
+   "q": "A ball rolls horizontally off a bench of height 4.9 m with a horizontal speed of 6.0 m s⁻¹. Air resistance is negligible. Take g = 9.8 m s⁻². How far horizontally from the edge of the bench does the ball land?",
+   "options": [
+    "9.8 m",
+    "12 m",
+    "6.0 m",
+    "3.0 m"
+   ],
+   "answer": 2,
+   "explanation": "Vertical and horizontal motion are independent. The vertical drop gives t = √(2h/g) = √(2 × 4.9 / 9.8) = 1.0 s. The horizontal distance is then 6.0 × 1.0 = 6.0 m. The vertical final speed is 9.8 m s⁻¹, but that does not determine the horizontal distance."
+  },
+  {
+   "n": 23,
+   "topic": "Mechanics",
+   "q": "Priya rolls a 0.80 kg trolley at 1.5 m s⁻¹ towards a stationary 0.40 kg trolley. The trolleys stick together after colliding. How much kinetic energy is dissipated in the collision?",
+   "options": [
+    "0.30 J",
+    "0.90 J",
+    "0.60 J",
+    "0.45 J"
+   ],
+   "answer": 0,
+   "explanation": "Momentum conservation gives the final speed: (0.80 × 1.5)/(1.20) = 1.0 m s⁻¹. Initial kinetic energy is ½ × 0.80 × 1.5² = 0.90 J, and final kinetic energy is ½ × 1.20 × 1.0² = 0.60 J. The kinetic energy dissipated is therefore 0.90 − 0.60 = 0.30 J."
+  },
+  {
+   "n": 24,
+   "topic": "Mechanics",
+   "q": "A small model car of mass 0.20 kg is attached to a light string of length 0.50 m and is whirled in a vertical circle. At the highest point, the string just remains taut. What is the speed of the car at that point? Take g = 9.8 m s⁻².",
+   "options": [
+    "3.1 m s⁻¹",
+    "4.4 m s⁻¹",
+    "2.2 m s⁻¹",
+    "1.6 m s⁻¹"
+   ],
+   "answer": 2,
+   "explanation": "When the string just remains taut at the top, the tension is zero and weight alone provides the centripetal force. Thus mg = mv²/r, so v = √(gr) = √(9.8 × 0.50) = 2.2 m s⁻¹. Using v = √(2gr) gives 3.1 m s⁻¹, which would come from a different energy argument, not from the condition for the string just to stay taut at the top."
+  },
+  {
+   "n": 25,
+   "topic": "Gravitational fields",
+   "q": "A satellite circles the Earth in a circular orbit at a height equal to the Earth's radius above the surface. The Earth's radius is 6.4 × 10⁶ m and the gravitational field strength at the Earth's surface is 9.8 N kg⁻¹. What is the orbital speed of the satellite?",
+   "options": [
+    "4.0 × 10³ m s⁻¹",
+    "1.1 × 10⁴ m s⁻¹",
+    "7.9 × 10³ m s⁻¹",
+    "5.6 × 10³ m s⁻¹"
+   ],
+   "answer": 3,
+   "explanation": "At height equal to one Earth radius, the orbital radius is r = 2R. The centripetal condition gives v²/r = GM/r², so v = √(GM/r). Since GM = gR², v = √(gR/2) = √(9.8 × 6.4 × 10⁶ / 2) = 5.6 × 10³ m s⁻¹. Using r = R instead would give the faster surface-orbit value of 7.9 × 10³ m s⁻¹."
+  },
+  {
+   "n": 26,
+   "topic": "Gravitational fields",
+   "q": "A probe of mass 500 kg is at a height above the Earth's surface equal to the Earth's radius. Use R = 6.4 × 10⁶ m and g = 9.8 N kg⁻¹, and take gravitational potential energy as zero at infinity. What is the gravitational potential energy of the probe?",
+   "options": [
+    "+1.6 × 10¹⁰ J",
+    "−3.1 × 10¹⁰ J",
+    "−1.6 × 10¹⁰ J",
+    "−3.1 × 10⁷ J"
+   ],
+   "answer": 2,
+   "explanation": "The distance from the Earth's centre is r = 2R. Using GM = gR², the potential energy is U = −GMm/r = −mgR/2 = −500 × 9.8 × 6.4 × 10⁶ / 2 = −1.568 × 10¹⁰ J, which rounds to −1.6 × 10¹⁰ J. The larger magnitude −3.1 × 10¹⁰ J would be for a probe at the Earth's surface, where r = R."
+  },
+  {
+   "n": 27,
+   "topic": "Thermal physics",
+   "q": "Aisha has a cylinder containing 2.0 mol of an ideal gas at a temperature of 300 K. The volume of the gas is 0.020 m³. Use R = 8.31 J mol⁻¹ K⁻¹. What is the pressure of the gas?",
+   "options": [
+    "2.5 × 10⁶ Pa",
+    "1.2 × 10⁵ Pa",
+    "2.5 × 10⁵ Pa",
+    "5.0 × 10³ Pa"
+   ],
+   "answer": 2,
+   "explanation": "Using pV = nRT gives p = nRT/V = (2.0 × 8.31 × 300)/0.020 = 2.49 × 10⁵ Pa, which rounds to 2.5 × 10⁵ Pa. Using 1.0 mol instead of 2.0 mol would give about 1.2 × 10⁵ Pa, and failing to divide by the volume would not give a pressure."
+  },
+  {
+   "n": 28,
+   "topic": "Thermal physics",
+   "q": "Oliver cools 0.50 kg of water initially at 20 °C to 0 °C and then freezes it at 0 °C. Use c_water = 4.2 × 10³ J kg⁻¹ K⁻¹ and L_fusion = 3.3 × 10⁵ J kg⁻¹. What is the total energy removed from the water?",
+   "options": [
+    "2.07 × 10⁵ J",
+    "2.07 × 10⁶ J",
+    "1.65 × 10⁵ J",
+    "4.2 × 10⁴ J"
+   ],
+   "answer": 0,
+   "explanation": "Cooling the water removes Q = mcΔT = 0.50 × 4.2 × 10³ × 20 = 4.2 × 10⁴ J. Freezing it removes Q = mL = 0.50 × 3.3 × 10⁵ = 1.65 × 10⁵ J. The total energy removed is 4.2 × 10⁴ + 1.65 × 10⁵ = 2.07 × 10⁵ J; using only the latent heat ignores the cooling stage."
+  },
+  {
+   "n": 29,
+   "topic": "Circular motion and simple harmonic motion",
+   "q": "A car of mass 900 kg travels around a level circular bend of radius 40 m. The coefficient of static friction between the tyres and the road is 0.50. Taking g = 9.8 m s⁻², what is the maximum speed at which the car can travel around the bend without slipping?",
+   "options": [
+    "196 m s⁻¹",
+    "20 m s⁻¹",
+    "14 m s⁻¹",
+    "28 m s⁻¹"
+   ],
+   "answer": 2,
+   "explanation": "Friction supplies the centripetal force, so μmg = mv²/r and the mass cancels. Thus v = √(μgr) = √(0.50 × 9.8 × 40) = 14 m s⁻¹. The value 196 m s⁻¹ is v² without taking the square root."
+  },
+  {
+   "n": 30,
+   "topic": "Circular motion and simple harmonic motion",
+   "q": "A mass of 0.25 kg is attached to a spring of spring constant 16 N m⁻¹ and performs simple harmonic motion. What is the period of oscillation?",
+   "options": [
+    "π/8 s",
+    "π/2 s",
+    "4π s",
+    "π/4 s"
+   ],
+   "answer": 3,
+   "explanation": "For a mass-spring oscillator, T = 2π√(m/k). Substituting gives T = 2π√(0.25/16) = 2π × 0.125 = π/4 s, which is about 0.785 s."
+  }
+ ]
+}

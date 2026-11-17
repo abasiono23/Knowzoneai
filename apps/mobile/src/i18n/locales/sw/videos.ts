@@ -459,6 +459,33 @@ const videos: Translation<typeof en> = {
     sceneHeading: 'Kichwa cha onyesho {{number}}',
     sceneNarration: 'Sauti ya msimulizi ya onyesho {{number}}',
   },
+  kora: {
+    title: 'Masomo na Kora',
+    subtitle: 'Masomo ya dakika tatu yanayofundishwa na Kora, kila moja likiwa na swali la haraka.',
+    name: 'Kora',
+    role: 'mwalimu wako wa AI',
+    english: 'Kiingereza',
+    minutes: 'dak {{n}}',
+    watched: 'Umetazama',
+    open: 'Fungua somo: {{title}}',
+    groups: {
+      exam: 'Kwa {{exams}}',
+      cyber: 'Usalama wa mtandao',
+      skills: 'Mbinu za kusoma',
+    },
+    start: 'Anza somo',
+    loading: 'Somo linapakia…',
+    loadFailed: 'Somo hili halikupakia. Angalia muunganisho wako kisha ujaribu tena.',
+    listFailed: 'Hatukuweza kupakia masomo. Angalia muunganisho wako kisha ujaribu tena.',
+    part: 'Sehemu ya {{n}} kati ya {{total}}: {{title}}',
+    pauseAndTry: 'Simama ujaribu',
+    continuesIn: 'Kora ataendelea baada ya sekunde {{n}}',
+    continue: 'Endelea',
+    back10: 'Rudi nyuma sekunde 10',
+    finishedTitle: 'Somo limekamilika',
+    finishedBody: 'Kazi nzuri. Jaribu somo lingine, au muulize Kora chochote ambacho hujaelewa.',
+    moreLessons: 'Masomo zaidi',
+  },
 };
 
 export default videos;

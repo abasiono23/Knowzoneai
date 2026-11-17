@@ -1,0 +1,401 @@
+{
+ "id": "gcse-biology-p1",
+ "exam": "gcse",
+ "subject": "biology",
+ "year": null,
+ "number": 1,
+ "source": "ai",
+ "minutes": 35,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Inheritance, variation and evolution",
+   "q": "A plant breeder crosses two pea plants. One parent is homozygous tall (TT) and the other parent is heterozygous tall (Tt). Tall is dominant to short (t). Which outcome is correct for the offspring?",
+   "options": [
+    "Half the offspring will be tall and half will be short.",
+    "All offspring will be homozygous tall (TT).",
+    "All offspring will be heterozygous tall (Tt).",
+    "All offspring will be tall but half will be homozygous (TT) and half heterozygous (Tt)."
+   ],
+   "answer": 3,
+   "explanation": "Crossing TT × Tt gives gametes T and T from the first parent and T and t from the second, producing genotypes TT and Tt in a 1:1 ratio. That means every offspring has at least one T so all are tall; half are TT and half are Tt. The other options are wrong because they ignore the heterozygous contribution or incorrectly predict short offspring."
+  },
+  {
+   "n": 2,
+   "topic": "Homeostasis and response",
+   "q": "A person exercises vigorously on a hot day. Which combination of responses helps maintain body temperature close to 37 °C?",
+   "options": [
+    "Increased sweating and dilation of skin blood vessels to increase heat loss.",
+    "Reduced sweating and constriction of skin blood vessels to preserve water.",
+    "Increased sweating and constriction of skin blood vessels to retain core heat.",
+    "Reduced sweating and dilation of skin blood vessels to cool the skin surface."
+   ],
+   "answer": 0,
+   "explanation": "To lose excess heat the body increases sweat production and dilates skin blood vessels (vasodilation) so more heat is transferred to the environment. Reduced sweating and vasoconstriction would conserve heat and raise temperature, so those options are incorrect; combining sweating with vasoconstriction is inconsistent because vasoconstriction reduces heat loss."
+  },
+  {
+   "n": 3,
+   "topic": "Ecology",
+   "q": "A freshwater pond has 1000 mg of biomass in producers and 100 mg of biomass in primary consumers. What is the approximate percentage efficiency of biomass transfer from producers to primary consumers?",
+   "options": [
+    "1%",
+    "10%",
+    "50%",
+    "100%"
+   ],
+   "answer": 1,
+   "explanation": "Transfer efficiency = (biomass of primary consumers ÷ biomass of producers) × 100 = (100 ÷ 1000) × 100 = 10%. The 1% value would correspond to 10 mg consumer biomass from 1000 mg producers; 100% and 50% are far too high for typical trophic transfers here."
+  },
+  {
+   "n": 4,
+   "topic": "Cell biology",
+   "q": "Which statement correctly compares osmosis and diffusion across a cell membrane?",
+   "options": [
+    "Osmosis requires energy from the cell; diffusion is always passive and requires no energy.",
+    "Osmosis is the net movement of water from low water potential to high water potential; diffusion moves molecules to equalise concentrations only in living cells.",
+    "Osmosis moves solute particles from low concentration to high concentration; diffusion moves water in the opposite direction.",
+    "Osmosis is the net movement of water from a higher water potential to a lower water potential through a partially permeable membrane; diffusion is the net movement of any molecules from higher concentration to lower concentration."
+   ],
+   "answer": 3,
+   "explanation": "Osmosis specifically refers to water moving down its water potential (from higher to lower) through a partially permeable membrane, and diffusion is the passive net movement of molecules from areas of higher concentration to lower concentration. Osmosis does not move solutes, does not require cellular energy, and moves from high to low water potential, so the incorrect options are wrong in those respects."
+  },
+  {
+   "n": 5,
+   "topic": "Inheritance, variation and evolution",
+   "q": "A family has two parents who are both carriers of cystic fibrosis (a recessive genetic disorder; carrier genotype Ff). They already have one child affected by cystic fibrosis (ff). What is the probability their next child will also be affected?",
+   "options": [
+    "50% because one parent must be affected.",
+    "100% because both parents are carriers.",
+    "25%",
+    "0% because they already have one affected child so they cannot have another."
+   ],
+   "answer": 2,
+   "explanation": "For two carriers Ff × Ff the Punnett square gives genotypes: 25% FF, 50% Ff, 25% ff. Each pregnancy is independent, so the chance of the next child being affected (ff) is 25%. It is not 0% or 100%, and having one affected child does not change the genetic probabilities for subsequent children."
+  },
+  {
+   "n": 6,
+   "topic": "Homeostasis and response",
+   "q": "A patient has low blood glucose after fasting. Which combination of hormonal changes is most likely to restore blood glucose to normal levels?",
+   "options": [
+    "Increased secretion of insulin and increased glycogen formation in the liver.",
+    "Increased secretion of insulin and increased uptake of glucose into muscle.",
+    "Decreased secretion of glucagon and increased fat storage.",
+    "Increased secretion of glucagon from the pancreas and increased glycogen breakdown in the liver."
+   ],
+   "answer": 3,
+   "explanation": "Glucagon raises blood glucose by stimulating glycogen breakdown (glycogenolysis) in the liver and gluconeogenesis. Insulin lowers blood glucose by promoting uptake and storage, so options suggesting increased insulin would worsen low blood glucose. Decreasing glucagon or increasing fat storage would not restore blood glucose."
+  },
+  {
+   "n": 7,
+   "topic": "Ecology",
+   "q": "An ecologist records the population sizes of two species on a small island over time. Species A shows regular peaks and troughs in numbers; species B gradually increases then stabilises. Which pair of descriptions best fits these patterns?",
+   "options": [
+    "Species A: population cycles possibly due to predator–prey interactions. Species B: logistic growth approaching carrying capacity.",
+    "Species A: immediate extinction after colonisation. Species B: random fluctuations with no density dependence.",
+    "Species A: stable population at carrying capacity. Species B: population cycles caused by seasonal predation.",
+    "Species A: exponential growth without limits. Species B: decline to extinction due to competition."
+   ],
+   "answer": 0,
+   "explanation": "Regular peaks and troughs are typical of predator–prey cycles or other cyclic interactions. Gradual increase then plateau matches logistic growth as the population hits the island's carrying capacity. The wrong options mismatch these patterns or describe opposite dynamics."
+  },
+  {
+   "n": 8,
+   "topic": "Cell biology",
+   "q": "A student measures the rate of diffusion of oxygen through agar blocks of different thicknesses. Which relationship should they expect between diffusion distance (x) and time (t) required for a fixed concentration change?",
+   "options": [
+    "Time t is independent of distance x for diffusion.",
+    "Time t is proportional to x² (t ∝ x²), so doubling the thickness makes diffusion time about four times longer.",
+    "Time t is proportional to x (t ∝ x), so doubling thickness doubles time.",
+    "Time t decreases as thickness x increases because a bigger gradient speeds diffusion."
+   ],
+   "answer": 1,
+   "explanation": "Diffusion follows a relationship where mean diffusion time is proportional to distance squared, so t ∝ x²; doubling distance increases time by four. Linear proportionality, independence, or decreasing time with distance are incorrect for simple diffusion."
+  },
+  {
+   "n": 9,
+   "topic": "Inheritance, variation and evolution",
+   "q": "A bacterial population is exposed to an antibiotic. A small number of bacteria survive because they have a resistant allele. Over many generations with antibiotic present, what is most likely to happen to the frequency of the resistant allele and why?",
+   "options": [
+    "The frequency becomes zero because resistance cannot be inherited.",
+    "The frequency decreases because antibiotics always remove resistant alleles faster than non-resistant ones.",
+    "The frequency of the resistant allele increases because those bacteria have a selective advantage and leave more surviving offspring.",
+    "The frequency stays the same because mutations are the only way allele frequencies change."
+   ],
+   "answer": 2,
+   "explanation": "Natural selection favours heritable traits that increase survival and reproduction; in the presence of antibiotic, resistant bacteria survive and reproduce more, increasing allele frequency. Antibiotics do not selectively remove resistant alleles; mutations are not the only mechanism changing allele frequency, and resistance can be inherited, so the wrong options are false."
+  },
+  {
+   "n": 10,
+   "topic": "Homeostasis and response",
+   "q": "A patient with type 1 diabetes forgets to take insulin and their blood glucose rises to 20 mmol/L. Which immediate effect is expected and why?",
+   "options": [
+    "High blood glucose causes constriction of arterioles in the kidney reducing filtration rate and so reducing urination.",
+    "High blood glucose causes reduced urine production because the kidneys conserve water.",
+    "High blood glucose directly stimulates insulin release from the pancreas to restore normal levels.",
+    "High blood glucose causes osmotic diuresis, so the patient will pass large volumes of dilute urine and feel very thirsty."
+   ],
+   "answer": 3,
+   "explanation": "When blood glucose exceeds the renal threshold, kidneys cannot reabsorb all glucose; glucose in urine draws water by osmosis (osmotic diuresis), producing large volumes of dilute urine and thirst. The kidneys do not conserve water in this situation, arteriolar constriction is not the primary response, and in type 1 diabetes the pancreas cannot produce sufficient insulin, so blood glucose does not directly trigger adequate insulin release."
+  },
+  {
+   "n": 11,
+   "topic": "Organisation: tissues, organs and systems",
+   "q": "A small cut in the skin has damaged some cells but not broken the epidermis completely. Which immediate response helps reduce blood loss and prevent infection?",
+   "options": [
+    "Platelets collect at the wound and blood clotting forms a scab that blocks microbes",
+    "Red blood cells multiply quickly to plug the hole in the skin",
+    "White blood cells immediately form a scab over the wound to stop bleeding",
+    "The surrounding muscle contracts to seal the wound permanently"
+   ],
+   "answer": 0,
+   "explanation": "Platelets start clotting blood at a damaged blood vessel, forming a fibrin network and scab that reduces bleeding and helps block microbes. White blood cells fight microbes but do not form clots; red blood cells do not multiply to plug wounds; muscle contraction cannot permanently seal a skin wound."
+  },
+  {
+   "n": 12,
+   "topic": "Organisation: tissues, organs and systems",
+   "q": "A person has a blocked bile duct and cannot release bile into the small intestine. Which of these is the most likely effect on digestion?",
+   "options": [
+    "Protein digestion will stop because bile activates protease enzymes",
+    "All nutrient absorption in the ileum will cease because bile carries vitamins away",
+    "Starch digestion in the mouth will be prevented because bile neutralises amylase",
+    "Fat digestion and absorption will be reduced because bile emulsifies fats"
+   ],
+   "answer": 3,
+   "explanation": "Bile emulsifies fats into small droplets, increasing the surface area for lipase; without bile fat digestion and absorption fall. Bile does not activate proteases, and it does not neutralise amylase in the mouth; it aids fat-soluble vitamin absorption but does not stop all nutrient absorption."
+  },
+  {
+   "n": 13,
+   "topic": "Infection and response",
+   "q": "A student is given a bacterial infection and then recovers. Which change is most responsible for faster response if the same bacterium infects them again months later?",
+   "options": [
+    "The skin grows thicker after the first infection to prevent re-entry of that bacterium",
+    "Memory B cells produced during the first infection make specific antibodies more quickly on re-exposure",
+    "T cells stop recognising the bacterium so symptoms are milder next time",
+    "Phagocytes increase their size permanently so they engulf bacteria faster"
+   ],
+   "answer": 1,
+   "explanation": "Adaptive immunity generates memory B cells that rapidly produce specific antibodies upon re-exposure, giving a quicker, stronger response. Phagocytes don't permanently enlarge; skin thickness doesn't change specifically for a previous infection; T cells continuing to recognise would aid response, not stop recognising."
+  },
+  {
+   "n": 14,
+   "topic": "Infection and response",
+   "q": "Which statement best explains why antibiotics do not treat viral infections?",
+   "options": [
+    "Antibiotics break down in the acidic environment of cells infected by viruses",
+    "Antibiotics target bacterial cell structures or metabolic pathways that viruses do not possess",
+    "Viruses only infect plants and antibiotics are for animals",
+    "Viruses are too small for antibiotics to reach them in the body"
+   ],
+   "answer": 1,
+   "explanation": "Antibiotics interfere with bacterial-specific features such as cell walls or bacterial ribosomes; viruses lack these and replicate inside host cells, so antibiotics are ineffective. Size is not the reason, antibiotics do not universally break down inside infected cells, and viruses infect many organisms including humans."
+  },
+  {
+   "n": 15,
+   "topic": "Bioenergetics: photosynthesis and respiration",
+   "q": "A seedling is placed in dim light and at the same time its temperature is lowered from 25 °C to 5 °C. Over the next 24 hours, which process in the seedling is most reduced and why?",
+   "options": [
+    "Mineral uptake increases because root membrane channels open more in the cold",
+    "Light-dependent reactions of photosynthesis increase because lower temperature concentrates chlorophyll",
+    "Transpiration rate increases because cold air holds more water vapour",
+    "Respiration rate is reduced because enzyme activity falls at lower temperature"
+   ],
+   "answer": 3,
+   "explanation": "Lower temperature slows enzyme-catalysed reactions, so respiration decreases. Light-dependent photosynthesis relies on light and is not increased by cold; cold air holds less water vapour so transpiration usually decreases; mineral uptake generally slows with reduced metabolic and membrane activity."
+  },
+  {
+   "n": 16,
+   "topic": "Bioenergetics: photosynthesis and respiration",
+   "q": "In an experiment measuring oxygen production of pondweed, a student doubles the light intensity and records the rate of oxygen bubbles rising. Other conditions constant, which change in rate of photosynthesis is most likely and why?",
+   "options": [
+    "Rate increases but eventually plateaus because another factor (like CO₂ or temperature) becomes limiting",
+    "Rate increases without limit as light intensity rises",
+    "Rate remains unchanged because photosynthesis does not depend on light intensity",
+    "Rate halves because higher light damages chloroplasts immediately"
+   ],
+   "answer": 0,
+   "explanation": "Photosynthesis rate increases with light intensity until another factor becomes limiting, giving a plateau. Immediate halving is incorrect; photosynthesis does depend on light; and it cannot increase without limit because other factors (CO₂, temperature, enzyme capacity) will limit the rate."
+  },
+  {
+   "n": 17,
+   "topic": "Inheritance, variation and evolution",
+   "q": "A plant shows a dominant trait A and a recessive trait b on two different genes. If a heterozygous plant AaBb is self-pollinated, what proportion of offspring are expected to show the recessive phenotype for both traits (aabb)?",
+   "options": [
+    "1/4",
+    "1/2",
+    "1/8",
+    "1/16"
+   ],
+   "answer": 3,
+   "explanation": "For each gene the chance of aa from Aa × Aa is 1/4 and for bb is 1/4; independent inheritance gives 1/4 × 1/4 = 1/16. 1/4 would be for one recessive trait only; 1/8 and 1/2 are incorrect combinations."
+  },
+  {
+   "n": 18,
+   "topic": "Inheritance, variation and evolution",
+   "q": "A breeder selects a herd of cattle for higher milk yield over many generations. Which mechanism explains the gradual increase in average milk yield?",
+   "options": [
+    "Mutations caused by milking directly create new milk-yield genes in parents",
+    "Horizontal gene transfer spreads milk-yield genes between adult cattle",
+    "Artificial selection increases frequency of alleles associated with higher milk yield in the population",
+    "Each individual changes its genotype in response to milking so offspring inherit the change"
+   ],
+   "answer": 2,
+   "explanation": "Artificial selection favours parents with alleles for higher milk yield so those alleles become more common in descendants. Horizontal gene transfer is negligible in cattle; individuals do not change genotype in response to environment in a way passed to offspring (Lamarckian idea); milking does not induce targeted mutations that are inherited."
+  },
+  {
+   "n": 19,
+   "topic": "Organisation: tissues, organs and systems",
+   "q": "Which change in the heart and circulatory system occurs during moderate aerobic exercise?",
+   "options": [
+    "Heart rate and stroke volume increase, raising cardiac output to supply muscles with more oxygen",
+    "Haemoglobin concentration halves so oxygen delivery is reduced",
+    "Arteries become wider permanently after a single exercise session",
+    "Blood pressure drops to zero because blood is diverted away from the heart"
+   ],
+   "answer": 0,
+   "explanation": "During exercise heart rate and stroke volume increase, so cardiac output (heart rate × stroke volume) rises to deliver more oxygenated blood. Blood pressure does not drop to zero; haemoglobin concentration does not halve acutely; arteries do not permanently widen after a single session."
+  },
+  {
+   "n": 20,
+   "topic": "Infection and response",
+   "q": "A vaccination programme uses an inactivated virus to induce immunity. Which best describes how this type of vaccine protects people without causing the disease?",
+   "options": [
+    "Vaccination with inactivated virus transfers active antibodies into the recipient for lifelong protection",
+    "Inactivated virus kills any live viruses immediately on contact inside the body",
+    "The inactivated virus integrates into the host DNA and permanently prevents infection",
+    "The inactivated virus stimulates antibody production and memory cell formation without replicating, so future exposures trigger rapid immunity"
+   ],
+   "answer": 3,
+   "explanation": "Inactivated vaccines present antigens that stimulate the adaptive immune system to produce antibodies and memory cells without viral replication. They do not integrate into host DNA, do not directly kill live viruses inside the body, and do not transfer active antibodies (that would be passive immunity, which is temporary)."
+  },
+  {
+   "n": 21,
+   "topic": "Homeostasis and response",
+   "q": "A person is dehydrated after a long run. Which change in the body helps restore water balance?",
+   "options": [
+    "Kidneys produce more dilute urine so more water is lost.",
+    "Kidneys produce more concentrated urine so less water is lost.",
+    "Sweat glands increase sweating to remove excess water from the body.",
+    "Blood vessels in the skin dilate to conserve water by reducing urine production."
+   ],
+   "answer": 1,
+   "explanation": "When dehydrated, the kidneys conserve water by producing more concentrated urine, reducing water loss. Producing more dilute urine would increase water loss and worsen dehydration. Increasing sweating would lose more water, not conserve it. Dilation of blood vessels in the skin increases heat loss and does not directly reduce urine production to conserve water."
+  },
+  {
+   "n": 22,
+   "topic": "Homeostasis and response",
+   "q": "A patient has low blood glucose after missing a meal. Which hormonal response increases blood glucose?",
+   "options": [
+    "Pancreas releases insulin which stimulates the liver to convert glycogen into glucose.",
+    "Pituitary releases growth hormone which immediately increases blood glucose by digestion.",
+    "Adrenal glands release adrenaline which stores glucose as glycogen in muscle.",
+    "Pancreas releases glucagon which stimulates the liver to convert glycogen into glucose."
+   ],
+   "answer": 3,
+   "explanation": "Glucagon from the pancreas raises blood glucose by causing the liver to break down glycogen into glucose. Insulin has the opposite effect, lowering blood glucose. Adrenaline can increase blood glucose but not by storing glucose as glycogen; it promotes glycogen breakdown. Growth hormone does not immediately increase blood glucose by digestion."
+  },
+  {
+   "n": 23,
+   "topic": "Homeostasis and response",
+   "q": "A student tests reaction time by dropping a ruler and measuring where a partner catches it. Which change to the standard method would reduce systematic error?",
+   "options": [
+    "Use the same ruler and have the same tester drop it from the same hand position each trial.",
+    "Change to a longer ruler for some trials and a shorter ruler for others to keep it varied.",
+    "Allow the catcher to move the catching hand forward gradually during the trial.",
+    "Average results from different testers who each use different dropping hands."
+   ],
+   "answer": 0,
+   "explanation": "Using the same ruler and consistent drop technique reduces systematic error from differences in apparatus or method. Allowing the catcher to move the hand introduces variable reaction distance and increases error. Changing ruler length between trials introduces systematic variation. Averaging across different testers with different drop methods doesn't remove systematic differences."
+  },
+  {
+   "n": 24,
+   "topic": "Ecology",
+   "q": "A hedgerow has 50 oak trees and a bird species nests only in oak trees. If 30% of oaks are removed, what is the new maximum number of nests assuming one nest per oak?",
+   "options": [
+    "35 nests",
+    "15 nests",
+    "50 nests",
+    "30 nests"
+   ],
+   "answer": 0,
+   "explanation": "Removing 30% of 50 oaks removes 0.30 × 50 = 15 trees, leaving 50 − 15 = 35 oaks, so 35 nests maximum. 30 nests would mean removing 40% of oaks; 15 nests would be left if 70% were removed; 50 nests assumes no trees removed."
+  },
+  {
+   "n": 25,
+   "topic": "Ecology",
+   "q": "An ecologist records the number of species present in two habitats. Habitat A has many different species each in low numbers; Habitat B has few species but high numbers of each. Which statement about biodiversity is correct?",
+   "options": [
+    "Habitat A has higher species diversity because it has greater species richness and evenness.",
+    "Both habitats have equal diversity because the total number of individual organisms is the same.",
+    "Habitat B has higher diversity because it has higher total population numbers.",
+    "Habitat B has higher diversity because one species dominating increases diversity indices."
+   ],
+   "answer": 0,
+   "explanation": "Species diversity is higher when species richness (number of species) and evenness (similar abundance) are greater, so Habitat A has higher diversity. Total individual numbers do not increase species diversity. Equal total individuals does not mean equal diversity if species counts differ. One species dominating lowers evenness and so decreases diversity."
+  },
+  {
+   "n": 26,
+   "topic": "Ecology",
+   "q": "A food chain starts with grass (producer) with 2000 kJ of energy. If 10% of energy is transferred between trophic levels, how much energy reaches tertiary consumers (third consumer level after the producer)?",
+   "options": [
+    "0.2 kJ",
+    "20 kJ",
+    "2.0 kJ",
+    "200 kJ"
+   ],
+   "answer": 2,
+   "explanation": "Energy transferred each step is 10%: after primary consumer 2000 × 0.10 = 200 kJ; after secondary consumer 200 × 0.10 = 20 kJ; after tertiary consumer 20 × 0.10 = 2.0 kJ. 200 kJ is energy at the primary consumer, 20 kJ at the secondary, and 0.2 kJ would be if 1% transfer occurred at the last step."
+  },
+  {
+   "n": 27,
+   "topic": "Cell biology",
+   "q": "Which cellular structure is present in both animal and plant cells and is the site of aerobic respiration where ATP is produced?",
+   "options": [
+    "Mitochondrion",
+    "Chloroplast",
+    "Cell wall",
+    "Vacuole"
+   ],
+   "answer": 0,
+   "explanation": "Mitochondria are the site of aerobic respiration in both animal and plant cells, producing ATP. Chloroplasts are only in plant cells and are where photosynthesis occurs. Cell walls and vacuoles are typical of plant cells (cell walls absent in animal cells) and do not perform aerobic respiration."
+  },
+  {
+   "n": 28,
+   "topic": "Cell biology",
+   "q": "A student measures the length of five bacterial cells: 1.0 μm, 1.2 μm, 0.8 μm, 1.4 μm, 1.6 μm. What is the mean cell length?",
+   "options": [
+    "1.4 μm",
+    "6.0 μm",
+    "1.0 μm",
+    "1.2 μm"
+   ],
+   "answer": 3,
+   "explanation": "Mean length = (1.0 + 1.2 + 0.8 + 1.4 + 1.6) μm ÷ 5 = 6.0 μm ÷ 5 = 1.2 μm. 1.0 μm would be the smallest value, 1.4 μm is the mean if the sum were 7.0 μm, and 6.0 μm is the sum, not the mean."
+  },
+  {
+   "n": 29,
+   "topic": "Organisation: tissues, organs and systems",
+   "q": "Which combination correctly matches organ to primary function?",
+   "options": [
+    "Liver: primary site of gas exchange between blood and air.",
+    "Small intestine: filters waste to form urine.",
+    "Heart: produces digestive enzymes to break down proteins.",
+    "Stomach: mechanical and chemical digestion of food."
+   ],
+   "answer": 3,
+   "explanation": "The stomach performs mechanical digestion (churning) and chemical digestion (acid and enzymes) of food. Gas exchange occurs in the lungs, not the liver. The small intestine absorbs nutrients, not filter waste into urine (that's kidney function). The heart pumps blood; it does not produce digestive enzymes."
+  },
+  {
+   "n": 30,
+   "topic": "Organisation: tissues, organs and systems",
+   "q": "A person with a blocked valve between the left atrium and left ventricle will most directly have which immediate effect on circulation?",
+   "options": [
+    "Left ventricle will pump more blood into the aorta because of higher preload.",
+    "Oxygen content of arterial blood will immediately increase due to slower flow.",
+    "Blood will back up in the left atrium, increasing pressure in the pulmonary circulation.",
+    "Blood will back up in the systemic veins causing swelling in the legs first."
+   ],
+   "answer": 2,
+   "explanation": "A blockage at the left atrioventricular valve causes blood to accumulate in the left atrium, raising pressure that can transmit back to pulmonary veins and capillaries. Systemic venous backup and leg swelling are more associated with right-side heart failure. Slower flow does not increase arterial oxygen content. The left ventricle cannot pump more if it receives less blood; higher preload would not occur if inflow is blocked."
+  }
+ ]
+}

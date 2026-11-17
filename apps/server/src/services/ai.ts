@@ -16,8 +16,17 @@ export function openaiClient(use: 'features' | 'safety' = 'features') {
   return (client ??= new OpenAI({ apiKey: config.OPENAI_API_KEY }));
 }
 
-/** Every AI call is logged with its tokens, for cost tracking and the tutor's daily allowance. */
-export async function logUsage(userId: string, feature: string, model: string, usage?: OpenAI.Responses.ResponseUsage) {
+/**
+ * Every AI call is logged with its tokens, for cost tracking and the tutor's daily allowance.
+ * `model` is OpenAI's name for the model, or "vultr:<model>" for a Vultr call (services/vultr.ts,
+ * which also holds Vultr's prices: vultrCost(model, tokens)).
+ */
+export async function logUsage(
+  userId: string,
+  feature: string,
+  model: string,
+  usage?: Pick<OpenAI.Responses.ResponseUsage, 'input_tokens' | 'output_tokens'>,
+) {
   await prisma.usageEvent.create({
     data: {
       userId,

@@ -8,7 +8,7 @@ import { LoadError, Loading } from '@/components/exams/ui';
 import { Button, Card, Screen, ScreenHeader, Text } from '@/components/ui';
 import { Colors, Fonts, Radius, Spacing } from '@/constants/theme';
 import { errorText } from '@/i18n/errors';
-import { examsApi, type ExamId, type ExamSubjectId, type PaperSummary } from '@/lib/exams';
+import { examsApi, isPracticeOnly, type ExamId, type ExamSubjectId, type PaperSummary } from '@/lib/exams';
 
 /** One subject's papers: real past papers by year (when licensed) and numbered practice papers. */
 export default function SubjectPapers() {
@@ -102,7 +102,7 @@ export default function SubjectPapers() {
                 {t('practice')}
               </Text>
               <Text variant="small" color={Colors.textSecondary}>
-                {t('practiceNote', { exam: examName })}
+                {isPracticeOnly(exam) ? t(`notes.${exam}` as 'notes.sat') : t('practiceNote', { exam: examName })}
               </Text>
               {practice.map(row)}
             </View>

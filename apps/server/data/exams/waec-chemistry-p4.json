@@ -1,0 +1,661 @@
+{
+ "id": "waec-chemistry-p4",
+ "exam": "waec",
+ "subject": "chemistry",
+ "year": null,
+ "number": 4,
+ "source": "ai",
+ "minutes": 60,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Rates of reaction and equilibrium",
+   "q": "For the equilibrium 2NO₂(g) ⇌ N₂O₄(g), ΔH = −57 kJ mol⁻¹, which change would increase the equilibrium amount of N₂O₄?",
+   "options": [
+    "Adding a catalyst",
+    "Increasing the pressure at constant temperature",
+    "Adding helium gas at constant volume",
+    "Increasing the temperature at constant pressure"
+   ],
+   "answer": 1,
+   "explanation": "Increasing pressure favours the side with fewer gas molecules, which is the N₂O₄ side, so its equilibrium amount increases. Raising the temperature favours the endothermic reverse reaction, a catalyst does not shift the position of equilibrium, and helium added at constant volume does not change the partial pressures of the reacting gases."
+  },
+  {
+   "n": 2,
+   "topic": "Oxidation, reduction and electrolysis",
+   "q": "A current of 0.50 A is passed through aqueous copper(II) sulfate for 3860 s using inert electrodes. What mass of copper is deposited? (1 F = 96500 C mol⁻¹; Cu = 64)",
+   "options": [
+    "1.28 g",
+    "1.93 g",
+    "0.320 g",
+    "0.640 g"
+   ],
+   "answer": 3,
+   "explanation": "Quantity of charge Q = It = 0.50 × 3860 = 1930 C. This is 1930 ÷ 96500 = 0.0200 mol of electrons, and Cu²⁺ needs 2 electrons per copper atom, so 0.0100 mol of copper forms. Mass = 0.0100 × 64 = 0.640 g."
+  },
+  {
+   "n": 3,
+   "topic": "Oxidation, reduction and electrolysis",
+   "q": "What is the oxidation number of manganese in K₂MnO₄?",
+   "options": [
+    "+6",
+    "+4",
+    "+7",
+    "+2"
+   ],
+   "answer": 0,
+   "explanation": "In K₂MnO₄, each potassium is +1 and each oxygen is −2. Let the manganese oxidation number be x: 2(+1) + x + 4(−2) = 0, so x = +6. A value of +7 belongs to permanganate, KMnO₄, while +4 and +2 do not balance the compound."
+  },
+  {
+   "n": 4,
+   "topic": "Water and solubility",
+   "q": "At 30°C, the solubility of sodium trioxonitrate(V) is 95 g per 100 g of water. What mass of a saturated solution at this temperature contains 19 g of the dissolved salt?",
+   "options": [
+    "20 g",
+    "114 g",
+    "39 g",
+    "119 g"
+   ],
+   "answer": 2,
+   "explanation": "A saturated solution contains 95 g of salt with 100 g of water, giving 195 g of solution in total. Since 19 g is one-fifth of 95 g, the solution mass needed is one-fifth of 195 g, which is 39 g; 20 g is only the water present, not the total solution."
+  },
+  {
+   "n": 5,
+   "topic": "Periodic table",
+   "q": "Which element has the highest electronegativity among the Period 3 elements sodium, silicon, sulphur and chlorine?",
+   "options": [
+    "Chlorine",
+    "Sulphur",
+    "Sodium",
+    "Silicon"
+   ],
+   "answer": 0,
+   "explanation": "Electronegativity generally increases across a period from left to right because effective nuclear charge increases while shielding changes little. Among these Period 3 elements, chlorine is furthest to the right and has the highest electronegativity; sodium has the lowest among those listed."
+  },
+  {
+   "n": 6,
+   "topic": "Mole concept and stoichiometry",
+   "q": "A sample of hydrated sodium carbonate, Na₂CO₃·10H₂O, from a laboratory in Ilorin has a mass of 14.3 g. It is strongly heated to constant mass. What mass of anhydrous sodium carbonate remains? (Na = 23, C = 12, O = 16, H = 1)",
+   "options": [
+    "14.3 g",
+    "5.30 g",
+    "10.6 g",
+    "9.00 g"
+   ],
+   "answer": 1,
+   "explanation": "Molar mass of Na₂CO₃·10H₂O = 106 + 180 = 286 g mol⁻¹, so the sample contains 14.3 ÷ 286 = 0.0500 mol. Each mole gives one mole of anhydrous Na₂CO₃, whose molar mass is 106 g mol⁻¹; hence mass = 0.0500 × 106 = 5.30 g. The 9.00 g value is the mass of water lost, not the residue remaining."
+  },
+  {
+   "n": 7,
+   "topic": "Separation of mixtures",
+   "q": "A laboratory assistant in Enugu wishes to separate the coloured components of a sample of black ink. Which technique is most suitable?",
+   "options": [
+    "Filtration",
+    "Paper chromatography",
+    "Sublimation",
+    "Simple distillation"
+   ],
+   "answer": 1,
+   "explanation": "Paper chromatography separates dissolved substances according to their different rates of movement between a stationary phase and a moving solvent. Distillation would separate a volatile solvent from the ink, while filtration would not resolve the different dissolved dyes."
+  },
+  {
+   "n": 8,
+   "topic": "Separation of mixtures",
+   "q": "A small quantity of fine solid particles is suspended in a sample of palm oil in Warri. Which method is most suitable for removing the solid particles and collecting the oil?",
+   "options": [
+    "Simple distillation",
+    "Filtration",
+    "Paper chromatography",
+    "Sublimation"
+   ],
+   "answer": 1,
+   "explanation": "Filtration passes the oil through a filter medium while retaining insoluble solid particles as residue. Simple distillation would vaporise the oil, while chromatography and sublimation are used for separating other types of mixtures."
+  },
+  {
+   "n": 9,
+   "topic": "Gas laws",
+   "q": "A balloon contains 300 cm³ of gas at a pressure of 1.00 × 10⁵ Pa. It is slowly compressed at constant temperature until the pressure is 2.50 × 10⁵ Pa. What is the new volume of the gas?",
+   "options": [
+    "150 cm³",
+    "300 cm³",
+    "750 cm³",
+    "120 cm³"
+   ],
+   "answer": 3,
+   "explanation": "At constant temperature, Boyle's law gives P₁V₁ = P₂V₂, so V₂ = (1.00 × 10⁵ × 300) ÷ (2.50 × 10⁵) = 120 cm³. Multiplying by the pressure ratio instead of dividing gives 750 cm³, which is a common error."
+  },
+  {
+   "n": 10,
+   "topic": "Non-metals and their compounds",
+   "q": "Chlorine is added in small amounts to the municipal water supply in Port Harcourt mainly to",
+   "options": [
+    "soften hard water by removing calcium ions",
+    "raise the pH of the water",
+    "kill harmful micro-organisms in the water",
+    "remove suspended solid particles from the water"
+   ],
+   "answer": 2,
+   "explanation": "Chlorine acts as a disinfectant because it destroys or inactivates harmful bacteria and other micro-organisms in water. It does not act as a filter, water softener or alkaline pH adjuster."
+  },
+  {
+   "n": 11,
+   "topic": "Non-metals and their compounds",
+   "q": "A student in Owerri adds dilute hydrochloric acid to sodium sulphite. Which gas is evolved?",
+   "options": [
+    "Sulphur(IV) oxide, SO₂",
+    "Chlorine, Cl₂",
+    "Carbon(IV) oxide, CO₂",
+    "Hydrogen, H₂"
+   ],
+   "answer": 0,
+   "explanation": "Sodium sulphite reacts with dilute acid to form sulphur(IV) oxide: Na₂SO₃ + 2HCl → 2NaCl + SO₂ + H₂O. Carbon(IV) oxide is evolved from carbonates or hydrogencarbonates, not from sulphites."
+  },
+  {
+   "n": 12,
+   "topic": "Mole concept and stoichiometry",
+   "q": "A gaseous oxide of nitrogen from a laboratory in Ikeja contains 30.4% nitrogen and 69.6% oxygen by mass. What is its empirical formula? (N = 14, O = 16)",
+   "options": [
+    "N₂O",
+    "N₂O₅",
+    "NO₂",
+    "NO"
+   ],
+   "answer": 2,
+   "explanation": "Moles of N = 30.4 ÷ 14 = 2.17 mol, and moles of O = 69.6 ÷ 16 = 4.35 mol. Dividing by 2.17 gives an N:O ratio of 1:2.00, so the empirical formula is NO₂."
+  },
+  {
+   "n": 13,
+   "topic": "Mole concept and stoichiometry",
+   "q": "A student in Ibadan adds 25.0 cm³ of 0.200 mol dm⁻³ silver nitrate solution to excess sodium chloride solution. What mass of silver chloride precipitate is formed? (Ag = 108, Cl = 35.5)",
+   "options": [
+    "0.359 g",
+    "0.718 g",
+    "1.44 g",
+    "2.87 g"
+   ],
+   "answer": 1,
+   "explanation": "Amount of AgNO₃ = 0.200 mol dm⁻³ × 0.0250 dm³ = 0.00500 mol. The reaction is 1:1, so mass of AgCl = 0.00500 mol × (108 + 35.5) g mol⁻¹ = 0.7175 g, approximately 0.718 g. The value 0.359 g comes from halving the amount of silver chloride, which is not justified by the equation."
+  },
+  {
+   "n": 14,
+   "topic": "Metals and their compounds",
+   "q": "Ade in Ibadan passes a current of 2.00 A through acidified copper(II) sulfate solution for 1930 s using copper electrodes. What mass of copper is deposited at the cathode? (Cu = 64; 1 F = 96500 C mol⁻¹)",
+   "options": [
+    "0.64 g",
+    "2.56 g",
+    "5.12 g",
+    "1.28 g"
+   ],
+   "answer": 3,
+   "explanation": "Quantity of charge = 2.00 A × 1930 s = 3860 C. 3860 C ÷ 96500 C mol⁻¹ = 0.0400 mol of electrons; since Cu²⁺ + 2e⁻ → Cu, the copper deposited is 0.0200 mol. Mass = 0.0200 × 64 g = 1.28 g; omitting the two-electron requirement gives 2.56 g."
+  },
+  {
+   "n": 15,
+   "topic": "Metals and their compounds",
+   "q": "At a school laboratory in Jos, 3.36 g of iron is heated with excess steam according to 3Fe(s) + 4H₂O(g) → Fe₃O₄(s) + 4H₂(g). What volume of hydrogen is produced at s.t.p.? (Fe = 56; molar volume at s.t.p. = 22.4 dm³ mol⁻¹)",
+   "options": [
+    "1.344 dm³",
+    "0.896 dm³",
+    "1.792 dm³",
+    "2.688 dm³"
+   ],
+   "answer": 2,
+   "explanation": "Moles of iron = 3.36 g ÷ 56 g mol⁻¹ = 0.0600 mol. From the equation, 3 mol Fe gives 4 mol H₂, so H₂ produced = (4/3) × 0.0600 = 0.0800 mol. Volume at s.t.p. = 0.0800 × 22.4 dm³ = 1.792 dm³."
+  },
+  {
+   "n": 16,
+   "topic": "Metals and their compounds",
+   "q": "A laboratory technician in Abeokuta obtains a brick-red colour when a clean nichrome wire dipped in a metal salt is held in a non-luminous flame. Which metal ion is indicated?",
+   "options": [
+    "Calcium ion",
+    "Sodium ion",
+    "Copper(II) ion",
+    "Potassium ion"
+   ],
+   "answer": 0,
+   "explanation": "Calcium salts give a brick-red flame colour in a flame test. Sodium gives a golden-yellow flame, potassium gives a lilac flame, and copper(II) gives a blue-green flame, so those observations do not match the result described."
+  },
+  {
+   "n": 17,
+   "topic": "Atomic structure",
+   "q": "Chlorine in nature consists of 75.0% of ³⁵Cl and 25.0% of ³⁷Cl. What is the relative atomic mass of chlorine?",
+   "options": [
+    "35.5",
+    "36.0",
+    "36.5",
+    "35.0"
+   ],
+   "answer": 0,
+   "explanation": "Relative atomic mass = (75.0 × 35 + 25.0 × 37) ÷ 100 = (2625 + 925) ÷ 100 = 35.5. A simple average of 35 and 37 gives 36.0, but that would require equal abundances, which is not the case."
+  },
+  {
+   "n": 18,
+   "topic": "Functional groups in organic chemistry",
+   "q": "Which formula represents a secondary alcohol?",
+   "options": [
+    "CH₃CH₂CH₂OH",
+    "CH₃CH₂CH(OH)CH₃",
+    "(CH₃)₃COH",
+    "CH₃OCH₂CH₂CH₃"
+   ],
+   "answer": 1,
+   "explanation": "In CH₃CH₂CH(OH)CH₃, the carbon carrying the –OH group is attached directly to two other carbon atoms, so it is a secondary alcohol. CH₃CH₂CH₂OH is primary, (CH₃)₃COH is tertiary, and CH₃OCH₂CH₂CH₃ is an ether with no –OH group."
+  },
+  {
+   "n": 19,
+   "topic": "Chemical bonding",
+   "q": "Magnesium oxide has a much higher melting point than sodium chloride. Which statement best explains this?",
+   "options": [
+    "Magnesium oxide has a simple molecular structure with weak van der Waals forces.",
+    "Magnesium oxide contains hydrogen bonds between its ions.",
+    "The ions in magnesium oxide carry higher charges, giving stronger electrostatic attractions.",
+    "Magnesium oxide is covalent while sodium chloride is ionic."
+   ],
+   "answer": 2,
+   "explanation": "Magnesium oxide is ionic with Mg²⁺ and O²⁻ ions, while sodium chloride has Na⁺ and Cl⁻ ions. The higher charges in magnesium oxide produce much stronger electrostatic attractions, so more energy is needed to melt it. It is not a simple molecular compound with weak van der Waals forces."
+  },
+  {
+   "n": 20,
+   "topic": "Acids, bases and salts",
+   "q": "A sample of an oxide in a laboratory in Ilorin dissolves in dilute hydrochloric acid to form a salt and water. The same oxide also dissolves in excess sodium hydroxide solution. Which oxide is most likely present in the sample?",
+   "options": [
+    "Copper(II) oxide",
+    "Zinc oxide",
+    "Calcium oxide",
+    "Iron(III) oxide"
+   ],
+   "answer": 1,
+   "explanation": "Zinc oxide is amphoteric, so it reacts with both dilute hydrochloric acid and excess sodium hydroxide. Calcium oxide is basic and does not dissolve in sodium hydroxide, while copper(II) oxide and iron(III) oxide do not show this amphoteric behaviour."
+  },
+  {
+   "n": 21,
+   "topic": "Acids, bases and salts",
+   "q": "250 cm³ of 0.100 mol/dm³ hydrochloric acid is exactly neutralized by a solution of sodium trioxocarbonate(IV). If the equation is Na₂CO₃ + 2HCl → 2NaCl + H₂O + CO₂, what mass of anhydrous Na₂CO₃ is required? (Na₂CO₃ = 106 g/mol)",
+   "options": [
+    "0.663 g",
+    "5.300 g",
+    "1.325 g",
+    "2.650 g"
+   ],
+   "answer": 2,
+   "explanation": "Moles of HCl = 0.250 × 0.100 = 0.0250 mol. The equation shows that 1 mol Na₂CO₃ reacts with 2 mol HCl, so moles of Na₂CO₃ = 0.0250 ÷ 2 = 0.0125 mol. Mass required = 0.0125 × 106 = 1.325 g."
+  },
+  {
+   "n": 22,
+   "topic": "Acids, bases and salts",
+   "q": "A student in Abeokuta adds excess sodium hydroxide solution to a solution of an unknown salt. A white precipitate forms, and the precipitate dissolves in the excess alkali. Which cation is most likely present in the salt?",
+   "options": [
+    "Ca²⁺",
+    "Zn²⁺",
+    "Fe³⁺",
+    "Cu²⁺"
+   ],
+   "answer": 1,
+   "explanation": "Zn²⁺ forms a white precipitate of Zn(OH)₂ that dissolves in excess sodium hydroxide. Cu²⁺ gives a blue precipitate, Fe³⁺ gives a reddish-brown precipitate, and Ca²⁺ gives a white precipitate that does not dissolve in excess alkali."
+  },
+  {
+   "n": 23,
+   "topic": "Hydrocarbons",
+   "q": "Which of the following compounds is an isomer of but-1-ene?",
+   "options": [
+    "butane",
+    "propane",
+    "2-methylpropene",
+    "ethyne"
+   ],
+   "answer": 2,
+   "explanation": "Isomers have the same molecular formula. Both but-1-ene and 2-methylpropene have the formula C₄H₈, while butane, ethyne and propane have different formulae."
+  },
+  {
+   "n": 24,
+   "topic": "Hydrocarbons",
+   "q": "Benzene is warmed with a mixture of concentrated nitric acid and concentrated sulphuric acid at 50–60°C. Which compound is formed?",
+   "options": [
+    "Benzene sulphonic acid",
+    "Phenylamine",
+    "Nitrobenzene",
+    "Sodium benzoate"
+   ],
+   "answer": 2,
+   "explanation": "The mixture generates the nitronium ion, NO₂⁺, which substitutes a hydrogen atom on benzene to form nitrobenzene. Phenylamine would require reduction of nitrobenzene, and benzene sulphonic acid is formed by sulphonation rather than nitration."
+  },
+  {
+   "n": 25,
+   "topic": "Hydrocarbons",
+   "q": "Ethyne reacts with two moles of hydrogen bromide in the absence of an organic peroxide. Which compound is the major product?",
+   "options": [
+    "1,1-dibromoethane",
+    "Bromoethane",
+    "1,1,2,2-tetrabromoethane",
+    "1,2-dibromoethane"
+   ],
+   "answer": 0,
+   "explanation": "The first addition gives bromoethene. The second HBr adds by Markovnikov's rule, placing the second bromine on the carbon already bonded to bromine, so the major product is 1,1-dibromoethane. 1,2-Dibromoethane would result if the bromine atoms ended on different carbon atoms."
+  },
+  {
+   "n": 26,
+   "topic": "Environmental chemistry",
+   "q": "The concentration of carbon monoxide in air near a busy motor park in Onitsha is found to be 0.025% by volume. What is this concentration in parts per million?",
+   "options": [
+    "25 ppm",
+    "2500 ppm",
+    "2.5 ppm",
+    "250 ppm"
+   ],
+   "answer": 3,
+   "explanation": "Since 1% is 10 000 ppm, 0.025% is 0.025 × 10 000 = 250 ppm. A common error is to multiply by 100 instead of 10 000."
+  },
+  {
+   "n": 27,
+   "topic": "Energy changes",
+   "q": "A student in Enugu burns a sample of ethanol and uses the heat to warm 250 g of water. The temperature of the water rises by 5.00°C. Taking the specific heat capacity of water as 4.18 J g⁻¹ K⁻¹, what is the heat absorbed by the water?",
+   "options": [
+    "0.523 kJ",
+    "1.045 kJ",
+    "5.225 kJ",
+    "52.25 kJ"
+   ],
+   "answer": 2,
+   "explanation": "Heat absorbed = m × c × ΔT = 250 × 4.18 × 5.00 = 5225 J = 5.225 kJ. Leaving out the temperature rise gives only 1.045 kJ, so it is not the heat absorbed."
+  },
+  {
+   "n": 28,
+   "topic": "Energy changes",
+   "q": "The enthalpy change for the reaction N₂(g) + 3H₂(g) → 2NH₃(g) is −92 kJ. What is the heat released when 4.0 g of hydrogen reacts completely with nitrogen in this reaction? (H = 1.0)",
+   "options": [
+    "92.0 kJ",
+    "138 kJ",
+    "30.7 kJ",
+    "61.3 kJ"
+   ],
+   "answer": 3,
+   "explanation": "The equation uses 3 mol of H₂ and releases 92 kJ. The 4.0 g of H₂ is 4.0 ÷ 2 = 2.0 mol, so heat released = (2.0 ÷ 3.0) × 92 = 61.3 kJ."
+  },
+  {
+   "n": 29,
+   "topic": "Mole concept and stoichiometry",
+   "q": "A 0.125 mol sample of hydrated copper(II) sulfate, CuSO₄·5H₂O, is heated gently until all the water of crystallisation is lost. What mass of anhydrous copper(II) sulfate remains? (Cu = 64, S = 32, O = 16, H = 1)",
+   "options": [
+    "11.3 g",
+    "20.0 g",
+    "31.3 g",
+    "40.0 g"
+   ],
+   "answer": 1,
+   "explanation": "The molar mass of anhydrous CuSO₄ is 160 g mol⁻¹. Heating removes the water but leaves the same 0.125 mol of CuSO₄. Mass = 0.125 × 160 = 20.0 g; 31.3 g would be the mass before the water was lost."
+  },
+  {
+   "n": 30,
+   "topic": "Gas laws",
+   "q": "A balloon in Jos contains 300 cm³ of air at 27 °C. It is cooled to −23 °C at constant pressure. What volume does the air occupy? (Assume ideal gas behaviour.)",
+   "options": [
+    "250 cm³",
+    "360 cm³",
+    "275 cm³",
+    "225 cm³"
+   ],
+   "answer": 0,
+   "explanation": "Convert the temperatures to kelvin: 27 °C = 300 K and −23 °C = 250 K. At constant pressure, V₂ = V₁ × T₂/T₁ = 300 cm³ × 250/300 = 250 cm³. The volume decreases as the gas is cooled."
+  },
+  {
+   "n": 31,
+   "topic": "Gas laws",
+   "q": "At the same temperature and pressure in a laboratory in Kaduna, a gas Y diffuses twice as fast as sulfur(IV) oxide, SO₂. What is the molar mass of Y? (S = 32, O = 16)",
+   "options": [
+    "8 g mol⁻¹",
+    "128 g mol⁻¹",
+    "16 g mol⁻¹",
+    "32 g mol⁻¹"
+   ],
+   "answer": 2,
+   "explanation": "By Graham's law, rate ratio = √(M_SO₂/M_Y). Here rate_Y/rate_SO₂ = 2, so 2 = √(64/M_Y). Squaring gives 4 = 64/M_Y and M_Y = 16 g mol⁻¹."
+  },
+  {
+   "n": 32,
+   "topic": "Non-metals and their compounds",
+   "q": "Which statement best explains why graphite can be used as a dry lubricant in machines?",
+   "options": [
+    "It reacts with air to form a slippery oxide coating on the surface.",
+    "Its layers of carbon atoms are held by weak forces and can slide over one another.",
+    "Its delocalised electrons between the layers make it slippery.",
+    "Each carbon atom is joined to four other carbon atoms in a rigid network."
+   ],
+   "answer": 1,
+   "explanation": "Graphite consists of layers of carbon atoms held by weak forces, so the layers slide easily over one another and give a lubricating effect. Delocalised electrons explain its electrical conduction, not its slipperiness; a rigid four-bond carbon network describes diamond."
+  },
+  {
+   "n": 33,
+   "topic": "Non-metals and their compounds",
+   "q": "A solution suspected to contain sulfate ions is treated with barium chloride solution followed by dilute hydrochloric acid. Which observation confirms the presence of sulfate ions?",
+   "options": [
+    "A white precipitate that remains insoluble in dilute hydrochloric acid.",
+    "A white precipitate that dissolves in dilute hydrochloric acid with effervescence.",
+    "A green precipitate that turns black on standing.",
+    "A yellow precipitate that is soluble in hot water."
+   ],
+   "answer": 0,
+   "explanation": "Barium ions react with sulfate ions to give a white precipitate of barium sulfate. Barium sulfate is insoluble in dilute hydrochloric acid, so the precipitate remains. A white precipitate that dissolves with effervescence would suggest carbonate or sulfite rather than sulfate."
+  },
+  {
+   "n": 34,
+   "topic": "Metals and their compounds",
+   "q": "A freshly cleaned iron nail is left in moist air in a laboratory in Kano. After some days, a reddish-brown coating forms on the nail. Which statement best explains the formation of this coating?",
+   "options": [
+    "Oxygen alone reacts with iron to form anhydrous iron(II) oxide.",
+    "Carbon dioxide in the air reacts directly with iron to form the coating.",
+    "Both oxygen and water take part in forming hydrated iron(III) oxide.",
+    "Water alone dissolves iron to form iron(III) hydroxide."
+   ],
+   "answer": 2,
+   "explanation": "Rusting requires both oxygen and water; the reddish-brown product is hydrated iron(III) oxide. Oxygen alone or water alone does not explain the corrosion, and carbon dioxide is not the direct reactant in rust formation."
+  },
+  {
+   "n": 35,
+   "topic": "Metals and their compounds",
+   "q": "A metal workshop in Aba prefers copper to iron for making electrical wires. Which property of copper is most responsible for this choice?",
+   "options": [
+    "It has low density and does not react with water.",
+    "It has a high melting point and is very brittle.",
+    "It has high electrical conductivity and can easily be drawn into wires.",
+    "It is highly reactive and quickly forms a protective oxide layer."
+   ],
+   "answer": 2,
+   "explanation": "Copper is used for electrical wiring because it conducts electricity well and is ductile, so it can be drawn into thin wires. Low density, high brittleness and high reactivity are not the reasons for its use in wiring."
+  },
+  {
+   "n": 36,
+   "topic": "Metals and their compounds",
+   "q": "Stainless steel contains iron, chromium and nickel. Chromium is added mainly to make the steel",
+   "options": [
+    "more magnetic for use in electromagnets.",
+    "resistant to corrosion by forming a thin protective oxide layer.",
+    "harder by converting all the iron into iron carbide.",
+    "lower in melting point so that it can be cast easily."
+   ],
+   "answer": 1,
+   "explanation": "Chromium forms a thin, adherent oxide layer on the steel surface, which protects the iron from further corrosion. The other changes described do not represent the main purpose of adding chromium to stainless steel."
+  },
+  {
+   "n": 37,
+   "topic": "Atomic structure",
+   "q": "The first ionisation energy of magnesium is higher than that of aluminium. Which statement best explains this difference?",
+   "options": [
+    "Aluminium has more shells than magnesium, so its outer electron is more shielded.",
+    "Aluminium has a larger nuclear charge than magnesium, so its outer electron is less strongly attracted.",
+    "The electron removed from magnesium is from a filled 3s orbital, while that from aluminium is from a higher-energy 3p orbital.",
+    "Magnesium has a smaller atomic radius, so its outer electron is less strongly attracted."
+   ],
+   "answer": 2,
+   "explanation": "Magnesium loses an electron from the filled 3s sublevel, whereas aluminium loses a 3p electron that is higher in energy and less tightly held, so aluminium has the lower first ionisation energy. Nuclear charge alone does not explain the trend, and both elements have the same number of occupied shells."
+  },
+  {
+   "n": 38,
+   "topic": "Atomic structure",
+   "q": "Which statement about the line emission spectrum of an element is correct?",
+   "options": [
+    "The lines are produced when electrons move from lower to higher energy levels.",
+    "All elements produce identical lines when heated to the same temperature.",
+    "Each element produces its own set of lines, which can be used to identify the element.",
+    "A line emission spectrum is obtained only when atoms absorb photons."
+   ],
+   "answer": 2,
+   "explanation": "Emission lines are produced when excited electrons fall to lower energy levels, and the pattern of lines is characteristic of the element. Absorption produces an absorption spectrum, and identical spectra for all elements would make identification impossible."
+  },
+  {
+   "n": 39,
+   "topic": "Atomic structure",
+   "q": "In the hydrogen emission spectrum, which electron transition gives a photon of the longest wavelength?",
+   "options": [
+    "n = 3 to n = 2",
+    "n = 2 to n = 1",
+    "n = 5 to n = 3",
+    "n = 4 to n = 2"
+   ],
+   "answer": 2,
+   "explanation": "Longer wavelength corresponds to a smaller energy difference between levels. Using ΔE ∝ (1/3² − 1/5²) = 1/9 − 1/25 = 16/225, the transition with the smallest energy gap among the choices is n = 5 to n = 3."
+  },
+  {
+   "n": 40,
+   "topic": "Functional groups in organic chemistry",
+   "q": "An organic compound reacts with sodium trioxocarbonate(IV) solution to give effervescence. Which functional group is definitely present in the compound?",
+   "options": [
+    "Hydroxyl group",
+    "Ketone group",
+    "Carboxyl group",
+    "Aldehyde group"
+   ],
+   "answer": 2,
+   "explanation": "Carboxylic acids react with trioxocarbonate(IV) salts or carbonates to release carbon dioxide, producing effervescence. Aldehydes, ketones and alcohols do not give this reaction under ordinary conditions."
+  },
+  {
+   "n": 41,
+   "topic": "Functional groups in organic chemistry",
+   "q": "Which compound gives a brick-red precipitate when warmed with Fehling's solution?",
+   "options": [
+    "Propanone",
+    "Propanoic acid",
+    "Propan-2-ol",
+    "Propanal"
+   ],
+   "answer": 3,
+   "explanation": "Fehling's solution is reduced to a brick-red precipitate of copper(I) oxide by aldehydes such as propanal. Propanone, propan-2-ol and propanoic acid do not give this positive test under the standard conditions."
+  },
+  {
+   "n": 42,
+   "topic": "Chemical bonding",
+   "q": "A solid substance does not conduct electricity when solid, but conducts when melted. It also has a high melting point. Which type of bonding is present in the substance?",
+   "options": [
+    "Metallic bonding",
+    "Ionic bonding",
+    "Giant covalent bonding",
+    "Simple molecular covalent bonding"
+   ],
+   "answer": 1,
+   "explanation": "Ionic compounds have high melting points because of strong electrostatic attractions in the lattice, and their ions become mobile and conduct electricity only when molten or dissolved. Simple molecular and giant covalent substances do not generally conduct when melted, while metals conduct even when solid."
+  },
+  {
+   "n": 43,
+   "topic": "Acids, bases and salts",
+   "q": "In a titration at Ibadan, 20.0 cm³ of 0.050 mol/dm³ sodium trioxocarbonate(IV) solution required 25.0 cm³ of hydrochloric acid for complete reaction. What is the concentration of the acid, in mol/dm³?",
+   "options": [
+    "0.100",
+    "0.080",
+    "0.040",
+    "0.050"
+   ],
+   "answer": 1,
+   "explanation": "The equation is Na₂CO₃ + 2HCl → 2NaCl + H₂O + CO₂, so one mole of the carbonate reacts with two moles of acid. The carbonate amount is 20.0/1000 × 0.050 = 1.00 × 10⁻³ mol, so HCl needed is 2.00 × 10⁻³ mol; concentration = 2.00 × 10⁻³ ÷ 0.0250 = 0.080 mol/dm³."
+  },
+  {
+   "n": 44,
+   "topic": "Acids, bases and salts",
+   "q": "Which pair of solutions should be mixed to prepare lead(II) chloride by precipitation?",
+   "options": [
+    "Lead(II) trioxonitrate(V) solution and sodium chloride solution",
+    "Lead(II) trioxonitrate(V) solution and sodium trioxonitrate(V) solution",
+    "Lead(II) trioxonitrate(V) solution and sodium sulphate solution",
+    "Sodium chloride solution and silver trioxonitrate(V) solution"
+   ],
+   "answer": 0,
+   "explanation": "Lead(II) chloride is formed when lead(II) ions meet chloride ions, so lead(II) trioxonitrate(V) solution and sodium chloride solution are the required pair. The other pairs either give a different precipitate, such as lead(II) sulphate or silver chloride, or give no lead(II) chloride."
+  },
+  {
+   "n": 45,
+   "topic": "Acids, bases and salts",
+   "q": "A solution of sodium ethanoate in water is alkaline. Which statement best explains this observation?",
+   "options": [
+    "Sodium ions react with water to form sodium hydroxide.",
+    "Ethanoate ions react with water to form ethanoic acid and hydroxide ions.",
+    "Sodium ethanoate ionizes completely to release hydroxide ions.",
+    "Ethanoate ions donate protons to water to form hydronium ions."
+   ],
+   "answer": 1,
+   "explanation": "The ethanoate ion is the conjugate base of a weak acid; it accepts a proton from water, producing ethanoic acid and OH⁻ ions. Sodium ions do not hydrolyse appreciably, so they do not account for the alkalinity."
+  },
+  {
+   "n": 46,
+   "topic": "Hydrocarbons",
+   "q": "How many structural isomers, excluding cis-trans isomers, have the molecular formula C₅H₁₀ and contain one carbon-carbon double bond?",
+   "options": [
+    "6",
+    "3",
+    "5",
+    "4"
+   ],
+   "answer": 2,
+   "explanation": "The isomers are pent-1-ene, pent-2-ene, 2-methylbut-1-ene, 3-methylbut-1-ene and 2-methylbut-2-ene. Cis and trans forms of pent-2-ene are not counted separately here, so the total is five."
+  },
+  {
+   "n": 47,
+   "topic": "Hydrocarbons",
+   "q": "Ethyne is bubbled through excess bromine water in the dark. How many moles of bromine react with 0.10 mol of ethyne?",
+   "options": [
+    "0.20 mol",
+    "0.10 mol",
+    "0.40 mol",
+    "0.050 mol"
+   ],
+   "answer": 0,
+   "explanation": "Each mole of ethyne has a triple bond and can add two moles of bromine to form 1,1,2,2-tetrabromoethane. Therefore 0.10 mol of ethyne reacts with 2 × 0.10 = 0.20 mol of bromine."
+  },
+  {
+   "n": 48,
+   "topic": "Hydrocarbons",
+   "q": "Which statement about members of a homologous series is correct?",
+   "options": [
+    "Consecutive members differ by CH₂ and have similar chemical properties.",
+    "All members have the same molecular formula but different structures.",
+    "All members contain the same number of carbon atoms but different functional groups.",
+    "Consecutive members differ by CH₂ and have identical physical properties."
+   ],
+   "answer": 0,
+   "explanation": "Members of a homologous series fit the same general formula, differ from one member to the next by a CH₂ unit, and show similar chemical properties. Their physical properties change gradually rather than being identical."
+  },
+  {
+   "n": 49,
+   "topic": "Environmental chemistry",
+   "q": "A factory in Port Harcourt discharges large volumes of hot cooling water into a stream. Which harmful effect on the stream is most directly caused by the hot water?",
+   "options": [
+    "Heavy metals are converted into harmless substances.",
+    "The water becomes more acidic because hydrogen ions are released.",
+    "The solubility of oxygen decreases, so aquatic animals may suffocate.",
+    "Eutrophication increases because nutrients are released."
+   ],
+   "answer": 2,
+   "explanation": "Warmer water holds less dissolved oxygen and also raises the metabolic oxygen demand of fish, so aquatic animals may suffer from oxygen shortage. Thermal discharge does not by itself release nutrients or hydrogen ions."
+  },
+  {
+   "n": 50,
+   "topic": "Environmental chemistry",
+   "q": "A coal-fired factory in Enugu releases a gas formed from sulphur impurities in the coal. This gas is a major cause of acid rain. Which gas is it?",
+   "options": [
+    "Carbon(II) oxide",
+    "Hydrogen",
+    "Sulphur(IV) oxide",
+    "Methane"
+   ],
+   "answer": 2,
+   "explanation": "Sulphur impurities in coal burn to form sulphur(IV) oxide, which can be oxidized further and dissolved in atmospheric moisture to produce acidic rain. Carbon(II) oxide, methane and hydrogen are not the main acid-rain gases formed from sulphur impurities."
+  }
+ ]
+}

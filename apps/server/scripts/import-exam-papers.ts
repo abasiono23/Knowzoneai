@@ -5,7 +5,7 @@
  *   exam,subject,year,n,topic,passage,question,a,b,c,d,e,answer,explanation
  *   jamb,physics,2019,1,Motion,,"A car accelerates…",2 m/s²,4 m/s²,6 m/s²,8 m/s²,,B,"a = Δv/t = …"
  *
- * - exam: jamb | waec | neco; subject: one of the Past Questions subjects (see src/data/exams.ts)
+ * - exam: jamb | waec | neco | sat | act | ap | gcse | alevel | kcse | nsc; subject: one of that exam’s subjects (see src/data/exams.ts)
  * - topic: one of that subject's syllabus topics if possible (scores are broken down by topic)
  * - e is optional (5-option papers); answer is the letter of the right option
  * Each exam + subject + year becomes one paper file in data/exams/. Run from apps/server:
@@ -15,7 +15,7 @@
 import { readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 
-import { paperFormat, type Exam, type ExamSubject } from '../src/data/exams.js';
+import { EXAMS, hasSubject, paperFormat, type Exam, type ExamSubject } from '../src/data/exams.js';
 import { Paper, type Question } from '../src/services/exams.js';
 
 const [file] = process.argv.slice(2).filter((a, i, all) => !a.startsWith('--') && !all[i - 1]?.startsWith('--'));
@@ -64,6 +64,7 @@ rows.forEach((r, line) => {
   const exam = get(r, 'exam').toLowerCase() as Exam;
   const subject = get(r, 'subject').toLowerCase() as ExamSubject;
   const year = Number(get(r, 'year'));
+  if (!EXAMS.includes(exam) || !hasSubject(exam, subject)) throw new Error(`Row ${line + 2}: ${exam} has no subject "${subject}"`);
   const key = `${exam}-${subject}-${year}`;
   const options = ['a', 'b', 'c', 'd', 'e'].map((k) => get(r, k)).filter(Boolean);
   const answer = 'abcde'.indexOf(get(r, 'answer').toLowerCase());

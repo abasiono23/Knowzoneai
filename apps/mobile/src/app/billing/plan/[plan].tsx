@@ -8,15 +8,8 @@ import { FeatureList, PeriodToggle, TrustRow } from '@/components/billing/billin
 import { Button, Card, Screen, ScreenHeader, Text } from '@/components/ui';
 import { Colors, Radius, Spacing } from '@/constants/theme';
 import { useCheckout } from '@/lib/billing/checkout';
-import {
-  MONTHLY_CREDITS,
-  PERIOD,
-  PLANS,
-  TUTOR_DAILY,
-  money,
-  type PaidPlan,
-  type PlanId,
-} from '@/lib/billing/plans';
+import { MONTHLY_CREDITS, PERIOD, PLANS, TUTOR_DAILY, money, type PaidPlan, type PlanId } from '@/lib/billing/plans';
+import { DEFAULT_REGION, examNames, listOf, regionOf } from '@/lib/region';
 import { useSession } from '@/lib/session';
 
 const FREE_LIMITS = ['tutor', 'video', 'offline', 'exams'] as const;
@@ -40,6 +33,13 @@ export default function PlanDetailScreen() {
   const { plan: raw } = useLocalSearchParams<{ plan: string }>();
   const plan: PlanId = raw === 'PLUS' || raw === 'PRO' ? raw : 'FREE';
   const { user } = useSession();
+  const region = regionOf(user);
+  const whoA =
+    region === DEFAULT_REGION
+      ? 'plan.faq.PRO.whoA'
+      : examNames(region).length
+        ? 'plan.faq.PRO.whoAFor'
+        : 'plan.faq.PRO.whoAAny';
   const checkout = useCheckout();
   const p = PLANS[plan];
   const current = (user?.plan ?? 'FREE') === plan;
@@ -128,7 +128,9 @@ export default function PlanDetailScreen() {
               <Card key={f.q} style={{ gap: 4 }}>
                 <Text variant="bodyStrong">{t(f.q)}</Text>
                 <Text variant="small" color={Colors.textSecondary}>
-                  {t(f.a, {
+                  {/* Who Pro is for names the student's own exams (Nigeria's wording is unchanged). */}
+                  {t(f.a === 'plan.faq.PRO.whoA' ? whoA : f.a, {
+                    exams: listOf(examNames(region)),
                     credits: MONTHLY_CREDITS.PLUS,
                     questions: TUTOR_DAILY.PRO,
                   })}

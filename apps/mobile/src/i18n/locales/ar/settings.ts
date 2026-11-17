@@ -58,6 +58,7 @@ const settings: Translation<typeof en> = {
     activeCount_many: '{{count}} نشطًا',
     activeCount_other: '{{count}} نشط',
     language: 'اللغة',
+    region: 'بلد الدراسة',
     appearance: 'المظهر',
     privacy: 'الخصوصية',
     downloadData: 'تنزيل بياناتي',
@@ -102,6 +103,11 @@ const settings: Translation<typeof en> = {
     reduceMotionHint: 'رسوم متحركة أقل في أنحاء التطبيق',
     haptics: 'الاهتزاز في الألعاب',
     hapticsHint: 'استجابة لمسية في Knowzone World',
+  },
+  region: {
+    title: 'بلد الدراسة',
+    intro: 'اختر البلد الذي تدرس فيه. سيعرض Knowzone تدريب امتحانات ذلك البلد أولًا، وسيتبع مدرّسك الذكي امتحاناته.',
+    footer: 'تبقى درجاتك عند تغيير البلد، ويمكنك فتح أوراق بلدان أخرى من صفحة التدريب على الامتحانات.',
   },
   language: {
     title: 'اللغة',

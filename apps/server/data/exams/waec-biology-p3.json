@@ -1,0 +1,661 @@
+{
+ "id": "waec-biology-p3",
+ "exam": "waec",
+ "subject": "biology",
+ "year": null,
+ "number": 3,
+ "source": "ai",
+ "minutes": 60,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Support and movement",
+   "q": "At a freely movable joint such as the knee, which structure secretes the fluid that lubricates the articular surfaces?",
+   "options": [
+    "Articular cartilage",
+    "Synovial membrane",
+    "Ligament",
+    "Tendon"
+   ],
+   "answer": 1,
+   "explanation": "The synovial membrane lines the joint capsule and secretes synovial fluid, which reduces friction. Articular cartilage cushions the ends of bones, while ligaments and tendons are dense connective tissues that do not secrete this lubricating fluid."
+  },
+  {
+   "n": 2,
+   "topic": "Support and movement",
+   "q": "A student in Ibadan models the elbow using two strips of rubber. Which statement best explains why two antagonistic muscles are needed to move the forearm at the elbow?",
+   "options": [
+    "Ligaments contract to produce the opposite movement at the joint.",
+    "Muscles can actively lengthen and push a bone in the opposite direction.",
+    "A muscle can only pull a bone when it contracts and shortens, so a second muscle is needed to pull it back.",
+    "One muscle can both pull and push a bone if it is attached by a tendon."
+   ],
+   "answer": 2,
+   "explanation": "Skeletal muscles produce movement only by contracting and shortening, so they cannot push a bone back to its original position. The antagonistic muscle contracts to produce the opposite movement while the first muscle relaxes."
+  },
+  {
+   "n": 3,
+   "topic": "Support and movement",
+   "q": "Which function is performed by the intervertebral discs in the human vertebral column?",
+   "options": [
+    "They secrete synovial fluid into freely movable joints.",
+    "They attach skeletal muscles directly to the vertebrae.",
+    "They produce red blood cells throughout adult life.",
+    "They absorb shock and allow slight movement between vertebrae."
+   ],
+   "answer": 3,
+   "explanation": "Intervertebral discs are pads of cartilage between adjacent vertebrae; they cushion the bones and permit limited movement. Red marrow produces blood cells, synovial fluid is produced within synovial joints, and muscles are attached by tendons rather than by the discs."
+  },
+  {
+   "n": 4,
+   "topic": "Ecology",
+   "q": "A fisheries student in Epe caught 80 tilapia, marked them, and released them back into a pond. Later, a sample of 60 tilapia was caught and 12 were found to be marked. Using the mark-recapture method, estimate the total population of tilapia in the pond.",
+   "options": [
+    "160",
+    "128",
+    "400",
+    "480"
+   ],
+   "answer": 2,
+   "explanation": "The estimate is (number first marked × number in second sample) ÷ number marked in second sample = (80 × 60) ÷ 12 = 400. Adding or subtracting the recaptured marked fish, or using the marked fraction incorrectly, gives the other values."
+  },
+  {
+   "n": 5,
+   "topic": "Ecology",
+   "q": "In a rice field near Kebbi, the food chain is rice plants → grasshoppers → frogs → snakes. If the rice plants contain 80 000 kJ of energy, approximately how much energy reaches the snakes, assuming a 10% transfer efficiency at each level?",
+   "options": [
+    "80 kJ",
+    "8 000 kJ",
+    "800 kJ",
+    "8 kJ"
+   ],
+   "answer": 0,
+   "explanation": "Energy passed to each trophic level is one-tenth of the previous level: grasshoppers receive 8 000 kJ, frogs 800 kJ, and snakes 80 kJ. Stopping one or more transfers early gives greater values."
+  },
+  {
+   "n": 6,
+   "topic": "Ecology",
+   "q": "In a cattle ranch near Sokoto, cattle egrets follow herds and feed on insects disturbed as the cattle move through the grass. The relationship between the egrets and the cattle is best described as",
+   "options": [
+    "Competition",
+    "Parasitism",
+    "Mutualism",
+    "Commensalism"
+   ],
+   "answer": 3,
+   "explanation": "The egrets obtain food from insects disturbed by the cattle, while the cattle are neither helped nor harmed, which is commensalism. Mutualism would require both species to benefit, and parasitism would require the egrets to harm the cattle."
+  },
+  {
+   "n": 7,
+   "topic": "Respiration",
+   "q": "Which pair of features makes the alveoli efficient surfaces for gaseous exchange in the human lungs?",
+   "options": [
+    "Cartilaginous rings and a layer of cilia",
+    "Thick muscular walls and a small total surface area",
+    "Thin moist walls and a rich capillary network",
+    "Valves that control air flow and a single blood vessel"
+   ],
+   "answer": 2,
+   "explanation": "Alveoli have very thin, moist walls and are surrounded by many capillaries, giving a short diffusion distance and a steep concentration gradient. Thick walls, small surface area, cilia and cartilage are features of the airways rather than exchange surfaces."
+  },
+  {
+   "n": 8,
+   "topic": "Respiration",
+   "q": "A man in Lagos runs a generator in a poorly ventilated room and inhales carbon monoxide. Why does he become short of oxygen in his tissues?",
+   "options": [
+    "Carbon monoxide combines with carbon dioxide to stop diffusion.",
+    "Carbon monoxide blocks the diaphragm from contracting.",
+    "Carbon monoxide dissolves the alveolar walls, preventing gas exchange.",
+    "Carbon monoxide binds strongly to haemoglobin and reduces oxygen transport."
+   ],
+   "answer": 3,
+   "explanation": "Carbon monoxide combines with haemoglobin more readily than oxygen does, so less haemoglobin is available to carry oxygen to tissues. It does not primarily dissolve alveolar walls nor stop the diaphragm from contracting."
+  },
+  {
+   "n": 9,
+   "topic": "Nervous and hormonal coordination",
+   "q": "Which part of the brain coordinates muscular activity and helps maintain balance during a football match in Abuja?",
+   "options": [
+    "Hypothalamus",
+    "Cerebrum",
+    "Medulla oblongata",
+    "Cerebellum"
+   ],
+   "answer": 3,
+   "explanation": "The cerebellum coordinates voluntary movements and balance, using information from the ears and muscles. The cerebrum is mainly for conscious thought, the medulla controls involuntary vital actions, and the hypothalamus regulates temperature and water balance."
+  },
+  {
+   "n": 10,
+   "topic": "Nervous and hormonal coordination",
+   "q": "A trader in Maiduguri becomes dehydrated during very hot weather. Which hormonal response helps him conserve water?",
+   "options": [
+    "Increased secretion of insulin causes the kidneys to reabsorb more glucose.",
+    "Increased secretion of thyroxine causes sweat glands to stop producing sweat.",
+    "Increased secretion of adrenaline causes the kidneys to produce more urine.",
+    "Increased secretion of antidiuretic hormone causes more water to be reabsorbed by the kidney tubules."
+   ],
+   "answer": 3,
+   "explanation": "When blood water potential falls, more antidiuretic hormone is released and the collecting ducts become more permeable to water, so more water is reabsorbed and less urine is produced. Insulin controls blood glucose rather than water conservation, and adrenaline does not conserve water by increasing urine output."
+  },
+  {
+   "n": 11,
+   "topic": "Nutrition in plants and animals",
+   "q": "Mr Adeyemi in Ibadan has a blocked bile duct. Digestion of which food component is most directly impaired?",
+   "options": [
+    "Cooked starch",
+    "Glucose",
+    "Lean meat (protein)",
+    "Palm oil (fat)"
+   ],
+   "answer": 3,
+   "explanation": "Bile from the liver normally emulsifies fats into small droplets, increasing the surface area for lipase action. A blocked bile duct therefore reduces fat digestion and absorption most directly, while starch, protein and glucose digestion depend mainly on other secretions and enzymes."
+  },
+  {
+   "n": 12,
+   "topic": "Nutrition in plants and animals",
+   "q": "A cocoa farmer in Ondo noticed that older leaves of some trees had yellow patches between green veins. A soil test showed a deficiency of magnesium. Magnesium is most directly needed for the formation of which substance?",
+   "options": [
+    "Protein",
+    "Cellulose",
+    "Starch",
+    "Chlorophyll"
+   ],
+   "answer": 3,
+   "explanation": "Magnesium is the central atom in the chlorophyll molecule, so its deficiency reduces chlorophyll formation and causes yellowing between veins, especially in older leaves. It is not the main structural component of cellulose, protein or starch."
+  },
+  {
+   "n": 13,
+   "topic": "Cell structure and organisation",
+   "q": "Which structure is absent from a mature human red blood cell?",
+   "options": [
+    "Cell membrane",
+    "Haemoglobin",
+    "Nucleus",
+    "Cytoplasm"
+   ],
+   "answer": 2,
+   "explanation": "A mature human red blood cell loses its nucleus and most organelles, leaving more space for haemoglobin to carry oxygen. The cell membrane and cytoplasm are still present, and haemoglobin is the main content of the cell."
+  },
+  {
+   "n": 14,
+   "topic": "Cell structure and organisation",
+   "q": "A student in Zaria examines a cell that has a cellulose cell wall, a large central vacuole and no chloroplast. The cell was most likely obtained from",
+   "options": [
+    "a bacterial colony",
+    "an onion epidermis",
+    "a green cassava leaf",
+    "the inner cheek of a human"
+   ],
+   "answer": 1,
+   "explanation": "An onion epidermal cell is a plant cell with a cellulose wall and a large central vacuole, but it lacks chloroplasts because it is not a photosynthetic tissue. A human cheek cell has no cellulose wall, a cassava leaf cell contains chloroplasts, and a bacterial cell does not have a large central vacuole."
+  },
+  {
+   "n": 15,
+   "topic": "Cell structure and organisation",
+   "q": "A cell has a rigid wall made of chitin, no chlorophyll and numerous mitochondria. It most likely belongs to",
+   "options": [
+    "a mushroom",
+    "a bacterium",
+    "a human liver",
+    "a maize leaf"
+   ],
+   "answer": 0,
+   "explanation": "Fungal cells, such as those of a mushroom, have chitin in their cell walls and no chlorophyll. A maize leaf cell has cellulose and chloroplasts, a human liver cell has no rigid wall, and a bacterial cell lacks mitochondria and has a different wall composition."
+  },
+  {
+   "n": 16,
+   "topic": "Genetics",
+   "q": "In a species of flowering plant, red flower colour and white flower colour show incomplete dominance. A pure red plant is crossed with a pure white plant, and the F₁ plants are pink. If two pink F₁ plants are crossed, what fraction of the F₂ plants is expected to be pink?",
+   "options": [
+    "1/2",
+    "3/4",
+    "1",
+    "1/4"
+   ],
+   "answer": 0,
+   "explanation": "If red is RR and white is WW, the F₁ pink plants are RW. Crossing RW × RW gives 1 RR red : 2 RW pink : 1 WW white, so the fraction of pink plants is 2/4 = 1/2."
+  },
+  {
+   "n": 17,
+   "topic": "Diffusion, osmosis and active transport",
+   "q": "A 4.0 cm strip of Irish potato is placed in distilled water. After 30 minutes, its length is 4.4 cm. What is the percentage increase in length?",
+   "options": [
+    "40%",
+    "10%",
+    "0.4%",
+    "4%"
+   ],
+   "answer": 1,
+   "explanation": "The increase in length is 4.4 cm − 4.0 cm = 0.4 cm. The percentage increase is (0.4 ÷ 4.0) × 100 = 10%, and the increase occurs because water enters the potato cells by osmosis."
+  },
+  {
+   "n": 18,
+   "topic": "Diffusion, osmosis and active transport",
+   "q": "Pieces of beetroot were placed in distilled water at 20 °C and at 60 °C. The water at 60 °C became more deeply red. Which explanation is best?",
+   "options": [
+    "High temperature made the cell membranes more permeable, so red pigment diffused out.",
+    "Red pigment was actively transported out of the cells at high temperature.",
+    "The beetroot cells absorbed more water at 60 °C, forcing pigment out.",
+    "High temperature increased osmosis of red pigment into the water."
+   ],
+   "answer": 0,
+   "explanation": "High temperature damages membrane proteins and lipids, making the cell membranes more permeable so the red pigment leaks out by diffusion. Pigments are not moved by osmosis, and their release does not result from active transport or from water pushing them out."
+  },
+  {
+   "n": 19,
+   "topic": "Diseases and their control",
+   "q": "A health worker in Sokoto finds that measles is spreading among children in a crowded settlement. Which action is most useful for controlling the outbreak?",
+   "options": [
+    "Giving antibiotics to every child in the settlement",
+    "Preventing all children from attending school for one year",
+    "Spraying the houses with insecticide each evening",
+    "Vaccinating susceptible children without delay"
+   ],
+   "answer": 3,
+   "explanation": "Measles is a viral disease, and vaccination of susceptible children is the most direct way to stop its spread. Antibiotics act against bacteria, not viruses, and insecticides do not control an airborne viral infection. Keeping children out of school may reduce contact, but it does not protect susceptible children as effectively as prompt vaccination."
+  },
+  {
+   "n": 20,
+   "topic": "Diseases and their control",
+   "q": "A student in Ilesa has bloody diarrhoea and abdominal cramps after eating food from a roadside seller. Which household practice most directly prevents the spread of this infection to other members?",
+   "options": [
+    "Sleeping under an insecticide-treated net every night",
+    "Avoiding all cooked food for one week",
+    "Taking antimalarial tablets daily",
+    "Washing hands with soap after using the toilet and before handling food"
+   ],
+   "answer": 3,
+   "explanation": "Bloody diarrhoea of this kind is commonly spread by the faecal-oral route, so proper handwashing with soap is a direct control measure. Antimalarial tablets and insecticide-treated nets help against malaria, not against food- or water-borne diarrhoeal infections. Avoiding cooked food is not a reliable control measure because contamination often occurs during handling."
+  },
+  {
+   "n": 21,
+   "topic": "Diseases and their control",
+   "q": "In a village near Makurdi, many children develop schistosomiasis after bathing in a slow-moving stream. Which measure most directly reduces new infections?",
+   "options": [
+    "Avoiding contact with snail-infested water and providing safe water supplies",
+    "Boiling milk before drinking",
+    "Using insecticide-treated nets every night",
+    "Giving antibiotics to all healthy children in the village"
+   ],
+   "answer": 0,
+   "explanation": "Schistosomiasis is caused by Schistosoma worms whose larvae can penetrate the skin of people wading or bathing in contaminated water. The infection involves a snail intermediate host, so avoiding contaminated water and providing safe water directly interrupt transmission. Insecticide-treated nets are for malaria control, and boiling milk does not prevent this water-contact disease."
+  },
+  {
+   "n": 22,
+   "topic": "Transport systems",
+   "q": "Which blood vessel carries absorbed nutrients from the small intestine directly to the liver?",
+   "options": [
+    "Pulmonary vein",
+    "Hepatic vein",
+    "Renal artery",
+    "Hepatic portal vein"
+   ],
+   "answer": 3,
+   "explanation": "The hepatic portal vein carries blood rich in absorbed nutrients from the small intestine to the liver for processing and storage. The hepatic vein carries blood away from the liver, while the pulmonary vein carries oxygenated blood from the lungs to the left atrium. The renal artery supplies blood to the kidney."
+  },
+  {
+   "n": 23,
+   "topic": "Transport systems",
+   "q": "A student examines a leaf of a plant growing in a dry habitat. Which feature most directly reduces water loss while still allowing gaseous exchange?",
+   "options": [
+    "Stomata occurring mainly on the upper surface",
+    "Large, broad leaves with many stomata",
+    "A very thin cuticle",
+    "Sunken stomata in pits"
+   ],
+   "answer": 3,
+   "explanation": "Sunken stomata in pits trap a layer of moist air near the stomatal opening, reducing transpiration while still permitting gas exchange. A thin cuticle, stomata on the upper surface and large broad leaves would generally increase water loss. These features are adaptations to dry conditions."
+  },
+  {
+   "n": 24,
+   "topic": "Classification of living things",
+   "q": "A biologist in Ibadan examines an organism that has a notochord, a dorsal hollow nerve cord and pharyngeal gill slits at some stage in its life. To which phylum does it most likely belong?",
+   "options": [
+    "Annelida",
+    "Mollusca",
+    "Arthropoda",
+    "Chordata"
+   ],
+   "answer": 3,
+   "explanation": "A notochord, a dorsal hollow nerve cord and pharyngeal gill slits are characteristic features of the phylum Chordata, at least during some stage of development. Arthropods have jointed appendages and an exoskeleton, while annelids and molluscs do not possess a notochord. These features are used in classification because they reflect fundamental body plans."
+  },
+  {
+   "n": 25,
+   "topic": "Classification of living things",
+   "q": "The scientific name of the human is written as Homo sapiens. Which statement about this name is correct?",
+   "options": [
+    "The first word is the family and the second word is the phylum.",
+    "Homo is the species and sapiens is the genus.",
+    "Both words are common names and are not used in classification.",
+    "Homo is the genus and sapiens is the specific epithet."
+   ],
+   "answer": 3,
+   "explanation": "In binomial nomenclature, the first word of a scientific name is the genus and the second word is the specific epithet. The full species name is Homo sapiens, usually printed in italics or underlined when handwritten. Scientific names are part of formal classification, not ordinary common names."
+  },
+  {
+   "n": 26,
+   "topic": "Variation and evolution",
+   "q": "In a population of goats in Jos, horn length varies gradually from short to long. Which type of variation is shown?",
+   "options": [
+    "Mutation",
+    "Discontinuous variation",
+    "Artificial selection",
+    "Continuous variation"
+   ],
+   "answer": 3,
+   "explanation": "Continuous variation shows a gradual range of measurements rather than distinct categories, as seen when horn length varies from short to long. Discontinuous variation gives clear-cut categories, such as blood group or tongue rolling. Mutation is a source of new alleles, not a description of the pattern of variation itself."
+  },
+  {
+   "n": 27,
+   "topic": "Variation and evolution",
+   "q": "Two populations of birds on different islands develop different beak shapes over many generations. Which condition is most important for them to become separate species?",
+   "options": [
+    "Absence of variation in beak shape",
+    "Reproductive isolation",
+    "Frequent interbreeding between the populations",
+    "Identical selection pressures in both habitats"
+   ],
+   "answer": 1,
+   "explanation": "Reproductive isolation prevents the two populations from exchanging genes, allowing them to diverge into separate species over time. Frequent interbreeding would keep the populations genetically connected and oppose speciation. Differing selection pressures and variation may promote divergence, but reproductive isolation is the key condition for maintaining separate species."
+  },
+  {
+   "n": 28,
+   "topic": "Excretion",
+   "q": "A biology student in Ilorin compares nitrogenous waste excretion in a freshwater fish and a mammal. Why is ammonia converted to urea in the mammal before it is transported to the kidneys?",
+   "options": [
+    "Ammonia is less toxic than urea and is safer to transport in blood.",
+    "Urea is less toxic and can be carried in the blood with less water loss than ammonia.",
+    "Conversion to urea allows the mammal to excrete nitrogen without using any water.",
+    "Urea is insoluble and can be stored in the liver until the kidney is ready to remove it."
+   ],
+   "answer": 1,
+   "explanation": "Mammals convert highly toxic ammonia into less toxic urea in the liver; urea can be carried in the blood and excreted with relatively little water. Ammonia is not safer to transport, and urea is soluble rather than stored as an insoluble substance."
+  },
+  {
+   "n": 29,
+   "topic": "Excretion",
+   "q": "Which structure carries urine from the renal pelvis of the kidney to the urinary bladder?",
+   "options": [
+    "Urethra",
+    "Loop of Henle",
+    "Renal vein",
+    "Ureter"
+   ],
+   "answer": 3,
+   "explanation": "The ureter is the tube that carries urine from the renal pelvis of each kidney to the urinary bladder. The urethra carries urine from the bladder to the outside, while the renal vein carries blood and the loop of Henle is part of a nephron."
+  },
+  {
+   "n": 30,
+   "topic": "Excretion",
+   "q": "During a hot afternoon in Sokoto, a boy sweats profusely. Which excretory function is performed by his sweat glands?",
+   "options": [
+    "Removal of carbon dioxide and water vapour from the lungs.",
+    "Removal of glucose and plasma proteins from the blood.",
+    "Removal of bile pigments and excess amino acids.",
+    "Removal of water, mineral salts and a small amount of urea."
+   ],
+   "answer": 3,
+   "explanation": "Sweat contains water, mineral salts and traces of urea, so the sweat glands help remove these substances from the body. Carbon dioxide is mainly excreted by the lungs, glucose and plasma proteins are retained in the blood, and bile pigments are excreted in bile."
+  },
+  {
+   "n": 31,
+   "topic": "Reproduction",
+   "q": "A sperm cell from a man in Kano must penetrate the outer layers of an ovum in the oviduct. Which role is performed by the enzymes in the sperm acrosome?",
+   "options": [
+    "They prevent more than one sperm from reaching the ovum by forming a hard coat.",
+    "They provide energy for the sperm to swim by breaking down glucose.",
+    "They digest the membranes surrounding the ovum to allow the sperm nucleus to enter.",
+    "They stimulate the ovary to release a mature ovum immediately."
+   ],
+   "answer": 2,
+   "explanation": "The acrosome contains enzymes that digest the egg coverings, such as the zona pellucida, so the sperm nucleus can enter. Energy for swimming comes from mitochondria, and the cortical reaction after a sperm enters helps prevent further sperm entry."
+  },
+  {
+   "n": 32,
+   "topic": "Reproduction",
+   "q": "In a flowering plant, a pollen tube enters the embryo sac and releases two male nuclei. What is formed when one male nucleus fuses with the two polar nuclei?",
+   "options": [
+    "The zygote, which develops into the embryo.",
+    "The fruit wall, which develops from the ovary wall.",
+    "Endosperm, which nourishes the developing embryo.",
+    "The seed coat, which protects the seed."
+   ],
+   "answer": 2,
+   "explanation": "In flowering plants, double fertilisation involves one male nucleus fusing with the egg to form the zygote and the other fusing with two polar nuclei to form endosperm. The endosperm supplies nutrients to the developing embryo, while the seed coat develops from the integuments and the fruit wall from the ovary wall."
+  },
+  {
+   "n": 33,
+   "topic": "Support and movement",
+   "q": "A student in Jos bends her arm to lift a book. Which type of joint allows movement at her elbow?",
+   "options": [
+    "Ball-and-socket joint",
+    "Pivot joint",
+    "Hinge joint",
+    "Gliding joint"
+   ],
+   "answer": 2,
+   "explanation": "The elbow is a hinge joint, allowing movement mainly in one plane as the arm bends and straightens. A ball-and-socket joint allows movement in many directions, a pivot joint allows rotation, and a gliding joint allows sliding movements."
+  },
+  {
+   "n": 34,
+   "topic": "Support and movement",
+   "q": "A teenager in Enugu injures the epiphyseal cartilage near the end of a long bone. Why does this injury delay increase in bone length?",
+   "options": [
+    "The cartilage stores fat that supplies energy for bone growth.",
+    "The cartilage is the growth plate where new bone is formed by ossification.",
+    "The cartilage forms the hard outer layer that protects the bone shaft.",
+    "The cartilage carries blood containing oxygen to the bone marrow."
+   ],
+   "answer": 1,
+   "explanation": "Near the ends of growing long bones, hyaline cartilage forms an epiphyseal growth plate where cartilage is gradually replaced by bone, so the bone lengthens. Damage to this region interferes with ossification and can reduce further growth in length of the bone."
+  },
+  {
+   "n": 35,
+   "topic": "Ecology",
+   "q": "In a farm near Ogbomoso, dead leaves, animal droppings and remains of insects disappear from the soil surface over several weeks. Which statement best explains the role of decomposers in this process?",
+   "options": [
+    "They convert atmospheric nitrogen directly into plant proteins.",
+    "They prevent mineral nutrients from entering the soil by storing them permanently.",
+    "They transfer all the energy in dead matter to the next trophic level without loss.",
+    "They break down dead organic matter and release mineral nutrients into the soil."
+   ],
+   "answer": 3,
+   "explanation": "Decomposers such as bacteria and fungi break down dead organic matter, releasing mineral ions that plants can absorb. They do not convert atmospheric nitrogen into proteins, and energy is lost as heat at each trophic level rather than being passed on completely."
+  },
+  {
+   "n": 36,
+   "topic": "Ecology",
+   "q": "In a rocky shore near Lagos, barnacles and limpets occupy the same area and compete for limited space. Which term best describes their interaction?",
+   "options": [
+    "Intraspecific competition",
+    "Commensalism",
+    "Interspecific competition",
+    "Mutualism"
+   ],
+   "answer": 2,
+   "explanation": "Barnacles and limpets are different species using the same limited resource, space, so their interaction is interspecific competition. Intraspecific competition occurs between members of the same species, while commensalism and mutualism describe different relationships."
+  },
+  {
+   "n": 37,
+   "topic": "Respiration",
+   "q": "A student in Ibadan who has just completed a fast 800 m race breathes deeply and rapidly. The increased ventilation is mainly caused by",
+   "options": [
+    "a decrease in blood pH acting directly on the lungs to increase expansion",
+    "a rise in the carbon dioxide concentration of the blood stimulating the respiratory centre",
+    "accumulation of lactic acid in the lungs stimulating contraction of the alveoli",
+    "a fall in the oxygen concentration of the blood acting directly on the diaphragm"
+   ],
+   "answer": 1,
+   "explanation": "During vigorous exercise, extra carbon dioxide is produced and blood carbon dioxide rises; chemoreceptors send impulses to the respiratory centre in the medulla, which increases breathing rate and depth. Oxygen shortage is not the main direct stimulus under normal conditions, and lactic acid does not act directly on the lungs."
+  },
+  {
+   "n": 38,
+   "topic": "Respiration",
+   "q": "A muscle cell in a Lagos athlete breaks down 2 molecules of glucose to pyruvate by glycolysis and then converts the pyruvate to lactate. What is the net yield of ATP from this process?",
+   "options": [
+    "8 ATP",
+    "2 ATP",
+    "36 ATP",
+    "4 ATP"
+   ],
+   "answer": 3,
+   "explanation": "Glycolysis yields a net of 2 ATP per glucose molecule. Two glucose molecules therefore give 2 × 2 = 4 ATP, while the conversion of pyruvate to lactate regenerates NAD⁺ but does not produce additional ATP."
+  },
+  {
+   "n": 39,
+   "topic": "Respiration",
+   "q": "A baker in Kano mixes yeast with dough and keeps it in a warm closed container. The dough rises mainly because",
+   "options": [
+    "alcohol produced during anaerobic respiration evaporates rapidly and lifts the dough",
+    "carbon dioxide produced by anaerobic respiration of the yeast is trapped in the dough",
+    "nitrogen from the air is released by the yeast and forms bubbles in the dough",
+    "oxygen produced during aerobic respiration is trapped as bubbles in the dough"
+   ],
+   "answer": 1,
+   "explanation": "In the closed warm dough, yeast respires anaerobically, breaking down sugars into ethanol and carbon dioxide. The trapped carbon dioxide bubbles make the dough rise; oxygen is not produced during respiration, and nitrogen is not released by yeast."
+  },
+  {
+   "n": 40,
+   "topic": "Nervous and hormonal coordination",
+   "q": "A nursing mother in Enugu hears her baby cry, and milk begins to flow from her breasts before she picks the baby up. The hormone directly responsible for this release of milk is",
+   "options": [
+    "prolactin",
+    "oestrogen",
+    "adrenaline",
+    "oxytocin"
+   ],
+   "answer": 3,
+   "explanation": "The sound of the baby triggers a neuroendocrine reflex, and oxytocin released from the posterior pituitary causes contraction of myoepithelial cells around the mammary alveoli, leading to milk ejection. Prolactin mainly stimulates milk production rather than the immediate release of stored milk."
+  },
+  {
+   "n": 41,
+   "topic": "Nutrition in plants and animals",
+   "q": "A farmer in Abeokuta observes that maize plants have purplish leaves and poorly filled grains. Soil test shows a deficiency of an element needed for ATP, nucleic acids and phospholipids. Which element should be supplied?",
+   "options": [
+    "nitrogen",
+    "potassium",
+    "phosphorus",
+    "magnesium"
+   ],
+   "answer": 2,
+   "explanation": "Phosphorus is a component of ATP, nucleic acids and phospholipids, and deficiency can produce purplish leaves and poor grain filling. Nitrogen deficiency commonly causes yellowing and poor growth, magnesium deficiency causes interveinal chlorosis, and potassium deficiency affects water regulation and leaf margins."
+  },
+  {
+   "n": 42,
+   "topic": "Nutrition in plants and animals",
+   "q": "After eating fried plantain, a student in Ilorin has lipids in the small intestine emulsified by bile salts. Which enzyme then breaks the emulsified lipids into fatty acids and glycerol?",
+   "options": [
+    "pepsin",
+    "trypsin",
+    "amylase",
+    "lipase"
+   ],
+   "answer": 3,
+   "explanation": "Bile salts emulsify fats into tiny droplets but do not digest them chemically. Lipase then hydrolyses the emulsified fats into fatty acids and glycerol; pepsin and trypsin act on proteins, while amylase acts on starch."
+  },
+  {
+   "n": 43,
+   "topic": "Nutrition in plants and animals",
+   "q": "A variegated leaf from a plant in Jos has green and white patches. It is exposed to sunlight for 6 hours, decolourised and tested with iodine solution. Which region of the leaf turns blue-black?",
+   "options": [
+    "both green and white patches equally, because all living cells photosynthesise",
+    "the white patches, because they lack chlorophyll",
+    "neither patch, because variegated leaves cannot photosynthesise",
+    "the green patches, because they contain chlorophyll"
+   ],
+   "answer": 3,
+   "explanation": "Iodine solution turns blue-black in the presence of starch. Photosynthesis occurs in the green patches where chlorophyll is present, so those regions produce starch; the white patches lack chlorophyll and cannot photosynthesise."
+  },
+  {
+   "n": 44,
+   "topic": "Cell structure and organisation",
+   "q": "A student in Lagos examines an onion epidermal cell and a rat liver cell under a light microscope. Which structure is present in the onion epidermal cell but absent in the liver cell?",
+   "options": [
+    "mitochondrion",
+    "cellulose cell wall",
+    "nucleus",
+    "plasma membrane"
+   ],
+   "answer": 1,
+   "explanation": "The onion epidermal cell is a plant cell and has a cellulose cell wall outside the plasma membrane. Animal liver cells lack a cellulose cell wall, although both cell types possess a plasma membrane, nucleus and mitochondria."
+  },
+  {
+   "n": 45,
+   "topic": "Genetics",
+   "q": "Mrs Adebayo has sickle-cell trait (AS) and her husband has sickle-cell anaemia (SS). What is the probability that their next child will have sickle-cell anaemia?",
+   "options": [
+    "3/4",
+    "1/2",
+    "1",
+    "1/4"
+   ],
+   "answer": 1,
+   "explanation": "A cross between AS and SS produces AS and SS offspring in a 1:1 ratio. Therefore half of the children are expected to have sickle-cell anaemia. A child with AS has sickle-cell trait rather than the anaemia."
+  },
+  {
+   "n": 46,
+   "topic": "Genetics",
+   "q": "Red-scaled fish and white-scaled fish are crossed. The F1 offspring are all pink. When the F1 offspring are interbred, what phenotypic ratio is expected in the F2 generation?",
+   "options": [
+    "1 red : 2 pink : 1 white",
+    "2 red : 1 pink : 1 white",
+    "1 red : 1 white",
+    "3 red : 1 white"
+   ],
+   "answer": 0,
+   "explanation": "The F1 fish are heterozygous, so interbreeding them gives the genotypes RR, RW, RW and WW. These appear as one red, two pink and one white fish. A 3:1 ratio would occur only with complete dominance, where the heterozygote resembles one parent."
+  },
+  {
+   "n": 47,
+   "topic": "Genetics",
+   "q": "A colour-blind man marries a woman who is homozygous for normal colour vision. What proportion of their sons is expected to be colour-blind?",
+   "options": [
+    "1/4",
+    "1",
+    "1/2",
+    "0"
+   ],
+   "answer": 3,
+   "explanation": "The father has genotype X^cY and the mother has X^C X^C. Every son receives the Y chromosome from the father and an X^C chromosome from the mother, so all sons have normal colour vision. The daughters are carriers but are not colour-blind."
+  },
+  {
+   "n": 48,
+   "topic": "Diffusion, osmosis and active transport",
+   "q": "A caterer in Ibadan soaks pieces of yam in a very concentrated salt solution. After 30 minutes, the yam pieces become soft and flaccid. What is the best explanation for this observation?",
+   "options": [
+    "Salt is digested by enzymes in the yam cells.",
+    "Salt enters the yam cells by active transport.",
+    "Water leaves the yam cells by osmosis.",
+    "Water enters the yam cells by osmosis."
+   ],
+   "answer": 2,
+   "explanation": "The concentrated salt solution has a lower water potential than the yam cell sap, so water moves out of the cells by osmosis. As the cells lose water, they lose turgor and the yam becomes soft and flaccid. Active transport of salt would not account for the rapid loss of firmness."
+  },
+  {
+   "n": 49,
+   "topic": "Diffusion, osmosis and active transport",
+   "q": "In a laboratory in Ibadan, a student places a drop of ink at the bottom of a beaker of water and leaves it undisturbed. After some hours, the colour spreads throughout the water. Which process is mainly responsible?",
+   "options": [
+    "Transpiration",
+    "Osmosis",
+    "Diffusion",
+    "Active transport"
+   ],
+   "answer": 2,
+   "explanation": "The ink particles move randomly from a region of higher concentration to a region of lower concentration until they are evenly spread. Osmosis involves water movement through a partially permeable membrane, while active transport requires energy and a membrane. Transpiration is the loss of water vapour from plants."
+  },
+  {
+   "n": 50,
+   "topic": "Diffusion, osmosis and active transport",
+   "q": "Which observation provides the best evidence that mineral ions are absorbed by active transport in a root hair cell?",
+   "options": [
+    "Mineral ions enter only when their concentration outside is higher than inside.",
+    "Mineral ions continue to enter the root hair even when their concentration inside is higher than in the soil.",
+    "Oxygen enters the root hair by diffusion.",
+    "Water enters the root hair when the soil solution is dilute."
+   ],
+   "answer": 1,
+   "explanation": "Active transport can move substances against a concentration gradient and uses energy from respiration. If ions continue entering when the concentration is lower outside than inside, simple diffusion cannot explain the movement. Water and oxygen move by diffusion or osmosis and do not provide this evidence."
+  }
+ ]
+}

@@ -1,0 +1,531 @@
+{
+ "id": "jamb-physics-p3",
+ "exam": "jamb",
+ "subject": "physics",
+ "year": null,
+ "number": 3,
+ "source": "ai",
+ "minutes": 27,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Measurement and units",
+   "q": "A micrometer screw gauge has a pitch of 0.50 mm and a thimble with 50 equal divisions. What is its least count?",
+   "options": [
+    "0.010 mm",
+    "0.10 mm",
+    "0.001 mm",
+    "0.50 mm"
+   ],
+   "answer": 0,
+   "explanation": "The least count equals the pitch divided by the number of thimble divisions: 0.50 mm ÷ 50 = 0.010 mm. Taking 0.50 mm as the answer mistakes the pitch for the least count."
+  },
+  {
+   "n": 2,
+   "topic": "Measurement and units",
+   "q": "A rectangular metal block of mass 1.20 kg has dimensions 15.0 cm × 8.0 cm × 5.0 cm. What is its density in kg/m³?",
+   "options": [
+    "200 kg/m³",
+    "2400 kg/m³",
+    "2000 kg/m³",
+    "2.0 kg/m³"
+   ],
+   "answer": 2,
+   "explanation": "The volume is 15.0 × 8.0 × 5.0 = 600 cm³ = 6.00 × 10⁻⁴ m³. Density = mass ÷ volume = 1.20 kg ÷ 6.00 × 10⁻⁴ m³ = 2000 kg/m³."
+  },
+  {
+   "n": 3,
+   "topic": "Measurement and units",
+   "q": "The unit of a physical quantity is kg m² s⁻³. Which of the following physical quantities has this unit?",
+   "options": [
+    "Force",
+    "Power",
+    "Pressure",
+    "Momentum"
+   ],
+   "answer": 1,
+   "explanation": "Power is work done per second, so its unit is J/s = kg m² s⁻³. Force has unit kg m s⁻², pressure has unit kg m⁻¹ s⁻², and momentum has unit kg m s⁻¹."
+  },
+  {
+   "n": 4,
+   "topic": "Motion",
+   "q": "A canoe is paddled straight across a river 120 m wide at a speed of 3.0 m/s relative to the water. The river current flows at 4.0 m/s parallel to the bank. How far downstream is the canoe carried by the time it reaches the opposite bank?",
+   "options": [
+    "240 m",
+    "160 m",
+    "90 m",
+    "200 m"
+   ],
+   "answer": 1,
+   "explanation": "The time to cross depends on the speed across the river: 120 m ÷ 3.0 m/s = 40 s. During this time the current carries the canoe 4.0 m/s × 40 s = 160 m downstream."
+  },
+  {
+   "n": 5,
+   "topic": "Motion",
+   "q": "A taxi in Abuja travelling at 15 m/s accelerates uniformly at 2.0 m/s² for 5.0 s. What distance does it cover during this time?",
+   "options": [
+    "75 m",
+    "150 m",
+    "100 m",
+    "125 m"
+   ],
+   "answer": 2,
+   "explanation": "Using s = ut + ½at² gives s = 15 × 5 + ½ × 2.0 × 5² = 75 + 25 = 100 m. The value 75 m is the distance if the acceleration were ignored."
+  },
+  {
+   "n": 6,
+   "topic": "Simple machines",
+   "q": "A pulley system with velocity ratio 5 and efficiency 80% is used to raise a load using an effort of 150 N. What is the load?",
+   "options": [
+    "600 N",
+    "120 N",
+    "375 N",
+    "750 N"
+   ],
+   "answer": 0,
+   "explanation": "Mechanical advantage = efficiency × velocity ratio = 0.80 × 5 = 4.0. Load = effort × mechanical advantage = 150 N × 4.0 = 600 N; 750 N would be the ideal load without allowing for efficiency."
+  },
+  {
+   "n": 7,
+   "topic": "Simple machines",
+   "q": "The sloping length of a wedge is 18 cm and its thickness at the back is 3.0 cm. What is its velocity ratio?",
+   "options": [
+    "6",
+    "0.17",
+    "54",
+    "3"
+   ],
+   "answer": 0,
+   "explanation": "For a wedge, velocity ratio = length of slope ÷ thickness = 18 cm ÷ 3.0 cm = 6. The value 0.17 is the reciprocal, which reverses the ratio."
+  },
+  {
+   "n": 8,
+   "topic": "Waves",
+   "q": "Tunde's guitar string produces a frequency of 440 Hz. When sounded with a tuning fork in Ibadan, 5 beats per second are heard. He tightens the string slightly and the beat frequency decreases. What is the frequency of the tuning fork?",
+   "options": [
+    "450 Hz",
+    "445 Hz",
+    "435 Hz",
+    "430 Hz"
+   ],
+   "answer": 1,
+   "explanation": "A beat frequency of 5 Hz means the tuning fork could be 435 Hz or 445 Hz. Tightening raises the string frequency, and since the beat frequency decreases, the string moves toward the fork, so the fork must be 445 Hz; the 435 Hz alternative would make the beats increase."
+  },
+  {
+   "n": 9,
+   "topic": "Waves",
+   "q": "Water waves travel from a deep region to a shallow region. In the deep region the wavelength is 4.0 cm and the frequency is 20 Hz. If the wave speed in the shallow region is 60 cm/s, what is the wavelength there?",
+   "options": [
+    "4.0 cm",
+    "3.0 cm",
+    "5.3 cm",
+    "0.75 cm"
+   ],
+   "answer": 1,
+   "explanation": "Frequency remains 20 Hz when the waves enter the shallow region. Wavelength = speed ÷ frequency = 60 cm/s ÷ 20 Hz = 3.0 cm; 4.0 cm would wrongly assume the wavelength is unchanged."
+  },
+  {
+   "n": 10,
+   "topic": "Newton’s laws and momentum",
+   "q": "An articulated lorry of mass 4000 kg is moving at 15 m/s. Its brakes exert a constant retarding force of 12 000 N. How long does the lorry take to stop?",
+   "options": [
+    "3.2 s",
+    "5.0 s",
+    "7.5 s",
+    "10.0 s"
+   ],
+   "answer": 1,
+   "explanation": "The impulse exerted by the brakes equals the change in momentum: average force × time = mass × velocity. Thus t = (4000 × 15) ÷ 12 000 = 5.0 s. A time such as 10.0 s would imply a retarding force of only 6000 N."
+  },
+  {
+   "n": 11,
+   "topic": "Newton’s laws and momentum",
+   "q": "A hunter in Makurdi fires a bullet of mass 0.020 kg from a gun of mass 4.0 kg. If the bullet leaves the gun at 300 m/s, what is the recoil speed of the gun? Ignore air resistance.",
+   "options": [
+    "6.0 m/s",
+    "1.5 m/s",
+    "0.75 m/s",
+    "0.15 m/s"
+   ],
+   "answer": 1,
+   "explanation": "By conservation of linear momentum, initial momentum is zero, so the backward momentum of the gun equals the forward momentum of the bullet: 4.0 × v = 0.020 × 300. Hence v = 6.0 ÷ 4.0 = 1.5 m/s. The value 6.0 m/s is the momentum of the bullet, not the recoil speed."
+  },
+  {
+   "n": 12,
+   "topic": "Newton’s laws and momentum",
+   "q": "A 0.15 kg cricket ball approaches a bat horizontally at 20 m/s and leaves the bat horizontally at 30 m/s in the opposite direction. If the contact time is 0.010 s, what is the magnitude of the average force exerted by the bat on the ball?",
+   "options": [
+    "450 N",
+    "150 N",
+    "750 N",
+    "1500 N"
+   ],
+   "answer": 2,
+   "explanation": "Taking the direction of approach as negative, change in momentum = 0.15[30 − (−20)] = 0.15 × 50 = 7.5 kg m/s. Average force = change in momentum ÷ time = 7.5 ÷ 0.010 = 750 N. Using 30 − 20 instead of adding the speeds gives 150 N."
+  },
+  {
+   "n": 13,
+   "topic": "Scalars and vectors",
+   "q": "A particle moves from the point (1.0 m, 2.0 m) to the point (7.0 m, 10.0 m). What is the magnitude of its displacement?",
+   "options": [
+    "14.0 m",
+    "8.0 m",
+    "6.0 m",
+    "10.0 m"
+   ],
+   "answer": 3,
+   "explanation": "The displacement components are (7.0 − 1.0) m = 6.0 m horizontally and (10.0 − 2.0) m = 8.0 m vertically. Its magnitude is √(6.0² + 8.0²) = √100 = 10.0 m. The 8.0 m value is only the vertical component, while 14.0 m is the sum of the components rather than the resultant."
+  },
+  {
+   "n": 14,
+   "topic": "Scalars and vectors",
+   "q": "A force of 40 N acts at 60° to the horizontal. What is the magnitude of its horizontal component?",
+   "options": [
+    "69.3 N",
+    "20 N",
+    "34.6 N",
+    "40.0 N"
+   ],
+   "answer": 1,
+   "explanation": "The horizontal component is F cos θ = 40 × cos 60° = 40 × 0.5 = 20 N. The value 34.6 N is the vertical component, since 40 × sin 60° = 34.6 N."
+  },
+  {
+   "n": 15,
+   "topic": "Gas laws",
+   "q": "A fixed mass of gas occupies 600 cm³ at 27°C and constant pressure. At what temperature will its volume become 900 cm³?",
+   "options": [
+    "450°C",
+    "300°C",
+    "40.5°C",
+    "177°C"
+   ],
+   "answer": 3,
+   "explanation": "Convert to kelvin: T₁ = 27 + 273 = 300 K. Since V/T is constant at constant pressure, T₂ = 300 × (900 ÷ 600) = 450 K = 177°C. The value 450°C is the kelvin temperature quoted as if it were in degrees Celsius."
+  },
+  {
+   "n": 16,
+   "topic": "Gas laws",
+   "q": "A fixed mass of gas occupies 3.0 L at 27°C and 1.0 atm. What volume will it occupy at 127°C and 4.0 atm?",
+   "options": [
+    "1.33 L",
+    "1.00 L",
+    "4.00 L",
+    "0.75 L"
+   ],
+   "answer": 1,
+   "explanation": "Using P₁V₁/T₁ = P₂V₂/T₂ with temperatures in kelvin (300 K and 400 K), V₂ = (1.0 × 3.0 × 400) ÷ (4.0 × 300) = 1.00 L. Applying Boyle's law only gives 0.75 L, but the temperature also changes."
+  },
+  {
+   "n": 17,
+   "topic": "Electrostatics and capacitors",
+   "q": "Two point charges of +4.0 μC and +1.0 μC are separated by 0.20 m in air. What is the magnitude of the electrostatic force between them? (Coulomb constant k = 9.0 × 10⁹ N m² C⁻²)",
+   "options": [
+    "1.80 N",
+    "0.45 N",
+    "4.50 N",
+    "0.90 N"
+   ],
+   "answer": 3,
+   "explanation": "Coulomb's law gives F = kq₁q₂/r² = (9.0 × 10⁹ × 4.0 × 10⁻⁶ × 1.0 × 10⁻⁶) ÷ (0.20)². This equals 0.036 ÷ 0.040 = 0.90 N. The force is repulsive because both charges are positive."
+  },
+  {
+   "n": 18,
+   "topic": "Electrostatics and capacitors",
+   "q": "A 20 μF capacitor is charged to a potential difference of 50 V. How much energy is stored in the capacitor?",
+   "options": [
+    "0.025 J",
+    "0.050 J",
+    "2.5 J",
+    "1.0 J"
+   ],
+   "answer": 0,
+   "explanation": "The energy stored is E = ½CV² = ½ × 20 × 10⁻⁶ × 50² = ½ × 20 × 10⁻⁶ × 2500 = 0.025 J. Omitting the ½ factor gives 0.050 J."
+  },
+  {
+   "n": 19,
+   "topic": "Elasticity and pressure",
+   "q": "A cube of side 0.20 m and density 2500 kg/m³ rests on a horizontal table. Taking g = 10 m/s², what pressure does the cube exert on the table?",
+   "options": [
+    "8.3 × 10² Pa",
+    "2.5 × 10⁴ Pa",
+    "5.0 × 10³ Pa",
+    "5.0 × 10² Pa"
+   ],
+   "answer": 2,
+   "explanation": "The volume of the cube is 0.20³ = 0.008 m³, so its mass is 2500 × 0.008 = 20 kg and its weight is 20 × 10 = 200 N. The contact area is 0.20 × 0.20 = 0.040 m², so the pressure is 200 ÷ 0.040 = 5.0 × 10³ Pa."
+  },
+  {
+   "n": 20,
+   "topic": "Elasticity and pressure",
+   "q": "A vertical rectangular gate 2.0 m high and 3.0 m wide in a dam is filled to the top with water. Taking the density of water as 1000 kg/m³ and g = 10 m/s², what is the total force exerted by the water on the gate?",
+   "options": [
+    "1.2 × 10⁵ N",
+    "3.0 × 10⁴ N",
+    "6.0 × 10⁴ N",
+    "6.0 × 10³ N"
+   ],
+   "answer": 2,
+   "explanation": "The pressure on a vertical gate increases with depth, so the average pressure is the pressure at half the depth: 1000 × 10 × 1.0 = 1.0 × 10⁴ Pa. The gate area is 2.0 × 3.0 = 6.0 m², giving a total force of 1.0 × 10⁴ × 6.0 = 6.0 × 10⁴ N."
+  },
+  {
+   "n": 21,
+   "topic": "Elasticity and pressure",
+   "q": "A wire of length 2.0 m and cross-sectional area 0.50 mm² extends by 0.40 mm under a load. A second wire of the same material has length 3.0 m and cross-sectional area 1.0 mm². What extension does the same load produce in the second wire?",
+   "options": [
+    "0.20 mm",
+    "0.30 mm",
+    "0.40 mm",
+    "0.60 mm"
+   ],
+   "answer": 1,
+   "explanation": "For the same load and material, extension is proportional to length and inversely proportional to area. Thus the new extension is 0.40 × (3.0/2.0) × (0.50/1.0) = 0.30 mm."
+  },
+  {
+   "n": 22,
+   "topic": "Magnetism and electromagnetic induction",
+   "q": "A straight wire of length 0.40 m carrying a current of 5.0 A is placed in a uniform magnetic field of flux density 0.20 T. If the wire makes an angle of 30° with the field, what is the magnitude of the magnetic force on the wire?",
+   "options": [
+    "0.40 N",
+    "0.10 N",
+    "0.35 N",
+    "0.20 N"
+   ],
+   "answer": 3,
+   "explanation": "The magnetic force is F = BIL sin θ = 0.20 × 5.0 × 0.40 × sin 30° = 0.20 N. Only the component of the field perpendicular to the wire produces the force, so omitting sin 30° would wrongly give 0.40 N."
+  },
+  {
+   "n": 23,
+   "topic": "Magnetism and electromagnetic induction",
+   "q": "An ideal transformer has 500 turns in its primary coil and 100 turns in its secondary coil. If the primary coil is connected to a 240 V a.c. supply, what is the secondary voltage?",
+   "options": [
+    "200 V",
+    "48 V",
+    "1200 V",
+    "40 V"
+   ],
+   "answer": 1,
+   "explanation": "For an ideal transformer, secondary voltage divided by primary voltage equals secondary turns divided by primary turns. Hence Vs = 240 × (100/500) = 48 V."
+  },
+  {
+   "n": 24,
+   "topic": "Magnetism and electromagnetic induction",
+   "q": "A circular coil of 50 turns and radius 0.10 m carries a current of 2.0 A. What is the magnetic flux density at the centre of the coil? (μ₀ = 4π × 10⁻⁷ T·m/A; take π = 3.14)",
+   "options": [
+    "6.3 × 10⁻⁴ T",
+    "3.1 × 10⁻⁴ T",
+    "1.3 × 10⁻³ T",
+    "6.3 × 10⁻³ T"
+   ],
+   "answer": 0,
+   "explanation": "At the centre of a circular coil, B = μ₀NI/(2r) = (4π × 10⁻⁷ × 50 × 2.0)/(2 × 0.10). This gives about 6.3 × 10⁻⁴ T when π is taken as 3.14."
+  },
+  {
+   "n": 25,
+   "topic": "Heat and temperature",
+   "q": "Ngozi uses a 3.0 kW electric kettle to heat 2.0 kg of water from 25°C to 100°C. Taking the specific heat capacity of water as 4200 J/kg·K, how long does it take? (Assume no heat losses)",
+   "options": [
+    "210 s",
+    "105 s",
+    "70 s",
+    "280 s"
+   ],
+   "answer": 0,
+   "explanation": "Heat required = mcΔT = 2.0 × 4200 × (100 - 25) = 630000 J. Since power = 3.0 kW = 3000 J/s, time = 630000 ÷ 3000 = 210 s."
+  },
+  {
+   "n": 26,
+   "topic": "Heat and temperature",
+   "q": "The resistance of a platinum wire is 5.0 Ω at 0°C and 5.5 Ω at 100°C. What temperature corresponds to a resistance of 5.2 Ω, assuming the resistance varies linearly with temperature?",
+   "options": [
+    "4°C",
+    "94.5°C",
+    "40°C",
+    "44°C"
+   ],
+   "answer": 2,
+   "explanation": "For a resistance thermometer, the change in resistance is proportional to the temperature change: T = ((5.2 - 5.0)/(5.5 - 5.0)) × 100°C = 40°C. The value 4°C comes from using only the base resistance, 5.0 Ω, instead of the full 0°C to 100°C resistance change."
+  },
+  {
+   "n": 27,
+   "topic": "Light and optics",
+   "q": "A ray of light passes from air into a parallel-sided glass slab of refractive index 1.50 at an angle of incidence 40°. It emerges from the opposite face into air. What is the angle of emergence?",
+   "options": [
+    "40°",
+    "74.6°",
+    "64.6°",
+    "25.4°"
+   ],
+   "answer": 0,
+   "explanation": "At the first face the ray bends towards the normal to about 25.4° inside the glass, but at the parallel second face it bends away by the same amount. Hence it emerges at 40°, parallel to the incident ray, so the angle of emergence equals the angle of incidence."
+  },
+  {
+   "n": 28,
+   "topic": "Light and optics",
+   "q": "An object is placed 12 cm from a converging lens of focal length 8.0 cm. What is the linear magnification produced?",
+   "options": [
+    "3.0",
+    "0.50",
+    "2.0",
+    "1.5"
+   ],
+   "answer": 2,
+   "explanation": "Using 1/f = 1/u + 1/v gives 1/8.0 = 1/12 + 1/v, so v = 24 cm. The linear magnification is v/u = 24/12 = 2.0."
+  },
+  {
+   "n": 29,
+   "topic": "Current electricity",
+   "q": "In a factory in Jos, an electric heater draws a current of 2.5 A from a 240 V mains supply for 4.0 minutes. How much electrical energy is converted to heat? Use 1 kJ = 1000 J.",
+   "options": [
+    "24 kJ",
+    "1440 kJ",
+    "2.4 kJ",
+    "144 kJ"
+   ],
+   "answer": 3,
+   "explanation": "Using E = VIt, the time is 4.0 min = 240 s, so E = 240 × 2.5 × 240 = 144000 J = 144 kJ. Using 4.0 s instead of 240 s gives 2.4 kJ, which is the value obtained if the minutes are not converted to seconds."
+  },
+  {
+   "n": 30,
+   "topic": "Current electricity",
+   "q": "A 6.0 Ω resistor is connected in parallel with a 3.0 Ω resistor. The combination is connected in series with a 4.0 Ω resistor and a 12 V battery of negligible internal resistance. What is the current through the 4.0 Ω resistor?",
+   "options": [
+    "2.0 A",
+    "1.0 A",
+    "4.0 A",
+    "1.5 A"
+   ],
+   "answer": 0,
+   "explanation": "The parallel pair has resistance (6.0 × 3.0)/(6.0 + 3.0) = 2.0 Ω, so the total resistance is 2.0 + 4.0 = 6.0 Ω. The current from the battery, which is also the current through the 4.0 Ω resistor, is 12/6.0 = 2.0 A."
+  },
+  {
+   "n": 31,
+   "topic": "Current electricity",
+   "q": "A uniform wire of resistance R is stretched uniformly until its length is doubled. Its volume remains constant. What is the resistance of the stretched wire?",
+   "options": [
+    "R/2",
+    "2R",
+    "R/4",
+    "4R"
+   ],
+   "answer": 3,
+   "explanation": "Resistance is given by R = ρl/A. Doubling the length while keeping volume constant halves the cross-sectional area, so the new resistance is ρ(2l)/(A/2) = 4ρl/A = 4R."
+  },
+  {
+   "n": 32,
+   "topic": "Atomic and nuclear physics",
+   "q": "A radioactive source used in a hospital in Ibadan has a half-life of 8 days. What fraction of the original number of radioactive atoms remains after 24 days?",
+   "options": [
+    "1/3",
+    "1/6",
+    "1/16",
+    "1/8"
+   ],
+   "answer": 3,
+   "explanation": "24 days is 24/8 = 3 half-lives. After three half-lives the fraction remaining is (1/2)³ = 1/8; using 1/16 corresponds to four half-lives."
+  },
+  {
+   "n": 33,
+   "topic": "Atomic and nuclear physics",
+   "q": "A nucleus undergoes two alpha decays and three beta-minus decays. Compared with the original nucleus, what happens to its mass number and atomic number respectively?",
+   "options": [
+    "decreased by 8 and increased by 1",
+    "decreased by 8 and decreased by 1",
+    "decreased by 8 and decreased by 7",
+    "decreased by 6 and decreased by 1"
+   ],
+   "answer": 1,
+   "explanation": "Each alpha decay reduces the mass number by 4 and atomic number by 2, so two alpha decays reduce them by 8 and 4 respectively. Each beta-minus decay leaves the mass number unchanged and increases the atomic number by 1, so three beta-minus decays give a net atomic-number change of -4 + 3 = -1."
+  },
+  {
+   "n": 34,
+   "topic": "Atomic and nuclear physics",
+   "q": "The fission of uranium-235 can be represented by ²³⁵U + ¹n → ¹⁴⁴Ba + ⁹⁰Kr + x neutrons. What is the value of x?",
+   "options": [
+    "2",
+    "4",
+    "1",
+    "3"
+   ],
+   "answer": 0,
+   "explanation": "The total mass number on the left is 235 + 1 = 236. On the right it is 144 + 90 + x = 234 + x, so 234 + x = 236 gives x = 2."
+  },
+  {
+   "n": 35,
+   "topic": "Work, energy and power",
+   "q": "A force of 40 N pulls a box through a horizontal distance of 3.0 m. If the force makes an angle of 60° with the horizontal, calculate the work done by the force.",
+   "options": [
+    "60 J",
+    "120 J",
+    "104 J",
+    "30 J"
+   ],
+   "answer": 0,
+   "explanation": "Work is W = Fd cos θ = 40 × 3.0 × cos 60° = 120 × 0.5 = 60 J. Using sin 60° instead of cos 60° gives about 104 J, while ignoring the angle gives 120 J."
+  },
+  {
+   "n": 36,
+   "topic": "Work, energy and power",
+   "q": "A danfo bus of mass 1,500 kg moving at 12 m/s is brought to rest in 6.0 s by the brakes. What average power is dissipated by the brakes?",
+   "options": [
+    "9.0 kW",
+    "108 kW",
+    "18 kW",
+    "36 kW"
+   ],
+   "answer": 2,
+   "explanation": "The kinetic energy lost is ½ × 1500 × 12² = 108000 J. The average power is this energy divided by 6.0 s: 108000/6.0 = 18000 W = 18 kW; omitting the ½ in the kinetic-energy formula gives 36 kW."
+  },
+  {
+   "n": 37,
+   "topic": "Sound",
+   "q": "A pipe open at both ends has a fundamental frequency of 220 Hz in air. If the speed of sound in air is 330 m/s, what is the length of the pipe?",
+   "options": [
+    "3.0 m",
+    "1.5 m",
+    "0.75 m",
+    "0.38 m"
+   ],
+   "answer": 2,
+   "explanation": "For a pipe open at both ends, the fundamental wavelength is λ = 2L, so f = v/(2L). Hence L = v/(2f) = 330/(2 × 220) = 0.75 m; 0.38 m would be obtained by treating it as closed at one end."
+  },
+  {
+   "n": 38,
+   "topic": "Sound",
+   "q": "A ship near Lagos harbour sends a sound pulse vertically to the seabed and receives the echo 0.80 s later. If the speed of sound in seawater is 1,500 m/s, how deep is the water?",
+   "options": [
+    "300 m",
+    "1200 m",
+    "2400 m",
+    "600 m"
+   ],
+   "answer": 3,
+   "explanation": "The sound travels to the seabed and back, so the total distance is 1500 × 0.80 = 1200 m. The depth is half of this total distance: 1200/2 = 600 m; using the full distance without halving gives 1200 m."
+  },
+  {
+   "n": 39,
+   "topic": "Measurement and units",
+   "q": "A square plot of land in Ilorin has sides of length 0.25 km. What is its area in hectares? (Take 1 hectare = 10⁴ m².)",
+   "options": [
+    "6.25 hectares",
+    "0.625 hectares",
+    "62.5 hectares",
+    "625 hectares"
+   ],
+   "answer": 0,
+   "explanation": "Convert the side to metres: 0.25 km = 250 m. Area = 250 m × 250 m = 62,500 m², which is 62,500 ÷ 10,000 = 6.25 hectares. Using 1 hectare = 10⁴ m² avoids the common mistake of taking 1 km² as 10 hectares."
+  },
+  {
+   "n": 40,
+   "topic": "Measurement and units",
+   "q": "A metal cube of mass 0.025 kg has a volume of 5.0 cm³. What is its density in kg/m³?",
+   "options": [
+    "500 kg/m³",
+    "5.0 kg/m³",
+    "50000 kg/m³",
+    "5000 kg/m³"
+   ],
+   "answer": 3,
+   "explanation": "5.0 cm³ = 5.0 × 10⁻⁶ m³. Density = mass ÷ volume = 0.025 kg ÷ (5.0 × 10⁻⁶ m³) = 5000 kg/m³. The value 5.0 kg/m³ comes from failing to convert cm³ to m³."
+  }
+ ]
+}

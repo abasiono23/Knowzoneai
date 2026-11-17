@@ -1,0 +1,401 @@
+{
+ "id": "nsc-geography-p1",
+ "exam": "nsc",
+ "subject": "geography",
+ "year": null,
+ "number": 1,
+ "source": "ai",
+ "minutes": 35,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "The atmosphere: global circulation and weather",
+   "q": "A parcel of surface air moves from the subtropical high-pressure belt at about 30° S towards the Equator. In the Southern Hemisphere it is deflected by the Coriolis force. Which prevailing wind belt does this movement produce?",
+   "options": [
+    "Polar easterlies",
+    "South-east trade winds",
+    "North-east trade winds",
+    "South-west westerlies"
+   ],
+   "answer": 1,
+   "explanation": "In the Southern Hemisphere the Coriolis force deflects moving air to its left. Air moving from 30° S toward the Equator therefore comes from the south-east, producing the south-east trade winds. The north-east trades occur in the Northern Hemisphere, while the westerlies lie poleward of the subtropical high."
+  },
+  {
+   "n": 2,
+   "topic": "The atmosphere: global circulation and weather",
+   "q": "A hiker on the Highveld at 1 500 m records a temperature of 22 °C. Using the environmental lapse rate of 6.5 °C per 1 000 m, what is the approximate temperature at the top of the Drakensberg escarpment at 3 000 m, assuming the same air mass and no temperature inversion?",
+   "options": [
+    "12.3 °C",
+    "7.0 °C",
+    "2.5 °C",
+    "31.8 °C"
+   ],
+   "answer": 0,
+   "explanation": "The height difference is 3 000 m − 1 500 m = 1 500 m. The temperature drop is (1 500 ÷ 1 000) × 6.5 °C = 9.75 °C, so 22 °C − 9.75 °C = 12.25 °C, which rounds to 12.3 °C. Adding the lapse rate instead of subtracting it gives the implausible 31.8 °C."
+  },
+  {
+   "n": 3,
+   "topic": "The atmosphere: global circulation and weather",
+   "q": "Why does the intertropical convergence zone (ITCZ) generally experience heavy convectional rain, whereas the subtropical high-pressure belt near 30° S generally experiences settled, dry weather?",
+   "options": [
+    "The Coriolis force makes air spiral upwards at the Equator and downwards near 30° S.",
+    "Descending air near the Equator cools and forms cloud, while rising air near 30° S warms and clears the sky.",
+    "Rising air near the Equator cools and condenses, while descending air near 30° S warms and inhibits condensation.",
+    "Both belts have rising air, but the Equator receives more direct sunlight."
+   ],
+   "answer": 2,
+   "explanation": "At the ITCZ, surface convergence and ascent cause air to cool and water vapour to condense, forming deep convectional clouds and rain. Near 30° S, upper-air convergence and subsidence make air descend, warm and become drier, suppressing cloud formation. Reversing these vertical motions confuses the pressure belts."
+  },
+  {
+   "n": 4,
+   "topic": "Drainage systems and fluvial processes",
+   "q": "A river has a rectangular channel 8 m wide, with an average depth of 1.5 m and an average flow velocity of 0.9 m/s. What is the discharge of the river?",
+   "options": [
+    "1.35 m³/s",
+    "7.2 m³/s",
+    "12.0 m³/s",
+    "10.8 m³/s"
+   ],
+   "answer": 3,
+   "explanation": "Discharge = cross-sectional area × velocity = (8 m × 1.5 m) × 0.9 m/s = 12 m² × 0.9 m/s = 10.8 m³/s. Multiplying width by velocity only gives 7.2 m³/s and omits the depth, while 12.0 m³/s is the cross-sectional area rather than the discharge."
+  },
+  {
+   "n": 5,
+   "topic": "Drainage systems and fluvial processes",
+   "q": "In a freely meandering river, where are erosion and deposition normally concentrated at a bend?",
+   "options": [
+    "Erosion on the inner, convex bank and deposition on the outer, concave bank.",
+    "Erosion equally on both banks, with deposition only on the river bed.",
+    "Erosion on the outer, concave bank and deposition on the inner, convex bank.",
+    "Deposition on the outer bank because the flow is fastest there and erosion on the inner bank because the flow is slowest there."
+   ],
+   "answer": 2,
+   "explanation": "At a bend, centrifugal force pushes the fastest flow towards the outer bank, which is undercut and becomes concave; slower flow on the inner bank encourages deposition and forms a convex slip-off slope. Reversing this pattern describes a common misconception."
+  },
+  {
+   "n": 6,
+   "topic": "Drainage systems and fluvial processes",
+   "q": "A drainage pattern in which main rivers run roughly parallel to folded rock strata and short tributaries join them at almost right angles is called...",
+   "options": [
+    "Dendritic drainage",
+    "Centripetal drainage",
+    "Trellis drainage",
+    "Radial drainage"
+   ],
+   "answer": 2,
+   "explanation": "Trellis drainage develops where alternating resistant and less resistant strata guide parallel main streams, with shorter tributaries cutting across the weaker beds at right angles. Dendritic drainage is irregular and branch-like on uniform rock, radial drainage spreads from a central high, and centripetal drainage flows inward to a basin."
+  },
+  {
+   "n": 7,
+   "topic": "Mid-latitude and tropical cyclones",
+   "q": "Tropical cyclones rarely form within about 5° of the Equator mainly because...",
+   "options": [
+    "the trade winds are too weak to cause converging air.",
+    "the Coriolis force is too weak for converging air to develop and maintain a cyclonic rotation.",
+    "the sea-surface temperature is too low to supply enough latent heat.",
+    "descending air in the ITCZ prevents thunderstorm clouds from forming."
+   ],
+   "answer": 1,
+   "explanation": "A tropical cyclone needs warm ocean water, abundant moisture and sufficient Coriolis force to organise rotation. Within about 5° of the Equator the Coriolis force is very weak even though the sea is warm and the ITCZ favours rising air. The idea that the ITCZ descends there is a reversal of its usual convection."
+  },
+  {
+   "n": 8,
+   "topic": "Mid-latitude and tropical cyclones",
+   "q": "A mid-latitude cyclone approaches Cape Town from the west, and its cold front passes over the city. Which sequence best describes the usual pressure and wind changes before and after the cold front?",
+   "options": [
+    "Pressure falls ahead of the front with a mild north-westerly wind; after the front pressure rises and a colder south-westerly wind brings showers.",
+    "Pressure remains steady, a dry berg wind blows before the front, and after it humid easterly winds bring no temperature change.",
+    "Pressure falls ahead with a cold south-easterly wind; after the front pressure falls further and the wind becomes north-westerly and warmer.",
+    "Pressure rises ahead of the front with a warm south-easterly wind; after the front pressure falls and clear, hot weather follows."
+   ],
+   "answer": 0,
+   "explanation": "Ahead of a Southern Hemisphere cold front, the warm sector usually brings a mild north-westerly wind and falling pressure. After the cold front passes, the wind changes to the south-west, colder air arrives, pressure rises and showers often occur. A dry berg wind is not the typical frontal sequence at Cape Town."
+  },
+  {
+   "n": 9,
+   "topic": "Urban settlements",
+   "q": "In the apartheid city model, what was the typical spatial result of the Group Areas Act for black urban residents?",
+   "options": [
+    "They were allocated land in the central business district for high-rise housing.",
+    "They were segregated into townships, often located on the urban periphery away from white residential areas.",
+    "They were encouraged to live in mixed-race suburbs close to industrial areas.",
+    "They were given preferential housing along the coast and near city parks."
+   ],
+   "answer": 1,
+   "explanation": "The apartheid city was planned with racial zoning: white areas were favoured, while black residents were confined to separate townships, frequently on the outer edge of the city and sometimes downwind of industry. The other statements reverse the segregation and peripheralisation that the Group Areas Act helped enforce."
+  },
+  {
+   "n": 10,
+   "topic": "Urban settlements",
+   "q": "An inner-city neighbourhood in Johannesburg is renovated with new apartments, coffee shops and offices. Monthly rents rise from about R2 500 to R6 000, and many low-income tenants move to the outskirts. Which process is described?",
+   "options": [
+    "Counter-urbanisation",
+    "Suburbanisation",
+    "Gentrification",
+    "Urban sprawl"
+   ],
+   "answer": 2,
+   "explanation": "Gentrification is the upgrading of an inner-city or older residential area that attracts higher-income residents and businesses, raising property values and rents and often displacing poorer tenants. Urban sprawl is outward low-density growth, counter-urbanisation is movement from cities to rural areas, and suburbanisation is the growth of suburbs."
+  },
+  {
+   "n": 11,
+   "topic": "Geomorphology: landforms and slopes",
+   "q": "A mountain road rises 25 m over a horizontal distance of 250 m. What is the gradient of the road expressed as a ratio in the form 1 : x?",
+   "options": [
+    "1 : 0.1",
+    "1 : 100",
+    "1 : 10",
+    "1 : 250"
+   ],
+   "answer": 2,
+   "explanation": "Gradient = vertical difference ÷ horizontal distance = 25 m ÷ 250 m = 0.1, so the ratio is 1 : 10, which is a 10% slope. The ratio 1 : 0.1 reverses the relationship, while 1 : 100 and 1 : 250 do not follow the calculation."
+  },
+  {
+   "n": 12,
+   "topic": "Geomorphology: landforms and slopes",
+   "q": "Which type of mass movement is best described as saturated soil and regolith moving rapidly downslope as a thick, muddy flow after heavy rain?",
+   "options": [
+    "Soil creep",
+    "Rockfall",
+    "Sheetwash",
+    "Mudflow"
+   ],
+   "answer": 3,
+   "explanation": "A mudflow occurs when water saturates fine material so that it flows rapidly downslope as a muddy mass. Soil creep is extremely slow, rockfall involves free-falling rock, and sheetwash is the unchannelled movement of water over the surface rather than saturated debris moving as a mass."
+  },
+  {
+   "n": 13,
+   "topic": "Geomorphology: landforms and slopes",
+   "q": "Which slope element is best described as the steep, bare section of a slope where rock is exposed and material is removed by rockfall?",
+   "options": [
+    "Free face",
+    "Crest",
+    "Debris slope",
+    "Pediment"
+   ],
+   "answer": 0,
+   "explanation": "The free face is the steep rock outcrop on a slope, often above a debris slope. The debris slope is where fallen material accumulates below it, the crest is the upper convex bend, and a pediment is a gently sloping bedrock surface at the base of a mountain in arid regions."
+  },
+  {
+   "n": 14,
+   "topic": "Geographical information systems (GIS)",
+   "q": "A raster data set has square cells that measure 20 m by 20 m on the ground. What area, in hectares, does one raster cell represent?",
+   "options": [
+    "0.04 ha",
+    "400 ha",
+    "4 ha",
+    "0.4 ha"
+   ],
+   "answer": 0,
+   "explanation": "The area of one cell is 20 m × 20 m = 400 m². Since 1 ha = 10 000 m², 400 m² ÷ 10 000 m²/ha = 0.04 ha."
+  },
+  {
+   "n": 15,
+   "topic": "Geographical information systems (GIS)",
+   "q": "In a GIS, cadastral data showing the boundaries of farms and erven are best represented by which data type, and why?",
+   "options": [
+    "Vector points, because each farm is represented by a single coordinate and cannot have area.",
+    "Vector polygons, because boundaries are stored as precise lines that enclose areas and can carry attributes such as owner and land use.",
+    "Raster vectors, because a grid of cells is used to draw each straight boundary.",
+    "Raster cells, because each farm boundary is stored as a pixel value that changes gradually across the land."
+   ],
+   "answer": 1,
+   "explanation": "Farm and erf boundaries enclose areas and are therefore represented as vector polygons, with associated attributes stored in the GIS. Points cannot represent an area, and raster grids are better for continuous surfaces such as elevation or temperature than for precise cadastral boundaries."
+  },
+  {
+   "n": 16,
+   "topic": "Rural settlements",
+   "q": "Which statement best describes a dispersed rural settlement pattern?",
+   "options": [
+    "High-density informal houses are grouped close to a mine shaft for easy commuting.",
+    "Homesteads and farmsteads are widely separated across the countryside, often with each household close to its own farmland.",
+    "Houses are tightly clustered around a communal water point, church and store.",
+    "Buildings are arranged in a single row along both sides of a main road."
+   ],
+   "answer": 1,
+   "explanation": "A dispersed pattern occurs where farms or homesteads are spread out rather than grouped into a village. A cluster around a water point or along a road describes nucleated or linear patterns, respectively, and high-density housing near a mine is an urban or mining settlement feature."
+  },
+  {
+   "n": 17,
+   "topic": "Rural settlements",
+   "q": "Many rural households in South Africa depend on social grants and remittances. What does the term remittances mean in this context?",
+   "options": [
+    "Profits earned by commercial farmers from exporting crops.",
+    "Loans from a bank that rural households must repay with interest.",
+    "Money sent home by family members who work in towns or other areas.",
+    "Payments made by the government to pensioners and child-headed households."
+   ],
+   "answer": 2,
+   "explanation": "Remittances are transfers of money, usually by migrants, to relatives in their home area. Government payments are social grants, while farm profits and bank loans are different sources of income."
+  },
+  {
+   "n": 18,
+   "topic": "Development and population",
+   "q": "A district had a population of 240 000 in 2011 and 300 000 in 2021. What was the percentage increase in population over the period?",
+   "options": [
+    "60%",
+    "125%",
+    "20%",
+    "25%"
+   ],
+   "answer": 3,
+   "explanation": "The increase is 300 000 − 240 000 = 60 000. The percentage increase is (60 000 ÷ 240 000) × 100 = 25%; dividing the increase by the later population would wrongly give 20%."
+  },
+  {
+   "n": 19,
+   "topic": "Development and population",
+   "q": "A population pyramid for Country X has a wide base, a rapid narrowing above childhood ages, and very few people in the oldest age groups. Which conclusion is most consistent with this shape?",
+   "options": [
+    "Country X has an ageing population with most people in retirement.",
+    "Country X has more elderly people than children under 15.",
+    "Country X has a high proportion of children and is likely to have a high dependency ratio.",
+    "Country X has a low birth rate and a stable population."
+   ],
+   "answer": 2,
+   "explanation": "A wide base indicates a large young population, produced by high birth rates, while few elderly people reflect lower life expectancy. This gives a high youth dependency ratio; an ageing population would instead have a narrow base and a wider top."
+  },
+  {
+   "n": 20,
+   "topic": "Development and population",
+   "q": "Which pair correctly gives one social indicator and one economic indicator of development?",
+   "options": [
+    "Population density and birth rate",
+    "GDP per capita and GNI per capita",
+    "Life expectancy and infant mortality rate",
+    "Literacy rate and GDP per capita"
+   ],
+   "answer": 3,
+   "explanation": "Literacy rate measures education and is a social indicator, while GDP per capita measures average economic output per person. Both items in the other pairs belong to the same broad type of indicator."
+  },
+  {
+   "n": 21,
+   "topic": "Economic geography of South Africa",
+   "q": "Which combination best explains why Gauteng is regarded as the economic core of South Africa?",
+   "options": [
+    "It has the country’s richest platinum reserves and the main coal-export harbour, which support most of its manufacturing.",
+    "It has the largest share of the coastline and the warmest ocean currents, which attract tourists and fish-processing plants.",
+    "It has the most reliable summer rainfall and deep fertile soils, which support large-scale commercial crop farming.",
+    "It has a dense labour market, diversified finance and manufacturing, and strong transport links to other regions."
+   ],
+   "answer": 3,
+   "explanation": "Gauteng is a core region because the agglomeration of people, finance, manufacturing and transport links creates a large market and many jobs. Its economic strength is not mainly due to having the richest platinum reserves, the most reliable rainfall or a coastline; those advantages belong to other regions or are exaggerated."
+  },
+  {
+   "n": 22,
+   "topic": "Economic geography of South Africa",
+   "q": "Which statement best describes South Africa’s informal sector in economic geography?",
+   "options": [
+    "It is made up only of illegal trading such as smuggling and unlicensed mining.",
+    "It consists largely of unregistered enterprises and precarious work that provide income where formal employment is limited.",
+    "It is the part of the economy that pays taxes and is protected by labour legislation.",
+    "It is limited to subsistence farming in former homelands and does not include urban activities."
+   ],
+   "answer": 1,
+   "explanation": "The informal sector includes unregistered and unregulated economic activities such as street trading, casual work and small services, often filling gaps where formal jobs are scarce. It is not defined as illegal activity, formal protected employment or only rural subsistence farming."
+  },
+  {
+   "n": 23,
+   "topic": "Economic geography of South Africa",
+   "q": "A Spatial Development Initiative such as the Coega Industrial Development Zone near Gqeberha was mainly established to do what?",
+   "options": [
+    "Enforce tighter pollution limits on industries in existing metropolitan areas.",
+    "Attract investment and create jobs by linking transport infrastructure and incentives to industries with export potential.",
+    "Divide agricultural land into smallholdings for emerging farmers.",
+    "Move government departments from Pretoria and Cape Town to rural districts."
+   ],
+   "answer": 1,
+   "explanation": "Spatial development initiatives and industrial development zones aim to attract investment by combining infrastructure, incentives and a location suited to export-orientated production, thereby creating jobs. They are not primarily land-reform, pollution-control or departmental relocation programmes."
+  },
+  {
+   "n": 24,
+   "topic": "Mapwork: topographic maps and scale",
+   "q": "A topographic map has a scale of 1:50 000. A straight road measures 7,4 cm on the map. What is the road’s real distance in kilometres?",
+   "options": [
+    "7,4 km",
+    "37 km",
+    "3,7 km",
+    "0,37 km"
+   ],
+   "answer": 2,
+   "explanation": "At 1:50 000, one centimetre on the map represents 50 000 cm, or 0,5 km, on the ground. Therefore 7,4 cm × 0,5 km = 3,7 km; a result of 37 km comes from treating 1 cm as 5 km, and 7,4 km ignores the scale."
+  },
+  {
+   "n": 25,
+   "topic": "Mapwork: topographic maps and scale",
+   "q": "On a 1:50 000 topographic map, two points X and Y are 6 cm apart along a straight line. X is on the 1 200 m contour and Y is on the 1 500 m contour. What is the average gradient from X to Y?",
+   "options": [
+    "1:20",
+    "1:5",
+    "1:100",
+    "1:10"
+   ],
+   "answer": 3,
+   "explanation": "First convert the map distance to ground distance: 6 cm × 50 000 = 300 000 cm = 3 000 m. The vertical difference is 1 500 m − 1 200 m = 300 m, so the gradient is 300 m ÷ 3 000 m = 1:10."
+  },
+  {
+   "n": 26,
+   "topic": "Mapwork: topographic maps and scale",
+   "q": "A map for a place near Springbok states that the magnetic declination was 24°15′ west of true north in 2018. The annual change is 8′ eastwards. What is the magnetic declination for 2023?",
+   "options": [
+    "23°35′ west of true north",
+    "24°55′ west of true north",
+    "23°35′ east of true north",
+    "22°55′ west of true north"
+   ],
+   "answer": 0,
+   "explanation": "From 2018 to 2023 is 5 years, so the change is 5 × 8′ = 40′ eastwards. Eastwards change reduces a west declination: 24°15′ − 40′ = 23°35′ west of true north. Adding the change or reversing the direction would not give this result."
+  },
+  {
+   "n": 27,
+   "topic": "Resources and sustainability",
+   "q": "Which statement best explains why coal is classified as a non-renewable resource even though South Africa has large coal reserves?",
+   "options": [
+    "It is found only in deep underground mines that cannot be restored after mining.",
+    "It forms over millions of years and is used far faster than natural processes can replace it.",
+    "It cannot be recycled, and non-renewable resources are defined as materials that cannot be recycled.",
+    "It causes acid rain and releases sulphur dioxide when burned."
+   ],
+   "answer": 1,
+   "explanation": "A non-renewable resource is formed by natural processes far more slowly than people use it, so even large coal reserves are finite on human timescales. Pollution and the difficulty of rehabilitating mines are important impacts, but they are not the reason coal is called non-renewable."
+  },
+  {
+   "n": 28,
+   "topic": "Resources and sustainability",
+   "q": "A copper mine is planned near a river. Which strategy best applies the principle of sustainable resource use?",
+   "options": [
+    "Focus on maximising profit while mining and deal with environmental damage only after the ore body is exhausted.",
+    "Extract all the ore as quickly as possible because a non-renewable resource should be used before it runs out.",
+    "Stop all mining in the area because any use of a non-renewable resource is unsustainable.",
+    "Extract the ore while controlling water pollution and rehabilitating the land so that future users are not harmed."
+   ],
+   "answer": 3,
+   "explanation": "Sustainable resource use balances economic benefits with preventing environmental damage and protecting the needs of future users. Controlling water pollution and rehabilitating land while mining meet this principle; simply extracting as fast as possible or stopping all use ignores the balance between economic, social and environmental needs."
+  },
+  {
+   "n": 29,
+   "topic": "South Africa’s climate and weather",
+   "q": "Why is Alexander Bay on the west coast much drier than Durban on the east coast, although both are at similar latitudes?",
+   "options": [
+    "The west coast receives winter rain from the westerlies while the east coast remains dry in all seasons.",
+    "The east coast is closer to the equator, so descending air brings more rain there.",
+    "The west coast is much higher above sea level, so it lies in the rain shadow of the Drakensberg.",
+    "The east coast receives moisture-bearing onshore winds from the warm Indian Ocean, while the west coast is affected by the cold Benguela Current and offshore winds."
+   ],
+   "answer": 3,
+   "explanation": "The warm Indian Ocean and onshore winds supply moisture to the east coast, whereas the cold Benguela Current cools and stabilises the air over the west coast and offshore winds reduce rainfall there. This ocean-current and wind-direction contrast explains the dryness of places such as Alexander Bay compared with Durban."
+  },
+  {
+   "n": 30,
+   "topic": "South Africa’s climate and weather",
+   "q": "Which description best explains the formation of a berg wind along parts of the South African coast?",
+   "options": [
+    "Moist air from the Indian Ocean rises over the Drakensberg, cools and produces heavy orographic rain.",
+    "Tropical air moves southwards over the interior, causing widespread thunderstorms in summer.",
+    "Cold air from the ocean moves inland and cools the coastal plain, causing frost in winter.",
+    "Air descends from the interior plateau towards the coast, warming adiabatically and bringing hot, dry conditions."
+   ],
+   "answer": 3,
+   "explanation": "A berg wind forms when air descends from the interior plateau towards the coast and warms adiabatically, producing hot, dry conditions. Rising moist air over the Drakensberg, cold ocean air moving inland, or tropical air causing summer thunderstorms describes other weather processes."
+  }
+ ]
+}

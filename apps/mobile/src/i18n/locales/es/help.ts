@@ -772,7 +772,7 @@ const help: Translation<typeof en> = {
             body: ['Lo que genera la IA puede:'],
             bullets: [
               'Contener errores, sobre todo en cálculos, fechas y cifras',
-              'Pasar por alto detalles de tu temario o tu examen concreto (WAEC, NECO, JAMB)',
+              'Pasar por alto detalles de tu temario o tu examen concreto (WAEC, SAT, GCSE…)',
               'Leer mal la letra a mano, las fotos borrosas o los diagramas complejos',
               'No conocer hechos muy recientes ni cambios en el temario',
               'Sonar segura incluso cuando se equivoca',

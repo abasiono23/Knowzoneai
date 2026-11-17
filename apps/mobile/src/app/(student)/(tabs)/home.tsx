@@ -10,12 +10,15 @@ import { MaterialCard } from '@/components/materials/material-card';
 import { Rail } from '@/components/content/rail';
 import { Card, IconButton, ProgressBar, Screen, SectionHeader, StatPill, Text } from '@/components/ui';
 import { CoursesRail } from '@/components/courses/courses-rail';
+import { KoraLessonsRail } from '@/components/kora/lesson-card';
 import { VideosBanner } from '@/components/videos/videos-banner';
 import { Colors, Gradients, Palette, Radius, Spacing } from '@/constants/theme';
 import { getLesson, matchSubject, subjectName, LESSONS } from '@/lib/catalog';
 import { buildPlan } from '@/lib/learning-plan';
 import { useLibrary } from '@/lib/library-store';
 import { useMaterials } from '@/lib/studio/store';
+import { isPracticeOnly } from '@/lib/exams';
+import { EXAM_NAMES, examsForRegion, listOf, regionOf } from '@/lib/region';
 import { useActivity } from '@/lib/rewards/activity';
 import { useSession } from '@/lib/session';
 
@@ -78,6 +81,22 @@ export default function HomeScreen() {
   const focusSubject = today?.day.subject ? matchSubject(today.day.subject) : undefined;
   const focus = focusSubject ? subjectName(focusSubject, t) : (today?.day.focus ?? '');
   const goal = Math.min(1, user.todayMinutes / user.dailyGoalMinutes);
+
+  // The exam card of the student's study region. Nigeria's is the one the app has always had.
+  const regionExams = examsForRegion(regionOf(user));
+  const only = regionExams.length === 1 ? regionExams[0]! : null;
+  const examCard = regionExams.length
+    ? {
+        names: regionExams.map((e) => EXAM_NAMES[e]),
+        // Nigeria's three and the other WAEC countries' one are past questions; everywhere else it is practice.
+        title: !regionExams.some(isPracticeOnly)
+          ? only
+            ? tExams('card.titleOne', { exam: EXAM_NAMES[only] })
+            : tExams('card.title')
+          : tExams('card.titlePractice', { exams: listOf(regionExams.map((e) => EXAM_NAMES[e])) }),
+        body: regionExams.some(isPracticeOnly) ? tExams('card.bodyPractice') : tExams('card.body'),
+      }
+    : null;
 
   return (
     <Screen>
@@ -211,41 +230,45 @@ export default function HomeScreen() {
         ))}
       </View>
 
-      {/* Past Questions: JAMB, WAEC and NECO */}
-      <Pressable
-        onPress={() => router.push('/exams' as Href)}
-        accessibilityRole="button"
-        accessibilityLabel={`${tExams('card.title')}. ${tExams('card.body')}`}>
-        {({ pressed }) => (
-          <LinearGradient
-            colors={['#0E7C66', '#0B4F6C']}
-            start={{ x: 0, y: 0 }}
-            end={{ x: 1, y: 1 }}
-            style={[styles.exams, { transform: [{ scale: pressed ? 0.98 : 1 }] }]}>
-            <View style={{ flex: 1, gap: 6 }}>
-              <Text variant="label" color="#9FF5D9">
-                {tExams('card.eyebrow')}
-              </Text>
-              <Text variant="heading">{tExams('card.title')}</Text>
-              <Text variant="small" color="rgba(255,255,255,0.85)">
-                {tExams('card.body')}
-              </Text>
-              <View style={styles.examChips}>
-                {(['JAMB', 'WAEC', 'NECO'] as const).map((name) => (
-                  <View key={name} style={styles.examChip}>
-                    <Text variant="small" style={{ fontFamily: 'Manrope_800ExtraBold' }} color="#fff">
-                      {name}
-                    </Text>
-                  </View>
-                ))}
+      {/* Exam practice for the student's study region: JAMB, WAEC and NECO in Nigeria, WAEC in the
+          other WAEC countries, SAT, ACT and AP in the US, GCSE and A-level in the UK, KCSE in Kenya, Matric
+          in South Africa. No card where we have no papers. */}
+      {examCard && (
+        <Pressable
+          onPress={() => router.push('/exams' as Href)}
+          accessibilityRole="button"
+          accessibilityLabel={`${examCard.title}. ${examCard.body}`}>
+          {({ pressed }) => (
+            <LinearGradient
+              colors={['#0E7C66', '#0B4F6C']}
+              start={{ x: 0, y: 0 }}
+              end={{ x: 1, y: 1 }}
+              style={[styles.exams, { transform: [{ scale: pressed ? 0.98 : 1 }] }]}>
+              <View style={{ flex: 1, gap: 6 }}>
+                <Text variant="label" color="#9FF5D9">
+                  {tExams('card.eyebrow')}
+                </Text>
+                <Text variant="heading">{examCard.title}</Text>
+                <Text variant="small" color="rgba(255,255,255,0.85)">
+                  {examCard.body}
+                </Text>
+                <View style={styles.examChips}>
+                  {examCard.names.map((name) => (
+                    <View key={name} style={styles.examChip}>
+                      <Text variant="small" style={{ fontFamily: 'Manrope_800ExtraBold' }} color="#fff">
+                        {name}
+                      </Text>
+                    </View>
+                  ))}
+                </View>
               </View>
-            </View>
-            <View style={styles.examIcon}>
-              <Ionicons name="school" size={30} color="#0E7C66" />
-            </View>
-          </LinearGradient>
-        )}
-      </Pressable>
+              <View style={styles.examIcon}>
+                <Ionicons name="school" size={30} color="#0E7C66" />
+              </View>
+            </LinearGradient>
+          )}
+        </Pressable>
+      )}
 
       {/* Today in your plan */}
       {today && todayLesson && (
@@ -293,6 +316,8 @@ export default function HomeScreen() {
       </Pressable>
 
       <VideosBanner />
+
+      <KoraLessonsRail />
 
       {/* Library shortcuts */}
       <View style={styles.shortcuts}>

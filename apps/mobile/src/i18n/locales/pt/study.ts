@@ -203,7 +203,7 @@ const study: Translation<typeof en> = {
     topicLabel: 'Tema',
     topicPlaceholder: 'ex.: Como funcionam as vacinas',
     focusLabel: 'Algo em específico? (opcional)',
-    focusPlaceholder: 'ex.: para o WAEC, foca nos cálculos',
+    focusPlaceholder: 'ex.: para o {{exam}}, foca nos cálculos',
     popular: 'POPULAR AGORA',
     ideas: {
       photosynthesis: 'Fotossíntese',
@@ -354,7 +354,7 @@ const study: Translation<typeof en> = {
     subject: 'Disciplina',
     folderName: 'Nome da pasta',
     tags: 'Etiquetas',
-    tagsPlaceholder: 'ex.: WAEC, 2.º período, rever',
+    tagsPlaceholder: 'ex.: {{exam}}, 2.º período, rever',
     tagsHint: 'Separa as etiquetas com vírgulas',
     created: 'Criado a {{date}} a partir de {{source}}',
   },

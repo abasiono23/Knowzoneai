@@ -1,0 +1,401 @@
+{
+ "id": "kcse-mathematics-p1",
+ "exam": "kcse",
+ "subject": "mathematics",
+ "year": null,
+ "number": 1,
+ "source": "ai",
+ "minutes": 35,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Numbers: integers, fractions and decimals",
+   "q": "Amina's bank account had a balance of KSh −1 250. She deposited KSh 3 400, later withdrew KSh 2 100, and the bank charged her KSh 75. What was her final balance?",
+   "options": [
+    "KSh 50",
+    "KSh 25",
+    "KSh −25",
+    "KSh 125"
+   ],
+   "answer": 2,
+   "explanation": "Final balance = −1 250 + 3 400 − 2 100 − 75 = −25, so she was overdrawn by KSh 25. Forgetting to subtract the bank charge gives KSh 50, while adding the charge instead of subtracting it gives KSh 125."
+  },
+  {
+   "n": 2,
+   "topic": "Numbers: integers, fractions and decimals",
+   "q": "Evaluate (3/4 ÷ 2/5) − 0.25 × 1.2.",
+   "options": [
+    "369/200",
+    "87/40",
+    "63/40",
+    "0"
+   ],
+   "answer": 2,
+   "explanation": "3/4 ÷ 2/5 = 15/8 and 0.25 × 1.2 = 3/10. Hence 15/8 − 3/10 = (75 − 12)/40 = 63/40. Multiplying instead of dividing gives 3/10, which leads to 0 after subtracting 3/10."
+  },
+  {
+   "n": 3,
+   "topic": "Numbers: integers, fractions and decimals",
+   "q": "Amina spent 1/3 of her money on books and 1/4 of the remainder on transport. She was left with KSh 1 200. How much money did she have at first?",
+   "options": [
+    "KSh 2 880",
+    "KSh 1 800",
+    "KSh 4 800",
+    "KSh 2 400"
+   ],
+   "answer": 3,
+   "explanation": "Let the initial amount be x. After books she had 2x/3; transport took 1/4 of that, leaving 2x/3 − x/6 = x/2. Thus x/2 = 1 200, so x = KSh 2 400. Treating transport as 1/4 of the original amount gives KSh 2 880, and ignoring transport gives KSh 1 800."
+  },
+  {
+   "n": 4,
+   "topic": "Matrices and transformations",
+   "q": "Given A = [2, −1; 3, 4] and B = [1, 2; 0, −1], find the product AB.",
+   "options": [
+    "[8, 7; −3, −4]",
+    "[3, 1; 3, 3]",
+    "[2, −2; 0, −4]",
+    "[2, 5; 3, 2]"
+   ],
+   "answer": 3,
+   "explanation": "The first row of AB is (2×1 + (−1)×0, 2×2 + (−1)×(−1)) = (2, 5), and the second row is (3×1 + 4×0, 3×2 + 4×(−1)) = (3, 2). The matrix [8, 7; −3, −4] is BA, while [2, −2; 0, −4] comes from multiplying matching entries instead of using row-by-column multiplication."
+  },
+  {
+   "n": 5,
+   "topic": "Matrices and transformations",
+   "q": "A point P(3, −2) is mapped by the matrix [0, −1; 1, 0]. What are the coordinates of its image, and what single transformation does the matrix represent?",
+   "options": [
+    "(2, −3); a reflection in the x-axis",
+    "(−3, 2); a rotation of 180° about the origin",
+    "(2, 3); a rotation of 90° anticlockwise about the origin",
+    "(−2, −3); a rotation of 90° clockwise about the origin"
+   ],
+   "answer": 2,
+   "explanation": "Multiplying the matrix by the column vector (3, −2) gives (0×3 + (−1)×(−2), 1×3 + 0×(−2)) = (2, 3). The matrix [0, −1; 1, 0] is the standard 90° anticlockwise rotation about the origin. Using the clockwise rotation matrix would give (−2, −3)."
+  },
+  {
+   "n": 6,
+   "topic": "Circles: chords, tangents and angle properties",
+   "q": "A chord AB of a circle with centre O is 5 cm from O. The radius of the circle is 13 cm. What is the length of chord AB?",
+   "options": [
+    "24 cm",
+    "√194 cm",
+    "18 cm",
+    "12 cm"
+   ],
+   "answer": 0,
+   "explanation": "The perpendicular distance from the centre to a chord bisects the chord. Half the chord is √(13² − 5²) = √144 = 12 cm, so the full chord is 2 × 12 = 24 cm. The value 12 cm is only half the chord."
+  },
+  {
+   "n": 7,
+   "topic": "Circles: chords, tangents and angle properties",
+   "q": "AT is a tangent to a circle at A and AB is a chord. Point C lies on the circle on the opposite side of AB from T. If ∠BAT = 38°, find ∠ACB.",
+   "options": [
+    "142°",
+    "52°",
+    "76°",
+    "38°"
+   ],
+   "answer": 3,
+   "explanation": "By the alternate segment theorem, the angle between a tangent and a chord at the point of contact equals the angle in the alternate segment. Hence ∠ACB = ∠BAT = 38°. The value 52° comes from taking the complement with 90°, which is not the relationship here."
+  },
+  {
+   "n": 8,
+   "topic": "Statistics",
+   "q": "The numbers of goals scored by 20 footballers in a tournament were recorded as follows:\nGoals | 0 | 1 | 2 | 3 | 4\nFrequency | 3 | 5 | 8 | 3 | 1\nCalculate the mean number of goals per footballer.",
+   "options": [
+    "1.5 goals",
+    "1.7 goals",
+    "1 goal",
+    "2 goals"
+   ],
+   "answer": 1,
+   "explanation": "The total frequency is 20 and the sum of goals is 0×3 + 1×5 + 2×8 + 3×3 + 4×1 = 34. The mean is 34 ÷ 20 = 1.7 goals. The value 2 goals is the mode (and, here, also the median), not the mean."
+  },
+  {
+   "n": 9,
+   "topic": "Statistics",
+   "q": "The marks scored by 30 learners in a mathematics test are grouped as follows:\nMarks | 0–10 | 10–20 | 20–30 | 30–40 | 40–50\nFrequency | 4 | 6 | 10 | 7 | 3\nEstimate the median mark using the grouped-data median formula.",
+   "options": [
+    "25.5 marks",
+    "25 marks",
+    "30 marks",
+    "24 marks"
+   ],
+   "answer": 1,
+   "explanation": "Cumulative frequencies are 4, 10, 20, 27 and 30, so the median lies in the 20–30 class. Using L + ((N/2 − cf)/f)h gives 20 + ((15 − 10)/10) × 10 = 25 marks. Using (N + 1)/2 instead of N/2 gives the tempting 25.5 marks, but the grouped-data formula uses N/2."
+  },
+  {
+   "n": 10,
+   "topic": "Statistics",
+   "q": "The mean mass of 25 boys is 48 kg, while the mean mass of 15 girls is 42 kg. What is the mean mass of all 40 learners?",
+   "options": [
+    "45 kg",
+    "48 kg",
+    "45.75 kg",
+    "44.25 kg"
+   ],
+   "answer": 2,
+   "explanation": "Total mass = 25 × 48 + 15 × 42 = 1 200 + 630 = 1 830 kg, so mean = 1 830 ÷ 40 = 45.75 kg. Taking the simple average of 48 kg and 42 kg gives 45 kg and ignores the unequal group sizes."
+  },
+  {
+   "n": 11,
+   "topic": "Vectors",
+   "q": "Given a = 3i − 2j and b = −i + 5j, find 2a − 3b.",
+   "options": [
+    "3i + 11j",
+    "9i − 19j",
+    "3i − 19j",
+    "9i + 11j"
+   ],
+   "answer": 1,
+   "explanation": "Here 2a = 6i − 4j and 3b = −3i + 15j, so 2a − 3b = (6 − (−3))i + (−4 − 15)j = 9i − 19j. The value 3i − 19j comes from subtracting the i-component of 3b instead of adding its negative, while 3i + 11j results if the signs of both components are mishandled."
+  },
+  {
+   "n": 12,
+   "topic": "Vectors",
+   "q": "A displacement vector is 6i − 8j metres. What is the unit vector in the same direction?",
+   "options": [
+    "0.6i − 0.8j",
+    "0.8i − 0.6j",
+    "6i − 8j",
+    "−0.6i + 0.8j"
+   ],
+   "answer": 0,
+   "explanation": "The magnitude is √(6² + (−8)²) = √100 = 10, so the unit vector is (6i − 8j) ÷ 10 = 0.6i − 0.8j. Leaving it as 6i − 8j ignores the need to divide by the magnitude, while −0.6i + 0.8j points in the opposite direction."
+  },
+  {
+   "n": 13,
+   "topic": "Vectors",
+   "q": "Point A has position vector 2i + j and point B has position vector 8i + 7j. Point P divides AB internally in the ratio AP:PB = 2:1. Find the position vector of P.",
+   "options": [
+    "14i + 13j",
+    "5i + 4j",
+    "6i + 5j",
+    "4i + 3j"
+   ],
+   "answer": 2,
+   "explanation": "For AP:PB = 2:1, P is found by A + (2/3)(B − A), giving (2i + j) + (2/3)(6i + 6j) = 6i + 5j. Reversing the ratio gives 4i + 3j, the midpoint is 5i + 4j, and treating 2:1 as a multiplier of the whole vector AB gives the external-like point 14i + 13j."
+  },
+  {
+   "n": 14,
+   "topic": "Differentiation and integration",
+   "q": "Find the gradient of the curve y = (x² + 3)⁵ at x = 1.",
+   "options": [
+    "10240",
+    "1280",
+    "5120",
+    "2560"
+   ],
+   "answer": 3,
+   "explanation": "Using the chain rule, dy/dx = 5(x² + 3)⁴ × 2x = 10x(x² + 3)⁴. At x = 1 this is 10 × 4⁴ = 10 × 256 = 2560. The value 1280 comes from omitting the factor 2x from the derivative of the inside function."
+  },
+  {
+   "n": 15,
+   "topic": "Differentiation and integration",
+   "q": "Evaluate ∫₁² (4x³ − 3x² + 2) dx.",
+   "options": [
+    "10",
+    "8",
+    "14",
+    "24"
+   ],
+   "answer": 0,
+   "explanation": "An antiderivative is x⁴ − x³ + 2x. Evaluating from 1 to 2 gives (16 − 8 + 4) − (1 − 1 + 2) = 12 − 2 = 10. The value 8 results if the integrated constant term 2x is omitted."
+  },
+  {
+   "n": 16,
+   "topic": "Differentiation and integration",
+   "q": "A car moves in a straight line such that its velocity, in m/s, after t seconds is v = 3t² − 8t + 5. Find its acceleration when t = 3 s.",
+   "options": [
+    "18 m/s²",
+    "8 m/s²",
+    "10 m/s²",
+    "26 m/s²"
+   ],
+   "answer": 2,
+   "explanation": "Acceleration is dv/dt = 6t − 8, so at t = 3 s it is 18 − 8 = 10 m/s². The value 8 m/s² is the velocity at t = 3 s, not the acceleration, while 26 m/s² comes from a sign error when differentiating −8t."
+  },
+  {
+   "n": 17,
+   "topic": "Coordinates, graphs and linear motion",
+   "q": "Which equation represents the line through the point (2, −3) and perpendicular to the line 2x + 3y = 6?",
+   "options": [
+    "3x − 2y = 0",
+    "3x − 2y − 12 = 0",
+    "2x + 3y + 5 = 0",
+    "3x + 2y = 0"
+   ],
+   "answer": 1,
+   "explanation": "The line 2x + 3y = 6 has gradient −2/3, so a perpendicular line has gradient 3/2. Using y − (−3) = (3/2)(x − 2) gives y = (3/2)x − 6, which rearranges to 3x − 2y − 12 = 0. The equation 2x + 3y + 5 = 0 is a parallel line through the same point, not a perpendicular one."
+  },
+  {
+   "n": 18,
+   "topic": "Coordinates, graphs and linear motion",
+   "q": "A matatu on Thika Road moves in a straight line such that its velocity changes uniformly from 12 m/s to 0 m/s over 6 s. The velocity–time graph is a straight line from (0 s, 12 m/s) to (6 s, 0 m/s). What distance does the matatu travel during this time?",
+   "options": [
+    "72 m",
+    "18 m",
+    "36 m",
+    "6 m"
+   ],
+   "answer": 2,
+   "explanation": "Distance is the area under the velocity–time graph, which is a triangle: ½ × 6 × 12 = 36 m. Multiplying 6 by 12 gives 72 m and treats the graph as a rectangle, while 6 m is the average velocity, not a distance."
+  },
+  {
+   "n": 19,
+   "topic": "Quadratic expressions and equations",
+   "q": "Express 2x² − 8x + 5 in the form a(x − p)² + q. What is the value of q?",
+   "options": [
+    "5",
+    "−3",
+    "−8",
+    "3"
+   ],
+   "answer": 1,
+   "explanation": "Complete the square: 2x² − 8x + 5 = 2(x² − 4x) + 5 = 2[(x − 2)² − 4] + 5 = 2(x − 2)² − 8 + 5 = 2(x − 2)² − 3. Hence q = −3; the value 5 appears if the −8 adjustment is forgotten, and −8 appears if the original +5 is omitted."
+  },
+  {
+   "n": 20,
+   "topic": "Quadratic expressions and equations",
+   "q": "Wanjiku's rectangular plot of land has length 5 m longer than its width. Its area is 84 m². Find the width of the plot.",
+   "options": [
+    "14 m",
+    "6 m",
+    "7 m",
+    "12 m"
+   ],
+   "answer": 2,
+   "explanation": "Let the width be w metres; then the length is w + 5 metres. Thus w(w + 5) = 84, so w² + 5w − 84 = 0, which factorises as (w + 12)(w − 7) = 0. The positive width is 7 m, and 12 m is the corresponding length, not the width."
+  },
+  {
+   "n": 21,
+   "topic": "Indices and logarithms",
+   "q": "Evaluate (8^(2/3) × 4^(1/2)) ÷ 2^0.",
+   "options": [
+    "2",
+    "16",
+    "4",
+    "8"
+   ],
+   "answer": 3,
+   "explanation": "8^(2/3) = (∛8)^2 = 2^2 = 4 and 4^(1/2) = 2. Their product is 4 × 2 = 8, and 2^0 = 1, so dividing by 1 gives 8. Choosing 4 leaves out the square root of 4, while 16 uses 4 × 4 instead of 4 × 2."
+  },
+  {
+   "n": 22,
+   "topic": "Indices and logarithms",
+   "q": "Solve for x: log₂(x + 3) = 3 + log₂(x − 1).",
+   "options": [
+    "7/11",
+    "11/7",
+    "5/7",
+    "11/9"
+   ],
+   "answer": 1,
+   "explanation": "Rearrange to get log₂(x + 3) − log₂(x − 1) = 3, so (x + 3)/(x − 1) = 2³ = 8. Then x + 3 = 8x − 8, giving 7x = 11 and x = 11/7. The value 5/7 is not acceptable because x − 1 would be negative."
+  },
+  {
+   "n": 23,
+   "topic": "Indices and logarithms",
+   "q": "Given that log₁₀ 2 = 0.3010 and log₁₀ 3 = 0.4771, evaluate log₁₀ 0.24.",
+   "options": [
+    "0.3801",
+    "−1.6199",
+    "−0.3802",
+    "−0.6199"
+   ],
+   "answer": 3,
+   "explanation": "0.24 = 24/100, so log₁₀ 0.24 = log₁₀ 24 − log₁₀ 100. Now log₁₀ 24 = 3log₁₀ 2 + log₁₀ 3 = 0.9030 + 0.4771 = 1.3801, so the value is 1.3801 − 2 = −0.6199. Using 10 instead of 100 as the denominator would wrongly give 0.3801."
+  },
+  {
+   "n": 24,
+   "topic": "Algebraic expressions and equations",
+   "q": "Wanjiku bought 3 pens and 2 exercise books for KSh 190. Mwangi bought 5 pens and 4 exercise books for KSh 350. Find the cost of one exercise book.",
+   "options": [
+    "KSh 40",
+    "KSh 20",
+    "KSh 50",
+    "KSh 30"
+   ],
+   "answer": 2,
+   "explanation": "Let p be the price of a pen and b the price of an exercise book. From 3p + 2b = 190 and 5p + 4b = 350, doubling the first gives 6p + 4b = 380; subtracting the second gives p = 30. Then 3 × 30 + 2b = 190, so 2b = 100 and b = 50. The value KSh 30 is the price of a pen, not an exercise book."
+  },
+  {
+   "n": 25,
+   "topic": "Algebraic expressions and equations",
+   "q": "Simplify (x² − 5x + 6)/(x² − 9) ÷ (x − 2)/(x + 3), stating any necessary restriction.",
+   "options": [
+    "1, provided x ≠ −3, 2 or 3",
+    "1, for all values of x",
+    "(x + 3)/(x − 3), provided x ≠ 3",
+    "(x − 3)/(x + 3), provided x ≠ −3"
+   ],
+   "answer": 0,
+   "explanation": "Factorise x² − 5x + 6 as (x − 2)(x − 3) and x² − 9 as (x − 3)(x + 3). Dividing by (x − 2)/(x + 3) is the same as multiplying by (x + 3)/(x − 2), after which all factors cancel to give 1. The original expression is undefined when x = −3, x = 2 or x = 3, so these restrictions must be stated."
+  },
+  {
+   "n": 26,
+   "topic": "Algebraic expressions and equations",
+   "q": "A rectangular plot has length 4 m longer than its width. Its area is 45 m². Find the width of the plot.",
+   "options": [
+    "9 m",
+    "4 m",
+    "5 m",
+    "3 m"
+   ],
+   "answer": 2,
+   "explanation": "Let the width be w metres, so the length is w + 4 metres. Then w(w + 4) = 45, giving w² + 4w − 45 = 0 = (w + 9)(w − 5). Since width must be positive, w = 5 m; the length is 9 m, so choosing 9 m gives the length rather than the width."
+  },
+  {
+   "n": 27,
+   "topic": "Measurement: length, area and volume",
+   "q": "A trapezium-shaped maize plot has parallel sides 48 m and 32 m, and the perpendicular distance between them is 25 m. Calculate its area in hectares.",
+   "options": [
+    "1 hectare",
+    "0.1 hectares",
+    "10 hectares",
+    "0.01 hectares"
+   ],
+   "answer": 1,
+   "explanation": "Area of a trapezium = ½(a + b)h = ½(48 + 32) × 25 = 1000 m². Since 1 hectare = 10 000 m², this is 0.1 hectares. Keeping 1000 as hectares without converting, or using 1 hectare = 100 m², gives the wrong magnitudes."
+  },
+  {
+   "n": 28,
+   "topic": "Measurement: length, area and volume",
+   "q": "A closed cylindrical water tank has radius 7 m and height 30 m. Calculate its total surface area using π = 22/7.",
+   "options": [
+    "3,872 m²",
+    "1,628 m²",
+    "1,320 m²",
+    "1,474 m²"
+   ],
+   "answer": 1,
+   "explanation": "Total surface area = 2πr² + 2πrh = 2πr(r + h). With r = 7 m, h = 30 m and π = 22/7, this is 2 × (22/7) × 7 × 37 = 1,628 m². The value 1,320 m² is only the curved surface, while 1,474 m² includes just one circular end."
+  },
+  {
+   "n": 29,
+   "topic": "Angles, polygons and geometric constructions",
+   "q": "The interior angle of a regular polygon is 156°. Find the number of sides of the polygon.",
+   "options": [
+    "24",
+    "15",
+    "30",
+    "12"
+   ],
+   "answer": 1,
+   "explanation": "The exterior angle is 180° − 156° = 24°. Since the exterior angles of a regular polygon sum to 360°, the number of sides is 360 ÷ 24 = 15. The value 24 is the size of each exterior angle, not the number of sides."
+  },
+  {
+   "n": 30,
+   "topic": "Angles, polygons and geometric constructions",
+   "q": "To construct an equilateral triangle on a given line segment XY, a pair of compasses is used to draw arcs from X and from Y. What must the radius of each arc be?",
+   "options": [
+    "Twice the length XY",
+    "Half the length XY",
+    "The length XY",
+    "Any length greater than half XY but less than XY"
+   ],
+   "answer": 2,
+   "explanation": "An equilateral triangle on XY must have X and Y as two vertices and its third vertex at a distance XY from both X and Y. Therefore the arcs drawn from X and Y must each have radius XY. A radius of half XY would only mark the midpoint of XY and would not locate the third vertex."
+  }
+ ]
+}

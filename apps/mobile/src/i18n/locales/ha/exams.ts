@@ -4,6 +4,8 @@ import type en from '../en/exams';
 
 const exams: Translation<typeof en> = {
   title: 'Tambayoyin Baya',
+  /** The same page for SAT and GCSE students: those papers are practice, never "past questions". */
+  practiceTitle: 'Gwajin jarabawa',
   eyebrow: 'JAMB · WAEC · NECO',
   offline: 'Tambayoyin Baya suna buƙatar intanet.',
   loadFailed: 'Ba mu iya loda takardun ba. Duba haɗin intanet ɗinka kuma ka sake gwadawa.',
@@ -13,11 +15,30 @@ const exams: Translation<typeof en> = {
     title: 'Tambayoyin baya na JAMB, WAEC & NECO',
     body: 'Yi gwaji a kowane darasi a tsarin jarabawa na gaske, ga bayanin kowace amsa, kuma ka zauna takardu masu lokaci.',
     action: 'Fara gwaji',
+    /** One exam (the WAEC countries outside Nigeria). */
+    titleOne: 'Tambayoyin baya na {{exam}}',
+    titlePractice: 'Gwajin {{exams}}',
+    bodyPractice: 'Gwajin zaɓi daga amsoshi bisa jarabawa da darasi, da bayanin kowace amsa. AI ne ya rubuta, an kuma sake dubawa; ba tambayoyin baya ba ne.',
+    sat: {
+      title: 'Takardun gwaji na SAT',
+      body: 'Gwajin zaɓi daga amsoshi bisa sassan SAT na dijital da lokacinsa, da bayanin kowace amsa. AI ne ya rubuta, an kuma sake dubawa; ba tambayoyin baya ba ne.',
+    },
+    gcse: {
+      title: 'Gwaji irin na GCSE',
+      body: 'Gwajin zaɓi daga amsoshi bisa maudu’i a Maths, English Language, Biology, Chemistry da Physics, da bayanin kowace amsa. AI ne ya rubuta, an kuma sake dubawa; ba tambayoyin baya ba ne.',
+    },
   },
   exams: {
     jamb: { name: 'JAMB', full: 'JAMB UTME', about: 'Jarabawa a kwamfuta · Use of English da darussa uku' },
     waec: { name: 'WAEC', full: 'WAEC WASSCE', about: 'Takardar shaidar sakandare · tambayoyin zaɓi' },
     neco: { name: 'NECO', full: 'NECO SSCE', about: 'Takardar shaidar sakandare · tambayoyin zaɓi' },
+    sat: { name: 'SAT', full: 'Gwajin SAT na dijital', about: 'Reading and Writing · Math · zaɓi daga amsoshi kawai' },
+    act: { name: 'ACT', full: 'Gwajin ACT', about: 'English · Math · Reading · Science' },
+    ap: { name: 'AP', full: 'Gwajin zaɓi daga amsoshi na AP', about: 'Calculus AB · Biology · Chemistry · Physics 1 · US History · English Language' },
+    gcse: { name: 'GCSE', full: 'Gwaji irin na GCSE', about: 'Gwajin zaɓi daga amsoshi bisa maudu’i' },
+    alevel: { name: 'A-level', full: 'Gwaji irin na A-level', about: 'Gwajin zaɓi daga amsoshi bisa maudu’i' },
+    kcse: { name: 'KCSE', full: 'Gwaji irin na KCSE', about: 'Gwajin zaɓi daga amsoshi bisa maudu’i' },
+    nsc: { name: 'Matric', full: 'Gwaji irin na Matric (NSC)', about: 'Gwajin zaɓi daga amsoshi bisa maudu’i' },
   },
   subjects: {
     english: 'Harshen Turanci',
@@ -30,7 +51,37 @@ const exams: Translation<typeof en> = {
     literature: 'Adabin Turanci',
     geography: 'Labarin Ƙasa',
     commerce: 'Kasuwanci',
+    'reading-writing': 'Reading and Writing',
+    math: 'Math',
+    maths: 'Maths',
+    'english-language': 'English Language',
+    reading: 'Reading',
+    science: 'Science',
+    'calculus-ab': 'Calculus AB',
+    'physics-1': 'Physics 1',
+    'us-history': 'US History',
+    'physical-sciences': 'Physical Sciences',
+    'life-sciences': 'Life Sciences',
+    accounting: 'Accounting',
   },
+  /** What SAT and GCSE practice is and isn't, shown wherever those papers are listed. */
+  notes: {
+    sat: 'Waɗannan tambayoyin gwaji AI ne ya rubuta su, kuma bita ta biyu ta AI ta duba su; ba takardun SAT na baya ba ne. Suna bin sassan SAT na dijital da lokacinsa, amma zaɓi daga amsoshi ne kawai: ainihin sashen Math yana da tambayoyin da za ka rubuta amsarka da kanka.',
+    act: 'Waɗannan tambayoyin gwaji AI ne ya rubuta su, kuma bita ta biyu ta AI ta duba su; ba takardun ACT na baya ba ne. Suna bin sassan ACT, yawan tambayoyinsa da lokacinsa.',
+    ap: 'Waɗannan tambayoyin gwaji AI ne ya rubuta su, kuma bita ta biyu ta AI ta duba su; ba takardun AP na baya ba ne. Sashen zaɓi daga amsoshi na kowace jarabawar AP kawai suke gwadawa: ainihin jarabawar tana da sashen amsoshin da ake rubutawa.',
+    gcse: 'Waɗannan tambayoyin gwaji AI ne ya rubuta su, kuma bita ta biyu ta AI ta duba su; ba tambayoyin baya ba ne. Yawancin ainihin takardun GCSE amsoshi ne da ake rubutawa, don haka yi amfani da waɗannan tambayoyin zaɓi don bitar kowane maudu’i, ba a matsayin kwafin jarabawar ba.',
+    alevel: 'Waɗannan tambayoyin gwaji AI ne ya rubuta su, kuma bita ta biyu ta AI ta duba su; ba tambayoyin baya ba ne. Yawancin ainihin takardun A-level amsoshi ne da ake rubutawa, don haka yi amfani da waɗannan tambayoyin zaɓi don bitar kowane maudu’i, ba a matsayin kwafin jarabawar ba.',
+    kcse: 'Waɗannan tambayoyin gwaji AI ne ya rubuta su, kuma bita ta biyu ta AI ta duba su; ba tambayoyin baya ba ne. Yawancin ainihin takardun KCSE amsoshi ne da ake rubutawa, don haka yi amfani da waɗannan tambayoyin zaɓi don bitar kowane maudu’i, ba a matsayin kwafin jarabawar ba.',
+    nsc: 'Waɗannan tambayoyin gwaji AI ne ya rubuta su, kuma bita ta biyu ta AI ta duba su; ba tambayoyin baya ba ne. Yawancin ainihin takardun Matric (NSC) amsoshi ne da ake rubutawa, don haka yi amfani da waɗannan tambayoyin zaɓi don bitar kowane maudu’i, ba a matsayin kwafin jarabawar ba.',
+  },
+  /** A study region we have no papers for. */
+  none: {
+    title: 'Babu takardun jarabawa na {{country}}',
+    body: 'Malamin AI ɗinka, littattafai da kwasa-kwasai suna aiki da kowace manhaja. Har yanzu za ka iya yin gwaji da takardun wasu ƙasashe a ƙasa.',
+  },
+  otherExams: 'Sauran jarabawowi',
+  region: 'Ƙasar karatu: {{country}}',
+  change: 'Canza',
   pickExam: 'Zaɓi jarabawarka',
   carryOn: 'Ci gaba daga inda ka tsaya',
   pickSubject: 'Zaɓi darasi',
@@ -62,6 +113,8 @@ const exams: Translation<typeof en> = {
       title: 'Jarabawa mai lokaci',
       body: 'Zauna kamar jarabawa ta gaske: minti {{minutes}}, sakamako a ƙarshe.',
     },
+    /** GCSE practice isn't in the exam's format, so its timed mode doesn't say "like the real exam". */
+    timedQuiz: { title: 'Gwaji mai lokaci', body: 'Da agogo: minti {{minutes}}, sakamako a ƙarshe.' },
     history: 'MAKINKA',
     historyRow: '{{score}}/{{total}} · {{mode}} · {{date}}',
     modeName: { practice: 'Gwaji', timed: 'Mai lokaci' },

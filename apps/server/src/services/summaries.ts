@@ -34,6 +34,9 @@ const Library = z.object({
   topics: z.array(Topic).min(1),
 });
 export type SummaryLibrary = z.infer<typeof Library>;
+/** What every file in data/summaries must fit: for the scripts that write them and the test that reads them all. */
+export const SummaryLibrarySchema = Library;
+export const SummaryTextSchema = Text;
 
 export const LIBRARIES = [
   'mathematics',
@@ -56,20 +59,141 @@ export const LIBRARIES = [
 export type LibraryId = (typeof LIBRARIES)[number];
 
 /**
- * University, polytechnic and college courses with summaries, each in data/summaries/uni-<course>.json.
+ * University, polytechnic and college courses, each with its summaries in data/summaries/uni-<course>.json:
+ * the app's whole course list (apps/mobile/src/lib/books.ts FACULTIES), by faculty. A course whose file
+ * isn't there yet has none. Written with scripts/course-summaries.ts (the first ten with summaries-build.ts).
  * English only for now: readers of other languages see the English, with a notice.
  */
 export const COURSES = [
-  'accounting',
-  'business-administration',
+  // agriculture
+  'agriculture',
+  'agricultural-economics',
+  'agricultural-extension',
+  'agronomy',
+  'animal-science',
+  'crop-science',
+  'fisheries',
+  'forestry',
+  'food-science',
+  'soil-science',
+  // arts
+  'english',
+  'history',
+  'linguistics',
+  'philosophy',
+  'religious-studies',
+  'theatre-arts',
+  'music',
+  'fine-arts',
+  'french',
+  'arabic',
+  'yoruba',
+  'igbo',
+  'hausa',
+  // education
+  'education-biology',
+  'education-chemistry',
+  'education-physics',
+  'education-mathematics',
+  'education-english',
+  'education-economics',
+  'guidance-counselling',
+  'educational-management',
+  'early-childhood',
+  'adult-education',
+  'physical-health-education',
+  'library-science',
+  // engineering
+  'agricultural-engineering',
+  'biomedical-engineering',
+  'chemical-engineering',
   'civil-engineering',
-  'computer-science',
-  'economics',
+  'computer-engineering',
+  'electrical-engineering',
+  'mechanical-engineering',
+  'mechatronics',
+  'metallurgical-engineering',
+  'petroleum-engineering',
+  'production-engineering',
+  'marine-engineering',
+  'aerospace-engineering',
+  'telecommunications-engineering',
+  // environmental
+  'architecture',
+  'building',
+  'estate-management',
+  'quantity-surveying',
+  'surveying',
+  'urban-planning',
+  'environmental-management',
+  // law
   'law',
-  'mass-communication',
+  'islamic-law',
+  'llm',
+  // management
+  'accounting',
+  'banking-finance',
+  'business-administration',
+  'entrepreneurship',
+  'insurance',
+  'marketing',
+  'public-administration',
+  'hospitality-tourism',
+  'human-resources',
+  'actuarial-science',
+  'taxation',
+  'mba',
+  'mpa',
+  // health
   'medicine',
+  'dentistry',
   'nursing',
+  'pharmacy',
+  'medical-laboratory-science',
+  'physiotherapy',
+  'radiography',
+  'optometry',
+  'public-health',
+  'nutrition',
+  'anatomy',
+  'physiology',
+  'health-information',
+  'veterinary-medicine',
+  'mph',
+  // sciences
+  'biology',
+  'biochemistry',
+  'botany',
+  'zoology',
+  'microbiology',
+  'biotechnology',
+  'chemistry',
+  'industrial-chemistry',
+  'physics',
+  'geology',
+  'mathematics',
+  'statistics',
+  'science-laboratory-technology',
+  // social
+  'economics',
   'political-science',
+  'international-relations',
+  'sociology',
+  'psychology',
+  'mass-communication',
+  'geography',
+  'criminology',
+  'social-work',
+  'demography',
+  'peace-conflict',
+  // computing
+  'computer-science',
+  'software-engineering',
+  'information-technology',
+  'information-systems',
+  'cyber-security',
+  'data-science',
+  'artificial-intelligence',
 ] as const;
 export const courseLibrary = (course: string) => `uni-${course}`;
 /** Every library a reader can open or search: the school subjects' and the courses'. */
@@ -157,10 +281,15 @@ function library(id: string): SummaryLibrary | null {
   return lib;
 }
 
-/** Tests can put libraries in without the files. */
+/**
+ * Tests can put libraries in without the files. With a list, only those libraries exist: the files on disk
+ * stay out, so a test's results don't change as real summaries are added. null goes back to the files.
+ */
 export function useSummaries(list: SummaryLibrary[] | null) {
   loaded.clear();
-  for (const lib of list ?? []) loaded.set(lib.id, lib);
+  if (!list) return;
+  for (const id of ALL_LIBRARIES) loaded.set(id, null);
+  for (const lib of list) loaded.set(lib.id, lib);
 }
 
 function pick<T>(t: Record<string, T>, lang: LanguageId): T {

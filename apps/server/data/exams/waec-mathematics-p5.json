@@ -1,0 +1,661 @@
+{
+ "id": "waec-mathematics-p5",
+ "exam": "waec",
+ "subject": "mathematics",
+ "year": null,
+ "number": 5,
+ "source": "ai",
+ "minutes": 60,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Trigonometry",
+   "q": "A vertical mast in Ilorin is supported by a wire 17 m long fixed to level ground. The foot of the wire is 8 m from the base of the mast. Find the angle the wire makes with the ground, correct to the nearest degree.",
+   "options": [
+    "28°",
+    "62°",
+    "65°",
+    "61°"
+   ],
+   "answer": 1,
+   "explanation": "The wire, mast and ground form a right-angled triangle. If θ is the angle with the ground, cos θ = adjacent/hypotenuse = 8/17, so θ = cos⁻¹(8/17) ≈ 61.9°, which is 62° to the nearest degree. The value 28° is the complement, not the required angle."
+  },
+  {
+   "n": 2,
+   "topic": "Trigonometry",
+   "q": "Solve 3 tan θ + √3 = 0 for 0° ≤ θ < 360°.",
+   "options": [
+    "120° and 300°",
+    "150° and 210°",
+    "150° and 330°",
+    "210° and 330°"
+   ],
+   "answer": 2,
+   "explanation": "3 tan θ + √3 = 0 gives tan θ = −√3/3. The reference angle is 30°, and tan θ is negative in the second and fourth quadrants, so θ = 180° − 30° = 150° and θ = 360° − 30° = 330°."
+  },
+  {
+   "n": 3,
+   "topic": "Trigonometry",
+   "q": "Given that sin θ = 8/17 and 90° < θ < 180°, find tan θ.",
+   "options": [
+    "−15/8",
+    "8/15",
+    "−8/15",
+    "15/8"
+   ],
+   "answer": 2,
+   "explanation": "In the second quadrant cos θ is negative. From sin²θ + cos²θ = 1, cos θ = −√(1 − 64/289) = −15/17. Hence tan θ = sin θ ÷ cos θ = (8/17) ÷ (−15/17) = −8/15. The value 8/15 ignores the negative sign in the second quadrant."
+  },
+  {
+   "n": 4,
+   "topic": "Statistics",
+   "q": "The mean score of k students in a test in Bauchi is 48. A new student who scored 60 joins the class, and the mean score becomes 49. Find k.",
+   "options": [
+    "12",
+    "10",
+    "11",
+    "9"
+   ],
+   "answer": 2,
+   "explanation": "The initial total score is 48k. After the new student joins, (48k + 60)/(k + 1) = 49, so 48k + 60 = 49k + 49. Hence k = 11."
+  },
+  {
+   "n": 5,
+   "topic": "Statistics",
+   "q": "The weekly savings, in naira, of 9 traders in Owerri are: 450, 600, 750, 600, 900, 1,050, 600, 750, 1,200. Find the mode and the median, respectively.",
+   "options": [
+    "₦600 and ₦750",
+    "₦600 and ₦600",
+    "₦750 and ₦750",
+    "₦600 and ₦900"
+   ],
+   "answer": 0,
+   "explanation": "The value ₦600 occurs three times, more than any other, so the mode is ₦600. Arranging the savings in order gives 450, 600, 600, 600, 750, 750, 900, 1,050, 1,200; the fifth value is ₦750, so the median is ₦750."
+  },
+  {
+   "n": 6,
+   "topic": "Variation",
+   "q": "The cost C (in naira) of a rectangular floor covering varies directly as its length L and inversely as the square of its width W. A covering 8 m long and 2 m wide costs ₦1,200. Find the cost of a covering 9 m long and 3 m wide.",
+   "options": [
+    "₦2,025",
+    "₦900",
+    "₦1,800",
+    "₦600"
+   ],
+   "answer": 3,
+   "explanation": "Let C = kL/W². Using the first covering, 1,200 = k × 8/2², so k = 600. For the second covering, C = 600 × 9/3² = 600 × 9/9 = ₦600. Using the unsquared width gives ₦900 instead."
+  },
+  {
+   "n": 7,
+   "topic": "Variation",
+   "q": "The force F newtons between two magnets varies inversely as the square of the distance d metres between them. When d = 3 m, F = 40 N. Find F when d = 2 m.",
+   "options": [
+    "60 N",
+    "120 N",
+    "17.8 N",
+    "90 N"
+   ],
+   "answer": 3,
+   "explanation": "For inverse-square variation, Fd² is constant. Thus 40 × 3² = F × 2², giving 360 = 4F, so F = 90 N. Using inverse variation without squaring the distance gives 60 N instead."
+  },
+  {
+   "n": 8,
+   "topic": "Angles and circle geometry",
+   "q": "PQ is a diameter of a circle with centre O. R is a point on the circle such that ∠PQR = 38°. Find ∠QPR.",
+   "options": [
+    "38°",
+    "48°",
+    "52°",
+    "62°"
+   ],
+   "answer": 2,
+   "explanation": "Since PQ is a diameter, the angle subtended at the circumference, ∠PRQ, is 90°. In triangle PQR, ∠QPR = 180° − 90° − 38° = 52°."
+  },
+  {
+   "n": 9,
+   "topic": "Angles and circle geometry",
+   "q": "In a circle, chord AB is equal in length to chord CD. The minor arc AB subtends (3x + 15)° at the centre, and the minor arc CD subtends (5x − 25)° at the centre. Find x.",
+   "options": [
+    "25",
+    "15",
+    "20",
+    "10"
+   ],
+   "answer": 2,
+   "explanation": "Equal chords subtend equal angles at the centre of the same circle, so 3x + 15 = 5x − 25. This gives 40 = 2x, hence x = 20. Choosing 25 mistakes the central angle for a right angle rather than comparing the two central angles."
+  },
+  {
+   "n": 10,
+   "topic": "Surds",
+   "q": "Simplify √50 + √18 − √32.",
+   "options": [
+    "2√2",
+    "4√2",
+    "6√2",
+    "8√2"
+   ],
+   "answer": 1,
+   "explanation": "Write each surd in terms of √2: √50 = 5√2, √18 = 3√2 and √32 = 4√2. Thus the expression becomes (5 + 3 − 4)√2 = 4√2."
+  },
+  {
+   "n": 11,
+   "topic": "Surds",
+   "q": "Find x if √(x + 9) = √x + 1.",
+   "options": [
+    "25",
+    "9",
+    "16",
+    "4"
+   ],
+   "answer": 2,
+   "explanation": "Squaring both sides gives x + 9 = x + 2√x + 1, so 8 = 2√x. Hence √x = 4 and x = 16, and checking gives 5 = 4 + 1."
+  },
+  {
+   "n": 12,
+   "topic": "Matrices and determinants",
+   "q": "If A = [[3, −1], [2, 4]], find the determinant of 2A.",
+   "options": [
+    "56",
+    "112",
+    "14",
+    "28"
+   ],
+   "answer": 0,
+   "explanation": "For a 2 × 2 matrix, det(2A) = 2² det(A). Here det(A) = 3 × 4 − (−1) × 2 = 12 + 2 = 14, so det(2A) = 4 × 14 = 56."
+  },
+  {
+   "n": 13,
+   "topic": "Matrices and determinants",
+   "q": "If P = [[3, 2], [−1, 5]], find P⁻¹.",
+   "options": [
+    "1/17 [[5, −2], [1, 3]]",
+    "1/17 [[5, 1], [−2, 3]]",
+    "1/13 [[5, −2], [1, 3]]",
+    "1/17 [[5, 2], [−1, 3]]"
+   ],
+   "answer": 0,
+   "explanation": "For a 2 × 2 matrix, the inverse is 1/(ad − bc) [[d, −b], [−c, a]]. The determinant is 3 × 5 − 2 × (−1) = 15 + 2 = 17, so P⁻¹ = 1/17 [[5, −2], [1, 3]]."
+  },
+  {
+   "n": 14,
+   "topic": "Matrices and determinants",
+   "q": "Find the determinant of M = [[2, −1, 3], [4, 0, 1], [−2, 5, 1]].",
+   "options": [
+    "−56",
+    "64",
+    "44",
+    "56"
+   ],
+   "answer": 3,
+   "explanation": "Expanding along the first row gives 2(0 × 1 − 1 × 5) − (−1)(4 × 1 − 1 × (−2)) + 3(4 × 5 − 0 × (−2)). This simplifies to −10 + 6 + 60 = 56."
+  },
+  {
+   "n": 15,
+   "topic": "Probability",
+   "q": "A bag contains 5 red, 3 blue and 2 green marbles. Two marbles are drawn one after the other without replacement. What is the probability that the two marbles are of the same colour?",
+   "options": [
+    "2/9",
+    "19/50",
+    "13/45",
+    "14/45"
+   ],
+   "answer": 3,
+   "explanation": "Same colour means either red-red, blue-blue or green-green. The probability is (5/10 × 4/9) + (3/10 × 2/9) + (2/10 × 1/9) = 28/90 = 14/45."
+  },
+  {
+   "n": 16,
+   "topic": "Probability",
+   "q": "A fair die is rolled twice. What is the probability that the sum of the two scores is a prime number?",
+   "options": [
+    "5/12",
+    "7/18",
+    "1/3",
+    "1/2"
+   ],
+   "answer": 0,
+   "explanation": "The prime totals possible are 2, 3, 5, 7 and 11, occurring in 1, 2, 4, 6 and 2 ways respectively. Hence the probability is (1 + 2 + 4 + 6 + 2)/36 = 15/36 = 5/12."
+  },
+  {
+   "n": 17,
+   "topic": "Simultaneous equations and inequalities",
+   "q": "At Sabon Gari Market in Kaduna, 5 kg of rice and 2 kg of beans cost ₦8,900, while 3 kg of rice and 4 kg of beans cost ₦8,700. Find the cost of 1 kg of rice.",
+   "options": [
+    "₦1,200",
+    "₦1,500",
+    "₦1,300",
+    "₦2,500"
+   ],
+   "answer": 2,
+   "explanation": "Let rice cost r naira and beans cost b naira per kg. From 5r + 2b = 8900 and 3r + 4b = 8700, doubling the first gives 10r + 4b = 17800. Subtracting gives 7r = 9100, so r = 1300."
+  },
+  {
+   "n": 18,
+   "topic": "Fractions, decimals and percentages",
+   "q": "A trader in Owerri bought 3/5 of a bag of rice and later sold 2/3 of what he bought. What fraction of the full bag remained with him?",
+   "options": [
+    "4/15",
+    "1/15",
+    "1/5",
+    "2/5"
+   ],
+   "answer": 2,
+   "explanation": "He sold (2/3) × (3/5) = 2/5 of a full bag, so the fraction left is (1/3) × (3/5) = 1/5. The value 2/5 is the fraction sold, not the fraction remaining."
+  },
+  {
+   "n": 19,
+   "topic": "Fractions, decimals and percentages",
+   "q": "A bank in Lekki charges a service fee of 0.8% on a transfer of ₦125,000. How much is the service fee?",
+   "options": [
+    "₦1,000",
+    "₦100",
+    "₦10,000",
+    "₦125"
+   ],
+   "answer": 0,
+   "explanation": "0.8% = 0.8/100 = 0.008, so the fee is 0.008 × ₦125,000 = ₦1,000. Using 0.08 instead of 0.008 would wrongly give ₦10,000."
+  },
+  {
+   "n": 20,
+   "topic": "Fractions, decimals and percentages",
+   "q": "Mama Ngozi in Aba increased the price of a bag of garri by 25% and later reduced the new price by 20%. What is the net percentage change from the original price?",
+   "options": [
+    "0% change",
+    "5% increase",
+    "20% increase",
+    "5% decrease"
+   ],
+   "answer": 0,
+   "explanation": "Take the original price as ₦100. After a 25% increase it becomes ₦125; reducing ₦125 by 20% gives 125 × 0.8 = ₦100, the original price. Therefore there is no net change."
+  },
+  {
+   "n": 21,
+   "topic": "Mensuration",
+   "q": "A right pyramid has a square base of side 10 cm and a vertical height of 12 cm. Find its total surface area.",
+   "options": [
+    "240 cm²",
+    "340 cm²",
+    "260 cm²",
+    "360 cm²"
+   ],
+   "answer": 3,
+   "explanation": "The slant height is √(12² + 5²) = 13 cm. The base area is 100 cm² and the four triangular faces have total area 4 × (1/2 × 10 × 13) = 260 cm², giving 360 cm² altogether. The value 340 cm² uses the vertical height instead of the slant height."
+  },
+  {
+   "n": 22,
+   "topic": "Mensuration",
+   "q": "A concrete block in Ibadan is in the shape of a triangular prism. Its triangular face has base 12 cm and height 8 cm, and the prism is 25 cm long. Find its volume.",
+   "options": [
+    "2,400 cm³",
+    "800 cm³",
+    "1,200 cm³",
+    "600 cm³"
+   ],
+   "answer": 2,
+   "explanation": "Area of the triangular face = 1/2 × 12 × 8 = 48 cm². Volume = 48 × 25 = 1,200 cm³. The value 2,400 cm³ comes from omitting the 1/2 in the triangle area."
+  },
+  {
+   "n": 23,
+   "topic": "Coordinate geometry",
+   "q": "Find the equation of the straight line passing through the points (1, 2) and (3, 8).",
+   "options": [
+    "y = −3x + 5",
+    "y = 3x − 1",
+    "y = (1/3)x + 5/3",
+    "y = 3x + 1"
+   ],
+   "answer": 1,
+   "explanation": "The gradient is (8 − 2)/(3 − 1) = 3. Using y − 2 = 3(x − 1) gives y = 3x − 1. The equation y = −3x + 5 fits (1, 2) but not (3, 8), so it is not the line through both points."
+  },
+  {
+   "n": 24,
+   "topic": "Coordinate geometry",
+   "q": "The line 3x + 4y = 24 cuts the x-axis at A and the y-axis at B. Find the length of AB.",
+   "options": [
+    "7 units",
+    "5 units",
+    "14 units",
+    "10 units"
+   ],
+   "answer": 3,
+   "explanation": "On the x-axis, y = 0, so 3x = 24 and x = 8; the point is (8, 0). On the y-axis, x = 0, so 4y = 24 and y = 6; the point is (0, 6). Thus AB = √(8² + 6²) = √100 = 10 units."
+  },
+  {
+   "n": 25,
+   "topic": "Differentiation",
+   "q": "Find the equation of the tangent to the curve y = x² − 3x + 5 at the point (2, 3).",
+   "options": [
+    "y = 3x − 3",
+    "y = −x + 5",
+    "y = x + 1",
+    "y = 2x − 1"
+   ],
+   "answer": 2,
+   "explanation": "dy/dx = 2x − 3, so at x = 2 the gradient is 1. Hence y − 3 = 1(x − 2), which simplifies to y = x + 1. The line y = −x + 5 has gradient −1, so it cannot be the tangent at that point."
+  },
+  {
+   "n": 26,
+   "topic": "Differentiation",
+   "q": "A rectangular plot in Sagamu has length x metres and width (10 − x) metres. Given that the area A = x(10 − x), find the value of x for which the area is maximum.",
+   "options": [
+    "0 m",
+    "2.5 m",
+    "5 m",
+    "10 m"
+   ],
+   "answer": 2,
+   "explanation": "A = 10x − x², so dA/dx = 10 − 2x. Setting 10 − 2x = 0 gives x = 5, and d²A/dx² = −2 < 0, confirming a maximum. At x = 10 m or 0 m, the width or length is zero, so the area is not maximum."
+  },
+  {
+   "n": 27,
+   "topic": "Indices and logarithms",
+   "q": "Simplify (2^(3/2) × 8^(5/6)) ÷ 4^(1/3).",
+   "options": [
+    "8∛2",
+    "4∛2",
+    "8∛4",
+    "16∛2"
+   ],
+   "answer": 0,
+   "explanation": "Write every base as a power of 2: 2^(3/2) × 8^(5/6) = 2^(3/2) × 2^(5/2) = 2^4, while 4^(1/3) = 2^(2/3). Hence the expression is 2^(4 − 2/3) = 2^(10/3) = 8∛2. The value 8∛4 would come from adding the exponents incorrectly."
+  },
+  {
+   "n": 28,
+   "topic": "Indices and logarithms",
+   "q": "Given that log₁₀ 2 = 0.3010 and log₁₀ 5 = 0.6990, evaluate log₁₀ 40.",
+   "options": [
+    "1.3970",
+    "1.9030",
+    "2.3010",
+    "1.6020"
+   ],
+   "answer": 3,
+   "explanation": "Since 40 = 2³ × 5, log₁₀ 40 = 3 log₁₀ 2 + log₁₀ 5. Thus it is 3 × 0.3010 + 0.6990 = 1.6020. A common slip is to subtract the logarithms instead of adding them."
+  },
+  {
+   "n": 29,
+   "topic": "Sequences and series",
+   "q": "The 3rd term of an arithmetic progression is 11 and the 8th term is 31. Find the sum of the first 12 terms.",
+   "options": [
+    "324",
+    "276",
+    "300",
+    "288"
+   ],
+   "answer": 2,
+   "explanation": "Let the first term be a and the common difference be d. Then a + 2d = 11 and a + 7d = 31, giving d = 4 and a = 3. The sum is (12/2)[2(3) + 11(4)] = 6 × 50 = 300."
+  },
+  {
+   "n": 30,
+   "topic": "Sequences and series",
+   "q": "The second term of a geometric progression is 5 and the fifth term is −40. Find the common ratio.",
+   "options": [
+    "2",
+    "−2",
+    "−1/2",
+    "1/2"
+   ],
+   "answer": 1,
+   "explanation": "For a geometric progression, the second term is ar and the fifth term is ar⁴. Dividing ar⁴ by ar gives r³ = −40/5 = −8, so r = −2. The positive value 2 would give a fifth term of 40, not −40."
+  },
+  {
+   "n": 31,
+   "topic": "Sequences and series",
+   "q": "The sum to infinity of a geometric progression is 8/3 and its first term is 2. Find the third term.",
+   "options": [
+    "1/4",
+    "1/8",
+    "1/2",
+    "1/16"
+   ],
+   "answer": 1,
+   "explanation": "Using S∞ = a/(1 − r), we have 2/(1 − r) = 8/3. Solving gives 6 = 8 − 8r, so r = 1/4. The third term is ar² = 2 × (1/4)² = 1/8; the value 1/4 is the common ratio, not the third term."
+  },
+  {
+   "n": 32,
+   "topic": "Integration",
+   "q": "Evaluate ∫₁⁴ (3√x − 2) dx.",
+   "options": [
+    "8",
+    "14",
+    "6",
+    "10"
+   ],
+   "answer": 0,
+   "explanation": "An antiderivative is 2x^(3/2) − 2x. Substituting the limits gives [2(8) − 8] − [2(1) − 2] = 8 − 0 = 8. Omitting the −2 term in the integrand gives 14 instead."
+  },
+  {
+   "n": 33,
+   "topic": "Integration",
+   "q": "Find the area under the curve y = x² + 2x between x = 0 and x = 2.",
+   "options": [
+    "8/3 square units",
+    "8 square units",
+    "20/3 square units",
+    "16/3 square units"
+   ],
+   "answer": 2,
+   "explanation": "The area is ∫₀² (x² + 2x) dx = [x³/3 + x²]₀². This gives 8/3 + 4 = 20/3 square units. Forgetting to integrate the 2x term and adding only x³/3 from 0 to 2 gives 8/3 square units."
+  },
+  {
+   "n": 34,
+   "topic": "Number bases",
+   "q": "Convert 73₁₀ to base 5.",
+   "options": [
+    "342₅",
+    "243₅",
+    "234₅",
+    "223₅"
+   ],
+   "answer": 1,
+   "explanation": "Repeated division by 5 gives remainders 3, 4 and 2, read upwards as 243₅. Checking: 2 × 5² + 4 × 5 + 3 = 50 + 20 + 3 = 73."
+  },
+  {
+   "n": 35,
+   "topic": "Number bases",
+   "q": "Evaluate 324₅ + 143₅, giving your answer in base 5.",
+   "options": [
+    "1122₅",
+    "1012₅",
+    "1022₅",
+    "1002₅"
+   ],
+   "answer": 2,
+   "explanation": "Units: 4 + 3 = 7, written as 12₅, so write 2 and carry 1. The fives column gives 2 + 4 + 1 = 7, again 12₅, so write 2 and carry 1; the twenty-fives column gives 3 + 1 + 1 = 5, written as 10₅, so write 0 and carry 1, making the result 1022₅. Converting to base 10 confirms 324₅ + 143₅ = 89 + 48 = 137 = 1022₅."
+  },
+  {
+   "n": 36,
+   "topic": "Quadratic equations",
+   "q": "The roots of a quadratic equation are (3 + √7)/4 and (3 − √7)/4. Find the equation whose coefficients are integers.",
+   "options": [
+    "8x² − 12x + 1 = 0",
+    "4x² − 6x + 1 = 0",
+    "4x² − 3x + 2 = 0",
+    "8x² + 12x − 1 = 0"
+   ],
+   "answer": 0,
+   "explanation": "The sum of the roots is (3 + √7 + 3 − √7)/4 = 6/4 = 3/2, and their product is ((3)² − (√7)²)/16 = 2/16 = 1/8. The equation is x² − (3/2)x + 1/8 = 0, which becomes 8x² − 12x + 1 = 0 after multiplying by 8."
+  },
+  {
+   "n": 37,
+   "topic": "Quadratic equations",
+   "q": "The sum of a positive fraction and its reciprocal is 25/12. If the fraction is less than 1, find the fraction.",
+   "options": [
+    "5/6",
+    "3/4",
+    "2/3",
+    "4/3"
+   ],
+   "answer": 1,
+   "explanation": "Let the fraction be x. Then x + 1/x = 25/12, so 12x² − 25x + 12 = 0. This gives x = 3/4 or x = 4/3; the fraction less than 1 is 3/4."
+  },
+  {
+   "n": 38,
+   "topic": "Quadratic equations",
+   "q": "The product of two consecutive odd positive integers is 143. Find the smaller integer.",
+   "options": [
+    "11",
+    "9",
+    "13",
+    "12"
+   ],
+   "answer": 0,
+   "explanation": "Let the smaller odd integer be x, then x(x + 2) = 143. So x² + 2x − 143 = 0 = (x − 11)(x + 13), and the positive smaller odd integer is 11."
+  },
+  {
+   "n": 39,
+   "topic": "Sets",
+   "q": "Given that A = {2, 3, 5, 7} and B = {1, 2, 4, 8}, find A △ B, where △ denotes symmetric difference.",
+   "options": [
+    "{2}",
+    "{1, 3, 4, 5, 8}",
+    "{1, 3, 4, 5, 7, 8}",
+    "{1, 2, 3, 4, 5, 7, 8}"
+   ],
+   "answer": 2,
+   "explanation": "The symmetric difference A △ B contains elements that are in A or B but not in both. Removing the common element 2 from A ∪ B = {1, 2, 3, 4, 5, 7, 8} gives {1, 3, 4, 5, 7, 8}."
+  },
+  {
+   "n": 40,
+   "topic": "Sets",
+   "q": "In a boarding house in Ijebu, 32 students drink tea, 27 drink coffee and 15 drink both. If every student drinks at least one of the two, how many students are in the boarding house?",
+   "options": [
+    "12",
+    "47",
+    "44",
+    "59"
+   ],
+   "answer": 2,
+   "explanation": "Using n(T ∪ C) = n(T) + n(C) − n(T ∩ C), the number who drink tea or coffee is 32 + 27 − 15 = 44. Since everyone drinks at least one, the boarding house has 44 students."
+  },
+  {
+   "n": 41,
+   "topic": "Trigonometry",
+   "q": "In right-angled triangle ABC, angle C = 90°, AC = 8 cm and BC = 15 cm. Find cos A.",
+   "options": [
+    "8/15",
+    "15/8",
+    "8/17",
+    "15/17"
+   ],
+   "answer": 2,
+   "explanation": "By Pythagoras, AB = √(8² + 15²) = 17 cm. In the right-angled triangle, cos A = adjacent/hypotenuse = AC/AB = 8/17."
+  },
+  {
+   "n": 42,
+   "topic": "Trigonometry",
+   "q": "Given that sin θ = 7/25 and 90° < θ < 180°, find cos θ.",
+   "options": [
+    "24/25",
+    "−7/24",
+    "−24/25",
+    "−25/24"
+   ],
+   "answer": 2,
+   "explanation": "Since θ is in the second quadrant, cos θ is negative. Using the 7-24-25 triangle, the magnitude is 24/25, so cos θ = −24/25."
+  },
+  {
+   "n": 43,
+   "topic": "Trigonometry",
+   "q": "Solve 2 cos 2θ = 1 for 0° ≤ θ < 180°.",
+   "options": [
+    "30°, 150°",
+    "60°, 120°",
+    "30°, 330°",
+    "60°, 300°"
+   ],
+   "answer": 0,
+   "explanation": "2cos 2θ = 1 gives cos 2θ = 1/2. For 0° ≤ θ < 180°, 2θ lies from 0° to less than 360°, so 2θ = 60° or 300°, hence θ = 30° or 150°."
+  },
+  {
+   "n": 44,
+   "topic": "Statistics",
+   "q": "The mean score of six students in a Mathematics test in Oyo is 10. Their scores are 4, 7, 9, x, 13 and 15. Find the median score.",
+   "options": [
+    "12",
+    "10.5",
+    "9",
+    "10"
+   ],
+   "answer": 1,
+   "explanation": "The total score is 6 × 10 = 60, so x = 60 − (4 + 7 + 9 + 13 + 15) = 12. Arranged in order, the scores are 4, 7, 9, 12, 13, 15; the median is (9 + 12)/2 = 10.5."
+  },
+  {
+   "n": 45,
+   "topic": "Statistics",
+   "q": "The masses, in kg, of five bags of rice in a shop in Aba are 10, 12, 14, 16 and 18. Calculate the standard deviation of the masses.",
+   "options": [
+    "8 kg",
+    "√10 kg",
+    "4 kg",
+    "2√2 kg"
+   ],
+   "answer": 3,
+   "explanation": "The mean is 14 kg. The squared deviations from the mean are 16, 4, 0, 4 and 16, with sum 40. The variance is 40/5 = 8, so the standard deviation is √8 = 2√2 kg."
+  },
+  {
+   "n": 46,
+   "topic": "Angles and circle geometry",
+   "q": "In a circle with centre O, chord XY subtends an angle of 118° at O. Find the acute angle between the tangent at X and the chord XY.",
+   "options": [
+    "31°",
+    "59°",
+    "62°",
+    "121°"
+   ],
+   "answer": 1,
+   "explanation": "Triangle OXY is isosceles because OX = OY, so ∠OXY = (180° − 118°) ÷ 2 = 31°. The radius OX is perpendicular to the tangent at X, so the acute angle between the tangent and XY is 90° − 31° = 59°. The obtuse angle is its supplement, 121°."
+  },
+  {
+   "n": 47,
+   "topic": "Variation",
+   "q": "The cost C (in naira) of catering for n guests for d days varies directly as n and as the square root of d. If catering for 40 guests for 9 days costs ₦72,000, find the cost of catering for 25 guests for 16 days.",
+   "options": [
+    "₦96,000",
+    "₦60,000",
+    "₦80,000",
+    "₦45,000"
+   ],
+   "answer": 1,
+   "explanation": "Write C = kn√d. From 72,000 = k × 40 × √9 = 120k, k = 600. Hence C = 600 × 25 × √16 = 600 × 25 × 4 = ₦60,000. Using d directly instead of √d gives ₦80,000."
+  },
+  {
+   "n": 48,
+   "topic": "Surds",
+   "q": "Simplify √(11 + 6√2).",
+   "options": [
+    "3 − √2",
+    "1 + 3√2",
+    "9 + √2",
+    "3 + √2"
+   ],
+   "answer": 3,
+   "explanation": "Notice that (3 + √2)² = 9 + 6√2 + 2 = 11 + 6√2, and 3 + √2 is positive. Hence √(11 + 6√2) = 3 + √2. The expression 3 − √2 has square 11 − 6√2, not 11 + 6√2."
+  },
+  {
+   "n": 49,
+   "topic": "Matrices and determinants",
+   "q": "If A = [[4, 1], [3, 2]] and B = [[2, 5], [1, 3]], find det(AB).",
+   "options": [
+    "1",
+    "4",
+    "6",
+    "5"
+   ],
+   "answer": 3,
+   "explanation": "Using det(AB) = det(A) det(B), det(A) = 4×2 − 1×3 = 5 and det(B) = 2×3 − 5×1 = 1, so det(AB) = 5×1 = 5. Direct multiplication gives AB = [[9, 23], [8, 21]], whose determinant is 9×21 − 23×8 = 5."
+  },
+  {
+   "n": 50,
+   "topic": "Angles and circle geometry",
+   "q": "Chords AB and CD of a circle meet at E inside the circle. If ∠AEC = 72° and the minor arc AC measures 86°, find the measure of the minor arc BD.",
+   "options": [
+    "58°",
+    "29°",
+    "100°",
+    "158°"
+   ],
+   "answer": 0,
+   "explanation": "For two chords intersecting inside a circle, the angle formed equals half the sum of the intercepted arcs: 72° = (86° + arc BD) ÷ 2. Thus arc BD = 2×72° − 86° = 58°. Taking half of 72° or using the wrong intercepted arcs gives different values."
+  }
+ ]
+}

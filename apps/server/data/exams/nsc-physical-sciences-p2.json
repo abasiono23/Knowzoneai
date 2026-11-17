@@ -1,0 +1,401 @@
+{
+ "id": "nsc-physical-sciences-p2",
+ "exam": "nsc",
+ "subject": "physical-sciences",
+ "year": null,
+ "number": 2,
+ "source": "ai",
+ "minutes": 35,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Electric circuits",
+   "q": "A cell of emf 9,0 V and internal resistance 0,60 Ω is connected in series with a 2,4 Ω resistor and a parallel combination of two 3,0 Ω resistors. What is the current through the cell?",
+   "options": [
+    "2,0 A",
+    "1,0 A",
+    "1,5 A",
+    "2,3 A"
+   ],
+   "answer": 0,
+   "explanation": "The two 3,0 Ω resistors in parallel have equivalent resistance (3,0 × 3,0)/(3,0 + 3,0) = 1,5 Ω. The total resistance is 0,60 + 2,4 + 1,5 = 4,5 Ω, so I = 9,0/4,5 = 2,0 A. Omitting the internal resistance gives 9,0/(2,4 + 1,5) = 2,3 A, which is a common mistake."
+  },
+  {
+   "n": 2,
+   "topic": "Electric circuits",
+   "q": "An electric kettle marked 1 500 W is used for 20 minutes in a home in Gqeberha. If electricity costs R2,50 per kWh, what is the cost of the electrical energy used?",
+   "options": [
+    "R0,50",
+    "R2,50",
+    "R1,25",
+    "R0,75"
+   ],
+   "answer": 2,
+   "explanation": "The power is 1 500 W = 1,5 kW, and 20 minutes = 1/3 h. The energy used is 1,5 × 1/3 = 0,50 kWh, so the cost is 0,50 × R2,50 = R1,25. The value R0,50 is the energy in kWh, not the cost."
+  },
+  {
+   "n": 3,
+   "topic": "Electric circuits",
+   "q": "A 6,0 Ω resistor and a 3,0 Ω resistor are connected in parallel. The parallel combination is connected in series with a 2,0 Ω resistor and a 12 V battery of negligible internal resistance. What is the current through the 6,0 Ω resistor?",
+   "options": [
+    "1,5 A",
+    "1,0 A",
+    "2,0 A",
+    "3,0 A"
+   ],
+   "answer": 1,
+   "explanation": "The parallel equivalent resistance is (6,0 × 3,0)/(6,0 + 3,0) = 2,0 Ω, so the total resistance is 2,0 + 2,0 = 4,0 Ω and the total current is 12/4,0 = 3,0 A. The potential difference across the parallel combination is 3,0 × 2,0 = 6,0 V, so the current through the 6,0 Ω resistor is 6,0/6,0 = 1,0 A. The 2,0 A current flows through the 3,0 Ω resistor, while 3,0 A is the total current."
+  },
+  {
+   "n": 4,
+   "topic": "Stoichiometry and quantitative chemistry",
+   "q": "In the Haber process, nitrogen and hydrogen react according to N₂(g) + 3H₂(g) → 2NH₃(g). If 4,0 mol N₂ is mixed with 9,0 mol H₂, what is the maximum amount of NH₃ that can be formed?",
+   "options": [
+    "9,0 mol",
+    "6,0 mol",
+    "4,5 mol",
+    "8,0 mol"
+   ],
+   "answer": 1,
+   "explanation": "For 4,0 mol N₂, 12 mol H₂ would be needed, so the available 9,0 mol H₂ is the limiting reagent. From the equation, 9,0 mol H₂ forms 9,0 × (2/3) = 6,0 mol NH₃. Using all the nitrogen would suggest 8,0 mol NH₃, but that ignores the limiting hydrogen."
+  },
+  {
+   "n": 5,
+   "topic": "Stoichiometry and quantitative chemistry",
+   "q": "A 50,0 cm³ sample of 0,100 mol·dm⁻³ silver nitrate solution is mixed with excess sodium chloride solution. Silver chloride precipitates according to Ag⁺(aq) + Cl⁻(aq) → AgCl(s). What mass of silver chloride is formed? (M(AgCl) = 143,5 g·mol⁻¹)",
+   "options": [
+    "7,18 g",
+    "0,718 g",
+    "0,0718 g",
+    "1,44 g"
+   ],
+   "answer": 1,
+   "explanation": "The amount of silver nitrate is n = cV = 0,100 × (50,0/1000) = 0,00500 mol. The equation shows that 1 mol Ag⁺ gives 1 mol AgCl, so m = nM = 0,00500 × 143,5 = 0,7175 g ≈ 0,718 g. A mass of 1,44 g would require twice as much silver nitrate."
+  },
+  {
+   "n": 6,
+   "topic": "Stoichiometry and quantitative chemistry",
+   "q": "A compound contains 40,0% carbon, 6,7% hydrogen and 53,3% oxygen by mass. Its molar mass is 60 g·mol⁻¹. What is its molecular formula? (M(C) = 12 g·mol⁻¹, M(H) = 1 g·mol⁻¹, M(O) = 16 g·mol⁻¹)",
+   "options": [
+    "C₂H₆O",
+    "C₃H₆O₃",
+    "CH₂O",
+    "C₂H₄O₂"
+   ],
+   "answer": 3,
+   "explanation": "The mole ratio is C : H : O = 40,0/12 : 6,7/1 : 53,3/16 ≈ 3,33 : 6,7 : 3,33 = 1 : 2 : 1, so the empirical formula is CH₂O. Its empirical formula mass is 12 + 2 + 16 = 30 g·mol⁻¹, and 60/30 = 2, so the molecular formula is C₂H₄O₂."
+  },
+  {
+   "n": 7,
+   "topic": "Organic chemistry",
+   "q": "When a primary alcohol such as ethanol is heated under reflux with excess acidified potassium dichromate solution, which functional group is present in the main organic product?",
+   "options": [
+    "Aldehyde group (–CHO)",
+    "Ketone group (–CO–)",
+    "Carboxyl group (–COOH)",
+    "Ester group (–COO–)"
+   ],
+   "answer": 2,
+   "explanation": "Under reflux with excess acidified potassium dichromate, a primary alcohol is oxidised first to an aldehyde and then further to a carboxylic acid. Therefore the main product contains a carboxyl group. An aldehyde would be the main product only if it were distilled off as it formed, and ketones come from secondary alcohols."
+  },
+  {
+   "n": 8,
+   "topic": "Organic chemistry",
+   "q": "Which pair of compounds are chain isomers?",
+   "options": [
+    "Propan-1-ol and propan-2-ol",
+    "Butane and 2-methylpropane",
+    "Propanal and propanone",
+    "But-1-ene and but-2-ene"
+   ],
+   "answer": 1,
+   "explanation": "Chain isomers have the same molecular formula but different carbon skeletons. Butane and 2-methylpropane both have formula C₄H₁₀, but one has an unbranched chain and the other has a branched chain. Propan-1-ol and propan-2-ol are position isomers, and propanal and propanone are functional group isomers."
+  },
+  {
+   "n": 9,
+   "topic": "Electrostatics",
+   "q": "In an experiment in Polokwane, two parallel metal plates are separated by 5,0 mm and connected to a 250 V supply. What is the magnitude of the uniform electric field between the plates?",
+   "options": [
+    "5,0 × 10⁴ V·m⁻¹",
+    "5,0 × 10¹ V·m⁻¹",
+    "2,5 × 10⁵ V·m⁻¹",
+    "1,25 V·m⁻¹"
+   ],
+   "answer": 0,
+   "explanation": "For parallel plates, E = V/d. Converting 5,0 mm to 5,0 × 10⁻³ m gives E = 250/(5,0 × 10⁻³) = 5,0 × 10⁴ V·m⁻¹. Using millimetres directly as metres gives 5,0 × 10¹ V·m⁻¹, which is far too small."
+  },
+  {
+   "n": 10,
+   "topic": "Chemical equilibrium",
+   "q": "The reaction Fe₃O₄(s) + 4H₂(g) ⇌ 3Fe(s) + 4H₂O(g) is at equilibrium in a closed vessel. Which expression gives the equilibrium constant Kc for this reaction?",
+   "options": [
+    "[H₂O(g)] ÷ [H₂(g)]",
+    "[H₂O(g)]⁴ × [Fe(s)]³ ÷ ([Fe₃O₄(s)] × [H₂(g)]⁴)",
+    "[H₂(g)]⁴ ÷ [H₂O(g)]⁴",
+    "[H₂O(g)]⁴ ÷ [H₂(g)]⁴"
+   ],
+   "answer": 3,
+   "explanation": "Pure solids have constant activity and are not included in the equilibrium constant expression, so only the gaseous concentrations appear. The products are placed above the reactants, each raised to its stoichiometric coefficient, giving [H₂O(g)]⁴ ÷ [H₂(g)]⁴. Including Fe or Fe₃O₄ or leaving out the exponents gives an incorrect expression."
+  },
+  {
+   "n": 11,
+   "topic": "Chemical equilibrium",
+   "q": "In a closed 1,0 dm³ vessel at constant temperature, 0,60 mol H₂(g) and 0,40 mol I₂(g) are mixed. The system reaches equilibrium according to H₂(g) + I₂(g) ⇌ 2HI(g). At equilibrium 0,50 mol HI(g) is present. What is Kc?",
+   "options": [
+    "4,76",
+    "9,52",
+    "1,04",
+    "0,21"
+   ],
+   "answer": 0,
+   "explanation": "Let x mol of H₂ react. Since 2x = 0,50 mol HI is formed, x = 0,25 mol. At equilibrium: [H₂] = 0,60 − 0,25 = 0,35 mol·dm⁻³, [I₂] = 0,40 − 0,25 = 0,15 mol·dm⁻³ and [HI] = 0,50 mol·dm⁻³. Thus Kc = (0,50)² ÷ (0,35 × 0,15) = 0,25 ÷ 0,0525 ≈ 4,76."
+  },
+  {
+   "n": 12,
+   "topic": "Chemical equilibrium",
+   "q": "In a closed vessel, calcium carbonate decomposes endothermically according to CaCO₃(s) ⇌ CaO(s) + CO₂(g). The system is at equilibrium. Which change will increase the equilibrium amount of CO₂(g)?",
+   "options": [
+    "Adding more CaO(s)",
+    "Decreasing the volume of the vessel while keeping the temperature constant",
+    "Adding more CaCO₃(s)",
+    "Increasing the volume of the vessel while keeping the temperature constant"
+   ],
+   "answer": 3,
+   "explanation": "Only CO₂ is gaseous in this equilibrium, so increasing the volume lowers the pressure and shifts the equilibrium towards the side with more gas moles, producing more CO₂. Decreasing the volume favours the reverse reaction, while adding more pure solids such as CaCO₃ or CaO does not change the equilibrium position."
+  },
+  {
+   "n": 13,
+   "topic": "Chemical bonding and intermolecular forces",
+   "q": "Hydrogen fluoride, HF, has a much higher boiling point than hydrogen chloride, HCl, even though HCl has more electrons. Which statement best explains this?",
+   "options": [
+    "HF molecules form hydrogen bonds, while HCl molecules have only dipole–dipole forces and London forces.",
+    "HCl molecules form stronger London forces, so HCl should have the higher boiling point.",
+    "HF has stronger covalent bonds, so more energy is needed to break its molecules apart during boiling.",
+    "HF is an ionic compound, so strong electrostatic forces must be overcome when it boils."
+   ],
+   "answer": 0,
+   "explanation": "Boiling requires energy to overcome intermolecular forces, not to break covalent bonds inside molecules. HF molecules can form relatively strong hydrogen bonds because hydrogen is bonded to highly electronegative fluorine, while HCl has weaker dipole–dipole and London forces. This explains why HF has the higher boiling point despite HCl having more electrons."
+  },
+  {
+   "n": 14,
+   "topic": "Chemical bonding and intermolecular forces",
+   "q": "An ammonia molecule, NH₃, has a central nitrogen atom bonded to three hydrogen atoms and one lone pair. Which description of its shape and polarity is correct?",
+   "options": [
+    "Trigonal planar and non-polar",
+    "Trigonal pyramidal and polar",
+    "Tetrahedral and non-polar",
+    "Linear and polar"
+   ],
+   "answer": 1,
+   "explanation": "The four electron pairs around nitrogen are arranged roughly tetrahedrally, but one position is occupied by a lone pair rather than an atom, so the molecular shape is trigonal pyramidal. The N–H bond dipoles do not cancel, so the molecule is polar overall. Treating the lone pair as an atom or ignoring its effect gives the incorrect shapes and polarity."
+  },
+  {
+   "n": 15,
+   "topic": "Waves, sound and the Doppler effect",
+   "q": "A minibus taxi sounding a horn with frequency 720 Hz moves directly away from a stationary pedestrian at 20 m·s⁻¹. The speed of sound in the air is 340 m·s⁻¹. What frequency does the pedestrian hear? Give the nearest hertz.",
+   "options": [
+    "720 Hz",
+    "680 Hz",
+    "765 Hz",
+    "678 Hz"
+   ],
+   "answer": 1,
+   "explanation": "For a source moving away from a stationary observer, the observed frequency is f′ = f × v ÷ (v + v_source). Substitute f = 720 Hz, v = 340 m·s⁻¹ and v_source = 20 m·s⁻¹: f′ = 720 × 340 ÷ 360 = 680 Hz. The value 765 Hz would apply if the taxi were moving towards the pedestrian, while 720 Hz ignores the Doppler shift."
+  },
+  {
+   "n": 16,
+   "topic": "Waves, sound and the Doppler effect",
+   "q": "A transverse wave on a string has a period of 4,0 ms and a wavelength of 0,85 m. What is its speed?",
+   "options": [
+    "0,0034 m·s⁻¹",
+    "212,5 m·s⁻¹",
+    "294,1 m·s⁻¹",
+    "0,2125 m·s⁻¹"
+   ],
+   "answer": 1,
+   "explanation": "The period is 4,0 ms = 0,0040 s, so the frequency is f = 1 ÷ 0,0040 = 250 Hz. The wave speed is v = fλ = 250 × 0,85 = 212,5 m·s⁻¹. Treating 4,0 ms as 4,0 s or multiplying wavelength by period instead of using frequency gives the incorrect values."
+  },
+  {
+   "n": 17,
+   "topic": "Waves, sound and the Doppler effect",
+   "q": "A sound wave with frequency 850 Hz travels through air at 340 m·s⁻¹. What is the distance along the wave from one compression to the next compression?",
+   "options": [
+    "0,40 m",
+    "289 000 m",
+    "2,5 m",
+    "0,20 m"
+   ],
+   "answer": 0,
+   "explanation": "The distance from one compression to the next compression is one wavelength. Using v = fλ gives λ = v ÷ f = 340 ÷ 850 = 0,40 m. A distance of 0,20 m would be from a compression to the adjacent rarefaction, which is half a wavelength."
+  },
+  {
+   "n": 18,
+   "topic": "Electrodynamics: motors, generators and alternating current",
+   "q": "In an AC generator, what is the main purpose of the slip rings?",
+   "options": [
+    "They increase the magnetic flux through the coil by concentrating the magnetic field.",
+    "They provide a continuous electrical connection to the rotating coil while allowing the output current to reverse every half revolution.",
+    "They reduce eddy currents in the iron core of the generator.",
+    "They reverse the connections every half revolution so that the output current is direct current."
+   ],
+   "answer": 1,
+   "explanation": "Slip rings keep the external circuit connected to a rotating coil and allow the alternating output from the coil to pass to the external circuit. They do not rectify the current; a split-ring commutator is used in a DC generator to reverse connections every half revolution. Eddy currents are reduced by laminating the core, not by slip rings."
+  },
+  {
+   "n": 19,
+   "topic": "Electrodynamics: motors, generators and alternating current",
+   "q": "A portable electric heater is connected to a 230 V rms alternating supply and draws an rms current of 6,5 A. The heating element behaves as a pure resistance. What is the average power dissipated by the heater?",
+   "options": [
+    "2,11 kW",
+    "0,748 kW",
+    "2,99 kW",
+    "1,50 kW"
+   ],
+   "answer": 3,
+   "explanation": "For a pure resistance on an AC supply, the average power is P = V_rms × I_rms. Thus P = 230 × 6,5 = 1495 W ≈ 1,50 kW. Using peak values without the correct factors, or halving the product, gives the other values."
+  },
+  {
+   "n": 20,
+   "topic": "Motion in one dimension and vertical projectile motion",
+   "q": "A cyclist riding along a straight road in Stellenbosch has a velocity–time graph described as follows: from t = 0 s to t = 3 s the velocity is constant at 4 m·s⁻¹; from t = 3 s to t = 8 s the velocity decreases uniformly to 0 m·s⁻¹; from t = 8 s to t = 10 s the cyclist remains at rest. What is the total distance travelled during the 10 s?",
+   "options": [
+    "32 m",
+    "22 m",
+    "10 m",
+    "20 m"
+   ],
+   "answer": 1,
+   "explanation": "The distance is the area under the velocity–time graph. It is (3 s)(4 m·s⁻¹) + ½(5 s)(4 m·s⁻¹) = 12 m + 10 m = 22 m; the final 2 s at rest adds nothing."
+  },
+  {
+   "n": 21,
+   "topic": "Motion in one dimension and vertical projectile motion",
+   "q": "A minibus taxi on a straight road near Polokwane brakes uniformly from 20 m·s⁻¹ to rest over a distance of 40 m. Taking the direction of motion as positive, what is the acceleration of the taxi during braking?",
+   "options": [
+    "−5 m·s⁻²",
+    "−2,5 m·s⁻²",
+    "−10 m·s⁻²",
+    "+5 m·s⁻²"
+   ],
+   "answer": 0,
+   "explanation": "Use v² = u² + 2as with v = 0, u = 20 m·s⁻¹ and s = 40 m. Then 0 = 400 + 80a, so a = −5 m·s⁻²; the negative sign shows the acceleration is opposite to the motion. A value of +5 m·s⁻² would mean the taxi is speeding up in the direction of motion."
+  },
+  {
+   "n": 22,
+   "topic": "Work, energy and power",
+   "q": "A worker at a market in Durban pulls a 20 kg crate 5 m across a horizontal floor using a horizontal force of 80 N. A constant friction force of 20 N acts on the crate. What is the net work done on the crate during this displacement?",
+   "options": [
+    "100 J",
+    "500 J",
+    "300 J",
+    "400 J"
+   ],
+   "answer": 2,
+   "explanation": "The normal force and weight are perpendicular to the displacement, so they do no work. The net horizontal force is 80 N − 20 N = 60 N, so W_net = F_net Δx cos 0° = (60 N)(5 m) = 300 J; the applied force alone does 400 J and friction does −100 J."
+  },
+  {
+   "n": 23,
+   "topic": "Work, energy and power",
+   "q": "A pump on a farm near Upington lifts 150 kg of water through a vertical height of 8 m every minute. Ignore energy losses and take g = 9,8 m·s⁻². What is the minimum useful power of the pump?",
+   "options": [
+    "117,6 W",
+    "196 W",
+    "1 960 W",
+    "11 760 W"
+   ],
+   "answer": 1,
+   "explanation": "The useful work done per minute is mgh = (150 kg)(9,8 m·s⁻²)(8 m) = 11 760 J. Since this is done in 60 s, power = 11 760 J ÷ 60 s = 196 W."
+  },
+  {
+   "n": 24,
+   "topic": "Work, energy and power",
+   "q": "A 2 kg stone is dropped from rest from a height of 10 m above the ground in Mpumalanga. Ignoring air resistance, what is the speed of the stone just before it reaches the ground? Use g = 9,8 m·s⁻².",
+   "options": [
+    "9,8 m·s⁻¹",
+    "14 m·s⁻¹",
+    "196 m·s⁻¹",
+    "20 m·s⁻¹"
+   ],
+   "answer": 1,
+   "explanation": "Mechanical energy is conserved, so mgh = ½mv² and the mass cancels. Thus v = √(2gh) = √(2 × 9,8 × 10) = √196 = 14 m·s⁻¹; 196 m·s⁻¹ is the square of the speed, not the speed."
+  },
+  {
+   "n": 25,
+   "topic": "Rates of reaction",
+   "q": "In a laboratory at a school in East London, zinc granules react with excess dilute hydrochloric acid and the hydrogen gas is collected in a gas syringe. The volume of gas collected is 10 cm³ at t = 20 s and 70 cm³ at t = 50 s. What is the average rate of production of hydrogen gas over this interval?",
+   "options": [
+    "60 cm³·s⁻¹",
+    "3,0 cm³·s⁻¹",
+    "2,0 cm³·s⁻¹",
+    "1,4 cm³·s⁻¹"
+   ],
+   "answer": 2,
+   "explanation": "The average rate is the change in volume divided by the time interval: (70 cm³ − 10 cm³) ÷ (50 s − 20 s) = 60 cm³ ÷ 30 s = 2,0 cm³·s⁻¹. Using only the final volume and final time would give 1,4 cm³·s⁻¹, which ignores the gas already present at 20 s."
+  },
+  {
+   "n": 26,
+   "topic": "Rates of reaction",
+   "q": "A learner in Nelspruit reacts zinc granules with dilute hydrochloric acid. Without changing the temperature or the mass of zinc, she uses hydrochloric acid of higher concentration. Which statement best explains the increase in reaction rate?",
+   "options": [
+    "The activation energy for the reaction is lowered.",
+    "There are more acid particles per unit volume, so successful collisions with the zinc occur more frequently.",
+    "The zinc acts as a catalyst when the acid concentration increases.",
+    "The zinc particles gain more kinetic energy and move faster."
+   ],
+   "answer": 1,
+   "explanation": "Increasing concentration increases the number of acid particles per unit volume, so collision frequency with the zinc surface increases. The activation energy is not changed by concentration; that would require a catalyst."
+  },
+  {
+   "n": 27,
+   "topic": "Newton’s laws",
+   "q": "A boy in Gqeberha pushes horizontally against a stationary wall with a force of 50 N. The boy does not move. Which statement about the horizontal forces is correct?",
+   "options": [
+    "The boy exerts no force on the wall because the wall does not move.",
+    "The force of the boy on the wall and the force of the wall on the boy are equal in magnitude and opposite in direction, but they act on different objects.",
+    "The wall pushes the boy harder than he pushes the wall because the wall is solid.",
+    "These two forces cancel each other because the boy and wall remain at rest."
+   ],
+   "answer": 1,
+   "explanation": "Newton’s third law pairs are equal in magnitude and opposite in direction and act on different objects, so they cannot cancel each other. The boy remains at rest because the floor exerts a friction force on him that balances the wall’s push on him."
+  },
+  {
+   "n": 28,
+   "topic": "Newton’s laws",
+   "q": "A 70 kg passenger stands on a bathroom scale inside a lift in a Pretoria office block. The lift accelerates upwards at 2 m·s⁻². Take g = 9,8 m·s⁻². What is the scale reading, that is, the normal force exerted by the scale on the passenger?",
+   "options": [
+    "826 N",
+    "140 N",
+    "546 N",
+    "686 N"
+   ],
+   "answer": 0,
+   "explanation": "Taking upward as positive, N − mg = ma, so N = m(g + a) = 70(9,8 + 2) = 826 N. The passenger therefore feels heavier than when stationary; 686 N is only the true weight mg."
+  },
+  {
+   "n": 29,
+   "topic": "Momentum and impulse",
+   "q": "During a soccer match in Polokwane, a 1.5 kg ball moves horizontally towards a wall at 8.0 m·s⁻¹ and rebounds horizontally at 6.0 m·s⁻¹. The ball is in contact with the wall for 0.020 s. What is the magnitude of the average net force exerted by the wall on the ball?",
+   "options": [
+    "1.05 × 10³ N",
+    "1.50 × 10² N",
+    "4.50 × 10² N",
+    "6.00 × 10² N"
+   ],
+   "answer": 0,
+   "explanation": "Taking towards the wall as positive gives initial velocity +8.0 m·s⁻¹ and final velocity −6.0 m·s⁻¹, so Δp = 1.5 × (−6.0 − 8.0) = −21 kg·m·s⁻¹. The magnitude of the average force is |Δp|/Δt = 21/0.020 = 1.05 × 10³ N. Using 8.0 − 6.0 would give 150 N, which is wrong because the ball reverses direction."
+  },
+  {
+   "n": 30,
+   "topic": "Momentum and impulse",
+   "q": "Two trolleys move on a frictionless straight track. Trolley P of mass 0.30 kg moves east at 2.0 m·s⁻¹ and collides with stationary trolley Q of mass 0.20 kg. After the collision, the trolleys lock together. How much kinetic energy is lost during the collision?",
+   "options": [
+    "0.24 J",
+    "0.12 J",
+    "0.60 J",
+    "0.36 J"
+   ],
+   "answer": 0,
+   "explanation": "By conservation of momentum, 0.30 × 2.0 = (0.30 + 0.20)v, so the common velocity is 1.2 m·s⁻¹ east. Initial kinetic energy is 0.5 × 0.30 × (2.0)² = 0.60 J, and final kinetic energy is 0.5 × 0.50 × (1.2)² = 0.36 J. The kinetic energy lost is 0.60 − 0.36 = 0.24 J."
+  }
+ ]
+}

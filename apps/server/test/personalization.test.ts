@@ -16,6 +16,7 @@ const PROFILE = {
   goals: ['pass-exam'],
   formats: ['quizzes', 'videos'],
   language: 'yo',
+  region: 'NG',
   dailyMinutes: 30,
   reminders: { enabled: true, time: '18:30', days: [1, 3, 5], types: ['daily', 'streak'] },
   teacherRole: null,

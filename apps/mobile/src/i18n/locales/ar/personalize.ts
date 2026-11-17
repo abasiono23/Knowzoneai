@@ -77,6 +77,10 @@ const personalize: Translation<typeof en> = {
     title: 'كيف تحب أن تتعلّم؟',
     subtitle: 'اختر المفضّلة لديك. سنبدأ بها ونمزجها مع البقية.',
   },
+  region: {
+    title: 'أين تدرس؟',
+    subtitle: 'سنعرض لك امتحانات بلدك والتدريب عليها. يمكنك تغيير ذلك في أي وقت من الإعدادات.',
+  },
   language: {
     title: 'اختر لغتك',
     subtitle: 'سيستخدم التطبيق كله ودروسك ومدرّسك الذكي هذه اللغة فورًا.',
@@ -137,6 +141,7 @@ const personalize: Translation<typeof en> = {
       teachLevels: 'الطلاب',
       age: 'الفئة العمرية',
       education: 'المستوى',
+      region: 'بلد الدراسة',
       pathway: 'المسار',
       exams: 'الامتحانات',
       subjects: 'المواد',
@@ -292,7 +297,7 @@ const personalize: Translation<typeof en> = {
   learnerTypes: {
     school: { label: 'طالب مدرسة', description: 'المرحلة الابتدائية أو الثانوية' },
     university: { label: 'جامعة أو كلية', description: 'شهادة جامعية أو دبلوم أو ND/HND' },
-    exam: { label: 'مرشّح لامتحان', description: 'أستعد لـ JAMB وWAEC وIELTS وغيرها' },
+    exam: { label: 'مرشّح لامتحان', description: 'أستعد لـ JAMB وWAEC وIELTS وغيرها', descriptionFor: 'أستعد لـ {{exams}} وغيرها' },
     professional: { label: 'موظف محترف', description: 'أطوّر مهاراتي أو أسعى للحصول على شهادة' },
     lifelong: { label: 'متعلّم فضولي', description: 'أتعلّم شيئًا جديدًا للمتعة' },
     teacher: { label: 'معلّم أو مدرّس', description: 'أنشئ فصولًا، وكلّف بتمارين، وتابع التقدّم' },
@@ -301,7 +306,7 @@ const personalize: Translation<typeof en> = {
     'school-teacher': { label: 'معلّم مدرسة', description: 'المرحلة الابتدائية أو الثانوية' },
     lecturer: { label: 'محاضر', description: 'جامعة أو معهد تقني أو كلية' },
     'private-tutor': { label: 'مدرّس خصوصي', description: 'فردي أو مجموعات صغيرة' },
-    'exam-coach': { label: 'مدرّب التحضير للامتحانات', description: 'JAMB وWAEC وIELTS وغيرها' },
+    'exam-coach': { label: 'مدرّب التحضير للامتحانات', description: 'JAMB وWAEC وIELTS وغيرها', descriptionFor: '{{exams}} وغيرها' },
     parent: { label: 'وليّ أمر أو تعليم منزلي', description: 'أوجّه أطفالي' },
   },
   teachLevelOptions: {

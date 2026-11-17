@@ -50,6 +50,7 @@ const settings: Translation<typeof en> = {
     activeCount_one: '{{count}} na-arụ ọrụ',
     activeCount_other: '{{count}} na-arụ ọrụ',
     language: 'Asụsụ',
+    region: 'Obodo ọmụmụ',
     appearance: 'Ọdịdị',
     privacy: 'Nzuzo',
     downloadData: 'Budata data m',
@@ -95,6 +96,11 @@ const settings: Translation<typeof en> = {
     reduceMotionHint: 'Ihe na-emegharị emegharị dị obere na ngwa ahụ',
     haptics: 'Ịma jijiji n’egwuregwu',
     hapticsHint: 'Nzaghachi ịma jijiji na Knowzone World',
+  },
+  region: {
+    title: 'Obodo ọmụmụ',
+    intro: 'Họrọ obodo ebe ị na-amụ akwụkwọ. Knowzone ga-ebu ụzọ gosi omume ule nke obodo ahụ, onye nkuzi AI gị ga-esokwa ule ya.',
+    footer: 'Akara gị ga-adịgide mgbe ị gbanwere obodo, ị nwekwara ike imeghe akwụkwọ ajụjụ obodo ndị ọzọ site na peeji omume ule.',
   },
   language: {
     title: 'Asụsụ',

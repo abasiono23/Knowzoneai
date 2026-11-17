@@ -1,0 +1,661 @@
+{
+ "id": "waec-geography-p6",
+ "exam": "waec",
+ "subject": "geography",
+ "year": null,
+ "number": 6,
+ "source": "ai",
+ "minutes": 60,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Latitude, longitude and time",
+   "q": "A ship’s chronometer, set to GMT, reads 14:00. At the same instant, the local mean time at the ship’s position is 10:40. What is the longitude of the ship?",
+   "options": [
+    "50°E",
+    "50°W",
+    "10°W",
+    "70°W"
+   ],
+   "answer": 1,
+   "explanation": "The local time is 3 hours 20 minutes behind GMT, which is 200 minutes. Since 4 minutes of time correspond to 1° of longitude, the difference is 200 ÷ 4 = 50°. Local time behind GMT means the place is west of Greenwich, so the longitude is 50°W."
+  },
+  {
+   "n": 2,
+   "topic": "Latitude, longitude and time",
+   "q": "What is the main reason why countries such as Nigeria use a standard time instead of local solar time at every place?",
+   "options": [
+    "To give every place in the country equal hours of daylight",
+    "To make noon occur at exactly 12:00 at every longitude",
+    "To make transport, communication and official activities easier by using one time within the country",
+    "To make the Sun rise at exactly the same clock time everywhere in the country"
+   ],
+   "answer": 2,
+   "explanation": "A standard time avoids confusion that would arise if every locality kept its own local solar time. It assists transport, communication and administration by giving a whole country or region one official time."
+  },
+  {
+   "n": 3,
+   "topic": "Population",
+   "q": "A local government area in Kwara State has a population of 360,000 and an area of 1,500 km². Calculate its population density.",
+   "options": [
+    "240 persons per km²",
+    "540 persons per km²",
+    "2 400 persons per km²",
+    "24 persons per km²"
+   ],
+   "answer": 0,
+   "explanation": "Population density is population divided by area. Thus 360,000 ÷ 1,500 = 240 persons per km²."
+  },
+  {
+   "n": 4,
+   "topic": "Population",
+   "q": "Which statement best describes an optimum population?",
+   "options": [
+    "A population in which the number of elderly people is greater than the number of children",
+    "A population whose size is matched to available resources to give the highest possible standard of living",
+    "A population that is larger than the resources available to support it",
+    "A population that is evenly spread over every part of a country"
+   ],
+   "answer": 1,
+   "explanation": "An optimum population is the size that, with the available resources and technology, can give the highest standard of living. A population larger than the resources can support represents overpopulation, not optimum population."
+  },
+  {
+   "n": 5,
+   "topic": "The earth and the solar system",
+   "q": "Which statement best explains why the Moon appears to change phases when viewed from Earth?",
+   "options": [
+    "The Moon spins once every 24 hours relative to the Sun",
+    "Earth’s shadow covers the Moon in different ways each night",
+    "Different amounts of the Moon’s sunlit half face Earth as the Moon revolves around Earth",
+    "The Moon produces its own light and dims at intervals"
+   ],
+   "answer": 2,
+   "explanation": "The Moon is always half lit by the Sun, but its position relative to Earth and the Sun changes as it revolves. This makes different portions of the sunlit half visible from Earth, producing the phases."
+  },
+  {
+   "n": 6,
+   "topic": "Environmental hazards and conservation",
+   "q": "Farmers in the Guinea savanna set bush fires during the dry season. Which effect is most likely to reduce soil fertility?",
+   "options": [
+    "A rise in humus content of the topsoil",
+    "A reduction in surface runoff during the next rains",
+    "An increase in the water-holding capacity of the soil",
+    "Loss of organic matter and destruction of soil microorganisms"
+   ],
+   "answer": 3,
+   "explanation": "Bush burning destroys humus and kills many beneficial soil organisms, which reduces soil fertility over time. The ash may add some minerals briefly, but the long-term loss of organic matter is harmful."
+  },
+  {
+   "n": 7,
+   "topic": "Environmental hazards and conservation",
+   "q": "Which measure is most suitable for reducing air pollution caused by old vehicles in Lagos?",
+   "options": [
+    "Encouraging the importation of more second-hand vehicles without inspection",
+    "Burning refuse along the roadsides to clear space for traffic",
+    "Permitting vehicles with faulty exhausts to operate only during off-peak hours",
+    "Enforcing exhaust emission standards and promoting public transport"
+   ],
+   "answer": 3,
+   "explanation": "Emission standards reduce the pollutants released by each vehicle, while public transport can reduce the total number of vehicles on the road. Allowing faulty vehicles, open burning or uninspected old imports would worsen air quality."
+  },
+  {
+   "n": 8,
+   "topic": "Settlements",
+   "q": "Kafanchan lies in a valley, while Zaria is on a broad plain near a major road junction. The description of Zaria's position in relation to the road junction refers to its",
+   "options": [
+    "morphology",
+    "function",
+    "situation",
+    "site"
+   ],
+   "answer": 2,
+   "explanation": "Situation refers to the position of a settlement relative to surrounding features such as routes, rivers and other settlements. Site is the actual land occupied by the settlement, so it does not describe the relationship to the road junction."
+  },
+  {
+   "n": 9,
+   "topic": "Settlements",
+   "q": "A row of houses has developed along the only road passing through a narrow valley near Jos. This settlement pattern is best described as",
+   "options": [
+    "linear",
+    "dispersed",
+    "radial",
+    "nucleated"
+   ],
+   "answer": 0,
+   "explanation": "A linear pattern occurs where buildings are arranged in a long strip along a road, river or valley. A nucleated pattern is clustered around a centre, while a dispersed pattern consists of scattered buildings."
+  },
+  {
+   "n": 10,
+   "topic": "Settlements",
+   "q": "The concentration of market towns at road junctions in many parts of Nigeria is best explained by",
+   "options": [
+    "presence of mineral deposits",
+    "fertile volcanic soil",
+    "easy access to several routes",
+    "high annual rainfall"
+   ],
+   "answer": 2,
+   "explanation": "Market towns need to be accessible to traders and farmers coming from different directions, and road junctions provide this advantage. Mineral deposits, rainfall or volcanic soil do not by themselves explain the general location of market towns at junctions."
+  },
+  {
+   "n": 11,
+   "topic": "Landforms and processes",
+   "q": "The wearing away of a river bed by sand and pebbles carried by the river is called",
+   "options": [
+    "abrasion",
+    "solution",
+    "hydraulic action",
+    "attrition"
+   ],
+   "answer": 0,
+   "explanation": "Abrasion occurs when the load carried by a river scrapes and wears away the river bed and banks. Attrition is the wearing down of rock fragments against one another, while hydraulic action is the force of moving water."
+  },
+  {
+   "n": 12,
+   "topic": "Map reading and scale",
+   "q": "A map scale is given as 4 cm to 1 km. Express this scale as a representative fraction.",
+   "options": [
+    "1:250,000",
+    "1:4,000",
+    "1:40,000",
+    "1:25,000"
+   ],
+   "answer": 3,
+   "explanation": "Since 1 km = 100,000 cm, 4 cm on the map represents 100,000 cm on the ground. Therefore 1 cm represents 100,000 ÷ 4 = 25,000 cm, giving the scale 1:25,000."
+  },
+  {
+   "n": 13,
+   "topic": "Map reading and scale",
+   "q": "A cross-section is drawn on a map with horizontal scale 1:50,000 and vertical scale 1:5,000. What is the vertical exaggeration?",
+   "options": [
+    "10 times",
+    "5 times",
+    "0.1 times",
+    "100 times"
+   ],
+   "answer": 0,
+   "explanation": "Vertical exaggeration is found by dividing the horizontal scale denominator by the vertical scale denominator: 50,000 ÷ 5,000 = 10. The vertical scale is therefore 10 times the horizontal scale."
+  },
+  {
+   "n": 14,
+   "topic": "Weather and climate",
+   "q": "At a weather station in Enugu, a rain gauge with a circular opening of radius 5 cm collects rainwater during a storm in which 60 mm of rainfall is recorded. Using π = 3.14, what volume of water is collected?",
+   "options": [
+    "4,710 cm³",
+    "78.5 cm³",
+    "47.1 cm³",
+    "471 cm³"
+   ],
+   "answer": 3,
+   "explanation": "The gauge opening has area πr² = 3.14 × 5² = 78.5 cm². Since 60 mm = 6 cm, the collected volume is 78.5 cm² × 6 cm = 471 cm³. The value 4,710 cm³ would arise if 60 mm were wrongly treated as 60 cm."
+  },
+  {
+   "n": 15,
+   "topic": "Weather and climate",
+   "q": "The wet season rainfall in southern Nigeria is mainly brought by moist air moving from the Atlantic Ocean. This air mass is best described as the",
+   "options": [
+    "dry harmattan winds",
+    "north-east trade winds",
+    "south-westerly monsoon winds",
+    "south-east trade winds"
+   ],
+   "answer": 2,
+   "explanation": "The wet season in southern Nigeria is dominated by moist air that crosses the coast from the Atlantic as a south-westerly monsoon. The north-east trade winds and harmattan are dry, while south-east trades do not provide the onshore moist flow described."
+  },
+  {
+   "n": 16,
+   "topic": "Agriculture",
+   "q": "A farmer in Nsukka plants yam on 3.5 hectares at a spacing of 1 m × 1 m. If one sett is planted per stand, how many yam setts are required? (1 hectare = 10,000 m²)",
+   "options": [
+    "350,000 yam setts",
+    "3,500 yam setts",
+    "35,000 yam setts",
+    "17,500 yam setts"
+   ],
+   "answer": 2,
+   "explanation": "One hectare contains 10,000 m², so at 1 m × 1 m each yam stand occupies 1 m². The field therefore needs 3.5 × 10,000 = 35,000 setts."
+  },
+  {
+   "n": 17,
+   "topic": "Agriculture",
+   "q": "A farmer in Zaki Biam uses a hoe and cutlass on a small plot, and most of the produce is consumed by the family. This farming system is best described as",
+   "options": [
+    "subsistence farming",
+    "mixed farming",
+    "plantation agriculture",
+    "commercial arable farming"
+   ],
+   "answer": 0,
+   "explanation": "The farm is small, uses simple tools and produces mainly for family consumption, which are features of subsistence farming. Plantation and commercial arable farming produce mainly for sale, while the stem gives no indication of livestock to make mixed farming the best description."
+  },
+  {
+   "n": 18,
+   "topic": "Vegetation and soils",
+   "q": "After several years of cultivation, a farmer in Makurdi abandons a plot. Grasses first cover it, and later shrubs and small trees appear. This gradual replacement of plant communities is called",
+   "options": [
+    "deforestation",
+    "secondary succession",
+    "soil stratification",
+    "leaching"
+   ],
+   "answer": 1,
+   "explanation": "The regrowth of plants on land that was previously cleared and cultivated is secondary succession. Pioneer grasses are later replaced by shrubs and trees as the community changes. Leaching and deforestation do not describe this gradual replacement of plant communities."
+  },
+  {
+   "n": 19,
+   "topic": "Vegetation and soils",
+   "q": "A farmer in Abakaliki finds that maize yields are poor because the soil is strongly acidic. Applying lime to the soil will mainly",
+   "options": [
+    "supply nitrogen to the crop",
+    "improve soil drainage",
+    "increase soil acidity",
+    "raise the soil pH and reduce acidity"
+   ],
+   "answer": 3,
+   "explanation": "Lime is a basic material that neutralises soil acidity and raises the soil pH. It is not a nitrogen fertilizer and does not mainly improve drainage; those effects belong to other treatments and practices."
+  },
+  {
+   "n": 20,
+   "topic": "Industry and natural resources",
+   "q": "Quarrying limestone for cement production is best classified as a ...",
+   "options": [
+    "secondary activity",
+    "quaternary activity",
+    "tertiary activity",
+    "primary activity"
+   ],
+   "answer": 3,
+   "explanation": "Quarrying is the extraction of raw material from the earth, so it belongs to primary activities. Manufacturing cement from the limestone would be a secondary activity."
+  },
+  {
+   "n": 21,
+   "topic": "Industry and natural resources",
+   "q": "The manufacture of electronic components is a good example of a footloose industry mainly because it ...",
+   "options": [
+    "uses light raw materials that are easily transported",
+    "sells its products only within the immediate local market",
+    "depends on a constant supply of coal for smelting",
+    "must be located close to bulky raw materials to reduce weight"
+   ],
+   "answer": 0,
+   "explanation": "A footloose industry is not tied closely to raw materials or markets, and electronic components use light, high-value materials that are easy to move. Being near bulky raw materials or coal is more typical of weight-losing or heavy industries."
+  },
+  {
+   "n": 22,
+   "topic": "Transport and trade",
+   "q": "For the evacuation of large quantities of freshly harvested tomatoes from Jos to Lagos, the most suitable mode of transport is ...",
+   "options": [
+    "road transport, because it gives door-to-door service and reduces delay for perishable goods",
+    "rail transport, because it is fastest over long distances",
+    "pipeline transport, because it can move farm produce continuously",
+    "air transport, because it carries the largest tonnage of farm produce"
+   ],
+   "answer": 0,
+   "explanation": "Tomatoes are perishable and need quick, flexible movement from farms to markets, which road transport provides. Air transport is fast but too costly and limited in tonnage for large quantities, while rail and pipeline do not offer door-to-door delivery for such produce."
+  },
+  {
+   "n": 23,
+   "topic": "Transport and trade",
+   "q": "A government introduces an import quota on foreign rice mainly to ...",
+   "options": [
+    "encourage citizens to buy more foreign rice",
+    "increase the supply of imported rice in the market",
+    "collect a fixed tax on every bag of imported rice",
+    "restrict the quantity of imported rice and protect local rice farmers"
+   ],
+   "answer": 3,
+   "explanation": "An import quota places a physical limit on the quantity of a good that may be imported, thereby reducing competition from foreign rice. A tax on imports is a tariff, not a quota, and increasing foreign rice supply or encouraging its purchase is the opposite of the policy aim."
+  },
+  {
+   "n": 24,
+   "topic": "Latitude, longitude and time",
+   "q": "A town on longitude 18°W has a local solar time of 07:30. What is the local solar time at a town on longitude 36°E?",
+   "options": [
+    "10:42",
+    "03:54",
+    "11:06",
+    "11:30"
+   ],
+   "answer": 2,
+   "explanation": "The longitude difference is 18° + 36° = 54°. Since 15° corresponds to 1 hour, 54° corresponds to 3 hours 36 minutes; the second town is east of the first, so its time is ahead: 07:30 + 3:36 = 11:06."
+  },
+  {
+   "n": 25,
+   "topic": "Latitude, longitude and time",
+   "q": "On 21 March, the length of day is approximately 12 hours at ...",
+   "options": [
+    "places north of the Tropic of Cancer only",
+    "the Equator only",
+    "all places on Earth",
+    "the poles only"
+   ],
+   "answer": 2,
+   "explanation": "21 March is an equinox, when the Sun is vertically overhead at the Equator and all places have approximately equal day and night. The 12-hour day is therefore not restricted to the Equator or to any one hemisphere."
+  },
+  {
+   "n": 26,
+   "topic": "Population",
+   "q": "A local government area in Nasarawa State has a population of 240,000 and covers an area of 800 km². What is its population density?",
+   "options": [
+    "300 persons per km²",
+    "30 persons per km²",
+    "3,000 persons per km²",
+    "1,920 persons per km²"
+   ],
+   "answer": 0,
+   "explanation": "Population density is population divided by area: 240,000 ÷ 800 = 300 persons per km². The figure 3,000 would result from misplacing a zero in the division."
+  },
+  {
+   "n": 27,
+   "topic": "Population",
+   "q": "Which measure is most likely to reduce infant mortality in rural Nigeria?",
+   "options": [
+    "encouraging early marriage among young women",
+    "expanding immunization and maternal health services",
+    "reducing the number of health centres in villages",
+    "increasing the number of primary schools without health facilities"
+   ],
+   "answer": 1,
+   "explanation": "Immunization protects infants from common diseases, and better maternal health care reduces complications at birth and in early childhood. Early marriage can increase health risks, while reducing health centres would make care less accessible."
+  },
+  {
+   "n": 28,
+   "topic": "Environmental hazards and conservation",
+   "q": "A town in Ogun State uses a stream for domestic water. An open refuse dump is located on the stream bank. What is the most direct hazard to water users during heavy rain?",
+   "options": [
+    "A rise in wind-blown dust from the stream bank",
+    "Contamination of the stream by refuse and leachate",
+    "The sudden formation of a sinkhole under the dump",
+    "An increase in groundwater recharge beneath the dump"
+   ],
+   "answer": 1,
+   "explanation": "Heavy rain can wash refuse and leachate from the dump into the stream, making the water unsafe for domestic use. The dump on the bank does not itself cause an earthquake or volcanic eruption, and dust is not the main hazard during rainfall."
+  },
+  {
+   "n": 29,
+   "topic": "Environmental hazards and conservation",
+   "q": "A community wants to conserve a small sacred grove that contains rare trees while still collecting fallen branches for fuel. Which measure best fits these conditions?",
+   "options": [
+    "Total exclusion of villagers from the grove with no collection allowed",
+    "Community-managed conservation with controlled collection of fallen branches",
+    "Clearing the undergrowth and planting maize among the rare trees",
+    "Leasing the grove to a timber company for selective logging"
+   ],
+   "answer": 1,
+   "explanation": "Community-based management allows the grove to remain protected while permitting limited, controlled use such as collecting fallen branches. Excluding all villagers may be difficult and ignores local needs, while clearing the grove or giving it to a timber company would destroy the rare trees."
+  },
+  {
+   "n": 30,
+   "topic": "Settlements",
+   "q": "A city usually has a larger sphere of influence than a village mainly because the city",
+   "options": [
+    "has a lower population density",
+    "offers a wider range of specialised goods and services",
+    "is always located at a river confluence",
+    "has more farmland per person"
+   ],
+   "answer": 1,
+   "explanation": "A city attracts people from distant places because it provides specialised services such as hospitals, banks and higher education that villages usually lack. Being at a river confluence is not always true of cities, and cities generally have denser rather than lower population."
+  },
+  {
+   "n": 31,
+   "topic": "Settlements",
+   "q": "The arrangement in which houses are clustered around a central focus such as a market or chief's compound is called a",
+   "options": [
+    "linear settlement",
+    "nucleated settlement",
+    "isolated settlement",
+    "dispersed settlement"
+   ],
+   "answer": 1,
+   "explanation": "A nucleated settlement has buildings grouped closely around a central point, often for defence, trade or social reasons. A linear settlement follows a road or river, while a dispersed settlement has separate farmsteads spread over an area."
+  },
+  {
+   "n": 32,
+   "topic": "Geography of Nigeria",
+   "q": "Which condition is a major limitation to crop farming in the far northern part of Nigeria?",
+   "options": [
+    "Deep fertile volcanic soils",
+    "High humidity throughout the year",
+    "Short rainy season and frequent drought",
+    "Excessive rainfall causing leaching"
+   ],
+   "answer": 2,
+   "explanation": "The far north has a short rainy season and is prone to drought, which limits the growing period and crop yields. High humidity, excessive rainfall and deep volcanic soils are not typical limiting conditions of that region."
+  },
+  {
+   "n": 33,
+   "topic": "Geography of Nigeria",
+   "q": "The body of water that borders Nigeria to the south is the",
+   "options": [
+    "Gulf of Guinea",
+    "Lake Chad",
+    "Mediterranean Sea",
+    "Red Sea"
+   ],
+   "answer": 0,
+   "explanation": "Nigeria's southern coastline lies along the Gulf of Guinea, which is part of the Atlantic Ocean. The Red Sea and Mediterranean Sea are far from Nigeria, while Lake Chad lies to the north-east."
+  },
+  {
+   "n": 34,
+   "topic": "Settlements",
+   "q": "Which factor most often encourages the rapid growth of informal settlements on the outskirts of a Nigerian city?",
+   "options": [
+    "Strict enforcement of building codes",
+    "Adequate supply of planned low-cost houses",
+    "Shortage of affordable housing within the city",
+    "Decline in rural-to-urban migration"
+   ],
+   "answer": 2,
+   "explanation": "When affordable housing is scarce, many low-income migrants build temporary or unplanned dwellings on the outskirts. Strict building controls, an adequate supply of planned low-cost housing, and reduced migration would tend to slow rather than encourage informal settlement growth."
+  },
+  {
+   "n": 35,
+   "topic": "Map reading and scale",
+   "q": "A topographic map has a scale of 1:200,000. What does 1 cm on the map represent on the ground?",
+   "options": [
+    "1 cm represents 2 km",
+    "1 cm represents 20 km",
+    "1 cm represents 200 km",
+    "1 cm represents 0.2 km"
+   ],
+   "answer": 0,
+   "explanation": "The scale 1:200,000 means that 1 cm on the map represents 200,000 cm on the ground. Converting to kilometres gives 200,000 ÷ 100,000 = 2 km."
+  },
+  {
+   "n": 36,
+   "topic": "Landforms and processes",
+   "q": "Which condition most favours the formation of a river delta?",
+   "options": [
+    "Strong wave action along an open coast",
+    "Rapid uplift of the coastal area",
+    "A heavy load and gentle gradient at the river mouth",
+    "A steep rocky coastline with deep offshore water"
+   ],
+   "answer": 2,
+   "explanation": "A delta forms where a river deposits much of its load near its mouth because the current slows on a gentle gradient. Strong waves, deep water, steep rocky coasts and rapid uplift encourage removal of sediment rather than deposition."
+  },
+  {
+   "n": 37,
+   "topic": "Agriculture",
+   "q": "The system of farming in which a farmer grows crops and rears animals on the same farm is called",
+   "options": [
+    "monoculture",
+    "plantation agriculture",
+    "shifting cultivation",
+    "mixed farming"
+   ],
+   "answer": 3,
+   "explanation": "Mixed farming combines crop production with livestock rearing on the same farm. Monoculture involves one crop, while plantation agriculture is large-scale commercial cropping."
+  },
+  {
+   "n": 38,
+   "topic": "Map reading and scale",
+   "q": "Which of the following map scales is the largest?",
+   "options": [
+    "1:50,000",
+    "1:10,000",
+    "1:100,000",
+    "1:250,000"
+   ],
+   "answer": 1,
+   "explanation": "A map scale is larger when its denominator is smaller. The scale 1:10,000 therefore represents the largest scale and shows the greatest detail among the choices."
+  },
+  {
+   "n": 39,
+   "topic": "Weather and climate",
+   "q": "A weather observer in Lagos sees a tall, dense cloud with a flat base and an anvil-shaped top. Which cloud type is this?",
+   "options": [
+    "Stratus",
+    "Cumulonimbus",
+    "Cirrus",
+    "Altostratus"
+   ],
+   "answer": 1,
+   "explanation": "Cumulonimbus clouds are tall, dense storm clouds and often develop an anvil-shaped top. Cirrus clouds are high and wispy, while stratus clouds form low, flat layers."
+  },
+  {
+   "n": 40,
+   "topic": "Agriculture",
+   "q": "A farmer in Ondo State grows cocoa mainly for sale to processing companies. The crop is best classified as",
+   "options": [
+    "a cover crop",
+    "a fodder crop",
+    "a cash crop",
+    "a food crop"
+   ],
+   "answer": 2,
+   "explanation": "Cocoa is grown mainly for sale and export rather than for direct subsistence consumption, so it is a cash crop. A cover crop protects the soil, while a fodder crop is grown to feed livestock."
+  },
+  {
+   "n": 41,
+   "topic": "Vegetation and soils",
+   "q": "The soils on the steep slopes around Obudu are usually shallow mainly because",
+   "options": [
+    "erosion removes weathered material faster than it forms",
+    "the underlying rock is always limestone",
+    "dense vegetation prevents soil formation",
+    "rainfall is too low for weathering"
+   ],
+   "answer": 0,
+   "explanation": "On steep slopes, rainwater runs off quickly and removes topsoil and weathered material faster than new soil can form. Low rainfall, dense vegetation, or a limestone parent rock do not explain why such slopes have shallow soils."
+  },
+  {
+   "n": 42,
+   "topic": "Rocks and minerals",
+   "q": "Which process is mainly responsible for changing limestone into marble?",
+   "options": [
+    "cooling of magma underground",
+    "heating and pressure during metamorphism",
+    "weathering by wind and rain",
+    "deposition in shallow seas"
+   ],
+   "answer": 1,
+   "explanation": "Marble forms when limestone is subjected to heat and pressure during metamorphism. Cooling magma forms igneous rocks, deposition forms sedimentary layers, and weathering breaks rocks down rather than converting limestone to marble."
+  },
+  {
+   "n": 43,
+   "topic": "Industry and natural resources",
+   "q": "The main raw material used in producing nitrogenous fertilizer in Nigeria is",
+   "options": [
+    "limestone",
+    "natural gas",
+    "bauxite",
+    "iron ore"
+   ],
+   "answer": 1,
+   "explanation": "Nitrogenous fertilizer production in Nigeria uses natural gas to make ammonia, which is then converted to urea or other fertilizers. Bauxite is an aluminium ore, iron ore is used for steel, and limestone is mainly a source of calcium rather than nitrogen."
+  },
+  {
+   "n": 44,
+   "topic": "Industry and natural resources",
+   "q": "A company in Warri refines crude oil into petrol and kerosene. This activity is best classified as",
+   "options": [
+    "extractive industry",
+    "primary industry",
+    "secondary industry",
+    "tertiary industry"
+   ],
+   "answer": 2,
+   "explanation": "Refining crude oil into petrol and kerosene changes raw materials into new products, which is manufacturing and therefore a secondary industry. Primary industries extract raw materials, tertiary industries provide services, and extractive industry refers to mining or quarrying."
+  },
+  {
+   "n": 45,
+   "topic": "Transport and trade",
+   "q": "Nigeria’s foreign trade is highly vulnerable to changes in world prices mainly because",
+   "options": [
+    "exports are dominated by crude oil",
+    "most exports are manufactured goods",
+    "imports are banned completely",
+    "the country has no seaports"
+   ],
+   "answer": 0,
+   "explanation": "Crude oil supplies the overwhelming share of Nigeria’s export earnings, so changes in world oil prices strongly affect foreign exchange earnings. Nigeria does not rely mainly on manufactured exports, has seaports, and does not ban all imports."
+  },
+  {
+   "n": 46,
+   "topic": "Latitude, longitude and time",
+   "q": "A town records local solar time 13:00 when Greenwich Mean Time is 10:00. On which longitude does the town lie?",
+   "options": [
+    "15°E",
+    "45°W",
+    "45°E",
+    "135°E"
+   ],
+   "answer": 2,
+   "explanation": "The town is 3 hours ahead of Greenwich Mean Time. Since 15° of longitude corresponds to 1 hour, 3 hours corresponds to 45°, and a place ahead of GMT lies east, giving 45°E. The longitude 45°W would mean 3 hours behind GMT rather than ahead."
+  },
+  {
+   "n": 47,
+   "topic": "The earth and the solar system",
+   "q": "Why is a solar day about 4 minutes longer than a sidereal day?",
+   "options": [
+    "The Earth's atmosphere refracts sunlight near the horizon.",
+    "The Earth's axis is inclined at about 23.5°.",
+    "The Earth moves along its orbit while rotating on its axis.",
+    "The Moon's gravity slows the Earth's rotation each day."
+   ],
+   "answer": 2,
+   "explanation": "A sidereal day is measured relative to distant stars, while a solar day is measured relative to the Sun. As the Earth rotates, it also advances along its orbit, so it must turn a little farther to bring the Sun back to the same meridian, making the solar day about 4 minutes longer."
+  },
+  {
+   "n": 48,
+   "topic": "Population",
+   "q": "A district in Benue State has 2,000 people aged below 15, 6,000 people aged 15–64 and 400 people aged 65 and above. What is the dependency ratio per 100 people of working age?",
+   "options": [
+    "50 per 100",
+    "40 per 100",
+    "240 per 100",
+    "33.3 per 100"
+   ],
+   "answer": 1,
+   "explanation": "The dependants are people aged below 15 and those aged 65 and above, totalling 2,000 + 400 = 2,400. The working-age population is 6,000, so the dependency ratio is (2,400 ÷ 6,000) × 100 = 40 per 100. The value 33.3 per 100 would be obtained if the elderly were wrongly left out."
+  },
+  {
+   "n": 49,
+   "topic": "Population",
+   "q": "A trader lives in Ota and travels every morning to a market in Lagos, returning in the evening. This movement is best described as",
+   "options": [
+    "Emigration",
+    "Transhumance",
+    "Nomadism",
+    "Commuting"
+   ],
+   "answer": 3,
+   "explanation": "Commuting is the regular daily movement of people between their homes and places of work, trade or school. The trader returns home each evening, unlike emigration, which involves settling in another country, or transhumance and nomadism, which concern livestock movement."
+  },
+  {
+   "n": 50,
+   "topic": "Environmental hazards and conservation",
+   "q": "A growing town in Enugu State wants to reduce the amount of plastic waste entering a nearby river. Which measure is most sustainable?",
+   "options": [
+    "Burying plastic waste in shallow pits near the riverbank.",
+    "Promoting the recycling and reuse of plastic containers.",
+    "Burning plastic waste regularly beside the river.",
+    "Encouraging shops to give customers more free plastic bags."
+   ],
+   "answer": 1,
+   "explanation": "Recycling and reuse reduces both the amount of plastic discarded and the demand for new plastic, helping keep waste out of the river. Burying or burning plastic near the river can release pollutants, while increasing free plastic bags adds more waste."
+  }
+ ]
+}

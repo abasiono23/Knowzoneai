@@ -2,7 +2,12 @@
  * Mock tutor "brain" for frontend-first development. Produces the same structured
  * TutorAnswer the real OpenAI-backed endpoint will return, from a small knowledge base.
  */
+import { currentRegion, DEFAULT_REGION } from '@/lib/region';
+
 import type { Attachment, TutorAnswer, TutorLevel, TutorMode } from './types';
+
+/** The demo answers name WAEC and JAMB for students in Nigeria only; elsewhere they speak of exams in general. */
+const nigeria = () => currentRegion() === DEFAULT_REGION;
 
 type Topic = { keywords: string[]; build: (level: TutorLevel) => TutorAnswer };
 
@@ -52,7 +57,7 @@ const TOPICS: Topic[] = [
         },
         {
           type: 'tip',
-          text: 'Exam tip: WAEC often asks for the raw materials (CO₂, water) and the products (glucose, oxygen). Learn the equation by heart.',
+          text: `Exam tip: ${nigeria() ? 'WAEC often asks' : 'examiners often ask'} for the raw materials (CO₂, water) and the products (glucose, oxygen). Learn the equation by heart.`,
         },
       ],
       keyTerms: [
@@ -88,7 +93,7 @@ const TOPICS: Topic[] = [
       followUps: [
         'What are limiting factors?',
         'How is respiration different?',
-        'Give me a WAEC question on this',
+        nigeria() ? 'Give me a WAEC question on this' : 'Give me an exam-style question on this',
         'Explain the Calvin cycle',
       ],
       flashcards: [
@@ -453,7 +458,7 @@ const TOPICS: Topic[] = [
         'What shifts the demand curve?',
         'Explain elasticity',
         'Draw it as a diagram',
-        'Give me a JAMB question',
+        nigeria() ? 'Give me a JAMB question' : 'Give me an exam-style question',
       ],
       flashcards: [
         { front: 'Law of demand', back: 'As price rises, quantity demanded falls (all else equal)' },

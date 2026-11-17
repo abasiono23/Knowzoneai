@@ -1,0 +1,661 @@
+{
+ "id": "waec-physics-p3",
+ "exam": "waec",
+ "subject": "physics",
+ "year": null,
+ "number": 3,
+ "source": "ai",
+ "minutes": 60,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Electrostatics and capacitors",
+   "q": "A point charge of 5.0 μC is placed in air. What is the electric potential at a point 0.25 m from the charge? (Take 1/(4πɛ₀) = 9.0 × 10⁹ N m² C⁻².)",
+   "options": [
+    "1.8 × 10⁶ V",
+    "1.8 × 10⁵ V",
+    "4.5 × 10⁴ V",
+    "7.2 × 10⁵ V"
+   ],
+   "answer": 1,
+   "explanation": "The electric potential is V = (1/(4πɛ₀))Q/r = (9.0 × 10⁹ × 5.0 × 10⁻⁶)/0.25 = 1.8 × 10⁵ V. Using E = kQ/r² instead gives 7.2 × 10⁵ N/C, which is an electric field, not a potential."
+  },
+  {
+   "n": 2,
+   "topic": "Electrostatics and capacitors",
+   "q": "A 4.0 μF capacitor and an 8.0 μF capacitor are connected in parallel to a 12 V battery. What is the total energy stored in the two capacitors?",
+   "options": [
+    "1.73 × 10⁻³ J",
+    "4.32 × 10⁻⁴ J",
+    "8.64 × 10⁻⁴ J",
+    "8.64 × 10⁻⁶ J"
+   ],
+   "answer": 2,
+   "explanation": "In parallel the equivalent capacitance is 4.0 + 8.0 = 12 μF, so E = ½CV² = ½ × 12 × 10⁻⁶ × 12² = 8.64 × 10⁻⁴ J. The value 1.73 × 10⁻³ J comes from using QV without the factor ½."
+  },
+  {
+   "n": 3,
+   "topic": "Work, energy and power",
+   "q": "A water pump in Jos raises 150 kg of water through a vertical height of 12 m in 20 s. If the power supplied to the pump is 1.2 kW, what is its efficiency? (Take g = 10 m/s².)",
+   "options": [
+    "90%",
+    "75%",
+    "60%",
+    "80%"
+   ],
+   "answer": 1,
+   "explanation": "Useful power = mgh/t = (150 × 10 × 12)/20 = 900 W. Efficiency = (900/1200) × 100% = 75%. The other values arise from arithmetic errors in the useful power or input power."
+  },
+  {
+   "n": 4,
+   "topic": "Work, energy and power",
+   "q": "A mason in Aba raises a 2.0 kg hammer through a vertical height of 0.80 m and lets it fall on a nail. If all the energy drives the nail 4.0 cm into a plank, what is the average resistance of the plank? (Take g = 10 m/s².)",
+   "options": [
+    "4000 N",
+    "40 N",
+    "160 N",
+    "400 N"
+   ],
+   "answer": 3,
+   "explanation": "The energy gained is mgh = 2.0 × 10 × 0.80 = 16 J. This equals work done against resistance, Fd = F × 0.040, so F = 16/0.040 = 400 N. Using 4.0 cm as 0.40 m gives 40 N, which is an error in converting centimetres to metres."
+  },
+  {
+   "n": 5,
+   "topic": "Elasticity and pressure",
+   "q": "A woman in Ibadan of mass 60 kg stands on one heel whose area in contact with the floor is 0.50 cm². What pressure does she exert on the floor? (Take g = 10 m/s².)",
+   "options": [
+    "6.0 × 10⁶ Pa",
+    "1.2 × 10⁷ Pa",
+    "1.2 × 10⁶ Pa",
+    "1.2 × 10⁵ Pa"
+   ],
+   "answer": 1,
+   "explanation": "Area = 0.50 cm² = 0.50 × 10⁻⁴ m² = 5.0 × 10⁻⁵ m² and force = mg = 60 × 10 = 600 N. Hence pressure = 600/(5.0 × 10⁻⁵) = 1.2 × 10⁷ Pa. Using mass rather than weight gives 1.2 × 10⁶ Pa."
+  },
+  {
+   "n": 6,
+   "topic": "Elasticity and pressure",
+   "q": "Two steel wires P and Q are made from the same material. P has length L and diameter d, while Q has length 2L and diameter 2d. When equal loads are applied, how does the extension of Q compare with that of P?",
+   "options": [
+    "It is one-quarter that of P.",
+    "It is half that of P.",
+    "It is equal to that of P.",
+    "It is twice that of P."
+   ],
+   "answer": 1,
+   "explanation": "For the same material and load, extension e ∝ L/d². Thus e_Q/e_P = (2L/L) × (d/2d)² = 2 × 1/4 = 1/2, so Q extends by half as much as P. Considering only the doubled length would incorrectly make Q extend twice as much."
+  },
+  {
+   "n": 7,
+   "topic": "Magnetism and electromagnetic induction",
+   "q": "A straight wire carrying a steady current due north is placed in a uniform magnetic field directed vertically downwards. In which direction does the magnetic force on the wire act?",
+   "options": [
+    "East",
+    "South",
+    "West",
+    "Vertically upwards"
+   ],
+   "answer": 2,
+   "explanation": "Using the motor-effect rule or F = IL × B, with current north and field downward, the force is directed west. The force is perpendicular to both the wire and the field, so a vertical or southward force is not possible here."
+  },
+  {
+   "n": 8,
+   "topic": "Magnetism and electromagnetic induction",
+   "q": "Ngozi pushes a bar magnet into a coil connected to a galvanometer and observes a deflection. She then holds the magnet stationary inside the coil. What should she observe?",
+   "options": [
+    "The galvanometer reading remains steady at the same value.",
+    "The galvanometer reading doubles.",
+    "The galvanometer reading becomes zero.",
+    "The galvanometer reading reverses and remains steady."
+   ],
+   "answer": 2,
+   "explanation": "An induced e.m.f. occurs only while the magnetic flux through the coil is changing. When the magnet is stationary, the flux is constant, so no current is induced and the galvanometer reads zero. A steady deflection would wrongly suggest that a constant flux itself drives current."
+  },
+  {
+   "n": 9,
+   "topic": "Work, energy and power",
+   "q": "A 50 kg crate initially at rest is pulled with a constant horizontal force of 120 N through a distance of 5.0 m along a rough horizontal floor. If the constant friction opposing the motion is 40 N, what is the final speed of the crate?",
+   "options": [
+    "4.9 m/s",
+    "2.8 m/s",
+    "4.0 m/s",
+    "8.0 m/s"
+   ],
+   "answer": 2,
+   "explanation": "The resultant force is 120 − 40 = 80 N, so the net work is 80 × 5.0 = 400 J. From ½ × 50 × v² = 400, v² = 16 and v = 4.0 m/s. Using only the friction force gives 2.8 m/s, which ignores the much larger applied force."
+  },
+  {
+   "n": 10,
+   "topic": "Magnetism and electromagnetic induction",
+   "q": "A coil of 400 turns and resistance 5.0 Ω experiences a uniform change in magnetic flux through each turn from 0.025 Wb to 0.005 Wb in 0.40 s. What average current is induced in the coil?",
+   "options": [
+    "4.0 A",
+    "1.6 A",
+    "0.010 A",
+    "20 A"
+   ],
+   "answer": 0,
+   "explanation": "The change in flux is 0.025 − 0.005 = 0.020 Wb, so average e.m.f. = NΔΦ/Δt = 400 × 0.020/0.40 = 20 V. The average induced current is V/R = 20/5.0 = 4.0 A. Omitting the number of turns gives 0.010 A."
+  },
+  {
+   "n": 11,
+   "topic": "Current electricity",
+   "q": "A dry cell of e.m.f. 6.0 V and internal resistance 0.50 Ω is connected across a 2.50 Ω resistor in a circuit set up in Enugu. What is the terminal potential difference of the cell?",
+   "options": [
+    "4.8 V",
+    "5.5 V",
+    "5.0 V",
+    "6.0 V"
+   ],
+   "answer": 2,
+   "explanation": "The current is 6.0 ÷ (2.50 + 0.50) = 2.0 A. The terminal potential difference is e.m.f. minus the internal drop, 6.0 − (2.0 × 0.50) = 5.0 V. The value 6.0 V would be obtained only if the internal resistance were zero."
+  },
+  {
+   "n": 12,
+   "topic": "Current electricity",
+   "q": "A student in Kano connects resistors of 4.0 Ω, 6.0 Ω and 12 Ω in parallel. What is the effective resistance of the combination?",
+   "options": [
+    "22 Ω",
+    "0.50 Ω",
+    "7.33 Ω",
+    "2.0 Ω"
+   ],
+   "answer": 3,
+   "explanation": "For resistors in parallel, 1/R = 1/4.0 + 1/6.0 + 1/12 = 0.50 Ω⁻¹, so R = 1/0.50 = 2.0 Ω. Adding the resistance values directly gives 22 Ω, which is not valid for a parallel combination."
+  },
+  {
+   "n": 13,
+   "topic": "Current electricity",
+   "q": "An electric iron rated 1.2 kW is used for 30 minutes each day. If electrical energy costs ₦40 per kWh, what is the cost of using the iron for 20 days?",
+   "options": [
+    "₦24",
+    "₦480",
+    "₦960",
+    "₦240"
+   ],
+   "answer": 1,
+   "explanation": "Daily energy used is 1.2 × 0.50 = 0.60 kWh. In 20 days this is 12 kWh, and the cost is 12 × ₦40 = ₦480. Using the iron for one hour each day would give ₦960."
+  },
+  {
+   "n": 14,
+   "topic": "Light and optics",
+   "q": "A girl in Abeokuta stands 2.5 m in front of a plane mirror. How far is her image from her?",
+   "options": [
+    "2.5 m",
+    "5.0 m",
+    "0 m",
+    "1.25 m"
+   ],
+   "answer": 1,
+   "explanation": "The image in a plane mirror is as far behind the mirror as the girl is in front of it. The distance between the girl and her image is therefore 2.5 m + 2.5 m = 5.0 m. The value 2.5 m is only the distance from the girl to the mirror."
+  },
+  {
+   "n": 15,
+   "topic": "Light and optics",
+   "q": "A coin at the bottom of a tank of water of refractive index 4/3 appears to be 9.0 cm below the water surface when viewed from directly above. What is the real depth of the coin?",
+   "options": [
+    "13.5 cm",
+    "9.0 cm",
+    "6.75 cm",
+    "12.0 cm"
+   ],
+   "answer": 3,
+   "explanation": "The refractive index is the real depth divided by the apparent depth, so real depth = (4/3) × 9.0 = 12.0 cm. Dividing 9.0 by 4/3 instead gives 6.75 cm, which is a common inversion error."
+  },
+  {
+   "n": 16,
+   "topic": "Light and optics",
+   "q": "A narrow beam of white light passes through a glass prism. Which colour of light is deviated least by the prism?",
+   "options": [
+    "Red",
+    "Yellow",
+    "Violet",
+    "Green"
+   ],
+   "answer": 0,
+   "explanation": "Red light has the longest wavelength of the listed colours and the smallest refractive index in glass, so it is deviated least. Violet is deviated most because it has the shortest wavelength and largest refractive index in glass."
+  },
+  {
+   "n": 17,
+   "topic": "Waves",
+   "q": "A guitar string in Tunde's room is sounded together with a tuning fork of frequency 512 Hz, and 6 beats per second are heard. If the string frequency is lower than that of the tuning fork, what is the frequency of the string?",
+   "options": [
+    "503 Hz",
+    "506 Hz",
+    "512 Hz",
+    "518 Hz"
+   ],
+   "answer": 1,
+   "explanation": "The beat frequency equals the difference between the two frequencies, so the string frequency is 512 − 6 = 506 Hz because it is lower. Adding 6 gives 518 Hz, which would correspond to a string frequency higher than that of the tuning fork."
+  },
+  {
+   "n": 18,
+   "topic": "Measurement and units",
+   "q": "The main scale of a vernier calliper reads 2.4 cm and the 6th vernier division coincides with a main-scale division. If the vernier scale has 10 divisions corresponding to 9 main-scale divisions and each main-scale division is 0.1 cm, what is the reading on the calliper?",
+   "options": [
+    "2.34 cm",
+    "3.00 cm",
+    "2.46 cm",
+    "2.40 cm"
+   ],
+   "answer": 2,
+   "explanation": "The least count is 0.1 cm − (9/10 × 0.1 cm) = 0.01 cm. The reading is 2.4 cm + (6 × 0.01 cm) = 2.46 cm. Ignoring the vernier scale would give 2.40 cm."
+  },
+  {
+   "n": 19,
+   "topic": "Measurement and units",
+   "q": "The length of a football field in Kaduna is 0.105 km. Express this length in centimetres.",
+   "options": [
+    "1.05 × 10³ cm",
+    "1.05 × 10⁴ cm",
+    "105 cm",
+    "1.05 × 10⁵ cm"
+   ],
+   "answer": 1,
+   "explanation": "0.105 km = 0.105 × 1000 m = 105 m, and 105 × 100 = 10500 cm = 1.05 × 10⁴ cm. The value 1.05 × 10³ cm is ten times too small."
+  },
+  {
+   "n": 20,
+   "topic": "Simple machines",
+   "q": "A porter in Onitsha pushes a 900 N drum up a ramp 6.0 m long onto a platform 1.5 m high. He applies a force of 300 N parallel to the ramp. Calculate the efficiency of the ramp.",
+   "options": [
+    "75%",
+    "80%",
+    "50%",
+    "25%"
+   ],
+   "answer": 0,
+   "explanation": "Useful work done on the drum is 900 × 1.5 = 1350 J. Work input is 300 × 6.0 = 1800 J. Efficiency = (1350 ÷ 1800) × 100% = 75%. The value 80% would be obtained by rounding the exact ratio too roughly; the exact result is 75%."
+  },
+  {
+   "n": 21,
+   "topic": "Simple machines",
+   "q": "A wheel and axle have a wheel radius of 0.30 m and an axle radius of 0.060 m. What effort applied at the wheel will just raise a load of 450 N on the axle when friction is negligible?",
+   "options": [
+    "2 250 N",
+    "18 N",
+    "90 N",
+    "150 N"
+   ],
+   "answer": 2,
+   "explanation": "For an ideal wheel and axle, effort × wheel radius = load × axle radius. Thus E × 0.30 = 450 × 0.060, giving E = 27 ÷ 0.30 = 90 N. Using the radii in reverse gives 2 250 N, which is far too large."
+  },
+  {
+   "n": 22,
+   "topic": "Motion",
+   "q": "A bus travelling at 25 m/s on a Benin highway brakes uniformly and stops in 8.0 s. What distance does it cover while braking?",
+   "options": [
+    "100 m",
+    "400 m",
+    "80 m",
+    "200 m"
+   ],
+   "answer": 0,
+   "explanation": "For uniform acceleration, distance = average velocity × time = ((25 + 0) ÷ 2) × 8.0 = 100 m. Using 25 × 8.0 without averaging gives 200 m, which is a common mistake."
+  },
+  {
+   "n": 23,
+   "topic": "Motion",
+   "q": "A stone is dropped from rest from the top of a building in Jos and takes 3.0 s to reach the ground. Neglecting air resistance and taking g = 10 m/s², calculate the height of the building.",
+   "options": [
+    "45 m",
+    "15 m",
+    "90 m",
+    "30 m"
+   ],
+   "answer": 0,
+   "explanation": "For an object released from rest, h = ½gt². Thus h = ½ × 10 × (3.0)² = 45 m. Using gt² without the factor ½ gives 90 m."
+  },
+  {
+   "n": 24,
+   "topic": "Motion",
+   "q": "A cyclist moves with constant speed 12 m/s around a circular track of radius 40 m. Calculate the magnitude of the centripetal acceleration.",
+   "options": [
+    "12 m/s²",
+    "3.6 m/s²",
+    "0.30 m/s²",
+    "28.8 m/s²"
+   ],
+   "answer": 1,
+   "explanation": "Centripetal acceleration is a = v²/r. Here a = 12² ÷ 40 = 144 ÷ 40 = 3.6 m/s². Dividing speed by radius gives 0.30 m/s², which is not acceleration in this circular-motion formula."
+  },
+  {
+   "n": 25,
+   "topic": "Atomic and nuclear physics",
+   "q": "A radioactive source used in a hospital in Ibadan has an initial activity of 8000 Bq and a half-life of 8 days. What is its activity after 32 days?",
+   "options": [
+    "4000 Bq",
+    "1000 Bq",
+    "250 Bq",
+    "500 Bq"
+   ],
+   "answer": 3,
+   "explanation": "After 32 days, the number of half-lives is 32 ÷ 8 = 4. The activity falls as 8000 → 4000 → 2000 → 1000 → 500 Bq. Therefore the activity after 32 days is 500 Bq."
+  },
+  {
+   "n": 26,
+   "topic": "Atomic and nuclear physics",
+   "q": "In a nuclear reaction, nitrogen-14 is bombarded by an alpha particle to produce oxygen-17 and a particle X. Which particle is X?",
+   "options": [
+    "A neutron",
+    "A proton",
+    "A beta-minus particle",
+    "An alpha particle"
+   ],
+   "answer": 1,
+   "explanation": "Balancing mass numbers gives 14 + 4 = 17 + 1, so X has mass number 1. Balancing atomic numbers gives 7 + 2 = 8 + 1, so X has atomic number 1. A particle with mass number 1 and atomic number 1 is a proton."
+  },
+  {
+   "n": 27,
+   "topic": "Sound",
+   "q": "During a thunderstorm in Makurdi, a student sees a lightning flash and hears the thunder 3.0 s later. If the speed of sound in air is 330 m/s and the time taken by light is negligible, how far is the lightning from the student?",
+   "options": [
+    "2 970 m",
+    "330 m",
+    "990 m",
+    "110 m"
+   ],
+   "answer": 2,
+   "explanation": "For sound moving at constant speed, distance = speed × time = 330 × 3.0 = 990 m. Dividing instead of multiplying gives 110 m, and using 3.0² in the calculation gives 2 970 m."
+  },
+  {
+   "n": 28,
+   "topic": "Sound",
+   "q": "A guitar string in Enugu is sounded with a tuning fork of frequency 256 Hz and 5 beats per second are heard. When the tension of the string is slightly increased, the beat frequency decreases. What is the original frequency of the string?",
+   "options": [
+    "261 Hz",
+    "256 Hz",
+    "266 Hz",
+    "251 Hz"
+   ],
+   "answer": 3,
+   "explanation": "The string frequency must differ from 256 Hz by 5 Hz, so it is either 251 Hz or 261 Hz. Increasing the tension raises the string frequency; for the beat frequency to decrease, the string frequency must move closer to 256 Hz, so it was originally 251 Hz."
+  },
+  {
+   "n": 29,
+   "topic": "Gas laws",
+   "q": "A rigid cylinder contains argon at a pressure of 2.4 × 10^5 Pa and a temperature of 400 K. The gas is cooled to 300 K while the volume remains constant. What is the new pressure?",
+   "options": [
+    "3.2 × 10^5 Pa",
+    "1.8 × 10^5 Pa",
+    "6.0 × 10^4 Pa",
+    "2.4 × 10^5 Pa"
+   ],
+   "answer": 1,
+   "explanation": "For a fixed mass at constant volume, P/T is constant, so P₂ = P₁T₂/T₁. Thus P₂ = 2.4×10^5 × 300/400 = 1.8×10^5 Pa. Using the inverse ratio gives 3.2×10^5 Pa, which would apply if the temperature increased rather than decreased."
+  },
+  {
+   "n": 30,
+   "topic": "Gas laws",
+   "q": "A steel cylinder contains 2.00 mol of helium at 300 K and occupies a volume of 0.0500 m³. Taking R = 8.31 J mol⁻¹ K⁻¹, calculate the pressure of the helium.",
+   "options": [
+    "4.98 × 10^3 Pa",
+    "4.99 × 10^4 Pa",
+    "1.99 × 10^5 Pa",
+    "9.97 × 10^4 Pa"
+   ],
+   "answer": 3,
+   "explanation": "Using the ideal gas equation, P = nRT/V. Substituting gives P = (2.00 × 8.31 × 300)/0.0500 = 9.97×10^4 Pa. Using 1.00 mol instead of 2.00 mol gives 4.99×10^4 Pa."
+  },
+  {
+   "n": 31,
+   "topic": "Scalars and vectors",
+   "q": "Which of the following pairs contains a scalar quantity followed by a vector quantity?",
+   "options": [
+    "distance and speed",
+    "momentum and force",
+    "work and acceleration",
+    "temperature and mass"
+   ],
+   "answer": 2,
+   "explanation": "Work is a scalar because it has magnitude only, whereas acceleration is a vector because it has both magnitude and direction. Momentum and force are both vectors, while temperature, mass, distance and speed are all scalars."
+  },
+  {
+   "n": 32,
+   "topic": "Scalars and vectors",
+   "q": "Adaeze cycles 8.0 km due north and then 15 km due east. What is the magnitude and direction of her resultant displacement? [Take tan⁻¹(15/8) = 61.9° and tan⁻¹(8/15) = 28.1°]",
+   "options": [
+    "23 km at 61.9° east of north",
+    "17 km at 61.9° east of north",
+    "17 km at 28.1° east of north",
+    "17 km at 61.9° north of east"
+   ],
+   "answer": 1,
+   "explanation": "The resultant magnitude is R = √(8.0² + 15²) = √289 = 17 km. The direction measured from north toward east is θ = tan⁻¹(15/8) = 61.9° east of north. The 28.1° value comes from using the ratio 8/15, and adding the magnitudes gives 23 km."
+  },
+  {
+   "n": 33,
+   "topic": "Newton’s laws and momentum",
+   "q": "A standing passenger in a bus moving at constant speed is thrown forward when the driver suddenly applies the brakes. Which statement best explains the observation?",
+   "options": [
+    "The bus exerts a forward reaction on him according to Newton’s third law.",
+    "A centrifugal force acts outward on him when the bus brakes.",
+    "His inertia tends to keep him in uniform motion while the bus slows down.",
+    "The normal reaction from the floor increases and pushes him forward."
+   ],
+   "answer": 2,
+   "explanation": "According to Newton’s first law, the passenger tends to continue moving forward with the speed of the bus when the bus decelerates. The forward sensation is due to inertia, not to a real forward push from the bus, the floor, or a centrifugal force."
+  },
+  {
+   "n": 34,
+   "topic": "Newton’s laws and momentum",
+   "q": "In Ibadan, a 3.0 kg trolley moving at 4.0 m/s collides with a stationary 5.0 kg trolley. They lock together after the collision. Calculate their common speed.",
+   "options": [
+    "0.80 m/s",
+    "4.0 m/s",
+    "2.4 m/s",
+    "1.5 m/s"
+   ],
+   "answer": 3,
+   "explanation": "Total momentum before collision is (3.0 × 4.0) = 12 kg m s⁻¹. After locking together, (3.0 + 5.0)v = 12, so v = 12/8.0 = 1.5 m/s. Dividing by only 5.0 kg gives 2.4 m/s, which wrongly ignores the mass of the moving trolley."
+  },
+  {
+   "n": 35,
+   "topic": "Newton’s laws and momentum",
+   "q": "A footballer in Enugu kicks a 0.40 kg ball initially at rest. The ball leaves his foot with a speed of 25 m/s, and the foot is in contact with the ball for 0.080 s. What average force does the foot exert on the ball?",
+   "options": [
+    "312.5 N",
+    "125 N",
+    "5.0 N",
+    "10 N"
+   ],
+   "answer": 1,
+   "explanation": "Impulse equals change in momentum: Ft = m(v − u). Thus F = (0.40 × 25)/0.080 = 125 N. The value 10 N is the impulse in N s, not the average force."
+  },
+  {
+   "n": 36,
+   "topic": "Heat and temperature",
+   "q": "A 0.750 kg aluminium block is heated from 25°C to 115°C. If the specific heat capacity of aluminium is 900 J kg⁻¹ K⁻¹, calculate the heat absorbed.",
+   "options": [
+    "6.75 × 10^4 J",
+    "6.075 × 10^4 J",
+    "7.76 × 10^4 J",
+    "1.69 × 10^4 J"
+   ],
+   "answer": 1,
+   "explanation": "The temperature change is 115°C − 25°C = 90 K. Heat absorbed Q = mcΔT = 0.750 × 900 × 90 = 60,750 J = 6.075×10^4 J. Using 115 or 25 as the temperature change gives the larger and smaller numerical values shown."
+  },
+  {
+   "n": 37,
+   "topic": "Heat and temperature",
+   "q": "A steel rail is 12.0 m long at 20°C. At 50°C its length becomes 12.00576 m. Calculate the linear expansivity of the steel.",
+   "options": [
+    "1.92 × 10^-4 K⁻¹",
+    "1.60 × 10^-3 K⁻¹",
+    "1.6 × 10^-5 K⁻¹",
+    "4.80 × 10^-4 K⁻¹"
+   ],
+   "answer": 2,
+   "explanation": "Linear expansivity is α = ΔL/(L₀ΔT). Here ΔL = 12.00576 − 12.0 = 0.00576 m and ΔT = 50 − 20 = 30 K. Hence α = 0.00576/(12.0 × 30) = 1.6×10^-5 K⁻¹. Omitting L₀ or ΔT in the calculation produces the other numerical values."
+  },
+  {
+   "n": 38,
+   "topic": "Electrostatics and capacitors",
+   "q": "Two point charges +8.0 μC and −2.0 μC are placed 0.30 m apart in air. At what point on the line joining them is the net electric field zero?",
+   "options": [
+    "0.20 m from the +8.0 μC charge towards the −2.0 μC charge",
+    "0.10 m from the −2.0 μC charge towards the +8.0 μC charge",
+    "0.60 m from the −2.0 μC charge on the side away from the +8.0 μC charge",
+    "0.30 m from the −2.0 μC charge on the side away from the +8.0 μC charge"
+   ],
+   "answer": 3,
+   "explanation": "The zero-field point is outside the two charges, on the side of the smaller charge. Let x be the distance from the −2.0 μC charge on the side away from the +8.0 μC charge. Equating magnitudes gives 8/(0.30+x)² = 2/x², which simplifies to 2x = 0.30+x, so x = 0.30 m. This point is therefore 0.30 m from the −2.0 μC charge on the side away from the +8.0 μC charge."
+  },
+  {
+   "n": 39,
+   "topic": "Electrostatics and capacitors",
+   "q": "A 3.0 μF capacitor and a 6.0 μF capacitor are connected in parallel. This combination is then connected in series with a 4.5 μF capacitor. Calculate the equivalent capacitance of the arrangement.",
+   "options": [
+    "3.0 μF",
+    "9.0 μF",
+    "4.5 μF",
+    "13.5 μF"
+   ],
+   "answer": 0,
+   "explanation": "The 3.0 μF and 6.0 μF capacitors in parallel give 3.0 + 6.0 = 9.0 μF. This 9.0 μF is in series with 4.5 μF, so 1/Ceq = 1/9.0 + 1/4.5 = 1/9.0 + 2/9.0 = 3/9.0, giving Ceq = 3.0 μF. Treating all as simply added gives 13.5 μF and ignores the series connection."
+  },
+  {
+   "n": 40,
+   "topic": "Work, energy and power",
+   "q": "A pump raises 1.2 m³ of water per minute through a vertical height of 10 m. Taking ρ = 1000 kg/m³ and g = 10 m/s², what useful power does the pump develop?",
+   "options": [
+    "12 kW",
+    "120 kW",
+    "0.20 kW",
+    "2.0 kW"
+   ],
+   "answer": 3,
+   "explanation": "Mass of water raised per minute = density × volume = 1000 × 1.2 = 1200 kg. Work done per minute = mgh = 1200 × 10 × 10 = 120,000 J. Power = 120,000 J ÷ 60 s = 2000 W = 2.0 kW. Using the minute value directly gives 120 kW, but power must be per second."
+  },
+  {
+   "n": 41,
+   "topic": "Work, energy and power",
+   "q": "A 2.0 kg object slides from rest down a smooth curved track from a height of 1.8 m. Taking g = 10 m/s², what is its speed at the bottom?",
+   "options": [
+    "18.0 m/s",
+    "3.0 m/s",
+    "9.0 m/s",
+    "6.0 m/s"
+   ],
+   "answer": 3,
+   "explanation": "At the top the object has potential energy mgh = 2.0 × 10 × 1.8 = 36 J, and at the bottom this becomes kinetic energy. From ½mv² = mgh, v = √(2gh) = √(2 × 10 × 1.8) = √36 = 6.0 m/s. The smooth track means no energy is lost to friction."
+  },
+  {
+   "n": 42,
+   "topic": "Elasticity and pressure",
+   "q": "A wire of length 3.0 m and cross-sectional area 1.0 mm² extends by 0.60 mm under a load of 120 N. Calculate Young's modulus of the wire.",
+   "options": [
+    "3.0 × 10¹¹ Pa",
+    "6.0 × 10¹¹ Pa",
+    "1.2 × 10¹² Pa",
+    "2.0 × 10¹¹ Pa"
+   ],
+   "answer": 1,
+   "explanation": "Stress = F/A = 120/(1.0 × 10⁻⁶) = 1.20 × 10⁸ Pa. Strain = e/L = (0.60 × 10⁻³)/3.0 = 2.0 × 10⁻⁴. Young's modulus = stress/strain = (1.20 × 10⁸)/(2.0 × 10⁻⁴) = 6.0 × 10¹¹ Pa. Forgetting to convert millimetres to metres gives a very different value."
+  },
+  {
+   "n": 43,
+   "topic": "Elasticity and pressure",
+   "q": "A rectangular tank filled with water is 1.5 m deep and has a base area of 2.0 m². Taking ρ = 1000 kg/m³ and g = 10 m/s², calculate the total force exerted by the water on the base.",
+   "options": [
+    "3,000 N",
+    "30,000 N",
+    "60,000 N",
+    "15,000 N"
+   ],
+   "answer": 1,
+   "explanation": "Pressure due to water at the base = ρgh = 1000 × 10 × 1.5 = 15,000 Pa. The area of the base is 2.0 m², so force = pressure × area = 15,000 × 2.0 = 30,000 N. Quoting 15,000 N gives the pressure numerically but omits the base area."
+  },
+  {
+   "n": 44,
+   "topic": "Magnetism and electromagnetic induction",
+   "q": "A long straight wire in Kano carries a current of 10 A. Calculate the magnetic flux density at a point 0.50 m from the wire. [μ₀ = 4π × 10⁻⁷ T m/A]",
+   "options": [
+    "1.0 × 10⁻⁵ T",
+    "8.0 × 10⁻⁶ T",
+    "4.0 × 10⁻⁶ T",
+    "2.0 × 10⁻⁶ T"
+   ],
+   "answer": 2,
+   "explanation": "For a long straight wire, B = μ₀I/(2πr). Using μ₀ = 4π × 10⁻⁷ T m/A gives B = (4π × 10⁻⁷ × 10)/(2π × 0.50) = 4.0 × 10⁻⁶ T. Omitting the factor 2π or using diameter instead of distance leads to the other values."
+  },
+  {
+   "n": 45,
+   "topic": "Magnetism and electromagnetic induction",
+   "q": "An ideal transformer in Jos has a primary voltage of 240 V and a secondary voltage of 12 V. If the secondary current is 5.0 A, calculate the primary current.",
+   "options": [
+    "5.0 A",
+    "0.25 A",
+    "0.50 A",
+    "100 A"
+   ],
+   "answer": 1,
+   "explanation": "For an ideal transformer, power in the primary equals power in the secondary. Secondary power = V_s I_s = 12 × 5.0 = 60 W, so 240 × I_p = 60, giving I_p = 0.25 A. Multiplying by the voltage ratio instead of dividing would give 100 A."
+  },
+  {
+   "n": 46,
+   "topic": "Electrostatics and capacitors",
+   "q": "A 10 μF capacitor is charged to 100 V and then disconnected from the supply. A dielectric of relative permittivity 5 is then used to fill the space between its plates. What is the new potential difference across the capacitor?",
+   "options": [
+    "10 V",
+    "500 V",
+    "20 V",
+    "100 V"
+   ],
+   "answer": 2,
+   "explanation": "Charge on the capacitor before inserting the dielectric is Q = CV = 10 μF × 100 V = 1000 μC. Since the capacitor is disconnected, this charge remains constant. The dielectric increases capacitance to 5 × 10 μF = 50 μF, so the new potential difference is V = Q/C = 1000 μC ÷ 50 μF = 20 V. Multiplying the original voltage by 5 instead of reducing it gives 500 V."
+  },
+  {
+   "n": 47,
+   "topic": "Current electricity",
+   "q": "An electric iron rated 1.5 kW is used on a 240 V supply for 2.0 h. If electrical energy costs ₦50 per kWh, how much does the energy used cost?",
+   "options": [
+    "₦150",
+    "₦1,500",
+    "₦300",
+    "₦75"
+   ],
+   "answer": 0,
+   "explanation": "The energy used is 1.5 kW × 2.0 h = 3.0 kWh. At ₦50 per kWh, the cost is 3.0 × ₦50 = ₦150. The value ₦75 would result from using only 1.5 kWh, not 3.0 kWh."
+  },
+  {
+   "n": 48,
+   "topic": "Current electricity",
+   "q": "Two resistors of 4.0 Ω and 12 Ω are connected in parallel. This combination is then connected in series with a 5.0 Ω resistor across a 12 V battery of negligible internal resistance. What is the potential difference across the parallel combination?",
+   "options": [
+    "3.0 V",
+    "7.5 V",
+    "4.5 V",
+    "9.0 V"
+   ],
+   "answer": 2,
+   "explanation": "The parallel resistance is (4.0 × 12)/(4.0 + 12) = 3.0 Ω. Total resistance is 3.0 Ω + 5.0 Ω = 8.0 Ω, so the current is 12 V ÷ 8.0 Ω = 1.5 A. The p.d. across the parallel combination is 1.5 A × 3.0 Ω = 4.5 V; 7.5 V is the p.d. across the 5.0 Ω resistor."
+  },
+  {
+   "n": 49,
+   "topic": "Light and optics",
+   "q": "A coin lies at the bottom of a swimming pool 1.80 m deep. If the refractive index of water is 4/3, what is the apparent depth of the coin?",
+   "options": [
+    "1.50 m",
+    "0.45 m",
+    "2.40 m",
+    "1.35 m"
+   ],
+   "answer": 3,
+   "explanation": "Apparent depth = real depth ÷ refractive index = 1.80 m ÷ (4/3) = 1.35 m. Multiplying by 4/3 instead of dividing gives 2.40 m, which is a common error."
+  },
+  {
+   "n": 50,
+   "topic": "Light and optics",
+   "q": "A converging lens has a focal length of 25 cm. What is its power?",
+   "options": [
+    "−4.0 D",
+    "4.0 D",
+    "0.04 D",
+    "25.0 D"
+   ],
+   "answer": 1,
+   "explanation": "The power of a lens is P = 1/f, with f in metres. Here f = 25 cm = 0.25 m, so P = 1/0.25 = 4.0 D; a converging lens has positive power."
+  }
+ ]
+}

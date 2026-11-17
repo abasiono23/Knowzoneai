@@ -458,6 +458,34 @@ const videos = {
     sceneHeading: 'Scene {{number}} heading',
     sceneNarration: 'Scene {{number}} narration',
   },
+  /** Lessons with Kora: three-minute lessons a cartoon Kora teaches (the lessons themselves are in English). */
+  kora: {
+    title: 'Lessons with Kora',
+    subtitle: 'Three-minute lessons taught by Kora, with a quick check in each one.',
+    name: 'Kora',
+    role: 'your AI tutor',
+    english: 'English',
+    minutes: '{{n}} min',
+    watched: 'Watched',
+    open: 'Open lesson: {{title}}',
+    groups: {
+      exam: 'For {{exams}}',
+      cyber: 'Cybersecurity',
+      skills: 'Study skills',
+    },
+    start: 'Start lesson',
+    loading: 'Loading the lesson…',
+    loadFailed: 'This lesson didn’t load. Check your connection and try again.',
+    listFailed: 'We couldn’t load the lessons. Check your connection and try again.',
+    part: 'Part {{n}} of {{total}}: {{title}}',
+    pauseAndTry: 'Pause and try',
+    continuesIn: 'Continues in {{n}} s',
+    continue: 'Continue',
+    back10: 'Back 10 seconds',
+    finishedTitle: 'Lesson complete',
+    finishedBody: 'Nice work. Try another lesson, or ask Kora about anything you’re unsure of.',
+    moreLessons: 'More lessons',
+  },
 };
 
 export default videos;

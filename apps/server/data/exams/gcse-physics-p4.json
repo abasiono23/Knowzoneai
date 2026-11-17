@@ -1,0 +1,401 @@
+{
+ "id": "gcse-physics-p4",
+ "exam": "gcse",
+ "subject": "physics",
+ "year": null,
+ "number": 4,
+ "source": "ai",
+ "minutes": 35,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Space physics",
+   "q": "Which statement defines a light-year?",
+   "options": [
+    "The distance travelled by light in a vacuum in one year.",
+    "The average distance from Earth to the Sun.",
+    "The distance light travels through a material in one second.",
+    "The time taken for light to travel from the Sun to Earth."
+   ],
+   "answer": 0,
+   "explanation": "A light-year is a unit of distance, not a unit of time. It is the distance that light travels in a vacuum in one year, which is about 9.5 × 10¹² km. The average Earth–Sun distance is one astronomical unit, not a light-year."
+  },
+  {
+   "n": 2,
+   "topic": "Waves",
+   "q": "Which statement about a longitudinal wave is correct?",
+   "options": [
+    "The oscillations are perpendicular to the direction in which the wave transfers energy.",
+    "The oscillations are parallel to the direction in which the wave transfers energy.",
+    "The particles of the medium travel along with the wave.",
+    "It can transfer energy through a vacuum without a medium."
+   ],
+   "answer": 1,
+   "explanation": "In a longitudinal wave, such as a sound wave, the particles oscillate parallel to the direction of energy transfer. The particles vibrate about fixed positions and do not travel along with the wave. A sound wave cannot travel through a vacuum because there are no particles to vibrate."
+  },
+  {
+   "n": 3,
+   "topic": "Forces and motion",
+   "q": "A trolley of mass 4.0 kg is pushed with a forward force of 12 N. A friction force of 5.0 N acts backwards. What is the acceleration of the trolley?",
+   "options": [
+    "1.75 m/s²",
+    "4.25 m/s²",
+    "3.0 m/s²",
+    "1.25 m/s²"
+   ],
+   "answer": 0,
+   "explanation": "The resultant force is 12 N − 5.0 N = 7.0 N. Using a = F ÷ m gives 7.0 N ÷ 4.0 kg = 1.75 m/s². The value 3.0 m/s² would be obtained by ignoring friction, while 4.25 m/s² comes from adding the forces instead of subtracting them."
+  },
+  {
+   "n": 4,
+   "topic": "Particle model of matter",
+   "q": "A stone has a mass of 0.48 kg and a volume of 160 cm³. What is its density?",
+   "options": [
+    "30 000 kg/m³",
+    "3000 kg/m³",
+    "3.0 kg/m³",
+    "0.0030 kg/m³"
+   ],
+   "answer": 1,
+   "explanation": "160 cm³ = 160 × 10⁻⁶ m³ = 1.6 × 10⁻⁴ m³. Density = mass ÷ volume = 0.48 kg ÷ 1.6 × 10⁻⁴ m³ = 3000 kg/m³. Equivalently, 0.48 kg is 480 g, and 480 g ÷ 160 cm³ = 3.0 g/cm³, which is 3000 kg/m³."
+  },
+  {
+   "n": 5,
+   "topic": "Space physics",
+   "q": "A galaxy's spectrum shows its spectral lines shifted towards the red end compared with the same lines measured in a laboratory. What does this indicate about the galaxy?",
+   "options": [
+    "It is moving away from Earth, so the observed wavelengths are stretched.",
+    "It is stationary relative to Earth but cooler than the laboratory source.",
+    "It is moving towards Earth, so the observed wavelengths are compressed.",
+    "It is moving across the line of sight, which lengthens its wavelengths."
+   ],
+   "answer": 0,
+   "explanation": "A redshift means the observed wavelengths are longer than in the laboratory. This happens when the source is moving away from the observer, so the waves are stretched. Motion across the line of sight does not produce this red shift in the galaxy's spectral lines."
+  },
+  {
+   "n": 6,
+   "topic": "Waves",
+   "q": "A ray of light passes from air into a glass block at a non-zero angle to the normal. It slows down as it enters the glass. What happens to the ray at the boundary?",
+   "options": [
+    "It bends towards the normal because its speed decreases.",
+    "It bends away from the normal because its speed decreases.",
+    "It bends towards the normal because its frequency decreases.",
+    "It continues in the same direction because its frequency stays the same."
+   ],
+   "answer": 0,
+   "explanation": "When light enters glass and slows down, it refracts towards the normal. The frequency stays the same, but the wavelength becomes shorter, and the change in speed causes the direction to change at an angle. The frequency does not decrease at the boundary."
+  },
+  {
+   "n": 7,
+   "topic": "Forces and motion",
+   "q": "A crane lifts a 120 kg load vertically through 6.0 m in 15 s. Take g = 10 N/kg. What is the useful power of the crane?",
+   "options": [
+    "7200 W",
+    "48 W",
+    "1200 W",
+    "480 W"
+   ],
+   "answer": 3,
+   "explanation": "The weight of the load is 120 kg × 10 N/kg = 1200 N. Work done = force × distance = 1200 N × 6.0 m = 7200 J. Power = work done ÷ time = 7200 J ÷ 15 s = 480 W. The value 7200 W is the work done expressed with the wrong unit, not the power."
+  },
+  {
+   "n": 8,
+   "topic": "Particle model of matter",
+   "q": "While a pure solid is melting at its melting point, energy is supplied at a steady rate. Which statement explains why its temperature does not rise during melting?",
+   "options": [
+    "The energy supplied is lost to the surroundings, so the particles do not gain any energy.",
+    "Energy is used to overcome forces between particles, increasing their potential energy rather than their average kinetic energy.",
+    "The average kinetic energy of the particles must fall as the solid changes to a liquid.",
+    "The particles stop taking in energy until all the solid has melted."
+   ],
+   "answer": 1,
+   "explanation": "During melting, the energy supplied increases the internal energy by changing the arrangement of the particles. It increases their potential energy by overcoming the forces between particles, while the average kinetic energy and temperature stay constant. The particles continue to take in energy throughout the change of state."
+  },
+  {
+   "n": 9,
+   "topic": "Space physics",
+   "q": "An artificial satellite moves in a circular orbit around Earth at a constant speed. Why does its velocity keep changing?",
+   "options": [
+    "The satellite's mass changes as it moves around Earth.",
+    "Gravity acts in the same direction as its motion, so its speed changes.",
+    "Its speed is constant, so its velocity cannot change.",
+    "The direction of its motion changes continuously, and velocity has both speed and direction."
+   ],
+   "answer": 3,
+   "explanation": "Velocity is a vector, so it depends on both speed and direction. In a circular orbit the satellite's speed stays constant, but its direction changes continuously, so its velocity changes. Gravity acts perpendicular to the motion and changes the direction without changing the speed."
+  },
+  {
+   "n": 10,
+   "topic": "Forces and motion",
+   "q": "Which factor increases the thinking distance of a car but does not directly change the braking distance?",
+   "options": [
+    "The road surface becomes wet.",
+    "The car carries a heavier load.",
+    "The brake pads are worn.",
+    "A tired driver has a slower reaction time."
+   ],
+   "answer": 3,
+   "explanation": "Thinking distance depends on the driver's reaction time and the car's speed. Tiredness increases reaction time, so the car travels further before the brakes are applied. Wet roads, worn brake pads and a heavier load affect the braking distance rather than directly changing reaction time."
+  },
+  {
+   "n": 11,
+   "topic": "Electricity",
+   "q": "An electric motor is connected to a 12 V supply. It draws a steady current of 0.50 A for 2.0 minutes. How much energy is transferred by the motor?",
+   "options": [
+    "6.0 J",
+    "720 J",
+    "1 440 J",
+    "12 J"
+   ],
+   "answer": 1,
+   "explanation": "The power is P = VI = 12 × 0.50 = 6.0 W. The time is 2.0 minutes = 120 s, so the energy transferred is E = Pt = 6.0 × 120 = 720 J. Using 2.0 minutes directly as the time gives 12 J, which is incorrect because time must be in seconds."
+  },
+  {
+   "n": 12,
+   "topic": "Electricity",
+   "q": "A fixed resistor is kept at constant temperature. Which statement describes its electrical behaviour?",
+   "options": [
+    "The current through the resistor is directly proportional to the potential difference across it.",
+    "The resistance of the resistor increases as the current increases.",
+    "The resistor has zero resistance when the potential difference is zero.",
+    "The current through the resistor is inversely proportional to the potential difference across it."
+   ],
+   "answer": 0,
+   "explanation": "For a fixed resistor at constant temperature, resistance is constant, so current is directly proportional to potential difference. Doubling the potential difference doubles the current. The resistance does not increase with current in this case."
+  },
+  {
+   "n": 13,
+   "topic": "Electricity",
+   "q": "A 6.0 V battery is connected to two resistors in series: an 8.0 Ω resistor and a 4.0 Ω resistor. What is the potential difference across the 4.0 Ω resistor?",
+   "options": [
+    "3.0 V",
+    "6.0 V",
+    "2.0 V",
+    "4.0 V"
+   ],
+   "answer": 2,
+   "explanation": "The total resistance is 8.0 Ω + 4.0 Ω = 12 Ω, so the current is I = V/R = 6.0/12 = 0.50 A. The potential difference across the 4.0 Ω resistor is V = IR = 0.50 × 4.0 = 2.0 V. The 4.0 V value would be the potential difference across the 8.0 Ω resistor."
+  },
+  {
+   "n": 14,
+   "topic": "Magnetism and electromagnetism",
+   "q": "An ideal transformer has 200 turns on the primary coil and 50 turns on the secondary coil. The primary coil is connected to a 12 V alternating supply. What is the potential difference across the secondary coil?",
+   "options": [
+    "0.060 V",
+    "48 V",
+    "12 V",
+    "3.0 V"
+   ],
+   "answer": 3,
+   "explanation": "For an ideal transformer, Vs/Vp = Ns/Np. Here Ns/Np = 50/200 = 1/4, so Vs = 12 × 1/4 = 3.0 V. Using the turns ratio upside down would give 48 V."
+  },
+  {
+   "n": 15,
+   "topic": "Magnetism and electromagnetism",
+   "q": "A straight wire carries conventional current vertically upwards on the page. The wire is in a uniform magnetic field that points from left to right across the page. In which direction does the magnetic force on the wire act?",
+   "options": [
+    "Out of the page, towards the reader",
+    "Into the page, away from the reader",
+    "Vertically downwards",
+    "From right to left"
+   ],
+   "answer": 1,
+   "explanation": "Using Fleming's left-hand rule, the magnetic field points left to right and the conventional current points upwards. The resulting force is into the page, away from the reader. Reversing the current or the field would reverse that direction."
+  },
+  {
+   "n": 16,
+   "topic": "Energy",
+   "q": "A small electric motor raises a 5.0 kg load vertically through 6.0 m in 4.0 s. The electrical power input to the motor is 120 W. Use g = 10 N/kg. What is the efficiency of the motor?",
+   "options": [
+    "37.5%",
+    "80%",
+    "25%",
+    "62.5%"
+   ],
+   "answer": 3,
+   "explanation": "Useful output energy is mgh = 5.0 × 10 × 6.0 = 300 J. Electrical input energy is Pt = 120 × 4.0 = 480 J. Efficiency = useful output/input × 100 = 300/480 × 100 = 62.5%. The 37.5% value is the wasted-energy fraction, not the efficiency."
+  },
+  {
+   "n": 17,
+   "topic": "Energy",
+   "q": "Mateusz uses a 2.0 kW electric heater to transfer 900 kJ of energy. How long is the heater switched on for?",
+   "options": [
+    "450 minutes",
+    "22.2 minutes",
+    "7.5 minutes",
+    "0.45 minutes"
+   ],
+   "answer": 2,
+   "explanation": "Energy transferred is power × time, so time = energy/power. Converting 900 kJ to 900 000 J gives t = 900 000/2 000 = 450 s. This is 450/60 = 7.5 minutes. The time must be in seconds when the power is in watts, because a watt is one joule per second."
+  },
+  {
+   "n": 18,
+   "topic": "Atomic structure and radioactivity",
+   "q": "A radioactive source has a count rate of 240 counts per minute. After 12 days, the count rate is 60 counts per minute. The background count rate is negligible. What is the half-life of the source?",
+   "options": [
+    "3 days",
+    "6 days",
+    "24 days",
+    "12 days"
+   ],
+   "answer": 1,
+   "explanation": "The count rate falls from 240 to 60 counts per minute, which is a factor of 4. A factor of 4 corresponds to two half-lives because 240 → 120 → 60. The half-life is therefore 12 days ÷ 2 = 6 days."
+  },
+  {
+   "n": 19,
+   "topic": "Atomic structure and radioactivity",
+   "q": "Sodium-24 has mass number 24 and atomic number 11. It undergoes beta decay. Which nucleus is produced?",
+   "options": [
+    "Magnesium-24 (mass number 24, atomic number 12)",
+    "Aluminium-24 (mass number 24, atomic number 13)",
+    "Neon-24 (mass number 24, atomic number 10)",
+    "Sodium-23 (mass number 23, atomic number 11)"
+   ],
+   "answer": 0,
+   "explanation": "In beta decay, a neutron changes into a proton and an electron, so the proton number increases by 1 while the mass number stays the same. Sodium has atomic number 11, so the new nucleus has atomic number 12, which is magnesium. Its mass number remains 24."
+  },
+  {
+   "n": 20,
+   "topic": "Atomic structure and radioactivity",
+   "q": "An ion contains 12 protons, 12 neutrons and 10 electrons. Which description is correct?",
+   "options": [
+    "A magnesium ion, Mg⁺",
+    "A magnesium ion, Mg²⁺",
+    "A neon atom, Ne",
+    "An aluminium ion, Al³⁺"
+   ],
+   "answer": 1,
+   "explanation": "The number of protons determines the element: 12 protons means magnesium. There are 12 protons but only 10 electrons, so the ion has a charge of 2+ because it has two fewer electrons than protons. The 12 neutrons do not affect the charge."
+  },
+  {
+   "n": 21,
+   "topic": "Space physics",
+   "q": "A satellite moves in a circular orbit of radius 8.0 × 10⁶ m with an orbital period of 2.0 hours. Use π = 3.14. What is its orbital speed? Give your answer to 2 significant figures.",
+   "options": [
+    "1.4 × 10⁴ m/s",
+    "5.0 × 10⁷ m/s",
+    "7.0 × 10³ m/s",
+    "3.5 × 10³ m/s"
+   ],
+   "answer": 2,
+   "explanation": "The orbital circumference is 2πr = 2 × 3.14 × 8.0 × 10⁶ = 5.024 × 10⁷ m. The period is 2.0 × 3600 = 7200 s. Speed = circumference ÷ period = 5.024 × 10⁷ ÷ 7200 = 6.98 × 10³ m/s, which is 7.0 × 10³ m/s to 2 significant figures."
+  },
+  {
+   "n": 22,
+   "topic": "Space physics",
+   "q": "A moon moves in a circular orbit around a planet. Which statement describes the gravitational force on the moon due to the planet?",
+   "options": [
+    "It acts in the same direction as the moon's velocity.",
+    "It acts directly away from the planet.",
+    "It acts towards the centre of the planet.",
+    "It is zero because the moon moves at constant speed."
+   ],
+   "answer": 2,
+   "explanation": "The gravitational force from the planet acts towards the planet's centre and provides the force needed to change the moon's direction continuously. Moving at constant speed in a circle still requires a resultant force; a zero force would make the moon travel in a straight line."
+  },
+  {
+   "n": 23,
+   "topic": "Waves",
+   "q": "A research ship off the coast of Cardiff sends an ultrasound pulse vertically down to the seabed. The echo returns 0.80 s later. Sound travels through the seawater at 1500 m/s. How deep is the seabed?",
+   "options": [
+    "300 m",
+    "600 m",
+    "1200 m",
+    "2400 m"
+   ],
+   "answer": 1,
+   "explanation": "The pulse travels to the seabed and back, so the total distance is speed × time = 1500 × 0.80 = 1200 m. The depth is half the total distance: 1200 ÷ 2 = 600 m. The value 1200 m is the full there-and-back distance, not the depth."
+  },
+  {
+   "n": 24,
+   "topic": "Waves",
+   "q": "A monochromatic light wave passes from air into glass. Its frequency stays the same. The speed of light in glass is less than in air. What happens to the wavelength of the light in the glass?",
+   "options": [
+    "It decreases.",
+    "It decreases only if the frequency also decreases.",
+    "It stays the same.",
+    "It increases."
+   ],
+   "answer": 0,
+   "explanation": "The wave equation is v = f × λ, so λ = v ÷ f. The frequency is unchanged and the speed is smaller in glass, so the wavelength must be smaller. Wavelength does not stay the same because the speed changes."
+  },
+  {
+   "n": 25,
+   "topic": "Waves",
+   "q": "A sound wave has a period of 0.0025 s and a wavelength of 0.85 m. What is its speed?",
+   "options": [
+    "0.0021 m/s",
+    "0.0029 m/s",
+    "340 m/s",
+    "400 m/s"
+   ],
+   "answer": 2,
+   "explanation": "The frequency is 1 ÷ period = 1 ÷ 0.0025 = 400 Hz. Speed = frequency × wavelength = 400 × 0.85 = 340 m/s. The value 400 m/s is the frequency alone, not the wave speed."
+  },
+  {
+   "n": 26,
+   "topic": "Forces and motion",
+   "q": "Amira is driving a car of mass 1200 kg. It accelerates from 8.0 m/s to 20.0 m/s in 6.0 s. What is the resultant force on the car?",
+   "options": [
+    "4000 N",
+    "1600 N",
+    "2400 N",
+    "14,400 N"
+   ],
+   "answer": 2,
+   "explanation": "Acceleration = change in velocity ÷ time = (20.0 − 8.0) ÷ 6.0 = 2.0 m/s². Resultant force = mass × acceleration = 1200 × 2.0 = 2400 N. The value 14,400 N would come from multiplying mass by the change in velocity without dividing by time."
+  },
+  {
+   "n": 27,
+   "topic": "Forces and motion",
+   "q": "Rhys cycles in a straight line. A velocity–time graph starts at 0 m/s at 0 s, rises in a straight line to 10 m/s at 5 s, stays constant at 10 m/s from 5 s to 15 s, then falls in a straight line to 0 m/s at 20 s. What is the total distance travelled by Rhys?",
+   "options": [
+    "100 m",
+    "200 m",
+    "125 m",
+    "150 m"
+   ],
+   "answer": 3,
+   "explanation": "Distance travelled is the area under the velocity–time graph. The first triangle has area ½ × 5 × 10 = 25 m, the constant section has area 10 × 10 = 100 m, and the final triangle has area ½ × 5 × 10 = 25 m. The total is 25 + 100 + 25 = 150 m."
+  },
+  {
+   "n": 28,
+   "topic": "Forces and motion",
+   "q": "A skydiver falls at a constant terminal velocity before opening the parachute. Which statement is correct?",
+   "options": [
+    "The upward air resistance equals the downward weight.",
+    "The downward weight is greater than the upward air resistance.",
+    "No forces act on the skydiver.",
+    "The upward air resistance is greater than the downward weight."
+   ],
+   "answer": 0,
+   "explanation": "Constant terminal velocity means the acceleration is zero, so the resultant force is zero. The upward air resistance and downward weight are equal and opposite; if either were larger, the skydiver would accelerate in that direction."
+  },
+  {
+   "n": 29,
+   "topic": "Particle model of matter",
+   "q": "Priya measures a cuboid with dimensions 5.0 cm × 4.0 cm × 2.0 cm and a mass of 320 g. What is its density?",
+   "options": [
+    "16.0 g/cm³",
+    "32.0 g/cm³",
+    "0.125 g/cm³",
+    "8.0 g/cm³"
+   ],
+   "answer": 3,
+   "explanation": "Volume = 5.0 × 4.0 × 2.0 = 40 cm³. Density = mass ÷ volume = 320 ÷ 40 = 8.0 g/cm³. The value 16.0 g/cm³ comes from using only the area 5.0 × 4.0 cm² instead of the full volume."
+  },
+  {
+   "n": 30,
+   "topic": "Particle model of matter",
+   "q": "Which statement best explains why a gas exerts a pressure on the walls of its container?",
+   "options": [
+    "Gas particles have no mass, so they transfer energy to the walls.",
+    "Gas particles collide with the walls, exerting a force at right angles to the wall.",
+    "Gas particles repel one another, pushing the walls outwards.",
+    "Gas particles are held in fixed positions and vibrate against the walls."
+   ],
+   "answer": 1,
+   "explanation": "Pressure is caused by the force of many random gas particle collisions with the container walls per unit area. The particles are moving randomly, not held in fixed positions, and they do have mass."
+  }
+ ]
+}

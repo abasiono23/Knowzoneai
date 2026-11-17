@@ -1,0 +1,401 @@
+{
+ "id": "gcse-biology-p4",
+ "exam": "gcse",
+ "subject": "biology",
+ "year": null,
+ "number": 4,
+ "source": "ai",
+ "minutes": 35,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Inheritance, variation and evolution",
+   "q": "In a diploid organism, a body cell has 32 chromosomes. Which row correctly describes the number of chromosomes in a gamete produced by meiosis and in the zygote formed after fertilisation?",
+   "options": [
+    "16 in the gamete and 64 in the zygote",
+    "32 in the gamete and 64 in the zygote",
+    "8 in the gamete and 16 in the zygote",
+    "16 in the gamete and 32 in the zygote"
+   ],
+   "answer": 3,
+   "explanation": "Meiosis halves the chromosome number, so a body cell with 32 chromosomes produces gametes with 16. At fertilisation, two gametes fuse, restoring the diploid number: 16 + 16 = 32 in the zygote. The row with 8 in the gamete is wrong because chromosome number is not halved twice; the row with 64 in the zygote is wrong because fusion restores, not doubles, the body-cell number."
+  },
+  {
+   "n": 2,
+   "topic": "Inheritance, variation and evolution",
+   "q": "In snapdragons, flower colour is controlled by two alleles: RR gives red, WW gives white, and RW gives pink. Two pink-flowered plants are crossed. What proportion of the offspring is expected to be pink?",
+   "options": [
+    "1/4 (25%)",
+    "1/2 (50%)",
+    "3/4 (75%)",
+    "0 (0%)"
+   ],
+   "answer": 1,
+   "explanation": "A cross between two RW plants gives RR, RW, RW and WW in equal proportions. Two of these four outcomes are pink (RW), so the expected proportion is 2/4 = 1/2. An answer of 1/4 would be the proportion of red or white offspring, not pink."
+  },
+  {
+   "n": 3,
+   "topic": "Inheritance, variation and evolution",
+   "q": "Which statement about mutations is correct?",
+   "options": [
+    "Most mutations do not change the phenotype.",
+    "Mutations happen because organisms need to adapt.",
+    "All mutations are harmful to the organism.",
+    "Mutations are always passed to offspring."
+   ],
+   "answer": 0,
+   "explanation": "Mutations are random changes in DNA, and most occur without changing the phenotype. Some are harmful or beneficial, but they are not caused by an organism needing to adapt, and only mutations in gametes can be passed to offspring. The statement that all mutations are harmful ignores neutral mutations."
+  },
+  {
+   "n": 4,
+   "topic": "Infection and response",
+   "q": "Which statement correctly describes the cause of malaria and how it is transmitted?",
+   "options": [
+    "A protozoan pathogen carried by mosquitoes.",
+    "A fungus spread by direct skin contact.",
+    "A bacterium spread by contaminated drinking water.",
+    "A virus spread by droplets in the air."
+   ],
+   "answer": 0,
+   "explanation": "Malaria is caused by Plasmodium, a protozoan pathogen, and is transmitted by mosquitoes that act as vectors. It is not caused by a bacterium, virus or fungus. Confusing malaria with a water-borne bacterial disease is a common error because both can cause fever."
+  },
+  {
+   "n": 5,
+   "topic": "Infection and response",
+   "q": "Why does infection with HIV make a person more vulnerable to other infections?",
+   "options": [
+    "HIV destroys red blood cells, so less oxygen reaches the immune system.",
+    "HIV forms a barrier over the skin, so pathogens enter more easily.",
+    "HIV breaks down antibodies in the blood, so pathogens cannot be recognised.",
+    "HIV destroys white blood cells, so the immune response is weakened."
+   ],
+   "answer": 3,
+   "explanation": "HIV infects and destroys white blood cells, especially helper T cells, so the immune system cannot coordinate an effective response. It does not destroy red blood cells or digest antibodies. This is why other pathogens can cause serious illness more easily."
+  },
+  {
+   "n": 6,
+   "topic": "Cell biology",
+   "q": "A human body cell with 46 chromosomes divides by mitosis. What is the chromosome number in each daughter cell and how do the daughter cells compare genetically with the parent cell?",
+   "options": [
+    "23 chromosomes; genetically different from the parent cell",
+    "46 chromosomes; genetically different from the parent cell",
+    "46 chromosomes; genetically identical to the parent cell",
+    "23 chromosomes; genetically identical to the parent cell"
+   ],
+   "answer": 2,
+   "explanation": "Mitosis produces two daughter cells with the same chromosome number as the parent cell, so 46 chromosomes remain in each daughter cell. The daughter cells are genetically identical to the parent cell apart from rare mutations. Answers giving 23 chromosomes describe meiosis, not mitosis."
+  },
+  {
+   "n": 7,
+   "topic": "Cell biology",
+   "q": "Which statement about adult stem cells is correct?",
+   "options": [
+    "They cannot divide, so they cannot repair damaged tissues.",
+    "They are found only in embryos and are not present in adults.",
+    "They can divide and differentiate into a limited range of specialised cell types.",
+    "They can differentiate into any type of specialised cell in the body."
+   ],
+   "answer": 2,
+   "explanation": "Adult stem cells can divide and differentiate into a limited range of specialised cells, such as certain blood cells or tissue-repair cells. They are not able to form every cell type and are not found only in embryos. The statement that they cannot divide is wrong because stem cells must divide to replace cells."
+  },
+  {
+   "n": 8,
+   "topic": "Ecology",
+   "q": "In a pond, water fleas eat algae and small fish eat water fleas. If the small fish are removed, which change is most likely in the short term?",
+   "options": [
+    "Algae increase and water fleas remain unchanged.",
+    "Algae and water fleas both decrease.",
+    "Water fleas increase, so algae decrease.",
+    "Water fleas decrease, so algae increase."
+   ],
+   "answer": 2,
+   "explanation": "Small fish are predators of water fleas, so removing the fish removes predation pressure and the water-flea population is likely to rise. More water fleas eat more algae, so the algal population falls in the short term. The opposite answer confuses predator and prey effects."
+  },
+  {
+   "n": 9,
+   "topic": "Ecology",
+   "q": "In a woodland food chain, one large oak tree supports many caterpillars, which support fewer blue tits. A pyramid of numbers is drawn with a narrow bottom bar for oak trees and a wider bar above for caterpillars. Which statement best explains this shape?",
+   "options": [
+    "One large oak tree can provide food for many small caterpillars, so numbers of organisms do not always follow a normal pyramid shape.",
+    "Caterpillars are producers, so they are always more numerous than the trees they feed on.",
+    "Energy is lost at each stage, so there must be more caterpillars than oak trees.",
+    "The oak tree is a consumer, so it is shown as a narrow bar because consumers are rare."
+   ],
+   "answer": 0,
+   "explanation": "A pyramid of numbers counts organisms, not energy, and one very large oak tree can support many small caterpillars. This can make the bottom bar narrower than the bar for the caterpillars even though the oak is the producer. The food chain energy decreases at each stage, so an explanation saying energy is greater in caterpillars is incorrect."
+  },
+  {
+   "n": 10,
+   "topic": "Ecology",
+   "q": "Fertiliser containing nitrate runs into a pond. Which sequence best explains why fish may die?",
+   "options": [
+    "Algae grow rapidly, then die; decomposers break them down and use oxygen, so fish suffocate.",
+    "Algae block sunlight, so fish cannot photosynthesise and die.",
+    "Decomposers release extra oxygen, which makes fish suffocate.",
+    "Nitrate is a poison that kills fish before algae grow."
+   ],
+   "answer": 0,
+   "explanation": "Nitrate from fertiliser causes rapid growth of algae. When the algae die, decomposers break them down and respire, using up oxygen in the water, so fish can suffocate. Fish do not photosynthesise, and decomposition does not release extra oxygen to suffocate them."
+  },
+  {
+   "n": 11,
+   "topic": "Organisation: tissues, organs and systems",
+   "q": "Which statement best describes the main role of hydrochloric acid in the human stomach?",
+   "options": [
+    "It breaks down starch into maltose before absorption in the stomach.",
+    "It emulsifies fats into small droplets so that lipase can digest them.",
+    "It neutralises bile so that enzymes from the small intestine can work.",
+    "It kills many microorganisms and provides the acidic pH needed for protease enzymes to work."
+   ],
+   "answer": 3,
+   "explanation": "Hydrochloric acid in the stomach helps kill microorganisms in food and gives the acidic conditions required by stomach protease enzymes. Emulsifying fats is a function of bile, while starch digestion begins with amylase in the mouth and small intestine."
+  },
+  {
+   "n": 12,
+   "topic": "Bioenergetics: photosynthesis and respiration",
+   "q": "A transparent sealed chamber contains a healthy plant with plenty of water and minerals. The carbon dioxide concentration inside is increased from 0.04% to 0.10%. The rate of photosynthesis immediately increases. Which factor was limiting the rate before the increase?",
+   "options": [
+    "Mineral ion concentration",
+    "Light intensity",
+    "Temperature",
+    "Carbon dioxide concentration"
+   ],
+   "answer": 3,
+   "explanation": "Photosynthesis rate rose when carbon dioxide concentration was increased, so carbon dioxide supply was the limiting factor at the lower concentration. Water and minerals were already plentiful, and light and temperature were not changed."
+  },
+  {
+   "n": 13,
+   "topic": "Inheritance, variation and evolution",
+   "q": "A normal human body cell contains 46 chromosomes. How many chromosomes are in a normal human gamete produced by meiosis?",
+   "options": [
+    "46",
+    "22",
+    "92",
+    "23"
+   ],
+   "answer": 3,
+   "explanation": "Meiosis halves the chromosome number so each gamete has one chromosome from each homologous pair. In humans this gives 23 chromosomes, restoring 46 at fertilisation. A count of 22 would leave a chromosome unpaired after fertilisation, and 46 would double the number in a zygote."
+  },
+  {
+   "n": 14,
+   "topic": "Organisation: tissues, organs and systems",
+   "q": "Which feature of the alveoli in the lungs most directly increases the rate of gas exchange?",
+   "options": [
+    "A thick layer of muscle in the alveolar wall to pump gases into the blood.",
+    "A small surface area so that gases are concentrated in fewer places.",
+    "A lining of cilia that move oxygen into the bloodstream.",
+    "A very large total surface area combined with walls that are one cell thick."
+   ],
+   "answer": 3,
+   "explanation": "Alveoli have a large total surface area and very thin walls, giving a short diffusion distance for oxygen and carbon dioxide. They also have a good blood supply, but thick muscle, a small surface area or cilia would not speed up diffusion."
+  },
+  {
+   "n": 15,
+   "topic": "Bioenergetics: photosynthesis and respiration",
+   "q": "After a short sprint, a runner continues to breathe deeply for several minutes. Which statement explains why this extra oxygen is useful?",
+   "options": [
+    "It allows more lactic acid to be made by anaerobic respiration in the muscles.",
+    "It allows lactic acid to be broken down by aerobic respiration, mainly in the liver.",
+    "It converts glucose directly into carbon dioxide in the blood without respiration.",
+    "It replaces the oxygen that was produced by anaerobic respiration in the muscles."
+   ],
+   "answer": 1,
+   "explanation": "Anaerobic respiration in muscles produces lactic acid. The extra oxygen is used to break down lactic acid aerobically, which is often called repaying the oxygen debt. Anaerobic respiration does not produce oxygen, and making more lactic acid would not help recovery."
+  },
+  {
+   "n": 16,
+   "topic": "Homeostasis and response",
+   "q": "Which statement correctly distinguishes nervous coordination from hormonal coordination in the human body?",
+   "options": [
+    "Hormonal coordination uses electrical impulses along neurones and usually produces faster, shorter-lasting responses.",
+    "Nervous coordination uses hormones carried in the blood and usually produces slower, longer-lasting responses.",
+    "Hormonal coordination acts only at synapses, while nervous coordination acts only through the bloodstream.",
+    "Nervous coordination uses electrical impulses along neurones and usually produces faster, shorter-lasting responses."
+   ],
+   "answer": 3,
+   "explanation": "Nervous responses travel as electrical impulses along neurones, so they are generally rapid and short-lived. Hormones are chemicals carried in the blood, so hormonal responses are usually slower and longer-lasting."
+  },
+  {
+   "n": 17,
+   "topic": "Inheritance, variation and evolution",
+   "q": "A population of insects is exposed to a pesticide. A few insects survive because they have an allele that gives resistance. What originally caused this resistance allele to appear in the population?",
+   "options": [
+    "The insects chose to change their DNA in order to resist the pesticide.",
+    "A random mutation in the DNA of an insect before the pesticide was used.",
+    "The pesticide was inherited from the parent insects and became a new allele.",
+    "The pesticide caused a helpful mutation in the insects that survived."
+   ],
+   "answer": 1,
+   "explanation": "New alleles arise by random mutation, and this variation can exist before the environmental change. The pesticide does not create the resistance mutation; it selects the insects that already carry the resistant allele. Acquired changes or choices in body cells are not inherited as new alleles."
+  },
+  {
+   "n": 18,
+   "topic": "Organisation: tissues, organs and systems",
+   "q": "Which sequence correctly shows the levels of organisation from simplest to most complex?",
+   "options": [
+    "Cell → organ → tissue → organ system",
+    "Organ → organ system → cell → tissue",
+    "Tissue → cell → organ system → organ",
+    "Cell → tissue → organ → organ system"
+   ],
+   "answer": 3,
+   "explanation": "Cells with similar functions form tissues; tissues work together in organs, and organs work together in organ systems. The other sequences place organs or systems before the cells and tissues that make them."
+  },
+  {
+   "n": 19,
+   "topic": "Bioenergetics: photosynthesis and respiration",
+   "q": "A student uses a respirometer to measure oxygen uptake by three germinating seeds. The oxygen volume falls by 1.8 cm³ in 6 minutes. What is the mean rate of oxygen uptake per seed?",
+   "options": [
+    "0.10 cm³/min",
+    "0.05 cm³/min",
+    "0.60 cm³/min",
+    "0.30 cm³/min"
+   ],
+   "answer": 0,
+   "explanation": "The total rate for three seeds is 1.8 cm³ ÷ 6 min = 0.30 cm³/min. Dividing by 3 seeds gives 0.10 cm³/min per seed. The value 0.30 cm³/min is the total for all three seeds, not the mean per seed."
+  },
+  {
+   "n": 20,
+   "topic": "Infection and response",
+   "q": "In a town, 80 000 children are eligible for an MMR vaccination. A campaign reports that 92% of these eligible children receive the vaccine. How many eligible children do not receive it?",
+   "options": [
+    "7 360",
+    "73 600",
+    "4 000",
+    "6 400"
+   ],
+   "answer": 3,
+   "explanation": "Find 8% of 80 000 because 100% − 92% = 8%: 0.08 × 80 000 = 6 400 children. The value 73 600 is the number who are vaccinated, not the number who miss vaccination."
+  },
+  {
+   "n": 21,
+   "topic": "Infection and response",
+   "q": "Which statement best describes the main role of platelets in the body's defence against infection?",
+   "options": [
+    "They produce antibodies that bind to antigens.",
+    "They help form blood clots that seal wounds and reduce pathogen entry.",
+    "They engulf and digest pathogens.",
+    "They release mucus that traps pathogens in the airways."
+   ],
+   "answer": 1,
+   "explanation": "Platelets are cell fragments involved in clotting; the clot plugs a break in the skin and helps prevent microbes from entering. Engulfing pathogens and making antibodies are jobs of white blood cells, not platelets."
+  },
+  {
+   "n": 22,
+   "topic": "Cell biology",
+   "q": "A microscope field has a diameter of 0.50 mm. A student counts 25 cells lying end-to-end across the diameter. What is the estimated average length of one cell in micrometres (μm)?",
+   "options": [
+    "12.5 μm",
+    "50 μm",
+    "20 μm",
+    "0.02 μm"
+   ],
+   "answer": 2,
+   "explanation": "Convert 0.50 mm to micrometres: 0.50 × 1000 = 500 μm. Divide the field diameter by 25 cells: 500 ÷ 25 = 20 μm per cell. The value 0.02 μm comes from dividing 0.50 by 25 without converting millimetres to micrometres."
+  },
+  {
+   "n": 23,
+   "topic": "Ecology",
+   "q": "Consider the food chain: grass → rabbit → fox. If a disease greatly reduces the rabbit population, which immediate change is most likely?",
+   "options": [
+    "The grass population increases and the fox population decreases.",
+    "The grass and fox populations both decrease.",
+    "The grass and fox populations both increase.",
+    "The grass population decreases and the fox population increases."
+   ],
+   "answer": 0,
+   "explanation": "Fewer rabbits means less grass is eaten, so more grass can survive and grow. Foxes have fewer rabbits to eat, so their population is likely to fall because less food is available."
+  },
+  {
+   "n": 24,
+   "topic": "Ecology",
+   "q": "Which process takes carbon dioxide out of the atmosphere and into living organisms?",
+   "options": [
+    "Photosynthesis by producers",
+    "Respiration by animals",
+    "Combustion of fossil fuels",
+    "Decomposition by microorganisms"
+   ],
+   "answer": 0,
+   "explanation": "Photosynthesis uses carbon dioxide and water to make glucose, storing carbon in producers. Respiration, combustion and decomposition all release carbon dioxide into the atmosphere rather than removing it overall."
+  },
+  {
+   "n": 25,
+   "topic": "Organisation: tissues, organs and systems",
+   "q": "The walls of capillaries are only one cell thick. Which function is most directly supported by this feature?",
+   "options": [
+    "Generation of high blood pressure to push blood around the body.",
+    "Prevention of blood flowing backwards in the circulatory system.",
+    "Production of antibodies to destroy pathogens in the blood.",
+    "Rapid exchange of substances between the blood and surrounding tissues."
+   ],
+   "answer": 3,
+   "explanation": "A thin capillary wall shortens the diffusion distance, helping substances such as oxygen, glucose and carbon dioxide exchange quickly between blood and tissues. Valves prevent backflow and the heart generates pressure; antibodies are produced by white blood cells, not by capillary walls."
+  },
+  {
+   "n": 26,
+   "topic": "Bioenergetics: photosynthesis and respiration",
+   "q": "A student measures the rate of photosynthesis of pondweed in constant bright light at 20 °C as the carbon dioxide concentration increases. The results are: 0.01% CO₂: 7 bubbles per minute; 0.02% CO₂: 14 bubbles per minute; 0.04% CO₂: 21 bubbles per minute; 0.08% CO₂: 21 bubbles per minute. Which conclusion is best supported by these results?",
+   "options": [
+    "Carbon dioxide is the limiting factor between 0.01% and 0.04%, but above 0.04% another factor limits the rate.",
+    "Higher carbon dioxide concentrations reduce the rate of oxygen production.",
+    "Light intensity is the limiting factor between 0.01% and 0.04%.",
+    "Carbon dioxide is the limiting factor at every concentration tested."
+   ],
+   "answer": 0,
+   "explanation": "The rate rises as carbon dioxide increases from 0.01% to 0.04%, so carbon dioxide is limiting over that range. From 0.04% to 0.08% the rate stays at 21 bubbles per minute, so carbon dioxide is no longer limiting and another factor is. Light intensity is not limiting between 0.01% and 0.04% because changing carbon dioxide concentration changes the rate."
+  },
+  {
+   "n": 27,
+   "topic": "Bioenergetics: photosynthesis and respiration",
+   "q": "A plant's roots become waterlogged, so the oxygen concentration around the root cells falls. Which products are produced by anaerobic respiration in the root cells?",
+   "options": [
+    "Lactic acid only",
+    "Water and carbon dioxide",
+    "Ethanol and carbon dioxide",
+    "Glucose and oxygen"
+   ],
+   "answer": 2,
+   "explanation": "Plant cells respire anaerobically by converting glucose into ethanol and carbon dioxide, releasing a small amount of energy. Human muscle cells produce lactic acid when oxygen is limited, which is a common but different anaerobic response. Water and carbon dioxide are products of aerobic respiration, not the products of anaerobic respiration in plant roots."
+  },
+  {
+   "n": 28,
+   "topic": "Bioenergetics: photosynthesis and respiration",
+   "q": "Why is the rate of photosynthesis usually lower in green light than in red light of the same intensity?",
+   "options": [
+    "Green light increases the rate of respiration more than the rate of photosynthesis.",
+    "Green light is not part of the visible spectrum, so it cannot drive photosynthesis.",
+    "Chlorophyll absorbs green light less strongly than red or blue light, so less light energy is available for photosynthesis.",
+    "Chlorophyll reflects green light completely, so no photosynthesis can occur in green light."
+   ],
+   "answer": 2,
+   "explanation": "Chlorophyll absorbs red and blue light strongly and green light less strongly, so green light provides less absorbed energy for photosynthesis. Some photosynthesis can still happen in green light because green light is not completely reflected or unused. Green light is part of the visible spectrum, and it does not speed up respiration more than photosynthesis."
+  },
+  {
+   "n": 29,
+   "topic": "Homeostasis and response",
+   "q": "After a person eats a salty meal, ADH secretion increases. Their daily urine volume falls from 1.5 dm³ to 0.6 dm³. What is the percentage decrease in urine volume?",
+   "options": [
+    "40%",
+    "150%",
+    "90%",
+    "60%"
+   ],
+   "answer": 3,
+   "explanation": "The decrease is 1.5 − 0.6 = 0.9 dm³. As a percentage of the original volume, this is (0.9 ÷ 1.5) × 100 = 60%. ADH makes the kidney tubules reabsorb more water, so a smaller volume of more concentrated urine is produced."
+  },
+  {
+   "n": 30,
+   "topic": "Homeostasis and response",
+   "q": "Which organ detects changes in blood glucose concentration and secretes insulin and glucagon?",
+   "options": [
+    "The adrenal glands",
+    "The pancreas",
+    "The kidneys",
+    "The liver"
+   ],
+   "answer": 1,
+   "explanation": "The pancreas contains cells that detect blood glucose concentration and secrete insulin or glucagon to restore the normal level. The liver stores or releases glycogen but does not secrete these hormones. The kidneys remove urea and adjust water balance, and the adrenal glands secrete hormones such as adrenaline."
+  }
+ ]
+}

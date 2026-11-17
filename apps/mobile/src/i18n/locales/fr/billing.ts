@@ -78,6 +78,8 @@ const billing: Translation<typeof en> = {
     studyPlans: 'Plans de révision personnalisés',
     insights: 'Statistiques de progression plus détaillées',
     examPapers: 'Épreuves d’entraînement complètes WAEC, NECO et JAMB',
+    examPapersFor: 'Épreuves d’entraînement complètes {{exams}}',
+    examPapersAny: 'Épreuves d’entraînement complètes',
     library: 'Bibliothèque de révision et dossiers plus grands',
     priority: 'Traitement prioritaire aux heures de pointe',
     everythingPlus: 'Tout ce qu’offre Plus',
@@ -198,6 +200,8 @@ const billing: Translation<typeof en> = {
       PRO: {
         whoQ: 'Pro, c’est pour qui ?',
         whoA: 'Pour les élèves qui préparent le WAEC, le NECO ou le JAMB, qui s’entraînent chaque jour et veulent des épreuves complètes type examen.',
+        whoAFor: 'Pour les élèves qui préparent {{exams}}, qui s’entraînent chaque jour et veulent les épreuves d’entraînement complètes.',
+        whoAAny: 'Pour les élèves qui s’entraînent chaque jour et veulent profiter au maximum du tuteur IA, avec la priorité aux heures de pointe.',
         fairQ: 'Que veut dire « usage raisonnable » ?',
         fairA:
           'Jusqu’à {{questions}} questions au tuteur par jour, de quoi réviser intensément. Cela empêche l’usage automatisé ou les comptes partagés.',

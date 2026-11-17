@@ -203,7 +203,7 @@ const study = {
     topicLabel: 'Topic',
     topicPlaceholder: 'e.g. How vaccines work',
     focusLabel: 'Anything specific? (optional)',
-    focusPlaceholder: 'e.g. for WAEC, focus on calculations',
+    focusPlaceholder: 'e.g. for {{exam}}, focus on calculations',
     popular: 'POPULAR RIGHT NOW',
     ideas: {
       photosynthesis: 'Photosynthesis',
@@ -341,7 +341,7 @@ const study = {
     subject: 'Subject',
     folderName: 'Folder name',
     tags: 'Tags',
-    tagsPlaceholder: 'e.g. WAEC, term 2, revise',
+    tagsPlaceholder: 'e.g. {{exam}}, term 2, revise',
     tagsHint: 'Separate tags with commas',
     created: 'Created {{date}} from {{source}}',
   },

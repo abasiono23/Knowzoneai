@@ -1,0 +1,661 @@
+{
+ "id": "waec-physics-p5",
+ "exam": "waec",
+ "subject": "physics",
+ "year": null,
+ "number": 5,
+ "source": "ai",
+ "minutes": 60,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Work, energy and power",
+   "q": "A boy in Ibadan pulls a crate with a force of 80 N applied at 30° above the horizontal. The crate moves 5.0 m along a level floor. Calculate the work done by the applied force.",
+   "options": [
+    "231 J",
+    "400 J",
+    "200 J",
+    "346 J"
+   ],
+   "answer": 3,
+   "explanation": "The work done is Fd cos θ = 80 × 5.0 × cos 30° = 346 J. Using the sine of 30° instead of the cosine gives 200 J, which is not the work done by the pulling force along the floor."
+  },
+  {
+   "n": 2,
+   "topic": "Work, energy and power",
+   "q": "A water pump in Calabar raises 450 kg of water per minute through a vertical height of 12 m. If the pump is 60% efficient, calculate the power input. (g = 10 m/s²)",
+   "options": [
+    "540 W",
+    "900 W",
+    "1500 W",
+    "2500 W"
+   ],
+   "answer": 2,
+   "explanation": "Useful power output = mgh/t = 450 × 10 × 12 ÷ 60 = 900 W. Since efficiency = useful power ÷ input power, input power = 900 ÷ 0.60 = 1500 W."
+  },
+  {
+   "n": 3,
+   "topic": "Work, energy and power",
+   "q": "A hammer of mass 2.0 kg moving at 10 m/s drives a nail 5.0 cm into a wooden plank. Taking the resistance force as constant, calculate its magnitude.",
+   "options": [
+    "400 N",
+    "100 N",
+    "200 N",
+    "2000 N"
+   ],
+   "answer": 3,
+   "explanation": "The kinetic energy of the hammer is ½ × 2.0 × 10² = 100 J. This energy is used against the resistance force over 0.050 m, so F = 100 ÷ 0.050 = 2000 N; treating 5.0 cm as 0.50 m gives the wrong value 200 N."
+  },
+  {
+   "n": 4,
+   "topic": "Heat and temperature",
+   "q": "The mercury column of a thermometer is 25 mm long at the ice point and 125 mm long at the steam point. What temperature is indicated when the column length is 85 mm?",
+   "options": [
+    "48°C",
+    "68°C",
+    "40°C",
+    "60°C"
+   ],
+   "answer": 3,
+   "explanation": "The calibrated range is 125 − 25 = 100 mm, corresponding to 100°C. The column is 85 − 25 = 60 mm above the ice point, so the temperature is (60 ÷ 100) × 100°C = 60°C."
+  },
+  {
+   "n": 5,
+   "topic": "Heat and temperature",
+   "q": "Calculate the quantity of heat required to convert 0.40 kg of ice at −10°C completely to water at 0°C. (Specific heat capacity of ice = 2100 J kg⁻¹ K⁻¹; specific latent heat of fusion of ice = 3.34 × 10⁵ J kg⁻¹)",
+   "options": [
+    "1.42 × 10⁴ J",
+    "8.40 × 10³ J",
+    "1.34 × 10⁵ J",
+    "1.42 × 10⁵ J"
+   ],
+   "answer": 3,
+   "explanation": "Heat to warm the ice = 0.40 × 2100 × 10 = 8400 J. Heat to melt it = 0.40 × 3.34 × 10⁵ = 1.336 × 10⁵ J. Total heat = 8400 + 133600 = 1.42 × 10⁵ J."
+  },
+  {
+   "n": 6,
+   "topic": "Atomic and nuclear physics",
+   "q": "When a ²⁷₁₃Al nucleus is bombarded with a neutron and emits an alpha particle, the nucleus formed is",
+   "options": [
+    "²⁴₁₁Na",
+    "²⁴₁₀Ne",
+    "²⁴₁₂Mg",
+    "³⁰₁₅P"
+   ],
+   "answer": 0,
+   "explanation": "Using conservation of nucleon number: 27 + 1 = 4 + A, so A = 24. Using conservation of atomic number: 13 + 0 = 2 + Z, so Z = 11. The product is therefore ²⁴₁₁Na."
+  },
+  {
+   "n": 7,
+   "topic": "Atomic and nuclear physics",
+   "q": "A nucleus of ²³⁴₉₀Th emits an alpha particle and then two beta particles. What are the mass number and atomic number of the final nucleus?",
+   "options": [
+    "²³⁰₉₀Th",
+    "²³⁰₈₈Ra",
+    "²³⁴₉₂U",
+    "²³⁰₉₂U"
+   ],
+   "answer": 0,
+   "explanation": "Alpha emission reduces the mass number by 4 and the atomic number by 2, giving ²³⁰₈₈Ra. Each beta emission leaves the mass number unchanged and increases the atomic number by 1, so two beta emissions give a final nucleus of ²³⁰₉₀Th."
+  },
+  {
+   "n": 8,
+   "topic": "Motion",
+   "q": "A body starts from rest and accelerates uniformly for 4.0 s, reaching a speed of 8.0 m/s. It then decelerates uniformly and comes to rest after another 6.0 s. Calculate the total distance travelled.",
+   "options": [
+    "40 m",
+    "16 m",
+    "24 m",
+    "80 m"
+   ],
+   "answer": 0,
+   "explanation": "The velocity–time graph is a triangle with total base 4.0 + 6.0 = 10 s and height 8.0 m/s. Its area is ½ × 10 × 8.0 = 40 m. Taking only the first or second stage gives 16 m or 24 m, not the total distance."
+  },
+  {
+   "n": 9,
+   "topic": "Motion",
+   "q": "A stone is dropped from rest from a cliff in Jos and reaches the ground with a speed of 30 m/s. Neglecting air resistance, calculate the height of the cliff. (g = 10 m/s²)",
+   "options": [
+    "30 m",
+    "90 m",
+    "45 m",
+    "15 m"
+   ],
+   "answer": 2,
+   "explanation": "Using v² = u² + 2gh with u = 0 gives 30² = 2 × 10 × h. Thus h = 900 ÷ 20 = 45 m; using h = v² ÷ g instead of v² ÷ 2g gives 90 m."
+  },
+  {
+   "n": 10,
+   "topic": "Motion",
+   "q": "Two boys on a straight path in Ilesa are 75 m apart. They start from rest at the same time and run towards each other with uniform accelerations of 2.0 m/s² and 4.0 m/s² respectively. How long will it take them to meet?",
+   "options": [
+    "5.0 s",
+    "8.7 s",
+    "3.5 s",
+    "12.5 s"
+   ],
+   "answer": 0,
+   "explanation": "Their relative acceleration is 2.0 + 4.0 = 6.0 m/s². Using 75 = ½ × 6.0 × t² gives t² = 25, so t = 5.0 s. Using only one boy's acceleration gives 8.7 s, which ignores the other boy's motion."
+  },
+  {
+   "n": 11,
+   "topic": "Electrostatics and capacitors",
+   "q": "Two capacitors of capacitance 4 μF and 6 μF are connected in series across a 20 V battery. Calculate the total energy stored in the combination.",
+   "options": [
+    "4.8 × 10⁻⁴ J",
+    "2.0 × 10⁻³ J",
+    "9.6 × 10⁻⁴ J",
+    "1.2 × 10⁻³ J"
+   ],
+   "answer": 0,
+   "explanation": "The equivalent capacitance in series is (4 × 6)/(4 + 6) = 2.4 μF. The energy stored is ½CV² = ½ × 2.4 × 10⁻⁶ × 20² = 4.8 × 10⁻⁴ J. Using the sum 10 μF as though the capacitors were in parallel gives 2.0 × 10⁻³ J."
+  },
+  {
+   "n": 12,
+   "topic": "Electrostatics and capacitors",
+   "q": "A 10 μF capacitor is charged to 200 V and then disconnected from the battery. The separation between its parallel plates is doubled while the charge on the plates remains constant. What is the new potential difference across the plates?",
+   "options": [
+    "200 V",
+    "100 V",
+    "800 V",
+    "400 V"
+   ],
+   "answer": 3,
+   "explanation": "For a parallel-plate capacitor C = ε₀A/d, so doubling the plate separation halves the capacitance. Since charge Q is constant, V = Q/C doubles from 200 V to 400 V. Treating the potential as unchanged would leave 200 V, but the capacitance has changed."
+  },
+  {
+   "n": 13,
+   "topic": "Newton’s laws and momentum",
+   "q": "A passenger of mass 60 kg stands on a weighing scale in a lift. The lift accelerates upward at 2.0 m/s². What is the reading on the scale? (Take g = 10 m/s².)",
+   "options": [
+    "600 N",
+    "720 N",
+    "120 N",
+    "480 N"
+   ],
+   "answer": 1,
+   "explanation": "The scale reads the normal reaction R. For upward acceleration, R − mg = ma, so R = m(g + a) = 60 × (10 + 2.0) = 720 N. A reading of 480 N would arise if the lift were accelerating downward at 2.0 m/s²."
+  },
+  {
+   "n": 14,
+   "topic": "Newton’s laws and momentum",
+   "q": "A goalkeeper in Enugu stops a 0.40 kg ball moving horizontally at 15 m/s. If the ball is brought to rest in 0.20 s, calculate the average force exerted on the ball.",
+   "options": [
+    "60 N",
+    "6.0 N",
+    "30 N",
+    "120 N"
+   ],
+   "answer": 2,
+   "explanation": "The change in momentum is mv = 0.40 × 15 = 6.0 kg m/s. Average force = change in momentum ÷ time = 6.0 ÷ 0.20 = 30 N. The value 6.0 is the impulse, not the average force."
+  },
+  {
+   "n": 15,
+   "topic": "Elasticity and pressure",
+   "q": "A spiral spring of natural length 20 cm is stretched to 24 cm by a load of 12 N. Assuming Hooke's law is obeyed, what load will stretch it to 30 cm?",
+   "options": [
+    "36 N",
+    "30 N",
+    "18 N",
+    "15 N"
+   ],
+   "answer": 1,
+   "explanation": "The first extension is 24 − 20 = 4 cm, so the force constant is 12 ÷ 4 = 3 N/cm. For a stretched length of 30 cm, the extension is 30 − 20 = 10 cm, giving load = 3 × 10 = 30 N. Using total lengths instead of extensions leads to a different value."
+  },
+  {
+   "n": 16,
+   "topic": "Elasticity and pressure",
+   "q": "In a hydraulic lift in Onitsha, a force of 200 N is applied to a small piston of area 0.010 m². If the large piston has area 0.50 m², calculate the maximum load that can be lifted.",
+   "options": [
+    "1.0 × 10⁴ N",
+    "200 N",
+    "4.0 N",
+    "2.0 × 10⁴ N"
+   ],
+   "answer": 0,
+   "explanation": "By Pascal’s principle, pressure is transmitted equally: F₂/A₂ = F₁/A₁. Thus F₂ = 200 × (0.50 ÷ 0.010) = 1.0 × 10⁴ N. Using the inverse area ratio would give the much smaller value 4.0 N."
+  },
+  {
+   "n": 17,
+   "topic": "Light and optics",
+   "q": "A diverging lens of focal length 15 cm has an object placed 10 cm in front of it. Where is the image formed?",
+   "options": [
+    "6 cm from the lens, on the opposite side from the object",
+    "30 cm from the lens, on the opposite side from the object",
+    "30 cm from the lens, on the same side as the object",
+    "6 cm from the lens, on the same side as the object"
+   ],
+   "answer": 3,
+   "explanation": "Using 1/f = 1/u + 1/v with f = −15 cm and u = 10 cm gives 1/v = −1/15 − 1/10 = −1/6, so v = −6 cm. The negative sign means the image is virtual and 6 cm from the lens on the same side as the object. A diverging lens always forms a virtual, diminished image for a real object."
+  },
+  {
+   "n": 18,
+   "topic": "Light and optics",
+   "q": "A man 1.8 m tall stands 3.0 m in front of a vertical plane mirror. What minimum length of mirror is required for him to see his full image?",
+   "options": [
+    "0.60 m",
+    "0.90 m",
+    "1.8 m",
+    "3.0 m"
+   ],
+   "answer": 1,
+   "explanation": "The minimum mirror length needed to see a full-length image in a plane mirror is half the person’s height, so it is 0.5 × 1.8 = 0.90 m. This result does not depend on the 3.0 m distance from the mirror."
+  },
+  {
+   "n": 19,
+   "topic": "Waves",
+   "q": "A broadcasting antenna in Makurdi emits electromagnetic waves of wavelength 250 m. If the speed of the waves is 3.0 × 10⁸ m/s, what is their frequency?",
+   "options": [
+    "1.2 × 10⁶ Hz",
+    "7.5 × 10¹⁰ Hz",
+    "8.3 × 10⁻⁷ Hz",
+    "1.2 × 10³ Hz"
+   ],
+   "answer": 0,
+   "explanation": "The frequency is f = c/λ = (3.0 × 10⁸ m/s)/(250 m) = 1.2 × 10⁶ Hz. Multiplying speed by wavelength instead of dividing gives a very large frequency, which is not the correct relationship."
+  },
+  {
+   "n": 20,
+   "topic": "Waves",
+   "q": "A sonometer wire of length 0.80 m gives a fundamental note of frequency 250 Hz. If its length is reduced to 0.50 m while the tension remains unchanged, what fundamental frequency will it produce?",
+   "options": [
+    "500 Hz",
+    "156 Hz",
+    "200 Hz",
+    "400 Hz"
+   ],
+   "answer": 3,
+   "explanation": "For a sonometer wire under constant tension, the fundamental frequency is inversely proportional to the length, so f₂ = 250 × (0.80/0.50) = 400 Hz. Using direct proportion with the lengths gives about 156 Hz, which is a common error."
+  },
+  {
+   "n": 21,
+   "topic": "Waves",
+   "q": "A water wave in a ripple tank has frequency 25 Hz and wavelength 0.080 m. Calculate the distance travelled by the wave in 4.0 s.",
+   "options": [
+    "2.0 m",
+    "8.0 m",
+    "0.80 m",
+    "0.20 m"
+   ],
+   "answer": 1,
+   "explanation": "The wave speed is v = fλ = 25 × 0.080 = 2.0 m/s. In 4.0 s the distance travelled is d = vt = 2.0 × 4.0 = 8.0 m."
+  },
+  {
+   "n": 22,
+   "topic": "Current electricity",
+   "q": "An electric kettle in Uyo is marked 1.8 kW, 240 V. Calculate the current it draws when connected to a 240 V supply.",
+   "options": [
+    "7.5 A",
+    "75 A",
+    "0.0075 A",
+    "432 A"
+   ],
+   "answer": 0,
+   "explanation": "Electrical power is P = VI, so I = P/V = (1.8 × 10³ W)/(240 V) = 7.5 A. Leaving the power in kilowatts without converting to watts gives 0.0075 A."
+  },
+  {
+   "n": 23,
+   "topic": "Current electricity",
+   "q": "A current of 2.0 A flows through a 5.0 Ω resistor for 3.0 minutes. Calculate the heat produced in the resistor.",
+   "options": [
+    "60 J",
+    "1800 J",
+    "3600 J",
+    "600 J"
+   ],
+   "answer": 2,
+   "explanation": "Heat produced is H = I²Rt = (2.0)² × 5.0 × (3.0 × 60) = 3600 J. Using 3.0 minutes without converting to seconds gives only 60 J."
+  },
+  {
+   "n": 24,
+   "topic": "Measurement and units",
+   "q": "A rectangular plot of land in Kaduna measures 250 m by 0.40 km. What is its area in hectares? (1 hectare = 10 000 m²)",
+   "options": [
+    "10 ha",
+    "1 000 ha",
+    "100 ha",
+    "1.0 ha"
+   ],
+   "answer": 0,
+   "explanation": "The width is 0.40 km = 400 m, so the area is 250 m × 400 m = 100 000 m². Since 1 hectare = 10 000 m², the area is 100 000/10 000 = 10 ha."
+  },
+  {
+   "n": 25,
+   "topic": "Measurement and units",
+   "q": "The dimension of torque is",
+   "options": [
+    "ML²T⁻¹",
+    "ML²T⁻²",
+    "MLT⁻¹",
+    "MLT⁻²"
+   ],
+   "answer": 1,
+   "explanation": "Torque = force × perpendicular distance, so its dimension is MLT⁻² × L = ML²T⁻². The dimension MLT⁻² is that of force alone, not torque."
+  },
+  {
+   "n": 26,
+   "topic": "Magnetism and electromagnetic induction",
+   "q": "A soft-iron core is used in a transformer because it",
+   "options": [
+    "has a very high electrical resistance",
+    "is a good electrical insulator",
+    "retains magnetism strongly after the current is switched off",
+    "can be easily magnetised and demagnetised"
+   ],
+   "answer": 3,
+   "explanation": "Soft iron has high permeability and is easily magnetised and demagnetised, so it strengthens the magnetic linkage between the primary and secondary coils while responding quickly to alternating current. Lamination reduces eddy currents, but that is due to the thin insulated sheets, not because the soft iron itself has very high resistance."
+  },
+  {
+   "n": 27,
+   "topic": "Sound",
+   "q": "At a market in Onitsha, a loudspeaker produces sound of intensity 2.0 × 10⁻⁶ W/m². Taking the threshold of hearing as 1.0 × 10⁻¹² W/m², calculate the sound intensity level.",
+   "options": [
+    "66 dB",
+    "60 dB",
+    "30 dB",
+    "63 dB"
+   ],
+   "answer": 3,
+   "explanation": "Sound intensity level is 10 log₁₀(I/I₀). Here I/I₀ = (2.0 × 10⁻⁶)/(1.0 × 10⁻¹²) = 2.0 × 10⁶, so the level is 10 × (6 + 0.3010) = 63 dB. The value 60 dB is obtained by ignoring the factor 2 in the intensity ratio."
+  },
+  {
+   "n": 28,
+   "topic": "Sound",
+   "q": "A stationary siren in a factory in Aba emits sound of frequency 680 Hz. A worker moves away from the siren at 20 m/s. If the speed of sound in air is 340 m/s, calculate the frequency heard by the worker.",
+   "options": [
+    "600 Hz",
+    "680 Hz",
+    "720 Hz",
+    "640 Hz"
+   ],
+   "answer": 3,
+   "explanation": "For a stationary source and an observer moving away, the observed frequency is f(v − v₀)/v = 680 × (340 − 20)/340 = 640 Hz. The value 720 Hz comes from adding the observer's speed instead of subtracting it."
+  },
+  {
+   "n": 29,
+   "topic": "Sound",
+   "q": "A talking drum in Ibadan produces a sound wave of frequency 250 Hz. If the speed of sound in air is 340 m/s, what is the distance between two successive compressions?",
+   "options": [
+    "1.36 m",
+    "0.74 m",
+    "0.68 m",
+    "2.72 m"
+   ],
+   "answer": 0,
+   "explanation": "The distance between successive compressions is one wavelength. Using λ = v/f = 340/250 = 1.36 m. The value 0.68 m is half a wavelength, which is the distance between a compression and the next rarefaction."
+  },
+  {
+   "n": 30,
+   "topic": "Scalars and vectors",
+   "q": "Which of the following pairs consists of a scalar quantity and a vector quantity respectively?",
+   "options": [
+    "Mass and energy",
+    "Speed and displacement",
+    "Distance and temperature",
+    "Velocity and acceleration"
+   ],
+   "answer": 1,
+   "explanation": "Speed is a scalar because it has magnitude only, while displacement is a vector because it has both magnitude and direction. Velocity and acceleration are both vectors, while mass and energy are both scalars."
+  },
+  {
+   "n": 31,
+   "topic": "Scalars and vectors",
+   "q": "Two forces of magnitudes 6.0 N and 10.0 N act at a point with an angle of 60° between them. Calculate the magnitude of their resultant.",
+   "options": [
+    "11.7 N",
+    "16.0 N",
+    "8.0 N",
+    "14.0 N"
+   ],
+   "answer": 3,
+   "explanation": "Using the cosine rule for two forces, R = √(6² + 10² + 2 × 6 × 10 × cos60°) = √(36 + 100 + 60) = √196 = 14.0 N. The value 16.0 N is the simple sum of the forces, which applies only when the angle between them is 0°."
+  },
+  {
+   "n": 32,
+   "topic": "Simple machines",
+   "q": "A farmer in Jos uses a 2.0 m long bamboo as a first-class lever to lift a stone of weight 600 N. The pivot is 0.40 m from the stone. Calculate the effort needed at the other end to balance the stone.",
+   "options": [
+    "150 N",
+    "120 N",
+    "2400 N",
+    "240 N"
+   ],
+   "answer": 0,
+   "explanation": "Taking moments about the pivot: effort × (2.0 − 0.40) = 600 × 0.40. Thus effort = 240/1.6 = 150 N. The value 120 N is obtained by wrongly taking the whole 2.0 m as the effort arm."
+  },
+  {
+   "n": 33,
+   "topic": "Simple machines",
+   "q": "A block and tackle in a cocoa store in Ondo raises a load of 240 N through 0.50 m when an effort of 80 N moves through 2.0 m. Calculate the efficiency of the machine.",
+   "options": [
+    "25%",
+    "300%",
+    "75%",
+    "133%"
+   ],
+   "answer": 2,
+   "explanation": "Useful work output = 240 × 0.50 = 120 J, while work input = 80 × 2.0 = 160 J. Efficiency = (120/160) × 100% = 75%. The value 25% comes from using only the ratio of the distances moved."
+  },
+  {
+   "n": 34,
+   "topic": "Gas laws",
+   "q": "A bubble of air at the bottom of a swimming pool in Abuja has volume 3.0 cm³ where the pressure is 2.0 × 10⁵ Pa. It rises to the surface where the pressure is 1.0 × 10⁵ Pa. If the temperature remains constant, calculate its volume at the surface.",
+   "options": [
+    "12.0 cm³",
+    "3.0 cm³",
+    "1.5 cm³",
+    "6.0 cm³"
+   ],
+   "answer": 3,
+   "explanation": "At constant temperature, Boyle's law gives P₁V₁ = P₂V₂. Thus V₂ = (2.0 × 10⁵ × 3.0)/(1.0 × 10⁵) = 6.0 cm³. The value 1.5 cm³ is obtained by using the pressure ratio the wrong way round."
+  },
+  {
+   "n": 35,
+   "topic": "Gas laws",
+   "q": "A fixed mass of gas has density 1.2 kg/m³ at 27°C. At constant pressure, its temperature is raised to 127°C. Calculate its new density.",
+   "options": [
+    "0.26 kg/m³",
+    "1.60 kg/m³",
+    "0.90 kg/m³",
+    "1.20 kg/m³"
+   ],
+   "answer": 2,
+   "explanation": "At constant pressure, density is inversely proportional to absolute temperature, so ρ₂ = ρ₁T₁/T₂. Converting to kelvin gives 300 K and 400 K, hence ρ₂ = 1.2 × 300/400 = 0.90 kg/m³. The value 1.60 kg/m³ comes from using the temperature ratio upside down, and 0.26 kg/m³ comes from failing to convert °C to K."
+  },
+  {
+   "n": 36,
+   "topic": "Work, energy and power",
+   "q": "Ade in Ilorin pulls a crate along a level floor with a rope that makes an angle of 30° with the horizontal. He applies a constant force of 60 N and moves the crate 5.0 m. Calculate the work done by the applied force.",
+   "options": [
+    "150 J",
+    "300 J",
+    "75.0 J",
+    "150√3 J ≈ 260 J"
+   ],
+   "answer": 3,
+   "explanation": "The horizontal component of the force is 60 cos 30°, so W = 60 × 5.0 × cos 30° = 150√3 J ≈ 260 J. The value 300 J comes from using the full 60 N without resolving, while 150 J would use the sine component instead."
+  },
+  {
+   "n": 37,
+   "topic": "Work, energy and power",
+   "q": "A water pump in Abeokuta lifts 0.80 m³ of water through a vertical height of 8.0 m in 20 s. Taking the density of water as 1000 kg/m³ and g = 10 m/s², calculate the useful output power of the pump.",
+   "options": [
+    "6.4 kW",
+    "32 kW",
+    "1.6 kW",
+    "3.2 kW"
+   ],
+   "answer": 3,
+   "explanation": "The mass lifted is 1000 × 0.80 = 800 kg. Useful work = mgh = 800 × 10 × 8.0 = 64 000 J, so power = 64 000 ÷ 20 = 3200 W = 3.2 kW."
+  },
+  {
+   "n": 38,
+   "topic": "Work, energy and power",
+   "q": "A trader in Onitsha uses a ramp 3.0 m long to push a 50 kg sack onto a platform 1.2 m high. She applies a steady force of 240 N along the ramp. Taking g = 10 m/s², calculate the efficiency of the ramp.",
+   "options": [
+    "120%",
+    "72.0%",
+    "83.3%",
+    "60.0%"
+   ],
+   "answer": 2,
+   "explanation": "Useful work = mgh = 50 × 10 × 1.2 = 600 J. Work input = Fd = 240 × 3.0 = 720 J, so efficiency = (600 ÷ 720) × 100% = 83.3%. The figure 72.0% comes from confusing the work input with a percentage of the useful work."
+  },
+  {
+   "n": 39,
+   "topic": "Heat and temperature",
+   "q": "A metal block of mass 0.40 kg in Jos absorbs 7.2 kJ of heat and its temperature rises from 20°C to 80°C. Calculate the specific heat capacity of the metal.",
+   "options": [
+    "300 J/kg°C",
+    "600 J/kg°C",
+    "120 J/kg°C",
+    "180 J/kg°C"
+   ],
+   "answer": 0,
+   "explanation": "The temperature rise is 80°C − 20°C = 60°C. Using Q = mcΔT gives c = 7200 ÷ (0.40 × 60) = 300 J/kg°C."
+  },
+  {
+   "n": 40,
+   "topic": "Heat and temperature",
+   "q": "An electric kettle in Enugu is rated 800 W. It heats 1.5 kg of water from 25°C to 75°C. Assuming no heat losses and taking the specific heat capacity of water as 4200 J/kg°C, how long does the heating take?",
+   "options": [
+    "525 s",
+    "788 s",
+    "263 s",
+    "394 s"
+   ],
+   "answer": 3,
+   "explanation": "Heat required = 1.5 × 4200 × (75 − 25) = 315 000 J. Time = 315 000 ÷ 800 = 393.75 s ≈ 394 s."
+  },
+  {
+   "n": 41,
+   "topic": "Atomic and nuclear physics",
+   "q": "A radioactive sample in a laboratory in Zaria has a half-life of 12 days. It initially contains 4.0 × 10¹⁸ atoms of the radioactive nuclide. How many atoms of the nuclide have decayed after 36 days?",
+   "options": [
+    "2.0 × 10¹⁸",
+    "5.0 × 10¹⁷",
+    "3.5 × 10¹⁸",
+    "1.0 × 10¹⁸"
+   ],
+   "answer": 2,
+   "explanation": "36 days is 36 ÷ 12 = 3 half-lives. The number remaining is 4.0 × 10¹⁸ ÷ 2³ = 5.0 × 10¹⁷, so the number decayed is 4.0 × 10¹⁸ − 5.0 × 10¹⁷ = 3.5 × 10¹⁸. The figure 5.0 × 10¹⁷ is the number remaining, not the number decayed."
+  },
+  {
+   "n": 42,
+   "topic": "Atomic and nuclear physics",
+   "q": "A nucleus of polonium-210, ²¹⁰₈₄Po, emits an alpha particle. What are the mass number and atomic number of the daughter nucleus?",
+   "options": [
+    "²¹⁴₈₆Rn",
+    "²⁰⁶₈₂Pb",
+    "²¹⁰₈₂Pb",
+    "²⁰⁶₈₄Po"
+   ],
+   "answer": 1,
+   "explanation": "An alpha particle is ⁴₂He, so alpha emission decreases the mass number by 4 and the atomic number by 2. Thus ²¹⁰₈₄Po becomes ²⁰⁶₈₂Pb. The nucleus ²⁰⁶₈₄Po keeps the atomic number unchanged and would not result from alpha decay."
+  },
+  {
+   "n": 43,
+   "topic": "Motion",
+   "q": "A taxi in Abuja starts from rest and accelerates uniformly at 3.0 m/s² for 4.0 s. It then travels at the speed reached for another 6.0 s. Calculate the total distance travelled.",
+   "options": [
+    "84 m",
+    "96 m",
+    "72 m",
+    "120 m"
+   ],
+   "answer": 1,
+   "explanation": "During acceleration, distance = ½ × 3.0 × 4.0² = 24 m and final speed = 3.0 × 4.0 = 12 m/s. During the constant-speed stage, distance = 12 × 6.0 = 72 m, giving a total of 24 + 72 = 96 m. The figure 72 m is only the constant-speed part."
+  },
+  {
+   "n": 44,
+   "topic": "Motion",
+   "q": "A girl in Ibadan throws a stone vertically upward with an initial speed of 20 m/s. Taking g = 10 m/s² and neglecting air resistance, how long does the stone take to return to the point of projection?",
+   "options": [
+    "8.0 s",
+    "4.0 s",
+    "0.50 s",
+    "2.0 s"
+   ],
+   "answer": 1,
+   "explanation": "The time to reach the highest point is u ÷ g = 20 ÷ 10 = 2.0 s. The total time to return to the starting point is twice this, 4.0 s; the 2.0 s figure is only the upward journey."
+  },
+  {
+   "n": 45,
+   "topic": "Motion",
+   "q": "A bicycle in Lekki moving at 6.0 m/s accelerates uniformly to 14 m/s over a distance of 40 m. Calculate its acceleration.",
+   "options": [
+    "8.0 m/s²",
+    "0.20 m/s²",
+    "2.0 m/s²",
+    "4.0 m/s²"
+   ],
+   "answer": 2,
+   "explanation": "Using v² = u² + 2as gives 14² = 6² + 2a × 40. Thus 196 = 36 + 80a, so a = (196 − 36) ÷ 80 = 2.0 m/s²."
+  },
+  {
+   "n": 46,
+   "topic": "Electrostatics and capacitors",
+   "q": "A charge of 5.0 μC is moved between two points in an electric field with a potential difference of 240 V. Calculate the work done in moving the charge.",
+   "options": [
+    "1.2 × 10⁻³ J",
+    "2.4 × 10⁻³ J",
+    "1.2 × 10⁻⁶ J",
+    "1.2 J"
+   ],
+   "answer": 0,
+   "explanation": "Work done is W = QV = 5.0 × 10⁻⁶ × 240 = 1.2 × 10⁻³ J. Using 5.0 × 10⁻³ C instead of 5.0 × 10⁻⁶ C gives 1.2 J, which is a unit-conversion error. The answer 2.4 × 10⁻³ J would require twice the charge or twice the potential difference."
+  },
+  {
+   "n": 47,
+   "topic": "Electrostatics and capacitors",
+   "q": "A 30 μF capacitor in the flash circuit of a camera in Ibadan is charged to 200 V. Calculate the energy stored in the capacitor.",
+   "options": [
+    "0.60 J",
+    "6.0 × 10⁻³ J",
+    "3.0 × 10⁻³ J",
+    "1.20 J"
+   ],
+   "answer": 0,
+   "explanation": "Energy stored is E = ½CV² = ½ × 30 × 10⁻⁶ × (200)² = 0.60 J. The value 1.20 J is obtained when the factor ½ is omitted. Using CV without squaring V gives 6.0 × 10⁻³ J."
+  },
+  {
+   "n": 48,
+   "topic": "Elasticity and pressure",
+   "q": "A helical spring in a laboratory in Enugu has a force constant of 250 N/m. It is stretched by 8.0 cm from its natural length. Calculate the elastic potential energy stored in the spring.",
+   "options": [
+    "1.60 J",
+    "10.0 J",
+    "0.80 J",
+    "0.0080 J"
+   ],
+   "answer": 2,
+   "explanation": "Elastic potential energy is E = ½kx² = ½ × 250 × (0.080)² = 0.80 J. Omitting the factor ½ gives 1.60 J. Using ½kx rather than ½kx² gives 10.0 J."
+  },
+  {
+   "n": 49,
+   "topic": "Elasticity and pressure",
+   "q": "In a hydraulic garage in Kaduna, a force of 300 N is applied to a small piston of area 0.015 m². Calculate the pressure transmitted through the oil.",
+   "options": [
+    "4.5 × 10³ Pa",
+    "2.0 × 10⁵ Pa",
+    "2.0 × 10⁴ Pa",
+    "3.0 × 10² Pa"
+   ],
+   "answer": 2,
+   "explanation": "Pressure transmitted is p = F/A = 300 ÷ 0.015 = 2.0 × 10⁴ Pa. Multiplying force by area instead of dividing gives 4.5 × 10³ (though with wrong units), while using an area of 0.0015 m² gives 2.0 × 10⁵ Pa. The value 3.0 × 10² Pa comes from dividing 300 N by about 1 m², not by the given piston area."
+  },
+  {
+   "n": 50,
+   "topic": "Newton’s laws and momentum",
+   "q": "A 0.20 kg ball moving horizontally at 4.0 m/s collides with a stationary 0.30 kg ball. They stick together and move along the same line. Calculate their common speed immediately after the collision.",
+   "options": [
+    "2.0 m/s",
+    "1.6 m/s",
+    "0.80 m/s",
+    "2.4 m/s"
+   ],
+   "answer": 1,
+   "explanation": "By conservation of momentum, (0.20 × 4.0) + (0.30 × 0) = (0.20 + 0.30)v, so 0.80 = 0.50v and v = 1.6 m/s. The value 0.80 m/s is the total initial momentum, not the final speed. The value 2.0 m/s would result if the total mass were wrongly taken as 0.40 kg."
+  }
+ ]
+}

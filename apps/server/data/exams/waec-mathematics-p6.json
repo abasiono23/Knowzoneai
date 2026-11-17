@@ -1,0 +1,661 @@
+{
+ "id": "waec-mathematics-p6",
+ "exam": "waec",
+ "subject": "mathematics",
+ "year": null,
+ "number": 6,
+ "source": "ai",
+ "minutes": 60,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Indices and logarithms",
+   "q": "Simplify (81^(3/4) × 32^(2/5)) ÷ 27^(1/3).",
+   "options": [
+    "24",
+    "36",
+    "108",
+    "12"
+   ],
+   "answer": 1,
+   "explanation": "81^(3/4)=27, 32^(2/5)=4 and 27^(1/3)=3, so (27 × 4) ÷ 3 = 36. Taking 81^(3/4) as 9 gives 12, which is a common exponent error."
+  },
+  {
+   "n": 2,
+   "topic": "Indices and logarithms",
+   "q": "Given that log₁₀ 2 = 0.3010 and log₁₀ 7 = 0.8451, evaluate log₁₀ 3.5.",
+   "options": [
+    "1.1461",
+    "0.5441",
+    "2.8076",
+    "0.5440"
+   ],
+   "answer": 1,
+   "explanation": "Since 3.5 = 7 ÷ 2, log₁₀ 3.5 = log₁₀ 7 − log₁₀ 2 = 0.8451 − 0.3010 = 0.5441. Adding the logarithms corresponds to log₁₀ 14 and gives 1.1461."
+  },
+  {
+   "n": 3,
+   "topic": "Indices and logarithms",
+   "q": "Solve for x: 9^(2x − 3) = 27^(x + 1).",
+   "options": [
+    "4",
+    "−6",
+    "3",
+    "9"
+   ],
+   "answer": 3,
+   "explanation": "Write 9 and 27 as powers of 3: 3^(4x − 6) = 3^(3x + 3), so 4x − 6 = 3x + 3 and x = 9. Comparing 2x − 3 with x + 1 instead gives x = 4, which is a common mistake."
+  },
+  {
+   "n": 4,
+   "topic": "Sets",
+   "q": "In a survey of 70 students in Lokoja, 40 like Mathematics, 35 like Physics and 25 like both subjects. How many students like neither Mathematics nor Physics?",
+   "options": [
+    "5",
+    "15",
+    "20",
+    "30"
+   ],
+   "answer": 2,
+   "explanation": "The number who like at least one subject is 40 + 35 − 25 = 50. Therefore, the number who like neither is 70 − 50 = 20; using 40 + 35 without subtracting the overlap gives 5 as a tempting error."
+  },
+  {
+   "n": 5,
+   "topic": "Sets",
+   "q": "Let U = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12}, A = {x ∈ U : x is a prime number and x < 12} and B = {x ∈ U : x is a multiple of 3}. Find (A ∪ B)′.",
+   "options": [
+    "{1, 4, 8, 10, 12}",
+    "{1, 4, 8, 10}",
+    "{1, 4, 8}",
+    "{2, 3, 5, 6, 7, 9, 11}"
+   ],
+   "answer": 1,
+   "explanation": "The primes in U are {2, 3, 5, 7, 11} and the multiples of 3 are {3, 6, 9, 12}, so the union is {2, 3, 5, 6, 7, 9, 11, 12}. The complement in U is {1, 4, 8, 10}; omitting 12 from the multiples of 3 would wrongly include 12 in the complement."
+  },
+  {
+   "n": 6,
+   "topic": "Statistics",
+   "q": "The daily sales, in naira, made by 7 traders in Warri are 2,500, 3,200, 1,800, 4,000, 3,200, 2,700 and 5,600. Calculate the median daily sale.",
+   "options": [
+    "₦3,200",
+    "₦4,000",
+    "₦2,700",
+    "₦3,286"
+   ],
+   "answer": 0,
+   "explanation": "Arranging the sales in order gives 1,800, 2,500, 2,700, 3,200, 3,200, 4,000, 5,600, so the fourth value is the median, ₦3,200. The mean is about ₦3,286, not the median."
+  },
+  {
+   "n": 7,
+   "topic": "Statistics",
+   "q": "The numbers of goals scored by a football team in 20 matches are summarised as follows: 0 goal: 4 matches; 1 goal: 6 matches; 2 goals: 7 matches; 3 goals: 3 matches. Calculate the mean number of goals per match.",
+   "options": [
+    "1.75",
+    "1.45",
+    "1.35",
+    "1.50"
+   ],
+   "answer": 1,
+   "explanation": "The total number of goals is 0 × 4 + 1 × 6 + 2 × 7 + 3 × 3 = 29. Since there are 20 matches, the mean is 29 ÷ 20 = 1.45 goals per match."
+  },
+  {
+   "n": 8,
+   "topic": "Statistics",
+   "q": "The scores of five pupils in a Mathematics quiz in Jos are 2, 4, 6, 8 and 10. Calculate the variance of the distribution.",
+   "options": [
+    "40",
+    "4",
+    "10",
+    "8"
+   ],
+   "answer": 3,
+   "explanation": "The mean is (2 + 4 + 6 + 8 + 10) ÷ 5 = 6. The squared deviations add to 16 + 4 + 0 + 4 + 16 = 40, so the variance is 40 ÷ 5 = 8. Dividing by 4 gives 10, which would be the sample variance rather than the variance of the distribution."
+  },
+  {
+   "n": 9,
+   "topic": "Number bases",
+   "q": "Evaluate 10111₂ + 1101₂, giving your answer in base 2.",
+   "options": [
+    "100010₂",
+    "100100₂",
+    "100101₂",
+    "110100₂"
+   ],
+   "answer": 1,
+   "explanation": "In base 10, 10111₂ = 23 and 1101₂ = 13, so the sum is 36. Since 36 = 32 + 4, its binary form is 100100₂."
+  },
+  {
+   "n": 10,
+   "topic": "Number bases",
+   "q": "Convert 212₃ to base 5.",
+   "options": [
+    "34₅",
+    "42₅",
+    "23₅",
+    "43₅"
+   ],
+   "answer": 3,
+   "explanation": "212₃ = 2 × 3² + 1 × 3 + 2 = 23₁₀. Converting 23₁₀ to base 5 gives 4 × 5 + 3, which is 43₅; reversing the digits gives 34₅, a common error."
+  },
+  {
+   "n": 11,
+   "topic": "Differentiation",
+   "q": "The radius of a circular oil patch on a garage floor in Onitsha is increasing at 0.4 cm/s. At the instant when the radius is 5 cm, find the rate at which its area is increasing. [Area = πr²]",
+   "options": [
+    "10π cm²/s",
+    "4π cm²/s",
+    "0.8π cm²/s",
+    "2π cm²/s"
+   ],
+   "answer": 1,
+   "explanation": "Using A = πr² gives dA/dt = 2πr dr/dt. Substituting r = 5 cm and dr/dt = 0.4 cm/s gives dA/dt = 2π × 5 × 0.4 = 4π cm²/s; using only πr² would give 2π cm²/s, which ignores the factor 2 from differentiating r²."
+  },
+  {
+   "n": 12,
+   "topic": "Mensuration",
+   "q": "A cylindrical tank of radius 1.4 m and height 3 m is full of water. If 2,200 litres are drawn from it, how many litres remain? [Take π = 22/7]",
+   "options": [
+    "14,080 litres",
+    "16,280 litres",
+    "20,680 litres",
+    "18,480 litres"
+   ],
+   "answer": 1,
+   "explanation": "Volume = πr²h = (22/7) × 1.4² × 3 = 18.48 m³ = 18,480 litres. After drawing 2,200 litres, the amount left is 18,480 − 2,200 = 16,280 litres; 20,680 litres results from adding instead of subtracting 2,200."
+  },
+  {
+   "n": 13,
+   "topic": "Angles and circle geometry",
+   "q": "Each interior angle of a regular polygon is 156°. How many sides has the polygon?",
+   "options": [
+    "15 sides",
+    "18 sides",
+    "20 sides",
+    "12 sides"
+   ],
+   "answer": 0,
+   "explanation": "For a regular polygon, each interior angle = (n − 2) × 180°/n. Setting (n − 2) × 180/n = 156 gives 180n − 360 = 156n, so 24n = 360 and n = 15."
+  },
+  {
+   "n": 14,
+   "topic": "Trigonometry",
+   "q": "Solve 4 cos² θ − 1 = 0 for 0° ≤ θ < 360°.",
+   "options": [
+    "60° and 300°",
+    "120° and 240°",
+    "60°, 120°, 240° and 300°",
+    "30°, 150°, 210° and 330°"
+   ],
+   "answer": 2,
+   "explanation": "4 cos²θ − 1 = 0 gives cos²θ = 1/4, so cosθ = 1/2 or cosθ = −1/2. In the interval 0° ≤ θ < 360°, these give 60°, 300° from cosθ = 1/2 and 120°, 240° from cosθ = −1/2."
+  },
+  {
+   "n": 15,
+   "topic": "Simultaneous equations and inequalities",
+   "q": "At Bodija Market in Ibadan, 3 kg of yam and 4 kg of rice cost ₦7,200, while 5 kg of yam and 2 kg of rice cost ₦6,400. Find the cost of 1 kg of yam.",
+   "options": [
+    "₦800",
+    "₦1,200",
+    "₦600",
+    "₦1,000"
+   ],
+   "answer": 0,
+   "explanation": "Let the cost of 1 kg of yam be y naira and 1 kg of rice be r naira. Doubling the second equation gives 10y + 4r = ₦12,800; subtracting 3y + 4r = ₦7,200 gives 7y = ₦5,600, so y = ₦800. The cost of 1 kg of rice is ₦1,200, which is a different item."
+  },
+  {
+   "n": 16,
+   "topic": "Simultaneous equations and inequalities",
+   "q": "Solve the inequality (2x − 1)/3 ≤ (x + 2)/2.",
+   "options": [
+    "x ≥ 2",
+    "x ≥ 8",
+    "x ≤ 2",
+    "x ≤ 8"
+   ],
+   "answer": 3,
+   "explanation": "Multiplying both sides by 6 gives 2(2x − 1) ≤ 3(x + 2). Expanding gives 4x − 2 ≤ 3x + 6, so x ≤ 8."
+  },
+  {
+   "n": 17,
+   "topic": "Simultaneous equations and inequalities",
+   "q": "If 3x + 2y = 19 and x − y = 3, find x² + y².",
+   "options": [
+    "13",
+    "29",
+    "41",
+    "21"
+   ],
+   "answer": 1,
+   "explanation": "From x − y = 3, x = y + 3. Substituting into 3x + 2y = 19 gives 3(y + 3) + 2y = 19, so 5y = 10 and y = 2; hence x = 5. Therefore x² + y² = 25 + 4 = 29."
+  },
+  {
+   "n": 18,
+   "topic": "Probability",
+   "q": "In a school in Ilorin, 18 students play football, 15 play volleyball and 6 play both games. If a student is selected at random from the 40 students in the class, what is the probability that the student plays neither football nor volleyball?",
+   "options": [
+    "27/40",
+    "3/20",
+    "7/20",
+    "13/40"
+   ],
+   "answer": 3,
+   "explanation": "The number who play at least one of the two games is 18 + 15 − 6 = 27, so 40 − 27 = 13 play neither. The required probability is therefore 13/40. The value 27/40 would give the probability of playing at least one game, not neither."
+  },
+  {
+   "n": 19,
+   "topic": "Probability",
+   "q": "A bag contains 4 red, 3 blue and 2 green identical balls. Two balls are drawn at random one after the other without replacement. What is the probability that both balls are of the same colour?",
+   "options": [
+    "29/81",
+    "1/3",
+    "5/18",
+    "2/9"
+   ],
+   "answer": 2,
+   "explanation": "The total number of ways of choosing 2 balls is 9C2 = 36. The favourable ways are 4C2 + 3C2 + 2C2 = 6 + 3 + 1 = 10, so the probability is 10/36 = 5/18. The value 29/81 would arise if replacement were allowed."
+  },
+  {
+   "n": 20,
+   "topic": "Quadratic equations",
+   "q": "Form the quadratic equation whose roots are 2 + √5 and 2 − √5, expressing it in the form x² + bx + c = 0.",
+   "options": [
+    "x² + 4x + 1 = 0",
+    "x² − 4x + 1 = 0",
+    "x² + 4x − 1 = 0",
+    "x² − 4x − 1 = 0"
+   ],
+   "answer": 3,
+   "explanation": "The sum of the roots is (2 + √5) + (2 − √5) = 4, and the product is (2 + √5)(2 − √5) = 4 − 5 = −1. The equation is x² − (sum of roots)x + (product of roots) = 0, giving x² − 4x − 1 = 0."
+  },
+  {
+   "n": 21,
+   "topic": "Quadratic equations",
+   "q": "Solve the equation 6x² + x − 2 = 0.",
+   "options": [
+    "x = −2/3 or x = 1/2",
+    "x = −1/3 or x = 2",
+    "x = 1/3 or x = −2",
+    "x = 2/3 or x = −1/2"
+   ],
+   "answer": 0,
+   "explanation": "Factorising gives (3x + 2)(2x − 1) = 0. Hence 3x + 2 = 0 or 2x − 1 = 0, so x = −2/3 or x = 1/2."
+  },
+  {
+   "n": 22,
+   "topic": "Quadratic equations",
+   "q": "The area of a rectangular plot in Abuja is 192 m². Its length is 4 m more than its breadth. Find the breadth of the plot.",
+   "options": [
+    "16 m",
+    "14 m",
+    "8 m",
+    "12 m"
+   ],
+   "answer": 3,
+   "explanation": "Let the breadth be b m; then the length is (b + 4) m. Since b(b + 4) = 192, b² + 4b − 192 = 0, which factorises as (b − 12)(b + 16) = 0. The positive breadth is 12 m."
+  },
+  {
+   "n": 23,
+   "topic": "Variation",
+   "q": "The extension e cm of an elastic string varies directly as the tension T newtons and inversely as the square root of its length l metres. When T = 10 N and l = 25 m, e = 4 cm. Find e when T = 18 N and l = 9 m.",
+   "options": [
+    "15 cm",
+    "12 cm",
+    "8 cm",
+    "20 cm"
+   ],
+   "answer": 1,
+   "explanation": "Write e = kT/√l. Substituting T = 10, l = 25 and e = 4 gives 4 = k(10)/5, so k = 2. When T = 18 and l = 9, e = 2 × 18/3 = 12 cm."
+  },
+  {
+   "n": 24,
+   "topic": "Variation",
+   "q": "The stopping distance d metres of a car varies directly as the square of its speed v m/s. A car travelling at 20 m/s stops in a distance of 50 m. What distance will it need to stop when travelling at 30 m/s?",
+   "options": [
+    "125 m",
+    "112.5 m",
+    "100 m",
+    "75 m"
+   ],
+   "answer": 1,
+   "explanation": "Using d = kv², 50 = k(20²), so k = 50/400 = 1/8. At v = 30 m/s, d = (1/8)(30²) = 900/8 = 112.5 m. A linear speed-to-distance assumption would wrongly give 75 m."
+  },
+  {
+   "n": 25,
+   "topic": "Surds",
+   "q": "Express 4/(√11 + √7) in simplest surd form.",
+   "options": [
+    "√11 − √7",
+    "2(√11 − √7)",
+    "√11 + √7",
+    "(√11 − √7)/2"
+   ],
+   "answer": 0,
+   "explanation": "Multiply numerator and denominator by the conjugate √11 − √7: 4(√11 − √7)/((√11 + √7)(√11 − √7)) = 4(√11 − √7)/(11 − 7) = √11 − √7. The expression 2(√11 − √7) results if the denominator 4 is not fully divided out after multiplying by the conjugate."
+  },
+  {
+   "n": 26,
+   "topic": "Surds",
+   "q": "Simplify (√5 + 2)/(√5 − 1).",
+   "options": [
+    "(7 + √5)/4",
+    "(3 + √5)/4",
+    "(7 + 3√5)/4",
+    "7 + 3√5"
+   ],
+   "answer": 2,
+   "explanation": "Multiply numerator and denominator by √5 + 1: ((√5 + 2)(√5 + 1))/((√5 − 1)(√5 + 1)) = (5 + √5 + 2√5 + 2)/(5 − 1) = (7 + 3√5)/4. The expression (7 + √5)/4 arises if the 2√5 term is missed when expanding the numerator."
+  },
+  {
+   "n": 27,
+   "topic": "Integration",
+   "q": "Evaluate ∫₁² (6x² − 4x + 1) dx.",
+   "options": [
+    "11",
+    "12",
+    "9",
+    "7"
+   ],
+   "answer": 2,
+   "explanation": "An antiderivative is 2x³ − 2x² + x. At x = 2 it is 16 − 8 + 2 = 10, and at x = 1 it is 2 − 2 + 1 = 1, so the integral is 10 − 1 = 9. The value 11 comes from adding the values at the limits instead of subtracting them."
+  },
+  {
+   "n": 28,
+   "topic": "Integration",
+   "q": "A curve passes through the point (1, 2) and its gradient is dy/dx = 3x² + 4x − 5. Find the equation of the curve.",
+   "options": [
+    "y = x³ + 2x² − 5x + 4",
+    "y = x³ + 4x² − 5x + 4",
+    "y = x³ + 2x² − 5x + 2",
+    "y = x³ + 2x² − 5x − 4"
+   ],
+   "answer": 0,
+   "explanation": "Integrating the gradient gives y = x³ + 2x² − 5x + C. Substituting (1, 2) gives 2 = 1 + 2 − 5 + C, so C = 4. The expression with +2 uses a wrong constant, while the one with 4x² incorrectly integrates 4x."
+  },
+  {
+   "n": 29,
+   "topic": "Sequences and series",
+   "q": "The 7th term of an arithmetic progression is 31 and the 15th term is 63. Find the sum of the first 10 terms.",
+   "options": [
+    "230",
+    "210",
+    "270",
+    "250"
+   ],
+   "answer": 3,
+   "explanation": "Using a + 6d = 31 and a + 14d = 63, subtraction gives 8d = 32, so d = 4 and a = 31 − 6(4) = 7. Thus S₁₀ = 10/2[2(7) + 9(4)] = 5(14 + 36) = 250. The value 210 comes from taking a = 3, obtained by subtracting 7d instead of 6d."
+  },
+  {
+   "n": 30,
+   "topic": "Sequences and series",
+   "q": "In a geometric progression, the 4th term is 24 and the common ratio is 2. Find the sum of the first 6 terms.",
+   "options": [
+    "192",
+    "96",
+    "93",
+    "189"
+   ],
+   "answer": 3,
+   "explanation": "The 4th term is ar³ = 24, so a(2³) = 24 and a = 3. Then S₆ = 3(2⁶ − 1)/(2 − 1) = 3(64 − 1) = 189. The value 192 comes from using 2⁶ without subtracting 1, while 96 is the 6th term, not the sum."
+  },
+  {
+   "n": 31,
+   "topic": "Matrices and determinants",
+   "q": "Using the matrix method, solve the simultaneous equations 3x + y = 11 and 2x + 4y = 14.",
+   "options": [
+    "x = 1, y = 8",
+    "x = 3, y = 2",
+    "x = 2, y = 3",
+    "x = 4, y = −1"
+   ],
+   "answer": 1,
+   "explanation": "The coefficient determinant is (3)(4) − (1)(2) = 10. By Cramer's rule, x = (11·4 − 1·14)/10 = 30/10 = 3 and y = (3·14 − 11·2)/10 = 20/10 = 2. Substitution confirms that x = 3 and y = 2 satisfy both equations."
+  },
+  {
+   "n": 32,
+   "topic": "Matrices and determinants",
+   "q": "If A and B are 2 × 2 matrices such that det A = 3 and det B = 4, find det(2AB).",
+   "options": [
+    "48",
+    "24",
+    "96",
+    "12"
+   ],
+   "answer": 0,
+   "explanation": "For 2 × 2 matrices, multiplying by the scalar 2 multiplies the determinant by 2² = 4, and det(AB) = det A × det B. Hence det(2AB) = 4 × 3 × 4 = 48. The value 24 arises from treating scalar multiplication as multiplying the determinant by 2 instead of 2²."
+  },
+  {
+   "n": 33,
+   "topic": "Fractions, decimals and percentages",
+   "q": "A trader in Sokoto had 3/8 of a full tank of petrol. He sold 2/5 of this quantity. What fraction of the full tank remained with him?",
+   "options": [
+    "3/8",
+    "3/5",
+    "3/20",
+    "9/40"
+   ],
+   "answer": 3,
+   "explanation": "The quantity sold was 2/5 × 3/8 = 3/20 of the full tank. The fraction left is 3/8 − 3/20 = 15/40 − 6/40 = 9/40. The value 3/5 is only the fraction of his petrol stock left, not the fraction of the full tank."
+  },
+  {
+   "n": 34,
+   "topic": "Fractions, decimals and percentages",
+   "q": "A civil servant in Jos spends 15% of her monthly salary on food and 1/5 of it on rent. If she spends a total of ₦70,000 on food and rent, what is her monthly salary?",
+   "options": [
+    "₦280,000",
+    "₦100,000",
+    "₦175,000",
+    "₦200,000"
+   ],
+   "answer": 3,
+   "explanation": "15% = 3/20 and 1/5 = 4/20, so food and rent together take 7/20 of the salary. Thus the salary is 70,000 × 20/7 = ₦200,000. Treating ₦70,000 as 70% of the salary would wrongly give ₦100,000."
+  },
+  {
+   "n": 35,
+   "topic": "Fractions, decimals and percentages",
+   "q": "Simplify 0.45 ÷ 0.09 + 1.6 × 0.5.",
+   "options": [
+    "0.58",
+    "5.8",
+    "9.8",
+    "6.3"
+   ],
+   "answer": 1,
+   "explanation": "0.45 ÷ 0.09 = 5 and 1.6 × 0.5 = 0.8. Adding these gives 5 + 0.8 = 5.8. A decimal-point slip can produce 0.58 instead of 5.8."
+  },
+  {
+   "n": 36,
+   "topic": "Coordinate geometry",
+   "q": "A triangular plot in Asaba has vertices A(1, 2), B(5, 2) and C(3, 6). Find the area of the plot in square units.",
+   "options": [
+    "8 square units",
+    "10 square units",
+    "4 square units",
+    "16 square units"
+   ],
+   "answer": 0,
+   "explanation": "AB is horizontal and has length 5 − 1 = 4. The perpendicular height from C(3, 6) to the line y = 2 is 4. Hence the area is 1/2 × 4 × 4 = 8 square units."
+  },
+  {
+   "n": 37,
+   "topic": "Indices and logarithms",
+   "q": "Simplify (a^(2/3) × a^(1/2)) ÷ a^(1/6), where a > 0.",
+   "options": [
+    "1",
+    "a^(4/3)",
+    "a",
+    "a^(1/6)"
+   ],
+   "answer": 2,
+   "explanation": "Using the laws of indices, (a^(2/3) × a^(1/2)) ÷ a^(1/6) = a^(2/3 + 1/2 − 1/6). The exponent is 4/6 + 3/6 − 1/6 = 1, so the expression equals a."
+  },
+  {
+   "n": 38,
+   "topic": "Indices and logarithms",
+   "q": "Solve log₂(x + 3) + log₂(x − 3) = 4 for x, where x > 3.",
+   "options": [
+    "5",
+    "8",
+    "−5",
+    "±5"
+   ],
+   "answer": 0,
+   "explanation": "Combine the logarithms: log₂((x + 3)(x − 3)) = 4, so (x + 3)(x − 3) = 2⁴ = 16. This gives x² − 9 = 16, hence x² = 25 and x = 5 or −5; the condition x > 3 selects 5. The value ±5 includes the invalid −5."
+  },
+  {
+   "n": 39,
+   "topic": "Sets",
+   "q": "In a survey of 120 traders in Oshodi, 68 sell fabrics, 54 sell shoes and 25 sell neither. How many sell both fabrics and shoes?",
+   "options": [
+    "27",
+    "25",
+    "2",
+    "43"
+   ],
+   "answer": 0,
+   "explanation": "The number selling at least one item is 120 − 25 = 95. If x sell both, then 68 + 54 − x = 95, so x = 122 − 95 = 27. Using the total 120 instead of 95 would wrongly give 2."
+  },
+  {
+   "n": 40,
+   "topic": "Sets",
+   "q": "Given that P = {x : x is an even integer, 0 < x ≤ 10} and Q = {x : x is a prime number less than 12}, find n(P ∪ Q).",
+   "options": [
+    "10",
+    "9",
+    "8",
+    "5"
+   ],
+   "answer": 1,
+   "explanation": "P = {2, 4, 6, 8, 10} and Q = {2, 3, 5, 7, 11}. Their union is {2, 3, 4, 5, 6, 7, 8, 10, 11}, which has 9 elements. The common element 2 is counted once, not twice."
+  },
+  {
+   "n": 41,
+   "topic": "Statistics",
+   "q": "The scores of eight students in a Mathematics test in Kaduna are 12, 15, 18, 10, 15, 20, 14 and 16. Find the median score.",
+   "options": [
+    "15.5",
+    "14",
+    "15",
+    "16"
+   ],
+   "answer": 2,
+   "explanation": "Arranging the scores in order gives 10, 12, 14, 15, 15, 16, 18, 20. Since there are eight scores, the median is the mean of the fourth and fifth scores: (15 + 15) ÷ 2 = 15."
+  },
+  {
+   "n": 42,
+   "topic": "Statistics",
+   "q": "The number of customers that visited a shop in Enugu on six consecutive days were 24, 31, 18, 24, 45 and 38. Calculate the mean deviation of the number of customers from the mean.",
+   "options": [
+    "6",
+    "9",
+    "7",
+    "8"
+   ],
+   "answer": 3,
+   "explanation": "The total number of customers is 180, so the mean is 180 ÷ 6 = 30. The absolute deviations from 30 are 6, 1, 12, 6, 15 and 8; their sum is 48, so the mean deviation is 48 ÷ 6 = 8."
+  },
+  {
+   "n": 43,
+   "topic": "Number bases",
+   "q": "Convert 111011₂ to base 5.",
+   "options": [
+    "214₅",
+    "204₅",
+    "224₅",
+    "104₅"
+   ],
+   "answer": 0,
+   "explanation": "111011₂ = 32 + 16 + 8 + 2 + 1 = 59. Now 59 = 2 × 25 + 1 × 5 + 4, so the base 5 representation is 214₅."
+  },
+  {
+   "n": 44,
+   "topic": "Number bases",
+   "q": "Evaluate 245₇ + 136₇, giving your answer in base 7.",
+   "options": [
+    "404₇",
+    "411₇",
+    "414₇",
+    "424₇"
+   ],
+   "answer": 2,
+   "explanation": "Adding the units: 5 + 6 = 11, write 4 and carry 1. Adding the sevens: 4 + 3 + 1 = 8, write 1 and carry 1. Adding the forty-nines: 2 + 1 + 1 = 4, so the sum is 414₇."
+  },
+  {
+   "n": 45,
+   "topic": "Number bases",
+   "q": "Evaluate 24₅ × 3₅, giving your answer in base 5.",
+   "options": [
+    "132₅",
+    "102₅",
+    "142₅",
+    "122₅"
+   ],
+   "answer": 0,
+   "explanation": "24₅ = 2 × 5 + 4 = 14 in base 10. Then 14 × 3 = 42, and 42 = 1 × 25 + 3 × 5 + 2, so the product is 132₅."
+  },
+  {
+   "n": 46,
+   "topic": "Differentiation",
+   "q": "Given that y = 5x³ − 2x² + 7x − 4, find d²y/dx².",
+   "options": [
+    "30x² − 4x",
+    "30x − 4",
+    "30x + 7",
+    "15x² − 4x + 7"
+   ],
+   "answer": 1,
+   "explanation": "First, dy/dx = 15x² − 4x + 7. Differentiating again gives d²y/dx² = 30x − 4."
+  },
+  {
+   "n": 47,
+   "topic": "Differentiation",
+   "q": "Find the equation of the normal to the curve y = x² + 2x − 1 at the point where x = 1.",
+   "options": [
+    "x + 4y − 9 = 0",
+    "4x + y − 6 = 0",
+    "x − 4y + 7 = 0",
+    "4x − y − 2 = 0"
+   ],
+   "answer": 0,
+   "explanation": "At x = 1, y = 1² + 2(1) − 1 = 2, and dy/dx = 2x + 2, so the tangent slope is 4. The normal slope is therefore −1/4, giving y − 2 = −(x − 1)/4, which simplifies to x + 4y − 9 = 0."
+  },
+  {
+   "n": 48,
+   "topic": "Mensuration",
+   "q": "A hemispherical bowl in Jos has internal radius 21 cm. Find its capacity in litres. [Take π = 22/7; 1000 cm³ = 1 litre]",
+   "options": [
+    "38.808 litres",
+    "9.702 litres",
+    "29.106 litres",
+    "19.404 litres"
+   ],
+   "answer": 3,
+   "explanation": "The volume of a hemisphere is (2/3)πr³. Thus V = (2/3) × (22/7) × 21³ = 19,404 cm³ = 19.404 litres."
+  },
+  {
+   "n": 49,
+   "topic": "Angles and circle geometry",
+   "q": "PT is a tangent to a circle at T, and TQ is a chord. The angle between PT and TQ is (2x + 5)°, while the angle subtended by TQ in the alternate segment is (3x − 15)°. Find the size of the angle subtended by TQ in the alternate segment.",
+   "options": [
+    "15°",
+    "45°",
+    "25°",
+    "99°"
+   ],
+   "answer": 1,
+   "explanation": "By the alternate segment theorem, the angle between the tangent and chord equals the angle in the alternate segment. Hence 2x + 5 = 3x − 15, so x = 20. The required angle is 2(20) + 5 = 45°. The value 99° would arise from wrongly treating the two angles as supplementary."
+  },
+  {
+   "n": 50,
+   "topic": "Trigonometry",
+   "q": "A boat leaves a port and sails 8 km on a bearing of 060°, then 6 km on a bearing of 150°. How far is it from the port?",
+   "options": [
+    "14 km",
+    "2 km",
+    "√52 km",
+    "10 km"
+   ],
+   "answer": 3,
+   "explanation": "The bearings differ by 90°, so the two displacements form a right-angled triangle with legs 8 km and 6 km. The distance from the port is √(8² + 6²) = √100 = 10 km. Adding the distances gives 14 km, but that ignores the change in direction."
+  }
+ ]
+}

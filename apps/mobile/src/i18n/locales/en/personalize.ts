@@ -67,6 +67,10 @@ const personalize = {
     title: 'How do you like to learn?',
     subtitle: 'Pick your favourites. We’ll lead with these and mix in the rest.',
   },
+  region: {
+    title: 'Where do you study?',
+    subtitle: 'We’ll show the exams and exam practice for your country. You can change it any time in Settings.',
+  },
   language: {
     title: 'Choose your language',
     subtitle: 'The whole app, your lessons and your AI tutor will use this language right away.',
@@ -115,6 +119,7 @@ const personalize = {
       teachLevels: 'Students',
       age: 'Age group',
       education: 'Level',
+      region: 'Study region',
       pathway: 'Pathway',
       exams: 'Exams',
       subjects: 'Subjects',
@@ -260,7 +265,7 @@ const personalize = {
   learnerTypes: {
     school: { label: 'School student', description: 'Primary or secondary school' },
     university: { label: 'University or college', description: 'Degree, diploma or ND/HND' },
-    exam: { label: 'Exam candidate', description: 'Preparing for JAMB, WAEC, IELTS and more' },
+    exam: { label: 'Exam candidate', description: 'Preparing for JAMB, WAEC, IELTS and more', descriptionFor: 'Preparing for {{exams}} and more' },
     professional: { label: 'Working professional', description: 'Upskilling or getting certified' },
     lifelong: { label: 'Curious learner', description: 'Learning something new for fun' },
     teacher: { label: 'Teacher or tutor', description: 'Create classes, assign practice, track progress' },
@@ -269,7 +274,7 @@ const personalize = {
     'school-teacher': { label: 'School teacher', description: 'Primary or secondary school' },
     lecturer: { label: 'Lecturer', description: 'University, polytechnic or college' },
     'private-tutor': { label: 'Private tutor', description: 'One-to-one or small groups' },
-    'exam-coach': { label: 'Exam prep coach', description: 'JAMB, WAEC, IELTS and more' },
+    'exam-coach': { label: 'Exam prep coach', description: 'JAMB, WAEC, IELTS and more', descriptionFor: '{{exams}} and more' },
     parent: { label: 'Parent or homeschooler', description: 'Guiding my own children' },
   },
   teachLevelOptions: {

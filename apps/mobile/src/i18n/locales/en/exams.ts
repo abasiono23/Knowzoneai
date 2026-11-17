@@ -1,10 +1,12 @@
 /**
- * Past Questions (JAMB, WAEC, NECO): the dashboard card, browsing by exam, subject and paper, and
+ * Past Questions (JAMB, WAEC, NECO) and exam practice (SAT, ACT, AP, GCSE, A-level, KCSE, Matric): the card, browsing by exam, subject and paper, and
  * studying, practising or sitting a paper. Questions themselves are in English, like the real exams;
  * exam names (JAMB, WAEC, NECO, UTME…) are not translated.
  */
 export default {
   title: 'Past Questions',
+  /** The same page for students of every other exam: those papers are practice, never "past questions". */
+  practiceTitle: 'Exam practice',
   eyebrow: 'JAMB · WAEC · NECO',
   offline: 'Past Questions needs an internet connection.',
   loadFailed: 'We couldn’t load the papers. Check your connection and try again.',
@@ -14,11 +16,31 @@ export default {
     title: 'JAMB, WAEC & NECO past questions',
     body: 'Practise every subject in the real exam format, see every answer explained, and sit timed papers.',
     action: 'Start practising',
+    /** One exam (the WAEC countries outside Nigeria). */
+    titleOne: '{{exam}} past questions',
+    /** Practice-only exams (SAT, ACT and AP; GCSE and A-level; KCSE; Matric): never "past questions". */
+    titlePractice: '{{exams}} practice',
+    bodyPractice: 'Multiple-choice practice by exam and subject, with every answer explained. Written by AI and double-checked, not past papers.',
+    sat: {
+      title: 'SAT practice papers',
+      body: 'Multiple-choice practice in the digital SAT’s sections and timing, with every answer explained. Written by AI and double-checked, not past papers.',
+    },
+    gcse: {
+      title: 'GCSE-style practice',
+      body: 'Multiple-choice practice by topic in Maths, English Language, Biology, Chemistry and Physics, with every answer explained. Written by AI and double-checked, not past papers.',
+    },
   },
   exams: {
     jamb: { name: 'JAMB', full: 'JAMB UTME', about: 'Computer-based test · Use of English plus three subjects' },
     waec: { name: 'WAEC', full: 'WAEC WASSCE', about: 'Senior school certificate · objective papers' },
     neco: { name: 'NECO', full: 'NECO SSCE', about: 'Senior school certificate · objective papers' },
+    sat: { name: 'SAT', full: 'Digital SAT practice', about: 'Reading and Writing · Math · multiple choice only' },
+    act: { name: 'ACT', full: 'ACT practice', about: 'English · Math · Reading · Science' },
+    ap: { name: 'AP', full: 'AP multiple-choice practice', about: 'Calculus AB · Biology · Chemistry · Physics 1 · US History · English Language' },
+    gcse: { name: 'GCSE', full: 'GCSE-style practice', about: 'Multiple-choice practice by topic' },
+    alevel: { name: 'A-level', full: 'A-level-style practice', about: 'Multiple-choice practice by topic' },
+    kcse: { name: 'KCSE', full: 'KCSE-style practice', about: 'Multiple-choice practice by topic' },
+    nsc: { name: 'Matric', full: 'Matric (NSC)-style practice', about: 'Multiple-choice practice by topic' },
   },
   subjects: {
     english: 'English Language',
@@ -31,7 +53,37 @@ export default {
     literature: 'Literature in English',
     geography: 'Geography',
     commerce: 'Commerce',
+    'reading-writing': 'Reading and Writing',
+    math: 'Math',
+    maths: 'Maths',
+    'english-language': 'English Language',
+    reading: 'Reading',
+    science: 'Science',
+    'calculus-ab': 'Calculus AB',
+    'physics-1': 'Physics 1',
+    'us-history': 'US History',
+    'physical-sciences': 'Physical Sciences',
+    'life-sciences': 'Life Sciences',
+    accounting: 'Accounting',
   },
+  /** What each practice-only exam’s papers are and aren’t, shown wherever they are listed. */
+  notes: {
+    sat: 'These are practice questions written by AI and checked by a second AI review, not past SAT papers. They follow the digital SAT’s sections and timing, but are multiple choice only: the real Math section also has questions where you enter your own answer.',
+    act: 'These are practice questions written by AI and checked by a second AI review, not past ACT papers. They follow the ACT’s sections, number of questions and timing.',
+    ap: 'These are practice questions written by AI and checked by a second AI review, not past AP papers. They practise the multiple-choice section of each AP exam only: the real exams also have a free-response section.',
+    gcse: 'These are practice questions written by AI and checked by a second AI review, not past papers. Real GCSE papers are mostly written answers, so use these multiple-choice quizzes to revise each topic, not as a copy of the exam.',
+    alevel: 'These are practice questions written by AI and checked by a second AI review, not past papers. Real A-level papers are mostly written answers, so use these multiple-choice quizzes to revise each topic, not as a copy of the exam.',
+    kcse: 'These are practice questions written by AI and checked by a second AI review, not past papers. Real KCSE papers are mostly written answers, so use these multiple-choice quizzes to revise each topic, not as a copy of the exam.',
+    nsc: 'These are practice questions written by AI and checked by a second AI review, not past papers. Real Matric (NSC) papers are mostly written answers, so use these multiple-choice quizzes to revise each topic, not as a copy of the exam.',
+  },
+  /** A study region we have no papers for. */
+  none: {
+    title: 'No exam papers for {{country}}',
+    body: 'Your AI tutor, textbooks and courses work with any syllabus. You can still practise with other countries’ papers below.',
+  },
+  otherExams: 'Other exams',
+  region: 'Study region: {{country}}',
+  change: 'Change',
   pickExam: 'Choose your exam',
   carryOn: 'Carry on where you stopped',
   pickSubject: 'Choose a subject',
@@ -60,6 +112,8 @@ export default {
     study: { title: 'Study', body: 'See every question with its answer and explanation.' },
     practice: { title: 'Practice', body: 'Answer at your own pace and see if you’re right after each question.' },
     timed: { title: 'Timed exam', body: 'Sit it like the real exam: {{minutes}} minutes, results at the end.' },
+    /** Topic quizzes (GCSE, A-level, KCSE, Matric) aren’t in the exam’s format, so their timed mode doesn’t say "like the real exam". */
+    timedQuiz: { title: 'Timed quiz', body: 'Against the clock: {{minutes}} minutes, results at the end.' },
     history: 'YOUR SCORES',
     historyRow: '{{score}}/{{total}} · {{mode}} · {{date}}',
     modeName: { practice: 'Practice', timed: 'Timed' },

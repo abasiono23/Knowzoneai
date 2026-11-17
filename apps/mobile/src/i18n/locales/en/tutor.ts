@@ -147,6 +147,10 @@ const tutor = {
     genericError: 'Something went wrong.',
     thinking: 'Thinking it through…',
   },
+  related: {
+    title: 'From your Knowzone notes',
+    openLabel: 'Open: {{title}}',
+  },
   followUps: {
     title: 'ASK NEXT',
     askLabel: 'Ask: {{question}}',

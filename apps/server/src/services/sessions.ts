@@ -1,5 +1,6 @@
 import type { NextFunction, Request, Response } from 'express';
 
+import { isRegion } from '../data/exams.js';
 import { prisma } from '../db.js';
 import { Prisma, type User } from '../generated/prisma/client.js';
 import { AppError, forbidden, unauthorized } from '../lib/errors.js';
@@ -85,6 +86,8 @@ async function profileFor(claims: SupabaseClaims): Promise<User> {
         marketingConsent: !!consent?.marketing,
         consentAt: accepted ? new Date() : null,
         referralCode: newReferralCode(),
+        // The country from the sign-up form. Google and Apple sign-ups have none and are asked in onboarding.
+        ...(isRegion(m.region) && { settings: { region: m.region } }),
         aiCredits: WELCOME_CREDITS,
         creditEntries: { create: { credits: WELCOME_CREDITS, reason: 'welcome' } },
         notifications: {

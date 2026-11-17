@@ -506,6 +506,33 @@ const videos: Translation<typeof en> = {
     sceneHeading: 'عنوان المشهد {{number}}',
     sceneNarration: 'التعليق الصوتي للمشهد {{number}}',
   },
+  kora: {
+    title: 'دروس مع كورا',
+    subtitle: 'دروس مدتها ثلاث دقائق تشرحها كورا، وفي كل درس سؤال سريع.',
+    name: 'كورا',
+    role: 'معلّمتك بالذكاء الاصطناعي',
+    english: 'الإنجليزية',
+    minutes: '{{n}} د',
+    watched: 'تمت المشاهدة',
+    open: 'افتح الدرس: {{title}}',
+    groups: {
+      exam: 'لامتحانات {{exams}}',
+      cyber: 'الأمن السيبراني',
+      skills: 'مهارات المذاكرة',
+    },
+    start: 'ابدأ الدرس',
+    loading: 'جارٍ تحميل الدرس…',
+    loadFailed: 'لم يُحمَّل هذا الدرس. تحقّق من اتصالك ثم حاول مرة أخرى.',
+    listFailed: 'تعذّر تحميل الدروس. تحقّق من اتصالك ثم حاول مرة أخرى.',
+    part: 'الجزء {{n}} من {{total}}: {{title}}',
+    pauseAndTry: 'توقّف وحاول',
+    continuesIn: 'تتابع كورا بعد {{n}} ث',
+    continue: 'متابعة',
+    back10: 'الرجوع 10 ثوانٍ',
+    finishedTitle: 'اكتمل الدرس',
+    finishedBody: 'أحسنت. جرّب درسًا آخر، أو اسأل كورا عن أي شيء لم يتضح لك.',
+    moreLessons: 'دروس أخرى',
+  },
 };
 
 export default videos;

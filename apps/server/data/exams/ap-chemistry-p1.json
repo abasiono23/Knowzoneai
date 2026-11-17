@@ -1,0 +1,791 @@
+{
+ "id": "ap-chemistry-p1",
+ "exam": "ap",
+ "subject": "chemistry",
+ "year": null,
+ "number": 1,
+ "source": "ai",
+ "minutes": 90,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Equilibrium",
+   "q": "At 500 K, Kp = 0.120 for N₂O₄(g) ⇌ 2 NO₂(g). A flask initially contains N₂O₄ at a partial pressure of 0.200 atm and NO₂ at a partial pressure of 0.100 atm. Which statement describes the net change as equilibrium is established?",
+   "options": [
+    "Both partial pressures decrease.",
+    "The partial pressure of N₂O₄ increases and the partial pressure of NO₂ decreases.",
+    "No net change occurs because the system already contains both reactants and products.",
+    "The partial pressure of N₂O₄ decreases and the partial pressure of NO₂ increases."
+   ],
+   "answer": 3,
+   "explanation": "Calculate Qp = (0.100)²/0.200 = 0.0500. Since Qp is less than Kp, the forward reaction is favored, so N₂O₄ is consumed and NO₂ is produced as equilibrium is established."
+  },
+  {
+   "n": 2,
+   "topic": "Equilibrium",
+   "q": "For the equilibrium 2 SO₂(g) + O₂(g) ⇌ 2 SO₃(g), ΔH° = −198 kJ. The system is at equilibrium in a rigid container. Which change will increase the equilibrium concentration of SO₃?",
+   "options": [
+    "Decreasing the container volume",
+    "Raising the temperature",
+    "Removing some O₂ gas",
+    "Adding Ne gas at constant volume"
+   ],
+   "answer": 0,
+   "explanation": "Decreasing the volume raises the partial pressures and shifts the equilibrium toward the side with fewer gas molecules, which is the products. Raising the temperature shifts this exothermic reaction left, and adding Ne at constant volume or removing O₂ does not increase SO₃."
+  },
+  {
+   "n": 3,
+   "topic": "Equilibrium",
+   "q": "A 1.00 L vessel initially contains 0.400 mol A, 0.400 mol B, and no C. The reaction A(g) + B(g) ⇌ C(g) reaches equilibrium with [C] = 0.100 M. What is Kc for the reaction at this temperature?",
+   "options": [
+    "1.11",
+    "2.50",
+    "0.900",
+    "0.625"
+   ],
+   "answer": 0,
+   "explanation": "At equilibrium, 0.100 M C has formed, so A and B each decrease by 0.100 M to 0.300 M. Kc = [C]/([A][B]) = 0.100/(0.300 × 0.300) = 1.11."
+  },
+  {
+   "n": 4,
+   "topic": "Thermochemistry",
+   "q": "A 25.0 g sample of an unknown metal at 95.0°C is placed in 100.0 g of water at 22.0°C in an insulated container. The final temperature of the mixture is 26.0°C. Assume no heat is lost to the surroundings. The specific heat capacity of water is 4.18 J/(g·°C). What is the specific heat capacity of the metal?",
+   "options": [
+    "0.194 J/(g·°C)",
+    "0.916 J/(g·°C)",
+    "0.969 J/(g·°C)",
+    "0.242 J/(g·°C)"
+   ],
+   "answer": 2,
+   "explanation": "The water absorbs q = (100.0 g)(4.18 J/(g·°C))(4.0°C) = 1672 J. The metal cools by 69.0°C, so c = 1672 J/[(25.0 g)(69.0°C)] = 0.969 J/(g·°C)."
+  },
+  {
+   "n": 5,
+   "topic": "Thermochemistry",
+   "q": "Using the standard enthalpies of formation shown, what is ΔH° for CH₄(g) + 2 O₂(g) → CO₂(g) + 2 H₂O(l)? ΔH°f: CH₄(g) = −74.8 kJ/mol; CO₂(g) = −393.5 kJ/mol; H₂O(l) = −285.8 kJ/mol; O₂(g) = 0 kJ/mol.",
+   "options": [
+    "−890.3 kJ",
+    "−965.1 kJ",
+    "+890.3 kJ",
+    "−604.5 kJ"
+   ],
+   "answer": 0,
+   "explanation": "ΔH°rxn = [products] − [reactants] = [−393.5 + 2(−285.8)] − [−74.8 + 0] = −890.3 kJ. The two moles of liquid water in the equation must be included."
+  },
+  {
+   "n": 6,
+   "topic": "Acids and bases",
+   "q": "A 0.100 M aqueous solution of a weak monoprotic acid HA has pH 2.70 at 25°C. What is the acid-dissociation constant, Ka, for HA?",
+   "options": [
+    "2.0 × 10⁻³",
+    "2.0 × 10⁻⁵",
+    "4.1 × 10⁻⁵",
+    "4.0 × 10⁻⁶"
+   ],
+   "answer": 2,
+   "explanation": "From pH 2.70, [H⁺] = 10⁻²·⁷⁰ = 2.0 × 10⁻³ M. For HA, Ka = [H⁺][A⁻]/[HA] ≈ (2.0 × 10⁻³)²/(0.100 − 0.0020) = 4.1 × 10⁻⁵."
+  },
+  {
+   "n": 7,
+   "topic": "Acids and bases",
+   "q": "A buffer solution is prepared by dissolving 0.100 mol NH₃ and 0.150 mol NH₄Cl in enough water to make 1.00 L of solution. For NH₃, Kb = 1.8 × 10⁻⁵. What is the pH of the buffer at 25°C?",
+   "options": [
+    "9.26",
+    "9.08",
+    "8.92",
+    "4.92"
+   ],
+   "answer": 1,
+   "explanation": "For a weak base buffer, pOH = pKb + log([NH₄⁺]/[NH₃]) = 4.745 + log(0.150/0.100) = 4.921. Then pH = 14.000 − 4.921 = 9.079."
+  },
+  {
+   "n": 8,
+   "topic": "Acids and bases",
+   "q": "A 25.0 mL sample of 0.100 M HCl is titrated with 0.100 M NaOH. What is the pH after 10.0 mL of NaOH have been added?",
+   "options": [
+    "1.37",
+    "1.22",
+    "12.63",
+    "1.00"
+   ],
+   "answer": 0,
+   "explanation": "Initial H⁺ = (0.0250 L)(0.100 M) = 2.50 × 10⁻³ mol; added OH⁻ = (0.0100 L)(0.100 M) = 1.00 × 10⁻³ mol. The excess H⁺ is 1.50 × 10⁻³ mol in 0.0350 L, so [H⁺] = 0.0429 M and pH = −log(0.0429) = 1.37."
+  },
+  {
+   "n": 9,
+   "topic": "Kinetics",
+   "q": "For the reaction A + B → C, the initial rate was measured at 25°C in three experiments: experiment 1, [A]₀ = 0.10 M and [B]₀ = 0.10 M, initial rate = 2.0 × 10⁻³ M/s; experiment 2, [A]₀ = 0.20 M and [B]₀ = 0.10 M, initial rate = 8.0 × 10⁻³ M/s; experiment 3, [A]₀ = 0.10 M and [B]₀ = 0.20 M, initial rate = 2.0 × 10⁻³ M/s. Which rate law is consistent with these data?",
+   "options": [
+    "rate = k[A]",
+    "rate = k[A]²[B]",
+    "rate = k[A]²",
+    "rate = k[A][B]"
+   ],
+   "answer": 2,
+   "explanation": "Doubling [A] while holding [B] constant increases the initial rate by a factor of four, so the reaction is second order in A. Doubling [B] has no effect on the rate, so the reaction is zero order in B; therefore rate = k[A]²."
+  },
+  {
+   "n": 10,
+   "topic": "Kinetics",
+   "q": "The decomposition of N₂O₅ is first order with a half-life of 2.4 × 10³ s at 25°C. If the initial concentration is 0.0200 M, what concentration remains after 7.2 × 10³ s?",
+   "options": [
+    "0.00667 M",
+    "0.0100 M",
+    "0.000313 M",
+    "0.00250 M"
+   ],
+   "answer": 3,
+   "explanation": "The half-life is 2.4 × 10³ s, so 7.2 × 10³ s is three half-lives. The concentration is 0.0200 M × (1/2)³ = 0.00250 M."
+  },
+  {
+   "n": 11,
+   "topic": "Compound structure and properties",
+   "q": "Hydrogen cyanide, HCN, is a linear molecule. Which statement best describes the bonding to carbon and the H–C–N bond angle?",
+   "options": [
+    "There is one sigma bond and three pi bonds to carbon, and the bond angle is 109.5°.",
+    "There are two sigma bonds and one pi bond to carbon, and the bond angle is 180°.",
+    "There are two sigma bonds and two pi bonds to carbon, and the bond angle is 120°.",
+    "There are two sigma bonds and two pi bonds to carbon, and the bond angle is 180°."
+   ],
+   "answer": 3,
+   "explanation": "The Lewis structure of HCN is H–C≡N. Carbon has two electron domains, so it is sp hybridized and the H–C–N angle is 180°; the triple bond contributes one sigma and two pi bonds, and the C–H bond adds another sigma bond."
+  },
+  {
+   "n": 12,
+   "topic": "Compound structure and properties",
+   "q": "Ethanol (CH₃CH₂OH) and dimethyl ether (CH₃OCH₃) have the same molecular formula, C₂H₆O. Ethanol is a liquid at room temperature, while dimethyl ether is a gas. Which statement best explains this difference?",
+   "options": [
+    "Dimethyl ether can form hydrogen bonds with itself because oxygen has two lone pairs, but ethanol cannot.",
+    "Dimethyl ether has a larger molar mass, so its London dispersion forces are much stronger.",
+    "Ethanol molecules can donate and accept hydrogen bonds, whereas dimethyl ether molecules can accept but not donate hydrogen bonds, so ethanol has stronger intermolecular attractions.",
+    "Ethanol has weaker dipole–dipole attractions because its dipole moment is smaller."
+   ],
+   "answer": 2,
+   "explanation": "Ethanol has an –OH group that can both donate and accept hydrogen bonds, giving the pure liquid stronger intermolecular attractions than dimethyl ether, which lacks an O–H bond and cannot donate hydrogen bonds to itself. The two compounds have the same molar mass, so the large boiling-point difference is not caused by London dispersion forces from a larger molar mass."
+  },
+  {
+   "n": 13,
+   "topic": "Compound structure and properties",
+   "q": "Boron trifluoride, BF₃, is a nonpolar molecule, whereas nitrogen trifluoride, NF₃, is polar. Both molecules contain three bonds from the central atom to fluorine. Which statement best explains their different polarities?",
+   "options": [
+    "B–F bonds are nonpolar, so BF₃ cannot have a net dipole, whereas N–F bonds are polar.",
+    "Both molecules have the same shape, but fluorine is more electronegative in NF₃ than in BF₃.",
+    "BF₃ is trigonal planar and its B–F bond dipoles cancel, while NF₃ is trigonal pyramidal and its N–F bond dipoles do not cancel.",
+    "BF₃ is trigonal pyramidal and its B–F bond dipoles cancel, while NF₃ is trigonal planar and its N–F bond dipoles do not cancel."
+   ],
+   "answer": 2,
+   "explanation": "BF₃ has three electron domains around boron and is trigonal planar, so the three polar B–F bond dipoles cancel. NF₃ has a lone pair on nitrogen, making it trigonal pyramidal, and the N–F bond dipoles do not cancel."
+  },
+  {
+   "n": 14,
+   "topic": "Atomic structure and properties",
+   "q": "An element has first, second, and third ionization energies of 496 kJ/mol, 4560 kJ/mol, and 6910 kJ/mol, respectively. A large jump occurs between the first and second ionization energies. Which best explains this observation?",
+   "options": [
+    "The element has two valence electrons; the first two electrons are removed easily before the large jump between the second and third ionization energies.",
+    "The third ionization energy is larger than the second only because the remaining ion has a larger radius.",
+    "The second electron is removed from a higher-energy orbital than the first, so it requires less energy to remove.",
+    "The element has one valence electron; removing the second electron requires breaking into a stable noble-gas core, so the ionization energy increases sharply."
+   ],
+   "answer": 3,
+   "explanation": "The ionization-energy data fit sodium: removing the single 3s valence electron requires 496 kJ/mol, but the next electron comes from the stable neon-like core and requires 4560 kJ/mol. The large jump therefore indicates one valence electron, not two."
+  },
+  {
+   "n": 15,
+   "topic": "Atomic structure and properties",
+   "q": "Four ions with the same number of electrons are O²⁻, F⁻, Na⁺, and Mg²⁺. Which ion has the smallest ionic radius, and why?",
+   "options": [
+    "Mg²⁺, because it has the greatest nuclear charge while all four ions have the same electron configuration, so its electrons are pulled inward most strongly.",
+    "Na⁺, because it is the only ion with a noble-gas electron configuration.",
+    "O²⁻, because it has the greatest nuclear charge and attracts its electrons most strongly.",
+    "F⁻, because it has more electrons than protons and therefore the largest effective nuclear charge."
+   ],
+   "answer": 0,
+   "explanation": "All four ions have the same 10-electron configuration, so the ionic radius depends mainly on the nuclear charge. Mg²⁺ has the largest nuclear charge (Z = 12), so its attraction for the electrons is greatest and its radius is smallest."
+  },
+  {
+   "n": 16,
+   "topic": "Properties of substances and mixtures",
+   "q": "At 25°C, the vapor pressure of pure water is 23.8 mmHg. A solution is prepared by dissolving 1.00 mol of glucose (a nonvolatile, nonelectrolyte) in 9.00 mol of water. Assuming ideal behavior, what is the vapor pressure of the solution?",
+   "options": [
+    "23.8 mmHg",
+    "2.38 mmHg",
+    "26.4 mmHg",
+    "21.4 mmHg"
+   ],
+   "answer": 3,
+   "explanation": "Raoult’s law gives P_solution = X_water × P°_water. The mole fraction of water is 9.00/(9.00 + 1.00) = 0.900, so P_solution = 0.900 × 23.8 mmHg = 21.4 mmHg; 2.38 mmHg is the lowering, not the final vapor pressure."
+  },
+  {
+   "n": 17,
+   "topic": "Properties of substances and mixtures",
+   "q": "A solution is prepared by dissolving 0.500 mol of CaCl₂ in 500. g of water. Assuming complete dissociation of CaCl₂, what is the freezing point of the solution? (Kf for water = 1.86°C·kg/mol.)",
+   "options": [
+    "−1.86°C",
+    "−3.72°C",
+    "−0.930°C",
+    "−5.58°C"
+   ],
+   "answer": 3,
+   "explanation": "The molality of CaCl₂ is 0.500 mol / 0.500 kg = 1.00 mol/kg. Complete dissociation gives i = 3, so ΔTf = i Kf m = 3 × 1.86 × 1.00 = 5.58°C; the freezing point is 0.00°C − 5.58°C = −5.58°C."
+  },
+  {
+   "n": 18,
+   "topic": "Properties of substances and mixtures",
+   "q": "At 300 K, a 2.00 L container holds a mixture of 0.200 mol N₂ and 0.300 mol O₂. What is the total pressure of the gas mixture? (R = 0.08206 L·atm/(mol·K))",
+   "options": [
+    "6.15 atm",
+    "3.69 atm",
+    "2.46 atm",
+    "12.3 atm"
+   ],
+   "answer": 0,
+   "explanation": "The total number of moles is 0.200 + 0.300 = 0.500 mol. Using PV = nRT, P = (0.500 mol)(0.08206 L·atm/(mol·K))(300 K)/(2.00 L) = 6.15 atm; 3.69 atm would be only the O₂ partial pressure."
+  },
+  {
+   "n": 19,
+   "topic": "Thermodynamics and electrochemistry",
+   "q": "A 5.00 g sample of a metal at 100.0°C is placed in 50.0 g of water at 25.0°C in an insulated calorimeter. The final temperature is 27.5°C. Assuming no heat loss and that the specific heat of water is 4.18 J/(g·°C), what is the specific heat of the metal?",
+   "options": [
+    "1.44 J/(g·°C)",
+    "2.88 J/(g·°C)",
+    "0.144 J/(g·°C)",
+    "4.18 J/(g·°C)"
+   ],
+   "answer": 0,
+   "explanation": "The water gains 50.0 g × 4.18 J/(g·°C) × 2.5°C = 522.5 J. The metal loses the same amount while cooling by 72.5°C, so c = 522.5 J / (5.00 g × 72.5°C) = 1.44 J/(g·°C); 4.18 J/(g·°C) is the specific heat of water, not the metal."
+  },
+  {
+   "n": 20,
+   "topic": "Thermodynamics and electrochemistry",
+   "q": "Standard reduction potentials are Ag⁺(aq) + e⁻ → Ag(s) E° = +0.80 V and Sn²⁺(aq) + 2e⁻ → Sn(s) E° = −0.14 V. A galvanic cell is constructed from these two half-reactions. What is E°cell, and which electrode is the cathode?",
+   "options": [
+    "0.94 V; Ag is the cathode.",
+    "−0.94 V; Sn is the cathode.",
+    "0.66 V; Ag is the cathode.",
+    "0.94 V; Sn is the cathode."
+   ],
+   "answer": 0,
+   "explanation": "The more positive reduction potential occurs at the cathode, so Ag⁺ is reduced at the silver electrode. E°cell = E°cathode − E°anode = 0.80 V − (−0.14 V) = 0.94 V."
+  },
+  {
+   "n": 21,
+   "topic": "Chemical reactions",
+   "q": "A student combines 25.0 mL of 0.200 M Pb(NO₃)₂ with 25.0 mL of 0.300 M KI. The precipitate forms according to Pb(NO₃)₂(aq) + 2 KI(aq) → PbI₂(s) + 2 KNO₃(aq). The molar mass of PbI₂ is 461 g/mol. What are the limiting reactant and the theoretical mass of PbI₂?",
+   "options": [
+    "KI is limiting, and 1.73 g of PbI₂ forms.",
+    "Pb(NO₃)₂ is limiting, and 1.15 g of PbI₂ forms.",
+    "Pb(NO₃)₂ is limiting, and 2.31 g of PbI₂ forms.",
+    "KI is limiting, and 3.46 g of PbI₂ forms."
+   ],
+   "answer": 0,
+   "explanation": "Moles of Pb(NO₃)₂ = 0.0250 L × 0.200 M = 0.00500 mol, and moles of KI = 0.0250 L × 0.300 M = 0.00750 mol. The 0.00500 mol Pb(NO₃)₂ would require 0.0100 mol KI, so KI is limiting. The KI produces 0.00750 ÷ 2 = 0.00375 mol PbI₂, whose mass is 0.00375 mol × 461 g/mol = 1.73 g."
+  },
+  {
+   "n": 22,
+   "topic": "Chemical reactions",
+   "q": "In an acidic solution, VO₂⁺ is reduced to VO²⁺ by Fe²⁺, which is oxidized to Fe³⁺. A 20.0 mL sample of 0.0500 M VO₂⁺ requires 18.5 mL of a Fe²⁺ solution to reach the endpoint. What is the concentration of the Fe²⁺ solution?",
+   "options": [
+    "0.108 M",
+    "0.0541 M",
+    "0.0500 M",
+    "0.0270 M"
+   ],
+   "answer": 1,
+   "explanation": "The VO₂⁺ ion goes from vanadium in the +5 oxidation state to +4, a one-electron reduction; Fe²⁺ to Fe³⁺ is a one-electron oxidation, so the reaction consumes Fe²⁺ and VO₂⁺ in a 1:1 mole ratio. Moles of VO₂⁺ = 0.0200 L × 0.0500 M = 0.00100 mol, so moles of Fe²⁺ = 0.00100 mol. The concentration is 0.00100 mol ÷ 0.0185 L = 0.0541 M."
+  },
+  {
+   "n": 23,
+   "topic": "Chemical reactions",
+   "q": "When solutions of silver nitrate and sodium chromate are mixed, a red solid forms. Which net ionic equation represents the reaction that produces the solid?",
+   "options": [
+    "Ag⁺(aq) + CrO₄²⁻(aq) → AgCrO₄(s)",
+    "Ag⁺(aq) + NO₃⁻(aq) → AgNO₃(s)",
+    "2 Ag⁺(aq) + CrO₄²⁻(aq) → Ag₂CrO₄(s)",
+    "2 AgNO₃(aq) + Na₂CrO₄(aq) → Ag₂CrO₄(s) + 2 NaNO₃(aq)"
+   ],
+   "answer": 2,
+   "explanation": "The precipitate is silver chromate, Ag₂CrO₄, and each chromate ion requires two silver ions to balance charge. Sodium and nitrate ions remain dissolved as spectator ions, so they are omitted from the net ionic equation. The complete molecular equation is not a net ionic equation, and silver nitrate is soluble rather than a precipitate."
+  },
+  {
+   "n": 24,
+   "topic": "Equilibrium",
+   "q": "At 500 K, 0.500 mol H₂ and 0.500 mol I₂ are placed in a 2.00 L vessel and allowed to reach equilibrium according to H₂(g) + I₂(g) ⇌ 2 HI(g). At equilibrium, the concentration of I₂ is 0.0500 M. What is Kc at this temperature?",
+   "options": [
+    "12.8",
+    "0.0156",
+    "16.0",
+    "64.0"
+   ],
+   "answer": 3,
+   "explanation": "The initial concentrations are 0.250 M for both H₂ and I₂. Because [I₂] falls to 0.0500 M, the change is 0.200 M, so [H₂] = 0.0500 M and [HI] = 2(0.200) = 0.400 M at equilibrium. Thus Kc = (0.400)² ÷ ((0.0500)(0.0500)) = 64.0; using 0.200 M for [HI] gives the tempting 16.0."
+  },
+  {
+   "n": 25,
+   "topic": "Equilibrium",
+   "q": "For the reaction N₂(g) + 3 H₂(g) ⇌ 2 NH₃(g), ΔH° = −92 kJ·mol⁻¹. The system is at equilibrium in a closed, rigid vessel. Which change will increase the amount of NH₃ at the new equilibrium?",
+   "options": [
+    "Increasing the volume at constant temperature",
+    "Decreasing the temperature at constant volume",
+    "Adding neon gas at constant volume",
+    "Increasing the temperature at constant volume"
+   ],
+   "answer": 1,
+   "explanation": "The forward reaction is exothermic, so lowering the temperature increases the equilibrium constant and shifts the system toward NH₃. Increasing the volume lowers partial pressures and shifts toward the side with more gas moles, the reactants. Adding neon at constant volume does not change the partial pressures of the reacting gases, so it causes no equilibrium shift."
+  },
+  {
+   "n": 26,
+   "topic": "Equilibrium",
+   "q": "At 25°C, a saturated solution of M(OH)₂ has a pH of 10.50. What is Ksp for M(OH)₂ at this temperature?",
+   "options": [
+    "1.0 × 10⁻⁷",
+    "5.0 × 10⁻⁸",
+    "3.2 × 10⁻¹¹",
+    "1.6 × 10⁻¹¹"
+   ],
+   "answer": 3,
+   "explanation": "A pH of 10.50 gives pOH = 3.50 and [OH⁻] = 10^(−3.50) = 3.16 × 10⁻⁴ M. For M(OH)₂(s) ⇌ M²⁺(aq) + 2 OH⁻(aq), [M²⁺] is half of [OH⁻], or 1.58 × 10⁻⁴ M. Therefore Ksp = (1.58 × 10⁻⁴)(3.16 × 10⁻⁴)² = 1.6 × 10⁻¹¹."
+  },
+  {
+   "n": 27,
+   "topic": "Acids and bases",
+   "q": "A 0.100 M aqueous solution of a weak monoprotic acid, HA, has a pH of 2.87 at 25°C. What is Ka for HA?",
+   "options": [
+    "1.8 × 10⁻⁵",
+    "1.4 × 10⁻³",
+    "1.8 × 10⁻⁴",
+    "7.5 × 10⁻⁶"
+   ],
+   "answer": 0,
+   "explanation": "From pH = 2.87, [H⁺] = 10^(−2.87) = 1.35 × 10⁻³ M. For HA ⇌ H⁺ + A⁻, Ka = (1.35 × 10⁻³)² ÷ (0.100 − 1.35 × 10⁻³) = 1.8 × 10⁻⁵. Using [H⁺] directly as Ka gives 1.4 × 10⁻³, which is the hydrogen ion concentration rather than an equilibrium constant."
+  },
+  {
+   "n": 28,
+   "topic": "Thermochemistry",
+   "q": "A 25.0 g piece of metal at 95.0°C is placed in 50.0 g of water at 25.0°C in an insulated cup. The mixture reaches a final temperature of 27.5°C. Assuming no heat is lost to the surroundings, what is the specific heat capacity of the metal? The specific heat capacity of water is 4.18 J/(g·°C).",
+   "options": [
+    "0.155 J/(g·°C)",
+    "0.310 J/(g·°C)",
+    "0.620 J/(g·°C)",
+    "0.299 J/(g·°C)"
+   ],
+   "answer": 1,
+   "explanation": "The water gains q = (50.0 g)(4.18 J/(g·°C))(27.5°C − 25.0°C) = 522.5 J. This heat comes from the metal, so 522.5 J = (25.0 g)c(95.0°C − 27.5°C). Therefore c = 522.5 J ÷ ((25.0 g)(67.5°C)) = 0.310 J/(g·°C)."
+  },
+  {
+   "n": 29,
+   "topic": "Thermochemistry",
+   "q": "For the reactions below, the enthalpy changes are for the equations as written. N₂(g) + O₂(g) → 2 NO(g), ΔH = +180.5 kJ; 2 NO(g) + O₂(g) → 2 NO₂(g), ΔH = −114.2 kJ. What is ΔH for N₂(g) + 2 O₂(g) → 2 NO₂(g)?",
+   "options": [
+    "+294.7 kJ",
+    "−294.7 kJ",
+    "+66.3 kJ",
+    "−66.3 kJ"
+   ],
+   "answer": 2,
+   "explanation": "Adding the two given equations cancels NO and gives N₂(g) + 2 O₂(g) → 2 NO₂(g). When equations are added, their enthalpy changes are added: +180.5 kJ + (−114.2 kJ) = +66.3 kJ. Reversing a step or combining the magnitudes incorrectly gives one of the other values."
+  },
+  {
+   "n": 30,
+   "topic": "Kinetics",
+   "q": "The initial rate of the reaction between gases X and Y was measured in three experiments, with the results shown.\n[X]₀ (M) | [Y]₀ (M) | initial rate (M/s)\n0.10 | 0.20 | 4.0 × 10⁻⁴\n0.20 | 0.20 | 1.6 × 10⁻³\n0.20 | 0.40 | 3.2 × 10⁻³\nWhat is the rate law for the reaction?",
+   "options": [
+    "rate = k[X][Y]",
+    "rate = k[X]²[Y]²",
+    "rate = k[X]²[Y]",
+    "rate = k[X][Y]²"
+   ],
+   "answer": 2,
+   "explanation": "Between the first two trials, [X] doubles while [Y] is constant and the rate becomes four times as large, so the reaction is second order in X. Between the last two trials, [Y] doubles while [X] is constant and the rate doubles, so the reaction is first order in Y. Combining these orders gives rate = k[X]²[Y]."
+  },
+  {
+   "n": 31,
+   "topic": "Kinetics",
+   "q": "A first-order reaction has a half-life of 24.0 min at a certain temperature. What fraction of the original reactant remains after 72.0 min?",
+   "options": [
+    "0.250",
+    "0.125",
+    "0.875",
+    "0.333"
+   ],
+   "answer": 1,
+   "explanation": "The elapsed time is 72.0 min ÷ 24.0 min = 3.00 half-lives. After three half-lives, the fraction remaining is (1/2)³ = 1/8 = 0.125. The value 0.333 would result from incorrectly taking the ratio of the half-life to the elapsed time."
+  },
+  {
+   "n": 32,
+   "topic": "Kinetics",
+   "q": "A chemist proposes the following two-step mechanism for a reaction.\nStep 1: A + B → C (slow)\nStep 2: A + C → D (fast)\nWhich rate law is predicted by this mechanism under the assumption that the first step is rate-determining?",
+   "options": [
+    "rate = k[A]²[B]",
+    "rate = k[A][B]",
+    "rate = k[A][C]",
+    "rate = k[A]²[B]²"
+   ],
+   "answer": 1,
+   "explanation": "The slow step controls the overall rate, so the predicted rate law is based on the reactants in that elementary step: rate = k[A][B]. The overall balanced equation is 2A + B → D, which can tempt use of the coefficients to write rate = k[A]²[B], but the slow elementary step determines the rate law here."
+  },
+  {
+   "n": 33,
+   "topic": "Compound structure and properties",
+   "q": "Three compounds with similar molar masses have the boiling points shown.\nCompound | structure description | boiling point (°C)\nP | CH₃CH₂CH₂OH | 97.2\nQ | CH₃CH₂OCH₃ | 10.8\nR | CH₃CH₂CH₂CH₃ | −0.5\nWhich statement best explains why compound P has a much higher boiling point than compound Q?",
+   "options": [
+    "P has stronger carbon–carbon bonds than Q, so more energy is required to boil P.",
+    "P has a permanent dipole moment, whereas Q is nonpolar.",
+    "P has a larger molar mass than Q, which increases London dispersion forces.",
+    "Molecules of P can form hydrogen bonds with one another through the O–H group, whereas molecules of Q cannot."
+   ],
+   "answer": 3,
+   "explanation": "The O–H group in the alcohol allows its molecules to hydrogen bond with one another, giving it much stronger intermolecular attractions than the ether. The ether molecules have dipole–dipole attractions and London dispersion forces but cannot donate hydrogen bonds to one another. The two compounds have the same molar mass, and boiling does not break the intramolecular carbon–carbon bonds."
+  },
+  {
+   "n": 34,
+   "topic": "Compound structure and properties",
+   "q": "The Lewis structure of sulfur dioxide, SO₂, has a central S atom bonded to two O atoms, with one lone pair on S. The S–O bonds are polar. Which statement best explains why an SO₂ molecule has a net dipole moment?",
+   "options": [
+    "The S=O double bond makes sulfur dioxide nonpolar regardless of geometry.",
+    "The molecule is linear, so the bond dipoles add together.",
+    "The two S–O bond dipoles do not cancel because the molecule is bent.",
+    "The lone pair on sulfur cancels the bond dipoles."
+   ],
+   "answer": 2,
+   "explanation": "The lone pair on sulfur leaves three electron domains around S, giving a bent molecular geometry. In a bent molecule, the two polar S–O bonds have dipole components that do not cancel, so the molecule has a net dipole moment. A linear arrangement of two identical bonds would allow cancellation, not addition."
+  },
+  {
+   "n": 35,
+   "topic": "Atomic structure and properties",
+   "q": "Among the Period 3 elements Mg, Al, and Si, the first ionization energy of Al is lower than that of Mg even though Al has one more proton. Which statement best explains this observation?",
+   "options": [
+    "The electron removed from Al experiences greater penetration than the electron removed from Mg.",
+    "Al has a larger nuclear charge, which attracts all electrons more strongly than in Mg.",
+    "The electron removed from Al is in a 3p orbital, which is higher in energy and more shielded than the 3s electron removed from Mg.",
+    "Al has a half-filled 3p subshell, making its electrons unusually stable."
+   ],
+   "answer": 2,
+   "explanation": "Magnesium loses a 3s electron, while aluminum loses a 3p electron. The 3p orbital is higher in energy and is shielded by the filled 3s subshell, so less energy is needed to remove that electron from Al. Greater nuclear charge would tend to increase ionization energy, and Al does not have a half-filled 3p subshell."
+  },
+  {
+   "n": 36,
+   "topic": "Atomic structure and properties",
+   "q": "The photoelectron spectrum of a neutral atom shows peaks with relative areas 1, 2, 6, 2, and 2 when the peaks are listed from lowest binding energy to highest binding energy. Which ground-state electron configuration is consistent with this spectrum?",
+   "options": [
+    "1s²2s²2p⁶3s²3p²",
+    "1s²2s²2p⁶3s²",
+    "1s²2s²2p⁶3s²3p⁶",
+    "1s²2s²2p⁶3s²3p¹"
+   ],
+   "answer": 3,
+   "explanation": "The total number of electrons is 1 + 2 + 6 + 2 + 2 = 13, so the neutral atom has 13 electrons. The lowest-binding-energy peak corresponds to the single 3p electron, followed by 3s, 2p, 2s, and 1s electrons, giving 1s²2s²2p⁶3s²3p¹. The configuration with two 3p electrons would show a lowest-binding-energy peak with relative area 2, not 1."
+  },
+  {
+   "n": 37,
+   "topic": "Properties of substances and mixtures",
+   "q": "A student needs to prepare 250.0 mL of 0.100 M CuSO₄(aq). What mass of solid CuSO₄·5H₂O (molar mass 249.7 g/mol) should be dissolved and diluted to 250.0 mL?",
+   "options": [
+    "15.98 g",
+    "6.24 g",
+    "3.99 g",
+    "24.97 g"
+   ],
+   "answer": 1,
+   "explanation": "The required moles of CuSO₄ are (0.100 mol/L)(0.2500 L) = 0.02500 mol. Because each formula unit of CuSO₄·5H₂O supplies one CuSO₄ unit, the mass is (0.02500 mol)(249.7 g/mol) = 6.2425 g, which rounds to 6.24 g. Using the anhydrous molar mass instead would give 3.99 g."
+  },
+  {
+   "n": 38,
+   "topic": "Properties of substances and mixtures",
+   "q": "A gas mixture contains 2.0 mol He and 3.0 mol Ne in a rigid 10.0 L container at 300 K. What is the partial pressure of He? (R = 0.0821 L·atm/(mol·K))",
+   "options": [
+    "7.39 atm",
+    "4.93 atm",
+    "0.493 atm",
+    "12.3 atm"
+   ],
+   "answer": 1,
+   "explanation": "The partial pressure of He depends only on the amount of He, the volume, and the temperature: P = nRT/V = (2.0 mol)(0.0821 L·atm/(mol·K))(300 K)/(10.0 L) = 4.93 atm. The value 7.39 atm is the partial pressure of Ne, and 12.3 atm is the total pressure of the mixture."
+  },
+  {
+   "n": 39,
+   "topic": "Properties of substances and mixtures",
+   "q": "Equal numbers of moles of three pure liquids, X, Y, and Z, with similar molar masses, are placed in identical open watch glasses under the same conditions. The times required for the liquids to evaporate completely are 12 min for X, 35 min for Y, and 80 min for Z. Which conclusion is best supported by these data?",
+   "options": [
+    "Z has the strongest intermolecular forces among the three liquids.",
+    "Z has the weakest London dispersion forces among the three liquids.",
+    "Y has the greatest equilibrium vapor pressure at the temperature of the experiment.",
+    "X has the highest normal boiling point among the three liquids."
+   ],
+   "answer": 0,
+   "explanation": "A liquid with stronger intermolecular attractions has a lower equilibrium vapor pressure and evaporates more slowly under identical conditions. Because Z takes the longest to evaporate, the data support the conclusion that Z has the strongest intermolecular forces among the three liquids. The fastest-evaporating liquid, X, would have the highest vapor pressure and the lowest normal boiling point."
+  },
+  {
+   "n": 40,
+   "topic": "Equilibrium",
+   "q": "At 25°C, a 0.100 M aqueous solution of a weak monoprotic acid HA has a pH of 3.00. What is the approximate value of Ka for HA?",
+   "options": [
+    "1.0 × 10⁻⁵",
+    "1.0 × 10⁻³",
+    "1.0 × 10⁻⁶",
+    "1.0 × 10⁻⁴"
+   ],
+   "answer": 0,
+   "explanation": "At pH 3.00, [H⁺] = 1.0 × 10⁻³ M, so [A⁻] is also approximately 1.0 × 10⁻³ M and [HA] = 0.100 − 0.001 = 0.099 M. Thus Ka = (1.0 × 10⁻³)²/0.099 ≈ 1.0 × 10⁻⁵. Using 0.100 instead of 0.099 gives a nearly identical result."
+  },
+  {
+   "n": 41,
+   "topic": "Equilibrium",
+   "q": "A solution is 0.010 M in both Cl⁻ and I⁻ at 25°C. Solid AgNO₃ is added gradually to the solution. Ksp for AgCl is 1.8 × 10⁻¹⁰, and Ksp for AgI is 8.5 × 10⁻¹⁷. Which halide precipitates first, and why?",
+   "options": [
+    "Both begin to precipitate at the same [Ag⁺], because the initial concentrations of Cl⁻ and I⁻ are equal.",
+    "AgI, because it begins to precipitate at a lower [Ag⁺] (about 8.5 × 10⁻¹⁵ M) than AgCl does (about 1.8 × 10⁻⁸ M).",
+    "AgCl, because it begins to precipitate at a lower [Ag⁺] (about 1.8 × 10⁻⁸ M) than AgI does (about 8.5 × 10⁻¹⁵ M).",
+    "AgI, because its smaller Ksp means that it has the greater molar solubility in this solution."
+   ],
+   "answer": 1,
+   "explanation": "Precipitation begins when [Ag⁺][halide⁻] reaches Ksp, so the required silver ion concentration is Ksp divided by 0.010 M. For AgI, that value is 8.5 × 10⁻¹⁷/0.010 = 8.5 × 10⁻¹⁵ M; for AgCl, it is 1.8 × 10⁻¹⁰/0.010 = 1.8 × 10⁻⁸ M. The smaller required [Ag⁺] is reached first, so AgI precipitates first."
+  },
+  {
+   "n": 42,
+   "topic": "Equilibrium",
+   "q": "Dinitrogen tetroxide decomposes in a sealed cylinder according to N₂O₄(g) ⇌ 2 NO₂(g), ΔH° = +57.2 kJ. The system is at equilibrium. Which change will increase the equilibrium number of moles of NO₂ in the cylinder?",
+   "options": [
+    "Increasing the pressure by decreasing the volume at constant temperature",
+    "Adding argon gas at constant volume and temperature",
+    "Removing some N₂O₄(g) at constant temperature and volume",
+    "Raising the temperature while keeping the volume constant"
+   ],
+   "answer": 3,
+   "explanation": "Because the forward reaction is endothermic, raising the temperature shifts the equilibrium toward NO₂ and increases its equilibrium number of moles. Decreasing the volume shifts the equilibrium toward the side with fewer gas molecules, N₂O₄, and adding argon at constant volume does not change the partial pressures of the reacting gases. Removing N₂O₄ causes a shift toward N₂O₄, consuming NO₂."
+  },
+  {
+   "n": 43,
+   "topic": "Chemical reactions",
+   "q": "Solid aluminum reacts with chlorine gas according to 2 Al(s) + 3 Cl₂(g) → 2 AlCl₃(s). A mixture of 5.40 g Al (molar mass 27.0 g/mol) and 10.65 g Cl₂ (molar mass 71.0 g/mol) is allowed to react completely. What is the limiting reactant and the theoretical mass of AlCl₃ produced? (Molar mass AlCl₃ = 133.5 g/mol)",
+   "options": [
+    "Al is limiting, and 26.7 g AlCl₃ is produced.",
+    "Cl₂ is limiting, and 20.0 g AlCl₃ is produced.",
+    "Al is limiting, and 13.35 g AlCl₃ is produced.",
+    "Cl₂ is limiting, and 13.35 g AlCl₃ is produced."
+   ],
+   "answer": 3,
+   "explanation": "The mixture contains 5.40 g/27.0 g/mol = 0.200 mol Al and 10.65 g/71.0 g/mol = 0.150 mol Cl₂. The 0.150 mol Cl₂ can consume 0.100 mol Al, leaving Al in excess, so Cl₂ is limiting. It produces (2/3)(0.150 mol) = 0.100 mol AlCl₃, with mass 0.100 mol × 133.5 g/mol = 13.35 g."
+  },
+  {
+   "n": 44,
+   "topic": "Chemical reactions",
+   "q": "A student mixes 50.0 mL of 0.20 M Pb(NO₃)₂ with 50.0 mL of 0.30 M KI. The reaction is Pb(NO₃)₂(aq) + 2 KI(aq) → PbI₂(s) + 2 KNO₃(aq). What is the limiting reactant and the theoretical mass of PbI₂ precipitate? (Molar mass PbI₂ = 461 g/mol)",
+   "options": [
+    "Pb(NO₃)₂ is limiting, and 4.61 g PbI₂ forms.",
+    "Pb(NO₃)₂ is limiting, and 2.31 g PbI₂ forms.",
+    "KI is limiting, and 3.46 g PbI₂ forms.",
+    "KI is limiting, and 6.92 g PbI₂ forms."
+   ],
+   "answer": 2,
+   "explanation": "Moles of Pb(NO₃)₂ are 0.0500 L × 0.20 M = 0.0100 mol, and moles of KI are 0.0500 L × 0.30 M = 0.0150 mol. The 0.0100 mol Pb²⁺ would require 0.0200 mol I⁻, but only 0.0150 mol I⁻ is present, so KI is limiting. It gives 0.0150/2 = 0.00750 mol PbI₂, whose mass is 0.00750 mol × 461 g/mol = 3.46 g."
+  },
+  {
+   "n": 45,
+   "topic": "Chemical reactions",
+   "q": "Complete combustion of a 0.300 g sample of a compound containing only carbon, hydrogen, and oxygen produces 0.440 g CO₂ and 0.180 g H₂O. What is the empirical formula of the compound? (Molar masses: CO₂ = 44.0 g/mol, H₂O = 18.0 g/mol; atomic masses: C = 12.0, H = 1.0, O = 16.0)",
+   "options": [
+    "C₂H₂O",
+    "CH₂O",
+    "CH₄O",
+    "C₂H₄O₂"
+   ],
+   "answer": 1,
+   "explanation": "The CO₂ contains 0.440/44.0 = 0.0100 mol C, and the H₂O contains 2 × (0.180/18.0) = 0.0200 mol H. The masses of C and H are 0.120 g and 0.0200 g, leaving 0.300 − 0.140 = 0.160 g O, which is 0.0100 mol O. The mole ratio C:H:O is 0.0100:0.0200:0.0100 = 1:2:1, so the empirical formula is CH₂O."
+  },
+  {
+   "n": 46,
+   "topic": "Thermochemistry",
+   "q": "To determine the specific heat of a metal, Maya heats a 25.0 g sample to 95.0°C and places it in an insulated cup containing 100.0 g of water at 25.0°C. After thermal equilibrium, the final temperature is 27.5°C. Assuming no heat is lost to the surroundings, what is the specific heat of the metal? (Specific heat of water = 4.18 J/(g·°C))",
+   "options": [
+    "0.619 J/(g·°C)",
+    "16.7 J/(g·°C)",
+    "4.18 J/(g·°C)",
+    "0.155 J/(g·°C)"
+   ],
+   "answer": 0,
+   "explanation": "The water absorbs q = (100.0 g)(4.18 J/(g·°C))(27.5°C − 25.0°C) = 1045 J. This equals the heat lost by the metal, whose temperature change has magnitude 95.0°C − 27.5°C = 67.5°C, so c = 1045 J/[(25.0 g)(67.5°C)] = 0.619 J/(g·°C). Using the mass of water instead of the mass of metal in the final division gives an incorrect smaller value."
+  },
+  {
+   "n": 47,
+   "topic": "Thermochemistry",
+   "q": "Given the standard enthalpies of formation: ΔH°f[NH₃(g)] = −45 kJ/mol, ΔH°f[NO(g)] = +90 kJ/mol, and ΔH°f[H₂O(g)] = −240 kJ/mol. For the reaction 4 NH₃(g) + 5 O₂(g) → 4 NO(g) + 6 H₂O(g), what is ΔH°rxn?",
+   "options": [
+    "+900 kJ",
+    "−1260 kJ",
+    "−900 kJ",
+    "−450 kJ"
+   ],
+   "answer": 2,
+   "explanation": "For the reaction, ΔH°rxn = Σ nΔH°f(products) − Σ mΔH°f(reactants). The product term is 4(+90 kJ) + 6(−240 kJ) = −1080 kJ, and the reactant term is 4(−45 kJ) = −180 kJ. Thus ΔH°rxn = −1080 kJ − (−180 kJ) = −900 kJ."
+  },
+  {
+   "n": 48,
+   "topic": "Thermodynamics and electrochemistry",
+   "q": "Standard reduction potentials: Mg²⁺(aq) + 2 e⁻ → Mg(s), E° = −2.37 V; Ag⁺(aq) + e⁻ → Ag(s), E° = +0.80 V. A galvanic cell is constructed using magnesium and silver electrodes under standard conditions. What is E°cell, and which electrode is the anode?",
+   "options": [
+    "E°cell = 3.17 V, and silver is the anode.",
+    "E°cell = −3.17 V, and magnesium is the anode.",
+    "E°cell = 1.57 V, and silver is the anode.",
+    "E°cell = 3.17 V, and magnesium is the anode."
+   ],
+   "answer": 3,
+   "explanation": "In a galvanic cell, the species with the higher reduction potential is reduced at the cathode, so Ag⁺ is reduced at the silver cathode and Mg is oxidized at the magnesium anode. E°cell = E°cathode − E°anode = 0.80 V − (−2.37 V) = 3.17 V. The magnesium electrode is the anode because oxidation occurs there."
+  },
+  {
+   "n": 49,
+   "topic": "Thermodynamics and electrochemistry",
+   "q": "For a certain redox reaction, n = 2 and E°cell = 0.45 V at 298 K. What is the standard Gibbs free energy change, ΔG°, for the reaction as written? (Faraday constant F = 96,500 C/mol)",
+   "options": [
+    "+86.9 kJ/mol",
+    "−173.7 kJ/mol",
+    "−86.9 kJ/mol",
+    "−43.4 kJ/mol"
+   ],
+   "answer": 2,
+   "explanation": "Use ΔG° = −nFE°. Substituting gives ΔG° = −(2)(96,500 C/mol)(0.45 V) = −86,850 J/mol, which is −86.9 kJ/mol. A positive E°cell corresponds to a negative ΔG° and a spontaneous reaction under standard conditions."
+  },
+  {
+   "n": 50,
+   "topic": "Acids and bases",
+   "q": "A student prepares a buffer by dissolving 0.040 mol of acetic acid, HC₂H₃O₂, and 0.060 mol of sodium acetate, NaC₂H₃O₂, in enough water to make 1.00 L of solution at 25°C. For acetic acid, Ka = 1.8 × 10⁻⁵. What is the pH of the buffer?",
+   "options": [
+    "4.57",
+    "5.10",
+    "4.74",
+    "4.92"
+   ],
+   "answer": 3,
+   "explanation": "Use pH = pKa + log([acetate]/[acetic acid]). Here pKa = −log(1.8 × 10⁻⁵) = 4.74, and log(0.060/0.040) = log(1.5) = 0.176, so pH = 4.92. The value 4.74 would ignore the unequal conjugate-base and acid concentrations."
+  },
+  {
+   "n": 51,
+   "topic": "Kinetics",
+   "q": "For the reaction A + B → products, a student measured initial rates at 25°C:\nTrial | [A]₀ (M) | [B]₀ (M) | initial rate (M/s)\n1 | 0.10 | 0.10 | 2.0 × 10⁻³\n2 | 0.20 | 0.10 | 8.0 × 10⁻³\n3 | 0.10 | 0.20 | 4.0 × 10⁻³\nWhich rate law is consistent with these data?",
+   "options": [
+    "rate = k[A][B]",
+    "rate = k[A]²[B]²",
+    "rate = k[A]²[B]",
+    "rate = k[A][B]²"
+   ],
+   "answer": 2,
+   "explanation": "Doubling A while holding B constant increases the rate by a factor of 4, so the reaction is second order in A. Doubling B while holding A constant doubles the rate, so the reaction is first order in B; therefore the rate law is rate = k[A]²[B]. The form rate = k[A][B] would require each doubling to double the rate."
+  },
+  {
+   "n": 52,
+   "topic": "Compound structure and properties",
+   "q": "A student compares four liquids at 1 atm. The liquids are butane, CH₃CH₂CH₂CH₃, molar mass about 58 g/mol; methoxyethane, CH₃CH₂OCH₃, molar mass about 60 g/mol; propan-1-ol, CH₃CH₂CH₂OH, molar mass about 60 g/mol; and propanal, CH₃CH₂CHO, molar mass about 58 g/mol. Which liquid is expected to have the highest normal boiling point?",
+   "options": [
+    "methoxyethane, CH₃CH₂OCH₃",
+    "butane, CH₃CH₂CH₂CH₃",
+    "propanal, CH₃CH₂CHO",
+    "propan-1-ol, CH₃CH₂CH₂OH"
+   ],
+   "answer": 3,
+   "explanation": "Propan-1-ol has an O–H group, so its molecules can form hydrogen bonds with one another, which are stronger than the London dispersion and dipole–dipole forces in the other liquids. Because the molar masses are similar, hydrogen bonding makes propan-1-ol have the highest normal boiling point."
+  },
+  {
+   "n": 53,
+   "topic": "Atomic structure and properties",
+   "q": "The ions O²⁻, F⁻, Na⁺, and Mg²⁺ are isoelectronic; each has 10 electrons and the configuration 1s²2s²2p⁶. Which ion has the largest ionic radius?",
+   "options": [
+    "O²⁻",
+    "F⁻",
+    "Mg²⁺",
+    "Na⁺"
+   ],
+   "answer": 0,
+   "explanation": "For isoelectronic species, the ion with the smallest nuclear charge has the least pull on the same number of electrons and is therefore largest. O²⁻ has 8 protons, fewer than the other ions, so it has the largest ionic radius."
+  },
+  {
+   "n": 54,
+   "topic": "Acids and bases",
+   "q": "A 25.0 mL sample of 0.100 M weak monoprotic acid HA is titrated with 0.100 M NaOH. For HA, Ka = 1.0 × 10⁻⁵. What is the pH after 12.5 mL of NaOH solution has been added?",
+   "options": [
+    "7.00",
+    "3.00",
+    "5.00",
+    "4.70"
+   ],
+   "answer": 2,
+   "explanation": "The volume 12.5 mL is exactly half of the NaOH volume needed to reach equivalence, so half of HA is converted to A⁻ and [HA] = [A⁻]. At that half-equivalence point, pH = pKa = −log(1.0 × 10⁻⁵) = 5.00. The pH 3.00 is the initial acid solution before any NaOH is added."
+  },
+  {
+   "n": 55,
+   "topic": "Kinetics",
+   "q": "The decomposition of a colored dye in aqueous solution is first order with rate constant k = 0.050 min⁻¹ at 25°C. What fraction of the dye remains 20.0 min after the reaction begins?",
+   "options": [
+    "0.25",
+    "0.37",
+    "0.61",
+    "0.50"
+   ],
+   "answer": 1,
+   "explanation": "For a first-order reaction, ln(remaining fraction) = −kt = −(0.050 min⁻¹)(20.0 min) = −1.00. Thus the remaining fraction is e^(−1.00) = 0.37. The value 0.50 would correspond to one half-life, which is about 13.9 min, not 20.0 min."
+  },
+  {
+   "n": 56,
+   "topic": "Compound structure and properties",
+   "q": "Formaldehyde has the connectivity H–C(–H)=O, with carbon as the central atom bonded to two hydrogen atoms and double-bonded to one oxygen atom. There are no lone pairs on carbon. Which term best describes the molecular geometry around the carbon atom?",
+   "options": [
+    "trigonal planar",
+    "bent",
+    "linear",
+    "tetrahedral"
+   ],
+   "answer": 0,
+   "explanation": "The carbon atom has three electron domains: two single bonds to H and one double bond to O, with no lone pairs. VSEPR theory places three domains as far apart as possible in a trigonal-planar arrangement, and a double bond counts as one domain."
+  },
+  {
+   "n": 57,
+   "topic": "Atomic structure and properties",
+   "q": "A photoelectron spectrum of an element shows three peaks with relative areas 2:2:3, corresponding to the 1s, 2s, and 2p subshells, respectively. The 1s peak has the highest binding energy. Which element is the sample?",
+   "options": [
+    "fluorine",
+    "carbon",
+    "oxygen",
+    "nitrogen"
+   ],
+   "answer": 3,
+   "explanation": "The peak areas give 2 + 2 + 3 = 7 electrons, with the configuration 1s²2s²2p³. That configuration is nitrogen. An oxygen sample would have a 2p peak area of 4, and carbon would have a 2p peak area of 2."
+  },
+  {
+   "n": 58,
+   "topic": "Acids and bases",
+   "q": "A 0.10 M aqueous solution of ammonium chloride, NH₄Cl, is prepared at 25°C. For NH₃, Kb = 1.8 × 10⁻⁵. What is the approximate pH of the solution?",
+   "options": [
+    "5.13",
+    "7.00",
+    "11.13",
+    "8.87"
+   ],
+   "answer": 0,
+   "explanation": "NH₄⁺ is the conjugate acid of NH₃, so Ka = Kw/Kb = 1.0 × 10⁻¹⁴/(1.8 × 10⁻⁵) = 5.6 × 10⁻¹⁰. For 0.10 M NH₄⁺, [H₃O⁺] ≈ √(Ka × 0.10) = 7.5 × 10⁻⁶ M, giving pH ≈ 5.13. The value 8.87 is the corresponding pOH, not the pH."
+  },
+  {
+   "n": 59,
+   "topic": "Kinetics",
+   "q": "A proposed mechanism for the reaction NO₂(g) + CO(g) → NO(g) + CO₂(g) is:\nStep 1: NO₂ + NO₂ → NO₃ + NO (slow)\nStep 2: NO₃ + CO → NO₂ + CO₂ (fast)\nWhich rate law is predicted by this mechanism?",
+   "options": [
+    "rate = k[NO₂][CO]",
+    "rate = k[NO₂]²",
+    "rate = k[NO₂][CO]²",
+    "rate = k[NO₂]²[CO]"
+   ],
+   "answer": 1,
+   "explanation": "The slow elementary step determines the overall rate law, and that step has two NO₂ reactants. Therefore the predicted rate is proportional to [NO₂]², with no CO concentration dependence because CO is consumed after the slow step. Including CO in the rate law would incorrectly assume the fast step controls the rate."
+  },
+  {
+   "n": 60,
+   "topic": "Properties of substances and mixtures",
+   "q": "The normal boiling points of methanol, CH₃OH, and fluoromethane, CH₃F, are 65°C and −78°C, respectively. The two molecules have similar molar masses and similar sizes. Which statement best explains why methanol has the much higher normal boiling point?",
+   "options": [
+    "Fluoromethane is polar, whereas methanol is nonpolar, so dipole–dipole forces are stronger in fluoromethane.",
+    "Methanol molecules form intermolecular hydrogen bonds, whereas fluoromethane molecules do not.",
+    "Fluoromethane has stronger London dispersion forces because it has more electrons than methanol.",
+    "Boiling methanol requires breaking C–O covalent bonds, while boiling fluoromethane requires only overcoming London dispersion forces."
+   ],
+   "answer": 1,
+   "explanation": "Methanol has an O–H bond, so its molecules can donate and accept hydrogen bonds, while fluoromethane cannot form intermolecular hydrogen bonds. These stronger intermolecular attractions must be overcome for methanol to boil. Boiling does not break the covalent C–O bond, and dispersion-force differences are not large enough to explain the 143°C difference."
+  }
+ ]
+}

@@ -201,7 +201,7 @@ const study: Translation<typeof en> = {
     topicLabel: 'Maudu’i',
     topicPlaceholder: 'misali Yadda alluran rigakafi ke aiki',
     focusLabel: 'Akwai wani abu na musamman? (ba dole ba)',
-    focusPlaceholder: 'misali don WAEC, mai da hankali kan lissafi',
+    focusPlaceholder: 'misali don {{exam}}, mai da hankali kan lissafi',
     popular: 'MASU TASHE YANZU',
     ideas: {
       photosynthesis: 'Photosynthesis',
@@ -339,7 +339,7 @@ const study: Translation<typeof en> = {
     subject: 'Fanni',
     folderName: 'Sunan folda',
     tags: 'Alamomi',
-    tagsPlaceholder: 'misali WAEC, zango na 2, bita',
+    tagsPlaceholder: 'misali {{exam}}, zango na 2, bita',
     tagsHint: 'Raba alamomi da waƙafi',
     created: 'An ƙirƙira {{date}} daga {{source}}',
   },

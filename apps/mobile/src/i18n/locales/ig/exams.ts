@@ -4,6 +4,8 @@ import type en from '../en/exams';
 
 const exams: Translation<typeof en> = {
   title: 'Ajụjụ Ule Gara Aga',
+  /** The same page for SAT and GCSE students: those papers are practice, never "past questions". */
+  practiceTitle: 'Omume ule',
   eyebrow: 'JAMB · WAEC · NECO',
   offline: 'Ajụjụ Ule Gara Aga chọrọ ịntanetị.',
   loadFailed: 'Anyị enweghị ike ibulite akwụkwọ ajụjụ. Lelee ịntanetị gị ma nwaa ọzọ.',
@@ -13,11 +15,30 @@ const exams: Translation<typeof en> = {
     title: 'Ajụjụ ule gara aga JAMB, WAEC & NECO',
     body: 'Mee omume n’isiokwu ọ bụla n’ụdị ule n’ezie, hụ nkọwa azịza ọ bụla, ma dee akwụkwọ ajụjụ nwere oge.',
     action: 'Malite omume',
+    /** One exam (the WAEC countries outside Nigeria). */
+    titleOne: 'Ajụjụ ule gara aga {{exam}}',
+    titlePractice: 'Omume {{exams}}',
+    bodyPractice: 'Omume nhọrọ ọtụtụ site n’ule na isiokwu ọmụmụ, nke azịza ọ bụla nwere nkọwa. Ọ bụ AI dere ya, e lelekwara ya ugboro abụọ; ọ bụghị ajụjụ ule gara aga.',
+    sat: {
+      title: 'Akwụkwọ omume SAT',
+      body: 'Omume nhọrọ ọtụtụ n’ụdị ngalaba na oge nke SAT dijitalụ, nke azịza ọ bụla nwere nkọwa. Ọ bụ AI dere ya, e lelekwara ya ugboro abụọ; ọ bụghị ajụjụ ule gara aga.',
+    },
+    gcse: {
+      title: 'Omume n’ụdị GCSE',
+      body: 'Omume nhọrọ ọtụtụ site n’isiokwu na Maths, English Language, Biology, Chemistry na Physics, nke azịza ọ bụla nwere nkọwa. Ọ bụ AI dere ya, e lelekwara ya ugboro abụọ; ọ bụghị ajụjụ ule gara aga.',
+    },
   },
   exams: {
     jamb: { name: 'JAMB', full: 'JAMB UTME', about: 'Ule na kọmputa · Use of English gbakwunyere isiokwu atọ' },
     waec: { name: 'WAEC', full: 'WAEC WASSCE', about: 'Asambodo ụlọ akwụkwọ sekọndrị · ajụjụ nhọrọ' },
     neco: { name: 'NECO', full: 'NECO SSCE', about: 'Asambodo ụlọ akwụkwọ sekọndrị · ajụjụ nhọrọ' },
+    sat: { name: 'SAT', full: 'Omume SAT dijitalụ', about: 'Reading and Writing · Math · naanị nhọrọ ọtụtụ' },
+    act: { name: 'ACT', full: 'Omume ACT', about: 'English · Math · Reading · Science' },
+    ap: { name: 'AP', full: 'Omume nhọrọ ọtụtụ nke AP', about: 'Calculus AB · Biology · Chemistry · Physics 1 · US History · English Language' },
+    gcse: { name: 'GCSE', full: 'Omume n’ụdị GCSE', about: 'Omume nhọrọ ọtụtụ site n’isiokwu' },
+    alevel: { name: 'A-level', full: 'Omume n’ụdị A-level', about: 'Omume nhọrọ ọtụtụ site n’isiokwu' },
+    kcse: { name: 'KCSE', full: 'Omume n’ụdị KCSE', about: 'Omume nhọrọ ọtụtụ site n’isiokwu' },
+    nsc: { name: 'Matric', full: 'Omume n’ụdị Matric (NSC)', about: 'Omume nhọrọ ọtụtụ site n’isiokwu' },
   },
   subjects: {
     english: 'Asụsụ Bekee',
@@ -30,7 +51,37 @@ const exams: Translation<typeof en> = {
     literature: 'Agụmagụ Bekee',
     geography: 'Jọgrafị',
     commerce: 'Azụmahịa',
+    'reading-writing': 'Reading and Writing',
+    math: 'Math',
+    maths: 'Maths',
+    'english-language': 'English Language',
+    reading: 'Reading',
+    science: 'Science',
+    'calculus-ab': 'Calculus AB',
+    'physics-1': 'Physics 1',
+    'us-history': 'US History',
+    'physical-sciences': 'Physical Sciences',
+    'life-sciences': 'Life Sciences',
+    accounting: 'Accounting',
   },
+  /** What SAT and GCSE practice is and isn't, shown wherever those papers are listed. */
+  notes: {
+    sat: 'Ajụjụ omume ndị a bụ AI dere ha, nyocha AI nke abụọ lelekwara ha; ha abụghị akwụkwọ ajụjụ SAT gara aga. Ha na-eso ngalaba na oge nke SAT dijitalụ, mana ha bụ naanị nhọrọ ọtụtụ: ngalaba Math n’ezie nwekwara ajụjụ ebe ị ga-ede azịza nke gị.',
+    act: 'Ajụjụ omume ndị a bụ AI dere ha, nyocha AI nke abụọ lelekwara ha; ha abụghị akwụkwọ ajụjụ ACT gara aga. Ha na-eso ngalaba, ọnụ ọgụgụ ajụjụ na oge nke ACT.',
+    ap: 'Ajụjụ omume ndị a bụ AI dere ha, nyocha AI nke abụọ lelekwara ha; ha abụghị akwụkwọ ajụjụ AP gara aga. Ha na-eme naanị ngalaba nhọrọ ọtụtụ nke ule AP ọ bụla: ule n’ezie nwekwara ngalaba azịza a na-ede ede.',
+    gcse: 'Ajụjụ omume ndị a bụ AI dere ha, nyocha AI nke abụọ lelekwara ha; ha abụghị ajụjụ ule gara aga. Ọtụtụ n’ime akwụkwọ ule GCSE n’ezie bụ azịza a na-ede ede, ya mere jiri ajụjụ nhọrọ ọtụtụ ndị a tụgharịa isiokwu ọ bụla, ọ bụghị dịka oyiri nke ule ahụ.',
+    alevel: 'Ajụjụ omume ndị a bụ AI dere ha, nyocha AI nke abụọ lelekwara ha; ha abụghị ajụjụ ule gara aga. Ọtụtụ n’ime akwụkwọ ule A-level n’ezie bụ azịza a na-ede ede, ya mere jiri ajụjụ nhọrọ ọtụtụ ndị a tụgharịa isiokwu ọ bụla, ọ bụghị dịka oyiri nke ule ahụ.',
+    kcse: 'Ajụjụ omume ndị a bụ AI dere ha, nyocha AI nke abụọ lelekwara ha; ha abụghị ajụjụ ule gara aga. Ọtụtụ n’ime akwụkwọ ule KCSE n’ezie bụ azịza a na-ede ede, ya mere jiri ajụjụ nhọrọ ọtụtụ ndị a tụgharịa isiokwu ọ bụla, ọ bụghị dịka oyiri nke ule ahụ.',
+    nsc: 'Ajụjụ omume ndị a bụ AI dere ha, nyocha AI nke abụọ lelekwara ha; ha abụghị ajụjụ ule gara aga. Ọtụtụ n’ime akwụkwọ ule Matric (NSC) n’ezie bụ azịza a na-ede ede, ya mere jiri ajụjụ nhọrọ ọtụtụ ndị a tụgharịa isiokwu ọ bụla, ọ bụghị dịka oyiri nke ule ahụ.',
+  },
+  /** A study region we have no papers for. */
+  none: {
+    title: 'Akwụkwọ ule adịghị maka {{country}}',
+    body: 'Onye nkuzi AI gị, akwụkwọ ọgụgụ na kọọsụ na-arụ ọrụ na syllabus ọ bụla. Ị ka nwere ike iji akwụkwọ ajụjụ obodo ndị ọzọ mee omume n’okpuru.',
+  },
+  otherExams: 'Ule ndị ọzọ',
+  region: 'Obodo ọmụmụ: {{country}}',
+  change: 'Gbanwee',
   pickExam: 'Họrọ ule gị',
   carryOn: 'Gaa n’ihu site n’ebe ị kwụsịrị',
   pickSubject: 'Họrọ otu isiokwu',
@@ -58,6 +109,8 @@ const exams: Translation<typeof en> = {
     study: { title: 'Mụọ', body: 'Hụ ajụjụ ọ bụla na azịza ya na nkọwa ya.' },
     practice: { title: 'Omume', body: 'Zaa n’oge nke gị ma hụ ma ị ziri ezi mgbe ajụjụ ọ bụla gasịrị.' },
     timed: { title: 'Ule nwere oge', body: 'Dee ya dịka ule n’ezie: nkeji {{minutes}}, nsonaazụ na njedebe.' },
+    /** GCSE practice isn't in the exam's format, so its timed mode doesn't say "like the real exam". */
+    timedQuiz: { title: 'Ajụjụ nwere oge', body: 'Megide elekere: nkeji {{minutes}}, nsonaazụ na njedebe.' },
     history: 'AKARA GỊ',
     historyRow: '{{score}}/{{total}} · {{mode}} · {{date}}',
     modeName: { practice: 'Omume', timed: 'Nwere oge' },

@@ -465,6 +465,33 @@ const videos: Translation<typeof en> = {
     sceneHeading: 'Isiokwu ihe nkiri {{number}}',
     sceneNarration: 'Olu nkọwa ihe nkiri {{number}}',
   },
+  kora: {
+    title: 'Ihe ọmụmụ na Kora',
+    subtitle: 'Ihe ọmụmụ nkeji atọ nke Kora na-akụzi, nwere otu ajụjụ ngwa ngwa n’ime nke ọ bụla.',
+    name: 'Kora',
+    role: 'onye nkuzi AI gị',
+    english: 'Bekee',
+    minutes: 'nkeji {{n}}',
+    watched: 'Ị lelela ya',
+    open: 'Mepee ihe ọmụmụ: {{title}}',
+    groups: {
+      exam: 'Maka {{exams}}',
+      cyber: 'Nchekwa ịntanetị',
+      skills: 'Nkà ịmụ ihe',
+    },
+    start: 'Malite ihe ọmụmụ',
+    loading: 'Ihe ọmụmụ na-ebudata…',
+    loadFailed: 'Ihe ọmụmụ a ebudataghị. Lelee njikọ gị ma nwaa ọzọ.',
+    listFailed: 'Anyị enweghị ike ibudata ihe ọmụmụ ndị a. Lelee njikọ gị ma nwaa ọzọ.',
+    part: 'Akụkụ {{n}} n’ime {{total}}: {{title}}',
+    pauseAndTry: 'Kwụsịtụ ma nwaa',
+    continuesIn: 'Kora ga-aga n’ihu n’ime sekọnd {{n}}',
+    continue: 'Gaa n’ihu',
+    back10: 'Laghachi azụ sekọnd 10',
+    finishedTitle: 'Ihe ọmụmụ agwụla',
+    finishedBody: 'Ị mere nke ọma. Nwaa ihe ọmụmụ ọzọ, ma ọ bụ jụọ Kora ihe ọ bụla na-edoghị gị anya.',
+    moreLessons: 'Ihe ọmụmụ ndị ọzọ',
+  },
 };
 
 export default videos;

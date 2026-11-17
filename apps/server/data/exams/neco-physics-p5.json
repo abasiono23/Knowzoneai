@@ -1,0 +1,791 @@
+{
+ "id": "neco-physics-p5",
+ "exam": "neco",
+ "subject": "physics",
+ "year": null,
+ "number": 5,
+ "source": "ai",
+ "minutes": 60,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Sound",
+   "q": "A fisherman in Bayelsa uses an echo sounder to determine the depth of a river. A sound pulse sent from the boat returns as an echo after 0.80 s. If sound travels in water at 1,500 m/s, calculate the depth of the river at that point.",
+   "options": [
+    "1,875 m",
+    "600 m",
+    "1,200 m",
+    "750 m"
+   ],
+   "answer": 1,
+   "explanation": "The echo travels to the river bed and back, so the depth is half the total distance: d = (1500 × 0.80)/2 = 600 m. The 1,200 m value is the total echo distance, not the depth."
+  },
+  {
+   "n": 2,
+   "topic": "Sound",
+   "q": "A sound source in a hall in Jos vibrates at 500 Hz. If sound travels through the air at 340 m/s, how far does the sound travel during 25 complete vibrations of the source?",
+   "options": [
+    "17 m",
+    "34 m",
+    "8.5 m",
+    "0.68 m"
+   ],
+   "answer": 0,
+   "explanation": "25 vibrations take 25/500 = 0.05 s. Distance travelled = speed × time = 340 × 0.05 = 17 m; 0.68 m is the wavelength, the distance covered in one vibration."
+  },
+  {
+   "n": 3,
+   "topic": "Simple machines",
+   "q": "A labourer in Oyo uses a plank 5.0 m long as an inclined plane to raise a load of 400 N to a height of 1.0 m. If the effort applied along the plank is 100 N, calculate the efficiency of the inclined plane.",
+   "options": [
+    "80%",
+    "20%",
+    "400%",
+    "125%"
+   ],
+   "answer": 0,
+   "explanation": "Velocity ratio = length of plank/height = 5.0/1.0 = 5; mechanical advantage = load/effort = 400/100 = 4. Efficiency = (4/5) × 100 = 80%. The 20% value is the percentage lost, not the efficiency."
+  },
+  {
+   "n": 4,
+   "topic": "Simple machines",
+   "q": "A screw jack in a vulcanizer's workshop in Aba has a pitch of 4 mm. Its handle is turned through a circle of radius 35 cm. Taking π = 22/7, calculate the velocity ratio of the jack.",
+   "options": [
+    "275",
+    "55",
+    "550",
+    "1,100"
+   ],
+   "answer": 2,
+   "explanation": "The velocity ratio of a screw jack is the circumference described by the handle divided by the pitch: (2 × 22/7 × 35)/0.4 = 550. The 4 mm pitch is 0.4 cm in the same units."
+  },
+  {
+   "n": 5,
+   "topic": "Scalars and vectors",
+   "q": "A force in a machine in Ibadan has a horizontal component of 6 N and a vertical component of 8 N. What is the angle the force makes with the horizontal?",
+   "options": [
+    "53°",
+    "60°",
+    "45°",
+    "37°"
+   ],
+   "answer": 0,
+   "explanation": "tan θ = 8/6 = 4/3, so θ ≈ 53° above the horizontal. The 37° value comes from interchanging the components and using tan θ = 6/8."
+  },
+  {
+   "n": 6,
+   "topic": "Scalars and vectors",
+   "q": "A cyclist in Ilorin moves 5 m due north and then 5 m due east. What is the magnitude and direction of her resultant displacement?",
+   "options": [
+    "10 m on a bearing of 045°",
+    "5√2 m on a bearing of 135°",
+    "5 m on a bearing of 045°",
+    "5√2 m on a bearing of 045°"
+   ],
+   "answer": 3,
+   "explanation": "The two displacements are perpendicular, so resultant magnitude = √(5² + 5²) = 5√2 m. The resultant points north-east, which is a bearing of 045°; adding the distances directly would wrongly give 10 m."
+  },
+  {
+   "n": 7,
+   "topic": "Motion",
+   "q": "A stone is thrown horizontally from the top of a table 1.8 m high with a speed of 5.0 m/s. Taking g = 10 m/s² and neglecting air resistance, calculate the time it takes to reach the ground.",
+   "options": [
+    "0.60 s",
+    "0.30 s",
+    "0.36 s",
+    "0.42 s"
+   ],
+   "answer": 0,
+   "explanation": "For vertical motion, initial vertical velocity is zero, so h = ½gt² and t = √(2h/g). Thus t = √(2 × 1.8/10) = √0.36 = 0.60 s; the horizontal speed affects range, not falling time."
+  },
+  {
+   "n": 8,
+   "topic": "Motion",
+   "q": "A vehicle in Ilorin increases its velocity uniformly from 12 m/s to 20 m/s in 5.0 s. It then travels at a constant velocity of 20 m/s for the next 10 s. Calculate the total distance covered.",
+   "options": [
+    "300 m",
+    "200 m",
+    "280 m",
+    "260 m"
+   ],
+   "answer": 2,
+   "explanation": "During acceleration, distance = average velocity × time = ((12 + 20)/2) × 5.0 = 80 m. At constant velocity, distance = 20 × 10 = 200 m, giving 80 + 200 = 280 m; using 20 m/s throughout the acceleration stage gives 300 m."
+  },
+  {
+   "n": 9,
+   "topic": "Motion",
+   "q": "A danfo in Lagos travelling at 10 m/s accelerates uniformly at 2.0 m/s² for 5.0 s. Calculate the distance it covers in this time.",
+   "options": [
+    "25 m",
+    "50 m",
+    "75 m",
+    "100 m"
+   ],
+   "answer": 2,
+   "explanation": "Use s = ut + ½at² = 10 × 5.0 + ½ × 2.0 × (5.0)² = 50 + 25 = 75 m. The 50 m value is only the distance due to the initial velocity, while 25 m is only the extra distance due to acceleration."
+  },
+  {
+   "n": 10,
+   "topic": "Heat and temperature",
+   "q": "A patient in Kaduna has a body temperature of 104°F. Express this temperature in degrees Celsius.",
+   "options": [
+    "219.2°C",
+    "75.6°C",
+    "40°C",
+    "57.8°C"
+   ],
+   "answer": 2,
+   "explanation": "Use C = (F − 32) × 5/9. Thus C = (104 − 32) × 5/9 = 72 × 5/9 = 40°C. The value 57.8°C comes from omitting the subtraction of 32."
+  },
+  {
+   "n": 11,
+   "topic": "Heat and temperature",
+   "q": "The handle of a cooking pot is made of wood in order to reduce the transfer of heat from the pot to the hand mainly by...",
+   "options": [
+    "evaporation",
+    "conduction",
+    "convection",
+    "radiation"
+   ],
+   "answer": 1,
+   "explanation": "Heat travels along the solid handle from the hot pot to the hand mainly by conduction. Wood is a poor conductor, so it slows down this heat transfer."
+  },
+  {
+   "n": 12,
+   "topic": "Heat and temperature",
+   "q": "Calculate the quantity of heat required to convert 0.50 kg of water at 100°C completely to steam at 100°C. [Specific latent heat of vaporization of water = 2.26 × 10⁶ J/kg]",
+   "options": [
+    "2.26 × 10⁶ J",
+    "4.52 × 10⁶ J",
+    "1.13 × 10⁶ J",
+    "1.13 × 10⁵ J"
+   ],
+   "answer": 2,
+   "explanation": "At 100°C the heat supplied is latent heat: Q = mL = 0.50 × 2.26 × 10⁶ = 1.13 × 10⁶ J. The value 2.26 × 10⁶ J would be for 1.00 kg, while 4.52 × 10⁶ J comes from doubling rather than halving the latent heat."
+  },
+  {
+   "n": 13,
+   "topic": "Light and optics",
+   "q": "A ray of light passes obliquely through a rectangular glass block and emerges into air. The emergent ray is...",
+   "options": [
+    "parallel to the incident ray with no displacement",
+    "deviated away from the normal at the first face",
+    "perpendicular to the incident ray",
+    "parallel to the incident ray and laterally displaced"
+   ],
+   "answer": 3,
+   "explanation": "At the two parallel faces the changes in direction are equal and opposite, so the emergent ray is parallel to the incident ray but shifted sideways. It is not along the same line because refraction at the first face and again at the second face displaces it."
+  },
+  {
+   "n": 14,
+   "topic": "Light and optics",
+   "q": "An object is placed at the centre of curvature of a concave mirror. The image formed is...",
+   "options": [
+    "at infinity and highly magnified",
+    "virtual, erect and diminished",
+    "real, inverted and the same size as the object",
+    "real, inverted and magnified"
+   ],
+   "answer": 2,
+   "explanation": "For a concave mirror, an object at the centre of curvature forms a real, inverted image of the same size at the centre of curvature. A virtual erect diminished image is obtained with a convex mirror, not this arrangement."
+  },
+  {
+   "n": 15,
+   "topic": "Light and optics",
+   "q": "A swimming pool in a hotel in Abuja appears 2.4 m deep when it is full of water. If the refractive index of water is 4/3, what is the actual depth of the pool?",
+   "options": [
+    "4.8 m",
+    "3.2 m",
+    "1.8 m",
+    "2.4 m"
+   ],
+   "answer": 1,
+   "explanation": "The apparent depth equals the real depth divided by the refractive index, so real depth = apparent depth × n = 2.4 × 4/3 = 3.2 m. Multiplying by 3/4 instead gives 1.8 m."
+  },
+  {
+   "n": 16,
+   "topic": "Current electricity",
+   "q": "A student in Ibadan measures the resistance of a uniform metal wire of length 2.0 m and cross-sectional area 1.0 × 10⁻⁶ m² as 0.40 Ω. Calculate the resistivity of the metal.",
+   "options": [
+    "2.0 × 10⁻⁶ Ω m",
+    "2.0 × 10⁻⁷ Ω m",
+    "8.0 × 10⁻⁷ Ω m",
+    "5.0 × 10⁻⁷ Ω m"
+   ],
+   "answer": 1,
+   "explanation": "Resistance is R = ρl/A, so ρ = RA/l = (0.40 × 1.0 × 10⁻⁶)/2.0 = 2.0 × 10⁻⁷ Ω m. Using ρ = RAl instead would give 8.0 × 10⁻⁷ Ω m."
+  },
+  {
+   "n": 17,
+   "topic": "Current electricity",
+   "q": "A 60 W lamp in a home in Port Harcourt is connected to a 240 V supply. Calculate the resistance of the lamp when it is operating normally.",
+   "options": [
+    "960 Ω",
+    "4.0 Ω",
+    "14 400 Ω",
+    "240 Ω"
+   ],
+   "answer": 0,
+   "explanation": "For a lamp operating normally, P = V²/R, so R = V²/P = (240)²/60 = 960 Ω. Dividing voltage by power gives 4.0 Ω, which is not resistance."
+  },
+  {
+   "n": 18,
+   "topic": "Waves",
+   "q": "A student in Enugu hears the sound from a radio in the next room through an open doorway but cannot see the radio. This is mainly because...",
+   "options": [
+    "sound waves have much longer wavelengths and diffract appreciably round the doorway",
+    "sound travels faster than light",
+    "sound is longitudinal while light is transverse",
+    "light is completely absorbed by the doorway"
+   ],
+   "answer": 0,
+   "explanation": "Diffraction is appreciable when the wavelength is comparable to the size of the obstacle or opening. Sound has a much longer wavelength than light, so it bends round the doorway while light travels almost in straight lines."
+  },
+  {
+   "n": 19,
+   "topic": "Waves",
+   "q": "A tuning fork in a music class in Makurdi vibrates with a frequency of 512 Hz. Calculate its period of vibration.",
+   "options": [
+    "512 s",
+    "1.95 × 10⁻² s",
+    "0.512 s",
+    "1.95 × 10⁻³ s"
+   ],
+   "answer": 3,
+   "explanation": "The period is the reciprocal of frequency: T = 1/f = 1/512 ≈ 1.95 × 10⁻³ s. The value 0.512 s would come from an incorrect decimal shift, not from the reciprocal of 512 Hz."
+  },
+  {
+   "n": 20,
+   "topic": "Elasticity and pressure",
+   "q": "A steel rod used in a workshop in Ilesa has an original length of 3.0 m and a cross-sectional area of 2.0 × 10⁻⁶ m². It extends by 1.5 mm under a tensile force of 60 N. Calculate the Young modulus of the steel.",
+   "options": [
+    "1.2 × 10¹¹ N/m²",
+    "6.0 × 10⁹ N/m²",
+    "3.0 × 10¹⁰ N/m²",
+    "6.0 × 10¹⁰ N/m²"
+   ],
+   "answer": 3,
+   "explanation": "Young modulus E = (F/A) ÷ (e/L) = FL/(Ae). Converting 1.5 mm to 1.5 × 10⁻³ m gives E = (60 × 3.0)/(2.0 × 10⁻⁶ × 1.5 × 10⁻³) = 6.0 × 10¹⁰ N/m². Forgetting to convert the extension to metres or using the area incorrectly gives the other values."
+  },
+  {
+   "n": 21,
+   "topic": "Electrostatics and capacitors",
+   "q": "A charged metal sphere in a laboratory in Enugu has a charge of 4.0 × 10⁻⁸ C and a radius of 20 cm. Taking 1/(4πɛ₀) = 9.0 × 10⁹ N m²/C², calculate the electric potential at the surface of the sphere.",
+   "options": [
+    "1.8 × 10⁴ V",
+    "9.0 × 10² V",
+    "1.8 × 10³ V",
+    "3.6 × 10² V"
+   ],
+   "answer": 2,
+   "explanation": "For a charged sphere, the surface potential is V = (1/(4πɛ₀))Q/r. Thus V = (9.0 × 10⁹ × 4.0 × 10⁻⁸)/0.20 = 1.8 × 10³ V. Using 20 cm as 20 m or omitting the radius division produces the other values."
+  },
+  {
+   "n": 22,
+   "topic": "Measurement and units",
+   "q": "A technician at a workshop in Aba finds that a micrometer screw gauge reads 0.03 mm when its jaws are closed. When it is used to measure the diameter of a wire, the reading is 2.58 mm. What is the actual diameter of the wire?",
+   "options": [
+    "2.52 mm",
+    "2.55 mm",
+    "2.61 mm",
+    "2.58 mm"
+   ],
+   "answer": 1,
+   "explanation": "The closed-jaw reading is a positive zero error, so it must be subtracted from the measured reading: 2.58 mm − 0.03 mm = 2.55 mm. Adding the zero error or ignoring it gives the other listed values."
+  },
+  {
+   "n": 23,
+   "topic": "Magnetism and electromagnetic induction",
+   "q": "A step-down transformer used to charge a phone in a shop in Ibadan is ideal. The input potential difference is 240 V and the output potential difference is 12 V. If the primary current is 0.50 A, calculate the secondary current.",
+   "options": [
+    "10 A",
+    "20 A",
+    "0.025 A",
+    "5.0 A"
+   ],
+   "answer": 0,
+   "explanation": "For an ideal transformer, input power equals output power: VpIp = VsIs. Hence Is = (240 × 0.50)/12 = 10 A. A step-down transformer increases current, so the secondary current is greater than the primary current."
+  },
+  {
+   "n": 24,
+   "topic": "Elasticity and pressure",
+   "q": "A stone of volume 2.0 × 10⁻⁴ m³ is completely immersed in water of density 1.0 × 10³ kg/m³. Taking g = 10 m/s², calculate the upthrust on the stone.",
+   "options": [
+    "0.20 N",
+    "20 N",
+    "5.0 N",
+    "2.0 N"
+   ],
+   "answer": 3,
+   "explanation": "Upthrust equals the weight of the displaced water: U = ρVg = 1.0 × 10³ × 2.0 × 10⁻⁴ × 10 = 2.0 N. The mass of the stone itself is not needed for upthrust."
+  },
+  {
+   "n": 25,
+   "topic": "Measurement and units",
+   "q": "A vernier caliper has 20 vernier divisions coinciding with 19 main-scale divisions. The smallest main-scale division is 0.1 cm. The zero of the vernier scale lies just beyond the 3.2 cm mark, and the 4th vernier division coincides with a main-scale division. What is the correct reading?",
+   "options": [
+    "3.204 cm",
+    "3.200 cm",
+    "3.220 cm",
+    "3.240 cm"
+   ],
+   "answer": 2,
+   "explanation": "Least count = 0.1 cm ÷ 20 = 0.005 cm, so the vernier reading is 4 × 0.005 cm = 0.020 cm. Adding this to the main-scale value gives 3.2 cm + 0.020 cm = 3.220 cm."
+  },
+  {
+   "n": 26,
+   "topic": "Electrostatics and capacitors",
+   "q": "A sheet of dielectric material is inserted between the plates of an isolated charged capacitor. Why does the capacitance increase?",
+   "options": [
+    "The dielectric reduces the electric field between the plates, so the potential difference falls while the charge remains constant.",
+    "The dielectric increases the effective area of the capacitor plates.",
+    "The dielectric supplies extra charge to the capacitor plates.",
+    "The dielectric causes the separation between the capacitor plates to decrease."
+   ],
+   "answer": 0,
+   "explanation": "For an isolated capacitor, the charge remains constant. A dielectric reduces the electric field and hence the potential difference, and since C = Q/V, a smaller V gives a larger capacitance. The dielectric does not add charge, change the plate area, or reduce the physical separation."
+  },
+  {
+   "n": 27,
+   "topic": "Magnetism and electromagnetic induction",
+   "q": "A long straight wire in a laboratory in Ibadan carries a current of 5.0 A. Calculate the magnetic flux density at a point 0.20 m from the wire. Take μ₀ = 4π × 10⁻⁷ T m/A.",
+   "options": [
+    "5.0 × 10⁻⁶ T",
+    "5.0 × 10⁻⁵ T",
+    "2.5 × 10⁻⁶ T",
+    "1.0 × 10⁻⁵ T"
+   ],
+   "answer": 0,
+   "explanation": "The flux density near a long straight wire is B = μ₀I/(2πr). Substituting gives B = (4π × 10⁻⁷ × 5.0)/(2π × 0.20) = 5.0 × 10⁻⁶ T. Omitting the factor 2π or using the radius incorrectly gives the other values."
+  },
+  {
+   "n": 28,
+   "topic": "Elasticity and pressure",
+   "q": "A U-tube containing mercury is connected to a gas supply. The mercury level in the arm open to the atmosphere is 12 cm higher than the level in the arm connected to the gas. If atmospheric pressure is 76 cmHg, calculate the pressure of the gas.",
+   "options": [
+    "12 cmHg",
+    "88 cmHg",
+    "64 cmHg",
+    "76 cmHg"
+   ],
+   "answer": 1,
+   "explanation": "The higher mercury level is on the side open to the atmosphere, so the gas pressure is greater than atmospheric pressure by the 12 cmHg head. Therefore the gas pressure is 76 cmHg + 12 cmHg = 88 cmHg."
+  },
+  {
+   "n": 29,
+   "topic": "Measurement and units",
+   "q": "The unit of Young's modulus is the same as the unit of",
+   "options": [
+    "stress",
+    "work",
+    "force",
+    "strain"
+   ],
+   "answer": 0,
+   "explanation": "Young's modulus is stress divided by strain. Strain has no unit, so Young's modulus has the same unit as stress, namely N/m² (or Pa). Force and work have different units."
+  },
+  {
+   "n": 30,
+   "topic": "Newton’s laws and momentum",
+   "q": "A hunter in Makurdi fires a bullet of mass 20 g from a gun of mass 2.5 kg. The bullet leaves the gun horizontally with a speed of 300 m/s. Neglecting air resistance, what is the recoil speed of the gun?",
+   "options": [
+    "0.24 m/s",
+    "2.4 m/s",
+    "2.5 m/s",
+    "6.0 m/s"
+   ],
+   "answer": 1,
+   "explanation": "Total momentum before firing is zero, so the bullet and gun have equal and opposite momenta: 0.020 × 300 = 2.5 × v. Hence v = 6.0 ÷ 2.5 = 2.4 m/s. The value 0.24 m/s comes from a decimal-place error, not from conservation of momentum."
+  },
+  {
+   "n": 31,
+   "topic": "Newton’s laws and momentum",
+   "q": "A lorry of mass 4000 kg travelling at 20 m/s is brought to rest by a constant braking force of 8000 N. Calculate the time taken to stop.",
+   "options": [
+    "10 s",
+    "20 s",
+    "8 s",
+    "5 s"
+   ],
+   "answer": 0,
+   "explanation": "Initial momentum = 4000 × 20 = 80,000 kg·m/s. The braking force removes momentum at 8000 N, so t = 80,000 ÷ 8000 = 10 s. Using mass divided by force gives the wrong time."
+  },
+  {
+   "n": 32,
+   "topic": "Newton’s laws and momentum",
+   "q": "A car travels round a circular track at constant speed. Which statement about the car is correct?",
+   "options": [
+    "It has a constant velocity because it moves at constant speed.",
+    "It has no acceleration because its speed is constant.",
+    "It has an acceleration directed towards the centre of the circular path.",
+    "It has an acceleration along the direction of its motion."
+   ],
+   "answer": 2,
+   "explanation": "Even at constant speed, the direction of motion changes, so the velocity changes and there is a centripetal acceleration towards the centre. A constant velocity would require both speed and direction to remain unchanged."
+  },
+  {
+   "n": 33,
+   "topic": "Atomic and nuclear physics",
+   "q": "When nitrogen-14 (¹⁴₇N) is bombarded with an alpha particle, an oxygen nucleus and a proton are produced. The reaction is ¹⁴₇N + ⁴₂He → X + ¹₁H. Which nucleus is represented by X?",
+   "options": [
+    "¹⁸₈O",
+    "¹⁶₈O",
+    "¹⁷₈O",
+    "¹⁷₉F"
+   ],
+   "answer": 2,
+   "explanation": "Balancing mass number: 14 + 4 − 1 = 17. Balancing atomic number: 7 + 2 − 1 = 8, so X is ¹⁷₈O. The value ¹⁸₈O would arise if the emitted proton were not subtracted from the mass number."
+  },
+  {
+   "n": 34,
+   "topic": "Atomic and nuclear physics",
+   "q": "A radioactive source in a laboratory in Zaria has a half-life of 20 days. Its initial activity is 800 Bq. What is its activity after 60 days?",
+   "options": [
+    "100 Bq",
+    "50 Bq",
+    "400 Bq",
+    "200 Bq"
+   ],
+   "answer": 0,
+   "explanation": "60 days is three half-lives, so activity = 800 × (1/2)³ = 100 Bq. The value 400 Bq would be obtained after only one half-life."
+  },
+  {
+   "n": 35,
+   "topic": "Gas laws",
+   "q": "A cylinder in Asaba contains 0.025 m³ of oxygen at a pressure of 2.0 × 10⁵ Pa and a temperature of 27 °C. Taking R = 8.31 J mol⁻¹ K⁻¹, calculate the number of moles of oxygen in the cylinder.",
+   "options": [
+    "22.3 mol",
+    "2.0 mol",
+    "0.20 mol",
+    "20 mol"
+   ],
+   "answer": 1,
+   "explanation": "Convert 27 °C to 300 K, then n = PV ÷ RT = (2.0 × 10⁵ × 0.025) ÷ (8.31 × 300) ≈ 2.0 mol. Using 27 instead of 300 K gives an incorrect larger value."
+  },
+  {
+   "n": 36,
+   "topic": "Gas laws",
+   "q": "Which assumption is made in the simple kinetic theory of gases?",
+   "options": [
+    "The gas molecules are stationary between collisions.",
+    "The gas molecules all move with the same speed.",
+    "The volume occupied by the gas molecules is negligible compared with the volume of the container.",
+    "The gas molecules attract one another strongly at all distances."
+   ],
+   "answer": 2,
+   "explanation": "The simple kinetic theory treats gas molecules as having negligible volume and exerting no appreciable forces on one another except during collisions. The molecules move randomly with a range of speeds, so being stationary or having a single common speed is not assumed."
+  },
+  {
+   "n": 37,
+   "topic": "Work, energy and power",
+   "q": "A mason in Ibadan lifts a 20 kg block vertically through 1.5 m and then carries it horizontally through 4.0 m at the same height. Taking g = 10 m/s², calculate the work done against gravity during the whole movement.",
+   "options": [
+    "1,100 J",
+    "500 J",
+    "800 J",
+    "300 J"
+   ],
+   "answer": 3,
+   "explanation": "Work done against gravity depends only on vertical height gained: mgh = 20 × 10 × 1.5 = 300 J. Carrying the block horizontally at constant height does not change its gravitational potential energy, so no work is done against gravity in that part."
+  },
+  {
+   "n": 38,
+   "topic": "Work, energy and power",
+   "q": "A boy in Enugu uses a pulley system to lift a 60 kg load through a vertical height of 5.0 m in 10 s. The average power supplied to the pulley system is 400 W. Taking g = 10 m/s², calculate the efficiency of the system.",
+   "options": [
+    "75%",
+    "80%",
+    "60%",
+    "25%"
+   ],
+   "answer": 0,
+   "explanation": "Useful output power = mgh ÷ t = (60 × 10 × 5.0) ÷ 10 = 300 W. Efficiency = useful power ÷ input power × 100% = 300 ÷ 400 × 100% = 75%."
+  },
+  {
+   "n": 39,
+   "topic": "Work, energy and power",
+   "q": "A trader in Onitsha uses an electric iron rated 1.5 kW for 4 hours each day. If electrical energy costs ₦50 per kWh, what is the cost of operating the iron for 30 days?",
+   "options": [
+    "₦1,800",
+    "₦6,000",
+    "₦9,000",
+    "₦18,000"
+   ],
+   "answer": 2,
+   "explanation": "Daily energy = 1.5 kW × 4 h = 6.0 kWh. For 30 days, energy = 6.0 × 30 = 180 kWh, so cost = 180 × ₦50 = ₦9,000. Using only the time and rate omits the power rating."
+  },
+  {
+   "n": 40,
+   "topic": "Sound",
+   "q": "A note produced by a flute in a music class in Uyo has a frequency of 440 Hz. If the speed of sound in air is 330 m/s, the wavelength of the note is",
+   "options": [
+    "1.33 m",
+    "0.75 cm",
+    "145200 m",
+    "0.75 m"
+   ],
+   "answer": 3,
+   "explanation": "Using v = fλ, λ = v/f = 330/440 = 0.75 m. The value 145200 is obtained by multiplying speed by frequency, which does not give wavelength."
+  },
+  {
+   "n": 41,
+   "topic": "Sound",
+   "q": "A hunter in Ilorin fires a gun and hears the echo from a cliff 1.5 s later. If the speed of sound in air is 340 m/s, how far is the hunter from the cliff?",
+   "options": [
+    "510 m",
+    "113 m",
+    "255 m",
+    "227 m"
+   ],
+   "answer": 2,
+   "explanation": "The sound travels to the cliff and back in 1.5 s, covering a total distance of 340 × 1.5 = 510 m. The one-way distance to the cliff is 510/2 = 255 m."
+  },
+  {
+   "n": 42,
+   "topic": "Simple machines",
+   "q": "A pulley system in a rice mill in Abakaliki has a velocity ratio of 5.0 and an efficiency of 80%. What effort is required to raise a load of 400 N?",
+   "options": [
+    "125 N",
+    "80 N",
+    "100 N",
+    "1600 N"
+   ],
+   "answer": 2,
+   "explanation": "Efficiency = (mechanical advantage ÷ velocity ratio) × 100%, so mechanical advantage = 0.80 × 5.0 = 4.0. Effort = load ÷ mechanical advantage = 400/4.0 = 100 N."
+  },
+  {
+   "n": 43,
+   "topic": "Simple machines",
+   "q": "A screw jack used in a mechanic's workshop in Aba has a pitch of 0.50 cm. The effort is applied at the end of a handle 50 cm from the axis. Taking π = 3.14, calculate the velocity ratio of the jack.",
+   "options": [
+    "100",
+    "628",
+    "314",
+    "157"
+   ],
+   "answer": 1,
+   "explanation": "For a screw jack, velocity ratio = 2πr ÷ pitch. Here r = 50 cm and pitch = 0.50 cm, so velocity ratio = (2 × 3.14 × 50) ÷ 0.50 = 314 ÷ 0.50 = 628."
+  },
+  {
+   "n": 44,
+   "topic": "Scalars and vectors",
+   "q": "Which of the following sets contains only vector quantities?",
+   "options": [
+    "Force, velocity, acceleration",
+    "Speed, velocity, acceleration",
+    "Displacement, distance, force",
+    "Mass, weight, time"
+   ],
+   "answer": 0,
+   "explanation": "Vector quantities have both magnitude and direction. Force, velocity and acceleration are vectors, while speed, mass, time and distance are scalars."
+  },
+  {
+   "n": 45,
+   "topic": "Scalars and vectors",
+   "q": "Two forces of magnitudes 3.0 N and 4.0 N act at right angles at a point in Minna. What is the tangent of the angle which their resultant makes with the 4.0 N force?",
+   "options": [
+    "0.60",
+    "0.80",
+    "0.75",
+    "1.33"
+   ],
+   "answer": 2,
+   "explanation": "The resultant has a component of 4.0 N along the 4.0 N force and a perpendicular component of 3.0 N. Thus tan θ = 3.0/4.0 = 0.75."
+  },
+  {
+   "n": 46,
+   "topic": "Motion",
+   "q": "A ball is projected horizontally from the top of a building 20 m high in Enugu with a speed of 8.0 m/s. Taking g = 10 m/s² and neglecting air resistance, how long does it take the ball to reach the ground?",
+   "options": [
+    "2.5 s",
+    "4.0 s",
+    "1.0 s",
+    "2.0 s"
+   ],
+   "answer": 3,
+   "explanation": "The vertical motion has initial velocity zero, so h = ½gt². Thus 20 = ½ × 10 × t² = 5t², giving t² = 4 and t = 2.0 s. The horizontal speed does not affect the time of fall."
+  },
+  {
+   "n": 47,
+   "topic": "Motion",
+   "q": "A pupil in Lokoja walks 300 m in 5.0 minutes, rests for 5.0 minutes and then walks another 300 m in 5.0 minutes. What is the average speed for the whole journey?",
+   "options": [
+    "0.75 m/s",
+    "1.0 m/s",
+    "0.50 m/s",
+    "2/3 m/s"
+   ],
+   "answer": 3,
+   "explanation": "Total distance = 300 + 300 = 600 m. Total time including the rest = 5.0 + 5.0 + 5.0 = 15 minutes = 900 s, so average speed = 600/900 = 2/3 m/s. Using only the walking time gives 1.0 m/s, but this ignores the rest period."
+  },
+  {
+   "n": 48,
+   "topic": "Heat and temperature",
+   "q": "A steel rail on a railway line in Kaduna is 80 m long at 20 °C. If the temperature rises to 60 °C, calculate the increase in length. (Linear expansivity of steel = 1.2 × 10⁻⁵ K⁻¹)",
+   "options": [
+    "0.96 cm",
+    "3.84 cm",
+    "0.0384 cm",
+    "4.80 cm"
+   ],
+   "answer": 1,
+   "explanation": "The temperature rise is 60 °C − 20 °C = 40 K. Increase in length = LαΔθ = 80 × 1.2 × 10⁻⁵ × 40 = 0.0384 m = 3.84 cm."
+  },
+  {
+   "n": 49,
+   "topic": "Heat and temperature",
+   "q": "A copper kettle of mass 1.5 kg contains 2.0 kg of water at 20 °C. Calculate the total heat required to raise the temperature of the kettle and water to 80 °C. (Specific heat capacity of copper = 400 J kg⁻¹ K⁻¹; of water = 4200 J kg⁻¹ K⁻¹)",
+   "options": [
+    "5.04 × 10⁵ J",
+    "5.40 × 10⁴ J",
+    "5.76 × 10⁵ J",
+    "5.40 × 10⁵ J"
+   ],
+   "answer": 3,
+   "explanation": "The temperature rise is 60 K. Heat needed = (m_c c_c + m_w c_w)Δθ = (1.5 × 400 + 2.0 × 4200) × 60 = (600 + 8400) × 60 = 5.40 × 10⁵ J. The water alone takes 5.04 × 10⁵ J, so leaving out the kettle gives a smaller value."
+  },
+  {
+   "n": 50,
+   "topic": "Light and optics",
+   "q": "A swimming pool in Port Harcourt is filled with water of refractive index 4/3 to a real depth of 2.4 m. To an observer looking directly downwards, what is the apparent depth of the bottom of the pool?",
+   "options": [
+    "3.2 m",
+    "1.8 m",
+    "1.2 m",
+    "0.6 m"
+   ],
+   "answer": 1,
+   "explanation": "Apparent depth = real depth ÷ refractive index = 2.4 ÷ (4/3) = 2.4 × 3/4 = 1.8 m. Multiplying by the refractive index instead would give 3.2 m, which is incorrect."
+  },
+  {
+   "n": 51,
+   "topic": "Light and optics",
+   "q": "A converging lens of focal length 12.0 cm forms a real image 18.0 cm from the lens. Calculate the object distance.",
+   "options": [
+    "6.0 cm",
+    "30.0 cm",
+    "36.0 cm",
+    "7.2 cm"
+   ],
+   "answer": 2,
+   "explanation": "Using 1/f = 1/u + 1/v gives 1/u = 1/12 − 1/18 = 1/36, so u = 36.0 cm."
+  },
+  {
+   "n": 52,
+   "topic": "Light and optics",
+   "q": "White light is passed through a glass prism. Which colour of light is deviated most by the prism?",
+   "options": [
+    "Yellow",
+    "Violet",
+    "Green",
+    "Red"
+   ],
+   "answer": 1,
+   "explanation": "Glass has the greatest refractive index for violet light, so violet is deviated most. Red has the least refractive index among the visible colours and is deviated least."
+  },
+  {
+   "n": 53,
+   "topic": "Current electricity",
+   "q": "A uniform resistance wire in a laboratory in Aba has length 2.5 m, cross-sectional area 5.0 × 10⁻⁷ m² and resistivity 1.6 × 10⁻⁶ Ω m. Calculate its resistance.",
+   "options": [
+    "0.80 Ω",
+    "80 Ω",
+    "8.0 Ω",
+    "4.0 Ω"
+   ],
+   "answer": 2,
+   "explanation": "Resistance R = ρL/A = (1.6 × 10⁻⁶ × 2.5) ÷ (5.0 × 10⁻⁷) = 8.0 Ω."
+  },
+  {
+   "n": 54,
+   "topic": "Current electricity",
+   "q": "An electric bulb marked 100 W, 250 V is connected to a 200 V supply. Assuming its resistance remains constant, calculate the power it consumes.",
+   "options": [
+    "100 W",
+    "125 W",
+    "64 W",
+    "80 W"
+   ],
+   "answer": 2,
+   "explanation": "The resistance is R = V²/P = 250² ÷ 100 = 625 Ω. At 200 V, power = V²/R = 200² ÷ 625 = 64 W."
+  },
+  {
+   "n": 55,
+   "topic": "Waves",
+   "q": "An open pipe in a school laboratory in Enugu produces a fundamental note of frequency 220 Hz. What is the frequency of its first overtone?",
+   "options": [
+    "440 Hz",
+    "110 Hz",
+    "660 Hz",
+    "220 Hz"
+   ],
+   "answer": 0,
+   "explanation": "An open pipe supports all harmonics. Its first overtone is the second harmonic, so its frequency is 2 × 220 = 440 Hz."
+  },
+  {
+   "n": 56,
+   "topic": "Waves",
+   "q": "The equation of a progressive wave is y = 0.04 sin 2π(5t − 0.25x), where y is in metres, t in seconds and x in metres. Calculate the speed of the wave.",
+   "options": [
+    "4 m/s",
+    "1.25 m/s",
+    "20 m/s",
+    "5 m/s"
+   ],
+   "answer": 2,
+   "explanation": "Comparing with y = A sin 2π(ft − x/λ), f = 5 Hz and 1/λ = 0.25 m⁻¹, so λ = 4 m. Speed v = fλ = 5 × 4 = 20 m/s."
+  },
+  {
+   "n": 57,
+   "topic": "Elasticity and pressure",
+   "q": "A concrete block at a building site in Uyo weighs 480 N. It rests on level ground on a face measuring 0.60 m by 0.40 m. Calculate the pressure the block exerts on the ground.",
+   "options": [
+    "2000 Pa",
+    "480 Pa",
+    "800 Pa",
+    "4800 Pa"
+   ],
+   "answer": 0,
+   "explanation": "Pressure = force ÷ area = 480 N ÷ (0.60 m × 0.40 m) = 480 ÷ 0.24 = 2000 Pa. Adding the side lengths instead of finding the area gives a very different pressure."
+  },
+  {
+   "n": 58,
+   "topic": "Elasticity and pressure",
+   "q": "A copper wire in a radio repair shop in Abeokuta has an original length of 2.0 m and a cross-sectional area of 1.0 mm². It extends by 0.20 mm when a tensile force of 40 N is applied. Calculate the Young's modulus of the copper wire.",
+   "options": [
+    "2.0 × 10¹¹ Pa",
+    "8.0 × 10¹¹ Pa",
+    "4.0 × 10¹¹ Pa",
+    "4.0 × 10⁸ Pa"
+   ],
+   "answer": 2,
+   "explanation": "Stress = F/A = 40 N ÷ (1.0 × 10⁻⁶ m²) = 4.0 × 10⁷ Pa. Strain = e/L = (0.20 × 10⁻³ m) ÷ 2.0 m = 1.0 × 10⁻⁴. Therefore Young's modulus = stress ÷ strain = 4.0 × 10¹¹ Pa."
+  },
+  {
+   "n": 59,
+   "topic": "Measurement and units",
+   "q": "A carpenter in Ogbomoso measures the sides of a rectangular board as (8.0 ± 0.1) cm and (5.0 ± 0.1) cm. What is the percentage error in the calculated area of the board?",
+   "options": [
+    "3.25%",
+    "1.25%",
+    "6.50%",
+    "2.00%"
+   ],
+   "answer": 0,
+   "explanation": "For a product, percentage errors add: (0.1/8.0) × 100% + (0.1/5.0) × 100% = 1.25% + 2.00% = 3.25%. The area itself is 40 cm², but its percentage error is not obtained by simply adding the two measured sides."
+  },
+  {
+   "n": 60,
+   "topic": "Electrostatics and capacitors",
+   "q": "Three capacitors of capacitance 3 μF, 6 μF and 9 μF are connected with the 3 μF and 6 μF in series, and the combination is connected in parallel with the 9 μF capacitor across a 12 V battery. Calculate the total energy stored in the network.",
+   "options": [
+    "1.30 × 10⁻³ J",
+    "7.92 × 10⁻⁴ J",
+    "1.58 × 10⁻³ J",
+    "6.48 × 10⁻⁴ J"
+   ],
+   "answer": 1,
+   "explanation": "The series pair has capacitance (3 × 6)/(3 + 6) = 2 μF; in parallel with 9 μF gives C_total = 11 μF. Energy = ½CV² = ½ × 11 × 10⁻⁶ × 12² = 7.92 × 10⁻⁴ J. Adding all three directly as 18 μF corresponds to all in parallel and gives a larger energy."
+  }
+ ]
+}

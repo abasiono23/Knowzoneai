@@ -13,8 +13,10 @@ import { Card, Screen, Text } from '@/components/ui';
 import { Colors, Radius, Spacing } from '@/constants/theme';
 import { formatLabel, FORMAT_META, search, subjectName, type Format } from '@/lib/catalog';
 import { catalogueFor, useBooksProfile } from '@/lib/books';
+import { regionOf } from '@/lib/region';
+import { useSession } from '@/lib/session';
 import { useLibrary } from '@/lib/library-store';
-import { NO_RESULTS, searchAll, type SearchResults } from '@/lib/search-all';
+import { NO_RESULTS, searchAll, searchSmart, withSmart, type SearchResults, type SmartItem } from '@/lib/search-all';
 
 const TABS = ['all', 'videos', 'summaries', 'books', 'lessons', 'more', 'subjects', 'topics'] as const;
 
@@ -32,19 +34,39 @@ export default function SearchResultsScreen() {
   const results = useMemo(() => search(q), [q]);
   const { profile } = useBooksProfile();
   const country = profile?.country ? catalogueFor(profile.country) : undefined;
+  const region = regionOf(useSession().user);
   // Everything beyond lessons comes from the server. If it can't be reached, the lessons still show.
   const [found, setFound] = useState<{ q: string; results: SearchResults } | null>(null);
   useEffect(() => {
     let stale = false;
-    searchAll(q, country)
+    searchAll(q, country, region)
       .then((r) => !stale && setFound({ q, results: r }))
       .catch(() => !stale && setFound({ q, results: NO_RESULTS }));
     return () => {
       stale = true;
     };
-  }, [q, country]);
-  const all = found?.q === q ? found.results : null;
-  const more = all ? all.courses.length + all.exams.length + all.reels.length + all.skills.length : 0;
+  }, [q, country, region]);
+  // Smart search (by meaning) arrives a moment later and joins the same lists. Without it, nothing changes.
+  const [smart, setSmart] = useState<{ q: string; items: SmartItem[] } | null>(null);
+  useEffect(() => {
+    let stale = false;
+    if (q.trim().length < 2) return;
+    searchSmart(q, country, region)
+      .then((r) => !stale && setSmart({ q, items: r.items }))
+      .catch(() => !stale && setSmart({ q, items: [] }));
+    return () => {
+      stale = true;
+    };
+  }, [q, country, region]);
+  // "No results" waits for it: it often finds what the words alone didn't.
+  const smartPending = q.trim().length >= 2 && smart?.q !== q;
+  const all = useMemo(
+    () => (found?.q === q ? withSmart(found.results, smart?.q === q ? smart.items : null) : null),
+    [found, smart, q],
+  );
+  const more = all
+    ? all.courses.length + all.exams.length + all.reels.length + all.skills.length + all.questions.length
+    : 0;
   const lessons = format ? results.lessons.filter((l) => l.format === format) : results.lessons;
   const total =
     results.lessons.length +
@@ -89,7 +111,7 @@ export default function SearchResultsScreen() {
         ))}
       </ScrollView>
 
-      {total === 0 && !all ? (
+      {total === 0 && (!all || smartPending) ? (
         <ActivityIndicator color={Colors.primary} style={{ marginTop: Spacing.lg }} />
       ) : total === 0 ? (
         <EmptyState
@@ -230,6 +252,15 @@ export default function SearchResultsScreen() {
                   title={`${tExams(`exams.${e.exam}.name`)} · ${tExams(`subjects.${e.subject}` as never)}`}
                   body={t('results.pastQuestions')}
                   onPress={() => router.push(`/exams/${e.exam}/${e.subject}` as Href)}
+                />
+              ))}
+              {all.questions.map((x) => (
+                <TextResult
+                  key={x.id}
+                  icon="help-circle"
+                  title={x.title}
+                  body={x.snippet}
+                  onPress={() => router.push(x.link as Href)}
                 />
               ))}
               {all.reels.map((r) => (

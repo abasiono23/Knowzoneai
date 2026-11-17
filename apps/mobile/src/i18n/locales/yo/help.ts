@@ -765,7 +765,7 @@ const help: Translation<typeof en> = {
             body: ['Ohun tí AI ṣẹ̀dá lè:'],
             bullets: [
               'Ní àṣìṣe òkodoro, pàápàá nínú ìṣirò, ọjọ́ àti iye',
-              'Fo àlàyé láti inú sílébọ́ọ̀sì tàbí ìgbìmọ̀ ìdánwò rẹ pàtó (WAEC, NECO, JAMB)',
+              'Fo àlàyé láti inú sílébọ́ọ̀sì tàbí ìgbìmọ̀ ìdánwò rẹ pàtó (WAEC, SAT, GCSE…)',
               'Ka ìkọ̀wé ọwọ́, fọ́tò tí kò mọ́ tàbí àwòrán tó díjú ní àìtọ́',
               'Má mọ̀ nípa ìṣẹ̀lẹ̀ àìpẹ́ gan-an tàbí àyípadà sílébọ́ọ̀sì',
               'Dún bí ẹni tó dá a lójú kódà nígbà tí kò tọ̀nà',

@@ -5,18 +5,50 @@ import { useTranslation } from 'react-i18next';
 import { Pressable, StyleSheet, View } from 'react-native';
 
 import { LoadError, Loading } from '@/components/exams/ui';
-import { Card, Screen, ScreenHeader, Text } from '@/components/ui';
+import { Button, Card, Screen, ScreenHeader, Text } from '@/components/ui';
 import { Colors, Fonts, Radius, Spacing } from '@/constants/theme';
 import { errorText } from '@/i18n/errors';
 import { USE_MOCKS } from '@/lib/config';
-import { EXAM_IDS, examsApi, SUBJECT_ICONS, type ExamId, type ExamsOverview } from '@/lib/exams';
+import {
+  EXAM_IDS,
+  examsApi,
+  isExamId,
+  isPracticeOnly,
+  SUBJECT_ICONS,
+  type ExamId,
+  type ExamsOverview,
+} from '@/lib/exams';
 import { openSittings, sitHref, type OpenSitting } from '@/lib/exams-progress';
+import {
+  EXAM_NAMES,
+  examsForRegion,
+  pastQuestions,
+  regionLabel,
+  regionName,
+  regionOf,
+} from '@/lib/region';
+import { useSession } from '@/lib/session';
 
-/** Past Questions: papers in progress first, then choose JAMB, WAEC or NECO, then a subject. */
+/**
+ * Past Questions / exam practice: papers in progress first, then the exams of the student's study
+ * region (JAMB, WAEC and NECO in Nigeria; WAEC in Ghana; SAT in the US; GCSE in the UK), then a
+ * subject. Other countries' exams are one tap away under "Other exams"; a region with no papers of
+ * its own is told so and pointed at the tutor and its books.
+ */
 export default function ExamsHome() {
   const { t } = useTranslation('exams');
+  const { t: th } = useTranslation('home');
+  const { t: tb } = useTranslation('books');
+  const { user } = useSession();
+  const region = regionOf(user);
+  const mine = examsForRegion(region);
+  const others = EXAM_IDS.filter((e) => !mine.includes(e));
   const params = useLocalSearchParams<{ exam?: string }>();
-  const [exam, setExam] = useState<ExamId>(EXAM_IDS.includes(params.exam as ExamId) ? (params.exam as ExamId) : 'jamb');
+  // Their own first exam unless a link asked for another; none chosen where we have no papers for them.
+  const [picked, setPicked] = useState<ExamId | null>(isExamId(params.exam) ? params.exam : null);
+  const exam: ExamId | null = picked ?? mine[0] ?? null;
+  const setExam = setPicked;
+  const [showOthers, setShowOthers] = useState(() => isExamId(params.exam) && !mine.includes(params.exam));
   const [data, setData] = useState<ExamsOverview | null>(null);
   const [error, setError] = useState<string | null>(USE_MOCKS ? t('offline') : null);
 
@@ -49,7 +81,12 @@ export default function ExamsHome() {
 
   return (
     <Screen withTabBar={false}>
-      <ScreenHeader eyebrow={t('eyebrow')} title={t('title')} />
+      <ScreenHeader
+        eyebrow={
+          mine.length ? mine.map((e) => EXAM_NAMES[e]).join(' · ') : regionLabel(region)
+        }
+        title={pastQuestions(region) ? t('title') : t('practiceTitle')}
+      />
 
       {open.length > 0 && (
         <View style={{ gap: Spacing.sm }}>
@@ -86,72 +123,146 @@ export default function ExamsHome() {
         </View>
       )}
 
-
-      <Text variant="label" color={Colors.textSecondary}>
-        {t('pickExam')}
-      </Text>
-      <View style={styles.exams}>
-        {EXAM_IDS.map((id) => {
-          const on = id === exam;
-          return (
-            <Pressable
-              key={id}
-              onPress={() => setExam(id)}
-              accessibilityRole="tab"
-              accessibilityState={{ selected: on }}
-              accessibilityLabel={t(`exams.${id}.full`)}
-              style={[styles.exam, on && styles.examOn]}>
-              <Text style={{ fontFamily: Fonts.extrabold, fontSize: 18, color: on ? '#fff' : Colors.text }}>
-                {t(`exams.${id}.name`)}
-              </Text>
-            </Pressable>
-          );
-        })}
-      </View>
-      <Text variant="small" color={Colors.textSecondary}>
-        {t(`exams.${exam}.full`)} · {t(`exams.${exam}.about`)}
-      </Text>
-
-      <Text variant="label" color={Colors.textSecondary} style={{ marginTop: Spacing.sm }}>
-        {t('pickSubject')}
-      </Text>
-      {error ? (
-        <LoadError text={error} onRetry={retry} />
-      ) : !data ? (
-        <Loading />
+      {mine.length > 0 ? (
+        <>
+          <Text variant="label" color={Colors.textSecondary}>
+            {t('pickExam')}
+          </Text>
+          <View style={styles.exams}>
+            {mine.map((id) => {
+              const on = id === exam;
+              return (
+                <Pressable
+                  key={id}
+                  onPress={() => setExam(id)}
+                  accessibilityRole="tab"
+                  accessibilityState={{ selected: on }}
+                  accessibilityLabel={t(`exams.${id}.full`)}
+                  style={[styles.exam, on && styles.examOn]}>
+                  <Text style={{ fontFamily: Fonts.extrabold, fontSize: 18, color: on ? '#fff' : Colors.text }}>
+                    {t(`exams.${id}.name`)}
+                  </Text>
+                </Pressable>
+              );
+            })}
+          </View>
+        </>
       ) : (
-        <View style={{ gap: Spacing.sm }}>
-          {subjects.map((s) => {
-            const look = SUBJECT_ICONS[s.id];
+        // No papers for this country: say so, and lead with what works for any syllabus.
+        <Card style={{ gap: Spacing.sm }}>
+          <Text variant="bodyStrong">{t('none.title', { country: regionName(region) })}</Text>
+          <Text variant="small" color={Colors.textSecondary}>
+            {t('none.body')}
+          </Text>
+          <Button title={th('home.askTutor')} icon="chatbubble-ellipses" onPress={() => router.push('/tutor')} />
+          <Button
+            title={tb('title')}
+            variant="secondary"
+            icon="library"
+            onPress={() => router.push('/books' as Href)}
+          />
+        </Card>
+      )}
+
+      {/* Other countries' exams stay open to everyone, one tap away. */}
+      <Pressable
+        onPress={() => setShowOthers((v) => !v)}
+        accessibilityRole="button"
+        accessibilityState={{ expanded: showOthers }}
+        hitSlop={8}
+        style={styles.othersLink}>
+        <Text variant="small" color={Colors.primary} style={{ fontFamily: Fonts.bold }}>
+          {t('otherExams')}
+        </Text>
+        <Ionicons name={showOthers ? 'chevron-up' : 'chevron-down'} size={14} color={Colors.primary} />
+      </Pressable>
+      {showOthers && (
+        <View style={[styles.exams, styles.others]}>
+          {others.map((id) => {
+            const on = id === exam;
             return (
               <Pressable
-                key={s.id}
-                onPress={() => router.push(`/exams/${exam}/${s.id}` as Href)}
-                disabled={!s.papers}
-                accessibilityRole="button"
-                style={({ pressed }) => [pressed && { opacity: 0.85 }]}>
-                <Card style={[styles.subject, !s.papers && { opacity: 0.5 }]}>
-                  <View style={[styles.icon, { backgroundColor: `${look.color}22` }]}>
-                    <Ionicons name={look.icon as keyof typeof Ionicons.glyphMap} size={22} color={look.color} />
-                  </View>
-                  <View style={{ flex: 1, gap: 2 }}>
-                    <Text variant="bodyStrong">{t(`subjects.${s.id}`)}</Text>
-                    <Text variant="small" color={Colors.textSecondary}>
-                      {s.papers ? t('subjectMeta', { count: s.papers, questions: s.questions }) : t('noPapers')}
-                    </Text>
-                    {s.years.length > 0 && (
-                      <Text variant="small" color={Colors.reward}>
-                        {t('years', { years: s.years.join(', ') })}
-                      </Text>
-                    )}
-                  </View>
-                  <Ionicons name="chevron-forward" size={18} color={Colors.textMuted} />
-                </Card>
+                key={id}
+                onPress={() => setExam(id)}
+                accessibilityRole="tab"
+                accessibilityState={{ selected: on }}
+                accessibilityLabel={t(`exams.${id}.full`)}
+                style={[styles.exam, styles.examSmall, on && styles.examOn]}>
+                <Text style={{ fontFamily: Fonts.extrabold, fontSize: 15, color: on ? '#fff' : Colors.text }}>
+                  {t(`exams.${id}.name`)}
+                </Text>
               </Pressable>
             );
           })}
         </View>
       )}
+
+      {exam && (
+        <>
+          <Text variant="small" color={Colors.textSecondary}>
+            {t(`exams.${exam}.full`)} · {t(`exams.${exam}.about`)}
+          </Text>
+          {isPracticeOnly(exam) && (
+            <Text variant="small" color={Colors.textMuted}>
+              {t(`notes.${exam}` as 'notes.sat')}
+            </Text>
+          )}
+
+          <Text variant="label" color={Colors.textSecondary} style={{ marginTop: Spacing.sm }}>
+            {t('pickSubject')}
+          </Text>
+          {error ? (
+            <LoadError text={error} onRetry={retry} />
+          ) : !data ? (
+            <Loading />
+          ) : (
+            <View style={{ gap: Spacing.sm }}>
+              {subjects.map((s) => {
+                const look = SUBJECT_ICONS[s.id];
+                return (
+                  <Pressable
+                    key={s.id}
+                    onPress={() => router.push(`/exams/${exam}/${s.id}` as Href)}
+                    disabled={!s.papers}
+                    accessibilityRole="button"
+                    style={({ pressed }) => [pressed && { opacity: 0.85 }]}>
+                    <Card style={[styles.subject, !s.papers && { opacity: 0.5 }]}>
+                      <View style={[styles.icon, { backgroundColor: `${look.color}22` }]}>
+                        <Ionicons name={look.icon as keyof typeof Ionicons.glyphMap} size={22} color={look.color} />
+                      </View>
+                      <View style={{ flex: 1, gap: 2 }}>
+                        <Text variant="bodyStrong">{t(`subjects.${s.id}`)}</Text>
+                        <Text variant="small" color={Colors.textSecondary}>
+                          {s.papers ? t('subjectMeta', { count: s.papers, questions: s.questions }) : t('noPapers')}
+                        </Text>
+                        {s.years.length > 0 && (
+                          <Text variant="small" color={Colors.reward}>
+                            {t('years', { years: s.years.join(', ') })}
+                          </Text>
+                        )}
+                      </View>
+                      <Ionicons name="chevron-forward" size={18} color={Colors.textMuted} />
+                    </Card>
+                  </Pressable>
+                );
+              })}
+            </View>
+          )}
+        </>
+      )}
+
+      <Pressable
+        onPress={() => router.push('/settings/region' as Href)}
+        accessibilityRole="link"
+        hitSlop={8}
+        style={styles.regionLine}>
+        <Text variant="small" color={Colors.textMuted}>
+          {t('region', { country: regionLabel(region) })}
+        </Text>
+        <Text variant="small" color={Colors.primary} style={{ fontFamily: Fonts.bold }}>
+          {t('change')}
+        </Text>
+      </Pressable>
     </Screen>
   );
 }
@@ -167,7 +278,12 @@ const styles = StyleSheet.create({
     borderColor: Colors.border,
     backgroundColor: Colors.surface,
   },
+  examSmall: { paddingVertical: Spacing.sm, flexGrow: 1, flexShrink: 0, flexBasis: '22%' },
+  // Every other country's exams: more than one row fits on a phone.
+  others: { flexWrap: 'wrap' },
   examOn: { backgroundColor: Colors.primary, borderColor: Colors.primary },
+  othersLink: { flexDirection: 'row', alignItems: 'center', gap: 4, alignSelf: 'flex-start' },
+  regionLine: { flexDirection: 'row', alignItems: 'center', gap: Spacing.sm, flexWrap: 'wrap', marginTop: Spacing.sm },
   carryOn: { borderWidth: 1.5, borderColor: Colors.primary },
   subject: { flexDirection: 'row', alignItems: 'center', gap: Spacing.md },
   icon: { width: 44, height: 44, borderRadius: Radius.md, alignItems: 'center', justifyContent: 'center' },

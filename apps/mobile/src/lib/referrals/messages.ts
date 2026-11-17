@@ -1,4 +1,5 @@
 import i18n from '@/i18n';
+import { currentRegion, DEFAULT_REGION, examNames } from '@/lib/region';
 
 /**
  * Ready-made invite messages. Students can pick a tone; the code and link are always included.
@@ -13,8 +14,17 @@ export const TEMPLATES = [
 export type TemplateId = (typeof TEMPLATES)[number]['id'];
 
 /** The invite message for a template, in the current language. */
-export const inviteMessage = (id: TemplateId, code: string, link: string, credits: number) =>
-  i18n.t(`referrals:templates.${id}.text`, { code, link, credits });
+export function inviteMessage(id: TemplateId, code: string, link: string, credits: number) {
+  // The exam-prep invite names the sender's own exams: WAEC/JAMB in Nigeria, SAT in the US…
+  const region = currentRegion();
+  if (id === 'exams' && region !== DEFAULT_REGION) {
+    const names = examNames(region);
+    return names.length
+      ? i18n.t('referrals:templates.exams.textFor', { exams: names.join('/'), code, link, credits })
+      : i18n.t('referrals:templates.exams.textAny', { code, link, credits });
+  }
+  return i18n.t(`referrals:templates.${id}.text`, { code, link, credits });
+}
 
 /** Title and reward text are `referrals:milestones.<id>.title|reward`. */
 export const MILESTONES = [

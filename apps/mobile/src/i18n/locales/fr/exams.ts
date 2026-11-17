@@ -4,6 +4,8 @@ import type en from '../en/exams';
 
 const exams: Translation<typeof en> = {
   title: 'Annales',
+  /** The same page for SAT and GCSE students: those papers are practice, never "past questions". */
+  practiceTitle: 'Entraînement aux examens',
   eyebrow: 'JAMB · WAEC · NECO',
   offline: 'Les annales ont besoin d’une connexion Internet.',
   loadFailed: 'Impossible de charger les épreuves. Vérifie ta connexion et réessaie.',
@@ -13,11 +15,30 @@ const exams: Translation<typeof en> = {
     title: 'Annales JAMB, WAEC & NECO',
     body: 'Entraîne-toi dans chaque matière au format réel, avec chaque réponse expliquée, et passe des épreuves chronométrées.',
     action: 'Commencer',
+    /** One exam (the WAEC countries outside Nigeria). */
+    titleOne: 'Annales {{exam}}',
+    titlePractice: 'Entraînement {{exams}}',
+    bodyPractice: 'Des QCM par examen et par matière, avec chaque réponse expliquée. Rédigés par l’IA et vérifiés deux fois : ce ne sont pas des annales.',
+    sat: {
+      title: 'Épreuves d’entraînement SAT',
+      body: 'Des QCM qui suivent les sections et le minutage du SAT numérique, avec chaque réponse expliquée. Rédigés par l’IA et vérifiés deux fois : ce ne sont pas des annales.',
+    },
+    gcse: {
+      title: 'Entraînement type GCSE',
+      body: 'Des QCM par thème en Maths, English Language, Biology, Chemistry et Physics, avec chaque réponse expliquée. Rédigés par l’IA et vérifiés deux fois : ce ne sont pas des annales.',
+    },
   },
   exams: {
     jamb: { name: 'JAMB', full: 'JAMB UTME', about: 'Test sur ordinateur · Use of English + trois matières' },
     waec: { name: 'WAEC', full: 'WAEC WASSCE', about: 'Certificat de fin de secondaire · QCM' },
     neco: { name: 'NECO', full: 'NECO SSCE', about: 'Certificat de fin de secondaire · QCM' },
+    sat: { name: 'SAT', full: 'Entraînement au SAT numérique', about: 'Reading and Writing · Math · QCM uniquement' },
+    act: { name: 'ACT', full: 'Entraînement à l’ACT', about: 'English · Math · Reading · Science' },
+    ap: { name: 'AP', full: 'Entraînement aux QCM des examens AP', about: 'Calculus AB · Biology · Chemistry · Physics 1 · US History · English Language' },
+    gcse: { name: 'GCSE', full: 'Entraînement type GCSE', about: 'QCM d’entraînement par thème' },
+    alevel: { name: 'A-level', full: 'Entraînement type A-level', about: 'QCM d’entraînement par thème' },
+    kcse: { name: 'KCSE', full: 'Entraînement type KCSE', about: 'QCM d’entraînement par thème' },
+    nsc: { name: 'Matric', full: 'Entraînement type Matric (NSC)', about: 'QCM d’entraînement par thème' },
   },
   subjects: {
     english: 'Langue anglaise',
@@ -30,7 +51,37 @@ const exams: Translation<typeof en> = {
     literature: 'Littérature anglaise',
     geography: 'Géographie',
     commerce: 'Commerce',
+    'reading-writing': 'Reading and Writing',
+    math: 'Math',
+    maths: 'Maths',
+    'english-language': 'English Language',
+    reading: 'Reading',
+    science: 'Science',
+    'calculus-ab': 'Calculus AB',
+    'physics-1': 'Physics 1',
+    'us-history': 'US History',
+    'physical-sciences': 'Physical Sciences',
+    'life-sciences': 'Life Sciences',
+    accounting: 'Accounting',
   },
+  /** What SAT and GCSE practice is and isn't, shown wherever those papers are listed. */
+  notes: {
+    sat: 'Ces questions d’entraînement sont rédigées par l’IA et vérifiées par une seconde relecture IA : ce ne sont pas d’anciennes épreuves du SAT. Elles suivent les sections et le minutage du SAT numérique, mais uniquement en QCM : la vraie section Math comporte aussi des questions où tu saisis ta propre réponse.',
+    act: 'Ces questions d’entraînement sont rédigées par l’IA et vérifiées par une seconde relecture IA : ce ne sont pas d’anciennes épreuves du ACT. Elles suivent les sections, le nombre de questions et le minutage de l’ACT.',
+    ap: 'Ces questions d’entraînement sont rédigées par l’IA et vérifiées par une seconde relecture IA : ce ne sont pas d’anciennes épreuves du AP. Elles n’entraînent qu’à la partie QCM de chaque examen AP : les vrais examens comportent aussi une partie à réponses rédigées.',
+    gcse: 'Ces questions d’entraînement sont rédigées par l’IA et vérifiées par une seconde relecture IA : ce ne sont pas des annales. Les vraies épreuves du GCSE demandent surtout des réponses rédigées ; utilise donc ces QCM pour réviser chaque thème, pas comme une copie de l’examen.',
+    alevel: 'Ces questions d’entraînement sont rédigées par l’IA et vérifiées par une seconde relecture IA : ce ne sont pas des annales. Les vraies épreuves du A-level demandent surtout des réponses rédigées ; utilise donc ces QCM pour réviser chaque thème, pas comme une copie de l’examen.',
+    kcse: 'Ces questions d’entraînement sont rédigées par l’IA et vérifiées par une seconde relecture IA : ce ne sont pas des annales. Les vraies épreuves du KCSE demandent surtout des réponses rédigées ; utilise donc ces QCM pour réviser chaque thème, pas comme une copie de l’examen.',
+    nsc: 'Ces questions d’entraînement sont rédigées par l’IA et vérifiées par une seconde relecture IA : ce ne sont pas des annales. Les vraies épreuves du Matric (NSC) demandent surtout des réponses rédigées ; utilise donc ces QCM pour réviser chaque thème, pas comme une copie de l’examen.',
+  },
+  /** A study region we have no papers for. */
+  none: {
+    title: 'Pas d’épreuves d’examen pour {{country}}',
+    body: 'Ton tuteur IA, tes manuels et les cours fonctionnent avec n’importe quel programme. Tu peux quand même t’entraîner avec les épreuves d’autres pays ci-dessous.',
+  },
+  otherExams: 'Autres examens',
+  region: 'Pays d’études : {{country}}',
+  change: 'Changer',
   pickExam: 'Choisis ton examen',
   carryOn: 'Reprends là où tu t’es arrêté',
   pickSubject: 'Choisis une matière',
@@ -60,6 +111,8 @@ const exams: Translation<typeof en> = {
     study: { title: 'Réviser', body: 'Vois chaque question avec sa réponse et son explication.' },
     practice: { title: 'S’entraîner', body: 'Réponds à ton rythme et vois si tu as juste après chaque question.' },
     timed: { title: 'Examen chronométré', body: 'Comme le vrai examen : {{minutes}} minutes, résultats à la fin.' },
+    /** GCSE practice isn't in the exam's format, so its timed mode doesn't say "like the real exam". */
+    timedQuiz: { title: 'Quiz chronométré', body: 'Contre la montre : {{minutes}} minutes, résultats à la fin.' },
     history: 'TES SCORES',
     historyRow: '{{score}}/{{total}} · {{mode}} · {{date}}',
     modeName: { practice: 'Entraînement', timed: 'Chronométré' },

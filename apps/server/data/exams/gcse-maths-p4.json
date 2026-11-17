@@ -1,0 +1,401 @@
+{
+ "id": "gcse-maths-p4",
+ "exam": "gcse",
+ "subject": "maths",
+ "year": null,
+ "number": 4,
+ "source": "ai",
+ "minutes": 35,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Graphs of functions",
+   "q": "The curve y = (x − 3)² + 4 has a minimum point. What are the coordinates of this minimum point?",
+   "options": [
+    "(4, 3)",
+    "(3, 4)",
+    "(−3, 4)",
+    "(3, −4)"
+   ],
+   "answer": 1,
+   "explanation": "The completed square form shows that (x − 3)² is never negative, so its least value is 0. This occurs when x = 3, and then y = 4, giving the minimum point (3, 4)."
+  },
+  {
+   "n": 2,
+   "topic": "Graphs of functions",
+   "q": "The graph of y = x² − 2x − 15 crosses the x-axis at two points. What is the distance between these two x-intercepts?",
+   "options": [
+    "10",
+    "2",
+    "8",
+    "15"
+   ],
+   "answer": 2,
+   "explanation": "Factorising gives y = (x − 5)(x + 3), so the x-intercepts are at x = 5 and x = −3. The distance between them is 5 − (−3) = 8."
+  },
+  {
+   "n": 3,
+   "topic": "Graphs of functions",
+   "q": "The graph of y = f(x) has a minimum point at (2, −3). What are the coordinates of the minimum point of the graph y = f(x + 4) − 1?",
+   "options": [
+    "(−2, −2)",
+    "(6, −4)",
+    "(−2, −4)",
+    "(6, −2)"
+   ],
+   "answer": 2,
+   "explanation": "The transformation y = f(x + 4) shifts the graph 4 units to the left, so the x-coordinate changes from 2 to −2. The −1 outside shifts the graph 1 unit down, so the y-coordinate changes from −3 to −4."
+  },
+  {
+   "n": 4,
+   "topic": "Simultaneous equations",
+   "q": "Solve the simultaneous equations 4x + y = 17 and 3x − y = 4.",
+   "options": [
+    "x = 3, y = 4",
+    "x = 2, y = 9",
+    "x = 5, y = 3",
+    "x = 3, y = 5"
+   ],
+   "answer": 3,
+   "explanation": "Adding the two equations eliminates y and gives 7x = 21, so x = 3. Substituting into 4x + y = 17 gives 12 + y = 17, so y = 5."
+  },
+  {
+   "n": 5,
+   "topic": "Simultaneous equations",
+   "q": "Solve the simultaneous equations y = x² − 2 and y = x + 4.",
+   "options": [
+    "(−2, 2) and (3, −7)",
+    "(−2, 2) and (3, 7)",
+    "(−3, 1) and (2, 6)",
+    "(−2, 6) and (3, 1)"
+   ],
+   "answer": 1,
+   "explanation": "Substituting y = x + 4 into y = x² − 2 gives x + 4 = x² − 2, so x² − x − 6 = 0. This factorises as (x − 3)(x + 2) = 0, giving x = 3 or x = −2; using y = x + 4 gives the corresponding pairs (3, 7) and (−2, 2)."
+  },
+  {
+   "n": 6,
+   "topic": "Indices, standard form and surds",
+   "q": "Write 0.00406 in standard form.",
+   "options": [
+    "4.06 × 10⁻²",
+    "4.06 × 10⁻³",
+    "4.06 × 10³",
+    "4.06 × 10⁻⁴"
+   ],
+   "answer": 1,
+   "explanation": "Moving the decimal point in 0.00406 three places to the right gives 4.06, so the power of 10 is −3. Therefore 0.00406 = 4.06 × 10⁻³."
+  },
+  {
+   "n": 7,
+   "topic": "Indices, standard form and surds",
+   "q": "Simplify (3a⁴)² × 2a⁻¹, giving your answer with positive indices only.",
+   "options": [
+    "18a⁷",
+    "18a⁸",
+    "6a⁷",
+    "9a⁷"
+   ],
+   "answer": 0,
+   "explanation": "First square the bracket: (3a⁴)² = 9a⁸. Multiplying by 2a⁻¹ gives (9 × 2)a^(8 − 1) = 18a⁷."
+  },
+  {
+   "n": 8,
+   "topic": "Indices, standard form and surds",
+   "q": "Expand and simplify (2 + √3)(5 − √3). Give your answer in simplest surd form.",
+   "options": [
+    "7 + 7√3",
+    "7 + 3√3",
+    "13 + 3√3",
+    "13 − 3√3"
+   ],
+   "answer": 1,
+   "explanation": "Expanding gives 10 − 2√3 + 5√3 − 3. The surd terms combine to 3√3, and the numbers combine to 7, so the answer is 7 + 3√3."
+  },
+  {
+   "n": 9,
+   "topic": "Linear equations and inequalities",
+   "q": "Solve the inequality 4(2x − 5) < 3x + 10.",
+   "options": [
+    "x < 6",
+    "x > 6",
+    "x < −2",
+    "x > −2"
+   ],
+   "answer": 0,
+   "explanation": "Expanding the left side gives 8x − 20 < 3x + 10. Subtracting 3x and adding 20 gives 5x < 30, so x < 6; dividing by the positive number 5 does not reverse the inequality."
+  },
+  {
+   "n": 10,
+   "topic": "Linear equations and inequalities",
+   "q": "Solve 3x/4 + 2 = x/2 + 5.",
+   "options": [
+    "x = 18",
+    "x = 12",
+    "x = 3",
+    "x = −12"
+   ],
+   "answer": 1,
+   "explanation": "Multiplying every term by 4 gives 3x + 8 = 2x + 20. Subtracting 2x gives x + 8 = 20, so x = 12."
+  },
+  {
+   "n": 11,
+   "topic": "Pythagoras’ theorem and trigonometry",
+   "q": "A right-angled triangle has two shorter sides of length 9 cm and 12 cm. Work out the length of the hypotenuse.",
+   "options": [
+    "3 cm",
+    "21 cm",
+    "√63 cm",
+    "15 cm"
+   ],
+   "answer": 3,
+   "explanation": "Using Pythagoras’ theorem: hypotenuse² = 9² + 12² = 81 + 144 = 225, so the hypotenuse is √225 = 15 cm. Adding the two shorter sides gives 21 cm, and subtracting them gives 3 cm; √63 cm comes from incorrectly subtracting the squares instead of adding them."
+  },
+  {
+   "n": 12,
+   "topic": "Pythagoras’ theorem and trigonometry",
+   "q": "In a right-angled triangle, the hypotenuse is 14 cm and one acute angle is 30°. The side opposite the 30° angle is required. What is its length?",
+   "options": [
+    "7√3 cm",
+    "14√3 cm",
+    "7 cm",
+    "28 cm"
+   ],
+   "answer": 2,
+   "explanation": "The side opposite the 30° angle is hypotenuse × sin 30° = 14 × 0.5 = 7 cm. Using cosine instead would give the adjacent side, 7√3 cm, rather than the opposite side."
+  },
+  {
+   "n": 13,
+   "topic": "Pythagoras’ theorem and trigonometry",
+   "q": "A right-angled triangle has a hypotenuse of 10 m. The side adjacent to an angle θ is 5√3 m. Work out the size of θ.",
+   "options": [
+    "30°",
+    "45°",
+    "90°",
+    "60°"
+   ],
+   "answer": 0,
+   "explanation": "cos θ = adjacent ÷ hypotenuse = 5√3 ÷ 10 = √3/2, and cos 30° = √3/2. An angle of 60° would have an adjacent side of 5 m, not 5√3 m."
+  },
+  {
+   "n": 14,
+   "topic": "Angles and polygons",
+   "q": "In a triangle, two of the interior angles are 38° and 74°. What is the size of the exterior angle at the third vertex?",
+   "options": [
+    "142°",
+    "68°",
+    "112°",
+    "106°"
+   ],
+   "answer": 2,
+   "explanation": "The third interior angle is 180° − 38° − 74° = 68°. The exterior angle is 180° − 68° = 112°, which also equals the sum of the two opposite interior angles, 38° + 74° = 112°."
+  },
+  {
+   "n": 15,
+   "topic": "Statistics",
+   "q": "A survey of 20 households in Bradford recorded the number of pets per household. The results are shown in this table:\nNumber of pets: 0 | 1 | 2 | 3\nNumber of households: 4 | 7 | 5 | 4\nWork out the mean number of pets per household.",
+   "options": [
+    "5",
+    "1.5",
+    "7.25",
+    "1.45"
+   ],
+   "answer": 3,
+   "explanation": "The total number of pets is 0 × 4 + 1 × 7 + 2 × 5 + 3 × 4 = 7 + 10 + 12 = 29. The mean is 29 ÷ 20 = 1.45 pets per household. The value 1.5 comes from averaging 0, 1, 2 and 3 without using the frequencies, and 7.25 comes from dividing the total by the four pet-count categories."
+  },
+  {
+   "n": 16,
+   "topic": "Statistics",
+   "q": "Maya, Oliver, Sana, Rhys, Zara, Kofi, Erin, Tomas and Leila each recorded their travel time, in minutes, to a college in Cardiff. Their times are: 15, 20, 20, 25, 30, 35, 35, 40, 45. Work out the median and the range.",
+   "options": [
+    "Median 30 minutes, range 45 minutes",
+    "Median 30 minutes, range 30 minutes",
+    "Median 25 minutes, range 30 minutes",
+    "Median 20 minutes, range 30 minutes"
+   ],
+   "answer": 1,
+   "explanation": "There are nine values, so the median is the fifth value, 30 minutes. The range is the largest time minus the smallest time: 45 − 15 = 30 minutes."
+  },
+  {
+   "n": 17,
+   "topic": "Transformations and vectors",
+   "q": "A point P has coordinates (4, −3). It is rotated 180° about the origin. What are the coordinates of the image of P?",
+   "options": [
+    "(3, −4)",
+    "(−4, 3)",
+    "(4, 3)",
+    "(−4, −3)"
+   ],
+   "answer": 1,
+   "explanation": "A 180° rotation about the origin maps (x, y) to (−x, −y). So (4, −3) maps to (−4, 3); changing only one sign would describe a reflection in an axis, not a half-turn."
+  },
+  {
+   "n": 18,
+   "topic": "Transformations and vectors",
+   "q": "The vector a is 3 units right and 2 units down. The vector b is 1 unit left and 5 units up. Work out the vector 2a − b.",
+   "options": [
+    "5 units right and 1 unit up",
+    "7 units right and 9 units down",
+    "5 units right and 9 units down",
+    "7 units right and 1 unit up"
+   ],
+   "answer": 1,
+   "explanation": "Using coordinates, a = (3, −2) and b = (−1, 5). Then 2a − b = 2(3, −2) − (−1, 5) = (6, −4) + (1, −5) = (7, −9), which is 7 units right and 9 units down. The result 5 units right and 1 unit up comes from calculating 2a + b instead of 2a − b."
+  },
+  {
+   "n": 19,
+   "topic": "Ratio and proportion",
+   "q": "A lemon squash recipe mixes concentrate and water in the ratio 3 : 8. Amara uses 240 ml of concentrate. How many millilitres of water should she use?",
+   "options": [
+    "90 ml",
+    "640 ml",
+    "1920 ml",
+    "80 ml"
+   ],
+   "answer": 1,
+   "explanation": "The concentrate is 3 parts, so one part is 240 ÷ 3 = 80 ml. Water is 8 parts, which is 8 × 80 = 640 ml. The value 90 ml comes from dividing by 8 and multiplying by 3 instead of using the correct order."
+  },
+  {
+   "n": 20,
+   "topic": "Ratio and proportion",
+   "q": "£540 is shared between Priya and Tom in the ratio 4 : 5. How much more does Tom receive than Priya?",
+   "options": [
+    "£300",
+    "£240",
+    "£60",
+    "£120"
+   ],
+   "answer": 2,
+   "explanation": "There are 4 + 5 = 9 parts in total, so one part is £540 ÷ 9 = £60. Tom receives 5 parts and Priya receives 4 parts, so the difference is 1 part, which is £60. The value £300 is Tom’s full share, not the difference."
+  },
+  {
+   "n": 21,
+   "topic": "Ratio and proportion",
+   "q": "At a builders' merchant in Cardiff, a 5 m length of copper pipe has mass 12 kg. Another length of the same pipe has length 8 m. The mass is directly proportional to length. Work out the mass of the 8 m length.",
+   "options": [
+    "60 kg",
+    "20 kg",
+    "7.5 kg",
+    "19.2 kg"
+   ],
+   "answer": 3,
+   "explanation": "A 5 m length has mass 12 kg, so 1 m has mass 12 ÷ 5 = 2.4 kg. Therefore 8 m has mass 8 × 2.4 = 19.2 kg. The value 7.5 kg comes from using inverse proportion, but the mass increases as the length increases."
+  },
+  {
+   "n": 22,
+   "topic": "Algebraic expressions and formulae",
+   "q": "Expand and simplify (2x − 3)(x + 5).",
+   "options": [
+    "2x² + 7x − 15",
+    "2x² − 7x − 15",
+    "2x² + 13x − 15",
+    "2x² + 7x + 15"
+   ],
+   "answer": 0,
+   "explanation": "Multiply each term: 2x × x = 2x², 2x × 5 = 10x, −3 × x = −3x, and −3 × 5 = −15. Combining 10x and −3x gives 7x, so the result is 2x² + 7x − 15. The expression with 13x comes from adding 10x and 3x instead of subtracting."
+  },
+  {
+   "n": 23,
+   "topic": "Algebraic expressions and formulae",
+   "q": "Make x the subject of the formula y = (3x + 2) ÷ 5.",
+   "options": [
+    "x = (5y − 2) × 3",
+    "x = (5y + 2) ÷ 3",
+    "x = (5y − 2) ÷ 3",
+    "x = (y − 2) ÷ 3"
+   ],
+   "answer": 2,
+   "explanation": "Multiply both sides by 5 to get 5y = 3x + 2. Subtract 2 to get 5y − 2 = 3x, then divide by 3, giving x = (5y − 2) ÷ 3. The expression (5y + 2) ÷ 3 has the sign wrong after moving the 2."
+  },
+  {
+   "n": 24,
+   "topic": "Algebraic expressions and formulae",
+   "q": "Work out the value of a² − 2ab when a = −3 and b = 4.",
+   "options": [
+    "−33",
+    "33",
+    "−15",
+    "15"
+   ],
+   "answer": 1,
+   "explanation": "Substitute the values: (−3)² − 2 × (−3) × 4 = 9 − (−24) = 9 + 24 = 33. The value −15 comes from treating 2 × (−3) × 4 as 24 and subtracting it, but the product is negative, so subtracting it gives a positive addition."
+  },
+  {
+   "n": 25,
+   "topic": "Sequences",
+   "q": "The first four terms of a sequence are 4, 13, 22, 31. The sequence continues with the same rule. Which expression gives the nth term?",
+   "options": [
+    "9n + 4",
+    "n + 9",
+    "9n − 4",
+    "9n − 5"
+   ],
+   "answer": 3,
+   "explanation": "The terms increase by 9 each time, so the expression contains 9n. To make the first term 4, use 9 × 1 − 5 = 4, so the nth term is 9n − 5. The expression 9n + 4 uses the first term as the constant instead of adjusting for the first term."
+  },
+  {
+   "n": 26,
+   "topic": "Circle theorems",
+   "q": "A circle has centre O and radius 5 cm. A point P is outside the circle. PT is a tangent to the circle at T. OP = 13 cm. Work out the length PT.",
+   "options": [
+    "12 cm",
+    "√194 cm",
+    "8 cm",
+    "18 cm"
+   ],
+   "answer": 0,
+   "explanation": "The tangent is perpendicular to the radius at the point of contact, so triangle OTP is right-angled at T. Using Pythagoras: PT² = 13² − 5² = 169 − 25 = 144, so PT = 12 cm. The value 8 cm subtracts 13 and 5 instead of using Pythagoras."
+  },
+  {
+   "n": 27,
+   "topic": "Circle theorems",
+   "q": "Points P, Q, R and S lie on a circle in that order. Angle PQR = 104°. Work out angle PSR.",
+   "options": [
+    "52°",
+    "128°",
+    "76°",
+    "104°"
+   ],
+   "answer": 2,
+   "explanation": "In a cyclic quadrilateral, opposite angles add to 180°. Angles PQR and PSR are opposite angles, so angle PSR = 180° − 104° = 76°. The value 104° wrongly assumes the two angles are equal rather than supplementary."
+  },
+  {
+   "n": 28,
+   "topic": "Quadratic equations",
+   "q": "Solve 3x² − 12x = 0. Give all the values of x.",
+   "options": [
+    "x = 0 or x = 4",
+    "x = 4",
+    "x = 0 or x = −4",
+    "x = −4"
+   ],
+   "answer": 0,
+   "explanation": "Factorise: 3x² − 12x = 3x(x − 4). Setting the factors equal to zero gives x = 0 or x = 4. Answering x = 4 alone loses the root from setting the factor 3x equal to zero."
+  },
+  {
+   "n": 29,
+   "topic": "Quadratic equations",
+   "q": "The equation x² − 8x + 5 = 0 can be written as (x − p)² = q. Work out p and q.",
+   "options": [
+    "p = −4 and q = 21",
+    "p = 4 and q = 21",
+    "p = 4 and q = 11",
+    "p = −4 and q = 11"
+   ],
+   "answer": 2,
+   "explanation": "Completing the square gives x² − 8x + 5 = (x − 4)² − 16 + 5 = (x − 4)² − 11. So the equation becomes (x − 4)² = 11, meaning p = 4 and q = 11. The value q = 21 comes from adding 16 to 5 instead of subtracting it."
+  },
+  {
+   "n": 30,
+   "topic": "Quadratic equations",
+   "q": "What is the minimum value of y for the quadratic y = 2x² + 4x + 7?",
+   "options": [
+    "3",
+    "−1",
+    "7",
+    "5"
+   ],
+   "answer": 3,
+   "explanation": "Complete the square: 2x² + 4x + 7 = 2(x + 1)² + 5. Since 2(x + 1)² is always at least zero, the minimum value of y is 5 when x = −1. Choosing 7 ignores the effect of the x² and x terms."
+  }
+ ]
+}

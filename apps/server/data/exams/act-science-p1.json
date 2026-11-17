@@ -1,0 +1,554 @@
+{
+ "id": "act-science-p1",
+ "exam": "act",
+ "subject": "science",
+ "year": null,
+ "number": 1,
+ "source": "ai",
+ "minutes": 40,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Data representation: reading tables and graphs",
+   "passage": "Maya Rodriguez and Ethan Chen placed 20 identical 250-mL beakers on a classroom counter. Each beaker contained 200 mL of distilled water at 22.0°C. Five beakers were wrapped in clear film, five in red film, five in blue film, and five in green film. Each beaker was covered with a lid that held a thermometer. All beakers were spaced evenly under one 40-watt LED lamp. Starting at the same time, the students recorded the water temperature every 10 min for 60 min. Table 1 shows the average temperature increase after 60 min and the average time for the water to increase by 1.0°C for each film color. The students hypothesized that a film's effect on water temperature depends mainly on how much light passes through the film.\n\nFilm color | Average light intensity at water surface (lux) | Average temperature increase after 60 min (°C) | Average time to increase 1.0°C (min)\nClear | 820 | 3.6 | 18\nRed | 610 | 2.8 | 23\nBlue | 560 | 2.5 | 26\nGreen | 430 | 2.0 | 31",
+   "q": "Based on Table 1, which film color produced the greatest average increase in water temperature after 60 min?",
+   "options": [
+    "Blue film",
+    "Red film",
+    "Green film",
+    "Clear film"
+   ],
+   "answer": 3,
+   "explanation": "Table 1 shows an average increase of 3.6°C for the clear film, compared with 2.8°C for red, 2.5°C for blue, and 2.0°C for green. The clear film therefore produced the greatest average increase after 60 min."
+  },
+  {
+   "n": 2,
+   "topic": "Data representation: trends, interpolation and extrapolation",
+   "passage": "Maya Rodriguez and Ethan Chen placed 20 identical 250-mL beakers on a classroom counter. Each beaker contained 200 mL of distilled water at 22.0°C. Five beakers were wrapped in clear film, five in red film, five in blue film, and five in green film. Each beaker was covered with a lid that held a thermometer. All beakers were spaced evenly under one 40-watt LED lamp. Starting at the same time, the students recorded the water temperature every 10 min for 60 min. Table 1 shows the average temperature increase after 60 min and the average time for the water to increase by 1.0°C for each film color. The students hypothesized that a film's effect on water temperature depends mainly on how much light passes through the film.\n\nFilm color | Average light intensity at water surface (lux) | Average temperature increase after 60 min (°C) | Average time to increase 1.0°C (min)\nClear | 820 | 3.6 | 18\nRed | 610 | 2.8 | 23\nBlue | 560 | 2.5 | 26\nGreen | 430 | 2.0 | 31",
+   "q": "The average light intensity for the clear film is 820 lux, and that for the red film is 610 lux. If the trend in Table 1 is used to interpolate, a film that transmitted 700 lux would most likely produce an average temperature increase closest to which value?",
+   "options": [
+    "2.6°C",
+    "3.4°C",
+    "3.1°C",
+    "1.9°C"
+   ],
+   "answer": 2,
+   "explanation": "The 700-lux value lies between the red and clear films, so linear interpolation gives 2.8°C + [(700 − 610)/(820 − 610)](3.6°C − 2.8°C) = 2.8°C + (90/210)(0.8°C) ≈ 3.14°C. This is closest to 3.1°C. The value 2.6°C would be too low for a light intensity just below that of the red film."
+  },
+  {
+   "n": 3,
+   "topic": "Research summaries: experimental design",
+   "passage": "Maya Rodriguez and Ethan Chen placed 20 identical 250-mL beakers on a classroom counter. Each beaker contained 200 mL of distilled water at 22.0°C. Five beakers were wrapped in clear film, five in red film, five in blue film, and five in green film. Each beaker was covered with a lid that held a thermometer. All beakers were spaced evenly under one 40-watt LED lamp. Starting at the same time, the students recorded the water temperature every 10 min for 60 min. Table 1 shows the average temperature increase after 60 min and the average time for the water to increase by 1.0°C for each film color. The students hypothesized that a film's effect on water temperature depends mainly on how much light passes through the film.\n\nFilm color | Average light intensity at water surface (lux) | Average temperature increase after 60 min (°C) | Average time to increase 1.0°C (min)\nClear | 820 | 3.6 | 18\nRed | 610 | 2.8 | 23\nBlue | 560 | 2.5 | 26\nGreen | 430 | 2.0 | 31",
+   "q": "Which change to the experimental design would best reduce the effect of uneven light intensity at different positions on the counter?",
+   "options": [
+    "Record temperature only at the end of 60 min.",
+    "Use a separate lamp for each film color.",
+    "Repeat the trials with beakers of each film color placed in several positions under the lamp.",
+    "Use 400 mL of water in each beaker instead of 200 mL."
+   ],
+   "answer": 2,
+   "explanation": "Moving beakers of each color to different positions across repeated trials averages out differences in lamp intensity across the counter, so position is less likely to explain the results. Changing the water volume or using separate lamps would introduce additional variables, and recording only at 60 min would not fix the position problem."
+  },
+  {
+   "n": 4,
+   "topic": "Scientific models, hypotheses and predictions",
+   "passage": "Maya Rodriguez and Ethan Chen placed 20 identical 250-mL beakers on a classroom counter. Each beaker contained 200 mL of distilled water at 22.0°C. Five beakers were wrapped in clear film, five in red film, five in blue film, and five in green film. Each beaker was covered with a lid that held a thermometer. All beakers were spaced evenly under one 40-watt LED lamp. Starting at the same time, the students recorded the water temperature every 10 min for 60 min. Table 1 shows the average temperature increase after 60 min and the average time for the water to increase by 1.0°C for each film color. The students hypothesized that a film's effect on water temperature depends mainly on how much light passes through the film.\n\nFilm color | Average light intensity at water surface (lux) | Average temperature increase after 60 min (°C) | Average time to increase 1.0°C (min)\nClear | 820 | 3.6 | 18\nRed | 610 | 2.8 | 23\nBlue | 560 | 2.5 | 26\nGreen | 430 | 2.0 | 31",
+   "q": "A student claims that the temperature increase is directly proportional to the light intensity. Using the clear-film data as the reference, what increase would this claim predict for the green film?",
+   "options": [
+    "2.0°C",
+    "1.9°C",
+    "2.5°C",
+    "0.9°C"
+   ],
+   "answer": 1,
+   "explanation": "The proportional model gives 3.6°C × (430 lux ÷ 820 lux) = 1.89°C, which rounds to 1.9°C. The observed green-film increase of 2.0°C is close but is a measurement, not the prediction calculated from the proportional claim."
+  },
+  {
+   "n": 5,
+   "topic": "Data representation: trends, interpolation and extrapolation",
+   "q": "A student measured the mass of a candle after it burned for different amounts of time.\nTime (min) | Mass (g)\n0 | 120.0\n10 | 114.5\n20 | 109.0\n30 | 103.5\nIf the mass continues to decrease at the same average rate, what is the best estimate of the candle's mass at 45 min?",
+   "options": [
+    "92.5 g",
+    "95.3 g",
+    "101.3 g",
+    "98.0 g"
+   ],
+   "answer": 1,
+   "explanation": "The candle loses 5.5 g every 10 min, or 0.55 g/min, because 120.0 g − 103.5 g = 16.5 g over 30 min. At 45 min the predicted mass is 120.0 g − 0.55 g/min × 45 min = 95.25 g, which rounds to 95.3 g."
+  },
+  {
+   "n": 6,
+   "topic": "Data representation: reading tables and graphs",
+   "q": "A student titrated 25.0 mL samples of 0.10 M HCl with NaOH solution. The buret readings are shown.\nTrial | Initial reading (mL) | Final reading (mL)\n1 | 0.50 | 12.80\n2 | 1.20 | 13.90\n3 | 2.05 | 14.65\nWhich trial delivered the largest volume of NaOH solution, and what was that volume?",
+   "options": [
+    "Trial 1, 12.30 mL",
+    "Trial 1, 12.80 mL",
+    "Trial 2, 12.70 mL",
+    "Trial 3, 12.60 mL"
+   ],
+   "answer": 2,
+   "explanation": "The delivered volume is final reading minus initial reading. Trial 2 delivered 13.90 mL − 1.20 mL = 12.70 mL, more than Trial 3's 12.60 mL and Trial 1's 12.30 mL. The 12.80 mL value is Trial 1's final reading, not a delivered volume."
+  },
+  {
+   "n": 7,
+   "topic": "Research summaries: experimental design",
+   "q": "Students want to test the hypothesis that adding table salt increases the boiling point of water. They have a hot plate, thermometer, balance, salt, and distilled water. Which procedure would best test the hypothesis?",
+   "options": [
+    "Heat 200 mL of water, add salt while it is boiling, and record the highest temperature reached after 10 min.",
+    "Heat 200 mL of water at one setting, then repeat with 400 mL of water with added salt at the same setting.",
+    "Use a different hot plate for each salt amount and record the temperature when the first bubble appears.",
+    "Heat separate 200 mL samples with 0 g, 5 g, and 10 g of salt at the same hot-plate setting, and record the steady boiling temperature of each."
+   ],
+   "answer": 3,
+   "explanation": "The best test varies the amount of salt while keeping the water volume and heating setting the same, then measures the steady boiling temperature. Changing the water volume, using different hot plates, or timing how long water boils away would introduce other variables or fail to measure the boiling point."
+  },
+  {
+   "n": 8,
+   "topic": "Scientific models, hypotheses and predictions",
+   "q": "A model predicts the number of bacteria in a culture by N = 100(1.10)^t, where t is time in hours. According to the model, how many bacteria are predicted after 2 h?",
+   "options": [
+    "110",
+    "121",
+    "120",
+    "125"
+   ],
+   "answer": 1,
+   "explanation": "Substitute t = 2 into N = 100(1.10)^t: N = 100 × 1.10² = 100 × 1.21 = 121 bacteria. The value 120 results from adding 10 bacteria per hour to the original 100, which ignores compounding."
+  },
+  {
+   "n": 9,
+   "topic": "Data representation: reading tables and graphs",
+   "q": "Four metal samples were placed into separate identical cups containing 200 g of water at 20.0°C. After 5 min, the final water temperatures were recorded.\nSample | Final water temperature (°C)\nA | 24.5\nB | 23.1\nC | 25.8\nD | 22.4\nAssuming no heat is lost to the surroundings, which sample transferred the most thermal energy to the water?",
+   "options": [
+    "Sample A",
+    "Sample B",
+    "Sample C",
+    "Sample D"
+   ],
+   "answer": 2,
+   "explanation": "Because each water sample has the same mass and starts at 20.0°C, the largest temperature rise means the most thermal energy was transferred to the water. Sample C raised the water temperature by 25.8°C − 20.0°C = 5.8°C, which is greater than the rises for samples A, B, and D."
+  },
+  {
+   "n": 10,
+   "topic": "Data representation: trends, interpolation and extrapolation",
+   "q": "A student records the mass of a chemical remaining during evaporation.\nTime (min) | Mass (g)\n0 | 50.0\n4 | 42.0\n8 | 34.0\nIf the mass continues to decrease at the same linear rate, what is the best prediction for the mass at 12 min?",
+   "options": [
+    "28.0 g",
+    "30.0 g",
+    "26.0 g",
+    "24.0 g"
+   ],
+   "answer": 2,
+   "explanation": "The mass decreases by 8.0 g every 4 min, a rate of 2.0 g/min. Continuing this linear trend for 4 more min from 34.0 g at 8 min gives 34.0 g − 8.0 g = 26.0 g at 12 min."
+  },
+  {
+   "n": 11,
+   "topic": "Data representation: reading tables and graphs",
+   "passage": "Students in a chemistry laboratory dissolved different masses of sodium chloride in 500 g of water at 20.0°C. Each sample was heated on the same hot plate setting. The boiling point was recorded when steady boiling began, and two times were measured: the time to reach 100.0°C and the total time to begin boiling. The table shows the results.\n\nTrial | NaCl added (g) | Boiling point (°C) | Time to reach 100.0°C (s) | Total heating time to boil (s)\n1 | 0 | 100.0 | 240 | 240\n2 | 10 | 100.4 | 242 | 253\n3 | 20 | 100.7 | 245 | 267\n4 | 30 | 101.1 | 249 | 283\n5 | 40 | 101.4 | 254 | 301\n\nDr. Okafor claims that the increased total heating time is chiefly caused by the rising boiling point: more salt means the water must reach a higher final temperature. Dr. Patel claims that dissolved salt slows heat transfer through the water, causing longer heating times even before the sample reaches 100.0°C. Both note that the hot plate setting and starting water temperature were identical.",
+   "q": "According to the table, from Trial 1 to Trial 5, the boiling point of the saltwater increases by approximately:",
+   "options": [
+    "14.0°C",
+    "1.4°C",
+    "40.0°C",
+    "0.4°C"
+   ],
+   "answer": 1,
+   "explanation": "Trial 5 has a boiling point of 101.4°C and Trial 1 has 100.0°C, so the increase is 101.4 − 100.0 = 1.4°C. The value 0.4°C is only the increase from one 10 g step, not the full 0 g to 40 g change."
+  },
+  {
+   "n": 12,
+   "topic": "Data representation: trends, interpolation and extrapolation",
+   "passage": "Students in a chemistry laboratory dissolved different masses of sodium chloride in 500 g of water at 20.0°C. Each sample was heated on the same hot plate setting. The boiling point was recorded when steady boiling began, and two times were measured: the time to reach 100.0°C and the total time to begin boiling. The table shows the results.\n\nTrial | NaCl added (g) | Boiling point (°C) | Time to reach 100.0°C (s) | Total heating time to boil (s)\n1 | 0 | 100.0 | 240 | 240\n2 | 10 | 100.4 | 242 | 253\n3 | 20 | 100.7 | 245 | 267\n4 | 30 | 101.1 | 249 | 283\n5 | 40 | 101.4 | 254 | 301\n\nDr. Okafor claims that the increased total heating time is chiefly caused by the rising boiling point: more salt means the water must reach a higher final temperature. Dr. Patel claims that dissolved salt slows heat transfer through the water, causing longer heating times even before the sample reaches 100.0°C. Both note that the hot plate setting and starting water temperature were identical.",
+   "q": "Using linear interpolation between the 20 g and 30 g trials, what total heating time would be predicted for a trial with 25 g of NaCl added?",
+   "options": [
+    "275 s",
+    "274 s",
+    "283 s",
+    "267 s"
+   ],
+   "answer": 0,
+   "explanation": "Linear interpolation uses the midpoint because 25 g is exactly halfway between 20 g and 30 g. Thus (267 s + 283 s) ÷ 2 = 275 s."
+  },
+  {
+   "n": 13,
+   "topic": "Research summaries: interpreting results",
+   "passage": "Students in a chemistry laboratory dissolved different masses of sodium chloride in 500 g of water at 20.0°C. Each sample was heated on the same hot plate setting. The boiling point was recorded when steady boiling began, and two times were measured: the time to reach 100.0°C and the total time to begin boiling. The table shows the results.\n\nTrial | NaCl added (g) | Boiling point (°C) | Time to reach 100.0°C (s) | Total heating time to boil (s)\n1 | 0 | 100.0 | 240 | 240\n2 | 10 | 100.4 | 242 | 253\n3 | 20 | 100.7 | 245 | 267\n4 | 30 | 101.1 | 249 | 283\n5 | 40 | 101.4 | 254 | 301\n\nDr. Okafor claims that the increased total heating time is chiefly caused by the rising boiling point: more salt means the water must reach a higher final temperature. Dr. Patel claims that dissolved salt slows heat transfer through the water, causing longer heating times even before the sample reaches 100.0°C. Both note that the hot plate setting and starting water temperature were identical.",
+   "q": "Which observation most directly supports Dr. Patel's claim that dissolved salt slows heat transfer before the water reaches 100.0°C?",
+   "options": [
+    "The boiling point increases from 100.0°C to 101.4°C as NaCl added increases.",
+    "Trial 1 reaches boiling in the shortest total time.",
+    "The time to reach 100.0°C increases from 240 s to 254 s as NaCl added increases from 0 g to 40 g.",
+    "The total heating time increases from 240 s to 301 s as NaCl added increases."
+   ],
+   "answer": 2,
+   "explanation": "Dr. Patel's claim concerns slower heating before boiling, so the time needed to reach the same 100.0°C mark is the most direct evidence. That time rises from 240 s without added salt to 254 s with 40 g of added salt."
+  },
+  {
+   "n": 14,
+   "topic": "Conflicting viewpoints",
+   "passage": "Students in a chemistry laboratory dissolved different masses of sodium chloride in 500 g of water at 20.0°C. Each sample was heated on the same hot plate setting. The boiling point was recorded when steady boiling began, and two times were measured: the time to reach 100.0°C and the total time to begin boiling. The table shows the results.\n\nTrial | NaCl added (g) | Boiling point (°C) | Time to reach 100.0°C (s) | Total heating time to boil (s)\n1 | 0 | 100.0 | 240 | 240\n2 | 10 | 100.4 | 242 | 253\n3 | 20 | 100.7 | 245 | 267\n4 | 30 | 101.1 | 249 | 283\n5 | 40 | 101.4 | 254 | 301\n\nDr. Okafor claims that the increased total heating time is chiefly caused by the rising boiling point: more salt means the water must reach a higher final temperature. Dr. Patel claims that dissolved salt slows heat transfer through the water, causing longer heating times even before the sample reaches 100.0°C. Both note that the hot plate setting and starting water temperature were identical.",
+   "q": "Which comparison most weakens Dr. Okafor's claim that the increased total heating time is chiefly caused by the rising boiling point?",
+   "options": [
+    "The total heating time rises by 61 s from the 0 g trial to the 40 g trial.",
+    "The 0 g trial reaches 100.0°C in 240 s.",
+    "The boiling point rises by 1.4°C from the 0 g trial to the 40 g trial.",
+    "The time to reach 100.0°C rises by 14 s from the 0 g trial to the 40 g trial, even before the final boiling point is higher."
+   ],
+   "answer": 3,
+   "explanation": "From 0 g to 40 g, the time to reach 100.0°C increases from 240 s to 254 s, a 14 s increase before the sample must reach any raised final boiling point. This shows the salt slows heating even at a common temperature, supporting Dr. Patel's explanation rather than Okafor's claim that the extra time is chiefly due to a higher final temperature."
+  },
+  {
+   "n": 15,
+   "topic": "Research summaries: interpreting results",
+   "passage": "Students in a chemistry laboratory dissolved different masses of sodium chloride in 500 g of water at 20.0°C. Each sample was heated on the same hot plate setting. The boiling point was recorded when steady boiling began, and two times were measured: the time to reach 100.0°C and the total time to begin boiling. The table shows the results.\n\nTrial | NaCl added (g) | Boiling point (°C) | Time to reach 100.0°C (s) | Total heating time to boil (s)\n1 | 0 | 100.0 | 240 | 240\n2 | 10 | 100.4 | 242 | 253\n3 | 20 | 100.7 | 245 | 267\n4 | 30 | 101.1 | 249 | 283\n5 | 40 | 101.4 | 254 | 301\n\nDr. Okafor claims that the increased total heating time is chiefly caused by the rising boiling point: more salt means the water must reach a higher final temperature. Dr. Patel claims that dissolved salt slows heat transfer through the water, causing longer heating times even before the sample reaches 100.0°C. Both note that the hot plate setting and starting water temperature were identical.",
+   "q": "To test directly whether dissolved salt changes the rate of heating before boiling begins, which additional measurement would be most useful?",
+   "options": [
+    "The total heating time for each sample.",
+    "The final boiling point of each sample.",
+    "The mass of undissolved salt at the end of each trial.",
+    "The temperature of each sample 60 s after heating begins, with the same starting temperature and hot plate setting."
+   ],
+   "answer": 3,
+   "explanation": "Measuring each sample's temperature at the same elapsed time directly compares heating rates before boiling, while keeping the starting conditions and hot plate setting controlled. Total heating time is less direct because the samples also have different final boiling points."
+  },
+  {
+   "n": 16,
+   "topic": "Data representation: trends, interpolation and extrapolation",
+   "q": "A metal block cools in room-temperature air. Its temperatures at selected times are 3 min: 72°C; 5 min: 58°C; 7 min: 47°C; 9 min: 38°C. If the temperature changes linearly between 5 min and 7 min, what is the predicted temperature at 6 min?",
+   "options": [
+    "58.0°C",
+    "52.0°C",
+    "52.5°C",
+    "53.0°C"
+   ],
+   "answer": 2,
+   "explanation": "The temperature at 6 min is halfway between the 5 min and 7 min values, so (58°C + 47°C) ÷ 2 = 52.5°C. The 58.0°C value is the 5 min temperature, not the 6 min interpolation."
+  },
+  {
+   "n": 17,
+   "topic": "Data representation: trends, interpolation and extrapolation",
+   "q": "A gas is held at constant volume. Its pressure is measured at several temperatures: –20°C: 220 kPa; 0°C: 240 kPa; 20°C: 260 kPa; 40°C: 280 kPa. If the linear trend continues, what pressure is predicted at 80°C?",
+   "options": [
+    "300 kPa",
+    "360 kPa",
+    "340 kPa",
+    "320 kPa"
+   ],
+   "answer": 3,
+   "explanation": "The pressure increases by 20 kPa for every 20°C increase, which is 1 kPa/°C. From 40°C to 80°C is a 40°C increase, so 280 kPa + 40 kPa = 320 kPa."
+  },
+  {
+   "n": 18,
+   "topic": "Conflicting viewpoints",
+   "q": "Two biologists debate why a seedling stem bends toward a window. Dr. Lin says cells on the shaded side of the stem elongate more than cells on the lighted side. Dr. Gomez says cells on the lighted side shorten, pulling the stem toward the light. They mark equal lengths of stem tissue on both sides. Before light exposure, both marked regions are 20 µm long. After 2 days, the lighted-side region is 22 µm long, and the shaded-side region is 34 µm long. Which conclusion is best supported by the measurements?",
+   "options": [
+    "Dr. Lin's view, because the shaded-side cells lengthened much more while the lighted-side cells did not shorten.",
+    "Neither view, because the marked regions did not change length.",
+    "Dr. Gomez's view, because the lighted-side region changed length.",
+    "Both views equally, because both sides changed length."
+   ],
+   "answer": 0,
+   "explanation": "The shaded-side region grew from 20 µm to 34 µm, an increase of 14 µm, while the lighted-side region grew slightly from 20 µm to 22 µm rather than shortening. That pattern supports Dr. Lin's explanation and does not support Dr. Gomez's claim."
+  },
+  {
+   "n": 19,
+   "topic": "Research summaries: interpreting results",
+   "q": "Researchers tested a dye-removal filter. They added 5.0 mg of dye to 1 L of water and passed the water through filters of different masses. The dye remaining afterward was 0 g: 5.0 mg; 2 g: 3.2 mg; 4 g: 1.8 mg; 6 g: 0.9 mg; 8 g: 0.4 mg. Which statement is best supported by the data?",
+   "options": [
+    "Each additional 2 g of filter removed less dye than the previous 2 g removed.",
+    "The filter removed all the dye when 8 g was used.",
+    "The mass of dye removed was approximately the same for each additional 2 g of filter.",
+    "The filter became more effective per gram as its mass increased."
+   ],
+   "answer": 0,
+   "explanation": "Dye removed in successive 2 g steps is 1.8 mg, 1.4 mg, 0.9 mg, and 0.5 mg, so each additional 2 g removes less than the previous 2 g did. The 8 g filter leaves 0.4 mg of dye, so it did not remove all the dye."
+  },
+  {
+   "n": 20,
+   "topic": "Data representation: reading tables and graphs",
+   "q": "A table lists the solubility of a solid in water: 10°C: 20 g/100 g water; 20°C: 32 g/100 g water; 30°C: 46 g/100 g water; 40°C: 64 g/100 g water. According to the table, how much does the solubility increase from 20°C to 40°C?",
+   "options": [
+    "32 g/100 g water",
+    "30 g/100 g water",
+    "14 g/100 g water",
+    "64 g/100 g water"
+   ],
+   "answer": 0,
+   "explanation": "At 40°C the solubility is 64 g/100 g water, and at 20°C it is 32 g/100 g water. The increase is 64 − 32 = 32 g/100 g water."
+  },
+  {
+   "n": 21,
+   "topic": "Research summaries: experimental design",
+   "passage": "Students investigated how temperature affects the activity of catalase in potato tissue. For each trial, 5.0 g of diced potato was added to a flask containing 50.0 mL of 1.0% hydrogen peroxide solution at a selected temperature. The students recorded the time needed to collect 20.0 mL of oxygen gas in a gas syringe. They repeated each temperature three times and used the same potato, the same size of potato pieces, and the same hydrogen peroxide concentration each time. The apparatus was cleaned between trials, and the syringe was checked for leaks. The students calculated the rate of oxygen production by dividing 20.0 mL by the mean time. The room pressure remained close to 1.0 atm during all trials. The mean times are shown.\nTemperature (°C) | Mean time to collect 20.0 mL O₂ (s)\n10 | 84\n20 | 42\n30 | 24\n40 | 18\n50 | 57",
+   "q": "Which variable was the independent variable in the students' experiment?",
+   "options": [
+    "The time needed to collect 20.0 mL of oxygen gas",
+    "The mass of diced potato used in each trial",
+    "The temperature of the hydrogen peroxide solution",
+    "The volume of oxygen gas collected before timing stopped"
+   ],
+   "answer": 2,
+   "explanation": "The students selected and changed the temperature for different trials and then measured the time required to collect oxygen. The mass of potato and the endpoint volume were held the same, and the collection time was a dependent measurement."
+  },
+  {
+   "n": 22,
+   "topic": "Research summaries: experimental design",
+   "passage": "Students investigated how temperature affects the activity of catalase in potato tissue. For each trial, 5.0 g of diced potato was added to a flask containing 50.0 mL of 1.0% hydrogen peroxide solution at a selected temperature. The students recorded the time needed to collect 20.0 mL of oxygen gas in a gas syringe. They repeated each temperature three times and used the same potato, the same size of potato pieces, and the same hydrogen peroxide concentration each time. The apparatus was cleaned between trials, and the syringe was checked for leaks. The students calculated the rate of oxygen production by dividing 20.0 mL by the mean time. The room pressure remained close to 1.0 atm during all trials. The mean times are shown.\nTemperature (°C) | Mean time to collect 20.0 mL O₂ (s)\n10 | 84\n20 | 42\n30 | 24\n40 | 18\n50 | 57",
+   "q": "The students used three repeated trials at each temperature. Which change would best improve the reliability of the mean times?",
+   "options": [
+    "Stop timing after exactly 60 s instead of collecting a set volume of gas.",
+    "Repeat the experiment several more times at each temperature and calculate new means.",
+    "Test only the temperature that produced the fastest gas collection.",
+    "Use a different potato for each temperature but one trial per temperature."
+   ],
+   "answer": 1,
+   "explanation": "More repeated trials reduce the influence of random variation and make the mean times more reliable. Testing only one temperature or changing the potato between trials would not improve confidence in each mean."
+  },
+  {
+   "n": 23,
+   "topic": "Research summaries: interpreting results",
+   "passage": "Students investigated how temperature affects the activity of catalase in potato tissue. For each trial, 5.0 g of diced potato was added to a flask containing 50.0 mL of 1.0% hydrogen peroxide solution at a selected temperature. The students recorded the time needed to collect 20.0 mL of oxygen gas in a gas syringe. They repeated each temperature three times and used the same potato, the same size of potato pieces, and the same hydrogen peroxide concentration each time. The apparatus was cleaned between trials, and the syringe was checked for leaks. The students calculated the rate of oxygen production by dividing 20.0 mL by the mean time. The room pressure remained close to 1.0 atm during all trials. The mean times are shown.\nTemperature (°C) | Mean time to collect 20.0 mL O₂ (s)\n10 | 84\n20 | 42\n30 | 24\n40 | 18\n50 | 57",
+   "q": "According to the table, at which temperature did the potato catalase produce oxygen most rapidly?",
+   "options": [
+    "40°C",
+    "50°C",
+    "10°C",
+    "30°C"
+   ],
+   "answer": 0,
+   "explanation": "The rate is 20.0 mL divided by the mean time, so the shortest mean time gives the greatest rate. The shortest time is 18 s at 40°C, where 20.0 ÷ 18 ≈ 1.11 mL/s."
+  },
+  {
+   "n": 24,
+   "topic": "Research summaries: interpreting results",
+   "passage": "Students investigated how temperature affects the activity of catalase in potato tissue. For each trial, 5.0 g of diced potato was added to a flask containing 50.0 mL of 1.0% hydrogen peroxide solution at a selected temperature. The students recorded the time needed to collect 20.0 mL of oxygen gas in a gas syringe. They repeated each temperature three times and used the same potato, the same size of potato pieces, and the same hydrogen peroxide concentration each time. The apparatus was cleaned between trials, and the syringe was checked for leaks. The students calculated the rate of oxygen production by dividing 20.0 mL by the mean time. The room pressure remained close to 1.0 atm during all trials. The mean times are shown.\nTemperature (°C) | Mean time to collect 20.0 mL O₂ (s)\n10 | 84\n20 | 42\n30 | 24\n40 | 18\n50 | 57",
+   "q": "The mean rate of oxygen production at 40°C is approximately how many times the mean rate at 50°C?",
+   "options": [
+    "0.32 times",
+    "12.7 times",
+    "3.2 times",
+    "1.1 times"
+   ],
+   "answer": 2,
+   "explanation": "Rate at 40°C is 20.0 ÷ 18 ≈ 1.11 mL/s, and at 50°C it is 20.0 ÷ 57 ≈ 0.351 mL/s. Their ratio is (20.0 ÷ 18) ÷ (20.0 ÷ 57) = 57 ÷ 18 ≈ 3.2."
+  },
+  {
+   "n": 25,
+   "topic": "Scientific models, hypotheses and predictions",
+   "passage": "Students investigated how temperature affects the activity of catalase in potato tissue. For each trial, 5.0 g of diced potato was added to a flask containing 50.0 mL of 1.0% hydrogen peroxide solution at a selected temperature. The students recorded the time needed to collect 20.0 mL of oxygen gas in a gas syringe. They repeated each temperature three times and used the same potato, the same size of potato pieces, and the same hydrogen peroxide concentration each time. The apparatus was cleaned between trials, and the syringe was checked for leaks. The students calculated the rate of oxygen production by dividing 20.0 mL by the mean time. The room pressure remained close to 1.0 atm during all trials. The mean times are shown.\nTemperature (°C) | Mean time to collect 20.0 mL O₂ (s)\n10 | 84\n20 | 42\n30 | 24\n40 | 18\n50 | 57",
+   "q": "A student hypothesized that catalase activity would rise from 10°C to 40°C and then fall at higher temperatures. Which additional result would support this hypothesis?",
+   "options": [
+    "At 35°C, the mean time to collect 20.0 mL of oxygen gas is 30 s.",
+    "At 45°C, the mean time to collect 20.0 mL of oxygen gas is 12 s.",
+    "At 45°C, the mean time to collect 20.0 mL of oxygen gas is 30 s.",
+    "At 60°C, the mean time to collect 20.0 mL of oxygen gas is 18 s."
+   ],
+   "answer": 2,
+   "explanation": "Because a longer collection time means a lower oxygen-production rate, a 30 s time at 45°C indicates less activity above 40°C, consistent with a fall after the peak. A shorter time at 45°C would suggest activity was still increasing, and a 30 s time at 35°C would contradict the rise from 30°C to 40°C."
+  },
+  {
+   "n": 26,
+   "topic": "Conflicting viewpoints",
+   "passage": "Two wildlife biologists are comparing native fish counts in six mountain lakes of similar size and elevation. Dr. Okafor argues that introduced trout are the main reason some lakes have fewer native fish, because trout prey on native fish. Dr. Lind argues that lower pH (more acidic water) is the main cause, because native fish struggle to survive below about pH 6.5. The researchers sampled each lake using the same nets for 10 net-hours in late summer. The sampling was repeated in three summers, and the values shown are averages. All lakes had similar water temperatures and dissolved oxygen concentrations, and no lake was stocked with trout during the study. The table shows whether introduced trout were present, the lake pH, and the native fish caught per net-hour.\nLake | Introduced trout present? | pH | Native fish per net-hour\nCedar | Yes | 6.8 | 12\nBirch | Yes | 6.6 | 10\nGranite | Yes | 5.2 | 4\nAspen | No | 6.8 | 35\nPine | No | 6.6 | 36\nJuniper | No | 5.2 | 8",
+   "q": "The two researchers disagree mainly about which factor is most responsible for the differences in native fish counts among the lakes?",
+   "options": [
+    "Whether native fish were caught in all six lakes.",
+    "Whether the lakes differ in size and elevation.",
+    "Whether introduced trout or low pH is the main cause.",
+    "Whether netting should be done in late summer or another season."
+   ],
+   "answer": 2,
+   "explanation": "Dr. Okafor emphasizes predation by introduced trout, while Dr. Lind emphasizes low pH as the main cause. The passage states that lake size and elevation are similar and that sampling was standardized, so those are not the main disagreement."
+  },
+  {
+   "n": 27,
+   "topic": "Conflicting viewpoints",
+   "passage": "Two wildlife biologists are comparing native fish counts in six mountain lakes of similar size and elevation. Dr. Okafor argues that introduced trout are the main reason some lakes have fewer native fish, because trout prey on native fish. Dr. Lind argues that lower pH (more acidic water) is the main cause, because native fish struggle to survive below about pH 6.5. The researchers sampled each lake using the same nets for 10 net-hours in late summer. The sampling was repeated in three summers, and the values shown are averages. All lakes had similar water temperatures and dissolved oxygen concentrations, and no lake was stocked with trout during the study. The table shows whether introduced trout were present, the lake pH, and the native fish caught per net-hour.\nLake | Introduced trout present? | pH | Native fish per net-hour\nCedar | Yes | 6.8 | 12\nBirch | Yes | 6.6 | 10\nGranite | Yes | 5.2 | 4\nAspen | No | 6.8 | 35\nPine | No | 6.6 | 36\nJuniper | No | 5.2 | 8",
+   "q": "Which pair of lakes provides the clearest support for Dr. Lind's claim that lower pH is associated with fewer native fish?",
+   "options": [
+    "Pine and Juniper",
+    "Birch and Aspen",
+    "Granite and Juniper",
+    "Cedar and Aspen"
+   ],
+   "answer": 0,
+   "explanation": "Pine and Juniper both lacked introduced trout, so their trout status was the same. Their native fish count dropped from 36 per net-hour at pH 6.6 to 8 per net-hour at pH 5.2, linking lower pH to fewer native fish."
+  },
+  {
+   "n": 28,
+   "topic": "Scientific models, hypotheses and predictions",
+   "passage": "Two wildlife biologists are comparing native fish counts in six mountain lakes of similar size and elevation. Dr. Okafor argues that introduced trout are the main reason some lakes have fewer native fish, because trout prey on native fish. Dr. Lind argues that lower pH (more acidic water) is the main cause, because native fish struggle to survive below about pH 6.5. The researchers sampled each lake using the same nets for 10 net-hours in late summer. The sampling was repeated in three summers, and the values shown are averages. All lakes had similar water temperatures and dissolved oxygen concentrations, and no lake was stocked with trout during the study. The table shows whether introduced trout were present, the lake pH, and the native fish caught per net-hour.\nLake | Introduced trout present? | pH | Native fish per net-hour\nCedar | Yes | 6.8 | 12\nBirch | Yes | 6.6 | 10\nGranite | Yes | 5.2 | 4\nAspen | No | 6.8 | 35\nPine | No | 6.6 | 36\nJuniper | No | 5.2 | 8",
+   "q": "If Dr. Okafor's hypothesis is correct, what would be the most likely effect of removing introduced trout from Cedar Lake while all other conditions remain the same?",
+   "options": [
+    "The pH of Cedar Lake would immediately rise above 6.8.",
+    "The native fish count would remain exactly 12 per net-hour.",
+    "The number of native fish caught per net-hour would increase toward the counts seen in lakes without trout.",
+    "The native fish count would decrease because fewer trout would be present."
+   ],
+   "answer": 2,
+   "explanation": "Dr. Okafor claims trout are the main cause of fewer native fish, so removing trout should reduce predation and allow more native fish to survive. Lakes without trout at similar pH had much higher counts than Cedar Lake."
+  },
+  {
+   "n": 29,
+   "topic": "Research summaries: interpreting results",
+   "passage": "Two wildlife biologists are comparing native fish counts in six mountain lakes of similar size and elevation. Dr. Okafor argues that introduced trout are the main reason some lakes have fewer native fish, because trout prey on native fish. Dr. Lind argues that lower pH (more acidic water) is the main cause, because native fish struggle to survive below about pH 6.5. The researchers sampled each lake using the same nets for 10 net-hours in late summer. The sampling was repeated in three summers, and the values shown are averages. All lakes had similar water temperatures and dissolved oxygen concentrations, and no lake was stocked with trout during the study. The table shows whether introduced trout were present, the lake pH, and the native fish caught per net-hour.\nLake | Introduced trout present? | pH | Native fish per net-hour\nCedar | Yes | 6.8 | 12\nBirch | Yes | 6.6 | 10\nGranite | Yes | 5.2 | 4\nAspen | No | 6.8 | 35\nPine | No | 6.6 | 36\nJuniper | No | 5.2 | 8",
+   "q": "At a pH of about 6.8, how did the native fish count in Cedar Lake compare with that in Aspen Lake?",
+   "options": [
+    "Cedar Lake, which had introduced trout, had fewer native fish per net-hour.",
+    "Both lakes had nearly the same native fish counts because their pH was the same.",
+    "Cedar Lake, which had no introduced trout, had more native fish per net-hour.",
+    "Aspen Lake had fewer native fish because it had introduced trout."
+   ],
+   "answer": 0,
+   "explanation": "The table gives Cedar Lake a pH of 6.8 with trout present and 12 native fish per net-hour, while Aspen Lake has pH 6.8 with no trout and 35 native fish per net-hour. Thus, at similar pH, the lake with trout had fewer native fish."
+  },
+  {
+   "n": 30,
+   "topic": "Conflicting viewpoints",
+   "passage": "Two wildlife biologists are comparing native fish counts in six mountain lakes of similar size and elevation. Dr. Okafor argues that introduced trout are the main reason some lakes have fewer native fish, because trout prey on native fish. Dr. Lind argues that lower pH (more acidic water) is the main cause, because native fish struggle to survive below about pH 6.5. The researchers sampled each lake using the same nets for 10 net-hours in late summer. The sampling was repeated in three summers, and the values shown are averages. All lakes had similar water temperatures and dissolved oxygen concentrations, and no lake was stocked with trout during the study. The table shows whether introduced trout were present, the lake pH, and the native fish caught per net-hour.\nLake | Introduced trout present? | pH | Native fish per net-hour\nCedar | Yes | 6.8 | 12\nBirch | Yes | 6.6 | 10\nGranite | Yes | 5.2 | 4\nAspen | No | 6.8 | 35\nPine | No | 6.6 | 36\nJuniper | No | 5.2 | 8",
+   "q": "Which statement would Dr. Lind most likely use to counter Dr. Okafor's argument that introduced trout are the main cause of low native fish counts?",
+   "options": [
+    "Granite Lake has fewer native fish than Juniper Lake even though both have pH 5.2.",
+    "Among lakes without trout, native fish counts dropped from 36 per net-hour at pH 6.6 to 8 per net-hour at pH 5.2.",
+    "Cedar Lake has fewer native fish than Aspen Lake even though both have pH 6.8.",
+    "Pine Lake and Aspen Lake have similar native fish counts even though their pH differs by 0.2."
+   ],
+   "answer": 1,
+   "explanation": "This statement uses lakes with the same trout status, no trout, to show that lower pH is associated with a large drop in native fish. That supports Dr. Lind's view that pH, rather than trout presence, is the main cause. The other comparisons describe cases where trout presence may explain the difference or where the pH difference is too small to make the point."
+  },
+  {
+   "n": 31,
+   "topic": "Research summaries: experimental design",
+   "passage": "Students studied duckweed growth under red or green LED light. Each beaker contained 250 mL pond water and 20 duckweed fronds. Half of the beakers received 0.50 g of a commercial aquarium fertilizer; the other half received no fertilizer. Every beaker was kept at 22°C and given 12 h of light and 12 h of darkness each day. The students used 3 beakers for each combination of light color and fertilizer treatment and placed all beakers on the same shelf to keep light intensity similar. On days 0, 4, 8, and 12, they counted all fronds in each beaker and averaged the three counts for each treatment.\n\nDays | Red, no fertilizer | Red, fertilizer | Green, no fertilizer | Green, fertilizer\n0 | 20 | 20 | 20 | 20\n4 | 32 | 38 | 28 | 31\n8 | 47 | 58 | 39 | 44\n12 | 61 | 75 | 48 | 56\n\nThe students hypothesized that red light would allow more growth than green light and that fertilizer would increase growth in both light colors. They also predicted that under red light with fertilizer, the frond number would continue to increase after day 12 but at a decreasing rate.",
+   "q": "Why did the students include the beakers that received no fertilizer?",
+   "options": [
+    "to make sure every beaker started with exactly 20 fronds",
+    "to keep the final frond count the same among the light colors",
+    "to provide a comparison for the effect of adding fertilizer",
+    "to test whether fertilizer changes the color of the LED light"
+   ],
+   "answer": 2,
+   "explanation": "The no-fertilizer beakers are controls for the fertilizer treatment: they show growth under the same light and water conditions without added nutrients. Comparing them with the fertilized beakers reveals whether fertilizer affected frond number; keeping the starting count at 20 was ensured by the design, not by the no-fertilizer treatment."
+  },
+  {
+   "n": 32,
+   "topic": "Data representation: reading tables and graphs",
+   "passage": "Students studied duckweed growth under red or green LED light. Each beaker contained 250 mL pond water and 20 duckweed fronds. Half of the beakers received 0.50 g of a commercial aquarium fertilizer; the other half received no fertilizer. Every beaker was kept at 22°C and given 12 h of light and 12 h of darkness each day. The students used 3 beakers for each combination of light color and fertilizer treatment and placed all beakers on the same shelf to keep light intensity similar. On days 0, 4, 8, and 12, they counted all fronds in each beaker and averaged the three counts for each treatment.\n\nDays | Red, no fertilizer | Red, fertilizer | Green, no fertilizer | Green, fertilizer\n0 | 20 | 20 | 20 | 20\n4 | 32 | 38 | 28 | 31\n8 | 47 | 58 | 39 | 44\n12 | 61 | 75 | 48 | 56\n\nThe students hypothesized that red light would allow more growth than green light and that fertilizer would increase growth in both light colors. They also predicted that under red light with fertilizer, the frond number would continue to increase after day 12 but at a decreasing rate.",
+   "q": "On day 8, which treatment had a mean frond count closest to 50?",
+   "options": [
+    "Green light with fertilizer, at 44 fronds",
+    "Green light with no fertilizer, at 39 fronds",
+    "Red light with fertilizer, at 58 fronds",
+    "Red light with no fertilizer, at 47 fronds"
+   ],
+   "answer": 3,
+   "explanation": "The day-8 count for red light with no fertilizer is 47 fronds, which is 3 fronds from 50. The other day-8 means are 58, 39, and 44 fronds, so their distances from 50 are 8, 11, and 6 fronds, respectively."
+  },
+  {
+   "n": 33,
+   "topic": "Data representation: trends, interpolation and extrapolation",
+   "passage": "Students studied duckweed growth under red or green LED light. Each beaker contained 250 mL pond water and 20 duckweed fronds. Half of the beakers received 0.50 g of a commercial aquarium fertilizer; the other half received no fertilizer. Every beaker was kept at 22°C and given 12 h of light and 12 h of darkness each day. The students used 3 beakers for each combination of light color and fertilizer treatment and placed all beakers on the same shelf to keep light intensity similar. On days 0, 4, 8, and 12, they counted all fronds in each beaker and averaged the three counts for each treatment.\n\nDays | Red, no fertilizer | Red, fertilizer | Green, no fertilizer | Green, fertilizer\n0 | 20 | 20 | 20 | 20\n4 | 32 | 38 | 28 | 31\n8 | 47 | 58 | 39 | 44\n12 | 61 | 75 | 48 | 56\n\nThe students hypothesized that red light would allow more growth than green light and that fertilizer would increase growth in both light colors. They also predicted that under red light with fertilizer, the frond number would continue to increase after day 12 but at a decreasing rate.",
+   "q": "Between day 8 and day 12, the mean frond count for red light with fertilizer increased from 58 to 75. If the count increased by the same amount each day during this interval, what is the predicted mean count on day 10?",
+   "options": [
+    "68.0 fronds",
+    "75.0 fronds",
+    "62.5 fronds",
+    "66.5 fronds"
+   ],
+   "answer": 3,
+   "explanation": "The total increase is 75 − 58 = 17 fronds over 4 days, or 4.25 fronds per day. Day 10 is 2 days after day 8, so the prediction is 58 + 2(4.25) = 66.5 fronds."
+  },
+  {
+   "n": 34,
+   "topic": "Scientific models, hypotheses and predictions",
+   "passage": "Students studied duckweed growth under red or green LED light. Each beaker contained 250 mL pond water and 20 duckweed fronds. Half of the beakers received 0.50 g of a commercial aquarium fertilizer; the other half received no fertilizer. Every beaker was kept at 22°C and given 12 h of light and 12 h of darkness each day. The students used 3 beakers for each combination of light color and fertilizer treatment and placed all beakers on the same shelf to keep light intensity similar. On days 0, 4, 8, and 12, they counted all fronds in each beaker and averaged the three counts for each treatment.\n\nDays | Red, no fertilizer | Red, fertilizer | Green, no fertilizer | Green, fertilizer\n0 | 20 | 20 | 20 | 20\n4 | 32 | 38 | 28 | 31\n8 | 47 | 58 | 39 | 44\n12 | 61 | 75 | 48 | 56\n\nThe students hypothesized that red light would allow more growth than green light and that fertilizer would increase growth in both light colors. They also predicted that under red light with fertilizer, the frond number would continue to increase after day 12 but at a decreasing rate.",
+   "q": "The students predicted that after day 12, the red-light fertilized treatment would keep increasing but at a decreasing rate. Which day-16 mean frond count would best support this prediction?",
+   "options": [
+    "92 fronds",
+    "88 fronds",
+    "75 fronds",
+    "101 fronds"
+   ],
+   "answer": 1,
+   "explanation": "The increase from day 8 to day 12 was 75 − 58 = 17 fronds. A count of 88 on day 16 would be an increase of 13 fronds from day 12, which is positive but smaller than the previous 17-frond increase. Counts of 75 or less would not increase, while 92 repeats the previous increase and 101 shows a larger increase."
+  },
+  {
+   "n": 35,
+   "topic": "Data representation: reading tables and graphs",
+   "q": "Students recorded water temperature at several depths in a lake, as shown in the table.\n\nDepth (m) | Temperature (°C)\n0 | 24\n5 | 21\n10 | 17\n15 | 12\n20 | 8\n\nFrom 5 m to 15 m, how does the temperature change?",
+   "options": [
+    "It decreases by 4°C.",
+    "It decreases by 13°C.",
+    "It decreases by 9°C.",
+    "It increases by 9°C."
+   ],
+   "answer": 2,
+   "explanation": "At 5 m the temperature is 21°C, and at 15 m it is 12°C. The change is 21 − 12 = 9°C, and the temperature decreases as depth increases."
+  },
+  {
+   "n": 36,
+   "topic": "Research summaries: experimental design",
+   "q": "A student tests how detergent concentration affects the surface tension of water. The student uses the same water temperature, the same container, and the same volume of water in each trial but changes the detergent concentration. Which change would best improve the reliability of the results?",
+   "options": [
+    "Change the water temperature along with the detergent concentration.",
+    "Use a different container for each concentration.",
+    "Test only the highest detergent concentration once.",
+    "Repeat each detergent concentration several times and average the measurements."
+   ],
+   "answer": 3,
+   "explanation": "Repeating each concentration and averaging reduces the effect of random measurement error, improving reliability. Changing two variables at once or testing only one concentration once would make the results less reliable and less able to isolate the effect of detergent concentration."
+  },
+  {
+   "n": 37,
+   "topic": "Data representation: trends, interpolation and extrapolation",
+   "q": "A solution’s absorbance was measured every 2 minutes, as shown in the table.\n\nTime (min) | Absorbance\n0 | 0.12\n2 | 0.28\n4 | 0.44\n6 | 0.60\n\nIf absorbance continues to increase at the same rate, what absorbance is predicted at 10 min?",
+   "options": [
+    "0.68",
+    "0.76",
+    "1.08",
+    "0.92"
+   ],
+   "answer": 3,
+   "explanation": "From the table, absorbance increases by 0.16 every 2 minutes, or 0.08 per minute. From 6 to 10 minutes is 4 more minutes, so the predicted absorbance is 0.60 + 4(0.08) = 0.92."
+  },
+  {
+   "n": 38,
+   "topic": "Data representation: reading tables and graphs",
+   "q": "In a toxicity test, students recorded the percent of Daphnia surviving after 24 h at different pH values.\n\npH | Survival in Group 1 (%) | Survival in Group 2 (%)\n6.0 | 92 | 85\n6.5 | 80 | 78\n7.0 | 62 | 70\n7.5 | 41 | 55\n8.0 | 20 | 33\n\nBetween pH 6.5 and pH 7.5, which statement about survival is supported by the table?",
+   "options": [
+    "Group 2 survival decreased by 39 percentage points, which is 16 percentage points more than the decrease in Group 1 survival.",
+    "Group 1 survival decreased by 39 percentage points, which is 23 percentage points more than the decrease in Group 2 survival.",
+    "Group 1 survival decreased by 39 percentage points, which is 16 percentage points more than the decrease in Group 2 survival.",
+    "Both groups decreased by the same number of percentage points."
+   ],
+   "answer": 2,
+   "explanation": "For Group 1, survival falls from 80% at pH 6.5 to 41% at pH 7.5, a decrease of 80 − 41 = 39 percentage points. For Group 2, survival falls from 78% to 55%, a decrease of 23 percentage points, so Group 1’s decrease is 39 − 23 = 16 percentage points greater."
+  },
+  {
+   "n": 39,
+   "topic": "Data representation: trends, interpolation and extrapolation",
+   "q": "A bacterial population doubles every 30 min. At 1:00 p.m., a culture contains 5,000 cells. If the trend continues, how many cells are predicted at 2:30 p.m.?",
+   "options": [
+    "15,000 cells",
+    "80,000 cells",
+    "20,000 cells",
+    "40,000 cells"
+   ],
+   "answer": 3,
+   "explanation": "From 1:00 p.m. to 2:30 p.m. is 90 minutes, or 3 doubling periods of 30 minutes. The predicted population is 5,000 × 2³ = 5,000 × 8 = 40,000 cells."
+  },
+  {
+   "n": 40,
+   "topic": "Scientific models, hypotheses and predictions",
+   "q": "Two models predict the mass of a tadpole over 4 weeks. The linear model predicts that mass increases by 0.20 g per day from an initial mass of 2.0 g. The doubling model predicts that mass doubles every week from the same initial mass. An observed mass of about 7.6 g after 4 weeks would most directly support which model?",
+   "options": [
+    "The linear model, because it predicts 2.0(1.20)⁴ ≈ 4.1 g.",
+    "The linear model, because it predicts 2.0 + (0.20)(28) = 7.6 g.",
+    "The doubling model, because it predicts 2.0 + (0.20)(7) = 3.4 g.",
+    "The doubling model, because it predicts 2.0(2⁴) = 32 g."
+   ],
+   "answer": 1,
+   "explanation": "Four weeks is 28 days, so the linear model predicts 2.0 + 0.20 × 28 = 7.6 g. The doubling model predicts 2.0 × 2⁴ = 32 g after 4 weeks, not 7.6 g, so the observed mass supports the linear model."
+  }
+ ]
+}

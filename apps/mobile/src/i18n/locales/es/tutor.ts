@@ -146,6 +146,10 @@ const tutor: Translation<typeof en> = {
     genericError: 'Algo salió mal.',
     thinking: 'Pensándolo bien…',
   },
+  related: {
+    title: 'De tus apuntes de Knowzone',
+    openLabel: 'Abrir: {{title}}',
+  },
   followUps: {
     title: 'PREGUNTA DESPUÉS',
     askLabel: 'Preguntar: {{question}}',

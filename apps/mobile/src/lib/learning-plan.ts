@@ -3,7 +3,7 @@ import type { TFunction } from 'i18next';
 import { formatDate } from '@/i18n';
 import type en from '@/i18n/locales/en/personalize';
 
-import { EXAMS, FORMATS, INTERESTS, learnerKey, subjectLabel, type Personalization } from './personalization';
+import { examLabel, FORMATS, INTERESTS, learnerKey, subjectLabel, type Personalization } from './personalization';
 
 export type PlanDay = {
   /** Short weekday name in the current language. */
@@ -77,7 +77,6 @@ export function buildPlan(p: Personalization, t: TFunction<'personalize'>): Lear
   const subjects = p.subjects.length ? p.subjects : ['English Language', 'Mathematics'];
   const formats = p.formats.length ? p.formats : ['summaries', 'quizzes', 'flashcards'];
   const hasExam = p.examGoals.length > 0 && !p.examGoals.includes('none');
-  const examOptions = EXAMS[learnerKey(p.learnerType)];
 
   // Six learning days rotate subjects; Sunday is a light recap so streaks stay achievable.
   const days: PlanDay[] = Array.from({ length: 7 }, (_, i) => {
@@ -106,7 +105,7 @@ export function buildPlan(p: Personalization, t: TFunction<'personalize'>): Lear
   const exam =
     hasExam && p.examMonth
       ? {
-          label: examOptions.find((e) => e.id === p.examGoals[0])?.label ?? t('plan.yourExam'),
+          label: p.examGoals[0] ? examLabel(p.examGoals[0], learnerKey(p.learnerType), p.region) : t('plan.yourExam'),
           month: p.examMonth,
           weeksLeft: weeksUntil(p.examMonth),
         }

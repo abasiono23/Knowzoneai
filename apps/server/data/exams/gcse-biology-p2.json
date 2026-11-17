@@ -1,0 +1,401 @@
+{
+ "id": "gcse-biology-p2",
+ "exam": "gcse",
+ "subject": "biology",
+ "year": null,
+ "number": 2,
+ "source": "ai",
+ "minutes": 35,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Infection and response",
+   "q": "A student tests whether handwashing with soap reduces bacteria on fingertips. They press their right fingertip on an agar plate after washing with soap, and their left fingertip on another plate without washing. Both plates are incubated at 25°C for 48 hours. Which improvement would make this investigation more reliable?",
+   "options": [
+    "Only count colonies that are the same size on both plates to avoid mistakes",
+    "Use antibiotics in the agar to prevent contamination from airborne microbes",
+    "Repeat the experiment with several students and calculate the mean number of colonies for washed and unwashed fingertips",
+    "Incubate the plates at 37°C because that is human body temperature"
+   ],
+   "answer": 2,
+   "explanation": "Repeating with several students and using the mean reduces the effect of random variation and makes the result more reliable. Incubating at 37°C could encourage growth of pathogens and is unsafe in a school lab; 25°C is safer. Adding antibiotics would bias against some bacteria and not test handwashing. Counting only same-sized colonies would ignore valid data and distort colony counts."
+  },
+  {
+   "n": 2,
+   "topic": "Homeostasis and response",
+   "q": "A person drinks a large volume of plain water quickly. Which immediate change do homeostatic mechanisms use to restore blood osmolarity?",
+   "options": [
+    "Increase production of adrenaline so the heart rate rises and more water is pumped into cells",
+    "Decrease secretion of antidiuretic hormone (ADH) so kidneys reabsorb less water and produce dilute urine",
+    "Release more glucagon to convert glycogen to glucose and dilute the blood",
+    "Increase secretion of aldosterone so the kidneys reabsorb more sodium and water"
+   ],
+   "answer": 1,
+   "explanation": "Drinking lots of water lowers blood osmolarity; ADH secretion falls so kidneys reabsorb less water and urine becomes dilute, restoring osmolarity. Adrenaline and glucagon control heart rate and blood glucose, not immediate osmolarity. Aldosterone increases sodium (and water) reabsorption and would raise blood volume/osmolarity, so it is not the correct immediate response to excess water."
+  },
+  {
+   "n": 3,
+   "topic": "Bioenergetics: photosynthesis and respiration",
+   "q": "A pond plant is left in bright light at 20°C and the rate of oxygen production is measured. An experimenter then increases the temperature to 35°C and sees the oxygen production fall. Which is the most likely explanation?",
+   "options": [
+    "Higher temperature causes stomata to stay closed so carbon dioxide cannot diffuse in at all",
+    "Plants switch from photosynthesis to respiration above 30°C, so oxygen is used instead of produced",
+    "Enzymes involved in the plant's photosynthesis are less effective at 35°C because they begin to denature, reducing rate of reaction",
+    "Light intensity automatically becomes lower at higher temperature, so photosynthesis slows"
+   ],
+   "answer": 2,
+   "explanation": "Photosynthetic enzymes have an optimum temperature; at 35°C they may begin to denature, reducing oxygen production. Light intensity does not decrease with temperature in the experiment. Plants do not switch off photosynthesis entirely above 30°C; respiration and photosynthesis can both occur. While stomata may respond to conditions, the main cause is enzyme activity loss at higher temperature."
+  },
+  {
+   "n": 4,
+   "topic": "Inheritance, variation and evolution",
+   "q": "In pea plants, tall (T) is dominant to short (t). Two heterozygous tall plants are crossed. What proportion of their offspring are expected to be homozygous short?",
+   "options": [
+    "0%",
+    "25%",
+    "75%",
+    "50%"
+   ],
+   "answer": 1,
+   "explanation": "Crossing Tt × Tt gives genotypes TT, Tt, Tt, tt — one out of four (25%) is homozygous short (tt). 50% would be heterozygous or homozygous tall combined; 75% is the proportion showing the tall phenotype, not homozygous short. 0% is incorrect because the recessive allele can appear."
+  },
+  {
+   "n": 5,
+   "topic": "Infection and response",
+   "q": "Which statement best explains why antibiotics cannot treat influenza (a viral infection)?",
+   "options": [
+    "Viruses are too small for antibiotics to bind to them physically",
+    "Antibiotics target bacterial cell structures or processes, while viruses use host cell machinery and lack those bacterial targets",
+    "Influenza is resistant to antibiotics because it has a cell wall different from bacterial cell walls",
+    "Antibiotics cannot reach the lungs where influenza infects because blood vessels stop there"
+   ],
+   "answer": 1,
+   "explanation": "Antibiotics interfere with bacterial-specific structures or metabolic pathways (cell wall synthesis, ribosomes) that viruses do not possess; viruses replicate inside host cells. Antibiotics can reach the lungs via the bloodstream, size is not the relevant factor, and viruses do not have bacterial-type cell walls, so the resistance explanation is incorrect."
+  },
+  {
+   "n": 6,
+   "topic": "Homeostasis and response",
+   "q": "A diabetic patient measures a fasting blood glucose concentration of 8.0 mmol/L. Which action by insulin or glucagon would move the concentration closer to the normal fasting range (~4–6 mmol/L)?",
+   "options": [
+    "Increase glucagon secretion to stimulate glycogen breakdown and raise blood glucose further",
+    "Increase insulin secretion to promote glucose uptake into liver and muscle and convert extra glucose to glycogen",
+    "Decrease insulin secretion so cells stop taking up glucose and blood glucose falls",
+    "Increase ADH secretion to dilute the blood glucose concentration by retaining water"
+   ],
+   "answer": 1,
+   "explanation": "High fasting glucose (8.0 mmol/L) is reduced by increasing insulin, which promotes cellular uptake and glycogen formation. Increasing glucagon would raise glucose further. Decreasing insulin would worsen hyperglycaemia. ADH affects water balance and can change concentration marginally but does not correct glucose by metabolism."
+  },
+  {
+   "n": 7,
+   "topic": "Bioenergetics: photosynthesis and respiration",
+   "q": "A student measures the mass of a sealed filamentous algae culture at start and after one week of continuous light. The dry mass increases by 12 g. If the culture fixed 4.0 mol of CO₂ in that week, what is the approximate mean relative molecular mass (Mr) of the organic matter synthesised? (Use Mr ≈ mass in g ÷ moles of CO₂; assume each mole CO₂ contributes one 'unit' to organic matter.)",
+   "options": [
+    "Approximately 3.0 g per mole (Mr ≈ 3.0)",
+    "Approximately 16 g per mole (Mr ≈ 16)",
+    "Approximately 48 g per mole (Mr ≈ 48)",
+    "Approximately 0.33 g per mole (Mr ≈ 0.33)"
+   ],
+   "answer": 0,
+   "explanation": "If 12 g dry mass increase corresponds to 4.0 mol CO₂ fixed, Mr ≈ 12 ÷ 4.0 = 3.0 g per mole under the simplified assumption. The other values come from incorrect divisions (12 ÷ 0.25, 12 ÷ 36, etc.) and are not consistent with the calculation shown."
+  },
+  {
+   "n": 8,
+   "topic": "Inheritance, variation and evolution",
+   "q": "A population of moths lives on trees with dark bark. A mutation produces some paler moths which are more visible to predators. Over many generations, which process would most likely change the population to be mostly darker again?",
+   "options": [
+    "Genetic drift: the paler colour will always disappear because it is less common",
+    "Gene flow: migration of paler moths into the forest will make all moths paler",
+    "Lamarkian inheritance: moths that try to become darker will pass on the darker trait to offspring",
+    "Natural selection: darker moths have higher survival and reproductive success, increasing frequency of dark alleles"
+   ],
+   "answer": 3,
+   "explanation": "Natural selection favours traits that increase survival; on dark bark, darker moths avoid predation and their alleles rise in frequency. Genetic drift is random and does not guarantee the disappearance of paler moths. Gene flow could introduce alleles but would not necessarily make all moths paler. Lamarckian inheritance is not supported: acquired changes from behaviour are not inherited genetically."
+  },
+  {
+   "n": 9,
+   "topic": "Infection and response",
+   "q": "A vaccine contains weakened but live bacteria that cannot cause disease. How does this vaccine produce immunity?",
+   "options": [
+    "It increases the number of red blood cells so more oxygen helps immune cells work",
+    "It gives passive immunity by supplying ready-made antibodies that last for many years",
+    "It stimulates a primary immune response so memory B and T lymphocytes are produced, enabling a faster, stronger response on future exposure",
+    "It permanently inserts the bacterial DNA into body cells so they become resistant"
+   ],
+   "answer": 2,
+   "explanation": "Live but weakened vaccines stimulate the body's own adaptive immune system to produce memory cells, giving active immunity. Passive immunity involves supplying antibodies externally and is short-term. Increasing red blood cells is unrelated to specific immunity. Permanently inserting bacterial DNA into host cells does not describe how vaccines work and would be unsafe."
+  },
+  {
+   "n": 10,
+   "topic": "Homeostasis and response",
+   "q": "A reflex arc causes you to withdraw your hand quickly from a hot surface without thinking. Which sequence correctly describes the nerve pathway involved?",
+   "options": [
+    "Receptor → motor neurone to brain → brain sends message via sensory neurone to effector",
+    "Receptor → relay neurone in skin → motor neurone in spinal cord → endocrine gland releases hormone to muscle",
+    "Receptor → sensory neurone to spinal cord → motor neurone to brain → brain sends message back to muscle",
+    "Receptor detects stimulus → sensory neurone transmits impulse to spinal cord → relay neurone connects to motor neurone → motor neurone causes effector muscle to contract"
+   ],
+   "answer": 3,
+   "explanation": "A reflex arc passes from receptor to sensory neurone to spinal cord relay neurone to motor neurone then effector, allowing a rapid response without involving conscious brain processing. The wrong sequences misorder neurones, send impulses first to the brain (which would be slower), or involve hormones instead of nerve impulses."
+  },
+  {
+   "n": 11,
+   "topic": "Cell biology",
+   "q": "A typical animal cell placed in a solution loses water and shrivels. Which description best explains why this happens?",
+   "options": [
+    "The cell membrane becomes impermeable to water, forcing water out by active transport.",
+    "The solution outside the cell is hypertonic, so water moves out of the cell by osmosis down a water potential gradient.",
+    "The solution outside has more ions, so ions move out of the cell and drag water with them by facilitated diffusion.",
+    "The solution outside the cell is hypotonic, so water moves out of the cell by diffusion down a concentration gradient."
+   ],
+   "answer": 1,
+   "explanation": "If the external solution has a lower water potential (is hypertonic) water leaves the cell by osmosis, causing it to shrivel. Osmosis is the movement of water down a water potential gradient across a partially permeable membrane; it is not active transport or diffusion of solute particles. Ions do not 'drag' water out by facilitated diffusion."
+  },
+  {
+   "n": 12,
+   "topic": "Cell biology",
+   "q": "A student measures a cube of tissue whose side length is 1.0 mm and then measures a cube of the same tissue with side length 4.0 mm. Which statement about surface area to volume ratio (SA:V) is correct?",
+   "options": [
+    "The 1.0 mm cube has SA:V = 6:1 (units mm²:mm³) and the 4.0 mm cube has SA:V = 6:4 = 1.5:1, so the smaller cube has the larger SA:V.",
+    "Both cubes have the same SA:V because SA and volume increase proportionally with side length.",
+    "The 1.0 mm cube has SA:V = 24:1 and the 4.0 mm cube has SA:V = 6:1, so the larger cube has the larger SA:V.",
+    "The 4.0 mm cube has a SA:V four times larger than the 1.0 mm cube because its side is four times bigger."
+   ],
+   "answer": 0,
+   "explanation": "Surface area of a cube = 6 × side² and volume = side³. For 1.0 mm: SA = 6 mm², V = 1 mm³, so SA:V = 6:1. For 4.0 mm: SA = 6×16 = 96 mm², V = 64 mm³, so SA:V = 96:64 = 1.5:1. SA:V falls as size increases, so the smaller cube has the larger ratio."
+  },
+  {
+   "n": 13,
+   "topic": "Cell biology",
+   "q": "A scientist stains a sample to view mitochondria more clearly. Which cell type from the list would you expect to have the highest number of mitochondria per cell?",
+   "options": [
+    "A plant root hair cell actively absorbing mineral ions.",
+    "A skeletal muscle cell from the leg of a long-distance runner.",
+    "A mature red blood cell in human blood.",
+    "A bacterium such as Escherichia coli."
+   ],
+   "answer": 1,
+   "explanation": "Muscle cells, especially in endurance-trained athletes, need lots of ATP and so contain many mitochondria. Mature red blood cells lack mitochondria, plant root hair cells have mitochondria but fewer than active muscle cells, and bacteria are prokaryotes that do not have mitochondria."
+  },
+  {
+   "n": 14,
+   "topic": "Ecology",
+   "q": "A freshwater pond has a sudden drop in oxygen concentration at night. Which change in the pond ecosystem is the most likely immediate cause?",
+   "options": [
+    "At night, all decomposers stop respiring so oxygen is used up by plants instead.",
+    "Light is absent so photosynthesis reverses and consumes oxygen instead of producing it.",
+    "Respiration by plants and animals exceeds photosynthesis at night, so oxygen is used up faster than it is produced.",
+    "Oxygen dissolves out of the water more quickly at night because the temperature falls."
+   ],
+   "answer": 2,
+   "explanation": "During night there is no photosynthesis so organisms continue to respire using oxygen; if respiration exceeds oxygen production the concentration falls. Decomposers do not stop respiring at night; photosynthesis does not reverse into an oxygen-consuming process; lower temperature at night would tend to increase gas solubility, not decrease oxygen."
+  },
+  {
+   "n": 15,
+   "topic": "Ecology",
+   "q": "A student samples two different grassland sites and records the following Simpson's diversity index values: Site A = 0.75, Site B = 0.95. Which is the best interpretation?",
+   "options": [
+    "Both sites have equal diversity because values are between 0 and 1.",
+    "Site A is more diverse because a lower value means more species are present.",
+    "Site B must have more biomass overall because its diversity index is higher.",
+    "Site B is more diverse, with a more even distribution of species and/or more species than Site A."
+   ],
+   "answer": 3,
+   "explanation": "Simpson's index ranges from 0 to 1 with higher values indicating greater diversity (more species and/or more even abundance). A lower value does not indicate greater diversity, and the index does not measure biomass, only species diversity and evenness."
+  },
+  {
+   "n": 16,
+   "topic": "Organisation: tissues, organs and systems",
+   "q": "Which description correctly matches tissue to its primary function in the human digestive system?",
+   "options": [
+    "Epithelial tissue in the gut generates digestive enzymes to chemically break down food.",
+    "Connective tissue in the gut secretes hydrochloric acid to kill bacteria.",
+    "Smooth muscle tissue in the gut wall contracts rhythmically to push food along by peristalsis.",
+    "Skeletal muscle tissue in the gut controls voluntary swallowing of food throughout the gut."
+   ],
+   "answer": 2,
+   "explanation": "Smooth muscle in the gut produces coordinated contractions (peristalsis). Epithelial tissue absorbs nutrients and secretes enzymes in glands but does not 'generate' all enzymes; connective tissue supports and binds, it does not secrete stomach acid (parietal cells do); skeletal muscle is under voluntary control and is involved in swallowing only in the mouth and upper oesophagus, not throughout the gut."
+  },
+  {
+   "n": 17,
+   "topic": "Organisation: tissues, organs and systems",
+   "q": "A patient has left-sided heart failure where the left ventricle cannot pump effectively. Which immediate symptom is most likely to arise from this failure?",
+   "options": [
+    "Swelling in the legs (peripheral oedema) only, because the left ventricle controls leg circulation.",
+    "Fluid accumulating in the lungs (pulmonary oedema) causing shortness of breath because blood backs up in the pulmonary circulation.",
+    "Jaundice, because the left ventricle failure causes a build-up of bilirubin in the blood.",
+    "High blood flow to the brain causing headaches, because blood is forced back from the left ventricle."
+   ],
+   "answer": 1,
+   "explanation": "Left ventricle failure causes blood to back up into the pulmonary veins and capillaries, increasing pressure and leading to fluid leaking into alveoli (pulmonary oedema) and breathlessness. Peripheral oedema is more associated with right-sided failure. Jaundice and increased cerebral flow are not direct consequences of left ventricular failure."
+  },
+  {
+   "n": 18,
+   "topic": "Infection and response",
+   "q": "An antibiotic is effective against Gram-positive bacteria but not Gram-negative. Which bacterial structural difference explains this selectivity?",
+   "options": [
+    "Gram-negative bacteria have an outer membrane that blocks many antibiotics; Gram-positive bacteria lack this outer membrane and have a thicker peptidoglycan layer accessible to the antibiotic.",
+    "Gram-positive bacteria have mitochondria that antibiotics target, whereas Gram-negative bacteria lack mitochondria.",
+    "Gram-positive bacteria have a capsule that attracts antibiotics and increases their uptake.",
+    "Gram-negative bacteria are larger cells so the antibiotic cannot reach the interior quickly enough."
+   ],
+   "answer": 0,
+   "explanation": "Gram-negative bacteria possess an extra outer membrane that can prevent antibiotic entry; Gram-positive bacteria lack this outer membrane and their thick peptidoglycan is exposed. Bacteria do not have mitochondria; size differences do not explain selective antibiotic access here; capsules do not 'attract' antibiotics."
+  },
+  {
+   "n": 19,
+   "topic": "Infection and response",
+   "q": "A school monitors cases of influenza and finds an R (reproduction) number of 1.3. What does this mean for the expected trend in case numbers, and what control measure would reduce R to below 1?",
+   "options": [
+    "Each infected person infects 0.3 of another person, so cases will slowly die out; vaccinating only sick people will lower R below 1.",
+    "Each infected person infects on average 1.3 others, so case numbers will increase; reducing contacts per person (for example temporary school closures) can lower R below 1.",
+    "R = 1.3 means 130% of the population is immune; increasing testing will directly lower R below 1.",
+    "R = 1.3 means infections last 1.3 times longer; giving antibiotics to all pupils will reduce R below 1."
+   ],
+   "answer": 1,
+   "explanation": "R = 1.3 means each case causes 1.3 new cases on average, so infections grow exponentially. Reducing contact rates (social distancing, temporary closures) lowers transmission and can reduce R below 1. The wrong options misunderstand R (it is not a fraction of a person immune, not a measure of duration) and antibiotics do not reduce viral spread."
+  },
+  {
+   "n": 20,
+   "topic": "Homeostasis and response",
+   "q": "A person becomes dehydrated after running 10 km on a hot day. Which immediate change in blood composition and kidney response helps restore water balance?",
+   "options": [
+    "Blood osmolarity increases, osmoreceptors trigger release of ADH, kidneys reabsorb more water so urine becomes darker and smaller in volume.",
+    "Blood osmolarity increases, thyroid increases metabolic rate, lungs increase breathing to remove excess water vapour.",
+    "Blood osmolarity decreases, pancreas releases insulin, kidneys excrete more water so urine becomes clearer and larger in volume.",
+    "Blood glucose rises, adrenal glands release adrenaline, kidneys secrete more salt to draw water into urine."
+   ],
+   "answer": 0,
+   "explanation": "Dehydration raises blood osmolarity; osmoreceptors cause posterior pituitary to release ADH, increasing water reabsorption in kidneys, so urine is darker and reduced in volume. Insulin and adrenaline do not directly control water reabsorption, and thyroid or lung changes do not correct plasma osmolarity this way."
+  },
+  {
+   "n": 21,
+   "topic": "Homeostasis and response",
+   "q": "A student tests reaction times by dropping a ruler and measuring how far it falls before being caught. Which change to the nervous system would most likely decrease (improve) the student's reaction time?",
+   "options": [
+    "Decrease in synapse number so there are fewer neurones in the reflex pathway, slowing processing.",
+    "Myelination of sensory and motor neurones increasing conduction speed between receptor and effector.",
+    "Widening of nerve fibres so they take longer to depolarise and repolarise, increasing transmission delay.",
+    "A change from chemical synapses to gap junctions throughout the brain reducing signal strength."
+   ],
+   "answer": 1,
+   "explanation": "Myelination speeds action potential conduction along neurones, reducing reaction time. Fewer synapses would reduce processing but typically reduce speed only if signal integration is lost; chemical synapses cannot simply change to gap junctions across the brain, and widening fibres generally increases conduction velocity, not slows it as suggested."
+  },
+  {
+   "n": 22,
+   "topic": "Homeostasis and response",
+   "q": "A patient's blood calcium concentration falls below normal. Which immediate hormonal response restores calcium to normal levels?",
+   "options": [
+    "Calcitonin is released, increasing osteoblast activity to deposit calcium into bone, reducing blood calcium further.",
+    "Thyroxine is released, increasing metabolic rate so bones absorb more calcium from blood.",
+    "Parathyroid hormone (PTH) is released, increasing bone resorption and stimulating kidneys to reabsorb calcium and activate vitamin D, raising blood calcium.",
+    "Insulin is released, causing cells to take up calcium from the blood, lowering blood calcium."
+   ],
+   "answer": 2,
+   "explanation": "Low blood calcium triggers PTH release which increases bone breakdown and renal calcium reabsorption, and activates vitamin D, raising blood calcium. Calcitonin lowers blood calcium, so it is not released when calcium is low. Insulin and thyroxine do not act to raise blood calcium in this way."
+  },
+  {
+   "n": 23,
+   "topic": "Bioenergetics: photosynthesis and respiration",
+   "q": "A sealed pot plant is placed in bright light for 4 hours. Which change most directly measures the rate of photosynthesis over that period?",
+   "options": [
+    "Increase in oxygen concentration inside the sealed pot relative to start, measured per hour.",
+    "Decrease in leaf temperature by 10°C due to evaporative cooling.",
+    "Increase in plant mass due to water uptake only, measured in grams.",
+    "Decrease in carbon dioxide concentration in the soil surrounding the pot after 4 hours."
+   ],
+   "answer": 0,
+   "explanation": "Photosynthesis produces oxygen; measuring the increase in O₂ inside the sealed pot per hour directly reflects photosynthetic rate. Soil CO₂ is not directly informative for whole-plant photosynthesis, mass increase from water uptake doesn't measure carbon fixation, and leaf temperature changes are not direct measures of photosynthesis rate."
+  },
+  {
+   "n": 24,
+   "topic": "Bioenergetics: photosynthesis and respiration",
+   "q": "A yeast culture respires anaerobically in a 250 cm³ fermenter producing ethanol and CO₂. If 1.2 mol of glucose are fermented by yeast to 2 ethanol + 2 CO₂ per glucose, how many moles of CO₂ are produced and how many total moles of ethanol are produced?",
+   "options": [
+    "2.4 mol CO₂ and 1.2 mol ethanol.",
+    "2.4 mol CO₂ and 2.4 mol ethanol.",
+    "1.2 mol CO₂ and 2.4 mol ethanol.",
+    "4.8 mol CO₂ and 4.8 mol ethanol."
+   ],
+   "answer": 1,
+   "explanation": "Fermentation equation: 1 glucose → 2 ethanol + 2 CO₂, so 1.2 mol glucose produces 2 × 1.2 = 2.4 mol CO₂ and 2 × 1.2 = 2.4 mol ethanol. The other options misapply the stoichiometry."
+  },
+  {
+   "n": 25,
+   "topic": "Bioenergetics: photosynthesis and respiration",
+   "q": "A student records the rate of photosynthesis (oxygen produced per minute) at different light intensities and plots a curve that rises then levels off. Which factor most likely limits the rate of photosynthesis at the plateau (highest light intensities)?",
+   "options": [
+    "Soil pH becomes acidic at high light intensities and blocks photon absorption.",
+    "Availability of oxygen becomes limiting so the light reactions stop.",
+    "Chlorophyll concentration in each chloroplast decreases with more light, so no more absorption is possible.",
+    "Carbon dioxide concentration or enzyme activity in the Calvin cycle becomes limiting so increasing light gives no further increase."
+   ],
+   "answer": 3,
+   "explanation": "At high light, another factor such as CO₂ concentration or Calvin cycle enzyme capacity becomes limiting, causing the plateau. Oxygen is a product, not limiting photosynthesis; chlorophyll concentration does not decrease with more light, and soil pH does not suddenly change with light to block photon absorption."
+  },
+  {
+   "n": 26,
+   "topic": "Cell biology",
+   "q": "A thin section of leaf is examined under a light microscope. Which cell structure visible at this magnification most directly indicates the cell is photosynthetic?",
+   "options": [
+    "Large central vacuole since only leaf cells have vacuoles.",
+    "Cellulose cell wall because only photosynthetic cells have walls.",
+    "Chloroplasts visible as green oval organelles containing chlorophyll.",
+    "Ribosomes because they are unique to photosynthetic cells."
+   ],
+   "answer": 2,
+   "explanation": "Chloroplasts containing chlorophyll are the organelles of photosynthesis and are visible under a light microscope in many stained or fresh preparations. Cell walls and vacuoles occur in many plant cells not solely photosynthetic ones, and ribosomes are too small to be seen with a light microscope and are not unique to photosynthetic cells."
+  },
+  {
+   "n": 27,
+   "topic": "Cell biology",
+   "q": "A scientist measures diffusion of dye across two cubes of agar tissue. Cube A has side length 1.0 mm and cube B has side length 2.0 mm. Assuming diffusion distance is proportional to side length, which statement compares the surface area:volume ratio (SA:V) and diffusion rate per unit volume between the cubes?",
+   "options": [
+    "Both cubes have the same SA:V so diffusion per unit volume is identical.",
+    "Cube A has smaller SA:V but still diffuses faster per unit volume because it has less mass.",
+    "Cube A has a larger SA:V and therefore a higher diffusion rate per unit volume than cube B; specifically SA:V for A is 6 mm²:1 mm³ = 6 mm⁻¹ and for B is 6×(2²)/(2³) = 3 mm⁻¹.",
+    "Cube B has larger SA:V so diffusion per unit volume is faster in B than in A."
+   ],
+   "answer": 2,
+   "explanation": "Surface area scales with side² and volume with side³; for a 1 mm cube SA = 6 mm² and volume = 1 mm³ so SA:V = 6 mm⁻¹. For 2 mm cube SA = 24 mm² and volume = 8 mm³ so SA:V = 3 mm⁻¹. Higher SA:V in the smaller cube gives faster diffusion per unit volume. The other options misstate the scaling relationships."
+  },
+  {
+   "n": 28,
+   "topic": "Homeostasis and response",
+   "q": "Which statement best distinguishes type 1 diabetes from type 2 diabetes in terms of cause and usual first-line treatment?",
+   "options": [
+    "Type 2 diabetes is always caused by eating too much sugar and can only be treated by removing sugar from the diet, whereas type 1 is a childhood infection treated with antibiotics.",
+    "Type 1 diabetes is caused by insulin resistance and is treated with diet and exercise; type 2 is caused by lack of insulin and needs insulin injections first.",
+    "Type 1 and type 2 diabetes are both caused by the same problem (not enough insulin production) and are treated in the same way with insulin injections.",
+    "Type 1 diabetes is caused by destruction of pancreatic β cells and is usually treated with insulin injections; type 2 is caused by cells becoming less responsive to insulin and is usually managed first with diet, exercise and sometimes oral drugs."
+   ],
+   "answer": 3,
+   "explanation": "The correct statement matches GCSE coverage: type 1 results from autoimmune destruction of insulin-producing β cells so patients need insulin injections, while type 2 involves reduced response to insulin (insulin resistance) and is initially managed with lifestyle changes and possibly oral medication. The wrong options confuse causes and treatments, claim both types are identical, or assert incorrect causes (infection, only sugar intake) or incorrect treatments (antibiotics)."
+  },
+  {
+   "n": 29,
+   "topic": "Bioenergetics: photosynthesis and respiration",
+   "q": "A student measures the rate of photosynthesis (volume of O₂ produced per minute) for an aquatic plant using a fixed lamp. At a lamp distance of 20 cm the rate is 12 cm³ O₂ min⁻¹. The student moves the lamp to 40 cm. Assuming the lamp acts as a point source and light is the only limiting factor, what rate should the student expect at 40 cm?",
+   "options": [
+    "6 cm³ O₂ min⁻¹",
+    "1.5 cm³ O₂ min⁻¹",
+    "12 cm³ O₂ min⁻¹",
+    "3 cm³ O₂ min⁻¹"
+   ],
+   "answer": 3,
+   "explanation": "Light intensity from a point source follows an inverse square law, so intensity at 40 cm = (1/40²) relative to (1/20²). The ratio is (1/1600) ÷ (1/400) = 1/4, so the photosynthesis rate falls to 1/4 of 12 cm³ min⁻¹ = 3 cm³ min⁻¹. The answer 6 cm³ min⁻¹ incorrectly assumes intensity halves with distance, 12 cm³ min⁻¹ assumes no change, and 1.5 cm³ min⁻¹ would be 1/8 of the original, which is not given by the inverse square law."
+  },
+  {
+   "n": 30,
+   "topic": "Homeostasis and response",
+   "q": "A person moves from a warm indoor room at 20°C to outside air at 0°C. Which combination of physiological responses will most help the person conserve heat and raise core body temperature?",
+   "options": [
+    "Decreased shivering, vasoconstriction of skin arterioles, increased sweat production, relaxation of body hairs",
+    "Increased shivering, vasodilation of skin arterioles, increased sweat production, erection of body hairs",
+    "Increased shivering, vasoconstriction of skin arterioles, decreased sweat production, erection of body hairs (piloerection)",
+    "Increased sweating, vasodilation of skin arterioles, decreased shivering, relaxation of body hairs"
+   ],
+   "answer": 2,
+   "explanation": "To conserve heat in cold conditions the body increases shivering (muscle contractions generate heat), constricts arterioles near the skin to reduce blood flow and heat loss, reduces sweat production to avoid evaporative cooling, and erects hairs to trap insulating air. Options that state vasodilation or increased sweating are wrong because those responses increase heat loss rather than conserve it."
+  }
+ ]
+}

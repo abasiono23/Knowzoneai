@@ -1,0 +1,791 @@
+{
+ "id": "neco-geography-p6",
+ "exam": "neco",
+ "subject": "geography",
+ "year": null,
+ "number": 6,
+ "source": "ai",
+ "minutes": 60,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Map reading and scale",
+   "q": "A road measures 6.8 cm on a map with scale 1:150,000. What is the actual length of the road in kilometres?",
+   "options": [
+    "102 km",
+    "1.02 km",
+    "4.53 km",
+    "10.2 km"
+   ],
+   "answer": 3,
+   "explanation": "The ground distance is 6.8 × 150,000 cm = 1,020,000 cm. Dividing by 100,000 gives 10.2 km. The value 102 km results from a decimal-place error, while 1.02 km is ten times too small."
+  },
+  {
+   "n": 2,
+   "topic": "Map reading and scale",
+   "q": "A school is located at grid reference 342567 on a topographic map. What is the easting of the school?",
+   "options": [
+    "34",
+    "342",
+    "67",
+    "567"
+   ],
+   "answer": 1,
+   "explanation": "In a six-figure grid reference, the first three digits give the easting and the last three give the northing. Therefore the easting is 342, while 567 is the northing. The shorter figures 34 and 67 do not represent the full easting."
+  },
+  {
+   "n": 3,
+   "topic": "Geography of Nigeria",
+   "q": "The vegetation type commonly found along the coastal creeks and lagoons of southern Nigeria, where trees have breathing roots, is",
+   "options": [
+    "tropical rainforest",
+    "freshwater swamp",
+    "derived savanna",
+    "mangrove swamp"
+   ],
+   "answer": 3,
+   "explanation": "Mangrove swamp vegetation grows in saline, waterlogged coastal areas and is recognised by trees with breathing roots, called pneumatophores. Tropical rainforest occurs on well-drained land farther inland, while freshwater swamp is less saline. Derived savanna is a transition vegetation in the interior."
+  },
+  {
+   "n": 4,
+   "topic": "Geography of Nigeria",
+   "q": "The mineral that made Jos a major mining centre in colonial Nigeria is",
+   "options": [
+    "coal",
+    "gold",
+    "tin",
+    "limestone"
+   ],
+   "answer": 2,
+   "explanation": "Jos and the adjoining Plateau tin fields were important sources of cassiterite, the ore of tin, during the colonial period. Coal is mined chiefly around Enugu, and neither gold nor limestone was the mineral that established Jos as a mining centre."
+  },
+  {
+   "n": 5,
+   "topic": "Transport and trade",
+   "q": "The historical trans-Saharan trade between West Africa and North Africa depended mainly on which animal for transporting goods across the desert?",
+   "options": [
+    "donkey",
+    "camel",
+    "horse",
+    "ox"
+   ],
+   "answer": 1,
+   "explanation": "Camels were well adapted to desert conditions and carried goods across the Sahara in caravans. Horses, oxen and donkeys are less suited to long journeys across hot, dry desert terrain. This made the camel central to the trans-Saharan trade."
+  },
+  {
+   "n": 6,
+   "topic": "The earth and the solar system",
+   "q": "The apparent daily movement of stars from east to west is caused by the",
+   "options": [
+    "revolution of the Earth around the Sun",
+    "rotation of the Earth from west to east",
+    "movement of the stars around the Earth",
+    "rotation of the Moon around the Earth"
+   ],
+   "answer": 1,
+   "explanation": "As the Earth rotates from west to east, the stars seem to move across the sky in the opposite direction, from east to west. The Earth's revolution around the Sun causes the annual change in the night sky, not the daily apparent motion. The Moon's orbit affects its own apparent movement but not the daily motion of the stars."
+  },
+  {
+   "n": 7,
+   "topic": "Population",
+   "q": "A local government area in Niger State has a population of 540,000 and a land area of 1,800 km². What is its population density?",
+   "options": [
+    "30 persons per km²",
+    "3,000 persons per km²",
+    "300 persons per km²",
+    "600 persons per km²"
+   ],
+   "answer": 2,
+   "explanation": "Population density is obtained by dividing the population by the land area: 540,000 ÷ 1,800 = 300 persons per km². An answer such as 30 persons per km² comes from dropping a zero, while 600 persons per km² would result from using only half the area."
+  },
+  {
+   "n": 8,
+   "topic": "Population",
+   "q": "In a town in Oyo State, 3,000 people are aged below 15 years, 12,000 are aged 15–64 years, and 2,000 are aged 65 years and above. Calculate the dependency ratio per 100 persons of working age.",
+   "options": [
+    "41.7 dependents per 100 working-age persons",
+    "16.7 dependents per 100 working-age persons",
+    "141.7 dependents per 100 working-age persons",
+    "25.0 dependents per 100 working-age persons"
+   ],
+   "answer": 0,
+   "explanation": "The dependent population is 3,000 + 2,000 = 5,000, and the working-age population is 12,000. The dependency ratio is (5,000 ÷ 12,000) × 100 = 41.7 dependents per 100 working-age persons. Using only those aged below 15 gives 25.0, which ignores the elderly dependents."
+  },
+  {
+   "n": 9,
+   "topic": "Population",
+   "q": "Which factor mainly accounts for the large proportion of young people in Nigeria's population pyramid?",
+   "options": [
+    "A persistently high birth rate",
+    "A high rate of immigration from neighbouring countries",
+    "A long average life expectancy",
+    "A very low infant mortality rate"
+   ],
+   "answer": 0,
+   "explanation": "Nigeria's population pyramid has a broad base because the birth rate has remained high over many years, producing a large number of children relative to older age groups. Immigration is small compared with births, and low infant mortality or long life expectancy would not by themselves create a broad base."
+  },
+  {
+   "n": 10,
+   "topic": "Environmental hazards and conservation",
+   "q": "Which measure is most appropriate for protecting a wildlife reserve in Nigeria from illegal hunting?",
+   "options": [
+    "Converting part of the reserve to farmland for settlers",
+    "Allowing unrestricted grazing of livestock inside the reserve",
+    "Employing trained rangers and involving nearby communities in conservation",
+    "Permitting commercial logging around the reserve boundary"
+   ],
+   "answer": 2,
+   "explanation": "Trained rangers can enforce protection rules, while involving nearby communities gives local people a stake in conserving the reserve and reduces poaching. Allowing grazing, farming or logging increases pressure on the reserve rather than protecting it."
+  },
+  {
+   "n": 11,
+   "topic": "Environmental hazards and conservation",
+   "q": "A community in Osun State wants to reduce pollution of a stream where residents wash and fetch water. Which action is most suitable?",
+   "options": [
+    "Dumping refuse farther downstream so it is carried away",
+    "Providing waste collection points and treating sewage before it enters the stream",
+    "Burning household waste along the stream bank",
+    "Using the stream for disposal of used engine oil"
+   ],
+   "answer": 1,
+   "explanation": "Collecting waste and treating sewage before it reaches the stream remove pollutants at source and protect the water used by residents. Carrying refuse downstream, burning waste beside the stream or pouring engine oil into it still allows harmful substances to enter the water."
+  },
+  {
+   "n": 12,
+   "topic": "Settlements",
+   "q": "A village has a primary school and a small market, while a nearby town has a university, a general hospital and a regional market. This difference best illustrates",
+   "options": [
+    "a dispersed settlement pattern",
+    "urban decay",
+    "a conurbation",
+    "a difference in the settlement hierarchy"
+   ],
+   "answer": 3,
+   "explanation": "The village and town provide different numbers and levels of services, which is the basis of a settlement hierarchy. A university, general hospital and regional market serve a wider area than a primary school and small market, placing the town higher in the hierarchy. Dispersed pattern, urban decay and conurbation describe other settlement features, not the ranking of services."
+  },
+  {
+   "n": 13,
+   "topic": "Latitude, longitude and time",
+   "q": "A town on longitude 45°E records a local solar time of 10:40. What is the Greenwich Mean Time at the same moment?",
+   "options": [
+    "16:40",
+    "04:40",
+    "13:40",
+    "07:40"
+   ],
+   "answer": 3,
+   "explanation": "Longitude 45°E is 45 ÷ 15 = 3 hours ahead of Greenwich Mean Time. To obtain GMT, subtract 3 hours from the local solar time: 10:40 − 3:00 = 07:40. Adding 3 hours would give 13:40, which goes in the wrong direction."
+  },
+  {
+   "n": 14,
+   "topic": "Landforms and processes",
+   "q": "In the dry season, granite outcrops around Kano peel off in curved layers after repeated heating by day and cooling at night. This process of weathering is called...",
+   "options": [
+    "carbonation",
+    "oxidation",
+    "abrasion",
+    "exfoliation"
+   ],
+   "answer": 3,
+   "explanation": "Repeated heating and cooling makes the outer layers of rock expand and contract at different rates, so they peel off in curved shells; this is exfoliation. Carbonation acts mainly on limestone, oxidation affects iron-bearing minerals, and abrasion is the wearing away of rock by moving materials."
+  },
+  {
+   "n": 15,
+   "topic": "Landforms and processes",
+   "q": "A tributary valley with a floor higher than that of the main valley, so that the tributary enters the main valley by a steep fall, is called a...",
+   "options": [
+    "hanging valley",
+    "incised meander",
+    "delta",
+    "flood plain"
+   ],
+   "answer": 0,
+   "explanation": "A hanging valley is left above the floor of the main valley, often because the main valley was deepened more rapidly, and its stream may descend as a waterfall. A flood plain is a low flat area of deposition, an incised meander is a deeply cut river bend, and a delta is a depositional feature at a river mouth."
+  },
+  {
+   "n": 16,
+   "topic": "Agriculture",
+   "q": "A farmer at Minna plants groundnut in rotation with maize mainly because groundnut...",
+   "options": [
+    "prevents all forms of soil erosion",
+    "releases a poison that kills soil pests",
+    "adds nitrogen to the soil through root nodules",
+    "grows faster than maize"
+   ],
+   "answer": 2,
+   "explanation": "Groundnut is a legume, and bacteria in nodules on its roots fix nitrogen, which improves soil fertility for the next crop. It does not make maize grow faster by nature, kill all soil pests, or stop every kind of erosion."
+  },
+  {
+   "n": 17,
+   "topic": "Agriculture",
+   "q": "A farmer in Kano State applies farmyard manure to his field every year. Compared with NPK fertilizer, farmyard manure is more important for...",
+   "options": [
+    "making the soil strongly acidic",
+    "improving soil structure and water-holding capacity",
+    "supplying nutrients in a highly concentrated form",
+    "killing weeds in the field"
+   ],
+   "answer": 1,
+   "explanation": "Farmyard manure adds organic matter, which improves soil structure, aeration and water retention, though its nutrient concentration is low. NPK fertilizer supplies nutrients in concentrated form but does not improve soil structure in the same way, and manure does not make soil strongly acidic or kill weeds."
+  },
+  {
+   "n": 18,
+   "topic": "Agriculture",
+   "q": "A farmer in Ogbomoso cultivates a gentle slope and wants to reduce soil erosion. The most suitable practice is to...",
+   "options": [
+    "plough along the contour",
+    "burn crop residues on the slope",
+    "clear all vegetation from the plot",
+    "plough straight up and down the slope"
+   ],
+   "answer": 0,
+   "explanation": "Ploughing along the contour creates ridges across the slope that slow runoff and trap soil, reducing erosion. Ploughing up and down the slope, removing vegetation, and burning residues all expose the soil and increase erosion."
+  },
+  {
+   "n": 19,
+   "topic": "Rocks and minerals",
+   "q": "A soft mineral with a greasy feel that is used in making talcum powder is...",
+   "options": [
+    "talc",
+    "graphite",
+    "gypsum",
+    "quartz"
+   ],
+   "answer": 0,
+   "explanation": "Talc is very soft, feels greasy, and is the main mineral used in talcum powder. Graphite is also soft and greasy but is used in pencils and lubricants; gypsum is used in plaster, and quartz is hard."
+  },
+  {
+   "n": 20,
+   "topic": "Rocks and minerals",
+   "q": "Which grade of coal has the highest carbon content and gives the greatest heat per unit mass?",
+   "options": [
+    "lignite",
+    "anthracite",
+    "peat",
+    "bituminous coal"
+   ],
+   "answer": 1,
+   "explanation": "Anthracite is the highest grade of coal, with the greatest carbon content and heating value. Bituminous coal and lignite are lower grades, while peat is an earlier stage of coal formation."
+  },
+  {
+   "n": 21,
+   "topic": "Industry and natural resources",
+   "q": "A sugar refinery is best located close to sugar-cane plantations mainly because sugar cane...",
+   "options": [
+    "requires highly skilled labour found only in large cities",
+    "is bulky and loses sugar content soon after harvesting",
+    "is obtained mainly from imported minerals",
+    "is light and can be stored for a long time without loss"
+   ],
+   "answer": 1,
+   "explanation": "Sugar cane is bulky and its sucrose content falls after harvesting, so it should be crushed and processed near where it is grown. It is not light or long-storing, it is a crop and not a mineral, and the key location factor is not city-based skilled labour."
+  },
+  {
+   "n": 22,
+   "topic": "Industry and natural resources",
+   "q": "The use of solar-powered pumps for rural water supply in northern Nigeria is favoured mainly by the area's...",
+   "options": [
+    "large coal reserves",
+    "high and reliable rainfall",
+    "strong tidal currents",
+    "abundant sunshine and clear skies"
+   ],
+   "answer": 3,
+   "explanation": "Solar pumps need strong, regular sunshine, and northern Nigeria has abundant solar radiation and many clear days. Rainfall is not the energy source, tidal currents occur along the coast, and coal reserves do not power solar pumps."
+  },
+  {
+   "n": 23,
+   "topic": "Weather and climate",
+   "q": "At Ilorin, the air temperature is 30°C and the saturation vapour pressure is 30 hPa. If the actual vapour pressure is 18 hPa, what is the relative humidity?",
+   "options": [
+    "40%",
+    "60%",
+    "167%",
+    "38%"
+   ],
+   "answer": 1,
+   "explanation": "Relative humidity = (actual vapour pressure ÷ saturation vapour pressure) × 100 = (18 ÷ 30) × 100 = 60%. The value 40% comes from mistaking the difference between the two pressures for a percentage of saturation, while 167% reverses the division."
+  },
+  {
+   "n": 24,
+   "topic": "Weather and climate",
+   "q": "A rectangular plot at Ibadan measuring 20 m by 30 m receives 40 mm of rain. What volume of rainwater falls on the plot?",
+   "options": [
+    "24 m³",
+    "240 m³",
+    "2.4 m³",
+    "12 m³"
+   ],
+   "answer": 0,
+   "explanation": "Area = 20 m × 30 m = 600 m², and 40 mm = 0.04 m. Volume = 600 × 0.04 = 24 m³. Using 0.004 m instead of 0.04 m gives 2.4 m³."
+  },
+  {
+   "n": 25,
+   "topic": "Weather and climate",
+   "q": "The annual rainfall total of Calabar is much higher than that of Sokoto mainly because Calabar",
+   "options": [
+    "is higher above sea level and therefore has stronger condensation",
+    "is closer to the Sahara and receives more condensation nuclei",
+    "is nearer the coast and receives moist south-westerly winds for a longer period",
+    "lies in the rain shadow of the Cameroon Mountains"
+   ],
+   "answer": 2,
+   "explanation": "Calabar lies in the coastal belt, where moisture-bearing south-westerly winds from the Atlantic produce rain over a long wet season; Sokoto is farther inland in the drier savanna. Altitude and rain-shadow effects are not the main reasons for the difference."
+  },
+  {
+   "n": 26,
+   "topic": "Vegetation and soils",
+   "q": "In a typical soil profile, the layer consisting mainly of weathered rock fragments immediately above solid bedrock is known as the",
+   "options": [
+    "O horizon",
+    "A horizon",
+    "B horizon",
+    "C horizon"
+   ],
+   "answer": 3,
+   "explanation": "The correct layer is the parent-material horizon, made up of partly weathered rock fragments below the subsoil and above solid bedrock. The topsoil is the surface mineral layer, the subsoil lies below it, and the organic layer lies at the surface."
+  },
+  {
+   "n": 27,
+   "topic": "Vegetation and soils",
+   "q": "Tall trees in the tropical rainforest of southern Nigeria commonly possess large buttress roots. This feature mainly enables the trees to",
+   "options": [
+    "remain upright in shallow, leached soils by increasing support at the base",
+    "absorb water directly from the atmosphere",
+    "store starch for use in the dry season",
+    "reduce transpiration during the dry season"
+   ],
+   "answer": 0,
+   "explanation": "Buttress roots widen the base of tall rainforest trees and give them firm anchorage in deep but nutrient-poor, often shallow-rooted tropical soils. They do not absorb atmospheric water or act mainly as water-storage organs."
+  },
+  {
+   "n": 28,
+   "topic": "Vegetation and soils",
+   "q": "In the Guinea savanna, many grasses appear dry and dead in the dry season but grow again after the first rains because",
+   "options": [
+    "fresh seeds are carried in every year from the rainforest",
+    "their leaves remain green beneath the soil surface",
+    "food is stored in underground rhizomes and rootstocks",
+    "the harmattan haze supplies water to the roots"
+   ],
+   "answer": 2,
+   "explanation": "Savanna grasses survive drought by dying back above ground while storing food in underground stems and roots; new shoots arise when moisture returns. Seeds may also germinate, but regrowth of established grasses depends mainly on these underground food stores."
+  },
+  {
+   "n": 29,
+   "topic": "Map reading and scale",
+   "q": "On a map with scale 1:50,000, two points are 4 cm apart. Their heights are 450 m and 650 m. What is the average gradient between them?",
+   "options": [
+    "1 in 5",
+    "1 in 20",
+    "1 in 10",
+    "1 in 100"
+   ],
+   "answer": 2,
+   "explanation": "Horizontal ground distance = 4 cm × 50,000 = 200,000 cm = 2,000 m. Vertical difference = 650 m − 450 m = 200 m, so the gradient is 200 m ÷ 2,000 m = 1/10, or 1 in 10."
+  },
+  {
+   "n": 30,
+   "topic": "Geography of Nigeria",
+   "q": "The River Benue rises from the Adamawa Highlands in which country before entering Nigeria?",
+   "options": [
+    "Cameroon",
+    "Benin",
+    "Chad",
+    "Niger"
+   ],
+   "answer": 0,
+   "explanation": "The Benue takes its source from the Adamawa Plateau in Cameroon and flows westwards into Nigeria, where it joins the Niger at Lokoja. Chad, Niger and Benin do not contain the source of the Benue."
+  },
+  {
+   "n": 31,
+   "topic": "Transport and trade",
+   "q": "A Nigerian company sells 600 tonnes of cocoa beans to a buyer in Belgium. In Nigeria’s external trade, this transaction is best classified as",
+   "options": [
+    "entrepôt trade in a raw material",
+    "import trade in a manufactured good",
+    "export trade in a primary product",
+    "invisible trade in a service"
+   ],
+   "answer": 2,
+   "explanation": "Cocoa beans are raw agricultural produce sold to another country, so the sale earns foreign exchange as an export of a primary product. Import trade would mean buying goods from abroad, while invisible trade refers to services rather than goods."
+  },
+  {
+   "n": 32,
+   "topic": "Transport and trade",
+   "q": "The main advantage of containerisation in Nigeria’s foreign trade is that it",
+   "options": [
+    "reduces handling delays and damage to goods",
+    "allows goods to move without shipping documents",
+    "increases the number of dock workers required",
+    "removes the need for customs inspection"
+   ],
+   "answer": 0,
+   "explanation": "Containers allow cargo to be packed once and moved by ship, rail or road with less manual handling, reducing delays, theft and breakage. Customs inspection and documentation are still required; containerisation does not remove them."
+  },
+  {
+   "n": 33,
+   "topic": "Transport and trade",
+   "q": "In a year, a country exported goods worth ₦84 billion and imported goods worth ₦105 billion. What was the country’s balance of trade?",
+   "options": [
+    "A surplus of ₦189 billion",
+    "A surplus of ₦21 billion",
+    "A deficit of ₦21 billion",
+    "A deficit of ₦189 billion"
+   ],
+   "answer": 2,
+   "explanation": "The value of imports exceeded exports by ₦105 billion − ₦84 billion = ₦21 billion, so the country had a trade deficit. A surplus would occur if exports were greater than imports, and adding the two values is not the balance of trade."
+  },
+  {
+   "n": 34,
+   "topic": "The earth and the solar system",
+   "q": "Which observation is the strongest evidence that the Earth rotates on its axis?",
+   "options": [
+    "The Moon shows different phases within a month",
+    "The Sun reaches a higher noon altitude in June than in December",
+    "A Foucault pendulum changes the direction of its swing during the day",
+    "A leap year has one extra day"
+   ],
+   "answer": 2,
+   "explanation": "A Foucault pendulum appears to change the direction of its swing because the Earth turns beneath it, providing direct evidence of rotation. Moon phases and the Sun’s changing noon altitude are explained mainly by the Moon’s orbit and the Earth’s axial tilt and revolution, not by daily rotation."
+  },
+  {
+   "n": 35,
+   "topic": "Population",
+   "q": "Over a ten-year period, the population of a town in Oyo State increased from 80,000 to 96,000. Using simple annual growth, what was the average annual growth rate?",
+   "options": [
+    "16%",
+    "20%",
+    "1.6%",
+    "2.0%"
+   ],
+   "answer": 3,
+   "explanation": "The increase was 96,000 − 80,000 = 16,000. As a percentage of the original population, this is (16,000 ÷ 80,000) × 100 = 20% over ten years, giving an average simple annual rate of 20% ÷ 10 = 2.0%."
+  },
+  {
+   "n": 36,
+   "topic": "Environmental hazards and conservation",
+   "q": "To reduce desert encroachment in northern Nigeria, the most appropriate measure is to",
+   "options": [
+    "clear shrubs for large-scale mechanised farming",
+    "increase the number of grazing animals",
+    "allow bush burning every dry season",
+    "establish shelter belts and protect existing trees"
+   ],
+   "answer": 3,
+   "explanation": "Shelter belts and protected trees reduce wind speed, trap moisture and help stabilise the soil, slowing the advance of desert conditions. Removing vegetation or allowing heavy grazing and burning makes the land more exposed to erosion and desertification."
+  },
+  {
+   "n": 37,
+   "topic": "Settlements",
+   "q": "Which of the following is a pull factor that encourages rural-urban migration in Nigeria?",
+   "options": [
+    "Overcrowded city schools",
+    "High cost of city accommodation",
+    "Availability of higher education institutions in cities",
+    "Land shortage in city suburbs"
+   ],
+   "answer": 2,
+   "explanation": "People are attracted to cities by opportunities such as higher education institutions, which act as a pull factor. High rent, overcrowded schools and land shortage are disadvantages that may discourage migration rather than attract people."
+  },
+  {
+   "n": 38,
+   "topic": "Latitude, longitude and time",
+   "q": "Places on different longitudes have different local solar times mainly because the Earth",
+   "options": [
+    "revolves round the Sun",
+    "is tilted on its axis",
+    "rotates on its axis from west to east",
+    "is spherical in shape"
+   ],
+   "answer": 2,
+   "explanation": "As the Earth rotates from west to east, places farther east experience noon earlier than places farther west. This rotation produces the 15° per hour relationship used in local solar time. Revolution and axial tilt mainly affect seasons and day length."
+  },
+  {
+   "n": 39,
+   "topic": "Landforms and processes",
+   "q": "The process by which rainwater containing dissolved carbon dioxide wears away limestone to form caves and underground rivers is called",
+   "options": [
+    "oxidation",
+    "exfoliation",
+    "carbonation",
+    "abrasion"
+   ],
+   "answer": 2,
+   "explanation": "Carbonation is the chemical weathering of limestone by weak carbonic acid, which dissolves the rock and can produce caves and underground rivers. Oxidation affects iron-rich rocks, exfoliation is peeling due to temperature changes, and abrasion is physical wearing by moving materials."
+  },
+  {
+   "n": 40,
+   "topic": "Landforms and processes",
+   "q": "Which type of mass movement is indicated by tilted fences and telephone poles on a gentle slope?",
+   "options": [
+    "Mudflow",
+    "Rockfall",
+    "Landslide",
+    "Soil creep"
+   ],
+   "answer": 3,
+   "explanation": "Soil creep is a very slow downslope movement of soil and weathered rock, so structures on the slope gradually become tilted. Landslides, rockfalls and mudflows are generally much faster forms of mass movement."
+  },
+  {
+   "n": 41,
+   "topic": "Agriculture",
+   "q": "A farmer in Kaduna sold 1,200 kg of maize at ₦450 per kg. The cost of inputs and labour was ₦180,000. What profit did the farmer make?",
+   "options": [
+    "₦180,000",
+    "₦720,000",
+    "₦360,000",
+    "₦540,000"
+   ],
+   "answer": 2,
+   "explanation": "Total revenue is 1,200 × ₦450 = ₦540,000. Profit is revenue minus cost, so ₦540,000 − ₦180,000 = ₦360,000. The figure ₦540,000 is the total revenue before deducting costs."
+  },
+  {
+   "n": 42,
+   "topic": "Agriculture",
+   "q": "Which of the following is an example of biological pest control in a maize field?",
+   "options": [
+    "Introducing ladybirds to feed on aphids",
+    "Burning all crop residues after harvest",
+    "Spraying a broad-spectrum insecticide",
+    "Uprooting maize plants attacked by stem borers"
+   ],
+   "answer": 0,
+   "explanation": "Biological pest control uses natural enemies of pests, such as ladybirds feeding on aphids. Spraying insecticide is chemical control, while burning residues and uprooting attacked plants are cultural or physical measures."
+  },
+  {
+   "n": 43,
+   "topic": "Rocks and minerals",
+   "q": "Which rock is formed when magma cools slowly deep below the Earth's surface, allowing large crystals to develop?",
+   "options": [
+    "Basalt",
+    "Shale",
+    "Limestone",
+    "Granite"
+   ],
+   "answer": 3,
+   "explanation": "Granite is an intrusive igneous rock formed from magma that cools slowly underground, giving large crystals time to grow. Basalt cools quickly at the surface and is usually fine-grained, while limestone and shale are sedimentary rocks."
+  },
+  {
+   "n": 44,
+   "topic": "Industry and natural resources",
+   "q": "A cocoa exporter in Ondo earns less foreign exchange from selling raw cocoa beans than from selling cocoa butter and powder mainly because",
+   "options": [
+    "foreign buyers do not accept processed cocoa from Nigeria",
+    "cocoa beans cannot be stored before export",
+    "cocoa beans are more expensive to transport by sea than processed products",
+    "processed cocoa products have higher value added"
+   ],
+   "answer": 3,
+   "explanation": "Processing cocoa into butter and powder adds value, so the processed products generally sell at higher prices than raw beans. Raw beans can be stored and transported, and the lower earnings come mainly from exporting without much processing."
+  },
+  {
+   "n": 45,
+   "topic": "Industry and natural resources",
+   "q": "Which of the following raw materials used in Nigerian industries is renewable?",
+   "options": [
+    "Tin ore",
+    "Natural gas",
+    "Rubber latex",
+    "Limestone"
+   ],
+   "answer": 2,
+   "explanation": "Rubber latex is obtained from rubber trees and can be replenished through continued tapping and replanting, so it is renewable. Limestone, tin ore and natural gas are finite mineral resources."
+  },
+  {
+   "n": 46,
+   "topic": "Weather and climate",
+   "q": "The line on a map joining places with equal duration of sunshine is called an",
+   "options": [
+    "isobar",
+    "isohyet",
+    "isotherm",
+    "isohel"
+   ],
+   "answer": 3,
+   "explanation": "An isohel joins places having equal hours of sunshine. Isohyets join places of equal rainfall, isobars join places of equal pressure, and isotherms join places of equal temperature."
+  },
+  {
+   "n": 47,
+   "topic": "Weather and climate",
+   "q": "The harmattan wind over northern Nigeria is usually dry because it",
+   "options": [
+    "blows from the Sahara Desert",
+    "rises over the Jos Plateau",
+    "crosses the warm Atlantic Ocean",
+    "originates from the Gulf of Guinea"
+   ],
+   "answer": 0,
+   "explanation": "Harmattan air is dry because it comes from the Sahara Desert and picks up little moisture along its path over West Africa. Winds from the Atlantic Ocean or Gulf of Guinea would be moist rather than dry."
+  },
+  {
+   "n": 48,
+   "topic": "Weather and climate",
+   "q": "Which condition is most likely to lead to the formation of radiation fog in Jos during the early morning?",
+   "options": [
+    "Heavy cloud cover trapping heat near the ground",
+    "Clear, calm night with rapid cooling of the ground",
+    "Strong winds mixing warm and cold air",
+    "Hot afternoon with high evaporation"
+   ],
+   "answer": 1,
+   "explanation": "Radiation fog forms when the ground cools rapidly on a clear, calm night, chilling the air just above it to its dew point. Strong wind or cloud cover would reduce cooling, and a hot afternoon is more likely to produce heat haze than fog."
+  },
+  {
+   "n": 49,
+   "topic": "Vegetation and soils",
+   "q": "The dark, decomposed organic matter in soil that improves water retention and fertility is called",
+   "options": [
+    "bedrock",
+    "laterite",
+    "alluvium",
+    "humus"
+   ],
+   "answer": 3,
+   "explanation": "Humus is dark decomposed organic matter that improves soil fertility and water retention. Laterite is a soil type rich in iron, bedrock is solid rock below the soil, and alluvium is material deposited by water."
+  },
+  {
+   "n": 50,
+   "topic": "Vegetation and soils",
+   "q": "The practice of growing alternate strips of crops and grasses across a slope to reduce soil erosion is called",
+   "options": [
+    "crop rotation",
+    "mulching",
+    "strip cropping",
+    "bush fallowing"
+   ],
+   "answer": 2,
+   "explanation": "Strip cropping uses alternate strips of crops and grasses, often across a slope, to slow runoff and trap soil. Mulching covers the soil surface, crop rotation changes crops between seasons, and bush fallowing leaves land uncultivated for a period."
+  },
+  {
+   "n": 51,
+   "topic": "Map reading and scale",
+   "q": "On a topographic map, the figure 1,250 written beside a point is a ...",
+   "options": [
+    "spot height",
+    "representative fraction",
+    "contour interval",
+    "bearing"
+   ],
+   "answer": 0,
+   "explanation": "A spot height is the exact elevation of a point, usually shown as a number beside a dot or point on a topographic map. Contour interval is the vertical difference between adjacent contour lines, and bearing is an angular direction."
+  },
+  {
+   "n": 52,
+   "topic": "Map reading and scale",
+   "q": "A map scale is stated as 1 cm represents 2.5 km. Express this scale as a representative fraction.",
+   "options": [
+    "1:250,000",
+    "1:25,000",
+    "1:2,500,000",
+    "1:250"
+   ],
+   "answer": 0,
+   "explanation": "One kilometre is 100,000 cm, so 2.5 km is 2.5 × 100,000 = 250,000 cm. Thus 1 cm on the map represents 250,000 cm on the ground, and the representative fraction is 1:250,000. A scale of 1:25,000 would represent only 0.25 km per centimetre."
+  },
+  {
+   "n": 53,
+   "topic": "Map reading and scale",
+   "q": "On a map with scale 1:250,000, a rectangular forest reserve measures 8 cm by 5 cm. What is the actual area of the reserve in square kilometres?",
+   "options": [
+    "100 km²",
+    "625 km²",
+    "250 km²",
+    "40 km²"
+   ],
+   "answer": 2,
+   "explanation": "Since 1 cm on the map represents 2.5 km on the ground, the sides are 8 × 2.5 = 20 km and 5 × 2.5 = 12.5 km. The area is 20 × 12.5 = 250 km². Using the map dimensions directly as 8 × 5 = 40 without converting with the squared scale gives an incorrect answer."
+  },
+  {
+   "n": 54,
+   "topic": "Geography of Nigeria",
+   "q": "The moist south-west wind that brings most of the rainfall to southern Nigeria originates from the ...",
+   "options": [
+    "Indian Ocean",
+    "Sahara Desert",
+    "Atlantic Ocean",
+    "Mediterranean Sea"
+   ],
+   "answer": 2,
+   "explanation": "The south-west monsoon is a moisture-laden wind from the Atlantic Ocean; it blows inland and causes heavy rainfall in southern Nigeria. The Sahara Desert is the source region of the dry north-east trade wind, not the rain-bearing south-west wind."
+  },
+  {
+   "n": 55,
+   "topic": "Geography of Nigeria",
+   "q": "The Ajaokuta Steel Company is located in which state of Nigeria?",
+   "options": [
+    "Kwara State",
+    "Benue State",
+    "Niger State",
+    "Kogi State"
+   ],
+   "answer": 3,
+   "explanation": "Ajaokuta is a town in Kogi State, on the southern side of the Niger, where the steel complex was established. Niger State lies across the river and is a common confusion because of proximity to the Niger."
+  },
+  {
+   "n": 56,
+   "topic": "Geography of Nigeria",
+   "q": "The cool climate of the Jos Plateau makes it particularly suitable for the cultivation of ...",
+   "options": [
+    "cocoa",
+    "rubber",
+    "Irish potatoes",
+    "oil palm"
+   ],
+   "answer": 2,
+   "explanation": "The Jos Plateau has lower temperatures because of its high elevation, making it suitable for temperate crops such as Irish potatoes. Cocoa, oil palm and rubber require warmer, humid lowland conditions and are grown mainly in southern Nigeria."
+  },
+  {
+   "n": 57,
+   "topic": "The earth and the solar system",
+   "q": "Which of the following is a consequence of the Earth's revolution around the Sun?",
+   "options": [
+    "Deflection of winds by the Coriolis force",
+    "Variation in the length of day and night during the year",
+    "Occurrence of day and night",
+    "Apparent daily movement of stars from east to west"
+   ],
+   "answer": 1,
+   "explanation": "As the Earth revolves around the Sun with its axis tilted, the circle of illumination shifts relative to places, causing the length of day and night to vary through the year. Day and night, the apparent daily movement of stars, and the Coriolis deflection are effects of the Earth's rotation."
+  },
+  {
+   "n": 58,
+   "topic": "Population",
+   "q": "In a town in Sokoto State, a population survey recorded 5,400 males and 6,000 females. What is the sex ratio of the town, expressed as the number of males per 100 females?",
+   "options": [
+    "90",
+    "10",
+    "900",
+    "111"
+   ],
+   "answer": 0,
+   "explanation": "The sex ratio is (5,400 ÷ 6,000) × 100 = 90 males per 100 females. The value 111 results from dividing females by males, while 900 comes from multiplying by 1,000 instead of 100."
+  },
+  {
+   "n": 59,
+   "topic": "Population",
+   "q": "In a district of Kaduna State, 1,050 live births and 330 deaths were recorded in a year. If the mid-year population was 60,000, what was the rate of natural increase per 1,000 people?",
+   "options": [
+    "1.2 per 1,000",
+    "12 per 1,000",
+    "6 per 1,000",
+    "18 per 1,000"
+   ],
+   "answer": 1,
+   "explanation": "Natural increase = 1,050 − 330 = 720. The rate is (720 ÷ 60,000) × 1,000 = 12 per 1,000. Using only births gives about 18 per 1,000, and using only deaths gives about 6 per 1,000."
+  },
+  {
+   "n": 60,
+   "topic": "Population",
+   "q": "Which development would most likely discourage rural-urban migration from a village in Kano State?",
+   "options": [
+    "Raising wages in city factories",
+    "Improving bus services between the village and the city",
+    "Establishing an irrigation scheme that provides year-round farm employment",
+    "Building more universities in Lagos"
+   ],
+   "answer": 2,
+   "explanation": "A local irrigation scheme creates year-round income and reduces the need to move to the city for work. Better transport, city universities and higher city wages make urban migration more attractive rather than discouraging it."
+  }
+ ]
+}

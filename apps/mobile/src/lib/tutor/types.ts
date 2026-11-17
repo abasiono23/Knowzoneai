@@ -52,7 +52,12 @@ export type TutorAnswer = {
   subject: string;
   /** Where the answer is grounded, e.g. "Your notes: Cell Biology". */
   sources: string[];
+  /** Knowzone's own notes and practice papers on the same thing, found by smart search. */
+  related?: RelatedLink[];
 };
+
+/** A summary (`/books/summary/…`) or a practice paper (`/exams/paper/…`) to open from an answer. */
+export type RelatedLink = { kind: 'note' | 'question'; title: string; link: string };
 
 export type Attachment = { kind: 'image' | 'pdf'; uri: string; name: string; page?: number };
 

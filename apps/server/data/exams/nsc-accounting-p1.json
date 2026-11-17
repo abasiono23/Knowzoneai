@@ -1,0 +1,401 @@
+{
+ "id": "nsc-accounting-p1",
+ "exam": "nsc",
+ "subject": "accounting",
+ "year": null,
+ "number": 1,
+ "source": "ai",
+ "minutes": 35,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Budgeting",
+   "q": "Thandi's Traders in Makhanda expects total sales of R80 000 in March, R100 000 in April and R120 000 in May. Of each month's sales, 40% is for cash and 60% is on credit. Debtors are collected as follows: 50% in the month after the sale, 45% two months after the sale and 5% is written off as bad debts. Calculate the budgeted cash receipts from sales in May.",
+   "options": [
+    "R99 600",
+    "R78 000",
+    "R134 000",
+    "R171 600"
+   ],
+   "answer": 0,
+   "explanation": "May cash receipts = May cash sales (40% × R120 000 = R48 000) + 50% of April credit sales (50% × R60 000 = R30 000) + 45% of March credit sales (45% × R48 000 = R21 600) = R99 600. The 5% bad-debt portion is not collected, and May credit sales are not received in May."
+  },
+  {
+   "n": 2,
+   "topic": "Budgeting",
+   "q": "At the end of May, Sipho's Tuck Shop had a budgeted profit of R6 000. The actual profit was R5 500, even though actual sales were higher than budgeted. How should the profit variance be reported?",
+   "options": [
+    "R500 favourable, because actual sales were higher than budgeted",
+    "R500 unfavourable, because actual profit is R500 below the budgeted profit",
+    "R11 500 favourable, because budgeted and actual profit are added together",
+    "R6 000 unfavourable, because the actual profit is lower than budget but the full budgeted amount is the variance"
+   ],
+   "answer": 1,
+   "explanation": "Profit variance = actual profit − budgeted profit = R5 500 − R6 000 = −R500, so it is R500 unfavourable. Higher sales do not make the variance favourable if costs rose enough to reduce actual profit below the budget."
+  },
+  {
+   "n": 3,
+   "topic": "Accounting concepts, GAAP and ethics",
+   "q": "A business bought equipment for R850 000. At year-end the equipment could be sold for R1 250 000, but it is shown in the financial statements at R850 000 less accumulated depreciation. Which accounting concept explains this treatment?",
+   "options": [
+    "Business entity",
+    "Historical cost",
+    "Prudence",
+    "Going concern"
+   ],
+   "answer": 1,
+   "explanation": "Under the historical cost concept, equipment is recorded at its original cost less accumulated depreciation. Market value is not used merely because it is higher, so the treatment is not explained by going concern or business entity."
+  },
+  {
+   "n": 4,
+   "topic": "Accounting concepts, GAAP and ethics",
+   "q": "The owner of Zanele Stores instructs the bookkeeper to value slow-moving inventory at its cost of R45 000 although it can only be sold for R35 000, so that profit looks better. Which combination correctly identifies the main ethics breach and the accounting principle being ignored?",
+   "options": [
+    "Confidentiality and going concern",
+    "Objectivity and business entity",
+    "Professional behaviour and matching",
+    "Integrity and prudence"
+   ],
+   "answer": 3,
+   "explanation": "Valuing inventory above its net realisable value deliberately overstates profit, which breaches integrity. Prudence requires inventory to be measured at the lower of cost and net realisable value, namely R35 000 rather than R45 000."
+  },
+  {
+   "n": 5,
+   "topic": "Internal control and auditing",
+   "q": "Which procedure provides the strongest independent control over cash received at the point of sale in a small retail shop?",
+   "options": [
+    "All cash is kept in the cash drawer and banked once a month to reduce banking costs",
+    "Only the owner knows the cash register code, so no reconciliation is needed",
+    "The cashier counts the cash at closing time and records the total in the cash book without review",
+    "A supervisor compares the cash register roll total with the cash counted and the bank deposit slip each day"
+   ],
+   "answer": 3,
+   "explanation": "Comparing the cash register roll with the cash counted and the bank deposit slip daily gives an independent check by someone other than the cashier. Keeping cash until month-end or allowing the cashier to count without review weakens control by reducing timely detection and segregation of duties."
+  },
+  {
+   "n": 6,
+   "topic": "Internal control and auditing",
+   "q": "Kopano Ltd has an external auditor. Which statement about the external auditor's responsibility is correct?",
+   "options": [
+    "The external auditor is appointed by the financial director and reports only to management",
+    "The external auditor prepares the financial statements and then audits them",
+    "The external auditor gives an independent opinion on whether the financial statements fairly present the company's financial position; the directors remain responsible for internal control",
+    "The external auditor must detect all fraud and is responsible for maintaining the company's internal control"
+   ],
+   "answer": 2,
+   "explanation": "The external auditor expresses an independent opinion on the fair presentation of the financial statements and reports to the shareholders. The directors and management remain responsible for internal control, and an audit is not a guarantee that all fraud will be detected."
+  },
+  {
+   "n": 7,
+   "topic": "Companies: financial statements",
+   "q": "The following information relates to Lindiwe Ltd on 28 February 2025:\nOrdinary share capital: R1 250 000\nRetained income on 1 March 2024: R380 000\nProfit for the year after tax: R540 000\nInterim dividends paid: R90 000\nFinal dividends declared and approved before year-end: R110 000\nCalculate ordinary shareholders' equity at 28 February 2025.",
+   "options": [
+    "R2 170 000",
+    "R2 060 000",
+    "R2 080 000",
+    "R1 970 000"
+   ],
+   "answer": 3,
+   "explanation": "Retained income at year-end = R380 000 + R540 000 − R90 000 − R110 000 = R720 000. Ordinary shareholders' equity = ordinary share capital R1 250 000 + retained income R720 000 = R1 970 000."
+  },
+  {
+   "n": 8,
+   "topic": "Companies: financial statements",
+   "q": "Buhle Ltd had 400 000 ordinary shares in issue throughout the year ended 31 December 2024. Profit after tax for the year was R1 200 000. Total dividends declared for the year were R500 000. Calculate the earnings per share (EPS) in cents.",
+   "options": [
+    "300 cents",
+    "125 cents",
+    "3 cents",
+    "425 cents"
+   ],
+   "answer": 0,
+   "explanation": "EPS = profit after tax ÷ number of ordinary shares = R1 200 000 ÷ 400 000 = R3.00 per share, which is 300 cents. Dividends declared are used for dividends per share, not earnings per share."
+  },
+  {
+   "n": 9,
+   "topic": "Companies: financial statements",
+   "q": "Khumalo Ltd, a VAT-registered company, made credit sales of R1 380 000 including VAT at 15% during the year. What amount should be reported as revenue in the statement of profit or loss?",
+   "options": [
+    "R1 587 000",
+    "R1 200 000",
+    "R1 173 000",
+    "R1 380 000"
+   ],
+   "answer": 1,
+   "explanation": "Revenue excludes VAT because the VAT collected is payable to SARS. Revenue = R1 380 000 ÷ 1.15 = R1 200 000; the VAT portion is R180 000."
+  },
+  {
+   "n": 10,
+   "topic": "Budgeting",
+   "q": "Lerato's Hardware purchases goods on credit. The cash budget assumes creditors are paid as follows: 60% in the month following the purchase and 40% two months after the purchase. Purchases for March are R50 000, April R60 000 and May R70 000. Calculate the budgeted cash paid to creditors in May.",
+   "options": [
+    "R56 000",
+    "R42 000",
+    "R54 000",
+    "R70 000"
+   ],
+   "answer": 0,
+   "explanation": "May payments to creditors = 60% of April purchases (60% × R60 000 = R36 000) + 40% of March purchases (40% × R50 000 = R20 000) = R56 000. Purchases made in May are not paid in May under this payment policy."
+  },
+  {
+   "n": 11,
+   "topic": "Partnerships",
+   "q": "Thabo and Naledi are partners sharing profits and losses in the ratio 3:2. Their capital balances are Thabo R240 000 and Naledi R160 000. The partnership agreement provides interest on capital at 8% per year and an annual salary of R60 000 to Naledi. Profit before appropriation for the year is R312 000. What is Thabo’s share of the residual profit?",
+   "options": [
+    "R187 200",
+    "R151 200",
+    "R132 000",
+    "R110 000"
+   ],
+   "answer": 2,
+   "explanation": "Interest on capital totals R32 000 (Thabo R19 200 and Naledi R12 800), and Naledi’s salary is R60 000. Residual profit is therefore R312 000 − R32 000 − R60 000 = R220 000, and Thabo receives 3/5 of this, which is R132 000. The R151 200 figure incorrectly adds Thabo’s interest on capital to his residual share."
+  },
+  {
+   "n": 12,
+   "topic": "Partnerships",
+   "q": "Sipho is a partner in a firm with a financial year ending 30 June 2025. His current account had a credit balance of R24 000 on 1 July 2024. During the year his drawings were R90 000, interest on drawings was R3 000, interest on capital was R40 000, salary was R120 000 and his share of residual profit was R75 000. What is the balance of Sipho’s current account on 30 June 2025?",
+   "options": [
+    "R169 000 credit",
+    "R259 000 credit",
+    "R172 000 credit",
+    "R166 000 credit"
+   ],
+   "answer": 3,
+   "explanation": "Credit entries total R24 000 + R40 000 + R120 000 + R75 000 = R259 000. Deduct drawings of R90 000 and interest on drawings of R3 000: R259 000 − R93 000 = R166 000 credit. The R169 000 balance ignores the debit for interest on drawings."
+  },
+  {
+   "n": 13,
+   "topic": "Partnerships",
+   "q": "Lindiwe and Kagiso are partners in a stationery business in Bloemfontein, sharing profits and losses in the ratio 2:1. Before admitting Musa as a new partner, land is revalued from R360 000 to R420 000. Lindiwe’s capital balance before the revaluation is R300 000. No other adjustments are made before Musa’s admission. What will Lindiwe’s capital balance be immediately after the revaluation?",
+   "options": [
+    "R330 000",
+    "R360 000",
+    "R340 000",
+    "R300 000"
+   ],
+   "answer": 2,
+   "explanation": "The revaluation increases land by R60 000, which is shared by the old partners in their old profit-sharing ratio of 2:1. Lindiwe receives 2/3 × R60 000 = R40 000, so her capital becomes R300 000 + R40 000 = R340 000. The R330 000 figure would result from splitting the increase equally rather than in the agreed ratio."
+  },
+  {
+   "n": 14,
+   "topic": "Bank, debtors and creditors reconciliations",
+   "q": "KZN Traders had a favourable bank balance of R42 500 in its general ledger on 31 May 2025 before recording bank charges of R350 and a debit order for insurance of R1 200. After these entries are recorded, the bank reconciliation showed an outstanding deposit of R9 400 and an outstanding cheque of R6 150. What amount will appear as the favourable bank statement balance on 31 May 2025?",
+   "options": [
+    "R44 200 favourable",
+    "R37 700 favourable",
+    "R39 250 favourable",
+    "R40 950 favourable"
+   ],
+   "answer": 1,
+   "explanation": "The updated ledger bank balance is R42 500 − R350 − R1 200 = R40 950 favourable. To obtain the bank statement balance, add the outstanding cheque and deduct the outstanding deposit: R40 950 + R6 150 − R9 400 = R37 700 favourable. The R40 950 figure is only the updated ledger balance before outstanding items are taken into account."
+  },
+  {
+   "n": 15,
+   "topic": "Bank, debtors and creditors reconciliations",
+   "q": "Durban Dealers had a debit balance of R60 950 on the Debtors Control account on 31 March 2025. The debtors list totalled R60 900. Investigation revealed that a credit note of R950 issued to a debtor was entered in the debtors ledger but omitted from the Debtors Control account; a payment of R1 600 by a debtor was entered in the Debtors Control account but omitted from the debtor’s account; and an invoice of R700 was correctly entered in the Debtors Control account but omitted from the debtor’s account. What is the corrected balance of the Debtors Control account?",
+   "options": [
+    "R60 000 debit",
+    "R60 950 debit",
+    "R61 900 debit",
+    "R59 100 debit"
+   ],
+   "answer": 0,
+   "explanation": "Only the omitted credit note affects the Debtors Control account; it should reduce debtors by R950, giving R60 950 − R950 = R60 000 debit. The payment and invoice were already recorded in the control account and only affect the debtors list. The R59 100 figure arises from incorrectly adjusting the control account for all three items."
+  },
+  {
+   "n": 16,
+   "topic": "Bank, debtors and creditors reconciliations",
+   "q": "Thabo Traders in Gqeberha has a creditor’s ledger account for Lesedi Wholesalers with a credit balance of R19 550 on 30 June 2025. The statement received from Lesedi Wholesalers showed a balance of R22 300 owed by Thabo Traders. The following were discovered: an invoice of R1 100 on the statement had not been recorded in the creditor’s ledger; a payment of R2 300 had been recorded in the creditor’s ledger but was not yet on the statement; and a credit note of R650 on the statement had not been recorded in the creditor’s ledger. What is the correct amount owed to Lesedi Wholesalers on 30 June 2025?",
+   "options": [
+    "R22 300",
+    "R21 300",
+    "R19 550",
+    "R20 000"
+   ],
+   "answer": 3,
+   "explanation": "Starting with the ledger balance: R19 550 + R1 100 invoice − R650 credit note = R20 000. The payment of R2 300 is already recorded in the creditor’s ledger, so no further adjustment is made for it. Starting from the statement, R22 300 − R2 300 payment not yet on the statement = R20 000."
+  },
+  {
+   "n": 17,
+   "topic": "Cost accounting: manufacturing",
+   "q": "Tshwane Furnishers manufactures desks. The following information relates to the year ended 28 February 2025: direct materials used R480 000; direct labour R300 000; factory overheads R180 000; work-in-progress at the beginning R35 000; work-in-progress at the end R42 000; finished goods at the beginning R50 000; finished goods at the end R38 000. What is the cost of production for the year?",
+   "options": [
+    "R967 000",
+    "R960 000",
+    "R965 000",
+    "R953 000"
+   ],
+   "answer": 3,
+   "explanation": "Cost of production = R480 000 + R300 000 + R180 000 + R35 000 − R42 000 = R953 000. The R960 000 figure ignores work-in-progress, while R965 000 includes the finished goods movement and is the cost of sales, not the cost of production."
+  },
+  {
+   "n": 18,
+   "topic": "Cost accounting: manufacturing",
+   "q": "Polokwane Pottery uses machine hours to absorb factory overheads. Budgeted factory overheads for the year were R240 000 and budgeted machine hours were 8 000. In June 2025, the factory actually used 700 machine hours and incurred R22 500 in factory overheads. What amount of factory overhead was absorbed by production for June 2025?",
+   "options": [
+    "R22 500",
+    "R21 000",
+    "R1 500",
+    "R30 000"
+   ],
+   "answer": 1,
+   "explanation": "The predetermined overhead rate is R240 000 ÷ 8 000 = R30 per machine hour. Absorbed overhead is 700 × R30 = R21 000. The R22 500 is the actual overhead incurred, and the R1 500 is the under-absorbed difference."
+  },
+  {
+   "n": 19,
+   "topic": "Cash flow statement",
+   "q": "Mangaung Ltd had a retained income balance of R450 000 on 1 March 2024 and R590 000 on 28 February 2025. The profit after tax for the year was R320 000. What amount was paid as dividends during the year?",
+   "options": [
+    "R180 000",
+    "R320 000",
+    "R270 000",
+    "R140 000"
+   ],
+   "answer": 0,
+   "explanation": "Dividends = opening retained income + profit after tax − closing retained income = R450 000 + R320 000 − R590 000 = R180 000. The R140 000 figure is only the increase in retained income, not the cash dividend paid."
+  },
+  {
+   "n": 20,
+   "topic": "Cash flow statement",
+   "q": "KwaMashu Ltd had a credit balance of R42 000 in its SARS (income tax) account on 1 March 2024. Current tax for the year ended 28 February 2025 was R180 000, and the SARS account had a credit balance of R36 000 on 28 February 2025. What amount was paid to SARS for income tax during the year?",
+   "options": [
+    "R180 000",
+    "R186 000",
+    "R174 000",
+    "R258 000"
+   ],
+   "answer": 1,
+   "explanation": "Income tax paid = opening amount owed + current tax − closing amount owed = R42 000 + R180 000 − R36 000 = R186 000. The R174 000 figure results from reversing the opening and closing balances."
+  },
+  {
+   "n": 21,
+   "topic": "Analysis and interpretation of financial statements",
+   "q": "A clothing store in Mangaung has cost of sales of R480 000 and gross profit of R320 000 for the year. What is the gross profit percentage on turnover?",
+   "options": [
+    "66.7%",
+    "40.0%",
+    "32.0%",
+    "60.0%"
+   ],
+   "answer": 1,
+   "explanation": "Turnover is cost of sales plus gross profit: R480 000 + R320 000 = R800 000. Gross profit percentage on turnover = R320 000 ÷ R800 000 × 100 = 40.0%. The 66.7% figure is the mark-up on cost (R320 000 ÷ R480 000 × 100), not the percentage on turnover."
+  },
+  {
+   "n": 22,
+   "topic": "Value-added tax (VAT)",
+   "q": "A supermarket in Polokwane sells standard-rated goods for R2 300, including VAT at 15%. What amount of VAT must be recorded separately from the selling price?",
+   "options": [
+    "R2 645",
+    "R2 000",
+    "R300",
+    "R345"
+   ],
+   "answer": 2,
+   "explanation": "The VAT-inclusive amount is 115% of the price before VAT. VAT = R2 300 × 15 ÷ 115 = R300, while R2 000 is the price before VAT. Calculating 15% of R2 300 gives R345, which incorrectly treats the VAT-inclusive amount as the base for VAT."
+  },
+  {
+   "n": 23,
+   "topic": "Journals, ledgers and the accounting equation",
+   "q": "Lerato’s business pays a creditor, Khumalo Wholesalers, R4 500 by electronic funds transfer. What is the effect on the accounting equation?",
+   "options": [
+    "Equity decreases by R4 500 and liabilities decrease by R4 500.",
+    "Assets decrease by R4 500 and liabilities decrease by R4 500.",
+    "Assets decrease by R4 500 and equity decreases by R4 500.",
+    "Assets decrease by R4 500 and liabilities increase by R4 500."
+   ],
+   "answer": 1,
+   "explanation": "Paying a creditor reduces the bank balance, so assets decrease, and it also reduces the amount owed to creditors, so liabilities decrease by the same amount. This settlement of a debt is not an expense, so equity is not affected. The transaction keeps the accounting equation in balance."
+  },
+  {
+   "n": 24,
+   "topic": "Inventory systems and stock valuation",
+   "q": "A business uses the perpetual inventory system. It buys trading stock on credit for R12 000. Which account is debited when recording the purchase?",
+   "options": [
+    "Cost of sales",
+    "Purchases",
+    "Creditors control",
+    "Trading stock"
+   ],
+   "answer": 3,
+   "explanation": "Under the perpetual inventory system, every purchase of trading stock is entered directly in the trading stock account, which is debited. The creditors control account is credited because the stock was bought on credit. The Purchases account is used in the periodic inventory system, not under the perpetual system."
+  },
+  {
+   "n": 25,
+   "topic": "Analysis and interpretation of financial statements",
+   "q": "The following balances relate to Senzo Traders for the year ended 28 February 2024: ordinary share capital (unchanged) R600 000; retained income on 1 March 2023 R150 000; retained income on 28 February 2024 R250 000; profit after tax R140 000. Calculate the return on shareholders’ equity.",
+   "options": [
+    "20.0%",
+    "18.7%",
+    "17.5%",
+    "16.5%"
+   ],
+   "answer": 2,
+   "explanation": "Opening shareholders’ equity is R600 000 + R150 000 = R750 000, and closing equity is R600 000 + R250 000 = R850 000. Average shareholders’ equity is (R750 000 + R850 000) ÷ 2 = R800 000. Return on shareholders’ equity = R140 000 ÷ R800 000 × 100 = 17.5%; using only opening equity gives 18.7% and using only closing equity gives 16.5%."
+  },
+  {
+   "n": 26,
+   "topic": "Value-added tax (VAT)",
+   "q": "Which item is a zero-rated supply for VAT purposes in South Africa?",
+   "options": [
+    "Goods exported by a registered vendor to a client in Botswana",
+    "A standard-rated delivery service within South Africa",
+    "Audit fees charged by a local accounting firm",
+    "Rent received for a residential flat"
+   ],
+   "answer": 0,
+   "explanation": "Exported goods are zero-rated, meaning VAT is charged at 0% and the vendor may still claim input VAT where applicable. Audit fees are standard-rated, residential rent is exempt rather than zero-rated, and a local delivery service is standard-rated. A zero-rated supply must not be confused with an exempt supply."
+  },
+  {
+   "n": 27,
+   "topic": "Journals, ledgers and the accounting equation",
+   "q": "The Debtors Control account has a debit balance of R54 000. The Debtors List totals R53 200. The difference was caused by a credit sales invoice of R800 that was entered in the Debtors Control account but omitted from the Debtors List. What is the correct total of the Debtors List after correction?",
+   "options": [
+    "R54 800",
+    "R53 200",
+    "R54 000",
+    "R52 400"
+   ],
+   "answer": 2,
+   "explanation": "The credit sales invoice increases the amount owed by debtors and must appear in the Debtors List. Add the omitted R800 to the list total: R53 200 + R800 = R54 000, which agrees with the Debtors Control account. Subtracting the invoice would be appropriate only if it had been wrongly added to the list."
+  },
+  {
+   "n": 28,
+   "topic": "Inventory systems and stock valuation",
+   "q": "Buhle Stores uses the FIFO method for stock item X. It had 40 units at R25 each, then bought 60 units at R30 each, and sold 70 units. What is the value of the closing stock?",
+   "options": [
+    "R900",
+    "R2 800",
+    "R750",
+    "R1 900"
+   ],
+   "answer": 0,
+   "explanation": "FIFO means the first units bought are the first units sold. The 70 units sold are taken as 40 units at R25 plus 30 units at R30, leaving 30 units from the later purchase at R30 each. Closing stock = 30 × R30 = R900; R1 900 is the cost of sales and R750 would result from using the LIFO assumption."
+  },
+  {
+   "n": 29,
+   "topic": "Analysis and interpretation of financial statements",
+   "q": "A trader’s current ratio improved from 1.8:1 last year to 2.4:1 this year. Which interpretation is most appropriate?",
+   "options": [
+    "The business has become more profitable because its current ratio increased.",
+    "The business is now unable to pay its current liabilities as they fall due.",
+    "The business has reduced its dependence on shareholders’ equity.",
+    "The business has stronger short-term liquidity, although the high ratio may indicate excessive stock or idle cash."
+   ],
+   "answer": 3,
+   "explanation": "The current ratio compares current assets with current liabilities, so a rise from 1.8:1 to 2.4:1 indicates better short-term cover. A very high current ratio could mean that cash or stock is not being used efficiently. It does not measure profitability or show reduced reliance on shareholders’ equity."
+  },
+  {
+   "n": 30,
+   "topic": "Journals, ledgers and the accounting equation",
+   "q": "Sipho, the owner of a business that uses the perpetual inventory system, takes trading stock costing R1 500 for personal use. No VAT is involved. What is the effect on the accounting equation?",
+   "options": [
+    "Assets decrease by R1 500 and liabilities increase by R1 500.",
+    "Assets decrease by R1 500 and equity is unchanged.",
+    "Equity decreases by R1 500 and liabilities decrease by R1 500.",
+    "Assets decrease by R1 500 and equity decreases by R1 500."
+   ],
+   "answer": 3,
+   "explanation": "Taking stock for personal use is drawings, which reduces the owner’s equity. Under the perpetual inventory system the trading stock asset also decreases by the cost of the goods, R1 500. The two decreases keep the accounting equation balanced."
+  }
+ ]
+}

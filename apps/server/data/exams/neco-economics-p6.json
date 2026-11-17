@@ -1,0 +1,791 @@
+{
+ "id": "neco-economics-p6",
+ "exam": "neco",
+ "subject": "economics",
+ "year": null,
+ "number": 6,
+ "source": "ai",
+ "minutes": 60,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Basic economic concepts",
+   "q": "A small firm in Ilesa can use its only machine to produce either 600 pairs of slippers or 400 school bags in a month. What is the opportunity cost of producing one school bag?",
+   "options": [
+    "400 school bags",
+    "600 pairs of slippers",
+    "1.5 pairs of slippers",
+    "0.67 school bags"
+   ],
+   "answer": 2,
+   "explanation": "To produce 400 school bags, the firm gives up 600 pairs of slippers, so one bag costs 600 ÷ 400 = 1.5 pairs of slippers. The reciprocal value would measure the opportunity cost of a pair of slippers, not a school bag."
+  },
+  {
+   "n": 2,
+   "topic": "Basic economic concepts",
+   "q": "A lighthouse on the Lagos coast warns all ships at sea, whether or not their owners pay for it. The service provided by the lighthouse is best described as",
+   "options": [
+    "a public good",
+    "a free good",
+    "a capital good",
+    "a private good"
+   ],
+   "answer": 0,
+   "explanation": "A public good is non-excludable and non-rival in consumption, as ships cannot easily be stopped from using the warning and one ship's use does not reduce another's. It is not a free good merely because users do not pay directly, since providing the service uses scarce resources."
+  },
+  {
+   "n": 3,
+   "topic": "Basic economic concepts",
+   "q": "Which of the following will shift the supply curve of garri to the left?",
+   "options": [
+    "A fall in the price of garri",
+    "An increase in the price of cassava used in producing garri",
+    "An increase in consumers' income",
+    "An increase in the number of garri sellers"
+   ],
+   "answer": 1,
+   "explanation": "Higher cassava prices raise production costs, so sellers offer less garri at every price. A change in the price of garri itself causes a movement along the supply curve, while more sellers would shift supply to the right."
+  },
+  {
+   "n": 4,
+   "topic": "National income",
+   "q": "In a year, Nigeria's GDP is ₦300 billion. Nigerian citizens earn ₦12 billion from investments abroad, while foreign investors earn ₦5 billion from investments in Nigeria. Calculate Nigeria's GNP.",
+   "options": [
+    "₦317 billion",
+    "₦293 billion",
+    "₦305 billion",
+    "₦307 billion"
+   ],
+   "answer": 3,
+   "explanation": "GNP equals GDP plus net factor income from abroad: ₦300 billion + ₦12 billion − ₦5 billion = ₦307 billion. The figure of ₦293 billion wrongly subtracts the citizens' foreign earnings and adds foreigners' earnings."
+  },
+  {
+   "n": 5,
+   "topic": "National income",
+   "q": "A state government in Nigeria pays ₦100,000 as a scholarship to a student. In national income accounting, this payment is best described as",
+   "options": [
+    "government final consumption expenditure, which is included in GDP",
+    "factor income from employment, which is included in national income",
+    "an investment expenditure, which is included in GDP",
+    "a transfer payment, which is not included in national income"
+   ],
+   "answer": 3,
+   "explanation": "A scholarship is a transfer payment because it transfers income without producing a good or service in return, so it is not part of national income. It is not government final consumption, which covers payments for goods and services currently produced."
+  },
+  {
+   "n": 6,
+   "topic": "Population and labour",
+   "q": "Which of the following is a common source of inaccuracy in population censuses in Nigeria?",
+   "options": [
+    "Complete registration of births and deaths",
+    "Poor record-keeping and difficulty reaching some remote areas",
+    "High level of literacy in all communities",
+    "Use of modern satellite maps"
+   ],
+   "answer": 1,
+   "explanation": "Inaccurate records and difficult terrain can cause people to be omitted or counted twice during a census. Modern maps and complete civil registration would rather improve the accuracy of population data."
+  },
+  {
+   "n": 7,
+   "topic": "Population and labour",
+   "q": "An accountant in Jos works for only two hours a day because her firm has little work, although she is willing to work full time. This situation is best described as",
+   "options": [
+    "open unemployment",
+    "voluntary unemployment",
+    "seasonal unemployment",
+    "underemployment"
+   ],
+   "answer": 3,
+   "explanation": "Underemployment occurs when a worker is employed for fewer hours or in a job below full capacity and is willing to work more. She is not openly unemployed because she has some work, and her reduced hours are not voluntary."
+  },
+  {
+   "n": 8,
+   "topic": "Agriculture and industry in Nigeria",
+   "q": "A state government in Niger State establishes tractor-hire services for small-scale farmers. The main aim of this policy is to",
+   "options": [
+    "encourage farm workers to migrate to cities",
+    "increase the cost of tractors for commercial farmers",
+    "make mechanisation affordable and raise farm output",
+    "reduce the cultivation of food crops in the state"
+   ],
+   "answer": 2,
+   "explanation": "Tractor-hire services allow small farmers to use machinery without buying tractors, lowering the cost of mechanisation and supporting higher output. It is not designed to raise machinery prices, reduce food production, or push workers out of farming."
+  },
+  {
+   "n": 9,
+   "topic": "International trade",
+   "q": "A customs duty charged as a fixed percentage of the value of imported goods is known as",
+   "options": [
+    "an export subsidy",
+    "an ad valorem tariff",
+    "an import quota",
+    "a specific tariff"
+   ],
+   "answer": 1,
+   "explanation": "An ad valorem tariff is levied as a percentage of the value of imported goods, so the duty changes with the value of the consignment. A specific tariff is a fixed amount per unit, an import quota limits the quantity imported, and an export subsidy is a payment to exporters."
+  },
+  {
+   "n": 10,
+   "topic": "Demand and supply",
+   "q": "Which of the following will, other things being equal, cause an outward shift of the supply curve for maize in Kaduna State?",
+   "options": [
+    "An increase in consumers' incomes",
+    "A government campaign encouraging people to consume more maize",
+    "A rise in the market price of maize",
+    "The introduction of improved maize seed varieties"
+   ],
+   "answer": 3,
+   "explanation": "Improved maize seed varieties raise productivity, lowering the cost of producing maize, so farmers supply more at each price and the supply curve shifts outward. A change in the price of maize causes a movement along the supply curve, while higher consumers' incomes or a consumption campaign affect demand rather than supply."
+  },
+  {
+   "n": 11,
+   "topic": "Elasticity",
+   "q": "A trader in Onitsha sells a product for which the price elasticity of demand is inelastic. If the trader wants to increase total revenue, the trader should",
+   "options": [
+    "reduce the quantity sold at the same price",
+    "increase the price of the product",
+    "make demand perfectly elastic by advertising",
+    "reduce the price of the product"
+   ],
+   "answer": 1,
+   "explanation": "For a product with inelastic demand, a rise in price causes a proportionately smaller fall in quantity demanded, so total revenue increases. Reducing the price would lower total revenue, and changing quantity at the same price or trying to make demand perfectly elastic does not directly raise revenue from the existing demand."
+  },
+  {
+   "n": 12,
+   "topic": "Demand and supply",
+   "q": "At a market in Ogbomoso, the price of a commodity is temporarily above the equilibrium price. Other things being equal, what is the likely outcome?",
+   "options": [
+    "Supply will continue to increase while the price remains above equilibrium",
+    "A shortage will exist, and the price will tend to rise",
+    "A surplus will exist, and the price will tend to fall",
+    "Demand will immediately increase until the surplus disappears"
+   ],
+   "answer": 2,
+   "explanation": "When the price is above equilibrium, quantity supplied exceeds quantity demanded, creating a surplus. Sellers with unsold stock will tend to reduce price, moving the market toward equilibrium."
+  },
+  {
+   "n": 13,
+   "topic": "Elasticity",
+   "q": "A trader in Ilorin observes that as consumers' income falls, their purchases of a particular locally made beverage increase. The income elasticity of demand for the beverage is",
+   "options": [
+    "zero, and the beverage is a necessity",
+    "positive, and the beverage is a luxury good",
+    "negative, and the beverage is an inferior good",
+    "positive, and the beverage is a normal good"
+   ],
+   "answer": 2,
+   "explanation": "If a fall in income causes purchases of a good to rise, the income elasticity of demand is negative, which is the defining feature of an inferior good. Normal and luxury goods have positive income elasticities, while zero elasticity would mean purchases do not change when income changes."
+  },
+  {
+   "n": 14,
+   "topic": "International trade",
+   "q": "A government order that completely forbids the importation of a particular commodity into a country is called",
+   "options": [
+    "a subsidy",
+    "a quota",
+    "an embargo",
+    "an ad valorem tariff"
+   ],
+   "answer": 2,
+   "explanation": "An embargo is a complete prohibition on trade in a specified commodity or with a specified country. A quota merely limits quantity, an ad valorem tariff taxes imports, and a subsidy supports domestic production or exports."
+  },
+  {
+   "n": 15,
+   "topic": "Money and inflation",
+   "q": "A market basket in Bauchi cost ₦48,000 in 2023 and ₦60,000 in 2024. If 2023 is the base year, what is the consumer price index for 2024?",
+   "options": [
+    "80",
+    "120",
+    "125",
+    "25"
+   ],
+   "answer": 2,
+   "explanation": "The consumer price index is calculated as (current market basket cost ÷ base-year market basket cost) × 100. Thus (₦60,000 ÷ ₦48,000) × 100 = 125. The value 25 is only the percentage increase in the basket cost, not the index."
+  },
+  {
+   "n": 16,
+   "topic": "Money and inflation",
+   "q": "Which of the following best explains why money is said to be a good store of value when inflation is low?",
+   "options": [
+    "It is issued only by the Central Bank of Nigeria.",
+    "It can be held and used to make purchases in the future without a rapid loss of purchasing power.",
+    "It has intrinsic value equal to its face value.",
+    "It is accepted only by commercial banks."
+   ],
+   "answer": 1,
+   "explanation": "Money as a store of value means people can keep it and use it later. When inflation is low, its purchasing power does not fall quickly, so it preserves value better. The issuer or the accepting institution does not determine its store-of-value function."
+  },
+  {
+   "n": 17,
+   "topic": "Theory of production",
+   "q": "In an automobile assembly plant in Lagos, each worker repeatedly performs only one small operation before the product moves to the next worker. This method of organizing production is best described as:",
+   "options": [
+    "capital-intensive production",
+    "division of labour",
+    "economies of scale",
+    "vertical integration"
+   ],
+   "answer": 1,
+   "explanation": "Division of labour occurs when production is broken into specialized tasks performed by different workers. This can raise output through specialization and repetition. Economies of scale refer to cost advantages from larger output, not the splitting of tasks itself."
+  },
+  {
+   "n": 18,
+   "topic": "Theory of production",
+   "q": "A poultry farmer in Ogun State records the following additions to total output when bags of feed are added one after another to a fixed number of birds: first bag 30 eggs, second bag 27 eggs, third bag 21 eggs, fourth bag 8 eggs. Diminishing marginal returns set in from the:",
+   "options": [
+    "fourth bag, because its marginal product is lowest",
+    "third bag, because total output begins to fall",
+    "second bag, because its marginal product is lower than that of the first",
+    "first bag, because marginal product starts to rise"
+   ],
+   "answer": 2,
+   "explanation": "Diminishing marginal returns begin when the marginal product of the variable input starts to fall. The second bag adds 27 eggs, which is less than the 30 eggs added by the first bag, so diminishing returns have begun. Total output is still rising even when the additions become smaller."
+  },
+  {
+   "n": 19,
+   "topic": "Costs and revenue",
+   "q": "A small firm in Ado-Ekiti has total fixed cost of ₦60,000. It sells its product at ₦500 per unit and its average variable cost is ₦300 per unit. What is the break-even quantity?",
+   "options": [
+    "120 units",
+    "200 units",
+    "300 units",
+    "750 units"
+   ],
+   "answer": 2,
+   "explanation": "Contribution per unit is selling price minus average variable cost: ₦500 − ₦300 = ₦200. Break-even quantity is fixed cost divided by contribution per unit: ₦60,000 ÷ ₦200 = 300 units. Using ₦60,000 ÷ ₦500 would wrongly ignore variable cost."
+  },
+  {
+   "n": 20,
+   "topic": "Costs and revenue",
+   "q": "A firm in Lokoja currently produces a level of output at which marginal cost is ₦180 and the market price is ₦250. It operates in a perfectly competitive market. To maximize profit in the short run, the firm should:",
+   "options": [
+    "increase price above ₦250 to raise profit",
+    "shut down immediately because price is above marginal cost",
+    "increase output until marginal cost rises to ₦250",
+    "reduce output because marginal cost is below price"
+   ],
+   "answer": 2,
+   "explanation": "In perfect competition, price equals marginal revenue. If marginal cost is below price, each extra unit adds more revenue than cost, so expanding output raises profit until marginal cost equals price. A perfect competitor cannot set a higher price than the market price."
+  },
+  {
+   "n": 21,
+   "topic": "Public finance",
+   "q": "The excess of a government's planned expenditure over its expected revenue in a given year is known as:",
+   "options": [
+    "a budget surplus",
+    "a budget deficit",
+    "external reserves",
+    "a balanced budget"
+   ],
+   "answer": 1,
+   "explanation": "A budget deficit occurs when planned government spending exceeds expected revenue for the year. A surplus is the opposite, while a balanced budget means planned expenditure equals expected revenue."
+  },
+  {
+   "n": 22,
+   "topic": "Public finance",
+   "q": "A state government in Nigeria imposes a tax on cement. If demand for cement is perfectly inelastic, who bears the full burden of the tax?",
+   "options": [
+    "Buyers, because they cannot reduce the quantity demanded when the price rises",
+    "Sellers, because they collect the tax on behalf of government",
+    "Government, because it fixes the tax rate",
+    "Both buyers and sellers equally, because tax burden is always shared"
+   ],
+   "answer": 0,
+   "explanation": "With perfectly inelastic demand, buyers do not reduce the quantity demanded even when the price rises. Sellers can therefore pass the whole tax on to buyers through a higher price. The party that legally collects the tax need not bear the economic burden."
+  },
+  {
+   "n": 23,
+   "topic": "Market structures",
+   "q": "Obiora sells 200 units of a product in a monopolistically competitive market at ₦50 per unit. His average total cost is ₦54. What is his economic profit or loss?",
+   "options": [
+    "A loss of ₦800",
+    "A loss of ₦1,000",
+    "Normal profit of ₦0",
+    "A profit of ₦800"
+   ],
+   "answer": 0,
+   "explanation": "Total revenue is 200 × ₦50 = ₦10,000, while total cost is 200 × ₦54 = ₦10,800. The firm therefore makes a loss of ₦800."
+  },
+  {
+   "n": 24,
+   "topic": "Market structures",
+   "q": "In a market where many sellers offer identical products and no single seller can influence the ruling price, a firm is said to be",
+   "options": [
+    "a price leader",
+    "a discriminating monopolist",
+    "a price maker",
+    "a price taker"
+   ],
+   "answer": 3,
+   "explanation": "Under perfect competition, each firm sells a homogeneous product and is too small to affect the market price. Such a firm can sell any quantity at the ruling price and is therefore a price taker."
+  },
+  {
+   "n": 25,
+   "topic": "Economic development and planning",
+   "q": "A state government prepares a five-year development plan with clear targets, but during implementation many ministries fail to release their counterpart funds. This mainly shows the planning problem of",
+   "options": [
+    "excessive private sector participation",
+    "inaccurate population census",
+    "inadequate funding for implementation",
+    "rapid technological change"
+   ],
+   "answer": 2,
+   "explanation": "Counterpart funds are part of the financing required to execute planned projects. When ministries fail to release them, projects are delayed or abandoned, showing inadequate funding for implementation."
+  },
+  {
+   "n": 26,
+   "topic": "National income",
+   "q": "Using the expenditure approach, calculate gross domestic product at market prices from the following data for a small economy: private consumption ₦500 million, government consumption ₦200 million, gross investment ₦150 million, exports ₦100 million and imports ₦130 million.",
+   "options": [
+    "₦850 million",
+    "₦950 million",
+    "₦720 million",
+    "₦820 million"
+   ],
+   "answer": 3,
+   "explanation": "GDP at market prices is C + I + G + (X − M) = 500 + 150 + 200 + (100 − 130) = ₦820 million. The net export position is −₦30 million, so adding exports and subtracting imports is essential."
+  },
+  {
+   "n": 27,
+   "topic": "Basic economic concepts",
+   "q": "When the price of kerosene rises and, as a result, the demand for cooking gas increases, kerosene and cooking gas are",
+   "options": [
+    "inferior goods",
+    "substitutes",
+    "complements",
+    "free goods"
+   ],
+   "answer": 1,
+   "explanation": "When a rise in the price of kerosene increases the demand for cooking gas, consumers are switching from one good to the other. Goods used in place of each other are substitutes."
+  },
+  {
+   "n": 28,
+   "topic": "Population and labour",
+   "q": "A local government area in Benue State has a population of 250,000 and covers a land area of 2,500 km². What is its population density?",
+   "options": [
+    "62.5 persons per km²",
+    "100 persons per km²",
+    "1,000 persons per km²",
+    "10 persons per km²"
+   ],
+   "answer": 1,
+   "explanation": "Population density is population divided by land area. So, 250,000 ÷ 2,500 = 100 persons per km². The other values result from multiplying or dividing the figures incorrectly."
+  },
+  {
+   "n": 29,
+   "topic": "Population and labour",
+   "q": "A tailor in Ibadan works only during festive seasons and remains idle for most months, although he is willing and able to work. This situation is an example of",
+   "options": [
+    "seasonal unemployment",
+    "structural unemployment",
+    "disguised unemployment",
+    "frictional unemployment"
+   ],
+   "answer": 0,
+   "explanation": "The tailor is idle because demand for his service is periodic, which is characteristic of seasonal unemployment. Frictional unemployment involves movement between jobs, while structural unemployment arises from changes in the structure of production."
+  },
+  {
+   "n": 30,
+   "topic": "Population and labour",
+   "q": "At the beginning of a year, a town in Ogun State had a population of 80,000. During the year, there were 3,200 live births, 800 deaths, 400 immigrants and 200 emigrants. What was the town's population growth rate for the year?",
+   "options": [
+    "3.25%",
+    "2.75%",
+    "3.00%",
+    "4.00%"
+   ],
+   "answer": 0,
+   "explanation": "Net increase = 3,200 − 800 + 400 − 200 = 2,600. Population growth rate = (2,600 ÷ 80,000) × 100% = 3.25%."
+  },
+  {
+   "n": 31,
+   "topic": "Agriculture and industry in Nigeria",
+   "q": "A cocoa farmers' marketing cooperative in Ondo State collects members' produce, sells it in bulk and gives loans to members. The main benefit of this arrangement is that it",
+   "options": [
+    "replaces farm labour completely with machines",
+    "fixes uniform prices for imported goods",
+    "guarantees members exemption from all taxes",
+    "enables members to obtain better prices and credit facilities"
+   ],
+   "answer": 3,
+   "explanation": "Bulk selling strengthens farmers' bargaining power, while cooperative loans help ease their credit problems. Cooperatives do not grant total tax exemption, set import prices, or replace all farm labour with machines."
+  },
+  {
+   "n": 32,
+   "topic": "Agriculture and industry in Nigeria",
+   "q": "A cement factory is established close to a limestone deposit in Ogun State. The major industrial location factor influencing this decision is",
+   "options": [
+    "government restriction on mining",
+    "nearness to raw materials",
+    "availability of cheap imported labour",
+    "nearness to export markets"
+   ],
+   "answer": 1,
+   "explanation": "Limestone is bulky and costly to transport, so cement production is usually located near its source. Imported labour and mining restrictions do not explain why the factory is close to the deposit."
+  },
+  {
+   "n": 33,
+   "topic": "Agriculture and industry in Nigeria",
+   "q": "Which of the following is a direct contribution of the industrial sector to agriculture in Nigeria?",
+   "options": [
+    "Provision of land for farming",
+    "Production of fertilisers and farm machinery",
+    "Fixing of prices of farm produce",
+    "Control of weather conditions for crops"
+   ],
+   "answer": 1,
+   "explanation": "Industries supply farm inputs such as fertilisers, tools and machines that help raise agricultural productivity. Industry does not create land or control weather, and price fixing is normally a government function."
+  },
+  {
+   "n": 34,
+   "topic": "International trade",
+   "q": "If Nigeria's visible imports are greater in value than her visible exports in a given year, the country is said to have",
+   "options": [
+    "a trade surplus",
+    "a favourable balance of trade",
+    "a trade deficit",
+    "a balanced trade"
+   ],
+   "answer": 2,
+   "explanation": "A trade deficit occurs when visible imports exceed visible exports. A surplus arises when exports exceed imports, while trade is balanced when the two values are equal."
+  },
+  {
+   "n": 35,
+   "topic": "International trade",
+   "q": "A Nigerian student in the United Kingdom receives a scholarship from a British university. In Nigeria's balance of payments, this receipt is recorded as",
+   "options": [
+    "a visible import in the current account",
+    "a debit in the trade account",
+    "an invisible receipt in the current account",
+    "a capital outflow in the capital account"
+   ],
+   "answer": 2,
+   "explanation": "A scholarship is a current transfer rather than payment for goods, so it is a credit in the current account and is classified among invisible receipts. It is not a visible import, a capital outflow, or a trade-account debit."
+  },
+  {
+   "n": 36,
+   "topic": "Banking and financial institutions",
+   "q": "A customer in Kaduna issues a cheque for ₦250,000, but the bank returns it unpaid because the account balance is only ₦180,000. The cheque is said to have been",
+   "options": [
+    "discounted",
+    "dishonoured",
+    "crossed",
+    "endorsed"
+   ],
+   "answer": 1,
+   "explanation": "A cheque returned unpaid by the bank is described as dishonoured; in this case, dishonour arises from insufficient funds. Endorsement transfers rights, crossing affects the mode of payment, and discounting is an advance against a cheque or bill before maturity."
+  },
+  {
+   "n": 37,
+   "topic": "Elasticity",
+   "q": "If the demand for a commodity is perfectly inelastic while supply is elastic, an indirect tax imposed on its producers will be borne entirely by",
+   "options": [
+    "producers",
+    "consumers",
+    "the government",
+    "producers and consumers equally"
+   ],
+   "answer": 1,
+   "explanation": "With perfectly inelastic demand, quantity demanded remains unchanged when price rises, so producers can pass the full tax to consumers through a higher price. Producers therefore receive the same net price as before and bear none of the tax."
+  },
+  {
+   "n": 38,
+   "topic": "Elasticity",
+   "q": "When the price elasticity of demand for a commodity is exactly one, a rise in its price will cause total revenue to",
+   "options": [
+    "fall to zero",
+    "fall",
+    "rise",
+    "remain unchanged"
+   ],
+   "answer": 3,
+   "explanation": "With unitary elasticity, the percentage fall in quantity demanded equals the percentage rise in price, so the total amount spent on the commodity stays the same. Total revenue would rise when demand is inelastic and fall when demand is elastic."
+  },
+  {
+   "n": 39,
+   "topic": "Money and inflation",
+   "q": "Which of the following assets is the most liquid?",
+   "options": [
+    "Ordinary shares",
+    "Savings account balances",
+    "Treasury bills",
+    "Currency in circulation"
+   ],
+   "answer": 3,
+   "explanation": "Currency in circulation is generally acceptable for immediate payment and can be used directly for transactions without conversion. Savings balances, treasury bills and shares must first be converted into cash, so they are less liquid than currency."
+  },
+  {
+   "n": 40,
+   "topic": "Theory of production",
+   "q": "A small firm in Ilorin has total fixed cost of ₦24,000. When it produces 600 units, its total variable cost is ₦36,000. Its average total cost is",
+   "options": [
+    "₦60",
+    "₦100",
+    "₦140",
+    "₦40"
+   ],
+   "answer": 1,
+   "explanation": "Total cost is ₦24,000 + ₦36,000 = ₦60,000. Average total cost is ₦60,000 ÷ 600 = ₦100 per unit. The ₦60 figure is average variable cost, while ₦40 is average fixed cost."
+  },
+  {
+   "n": 41,
+   "topic": "Theory of production",
+   "q": "A firm’s long-run average cost falls from ₦150 to ₦120 per unit as its output expands from 1,000 to 2,000 units. This is an example of",
+   "options": [
+    "diminishing returns to a variable factor",
+    "economies of scale",
+    "diseconomies of scale",
+    "constant returns to scale"
+   ],
+   "answer": 1,
+   "explanation": "Economies of scale occur when long-run average cost falls as the scale of output expands. Diseconomies of scale would mean rising long-run average cost, while diminishing returns relate to adding a variable factor to fixed factors in the short run."
+  },
+  {
+   "n": 42,
+   "topic": "Costs and revenue",
+   "q": "A trader in Kano uses his personal shop, which could have been rented out for ₦450,000 a year, and his own savings of ₦1,000,000, which could have earned 10% interest annually, to run his business. The rent and interest forgone are best described as",
+   "options": [
+    "implicit costs",
+    "sunk costs",
+    "explicit costs",
+    "marginal costs"
+   ],
+   "answer": 0,
+   "explanation": "The rent and interest given up are not cash payments to outsiders but opportunity costs of the trader's own resources, so they are implicit costs. Explicit costs are actual money payments, while sunk costs are already irrecoverable and marginal cost refers to the extra cost of one more unit."
+  },
+  {
+   "n": 43,
+   "topic": "Costs and revenue",
+   "q": "A small printing firm in Abeokuta sells a pack of exercise books for ₦250. Its total fixed cost is ₦84,000 per month and the variable cost per pack is ₦100. The break-even output per month is",
+   "options": [
+    "840 packs",
+    "560 packs",
+    "336 packs",
+    "240 packs"
+   ],
+   "answer": 1,
+   "explanation": "Break-even output is fixed cost divided by contribution per pack: ₦84,000 ÷ (₦250 − ₦100) = ₦84,000 ÷ ₦150 = 560 packs. Dividing fixed cost by the selling price alone would wrongly give 336 packs and neglect variable cost."
+  },
+  {
+   "n": 44,
+   "topic": "Public finance",
+   "q": "In Nigeria, the tax charged on the profits of incorporated companies is assessed and collected by the",
+   "options": [
+    "State Internal Revenue Service",
+    "Federal Inland Revenue Service",
+    "National Pension Commission",
+    "Nigeria Customs Service"
+   ],
+   "answer": 1,
+   "explanation": "Company income tax is a federal tax administered by the Federal Inland Revenue Service. State internal revenue services handle certain personal taxes and levies, while Customs is mainly responsible for import and export duties."
+  },
+  {
+   "n": 45,
+   "topic": "Economic development and planning",
+   "q": "The gradual shift of a country's labour and output from agriculture to manufacturing and services is known as",
+   "options": [
+    "urbanisation",
+    "import substitution",
+    "economic diversification",
+    "structural transformation"
+   ],
+   "answer": 3,
+   "explanation": "Structural transformation refers to the long-term shift of an economy's resources and output from agriculture toward manufacturing and services. Urbanisation is specifically a population shift to towns, while import substitution is a trade policy strategy."
+  },
+  {
+   "n": 46,
+   "topic": "Basic economic concepts",
+   "q": "The fundamental economic problem of scarcity arises mainly because",
+   "options": [
+    "money is always in short supply in the economy.",
+    "human wants are unlimited while productive resources are limited.",
+    "some people are poor and cannot afford basic goods.",
+    "the population is growing faster than food production."
+   ],
+   "answer": 1,
+   "explanation": "Scarcity is the condition in which available resources are insufficient to satisfy all human wants; it is not the same as poverty or a shortage of money. Even a wealthy society faces scarcity because wants exceed the resources available to satisfy them."
+  },
+  {
+   "n": 47,
+   "topic": "Basic economic concepts",
+   "q": "In a free market, a surplus of a commodity will normally cause the price to",
+   "options": [
+    "rise, because sellers want to recover their costs.",
+    "fall, so that quantity demanded rises and quantity supplied falls.",
+    "remain unchanged, because supply is fixed.",
+    "fall, so that quantity supplied rises and quantity demanded falls."
+   ],
+   "answer": 1,
+   "explanation": "A surplus occurs when price is above the equilibrium level and quantity supplied exceeds quantity demanded. Competition among sellers then pushes the price down, encouraging more purchases and discouraging some sellers, which removes the surplus."
+  },
+  {
+   "n": 48,
+   "topic": "National income",
+   "q": "Which of the following is excluded from the computation of a country's gross domestic product?",
+   "options": [
+    "A second-hand car sold by one Nigerian to another.",
+    "The value of tomatoes sold by a farmer to a consumer.",
+    "Fees paid to a lawyer for legal services rendered.",
+    "A newly built classroom by a construction firm."
+   ],
+   "answer": 0,
+   "explanation": "Gross domestic product measures the value of final goods and services currently produced within a country during a period. The resale of a second-hand car does not represent new production, whereas the new classroom, legal service and current farm output do."
+  },
+  {
+   "n": 49,
+   "topic": "Population and labour",
+   "q": "The type of unemployment that occurs when workers are temporarily between jobs while searching for new ones is called",
+   "options": [
+    "seasonal unemployment.",
+    "structural unemployment.",
+    "cyclical unemployment.",
+    "frictional unemployment."
+   ],
+   "answer": 3,
+   "explanation": "Frictional unemployment arises during the normal period of transition between jobs or while a worker is looking for a first job. It is not caused by a change in season, a change in the structure of the economy or a fall in aggregate demand."
+  },
+  {
+   "n": 50,
+   "topic": "Population and labour",
+   "q": "A state has a working-age population of 30 million. If 6 million of them are not willing or able to work, what is the size of the labour force?",
+   "options": [
+    "36 million",
+    "30 million",
+    "20 million",
+    "24 million"
+   ],
+   "answer": 3,
+   "explanation": "The labour force consists of the working-age population that is willing and able to work. Subtracting those not willing or able to work from the working-age population gives 30 million − 6 million = 24 million."
+  },
+  {
+   "n": 51,
+   "topic": "Population and labour",
+   "q": "Occupational mobility of labour is likely to be higher when",
+   "options": [
+    "workers possess transferable skills and have information about available jobs.",
+    "workers are close to retirement age.",
+    "housing is difficult to obtain in other areas.",
+    "workers have strong family ties to their present location."
+   ],
+   "answer": 0,
+   "explanation": "Occupational mobility refers to the ease with which workers can move between different jobs or occupations. Transferable skills and good job information make such movement easier, while family ties, housing difficulties and age reduce mobility."
+  },
+  {
+   "n": 52,
+   "topic": "Agriculture and industry in Nigeria",
+   "q": "A major reason why agricultural output in many parts of Nigeria fluctuates from year to year is that most crop production is",
+   "options": [
+    "carried out under large-scale irrigation.",
+    "fully mechanized and capital-intensive.",
+    "rain-fed and therefore dependent on rainfall.",
+    "controlled mainly by foreign companies."
+   ],
+   "answer": 2,
+   "explanation": "Most Nigerian crop farmers rely on natural rainfall, so poor or irregular rainfall can reduce output while favourable rainfall can raise it. Irrigation and mechanization are not widespread enough to remove this weather dependence."
+  },
+  {
+   "n": 53,
+   "topic": "Agriculture and industry in Nigeria",
+   "q": "Bola's packaging factory in Ikorodu spends a large part of its revenue on running generators because public electricity supply is unreliable. This situation best illustrates the effect of",
+   "options": [
+    "poor infrastructure on industrial production.",
+    "excess demand for packaging materials.",
+    "high labour productivity in manufacturing.",
+    "overdependence on agricultural raw materials."
+   ],
+   "answer": 0,
+   "explanation": "Unreliable public electricity forces the factory to bear extra costs for generator fuel and maintenance, which raises production costs and reduces competitiveness. This is an infrastructure problem, not a demand or raw material problem."
+  },
+  {
+   "n": 54,
+   "topic": "International trade",
+   "q": "A Nigerian insurance company in Lagos provides marine insurance cover to a shipping firm in Ghana and receives payment for the service. In Nigeria's balance of payments, this transaction is best recorded as",
+   "options": [
+    "a unilateral transfer",
+    "an invisible export",
+    "a visible import",
+    "a capital inflow"
+   ],
+   "answer": 1,
+   "explanation": "The transaction is an export of a service, and services are recorded as invisible trade in the balance of payments. It is not a visible import because insurance is not a physical good, and it is not a unilateral transfer because payment is made for a service supplied."
+  },
+  {
+   "n": 55,
+   "topic": "International trade",
+   "q": "A trader in Kano imports sewing machines with a customs value (CIF) of ₦1,200,000. If the ad valorem duty is 20% and a specific duty of ₦50,000 is also charged, the total customs duty payable is",
+   "options": [
+    "₦290,000",
+    "₦250,000",
+    "₦240,000",
+    "₦1,440,000"
+   ],
+   "answer": 0,
+   "explanation": "The ad valorem duty is 20% of ₦1,200,000, which equals ₦240,000. Adding the specific duty of ₦50,000 gives a total customs duty of ₦290,000; using only the ad valorem part omits the specific duty."
+  },
+  {
+   "n": 56,
+   "topic": "Demand and supply",
+   "q": "Which of the following will cause a movement along the supply curve for bread rather than a shift of the curve?",
+   "options": [
+    "A fall in the price of flour used in baking",
+    "An improvement in the baking oven used by bakers",
+    "An increase in the wages paid to bakers",
+    "A change in the market price of bread"
+   ],
+   "answer": 3,
+   "explanation": "A change in the price of bread itself changes the quantity supplied and is shown as a movement along the supply curve. Changes in wages, flour prices or baking technology alter production conditions and shift the supply curve."
+  },
+  {
+   "n": 57,
+   "topic": "Demand and supply",
+   "q": "The demand and supply functions for sachet water in a market in Kaduna are Qd = 240 − 5P and Qs = 40 + 3P, where price is in naira and quantity is in units. The equilibrium price and quantity are",
+   "options": [
+    "₦25 and 115 units",
+    "₦20 and 140 units",
+    "₦30 and 130 units",
+    "₦25 and 85 units"
+   ],
+   "answer": 0,
+   "explanation": "At equilibrium, Qd = Qs, so 240 − 5P = 40 + 3P. This gives 200 = 8P, hence P = ₦25; substituting P = 25 into either function gives Q = 115 units."
+  },
+  {
+   "n": 58,
+   "topic": "Demand and supply",
+   "q": "The price of margarine, a close substitute for butter, falls in the market. Other things being equal, what happens in the market for butter?",
+   "options": [
+    "The supply curve of butter shifts to the right.",
+    "The demand curve for butter shifts to the left.",
+    "There is a movement upward along the demand curve for butter.",
+    "The demand curve for butter shifts to the right."
+   ],
+   "answer": 1,
+   "explanation": "A fall in the price of margarine makes the substitute relatively cheaper, so consumers buy less butter at each price; this decreases demand and shifts the butter demand curve left. It is not a movement along the butter demand curve because the price of butter itself has not been stated to change."
+  },
+  {
+   "n": 59,
+   "topic": "Banking and financial institutions",
+   "q": "The Central Bank of Nigeria performs the function of settling cheques and other claims among commercial banks. This function is known as acting as",
+   "options": [
+    "issuer of currency",
+    "banker to the government",
+    "lender of last resort",
+    "the bankers' bank and clearing house"
+   ],
+   "answer": 3,
+   "explanation": "Settling interbank claims and clearing cheques is part of the Central Bank's role as the bankers' bank and clearing house. Lending to banks in temporary difficulty is lender of last resort, while issuing currency and keeping government accounts are separate central-banking functions."
+  },
+  {
+   "n": 60,
+   "topic": "Banking and financial institutions",
+   "q": "A customer in Aba deposits a fixed sum with a commercial bank for one year and agrees to withdraw it only after that period, receiving interest. This type of account is known as",
+   "options": [
+    "a savings account",
+    "a current account",
+    "a fixed deposit account",
+    "a call deposit account"
+   ],
+   "answer": 2,
+   "explanation": "A fixed deposit account is kept for a stated period and earns interest, with withdrawal before maturity usually attracting a penalty. Current accounts are mainly for day-to-day transactions, savings accounts allow more frequent withdrawals, and call deposits are repayable on short notice or when called."
+  }
+ ]
+}

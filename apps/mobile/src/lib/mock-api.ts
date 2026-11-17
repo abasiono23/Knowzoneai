@@ -338,6 +338,7 @@ function settingsOf(user: MockUser): AppSettings {
       { id: 'r2', label: 'Weekend revision', time: '10:00', days: [6], enabled: false },
     ],
     appLanguage: 'en',
+    region: user.region ?? 'NG',
     privacy: { profileVisibility: 'school', personalisedRecommendations: true, usageAnalytics: true, improveAi: false },
   };
   return user.settings;
@@ -568,6 +569,11 @@ export async function mockRequest<T>(path: string, init: RequestInit, token: str
         throw new MockError(409, 'An account with this email already exists');
       const user = newUser({ name: body.name, email, password: body.password, provider: 'email' });
       user.termsAccepted = !!(body.consent as Consent)?.terms;
+      // The country from the sign-up form, like the server.
+      if (typeof body.region === 'string' && /^[A-Z]{2}$/.test(body.region)) {
+        user.region = body.region;
+        user.regionChosen = true;
+      }
       db.users.push(user);
       return done({ token: user.id, user: publicUser(user) });
     }
@@ -927,6 +933,10 @@ export async function mockRequest<T>(path: string, init: RequestInit, token: str
           notifications: { ...cur.notifications, ...(body.notifications ?? {}) },
           privacy: { ...cur.privacy, ...(body.privacy ?? {}) },
         };
+        if (body.region) {
+          user.region = body.region;
+          user.regionChosen = true;
+        }
       }
       return done({ settings: settingsOf(user) });
     }
@@ -1088,6 +1098,12 @@ export async function mockRequest<T>(path: string, init: RequestInit, token: str
       if (!init.method || init.method === 'GET') return done({ personalization: user.personalization ?? null });
       user.personalization = body;
       if (body.dailyMinutes) user.dailyGoalMinutes = body.dailyMinutes;
+      // Like the server: the study region follows the country chosen in onboarding.
+      if (body.region) {
+        user.region = body.region;
+        user.regionChosen = true;
+        settingsOf(user).region = body.region;
+      }
       return done({ user: publicUser(user) });
     }
     case '/classes/join': {

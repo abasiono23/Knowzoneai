@@ -1,0 +1,661 @@
+{
+ "id": "waec-chemistry-p6",
+ "exam": "waec",
+ "subject": "chemistry",
+ "year": null,
+ "number": 6,
+ "source": "ai",
+ "minutes": 60,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Gas laws",
+   "q": "A fixed mass of gas occupies 200 cm³ at 27 °C and 150 kPa. What volume will it occupy at 87 °C and 100 kPa?",
+   "options": [
+    "480 cm³",
+    "240 cm³",
+    "360 cm³",
+    "160 cm³"
+   ],
+   "answer": 2,
+   "explanation": "Using the combined gas law: P₁V₁/T₁ = P₂V₂/T₂, so V₂ = (150 × 200 × 360)/(100 × 300) = 360 cm³. Temperatures must be converted to kelvin: 27 °C = 300 K and 87 °C = 360 K."
+  },
+  {
+   "n": 2,
+   "topic": "Gas laws",
+   "q": "A sample of nitrogen trapped in a syringe fitted with a movable piston occupies 100 cm³ at 7 °C. At what temperature in °C will it occupy 150 cm³ if the pressure is kept constant?",
+   "options": [
+    "210 °C",
+    "10.5 °C",
+    "147 °C",
+    "87 °C"
+   ],
+   "answer": 2,
+   "explanation": "At constant pressure, V/T is constant. Converting 7 °C to 280 K gives T₂ = 280 × (150/100) = 420 K, and 420 K − 273 = 147 °C. Using 7 °C directly instead of 280 K is a common error and gives an incorrect value."
+  },
+  {
+   "n": 3,
+   "topic": "Gas laws",
+   "q": "Under the same conditions, 30 cm³ of gas X diffuses through a porous plug in 15 s, while 10 cm³ of oxygen diffuses through the same plug in 10 s. What is the relative molecular mass of X? (O = 16)",
+   "options": [
+    "64",
+    "16",
+    "4",
+    "8"
+   ],
+   "answer": 3,
+   "explanation": "Rate of X = 30/15 = 2 cm³ s⁻¹ and rate of oxygen = 10/10 = 1 cm³ s⁻¹. By Graham's law, rate X/rate O₂ = √(M(O₂)/M(X)), so 2 = √(32/M(X)); squaring gives 4 = 32/M(X), hence M(X) = 8. Using the rate ratio upside down would not give this result."
+  },
+  {
+   "n": 4,
+   "topic": "Periodic table",
+   "q": "Which property is characteristic of transition metals such as iron and copper?",
+   "options": [
+    "They have complete d subshells in all their compounds",
+    "They form only colourless compounds",
+    "They can exhibit variable oxidation states",
+    "They belong to Group I of the Periodic Table"
+   ],
+   "answer": 2,
+   "explanation": "Transition metals commonly show more than one oxidation state, for example iron forms Fe²⁺ and Fe³⁺, while copper forms Cu⁺ and Cu²⁺. Many also form coloured compounds, and their ions often have incomplete d subshells."
+  },
+  {
+   "n": 5,
+   "topic": "Periodic table",
+   "q": "An element X forms the chloride XCl₃ and the oxide X₂O₃. In which group of the Periodic Table is X most likely found?",
+   "options": [
+    "Group III",
+    "Group I",
+    "Group II",
+    "Group V"
+   ],
+   "answer": 0,
+   "explanation": "Both formulas show that X has a valency of three: one X atom combines with three chlorine atoms in XCl₃, and two X atoms combine with three oxygen atoms in X₂O₃. Elements with a valency of three are placed in Group III."
+  },
+  {
+   "n": 6,
+   "topic": "Water and solubility",
+   "q": "At 40 °C, 25.0 g of a saturated solution contains 5.0 g of dissolved solute. What is the solubility of the solute at 40 °C in g per 100 g of water?",
+   "options": [
+    "25 g per 100 g of water",
+    "30 g per 100 g of water",
+    "20 g per 100 g of water",
+    "5 g per 100 g of water"
+   ],
+   "answer": 0,
+   "explanation": "The mass of water in the saturated solution is 25.0 − 5.0 = 20.0 g. Solubility = (5.0/20.0) × 100 = 25 g per 100 g of water. Using the total solution mass instead of the water mass would give a different and incorrect value."
+  },
+  {
+   "n": 7,
+   "topic": "Water and solubility",
+   "q": "A student in Kano leaves some calcium chloride pellets in an open dish. The pellets absorb moisture from the air and dissolve in the water they absorb. Calcium chloride is best described as",
+   "options": [
+    "efflorescent",
+    "deliquescent",
+    "volatile",
+    "insoluble"
+   ],
+   "answer": 1,
+   "explanation": "A deliquescent substance absorbs moisture from the air and dissolves in the water it absorbs, which is what happens to the calcium chloride pellets. An efflorescent substance instead loses water of crystallisation to the atmosphere, while insolubility and volatility do not describe this behaviour."
+  },
+  {
+   "n": 8,
+   "topic": "Environmental chemistry",
+   "q": "Motor vehicles in Lagos are fitted with catalytic converters. These devices mainly convert carbon(II) oxide and nitrogen(II) oxide into",
+   "options": [
+    "carbon and oxygen",
+    "carbon(IV) oxide and nitrogen(IV) oxide",
+    "carbon(IV) oxide and nitrogen",
+    "hydrogen and nitrogen"
+   ],
+   "answer": 2,
+   "explanation": "In a catalytic converter, carbon(II) oxide is oxidised to carbon(IV) oxide while nitrogen(II) oxide is reduced to nitrogen: 2CO + 2NO → 2CO₂ + N₂. The pair carbon(IV) oxide and nitrogen(IV) oxide would still leave an oxide of nitrogen pollutant, so it is not the main conversion."
+  },
+  {
+   "n": 9,
+   "topic": "Atomic structure",
+   "q": "An ion is represented as ³⁴S²⁻, where the atomic number of sulphur is 16. How many protons, neutrons and electrons are present in the ion?",
+   "options": [
+    "16 protons, 18 neutrons and 16 electrons",
+    "18 protons, 16 neutrons and 18 electrons",
+    "16 protons, 16 neutrons and 18 electrons",
+    "16 protons, 18 neutrons and 18 electrons"
+   ],
+   "answer": 3,
+   "explanation": "Sulphur has atomic number 16, so the ion has 16 protons. The mass number 34 gives 34 − 16 = 18 neutrons, and the 2− charge shows that two electrons have been gained, giving 16 + 2 = 18 electrons."
+  },
+  {
+   "n": 10,
+   "topic": "Environmental chemistry",
+   "q": "The ozone layer protects living organisms on Earth mainly by absorbing",
+   "options": [
+    "ultraviolet radiation from the sun",
+    "radio waves from the sun",
+    "visible light from the sun",
+    "infrared radiation from the sun"
+   ],
+   "answer": 0,
+   "explanation": "Ozone in the stratosphere absorbs most of the harmful ultraviolet radiation from the sun before it reaches the Earth's surface. Infrared radiation is mainly associated with heat, not the protective role of the ozone layer."
+  },
+  {
+   "n": 11,
+   "topic": "Rates of reaction and equilibrium",
+   "q": "At a certain temperature, a 2.0 dm³ vessel contains 0.20 mol H₂, 0.30 mol Cl₂ and 0.60 mol HCl at equilibrium according to H₂(g) + Cl₂(g) ⇌ 2HCl(g). What is Kc?",
+   "options": [
+    "0.60",
+    "2.0",
+    "0.17",
+    "6.0"
+   ],
+   "answer": 3,
+   "explanation": "The equilibrium concentrations are [H₂] = 0.20 ÷ 2.0 = 0.10 mol dm⁻³, [Cl₂] = 0.30 ÷ 2.0 = 0.15 mol dm⁻³ and [HCl] = 0.60 ÷ 2.0 = 0.30 mol dm⁻³. Thus Kc = (0.30)² ÷ (0.10 × 0.15) = 0.09 ÷ 0.015 = 6.0."
+  },
+  {
+   "n": 12,
+   "topic": "Rates of reaction and equilibrium",
+   "q": "The rate of a reaction obeys rate = k[A]². When [A] = 0.20 mol dm⁻³, the rate is 2.4 × 10⁻² mol dm⁻³ s⁻¹. What is the value of k?",
+   "options": [
+    "0.12 dm³ mol⁻¹ s⁻¹",
+    "0.60 dm³ mol⁻¹ s⁻¹",
+    "0.0048 dm³ mol⁻¹ s⁻¹",
+    "0.30 dm³ mol⁻¹ s⁻¹"
+   ],
+   "answer": 1,
+   "explanation": "Using k = rate ÷ (concentration of the reactant)², k = 2.4 × 10⁻² ÷ (0.20)² = 2.4 × 10⁻² ÷ 0.040 = 0.60. The units are dm³ mol⁻¹ s⁻¹; the value 0.12 would come from dividing by concentration only once."
+  },
+  {
+   "n": 13,
+   "topic": "Chemical bonding",
+   "q": "Solid magnesium chloride does not conduct electricity, but molten magnesium chloride does. Which statement best explains this?",
+   "options": [
+    "In the solid, the electrons are localised, but in the molten state the electrons are free to move.",
+    "The solid contains molecules, which break up into ions only when melted.",
+    "In the solid, the ions are held in fixed positions in a lattice, but in the molten state the ions are free to move.",
+    "The molten compound contains delocalised electrons from magnesium atoms."
+   ],
+   "answer": 2,
+   "explanation": "Solid magnesium chloride is ionic: its ions are held in fixed positions in the lattice and cannot move to carry current. When melted, the lattice breaks down and the ions become mobile, so the molten compound conducts electricity. Delocalised electrons are responsible for conduction in metals, not in molten magnesium chloride."
+  },
+  {
+   "n": 14,
+   "topic": "Chemical bonding",
+   "q": "Which of these molecules is polar?",
+   "options": [
+    "NH₃",
+    "CO₂",
+    "BF₃",
+    "CH₄"
+   ],
+   "answer": 0,
+   "explanation": "Ammonia has a trigonal pyramidal shape with a lone pair on nitrogen, so its bond dipoles do not cancel and the molecule is polar. Methane, carbon dioxide and boron trifluoride have symmetrical shapes in which the bond dipoles cancel."
+  },
+  {
+   "n": 15,
+   "topic": "Oxidation, reduction and electrolysis",
+   "q": "Which of the following conversions involves reduction?",
+   "options": [
+    "Zn → Zn²⁺",
+    "Cr₂O₇²⁻ → Cr³⁺",
+    "Fe²⁺ → Fe³⁺",
+    "Cl⁻ → Cl₂"
+   ],
+   "answer": 1,
+   "explanation": "In Cr₂O₇²⁻, chromium has an oxidation number of +6, while in Cr³⁺ it is +3; this decrease in oxidation number shows reduction. The changes Fe²⁺ → Fe³⁺, Cl⁻ → Cl₂ and Zn → Zn²⁺ all involve an increase in oxidation number and are therefore oxidations."
+  },
+  {
+   "n": 16,
+   "topic": "Oxidation, reduction and electrolysis",
+   "q": "During the electrolysis of dilute sulphuric acid using platinum electrodes, which gas is produced at the cathode?",
+   "options": [
+    "Oxygen",
+    "Chlorine",
+    "Hydrogen",
+    "Sulphur dioxide"
+   ],
+   "answer": 2,
+   "explanation": "At the cathode, hydrogen ions gain electrons and are discharged as hydrogen gas. Oxygen is produced at the anode from the oxidation of hydroxide ions, while sulphate ions are not discharged under these conditions."
+  },
+  {
+   "n": 17,
+   "topic": "Mole concept and stoichiometry",
+   "q": "Nitrogen reacts with hydrogen according to N₂ + 3H₂ → 2NH₃. If 4.0 dm³ of nitrogen reacts completely with hydrogen at the same temperature and pressure, what volume of ammonia is produced?",
+   "options": [
+    "4.0 dm³",
+    "2.0 dm³",
+    "12.0 dm³",
+    "8.0 dm³"
+   ],
+   "answer": 3,
+   "explanation": "From N₂ + 3H₂ → 2NH₃, one volume of nitrogen produces two volumes of ammonia at the same temperature and pressure. Therefore 4.0 dm³ of nitrogen gives 2 × 4.0 dm³ = 8.0 dm³ of ammonia."
+  },
+  {
+   "n": 18,
+   "topic": "Mole concept and stoichiometry",
+   "q": "Aluminium reacts with chlorine as shown: 2Al + 3Cl₂ → 2AlCl₃. What mass of aluminium chloride is formed when 5.40 g of aluminium reacts completely with excess chlorine? [Al = 27, Cl = 35.5]",
+   "options": [
+    "26.7 g",
+    "13.4 g",
+    "40.1 g",
+    "53.4 g"
+   ],
+   "answer": 0,
+   "explanation": "Moles of aluminium = 5.40 g ÷ 27 g mol⁻¹ = 0.200 mol. The equation shows that 2 mol Al gives 2 mol AlCl₃, so 0.200 mol AlCl₃ is formed. Its molar mass is 27 + (3 × 35.5) = 133.5 g mol⁻¹, so mass = 0.200 × 133.5 = 26.7 g."
+  },
+  {
+   "n": 19,
+   "topic": "Hydrocarbons",
+   "q": "Which formula is the general formula of the alkyne homologous series?",
+   "options": [
+    "CₙH₂ₙ₊₂",
+    "CₙH₂ₙ₋₁",
+    "CₙH₂ₙ",
+    "CₙH₂ₙ₋₂"
+   ],
+   "answer": 3,
+   "explanation": "Alkynes contain one carbon–carbon triple bond and have four fewer hydrogen atoms than the corresponding alkane, giving the general formula CₙH₂ₙ₋₂. CₙH₂ₙ₊₂ is the alkane series, while CₙH₂ₙ is the alkene series."
+  },
+  {
+   "n": 20,
+   "topic": "Functional groups in organic chemistry",
+   "q": "A laboratory technician in Jos warms an unknown liquid with iodine in aqueous sodium hydroxide and obtains a yellow precipitate. Which compound would give this result?",
+   "options": [
+    "propan-1-ol",
+    "propanal",
+    "propanoic acid",
+    "propanone"
+   ],
+   "answer": 3,
+   "explanation": "The yellow precipitate is iodoform, formed when a methyl ketone such as propanone is warmed with iodine and aqueous sodium hydroxide. Propanal, propan-1-ol and propanoic acid do not contain the CH₃CO– grouping needed for this test."
+  },
+  {
+   "n": 21,
+   "topic": "Functional groups in organic chemistry",
+   "q": "Which ester gives propan-2-ol and ethanoic acid on hydrolysis?",
+   "options": [
+    "methyl propanoate",
+    "ethyl propanoate",
+    "propan-2-yl ethanoate",
+    "propyl ethanoate"
+   ],
+   "answer": 2,
+   "explanation": "Hydrolysis of propan-2-yl ethanoate gives propan-2-ol and ethanoic acid because the alcohol part of the ester is propan-2-ol and the acid part is ethanoic acid. Propyl ethanoate would give propan-1-ol, while ethyl propanoate and methyl propanoate would give propanoic acid."
+  },
+  {
+   "n": 22,
+   "topic": "Acids, bases and salts",
+   "q": "A science teacher in Ede tests separate solutions of some salts with litmus paper. Which salt solution turns red litmus paper blue?",
+   "options": [
+    "ammonium chloride",
+    "sodium chloride",
+    "sodium trioxocarbonate(IV)",
+    "aluminium chloride"
+   ],
+   "answer": 2,
+   "explanation": "Sodium trioxocarbonate(IV) is a salt of a weak acid and a strong base, so its solution is alkaline and turns red litmus blue. Ammonium chloride and aluminium chloride are acidic salts, while sodium chloride dissolves to give a neutral solution."
+  },
+  {
+   "n": 23,
+   "topic": "Acids, bases and salts",
+   "q": "A student in Abeokuta tests a solid oxide with dilute hydrochloric acid and then with aqueous sodium hydroxide. The solid reacts with both reagents. Which oxide could it be?",
+   "options": [
+    "ZnO",
+    "SO₂",
+    "CuO",
+    "MgO"
+   ],
+   "answer": 0,
+   "explanation": "Zinc oxide is amphoteric; it reacts with dilute hydrochloric acid to form zinc chloride and with aqueous sodium hydroxide to form a zincate. Magnesium oxide and copper(II) oxide are basic oxides, while sulphur(IV) oxide is acidic and will not react with dilute hydrochloric acid in this way."
+  },
+  {
+   "n": 24,
+   "topic": "Energy changes",
+   "q": "A student in Zaria mixes 25.0 cm³ of 1.00 mol dm⁻³ hydrochloric acid at 26.0 °C with 25.0 cm³ of 1.00 mol dm⁻³ potassium hydroxide at 26.0 °C. The highest temperature reached is 32.7 °C. Calculate the molar enthalpy of neutralization. (Assume density of solution = 1.0 g cm⁻³; specific heat capacity = 4.2 J g⁻¹ K⁻¹.)",
+   "options": [
+    "-28.1 kJ mol⁻¹",
+    "-112.6 kJ mol⁻¹",
+    "-56.3 kJ mol⁻¹",
+    "+56.3 kJ mol⁻¹"
+   ],
+   "answer": 2,
+   "explanation": "The total volume is 50.0 cm³, so the solution mass is about 50.0 g. Heat evolved = 50.0 × 4.2 × (32.7 − 26.0) = 1407 J = 1.407 kJ. Since 0.0250 mol of water is formed, ΔH = −1.407 ÷ 0.0250 = −56.3 kJ mol⁻¹; neutralization is exothermic, so a positive value is incorrect."
+  },
+  {
+   "n": 25,
+   "topic": "Separation of mixtures",
+   "q": "A refinery in Port Harcourt separates crude oil into petrol, kerosene and diesel. The method used for this separation is",
+   "options": [
+    "sublimation",
+    "fractional distillation",
+    "filtration",
+    "chromatography"
+   ],
+   "answer": 1,
+   "explanation": "Crude oil is a mixture of liquids with different boiling points, so fractional distillation separates it into fractions such as petrol, kerosene and diesel. Filtration cannot separate miscible liquids, while sublimation and chromatography are unsuitable for large-scale separation of crude oil."
+  },
+  {
+   "n": 26,
+   "topic": "Gas laws",
+   "q": "A fixed mass of gas occupies 240 cm³ at a pressure of 1.0 × 10⁵ Pa. At constant temperature, what volume will it occupy when the pressure is increased to 2.5 × 10⁵ Pa?",
+   "options": [
+    "600 cm³",
+    "960 cm³",
+    "60 cm³",
+    "96 cm³"
+   ],
+   "answer": 3,
+   "explanation": "Using Boyle’s law, P₁V₁ = P₂V₂ at constant temperature. Thus V₂ = (1.0 × 10⁵ × 240)/(2.5 × 10⁵) = 96 cm³. The value 600 cm³ would result from multiplying the volume by the pressure ratio instead of dividing by it."
+  },
+  {
+   "n": 27,
+   "topic": "Gas laws",
+   "q": "A fixed mass of gas occupies 300 cm³ at 27 °C. At constant pressure, at what temperature in °C will its volume become 400 cm³?",
+   "options": [
+    "177 °C",
+    "100 °C",
+    "227 °C",
+    "127 °C"
+   ],
+   "answer": 3,
+   "explanation": "Convert the initial temperature to kelvin: 27 °C = 300 K. By Charles’s law, V₁/T₁ = V₂/T₂, so T₂ = (400 × 300)/300 = 400 K, which is 127 °C. Using the Celsius temperature directly instead of first converting to kelvin gives an incorrect result."
+  },
+  {
+   "n": 28,
+   "topic": "Gas laws",
+   "q": "A 5.0 dm³ flask at 27 °C contains 0.20 mol of an ideal gas. Calculate the pressure exerted by the gas. (R = 8.31 J K⁻¹ mol⁻¹)",
+   "options": [
+    "9.97 × 10⁴ Pa",
+    "9.97 × 10³ Pa",
+    "9.97 × 10² Pa",
+    "9.97 × 10⁵ Pa"
+   ],
+   "answer": 0,
+   "explanation": "Convert the volume to m³: 5.0 dm³ = 5.0 × 10⁻³ m³, and T = 27 + 273 = 300 K. Then P = nRT/V = (0.20 × 8.31 × 300)/(5.0 × 10⁻³) = 9.97 × 10⁴ Pa. Failing to convert dm³ to m³ gives a pressure that is 1000 times too small."
+  },
+  {
+   "n": 29,
+   "topic": "Periodic table",
+   "q": "Going down Group VII from fluorine to iodine, which property decreases?",
+   "options": [
+    "Melting point",
+    "Atomic radius",
+    "Density",
+    "Oxidising power"
+   ],
+   "answer": 3,
+   "explanation": "The halogen atoms become larger and less able to attract an electron, so their oxidising power decreases down the group. Atomic radius, melting point and density generally increase from fluorine to iodine."
+  },
+  {
+   "n": 30,
+   "topic": "Periodic table",
+   "q": "Elements in the same group of the Periodic Table have the same",
+   "options": [
+    "relative atomic mass",
+    "number of neutrons",
+    "number of electrons in their outermost shell",
+    "number of shells"
+   ],
+   "answer": 2,
+   "explanation": "Elements in the same group have the same number of outermost-shell electrons, which gives them similar chemical properties. They differ in the number of shells, relative atomic mass and number of neutrons."
+  },
+  {
+   "n": 31,
+   "topic": "Environmental chemistry",
+   "q": "Which environmental problem is most directly caused by the accumulation of carbon dioxide in the atmosphere?",
+   "options": [
+    "Global warming through the enhanced greenhouse effect",
+    "Eutrophication of rivers",
+    "Formation of acid rain",
+    "Depletion of ozone in the stratosphere"
+   ],
+   "answer": 0,
+   "explanation": "Carbon dioxide absorbs infrared radiation emitted by the Earth, trapping heat and enhancing the greenhouse effect. Ozone depletion is linked mainly to chlorofluorocarbons, acid rain to sulphur dioxide and nitrogen oxides, and eutrophication to excess nitrate or phosphate."
+  },
+  {
+   "n": 32,
+   "topic": "Environmental chemistry",
+   "q": "A factory in Ibadan discharges hot cooling water into a river. What is the main immediate danger to fish in the river?",
+   "options": [
+    "Dissolved oxygen increases, causing fish to suffocate from too much oxygen.",
+    "Fish absorb heat and therefore require less oxygen, so they thrive.",
+    "The water becomes strongly acidic because steam forms hydrogen ions.",
+    "Dissolved oxygen decreases because oxygen is less soluble in warmer water."
+   ],
+   "answer": 3,
+   "explanation": "Warmer water holds less dissolved oxygen, so fish may suffocate even if the water is otherwise clean. The effect is due to lower gas solubility at higher temperature, not to acid formation or extra oxygen production."
+  },
+  {
+   "n": 33,
+   "topic": "Metals and their compounds",
+   "q": "A student in Oyo adds zinc dust to copper(II) sulphate solution. The blue colour fades and a reddish-brown solid forms. What does this experiment show?",
+   "options": [
+    "Zinc is more reactive than copper and displaces it from solution.",
+    "Zinc reacts with sulphate ions to produce zinc sulphate and copper metal.",
+    "Copper is more reactive than zinc and displaces zinc from solution.",
+    "Copper(II) ions gain electrons from sulphate ions to form copper metal."
+   ],
+   "answer": 0,
+   "explanation": "Zinc is higher than copper in the reactivity series, so it displaces copper from copper(II) sulphate: Zn(s) + Cu²⁺(aq) → Zn²⁺(aq) + Cu(s). The reddish-brown solid is copper, while the blue colour of Cu²⁺ fades."
+  },
+  {
+   "n": 34,
+   "topic": "Metals and their compounds",
+   "q": "In testing an unknown solution, which reagent gives a blood-red colour with iron(III) ions and is used to confirm their presence?",
+   "options": [
+    "Potassium thiocyanate solution",
+    "Barium chloride solution",
+    "Sodium hydroxide solution",
+    "Dilute hydrochloric acid"
+   ],
+   "answer": 0,
+   "explanation": "Iron(III) ions form a blood-red complex with thiocyanate ions. Sodium hydroxide gives a reddish-brown precipitate with iron(III) rather than a blood-red solution, while barium chloride tests for sulphate and dilute hydrochloric acid does not confirm iron(III)."
+  },
+  {
+   "n": 35,
+   "topic": "Rates of reaction and equilibrium",
+   "q": "For a first-order reaction with a half-life of 25 s, what fraction of the reactant remains after 100 s?",
+   "options": [
+    "1/4",
+    "1/16",
+    "1/8",
+    "1/32"
+   ],
+   "answer": 1,
+   "explanation": "After 100 s, four half-lives have passed since 100 ÷ 25 = 4. The fraction remaining is (1/2)⁴ = 1/16. A fraction of 1/8 would remain after only three half-lives, which is 75 s."
+  },
+  {
+   "n": 36,
+   "topic": "Rates of reaction and equilibrium",
+   "q": "For the equilibrium N₂(g) + 3H₂(g) ⇌ 2NH₃(g), ΔH = −92 kJ mol⁻¹, which change would increase the equilibrium yield of ammonia?",
+   "options": [
+    "Removing ammonia as it is formed",
+    "Increasing the temperature",
+    "Decreasing the pressure",
+    "Adding a catalyst"
+   ],
+   "answer": 0,
+   "explanation": "Removing ammonia lowers its concentration, so the equilibrium shifts to the right to replace it, increasing the yield. Increasing temperature shifts this exothermic reaction to the left, a catalyst does not change the equilibrium position, and decreasing pressure favours the side with more gas molecules, which is the reactant side."
+  },
+  {
+   "n": 37,
+   "topic": "Atomic structure",
+   "q": "Copper has atomic number 29. What is the ground-state electron configuration of the Cu⁺ ion?",
+   "options": [
+    "[Ar] 3d⁹",
+    "[Ar] 3d⁸ 4s¹",
+    "[Ar] 3d¹⁰",
+    "[Ar] 3d¹⁰ 4s¹"
+   ],
+   "answer": 2,
+   "explanation": "A neutral copper atom has the configuration [Ar] 3d¹⁰ 4s¹. The Cu⁺ ion is formed by losing the single 4s electron, leaving the stable [Ar] 3d¹⁰ configuration."
+  },
+  {
+   "n": 38,
+   "topic": "Oxidation, reduction and electrolysis",
+   "q": "In the reaction 2I⁻ + Cl₂ → I₂ + 2Cl⁻, which statement is correct?",
+   "options": [
+    "Iodide ions are reduced and chlorine molecules are oxidised.",
+    "Chlorine molecules act as the reducing agent.",
+    "The oxidation number of iodine remains −1 throughout the reaction.",
+    "Iodide ions are oxidised and chlorine molecules are reduced."
+   ],
+   "answer": 3,
+   "explanation": "Iodide ions lose electrons to form iodine, so they are oxidised; chlorine molecules gain electrons to form chloride ions and are reduced. Chlorine is therefore the oxidising agent, and the oxidation number of iodine changes from −1 to 0."
+  },
+  {
+   "n": 39,
+   "topic": "Mole concept and stoichiometry",
+   "q": "A water treatment plant in Jos needs 0.025 mol of chlorine gas, Cl₂, for disinfection. What mass of chlorine gas is required? (Cl = 35.5)",
+   "options": [
+    "3.550 g",
+    "1.775 g",
+    "0.888 g",
+    "0.025 g"
+   ],
+   "answer": 1,
+   "explanation": "The molar mass of chlorine gas is 2 × 35.5 = 71.0 g mol⁻¹. The mass required is 0.025 mol × 71.0 g mol⁻¹ = 1.775 g. Using the atomic mass instead of the molecular mass gives 0.888 g, which is incorrect for Cl₂."
+  },
+  {
+   "n": 40,
+   "topic": "Mole concept and stoichiometry",
+   "q": "A dairy farmer in Ibadan uses calcium hydroxide to neutralise 0.025 mol of sulphuric acid according to Ca(OH)₂ + H₂SO₄ → CaSO₄ + 2H₂O. What mass of calcium hydroxide is needed? (Ca = 40, O = 16, H = 1)",
+   "options": [
+    "0.740 g",
+    "1.85 g",
+    "3.70 g",
+    "0.925 g"
+   ],
+   "answer": 1,
+   "explanation": "The equation shows that 1 mol of Ca(OH)₂ reacts with 1 mol of H₂SO₄, so 0.025 mol of Ca(OH)₂ is required. Its molar mass is 40 + 2(16 + 1) = 74 g mol⁻¹, giving a mass of 0.025 × 74 = 1.85 g."
+  },
+  {
+   "n": 41,
+   "topic": "Hydrocarbons",
+   "q": "A sample of ethene from a factory in Port Harcourt is bubbled into bromine water at room temperature. Which observation and product are correct?",
+   "options": [
+    "The solution turns blue and ethyne is formed.",
+    "The colour remains and ethane is formed.",
+    "The orange-brown colour of bromine water is decolourised and 1,2-dibromoethane is formed.",
+    "A white precipitate forms and bromoethane is produced."
+   ],
+   "answer": 2,
+   "explanation": "Ethene is unsaturated and undergoes addition with bromine, so the orange-brown colour of bromine water disappears. The two bromine atoms add across the double bond to give 1,2-dibromoethane; no ethane, bromoethane or ethyne is formed in this test."
+  },
+  {
+   "n": 42,
+   "topic": "Hydrocarbons",
+   "q": "20 cm³ of a gaseous hydrocarbon, CₓHᵧ, is completely burnt in excess oxygen. The volumes of carbon dioxide and water vapour produced, measured at the same temperature and pressure, are 40 cm³ and 60 cm³ respectively. What is the molecular formula of the hydrocarbon?",
+   "options": [
+    "C₃H₈",
+    "C₂H₄",
+    "CH₄",
+    "C₂H₆"
+   ],
+   "answer": 3,
+   "explanation": "Under the same conditions, gas volumes are in the same ratio as moles, so the volume ratio CₓHᵧ : CO₂ : H₂O is 20 : 40 : 60 = 1 : 2 : 3. Complete combustion of 1 mol CₓHᵧ gives x mol CO₂ and y/2 mol H₂O, hence x = 2 and y/2 = 3, so y = 6. The formula is C₂H₆."
+  },
+  {
+   "n": 43,
+   "topic": "Hydrocarbons",
+   "q": "What is the IUPAC name of the compound CH₂=C(CH₃)₂?",
+   "options": [
+    "2-methylprop-1-ene",
+    "2-methylbut-1-ene",
+    "but-1-ene",
+    "but-2-ene"
+   ],
+   "answer": 0,
+   "explanation": "The longest chain containing the double bond has three carbon atoms, so the parent alkene is prop-1-ene. Numbering from the double-bond end places a methyl group on carbon 2, giving 2-methylprop-1-ene. The other names either omit the branch or describe different carbon skeletons."
+  },
+  {
+   "n": 44,
+   "topic": "Functional groups in organic chemistry",
+   "q": "A student in Ilorin warms an organic compound X with Fehling’s solution and obtains a brick-red precipitate. X also reacts with sodium hydrogen trioxocarbonate(IV) solution to produce a gas. Which pair of functional groups is present in X?",
+   "options": [
+    "Aldehyde and ester",
+    "Alcohol and carboxylic acid",
+    "Aldehyde and carboxylic acid",
+    "Ketone and alcohol"
+   ],
+   "answer": 2,
+   "explanation": "The brick-red precipitate with Fehling’s solution shows that an aldehyde group is present; a ketone would not give this result. The gas evolved with sodium hydrogen trioxocarbonate(IV) is carbon(IV) oxide, showing that a carboxylic acid group is present. The other pairs either lack the aldehyde group or lack the acidic group needed for both observations."
+  },
+  {
+   "n": 45,
+   "topic": "Functional groups in organic chemistry",
+   "q": "Butan-2-ol is heated under reflux with excess acidified potassium dichromate(VI). Which organic product is formed?",
+   "options": [
+    "Butanal",
+    "But-1-ene",
+    "Butan-2-one",
+    "Butanoic acid"
+   ],
+   "answer": 2,
+   "explanation": "Butan-2-ol is a secondary alkanol, and oxidation of a secondary alkanol gives a ketone. The product is butan-2-one, which resists further oxidation under these conditions. Butanal and butanoic acid would arise from a primary alkanol, while an alkene would require dehydration rather than oxidation."
+  },
+  {
+   "n": 46,
+   "topic": "Acids, bases and salts",
+   "q": "At 25 °C, the hydrogen ion concentration of a hydrochloric acid solution is 2.0 × 10⁻³ mol dm⁻³. What is the pH of the solution? (log₁₀ 2 = 0.301)",
+   "options": [
+    "2.70",
+    "3.00",
+    "2.30",
+    "11.30"
+   ],
+   "answer": 0,
+   "explanation": "For this solution, pH = −log₁₀(2.0 × 10⁻³) = 3 − 0.301 = 2.699, which is approximately 2.70. The value 11.30 would correspond to the pOH under the approximation pH + pOH = 14, not to the pH. The solution is acidic, so the pH must be below 7."
+  },
+  {
+   "n": 47,
+   "topic": "Energy changes",
+   "q": "A student in Minna completely burns 5.6 g of ethene, C₂H₄ (molar mass = 28 g mol⁻¹), and finds that 282 kJ of heat is released. What is the enthalpy of combustion of ethene?",
+   "options": [
+    "−56.4 kJ mol⁻¹",
+    "+1410 kJ mol⁻¹",
+    "−1410 kJ mol⁻¹",
+    "−282 kJ mol⁻¹"
+   ],
+   "answer": 2,
+   "explanation": "Moles of ethene burned = 5.6 ÷ 28 = 0.20 mol. Heat released per mole = 282 ÷ 0.20 = 1410 kJ mol⁻¹. Since heat is released, the enthalpy change of combustion is −1410 kJ mol⁻¹."
+  },
+  {
+   "n": 48,
+   "topic": "Non-metals and their compounds",
+   "q": "A student in Kano passes dry ammonia gas over heated copper(II) oxide until reaction is complete. Which products are formed?",
+   "options": [
+    "Copper, nitrogen(II) oxide and water",
+    "Copper, nitrogen and water",
+    "Copper(II) nitrate, nitrogen and water",
+    "Copper, hydrogen and water"
+   ],
+   "answer": 1,
+   "explanation": "Ammonia reduces heated copper(II) oxide to copper and is itself oxidised to nitrogen. The balanced reaction is 2NH₃ + 3CuO → 3Cu + N₂ + 3H₂O, so the products are copper, nitrogen and water. Hydrogen is not produced because ammonia is oxidised by copper(II) oxide."
+  },
+  {
+   "n": 49,
+   "topic": "Separation of mixtures",
+   "q": "A student in Ibadan adds distilled water to a mixture of lead(II) sulphate and sodium chloride, stirs and filters. Which statement best describes what remains on the filter paper and what passes through?",
+   "options": [
+    "Lead(II) sulphate dissolves and passes through in the filtrate while sodium chloride remains as residue.",
+    "Sodium chloride remains on the filter paper while lead(II) sulphate passes through in the filtrate.",
+    "The mixture dissolves completely so no solid remains on the filter paper.",
+    "Lead(II) sulphate remains on the filter paper while sodium chloride passes through in the filtrate."
+   ],
+   "answer": 3,
+   "explanation": "Lead(II) sulphate is insoluble in water and is trapped by the filter paper, while sodium chloride dissolves and passes through as the filtrate. If the lead(II) sulphate were soluble, it would pass through, but it is not soluble in water."
+  },
+  {
+   "n": 50,
+   "topic": "Gas laws",
+   "q": "A sample of carbon(IV) oxide occupies 11.2 dm³ at s.t.p. How many molecules are present? (Molar volume at s.t.p. = 22.4 dm³; Avogadro constant = 6.02 × 10²³ mol⁻¹)",
+   "options": [
+    "3.01 × 10²³",
+    "3.01 × 10²²",
+    "1.505 × 10²³",
+    "6.02 × 10²³"
+   ],
+   "answer": 0,
+   "explanation": "At s.t.p., 22.4 dm³ contains 6.02 × 10²³ molecules, so 11.2 dm³ is 0.50 mol. Therefore, the number of molecules is 0.50 × 6.02 × 10²³ = 3.01 × 10²³. Treating 11.2 dm³ as one molar volume gives 6.02 × 10²³, which would be for 22.4 dm³."
+  }
+ ]
+}

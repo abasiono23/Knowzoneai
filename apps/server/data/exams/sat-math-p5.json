@@ -1,0 +1,583 @@
+{
+ "id": "sat-math-p5",
+ "exam": "sat",
+ "subject": "math",
+ "year": null,
+ "number": 5,
+ "source": "ai",
+ "minutes": 70,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Linear equations in two variables",
+   "q": "A rideshare company charges a base fare of $4.75 plus $1.60 for each mile traveled. Which equation represents the total fare F, in dollars, for a ride of m miles?",
+   "options": [
+    "F = 4.75m + 1.60",
+    "F = 1.60(m + 4.75)",
+    "F = 1.60m + 4.75",
+    "F = 4.75(m + 1.60)"
+   ],
+   "answer": 2,
+   "explanation": "The base fare is charged once, and the per-mile charge is multiplied by the number of miles, so F = 1.60m + 4.75. The expression 1.60(m + 4.75) incorrectly multiplies the base fare by the per-mile rate. Similarly, 4.75m + 1.60 reverses the roles of the base fare and per-mile charge."
+  },
+  {
+   "n": 2,
+   "topic": "Linear equations in two variables",
+   "q": "In the xy-plane, line ℓ is perpendicular to the line y = (2/3)x + 7 and passes through the point (5, −2). What is the equation of line ℓ?",
+   "options": [
+    "y = −(3/2)x − 11/2",
+    "y = −(3/2)x + 11/2",
+    "y = −(2/3)x + 4/3",
+    "y = (2/3)x − 16/3"
+   ],
+   "answer": 1,
+   "explanation": "The given line has slope 2/3, so a perpendicular line has slope −3/2. Using point-slope form with (5, −2): y + 2 = −(3/2)(x − 5), which simplifies to y = −(3/2)x + 11/2. Using the parallel slope 2/3 instead gives y = (2/3)x − 16/3, not the required perpendicular line."
+  },
+  {
+   "n": 3,
+   "topic": "One-variable data: center and spread",
+   "q": "The numbers of books read during one month by 8 students are 2, 4, 4, 5, 6, 7, 7, 7. What is the mode of the data set?",
+   "options": [
+    "4",
+    "6",
+    "7",
+    "5"
+   ],
+   "answer": 2,
+   "explanation": "The value 7 appears three times, while every other value appears at most twice. Therefore, the mode is 7. The value 4 appears twice, but it is not the most frequent value."
+  },
+  {
+   "n": 4,
+   "topic": "One-variable data: center and spread",
+   "q": "A data set contains 9 values and has a mean of 18. A tenth value equal to 30 is added to the data set. What is the mean of the 10 values?",
+   "options": [
+    "20",
+    "24",
+    "18.3",
+    "19.2"
+   ],
+   "answer": 3,
+   "explanation": "The original sum is 9 × 18 = 162. Adding 30 makes the new sum 162 + 30 = 192, and dividing by 10 gives a new mean of 19.2. The value 24 comes from averaging 18 and 30 without accounting for all the other values."
+  },
+  {
+   "n": 5,
+   "topic": "One-variable data: center and spread",
+   "q": "A data set consists of 12 positive numbers and has mean 35 and median 30. If the greatest value in the data set is increased by 24 and all other values remain unchanged, which statement about the data set must be true?",
+   "options": [
+    "The mean stays the same, and the median increases by 2.",
+    "The mean increases by 2, and the median stays the same.",
+    "The mean increases by 2, and the median increases by 2.",
+    "The mean increases by 24, and the median increases by 2."
+   ],
+   "answer": 1,
+   "explanation": "The sum increases by 24, so the mean increases by 24 ÷ 12 = 2. The median of 12 ordered values is the average of the 6th and 7th values, and increasing the greatest value does not affect either of those positions. Therefore, the median stays the same while the mean increases by 2."
+  },
+  {
+   "n": 6,
+   "topic": "Nonlinear functions",
+   "q": "The value, in dollars, of a laptop after t years is modeled by V(t) = 1,450(0.82)ᵗ. Which statement best describes the value of the laptop each year?",
+   "options": [
+    "It decreases by $0.82 each year.",
+    "It decreases by 82% of its value from the previous year.",
+    "It decreases by 18% of its value from the previous year.",
+    "It increases by 18% of its value from the previous year."
+   ],
+   "answer": 2,
+   "explanation": "Since 0.82 = 1 − 0.18, the model multiplies the previous year's value by 0.82 each year. That is an 18% decrease per year. A decrease of $0.82 or 82% confuses the multiplier with the amount of change."
+  },
+  {
+   "n": 7,
+   "topic": "Nonlinear functions",
+   "q": "In the xy-plane, the graph of a quadratic function has vertex (2, −9) and passes through the point (5, 0). What is the y-intercept of the graph?",
+   "options": [
+    "5",
+    "−9",
+    "−5",
+    "−13"
+   ],
+   "answer": 2,
+   "explanation": "A quadratic with vertex (2, −9) has equation y = a(x − 2)² − 9. Substituting (5, 0) gives 0 = a(3)² − 9, so a = 1. Thus y = (x − 2)² − 9 = x² − 4x − 5, and the y-intercept is −5."
+  },
+  {
+   "n": 8,
+   "topic": "Right triangles and trigonometry",
+   "q": "In right triangle PQR, angle R is a right angle. If PQ = 13 and PR = 5, what is sin Q?",
+   "options": [
+    "12/5",
+    "5/13",
+    "5/12",
+    "12/13"
+   ],
+   "answer": 1,
+   "explanation": "Because angle R is a right angle, PQ = 13 is the hypotenuse. The side opposite angle Q is PR = 5, so sin Q = opposite/hypotenuse = 5/13. The ratio 12/13 is cos Q, and 5/12 is tan Q."
+  },
+  {
+   "n": 9,
+   "topic": "Right triangles and trigonometry",
+   "q": "From the top of a vertical building that is 60 feet tall, the angle of depression to a car on level ground is 35°. Which expression gives the horizontal distance, in feet, from the base of the building to the car?",
+   "options": [
+    "60/sin 35°",
+    "60 sin 35°",
+    "60/tan 35°",
+    "60 tan 35°"
+   ],
+   "answer": 2,
+   "explanation": "The vertical side of the right triangle is 60 feet, and the horizontal distance d is adjacent to the 35° angle at the car. Thus tan 35° = 60/d, so d = 60/tan 35°. The expression 60/sin 35° gives the line-of-sight distance, not the horizontal distance."
+  },
+  {
+   "n": 10,
+   "topic": "Percentages",
+   "q": "After an 18% discount, the price of a tablet is $246. What was the tablet's price before the discount?",
+   "options": [
+    "$300.00",
+    "$290.28",
+    "$201.72",
+    "$264.00"
+   ],
+   "answer": 0,
+   "explanation": "Let p be the original price. After an 18% discount, 0.82p = 246, so p = 246 ÷ 0.82 = 300. The value $290.28 comes from increasing $246 by 18% instead of reversing the discount."
+  },
+  {
+   "n": 11,
+   "topic": "Linear equations in one variable",
+   "q": "A rideshare driver charges a base fee of $3.25 plus $2.25 per mile. A passenger's fare before tip was $25.75. How many miles was the trip?",
+   "options": [
+    "9 miles",
+    "12 miles",
+    "10 miles",
+    "11 miles"
+   ],
+   "answer": 2,
+   "explanation": "Let m be the number of miles. Then 3.25 + 2.25m = 25.75, so 2.25m = 22.50 and m = 10. The value 9 miles would result from mistakenly using $2.50 per mile after subtracting the base fee."
+  },
+  {
+   "n": 12,
+   "topic": "Ratios, rates, proportions and units",
+   "q": "A machine fills 5 bottles every 8 seconds. At this constant rate, how many bottles does it fill in 4 minutes?",
+   "options": [
+    "120 bottles",
+    "240 bottles",
+    "150 bottles",
+    "160 bottles"
+   ],
+   "answer": 2,
+   "explanation": "Convert 4 minutes to seconds: 4 × 60 = 240 seconds. There are 240 ÷ 8 = 30 groups of 8 seconds, so the machine fills 30 × 5 = 150 bottles."
+  },
+  {
+   "n": 13,
+   "topic": "Nonlinear equations and systems",
+   "q": "The system of equations y = x² + 1 and y = 2x + 4 has two intersection points. What is the sum of the x-coordinates of the intersection points?",
+   "options": [
+    "2",
+    "4",
+    "−3",
+    "−2"
+   ],
+   "answer": 0,
+   "explanation": "Set the expressions for y equal: x² + 1 = 2x + 4, so x² − 2x − 3 = 0. Factoring gives (x − 3)(x + 1) = 0, so the x-coordinates are 3 and −1. Their sum is 3 + (−1) = 2; the product would be −3."
+  },
+  {
+   "n": 14,
+   "topic": "Percentages",
+   "q": "A bicycle helmet is on sale for 35% off its regular price of $64. A 5% sales tax is applied to the sale price. What is the total amount paid for the helmet?",
+   "options": [
+    "$39.52",
+    "$41.60",
+    "$43.68",
+    "$44.80"
+   ],
+   "answer": 2,
+   "explanation": "The sale price is 65% of $64, or 0.65 × 64 = $41.60. Applying 5% sales tax gives 1.05 × 41.60 = $43.68. The value $44.80 applies the 5% tax to the original $64 rather than the sale price."
+  },
+  {
+   "n": 15,
+   "topic": "Linear equations in one variable",
+   "q": "Solve for x: (2/3)x − 5 = (3/4)x + 1.",
+   "options": [
+    "12",
+    "−12",
+    "72",
+    "−72"
+   ],
+   "answer": 3,
+   "explanation": "Subtract (3/4)x from both sides and add 5: (2/3 − 3/4)x = 6. Since 2/3 − 3/4 = −1/12, the equation becomes (−1/12)x = 6, so x = −72. The value 72 comes from losing the negative sign."
+  },
+  {
+   "n": 16,
+   "topic": "Ratios, rates, proportions and units",
+   "q": "On a map, 3/4 inch represents 12 miles. What distance, in miles, is represented by 2.5 inches on the map?",
+   "options": [
+    "48 miles",
+    "16 miles",
+    "30 miles",
+    "40 miles"
+   ],
+   "answer": 3,
+   "explanation": "Since 3/4 inch equals 0.75 inch, the scale is 12 ÷ 0.75 = 16 miles per inch. Thus 2.5 inches represents 2.5 × 16 = 40 miles. The value 30 miles would come from using 12 miles per inch."
+  },
+  {
+   "n": 17,
+   "topic": "Nonlinear equations and systems",
+   "q": "What is the solution to the equation √(3x + 4) = x?",
+   "options": [
+    "−1",
+    "4",
+    "1",
+    "2"
+   ],
+   "answer": 1,
+   "explanation": "Squaring both sides gives 3x + 4 = x², so x² − 3x − 4 = 0. Factoring yields (x − 4)(x + 1) = 0, so the possible values are x = 4 and x = −1. Substituting x = −1 gives 1 = −1, which is false, so only x = 4 is a solution."
+  },
+  {
+   "n": 18,
+   "topic": "Percentages",
+   "q": "A town's population increased by 30% from 2010 to 2015, then decreased by 25% from 2015 to 2020. If the population in 2020 was 39,000, what was the population in 2010?",
+   "options": [
+    "38,025",
+    "40,000",
+    "52,000",
+    "30,000"
+   ],
+   "answer": 1,
+   "explanation": "Let p be the 2010 population. After a 30% increase and then a 25% decrease, the 2020 population is p × 1.30 × 0.75 = 0.975p. So 0.975p = 39,000, which gives p = 39,000 ÷ 0.975 = 40,000."
+  },
+  {
+   "n": 19,
+   "topic": "Ratios, rates, proportions and units",
+   "q": "At a factory, 5 identical machines produce 840 parts in 6 hours. At this constant rate, how many parts will 8 machines produce in 5 hours?",
+   "options": [
+    "700 parts",
+    "1,008 parts",
+    "1,344 parts",
+    "1,120 parts"
+   ],
+   "answer": 3,
+   "explanation": "The 5 machines working 6 hours total 5 × 6 = 30 machine-hours, so the rate is 840 ÷ 30 = 28 parts per machine-hour. For 8 machines working 5 hours, the number of parts is 8 × 5 × 28 = 1,120. The value 1,344 parts would be correct for 8 machines working 6 hours."
+  },
+  {
+   "n": 20,
+   "topic": "Systems of two linear equations",
+   "q": "A community garden has 26 plots in two sizes. Small plots rent for $18 each and large plots rent for $30 each. The garden collects $624 in annual rent from all 26 plots. How many large plots are there?",
+   "options": [
+    "14",
+    "13",
+    "12",
+    "10"
+   ],
+   "answer": 1,
+   "explanation": "Let s be the number of small plots and l be the number of large plots. Then s + l = 26 and 18s + 30l = 624. Substituting s = 26 − l gives 468 − 18l + 30l = 624, so 12l = 156 and l = 13."
+  },
+  {
+   "n": 21,
+   "topic": "Systems of two linear equations",
+   "q": "A hardware store sold 35 gallons of paint in two types. Interior paint costs $24 per gallon, and exterior paint costs $32 per gallon. The store collected $1,008 from these sales. How many gallons of exterior paint were sold?",
+   "options": [
+    "14",
+    "20",
+    "24",
+    "21"
+   ],
+   "answer": 3,
+   "explanation": "Let i be gallons of interior paint and e be gallons of exterior paint. The equations i + e = 35 and 24i + 32e = 1,008 give 24(35 − e) + 32e = 1,008, so 840 + 8e = 1,008 and e = 21. Using 14 gallons of exterior paint would produce only $952 in revenue with 21 interior gallons, not $1,008."
+  },
+  {
+   "n": 22,
+   "topic": "Systems of two linear equations",
+   "q": "A boat travels 36 miles downstream in 2 hours. It travels the same 36 miles upstream in 3 hours. The boat's speed in still water is b miles per hour, and the current's speed is c miles per hour. What is c?",
+   "options": [
+    "15",
+    "12",
+    "3",
+    "6"
+   ],
+   "answer": 2,
+   "explanation": "Downstream speed is b + c = 36 ÷ 2 = 18, and upstream speed is b − c = 36 ÷ 3 = 12. Adding the equations gives 2b = 30, so b = 15, and then 15 + c = 18 gives c = 3. The value 15 is the boat's speed in still water, not the current speed."
+  },
+  {
+   "n": 23,
+   "topic": "Linear functions",
+   "q": "A bakery's daily profit, in dollars, is modeled by P(c) = 2.75c − 340, where c is the number of cupcakes sold. What is the best interpretation of 2.75 in this context?",
+   "options": [
+    "The bakery's profit decreases by $2.75 for each additional cupcake sold.",
+    "The bakery charges $2.75 for each cupcake sold.",
+    "The bakery's profit is $2.75 when no cupcakes are sold.",
+    "The bakery's profit increases by $2.75 for each additional cupcake sold."
+   ],
+   "answer": 3,
+   "explanation": "The function is linear, so the coefficient of c is the rate of change of profit with respect to cupcakes sold. Increasing c by 1 changes P(c) by $2.75, so profit rises by $2.75 per additional cupcake. The constant −340, not 2.75, relates to profit when no cupcakes are sold."
+  },
+  {
+   "n": 24,
+   "topic": "Linear functions",
+   "q": "The function f is linear and satisfies f(2x + 1) = 6x − 4 for all values of x. What is f(7)?",
+   "options": [
+    "14",
+    "20",
+    "10",
+    "38"
+   ],
+   "answer": 0,
+   "explanation": "To evaluate f(7), set 2x + 1 = 7, which gives x = 3. Then f(7) = 6(3) − 4 = 14. Substituting x = 7 directly gives 38, but that computes f(15), not f(7)."
+  },
+  {
+   "n": 25,
+   "topic": "Area and volume",
+   "q": "A rectangular patio is 24 feet long and 15 feet wide. It will be covered with square tiles that each have side length 1.5 feet. How many tiles are needed to cover the patio with no gaps or overlaps?",
+   "options": [
+    "180",
+    "160",
+    "240",
+    "120"
+   ],
+   "answer": 1,
+   "explanation": "The patio area is 24 × 15 = 360 square feet, and each square tile has area 1.5 × 1.5 = 2.25 square feet. Dividing gives 360 ÷ 2.25 = 160 tiles. Along the sides this is 24 ÷ 1.5 = 16 tiles by 15 ÷ 1.5 = 10 tiles, also totaling 160."
+  },
+  {
+   "n": 26,
+   "topic": "Area and volume",
+   "q": "A concrete planter is shaped like a rectangular prism with outer dimensions 20 inches by 12 inches by 10 inches. A rectangular hole measuring 16 inches by 8 inches by 10 inches is cut through the planter from top to bottom. What is the volume of the concrete, in cubic inches?",
+   "options": [
+    "3,680",
+    "2,400",
+    "1,280",
+    "1,120"
+   ],
+   "answer": 3,
+   "explanation": "The outer rectangular prism has volume 20 × 12 × 10 = 2,400 cubic inches. The hole has volume 16 × 8 × 10 = 1,280 cubic inches. Subtracting the hole from the outer volume gives 2,400 − 1,280 = 1,120 cubic inches of concrete."
+  },
+  {
+   "n": 27,
+   "topic": "Circles",
+   "q": "A circular garden has a radius of 12 feet. A sprinkler set at the center waters a sector of the garden with a central angle of 75°. What is the area, in square feet, of the sector the sprinkler waters?",
+   "options": [
+    "15π",
+    "60π",
+    "30π",
+    "90π"
+   ],
+   "answer": 2,
+   "explanation": "The sector is 75/360 = 5/24 of the whole circle. The circle's area is π × 12² = 144π, so the sector area is (5/24)(144π) = 30π square feet. Using 75/180 instead would give 60π, which is twice the correct sector area."
+  },
+  {
+   "n": 28,
+   "topic": "Circles",
+   "q": "A chord of a circle is 24 centimeters long and is 5 centimeters from the center. What is the diameter of the circle, in centimeters?",
+   "options": [
+    "24",
+    "13",
+    "34",
+    "26"
+   ],
+   "answer": 3,
+   "explanation": "A radius to an endpoint of the chord forms a right triangle with half the chord and the perpendicular distance to the chord. Half the chord is 12, so the radius is √(12² + 5²) = √169 = 13 centimeters. The diameter is twice the radius, or 26 centimeters; 13 is the radius, not the diameter."
+  },
+  {
+   "n": 29,
+   "topic": "Lines, angles and triangles",
+   "q": "In triangle DEF, DE = DF, and the measure of angle E is 72°. What is the measure of angle D?",
+   "options": [
+    "36°",
+    "72°",
+    "54°",
+    "108°"
+   ],
+   "answer": 0,
+   "explanation": "Because DE = DF, the triangle is isosceles with base EF, so angle E and angle F are equal: both are 72°. Therefore angle D = 180° − (72° + 72°) = 36°."
+  },
+  {
+   "n": 30,
+   "topic": "Lines, angles and triangles",
+   "q": "In triangle ABC, point D lies on side AB and point E lies on side AC, and DE is parallel to BC. If the measure of angle ADE is (2x + 10)° and the measure of angle ABC is (3x − 20)°, what is the value of x?",
+   "options": [
+    "50",
+    "10",
+    "30",
+    "70"
+   ],
+   "answer": 2,
+   "explanation": "Since DE is parallel to BC, angle ADE and angle ABC are corresponding angles, so they are equal. Thus 2x + 10 = 3x − 20, which gives x = 30. The value 70 is the angle measure, not x."
+  },
+  {
+   "n": 31,
+   "topic": "Two-variable data: models and scatterplots",
+   "q": "The total monthly cost y, in dollars, of a gym membership with x personal training sessions is modeled by y = 0.75x + 20. Which statement best describes the meaning of 0.75 in this model?",
+   "options": [
+    "The predicted monthly cost increases by $20 for each additional $0.75 spent.",
+    "The predicted monthly cost is $0.75 when there are no personal training sessions.",
+    "The predicted monthly cost increases by $0.75 for each additional personal training session.",
+    "The predicted monthly cost is $20 for each additional personal training session."
+   ],
+   "answer": 2,
+   "explanation": "In a linear model of the form y = mx + b, the slope m describes the predicted change in y for each one-unit increase in x. Here x is the number of personal training sessions, so the predicted cost increases by $0.75 per additional session. The $20 is the predicted cost with 0 sessions."
+  },
+  {
+   "n": 32,
+   "topic": "Two-variable data: models and scatterplots",
+   "q": "Data from a used-car website are modeled by the line y = 1,850 − 120x, where x is the age of a car in years and y is its predicted value in dollars. A car that is 6 years old was listed for $1,050. What is the residual, in dollars, for this car?",
+   "options": [
+    "−$720",
+    "−$1,130",
+    "$80",
+    "−$80"
+   ],
+   "answer": 3,
+   "explanation": "The predicted value is 1,850 − 120(6) = 1,130 dollars. The residual is actual value minus predicted value: 1,050 − 1,130 = −80 dollars. A negative residual means the actual value is $80 less than the predicted value."
+  },
+  {
+   "n": 33,
+   "topic": "Two-variable data: models and scatterplots",
+   "q": "A scatterplot has a line of best fit y = 7.5x + 18, where y is the predicted amount in dollars for x hours. If all y-values are converted from dollars to cents while x remains in hours, what is the slope of the new line of best fit?",
+   "options": [
+    "1,800",
+    "750",
+    "0.075",
+    "7.5"
+   ],
+   "answer": 1,
+   "explanation": "Converting dollars to cents multiplies each predicted y-value by 100, so the new equation is y = 100(7.5x + 18) = 750x + 1,800. Therefore the new slope is 750, measured in cents per hour. The value 1,800 is the new intercept, not the slope."
+  },
+  {
+   "n": 34,
+   "topic": "Probability and conditional probability",
+   "q": "A survey of 240 residents recorded whether they rent or own their home and whether they own a dog. Of 90 homeowners, 54 owned a dog. Of 150 renters, 75 owned a dog. If a resident who owns a dog is selected at random, what is the probability that the resident owns a home?",
+   "options": [
+    "18/43",
+    "25/43",
+    "3/5",
+    "9/40"
+   ],
+   "answer": 0,
+   "explanation": "There are 54 + 75 = 129 dog owners in total, and 54 of them own a home. So the conditional probability is 54/129 = 18/43. The fraction 3/5 is the probability of owning a dog among homeowners, not the reverse."
+  },
+  {
+   "n": 35,
+   "topic": "Probability and conditional probability",
+   "q": "A drawer contains 5 black socks and 3 white socks. Two socks are drawn at random without replacement. Given that at least one of the drawn socks is black, what is the probability that both drawn socks are black?",
+   "options": [
+    "25/28",
+    "5/14",
+    "2/5",
+    "5/8"
+   ],
+   "answer": 2,
+   "explanation": "There are 28 equally likely pairs of socks. Both black occurs in 10 pairs, and at least one black occurs in 28 − 3 = 25 pairs. Conditional on at least one black, the probability both are black is 10/25 = 2/5. The value 5/14 is the probability both are black without the given condition."
+  },
+  {
+   "n": 36,
+   "topic": "Inference from samples and margin of error",
+   "q": "A random sample of 400 residents found that 55% favor a new bike lane. The margin of error at 95% confidence is 5 percentage points. If the sample size were increased to 1,600 residents from the same population at the same confidence level, what would be the approximate margin of error?",
+   "options": [
+    "10 percentage points",
+    "2.5 percentage points",
+    "1.25 percentage points",
+    "5 percentage points"
+   ],
+   "answer": 1,
+   "explanation": "For random samples, the margin of error is approximately proportional to 1/√n. Quadrupling the sample size multiplies the margin of error by 1/√4 = 1/2, so the new margin of error is about 5/2 = 2.5 percentage points."
+  },
+  {
+   "n": 37,
+   "topic": "Inference from samples and margin of error",
+   "q": "A school district wants to estimate the average number of hours per week that students in the district spend on extracurricular activities. Which sampling method would best allow the district to generalize the estimate to all students in the district?",
+   "options": [
+    "Select a random sample of students from all schools in the district.",
+    "Survey only students who participate in after-school sports.",
+    "Ask students who volunteer to complete an online survey.",
+    "Survey all students in one randomly selected school."
+   ],
+   "answer": 0,
+   "explanation": "A random sample selected from the entire district is most likely to be representative of all students in the district. Surveying only athletes, one school, or volunteers can produce biased results that do not generalize to the full population."
+  },
+  {
+   "n": 38,
+   "topic": "Linear inequalities",
+   "q": "A community pool allows a group rate only when the number of visitors n is more than 8 and no more than 20. Which inequality represents all possible values of n?",
+   "options": [
+    "8 < n < 20",
+    "8 ≤ n < 20",
+    "8 < n ≤ 20",
+    "n < 8 or n ≥ 20"
+   ],
+   "answer": 2,
+   "explanation": "More than 8 gives n > 8, while no more than 20 gives n ≤ 20. Combining these gives 8 < n ≤ 20; the endpoints must keep the correct inclusive or strict relation."
+  },
+  {
+   "n": 39,
+   "topic": "Equivalent expressions",
+   "q": "Which expression is equivalent to 5(2x − 3) + 4(x + 6)?",
+   "options": [
+    "6x + 9",
+    "14x + 9",
+    "14x + 21",
+    "14x − 9"
+   ],
+   "answer": 1,
+   "explanation": "Distribute: 5(2x − 3) = 10x − 15 and 4(x + 6) = 4x + 24. Adding gives 10x + 4x − 15 + 24 = 14x + 9. The expression 14x − 9 results from treating 4(x + 6) as 4x + 6 rather than 4x + 24."
+  },
+  {
+   "n": 40,
+   "topic": "Linear equations in two variables",
+   "q": "A line in the xy-plane passes through the points (2, 7) and (6, −1). What is the slope of the line?",
+   "options": [
+    "2",
+    "−1/2",
+    "−2",
+    "1/2"
+   ],
+   "answer": 2,
+   "explanation": "Slope is the change in y divided by the change in x: (−1 − 7)/(6 − 2) = −8/4 = −2. A value such as 1/2 comes from using a negative reciprocal instead of the slope between the two points."
+  },
+  {
+   "n": 41,
+   "topic": "One-variable data: center and spread",
+   "q": "The waiting times, in minutes, for eight customers are 12, 15, 18, 20, 22, 25, 28, and 31. What is the interquartile range of the waiting times?",
+   "options": [
+    "16.5 minutes",
+    "26.5 minutes",
+    "19 minutes",
+    "10 minutes"
+   ],
+   "answer": 3,
+   "explanation": "The lower half is 12, 15, 18, 20, so the first quartile is 16.5. The upper half is 22, 25, 28, 31, so the third quartile is 26.5. The interquartile range is 26.5 − 16.5 = 10 minutes."
+  },
+  {
+   "n": 42,
+   "topic": "Linear inequalities",
+   "q": "A delivery van can carry at most 1,200 pounds. The driver has already loaded 450 pounds of packages and will add boxes that each weigh 35 pounds. What is the greatest number of boxes the driver can add?",
+   "options": [
+    "21",
+    "34",
+    "22",
+    "20"
+   ],
+   "answer": 0,
+   "explanation": "Let b be the number of boxes. Then 450 + 35b ≤ 1,200, so 35b ≤ 750 and b ≤ 750/35 ≈ 21.43. Since b must be a whole number, the greatest possible value is 21; 22 boxes would make the load 1,220 pounds."
+  },
+  {
+   "n": 43,
+   "topic": "Equivalent expressions",
+   "q": "Which expression is equivalent to (6x⁵y²)(2x⁻²y³) for x ≠ 0 and y ≠ 0?",
+   "options": [
+    "12x³y⁶",
+    "12x⁷y⁵",
+    "12x³y⁵",
+    "8x³y⁵"
+   ],
+   "answer": 2,
+   "explanation": "Multiply coefficients: 6 × 2 = 12. Add exponents for like bases: x⁵ × x⁻² = x³ and y² × y³ = y⁵, so the expression is 12x³y⁵. Adding the x-exponents incorrectly gives 12x⁷y⁵."
+  },
+  {
+   "n": 44,
+   "topic": "Linear equations in two variables",
+   "q": "Line k is perpendicular to the line 2x − 5y = 10 and passes through the point (4, −3). Which equation represents line k?",
+   "options": [
+    "2x − 5y = 23",
+    "2x + 5y = −7",
+    "5x − 2y = 26",
+    "5x + 2y = 14"
+   ],
+   "answer": 3,
+   "explanation": "The given line has slope 2/5, so a perpendicular line has slope −5/2. Using point-slope form through (4, −3): y + 3 = (−5/2)(x − 4), which simplifies to 5x + 2y = 14. The equation 2x − 5y = 23 would be parallel to the given line, not perpendicular."
+  }
+ ]
+}

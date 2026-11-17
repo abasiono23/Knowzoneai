@@ -1,0 +1,401 @@
+{
+ "id": "nsc-life-sciences-p1",
+ "exam": "nsc",
+ "subject": "life-sciences",
+ "year": null,
+ "number": 1,
+ "source": "ai",
+ "minutes": 35,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Genetics and inheritance",
+   "q": "A man in Soweto has blood group AB and a woman has blood group O. Assuming no mutations, which blood groups could their children have?",
+   "options": [
+    "Blood group O only",
+    "Blood group AB or blood group O only",
+    "Blood group A or blood group B only",
+    "Blood group A, B, AB or O"
+   ],
+   "answer": 2,
+   "explanation": "The AB parent produces I^A and I^B gametes, while the O parent produces i gametes. The children can therefore be I^A i (blood group A) or I^B i (blood group B), not AB or O."
+  },
+  {
+   "n": 2,
+   "topic": "Genetics and inheritance",
+   "q": "A farmer in the Eastern Cape crosses two heterozygous black Nguni cattle. Black coat colour (B) is dominant to red (b). Of the black calves produced, what fraction is expected to be homozygous black?",
+   "options": [
+    "One third",
+    "One quarter",
+    "Three quarters",
+    "One half"
+   ],
+   "answer": 0,
+   "explanation": "The cross Bb × Bb gives genotypes in the ratio 1 BB : 2 Bb : 1 bb. Among the black calves, which are BB and Bb, only the BB calves are homozygous black, so this is 1 out of 3."
+  },
+  {
+   "n": 3,
+   "topic": "Plant and animal tissues",
+   "q": "A learner in Polokwane examines a transverse section of a sunflower stem. One tissue has thick lignified walls and no living cell contents, and it transports water and dissolved mineral salts from the roots to the leaves. Which tissue is being described?",
+   "options": [
+    "Phloem",
+    "Cambium",
+    "Xylem",
+    "Epidermis"
+   ],
+   "answer": 2,
+   "explanation": "Xylem consists of dead, lignified vessel elements and tracheids that transport water and mineral salts upward through the plant. Phloem mainly transports dissolved sugars and amino acids, while cambium is a meristem and the epidermis is a protective covering."
+  },
+  {
+   "n": 4,
+   "topic": "Plant and animal tissues",
+   "q": "A Grade 10 class in Mthatha compares four animal tissues. Tissue 1 has striated cells and is under voluntary control. Tissue 2 has spindle-shaped cells without striations and contracts slowly and involuntarily. Tissue 3 has branched striated cells joined by intercalated discs. Tissue 4 has flattened cells joined tightly to form a lining. Which tissue is cardiac muscle?",
+   "options": [
+    "Tissue 2",
+    "Tissue 1",
+    "Tissue 3",
+    "Tissue 4"
+   ],
+   "answer": 2,
+   "explanation": "Cardiac muscle consists of branched striated cells joined by intercalated discs and works involuntarily. The other tissues described are skeletal muscle, smooth muscle and epithelial tissue."
+  },
+  {
+   "n": 5,
+   "topic": "Photosynthesis and cellular respiration",
+   "q": "Yeast is used in a bakery in Randburg. During anaerobic respiration, one glucose molecule is converted to ethanol and carbon dioxide. What is the net gain of ATP molecules per glucose molecule in this process?",
+   "options": [
+    "34 ATP molecules",
+    "4 ATP molecules",
+    "2 ATP molecules",
+    "38 ATP molecules"
+   ],
+   "answer": 2,
+   "explanation": "Glycolysis produces 4 ATP molecules and uses 2, giving a net gain of 2 ATP molecules. The later fermentation steps regenerate NAD⁺ without producing more ATP, while 38 ATP molecules is the CAPS total for aerobic respiration of one glucose molecule."
+  },
+  {
+   "n": 6,
+   "topic": "Photosynthesis and cellular respiration",
+   "q": "A learner in Bloemfontein measures the rate of photosynthesis in maize leaves at different light intensities. Temperature and carbon dioxide concentration are kept constant. The results are:\nlight intensity (arbitrary units) | rate of CO₂ uptake (µmol/m²/s)\n0 | 0\n200 | 12\n400 | 24\n600 | 30\n800 | 32\n1000 | 32\nWhich conclusion best explains why the rate stays at 32 µmol/m²/s between 800 and 1000 arbitrary units?",
+   "options": [
+    "A factor other than light intensity, such as carbon dioxide concentration, is limiting",
+    "Light intensity is limiting the rate",
+    "Photosynthesis has stopped, so no CO₂ is taken up",
+    "The leaf is respiring faster than it is photosynthesising"
+   ],
+   "answer": 0,
+   "explanation": "The plateau shows that increasing light intensity no longer increases the rate, so light is not the limiting factor. Another factor such as carbon dioxide concentration or temperature is limiting; a CO₂ uptake of 32 µmol/m²/s also shows that photosynthesis has not stopped."
+  },
+  {
+   "n": 7,
+   "topic": "Photosynthesis and cellular respiration",
+   "q": "A learner in Kimberley claims that during the day a green leaf only carries out photosynthesis and stops respiring. Which statement best corrects this misconception?",
+   "options": [
+    "Both photosynthesis and aerobic respiration occur in the leaf during the day, but photosynthesis usually exceeds respiration in a healthy leaf",
+    "Respiration only occurs at night because light destroys the mitochondria",
+    "Photosynthesis and respiration cannot occur in the same cell at the same time",
+    "Respiration occurs during the day, but it uses all the oxygen produced by photosynthesis"
+   ],
+   "answer": 0,
+   "explanation": "Living cells respire continuously, and light does not stop aerobic respiration in a leaf. During daylight a healthy leaf usually photosynthesises faster than it respires, so it releases oxygen even though respiration is still occurring."
+  },
+  {
+   "n": 8,
+   "topic": "DNA: the code of life",
+   "q": "A DNA sample from a Cape fur seal contains 22% adenine. What percentage of the bases in this double-stranded DNA sample is guanine?",
+   "options": [
+    "56%",
+    "22%",
+    "28%",
+    "44%"
+   ],
+   "answer": 2,
+   "explanation": "In double-stranded DNA, adenine pairs with thymine, so adenine and thymine are both 22%, giving A + T = 44%. The remaining 56% is shared equally by cytosine and guanine, so guanine is 28%."
+  },
+  {
+   "n": 9,
+   "topic": "DNA: the code of life",
+   "q": "A DNA triplet on the template strand is TAC. During transcription, what mRNA codon is produced?",
+   "options": [
+    "ATG",
+    "UAC",
+    "AUG",
+    "TUG"
+   ],
+   "answer": 2,
+   "explanation": "The RNA sequence complementary to the DNA template triplet TAC is AUG: T pairs with A, A pairs with U and C pairs with G. The sequence ATG cannot occur in RNA because RNA contains uracil instead of thymine, and UAC would result from using a different base-pairing rule."
+  },
+  {
+   "n": 10,
+   "topic": "Animal nutrition and gaseous exchange",
+   "q": "A patient at a clinic in Cape Town has a tidal volume of 450 mL and a breathing rate of 14 breaths per minute. The volume of air in the conducting airways (anatomical dead space) is 150 mL per breath. What is the patient's alveolar ventilation?",
+   "options": [
+    "5.6 L/min",
+    "2.1 L/min",
+    "6.3 L/min",
+    "4.2 L/min"
+   ],
+   "answer": 3,
+   "explanation": "Alveolar ventilation is the volume of fresh air reaching the alveoli per minute: (tidal volume − dead space) × breathing rate = (450 − 150) mL × 14 min⁻¹ = 4200 mL/min = 4.2 L/min. The value 6.3 L/min uses the full tidal volume and ignores the dead space. The value 2.1 L/min is the dead-space volume multiplied by the breathing rate, not the fresh air reaching the alveoli."
+  },
+  {
+   "n": 11,
+   "topic": "Animal nutrition and gaseous exchange",
+   "q": "A patient in Bloemfontein has a gallstone that completely blocks the bile duct, so bile cannot reach the small intestine. Which set of symptoms is most directly expected?",
+   "options": [
+    "Immediate dehydration because water absorption in the large intestine depends on bile",
+    "Glucose appearing in the urine because starch digestion stops",
+    "Undigested protein in the stools and severe anaemia",
+    "Fatty stools and poor absorption of vitamins A, D, E and K"
+   ],
+   "answer": 3,
+   "explanation": "Bile salts emulsify fats into smaller droplets, increasing the surface area for lipase, and they help absorb fat-soluble vitamins A, D, E and K. Without bile reaching the small intestine, fat digestion and absorption are impaired, producing fatty stools and possible deficiency of these vitamins. Protein digestion depends mainly on gastric and pancreatic proteases, while water absorption in the large intestine does not depend on bile."
+  },
+  {
+   "n": 12,
+   "topic": "Animal nutrition and gaseous exchange",
+   "q": "Which statement best explains why oxygen continues to diffuse from alveolar air into the blood as blood flows through the pulmonary capillaries?",
+   "options": [
+    "The blood in pulmonary capillaries has a higher oxygen partial pressure than alveolar air, so oxygen moves down its gradient.",
+    "Haemoglobin actively pumps oxygen into the blood plasma against the concentration gradient.",
+    "Carbon dioxide carries oxygen across the alveolar wall by combining with haemoglobin.",
+    "The partial pressure of oxygen in alveolar air is higher than in the arriving blood, maintaining a diffusion gradient."
+   ],
+   "answer": 3,
+   "explanation": "Oxygen diffuses passively from a region of higher partial pressure in the alveoli to a region of lower partial pressure in the arriving pulmonary capillary blood. Haemoglobin binding oxygen keeps the dissolved oxygen partial pressure low, helping maintain the gradient. It does not actively pump oxygen, and carbon dioxide transport is separate from oxygen transport."
+  },
+  {
+   "n": 13,
+   "topic": "Biodiversity and classification",
+   "q": "Two fynbos plots near Caledon each contain exactly five plant species. In plot A, each species has 20 individuals. In plot B, one species has 80 individuals and each of the other four species has 5 individuals. Which conclusion about the two plots is best supported?",
+   "options": [
+    "The plots have the same species richness, but plot A has more even species abundances.",
+    "Plot B has greater species richness because it has more total individuals.",
+    "Plot A has greater species richness than plot B.",
+    "The plots have the same species evenness because each has five species."
+   ],
+   "answer": 0,
+   "explanation": "Species richness is the number of different species present, and both plots contain five species. Species evenness describes how similar the abundances of the species are; plot A has equal numbers of each species, while plot B is dominated by one species. Total abundance does not increase species richness, and having the same number of species does not mean evenness is the same."
+  },
+  {
+   "n": 14,
+   "topic": "Biodiversity and classification",
+   "q": "A learner collects a multicellular organism from a rotting log in the Knysna Forest. Its cells have cell walls made of chitin, it is heterotrophic and it has no chlorophyll. Into which kingdom should it be classified?",
+   "options": [
+    "Plantae, because it has cell walls",
+    "Animalia, because it is heterotrophic",
+    "Protista, because it is found on decaying matter",
+    "Fungi"
+   ],
+   "answer": 3,
+   "explanation": "Cell walls made of chitin, heterotrophic nutrition and absence of chlorophyll are characteristic of fungi. Plantae generally have cellulose cell walls and are autotrophic, while animals lack cell walls. Finding an organism on decaying matter describes its habitat, not the kingdom to which it belongs."
+  },
+  {
+   "n": 15,
+   "topic": "Cell division: mitosis and meiosis",
+   "q": "A human primary spermatocyte has 46 chromosomes. It completes meiosis I, producing two secondary spermatocytes. What is the number of chromatids in one secondary spermatocyte immediately after meiosis I?",
+   "options": [
+    "46 chromatids",
+    "92 chromatids",
+    "46 chromosomes",
+    "23 chromatids"
+   ],
+   "answer": 0,
+   "explanation": "Before meiosis I, DNA replication produces 92 chromatids in the primary spermatocyte, but homologous chromosomes then separate. Each secondary spermatocyte receives 23 chromosomes, and each chromosome still consists of two sister chromatids, giving 23 × 2 = 46 chromatids. Counting 23 chromatids mistakes chromosome number for chromatid number."
+  },
+  {
+   "n": 16,
+   "topic": "Cell division: mitosis and meiosis",
+   "q": "During one stage of meiosis, homologous chromosome pairs line up at the cell equator, and the orientation of each pair is independent of the other pairs. Which stage is described?",
+   "options": [
+    "Anaphase I",
+    "Metaphase I",
+    "Metaphase II",
+    "Prophase II"
+   ],
+   "answer": 1,
+   "explanation": "Pairing and alignment of homologous chromosomes at the equator occurs in metaphase I. The independent orientation of each homologous pair is a source of genetic variation. Metaphase II involves individual chromosomes lining up, anaphase I involves separation of homologous chromosomes, and prophase II occurs after the first meiotic division."
+  },
+  {
+   "n": 17,
+   "topic": "Cell division: mitosis and meiosis",
+   "q": "A student states that mitosis and meiosis both produce genetically identical daughter cells. Which correction is scientifically accurate?",
+   "options": [
+    "Both processes produce variation because DNA replication causes new mutations every time.",
+    "Mitosis produces four haploid cells, while meiosis produces two diploid cells.",
+    "Meiosis produces identical gametes because homologous chromosomes are copied before division.",
+    "Meiosis produces daughter cells that are genetically different from each other and from the parent cell due to crossing over and random assortment, whereas mitosis usually produces genetically identical daughter cells."
+   ],
+   "answer": 3,
+   "explanation": "Mitosis usually maintains the chromosome number and produces genetically identical daughter cells, which is important for growth and repair. Meiosis reduces the chromosome number and introduces genetic variation through crossing over in prophase I and the random assortment of homologous chromosomes. DNA replication does not create variation every time; errors are rare mutations, not the normal source of meiotic variation."
+  },
+  {
+   "n": 18,
+   "topic": "Plant hormones and responses",
+   "q": "A potted sunflower on a windowsill in Johannesburg bends towards the light. Which explanation best accounts for this response?",
+   "options": [
+    "Auxin moves towards the shaded side of the shoot, where it stimulates greater cell elongation, causing the shoot to bend towards the light.",
+    "Ethylene moves to the shaded side and inhibits elongation there, causing the shoot to bend away from the light.",
+    "Auxin accumulates on the illuminated side and stimulates greater cell elongation there, causing the shoot to bend towards the light.",
+    "Auxin is broken down equally on all sides, so all cells elongate equally and the shoot bends towards the light."
+   ],
+   "answer": 0,
+   "explanation": "In shoot phototropism, auxin is redistributed away from the light so that a higher concentration occurs on the shaded side. Because shoot cells are stimulated by auxin to elongate, the shaded side grows longer and the shoot bends towards the light. Equal breakdown or ethylene inhibition does not explain this directional growth."
+  },
+  {
+   "n": 19,
+   "topic": "Plant hormones and responses",
+   "q": "A bean seedling is laid horizontally in moist soil in the dark. After a few days, the shoot curves upwards and the root curves downwards. Which statement best explains these responses?",
+   "options": [
+    "Gibberellin accumulates on the lower side and causes the shoot to grow upwards while the root follows gravity passively without hormones.",
+    "Auxin accumulates on the lower side of both organs; in the shoot it stimulates elongation, while in the root it inhibits elongation.",
+    "Auxin accumulates on the lower side of both organs and stimulates elongation in both, so both organs curve upwards.",
+    "Auxin accumulates on the upper side of both organs; in the shoot it stimulates elongation, while in the root it inhibits elongation."
+   ],
+   "answer": 1,
+   "explanation": "Gravity causes auxin to accumulate on the lower side of the horizontally placed shoot and root. Shoot cells respond to this higher auxin concentration by elongating more, so the shoot curves upwards, while root cells are inhibited by high auxin on the lower side, so the root curves downwards. The response depends on differences in auxin distribution and tissue sensitivity, not on gibberellin or a hormone-free root."
+  },
+  {
+   "n": 20,
+   "topic": "Excretion in humans",
+   "q": "During a hot day in Upington, Thabo sweats heavily and drinks very little water. Which response would help his body conserve water?",
+   "options": [
+    "Increased ADH secretion from the posterior pituitary makes the distal tubule and collecting duct more permeable to water, so more water is reabsorbed.",
+    "Decreased ADH secretion makes the collecting duct more permeable to water, so more water is reabsorbed.",
+    "Increased aldosterone secretion from the posterior pituitary makes the collecting duct more permeable to water, so more water is reabsorbed.",
+    "ADH secreted by the adrenal glands makes the collecting duct more permeable to water, so more water is reabsorbed."
+   ],
+   "answer": 0,
+   "explanation": "Thabo is dehydrated, so blood osmolality rises and osmoreceptors stimulate more ADH release from the posterior pituitary. ADH increases the permeability of the distal tubule and collecting duct to water, so more water is reabsorbed and a smaller volume of concentrated urine is formed. ADH is not secreted by the adrenal glands, and aldosterone mainly promotes sodium reabsorption rather than directly making the collecting duct water-permeable."
+  },
+  {
+   "n": 21,
+   "topic": "Excretion in humans",
+   "q": "In a healthy adult, 180 litres of filtrate are formed per day and 1.8 litres of urine are produced per day. What percentage of the filtrate is reabsorbed by the nephrons?",
+   "options": [
+    "1%",
+    "90%",
+    "98%",
+    "99%"
+   ],
+   "answer": 3,
+   "explanation": "The volume reabsorbed is 180 L - 1.8 L = 178.2 L. The percentage reabsorbed is (178.2 ÷ 180) × 100 = 99%. The 1% that is not reabsorbed is the urine volume as a percentage of the filtrate."
+  },
+  {
+   "n": 22,
+   "topic": "Excretion in humans",
+   "q": "A healthy person's urine contains no glucose, although glucose is present in the filtrate at the proximal tubule. What explains this?",
+   "options": [
+    "Glucose is reabsorbed by active transport from the proximal tubule into the blood.",
+    "Glucose is broken down by enzymes in the collecting duct and excreted as urea.",
+    "Glucose remains in the filtrate but is too large to pass through the ureter.",
+    "Glucose is filtered only if blood glucose is very high, so normally none enters the filtrate."
+   ],
+   "answer": 0,
+   "explanation": "In a healthy person, glucose is filtered at the glomerulus but is completely reabsorbed by active transport in the proximal convoluted tubule. It therefore does not normally appear in the urine. If blood glucose exceeds the renal threshold, the carriers cannot reabsorb all the glucose and glucose appears in the urine."
+  },
+  {
+   "n": 23,
+   "topic": "Evolution by natural selection",
+   "q": "In a Johannesburg hospital, a course of antibiotics is used to treat a bacterial infection. Some bacteria survive and multiply, and the infection returns with many resistant bacteria. Which explanation fits evolution by natural selection?",
+   "options": [
+    "Bacteria with heritable resistance survive the antibiotic, reproduce, and pass resistance alleles to their offspring.",
+    "The antibiotic kills resistant bacteria, allowing susceptible bacteria to increase in number.",
+    "The antibiotic directly changes the DNA of each bacterium so that all of them become resistant during the infection.",
+    "Bacteria that are not resistant learn to avoid the antibiotic and then pass this learning to their offspring."
+   ],
+   "answer": 0,
+   "explanation": "Antibiotic resistance is already present as random genetic variation in some bacteria. The antibiotic kills susceptible bacteria, while resistant bacteria survive, reproduce and pass the resistance alleles to their offspring. This is natural selection; the antibiotic does not deliberately cause resistance during the infection."
+  },
+  {
+   "n": 24,
+   "topic": "Evolution by natural selection",
+   "q": "A river changes course and separates a population of lizards in the Karoo into two populations that no longer meet. Over many generations, different mutations and selection pressures occur in each population. Which statement best describes how allopatric speciation could occur?",
+   "options": [
+    "The river directly causes the needed mutations so both populations adapt in the same way.",
+    "The two populations become different species as soon as they are separated by the river.",
+    "Gene flow between the separated populations increases, which prevents speciation.",
+    "Accumulated genetic differences may eventually prevent the two populations from interbreeding to produce fertile offspring, making them separate species."
+   ],
+   "answer": 3,
+   "explanation": "Allopatric speciation begins when a physical barrier such as a river separates populations, stopping gene flow. Different mutations and selection pressures can cause the populations to accumulate different genetic characteristics. If reproductive isolation develops so that they cannot produce fertile offspring, they are separate species; separation alone does not instantly create a new species."
+  },
+  {
+   "n": 25,
+   "topic": "Evolution by natural selection",
+   "q": "Which statement is a necessary condition for natural selection to occur in a population of impala in the Kruger National Park?",
+   "options": [
+    "The environment must directly change the genes of individuals so that they adapt.",
+    "All individuals must have the same inherited traits so that the population remains stable.",
+    "Individuals must acquire useful traits during their lifetime and pass these acquired traits to their offspring.",
+    "Individuals must differ in inherited traits that affect their chance of surviving and reproducing."
+   ],
+   "answer": 3,
+   "explanation": "Natural selection requires heritable variation in a population, so that some inherited variants leave more offspring in the prevailing environment. Acquired changes during an individual's lifetime are not passed on in the way that inherited alleles are. The environment selects among existing variants; it does not directly rewrite an individual's genes to suit its needs."
+  },
+  {
+   "n": 26,
+   "topic": "The endocrine system and homeostasis",
+   "q": "After Sipho eats a large meal containing starch, his blood glucose concentration rises. Which sequence describes the normal negative feedback response?",
+   "options": [
+    "The pancreas secretes insulin; glycogen is broken down in the liver to glucose; blood glucose concentration decreases.",
+    "The pancreas secretes glucagon; muscle cells convert glucose to glycogen; blood glucose concentration increases.",
+    "The pancreas secretes insulin; liver and muscle cells take up glucose and convert it to glycogen; blood glucose concentration decreases.",
+    "The pancreas secretes glucagon; the liver converts glycogen to glucose; blood glucose concentration decreases."
+   ],
+   "answer": 2,
+   "explanation": "After a starch meal is digested, blood glucose rises and stimulates insulin secretion from the pancreas. Insulin promotes glucose uptake by liver and muscle cells and conversion of excess glucose to glycogen, lowering the blood glucose concentration. Glucagon has the opposite effect because it stimulates the breakdown of glycogen to glucose."
+  },
+  {
+   "n": 27,
+   "topic": "The endocrine system and homeostasis",
+   "q": "When thyroxine concentration in the blood falls, the hypothalamus secretes TRH, which stimulates the anterior pituitary to release TSH. TSH stimulates the thyroid gland to release thyroxine. Which statement correctly describes the negative feedback that follows?",
+   "options": [
+    "Low thyroxine levels stimulate the thyroid to release TSH, which increases TRH.",
+    "High thyroxine levels inhibit the secretion of TRH and TSH, reducing further thyroxine release.",
+    "High thyroxine levels stimulate the hypothalamus to secrete more TRH, increasing thyroxine release further.",
+    "TSH directly inhibits the thyroid gland, so less thyroxine is released."
+   ],
+   "answer": 1,
+   "explanation": "Thyroxine is controlled by negative feedback. When thyroxine rises, it inhibits the hypothalamus and anterior pituitary, reducing TRH and TSH secretion and therefore reducing further thyroxine release. TSH stimulates rather than inhibits the thyroid gland."
+  },
+  {
+   "n": 28,
+   "topic": "The chemistry of life and cells",
+   "q": "0.20 mol of glucose is dissolved in distilled water to make 500 cm³ of solution. What is the concentration of glucose in mol·dm⁻³?",
+   "options": [
+    "1.00 mol·dm⁻³",
+    "0.80 mol·dm⁻³",
+    "0.10 mol·dm⁻³",
+    "0.40 mol·dm⁻³"
+   ],
+   "answer": 3,
+   "explanation": "The volume is 500 cm³ = 0.500 dm³. Concentration = amount ÷ volume = 0.20 mol ÷ 0.500 dm³ = 0.40 mol·dm⁻³. Using 500 cm³ as 0.500 dm³ avoids the common error of multiplying by 500 instead of dividing by 1000."
+  },
+  {
+   "n": 29,
+   "topic": "The chemistry of life and cells",
+   "q": "A plant cell is placed in a 0.30 mol·dm⁻³ sucrose solution. The cell sap has a higher water potential and a lower solute concentration than the external solution. What is the expected movement of water, and why?",
+   "options": [
+    "Sucrose moves into the cell by osmosis until the concentrations are equal.",
+    "Water moves out of the cell by osmosis because the external solution has a lower water potential than the cell sap.",
+    "Water moves out of the cell because the cell wall is impermeable to water.",
+    "Water moves into the cell because the external solution has a higher water potential."
+   ],
+   "answer": 1,
+   "explanation": "Water moves by osmosis from a region of higher water potential to a region of lower water potential through the selectively permeable membrane. The sucrose solution has a lower water potential than the cell sap, so water leaves the cell. Sucrose molecules are too large to pass through the membrane, and the cell wall is permeable to water."
+  },
+  {
+   "n": 30,
+   "topic": "Human evolution",
+   "q": "A fossil hominin skull has the opening for the spinal cord, the foramen magnum, positioned underneath the skull rather than towards the back. Which conclusion is best supported by this feature?",
+   "options": [
+    "The hominin used fire and made cave paintings.",
+    "The hominin was adapted for habitual bipedal walking.",
+    "The hominin walked on its knuckles like a chimpanzee.",
+    "The hominin had a larger brain than modern humans."
+   ],
+   "answer": 1,
+   "explanation": "A foramen magnum positioned centrally under the skull allows the head to balance on a vertical vertebral column, which is an adaptation for upright bipedal walking. A more posterior foramen magnum is associated with quadrupedal locomotion. This feature does not by itself indicate brain size or cultural behaviour."
+  }
+ ]
+}

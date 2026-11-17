@@ -1,0 +1,791 @@
+{
+ "id": "neco-physics-p3",
+ "exam": "neco",
+ "subject": "physics",
+ "year": null,
+ "number": 3,
+ "source": "ai",
+ "minutes": 60,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Sound",
+   "q": "A sound wave travels from air into water. Which property of the wave remains unchanged?",
+   "options": [
+    "Wavelength",
+    "Frequency",
+    "Speed",
+    "Amplitude"
+   ],
+   "answer": 1,
+   "explanation": "The frequency of a wave is determined by its source and does not change when it enters another medium. The speed changes with the medium, and since speed = frequency × wavelength, the wavelength also changes; amplitude may change because of reflection and transmission at the boundary."
+  },
+  {
+   "n": 2,
+   "topic": "Sound",
+   "q": "An air column closed at one end has a fundamental frequency of 240 Hz. Which of the following frequencies cannot be produced by the column?",
+   "options": [
+    "720 Hz",
+    "1440 Hz",
+    "1680 Hz",
+    "1200 Hz"
+   ],
+   "answer": 1,
+   "explanation": "An air column closed at one end produces only odd harmonics, namely 240 Hz, 720 Hz, 1200 Hz, 1680 Hz, and so on. The frequency 1440 Hz is an even multiple of the fundamental, so it cannot be produced."
+  },
+  {
+   "n": 3,
+   "topic": "Sound",
+   "q": "A small loudspeaker at a market in Ilorin radiates sound equally in all directions. A listener moves from 2.0 m to 4.0 m from the loudspeaker. If the intensity at 2.0 m is I, what is the intensity at 4.0 m?",
+   "options": [
+    "I/4",
+    "I/16",
+    "I/8",
+    "I/2"
+   ],
+   "answer": 0,
+   "explanation": "Sound intensity from a point source obeys the inverse-square law. Doubling the distance increases the area over which the same power is spread by a factor of 2² = 4, so the intensity becomes I/4."
+  },
+  {
+   "n": 4,
+   "topic": "Heat and temperature",
+   "q": "A laundry in Aba converts 0.25 kg of water at 100°C completely to steam at 100°C. If the specific latent heat of vaporization of water is 2.26 × 10⁶ J/kg, how much heat is required?",
+   "options": [
+    "5.65 × 10⁵ J",
+    "2.26 × 10⁶ J",
+    "9.04 × 10⁵ J",
+    "5.65 × 10⁴ J"
+   ],
+   "answer": 0,
+   "explanation": "At the boiling point, the heat required for a change of state is Q = mLv = 0.25 × 2.26 × 10⁶ = 5.65 × 10⁵ J. No temperature change occurs while the water is turning to steam, so specific heat capacity is not used."
+  },
+  {
+   "n": 5,
+   "topic": "Heat and temperature",
+   "q": "A copper rod of length 0.50 m and cross-sectional area 2.0 × 10⁻⁴ m² has its ends maintained at 100°C and 20°C. If the thermal conductivity of copper is 400 W m⁻¹ K⁻¹, calculate the rate of heat flow along the rod.",
+   "options": [
+    "25.6 W",
+    "12.8 W",
+    "128 W",
+    "6.4 W"
+   ],
+   "answer": 1,
+   "explanation": "Using Q/t = kAΔT/L, the temperature difference is 100 − 20 = 80 K. Thus Q/t = (400 × 2.0 × 10⁻⁴ × 80)/0.50 = 12.8 W."
+  },
+  {
+   "n": 6,
+   "topic": "Heat and temperature",
+   "q": "A Celsius thermometer and a Fahrenheit thermometer are placed in a bath. At what numerical reading on both scales will the two thermometers show the same value?",
+   "options": [
+    "−40",
+    "0",
+    "100",
+    "32"
+   ],
+   "answer": 0,
+   "explanation": "Set the Celsius reading x equal to the Fahrenheit reading x and use x/5 = (x − 32)/9. This gives 9x = 5x − 160, so x = −40; at this temperature both scales read −40."
+  },
+  {
+   "n": 7,
+   "topic": "Atomic and nuclear physics",
+   "q": "In the fusion reaction ²₁H + ³₁H → ⁴₂He + X, what particle is represented by X?",
+   "options": [
+    "Gamma photon",
+    "Neutron",
+    "Electron",
+    "Proton"
+   ],
+   "answer": 1,
+   "explanation": "Total mass number on the left is 2 + 3 = 5, so X must have mass number 1 because helium-4 has mass number 4. Total atomic number on the left is 1 + 1 = 2, so X must have atomic number 0; hence X is a neutron, ¹₀n."
+  },
+  {
+   "n": 8,
+   "topic": "Atomic and nuclear physics",
+   "q": "A Geiger–Müller tube near a radioactive source in a hospital in Zaria records 96 counts/min. The background count rate is 16 counts/min. What count rate is expected after 4 half-lives of the source?",
+   "options": [
+    "21 counts/min",
+    "6 counts/min",
+    "16 counts/min",
+    "5 counts/min"
+   ],
+   "answer": 0,
+   "explanation": "Subtract the background before applying decay: source count rate initially = 96 − 16 = 80 counts/min. After 4 half-lives it falls to 80/2⁴ = 5 counts/min; adding the unchanged background gives 5 + 16 = 21 counts/min."
+  },
+  {
+   "n": 9,
+   "topic": "Measurement and units",
+   "q": "The SI unit of impulse is the newton second (N s). Which of the following quantities has the same unit?",
+   "options": [
+    "Force",
+    "Momentum",
+    "Pressure",
+    "Power"
+   ],
+   "answer": 1,
+   "explanation": "Impulse is force × time, so its unit is N s = kg m s⁻¹. Momentum is mass × velocity, also kg m s⁻¹, so impulse and momentum have the same unit. Force is N, power is J/s, and pressure is N/m²."
+  },
+  {
+   "n": 10,
+   "topic": "Simple machines",
+   "q": "A screw jack has a pitch of 5.0 mm and a handle whose effective radius from the axis is 0.40 m. Taking π = 3.14, calculate its velocity ratio.",
+   "options": [
+    "251.2",
+    "1004.8",
+    "502.4",
+    "50.24"
+   ],
+   "answer": 2,
+   "explanation": "For a screw jack, velocity ratio = circumference of the effort circle ÷ pitch = 2πR ÷ p. Converting 5.0 mm to 0.005 m gives VR = (2 × 3.14 × 0.40) ÷ 0.005 = 502.4."
+  },
+  {
+   "n": 11,
+   "topic": "Simple machines",
+   "q": "A block and tackle with velocity ratio 6 is used to raise a load of 450 N through 2.0 m. If the effort applied is 100 N, calculate the efficiency of the machine.",
+   "options": [
+    "90%",
+    "75%",
+    "37.5%",
+    "80%"
+   ],
+   "answer": 1,
+   "explanation": "The mechanical advantage is 450 N ÷ 100 N = 4.5. Hence efficiency = (mechanical advantage ÷ velocity ratio) × 100% = (4.5 ÷ 6) × 100% = 75%. The work method also gives 900 J ÷ 1200 J = 0.75."
+  },
+  {
+   "n": 12,
+   "topic": "Elasticity and pressure",
+   "q": "A metal wire has Young modulus 2.0 × 10¹¹ Pa. When a tensile stress of 8.0 × 10⁸ Pa is applied within the elastic limit, what is the strain produced?",
+   "options": [
+    "0.004",
+    "250",
+    "0.04",
+    "0.0004"
+   ],
+   "answer": 0,
+   "explanation": "Young modulus = stress ÷ strain, so strain = stress ÷ Young modulus. Strain = (8.0 × 10⁸ Pa) ÷ (2.0 × 10¹¹ Pa) = 4.0 × 10⁻³ = 0.004."
+  },
+  {
+   "n": 13,
+   "topic": "Elasticity and pressure",
+   "q": "A rectangular block of weight 32 N has dimensions 0.40 m by 0.20 m by 0.10 m. It is placed on a horizontal table. Calculate the maximum pressure it can exert on the table.",
+   "options": [
+    "1600 Pa",
+    "800 Pa",
+    "320 Pa",
+    "400 Pa"
+   ],
+   "answer": 0,
+   "explanation": "The greatest pressure is obtained with the smallest contact area, 0.20 m × 0.10 m = 0.020 m². Thus P = F ÷ A = 32 N ÷ 0.020 m² = 1600 Pa. Using the largest face would give the minimum pressure, not the maximum."
+  },
+  {
+   "n": 14,
+   "topic": "Elasticity and pressure",
+   "q": "A solid weighs 18 N in air and 14 N when completely immersed in a liquid of density 800 kg/m³. Taking g = 10 m/s², calculate the volume of the solid.",
+   "options": [
+    "5.0 × 10⁻⁴ m³",
+    "4.5 × 10⁻⁴ m³",
+    "1.25 × 10⁻³ m³",
+    "2.0 × 10⁻³ m³"
+   ],
+   "answer": 0,
+   "explanation": "The apparent loss in weight is the upthrust: 18 N − 14 N = 4 N. Since upthrust = ρVg, V = 4 ÷ (800 × 10) = 5.0 × 10⁻⁴ m³."
+  },
+  {
+   "n": 15,
+   "topic": "Scalars and vectors",
+   "q": "Two forces of 50 N and 120 N act at right angles at the same point on a body. What is the magnitude of their resultant?",
+   "options": [
+    "130 N",
+    "6500 N",
+    "70 N",
+    "170 N"
+   ],
+   "answer": 0,
+   "explanation": "For perpendicular forces, R = √(F₁² + F₂²). Hence R = √(50² + 120²) N = √(2500 + 14400) N = √16900 N = 130 N. Adding the magnitudes directly would wrongly give 170 N."
+  },
+  {
+   "n": 16,
+   "topic": "Scalars and vectors",
+   "q": "Kemi walks 9.0 km due west and then 12.0 km due south. What is the direction of her resultant displacement, measured from the west direction towards the south?",
+   "options": [
+    "37° south of west",
+    "127° south of west",
+    "233° south of west",
+    "53° south of west"
+   ],
+   "answer": 3,
+   "explanation": "The resultant has a westward component of 9.0 km and a southward component of 12.0 km. The angle from west towards south is θ where tan θ = 12.0 ÷ 9.0, so θ ≈ 53°. Using 9.0/12.0 gives about 37°, which measures from south toward west instead."
+  },
+  {
+   "n": 17,
+   "topic": "Motion",
+   "q": "A body starts from rest and moves with uniform acceleration of 4.0 m/s² for 5.0 s. What distance does it cover in the fifth second?",
+   "options": [
+    "10 m",
+    "50 m",
+    "18 m",
+    "8 m"
+   ],
+   "answer": 2,
+   "explanation": "Distance in the fifth second = total distance in 5 s − total distance in 4 s. Using s = ½at², total distance in 5 s is ½ × 4.0 × 5² = 50 m and in 4 s is ½ × 4.0 × 4² = 32 m, so distance = 50 − 32 = 18 m."
+  },
+  {
+   "n": 18,
+   "topic": "Motion",
+   "q": "A car travelling on a straight road accelerates uniformly from 12 m/s to 28 m/s while covering 200 m. Calculate the time taken.",
+   "options": [
+    "10 s",
+    "25 s",
+    "20 s",
+    "5 s"
+   ],
+   "answer": 0,
+   "explanation": "For uniform acceleration, average velocity = (u + v) ÷ 2 = (12 + 28) ÷ 2 = 20 m/s. Time = distance ÷ average velocity = 200 ÷ 20 = 10 s."
+  },
+  {
+   "n": 19,
+   "topic": "Motion",
+   "q": "A tricycle travelling at 20 m/s is brought to rest in 40 m by uniform braking. Calculate the magnitude of its retardation.",
+   "options": [
+    "5.0 m/s²",
+    "10 m/s²",
+    "2.5 m/s²",
+    "0.5 m/s²"
+   ],
+   "answer": 0,
+   "explanation": "Using v² = u² + 2as with v = 0, u = 20 m/s and s = 40 m: 0 = 20² + 2a(40), so a = −400 ÷ 80 = −5 m/s². The magnitude of the retardation is 5.0 m/s²."
+  },
+  {
+   "n": 20,
+   "topic": "Newton’s laws and momentum",
+   "q": "An 18-year-old student, whose mass together with his skateboard is 50 kg, stands at rest on a smooth horizontal floor. He throws a 2.0 kg ball horizontally away from him at 5.0 m/s. What is his speed immediately after the throw?",
+   "options": [
+    "0.50 m/s",
+    "0.25 m/s",
+    "0.20 m/s",
+    "0.10 m/s"
+   ],
+   "answer": 2,
+   "explanation": "Total momentum before the throw is zero. After the throw, 50v + 2.0 × 5.0 = 0, so v = −0.20 m/s; the speed is 0.20 m/s. The 0.25 m/s value would come from using an incorrect total mass for the student and skateboard."
+  },
+  {
+   "n": 21,
+   "topic": "Newton’s laws and momentum",
+   "q": "A trader in Onitsha catches a 0.25 kg ball moving horizontally towards him at 12 m/s and brings it to rest in 0.10 s. What is the magnitude of the average force exerted by his hand on the ball?",
+   "options": [
+    "300 N",
+    "30 N",
+    "0.30 N",
+    "3.0 N"
+   ],
+   "answer": 1,
+   "explanation": "The change in momentum is 0.25 × 12 = 3.0 kg m/s. The average force is 3.0 ÷ 0.10 = 30 N. The 3.0 N value results from leaving out the division by the time."
+  },
+  {
+   "n": 22,
+   "topic": "Newton’s laws and momentum",
+   "q": "A crate of mass 20 kg is pulled along a rough horizontal floor by a horizontal force of 90 N. The frictional force between the crate and the floor is 30 N. What is the acceleration of the crate?",
+   "options": [
+    "1.5 m/s²",
+    "4.5 m/s²",
+    "6.0 m/s²",
+    "3.0 m/s²"
+   ],
+   "answer": 3,
+   "explanation": "The resultant horizontal force is 90 − 30 = 60 N. Using F = ma gives a = 60 ÷ 20 = 3.0 m/s². Using the applied force alone gives the tempting value 4.5 m/s²."
+  },
+  {
+   "n": 23,
+   "topic": "Gas laws",
+   "q": "A fixed mass of gas at constant temperature has a volume of 250 cm³ when its pressure is 1.2 × 10⁵ Pa. What volume will it occupy when the pressure is increased to 2.0 × 10⁵ Pa?",
+   "options": [
+    "200 cm³",
+    "100 cm³",
+    "150 cm³",
+    "417 cm³"
+   ],
+   "answer": 2,
+   "explanation": "For a fixed mass at constant temperature, P₁V₁ = P₂V₂. Thus V₂ = (1.2 × 10⁵ × 250) ÷ (2.0 × 10⁵) = 150 cm³. Using the pressure ratio upside down gives the tempting value 417 cm³."
+  },
+  {
+   "n": 24,
+   "topic": "Gas laws",
+   "q": "An evacuated cylinder of volume 0.0800 m³ is filled with 0.500 mol of nitrogen at a temperature of 300 K. Taking R = 8.31 J mol⁻¹ K⁻¹, calculate the pressure of the gas.",
+   "options": [
+    "1.56 × 10⁵ Pa",
+    "1.25 × 10³ Pa",
+    "1.56 × 10⁴ Pa",
+    "3.12 × 10⁴ Pa"
+   ],
+   "answer": 2,
+   "explanation": "Using PV = nRT, P = nRT ÷ V = (0.500 × 8.31 × 300) ÷ 0.0800 = 1.56 × 10⁴ Pa. The value 1.25 × 10³ Pa is nRT before dividing by the volume."
+  },
+  {
+   "n": 25,
+   "topic": "Gas laws",
+   "q": "Calculate the density of oxygen gas, molar mass 32 g/mol, at a pressure of 1.00 × 10⁵ Pa and a temperature of 300 K. Take R = 8.31 J mol⁻¹ K⁻¹.",
+   "options": [
+    "0.128 kg/m³",
+    "1.28 kg/m³",
+    "1.28 × 10³ kg/m³",
+    "2.56 kg/m³"
+   ],
+   "answer": 1,
+   "explanation": "For an ideal gas, density ρ = PM ÷ RT. Converting the molar mass to 0.032 kg/mol gives ρ = (1.00 × 10⁵ × 0.032) ÷ (8.31 × 300) = 1.28 kg/m³. Using 32 instead of 0.032 gives the tempting large value 1.28 × 10³ kg/m³."
+  },
+  {
+   "n": 26,
+   "topic": "Magnetism and electromagnetic induction",
+   "q": "A particle of charge 2.0 × 10⁻⁶ C moves with a speed of 5.0 × 10⁴ m/s perpendicular to a uniform magnetic field of flux density 0.30 T. Calculate the magnetic force on the particle.",
+   "options": [
+    "0.030 N",
+    "0.30 N",
+    "3.0 N",
+    "0.015 N"
+   ],
+   "answer": 0,
+   "explanation": "The magnetic force is F = qvB sin θ. Since the velocity is perpendicular to the field, sin 90° = 1, so F = 2.0 × 10⁻⁶ × 5.0 × 10⁴ × 0.30 = 0.030 N. The value 0.015 N would arise from incorrectly using sin 30°."
+  },
+  {
+   "n": 27,
+   "topic": "Magnetism and electromagnetic induction",
+   "q": "A closed copper ring falls vertically towards the north pole of a strong magnet. According to Lenz’s law, the induced current in the ring produces a magnetic force that",
+   "options": [
+    "opposes the motion of the ring",
+    "has no magnetic effect on the ring",
+    "increases the acceleration of the ring",
+    "attracts the ring towards the magnet"
+   ],
+   "answer": 0,
+   "explanation": "Lenz’s law states that the induced current produces effects that oppose the change causing it. As the ring approaches the magnet, the induced current creates a magnetic force that opposes the ring’s motion. This is why the ring experiences a retarding force rather than being attracted faster towards the magnet."
+  },
+  {
+   "n": 28,
+   "topic": "Light and optics",
+   "q": "The speed of light in a certain transparent liquid is 2.0 × 10⁸ m/s. If the speed of light in vacuum is 3.0 × 10⁸ m/s, calculate the refractive index of the liquid.",
+   "options": [
+    "2.0",
+    "6.0",
+    "1.5",
+    "0.67"
+   ],
+   "answer": 2,
+   "explanation": "The refractive index is n = c ÷ v = (3.0 × 10⁸) ÷ (2.0 × 10⁸) = 1.5. Finding v ÷ c instead gives the tempting value 0.67."
+  },
+  {
+   "n": 29,
+   "topic": "Light and optics",
+   "q": "The transmission of light signals along an optical fibre depends mainly on",
+   "options": [
+    "total internal reflection",
+    "dispersion of light",
+    "diffraction of light",
+    "polarization of light"
+   ],
+   "answer": 0,
+   "explanation": "In an optical fibre, the core has a higher refractive index than the cladding. Light striking the boundary at an angle greater than the critical angle is totally internally reflected and continues along the fibre. Dispersion, diffraction and polarization do not keep the light confined within the fibre."
+  },
+  {
+   "n": 30,
+   "topic": "Current electricity",
+   "q": "A uniform wire of resistance 12 Ω is cut into three equal lengths. The three pieces are then connected in parallel. What is the effective resistance of the combination?",
+   "options": [
+    "1.33 Ω",
+    "0.75 Ω",
+    "12.0 Ω",
+    "4.00 Ω"
+   ],
+   "answer": 0,
+   "explanation": "Each piece has resistance 12 Ω ÷ 3 = 4.00 Ω. For three 4.00 Ω resistors in parallel, 1/R = 1/4.00 + 1/4.00 + 1/4.00 = 0.75 Ω⁻¹, so R = 1.33 Ω. The 4.00 Ω value is the resistance of one piece only, not the parallel combination; 0.75 Ω is the reciprocal sum before inverting."
+  },
+  {
+   "n": 31,
+   "topic": "Current electricity",
+   "q": "A kettle in a cafeteria in Enugu is rated 2.0 kW, 240 V. What is the resistance of its heating element when it operates at the rated voltage?",
+   "options": [
+    "28.8 Ω",
+    "8.33 Ω",
+    "0.12 Ω",
+    "57.6 Ω"
+   ],
+   "answer": 0,
+   "explanation": "Power is P = V²/R, so R = V²/P = (240)²/2000 = 28.8 Ω. The 8.33 Ω value is the current P/V = 2000/240, not the resistance, and 57.6 Ω would result from using half the rated power."
+  },
+  {
+   "n": 32,
+   "topic": "Current electricity",
+   "q": "A potential difference of 6.0 V is maintained across a parallel combination of a 10 Ω resistor and a 15 Ω resistor. What is the current through the 15 Ω resistor?",
+   "options": [
+    "0.40 A",
+    "0.60 A",
+    "0.24 A",
+    "1.0 A"
+   ],
+   "answer": 0,
+   "explanation": "In a parallel combination the potential difference across each resistor is 6.0 V, so I = V/R = 6.0/15 = 0.40 A. The 1.0 A value is the total current from the supply, while 0.60 A is the current through the 10 Ω resistor."
+  },
+  {
+   "n": 33,
+   "topic": "Work, energy and power",
+   "q": "A 20 kg bag of rice is dragged 4.0 m along a rough horizontal floor in Onitsha. If the coefficient of kinetic friction between the bag and the floor is 0.25, calculate the work done against friction. Take g = 10 m/s².",
+   "options": [
+    "200 J",
+    "50 J",
+    "100 J",
+    "800 J"
+   ],
+   "answer": 0,
+   "explanation": "The normal reaction is N = mg = 20 × 10 = 200 N, so friction is F = μN = 0.25 × 200 = 50 N. Work against friction is Fd = 50 × 4.0 = 200 J. The 800 J value uses the weight itself as the friction force without multiplying by the coefficient of friction."
+  },
+  {
+   "n": 34,
+   "topic": "Work, energy and power",
+   "q": "An electric motor in a workshop in Kano has an input power of 2.5 kW and an efficiency of 75%. How much useful work does it do in 40 s?",
+   "options": [
+    "1.33 × 10⁵ J",
+    "1.0 × 10⁵ J",
+    "1.9 × 10³ J",
+    "7.5 × 10⁴ J"
+   ],
+   "answer": 3,
+   "explanation": "Useful power = 75% of 2.5 kW = 0.75 × 2500 = 1875 W. In 40 s the useful work is P t = 1875 × 40 = 7.5 × 10⁴ J. The 1.0 × 10⁵ J value is the total input energy, not the useful output."
+  },
+  {
+   "n": 35,
+   "topic": "Work, energy and power",
+   "q": "A 5.0 kg block moving at 8.0 m/s along a level floor is brought to rest by friction over a distance of 16 m. What is the average frictional force on the block?",
+   "options": [
+    "160 N",
+    "20 N",
+    "10 N",
+    "2.5 N"
+   ],
+   "answer": 2,
+   "explanation": "Initial kinetic energy = ½ × 5.0 × 8.0² = 160 J. This is lost as work done by friction, F × 16 = 160, so F = 10 N. The 20 N value comes from omitting the ½ in the kinetic-energy formula."
+  },
+  {
+   "n": 36,
+   "topic": "Electrostatics and capacitors",
+   "q": "Two parallel metal plates in a physics laboratory in Ibadan are separated by 2.0 mm and connected to a 60 V battery. What is the electric field strength between the plates?",
+   "options": [
+    "3.0 × 10⁷ V/m",
+    "3.0 × 10⁴ V/m",
+    "6.0 × 10⁴ V/m",
+    "30 V/m"
+   ],
+   "answer": 1,
+   "explanation": "For parallel plates, E = V/d = 60/(2.0 × 10⁻³) = 3.0 × 10⁴ V/m. Converting 2.0 mm to 2.0 × 10⁻³ m is essential; treating the separation as 2.0 m gives 30 V/m."
+  },
+  {
+   "n": 37,
+   "topic": "Electrostatics and capacitors",
+   "q": "At a point 0.50 m from a small charged sphere in air, the electric field strength is 3.6 × 10⁴ N/C. What is the magnitude of the charge on the sphere? Take 1/(4πε₀) = 9.0 × 10⁹ N m² C⁻².",
+   "options": [
+    "0.50 μC",
+    "4.0 μC",
+    "2.0 μC",
+    "1.0 μC"
+   ],
+   "answer": 3,
+   "explanation": "From E = kQ/r², Q = Er²/k = (3.6 × 10⁴)(0.50²)/(9.0 × 10⁹) = 1.0 × 10⁻⁶ C = 1.0 μC. The 2.0 μC value comes from using r instead of r² in the formula."
+  },
+  {
+   "n": 38,
+   "topic": "Waves",
+   "q": "A radio station in Lagos transmits at a frequency of 90.0 MHz. If radio waves travel at 3.0 × 10⁸ m/s, what is their wavelength?",
+   "options": [
+    "33.3 m",
+    "0.333 m",
+    "3.33 m",
+    "300 m"
+   ],
+   "answer": 2,
+   "explanation": "Using v = fλ gives λ = v/f = (3.0 × 10⁸)/(90.0 × 10⁶) = 3.33 m. A result of 33.3 m would arise from a factor-of-10 error when converting 90.0 MHz to hertz."
+  },
+  {
+   "n": 39,
+   "topic": "Waves",
+   "q": "A closed organ pipe has a fundamental frequency of 220 Hz. What is the frequency of its second overtone?",
+   "options": [
+    "880 Hz",
+    "1100 Hz",
+    "440 Hz",
+    "660 Hz"
+   ],
+   "answer": 1,
+   "explanation": "A closed pipe supports only odd harmonics. The fundamental is 220 Hz, the first overtone is 3 × 220 = 660 Hz, and the second overtone is 5 × 220 = 1100 Hz. The 660 Hz value is the first overtone, not the second."
+  },
+  {
+   "n": 40,
+   "topic": "Atomic and nuclear physics",
+   "q": "The activity of a radioactive sample in a hospital in Kano falls from 9600 Bq to 600 Bq in 12 days. What is its half-life?",
+   "options": [
+    "6 days",
+    "2 days",
+    "3 days",
+    "4 days"
+   ],
+   "answer": 2,
+   "explanation": "The activity falls by a factor of 9600 ÷ 600 = 16. Since 16 = 2⁴, four half-lives have passed. The half-life is therefore 12 days ÷ 4 = 3 days."
+  },
+  {
+   "n": 41,
+   "topic": "Atomic and nuclear physics",
+   "q": "When a nucleus emits a positron, how do its mass number and atomic number change?",
+   "options": [
+    "The mass number stays the same and the atomic number stays the same.",
+    "The mass number stays the same and the atomic number decreases by 1.",
+    "The mass number decreases by 4 and the atomic number decreases by 2.",
+    "The mass number stays the same and the atomic number increases by 1."
+   ],
+   "answer": 1,
+   "explanation": "In positron emission, a proton changes into a neutron and a positron is emitted. The mass number is unchanged, while the loss of one proton lowers the atomic number by 1. Beta-minus emission would instead increase the atomic number by 1."
+  },
+  {
+   "n": 42,
+   "topic": "Sound",
+   "q": "A pupil in Obudu claps once and hears an echo from a cliff 102 m away after 0.60 s. What is the speed of sound in air?",
+   "options": [
+    "680 m/s",
+    "85 m/s",
+    "340 m/s",
+    "170 m/s"
+   ],
+   "answer": 2,
+   "explanation": "The sound travels to the cliff and back, a total distance of 2 × 102 m = 204 m. The speed is v = 204 ÷ 0.60 = 340 m/s. Using only the one-way distance would wrongly give 170 m/s."
+  },
+  {
+   "n": 43,
+   "topic": "Sound",
+   "q": "A sound wave travels 660 m in 2.0 s through air. If its wavelength is 0.75 m, what is its frequency?",
+   "options": [
+    "247.5 Hz",
+    "330 Hz",
+    "880 Hz",
+    "440 Hz"
+   ],
+   "answer": 3,
+   "explanation": "The speed of the wave is v = 660 ÷ 2.0 = 330 m/s. Using v = fλ gives f = v ÷ λ = 330 ÷ 0.75 = 440 Hz. Multiplying speed by wavelength gives 247.5, which is a common but incorrect operation."
+  },
+  {
+   "n": 44,
+   "topic": "Heat and temperature",
+   "q": "A student in Jos mixes 0.200 kg of water at 80°C with 0.300 kg of water at 20°C in a container of negligible heat capacity. What is the final steady temperature?",
+   "options": [
+    "44°C",
+    "60°C",
+    "50°C",
+    "38°C"
+   ],
+   "answer": 0,
+   "explanation": "Heat lost by the hot water equals heat gained by the cold water: 0.200(80 − θ) = 0.300(θ − 20). Solving gives 16 − 0.2θ = 0.3θ − 6, so 22 = 0.5θ and θ = 44°C. Taking a simple average would wrongly give 50°C."
+  },
+  {
+   "n": 45,
+   "topic": "Heat and temperature",
+   "q": "How much heat is required to change 50 g of water at 100°C to steam at 100°C? [Specific latent heat of vaporisation of water = 2.26 × 10⁶ J/kg]",
+   "options": [
+    "1.13 × 10⁴ J",
+    "1.13 × 10⁵ J",
+    "2.26 × 10⁵ J",
+    "1.13 × 10⁸ J"
+   ],
+   "answer": 1,
+   "explanation": "First convert the mass: 50 g = 0.050 kg. The heat required is Q = mL = 0.050 × 2.26 × 10⁶ = 1.13 × 10⁵ J. There is no temperature change during vaporisation at 100°C."
+  },
+  {
+   "n": 46,
+   "topic": "Measurement and units",
+   "q": "A floor tile in Ilorin has an area of 2.5 × 10⁴ mm². What is this area in square metres?",
+   "options": [
+    "0.25 m²",
+    "0.025 m²",
+    "0.0025 m²",
+    "2.5 m²"
+   ],
+   "answer": 1,
+   "explanation": "Since 1 m = 1000 mm, 1 m² = 1000 × 1000 mm² = 10⁶ mm². Therefore 2.5 × 10⁴ mm² = 2.5 × 10⁴ ÷ 10⁶ m² = 0.025 m²."
+  },
+  {
+   "n": 47,
+   "topic": "Simple machines",
+   "q": "A uniform metre rule is pivoted at its 50 cm mark. A 20 N weight is hung at the 10 cm mark. At what mark must a 25 N weight be hung to balance the rule?",
+   "options": [
+    "90 cm mark",
+    "78 cm mark",
+    "68 cm mark",
+    "82 cm mark"
+   ],
+   "answer": 3,
+   "explanation": "The 20 N weight is 50 − 10 = 40 cm from the pivot. For balance, 25 × d = 20 × 40, so d = 32 cm on the opposite side, giving the mark 50 + 32 = 82 cm. A mark such as 68 cm would be only 18 cm from the pivot and would not balance the rule."
+  },
+  {
+   "n": 48,
+   "topic": "Simple machines",
+   "q": "A machine at a workshop in Aba receives 500 J of work input and delivers 350 J of useful work. What is its efficiency?",
+   "options": [
+    "70%",
+    "30%",
+    "143%",
+    "85%"
+   ],
+   "answer": 0,
+   "explanation": "Efficiency = useful work output ÷ work input × 100% = 350 ÷ 500 × 100% = 70%. The remaining 150 J is wasted, while 143% comes from inverting the ratio of input to output."
+  },
+  {
+   "n": 49,
+   "topic": "Simple machines",
+   "q": "A screw jack used in a workshop in Kano has a pitch of 4.0 mm. The handle is turned through a circle of radius 0.28 m. Taking π = 22/7, calculate its velocity ratio.",
+   "options": [
+    "70",
+    "220",
+    "440",
+    "880"
+   ],
+   "answer": 2,
+   "explanation": "The velocity ratio is circumference of the handle circle divided by the pitch: VR = 2πr ÷ pitch = [2 × (22/7) × 0.28] ÷ 0.004 = 1.76 ÷ 0.004 = 440. Using only πr instead of 2πr gives 220, which is half the required value."
+  },
+  {
+   "n": 50,
+   "topic": "Elasticity and pressure",
+   "q": "A wire of original length 1.20 m and cross-sectional area 2.0 × 10⁻⁶ m² extends by 0.12 m under a force of 30 N. Calculate the Young modulus of the material of the wire.",
+   "options": [
+    "1.5 × 10⁸ Pa",
+    "3.0 × 10⁷ Pa",
+    "1.5 × 10⁹ Pa",
+    "1.5 × 10⁷ Pa"
+   ],
+   "answer": 0,
+   "explanation": "Stress = force ÷ area = 30 ÷ (2.0 × 10⁻⁶) = 1.5 × 10⁷ Pa. Strain = extension ÷ original length = 0.12 ÷ 1.20 = 0.10. Young modulus = stress ÷ strain = (1.5 × 10⁷) ÷ 0.10 = 1.5 × 10⁸ Pa."
+  },
+  {
+   "n": 51,
+   "topic": "Elasticity and pressure",
+   "q": "The pressure due to a column of kerosene 3.0 m deep in a tank in Kaduna is 2.4 × 10⁴ Pa. Taking g = 10 m/s², calculate the density of the kerosene.",
+   "options": [
+    "1000 kg/m³",
+    "800 kg/m³",
+    "960 kg/m³",
+    "720 kg/m³"
+   ],
+   "answer": 1,
+   "explanation": "For a liquid column, P = ρgh, so ρ = P ÷ (gh) = (2.4 × 10⁴) ÷ (10 × 3.0) = 800 kg/m³. The pressure given is due to the kerosene column only."
+  },
+  {
+   "n": 52,
+   "topic": "Scalars and vectors",
+   "q": "A cyclist in Ibadan travels 6.0 km on a bearing of 030°. What is the eastward component of the cyclist's displacement?",
+   "options": [
+    "4.2 km",
+    "3.0 km",
+    "5.2 km",
+    "6.0 km"
+   ],
+   "answer": 1,
+   "explanation": "A bearing of 030° is 30° east of north. The eastward component is therefore 6.0 sin 30° = 3.0 km, while 5.2 km is the northward component, 6.0 cos 30°."
+  },
+  {
+   "n": 53,
+   "topic": "Scalars and vectors",
+   "q": "Two ropes attached to a canoe on the River Niger pull it with forces of 7.0 N due east and 24 N due north. What is the magnitude of the resultant force on the canoe?",
+   "options": [
+    "17 N",
+    "31 N",
+    "24 N",
+    "25 N"
+   ],
+   "answer": 3,
+   "explanation": "The two forces are perpendicular, so the resultant magnitude is √(7.0² + 24²) = √(49 + 576) = √625 = 25 N. Adding the magnitudes gives 31 N only when the forces act in the same direction."
+  },
+  {
+   "n": 54,
+   "topic": "Motion",
+   "q": "A trolley in a physics laboratory in Owerri starts from rest and covers 16 m in the first 4.0 s while accelerating uniformly. Calculate its acceleration.",
+   "options": [
+    "8.0 m/s²",
+    "4.0 m/s²",
+    "2.0 m/s²",
+    "1.0 m/s²"
+   ],
+   "answer": 2,
+   "explanation": "Using s = ut + ½at² with u = 0 gives 16 = ½ × a × 4.0² = 8a, so a = 2.0 m/s²."
+  },
+  {
+   "n": 55,
+   "topic": "Motion",
+   "q": "A ball is dropped from rest from the top of a tower and reaches the ground with a speed of 40 m/s. Taking g = 10 m/s² and neglecting air resistance, calculate the height of the tower.",
+   "options": [
+    "160 m",
+    "80 m",
+    "20 m",
+    "40 m"
+   ],
+   "answer": 1,
+   "explanation": "Using v² = u² + 2gh with u = 0 gives h = v² ÷ (2g) = 40² ÷ (2 × 10) = 80 m. Omitting the factor 2 in the denominator gives 160 m."
+  },
+  {
+   "n": 56,
+   "topic": "Motion",
+   "q": "A car slows down uniformly from 30 m/s to 10 m/s while covering a distance of 80 m. Calculate the time taken.",
+   "options": [
+    "4.0 s",
+    "16.0 s",
+    "2.0 s",
+    "8.0 s"
+   ],
+   "answer": 0,
+   "explanation": "For uniform acceleration, average velocity = (30 + 10) ÷ 2 = 20 m/s, so t = distance ÷ average velocity = 80 ÷ 20 = 4.0 s. Alternatively, the acceleration is (10² − 30²) ÷ (2 × 80) = −5 m/s², giving t = (10 − 30) ÷ (−5) = 4.0 s."
+  },
+  {
+   "n": 57,
+   "topic": "Newton’s laws and momentum",
+   "q": "A mason in Aba uses a rope to raise a bucket of mass 5.0 kg vertically with a constant acceleration of 2.0 m/s². Taking g = 10 m/s², what is the tension in the rope?",
+   "options": [
+    "50 N",
+    "60 N",
+    "70 N",
+    "40 N"
+   ],
+   "answer": 1,
+   "explanation": "The resultant upward force is T − mg = ma, so T = m(g + a) = 5.0 × (10 + 2.0) = 60 N. The value 50 N is just the weight of the bucket and ignores the upward acceleration."
+  },
+  {
+   "n": 58,
+   "topic": "Gas laws",
+   "q": "A fixed mass of gas occupies 600 cm³ at 27°C and a pressure of 1.0 × 10⁵ Pa. What volume will it occupy at 127°C and 2.0 × 10⁵ Pa?",
+   "options": [
+    "300 cm³",
+    "1200 cm³",
+    "800 cm³",
+    "400 cm³"
+   ],
+   "answer": 3,
+   "explanation": "Using P1V1/T1 = P2V2/T2 with temperatures in kelvin: V2 = (1.0 × 10⁵ × 600 × 400)/(2.0 × 10⁵ × 300) = 400 cm³. Ignoring the increase in pressure would give 800 cm³."
+  },
+  {
+   "n": 59,
+   "topic": "Magnetism and electromagnetic induction",
+   "q": "A flat coil of 100 turns and area 0.020 m² lies in a uniform magnetic field of 0.50 T, with its plane perpendicular to the field. The direction of the field is reversed in 0.10 s. What is the magnitude of the average induced e.m.f. in the coil?",
+   "options": [
+    "10 V",
+    "0.20 V",
+    "20 V",
+    "40 V"
+   ],
+   "answer": 2,
+   "explanation": "The flux through each turn is BA = 0.50 × 0.020 = 0.010 Wb. Reversing the field changes the flux by 2 × 0.010 = 0.020 Wb, so the average e.m.f. is NΔΦ/Δt = 100 × 0.020/0.10 = 20 V. Omitting the number of turns gives 0.20 V."
+  },
+  {
+   "n": 60,
+   "topic": "Light and optics",
+   "q": "A transparent medium has refractive index √2. What is the critical angle for light travelling from the medium into air?",
+   "options": [
+    "45°",
+    "60°",
+    "90°",
+    "30°"
+   ],
+   "answer": 0,
+   "explanation": "At the critical angle C, sin C = 1/n = 1/√2, so C = 45°. The value 30° would require sin C = 0.50, which does not match this refractive index."
+  }
+ ]
+}

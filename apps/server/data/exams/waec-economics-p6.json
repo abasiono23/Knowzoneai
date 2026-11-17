@@ -1,0 +1,661 @@
+{
+ "id": "waec-economics-p6",
+ "exam": "waec",
+ "subject": "economics",
+ "year": null,
+ "number": 6,
+ "source": "ai",
+ "minutes": 60,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Demand and supply",
+   "q": "The demand and supply functions for garri in a market in Aba are Qd = 120 − 3P and Qs = 20 + 2P, where quantity is in bags and price is in naira. What are the equilibrium price and quantity?",
+   "options": [
+    "₦25 and 45 bags",
+    "₦20 and 60 bags",
+    "₦10 and 50 bags",
+    "₦20 and 100 bags"
+   ],
+   "answer": 1,
+   "explanation": "Set Qd equal to Qs: 120 − 3P = 20 + 2P, so 100 = 5P and P = ₦20. Substituting P = 20 into Qd = 120 − 3(20) gives Q = 60 bags. The pair ₦25 and 45 bags does not satisfy the supply function at that price."
+  },
+  {
+   "n": 2,
+   "topic": "Demand and supply",
+   "q": "Rice is a normal good. In one season, consumers' incomes rise at the same time as the cost of fertilizer used by rice farmers increases. What must happen in the rice market?",
+   "options": [
+    "Equilibrium quantity will fall while equilibrium price may rise, fall or remain unchanged.",
+    "Equilibrium price will rise, but the change in equilibrium quantity cannot be determined from the information given.",
+    "Equilibrium price and quantity will both rise.",
+    "Equilibrium price and quantity will both fall."
+   ],
+   "answer": 1,
+   "explanation": "A rise in consumers' incomes increases demand, while a rise in fertilizer cost decreases supply. Both changes push price upward; however, the higher demand tends to raise quantity while the reduced supply tends to lower it, so quantity could rise, fall or stay the same."
+  },
+  {
+   "n": 3,
+   "topic": "Market structures",
+   "q": "Which of the following is a characteristic of a monopoly?",
+   "options": [
+    "Many sellers sell identical products.",
+    "Each firm is a price taker.",
+    "There is a single seller whose product has no close substitute.",
+    "There is free entry and exit of firms."
+   ],
+   "answer": 2,
+   "explanation": "A monopoly exists where one firm is the sole seller of a product for which there is no close substitute. Price-taking and free entry are features of perfect competition, while many sellers with identical products also describe perfect competition."
+  },
+  {
+   "n": 4,
+   "topic": "Population and labour",
+   "q": "In a community in Niger State, there are 60 children below 15 years, 20 elderly persons above 65 years and 120 persons aged 15–64 years. What is the age dependency ratio?",
+   "options": [
+    "16.7 dependants per 100 working-age persons",
+    "166.7 dependants per 100 working-age persons",
+    "50.0 dependants per 100 working-age persons",
+    "66.7 dependants per 100 working-age persons"
+   ],
+   "answer": 3,
+   "explanation": "The dependent population is 60 + 20 = 80 persons, while the working-age population is 120 persons. The dependency ratio is (80 ÷ 120) × 100 = 66.7 dependants per 100 working-age persons."
+  },
+  {
+   "n": 5,
+   "topic": "Public finance",
+   "q": "A tax that takes a larger proportion of the income of a poor person than of a rich person is called",
+   "options": [
+    "a progressive tax",
+    "a regressive tax",
+    "a direct tax",
+    "a proportional tax"
+   ],
+   "answer": 1,
+   "explanation": "A regressive tax places a relatively heavier burden on lower-income earners because it takes a larger proportion of their income. A progressive tax takes a larger proportion from higher incomes, and a proportional tax takes the same proportion from all incomes."
+  },
+  {
+   "n": 6,
+   "topic": "Public finance",
+   "q": "The principle of taxation which states that people should pay taxes in proportion to the benefits they receive from government services is called",
+   "options": [
+    "the equity principle",
+    "the proportional principle",
+    "the ability-to-pay principle",
+    "the benefit principle"
+   ],
+   "answer": 3,
+   "explanation": "The benefit principle links a person's tax payment to the benefits derived from public services. The ability-to-pay principle relates tax payments to income or wealth rather than to benefits received."
+  },
+  {
+   "n": 7,
+   "topic": "Basic economic concepts",
+   "q": "Which of the following best explains the meaning of a point inside a production possibility curve?",
+   "options": [
+    "The opportunity cost of production has become zero.",
+    "The combination of goods produced is beyond the economy's capacity.",
+    "The economy is using the best available technology efficiently.",
+    "The economy is producing below its full productive capacity."
+   ],
+   "answer": 3,
+   "explanation": "A point inside the production possibility curve shows that some productive resources are idle or not efficiently used, so output is below capacity. Efficient use is shown on the curve, while a combination beyond the curve is unattainable with present resources."
+  },
+  {
+   "n": 8,
+   "topic": "Basic economic concepts",
+   "q": "In a free enterprise economy, the allocation of scarce resources is mainly determined by",
+   "options": [
+    "the price mechanism through market forces of demand and supply.",
+    "the decisions of trade unions alone.",
+    "directives issued by a central planning authority.",
+    "customs and traditions inherited from the community."
+   ],
+   "answer": 0,
+   "explanation": "In a free enterprise economy, prices act as signals that guide producers and consumers in deciding what, how and for whom to produce. Central directives belong mainly to a planned economy, while customs and trade unions are not the main allocative mechanism."
+  },
+  {
+   "n": 9,
+   "topic": "Costs and revenue",
+   "q": "A small firm in Akure produces 100 units at a total cost of ₦150,000. When output rises to 120 units, its total cost becomes ₦168,000. What is its marginal cost between these two output levels?",
+   "options": [
+    "₦18,000",
+    "₦300",
+    "₦900",
+    "₦1,500"
+   ],
+   "answer": 2,
+   "explanation": "The rise in total cost is ₦168,000 − ₦150,000 = ₦18,000, while output rises by 120 − 100 = 20 units. Marginal cost is therefore ₦18,000 ÷ 20 = ₦900. The value ₦1,500 is the average total cost at 100 units, not the marginal cost."
+  },
+  {
+   "n": 10,
+   "topic": "Costs and revenue",
+   "q": "A trader in Ibadan sells 400 units of a good at ₦150 each. Her total fixed cost is ₦48,000 and, at this output, her average variable cost is ₦15. What is her profit?",
+   "options": [
+    "₦6,000 profit",
+    "₦12,000 profit",
+    "₦54,000 profit",
+    "₦6,000 loss"
+   ],
+   "answer": 0,
+   "explanation": "Total revenue is 400 × ₦150 = ₦60,000. Total variable cost is 400 × ₦15 = ₦6,000, so total cost is ₦48,000 + ₦6,000 = ₦54,000. Profit is therefore ₦60,000 − ₦54,000 = ₦6,000."
+  },
+  {
+   "n": 11,
+   "topic": "Costs and revenue",
+   "q": "For a firm in Enugu, the addition to total revenue obtained from selling one additional unit of output is called",
+   "options": [
+    "marginal revenue.",
+    "marginal cost.",
+    "average revenue.",
+    "total revenue."
+   ],
+   "answer": 0,
+   "explanation": "Marginal revenue is the extra revenue earned from selling one more unit of output. Average revenue is total revenue divided by output, while marginal cost measures the extra cost of producing one more unit."
+  },
+  {
+   "n": 12,
+   "topic": "Agriculture and industry in Nigeria",
+   "q": "A rice-milling plant in Ebonyi State supplies rice bran to a poultry feed factory located nearby. This relationship is best described as",
+   "options": [
+    "a horizontal linkage.",
+    "a backward linkage.",
+    "a conglomerate linkage.",
+    "a forward linkage."
+   ],
+   "answer": 3,
+   "explanation": "A forward linkage exists when the output or by-product of one industry becomes an input for another industry. In this case, rice bran from the rice mill is used by the poultry feed factory; a backward linkage would involve paddy rice farmers supplying the mill."
+  },
+  {
+   "n": 13,
+   "topic": "Agriculture and industry in Nigeria",
+   "q": "Which of the following is an example of an agro-based industry in Nigeria?",
+   "options": [
+    "A steel rolling mill in Jos.",
+    "A radio assembly plant in Aba.",
+    "A groundnut oil mill in Kano.",
+    "A cement factory in Ogun State."
+   ],
+   "answer": 2,
+   "explanation": "An agro-based industry processes agricultural raw materials, and a groundnut oil mill processes groundnut into oil and other products. Cement, radio assembly and steel rolling depend mainly on mineral or industrial raw materials rather than agricultural produce."
+  },
+  {
+   "n": 14,
+   "topic": "Economic development and planning",
+   "q": "Which of the following is most likely to improve the effectiveness of development planning in Nigeria?",
+   "options": [
+    "Relying only on foreign experts to set targets.",
+    "Basing plans on reliable statistics and involving local communities.",
+    "Changing plans every few months to reflect new political interests.",
+    "Preparing plans without monitoring their implementation."
+   ],
+   "answer": 1,
+   "explanation": "Reliable statistics help planners set realistic targets, while involving local communities ensures that projects reflect actual needs. Lack of monitoring, excessive reliance on outsiders and frequent politically motivated changes tend to reduce the effectiveness of development plans."
+  },
+  {
+   "n": 15,
+   "topic": "Banking and financial institutions",
+   "q": "The ability of a commercial bank to pay its customers' withdrawals as they fall due is referred to as",
+   "options": [
+    "solvency",
+    "capital adequacy",
+    "liquidity",
+    "profitability"
+   ],
+   "answer": 2,
+   "explanation": "Liquidity is the ability of a bank to meet its short-term obligations, especially customers' withdrawal demands, as they fall due. Solvency concerns whether assets exceed liabilities, profitability concerns earning profit, and capital adequacy concerns having enough capital."
+  },
+  {
+   "n": 16,
+   "topic": "Banking and financial institutions",
+   "q": "The Bank of Industry is best classified in Nigeria as a",
+   "options": [
+    "commercial bank",
+    "mortgage bank",
+    "development bank",
+    "merchant bank"
+   ],
+   "answer": 2,
+   "explanation": "The Bank of Industry is a development finance institution that provides medium- and long-term finance for industry and small businesses. It is not a commercial bank, a mortgage bank, or a merchant bank."
+  },
+  {
+   "n": 17,
+   "topic": "National income",
+   "q": "A country produces only rice and cloth. In 2023, it produced 1,000 bags of rice valued at ₦20,000 per bag and 500 pieces of cloth valued at ₦10,000 per piece. What is the country's GDP at market prices for 2023?",
+   "options": [
+    "₦25,000,000",
+    "₦20,500,000",
+    "₦15,000,000",
+    "₦30,000,000"
+   ],
+   "answer": 0,
+   "explanation": "GDP at market prices is the total market value of final goods and services produced. Here it is (1,000 × ₦20,000) + (500 × ₦10,000) = ₦20,000,000 + ₦5,000,000 = ₦25,000,000. The other figures come from omitting or wrongly combining one of the product values."
+  },
+  {
+   "n": 18,
+   "topic": "International trade",
+   "q": "Which of the following is an argument in favour of using tariffs to protect infant industries in Nigeria?",
+   "options": [
+    "Tariffs always lead to lower prices for consumers.",
+    "Tariffs encourage unlimited importation of cheaper goods.",
+    "Tariffs remove the need for a country to specialize in production.",
+    "New industries need time to grow before they can compete with established foreign firms."
+   ],
+   "answer": 3,
+   "explanation": "The infant industry argument is that newly established domestic industries may need temporary protection until they grow large enough to compete with established foreign firms. Tariffs normally raise consumer prices, do not remove the need for specialization, and restrict rather than encourage imports."
+  },
+  {
+   "n": 19,
+   "topic": "International trade",
+   "q": "A Nigerian businessman imports a generator from Japan for $15,000. If the exchange rate is ₦1,550 = $1, how much naira will he pay for the generator, excluding other charges?",
+   "options": [
+    "₦15,000,000",
+    "₦23,250,000",
+    "₦22,500,000",
+    "₦23,000,000"
+   ],
+   "answer": 1,
+   "explanation": "The naira cost is found by multiplying the foreign currency amount by the exchange rate: $15,000 × ₦1,550 = ₦23,250,000. Using a lower exchange rate such as ₦1,500 would give a smaller, incorrect amount."
+  },
+  {
+   "n": 20,
+   "topic": "Money and inflation",
+   "q": "Narrow money (M1) in Nigeria consists mainly of",
+   "options": [
+    "currency outside banks plus time deposits",
+    "currency outside banks plus demand deposits",
+    "treasury bills plus savings deposits",
+    "all bank loans plus government securities"
+   ],
+   "answer": 1,
+   "explanation": "Narrow money (M1) is the part of money supply held mainly for transactions and consists of currency outside banks plus demand deposits. Time and savings deposits belong to broader money measures, and loans or government securities are not treated as money in this definition."
+  },
+  {
+   "n": 21,
+   "topic": "Money and inflation",
+   "q": "If commercial banks in Nigeria decide to keep a larger proportion of their deposits as excess reserves, the money supply will most likely",
+   "options": [
+    "remain unchanged, because reserves are not money",
+    "rise, because banks will have more reserves",
+    "rise, because customers will withdraw more cash",
+    "fall, because banks will grant fewer loans"
+   ],
+   "answer": 3,
+   "explanation": "Excess reserves are reserves held above the required minimum. If banks keep a larger proportion as excess reserves, they have less to lend, credit creation falls, and the money supply is likely to contract. Holding more reserves does not raise money supply unless the reserves are used to create loans and deposits."
+  },
+  {
+   "n": 22,
+   "topic": "Elasticity",
+   "q": "In a market in Owerri, the price of a 5 kg bag of rice rises from ₦7,000 to ₦8,400, and quantity demanded falls from 500 bags to 400 bags. Using the original values as the base, the coefficient of price elasticity of demand (ignoring the negative sign) is",
+   "options": [
+    "1.5",
+    "0.2",
+    "1.0",
+    "0.5"
+   ],
+   "answer": 2,
+   "explanation": "The percentage change in quantity demanded is (100 ÷ 500) × 100 = 20%, while the percentage change in price is (1,400 ÷ 7,000) × 100 = 20%. Therefore, the price elasticity of demand is 20% ÷ 20% = 1.0. The value 1.5 would be obtained by using the new price and quantity as the base, which is not what the question asks for."
+  },
+  {
+   "n": 23,
+   "topic": "Elasticity",
+   "q": "Cocoa farmers in Ondo State need about two years to plant new trees and increase output. If the price of cocoa rises and the period considered is only six months, the supply of cocoa within that period is best described as",
+   "options": [
+    "inelastic",
+    "perfectly elastic",
+    "unit elastic",
+    "elastic"
+   ],
+   "answer": 0,
+   "explanation": "In six months, cocoa farmers cannot substantially increase output because new trees take years to mature. Quantity supplied therefore responds only slightly to the price rise, making supply inelastic. Supply would be more elastic over a longer period when farmers can adjust production."
+  },
+  {
+   "n": 24,
+   "topic": "Theory of production",
+   "q": "A tailoring firm in Aba employs one sewing machine and additional workers. Total output rises from 18 shirts with three workers to 23 shirts with four workers. The marginal product of the fourth worker is",
+   "options": [
+    "18 shirts",
+    "4 shirts",
+    "23 shirts",
+    "5 shirts"
+   ],
+   "answer": 3,
+   "explanation": "Marginal product is the change in total output divided by the change in labour: (23 − 18) ÷ (4 − 3) = 5 shirts. The value 23 shirts is the total output after employing four workers, not the extra output from the fourth worker."
+  },
+  {
+   "n": 25,
+   "topic": "Theory of production",
+   "q": "A food-processing company in Ibadan increases all its inputs by 12% and its total output rises by 18%. This production outcome illustrates",
+   "options": [
+    "decreasing returns to scale",
+    "constant returns to scale",
+    "the law of diminishing returns",
+    "increasing returns to scale"
+   ],
+   "answer": 3,
+   "explanation": "Returns to scale compare the proportional change in all inputs with the proportional change in output. Since output rises by a larger percentage than inputs, the firm experiences increasing returns to scale. Diminishing returns concerns the short run when only one input is varied while others are fixed."
+  },
+  {
+   "n": 26,
+   "topic": "Demand and supply",
+   "q": "A bumper harvest of tomatoes in Kano State increases the supply of tomatoes while the demand curve remains unchanged. In the market for tomatoes, this will most likely lead to",
+   "options": [
+    "a fall in both equilibrium price and quantity",
+    "a rise in both equilibrium price and quantity",
+    "a rise in equilibrium price and a fall in equilibrium quantity",
+    "a fall in equilibrium price and a rise in equilibrium quantity"
+   ],
+   "answer": 3,
+   "explanation": "An increase in supply shifts the supply curve to the right. With demand unchanged, the new equilibrium occurs at a lower price and a larger quantity exchanged. The higher price outcome would result from an increase in demand or a decrease in supply, not a bumper harvest."
+  },
+  {
+   "n": 27,
+   "topic": "Demand and supply",
+   "q": "The government fixes the price of a 50 kg bag of fertiliser in Katsina below the equilibrium market price. What is the most likely result?",
+   "options": [
+    "excess supply and unsold fertiliser",
+    "excess demand and possible black marketing",
+    "a new equilibrium at the fixed price",
+    "a fall in the quantity demanded of fertiliser"
+   ],
+   "answer": 1,
+   "explanation": "A price fixed below equilibrium makes quantity demanded exceed quantity supplied, creating a shortage. Sellers may then ration the fertiliser or sell it illegally at higher prices, encouraging black marketing. Excess supply would arise if the fixed price were above equilibrium."
+  },
+  {
+   "n": 28,
+   "topic": "Market structures",
+   "q": "A small seller of bottled water in Onitsha sells among many other sellers of identical bottled water and cannot influence the market price. The demand curve facing this seller is",
+   "options": [
+    "upward sloping",
+    "vertical",
+    "horizontal",
+    "downward sloping"
+   ],
+   "answer": 2,
+   "explanation": "Under perfect competition, the individual seller is a price taker and can sell any quantity at the prevailing market price. Its demand curve is therefore horizontal, showing perfect elasticity at the market price. A downward-sloping demand curve belongs to firms with some market power."
+  },
+  {
+   "n": 29,
+   "topic": "Market structures",
+   "q": "The cement industry in Nigeria is dominated by a few large firms whose pricing decisions directly affect one another. This market is best described as",
+   "options": [
+    "monopolistic competition",
+    "oligopoly",
+    "monopoly",
+    "perfect competition"
+   ],
+   "answer": 1,
+   "explanation": "An oligopoly is characterised by a few large sellers whose decisions are mutually interdependent. Perfect competition has many price-taking sellers, a monopoly has one seller, and monopolistic competition has many sellers offering differentiated products."
+  },
+  {
+   "n": 30,
+   "topic": "Population and labour",
+   "q": "In Ede, Osun State, 36,000 people are aged below 15, 24,000 are aged between 15 and 64, and 10,000 are aged above 64. What is the dependency ratio?",
+   "options": [
+    "291.7 dependants per 100 persons of working age",
+    "150.0 dependants per 100 persons of working age",
+    "41.7 dependants per 100 persons of working age",
+    "191.7 dependants per 100 persons of working age"
+   ],
+   "answer": 3,
+   "explanation": "The dependants are the 36,000 persons below 15 and the 10,000 persons above 64, giving 46,000. The working-age population is 24,000, so the dependency ratio is (46,000 ÷ 24,000) × 100 = 191.7 dependants per 100 persons of working age. Using only the under-15 group gives the tempting 150.0 figure, which leaves out the older dependants."
+  },
+  {
+   "n": 31,
+   "topic": "Population and labour",
+   "q": "The labour force of a country consists of persons who are",
+   "options": [
+    "employed only",
+    "employed or actively seeking work within the working-age population",
+    "all persons living in the country",
+    "of working age, whether employed or not"
+   ],
+   "answer": 1,
+   "explanation": "The labour force comprises those within the working-age population who are either employed or unemployed but actively looking for work. Persons of working age who are not working and not seeking work are outside the labour force, so the option that includes all persons of working age is too broad."
+  },
+  {
+   "n": 32,
+   "topic": "Population and labour",
+   "q": "A young farmer moves from Gboko to Lagos in search of better-paid work. Which of the following is most likely to result from this type of migration for Lagos?",
+   "options": [
+    "A rise in the number of farm workers in Gboko",
+    "Increased pressure on housing and social amenities",
+    "A decline in the population density of Lagos",
+    "A fall in the demand for public transport in Lagos"
+   ],
+   "answer": 1,
+   "explanation": "Movement from a rural area to a large city increases the city's population, so demand for housing, water, schools and other amenities rises. The movement reduces, rather than raises, farm labour in the source area and increases rather than lowers population density in Lagos."
+  },
+  {
+   "n": 33,
+   "topic": "Public finance",
+   "q": "The Federal Government of Nigeria increases tax rates and reduces spending on roads and schools. This policy is most likely intended to",
+   "options": [
+    "encourage higher consumption by households",
+    "expand public investment in infrastructure",
+    "reduce aggregate demand and control inflation",
+    "increase aggregate demand and reduce unemployment"
+   ],
+   "answer": 2,
+   "explanation": "Higher taxes reduce disposable income and lower government spending reduces aggregate demand, both of which help to ease inflationary pressure. Such a contractionary fiscal policy would not be intended to expand public investment or encourage consumption."
+  },
+  {
+   "n": 34,
+   "topic": "Economic development and planning",
+   "q": "A country's real gross domestic product grows at 4.5% per annum while its population grows at 2.5% per annum. What is the approximate annual growth rate of real income per head?",
+   "options": [
+    "7.0%",
+    "2.0%",
+    "1.8%",
+    "11.25%"
+   ],
+   "answer": 1,
+   "explanation": "Real income per head grows approximately at the difference between the GDP growth rate and the population growth rate: 4.5% − 2.5% = 2.0%. Dividing the GDP growth rate by the population growth rate gives the tempting but incorrect 1.8%."
+  },
+  {
+   "n": 35,
+   "topic": "Costs and revenue",
+   "q": "A small firm in Umuahia operates in a perfectly competitive market. Its average revenue is greater than average variable cost but less than average total cost. In the short run, the firm should",
+   "options": [
+    "expand output to earn abnormal profit",
+    "continue producing to reduce its loss",
+    "raise its price above average total cost",
+    "shut down immediately at zero output"
+   ],
+   "answer": 1,
+   "explanation": "When average revenue covers average variable cost but not average total cost, the firm makes a loss but each unit sold contributes towards fixed costs, so continuing production minimises the loss. Immediate shutdown would leave the firm to bear all fixed costs; expanding at the existing price would not create abnormal profit."
+  },
+  {
+   "n": 36,
+   "topic": "Costs and revenue",
+   "q": "A bakery in Ilorin has total fixed cost of ₦45,000. It sells each loaf for ₦60 and incurs an average variable cost of ₦30 per loaf. What is the break-even output?",
+   "options": [
+    "3,000 loaves",
+    "750 loaves",
+    "1,500 loaves",
+    "1,000 loaves"
+   ],
+   "answer": 2,
+   "explanation": "Contribution per loaf is ₦60 − ₦30 = ₦30. Break-even output is fixed cost divided by contribution per loaf: ₦45,000 ÷ ₦30 = 1,500 loaves. Dividing the fixed cost by the selling price alone gives the tempting 750 loaves but wrongly ignores variable cost."
+  },
+  {
+   "n": 37,
+   "topic": "Costs and revenue",
+   "q": "A firm in Nsukka produces 100 units at an average total cost of ₦150. If its total fixed cost is ₦5,000, what is its average variable cost?",
+   "options": [
+    "₦10,000",
+    "₦50",
+    "₦100",
+    "₦150"
+   ],
+   "answer": 2,
+   "explanation": "Total cost is 100 × ₦150 = ₦15,000. Subtracting fixed cost gives total variable cost of ₦10,000, so average variable cost is ₦10,000 ÷ 100 = ₦100. The figure ₦50 is average fixed cost, not average variable cost."
+  },
+  {
+   "n": 38,
+   "topic": "Basic economic concepts",
+   "q": "A community in Nasarawa State can use its land either to grow yam or to rear cattle. As more land is moved from yam production to cattle rearing, the quantity of yam sacrificed for each additional herd of cattle increases. This situation illustrates the principle of",
+   "options": [
+    "constant opportunity cost",
+    "zero opportunity cost",
+    "increasing opportunity cost",
+    "decreasing opportunity cost"
+   ],
+   "answer": 2,
+   "explanation": "The community faces increasing opportunity cost because land is not equally suitable for yam and cattle; each extra herd of cattle requires giving up more yam. Constant opportunity cost would give a straight-line production possibility curve, while zero opportunity cost would mean no sacrifice."
+  },
+  {
+   "n": 39,
+   "topic": "Basic economic concepts",
+   "q": "A movement along the demand curve for sachet water in Owerri is caused by a change in the",
+   "options": [
+    "number of buyers of sachet water",
+    "taste for bottled water",
+    "price of sachet water",
+    "income of consumers in Owerri"
+   ],
+   "answer": 2,
+   "explanation": "A change in the price of sachet water changes the quantity demanded and causes a movement along its demand curve. Changes in income, number of buyers or taste for a related product shift the demand curve rather than move along it."
+  },
+  {
+   "n": 40,
+   "topic": "Agriculture and industry in Nigeria",
+   "q": "An example of an agro-based industry in Nigeria is",
+   "options": [
+    "a rice-milling plant in Kebbi",
+    "an oil refinery in Port Harcourt",
+    "a cement factory in Ogun State",
+    "a bicycle assembly plant in Ibadan"
+   ],
+   "answer": 0,
+   "explanation": "A rice-milling plant processes paddy rice, which is an agricultural raw material, so it is agro-based. Cement making, crude oil refining and bicycle assembly use mainly mineral or industrial inputs rather than agricultural raw materials."
+  },
+  {
+   "n": 41,
+   "topic": "Agriculture and industry in Nigeria",
+   "q": "A major factor that discourages large-scale food processing in rural areas of Nigeria is",
+   "options": [
+    "excess supply of processing machinery in rural areas",
+    "inadequate electricity and storage facilities",
+    "low consumer demand for processed food throughout Nigeria",
+    "shortage of raw agricultural materials in rural areas"
+   ],
+   "answer": 1,
+   "explanation": "Unreliable electricity and poor storage raise processing costs and cause waste, so they discourage large-scale food processing in rural areas. Raw agricultural materials are usually available in rural areas, and the main problem is not an excess of machinery or a general absence of demand for processed food."
+  },
+  {
+   "n": 42,
+   "topic": "Banking and financial institutions",
+   "q": "An overdraft facility granted by a bank to a trader in Onitsha allows the trader to",
+   "options": [
+    "earn interest on unused deposits in the current account",
+    "convert savings deposits into fixed deposits without notice",
+    "obtain a long-term mortgage for a residential house",
+    "withdraw more than the current account balance up to an agreed limit"
+   ],
+   "answer": 3,
+   "explanation": "An overdraft is a short-term borrowing arrangement that lets a current account holder withdraw beyond the available balance up to an agreed limit. It is not a long-term mortgage or a fixed savings deposit, and unused balances in a current account do not normally earn interest."
+  },
+  {
+   "n": 43,
+   "topic": "National income",
+   "q": "In a hypothetical economy, private consumption expenditure is ₦480 billion, gross investment is ₦120 billion, government expenditure is ₦150 billion, exports are ₦90 billion and imports are ₦70 billion. Using the expenditure approach, GDP at market prices is",
+   "options": [
+    "₦730 billion",
+    "₦750 billion",
+    "₦910 billion",
+    "₦770 billion"
+   ],
+   "answer": 3,
+   "explanation": "Using GDP = C + I + G + (X − M): 480 + 120 + 150 + (90 − 70) = ₦770 billion. Adding imports instead of subtracting them gives ₦910 billion, while omitting net exports gives ₦750 billion."
+  },
+  {
+   "n": 44,
+   "topic": "National income",
+   "q": "The income approach to measuring national income adds together",
+   "options": [
+    "the value of only goods and services produced by government",
+    "the market value of all intermediate goods and services",
+    "consumption, investment, government expenditure and net exports",
+    "compensation of employees, rent, interest and profits"
+   ],
+   "answer": 3,
+   "explanation": "The income approach sums the factor incomes earned in production: compensation of employees, rent, interest and profits. Consumption, investment, government spending and net exports belong to the expenditure approach, while intermediate goods are not counted to avoid double counting."
+  },
+  {
+   "n": 45,
+   "topic": "International trade",
+   "q": "A customs union differs from a free trade area mainly because members of a customs union",
+   "options": [
+    "use a single currency for all transactions among themselves",
+    "remove tariffs only on agricultural goods traded among themselves",
+    "allow free movement of capital and labour among themselves",
+    "adopt a common external tariff on goods from non-members"
+   ],
+   "answer": 3,
+   "explanation": "Members of a customs union remove trade barriers among themselves and also apply a common tariff to imports from non-member countries. A free trade area removes barriers among members but each member keeps its own external tariff; free movement of capital and labour is a feature of a common market."
+  },
+  {
+   "n": 46,
+   "topic": "International trade",
+   "q": "A foreign firm sells frozen chicken in Nigeria at a price lower than the price it charges in its own home market. This trade practice is called",
+   "options": [
+    "a quota",
+    "dumping",
+    "a voluntary export restraint",
+    "an export subsidy"
+   ],
+   "answer": 1,
+   "explanation": "Dumping occurs when a foreign producer sells goods in another country below the price charged in the home market or below production cost. A quota and a voluntary export restraint limit quantity, while an export subsidy is a government payment to exporters."
+  },
+  {
+   "n": 47,
+   "topic": "Money and inflation",
+   "q": "In a hypothetical economy, the money supply is ₦80 billion, the velocity of circulation is 4, and real output is 160 billion units. Using MV = PY, what is the price level?",
+   "options": [
+    "2",
+    "0.5",
+    "2.5",
+    "5"
+   ],
+   "answer": 0,
+   "explanation": "Using MV = PY, the price level is P = MV ÷ Y = (₦80 billion × 4) ÷ 160 billion = 2. The money supply times velocity equals 320 billion, and dividing by real output of 160 billion units gives the price level."
+  },
+  {
+   "n": 48,
+   "topic": "Money and inflation",
+   "q": "Workers in a manufacturing company in Ikeja obtain a large wage increase. The company raises its prices to cover the higher wage bill, and workers then demand another wage increase to restore their purchasing power. This sequence is best described as",
+   "options": [
+    "deflation caused by a fall in money supply",
+    "demand-pull inflation caused by a reduction in taxes",
+    "imported inflation caused by a rise in foreign prices",
+    "a wage-price spiral"
+   ],
+   "answer": 3,
+   "explanation": "A wage-price spiral occurs when wage increases push up costs and prices, and the resulting rise in prices leads workers to seek further wage increases. It is a self-reinforcing form of cost-push inflation, not imported inflation or demand-pull inflation from tax cuts."
+  },
+  {
+   "n": 49,
+   "topic": "Elasticity",
+   "q": "The price of a bag of rice in a market rises from ₦25,000 to ₦30,000, and a trader's weekly quantity supplied rises from 200 bags to 260 bags. Using the original values to calculate percentage changes, what is the price elasticity of supply?",
+   "options": [
+    "1.5",
+    "2.0",
+    "0.67",
+    "1.2"
+   ],
+   "answer": 0,
+   "explanation": "Percentage change in quantity supplied = (60 ÷ 200) × 100 = 30%, while percentage change in price = (5,000 ÷ 25,000) × 100 = 20%. Therefore elasticity = 30% ÷ 20% = 1.5, so supply is elastic."
+  },
+  {
+   "n": 50,
+   "topic": "Elasticity",
+   "q": "A worker's monthly income rises from ₦60,000 to ₦75,000, and her purchases of a particular brand of noodles fall from 40 packs to 32 packs. Using original values, her income elasticity of demand is",
+   "options": [
+    "-1.25, and the noodles are an inferior good",
+    "0.8, and the noodles are a normal good",
+    "1.25, and the noodles are a luxury good",
+    "-0.8, and the noodles are an inferior good"
+   ],
+   "answer": 3,
+   "explanation": "Percentage change in quantity demanded = (32 − 40) ÷ 40 × 100 = −20%, while percentage change in income = (75,000 − 60,000) ÷ 60,000 × 100 = 25%. Income elasticity = −20% ÷ 25% = −0.8; the negative value shows that the noodles are an inferior good."
+  }
+ ]
+}

@@ -1,4 +1,4 @@
-import { EXAM_SUBJECTS, EXAMS } from '../data/exams.js';
+import { DEFAULT_REGION, EXAM_SUBJECTS_OF, EXAMS, examsForRegion } from '../data/exams.js';
 import { allCountries, allCourseBooks, visibleBooks, WORLD } from './books.js';
 import { cardText, allReels } from './reels.js';
 import type { LanguageId } from './personalization.js';
@@ -60,7 +60,11 @@ function once<T>(list: T[], key: (x: T) => string) {
   });
 }
 
-export async function searchEverything(lang: LanguageId, query: string, country?: string) {
+/**
+ * `region` is the student's study region: their own exams are found by subject as before, and another
+ * region's exam only when the search names it ("SAT math"). Without one (older apps), Nigeria's.
+ */
+export async function searchEverything(lang: LanguageId, query: string, country?: string, region?: string) {
   const words = searchWords(query);
   const empty = { videos: [], summaries: [], books: [], reels: [], courses: [], exams: [], skills: [] };
   if (!words.length || words.join('').length < 2) return empty;
@@ -198,12 +202,17 @@ export async function searchEverything(lang: LanguageId, query: string, country?
     (s) => `${s.name} ${s.tagline} ${s.english}`,
   ).map(({ english: _e, ...s }) => s);
 
+  // What people type for the exams whose id isn't their name: "A-level maths", "matric accounting".
+  const EXAM_WORDS: Partial<Record<(typeof EXAMS)[number], string[]>> = { alevel: ['alevel', 'alevels', 'a-level', 'a-levels', 'level', 'levels'], nsc: ['nsc', 'matric'] };
+  const mine = examsForRegion(region ?? DEFAULT_REGION);
+  // Older apps send no region and only know Nigeria's exams, so they never get another one.
+  const named = region !== undefined;
   const exams = find(
-    EXAMS.flatMap((exam) =>
-      EXAM_SUBJECTS.map((subject) => ({
+    EXAMS.filter((exam) => mine.includes(exam) || (named && words.some((w) => (EXAM_WORDS[exam] ?? [exam]).includes(w)))).flatMap((exam) =>
+      EXAM_SUBJECTS_OF[exam].map((subject) => ({
         exam: exam as string,
         subject: subject as string,
-        title: `${exam.toUpperCase()} ${subject.replace(/-/g, ' ')}`,
+        title: `${(EXAM_WORDS[exam] ?? [exam]).join(' ').toUpperCase()} ${subject.replace(/-/g, ' ')}`,
       })),
     ),
     words,

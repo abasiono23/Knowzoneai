@@ -12,6 +12,7 @@ import { Radius, Spacing } from '@/constants/theme';
 import { useFlipStyle } from '@/i18n/provider';
 import { USE_MOCKS } from '@/lib/config';
 import { currentPaper } from '@/lib/exams-progress';
+import { pastQuestions, regionOf } from '@/lib/region';
 import { useSession } from '@/lib/session';
 import { listConversations } from '@/lib/tutor/remote';
 
@@ -62,18 +63,19 @@ export function DesktopSidebar() {
   const { t: te } = useTranslation('exams');
   const { t: tu } = useTranslation('tutor');
   const flip = useFlipStyle();
+  const { user } = useSession();
   const label: Record<Section, string> = {
     home: t('tabs.home'),
     explore: t('tabs.explore'),
     tutor: th('home.quickActions.tutor.title'),
-    exams: te('title'),
+    // SAT and GCSE papers are practice, never past questions; so is a region with no papers of its own.
+    exams: pastQuestions(regionOf(user)) ? te('title') : te('practiceTitle'),
     books: t('desktop.books'),
     videos: th('home.quickActions.videos.title'),
     play: t('tabs.play'),
     rooms: th('home.quickActions.rooms.title'),
     studio: t('tabs.aiStudio'),
   };
-  const { user } = useSession();
   const path = usePathname();
   const [recent, setRecent] = useState<Recent[] | null>(USE_MOCKS ? [] : null);
   const [folded, setFolded] = useState(wasFolded);

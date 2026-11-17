@@ -459,6 +459,33 @@ const videos: Translation<typeof en> = {
     sceneHeading: 'Àkọlé ìran {{number}}',
     sceneNarration: 'Ohùn àlàyé ìran {{number}}',
   },
+  kora: {
+    title: 'Ẹ̀kọ́ pẹ̀lú Kora',
+    subtitle: 'Ẹ̀kọ́ ìṣẹ́jú mẹ́ta tí Kora ń kọ́, pẹ̀lú ìbéèrè kúkúrú kan nínú ọ̀kọ̀ọ̀kan.',
+    name: 'Kora',
+    role: 'olùkọ́ AI rẹ',
+    english: 'Gẹ̀ẹ́sì',
+    minutes: 'ìṣẹ́jú {{n}}',
+    watched: 'O ti wò ó',
+    open: 'Ṣí ẹ̀kọ́: {{title}}',
+    groups: {
+      exam: 'Fún {{exams}}',
+      cyber: 'Ààbò orí ayélujára',
+      skills: 'Ọgbọ́n ìkẹ́kọ̀ọ́',
+    },
+    start: 'Bẹ̀rẹ̀ ẹ̀kọ́',
+    loading: 'Ẹ̀kọ́ ń ṣí…',
+    loadFailed: 'Ẹ̀kọ́ yìí kò ṣí. Ṣàyẹ̀wò ìsopọ̀ rẹ kí o sì gbìyànjú lẹ́ẹ̀kan sí i.',
+    listFailed: 'A kò lè ṣí àwọn ẹ̀kọ́ náà. Ṣàyẹ̀wò ìsopọ̀ rẹ kí o sì gbìyànjú lẹ́ẹ̀kan sí i.',
+    part: 'Apá {{n}} nínú {{total}}: {{title}}',
+    pauseAndTry: 'Dúró, kí o gbìyànjú',
+    continuesIn: 'Kora yóò tẹ̀síwájú ní ìṣẹ́jú-àáyá {{n}}',
+    continue: 'Tẹ̀síwájú',
+    back10: 'Padà sẹ́yìn ìṣẹ́jú-àáyá 10',
+    finishedTitle: 'Ẹ̀kọ́ ti parí',
+    finishedBody: 'O ṣeun. Gbìyànjú ẹ̀kọ́ mìíràn, tàbí bi Kora nípa ohunkóhun tí kò yé ọ.',
+    moreLessons: 'Àwọn ẹ̀kọ́ mìíràn',
+  },
 };
 
 export default videos;

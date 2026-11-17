@@ -20,6 +20,9 @@ const referrals: Translation<typeof en> = {
     exams: {
       label: 'Shirin jarrabawa',
       text: 'Shirin WAEC/JAMB ya fi sauƙi sosai da Knowzone AI: gwaje-gwajen atisaye, malamin AI da gajerun darussan bidiyo. Yi amfani da lambata {{code}} don ƙarin kiredit na AI {{credits}}: {{link}}',
+      /** The same invite for other study regions: their exams, or none named. */
+      textFor: 'Shirin {{exams}} ya fi sauƙi sosai da Knowzone AI: gwaje-gwajen atisaye, malamin AI da gajerun darussan bidiyo. Yi amfani da lambata {{code}} don ƙarin kiredit na AI {{credits}}: {{link}}',
+      textAny: 'Shirin jarabawa ya fi sauƙi sosai da Knowzone AI: gwaje-gwajen atisaye, malamin AI da gajerun darussan bidiyo. Yi amfani da lambata {{code}} don ƙarin kiredit na AI {{credits}}: {{link}}',
     },
     game: {
       label: 'Knowzone World',

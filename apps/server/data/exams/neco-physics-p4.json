@@ -1,0 +1,791 @@
+{
+ "id": "neco-physics-p4",
+ "exam": "neco",
+ "subject": "physics",
+ "year": null,
+ "number": 4,
+ "source": "ai",
+ "minutes": 60,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Light and optics",
+   "q": "At a physics laboratory in Katsina, a ray of light travelling in glass of refractive index 1.60 strikes the glass–air boundary at an angle of incidence of 30°. Calculate the angle of refraction in air.",
+   "options": [
+    "53.1°",
+    "38.7°",
+    "30.0°",
+    "18.2°"
+   ],
+   "answer": 0,
+   "explanation": "Using Snell's law, 1.60 × sin 30° = 1.00 × sin r, so sin r = 0.800 and r = 53.1°. Dividing sin 30° by 1.60 gives 18.2°, which is a common error."
+  },
+  {
+   "n": 2,
+   "topic": "Light and optics",
+   "q": "A ray of light makes an angle of 35° with the surface of a plane mirror. What is the angle of reflection?",
+   "options": [
+    "55°",
+    "35°",
+    "45°",
+    "70°"
+   ],
+   "answer": 0,
+   "explanation": "The angle of incidence is measured from the normal, so it is 90° − 35° = 55°. By the law of reflection, the angle of reflection equals the angle of incidence, giving 55°."
+  },
+  {
+   "n": 3,
+   "topic": "Light and optics",
+   "q": "A student in Aba cannot see clearly objects beyond 2.5 m and is advised to use spectacles. What power of lens should correct the defect for distant objects?",
+   "options": [
+    "+2.5 D",
+    "+0.40 D",
+    "−0.40 D",
+    "−2.5 D"
+   ],
+   "answer": 2,
+   "explanation": "Short-sightedness is corrected by a diverging lens that forms a virtual image of a distant object at the far point. Thus f = −2.5 m and P = 1/f = −0.40 D."
+  },
+  {
+   "n": 4,
+   "topic": "Simple machines",
+   "q": "A plank of length 7.5 m is used as an inclined plane to raise a load through a vertical height of 1.5 m. What is the velocity ratio of the plane?",
+   "options": [
+    "9.0",
+    "0.20",
+    "6.0",
+    "5.0"
+   ],
+   "answer": 3,
+   "explanation": "For an inclined plane, velocity ratio = length of plane ÷ vertical height = 7.5 ÷ 1.5 = 5.0. Using the height divided by length gives 0.20, which is a common mistake."
+  },
+  {
+   "n": 5,
+   "topic": "Simple machines",
+   "q": "A block and tackle in a workshop in Ilesha has a velocity ratio of 4.0. If the effort moves through 2.4 m, through what distance is the load raised?",
+   "options": [
+    "1.60 m",
+    "0.40 m",
+    "0.60 m",
+    "9.60 m"
+   ],
+   "answer": 2,
+   "explanation": "Velocity ratio = effort distance ÷ load distance. Therefore load distance = 2.4 ÷ 4.0 = 0.60 m. Multiplying the distances instead gives 9.60 m, which is incorrect."
+  },
+  {
+   "n": 6,
+   "topic": "Scalars and vectors",
+   "q": "A boat is headed due north at 4.0 m/s relative to the water, while the river flows due east at 3.0 m/s. What is the resultant velocity of the boat relative to the bank?",
+   "options": [
+    "5.0 m/s at 36.9° east of north",
+    "5.0 m/s at 53.1° east of north",
+    "7.0 m/s at 36.9° east of north",
+    "1.0 m/s at 53.1° east of north"
+   ],
+   "answer": 0,
+   "explanation": "The perpendicular velocity components are 3.0 m/s east and 4.0 m/s north, so the magnitude is √(3.0² + 4.0²) = 5.0 m/s. The angle from north toward east is tanθ = 3.0/4.0, giving θ = 36.9° east of north."
+  },
+  {
+   "n": 7,
+   "topic": "Scalars and vectors",
+   "q": "A body is acted upon by three coplanar forces and remains in equilibrium. If two of the forces are 5 N due east and 12 N due north, what is the magnitude of the third force?",
+   "options": [
+    "13 N",
+    "60 N",
+    "7 N",
+    "17 N"
+   ],
+   "answer": 0,
+   "explanation": "The third force must balance the resultant of the two given forces. Its magnitude is √(5² + 12²) = 13 N, acting opposite to the resultant."
+  },
+  {
+   "n": 8,
+   "topic": "Waves",
+   "q": "An FM radio station in Ibadan broadcasts at a frequency of 98.5 MHz. Taking the speed of radio waves as 3.00 × 10⁸ m/s, calculate the wavelength of the waves.",
+   "options": [
+    "0.305 m",
+    "30.5 m",
+    "2.95 m",
+    "3.05 m"
+   ],
+   "answer": 3,
+   "explanation": "Using λ = v/f, λ = (3.00 × 10⁸) ÷ (98.5 × 10⁶) = 3.05 m. Failing to convert megahertz to hertz gives 30.5 m, which is incorrect."
+  },
+  {
+   "n": 9,
+   "topic": "Sound",
+   "q": "At a factory in Aba, a machine produces sound of intensity 1.0 × 10⁻⁴ W/m². If the threshold of hearing is 1.0 × 10⁻¹² W/m², the intensity level of the sound is",
+   "options": [
+    "100 dB",
+    "80 dB",
+    "40 dB",
+    "8 dB"
+   ],
+   "answer": 1,
+   "explanation": "The intensity level is 10 log₁₀(I/I₀) = 10 log₁₀(1.0 × 10⁸) = 80 dB. The intensity ratio contains eight powers of ten, so the result is 80 dB; 8 dB comes from reading the exponent without multiplying by 10."
+  },
+  {
+   "n": 10,
+   "topic": "Sound",
+   "q": "Two musical notes from a violin and a flute have the same frequency and the same loudness, yet a listener can tell which instrument is playing. The difference is mainly due to their",
+   "options": [
+    "loudness",
+    "quality (timbre)",
+    "speed",
+    "pitch"
+   ],
+   "answer": 1,
+   "explanation": "The violin and flute have different waveforms and overtones even when their fundamental frequencies and loudness are the same, and this difference is heard as quality or timbre. Pitch depends mainly on frequency, while loudness depends mainly on amplitude."
+  },
+  {
+   "n": 11,
+   "topic": "Heat and temperature",
+   "q": "The silvered inner surfaces of a vacuum flask reduce heat loss mainly by",
+   "options": [
+    "evaporation",
+    "convection",
+    "radiation",
+    "conduction"
+   ],
+   "answer": 2,
+   "explanation": "Shiny silvered surfaces have low emissivity and reflect thermal radiation, so they reduce heat transfer by radiation. Conduction and convection are mainly reduced by the vacuum space and the stopper."
+  },
+  {
+   "n": 12,
+   "topic": "Atomic and nuclear physics",
+   "q": "A radioactive source in a hospital in Ibadan has a half-life of 5 days. If its activity is 600 Bq after 20 days, its initial activity was",
+   "options": [
+    "4 800 Bq",
+    "2 400 Bq",
+    "1 200 Bq",
+    "9 600 Bq"
+   ],
+   "answer": 3,
+   "explanation": "20 days is 20 ÷ 5 = 4 half-lives, so the activity has fallen to 1/2⁴ = 1/16 of its initial value. Therefore the initial activity is 600 × 16 = 9 600 Bq."
+  },
+  {
+   "n": 13,
+   "topic": "Atomic and nuclear physics",
+   "q": "A nucleus of bismuth-210, ²¹⁰₈₃Bi, emits a beta particle. The resulting nucleus has",
+   "options": [
+    "atomic number 83 and mass number 209",
+    "atomic number 84 and mass number 210",
+    "atomic number 84 and mass number 211",
+    "atomic number 82 and mass number 210"
+   ],
+   "answer": 1,
+   "explanation": "In beta-minus emission, a neutron changes into a proton, so the atomic number increases by 1 while the mass number stays the same. The product therefore has atomic number 84 and mass number 210; decreasing the atomic number by 2 would be alpha decay."
+  },
+  {
+   "n": 14,
+   "topic": "Electrostatics and capacitors",
+   "q": "A parallel-plate capacitor in a school laboratory in Ilorin has plates of area 0.020 m² separated by 2.0 mm of air. If ε₀ = 8.85 × 10⁻¹² F/m, its capacitance is approximately",
+   "options": [
+    "8.85 × 10⁻¹² F",
+    "8.85 × 10⁻¹¹ F",
+    "8.85 × 10⁻¹⁰ F",
+    "4.43 × 10⁻¹¹ F"
+   ],
+   "answer": 1,
+   "explanation": "C = ε₀A/d = (8.85 × 10⁻¹² × 0.020) ÷ (2.0 × 10⁻³) = 8.85 × 10⁻¹¹ F. The value 4.43 × 10⁻¹¹ F would arise from introducing an unnecessary factor of one-half."
+  },
+  {
+   "n": 15,
+   "topic": "Electrostatics and capacitors",
+   "q": "A 20 μF capacitor in a radio circuit in Onitsha is charged to 50 V. The charge stored on the capacitor is",
+   "options": [
+    "2.5 × 10⁻² C",
+    "1.0 × 10⁻³ C",
+    "5.0 × 10⁻⁴ C",
+    "2.0 × 10⁻³ C"
+   ],
+   "answer": 1,
+   "explanation": "The charge is Q = CV = (20 × 10⁻⁶ F)(50 V) = 1.0 × 10⁻³ C. The value 2.5 × 10⁻² comes from using ½CV², which gives energy in joules rather than charge in coulombs."
+  },
+  {
+   "n": 16,
+   "topic": "Electrostatics and capacitors",
+   "q": "A positively charged rod is brought near, but not touching, an insulated neutral metal sphere. The side of the sphere nearer the rod becomes",
+   "options": [
+    "negatively charged",
+    "charged with the same sign as the rod",
+    "uncharged throughout",
+    "positively charged"
+   ],
+   "answer": 0,
+   "explanation": "Electrons in the metal are attracted toward the positive rod, so the nearer side becomes negatively charged by induction while the far side becomes positive. The sphere as a whole remains neutral because no charge has been transferred to it."
+  },
+  {
+   "n": 17,
+   "topic": "Measurement and units",
+   "q": "A surveyor in Abuja records the area of a plot as 0.025 km². Express this area in square metres.",
+   "options": [
+    "250 000 m²",
+    "2 500 m²",
+    "250 m²",
+    "25 000 m²"
+   ],
+   "answer": 3,
+   "explanation": "Since 1 km² = 1 000 000 m², 0.025 km² = 0.025 × 1 000 000 = 25 000 m². Treating the conversion as 1 km² = 10 000 m² would give 250 m², which is too small."
+  },
+  {
+   "n": 18,
+   "topic": "Measurement and units",
+   "q": "An empty measuring cylinder has a mass of 120 g. When filled to the 80 cm³ mark with palm oil, the total mass is 192 g. Calculate the density of the palm oil in kg/m³.",
+   "options": [
+    "2 400 kg/m³",
+    "900 kg/m³",
+    "0.9 kg/m³",
+    "90 kg/m³"
+   ],
+   "answer": 1,
+   "explanation": "Mass of palm oil = 192 g − 120 g = 72 g. Density = 72 g ÷ 80 cm³ = 0.9 g/cm³, and since 1 g/cm³ = 1000 kg/m³, this is 900 kg/m³. Leaving the value as 0.9 kg/m³ omits the conversion from g/cm³ to kg/m³."
+  },
+  {
+   "n": 19,
+   "topic": "Measurement and units",
+   "q": "A technician in Jos measures a length as 7.2 × 10⁻⁵ km. Express this length in millimetres.",
+   "options": [
+    "7.2 mm",
+    "720 mm",
+    "72 mm",
+    "0.72 mm"
+   ],
+   "answer": 2,
+   "explanation": "1 km = 1 000 000 mm, so 7.2 × 10⁻⁵ km = 7.2 × 10⁻⁵ × 1 000 000 mm = 72 mm. Using 100 000 mm for 1 km would give 7.2 mm, which is ten times too small."
+  },
+  {
+   "n": 20,
+   "topic": "Motion",
+   "q": "A stone is released from rest from the top of a tower in Ibadan and takes 4.0 s to reach the ground. Taking g = 10 m/s², calculate the distance it falls in the last second.",
+   "options": [
+    "35 m",
+    "45 m",
+    "20 m",
+    "80 m"
+   ],
+   "answer": 0,
+   "explanation": "Total fall in 4.0 s is ½ × 10 × 4² = 80 m, while the distance in the first 3.0 s is ½ × 10 × 3² = 45 m. The distance in the last second is therefore 80 − 45 = 35 m. The value 80 m is the whole height, not just the last second's fall."
+  },
+  {
+   "n": 21,
+   "topic": "Motion",
+   "q": "A car in Kaduna starts from rest and attains a speed of 20 m/s after travelling 50 m with uniform acceleration. Calculate the acceleration.",
+   "options": [
+    "0.20 m/s²",
+    "2.0 m/s²",
+    "8.0 m/s²",
+    "4.0 m/s²"
+   ],
+   "answer": 3,
+   "explanation": "Using v² = u² + 2as with u = 0, v = 20 m/s and s = 50 m gives 20² = 0 + 2a(50), so a = 400 ÷ 100 = 4.0 m/s². Using v² = as instead of v² = 2as gives 8.0 m/s²."
+  },
+  {
+   "n": 22,
+   "topic": "Work, energy and power",
+   "q": "A labourer in Enugu lifts a 25 kg bag from the ground to a lorry 1.2 m high in 2.0 s. Calculate the average power developed. Take g = 10 m/s².",
+   "options": [
+    "75 W",
+    "150 W",
+    "600 W",
+    "300 W"
+   ],
+   "answer": 1,
+   "explanation": "Useful work done = mgh = 25 × 10 × 1.2 = 300 J. Power = work ÷ time = 300 ÷ 2.0 = 150 W. The value 300 W is the work done in joules, not the power in watts."
+  },
+  {
+   "n": 23,
+   "topic": "Work, energy and power",
+   "q": "A pump rated at 2.0 kW is used to raise water from a well 20 m deep. If the pump is 80% efficient, what mass of water can it raise in 5.0 s? Take g = 10 m/s².",
+   "options": [
+    "80 kg",
+    "32 kg",
+    "40 kg",
+    "50 kg"
+   ],
+   "answer": 2,
+   "explanation": "Useful power = 80% of 2.0 kW = 0.80 × 2000 = 1600 W. In 5.0 s this gives 1600 × 5 = 8000 J of useful energy. Thus mgh = 8000, so m = 8000 ÷ (10 × 20) = 40 kg. Using the full 2.0 kW without the efficiency gives 50 kg."
+  },
+  {
+   "n": 24,
+   "topic": "Gas laws",
+   "q": "A fixed mass of gas in a cylinder in Aba occupies 600 cm³ at a pressure of 1.0 × 10⁵ Pa. If the pressure is increased to 2.5 × 10⁵ Pa at constant temperature, calculate the new volume.",
+   "options": [
+    "120 cm³",
+    "240 cm³",
+    "600 cm³",
+    "1 500 cm³"
+   ],
+   "answer": 1,
+   "explanation": "At constant temperature, P₁V₁ = P₂V₂. Thus V₂ = (1.0 × 10⁵ × 600) ÷ (2.5 × 10⁵) = 240 cm³. Multiplying by the pressure ratio instead of dividing gives 1 500 cm³."
+  },
+  {
+   "n": 25,
+   "topic": "Gas laws",
+   "q": "A sealed rigid vessel in Lagos contains a gas at 27°C and a pressure of 1.5 × 10⁵ Pa. Calculate the pressure when the temperature is raised to 87°C at constant volume.",
+   "options": [
+    "1.50 × 10⁵ Pa",
+    "4.8 × 10⁵ Pa",
+    "1.8 × 10⁵ Pa",
+    "1.25 × 10⁵ Pa"
+   ],
+   "answer": 2,
+   "explanation": "The temperatures must be in kelvin: 27°C = 300 K and 87°C = 360 K. At constant volume, P₂ = P₁ × T₂/T₁ = 1.5 × 10⁵ × 360/300 = 1.8 × 10⁵ Pa. Using the inverse temperature ratio would give 1.25 × 10⁵ Pa."
+  },
+  {
+   "n": 26,
+   "topic": "Elasticity and pressure",
+   "q": "A diver in a training pool in Abuja descends to a depth of 4.0 m below the water surface. Taking the density of water as 1000 kg/m³ and g = 10 m/s², calculate the pressure due to the water on the diver.",
+   "options": [
+    "1.0 × 10⁴ Pa",
+    "4.0 × 10⁴ Pa",
+    "4.0 × 10⁵ Pa",
+    "4.0 × 10³ Pa"
+   ],
+   "answer": 1,
+   "explanation": "The pressure due to a liquid column is p = ρgh = 1000 × 10 × 4.0 = 4.0 × 10⁴ Pa. This is the gauge pressure due to the water, not including atmospheric pressure. Using a depth of 1.0 m instead of 4.0 m gives 1.0 × 10⁴ Pa, which is incorrect here."
+  },
+  {
+   "n": 27,
+   "topic": "Elasticity and pressure",
+   "q": "A nylon thread of original length 2.0 m stretches by 4.0 mm when a load is attached to it. What is the tensile strain produced?",
+   "options": [
+    "2.0 × 10⁻³",
+    "5.0 × 10⁻⁴",
+    "2.0 × 10⁻⁶",
+    "8.0 × 10⁻³"
+   ],
+   "answer": 0,
+   "explanation": "Tensile strain = extension ÷ original length. Since 4.0 mm = 4.0 × 10⁻³ m, strain = (4.0 × 10⁻³) ÷ 2.0 = 2.0 × 10⁻³. The result is dimensionless, as strain has no unit."
+  },
+  {
+   "n": 28,
+   "topic": "Magnetism and electromagnetic induction",
+   "q": "A straight wire carries a steady current from south to north. It is placed in a uniform magnetic field directed vertically upward. In what direction does the magnetic force on the wire act?",
+   "options": [
+    "Downward",
+    "East",
+    "South",
+    "West"
+   ],
+   "answer": 1,
+   "explanation": "Using Fleming’s left-hand rule or F = IL × B, a current directed north in an upward magnetic field experiences a force directed east. The force is perpendicular to both the current and the magnetic field. A westward result would correspond to reversing the current or the field direction."
+  },
+  {
+   "n": 29,
+   "topic": "Magnetism and electromagnetic induction",
+   "q": "An ideal step-down transformer in a village near Jos has 1320 turns in the primary and 66 turns in the secondary. If the primary voltage is 240 V, what is the secondary voltage?",
+   "options": [
+    "24 V",
+    "12 V",
+    "6.0 V",
+    "480 V"
+   ],
+   "answer": 1,
+   "explanation": "For an ideal transformer, Vs/Vp = Ns/Np. Thus Vs = 240 × 66/1320 = 240 × 0.050 = 12 V. The transformer steps the voltage down because the secondary has fewer turns than the primary."
+  },
+  {
+   "n": 30,
+   "topic": "Magnetism and electromagnetic induction",
+   "q": "A coil of 50 turns and cross-sectional area 0.020 m² is placed perpendicular to a uniform magnetic field. The magnetic flux density decreases uniformly from 0.30 T to 0.10 T in 0.20 s. Calculate the average e.m.f. induced in the coil.",
+   "options": [
+    "0.50 V",
+    "0.020 V",
+    "1.0 V",
+    "5.0 V"
+   ],
+   "answer": 2,
+   "explanation": "The change in flux density is 0.30 − 0.10 = 0.20 T. Average e.m.f. = N × A × ΔB/Δt = 50 × 0.020 × 0.20/0.20 = 1.0 V. Forgetting the number of turns gives 0.020 V, which is much too small."
+  },
+  {
+   "n": 31,
+   "topic": "Current electricity",
+   "q": "A dry cell of e.m.f. 4.5 V and internal resistance 0.50 Ω is connected across a 4.0 Ω resistor. What is the terminal potential difference of the cell?",
+   "options": [
+    "4.5 V",
+    "0.50 V",
+    "5.0 V",
+    "4.0 V"
+   ],
+   "answer": 3,
+   "explanation": "Current I = E/(R + r) = 4.5/(4.0 + 0.50) = 1.0 A. Terminal p.d. = IR = 1.0 × 4.0 = 4.0 V, or E − Ir = 4.5 − 0.50 = 4.0 V. The value 0.50 V is the lost volts across the internal resistance, not the terminal p.d."
+  },
+  {
+   "n": 32,
+   "topic": "Current electricity",
+   "q": "A refrigerator rated 300 W is used for 8.0 hours each day for 30 days. If electrical energy costs ₦60 per kWh, what is the cost of energy consumed?",
+   "options": [
+    "₦720",
+    "₦4,320",
+    "₦14,400",
+    "₦432"
+   ],
+   "answer": 1,
+   "explanation": "Power in kW = 0.300 kW. Energy consumed = 0.300 × 8.0 × 30 = 72 kWh. Cost = 72 × ₦60 = ₦4,320."
+  },
+  {
+   "n": 33,
+   "topic": "Current electricity",
+   "q": "A student in Kano connects a 10 Ω resistor and a 15 Ω resistor in parallel. The combination is then connected in series with a 6.0 Ω resistor. What is the effective resistance of the network?",
+   "options": [
+    "12 Ω",
+    "31 Ω",
+    "6.0 Ω",
+    "9.0 Ω"
+   ],
+   "answer": 0,
+   "explanation": "For the parallel pair, 1/R = 1/10 + 1/15 = 3/30 + 2/30 = 5/30, so R = 6.0 Ω. Adding the series 6.0 Ω gives an effective resistance of 6.0 + 6.0 = 12 Ω."
+  },
+  {
+   "n": 34,
+   "topic": "Newton’s laws and momentum",
+   "q": "A force of 20 N acts on a 4.0 kg trolley initially at rest for 3.0 s. What is the final speed of the trolley if friction is negligible?",
+   "options": [
+    "5.0 m/s",
+    "15 m/s",
+    "60 m/s",
+    "240 m/s"
+   ],
+   "answer": 1,
+   "explanation": "Impulse = change in momentum: Ft = mv. Thus v = Ft/m = (20 × 3.0)/4.0 = 15 m/s. The acceleration is 20/4.0 = 5.0 m/s² and after 3.0 s the speed is 5.0 × 3.0 = 15 m/s."
+  },
+  {
+   "n": 35,
+   "topic": "Light and optics",
+   "q": "The speed of light in air is 3.0 × 10⁸ m/s. Calculate the speed of light in a glass block of refractive index 1.50.",
+   "options": [
+    "1.5 × 10⁸ m/s",
+    "3.0 × 10⁸ m/s",
+    "2.0 × 10⁸ m/s",
+    "4.5 × 10⁸ m/s"
+   ],
+   "answer": 2,
+   "explanation": "Refractive index n = speed of light in air ÷ speed of light in the medium, so v = c ÷ n = 3.0 × 10⁸ ÷ 1.50 = 2.0 × 10⁸ m/s. A value such as 4.5 × 10⁸ m/s would result from multiplying instead of dividing by the refractive index."
+  },
+  {
+   "n": 36,
+   "topic": "Light and optics",
+   "q": "Which condition is necessary for total internal reflection to occur at a boundary between two transparent media?",
+   "options": [
+    "Light travels from an optically denser medium to a less dense medium at exactly the critical angle.",
+    "Light travels from an optically denser medium to a less dense medium and the angle of incidence is greater than the critical angle.",
+    "Light travels from an optically less dense medium to a denser medium and the angle of incidence is greater than the critical angle.",
+    "Light travels from an optically denser medium to a less dense medium at any angle of incidence."
+   ],
+   "answer": 1,
+   "explanation": "Total internal reflection occurs only when light is in the denser medium and moves towards the less dense medium, with the angle of incidence greater than the critical angle. At exactly the critical angle, the refracted ray travels along the boundary. If light goes from a less dense to a denser medium, total internal reflection cannot occur."
+  },
+  {
+   "n": 37,
+   "topic": "Simple machines",
+   "q": "Which of the following is a third-class lever?",
+   "options": [
+    "A crowbar used with the fulcrum between the load and the effort",
+    "A pair of tongs",
+    "A pair of scissors",
+    "A wheelbarrow"
+   ],
+   "answer": 1,
+   "explanation": "In a third-class lever, the effort lies between the fulcrum and the load, as in a pair of tongs. A wheelbarrow is a second-class lever, while a crowbar used with the fulcrum between load and effort and a pair of scissors are first-class levers."
+  },
+  {
+   "n": 38,
+   "topic": "Simple machines",
+   "q": "A block and tackle in a factory in Aba has a velocity ratio of 5.0. When an effort of 120 N raises a load of 480 N, what is the efficiency of the machine?",
+   "options": [
+    "125%",
+    "40%",
+    "80%",
+    "96%"
+   ],
+   "answer": 2,
+   "explanation": "Mechanical advantage = load ÷ effort = 480 N ÷ 120 N = 4.0. Efficiency = (mechanical advantage ÷ velocity ratio) × 100% = (4.0 ÷ 5.0) × 100% = 80%. A value above 100% would imply a machine more efficient than an ideal machine."
+  },
+  {
+   "n": 39,
+   "topic": "Simple machines",
+   "q": "A wheelbarrow has its handles 1.20 m from the wheel and carries a load whose weight acts 0.40 m from the wheel. If the total weight is 450 N, what effort is needed at the handles, neglecting friction?",
+   "options": [
+    "50 N",
+    "1 800 N",
+    "150 N",
+    "450 N"
+   ],
+   "answer": 2,
+   "explanation": "Taking moments about the wheel, effort × 1.20 m = 450 N × 0.40 m. Thus effort = 180 ÷ 1.20 = 150 N. The wheelbarrow is a second-class lever with the wheel as the fulcrum."
+  },
+  {
+   "n": 40,
+   "topic": "Waves",
+   "q": "A tuning fork is sounded above a resonance tube closed at one end. The first resonance occurs when the air column is 18 cm long and the second resonance when it is 58 cm long. If the speed of sound in air is 340 m/s, calculate the frequency of the tuning fork.",
+   "options": [
+    "850 Hz",
+    "425 Hz",
+    "212.5 Hz",
+    "170 Hz"
+   ],
+   "answer": 1,
+   "explanation": "The separation between successive resonance positions in a closed pipe is λ/2. Thus λ/2 = 58 cm − 18 cm = 40 cm = 0.40 m, so λ = 0.80 m. Frequency f = v ÷ λ = 340 ÷ 0.80 = 425 Hz. Using the 40 cm difference directly as the wavelength would wrongly give 850 Hz."
+  },
+  {
+   "n": 41,
+   "topic": "Waves",
+   "q": "A student in Jos claps her hands and hears the echo from a cliff 0.60 s later. If the speed of sound in air is 340 m/s, how far is she from the cliff?",
+   "options": [
+    "102 m",
+    "204 m",
+    "51 m",
+    "340 m"
+   ],
+   "answer": 0,
+   "explanation": "The sound travels to the cliff and back in 0.60 s, so the total distance is v × t = 340 × 0.60 = 204 m. The distance to the cliff is half of this: 204 ÷ 2 = 102 m. Using the full 204 m as the one-way distance is a common error."
+  },
+  {
+   "n": 42,
+   "topic": "Scalars and vectors",
+   "q": "A boat is moving at 6.0 m/s due north across a river that flows at 8.0 m/s due east. What is the magnitude of the resultant velocity of the boat?",
+   "options": [
+    "10.0 m/s",
+    "48.0 m/s",
+    "2.0 m/s",
+    "14.0 m/s"
+   ],
+   "answer": 0,
+   "explanation": "The two velocities are perpendicular, so their resultant magnitude is √(6.0² + 8.0²) = √(36 + 64) = √100 = 10.0 m/s. Adding 6.0 and 8.0 directly is only valid if the velocities act in the same direction."
+  },
+  {
+   "n": 43,
+   "topic": "Scalars and vectors",
+   "q": "A boy in Kano pulls a sled with a force of 80 N at 30° above the horizontal. What is the vertical component of the force?",
+   "options": [
+    "40 N",
+    "80 N",
+    "69.3 N",
+    "20 N"
+   ],
+   "answer": 0,
+   "explanation": "The vertical component is F sin θ = 80 × sin 30° = 80 × 0.5 = 40 N. The horizontal component is 80 × cos 30° ≈ 69.3 N, so that value belongs to the horizontal direction."
+  },
+  {
+   "n": 44,
+   "topic": "Sound",
+   "q": "A guitar string in Enugu has length 0.50 m, mass per unit length 0.010 kg/m and is under a tension of 100 N. What is the frequency of its fundamental note?",
+   "options": [
+    "200 Hz",
+    "141 Hz",
+    "50 Hz",
+    "100 Hz"
+   ],
+   "answer": 3,
+   "explanation": "For a stretched string, the fundamental frequency is f = (1/(2L))√(T/μ). Substituting gives (1/(1.00)) × √(100/0.010) = √10000 = 100 Hz. Using the full string length as one wavelength instead of a half wavelength gives 200 Hz."
+  },
+  {
+   "n": 45,
+   "topic": "Sound",
+   "q": "A motorcycle in Ibadan sounding a horn of frequency 640 Hz approaches a stationary trader at 20 m/s. If the speed of sound in air is 340 m/s, what frequency does the trader hear?",
+   "options": [
+    "604 Hz",
+    "602 Hz",
+    "640 Hz",
+    "680 Hz"
+   ],
+   "answer": 3,
+   "explanation": "For a source moving towards a stationary observer, the observed frequency is f′ = fv/(v − vs). Substituting gives 640 × 340/(340 − 20) = 640 × 340/320 = 680 Hz. Using v + vs in the denominator gives about 604 Hz, while ignoring the motion leaves 640 Hz."
+  },
+  {
+   "n": 46,
+   "topic": "Sound",
+   "q": "A tuning fork is sounded over a resonance tube closed at one end. The first two resonance lengths are 18.0 cm and 58.0 cm. Calculate the end correction.",
+   "options": [
+    "20.0 cm",
+    "4.0 cm",
+    "5.0 cm",
+    "2.0 cm"
+   ],
+   "answer": 3,
+   "explanation": "For a closed pipe, l₁ + e = λ/4 and l₂ + e = 3λ/4, so e = (l₂ − 3l₁)/2. Thus e = (58.0 − 3 × 18.0)/2 = 2.0 cm. The value 20.0 cm is half the difference of the resonance lengths and is not the end correction."
+  },
+  {
+   "n": 47,
+   "topic": "Heat and temperature",
+   "q": "A copper block of mass 0.50 kg at 100°C is put into 0.25 kg of water at 20°C in an insulated container. If the specific heat capacity of copper is 400 J/(kg°C) and that of water is 4200 J/(kg°C), calculate the final temperature.",
+   "options": [
+    "42.1°C",
+    "32.8°C",
+    "60.0°C",
+    "27.0°C"
+   ],
+   "answer": 1,
+   "explanation": "Heat lost by copper equals heat gained by water: 0.50 × 400 × (100 − θ) = 0.25 × 4200 × (θ − 20). Solving gives 20000 − 200θ = 1050θ − 21000, so θ = 41000 ÷ 1250 = 32.8°C. Using 0.50 kg for the water instead of 0.25 kg gives about 27.0°C."
+  },
+  {
+   "n": 48,
+   "topic": "Atomic and nuclear physics",
+   "q": "A radioactive source in a Lagos hospital has an activity of 480 Bq. After 40 days, its activity is 30 Bq. What is its half-life?",
+   "options": [
+    "10 days",
+    "20 days",
+    "5 days",
+    "8 days"
+   ],
+   "answer": 0,
+   "explanation": "The activity falls by a factor of 480 ÷ 30 = 16 = 2⁴, so four half-lives have elapsed. Since 4 half-lives take 40 days, one half-life is 40 ÷ 4 = 10 days. Taking 40 ÷ 2 gives 20 days, which is a common error."
+  },
+  {
+   "n": 49,
+   "topic": "Atomic and nuclear physics",
+   "q": "A fluorine-19 nucleus (¹⁹₉F) captures a proton (¹₁H). If an alpha particle is emitted, what is the product nucleus?",
+   "options": [
+    "²⁰₁₀Ne",
+    "¹⁶₇N",
+    "¹⁶₈O",
+    "¹⁵₈O"
+   ],
+   "answer": 2,
+   "explanation": "Total mass number before the reaction is 19 + 1 = 20, and after emission of an alpha particle of mass number 4 the product must have mass number 16. Total atomic number before is 9 + 1 = 10; after alpha emission of atomic number 2, the product must have atomic number 8, which is oxygen-16."
+  },
+  {
+   "n": 50,
+   "topic": "Electrostatics and capacitors",
+   "q": "What is the electric field intensity at a point 0.30 m from a point charge of 9.0 × 10⁻⁹ C in air? (k = 9.0 × 10⁹ N m²/C²)",
+   "options": [
+    "90 N/C",
+    "270 N/C",
+    "900 N/C",
+    "100 N/C"
+   ],
+   "answer": 2,
+   "explanation": "For a point charge, E = kQ/r² = (9.0 × 10⁹ × 9.0 × 10⁻⁹)/(0.30²) = 81/0.09 = 900 N/C. Dividing by r instead of r² would give 270 N/C, which is a common error."
+  },
+  {
+   "n": 51,
+   "topic": "Electrostatics and capacitors",
+   "q": "A 2.0 μF capacitor is charged to 150 V and then disconnected from the battery. It is connected across an uncharged 3.0 μF capacitor. Calculate the common potential difference across the capacitors.",
+   "options": [
+    "100 V",
+    "60 V",
+    "150 V",
+    "90 V"
+   ],
+   "answer": 1,
+   "explanation": "Charge is conserved: Q = 2.0 μF × 150 V = 300 μC. When connected, the capacitors are in parallel with total capacitance 5.0 μF, so V = Q/C = 300 μC ÷ 5.0 μF = 60 V. Keeping the original voltage or sharing charge equally instead of in proportion to capacitance leads to the wrong values."
+  },
+  {
+   "n": 52,
+   "topic": "Electrostatics and capacitors",
+   "q": "A parallel-plate capacitor has plate area 0.020 m², plate separation 1.0 mm and a dielectric of relative permittivity 5.0 between the plates. Calculate its capacitance. (ε₀ = 8.85 × 10⁻¹² F/m)",
+   "options": [
+    "4.43 × 10⁻¹⁰ F",
+    "8.85 × 10⁻⁹ F",
+    "8.85 × 10⁻¹⁰ F",
+    "1.77 × 10⁻¹⁰ F"
+   ],
+   "answer": 2,
+   "explanation": "For a parallel-plate capacitor, C = ε₀εᵣA/d. Here C = (8.85 × 10⁻¹² × 5.0 × 0.020)/(1.0 × 10⁻³) = 8.85 × 10⁻¹⁰ F. Omitting the dielectric constant would give 1.77 × 10⁻¹⁰ F, which is much smaller."
+  },
+  {
+   "n": 53,
+   "topic": "Measurement and units",
+   "q": "A carpenter in Owerri measures a rectangular table top as 1.50 m by 80.0 cm. Calculate its area in square centimetres.",
+   "options": [
+    "1.20 × 10³ cm²",
+    "1.20 × 10² cm²",
+    "1.20 × 10⁵ cm²",
+    "1.20 × 10⁴ cm²"
+   ],
+   "answer": 3,
+   "explanation": "Convert 1.50 m to 150 cm before multiplying: area = 150 cm × 80.0 cm = 12 000 cm² = 1.20 × 10⁴ cm². Using 1.50 m × 80.0 cm directly mixes units and does not give square centimetres."
+  },
+  {
+   "n": 54,
+   "topic": "Measurement and units",
+   "q": "The dimension of power is",
+   "options": [
+    "ML²T⁻²",
+    "ML²T⁻³",
+    "MLT⁻²",
+    "MLT⁻³"
+   ],
+   "answer": 1,
+   "explanation": "Power is work divided by time, so its dimension is force × distance ÷ time = MLT⁻² × L ÷ T = ML²T⁻³. The quantity ML²T⁻² is the dimension of work or energy, not power."
+  },
+  {
+   "n": 55,
+   "topic": "Measurement and units",
+   "q": "A student in Jos uses a metre rule to measure the length of a book as 24.5 cm. If the actual length of the book is 25.0 cm, calculate the percentage error of the measurement.",
+   "options": [
+    "0.5%",
+    "2.0%",
+    "5.0%",
+    "2.5%"
+   ],
+   "answer": 1,
+   "explanation": "Percentage error = (actual length − measured length) ÷ actual length × 100 = (25.0 − 24.5) ÷ 25.0 × 100 = 2.0%. A value like 0.5% comes from using the error itself without expressing it as a percentage of the actual length."
+  },
+  {
+   "n": 56,
+   "topic": "Motion",
+   "q": "A bus in Onitsha starts from rest and accelerates uniformly at 2.0 m/s² for 6.0 s. It then travels at the speed attained for 4.0 s. Calculate the total distance covered.",
+   "options": [
+    "36 m",
+    "84 m",
+    "48 m",
+    "120 m"
+   ],
+   "answer": 1,
+   "explanation": "The speed attained is v = 2.0 × 6.0 = 12 m/s. During acceleration the distance is ½ × 2.0 × 6.0² = 36 m, and during constant speed it is 12 × 4.0 = 48 m, giving a total of 84 m. The value 120 m would wrongly treat the bus as moving at 12 m/s for the whole 10 s."
+  },
+  {
+   "n": 57,
+   "topic": "Motion",
+   "q": "A motorcycle in Ibadan moving at 18 m/s decelerates uniformly and stops over 36 m. Calculate its deceleration.",
+   "options": [
+    "2.0 m/s²",
+    "9.0 m/s²",
+    "4.5 m/s²",
+    "0.50 m/s²"
+   ],
+   "answer": 2,
+   "explanation": "Using v² = u² + 2as with final speed zero gives 0 = 18² + 2a(36), so a = −324 ÷ 72 = −4.5 m/s². The deceleration is therefore 4.5 m/s²; omitting the 2 in the equation would wrongly give 9.0 m/s²."
+  },
+  {
+   "n": 58,
+   "topic": "Motion",
+   "q": "A stone is thrown vertically upward from a point 1.6 m above the ground with a speed of 15 m/s. Taking g = 10 m/s², calculate the maximum height reached above the ground.",
+   "options": [
+    "24.1 m",
+    "11.25 m",
+    "12.85 m",
+    "13.6 m"
+   ],
+   "answer": 2,
+   "explanation": "The maximum rise above the throwing point is u² ÷ (2g) = 15² ÷ 20 = 11.25 m. Adding the initial height gives 11.25 + 1.6 = 12.85 m above the ground; 11.25 m is only the rise above the hand."
+  },
+  {
+   "n": 59,
+   "topic": "Work, energy and power",
+   "q": "A 3.0 kg block is pulled up a rough inclined plane of length 5.0 m and vertical height 3.0 m at constant speed by a force of 30 N acting parallel to the plane. Taking g = 10 m/s², calculate the efficiency of the plane.",
+   "options": [
+    "75%",
+    "50%",
+    "90%",
+    "60%"
+   ],
+   "answer": 3,
+   "explanation": "The useful work is the gain in gravitational potential energy: mgh = 3.0 × 10 × 3.0 = 90 J. The work input is 30 × 5.0 = 150 J, so efficiency = (90 ÷ 150) × 100 = 60%."
+  },
+  {
+   "n": 60,
+   "topic": "Work, energy and power",
+   "q": "A taxi in Port Harcourt moves at a steady speed of 25 m/s against a total resistive force of 800 N. Calculate the useful power developed by the engine.",
+   "options": [
+    "32 kW",
+    "2.0 kW",
+    "20 kW",
+    "0.032 kW"
+   ],
+   "answer": 2,
+   "explanation": "Useful power = force × speed = 800 × 25 = 20 000 W = 20 kW. Dividing force by speed gives 32 W, which is not a valid power calculation."
+  }
+ ]
+}

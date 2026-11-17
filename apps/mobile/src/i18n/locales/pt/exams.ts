@@ -4,6 +4,8 @@ import type en from '../en/exams';
 
 const exams: Translation<typeof en> = {
   title: 'Exames anteriores',
+  /** The same page for SAT and GCSE students: those papers are practice, never "past questions". */
+  practiceTitle: 'Treino para exames',
   eyebrow: 'JAMB · WAEC · NECO',
   offline: 'Os exames anteriores precisam de ligação à internet.',
   loadFailed: 'Não conseguimos carregar os exames. Verifica a tua ligação e tenta novamente.',
@@ -13,11 +15,30 @@ const exams: Translation<typeof en> = {
     title: 'Exames anteriores JAMB, WAEC e NECO',
     body: 'Pratica todas as disciplinas no formato real, vê cada resposta explicada e faz provas cronometradas.',
     action: 'Começar a praticar',
+    /** One exam (the WAEC countries outside Nigeria). */
+    titleOne: 'Exames anteriores {{exam}}',
+    titlePractice: 'Treino para {{exams}}',
+    bodyPractice: 'Treino de escolha múltipla por exame e disciplina, com cada resposta explicada. Escritas por IA e verificadas duas vezes; não são exames anteriores.',
+    sat: {
+      title: 'Provas de treino SAT',
+      body: 'Treino de escolha múltipla com as secções e os tempos do SAT digital, com cada resposta explicada. Escritas por IA e verificadas duas vezes; não são exames anteriores.',
+    },
+    gcse: {
+      title: 'Treino ao estilo GCSE',
+      body: 'Treino de escolha múltipla por tema em Maths, English Language, Biology, Chemistry e Physics, com cada resposta explicada. Escritas por IA e verificadas duas vezes; não são exames anteriores.',
+    },
   },
   exams: {
     jamb: { name: 'JAMB', full: 'JAMB UTME', about: 'Prova em computador · Use of English e mais três disciplinas' },
     waec: { name: 'WAEC', full: 'WAEC WASSCE', about: 'Certificado do secundário · escolha múltipla' },
     neco: { name: 'NECO', full: 'NECO SSCE', about: 'Certificado do secundário · escolha múltipla' },
+    sat: { name: 'SAT', full: 'Treino para o SAT digital', about: 'Reading and Writing · Math · só escolha múltipla' },
+    act: { name: 'ACT', full: 'Treino para o ACT', about: 'English · Math · Reading · Science' },
+    ap: { name: 'AP', full: 'Treino de escolha múltipla para AP', about: 'Calculus AB · Biology · Chemistry · Physics 1 · US History · English Language' },
+    gcse: { name: 'GCSE', full: 'Treino ao estilo GCSE', about: 'Treino de escolha múltipla por tema' },
+    alevel: { name: 'A-level', full: 'Treino ao estilo A-level', about: 'Treino de escolha múltipla por tema' },
+    kcse: { name: 'KCSE', full: 'Treino ao estilo KCSE', about: 'Treino de escolha múltipla por tema' },
+    nsc: { name: 'Matric', full: 'Treino ao estilo Matric (NSC)', about: 'Treino de escolha múltipla por tema' },
   },
   subjects: {
     english: 'Língua Inglesa',
@@ -30,7 +51,37 @@ const exams: Translation<typeof en> = {
     literature: 'Literatura em Inglês',
     geography: 'Geografia',
     commerce: 'Comércio',
+    'reading-writing': 'Reading and Writing',
+    math: 'Math',
+    maths: 'Maths',
+    'english-language': 'English Language',
+    reading: 'Reading',
+    science: 'Science',
+    'calculus-ab': 'Calculus AB',
+    'physics-1': 'Physics 1',
+    'us-history': 'US History',
+    'physical-sciences': 'Physical Sciences',
+    'life-sciences': 'Life Sciences',
+    accounting: 'Accounting',
   },
+  /** What SAT and GCSE practice is and isn't, shown wherever those papers are listed. */
+  notes: {
+    sat: 'Estas são perguntas de treino escritas por IA e verificadas por uma segunda revisão de IA; não são provas anteriores do SAT. Seguem as secções e os tempos do SAT digital, mas são só de escolha múltipla: a secção real de Math também tem perguntas em que escreves a tua própria resposta.',
+    act: 'Estas são perguntas de treino escritas por IA e verificadas por uma segunda revisão de IA; não são provas anteriores do ACT. Seguem as secções, o número de perguntas e os tempos do ACT.',
+    ap: 'Estas são perguntas de treino escritas por IA e verificadas por uma segunda revisão de IA; não são provas anteriores do AP. Treinam apenas a secção de escolha múltipla de cada exame AP: os exames reais também têm uma secção de resposta escrita.',
+    gcse: 'Estas são perguntas de treino escritas por IA e verificadas por uma segunda revisão de IA; não são exames anteriores. As provas reais do GCSE são sobretudo de resposta escrita, por isso usa estes quizzes de escolha múltipla para rever cada tema, não como cópia do exame.',
+    alevel: 'Estas são perguntas de treino escritas por IA e verificadas por uma segunda revisão de IA; não são exames anteriores. As provas reais do A-level são sobretudo de resposta escrita, por isso usa estes quizzes de escolha múltipla para rever cada tema, não como cópia do exame.',
+    kcse: 'Estas são perguntas de treino escritas por IA e verificadas por uma segunda revisão de IA; não são exames anteriores. As provas reais do KCSE são sobretudo de resposta escrita, por isso usa estes quizzes de escolha múltipla para rever cada tema, não como cópia do exame.',
+    nsc: 'Estas são perguntas de treino escritas por IA e verificadas por uma segunda revisão de IA; não são exames anteriores. As provas reais do Matric (NSC) são sobretudo de resposta escrita, por isso usa estes quizzes de escolha múltipla para rever cada tema, não como cópia do exame.',
+  },
+  /** A study region we have no papers for. */
+  none: {
+    title: 'Não há provas de exame para {{country}}',
+    body: 'O teu tutor de IA, os manuais e os cursos funcionam com qualquer programa. Podes, ainda assim, treinar com as provas de outros países abaixo.',
+  },
+  otherExams: 'Outros exames',
+  region: 'País de estudo: {{country}}',
+  change: 'Mudar',
   pickExam: 'Escolhe o teu exame',
   carryOn: 'Continua onde paraste',
   pickSubject: 'Escolhe uma disciplina',
@@ -60,6 +111,8 @@ const exams: Translation<typeof en> = {
     study: { title: 'Estudar', body: 'Vê cada pergunta com a resposta e a explicação.' },
     practice: { title: 'Praticar', body: 'Responde ao teu ritmo e vê se acertaste depois de cada pergunta.' },
     timed: { title: 'Exame cronometrado', body: 'Como no exame real: {{minutes}} minutos, resultados no fim.' },
+    /** GCSE practice isn't in the exam's format, so its timed mode doesn't say "like the real exam". */
+    timedQuiz: { title: 'Quiz cronometrado', body: 'Contra o relógio: {{minutes}} minutos, resultados no fim.' },
     history: 'AS TUAS PONTUAÇÕES',
     historyRow: '{{score}}/{{total}} · {{mode}} · {{date}}',
     modeName: { practice: 'Treino', timed: 'Cronometrado' },

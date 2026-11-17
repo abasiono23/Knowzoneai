@@ -1,0 +1,791 @@
+{
+ "id": "neco-mathematics-p5",
+ "exam": "neco",
+ "subject": "mathematics",
+ "year": null,
+ "number": 5,
+ "source": "ai",
+ "minutes": 60,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Integration",
+   "q": "Evaluate ∫₁² (4x³ − 6x² + 2) dx.",
+   "options": [
+    "1",
+    "5",
+    "3",
+    "4"
+   ],
+   "answer": 2,
+   "explanation": "Integrating term by term gives x⁴ − 2x³ + 2x. Evaluating from 1 to 2 gives (16 − 16 + 4) − (1 − 2 + 2) = 4 − 1 = 3."
+  },
+  {
+   "n": 2,
+   "topic": "Integration",
+   "q": "The gradient of a curve at any point is 5x² + 4x − 3. If the curve passes through the point (1, 4), find its equation.",
+   "options": [
+    "3y = 5x³ + 6x² − 9x + 8",
+    "3y = 5x³ + 6x² − 9x + 10",
+    "y = 5x³ + 2x² − 3x + 4",
+    "3y = 5x³ + 6x² − 9x − 10"
+   ],
+   "answer": 1,
+   "explanation": "Integrating the gradient gives y = (5/3)x³ + 2x² − 3x + C. Substituting x = 1 and y = 4 gives C = 10/3, so multiplying by 3 gives 3y = 5x³ + 6x² − 9x + 10."
+  },
+  {
+   "n": 3,
+   "topic": "Integration",
+   "q": "A particle moves along a straight line with velocity v = (3t² − 4t + 1) m/s, where t is in seconds. Find its displacement from the starting point after 2 seconds.",
+   "options": [
+    "4 m",
+    "1 m",
+    "2 m",
+    "6 m"
+   ],
+   "answer": 2,
+   "explanation": "Displacement is the definite integral of velocity: ∫₀² (3t² − 4t + 1) dt = [t³ − 2t² + t]₀² = 2. Thus the displacement is 2 m."
+  },
+  {
+   "n": 4,
+   "topic": "Statistics",
+   "q": "Marks scored by five pupils in a quiz in Enugu are 7, 9, 10, 11 and 13. Calculate the standard deviation.",
+   "options": [
+    "4",
+    "2",
+    "20",
+    "√10"
+   ],
+   "answer": 1,
+   "explanation": "The mean is 10; the squared deviations are 9, 1, 0, 1 and 9. Their mean is (9 + 1 + 0 + 1 + 9)/5 = 4, so the standard deviation is √4 = 2. The value 4 is the variance, not the standard deviation."
+  },
+  {
+   "n": 5,
+   "topic": "Variation",
+   "q": "The cost C of a journey varies directly as the square of the speed s and inversely as the number of passengers n. If a journey at 60 km/h with 4 passengers costs ₦1,800, find the cost of a journey at 80 km/h with 5 passengers.",
+   "options": [
+    "₦3,200",
+    "₦2,400",
+    "₦2,560",
+    "₦2,880"
+   ],
+   "answer": 2,
+   "explanation": "Write C = k s²/n. Using the first journey, k = 1,800 × 4 / 60² = 2. Then C = 2 × 80² / 5 = ₦2,560."
+  },
+  {
+   "n": 6,
+   "topic": "Variation",
+   "q": "The electrical resistance R of a wire varies directly as its length L and inversely as the square of its diameter d. A wire of length 20 m and diameter 2 mm has resistance 15 Ω. Find the resistance of a wire of the same material with length 30 m and diameter 3 mm.",
+   "options": [
+    "12 Ω",
+    "22.5 Ω",
+    "7.5 Ω",
+    "10 Ω"
+   ],
+   "answer": 3,
+   "explanation": "Since R = kL/d², k = 15 × 2² / 20 = 3. For the second wire, R = 3 × 30 / 3² = 10 Ω."
+  },
+  {
+   "n": 7,
+   "topic": "Probability",
+   "q": "Ade and Bola independently try to solve a problem. The probability that Ade solves it is 1/3 and the probability that Bola solves it is 2/5. What is the probability that exactly one of them solves the problem?",
+   "options": [
+    "7/15",
+    "2/5",
+    "2/15",
+    "3/5"
+   ],
+   "answer": 0,
+   "explanation": "Exactly one solves if Ade solves and Bola does not, or Bola solves and Ade does not: (1/3)(3/5) + (2/3)(2/5) = 3/15 + 4/15 = 7/15."
+  },
+  {
+   "n": 8,
+   "topic": "Probability",
+   "q": "In a school in Abeokuta, 40% of the students study French, 30% study Yoruba, and 10% study both French and Yoruba. A student is selected at random. Find the probability that the student studies French or Yoruba.",
+   "options": [
+    "0.2",
+    "0.6",
+    "0.8",
+    "0.7"
+   ],
+   "answer": 1,
+   "explanation": "For two events, P(F or Y) = P(F) + P(Y) − P(F and Y) = 0.4 + 0.3 − 0.1 = 0.6."
+  },
+  {
+   "n": 9,
+   "topic": "Probability",
+   "q": "A committee of 3 students is selected at random from 4 boys and 5 girls in a school in Ilorin. What is the probability that the committee contains exactly 2 girls?",
+   "options": [
+    "10/21",
+    "2/7",
+    "20/63",
+    "5/14"
+   ],
+   "answer": 0,
+   "explanation": "There are C(9,3) = 84 possible committees. Committees with exactly 2 girls and 1 boy number C(5,2) × C(4,1) = 10 × 4 = 40, so the probability is 40/84 = 10/21."
+  },
+  {
+   "n": 10,
+   "topic": "Fractions, decimals and percentages",
+   "q": "A man in Kano left 2/5 of his estate to his wife, 1/3 to his son and the remainder to charity. If the charity received ₦48,000, what was the total value of the estate?",
+   "options": [
+    "₦240,000",
+    "₦180,000",
+    "₦120,000",
+    "₦144,000"
+   ],
+   "answer": 1,
+   "explanation": "The wife and son received 2/5 + 1/3 = 6/15 + 5/15 = 11/15 of the estate, leaving 4/15 for charity. Since 4/15 of the estate is ₦48,000, the whole estate is ₦48,000 × 15/4 = ₦180,000. The value ₦120,000 would result from using 2/5 as the charity share instead of 4/15."
+  },
+  {
+   "n": 11,
+   "topic": "Fractions, decimals and percentages",
+   "q": "A businessman in Abuja bought a plot of land for ₦2,000,000. Its value increased by 15% in the first year and by 20% of the new value in the second year. Find its value after the two years.",
+   "options": [
+    "₦2,300,000",
+    "₦2,760,000",
+    "₦2,500,000",
+    "₦2,700,000"
+   ],
+   "answer": 1,
+   "explanation": "After the first year the value is ₦2,000,000 × 1.15 = ₦2,300,000. After the second year it is ₦2,300,000 × 1.20 = ₦2,760,000. Adding 15% and 20% directly gives ₦2,700,000, which ignores that the 20% increase is on the new value, not on the original value."
+  },
+  {
+   "n": 12,
+   "topic": "Fractions, decimals and percentages",
+   "q": "A woman in Kaduna spent 1/4 of her monthly salary on food and 1/3 of the remainder on transport. If she was left with ₦39,000 after these expenses, find her monthly salary.",
+   "options": [
+    "₦78,000",
+    "₦52,000",
+    "₦156,000",
+    "₦93,600"
+   ],
+   "answer": 0,
+   "explanation": "After spending 1/4 on food, 3/4 of the salary remains. Transport takes 1/3 of this remainder, which is 1/4 of the salary, so the total spent is 1/2 of the salary and ₦39,000 is also 1/2 of the salary. Hence the monthly salary is ₦39,000 × 2 = ₦78,000. Adding 1/4 and 1/3 as if both were taken from the salary gives a spent fraction of 7/12 and leads to ₦93,600, but the transport fraction is of the remainder only."
+  },
+  {
+   "n": 13,
+   "topic": "Angles and circle geometry",
+   "q": "In a circle with centre O, the tangent at P makes an acute angle of 64° with chord PQ. Find ∠POQ.",
+   "options": [
+    "116°",
+    "52°",
+    "128°",
+    "64°"
+   ],
+   "answer": 2,
+   "explanation": "The radius OP is perpendicular to the tangent at P, so the angle between OP and chord PQ is 90° − 64° = 26°. Triangle OPQ is isosceles because OP = OQ, so its base angles are each 26°, giving ∠POQ = 180° − 2 × 26° = 128°. The value 64° is the angle between the tangent and the chord, not the central angle."
+  },
+  {
+   "n": 14,
+   "topic": "Angles and circle geometry",
+   "q": "In a cyclic quadrilateral ABCD, ∠DAB = (2x + 15)° and ∠BCD = (x + 45)°. Find ∠DAB.",
+   "options": [
+    "95°",
+    "75°",
+    "85°",
+    "125°"
+   ],
+   "answer": 0,
+   "explanation": "Opposite angles of a cyclic quadrilateral are supplementary, so (2x + 15) + (x + 45) = 180. This gives 3x + 60 = 180, so x = 40 and ∠DAB = 2(40) + 15 = 95°. The angle BCD is then 85°, which is supplementary to the required angle, not equal to it."
+  },
+  {
+   "n": 15,
+   "topic": "Angles and circle geometry",
+   "q": "In a circle of radius 5 cm, a chord AB is 8 cm long. Find the perpendicular distance from the centre of the circle to chord AB.",
+   "options": [
+    "3 cm",
+    "9 cm",
+    "4 cm",
+    "√41 cm"
+   ],
+   "answer": 0,
+   "explanation": "The perpendicular from the centre to a chord bisects the chord, so each half of AB is 4 cm. Using Pythagoras in the right triangle formed with the radius, distance² + 4² = 5², so distance² = 25 − 16 = 9 and the distance is 3 cm. The value 4 cm is half the chord, not the perpendicular distance from the centre."
+  },
+  {
+   "n": 16,
+   "topic": "Trigonometry",
+   "q": "A boy standing 30 m from the foot of a vertical tower in Kaduna observes the angle of elevation of the top of the tower as 45°. He walks 10 m straight towards the tower and observes the angle of elevation as θ. Find tan θ.",
+   "options": [
+    "2/3",
+    "3/2",
+    "1",
+    "3"
+   ],
+   "answer": 1,
+   "explanation": "From the first position, the height of the tower is 30 × tan 45° = 30 m. After walking 10 m closer, he is 20 m from the foot of the tower, so tan θ = 30/20 = 3/2. The value 1 is the tangent of the original 45° angle, not the new angle after moving closer."
+  },
+  {
+   "n": 17,
+   "topic": "Trigonometry",
+   "q": "Given that cos θ = −5/13 and 180° < θ < 270°, find sin θ + tan θ.",
+   "options": [
+    "96/65",
+    "−216/65",
+    "−96/65",
+    "216/65"
+   ],
+   "answer": 0,
+   "explanation": "In the third quadrant, sin θ is negative and tan θ is positive. With cos θ = −5/13, the opposite side is 12, so sin θ = −12/13 and tan θ = (−12/13) ÷ (−5/13) = 12/5. Thus sin θ + tan θ = −12/13 + 12/5 = (−60 + 156)/65 = 96/65."
+  },
+  {
+   "n": 18,
+   "topic": "Surds",
+   "q": "Simplify 3/(√7 + 2).",
+   "options": [
+    "√7 − 2",
+    "3√7 − 6",
+    "√7 + 2",
+    "(√7 − 2)/3"
+   ],
+   "answer": 0,
+   "explanation": "Multiply the numerator and denominator by the conjugate √7 − 2. The denominator becomes 7 − 4 = 3, so the expression becomes 3(√7 − 2)/3 = √7 − 2. Leaving 3√7 − 6 shows that the common factor 3 has not been cancelled."
+  },
+  {
+   "n": 19,
+   "topic": "Surds",
+   "q": "Given that √a + √b = 5 and √(ab) = 6, where a and b are positive integers, find a + b.",
+   "options": [
+    "25",
+    "13",
+    "37",
+    "12"
+   ],
+   "answer": 1,
+   "explanation": "Let x = √a and y = √b. Then x + y = 5 and xy = 6, so a + b = x² + y² = (x + y)² − 2xy = 25 − 12 = 13. The value 25 is obtained if the 2xy term is forgotten, while 12 is just 2xy."
+  },
+  {
+   "n": 20,
+   "topic": "Mensuration",
+   "q": "A cylindrical water tank in Aba has radius 0.7 m and height 2 m. Find its capacity in litres. [Take π = 22/7]",
+   "options": [
+    "1540 litres",
+    "770 litres",
+    "3080 litres",
+    "30800 litres"
+   ],
+   "answer": 2,
+   "explanation": "Volume = πr²h = 22/7 × 0.7² × 2 = 3.08 m³. Since 1 m³ = 1000 litres, the capacity is 3080 litres. Using 0.35 m as the radius instead of 0.7 m gives 770 litres."
+  },
+  {
+   "n": 21,
+   "topic": "Mensuration",
+   "q": "A conical heap of rice in Kebbi has base radius 3.5 m and height 6 m. Find its volume. [Take π = 22/7]",
+   "options": [
+    "308 m³",
+    "38.5 m³",
+    "77 m³",
+    "231 m³"
+   ],
+   "answer": 2,
+   "explanation": "Volume = (1/3)πr²h = (1/3) × 22/7 × 3.5² × 6 = 77 m³. Omitting the factor 1/3 gives 231 m³, while using the diameter 7 m as the radius gives 308 m³."
+  },
+  {
+   "n": 22,
+   "topic": "Mensuration",
+   "q": "Mrs Okafor's rectangular plot in Owerri measures 18 m by 12 m. A path of uniform width 2 m is made round the outside of the plot. Find the area of the path.",
+   "options": [
+    "136 m²",
+    "64 m²",
+    "120 m²",
+    "352 m²"
+   ],
+   "answer": 0,
+   "explanation": "The outer dimensions are 18 + 2 × 2 = 22 m and 12 + 2 × 2 = 16 m, so the path area is 22 × 16 − 18 × 12 = 136 m². Adding 2 m only once to each side gives 64 m², which is a common error."
+  },
+  {
+   "n": 23,
+   "topic": "Sequences and series",
+   "q": "The first term of an arithmetic progression is 7 and the 12th term is 51. Find the sum of the first 12 terms.",
+   "options": [
+    "348",
+    "372",
+    "306",
+    "696"
+   ],
+   "answer": 0,
+   "explanation": "The 12th term is the last term, so S₁₂ = 12/2 × (7 + 51) = 348. Forgetting to divide by 2 gives 696. Using 12d instead of 11d in the sum formula gives 372."
+  },
+  {
+   "n": 24,
+   "topic": "Sequences and series",
+   "q": "The second term of a geometric progression is 9 and the fifth term is 243. Find the sum of the first four terms.",
+   "options": [
+    "363",
+    "81",
+    "360",
+    "120"
+   ],
+   "answer": 3,
+   "explanation": "Let the first term be a and the common ratio be r. From ar = 9 and ar⁴ = 243, r³ = 27, so r = 3 and a = 3; hence the sum of the first four terms is 3 + 9 + 27 + 81 = 120. Treating the second term 9 as the first term gives 360, and adding the fifth term as well gives 363."
+  },
+  {
+   "n": 25,
+   "topic": "Sequences and series",
+   "q": "The sum of the first n terms of an arithmetic progression is given by Sₙ = 5n² + 3n. Find the 10th term.",
+   "options": [
+    "100",
+    "98",
+    "103",
+    "530"
+   ],
+   "answer": 1,
+   "explanation": "The 10th term is S₁₀ − S₉ = (5 × 10² + 3 × 10) − (5 × 9² + 3 × 9) = 530 − 432 = 98. Using 10n + 3 instead of the term formula gives 103, while 530 is the sum of the first 10 terms, not the 10th term."
+  },
+  {
+   "n": 26,
+   "topic": "Matrices and determinants",
+   "q": "If A = [[5, 2], [3, 1]], find A⁻¹.",
+   "options": [
+    "[[5, −2], [−3, 1]]",
+    "[[−1, 2], [3, −5]]",
+    "[[−1, 3], [2, −5]]",
+    "[[1, −2], [−3, 5]]"
+   ],
+   "answer": 1,
+   "explanation": "The determinant is 5 × 1 − 2 × 3 = −1, so A⁻¹ = (1/(−1)) × [[1, −2], [−3, 5]] = [[−1, 2], [3, −5]]. Forgetting to multiply by 1/(−1) leaves [[1, −2], [−3, 5]], which is not the inverse."
+  },
+  {
+   "n": 27,
+   "topic": "Indices and logarithms",
+   "q": "Solve for x: 4^(2x − 1) = 8^(x + 2).",
+   "options": [
+    "−7",
+    "3",
+    "8",
+    "4"
+   ],
+   "answer": 2,
+   "explanation": "Write both sides with base 2: 2^(4x − 2) = 2^(3x + 6). Equating exponents gives 4x − 2 = 3x + 6, so x = 8. Equating 2x − 1 with x + 2 gives 3, which is incorrect because the power of 4 must also be multiplied by 2."
+  },
+  {
+   "n": 28,
+   "topic": "Indices and logarithms",
+   "q": "Given that log₁₀ 2 = 0.3010 and log₁₀ 3 = 0.4771, evaluate log₁₀ 0.048.",
+   "options": [
+    "1.3189",
+    "1.6811",
+    "−1.3189",
+    "−0.3189"
+   ],
+   "answer": 2,
+   "explanation": "Since 0.048 = (2⁴ × 3) ÷ 10³, log₁₀ 0.048 = 4(0.3010) + 0.4771 − 3 = −1.3189. Using 48 without the division by 1000 gives 1.6811, while using 10² instead of 10³ gives −0.3189."
+  },
+  {
+   "n": 29,
+   "topic": "Simultaneous equations and inequalities",
+   "q": "At a fruit stall in Owerri, 3 baskets of oranges and 2 baskets of mangoes cost ₦7,400, while 5 baskets of oranges and 4 baskets of mangoes cost ₦13,000. Find the total cost of one basket of oranges and one basket of mangoes.",
+   "options": [
+    "₦2,800",
+    "₦3,200",
+    "₦3,000",
+    "₦2,600"
+   ],
+   "answer": 0,
+   "explanation": "Let one basket of oranges cost o naira and one basket of mangoes cost m naira. Doubling 3o + 2m = 7,400 gives 6o + 4m = 14,800; subtracting 5o + 4m = 13,000 gives o = 1,800. Then 3(1,800) + 2m = 7,400, so m = 1,000. Hence o + m = 1,800 + 1,000 = ₦2,800."
+  },
+  {
+   "n": 30,
+   "topic": "Simultaneous equations and inequalities",
+   "q": "At a fabric shop in Aba, 5 metres of Ankara and 2 metres of lace cost ₦25,000, while 3 metres of Ankara and 4 metres of lace cost ₦22,000. Find the total cost of one metre of Ankara and one metre of lace.",
+   "options": [
+    "₦7,000",
+    "₦6,500",
+    "₦7,500",
+    "₦6,000"
+   ],
+   "answer": 1,
+   "explanation": "Let Ankara cost a naira per metre and lace cost l naira per metre. Doubling 5a + 2l = 25,000 gives 10a + 4l = 50,000; subtracting 3a + 4l = 22,000 gives 7a = 28,000, so a = 4,000. Then 5(4,000) + 2l = 25,000, so l = 2,500. Therefore a + l = ₦6,500."
+  },
+  {
+   "n": 31,
+   "topic": "Simultaneous equations and inequalities",
+   "q": "Given that x is an integer, how many integers satisfy both 3x + 2 < 20 and 2x − 5 ≥ −9?",
+   "options": [
+    "7",
+    "8",
+    "9",
+    "10"
+   ],
+   "answer": 1,
+   "explanation": "From 3x + 2 < 20, x < 6. From 2x − 5 ≥ −9, x ≥ −2. Thus the integers are −2, −1, 0, 1, 2, 3, 4, 5, which are 8 integers in total."
+  },
+  {
+   "n": 32,
+   "topic": "Number bases",
+   "q": "Evaluate 210₃ × 12₃, giving your answer in base 3.",
+   "options": [
+    "10210₃",
+    "11020₃",
+    "10220₃",
+    "10120₃"
+   ],
+   "answer": 2,
+   "explanation": "In decimal, 210₃ = 2×9 + 1×3 = 21 and 12₃ = 1×3 + 2 = 5. Their product is 105. Converting 105 to base 3 gives 1×81 + 0×27 + 2×9 + 2×3 + 0 = 10220₃."
+  },
+  {
+   "n": 33,
+   "topic": "Number bases",
+   "q": "If 34ₓ + 21ₓ = 110ₓ, find the value of x.",
+   "options": [
+    "6",
+    "5",
+    "4",
+    "2"
+   ],
+   "answer": 1,
+   "explanation": "Converting each numeral to base 10 gives (3x + 4) + (2x + 1) = x² + x. This simplifies to x² − 4x − 5 = 0, so x = 5 or x = −1. Since a base must be greater than the largest digit 4, the valid value is x = 5."
+  },
+  {
+   "n": 34,
+   "topic": "Differentiation",
+   "q": "Differentiate y = (x + 4)(2x² − 3) with respect to x.",
+   "options": [
+    "2x² + 16x − 3",
+    "6x² + 8x − 3",
+    "6x² + 16x − 3",
+    "6x² + 16x + 3"
+   ],
+   "answer": 2,
+   "explanation": "Using the product rule, dy/dx = 1(2x² − 3) + (x + 4)(4x) = 2x² − 3 + 4x² + 16x = 6x² + 16x − 3. Expanding first and differentiating gives the same result."
+  },
+  {
+   "n": 35,
+   "topic": "Differentiation",
+   "q": "Given that y = (4x − 1)/(x + 3), where x ≠ −3, find dy/dx.",
+   "options": [
+    "13/(x + 3)²",
+    "11/(x + 3)²",
+    "13/(x + 3)",
+    "−13/(x + 3)²"
+   ],
+   "answer": 0,
+   "explanation": "By the quotient rule, dy/dx = [4(x + 3) − (4x − 1)]/(x + 3)² = (4x + 12 − 4x + 1)/(x + 3)² = 13/(x + 3)²."
+  },
+  {
+   "n": 36,
+   "topic": "Differentiation",
+   "q": "If y = 1/(2x + 1)³, find dy/dx.",
+   "options": [
+    "−3/(2x + 1)⁴",
+    "6/(2x + 1)⁴",
+    "−6/(2x + 1)³",
+    "−6/(2x + 1)⁴"
+   ],
+   "answer": 3,
+   "explanation": "Write y = (2x + 1)⁻³. Then dy/dx = −3(2x + 1)⁻⁴ × 2 = −6/(2x + 1)⁴. The inner derivative 2 must be included, and the power increases by 1."
+  },
+  {
+   "n": 37,
+   "topic": "Coordinate geometry",
+   "q": "A circle has centre C(3, −2) and passes through the point A(7, 1). Find the equation of the circle.",
+   "options": [
+    "(x − 3)² + (y + 2)² = 25",
+    "(x − 3)² + (y − 2)² = 25",
+    "(x + 3)² + (y − 2)² = 25",
+    "(x − 3)² + (y + 2)² = 5"
+   ],
+   "answer": 0,
+   "explanation": "The square of the radius is (7 − 3)² + (1 + 2)² = 4² + 3² = 16 + 9 = 25. Therefore the circle is (x − 3)² + (y + 2)² = 25. Writing (y − 2)² would use the wrong sign for the centre's y-coordinate."
+  },
+  {
+   "n": 38,
+   "topic": "Quadratic equations",
+   "q": "The product of two positive integers that differ by 5 is 84. Find the smaller integer.",
+   "options": [
+    "7",
+    "12",
+    "14",
+    "6"
+   ],
+   "answer": 0,
+   "explanation": "Let the smaller integer be n. Then n(n + 5) = 84, so n² + 5n − 84 = 0, which factorises as (n + 12)(n − 7) = 0. Since n is positive, n = 7, and the integers are 7 and 12."
+  },
+  {
+   "n": 39,
+   "topic": "Quadratic equations",
+   "q": "A quadratic equation has roots 3 and −2/3. Form the equation with integer coefficients in the form ax² + bx + c = 0, where a > 0 and a, b, c have no common factor.",
+   "options": [
+    "3x² − 7x + 6 = 0",
+    "3x² + 7x − 6 = 0",
+    "x² − 7x − 6 = 0",
+    "3x² − 7x − 6 = 0"
+   ],
+   "answer": 3,
+   "explanation": "The sum of the roots is 3 + (−2/3) = 7/3, and their product is 3 × (−2/3) = −2. So the equation is x² − (7/3)x − 2 = 0, which gives 3x² − 7x − 6 = 0 after multiplying by 3. The constant term is negative because the product of the roots is negative."
+  },
+  {
+   "n": 40,
+   "topic": "Quadratic equations",
+   "q": "One root of the equation 2x² + px − 5 = 0 is 1. Find the other root.",
+   "options": [
+    "2",
+    "−5/2",
+    "5/2",
+    "−5"
+   ],
+   "answer": 1,
+   "explanation": "For a quadratic equation, the product of the roots is c/a. Here c/a = (−5)/2 = −5/2; since one root is 1, the other root is −5/2. Substituting x = 1 gives p = 3, but that is not needed to find the other root."
+  },
+  {
+   "n": 41,
+   "topic": "Sets",
+   "q": "In a market survey of 90 traders in Uyo, 52 sell plantain, 38 sell yam and 20 sell both plantain and yam. How many traders sell neither plantain nor yam?",
+   "options": [
+    "32",
+    "70",
+    "20",
+    "0"
+   ],
+   "answer": 2,
+   "explanation": "The number selling at least one of the two items is 52 + 38 − 20 = 70. Therefore the number selling neither is 90 − 70 = 20. Subtracting 52 + 38 directly from 90 ignores the overlap and gives 0, which is not correct."
+  },
+  {
+   "n": 42,
+   "topic": "Sets",
+   "q": "Let U = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12}, A = {x ∈ U : x is a multiple of 4} and B = {x ∈ U : x is a factor of 18}. Find (A ∪ B)′.",
+   "options": [
+    "{5, 7, 10, 11, 12}",
+    "{5, 10, 11}",
+    "{5, 7, 10}",
+    "{5, 7, 10, 11}"
+   ],
+   "answer": 3,
+   "explanation": "A = {4, 8, 12} and B = {1, 2, 3, 6, 9}. Their union is {1, 2, 3, 4, 6, 8, 9, 12}, so the complement in U is {5, 7, 10, 11}. Including 12 would incorrectly treat a multiple of 4 as not being in the union."
+  },
+  {
+   "n": 43,
+   "topic": "Integration",
+   "q": "Evaluate ∫₀² (3x² + 4x) dx.",
+   "options": [
+    "24",
+    "32",
+    "8",
+    "16"
+   ],
+   "answer": 3,
+   "explanation": "An antiderivative is x³ + 2x². Evaluating from 0 to 2 gives (2³ + 2 × 2²) − (0 + 0) = 8 + 8 = 16. Omitting the 4x term would give only 8."
+  },
+  {
+   "n": 44,
+   "topic": "Statistics",
+   "q": "The numbers of textbooks sold by 9 traders in Kano on a market day are 4, 7, 2, 9, 5, 8, 6, 3 and 10. Find the median number of textbooks.",
+   "options": [
+    "5.5",
+    "5",
+    "6",
+    "7"
+   ],
+   "answer": 2,
+   "explanation": "Arrange the numbers in order: 2, 3, 4, 5, 6, 7, 8, 9, 10. With 9 values, the median is the 5th value, which is 6. The value 5.5 would be used only if there were an even number of values and the two middle values were averaged."
+  },
+  {
+   "n": 45,
+   "topic": "Statistics",
+   "q": "The mean age of 6 pupils in a school in Ilorin is 12 years. A seventh pupil aged 19 years joins the group. Find the new mean age of the 7 pupils.",
+   "options": [
+    "12.5 years",
+    "14 years",
+    "12 years",
+    "13 years"
+   ],
+   "answer": 3,
+   "explanation": "The total age of the first 6 pupils is 6 × 12 = 72 years. Adding the seventh pupil gives 72 + 19 = 91 years, so the new mean is 91 ÷ 7 = 13 years. The new mean must exceed 12 because the joining pupil is older than the original mean."
+  },
+  {
+   "n": 46,
+   "topic": "Variation",
+   "q": "A trader in Jos pays a transport fare F that varies directly as the distance d travelled. If he pays ₦1,200 for a journey of 80 km, how much will he pay for a journey of 130 km?",
+   "options": [
+    "₦1,950",
+    "₦1,725",
+    "₦1,800",
+    "₦2,100"
+   ],
+   "answer": 0,
+   "explanation": "Since F varies directly as d, F = kd. From ₦1,200 = k × 80, k = 15, so for 130 km, F = 15 × 130 = ₦1,950. The value ₦1,800 would come from using a shorter distance and does not fit the direct proportion."
+  },
+  {
+   "n": 47,
+   "topic": "Variation",
+   "q": "The intensity I of light from a bulb varies directly as the power P of the bulb and inversely as the square of the distance d from the bulb. When a 120 W bulb gives an intensity of 60 lux at 2 m, what intensity will an 80 W bulb give at 4 m?",
+   "options": [
+    "10 lux",
+    "40 lux",
+    "5 lux",
+    "20 lux"
+   ],
+   "answer": 0,
+   "explanation": "The relation is I = kP ÷ d². Using 60 = k × 120 ÷ 2² gives k = 2, so with P = 80 W and d = 4 m, I = 2 × 80 ÷ 16 = 10 lux. Using d instead of d² in the variation gives 20 lux, which is a common mistake."
+  },
+  {
+   "n": 48,
+   "topic": "Variation",
+   "q": "The time t taken by a water pump to fill a tank varies inversely as the square of its power rating p. If a 4 kW pump fills the tank in 45 minutes, how long will a 6 kW pump take?",
+   "options": [
+    "20 minutes",
+    "60 minutes",
+    "80 minutes",
+    "30 minutes"
+   ],
+   "answer": 0,
+   "explanation": "For inverse square variation, t = k ÷ p². Thus k = 45 × 4² = 720, and for a 6 kW pump t = 720 ÷ 6² = 720 ÷ 36 = 20 minutes. The time 30 minutes comes from treating the variation as inversely proportional to p rather than p²."
+  },
+  {
+   "n": 49,
+   "topic": "Probability",
+   "q": "A fair die is rolled once. What is the probability of obtaining a score that is a factor of 12?",
+   "options": [
+    "2/3",
+    "5/6",
+    "1/2",
+    "1/3"
+   ],
+   "answer": 1,
+   "explanation": "The factors of 12 among the scores 1, 2, 3, 4, 5, 6 are 1, 2, 3, 4 and 6, five outcomes. Therefore the probability is 5/6. Choosing 2/3 would mean only four factors were counted."
+  },
+  {
+   "n": 50,
+   "topic": "Probability",
+   "q": "A bag in Katsina contains 9 red, 6 blue and 5 white counters. One counter is picked at random. What is the probability that it is red or white?",
+   "options": [
+    "7/10",
+    "3/4",
+    "9/20",
+    "1/4"
+   ],
+   "answer": 0,
+   "explanation": "There are 9 + 6 + 5 = 20 counters, and 9 + 5 = 14 are red or white. Thus the probability is 14/20 = 7/10. The value 3/4 would be the probability of picking a counter that is not white, not red or white."
+  },
+  {
+   "n": 51,
+   "topic": "Probability",
+   "q": "A community committee in Kaduna is to be formed by selecting two people at random from 4 men and 3 women. What is the probability that both people selected are women?",
+   "options": [
+    "1/7",
+    "3/7",
+    "2/7",
+    "1/3"
+   ],
+   "answer": 0,
+   "explanation": "There are C(7,2) = 21 ways to choose two people, and C(3,2) = 3 ways to choose both women. Hence the probability is 3/21 = 1/7. The value 3/7 is just the chance that the first person chosen is a woman, not that both are women."
+  },
+  {
+   "n": 52,
+   "topic": "Fractions, decimals and percentages",
+   "q": "Evaluate (0.6 × (1 + 2/3)) ÷ 0.4.",
+   "options": [
+    "0.5",
+    "1.5",
+    "1.0",
+    "2.5"
+   ],
+   "answer": 3,
+   "explanation": "First, 1 + 2/3 = 5/3, so 0.6 × (1 + 2/3) = 3/5 × 5/3 = 1. Then 1 ÷ 0.4 = 2.5. The result 1.0 stops before carrying out the final division by 0.4."
+  },
+  {
+   "n": 53,
+   "topic": "Fractions, decimals and percentages",
+   "q": "A civil servant in Abuja earns a monthly salary of ₦84,000. He spends 35% of it on rent and 20% of the remainder on food. How much of the salary remains after these two expenses?",
+   "options": [
+    "₦37,800",
+    "₦46,200",
+    "₦54,600",
+    "₦43,680"
+   ],
+   "answer": 3,
+   "explanation": "He pays 35% of ₦84,000 = ₦29,400 on rent, leaving ₦54,600. Food is 20% of ₦54,600 = ₦10,920, so the remainder is ₦54,600 − ₦10,920 = ₦43,680. Taking 20% of the original salary instead of the remainder gives ₦37,800."
+  },
+  {
+   "n": 54,
+   "topic": "Angles and circle geometry",
+   "q": "From an external point P, two tangents PA and PB are drawn to a circle with centre O. If ∠APB = 64°, find ∠AOB.",
+   "options": [
+    "128°",
+    "64°",
+    "32°",
+    "116°"
+   ],
+   "answer": 3,
+   "explanation": "The radii to the points of tangency are perpendicular to the tangents, so the angles at the two points of tangency are 90° each. The quadrilateral formed by the centre, the two points of tangency and P has angles summing to 360°, hence ∠AOB = 360° − 90° − 90° − 64° = 116°. The value 64° mistakenly assumes the angle between the tangents equals the angle at the centre."
+  },
+  {
+   "n": 55,
+   "topic": "Angles and circle geometry",
+   "q": "P, Q and R are points on a circle with centre O. If ∠POQ = 132° and R lies on the minor arc PQ, find ∠PRQ.",
+   "options": [
+    "132°",
+    "114°",
+    "228°",
+    "66°"
+   ],
+   "answer": 1,
+   "explanation": "The central angle for the minor arc PQ is 132°, so the major arc PQ measures 360° − 132° = 228°. Since R lies on the minor arc, ∠PRQ stands on the major arc, so it is half of 228°, which is 114°. The value 66° would be correct if R were on the major arc."
+  },
+  {
+   "n": 56,
+   "topic": "Trigonometry",
+   "q": "In a right-angled triangle, tan θ = 5/12 and θ is acute. Find 2 sin θ + cos θ.",
+   "options": [
+    "10/13",
+    "24/13",
+    "22/13",
+    "17/13"
+   ],
+   "answer": 2,
+   "explanation": "For acute θ with tan θ = opposite/adjacent = 5/12, the hypotenuse is √(5² + 12²) = 13, so sin θ = 5/13 and cos θ = 12/13. Hence 2 sin θ + cos θ = 10/13 + 12/13 = 22/13. The value 17/13 would be sin θ + cos θ, not 2 sin θ + cos θ."
+  },
+  {
+   "n": 57,
+   "topic": "Trigonometry",
+   "q": "Solve 2 sin² θ + sin θ − 1 = 0 for 0° ≤ θ < 360°.",
+   "options": [
+    "150°, 210°, 270°",
+    "30°, 150°, 270°",
+    "30°, 270°",
+    "30°, 150°"
+   ],
+   "answer": 1,
+   "explanation": "Factorising gives (2 sin θ − 1)(sin θ + 1) = 0. Thus sin θ = 1/2, giving θ = 30° or 150°, and sin θ = −1, giving θ = 270°. Therefore the complete solution in the given interval is 30°, 150°, 270°."
+  },
+  {
+   "n": 58,
+   "topic": "Surds",
+   "q": "Simplify (3√2 + 2√3)(3√2 − 2√3) + √50.",
+   "options": [
+    "6 + 5√2",
+    "6 + 10√2",
+    "18 + 5√2",
+    "6 + √2"
+   ],
+   "answer": 0,
+   "explanation": "The product is a difference of two squares: (3√2)² − (2√3)² = 18 − 12 = 6. Also, √50 = 5√2, so the simplified expression is 6 + 5√2. The expression 6 + √2 would result from incorrectly treating √50 as √2."
+  },
+  {
+   "n": 59,
+   "topic": "Surds",
+   "q": "Rationalise the denominator and simplify: 6/(√10 − √7).",
+   "options": [
+    "3(√10 + √7)",
+    "2√10 + 2√7",
+    "2√10 + √7",
+    "(6√10 + 6√7)/17"
+   ],
+   "answer": 1,
+   "explanation": "Multiply numerator and denominator by √10 + √7: 6(√10 + √7)/(10 − 7) = 6(√10 + √7)/3 = 2(√10 + √7). Thus the simplified form is 2√10 + 2√7. The expression 2√10 + √7 omits the factor 2 from the √7 term."
+  },
+  {
+   "n": 60,
+   "topic": "Mensuration",
+   "q": "A cylindrical water drum in Ibadan has radius 21 cm and height 50 cm. Find its total surface area. [Take π = 22/7]",
+   "options": [
+    "6,600 cm²",
+    "7,986 cm²",
+    "2,772 cm²",
+    "9,372 cm²"
+   ],
+   "answer": 3,
+   "explanation": "Total surface area of a cylinder is 2πr² + 2πrh = 2πr(r + h). Substituting r = 21 cm and h = 50 cm gives 2 × 22/7 × 21 × 71 = 9,372 cm². The value 6,600 cm² is only the curved surface area."
+  }
+ ]
+}

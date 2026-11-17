@@ -1,0 +1,661 @@
+{
+ "id": "waec-physics-p6",
+ "exam": "waec",
+ "subject": "physics",
+ "year": null,
+ "number": 6,
+ "source": "ai",
+ "minutes": 60,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Simple machines",
+   "q": "A farmer in Makurdi uses a first-class lever to lift a load of 540 N. The load is 0.50 m from the fulcrum and the effort is applied 1.50 m from the fulcrum. If the lever has an efficiency of 75%, what effort is required?",
+   "options": [
+    "135 N",
+    "240 N",
+    "180 N",
+    "720 N"
+   ],
+   "answer": 1,
+   "explanation": "Velocity ratio = effort arm ÷ load arm = 1.50 ÷ 0.50 = 3.0. Efficiency = mechanical advantage ÷ velocity ratio, so mechanical advantage = 0.75 × 3.0 = 2.25. Effort = load ÷ mechanical advantage = 540 ÷ 2.25 = 240 N; 180 N would be the ideal effort if friction were absent."
+  },
+  {
+   "n": 2,
+   "topic": "Simple machines",
+   "q": "A carpenter in Uyo drives a wedge of length 20.0 cm and thickness 4.0 cm into a log with an effort of 120 N. If the efficiency of the wedge is 80%, what resistance does it overcome?",
+   "options": [
+    "600 N",
+    "480 N",
+    "96 N",
+    "384 N"
+   ],
+   "answer": 1,
+   "explanation": "Velocity ratio of the wedge = length ÷ thickness = 20.0 ÷ 4.0 = 5.0. Efficiency = mechanical advantage ÷ velocity ratio, so mechanical advantage = 0.80 × 5.0 = 4.0. Resistance overcome = effort × mechanical advantage = 120 × 4.0 = 480 N; 600 N would be obtained only if the wedge were 100% efficient."
+  },
+  {
+   "n": 3,
+   "topic": "Electrostatics and capacitors",
+   "q": "A negatively charged rod is brought near an isolated uncharged metal sphere without contact. Which statement describes the charge distribution on the sphere and the force between them?",
+   "options": [
+    "Negative charge is induced on the side nearer the rod, positive charge on the farther side, and the sphere is repelled.",
+    "No charge is induced on the sphere because it is uncharged, so there is no force.",
+    "Both sides of the sphere become positively charged, and the sphere is attracted to the rod.",
+    "Positive charge is induced on the side nearer the rod, negative charge on the farther side, and the sphere is attracted to the rod."
+   ],
+   "answer": 3,
+   "explanation": "Bringing a negatively charged rod near an isolated metal sphere repels free electrons to the farther side, leaving positive charge on the nearer side. The nearer positive charge is closer than the farther negative charge, so the net electric force is attractive. The sphere remains neutral overall, but its charges are redistributed by induction."
+  },
+  {
+   "n": 4,
+   "topic": "Electrostatics and capacitors",
+   "q": "A parallel-plate capacitor in a physics laboratory in Ilorin has a capacitance of 8.0 μF with air between its plates. When a dielectric material of relative permittivity 5.0 completely fills the space between the plates, what is the capacitance?",
+   "options": [
+    "1.6 μF",
+    "13 μF",
+    "40 μF",
+    "8.0 μF"
+   ],
+   "answer": 2,
+   "explanation": "With air, C = ε₀A/d. Filling the space with a dielectric multiplies the capacitance by the relative permittivity, so C = 5.0 × 8.0 μF = 40 μF. Dividing by 5.0 instead would give 1.6 μF, which is the common error of applying the dielectric factor the wrong way."
+  },
+  {
+   "n": 5,
+   "topic": "Measurement and units",
+   "q": "A student in Kano records the length of a metal rod as 0.0250 m. How many significant figures are in this measurement?",
+   "options": [
+    "5",
+    "3",
+    "2",
+    "4"
+   ],
+   "answer": 1,
+   "explanation": "The digits that are significant in 0.0250 m are 2, 5 and the trailing 0, giving three significant figures. Leading zeros after the decimal point merely locate the decimal point and are not significant."
+  },
+  {
+   "n": 6,
+   "topic": "Measurement and units",
+   "q": "A block of granite from a quarry in Kano has mass 2.50 kg and volume 250 cm³. Calculate its density in kg/m³.",
+   "options": [
+    "25,000 kg/m³",
+    "100 kg/m³",
+    "1,000 kg/m³",
+    "10,000 kg/m³"
+   ],
+   "answer": 3,
+   "explanation": "Volume = 250 cm³ = 250 × 10⁻⁶ m³ = 2.50 × 10⁻⁴ m³. Density = mass ÷ volume = 2.50 kg ÷ (2.50 × 10⁻⁴ m³) = 10,000 kg/m³. Using the conversion factor for area or forgetting the 10⁶ factor for cm³ to m³ leads to a much smaller value."
+  },
+  {
+   "n": 7,
+   "topic": "Atomic and nuclear physics",
+   "q": "In a nuclear reactor, cadmium rods are used mainly to",
+   "options": [
+    "cool the reactor core by conducting heat away.",
+    "shield workers from gamma radiation.",
+    "slow down fast neutrons to sustain the chain reaction.",
+    "absorb neutrons in order to control the rate of the chain reaction."
+   ],
+   "answer": 3,
+   "explanation": "Cadmium rods strongly absorb neutrons, so they are inserted or withdrawn to control the number of neutrons available for fission. Moderators such as graphite slow neutrons, while coolants remove heat; these are different functions in a reactor."
+  },
+  {
+   "n": 8,
+   "topic": "Atomic and nuclear physics",
+   "q": "The mass defect of a nucleus is 0.020 u. Taking 1 u = 931 MeV, calculate the binding energy of the nucleus.",
+   "options": [
+    "9.31 MeV",
+    "37.24 MeV",
+    "18.62 MeV",
+    "1.862 MeV"
+   ],
+   "answer": 2,
+   "explanation": "Binding energy = mass defect × conversion factor = 0.020 u × 931 MeV/u = 18.62 MeV. Halving the mass defect would give 9.31 MeV, and a decimal-place slip could wrongly give 1.862 MeV."
+  },
+  {
+   "n": 9,
+   "topic": "Gas laws",
+   "q": "A sealed tyre in Kaduna contains air at a pressure of 2.0 × 10⁵ Pa when the temperature is 27 °C. After a short journey, the temperature of the air rises to 57 °C. If the volume of the tyre remains constant, calculate the new pressure of the air.",
+   "options": [
+    "1.8 × 10⁵ Pa",
+    "4.2 × 10⁵ Pa",
+    "2.2 × 10⁵ Pa",
+    "2.0 × 10⁵ Pa"
+   ],
+   "answer": 2,
+   "explanation": "Using the pressure law P₁/T₁ = P₂/T₂ at constant volume, the temperatures must be in kelvin: T₁ = 27 + 273 = 300 K and T₂ = 57 + 273 = 330 K. Thus P₂ = (2.0 × 10⁵ × 330)/300 = 2.2 × 10⁵ Pa. A result such as 1.8 × 10⁵ Pa comes from inverting the temperature ratio, while 4.2 × 10⁵ Pa comes from using Celsius temperatures directly."
+  },
+  {
+   "n": 10,
+   "topic": "Gas laws",
+   "q": "A cylinder in Ibadan contains a fixed mass of gas at a pressure of 1.0 × 10⁵ Pa and a volume of 60 cm³. The gas is slowly compressed at constant temperature until its volume is 20 cm³. Calculate the new pressure of the gas.",
+   "options": [
+    "3.0 × 10⁵ Pa",
+    "4.0 × 10⁵ Pa",
+    "2.0 × 10⁵ Pa",
+    "0.33 × 10⁵ Pa"
+   ],
+   "answer": 0,
+   "explanation": "At constant temperature, Boyle’s law gives P₁V₁ = P₂V₂. Hence P₂ = (1.0 × 10⁵ × 60)/20 = 3.0 × 10⁵ Pa. The value 0.33 × 10⁵ Pa would come from using the inverse volume ratio."
+  },
+  {
+   "n": 11,
+   "topic": "Scalars and vectors",
+   "q": "A girl in Jos pulls a cart with a force of 80 N along a rope inclined at 60° above the horizontal. Calculate the horizontal component of the force.",
+   "options": [
+    "80 N",
+    "40 N",
+    "69.3 N",
+    "92.4 N"
+   ],
+   "answer": 1,
+   "explanation": "The horizontal component is F cos θ = 80 cos 60° = 80 × 0.5 = 40 N. The vertical component is 80 sin 60° ≈ 69.3 N, not the horizontal component."
+  },
+  {
+   "n": 12,
+   "topic": "Scalars and vectors",
+   "q": "A trader in Kano walks 4 km due north, then 3 km due west, and finally 4 km due south. What is her displacement from the starting point?",
+   "options": [
+    "3 km due east",
+    "5 km due north-west",
+    "11 km due west",
+    "3 km due west"
+   ],
+   "answer": 3,
+   "explanation": "The 4 km north and 4 km south displacements cancel because they are equal and opposite. The only remaining displacement from the starting point is 3 km due west. The total distance walked is 11 km, but distance is not the same as displacement."
+  },
+  {
+   "n": 13,
+   "topic": "Waves",
+   "q": "A boy in Ibadan claps his hands and hears the echo from a wall 68 m away 0.40 s later. Calculate the speed of sound in air.",
+   "options": [
+    "136 m/s",
+    "340 m/s",
+    "170 m/s",
+    "680 m/s"
+   ],
+   "answer": 1,
+   "explanation": "The sound travels to the wall and back, so the total distance is 2 × 68 = 136 m. Therefore the speed is v = 136/0.40 = 340 m/s. Using only the one-way distance gives 170 m/s, which ignores the return journey."
+  },
+  {
+   "n": 14,
+   "topic": "Waves",
+   "q": "A loudspeaker in Enugu produces a musical note of frequency 660 Hz. If the speed of sound in air is 330 m/s, calculate the wavelength of the note.",
+   "options": [
+    "330 m",
+    "0.25 m",
+    "0.50 m",
+    "2.0 m"
+   ],
+   "answer": 2,
+   "explanation": "The wave equation gives λ = v/f. Thus λ = 330/660 = 0.50 m. The value 2.0 m results from dividing frequency by speed instead of speed by frequency."
+  },
+  {
+   "n": 15,
+   "topic": "Motion",
+   "q": "A ripe mango falls from rest from a tree in Ogbomoso and takes 0.80 s to reach the ground. Taking g = 10 m/s², calculate the height from which it fell. Neglect air resistance.",
+   "options": [
+    "4.0 m",
+    "3.2 m",
+    "8.0 m",
+    "6.4 m"
+   ],
+   "answer": 1,
+   "explanation": "The mango starts from rest, so h = ½gt². Hence h = ½ × 10 × (0.80)² = 3.2 m. Omitting the factor ½ gives 6.4 m."
+  },
+  {
+   "n": 16,
+   "topic": "Current electricity",
+   "q": "A dry cell in a torch in Bauchi has an e.m.f. of 1.5 V and an internal resistance of 0.50 Ω. It is connected to a bulb of resistance 2.5 Ω. Calculate the terminal potential difference across the cell.",
+   "options": [
+    "1.50 V",
+    "0.25 V",
+    "1.25 V",
+    "0.50 V"
+   ],
+   "answer": 2,
+   "explanation": "Total resistance = 2.5 + 0.50 = 3.0 Ω, so current I = 1.5/3.0 = 0.50 A. Terminal p.d. = e.m.f. − Ir = 1.5 − (0.50 × 0.50) = 1.25 V, which is also the voltage across the 2.5 Ω bulb (0.50 × 2.5). The value 0.25 V is only the internal voltage drop Ir, not the terminal p.d."
+  },
+  {
+   "n": 17,
+   "topic": "Sound",
+   "q": "In a resonance tube experiment in a laboratory in Ogbomoso, a tuning fork of frequency 500 Hz gives the first and second resonance positions as 17.0 cm and 53.0 cm respectively from the open end. Calculate the speed of sound in air.",
+   "options": [
+    "720 m/s",
+    "340 m/s",
+    "180 m/s",
+    "360 m/s"
+   ],
+   "answer": 3,
+   "explanation": "For a tube closed at one end, the distance between the first and second resonance positions is half a wavelength: λ/2 = 53.0 cm − 17.0 cm = 36.0 cm = 0.36 m, so λ = 0.72 m. Hence v = fλ = 500 × 0.72 = 360 m/s. Using the 0.36 m interval directly as the wavelength gives 180 m/s, which is incorrect."
+  },
+  {
+   "n": 18,
+   "topic": "Sound",
+   "q": "A stationary loudspeaker at a sports ground in Ibadan emits a note of frequency 918 Hz. A cyclist moves directly away from the loudspeaker at 20 m/s. If the speed of sound in air is 340 m/s, calculate the frequency of the note heard by the cyclist.",
+   "options": [
+    "918 Hz",
+    "972 Hz",
+    "867 Hz",
+    "864 Hz"
+   ],
+   "answer": 3,
+   "explanation": "For an observer moving away from a stationary source, f′ = f(v − u)/v = 918(340 − 20)/340 = 864 Hz. The 972 Hz result comes from treating the cyclist as moving towards the source, while 867 Hz comes from wrongly applying the formula for a moving source."
+  },
+  {
+   "n": 19,
+   "topic": "Sound",
+   "q": "Two tuning forks are sounded together and produce 6 beats per second. The frequency of one fork is 512 Hz. When the other fork is loaded with a little wax, the beat frequency decreases to 4 beats per second. Calculate the original frequency of the loaded fork.",
+   "options": [
+    "506 Hz",
+    "518 Hz",
+    "516 Hz",
+    "524 Hz"
+   ],
+   "answer": 1,
+   "explanation": "The unknown frequency must be either 512 + 6 = 518 Hz or 512 − 6 = 506 Hz. Loading with wax lowers the fork's frequency; if it were originally 506 Hz, lowering it further would increase the beat, so it must originally have been 518 Hz. Decreasing it towards 512 Hz reduces the beat from 6 to 4 per second."
+  },
+  {
+   "n": 20,
+   "topic": "Elasticity and pressure",
+   "q": "A rectangular water tank in a school hostel in Makurdi is filled with water to a vertical depth of 2.5 m. Calculate the pressure at the bottom of the tank due to the water alone. (Density of water = 1.0 × 10³ kg/m³; g = 10 m/s²)",
+   "options": [
+    "2 500 Pa",
+    "25 000 Pa",
+    "250 000 Pa",
+    "250 Pa"
+   ],
+   "answer": 1,
+   "explanation": "The pressure due to a liquid column is P = ρgh = (1.0 × 10³)(10)(2.5) = 25 000 Pa. The value 250 Pa would come from dividing by g instead of multiplying by it, which is not valid for liquid pressure."
+  },
+  {
+   "n": 21,
+   "topic": "Elasticity and pressure",
+   "q": "A brass wire in a workshop in Ijebu Ode has an original length of 4.0 m. It extends by 2.0 mm when a load is attached. Calculate the tensile strain produced.",
+   "options": [
+    "8.0 × 10⁻³",
+    "5.0 × 10⁻²",
+    "5.0 × 10⁻⁴",
+    "2.0 × 10⁻³"
+   ],
+   "answer": 2,
+   "explanation": "Strain = extension/original length, with both lengths in the same unit: 2.0 mm = 2.0 × 10⁻³ m. Thus strain = (2.0 × 10⁻³)/4.0 = 5.0 × 10⁻⁴, a dimensionless quantity. The value 8.0 × 10⁻³ would come from multiplying the extension by the original length instead of dividing."
+  },
+  {
+   "n": 22,
+   "topic": "Work, energy and power",
+   "q": "A bus of mass 1 500 kg travelling at 20 m/s is brought to rest by a constant braking force of 6 000 N. Calculate the distance it travels before stopping.",
+   "options": [
+    "25 m",
+    "12.5 m",
+    "50 m",
+    "100 m"
+   ],
+   "answer": 2,
+   "explanation": "The kinetic energy to be removed is 1/2 × 1 500 × 20² = 300 000 J. The braking work is Fd = 6 000d, so 6 000d = 300 000, giving d = 50 m. The 100 m result would arise if the 1/2 in the kinetic energy formula were omitted."
+  },
+  {
+   "n": 23,
+   "topic": "Light and optics",
+   "q": "An object 4.0 cm high is placed 15 cm from a converging lens of focal length 10 cm. Calculate the height of the real image formed.",
+   "options": [
+    "2.0 cm",
+    "12.0 cm",
+    "6.0 cm",
+    "8.0 cm"
+   ],
+   "answer": 3,
+   "explanation": "Using 1/f = 1/u + 1/v gives 1/v = 1/10 − 1/15 = 1/30, so v = 30 cm. Magnification = v/u = 30/15 = 2, hence image height = 2 × 4.0 = 8.0 cm. The value 2.0 cm comes from using the reciprocal magnification u/v."
+  },
+  {
+   "n": 24,
+   "topic": "Light and optics",
+   "q": "A student in Warri cannot see objects clearly beyond 50 cm. What power of spectacle lens is required to correct the defect?",
+   "options": [
+    "+0.50 D",
+    "-2.0 D",
+    "-0.50 D",
+    "+2.0 D"
+   ],
+   "answer": 1,
+   "explanation": "A short-sighted eye is corrected with a diverging lens whose focal length is numerically equal to the far point, 0.50 m. Using P = 1/f with f = -0.50 m gives P = -2.0 D; a positive power would be for long-sightedness."
+  },
+  {
+   "n": 25,
+   "topic": "Magnetism and electromagnetic induction",
+   "q": "A student in Owerri pushes the north pole of a bar magnet towards a coil connected to a galvanometer. Which statement correctly describes the induced current in the coil as the magnet approaches?",
+   "options": [
+    "It is zero because the coil is not part of a complete circuit.",
+    "It produces a south pole at the end of the coil facing the magnet.",
+    "Its direction is independent of whether the magnet moves towards or away from the coil.",
+    "It produces a north pole at the end of the coil facing the magnet."
+   ],
+   "answer": 3,
+   "explanation": "By Lenz’s law, the induced current opposes the change causing it, so the end of the coil facing the approaching north pole becomes a north pole and repels the magnet. A south pole would attract the magnet and assist the motion, contrary to conservation of energy."
+  },
+  {
+   "n": 26,
+   "topic": "Newton’s laws and momentum",
+   "q": "Two trolleys of masses 2.0 kg and 3.0 kg are held together on a smooth horizontal bench in Ibadan with a compressed spring between them. When released, the 2.0 kg trolley moves to the left at 3.0 m/s. Calculate the speed of the 3.0 kg trolley immediately after release.",
+   "options": [
+    "2.0 m/s",
+    "1.5 m/s",
+    "4.5 m/s",
+    "3.0 m/s"
+   ],
+   "answer": 0,
+   "explanation": "Total initial momentum is zero. Taking left as negative, 0 = (2.0 × -3.0) + (3.0 × v), so 3.0v = 6.0 and v = 2.0 m/s to the right. The speed is therefore 2.0 m/s."
+  },
+  {
+   "n": 27,
+   "topic": "Newton’s laws and momentum",
+   "q": "A cart of mass 4.0 kg on a smooth horizontal floor is acted upon by two horizontal forces of 20 N and 12 N in opposite directions. Calculate the acceleration of the cart.",
+   "options": [
+    "0.50 m/s²",
+    "8.0 m/s²",
+    "5.0 m/s²",
+    "2.0 m/s²"
+   ],
+   "answer": 3,
+   "explanation": "The net force is 20 − 12 = 8 N. Using F = ma, acceleration = 8/4.0 = 2.0 m/s². The value 5.0 m/s² comes from using only the 20 N force, while 8.0 m/s² treats the net force itself as the acceleration."
+  },
+  {
+   "n": 28,
+   "topic": "Heat and temperature",
+   "q": "A fixed mass of gas at constant pressure occupies 300 cm³ at 27°C. Calculate its volume at 127°C.",
+   "options": [
+    "225 cm³",
+    "1.41 × 10³ cm³",
+    "367 cm³",
+    "400 cm³"
+   ],
+   "answer": 3,
+   "explanation": "Convert to kelvin: T₁ = 300 K and T₂ = 400 K. At constant pressure, V₁/T₁ = V₂/T₂, so V₂ = 300 × 400/300 = 400 cm³. Using Celsius temperatures directly gives about 1.41 × 10³ cm³, which is incorrect because gas-law temperatures must be absolute."
+  },
+  {
+   "n": 29,
+   "topic": "Heat and temperature",
+   "q": "A 0.20 kg metal block at 100°C is dropped into 0.15 kg of water at 20°C in a lagged calorimeter of negligible heat capacity. The final steady temperature is 30°C. Calculate the specific heat capacity of the metal. Take specific heat capacity of water = 4.2 × 10³ J kg⁻¹ K⁻¹.",
+   "options": [
+    "4.5 × 10² J kg⁻¹ K⁻¹",
+    "3.2 × 10² J kg⁻¹ K⁻¹",
+    "1.35 × 10³ J kg⁻¹ K⁻¹",
+    "9.0 × 10² J kg⁻¹ K⁻¹"
+   ],
+   "answer": 0,
+   "explanation": "Heat lost by the metal = 0.20 × c × (100 − 30) = 14c J. Heat gained by the water = 0.15 × 4.2 × 10³ × (30 − 20) = 6300 J. Thus c = 6300/14 = 450 = 4.5 × 10² J kg⁻¹ K⁻¹. The value 1.35 × 10³ comes from using 30°C instead of 10°C as the water’s temperature rise."
+  },
+  {
+   "n": 30,
+   "topic": "Simple machines",
+   "q": "A block and tackle in a furniture workshop in Ibadan has a velocity ratio of 4.0. It raises a load of 300 N with an efficiency of 50%. Calculate the effort applied.",
+   "options": [
+    "300 N",
+    "600 N",
+    "150 N",
+    "75 N"
+   ],
+   "answer": 2,
+   "explanation": "Efficiency is mechanical advantage divided by velocity ratio, so MA = 0.50 × 4.0 = 2.0. The effort is load divided by MA, giving 300 ÷ 2.0 = 150 N. Ignoring efficiency would give 300 ÷ 4.0 = 75 N, which is too small."
+  },
+  {
+   "n": 31,
+   "topic": "Simple machines",
+   "q": "A wheelbarrow is used to carry a load of 360 N. The distance from the wheel to the load is 0.50 m, and from the wheel to the effort is 1.50 m. Calculate the effort needed, neglecting friction.",
+   "options": [
+    "240 N",
+    "90 N",
+    "120 N",
+    "1 080 N"
+   ],
+   "answer": 2,
+   "explanation": "For the lever, effort = (load × load arm) ÷ effort arm. Thus effort = (360 × 0.50) ÷ 1.50 = 120 N. Using the total length from wheel to handle instead of the effort arm would produce 90 N."
+  },
+  {
+   "n": 32,
+   "topic": "Electrostatics and capacitors",
+   "q": "A positively charged rod is brought near the cap of an uncharged gold-leaf electroscope without touching it. What is observed?",
+   "options": [
+    "The leaf diverges and carries a positive charge.",
+    "The leaf remains undeflected because the rod does not touch the electroscope.",
+    "The leaf diverges and carries a negative charge.",
+    "The leaf collapses toward the stem."
+   ],
+   "answer": 0,
+   "explanation": "The positive rod attracts electrons from the leaf and stem towards the cap. The leaf is left with a net positive charge, so it repels the positively charged lower stem and diverges. No charge is transferred because the rod does not touch the electroscope."
+  },
+  {
+   "n": 33,
+   "topic": "Electrostatics and capacitors",
+   "q": "A capacitor in a radio circuit in Port Harcourt stores 0.050 J of energy when the potential difference across it is 100 V. Calculate its capacitance.",
+   "options": [
+    "1 000 μF",
+    "10 μF",
+    "20 μF",
+    "5.0 μF"
+   ],
+   "answer": 1,
+   "explanation": "Energy stored is E = ½CV², so C = 2E/V² = 2 × 0.050 ÷ 100² = 1.0 × 10⁻⁵ F = 10 μF. Omitting the factor ½ in the formula gives 5.0 μF."
+  },
+  {
+   "n": 34,
+   "topic": "Electrostatics and capacitors",
+   "q": "A point charge of +6.0 × 10⁻⁹ C is placed in air. What is the electric potential at a point 0.20 m from the charge? (k = 9.0 × 10⁹ N m² C⁻²)",
+   "options": [
+    "27 V",
+    "540 V",
+    "270 V",
+    "135 V"
+   ],
+   "answer": 2,
+   "explanation": "For a point charge, V = kQ/r = (9.0 × 10⁹ × 6.0 × 10⁻⁹) ÷ 0.20 = 270 V. Using 0.40 m instead of 0.20 m would give 135 V."
+  },
+  {
+   "n": 35,
+   "topic": "Measurement and units",
+   "q": "The dimension of density is",
+   "options": [
+    "M L³",
+    "M L⁻³",
+    "M L⁻¹ T⁻²",
+    "M L² T⁻²"
+   ],
+   "answer": 1,
+   "explanation": "Density = mass/volume, and volume has dimensions L³. Hence density has dimensions M L⁻³. M L⁻¹ T⁻² is the dimension of pressure, not density."
+  },
+  {
+   "n": 36,
+   "topic": "Measurement and units",
+   "q": "A quantity is measured as 2.50 × 10⁻⁴ m. Express this measurement in micrometres.",
+   "options": [
+    "2.50 μm",
+    "0.250 μm",
+    "250 μm",
+    "2 500 μm"
+   ],
+   "answer": 2,
+   "explanation": "Since 1 μm = 10⁻⁶ m, divide 2.50 × 10⁻⁴ m by 10⁻⁶ m/μm. This gives 2.50 × 10² μm = 250 μm. Multiplying by 10⁻³ instead would give 0.250 μm."
+  },
+  {
+   "n": 37,
+   "topic": "Atomic and nuclear physics",
+   "q": "In a nuclear reaction, a mass defect of 2.0 × 10⁻⁶ kg is converted completely to energy. Calculate the energy released. (c = 3.0 × 10⁸ m/s)",
+   "options": [
+    "1.8 × 10¹⁴ J",
+    "9.0 × 10¹⁰ J",
+    "6.0 × 10² J",
+    "1.8 × 10¹¹ J"
+   ],
+   "answer": 3,
+   "explanation": "Using E = mc², E = 2.0 × 10⁻⁶ × (3.0 × 10⁸)² = 1.8 × 10¹¹ J. Using c without squaring would give 6.0 × 10² J, which is far too small."
+  },
+  {
+   "n": 38,
+   "topic": "Gas laws",
+   "q": "A sealed steel cylinder in Jos contains gas at 27 °C and a pressure of 90 kPa. The gas is heated to 127 °C while the volume is kept constant. Calculate the new pressure of the gas.",
+   "options": [
+    "360 kPa",
+    "120 kPa",
+    "90.0 kPa",
+    "67.5 kPa"
+   ],
+   "answer": 1,
+   "explanation": "At constant volume, pressure is directly proportional to absolute temperature, so p₂ = p₁T₂/T₁. Converting to kelvin gives T₁ = 300 K and T₂ = 400 K, hence p₂ = 90 × 400/300 = 120 kPa."
+  },
+  {
+   "n": 39,
+   "topic": "Gas laws",
+   "q": "A cylinder in Ilorin contains 0.25 mol of an ideal gas at 27 °C in a volume of 15 dm³. Calculate the pressure of the gas. [R = 8.3 J mol⁻¹ K⁻¹]",
+   "options": [
+    "6.23 × 10⁴ Pa",
+    "8.30 × 10⁴ Pa",
+    "2.08 × 10⁴ Pa",
+    "4.15 × 10⁴ Pa"
+   ],
+   "answer": 3,
+   "explanation": "Using P = nRT/V, convert 15 dm³ to 0.015 m³ and 27 °C to 300 K. Thus P = (0.25 × 8.3 × 300)/0.015 = 4.15 × 10⁴ Pa."
+  },
+  {
+   "n": 40,
+   "topic": "Scalars and vectors",
+   "q": "A force F = (7i + 2j) N acts on a block in Aba and produces a displacement s = (3i + 4j) m. Calculate the work done by the force.",
+   "options": [
+    "21 J",
+    "34 J",
+    "13 J",
+    "29 J"
+   ],
+   "answer": 3,
+   "explanation": "Work is the scalar product of force and displacement: W = (7 × 3) + (2 × 4) = 21 + 8 = 29 J. Using the cross components gives 34 J, which is not the work done."
+  },
+  {
+   "n": 41,
+   "topic": "Motion",
+   "q": "A motorcyclist in Kaduna travelling at 12 m/s applies the brakes and comes to rest in 3.0 s. Calculate the distance travelled during braking, assuming uniform deceleration.",
+   "options": [
+    "12 m",
+    "36 m",
+    "4.0 m",
+    "18 m"
+   ],
+   "answer": 3,
+   "explanation": "For uniform acceleration or deceleration, s = ((u + v)/2)t. Here s = ((12 + 0)/2) × 3.0 = 18 m. Using 12 × 3.0 as if the speed stayed constant gives 36 m, which is incorrect."
+  },
+  {
+   "n": 42,
+   "topic": "Motion",
+   "q": "A ball is projected vertically upwards from the ground in Enugu and returns to the ground after 8.0 s. Calculate the greatest height reached. [g = 10 m/s²]",
+   "options": [
+    "40 m",
+    "160 m",
+    "20 m",
+    "80 m"
+   ],
+   "answer": 3,
+   "explanation": "The time to reach the greatest height is half of 8.0 s, which is 4.0 s. Using h = ½gt² gives h = ½ × 10 × 4.0² = 80 m."
+  },
+  {
+   "n": 43,
+   "topic": "Waves",
+   "q": "A sound wave from a loudspeaker in Oyo has a frequency of 500 Hz and a wavelength of 0.66 m. Calculate the speed of the sound wave.",
+   "options": [
+    "330 m/s",
+    "165 m/s",
+    "758 m/s",
+    "660 m/s"
+   ],
+   "answer": 0,
+   "explanation": "Wave speed is v = fλ, so v = 500 × 0.66 = 330 m/s. Dividing frequency by wavelength gives about 758 m/s, which is not the wave speed."
+  },
+  {
+   "n": 44,
+   "topic": "Waves",
+   "q": "A pupil in Benin City stands 170 m from a high wall and claps. She hears the echo 1.0 s later. Calculate the speed of sound in air.",
+   "options": [
+    "340 m/s",
+    "680 m/s",
+    "85 m/s",
+    "170 m/s"
+   ],
+   "answer": 0,
+   "explanation": "The sound travels to the wall and back, a total distance of 2 × 170 = 340 m. The speed is therefore 340/1.0 = 340 m/s. Ignoring the return journey gives 170 m/s, which is incorrect."
+  },
+  {
+   "n": 45,
+   "topic": "Waves",
+   "q": "A closed pipe in a school laboratory in Ibadan produces a fundamental note of frequency 256 Hz. What is the frequency of its first overtone?",
+   "options": [
+    "768 Hz",
+    "1280 Hz",
+    "256 Hz",
+    "512 Hz"
+   ],
+   "answer": 0,
+   "explanation": "A closed pipe produces odd harmonics only: f, 3f, 5f, and so on. The first overtone is therefore 3 × 256 = 768 Hz; the even harmonic 512 Hz is not produced by this pipe."
+  },
+  {
+   "n": 46,
+   "topic": "Current electricity",
+   "q": "A student in Warri connects a cell of e.m.f. 6.0 V and internal resistance 0.50 Ω to two 4.0 Ω resistors joined in parallel. Calculate the terminal potential difference of the cell.",
+   "options": [
+    "4.8 V",
+    "1.2 V",
+    "3.6 V",
+    "6.0 V"
+   ],
+   "answer": 0,
+   "explanation": "The two 4.0 Ω resistors in parallel give an external resistance of 2.0 Ω, so the total resistance is 2.0 Ω + 0.50 Ω = 2.50 Ω. The current is I = 6.0/2.50 = 2.4 A, and the terminal p.d. is 6.0 − (2.4 × 0.50) = 4.8 V. The value 1.2 V is only the lost volts across the internal resistance."
+  },
+  {
+   "n": 47,
+   "topic": "Current electricity",
+   "q": "An electric water heater in a hostel in Zaria is marked 2.5 kW, 240 V. If it is used for 3 hours each day for 30 days, calculate the cost of electrical energy consumed at ₦50 per kWh.",
+   "options": [
+    "₦11,250",
+    "₦7,500",
+    "₦22,500",
+    "₦3,750"
+   ],
+   "answer": 0,
+   "explanation": "The energy consumed is 2.5 kW × 3 h/day × 30 days = 225 kWh. At ₦50 per kWh, the cost is 225 × ₦50 = ₦11,250. Using only one hour per day would give ₦3,750, not the required total."
+  },
+  {
+   "n": 48,
+   "topic": "Sound",
+   "q": "An organ pipe closed at one end in a church in Owerri has a first overtone frequency of 600 Hz. Calculate the fundamental frequency of the pipe.",
+   "options": [
+    "1,200 Hz",
+    "200 Hz",
+    "600 Hz",
+    "300 Hz"
+   ],
+   "answer": 1,
+   "explanation": "For a pipe closed at one end, the harmonics are in the ratio 1 : 3 : 5 …, so the first overtone is the third harmonic. Thus the fundamental frequency is 600/3 = 200 Hz. The value 300 Hz would apply if the pipe were open at both ends and the first overtone were the second harmonic."
+  },
+  {
+   "n": 49,
+   "topic": "Sound",
+   "q": "Which pair of sound-wave characteristics determines loudness and quality respectively?",
+   "options": [
+    "Wavelength and amplitude",
+    "Amplitude and waveform",
+    "Frequency and amplitude",
+    "Amplitude and frequency"
+   ],
+   "answer": 1,
+   "explanation": "Loudness is determined by the amplitude of the sound wave, while quality (timbre) is determined by the waveform or harmonic content. Frequency determines pitch, not quality, and wavelength alone does not determine loudness or quality."
+  },
+  {
+   "n": 50,
+   "topic": "Elasticity and pressure",
+   "q": "A nylon thread in a tailor’s shop in Surulere has a cross-sectional area of 4.0 × 10⁻⁷ m². It is pulled with a force of 24 N just before breaking. Calculate the tensile stress at the breaking point.",
+   "options": [
+    "9.6 × 10⁻⁶ N/m²",
+    "1.0 × 10⁸ N/m²",
+    "4.8 × 10⁷ N/m²",
+    "6.0 × 10⁷ N/m²"
+   ],
+   "answer": 3,
+   "explanation": "Tensile stress is force divided by cross-sectional area: (24 N)/(4.0 × 10⁻⁷ m²) = 6.0 × 10⁷ N/m². Multiplying force by area gives 9.6 × 10⁻⁶ N/m², which is not a stress."
+  }
+ ]
+}

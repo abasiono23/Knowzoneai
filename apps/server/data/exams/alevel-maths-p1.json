@@ -1,0 +1,401 @@
+{
+ "id": "alevel-maths-p1",
+ "exam": "alevel",
+ "subject": "maths",
+ "year": null,
+ "number": 1,
+ "source": "ai",
+ "minutes": 40,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Proof",
+   "q": "Which value is a counterexample to the statement 'For all positive real numbers x, x³ > x²'?",
+   "options": [
+    "x = 3/2",
+    "x = 1/2",
+    "x = 2",
+    "x = 5/2"
+   ],
+   "answer": 1,
+   "explanation": "For x = 1/2, x³ = 1/8 and x² = 1/4, so x³ > x² is false. Values greater than 1 satisfy x³ > x², so they are not counterexamples."
+  },
+  {
+   "n": 2,
+   "topic": "Proof",
+   "q": "For an integer n, which completed argument correctly proves by deduction that (2n + 1)² is odd?",
+   "options": [
+    "(2n + 1)² = 4n² + 4n + 1 = 2(2n² + 2n) + 1, which is one more than an even integer.",
+    "Because 2n + 1 is odd, its square must be even.",
+    "(2n + 1)² = 4n² + 1, so it is odd because 4n² is even.",
+    "Checking n = 0, 1 and 2 gives odd values, so it is odd for every integer n."
+   ],
+   "answer": 0,
+   "explanation": "Expanding gives (2n + 1)² = 4n² + 4n + 1 = 2(2n² + 2n) + 1, which has the form 2m + 1 and is therefore odd. Checking a few values does not prove the result for every integer, and squaring an odd integer gives an odd integer."
+  },
+  {
+   "n": 3,
+   "topic": "Proof",
+   "q": "Which is the correct start of a proof by contradiction that, for every integer n, if n² is odd then n is odd?",
+   "options": [
+    "Suppose n is odd. Then n = 2k + 1, so n² is odd, contradicting the statement.",
+    "Suppose n² is odd. Then n must be odd, which proves the result.",
+    "Suppose n is even. Then n = 2k for some integer k, so n² = 4k², which is even, contradicting n² being odd.",
+    "Suppose n² is even. Then n = 2k, so n² is even, contradicting n² being odd."
+   ],
+   "answer": 2,
+   "explanation": "To prove 'if n² is odd then n is odd' by contradiction, assume n² is odd and n is even. Writing n = 2k gives n² = 4k², which is even, contradicting n² being odd. The other choices either assume the conclusion or make the wrong assumption."
+  },
+  {
+   "n": 4,
+   "topic": "Probability and statistical distributions",
+   "q": "At a college in Leicester, 60% of students travel by bus. Among bus users, 30% study mathematics; among students who do not travel by bus, 20% study mathematics. A mathematics student is selected at random. What is the probability that this student travels by bus?",
+   "options": [
+    "3/10",
+    "13/50",
+    "9/13",
+    "9/50"
+   ],
+   "answer": 2,
+   "explanation": "The probability of being a bus user and studying mathematics is 0.6 × 0.3 = 0.18. The total probability of studying mathematics is 0.18 + 0.4 × 0.2 = 0.26, so the required conditional probability is 0.18/0.26 = 9/13. The value 9/50 is only the joint probability of travelling by bus and studying mathematics."
+  },
+  {
+   "n": 5,
+   "topic": "Probability and statistical distributions",
+   "q": "A biased coin has probability 0.3 of landing heads on each independent toss. It is tossed 8 times. What is the probability of exactly 3 heads? Give your answer to 4 decimal places.",
+   "options": [
+    "0.1681",
+    "0.0467",
+    "0.0270",
+    "0.2541"
+   ],
+   "answer": 3,
+   "explanation": "If X is the number of heads, X ~ B(8, 0.3), so P(X = 3) = C(8, 3) × 0.3³ × 0.7⁵ = 56 × 0.027 × 0.16807 ≈ 0.2541. The value 0.0270 is just 0.3³ and omits both the choice of positions and the five tails."
+  },
+  {
+   "n": 6,
+   "topic": "Probability and statistical distributions",
+   "q": "The masses of bags of flour from a bakery in Cardiff are normally distributed with mean 1.20 kg and standard deviation 0.05 kg. What is the probability that a randomly selected bag has mass less than 1.10 kg? You may use P(Z ≤ −2) = 0.0228.",
+   "options": [
+    "0.9772",
+    "0.1587",
+    "0.0228",
+    "0.0456"
+   ],
+   "answer": 2,
+   "explanation": "Standardising gives z = (1.10 − 1.20)/0.05 = −2, so the required probability is P(Z ≤ −2) = 0.0228. The value 0.9772 is the probability in the opposite tail, P(Z ≤ 2)."
+  },
+  {
+   "n": 7,
+   "topic": "Coordinate geometry",
+   "q": "The circle with equation x² + y² − 6x + 8y − 11 = 0 has centre and radius given by which option?",
+   "options": [
+    "Centre (3, 4), radius 6",
+    "Centre (−3, 4), radius 6",
+    "Centre (3, −4), radius 36",
+    "Centre (3, −4), radius 6"
+   ],
+   "answer": 3,
+   "explanation": "Completing the square gives (x − 3)² + (y + 4)² = 36, so the centre is (3, −4) and the radius is √36 = 6. The value 36 is the square of the radius, not the radius itself."
+  },
+  {
+   "n": 8,
+   "topic": "Coordinate geometry",
+   "q": "A circle has centre C(2, −1). The point P(5, 3) lies on the circle. What is the equation of the tangent to the circle at P?",
+   "options": [
+    "4x − 3y = 11",
+    "3x − 4y = 3",
+    "3x + 4y = 27",
+    "4x + 3y = 29"
+   ],
+   "answer": 2,
+   "explanation": "The radius CP has gradient (3 − (−1))/(5 − 2) = 4/3, so the tangent has gradient −3/4. Using the point P(5, 3): y − 3 = −3/4(x − 5), which rearranges to 3x + 4y = 27. The equation 4x − 3y = 11 is the radius line through C and P, not the tangent."
+  },
+  {
+   "n": 9,
+   "topic": "Algebra and functions",
+   "q": "Given that (x − 2) is a factor of 2x³ − x² + kx + 6, what is the value of k?",
+   "options": [
+    "9",
+    "−9",
+    "3",
+    "−7"
+   ],
+   "answer": 1,
+   "explanation": "By the factor theorem, f(2) = 0. Substituting x = 2 gives 2(2³) − 2² + 2k + 6 = 16 − 4 + 2k + 6 = 18 + 2k, so 18 + 2k = 0 and k = −9."
+  },
+  {
+   "n": 10,
+   "topic": "Algebra and functions",
+   "q": "The curve y = f(x) has a minimum at (3, −2). What is the minimum point of y = 2f(x − 1) + 4?",
+   "options": [
+    "(2, 0)",
+    "(4, 4)",
+    "(4, 2)",
+    "(4, 0)"
+   ],
+   "answer": 3,
+   "explanation": "The transformation f(x − 1) shifts the graph 1 unit to the right, so the x-coordinate becomes 3 + 1 = 4. The y-coordinate is doubled and then increased by 4, giving 2 × (−2) + 4 = 0, so the minimum is at (4, 0)."
+  },
+  {
+   "n": 11,
+   "topic": "Numerical methods",
+   "q": "Aisha uses the Newton–Raphson method to estimate a root of x² − 5 = 0. Taking x₀ = 2, what is x₁? Give your answer as an exact decimal.",
+   "options": [
+    "1.75",
+    "2.5",
+    "1.5",
+    "2.25"
+   ],
+   "answer": 3,
+   "explanation": "Here f(x) = x² − 5, so f(2) = −1 and f′(x) = 2x, giving f′(2) = 4. The formula is x₁ = x₀ − f(x₀)/f′(x₀) = 2 − (−1)/4 = 2.25. Using x₀ + f(x₀)/f′(x₀) instead of subtracting gives 1.75, a common sign error."
+  },
+  {
+   "n": 12,
+   "topic": "Numerical methods",
+   "q": "Dafydd uses the trapezium rule with four strips to estimate ∫₀² x² dx. The values of x are 0, 0.5, 1, 1.5, 2 and the corresponding values of x² are 0, 0.25, 1, 2.25, 4. What estimate does he obtain?",
+   "options": [
+    "1.875",
+    "3.75",
+    "5.5",
+    "2.75"
+   ],
+   "answer": 3,
+   "explanation": "The strip width is h = (2 − 0)/4 = 0.5. The trapezium estimate is h/2 [y₀ + y₄ + 2(y₁ + y₂ + y₃)] = 0.25 × [0 + 4 + 2(0.25 + 1 + 2.25)] = 0.25 × 11 = 2.75. Omitting the factor 2 before the interior ordinates would give 1.875, while forgetting to divide the bracket by 2 gives 5.5."
+  },
+  {
+   "n": 13,
+   "topic": "Numerical methods",
+   "q": "Priya uses the iteration xₙ₊₁ = (5 − xₙ²)/2 with x₀ = 1. What is x₂?",
+   "options": [
+    "0.5",
+    "2",
+    "4.5",
+    "1.5"
+   ],
+   "answer": 0,
+   "explanation": "First x₁ = (5 − 1²)/2 = 2. Then x₂ = (5 − 2²)/2 = (5 − 4)/2 = 0.5. Reusing x₀ instead of x₁ gives 2, and dropping the square in the second step gives 1.5."
+  },
+  {
+   "n": 14,
+   "topic": "Statistical hypothesis testing",
+   "q": "Kwame tests H₀: p = 0.5 against H₁: p > 0.5 using X ~ B(10, p), where X is the number of successes. He observes X = 8. What is the p-value for this test?",
+   "options": [
+    "11/1024",
+    "45/1024",
+    "7/64",
+    "7/128"
+   ],
+   "answer": 3,
+   "explanation": "Under H₀, X ~ B(10, 0.5). The p-value is P(X ≥ 8) = [C(10,8) + C(10,9) + C(10,10)]/2¹⁰ = (45 + 10 + 1)/1024 = 56/1024 = 7/128. Including only the outcome X = 8 gives 45/1024, which is a common one-tail error."
+  },
+  {
+   "n": 15,
+   "topic": "Statistical hypothesis testing",
+   "q": "Siobhan carries out a hypothesis test at the 5% significance level. Which statement correctly describes the significance level?",
+   "options": [
+    "It is the probability of rejecting H₀ when H₁ is true.",
+    "It is the probability of not rejecting H₀ when H₀ is false.",
+    "It is the probability of rejecting H₀ when H₀ is true.",
+    "It is the probability that H₀ is true, given that it has been rejected."
+   ],
+   "answer": 2,
+   "explanation": "The significance level is the probability of a Type I error, namely rejecting H₀ when H₀ is true. It is not the probability that H₀ is true after seeing the data, nor the probability of failing to reject a false null hypothesis."
+  },
+  {
+   "n": 16,
+   "topic": "Statistical hypothesis testing",
+   "q": "A test uses X ~ B(20, p) with H₀: p = 0.5 and H₁: p > 0.5 at the 5% significance level. Using tables or otherwise, what is the critical region?",
+   "options": [
+    "X ≥ 15",
+    "X ≥ 14",
+    "X ≤ 5",
+    "X ≥ 16"
+   ],
+   "answer": 0,
+   "explanation": "For X ~ B(20, 0.5), P(X ≥ 15) = 21700/1048576 ≈ 0.0207, which is below 0.05. However, P(X ≥ 14) = 60460/1048576 ≈ 0.0577, which is above 0.05, so 14 cannot be included. The smallest upper-tail critical region at the 5% level is therefore X ≥ 15."
+  },
+  {
+   "n": 17,
+   "topic": "Differentiation",
+   "q": "Michael is differentiating f(x) = (x² + 1)/(x − 1). What is f′(3)?",
+   "options": [
+    "3/2",
+    "0",
+    "1",
+    "1/2"
+   ],
+   "answer": 3,
+   "explanation": "Using the quotient rule, f′(x) = [2x(x − 1) − (x² + 1)]/(x − 1)² = (x² − 2x − 1)/(x − 1)². At x = 3 this gives (9 − 6 − 1)/4 = 1/2. Forgetting to square the denominator gives 1, and using the wrong sign when differentiating 2/(x − 1) gives 3/2."
+  },
+  {
+   "n": 18,
+   "topic": "Differentiation",
+   "q": "Niamh considers the curve x² + xy + y² = 7. What is the value of dy/dx at the point (1, 2)?",
+   "options": [
+    "−1",
+    "−2/5",
+    "−4/5",
+    "4/5"
+   ],
+   "answer": 2,
+   "explanation": "Differentiating implicitly gives 2x + y + x(dy/dx) + 2y(dy/dx) = 0. Substituting x = 1 and y = 2 gives 2 + 2 + (1 + 4)dy/dx = 0, so dy/dx = −4/5. Forgetting the x(dy/dx) term gives −1, while omitting the y term from the product y + x(dy/dx) gives −2/5."
+  },
+  {
+   "n": 19,
+   "topic": "Integration",
+   "q": "Dev evaluates ∫₀¹ x e^(x²) dx. What is the exact value?",
+   "options": [
+    "e − 1",
+    "(e − 1)/4",
+    "e/2",
+    "(e − 1)/2"
+   ],
+   "answer": 3,
+   "explanation": "Let u = x², so du = 2x dx. Then the integral becomes 1/2 ∫₀¹ e^u du = 1/2[e^u]₀¹ = (e − 1)/2. Forgetting the factor 1/2 gives e − 1, while evaluating only the upper-bound term in e^(x²)/2 gives e/2."
+  },
+  {
+   "n": 20,
+   "topic": "Integration",
+   "q": "Lauren uses integration by parts to evaluate ∫₁² ln x dx. What is the exact value?",
+   "options": [
+    "2ln 2 − 2",
+    "2ln 2",
+    "2ln 2 + 1",
+    "2ln 2 − 1"
+   ],
+   "answer": 3,
+   "explanation": "Using u = ln x and dv = dx gives ∫ ln x dx = x ln x − x. Evaluating from 1 to 2 gives (2ln 2 − 2) − (0 − 1) = 2ln 2 − 1. Evaluating only at the upper limit gives 2ln 2 − 2."
+  },
+  {
+   "n": 21,
+   "topic": "Sequences and series",
+   "q": "Aisha is saving for a trip to Cardiff. The amounts she saves in consecutive weeks form an arithmetic sequence. She saves £17 in the 5th week and £45 in the 12th week. What is the total amount she saves in the first 20 weeks?",
+   "options": [
+    "£820",
+    "£620",
+    "£760",
+    "£780"
+   ],
+   "answer": 3,
+   "explanation": "Let the first term be a and the common difference be d. Then a + 4d = 17 and a + 11d = 45, so 7d = 28 and d = 4, giving a = 1. Hence S₂₀ = 20/2 × (2 × 1 + 19 × 4) = 10 × 78 = £780. Using £17 and £45 as if they were the first and last terms gives £620, which is not valid here."
+  },
+  {
+   "n": 22,
+   "topic": "Sequences and series",
+   "q": "Rhys is investigating the geometric series 8 + 8(x − 1)/3 + 8 × ((x − 1)/3)² + ... . The series is convergent and has sum to infinity 12. What is the value of x?",
+   "options": [
+    "−0.5",
+    "2",
+    "0.5",
+    "4"
+   ],
+   "answer": 1,
+   "explanation": "For a convergent geometric series with first term 8 and common ratio r = (x − 1)/3, the sum to infinity is 8/(1 − r) = 12. Thus 1 − r = 8/12 = 2/3, so r = 1/3 and (x − 1)/3 = 1/3, giving x = 2. The value 4 would make r = 1, so the series would not converge to a finite sum."
+  },
+  {
+   "n": 23,
+   "topic": "Sequences and series",
+   "q": "Evaluate ∑ from r = 1 to 10 of 3 × 2^(r − 1).",
+   "options": [
+    "1533",
+    "6141",
+    "3069",
+    "3072"
+   ],
+   "answer": 2,
+   "explanation": "This is a geometric series with first term 3, common ratio 2 and 10 terms, so the sum is 3 × (2¹⁰ − 1)/(2 − 1) = 3 × 1023 = 3069. The value 3072 comes from omitting the −1 in the geometric-sum formula, while 6141 would arise from using 11 terms instead of 10."
+  },
+  {
+   "n": 24,
+   "topic": "Kinematics",
+   "q": "Niamh cycles along a straight path in Belfast. She accelerates uniformly from 8 m/s to 20 m/s in 6 s. How far does she travel during this acceleration?",
+   "options": [
+    "84 m",
+    "72 m",
+    "120 m",
+    "168 m"
+   ],
+   "answer": 0,
+   "explanation": "For uniform acceleration, distance = average velocity × time = ((8 + 20)/2) × 6 = 14 × 6 = 84 m. Using the final velocity as though it were constant gives 120 m, and using (8 + 20) × 6 without halving gives 168 m."
+  },
+  {
+   "n": 25,
+   "topic": "Kinematics",
+   "q": "A particle moves in a straight line. Its velocity, v m/s, at time t seconds is v = t² − 6t + 8 for 0 ≤ t ≤ 5. Find the total distance travelled in the first 5 seconds.",
+   "options": [
+    "12 m",
+    "8 m",
+    "20/3 m",
+    "28/3 m"
+   ],
+   "answer": 3,
+   "explanation": "The velocity is zero when t = 2 and t = 4. The total distance is the sum of the magnitudes of the displacements on each interval: 20/3 m from t = 0 to 2, 4/3 m from 2 to 4, and 4/3 m from 4 to 5, giving 28/3 m. The value 20/3 m is the net displacement, not the total distance, because the particle reverses direction."
+  },
+  {
+   "n": 26,
+   "topic": "Statistical sampling and data presentation",
+   "q": "A college in Leicester has 800 students. A researcher takes a stratified sample of 60 students, stratified by campus. North campus has 320 students and South campus has 480 students. How many students should be selected from North campus?",
+   "options": [
+    "36",
+    "24",
+    "32",
+    "28"
+   ],
+   "answer": 1,
+   "explanation": "The proportion of students at North campus is 320/800 = 0.4. For a stratified sample of 60, the number selected from North is 60 × 0.4 = 24. The value 36 is the number that should be selected from South campus, not North."
+  },
+  {
+   "n": 27,
+   "topic": "Statistical sampling and data presentation",
+   "q": "A histogram represents the times, t minutes, recorded in a study in Norwich. The class intervals and frequency densities are:\nt: 0 < t ≤ 10 | 10 < t ≤ 20 | 20 < t ≤ 40 | 40 < t ≤ 60\nFrequency density: 2.0 | 1.5 | 0.8 | 0.3\nHow many observations are represented in total?",
+   "options": [
+    "63",
+    "57",
+    "46",
+    "4.6"
+   ],
+   "answer": 1,
+   "explanation": "Frequency is frequency density × class width, so the class frequencies are 10 × 2.0 = 20, 10 × 1.5 = 15, 20 × 0.8 = 16 and 20 × 0.3 = 6. The total is 20 + 15 + 16 + 6 = 57. Adding the frequency densities without multiplying by the widths gives 4.6, which is not a frequency."
+  },
+  {
+   "n": 28,
+   "topic": "Statistical sampling and data presentation",
+   "q": "A bus company in Bradford records journey times in minutes. For one route, the lower quartile is 12, the median is 18 and the upper quartile is 25. An outlier is defined as a value below Q₁ − 1.5 × IQR or above Q₃ + 1.5 × IQR. Which one of these journey times would be classified as an outlier?",
+   "options": [
+    "44 minutes",
+    "42 minutes",
+    "39 minutes",
+    "47 minutes"
+   ],
+   "answer": 3,
+   "explanation": "The interquartile range is 25 − 12 = 13, so the upper outlier boundary is 25 + 1.5 × 13 = 25 + 19.5 = 44.5 minutes. A time is an outlier only if it is greater than 44.5 minutes (or below the lower boundary), so 47 minutes is the only listed time that qualifies. The 44-minute time lies just inside the boundary."
+  },
+  {
+   "n": 29,
+   "topic": "Vectors",
+   "q": "The vectors a = 2i − j + 3k and b = 3i + λj + k are perpendicular. What is the value of λ?",
+   "options": [
+    "9",
+    "6",
+    "0",
+    "−9"
+   ],
+   "answer": 0,
+   "explanation": "Perpendicular vectors have scalar product zero. Here a · b = (2)(3) + (−1)(λ) + (3)(1) = 9 − λ, so 9 − λ = 0 and λ = 9. Forgetting the k-component contribution would give λ = 6 instead."
+  },
+  {
+   "n": 30,
+   "topic": "Vectors",
+   "q": "The position vectors of points A and B relative to an origin O are a = i + 2j − k and b = 4i − j + 2k. The point C lies on the line segment AB with AC : CB = 2 : 1. What is the position vector of C?",
+   "options": [
+    "7i − 4j + 5k",
+    "3i + k",
+    "2i + j",
+    "5i + j + k"
+   ],
+   "answer": 1,
+   "explanation": "Since AC : CB = 2 : 1, the position vector of C is (1a + 2b)/(2 + 1). Thus C = (i + 2j − k + 8i − 2j + 4k)/3 = (9i + 3k)/3 = 3i + k. Using the reversed ratio would give 2i + j, and 7i − 4j + 5k would arise from an external division."
+  }
+ ]
+}

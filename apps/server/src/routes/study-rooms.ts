@@ -1,7 +1,7 @@
 import { Router } from 'express';
 import { z } from 'zod';
 
-import { EXAM_SUBJECTS, EXAMS } from '../data/exams.js';
+import { EXAM_SUBJECTS, EXAMS, hasSubject } from '../data/exams.js';
 import { prisma } from '../db.js';
 import { AppError, notFound } from '../lib/errors.js';
 import { localDayKey } from '../lib/time.js';
@@ -323,6 +323,7 @@ studyRoomsRouter.post('/me/study-rooms/:id/quiz', async (req, res) => {
   const user = me(req);
   const m = await host(String(req.params.id), user);
   const { exam, subject } = z.object({ exam: z.enum(EXAMS), subject: z.enum(EXAM_SUBJECTS) }).parse(req.body);
+  if (!hasSubject(exam, subject)) throw new AppError(404, 'There aren’t enough questions for that subject yet.', 'no-questions');
   if (m.room.phase === 'focus' && (m.room.phaseEndsAt?.getTime() ?? 0) > Date.now())
     throw new AppError(409, 'Quizzes are for breaks. Wait until focus time ends.', 'focus');
   if (await prisma.studyRoomQuiz.findFirst({ where: { roomId: m.roomId, startedAt: { gt: new Date(Date.now() - QUIZ_MS) } } }))

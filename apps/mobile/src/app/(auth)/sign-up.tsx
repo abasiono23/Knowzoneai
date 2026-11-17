@@ -6,11 +6,13 @@ import { type TextInputInstance } from 'react-native';
 import { AuthScreen } from '@/components/auth/auth-screen';
 import { PasswordStrength } from '@/components/auth/password-strength';
 import { TextField } from '@/components/auth/text-field';
+import { CountryField } from '@/components/region-picker';
 import { Button, Text } from '@/components/ui';
 import { Colors } from '@/constants/theme';
 import { isValidEmail, signupDraft } from '@/lib/onboarding-flow';
+import { guessedCountry } from '@/lib/region';
 
-type Errors = Partial<Record<'name' | 'email' | 'password', string>>;
+type Errors = Partial<Record<'name' | 'email' | 'password' | 'region', string>>;
 
 export default function SignUpScreen() {
   const { t } = useTranslation('auth');
@@ -18,6 +20,8 @@ export default function SignUpScreen() {
   const [name, setName] = useState(draft?.name ?? '');
   const [email, setEmail] = useState(draft?.email ?? '');
   const [password, setPassword] = useState('');
+  // Where they study: starts on the device's country when it's one we list, and is theirs to change.
+  const [region, setRegion] = useState<string | null>(() => draft?.region ?? guessedCountry());
   const [errors, setErrors] = useState<Errors>({});
   const emailRef = useRef<TextInputInstance>(null);
   const passwordRef = useRef<TextInputInstance>(null);
@@ -27,11 +31,12 @@ export default function SignUpScreen() {
     if (!name.trim()) next.name = t('signUp.nameRequired');
     if (!isValidEmail(email)) next.email = t('validation.email');
     if (password.length < 8) next.password = t('validation.passwordMin');
+    if (!region) next.region = t('regions.required', { ns: 'common' });
     setErrors(next);
-    if (Object.keys(next).length) return;
+    if (Object.keys(next).length || !region) return;
 
     // The account is created after the student accepts the terms on the next screen.
-    signupDraft.set({ name: name.trim(), email: email.trim().toLowerCase(), password });
+    signupDraft.set({ name: name.trim(), email: email.trim().toLowerCase(), password, region });
     router.push('/terms');
   };
 
@@ -42,7 +47,8 @@ export default function SignUpScreen() {
       subtitle={t('signUp.subtitle')}
       footer={
         <>
-          <Button title={t('actions.continue', { ns: 'common' })} onPress={submit} />
+          {/* No country, no account: the button waits for one. */}
+          <Button title={t('actions.continue', { ns: 'common' })} onPress={submit} disabled={!region} />
           <Text variant="small" color={Colors.textSecondary} center>
             <Trans
               t={t}
@@ -103,6 +109,14 @@ export default function SignUpScreen() {
         onSubmitEditing={submit}
       />
       <PasswordStrength password={password} />
+      <CountryField
+        value={region}
+        onChange={(code) => {
+          setRegion(code);
+          setErrors((e) => ({ ...e, region: undefined }));
+        }}
+        error={errors.region}
+      />
     </AuthScreen>
   );
 }

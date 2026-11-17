@@ -65,7 +65,7 @@ const rooms: Translation<typeof en> = {
   },
   goal: 'OBJECTIF DE LA SALLE',
   goalEmpty: 'Pas encore d’objectif.',
-  goalPlaceholder: 'ex. Finir JAMB Physique épreuve 1',
+  goalPlaceholder: 'ex. Finir {{exam}} Physique épreuve 1',
   setGoal: 'Fixer l’objectif',
   editGoal: 'Modifier',
   goalProgress: '{{done}} sur {{total}} ont fini',

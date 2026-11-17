@@ -1,0 +1,401 @@
+{
+ "id": "gcse-chemistry-p1",
+ "exam": "gcse",
+ "subject": "chemistry",
+ "year": null,
+ "number": 1,
+ "source": "ai",
+ "minutes": 35,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Atomic structure and the periodic table",
+   "q": "An isotope of chlorine has 17 protons and a mass number of 37. How many neutrons and electrons does this neutral atom have?",
+   "options": [
+    "17 neutrons and 20 electrons.",
+    "37 neutrons and 17 electrons.",
+    "20 neutrons and 17 electrons.",
+    "20 neutrons and 20 electrons."
+   ],
+   "answer": 2,
+   "explanation": "Mass number = protons + neutrons so neutrons = 37 − 17 = 20; a neutral atom has equal protons and electrons so electrons = 17. The correct option is therefore '20 neutrons and 17 electrons.' The other options give incorrect counts of neutrons or electrons."
+  },
+  {
+   "n": 2,
+   "topic": "Atomic structure and the periodic table",
+   "q": "A student is asked to write the electronic configuration of sulphur (atomic number 16). Which configuration is correct?",
+   "options": [
+    "1s² 2s² 2p⁶ 3s⁴ 3p²",
+    "1s² 2s² 2p⁶ 3s² 3p⁴",
+    "1s² 2s² 2p⁴ 3s² 3p⁴",
+    "1s² 2s² 2p⁶ 3s² 3p⁶"
+   ],
+   "answer": 1,
+   "explanation": "Sulfur has 16 electrons: filling order gives 1s² (2), 2s² (2), 2p⁶ (6) = 10, then 3s² (2) and 3p⁴ (4) = 16, so '1s² 2s² 2p⁶ 3s² 3p⁴' is correct. The other options either overfill 3p to 3p⁶, underfill 2p, or incorrectly place electrons into 3s beyond its capacity."
+  },
+  {
+   "n": 3,
+   "topic": "Chemical analysis",
+   "q": "A sample contains a soluble salt that gives a white precipitate with silver nitrate solution. Which ion is present in the sample?",
+   "options": [
+    "Carbonate ions, because Ag⁺ + CO₃²⁻ → Ag₂CO₃(s), a white precipitate when tested with silver nitrate.",
+    "Nitrate ions, because Ag⁺ + NO₃⁻ → AgNO₃(s), a white precipitate.",
+    "Sulfate ions, because Ag⁺ + SO₄²⁻ → Ag₂SO₄(s), a white precipitate under these test conditions.",
+    "Chloride ions, because Ag⁺ + Cl⁻ → AgCl(s), a white precipitate."
+   ],
+   "answer": 3,
+   "explanation": "Silver nitrate gives a white precipitate with chloride ions due to Ag⁺ + Cl⁻ → AgCl(s); this is the standard test for halides. Silver sulfate is soluble enough under normal test conditions and nitrates are soluble (so no precipitate), while silver carbonate is not the typical result with this reagent in a halide test and carbonate is usually tested with acid to give CO₂, so the other options are incorrect or misleading."
+  },
+  {
+   "n": 4,
+   "topic": "Chemical analysis",
+   "q": "A student titrates 25.0 cm³ of 0.100 mol dm⁻³ hydrochloric acid (HCl) with sodium hydroxide (NaOH). What volume of 0.100 mol dm⁻³ NaOH is required to reach the end point? (HCl + NaOH → NaCl + H₂O)",
+   "options": [
+    "50.0 cm³",
+    "100.0 cm³",
+    "12.5 cm³",
+    "25.0 cm³"
+   ],
+   "answer": 3,
+   "explanation": "The reaction is 1:1 so moles HCl = moles NaOH at the end point. Moles HCl = concentration × volume = 0.100 mol dm⁻³ × 25.0 cm³ × (1 dm³/1000 cm³) = 0.00250 mol. Required volume of 0.100 mol dm⁻³ NaOH = moles ÷ concentration = 0.00250 ÷ 0.100 = 0.0250 dm³ = 25.0 cm³. The other volumes are incorrect for a 1:1 titration at equal concentrations."
+  },
+  {
+   "n": 5,
+   "topic": "Chemical changes",
+   "q": "A student adds magnesium ribbon to 1.0 mol dm⁻³ hydrochloric acid and collects the hydrogen gas produced. Which observation and explanation correctly describes what they should see and why? (Assume excess acid and clean magnesium.)",
+   "options": [
+    "A black solid forms on the ribbon because magnesium is oxidised to magnesium oxide by the acid.",
+    "White precipitate forms because magnesium reacts with chloride ions to make magnesium chloride, which is insoluble.",
+    "No reaction because acids only react with non-metals, and magnesium is a metal so nothing happens.",
+    "Bubbling of gas from the magnesium and the magnesium gradually disappears because magnesium atoms lose electrons to form Mg²⁺ and hydrogen ions are reduced to H₂."
+   ],
+   "answer": 3,
+   "explanation": "Magnesium (a metal) reacts with hydrochloric acid: Mg → Mg²⁺ + 2e⁻ and 2H⁺ + 2e⁻ → H₂, so bubbles of hydrogen and gradual disappearance of the metal are seen. Saying acids only react with non-metals is wrong; magnesium chloride is soluble so no white precipitate forms; magnesium oxide would form on burning in air, not when reacting with acid."
+  },
+  {
+   "n": 6,
+   "topic": "Chemical changes",
+   "q": "A student electrolyses dilute sulfuric acid between inert electrodes. Which product appears at the anode and why?",
+   "options": [
+    "Chlorine gas because chloride impurities are always oxidised preferentially to oxygen.",
+    "Oxygen gas because hydroxide ions are oxidised at the anode: 4OH⁻ → O₂ + 2H₂O + 4e⁻.",
+    "Hydrogen gas because hydrogen ions are oxidised at the anode to form H₂.",
+    "Sulfur dioxide because sulfate ions decompose to give SO₂ at the anode."
+   ],
+   "answer": 1,
+   "explanation": "In electrolysis of dilute sulfuric acid with inert electrodes, water/hydroxide is oxidised at the anode to give O₂. Hydrogen ions are reduced at the cathode, not oxidised. Sulfate ions are difficult to oxidise and do not give SO₂ under these conditions, and chlorine only appears if significant chloride ions are present."
+  },
+  {
+   "n": 7,
+   "topic": "The rate and extent of chemical change",
+   "q": "A collision theory question: which change will increase the rate of a reaction between two gases the most and why?",
+   "options": [
+    "Lowering the temperature because slower molecules collide more effectively and align better.",
+    "Adding an inert gas at constant pressure because it increases the concentration of reactant molecules.",
+    "Decreasing the pressure because molecules travel further and collide more energetically.",
+    "Increasing the temperature by 20 °C because a larger fraction of molecules will have energy greater than the activation energy, increasing successful collisions."
+   ],
+   "answer": 3,
+   "explanation": "Raising temperature increases kinetic energy so more molecules exceed the activation energy, greatly increasing rate. Decreasing pressure reduces collision frequency, adding an inert gas at constant pressure does not increase reactant concentration, and lowering temperature decreases rates."
+  },
+  {
+   "n": 8,
+   "topic": "The rate and extent of chemical change",
+   "q": "In the reversible reaction N₂(g) + 3H₂(g) ⇌ 2NH₃(g) at equilibrium, which change will increase the equilibrium yield of ammonia and why?",
+   "options": [
+    "Decreasing temperature, because the forward reaction is endothermic so lowering temperature favours products.",
+    "Adding an inert gas at constant volume, because this increases the partial pressures of reactants and favours the forward reaction.",
+    "Increasing pressure, because the forward reaction produces fewer moles of gas (4 → 2) so higher pressure favours ammonia formation.",
+    "Removing some ammonia, because this will shift equilibrium to the left to replace the removed ammonia."
+   ],
+   "answer": 2,
+   "explanation": "For N₂ + 3H₂ ⇌ 2NH₃, increasing pressure favours the side with fewer gas moles, increasing ammonia yield. Removing ammonia shifts equilibrium to the right (not left) to replace it. The forward Haber reaction is exothermic, so decreasing temperature does favour products (this part is true), but the wrong option incorrectly stated the forward reaction was endothermic. Adding an inert gas at constant volume does not change partial pressures of reacting gases significantly."
+  },
+  {
+   "n": 9,
+   "topic": "The rate and extent of chemical change",
+   "q": "A student measures initial rates for the reaction between A and B and finds rate = k[A]¹[B]⁰. Which statement describes the role of B and how the rate changes if [A] doubles and [B] is halved?",
+   "options": [
+    "B is a catalyst; halving its concentration speeds the reaction up while doubling [A] has no effect.",
+    "B is zero order so changing [B] has no effect; doubling [A] doubles the rate while halving [B] leaves the rate unchanged.",
+    "B is first order so halving [B] halves the rate; doubling [A] leaves the rate unchanged because A is zero order.",
+    "B is second order so halving [B] quarters the rate; doubling [A] doubles the rate because A is first order."
+   ],
+   "answer": 1,
+   "explanation": "Rate = k[A]¹[B]⁰ means reaction is first order in A and zero order in B; rate ∝ [A], so doubling [A] doubles rate, and changing [B] has no effect. The wrong options misidentify the orders or confuse catalysts with reactant concentrations."
+  },
+  {
+   "n": 10,
+   "topic": "Energy changes",
+   "q": "A student mixes 50.0 g of water at 20.0 °C with 50.0 g of water at 60.0 °C in a copper calorimeter that can be ignored. What is the final temperature (assume no heat loss and specific heat capacity of water = 4.18 J g⁻¹ °C⁻¹)?",
+   "options": [
+    "40.0 °C because equal masses of water at 20.0 °C and 60.0 °C mix to give the average temperature.",
+    "20.0 °C because mixing with cooler water cools everything to the lower initial temperature.",
+    "26.7 °C because you must divide the temperature change by three for mixing problems.",
+    "60.0 °C because the hotter water determines the final temperature when mixing with cooler water."
+   ],
+   "answer": 0,
+   "explanation": "Equal masses mean final temperature is the average: (20.0 + 60.0)/2 = 40.0 °C. The other options misunderstand heat balance—no division by three, and heat exchange leads to a mean, not staying at one initial temperature."
+  },
+  {
+   "n": 11,
+   "topic": "Chemistry of the atmosphere",
+   "q": "Which statement correctly explains the main reason global average concentrations of carbon dioxide have risen since 1750?",
+   "options": [
+    "Burning fossil fuels for energy and transport releases CO₂ that was previously stored underground, increasing atmospheric CO₂ concentrations.",
+    "Plants have stopped respiring, so they no longer remove CO₂ from the atmosphere.",
+    "The increase is mainly due to volcanic eruptions releasing vast amounts of CO₂ every year since 1750.",
+    "The rise is caused by the oceans releasing CO₂ because sea water temperature has dropped significantly since 1750."
+   ],
+   "answer": 0,
+   "explanation": "The industrial revolution increased combustion of coal, oil and gas, adding CO₂ to the atmosphere. Volcanic CO₂ is minor compared with fossil fuel emissions, plants still respire and also sequester carbon through photosynthesis, and ocean warming (not cooling) would tend to release CO₂; the stated ocean temperature change is incorrect."
+  },
+  {
+   "n": 12,
+   "topic": "Organic chemistry",
+   "q": "Which structural formula represents an alcohol with the molecular formula C3H8O that is a constitutional isomer of propan-1-ol and has a hydroxyl group on the middle carbon?",
+   "options": [
+    "CH3–O–CH2–CH3",
+    "CH3–CH2–CH2–OH",
+    "CH3–CH2–OH",
+    "CH3–CH(OH)–CH3"
+   ],
+   "answer": 3,
+   "explanation": "CH3–CH(OH)–CH3 is the correct structure for propan-2-ol (the alcohol with the OH on the middle carbon). CH3–CH2–CH2–OH is propan-1-ol (OH on the end), CH3–O–CH2–CH3 is an ether (not an alcohol), and CH3–CH2–OH is ethanol (C2H5OH), not C3H8O."
+  },
+  {
+   "n": 13,
+   "topic": "Organic chemistry",
+   "q": "A student partially combusts a sample of ethanol. Which pair of products is produced when combustion is incomplete?",
+   "options": [
+    "Methane and oxygen",
+    "Carbon and nitrogen",
+    "Carbon monoxide and water",
+    "Carbon dioxide and water"
+   ],
+   "answer": 2,
+   "explanation": "Incomplete combustion of ethanol commonly produces carbon monoxide and water because there is not enough oxygen to form carbon dioxide. Carbon dioxide and water are products of complete combustion, methane and oxygen are not combustion products, and carbon and nitrogen are not the typical pair from burning ethanol."
+  },
+  {
+   "n": 14,
+   "topic": "Organic chemistry",
+   "q": "Which reagent and condition would convert ethene into ethane in the laboratory?",
+   "options": [
+    "Hydrogen gas with a nickel catalyst at room or slightly elevated temperature (hydrogenation)",
+    "Hot concentrated potassium hydroxide (elimination)",
+    "Cold aqueous acidified potassium manganate(VII) (oxidation)",
+    "Aqueous bromine at room temperature (addition of Br2 across double bond)"
+   ],
+   "answer": 0,
+   "explanation": "Ethene is hydrogenated to ethane by hydrogen gas in the presence of a metal catalyst such as nickel. Hot KOH causes elimination (forming alkenes), aqueous bromine would add Br2 across the double bond giving a dibromo product, and cold acidified KMnO4 would oxidise the alkene to a diol, not fully hydrogenate to an alkane."
+  },
+  {
+   "n": 15,
+   "topic": "Quantitative chemistry",
+   "q": "What mass of magnesium oxide (MgO) is produced when 0.50 mol of magnesium reacts completely with oxygen? (Mr: Mg = 24.3, O = 16.0)",
+   "options": [
+    "20.2 g",
+    "8.10 g",
+    "12.2 g",
+    "40.4 g"
+   ],
+   "answer": 0,
+   "explanation": "Reaction: 2Mg + O2 → 2MgO, so 1 mol Mg → 1 mol MgO. 0.50 mol Mg gives 0.50 mol MgO. Mr of MgO = 24.3 + 16.0 = 40.3. Mass = moles × Mr = 0.50 × 40.3 = 20.15 g, rounded to 20.2 g. 12.2 g would be if Mr were taken as 24.3×0.5, 40.4 g corresponds to 1.00 mol, and 8.10 g is incorrect arithmetic."
+  },
+  {
+   "n": 16,
+   "topic": "Quantitative chemistry",
+   "q": "A 250.0 cm³ sample of a solution contains 0.0200 mol of solute. What is the concentration in mol dm⁻³?",
+   "options": [
+    "0.200 mol dm⁻³",
+    "0.0000800 mol dm⁻³",
+    "0.0800 mol dm⁻³",
+    "8.00 mol dm⁻³"
+   ],
+   "answer": 2,
+   "explanation": "Convert volume to dm³: 250.0 cm³ = 0.2500 dm³. Concentration = moles ÷ volume = 0.0200 ÷ 0.2500 = 0.0800 mol dm⁻³. 8.00 would be if volume were 0.00250 dm³, 0.200 would be 0.0500 ÷ 0.2500, and 0.0000800 is far too small (0.0200 ÷ 250.0)."
+  },
+  {
+   "n": 17,
+   "topic": "Quantitative chemistry",
+   "q": "Copper(II) sulfate crystals (CuSO4·5H2O) are heated to drive off all water of crystallisation. If 2.50 g of hydrated crystals yield 1.58 g of anhydrous CuSO4, what is the percentage by mass of water in the hydrated crystals? (Give to three significant figures.)",
+   "options": [
+    "36.8 %",
+    "42.1 %",
+    "63.2 %",
+    "27.0 %"
+   ],
+   "answer": 0,
+   "explanation": "Mass of water lost = 2.50 − 1.58 = 0.92 g. Percentage water = (0.92 ÷ 2.50) × 100 = 36.8%. 63.2% would be the remaining salt if confused, 27.0% and 42.1% are arithmetic errors."
+  },
+  {
+   "n": 18,
+   "topic": "Bonding, structure and the properties of matter",
+   "q": "Which statement correctly explains why ionic compounds generally have high melting points?",
+   "options": [
+    "Weak intermolecular forces hold small molecules together so they melt at high temperatures",
+    "Covalent bonds between individual molecules must be broken to melt ionic compounds",
+    "Metallic bonding between positive ions and delocalised electrons produces low melting points",
+    "Strong electrostatic attractions between oppositely charged ions throughout the giant ionic lattice require large amounts of energy to overcome"
+   ],
+   "answer": 3,
+   "explanation": "Ionic compounds form giant lattices with strong electrostatic attractions between oppositely charged ions; breaking these attractions requires much energy, so melting points are high. The other statements confuse intermolecular forces, metallic bonding, and covalent molecular substances with ionic lattices."
+  },
+  {
+   "n": 19,
+   "topic": "Bonding, structure and the properties of matter",
+   "q": "Which material is correctly paired with its dominant type of bonding or structure?",
+   "options": [
+    "Iron — molecular covalent molecules held by van der Waals forces",
+    "Graphite — giant covalent structure; layers of carbon atoms with delocalised electrons",
+    "Silicon dioxide (quartz) — ionic lattice of Si⁴⁺ and O²⁻ ions",
+    "Sodium chloride — giant covalent network of atoms"
+   ],
+   "answer": 1,
+   "explanation": "Graphite is a giant covalent structure with layers of carbon atoms and delocalised electrons allowing conductivity. Silicon dioxide is a giant covalent network, not ionic; sodium chloride is ionic, not covalent network; iron is a metal with metallic bonding, not molecular covalent."
+  },
+  {
+   "n": 20,
+   "topic": "Chemical analysis",
+   "q": "A sample of dilute hydrochloric acid is suspected to contain chloride ions and sulfate ions. Which pair of tests correctly identifies chloride and sulfate ions respectively?",
+   "options": [
+    "Add barium nitrate; a black precipitate indicates chloride. Then add aqueous lead(II) nitrate; no precipitate indicates sulfate.",
+    "Add aqueous silver nitrate; a white precipitate forms (chloride). Then add barium nitrate; a white precipitate forms that is insoluble in dilute hydrochloric acid (sulfate).",
+    "Add aqueous silver nitrate; no precipitate indicates chloride. Then add sodium chloride; a white precipitate indicates sulfate.",
+    "Add aqueous silver nitrate; a blue precipitate indicates chloride. Then add magnesium sulfate; a white precipitate indicates sulfate."
+   ],
+   "answer": 1,
+   "explanation": "Chloride ions give a white precipitate of silver chloride with AgNO3. Sulfate ions give a white precipitate of barium sulfate with Ba(NO3)2 that is insoluble in dilute HCl. A blue or black precipitate are incorrect colours, adding magnesium sulfate or sodium chloride is irrelevant, and 'no precipitate' with AgNO3 would suggest no chloride."
+  },
+  {
+   "n": 21,
+   "topic": "Atomic structure and the periodic table",
+   "q": "An element X has two naturally occurring isotopes: X-63 (69% abundance) and X-65 (31% abundance). Calculate the relative atomic mass of element X (to two decimal places).",
+   "options": [
+    "63.00",
+    "63.38",
+    "63.62",
+    "64.00"
+   ],
+   "answer": 2,
+   "explanation": "Relative atomic mass = (63 × 0.69) + (65 × 0.31) = 43.47 + 20.15 = 63.62. The answer 63.38 would be the result if the abundances were swapped; 64.00 and 63.00 ignore the weighted average."
+  },
+  {
+   "n": 22,
+   "topic": "Atomic structure and the periodic table",
+   "q": "Which of these statements correctly explains why noble gases are unreactive?",
+   "options": [
+    "Noble gas atoms lack electrons entirely, so there are no electrons available for bonding.",
+    "Noble gases always form ions with a charge of +1, which prevents further reactions.",
+    "Noble gas atoms have a full outer shell of electrons, so they do not tend to gain, lose or share electrons.",
+    "Noble gas atoms have more protons than electrons, making them electrically positive and unreactive."
+   ],
+   "answer": 2,
+   "explanation": "Noble gases have complete valence electron shells so they are stable and do not need to gain, lose or share electrons. The wrong options are chemically impossible: noble gases do have electrons, they do not normally form +1 ions, and they are electrically neutral (protons = electrons)."
+  },
+  {
+   "n": 23,
+   "topic": "Using resources",
+   "q": "A copper pipe costs £45 and lasts 40 years. A plastic pipe costs £15 and lasts 10 years. Ignoring maintenance and inflation, which is cheaper per year and by how much?",
+   "options": [
+    "Plastic is cheaper by £0.75 per year.",
+    "Plastic is cheaper by £0.375 per year.",
+    "Copper is cheaper by £0.75 per year.",
+    "Copper is cheaper by £0.375 per year."
+   ],
+   "answer": 3,
+   "explanation": "Cost per year: copper £45 ÷ 40 = £1.125/year; plastic £15 ÷ 10 = £1.50/year. Copper is cheaper by £1.50 − £1.125 = £0.375 per year. The other options reverse the difference or calculate it incorrectly."
+  },
+  {
+   "n": 24,
+   "topic": "Using resources",
+   "q": "Which statement best describes a sustainable advantage of recycling aluminium rather than making aluminium from bauxite ore?",
+   "options": [
+    "Making aluminium from bauxite produces no waste, so recycling is unnecessary.",
+    "Recycling aluminium requires more energy than extraction, so it increases electricity demand.",
+    "Recycled aluminium is chemically different and therefore never suitable for food packaging.",
+    "Recycling aluminium uses much less energy, so it reduces carbon dioxide emissions and conserves finite resources."
+   ],
+   "answer": 3,
+   "explanation": "Recycling aluminium requires far less energy than producing aluminium from bauxite, lowering CO2 emissions and conserving resources. Recycled aluminium is suitable for many uses including food packaging, extraction from bauxite does produce waste (bauxite residue), and recycling does not use more energy than primary production."
+  },
+  {
+   "n": 25,
+   "topic": "Chemical changes",
+   "q": "A student adds excess zinc to 25.0 cm³ of 0.100 mol dm⁻³ copper(II) sulfate solution: Zn + Cu2+ → Zn2+ + Cu. What mass of copper (Cu, Ar = 63.5) could form at maximum? (Give your answer to three significant figures.)",
+   "options": [
+    "1.59 g",
+    "0.159 g",
+    "0.0795 g",
+    "0.318 g"
+   ],
+   "answer": 1,
+   "explanation": "Moles of Cu2+ = concentration × volume = 0.100 mol dm⁻³ × 0.0250 dm³ = 0.00250 mol. 1 mol Cu2+ gives 1 mol Cu, so moles Cu = 0.00250. Mass = 0.00250 × 63.5 = 0.15875 g ≈ 0.159 g. 0.318 g would be double, 0.0795 g is half, and 1.59 g is 10×, so they are incorrect."
+  },
+  {
+   "n": 26,
+   "topic": "Chemical changes",
+   "q": "Which observation would best indicate that a metal has reacted with dilute sulfuric acid to produce hydrogen gas?",
+   "options": [
+    "Bubbles form on the metal surface and a squeaky pop is heard when a lit splint is brought to the gas.",
+    "The acid becomes solid and the metal disappears without bubbling.",
+    "A colourless liquid forms with a sweet smell and no bubbles.",
+    "The metal turns black and no gas is produced."
+   ],
+   "answer": 0,
+   "explanation": "Reaction of a metal with dilute sulfuric acid typically produces hydrogen gas, seen as bubbling; a lit splint makes a characteristic squeaky pop. Formation of a black solid without gas suggests a different chemical change or contamination; a sweet smell and no bubbles are not typical of H2; acids do not become solid under these conditions."
+  },
+  {
+   "n": 27,
+   "topic": "The rate and extent of chemical change",
+   "q": "A student investigates how temperature affects the rate of a reaction and plots a graph of concentration of reactant against time. Which change would show an increased rate on this graph?",
+   "options": [
+    "The final concentration of reactant at long times is higher, showing a faster rate.",
+    "The time axis is stretched, producing the same-shaped curve but shifted right.",
+    "The line becomes a horizontal straight line, showing constant concentration over time.",
+    "The line becomes steeper at early times, showing concentration falls faster as temperature increases."
+   ],
+   "answer": 3,
+   "explanation": "An increased rate means the reactant concentration decreases faster, so the slope of concentration vs time is steeper. A higher final concentration would indicate less reaction (not a faster rate); a horizontal line means no change (no reaction); stretching the time axis without changing the data does not represent an actual change in rate."
+  },
+  {
+   "n": 28,
+   "topic": "Quantitative chemistry",
+   "q": "A student adds 2.40 g of magnesium to excess sulfuric acid and dissolves the resulting magnesium sulfate in water to make 250.0 cm³ of solution. Using Mr(Mg) = 24.3, what is the concentration of magnesium ions (Mg²⁺) in the solution in mol dm⁻³? Assume all the magnesium reacts and gives Mg²⁺ in a 1:1 ratio.",
+   "options": [
+    "0.395 mol dm⁻³",
+    "0.198 mol dm⁻³",
+    "0.400 mol dm⁻³",
+    "0.000395 mol dm⁻³"
+   ],
+   "answer": 0,
+   "explanation": "Moles of Mg = 2.40 ÷ 24.3 = 0.0988 mol. Concentration = moles ÷ volume in dm³ = 0.0988 ÷ 0.250 = 0.395 mol dm⁻³. The 0.400 value comes from using Mr = 24.0 (2.40 ÷ 24.0 = 0.100 → 0.100 ÷ 0.250 = 0.400). The 0.000395 arises from incorrectly dividing by 250 instead of 0.250. The 0.198 value is about half the correct concentration, a common error from using an incorrect volume (for example dividing by 0.500 dm³)."
+  },
+  {
+   "n": 29,
+   "topic": "The rate and extent of chemical change",
+   "q": "The equilibrium: 2SO₂(g) + O₂(g) ⇌ 2SO₃(g) is exothermic in the forward direction. A chemist wants to increase the yield of SO₃ and also increase the rate at which the forward reaction reaches equilibrium. Which combination of changes to the system will achieve both aims?",
+   "options": [
+    "Decrease the pressure and add a catalyst (keeping temperature constant).",
+    "Add more O₂ and increase the temperature (no catalyst).",
+    "Increase the temperature and decrease the pressure (no catalyst).",
+    "Increase the pressure and add a catalyst (keeping temperature constant)."
+   ],
+   "answer": 3,
+   "explanation": "Increasing pressure shifts the equilibrium to the side with fewer gas molecules (2SO₃ from 3 total reactant molecules), increasing SO₃ yield. A catalyst increases the rate of both forward and reverse reactions so equilibrium is reached faster but does not change yield. Increasing temperature would shift the exothermic equilibrium left, reducing SO₃, and decreasing pressure moves equilibrium the wrong way."
+  },
+  {
+   "n": 30,
+   "topic": "Energy changes",
+   "q": "A student reacts 2.00 g of a solid sample (molar mass 58.5 g mol⁻¹) with excess acid. The temperature of 100.0 g of water around the reaction rises from 18.5 °C to 32.5 °C. Assume all heat produced is absorbed by the water and use specific heat capacity 4.18 J g⁻¹ °C⁻¹. What is the molar enthalpy change (ΔH) for the reaction in kJ mol⁻¹? (Sign the answer negative for an exothermic reaction.)",
+   "options": [
+    "−85.5 kJ mol⁻¹ (to three significant figures).",
+    "−342 kJ mol⁻¹ (to three significant figures).",
+    "+171 kJ mol⁻¹ (to three significant figures).",
+    "−171 kJ mol⁻¹ (to three significant figures)."
+   ],
+   "answer": 3,
+   "explanation": "Heat absorbed by water q = 100.0 g × 4.18 J g⁻¹ °C⁻¹ × (32.5−18.5) °C = 5 852 J = 5.852 kJ. Moles of sample = 2.00 g ÷ 58.5 g mol⁻¹ = 0.03419 mol. Molar enthalpy = 5.852 kJ ÷ 0.03419 mol = 171.2 kJ mol⁻¹ released, so ΔH = −171 kJ mol⁻¹. The positive +171 kJ mol⁻¹ ignores exothermic sign; −85.5 kJ mol⁻¹ halves the value (likely using 0.0684 mol), and −342 kJ mol⁻¹ doubles it (likely using half the mass or wrong ΔT)."
+  }
+ ]
+}

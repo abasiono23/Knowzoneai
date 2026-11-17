@@ -5,7 +5,12 @@ import type { User } from './api';
  * the terms. The account is only created after consent, and the password never
  * goes into route params.
  */
-type PendingSignup = { name: string; email: string; password: string };
+type PendingSignup = {
+  name: string;
+  email: string;
+  password: string;
+  /** The country chosen on the form (ISO code). */ region?: string;
+};
 let pendingSignup: PendingSignup | null = null;
 
 export const signupDraft = {

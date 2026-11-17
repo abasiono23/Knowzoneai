@@ -1,0 +1,531 @@
+{
+ "id": "jamb-physics-p6",
+ "exam": "jamb",
+ "subject": "physics",
+ "year": null,
+ "number": 6,
+ "source": "ai",
+ "minutes": 27,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Magnetism and electromagnetic induction",
+   "q": "A straight wire of length 0.20 m carrying a current of 5.0 A is placed perpendicular to a uniform magnetic field of flux density 0.30 T. Calculate the force on the wire.",
+   "options": [
+    "0.30 N",
+    "0.030 N",
+    "3.0 N",
+    "30 N"
+   ],
+   "answer": 0,
+   "explanation": "The magnetic force is F = BIL sin θ, with θ = 90° so sin θ = 1. Thus F = 0.30 × 5.0 × 0.20 = 0.30 N. The value 0.030 N results from an error of one decimal place, while 3.0 N and 30 N come from misplacing the decimal point."
+  },
+  {
+   "n": 2,
+   "topic": "Magnetism and electromagnetic induction",
+   "q": "A coil of 200 turns encloses a magnetic flux that decreases uniformly from 0.050 Wb to 0.010 Wb in 0.20 s. Calculate the average induced emf in the coil.",
+   "options": [
+    "0.20 V",
+    "40 V",
+    "8.0 V",
+    "10 V"
+   ],
+   "answer": 1,
+   "explanation": "The change in flux is 0.050 − 0.010 = 0.040 Wb, so the average induced emf is 200 × 0.040 ÷ 0.20 = 40 V. A value of 0.20 V is obtained by omitting the 200 turns, while 8.0 V is obtained if the time interval is not used correctly."
+  },
+  {
+   "n": 3,
+   "topic": "Scalars and vectors",
+   "q": "Two vectors are given as a = 3i + 4j and b = 4i − 3j. What is the angle between them?",
+   "options": [
+    "45°",
+    "90°",
+    "180°",
+    "0°"
+   ],
+   "answer": 1,
+   "explanation": "The dot product is a · b = (3 × 4) + (4 × −3) = 12 − 12 = 0. Since cos θ = (a · b)/(|a||b|) = 0, the angle θ is 90°. The vectors therefore have equal magnitudes but are perpendicular, not parallel or oppositely directed."
+  },
+  {
+   "n": 4,
+   "topic": "Scalars and vectors",
+   "q": "A force F = (5i + 2j) N acts on a crate in Onitsha and displaces it through s = (2i + 3j) m. Calculate the work done by the force.",
+   "options": [
+    "10 J",
+    "19 J",
+    "4 J",
+    "16 J"
+   ],
+   "answer": 3,
+   "explanation": "Work done is the scalar product F · s = (5 × 2) + (2 × 3) = 10 + 6 = 16 J. The value 4 J comes from subtracting the two products, while 19 J comes from mixing the i and j components incorrectly."
+  },
+  {
+   "n": 5,
+   "topic": "Light and optics",
+   "q": "A converging lens of focal length 15 cm forms a real image twice the size of the object. Calculate the object distance.",
+   "options": [
+    "7.5 cm",
+    "22.5 cm",
+    "30.0 cm",
+    "15.0 cm"
+   ],
+   "answer": 1,
+   "explanation": "For a real image, magnification m = v/u = 2, so v = 2u. Using 1/f = 1/u + 1/v gives 1/15 = 1/u + 1/(2u) = 3/(2u), hence u = 22.5 cm. Choosing 30.0 cm gives equal object and image distances and a magnification of 1, not 2."
+  },
+  {
+   "n": 6,
+   "topic": "Motion",
+   "q": "A bus moving along a straight road with uniform acceleration covers 12 m during the 2nd second and 20 m during the 4th second. Calculate its acceleration.",
+   "options": [
+    "2.0 m/s²",
+    "4.0 m/s²",
+    "8.0 m/s²",
+    "3.0 m/s²"
+   ],
+   "answer": 1,
+   "explanation": "The distance covered in the nth second is sₙ = u + (a/2)(2n − 1). Thus 12 = u + 1.5a and 20 = u + 3.5a. Subtracting gives 8 = 2a, so a = 4.0 m/s²."
+  },
+  {
+   "n": 7,
+   "topic": "Motion",
+   "q": "A stone is dropped from rest into a dry well 45 m deep. Taking g = 10 m/s² and the speed of sound in air as 340 m/s, how long after the stone is released will a person at the top hear the splash?",
+   "options": [
+    "4.50 s",
+    "3.13 s",
+    "3.26 s",
+    "3.00 s"
+   ],
+   "answer": 1,
+   "explanation": "The stone falls for t = √(2h/g) = √(90/10) = 3.0 s. The sound then takes 45/340 ≈ 0.13 s to reach the top, so the total time is about 3.13 s. A result of 3.00 s ignores the time taken by the sound to travel up the well."
+  },
+  {
+   "n": 8,
+   "topic": "Motion",
+   "q": "A football is kicked from level ground in Jos and reaches a maximum height of 20 m. Taking g = 10 m/s² and neglecting air resistance, calculate the vertical component of its initial velocity.",
+   "options": [
+    "10 m/s",
+    "14.1 m/s",
+    "20 m/s",
+    "40 m/s"
+   ],
+   "answer": 2,
+   "explanation": "At maximum height the vertical velocity is zero, so u_y² = 2gH = 2 × 10 × 20 = 400. Thus the vertical component of the initial velocity is √400 = 20 m/s. A value near 14.1 m/s comes from omitting the factor 2 in the formula."
+  },
+  {
+   "n": 9,
+   "topic": "Current electricity",
+   "q": "A battery of e.m.f. 12 V and internal resistance 0.80 Ω is connected to an external resistor of 5.2 Ω. Calculate the terminal p.d. of the battery.",
+   "options": [
+    "1.60 V",
+    "12.0 V",
+    "10.0 V",
+    "10.4 V"
+   ],
+   "answer": 3,
+   "explanation": "The total resistance is 5.2 Ω + 0.80 Ω = 6.0 Ω, so the current is 12 V ÷ 6.0 Ω = 2.0 A. The terminal p.d. is 12 V − (2.0 A × 0.80 Ω) = 10.4 V. The value 1.60 V is the lost volts across the internal resistance, while 12.0 V ignores the internal drop."
+  },
+  {
+   "n": 10,
+   "topic": "Current electricity",
+   "q": "A current of 0.50 A flows through a conductor for 2.0 minutes. Calculate the number of electrons that pass a point in the conductor. (e = 1.6 × 10⁻¹⁹ C)",
+   "options": [
+    "1.88 × 10²⁰",
+    "6.25 × 10¹⁸",
+    "3.75 × 10²⁰",
+    "3.00 × 10²⁰"
+   ],
+   "answer": 2,
+   "explanation": "The time is 2.0 × 60 = 120 s, so the charge is Q = It = 0.50 × 120 = 60 C. The number of electrons is Q ÷ e = 60 ÷ (1.6 × 10⁻¹⁹) = 3.75 × 10²⁰. The value 6.25 × 10¹⁸ results from using 2.0 s instead of converting the time to seconds."
+  },
+  {
+   "n": 11,
+   "topic": "Current electricity",
+   "q": "A student in Kaduna connects a 9 Ω resistor and an 18 Ω resistor in parallel. The parallel combination is then connected in series with a 6 Ω resistor across a 12 V battery of negligible internal resistance. Calculate the current drawn from the battery.",
+   "options": [
+    "0.36 A",
+    "1.0 A",
+    "0.80 A",
+    "2.0 A"
+   ],
+   "answer": 1,
+   "explanation": "The parallel resistance is (9 × 18) ÷ (9 + 18) = 6 Ω. The total resistance is 6 Ω + 6 Ω = 12 Ω, so the current is 12 V ÷ 12 Ω = 1.0 A. The value 2.0 A would be obtained by ignoring the 6 Ω series resistor, while 0.36 A comes from adding all the resistances."
+  },
+  {
+   "n": 12,
+   "topic": "Atomic and nuclear physics",
+   "q": "A phosphorus-32 nucleus, ³²₁₅P, undergoes beta-minus decay. Which nucleus is formed?",
+   "options": [
+    "³¹₁₅P",
+    "³²₁₆S",
+    "³²₁₄Si",
+    "²⁸₁₃Al"
+   ],
+   "answer": 1,
+   "explanation": "In beta-minus decay, the mass number stays the same and the atomic number increases by one. Therefore ³²₁₅P changes to ³²₁₆S. The nucleus ³²₁₄Si would correspond to a decrease in atomic number, as in beta-plus decay."
+  },
+  {
+   "n": 13,
+   "topic": "Sound",
+   "q": "An open pipe in a music hall in Abeokuta has a fundamental frequency of 300 Hz. What is the frequency of its second overtone?",
+   "options": [
+    "600 Hz",
+    "450 Hz",
+    "900 Hz",
+    "1 200 Hz"
+   ],
+   "answer": 2,
+   "explanation": "An open pipe produces harmonics at f, 2f, 3f, and so on. The second overtone is the third harmonic, so its frequency is 3 × 300 = 900 Hz. The value 600 Hz is the first overtone, not the second."
+  },
+  {
+   "n": 14,
+   "topic": "Newton’s laws and momentum",
+   "q": "A girl in Ibadan pushes a 10 kg cart from rest with a constant horizontal force of 30 N against a constant frictional force of 10 N. What is the speed of the cart after 4.0 s?",
+   "options": [
+    "12 m/s",
+    "8.0 m/s",
+    "4.0 m/s",
+    "2.0 m/s"
+   ],
+   "answer": 1,
+   "explanation": "The net force is 30 N − 10 N = 20 N, so the acceleration is 20 ÷ 10 = 2.0 m/s². Starting from rest, the speed after 4.0 s is 2.0 × 4.0 = 8.0 m/s. The value 12 m/s results from ignoring friction."
+  },
+  {
+   "n": 15,
+   "topic": "Newton’s laws and momentum",
+   "q": "A 0.15 kg cricket ball in Lagos moves horizontally at 20 m/s and is hit straight back along the same line at 30 m/s. What is the magnitude of the change in momentum of the ball?",
+   "options": [
+    "4.5 kg m/s",
+    "1.5 kg m/s",
+    "7.5 kg m/s",
+    "3.0 kg m/s"
+   ],
+   "answer": 2,
+   "explanation": "Since the ball reverses direction, the change in speed is 30 + 20 = 50 m/s in magnitude. Thus the magnitude of the change in momentum is 0.15 × 50 = 7.5 kg m/s. The value 1.5 kg m/s comes from using 30 − 20 = 10 m/s without allowing for the reversal of direction."
+  },
+  {
+   "n": 16,
+   "topic": "Elasticity and pressure",
+   "q": "An aluminium rod in a workshop in Ilorin has length 1.5 m and cross-sectional area 2.0 × 10⁻⁶ m². It stretches by 0.30 mm when a tensile force of 60 N is applied. Calculate Young's modulus for aluminium.",
+   "options": [
+    "3.0 × 10¹¹ Pa",
+    "7.5 × 10¹⁰ Pa",
+    "1.5 × 10¹¹ Pa",
+    "1.5 × 10⁸ Pa"
+   ],
+   "answer": 2,
+   "explanation": "Stress = 60/(2.0 × 10⁻⁶) = 3.0 × 10⁷ Pa. Strain = (0.30 × 10⁻³)/1.5 = 2.0 × 10⁻⁴, so Young's modulus = stress/strain = 1.5 × 10¹¹ Pa. Using millimetres directly for the extension gives 1.5 × 10⁸ Pa, which is far too small."
+  },
+  {
+   "n": 17,
+   "topic": "Waves",
+   "q": "A guitar string in a music studio in Port Harcourt is 0.60 m long between fixed supports. It produces its first overtone at a frequency of 450 Hz. Calculate the speed of the transverse wave on the string.",
+   "options": [
+    "540 m/s",
+    "900 m/s",
+    "135 m/s",
+    "270 m/s"
+   ],
+   "answer": 3,
+   "explanation": "At the first overtone the string vibrates in two loops, so its wavelength is 0.60 m. Hence v = fλ = 450 × 0.60 = 270 m/s. Using the fundamental wavelength of 1.2 m would give 540 m/s."
+  },
+  {
+   "n": 18,
+   "topic": "Gas laws",
+   "q": "A closed vessel in Warri contains a mixture of 0.20 mol of oxygen and 0.40 mol of nitrogen at the same temperature. If the total pressure is 3.0 × 10⁵ Pa, calculate the partial pressure of oxygen.",
+   "options": [
+    "6.0 × 10⁴ Pa",
+    "1.5 × 10⁵ Pa",
+    "2.0 × 10⁵ Pa",
+    "1.0 × 10⁵ Pa"
+   ],
+   "answer": 3,
+   "explanation": "The mole fraction of oxygen is 0.20/(0.20 + 0.40) = 1/3. Its partial pressure is therefore (1/3) × 3.0 × 10⁵ = 1.0 × 10⁵ Pa. The partial pressure of nitrogen would be 2.0 × 10⁵ Pa, while 6.0 × 10⁴ Pa comes from multiplying 0.20 by the total pressure without using the mole fraction."
+  },
+  {
+   "n": 19,
+   "topic": "Electrostatics and capacitors",
+   "q": "Two small point charges of +2.0 μC and +8.0 μC are placed 0.30 m apart in air. Calculate the magnitude of the electrostatic force between them. [k = 9.0 × 10⁹ N m² C⁻²]",
+   "options": [
+    "14.4 N",
+    "1.6 N",
+    "4.8 N",
+    "0.48 N"
+   ],
+   "answer": 1,
+   "explanation": "F = kq₁q₂/r² = (9.0 × 10⁹ × 2.0 × 10⁻⁶ × 8.0 × 10⁻⁶)/(0.30)² = 0.144/0.09 = 1.6 N. Dividing by 0.30 instead of 0.30² gives 0.48 N."
+  },
+  {
+   "n": 20,
+   "topic": "Elasticity and pressure",
+   "q": "A metal rod at a construction site in Ogbomoso is compressed by 0.50 mm under a force of 200 N. Assuming Hooke's law is obeyed, calculate the elastic potential energy stored in the rod.",
+   "options": [
+    "0.050 J",
+    "100 J",
+    "0.025 J",
+    "0.10 J"
+   ],
+   "answer": 0,
+   "explanation": "The elastic potential energy is ½Fe = ½ × 200 × (0.50 × 10⁻³) = 0.050 J. Forgetting the ½ factor would double the value to 0.10 J."
+  },
+  {
+   "n": 21,
+   "topic": "Waves",
+   "q": "In a ripple tank experiment in Enugu, straight water waves pass from a deep region into a shallow region. The frequency is 8.0 Hz, the wave speed in the deep region is 2.4 m/s and the wave speed in the shallow region is 1.6 m/s. Calculate the wavelength in the shallow region.",
+   "options": [
+    "12.8 m",
+    "0.20 m",
+    "0.30 m",
+    "5.0 m"
+   ],
+   "answer": 1,
+   "explanation": "Frequency does not change at the boundary, so λ = v/f = 1.6/8.0 = 0.20 m in the shallow region. The deep-region wavelength is 2.4/8.0 = 0.30 m."
+  },
+  {
+   "n": 22,
+   "topic": "Gas laws",
+   "q": "Calculate the volume occupied by 8.0 g of oxygen gas at s.t.p. [O = 16; molar volume of a gas at s.t.p. = 22.4 dm³]",
+   "options": [
+    "22.4 dm³",
+    "5.6 dm³",
+    "2.8 dm³",
+    "11.2 dm³"
+   ],
+   "answer": 1,
+   "explanation": "Oxygen is diatomic, so its molar mass is 32 g/mol. Thus 8.0 g is 8.0/32 = 0.25 mol, and the volume at s.t.p. is 0.25 × 22.4 = 5.6 dm³. Treating oxygen as monatomic would double the volume to 11.2 dm³."
+  },
+  {
+   "n": 23,
+   "topic": "Electrostatics and capacitors",
+   "q": "A parallel-plate capacitor in a school laboratory in Zaria has a potential difference of 100 V across plates separated by 4.0 mm. Calculate the electric field strength between the plates.",
+   "options": [
+    "2.5 × 10⁴ V m⁻¹",
+    "2.5 × 10¹ V m⁻¹",
+    "2.5 × 10⁵ V m⁻¹",
+    "4.0 × 10⁻¹ V m⁻¹"
+   ],
+   "answer": 0,
+   "explanation": "The field is uniform, so E = V/d = 100/(4.0 × 10⁻³) = 2.5 × 10⁴ V m⁻¹. Using 4.0 instead of 0.004 m gives 2.5 × 10¹ V m⁻¹, which is incorrect because the separation must be in metres."
+  },
+  {
+   "n": 24,
+   "topic": "Elasticity and pressure",
+   "q": "The upper surface of a flat roof of a building in Akure has area 40 m². Taking atmospheric pressure as 1.0 × 10⁵ Pa, calculate the force exerted by the atmosphere on this surface.",
+   "options": [
+    "4.0 × 10⁵ N",
+    "2.5 × 10³ N",
+    "4.0 × 10⁶ N",
+    "4.0 × 10³ N"
+   ],
+   "answer": 2,
+   "explanation": "Force = pressure × area = (1.0 × 10⁵) × 40 = 4.0 × 10⁶ N. The atmosphere also exerts an upward force on the underside, but the question asks for the force on the upper surface."
+  },
+  {
+   "n": 25,
+   "topic": "Heat and temperature",
+   "q": "A 0.50 kg aluminium block in a workshop in Enugu is heated from 20°C to 60°C. If the specific heat capacity of aluminium is 900 J/(kg·°C), calculate the heat absorbed by the block.",
+   "options": [
+    "3.6 × 10⁴ J",
+    "4.5 × 10³ J",
+    "9.0 × 10³ J",
+    "1.8 × 10⁴ J"
+   ],
+   "answer": 3,
+   "explanation": "Heat absorbed is Q = mcΔT = 0.50 × 900 × (60 − 20) = 18 000 J = 1.8 × 10⁴ J. Using a temperature change of 10°C gives 4.5 × 10³ J, while using 80°C as the temperature change gives 3.6 × 10⁴ J."
+  },
+  {
+   "n": 26,
+   "topic": "Work, energy and power",
+   "q": "A hoist in a warehouse in Kano raises a 40 kg load through a vertical height of 6.0 m in 5.0 s. If the hoist is 60% efficient, calculate the input power it requires. (g = 10 m/s²)",
+   "options": [
+    "288 W",
+    "800 W",
+    "1200 W",
+    "480 W"
+   ],
+   "answer": 1,
+   "explanation": "Useful power = mgh/t = 40 × 10 × 6.0 ÷ 5.0 = 480 W. Since efficiency = useful power ÷ input power, input power = 480 ÷ 0.60 = 800 W. Giving 480 W ignores the efficiency, while 288 W is obtained by wrongly multiplying 480 W by 0.60."
+  },
+  {
+   "n": 27,
+   "topic": "Work, energy and power",
+   "q": "A ball of mass 0.20 kg is released from rest from a height of 5.0 m above the ground. Neglecting air resistance, calculate its speed just before it hits the ground. (g = 10 m/s²)",
+   "options": [
+    "50 m/s",
+    "10 m/s",
+    "√50 m/s",
+    "100 m/s"
+   ],
+   "answer": 1,
+   "explanation": "Mechanical energy is conserved, so mgh = ½mv² and v = √(2gh). Therefore v = √(2 × 10 × 5.0) = √100 = 10 m/s. Using v = √(gh) gives √50 m/s, while using v = gh gives 50 m/s."
+  },
+  {
+   "n": 28,
+   "topic": "Work, energy and power",
+   "q": "A force of 50 N stretches a spring by 0.10 m within its elastic limit. Calculate the elastic potential energy stored in the spring.",
+   "options": [
+    "2.5 J",
+    "5.0 J",
+    "0.50 J",
+    "0.25 J"
+   ],
+   "answer": 0,
+   "explanation": "The energy stored in a stretched spring within the elastic limit is ½ × force × extension. Thus energy = ½ × 50 × 0.10 = 2.5 J. Omitting the ½ gives 5.0 J, while using force × extension² gives 0.50 J."
+  },
+  {
+   "n": 29,
+   "topic": "Measurement and units",
+   "q": "A bottle contains 750 cm³ of palm oil of density 0.90 g/cm³. Calculate the mass of the palm oil in kilograms.",
+   "options": [
+    "0.675 kg",
+    "6.75 kg",
+    "0.833 kg",
+    "0.0675 kg"
+   ],
+   "answer": 0,
+   "explanation": "Mass = density × volume = 0.90 × 750 = 675 g = 0.675 kg. Dividing volume by density instead of multiplying gives about 0.833 kg, and converting grams to kilograms incorrectly can give 6.75 kg."
+  },
+  {
+   "n": 30,
+   "topic": "Simple machines",
+   "q": "A simple machine in a workshop in Aba has a velocity ratio of 6.0 and an efficiency of 40%. Calculate its mechanical advantage.",
+   "options": [
+    "0.24",
+    "2.4",
+    "6.4",
+    "15"
+   ],
+   "answer": 1,
+   "explanation": "Efficiency = (mechanical advantage ÷ velocity ratio) × 100%. Thus mechanical advantage = 0.40 × 6.0 = 2.4. Dividing the velocity ratio by the efficiency wrongly gives 15, which would also imply an unrealistic efficiency above 100% if taken as mechanical advantage."
+  },
+  {
+   "n": 31,
+   "topic": "Simple machines",
+   "q": "Which of the following is an example of a second-class lever?",
+   "options": [
+    "Pair of scissors",
+    "Fishing rod",
+    "Nutcracker",
+    "See-saw"
+   ],
+   "answer": 2,
+   "explanation": "In a second-class lever, the load lies between the fulcrum and the effort. A nutcracker has the nut, which is the load, between the hinge and the hand applying the effort. Scissors and a see-saw are first-class levers, while a fishing rod is a third-class lever."
+  },
+  {
+   "n": 32,
+   "topic": "Motion",
+   "q": "A pick-up van in Abeokuta starts with a speed of 8.0 m/s and accelerates uniformly at 1.5 m/s² for 4.0 s. It then brakes uniformly and comes to rest in 5.0 s. Calculate the total distance travelled by the van.",
+   "options": [
+    "44 m",
+    "35 m",
+    "79 m",
+    "67 m"
+   ],
+   "answer": 2,
+   "explanation": "During acceleration, s₁ = ut + ½at² = 8.0(4.0) + ½(1.5)(4.0)² = 44 m, and the speed becomes 8.0 + 1.5(4.0) = 14 m/s. During braking, s₂ = ½(14 + 0)(5.0) = 35 m, so total distance = 44 + 35 = 79 m. The 44 m figure is only the distance covered while accelerating."
+  },
+  {
+   "n": 33,
+   "topic": "Motion",
+   "q": "A football is kicked from level ground in Owerri with a speed of 15 m/s at 53° to the horizontal. Taking g = 10 m/s², sin 53° = 0.80 and cos 53° = 0.60, calculate the horizontal range of the ball.",
+   "options": [
+    "27.0 m",
+    "21.6 m",
+    "10.8 m",
+    "7.2 m"
+   ],
+   "answer": 1,
+   "explanation": "Horizontal range R = u² sin 2θ / g = 15²(2 sin 53° cos 53°)/10 = 225(2 × 0.80 × 0.60)/10 = 21.6 m. Using only one factor of sin 53° cos 53° gives 10.8 m, while 7.2 m is the maximum height."
+  },
+  {
+   "n": 34,
+   "topic": "Motion",
+   "q": "A trader's car in Kano starts from rest and accelerates uniformly to 20 m/s in 8.0 s. It maintains this speed for 15 s and then decelerates uniformly to rest in 5.0 s. Calculate the total distance travelled by the car.",
+   "options": [
+    "350 m",
+    "510 m",
+    "430 m",
+    "480 m"
+   ],
+   "answer": 2,
+   "explanation": "The acceleration distance is ½(0 + 20)(8.0) = 80 m, the constant-speed distance is 20 × 15 = 300 m, and the deceleration distance is ½(20 + 0)(5.0) = 50 m. Adding these gives 80 + 300 + 50 = 430 m. Using 20 m/s for the first 8.0 s would wrongly add an extra 80 m and give 510 m."
+  },
+  {
+   "n": 35,
+   "topic": "Scalars and vectors",
+   "q": "A force acting on a bolt in a workshop in Aba has components 15 N due west and 8 N due north. What are the magnitude and quadrant of the force vector?",
+   "options": [
+    "7 N, second quadrant",
+    "23 N, second quadrant",
+    "17 N, second quadrant",
+    "17 N, first quadrant"
+   ],
+   "answer": 2,
+   "explanation": "The magnitude is √(15² + 8²) = √(225 + 64) = √289 = 17 N. A westward component is negative on the x-axis and a northward component is positive on the y-axis, so the vector lies in the second quadrant. Subtracting or adding the component magnitudes gives 7 N or 23 N, which is incorrect."
+  },
+  {
+   "n": 36,
+   "topic": "Magnetism and electromagnetic induction",
+   "q": "A straight copper wire of length 0.20 m carrying a current of 3.0 A is placed in a uniform magnetic field of flux density 0.25 T. If the wire makes an angle of 30° with the field, calculate the force on the wire.",
+   "options": [
+    "0.015 N",
+    "0.15 N",
+    "0.075 N",
+    "0.13 N"
+   ],
+   "answer": 2,
+   "explanation": "The magnetic force is F = BIL sinθ = 0.25 × 3.0 × 0.20 × sin 30° = 0.075 N. Omitting the sine factor gives 0.15 N, while using cos 30° instead gives about 0.13 N."
+  },
+  {
+   "n": 37,
+   "topic": "Magnetism and electromagnetic induction",
+   "q": "A coil of 200 turns and area 0.010 m² is placed with its plane perpendicular to a uniform magnetic field. The flux density increases uniformly from 0.10 T to 0.50 T in 0.20 s. Calculate the average induced emf in the coil.",
+   "options": [
+    "0.004 V",
+    "4.0 V",
+    "0.80 V",
+    "0.020 V"
+   ],
+   "answer": 1,
+   "explanation": "By Faraday's law, E = NΔΦ/Δt = N A ΔB/Δt = 200 × 0.010 × (0.50 − 0.10) / 0.20 = 4.0 V. Omitting the number of turns gives 0.020 V, while omitting the time interval gives 0.80 V."
+  },
+  {
+   "n": 38,
+   "topic": "Magnetism and electromagnetic induction",
+   "q": "An a.c. generator in a school laboratory has a rectangular coil rotating steadily in a uniform magnetic field. The induced emf is greatest when the plane of the coil is",
+   "options": [
+    "at 30° to the magnetic field",
+    "parallel to the magnetic field",
+    "perpendicular to the magnetic field",
+    "at 60° to the magnetic field"
+   ],
+   "answer": 1,
+   "explanation": "The induced emf depends on the rate at which the magnetic flux through the coil changes, which is greatest when the coil is cutting the field lines most rapidly. This occurs when the plane of the coil is parallel to the magnetic field, where the flux is momentarily zero but its rate of change is maximum. When the plane is perpendicular to the field, the flux is maximum but the induced emf is zero."
+  },
+  {
+   "n": 39,
+   "topic": "Light and optics",
+   "q": "In a physics laboratory in Abeokuta, light passes from water of refractive index 4/3 into glass of refractive index 3/2. What is the refractive index of glass with respect to water?",
+   "options": [
+    "9/8",
+    "8/9",
+    "2/1",
+    "17/12"
+   ],
+   "answer": 0,
+   "explanation": "The refractive index of glass with respect to water is n(glass)/n(water) = (3/2) ÷ (4/3) = 9/8. The value 8/9 is the refractive index of water with respect to glass, obtained by inverting the ratio."
+  },
+  {
+   "n": 40,
+   "topic": "Atomic and nuclear physics",
+   "q": "The fission of a uranium-235 nucleus in a reactor can be represented by ²³⁵₉₂U + ¹₀n → ¹⁴¹₅₆Ba + ⁹²₃₆Kr + x neutrons. What is the value of x?",
+   "options": [
+    "3",
+    "4",
+    "2",
+    "1"
+   ],
+   "answer": 0,
+   "explanation": "The mass numbers must balance: 235 + 1 = 141 + 92 + x, so 236 = 233 + x and x = 3. The atomic numbers also balance because 92 + 0 = 56 + 36 + 0. Thus three neutrons are released."
+  }
+ ]
+}

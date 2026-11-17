@@ -1,0 +1,401 @@
+{
+ "id": "alevel-economics-p1",
+ "exam": "alevel",
+ "subject": "economics",
+ "year": null,
+ "number": 1,
+ "source": "ai",
+ "minutes": 40,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Inflation and unemployment",
+   "q": "Nadia's hourly nominal wage rises from £12.50 to £13.13. Over the same period the Consumer Prices Index rises from 108.0 to 111.9. Which statement is correct?",
+   "options": [
+    "Her real wage rises by approximately 3.6%.",
+    "Her real wage falls by approximately 1.4%.",
+    "Her real wage rises by approximately 1.4%.",
+    "Her real wage rises by approximately 5.0%."
+   ],
+   "answer": 2,
+   "explanation": "Her real wage change is ((13.13 ÷ 12.50) ÷ (111.9 ÷ 108.0) − 1) × 100 ≈ 1.38%. Nominal wages rise by about 5.04% and prices by about 3.61%, leaving a real gain of approximately 1.4%; using the nominal increase alone ignores the rise in prices."
+  },
+  {
+   "n": 2,
+   "topic": "Inflation and unemployment",
+   "q": "An economy is initially at its natural rate of unemployment. A sharp rise in world oil prices increases firms' costs. In the short run, what is the most likely effect according to the short-run Phillips curve?",
+   "options": [
+    "Inflation and unemployment both remain at their natural rates because oil is only a temporary cost.",
+    "Inflation rises and unemployment falls, as the economy moves along the short-run Phillips curve.",
+    "Inflation falls and unemployment rises, as lower aggregate demand moves the economy down the curve.",
+    "Inflation rises and unemployment rises, as the short-run Phillips curve shifts to the right."
+   ],
+   "answer": 3,
+   "explanation": "A large cost increase acts like an adverse supply shock, raising prices and reducing output, so inflation and unemployment can rise together, often called stagflation. This shifts the short-run Phillips curve to the right rather than moving along it; a movement along the curve would show the usual demand-pull trade-off."
+  },
+  {
+   "n": 3,
+   "topic": "Market structures",
+   "q": "A monopolist faces the demand curve P = 120 − 2Q and has total cost TC = 20Q + 100, where P is price in pounds and Q is output in units. What output and price maximise profit?",
+   "options": [
+    "Q = 25 units and P = £70",
+    "Q = 30 units and P = £60",
+    "Q = 50 units and P = £20",
+    "Q = 25 units and P = £20"
+   ],
+   "answer": 0,
+   "explanation": "Total revenue is (120 − 2Q)Q, so marginal revenue is MR = 120 − 4Q. Setting MR = MC gives 120 − 4Q = 20, so Q = 25; from the demand curve, P = 120 − 2(25) = £70. Charging £20 would set price equal to marginal cost, and producing Q = 30 would maximise revenue rather than profit."
+  },
+  {
+   "n": 4,
+   "topic": "Market structures",
+   "q": "Two industries have similar five-firm concentration ratios. Industry J has very high sunk costs of entry, while industry K has low sunk costs. According to contestable market theory, which outcome is most likely?",
+   "options": [
+    "Both industries have identical contestability because their concentration ratios are similar.",
+    "Industry K will face a more credible threat of entry, so its firms are likely to set lower mark-ups than those in industry J.",
+    "Industry K will have higher mark-ups because low entry costs encourage firms to enter and raise prices.",
+    "Industry J is more contestable because high sunk costs show that entrants must be able to compete at large scale."
+   ],
+   "answer": 1,
+   "explanation": "Contestability depends heavily on the absence of sunk costs and barriers to entry, not only on concentration. In industry K, hit-and-run entry is more credible, which can force incumbents to keep prices and mark-ups lower, whereas high sunk costs make entry less contestable in industry J."
+  },
+  {
+   "n": 5,
+   "topic": "Market structures",
+   "q": "In the long run, which best describes a firm in monopolistic competition operating in equilibrium?",
+   "options": [
+    "It produces where price equals marginal cost, so it is allocatively and productively efficient.",
+    "It earns persistent supernormal profit because product differentiation creates a legal barrier to entry.",
+    "It produces where marginal revenue equals marginal cost, charges a price equal to average total cost, and operates with excess capacity.",
+    "It produces at the minimum average total cost because all firms sell identical products."
+   ],
+   "answer": 2,
+   "explanation": "Free entry and exit remove supernormal profits in the long run, so each firm's demand curve is tangent to its average total cost curve, giving normal profit. The firm still sets output where MR = MC, but because demand is downward sloping and differentiated, price exceeds marginal cost and output is below the minimum average total cost point, creating excess capacity."
+  },
+  {
+   "n": 6,
+   "topic": "The labour market",
+   "q": "A firm sells its output in a perfectly competitive product market at £8 per unit and hires labour in a perfectly competitive labour market at a wage of £160 per day. The firm currently employs four workers and finds them profitable. The marginal product of the fifth worker is 24 units, of the sixth 21 units, of the seventh 18 units and of the eighth 12 units. Assuming diminishing marginal returns continue, how many workers should the firm employ to maximise profit?",
+   "options": [
+    "7 workers",
+    "5 workers",
+    "8 workers",
+    "6 workers"
+   ],
+   "answer": 3,
+   "explanation": "Marginal revenue product equals marginal product × output price, so the fifth worker adds £192, the sixth £168, the seventh £144 and the eighth £96. The firm should employ while MRP exceeds the £160 wage: the sixth worker is profitable but the seventh is not, so it employs 6 workers in total."
+  },
+  {
+   "n": 7,
+   "topic": "The labour market",
+   "q": "In Leeds, the hourly wage for care assistants rises from £10.00 to £11.00, and weekly hours supplied rise from 100 to 108. Using the midpoint formula, what is the wage elasticity of labour supply?",
+   "options": [
+    "1.24",
+    "0.80",
+    "0.81",
+    "1.00"
+   ],
+   "answer": 2,
+   "explanation": "Using the midpoint formula, the percentage change in hours is 8 ÷ 104 ≈ 7.69%, and the percentage change in the wage is 1 ÷ 10.50 ≈ 9.52%. Dividing gives 7.69 ÷ 9.52 ≈ 0.81, so labour supply is inelastic with respect to the wage; using the original values would give about 0.80."
+  },
+  {
+   "n": 8,
+   "topic": "International trade and exchange rates",
+   "q": "Country A can produce either 600 tonnes of wheat or 200 cars with its resources. Country B can produce either 500 tonnes of wheat or 100 cars with its resources. Assuming constant opportunity costs, which terms of trade would allow both countries to gain if Country A specialises in cars and Country B specialises in wheat?",
+   "options": [
+    "1 car for 4 tonnes of wheat",
+    "1 car for 6 tonnes of wheat",
+    "1 car for 2 tonnes of wheat",
+    "1 car for 3 tonnes of wheat"
+   ],
+   "answer": 0,
+   "explanation": "The car-specialising country's opportunity cost of 1 car is 600 ÷ 200 = 3 tonnes of wheat, while the wheat-specialising country's opportunity cost of 1 car is 500 ÷ 100 = 5 tonnes of wheat. Both gain if 1 car trades for more than 3 and less than 5 tonnes of wheat, so 4 tonnes works; 2 tonnes favours the car importer and 6 tonnes favours the car exporter."
+  },
+  {
+   "n": 9,
+   "topic": "International trade and exchange rates",
+   "q": "A depreciation of a country's currency is expected to improve its current account balance only if which condition is met, according to the Marshall–Lerner condition?",
+   "options": [
+    "The sum of the price elasticities of demand for exports and imports is less than 1.",
+    "The country's inflation rate is lower than its trading partners' inflation rates.",
+    "The country's price elasticity of supply for exports equals zero.",
+    "The sum of the price elasticities of demand for exports and imports is greater than 1."
+   ],
+   "answer": 3,
+   "explanation": "After a depreciation, exports become cheaper abroad and imports become dearer at home, but the quantities bought change only after some time. The Marshall–Lerner condition says the current account improves if the combined price elasticities of demand for exports and imports exceed 1, meaning quantity effects are large enough to outweigh the price effects; the J-curve describes a possible short-run worsening."
+  },
+  {
+   "n": 10,
+   "topic": "Demand, supply and price determination",
+   "q": "In the market for zero-emission bus passes in a Welsh city, demand is Qd = 500 − 10P and supply is Qs = 20 + 5P, where P is price in pounds and Q is thousands of passes per month. A maximum price of £25 is enforced. What is the resulting shortage or surplus?",
+   "options": [
+    "A surplus of 105,000 passes per month",
+    "A shortage of 70,000 passes per month",
+    "A shortage of 105,000 passes per month",
+    "A shortage of 35,000 passes per month"
+   ],
+   "answer": 2,
+   "explanation": "The equilibrium price is where 500 − 10P = 20 + 5P, giving P = £32 and Q = 180,000. At the maximum price of £25, quantity demanded is 250,000 while quantity supplied is 145,000. The binding price ceiling therefore creates a shortage of 250,000 − 145,000 = 105,000 passes per month."
+  },
+  {
+   "n": 11,
+   "topic": "Demand, supply and price determination",
+   "q": "In the market for local bus journeys, an increase in the price of petrol makes car use more expensive, while improved engine technology lowers bus operators' costs. Assuming bus travel and car use are substitutes, which outcome is certain?",
+   "options": [
+    "Equilibrium quantity rises",
+    "Equilibrium price falls",
+    "Equilibrium price rises",
+    "Equilibrium quantity falls"
+   ],
+   "answer": 0,
+   "explanation": "An increase in petrol price raises demand for bus travel, shifting demand to the right. Improved engine technology raises supply, shifting supply to the right. Both shifts increase equilibrium quantity, but the price effect is ambiguous because the demand increase pushes price up while the supply increase pushes it down."
+  },
+  {
+   "n": 12,
+   "topic": "Demand, supply and price determination",
+   "q": "In a low-skilled labour market in Birmingham, demand for labour is Ld = 800 − 20W and supply is Ls = 100 + 30W, where W is the hourly wage in pounds and L is thousands of workers. The government sets a minimum wage of £16 per hour. What is the resulting excess supply of labour?",
+   "options": [
+    "An excess demand of 100,000 workers",
+    "An excess supply of 40,000 workers",
+    "An excess supply of 100,000 workers",
+    "An excess supply of 60,000 workers"
+   ],
+   "answer": 2,
+   "explanation": "The equilibrium wage is £14 because 800 − 20W = 100 + 30W gives W = 14 and employment = 520,000. At the £16 minimum, labour demand is 480,000 and labour supply is 580,000. Excess supply is therefore 580,000 − 480,000 = 100,000 workers."
+  },
+  {
+   "n": 13,
+   "topic": "National income and economic growth",
+   "q": "Nominal GDP rises from £200 billion to £242 billion. The GDP deflator rises from 100 to 110. What happened to real GDP?",
+   "options": [
+    "It rose by 21%",
+    "It fell by 10%",
+    "It rose by 11%",
+    "It rose by 10%"
+   ],
+   "answer": 3,
+   "explanation": "Real GDP equals nominal GDP × 100 ÷ deflator. Initial real GDP is £200 billion × 100 ÷ 100 = £200 billion; final real GDP is £242 billion × 100 ÷ 110 = £220 billion. The percentage increase is (£220 billion − £200 billion) ÷ £200 billion × 100 = 10%. Subtracting the 10% deflator increase from the 21% nominal increase gives 11%, but that ignores compounding."
+  },
+  {
+   "n": 14,
+   "topic": "National income and economic growth",
+   "q": "In a closed economy with no government, households spend 80p of each extra £1 of income. Investment rises by £15 billion. Assuming spare capacity, what is the total increase in national income predicted by the simple multiplier?",
+   "options": [
+    "£18.75 billion",
+    "£12 billion",
+    "£60 billion",
+    "£75 billion"
+   ],
+   "answer": 3,
+   "explanation": "The multiplier is 1 ÷ (1 − 0.8) = 5. A £15 billion increase in investment raises national income by 5 × £15 billion = £75 billion. Using 1 ÷ 0.8 would incorrectly give £18.75 billion, and £12 billion counts only the first round of induced consumption."
+  },
+  {
+   "n": 15,
+   "topic": "Development and globalisation",
+   "q": "Hafsa compares GDP per capita in the United Kingdom and Bangladesh using purchasing power parity (PPP) rather than market exchange rates. Which statement best explains why the PPP comparison is more appropriate for comparing average living standards?",
+   "options": [
+    "It measures the sustainability of economic growth better than market exchange rates",
+    "It shows the distribution of income among households in each country",
+    "It adjusts for differences in the prices of goods and services between the countries",
+    "It includes unpaid household production, which market exchange rates ignore"
+   ],
+   "answer": 2,
+   "explanation": "Purchasing power parity converts GDP using price levels, so it adjusts for differences in the cost of a representative basket of goods and services. It does not by itself show income distribution, include unpaid household work or measure sustainability. Market exchange rates can therefore mislead when comparing average living standards between countries with very different price levels."
+  },
+  {
+   "n": 16,
+   "topic": "Development and globalisation",
+   "q": "Nordia can use all of its resources to produce either 40 tonnes of wheat or 20 tonnes of cloth. Sudia can use all of its resources to produce either 30 tonnes of wheat or 10 tonnes of cloth. Assuming constant opportunity costs, which specialisation is consistent with comparative advantage?",
+   "options": [
+    "Nordia specialises in wheat and Sudia specialises in cloth",
+    "Neither country specialises because Sudia has no absolute advantage in either good",
+    "Nordia specialises in both goods because it can produce more of each than Sudia",
+    "Nordia specialises in cloth and Sudia specialises in wheat"
+   ],
+   "answer": 3,
+   "explanation": "Nordia's opportunity cost of 1 tonne of wheat is 0.5 tonnes of cloth, while Sudia's is 1/3 tonne of cloth. Sudia therefore has the lower opportunity cost of wheat, and Nordia has the lower opportunity cost of cloth: 2 tonnes of wheat per tonne of cloth versus 3 tonnes for Sudia. Absolute advantage in both goods does not remove the gains from specialisation according to comparative advantage."
+  },
+  {
+   "n": 17,
+   "topic": "Elasticity",
+   "q": "At a price of £20, a café in Cardiff sells 1,000 coffees per week. It lowers the price to £18 and sales rise to 1,200 per week. Using the initial values as the base for percentage changes, what is the price elasticity of demand?",
+   "options": [
+    "−2.0",
+    "−0.5",
+    "−1.0",
+    "+2.0"
+   ],
+   "answer": 0,
+   "explanation": "Percentage change in quantity demanded is (1,200 − 1,000) ÷ 1,000 × 100 = 20%, and percentage change in price is (£18 − £20) ÷ £20 × 100 = −10%. PED is 20% ÷ (−10%) = −2.0. A common error is to invert the formula, which gives −0.5."
+  },
+  {
+   "n": 18,
+   "topic": "Elasticity",
+   "q": "When average real income in Belfast rises from £30,000 to £33,000 per year, weekly sales of a supermarket's own-brand baked beans fall from 5,000 to 4,750 units. Using the initial values as the base, what is the income elasticity of demand and how is the good classified?",
+   "options": [
+    "−2.0, so it is an inferior good",
+    "−0.5, so it is an inferior good",
+    "−0.5, so it is a normal luxury",
+    "0.5, so it is a normal necessity"
+   ],
+   "answer": 1,
+   "explanation": "Percentage change in quantity demanded is (4,750 − 5,000) ÷ 5,000 × 100 = −5%, and percentage change in income is (£33,000 − £30,000) ÷ £30,000 × 100 = 10%. YED is −5% ÷ 10% = −0.5. A negative income elasticity means the good is inferior; the numerical size does not turn it into a luxury."
+  },
+  {
+   "n": 19,
+   "topic": "Elasticity",
+   "q": "A specific tax per unit is imposed on producers in a market where demand is perfectly price inelastic and supply curves upward. What is the economic incidence of the tax?",
+   "options": [
+    "Consumers bear none of the tax burden because demand is perfectly inelastic",
+    "The burden is shared equally between consumers and producers because supply curves upward",
+    "Producers bear the whole tax burden because they are legally required to pay the tax",
+    "Consumers bear the whole tax burden because quantity demanded does not change"
+   ],
+   "answer": 3,
+   "explanation": "With perfectly inelastic demand, consumers buy the same quantity after the tax. The supply curve shifts upward by the amount of the tax, so the price paid by consumers rises by the full tax while producers' net price is unchanged. Legal responsibility for paying a tax does not determine its economic incidence."
+  },
+  {
+   "n": 20,
+   "topic": "Costs, revenue and profit",
+   "q": "A firm’s output schedule is as follows. Output (units): 0 | 1 | 2 | 3 | 4 | 5. Total revenue (£): 0 | 30 | 56 | 78 | 96 | 110. Total cost (£): 20 | 38 | 54 | 72 | 94 | 120. What are the profit-maximising output and the maximum profit?",
+   "options": [
+    "2 units and £2 profit",
+    "3 units and £78 profit",
+    "4 units and £2 profit",
+    "3 units and £6 profit"
+   ],
+   "answer": 3,
+   "explanation": "Profit is total revenue minus total cost: at 2 units it is £56 − £54 = £2; at 3 units it is £78 − £72 = £6; at 4 units it is £96 − £94 = £2. The largest profit in the table is £6, so the firm produces 3 units. At 3 units marginal revenue (£22) is still above marginal cost (£18), whereas a fourth unit would add £18 revenue but £22 cost."
+  },
+  {
+   "n": 21,
+   "topic": "Costs, revenue and profit",
+   "q": "Priya runs a bakery. At its current weekly output of 800 loaves, the price is £15 per loaf, total fixed cost is £5,000 and average variable cost is £10 per loaf. What is the bakery’s short-run profit or loss, and should it continue producing in the short run?",
+   "options": [
+    "A profit of £4,000; continue producing in the short run",
+    "A loss of £1,000; continue producing in the short run",
+    "A loss of £5,000; continue producing in the short run",
+    "A loss of £1,000; shut down immediately"
+   ],
+   "answer": 1,
+   "explanation": "Total revenue is £15 × 800 = £12,000 and total variable cost is £10 × 800 = £8,000, so total cost is £8,000 + £5,000 = £13,000. The bakery makes a loss of £1,000. Since the price of £15 is above average variable cost of £10, each sale contributes £5 towards fixed costs, so the bakery should keep producing in the short run."
+  },
+  {
+   "n": 22,
+   "topic": "Market failure and government intervention",
+   "q": "Which statement best explains why a pure public good, such as national defence, is likely to be underprovided by an unregulated free market?",
+   "options": [
+    "It is non-excludable and non-rival, so people can free-ride and firms cannot easily charge all users.",
+    "It is excludable and rival, so the price mechanism allocates it efficiently without government intervention.",
+    "It is excludable and non-rival, so firms can charge every user and have no incentive to restrict output.",
+    "It is non-excludable and rival, so users ignore congestion and consume too little."
+   ],
+   "answer": 0,
+   "explanation": "A pure public good is non-excludable, so people cannot be prevented from using it and each has an incentive to free-ride rather than pay. It is also non-rival, so one person’s use does not reduce another’s, which means the market cannot easily set a price that finances provision. These features create a missing market and underprovision."
+  },
+  {
+   "n": 23,
+   "topic": "Market failure and government intervention",
+   "q": "Two firms initially have permits to emit 100 tonnes of carbon dioxide each, but each would otherwise emit 120 tonnes. Firm X can reduce emissions at a marginal cost of £12 per tonne; Firm Y can reduce emissions at £30 per tonne. Permits may be traded. Which outcome is most likely if both firms minimise their compliance costs?",
+   "options": [
+    "Firm X buys permits from Firm Y because it has the lower abatement cost.",
+    "Firm X reduces emissions by more than Firm Y and sells permits to Firm Y.",
+    "Firm Y reduces emissions by more than Firm X and sells permits to Firm X.",
+    "Both firms reduce emissions by the same amount because the total number of permits is fixed."
+   ],
+   "answer": 1,
+   "explanation": "Firm X has a lower marginal abatement cost, so it is cheaper for X to cut emissions than for Y to do so. With trading, X can reduce more than its own required cut, sell the surplus permits to Y, and total compliance cost falls. Equal abatement or letting high-cost Y abate more would cost more overall."
+  },
+  {
+   "n": 24,
+   "topic": "Market failure and government intervention",
+   "q": "A factory’s marginal private cost (MPC) is £18 per unit, the marginal external cost (MEC) of pollution is £6 per unit and marginal social benefit (MSB) is £22 per unit at current output. Assuming no other distortions, which statement is correct?",
+   "options": [
+    "Marginal social cost is £18, so a subsidy of £6 per unit is needed to reach the social optimum.",
+    "Marginal social cost is £22, so the market is allocatively efficient because MSB equals MPC plus MEC.",
+    "Marginal social cost is £12, so current output is below the socially optimal level because MSC < MSB.",
+    "Marginal social cost is £24, so current output is above the socially optimal level because MSC > MSB."
+   ],
+   "answer": 3,
+   "explanation": "Marginal social cost is marginal private cost plus marginal external cost: £18 + £6 = £24. Since £24 is greater than the marginal social benefit of £22, the last units cost society more than they are valued, so current output is above the social optimum. A Pigouvian tax equal to the £6 marginal external cost would help internalise the pollution externality, not a subsidy."
+  },
+  {
+   "n": 25,
+   "topic": "Fiscal, monetary and supply-side policy",
+   "q": "Which of the following is an example of an automatic stabiliser in UK fiscal policy?",
+   "options": [
+    "A deliberate increase in the basic rate of income tax to reduce inflation",
+    "A one-off government grant to all first-time home buyers",
+    "The Bank of England raising Bank Rate when consumer price inflation rises",
+    "Unemployment benefits rising when the economy enters a recession"
+   ],
+   "answer": 3,
+   "explanation": "Automatic stabilisers operate without a new policy decision when the economic cycle changes. Unemployment benefits rise automatically in a recession, supporting incomes and cushioning aggregate demand. A deliberate tax change or a one-off grant is discretionary fiscal policy, while changing Bank Rate is monetary policy."
+  },
+  {
+   "n": 26,
+   "topic": "Fiscal, monetary and supply-side policy",
+   "q": "The Monetary Policy Committee raises Bank Rate. Other things being equal, which transmission mechanism is most consistent with standard macroeconomic theory?",
+   "options": [
+    "Commercial loan rates tend to fall, increasing investment and aggregate demand.",
+    "Commercial loan rates tend to rise, reducing investment, and sterling may appreciate, reducing net exports.",
+    "Higher Bank Rate reduces the return on saving, so households save less and increase consumption.",
+    "Sterling is certain to depreciate, raising import prices and increasing inflation."
+   ],
+   "answer": 1,
+   "explanation": "A higher Bank Rate usually raises borrowing costs, so investment and consumer spending on credit tend to fall. It can also attract capital inflows and appreciate sterling, making exports less competitive and imports cheaper, which reduces net exports and imported inflation pressures. The other statements reverse the usual effects or treat an uncertain exchange-rate response as certain."
+  },
+  {
+   "n": 27,
+   "topic": "Fiscal, monetary and supply-side policy",
+   "q": "Which policy is most clearly a supply-side policy aimed at increasing the productive capacity of the UK economy?",
+   "options": [
+    "An increase in child benefit payments to raise household consumption",
+    "A cut in Bank Rate to encourage borrowing and investment",
+    "Government-funded retraining for workers in declining industries to improve occupational mobility",
+    "A rise in import tariffs to protect domestic firms from foreign competition"
+   ],
+   "answer": 2,
+   "explanation": "Supply-side policies aim to improve the quantity or quality of factors of production and shift the long-run aggregate supply curve right. Retraining improves labour mobility and skills, so it can raise productive capacity. Child benefit mainly affects aggregate demand, Bank Rate is monetary policy, and import tariffs usually distort incentives rather than clearly expand capacity."
+  },
+  {
+   "n": 28,
+   "topic": "Aggregate demand and aggregate supply",
+   "q": "Assume a closed economy with no government and spare capacity. Consumption is £60 billion + 0.75Y, where Y is real GDP, and investment is £90 billion. What is the equilibrium level of real GDP?",
+   "options": [
+    "£360 billion",
+    "£600 billion",
+    "£150 billion",
+    "£240 billion"
+   ],
+   "answer": 1,
+   "explanation": "In equilibrium aggregate demand equals output, so Y = C + I = (60 + 0.75Y) + 90. Rearranging gives Y − 0.75Y = 150, so 0.25Y = 150 and Y = £600 billion. The multiplier is 1/(1 − 0.75) = 4, and applying it to £150 billion of autonomous spending also gives £600 billion."
+  },
+  {
+   "n": 29,
+   "topic": "Aggregate demand and aggregate supply",
+   "q": "An economy is initially in long-run equilibrium. There is a sharp rise in the world price of oil, a major input for many firms. On an AD/AS diagram with the price level on the vertical axis and real output on the horizontal axis, what is the most likely short-run effect?",
+   "options": [
+    "The aggregate demand curve shifts left and the price level falls while real output falls.",
+    "Short-run aggregate supply shifts right and the price level falls while real output rises.",
+    "Short-run aggregate supply shifts left and the price level rises while real output falls.",
+    "Aggregate demand shifts right and both the price level and real output rise."
+   ],
+   "answer": 2,
+   "explanation": "A sharp rise in oil prices raises firms’ costs of production, so short-run aggregate supply shifts left. At the existing aggregate demand, the equilibrium price level is higher and real output is lower, which is cost-push inflation. A rightward shift of aggregate demand would raise both output and the price level, which is demand-pull rather than the effect described."
+  },
+  {
+   "n": 30,
+   "topic": "Scarcity, choice and opportunity cost",
+   "q": "A city council has a fixed budget of £60 million. It decides to spend the whole amount on new flood defences instead of using the money for extra social care, public transport or street repairs. Which best measures the opportunity cost of the flood-defence decision in economic terms?",
+   "options": [
+    "Zero, because the flood defences are financed from existing tax revenue",
+    "Exactly £60 million, because that is the money spent",
+    "The value of the most preferred alternative use of the £60 million that is given up",
+    "The combined value of all the alternative uses that are given up"
+   ],
+   "answer": 2,
+   "explanation": "Opportunity cost is the value of the next best alternative forgone, not the total money spent or the sum of every possible alternative. Spending tax revenue on flood defences still means that the same £60 million cannot be used for social care, public transport or street repairs."
+  }
+ ]
+}

@@ -4,7 +4,7 @@
  *
  * Only free, legally readable books link to a copy. For the others these pages link to nothing.
  */
-import { COURSE_LEVELS, EXAMS, EXAM_SUBJECTS, levelName } from '../lib/data.mjs';
+import { COUNTRY_EXAMS, COURSE_LEVELS, levelName, notesSubject, practiceLabel } from '../lib/data.mjs';
 import { APP, ORIGIN, PATHS, chips, clip, esc, list, page, pageTitle, plural, safeUrl, section, tiles } from '../lib/html.mjs';
 
 const ROOT = PATHS.books;
@@ -249,7 +249,8 @@ export function bookPages({ index, courses, libraries, groups }) {
       const path = `${cPath}/${s.id}`;
       const own = index.schoolBooks(c.country, s.id);
       const library = index.libraryFor(s.id, libraries);
-      const exams = c.country === 'ng' && EXAM_SUBJECTS[s.id] ? groups.filter((g) => g.subject === s.id) : [];
+      // The country's own exams: JAMB, WAEC and NECO in Nigeria, WAEC in Ghana, GCSE-style practice in the UK.
+      const exams = groups.filter((g) => COUNTRY_EXAMS[c.country]?.includes(g.exam) && notesSubject(g) === s.id);
       const elsewhere = countries.filter((o) => o !== c && index.schoolPath(o.country, s.id));
       out.push({
         path,
@@ -271,7 +272,7 @@ export function bookPages({ index, courses, libraries, groups }) {
               chips(
                 [
                   library && { href: `${PATHS.learn}/${library.id}`, name: `${library.name} study notes` },
-                  ...exams.map((g) => ({ href: `${PATHS.practice}/${g.exam}/${g.subject}`, name: `${EXAMS[g.exam].name} ${EXAM_SUBJECTS[g.subject]} practice questions` })),
+                  ...exams.map((g) => ({ href: `${PATHS.practice}/${g.exam}/${g.subject}`, name: `${practiceLabel(g)} practice questions` })),
                   ...elsewhere.map((o) => ({ href: `${ROOT}/${o.country}/${s.id}`, name: `${index.subject(o, s.id).name} textbooks in ${index.countryName(o)}` })),
                   { href: cPath, name: `All subjects in ${place}` },
                 ].filter(Boolean),

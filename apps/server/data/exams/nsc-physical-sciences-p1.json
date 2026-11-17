@@ -1,0 +1,401 @@
+{
+ "id": "nsc-physical-sciences-p1",
+ "exam": "nsc",
+ "subject": "physical-sciences",
+ "year": null,
+ "number": 1,
+ "source": "ai",
+ "minutes": 35,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Acids and bases",
+   "q": "A solution of hydrochloric acid has a concentration of 0.025 mol·dm⁻³. Assuming the acid is completely ionised, what is the pH of the solution at 25 °C?",
+   "options": [
+    "2.40",
+    "12.40",
+    "1.30",
+    "1.60"
+   ],
+   "answer": 3,
+   "explanation": "Hydrochloric acid is a strong monoprotic acid, so [H₃O⁺] = 0.025 mol·dm⁻³. The pH is −log(0.025) = 1.60. A value of 12.40 is the pOH of the solution, not the pH."
+  },
+  {
+   "n": 2,
+   "topic": "Acids and bases",
+   "q": "During a titration, 25.0 cm³ of sodium hydroxide solution is neutralised by 20.0 cm³ of 0.150 mol·dm⁻³ sulphuric acid solution. The reaction is H₂SO₄(aq) + 2NaOH(aq) → Na₂SO₄(aq) + 2H₂O(ℓ). What is the concentration of the sodium hydroxide solution?",
+   "options": [
+    "0.375 mol·dm⁻³",
+    "0.0600 mol·dm⁻³",
+    "0.120 mol·dm⁻³",
+    "0.240 mol·dm⁻³"
+   ],
+   "answer": 3,
+   "explanation": "n(H₂SO₄) = cV = 0.150 × 0.0200 = 0.00300 mol. From the equation, n(NaOH) = 2 × 0.00300 = 0.00600 mol, so c(NaOH) = 0.00600 ÷ 0.0250 = 0.240 mol·dm⁻³. Ignoring the 2:1 mole ratio gives the incorrect value 0.120 mol·dm⁻³."
+  },
+  {
+   "n": 3,
+   "topic": "Acids and bases",
+   "q": "At 25 °C, aqueous sodium ethanoate solution has a pH greater than 7. Which statement best explains this observation?",
+   "options": [
+    "Ethanoate ions accept protons from water, producing more hydroxide ions.",
+    "The solution is neutral because all ions from a salt are spectator ions.",
+    "Sodium ions react with water to form sodium hydroxide and hydrogen gas.",
+    "Ethanoate ions donate protons to water, producing more hydronium ions."
+   ],
+   "answer": 0,
+   "explanation": "Sodium ethanoate dissolves to give Na⁺ and CH₃COO⁻ ions. The ethanoate ion is the conjugate base of the weak acid ethanoic acid, so it accepts protons from water: CH₃COO⁻ + H₂O ⇌ CH₃COOH + OH⁻. This increases the hydroxide ion concentration and makes the solution basic; Na⁺ is a spectator ion."
+  },
+  {
+   "n": 4,
+   "topic": "Motion in one dimension and vertical projectile motion",
+   "q": "A learner in Pretoria throws a ball vertically upwards from ground level with an initial speed of 19.6 m·s⁻¹. Ignore air resistance and take g = 9.8 m·s⁻². How long does the ball take to reach its maximum height?",
+   "options": [
+    "4.0 s",
+    "0.50 s",
+    "1.0 s",
+    "2.0 s"
+   ],
+   "answer": 3,
+   "explanation": "At maximum height the velocity is zero, so v = u + at gives 0 = 19.6 − 9.8t. Therefore t = 19.6 ÷ 9.8 = 2.0 s. The time 4.0 s is the total time for the ball to return to the ground, not the time to reach maximum height."
+  },
+  {
+   "n": 5,
+   "topic": "Motion in one dimension and vertical projectile motion",
+   "q": "A car on the N2 near Gqeberha accelerates uniformly from 12 m·s⁻¹ to 24 m·s⁻¹ while travelling 60 m in a straight line. What is the magnitude of its acceleration?",
+   "options": [
+    "0.20 m·s⁻²",
+    "1.2 m·s⁻²",
+    "3.6 m·s⁻²",
+    "7.2 m·s⁻²"
+   ],
+   "answer": 2,
+   "explanation": "Using v² = u² + 2as gives 24² = 12² + 2a(60), so 576 = 144 + 120a and a = 3.6 m·s⁻². Omitting the factor 2 in the equation gives the incorrect value 7.2 m·s⁻²."
+  },
+  {
+   "n": 6,
+   "topic": "Momentum and impulse",
+   "q": "A cricket ball of mass 0.16 kg is moving horizontally towards a batsman at 20 m·s⁻¹. After being struck, it moves horizontally back towards the bowler at 30 m·s⁻¹. The contact time between bat and ball is 0.20 s. What is the magnitude of the average force exerted by the bat on the ball?",
+   "options": [
+    "8 N",
+    "250 N",
+    "40 N",
+    "24 N"
+   ],
+   "answer": 2,
+   "explanation": "Taking the direction towards the bowler as positive, the initial velocity is −20 m·s⁻¹ and the final velocity is +30 m·s⁻¹, so the change in velocity is 50 m·s⁻¹. The average force is F = mΔv/Δt = (0.16 × 50) ÷ 0.20 = 40 N; ignoring the opposite directions gives a tempting 8 N."
+  },
+  {
+   "n": 7,
+   "topic": "Momentum and impulse",
+   "q": "Thabo (mass 60 kg) and Lerato (mass 40 kg) stand together at rest on a frictionless horizontal ice rink in Gauteng. They push away from each other. Immediately afterwards, Thabo moves to the left at 2.0 m·s⁻¹. What is Lerato's velocity immediately afterwards? Take to the right as positive.",
+   "options": [
+    "2.0 m·s⁻¹ to the right",
+    "1.3 m·s⁻¹ to the right",
+    "3.0 m·s⁻¹ to the right",
+    "3.0 m·s⁻¹ to the left"
+   ],
+   "answer": 2,
+   "explanation": "The initial total momentum is zero, so momentum conservation gives 0 = 60(−2.0) + 40v. Therefore v = +3.0 m·s⁻¹, meaning Lerato moves 3.0 m·s⁻¹ to the right. Using the mass ratio upside down gives the tempting but incorrect 1.3 m·s⁻¹."
+  },
+  {
+   "n": 8,
+   "topic": "Electrodynamics: motors, generators and alternating current",
+   "q": "An alternating voltage supply has an rms value of 230 V. The waveform is sinusoidal. What is the peak (maximum) value of the voltage?",
+   "options": [
+    "230 V",
+    "460 V",
+    "163 V",
+    "325 V"
+   ],
+   "answer": 3,
+   "explanation": "For a sinusoidal supply, V_peak = √2 V_rms = √2 × 230 ≈ 325 V. Dividing by √2 gives about 163 V, which is a common incorrect use of the rms formula."
+  },
+  {
+   "n": 9,
+   "topic": "Electrodynamics: motors, generators and alternating current",
+   "q": "An electric motor with a coil rotating between magnetic poles is fitted with a split-ring commutator. What is the main function of the commutator?",
+   "options": [
+    "It increases the magnetic flux through the coil so that a larger torque is produced.",
+    "It reverses the current in the coil every half rotation so that the coil continues to rotate in the same direction.",
+    "It uses slip rings to keep the current direction in the coil unchanged during rotation.",
+    "It changes the alternating current produced in the coil into direct current for the external circuit."
+   ],
+   "answer": 1,
+   "explanation": "The split-ring commutator reverses the current in the coil every half rotation, so the magnetic force on the coil keeps producing torque in the same direction. A commutator in a generator converts the coil's alternating current to direct current for the external circuit, which is a different function."
+  },
+  {
+   "n": 10,
+   "topic": "Electrodynamics: motors, generators and alternating current",
+   "q": "An alternating current from a generator has a frequency of 50 Hz. How many times does the current change direction in one second?",
+   "options": [
+    "150 times",
+    "50 times",
+    "25 times",
+    "100 times"
+   ],
+   "answer": 3,
+   "explanation": "A frequency of 50 Hz means 50 complete cycles per second. The current reverses direction twice per cycle, so it changes direction 2 × 50 = 100 times per second."
+  },
+  {
+   "n": 11,
+   "topic": "Chemical equilibrium",
+   "q": "In a closed container, the reversible reaction N₂O₄(g) ⇌ 2NO₂(g) reaches dynamic equilibrium at 25 °C. Which statement describes this equilibrium correctly?",
+   "options": [
+    "The rate of the forward reaction is zero, while the reverse reaction continues at a steady rate.",
+    "The forward and reverse reactions stop, so the concentrations of N₂O₄ and NO₂ remain constant.",
+    "The forward and reverse reactions continue at equal rates, so the concentrations of N₂O₄ and NO₂ remain constant.",
+    "The concentrations of N₂O₄ and NO₂ become equal and remain equal."
+   ],
+   "answer": 2,
+   "explanation": "At dynamic equilibrium the forward and reverse reactions are both still taking place, and their rates are equal. This keeps the concentrations constant, but it does not require the concentrations of the two substances to be equal."
+  },
+  {
+   "n": 12,
+   "topic": "Electrostatics",
+   "q": "Two identical isolated conducting spheres, X and Y, carry charges of +6.0 × 10⁻⁶ C and −2.0 × 10⁻⁶ C respectively. They are brought into contact and then separated. What is the final charge on each sphere?",
+   "options": [
+    "Each sphere carries +8.0 × 10⁻⁶ C.",
+    "Each sphere carries +2.0 × 10⁻⁶ C.",
+    "Sphere X carries +6.0 × 10⁻⁶ C and sphere Y carries −2.0 × 10⁻⁶ C.",
+    "Each sphere carries +4.0 × 10⁻⁶ C."
+   ],
+   "answer": 1,
+   "explanation": "The total charge is +6.0 × 10⁻⁶ C + (−2.0 × 10⁻⁶ C) = +4.0 × 10⁻⁶ C. Since the spheres are identical conductors, they share this total charge equally, giving +2.0 × 10⁻⁶ C on each sphere."
+  },
+  {
+   "n": 13,
+   "topic": "Vectors and scalars",
+   "q": "Which list contains only scalar quantities?",
+   "options": [
+    "force, weight, speed and energy",
+    "distance, velocity, mass and time",
+    "distance, speed, mass and energy",
+    "displacement, velocity, force and acceleration"
+   ],
+   "answer": 2,
+   "explanation": "Scalars have magnitude only, while vectors have both magnitude and direction. Distance, speed, mass and energy are all scalars; quantities such as displacement, velocity, force, acceleration and weight are vectors."
+  },
+  {
+   "n": 14,
+   "topic": "Rates of reaction",
+   "q": "In a laboratory at the University of Cape Town, the same mass of calcium carbonate is reacted with excess dilute hydrochloric acid, first as large lumps and then as a fine powder. The powder reacts faster. Which explanation is correct?",
+   "options": [
+    "The powder has a larger total surface area, so collisions between carbonate particles and acid particles are more frequent.",
+    "The powder has a lower activation energy for the reaction.",
+    "The powder produces more gas in total because it contains more particles.",
+    "The powder increases the concentration of hydrochloric acid."
+   ],
+   "answer": 0,
+   "explanation": "Reaction rate increases when a solid is divided into smaller pieces because a larger total surface area is exposed to the acid. This allows more frequent collisions between reacting particles. The same mass of calcium carbonate contains the same amount of substance, so the total amount of gas that can be produced is unchanged."
+  },
+  {
+   "n": 15,
+   "topic": "Chemical equilibrium",
+   "q": "In a closed 2.0 dm³ vessel at constant temperature, the equilibrium mixture for PCl₅(g) ⇌ PCl₃(g) + Cl₂(g) contains 0.20 mol PCl₅, 0.40 mol PCl₃ and 0.40 mol Cl₂. What is the numerical value of Kc for the reaction at this temperature?",
+   "options": [
+    "0.20",
+    "0.40",
+    "0.80",
+    "2.50"
+   ],
+   "answer": 1,
+   "explanation": "The equilibrium concentrations are [PCl₅] = 0.20 ÷ 2.0 = 0.10 mol·dm⁻³, [PCl₃] = 0.40 ÷ 2.0 = 0.20 mol·dm⁻³ and [Cl₂] = 0.20 mol·dm⁻³. Therefore Kc = (0.20 × 0.20) ÷ 0.10 = 0.40. Using the moles directly gives 0.80, while 2.50 is the reciprocal expression."
+  },
+  {
+   "n": 16,
+   "topic": "Electrostatics",
+   "q": "Two point charges, +3.0 μC and +5.0 μC, are placed 0.20 m apart in a vacuum. Using k = 9.0 × 10⁹ N·m²·C⁻², what is the electrostatic force between them?",
+   "options": [
+    "3.38 N, repulsive",
+    "6.75 N, repulsive",
+    "3.38 N, attractive",
+    "0.68 N, repulsive"
+   ],
+   "answer": 0,
+   "explanation": "By Coulomb’s law, F = kq₁q₂ ÷ r² = (9.0 × 10⁹)(3.0 × 10⁻⁶)(5.0 × 10⁻⁶) ÷ (0.20)² = 3.375 N, which rounds to 3.38 N. The charges are both positive, so the force is repulsive. The value 0.68 N results if the distance is not squared."
+  },
+  {
+   "n": 17,
+   "topic": "Vectors and scalars",
+   "q": "A learner in Bloemfontein pulls a trolley with a force of 6 N towards the east while another force of 8 N acts on the trolley towards the north. The two forces act at the same point. What is the magnitude of the resultant force?",
+   "options": [
+    "5.3 N",
+    "10 N",
+    "14 N",
+    "2 N"
+   ],
+   "answer": 1,
+   "explanation": "The two forces are perpendicular, so the resultant magnitude is found using Pythagoras: R = √(6² + 8²) = √(36 + 64) = √100 = 10 N. Adding the magnitudes gives 14 N, which ignores the different directions."
+  },
+  {
+   "n": 18,
+   "topic": "Rates of reaction",
+   "q": "During the reaction A → products, the concentration of A in a solution decreases from 0.80 mol·dm⁻³ to 0.32 mol·dm⁻³ in 4.0 minutes. What is the average rate of reaction with respect to A, expressed in mol·dm⁻³·s⁻¹?",
+   "options": [
+    "1.3 × 10⁻³ mol·dm⁻³·s⁻¹",
+    "1.2 × 10⁻¹ mol·dm⁻³·s⁻¹",
+    "4.8 × 10⁻¹ mol·dm⁻³·s⁻¹",
+    "2.0 × 10⁻³ mol·dm⁻³·s⁻¹"
+   ],
+   "answer": 3,
+   "explanation": "The decrease in concentration is 0.80 − 0.32 = 0.48 mol·dm⁻³. The time is 4.0 × 60 = 240 s, so the average rate is 0.48 ÷ 240 = 2.0 × 10⁻³ mol·dm⁻³·s⁻¹. The value 1.2 × 10⁻¹ is obtained if the time is left in minutes."
+  },
+  {
+   "n": 19,
+   "topic": "Chemical equilibrium",
+   "q": "For the exothermic reaction 2SO₂(g) + O₂(g) ⇌ 2SO₃(g), the system is at equilibrium in a closed vessel. Which change occurs when the temperature is increased while all else is kept constant?",
+   "options": [
+    "The equilibrium shifts to the right and Kc increases.",
+    "The equilibrium shifts to the left and the value of Kc decreases.",
+    "The equilibrium shifts to the left and Kc remains unchanged.",
+    "The equilibrium does not shift, but Kc decreases."
+   ],
+   "answer": 1,
+   "explanation": "For an exothermic forward reaction, increasing the temperature favours the endothermic reverse reaction, so the equilibrium shifts to the left. The equilibrium constant depends on temperature and, for this exothermic reaction, Kc decreases as temperature increases."
+  },
+  {
+   "n": 20,
+   "topic": "Electrostatics",
+   "q": "Two points X and Y are in an electric field. The electric potential at X is +120 V and at Y is +80 V. The electric field does work on a charge of +3.0 μC as it moves from X to Y. Calculate the work done by the electric field.",
+   "options": [
+    "+1.2 × 10⁻⁴ J",
+    "−1.2 × 10⁻⁴ J",
+    "+3.6 × 10⁻⁴ J",
+    "+6.0 × 10⁻⁵ J"
+   ],
+   "answer": 0,
+   "explanation": "The potential difference is V_Y − V_X = 80 − 120 = −40 V. The work done by the electric field is W = q(V_X − V_Y) = (3.0 × 10⁻⁶)(120 − 80) = 1.2 × 10⁻⁴ J. A positive charge moving from a higher to a lower potential has positive work done on it by the electric field."
+  },
+  {
+   "n": 21,
+   "topic": "Organic chemistry",
+   "q": "A compound has the condensed structural formula CH₃CH(CH₃)CH₂CH₂OH. What is its IUPAC name?",
+   "options": [
+    "3-methylbutan-1-ol",
+    "2-methylbutan-1-ol",
+    "pentan-1-ol",
+    "3-methylbutan-4-ol"
+   ],
+   "answer": 0,
+   "explanation": "The longest carbon chain containing the –OH group has four carbon atoms. Numbering from the end nearer the –OH gives the hydroxyl group position 1 and the methyl branch position 3, so the name is 3-methylbutan-1-ol. Naming from the other end would give a higher locant for –OH and is not correct IUPAC numbering."
+  },
+  {
+   "n": 22,
+   "topic": "Organic chemistry",
+   "q": "Ethyl ethanoate can be prepared by heating two reactants with concentrated sulphuric acid. Which pair of reactants gives ethyl ethanoate?",
+   "options": [
+    "Ethanoic acid and ethanol",
+    "Ethanoic acid and ethane",
+    "Ethanal and ethanol",
+    "Methanoic acid and ethanol"
+   ],
+   "answer": 0,
+   "explanation": "Ethyl ethanoate is an ester formed by the acid-catalysed reaction of ethanoic acid with ethanol. The acid contributes the CH₃COO– part and the alcohol contributes the C₂H₅O– part, giving CH₃COOC₂H₅. Methanoic acid with ethanol would give ethyl methanoate, not ethyl ethanoate."
+  },
+  {
+   "n": 23,
+   "topic": "Newton’s laws",
+   "q": "A net force of 12 N acts on a 3 kg object that is initially at rest. What is the displacement of the object after 4 s if the force continues to act?",
+   "options": [
+    "128 m",
+    "24 m",
+    "64 m",
+    "32 m"
+   ],
+   "answer": 3,
+   "explanation": "Using Newton’s second law, a = Fnet/m = 12/3 = 4 m·s⁻². The object starts from rest, so s = ut + ½at² = 0 + ½ × 4 × (4)² = 32 m. The value 64 m results if the factor ½ in the displacement formula is omitted."
+  },
+  {
+   "n": 24,
+   "topic": "Newton’s laws",
+   "q": "A 5 kg block rests on a horizontal table. The coefficient of static friction between the block and table is 0,4. A horizontal force of 15 N is applied to the block and the block remains stationary. Take g = 9,8 m·s⁻². What is the magnitude and direction of the static friction force acting on the block?",
+   "options": [
+    "0 N, because the block is not moving",
+    "5 N, horizontally opposite to the applied force",
+    "19,6 N, horizontally opposite to the applied force",
+    "15 N, horizontally opposite to the applied force"
+   ],
+   "answer": 3,
+   "explanation": "The maximum static friction is μsN = 0,4 × 5 × 9,8 = 19,6 N. Since the applied force is only 15 N and the block remains stationary, static friction adjusts to balance the applied force exactly. It is therefore 15 N horizontally opposite the applied force, not the maximum value."
+  },
+  {
+   "n": 25,
+   "topic": "Waves, sound and the Doppler effect",
+   "q": "An ambulance siren emits sound of frequency 600 Hz. The ambulance moves directly towards a stationary listener at 40 m·s⁻¹. Take the speed of sound in air as 340 m·s⁻¹. What frequency does the listener hear?",
+   "options": [
+    "671 Hz",
+    "680 Hz",
+    "537 Hz",
+    "600 Hz"
+   ],
+   "answer": 1,
+   "explanation": "For a source moving directly towards a stationary listener, fL = fs × v/(v − vs). Substituting gives fL = 600 × 340/(340 − 40) = 680 Hz. A value near 537 Hz would be obtained if the ambulance were moving away from the listener."
+  },
+  {
+   "n": 26,
+   "topic": "Waves, sound and the Doppler effect",
+   "q": "A transverse wave travels along a string with frequency 250 Hz and wavelength 0,80 m. What is the speed of the wave?",
+   "options": [
+    "0,20 m·s⁻¹",
+    "312,5 m·s⁻¹",
+    "0,0032 m·s⁻¹",
+    "200 m·s⁻¹"
+   ],
+   "answer": 3,
+   "explanation": "The wave equation gives v = fλ. Therefore v = 250 × 0,80 = 200 m·s⁻¹. Dividing frequency by wavelength instead of multiplying them gives the incorrect 312,5 m·s⁻¹."
+  },
+  {
+   "n": 27,
+   "topic": "Stoichiometry and quantitative chemistry",
+   "q": "Hydrogen reacts with oxygen according to 2H₂(g) + O₂(g) → 2H₂O(g). If 5 mol H₂ is mixed with 3 mol O₂, what is the maximum amount of H₂O that can be formed?",
+   "options": [
+    "5 mol",
+    "3 mol",
+    "6 mol",
+    "8 mol"
+   ],
+   "answer": 0,
+   "explanation": "The balanced equation shows that 2 mol H₂ react with 1 mol O₂ to form 2 mol H₂O. The 5 mol H₂ needs only 2,5 mol O₂, so O₂ is in excess and H₂ is limiting. Thus 5 mol H₂ forms 5 mol H₂O; using all 3 mol O₂ would incorrectly suggest 6 mol H₂O."
+  },
+  {
+   "n": 28,
+   "topic": "Stoichiometry and quantitative chemistry",
+   "q": "In a titration, 25,0 cm³ of 0,100 mol·dm⁻³ sodium hydroxide solution is neutralised by 20,0 cm³ of hydrochloric acid solution. The reaction is NaOH(aq) + HCl(aq) → NaCl(aq) + H₂O(l). What is the concentration of the hydrochloric acid?",
+   "options": [
+    "0,125 mol·dm⁻³",
+    "0,080 mol·dm⁻³",
+    "0,100 mol·dm⁻³",
+    "0,050 mol·dm⁻³"
+   ],
+   "answer": 0,
+   "explanation": "The amount of NaOH is n = cV = 0,100 × 0,0250 = 0,00250 mol. The equation shows a 1:1 mole ratio, so n(HCl) = 0,00250 mol. Then c(HCl) = n/V = 0,00250 / 0,0200 = 0,125 mol·dm⁻³."
+  },
+  {
+   "n": 29,
+   "topic": "Newton’s laws",
+   "q": "A 1 200 kg car accelerates uniformly from 10 m·s⁻¹ to 25 m·s⁻¹ in 6,0 s. What is the magnitude of the net force acting on the car?",
+   "options": [
+    "7 000 N",
+    "18 000 N",
+    "5 000 N",
+    "3 000 N"
+   ],
+   "answer": 3,
+   "explanation": "The acceleration is a = (v − u)/t = (25 − 10)/6,0 = 2,5 m·s⁻². Newton’s second law gives Fnet = ma = 1 200 × 2,5 = 3 000 N. The value 18 000 N is obtained if the change in velocity is multiplied by mass without dividing by the time."
+  },
+  {
+   "n": 30,
+   "topic": "Stoichiometry and quantitative chemistry",
+   "q": "Calcium carbonate decomposes on heating: CaCO₃(s) → CaO(s) + CO₂(g). What mass of calcium carbonate is needed to produce 4,48 dm³ of carbon dioxide at STP? Take the molar gas volume at STP as 22,4 dm³·mol⁻¹ and M(CaCO₃) = 100 g·mol⁻¹.",
+   "options": [
+    "20,0 g",
+    "10,0 g",
+    "44,8 g",
+    "100 g"
+   ],
+   "answer": 0,
+   "explanation": "At STP, n(CO₂) = V/Vm = 4,48/22,4 = 0,200 mol. From the equation, n(CaCO₃) = n(CO₂) = 0,200 mol. Therefore m = nM = 0,200 × 100 = 20,0 g."
+  }
+ ]
+}

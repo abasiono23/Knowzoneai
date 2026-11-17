@@ -1,0 +1,531 @@
+{
+ "id": "jamb-mathematics-p5",
+ "exam": "jamb",
+ "subject": "mathematics",
+ "year": null,
+ "number": 5,
+ "source": "ai",
+ "minutes": 27,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Surds",
+   "q": "Simplify (√8 + √18) ÷ √2.",
+   "options": [
+    "5√2",
+    "10",
+    "5",
+    "√13"
+   ],
+   "answer": 2,
+   "explanation": "√8 = 2√2 and √18 = 3√2, so the numerator is 5√2. Dividing 5√2 by √2 gives 5; leaving the answer as 5√2 would mean the division by √2 was not completed."
+  },
+  {
+   "n": 2,
+   "topic": "Surds",
+   "q": "Express (4 + √7)/(4 − √7) in the form (p + q√7)/r, where p, q and r are integers and the fraction is in its lowest terms.",
+   "options": [
+    "(9 + 8√7)/9",
+    "(23 + 8√7)/7",
+    "(23 − 8√7)/9",
+    "(23 + 8√7)/9"
+   ],
+   "answer": 3,
+   "explanation": "Multiply both numerator and denominator by 4 + √7. The numerator is (4 + √7)² = 16 + 8√7 + 7 = 23 + 8√7, while the denominator is 4² − (√7)² = 16 − 7 = 9. Hence the result is (23 + 8√7)/9."
+  },
+  {
+   "n": 3,
+   "topic": "Mensuration",
+   "q": "A cylindrical tank in Ibadan has diameter 14 m and height 9 m. Find its total surface area. Take π = 22/7.",
+   "options": [
+    "308 m²",
+    "396 m²",
+    "704 m²",
+    "550 m²"
+   ],
+   "answer": 2,
+   "explanation": "For a closed cylinder, total surface area = 2πr² + 2πrh = 2πr(r + h). With r = 7 m and h = 9 m, this is 2 × (22/7) × 7 × (7 + 9) = 704 m². The value 396 m² is only the curved surface area, so it omits the two circular ends."
+  },
+  {
+   "n": 4,
+   "topic": "Mensuration",
+   "q": "A rectangular water tank in Enugu is 4 m long, 3 m wide and 2 m deep, and is open at the top. Find the total area of the metal sheet used to make the tank.",
+   "options": [
+    "34 m²",
+    "40 m²",
+    "28 m²",
+    "52 m²"
+   ],
+   "answer": 1,
+   "explanation": "The base area is 4 × 3 = 12 m², and the four side walls have area 2 × 4 × 2 + 2 × 3 × 2 = 28 m². Since the tank is open at the top, the total metal sheet used is 12 + 28 = 40 m². A closed cuboid would need an extra 12 m² for the top, giving 52 m²."
+  },
+  {
+   "n": 5,
+   "topic": "Mensuration",
+   "q": "A spherical water melon in Benin City has diameter 18 cm. Find its volume in terms of π.",
+   "options": [
+    "324π cm³",
+    "972π cm³",
+    "729π cm³",
+    "108π cm³"
+   ],
+   "answer": 1,
+   "explanation": "The diameter is 18 cm, so the radius is 9 cm. Volume of a sphere = (4/3)πr³ = (4/3) × π × 9³ = 972π cm³. The value 324π cm³ is the surface area 4πr², not the volume."
+  },
+  {
+   "n": 6,
+   "topic": "Coordinate geometry",
+   "q": "A dispatch rider in Ilorin travels from point P(−3, 4) to Q(5, −2). What is the straight-line distance between the two points?",
+   "options": [
+    "10 units",
+    "14 units",
+    "8 units",
+    "√68 units"
+   ],
+   "answer": 0,
+   "explanation": "Using the distance formula, d² = (5 − (−3))² + (−2 − 4)² = 8² + (−6)² = 100. Therefore d = 10 units; 14 units is just the sum of the horizontal and vertical changes, not the straight-line distance."
+  },
+  {
+   "n": 7,
+   "topic": "Coordinate geometry",
+   "q": "A surveyor at Kano records two points K(1, 2) and Z(5, −6). Find the gradient of the straight line KZ.",
+   "options": [
+    "−1/2",
+    "−2",
+    "1/2",
+    "2"
+   ],
+   "answer": 1,
+   "explanation": "Gradient = (y₂ − y₁)/(x₂ − x₁) = (−6 − 2)/(5 − 1) = −8/4 = −2. The value −1/2 is the reciprocal and would come from placing the differences in the wrong order."
+  },
+  {
+   "n": 8,
+   "topic": "Differentiation",
+   "q": "Find the x-coordinates of the stationary points of the curve y = x³ − 6x² + 9x.",
+   "options": [
+    "x = 1 and x = −3",
+    "x = 1 and x = 3",
+    "x = −1 and x = −3",
+    "x = 0 and x = 3"
+   ],
+   "answer": 1,
+   "explanation": "Differentiate: dy/dx = 3x² − 12x + 9 = 3(x² − 4x + 3) = 3(x − 1)(x − 3). Setting dy/dx = 0 gives x = 1 and x = 3."
+  },
+  {
+   "n": 9,
+   "topic": "Differentiation",
+   "q": "If y = √(5x + 2), find dy/dx.",
+   "options": [
+    "5/(2√(5x + 2))",
+    "1/(2√(5x + 2))",
+    "5√(5x + 2)",
+    "5/(√(5x + 2))"
+   ],
+   "answer": 0,
+   "explanation": "Write y = (5x + 2)^(1/2). By the chain rule, dy/dx = (1/2)(5x + 2)^(−1/2) × 5 = 5/(2√(5x + 2)). The expression 1/(2√(5x + 2)) omits the inner derivative factor 5."
+  },
+  {
+   "n": 10,
+   "topic": "Fractions, decimals and percentages",
+   "q": "In a school in Bauchi, 3/5 of the students are boarders. If 2/3 of the boarders are girls and there are 240 girls who are boarders, how many students are in the school?",
+   "options": [
+    "360",
+    "600",
+    "400",
+    "720"
+   ],
+   "answer": 1,
+   "explanation": "Let the number of boarders be B. Then (2/3)B = 240, so B = 360. Since boarders form 3/5 of all students, the total number of students is 360 × 5/3 = 600."
+  },
+  {
+   "n": 11,
+   "topic": "Fractions, decimals and percentages",
+   "q": "A trader in Awka bought 12 dozen eggs at ₦150 per dozen and sold all the eggs at ₦15 each. Find his percentage profit.",
+   "options": [
+    "25%",
+    "16⅔%",
+    "20%",
+    "30%"
+   ],
+   "answer": 2,
+   "explanation": "The cost is 12 × ₦150 = ₦1,800. There are 12 × 12 = 144 eggs, so the selling price is 144 × ₦15 = ₦2,160. Profit is ₦2,160 − ₦1,800 = ₦360, and profit percentage is (360 ÷ 1800) × 100% = 20%."
+  },
+  {
+   "n": 12,
+   "topic": "Quadratic equations",
+   "q": "Solve the equation 2x² + 5x − 3 = 0.",
+   "options": [
+    "x = 1/2 or x = −3",
+    "x = −1 or x = 3/2",
+    "x = 1 or x = −3/2",
+    "x = −1/2 or x = 3"
+   ],
+   "answer": 0,
+   "explanation": "Factorising gives (2x − 1)(x + 3) = 0. Therefore 2x − 1 = 0 gives x = 1/2, and x + 3 = 0 gives x = −3."
+  },
+  {
+   "n": 13,
+   "topic": "Quadratic equations",
+   "q": "The sum of the squares of two consecutive positive integers is 85. Find the integers.",
+   "options": [
+    "8 and 9",
+    "6 and 7",
+    "7 and 8",
+    "5 and 6"
+   ],
+   "answer": 1,
+   "explanation": "Let the smaller integer be n. Then n² + (n + 1)² = 85, so 2n² + 2n + 1 = 85. This gives n² + n − 42 = 0, that is (n − 6)(n + 7) = 0. The positive value is n = 6, so the integers are 6 and 7."
+  },
+  {
+   "n": 14,
+   "topic": "Quadratic equations",
+   "q": "Solve the inequality x² − 3x ≤ 10.",
+   "options": [
+    "x ≤ −5 or x ≥ 2",
+    "−5 ≤ x ≤ 2",
+    "x ≤ −2 or x ≥ 5",
+    "−2 ≤ x ≤ 5"
+   ],
+   "answer": 3,
+   "explanation": "Rearrange to x² − 3x − 10 ≤ 0. Factorising gives (x − 5)(x + 2) ≤ 0, so the expression is non-positive between the roots −2 and 5. Hence −2 ≤ x ≤ 5."
+  },
+  {
+   "n": 15,
+   "topic": "Sequences and series",
+   "q": "The first three terms of a geometric progression are x − 1, x + 1 and 2x + 5. Find the possible values of x.",
+   "options": [
+    "x = 2 only",
+    "x = 2 or x = −3",
+    "x = 1 or x = −6",
+    "x = −2 or x = 3"
+   ],
+   "answer": 1,
+   "explanation": "For a geometric progression, the square of the middle term equals the product of the first and third terms: (x + 1)² = (x − 1)(2x + 5). Expanding gives x² + 2x + 1 = 2x² + 3x − 5, so x² + x − 6 = 0. Thus (x − 2)(x + 3) = 0, giving x = 2 or x = −3."
+  },
+  {
+   "n": 16,
+   "topic": "Sequences and series",
+   "q": "The sum of the first 5 terms of an arithmetic progression is 35, and the sum of the next 5 terms is 160. Find the first term.",
+   "options": [
+    "2",
+    "−3",
+    "3",
+    "−7"
+   ],
+   "answer": 1,
+   "explanation": "The sum of the first 10 terms is 35 + 160 = 195. Using S_n = n/2[2a + (n − 1)d], we get for S_5: 35 = 5/2(2a + 4d), so a + 2d = 7. For S_10: 195 = 5(2a + 9d), so 2a + 9d = 39. Solving gives d = 5 and a = −3."
+  },
+  {
+   "n": 17,
+   "topic": "Angles and circle geometry",
+   "q": "P, Q, R and S are points on a circle, and Q and S lie on the same side of chord PR. If ∠PQR = (2x + 5)° and ∠PSR = (3x − 10)°, find x.",
+   "options": [
+    "5",
+    "10",
+    "20",
+    "15"
+   ],
+   "answer": 3,
+   "explanation": "Angles subtended by the same chord at the circumference in the same segment are equal. Therefore 2x + 5 = 3x − 10, which gives x = 15."
+  },
+  {
+   "n": 18,
+   "topic": "Number bases",
+   "q": "Simplify 213₄ + 132₄, giving your answer in base 4.",
+   "options": [
+    "1011₄",
+    "1001₄",
+    "1111₄",
+    "1021₄"
+   ],
+   "answer": 0,
+   "explanation": "213₄ = 2×16 + 1×4 + 3 = 39 and 132₄ = 1×16 + 3×4 + 2 = 30, so the sum is 69. Converting 69 to base 4 gives 1011₄, since 64 + 4 + 1 = 69."
+  },
+  {
+   "n": 19,
+   "topic": "Number bases",
+   "q": "Convert 107₈ to base 5.",
+   "options": [
+    "204₅",
+    "231₅",
+    "341₅",
+    "241₅"
+   ],
+   "answer": 3,
+   "explanation": "107₈ = 1×8² + 0×8 + 7 = 71. Dividing 71 repeatedly by 5 gives remainders 1, 4 and 2, which read upward as 241₅."
+  },
+  {
+   "n": 20,
+   "topic": "Integration",
+   "q": "Evaluate ∫(10x⁴ − 6√x + 5) dx.",
+   "options": [
+    "2x⁵ − 4x√x + 5x² + C",
+    "2x⁵ − 4x√x + 5x + C",
+    "2x⁵ − 2x√x + 5x + C",
+    "2x⁵ − 4x√x + 5 + C"
+   ],
+   "answer": 1,
+   "explanation": "Using ∫x⁴ dx = x⁵/5 and ∫√x dx = (2/3)x√x, ∫10x⁴ dx = 2x⁵, ∫−6√x dx = −4x√x, and ∫5 dx = 5x. Adding the constant C gives 2x⁵ − 4x√x + 5x + C."
+  },
+  {
+   "n": 21,
+   "topic": "Integration",
+   "q": "Evaluate ∫₁³ (6x² + 2) dx.",
+   "options": [
+    "60",
+    "52",
+    "56",
+    "64"
+   ],
+   "answer": 2,
+   "explanation": "∫₁³ (6x² + 2) dx = [2x³ + 2x]₁³. Evaluating gives (2×27 + 6) − (2×1 + 2) = 60 − 4 = 56."
+  },
+  {
+   "n": 22,
+   "topic": "Integration",
+   "q": "A curve passes through the point (2, 5) and its gradient is dy/dx = 6x² − 10x + 3. Find the equation of the curve.",
+   "options": [
+    "y = 2x³ − 5x² + 3x + 13",
+    "y = 2x³ − 5x² + 3x − 3",
+    "y = 6x³ − 5x² + 3x + 3",
+    "y = 2x³ − 5x² + 3x + 3"
+   ],
+   "answer": 3,
+   "explanation": "Integrating gives y = 2x³ − 5x² + 3x + C. Using (2, 5): 5 = 16 − 20 + 6 + C = 2 + C, so C = 3. Therefore y = 2x³ − 5x² + 3x + 3."
+  },
+  {
+   "n": 23,
+   "topic": "Simultaneous equations and inequalities",
+   "q": "At Ogbete Market, Enugu, 2 bags of garri and 5 bottles of palm oil cost ₦9,000, while 4 bags of garri and 3 bottles of palm oil cost ₦12,400. Find the cost of one bag of garri.",
+   "options": [
+    "₦2,000",
+    "₦3,000",
+    "₦2,500",
+    "₦2,800"
+   ],
+   "answer": 2,
+   "explanation": "Let g be the price of a bag of garri and p the price of a bottle of palm oil. Then 2g + 5p = 9000 and 4g + 3p = 12400; solving gives p = 800 and g = 2500. Hence one bag of garri costs ₦2,500."
+  },
+  {
+   "n": 24,
+   "topic": "Simultaneous equations and inequalities",
+   "q": "Find the range of values of x satisfying both 5x − 4 < 2x + 8 and 3x + 1 ≥ x + 7.",
+   "options": [
+    "x < 4",
+    "3 ≤ x < 4",
+    "3 ≤ x ≤ 4",
+    "3 < x < 4"
+   ],
+   "answer": 1,
+   "explanation": "5x − 4 < 2x + 8 gives 3x < 12, so x < 4. Also 3x + 1 ≥ x + 7 gives 2x ≥ 6, so x ≥ 3; combining yields 3 ≤ x < 4."
+  },
+  {
+   "n": 25,
+   "topic": "Simultaneous equations and inequalities",
+   "q": "Solve the simultaneous equations 3x + 4y = 23 and 2x − 3y = 4. Find x − y.",
+   "options": [
+    "5",
+    "2",
+    "3",
+    "7"
+   ],
+   "answer": 2,
+   "explanation": "Multiplying 3x + 4y = 23 by 2 and 2x − 3y = 4 by 3 gives 6x + 8y = 46 and 6x − 9y = 12. Subtracting gives 17y = 34, so y = 2; then 2x − 6 = 4 gives x = 5. Thus x − y = 5 − 2 = 3."
+  },
+  {
+   "n": 26,
+   "topic": "Trigonometry",
+   "q": "Solve 2 sin θ = √3 for 0° ≤ θ < 360°.",
+   "options": [
+    "60°, 120°",
+    "30°, 150°",
+    "60°, 300°",
+    "120°, 240°"
+   ],
+   "answer": 0,
+   "explanation": "Since 2 sin θ = √3, sin θ = √3/2. The reference angle is 60°, and sine is positive in the first and second quadrants, so θ = 60° or 180° − 60° = 120°."
+  },
+  {
+   "n": 27,
+   "topic": "Trigonometry",
+   "q": "Simplify (1 − cos²θ)/(sinθ cosθ), for sinθ cosθ ≠ 0.",
+   "options": [
+    "cos θ",
+    "cot θ",
+    "tan θ",
+    "sin θ"
+   ],
+   "answer": 2,
+   "explanation": "Use 1 − cos²θ = sin²θ. Then (1 − cos²θ)/(sinθ cosθ) = sin²θ/(sinθ cosθ) = sinθ/cosθ = tan θ, provided sinθ cosθ ≠ 0."
+  },
+  {
+   "n": 28,
+   "topic": "Variation",
+   "q": "Anselem in Enugu observes that the cost C (in ₦) of printing exercise books varies directly as the number n of books and inversely as the square root of the number p of pages per book. If 200 books of 25 pages cost ₦40,000, find the cost of 300 books of 16 pages.",
+   "options": [
+    "₦100,000",
+    "₦60,000",
+    "₦75,000",
+    "₦90,000"
+   ],
+   "answer": 2,
+   "explanation": "Using C = k n/√p, 40,000 = k × 200/√25 = 40k, so k = 1,000. For the new order, C = 1,000 × 300/√16 = 1,000 × 75 = ₦75,000. Using only the increase in the number of books gives ₦60,000, which ignores the change in pages."
+  },
+  {
+   "n": 29,
+   "topic": "Variation",
+   "q": "The cost C (in ₦) of hiring a hall in Lagos consists of a fixed charge and an amount that varies directly as the number of hours h. When h = 3, C = ₦25,000; when h = 6, C = ₦40,000. Find the fixed charge.",
+   "options": [
+    "₦10,000",
+    "₦5,000",
+    "₦15,000",
+    "₦25,000"
+   ],
+   "answer": 0,
+   "explanation": "Let C = F + kh. Subtracting gives 3k = ₦15,000, so k = ₦5,000 per hour. Then F = ₦25,000 − 3 × ₦5,000 = ₦10,000. The ₦15,000 is the additional charge for the extra 3 hours, not the fixed charge."
+  },
+  {
+   "n": 30,
+   "topic": "Statistics",
+   "q": "The ages (in years) of 30 pupils in a school in Sokoto are grouped as follows: 1–5: 4 pupils; 6–10: 7 pupils; 11–15: 10 pupils; 16–20: 6 pupils; 21–25: 3 pupils. Estimate the median age.",
+   "options": [
+    "15 years",
+    "12 years",
+    "13 years",
+    "12.5 years"
+   ],
+   "answer": 3,
+   "explanation": "The median position is the 15th value. The cumulative frequencies are 4, 11, 21, 27 and 30, so the median class is 11–15 with lower boundary 10.5. Median = 10.5 + ((15 − 11)/10) × 5 = 12.5 years. Taking the midpoint of the class 11–15 gives 13 years, which does not use the cumulative frequency."
+  },
+  {
+   "n": 31,
+   "topic": "Statistics",
+   "q": "In a pie chart representing the favourite fruit of 480 students in a school in Ibadan, the sector for mango is 108°. How many students chose mango?",
+   "options": [
+    "108",
+    "120",
+    "144",
+    "160"
+   ],
+   "answer": 2,
+   "explanation": "The sector angle is 108° out of 360°, so the fraction choosing mango is 108/360 = 3/10. Thus the number is (3/10) × 480 = 144. Treating the angle 108° directly as a number of students gives the tempting 108."
+  },
+  {
+   "n": 32,
+   "topic": "Statistics",
+   "q": "The standard deviation of the masses of five bags of cocoa in Ondo is 7 kg. If 3 kg is added to the mass of each bag, find the new standard deviation.",
+   "options": [
+    "7 kg",
+    "4 kg",
+    "10 kg",
+    "21 kg"
+   ],
+   "answer": 0,
+   "explanation": "Adding the same constant to every observation shifts the mean by that constant but leaves the spread unchanged, so the standard deviation remains 7 kg. Adding 3 kg to the standard deviation gives 10 kg, but that is not how standard deviation responds to a change of origin."
+  },
+  {
+   "n": 33,
+   "topic": "Probability",
+   "q": "A box in Jos contains 7 red, 5 green and 3 yellow pencils. Two pencils are selected at random without replacement. What is the probability that both pencils are of the same colour?",
+   "options": [
+    "11/35",
+    "34/105",
+    "1/3",
+    "2/7"
+   ],
+   "answer": 1,
+   "explanation": "The favourable selections are C(7,2)+C(5,2)+C(3,2)=21+10+3=34, while the total selections are C(15,2)=105. Therefore the probability is 34/105. Counting only red pairs or using replacement gives different fractions such as 1/3."
+  },
+  {
+   "n": 34,
+   "topic": "Probability",
+   "q": "The probability that a trader in Onitsha makes a profit on a market day is 0.6. The probability that she makes a profit on the next market day is 0.5. If the two outcomes are independent, find the probability that she makes a profit on exactly one of the two market days.",
+   "options": [
+    "0.5",
+    "0.3",
+    "0.8",
+    "0.2"
+   ],
+   "answer": 0,
+   "explanation": "Exactly one profit can occur as profit then no profit, or no profit then profit. The probability is 0.6×0.5 + 0.4×0.5 = 0.3 + 0.2 = 0.5. The value 0.8 is the probability of at least one profit, while 0.3 is the probability of profit on both days."
+  },
+  {
+   "n": 35,
+   "topic": "Indices and logarithms",
+   "q": "Simplify (8^(2/3) × 9^(3/2)) ÷ 4^(1/2).",
+   "options": [
+    "108",
+    "27",
+    "54",
+    "18"
+   ],
+   "answer": 2,
+   "explanation": "8^(2/3)=4 and 9^(3/2)=27, so the numerator is 4×27=108. Since 4^(1/2)=2, the expression is 108÷2=54. The value 108 is obtained if the division by 2 is omitted."
+  },
+  {
+   "n": 36,
+   "topic": "Indices and logarithms",
+   "q": "Given that log₁₀ 2 = 0.3010, evaluate log₁₀ 0.004.",
+   "options": [
+    "−2.602",
+    "2.398",
+    "−1.398",
+    "−2.398"
+   ],
+   "answer": 3,
+   "explanation": "0.004 = 4 × 10^−3 = 2² × 10^−3, so log₁₀0.004 = 2 log₁₀2 − 3 = 2(0.3010) − 3 = −2.398. Forgetting the negative sign gives 2.398, which is not the logarithm of a number less than 1."
+  },
+  {
+   "n": 37,
+   "topic": "Indices and logarithms",
+   "q": "Solve for x: 5^(2x − 1) = 125^(x + 2).",
+   "options": [
+    "−7",
+    "7",
+    "−3",
+    "3"
+   ],
+   "answer": 0,
+   "explanation": "Since 125 = 5³, the equation becomes 5^(2x − 1) = 5^(3x + 6). Equating powers gives 2x − 1 = 3x + 6, so x = −7. If the exponent 3 is omitted, one obtains x = 3, which is a common error."
+  },
+  {
+   "n": 38,
+   "topic": "Matrices and determinants",
+   "q": "If A = [[7, 3], [2, 1]], find A⁻¹.",
+   "options": [
+    "[[−1, 3], [2, −7]]",
+    "[[1, 3], [2, 7]]",
+    "[[1, −3], [−2, 7]]",
+    "[[7, −3], [−2, 1]]"
+   ],
+   "answer": 2,
+   "explanation": "The determinant is 7×1 − 3×2 = 1. For a 2×2 matrix [[a, b], [c, d]], the inverse is 1/(ad − bc) [[d, −b], [−c, a]], so A⁻¹ = [[1, −3], [−2, 7]]. The option [[7, −3], [−2, 1]] swaps the diagonal entries incorrectly."
+  },
+  {
+   "n": 39,
+   "topic": "Matrices and determinants",
+   "q": "Find the determinant of M = [[1, 2, 3], [0, 1, 4], [5, 6, 0]].",
+   "options": [
+    "11",
+    "−1",
+    "1",
+    "5"
+   ],
+   "answer": 2,
+   "explanation": "Expanding along the first row: det M = 1(1×0 − 4×6) − 2(0×0 − 4×5) + 3(0×6 − 1×5) = −24 + 40 − 15 = 1. Reversing a sign in the expansion gives −1, which is not the determinant."
+  },
+  {
+   "n": 40,
+   "topic": "Sets",
+   "q": "Let U = {1, 2, 3, …, 15}, A = {x ∈ U : x is a factor of 12} and B = {x ∈ U : x is a multiple of 5}. Find A ∪ B.",
+   "options": [
+    "{1, 2, 3, 4, 5, 6, 10, 12}",
+    "{1, 2, 3, 4, 6, 12}",
+    "{1, 2, 3, 4, 5, 6, 10, 12, 15}",
+    "{1, 2, 3, 4, 6, 10, 12, 15}"
+   ],
+   "answer": 2,
+   "explanation": "The factors of 12 in U are {1, 2, 3, 4, 6, 12}, and the multiples of 5 in U are {5, 10, 15}. Their union contains all these elements without repetition, giving {1, 2, 3, 4, 5, 6, 10, 12, 15}."
+  }
+ ]
+}

@@ -20,6 +20,9 @@ const referrals: Translation<typeof en> = {
     exams: {
       label: 'Exam prep',
       text: 'WAEC/JAMB prep don easy well-well with Knowzone AI: practice quizzes, AI tutor and short video lessons. Use my code {{code}} make you get {{credits}} bonus AI credits: {{link}}',
+      /** The same invite for other study regions: their exams, or none named. */
+      textFor: '{{exams}} prep don easy well-well with Knowzone AI: practice quizzes, AI tutor and short video lessons. Use my code {{code}} make you get {{credits}} bonus AI credits: {{link}}',
+      textAny: 'Exam prep don easy well-well with Knowzone AI: practice quizzes, AI tutor and short video lessons. Use my code {{code}} make you get {{credits}} bonus AI credits: {{link}}',
     },
     game: {
       label: 'Knowzone World',

@@ -1,0 +1,791 @@
+{
+ "id": "neco-chemistry-p6",
+ "exam": "neco",
+ "subject": "chemistry",
+ "year": null,
+ "number": 6,
+ "source": "ai",
+ "minutes": 60,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Separation of mixtures",
+   "q": "A laboratory assistant in Aba needs to separate very fine clay particles suspended in water. The particles settle only very slowly on standing. Which method is most suitable?",
+   "options": [
+    "Sublimation",
+    "Separating funnel",
+    "Centrifugation",
+    "Evaporation to dryness"
+   ],
+   "answer": 2,
+   "explanation": "Centrifugation speeds up the settling of fine suspended solids by spinning the mixture at high speed. Sublimation applies to solids that vaporise directly, a separating funnel is for immiscible liquids, and evaporation to dryness would remove the water rather than efficiently separate the fine suspension."
+  },
+  {
+   "n": 2,
+   "topic": "Hydrocarbons",
+   "q": "Ethene is converted to polythene in a factory in Port Harcourt. The type of reaction involved is",
+   "options": [
+    "Addition polymerisation",
+    "Cracking",
+    "Esterification",
+    "Substitution polymerisation"
+   ],
+   "answer": 0,
+   "explanation": "Ethene molecules join through their double bonds without losing any atoms, forming polythene by addition polymerisation. Cracking breaks larger hydrocarbons into smaller ones, while esterification forms esters from acids and alcohols."
+  },
+  {
+   "n": 3,
+   "topic": "Hydrocarbons",
+   "q": "But-2-yne, C₄H₆, burns in oxygen. What amount of oxygen is needed for complete combustion of 0.20 mol of but-2-yne?",
+   "options": [
+    "2.2 mol",
+    "0.80 mol",
+    "1.1 mol",
+    "1.0 mol"
+   ],
+   "answer": 2,
+   "explanation": "The balanced equation is C₄H₆ + 5.5O₂ → 4CO₂ + 3H₂O. Thus 0.20 mol of but-2-yne requires 0.20 × 5.5 = 1.10 mol of oxygen."
+  },
+  {
+   "n": 4,
+   "topic": "Environmental chemistry",
+   "q": "During heavy traffic in Lagos, sunlight acts on pollutants from vehicle exhausts to form photochemical smog. Which pollutant is mainly responsible for initiating this smog formation?",
+   "options": [
+    "Methane",
+    "Oxides of nitrogen",
+    "Sulphur(IV) oxide",
+    "Carbon dioxide"
+   ],
+   "answer": 1,
+   "explanation": "Oxides of nitrogen from vehicle engines are acted upon by sunlight and help form photochemical smog. Carbon dioxide and methane are mainly greenhouse gases, while sulphur(IV) oxide contributes mainly to acid rain."
+  },
+  {
+   "n": 5,
+   "topic": "Acids, bases and salts",
+   "q": "An aqueous solution of ammonium chloride is acidic. This is mainly because",
+   "options": [
+    "ammonium chloride dissociates to give hydrogen chloride gas",
+    "chloride ions hydrolyse to produce hydrogen ions",
+    "the ammonium ion hydrolyses to produce hydrogen ions",
+    "water molecules accept protons from chloride ions"
+   ],
+   "answer": 2,
+   "explanation": "The ammonium ion reacts with water to form ammonia and hydronium ions, increasing the hydrogen ion concentration. Chloride ions come from a strong acid and do not hydrolyse appreciably to produce hydrogen ions."
+  },
+  {
+   "n": 6,
+   "topic": "Acids, bases and salts",
+   "q": "At 25 °C, a weak monobasic acid has concentration 0.10 mol/dm³ and pH 3.00. What is its acid dissociation constant, Ka?",
+   "options": [
+    "1.0 × 10⁻³ mol/dm³",
+    "1.0 × 10⁻⁷ mol/dm³",
+    "1.0 × 10⁻⁵ mol/dm³",
+    "1.0 × 10⁻⁹ mol/dm³"
+   ],
+   "answer": 2,
+   "explanation": "A pH of 3.00 gives [H⁺] = 10⁻³ mol/dm³. For HA ⇌ H⁺ + A⁻, Ka ≈ [H⁺]²/[HA] = (10⁻³)²/0.10 = 1.0 × 10⁻⁵ mol/dm³. The value 1.0 × 10⁻³ mol/dm³ is the hydrogen ion concentration, not Ka."
+  },
+  {
+   "n": 7,
+   "topic": "Acids, bases and salts",
+   "q": "A student in Oyo prepares copper(II) tetraoxosulphate(VI) crystals by adding copper(II) oxide to warm dilute tetraoxosulphate(VI) acid. Excess copper(II) oxide is added mainly to",
+   "options": [
+    "ensure that all the acid is neutralised",
+    "make the final solution strongly acidic",
+    "increase the yield of water of crystallisation",
+    "prevent the crystals from dissolving on cooling"
+   ],
+   "answer": 0,
+   "explanation": "Excess insoluble copper(II) oxide reacts with all the acid and is then filtered off, leaving only copper(II) tetraoxosulphate(VI) in solution for crystallisation. It does not make the solution strongly acidic or directly increase the water of crystallisation."
+  },
+  {
+   "n": 8,
+   "topic": "Mole concept and stoichiometry",
+   "q": "A sample of gas occupies 448 cm³ at s.t.p. What amount of gas, in mol, is present? (Molar volume at s.t.p. = 22.4 dm³ mol⁻¹)",
+   "options": [
+    "20.0 mol",
+    "0.0200 mol",
+    "0.200 mol",
+    "0.448 mol"
+   ],
+   "answer": 1,
+   "explanation": "448 cm³ is 0.448 dm³, and the amount is 0.448 dm³ ÷ 22.4 dm³ mol⁻¹ = 0.0200 mol. Using 448 directly with 22.4 gives 20.0 mol, which is wrong because the volume must first be converted from cm³ to dm³."
+  },
+  {
+   "n": 9,
+   "topic": "Mole concept and stoichiometry",
+   "q": "In a laboratory in Ibadan, 0.10 mol of calcium carbonate is added to 100 cm³ of 1.0 mol dm⁻³ hydrochloric acid. Which reactant remains and in what amount? CaCO₃ + 2HCl → CaCl₂ + H₂O + CO₂",
+   "options": [
+    "Hydrochloric acid, 0.100 mol",
+    "Calcium carbonate, 0.050 mol",
+    "Hydrochloric acid, 0.050 mol",
+    "Calcium carbonate, 0.100 mol"
+   ],
+   "answer": 1,
+   "explanation": "100 cm³ of 1.0 mol dm⁻³ HCl contains 0.100 mol of HCl. The equation shows that 2 mol HCl react with 1 mol CaCO₃, so 0.100 mol HCl reacts with 0.050 mol CaCO₃. Thus 0.050 mol of the original 0.10 mol CaCO₃ remains, while the acid is completely used up."
+  },
+  {
+   "n": 10,
+   "topic": "Periodic table",
+   "q": "Which property increases across Period 3 from sodium to chlorine?",
+   "options": [
+    "Metallic character",
+    "Number of electron shells",
+    "Electronegativity",
+    "Atomic radius"
+   ],
+   "answer": 2,
+   "explanation": "Electronegativity increases across Period 3 from sodium to chlorine as the nuclear charge increases while shielding remains roughly constant. Atomic radius and metallic character decrease across the period."
+  },
+  {
+   "n": 11,
+   "topic": "Periodic table",
+   "q": "An element has atomic number 20. In which group and period of the Periodic Table is it?",
+   "options": [
+    "Group IV and Period 4",
+    "Group II and Period 4",
+    "Group II and Period 3",
+    "Group IV and Period 2"
+   ],
+   "answer": 1,
+   "explanation": "Atomic number 20 gives the electron configuration 2,8,8,2, which is calcium. The two outer-shell electrons place it in Group II, and the four occupied shells place it in Period 4."
+  },
+  {
+   "n": 12,
+   "topic": "Chemical bonding",
+   "q": "In the reaction NH₃ + BF₃ → H₃NBF₃, what type of bond is formed between nitrogen and boron?",
+   "options": [
+    "Ionic bond formed by transfer of electrons",
+    "Hydrogen bond between two molecules",
+    "Coordinate (dative) covalent bond",
+    "Ordinary covalent bond formed by equal sharing of two electrons"
+   ],
+   "answer": 2,
+   "explanation": "In BF₃ the boron atom has an incomplete octet, and the lone pair on nitrogen in NH₃ is donated to boron. This shared pair comes from one atom, so the new N–B bond is a coordinate (dative) covalent bond."
+  },
+  {
+   "n": 13,
+   "topic": "Chemical bonding",
+   "q": "Graphite is used as an electrode in dry cells. Which statement explains this use?",
+   "options": [
+    "Weak van der Waals forces between layers allow current to pass.",
+    "Its layers are held by strong ionic bonds that allow ions to move.",
+    "Delocalised electrons between its layers are free to move.",
+    "Each carbon atom has four unpaired electrons that move freely."
+   ],
+   "answer": 2,
+   "explanation": "In graphite each carbon atom is bonded to three others in a layer, leaving one electron delocalised. These delocalised electrons can move along the layers and carry current, which makes graphite useful as an electrode."
+  },
+  {
+   "n": 14,
+   "topic": "Non-metals and their compounds",
+   "q": "A student in Enugu adds dilute hydrochloric acid to a solution of sodium sulphite in a test tube. The gas evolved turns acidified potassium dichromate(VI) paper from orange to green. Which gas is evolved and what property is shown?",
+   "options": [
+    "Carbon(IV) oxide; it is an acidic gas",
+    "Hydrogen sulphide; it is a reducing gas",
+    "Chlorine; it oxidises dichromate(VI) ions",
+    "Sulphur(IV) oxide; it reduces dichromate(VI) ions"
+   ],
+   "answer": 3,
+   "explanation": "Dilute hydrochloric acid reacts with sodium sulphite to release sulphur(IV) oxide, SO₂. The orange dichromate(VI) paper turns green because SO₂ reduces dichromate(VI) ions to chromium(III) ions. Carbon(IV) oxide does not change acidified dichromate(VI) paper under these conditions."
+  },
+  {
+   "n": 15,
+   "topic": "Non-metals and their compounds",
+   "q": "A laboratory technician in Warri decomposes hydrogen peroxide using manganese(IV) oxide. Which statement about the manganese(IV) oxide is correct?",
+   "options": [
+    "It changes the enthalpy change of the decomposition",
+    "It is completely used up, so it must be added continuously",
+    "It remains chemically unchanged and lowers the activation energy of the decomposition",
+    "It increases the amount of oxygen produced at equilibrium"
+   ],
+   "answer": 2,
+   "explanation": "Manganese(IV) oxide acts as a catalyst for the decomposition of hydrogen peroxide. A catalyst lowers the activation energy and remains chemically unchanged at the end of the reaction. It does not alter the enthalpy change of the reaction or increase the theoretical equilibrium yield."
+  },
+  {
+   "n": 16,
+   "topic": "Non-metals and their compounds",
+   "q": "In a home in Lagos, a faulty generator produces carbon monoxide. Which statement explains why carbon monoxide is dangerous when inhaled?",
+   "options": [
+    "It reacts with oxygen in the lungs to form carbon(IV) oxide",
+    "It dissolves the lining of the lungs and causes bleeding",
+    "It forms a stable compound with haemoglobin, reducing the oxygen-carrying capacity of the blood",
+    "It increases the acidity of the blood and causes immediate vomiting"
+   ],
+   "answer": 2,
+   "explanation": "Carbon monoxide binds strongly to haemoglobin to form carboxyhaemoglobin. This reduces the amount of haemoglobin available to carry oxygen around the body. The effect is dangerous even when the gas has no noticeable colour or smell."
+  },
+  {
+   "n": 17,
+   "topic": "Gas laws",
+   "q": "At the same temperature and pressure, 4.0 g of hydrogen gas occupies 48 dm³. What volume will 16.0 g of oxygen gas occupy under the same conditions? (H₂ = 2.0; O₂ = 32.0)",
+   "options": [
+    "12 dm³",
+    "24 dm³",
+    "48 dm³",
+    "96 dm³"
+   ],
+   "answer": 0,
+   "explanation": "Using Avogadro’s law, equal volumes of gases at the same temperature and pressure contain equal numbers of moles. 4.0 g of H₂ is 2.0 mol, while 16.0 g of O₂ is 0.50 mol. Therefore the oxygen volume is (0.50 ÷ 2.0) × 48 dm³ = 12 dm³."
+  },
+  {
+   "n": 18,
+   "topic": "Gas laws",
+   "q": "A 0.50 mol sample of an ideal gas at 300 K exerts a pressure of 8.31 × 10⁴ Pa. Calculate its volume in dm³. (R = 8.31 J K⁻¹ mol⁻¹)",
+   "options": [
+    "150 dm³",
+    "1.5 dm³",
+    "0.015 dm³",
+    "15 dm³"
+   ],
+   "answer": 3,
+   "explanation": "Using V = nRT ÷ P gives V = (0.50 × 8.31 × 300) ÷ (8.31 × 10⁴) = 0.015 m³. Since 1 m³ = 1000 dm³, the volume is 0.015 × 1000 = 15 dm³. The calculation must use SI units for pressure and volume before converting to dm³."
+  },
+  {
+   "n": 19,
+   "topic": "Energy changes",
+   "q": "A student in Sokoto dissolves 4.00 g of ammonium nitrate in 100 g of water. The temperature falls from 30.0 °C to 26.0 °C. Taking the specific heat capacity of water as 4.2 J g⁻¹ K⁻¹, calculate the heat absorbed from the water.",
+   "options": [
+    "1680 J",
+    "420 J",
+    "16 800 J",
+    "168 J"
+   ],
+   "answer": 0,
+   "explanation": "The temperature change is 30.0 − 26.0 = 4.0 K. Using q = mcΔT gives q = 100 × 4.2 × 4.0 = 1680 J. The water loses this amount of heat, so the heat absorbed from the water is 1680 J."
+  },
+  {
+   "n": 20,
+   "topic": "Energy changes",
+   "q": "Use the equations below to calculate ΔH for C(s) + ½O₂(g) → CO(g).\nC(s) + O₂(g) → CO₂(g), ΔH = −393 kJ mol⁻¹\nCO(g) + ½O₂(g) → CO₂(g), ΔH = −283 kJ mol⁻¹",
+   "options": [
+    "+676 kJ mol⁻¹",
+    "+110 kJ mol⁻¹",
+    "−676 kJ mol⁻¹",
+    "−110 kJ mol⁻¹"
+   ],
+   "answer": 3,
+   "explanation": "Reverse the second equation, changing its enthalpy change to +283 kJ mol⁻¹. Adding this to the first equation cancels CO₂ and leaves C(s) + ½O₂(g) → CO(g). Hence ΔH = −393 + 283 = −110 kJ mol⁻¹."
+  },
+  {
+   "n": 21,
+   "topic": "Water and solubility",
+   "q": "A student in Minna prepares a saturated solution of potassium trioxonitrate(V) at 80 °C using 100 g of water. The solution is cooled to 30 °C. If the solubilities at 80 °C and 30 °C are 169 g and 45 g per 100 g of water respectively, what mass of crystals is deposited?",
+   "options": [
+    "124 g",
+    "45 g",
+    "169 g",
+    "214 g"
+   ],
+   "answer": 0,
+   "explanation": "At 80 °C, 169 g of the salt dissolves in 100 g of water. At 30 °C, only 45 g can remain dissolved in the same mass of water. The mass deposited is 169 g − 45 g = 124 g."
+  },
+  {
+   "n": 22,
+   "topic": "Water and solubility",
+   "q": "A municipal water treatment plant in Jos carries out sedimentation, filtration, aeration and chlorination. Which process is mainly responsible for killing disease-causing micro-organisms?",
+   "options": [
+    "Aeration",
+    "Sedimentation",
+    "Filtration",
+    "Chlorination"
+   ],
+   "answer": 3,
+   "explanation": "Chlorination adds chlorine or chlorine compounds that destroy disease-causing micro-organisms. Sedimentation and filtration remove suspended particles, while aeration mainly improves taste and oxidises dissolved substances."
+  },
+  {
+   "n": 23,
+   "topic": "Rates of reaction and equilibrium",
+   "q": "In a kinetic study in a laboratory in Ibadan, dinitrogen pentoxide decomposes as 2N₂O₅(g) → 4NO₂(g) + O₂(g). If oxygen is formed at 0.015 mol dm⁻³ s⁻¹, at what rate is N₂O₅ decomposed?",
+   "options": [
+    "0.060 mol dm⁻³ s⁻¹",
+    "0.0075 mol dm⁻³ s⁻¹",
+    "0.015 mol dm⁻³ s⁻¹",
+    "0.030 mol dm⁻³ s⁻¹"
+   ],
+   "answer": 3,
+   "explanation": "From the equation, 2 mol of N₂O₅ decompose for every 1 mol of O₂ formed. Therefore the rate of decomposition of N₂O₅ is 2 × 0.015 = 0.030 mol dm⁻³ s⁻¹."
+  },
+  {
+   "n": 24,
+   "topic": "Rates of reaction and equilibrium",
+   "q": "At a certain temperature, the equilibrium constant Kc for 2SO₂(g) + O₂(g) ⇌ 2SO₃(g) is 500. At equilibrium, [SO₂] = 0.10 mol dm⁻³ and [O₂] = 0.20 mol dm⁻³. What is [SO₃]?",
+   "options": [
+    "0.10 mol dm⁻³",
+    "2.0 mol dm⁻³",
+    "1.0 mol dm⁻³",
+    "0.20 mol dm⁻³"
+   ],
+   "answer": 2,
+   "explanation": "Kc = [SO₃]² ÷ ([SO₂]²[O₂]). Substituting gives 500 = [SO₃]² ÷ (0.10² × 0.20) = [SO₃]² ÷ 0.0020. Hence [SO₃]² = 1.0 and [SO₃] = 1.0 mol dm⁻³."
+  },
+  {
+   "n": 25,
+   "topic": "Atomic structure",
+   "q": "An element R exists as two isotopes, ⁶⁹R and ⁷¹R, in the ratio 3:2 by abundance. What is the relative atomic mass of R?",
+   "options": [
+    "69.8",
+    "70.0",
+    "69.0",
+    "69.4"
+   ],
+   "answer": 0,
+   "explanation": "The relative atomic mass is the weighted average: (69 × 3 + 71 × 2) ÷ (3 + 2) = (207 + 142) ÷ 5 = 349 ÷ 5 = 69.8."
+  },
+  {
+   "n": 26,
+   "topic": "Oxidation, reduction and electrolysis",
+   "q": "During the electrolysis of copper(II) sulphate solution using platinum electrodes, a current of 2.50 A is passed for 64 min 20 s. What mass of copper is deposited at the cathode? (Cu = 64; F = 96500 C mol⁻¹)",
+   "options": [
+    "1.60 g",
+    "6.40 g",
+    "12.8 g",
+    "3.20 g"
+   ],
+   "answer": 3,
+   "explanation": "Time = (64 × 60) + 20 = 3860 s. Charge Q = It = 2.50 × 3860 = 9650 C. Moles of electrons = 9650 ÷ 96500 = 0.100 mol. Since Cu²⁺ + 2e → Cu, moles of copper = 0.100 ÷ 2 = 0.0500 mol. Mass of copper = 0.0500 × 64 = 3.20 g."
+  },
+  {
+   "n": 27,
+   "topic": "Separation of mixtures",
+   "q": "A laboratory technician, Nkechi, in Kaduna needs to obtain pure water from a dilute sugar solution. Which method is most suitable?",
+   "options": [
+    "Paper chromatography",
+    "Crystallisation",
+    "Simple distillation",
+    "Filtration"
+   ],
+   "answer": 2,
+   "explanation": "Simple distillation evaporates the water and condenses it, leaving the dissolved sugar behind. Filtration only removes insoluble solids, while crystallisation recovers the dissolved solid rather than pure water."
+  },
+  {
+   "n": 28,
+   "topic": "Separation of mixtures",
+   "q": "A student, Tunde, in Ogbomoso uses a separating funnel to separate a mixture of palm oil and water. Before opening the tap to run off the lower layer, he should first",
+   "options": [
+    "run off the upper layer first while keeping the stopper in place",
+    "remove the stopper from the top of the funnel",
+    "add water to the funnel until it is completely full",
+    "shake the funnel vigorously with the tap closed"
+   ],
+   "answer": 1,
+   "explanation": "Removing the stopper allows air into the funnel so that the lower layer flows out smoothly without a vacuum forming. Shaking would remix the layers, and the upper layer cannot be run off first through the tap at the bottom."
+  },
+  {
+   "n": 29,
+   "topic": "Hydrocarbons",
+   "q": "In a school laboratory in Asaba, ethene is mixed with hydrogen and passed over a heated nickel catalyst. The main product formed is",
+   "options": [
+    "Ethanol",
+    "Methane",
+    "Ethyne",
+    "Ethane"
+   ],
+   "answer": 3,
+   "explanation": "Hydrogen adds across the carbon-carbon double bond of ethene in the presence of nickel to form the saturated hydrocarbon ethane. Ethanol would require reaction with steam and an acid catalyst, not hydrogen alone."
+  },
+  {
+   "n": 30,
+   "topic": "Hydrocarbons",
+   "q": "A petroleum refinery in Warri converts long-chain hydrocarbons from crude oil into shorter-chain petrol and alkenes. The process used is",
+   "options": [
+    "Cracking",
+    "Hydrogenation",
+    "Fractional distillation",
+    "Polymerisation"
+   ],
+   "answer": 0,
+   "explanation": "Cracking breaks large hydrocarbon molecules into smaller, more useful molecules, including petrol-range alkanes and alkenes. Fractional distillation only separates hydrocarbons without breaking their chains, while polymerisation and hydrogenation build or saturate molecules."
+  },
+  {
+   "n": 31,
+   "topic": "Hydrocarbons",
+   "q": "What is the IUPAC name of the compound CH₃CH=CHCH₂CH₃?",
+   "options": [
+    "Pent-2-ene",
+    "Pent-1-ene",
+    "2-Methylbut-1-ene",
+    "Pent-3-ene"
+   ],
+   "answer": 0,
+   "explanation": "The longest carbon chain contains five carbon atoms, and numbering from the end nearer the double bond places it between carbon-2 and carbon-3, giving pent-2-ene. Pent-3-ene does not use the lowest possible locant for the double bond, and the branched name represents a different carbon skeleton."
+  },
+  {
+   "n": 32,
+   "topic": "Environmental chemistry",
+   "q": "In a poorly ventilated kitchen in Gusau, a family uses a charcoal stove. Which gas is most likely to build up and cause poisoning because of incomplete combustion?",
+   "options": [
+    "Methane",
+    "Carbon(IV) oxide",
+    "Carbon(II) oxide",
+    "Sulphur(IV) oxide"
+   ],
+   "answer": 2,
+   "explanation": "Incomplete combustion of charcoal produces carbon(II) oxide, which binds strongly to haemoglobin and prevents oxygen transport. Carbon(IV) oxide is not the main toxic gas from incomplete combustion, while sulphur(IV) oxide and methane are not the normal products of burning charcoal."
+  },
+  {
+   "n": 33,
+   "topic": "Acids, bases and salts",
+   "q": "At 25 °C, a solution prepared in a laboratory in Enugu has pOH = 4.0. What is its pH?",
+   "options": [
+    "7.0",
+    "4.0",
+    "10.0",
+    "14.0"
+   ],
+   "answer": 2,
+   "explanation": "At 25 °C, pH + pOH = 14.0, so pH = 14.0 - 4.0 = 10.0. The value 4.0 is the pOH itself, not the pH."
+  },
+  {
+   "n": 34,
+   "topic": "Acids, bases and salts",
+   "q": "A laboratory technician, Musa, in Katsina titrates aqueous ammonia against dilute hydrochloric acid. Which indicator is most suitable for detecting the end-point?",
+   "options": [
+    "Starch solution",
+    "Litmus solution",
+    "Methyl orange",
+    "Phenolphthalein"
+   ],
+   "answer": 2,
+   "explanation": "Aqueous ammonia is a weak base and hydrochloric acid is a strong acid, so the solution at the equivalence point is acidic. Methyl orange changes colour in the acidic pH range, whereas phenolphthalein changes in the alkaline range and is unsuitable; starch is used for iodine titrations."
+  },
+  {
+   "n": 35,
+   "topic": "Mole concept and stoichiometry",
+   "q": "An iron ore from a mine near Kano contains 42.0% iron by mass. What mass of the ore, in grams, is needed to obtain 336 g of iron?",
+   "options": [
+    "336 g",
+    "800 g",
+    "141 g",
+    "1,008 g"
+   ],
+   "answer": 1,
+   "explanation": "Mass of ore = mass of iron ÷ percentage iron = 336 g ÷ 0.420 = 800 g. Multiplying 336 g by 0.420 gives 141 g, which is the mass of iron in 336 g of ore, not the ore needed to obtain 336 g of iron."
+  },
+  {
+   "n": 36,
+   "topic": "Periodic table",
+   "q": "The modern Periodic Table arranges elements in order of increasing",
+   "options": [
+    "atomic number",
+    "atomic radius",
+    "number of neutrons",
+    "relative atomic mass"
+   ],
+   "answer": 0,
+   "explanation": "The modern Periodic Table uses increasing atomic number, that is, the number of protons in the nucleus. Mendeleev's earlier table was based mainly on increasing relative atomic mass."
+  },
+  {
+   "n": 37,
+   "topic": "Periodic table",
+   "q": "An element in Group II gives a brick-red colour in a flame test. Which element is it?",
+   "options": [
+    "Potassium",
+    "Copper",
+    "Sodium",
+    "Calcium"
+   ],
+   "answer": 3,
+   "explanation": "Calcium and its compounds give a brick-red flame colour. Sodium gives a golden-yellow flame, potassium gives a lilac flame, and copper gives a blue-green flame."
+  },
+  {
+   "n": 38,
+   "topic": "Chemical bonding",
+   "q": "A blacksmith in Ibadan hammers iron into thin sheets without the metal shattering. Which statement best explains this property?",
+   "options": [
+    "Strong electrostatic attraction between oppositely charged ions keeps the layers fixed in place.",
+    "Each iron atom shares a pair of electrons with only one neighbouring atom in a rigid lattice.",
+    "Layers of positive ions can slide over one another while delocalised electrons hold them together.",
+    "Weak intermolecular forces between separate iron molecules allow the particles to move easily."
+   ],
+   "answer": 2,
+   "explanation": "Iron has metallic bonding: positive ions are arranged in layers in a sea of delocalised electrons. When hammered, the layers can slide without the metal breaking, which makes iron malleable. The ionic description would lead to a brittle solid, and separate molecules are not present in a metal."
+  },
+  {
+   "n": 39,
+   "topic": "Non-metals and their compounds",
+   "q": "In a chemical plant in Sagamu, chlorine is passed over dry slaked lime to manufacture bleaching powder. Which compound is used, in the dry state, to make bleaching powder by reaction with chlorine?",
+   "options": [
+    "Calcium trioxocarbonate(IV)",
+    "Sodium hydroxide",
+    "Calcium hydroxide",
+    "Calcium oxide"
+   ],
+   "answer": 2,
+   "explanation": "Bleaching powder is made by the action of chlorine on dry calcium hydroxide, Ca(OH)₂. Calcium oxide is quicklime, not slaked lime, and sodium hydroxide would give a sodium oxochlorate(I) product instead."
+  },
+  {
+   "n": 40,
+   "topic": "Non-metals and their compounds",
+   "q": "In a school laboratory in Ogoja, chlorine is prepared by heating manganese(IV) oxide with concentrated hydrochloric acid. Which species is oxidized in the reaction?",
+   "options": [
+    "Manganese(IV) oxide",
+    "Chloride ion",
+    "Hydrogen ion",
+    "Water"
+   ],
+   "answer": 1,
+   "explanation": "The manganese in manganese(IV) oxide is reduced from +4 to +2, while the chloride ion in concentrated hydrochloric acid is oxidized to chlorine gas. The equation is MnO₂ + 4HCl → MnCl₂ + Cl₂ + 2H₂O."
+  },
+  {
+   "n": 41,
+   "topic": "Functional groups in organic chemistry",
+   "q": "A laboratory technician in Ilesa analyses a sweet-smelling liquid with the structure CH₃CH₂COOCH₂CH₃. To which homologous series does the liquid belong?",
+   "options": [
+    "Alkanals",
+    "Alkanoic acids",
+    "Esters",
+    "Alkanols"
+   ],
+   "answer": 2,
+   "explanation": "The compound contains the –COO– linkage, which is the ester functional group. The –COOH group of alkanoic acids is absent, so it is not an alkanoic acid."
+  },
+  {
+   "n": 42,
+   "topic": "Functional groups in organic chemistry",
+   "q": "Which compound is a functional group isomer of propanal?",
+   "options": [
+    "Propanone",
+    "Propanoic acid",
+    "Propan-1-ol",
+    "Propane"
+   ],
+   "answer": 0,
+   "explanation": "Propanal and propanone both have molecular formula C₃H₆O, but propanal contains an aldehyde group while propanone contains a ketone group. Propan-1-ol and propane have different molecular formulae from propanal."
+  },
+  {
+   "n": 43,
+   "topic": "Functional groups in organic chemistry",
+   "q": "Which compound is a primary amine?",
+   "options": [
+    "(CH₃)₂NH",
+    "CH₃CH₂NH₂",
+    "CH₃CONH₂",
+    "(CH₃)₃N"
+   ],
+   "answer": 1,
+   "explanation": "A primary amine has the general formula RNH₂, with the nitrogen atom joined to only one carbon-containing group; CH₃CH₂NH₂ fits this. (CH₃)₂NH is secondary, (CH₃)₃N is tertiary, and CH₃CONH₂ is an amide."
+  },
+  {
+   "n": 44,
+   "topic": "Gas laws",
+   "q": "A laboratory technician in Aba fills a 600 cm³ vessel with 0.020 mol of an ideal gas at 27 °C. Calculate the pressure exerted by the gas. (R = 8.31 J K⁻¹ mol⁻¹)",
+   "options": [
+    "831 kPa",
+    "83.1 kPa",
+    "8.31 kPa",
+    "41.6 kPa"
+   ],
+   "answer": 1,
+   "explanation": "The volume is 600 cm³ = 6.00 × 10⁻⁴ m³ and the temperature is 300 K. From P = nRT/V, P = (0.020 × 8.31 × 300) ÷ (6.00 × 10⁻⁴) = 83 100 Pa = 83.1 kPa."
+  },
+  {
+   "n": 45,
+   "topic": "Water and solubility",
+   "q": "A sample of temporary hard water from a borehole in Ilorin contains calcium hydrogencarbonate. After the water is boiled, the hardness decreases mainly because",
+   "options": [
+    "calcium hydrogencarbonate is converted to soluble calcium chloride",
+    "calcium hydrogencarbonate decomposes to insoluble calcium carbonate",
+    "calcium ions combine with dissolved oxygen to form calcium oxide",
+    "calcium sulphate is precipitated as insoluble crystals"
+   ],
+   "answer": 1,
+   "explanation": "Boiling decomposes calcium hydrogencarbonate to insoluble calcium carbonate, which precipitates and removes calcium ions from the water. This lowers temporary hardness. Calcium sulphate causes permanent hardness and is not removed by boiling."
+  },
+  {
+   "n": 46,
+   "topic": "Rates of reaction and equilibrium",
+   "q": "For the reaction 2A → B, the concentration of A falls from 0.80 mol dm⁻³ to 0.20 mol dm⁻³ in 30 s. What is the average rate of disappearance of A?",
+   "options": [
+    "0.020 mol dm⁻³ s⁻¹",
+    "0.040 mol dm⁻³ s⁻¹",
+    "0.010 mol dm⁻³ s⁻¹",
+    "0.600 mol dm⁻³ s⁻¹"
+   ],
+   "answer": 0,
+   "explanation": "The average rate of disappearance of the reactant is (0.80 − 0.20) mol dm⁻³ ÷ 30 s = 0.020 mol dm⁻³ s⁻¹. Dividing the concentration change by 2 would give the rate of reaction, not the rate of disappearance of the reactant."
+  },
+  {
+   "n": 47,
+   "topic": "Rates of reaction and equilibrium",
+   "q": "The initial rates for the reaction between P and Q are: when [P] = 0.10 mol dm⁻³ and [Q] = 0.10 mol dm⁻³, rate = 2.0 × 10⁻³ mol dm⁻³ s⁻¹; when [P] = 0.20 mol dm⁻³ and [Q] = 0.10 mol dm⁻³, rate = 8.0 × 10⁻³ mol dm⁻³ s⁻¹; when [P] = 0.10 mol dm⁻³ and [Q] = 0.20 mol dm⁻³, rate = 2.0 × 10⁻³ mol dm⁻³ s⁻¹. Which rate equation agrees with these results?",
+   "options": [
+    "rate = k[P][Q]",
+    "rate = k[P]²[Q]",
+    "rate = k[P]²",
+    "rate = k[Q]²"
+   ],
+   "answer": 2,
+   "explanation": "Doubling [P] while [Q] is unchanged increases the rate from 2.0 × 10⁻³ to 8.0 × 10⁻³, a factor of four, so the reaction is second order in P. Doubling [Q] leaves the rate unchanged, so it is zero order in Q; hence rate = k[P]²."
+  },
+  {
+   "n": 48,
+   "topic": "Rates of reaction and equilibrium",
+   "q": "For the equilibrium N₂O₄(g) ⇌ 2NO₂(g), ΔH = +57 kJ mol⁻¹, which change increases the amount of NO₂ at equilibrium?",
+   "options": [
+    "decrease the temperature",
+    "add a catalyst",
+    "increase the temperature",
+    "increase the pressure"
+   ],
+   "answer": 2,
+   "explanation": "The forward reaction is endothermic, so increasing temperature shifts the equilibrium in the forward direction, producing more NO₂. Increasing pressure favours the side with fewer gas molecules, while a catalyst does not change the equilibrium position."
+  },
+  {
+   "n": 49,
+   "topic": "Atomic structure",
+   "q": "Which pair are isotopes?",
+   "options": [
+    "²⁴Mg and ²⁴Na",
+    "²³Na and ²⁴Mg",
+    "¹⁶O and ¹⁹F",
+    "²⁴Mg and ²⁵Mg"
+   ],
+   "answer": 3,
+   "explanation": "Isotopes are atoms of the same element with the same atomic number but different mass numbers. The pair ²⁴Mg and ²⁵Mg both have atomic number 12 but mass numbers 24 and 25; the other pairs involve different elements."
+  },
+  {
+   "n": 50,
+   "topic": "Oxidation, reduction and electrolysis",
+   "q": "A bleach factory in Lagos analyses sodium chlorate, NaClO₃. What is the oxidation number of chlorine in the compound?",
+   "options": [
+    "+1",
+    "+7",
+    "+3",
+    "+5"
+   ],
+   "answer": 3,
+   "explanation": "In NaClO₃, sodium is +1 and each oxygen is −2. For the compound to be neutral: (+1) + x + 3(−2) = 0, giving x = +5 for chlorine."
+  },
+  {
+   "n": 51,
+   "topic": "Oxidation, reduction and electrolysis",
+   "q": "During the electrolysis of acidified water using platinum electrodes, a current of 1.00 A is passed for 965 s. What volume of hydrogen, measured at s.t.p., is produced at the cathode? (1 faraday = 96 500 C mol⁻¹; molar volume at s.t.p. = 22.4 dm³)",
+   "options": [
+    "56 cm³",
+    "112 cm³",
+    "224 cm³",
+    "11.2 cm³"
+   ],
+   "answer": 1,
+   "explanation": "Charge passed = 1.00 × 965 = 965 C, which is 965/96500 = 0.0100 mol of electrons. The cathode reaction 2H⁺ + 2e⁻ → H₂ gives 0.00500 mol H₂, and 0.00500 × 22.4 dm³ = 0.112 dm³ = 112 cm³."
+  },
+  {
+   "n": 52,
+   "topic": "Separation of mixtures",
+   "q": "A sample of muddy water in Makurdi is left undisturbed in a beaker for several hours. A clear layer forms above the mud. Which process is mainly responsible for this separation?",
+   "options": [
+    "Sublimation",
+    "Filtration",
+    "Chromatography",
+    "Sedimentation"
+   ],
+   "answer": 3,
+   "explanation": "The heavier solid particles settle to the bottom under gravity, leaving a clearer liquid above. Filtration would require a filter medium, sublimation involves a solid changing directly to vapour, and chromatography separates dissolved substances by movement through a stationary phase. The formation of the clear layer is sedimentation."
+  },
+  {
+   "n": 53,
+   "topic": "Separation of mixtures",
+   "q": "Lead(II) nitrate solution is mixed with potassium iodide solution and a yellow precipitate forms. Which method is most suitable for obtaining the precipitate from the mixture?",
+   "options": [
+    "Filtration",
+    "Sublimation",
+    "Use of a separating funnel",
+    "Evaporation to dryness"
+   ],
+   "answer": 0,
+   "explanation": "The yellow lead(II) iodide is an insoluble solid suspended in the liquid, so it is collected as a residue by filtration. Sublimation applies to solids that vaporise directly, evaporation to dryness would leave dissolved salts with the solid, and a separating funnel is used for immiscible liquids. Washing the residue after filtration can give the precipitate more free of soluble impurities."
+  },
+  {
+   "n": 54,
+   "topic": "Hydrocarbons",
+   "q": "Ethane burns completely in oxygen according to C₂H₆ + 7/2 O₂ → 2CO₂ + 3H₂O. What mass of carbon(IV) oxide is formed when 3.0 g of ethane is completely burned? (C = 12, H = 1, O = 16)",
+   "options": [
+    "8.8 g",
+    "22.0 g",
+    "13.2 g",
+    "4.4 g"
+   ],
+   "answer": 0,
+   "explanation": "The molar mass of ethane is 30 g/mol, so 3.0 g is 0.10 mol. Complete combustion of 1 mol of ethane gives 2 mol of carbon(IV) oxide, so 0.10 mol gives 0.20 mol of CO₂. The mass of CO₂ is 0.20 × 44 = 8.8 g."
+  },
+  {
+   "n": 55,
+   "topic": "Environmental chemistry",
+   "q": "A cement factory near Sagamu releases fine dust into the air. Which device is most suitable for removing the dust particles from the waste gas before it is released?",
+   "options": [
+    "Electrostatic precipitator",
+    "Fractionating column",
+    "Septic tank",
+    "Catalytic converter"
+   ],
+   "answer": 0,
+   "explanation": "An electrostatic precipitator charges the dust particles and attracts them to oppositely charged plates, removing them from the gas stream. A catalytic converter treats exhaust gases from engines, a septic tank treats sewage, and a fractionating column separates liquids by boiling point."
+  },
+  {
+   "n": 56,
+   "topic": "Environmental chemistry",
+   "q": "Waste cooking oil is discharged into a canal in Port Harcourt. Which immediate effect is most likely on organisms living in the water?",
+   "options": [
+    "The oil increases the dissolved oxygen content of the water.",
+    "The oil raises the pH of the water to about 14.",
+    "The oil makes the water permanently hard.",
+    "The oil film reduces the transfer of oxygen from air into the water."
+   ],
+   "answer": 3,
+   "explanation": "A layer of oil on the water surface can prevent oxygen from the air from dissolving in the water, reducing dissolved oxygen available to aquatic organisms. It does not increase dissolved oxygen, and oil is not the cause of permanent hardness or an extreme alkaline pH."
+  },
+  {
+   "n": 57,
+   "topic": "Mole concept and stoichiometry",
+   "q": "A pharmacist in Enugu needs to prepare 250 cm³ of 0.080 mol dm⁻³ sodium hydrogencarbonate solution. What mass of NaHCO₃ is required? (NaHCO₃ = 84 g mol⁻¹)",
+   "options": [
+    "0.168 g",
+    "2.10 g",
+    "1.68 g",
+    "16.8 g"
+   ],
+   "answer": 2,
+   "explanation": "Moles needed = 0.080 mol dm⁻³ × 0.250 dm³ = 0.020 mol; mass = 0.020 × 84 = 1.68 g. A value like 0.168 g would result from using 25 cm³ instead of 250 cm³."
+  },
+  {
+   "n": 58,
+   "topic": "Mole concept and stoichiometry",
+   "q": "In a workshop in Kaduna, 4.8 g of magnesium is added to 100 cm³ of 0.50 mol dm⁻³ hydrochloric acid. After reaction, what mass of magnesium remains unreacted? (Mg = 24 g mol⁻¹; Mg + 2HCl → MgCl₂ + H₂)",
+   "options": [
+    "4.8 g",
+    "3.6 g",
+    "0.6 g",
+    "4.2 g"
+   ],
+   "answer": 3,
+   "explanation": "HCl is limiting: 0.050 mol HCl reacts with 0.025 mol Mg, i.e. 0.60 g Mg. Initial Mg was 0.20 mol (4.8 g), so unreacted mass = 4.8 − 0.6 = 4.2 g. The value 3.6 g comes from omitting the 1:2 mole ratio in the equation."
+  },
+  {
+   "n": 59,
+   "topic": "Periodic table",
+   "q": "Which of the following ions has a larger radius than its parent atom?",
+   "options": [
+    "Magnesium ion, Mg²⁺",
+    "Chloride ion, Cl⁻",
+    "Potassium ion, K⁺",
+    "Sodium ion, Na⁺"
+   ],
+   "answer": 1,
+   "explanation": "An anion gains electrons and the increased electron–electron repulsion makes Cl⁻ larger than the Cl atom. Cations such as Na⁺, Mg²⁺ and K⁺ lose electrons and are smaller than their parent atoms."
+  },
+  {
+   "n": 60,
+   "topic": "Chemical bonding",
+   "q": "Which of the following substances contains both ionic and covalent bonds?",
+   "options": [
+    "Sodium chloride",
+    "Glucose",
+    "Methane",
+    "Ammonium chloride"
+   ],
+   "answer": 3,
+   "explanation": "Ammonium chloride is made of NH₄⁺ and Cl⁻ ions, so it has an ionic bond, while the N–H bonds inside the ammonium ion are covalent. Sodium chloride is ionic only, and methane and glucose are molecular covalent substances."
+  }
+ ]
+}

@@ -65,6 +65,10 @@ const personalize: Translation<typeof en> = {
     title: 'How you like to learn?',
     subtitle: 'Pick the ones wey you like pass. We go start with dem and mix the rest inside.',
   },
+  region: {
+    title: 'Where you dey study?',
+    subtitle: 'We go show you the exams and exam practice for your country. You fit change am anytime for Settings.',
+  },
   language: {
     title: 'Choose your language',
     subtitle: 'The whole app, your lessons and your AI tutor go use this language sharp-sharp.',
@@ -113,6 +117,7 @@ const personalize: Translation<typeof en> = {
       teachLevels: 'Students',
       age: 'Age group',
       education: 'Level',
+      region: 'Study region',
       pathway: 'Pathway',
       exams: 'Exams',
       subjects: 'Subjects',
@@ -256,7 +261,7 @@ const personalize: Translation<typeof en> = {
   learnerTypes: {
     school: { label: 'School student', description: 'Primary or secondary school' },
     university: { label: 'University or college', description: 'Degree, diploma or ND/HND' },
-    exam: { label: 'Exam candidate', description: 'Dey prepare for JAMB, WAEC, IELTS and others' },
+    exam: { label: 'Exam candidate', description: 'Dey prepare for JAMB, WAEC, IELTS and others', descriptionFor: 'Dey prepare for {{exams}} and others' },
     professional: { label: 'Working professional', description: 'Dey add skills or dey get certificate' },
     lifelong: { label: 'Person wey like to learn', description: 'Dey learn new thing for fun' },
     teacher: { label: 'Teacher or tutor', description: 'Create classes, give practice, follow progress' },
@@ -265,7 +270,7 @@ const personalize: Translation<typeof en> = {
     'school-teacher': { label: 'School teacher', description: 'Primary or secondary school' },
     lecturer: { label: 'Lecturer', description: 'University, polytechnic or college' },
     'private-tutor': { label: 'Private lesson teacher', description: 'One-to-one or small groups' },
-    'exam-coach': { label: 'Exam prep coach', description: 'JAMB, WAEC, IELTS and others' },
+    'exam-coach': { label: 'Exam prep coach', description: 'JAMB, WAEC, IELTS and others', descriptionFor: '{{exams}} and others' },
     parent: { label: 'Parent or homeschooler', description: 'I dey guide my own pikin dem' },
   },
   teachLevelOptions: {

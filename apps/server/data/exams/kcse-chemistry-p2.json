@@ -1,0 +1,401 @@
+{
+ "id": "kcse-chemistry-p2",
+ "exam": "kcse",
+ "subject": "chemistry",
+ "year": null,
+ "number": 2,
+ "source": "ai",
+ "minutes": 35,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Structure of the atom and the periodic table",
+   "q": "An atom of element Q has electron arrangement 2,8,6. In which group and period is Q placed, and what is the formula of its highest oxide?",
+   "options": [
+    "Group VIII, Period 3; QO₃",
+    "Group VI, Period 3; QO₃",
+    "Group VI, Period 3; QO₂",
+    "Group VI, Period 2; QO₃"
+   ],
+   "answer": 1,
+   "explanation": "The third shell is being filled, so Q is in Period 3; its six outer electrons place it in Group VI. In its highest oxide, Q has oxidation state +6, which balances three O²⁻ ions to give QO₃. A common error is to use the valency 2 suggested by gaining two electrons, which would wrongly give QO₂."
+  },
+  {
+   "n": 2,
+   "topic": "Structure of the atom and the periodic table",
+   "q": "A sample of magnesium contains 79% Mg-24, 10% Mg-25 and 11% Mg-26 by abundance. Calculate its relative atomic mass.",
+   "options": [
+    "24.00",
+    "25.00",
+    "24.32",
+    "24.50"
+   ],
+   "answer": 2,
+   "explanation": "Relative atomic mass = (79 × 24 + 10 × 25 + 11 × 26) ÷ 100 = 2432 ÷ 100 = 24.32. The value 24.00 would arise from taking only the most abundant isotope and ignoring the other isotopes."
+  },
+  {
+   "n": 3,
+   "topic": "Structure of the atom and the periodic table",
+   "q": "An ion Y³⁻ has the electron arrangement 2,8. What is the atomic number of Y, and in which group of the Periodic Table is Y placed?",
+   "options": [
+    "7 and Group III",
+    "10 and Group V",
+    "7 and Group V",
+    "10 and Group VIII"
+   ],
+   "answer": 2,
+   "explanation": "Y³⁻ has gained three electrons, so neutral Y has 10 − 3 = 7 electrons and atomic number 7. An atom with electron arrangement 2,5 has five outer electrons and is in Group V."
+  },
+  {
+   "n": 4,
+   "topic": "Salts",
+   "q": "A student in Nakuru needs a pure sample of lead(II) sulphate. Which method is suitable?",
+   "options": [
+    "Titrate lead(II) nitrate solution with dilute sulphuric acid, then evaporate to crystallisation.",
+    "Mix lead(II) nitrate solution with sodium sulphate solution, then filter, wash and dry the precipitate.",
+    "Add dilute sulphuric acid to lead metal, then filter and evaporate the filtrate.",
+    "Add zinc powder to lead(II) nitrate solution, then filter off the lead."
+   ],
+   "answer": 1,
+   "explanation": "Lead(II) sulphate is insoluble in water, so it is prepared by precipitation: lead(II) nitrate solution and sodium sulphate solution give lead(II) sulphate and sodium nitrate. Filtration isolates the precipitate, and washing removes soluble sodium nitrate. Evaporating a solution of an insoluble salt would not leave pure lead(II) sulphate."
+  },
+  {
+   "n": 5,
+   "topic": "Salts",
+   "q": "A hydrated magnesium sulphate has the formula MgSO₄·xH₂O and a molar mass of 246 g/mol. What is the value of x? (Mg = 24, S = 32, O = 16, H = 1)",
+   "options": [
+    "7",
+    "8",
+    "6",
+    "5"
+   ],
+   "answer": 0,
+   "explanation": "The mass of MgSO₄ is 24 + 32 + 4 × 16 = 120 g/mol. The water contributes 246 − 120 = 126 g/mol, and each H₂O is 18 g/mol, so x = 126 ÷ 18 = 7. Using x = 5 would give molar mass 210 g/mol, not 246 g/mol."
+  },
+  {
+   "n": 6,
+   "topic": "Chemical families and patterns in properties",
+   "q": "In Group VII, reactivity decreases from chlorine to iodine. Which statement best explains this trend?",
+   "options": [
+    "The atoms become smaller down the group, so the outer shell is closer to the nucleus.",
+    "The atoms become larger down the group, so the nucleus attracts an incoming electron less strongly.",
+    "The atoms lose their outer electrons more easily down the group.",
+    "The number of protons decreases down the group, weakening the nucleus."
+   ],
+   "answer": 1,
+   "explanation": "Halogens react by gaining one electron to form −1 ions; down the group the atomic radius and shielding increase, so the effective nuclear attraction for an incoming electron falls. The trend described by losing outer electrons more easily applies to Group I metals, not halogens."
+  },
+  {
+   "n": 7,
+   "topic": "Chemical families and patterns in properties",
+   "q": "A Group II metal X reacts with oxygen to form XO. When 1.20 g of X reacts completely, 2.00 g of XO is formed. What is the relative atomic mass of X? (O = 16)",
+   "options": [
+    "12",
+    "48",
+    "24",
+    "40"
+   ],
+   "answer": 2,
+   "explanation": "Oxygen combined = 2.00 − 1.20 = 0.80 g, which is 0.80 ÷ 16 = 0.050 mol O atoms. The formula XO shows one mole of X combines with one mole of O atoms, so 0.050 mol of X has mass 1.20 g; Ar(X) = 1.20 ÷ 0.050 = 24."
+  },
+  {
+   "n": 8,
+   "topic": "Nitrogen, sulphur and chlorine and their compounds",
+   "q": "When chlorine gas is passed into water, chlorine water is formed. What is observed when a piece of damp blue litmus paper is held in chlorine gas?",
+   "options": [
+    "It remains blue because chlorine is neutral.",
+    "It turns red and is then bleached white.",
+    "It turns red and stays red because chlorine acts only as an acid.",
+    "It turns blue and becomes darker."
+   ],
+   "answer": 1,
+   "explanation": "Chlorine reacts with water to form hydrochloric acid and hypochlorous acid, which first turns damp blue litmus red; hypochlorous acid then bleaches the colour. Dry chlorine alone does not bleach dry litmus, so the paper must be damp."
+  },
+  {
+   "n": 9,
+   "topic": "Nitrogen, sulphur and chlorine and their compounds",
+   "q": "In the Haber process, nitrogen reacts with hydrogen: N₂ + 3H₂ → 2NH₃. A factory in Thika uses 56 kg of nitrogen. What mass of ammonia is obtained, assuming complete reaction? (N = 14, H = 1)",
+   "options": [
+    "34 kg",
+    "56 kg",
+    "112 kg",
+    "68 kg"
+   ],
+   "answer": 3,
+   "explanation": "56 kg of N₂ is 56 ÷ 28 = 2 kmol. From the equation, 1 mol N₂ gives 2 mol NH₃, so 2 kmol N₂ gives 4 kmol NH₃; mass = 4 × 17 = 68 kg. Missing the 1:2 ratio or using the molar mass of N₂ instead of NH₃ gives a different result."
+  },
+  {
+   "n": 10,
+   "topic": "Nitrogen, sulphur and chlorine and their compounds",
+   "q": "In the Contact process, sulphur(IV) oxide is oxidised to sulphur(VI) oxide. Which catalyst and temperature are used industrially?",
+   "options": [
+    "Vanadium(V) oxide and about 100 °C",
+    "Vanadium(V) oxide and about 450 °C",
+    "Platinum and about 1500 °C",
+    "Iron and about 450 °C"
+   ],
+   "answer": 1,
+   "explanation": "The Contact process uses vanadium(V) oxide to catalyse 2SO₂ + O₂ ⇌ 2SO₃ at about 450 °C. A lower temperature would increase the equilibrium yield but make the reaction too slow; iron is used in ammonia manufacture, not in the Contact process."
+  },
+  {
+   "n": 11,
+   "topic": "Simple classification of substances",
+   "q": "Which of the following is a homogeneous mixture?",
+   "options": [
+    "Sodium chloride",
+    "Oxygen",
+    "Dry air",
+    "Distilled water"
+   ],
+   "answer": 2,
+   "explanation": "Dry air is a uniform mixture of gases such as nitrogen, oxygen and argon, so it is a homogeneous mixture. Sodium chloride and distilled water are compounds, while oxygen is an element, so each is a pure substance rather than a mixture."
+  },
+  {
+   "n": 12,
+   "topic": "Simple classification of substances",
+   "q": "At a school in Mombasa, kerosene and water are shaken together and allowed to stand as two layers. Which apparatus is most suitable for separating the two layers?",
+   "options": [
+    "A filter funnel and filter paper",
+    "A Liebig condenser",
+    "An evaporating dish",
+    "A separating funnel"
+   ],
+   "answer": 3,
+   "explanation": "Kerosene and water are immiscible, so they form separate layers that can be drained one after the other using a separating funnel. Filter paper does not separate two immiscible liquids, and a condenser is used for distillation rather than simple layer separation."
+  },
+  {
+   "n": 13,
+   "topic": "Gas laws",
+   "q": "At constant temperature, a fixed mass of gas occupies 240 cm³ at a pressure of 1.0 × 10⁵ Pa. It is compressed until its volume is 120 cm³. What is the new pressure?",
+   "options": [
+    "4.0 × 10⁵ Pa",
+    "5.0 × 10⁴ Pa",
+    "2.0 × 10⁵ Pa",
+    "1.0 × 10⁵ Pa"
+   ],
+   "answer": 2,
+   "explanation": "At constant temperature, Boyle’s law gives P₁V₁ = P₂V₂. Thus P₂ = (1.0 × 10⁵ Pa × 240 cm³) ÷ 120 cm³ = 2.0 × 10⁵ Pa. Halving the volume at constant temperature doubles the pressure."
+  },
+  {
+   "n": 14,
+   "topic": "Gas laws",
+   "q": "At constant pressure, a fixed mass of gas occupies 450 cm³ at 27 °C. It is heated to 87 °C. What volume does the gas occupy?",
+   "options": [
+    "375 cm³",
+    "450 cm³",
+    "1450 cm³",
+    "540 cm³"
+   ],
+   "answer": 3,
+   "explanation": "Charles’s law gives V₁ ÷ T₁ = V₂ ÷ T₂, with temperatures converted to kelvin: 27 °C = 300 K and 87 °C = 360 K. Therefore V₂ = (450 cm³ × 360 K) ÷ 300 K = 540 cm³. Using the Celsius values directly in the ratio gives an incorrect result."
+  },
+  {
+   "n": 15,
+   "topic": "Reaction rates and reversible reactions",
+   "q": "At a laboratory in Thika, a fixed mass of zinc granules is reacted with excess dilute hydrochloric acid. Which change increases the rate of hydrogen production without changing the total amount of hydrogen finally formed?",
+   "options": [
+    "Add an equal volume of water to the acid before adding the zinc",
+    "Use a single large piece of zinc of the same mass instead of granules",
+    "Cool the acid to 10 °C before adding the zinc",
+    "Warm the acid to 40 °C before adding the zinc"
+   ],
+   "answer": 3,
+   "explanation": "Warming the acid increases the kinetic energy of the reacting particles, so they collide more frequently and effectively, increasing the reaction rate. Since the mass of zinc and the excess acid are unchanged, the final amount of hydrogen remains the same. The other changes slow the reaction by reducing temperature, concentration or surface area."
+  },
+  {
+   "n": 16,
+   "topic": "Reaction rates and reversible reactions",
+   "q": "For a reversible reaction in a closed system at equilibrium, which statement is correct?",
+   "options": [
+    "The concentrations of reactants and products must be equal",
+    "The forward reaction stops completely once products form",
+    "No product molecules are present at equilibrium",
+    "The forward and reverse reactions continue at equal rates"
+   ],
+   "answer": 3,
+   "explanation": "At equilibrium, the system is dynamic: both the forward and reverse reactions continue, but at equal rates. The concentrations of reactants and products remain constant, though they are not necessarily equal."
+  },
+  {
+   "n": 17,
+   "topic": "Reaction rates and reversible reactions",
+   "q": "In the Contact process, sulphur dioxide reacts reversibly: 2SO₂(g) + O₂(g) ⇌ 2SO₃(g), and the forward reaction is exothermic. Which change would increase the equilibrium yield of sulphur trioxide?",
+   "options": [
+    "Add vanadium(V) oxide catalyst",
+    "Lower the temperature",
+    "Decrease the pressure",
+    "Raise the temperature"
+   ],
+   "answer": 1,
+   "explanation": "Lowering the temperature shifts the equilibrium in the exothermic direction, increasing the yield of sulphur trioxide. Raising the temperature favours the reverse endothermic reaction. A catalyst speeds up both directions equally and does not change the equilibrium position, while decreasing pressure favours the side with more gas molecules, which is the reactant side here."
+  },
+  {
+   "n": 18,
+   "topic": "Structure and bonding",
+   "q": "An element M forms ions M²⁺. Another element X forms ions X³⁻. What is the formula of the compound formed between M and X?",
+   "options": [
+    "M₃X₂",
+    "MX",
+    "M₂X₃",
+    "M₃X"
+   ],
+   "answer": 0,
+   "explanation": "The total positive charge must balance the total negative charge. Three M²⁺ ions give a total charge of +6, and two X³⁻ ions give a total charge of −6, so the formula is M₃X₂."
+  },
+  {
+   "n": 19,
+   "topic": "Structure and bonding",
+   "q": "Solid carbon dioxide (dry ice) is molecular, while magnesium oxide is ionic. Which statement best explains why carbon dioxide has a much lower melting point than magnesium oxide?",
+   "options": [
+    "Carbon dioxide molecules are held together by weak intermolecular forces, while magnesium oxide has a giant ionic lattice with strong electrostatic attractions",
+    "Carbon dioxide has weak covalent bonds between its atoms, while magnesium oxide has strong covalent bonds",
+    "Carbon dioxide is held together by strong ionic bonds, while magnesium oxide has weak intermolecular forces",
+    "Both form giant structures, but carbon dioxide molecules are lighter"
+   ],
+   "answer": 0,
+   "explanation": "For a simple molecular substance such as carbon dioxide, melting or sublimation mainly involves overcoming weak intermolecular forces, not breaking the strong covalent bonds within each molecule. Magnesium oxide is a giant ionic lattice, so its high melting point arises from overcoming strong electrostatic attractions between oppositely charged ions."
+  },
+  {
+   "n": 20,
+   "topic": "Structure and bonding",
+   "q": "A solid conducts electricity without melting or dissolving and is malleable. Which type of structure does it most likely have?",
+   "options": [
+    "A simple molecular structure with weak intermolecular forces",
+    "A giant ionic lattice with ions fixed in position",
+    "A giant metallic lattice with delocalised electrons",
+    "A giant covalent structure with all electrons fixed in bonds"
+   ],
+   "answer": 2,
+   "explanation": "A giant metallic lattice contains delocalised electrons that can move through the solid, allowing it to conduct electricity. The layers of metal ions can slide over one another, which explains why the solid is malleable. Ionic solids do not conduct when solid, simple molecular substances generally do not conduct, and giant covalent structures have fixed electrons."
+  },
+  {
+   "n": 21,
+   "topic": "Energy changes in chemical and physical processes",
+   "q": "When hydrogen peroxide decomposes, the mixture becomes warm. Which statement best explains this observation?",
+   "options": [
+    "The products have a higher total chemical energy than the reactants, so energy is absorbed from the surroundings.",
+    "The reaction has no activation energy because it releases heat.",
+    "The products have a lower total chemical energy than the reactants, so excess energy is released to the surroundings.",
+    "Bond breaking releases energy and bond forming absorbs energy, making the mixture warm."
+   ],
+   "answer": 2,
+   "explanation": "The decomposition is exothermic: the products are at a lower chemical energy level than the reactants, and the difference is released as heat. Bond breaking absorbs energy while bond forming releases energy, and an exothermic reaction still has an activation energy."
+  },
+  {
+   "n": 22,
+   "topic": "Energy changes in chemical and physical processes",
+   "q": "A student heats 250 g of water from 20.0 °C to 30.0 °C. Taking the specific heat capacity of water as 4.2 J/(g °C), how much heat is absorbed by the water?",
+   "options": [
+    "4.2 kJ",
+    "21.0 kJ",
+    "10.5 kJ",
+    "1.05 kJ"
+   ],
+   "answer": 2,
+   "explanation": "Heat absorbed = mass × specific heat capacity × temperature rise = 250 × 4.2 × 10.0 = 10 500 J, which is 10.5 kJ. The temperature rise is 30.0 °C − 20.0 °C = 10.0 °C."
+  },
+  {
+   "n": 23,
+   "topic": "Energy changes in chemical and physical processes",
+   "q": "For the reaction N₂(g) + 3H₂(g) → 2NH₃(g), use the bond energies: N≡N = 946 kJ/mol, H–H = 436 kJ/mol and N–H = 391 kJ/mol. What is the enthalpy change, ΔH, for the reaction as written?",
+   "options": [
+    "-1081 kJ/mol",
+    "+1081 kJ/mol",
+    "+92 kJ/mol",
+    "-92 kJ/mol"
+   ],
+   "answer": 3,
+   "explanation": "Bonds broken: 946 + 3 × 436 = 2254 kJ. Bonds formed: 2 × 3 × 391 = 2346 kJ. ΔH = energy used to break bonds − energy released forming bonds = 2254 − 2346 = -92 kJ/mol, so the reaction is exothermic."
+  },
+  {
+   "n": 24,
+   "topic": "Water and hydrogen",
+   "q": "A water sample contains calcium sulphate, which causes permanent hardness. Which substance removes this hardness by precipitating calcium ions as calcium carbonate?",
+   "options": [
+    "Calcium hydroxide",
+    "Sodium chloride",
+    "Sodium carbonate",
+    "Dilute hydrochloric acid"
+   ],
+   "answer": 2,
+   "explanation": "Sodium carbonate supplies carbonate ions, which react with calcium ions to form insoluble calcium carbonate, removing them from the water. Sodium chloride, dilute hydrochloric acid and calcium hydroxide do not provide carbonate ions to precipitate the calcium sulphate in this way."
+  },
+  {
+   "n": 25,
+   "topic": "Water and hydrogen",
+   "q": "Hydrogen gas is passed over heated copper(II) oxide. Which equation correctly represents the reaction?",
+   "options": [
+    "2CuO + H₂ → Cu₂O + H₂O",
+    "CuO + H₂ → Cu + H₂O",
+    "CuO + H₂ → Cu + H₂O₂",
+    "CuO + 2H₂ → CuH₂ + H₂O"
+   ],
+   "answer": 1,
+   "explanation": "Hydrogen reduces black copper(II) oxide to reddish-brown copper and is itself oxidised to water. The equation must show one oxygen atom from CuO combining with one hydrogen molecule to give one water molecule."
+  },
+  {
+   "n": 26,
+   "topic": "Acids, bases and indicators",
+   "q": "Phenolphthalein is added to dilute hydrochloric acid, and then excess sodium hydroxide solution is added. What colour change is observed?",
+   "options": [
+    "Yellow to red",
+    "Pink to colourless",
+    "Colourless to pink",
+    "Red to blue"
+   ],
+   "answer": 2,
+   "explanation": "Phenolphthalein is colourless in acidic solution and turns pink when the solution becomes alkaline. Adding excess sodium hydroxide neutralises the acid and leaves an alkaline solution, so the indicator changes from colourless to pink."
+  },
+  {
+   "n": 27,
+   "topic": "The mole: formulae and chemical equations",
+   "q": "A compound contains 40.0% carbon, 6.7% hydrogen and 53.3% oxygen by mass. What is its empirical formula? (C = 12, H = 1, O = 16)",
+   "options": [
+    "C₂H₄O₂",
+    "CH₄O",
+    "C₂H₆O",
+    "CH₂O"
+   ],
+   "answer": 3,
+   "explanation": "Moles ratio C : H : O = 40.0/12 : 6.7/1 : 53.3/16 ≈ 3.33 : 6.7 : 3.33, which simplifies to 1 : 2 : 1. The empirical formula is therefore CH₂O; C₂H₄O₂ is a possible molecular formula but it further simplifies to CH₂O."
+  },
+  {
+   "n": 28,
+   "topic": "The mole: formulae and chemical equations",
+   "q": "What volume of carbon dioxide, measured at s.t.p., is produced when 10.0 g of calcium carbonate is completely decomposed by heating? (CaCO₃ = 100; molar gas volume at s.t.p. = 22.4 dm³)",
+   "options": [
+    "2.24 dm³",
+    "22.4 dm³",
+    "1.12 dm³",
+    "0.224 dm³"
+   ],
+   "answer": 0,
+   "explanation": "The equation is CaCO₃ → CaO + CO₂, so 1 mole of calcium carbonate gives 1 mole of carbon dioxide. Moles of CaCO₃ = 10.0/100 = 0.100 mol, and volume of CO₂ = 0.100 × 22.4 = 2.24 dm³."
+  },
+  {
+   "n": 29,
+   "topic": "The mole: formulae and chemical equations",
+   "q": "Hydrated sodium carbonate has the formula Na₂CO₃·xH₂O and a relative formula mass of 286. What is the value of x? (Na₂CO₃ = 106; H₂O = 18)",
+   "options": [
+    "12",
+    "7",
+    "10",
+    "5"
+   ],
+   "answer": 2,
+   "explanation": "Mass due to water = 286 − 106 = 180. Since each water of crystallisation has mass 18, x = 180/18 = 10. The formula is Na₂CO₃·10H₂O."
+  },
+  {
+   "n": 30,
+   "topic": "Carbon and some of its compounds",
+   "q": "When excess carbon dioxide is bubbled through limewater, the milkiness first formed disappears. Which equation represents the reaction responsible for the disappearance of the milkiness?",
+   "options": [
+    "CaCO₃(s) + H₂O(l) + CO₂(g) → Ca(HCO₃)₂(aq)",
+    "Ca(OH)₂(aq) + CO₂(g) → CaCO₃(s) + H₂O(l)",
+    "CaCO₃(s) → CaO(s) + CO₂(g)",
+    "CaO(s) + H₂O(l) → Ca(OH)₂(aq)"
+   ],
+   "answer": 0,
+   "explanation": "The initial milkiness is calcium carbonate. With excess carbon dioxide, the insoluble calcium carbonate reacts with water and carbon dioxide to form soluble calcium hydrogen carbonate, so the milkiness disappears. The equation Ca(OH)₂ + CO₂ → CaCO₃ + H₂O accounts for the initial milkiness, not its disappearance."
+  }
+ ]
+}

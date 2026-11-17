@@ -1,0 +1,791 @@
+{
+ "id": "neco-physics-p6",
+ "exam": "neco",
+ "subject": "physics",
+ "year": null,
+ "number": 6,
+ "source": "ai",
+ "minutes": 60,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Current electricity",
+   "q": "A 20 Ω resistor in a circuit in Kaduna is connected across a 12 V supply of negligible internal resistance. Calculate the power dissipated in the resistor.",
+   "options": [
+    "240 W",
+    "0.60 W",
+    "7.2 W",
+    "3.6 W"
+   ],
+   "answer": 2,
+   "explanation": "The current is I = V/R = 12/20 = 0.60 A, so the power is P = VI = 12 × 0.60 = 7.2 W (or P = V²/R = 144/20). The value 0.60 W is the current magnitude in amperes, not a power, while 240 W comes from multiplying voltage by resistance."
+  },
+  {
+   "n": 2,
+   "topic": "Current electricity",
+   "q": "Which of the following statements about a domestic electrical circuit in a house in Lagos is correct?",
+   "options": [
+    "The earth wire is connected in series with the live wire.",
+    "The fuse is connected in the live wire and in series with the circuit it protects.",
+    "The neutral wire is always at a higher potential than the live wire.",
+    "The switch should be connected in the neutral wire."
+   ],
+   "answer": 1,
+   "explanation": "In correct domestic wiring, the fuse is placed in the live wire and in series with the circuit it protects, so that it melts and disconnects the live supply when the current is excessive. The earth wire is a safety connection and is not connected in series with the live wire, and switches should be in the live wire rather than the neutral."
+  },
+  {
+   "n": 3,
+   "topic": "Magnetism and electromagnetic induction",
+   "q": "The radial magnetic field in a moving-coil galvanometer is used mainly to ensure that the",
+   "options": [
+    "torque on the coil is maximum for a given current at every position of the coil",
+    "magnetic force on the coil is independent of the current",
+    "coil returns quickly to its zero position after deflection",
+    "eddy currents in the coil are completely eliminated"
+   ],
+   "answer": 0,
+   "explanation": "The radial field keeps the sides of the moving coil perpendicular to the magnetic field at every orientation, so the torque is N I A B for a given current and the deflection is proportional to current. Damping is controlled by the frame or other damping arrangements, and the magnetic force still depends on the current."
+  },
+  {
+   "n": 4,
+   "topic": "Electrostatics and capacitors",
+   "q": "Two small charges of +4.0 μC and +9.0 μC are placed 0.60 m apart in air. Calculate the electrostatic force between them. (Take k = 9.0 × 10⁹ N m² C⁻²)",
+   "options": [
+    "0.90 N",
+    "0.54 N",
+    "1.8 N",
+    "3.6 N"
+   ],
+   "answer": 0,
+   "explanation": "Using Coulomb's law, F = kq₁q₂/r² = (9.0 × 10⁹ × 4.0 × 10⁻⁶ × 9.0 × 10⁻⁶)/(0.60)² = 0.90 N. Forgetting to square the distance gives 0.54 N, while using an incorrect distance in the square gives 3.6 N."
+  },
+  {
+   "n": 5,
+   "topic": "Scalars and vectors",
+   "q": "A cyclist in Ibadan travels a displacement of 10 km on a bearing of 060°. What is the northward component of the displacement?",
+   "options": [
+    "10 km",
+    "8.7 km",
+    "0 km",
+    "5.0 km"
+   ],
+   "answer": 3,
+   "explanation": "The bearing is measured from north, so the northward component is 10 cos 60° = 10 × 0.50 = 5.0 km. The value 8.7 km is the eastward component, obtained from 10 sin 60°, not the northward component."
+  },
+  {
+   "n": 6,
+   "topic": "Scalars and vectors",
+   "q": "A boat in Calabar moves at 5 m/s due east in still water, while the river current flows at 12 m/s due south. What is the magnitude of the resultant velocity of the boat?",
+   "options": [
+    "7 m/s",
+    "13 m/s",
+    "8.5 m/s",
+    "17 m/s"
+   ],
+   "answer": 1,
+   "explanation": "The velocities are perpendicular, so resultant speed = √(5² + 12²) = √169 = 13 m/s. Adding the speeds to obtain 17 m/s or subtracting to obtain 7 m/s ignores their perpendicular directions."
+  },
+  {
+   "n": 7,
+   "topic": "Waves",
+   "q": "An FM radio station in Jos broadcasts at a frequency of 96 MHz. Taking the speed of electromagnetic waves as 3.0 × 10⁸ m/s, calculate the wavelength of the wave.",
+   "options": [
+    "0.3125 m",
+    "3.125 m",
+    "31.25 m",
+    "3.125 × 10⁶ m"
+   ],
+   "answer": 1,
+   "explanation": "The frequency is 96 MHz = 9.6 × 10⁷ Hz, so λ = c/f = 3.0 × 10⁸/(9.6 × 10⁷) = 3.125 m. Using 96 instead of 9.6 × 10⁷ gives 3.125 × 10⁶ m."
+  },
+  {
+   "n": 8,
+   "topic": "Atomic and nuclear physics",
+   "q": "A uranium-238 nucleus, ²³⁸₉₂U, emits an alpha particle and the resulting nucleus then emits a beta-minus particle. What are the mass number and atomic number of the final nucleus?",
+   "options": [
+    "Mass number 234, atomic number 91",
+    "Mass number 234, atomic number 89",
+    "Mass number 234, atomic number 90",
+    "Mass number 238, atomic number 91"
+   ],
+   "answer": 0,
+   "explanation": "Alpha emission reduces mass number by 4 and atomic number by 2, giving 234 and 90. Beta-minus emission leaves mass number unchanged and increases atomic number by 1, giving mass number 234 and atomic number 91. The value 234 and 90 is obtained if the beta-minus emission is ignored."
+  },
+  {
+   "n": 9,
+   "topic": "Light and optics",
+   "q": "A ray of light in a glass block of refractive index 3/2 is incident at the boundary with water of refractive index 4/3. Calculate the critical angle for the glass–water boundary.",
+   "options": [
+    "90.0°",
+    "62.7°",
+    "48.6°",
+    "41.8°"
+   ],
+   "answer": 1,
+   "explanation": "At the critical angle, sin c = n₂/n₁ = (4/3)/(3/2) = 8/9, so c ≈ 62.7°. The value 48.6° is the critical angle for a water–air boundary, not glass–water."
+  },
+  {
+   "n": 10,
+   "topic": "Light and optics",
+   "q": "A student in Kano uses a magnifying glass of focal length 5.0 cm to read a book, with the final image at the least distance of distinct vision of 25 cm. Calculate the angular magnification.",
+   "options": [
+    "5",
+    "20",
+    "30",
+    "6"
+   ],
+   "answer": 3,
+   "explanation": "For a simple microscope with the final image at the near point, M = 1 + D/f = 1 + 25/5 = 6. Using merely D/f gives 5, which would apply when the final image is at infinity."
+  },
+  {
+   "n": 11,
+   "topic": "Gas laws",
+   "q": "A bicycle pump in Abeokuta contains air at a pressure of 1.2 × 10⁵ Pa and a volume of 300 cm³. The air is compressed slowly to a volume of 120 cm³ at constant temperature. Calculate the new pressure.",
+   "options": [
+    "4.8 × 10⁴ Pa",
+    "3.0 × 10⁵ Pa",
+    "1.8 × 10⁵ Pa",
+    "4.8 × 10⁵ Pa"
+   ],
+   "answer": 1,
+   "explanation": "Boyle's law gives P₁V₁ = P₂V₂, so P₂ = 1.2 × 10⁵ × 300/120 = 3.0 × 10⁵ Pa. Using the volume ratio the other way gives 4.8 × 10⁴ Pa."
+  },
+  {
+   "n": 12,
+   "topic": "Gas laws",
+   "q": "A balloon in Jos contains 200 cm³ of gas at 27 °C. It is heated at constant pressure until its temperature is 87 °C. Calculate its new volume.",
+   "options": [
+    "167 cm³",
+    "220 cm³",
+    "240 cm³",
+    "360 cm³"
+   ],
+   "answer": 2,
+   "explanation": "Convert to kelvin: T₁ = 300 K and T₂ = 360 K. Charles's law gives V₂ = V₁T₂/T₁ = 200 × 360/300 = 240 cm³. Using the inverse temperature ratio gives about 167 cm³."
+  },
+  {
+   "n": 13,
+   "topic": "Measurement and units",
+   "q": "A student in Minna uses a micrometer screw gauge to measure the thickness of a metal sheet. The main scale reads 2.0 mm and the thimble scale reads 45 divisions. If the pitch of the screw is 0.50 mm and the thimble has 50 divisions, what is the thickness of the sheet?",
+   "options": [
+    "2.95 mm",
+    "2.05 mm",
+    "2.50 mm",
+    "2.45 mm"
+   ],
+   "answer": 3,
+   "explanation": "The least count is pitch ÷ number of thimble divisions = 0.50 mm ÷ 50 = 0.01 mm. The thimble contributes 45 × 0.01 mm = 0.45 mm, so the total thickness is 2.0 mm + 0.45 mm = 2.45 mm. Adding the pitch as well would wrongly give 2.95 mm."
+  },
+  {
+   "n": 14,
+   "topic": "Measurement and units",
+   "q": "A rectangular water tank in Sokoto has internal dimensions 1.2 m by 80 cm by 50 cm. What is its capacity in litres?",
+   "options": [
+    "0.48 L",
+    "4 800 L",
+    "480 L",
+    "48 L"
+   ],
+   "answer": 2,
+   "explanation": "Convert 1.2 m to 120 cm, then volume = 120 cm × 80 cm × 50 cm = 480 000 cm³. Since 1 000 cm³ = 1 L, the capacity is 480 L. Taking 0.48 m³ as 0.48 L is a common unit slip."
+  },
+  {
+   "n": 15,
+   "topic": "Sound",
+   "q": "On a quiet night, sound from a distant source is often heard more clearly because the sound waves are refracted towards the ground. This refraction is mainly caused by the air near the ground being",
+   "options": [
+    "drier than the air above, so sound travels faster near the ground",
+    "cooler than the air above, so sound travels more slowly near the ground",
+    "more humid than the air above, so sound travels more slowly near the ground",
+    "warmer than the air above, so sound travels faster near the ground"
+   ],
+   "answer": 1,
+   "explanation": "At night, the ground cools the air next to it, so the lower layer of air becomes cooler than the air above. Sound travels more slowly in cooler air, making the wavefronts bend towards the ground and allowing the sound to be heard more clearly. The other choices would not produce the observed downward bending."
+  },
+  {
+   "n": 16,
+   "topic": "Sound",
+   "q": "A person standing between two cliffs in Abeokuta claps once and hears the first echo after 0.40 s and the next echo after 0.90 s. If the speed of sound in air is 340 m/s, what is the distance between the two cliffs?",
+   "options": [
+    "221 m",
+    "68 m",
+    "153 m",
+    "85 m"
+   ],
+   "answer": 0,
+   "explanation": "For the first echo, distance to the nearer cliff is (340 × 0.40) ÷ 2 = 68 m. For the next echo, distance to the farther cliff is (340 × 0.90) ÷ 2 = 153 m. Since the person is between the cliffs, the distance between them is 68 m + 153 m = 221 m; subtracting them gives 85 m incorrectly."
+  },
+  {
+   "n": 17,
+   "topic": "Heat and temperature",
+   "q": "A technician in Akure calibrates a resistance thermometer. Its resistance is 20 Ω at 0 °C and 30 Ω at 100 °C. If the resistance of the thermometer is 26 Ω when placed in a liquid, what is the temperature of the liquid, assuming a linear change of resistance with temperature?",
+   "options": [
+    "40 °C",
+    "60 °C",
+    "80 °C",
+    "20 °C"
+   ],
+   "answer": 1,
+   "explanation": "Using the linear scale, temperature θ = ((R − R₀) ÷ (R₁₀₀ − R₀)) × 100 °C = ((26 − 20) ÷ (30 − 20)) × 100 °C = 60 °C. The resistance change is 6 Ω out of the 10 Ω change over 100 °C, so the interval is 60 °C. A value of 40 °C comes from using the fall from 30 Ω to 26 Ω over the full 100 °C."
+  },
+  {
+   "n": 18,
+   "topic": "Heat and temperature",
+   "q": "An air conditioner in a Lagos office removes 1.26 × 10⁵ J of heat from 3.0 kg of water at 25 °C. If the specific heat capacity of water is 4 200 J kg⁻¹ K⁻¹, what is the final temperature of the water?",
+   "options": [
+    "15 °C",
+    "20 °C",
+    "35 °C",
+    "10 °C"
+   ],
+   "answer": 0,
+   "explanation": "The temperature fall is ΔT = Q ÷ (mc) = 1.26 × 10⁵ J ÷ (3.0 kg × 4 200 J kg⁻¹ K⁻¹) = 10 K. Since heat is removed, the final temperature is 25 °C − 10 °C = 15 °C. 10 °C is only the temperature change, while 35 °C results from adding the change instead of subtracting it."
+  },
+  {
+   "n": 19,
+   "topic": "Heat and temperature",
+   "q": "A brass plate in a workshop in Kaduna has an area of 500 cm² at 20 °C. If the linear expansivity of brass is 1.8 × 10⁻⁵ K⁻¹, calculate the increase in area of the plate when its temperature rises to 120 °C.",
+   "options": [
+    "2.16 cm²",
+    "0.90 cm²",
+    "3.6 cm²",
+    "1.8 cm²"
+   ],
+   "answer": 3,
+   "explanation": "The area expansivity is twice the linear expansivity: β = 2 × 1.8 × 10⁻⁵ K⁻¹ = 3.6 × 10⁻⁵ K⁻¹. The temperature rise is 120 °C − 20 °C = 100 °C, so ΔA = 500 cm² × 3.6 × 10⁻⁵ K⁻¹ × 100 = 1.8 cm². Using the linear expansivity directly gives 0.90 cm², while using 120 °C instead of the temperature rise gives 2.16 cm²."
+  },
+  {
+   "n": 20,
+   "topic": "Work, energy and power",
+   "q": "A cyclist in Ilesha rides a bicycle at a constant speed of 6.0 m/s against a total resistive force of 80 N. What is the power developed by the cyclist?",
+   "options": [
+    "480 W",
+    "4 800 W",
+    "48 W",
+    "13.3 W"
+   ],
+   "answer": 0,
+   "explanation": "In 1 s the cyclist travels 6.0 m, so the work done against the resistive force is 80 N × 6.0 m = 480 J. The power is therefore 480 J ÷ 1 s = 480 W. Dividing the force by the speed gives 13.3 W, which is not the correct expression for power here."
+  },
+  {
+   "n": 21,
+   "topic": "Work, energy and power",
+   "q": "A car of mass 800 kg in Abuja accelerates uniformly from rest to 20 m/s in 10 s. Neglecting friction, what is the average power developed by the car?",
+   "options": [
+    "8 kW",
+    "160 kW",
+    "32 kW",
+    "16 kW"
+   ],
+   "answer": 3,
+   "explanation": "The gain in kinetic energy is ½ × 800 kg × (20 m/s)² = 160 000 J. Average power is this energy divided by 10 s, giving 16 000 W = 16 kW. Omitting the ½ in the kinetic-energy formula gives 32 kW, while treating the total energy as power gives 160 kW."
+  },
+  {
+   "n": 22,
+   "topic": "Newton’s laws and momentum",
+   "q": "A 0.50 kg ball moving horizontally at 6.0 m/s is brought to rest in 0.20 s by a goalkeeper in Ibadan. Calculate the average force exerted by the goalkeeper on the ball.",
+   "options": [
+    "3.0 N",
+    "30 N",
+    "15 N",
+    "1.5 N"
+   ],
+   "answer": 2,
+   "explanation": "The change in momentum is 0.50 × 6.0 = 3.0 kg m/s. Average force = change in momentum ÷ time = 3.0 ÷ 0.20 = 15 N. The value 30 N is the acceleration of the ball, not the force on it."
+  },
+  {
+   "n": 23,
+   "topic": "Newton’s laws and momentum",
+   "q": "A 25 kg box at a market in Onitsha is pulled along a horizontal floor by a horizontal force of 150 N. If the frictional force is 50 N, calculate the acceleration of the box.",
+   "options": [
+    "2.0 m/s²",
+    "8.0 m/s²",
+    "6.0 m/s²",
+    "4.0 m/s²"
+   ],
+   "answer": 3,
+   "explanation": "The resultant forward force is 150 − 50 = 100 N. Using F = ma, acceleration = 100 ÷ 25 = 4.0 m/s². Using the 150 N force without subtracting friction gives 6.0 m/s²."
+  },
+  {
+   "n": 24,
+   "topic": "Elasticity and pressure",
+   "q": "A metal wire fixed at one end in a workshop in Nsukka extends by 1.2 mm when a load of 120 N is hung from it. Assuming Hooke’s law is obeyed, what is the extension when the load is 180 N?",
+   "options": [
+    "1.5 mm",
+    "2.4 mm",
+    "0.80 mm",
+    "1.8 mm"
+   ],
+   "answer": 3,
+   "explanation": "For Hooke’s law, extension is proportional to load: x₂ = 1.2 × 180/120 = 1.8 mm. The value 0.80 mm is obtained by treating extension as inversely proportional to load."
+  },
+  {
+   "n": 25,
+   "topic": "Elasticity and pressure",
+   "q": "A drum in a palm-oil factory in Benin City contains palm oil of density 900 kg/m³. Calculate the pressure due to the oil at a depth of 1.5 m. Take g = 10 m/s².",
+   "options": [
+    "9,000 Pa",
+    "15,000 Pa",
+    "1,350 Pa",
+    "13,500 Pa"
+   ],
+   "answer": 3,
+   "explanation": "Pressure due to a liquid is ρgh = 900 × 10 × 1.5 = 13,500 Pa. Using the density of water, 1000 kg/m³, gives 15,000 Pa instead."
+  },
+  {
+   "n": 26,
+   "topic": "Motion",
+   "q": "A bicycle rider in Bauchi starts from rest and accelerates uniformly at 2.0 m/s² for 6.0 s. Calculate the distance covered in this time.",
+   "options": [
+    "12 m",
+    "36 m",
+    "72 m",
+    "24 m"
+   ],
+   "answer": 1,
+   "explanation": "Use s = ut + ½at². Since u = 0, s = ½ × 2.0 × 6.0² = 36 m. The value 72 m comes from using s = at² and omitting the factor ½."
+  },
+  {
+   "n": 27,
+   "topic": "Motion",
+   "q": "A trader travels from Ibadan to Lagos, covering the first 60 km at 40 km/h and the next 60 km at 60 km/h. Calculate the average speed for the whole journey.",
+   "options": [
+    "45 km/h",
+    "48 km/h",
+    "60 km/h",
+    "50 km/h"
+   ],
+   "answer": 1,
+   "explanation": "Total distance = 120 km. Total time = 60/40 + 60/60 = 1.5 + 1.0 = 2.5 h. Average speed = 120 ÷ 2.5 = 48 km/h. Taking the simple average of 40 and 60 gives 50 km/h, which is wrong because the times are not equal."
+  },
+  {
+   "n": 28,
+   "topic": "Motion",
+   "q": "A stone is thrown vertically upwards from the ground in Gombe with an initial speed of 25 m/s. Calculate the maximum height reached. Take g = 10 m/s² and neglect air resistance.",
+   "options": [
+    "1.25 m",
+    "31.25 m",
+    "62.5 m",
+    "2.5 m"
+   ],
+   "answer": 1,
+   "explanation": "At maximum height, v = 0. Using v² = u² − 2gh, h = u²/(2g) = 25²/(2 × 10) = 625/20 = 31.25 m. The value 62.5 m is obtained by omitting the factor 2 in the denominator."
+  },
+  {
+   "n": 29,
+   "topic": "Simple machines",
+   "q": "A uniform metre rule is balanced at its centre in a school laboratory in Zaria. A 30 g mass is suspended at the 10 cm mark. At what mark should a 40 g mass be suspended to balance the rule?",
+   "options": [
+    "20 cm mark",
+    "80 cm mark",
+    "90 cm mark",
+    "70 cm mark"
+   ],
+   "answer": 1,
+   "explanation": "Taking moments about the 50 cm pivot: 30 × (50 − 10) = 40 × (x − 50). Thus x − 50 = 1200/40 = 30, so x = 80 cm. A 40 g mass at the 20 cm mark gives a moment of the same magnitude but on the same side of the pivot, so the rule will not balance."
+  },
+  {
+   "n": 30,
+   "topic": "Simple machines",
+   "q": "Which statement best explains why the efficiency of a simple machine such as a pulley system in a workshop in Kano is always less than 100%?",
+   "options": [
+    "The mechanical advantage is always greater than the velocity ratio.",
+    "The load is always greater than the effort.",
+    "The machine multiplies energy as well as force.",
+    "Some of the work input is used to overcome friction and the weight of the moving parts."
+   ],
+   "answer": 3,
+   "explanation": "Efficiency is useful work output divided by work input. Friction and the weight of moving parts use up some of the input work, so not all of it becomes useful output. A machine cannot multiply energy, so an efficiency above 100% is impossible."
+  },
+  {
+   "n": 31,
+   "topic": "Current electricity",
+   "q": "An electric pressing iron in Kaduna is rated 1.2 kW, 240 V. It is used continuously for 2 hours 30 minutes. If electrical energy costs ₦60.00 per kWh, what is the cost of the energy consumed?",
+   "options": [
+    "₦144.00",
+    "₦72.00",
+    "₦180.00",
+    "₦360.00"
+   ],
+   "answer": 2,
+   "explanation": "The time is 2 hours 30 minutes = 2.5 h, so the energy used is 1.2 kW × 2.5 h = 3.0 kWh. The cost is 3.0 × ₦60.00 = ₦180.00. Using only 2 hours would give 1.2 × 2 × ₦60.00 = ₦144.00."
+  },
+  {
+   "n": 32,
+   "topic": "Current electricity",
+   "q": "A battery of e.m.f. 6.0 V and internal resistance 1.5 Ω is connected to a 4.5 Ω resistor. Calculate the power dissipated in the external resistor.",
+   "options": [
+    "1.5 W",
+    "6.0 W",
+    "8.0 W",
+    "4.5 W"
+   ],
+   "answer": 3,
+   "explanation": "The total resistance is 4.5 Ω + 1.5 Ω = 6.0 Ω, so the current is 6.0 V ÷ 6.0 Ω = 1.0 A. The power in the external resistor is I²R = (1.0)² × 4.5 = 4.5 W. The 1.5 W value is the power wasted inside the battery, not in the external resistor."
+  },
+  {
+   "n": 33,
+   "topic": "Current electricity",
+   "q": "Three resistors of 4 Ω, 5 Ω and 20 Ω are connected in parallel. What is the equivalent resistance of the combination?",
+   "options": [
+    "2 Ω",
+    "29 Ω",
+    "10 Ω",
+    "0.50 Ω"
+   ],
+   "answer": 0,
+   "explanation": "For parallel resistors, 1/R = 1/4 + 1/5 + 1/20 = 5/20 + 4/20 + 1/20 = 10/20 = 1/2. Taking the reciprocal gives R = 2 Ω. The value 0.50 Ω is the reciprocal before inversion, not the equivalent resistance."
+  },
+  {
+   "n": 34,
+   "topic": "Magnetism and electromagnetic induction",
+   "q": "A coil of 80 turns, each of area 0.015 m², rotates at 60 revolutions per second in a uniform magnetic field of flux density 0.25 T. Calculate the maximum e.m.f. induced in the coil.",
+   "options": [
+    "18 V",
+    "0.30 V",
+    "18π V",
+    "36π V"
+   ],
+   "answer": 3,
+   "explanation": "The angular speed is ω = 2π × 60 = 120π rad/s. The maximum e.m.f. is E₀ = NBAω = 80 × 0.25 × 0.015 × 120π = 36π V. Using πf instead of 2πf gives 18π V, which is only half the correct value."
+  },
+  {
+   "n": 35,
+   "topic": "Magnetism and electromagnetic induction",
+   "q": "The core of a transformer is made of thin laminated sheets rather than a solid block in order to",
+   "options": [
+    "reduce energy loss caused by hysteresis in the core",
+    "increase the magnetic flux linking the secondary coil",
+    "prevent the core from becoming permanently magnetized",
+    "reduce energy loss caused by eddy currents in the core"
+   ],
+   "answer": 3,
+   "explanation": "Laminations increase the resistance to eddy currents, thereby reducing heating losses in the core. Hysteresis loss is reduced by using a soft magnetic material, not by dividing the core into thin sheets. Lamination does not create extra magnetic flux linkage."
+  },
+  {
+   "n": 36,
+   "topic": "Electrostatics and capacitors",
+   "q": "Two point charges +4.0 μC and +9.0 μC are separated by 0.60 m in air. At what distance from the +4.0 μC charge, measured along the line joining them, is the resultant electric field zero?",
+   "options": [
+    "0.40 m",
+    "0.30 m",
+    "0.36 m",
+    "0.24 m"
+   ],
+   "answer": 3,
+   "explanation": "At the neutral point, the fields due to the two charges are equal: k(4.0)/x² = k(9.0)/(0.60 − x)². Taking square roots gives 2/x = 3/(0.60 − x), so x = 0.24 m from the +4.0 μC charge. The midpoint would be correct only if the two charges were equal in magnitude."
+  },
+  {
+   "n": 37,
+   "topic": "Scalars and vectors",
+   "q": "Two vectors are p = 6i + 2j and q = 2i − 3j. What is the magnitude of p − q?",
+   "options": [
+    "√41",
+    "√17",
+    "9",
+    "√65"
+   ],
+   "answer": 0,
+   "explanation": "Subtracting gives p − q = (6 − 2)i + (2 − (−3))j = 4i + 5j. Its magnitude is √(4² + 5²) = √(16 + 25) = √41. Adding the vectors instead gives 8i − j, whose magnitude is √65, so √65 is not the required result."
+  },
+  {
+   "n": 38,
+   "topic": "Waves",
+   "q": "A transverse wave travels along a rope in Jos. The distance between a crest and the next trough is 0.35 m. If the frequency of the wave is 8.0 Hz, calculate its speed.",
+   "options": [
+    "11.2 m/s",
+    "2.8 m/s",
+    "5.6 m/s",
+    "0.044 m/s"
+   ],
+   "answer": 2,
+   "explanation": "The distance from a crest to the next trough is half a wavelength, so λ = 2 × 0.35 = 0.70 m. Speed v = fλ = 8.0 × 0.70 = 5.6 m/s. The value 2.8 m/s comes from mistakenly treating 0.35 m as the full wavelength."
+  },
+  {
+   "n": 39,
+   "topic": "Waves",
+   "q": "A string in a cultural troupe in Makurdi is 1.5 m long between fixed supports and has a linear density of 0.010 kg/m. If the tension in the string is 36 N, calculate its fundamental frequency.",
+   "options": [
+    "40 Hz",
+    "10 Hz",
+    "20 Hz",
+    "30 Hz"
+   ],
+   "answer": 2,
+   "explanation": "The wave speed is v = √(T/μ) = √(36/0.010) = √3600 = 60 m/s. For a string fixed at both ends, the fundamental wavelength is 2L = 3.0 m, so f = v/λ = 60/3.0 = 20 Hz. Using L instead of 2L gives 40 Hz."
+  },
+  {
+   "n": 40,
+   "topic": "Atomic and nuclear physics",
+   "q": "A radioisotope used in a hospital in Lagos has an activity of 7200 Bq. After 30 days, its activity has fallen to 900 Bq. Calculate its half-life.",
+   "options": [
+    "7.5 days",
+    "10 days",
+    "15 days",
+    "5 days"
+   ],
+   "answer": 1,
+   "explanation": "The activity falls by a factor of 7200 ÷ 900 = 8, and 8 = 2³, so 3 half-lives have elapsed. Therefore one half-life is 30 ÷ 3 = 10 days."
+  },
+  {
+   "n": 41,
+   "topic": "Atomic and nuclear physics",
+   "q": "When beryllium-9 is bombarded with an alpha particle, carbon-12 and another particle are produced: ⁹₄Be + ⁴₂He → ¹²₆C + X. Identify X.",
+   "options": [
+    "a neutron, ¹₀n",
+    "a gamma ray, ⁰₀γ",
+    "an electron, ⁰₋₁e",
+    "a proton, ¹₁H"
+   ],
+   "answer": 0,
+   "explanation": "Conserving mass number gives 9 + 4 = 12 + A, so A = 1. Conserving atomic number gives 4 + 2 = 6 + Z, so Z = 0. The particle with mass number 1 and atomic number 0 is a neutron, ¹₀n."
+  },
+  {
+   "n": 42,
+   "topic": "Light and optics",
+   "q": "A glass block in a laboratory in Owerri has refractive index 2.0. Calculate the critical angle for light travelling from the glass into air.",
+   "options": [
+    "60°",
+    "45°",
+    "90°",
+    "30°"
+   ],
+   "answer": 3,
+   "explanation": "The critical angle C is given by sin C = 1/n = 1/2.0 = 0.5. Therefore C = sin⁻¹(0.5) = 30°. The value 60° comes from using the complementary angle."
+  },
+  {
+   "n": 43,
+   "topic": "Gas laws",
+   "q": "A fixed mass of gas occupies 900 cm³ at 27 °C and 1.0 × 10⁵ Pa. Calculate its volume at 227 °C and 2.5 × 10⁵ Pa.",
+   "options": [
+    "600 cm³",
+    "1500 cm³",
+    "360 cm³",
+    "3750 cm³"
+   ],
+   "answer": 0,
+   "explanation": "Convert temperatures to kelvin: T₁ = 300 K and T₂ = 500 K. Using the combined gas law, V₂ = P₁V₁T₂/(P₂T₁) = (1.0 × 10⁵ × 900 × 500)/(2.5 × 10⁵ × 300) = 600 cm³. Ignoring the pressure change gives 1500 cm³, while ignoring the temperature change gives 360 cm³."
+  },
+  {
+   "n": 44,
+   "topic": "Heat and temperature",
+   "q": "An ironsmith in Ilorin heats a 0.25 kg iron rod through a temperature rise of 80 K. If the specific heat capacity of iron is 450 J kg⁻¹ K⁻¹, calculate the heat absorbed by the rod.",
+   "options": [
+    "112.5 J",
+    "18 kJ",
+    "9.0 kJ",
+    "90 kJ"
+   ],
+   "answer": 2,
+   "explanation": "Using Q = mcΔθ gives 0.25 × 450 × 80 = 9000 J, which is 9.0 kJ. The value 112.5 J is obtained if the temperature rise is left out, while 18 kJ would come from using twice the mass."
+  },
+  {
+   "n": 45,
+   "topic": "Heat and temperature",
+   "q": "A laboratory thermometer in Ibadan reads 25°C. Express this temperature on the Kelvin scale. (Take absolute zero as −273°C.)",
+   "options": [
+    "323 K",
+    "298 K",
+    "273 K",
+    "248 K"
+   ],
+   "answer": 1,
+   "explanation": "The Kelvin temperature is obtained by adding 273 to the Celsius temperature: 25 + 273 = 298 K. Subtracting 25 from 273 gives 248 K, which is a common sign mistake."
+  },
+  {
+   "n": 46,
+   "topic": "Measurement and units",
+   "q": "A motorist in Lagos travels at a steady speed of 90 km/h. What is this speed in metres per second?",
+   "options": [
+    "25 m/s",
+    "250 m/s",
+    "15 m/s",
+    "32.4 m/s"
+   ],
+   "answer": 0,
+   "explanation": "Convert kilometres to metres and hours to seconds: 90 km/h = (90 × 1000) ÷ (60 × 60) = 25 m/s. Multiplying 90 by 0.36 instead of using the correct conversion factor gives 32.4 m/s."
+  },
+  {
+   "n": 47,
+   "topic": "Work, energy and power",
+   "q": "A labourer in Oshogbo pulls a wheelbarrow with a force of 120 N through a distance of 15 m along the ground. If the force acts at 60° to the horizontal, calculate the work done by the force.",
+   "options": [
+    "1 800 J",
+    "0 J",
+    "900 J",
+    "1 560 J"
+   ],
+   "answer": 2,
+   "explanation": "Work done = Fd cosθ = 120 × 15 × cos60° = 1800 × 0.5 = 900 J. Using sin60° instead of cos60° gives about 1 560 J, while ignoring the angle gives 1 800 J."
+  },
+  {
+   "n": 48,
+   "topic": "Work, energy and power",
+   "q": "A stone of mass 0.50 kg is thrown vertically upwards from the ground in Ibadan with a speed of 12 m/s. Calculate the maximum height reached. (Take g = 10 m/s²; ignore air resistance.)",
+   "options": [
+    "7.2 m",
+    "14.4 m",
+    "3.6 m",
+    "72 m"
+   ],
+   "answer": 0,
+   "explanation": "At the maximum height, ½mv² = mgh, so h = v² ÷ (2g) = 12² ÷ (2 × 10) = 144 ÷ 20 = 7.2 m. The mass cancels out, and using v² ÷ g instead gives 14.4 m."
+  },
+  {
+   "n": 49,
+   "topic": "Newton’s laws and momentum",
+   "q": "A lorry of mass 1500 kg travelling on a level road in Kaduna is acted upon by a forward force of 9000 N and a constant resistive force of 3000 N. Calculate its acceleration.",
+   "options": [
+    "8.0 m/s²",
+    "4.0 m/s²",
+    "2.0 m/s²",
+    "6.0 m/s²"
+   ],
+   "answer": 1,
+   "explanation": "The resultant force is 9000 − 3000 = 6000 N. Using F = ma, the acceleration is 6000 ÷ 1500 = 4.0 m/s². Ignoring the resistive force would wrongly give 6.0 m/s²."
+  },
+  {
+   "n": 50,
+   "topic": "Newton’s laws and momentum",
+   "q": "A boy of mass 40 kg jumps horizontally from a canoe of mass 60 kg with a speed of 3.0 m/s relative to the still water. The canoe is initially at rest. Calculate the recoil speed of the canoe.",
+   "options": [
+    "3.0 m/s",
+    "2.0 m/s",
+    "4.5 m/s",
+    "1.2 m/s"
+   ],
+   "answer": 1,
+   "explanation": "The total momentum is initially zero, so 40 × 3.0 = 60 × v. Thus v = 120 ÷ 60 = 2.0 m/s in the opposite direction to the boy. Using the boy's mass alone for the canoe gives a wrong result."
+  },
+  {
+   "n": 51,
+   "topic": "Elasticity and pressure",
+   "q": "A spring in a school laboratory in Jos stretches by 4.0 cm when a load of 2.0 N is hung from it. Calculate the force constant of the spring.",
+   "options": [
+    "200 N/m",
+    "0.50 N/m",
+    "8.0 N/m",
+    "50 N/m"
+   ],
+   "answer": 3,
+   "explanation": "The extension is 4.0 cm = 0.040 m. The force constant is k = F ÷ e = 2.0 ÷ 0.040 = 50 N/m. Treating 4.0 cm as 4.0 m gives 0.50 N/m, which is incorrect."
+  },
+  {
+   "n": 52,
+   "topic": "Elasticity and pressure",
+   "q": "A wooden crate of mass 12 kg rests on a horizontal floor in Aba. If the area of contact with the floor is 0.30 m² and g = 10 m/s², calculate the pressure exerted by the crate on the floor.",
+   "options": [
+    "4000 Pa",
+    "400 Pa",
+    "40 Pa",
+    "120 Pa"
+   ],
+   "answer": 1,
+   "explanation": "The weight of the crate is 12 × 10 = 120 N. Pressure is force ÷ area = 120 ÷ 0.30 = 400 Pa. Using mass instead of weight gives 40 Pa, which is wrong."
+  },
+  {
+   "n": 53,
+   "topic": "Elasticity and pressure",
+   "q": "A diver in a swimming pool in Lagos experiences a total pressure of 1.5 × 10⁵ Pa. If atmospheric pressure is 1.0 × 10⁵ Pa and the density of water is 1.0 × 10³ kg/m³, calculate the depth of the diver. Take g = 10 m/s².",
+   "options": [
+    "10.0 m",
+    "5.0 m",
+    "1.5 m",
+    "15.0 m"
+   ],
+   "answer": 1,
+   "explanation": "The pressure due to the water alone is 1.5 × 10⁵ − 1.0 × 10⁵ = 0.5 × 10⁵ Pa. Using P = ρgh gives h = 0.5 × 10⁵ ÷ (1.0 × 10³ × 10) = 5.0 m. Using the total pressure directly would wrongly give 15.0 m."
+  },
+  {
+   "n": 54,
+   "topic": "Motion",
+   "q": "A minibus in Jos starts from rest and accelerates uniformly at 2.5 m/s² for 4.0 s. It then continues at the speed reached for another 10 s. Calculate the total distance covered.",
+   "options": [
+    "100 m",
+    "160 m",
+    "120 m",
+    "140 m"
+   ],
+   "answer": 2,
+   "explanation": "The speed after acceleration is v = at = 2.5 × 4.0 = 10 m/s. Distance during acceleration is (0 + 10)/2 × 4.0 = 20 m, and distance at constant speed is 10 × 10 = 100 m, giving a total of 120 m."
+  },
+  {
+   "n": 55,
+   "topic": "Motion",
+   "q": "A taxi in Warri increases its speed uniformly from 6.0 m/s to 18 m/s in 5.0 s. Calculate the distance covered during this interval.",
+   "options": [
+    "30 m",
+    "90 m",
+    "120 m",
+    "60 m"
+   ],
+   "answer": 3,
+   "explanation": "The average speed is (6.0 + 18) ÷ 2 = 12 m/s. The distance is average speed × time = 12 × 5.0 = 60 m. Using the final speed alone would wrongly give 90 m."
+  },
+  {
+   "n": 56,
+   "topic": "Simple machines",
+   "q": "An inclined plane used for loading goods in a warehouse in Onitsha is 5.0 m long and rises to a vertical height of 1.0 m. Calculate the velocity ratio of the inclined plane.",
+   "options": [
+    "6.0",
+    "5.0",
+    "4.0",
+    "0.20"
+   ],
+   "answer": 1,
+   "explanation": "For an inclined plane, velocity ratio = length ÷ height = 5.0 ÷ 1.0 = 5.0. Dividing height by length gives 0.20, which is the reciprocal and not the velocity ratio."
+  },
+  {
+   "n": 57,
+   "topic": "Simple machines",
+   "q": "A wheel and axle in a bicycle repair workshop in Osogbo has a wheel of radius 60 cm and an axle of radius 15 cm. Calculate its velocity ratio.",
+   "options": [
+    "8.0",
+    "4.0",
+    "3.0",
+    "0.25"
+   ],
+   "answer": 1,
+   "explanation": "The velocity ratio of a wheel and axle is radius of wheel ÷ radius of axle = 60 ÷ 15 = 4.0. Using the axle radius divided by the wheel radius gives 0.25, which is not the velocity ratio for this arrangement."
+  },
+  {
+   "n": 58,
+   "topic": "Current electricity",
+   "q": "A student in Enugu uses an electric iron rated 1.5 kW, 220 V for 40 minutes daily for 20 days. If electrical energy costs ₦60 per kWh, what is the total cost of the energy consumed?",
+   "options": [
+    "₦2,400",
+    "₦900",
+    "₦1,800",
+    "₦1,200"
+   ],
+   "answer": 3,
+   "explanation": "The daily energy used is 1.5 kW × (40/60) h = 1.0 kWh, so in 20 days the energy is 20 kWh. The cost is 20 × ₦60 = ₦1,200; the 220 V rating is not needed once the power rating is known."
+  },
+  {
+   "n": 59,
+   "topic": "Current electricity",
+   "q": "A dry cell of e.m.f. 6.0 V and internal resistance 1.0 Ω is connected to a 2.0 Ω resistor in series with a parallel pair of two 6.0 Ω resistors. Calculate the terminal potential difference of the cell.",
+   "options": [
+    "3.0 V",
+    "5.0 V",
+    "4.0 V",
+    "6.0 V"
+   ],
+   "answer": 1,
+   "explanation": "The two 6.0 Ω resistors in parallel have equivalent resistance 3.0 Ω, so the total external resistance is 2.0 + 3.0 = 5.0 Ω. The current is 6.0/(5.0 + 1.0) = 1.0 A, hence terminal p.d. = 6.0 − (1.0 × 1.0) = 5.0 V; the 3.0 V is only the p.d. across the parallel pair."
+  },
+  {
+   "n": 60,
+   "topic": "Current electricity",
+   "q": "A galvanometer in a laboratory in Ibadan has a resistance of 50 Ω and gives full-scale deflection for a current of 2.0 mA. What resistance must be connected in series with it to convert it into a voltmeter reading up to 10 V?",
+   "options": [
+    "5,000 Ω",
+    "50 Ω",
+    "5,050 Ω",
+    "4,950 Ω"
+   ],
+   "answer": 3,
+   "explanation": "For full-scale deflection, V = Ig(G + R), so R = V/Ig − G. Thus R = 10/(2.0 × 10⁻³) − 50 = 4,950 Ω; using 5,000 Ω ignores the galvanometer resistance."
+  }
+ ]
+}

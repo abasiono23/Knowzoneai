@@ -61,7 +61,7 @@ const rooms: Translation<typeof en> = {
   },
   goal: 'EBUMNUCHE ỌNỤ ỤLỌ',
   goalEmpty: 'Enweghị ebumnuche ka.',
-  goalPlaceholder: 'dịka Mechaa JAMB Physics paper 1',
+  goalPlaceholder: 'dịka Mechaa {{exam}} Physics paper 1',
   setGoal: 'Debe ebumnuche',
   editGoal: 'Gbanwee',
   goalProgress: '{{done}} n’ime {{total}} emechaala',

@@ -19,6 +19,9 @@ const referrals = {
     exams: {
       label: 'Exam prep',
       text: 'WAEC/JAMB prep is so much easier with Knowzone AI: practice quizzes, an AI tutor and short video lessons. Use my code {{code}} for {{credits}} bonus AI credits: {{link}}',
+      /** The same invite for other study regions: their exams, or none named. */
+      textFor: '{{exams}} prep is so much easier with Knowzone AI: practice quizzes, an AI tutor and short video lessons. Use my code {{code}} for {{credits}} bonus AI credits: {{link}}',
+      textAny: 'Exam prep is so much easier with Knowzone AI: practice quizzes, an AI tutor and short video lessons. Use my code {{code}} for {{credits}} bonus AI credits: {{link}}',
     },
     game: {
       label: 'Knowzone World',

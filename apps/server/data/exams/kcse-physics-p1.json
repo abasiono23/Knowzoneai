@@ -1,0 +1,401 @@
+{
+ "id": "kcse-physics-p1",
+ "exam": "kcse",
+ "subject": "physics",
+ "year": null,
+ "number": 1,
+ "source": "ai",
+ "minutes": 35,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Uniform circular motion",
+   "q": "A cyclist moves round a circular track of radius 14 m at a steady speed, completing one lap in 22 s. Taking π = 22/7, what is the cyclist's linear speed?",
+   "options": [
+    "8.0 m/s",
+    "2.0 m/s",
+    "56 m/s",
+    "4.0 m/s"
+   ],
+   "answer": 3,
+   "explanation": "The distance covered in one lap is the circumference, 2πr = 2 × 22/7 × 14 = 88 m. The linear speed is 88 m ÷ 22 s = 4.0 m/s."
+  },
+  {
+   "n": 2,
+   "topic": "Uniform circular motion",
+   "q": "A small stone tied to a string is whirled in a horizontal circle at constant speed. If the string breaks suddenly, in which direction does the stone move immediately afterwards?",
+   "options": [
+    "Radially outwards from the centre of the circle",
+    "Radially inwards towards the centre of the circle",
+    "Along the circular path, continuing the same circle",
+    "Along the tangent to the circle at the point where the string breaks"
+   ],
+   "answer": 3,
+   "explanation": "At any instant the stone's velocity is tangential to the circular path. When the string breaks, the centripetal force is removed, so the stone continues along the tangent because of its inertia. Moving radially outwards is a common misconception based on an imagined centrifugal force."
+  },
+  {
+   "n": 3,
+   "topic": "Uniform circular motion",
+   "q": "A 0.20 kg mass attached to a string is whirled in a vertical circle of radius 0.50 m at a constant speed of 4.0 m/s. Taking g = 10 m/s², what is the tension in the string at the highest point?",
+   "options": [
+    "2.0 N",
+    "8.4 N",
+    "6.4 N",
+    "4.4 N"
+   ],
+   "answer": 3,
+   "explanation": "The centripetal force needed is mv²/r = 0.20 × 4.0² ÷ 0.50 = 6.4 N. At the highest point both tension and weight act towards the centre, so T + mg = mv²/r, giving T = 6.4 − (0.20 × 10) = 4.4 N."
+  },
+  {
+   "n": 4,
+   "topic": "Thin lenses",
+   "q": "An object is placed 15 cm from a converging lens of focal length 10 cm. What is the image distance?",
+   "options": [
+    "25 cm",
+    "5.0 cm",
+    "30 cm",
+    "6.0 cm"
+   ],
+   "answer": 2,
+   "explanation": "Using 1/f = 1/u + 1/v, we get 1/v = 1/10 − 1/15 = 1/30. Therefore v = 30 cm, so a real image is formed 30 cm from the lens."
+  },
+  {
+   "n": 5,
+   "topic": "Thin lenses",
+   "q": "A student uses a converging lens as a magnifying glass. To obtain an upright, virtual and magnified image, where should the object be placed?",
+   "options": [
+    "At the principal focus",
+    "Between the lens and its principal focus",
+    "Beyond twice the focal length",
+    "Between the principal focus and twice the focal length"
+   ],
+   "answer": 1,
+   "explanation": "A converging lens forms an upright, virtual and magnified image when the object is closer to the lens than its focal length. Placing the object at the principal focus gives an image at infinity, while placing it beyond the principal focus gives real inverted images."
+  },
+  {
+   "n": 6,
+   "topic": "Reflection and refraction of light",
+   "q": "Light travels from water of refractive index 4/3 to air. The critical angle for the water-air boundary is closest to which value?",
+   "options": [
+    "53°",
+    "49°",
+    "41°",
+    "37°"
+   ],
+   "answer": 1,
+   "explanation": "At the critical angle, sin c = 1/n = 1 ÷ (4/3) = 3/4 = 0.75. Thus c ≈ 48.6°, which is closest to 49°."
+  },
+  {
+   "n": 7,
+   "topic": "Reflection and refraction of light",
+   "q": "The angle between an incident ray and its reflected ray on a plane mirror is 80°. What is the angle between the incident ray and the mirror surface?",
+   "options": [
+    "10°",
+    "40°",
+    "50°",
+    "80°"
+   ],
+   "answer": 2,
+   "explanation": "The angle between the incident and reflected rays is i + r = 2i = 80°, so the angle of incidence is 40°. The angle between the incident ray and the mirror surface is therefore 90° − 40° = 50°."
+  },
+  {
+   "n": 8,
+   "topic": "Measurement",
+   "q": "A rectangular metal block from a workshop in Nakuru measures 5.0 cm by 4.0 cm by 2.0 cm and has a mass of 400 g. What is its density in kg/m³?",
+   "options": [
+    "1 000 kg/m³",
+    "10 kg/m³",
+    "10 000 kg/m³",
+    "100 000 kg/m³"
+   ],
+   "answer": 2,
+   "explanation": "The volume is 5.0 × 4.0 × 2.0 = 40 cm³ = 4.0 × 10⁻⁵ m³, and the mass is 0.400 kg. Density = 0.400 ÷ (4.0 × 10⁻⁵) = 10 000 kg/m³."
+  },
+  {
+   "n": 9,
+   "topic": "Floating and sinking",
+   "q": "A solid block of volume 300 cm³ and mass 240 g is gently placed in water of density 1.0 g/cm³. What is the volume of the block above the water surface when it floats steadily?",
+   "options": [
+    "300 cm³",
+    "60 cm³",
+    "240 cm³",
+    "75 cm³"
+   ],
+   "answer": 1,
+   "explanation": "The density of the block is 240 g ÷ 300 cm³ = 0.8 g/cm³, so it floats because this is less than the density of water. The upthrust equals the block's weight when 240 cm³ of water is displaced; hence the volume above water is 300 cm³ − 240 cm³ = 60 cm³."
+  },
+  {
+   "n": 10,
+   "topic": "Floating and sinking",
+   "q": "A uniform wooden rod floats upright in water with 40% of its length above the water surface. If the density of water is 1000 kg/m³, what is the density of the wood?",
+   "options": [
+    "1000 kg/m³",
+    "667 kg/m³",
+    "400 kg/m³",
+    "600 kg/m³"
+   ],
+   "answer": 3,
+   "explanation": "Since 40% of the rod is above water, 60% is submerged. For a floating body, the fraction submerged equals the ratio of the object's density to the liquid's density, so the wood density is 0.60 × 1000 kg/m³ = 600 kg/m³. Using the 40% above the water as the submerged fraction would wrongly give 400 kg/m³."
+  },
+  {
+   "n": 11,
+   "topic": "Gas laws",
+   "q": "A fixed mass of gas at constant temperature occupies 200 cm³ at a pressure of 1.0×10⁵ Pa. It is compressed to 100 cm³. What is the new pressure?",
+   "options": [
+    "1.0×10⁵ Pa",
+    "2.0×10⁵ Pa",
+    "4.0×10⁵ Pa",
+    "5.0×10⁴ Pa"
+   ],
+   "answer": 1,
+   "explanation": "At constant temperature, Boyle's law gives P₁V₁ = P₂V₂. Thus P₂ = (1.0×10⁵ Pa × 200 cm³) ÷ 100 cm³ = 2.0×10⁵ Pa. Halving the volume at constant temperature doubles the pressure."
+  },
+  {
+   "n": 12,
+   "topic": "Gas laws",
+   "q": "A fixed mass of gas at 27 °C exerts a pressure of 90 kPa. At constant volume, what pressure will it exert at 127 °C?",
+   "options": [
+    "120 kPa",
+    "90 kPa",
+    "423⅓ kPa",
+    "67.5 kPa"
+   ],
+   "answer": 0,
+   "explanation": "The temperatures must be converted to kelvin: 27 °C = 300 K and 127 °C = 400 K. Using the pressure law P₁/T₁ = P₂/T₂ gives P₂ = 90 kPa × 400 K ÷ 300 K = 120 kPa. Using the Celsius temperatures directly gives 423⅓ kPa, which is incorrect."
+  },
+  {
+   "n": 13,
+   "topic": "Electromagnetic induction and mains electricity",
+   "q": "A bar magnet is repeatedly pushed into and pulled out of a coil connected to a galvanometer. Which change would increase the induced e.m.f.?",
+   "options": [
+    "Holding the magnet stationary inside the coil",
+    "Pushing the magnet into the coil more quickly",
+    "Pushing the magnet into the coil more slowly",
+    "Using fewer turns in the coil"
+   ],
+   "answer": 1,
+   "explanation": "Faraday's law states that the induced e.m.f. depends on the rate at which magnetic flux linkage changes. Moving the magnet faster increases this rate, so the induced e.m.f. increases. Fewer turns reduce the flux linkage, and a stationary magnet produces no change in flux."
+  },
+  {
+   "n": 14,
+   "topic": "Electromagnetic induction and mains electricity",
+   "q": "A transformer connected to the 240 V mains has 1000 turns in its primary coil. It is designed to supply 12 V from its secondary coil. How many turns are needed in the secondary coil?",
+   "options": [
+    "500",
+    "20000",
+    "50",
+    "20"
+   ],
+   "answer": 2,
+   "explanation": "For an ideal transformer, Vₛ/Vₚ = Nₛ/Nₚ. Rearranging gives Nₛ = Nₚ × Vₛ/Vₚ = 1000 × 12/240 = 50 turns. Using the voltage ratio upside down would give 20000 turns, which is a step-up result instead of the required step-down."
+  },
+  {
+   "n": 15,
+   "topic": "Electromagnetic induction and mains electricity",
+   "q": "Which statement correctly describes the domestic mains electricity supply in Kenya?",
+   "options": [
+    "240 V, 60 Hz alternating current",
+    "240 V, 50 Hz direct current",
+    "110 V, 50 Hz alternating current",
+    "240 V, 50 Hz alternating current"
+   ],
+   "answer": 3,
+   "explanation": "The Kenyan domestic mains supply is an alternating current supply of about 240 V at a frequency of 50 Hz. Direct current does not reverse direction, and the other frequency and voltage values do not match the Kenyan supply."
+  },
+  {
+   "n": 16,
+   "topic": "Heat transfer and quantity of heat",
+   "q": "Two identical metal cans, one painted black and the other shiny silver, are filled with equal amounts of hot water at the same temperature and placed in a shaded room. The water in the black can cools faster. Which statement explains this?",
+   "options": [
+    "The black surface prevents convection currents in the water.",
+    "The black surface is a better emitter of infrared radiation than the shiny surface.",
+    "The black surface conducts heat through the metal more quickly.",
+    "The black surface reflects more infrared radiation back into the water."
+   ],
+   "answer": 1,
+   "explanation": "A black surface has a higher emissivity, so it radiates infrared heat more effectively than a shiny silver surface. The colour of the surface affects radiation rather than conduction through the metal or convection within the water."
+  },
+  {
+   "n": 17,
+   "topic": "Heat transfer and quantity of heat",
+   "q": "How much heat is required to raise the temperature of 2.0 kg of water from 20 °C to 50 °C? Take the specific heat capacity of water as 4200 J kg⁻¹ K⁻¹.",
+   "options": [
+    "5.04×10⁵ J",
+    "2.52×10⁵ J",
+    "1.26×10⁶ J",
+    "1.26×10⁵ J"
+   ],
+   "answer": 1,
+   "explanation": "The temperature rise is 50 °C − 20 °C = 30 K. Using Q = mcΔT gives Q = 2.0 kg × 4200 J kg⁻¹ K⁻¹ × 30 K = 252000 J = 2.52×10⁵ J. Using half or double the mass, or misreading the temperature rise, gives the other values."
+  },
+  {
+   "n": 18,
+   "topic": "Heat transfer and quantity of heat",
+   "q": "0.50 kg of ice at 0 °C is completely melted by supplying 1.68×10⁵ J of heat. What is the specific latent heat of fusion of ice?",
+   "options": [
+    "3.36×10⁵ J kg⁻¹",
+    "8.40×10⁴ J kg⁻¹",
+    "1.68×10⁵ J kg⁻¹",
+    "6.72×10⁵ J kg⁻¹"
+   ],
+   "answer": 0,
+   "explanation": "During melting the temperature remains at 0 °C, so the heat supplied is used as latent heat: Q = mL. Rearranging gives L = Q/m = 1.68×10⁵ J ÷ 0.50 kg = 3.36×10⁵ J kg⁻¹. The value 1.68×10⁵ J kg⁻¹ would be obtained by forgetting to divide by the mass."
+  },
+  {
+   "n": 19,
+   "topic": "Cells, simple circuits and current electricity",
+   "q": "A dry cell of e.m.f. 1.5 V has an internal resistance of 0.50 Ω. It is connected to an external resistor of 2.5 Ω. What is the terminal voltage of the cell?",
+   "options": [
+    "1.00 V",
+    "0.25 V",
+    "1.50 V",
+    "1.25 V"
+   ],
+   "answer": 3,
+   "explanation": "The total resistance is 2.5 Ω + 0.50 Ω = 3.0 Ω, so the current is 1.5 V ÷ 3.0 Ω = 0.50 A. The terminal voltage is the potential difference across the external resistor: 0.50 A × 2.5 Ω = 1.25 V. The value 0.25 V is the lost volts across the internal resistance, while 1.50 V would be the terminal voltage only if internal resistance were negligible."
+  },
+  {
+   "n": 20,
+   "topic": "Cells, simple circuits and current electricity",
+   "q": "At a home in Nakuru, a 1.5 kW electric kettle is used for 40 minutes each day. Electricity costs KSh 24 per kWh. What is the cost of using the kettle for 30 days?",
+   "options": [
+    "KSh 1 440",
+    "KSh 432",
+    "KSh 720",
+    "KSh 1 080"
+   ],
+   "answer": 2,
+   "explanation": "The kettle uses 1.5 kW × (40 ÷ 60) h = 1.0 kWh each day, so in 30 days it uses 30 kWh. At KSh 24 per kWh, the cost is 30 × 24 = KSh 720. Treating 40 minutes as 0.4 h gives KSh 432, but 40 minutes is 2/3 h."
+  },
+  {
+   "n": 21,
+   "topic": "Cells, simple circuits and current electricity",
+   "q": "Three identical cells, each of e.m.f. 2.0 V and negligible internal resistance, are connected in series. One cell is accidentally connected with its polarity reversed. What is the total e.m.f. of the combination?",
+   "options": [
+    "6.0 V",
+    "2.0 V",
+    "0 V",
+    "4.0 V"
+   ],
+   "answer": 1,
+   "explanation": "Two cells are connected in the same direction and add to 4.0 V, while the reversed cell opposes this with 2.0 V. The net e.m.f. is therefore 4.0 V − 2.0 V = 2.0 V. A total of 6.0 V would require all three cells to assist one another."
+  },
+  {
+   "n": 22,
+   "topic": "Hooke’s law",
+   "q": "An elastic spring of natural length 20.0 cm has a spring constant of 250 N/m. A 500 g mass is hung from it and the system settles at rest. Taking g = 10 N/kg, what is the new length of the spring?",
+   "options": [
+    "20.2 cm",
+    "22.0 cm",
+    "25.0 cm",
+    "2.0 cm"
+   ],
+   "answer": 1,
+   "explanation": "The weight is 0.500 kg × 10 N/kg = 5.0 N. The extension is F ÷ k = 5.0 N ÷ 250 N/m = 0.020 m = 2.0 cm, so the new length is 20.0 cm + 2.0 cm = 22.0 cm. The value 2.0 cm is only the extension, not the final length."
+  },
+  {
+   "n": 23,
+   "topic": "Hooke’s law",
+   "q": "Wanjiku connects two identical springs, each of spring constant 50 N/m, in series. A load of 1.0 N is hung from the combination. What is the total extension, assuming Hooke’s law is obeyed?",
+   "options": [
+    "2.0 cm",
+    "8.0 cm",
+    "1.0 cm",
+    "4.0 cm"
+   ],
+   "answer": 3,
+   "explanation": "Each spring supports the same 1.0 N load, so each extends by F ÷ k = 1.0 N ÷ 50 N/m = 0.020 m = 2.0 cm. In series the extensions add: 2.0 cm + 2.0 cm = 4.0 cm. Using an effective spring constant of 25 N/m also gives 1.0 ÷ 25 = 0.040 m."
+  },
+  {
+   "n": 24,
+   "topic": "Hooke’s law",
+   "q": "A spring obeys Hooke’s law. A force of 12 N produces an extension of 4.0 cm. What force is needed to produce an extension of 10.0 cm, assuming the elastic limit is not exceeded?",
+   "options": [
+    "40 N",
+    "30 N",
+    "4.8 N",
+    "20 N"
+   ],
+   "answer": 1,
+   "explanation": "The spring constant is k = F ÷ e = 12 N ÷ 0.040 m = 300 N/m. For an extension of 10.0 cm = 0.100 m, the force is F = k e = 300 × 0.100 = 30 N. Equivalently, the extension increases by a factor of 10.0 ÷ 4.0 = 2.5, so the force is 12 × 2.5 = 30 N."
+  },
+  {
+   "n": 25,
+   "topic": "Waves and sound",
+   "q": "A learner standing between two cliffs in Kericho claps once. She hears the first echo after 0.60 s and the second echo after 1.80 s. Taking the speed of sound in air as 340 m/s, how far apart are the cliffs?",
+   "options": [
+    "612 m",
+    "408 m",
+    "306 m",
+    "204 m"
+   ],
+   "answer": 1,
+   "explanation": "The distance to the nearer cliff is (340 × 0.60) ÷ 2 = 102 m. The distance to the farther cliff is (340 × 1.80) ÷ 2 = 306 m, so the cliff separation is 102 m + 306 m = 408 m. The value 612 m is the round-trip distance to the farther cliff, not the separation between the cliffs."
+  },
+  {
+   "n": 26,
+   "topic": "Waves and sound",
+   "q": "Mwangi generates 90 complete waves in 3.0 s in a ripple tank. The wavelength of the waves is 4.0 cm. What is the speed of the waves?",
+   "options": [
+    "120 m/s",
+    "12 m/s",
+    "0.12 m/s",
+    "1.2 m/s"
+   ],
+   "answer": 3,
+   "explanation": "The frequency is 90 ÷ 3.0 = 30 Hz. The wavelength is 4.0 cm = 0.040 m, so the wave speed is 30 Hz × 0.040 m = 1.2 m/s. The value 120 m/s arises if the wavelength is left as 4.0 instead of being converted from centimetres to metres."
+  },
+  {
+   "n": 27,
+   "topic": "Linear motion and Newton’s laws of motion",
+   "q": "A 1 200 kg matatu travelling at 15 m/s is brought to rest in 5.0 s. What is the magnitude of the average braking force?",
+   "options": [
+    "3 600 N",
+    "18 000 N",
+    "90 000 N",
+    "300 N"
+   ],
+   "answer": 0,
+   "explanation": "The acceleration is (0 − 15) ÷ 5.0 = −3.0 m/s², so the braking force magnitude is F = ma = 1 200 kg × 3.0 m/s² = 3 600 N. Multiplying mass by velocity gives 18 000 N, but force also requires dividing the change in velocity by the stopping time."
+  },
+  {
+   "n": 28,
+   "topic": "Linear motion and Newton’s laws of motion",
+   "q": "A stone is thrown vertically upwards from the ground with a velocity of 20 m/s. Neglecting air resistance and taking g = 10 m/s², what is the maximum height reached by the stone?",
+   "options": [
+    "20 m",
+    "40 m",
+    "10 m",
+    "80 m"
+   ],
+   "answer": 0,
+   "explanation": "At the maximum height the velocity is zero. Using v² = u² − 2gh gives 0 = 20² − 2 × 10 × h, so h = 400 ÷ 20 = 20 m. The value 40 m would be obtained by using h = u² ÷ g instead of dividing by 2g."
+  },
+  {
+   "n": 29,
+   "topic": "Magnetism and the magnetic effect of an electric current",
+   "q": "A long straight vertical copper wire carries conventional current upwards. At a point due east of the wire, what is the direction of the magnetic field produced by the current?",
+   "options": [
+    "Due east",
+    "Due west",
+    "Due north",
+    "Due south"
+   ],
+   "answer": 2,
+   "explanation": "Using the right-hand grip rule, with the thumb pointing upwards along the conventional current, the magnetic field lines curl anticlockwise when viewed from above. At a point east of the wire, the tangent to these field lines points due north."
+  },
+  {
+   "n": 30,
+   "topic": "Magnetism and the magnetic effect of an electric current",
+   "q": "A student in Kakamega makes an electromagnet by winding insulated copper wire around a soft-iron nail and connecting it to a cell. Which change will make the electromagnet stronger while using the same cell?",
+   "options": [
+    "Reversing the cell terminals",
+    "Increasing the number of turns of wire on the nail",
+    "Replacing the soft-iron nail with a plastic rod",
+    "Reducing the current by adding a resistor in series"
+   ],
+   "answer": 1,
+   "explanation": "The magnetic effect of a solenoid increases when the number of turns is increased. A soft-iron core concentrates the magnetic field, while a plastic core would weaken the electromagnet, and adding resistance reduces the current and the strength. Reversing the cell terminals changes the polarity but not the strength."
+  }
+ ]
+}

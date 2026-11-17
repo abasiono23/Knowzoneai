@@ -50,6 +50,7 @@ const settings: Translation<typeof en> = {
     activeCount_one: '{{count}} ń ṣiṣẹ́',
     activeCount_other: '{{count}} ń ṣiṣẹ́',
     language: 'Èdè',
+    region: 'Orílẹ̀-èdè ẹ̀kọ́',
     appearance: 'Ìrísí',
     privacy: 'Ìpamọ́',
     downloadData: 'Ṣe ìgbàsílẹ̀ dátà mi',
@@ -94,6 +95,11 @@ const settings: Translation<typeof en> = {
     reduceMotionHint: 'Àwọn eré-àwòrán tó ń gbé díẹ̀ jákèjádò áàpù',
     haptics: 'Ìgbọ̀nrìrì nínú eré',
     hapticsHint: 'Ìdáhùn ìgbọ̀nrìrì nínú Knowzone World',
+  },
+  region: {
+    title: 'Orílẹ̀-èdè ẹ̀kọ́',
+    intro: 'Yan orílẹ̀-èdè tí o ti ń kẹ́kọ̀ọ́. Knowzone yóò kọ́kọ́ fi ìdánrawò ìdánwò orílẹ̀-èdè náà hàn, olùkọ́ AI rẹ yóò sì tẹ̀lé àwọn ìdánwò rẹ̀.',
+    footer: 'Àwọn èsì rẹ kò ní parẹ́ tí o bá yí orílẹ̀-èdè padà, o sì lè ṣí ìwé àwọn orílẹ̀-èdè mìíràn láti ojú-ìwé ìdánrawò ìdánwò.',
   },
   language: {
     title: 'Èdè',

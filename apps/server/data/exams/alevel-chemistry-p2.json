@@ -1,0 +1,401 @@
+{
+ "id": "alevel-chemistry-p2",
+ "exam": "alevel",
+ "subject": "chemistry",
+ "year": null,
+ "number": 2,
+ "source": "ai",
+ "minutes": 40,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Chemical equilibria",
+   "q": "At 500 K in a laboratory in Leeds, 0.400 mol of H₂ and 0.400 mol of I₂ are sealed in a 2.00 dm³ vessel and allowed to reach equilibrium. At equilibrium, 0.240 mol of H₂ remains. What is the value of Kc for H₂(g) + I₂(g) ⇌ 2HI(g) at this temperature?",
+   "options": [
+    "1.78 (no units)",
+    "0.444 (no units)",
+    "11.1 (no units)",
+    "1.78 mol⁻¹ dm³"
+   ],
+   "answer": 0,
+   "explanation": "At equilibrium, 0.160 mol of H₂ has reacted, so there are 0.240 mol H₂, 0.240 mol I₂ and 0.320 mol HI. Dividing by 2.00 dm³ gives 0.120, 0.120 and 0.160 mol dm⁻³. Kc = (0.160²)/(0.120 × 0.120) = 1.78; the units cancel because there are equal numbers of moles of gas on both sides."
+  },
+  {
+   "n": 2,
+   "topic": "Chemical equilibria",
+   "q": "Priya records that at equilibrium a 2.00 dm³ vessel contains 0.300 mol CO(g), 0.200 mol H₂(g) and 0.100 mol CH₃OH(g). The total pressure is 5.00 × 10⁵ Pa. For CO(g) + 2H₂(g) ⇌ CH₃OH(g), what is Kp?",
+   "options": [
+    "1.20 × 10⁻¹¹ Pa⁻²",
+    "2.00 × 10⁻⁶ Pa⁻¹",
+    "3.00 (no units)",
+    "8.33 × 10¹⁰ Pa²"
+   ],
+   "answer": 0,
+   "explanation": "The total amount of gas is 0.600 mol, so the mole fractions are 1/2 for CO, 1/3 for H₂ and 1/6 for CH₃OH. The partial pressures are therefore 2.50 × 10⁵ Pa, 1.666... × 10⁵ Pa and 8.333... × 10⁴ Pa. Kp = (8.33 × 10⁴)/((2.50 × 10⁵) × (1.667 × 10⁵)²) = 1.20 × 10⁻¹¹ Pa⁻²."
+  },
+  {
+   "n": 3,
+   "topic": "Chemical equilibria",
+   "q": "Daniel, a student in Belfast, studies the equilibrium CO(g) + Cl₂(g) ⇌ COCl₂(g). At 600 K, Kc is 1.20 × 10² dm³ mol⁻¹. A reaction mixture contains [CO] = 0.500 mol dm⁻³, [Cl₂] = 0.500 mol dm⁻³ and [COCl₂] = 15.0 mol dm⁻³. Which statement is correct?",
+   "options": [
+    "Q = 30.0 dm³ mol⁻¹, so the net reaction is in the forward direction.",
+    "Q = 0.0167 dm³ mol⁻¹, so the net reaction is in the reverse direction.",
+    "Q = 60.0 dm³ mol⁻¹, so the net reaction is in the reverse direction.",
+    "Q = 60.0 dm³ mol⁻¹, so the net reaction is in the forward direction."
+   ],
+   "answer": 3,
+   "explanation": "Q = [COCl₂]/([CO][Cl₂]) = 15.0/(0.500 × 0.500) = 60.0 dm³ mol⁻¹. Since Q is less than Kc (120 dm³ mol⁻¹), the forward reaction is favoured until Q reaches Kc. The reverse direction would be favoured if Q were greater than Kc."
+  },
+  {
+   "n": 4,
+   "topic": "Atomic structure",
+   "q": "Which ion has the ground-state electron configuration [Ar]3d⁵ and is formed from its neutral atom by the loss of electrons from the 4s subshell only?",
+   "options": [
+    "Fe³⁺",
+    "Cr³⁺",
+    "Mn²⁺",
+    "Co²⁺"
+   ],
+   "answer": 2,
+   "explanation": "Manganese has the ground-state configuration [Ar]3d⁵4s², so Mn²⁺ is formed by removing the two 4s electrons to give [Ar]3d⁵. Fe³⁺ also has an [Ar]3d⁵ configuration, but forming it from Fe requires removal of a 3d electron as well as the two 4s electrons."
+  },
+  {
+   "n": 5,
+   "topic": "Atomic structure",
+   "q": "The first six ionisation energies of an element are 578, 1817, 2745, 11578, 14831 and 18378 kJ mol⁻¹. Which element could this be?",
+   "options": [
+    "Magnesium",
+    "Aluminium",
+    "Silicon",
+    "Phosphorus"
+   ],
+   "answer": 1,
+   "explanation": "The large jump between the third and fourth ionisation energies shows that the fourth electron is removed from a much less shielded inner shell, so the element has three relatively easily removed outer electrons. Aluminium has the configuration [Ne]3s²3p¹ and fits this pattern; magnesium would show a jump after the second ionisation."
+  },
+  {
+   "n": 6,
+   "topic": "Acids, bases and buffers",
+   "q": "A technician in Newport prepares a solution of a weak monobasic acid HA at 298 K. Its concentration is 0.0400 mol dm⁻³ and Ka = 1.60 × 10⁻⁵ mol dm⁻³. Using the approximation that [HA] at equilibrium is approximately 0.0400 mol dm⁻³, what is the pH of the solution?",
+   "options": [
+    "2.40",
+    "4.80",
+    "3.10",
+    "3.40"
+   ],
+   "answer": 2,
+   "explanation": "[H⁺] ≈ √(Ka × [HA]) = √(1.60 × 10⁻⁵ × 0.0400) = 8.00 × 10⁻⁴ mol dm⁻³. Therefore pH = −log(8.00 × 10⁻⁴) = 3.10. Using Ka/[HA] or ignoring the initial concentration gives the other common pH values."
+  },
+  {
+   "n": 7,
+   "topic": "Acids, bases and buffers",
+   "q": "Sioned in Bangor prepares a buffer by dissolving 0.0250 mol of sodium propanoate and 0.0200 mol of propanoic acid in water and making the volume up to 250 cm³ at 298 K. Ka for propanoic acid is 1.34 × 10⁻⁵ mol dm⁻³. What is the pH of the buffer?",
+   "options": [
+    "4.97",
+    "4.78",
+    "2.99",
+    "4.87"
+   ],
+   "answer": 0,
+   "explanation": "For a buffer, pH = pKa + log([A⁻]/[HA]); the volume cancels because both species are in the same solution. pKa = −log(1.34 × 10⁻⁵) = 4.87, and the mole ratio is 0.0250/0.0200 = 1.25. Hence pH = 4.87 + log(1.25) = 4.97."
+  },
+  {
+   "n": 8,
+   "topic": "Acids, bases and buffers",
+   "q": "An aqueous solution of 0.100 mol dm⁻³ ammonia is titrated with 0.100 mol dm⁻³ hydrochloric acid. The pH ranges over which four indicators change colour are: methyl orange 3.1–4.4; bromothymol blue 6.0–7.6; phenolphthalein 8.2–10.0; thymolphthalein 9.3–10.5. Which indicator is most suitable for this titration?",
+   "options": [
+    "Phenolphthalein",
+    "Thymolphthalein",
+    "Bromothymol blue",
+    "Methyl orange"
+   ],
+   "answer": 3,
+   "explanation": "At the equivalence point the solution contains ammonium chloride; the ammonium ion is a weak acid and hydrolyses to give an acidic solution. An indicator changing in the acidic range is therefore suitable, and methyl orange has the appropriate range. Phenolphthalein changes in the alkaline range, which would be suitable for a weak acid–strong base titration instead."
+  },
+  {
+   "n": 9,
+   "topic": "Redox and electrode potentials",
+   "q": "Kofi in Birmingham titrates 25.0 cm³ of 0.0200 mol dm⁻³ potassium manganate(VII) with 20.0 cm³ of a solution of iron(II) sulfate in acidic conditions. The relevant half-equations are MnO₄⁻ + 8H⁺ + 5e⁻ → Mn²⁺ + 4H₂O and Fe²⁺ → Fe³⁺ + e⁻. What is the concentration of iron(II) ions in the iron(II) sulfate solution?",
+   "options": [
+    "0.125 mol dm⁻³",
+    "0.0250 mol dm⁻³",
+    "0.0800 mol dm⁻³",
+    "1.25 mol dm⁻³"
+   ],
+   "answer": 0,
+   "explanation": "n(MnO₄⁻) = 0.0250 × 0.0200 = 5.00 × 10⁻⁴ mol. The half-equations show that one MnO₄⁻ accepts five electrons and each Fe²⁺ supplies one electron, so n(Fe²⁺) = 5 × 5.00 × 10⁻⁴ = 2.50 × 10⁻³ mol. Dividing by 0.0200 dm³ gives 0.125 mol dm⁻³."
+  },
+  {
+   "n": 10,
+   "topic": "Redox and electrode potentials",
+   "q": "Standard electrode potentials are Fe³⁺(aq) + e⁻ ⇌ Fe²⁺(aq), E° = +0.77 V; and I₂(s) + 2e⁻ ⇌ 2I⁻(aq), E° = +0.54 V. For the reaction 2Fe³⁺(aq) + 2I⁻(aq) → 2Fe²⁺(aq) + I₂(s) under standard conditions, which statement is correct?",
+   "options": [
+    "E°cell = +1.31 V, so the forward reaction is feasible under standard conditions.",
+    "E°cell = −0.23 V, so the forward reaction is not feasible under standard conditions.",
+    "E°cell = +0.23 V, so the forward reaction is feasible under standard conditions.",
+    "E°cell = +0.23 V, so the forward reaction is not feasible under standard conditions."
+   ],
+   "answer": 2,
+   "explanation": "Fe³⁺ is reduced to Fe²⁺ while I⁻ is oxidised to I₂. E°cell = E°red(cathode) − E°red(anode) = 0.77 − 0.54 = +0.23 V. A positive cell potential means the forward reaction is thermodynamically feasible under standard conditions."
+  },
+  {
+   "n": 11,
+   "topic": "Organic analysis: spectroscopy and chromatography",
+   "q": "A low-resolution ¹H NMR spectrum is recorded for ethyl methanoate, HCOOCH₂CH₃. How many proton environments are present, and what is the expected ratio of their peak areas?",
+   "options": [
+    "3 environments with peak areas in the ratio 1:1:3",
+    "3 environments with peak areas in the ratio 1:2:3",
+    "2 environments with peak areas in the ratio 2:3",
+    "4 environments with peak areas in the ratio 1:1:1:3"
+   ],
+   "answer": 1,
+   "explanation": "In ethyl methanoate there are three different proton environments: the methanoate hydrogen, the CH₂ hydrogens and the CH₃ hydrogens. Their integrated peak areas are in the ratio 1:2:3. The two hydrogens in the CH₂ group are equivalent in this achiral molecule, so treating them as separate environments would be incorrect."
+  },
+  {
+   "n": 12,
+   "topic": "Organic analysis: spectroscopy and chromatography",
+   "q": "How many different ¹³C environments are present in 2-methylbutane, CH₃CH(CH₃)CH₂CH₃?",
+   "options": [
+    "2",
+    "5",
+    "3",
+    "4"
+   ],
+   "answer": 3,
+   "explanation": "2-Methylbutane has four carbon environments: the central carbon; the two equivalent methyl groups attached to that central carbon; the CH₂ carbon; and the terminal CH₃ carbon. The two methyl groups attached to the central carbon are equivalent, so the total is not five. Thus the ¹³C NMR spectrum has four resonance signals."
+  },
+  {
+   "n": 13,
+   "topic": "Alcohols, carbonyls and carboxylic acids",
+   "q": "Butan-2-ol is heated with excess acidified potassium dichromate(VI), and the product is distilled off as it forms. What is the main organic product?",
+   "options": [
+    "butanal",
+    "butanoic acid",
+    "but-1-ene",
+    "butanone"
+   ],
+   "answer": 3,
+   "explanation": "Butan-2-ol is a secondary alcohol, so oxidation with acidified dichromate(VI) gives the ketone butanone. Removing the product by distillation prevents further oxidation under the reaction conditions. Ketones are resistant to oxidation by acidified dichromate(VI), which is why butanoic acid is not the main product."
+  },
+  {
+   "n": 14,
+   "topic": "Alcohols, carbonyls and carboxylic acids",
+   "q": "Butanal reacts with HCN in the presence of a small amount of KCN. Which structure is the organic product formed by nucleophilic addition?",
+   "options": [
+    "CH₃CH₂CH₂CH(OH)CN",
+    "CH₃CH₂CH₂CH₂OH",
+    "CH₃CH₂CH₂CH₂CN",
+    "CH₃CH₂CH(OH)CH₂CN"
+   ],
+   "answer": 0,
+   "explanation": "The cyanide ion attacks the carbonyl carbon of butanal, and protonation of the oxygen gives a cyanohydrin. The product therefore has an OH group and a CN group on the same former aldehyde carbon: CH₃CH₂CH₂CH(OH)CN. Omitting the OH group or adding CN at a different carbon gives a structure not formed by this nucleophilic addition."
+  },
+  {
+   "n": 15,
+   "topic": "Alcohols, carbonyls and carboxylic acids",
+   "q": "Propyl ethanoate is heated with aqueous sodium hydroxide. Which products are formed?",
+   "options": [
+    "sodium ethanoate and propan-2-ol",
+    "ethanoic acid and propan-1-ol",
+    "sodium ethanoate and propan-1-ol",
+    "sodium propanoate and ethanol"
+   ],
+   "answer": 2,
+   "explanation": "Propyl ethanoate is an ester of ethanoic acid and propan-1-ol. Heating with aqueous sodium hydroxide hydrolyses the ester to sodium ethanoate and propan-1-ol; the carboxylic acid is neutralised to its salt under alkaline conditions. Swapping the acyl and alkoxy groups would give the products from a different ester."
+  },
+  {
+   "n": 16,
+   "topic": "Transition metals",
+   "q": "A 25.0 cm³ sample of a solution containing Fe²⁺ ions is acidified and titrated with 0.0200 mol dm⁻³ potassium manganate(VII) solution. The end point is reached after 24.00 cm³ of the manganate(VII) solution has been added. The reaction is MnO₄⁻ + 8H⁺ + 5Fe²⁺ → Mn²⁺ + 4H₂O + 5Fe³⁺. What is the concentration of Fe²⁺ in the sample?",
+   "options": [
+    "0.100 mol dm⁻³",
+    "0.0192 mol dm⁻³",
+    "0.0960 mol dm⁻³",
+    "0.480 mol dm⁻³"
+   ],
+   "answer": 2,
+   "explanation": "Moles of MnO₄⁻ = 0.0200 × 24.00/1000 = 4.80 × 10⁻⁴ mol. From the equation, 1 mol MnO₄⁻ reacts with 5 mol Fe²⁺, so n(Fe²⁺) = 5 × 4.80 × 10⁻⁴ = 2.40 × 10⁻³ mol. Dividing by the sample volume, 25.0/1000 = 0.0250 dm³, gives [Fe²⁺] = 2.40 × 10⁻³ ÷ 0.0250 = 0.0960 mol dm⁻³."
+  },
+  {
+   "n": 17,
+   "topic": "Transition metals",
+   "q": "An aqueous solution containing [Cu(H₂O)₆]²⁺ ions is treated with excess concentrated ammonia solution. Which statement describes the main complex formed and the change to the copper oxidation state?",
+   "options": [
+    "[Cu(NH₃)₆]²⁺ is formed, giving a deep blue solution, and copper remains in the +2 oxidation state.",
+    "[Cu(NH₃)₄(H₂O)₂]⁺ is formed, giving a deep blue solution, and copper is reduced to the +1 oxidation state.",
+    "[Cu(NH₃)₄(H₂O)₂]²⁺ is formed, giving a deep blue solution, and copper remains in the +2 oxidation state.",
+    "[Cu(OH)₂(H₂O)₄] is formed as a pale blue precipitate, and copper remains in the +2 oxidation state."
+   ],
+   "answer": 2,
+   "explanation": "Excess ammonia replaces four of the water ligands to form [Cu(NH₃)₄(H₂O)₂]²⁺, which is deep blue in aqueous solution. Ammonia ligands are neutral and copper remains Cu²⁺, so the oxidation state does not change. A pale blue hydroxide precipitate is formed only before excess ammonia is added and does not represent the final complex."
+  },
+  {
+   "n": 18,
+   "topic": "Polymers, amino acids and proteins",
+   "q": "Which statement best explains why a soluble globular protein loses its biological activity when heated to 80 °C?",
+   "options": [
+    "The primary sequence of amino acids changes because amino acids rearrange.",
+    "Weak hydrogen bonds and other interactions between side chains are disrupted, changing the tertiary structure while peptide bonds remain intact.",
+    "Peptide bonds hydrolyse, producing a mixture of free amino acids.",
+    "Disulfide bonds are always broken, so the protein becomes a single polypeptide chain."
+   ],
+   "answer": 1,
+   "explanation": "Heating a globular protein to 80 °C denatures it by disrupting weak hydrogen bonds, ionic interactions and hydrophobic interactions between side chains. This changes the tertiary structure and destroys biological activity, but the primary sequence and peptide bonds remain intact. Hydrolysis of peptide bonds requires more severe conditions or enzymes."
+  },
+  {
+   "n": 19,
+   "topic": "Polymers, amino acids and proteins",
+   "q": "A polyamide is formed by condensation polymerisation between HOOC–(CH₂)₄–COOH and H₂N–(CH₂)₃–NH₂. What is the relative molecular mass of the repeating unit of the polymer? (Ar: C = 12.0, H = 1.0, N = 14.0, O = 16.0)",
+   "options": [
+    "166",
+    "220",
+    "202",
+    "184"
+   ],
+   "answer": 3,
+   "explanation": "The repeat unit is formed from one diamine residue and one dicarboxylic acid residue with the loss of two water molecules, because two amide links are formed per repeat unit. Mass of monomers = (3×12 + 10×1 + 2×14) + (6×12 + 10×1 + 4×16) = 74 + 146 = 220. Subtract 2 × 18 = 36, giving 220 − 36 = 184."
+  },
+  {
+   "n": 20,
+   "topic": "Amount of substance",
+   "q": "A 5.00 dm³ flask contains 0.250 mol of nitrogen at 300 K. Using pV = nRT with R = 8.31 J mol⁻¹ K⁻¹, what is the pressure of the gas in kPa?",
+   "options": [
+    "125 kPa",
+    "0.125 kPa",
+    "249 kPa",
+    "12.5 kPa"
+   ],
+   "answer": 0,
+   "explanation": "p = nRT/V = (0.250 × 8.31 × 300) ÷ (5.00 × 10⁻³) = 124650 Pa = 125 kPa. The value 249 kPa would come from counting nitrogen atoms as separate particles (0.500 mol) instead of N₂ molecules, while 0.125 kPa comes from using 5.00 m³ rather than converting dm³ to m³."
+  },
+  {
+   "n": 21,
+   "topic": "Amount of substance",
+   "q": "A gaseous hydrocarbon has Mr = 56.0. Complete combustion of 0.112 g of it gives 0.352 g of carbon dioxide and 0.144 g of water. What is its molecular formula?",
+   "options": [
+    "C₅H₁₂",
+    "C₃H₆",
+    "C₄H₈",
+    "C₄H₁₀"
+   ],
+   "answer": 2,
+   "explanation": "Moles of hydrocarbon = 0.112 ÷ 56.0 = 0.00200 mol. Moles of CO₂ = 0.352 ÷ 44.0 = 0.00800 mol, so there are 0.00800 ÷ 0.00200 = 4 carbon atoms per molecule. Moles of H₂O = 0.144 ÷ 18.0 = 0.00800 mol, so there are 2 × 0.00800 ÷ 0.00200 = 8 hydrogen atoms per molecule; the formula is C₄H₈."
+  },
+  {
+   "n": 22,
+   "topic": "Alkanes, alkenes and halogenoalkanes",
+   "q": "A molecule of 2-methylbutane, C₅H₁₂, is cracked to produce ethene and one other hydrocarbon only. Which hydrocarbon is also formed?",
+   "options": [
+    "propene",
+    "methane",
+    "propane",
+    "butane"
+   ],
+   "answer": 2,
+   "explanation": "Balancing carbon and hydrogen gives C₅H₁₂ → C₂H₄ + C₃H₈. The product with three carbon atoms and eight hydrogen atoms is propane; propene would have formula C₃H₆ and would not balance the twelve hydrogen atoms."
+  },
+  {
+   "n": 23,
+   "topic": "Alkanes, alkenes and halogenoalkanes",
+   "q": "Which compound shows E/Z isomerism?",
+   "options": [
+    "2-methylbut-2-ene",
+    "pent-2-ene",
+    "2-methylpropene",
+    "pent-1-ene"
+   ],
+   "answer": 1,
+   "explanation": "E/Z isomerism requires each carbon atom of the C=C double bond to be attached to two different groups. In pent-2-ene, each double-bond carbon is attached to H and an alkyl group, so E and Z forms exist; the other compounds have at least one double-bond carbon attached to two identical groups or two hydrogen atoms."
+  },
+  {
+   "n": 24,
+   "topic": "Alkanes, alkenes and halogenoalkanes",
+   "q": "Four 1-halogenobutanes are separately warmed with aqueous silver nitrate. Which reacts fastest to form a precipitate?",
+   "options": [
+    "1-bromobutane",
+    "1-chlorobutane",
+    "1-iodobutane",
+    "1-fluorobutane"
+   ],
+   "answer": 2,
+   "explanation": "The C–I bond is the weakest carbon–halogen bond, so iodide is released most readily in the hydrolysis reaction and silver iodide precipitates fastest. The C–F bond is strongest, so 1-fluorobutane reacts slowest."
+  },
+  {
+   "n": 25,
+   "topic": "Periodicity, Group 2 and Group 7",
+   "q": "Four Group 2 carbonates are heated separately until they decompose. Which carbonate requires the highest temperature to decompose?",
+   "options": [
+    "calcium carbonate",
+    "barium carbonate",
+    "strontium carbonate",
+    "magnesium carbonate"
+   ],
+   "answer": 1,
+   "explanation": "Thermal stability of Group 2 carbonates increases down the group as the cation becomes larger and less polarising. Barium carbonate is therefore the most stable and needs the highest temperature to decompose, while magnesium carbonate decomposes most readily."
+  },
+  {
+   "n": 26,
+   "topic": "Periodicity, Group 2 and Group 7",
+   "q": "When chlorine gas is bubbled through colourless aqueous potassium bromide, the solution becomes orange-brown. Which statement best explains this observation?",
+   "options": [
+    "Chlorine is a stronger oxidising agent than bromine, so it oxidises bromide ions to bromine and is itself reduced to chloride ions.",
+    "Bromine is a stronger oxidising agent than chlorine, so bromide ions are reduced to bromine.",
+    "Chlorine is displaced by bromine because bromine is more reactive than chlorine.",
+    "Chlorine forms a coloured complex with bromide ions without changing oxidation states."
+   ],
+   "answer": 0,
+   "explanation": "The reaction is Cl₂ + 2Br⁻ → 2Cl⁻ + Br₂. Chlorine is reduced to chloride ions and bromide ions are oxidised to bromine, which gives the orange-brown colour; chlorine is the stronger oxidising agent."
+  },
+  {
+   "n": 27,
+   "topic": "Energetics",
+   "q": "Using standard enthalpies of formation: CaCO₃(s) −1207 kJ mol⁻¹; CaO(s) −635 kJ mol⁻¹; CO₂(g) −394 kJ mol⁻¹, what is the standard enthalpy change for CaCO₃(s) → CaO(s) + CO₂(g)?",
+   "options": [
+    "−1029 kJ mol⁻¹",
+    "+178 kJ mol⁻¹",
+    "+1029 kJ mol⁻¹",
+    "−178 kJ mol⁻¹"
+   ],
+   "answer": 1,
+   "explanation": "ΔH = ΣΔHf products − ΣΔHf reactants = [−635 + (−394)] − (−1207) = +178 kJ mol⁻¹. The negative value would come from reversing the subtraction, and −1029 is only the sum of the formation enthalpies of the products."
+  },
+  {
+   "n": 28,
+   "topic": "Energetics",
+   "q": "In a polystyrene cup, 50.0 cm³ of 0.500 mol dm⁻³ hydrochloric acid is mixed with 50.0 cm³ of 0.500 mol dm⁻³ sodium hydroxide solution. Both solutions are initially at 21.0 °C; the maximum temperature reached is 24.3 °C. Assume the density of the mixture is 1.00 g cm⁻³ and its specific heat capacity is 4.18 J g⁻¹ K⁻¹. What is the enthalpy change of neutralisation, in kJ mol⁻¹?",
+   "options": [
+    "+55.2 kJ mol⁻¹",
+    "−55.2 kJ mol⁻¹",
+    "−1.38 kJ mol⁻¹",
+    "−27.6 kJ mol⁻¹"
+   ],
+   "answer": 1,
+   "explanation": "q = m c ΔT = 100.0 × 4.18 × 3.3 = 1379 J = 1.379 kJ. The amount of water formed is 0.0500 × 0.500 = 0.0250 mol, so ΔH = −1.379 ÷ 0.0250 = −55.2 kJ mol⁻¹. The value −27.6 kJ mol⁻¹ uses only the mass of one solution rather than the total mixture."
+  },
+  {
+   "n": 29,
+   "topic": "Thermodynamics: enthalpy, entropy and free energy",
+   "q": "For a reaction, ΔH = +45.0 kJ mol⁻¹ and ΔS = +120 J K⁻¹ mol⁻¹. What is ΔG at 400 K, and is the reaction feasible at this temperature? Assume ΔH and ΔS are independent of temperature.",
+   "options": [
+    "+3.0 kJ mol⁻¹; the reaction is not feasible at 400 K",
+    "+93.0 kJ mol⁻¹; the reaction is not feasible at 400 K",
+    "−3.0 kJ mol⁻¹; the reaction is feasible at 400 K",
+    "−48.0 kJ mol⁻¹; the reaction is feasible at 400 K"
+   ],
+   "answer": 2,
+   "explanation": "Convert the entropy term to kJ K⁻¹ mol⁻¹: 120 J K⁻¹ mol⁻¹ = 0.120 kJ K⁻¹ mol⁻¹. Then ΔG = ΔH − TΔS = 45.0 − (400 × 0.120) = −3.0 kJ mol⁻¹. A negative ΔG means the reaction is feasible at this temperature; adding TΔS instead of subtracting it would give +93.0 kJ mol⁻¹."
+  },
+  {
+   "n": 30,
+   "topic": "Thermodynamics: enthalpy, entropy and free energy",
+   "q": "A reversible reaction reaches equilibrium at constant temperature and pressure. Which statement is always correct for the reaction mixture?",
+   "options": [
+    "The enthalpy change of the reaction equals the product of temperature and the standard entropy change, ΔH = TΔS°, at equilibrium.",
+    "The standard Gibbs free energy change, ΔG°, is zero at equilibrium.",
+    "The Gibbs free energy change for converting reactants to products, ΔG, is zero at equilibrium.",
+    "The entropy change of the system is zero at equilibrium."
+   ],
+   "answer": 2,
+   "explanation": "At equilibrium the Gibbs free energy of the system is at a minimum with respect to the extent of reaction, so the reaction Gibbs free energy change ΔG is zero. The standard value ΔG° is related to the equilibrium constant and is zero only if K = 1. The entropy change of the system is not zero, and ΔH = TΔS° is the condition for ΔG° = 0, not the general equilibrium condition."
+  }
+ ]
+}

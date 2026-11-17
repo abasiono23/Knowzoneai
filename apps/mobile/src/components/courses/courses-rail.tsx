@@ -10,6 +10,7 @@ import { formatDate } from '@/i18n';
 import { useFlipStyle } from '@/i18n/provider';
 import { COURSES, getCourse } from '@/lib/courses/catalog';
 import { useCourses } from '@/lib/courses/store';
+import { namesForeignExam } from '@/lib/region';
 
 import { CourseCard } from './course-card';
 
@@ -21,7 +22,10 @@ export function CoursesRail({ title }: { title?: string }) {
     .sort((a, b) => enrolled[b] - enrolled[a])
     .map(getCourse)
     .filter((c) => !!c && !progressOf(c).complete);
-  const rest = COURSES.filter((c) => !enrolled[c.id]).sort((a, b) => Number(!!b.featured) - Number(!!a.featured));
+  // Courses named for another country's exam ("WAEC Maths…") aren't suggested here; they stay in the full catalogue.
+  const rest = COURSES.filter((c) => !enrolled[c.id] && !namesForeignExam(`${c.title} ${c.subtitle ?? ''}`)).sort(
+    (a, b) => Number(!!b.featured) - Number(!!a.featured),
+  );
   return (
     <Rail
       title={title ?? (mine.length ? t('rail.yourCourses') : t('rail.structured'))}

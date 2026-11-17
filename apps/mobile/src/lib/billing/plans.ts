@@ -4,6 +4,7 @@ import type { TFunction } from 'i18next';
 
 import i18n, { formatNumber } from '../../i18n';
 import type en from '../../i18n/locales/en/billing';
+import { currentRegion, DEFAULT_REGION, examNames, listOf } from '../region';
 
 /**
  * Plans and prices, set by the owner on 13 November 2026: Plus ₦5,000 and Pro ₦9,000 a month, with a term
@@ -140,13 +141,22 @@ export const PLANS: Record<PlanId, Plan> = {
     features: [
       feature('chatbubbles', () => i18n.t('billing:features.tutorDailyFair', { count: TUTOR_DAILY.PRO })),
       feature('flash', () => i18n.t('billing:features.monthlyCredits', { count: MONTHLY_CREDITS.PRO })),
-      feature('trophy', () => i18n.t('billing:features.examPapers')),
+      feature('trophy', () => examPapersFeature()),
       feature('library', () => i18n.t('billing:features.library')),
       feature('rocket', () => i18n.t('billing:features.priority')),
       feature('checkmark-done', () => i18n.t('billing:features.everythingPlus')),
     ],
   },
 };
+
+/** "Full WAEC, NECO and JAMB practice papers" in Nigeria; the student's own exams elsewhere, or none named. */
+export function examPapersFeature(region = currentRegion()) {
+  if (region === DEFAULT_REGION) return i18n.t('billing:features.examPapers');
+  const names = examNames(region);
+  return names.length
+    ? i18n.t('billing:features.examPapersFor', { exams: listOf(names) })
+    : i18n.t('billing:features.examPapersAny');
+}
 
 type ComparisonValue = string | boolean;
 type ComparisonValues = [ComparisonValue, ComparisonValue, ComparisonValue];

@@ -1,0 +1,531 @@
+{
+ "id": "jamb-mathematics-p6",
+ "exam": "jamb",
+ "subject": "mathematics",
+ "year": null,
+ "number": 6,
+ "source": "ai",
+ "minutes": 27,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Number bases",
+   "q": "If 2b4₇ = 137₁₀, find the digit b.",
+   "options": [
+    "5",
+    "4",
+    "6",
+    "7"
+   ],
+   "answer": 0,
+   "explanation": "2×7² + b×7 + 4 = 98 + 7b + 4 = 102 + 7b. Setting 102 + 7b = 137 gives 7b = 35, so b = 5. A digit cannot be 7 in base 7, so that value is invalid."
+  },
+  {
+   "n": 2,
+   "topic": "Indices and logarithms",
+   "q": "Given that log₁₀ a = 2 and log₁₀ b = −1, evaluate log₁₀(a²b³).",
+   "options": [
+    "4",
+    "1",
+    "−1",
+    "7"
+   ],
+   "answer": 1,
+   "explanation": "Using log laws, log₁₀(a²b³) = 2 log₁₀ a + 3 log₁₀ b. This gives 2(2) + 3(−1) = 4 − 3 = 1. The value −1 results from forgetting to apply the exponent 2 to a, while 4 ignores the b term."
+  },
+  {
+   "n": 3,
+   "topic": "Coordinate geometry",
+   "q": "A straight line in Jos passes through T(3, −4) and is parallel to 2x + 5y = 10. Find its equation.",
+   "options": [
+    "2x − 5y − 26 = 0",
+    "2x + 5y − 14 = 0",
+    "2x + 5y + 14 = 0",
+    "5x − 2y − 23 = 0"
+   ],
+   "answer": 2,
+   "explanation": "The line 2x + 5y = 10 has gradient −2/5, so a parallel line also has gradient −2/5. Through T(3, −4): y + 4 = −(2/5)(x − 3), which simplifies to 2x + 5y + 14 = 0."
+  },
+  {
+   "n": 4,
+   "topic": "Matrices and determinants",
+   "q": "If P = [[2, 5], [1, 3]], find P².",
+   "options": [
+    "[[4, 25], [1, 9]]",
+    "[[9, 25], [5, 14]]",
+    "[[9, 10], [5, 14]]",
+    "[[9, 25], [3, 14]]"
+   ],
+   "answer": 1,
+   "explanation": "P² means P multiplied by P, so row-by-column multiplication gives first row (2×2+5×1, 2×5+5×3) = (9, 25), and second row (1×2+3×1, 1×5+3×3) = (5, 14). Squaring each entry of P would give [[4, 25], [1, 9]], which is not matrix multiplication."
+  },
+  {
+   "n": 5,
+   "topic": "Number bases",
+   "q": "Evaluate 101101₂ ÷ 11₂, giving your answer in base 2.",
+   "options": [
+    "10011₂",
+    "1101₂",
+    "1111₂",
+    "1011₂"
+   ],
+   "answer": 2,
+   "explanation": "101101₂ = 45₁₀ and 11₂ = 3₁₀. Dividing gives 45 ÷ 3 = 15₁₀ = 1111₂."
+  },
+  {
+   "n": 6,
+   "topic": "Indices and logarithms",
+   "q": "If log₈ x = 2/3, find x.",
+   "options": [
+    "2",
+    "64",
+    "16",
+    "4"
+   ],
+   "answer": 3,
+   "explanation": "Rewrite the logarithm as x = 8^(2/3). Since 8^(2/3) = (∛8)² = 2², x = 4."
+  },
+  {
+   "n": 7,
+   "topic": "Coordinate geometry",
+   "q": "A plot boundary in Enugu has x-intercept 3 and y-intercept −4. Find the equation of the boundary line.",
+   "options": [
+    "4x + 3y = 12",
+    "4x − 3y = 12",
+    "3x + 4y = 12",
+    "3x − 4y = 12"
+   ],
+   "answer": 1,
+   "explanation": "The line passes through (3, 0) and (0, −4). Using intercept form x/3 + y/(−4) = 1 and multiplying by 12 gives 4x − 3y = 12."
+  },
+  {
+   "n": 8,
+   "topic": "Matrices and determinants",
+   "q": "Find the value of x for which the determinant of [[2, 3, 1], [0, x, 4], [1, 2, 0]] is zero.",
+   "options": [
+    "4",
+    "−8",
+    "−4",
+    "8"
+   ],
+   "answer": 2,
+   "explanation": "Expanding along the first row gives 2(0 − 8) − 3(0 − 4) + 1(0 − x) = −16 + 12 − x = −4 − x. Setting the determinant equal to zero gives −4 − x = 0, so x = −4."
+  },
+  {
+   "n": 9,
+   "topic": "Number bases",
+   "q": "If 231ₓ = 66₁₀, find the value of x.",
+   "options": [
+    "7",
+    "6",
+    "4",
+    "5"
+   ],
+   "answer": 3,
+   "explanation": "In base x, 231ₓ = 2x² + 3x + 1. Thus 2x² + 3x + 1 = 66, so 2x² + 3x − 65 = 0 = (x − 5)(2x + 13). The base must be a positive integer greater than 3, hence x = 5."
+  },
+  {
+   "n": 10,
+   "topic": "Indices and logarithms",
+   "q": "Simplify (16^(3/4) + 27^(2/3)) ÷ (9^(3/2) − 8^(2/3)).",
+   "options": [
+    "9/23",
+    "17/23",
+    "17/31",
+    "19/23"
+   ],
+   "answer": 1,
+   "explanation": "16^(3/4)=8 and 27^(2/3)=9, so the numerator is 17. Also 9^(3/2)=27 and 8^(2/3)=4, so the denominator is 23; hence the value is 17/23."
+  },
+  {
+   "n": 11,
+   "topic": "Simultaneous equations and inequalities",
+   "q": "In a bookshop in Jos, Musa bought 5 exercise books and 3 pens for ₦2,350, while Ngozi bought 3 exercise books and 4 pens for ₦1,850. Find the cost of one exercise book.",
+   "options": [
+    "₦450",
+    "₦350",
+    "₦300",
+    "₦200"
+   ],
+   "answer": 1,
+   "explanation": "Let the cost of an exercise book be b and that of a pen be p. Then 5b + 3p = 2350 and 3b + 4p = 1850. Eliminating p gives 11b = 3850, so b = 350. The value ₦200 is the cost of a pen, not of an exercise book."
+  },
+  {
+   "n": 12,
+   "topic": "Simultaneous equations and inequalities",
+   "q": "Find the range of values of x satisfying both 3x − 7 < 5x + 1 and 4x + 3 ≤ 2x + 13.",
+   "options": [
+    "x > −4 or x ≤ 5",
+    "x < −4 and x ≤ 5",
+    "−4 < x ≤ 5",
+    "−4 ≤ x < 5"
+   ],
+   "answer": 2,
+   "explanation": "The first inequality simplifies to −8 < 2x, so x > −4. The second simplifies to 2x ≤ 10, so x ≤ 5. Combining both gives −4 < x ≤ 5; the endpoint −4 is not included because the first inequality is strict."
+  },
+  {
+   "n": 13,
+   "topic": "Simultaneous equations and inequalities",
+   "q": "The sum of two numbers is 33, and the difference between their squares is 231. Find the larger number.",
+   "options": [
+    "20",
+    "23",
+    "13",
+    "17"
+   ],
+   "answer": 0,
+   "explanation": "Let the larger number be a and the smaller be b. Then a + b = 33 and a² − b² = (a − b)(a + b) = 231. Thus a − b = 231 ÷ 33 = 7. Solving a + b = 33 and a − b = 7 gives a = 20 and b = 13, so the larger number is 20."
+  },
+  {
+   "n": 14,
+   "topic": "Differentiation",
+   "q": "Differentiate y = (2x − 5)(x² + 3) with respect to x.",
+   "options": [
+    "6x² + 10x + 6",
+    "6x² − 10x",
+    "6x² + 6",
+    "6x² − 10x + 6"
+   ],
+   "answer": 3,
+   "explanation": "Using the product rule, dy/dx = 2(x² + 3) + (2x − 5)(2x) = 2x² + 6 + 4x² − 10x = 6x² − 10x + 6. Expanding first gives y = 2x³ − 5x² + 6x − 15, which gives the same derivative."
+  },
+  {
+   "n": 15,
+   "topic": "Differentiation",
+   "q": "Given that y = (7x + 1)/(2x − 3), where x ≠ 3/2, find dy/dx.",
+   "options": [
+    "−19/(2x − 3)²",
+    "−23/(2x − 3)",
+    "−23/(2x − 3)²",
+    "23/(2x − 3)²"
+   ],
+   "answer": 2,
+   "explanation": "Using the quotient rule, the numerator of dy/dx is 7(2x − 3) − 2(7x + 1) = 14x − 21 − 14x − 2 = −23. Therefore dy/dx = −23/(2x − 3)². The expression without the square denominator forgets to square the denominator after applying the quotient rule."
+  },
+  {
+   "n": 16,
+   "topic": "Differentiation",
+   "q": "If y = (3x² − 2)⁴, find dy/dx.",
+   "options": [
+    "4(3x² − 2)³",
+    "24x(3x² − 2)²",
+    "6x(3x² − 2)³",
+    "24x(3x² − 2)³"
+   ],
+   "answer": 3,
+   "explanation": "By the chain rule, dy/dx = 4(3x² − 2)³ × 6x = 24x(3x² − 2)³. The expression 4(3x² − 2)³ omits the derivative of the inner function, 3x² − 2."
+  },
+  {
+   "n": 17,
+   "topic": "Mensuration",
+   "q": "A conical funnel in Makurdi has base radius 6 cm and slant height 10 cm. Find its total surface area in terms of π.",
+   "options": [
+    "96π cm²",
+    "36π cm²",
+    "120π cm²",
+    "60π cm²"
+   ],
+   "answer": 0,
+   "explanation": "The total surface area of a cone is πr² + πrl, where r = 6 cm and l = 10 cm. This gives 36π + 60π = 96π cm². The value 60π cm² is only the curved surface area, while 36π cm² is only the base area."
+  },
+  {
+   "n": 18,
+   "topic": "Mensuration",
+   "q": "The surface area of a football in Ilorin is 144π cm². Find its radius.",
+   "options": [
+    "18 cm",
+    "36 cm",
+    "12 cm",
+    "6 cm"
+   ],
+   "answer": 3,
+   "explanation": "For a sphere, surface area = 4πr². Thus 4πr² = 144π, so r² = 36 and r = 6 cm. The value 12 cm would come from forgetting the factor 4 in the surface-area formula."
+  },
+  {
+   "n": 19,
+   "topic": "Statistics",
+   "q": "In a school in Ibadan, 15 students had a mean score of 52 in a Mathematics test, while 25 students had a mean score of 60. Find the combined mean score.",
+   "options": [
+    "60",
+    "56",
+    "58",
+    "57"
+   ],
+   "answer": 3,
+   "explanation": "The total score for the first group is 15 × 52 = 780, and for the second group is 25 × 60 = 1,500. The combined mean is (780 + 1,500) ÷ 40 = 2,280 ÷ 40 = 57. The value 56 is just the simple average of 52 and 60 and ignores the different group sizes."
+  },
+  {
+   "n": 20,
+   "topic": "Statistics",
+   "q": "The masses, in kg, of five baskets of tomatoes in Jos are 3, 5, 7, 9 and 11. Calculate their population variance.",
+   "options": [
+    "16 kg²",
+    "8 kg²",
+    "4 kg²",
+    "10 kg²"
+   ],
+   "answer": 1,
+   "explanation": "The mean is (3 + 5 + 7 + 9 + 11) ÷ 5 = 7. The squared deviations are 16, 4, 0, 4 and 16, which sum to 40. The population variance is 40 ÷ 5 = 8 kg²; using n − 1 instead of n would give 10 kg²."
+  },
+  {
+   "n": 21,
+   "topic": "Probability",
+   "q": "A box in Ibadan contains 3 red and 5 blue identical balls. A ball is picked at random, its colour noted, and it is replaced before a second ball is picked at random. What is the probability that the two picks are of different colours?",
+   "options": [
+    "1/2",
+    "15/32",
+    "15/64",
+    "5/16"
+   ],
+   "answer": 1,
+   "explanation": "The picks can be different as red then blue or blue then red. Their probabilities are (3/8 × 5/8) and (5/8 × 3/8), giving 15/64 + 15/64 = 30/64 = 15/32. The value 15/64 counts only one of the two possible orders."
+  },
+  {
+   "n": 22,
+   "topic": "Angles and circle geometry",
+   "q": "From an external point P, a tangent PT and a secant PAB are drawn to a circle, with A between P and B. If PT = 8 cm and PA = 4 cm, find AB.",
+   "options": [
+    "12 cm",
+    "20 cm",
+    "16 cm",
+    "4 cm"
+   ],
+   "answer": 0,
+   "explanation": "By the tangent-secant theorem, PT² = PA × PB, so PB = 8² ÷ 4 = 16 cm. Since P, A and B are collinear with A between P and B, AB = PB − PA = 16 − 4 = 12 cm. The length 16 cm is PB, not AB."
+  },
+  {
+   "n": 23,
+   "topic": "Sets",
+   "q": "In a class of 50 students in Minna, 28 study Biology, 24 study Chemistry and 18 study Physics. Also, 10 study Biology and Chemistry, 8 study Biology and Physics and 7 study Chemistry and Physics, while 4 study all three subjects. Taking the paired figures to include those who study all three, how many students study none of the three subjects?",
+   "options": [
+    "4",
+    "1",
+    "0",
+    "2"
+   ],
+   "answer": 1,
+   "explanation": "Using inclusion-exclusion, the number studying at least one subject is 28 + 24 + 18 − (10 + 8 + 7) + 4 = 49. Therefore the number studying none is 50 − 49 = 1."
+  },
+  {
+   "n": 24,
+   "topic": "Surds",
+   "q": "Simplify √(7 − 4√3).",
+   "options": [
+    "4 − √3",
+    "√3 − 2",
+    "2 + √3",
+    "2 − √3"
+   ],
+   "answer": 3,
+   "explanation": "Since (2 − √3)² = 4 − 4√3 + 3 = 7 − 4√3, the principal square root is 2 − √3. The value 2 − √3 is positive, so it is the correct root rather than √3 − 2."
+  },
+  {
+   "n": 25,
+   "topic": "Probability",
+   "q": "Two fair dice are rolled once. What is the probability that the product of the two scores is 12?",
+   "options": [
+    "1/9",
+    "1/18",
+    "1/12",
+    "1/6"
+   ],
+   "answer": 0,
+   "explanation": "The favourable outcomes are (2, 6), (3, 4), (4, 3) and (6, 2), giving 4 outcomes out of 36. Hence the probability is 4/36 = 1/9. The value 1/18 counts only half of the favourable ordered pairs."
+  },
+  {
+   "n": 26,
+   "topic": "Angles and circle geometry",
+   "q": "In a circle, the tangent at P is parallel to chord QR. If ∠PQR = 46°, find ∠PRQ.",
+   "options": [
+    "134°",
+    "88°",
+    "44°",
+    "46°"
+   ],
+   "answer": 3,
+   "explanation": "Because the tangent at P is parallel to QR, the angle between the tangent at P and PQ equals ∠PQR = 46°. By the alternate segment theorem, this angle equals ∠PRQ, so ∠PRQ = 46°."
+  },
+  {
+   "n": 27,
+   "topic": "Sets",
+   "q": "A set has 5 distinct elements. How many of its subsets have at most 2 elements, including the empty set?",
+   "options": [
+    "15",
+    "32",
+    "16",
+    "10"
+   ],
+   "answer": 2,
+   "explanation": "The subsets with at most 2 elements consist of 0, 1 or 2 elements. Their number is C(5,0) + C(5,1) + C(5,2) = 1 + 5 + 10 = 16. The value 15 would exclude the empty set."
+  },
+  {
+   "n": 28,
+   "topic": "Surds",
+   "q": "Solve for x in the equation √(2x + 3) = x.",
+   "options": [
+    "−1",
+    "3 or −1",
+    "3",
+    "1"
+   ],
+   "answer": 2,
+   "explanation": "Squaring gives 2x + 3 = x², so x² − 2x − 3 = 0 and (x − 3)(x + 1) = 0. Thus x = 3 or x = −1, but √(2x + 3) is non-negative and must equal x, so x cannot be negative. Checking gives x = 3 only, since √(2(3) + 3) = 3."
+  },
+  {
+   "n": 29,
+   "topic": "Fractions, decimals and percentages",
+   "q": "A trader in Suleja bought a crate of tomatoes for ₦18,000 and sold it for ₦21,600. What is her percentage profit on the cost price?",
+   "options": [
+    "20%",
+    "3.6%",
+    "25%",
+    "16⅔%"
+   ],
+   "answer": 0,
+   "explanation": "The profit is ₦21,600 − ₦18,000 = ₦3,600. The percentage profit on the cost price is (3,600 ÷ 18,000) × 100% = 20%. Using the selling price as the base gives 16⅔%, which is a common error."
+  },
+  {
+   "n": 30,
+   "topic": "Sequences and series",
+   "q": "The first term of an arithmetic progression is 5 and its common difference is 3. Find the least number of terms for which the nth term exceeds 100.",
+   "options": [
+    "33",
+    "31",
+    "34",
+    "32"
+   ],
+   "answer": 0,
+   "explanation": "The nth term is Tₙ = 5 + (n − 1)3 = 3n + 2. Solving 3n + 2 > 100 gives n > 32⅔, so the least integer n is 33. Indeed, T₃₂ = 98 and T₃₃ = 101."
+  },
+  {
+   "n": 31,
+   "topic": "Quadratic equations",
+   "q": "Solve the equation 3x² − 7x + 2 = 0.",
+   "options": [
+    "x = 1/3 or x = −2",
+    "x = −1/3 or x = 2",
+    "x = −1/3 or x = −2",
+    "x = 1/3 or x = 2"
+   ],
+   "answer": 3,
+   "explanation": "Factorising gives (3x − 1)(x − 2) = 0. Therefore 3x − 1 = 0 or x − 2 = 0, so x = 1/3 or x = 2."
+  },
+  {
+   "n": 32,
+   "topic": "Trigonometry",
+   "q": "In triangle ABC, AB = 7 cm, AC = 9 cm and angle BAC = 60°. Find BC.",
+   "options": [
+    "√67 cm",
+    "2 cm",
+    "√130 cm",
+    "√103 cm"
+   ],
+   "answer": 0,
+   "explanation": "By the cosine rule, BC² = 7² + 9² − 2(7)(9)cos 60° = 49 + 81 − 63 = 67. Hence BC = √67 cm. Omitting the cosine term gives √130 cm, which is incorrect."
+  },
+  {
+   "n": 33,
+   "topic": "Fractions, decimals and percentages",
+   "q": "A shopkeeper in Enugu bought a television set for ₦45,000. He marked it at ₦60,000 but sold it at a discount of 12% on the marked price. What is his percentage profit on the cost price?",
+   "options": [
+    "12%",
+    "20%",
+    "14⅔%",
+    "17⅓%"
+   ],
+   "answer": 3,
+   "explanation": "The selling price is ₦60,000 × (1 − 0.12) = ₦52,800. The profit is ₦52,800 − ₦45,000 = ₦7,800, so the percentage profit on cost is (7,800 ÷ 45,000) × 100% = 17⅓%."
+  },
+  {
+   "n": 34,
+   "topic": "Fractions, decimals and percentages",
+   "q": "A trader in Ibadan bought 240 bags of rice for ₦9,600,000. He sold 3/5 of the bags at ₦45,000 each and the remaining bags at ₦40,000 each. Find his percentage profit on the cost price.",
+   "options": [
+    "6%",
+    "10%",
+    "7.5%",
+    "8%"
+   ],
+   "answer": 2,
+   "explanation": "He sold 3/5 × 240 = 144 bags at ₦45,000 and the remaining 96 bags at ₦40,000. Total sales = 144 × ₦45,000 + 96 × ₦40,000 = ₦10,320,000, so profit = ₦720,000. Percentage profit = (720,000 ÷ 9,600,000) × 100% = 7.5%."
+  },
+  {
+   "n": 35,
+   "topic": "Quadratic equations",
+   "q": "If α and β are the roots of x² − 6x + 4 = 0, find α² + β².",
+   "options": [
+    "20",
+    "28",
+    "44",
+    "32"
+   ],
+   "answer": 1,
+   "explanation": "For x² − 6x + 4 = 0, α + β = 6 and αβ = 4. Thus α² + β² = (α + β)² − 2αβ = 36 − 8 = 28."
+  },
+  {
+   "n": 36,
+   "topic": "Trigonometry",
+   "q": "If sin θ = 3/5 and θ is acute, find sin 2θ.",
+   "options": [
+    "7/25",
+    "24/25",
+    "24/5",
+    "12/25"
+   ],
+   "answer": 1,
+   "explanation": "Since θ is acute, cos θ = √(1 − (3/5)²) = 4/5. Therefore sin 2θ = 2 sin θ cos θ = 2 × (3/5) × (4/5) = 24/25."
+  },
+  {
+   "n": 37,
+   "topic": "Sequences and series",
+   "q": "The sum of the first three terms of a geometric progression is 21, and the sum of the first six terms is 189. Find the common ratio.",
+   "options": [
+    "4",
+    "2",
+    "8",
+    "3"
+   ],
+   "answer": 1,
+   "explanation": "For a geometric progression, S₆ = S₃(1 + r³), so 189 = 21(1 + r³). Hence 1 + r³ = 9, giving r³ = 8 and r = 2."
+  },
+  {
+   "n": 38,
+   "topic": "Trigonometry",
+   "q": "Simplify (sin θ + cos θ)² − 2 sin θ cos θ.",
+   "options": [
+    "2",
+    "1",
+    "cos 2θ",
+    "sin 2θ"
+   ],
+   "answer": 1,
+   "explanation": "Expanding gives sin²θ + 2 sin θ cos θ + cos²θ − 2 sin θ cos θ. The middle terms cancel, leaving sin²θ + cos²θ, which equals 1."
+  },
+  {
+   "n": 39,
+   "topic": "Integration",
+   "q": "Evaluate ∫(6x² − 10/x² + 4) dx.",
+   "options": [
+    "2x³ + 10/x − 4x + C",
+    "2x³ − 10/x + 4x + C",
+    "2x³ + 10/x + 4x + C",
+    "2x³ + 5/x + 4x + C"
+   ],
+   "answer": 2,
+   "explanation": "Integrating term by term gives ∫6x² dx = 2x³, ∫−10x⁻² dx = 10/x, and ∫4 dx = 4x. Hence the result is 2x³ + 10/x + 4x + C. The term 5/x arises from halving the coefficient of 1/x² instead of applying the power rule correctly."
+  },
+  {
+   "n": 40,
+   "topic": "Integration",
+   "q": "Evaluate ∫₀¹ (2x + 1)³ dx.",
+   "options": [
+    "10",
+    "9",
+    "20",
+    "40"
+   ],
+   "answer": 0,
+   "explanation": "Expand: (2x + 1)³ = 8x³ + 12x² + 6x + 1, so the integral is 2x⁴ + 4x³ + 3x² + x. Substituting 1 and 0 gives 2 + 4 + 3 + 1 = 10. A common error is to use (2x + 1)⁴ ÷ 4 without dividing by the inner derivative 2, which gives 20."
+  }
+ ]
+}

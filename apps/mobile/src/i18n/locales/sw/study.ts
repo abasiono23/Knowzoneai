@@ -199,7 +199,7 @@ const study: Translation<typeof en> = {
     topicLabel: 'Mada',
     topicPlaceholder: 'mf. Jinsi chanjo zinavyofanya kazi',
     focusLabel: 'Kuna kitu maalum? (si lazima)',
-    focusPlaceholder: 'mf. kwa WAEC, zingatia hesabu',
+    focusPlaceholder: 'mf. kwa {{exam}}, zingatia hesabu',
     popular: 'MAARUFU SASA HIVI',
     ideas: {
       photosynthesis: 'Usanisinuru',
@@ -337,7 +337,7 @@ const study: Translation<typeof en> = {
     subject: 'Somo',
     folderName: 'Jina la folda',
     tags: 'Lebo',
-    tagsPlaceholder: 'mf. WAEC, muhula 2, rudia',
+    tagsPlaceholder: 'mf. {{exam}}, muhula 2, rudia',
     tagsHint: 'Tenganisha lebo kwa koma',
     created: 'Imeundwa {{date}} kutoka {{source}}',
   },

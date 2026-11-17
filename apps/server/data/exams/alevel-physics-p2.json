@@ -1,0 +1,401 @@
+{
+ "id": "alevel-physics-p2",
+ "exam": "alevel",
+ "subject": "physics",
+ "year": null,
+ "number": 2,
+ "source": "ai",
+ "minutes": 40,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Electricity",
+   "q": "Two parallel metal plates are separated by 4.0 cm and have a potential difference of 240 V between them. An electron is released from rest at the negative plate. Taking the electron charge as 1.6 × 10⁻¹⁹ C and mass as 9.1 × 10⁻³¹ kg, what is its speed as it reaches the positive plate? Ignore gravitational effects.",
+   "options": [
+    "9.2 × 10⁶ m s⁻¹",
+    "3.3 × 10⁶ m s⁻¹",
+    "6.5 × 10⁶ m s⁻¹",
+    "1.3 × 10⁷ m s⁻¹"
+   ],
+   "answer": 0,
+   "explanation": "The electric field does work qV on the electron, and this becomes kinetic energy: qV = ½mv². Rearranging gives v = √(2qV/m) = √(2 × 1.6 × 10⁻¹⁹ × 240 ÷ 9.1 × 10⁻³¹) ≈ 9.2 × 10⁶ m s⁻¹. Using qV = mv² instead of ½mv² would give a speed too large by a factor of √2."
+  },
+  {
+   "n": 2,
+   "topic": "Electricity",
+   "q": "Two capacitors of capacitance 6.0 μF and 3.0 μF are connected in series across a 12 V battery. What is the total energy stored in the two capacitors?",
+   "options": [
+    "1.44 × 10⁻⁴ J",
+    "2.88 × 10⁻⁴ J",
+    "4.32 × 10⁻⁴ J",
+    "6.48 × 10⁻⁴ J"
+   ],
+   "answer": 0,
+   "explanation": "For series capacitors, 1/C = 1/6.0 + 1/3.0, so the equivalent capacitance is 2.0 μF. The stored energy is ½CV² = ½ × 2.0 × 10⁻⁶ × 12² = 1.44 × 10⁻⁴ J. Treating the capacitors as if they were in parallel would give 6.48 × 10⁻⁴ J."
+  },
+  {
+   "n": 3,
+   "topic": "Electricity",
+   "q": "A copper wire of diameter 0.50 mm carries a current of 2.0 A. The number density of conduction electrons in copper is 8.5 × 10²⁸ m⁻³. Taking the elementary charge as 1.6 × 10⁻¹⁹ C, what is the mean drift speed of the electrons?",
+   "options": [
+    "7.5 × 10⁻⁴ m s⁻¹",
+    "1.9 × 10⁻⁴ m s⁻¹",
+    "1.5 × 10⁻³ m s⁻¹",
+    "5.9 × 10⁻⁴ m s⁻¹"
+   ],
+   "answer": 0,
+   "explanation": "The cross-sectional area is A = π(d/2)² = π(0.25 × 10⁻³)² ≈ 1.96 × 10⁻⁷ m². Using I = nAve gives v = I/(nAe) = 2.0 ÷ (8.5 × 10²⁸ × 1.96 × 10⁻⁷ × 1.6 × 10⁻¹⁹) ≈ 7.5 × 10⁻⁴ m s⁻¹. Mistakenly using the diameter as the radius gives a considerably smaller drift speed."
+  },
+  {
+   "n": 4,
+   "topic": "Circular motion and simple harmonic motion",
+   "q": "A car of mass 1200 kg passes over the top of a humpback bridge at a speed of 15 m s⁻¹. The bridge can be modelled as a circle of radius 50 m. Use g = 9.8 m s⁻². What is the normal reaction force from the road on the car at the top of the bridge?",
+   "options": [
+    "1.2 × 10⁴ N",
+    "1.7 × 10⁴ N",
+    "5.4 × 10³ N",
+    "6.4 × 10³ N"
+   ],
+   "answer": 3,
+   "explanation": "At the top of the bridge the resultant force towards the centre of the circular path is mg − N, so mg − N = mv²/r. Hence N = m(g − v²/r) = 1200 × (9.8 − 15²/50) = 1200 × 5.3 ≈ 6.4 × 10³ N. Adding the centripetal term to mg instead of subtracting it gives 1.7 × 10⁴ N."
+  },
+  {
+   "n": 5,
+   "topic": "Circular motion and simple harmonic motion",
+   "q": "A simple pendulum has a length of 0.90 m and performs small-amplitude oscillations near the Earth's surface. Use g = 9.8 m s⁻². What is its period?",
+   "options": [
+    "0.95 s",
+    "1.9 s",
+    "0.30 s",
+    "3.8 s"
+   ],
+   "answer": 1,
+   "explanation": "For small oscillations, T = 2π√(l/g) = 2π√(0.90/9.8) ≈ 1.9 s. Omitting the factor 2π gives about 0.30 s, while using π instead of 2π gives about 0.95 s."
+  },
+  {
+   "n": 6,
+   "topic": "Circular motion and simple harmonic motion",
+   "q": "A particle performs simple harmonic motion with amplitude 5.0 cm and frequency 2.0 Hz. What is the magnitude of its acceleration when its displacement from the equilibrium position is 3.0 cm?",
+   "options": [
+    "0.38 m s⁻²",
+    "7.9 m s⁻²",
+    "12.6 m s⁻²",
+    "4.7 m s⁻²"
+   ],
+   "answer": 3,
+   "explanation": "The angular frequency is ω = 2πf = 4π rad s⁻¹. For SHM, a = −ω²x, so the magnitude is (4π)² × 0.030 ≈ 4.7 m s⁻². Using the amplitude 0.050 m instead of the displacement gives about 7.9 m s⁻²."
+  },
+  {
+   "n": 7,
+   "topic": "Gravitational fields",
+   "q": "A satellite of mass 200 kg is moved from a circular orbit of radius 2R to a circular orbit of radius 4R around the Earth, where R is the Earth's radius. Use G = 6.67 × 10⁻¹¹ N m² kg⁻², Earth mass = 6.0 × 10²⁴ kg and R = 6.4 × 10⁶ m. What is the increase in gravitational potential energy of the satellite?",
+   "options": [
+    "6.3 × 10⁹ J",
+    "1.3 × 10¹⁰ J",
+    "1.6 × 10⁹ J",
+    "3.1 × 10⁹ J"
+   ],
+   "answer": 3,
+   "explanation": "The increase is ΔU = −GMm/(4R) − (−GMm/(2R)) = GMm/(4R). Substituting gives (6.67 × 10⁻¹¹ × 6.0 × 10²⁴ × 200) ÷ (4 × 6.4 × 10⁶) ≈ 3.1 × 10⁹ J. The satellite gains potential energy because it moves to a higher orbit."
+  },
+  {
+   "n": 8,
+   "topic": "Mechanics",
+   "q": "A stone is projected from level ground with speed 20 m s⁻¹ at 30° above the horizontal. Air resistance is negligible. Use g = 9.8 m s⁻². What is the horizontal range of the stone on the level ground?",
+   "options": [
+    "41 m",
+    "35 m",
+    "10 m",
+    "20 m"
+   ],
+   "answer": 1,
+   "explanation": "The range on level ground is R = u² sin(2θ)/g = 20² × sin60° ÷ 9.8 ≈ 35 m. Using sinθ instead of sin2θ gives about 20 m, and omitting the angular factor entirely gives about 41 m."
+  },
+  {
+   "n": 9,
+   "topic": "Mechanics",
+   "q": "A uniform beam of length 4.0 m and mass 60 kg is supported at each end. A person of mass 80 kg stands on the beam 1.0 m from the left end. Use g = 9.8 m s⁻². What is the upward reaction force at the right support?",
+   "options": [
+    "490 N",
+    "880 N",
+    "200 N",
+    "780 N"
+   ],
+   "answer": 0,
+   "explanation": "Taking moments about the left support: clockwise moments = (60 × 9.8 × 2.0) + (80 × 9.8 × 1.0) = 1960 N m. The right reaction R acts at 4.0 m, so 4.0R = 1960, giving R = 490 N. The value near 880 N is the reaction at the left support, not the right support."
+  },
+  {
+   "n": 10,
+   "topic": "Thermal physics",
+   "q": "In a laboratory in Leicester, Zainab has 0.120 mol of helium gas in a rigid container of volume 2.50 litres at 27 °C. Treating the helium as an ideal gas, what is the pressure? Use R = 8.31 J mol⁻¹ K⁻¹.",
+   "options": [
+    "1.08 × 10⁴ Pa",
+    "1.20 × 10² Pa",
+    "2.99 × 10² Pa",
+    "1.20 × 10⁵ Pa"
+   ],
+   "answer": 3,
+   "explanation": "Using pV = nRT gives p = (0.120 × 8.31 × 300)/(2.50 × 10⁻³) = 1.20 × 10⁵ Pa. The volume must be converted from litres to cubic metres and the temperature from °C to kelvin; treating 27 °C as 27 K gives about 1.08 × 10⁴ Pa."
+  },
+  {
+   "n": 11,
+   "topic": "Thermal physics",
+   "q": "Priya has 0.40 kg of ice at −10 °C. She supplies energy until it becomes water at 20 °C. The specific heat capacity of ice is 2.1 × 10³ J kg⁻¹ K⁻¹, the specific latent heat of fusion of ice is 3.3 × 10⁵ J kg⁻¹ and the specific heat capacity of water is 4.2 × 10³ J kg⁻¹ K⁻¹. What is the total energy required?",
+   "options": [
+    "1.82 × 10⁵ J",
+    "1.66 × 10⁵ J",
+    "1.74 × 10⁵ J",
+    "1.40 × 10⁵ J"
+   ],
+   "answer": 2,
+   "explanation": "The energy needed is 0.40 × 2.1 × 10³ × 10 for warming ice, plus 0.40 × 3.3 × 10⁵ for melting, plus 0.40 × 4.2 × 10³ × 20 for warming the meltwater: 8 400 + 132 000 + 33 600 = 1.74 × 10⁵ J. Omitting the energy to warm the ice gives 1.66 × 10⁵ J."
+  },
+  {
+   "n": 12,
+   "topic": "Thermal physics",
+   "q": "A sealed flask in Cardiff contains nitrogen gas at 300 K. The nitrogen has a molar mass of 28 g mol⁻¹. What is the root-mean-square speed of the nitrogen molecules? Use R = 8.31 J mol⁻¹ K⁻¹.",
+   "options": [
+    "1.63 × 10² m s⁻¹",
+    "4.22 × 10² m s⁻¹",
+    "5.17 × 10² m s⁻¹",
+    "3.65 × 10² m s⁻¹"
+   ],
+   "answer": 2,
+   "explanation": "For an ideal gas, ½m⟨c²⟩ = (3/2)kT, giving c_rms = √(3RT/M). With M = 0.028 kg mol⁻¹, c_rms = √(3 × 8.31 × 300 ÷ 0.028) ≈ 5.17 × 10² m s⁻¹. Using M = 0.28 kg mol⁻¹ gives 1.63 × 10² m s⁻¹."
+  },
+  {
+   "n": 13,
+   "topic": "Materials",
+   "q": "A steel wire of length 1.50 m and diameter 0.40 mm is stretched by a force of 50 N. The Young modulus of the steel is 2.0 × 10¹¹ Pa. Assuming Hooke’s law applies, what is the extension of the wire? Use π = 3.14.",
+   "options": [
+    "2.0 mm",
+    "3.0 mm",
+    "0.75 mm",
+    "4.5 mm"
+   ],
+   "answer": 1,
+   "explanation": "Area = πr² = 3.14 × (0.20 × 10⁻³)² = 1.26 × 10⁻⁷ m². Hooke’s law in the form E = FL/(AΔL) gives ΔL = FL/(AE) = (50 × 1.50)/(1.26 × 10⁻⁷ × 2.0 × 10¹¹) ≈ 3.0 × 10⁻³ m = 3.0 mm. Using the diameter instead of the radius gives 0.75 mm, and omitting the original length gives 2.0 mm."
+  },
+  {
+   "n": 14,
+   "topic": "Materials",
+   "q": "A wire obeys Hooke’s law. Its force–extension graph is a straight line through the origin, and a force of 80 N produces an extension of 4.0 mm. What is the extra elastic potential energy stored when the extension increases from 1.0 mm to 3.0 mm?",
+   "options": [
+    "0.080 J",
+    "0.120 J",
+    "0.060 J",
+    "0.090 J"
+   ],
+   "answer": 0,
+   "explanation": "The spring constant is 80 ÷ 0.0040 = 2.0 × 10⁴ N m⁻¹, so the extra energy is ½k(x₂² − x₁²) = ½ × 2.0 × 10⁴ × [(3.0 × 10⁻³)² − (1.0 × 10⁻³)²] = 0.080 J. The area between the graph and the extension axis from 1.0 mm to 3.0 mm is a trapezium with parallel sides 20 N and 60 N and width 2.0 mm, giving the same value."
+  },
+  {
+   "n": 15,
+   "topic": "Quantum phenomena",
+   "q": "A metal surface in an experiment in Bangor has a work function of 2.50 eV. Light of wavelength 400 nm is incident on it. What is the maximum kinetic energy of the emitted photoelectrons? Use hc = 1.99 × 10⁻²⁵ J m and 1 eV = 1.60 × 10⁻¹⁹ J.",
+   "options": [
+    "3.11 eV",
+    "0.61 eV",
+    "2.50 eV",
+    "5.61 eV"
+   ],
+   "answer": 1,
+   "explanation": "The photon energy is hc/λ = (1.99 × 10⁻²⁵)/(400 × 10⁻⁹) = 4.98 × 10⁻¹⁹ J, which is 4.98 × 10⁻¹⁹ ÷ 1.60 × 10⁻¹⁹ = 3.11 eV. The maximum kinetic energy is therefore 3.11 − 2.50 = 0.61 eV. Adding the work function instead of subtracting it gives 5.61 eV."
+  },
+  {
+   "n": 16,
+   "topic": "Waves and optics",
+   "q": "Light of wavelength 580 nm falls normally on a diffraction grating with 500 lines per millimetre. What is the angle between the zero-order maximum and the second-order maximum?",
+   "options": [
+    "16.9°",
+    "3.3°",
+    "54.5°",
+    "35.5°"
+   ],
+   "answer": 3,
+   "explanation": "The slit spacing is d = 1/(500 × 10³ m⁻¹) = 2.0 × 10⁻⁶ m. For the second-order maximum, sin θ = nλ/d = (2 × 580 × 10⁻⁹)/(2.0 × 10⁻⁶) = 0.580, so θ = 35.5°. Using the first order gives 16.9°, while taking 500 lines per centimetre gives 3.3°."
+  },
+  {
+   "n": 17,
+   "topic": "Waves and optics",
+   "q": "Unpolarised light of initial intensity I₀ passes through two ideal polarising filters. The transmission axis of the second filter is at 30° to the transmission axis of the first filter. What is the intensity of the light after the second filter?",
+   "options": [
+    "I₀/2",
+    "√3 I₀/4",
+    "3I₀/8",
+    "3I₀/4"
+   ],
+   "answer": 2,
+   "explanation": "The first filter halves the intensity, giving I₀/2. Malus’s law then gives (I₀/2) cos²30° = (I₀/2) × (3/4) = 3I₀/8; using cos 30° without squaring gives √3 I₀/4."
+  },
+  {
+   "n": 18,
+   "topic": "Magnetic fields and electromagnetic induction",
+   "q": "An alpha particle travels at right angles to a uniform magnetic field of flux density 0.40 T with speed 2.5 × 10⁶ m s⁻¹. The alpha particle has charge +3.2 × 10⁻¹⁹ C and mass 6.64 × 10⁻²⁷ kg. What is the radius of its circular path?",
+   "options": [
+    "0.13 m",
+    "0.052 m",
+    "0.26 m",
+    "7.7 m"
+   ],
+   "answer": 0,
+   "explanation": "The magnetic force provides the centripetal force, so r = mv/(qB). Substituting gives r = (6.64 × 10⁻²⁷ × 2.5 × 10⁶)/(3.2 × 10⁻¹⁹ × 0.40) = 0.13 m. Using the proton charge of 1.6 × 10⁻¹⁹ C doubles the radius to about 0.26 m, while omitting the flux density gives about 0.052 m."
+  },
+  {
+   "n": 19,
+   "topic": "Magnetic fields and electromagnetic induction",
+   "q": "A coil of 150 turns has a magnetic flux of 3.0 × 10⁻⁴ Wb through each turn. The flux is reduced to zero in 0.040 s. What is the magnitude of the average emf induced in the coil?",
+   "options": [
+    "7.5 × 10⁻³ V",
+    "1.8 × 10⁻³ V",
+    "4.5 × 10⁻² V",
+    "1.1 V"
+   ],
+   "answer": 3,
+   "explanation": "Faraday’s law gives ε = N ΔΦ/Δt = 150 × 3.0 × 10⁻⁴ ÷ 0.040 = 1.125 V, which is about 1.1 V. Forgetting the number of turns gives 7.5 × 10⁻³ V, while not dividing by the time interval gives 4.5 × 10⁻² V."
+  },
+  {
+   "n": 20,
+   "topic": "Electric fields and capacitance",
+   "q": "A 47 μF capacitor and a 33 μF capacitor are connected in series to a 10 V supply. What is the charge stored on each capacitor?",
+   "options": [
+    "1.9 × 10⁻⁴ C",
+    "3.3 × 10⁻⁴ C",
+    "8.0 × 10⁻⁴ C",
+    "4.7 × 10⁻⁴ C"
+   ],
+   "answer": 0,
+   "explanation": "The series equivalent capacitance is (47 × 33)/(47 + 33) μF = 19.3875 μF. The charge is Q = C V = 19.3875 × 10⁻⁶ × 10 = 1.9 × 10⁻⁴ C, and capacitors in series store the same charge. Adding the capacitances gives 80 μF and 8.0 × 10⁻⁴ C, which would be the total charge for a parallel connection."
+  },
+  {
+   "n": 21,
+   "topic": "Electric fields and capacitance",
+   "q": "A point charge of +6.0 × 10⁻⁸ C is moved between two points in an electric field. The electric potential at the initial point is +450 V and at the final point is +120 V. What is the work done by the electric field on the charge?",
+   "options": [
+    "2.7 × 10⁻⁵ J",
+    "3.4 × 10⁻⁵ J",
+    "7.2 × 10⁻⁶ J",
+    "2.0 × 10⁻⁵ J"
+   ],
+   "answer": 3,
+   "explanation": "For a positive charge moving to a lower potential, the field does positive work W = q(V_initial − V_final) = 6.0 × 10⁻⁸ × (450 − 120) = 1.98 × 10⁻⁵ J, which is about 2.0 × 10⁻⁵ J. Adding the potentials gives 3.4 × 10⁻⁵ J, which misuses the potential difference. Using only the final or initial potential gives one of the other values."
+  },
+  {
+   "n": 22,
+   "topic": "Nuclear physics",
+   "q": "A radioactive source has an activity of 960 Bq at time t = 0. After 30 days its activity is 120 Bq. What is the half-life of the source?",
+   "options": [
+    "10 days",
+    "15 days",
+    "7.5 days",
+    "90 days"
+   ],
+   "answer": 0,
+   "explanation": "The activity falls from 960 Bq to 120 Bq, a factor of 960/120 = 8. Since 8 = 2³, three half-lives have elapsed in 30 days, so one half-life is 30/3 = 10 days. The value 15 days would correspond to two half-lives, and 7.5 days to four half-lives."
+  },
+  {
+   "n": 23,
+   "topic": "Nuclear physics",
+   "q": "A nucleus of sodium-24 (₁₁²⁴Na) decays by beta-minus emission to magnesium-24. Which set of emitted particles is needed to complete the balanced nuclear equation?",
+   "options": [
+    "an alpha particle and a gamma-ray photon",
+    "an electron and an electron antineutrino",
+    "an electron only",
+    "a positron and an electron neutrino"
+   ],
+   "answer": 1,
+   "explanation": "In beta-minus decay, a neutron changes into a proton and the equation must include an electron and an electron antineutrino to conserve charge and lepton number. The atomic number increases from 11 to 12, so sodium-24 changes into magnesium-24. A positron and electron neutrino are emitted in beta-plus decay, not beta-minus decay."
+  },
+  {
+   "n": 24,
+   "topic": "Measurements and uncertainties",
+   "q": "A student measures the time for 20 oscillations four times and obtains 25.0 s, 25.4 s, 24.8 s and 25.2 s. The uncertainty in the mean period is taken as half the range divided by 20. What is the percentage uncertainty in the mean period?",
+   "options": [
+    "2.4%",
+    "48%",
+    "1.2%",
+    "24%"
+   ],
+   "answer": 2,
+   "explanation": "The mean 20-oscillation time is (25.0 + 25.4 + 24.8 + 25.2)/4 = 25.1 s, so the mean period is 25.1/20 = 1.255 s. The range is 25.4 − 24.8 = 0.6 s, so half the range is 0.3 s; for one oscillation this is 0.3/20 = 0.015 s. The percentage uncertainty is (0.015/1.255) × 100% = 1.2% to two significant figures. Using the full range gives about 2.4%, and failing to divide the uncertainty by 20 gives about 24%."
+  },
+  {
+   "n": 25,
+   "topic": "Measurements and uncertainties",
+   "q": "Resistance is calculated from V = 6.00 V ± 0.05 V and I = 0.250 A ± 0.005 A. What is the percentage uncertainty in R?",
+   "options": [
+    "2.0%",
+    "2.8%",
+    "1.7%",
+    "0.83%"
+   ],
+   "answer": 1,
+   "explanation": "For R = V/I, the percentage uncertainties add: (0.05/6.00) × 100% = 0.83% and (0.005/0.250) × 100% = 2.0%, giving 2.8% to two significant figures. Using only the current uncertainty gives 2.0%, while multiplying the two percentage uncertainties gives about 1.7%."
+  },
+  {
+   "n": 26,
+   "topic": "Particles and radiation",
+   "q": "A laser emits light of wavelength 450 nm. Using h = 6.63 × 10⁻³⁴ J s and c = 3.00 × 10⁸ m s⁻¹, what is the energy of one photon?",
+   "options": [
+    "1.47 × 10⁻²⁷ J",
+    "4.42 × 10⁻²⁸ J",
+    "4.42 × 10⁻¹⁹ J",
+    "8.95 × 10⁻³² J"
+   ],
+   "answer": 2,
+   "explanation": "The photon energy is E = hc/λ. With λ = 450 nm = 4.50 × 10⁻⁷ m, E = (6.63 × 10⁻³⁴ × 3.00 × 10⁸)/(4.50 × 10⁻⁷) = 4.42 × 10⁻¹⁹ J. The value 4.42 × 10⁻²⁸ J comes from treating 450 nm as 450 m rather than converting to metres."
+  },
+  {
+   "n": 27,
+   "topic": "Particles and radiation",
+   "q": "A nucleus undergoes β⁺ decay when a proton changes into a neutron, a positron and an electron neutrino. What happens to the nucleon number A and the proton number Z of the nucleus?",
+   "options": [
+    "A decreases by 1 and Z is unchanged.",
+    "A is unchanged and Z increases by 1.",
+    "A is unchanged and Z decreases by 1.",
+    "A is unchanged and Z is unchanged."
+   ],
+   "answer": 2,
+   "explanation": "In β⁺ decay a proton becomes a neutron, so the proton number Z falls by 1. The total number of nucleons is unchanged because a proton is replaced by a neutron, so A stays the same; the emitted positron and neutrino are not nucleons."
+  },
+  {
+   "n": 28,
+   "topic": "Particles and radiation",
+   "q": "In Rutherford’s alpha-particle scattering experiment, a very small fraction of alpha particles are deflected through large angles. Which conclusion do these large-angle deflections support?",
+   "options": [
+    "Alpha particles are deflected mainly by electrons in the atom.",
+    "The nucleus occupies most of the volume of the atom.",
+    "The atom contains electrons at discrete energy levels.",
+    "The atom contains a small, dense, positively charged nucleus."
+   ],
+   "answer": 3,
+   "explanation": "Large-angle deflection requires a concentrated positive charge and most of the atomic mass within a very small region. Electrons are much lighter and cannot cause such large deflections, and the small fraction deflected shows that the nucleus occupies only a tiny part of the atom."
+  },
+  {
+   "n": 29,
+   "topic": "Electricity",
+   "q": "A 12 V supply of negligible internal resistance is connected across a 6.0 kΩ fixed resistor and a thermistor in series. At a particular temperature the thermistor has resistance 2.0 kΩ. What is the potential difference across the fixed resistor?",
+   "options": [
+    "9.0 V",
+    "3.0 V",
+    "4.0 V",
+    "8.0 V"
+   ],
+   "answer": 0,
+   "explanation": "The total resistance is 6.0 kΩ + 2.0 kΩ = 8.0 kΩ, so the current is 12 V ÷ 8.0 kΩ = 1.5 mA. Across the fixed resistor, V = IR = 1.5 × 10⁻³ A × 6.0 × 10³ Ω = 9.0 V. The 3.0 V value is the potential difference across the thermistor."
+  },
+  {
+   "n": 30,
+   "topic": "Electricity",
+   "q": "Two resistors, 12 Ω and 4.0 Ω, are connected in parallel to a 6.0 V battery of negligible internal resistance. What is the total current drawn from the battery?",
+   "options": [
+    "2.0 A",
+    "0.38 A",
+    "0.50 A",
+    "1.5 A"
+   ],
+   "answer": 0,
+   "explanation": "The current through the 12 Ω resistor is 6.0 V ÷ 12 Ω = 0.50 A, and through the 4.0 Ω resistor is 6.0 V ÷ 4.0 Ω = 1.5 A. The battery supplies the sum, 2.0 A, because the branches are in parallel."
+  }
+ ]
+}

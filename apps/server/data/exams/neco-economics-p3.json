@@ -1,0 +1,791 @@
+{
+ "id": "neco-economics-p3",
+ "exam": "neco",
+ "subject": "economics",
+ "year": null,
+ "number": 3,
+ "source": "ai",
+ "minutes": 60,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Theory of production",
+   "q": "Which of the following is a variable factor of production for a bakery in the short run?",
+   "options": [
+    "Flour used in baking",
+    "The baking oven",
+    "The bakery building",
+    "The delivery van owned by the bakery"
+   ],
+   "answer": 0,
+   "explanation": "In the short run, at least one factor is fixed, but a variable factor can be increased as output changes. Flour is used up and can be varied with the level of baking, while the building, oven and delivery van are capital items that are not easily changed in the short run."
+  },
+  {
+   "n": 2,
+   "topic": "Theory of production",
+   "q": "A tailor in Ibadan uses one sewing machine and hires additional workers. The first additional worker raises output by 8 shirts per day, while a later additional worker raises output by 3 shirts per day. This best illustrates",
+   "options": [
+    "increasing returns to scale",
+    "the law of diminishing returns",
+    "economies of scale",
+    "constant returns to scale"
+   ],
+   "answer": 1,
+   "explanation": "The sewing machine is fixed while labour is varied, and the extra output from additional labour eventually falls. Returns to scale describe what happens when all inputs are changed together, not when only labour increases."
+  },
+  {
+   "n": 3,
+   "topic": "Theory of production",
+   "q": "Which statement is true of the long-run period in production?",
+   "options": [
+    "All factors of production can be varied.",
+    "At least one factor of production is fixed.",
+    "Output cannot be increased by changing inputs.",
+    "Total fixed cost is always greater than total variable cost."
+   ],
+   "answer": 0,
+   "explanation": "The long run is the period in which the firm can adjust all inputs, including capital such as machines and buildings. The presence of a fixed factor is a feature of the short run, not the long run."
+  },
+  {
+   "n": 4,
+   "topic": "Banking and financial institutions",
+   "q": "A trader in Onitsha deposits ₦80,000 in a savings account that pays 5% simple interest per annum. What interest will the deposit earn after 9 months?",
+   "options": [
+    "₦3,000",
+    "₦4,000",
+    "₦1,200",
+    "₦2,000"
+   ],
+   "answer": 0,
+   "explanation": "Simple interest is calculated as principal × rate × time, so ₦80,000 × 5% × 9/12 = ₦3,000. Using 12 months would wrongly give ₦4,000, which is the interest for a full year."
+  },
+  {
+   "n": 5,
+   "topic": "Banking and financial institutions",
+   "q": "The main function of an insurance company is to",
+   "options": [
+    "pool risks and compensate policyholders for insured losses",
+    "issue currency on behalf of the government",
+    "accept deposits from the public and grant loans",
+    "control the volume of money in circulation"
+   ],
+   "answer": 0,
+   "explanation": "Insurance companies collect premiums from many people and use the pooled funds to pay those who suffer insured losses. Accepting deposits and granting loans are mainly banking functions, while currency issuance and money-supply control are central banking functions."
+  },
+  {
+   "n": 6,
+   "topic": "Economic development and planning",
+   "q": "Which of the following is a common characteristic of a developing economy?",
+   "options": [
+    "Low rate of population growth",
+    "High dependence on primary production",
+    "High level of industrial technology",
+    "Widespread use of automated machinery"
+   ],
+   "answer": 1,
+   "explanation": "Developing economies often rely heavily on agriculture and mining and have a relatively low level of industrialisation. Low population growth, advanced industrial technology and widespread automation are more typical of developed economies."
+  },
+  {
+   "n": 7,
+   "topic": "Economic development and planning",
+   "q": "The process of increasing a country's stock of capital goods such as factories, machines and infrastructure is called",
+   "options": [
+    "capital formation",
+    "specialisation",
+    "capital consumption",
+    "inflation"
+   ],
+   "answer": 0,
+   "explanation": "Capital formation refers to additions to a country's stock of productive capital, including factories, machines and infrastructure. Capital consumption is the using up or wearing out of capital, not increasing it."
+  },
+  {
+   "n": 8,
+   "topic": "Demand and supply",
+   "q": "The demand and supply functions for yam in a local market are Qd = 100 − 2P and Qs = 20 + 3P, where P is price in naira. What is the equilibrium price?",
+   "options": [
+    "₦16",
+    "₦20",
+    "₦24",
+    "₦12"
+   ],
+   "answer": 0,
+   "explanation": "At equilibrium, quantity demanded equals quantity supplied, so 100 − 2P = 20 + 3P. This gives 80 = 5P, hence P = ₦16. At ₦20, for example, quantity supplied exceeds quantity demanded."
+  },
+  {
+   "n": 9,
+   "topic": "Demand and supply",
+   "q": "The government fixes the price of a bag of rice above the equilibrium price. What is the most likely effect in the rice market?",
+   "options": [
+    "A surplus of rice will occur.",
+    "The demand curve will shift to the right.",
+    "A shortage of rice will occur.",
+    "The market will remain at equilibrium."
+   ],
+   "answer": 0,
+   "explanation": "A price fixed above equilibrium makes quantity supplied greater than quantity demanded, creating a surplus. A shortage would arise if the fixed price were below equilibrium, not above it."
+  },
+  {
+   "n": 10,
+   "topic": "Basic economic concepts",
+   "q": "Amina in Minna has ₦15,000. She can either buy a second-hand sewing machine for ₦15,000 or pay for a six-month tailoring course costing ₦15,000. She decides to buy the sewing machine. What is the opportunity cost of her decision?",
+   "options": [
+    "The sewing machine she bought",
+    "The tailoring course she gave up",
+    "The combined value of the sewing machine and the tailoring course",
+    "The ₦15,000 paid for the sewing machine"
+   ],
+   "answer": 1,
+   "explanation": "Opportunity cost is the next best alternative forgone, not the money paid for the chosen item. Amina chose the sewing machine, so the tailoring course she gave up is the opportunity cost; the ₦15,000 is the money cost of the machine."
+  },
+  {
+   "n": 11,
+   "topic": "Basic economic concepts",
+   "q": "A production possibility curve for rice and yam is concave to the origin. This shape indicates that, as more yam is produced, the opportunity cost of yam in terms of rice will...",
+   "options": [
+    "remain constant",
+    "decrease",
+    "become zero",
+    "increase"
+   ],
+   "answer": 3,
+   "explanation": "A concave production possibility curve reflects increasing opportunity cost because resources are not equally efficient in producing rice and yam. As resources are shifted from rice to yam, successively larger amounts of rice must be sacrificed."
+  },
+  {
+   "n": 12,
+   "topic": "Basic economic concepts",
+   "q": "Tunde obtains 60 utils from the last loaf of bread costing ₦30 and 20 utils from the last bottle of soft drink costing ₦10. According to the equi-marginal principle, what should he do to maximise utility?",
+   "options": [
+    "Make no change, because the marginal utility per naira is 2 for each good",
+    "Buy more soft drink and less bread",
+    "Buy more bread and less soft drink",
+    "Buy less of both bread and soft drink"
+   ],
+   "answer": 0,
+   "explanation": "The marginal utility per naira is 60 ÷ 30 = 2 for bread and 20 ÷ 10 = 2 for soft drink. Since the ratios are equal, reallocating spending between the two goods will not increase total utility, so the present combination is already satisfactory."
+  },
+  {
+   "n": 13,
+   "topic": "National income",
+   "q": "A furniture maker in Ogbomoso buys timber and other materials worth ₦120,000 and sells the finished furniture for ₦200,000. Using the value-added method, the furniture maker's contribution to national income is...",
+   "options": [
+    "₦120,000",
+    "₦80,000",
+    "₦320,000",
+    "₦200,000"
+   ],
+   "answer": 1,
+   "explanation": "Value added equals the value of output minus the value of intermediate inputs: ₦200,000 − ₦120,000 = ₦80,000. Using the full selling price would double count the timber and materials already counted elsewhere."
+  },
+  {
+   "n": 14,
+   "topic": "National income",
+   "q": "A country's Gross National Product is ₦85 billion and net factor income from abroad is −₦5 billion. What is the country's Gross Domestic Product?",
+   "options": [
+    "₦90 billion",
+    "₦80 billion",
+    "₦95 billion",
+    "₦85 billion"
+   ],
+   "answer": 0,
+   "explanation": "Gross National Product equals Gross Domestic Product plus net factor income from abroad. Therefore GDP = ₦85 billion − (−₦5 billion) = ₦90 billion."
+  },
+  {
+   "n": 15,
+   "topic": "Agriculture and industry in Nigeria",
+   "q": "The main purpose of the Agricultural Credit Guarantee Scheme Fund in Nigeria is to...",
+   "options": [
+    "guarantee bank loans to farmers and reduce the lenders' risk",
+    "fix minimum prices for agricultural commodities",
+    "supply fertiliser directly to farmers at subsidised prices",
+    "provide free land for large-scale farming"
+   ],
+   "answer": 0,
+   "explanation": "The scheme encourages banks to lend to agriculture by sharing the risk of default on guaranteed loans. It does not directly distribute fertiliser, fix commodity prices, or allocate land to farmers."
+  },
+  {
+   "n": 16,
+   "topic": "Agriculture and industry in Nigeria",
+   "q": "A Nigerian government policy that restricts the importation of finished goods while encouraging local production of those goods is known as...",
+   "options": [
+    "import substitution industrialisation",
+    "export promotion strategy",
+    "trade liberalisation policy",
+    "backward integration policy"
+   ],
+   "answer": 0,
+   "explanation": "Import substitution industrialisation aims to replace imported finished goods with goods produced locally, often behind tariffs or import restrictions. Export promotion supports exports, trade liberalisation reduces trade barriers, and backward integration is mainly a firm's move into producing its own inputs."
+  },
+  {
+   "n": 17,
+   "topic": "Agriculture and industry in Nigeria",
+   "q": "Historically, one major function of commodity marketing boards in Nigeria was to...",
+   "options": [
+    "construct rural feeder roads in farming communities",
+    "provide subsidised fertiliser directly to cocoa farmers",
+    "buy farmers' export crops and stabilise producer prices",
+    "grant long-term loans to manufacturing firms"
+   ],
+   "answer": 2,
+   "explanation": "Marketing boards were established mainly to market export crops and reduce price fluctuations by buying produce and offering relatively stable producer prices. They were not primarily established to distribute fertiliser, finance manufacturing, or build rural roads."
+  },
+  {
+   "n": 18,
+   "topic": "Market structures",
+   "q": "The four largest firms in a Nigerian industry have sales of ₦40 million, ₦30 million, ₦20 million and ₦10 million respectively. If total industry sales are ₦200 million, what is the four-firm concentration ratio?",
+   "options": [
+    "50%",
+    "80%",
+    "20%",
+    "40%"
+   ],
+   "answer": 0,
+   "explanation": "The four largest firms' combined sales are ₦40 million + ₦30 million + ₦20 million + ₦10 million = ₦100 million. The four-firm concentration ratio is (₦100 million ÷ ₦200 million) × 100 = 50%."
+  },
+  {
+   "n": 19,
+   "topic": "Market structures",
+   "q": "The kinked demand curve model is used to explain price rigidity in which market structure?",
+   "options": [
+    "Monopolistic competition",
+    "Monopoly",
+    "Perfect competition",
+    "Oligopoly"
+   ],
+   "answer": 3,
+   "explanation": "In oligopoly, firms expect rivals not to follow a price increase but to match a price decrease, so each firm faces a kink in its demand curve. This can make price remain stable even when costs change slightly. Perfect competition, monopolistic competition and monopoly do not use the kinked demand curve as their main explanation of pricing."
+  },
+  {
+   "n": 20,
+   "topic": "International trade",
+   "q": "Nigeria records visible exports of ₦36 trillion and visible imports of ₦29 trillion in a year. Net services and income flows are –₦3 trillion, while net current transfers are ₦4 trillion. What is the current account balance?",
+   "options": [
+    "₦8 trillion surplus",
+    "₦1 trillion surplus",
+    "₦8 trillion deficit",
+    "₦7 trillion surplus"
+   ],
+   "answer": 0,
+   "explanation": "The current account balance is ₦36 trillion − ₦29 trillion − ₦3 trillion + ₦4 trillion = ₦8 trillion, which is a surplus. Using only visible exports and imports gives a ₦7 trillion surplus, but that ignores net services, income and transfers."
+  },
+  {
+   "n": 21,
+   "topic": "International trade",
+   "q": "The main aim of the African Continental Free Trade Area (AfCFTA) is to",
+   "options": [
+    "provide long-term development loans to African governments",
+    "restrict African countries from trading with non-African countries",
+    "expand intra-African trade by reducing tariffs and other trade barriers among member countries",
+    "establish a single central bank and common currency for all African countries"
+   ],
+   "answer": 2,
+   "explanation": "AfCFTA is principally a trade agreement intended to deepen trade among African countries by lowering tariffs and reducing other barriers. It is not a central-bank or development-loan arrangement, nor does it seek to stop African countries from trading outside the continent."
+  },
+  {
+   "n": 22,
+   "topic": "International trade",
+   "q": "A Nigerian importer of generating sets must first obtain a special permit from a government agency before the goods can enter the country. This measure is best described as",
+   "options": [
+    "an ad valorem tariff",
+    "an export subsidy",
+    "an import quota",
+    "a non-tariff barrier to trade"
+   ],
+   "answer": 3,
+   "explanation": "A special permit requirement restricts imports without imposing a tax, so it is a non-tariff barrier. An ad valorem tariff is a tax on value, an export subsidy assists exporters, and an import quota sets a fixed quantity limit rather than requiring a permit."
+  },
+  {
+   "n": 23,
+   "topic": "Public finance",
+   "q": "Which of the following is an example of a direct tax in Nigeria?",
+   "options": [
+    "Personal income tax paid by employees",
+    "Import duty on imported rice",
+    "Value added tax on purchased goods",
+    "Excise duty on locally produced drinks"
+   ],
+   "answer": 0,
+   "explanation": "Personal income tax is levied directly on the income of individuals, so it is a direct tax. Value added tax, import duty and excise duty are imposed on goods and services and are therefore indirect taxes."
+  },
+  {
+   "n": 24,
+   "topic": "Public finance",
+   "q": "A tax system in which the rate of tax increases as a person's taxable income increases is known as",
+   "options": [
+    "progressive taxation",
+    "indirect taxation",
+    "proportional taxation",
+    "regressive taxation"
+   ],
+   "answer": 0,
+   "explanation": "A progressive tax charges a higher rate as taxable income rises. A regressive tax takes a larger proportion from lower incomes, a proportional tax uses the same rate for all incomes, and indirect taxation refers to taxes on goods and services."
+  },
+  {
+   "n": 25,
+   "topic": "Population and labour",
+   "q": "A graduate with full capacity to work is employed for only three days in a week because his employer has no more work for him. This situation is best described as",
+   "options": [
+    "frictional unemployment",
+    "structural unemployment",
+    "underemployment",
+    "seasonal unemployment"
+   ],
+   "answer": 2,
+   "explanation": "Underemployment occurs when a worker is employed for fewer hours or at a level below full working capacity. The worker is not completely jobless, so frictional and structural unemployment do not best describe the situation, and no seasonal cause is stated."
+  },
+  {
+   "n": 26,
+   "topic": "Population and labour",
+   "q": "A young woman voluntarily leaves her job in Abuja to search for a better-paid job in Lagos and remains jobless for six weeks. This period of unemployment is best classified as",
+   "options": [
+    "structural unemployment",
+    "frictional unemployment",
+    "seasonal unemployment",
+    "cyclical unemployment"
+   ],
+   "answer": 1,
+   "explanation": "Frictional unemployment is temporary unemployment that arises while a person searches for a new or better job. Cyclical unemployment is linked to a fall in aggregate demand, structural unemployment to a mismatch of skills, and seasonal unemployment to regular seasonal changes in work."
+  },
+  {
+   "n": 27,
+   "topic": "Elasticity",
+   "q": "The price elasticity of supply of cocoa in a town is 2.5. If the market price of cocoa rises by 4%, by what percentage will quantity supplied rise?",
+   "options": [
+    "10%",
+    "6.5%",
+    "0.625%",
+    "1.6%"
+   ],
+   "answer": 0,
+   "explanation": "Percentage change in quantity supplied = price elasticity of supply × percentage change in price = 2.5 × 4% = 10%. The value 1.6% comes from dividing 4% by 2.5 instead of multiplying, while 0.625% comes from dividing 2.5 by 4."
+  },
+  {
+   "n": 28,
+   "topic": "Elasticity",
+   "q": "When the price of a locally made handbag was reduced by 5%, the seller discovered that total revenue from the handbags increased. This indicates that demand for the handbag is",
+   "options": [
+    "elastic",
+    "unitarily elastic",
+    "perfectly inelastic",
+    "inelastic"
+   ],
+   "answer": 0,
+   "explanation": "For elastic demand, a fall in price causes a proportionately larger rise in quantity demanded, so total revenue increases. If demand were inelastic, total revenue would fall when price falls, while with unitary elasticity total revenue would remain unchanged."
+  },
+  {
+   "n": 29,
+   "topic": "Money and inflation",
+   "q": "A pensioner in Owerri receives a fixed monthly pension of ₦90,000. If the general price level rises by 25%, what monthly pension would give the same purchasing power as before?",
+   "options": [
+    "₦112,500",
+    "₦115,000",
+    "₦90,000",
+    "₦108,000"
+   ],
+   "answer": 0,
+   "explanation": "To maintain purchasing power, the pension must rise by the same percentage as prices: ₦90,000 × 1.25 = ₦112,500. Leaving it at ₦90,000 would mean the real value of the pension falls when prices rise."
+  },
+  {
+   "n": 30,
+   "topic": "Money and inflation",
+   "q": "Which of the following is most likely to increase the quantity of money people in Nigeria hold for speculative purposes?",
+   "options": [
+    "An increase in national income",
+    "A rise in the market rate of interest",
+    "A fall in the market rate of interest",
+    "A rise in the general price level"
+   ],
+   "answer": 2,
+   "explanation": "Speculative money demand is inversely related to the interest rate: when the rate falls, bond prices are high and people expect them to fall, so they prefer to hold money. Higher income or prices mainly raise transactions demand, while a higher interest rate reduces speculative balances."
+  },
+  {
+   "n": 31,
+   "topic": "Costs and revenue",
+   "q": "A block-making firm in Abeokuta has total fixed cost of ₦48,000 and total variable cost of ₦96,000 when it produces 6,000 blocks. What is its average total cost per block?",
+   "options": [
+    "₦24",
+    "₦8",
+    "₦40",
+    "₦16"
+   ],
+   "answer": 0,
+   "explanation": "Total cost is ₦48,000 + ₦96,000 = ₦144,000. Average total cost is ₦144,000 ÷ 6,000 = ₦24 per block."
+  },
+  {
+   "n": 32,
+   "topic": "Costs and revenue",
+   "q": "A bookshop in Ilorin sells 250 textbooks at ₦180 each. Its total cost is ₦35,000. What is its profit?",
+   "options": [
+    "₦10,000",
+    "₦45,000",
+    "₦20,000",
+    "₦35,000"
+   ],
+   "answer": 0,
+   "explanation": "Total revenue is 250 × ₦180 = ₦45,000. Profit is total revenue minus total cost, so ₦45,000 − ₦35,000 = ₦10,000; the total revenue figure alone is not profit."
+  },
+  {
+   "n": 33,
+   "topic": "Costs and revenue",
+   "q": "When a firm's average total cost is falling as output increases, its marginal cost must be",
+   "options": [
+    "equal to average total cost",
+    "greater than average total cost",
+    "less than average total cost",
+    "equal to average fixed cost"
+   ],
+   "answer": 2,
+   "explanation": "Marginal cost pulls average total cost: if marginal cost is below average total cost, producing an extra unit lowers the average, so average total cost is falling. If marginal cost were above average total cost, average total cost would be rising."
+  },
+  {
+   "n": 34,
+   "topic": "Theory of production",
+   "q": "An isoquant in production theory shows the various combinations of",
+   "options": [
+    "two outputs that can be produced with a fixed input",
+    "inputs that can be bought with a given amount of money",
+    "output levels that yield the same total revenue",
+    "two inputs that produce the same level of output"
+   ],
+   "answer": 3,
+   "explanation": "An isoquant is a curve showing all combinations of inputs, such as capital and labour, that give the same output. A line showing input combinations purchasable with a given outlay is an isocost line, not an isoquant."
+  },
+  {
+   "n": 35,
+   "topic": "Theory of production",
+   "q": "A farmer observes that as more workers are employed, total product continues to rise but at a decreasing rate. This means that marginal product is",
+   "options": [
+    "positive but falling",
+    "positive and rising",
+    "negative and falling",
+    "zero"
+   ],
+   "answer": 0,
+   "explanation": "If total product is still increasing, marginal product is positive; if it rises at a decreasing rate, marginal product is falling. A negative marginal product would make total product decline."
+  },
+  {
+   "n": 36,
+   "topic": "Banking and financial institutions",
+   "q": "A customer writes a cheque for an amount greater than the balance in his current account, without any prior overdraft arrangement. The bank will most likely",
+   "options": [
+    "pay the cheque and create an overdraft automatically",
+    "reduce the amount on the cheque to the available balance",
+    "transfer the cheque to the savings account",
+    "dishonour the cheque"
+   ],
+   "answer": 3,
+   "explanation": "A bank honours a cheque only up to the available funds unless an overdraft has been arranged in advance. Writing a cheque above the balance without an overdraft leads to dishonour, not automatic payment or alteration of the amount."
+  },
+  {
+   "n": 37,
+   "topic": "Basic economic concepts",
+   "q": "An economy is currently producing at a point inside its production possibility frontier. What is the most likely result of moving to a point on the frontier?",
+   "options": [
+    "The economy has shifted its production possibility frontier outward",
+    "The economy now faces no opportunity cost in production",
+    "The quantity of resources available to the economy has increased",
+    "The economy is using its available resources more efficiently"
+   ],
+   "answer": 3,
+   "explanation": "A point inside the production possibility frontier shows that some resources are unemployed or not fully utilized. Moving to the frontier therefore indicates more efficient use of existing resources, not an increase in the quantity of resources or an outward shift of the frontier."
+  },
+  {
+   "n": 38,
+   "topic": "Basic economic concepts",
+   "q": "Mr Adeyemi deposits ₦500,000 in a fixed-deposit account instead of using it to buy a generating set. The reward he receives for postponing consumption is known as",
+   "options": [
+    "profit",
+    "rent",
+    "wages",
+    "interest"
+   ],
+   "answer": 3,
+   "explanation": "Interest is the reward for saving or for postponing present consumption. Rent is earned from land, wages from labour, and profit is the reward for entrepreneurship."
+  },
+  {
+   "n": 39,
+   "topic": "Demand and supply",
+   "q": "When the price of a commodity is ₦40, quantity demanded is 500 units. When the price falls to ₦30, quantity demanded rises to 600 units. Using the simple percentage method, what is the price elasticity of demand in absolute terms?",
+   "options": [
+    "5.0",
+    "1.25",
+    "0.2",
+    "0.8"
+   ],
+   "answer": 3,
+   "explanation": "Percentage change in quantity demanded is (100 ÷ 500) × 100 = 20%, while percentage change in price is (10 ÷ 40) × 100 = 25%. Therefore the price elasticity of demand in absolute terms is 20% ÷ 25% = 0.8."
+  },
+  {
+   "n": 40,
+   "topic": "Demand and supply",
+   "q": "A new machine lowers the cost of producing sachet water in Ibadan while, at the same time, a health campaign reduces people's desire to drink sachet water. What is the most likely effect on the market for sachet water?",
+   "options": [
+    "Equilibrium price will rise, while equilibrium quantity remains unchanged",
+    "Equilibrium price will fall, but the change in equilibrium quantity cannot be determined without more information",
+    "Equilibrium price will rise and equilibrium quantity will definitely fall",
+    "Equilibrium price will fall and equilibrium quantity will definitely rise"
+   ],
+   "answer": 1,
+   "explanation": "The new machine increases supply, shifting the supply curve to the right, while the health campaign decreases demand, shifting the demand curve to the left. Both changes push price downward, but they push quantity in opposite directions, so the final quantity effect depends on the relative sizes of the shifts."
+  },
+  {
+   "n": 41,
+   "topic": "National income",
+   "q": "A country's GDP at market prices is ₦800 billion and its net factor income from abroad is −₦50 billion. What is the country's gross national product at market prices?",
+   "options": [
+    "₦750 billion",
+    "₦50 billion",
+    "₦800 billion",
+    "₦850 billion"
+   ],
+   "answer": 0,
+   "explanation": "Gross national product equals GDP plus net factor income from abroad. Here, GNP = ₦800 billion + (−₦50 billion) = ₦750 billion."
+  },
+  {
+   "n": 42,
+   "topic": "National income",
+   "q": "Which method of measuring national income best avoids double counting when many firms sell intermediate goods to one another?",
+   "options": [
+    "Adding the market value of all intermediate goods produced",
+    "Adding the value added by each firm",
+    "Adding the total sales revenue of every firm",
+    "Adding only the incomes of government workers"
+   ],
+   "answer": 1,
+   "explanation": "Value added measures the extra value created at each stage of production and avoids counting intermediate goods more than once. Adding total sales revenue or the value of all intermediate goods would overstate national income through double counting."
+  },
+  {
+   "n": 43,
+   "topic": "National income",
+   "q": "Which of the following is a leakage from the circular flow of income in Nigeria?",
+   "options": [
+    "Government spending on rural roads",
+    "Revenue earned from exports of cocoa",
+    "Spending by firms on new machinery",
+    "Company income tax paid to the Federal Government"
+   ],
+   "answer": 3,
+   "explanation": "A leakage withdraws income from the circular flow before it returns as spending; taxes are a classic leakage. Government spending and firms' investment spending are injections, while export earnings bring income into the domestic economy."
+  },
+  {
+   "n": 44,
+   "topic": "Economic development and planning",
+   "q": "A national plan that covers a long period, such as 20 years, and sets broad development targets that guide shorter plans is called a",
+   "options": [
+    "perspective plan",
+    "sectoral plan",
+    "annual budget",
+    "rolling plan"
+   ],
+   "answer": 0,
+   "explanation": "A perspective plan is a long-term plan that provides broad direction for development and is implemented through shorter plans. A rolling plan is reviewed and extended annually, an annual budget covers one year, and a sectoral plan concentrates on a particular sector."
+  },
+  {
+   "n": 45,
+   "topic": "Economic development and planning",
+   "q": "Why is government spending on education and health often described as investment in human capital?",
+   "options": [
+    "It reduces the need for labour in production",
+    "It immediately increases the country's stock of physical machinery",
+    "It improves the skills, health and productivity of people",
+    "It is designed mainly to increase the number of civil servants"
+   ],
+   "answer": 2,
+   "explanation": "Spending on education and health develops people's knowledge, skills and physical well-being, raising their productivity and earning capacity. This is why it is treated as investment in human capital rather than physical capital."
+  },
+  {
+   "n": 46,
+   "topic": "Agriculture and industry in Nigeria",
+   "q": "A cassava-processing factory in Benue State buys fresh cassava from farmers in nearby villages. This development is most likely to",
+   "options": [
+    "provide a ready market for the farmers' cassava and reduce waste",
+    "discourage farmers from growing cassava",
+    "remove the need for improved cassava varieties",
+    "increase the importation of cassava flour"
+   ],
+   "answer": 0,
+   "explanation": "A processing factory creates a steady demand for fresh cassava, giving farmers a reliable market and reducing losses from spoilage. The factory does not discourage cassava growing or raise cassava-flour imports; it also does not remove the need for improved varieties."
+  },
+  {
+   "n": 47,
+   "topic": "Agriculture and industry in Nigeria",
+   "q": "Agricultural extension services are useful to farmers in Nigeria mainly because they",
+   "options": [
+    "spread improved farming methods and information to farmers",
+    "guarantee minimum prices for all crops",
+    "collect land taxes for local governments",
+    "provide industrial loans to traders"
+   ],
+   "answer": 0,
+   "explanation": "Extension services advise farmers on better seeds, fertiliser use, pest control and other improved practices, which raise productivity. They do not guarantee minimum prices, supply industrial loans, or collect land taxes."
+  },
+  {
+   "n": 48,
+   "topic": "Agriculture and industry in Nigeria",
+   "q": "A small shoe factory in Aba spends ₦450,000 monthly on diesel for its generator because electricity supply is unreliable. This situation most directly leads to",
+   "options": [
+    "a fall in its working capital requirements",
+    "higher production costs",
+    "increased use of labour-saving machines",
+    "lower prices for its shoes"
+   ],
+   "answer": 1,
+   "explanation": "Spending ₦450,000 monthly on diesel raises operating costs compared with using affordable grid electricity. This cost pressure does not normally lower shoe prices or reduce working capital needs, and it is not a direct cause of greater use of labour-saving machines."
+  },
+  {
+   "n": 49,
+   "topic": "Market structures",
+   "q": "In a Nigerian industry, the four largest firms account for 85% of total sales. This situation best indicates",
+   "options": [
+    "perfect competition among sellers",
+    "very low barriers to entry",
+    "a monopsonistic market",
+    "a high degree of market concentration"
+   ],
+   "answer": 3,
+   "explanation": "When the four largest sellers account for 85% of sales, the market is highly concentrated and likely oligopolistic. Perfect competition requires many sellers with negligible individual market share, while a monopsonistic market refers to buyer concentration. Low barriers to entry do not follow from high seller concentration."
+  },
+  {
+   "n": 50,
+   "topic": "Market structures",
+   "q": "A bakery in Ibadan brands and packages its bread differently from rival bakeries to attract more customers. This practice is characteristic of",
+   "options": [
+    "pure monopoly",
+    "monopsony",
+    "perfect competition",
+    "monopolistic competition"
+   ],
+   "answer": 3,
+   "explanation": "Branding and packaging differentiate otherwise similar bread, which is a key feature of monopolistic competition. Perfect competition has homogeneous products, a pure monopoly has one seller, and a monopsony concerns a single buyer."
+  },
+  {
+   "n": 51,
+   "topic": "International trade",
+   "q": "A Nigerian businessman imports medical equipment from Germany and pays through his bank. In Nigeria's balance of payments, this transaction is recorded as",
+   "options": [
+    "an import of goods in the current account",
+    "a capital transfer in the capital account",
+    "a portfolio investment in the financial account",
+    "an increase in external reserves"
+   ],
+   "answer": 0,
+   "explanation": "Imports of medical equipment are goods purchased from abroad, so they enter the current account as visible imports. Capital transfers and portfolio investment relate to financial flows, not the purchase of goods. External reserves change as a result, but the transaction itself is recorded as a goods import."
+  },
+  {
+   "n": 52,
+   "topic": "International trade",
+   "q": "The main objective of the ECOWAS Trade Liberalisation Scheme is to",
+   "options": [
+    "increase tariffs on imports from member countries",
+    "unify the currencies of all member countries immediately",
+    "fix the price of exports to non-member countries",
+    "reduce tariff and non-tariff barriers to trade among member countries"
+   ],
+   "answer": 3,
+   "explanation": "The scheme is intended to lower tariffs and non-tariff barriers so that goods can move more freely among ECOWAS member states. It does not raise tariffs on intra-regional imports, fix export prices to non-members, or unify all member currencies immediately."
+  },
+  {
+   "n": 53,
+   "topic": "Public finance",
+   "q": "The construction of rural roads and bridges by a state government is best explained by the",
+   "options": [
+    "allocation function of government",
+    "distribution function of government",
+    "stabilization function of government",
+    "regulatory function of the central bank"
+   ],
+   "answer": 0,
+   "explanation": "Government provision of roads and bridges adjusts the allocation of resources to produce public goods and infrastructure. Distribution concerns fairness in income, stabilization concerns managing the overall economy, and central-bank regulation concerns financial institutions."
+  },
+  {
+   "n": 54,
+   "topic": "Public finance",
+   "q": "Mr Musa earns ₦60,000 and pays ₦6,000 as tax, while Mrs Ade earns ₦250,000 and pays ₦15,000 as tax. The tax structure is",
+   "options": [
+    "progressive",
+    "proportional",
+    "indirect",
+    "regressive"
+   ],
+   "answer": 3,
+   "explanation": "Mr Musa's average tax rate is 6,000 ÷ 60,000 × 100 = 10%, while Mrs Ade's is 15,000 ÷ 250,000 × 100 = 6%. Since the average rate falls as income rises, the tax is regressive. A progressive structure would have charged a higher percentage rate on the larger income."
+  },
+  {
+   "n": 55,
+   "topic": "Population and labour",
+   "q": "A graduate in Jos who is qualified to work as an accountant spends most of the week driving a taxi because he cannot find an accounting job. This situation is best described as",
+   "options": [
+    "frictional unemployment",
+    "structural unemployment",
+    "underemployment",
+    "seasonal unemployment"
+   ],
+   "answer": 2,
+   "explanation": "The graduate is working, but in a job that does not fully use his training and capacity; this is underemployment. Seasonal unemployment would arise from a regular seasonal decline in work, while frictional unemployment refers to temporary search between jobs."
+  },
+  {
+   "n": 56,
+   "topic": "Population and labour",
+   "q": "In Ogun State, the working-age population is 2,400,000. Of these, 1,800,000 are employed and 300,000 are unemployed and actively looking for work. The remainder are not in the labour force. What is the labour force participation rate?",
+   "options": [
+    "75.0%",
+    "14.3%",
+    "12.5%",
+    "87.5%"
+   ],
+   "answer": 3,
+   "explanation": "The labour force is the employed plus the unemployed actively seeking work: 1,800,000 + 300,000 = 2,100,000. Dividing this by the working-age population of 2,400,000 and multiplying by 100 gives 87.5%."
+  },
+  {
+   "n": 57,
+   "topic": "Elasticity",
+   "q": "The price of a loaf of bread rises from ₦800 to ₦1,000, and the quantity of butter demanded in a market falls from 200 packs to 160 packs. Using the initial values as the base, what is the cross elasticity of demand for butter with respect to bread?",
+   "options": [
+    "1.25",
+    "-0.8",
+    "-1.25",
+    "0.8"
+   ],
+   "answer": 1,
+   "explanation": "Percentage change in quantity of butter = (160 - 200)/200 × 100 = -20%; percentage change in price of bread = (1,000 - 800)/800 × 100 = 25%. Cross elasticity = -20% ÷ 25% = -0.8. The negative sign shows the goods are complements."
+  },
+  {
+   "n": 58,
+   "topic": "Elasticity",
+   "q": "The price of a wristwatch in Kano is reduced from ₦6,000 to ₦5,400, and quantity demanded rises from 120 to 150 watches. Using the original price and quantity as the base, what is the price elasticity of demand (ignore the negative sign)?",
+   "options": [
+    "2.5",
+    "0.4",
+    "0.5",
+    "2.0"
+   ],
+   "answer": 0,
+   "explanation": "Percentage change in quantity demanded is (150 - 120)/120 × 100 = 25%, while percentage change in price is (5,400 - 6,000)/6,000 × 100 = -10%. Taking the absolute value, elasticity is 25% ÷ 10% = 2.5."
+  },
+  {
+   "n": 59,
+   "topic": "Money and inflation",
+   "q": "If a country's nominal GDP is ₦720 billion and its money supply is ₦180 billion, the income velocity of circulation is",
+   "options": [
+    "0.25",
+    "4",
+    "3",
+    "540"
+   ],
+   "answer": 1,
+   "explanation": "Velocity is nominal GDP divided by the money supply: ₦720 billion ÷ ₦180 billion = 4. This means the average naira is used four times in financing the year's output."
+  },
+  {
+   "n": 60,
+   "topic": "Money and inflation",
+   "q": "Ngozi borrowed ₦500,000 at a fixed interest rate before a period of unexpected high inflation. Who is most likely to gain from this situation?",
+   "options": [
+    "Ngozi, because she repays the loan with money of lower purchasing power",
+    "Persons holding large cash balances, because their savings keep their value",
+    "The lender, because the real value of the repayment rises",
+    "Pensioners on fixed incomes, because their real income increases"
+   ],
+   "answer": 0,
+   "explanation": "Unexpected inflation reduces the real value of money, so a debtor with a fixed-interest loan repays in naira that buy less than when the loan was taken; the real burden falls and the debtor gains. Lenders and fixed-income earners generally lose purchasing power when inflation is higher than expected."
+  }
+ ]
+}

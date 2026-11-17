@@ -215,7 +215,7 @@ const study: Translation<typeof en> = {
     topicLabel: 'الموضوع',
     topicPlaceholder: 'مثلًا: كيف تعمل اللقاحات',
     focusLabel: 'هل هناك شيء محدّد؟ (اختياري)',
-    focusPlaceholder: 'مثلًا: لامتحان WAEC، ركّز على الحسابات',
+    focusPlaceholder: 'مثلًا: لامتحان {{exam}}، ركّز على الحسابات',
     popular: 'الأكثر رواجًا الآن',
     ideas: {
       photosynthesis: 'البناء الضوئي',
@@ -405,7 +405,7 @@ const study: Translation<typeof en> = {
     subject: 'المادة',
     folderName: 'اسم المجلد',
     tags: 'الوسوم',
-    tagsPlaceholder: 'مثلًا: WAEC، الفصل الثاني، للمراجعة',
+    tagsPlaceholder: 'مثلًا: {{exam}}، الفصل الثاني، للمراجعة',
     tagsHint: 'افصل بين الوسوم بفواصل',
     created: 'أُنشئت في {{date}} من {{source}}',
   },

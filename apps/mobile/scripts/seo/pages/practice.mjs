@@ -1,10 +1,15 @@
 /**
- * Practice questions for JAMB, WAEC and NECO, by exam, subject, topic and paper.
+ * Practice questions for JAMB, WAEC, NECO, the SAT, the ACT, AP exams, GCSE, A-level, KCSE and Matric,
+ * by exam, subject, topic and paper.
  *
- * Honest wording matters here. These are practice papers Knowzone wrote in each exam's format, not
- * papers from previous years, so nothing on these pages calls them anything else.
+ * Honest wording matters here. These are practice papers Knowzone wrote, not papers from previous
+ * years, so nothing on these pages calls them anything else. The JAMB, WAEC and NECO ones are in each
+ * exam's objective format. The SAT ones follow the digital SAT's sections and timing but are multiple
+ * choice only; the ACT ones follow its sections; the AP ones practise the multiple-choice section
+ * only; the GCSE, A-level, KCSE and Matric ones are topic quizzes ("GCSE-style"), because those
+ * exams are mostly written answers. Each of those exams' pages says so (EXAMS[exam].note).
  */
-import { EXAMS, EXAM_SUBJECTS } from '../lib/data.mjs';
+import { EXAMS, EXAM_SUBJECTS, notesSubject, practiceLabel } from '../lib/data.mjs';
 import { APP, ORG, ORIGIN, PATHS, chips, clip, esc, list, page, pageTitle, paragraphs, plural, section, tiles } from '../lib/html.mjs';
 
 
@@ -14,7 +19,12 @@ const HUB = { name: 'Practice questions', path: ROOT };
 const HOME = { name: 'Home', path: '/' };
 
 const subjectPath = (g) => `${ROOT}/${g.exam}/${g.subject}`;
-const label = (g) => `${EXAMS[g.exam].name} ${EXAM_SUBJECTS[g.subject]}`;
+const label = practiceLabel;
+/** "minutes in the exam" where the paper is in the exam's format; plain minutes where it isn't. */
+const timing = (exam) => EXAMS[exam].timing ?? 'minutes in the exam';
+/** What this exam's practice is and isn't, for the exams that need saying. */
+const note = (exam) => (EXAMS[exam].note ? `<p class="kz-lead">${esc(EXAMS[exam].note)}</p>` : '');
+const examNames = (exams) => list(exams.map((e) => EXAMS[e].label ?? EXAMS[e].name));
 
 /** One question with its options; the answer and explanation open without any script. `from` is HTML. */
 function question(q, { id, from } = {}) {
@@ -71,7 +81,15 @@ export function practicePages({ groups, libraries, notesFor, books }) {
   const total = groups.reduce((n, g) => n + shown(g), 0);
   const subjectTile = (g) => ({ href: subjectPath(g), title: EXAM_SUBJECTS[g.subject], text: `${plural(shown(g), 'question')} · ${plural(g.topics.length, 'topic')}` });
   /** Nigeria's book list for a subject, when there is one. */
-  const bookList = (subject) => (books.schoolPath('ng', subject) ? { href: books.schoolPath('ng', subject), name: `${EXAM_SUBJECTS[subject]} textbooks (Nigeria)` } : null);
+  const COUNTRY = { ng: 'Nigeria', uk: 'United Kingdom', ke: 'Kenya', za: 'South Africa' };
+  /** The book list for a subject in the exam's country, when there is one. */
+  const bookList = (g) => {
+    const country = EXAMS[g.exam].books;
+    const subject = notesSubject(g);
+    const href = country && subject && books.schoolPath(country, subject);
+    return href ? { href, name: `${EXAM_SUBJECTS[g.subject]} textbooks (${COUNTRY[country]})` } : null;
+  };
+  const built = Object.keys(EXAMS).filter((exam) => byExam(exam).length);
   const appCta = {
     title: 'Sit a full timed paper',
     text: 'In the Knowzone app you can sit every paper against the clock, see your score by topic and ask Kora, the AI tutor, about any question.',
@@ -85,11 +103,12 @@ export function practicePages({ groups, libraries, notesFor, books }) {
     html: page({
       path: ROOT,
       section: ROOT,
-      title: pageTitle('JAMB, WAEC and NECO practice questions | Knowzone'),
-      description: `${total.toLocaleString('en')} free JAMB, WAEC and NECO practice questions in ${Object.keys(EXAM_SUBJECTS).length} subjects, each with its answer and a clear explanation. Written in the real exam formats.`,
+      title: pageTitle(`${examNames(built)} practice questions | Knowzone`, 'Exam practice questions with answers | Knowzone'),
+      // With many exams the list of names is too long for a title or a description: the page's sections name them.
+      description: `${total.toLocaleString('en')} free ${built.length > 5 ? 'exam' : examNames(built)} practice questions, each with its answer and a clear explanation, by exam, subject and topic${built.length > 5 ? `: ${built.map((e) => EXAMS[e].name).join(', ')}` : ''}.`,
       crumbs: [HOME, HUB],
       eyebrow: 'Free practice',
-      h1: 'JAMB, WAEC and NECO practice questions',
+      h1: built.length > 5 ? 'Exam practice questions with answers' : `${examNames(built)} practice questions`,
       intro: `${total.toLocaleString('en')} practice questions with answers and explanations, by exam, subject and topic.`,
       wide: true,
       ogType: 'website',
@@ -97,7 +116,12 @@ export function practicePages({ groups, libraries, notesFor, books }) {
       body: [
         ...Object.keys(EXAMS)
           .filter((exam) => byExam(exam).length)
-          .map((exam) => section(`${EXAMS[exam].full} practice questions`, `<p class="kz-lead"><a href="${ROOT}/${exam}">All ${EXAMS[exam].name} subjects</a></p>${tiles(byExam(exam).map(subjectTile))}`)),
+          .map((exam) =>
+            section(
+              `${EXAMS[exam].label ?? EXAMS[exam].full} practice questions`,
+              `<p class="kz-lead"><a href="${ROOT}/${exam}">All ${EXAMS[exam].label ?? EXAMS[exam].name} subjects</a></p>${tiles(byExam(exam).map(subjectTile))}`,
+            ),
+          ),
       ].join('\n'),
     }),
   });
@@ -107,6 +131,7 @@ export function practicePages({ groups, libraries, notesFor, books }) {
     const own = byExam(exam);
     if (!own.length) continue;
     const E = EXAMS[exam];
+    const L = E.label ?? E.name;
     const path = `${ROOT}/${exam}`;
     const count = own.reduce((n, g) => n + shown(g), 0);
     const formats = [...new Set(own.map((g) => `${g.papers[0].questions.length} questions in ${g.papers[0].minutes} minutes`))];
@@ -115,25 +140,28 @@ export function practicePages({ groups, libraries, notesFor, books }) {
       html: page({
         path,
         section: ROOT,
-        title: pageTitle(`${E.name} practice questions and answers, by subject | Knowzone`, `${E.name} practice questions and answers | Knowzone`),
-        description: `Free ${E.full} practice questions in ${list(own.map((g) => EXAM_SUBJECTS[g.subject]))}, with answers and explanations.`,
+        title: pageTitle(`${L} practice questions and answers, by subject | Knowzone`, `${L} practice questions and answers | Knowzone`),
+        description: `Free ${E.label ?? E.full} practice questions in ${list(own.map((g) => EXAM_SUBJECTS[g.subject]))}, with answers and explanations.`,
         crumbs: [HOME, HUB, { name: E.name, path }],
         eyebrow: E.full,
-        h1: `${E.name} practice questions with answers`,
+        h1: `${L} practice questions with answers`,
         intro: `${count.toLocaleString('en')} practice questions for ${E.about}, in ${plural(own.length, 'subject')}.`,
         wide: true,
-        cta: { ...appCta, title: `Practise ${E.name} in the app` },
+        cta: { ...appCta, title: `Practise ${E.real ? E.name : (E.practise ?? `for the ${E.name}`)} in the app` },
         jsonLd: [
           {
             '@context': 'https://schema.org',
             '@type': 'ItemList',
-            name: `${E.name} practice questions by subject`,
+            name: `${L} practice questions by subject`,
             itemListElement: own.map((g, i) => ({ '@type': 'ListItem', position: i + 1, name: label(g), url: `${ORIGIN}${subjectPath(g)}` })),
           },
         ],
         body: [
-          section('Choose a subject', `<p class="kz-lead">Each ${E.name} objective paper here has ${list(formats)}. Every question has its answer and an explanation.</p>${tiles(own.map(subjectTile))}`),
-          section('Other exams', chips(Object.keys(EXAMS).filter((e) => e !== exam && byExam(e).length).map((e) => ({ href: `${ROOT}/${e}`, name: `${EXAMS[e].name} practice questions` })))),
+          section(
+            'Choose a subject',
+            `<p class="kz-lead">Each ${E.real ? `${E.name} objective paper` : `${L} practice paper`} here has ${list(formats)}. Every question has its answer and an explanation.</p>${note(exam)}${tiles(own.map(subjectTile))}`,
+          ),
+          section('Other exams', chips(built.filter((e) => e !== exam).map((e) => ({ href: `${ROOT}/${e}`, name: `${EXAMS[e].label ?? EXAMS[e].name} practice questions` })))),
         ].join('\n'),
       }),
     });
@@ -144,9 +172,10 @@ export function practicePages({ groups, libraries, notesFor, books }) {
     const S = EXAM_SUBJECTS[g.subject];
     const base = subjectPath(g);
     const crumbs = [HOME, HUB, { name: E.name, path: `${ROOT}/${g.exam}` }, { name: S, path: base }];
-    const library = libraries.find((l) => l.id === g.subject);
+    const library = libraries.find((l) => l.id === notesSubject(g));
     const notesLink = library && { href: `${PATHS.learn}/${library.id}`, name: `${library.name} study notes` };
-    const sameSubject = groups.filter((o) => o.subject === g.subject && o.exam !== g.exam);
+    // The same subject in the exams that share its syllabus (JAMB, WAEC and NECO); GCSE Biology isn't WAEC Biology.
+    const sameSubject = groups.filter((o) => o.subject === g.subject && o.exam !== g.exam && E.family && EXAMS[o.exam].family === E.family);
     const paperPath = (p) => `${base}/paper-${p.number}`;
     const topicPath = (q) => `${base}/${g.topics.find((t) => t.name === q.topic)?.id ?? ''}`;
     const subjectCta = {
@@ -181,17 +210,18 @@ export function practicePages({ groups, libraries, notesFor, books }) {
         body: [
           section(
             'Practice papers',
-            tiles(
+            note(g.exam) +
+              tiles(
               g.papers.map((p) => ({
                 href: paperPath(p),
                 title: `${label(g)} practice paper ${p.number}`,
-                text: `${p.questions.length} questions · ${p.minutes} minutes in the exam`,
+                text: `${p.questions.length} questions · ${p.minutes} ${timing(g.exam)}`,
                 tag: p.free ? `All ${p.questions.length} questions` : `First ${p.shown.length} of ${p.questions.length} questions`,
               })),
             ),
           ),
           section('Questions by topic', tiles(g.topics.map((t) => ({ href: `${base}/${t.id}`, title: t.name, text: plural(t.questions.length, 'question') })))),
-          section(`More for ${S}`, chips([notesLink, bookList(g.subject), ...sameSubject.map((o) => ({ href: subjectPath(o), name: `${label(o)} practice questions` }))].filter(Boolean))),
+          section(`More for ${S}`, chips([notesLink, bookList(g), ...sameSubject.map((o) => ({ href: subjectPath(o), name: `${label(o)} practice questions` }))].filter(Boolean))),
         ].join('\n'),
       }),
     });
@@ -240,7 +270,7 @@ export function practicePages({ groups, libraries, notesFor, books }) {
                   { href: base, name: `All ${label(g)} topics` },
                   ...g.papers.map((p) => ({ href: paperPath(p), name: `Practice paper ${p.number}` })),
                   ...elsewhere.map((o) => ({ href: `${subjectPath(o)}/${t.id}`, name: `${t.name} for ${EXAMS[o.exam].name}` })),
-                  bookList(g.subject),
+                  bookList(g),
                 ].filter(Boolean),
               ),
             ),
@@ -261,15 +291,15 @@ export function practicePages({ groups, libraries, notesFor, books }) {
           section: ROOT,
           title: pageTitle(`${name} with answers | Knowzone`, `${name} | Knowzone`),
           description: p.free
-            ? `A full ${label(g)} practice paper: ${p.questions.length} questions in the real exam format (${p.minutes} minutes), each with its answer and explanation.`
+            ? `A full ${label(g)} practice paper: ${p.questions.length} ${E.real ? 'questions in the real exam format' : 'multiple-choice questions'} (${p.minutes} minutes), each with its answer and explanation.`
             : `The first ${p.shown.length} questions of ${name}, with answers and explanations. The full ${p.questions.length}-question paper is in the Knowzone app.`,
           crumbs: [...crumbs, { name: `Practice paper ${p.number}`, path }],
           eyebrow: label(g),
           h1: p.free ? `${name}: questions and answers` : `${name}: the first ${p.shown.length} questions`,
-          intro: `${p.questions.length} questions · ${p.minutes} minutes in the exam. ${p.free ? 'Try each question, then open its answer.' : `The first ${p.shown.length} are here; the rest are in the app.`}`,
+          intro: `${p.questions.length} questions · ${p.minutes} ${timing(g.exam)}. ${p.free ? 'Try each question, then open its answer.' : `The first ${p.shown.length} are here; the rest are in the app.`}`,
           cta: {
             title: hidden > 0 ? `Sit all ${p.questions.length} questions in the app` : 'Sit this paper against the clock',
-            text: `In the Knowzone app you can sit ${name} timed like the real exam, see your score by topic and ask Kora, the AI tutor, about any question.`,
+            text: `In the Knowzone app you can sit ${name} ${E.quiz ? 'against the clock' : (E.timed ?? 'timed like the real exam')}, see your score by topic and ask Kora, the AI tutor, about any question.`,
             href: APP.paper(p.id),
             label: 'Open this paper in the app',
           },
@@ -278,6 +308,7 @@ export function practicePages({ groups, libraries, notesFor, books }) {
             `        <ol class="kz-questions">
           ${p.shown.map((q) => question(q, { id: `q${q.n}`, from: `Question ${q.n} · <a href="${esc(topicPath(q))}">${esc(q.topic)}</a>` })).join('\n          ')}
         </ol>`,
+            note(g.exam),
             hidden > 0
               ? `        <aside class="kz-callout">
           <h2>The other ${hidden} questions are in the app</h2>
@@ -287,7 +318,7 @@ export function practicePages({ groups, libraries, notesFor, books }) {
               : '',
             section(
               `More ${label(g)} practice`,
-              chips([...g.papers.filter((o) => o !== p).map((o) => ({ href: paperPath(o), name: `Practice paper ${o.number}` })), { href: base, name: `${label(g)} questions by topic` }, notesLink, bookList(g.subject)].filter(Boolean)),
+              chips([...g.papers.filter((o) => o !== p).map((o) => ({ href: paperPath(o), name: `Practice paper ${o.number}` })), { href: base, name: `${label(g)} questions by topic` }, notesLink, bookList(g)].filter(Boolean)),
             ),
           ].join('\n'),
         }),

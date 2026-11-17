@@ -1,0 +1,583 @@
+{
+ "id": "sat-math-p1",
+ "exam": "sat",
+ "subject": "math",
+ "year": null,
+ "number": 1,
+ "source": "ai",
+ "minutes": 70,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Nonlinear functions",
+   "q": "A circle has equation (x − 3)² + (y + 1)² = 25. What is the maximum value of y on the circle?",
+   "options": [
+    "−1",
+    "4",
+    "6",
+    "3"
+   ],
+   "answer": 1,
+   "explanation": "Center is at (3, −1) with radius 5. Maximum y is center y + radius = −1 + 5 = 4. A tempting wrong answer '6' arises from adding radius to the x-coordinate instead."
+  },
+  {
+   "n": 2,
+   "topic": "Systems of two linear equations",
+   "q": "Jamal and Priya together have 86 stickers. Jamal has 8 more stickers than twice the number Priya has. How many stickers does Priya have?",
+   "options": [
+    "28",
+    "29",
+    "26",
+    "30"
+   ],
+   "answer": 2,
+   "explanation": "Let P be Priya's stickers, J Jamal's. J+P=86 and J = 2P+8. Substitute: (2P+8)+P=86 → 3P+8=86 → 3P=78 → P=26. A common error is solving 2P+8+P=86 as 2(P+8)+P or arithmetic mistakes leading to 28 or 29."
+  },
+  {
+   "n": 3,
+   "topic": "One-variable data: center and spread",
+   "q": "The ages (in years) of 5 campers are: 12, 14, 13, 14, 17. What is the median age?",
+   "options": [
+    "14",
+    "15",
+    "13",
+    "12"
+   ],
+   "answer": 0,
+   "explanation": "Sort the data: 12, 13, 14, 14, 17. With five values, the median is the middle value, which is the third: 14. A common error is to average two middle values when the count is odd."
+  },
+  {
+   "n": 4,
+   "topic": "One-variable data: center and spread",
+   "q": "A math teacher records test scores for 8 students: 70, 75, 80, 85, 90, 95, 100, 100. What is the interquartile range (IQR) of these scores?",
+   "options": [
+    "15",
+    "25",
+    "10",
+    "20"
+   ],
+   "answer": 3,
+   "explanation": "For 8 data points, median is average of 4th and 5th values: (85+90)/2=87.5. Lower half (first 4): 70,75,80,85 → Q1 is median of those = (75+80)/2=77.5. Upper half (last 4): 90,95,100,100 → Q3 = (95+100)/2=97.5. IQR = Q3−Q1 = 97.5−77.5 = 20."
+  },
+  {
+   "n": 5,
+   "topic": "Inference from samples and margin of error",
+   "q": "A poll of 900 registered voters found that 486 said they would vote for Candidate A. Using the approximate margin of error for a proportion, calculate the 95% margin of error (expressed as a percentage, rounded to one decimal place). Use the formula MOE ≈ 1.96 × sqrt(p(1−p)/n) and express p as the sample proportion.",
+   "options": [
+    "3.3%",
+    "4.8%",
+    "2.4%",
+    "5.0%"
+   ],
+   "answer": 0,
+   "explanation": "The sample proportion p = 486/900 = 0.54. Compute sqrt(p(1−p)/n) = sqrt(0.54×0.46/900) = sqrt(0.2484/900) = sqrt(0.000276) ≈ 0.0166. Multiply by 1.96 gives MOE ≈ 1.96×0.0166 ≈ 0.0326, or 3.26%, which rounds to 3.3%. A common mistake is using 1/√n (which would give about 3.33%) or forgetting to multiply by 1.96."
+  },
+  {
+   "n": 6,
+   "topic": "Inference from samples and margin of error",
+   "q": "A researcher reports a 90% confidence interval for a population mean as (48.2, 51.6). Which of the following is a correct interpretation?",
+   "options": [
+    "The sample mean is 90% likely to be exactly halfway between 48.2 and 51.6.",
+    "If the same sampling procedure were repeated many times, about 90% of the intervals constructed that way would contain the true population mean.",
+    "90% of individuals in the population have values between 48.2 and 51.6.",
+    "There is a 90% probability that the population mean lies between 48.2 and 51.6 for this single interval."
+   ],
+   "answer": 1,
+   "explanation": "The correct interpretation of a confidence interval is about the long-run performance of the procedure: about 90% of such intervals would contain the true mean. It is incorrect to assign a probability to the population mean lying in this specific computed interval or to claim the interval describes individual values."
+  },
+  {
+   "n": 7,
+   "topic": "Two-variable data: models and scatterplots",
+   "q": "A scatterplot of weekly hours spent studying (x) and test score (y) suggests a linear fit y ≈ 6x + 50. A student studied 3 hours and scored 68. What is the residual for that student?",
+   "options": [
+    "−2",
+    "2",
+    "−4",
+    "−0"
+   ],
+   "answer": 3,
+   "explanation": "The predicted score for x = 3 is ŷ = 6(3)+50 = 18+50 = 68. The residual is actual minus predicted = 68−68 = 0. A common mistake is subtracting in the wrong order or miscomputing the prediction."
+  },
+  {
+   "n": 8,
+   "topic": "Two-variable data: models and scatterplots",
+   "q": "A linear model for the cost C (in dollars) of renting a car is given by C = 35 + 0.20d, where d is miles driven. Which statement is best supported by this model?",
+   "options": [
+    "The cost is proportional to miles driven with no fixed fee.",
+    "There is a fixed $35 base fee plus $0.20 for each mile driven.",
+    "Each additional mile driven decreases the total cost by $0.20.",
+    "The cost per mile decreases as distance increases."
+   ],
+   "answer": 1,
+   "explanation": "The model C = 35 + 0.20d shows a fixed intercept of $35 (base fee) plus $0.20 per mile. It does not show decreasing cost per mile or proportionality without a fixed fee, and additional miles add, not subtract, cost."
+  },
+  {
+   "n": 9,
+   "topic": "Two-variable data: models and scatterplots",
+   "q": "A dataset of 6 points has sample correlation r = −0.92 between x and y. Which conclusion is most appropriate?",
+   "options": [
+    "There is a strong positive association because −0.92 is close to 1 in magnitude.",
+    "There is a strong negative linear association between x and y; as x increases, y tends to decrease.",
+    "x causes y to decrease because correlation implies causation.",
+    "There is no relationship between x and y because r is close to −1 only for large samples."
+   ],
+   "answer": 1,
+   "explanation": "A correlation of −0.92 indicates a strong negative linear association: larger x values tend to come with smaller y values. It does not establish causation, and the sign indicates negative association, not positive."
+  },
+  {
+   "n": 10,
+   "topic": "Equivalent expressions",
+   "q": "Which of the following is equivalent to (2x²y)(3x³y⁻²)?",
+   "options": [
+    "6x⁻¹y",
+    "6x⁵y⁻¹",
+    "6x⁵y",
+    "5x⁶y"
+   ],
+   "answer": 1,
+   "explanation": "Multiply coefficients: 2×3 = 6. Add exponents for x: 2 + 3 = 5, so x⁵. Add exponents for y: 1 + (−2) = −1, so y⁻¹. Thus 6x⁵y⁻¹ is correct. Common errors are adding exponents incorrectly or treating negative exponents as positive."
+  },
+  {
+   "n": 11,
+   "topic": "Linear equations in one variable",
+   "q": "A landscaper charges $45 for materials plus $12 per hour for labor. If a customer pays $189 total, how many hours of labor were provided?",
+   "options": [
+    "12 hours",
+    "11 hours",
+    "10 hours",
+    "13 hours"
+   ],
+   "answer": 0,
+   "explanation": "Let h be hours. 45 + 12h = 189 → 12h = 144 → h = 12. Common mistakes are subtracting incorrectly or dividing by a wrong coefficient."
+  },
+  {
+   "n": 12,
+   "topic": "Linear inequalities",
+   "q": "A bakery sells cupcakes in boxes that hold 6 cupcakes each. A caterer needs at least 50 cupcakes. Let b be the number of boxes ordered. Which inequality gives the smallest whole-number b the caterer should order, and what is that b?",
+   "options": [
+    "6b ≥ 50, so b = 8",
+    "6b > 50, so b = 10",
+    "6b ≥ 50, so b = 9",
+    "6b > 50, so b = 9"
+   ],
+   "answer": 2,
+   "explanation": "Since each box has 6 cupcakes, 6b must be at least 50, so 6b ≥ 50. Solving gives b ≥ 50/6 ≈ 8.333, so the smallest whole-number b is 9. Using 6b > 50 is incorrect because 'at least 50' allows equality; b = 8 gives only 48 cupcakes, which is too few."
+  },
+  {
+   "n": 13,
+   "topic": "Right triangles and trigonometry",
+   "q": "A ladder leans against a vertical wall making a 65° angle with the ground. The top of the ladder reaches a point 13 ft above the ground. What is the length of the ladder, to the nearest tenth of a foot? (Use sin(65°) ≈ 0.9063.)",
+   "options": [
+    "13 × cos(65°) ≈ 5.5 ft",
+    "13 × sin(65°) ≈ 11.8 ft",
+    "13 ÷ cos(65°) ≈ 33.8 ft",
+    "13 ÷ sin(65°) ≈ 14.3 ft"
+   ],
+   "answer": 3,
+   "explanation": "If θ = 65° is the angle with the ground, the opposite side (height 13 ft) = ladder × sin(65°). So ladder = 13/sin(65°) ≈ 13/0.9063 ≈ 14.34 ft, rounded to 14.3 ft. Multiplying by sin(65°) would give the opposite, not the hypotenuse; using cosine would be appropriate only for adjacent, not the given height."
+  },
+  {
+   "n": 14,
+   "topic": "Nonlinear equations and systems",
+   "q": "Solve the system: y = x² − 4 and y = 2x − 1. What are the x-coordinates of the intersection points?",
+   "options": [
+    "x = 2 and x = −2",
+    "x = −1 only",
+    "x = −1 and x = 3",
+    "x = 1 and x = −3"
+   ],
+   "answer": 2,
+   "explanation": "Set x² − 4 = 2x − 1 → x² − 2x − 3 = 0 → (x − 3)(x + 1) = 0, so x = 3 or x = −1. The wrong answers come from incorrect factoring or solving; there are two intersections, not one."
+  },
+  {
+   "n": 15,
+   "topic": "Linear inequalities",
+   "q": "For which values of x is the inequality 3 − 2x < 7 true?",
+   "options": [
+    "x < −2",
+    "x ≥ −2",
+    "x ≤ −2",
+    "x > −2"
+   ],
+   "answer": 3,
+   "explanation": "Solve 3 − 2x < 7 → −2x < 4 → x > −2 (divide by −2 reverses inequality). The common mistake is failing to reverse the inequality sign when dividing by a negative number."
+  },
+  {
+   "n": 16,
+   "topic": "Nonlinear equations and systems",
+   "q": "The equation x² + y² = 25 and the line y = x − 1 intersect in two points. What are the y-coordinates of the intersection points?",
+   "options": [
+    "y = 0 and y = 5",
+    "y = 1 and y = −5",
+    "y = −4 and y = 3",
+    "y = −3 and y = 4"
+   ],
+   "answer": 2,
+   "explanation": "Substitute y = x − 1 into x² + y² = 25: x² + (x − 1)² = 25 → x² + x² − 2x +1 =25 → 2x² −2x −24 =0 → x² − x −12 =0 → (x −4)(x +3)=0 so x = 4 or x = −3. Then y = x −1 gives y = 3 or y = −4. The other choices come from sign or factoring errors."
+  },
+  {
+   "n": 17,
+   "topic": "Linear inequalities",
+   "q": "A clothing store marks a sweater up 30% from cost, then later discounts the marked price by 20%. If the cost to the store is $40, what is the final sale price?",
+   "options": [
+    "$40 × 1.30 × 0.80 = $41.60",
+    "$40 × (1.30 − 0.20) = $40 × 1.10 = $44.00",
+    "$40 × 0.80 = $32.00",
+    "$40 × 1.30 × 0.20 = $10.40"
+   ],
+   "answer": 0,
+   "explanation": "Marked price = $40 × 1.30 = $52. Discounting by 20% multiplies by 0.80, so final sale price = $52 × 0.80 = $41.60. Subtracting 20 percentage points (1.30 − 0.20) is incorrect because percent off is multiplicative on the marked price; multiplying by 0.20 gives the amount discounted, not the final price."
+  },
+  {
+   "n": 18,
+   "topic": "Lines, angles and triangles",
+   "q": "A circle has center O. Triangle OAB is isosceles with OA = OB = radius. The measure of central angle AOB is 140°. What is the measure of each base angle at A and B in triangle OAB?",
+   "options": [
+    "40°",
+    "50°",
+    "20°",
+    "70°"
+   ],
+   "answer": 2,
+   "explanation": "Triangle OAB has two equal sides OA and OB, so base angles at A and B are equal. Sum of angles is 180°, so each base angle = (180° − 140°)/2 = 40°/2 = 20°. Common wrong answers come from halving 140° (giving 70°) or subtracting 140° from 180° but not dividing (giving 40°)."
+  },
+  {
+   "n": 19,
+   "topic": "Percentages",
+   "q": "A jacket is on sale for 30% off its original price of $120, then a store applies an additional 10% discount to the sale price during a clearance event. What is the final price?",
+   "options": [
+    "$54.00",
+    "$75.60",
+    "$66.00",
+    "$84.00"
+   ],
+   "answer": 1,
+   "explanation": "First discount: 30% off $120 leaves 70% of $120, which is $84. Then additional 10% off $84 leaves 90% of $84, which is 0.9×84 = $75.60. A common error is subtracting 40% total from the original ($72) or multiplying discounts instead of applying sequentially."
+  },
+  {
+   "n": 20,
+   "topic": "Two-variable data: models and scatterplots",
+   "q": "A study finds a strong positive linear relationship between hours studied (x) and test score (y) with regression line y = 5x + 60 and sample correlation r ≈ 0.9. If a student studies 3 additional hours beyond their usual 4 hours, what increase in predicted score does the model give?",
+   "options": [
+    "45 points",
+    "3 points",
+    "5 points",
+    "15 points"
+   ],
+   "answer": 3,
+   "explanation": "Slope 5 means each additional hour predicts an increase of 5 points in score. Studying 3 additional hours increases predicted score by 3×5 = 15 points. The high correlation r ≈ 0.9 indicates predictions are relatively reliable but does not change the slope value."
+  },
+  {
+   "n": 21,
+   "topic": "Equivalent expressions",
+   "q": "Simplify the expression 3(2x − 5) − 4(x + 1).",
+   "options": [
+    "6x − 1",
+    "−2x − 2",
+    "−x − 20",
+    "2x − 19"
+   ],
+   "answer": 3,
+   "explanation": "Distribute: 3(2x − 5) = 6x − 15 and −4(x + 1) = −4x − 4. Combine like terms: (6x − 4x) + (−15 − 4) = 2x − 19. The choice 6x − 1 comes from adding −15 and −4 incorrectly, and −2x − 2 or −x − 20 are results of sign or distribution mistakes."
+  },
+  {
+   "n": 22,
+   "topic": "Equivalent expressions",
+   "q": "Which expression is equivalent to (x² − 9)/(x − 3) for x ≠ 3?",
+   "options": [
+    "x + 3",
+    "x + 9/(x − 3)",
+    "x − 3",
+    "x² − 3"
+   ],
+   "answer": 0,
+   "explanation": "Factor numerator: x² − 9 = (x − 3)(x + 3). Cancel (x − 3) for x ≠ 3 to get x + 3. The choice x − 3 would come from reversing the sign, x + 9/(x − 3) shows incomplete cancellation, and x² − 3 is an unrelated mis-simplification."
+  },
+  {
+   "n": 23,
+   "topic": "Equivalent expressions",
+   "q": "Write an equivalent expression to 4/(1/x) assuming x ≠ 0.",
+   "options": [
+    "1/4x",
+    "4/x",
+    "x/4",
+    "4x"
+   ],
+   "answer": 3,
+   "explanation": "1/x is the reciprocal of x, so 4 divided by 1/x equals 4 × x = 4x. The answer 4/x would be 4 times the reciprocal, 1/4x and x/4 reflect misplaced reciprocals or inversion errors."
+  },
+  {
+   "n": 24,
+   "topic": "Linear inequalities",
+   "q": "Solve the inequality 3 − 2x < 9 and write the solution in interval notation.",
+   "options": [
+    "(-3, 3)",
+    "(-∞, -3)",
+    "(-∞, 3)",
+    "(-3, ∞)"
+   ],
+   "answer": 3,
+   "explanation": "3 − 2x < 9 → subtract 3: −2x < 6 → divide by −2 and reverse inequality: x > −3. In interval notation that is (−3, ∞). The choice (−∞, −3) reverses the inequality direction, (−∞, 3) and (−3, 3) are unrelated bounds."
+  },
+  {
+   "n": 25,
+   "topic": "Linear inequalities",
+   "q": "A café wants to buy at least 200 pounds of coffee for the season. If each 12-pound bag costs $22, what inequality represents the number b of bags they should buy, and what is the least whole number of bags needed?",
+   "options": [
+    "Inequality: b ≥ 200/22; least whole-number b = 10",
+    "Inequality: 12b > 200; least whole-number b = 17",
+    "Inequality: 12b ≥ 200; least whole-number b = 16",
+    "Inequality: 12b ≥ 200; least whole-number b = 17"
+   ],
+   "answer": 3,
+   "explanation": "They need at least 200 pounds: 12b ≥ 200 → b ≥ 200/12 ≈ 16.666..., so the least whole number of bags is 17. Using strict > would still give 17 but writing b ≥ 200/22 confuses pounds with dollars and 16 incorrectly rounds down."
+  },
+  {
+   "n": 26,
+   "topic": "Right triangles and trigonometry",
+   "q": "A ladder leans against a vertical wall. The ladder is 13 ft long and makes an angle of 60° with the ground. How high up the wall does the ladder reach (to the nearest tenth of a foot)?",
+   "options": [
+    "11.3 ft",
+    "6.5 ft",
+    "11.8 ft",
+    "12.0 ft"
+   ],
+   "answer": 0,
+   "explanation": "Height = 13 × sin(60°) = 13 × (√3/2) ≈ 13 × 0.866025 = 11.2583..., which rounds to 11.3 ft. The value 6.5 ft would be 13×sin(30°) or half the length; 11.8 and 12.0 are small rounding errors or use of cosine instead of sine."
+  },
+  {
+   "n": 27,
+   "topic": "Right triangles and trigonometry",
+   "q": "In a right triangle, the side opposite angle A is 7, the side adjacent to angle A is 24. What is tan(A) and what is the length of the hypotenuse?",
+   "options": [
+    "tan(A) = 7/24; hypotenuse = 25",
+    "tan(A) = 24/7; hypotenuse = 25",
+    "tan(A) = 24/7; hypotenuse = √49 + 24",
+    "tan(A) = 7/24; hypotenuse = √577"
+   ],
+   "answer": 0,
+   "explanation": "tan(A) = opposite/adjacent = 7/24. Hypotenuse by Pythagorean theorem: √(7² + 24²) = √(49 + 576) = √625 = 25. The choices with 24/7 invert the ratio; √577 is from adding incorrectly, and √49 + 24 is not the Pythagorean sum under the square root."
+  },
+  {
+   "n": 28,
+   "topic": "Nonlinear functions",
+   "q": "A ball is thrown upward and its height h (in meters) after t seconds is h = −5t² + 20t + 2. What is the maximum height reached by the ball?",
+   "options": [
+    "12 meters",
+    "18 meters",
+    "22 meters",
+    "20 meters"
+   ],
+   "answer": 2,
+   "explanation": "The quadratic's vertex occurs at t = −b/(2a) = −20/(2·−5) = 2 s. h(2) = −5(4) + 40 + 2 = −20 + 40 + 2 = 22 m. Common mistakes: using t = b/(2a) without sign or evaluating at wrong t gives the other listed values."
+  },
+  {
+   "n": 29,
+   "topic": "Nonlinear functions",
+   "q": "The function f(x) = x³ − 6x² + 9x models a relation. For which x does f(x) = 0? (List all real zeros.)",
+   "options": [
+    "x = 0 and x = 3 (with multiplicity 2)",
+    "x = 0, 1, 3",
+    "x = 3 only",
+    "x = 0 and x = 2"
+   ],
+   "answer": 0,
+   "explanation": "Factor f(x) = x(x² − 6x + 9) = x(x − 3)², so zeros are x = 0 and x = 3 (the factor (x − 3) is squared). The option listing x = 0, 1, 3 is wrong because x = 1 is not a root; x = 2 is not a root; x = 3 only omits x = 0."
+  },
+  {
+   "n": 30,
+   "topic": "Systems of two linear equations",
+   "q": "A school club sells chocolate bars and granola bars to raise money. They sell 12 items and collect $30. If a chocolate bar costs $3 and a granola bar costs $2, how many chocolate bars were sold?",
+   "options": [
+    "4",
+    "5",
+    "6",
+    "8"
+   ],
+   "answer": 2,
+   "explanation": "Let c be number of chocolate bars and g number of granola bars: c + g = 12 and 3c + 2g = 30. From first, g = 12 − c. Substitute: 3c + 2(12 − c) = 30 → 3c + 24 − 2c = 30 → c = 6. Options like 4 or 8 come from arithmetic errors solving the system."
+  },
+  {
+   "n": 31,
+   "topic": "Systems of two linear equations",
+   "q": "Two trains leave the same station at the same time on parallel tracks. One travels east at 60 mph, and the other travels west at 40 mph. After how many hours will they be 500 miles apart?",
+   "options": [
+    "6 hours",
+    "5 hours",
+    "8 hours",
+    "4 hours"
+   ],
+   "answer": 1,
+   "explanation": "Since they move in opposite directions, their separation increases at 60 + 40 = 100 mph. Time = distance/rate = 500/100 = 5 hours. Mistakes come from using only one train's speed or incorrect division."
+  },
+  {
+   "n": 32,
+   "topic": "Probability and conditional probability",
+   "q": "A bag contains 5 red marbles and 7 blue marbles. Two marbles are drawn at random without replacement. What is the probability both are red?",
+   "options": [
+    "5/33",
+    "1/6",
+    "5/24",
+    "25/144"
+   ],
+   "answer": 0,
+   "explanation": "Probability first red = 5/12, then second red = 4/11, so product = (5/12)(4/11) = 20/132 = 5/33. 25/144 is (5/12)² which assumes replacement; 1/6 and 5/24 are other incorrect simplifications."
+  },
+  {
+   "n": 33,
+   "topic": "Probability and conditional probability",
+   "q": "A school has 60% of students in band and 30% of students who play soccer. If 18% of students play both band and soccer, what is the probability that a randomly selected student plays soccer given that they are in band?",
+   "options": [
+    "0.60",
+    "0.18",
+    "0.30",
+    "0.50"
+   ],
+   "answer": 2,
+   "explanation": "Conditional probability P(soccer | band) = P(both)/P(band) = 0.18/0.60 = 0.30. 0.18 is P(both) not conditional; 0.50 and 0.60 come from misdividing or confusing the given percentages."
+  },
+  {
+   "n": 34,
+   "topic": "One-variable data: center and spread",
+   "q": "The following test scores out of 100 are for six students: 72, 85, 91, 85, 78, 89. What is the median score?",
+   "options": [
+    "85",
+    "84",
+    "85.5",
+    "78"
+   ],
+   "answer": 0,
+   "explanation": "Sort scores: 72, 78, 85, 85, 89, 91. With six values, median is average of third and fourth: (85 + 85)/2 = 85. 84 and 85.5 would be results if misidentifying positions; 78 is the second value, not median."
+  },
+  {
+   "n": 35,
+   "topic": "One-variable data: center and spread",
+   "q": "A dataset has mean 50 and standard deviation 5. If every data value is increased by 8, what are the new mean and standard deviation?",
+   "options": [
+    "Mean 42, standard deviation 5",
+    "Mean 58, standard deviation 8",
+    "Mean 58, standard deviation 5",
+    "Mean 58, standard deviation 13"
+   ],
+   "answer": 2,
+   "explanation": "Adding a constant shifts the mean by that constant: 50 + 8 = 58. Standard deviation is unchanged by adding a constant, so it remains 5. Errors include adding to the SD or subtracting from the mean."
+  },
+  {
+   "n": 36,
+   "topic": "Linear functions",
+   "q": "A line has slope 3 and passes through the point (2, −1). Which equation represents this line in slope-intercept form y = mx + b?",
+   "options": [
+    "y = 1/3 x − 7",
+    "y = 3x − 7",
+    "y = 3x + 5",
+    "y = 3x + 1"
+   ],
+   "answer": 1,
+   "explanation": "Use y = mx + b with m = 3. Substitute (2, −1): −1 = 3(2) + b, so b = −7. Thus the equation is y = 3x − 7. The choice y = 3x + 5 comes from adding instead of solving for b; y = 3x + 1 is an arithmetic error; y = 1/3 x − 7 has the wrong slope."
+  },
+  {
+   "n": 37,
+   "topic": "Percentages",
+   "q": "A jacket originally costs $80. It is first discounted 25% off the original price, and then that sale price is reduced by an additional 20%. What is the final price of the jacket?",
+   "options": [
+    "$60",
+    "$56",
+    "$44",
+    "$48"
+   ],
+   "answer": 3,
+   "explanation": "First discount gives 80 × 0.75 = $60. Then reduce that by 20%: 60 × 0.80 = $48. The $44 error would correspond to subtracting 45% directly from $80 (which is not correct for successive discounts); $60 is after the first discount only; $56 is 80 × 0.7, which would be a single 30% discount, not successive 25% and 20%."
+  },
+  {
+   "n": 38,
+   "topic": "Area and volume",
+   "q": "A solid is formed by removing a right circular cone from the top of a right circular cylinder. The cylinder and cone share the same base radius of 4 ft and the same height of 9 ft. What is the volume of the remaining solid in terms of π (cubic feet)?",
+   "options": [
+    "144π",
+    "108π",
+    "48π",
+    "96π"
+   ],
+   "answer": 3,
+   "explanation": "Cylinder volume = πr²h = π(4²)(9) = 144π. Cone volume = (1/3)πr²h = (1/3)·144π = 48π. Subtracting gives 144π − 48π = 96π. 48π is the cone volume only; 144π is the full cylinder volume; 108π would be an incorrect subtraction (144π − 36π) from a wrong cone calculation."
+  },
+  {
+   "n": 39,
+   "topic": "Lines, angles and triangles",
+   "q": "In triangle ABC, ∠A = 50° and ∠B = 60°. What is the measure, in degrees, of an exterior angle at vertex C (that is, the angle formed by extending side BC past C)?",
+   "options": [
+    "50°",
+    "70°",
+    "120°",
+    "110°"
+   ],
+   "answer": 3,
+   "explanation": "An exterior angle at C equals the sum of the two remote interior angles, ∠A + ∠B = 50° + 60° = 110°. The value 70° is the supplement of 110° (180° − 110°), 120° is incorrect addition, and 50° repeats ∠A and is not the exterior angle at C."
+  },
+  {
+   "n": 40,
+   "topic": "Linear functions",
+   "q": "Two mobile phone plans charge monthly fees plus per-minute rates. Plan A charges $20 per month plus $0.10 per minute. Plan B charges $5 per month plus $0.25 per minute. For how many minutes of talk time in a month do the two plans cost the same?",
+   "options": [
+    "75 minutes",
+    "150 minutes",
+    "60 minutes",
+    "100 minutes"
+   ],
+   "answer": 3,
+   "explanation": "Set total costs equal: 20 + 0.10m = 5 + 0.25m. Subtract 0.10m and 5: 15 = 0.15m, so m = 15 ÷ 0.15 = 100 minutes. 150 would come from dividing by 0.10 instead of 0.15; 60 and 75 are other arithmetic mistakes."
+  },
+  {
+   "n": 41,
+   "topic": "Nonlinear equations and systems",
+   "q": "The system of equations y = x² − 4 and y = 2x + 1 has two intersection points. What is the x-coordinate of the intersection point with the larger x-value?",
+   "options": [
+    "−1 + √6",
+    "1 + √6",
+    "−1 − √6",
+    "1 − √6"
+   ],
+   "answer": 1,
+   "explanation": "Set x² − 4 = 2x + 1, so x² − 2x − 5 = 0. Quadratic formula gives x = [2 ± √(4 + 20)]/2 = 1 ± √6. The larger x-value is 1 + √6. The other choices are the smaller root or algebraic sign errors from the quadratic formula."
+  },
+  {
+   "n": 42,
+   "topic": "Circles",
+   "q": "A circle has center at the origin and radius 10. A chord is located 6 units from the center (measured along the perpendicular from the center to the chord). What is the length of that chord?",
+   "options": [
+    "12",
+    "16",
+    "8",
+    "20"
+   ],
+   "answer": 1,
+   "explanation": "If d is distance from center to chord, half the chord length is √(r² − d²) = √(100 − 36) = √64 = 8, so chord length is 2×8 = 16. The answer 8 is half the chord, 12 and 20 come from incorrect computations of √(100 − 36) or mixing up diameter with chord."
+  },
+  {
+   "n": 43,
+   "topic": "Linear equations in two variables",
+   "q": "A line passes through the point (4, −1) and has slope −3/2. Which equation is equivalent to the equation of this line?",
+   "options": [
+    "y = −(3/2)x − 5",
+    "y = −(3/2)x + 5",
+    "y = (2/3)x + 5",
+    "y = −(3/2)x + 1"
+   ],
+   "answer": 1,
+   "explanation": "Use y = mx + b with m = −3/2 and substitute (4, −1): −1 = (−3/2)(4) + b = −6 + b, so b = 5. Thus y = −(3/2)x + 5. The other choices have wrong signs or swapped slope and reciprocal slope or miscomputed the y-intercept."
+  },
+  {
+   "n": 44,
+   "topic": "Ratios, rates, proportions and units",
+   "q": "A 2,400-gallon storage tank is being emptied by two pumps. Pump A removes water at a constant 200 gallons per hour for the whole time. Pump B removes water at a constant 150 gallons per hour but is turned off after 4 hours. How many hours after they start will the tank be empty?",
+   "options": [
+    "12",
+    "10",
+    "9",
+    "8"
+   ],
+   "answer": 2,
+   "explanation": "In the first 4 hours both pumps run, removing (200 + 150)×4 = 350×4 = 1,400 gallons. After that only Pump A runs at 200 gal/hr. Remaining volume is 2,400 − 1,400 = 1,000 gallons, which takes 1,000/200 = 5 more hours. Total time is 4 + 5 = 9 hours. The tempting 8 or 10 result from miscomputing the initial removal or the remaining time."
+  }
+ ]
+}

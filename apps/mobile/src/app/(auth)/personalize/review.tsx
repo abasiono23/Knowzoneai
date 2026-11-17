@@ -12,7 +12,7 @@ import { api } from '@/lib/api';
 import {
   AGE_GROUPS,
   EDUCATION_LEVELS,
-  EXAMS,
+  examLabel,
   FORMATS,
   GOALS,
   INTERESTS,
@@ -31,11 +31,12 @@ import {
   type Step,
 } from '@/lib/personalization';
 import { usePersonalization } from '@/lib/personalization-store';
+import { chosenRegion, guessRegion, regionLabel } from '@/lib/region';
 import { useSession } from '@/lib/session';
 
 export default function ReviewScreen() {
   const { profile: p } = usePersonalization();
-  const { setUser } = useSession();
+  const { user, setUser } = useSession();
   const { t } = useTranslation('personalize');
   const [error, setError] = useState<string | null>(null);
   const type = learnerKey(p.learnerType);
@@ -45,16 +46,25 @@ export default function ReviewScreen() {
 
   const exam = p.examGoals.includes(NO_EXAM)
     ? t('noExam')
-    : labels(p.examGoals, EXAMS[type]) +
+    : (p.examGoals.map((id) => examLabel(id, type, p.region)).join(', ') || t('notSet')) +
       (p.examMonth ? ` · ${upcomingMonths().find((m) => m.id === p.examMonth)?.label ?? ''}` : '');
 
   const teacher = p.learnerType === 'teacher';
+  const [guess] = useState(guessRegion);
+  const signedUpWith = chosenRegion(user);
+  const region = p.region ?? signedUpWith ?? guess;
   const allRows: { step: Step; icon: keyof typeof Ionicons.glyphMap; label: string; value: string }[] = [
     {
       step: 'learner-type',
       icon: 'person',
       label: t('review.rows.learnerType'),
       value: labelOf(LEARNER_TYPES, p.learnerType),
+    },
+    {
+      step: 'region',
+      icon: 'earth',
+      label: t('review.rows.region'),
+      value: regionLabel(region),
     },
     {
       step: 'teacher-role',
@@ -127,12 +137,12 @@ export default function ReviewScreen() {
     },
   ];
   // Only show the questions this user actually answered on their branch.
-  const rows = allRows.filter((r) => stepsFor(p.learnerType).includes(r.step));
+  const rows = allRows.filter((r) => stepsFor(p.learnerType, !signedUpWith).includes(r.step));
 
   const save = async () => {
     setError(null);
     try {
-      const res = await api.savePersonalization(p);
+      const res = await api.savePersonalization({ ...p, region });
       setUser(res.user);
     } catch (e) {
       // The plan still builds from the local draft; saving retries when onboarding completes.

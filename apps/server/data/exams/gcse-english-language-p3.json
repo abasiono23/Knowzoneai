@@ -1,0 +1,418 @@
+{
+ "id": "gcse-english-language-p3",
+ "exam": "gcse",
+ "subject": "english-language",
+ "year": null,
+ "number": 3,
+ "source": "ai",
+ "minutes": 35,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Spelling",
+   "q": "Which spelling is correct for the word meaning 'without doubt; certainly'?",
+   "options": [
+    "definitly",
+    "definately",
+    "definatly",
+    "definitely"
+   ],
+   "answer": 3,
+   "explanation": "The correct spelling is 'definitely', which has an 'i' after the 'f' and ends with '-itely'. 'Definately' is a common error because the spoken vowel is unclear."
+  },
+  {
+   "n": 2,
+   "topic": "Spelling",
+   "q": "Which spelling is correct for the word meaning 'a place to stay temporarily, such as on holiday'?",
+   "options": [
+    "accommodation",
+    "accommodaton",
+    "accomodation",
+    "acommodation"
+   ],
+   "answer": 0,
+   "explanation": "The correct spelling is 'accommodation', with double c and double m. It is related to 'accommodate', which also has double c and double m."
+  },
+  {
+   "n": 3,
+   "topic": "Retrieving explicit information",
+   "passage": "On Saturday morning, the youth council in Leeds opened a repair café in the community hall on Marsh Lane. Twelve volunteers, including Aisha from the college and Mateusz from the local bike shop, set up tables for broken lamps, kettles and bicycles. The event ran from 10:00 until 13:30. Visitors paid £2 for a repair token, and any money left after buying spare parts went to the hall's roof fund. By midday, the volunteers had mended nineteen items; by closing time, that number had risen to twenty-eight. Priya, the youth council chair, said the busiest table was the bicycle one, where seven bikes were fixed. The next repair café is planned for the first Saturday in March, and the group hopes to add a table for small electrical toys.",
+   "q": "According to the passage, at what time did the repair café finish?",
+   "options": [
+    "10:00",
+    "12:00",
+    "13:00",
+    "13:30"
+   ],
+   "answer": 3,
+   "explanation": "The passage states that the event ran from 10:00 until 13:30, so 13:30 is the finishing time. 12:00 is only the point by which nineteen items had been mended, not the end time."
+  },
+  {
+   "n": 4,
+   "topic": "Retrieving explicit information",
+   "passage": "On Saturday morning, the youth council in Leeds opened a repair café in the community hall on Marsh Lane. Twelve volunteers, including Aisha from the college and Mateusz from the local bike shop, set up tables for broken lamps, kettles and bicycles. The event ran from 10:00 until 13:30. Visitors paid £2 for a repair token, and any money left after buying spare parts went to the hall's roof fund. By midday, the volunteers had mended nineteen items; by closing time, that number had risen to twenty-eight. Priya, the youth council chair, said the busiest table was the bicycle one, where seven bikes were fixed. The next repair café is planned for the first Saturday in March, and the group hopes to add a table for small electrical toys.",
+   "q": "According to the passage, how many items had the volunteers mended by closing time?",
+   "options": [
+    "Nineteen",
+    "Twenty-eight",
+    "Twelve",
+    "Seven"
+   ],
+   "answer": 1,
+   "explanation": "By closing time, the number had risen to twenty-eight. Nineteen was the number by midday, and seven was the number of bicycles fixed, not the total number of items."
+  },
+  {
+   "n": 5,
+   "topic": "Retrieving explicit information",
+   "passage": "On Saturday morning, the youth council in Leeds opened a repair café in the community hall on Marsh Lane. Twelve volunteers, including Aisha from the college and Mateusz from the local bike shop, set up tables for broken lamps, kettles and bicycles. The event ran from 10:00 until 13:30. Visitors paid £2 for a repair token, and any money left after buying spare parts went to the hall's roof fund. By midday, the volunteers had mended nineteen items; by closing time, that number had risen to twenty-eight. Priya, the youth council chair, said the busiest table was the bicycle one, where seven bikes were fixed. The next repair café is planned for the first Saturday in March, and the group hopes to add a table for small electrical toys.",
+   "q": "What did the money left after buying spare parts go towards?",
+   "options": [
+    "A youth council trip",
+    "The hall's roof fund",
+    "Extra repair tools",
+    "A new bike shed"
+   ],
+   "answer": 1,
+   "explanation": "The passage says any money left after buying spare parts went to the hall's roof fund. A bike shop is mentioned only as the workplace of one volunteer, so it is not where the leftover money went."
+  },
+  {
+   "n": 6,
+   "topic": "Structure of a text",
+   "passage": "The market square was already crowded when Leila arrived. Stallholders called over the clatter of pans, a bus sighed at the lights, and the clock above the bank showed half past nine. She pulled her scarf tighter and checked the list in her hand: bread, batteries, a birthday card for her brother. Near the fountain, a fiddler played a quick tune, and two children spun in circles until their mother called them back. Leila was about to join the queue at the bakery when she noticed a small envelope on the ground. It was addressed to someone called Mr Iqbal. The noise of the market seemed to step back. She picked it up, turned it over, and looked towards the crowded post office on the corner.",
+   "q": "How does the sentence 'The noise of the market seemed to step back.' affect the structure of the passage?",
+   "options": [
+    "It speeds up the action by introducing a sudden chase.",
+    "It creates a comic tone by describing an impossible event.",
+    "It switches the reader to the viewpoint of the fiddler.",
+    "It slows the pace and narrows attention onto the discovered envelope."
+   ],
+   "answer": 3,
+   "explanation": "The short sentence follows the general market description and marks a shift from background noise to Leila's private focus on the envelope. It does not introduce a chase or change viewpoint; it deepens concentration."
+  },
+  {
+   "n": 7,
+   "topic": "Structure of a text",
+   "passage": "The market square was already crowded when Leila arrived. Stallholders called over the clatter of pans, a bus sighed at the lights, and the clock above the bank showed half past nine. She pulled her scarf tighter and checked the list in her hand: bread, batteries, a birthday card for her brother. Near the fountain, a fiddler played a quick tune, and two children spun in circles until their mother called them back. Leila was about to join the queue at the bakery when she noticed a small envelope on the ground. It was addressed to someone called Mr Iqbal. The noise of the market seemed to step back. She picked it up, turned it over, and looked towards the crowded post office on the corner.",
+   "q": "What is the effect of the list of items Leila checks in her hand?",
+   "options": [
+    "It pauses the narrative to describe the post office in detail.",
+    "It gives ordinary personal detail before the discovery of the envelope disrupts her routine.",
+    "It provides a flashback to an earlier visit to the market.",
+    "It suggests that Leila has already found the envelope."
+   ],
+   "answer": 1,
+   "explanation": "The list of bread, batteries and a birthday card makes Leila's errand concrete and everyday. The later envelope creates a contrast with this routine, rather than being a flashback or a description of the post office."
+  },
+  {
+   "n": 8,
+   "topic": "Writing for audience and purpose",
+   "q": "A Year 10 student is writing a short speech to persuade classmates to donate books to a school book drive. Which sentence is most appropriate for the audience and purpose?",
+   "options": [
+    "Bring in one book you no longer need and help another student discover their next favourite read.",
+    "If you do not donate, you are letting the whole school down.",
+    "Books are educational materials and should be recycled responsibly.",
+    "It is a statutory requirement for all pupils to participate in the book-collection initiative."
+   ],
+   "answer": 0,
+   "explanation": "The sentence uses direct, friendly language and gives a simple action with a positive reason, which suits a persuasive speech to classmates. The formal wording 'statutory requirement' sounds like an official notice, while the threat about letting the school down would alienate the audience."
+  },
+  {
+   "n": 9,
+   "topic": "Writing for audience and purpose",
+   "q": "A student is writing a formal email to a local council asking for a crossing patrol near a school. Which sentence uses the most appropriate tone?",
+   "options": [
+    "I would be grateful if you could consider installing a crossing patrol on Mill Lane.",
+    "Can you, like, think about a crossing patrol outside our school?",
+    "Sort out a crossing patrol on Mill Lane as soon as possible.",
+    "You must do something about the crossing because it is dangerous."
+   ],
+   "answer": 0,
+   "explanation": "The sentence is polite and formal, with a clear request suited to a council email. The other choices are too informal, too blunt or too vague for this purpose."
+  },
+  {
+   "n": 10,
+   "topic": "Writing for audience and purpose",
+   "q": "A student is writing an information leaflet for new students at a college, explaining how to borrow library books. Which sentence best suits the purpose of giving clear information?",
+   "options": [
+    "Books can be borrowed; ask someone if you need help.",
+    "Borrowing books is, in essence, a straightforward process of reciprocal resource utilisation.",
+    "To borrow a book, take it to the self-service machine and scan your student card.",
+    "You had better figure out the machines before you try to take a book out."
+   ],
+   "answer": 2,
+   "explanation": "The sentence gives a clear, ordered instruction that a new student can follow. The jargon-filled wording is harder to understand, while the vague sentence leaves out the key steps."
+  },
+  {
+   "n": 11,
+   "topic": "Writer’s viewpoint and purpose",
+   "passage": "At first, the community kitchen on Bellamy Road seemed to me like a tidy performance: clean aprons, neat labels, volunteers smiling for a photograph. I had come to write a short report, not to peel onions. Then Mrs Nwosu handed me a bowl of bruised tomatoes and told me, with a grin, to rescue what I could. For an hour I stood at the steel table, cutting away soft patches while the room filled with the smell of garlic and the clatter of saucepans. Nobody praised me. Nobody needed to. By the time we carried the trays to the hall, I had stopped thinking about the report. The kitchen was not performing. It was working, and somehow I had been included in the work.",
+   "q": "Which statement best describes the writer's viewpoint towards the community kitchen by the end of the passage?",
+   "options": [
+    "It is useful mainly because it provides material for the narrator's report.",
+    "It is merely a clever display designed to impress visitors.",
+    "It is worthwhile because the narrator has joined in its practical work.",
+    "It is welcoming, but the narrator remains a detached observer."
+   ],
+   "answer": 2,
+   "explanation": "By the end, the narrator has stopped thinking about the report and feels 'included in the work', which shows that practical participation changes their view. The kitchen is initially suspected of being a display, but the final sentence rejects the idea that it is merely performing."
+  },
+  {
+   "n": 12,
+   "topic": "Vocabulary in context",
+   "passage": "At first, the community kitchen on Bellamy Road seemed to me like a tidy performance: clean aprons, neat labels, volunteers smiling for a photograph. I had come to write a short report, not to peel onions. Then Mrs Nwosu handed me a bowl of bruised tomatoes and told me, with a grin, to rescue what I could. For an hour I stood at the steel table, cutting away soft patches while the room filled with the smell of garlic and the clatter of saucepans. Nobody praised me. Nobody needed to. By the time we carried the trays to the hall, I had stopped thinking about the report. The kitchen was not performing. It was working, and somehow I had been included in the work.",
+   "q": "In the phrase 'a tidy performance', the word 'performance' most nearly means:",
+   "options": [
+    "an impressive show put on for other people",
+    "a difficult duty that must be completed",
+    "a musical event held in public",
+    "a play acted on a stage"
+   ],
+   "answer": 0,
+   "explanation": "The context of clean aprons, neat labels and volunteers smiling for a photograph suggests an outward display intended to impress. The literal meanings linked to theatre, duty or music do not fit the narrator's suspicious first impression."
+  },
+  {
+   "n": 13,
+   "topic": "Inference and implied meaning",
+   "passage": "At first, the community kitchen on Bellamy Road seemed to me like a tidy performance: clean aprons, neat labels, volunteers smiling for a photograph. I had come to write a short report, not to peel onions. Then Mrs Nwosu handed me a bowl of bruised tomatoes and told me, with a grin, to rescue what I could. For an hour I stood at the steel table, cutting away soft patches while the room filled with the smell of garlic and the clatter of saucepans. Nobody praised me. Nobody needed to. By the time we carried the trays to the hall, I had stopped thinking about the report. The kitchen was not performing. It was working, and somehow I had been included in the work.",
+   "q": "What can reasonably be inferred about Mrs Nwosu's attitude towards the narrator?",
+   "options": [
+    "She doubts that the narrator can write an accurate report.",
+    "She is annoyed that the narrator has arrived without warning.",
+    "She wants the kitchen to appear perfect for a photograph.",
+    "She welcomes the narrator by giving them useful work to do."
+   ],
+   "answer": 3,
+   "explanation": "Mrs Nwosu's grin and her instruction to 'rescue what I could' suggest a practical, welcoming manner. There is no evidence that she is annoyed or concerned about the report; instead she includes the narrator in the kitchen's real work."
+  },
+  {
+   "n": 14,
+   "topic": "Writer’s viewpoint and purpose",
+   "passage": "On the first Saturday of every month, the library annexe in Cathays turns into a repair café. The queue is not a neat line but a slow river of kettles, lamps and radios, each with a paper label describing its fault in careful handwriting. Mr Iqbal, who fixes clocks, works without hurry. He opens a radio, hums at the dust inside, and asks the owner what the sound was like before it stopped. At another table, a teenager learns to rewire a plug under the eye of her grandmother. The room smells of coffee and warm solder. Nothing here is thrown away until someone has tried, kindly and stubbornly, to understand why it broke. By noon, the tables are still crowded, and the bin remains almost empty.",
+   "q": "What is the writer's primary purpose in the passage about the repair café?",
+   "options": [
+    "To persuade libraries to provide free coffee.",
+    "To criticise people who take broken items to be repaired.",
+    "To celebrate patient repair and the sharing of practical skills.",
+    "To warn readers about the dangers of electrical repairs."
+   ],
+   "answer": 2,
+   "explanation": "The passage presents repair as careful, sociable and worthwhile, with details such as the teenager learning to rewire a plug and the bin remaining almost empty. It does not focus on danger, coffee as a main aim, or criticism of the people bringing items."
+  },
+  {
+   "n": 15,
+   "topic": "Inference and implied meaning",
+   "passage": "On the first Saturday of every month, the library annexe in Cathays turns into a repair café. The queue is not a neat line but a slow river of kettles, lamps and radios, each with a paper label describing its fault in careful handwriting. Mr Iqbal, who fixes clocks, works without hurry. He opens a radio, hums at the dust inside, and asks the owner what the sound was like before it stopped. At another table, a teenager learns to rewire a plug under the eye of her grandmother. The room smells of coffee and warm solder. Nothing here is thrown away until someone has tried, kindly and stubbornly, to understand why it broke. By noon, the tables are still crowded, and the bin remains almost empty.",
+   "q": "Which inference about Mr Iqbal is best supported by the passage?",
+   "options": [
+    "He tries to understand a fault before attempting a repair.",
+    "He refuses to work on anything except clocks.",
+    "He dislikes speaking to the owners of the items.",
+    "He is eager to finish each repair as quickly as possible."
+   ],
+   "answer": 0,
+   "explanation": "Mr Iqbal works without hurry and asks the owner what the sound was like before it stopped, showing that he investigates the fault carefully. This contradicts the ideas that he rushes, avoids conversation or refuses to work on other items."
+  },
+  {
+   "n": 16,
+   "topic": "Punctuation",
+   "q": "Which sentence correctly uses a semicolon to separate two closely related main clauses?",
+   "options": [
+    "The rain had stopped, the playground; was already filling with children.",
+    "The rain had stopped; the playground was already filling with children.",
+    "The rain had stopped, the playground was already filling with children.",
+    "The rain had stopped the playground; was already filling with children."
+   ],
+   "answer": 1,
+   "explanation": "The semicolon correctly separates two independent main clauses that are closely related. The comma version creates a comma splice, while the other options place semicolons or commas where they break the structure of the clauses."
+  },
+  {
+   "n": 17,
+   "topic": "Punctuation",
+   "q": "Which sentence correctly uses the possessive apostrophe for a plural noun?",
+   "options": [
+    "The athletes's equipment was checked before the race.",
+    "The athletes' equipment was checked before the race.",
+    "The athlete's equipment was checked before the race.",
+    "The athletes equipment was checked before the race."
+   ],
+   "answer": 1,
+   "explanation": "The apostrophe after the -s in 'athletes' shows that the equipment belongs to the athletes as a group. 'Athletes' without an apostrophe is a plural noun, 'athlete's' is singular possessive, and 'athletes's' is not the standard plural possessive form."
+  },
+  {
+   "n": 18,
+   "topic": "Punctuation",
+   "q": "Which sentence correctly uses commas around a non-essential relative clause?",
+   "options": [
+    "The market, which opened at dawn, was already busy.",
+    "The market, which opened at dawn was already busy.",
+    "The market which opened at dawn was, already busy.",
+    "The market which opened at dawn, was already busy."
+   ],
+   "answer": 0,
+   "explanation": "The pair of commas encloses the non-essential relative clause 'which opened at dawn', which can be removed without breaking the main sentence. Missing either comma, or inserting a comma before 'already', disrupts the sentence's structure."
+  },
+  {
+   "n": 19,
+   "topic": "Vocabulary in context",
+   "q": "Read the sentence: 'The council's plan was deliberately vague, leaving room to change the details later.' What does 'vague' most nearly mean in this sentence?",
+   "options": [
+    "firmly decided",
+    "not stated precisely",
+    "expensive to organise",
+    "generous to residents"
+   ],
+   "answer": 1,
+   "explanation": "Here 'vague' means not precise or specific, which fits the clue that details could be changed later. The other meanings do not fit the context of an intentionally unspecific plan."
+  },
+  {
+   "n": 20,
+   "topic": "Retrieving explicit information",
+   "passage": "At half past six, the community hall in Abergavenny was already warm with the smell of onions. Nadia set out thirty-four bowls on the trestle tables while her uncle Ifan stirred a vast pot of cawl. The plan was simple: anyone who came before eight o'clock would eat free, and later customers would pay what they could. A hand-painted sign above the hatch read, 'Warm food, open hearts.' Outside, rain stitched silver threads across the car park, but inside the windows steamed like breath on glass. By seven, a queue curled past the bus shelter. Nadia counted thirty-seven people and hurried to fetch three more bowls from the cupboard. Her brother, Tomas, filled water jugs and pretended not to notice when an elderly man slipped a crumpled five-pound note into the donation tin.",
+   "q": "According to the passage, by what time did people need to arrive to eat free?",
+   "options": [
+    "Before the queue reached the bus shelter",
+    "Before seven o'clock",
+    "Before eight o'clock",
+    "Before half past six"
+   ],
+   "answer": 2,
+   "explanation": "The passage states that anyone who came before eight o'clock would eat free, so eight o'clock was the deadline."
+  },
+  {
+   "n": 21,
+   "topic": "Retrieving explicit information",
+   "passage": "At half past six, the community hall in Abergavenny was already warm with the smell of onions. Nadia set out thirty-four bowls on the trestle tables while her uncle Ifan stirred a vast pot of cawl. The plan was simple: anyone who came before eight o'clock would eat free, and later customers would pay what they could. A hand-painted sign above the hatch read, 'Warm food, open hearts.' Outside, rain stitched silver threads across the car park, but inside the windows steamed like breath on glass. By seven, a queue curled past the bus shelter. Nadia counted thirty-seven people and hurried to fetch three more bowls from the cupboard. Her brother, Tomas, filled water jugs and pretended not to notice when an elderly man slipped a crumpled five-pound note into the donation tin.",
+   "q": "How many bowls had Nadia placed on the trestle tables before she fetched extra ones?",
+   "options": [
+    "Thirty-four",
+    "Forty",
+    "Thirty-seven",
+    "Three"
+   ],
+   "answer": 0,
+   "explanation": "The passage says Nadia set out thirty-four bowls on the trestle tables before she later counted thirty-seven people and fetched three more."
+  },
+  {
+   "n": 22,
+   "topic": "Language techniques and their effects",
+   "passage": "At half past six, the community hall in Abergavenny was already warm with the smell of onions. Nadia set out thirty-four bowls on the trestle tables while her uncle Ifan stirred a vast pot of cawl. The plan was simple: anyone who came before eight o'clock would eat free, and later customers would pay what they could. A hand-painted sign above the hatch read, 'Warm food, open hearts.' Outside, rain stitched silver threads across the car park, but inside the windows steamed like breath on glass. By seven, a queue curled past the bus shelter. Nadia counted thirty-seven people and hurried to fetch three more bowls from the cupboard. Her brother, Tomas, filled water jugs and pretended not to notice when an elderly man slipped a crumpled five-pound note into the donation tin.",
+   "q": "Which statement best explains the effect of the phrase 'rain stitched silver threads across the car park'?",
+   "options": [
+    "It proves that the windows in the hall were broken.",
+    "It creates an image of the rain as fine and silvery, contrasting the cold outside with the warm, welcoming hall.",
+    "It suggests the rain was heavy enough to flood the car park.",
+    "It shows that Nadia was worried the weather would stop people coming."
+   ],
+   "answer": 1,
+   "explanation": "The metaphor presents the rain as silver thread being stitched, creating a vivid image of fine rain that contrasts with the warm hall. It does not suggest flooding, Nadia's worry or broken windows."
+  },
+  {
+   "n": 23,
+   "topic": "Language techniques and their effects",
+   "passage": "At half past six, the community hall in Abergavenny was already warm with the smell of onions. Nadia set out thirty-four bowls on the trestle tables while her uncle Ifan stirred a vast pot of cawl. The plan was simple: anyone who came before eight o'clock would eat free, and later customers would pay what they could. A hand-painted sign above the hatch read, 'Warm food, open hearts.' Outside, rain stitched silver threads across the car park, but inside the windows steamed like breath on glass. By seven, a queue curled past the bus shelter. Nadia counted thirty-seven people and hurried to fetch three more bowls from the cupboard. Her brother, Tomas, filled water jugs and pretended not to notice when an elderly man slipped a crumpled five-pound note into the donation tin.",
+   "q": "What is the effect of the sign 'Warm food, open hearts'?",
+   "options": [
+    "It creates a welcoming tone by linking hot food with generosity and kindness.",
+    "It warns customers that some dishes are very spicy.",
+    "It shows that a professional artist painted the sign.",
+    "It suggests the hall is collecting money for a heart charity."
+   ],
+   "answer": 0,
+   "explanation": "The sign links literal warm food with the figurative idea of open, generous hearts, making the event seem welcoming and kind. It is not a warning about spice, a heart charity appeal or evidence about the artist."
+  },
+  {
+   "n": 24,
+   "topic": "Grammar and sentence structure",
+   "q": "Which sentence has correct subject-verb agreement?",
+   "options": [
+    "The box of old photographs are found in the attic.",
+    "The box of old photographs have been found in the attic.",
+    "The box of old photographs were found in the attic.",
+    "The box of old photographs was found in the attic."
+   ],
+   "answer": 3,
+   "explanation": "The grammatical subject is 'box', which is singular, so it needs the singular verb 'was'. The plural noun 'photographs' is part of a prepositional phrase and does not control the verb."
+  },
+  {
+   "n": 25,
+   "topic": "Grammar and sentence structure",
+   "q": "Which sentence correctly punctuates the non-defining relative clause?",
+   "options": [
+    "My cousin, who lives in Leicester, plays in a jazz band.",
+    "My cousin who lives in Leicester plays, in a jazz band.",
+    "My cousin who lives in Leicester, plays in a jazz band.",
+    "My cousin, who lives in Leicester plays, in a jazz band."
+   ],
+   "answer": 0,
+   "explanation": "The clause 'who lives in Leicester' adds extra, non-essential information about the cousin, so it must be enclosed by a comma before and after. Placing a comma after 'plays' incorrectly separates the verb from the rest of the sentence."
+  },
+  {
+   "n": 26,
+   "topic": "Spelling",
+   "q": "A student wants to write the word meaning 'to make someone feel shy or ashamed'. Which spelling is correct?",
+   "options": [
+    "embarras",
+    "embarrass",
+    "embarass",
+    "embarres"
+   ],
+   "answer": 1,
+   "explanation": "The correct spelling is 'embarrass', with a double r and a double s: e-m-b-a-r-r-a-s-s. Spellings with one r or one s are common errors."
+  },
+  {
+   "n": 27,
+   "topic": "Retrieving explicit information",
+   "passage": "Every second Saturday, the repair café in Bradford's Lister Mills opens its doors from ten until one. Visitors bring broken lamps, torn coats and silent radios, and volunteers try to mend them for free. Last month, the café saved sixty-eight kilograms of small electrical items from landfill. Organiser Priya Shah said the aim was not simply to fix objects but to share skills. At one table, retired engineer Mr Okafor taught two teenagers how to replace a plug safely. 'A repair is a conversation,' he explained, 'and the object remembers the care.' The café asks for a voluntary donation of £3 to cover tea and replacement fuses, though nobody is turned away if they cannot pay.",
+   "q": "According to the passage, how much does the repair café ask visitors to donate voluntarily?",
+   "options": [
+    "£10",
+    "£3",
+    "£5",
+    "Nothing, because repairs are always free"
+   ],
+   "answer": 1,
+   "explanation": "The passage states that the café asks for a voluntary donation of £3 to cover tea and replacement fuses, though nobody is turned away if they cannot pay."
+  },
+  {
+   "n": 28,
+   "topic": "Language techniques and their effects",
+   "passage": "Every second Saturday, the repair café in Bradford's Lister Mills opens its doors from ten until one. Visitors bring broken lamps, torn coats and silent radios, and volunteers try to mend them for free. Last month, the café saved sixty-eight kilograms of small electrical items from landfill. Organiser Priya Shah said the aim was not simply to fix objects but to share skills. At one table, retired engineer Mr Okafor taught two teenagers how to replace a plug safely. 'A repair is a conversation,' he explained, 'and the object remembers the care.' The café asks for a voluntary donation of £3 to cover tea and replacement fuses, though nobody is turned away if they cannot pay.",
+   "q": "What is the effect of Mr Okafor's phrase 'the object remembers the care'?",
+   "options": [
+    "It personifies the repaired object, suggesting that care gives it value and a kind of history.",
+    "It suggests Mr Okafor does not believe repairs are useful.",
+    "It shows the object has a working memory that helps it function.",
+    "It proves the café only repairs objects with sentimental value."
+   ],
+   "answer": 0,
+   "explanation": "The phrase personifies the object as able to remember, suggesting that the care involved in repair gives it value and history. It is figurative, not a literal claim that objects have memories."
+  },
+  {
+   "n": 29,
+   "topic": "Writing for audience and purpose",
+   "q": "A student is writing a short speech for a Year 11 assembly to persuade students to use the library’s quiet study room. Which approach best matches the audience and purpose?",
+   "options": [
+    "Use jokes that mock teachers and suggest students will get away with doing no work.",
+    "Use direct, encouraging sentences that explain how the quiet room can help students revise and invite them to try it.",
+    "Write a formal report with headings, statistics and no direct address to the students.",
+    "Write a legal-style notice listing penalties for talking, without explaining why the room is useful."
+   ],
+   "answer": 1,
+   "explanation": "The audience is Year 11 students and the purpose is persuasion, so a direct and encouraging tone with clear benefits and an invitation suits the task. A formal report would be too impersonal, while a notice focused only on penalties would not persuade students of the room’s value."
+  },
+  {
+   "n": 30,
+   "topic": "Structure of a text",
+   "passage": "The Tuesday after half-term, Nadia found the community centre’s side door unlocked. Inside, the hall smelled of floor polish and rain. A row of plastic chairs faced a whiteboard on which someone had written: 'Volunteer session — 4 p.m. — tea afterwards.' Nadia had come only to return a library book, but she stopped. At the far end, Mr Iqbal was arranging paint pots by colour while two girls argued cheerfully over which poster would go above the door. Nadia meant to leave; instead she picked up a chair and carried it towards the table. By four o’clock, the room was crowded. Someone laughed at a joke about biscuits. Nadia, who had expected to feel like an outsider, found herself passing out name stickers and explaining the rota to a nervous boy. When she finally stepped back into the grey afternoon, the street looked less unfamiliar.",
+   "q": "Which sentence best explains why the final sentence is an effective ending for the passage’s structure?",
+   "options": [
+    "It returns to the street outside and shows that Nadia’s perception has changed after the session.",
+    "It introduces a new character to create a cliffhanger.",
+    "It lists the volunteer tasks in the order Nadia completed them.",
+    "It repeats the exact words of the opening to create a circular structure."
+   ],
+   "answer": 0,
+   "explanation": "The passage begins with Nadia outside the community centre and ends with her stepping back outside, but the street now seems less unfamiliar because of what happened inside. This closing contrast gives the passage a clear sense of change rather than introducing a new plot or listing tasks."
+  }
+ ]
+}

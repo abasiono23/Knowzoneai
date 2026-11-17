@@ -462,6 +462,33 @@ const videos: Translation<typeof en> = {
     sceneHeading: 'Taken fage {{number}}',
     sceneNarration: 'Muryar fage {{number}}',
   },
+  kora: {
+    title: 'Darussa tare da Kora',
+    subtitle: 'Darussan minti uku da Kora ke koyarwa, kowanne da tambaya ɗaya ta gaggawa.',
+    name: 'Kora',
+    role: 'malamar ku ta AI',
+    english: 'Turanci',
+    minutes: 'minti {{n}}',
+    watched: 'An kalla',
+    open: 'Buɗe darasi: {{title}}',
+    groups: {
+      exam: 'Don {{exams}}',
+      cyber: 'Tsaron intanet',
+      skills: 'Dabarun karatu',
+    },
+    start: 'Fara darasi',
+    loading: 'Ana buɗe darasin…',
+    loadFailed: 'Darasin bai buɗe ba. Duba haɗin intanet ɗinka ka sake gwadawa.',
+    listFailed: 'Ba mu iya buɗe darussan ba. Duba haɗin intanet ɗinka ka sake gwadawa.',
+    part: 'Sashe na {{n}} cikin {{total}}: {{title}}',
+    pauseAndTry: 'Tsaya ka gwada',
+    continuesIn: 'Kora za ta ci gaba cikin daƙiƙa {{n}}',
+    continue: 'Ci gaba',
+    back10: 'Koma baya daƙiƙa 10',
+    finishedTitle: 'An gama darasin',
+    finishedBody: 'Madalla. Gwada wani darasi, ko ka tambayi Kora duk abin da bai bayyana maka ba.',
+    moreLessons: 'Ƙarin darussa',
+  },
 };
 
 export default videos;

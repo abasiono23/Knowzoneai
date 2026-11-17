@@ -1,0 +1,791 @@
+{
+ "id": "neco-chemistry-p3",
+ "exam": "neco",
+ "subject": "chemistry",
+ "year": null,
+ "number": 3,
+ "source": "ai",
+ "minutes": 60,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Chemical bonding",
+   "q": "Hydrogen sulfide, H₂S, has two bonding pairs and two lone pairs around the sulfur atom. Which shape best describes a molecule of H₂S?",
+   "options": [
+    "Tetrahedral",
+    "Trigonal planar",
+    "Linear",
+    "Bent (V-shaped)"
+   ],
+   "answer": 3,
+   "explanation": "The four electron pairs around sulfur give a tetrahedral electron-pair arrangement, but the two lone pairs occupy two vertices, so the molecular shape is bent (V-shaped). Linear or trigonal planar arrangements would not account for the two lone pairs present."
+  },
+  {
+   "n": 2,
+   "topic": "Chemical bonding",
+   "q": "Solid iodine, I₂, consists of separate I₂ molecules. Which force mainly holds these molecules together in the solid?",
+   "options": [
+    "Covalent bonds between separate I₂ molecules",
+    "London dispersion forces",
+    "Hydrogen bonds between iodine atoms",
+    "Ionic attractions between I⁺ and I⁻ ions"
+   ],
+   "answer": 1,
+   "explanation": "The covalent bond within each I₂ molecule is strong, but the attraction between neighbouring molecules is due to weak London dispersion forces. These weak intermolecular forces explain why iodine has a relatively low melting point. Ionic and hydrogen-bonding descriptions do not fit a non-polar molecular solid."
+  },
+  {
+   "n": 3,
+   "topic": "Rates of reaction and equilibrium",
+   "q": "At a certain temperature, a 1.00 dm³ flask at equilibrium contains 0.50 mol N₂, 0.50 mol H₂ and 0.50 mol NH₃ for the reaction N₂(g) + 3H₂(g) ⇌ 2NH₃(g). Calculate Kc.",
+   "options": [
+    "8.0 mol⁻² dm⁶",
+    "4.0 mol⁻² dm⁶",
+    "2.0 mol⁻² dm⁶",
+    "1.0 mol⁻² dm⁶"
+   ],
+   "answer": 1,
+   "explanation": "For the reaction, Kc = [NH₃]² ÷ ([N₂][H₂]³). In a 1.00 dm³ flask, [NH₃] = 0.50 mol dm⁻³, [N₂] = 0.50 mol dm⁻³ and [H₂] = 0.50 mol dm⁻³, so Kc = (0.50)² ÷ (0.50 × 0.50³) = 0.25 ÷ 0.0625 = 4.0. The concentration of hydrogen is cubed because 3 mol H₂ appear in the equation; ignoring this gives an incorrect value."
+  },
+  {
+   "n": 4,
+   "topic": "Rates of reaction and equilibrium",
+   "q": "For an endothermic reaction at equilibrium, which change increases the numerical value of the equilibrium constant K?",
+   "options": [
+    "Increasing the pressure",
+    "Adding a catalyst",
+    "Increasing the concentration of a reactant",
+    "Increasing the temperature"
+   ],
+   "answer": 3,
+   "explanation": "The equilibrium constant K depends only on temperature for a given reaction. For an endothermic forward reaction, increasing temperature shifts the position of equilibrium towards the products and increases K. Adding a catalyst changes the rate of attainment but not K, while pressure and concentration changes at constant temperature do not change K."
+  },
+  {
+   "n": 5,
+   "topic": "Water and solubility",
+   "q": "At 30°C, the solubility of copper(II) sulfate is 25 g per 100 g of water. A student in Awka wants to prepare a saturated solution containing 12.5 g of copper(II) sulfate. What mass of water is required?",
+   "options": [
+    "50 g",
+    "100 g",
+    "75 g",
+    "25 g"
+   ],
+   "answer": 0,
+   "explanation": "From the solubility, 25 g of copper(II) sulfate dissolves in 100 g of water. The mass of water needed for 12.5 g is therefore (12.5 ÷ 25) × 100 g = 50 g. Using 100 g of water would dissolve twice as much solute as required."
+  },
+  {
+   "n": 6,
+   "topic": "Water and solubility",
+   "q": "A sample of well water in Ibadan forms scum with soap and gives little lather. Which method removes both temporary and permanent hardness from the water?",
+   "options": [
+    "Chlorinating the water",
+    "Filtering the water through sand",
+    "Boiling the water",
+    "Adding washing soda (sodium carbonate)"
+   ],
+   "answer": 3,
+   "explanation": "Washing soda supplies carbonate ions, which precipitate calcium and magnesium ions from both temporary and permanent hard water, softening it. Boiling removes only temporary hardness, while filtration removes suspended solids and chlorination disinfects; neither removes permanent hardness."
+  },
+  {
+   "n": 7,
+   "topic": "Metals and their compounds",
+   "q": "A colourless solution may contain Zn²⁺ or Al³⁺ ions. Which test, using excess reagent, gives a clear difference between the two ions?",
+   "options": [
+    "Add excess aqueous sodium hydroxide: both hydroxides dissolve completely, giving no difference.",
+    "Add barium chloride solution: both solutions give a white precipitate.",
+    "Add excess aqueous ammonia: zinc hydroxide dissolves, but aluminium hydroxide remains insoluble.",
+    "Add dilute hydrochloric acid: both solutions give a white precipitate."
+   ],
+   "answer": 2,
+   "explanation": "With a little aqueous ammonia, both Zn²⁺ and Al³⁺ give white hydroxide precipitates. In excess ammonia, zinc hydroxide dissolves to form a soluble ammine complex, whereas aluminium hydroxide remains insoluble. Excess sodium hydroxide dissolves both hydroxides, so it cannot distinguish them, and the other reagents do not give the stated precipitates with these ions."
+  },
+  {
+   "n": 8,
+   "topic": "Environmental chemistry",
+   "q": "Residents of a village near Zaria use well water contaminated by nitrate from an abandoned refuse dump. Which statement best explains why nitrate in drinking water can cause cyanosis in infants?",
+   "options": [
+    "Nitrate raises the pH of blood and causes the infant to breathe too rapidly.",
+    "Nitrate is reduced to nitrite, which oxidises haemoglobin and reduces its oxygen-carrying capacity.",
+    "Nitrate is converted to ammonia, which blocks the air passages in the lungs.",
+    "Nitrate binds directly to calcium in the blood and prevents normal blood clotting."
+   ],
+   "answer": 1,
+   "explanation": "In the body, nitrate is reduced to nitrite. Nitrite oxidises the iron in haemoglobin to form methaemoglobin, which cannot carry oxygen efficiently, causing cyanosis. The other statements describe effects that nitrate does not have in drinking water."
+  },
+  {
+   "n": 9,
+   "topic": "Environmental chemistry",
+   "q": "After a small crude oil spill in a creek near Warri, dissolved oxygen in the water falls sharply within two days. Which process most directly accounts for this fall?",
+   "options": [
+    "The oil reacts with water to produce hydrogen, which displaces dissolved oxygen.",
+    "Aerobic bacteria decompose the oil and use up dissolved oxygen.",
+    "The oil causes phytoplankton to produce nitrogen instead of oxygen.",
+    "The oil forms a film that makes oxygen more soluble, so oxygen escapes as gas."
+   ],
+   "answer": 1,
+   "explanation": "Oil is broken down by aerobic micro-organisms, and this decomposition consumes dissolved oxygen from the water. A surface film may reduce reaeration, but the rapid fall is chiefly due to microbial use of oxygen. The other processes are not normal ways in which oil depletes oxygen."
+  },
+  {
+   "n": 10,
+   "topic": "Atomic structure",
+   "q": "According to the Aufbau principle, which subshell is filled immediately after the 4s subshell?",
+   "options": [
+    "5s",
+    "3p",
+    "4p",
+    "3d"
+   ],
+   "answer": 3,
+   "explanation": "The filling order is 1s, 2s, 2p, 3s, 3p, 4s, 3d, 4p, and so on. The 4s subshell is lower in energy than 3d for the relevant atoms, so it is occupied first, followed by 3d."
+  },
+  {
+   "n": 11,
+   "topic": "Atomic structure",
+   "q": "An atom of element X has the electron configuration 1s² 2s² 2p⁶ 3s² 3p⁴. In which group and period is X placed?",
+   "options": [
+    "Group 18 (Group 0), Period 3",
+    "Group 16 (Group VI), Period 3",
+    "Group 16 (Group VI), Period 2",
+    "Group 14 (Group IV), Period 3"
+   ],
+   "answer": 1,
+   "explanation": "The outer shell is 3s² 3p⁴, giving six valence electrons, so the element is in Group 16 (Group VI). The highest occupied shell is the third shell, so it is in Period 3."
+  },
+  {
+   "n": 12,
+   "topic": "Atomic structure",
+   "q": "Magnesium has three naturally occurring isotopes: ²⁴Mg (79.0%), ²⁵Mg (10.0%) and ²⁶Mg (11.0%). Calculate its relative atomic mass.",
+   "options": [
+    "24.00",
+    "24.67",
+    "24.32",
+    "25.00"
+   ],
+   "answer": 2,
+   "explanation": "The relative atomic mass is the abundance-weighted average: (24 × 0.79) + (25 × 0.10) + (26 × 0.11) = 18.96 + 2.50 + 2.86 = 24.32. It is not the simple average of 24, 25 and 26, which would be 25.00."
+  },
+  {
+   "n": 13,
+   "topic": "Non-metals and their compounds",
+   "q": "Which of the following oxides is a neutral oxide?",
+   "options": [
+    "Carbon dioxide (CO₂)",
+    "Carbon monoxide (CO)",
+    "Phosphorus(V) oxide (P₄O₁₀)",
+    "Sulfur dioxide (SO₂)"
+   ],
+   "answer": 1,
+   "explanation": "Carbon monoxide is a neutral oxide: it does not form an acidic or basic solution with water in the usual school sense. Carbon dioxide, sulfur dioxide and phosphorus(V) oxide are acidic oxides that form acidic solutions with water or alkalis."
+  },
+  {
+   "n": 14,
+   "topic": "Functional groups in organic chemistry",
+   "q": "A student in Ilesha tests an unknown liquid of molecular formula C₃H₆O. It gives an orange precipitate with 2,4-dinitrophenylhydrazine but no reaction with Fehling's solution. Which functional group is present?",
+   "options": [
+    "Ketone",
+    "Carboxylic acid",
+    "Aldehyde",
+    "Alcohol"
+   ],
+   "answer": 0,
+   "explanation": "The orange precipitate with 2,4-dinitrophenylhydrazine shows that a carbonyl compound is present. Fehling's solution is not reduced, so the carbonyl is not an aldehyde; with formula C₃H₆O, the compound is the ketone propanone."
+  },
+  {
+   "n": 15,
+   "topic": "Functional groups in organic chemistry",
+   "q": "Ngozi warms an organic acid with sodium carbonate and obtains a gas that turns limewater milky. The same acid reacts with ethanol in the presence of concentrated sulfuric acid to form a sweet-smelling liquid. Which functional group is present in the acid?",
+   "options": [
+    "Carbonyl group in an aldehyde (–CHO)",
+    "Hydroxyl group (–OH)",
+    "Carboxyl group (–COOH)",
+    "Ester linkage (–COO–)"
+   ],
+   "answer": 2,
+   "explanation": "Reaction with sodium carbonate to give carbon dioxide is a test for a carboxylic acid, and reaction with ethanol to form a sweet-smelling ester confirms the carboxyl group. A hydroxyl group alone would not liberate carbon dioxide from sodium carbonate. The ester linkage is in the product, not in the original acid."
+  },
+  {
+   "n": 16,
+   "topic": "Functional groups in organic chemistry",
+   "q": "When ethanoyl chloride (CH₃COCl) is shaken with ethanol, the organic product formed contains which functional group?",
+   "options": [
+    "Alcohol (–OH)",
+    "Aldehyde (–CHO)",
+    "Carboxylic acid (–COOH)",
+    "Ester (–COO–)"
+   ],
+   "answer": 3,
+   "explanation": "Ethanoyl chloride reacts with ethanol to form ethyl ethanoate and hydrogen chloride: CH₃COCl + C₂H₅OH → CH₃COOC₂H₅ + HCl. The organic product contains the ester linkage. The reaction is not a simple oxidation to an aldehyde or acid."
+  },
+  {
+   "n": 17,
+   "topic": "Periodic table",
+   "q": "Which of the following ions has the largest radius?",
+   "options": [
+    "Al³⁺",
+    "F⁻",
+    "Mg²⁺",
+    "Na⁺"
+   ],
+   "answer": 1,
+   "explanation": "The ions listed all have 10 electrons, the same as neon. The fluoride ion has the smallest nuclear charge among them, so its electrons are held least tightly and its radius is largest. Increasing nuclear charge in the other ions pulls the same number of electrons closer, reducing the radius."
+  },
+  {
+   "n": 18,
+   "topic": "Periodic table",
+   "q": "Which statement about transition elements is correct?",
+   "options": [
+    "They have only one oxidation state in all their compounds.",
+    "Their ions always have completely filled d orbitals.",
+    "They are placed in Group I of the periodic table.",
+    "They commonly form coloured compounds."
+   ],
+   "answer": 3,
+   "explanation": "Transition elements commonly form coloured compounds because their ions often have partly filled d orbitals. They also show variable oxidation states, and their ions do not always have completely filled d orbitals. They are located in the d-block rather than Group I."
+  },
+  {
+   "n": 19,
+   "topic": "Separation of mixtures",
+   "q": "A student in Zaria has a mixture of lead(II) sulphate powder and sodium nitrate. Which procedure is most suitable for separating the two substances?",
+   "options": [
+    "Distil the solid mixture directly and collect the liquid that boils first.",
+    "Add water, stir, filter, and evaporate the filtrate; the residue is lead(II) sulphate.",
+    "Heat the mixture strongly so that lead(II) sulphate sublimes and leaves sodium nitrate.",
+    "Use a separating funnel to run off the lower layer."
+   ],
+   "answer": 1,
+   "explanation": "Lead(II) sulphate is insoluble in water while sodium nitrate is soluble. Adding water dissolves the sodium nitrate, filtration removes the lead(II) sulphate as residue, and evaporation of the filtrate recovers sodium nitrate. Sublimation, a separating funnel, and direct distillation do not apply to this solid mixture."
+  },
+  {
+   "n": 20,
+   "topic": "Separation of mixtures",
+   "q": "In a simple distillation set-up used to separate a salt solution, where should the thermometer bulb be placed?",
+   "options": [
+    "Inside the condenser jacket",
+    "In the receiving flask",
+    "At the side arm of the distillation flask, level with the opening to the condenser.",
+    "Deep in the liquid being heated"
+   ],
+   "answer": 2,
+   "explanation": "The thermometer bulb is placed at the side arm so that it measures the temperature of the vapour entering the condenser. Placing it in the liquid measures the temperature of the boiling mixture rather than the distilling vapour, and the condenser or receiver does not give the vapour temperature at the distillation flask."
+  },
+  {
+   "n": 21,
+   "topic": "Separation of mixtures",
+   "q": "Paper chromatography separates the components of a mixture mainly because the components",
+   "options": [
+    "have different densities and form separate layers.",
+    "have different boiling points.",
+    "have different particle sizes that block the filter paper.",
+    "move at different rates between the stationary and mobile phases."
+   ],
+   "answer": 3,
+   "explanation": "In paper chromatography, the components distribute themselves differently between the water held on the paper and the moving solvent. This causes them to travel at different rates and separate. Boiling point, particle size, and density differences are not the main basis of this method."
+  },
+  {
+   "n": 22,
+   "topic": "Acids, bases and salts",
+   "q": "Which of the following substances is an acid salt?",
+   "options": [
+    "Na₂SO₄",
+    "NaOH",
+    "Na₂CO₃",
+    "NaHSO₄"
+   ],
+   "answer": 3,
+   "explanation": "Sodium hydrogen sulphate, NaHSO₄, is formed by partial neutralisation of sulphuric acid and still contains a replaceable hydrogen atom. The other substances are a normal salt, a base, and a carbonate salt with no replaceable hydrogen."
+  },
+  {
+   "n": 23,
+   "topic": "Hydrocarbons",
+   "q": "When ethane reacts with chlorine in the presence of sunlight, the main type of reaction is",
+   "options": [
+    "substitution",
+    "addition",
+    "cracking",
+    "esterification"
+   ],
+   "answer": 0,
+   "explanation": "Alkanes such as ethane undergo free-radical substitution with halogens in sunlight, with hydrogen atoms replaced by chlorine atoms. Addition is characteristic of unsaturated hydrocarbons, while cracking and esterification do not describe this reaction."
+  },
+  {
+   "n": 24,
+   "topic": "Hydrocarbons",
+   "q": "Which hydrocarbon is formed when sodium ethanoate is heated strongly with soda lime?",
+   "options": [
+    "Ethyne",
+    "Methane",
+    "Ethane",
+    "Ethene"
+   ],
+   "answer": 1,
+   "explanation": "Heating sodium ethanoate with soda lime removes the carboxyl group as sodium carbonate and leaves methane: CH₃COONa + NaOH → CH₄ + Na₂CO₃. The other hydrocarbons are not produced in this laboratory preparation."
+  },
+  {
+   "n": 25,
+   "topic": "Mole concept and stoichiometry",
+   "q": "Farmer Musa in Kaduna uses urea, CO(NH₂)₂, as a nitrogen fertilizer. What mass of nitrogen is present in 12.0 g of urea? (C = 12.0, O = 16.0, N = 14.0, H = 1.0)",
+   "options": [
+    "28.0 g",
+    "11.2 g",
+    "5.60 g",
+    "2.80 g"
+   ],
+   "answer": 2,
+   "explanation": "The molar mass of urea is 12.0 + 16.0 + 2(14.0) + 4(1.0) = 60.0 g mol⁻¹, and each mole contains 28.0 g of nitrogen. Thus 12.0 g of urea contains 12.0 × 28.0/60.0 = 5.60 g of nitrogen. Using only one nitrogen atom instead of two in the formula gives 2.80 g."
+  },
+  {
+   "n": 26,
+   "topic": "Mole concept and stoichiometry",
+   "q": "A student in Ibadan dissolves 2.65 g of anhydrous sodium carbonate in distilled water and makes the solution up to 250.0 cm³. What is the molar concentration of the solution? (Na₂CO₃ = 106 g mol⁻¹)",
+   "options": [
+    "0.0100 mol dm⁻³",
+    "0.0250 mol dm⁻³",
+    "0.100 mol dm⁻³",
+    "0.400 mol dm⁻³"
+   ],
+   "answer": 2,
+   "explanation": "The amount of Na₂CO₃ is 2.65/106 = 0.0250 mol, and the volume is 250.0 cm³ = 0.250 dm³. The concentration is 0.0250/0.250 = 0.100 mol dm⁻³. The value 0.0250 is the number of moles, not the concentration."
+  },
+  {
+   "n": 27,
+   "topic": "Mole concept and stoichiometry",
+   "q": "At a fertilizer plant in Port Harcourt, 6.0 mol of nitrogen is mixed with 15.0 mol of hydrogen. Using N₂(g) + 3H₂(g) → 2NH₃(g), what is the maximum amount of ammonia that can be formed?",
+   "options": [
+    "12.0 mol",
+    "10.0 mol",
+    "15.0 mol",
+    "30.0 mol"
+   ],
+   "answer": 1,
+   "explanation": "15.0 mol of hydrogen can react with 15.0/3 = 5.0 mol of nitrogen, so hydrogen is limiting because only 6.0 mol of nitrogen is present. The ammonia produced is 2 × 5.0 = 10.0 mol. Using all the nitrogen would give 12.0 mol of ammonia, but there is not enough hydrogen for that."
+  },
+  {
+   "n": 28,
+   "topic": "Oxidation, reduction and electrolysis",
+   "q": "An electroplating workshop in Aba passes a steady current of 1.00 A through copper(II) sulfate solution for 965 s using copper electrodes. What mass of copper is deposited at the cathode? (Cu = 64.0; F = 96500 C mol⁻¹)",
+   "options": [
+    "0.320 g",
+    "0.640 g",
+    "0.160 g",
+    "3.20 g"
+   ],
+   "answer": 0,
+   "explanation": "The charge passed is 1.00 × 965 = 965 C, which is 965/96500 = 0.0100 mol of electrons. Since Cu²⁺ + 2e⁻ → Cu, the amount of copper deposited is 0.0100/2 = 0.00500 mol. The mass is 0.00500 × 64.0 = 0.320 g; forgetting the two-electron change gives 0.640 g."
+  },
+  {
+   "n": 29,
+   "topic": "Oxidation, reduction and electrolysis",
+   "q": "In the reaction MnO₂ + 4HCl → MnCl₂ + Cl₂ + 2H₂O, which change occurs?",
+   "options": [
+    "Oxygen is oxidised from −2 to 0.",
+    "Chloride ions are oxidised from −1 to 0 in chlorine.",
+    "Hydrogen is reduced from +1 to 0.",
+    "Manganese is oxidised from +4 to +2."
+   ],
+   "answer": 1,
+   "explanation": "Manganese in MnO₂ changes from +4 to +2 and is reduced, while chloride ions in HCl change from −1 to 0 and are oxidised to chlorine. Hydrogen remains +1 in water, and oxygen remains −2 in both MnO₂ and water."
+  },
+  {
+   "n": 30,
+   "topic": "Energy changes",
+   "q": "In a calorimetry experiment in Ibadan, 0.050 mol of ethanol is completely burned and the heat released raises the temperature of 500 g of water by 12.0°C. Calculate the molar enthalpy of combustion of ethanol. (Specific heat capacity of water = 4.2 J g⁻¹ K⁻¹)",
+   "options": [
+    "+504 kJ mol⁻¹",
+    "−252 kJ mol⁻¹",
+    "−504 kJ mol⁻¹",
+    "−25.2 kJ mol⁻¹"
+   ],
+   "answer": 2,
+   "explanation": "Heat absorbed by water = 500 × 4.2 × 12.0 = 25 200 J = 25.2 kJ. This heat is released by 0.050 mol of ethanol, so the heat per mole is 25.2/0.050 = 504 kJ mol⁻¹. Combustion is exothermic, so the enthalpy change is −504 kJ mol⁻¹; the positive value has the wrong sign."
+  },
+  {
+   "n": 31,
+   "topic": "Energy changes",
+   "q": "Use the average bond energies N≡N = 945 kJ mol⁻¹, H–H = 436 kJ mol⁻¹ and N–H = 391 kJ mol⁻¹. What is ΔH for N₂(g) + 3H₂(g) → 2NH₃(g)?",
+   "options": [
+    "−2346 kJ mol⁻¹",
+    "+93 kJ mol⁻¹",
+    "−2253 kJ mol⁻¹",
+    "−93 kJ mol⁻¹"
+   ],
+   "answer": 3,
+   "explanation": "Energy needed to break bonds = 945 + 3(436) = 2253 kJ mol⁻¹. Energy released forming bonds = 6(391) = 2346 kJ mol⁻¹. Therefore ΔH = 2253 − 2346 = −93 kJ mol⁻¹; using only the bonds broken or only the bonds formed gives the incorrect larger negative values."
+  },
+  {
+   "n": 32,
+   "topic": "Gas laws",
+   "q": "A 20.0 dm³ cylinder in Warri contains a gas at 27°C and 1.23 atm. Calculate the amount of gas in moles. (R = 0.082 dm³ atm mol⁻¹ K⁻¹)",
+   "options": [
+    "0.082 mol",
+    "1.00 mol",
+    "2.00 mol",
+    "0.500 mol"
+   ],
+   "answer": 1,
+   "explanation": "Use n = PV/RT with P = 1.23 atm, V = 20.0 dm³ and T = 27 + 273 = 300 K. Thus n = (1.23 × 20.0)/(0.082 × 300) = 24.6/24.6 = 1.00 mol. Using the Celsius value directly would give a very different and incorrect amount."
+  },
+  {
+   "n": 33,
+   "topic": "Chemical bonding",
+   "q": "Which of the following substances has a giant covalent (macromolecular) structure?",
+   "options": [
+    "Silicon(IV) oxide",
+    "Sodium chloride",
+    "Iodine",
+    "Carbon dioxide"
+   ],
+   "answer": 0,
+   "explanation": "Silicon(IV) oxide consists of a three-dimensional network of covalent bonds, so it is a giant covalent substance. Carbon dioxide and iodine form discrete simple molecules, while sodium chloride has an ionic lattice."
+  },
+  {
+   "n": 34,
+   "topic": "Rates of reaction and equilibrium",
+   "q": "For the equilibrium CaCO₃(s) ⇌ CaO(s) + CO₂(g), which expression gives Kc at a given temperature?",
+   "options": [
+    "Kc = [CO₂]",
+    "Kc = [CaO][CO₂]/[CaCO₃]",
+    "Kc = 1/[CO₂]",
+    "Kc = [CaCO₃]/([CaO][CO₂])"
+   ],
+   "answer": 0,
+   "explanation": "Pure solids are not included in the equilibrium expression because their concentration is constant. Therefore Kc depends only on the concentration of the gaseous carbon dioxide, giving Kc = [CO₂]."
+  },
+  {
+   "n": 35,
+   "topic": "Rates of reaction and equilibrium",
+   "q": "At a certain temperature, Kc = 9.0 for the reaction A(g) + B(g) ⇌ 2C(g). In a 2.0 dm³ vessel at equilibrium, there are 0.40 mol of A and 0.40 mol of B. How many moles of C are present?",
+   "options": [
+    "2.4 mol",
+    "1.2 mol",
+    "0.60 mol",
+    "0.36 mol"
+   ],
+   "answer": 1,
+   "explanation": "[A] = 0.40/2.0 = 0.20 mol dm⁻³ and [B] = 0.40/2.0 = 0.20 mol dm⁻³. Kc = [C]²/([A][B]), so 9.0 = [C]²/(0.20×0.20) and [C]² = 0.36, giving [C] = 0.60 mol dm⁻³. The amount of C in 2.0 dm³ is 0.60×2.0 = 1.2 mol."
+  },
+  {
+   "n": 36,
+   "topic": "Water and solubility",
+   "q": "At 60°C, the solubility of ammonium chloride is 55 g per 100 g of water. What mass of water is needed to dissolve 22 g of ammonium chloride at 60°C?",
+   "options": [
+    "40 g",
+    "20 g",
+    "55 g",
+    "110 g"
+   ],
+   "answer": 0,
+   "explanation": "The solubility 55 g per 100 g water means 55 g of ammonium chloride dissolves in 100 g of water at 60°C. For 22 g, water needed = (22/55)×100 = 40 g. Therefore 40 g of water is required."
+  },
+  {
+   "n": 37,
+   "topic": "Metals and their compounds",
+   "q": "A clean iron nail is left in aqueous copper(II) sulfate for some time in a laboratory in Aba. Which statement correctly describes the reaction that occurs?",
+   "options": [
+    "The blue colour fades and a reddish-brown deposit forms on the nail; Fe(s) + Cu²⁺(aq) → Fe²⁺(aq) + Cu(s).",
+    "No visible change occurs because iron is less reactive than copper, so it cannot displace copper.",
+    "Hydrogen gas is evolved and a black deposit remains, because iron reacts with the sulfate ion.",
+    "The solution becomes more blue and copper dissolves; Cu(s) + Fe²⁺(aq) → Cu²⁺(aq) + Fe(s)."
+   ],
+   "answer": 0,
+   "explanation": "Iron is more reactive than copper, so it displaces copper from copper(II) sulfate. Iron atoms are oxidized to Fe²⁺ while Cu²⁺ ions are reduced to copper metal, giving a reddish-brown deposit and fading the blue colour. The reaction is Fe(s) + Cu²⁺(aq) → Fe²⁺(aq) + Cu(s)."
+  },
+  {
+   "n": 38,
+   "topic": "Metals and their compounds",
+   "q": "Which alloy is made mainly from copper and zinc?",
+   "options": [
+    "Steel",
+    "Duralumin",
+    "Brass",
+    "Bronze"
+   ],
+   "answer": 2,
+   "explanation": "Brass is an alloy made mainly of copper and zinc. Bronze is mainly copper and tin, steel is mainly iron with carbon, and duralumin is mainly aluminium."
+  },
+  {
+   "n": 39,
+   "topic": "Metals and their compounds",
+   "q": "Aqueous sodium hydroxide is added dropwise, and then in excess, to a solution of aluminium chloride. Which observation is correct?",
+   "options": [
+    "A white gelatinous precipitate forms and dissolves in excess sodium hydroxide to give a colourless solution.",
+    "No precipitate forms because aluminium chloride is a simple covalent compound.",
+    "A white gelatinous precipitate forms and remains undissolved in excess sodium hydroxide.",
+    "A blue precipitate forms and dissolves in excess sodium hydroxide to give a deep blue solution."
+   ],
+   "answer": 0,
+   "explanation": "Aluminium ions react with hydroxide ions to form white gelatinous aluminium hydroxide, Al(OH)₃. Aluminium hydroxide is amphoteric, so it dissolves in excess sodium hydroxide to form a colourless aluminate solution. Magnesium hydroxide, by contrast, would remain insoluble in excess sodium hydroxide."
+  },
+  {
+   "n": 40,
+   "topic": "Environmental chemistry",
+   "q": "A cassava-processing plant near Aba discharges a large volume of starch-rich effluent into a stream. Which water-quality parameter increases most directly because micro-organisms break down the organic matter?",
+   "options": [
+    "Biochemical oxygen demand",
+    "pH",
+    "Dissolved oxygen concentration",
+    "Chloride ion concentration"
+   ],
+   "answer": 0,
+   "explanation": "Micro-organisms use dissolved oxygen to break down the starch-rich organic matter, so the biochemical oxygen demand rises. The dissolved oxygen concentration falls rather than rises as decomposition continues."
+  },
+  {
+   "n": 41,
+   "topic": "Environmental chemistry",
+   "q": "An old refrigerator repair workshop in Enugu releases a gas formerly used as a coolant into the atmosphere. Which gas is mainly linked to depletion of the ozone layer?",
+   "options": [
+    "Chlorofluorocarbons",
+    "Methane",
+    "Carbon dioxide",
+    "Sulphur(IV) oxide"
+   ],
+   "answer": 0,
+   "explanation": "Chlorofluorocarbons release chlorine radicals under ultraviolet light, and these radicals destroy ozone in the stratosphere. Carbon dioxide and methane are mainly greenhouse gases, while sulphur(IV) oxide contributes to acid rain."
+  },
+  {
+   "n": 42,
+   "topic": "Environmental chemistry",
+   "q": "A man uses a petrol generator in a closed room in Lagos. Which gas is most dangerous because it binds strongly to haemoglobin and reduces oxygen transport in the body?",
+   "options": [
+    "Methane",
+    "Carbon dioxide",
+    "Sulphur(IV) oxide",
+    "Carbon monoxide"
+   ],
+   "answer": 3,
+   "explanation": "Carbon monoxide forms a stable complex with haemoglobin, reducing the amount of oxygen carried round the body. Carbon dioxide and methane do not bind strongly to haemoglobin in this way."
+  },
+  {
+   "n": 43,
+   "topic": "Atomic structure",
+   "q": "An ion is represented as ³¹₁₅P³⁻. Which set correctly gives the number of protons, neutrons and electrons in the ion?",
+   "options": [
+    "15 protons, 18 neutrons and 12 electrons",
+    "15 protons, 16 neutrons and 15 electrons",
+    "16 protons, 15 neutrons and 18 electrons",
+    "15 protons, 16 neutrons and 18 electrons"
+   ],
+   "answer": 3,
+   "explanation": "Phosphorus has atomic number 15, so the ion has 15 protons. Its mass number is 31, so neutrons = 31 − 15 = 16. A 3− charge means 3 extra electrons beyond the neutral 15, giving 18 electrons."
+  },
+  {
+   "n": 44,
+   "topic": "Atomic structure",
+   "q": "Which electron configuration represents the ground-state Cr³⁺ ion? (Chromium has atomic number 24.)",
+   "options": [
+    "[Ar]3d⁵",
+    "[Ar]3d³",
+    "[Ar]3d²4s¹",
+    "[Ar]3d⁴4s²"
+   ],
+   "answer": 1,
+   "explanation": "A chromium atom is [Ar]3d⁵4s¹. To form Cr³⁺, the 4s electron and two 3d electrons are removed, leaving [Ar]3d³. The configuration [Ar]3d⁴4s² represents a common incorrect filling for the neutral atom."
+  },
+  {
+   "n": 45,
+   "topic": "Atomic structure",
+   "q": "The successive ionisation energies of an element are 578, 1817, 2745 and 11578 kJ mol⁻¹. To which group of the Periodic Table does the element most likely belong?",
+   "options": [
+    "Group 1",
+    "Group 4",
+    "Group 2",
+    "Group 3"
+   ],
+   "answer": 3,
+   "explanation": "The large jump occurs between the third and fourth ionisation energies, showing that the fourth electron is removed from a much closer inner shell. Therefore, the element has three valence electrons and belongs to Group 3."
+  },
+  {
+   "n": 46,
+   "topic": "Non-metals and their compounds",
+   "q": "A laboratory technician in Ilorin needs to dry a sample of ammonia gas before testing it. Which drying agent is most suitable?",
+   "options": [
+    "Concentrated tetraoxosulphate(VI) acid",
+    "Calcium oxide (quicklime)",
+    "Anhydrous calcium chloride",
+    "Phosphorus(V) oxide"
+   ],
+   "answer": 1,
+   "explanation": "Ammonia is a basic gas, so acidic drying agents react with it. Calcium oxide is basic and does not react with ammonia, while anhydrous calcium chloride forms a complex with ammonia."
+  },
+  {
+   "n": 47,
+   "topic": "Non-metals and their compounds",
+   "q": "Bromine water is added dropwise to potassium iodide solution in a test tube. Which observation is expected?",
+   "options": [
+    "A white precipitate of potassium bromide forms",
+    "A colourless gas is evolved",
+    "The solution becomes reddish-brown and the bromine colour is discharged",
+    "The solution immediately becomes blue-black"
+   ],
+   "answer": 2,
+   "explanation": "Bromine oxidises iodide ions to iodine, so bromine is reduced to bromide ions and its colour fades. The iodine formed gives a reddish-brown colour in aqueous solution; a blue-black colour would require starch."
+  },
+  {
+   "n": 48,
+   "topic": "Functional groups in organic chemistry",
+   "q": "A student in Abeokuta warms ethanol with ethanoic acid in the presence of a little concentrated tetraoxosulphate(VI) acid. Which compound is the main organic product?",
+   "options": [
+    "Ethyl ethanoate",
+    "Ethene",
+    "Ethanal",
+    "Ethoxyethane"
+   ],
+   "answer": 0,
+   "explanation": "Ethanol reacts with ethanoic acid under acid catalysis to form an ester, ethyl ethanoate. Ethanol alone can be dehydrated to ethene under stronger heating, but the presence of ethanoic acid favours esterification."
+  },
+  {
+   "n": 49,
+   "topic": "Functional groups in organic chemistry",
+   "q": "Which compound decolourises bromine water but does not give a red precipitate with Fehling's solution on warming?",
+   "options": [
+    "Hex-1-ene",
+    "Propan-2-one",
+    "Ethanal",
+    "Ethanoic acid"
+   ],
+   "answer": 0,
+   "explanation": "Hex-1-ene has a carbon-carbon double bond that adds bromine, decolourising bromine water, but it has no aldehyde group. Ethanal would reduce Fehling's solution, while ethanoic acid and propan-2-one do not readily decolourise bromine water under these conditions."
+  },
+  {
+   "n": 50,
+   "topic": "Periodic table",
+   "q": "A metal ion M²⁺ has the electronic configuration 1s² 2s² 2p⁶. What is the atomic number of M?",
+   "options": [
+    "14",
+    "11",
+    "12",
+    "10"
+   ],
+   "answer": 2,
+   "explanation": "The ion M²⁺ has 10 electrons, so the neutral atom M must have 10 + 2 = 12 electrons and therefore atomic number 12. The value 10 is the number of electrons in the ion, not the atomic number of the atom."
+  },
+  {
+   "n": 51,
+   "topic": "Periodic table",
+   "q": "An element X forms a hydride H₂X and a highest oxide XO₃. To which group of the periodic table does X belong?",
+   "options": [
+    "Group 16",
+    "Group 14",
+    "Group 17",
+    "Group 15"
+   ],
+   "answer": 0,
+   "explanation": "Group 16 elements form hydrides of the type H₂X and have a highest oxide of the type XO₃, as shown by sulfur forming H₂S and SO₃. The hydride formula rules out Groups 14, 15 and 17, which form different hydride types."
+  },
+  {
+   "n": 52,
+   "topic": "Periodic table",
+   "q": "An element has atomic number 17. In which group and period of the periodic table is it found?",
+   "options": [
+    "Group VI, Period 3",
+    "Group VII, Period 3",
+    "Group VII, Period 2",
+    "Group 0, Period 3"
+   ],
+   "answer": 1,
+   "explanation": "The element with atomic number 17 is chlorine, with electron configuration 1s² 2s² 2p⁶ 3s² 3p⁵. Its outer electrons are in the third shell, so it is in Period 3, and it has seven outer electrons, placing it in Group VII."
+  },
+  {
+   "n": 53,
+   "topic": "Separation of mixtures",
+   "q": "A student in Kaduna is given a mixture of camphor and chalk powder. Which method is most suitable for obtaining pure camphor from the mixture?",
+   "options": [
+    "Simple distillation",
+    "Filtration",
+    "Sublimation",
+    "Decantation"
+   ],
+   "answer": 2,
+   "explanation": "Camphor sublimes on heating while chalk powder does not, so the vapour can be cooled and collected as pure solid camphor. Filtration and decantation separate solids from liquids, while simple distillation is used for liquids."
+  },
+  {
+   "n": 54,
+   "topic": "Separation of mixtures",
+   "q": "In a paper chromatogram, a pigment spot moved 6.0 cm from the baseline while the solvent front moved 15.0 cm. What is the R_f value of the pigment?",
+   "options": [
+    "0.40",
+    "0.25",
+    "2.50",
+    "0.60"
+   ],
+   "answer": 0,
+   "explanation": "R_f = distance moved by pigment ÷ distance moved by solvent front = 6.0 cm ÷ 15.0 cm = 0.40. The value 2.50 comes from dividing 15.0 by 6.0, which reverses the correct ratio."
+  },
+  {
+   "n": 55,
+   "topic": "Acids, bases and salts",
+   "q": "At 25°C, a solution of sodium hydroxide has a concentration of 0.0050 mol/dm³. What is its pH? (Kw = 1.0 × 10⁻¹⁴)",
+   "options": [
+    "11.70",
+    "11.30",
+    "2.30",
+    "12.70"
+   ],
+   "answer": 0,
+   "explanation": "Sodium hydroxide is a strong base, so [OH⁻] = 0.0050 mol/dm³; pOH = −log(0.0050) = 2.30, and pH = 14.00 − 2.30 = 11.70. The value 2.30 is the pOH, not the pH."
+  },
+  {
+   "n": 56,
+   "topic": "Acids, bases and salts",
+   "q": "Which salt dissolves in water to give a solution with pH greater than 7?",
+   "options": [
+    "Sodium chloride",
+    "Potassium nitrate",
+    "Sodium ethanoate",
+    "Ammonium chloride"
+   ],
+   "answer": 2,
+   "explanation": "Sodium ethanoate is formed from a weak acid and a strong base; the ethanoate ion hydrolyses to produce OH⁻ ions, making the solution basic. Sodium chloride and potassium nitrate are salts of strong acids and strong bases, so their solutions are approximately neutral."
+  },
+  {
+   "n": 57,
+   "topic": "Acids, bases and salts",
+   "q": "A farmer in Kaduna finds that his soil is too acidic. Which substance is most suitable for reducing the acidity of the soil?",
+   "options": [
+    "Hydrochloric acid",
+    "Ammonium sulphate",
+    "Sodium chloride",
+    "Calcium oxide"
+   ],
+   "answer": 3,
+   "explanation": "Calcium oxide is a basic oxide and neutralises excess soil acidity. Ammonium sulphate would make the soil more acidic, while sodium chloride and hydrochloric acid do not correct soil acidity."
+  },
+  {
+   "n": 58,
+   "topic": "Hydrocarbons",
+   "q": "What is the IUPAC name of the compound CH₃CH(CH₃)CH₂CH=CH₂?",
+   "options": [
+    "2-methylpent-1-ene",
+    "2-methylpent-4-ene",
+    "4-methylpent-1-ene",
+    "4-methylpent-2-ene"
+   ],
+   "answer": 2,
+   "explanation": "The longest chain containing the double bond has five carbon atoms. Numbering from the double-bond end gives the double bond at carbon 1 and the methyl group at carbon 4, so the name is 4-methylpent-1-ene."
+  },
+  {
+   "n": 59,
+   "topic": "Hydrocarbons",
+   "q": "Ethene reacts with one mole of bromine in the dark. Which compound is formed?",
+   "options": [
+    "Ethane",
+    "1,1-dibromoethane",
+    "1,2-dibromoethane",
+    "Bromoethane"
+   ],
+   "answer": 2,
+   "explanation": "Bromine adds across the carbon–carbon double bond of ethene, giving CH₂BrCH₂Br, which is 1,2-dibromoethane. Both bromine atoms are added, so bromoethane and ethane are not the products."
+  },
+  {
+   "n": 60,
+   "topic": "Mole concept and stoichiometry",
+   "q": "A 25.0 g sample of a fertilizer from a depot in Kano contains ammonium sulphate, (NH₄)₂SO₄, mixed with inert material. If the sample contains 1.40 g of nitrogen, what is the percentage by mass of ammonium sulphate in the fertilizer? (N = 14, H = 1, S = 32, O = 16)",
+   "options": [
+    "5.60%",
+    "21.2%",
+    "52.8%",
+    "26.4%"
+   ],
+   "answer": 3,
+   "explanation": "The molar mass of (NH₄)₂SO₄ is 132 g mol⁻¹, and each mole contains 28 g of nitrogen. Thus 1.40 g of nitrogen comes from (1.40 × 132 ÷ 28) g = 6.60 g of ammonium sulphate, so the percentage is (6.60 ÷ 25.0) × 100 = 26.4%."
+  }
+ ]
+}

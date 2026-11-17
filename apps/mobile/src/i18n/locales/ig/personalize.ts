@@ -65,6 +65,10 @@ const personalize: Translation<typeof en> = {
     title: 'Olee otú ọ na-amasị gị isi amụ ihe?',
     subtitle: 'Họrọ ndị kacha amasị gị. Anyị ga-ebute ha ụzọ ma tinye ndị ọzọ n’etiti.',
   },
+  region: {
+    title: 'Ebee ka ị na-amụ akwụkwọ?',
+    subtitle: 'Anyị ga-egosi gị ule na omume ule nke obodo gị. Ị nwere ike ịgbanwe ya mgbe ọ bụla na Ntọala.',
+  },
   language: {
     title: 'Họrọ asụsụ gị',
     subtitle: 'Ngwa ahụ niile, ihe ọmụmụ gị na onye nkuzi AI gị ga-eji asụsụ a ozugbo.',
@@ -113,6 +117,7 @@ const personalize: Translation<typeof en> = {
       teachLevels: 'Ụmụ akwụkwọ',
       age: 'Otu afọ',
       education: 'Ọkwa',
+      region: 'Obodo ọmụmụ',
       pathway: 'Ụzọ',
       exams: 'Ule',
       subjects: 'Isiokwu ọmụmụ',
@@ -256,7 +261,7 @@ const personalize: Translation<typeof en> = {
   learnerTypes: {
     school: { label: 'Nwa akwụkwọ', description: 'Ụlọ akwụkwọ praịmarị ma ọ bụ sekọndrị' },
     university: { label: 'Mahadum ma ọ bụ kọleji', description: 'Digrii, diploma ma ọ bụ ND/HND' },
-    exam: { label: 'Onye na-ede ule', description: 'Na-akwado maka JAMB, WAEC, IELTS na ndị ọzọ' },
+    exam: { label: 'Onye na-ede ule', description: 'Na-akwado maka JAMB, WAEC, IELTS na ndị ọzọ', descriptionFor: 'Na-akwado maka {{exams}} na ndị ọzọ' },
     professional: { label: 'Onye ọrụ', description: 'Na-akwalite ikike ma ọ bụ na-enweta asambodo' },
     lifelong: { label: 'Onye ọchịchọ ịmụ ihe', description: 'Na-amụ ihe ọhụrụ maka obi ụtọ' },
     teacher: { label: 'Onye nkuzi ma ọ bụ onye nkuzi nkeonwe', description: 'Mepụta klaasị, nye omume, soro ọganihu' },
@@ -265,7 +270,7 @@ const personalize: Translation<typeof en> = {
     'school-teacher': { label: 'Onye nkuzi ụlọ akwụkwọ', description: 'Ụlọ akwụkwọ praịmarị ma ọ bụ sekọndrị' },
     lecturer: { label: 'Onye nkuzi mahadum', description: 'Mahadum, polytechnic ma ọ bụ kọleji' },
     'private-tutor': { label: 'Onye nkuzi nkeonwe', description: 'Otu na otu ma ọ bụ obere otu' },
-    'exam-coach': { label: 'Onye nkuzi nkwado ule', description: 'JAMB, WAEC, IELTS na ndị ọzọ' },
+    'exam-coach': { label: 'Onye nkuzi nkwado ule', description: 'JAMB, WAEC, IELTS na ndị ọzọ', descriptionFor: '{{exams}} na ndị ọzọ' },
     parent: { label: 'Nne/nna ma ọ bụ onye na-akụzi n’ụlọ', description: 'Na-eduzi ụmụ m' },
   },
   teachLevelOptions: {

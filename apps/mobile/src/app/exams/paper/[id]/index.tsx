@@ -8,7 +8,7 @@ import { LoadError, Loading } from '@/components/exams/ui';
 import { Button, Card, Screen, ScreenHeader, Text } from '@/components/ui';
 import { Colors, Radius, Spacing } from '@/constants/theme';
 import { errorText } from '@/i18n/errors';
-import { examsApi, loadPaper, type ExamAttempt, type Paper } from '@/lib/exams';
+import { examsApi, isPracticeOnly, isTopicQuiz, loadPaper, type ExamAttempt, type Paper } from '@/lib/exams';
 
 const MODES = [
   { id: 'study', icon: 'book', color: Colors.info },
@@ -23,6 +23,9 @@ export default function PaperOverview() {
   const [paper, setPaper] = useState<Paper | null>(null);
   const [attempts, setAttempts] = useState<ExamAttempt[]>([]);
   const [error, setError] = useState<{ text: string; pro: boolean } | null>(null);
+
+  // GCSE, A-level, KCSE and Matric practice is our own topic quiz, not the exam's format, so its timed mode doesn't claim to be.
+  const quiz = !!paper && isTopicQuiz(paper.exam);
 
   const load = useCallback(() => {
     setError(null);
@@ -75,6 +78,11 @@ export default function PaperOverview() {
                 ? t('paper.credit', { credit: paper.credit })
                 : t('paper.original')}
             </Text>
+            {isPracticeOnly(paper.exam) && (
+              <Text variant="small" color={Colors.textMuted}>
+                {t(`notes.${paper.exam}` as 'notes.sat')}
+              </Text>
+            )}
           </Card>
 
           <Text variant="label" color={Colors.textSecondary}>
@@ -95,9 +103,9 @@ export default function PaperOverview() {
                   <Ionicons name={m.icon} size={22} color={m.color} />
                 </View>
                 <View style={{ flex: 1, gap: 2 }}>
-                  <Text variant="bodyStrong">{t(`paper.${m.id}.title`)}</Text>
+                  <Text variant="bodyStrong">{t(`paper.${quiz && m.id === 'timed' ? 'timedQuiz' : m.id}.title`)}</Text>
                   <Text variant="small" color={Colors.textSecondary}>
-                    {t(`paper.${m.id}.body`, { minutes: paper.minutes })}
+                    {t(`paper.${quiz && m.id === 'timed' ? 'timedQuiz' : m.id}.body`, { minutes: paper.minutes })}
                   </Text>
                 </View>
                 <Ionicons name="chevron-forward" size={18} color={Colors.textMuted} />

@@ -1,0 +1,401 @@
+{
+ "id": "gcse-physics-p1",
+ "exam": "gcse",
+ "subject": "physics",
+ "year": null,
+ "number": 1,
+ "source": "ai",
+ "minutes": 35,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Waves",
+   "q": "A radio station emits a radio wave of frequency 100 kHz. What is the wavelength of this wave in air? (Use wave speed in air ≈ 3.0 × 10^8 m/s.)",
+   "options": [
+    "3.0 × 10^-3 m",
+    "3.0 × 10^1 m",
+    "3.0 × 10^3 m",
+    "3.0 × 10^6 m"
+   ],
+   "answer": 2,
+   "explanation": "Wavelength = wave speed ÷ frequency = (3.0 × 10^8 m/s) ÷ (100 × 10^3 s^-1) = 3.0 × 10^3 m. The other values are mistakes from moving the decimal by wrong powers of ten (for example using 100 Hz instead of 100 kHz or dividing by 1000 twice)."
+  },
+  {
+   "n": 2,
+   "topic": "Waves",
+   "q": "A student measures the period of a water wave as 0.4 s and the wavelength as 0.6 m. Which statement describes the wave speed and whether it is a transverse or longitudinal wave for typical water surface waves?",
+   "options": [
+    "Wave speed = 1.5 m/s and the wave is transverse",
+    "Wave speed = 0.24 m/s and the wave is longitudinal",
+    "Wave speed = 1.5 m/s and the wave is longitudinal",
+    "Wave speed = 0.24 m/s and the wave is transverse"
+   ],
+   "answer": 0,
+   "explanation": "Wave speed = wavelength ÷ period = 0.6 m ÷ 0.4 s = 1.5 m/s. Water surface waves are transverse because water particles move roughly up and down while the wave travels horizontally. The 0.24 m/s values would be if you multiplied instead of divided or used wrong numbers."
+  },
+  {
+   "n": 3,
+   "topic": "Atomic structure and radioactivity",
+   "q": "An isotope X has 17 protons and a mass number of 35. Which description is correct about isotope X?",
+   "options": [
+    "X has 18 electrons and 17 neutrons",
+    "X has 17 electrons and 17 neutrons",
+    "X has 35 electrons and 18 neutrons",
+    "X has 17 electrons and 18 neutrons"
+   ],
+   "answer": 3,
+   "explanation": "Mass number = protons + neutrons so neutrons = 35 − 17 = 18. A neutral atom has electrons = protons = 17. The other options incorrectly swap counts or assume the mass number equals electrons."
+  },
+  {
+   "n": 4,
+   "topic": "Atomic structure and radioactivity",
+   "q": "A sample contains 1.6 × 10^12 radioactive nuclei. The half-life is 4 hours. What number of undecayed nuclei remains after 12 hours?",
+   "options": [
+    "4.0 × 10^11 nuclei",
+    "8.0 × 10^11 nuclei",
+    "1.6 × 10^12 nuclei",
+    "2.0 × 10^11 nuclei"
+   ],
+   "answer": 3,
+   "explanation": "12 hours is three half-lives (12 ÷ 4 = 3), so remaining nuclei = (1.6 × 10^12) × (1/2)^3 = 1.6 × 10^12 × 1/8 = 0.2 × 10^12 = 2.0 × 10^11. The other values come from one or two half-life reductions or no decay."
+  },
+  {
+   "n": 5,
+   "topic": "Atomic structure and radioactivity",
+   "q": "Which statement correctly describes alpha, beta and gamma radiation from an unstable nucleus?",
+   "options": [
+    "Alpha particles decrease mass number by 4 and atomic number by 2; beta particles increase atomic number by 1; gamma rays are electromagnetic and do not change nucleon numbers",
+    "Alpha particles decrease mass number by 4 and atomic number by 2; beta particles decrease atomic number by 1; gamma rays decrease mass number",
+    "Alpha particles decrease mass number by 2; beta particles increase mass number by 1; gamma rays are particles that change atomic number",
+    "Alpha particles increase atomic number by 4; beta particles decrease atomic number by 1; gamma rays increase mass number"
+   ],
+   "answer": 0,
+   "explanation": "Alpha decay emits a 2-proton, 2-neutron helium nucleus so mass number −4 and atomic number −2. Beta decay converts a neutron to a proton, so atomic number +1 with little mass change. Gamma rays are high-energy photons and do not change nucleon counts. The wrong options confuse signs or treat gamma as particle that changes nucleons."
+  },
+  {
+   "n": 6,
+   "topic": "Magnetism and electromagnetism",
+   "q": "A straight wire carries a current of 2.0 A northwards. At a point 5.0 cm east of the wire, what is the direction of the magnetic field produced by the wire (use right-hand rule for conventional current)?",
+   "options": [
+    "Northwards (up the page)",
+    "Eastwards (right across the page)",
+    "Upwards (out of the page)",
+    "Downwards (into the page) if the page is a horizontal map with north up and east right)"
+   ],
+   "answer": 3,
+   "explanation": "Using the right-hand rule, thumb points along current (north/up), fingers curl so at a point east of the wire the magnetic field points into the page (downwards). The other directions ignore the circular field pattern around the wire."
+  },
+  {
+   "n": 7,
+   "topic": "Magnetism and electromagnetism",
+   "q": "A coil in a circuit is connected to a variable-power supply. Increasing the current in the coil will increase the magnetic flux through a nearby loop. According to electromagnetic induction, what will this changing flux induce in the nearby loop?",
+   "options": [
+    "A permanent increase in magnetic flux through the loop with no emf",
+    "An emf whose polarity reinforces the change in flux",
+    "An emf in the loop whose polarity opposes the change in flux",
+    "No emf unless the coil is physically moved"
+   ],
+   "answer": 2,
+   "explanation": "Faraday's law and Lenz's law state a changing magnetic flux induces an emf; Lenz's law gives polarity such that the induced emf opposes the change in flux. The wrong options either deny induction without motion, claim reinforcement, or claim no emf."
+  },
+  {
+   "n": 8,
+   "topic": "Particle model of matter",
+   "q": "A 200 g block of metal is heated from 20.0°C to 50.0°C. The specific heat capacity of the metal is 400 J/(kg·°C). How much thermal energy is needed? (Give answer in joules.)",
+   "options": [
+    "24 J",
+    "240 J",
+    "1200 J",
+    "2400 J"
+   ],
+   "answer": 3,
+   "explanation": "Energy = mass × specific heat capacity × temperature change. Mass = 0.200 kg, c = 400 J/(kg·°C), ΔT = 30.0°C → E = 0.200 × 400 × 30 = 2400 J. The smaller numbers come from using grams as kg without conversion or halving the value."
+  },
+  {
+   "n": 9,
+   "topic": "Particle model of matter",
+   "q": "Which change correctly describes what happens to density when the temperature of a fixed-mass gas in a sealed container is increased at constant volume?",
+   "options": [
+    "Density decreases because gas particles escape increasing the volume",
+    "Density stays the same because mass and volume are unchanged",
+    "Density increases because particles gain mass when heated",
+    "Density decreases because particles move faster and spread out"
+   ],
+   "answer": 1,
+   "explanation": "Density = mass ÷ volume; in a sealed rigid container mass and volume are constant so density does not change even though particle speed and pressure increase. The wrong options assume volume changes, mass changes with temperature, or particles escape, none of which apply to a sealed fixed-volume system."
+  },
+  {
+   "n": 10,
+   "topic": "Forces and motion",
+   "q": "A 1000 kg car is travelling at 20 m/s and the driver applies the brakes, bringing it to a stop in 5.0 s. What braking force acts on the car (state magnitude and direction)?",
+   "options": [
+    "A braking force of 4000 N acting opposite to the direction of motion.",
+    "A braking force of 4000 N acting in the direction of motion.",
+    "A braking force of 20000 N acting opposite to the direction of motion.",
+    "A braking force of 1000 N acting opposite to the direction of motion."
+   ],
+   "answer": 0,
+   "explanation": "Deceleration = (0 − 20) ÷ 5.0 = −4.0 m/s², so magnitude of net force = mass × deceleration = 1000 × 4.0 = 4000 N. The force must act opposite to the motion to slow the car; '4000 N in the direction of motion' would speed it up, and the other numbers do not match the calculation."
+  },
+  {
+   "n": 11,
+   "topic": "Electricity",
+   "q": "Two resistors, 2.0 Ω and 3.0 Ω, are connected in series across a 10 V battery. What is the current through the circuit?",
+   "options": [
+    "0.20 A",
+    "2.0 A",
+    "10.0 A",
+    "5.0 A"
+   ],
+   "answer": 1,
+   "explanation": "Series resistance = 2.0 + 3.0 = 5.0 Ω. Current = V ÷ R = 10 ÷ 5.0 = 2.0 A. The other answers come from incorrect division or forgetting to add resistances."
+  },
+  {
+   "n": 12,
+   "topic": "Space physics",
+   "q": "A person has mass 60 kg. What is their weight (force due to gravity) on the Moon where g ≈ 1.6 N/kg?",
+   "options": [
+    "360 N",
+    "96 N",
+    "588 N",
+    "60 N"
+   ],
+   "answer": 1,
+   "explanation": "Weight = mass × g = 60 × 1.6 = 96 N. 588 N is their Earth weight (60 × 9.8), 360 N would correspond to g ≈ 6.0 N/kg, and 60 N confuses mass (kg) with weight (N)."
+  },
+  {
+   "n": 13,
+   "topic": "Energy",
+   "q": "A 3.0 kW kettle heats 1.0 kg of water from 20.0°C to 90.0°C in 4.0 minutes. Assuming specific heat capacity of water is 4200 J/(kg°C), what is the efficiency of the kettle (to two significant figures)?",
+   "options": [
+    "41%",
+    "71%",
+    "4.1%",
+    "29%"
+   ],
+   "answer": 0,
+   "explanation": "Energy supplied = 3.0 kW × 240 s = 720 000 J. Energy used to heat water = 1.0 × 4200 × (90 − 20) = 294 000 J. Efficiency = 294 000 ÷ 720 000 = 0.4083 ≈ 41%. The other percentages do not match this calculation."
+  },
+  {
+   "n": 14,
+   "topic": "Forces and motion",
+   "q": "A driver is travelling at 25 m/s. Their reaction time is 0.70 s and the car's maximum deceleration under braking is 6.0 m/s². What is the total stopping distance (reaction distance + braking distance), to the nearest metre?",
+   "options": [
+    "88 m",
+    "17 m",
+    "70 m",
+    "52 m"
+   ],
+   "answer": 2,
+   "explanation": "Reaction distance = 25 × 0.70 = 17.5 m. Braking distance = v² ÷ (2a) = 25² ÷ (2×6.0) = 625 ÷ 12 = 52.08 m. Total ≈ 17.5 + 52.08 = 69.6 m ≈ 70 m. 52 m is just the braking part; 17 m is just the reaction part; 88 m is too large."
+  },
+  {
+   "n": 15,
+   "topic": "Electricity",
+   "q": "A small appliance plugged into a 230 V supply draws 3.0 A. What is the resistance of the appliance, to three significant figures?",
+   "options": [
+    "0.013 Ω",
+    "46.0 Ω",
+    "690 Ω",
+    "77.0 Ω"
+   ],
+   "answer": 3,
+   "explanation": "Ohm's law: R = V ÷ I = 230 ÷ 3.0 = 76.666... Ω, which to three significant figures is 77.0 Ω. The other values come from incorrect division or multiplication errors."
+  },
+  {
+   "n": 16,
+   "topic": "Space physics",
+   "q": "Which statement correctly describes the Moon at new moon as seen from Earth?",
+   "options": [
+    "The Moon is roughly between the Earth and Sun so the side illuminated by the Sun faces away from Earth, and the Moon is not visible (to the unaided eye).",
+    "The Moon is opposite the Sun so its whole face is illuminated and it appears brightest in the night sky.",
+    "The Moon is at its closest point to Earth (perigee) which causes a larger apparent size.",
+    "The Moon is at its highest point in the sky at midnight."
+   ],
+   "answer": 0,
+   "explanation": "At new moon the Moon lies approximately between Earth and Sun so the Sunlit side faces away and the Moon is not visible from Earth; 'opposite the Sun' describes a full moon, and perigee or being highest at midnight are unrelated to the new-moon phase."
+  },
+  {
+   "n": 17,
+   "topic": "Energy",
+   "q": "A hydroelectric turbine has water flow of 50 kg/s dropping 20 m. If the system is 80% efficient and g = 9.8 N/kg, what electrical power is produced (in kW) to three significant figures?",
+   "options": [
+    "7.84 kW",
+    "0.784 kW",
+    "6.13 kW",
+    "9.80 kW"
+   ],
+   "answer": 0,
+   "explanation": "Power available = m g h = 50 × 9.8 × 20 = 9800 W. With 80% efficiency electrical power = 0.80 × 9800 = 7840 W = 7.84 kW. 9.80 kW is the raw power before efficiency; 0.784 kW is 10× too small."
+  },
+  {
+   "n": 18,
+   "topic": "Forces and motion",
+   "q": "A constant force of 10 N acts on an object that moves 2.0 m in a direction 60° to the force. How much work is done by the force?",
+   "options": [
+    "17.3 J",
+    "10 J",
+    "5.0 J",
+    "20 J"
+   ],
+   "answer": 1,
+   "explanation": "Work = F × d × cosθ = 10 × 2.0 × cos60° = 20 × 0.5 = 10 J. 20 J ignores the angle, 5.0 J would be if cos60° = 0.25, and 17.3 J corresponds to using cos30° instead of cos60°."
+  },
+  {
+   "n": 19,
+   "topic": "Electricity",
+   "q": "Two resistors, 4.0 Ω and 6.0 Ω, are connected in parallel across a 12 V supply. What is the total current supplied by the battery?",
+   "options": [
+    "8.0 A",
+    "2.0 A",
+    "3.0 A",
+    "5.0 A"
+   ],
+   "answer": 3,
+   "explanation": "Parallel equivalent resistance = (4.0 × 6.0) ÷ (4.0 + 6.0) = 24 ÷ 10 = 2.4 Ω. Total current = 12 ÷ 2.4 = 5.0 A. The other currents do not match this division or come from incorrect handling of parallel resistances."
+  },
+  {
+   "n": 20,
+   "topic": "Waves",
+   "q": "A water wave has frequency 2.5 Hz and travels across a pond at 1.5 m/s. What is the wavelength of the wave?",
+   "options": [
+    "3.75 m",
+    "0.17 m",
+    "1.5 m",
+    "0.60 m"
+   ],
+   "answer": 3,
+   "explanation": "Wavelength λ = speed ÷ frequency = 1.5 m/s ÷ 2.5 Hz = 0.60 m. 3.75 m would be speed × frequency (wrong operation), 1.5 m is the speed not the wavelength, and 0.17 m is 1 ÷ (frequency × speed) which is not a correct formula."
+  },
+  {
+   "n": 21,
+   "topic": "Waves",
+   "q": "A string fixed at both ends is 1.20 m long and supports a wave travelling at 120 m/s. For the fundamental (first harmonic) standing wave on the string, what is the frequency?",
+   "options": [
+    "120 Hz",
+    "100 Hz",
+    "25 Hz",
+    "50 Hz"
+   ],
+   "answer": 3,
+   "explanation": "For the fundamental the wavelength λ = 2L = 2 × 1.20 m = 2.40 m, so f = v/λ = 120 m/s ÷ 2.40 m = 50 Hz. 100 Hz would come from using λ = L (wrong), 25 Hz from using λ = 4L, and 120 Hz is the wave speed mistaken for frequency."
+  },
+  {
+   "n": 22,
+   "topic": "Waves",
+   "q": "Which statement about electromagnetic waves is correct?",
+   "options": [
+    "They need a material medium to travel through and cannot be polarised.",
+    "They are transverse waves and can be polarised.",
+    "They are longitudinal waves and cannot be polarised.",
+    "They are longitudinal waves and can be polarised."
+   ],
+   "answer": 1,
+   "explanation": "Electromagnetic waves are transverse so their oscillations are perpendicular to the direction of travel and they can be polarised. The wrong options confuse transverse/longitudinal nature and incorrectly state they need a medium or cannot be polarised."
+  },
+  {
+   "n": 23,
+   "topic": "Atomic structure and radioactivity",
+   "q": "A radioactive isotope has an activity of 1600 Bq. Its half-life is 6 hours. What is its activity after 18 hours?",
+   "options": [
+    "100 Bq",
+    "200 Bq",
+    "400 Bq",
+    "800 Bq"
+   ],
+   "answer": 1,
+   "explanation": "18 hours is 3 half-lives (18 ÷ 6 = 3). After each half-life activity halves: 1600 → 800 → 400 → 200 Bq. 400 Bq would be after 12 hours (two half-lives), 800 Bq after 6 hours, and 100 Bq would be after 24 hours (four half-lives)."
+  },
+  {
+   "n": 24,
+   "topic": "Atomic structure and radioactivity",
+   "q": "Thorium-234 (234 over 90 Th) undergoes alpha decay. Which nucleus is produced?",
+   "options": [
+    "230 over 92 U (uranium-230)",
+    "234 over 88 Ra (radium-234)",
+    "238 over 92 U (uranium-238)",
+    "230 over 88 Ra (radium-230)"
+   ],
+   "answer": 3,
+   "explanation": "Alpha decay reduces mass number by 4 and atomic number by 2: 234 − 4 = 230 and 90 − 2 = 88, so the product is 230/88 Ra. The other choices either change the proton number incorrectly or keep the mass number unchanged."
+  },
+  {
+   "n": 25,
+   "topic": "Atomic structure and radioactivity",
+   "q": "Which pair correctly matches the type of radiation with its typical penetrating power and ionising ability?",
+   "options": [
+    "Alpha: low penetration, high ionising; Gamma: high penetration, low ionising",
+    "Alpha: high penetration, low ionising; Gamma: low penetration, high ionising",
+    "Alpha: high penetration, high ionising; Gamma: low penetration, low ionising",
+    "Alpha: low penetration, low ionising; Gamma: high penetration, high ionising"
+   ],
+   "answer": 0,
+   "explanation": "Alpha particles are the most ionising but are stopped by paper so have low penetration; gamma rays penetrate most materials and are the least ionising per interaction. The wrong options invert or mix up penetration and ionisation properties."
+  },
+  {
+   "n": 26,
+   "topic": "Magnetism and electromagnetism",
+   "q": "A straight horizontal wire 0.25 m long carries a current of 3.0 A. It lies in a vertical magnetic field of flux density 0.20 T and is perpendicular to the field. What magnetic force acts on the wire?",
+   "options": [
+    "0.025 N",
+    "0.60 N",
+    "0.15 N",
+    "1.50 N"
+   ],
+   "answer": 2,
+   "explanation": "Magnetic force F = B I L (sin 90° = 1) = 0.20 T × 3.0 A × 0.25 m = 0.15 N. 0.60 N would be if L = 1.0 m or a multiplication mistake, 0.025 N is 0.20 × 0.25 × 0.5 (wrong current), and 1.50 N is 10 times too large."
+  },
+  {
+   "n": 27,
+   "topic": "Magnetism and electromagnetism",
+   "q": "A metal rod of length 0.40 m moves at 5.0 m/s at right angles through a uniform magnetic field of 0.50 T. What is the magnitude of the induced emf between the ends of the rod?",
+   "options": [
+    "1.0 V",
+    "0.25 V",
+    "2.0 V",
+    "0.10 V"
+   ],
+   "answer": 0,
+   "explanation": "Induced emf E = B × l × v = 0.50 T × 0.40 m × 5.0 m/s = 1.0 V. 0.10 V and 0.25 V come from arithmetic errors (dividing by 10 or using wrong numbers), and 2.0 V would be double the correct result."
+  },
+  {
+   "n": 28,
+   "topic": "Particle model of matter",
+   "q": "A 200 g block of aluminium (specific heat capacity 900 J/kg°C) is heated from 20.0°C to 80.0°C. How much thermal energy is required (to three significant figures)?",
+   "options": [
+    "1.08 × 10^4 J",
+    "6.00 × 10^4 J",
+    "1.08 × 10^3 J",
+    "3.60 × 10^3 J"
+   ],
+   "answer": 0,
+   "explanation": "Energy Q = m c ΔT = 0.200 kg × 900 J/kg°C × (80.0 − 20.0)°C = 0.200 × 900 × 60 = 10,800 J = 1.08 × 10^4 J. 1.08 × 10^3 J is a factor of 10 too small, 6.00 × 10^4 J uses wrong mass or c, and 3.60 × 10^3 J is incorrect arithmetic."
+  },
+  {
+   "n": 29,
+   "topic": "Particle model of matter",
+   "q": "What happens to the density of a solid when it is heated (mass stays the same)?",
+   "options": [
+    "Density stays the same because mass and volume are both unchanged.",
+    "Density increases because volume decreases on heating.",
+    "Density decreases because volume increases while mass is unchanged.",
+    "Density increases because particles move faster and so mass increases."
+   ],
+   "answer": 2,
+   "explanation": "Heating usually causes a solid to expand, increasing its volume while mass remains constant, so density (mass ÷ volume) decreases. Mass does not increase when particles move faster, volume does not remain unchanged, and solids do not generally decrease in volume on heating."
+  },
+  {
+   "n": 30,
+   "topic": "Electricity",
+   "q": "A 12 V battery is connected to three identical lamps, each lamp having resistance 6.0 Ω. Two of the lamps are connected in parallel with each other, and the third lamp is connected in series with that parallel pair. What is the total current drawn from the battery?",
+   "options": [
+    "2.00 A",
+    "4.00 A",
+    "1.33 A",
+    "0.67 A"
+   ],
+   "answer": 2,
+   "explanation": "Two 6.0 Ω lamps in parallel give an equivalent resistance of 1/(1/6 + 1/6) = 3.0 Ω. That 3.0 Ω is in series with the other 6.0 Ω lamp, so total resistance is 3.0 + 6.0 = 9.0 Ω. Total current = 12 V ÷ 9.0 Ω = 4/3 A = 1.33 A. 2.00 A would be obtained if the total resistance were (incorrectly) taken as 6.0 Ω; 0.67 A comes from adding all three resistances (18 Ω) and 12/18 = 0.67 A; 4.00 A would be 12 V ÷ 3.0 Ω, which ignores the series lamp."
+  }
+ ]
+}

@@ -11,6 +11,7 @@ import { LANGUAGES } from '@/i18n';
 import { useLanguage } from '@/i18n/provider';
 import { TEXT_SCALES, useAppearance } from '@/lib/appearance';
 import { PLANS } from '@/lib/billing/plans';
+import { regionLabel, regionOf } from '@/lib/region';
 import { useSession } from '@/lib/session';
 import { useSettings } from '@/lib/settings';
 
@@ -144,6 +145,13 @@ export default function AccountSettingsScreen() {
           label={t('home.language')}
           value={LANGUAGES.find((l) => l.id === language)?.native}
           onPress={go('/settings/language')}
+          color={Colors.reward}
+        />
+        <SettingsLink
+          icon="earth-outline"
+          label={t('home.region')}
+          value={regionLabel(regionOf(user))}
+          onPress={go('/settings/region')}
           color={Colors.reward}
         />
         <SettingsLink

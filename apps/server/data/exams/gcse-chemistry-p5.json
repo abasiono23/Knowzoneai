@@ -1,0 +1,401 @@
+{
+ "id": "gcse-chemistry-p5",
+ "exam": "gcse",
+ "subject": "chemistry",
+ "year": null,
+ "number": 5,
+ "source": "ai",
+ "minutes": 35,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Bonding, structure and the properties of matter",
+   "q": "A student compares two solids, W and X. W has a giant ionic lattice; X has a simple molecular structure with weak intermolecular forces. Both are solids at room temperature. Which statement correctly explains why W has a much higher melting point than X?",
+   "options": [
+    "Strong covalent bonds between the ions in W must be broken, while the covalent bonds inside X remain unbroken.",
+    "Energy is needed to overcome strong electrostatic attractions between oppositely charged ions throughout W, but only weak intermolecular forces are overcome when X melts.",
+    "W has free electrons that hold the lattice together, so more energy is needed to melt it than X.",
+    "The molecules in X are held together by strong covalent bonds that must be broken before X can melt, so X should melt at the higher temperature."
+   ],
+   "answer": 1,
+   "explanation": "In an ionic lattice, melting requires overcoming strong electrostatic attractions between oppositely charged ions throughout the whole lattice. In a simple molecular solid, melting overcomes only weak intermolecular forces, not the strong covalent bonds within each molecule."
+  },
+  {
+   "n": 2,
+   "topic": "Quantitative chemistry",
+   "q": "A solution of potassium nitrate has a concentration of 0.250 mol dm⁻³. What volume of this solution contains 0.0125 mol of potassium nitrate?",
+   "options": [
+    "20.0 cm³",
+    "50.0 cm³",
+    "500 cm³",
+    "5.00 cm³"
+   ],
+   "answer": 1,
+   "explanation": "Rearrange n = c × V to V = n ÷ c, so V = 0.0125 ÷ 0.250 = 0.0500 dm³. Converting to cm³ gives 0.0500 × 1000 = 50.0 cm³."
+  },
+  {
+   "n": 3,
+   "topic": "Chemical changes",
+   "q": "During the electrolysis of molten zinc chloride using inert electrodes, which statement correctly describes what happens at the negative electrode?",
+   "options": [
+    "Zn²⁺ ions gain electrons and are reduced to zinc.",
+    "Zn²⁺ ions lose electrons and are oxidised to zinc solid.",
+    "Hydrogen ions gain electrons to form hydrogen gas because water is present.",
+    "Cl⁻ ions lose electrons and are oxidised to chlorine."
+   ],
+   "answer": 0,
+   "explanation": "At the negative electrode, Zn²⁺ ions gain electrons and are reduced to zinc atoms. Chloride ions move to the positive electrode, where they are oxidised to chlorine."
+  },
+  {
+   "n": 4,
+   "topic": "The rate and extent of chemical change",
+   "q": "A student measures the rate of reaction between excess marble chips and dilute hydrochloric acid by recording the total mass lost. At 40 s the total mass lost is 1.20 g. At 80 s the total mass lost is 1.80 g. What is the mean rate of mass loss between 40 s and 80 s?",
+   "options": [
+    "0.030 g/s",
+    "0.015 g/s",
+    "0.0075 g/s",
+    "0.045 g/s"
+   ],
+   "answer": 1,
+   "explanation": "The mass lost between 40 s and 80 s is 1.80 − 1.20 = 0.60 g. The time interval is 80 − 40 = 40 s, so the mean rate is 0.60 ÷ 40 = 0.015 g/s."
+  },
+  {
+   "n": 5,
+   "topic": "Bonding, structure and the properties of matter",
+   "q": "Graphite is used as a lubricant and diamond is used in cutting tools. Both are giant covalent structures of carbon. Which statement best explains these uses?",
+   "options": [
+    "Diamond has weak intermolecular forces between carbon atoms, so it can be shaped into a cutting edge, whereas graphite is a rigid network.",
+    "Graphite has weak covalent bonds within each layer, so the layers break away easily, whereas diamond has weak forces between ions.",
+    "Graphite has layers that can slide over each other because the forces between layers are weak, whereas diamond has a rigid three-dimensional network of carbon atoms each covalently bonded to four others.",
+    "Graphite is made of small molecules that roll over one another, whereas diamond is a giant ionic lattice."
+   ],
+   "answer": 2,
+   "explanation": "In graphite, the carbon atoms within each layer are covalently bonded, but the layers are held together by weak forces and can slide over one another. In diamond, every carbon atom is held in a rigid three-dimensional network by strong covalent bonds."
+  },
+  {
+   "n": 6,
+   "topic": "Quantitative chemistry",
+   "q": "The theoretical maximum mass of a product in a reaction is 8.00 g. A student obtains 6.40 g of the product. What is the percentage yield?",
+   "options": [
+    "125%",
+    "20.0%",
+    "64.0%",
+    "80.0%"
+   ],
+   "answer": 3,
+   "explanation": "Percentage yield = (actual mass ÷ theoretical maximum mass) × 100. Substituting gives (6.40 ÷ 8.00) × 100 = 80.0%."
+  },
+  {
+   "n": 7,
+   "topic": "Chemical changes",
+   "q": "Chlorine is bubbled through colourless potassium bromide solution. Which statement correctly describes the reaction that occurs?",
+   "options": [
+    "No reaction occurs because chlorine is less reactive than bromine.",
+    "Bromide ions are reduced to bromine while chlorine is oxidised to chloride ions.",
+    "Chlorine is reduced to chloride ions while bromide ions are oxidised to bromine, giving an orange-brown solution.",
+    "Potassium is displaced as a grey metal and chlorine forms potassium chloride."
+   ],
+   "answer": 2,
+   "explanation": "Chlorine is more reactive than bromine, so it displaces bromine from potassium bromide solution. Chlorine molecules gain electrons and are reduced, while bromide ions lose electrons and are oxidised to bromine, giving an orange-brown colour."
+  },
+  {
+   "n": 8,
+   "topic": "The rate and extent of chemical change",
+   "q": "A reaction between two aqueous solutions is slow at 20 °C. When the mixture is warmed to 30 °C, the rate increases noticeably. Which statement best explains this increase?",
+   "options": [
+    "A greater proportion of collisions have energy at least equal to the activation energy because particles have more kinetic energy on average.",
+    "The activation energy of the reaction is lowered by warming the mixture.",
+    "Warming makes all particles move with exactly the same speed, so more successful collisions occur.",
+    "The particles collide less often, but each collision is much more energetic."
+   ],
+   "answer": 0,
+   "explanation": "Increasing temperature gives particles more kinetic energy, so a greater proportion of collisions have energy equal to or greater than the activation energy. The activation energy itself is not lowered by warming."
+  },
+  {
+   "n": 9,
+   "topic": "Bonding, structure and the properties of matter",
+   "q": "Which statement correctly describes metallic bonding and explains why a metal such as copper is malleable?",
+   "options": [
+    "Metal atoms are held by strong intermolecular forces between layers, so the layers can slide without breaking covalent bonds.",
+    "Positive metal ions in layers are surrounded by delocalised electrons, allowing the layers to slide over one another without breaking the metallic bonds.",
+    "Metals contain small molecules that roll over each other when a force is applied.",
+    "Each metal atom shares a pair of electrons with only one neighbouring atom, so the bonds can bend easily."
+   ],
+   "answer": 1,
+   "explanation": "Metals consist of layers of positive ions with delocalised electrons between them. When a force is applied, the layers of ions can slide without breaking the attraction between the ions and the delocalised electrons, so the metal is malleable."
+  },
+  {
+   "n": 10,
+   "topic": "The rate and extent of chemical change",
+   "q": "The equilibrium N₂O₄(g) ⇌ 2NO₂(g) is endothermic in the forward direction. NO₂ is brown and N₂O₄ is colourless. A sealed tube containing the equilibrium mixture is cooled. What is observed and why?",
+   "options": [
+    "The mixture becomes darker because cooling shifts the equilibrium in the endothermic direction, producing more NO₂.",
+    "The mixture becomes darker because cooling increases both the forward and reverse rates equally but changes the colour of NO₂.",
+    "There is no change in colour because temperature affects the rate of reaching equilibrium but not the equilibrium position.",
+    "The mixture becomes paler because the equilibrium shifts in the exothermic direction, producing more N₂O₄."
+   ],
+   "answer": 3,
+   "explanation": "The forward reaction is endothermic, so the reverse reaction is exothermic. Cooling shifts the equilibrium in the exothermic direction, producing more colourless N₂O₄ and making the mixture paler."
+  },
+  {
+   "n": 11,
+   "topic": "Atomic structure and the periodic table",
+   "q": "A sample of boron contains 20% of boron-10 atoms and 80% of boron-11 atoms by abundance. What is the relative atomic mass of boron in this sample to one decimal place?",
+   "options": [
+    "10.2",
+    "10.8",
+    "11.0",
+    "10.5"
+   ],
+   "answer": 1,
+   "explanation": "The relative atomic mass is the weighted average: (20 × 10 + 80 × 11) ÷ 100 = 1080 ÷ 100 = 10.8. The value 10.5 would be the unweighted mean of 10 and 11, so it ignores the stated abundances."
+  },
+  {
+   "n": 12,
+   "topic": "Atomic structure and the periodic table",
+   "q": "An atom of aluminium has atomic number 13. What is the electronic configuration of the Al³⁺ ion, written as the number of electrons in each shell?",
+   "options": [
+    "2,8,3",
+    "2,8,6",
+    "2,8",
+    "2,8,1"
+   ],
+   "answer": 2,
+   "explanation": "A neutral aluminium atom has 13 electrons arranged 2,8,3. Forming Al³⁺ removes the three outer-shell electrons, leaving 2,8; the 2,8,3 arrangement is the neutral atom, not the ion."
+  },
+  {
+   "n": 13,
+   "topic": "Atomic structure and the periodic table",
+   "q": "An atom of potassium has atomic number 19. In which group and period is potassium placed in the modern periodic table?",
+   "options": [
+    "Group 3, Period 4",
+    "Group 1, Period 4",
+    "Group 1, Period 3",
+    "Group 2, Period 4"
+   ],
+   "answer": 1,
+   "explanation": "Potassium has electronic configuration 2,8,8,1. One electron in the outer shell places it in Group 1, and four occupied shells place it in Period 4."
+  },
+  {
+   "n": 14,
+   "topic": "Organic chemistry",
+   "q": "The repeating unit of an addition polymer is –CH₂–CHCl–. Which monomer produces this polymer?",
+   "options": [
+    "Ethene",
+    "1,2-dichloroethane",
+    "Chloroethene",
+    "Chloroethane"
+   ],
+   "answer": 2,
+   "explanation": "The repeating unit has the same carbon skeleton as the monomer but with the C=C double bond opened. –CH₂–CHCl– corresponds to CH₂=CHCl, chloroethene, while chloroethane is saturated and would not undergo addition polymerisation."
+  },
+  {
+   "n": 15,
+   "topic": "Organic chemistry",
+   "q": "One molecule of decane, C₁₀H₂₂, is cracked to produce one molecule of ethene and one molecule of an alkane as the only products. Which alkane is formed?",
+   "options": [
+    "Octane, C₈H₁₈",
+    "Hexane, C₆H₁₄",
+    "Butane, C₄H₁₀",
+    "Nonane, C₉H₂₀"
+   ],
+   "answer": 0,
+   "explanation": "Removing C₂H₄ from C₁₀H₂₂ leaves C₈H₁₈, which is octane. The equation is C₁₀H₂₂ → C₈H₁₈ + C₂H₄, and the carbon and hydrogen atoms balance."
+  },
+  {
+   "n": 16,
+   "topic": "Organic chemistry",
+   "q": "Hex-2-ene has molecular formula C₆H₁₂. What is the molecular formula of the alkane with the same number of carbon atoms?",
+   "options": [
+    "C₆H₁₄",
+    "C₆H₁₀",
+    "C₆H₁₂",
+    "C₇H₁₆"
+   ],
+   "answer": 0,
+   "explanation": "Alkanes have the general formula CₙH₂ₙ₊₂, so for six carbon atoms the formula is C₆H₁₄. The alkene C₆H₁₂ would need two more hydrogen atoms, not fewer, to become the corresponding alkane."
+  },
+  {
+   "n": 17,
+   "topic": "Using resources",
+   "q": "A student sets up four iron nails. Nail W is in damp air. Nail X is painted and in damp air. Nail Y is in boiled water covered with a layer of oil. Nail Z is in dry air with a drying agent. Which nail rusts most quickly?",
+   "options": [
+    "Nail Y in boiled water covered with oil",
+    "Nail Z in dry air with a drying agent",
+    "Nail X painted in damp air",
+    "Nail W in damp air"
+   ],
+   "answer": 3,
+   "explanation": "Iron rusts when both oxygen and water are present. Nail W has both; paint, the oil layer, and the drying agent each prevent contact between the iron and one or both of the reactants."
+  },
+  {
+   "n": 18,
+   "topic": "Using resources",
+   "q": "Which of these is a composite material?",
+   "options": [
+    "Fibreglass, made from glass fibres embedded in a polymer",
+    "Copper, a metal made of copper atoms",
+    "Poly(ethene), made from ethene monomers",
+    "Brass, made from copper and zinc"
+   ],
+   "answer": 0,
+   "explanation": "A composite contains two materials with different properties combined; fibreglass has glass fibres reinforcing a polymer. Brass is an alloy rather than a composite, while poly(ethene) and copper are single materials."
+  },
+  {
+   "n": 19,
+   "topic": "Chemical analysis",
+   "q": "A solution is acidified with dilute nitric acid and then silver nitrate solution is added. A cream precipitate forms. Which halide ion is present?",
+   "options": [
+    "Iodide, I⁻",
+    "Bromide, Br⁻",
+    "Chloride, Cl⁻",
+    "Sulfate, SO₄²⁻"
+   ],
+   "answer": 1,
+   "explanation": "Silver bromide is a cream precipitate; silver chloride is white and silver iodide is pale yellow. Nitric acid prevents carbonate ions interfering, and the result identifies bromide rather than sulfate."
+  },
+  {
+   "n": 20,
+   "topic": "Chemical analysis",
+   "q": "A student tests a gas with a glowing splint. The splint relights. Which gas is present?",
+   "options": [
+    "Hydrogen",
+    "Oxygen",
+    "Carbon dioxide",
+    "Chlorine"
+   ],
+   "answer": 1,
+   "explanation": "Oxygen supports combustion, so a glowing splint relights in it. Hydrogen gives a squeaky pop with a burning splint, carbon dioxide turns limewater milky, and chlorine bleaches damp litmus paper."
+  },
+  {
+   "n": 21,
+   "topic": "Bonding, structure and the properties of matter",
+   "q": "Copper conducts electricity in the solid state. Which statement explains this?",
+   "options": [
+    "Covalent bonds between copper atoms break to release electrons.",
+    "Positive copper ions can move through the lattice.",
+    "Delocalised electrons can move through the metal lattice.",
+    "Electrons are transferred from one copper ion to another only after melting."
+   ],
+   "answer": 2,
+   "explanation": "In a metal, the outer electrons are delocalised and can move through the lattice, carrying charge. The positive ions are fixed in position in the solid, and the metal does not need to melt to conduct."
+  },
+  {
+   "n": 22,
+   "topic": "Bonding, structure and the properties of matter",
+   "q": "A solid substance has a very high melting point, does not conduct electricity in either the solid or molten state, and is insoluble in water. Which type of structure is most consistent with these properties?",
+   "options": [
+    "Simple molecular",
+    "Metallic lattice",
+    "Ionic lattice",
+    "Giant covalent"
+   ],
+   "answer": 3,
+   "explanation": "A giant covalent structure such as diamond or silicon dioxide has many strong covalent bonds, giving a high melting point, and it does not contain mobile charged particles. Simple molecular solids have low melting points, ionic lattices usually conduct when molten, and metallic lattices conduct when solid."
+  },
+  {
+   "n": 23,
+   "topic": "Energy changes",
+   "q": "A reaction mixture in a school laboratory in Newport cools from 21 °C to 16 °C. Which statement describes the reaction?",
+   "options": [
+    "It is exothermic because the temperature of the mixture falls.",
+    "It is endothermic because energy is taken in from the surroundings.",
+    "It is endothermic because energy is released to the surroundings.",
+    "It is neither endothermic nor exothermic because the temperature changes."
+   ],
+   "answer": 1,
+   "explanation": "A fall in temperature shows that the reaction is absorbing energy from the surroundings, so it is endothermic. An exothermic reaction would transfer energy to the surroundings and raise the temperature."
+  },
+  {
+   "n": 24,
+   "topic": "Energy changes",
+   "q": "Use these bond energies: H–H = 436 kJ mol⁻¹, O=O = 498 kJ mol⁻¹ and O–H = 464 kJ mol⁻¹. What is the overall energy change for H₂(g) + ½O₂(g) → H₂O(g)?",
+   "options": [
+    "+685 kJ mol⁻¹",
+    "+243 kJ mol⁻¹",
+    "−243 kJ mol⁻¹",
+    "−928 kJ mol⁻¹"
+   ],
+   "answer": 2,
+   "explanation": "Energy needed to break bonds = 436 + ½ × 498 = 685 kJ mol⁻¹. Energy released forming bonds = 2 × 464 = 928 kJ mol⁻¹. Overall energy change = 685 − 928 = −243 kJ mol⁻¹, so the reaction is exothermic."
+  },
+  {
+   "n": 25,
+   "topic": "Chemistry of the atmosphere",
+   "q": "Which process removed a large amount of carbon dioxide from the early atmosphere and stored carbon in rocks?",
+   "options": [
+    "Carbon dioxide dissolved in the oceans and later formed carbonate rocks.",
+    "Burning fossil fuels removed carbon dioxide from the atmosphere and stored it in rocks.",
+    "Respiration by early animals removed carbon dioxide and locked it in rocks.",
+    "Photosynthesis by algae converted carbon dioxide directly into carbonate rocks."
+   ],
+   "answer": 0,
+   "explanation": "Carbon dioxide from the early atmosphere dissolved in the oceans and helped form carbonate sediments and rocks. Photosynthesis removed some carbon dioxide into living material, but it did not convert carbon dioxide directly into carbonate rocks."
+  },
+  {
+   "n": 26,
+   "topic": "The rate and extent of chemical change",
+   "q": "At a school in Birmingham, a reaction produces 0.72 g of precipitate in 30 s. What is the mean rate of reaction?",
+   "options": [
+    "0.24 g/s",
+    "2.4 g/s",
+    "21.6 g/s",
+    "0.024 g/s"
+   ],
+   "answer": 3,
+   "explanation": "Mean rate = mass of product ÷ time = 0.72 g ÷ 30 s = 0.024 g/s. The value 21.6 g/s comes from multiplying the mass by the time instead of dividing."
+  },
+  {
+   "n": 27,
+   "topic": "The rate and extent of chemical change",
+   "q": "For the equilibrium 2NO₂(g) ⇌ N₂O₄(g), which change increases the amount of N₂O₄ present at equilibrium?",
+   "options": [
+    "Increase the pressure.",
+    "Remove NO₂.",
+    "Add a catalyst.",
+    "Decrease the pressure."
+   ],
+   "answer": 0,
+   "explanation": "Increasing pressure moves the equilibrium towards the side with fewer gas molecules, which is the N₂O₄ side. A catalyst speeds up both directions equally and does not change the equilibrium position, while removing NO₂ moves the equilibrium towards NO₂."
+  },
+  {
+   "n": 28,
+   "topic": "The rate and extent of chemical change",
+   "q": "Why does increasing the temperature usually increase the rate of a chemical reaction?",
+   "options": [
+    "The activation energy is lowered, so more collisions are successful.",
+    "The concentration of the reactants increases, so particles collide more often.",
+    "Every collision between particles becomes successful because the particles gain energy.",
+    "More particles have energy at or above the activation energy, so successful collisions are more frequent."
+   ],
+   "answer": 3,
+   "explanation": "Higher temperature gives particles more kinetic energy, so a greater proportion have energy at or above the activation energy and successful collisions are more frequent. The activation energy itself is not lowered by heating, and not every collision becomes successful."
+  },
+  {
+   "n": 29,
+   "topic": "Quantitative chemistry",
+   "q": "Megan in Cardiff carries out a reaction in an open beaker. The total mass before the reaction is 132.5 g. After the reaction has finished, the total mass is 128.3 g because carbon dioxide has escaped. What mass of carbon dioxide escaped?",
+   "options": [
+    "0.0 g",
+    "260.8 g",
+    "8.4 g",
+    "4.2 g"
+   ],
+   "answer": 3,
+   "explanation": "Mass is conserved when the escaped gas is included, so the lost carbon dioxide accounts for the decrease in mass: 132.5 g − 128.3 g = 4.2 g. The gas has mass even though it escapes and can no longer be weighed with the beaker."
+  },
+  {
+   "n": 30,
+   "topic": "Quantitative chemistry",
+   "q": "When magnesium burns in oxygen, 2.40 g of magnesium combines with 1.60 g of oxygen. What is the empirical formula of the magnesium oxide formed? (Ar: Mg = 24, O = 16)",
+   "options": [
+    "Mg₂O",
+    "MgO",
+    "MgO₂",
+    "Mg₂O₃"
+   ],
+   "answer": 1,
+   "explanation": "Moles of magnesium = 2.40 ÷ 24 = 0.10 mol; moles of oxygen atoms = 1.60 ÷ 16 = 0.10 mol. The ratio Mg : O is 1 : 1, so the empirical formula is MgO."
+  }
+ ]
+}

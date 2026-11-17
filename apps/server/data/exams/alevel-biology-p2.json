@@ -1,0 +1,401 @@
+{
+ "id": "alevel-biology-p2",
+ "exam": "alevel",
+ "subject": "biology",
+ "year": null,
+ "number": 2,
+ "source": "ai",
+ "minutes": 40,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "DNA, genes and protein synthesis",
+   "q": "Bacteria were grown for many generations in a medium containing nitrogen-15, then transferred to a medium containing nitrogen-14. After two complete rounds of DNA replication, DNA was extracted and centrifuged. Which density distribution is expected if replication is semi-conservative?",
+   "options": [
+    "One quarter heavy DNA, one half intermediate DNA and one quarter light DNA.",
+    "All DNA of intermediate density, because every molecule retains one original strand.",
+    "Half heavy DNA and half light DNA, because the original double helix remains intact.",
+    "Equal amounts of intermediate-density DNA and light-density DNA, with no heavy DNA."
+   ],
+   "answer": 3,
+   "explanation": "After the first round, all DNA is hybrid, containing one nitrogen-15 strand and one nitrogen-14 strand. In the second round, each hybrid produces one hybrid molecule and one light molecule, so after two complete rounds the intermediate-density and light-density bands are present in equal amounts. Heavy DNA would occur only if the original double helix were conserved intact."
+  },
+  {
+   "n": 2,
+   "topic": "DNA, genes and protein synthesis",
+   "q": "A tRNA molecule has the anticodon 3′-ACG-5′. Assuming antiparallel complementary base pairing, what is the sequence of the mRNA codon it pairs with, written in the 5′ to 3′ direction?",
+   "options": [
+    "5′-ACG-3′",
+    "5′-CGU-3′",
+    "5′-GCA-3′",
+    "5′-UGC-3′"
+   ],
+   "answer": 3,
+   "explanation": "The anticodon 3′-ACG-5′ pairs antiparallel with the mRNA codon: the A at the 3′ end pairs with U at the 5′ end, C pairs with G, and G pairs with C, giving 5′-UGC-3′. Reversing or copying the anticodon without accounting for antiparallel pairing gives the incorrect sequences."
+  },
+  {
+   "n": 3,
+   "topic": "DNA, genes and protein synthesis",
+   "q": "After RNA primers on the lagging strand have been replaced by DNA, which enzyme joins the adjacent Okazaki fragments by forming phosphodiester bonds?",
+   "options": [
+    "DNA polymerase",
+    "DNA helicase",
+    "DNA ligase",
+    "Primase"
+   ],
+   "answer": 2,
+   "explanation": "DNA ligase catalyses the formation of phosphodiester bonds between adjacent DNA fragments, such as Okazaki fragments, after their RNA primers are replaced. DNA polymerase adds nucleotides during synthesis, helicase unwinds the double helix, and primase synthesises RNA primers."
+  },
+  {
+   "n": 4,
+   "topic": "Cell membranes and transport",
+   "q": "In a beetroot practical, cylinders of beetroot tissue were placed in water at different temperatures. Between 40 °C and 60 °C, the amount of red pigment released into the water increased sharply. Which explanation is most likely?",
+   "options": [
+    "Proteins in the membrane denature and the phospholipid bilayer is disrupted, so the membrane becomes more permeable to the pigment.",
+    "The cell wall is digested by enzymes released at higher temperatures, allowing pigment to leave.",
+    "The pigment is actively transported out of cells more rapidly because respiration increases.",
+    "The phospholipid molecules denature and lose their fatty acid tails."
+   ],
+   "answer": 0,
+   "explanation": "At temperatures around 40–60 °C, membrane proteins, including transport proteins and structural proteins, begin to denature and the phospholipid bilayer is disrupted. This increases membrane permeability so pigments leak out; phospholipids do not denature, and the leakage is not due to active transport or cell-wall digestion."
+  },
+  {
+   "n": 5,
+   "topic": "Cell membranes and transport",
+   "q": "A plant cell has a solute potential of −700 kPa and a pressure potential of +300 kPa. What is the water potential of the cell?",
+   "options": [
+    "−1000 kPa",
+    "+400 kPa",
+    "−400 kPa",
+    "−700 kPa"
+   ],
+   "answer": 2,
+   "explanation": "Water potential is the sum of solute potential and pressure potential: Ψw = Ψs + Ψp. Here Ψw = −700 kPa + 300 kPa = −400 kPa. Using −700 kPa ignores the pressure potential, and −1000 kPa comes from subtracting rather than adding the pressure potential."
+  },
+  {
+   "n": 6,
+   "topic": "Cell membranes and transport",
+   "q": "Which statement best describes how glucose is absorbed by epithelial cells of the ileum against its concentration gradient?",
+   "options": [
+    "Sodium ions are actively transported from the lumen into the epithelial cell, creating a water potential gradient that pulls glucose in by osmosis.",
+    "Sodium ions are actively transported out of the epithelial cell into the blood, and sodium ions then enter the cell from the lumen down their concentration gradient, co-transporting glucose with them.",
+    "Glucose is actively transported directly into the epithelial cell by ATP-powered carriers, then diffuses into the blood.",
+    "Glucose diffuses through the apical membrane by simple diffusion and is actively transported out of the cell into the blood."
+   ],
+   "answer": 1,
+   "explanation": "The sodium–potassium pump uses ATP to move Na⁺ out of the epithelial cell, maintaining a low intracellular Na⁺ concentration. Na⁺ then diffuses into the cell from the lumen down its concentration gradient through a co-transport protein, carrying glucose with it against glucose's concentration gradient. ATP is used indirectly, not by a direct ATP-powered glucose carrier at the apical membrane."
+  },
+  {
+   "n": 7,
+   "topic": "Exchange and transport in organisms",
+   "q": "Which statement correctly describes the effect of a higher partial pressure of carbon dioxide on the oxygen dissociation curve of haemoglobin?",
+   "options": [
+    "The curve shifts to the left, meaning haemoglobin has a higher affinity for oxygen.",
+    "The curve shifts to the right, meaning haemoglobin releases oxygen more readily at a given partial pressure of oxygen.",
+    "The maximum saturation increases above 100%, because more oxygen can bind to each haemoglobin molecule.",
+    "The curve becomes a straight line, because carbon dioxide competes directly with oxygen for haem groups."
+   ],
+   "answer": 1,
+   "explanation": "Carbon dioxide lowers blood pH, which reduces haemoglobin's affinity for oxygen and shifts the dissociation curve to the right. This is the Bohr shift, so oxygen is unloaded more readily at a given partial pressure of oxygen. Carbon dioxide does not compete directly with oxygen for haem groups, and maximum saturation does not exceed the normal maximum."
+  },
+  {
+   "n": 8,
+   "topic": "Exchange and transport in organisms",
+   "q": "During vigorous activity in an insect, lactate accumulates in the muscle cells. How does this help increase gas exchange?",
+   "options": [
+    "Lactate is converted to oxygen inside the tracheoles, increasing the partial pressure of oxygen in the tissues.",
+    "The spiracles close more often, which increases the pressure of air in the tracheal system.",
+    "Water moves by osmosis into the tracheoles, so they swell and increase their surface area.",
+    "Water moves by osmosis from the tracheoles into the muscle cells, so less fluid remains in the tracheoles and more tracheole surface is exposed to air."
+   ],
+   "answer": 3,
+   "explanation": "Lactate lowers the water potential of the muscle cells, so water moves by osmosis from the tracheoles into the cells. This reduces the fluid in the tracheole ends and exposes more tracheole surface to air, increasing the rate of oxygen diffusion. Water moving into the tracheoles would have the opposite effect."
+  },
+  {
+   "n": 9,
+   "topic": "Biological molecules",
+   "q": "Which statement best explains why the two polynucleotide strands of DNA are described as antiparallel?",
+   "options": [
+    "One strand contains deoxyribose while the other contains ribose.",
+    "Complementary base pairing means that adenine always pairs with thymine and guanine with cytosine.",
+    "The two strands are held together only by hydrogen bonds between phosphate groups.",
+    "Their sugar–phosphate backbones run in opposite directions, so one strand has a 5′ end next to a 3′ end of the other strand."
+   ],
+   "answer": 3,
+   "explanation": "Antiparallel refers to the opposite orientation of the two sugar–phosphate backbones: one strand runs 5′ to 3′ while the other runs 3′ to 5′ in the same overall direction. Complementary base pairing and hydrogen bonding between bases are separate features of the double helix, and both DNA strands contain deoxyribose."
+  },
+  {
+   "n": 10,
+   "topic": "Biological molecules",
+   "q": "Which statement about quaternary structure is correct?",
+   "options": [
+    "It involves the association of two or more polypeptide chains in a functional protein.",
+    "It occurs only in proteins that contain a metal-containing prosthetic group.",
+    "It is the coiling of a single polypeptide chain into an α-helix or β-pleated sheet.",
+    "It describes the linear sequence of amino acids joined by peptide bonds."
+   ],
+   "answer": 0,
+   "explanation": "Quaternary structure is the arrangement of two or more polypeptide chains held together in a single protein, as in haemoglobin. A single polypeptide chain folded into a three-dimensional shape has tertiary structure, and not every protein with quaternary structure contains a metal-containing prosthetic group."
+  },
+  {
+   "n": 11,
+   "topic": "Biological molecules",
+   "q": "Sunflower oil is liquid at room temperature, while butter is solid. Which difference best explains why sunflower oil has the lower melting point?",
+   "options": [
+    "It contains more saturated fatty acids, whose straight chains pack closely together.",
+    "Its fatty acid chains contain more C=C double bonds, which create kinks and prevent close packing.",
+    "Its fatty acid chains are longer and have no C=C double bonds, so they pack more tightly.",
+    "It contains more glycerol molecules per triglyceride, making the molecules smaller."
+   ],
+   "answer": 1,
+   "explanation": "Unsaturated fatty acids have C=C double bonds that introduce kinks, so the triglyceride molecules cannot pack closely and melt at a lower temperature. Saturated fatty acids have straight chains that pack closely, giving a higher melting point, and a triglyceride always contains three fatty acids joined to one glycerol."
+  },
+  {
+   "n": 12,
+   "topic": "Photosynthesis and respiration",
+   "q": "In the Calvin cycle, what is the main role of reduced NADP?",
+   "options": [
+    "It provides reducing power to convert glycerate 3-phosphate into triose phosphate.",
+    "It accepts electrons from chlorophyll during the light-dependent reactions.",
+    "It phosphorylates ribulose bisphosphate so that it can accept carbon dioxide.",
+    "It fixes carbon dioxide directly to form glycerate 3-phosphate."
+   ],
+   "answer": 0,
+   "explanation": "Reduced NADP donates hydrogen/reducing power in the Calvin cycle to reduce glycerate 3-phosphate to triose phosphate. ATP supplies energy for this step and for the regeneration of ribulose bisphosphate, while RuBisCO catalyses carbon dioxide fixation."
+  },
+  {
+   "n": 13,
+   "topic": "Photosynthesis and respiration",
+   "q": "During oxidative phosphorylation, what creates the proton gradient across the inner mitochondrial membrane?",
+   "options": [
+    "Oxygen accepts protons from the matrix and carries them into the intermembrane space.",
+    "Energy from electrons passing along the electron transport chain pumps protons from the matrix into the intermembrane space.",
+    "ATP synthase pumps protons from the intermembrane space into the matrix using ATP.",
+    "Protons are pumped from the intermembrane space into the matrix using energy released by oxygen."
+   ],
+   "answer": 1,
+   "explanation": "The electron transport chain uses energy from electron transfer to pump protons from the mitochondrial matrix into the intermembrane space. ATP synthase then allows protons to flow back down the gradient, and the energy released is used to synthesise ATP."
+  },
+  {
+   "n": 14,
+   "topic": "Photosynthesis and respiration",
+   "q": "A muscle cell in Ravi’s leg converts one glucose molecule to lactate during anaerobic respiration. What is the net ATP yield from this conversion?",
+   "options": [
+    "0 ATP",
+    "32 ATP",
+    "4 ATP",
+    "2 ATP"
+   ],
+   "answer": 3,
+   "explanation": "Glycolysis produces a net gain of 2 ATP and 2 reduced NAD per glucose before pyruvate is converted to lactate. The conversion of pyruvate to lactate regenerates NAD so glycolysis can continue, but it does not produce ATP directly."
+  },
+  {
+   "n": 15,
+   "topic": "Cells and microscopy",
+   "q": "Aisha in Leeds uses a light microscope to view a chloroplast. The image of the chloroplast is 30 mm long, and the actual chloroplast is 5 µm long. What is the magnification?",
+   "options": [
+    "×600",
+    "×6000",
+    "×60 000",
+    "×6"
+   ],
+   "answer": 1,
+   "explanation": "Magnification is image size divided by actual size. Converting 30 mm to micrometres gives 30 000 µm, and 30 000 µm ÷ 5 µm = 6000, so the magnification is ×6000."
+  },
+  {
+   "n": 16,
+   "topic": "Cells and microscopy",
+   "q": "Insulin is a protein secreted by β-cells in the pancreas. After insulin is synthesised on a ribosome attached to the rough endoplasmic reticulum, which route does it follow?",
+   "options": [
+    "Rough endoplasmic reticulum → mitochondrion → lysosome → cell-surface membrane",
+    "Golgi apparatus → rough endoplasmic reticulum → secretory vesicle → cell-surface membrane",
+    "Cytoplasm → nucleus → secretory vesicle → cell-surface membrane",
+    "Rough endoplasmic reticulum → Golgi apparatus → secretory vesicle → cell-surface membrane"
+   ],
+   "answer": 3,
+   "explanation": "Secreted proteins enter the rough endoplasmic reticulum, are transported to the Golgi apparatus for modification and packaging, and leave in secretory vesicles that fuse with the cell-surface membrane. Mitochondria and lysosomes are not the normal secretion route for insulin."
+  },
+  {
+   "n": 17,
+   "topic": "Gene expression and gene technology",
+   "q": "A point mutation occurs in the promoter region of a gene. Which outcome is most likely?",
+   "options": [
+    "The rate of transcription of the gene may change, but the amino acid sequence encoded by the gene need not change.",
+    "DNA replication will stop at the promoter.",
+    "The amino acid at the site of the mutation will always change.",
+    "The mRNA will contain one extra codon, producing a longer polypeptide."
+   ],
+   "answer": 0,
+   "explanation": "A promoter is a non-coding DNA sequence where RNA polymerase and transcription factors bind to regulate transcription. A mutation there can alter how much mRNA is made without changing the coding sequence that determines the amino acid sequence."
+  },
+  {
+   "n": 18,
+   "topic": "Gene expression and gene technology",
+   "q": "In agarose gel electrophoresis, DNA fragments move through the gel towards the positive electrode. Why?",
+   "options": [
+    "The phosphate groups in the DNA backbone give the fragments an overall negative charge.",
+    "The bases of DNA are positively charged, so the fragments move away from the negative electrode.",
+    "The DNA fragments are neutral, but the positive electrode attracts water molecules that carry them.",
+    "The gel contains positively charged pores that pull the DNA fragments along."
+   ],
+   "answer": 0,
+   "explanation": "Each DNA fragment carries many phosphate groups, and at the buffer pH used these give the DNA an overall negative charge. The fragments are therefore attracted towards the positive electrode, while their size affects how quickly they move through the gel."
+  },
+  {
+   "n": 19,
+   "topic": "Nervous and hormonal coordination",
+   "q": "At resting potential, the inside of a neurone is about −70 mV relative to the outside. Which statement best explains how the resting potential is maintained?",
+   "options": [
+    "The membrane is highly permeable to Na⁺, so Na⁺ diffuses inward until the inside becomes negative.",
+    "Voltage-gated K⁺ channels are open and voltage-gated Na⁺ channels are open, so both ions move equally.",
+    "The Na⁺/K⁺ pump moves three Na⁺ in and two K⁺ out, making the inside negative.",
+    "The Na⁺/K⁺ pump moves three Na⁺ out and two K⁺ in, and the membrane is much more permeable to K⁺ than to Na⁺, so K⁺ diffuses out."
+   ],
+   "answer": 3,
+   "explanation": "The pump is electrogenic and moves more positive charge out than in, while the resting membrane is far more permeable to K⁺ than to Na⁺. The outward diffusion of K⁺ helps keep the inside negative. Making the membrane highly permeable to Na⁺ or opening both voltage-gated channels equally would not maintain the resting potential."
+  },
+  {
+   "n": 20,
+   "topic": "Nervous and hormonal coordination",
+   "q": "An inhibitory synapse releases a neurotransmitter that opens Cl⁻ channels on the postsynaptic membrane. What is the most likely immediate effect on the postsynaptic neurone?",
+   "options": [
+    "Cl⁻ enters the postsynaptic neurone, making its membrane potential more negative and reducing the chance of an action potential.",
+    "The neurotransmitter binds to Na⁺ channels, causing hyperpolarisation by allowing Na⁺ to leave the postsynaptic neurone.",
+    "Cl⁻ enters the postsynaptic neurone, causing depolarisation and increasing the chance of an action potential.",
+    "Cl⁻ leaves the postsynaptic neurone, making the inside more negative and directly starting an action potential."
+   ],
+   "answer": 0,
+   "explanation": "Influx of negatively charged Cl⁻ makes the inside of the postsynaptic neurone more negative, which is hyperpolarisation. This moves the membrane potential further from the threshold, so an action potential is less likely. Allowing Na⁺ to leave or causing depolarisation would not be the normal effect of this inhibitory synapse."
+  },
+  {
+   "n": 21,
+   "topic": "Nervous and hormonal coordination",
+   "q": "A patient called Ayesha in Leeds has an underactive thyroid and takes thyroxine tablets. After several weeks, her blood thyroxine concentration is normal. What explains why her TSH concentration is usually lower than before treatment?",
+   "options": [
+    "The higher thyroxine concentration stimulates the anterior pituitary to release more TSH by positive feedback.",
+    "Thyroxine inhibits the thyroid gland from absorbing iodine, so no TSH can be produced.",
+    "Thyroxine tablets directly destroy TSH in the blood, so less TSH is detected.",
+    "The higher thyroxine concentration exerts negative feedback on the hypothalamus and anterior pituitary, reducing TSH secretion."
+   ],
+   "answer": 3,
+   "explanation": "Thyroxine normally exerts negative feedback on the hypothalamus and anterior pituitary, reducing TRH and TSH secretion. Correcting the thyroxine level therefore lowers the high TSH that occurs when thyroxine is low. Positive feedback or destruction of TSH by thyroxine would not explain the fall in TSH."
+  },
+  {
+   "n": 22,
+   "topic": "Genetic diversity, classification and evolution",
+   "q": "In a coding exon, a substitution changes the third base of a codon in the mRNA, but the polypeptide produced is unchanged. Which explanation is most likely?",
+   "options": [
+    "The third base of every codon is a wobble base that is not translated into an amino acid.",
+    "The genetic code is non-overlapping, so a change in one codon cannot affect the amino acid sequence.",
+    "The mutation changes the DNA but not the mRNA, because transcription uses the other DNA strand as a backup.",
+    "More than one codon can code for the same amino acid, so the amino acid sequence may remain the same."
+   ],
+   "answer": 3,
+   "explanation": "The genetic code is degenerate, meaning that several different codons can specify the same amino acid. A base substitution can therefore leave the amino acid sequence unchanged. The code being non-overlapping does not prevent a mutation changing an amino acid, and all three bases of a codon are part of the mRNA codon."
+  },
+  {
+   "n": 23,
+   "topic": "Genetic diversity, classification and evolution",
+   "q": "A student called Nadia in Birmingham surveys a population of 1000 snails. She finds that 640 are TT, 320 are Tt and 40 are tt for a gene with two alleles. What is the frequency of allele t in the population?",
+   "options": [
+    "0.04",
+    "0.20",
+    "0.36",
+    "0.32"
+   ],
+   "answer": 1,
+   "explanation": "The number of t alleles is 320 from the heterozygotes plus 2 × 40 = 80 from the tt snails, giving 400 t alleles. The total number of alleles is 2 × 1000 = 2000, so the allele frequency is 400 ÷ 2000 = 0.20. The value 0.04 is the frequency of tt individuals, not the t allele."
+  },
+  {
+   "n": 24,
+   "topic": "Ecosystems and energy transfer",
+   "q": "A field study near Cardiff by Ifan records that primary consumers in a meadow ingest 20 000 kJ m⁻² year⁻¹ of plant material. Of this, 6 000 kJ m⁻² year⁻¹ is egested in faeces and 5 000 kJ m⁻² year⁻¹ is lost as heat during respiration. No other energy losses are considered. What percentage of the ingested energy is incorporated into the primary consumers' biomass?",
+   "options": [
+    "70%",
+    "25%",
+    "30%",
+    "45%"
+   ],
+   "answer": 3,
+   "explanation": "Energy not egested is assimilated: 20 000 − 6 000 = 14 000 kJ m⁻² year⁻¹. Of this, 5 000 kJ m⁻² year⁻¹ is lost in respiration, leaving 9 000 kJ m⁻² year⁻¹ in biomass. As a percentage of ingested energy, this is (9 000 ÷ 20 000) × 100 = 45%; 70% is the assimilated proportion before respiratory loss."
+  },
+  {
+   "n": 25,
+   "topic": "Ecosystems and energy transfer",
+   "q": "A student called Kofi in Bristol says that energy lost between trophic levels is recycled by decomposers and returned to producers. Which statement best corrects this misconception?",
+   "options": [
+    "Energy passes back to producers through food chains, but matter remains in the decomposers.",
+    "Energy is recycled as chemical energy when decomposers break down dead material.",
+    "Decomposers convert lost heat back into light energy for photosynthesis.",
+    "Energy is not recycled: decomposers release it as heat during respiration, whereas matter such as carbon and nitrogen is recycled."
+   ],
+   "answer": 3,
+   "explanation": "Energy flows through ecosystems and is eventually lost as heat; it is not recycled back to producers. Decomposers recycle matter by breaking down dead material and releasing inorganic nutrients such as carbon dioxide and mineral ions. Heat cannot be converted back into light energy by decomposers, and food chains do not return energy to producers."
+  },
+  {
+   "n": 26,
+   "topic": "Immunity and disease",
+   "q": "A macrophage engulfs a pathogen and becomes an antigen-presenting cell. What is the main role of this antigen presentation in initiating an immune response?",
+   "options": [
+    "It causes memory B cells to divide without any interaction with T cells or cytokines.",
+    "It allows helper T cells with complementary receptors to bind the presented antigens and become activated, so they can stimulate B cells and other immune responses.",
+    "It allows the macrophage to secrete specific antibodies against the pathogen into the blood plasma.",
+    "It directly digests the pathogen using complement proteins and forms pores in its membrane."
+   ],
+   "answer": 1,
+   "explanation": "Antigen presentation places pathogen antigens on the macrophage surface so that compatible helper T cells can bind and become activated. Activated helper T cells release cytokines that help stimulate B cells and other immune responses. Macrophages do not secrete specific antibodies, and complement forming pores is a separate immune mechanism."
+  },
+  {
+   "n": 27,
+   "topic": "Immunity and disease",
+   "q": "A baby called Yusuf in Belfast receives antibodies across the placenta before birth. Which statement correctly describes this immunity and why?",
+   "options": [
+    "It is natural active immunity because the baby's plasma cells produce memory cells after receiving the antibodies.",
+    "It is artificial passive immunity because the antibodies came from another person.",
+    "It is natural passive immunity because the baby receives maternal antibodies without making their own immune response or memory cells.",
+    "It is artificial active immunity because the antibodies stimulate the baby to make memory cells."
+   ],
+   "answer": 2,
+   "explanation": "Antibodies crossing the placenta are acquired naturally and provide immediate protection, but the baby does not produce them or make memory cells against the pathogen. This makes the immunity passive. Artificial immunity involves medical intervention such as an injection, and active immunity requires the person’s own immune response and memory cell formation."
+  },
+  {
+   "n": 28,
+   "topic": "Homeostasis",
+   "q": "On a cold day, Priya’s core body temperature stays close to 37 °C. Which nervous response helps to reduce heat loss from her skin?",
+   "options": [
+    "Increased secretion of sweat from sweat glands",
+    "Increased rate of glycogen breakdown in skeletal muscle",
+    "Constriction of arterioles supplying skin capillaries",
+    "Relaxation of erector pili muscles"
+   ],
+   "answer": 2,
+   "explanation": "Sympathetic impulses cause arterioles near the skin surface to constrict, reducing blood flow and so reducing heat loss by radiation and convection. Sweating and relaxation of erector pili muscles would increase heat loss, while glycogen breakdown in skeletal muscle contributes to heat production rather than reducing heat loss."
+  },
+  {
+   "n": 29,
+   "topic": "Homeostasis",
+   "q": "Aisha, who has type 1 diabetes, forgets to give herself insulin before lunch. After the meal, why is her blood glucose concentration likely to remain high?",
+   "options": [
+    "The kidneys reabsorb more glucose from the filtrate",
+    "Body cells take up less glucose and the liver stores less glucose as glycogen.",
+    "The pancreas secretes less glucagon in response to the meal",
+    "The ileum absorbs glucose more rapidly than normal"
+   ],
+   "answer": 1,
+   "explanation": "Insulin normally increases glucose uptake by cells and stimulates glycogenesis in the liver, so too little insulin leaves more glucose in the blood. The kidneys do not normally reabsorb all glucose when blood concentration exceeds the renal threshold; glucose is lost in urine rather than actively reabsorbed more."
+  },
+  {
+   "n": 30,
+   "topic": "Homeostasis",
+   "q": "Which statement best explains how negative feedback helps to maintain a constant internal environment?",
+   "options": [
+    "Receptors stop sending impulses once the set point is reached, so effectors are not required",
+    "The set point is changed to match the external environment",
+    "A deviation from the set point triggers responses that increase the deviation",
+    "A deviation from the set point triggers responses that reduce the deviation."
+   ],
+   "answer": 3,
+   "explanation": "Negative feedback detects a change away from the set point and activates effectors that oppose it, bringing conditions back towards the set point. Responses that increase a deviation describe positive feedback, while changing the set point to match the external environment would not maintain a stable internal environment."
+  }
+ ]
+}

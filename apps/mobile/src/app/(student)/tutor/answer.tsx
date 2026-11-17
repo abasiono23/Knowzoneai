@@ -10,6 +10,7 @@ import { AnswerBlocks } from '@/components/tutor/answer-blocks';
 import { AnswerDiagram } from '@/components/tutor/diagram';
 import { TutorErrorState } from '@/components/tutor/error-state';
 import { FollowUps } from '@/components/tutor/follow-ups';
+import { RelatedLinks } from '@/components/tutor/related-links';
 import { Card, IconButton, Screen, ScreenHeader, Text } from '@/components/ui';
 import { Colors, Radius, Spacing } from '@/constants/theme';
 import { subjectLabel } from '@/lib/tutor/format';
@@ -135,6 +136,8 @@ export default function AnswerDetailScreen() {
           </Text>
         </Card>
       )}
+
+      <RelatedLinks items={answer.related} />
 
       <FollowUps items={answer.followUps} onPick={followUp} />
 

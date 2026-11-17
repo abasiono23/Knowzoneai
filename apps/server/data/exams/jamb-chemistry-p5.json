@@ -1,0 +1,531 @@
+{
+ "id": "jamb-chemistry-p5",
+ "exam": "jamb",
+ "subject": "chemistry",
+ "year": null,
+ "number": 5,
+ "source": "ai",
+ "minutes": 27,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Functional groups in organic chemistry",
+   "q": "Which of the following compounds decolourises bromine water at room temperature?",
+   "options": [
+    "Ethanol",
+    "Ethane",
+    "Ethene",
+    "Ethanoic acid"
+   ],
+   "answer": 2,
+   "explanation": "Ethene contains a carbon-carbon double bond, so it undergoes addition reaction with bromine and decolourises bromine water. Ethane is saturated, while ethanol and ethanoic acid do not have a C=C bond for this rapid addition reaction at room temperature."
+  },
+  {
+   "n": 2,
+   "topic": "Functional groups in organic chemistry",
+   "q": "A student in Ibadan warms ethanol with excess hot concentrated acidified potassium tetraoxomanganate(VII) solution. The final organic product formed is",
+   "options": [
+    "Ethanoic acid",
+    "Ethoxyethane",
+    "Ethanal",
+    "Ethene"
+   ],
+   "answer": 0,
+   "explanation": "Hot concentrated acidified potassium tetraoxomanganate(VII) is a strong oxidising agent. It oxidises ethanol first to ethanal and then further to ethanoic acid, so the final organic product is ethanoic acid."
+  },
+  {
+   "n": 3,
+   "topic": "Functional groups in organic chemistry",
+   "q": "Which reagent gives a silver mirror with an aldehyde but not with a ketone?",
+   "options": [
+    "Ammoniacal silver trioxonitrate(V)",
+    "Fehling's solution",
+    "Acidified potassium dichromate(VI)",
+    "Bromine water"
+   ],
+   "answer": 0,
+   "explanation": "Aldehydes reduce ammoniacal silver trioxonitrate(V) to metallic silver, forming a silver mirror, whereas simple ketones do not. Fehling's solution also detects aldehydes, but it gives a brick-red precipitate rather than a silver mirror."
+  },
+  {
+   "n": 4,
+   "topic": "Separation of mixtures",
+   "q": "A student in Port Harcourt wishes to obtain pure water from sea water. Which method is most suitable?",
+   "options": [
+    "Evaporation to dryness",
+    "Paper chromatography",
+    "Filtration",
+    "Simple distillation"
+   ],
+   "answer": 3,
+   "explanation": "Sea water contains dissolved salts; simple distillation evaporates the water and then condenses it, leaving the salts behind and giving pure water. Filtration and paper chromatography do not remove dissolved salts effectively, while evaporation to dryness leaves the salt rather than collecting pure water."
+  },
+  {
+   "n": 5,
+   "topic": "Separation of mixtures",
+   "q": "In a paper chromatography experiment, the solvent front travelled 12.0 cm from the origin while a blue dye spot travelled 7.5 cm. What is the Rf value of the blue dye?",
+   "options": [
+    "0.625",
+    "0.750",
+    "0.375",
+    "1.60"
+   ],
+   "answer": 0,
+   "explanation": "The Rf value is the distance moved by the dye divided by the distance moved by the solvent front. Thus Rf = 7.5 ÷ 12.0 = 0.625; inverting the ratio would wrongly give 1.60."
+  },
+  {
+   "n": 6,
+   "topic": "Mole concept and stoichiometry",
+   "q": "A motorist in Lagos burns 11.6 g of butane, C₄H₁₀, completely in excess oxygen. What mass of carbon(IV) oxide is produced? (C=12, H=1, O=16)",
+   "options": [
+    "44.0 g",
+    "35.2 g",
+    "17.6 g",
+    "70.4 g"
+   ],
+   "answer": 1,
+   "explanation": "Molar mass of butane = 4 × 12 + 10 × 1 = 58 g mol⁻¹, so moles of butane = 11.6 ÷ 58 = 0.200 mol. From 2C₄H₁₀ + 13O₂ → 8CO₂ + 10H₂O, 1 mol of butane gives 4 mol of CO₂, so 0.200 mol gives 0.800 mol CO₂. Mass of CO₂ = 0.800 × 44 = 35.2 g."
+  },
+  {
+   "n": 7,
+   "topic": "Mole concept and stoichiometry",
+   "q": "Excess zinc granules are added to 200 cm³ of 0.500 mol dm⁻³ hydrochloric acid. What volume of hydrogen is produced at s.t.p.? (Molar volume at s.t.p. = 22.4 dm³ mol⁻¹)",
+   "options": [
+    "4.48 dm³",
+    "1.12 dm³",
+    "0.560 dm³",
+    "2.24 dm³"
+   ],
+   "answer": 1,
+   "explanation": "Moles of HCl = 0.200 dm³ × 0.500 mol dm⁻³ = 0.100 mol. From Zn + 2HCl → ZnCl₂ + H₂, 2 mol HCl produce 1 mol H₂, so 0.100 mol HCl gives 0.050 mol H₂. Volume of H₂ = 0.050 × 22.4 = 1.12 dm³."
+  },
+  {
+   "n": 8,
+   "topic": "Mole concept and stoichiometry",
+   "q": "A 2.00 g sample of impure calcium carbonate from a quarry in Kogi reacts with excess dilute hydrochloric acid to produce 0.400 dm³ of carbon(IV) oxide at s.t.p. What is the percentage purity of the calcium carbonate? (CaCO₃=100; molar volume at s.t.p. = 22.4 dm³ mol⁻¹)",
+   "options": [
+    "44.6%",
+    "95.0%",
+    "89.3%",
+    "83.3%"
+   ],
+   "answer": 2,
+   "explanation": "Moles of CO₂ produced = 0.400 ÷ 22.4 = 0.01786 mol. CaCO₃ + 2HCl → CaCl₂ + CO₂ + H₂O, so moles of pure CaCO₃ = 0.01786 mol, giving mass = 0.01786 × 100 = 1.786 g. Percentage purity = (1.786 ÷ 2.00) × 100 = 89.3%."
+  },
+  {
+   "n": 9,
+   "topic": "Hydrocarbons",
+   "q": "A hydrocarbon gas forms a reddish-brown precipitate when passed through ammoniacal copper(I) chloride solution. The gas is",
+   "options": [
+    "Ethane",
+    "Ethene",
+    "Ethyne",
+    "Propane"
+   ],
+   "answer": 2,
+   "explanation": "Ethyne is a terminal alkyne and forms a reddish-brown copper(I) acetylide precipitate with ammoniacal copper(I) chloride. Ethene, ethane and propane do not give this reaction."
+  },
+  {
+   "n": 10,
+   "topic": "Water and solubility",
+   "q": "A sample of well water in Abeokuta forms scum with soap. After boiling, filtering and cooling, the water lathers readily with soap. The original hardness of the water was",
+   "options": [
+    "Salinity caused by sodium chloride",
+    "Permanent hardness",
+    "Both temporary and permanent hardness",
+    "Temporary hardness"
+   ],
+   "answer": 3,
+   "explanation": "Temporary hardness is caused mainly by calcium and magnesium hydrogencarbonates, which decompose on boiling to insoluble compounds that can be filtered off. Permanent hardness is not removed by boiling, so if it had been present the water would still not lather readily."
+  },
+  {
+   "n": 11,
+   "topic": "Hydrocarbons",
+   "q": "When 2-methylpropene reacts with hydrogen bromide in the dark, the major product is",
+   "options": [
+    "1-bromo-2-methylpropane",
+    "2-bromopropane",
+    "1-bromo-2-methylpropene",
+    "2-bromo-2-methylpropane"
+   ],
+   "answer": 3,
+   "explanation": "Hydrogen bromide adds according to Markovnikov’s rule: the hydrogen atom adds to the terminal carbon so that the more stable tertiary carbocation forms. Bromide then attaches to the tertiary carbon, giving 2-bromo-2-methylpropane; the anti-Markovnikov product would be 1-bromo-2-methylpropane."
+  },
+  {
+   "n": 12,
+   "topic": "Environmental chemistry",
+   "q": "A large refuse dump in Lagos produces a colourless gas that can burn and is formed by anaerobic decomposition of the waste. This gas is",
+   "options": [
+    "Methane",
+    "Oxygen",
+    "Carbon dioxide",
+    "Nitrogen"
+   ],
+   "answer": 0,
+   "explanation": "Anaerobic decomposition of organic waste produces methane, which is colourless and flammable. Carbon dioxide may also be produced, but it does not burn; oxygen and nitrogen are not generated by this decomposition."
+  },
+  {
+   "n": 13,
+   "topic": "Hydrocarbons",
+   "q": "Benzene reacts with chlorine in the presence of ultraviolet light. The main organic product is",
+   "options": [
+    "Benzene hexachloride (C₆H₆Cl₆)",
+    "Chlorobenzene",
+    "1,2-dichlorobenzene",
+    "Benzyl chloride"
+   ],
+   "answer": 0,
+   "explanation": "Ultraviolet light promotes addition of chlorine across the benzene ring, giving benzene hexachloride. Chlorobenzene is obtained by substitution when a halogen carrier such as iron(III) chloride is present."
+  },
+  {
+   "n": 14,
+   "topic": "Water and solubility",
+   "q": "A water treatment plant in Jos passes hard water through a resin that exchanges calcium and magnesium ions for sodium ions. This process is called",
+   "options": [
+    "Sedimentation",
+    "Chlorination",
+    "Ion exchange",
+    "Filtration"
+   ],
+   "answer": 2,
+   "explanation": "In ion exchange, calcium and magnesium ions in hard water are exchanged for sodium ions on the resin. Chlorination disinfects, sedimentation allows particles to settle, and filtration removes suspended solids rather than exchanging dissolved ions."
+  },
+  {
+   "n": 15,
+   "topic": "Acids, bases and salts",
+   "q": "A 2.50 g sample of limestone from Ewekoro produces 448 cm³ of carbon(IV) oxide at s.t.p. when treated with excess dilute hydrochloric acid. What is the percentage by mass of calcium carbonate in the sample? (CaCO₃ = 100 g/mol; molar volume at s.t.p. = 22.4 dm³)",
+   "options": [
+    "80.0%",
+    "89.6%",
+    "40.0%",
+    "20.0%"
+   ],
+   "answer": 0,
+   "explanation": "448 cm³ = 0.448 dm³, so moles of CO₂ = 0.448 ÷ 22.4 = 0.0200 mol. CaCO₃ produces one mole of CO₂ per mole, so mass of CaCO₃ = 0.0200 × 100 = 2.00 g. Percentage = (2.00 ÷ 2.50) × 100 = 80.0%."
+  },
+  {
+   "n": 16,
+   "topic": "Non-metals and their compounds",
+   "q": "In the laboratory preparation of chlorine by heating manganese(IV) oxide with concentrated hydrochloric acid, which statement correctly describes what happens to manganese?",
+   "options": [
+    "It remains in oxidation state +4.",
+    "It is oxidised from +2 to +4.",
+    "It is reduced from oxidation state +4 to +2.",
+    "It is oxidised from +4 to +7."
+   ],
+   "answer": 2,
+   "explanation": "MnO₂ contains manganese in the +4 oxidation state, while MnCl₂ contains manganese in the +2 state. Manganese is therefore reduced as it oxidises chloride ions to chlorine gas."
+  },
+  {
+   "n": 17,
+   "topic": "Non-metals and their compounds",
+   "q": "A reddish-brown gas is evolved when concentrated nitric acid is heated with copper turnings. At low temperature, the gas partly dimerises. Which gas is this?",
+   "options": [
+    "Nitrogen(II) oxide",
+    "Dinitrogen tetraoxide",
+    "Nitrogen(I) oxide",
+    "Nitrogen(IV) oxide"
+   ],
+   "answer": 3,
+   "explanation": "Copper with concentrated nitric acid produces nitrogen(IV) oxide, NO₂, which is reddish-brown. NO₂ dimerises to colourless dinitrogen tetraoxide, N₂O₄, at low temperature, but the gas first evolved is nitrogen(IV) oxide."
+  },
+  {
+   "n": 18,
+   "topic": "Metals and their compounds",
+   "q": "An iron spoon is to be electroplated with silver. Which combination should be used in the electroplating cell?",
+   "options": [
+    "Silver anode and silver nitrate electrolyte",
+    "Silver anode and iron(II) sulfate electrolyte",
+    "Iron anode and iron(II) sulfate electrolyte",
+    "Iron anode and silver nitrate electrolyte"
+   ],
+   "answer": 0,
+   "explanation": "In silver electroplating, the iron spoon is the cathode, the anode is pure silver, and the electrolyte supplies silver ions. During electrolysis, silver ions are reduced and deposited on the spoon while the silver anode dissolves."
+  },
+  {
+   "n": 19,
+   "topic": "Periodic table",
+   "q": "Which oxide of a Period 3 element is amphoteric?",
+   "options": [
+    "Sodium oxide",
+    "Magnesium oxide",
+    "Sulphur(IV) oxide",
+    "Aluminium oxide"
+   ],
+   "answer": 3,
+   "explanation": "Aluminium oxide reacts with both acids and alkalis, so it is amphoteric. Sodium oxide and magnesium oxide are basic oxides, while sulphur(IV) oxide is an acidic oxide."
+  },
+  {
+   "n": 20,
+   "topic": "Oxidation, reduction and electrolysis",
+   "q": "During copper electroplating in a workshop in Aba, a current of 2.00 A is passed through aqueous copper(II) sulfate for 965 s. What mass of copper is deposited at the cathode? (Cu = 63.5; 1 F = 96500 C mol⁻¹)",
+   "options": [
+    "0.318 g",
+    "0.635 g",
+    "1.27 g",
+    "2.54 g"
+   ],
+   "answer": 1,
+   "explanation": "Q = It = 2.00 × 965 = 1930 C, which is 1930 ÷ 96500 = 0.0200 mol of electrons. The cathode reaction is Cu²⁺ + 2e⁻ → Cu, so 0.0100 mol of copper forms; mass = 0.0100 × 63.5 = 0.635 g. Using one electron per copper ion would give the value 1.27 g."
+  },
+  {
+   "n": 21,
+   "topic": "Oxidation, reduction and electrolysis",
+   "q": "In the electrolysis of acidified water using platinum electrodes, what quantity of electricity is required to produce 3.20 g of oxygen at the anode? (O = 16; 1 F = 96500 C mol⁻¹)",
+   "options": [
+    "0.100 F",
+    "0.400 F",
+    "0.800 F",
+    "0.200 F"
+   ],
+   "answer": 1,
+   "explanation": "3.20 g of oxygen is 3.20 ÷ 32 = 0.100 mol of O₂. The anode reaction is 2H₂O → O₂ + 4H⁺ + 4e⁻, so 0.100 mol O₂ requires 0.400 mol of electrons, that is 0.400 F. Using two electrons per oxygen molecule would wrongly give 0.200 F."
+  },
+  {
+   "n": 22,
+   "topic": "Oxidation, reduction and electrolysis",
+   "q": "In the reaction 2KI(aq) + Cl₂(aq) → 2KCl(aq) + I₂(aq), which statement correctly describes the electron changes?",
+   "options": [
+    "Potassium ions lose electrons while iodine molecules gain electrons.",
+    "Iodide ions lose electrons while chlorine molecules gain electrons.",
+    "Iodide ions gain electrons while chlorine molecules lose electrons.",
+    "Chlorine molecules lose electrons while iodide ions gain electrons."
+   ],
+   "answer": 1,
+   "explanation": "Iodide ions are oxidised to iodine and therefore lose electrons, while chlorine molecules are reduced to chloride ions and gain electrons. Potassium ions are spectator ions and do not undergo electron transfer in this reaction."
+  },
+  {
+   "n": 23,
+   "topic": "Rates of reaction and equilibrium",
+   "q": "Which statement best explains why a small rise in temperature usually causes a large increase in the rate of a chemical reaction?",
+   "options": [
+    "The activation energy of the reaction is greatly increased.",
+    "A much larger fraction of colliding molecules has energy equal to or greater than the activation energy.",
+    "The molecules become larger and collide more frequently.",
+    "The equilibrium position always shifts to the right."
+   ],
+   "answer": 1,
+   "explanation": "At a higher temperature, the distribution of molecular energies shifts so that many more molecules have enough energy to overcome the activation-energy barrier. An increase in collision frequency alone is usually too small to account for the large rate increase. Changing the equilibrium position does not by itself explain the increase in reaction rate."
+  },
+  {
+   "n": 24,
+   "topic": "Rates of reaction and equilibrium",
+   "q": "The equilibrium N₂O₄(g) ⇌ 2NO₂(g) is set up in a cylinder with a movable piston at constant temperature. Which change increases the equilibrium amount of NO₂?",
+   "options": [
+    "Move the piston inward to decrease the volume.",
+    "Add argon at constant volume.",
+    "Move the piston outward to increase the volume.",
+    "Add a catalyst to the mixture."
+   ],
+   "answer": 2,
+   "explanation": "Increasing the volume lowers the pressure, and the equilibrium shifts towards the side with more gas molecules, which is NO₂. A catalyst speeds up attainment of equilibrium but does not change the equilibrium amount, while adding argon at constant volume leaves the partial pressures of the reacting gases unchanged."
+  },
+  {
+   "n": 25,
+   "topic": "Rates of reaction and equilibrium",
+   "q": "At a certain temperature, a 2.0 dm³ vessel contains 0.40 mol of A, 0.20 mol of B and 0.80 mol of C at equilibrium for A(g) + B(g) ⇌ 2C(g). What is Kc?",
+   "options": [
+    "8.0",
+    "10.0",
+    "0.125",
+    "20.0"
+   ],
+   "answer": 0,
+   "explanation": "The equilibrium concentrations are [A] = 0.40 ÷ 2.0 = 0.20 mol dm⁻³, [B] = 0.20 ÷ 2.0 = 0.10 mol dm⁻³ and [C] = 0.80 ÷ 2.0 = 0.40 mol dm⁻³. Thus Kc = [C]² ÷ ([A][B]) = (0.40)² ÷ (0.20 × 0.10) = 0.16 ÷ 0.020 = 8.0. Taking the reciprocal gives 0.125, which is incorrect."
+  },
+  {
+   "n": 26,
+   "topic": "Chemical bonding",
+   "q": "Ammonium chloride consists of NH₄⁺ and Cl⁻ ions. Which statement best describes the bonding in solid ammonium chloride?",
+   "options": [
+    "Only covalent bonds are present in the solid.",
+    "Covalent bonds hold the atoms within NH₄⁺ together, and ionic attractions hold NH₄⁺ and Cl⁻ together.",
+    "Metallic bonds hold NH₄⁺ and Cl⁻ together.",
+    "Only ionic bonds are present in the solid."
+   ],
+   "answer": 1,
+   "explanation": "Within the ammonium ion, nitrogen and hydrogen atoms are joined by covalent bonds, giving NH₄⁺. The positive NH₄⁺ ions and negative Cl⁻ ions are then held together by ionic attractions. Hence both covalent and ionic bonding are present."
+  },
+  {
+   "n": 27,
+   "topic": "Gas laws",
+   "q": "A 10.0 dm³ vessel contains 4.0 g of helium and 16.0 g of oxygen at 27 °C. What is the total pressure of the mixture? (He = 4, O = 16; R = 8.31 J K⁻¹ mol⁻¹)",
+   "options": [
+    "4.99 × 10⁵ Pa",
+    "2.49 × 10⁵ Pa",
+    "1.25 × 10⁵ Pa",
+    "3.74 × 10⁵ Pa"
+   ],
+   "answer": 3,
+   "explanation": "Moles of helium = 4.0 ÷ 4 = 1.0 mol; moles of oxygen = 16.0 ÷ 32 = 0.50 mol; total moles = 1.50 mol. Converting volume to m³, V = 10.0 dm³ = 0.0100 m³ and T = 300 K, so P = nRT ÷ V = (1.50 × 8.31 × 300) ÷ 0.0100 = 3.74 × 10⁵ Pa. Treating oxygen as 1.0 mol of atoms gives the too-high value 4.99 × 10⁵ Pa."
+  },
+  {
+   "n": 28,
+   "topic": "Gas laws",
+   "q": "A weather balloon released in Enugu contains 500 cm³ of helium at 27 °C and 100 kPa. At a higher altitude, the temperature is −33 °C and the pressure is 80 kPa. Assuming ideal gas behaviour, what is the new volume?",
+   "options": [
+    "320 cm³",
+    "500 cm³",
+    "625 cm³",
+    "400 cm³"
+   ],
+   "answer": 1,
+   "explanation": "Using P₁V₁/T₁ = P₂V₂/T₂ with temperatures in kelvin gives V₂ = 500 × (100 ÷ 80) × (240 ÷ 300) = 500 cm³. The cooling alone would reduce the volume to 400 cm³, while the pressure drop alone would increase it to 625 cm³; the two effects cancel."
+  },
+  {
+   "n": 29,
+   "topic": "Functional groups in organic chemistry",
+   "q": "A student in Ibadan has two colourless liquids, propanal and propanone. Which reagent will give a silver mirror with only one of the liquids when warmed?",
+   "options": [
+    "Tollens' reagent",
+    "Bromine water",
+    "Acidified potassium dichromate(VI)",
+    "Sodium trioxocarbonate(IV) solution"
+   ],
+   "answer": 0,
+   "explanation": "Tollens' reagent is ammoniacal silver nitrate; aldehydes such as propanal reduce it to metallic silver, forming a silver mirror, while ketones such as propanone do not. Acidified potassium dichromate(VI) may oxidise propanal but does not deposit silver. Sodium trioxocarbonate(IV) solution and bromine water do not give a silver mirror with these liquids."
+  },
+  {
+   "n": 30,
+   "topic": "Functional groups in organic chemistry",
+   "q": "Ethyl ethanoate is warmed with excess hot aqueous sodium hydroxide. Which products are formed?",
+   "options": [
+    "Sodium ethanoate and methanol",
+    "Sodium ethanoate and ethene",
+    "Sodium ethanoate and ethanol",
+    "Ethanoic acid and ethanol"
+   ],
+   "answer": 2,
+   "explanation": "Hot aqueous sodium hydroxide hydrolyses ethyl ethanoate to ethanoic acid and ethanol; in excess alkali the ethanoic acid is immediately neutralised to sodium ethanoate. Therefore the final products are sodium ethanoate and ethanol. Ethanoic acid and ethanol would be expected mainly under acid hydrolysis, while methanol is not formed because the alcohol part of the ester is the ethyl group."
+  },
+  {
+   "n": 31,
+   "topic": "Functional groups in organic chemistry",
+   "q": "Which formula represents a compound containing both an alkene and an alcohol functional group?",
+   "options": [
+    "CH₃CH₂COOH",
+    "CH₃CH=CHCH₂OH",
+    "CH₃COCH₂CH₃",
+    "CH₃CH₂CH₂CHO"
+   ],
+   "answer": 1,
+   "explanation": "CH₃CH=CHCH₂OH contains a carbon-to-carbon double bond, which is the alkene functional group, and an –OH group, which is the alcohol functional group. The other formulas contain aldehyde, carboxylic acid or ketone groups but no alcohol group."
+  },
+  {
+   "n": 32,
+   "topic": "Atomic structure",
+   "q": "Which of the following Period 3 elements has the largest atomic radius?",
+   "options": [
+    "Chlorine",
+    "Aluminium",
+    "Magnesium",
+    "Sodium"
+   ],
+   "answer": 3,
+   "explanation": "Atomic radius decreases across Period 3 from sodium to chlorine because the nuclear charge increases while the electrons remain in the same principal shell. The increased attraction pulls the outer electrons closer. Sodium is therefore larger than magnesium, aluminium and chlorine."
+  },
+  {
+   "n": 33,
+   "topic": "Atomic structure",
+   "q": "How many unpaired electrons are present in the ground-state Fe³⁺ ion? (Fe = 26)",
+   "options": [
+    "3",
+    "6",
+    "5",
+    "4"
+   ],
+   "answer": 2,
+   "explanation": "The Fe atom is [Ar] 3d⁶ 4s², so Fe³⁺ is [Ar] 3d⁵. In a half-filled 3d subshell each of the five d orbitals has one electron, giving five unpaired electrons. Pairing would leave fewer unpaired electrons and is not the ground-state arrangement for this ion."
+  },
+  {
+   "n": 34,
+   "topic": "Atomic structure",
+   "q": "The ground-state electron configuration of chromium is [Ar] 3d⁵ 4s¹ rather than [Ar] 3d⁴ 4s². Which statement best explains this exception to the usual Aufbau order?",
+   "options": [
+    "A completely filled 3d subshell is more stable.",
+    "A half-filled 3d subshell has extra stability.",
+    "The 4s electron is paired with a 3d electron to reduce repulsion.",
+    "The 4s orbital is higher in energy than the 3d orbital."
+   ],
+   "answer": 1,
+   "explanation": "In chromium, one 4s electron is promoted to 3d, producing a half-filled 3d⁵ subshell and a singly occupied 4s orbital. The extra exchange stability of the half-filled d subshell outweighs the usual [Ar] 3d⁴ 4s² arrangement. Chromium does not have a completely filled 3d subshell, so that statement cannot explain the exception."
+  },
+  {
+   "n": 35,
+   "topic": "Separation of mixtures",
+   "q": "A student in Kaduna is given a mixture of common salt and powdered chalk. Which procedure will give pure common salt?",
+   "options": [
+    "Heat the mixture strongly and collect the sublimate",
+    "Add water, stir, filter, then evaporate the filtrate to dryness",
+    "Use a magnet to remove the chalk, then evaporate the mixture",
+    "Add water, stir, filter, then keep the residue"
+   ],
+   "answer": 1,
+   "explanation": "Common salt is soluble in water, while chalk is insoluble. Adding water dissolves the salt; filtration removes the chalk, and evaporating the filtrate leaves the salt. The residue would contain the chalk, sublimation does not separate these solids, and chalk is not magnetic."
+  },
+  {
+   "n": 36,
+   "topic": "Mole concept and stoichiometry",
+   "q": "How many moles of chloride ions are present in 250 cm³ of 0.100 mol dm⁻³ aluminium chloride solution?",
+   "options": [
+    "0.300 mol",
+    "0.025 mol",
+    "0.075 mol",
+    "0.050 mol"
+   ],
+   "answer": 2,
+   "explanation": "Amount of AlCl₃ = 0.250 dm³ × 0.100 mol dm⁻³ = 0.025 mol. Each formula unit of AlCl₃ gives three chloride ions, so n(Cl⁻) = 3 × 0.025 mol = 0.075 mol. Using 0.025 mol gives the amount of AlCl₃, not of chloride ions."
+  },
+  {
+   "n": 37,
+   "topic": "Mole concept and stoichiometry",
+   "q": "Potassium trioxochlorate(V) decomposes on heating: 2KClO₃(s) → 2KCl(s) + 3O₂(g). What mass of KClO₃ is needed to produce 0.30 mol of oxygen gas? (K=39, Cl=35.5, O=16)",
+   "options": [
+    "36.75 g",
+    "49.0 g",
+    "24.5 g",
+    "12.25 g"
+   ],
+   "answer": 2,
+   "explanation": "Molar mass of KClO₃ = 39 + 35.5 + 3(16) = 122.5 g mol⁻¹. From the equation, 2 mol KClO₃ produce 3 mol O₂, so 0.30 mol O₂ requires (2/3) × 0.30 = 0.20 mol KClO₃. Mass = 0.20 mol × 122.5 g mol⁻¹ = 24.5 g."
+  },
+  {
+   "n": 38,
+   "topic": "Environmental chemistry",
+   "q": "On a sunny day in Lagos, nitrogen oxides and unburnt hydrocarbons from vehicle exhausts react in the air to form a secondary pollutant that irritates the eyes and respiratory tract. This pollutant is mainly",
+   "options": [
+    "lead(II) oxide",
+    "ozone (O₃)",
+    "sulphur(IV) oxide",
+    "carbon monoxide"
+   ],
+   "answer": 1,
+   "explanation": "Ground-level ozone is a secondary pollutant formed when nitrogen oxides and volatile organic compounds react in sunlight. Carbon monoxide and sulphur(IV) oxide are primary pollutants, while lead(II) oxide is a particulate material rather than the product of this photochemical reaction."
+  },
+  {
+   "n": 39,
+   "topic": "Environmental chemistry",
+   "q": "A spill of crude oil covers part of a pond in Bayelsa. Which immediate harmful effect is most directly caused by the floating oil layer?",
+   "options": [
+    "It makes the water strongly acidic immediately",
+    "It increases the solubility of oxygen in the water",
+    "It raises the permanent hardness of the water",
+    "It reduces oxygen diffusion into the water and blocks light needed by aquatic plants"
+   ],
+   "answer": 3,
+   "explanation": "A floating oil film limits the transfer of oxygen from air to water and reduces light penetration, so photosynthesis and dissolved oxygen fall. It does not increase oxygen solubility or immediately raise hardness or acidity."
+  },
+  {
+   "n": 40,
+   "topic": "Hydrocarbons",
+   "q": "A gaseous hydrocarbon, measured at room temperature and pressure, burns completely in oxygen. 10 cm³ of the hydrocarbon requires 30 cm³ of oxygen and produces 20 cm³ of carbon dioxide at the same temperature and pressure. The hydrocarbon is",
+   "options": [
+    "ethane",
+    "propane",
+    "ethene",
+    "ethyne"
+   ],
+   "answer": 2,
+   "explanation": "For CₓHᵧ, the volume of carbon dioxide gives x = 20 ÷ 10 = 2. The oxygen volume gives 10(2 + y/4) = 30, so 2 + y/4 = 3 and y = 4; the hydrocarbon is C₂H₄, ethene. Ethane would require 35 cm³ of oxygen and ethyne 25 cm³ under the same conditions."
+  }
+ ]
+}

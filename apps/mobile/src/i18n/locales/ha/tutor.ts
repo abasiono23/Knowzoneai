@@ -149,6 +149,10 @@ const tutor: Translation<typeof en> = {
     genericError: 'Wani abu ya faru ba daidai ba.',
     thinking: 'Ana tunani a kai…',
   },
+  related: {
+    title: 'Daga bayananka na Knowzone',
+    openLabel: 'Buɗe: {{title}}',
+  },
   followUps: {
     title: 'TAMBAYA NA GABA',
     askLabel: 'Tambaya: {{question}}',

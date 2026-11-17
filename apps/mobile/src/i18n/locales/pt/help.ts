@@ -769,7 +769,7 @@ const help: Translation<typeof en> = {
             body: ['O resultado da IA pode:'],
             bullets: [
               'Conter erros factuais, sobretudo em cálculos, datas e números',
-              'Falhar detalhes do teu programa ou entidade de exames (WAEC, NECO, JAMB)',
+              'Falhar detalhes do teu programa ou entidade de exames (WAEC, SAT, GCSE…)',
               'Interpretar mal letra manuscrita, fotos desfocadas ou diagramas complexos',
               'Não saber de acontecimentos muito recentes ou de mudanças no programa',
               'Parecer confiante mesmo quando está errada',

@@ -1,0 +1,531 @@
+{
+ "id": "jamb-mathematics-p3",
+ "exam": "jamb",
+ "subject": "mathematics",
+ "year": null,
+ "number": 3,
+ "source": "ai",
+ "minutes": 27,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Fractions, decimals and percentages",
+   "q": "A trader in Aba allows two successive discounts of 20% and 10% on the marked price of an article. What single discount is equivalent to the two discounts?",
+   "options": [
+    "30%",
+    "28%",
+    "25%",
+    "12%"
+   ],
+   "answer": 1,
+   "explanation": "After a 20% discount, the customer pays 80% of the marked price. A further 10% discount leaves 90% of that amount, so the fraction paid is 0.80 × 0.90 = 0.72. The equivalent single discount is 1 − 0.72 = 0.28, which is 28%; adding 20% and 10% gives 30%, but successive discounts are not additive."
+  },
+  {
+   "n": 2,
+   "topic": "Fractions, decimals and percentages",
+   "q": "Amina spent 3/8 of her monthly salary on food and 1/4 of the remainder on rent. If she had ₦45,000 left, what was her monthly salary?",
+   "options": [
+    "₦96,000",
+    "₦84,000",
+    "₦120,000",
+    "₦72,000"
+   ],
+   "answer": 0,
+   "explanation": "After spending 3/8 on food, 5/8 of the salary remains. The rent is 1/4 of 5/8 = 5/32 of the salary, so the fraction left is 1 − 3/8 − 5/32 = 15/32. Thus 15/32 of the salary is ₦45,000, and the salary is ₦45,000 × 32/15 = ₦96,000."
+  },
+  {
+   "n": 3,
+   "topic": "Fractions, decimals and percentages",
+   "q": "A trader in Jos bought a bag of rice for ₦42,000 and sold it for ₦48,300. What is the percentage profit?",
+   "options": [
+    "20%",
+    "15%",
+    "6%",
+    "13%"
+   ],
+   "answer": 1,
+   "explanation": "Profit = ₦48,300 − ₦42,000 = ₦6,300. Percentage profit is (6,300 ÷ 42,000) × 100% = 15%. Using the selling price as the denominator would give about 13.04%, but profit percentage is normally calculated on the cost price."
+  },
+  {
+   "n": 4,
+   "topic": "Quadratic equations",
+   "q": "The product of two consecutive positive integers is 156. Find the smaller integer.",
+   "options": [
+    "14",
+    "12",
+    "11",
+    "13"
+   ],
+   "answer": 1,
+   "explanation": "Let the smaller integer be n, so n(n + 1) = 156. This gives n² + n − 156 = 0 = (n − 12)(n + 13); the positive solution is n = 12. The pair is 12 and 13, so the smaller integer is 12."
+  },
+  {
+   "n": 5,
+   "topic": "Quadratic equations",
+   "q": "If α and β are the roots of x² − 7x + 10 = 0, find α² + β².",
+   "options": [
+    "69",
+    "21",
+    "39",
+    "29"
+   ],
+   "answer": 3,
+   "explanation": "From the equation, α + β = 7 and αβ = 10. Therefore α² + β² = (α + β)² − 2αβ = 7² − 2(10) = 49 − 20 = 29. Squaring the sum and adding twice the product would give 69, which is not α² + β²."
+  },
+  {
+   "n": 6,
+   "topic": "Quadratic equations",
+   "q": "A quadratic equation has roots −2 and 5. Find the equation in the form x² + bx + c = 0.",
+   "options": [
+    "x² − 3x + 10 = 0",
+    "x² + 3x + 10 = 0",
+    "x² − 3x − 10 = 0",
+    "x² + 3x − 10 = 0"
+   ],
+   "answer": 2,
+   "explanation": "For roots −2 and 5, the sum is 3 and the product is −10. The equation is x² − (sum of roots)x + (product of roots) = 0, so x² − 3x − 10 = 0. Using x² + 3x − 10 = 0 would reverse the sign of the sum."
+  },
+  {
+   "n": 7,
+   "topic": "Angles and circle geometry",
+   "q": "A tangent from an external point P touches a circle with centre O at T. If OT = 12 cm and OP = 13 cm, find the length of PT.",
+   "options": [
+    "25 cm",
+    "6 cm",
+    "5 cm",
+    "√313 cm"
+   ],
+   "answer": 2,
+   "explanation": "The radius OT is perpendicular to the tangent PT, so triangle OTP is right-angled at T. By Pythagoras, PT² = OP² − OT² = 13² − 12² = 25, hence PT = 5 cm. Adding the squares instead would incorrectly give √313 cm."
+  },
+  {
+   "n": 8,
+   "topic": "Angles and circle geometry",
+   "q": "Two tangents PA and PB are drawn from an external point P to a circle with centre O. If ∠APB = 70°, find ∠AOB.",
+   "options": [
+    "70°",
+    "110°",
+    "125°",
+    "140°"
+   ],
+   "answer": 1,
+   "explanation": "The radii OA and OB are perpendicular to the tangents PA and PB, so ∠OAP = ∠OBP = 90°. In quadrilateral OAPB, the angles sum to 360°, hence ∠AOB = 360° − 90° − 90° − 70° = 110°."
+  },
+  {
+   "n": 9,
+   "topic": "Coordinate geometry",
+   "q": "The point P divides the line segment joining A(1, −1) and B(7, 5) internally in the ratio 1:2. Find the coordinates of P.",
+   "options": [
+    "(4, 2)",
+    "(5, 3)",
+    "(3, 1)",
+    "(2, 0)"
+   ],
+   "answer": 2,
+   "explanation": "Using the section formula for internal division in the ratio 1:2, the coordinates are ((1×7 + 2×1)/(1+2), (1×5 + 2×(−1))/(1+2)). This gives (9/3, 3/3) = (3, 1). The coordinates (5, 3) would result from reversing the ratio to 2:1."
+  },
+  {
+   "n": 10,
+   "topic": "Coordinate geometry",
+   "q": "Find the coordinates of the point of intersection of the lines 2x + y = 7 and x + 3y = 11.",
+   "options": [
+    "(2, 3)",
+    "(5, 1)",
+    "(1, 5)",
+    "(3, 2)"
+   ],
+   "answer": 0,
+   "explanation": "From 2x + y = 7, y = 7 − 2x. Substituting into x + 3y = 11 gives x + 3(7 − 2x) = 11, so −5x = −10 and x = 2. Then y = 7 − 2(2) = 3, so the point is (2, 3)."
+  },
+  {
+   "n": 11,
+   "topic": "Indices and logarithms",
+   "q": "If 2^(3x − 1) = 4^(x + 2), find x.",
+   "options": [
+    "5",
+    "3/2",
+    "−3",
+    "3"
+   ],
+   "answer": 0,
+   "explanation": "Write the right side as 4^(x + 2) = 2^(2x + 4), then equate exponents: 3x − 1 = 2x + 4. Solving gives x = 5."
+  },
+  {
+   "n": 12,
+   "topic": "Indices and logarithms",
+   "q": "Evaluate log₄ 64 + log₉ (1/27).",
+   "options": [
+    "1/2",
+    "−3/2",
+    "9/2",
+    "3/2"
+   ],
+   "answer": 3,
+   "explanation": "log₄ 64 = 3 because 4³ = 64, and log₉(1/27) = −3/2 because 9^(−3/2) = 1/27. Their sum is 3 − 3/2 = 3/2."
+  },
+  {
+   "n": 13,
+   "topic": "Indices and logarithms",
+   "q": "If log₅(x − 1) + log₅(x + 3) = 1, find the admissible value of x.",
+   "options": [
+    "4",
+    "2",
+    "3",
+    "−4"
+   ],
+   "answer": 1,
+   "explanation": "The log rule gives (x − 1)(x + 3) = 5, so x² + 2x − 8 = 0, with roots 2 and −4. Since logs require x > 1, only 2 is admissible."
+  },
+  {
+   "n": 14,
+   "topic": "Surds",
+   "q": "Simplify (√12 + √27) ÷ √3.",
+   "options": [
+    "6",
+    "√13",
+    "5",
+    "5√3"
+   ],
+   "answer": 2,
+   "explanation": "√12 = 2√3 and √27 = 3√3, so the numerator is 5√3. Dividing by √3 gives 5."
+  },
+  {
+   "n": 15,
+   "topic": "Surds",
+   "q": "Simplify 4/(√7 + √3).",
+   "options": [
+    "√7 + √3",
+    "√7 − √3",
+    "(√7 − √3)/2",
+    "2(√7 − √3)"
+   ],
+   "answer": 1,
+   "explanation": "Multiply numerator and denominator by √7 − √3. The denominator becomes 7 − 3 = 4, so 4(√7 − √3)/4 simplifies to √7 − √3."
+  },
+  {
+   "n": 16,
+   "topic": "Surds",
+   "q": "Simplify (2√5 − 3)(2√5 + 3).",
+   "options": [
+    "1",
+    "29",
+    "−11",
+    "11"
+   ],
+   "answer": 3,
+   "explanation": "This is a difference of two squares: (2√5 − 3)(2√5 + 3) = (2√5)² − 3². Hence it equals 20 − 9 = 11."
+  },
+  {
+   "n": 17,
+   "topic": "Matrices and determinants",
+   "q": "If P = [[2, −3], [4, 1]] and Q = [[1, 5], [−2, 0]], find 2P − Q.",
+   "options": [
+    "[[3, −1], [10, 2]]",
+    "[[3, −11], [10, 2]]",
+    "[[3, 11], [10, 2]]",
+    "[[3, −11], [6, 2]]"
+   ],
+   "answer": 1,
+   "explanation": "First multiply P by 2 to get [[4, −6], [8, 2]], then subtract the corresponding entries of Q. This gives [[4−1, −6−5], [8−(−2), 2−0]] = [[3, −11], [10, 2]]."
+  },
+  {
+   "n": 18,
+   "topic": "Matrices and determinants",
+   "q": "Find the determinant of M = [[2, 1, 3], [0, −2, 1], [4, 0, 5]].",
+   "options": [
+    "8",
+    "0",
+    "48",
+    "−40"
+   ],
+   "answer": 0,
+   "explanation": "Expanding along the first row gives 2((−2)(5) − (1)(0)) − 1((0)(5) − (1)(4)) + 3((0)(0) − (−2)(4)). This simplifies to −20 + 4 + 24 = 8."
+  },
+  {
+   "n": 19,
+   "topic": "Simultaneous equations and inequalities",
+   "q": "A trader at Balogun Market bought 5 tins of milk and 3 bags of sugar for ₦4,950. If a tin of milk costs ₦150 more than a bag of sugar, find the cost of a tin of milk.",
+   "options": [
+    "₦525",
+    "₦675",
+    "₦600",
+    "₦750"
+   ],
+   "answer": 1,
+   "explanation": "Let the bag of sugar cost s and the tin of milk cost s + 150. Then 5(s + 150) + 3s = 4950, so 8s = 4200 and s = 525; thus the milk costs ₦675."
+  },
+  {
+   "n": 20,
+   "topic": "Simultaneous equations and inequalities",
+   "q": "Find the range of x satisfying 3x − 7 ≤ 2x + 1 and 5x + 4 > 3x − 2.",
+   "options": [
+    "x ≤ 8",
+    "−3 ≤ x < 8",
+    "−3 < x ≤ 8",
+    "x > −3"
+   ],
+   "answer": 2,
+   "explanation": "The first inequality gives x ≤ 8, while the second gives 2x > −6, so x > −3. Combining them yields −3 < x ≤ 8."
+  },
+  {
+   "n": 21,
+   "topic": "Sequences and series",
+   "q": "An arithmetic progression has fourth term 18 and eleventh term 53. Find the sum of its first twelve terms.",
+   "options": [
+    "360",
+    "348",
+    "366",
+    "384"
+   ],
+   "answer": 2,
+   "explanation": "Let the first term be a and the common difference be d. From a + 3d = 18 and a + 10d = 53, subtracting gives 7d = 35, so d = 5 and a = 3. The sum of the first 12 terms is 12/2(2×3 + 11×5) = 6×61 = 366."
+  },
+  {
+   "n": 22,
+   "topic": "Sequences and series",
+   "q": "A trader in Aba saves ₦5,000 in the first month and increases her monthly savings by 20% each subsequent month. What is the total amount she saves in the first four months?",
+   "options": [
+    "₦20,000",
+    "₦26,840",
+    "₦26,000",
+    "₦28,000"
+   ],
+   "answer": 1,
+   "explanation": "The savings form a geometric series with first term 5000 and common ratio 1.2. The total is 5000(1.2⁴ − 1)/(1.2 − 1) = 5000(2.0736 − 1)/0.2 = 26,840. Adding a fixed ₦1,000 each month would give ₦26,000, but the increase is 20% of each month's saving."
+  },
+  {
+   "n": 23,
+   "topic": "Sequences and series",
+   "q": "In a geometric progression, the third term is 12 and the sixth term is 96. Find the sum of the first five terms.",
+   "options": [
+    "45",
+    "372",
+    "96",
+    "93"
+   ],
+   "answer": 3,
+   "explanation": "Let the first term be a and the common ratio be r. Then ar² = 12 and ar⁵ = 96; dividing gives r³ = 8, so r = 2 and a = 3. The sum of the first five terms is 3(2⁵ − 1)/(2 − 1) = 3×31 = 93."
+  },
+  {
+   "n": 24,
+   "topic": "Number bases",
+   "q": "A student in Akure converts the binary number 110101₂ to base 8. What is the result?",
+   "options": [
+    "53₈",
+    "67₈",
+    "65₈",
+    "63₈"
+   ],
+   "answer": 2,
+   "explanation": "Group the binary digits in threes from the right: 110 101. These are 6 and 5 in decimal, so the number is 65₈. Checking in decimal, 110101₂ = 32 + 16 + 4 + 1 = 53 = 6×8 + 5."
+  },
+  {
+   "n": 25,
+   "topic": "Variation",
+   "q": "In a physics experiment, y varies directly as x and inversely as √z. If y = 6 when x = 9 and z = 4, find y when x = 15 and z = 25.",
+   "options": [
+    "8",
+    "6",
+    "5",
+    "4"
+   ],
+   "answer": 3,
+   "explanation": "Write y = kx/√z. Using y = 6, x = 9 and z = 4 gives 6 = 9k/2, so k = 12/9 = 4/3. When x = 15 and z = 25, y = (4/3)×15/5 = 4."
+  },
+  {
+   "n": 26,
+   "topic": "Variation",
+   "q": "A painter in Abeokuta finds that the cost C of painting a square wall varies directly as the square of its side length x. If a wall of side 5 m costs ₦12,500, find the cost of painting a similar square wall of side 8 m.",
+   "options": [
+    "₦32,000",
+    "₦20,000",
+    "₦40,000",
+    "₦51,200"
+   ],
+   "answer": 0,
+   "explanation": "Since C = kx², 12,500 = k×5², so k = 500. For x = 8 m, C = 500×8² = ₦32,000. Using direct proportion to x instead of x² gives ₦20,000, which is not correct here."
+  },
+  {
+   "n": 27,
+   "topic": "Statistics",
+   "q": "In a school in Jos, the mean mark of 8 students in a Mathematics test was 64. After a ninth student took the test, the mean mark of the nine students became 65. Find the ninth student's mark.",
+   "options": [
+    "73",
+    "81",
+    "65",
+    "72"
+   ],
+   "answer": 0,
+   "explanation": "The first eight students had a total mark of 8×64 = 512. The nine students had a total of 9×65 = 585, so the ninth student scored 585 − 512 = 73."
+  },
+  {
+   "n": 28,
+   "topic": "Statistics",
+   "q": "The ages (in years) of 20 students in a class in Kaduna are distributed as follows: 12 years, 3 students; 13 years, 5 students; 14 years, 7 students; 15 years, 4 students; 16 years, 1 student. Find the median age.",
+   "options": [
+    "14.5 years",
+    "15 years",
+    "13 years",
+    "14 years"
+   ],
+   "answer": 3,
+   "explanation": "There are 20 students, so the median is the average of the 10th and 11th ages after ordering. The first three ages are 12, the next five bring the count to 8, and the next seven are 14, so both the 10th and 11th ages are 14 years."
+  },
+  {
+   "n": 29,
+   "topic": "Statistics",
+   "q": "The mean age of 15 students in a class in Ibadan is 14 years. The mean age of another group of 10 students is 19 years. Find the mean age of all 25 students.",
+   "options": [
+    "15.8 years",
+    "16.5 years",
+    "16 years",
+    "17 years"
+   ],
+   "answer": 2,
+   "explanation": "Total age of the first group is 15×14 = 210 years, and of the second group is 10×19 = 190 years. The combined mean is (210 + 190) ÷ 25 = 400 ÷ 25 = 16 years. Taking the simple average of 14 and 19 gives 16.5 years, but the groups are not equal in size."
+  },
+  {
+   "n": 30,
+   "topic": "Mensuration",
+   "q": "A closed cylindrical tin made in Kano has diameter 28 cm and height 40 cm. Taking π = 22/7, find its total surface area.",
+   "options": [
+    "3,696 cm²",
+    "1,232 cm²",
+    "3,520 cm²",
+    "4,752 cm²"
+   ],
+   "answer": 3,
+   "explanation": "The radius is 14 cm, so total surface area = 2πr(r + h) = 2 × (22/7) × 14 × (14 + 40) = 4,752 cm². The value 3,520 cm² is only the curved surface area, while 1,232 cm² is only the two circular ends combined."
+  },
+  {
+   "n": 31,
+   "topic": "Mensuration",
+   "q": "A rectangular hall in Port Harcourt measures 18 m by 12 m. It is to be covered with square tiles of side 60 cm. How many tiles are needed to cover the hall completely?",
+   "options": [
+    "600",
+    "216",
+    "50",
+    "360"
+   ],
+   "answer": 0,
+   "explanation": "The hall area is 18 × 12 = 216 m², and each tile covers 0.6 × 0.6 = 0.36 m². Hence the number of tiles is 216 ÷ 0.36 = 600. Using 216 ÷ 0.6 = 360 ignores that the tile side must be squared."
+  },
+  {
+   "n": 32,
+   "topic": "Mensuration",
+   "q": "A solid hemisphere in Ilorin has radius 7 cm. Taking π = 22/7, find its total surface area.",
+   "options": [
+    "308 cm²",
+    "154 cm²",
+    "462 cm²",
+    "616 cm²"
+   ],
+   "answer": 2,
+   "explanation": "A solid hemisphere has total surface area equal to the curved surface plus the circular base: 3πr² = 3 × (22/7) × 7² = 462 cm². The value 308 cm² is the curved surface alone, while 154 cm² is only the circular base."
+  },
+  {
+   "n": 33,
+   "topic": "Trigonometry",
+   "q": "A vertical mast in Ibadan casts a shadow 18 m long on level ground when the sun's elevation is 30°. Find the height of the mast.",
+   "options": [
+    "6√3 m",
+    "18√3 m",
+    "9√3 m",
+    "9 m"
+   ],
+   "answer": 0,
+   "explanation": "Let the height be h. Then tan 30° = h/18, so h = 18 tan 30° = 18 × (1/√3) = 6√3 m. Using tan 60° instead gives 18√3 m, which is too large."
+  },
+  {
+   "n": 34,
+   "topic": "Sets",
+   "q": "In a staff room in Awka, 55 teachers were asked about three drinks. 28 drink tea, 25 drink coffee, 20 drink cocoa; 12 drink tea and coffee, 8 drink tea and cocoa, 7 drink coffee and cocoa, and 4 drink all three. How many teachers drink none of the three?",
+   "options": [
+    "27",
+    "5",
+    "9",
+    "50"
+   ],
+   "answer": 1,
+   "explanation": "By inclusion–exclusion, the number who drink at least one is 28 + 25 + 20 − 12 − 8 − 7 + 4 = 50. Therefore the number who drink none is 55 − 50 = 5. Omitting the addition of the four who drink all three gives 46 and a false answer of 9."
+  },
+  {
+   "n": 35,
+   "topic": "Sets",
+   "q": "A canteen in Owerri offers 6 different food items. In how many ways can a student choose at least two of the items?",
+   "options": [
+    "15",
+    "64",
+    "57",
+    "63"
+   ],
+   "answer": 2,
+   "explanation": "There are 2⁶ = 64 possible subsets of the 6 items. Excluding the empty choice and the 6 single-item choices gives 64 − 1 − 6 = 57 ways. The value 63 would be the number of ways to choose at least one item."
+  },
+  {
+   "n": 36,
+   "topic": "Differentiation",
+   "q": "If y = (2x + 3)/(x − 1), find dy/dx at x = 2.",
+   "options": [
+    "5",
+    "−1",
+    "−5",
+    "−5/9"
+   ],
+   "answer": 2,
+   "explanation": "Using the quotient rule, dy/dx = [2(x − 1) − (2x + 3)]/(x − 1)² = −5/(x − 1)². At x = 2, this becomes −5/1² = −5. The positive value results from dropping the minus sign in the quotient-rule numerator."
+  },
+  {
+   "n": 37,
+   "topic": "Differentiation",
+   "q": "A spherical balloon in Abuja is inflated so that its radius r cm after t seconds is r = 3t + 1. Find the rate of increase of its volume when t = 2. (Take V = 4/3πr³.)",
+   "options": [
+    "196π cm³/s",
+    "84π cm³/s",
+    "432π cm³/s",
+    "588π cm³/s"
+   ],
+   "answer": 3,
+   "explanation": "Since V = (4/3)πr³, dV/dt = 4πr² dr/dt. At t = 2, r = 7 and dr/dt = 3, so dV/dt = 4π(49)(3) = 588π cm³/s. The value 196π cm³/s comes from omitting the factor dr/dt = 3."
+  },
+  {
+   "n": 38,
+   "topic": "Differentiation",
+   "q": "Differentiate y = cos(3x² + 1) with respect to x.",
+   "options": [
+    "6x sin(3x² + 1)",
+    "−sin(3x² + 1)",
+    "−6x cos(3x² + 1)",
+    "−6x sin(3x² + 1)"
+   ],
+   "answer": 3,
+   "explanation": "Using the chain rule, the derivative of cos u is −sin u times du/dx. Here u = 3x² + 1, so du/dx = 6x, giving dy/dx = −6x sin(3x² + 1). Omitting du/dx gives −sin(3x² + 1)."
+  },
+  {
+   "n": 39,
+   "topic": "Integration",
+   "q": "Evaluate ∫ from 0 to 1 of (4x³ + 3x² − 2x) dx.",
+   "options": [
+    "2",
+    "1",
+    "0",
+    "3"
+   ],
+   "answer": 1,
+   "explanation": "Integrating term by term gives x⁴ + x³ − x². Evaluating from 0 to 1 gives (1 + 1 − 1) − 0 = 1. The result 2 is obtained if the −2x term is omitted before evaluation."
+  },
+  {
+   "n": 40,
+   "topic": "Integration",
+   "q": "Find ∫(3√x + 2/x²) dx.",
+   "options": [
+    "2x√x + 2/x + C",
+    "3x√x − 2/x + C",
+    "2x√x − 1/x + C",
+    "2x√x − 2/x + C"
+   ],
+   "answer": 3,
+   "explanation": "Since 3√x = 3x^(1/2), its integral is 3 × (2/3)x^(3/2) = 2x√x. Also, ∫2x⁻² dx = −2x⁻¹ = −2/x, so the result is 2x√x − 2/x + C; the term +2/x has the wrong sign."
+  }
+ ]
+}

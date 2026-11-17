@@ -75,6 +75,8 @@ const billing: Translation<typeof en> = {
     studyPlans: 'Tsarin karatu na musamman gare ka',
     insights: 'Cikakken bayani kan ci gabanka',
     examPapers: 'Cikakkun takardun atisaye na WAEC, NECO da JAMB',
+    examPapersFor: 'Cikakkun takardun atisaye na {{exams}}',
+    examPapersAny: 'Cikakkun takardun gwajin jarabawa',
     library: 'Babban laburaren karatu da manyan fayiloli',
     priority: 'Fifiko wajen sarrafawa lokacin cunkoso',
     everythingPlus: 'Duk abin da ke cikin Plus',
@@ -192,6 +194,8 @@ const billing: Translation<typeof en> = {
       PRO: {
         whoQ: 'Pro na wa ne?',
         whoA: 'Ɗaliban da ke shirin WAEC, NECO ko JAMB waɗanda suke atisaye kowace rana kuma suke son cikakkun takardu irin na baya.',
+        whoAFor: 'Ɗaliban da ke shirin {{exams}} waɗanda suke atisaye kowace rana kuma suke son cikakkun takardun gwaji.',
+        whoAAny: 'Ɗaliban da suke atisaye kowace rana kuma suke son cin moriyar malamin AI sosai, tare da fifiko idan aiki ya yi yawa.',
         fairQ: 'Mene ne ma’anar “amfani mai adalci”?',
         fairA:
           'Har zuwa tambayoyi {{questions}} ga malami a rana ya isa karatu mai yawa. Yana hana amfani na na’ura ko raba asusu.',

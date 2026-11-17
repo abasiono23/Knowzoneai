@@ -11,6 +11,8 @@ import { BookResult, TextResult, VideoResult } from '@/components/search/everyth
 import { Screen, SectionHeader, Text } from '@/components/ui';
 import { Colors, Radius, Spacing } from '@/constants/theme';
 import { catalogueFor, useBooksProfile } from '@/lib/books';
+import { regionOf } from '@/lib/region';
+import { useSession } from '@/lib/session';
 import { search, subjectName, SUBJECTS, TRENDING_SEARCHES } from '@/lib/catalog';
 import { useLibrary } from '@/lib/library-store';
 import { searchAll, type SearchResults } from '@/lib/search-all';
@@ -23,6 +25,7 @@ export default function SearchScreen() {
   const live = useMemo(() => (q.trim().length > 1 ? search(q) : null), [q]);
   const { profile } = useBooksProfile();
   const country = profile?.country ? catalogueFor(profile.country) : undefined;
+  const region = regionOf(useSession().user);
   // Waits for a pause in typing, so each letter doesn't ask the server.
   const [found, setFound] = useState<{ q: string; results: SearchResults } | null>(null);
   useEffect(() => {
@@ -30,7 +33,7 @@ export default function SearchScreen() {
     if (query.length < 2) return;
     let stale = false;
     const timer = setTimeout(() => {
-      searchAll(query, country)
+      searchAll(query, country, region)
         .then((r) => !stale && setFound({ q: query, results: r }))
         .catch(() => undefined);
     }, 300);
@@ -38,7 +41,7 @@ export default function SearchScreen() {
       stale = true;
       clearTimeout(timer);
     };
-  }, [q, country]);
+  }, [q, country, region]);
   const all = found?.q === q.trim() ? found.results : null;
 
   const submit = (query: string) => {

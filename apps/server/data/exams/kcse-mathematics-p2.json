@@ -1,0 +1,401 @@
+{
+ "id": "kcse-mathematics-p2",
+ "exam": "kcse",
+ "subject": "mathematics",
+ "year": null,
+ "number": 2,
+ "source": "ai",
+ "minutes": 35,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Coordinates, graphs and linear motion",
+   "q": "A straight line passes through the point (3, 5) and is parallel to the line 4x − 2y = 7. Which equation represents the line?",
+   "options": [
+    "y = 2x − 1",
+    "y = −2x + 11",
+    "y = 2x + 11",
+    "y = −½x + 13/2"
+   ],
+   "answer": 0,
+   "explanation": "The given line has gradient 2 because 4x − 2y = 7 rearranges to y = 2x − 7/2. A parallel line also has gradient 2, so y = 2x + c; using (3, 5) gives 5 = 6 + c, hence c = −1. The equation is y = 2x − 1."
+  },
+  {
+   "n": 2,
+   "topic": "Coordinates, graphs and linear motion",
+   "q": "A matatu travelling on Mombasa Road decelerates uniformly from 25 m/s to 10 m/s in 6 seconds. What distance does it travel during this deceleration?",
+   "options": [
+    "60 m",
+    "150 m",
+    "45 m",
+    "105 m"
+   ],
+   "answer": 3,
+   "explanation": "Using v = u + at gives a = (10 − 25)/6 = −2.5 m/s². The distance is s = ut + ½at² = 25 × 6 + ½ × (−2.5) × 36 = 105 m, or equivalently average velocity × time = 17.5 × 6 = 105 m. The value 150 m ignores the deceleration."
+  },
+  {
+   "n": 3,
+   "topic": "Coordinates, graphs and linear motion",
+   "q": "A cyclist’s distance–time graph has straight segments: from 0 to 2 hours the distance rises from 0 to 40 km; from 2 to 3 hours the distance stays at 40 km; from 3 to 5 hours the distance rises from 40 km to 100 km. What is the average speed for the whole journey?",
+   "options": [
+    "25 km/h",
+    "20 km/h",
+    "30 km/h",
+    "50 km/h"
+   ],
+   "answer": 1,
+   "explanation": "Average speed is total distance divided by total time, including the 1-hour stop: 100 km ÷ 5 h = 20 km/h. Dividing 100 km by 4 moving hours would incorrectly give 25 km/h, while 30 km/h is only the speed on the final segment."
+  },
+  {
+   "n": 4,
+   "topic": "Angles, polygons and geometric constructions",
+   "q": "The interior angles of a pentagon are (4x − 10)°, 112°, 95°, 125° and 118°. Find the value of x.",
+   "options": [
+    "35",
+    "25",
+    "22.5",
+    "30"
+   ],
+   "answer": 1,
+   "explanation": "The sum of the interior angles of a pentagon is (5 − 2) × 180° = 540°. The four known angles total 450°, so the remaining angle is 540° − 450° = 90°; hence 4x − 10 = 90, giving x = 25. Forgetting to add 10 before dividing by 4 would wrongly give 22.5."
+  },
+  {
+   "n": 5,
+   "topic": "Angles, polygons and geometric constructions",
+   "q": "In constructing the bisector of angle XYZ, an arc centred at Y cuts YX at A and YZ at B. With A and B as centres, equal arcs are drawn to meet at C inside the angle. Which line is the angle bisector?",
+   "options": [
+    "The line through Y and C",
+    "The line through C perpendicular to YB",
+    "The line through C parallel to YX",
+    "The line through A and B"
+   ],
+   "answer": 0,
+   "explanation": "Since A and B are equally distant from Y and the arcs with centres A and B have equal radii, C lies on the bisector of angle XYZ. The line through Y and C is therefore the angle bisector, while the line through A and B is just the chord joining points on the two arms."
+  },
+  {
+   "n": 6,
+   "topic": "Statistics",
+   "q": "The table shows the number of hours 25 students spent watching television in one week.\nHours | 0 | 1 | 2 | 3\nFrequency | 4 | 7 | 9 | 5\nCalculate the mean number of hours.",
+   "options": [
+    "1.6 hours",
+    "2 hours",
+    "1.8 hours",
+    "1.5 hours"
+   ],
+   "answer": 0,
+   "explanation": "The total number of hours is 0×4 + 1×7 + 2×9 + 3×5 = 40 hours. With 25 students, the mean is 40 ÷ 25 = 1.6 hours. The value 2 hours is the modal number of hours, not the mean."
+  },
+  {
+   "n": 7,
+   "topic": "Statistics",
+   "q": "The ages in years of eight pupils in a mathematics club are 12, 14, 13, 15, 16, 14, 13 and 15. What is the interquartile range?",
+   "options": [
+    "4 years",
+    "2 years",
+    "3 years",
+    "1 year"
+   ],
+   "answer": 1,
+   "explanation": "Arrange the ages in order: 12, 13, 13, 14, 14, 15, 15, 16. The lower quartile is 13 years and the upper quartile is 15 years, so the interquartile range is 15 − 13 = 2 years. The value 4 years is the range, not the interquartile range."
+  },
+  {
+   "n": 8,
+   "topic": "Quadratic expressions and equations",
+   "q": "Solve the equation 3x² − 5x − 2 = 0.",
+   "options": [
+    "x = 2 or x = −1/3",
+    "x = −2 or x = 1/3",
+    "x = −2 or x = −1/3",
+    "x = 2 or x = 1/3"
+   ],
+   "answer": 0,
+   "explanation": "Factorising gives (3x + 1)(x − 2) = 0, so 3x + 1 = 0 or x − 2 = 0. Hence x = −1/3 or x = 2. A sign slip in the factor 3x + 1 would give x = 1/3 instead."
+  },
+  {
+   "n": 9,
+   "topic": "Quadratic expressions and equations",
+   "q": "Kiptoo is 4 years older than his sister. The product of their ages is 96. How old is Kiptoo?",
+   "options": [
+    "12 years",
+    "10 years",
+    "8 years",
+    "16 years"
+   ],
+   "answer": 0,
+   "explanation": "Let the sister’s age be x years, so Kiptoo’s age is x + 4. Then x(x + 4) = 96, giving x² + 4x − 96 = 0 = (x − 8)(x + 12); the positive value is x = 8, so Kiptoo is 8 + 4 = 12 years. The value 8 years is the sister’s age, not Kiptoo’s."
+  },
+  {
+   "n": 10,
+   "topic": "Rates, ratio, proportion and percentages",
+   "q": "A matatu travelling from Nakuru to Eldoret uses 18 litres of diesel to cover 150 km. At the same rate, how many litres will it use to cover 250 km?",
+   "options": [
+    "30 litres",
+    "45 litres",
+    "10.8 litres",
+    "27 litres"
+   ],
+   "answer": 0,
+   "explanation": "The rate is 18 ÷ 150 = 0.12 litres per km, so for 250 km the diesel needed is 0.12 × 250 = 30 litres. Alternatively, the fuel is in the ratio 250:150, giving 18 × 250/150 = 30 litres. Using inverse proportion gives 10.8 litres, which is wrong because fuel used increases with distance."
+  },
+  {
+   "n": 11,
+   "topic": "Rates, ratio, proportion and percentages",
+   "q": "A trader in Kisumu buys a radio for KSh 2,500 and marks it up by 20%. During a sale, she gives a 10% discount on the marked price. What is the sale price?",
+   "options": [
+    "KSh 3,000",
+    "KSh 2,750",
+    "KSh 2,700",
+    "KSh 2,500"
+   ],
+   "answer": 2,
+   "explanation": "The marked price is KSh 2,500 × 1.20 = KSh 3,000. A 10% discount on the marked price is KSh 300, so the sale price is KSh 3,000 − KSh 300 = KSh 2,700. The value KSh 2,750 comes from treating the changes as a simple net 10% increase on the cost price, but the discount is taken on the marked price."
+  },
+  {
+   "n": 12,
+   "topic": "Rates, ratio, proportion and percentages",
+   "q": "Khalid, Wanjiku and Otieno share KSh 84,000 in the ratio 2:3:7. How much more does Otieno receive than Wanjiku?",
+   "options": [
+    "KSh 14,000",
+    "KSh 28,000",
+    "KSh 49,000",
+    "KSh 21,000"
+   ],
+   "answer": 1,
+   "explanation": "The total number of ratio parts is 2 + 3 + 7 = 12, so one part is KSh 84,000 ÷ 12 = KSh 7,000. Otieno receives 7 parts = KSh 49,000 and Wanjiku receives 3 parts = KSh 21,000, so the difference is KSh 49,000 − KSh 21,000 = KSh 28,000. KSh 21,000 is only Wanjiku's share, not the required difference."
+  },
+  {
+   "n": 13,
+   "topic": "Linear inequalities and linear programming",
+   "q": "Solve the inequality 3x − 5 ≤ 7x + 11.",
+   "options": [
+    "x ≥ -4",
+    "x ≥ 4",
+    "x ≤ 4",
+    "x ≤ -4"
+   ],
+   "answer": 0,
+   "explanation": "Subtracting 3x from both sides gives −5 ≤ 4x + 11, then subtracting 11 gives −16 ≤ 4x. Dividing by 4 gives −4 ≤ x, which is the same as x ≥ −4. Reversing the inequality sign unnecessarily would give x ≤ −4, which does not satisfy values such as x = 0."
+  },
+  {
+   "n": 14,
+   "topic": "Linear inequalities and linear programming",
+   "q": "A bakery makes x trays of mandazi and y trays of chapati. The constraints are x ≥ 0, y ≥ 0, x + y ≤ 8 and y ≤ x + 2. The profit is KSh 100 per tray of mandazi and KSh 200 per tray of chapati. What is the maximum possible profit?",
+   "options": [
+    "KSh 400",
+    "KSh 800",
+    "KSh 1,600",
+    "KSh 1,300"
+   ],
+   "answer": 3,
+   "explanation": "The feasible region has vertices (0, 0), (0, 2), (3, 5) and (8, 0), found from the boundary lines x = 0, y = 0, y = x + 2 and x + y = 8. Profit P = 100x + 200y gives KSh 0, KSh 400, KSh 1,300 and KSh 800 at these vertices respectively, so the maximum is KSh 1,300 at x = 3, y = 5. KSh 1,600 would require eight chapati trays with no mandazi trays, but then y ≤ x + 2 fails."
+  },
+  {
+   "n": 15,
+   "topic": "Measurement: length, area and volume",
+   "q": "A rectangular water tank measures 2.5 m long, 1.6 m wide and 1.2 m high. It is filled to 75% of its capacity. How many litres of water are in the tank?",
+   "options": [
+    "360 litres",
+    "3,600 litres",
+    "3.6 litres",
+    "4,800 litres"
+   ],
+   "answer": 1,
+   "explanation": "The tank volume is 2.5 × 1.6 × 1.2 = 4.8 m³. At 75% full, the water volume is 0.75 × 4.8 = 3.6 m³, and since 1 m³ = 1,000 litres, this is 3,600 litres. The value 4,800 litres is the capacity when the tank is completely full."
+  },
+  {
+   "n": 16,
+   "topic": "Measurement: length, area and volume",
+   "q": "A cylindrical metal pipe is open at both ends. Its external radius is 5 cm and internal radius is 3 cm. The length of the pipe is 28 cm. Taking π = 22/7, calculate the volume of metal in the pipe.",
+   "options": [
+    "2,200 cm³",
+    "1,408 cm³",
+    "352 cm³",
+    "792 cm³"
+   ],
+   "answer": 1,
+   "explanation": "The volume of metal is the difference between the volumes of the outer and inner cylinders: π(5² − 3²) × 28. Taking π = 22/7 gives (22/7) × 16 × 28 = 1,408 cm³. The value 352 cm³ comes from using (5 − 3)² instead of 5² − 3²."
+  },
+  {
+   "n": 17,
+   "topic": "Measurement: length, area and volume",
+   "q": "A conical heap of maize has base diameter 14 m and height 9 m. Taking π = 22/7, calculate its volume.",
+   "options": [
+    "1,386 m³",
+    "154 m³",
+    "462 m³",
+    "1,848 m³"
+   ],
+   "answer": 2,
+   "explanation": "The radius is half of 14 m, so r = 7 m. Volume = (1/3)πr²h = (1/3) × (22/7) × 7² × 9 = 462 m³. Forgetting the factor 1/3 gives 1,386 m³, while using the diameter as the radius gives 1,848 m³."
+  },
+  {
+   "n": 18,
+   "topic": "Circles: chords, tangents and angle properties",
+   "q": "An arc PQ of a circle subtends an angle of (3x + 10)° at the centre O and an angle of (x + 30)° at a point R on the major arc. Find the value of x.",
+   "options": [
+    "2",
+    "10",
+    "35",
+    "50"
+   ],
+   "answer": 3,
+   "explanation": "The angle at the centre is twice the angle at the circumference standing on the same arc. Hence 3x + 10 = 2(x + 30), so 3x + 10 = 2x + 60 and x = 50. Equating the two angles instead gives x = 10, which ignores the centre-angle theorem."
+  },
+  {
+   "n": 19,
+   "topic": "Circles: chords, tangents and angle properties",
+   "q": "PA and PB are two tangents to a circle with centre O from an external point P. Angle APB = 64°. Find angle AOB, where A and B are the points of contact.",
+   "options": [
+    "116°",
+    "64°",
+    "128°",
+    "32°"
+   ],
+   "answer": 0,
+   "explanation": "The radii to the points of contact are perpendicular to the tangents, so the quadrilateral OAPB has two right angles. Its angles sum to 360°, hence angle AOB = 360° − 90° − 90° − 64° = 116°. Doubling 64° to get 128° is a common mistake; the angle between the two tangents is supplementary to the central angle between the radii."
+  },
+  {
+   "n": 20,
+   "topic": "Commercial arithmetic",
+   "q": "Wanjiru deposits KSh 48,000 in a SACCO at 5% per annum compound interest, compounded annually. What amount will be in the account after 2 years?",
+   "options": [
+    "KSh 50,400",
+    "KSh 53,000",
+    "KSh 52,920",
+    "KSh 52,800"
+   ],
+   "answer": 2,
+   "explanation": "Using A = P(1 + r)^n, the amount is 48,000 × (1.05)^2 = 48,000 × 1.1025 = 52,920. The value KSh 52,800 would arise from simple interest of 5% per year for two years."
+  },
+  {
+   "n": 21,
+   "topic": "Commercial arithmetic",
+   "q": "Amina bought a refrigerator on hire purchase by paying a deposit of KSh 9,000 and 12 monthly instalments of KSh 2,200. The cash price was KSh 32,000. How much more than the cash price did she pay under hire purchase?",
+   "options": [
+    "KSh 35,400",
+    "KSh 3,400",
+    "KSh 26,400",
+    "KSh 23,000"
+   ],
+   "answer": 1,
+   "explanation": "The total hire-purchase payment is 9,000 + 12 × 2,200 = 35,400. The excess over the cash price is 35,400 − 32,000 = 3,400. KSh 35,400 is the total paid, not the excess."
+  },
+  {
+   "n": 22,
+   "topic": "Commercial arithmetic",
+   "q": "A salesman is paid a basic salary of KSh 15,000 per month plus a commission of 4% on sales above KSh 100,000. In one month he sold goods worth KSh 250,000. Calculate his total pay for that month.",
+   "options": [
+    "KSh 6,000",
+    "KSh 19,000",
+    "KSh 25,000",
+    "KSh 21,000"
+   ],
+   "answer": 3,
+   "explanation": "Sales above KSh 100,000 amount to 250,000 − 100,000 = 150,000. Commission is 4% × 150,000 = 6,000, so total pay is 15,000 + 6,000 = 21,000. Using 4% on all sales gives KSh 25,000."
+  },
+  {
+   "n": 23,
+   "topic": "Indices and logarithms",
+   "q": "Evaluate (3⁴ × 9^(−3/2)) ÷ 27^(1/3).",
+   "options": [
+    "1",
+    "1/3",
+    "9",
+    "3"
+   ],
+   "answer": 0,
+   "explanation": "Write all bases as powers of 3: 9^(−3/2) = (3²)^(−3/2) = 3^−3 and 27^(1/3) = (3³)^(1/3) = 3. The expression becomes 3⁴ × 3^−3 ÷ 3 = 3¹ ÷ 3 = 1."
+  },
+  {
+   "n": 24,
+   "topic": "Indices and logarithms",
+   "q": "Solve for x: 2 log₃ x − log₃(x − 2) = 2.",
+   "options": [
+    "x = 6 only",
+    "x = −3 or x = −6",
+    "x = 3 only",
+    "x = 3 or x = 6"
+   ],
+   "answer": 3,
+   "explanation": "Combine the logarithms: log₃(x²/(x − 2)) = 2, so x²/(x − 2) = 9. This gives x² − 9x + 18 = 0, hence (x − 3)(x − 6) = 0. Both x = 3 and x = 6 satisfy x > 2."
+  },
+  {
+   "n": 25,
+   "topic": "Indices and logarithms",
+   "q": "Given that 2^x = 5 and 2^y = 7, express log₂ 140 in terms of x and y.",
+   "options": [
+    "2x + y",
+    "x + y",
+    "x + y + 2",
+    "2xy"
+   ],
+   "answer": 2,
+   "explanation": "Since 140 = 4 × 5 × 7 = 2² × 2^x × 2^y, we have 140 = 2^(x + y + 2). Therefore log₂ 140 = x + y + 2."
+  },
+  {
+   "n": 26,
+   "topic": "Differentiation and integration",
+   "q": "Find the coordinates and nature of the stationary point of the curve y = x³ − 3x² + 4 at x = 2.",
+   "options": [
+    "(2, 0), maximum",
+    "(2, 4), minimum",
+    "(2, 0), minimum",
+    "(0, 4), maximum"
+   ],
+   "answer": 2,
+   "explanation": "dy/dx = 3x² − 6x, and at x = 2 this is 12 − 12 = 0. Also y = 2³ − 3(2²) + 4 = 0. Since d²y/dx² = 6x − 6 = 6 > 0 at x = 2, the point (2, 0) is a minimum."
+  },
+  {
+   "n": 27,
+   "topic": "Differentiation and integration",
+   "q": "Find the area under the curve y = x² + 1 between x = 0 and x = 2.",
+   "options": [
+    "5 square units",
+    "14/3 square units",
+    "10 square units",
+    "8/3 square units"
+   ],
+   "answer": 1,
+   "explanation": "Integrate: ∫₀² (x² + 1) dx = [x³/3 + x]₀² = 8/3 + 2 = 14/3. The answer is therefore 14/3 square units; 8/3 would arise by omitting the integral of 1."
+  },
+  {
+   "n": 28,
+   "topic": "Matrices and transformations",
+   "q": "Find the inverse of the matrix [4, 3; 2, 1].",
+   "options": [
+    "[1/2, −3/2; −1, 2]",
+    "[−1/2, 3/2; 1, −2]",
+    "[−2, 3; 2, −4]",
+    "[−1/2, 1; 3/2, −2]"
+   ],
+   "answer": 1,
+   "explanation": "The determinant is 4 × 1 − 3 × 2 = −2. The inverse is 1/(−2) × [1, −3; −2, 4] = [−1/2, 3/2; 1, −2]."
+  },
+  {
+   "n": 29,
+   "topic": "Matrices and transformations",
+   "q": "A triangle has vertices A(1, 1), B(3, 1) and C(1, 4). It is transformed by the matrix [2, 0; 0, 2]. Find the area of the image triangle.",
+   "options": [
+    "3 square units",
+    "12 square units",
+    "6 square units",
+    "24 square units"
+   ],
+   "answer": 1,
+   "explanation": "The original triangle has base 2 and height 3, so its area is 1/2 × 2 × 3 = 3 square units. The area scale factor is the determinant of [2, 0; 0, 2], which is 4, so the image area is 4 × 3 = 12 square units."
+  },
+  {
+   "n": 30,
+   "topic": "Sequences and series",
+   "q": "In an arithmetic progression, the 3rd term is 17 and the 8th term is 42. Find the sum of the first 20 terms.",
+   "options": [
+    "1040",
+    "1110",
+    "1090",
+    "990"
+   ],
+   "answer": 2,
+   "explanation": "Using a + 2d = 17 and a + 7d = 42 gives 5d = 25, so d = 5 and a = 7. Then S₂₀ = 20/2[2×7 + 19×5] = 10(14 + 95) = 1090. Counting the terms one place too high, using a + 3d = 17 and a + 8d = 42, gives the tempting value 990."
+  }
+ ]
+}

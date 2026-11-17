@@ -1,0 +1,401 @@
+{
+ "id": "gcse-maths-p5",
+ "exam": "gcse",
+ "subject": "maths",
+ "year": null,
+ "number": 5,
+ "source": "ai",
+ "minutes": 35,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Simultaneous equations",
+   "q": "Priya buys 2 adult cinema tickets and 3 child tickets for £41. Ben buys 4 adult tickets and 1 child ticket for £47. The adult ticket costs £a and the child ticket costs £c. What is the cost of one adult ticket?",
+   "options": [
+    "£12",
+    "£7",
+    "£10",
+    "£8.50"
+   ],
+   "answer": 2,
+   "explanation": "The equations are 2a + 3c = 41 and 4a + c = 47. Rearranging the second gives c = 47 − 4a, and substituting gives 2a + 3(47 − 4a) = 41, so −10a = −100 and a = 10. The child ticket costs £7, so giving £7 answers the wrong part of the problem."
+  },
+  {
+   "n": 2,
+   "topic": "Simultaneous equations",
+   "q": "Solve the simultaneous equations 5x + 3y = 7 and 2x − y = 4. Give x and y as exact fractions.",
+   "options": [
+    "x = 19/11, y = −6/11",
+    "x = 19/11, y = 6/11",
+    "x = 5, y = −6",
+    "x = 19/11, y = −4/11"
+   ],
+   "answer": 0,
+   "explanation": "Rearranging 2x − y = 4 gives y = 2x − 4. Substituting into 5x + 3y = 7 gives 5x + 3(2x − 4) = 7, so 11x − 12 = 7 and x = 19/11. Then y = 2(19/11) − 4 = 38/11 − 44/11 = −6/11."
+  },
+  {
+   "n": 3,
+   "topic": "Simultaneous equations",
+   "q": "The line y = x + 6 and the curve y = x² − 3x + 1 intersect at two points. What are their coordinates?",
+   "options": [
+    "(5, 11) and (−1, −5)",
+    "(−5, 1) and (1, 7)",
+    "(5, 6) and (−1, 0)",
+    "(5, 11) and (−1, 5)"
+   ],
+   "answer": 3,
+   "explanation": "Equating gives x² − 3x + 1 = x + 6, so x² − 4x − 5 = 0. This factorises as (x − 5)(x + 1) = 0, giving x = 5 or x = −1. Substituting into y = x + 6 gives y = 11 or y = 5."
+  },
+  {
+   "n": 4,
+   "topic": "Perimeter, area and volume",
+   "q": "A rectangular lawn measures 18 m by 12 m. A circular flower bed of radius 3 m is in the lawn, and the rest of the lawn is grass. Taking π = 3.14, what is the area of the grass?",
+   "options": [
+    "244.26 m²",
+    "102.96 m²",
+    "187.74 m²",
+    "197.16 m²"
+   ],
+   "answer": 2,
+   "explanation": "The rectangle has area 18 × 12 = 216 m². The circular flower bed has area π × 3² = 3.14 × 9 = 28.26 m². The grass area is 216 − 28.26 = 187.74 m²."
+  },
+  {
+   "n": 5,
+   "topic": "Perimeter, area and volume",
+   "q": "A triangular prism has a right-angled triangular cross-section. The two shorter sides that meet at the right angle are 9 cm and 12 cm, and the length of the prism is 20 cm. What is the volume of the prism?",
+   "options": [
+    "540 cm³",
+    "2160 cm³",
+    "1080 cm³",
+    "720 cm³"
+   ],
+   "answer": 2,
+   "explanation": "The triangular cross-section has area 1/2 × 9 × 12 = 54 cm². Multiplying by the prism length gives 54 × 20 = 1080 cm³. Multiplying 9 × 12 × 20 without the 1/2 gives 2160 cm³, and using the triangle perimeter would give the value 720 cm³."
+  },
+  {
+   "n": 6,
+   "topic": "Perimeter, area and volume",
+   "q": "A window is made from a rectangle of width 1.2 m and height 0.8 m with a semicircle on top. The diameter of the semicircle is equal to the width of the rectangle. Taking π = 3.14, work out the perimeter of the window.",
+   "options": [
+    "4.684 m",
+    "3.484 m",
+    "5.884 m",
+    "6.568 m"
+   ],
+   "answer": 0,
+   "explanation": "The perimeter consists of the bottom 1.2 m, two vertical sides of 0.8 m each, and the semicircular arc. The arc length is π × 1.2 ÷ 2 = 1.884 m, so the total is 1.2 + 1.6 + 1.884 = 4.684 m. Including the diameter as an extra straight edge gives 5.884 m."
+  },
+  {
+   "n": 7,
+   "topic": "Sequences",
+   "q": "A sequence begins 5, 12, 19, 26, ... The terms continue by adding the same number each time. Which expression gives the nth term?",
+   "options": [
+    "7n − 5",
+    "5n + 7",
+    "7n + 5",
+    "7n − 2"
+   ],
+   "answer": 3,
+   "explanation": "The common difference is 7, so the nth term has the form 7n + c. For n = 1, 7 + c = 5, so c = −2. Therefore the nth term is 7n − 2."
+  },
+  {
+   "n": 8,
+   "topic": "Sequences",
+   "q": "A geometric sequence has first term 5 and common ratio −2. What is the 6th term?",
+   "options": [
+    "−80",
+    "160",
+    "−160",
+    "−320"
+   ],
+   "answer": 2,
+   "explanation": "The terms are 5, −10, 20, −40, 80, −160. The 6th term is found from 5 × (−2)^5 = 5 × −32 = −160. Losing the negative sign gives 160, while using the 7th term gives −320."
+  },
+  {
+   "n": 9,
+   "topic": "Probability",
+   "q": "A fair spinner has four equal sectors numbered 1, 2, 3 and 4. The spinner is spun twice. What is the probability that the score is 3 on at least one of the two spins?",
+   "options": [
+    "9/16",
+    "1/4",
+    "1/2",
+    "7/16"
+   ],
+   "answer": 3,
+   "explanation": "The probability of not getting 3 on a single spin is 3/4, so the probability of no 3 on either spin is (3/4)² = 9/16. Therefore the probability of at least one 3 is 1 − 9/16 = 7/16. Adding 1/4 + 1/4 gives 1/2, but this double-counts the case where both spins are 3."
+  },
+  {
+   "n": 10,
+   "topic": "Probability",
+   "q": "A box contains 6 white beads and 4 black beads. Two beads are taken at random without replacement. What is the probability that both beads are black?",
+   "options": [
+    "4/25",
+    "3/25",
+    "2/15",
+    "2/5"
+   ],
+   "answer": 2,
+   "explanation": "The probability the first bead is black is 4/10. Given that, 3 black beads remain out of 9, so the second is black with probability 3/9. Thus the probability is 4/10 × 3/9 = 12/90 = 2/15. Using 4/10 for both draws gives 4/25, which would apply with replacement."
+  },
+  {
+   "n": 11,
+   "topic": "Circle theorems",
+   "q": "In a circle with centre O, PA and PB are tangents from an external point P, touching the circle at A and B. Angle APB = 52°. Work out angle AOB.",
+   "options": [
+    "116°",
+    "64°",
+    "52°",
+    "128°"
+   ],
+   "answer": 3,
+   "explanation": "A tangent is perpendicular to the radius at the point of contact, so two angles in quadrilateral OAPB are 90°. The angles in a quadrilateral sum to 360°, so angle AOB = 360° − 90° − 90° − 52° = 128°. The value 52° is angle APB, not the central angle."
+  },
+  {
+   "n": 12,
+   "topic": "Circle theorems",
+   "q": "Amara draws chords AB and CD of a circle. They intersect at X inside the circle. AX = 6 cm, XB = 4 cm and CX = 8 cm. Work out the length XD.",
+   "options": [
+    "2 cm",
+    "3 cm",
+    "5 cm",
+    "12 cm"
+   ],
+   "answer": 1,
+   "explanation": "The intersecting chords theorem gives AX × XB = CX × XD, so 6 × 4 = 8 × XD. Hence XD = 24 ÷ 8 = 3 cm. The 2 cm result would come from subtracting known lengths, which is not valid for intersecting chords."
+  },
+  {
+   "n": 13,
+   "topic": "Graphs of functions",
+   "q": "The curve y = (x + 2)(x − 6) has a minimum point. What are the coordinates of this minimum point?",
+   "options": [
+    "(2, −16)",
+    "(6, 0)",
+    "(−2, 0)",
+    "(2, 16)"
+   ],
+   "answer": 0,
+   "explanation": "The roots are x = −2 and x = 6, so the line of symmetry is halfway between them at x = 2. Substituting x = 2 gives y = (2 + 2)(2 − 6) = 4 × (−4) = −16. The points (−2, 0) and (6, 0) are the x-intercepts, not the minimum."
+  },
+  {
+   "n": 14,
+   "topic": "Graphs of functions",
+   "q": "Which equation represents a graph that has a y-intercept of 1 and passes through the point (2, 16)?",
+   "options": [
+    "y = (1/4)^x",
+    "y = 4x",
+    "y = x⁴",
+    "y = 4^x"
+   ],
+   "answer": 3,
+   "explanation": "At x = 0, y = 4^0 = 1, and at x = 2, y = 4² = 16, so y = 4^x fits both facts. The curve y = x⁴ has y-intercept 0, while y = (1/4)^x gives 1/16 when x = 2."
+  },
+  {
+   "n": 15,
+   "topic": "Transformations and vectors",
+   "q": "Yusuf writes a vector with components 5 and −12. What is the length of this vector?",
+   "options": [
+    "17",
+    "13",
+    "7",
+    "169"
+   ],
+   "answer": 1,
+   "explanation": "The length of a vector with components a and b is √(a² + b²), so here it is √(5² + (−12)²) = √(25 + 144) = √169 = 13. Adding 5 and 12 gives 17, but vector length uses Pythagoras rather than adding the components."
+  },
+  {
+   "n": 16,
+   "topic": "Transformations and vectors",
+   "q": "Aoife reflects the point with coordinates (−3, 4) in the line y = −x. What are the coordinates of its image?",
+   "options": [
+    "(−3, −4)",
+    "(−4, 3)",
+    "(4, −3)",
+    "(3, −4)"
+   ],
+   "answer": 1,
+   "explanation": "Reflection in the line y = −x maps (x, y) to (−y, −x). Applying this to (−3, 4) gives (−4, 3). Swapping the coordinates and changing neither sign gives (4, −3), which is the reflection in y = x."
+  },
+  {
+   "n": 17,
+   "topic": "Transformations and vectors",
+   "q": "M is the midpoint of AB. The position vector of A is (4, −1) and the position vector of M is (1, 3). What is the position vector of B?",
+   "options": [
+    "(3, −4)",
+    "(−3, 4)",
+    "(5, 2)",
+    "(−2, 7)"
+   ],
+   "answer": 3,
+   "explanation": "Since M is the midpoint, M = (A + B) ÷ 2, so B = 2M − A. Using the coordinates gives B = (2, 6) − (4, −1) = (−2, 7). The vector (−3, 4) is M − A, which is the displacement from A to M, not the position vector of B."
+  },
+  {
+   "n": 18,
+   "topic": "Angles and polygons",
+   "q": "The interior angles of a pentagon are 110°, 95°, 130°, 105° and x°. Work out the value of x.",
+   "options": [
+    "90°",
+    "100°",
+    "120°",
+    "80°"
+   ],
+   "answer": 1,
+   "explanation": "The interior angles of a pentagon sum to (5 − 2) × 180° = 540°. The four given angles add to 110° + 95° + 130° + 105° = 440°, so x = 540° − 440° = 100°."
+  },
+  {
+   "n": 19,
+   "topic": "Angles and polygons",
+   "q": "A straight line crosses two parallel lines. One pair of alternate angles are (3x + 10)° and (5x − 30)°. Work out the size of each alternate angle.",
+   "options": [
+    "110°",
+    "40°",
+    "20°",
+    "70°"
+   ],
+   "answer": 3,
+   "explanation": "Alternate angles between parallel lines are equal, so 3x + 10 = 5x − 30. This gives 40 = 2x, so x = 20. Substituting back gives 3 × 20 + 10 = 70°, so each alternate angle is 70°. The value 20° is x, not the angle, and 110° is the supplementary angle."
+  },
+  {
+   "n": 20,
+   "topic": "Angles and polygons",
+   "q": "The angles of a quadrilateral are in the ratio 2 : 3 : 4 : 6. Work out the largest angle.",
+   "options": [
+    "120°",
+    "96°",
+    "180°",
+    "144°"
+   ],
+   "answer": 3,
+   "explanation": "The angles in a quadrilateral sum to 360°. The ratio has 2 + 3 + 4 + 6 = 15 equal parts, so one part is 360° ÷ 15 = 24°. The largest angle is 6 parts, giving 6 × 24° = 144°."
+  },
+  {
+   "n": 21,
+   "topic": "Algebraic expressions and formulae",
+   "q": "Expand and simplify (p + 4)(2p − 3) − p(p + 5).",
+   "options": [
+    "p² − 12",
+    "p² − 6p − 12",
+    "p² + 12",
+    "p² + 10p − 12"
+   ],
+   "answer": 0,
+   "explanation": "First multiply out the brackets: (p + 4)(2p − 3) = 2p² + 5p − 12. Subtracting p(p + 5) gives 2p² + 5p − 12 − p² − 5p, and the p terms cancel to leave p² − 12. A common slip is to change only the p² term when subtracting p(p + 5), which would give p² + 10p − 12."
+  },
+  {
+   "n": 22,
+   "topic": "Algebraic expressions and formulae",
+   "q": "Make b the subject of the formula 4a = 3(b − 5).",
+   "options": [
+    "b = (4a + 5) ÷ 3",
+    "b = (4a − 15) ÷ 3",
+    "b = (4a + 15) ÷ 3",
+    "b = 4a ÷ 3 − 5"
+   ],
+   "answer": 2,
+   "explanation": "Divide both sides by 3 to get b − 5 = 4a ÷ 3. Then add 5 and combine over the common denominator 3: b = (4a + 15) ÷ 3. The terms cannot be combined as (4a + 5) ÷ 3 because 5 must be written as 15 ÷ 3 before adding."
+  },
+  {
+   "n": 23,
+   "topic": "Quadratic equations",
+   "q": "Solve 2x² − 7x + 3 = 0.",
+   "options": [
+    "x = 1/2 or x = −3",
+    "x = 1/2 or x = 3",
+    "x = 1 or x = 3",
+    "x = −1/2 or x = 3"
+   ],
+   "answer": 1,
+   "explanation": "Factorising gives (2x − 1)(x − 3) = 0. Setting each factor equal to zero gives 2x − 1 = 0, so x = 1/2, or x − 3 = 0, so x = 3. The factors must keep their signs: the correct factorisation is (2x − 1)(x − 3), not (2x + 1)(x + 3)."
+  },
+  {
+   "n": 24,
+   "topic": "Quadratic equations",
+   "q": "The graph of y = x² − 10x + 22 is a parabola. What are the coordinates of its minimum point?",
+   "options": [
+    "(5, −3)",
+    "(−5, 3)",
+    "(−5, −3)",
+    "(5, 3)"
+   ],
+   "answer": 0,
+   "explanation": "Complete the square: x² − 10x + 22 = (x − 5)² − 25 + 22 = (x − 5)² − 3. This is smallest when x − 5 = 0, so x = 5 and y = −3. The minimum point is therefore (5, −3)."
+  },
+  {
+   "n": 25,
+   "topic": "Quadratic equations",
+   "q": "A rectangular lawn has length 3 m more than its width. Its area is 40 m². What is the width of the lawn?",
+   "options": [
+    "10 m",
+    "4 m",
+    "5 m",
+    "8 m"
+   ],
+   "answer": 2,
+   "explanation": "Let the width be w metres, so the length is w + 3 metres. Then w(w + 3) = 40, so w² + 3w − 40 = 0, which factorises as (w + 8)(w − 5) = 0. The positive solution is w = 5, while 8 m is the length."
+  },
+  {
+   "n": 26,
+   "topic": "Indices, standard form and surds",
+   "q": "Simplify (4x³y⁻²)² ÷ (2xy⁻³), giving your answer with positive indices only.",
+   "options": [
+    "2x⁵ ÷ y",
+    "8x⁵y",
+    "8x⁵ ÷ y",
+    "8x⁵ ÷ y⁷"
+   ],
+   "answer": 2,
+   "explanation": "Squaring the first bracket gives 16x⁶y⁻⁴. Dividing by 2xy⁻³ gives (16 ÷ 2)x^(6 − 1)y^(−4 − (−3)) = 8x⁵y⁻¹. Using a positive index for y gives 8x⁵ ÷ y."
+  },
+  {
+   "n": 27,
+   "topic": "Indices, standard form and surds",
+   "q": "Work out (3.2 × 10⁵) + (4.8 × 10⁴). Give your answer in standard form.",
+   "options": [
+    "8.0 × 10⁵",
+    "3.68 × 10⁹",
+    "3.68 × 10⁵",
+    "8.0 × 10⁹"
+   ],
+   "answer": 2,
+   "explanation": "Write both numbers with the same power of 10: 3.2 × 10⁵ + 0.48 × 10⁵ = 3.68 × 10⁵. Adding 3.2 and 4.8 without changing the second number to the same power gives the incorrect result 8.0 × 10⁵."
+  },
+  {
+   "n": 28,
+   "topic": "Indices, standard form and surds",
+   "q": "Simplify 12 ÷ (√7 − 2), giving your answer in the form a√7 + b, where a and b are integers.",
+   "options": [
+    "4√7 + 2",
+    "4√7 − 8",
+    "12√7 + 24",
+    "4√7 + 8"
+   ],
+   "answer": 3,
+   "explanation": "Multiply numerator and denominator by √7 + 2. The denominator becomes (√7)² − 2² = 7 − 4 = 3, so 12(√7 + 2) ÷ 3 = 4√7 + 8. Using the conjugate with the opposite sign gives the wrong sign for the integer term."
+  },
+  {
+   "n": 29,
+   "topic": "Ratio and proportion",
+   "q": "A sum of £720 is shared among Aisha, Ben and Cerys in the ratio 5 : 3 : 1. How much does Aisha receive?",
+   "options": [
+    "£240",
+    "£450",
+    "£80",
+    "£400"
+   ],
+   "answer": 3,
+   "explanation": "The ratio has 5 + 3 + 1 = 9 equal parts. One part is £720 ÷ 9 = £80, so Aisha's 5 parts are 5 × £80 = £400. The £240 answer is Ben's share, not Aisha's."
+  },
+  {
+   "n": 30,
+   "topic": "Ratio and proportion",
+   "q": "At a shop in Leeds, a 750 g box of cereal costs £2.70. A 1.2 kg box of the same cereal costs £4.20. Which is better value and by how much per 100 g?",
+   "options": [
+    "The 750 g box, by 1p per 100 g",
+    "They cost the same per 100 g",
+    "The 1.2 kg box, by 1p per 100 g",
+    "The 1.2 kg box, by 5p per 100 g"
+   ],
+   "answer": 2,
+   "explanation": "For the 750 g box, £2.70 ÷ 7.5 = £0.36, or 36p per 100 g. For the 1.2 kg box, £4.20 ÷ 12 = £0.35, or 35p per 100 g, so the larger box is better value by 1p per 100 g."
+  }
+ ]
+}

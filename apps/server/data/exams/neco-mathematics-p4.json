@@ -1,0 +1,791 @@
+{
+ "id": "neco-mathematics-p4",
+ "exam": "neco",
+ "subject": "mathematics",
+ "year": null,
+ "number": 4,
+ "source": "ai",
+ "minutes": 60,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Indices and logarithms",
+   "q": "Given that p = logₐ 2 and q = logₐ 3, express logₐ 72 in terms of p and q.",
+   "options": [
+    "3p + 2q",
+    "p³ + q²",
+    "6pq",
+    "2p + 3q"
+   ],
+   "answer": 0,
+   "explanation": "Since 72 = 2³ × 3², logₐ 72 = logₐ(2³) + logₐ(3²) = 3 logₐ 2 + 2 logₐ 3 = 3p + 2q. The expression 2p + 3q reverses the powers of 2 and 3."
+  },
+  {
+   "n": 2,
+   "topic": "Indices and logarithms",
+   "q": "Solve for x: 2^(3x − 1) = 32^(x − 2).",
+   "options": [
+    "x = 9/2",
+    "x = 5",
+    "x = 3",
+    "x = 3/2"
+   ],
+   "answer": 0,
+   "explanation": "Write 32 as 2⁵, so 32^(x − 2) = 2^(5x − 10). Equating exponents gives 3x − 1 = 5x − 10, hence 2x = 9 and x = 9/2."
+  },
+  {
+   "n": 3,
+   "topic": "Indices and logarithms",
+   "q": "Given that log₁₀ 3 = 0.4771 and log₁₀ 7 = 0.8451, evaluate log₁₀ 2.1.",
+   "options": [
+    "1.3222",
+    "0.6778",
+    "0.3222",
+    "0.3680"
+   ],
+   "answer": 2,
+   "explanation": "Since 2.1 = (3 × 7) ÷ 10, log₁₀ 2.1 = log₁₀ 3 + log₁₀ 7 − log₁₀ 10. Thus log₁₀ 2.1 = 0.4771 + 0.8451 − 1 = 0.3222. Forgetting to subtract log₁₀ 10 gives 1.3222."
+  },
+  {
+   "n": 4,
+   "topic": "Angles and circle geometry",
+   "q": "In a circle, PT is a tangent at T and TQ is a chord. If ∠PTQ = 37°, find the angle which chord TQ subtends in the alternate segment.",
+   "options": [
+    "143°",
+    "53°",
+    "37°",
+    "74°"
+   ],
+   "answer": 2,
+   "explanation": "By the alternate segment theorem, the angle between tangent PT and chord TQ equals the angle that TQ subtends in the alternate segment. Therefore the required angle is equal to ∠PTQ, which is 37°."
+  },
+  {
+   "n": 5,
+   "topic": "Angles and circle geometry",
+   "q": "A, B and C are points on a circle with centre O. If ∠OAB = 28° and C lies on the major arc AB, find ∠ACB.",
+   "options": [
+    "124°",
+    "118°",
+    "28°",
+    "62°"
+   ],
+   "answer": 3,
+   "explanation": "In triangle OAB, OA = OB because they are radii, so ∠OBA = 28° and ∠AOB = 180° − 28° − 28° = 124°. The inscribed angle ∠ACB standing on minor arc AB is half the central angle 124°, giving 62°."
+  },
+  {
+   "n": 6,
+   "topic": "Angles and circle geometry",
+   "q": "Two chords AB and CD of a circle intersect at E. If AE = 4 cm, EB = 9 cm and CE = 3 cm, find ED.",
+   "options": [
+    "12 cm",
+    "10 cm",
+    "36 cm",
+    "16 cm"
+   ],
+   "answer": 0,
+   "explanation": "For two chords intersecting inside a circle, AE × EB = CE × ED. Thus 4 × 9 = 3 × ED, so ED = 36 ÷ 3 = 12 cm. The value 36 cm comes from forgetting to divide by 3."
+  },
+  {
+   "n": 7,
+   "topic": "Coordinate geometry",
+   "q": "A straight line passes through P(2, −1) and is perpendicular to the line 4x − 3y + 6 = 0. Find its equation.",
+   "options": [
+    "3x + 4y − 2 = 0",
+    "4x − 3y − 11 = 0",
+    "3x + 4y + 2 = 0",
+    "3x − 4y − 10 = 0"
+   ],
+   "answer": 0,
+   "explanation": "The given line has gradient 4/3, so a perpendicular line has gradient −3/4. Using y − (−1) = −3/4(x − 2) and simplifying gives 3x + 4y − 2 = 0. Substituting P(2, −1) into this equation gives 6 − 4 − 2 = 0."
+  },
+  {
+   "n": 8,
+   "topic": "Coordinate geometry",
+   "q": "Find the coordinates of the point where the line 5x − 2y = 20 meets the y-axis.",
+   "options": [
+    "(0, 10)",
+    "(0, −10)",
+    "(4, 0)",
+    "(−4, 0)"
+   ],
+   "answer": 1,
+   "explanation": "At the y-axis, x = 0, so 5(0) − 2y = 20 gives −2y = 20 and y = −10. Hence the point is (0, −10). The point (4, 0) is the x-intercept, not the y-intercept."
+  },
+  {
+   "n": 9,
+   "topic": "Simultaneous equations and inequalities",
+   "q": "In Onitsha Main Market, 3 baskets of tomatoes and 2 bags of onions cost ₦11,500, while 2 baskets of tomatoes and 5 bags of onions cost ₦15,000. Find the cost of one basket of tomatoes.",
+   "options": [
+    "₦3,500",
+    "₦3,000",
+    "₦2,000",
+    "₦2,500"
+   ],
+   "answer": 3,
+   "explanation": "Let t and o be the costs of a basket of tomatoes and a bag of onions. Then 3t + 2o = 11,500 and 2t + 5o = 15,000. Eliminating o gives 11t = 27,500, so t = ₦2,500; the ₦2,000 value is the cost of a bag of onions."
+  },
+  {
+   "n": 10,
+   "topic": "Simultaneous equations and inequalities",
+   "q": "Find the range of values of x satisfying both inequalities: 3x − 5 ≤ 7 and 2x + 1 > 5.",
+   "options": [
+    "2 < x ≤ 4",
+    "x ≤ 4",
+    "x > 2",
+    "2 ≤ x < 4"
+   ],
+   "answer": 0,
+   "explanation": "The first inequality gives 3x ≤ 12, so x ≤ 4. The second gives 2x > 4, so x > 2. Combining both conditions gives 2 < x ≤ 4."
+  },
+  {
+   "n": 11,
+   "topic": "Variation",
+   "q": "The quantity Q varies jointly as x and the square of y, and inversely as z. If Q = 48 when x = 3, y = 2 and z = 1, find Q when x = 5, y = 3 and z = 4.",
+   "options": [
+    "30",
+    "45",
+    "180",
+    "60"
+   ],
+   "answer": 1,
+   "explanation": "Write Q = kxy²/z. From 48 = k(3)(2²)/1, k = 4. Then Q = 4(5)(3²)/4 = 45. Treating y² as y gives 30, while omitting division by z gives 180."
+  },
+  {
+   "n": 12,
+   "topic": "Variation",
+   "q": "The mass M of a uniform wire varies directly as its length L and the square of its diameter d. A wire of length 8 m and diameter 2 mm has mass 96 g. Find the mass of a wire of the same material with length 15 m and diameter 3 mm.",
+   "options": [
+    "270 g",
+    "405 g",
+    "720 g",
+    "216 g"
+   ],
+   "answer": 1,
+   "explanation": "Write M = kLd². From 96 = k(8)(2²), k = 3, so M = 3(15)(3²) = 405 g. Using M ∝ Ld instead gives 270 g, and using the old length with the new diameter gives 216 g."
+  },
+  {
+   "n": 13,
+   "topic": "Sequences and series",
+   "q": "The sum to infinity of a geometric progression is 5 and its first term is 3. Find the third term.",
+   "options": [
+    "12/25",
+    "4/3",
+    "6/5",
+    "4/25"
+   ],
+   "answer": 0,
+   "explanation": "For a convergent GP, S∞ = a/(1 − r). Thus 5 = 3/(1 − r), giving r = 2/5. The third term is ar² = 3(2/5)² = 12/25. The value 6/5 is only the second term."
+  },
+  {
+   "n": 14,
+   "topic": "Sequences and series",
+   "q": "How many terms of the arithmetic progression 3, 5, 7, ... are needed to give a sum of 168?",
+   "options": [
+    "12",
+    "10",
+    "11",
+    "14"
+   ],
+   "answer": 0,
+   "explanation": "Here a = 3 and d = 2, so S_n = n/2[2(3) + (n − 1)2] = n(n + 2). Solving n(n + 2) = 168 gives n² + 2n − 168 = 0, hence n = 12. Indeed, 12 terms give a sum of 168."
+  },
+  {
+   "n": 15,
+   "topic": "Sequences and series",
+   "q": "The sum of the first 20 terms of an arithmetic progression is 650. If the first term is 4, find the 20th term.",
+   "options": [
+    "64",
+    "65",
+    "57",
+    "61"
+   ],
+   "answer": 3,
+   "explanation": "For an AP, S20 = 20/2(first term + 20th term). So 650 = 10(4 + T20), giving 4 + T20 = 65 and T20 = 61. Using one extra common difference after finding d = 3 gives the incorrect 64."
+  },
+  {
+   "n": 16,
+   "topic": "Statistics",
+   "q": "The mean mass of 8 bags of rice in Amina's shop is 25 kg. When one more bag is added, the mean mass becomes 26 kg. Find the mass of the added bag.",
+   "options": [
+    "34 kg",
+    "9 kg",
+    "25 kg",
+    "26 kg"
+   ],
+   "answer": 0,
+   "explanation": "Total mass of the 8 bags is 8 × 25 = 200 kg. With the added bag, total mass is 9 × 26 = 234 kg. The added bag therefore has mass 234 − 200 = 34 kg. Using the new mean for the original 8 bags wrongly gives 26 kg."
+  },
+  {
+   "n": 17,
+   "topic": "Statistics",
+   "q": "The scores of 20 students in a test are: 2 students scored 4, 5 students scored 6, 8 students scored 8, and 5 students scored 10. Calculate the mean score.",
+   "options": [
+    "7.0",
+    "7.2",
+    "7.6",
+    "8.0"
+   ],
+   "answer": 2,
+   "explanation": "Total score = 2×4 + 5×6 + 8×8 + 5×10 = 8 + 30 + 64 + 50 = 152. Since there are 20 students, mean = 152/20 = 7.6. Averaging only the distinct scores gives 7.0."
+  },
+  {
+   "n": 18,
+   "topic": "Matrices and determinants",
+   "q": "Find the determinant of the matrix N = [[2, −1, 3], [0, 4, 1], [5, 2, −2]].",
+   "options": [
+    "−85",
+    "35",
+    "−75",
+    "85"
+   ],
+   "answer": 0,
+   "explanation": "Expanding along the first row: 2[(4)(−2) − (1)(2)] − (−1)[(0)(−2) − (1)(5)] + 3[(0)(2) − (4)(5)] = 2(−10) + 1(−5) + 3(−20) = −85. A sign slip in the middle term gives −75."
+  },
+  {
+   "n": 19,
+   "topic": "Matrices and determinants",
+   "q": "Given P = [[2, −1], [3, 4]] and Q = [[0, 2], [1, −3]], find PQ.",
+   "options": [
+    "[[6, 8], [−7, −13]]",
+    "[[1, 7], [4, −6]]",
+    "[[−1, 1], [4, −6]]",
+    "[[−1, 7], [4, −6]]"
+   ],
+   "answer": 3,
+   "explanation": "Compute row by column: PQ = [[2×0 + (−1)×1, 2×2 + (−1)×(−3)], [3×0 + 4×1, 3×2 + 4×(−3)]] = [[−1, 7], [4, −6]]. The matrix [[6, 8], [−7, −13]] results from computing QP instead of PQ."
+  },
+  {
+   "n": 20,
+   "topic": "Matrices and determinants",
+   "q": "If A = [[2, 3], [4, 5]], find A² − 3A.",
+   "options": [
+    "[[10, 12], [16, 22]]",
+    "[[−2, 0], [4, 10]]",
+    "[[22, 30], [40, 52]]",
+    "[[−10, −12], [−16, −22]]"
+   ],
+   "answer": 0,
+   "explanation": "A² = [[16, 21], [28, 37]] and 3A = [[6, 9], [12, 15]]. Therefore A² − 3A = [[10, 12], [16, 22]]. Adding 3A instead of subtracting gives [[22, 30], [40, 52]]."
+  },
+  {
+   "n": 21,
+   "topic": "Sets",
+   "q": "A set A has 6 distinct elements. How many non-empty subsets can be formed from A?",
+   "options": [
+    "63",
+    "64",
+    "12",
+    "32"
+   ],
+   "answer": 0,
+   "explanation": "A set with 6 elements has 2⁶ = 64 subsets in all. Excluding the empty subset leaves 64 − 1 = 63 non-empty subsets; 64 is the total including the empty subset."
+  },
+  {
+   "n": 22,
+   "topic": "Sets",
+   "q": "Given that R = {x : x is an integer and 1 ≤ x < 6} and S = {x : x is a positive factor of 12}, find R ∩ S.",
+   "options": [
+    "{1, 2, 3, 4, 6}",
+    "{1, 2, 3, 4}",
+    "{2, 3, 4}",
+    "{1, 2, 3, 4, 5}"
+   ],
+   "answer": 1,
+   "explanation": "R = {1, 2, 3, 4, 5} and the positive factors of 12 are {1, 2, 3, 4, 6, 12}. Their common elements are {1, 2, 3, 4}; 5 is not a factor of 12, while 6 is not less than 6."
+  },
+  {
+   "n": 23,
+   "topic": "Integration",
+   "q": "Evaluate ∫(9x² − 4√x) dx.",
+   "options": [
+    "3x³ − (8/3)x^(1/2) + C",
+    "3x³ − (4/3)x^(3/2) + C",
+    "3x³ − (8/3)x^(3/2) + C",
+    "3x³ − 8x^(3/2) + C"
+   ],
+   "answer": 2,
+   "explanation": "The integral of 9x² is 3x³. Since √x = x^(1/2), the integral of −4x^(1/2) is −4 × (2/3)x^(3/2) = −(8/3)x^(3/2). Therefore the result is 3x³ − (8/3)x^(3/2) + C."
+  },
+  {
+   "n": 24,
+   "topic": "Integration",
+   "q": "Find the area under the curve y = 3x² + 1 between x = 1 and x = 3.",
+   "options": [
+    "30 square units",
+    "26 square units",
+    "28 square units",
+    "20 square units"
+   ],
+   "answer": 2,
+   "explanation": "The area is ∫ from 1 to 3 of (3x² + 1) dx = [x³ + x] from 1 to 3. This gives (27 + 3) − (1 + 1) = 28 square units. Omitting the +1 term during integration gives 26 square units."
+  },
+  {
+   "n": 25,
+   "topic": "Integration",
+   "q": "Find the equation of the curve whose gradient is dy/dx = 4x + 3 and which passes through the point (2, 10).",
+   "options": [
+    "y = 2x² + 3x",
+    "y = 2x² + 3x + 4",
+    "y = 2x² + 3x − 4",
+    "y = 4x² + 3x − 12"
+   ],
+   "answer": 2,
+   "explanation": "Integrating gives y = 2x² + 3x + C. Substituting x = 2 and y = 10 gives 10 = 8 + 6 + C, so C = −4. Hence y = 2x² + 3x − 4; using C = +4 would not pass through (2, 10)."
+  },
+  {
+   "n": 26,
+   "topic": "Differentiation",
+   "q": "Differentiate y = (3x − 2)/(x² + 1) with respect to x.",
+   "options": [
+    "(−3x² − 4x + 3)/(x² + 1)²",
+    "(3x² + 4x − 3)/(x² + 1)²",
+    "(−3x² + 4x + 3)/(x² + 1)",
+    "(−3x² + 4x + 3)/(x² + 1)²"
+   ],
+   "answer": 3,
+   "explanation": "Using the quotient rule, dy/dx = [3(x² + 1) − (3x − 2)(2x)]/(x² + 1)². Expanding gives [3x² + 3 − (6x² − 4x)]/(x² + 1)² = (−3x² + 4x + 3)/(x² + 1)². The denominator must be squared."
+  },
+  {
+   "n": 27,
+   "topic": "Differentiation",
+   "q": "Differentiate y = (5x − 3)⁴ with respect to x.",
+   "options": [
+    "20(5x − 3)³",
+    "4(5x − 3)³",
+    "5(5x − 3)³",
+    "20(5x − 3)⁴"
+   ],
+   "answer": 0,
+   "explanation": "Using the chain rule, dy/dx = 4(5x − 3)³ × 5 = 20(5x − 3)³. Forgetting to multiply by the derivative of 5x − 3 gives 4(5x − 3)³."
+  },
+  {
+   "n": 28,
+   "topic": "Differentiation",
+   "q": "The side x of a cube is increasing at 0.4 cm/s. Given that the volume is V = x³, find dV/dt when x = 5 cm.",
+   "options": [
+    "75 cm³/s",
+    "6 cm³/s",
+    "10 cm³/s",
+    "30 cm³/s"
+   ],
+   "answer": 3,
+   "explanation": "V = x³, so dV/dx = 3x². At x = 5, dV/dx = 75. By the chain rule, dV/dt = 75 × 0.4 = 30 cm³/s; 75 is only dV/dx and does not include the rate of change of the side."
+  },
+  {
+   "n": 29,
+   "topic": "Probability",
+   "q": "A number is chosen at random from the integers 1 to 50 inclusive. What is the probability that it is a multiple of 4 or 6?",
+   "options": [
+    "3/10",
+    "4/25",
+    "2/5",
+    "8/25"
+   ],
+   "answer": 3,
+   "explanation": "There are 12 multiples of 4 and 8 multiples of 6, but 4 numbers (12, 24, 36, 48) are counted twice. So the number of favourable outcomes is 12 + 8 − 4 = 16, giving probability 16/50 = 8/25. Adding 12 + 8 without subtracting the common multiples gives 20/50 = 2/5, which overcounts."
+  },
+  {
+   "n": 30,
+   "topic": "Probability",
+   "q": "A fair spinner has five equal sections numbered 1 to 5. It is spun three times. What is the probability of getting exactly two 4s?",
+   "options": [
+    "12/125",
+    "4/125",
+    "12/25",
+    "3/125"
+   ],
+   "answer": 0,
+   "explanation": "Choose the two spins that show 4 in C(3,2) = 3 ways. Each such sequence has probability (1/5)² × (4/5) = 4/125, so the required probability is 3 × 4/125 = 12/125. The value 4/125 is for one fixed arrangement of two 4s and a non-4, not all arrangements."
+  },
+  {
+   "n": 31,
+   "topic": "Number bases",
+   "q": "Evaluate 1101₂ + 111₂, giving your answer in base 2.",
+   "options": [
+    "11000₂",
+    "10100₂",
+    "10110₂",
+    "10010₂"
+   ],
+   "answer": 1,
+   "explanation": "1101₂ = 13 and 111₂ = 7, so the sum is 20 in base 10. Since 20 = 16 + 4 = 10100₂, the required sum is 10100₂. The value 10010₂ represents 18, which results from mishandling a carry."
+  },
+  {
+   "n": 32,
+   "topic": "Number bases",
+   "q": "If 43ₓ = 27₁₀, find the value of x.",
+   "options": [
+    "6",
+    "7",
+    "5",
+    "8"
+   ],
+   "answer": 0,
+   "explanation": "In base x, 43ₓ means 4x + 3. So 4x + 3 = 27, giving 4x = 24 and x = 6. Checking: 43₆ = 4 × 6 + 3 = 27."
+  },
+  {
+   "n": 33,
+   "topic": "Quadratic equations",
+   "q": "For what values of m does the equation x² − 4x + m = 0 have two distinct real roots?",
+   "options": [
+    "m > 4",
+    "m < 4",
+    "m ≤ 4",
+    "m = 4"
+   ],
+   "answer": 1,
+   "explanation": "For two distinct real roots, the discriminant must be greater than zero: (−4)² − 4(1)(m) > 0. This gives 16 − 4m > 0, so m < 4. If m = 4 the roots are equal, and if m > 4 there are no real roots."
+  },
+  {
+   "n": 34,
+   "topic": "Quadratic equations",
+   "q": "The curve y = x² + kx + 9 has a minimum value of 5. Find the possible values of k.",
+   "options": [
+    "−8 or 8",
+    "0 or 4",
+    "−4 or 4",
+    "4 only"
+   ],
+   "answer": 2,
+   "explanation": "Completing the square gives y = (x + k/2)² + 9 − k²/4, so the minimum value is 9 − k²/4. Setting 9 − k²/4 = 5 gives k² = 16, hence k = −4 or k = 4. The value k = 8 would give a minimum of −7, not 5."
+  },
+  {
+   "n": 35,
+   "topic": "Quadratic equations",
+   "q": "A rectangular plot in Owerri has its length 4 m longer than its width. If the area of the plot is 96 m², find its perimeter.",
+   "options": [
+    "44 m",
+    "28 m",
+    "40 m",
+    "32 m"
+   ],
+   "answer": 2,
+   "explanation": "Let the width be w m; then the length is w + 4 m. From w(w + 4) = 96, we get w² + 4w − 96 = 0, so (w + 12)(w − 8) = 0 and w = 8. The length is 12 m, hence the perimeter is 2(8 + 12) = 40 m."
+  },
+  {
+   "n": 36,
+   "topic": "Fractions, decimals and percentages",
+   "q": "A woman in Kaduna spent 2/5 of her money on food and 1/4 of her money on rent. If she had ₦7,000 left, how much money did she have at first?",
+   "options": [
+    "₦25,000",
+    "₦20,000",
+    "₦17,500",
+    "₦15,000"
+   ],
+   "answer": 1,
+   "explanation": "The fraction spent is 2/5 + 1/4 = 8/20 + 5/20 = 13/20, so the fraction left is 7/20. Thus 7/20 of the original amount is ₦7,000, giving the original amount as ₦7,000 × 20/7 = ₦20,000. Using 2/5 instead of 7/20 as the fraction left would give ₦17,500, which is incorrect."
+  },
+  {
+   "n": 37,
+   "topic": "Fractions, decimals and percentages",
+   "q": "The population of a town in Ogun State increased from 12,500 to 14,000. What is the percentage increase?",
+   "options": [
+    "12.5%",
+    "10.7%",
+    "12%",
+    "15%"
+   ],
+   "answer": 2,
+   "explanation": "The increase is 14,000 − 12,500 = 1,500. Percentage increase = (1,500 ÷ 12,500) × 100% = 12%. Dividing by the new population instead of the original gives about 10.7%, which is not the percentage increase."
+  },
+  {
+   "n": 38,
+   "topic": "Mensuration",
+   "q": "A cylindrical bucket with diameter 28 cm and height 30 cm is full of water. Find its capacity in litres. Take π = 22/7.",
+   "options": [
+    "184.8 litres",
+    "18.48 litres",
+    "4.62 litres",
+    "73.92 litres"
+   ],
+   "answer": 1,
+   "explanation": "The radius is 28 ÷ 2 = 14 cm. Volume = πr²h = 22/7 × 14² × 30 = 18,480 cm³. Since 1 litre = 1,000 cm³, the capacity is 18.48 litres. Using 7 cm as the radius gives 4.62 litres, which is too small."
+  },
+  {
+   "n": 39,
+   "topic": "Trigonometry",
+   "q": "A vertical flagpole in Minna stands on level ground. When the angle of elevation of the sun is 30°, the shadow of the pole is 9 m long. Calculate the height of the pole in simplest surd form.",
+   "options": [
+    "√3 m",
+    "3√3 m",
+    "6√3 m",
+    "9√3 m"
+   ],
+   "answer": 1,
+   "explanation": "In the right-angled triangle formed, tan 30° = height ÷ shadow = h ÷ 9. Since tan 30° = 1/√3, h = 9/√3 = 3√3 m. Multiplying by √3 instead of dividing gives the tempting but incorrect 9√3 m."
+  },
+  {
+   "n": 40,
+   "topic": "Trigonometry",
+   "q": "Solve 2cos²θ − 3cosθ + 1 = 0 for 0° ≤ θ < 360°.",
+   "options": [
+    "30°, 150°",
+    "0°, 120°, 240°",
+    "60°, 300°",
+    "0°, 60°, 300°"
+   ],
+   "answer": 3,
+   "explanation": "Factorising gives (2cosθ − 1)(cosθ − 1) = 0, so cosθ = 1 or cosθ = 1/2. In the given interval, these give θ = 0°, 60° and 300°. Leaving out 0° is a common error, but cos 0° = 1 satisfies the equation."
+  },
+  {
+   "n": 41,
+   "topic": "Trigonometry",
+   "q": "If tan θ = −3/4 and 90° < θ < 180°, find sin θ + cos θ.",
+   "options": [
+    "1/5",
+    "−1/5",
+    "−7/5",
+    "7/5"
+   ],
+   "answer": 1,
+   "explanation": "Because θ is in the second quadrant, take the opposite side as 3, the adjacent side as −4 and the hypotenuse as 5. Hence sin θ = 3/5 and cos θ = −4/5, so sin θ + cos θ = 3/5 − 4/5 = −1/5. Using positive cos θ gives the tempting 7/5, which ignores the quadrant."
+  },
+  {
+   "n": 42,
+   "topic": "Surds",
+   "q": "Simplify (2√5 − √3)(2√5 + √3) + √48.",
+   "options": [
+    "23 + 4√3",
+    "17 + 4√3",
+    "23",
+    "17 − 4√3"
+   ],
+   "answer": 1,
+   "explanation": "The product is a difference of two squares: (2√5)² − (√3)² = 20 − 3 = 17. Also √48 = 4√3, so the total is 17 + 4√3. Treating the product as 20 + 3 leads to the incorrect 23 + 4√3."
+  },
+  {
+   "n": 43,
+   "topic": "Surds",
+   "q": "Evaluate 1/(√7 − √5) + 1/(√7 + √5).",
+   "options": [
+    "√7",
+    "√5",
+    "(√7)/2",
+    "2√7"
+   ],
+   "answer": 0,
+   "explanation": "Rationalising each term gives (√7 + √5)/2 and (√7 − √5)/2. Adding them cancels the √5 terms and gives (2√7)/2 = √7. Adding the denominators directly or forgetting to divide by 2 leads to incorrect values."
+  },
+  {
+   "n": 44,
+   "topic": "Surds",
+   "q": "Rationalise the denominator and simplify: 5/(√13 − 2√3).",
+   "options": [
+    "5√13 − 10√3",
+    "√13 + 2√3",
+    "5√13 + 10√3",
+    "(5√13 + 10√3)/25"
+   ],
+   "answer": 2,
+   "explanation": "Multiply numerator and denominator by √13 + 2√3. The denominator becomes (√13)² − (2√3)² = 13 − 12 = 1, so the expression is 5(√13 + 2√3) = 5√13 + 10√3. Using 13 + 12 = 25 as the denominator is a common mistake."
+  },
+  {
+   "n": 45,
+   "topic": "Angles and circle geometry",
+   "q": "PT is a tangent to a circle with centre O at T, and TQ is a chord. If ∠PTQ = 35°, find ∠TOQ.",
+   "options": [
+    "35°",
+    "55°",
+    "70°",
+    "110°"
+   ],
+   "answer": 2,
+   "explanation": "The radius OT is perpendicular to tangent PT, so ∠OTQ = 90° − 35° = 55°. Triangle OTQ is isosceles because OT = OQ, so its angles are 55°, 55° and ∠TOQ; hence ∠TOQ = 180° − 110° = 70°. Doubling the base angle instead of the tangent–chord angle gives the tempting 110°."
+  },
+  {
+   "n": 46,
+   "topic": "Indices and logarithms",
+   "q": "Solve logₓ 27 = 3/2.",
+   "options": [
+    "81",
+    "18",
+    "9",
+    "3"
+   ],
+   "answer": 2,
+   "explanation": "The equation means x^(3/2) = 27. Raising both sides to the power 2/3 gives x = 27^(2/3) = (3³)^(2/3) = 3² = 9. The base must be positive and not equal to 1, so x = 9 is valid."
+  },
+  {
+   "n": 47,
+   "topic": "Indices and logarithms",
+   "q": "Evaluate log₆ 18 + log₆ 12 − log₆ 6.",
+   "options": [
+    "2",
+    "log₆ 24",
+    "1",
+    "3"
+   ],
+   "answer": 0,
+   "explanation": "Using the laws of logarithms, log₆18 + log₆12 − log₆6 = log₆((18 × 12)/6) = log₆36. Since 6² = 36, this equals 2. Combining the numbers inside a single log as 18 + 12 − 6 gives the incorrect log₆24."
+  },
+  {
+   "n": 48,
+   "topic": "Coordinate geometry",
+   "q": "P(2, −5) and Q(8, 7) are two points. Find the equation of the line through the midpoint of PQ perpendicular to PQ.",
+   "options": [
+    "x + 2y − 7 = 0",
+    "x − 2y − 3 = 0",
+    "2x − y − 9 = 0",
+    "2x + y − 11 = 0"
+   ],
+   "answer": 0,
+   "explanation": "The midpoint is ((2+8)/2, (−5+7)/2) = (5, 1). The slope of PQ is (7−(−5))/(8−2)=2, so the required perpendicular line has slope −1/2. Using y−1=−1/2(x−5) gives 2y−2=−x+5, that is x+2y−7=0. The equation 2x−y−9=0 has slope 2, so it is parallel to PQ, not perpendicular."
+  },
+  {
+   "n": 49,
+   "topic": "Coordinate geometry",
+   "q": "A circle has equation x² + y² + 8x − 6y + 5 = 0. Find its radius.",
+   "options": [
+    "√5",
+    "20",
+    "5",
+    "2√5"
+   ],
+   "answer": 3,
+   "explanation": "Completing the square gives (x+4)²+(y−3)²=20, so the radius is √20=2√5. Taking the constant 20 directly as the radius or using √5 gives incorrect values."
+  },
+  {
+   "n": 50,
+   "topic": "Coordinate geometry",
+   "q": "The point P divides the line segment joining A(1, 5) and B(7, −1) internally in the ratio AP : PB = 2 : 1. Find the coordinates of P.",
+   "options": [
+    "(5, 1)",
+    "(6, 0)",
+    "(4, 2)",
+    "(3, 3)"
+   ],
+   "answer": 0,
+   "explanation": "Using the section formula for internal division in ratio 2:1 gives P=((2×7+1×1)/3, (2×(−1)+1×5)/3) = (5, 1). The midpoint (4, 2) would only be obtained if AP : PB were 1 : 1, while reversing the ratio gives (3, 3)."
+  },
+  {
+   "n": 51,
+   "topic": "Simultaneous equations and inequalities",
+   "q": "At Mama Ngozi's shop, Ada bought 3 sachets of milk and 2 loaves of bread for ₦2,150. Bola bought 4 sachets of milk and 3 loaves of the same bread for ₦3,100. What is the total cost of one sachet of milk and one loaf of bread?",
+   "options": [
+    "₦950",
+    "₦250",
+    "₦700",
+    "₦1,050"
+   ],
+   "answer": 0,
+   "explanation": "Let a sachet cost ₦x and a loaf cost ₦y. Then 3x+2y=2150 and 4x+3y=3100. Solving gives x=250 and y=700, so x+y=950. The values ₦250 and ₦700 are the individual prices, not their total."
+  },
+  {
+   "n": 52,
+   "topic": "Simultaneous equations and inequalities",
+   "q": "Tunde is three times as old as his son. In 12 years' time, Tunde will be twice as old as his son. Find the son's present age.",
+   "options": [
+    "24 years",
+    "18 years",
+    "6 years",
+    "12 years"
+   ],
+   "answer": 3,
+   "explanation": "Let the son's age be x years, so Tunde is 3x years old. Then 3x+12=2(x+12), which gives 3x+12=2x+24, so x=12. If x were 6, Tunde would be 18 now and 30 in 12 years, which is not twice the son's age then."
+  },
+  {
+   "n": 53,
+   "topic": "Simultaneous equations and inequalities",
+   "q": "Given that x is an integer, how many integers satisfy both 2x + 1 < 11 and 3x − 4 ≥ −7?",
+   "options": [
+    "6",
+    "7",
+    "4",
+    "5"
+   ],
+   "answer": 0,
+   "explanation": "The inequalities simplify to x < 5 and x ≥ −1. The integers from −1 to 4 inclusive are six values. Including 5 would give seven, but 5 is excluded because 2x+1<11 is strict."
+  },
+  {
+   "n": 54,
+   "topic": "Variation",
+   "q": "The energy E used by an electric iron varies directly as the square of the voltage V and inversely as the resistance R. If E = 600 J when V = 120 V and R = 24 Ω, find E when V = 100 V and R = 25 Ω.",
+   "options": [
+    "400 J",
+    "600 J",
+    "480 J",
+    "250 J"
+   ],
+   "answer": 0,
+   "explanation": "Since E=kV²/R, substituting gives 600=k(120²)/24=600k, so k=1. Hence E=(100²)/25=400 J. The value 480 J is obtained if V is not squared."
+  },
+  {
+   "n": 55,
+   "topic": "Variation",
+   "q": "The amount A (in ₦) a taxi driver spends on fuel varies directly as the distance d (km) covered and the square of the speed s (km/h). If he spends ₦2,400 when d = 80 km and s = 60 km/h, find A when d = 100 km and s = 30 km/h.",
+   "options": [
+    "₦900",
+    "₦600",
+    "₦750",
+    "₦1,500"
+   ],
+   "answer": 2,
+   "explanation": "The relation is A=kds². Substituting gives 2400=k×80×60², so k=1/120. Thus A=(1/120)×100×30²=₦750; using s directly instead of s² would lead to ₦1,500."
+  },
+  {
+   "n": 56,
+   "topic": "Sequences and series",
+   "q": "The 4th term of an arithmetic progression is 17 and the 9th term is 42. Find the first term.",
+   "options": [
+    "5",
+    "12",
+    "−3",
+    "2"
+   ],
+   "answer": 3,
+   "explanation": "Let the first term be a and the common difference be d. Then a+3d=17 and a+8d=42; subtracting gives 5d=25, so d=5. Therefore a+15=17, giving a=2; choosing −3 comes from subtracting 4d instead of 3d when using the 4th term."
+  },
+  {
+   "n": 57,
+   "topic": "Sequences and series",
+   "q": "In a geometric progression, the 3rd term is 45 and the 6th term is 1215. Find the common ratio.",
+   "options": [
+    "9",
+    "15",
+    "5",
+    "3"
+   ],
+   "answer": 3,
+   "explanation": "Let the first term be a. Then ar²=45 and ar⁵=1215. Dividing gives r³=1215/45=27, so r=3. A value such as 9 comes from confusing the common ratio with r²."
+  },
+  {
+   "n": 58,
+   "topic": "Statistics",
+   "q": "The masses, in kg, of five bags of rice in a shop in Aba are 6, 8, 10, 12 and 14. Calculate the mean deviation from the mean.",
+   "options": [
+    "12 kg",
+    "2.83 kg",
+    "8 kg",
+    "2.4 kg"
+   ],
+   "answer": 3,
+   "explanation": "The mean is (6 + 8 + 10 + 12 + 14) ÷ 5 = 10 kg. The absolute deviations from 10 kg are 4, 2, 0, 2 and 4 kg, whose sum is 12 kg, so the mean deviation is 12 ÷ 5 = 2.4 kg. The value 2.83 kg is the standard deviation, not the mean deviation."
+  },
+  {
+   "n": 59,
+   "topic": "Statistics",
+   "q": "The distribution of the ages, in years, of 20 children in a community in Oyo is: ages 4, 5, 6, 7, 8 with frequencies 2, 5, 6, 4, 3 respectively. Find the median age.",
+   "options": [
+    "6.5 years",
+    "7 years",
+    "6 years",
+    "6.05 years"
+   ],
+   "answer": 2,
+   "explanation": "There are 20 children, so the median lies halfway between the 10th and 11th values. The cumulative frequencies are 2, 7, 13, 17 and 20, and both the 10th and 11th values fall in the age 6 group, which occupies positions 8 to 13. Therefore the median age is 6 years; 6.05 years is the mean, not the median."
+  },
+  {
+   "n": 60,
+   "topic": "Matrices and determinants",
+   "q": "If p is a positive integer and the matrix [[p, 4], [3, p − 1]] is singular, find p.",
+   "options": [
+    "12",
+    "4",
+    "−3",
+    "3"
+   ],
+   "answer": 1,
+   "explanation": "For the matrix to be singular, its determinant must be zero. So p(p − 1) − 4×3 = 0, giving p² − p − 12 = 0 and (p − 4)(p + 3) = 0. Since p is positive, p = 4."
+  }
+ ]
+}

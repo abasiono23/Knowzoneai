@@ -1,0 +1,401 @@
+{
+ "id": "kcse-biology-p2",
+ "exam": "kcse",
+ "subject": "biology",
+ "year": null,
+ "number": 2,
+ "source": "ai",
+ "minutes": 35,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "The cell",
+   "q": "A student measures the image of a chloroplast in a photomicrograph as 35 mm. The actual length of the chloroplast is 5 µm. What is the magnification of the photomicrograph?",
+   "options": [
+    "×7",
+    "×700",
+    "×7,000",
+    "×70,000"
+   ],
+   "answer": 2,
+   "explanation": "Magnification = image length ÷ actual length. Convert 35 mm to micrometres: 35 mm = 35,000 µm. Then 35,000 µm ÷ 5 µm = 7,000, so the photomicrograph is magnified ×7,000."
+  },
+  {
+   "n": 2,
+   "topic": "The cell",
+   "q": "An Acacia tree has a diploid chromosome number of 26. During meiosis, what is the total number of chromatids in one cell at metaphase I?",
+   "options": [
+    "26",
+    "13",
+    "52",
+    "104"
+   ],
+   "answer": 2,
+   "explanation": "At metaphase I, the 26 chromosomes have already replicated, and each chromosome consists of two sister chromatids. The total number of chromatids is therefore 26 × 2 = 52; the haploid number is 13, but the question asks for chromatids at metaphase I."
+  },
+  {
+   "n": 3,
+   "topic": "The cell",
+   "q": "Onion epidermal cells are mounted in 1.0 M sucrose solution. They become plasmolysed. Which statement best explains the plasmolysis?",
+   "options": [
+    "The cell wall shrinks inward because it is permeable to sucrose.",
+    "Sucrose enters the cell by osmosis and pushes the cytoplasm against the cell wall.",
+    "Water enters the cell by active transport and makes the vacuole swell.",
+    "Water leaves the vacuole by osmosis because the sucrose solution is more concentrated than the cell sap, so the cytoplasm pulls away from the cell wall."
+   ],
+   "answer": 3,
+   "explanation": "The sucrose solution is hypertonic to the cell sap, so water leaves the vacuole by osmosis. The protoplast shrinks and the cytoplasm and plasma membrane pull away from the freely permeable cell wall, causing plasmolysis."
+  },
+  {
+   "n": 4,
+   "topic": "Excretion and homeostasis",
+   "q": "Which substance is normally absent from the glomerular filtrate of a healthy person?",
+   "options": [
+    "Urea",
+    "Glucose",
+    "Amino acids",
+    "Plasma protein"
+   ],
+   "answer": 3,
+   "explanation": "Plasma proteins are large molecules and cannot pass through the glomerular wall into Bowman's capsule under normal conditions. Glucose and amino acids are small enough to be filtered, though they are later reabsorbed, while urea is also filtered."
+  },
+  {
+   "n": 5,
+   "topic": "Excretion and homeostasis",
+   "q": "What is the main role of the loop of Henle in a mammalian kidney?",
+   "options": [
+    "It carries urine from the kidney to the bladder.",
+    "It creates a high solute concentration in the medulla so that water can be reabsorbed from the collecting duct.",
+    "It filters blood under pressure to form glomerular filtrate.",
+    "It selectively reabsorbs all glucose from the filtrate."
+   ],
+   "answer": 1,
+   "explanation": "The loop of Henle builds and maintains an osmotic gradient in the medulla. This allows water to be reabsorbed from the collecting duct under the influence of ADH, producing concentrated urine."
+  },
+  {
+   "n": 6,
+   "topic": "Excretion and homeostasis",
+   "q": "After a student in Nakuru eats a large meal of ugali and beans, her blood glucose rises. Which homeostatic response helps return the blood glucose towards normal?",
+   "options": [
+    "The adrenal glands secrete more adrenaline.",
+    "The pituitary gland secretes more antidiuretic hormone.",
+    "The alpha cells of the islets of Langerhans secrete more glucagon.",
+    "The beta cells of the islets of Langerhans secrete more insulin."
+   ],
+   "answer": 3,
+   "explanation": "Insulin is secreted by beta cells when blood glucose is high. It increases glucose uptake by cells and conversion to glycogen in the liver, lowering blood glucose towards normal; glucagon and adrenaline would raise it instead."
+  },
+  {
+   "n": 7,
+   "topic": "Reception, response and coordination",
+   "q": "A student in Kericho cannot see the chalkboard clearly from the back of the class, although she can read a book held close to her eyes. Which defect of the eye and correction are most likely?",
+   "options": [
+    "Astigmatism, corrected using a cylindrical lens.",
+    "Presbyopia, corrected using bifocal lenses.",
+    "Myopia, corrected using a concave lens.",
+    "Hypermetropia, corrected using a convex lens."
+   ],
+   "answer": 2,
+   "explanation": "In myopia, the eyeball is too long or the lens is too strong, so distant images focus in front of the retina. A concave diverging lens spreads the rays so that the image is focused on the retina; hypermetropia has the opposite symptoms."
+  },
+  {
+   "n": 8,
+   "topic": "Reception, response and coordination",
+   "q": "A bean seedling is placed horizontally in moist soil in a dark box in Eldoret. After several days, its root bends downwards. Which explanation is correct?",
+   "options": [
+    "Gravity causes auxin to collect on the lower side of the root, where it stimulates growth, so the root bends upwards.",
+    "The root grows towards moisture and the shoot, without involving hormones.",
+    "Light causes auxin to move to the lower side, where it inhibits growth, so the root bends downwards.",
+    "Gravity causes auxin to accumulate on the lower side of the root, where high auxin inhibits growth, so the upper side grows faster and the root bends downwards."
+   ],
+   "answer": 3,
+   "explanation": "In a horizontal root, gravity causes auxin to accumulate on the lower side. In roots, high auxin inhibits cell elongation, so the lower side grows more slowly and the upper side grows faster, making the root curve downwards."
+  },
+  {
+   "n": 9,
+   "topic": "Evolution",
+   "q": "Fossils of Archaeopteryx show feathers and wings like those of birds, but also teeth and a long bony tail like those of reptiles. This is best used as evidence that...",
+   "options": [
+    "all birds are directly descended from modern reptiles over one generation.",
+    "birds and reptiles may share a common ancestor.",
+    "acquired features from use and disuse are inherited.",
+    "animals with similar features must always be unrelated."
+   ],
+   "answer": 1,
+   "explanation": "Archaeopteryx has a mixture of bird-like and reptile-like features, which supports the idea of a transitional form and common ancestry. It is not evidence for direct descent from modern reptiles in one generation or for inheritance of acquired characteristics."
+  },
+  {
+   "n": 10,
+   "topic": "Evolution",
+   "q": "Which of the following is the best example of adaptive radiation?",
+   "options": [
+    "A single bacterium becomes resistant because an antibiotic instructs it to form a protective enzyme.",
+    "Many species of cichlid fish in Lake Victoria with different feeding habits evolved from a common ancestor.",
+    "A mule is produced when a donkey and a horse are crossed and is sterile.",
+    "A person who spends time in the sun becomes darker and passes darker skin to children."
+   ],
+   "answer": 1,
+   "explanation": "Adaptive radiation is the evolution of several species from a common ancestor into different niches, as shown by cichlid fishes with different feeding habits. Sterile mules, acquired tanning and antibiotic-directed enzyme formation do not describe this process."
+  },
+  {
+   "n": 11,
+   "topic": "Nutrition in plants and animals",
+   "q": "A farmer in Kitale has repeatedly applied ammonium sulphate fertiliser and the soil has become too acidic for maize. Which practice is most suitable to raise the soil pH before planting?",
+   "options": [
+    "Spread sulphur powder on the soil.",
+    "Add calcium carbonate to the soil.",
+    "Irrigate the soil with dilute hydrochloric acid.",
+    "Apply more ammonium sulphate."
+   ],
+   "answer": 1,
+   "explanation": "Calcium carbonate is a liming material that neutralises soil acidity and raises pH. Ammonium sulphate and sulphur make the soil more acidic, while dilute hydrochloric acid would acidify it further."
+  },
+  {
+   "n": 12,
+   "topic": "Nutrition in plants and animals",
+   "q": "A patient in Thika has a blocked pancreatic duct, but the liver and gall bladder are functioning normally. Which statement best explains why the patient's faeces contain much undigested fat?",
+   "options": [
+    "Pancreatic lipase does not reach the duodenum to break down fats.",
+    "Gastric lipase cannot act in the stomach.",
+    "Bile cannot be stored in the gall bladder.",
+    "Bile is no longer produced by the liver."
+   ],
+   "answer": 0,
+   "explanation": "Pancreatic juice contains lipase, which breaks down fats in the duodenum; a blocked duct prevents this enzyme from reaching the food. Bile is still produced and stored normally, so it can emulsify fats, but emulsified fats are poorly digested without pancreatic lipase."
+  },
+  {
+   "n": 13,
+   "topic": "Nutrition in plants and animals",
+   "q": "A food sample from a Nairobi market is mashed in water and filtered. The filtrate is divided into three portions. With Benedict's solution and heating it remains blue; with Biuret solution it turns purple; when shaken with ethanol and then water a white emulsion forms. Which conclusion is best supported by these tests?",
+   "options": [
+    "The sample contains starch and lipid.",
+    "The sample contains a reducing sugar and protein.",
+    "The sample contains only lipid and no protein.",
+    "The sample contains protein and lipid but not a reducing sugar."
+   ],
+   "answer": 3,
+   "explanation": "A blue colour after Benedict's test and heating indicates that no reducing sugar is present. The purple colour with Biuret solution shows protein, and the white emulsion with ethanol and water shows lipid. Starch is not tested here, so a conclusion about starch is not supported."
+  },
+  {
+   "n": 14,
+   "topic": "Genetics",
+   "q": "In a variety of maize, the allele for tall stems (T) is dominant over the allele for short stems (t). A heterozygous tall plant is self-pollinated. Among the tall offspring, what fraction is expected to be homozygous tall?",
+   "options": [
+    "1/4",
+    "1/2",
+    "3/4",
+    "1/3"
+   ],
+   "answer": 3,
+   "explanation": "The cross Tt × Tt gives offspring in the ratio 1 TT : 2 Tt : 1 tt. Among the tall offspring, the genotypes are TT and Tt in the ratio 1 : 2, so one third of the tall offspring are homozygous tall."
+  },
+  {
+   "n": 15,
+   "topic": "Genetics",
+   "q": "At a clinic in Kisumu, a mother has blood group B with genotype I^B i. The father has blood group O with genotype ii. What are the expected blood groups of their children?",
+   "options": [
+    "75% group B and 25% group O.",
+    "50% group B and 50% group O.",
+    "50% group AB and 50% group O.",
+    "All children are group B."
+   ],
+   "answer": 1,
+   "explanation": "The cross I^B i × ii produces I^B i and ii offspring in equal numbers. I^B i gives blood group B and ii gives blood group O, so the expected ratio is 50% group B and 50% group O."
+  },
+  {
+   "n": 16,
+   "topic": "Genetics",
+   "q": "Red-green colour blindness is controlled by a recessive allele on the X chromosome. A colour-blind man marries a woman with normal colour vision who is homozygous for the normal allele. Which outcome is expected for their children?",
+   "options": [
+    "All daughters are colour-blind and all sons are carriers.",
+    "All sons are colour-blind and all daughters have normal colour vision.",
+    "All daughters are carriers and all sons have normal colour vision.",
+    "Half of the daughters are colour-blind and half of the sons are colour-blind."
+   ],
+   "answer": 2,
+   "explanation": "The father has genotype X^bY and the mother has genotype X^B X^B. Daughters receive X^b from the father and X^B from the mother, so they are carriers, while sons receive Y from the father and X^B from the mother, so they have normal colour vision."
+  },
+  {
+   "n": 17,
+   "topic": "Classification",
+   "q": "During a field study in the Aberdare Forest, students found a small green plant growing on a damp rock. It has no true roots, stems or leaves and reproduces by spores. To which group does it most likely belong?",
+   "options": [
+    "Pteridophytes",
+    "Gymnosperms",
+    "Angiosperms",
+    "Bryophytes"
+   ],
+   "answer": 3,
+   "explanation": "Bryophytes, such as mosses and liverworts, lack true roots, stems and leaves and reproduce by spores. Pteridophytes, such as ferns, have true vascular roots, stems and leaves, while gymnosperms and angiosperms reproduce by seeds."
+  },
+  {
+   "n": 18,
+   "topic": "Classification",
+   "q": "At the coast in Mombasa, a student collected a small animal with three pairs of jointed legs, one pair of antennae, and a body divided into head, thorax and abdomen. To which class does it belong?",
+   "options": [
+    "Crustacea",
+    "Arachnida",
+    "Insecta",
+    "Myriapoda"
+   ],
+   "answer": 2,
+   "explanation": "Insects have three pairs of jointed legs, one pair of antennae, and a body divided into head, thorax and abdomen. Arachnids have four pairs of legs and no antennae, crustaceans have two pairs of antennae, and myriapods have many body segments with many legs."
+  },
+  {
+   "n": 19,
+   "topic": "Respiration",
+   "q": "During a 400 m race in Eldoret, a runner's leg muscles use anaerobic respiration. Which equation summarises the reaction that produces the substance that causes muscle fatigue?",
+   "options": [
+    "glucose → lactic acid + energy",
+    "glucose → ethanol + carbon dioxide + energy",
+    "lactic acid + oxygen → carbon dioxide + water + energy",
+    "glucose + oxygen → carbon dioxide + water + energy"
+   ],
+   "answer": 0,
+   "explanation": "In animal muscles, when oxygen supply is insufficient, glucose is broken down anaerobically to lactic acid with the release of a small amount of energy. Lactic acid accumulation contributes to muscle fatigue, while ethanol and carbon dioxide are produced in yeast fermentation, not in human muscle."
+  },
+  {
+   "n": 20,
+   "topic": "Respiration",
+   "q": "In a respirometer at Nakuru, germinating bean seeds took up 3.0 cm³ of oxygen in 12 minutes. What was the average rate of oxygen uptake in cm³ per hour?",
+   "options": [
+    "180 cm³ per hour",
+    "0.25 cm³ per hour",
+    "15 cm³ per hour",
+    "36 cm³ per hour"
+   ],
+   "answer": 2,
+   "explanation": "The uptake rate is 3.0 cm³ ÷ 12 min = 0.25 cm³ per minute. Multiplying by 60 minutes gives 0.25 × 60 = 15 cm³ per hour."
+  },
+  {
+   "n": 21,
+   "topic": "Support and movement",
+   "q": "Hard, thick-walled fibres in the leaf bases of a coconut palm in Kilifi are dead at maturity and have lignified walls. To which tissue do these fibres belong?",
+   "options": [
+    "Sclerenchyma",
+    "Parenchyma",
+    "Phloem",
+    "Collenchyma"
+   ],
+   "answer": 0,
+   "explanation": "Sclerenchyma cells are dead at maturity, have thick lignified walls and give mechanical strength and support. Collenchyma and parenchyma are living tissues, with collenchyma providing flexible support rather than the hard support described."
+  },
+  {
+   "n": 22,
+   "topic": "Support and movement",
+   "q": "An earthworm in a Nairobi garden moves by waves of contraction of circular and longitudinal muscles against fluid in its coelom. Which type of skeleton supports this movement?",
+   "options": [
+    "Cartilaginous skeleton",
+    "Exoskeleton",
+    "Endoskeleton",
+    "Hydrostatic skeleton"
+   ],
+   "answer": 3,
+   "explanation": "The coelomic fluid is under pressure and resists muscle contraction, so it acts as a hydrostatic skeleton. An earthworm has no hard exoskeleton or internal bony endoskeleton."
+  },
+  {
+   "n": 23,
+   "topic": "Growth and development",
+   "q": "When a maize root tip is examined in a school laboratory in Kakamega, it shows a root cap, a meristematic region, a region of elongation and a maturation region. Which region is mainly responsible for the increase in length of the root?",
+   "options": [
+    "Maturation region",
+    "Root cap",
+    "Meristematic region",
+    "Region of elongation"
+   ],
+   "answer": 3,
+   "explanation": "Cells in the region of elongation take in water and enlarge, pushing the root tip downwards and increasing root length. The meristematic region mainly increases cell number by mitosis, while the root cap protects the tip and the maturation region allows differentiation."
+  },
+  {
+   "n": 24,
+   "topic": "Growth and development",
+   "q": "A student in Bungoma measured the dry mass of germinating maize grains. It dropped from 2.8 g at planting to 2.4 g on day 3 before rising after leaves formed. Which explanation best accounts for the drop in dry mass?",
+   "options": [
+    "Stored food is respired to provide energy before the young plant can photosynthesise.",
+    "The embryo begins photosynthesis immediately after planting and uses up glucose.",
+    "Water absorbed by the grain increases the dry mass recorded.",
+    "Mineral ions absorbed from the soil add greatly to dry mass on day 3."
+   ],
+   "answer": 0,
+   "explanation": "During early germination the seed respires stored organic food to release energy for growth, so dry mass falls until the young leaves can photosynthesise. Water uptake increases fresh mass but not dry mass, and mineral ions contribute only very small amounts."
+  },
+  {
+   "n": 25,
+   "topic": "Transport in plants and animals",
+   "q": "In a young mango tree in Mombasa, sucrose made in a mature leaf is transported to a developing fruit. Which statement describes this transport correctly?",
+   "options": [
+    "It moves through phloem from a source to a sink.",
+    "It moves through xylem from a source to a sink.",
+    "It moves through xylem by transpiration pull from leaf to fruit.",
+    "It moves through phloem from the fruit to the leaf."
+   ],
+   "answer": 0,
+   "explanation": "Sucrose is translocated in phloem from a source, such as a mature leaf, to a sink, such as a developing fruit. Xylem mainly transports water and mineral ions, and transpiration pull moves water upwards rather than transporting sucrose to fruits."
+  },
+  {
+   "n": 26,
+   "topic": "Transport in plants and animals",
+   "q": "During a health check at a clinic in Nakuru, a student's heart rate is 75 beats per minute and stroke volume is 70 cm³. What is the cardiac output in litres per minute?",
+   "options": [
+    "1.05 litres per minute",
+    "5 250 litres per minute",
+    "5.25 litres per minute",
+    "0.525 litres per minute"
+   ],
+   "answer": 2,
+   "explanation": "Cardiac output is heart rate × stroke volume = 75 × 70 = 5 250 cm³ per minute. Since 1 000 cm³ = 1 litre, this is 5.25 litres per minute."
+  },
+  {
+   "n": 27,
+   "topic": "Transport in plants and animals",
+   "q": "Which statement best explains why the wall of the left ventricle is thicker than that of the right ventricle in a human heart?",
+   "options": [
+    "The left ventricle pumps blood to the lungs over a shorter distance.",
+    "The left ventricle holds more blood because it receives blood from the lungs.",
+    "The left ventricle contains oxygenated blood, which requires stronger contractions.",
+    "The left ventricle generates higher pressure to pump blood to the body."
+   ],
+   "answer": 3,
+   "explanation": "The left ventricle pumps blood into the systemic circulation, so its thick muscular wall generates the high pressure needed to send blood round the body. The right ventricle pumps blood to the lungs at a lower pressure, and the presence of oxygenated blood alone does not explain the thicker wall."
+  },
+  {
+   "n": 28,
+   "topic": "Cell physiology",
+   "q": "Four agar cubes containing a purple indicator are placed in dilute hydrochloric acid. The acid diffuses in and decolourises the indicator. The side lengths of the cubes are 1 mm, 2 mm, 3 mm and 4 mm. Which cube will be decolourised first?",
+   "options": [
+    "All cubes will decolourise at the same time because they are made of the same agar.",
+    "The 2 mm cube, because it has a moderate surface area and volume.",
+    "The 4 mm cube, because it has the largest volume.",
+    "The 1 mm cube, because it has the largest surface area to volume ratio."
+   ],
+   "answer": 3,
+   "explanation": "Diffusion depends on surface area to volume ratio, and the 1 mm cube has the largest ratio. Its surface area to volume ratio is 6 mm⁻¹, compared with 1.5 mm⁻¹ for the 4 mm cube, so acid reaches its centre fastest."
+  },
+  {
+   "n": 29,
+   "topic": "Cell physiology",
+   "q": "A patient in Thika takes an antacid that raises the pH of the stomach contents from about 1.5 to 4.5. Pepsin in the stomach has an optimum pH of about 2. What is the most likely effect on pepsin activity?",
+   "options": [
+    "It becomes trypsin and digests proteins in the stomach.",
+    "It decreases because the pH is now further from the optimum.",
+    "It stays unchanged because enzymes are not affected by pH.",
+    "It increases because there is less acid in the stomach."
+   ],
+   "answer": 1,
+   "explanation": "Enzyme activity is affected by pH, and pepsin works best at about pH 2. Raising the stomach pH to 4.5 moves it away from the optimum, reducing pepsin activity and slowing protein digestion. Pepsin does not change into trypsin when the pH rises."
+  },
+  {
+   "n": 30,
+   "topic": "Reproduction in plants and animals",
+   "q": "In a flowering plant whose root tip cells have 24 chromosomes, what is the chromosome number in the endosperm after double fertilisation?",
+   "options": [
+    "24",
+    "36",
+    "12",
+    "48"
+   ],
+   "answer": 1,
+   "explanation": "Root tip cells are diploid, so 2n = 24 and n = 12. The endosperm forms when two polar nuclei, each with 12 chromosomes, fuse with one male gamete with 12 chromosomes, giving 12 + 12 + 12 = 36 chromosomes, which is triploid."
+  }
+ ]
+}

@@ -20,6 +20,9 @@ const referrals: Translation<typeof en> = {
     exams: {
       label: 'التحضير للامتحانات',
       text: 'التحضير لـ WAEC/JAMB أسهل بكثير مع Knowzone AI: اختبارات تدريبية ومدرّس ذكي ودروس فيديو قصيرة. استخدم رمزي {{code}} لتحصل على {{credits}} من أرصدة الذكاء الاصطناعي الإضافية: {{link}}',
+      /** The same invite for other study regions: their exams, or none named. */
+      textFor: 'التحضير لـ {{exams}} أسهل بكثير مع Knowzone AI: اختبارات تدريبية ومدرّس ذكي ودروس فيديو قصيرة. استخدم رمزي {{code}} لتحصل على {{credits}} من أرصدة الذكاء الاصطناعي الإضافية: {{link}}',
+      textAny: 'التحضير للامتحانات أسهل بكثير مع Knowzone AI: اختبارات تدريبية ومدرّس ذكي ودروس فيديو قصيرة. استخدم رمزي {{code}} لتحصل على {{credits}} من أرصدة الذكاء الاصطناعي الإضافية: {{link}}',
     },
     game: {
       label: 'Knowzone World',

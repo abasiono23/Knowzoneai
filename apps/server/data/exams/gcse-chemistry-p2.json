@@ -1,0 +1,401 @@
+{
+ "id": "gcse-chemistry-p2",
+ "exam": "gcse",
+ "subject": "chemistry",
+ "year": null,
+ "number": 2,
+ "source": "ai",
+ "minutes": 35,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Chemical changes",
+   "q": "A student tests a colourless metal carbonate X by adding dilute nitric acid. The mixture effervesces, and the gas produced turns limewater cloudy. Which conclusion is correct?",
+   "options": [
+    "X is a metal carbonate and the gas produced is oxygen (O₂).",
+    "X is a metal carbonate and the gas produced is hydrogen (H₂).",
+    "X is a metal carbonate and the gas produced is carbon dioxide (CO₂).",
+    "X is a metal oxide and the gas produced is carbon dioxide (CO₂)."
+   ],
+   "answer": 2,
+   "explanation": "Effervescence with dilute acid and limewater turning cloudy identifies carbon dioxide, which is produced when a metal carbonate reacts with acid. Hydrogen would be produced by acid reacting with a metal, not a carbonate. Oxygen is not evolved in this reaction. A metal oxide would not give CO₂ on reaction with acid; it would form a salt and water."
+  },
+  {
+   "n": 2,
+   "topic": "Chemical changes",
+   "q": "During electrolysis of molten lead(II) bromide, which statement correctly describes what happens at the electrodes?",
+   "options": [
+    "At the cathode, Br⁻ ions gain electrons to form bromide atoms; at the anode, Pb²⁺ ions lose electrons to form lead ions.",
+    "At the cathode, Pb²⁺ ions gain electrons to form lead atoms; at the anode, Br⁻ ions lose electrons to form bromine molecules (Br₂).",
+    "At the cathode, Pb²⁺ ions gain electrons to form lead atoms; at the anode, Br⁻ ions gain electrons to form bromide ions.",
+    "At the cathode, Pb²⁺ ions lose electrons to form lead atoms; at the anode, Br⁻ ions gain electrons to form bromine atoms."
+   ],
+   "answer": 1,
+   "explanation": "Reduction occurs at the cathode so Pb²⁺ gains two electrons to become lead atoms. Oxidation occurs at the anode so bromide ions lose electrons; two Br⁻ form one Br₂ molecule. The wrong options confuse oxidation with reduction or show impossible single-atom bromine products."
+  },
+  {
+   "n": 3,
+   "topic": "Chemical changes",
+   "q": "A boat hull is made of iron and is coated with a more reactive metal to protect it from rusting. Which statement describes the protection mechanism?",
+   "options": [
+    "The coating metal acts as a sacrificial anode and corrodes preferentially, protecting the iron cathode.",
+    "The coating metal makes the iron become the anode so the iron corrodes instead of the coating.",
+    "The coating metal acts as an inert barrier that prevents oxygen and water reaching the iron, so neither metal corrodes.",
+    "The coating metal reacts with water to form a protective oxide layer that stops both metals from corroding."
+   ],
+   "answer": 0,
+   "explanation": "A more reactive metal on iron acts as a sacrificial anode: it oxidises (corrodes) in preference to the iron, leaving the iron as the cathode and protected. An inert barrier would only work if continuous; the sacrificial option is the intended protection. The coating does not make iron corrode preferentially, and forming an oxide layer on the coating is not the usual sacrificial mechanism."
+  },
+  {
+   "n": 4,
+   "topic": "Atomic structure and the periodic table",
+   "q": "Element Y has atomic number 17 and mass number 35. Which description is correct for an atom of Y?",
+   "options": [
+    "It contains 35 protons, 17 neutrons and 17 electrons.",
+    "It contains 17 protons, 18 neutrons and 17 electrons.",
+    "It contains 17 protons, 35 neutrons and 17 electrons.",
+    "It contains 17 protons, 18 neutrons and 18 electrons."
+   ],
+   "answer": 1,
+   "explanation": "Atomic number gives protons (17); mass number equals protons plus neutrons so neutrons = 35 − 17 = 18. A neutral atom has equal electrons and protons (17). The wrong options have incorrect counts of protons, neutrons or electrons."
+  },
+  {
+   "n": 5,
+   "topic": "Atomic structure and the periodic table",
+   "q": "Which of these trends is correct down Group 1 of the Periodic Table?",
+   "options": [
+    "Elements become less reactive and have lower first ionisation energies down the group.",
+    "Elements become more reactive and have higher first ionisation energies down the group.",
+    "Elements become less reactive and have higher first ionisation energies down the group.",
+    "Elements become more reactive and have lower first ionisation energies down the group."
+   ],
+   "answer": 3,
+   "explanation": "Down Group 1 outer electrons are further from the nucleus and more shielded, so they are lost more easily; reactivity increases and first ionisation energy decreases. The incorrect options reverse the trends or mix them incorrectly."
+  },
+  {
+   "n": 6,
+   "topic": "Atomic structure and the periodic table",
+   "q": "A sample of an element shows these properties: a shiny metal, conducts electricity, forms oxide with formula M₂O, and reacts with water to produce hydrogen gas and a solution with pH about 13. Which group in the Periodic Table is M most likely in?",
+   "options": [
+    "Group 1 (alkali metals).",
+    "Group 7 (halogens).",
+    "Group 0 (noble gases).",
+    "Group 2 (alkaline earth metals)."
+   ],
+   "answer": 0,
+   "explanation": "A metal forming M₂O, reacting vigorously with water to give a strongly alkaline solution and hydrogen gas matches an alkali metal (Group 1). Group 2 metals typically form MO oxides and produce less vigorous reactions. Halogens are non-metals and noble gases are unreactive."
+  },
+  {
+   "n": 7,
+   "topic": "Chemistry of the atmosphere",
+   "q": "Which change in the Earth's atmosphere during the first billion years led to a large increase in atmospheric oxygen?",
+   "options": [
+    "Photosynthetic organisms evolved and produced oxygen as a waste product.",
+    "Meteorite impacts delivered large amounts of free oxygen to the atmosphere.",
+    "Volcanic activity released oxygen directly from the mantle into the atmosphere.",
+    "Early bacteria consumed oxygen, causing oxygen levels to spike."
+   ],
+   "answer": 0,
+   "explanation": "The rise of photosynthetic organisms (cyanobacteria) produced oxygen by splitting water, causing atmospheric O₂ to increase. Volcanoes release gases like CO₂ and H₂O, not free O₂. Early bacteria consumed oxygen, so they would reduce O₂ rather than increase it, and meteorites did not supply free oxygen in large amounts."
+  },
+  {
+   "n": 8,
+   "topic": "Chemistry of the atmosphere",
+   "q": "Which human activity is the main cause of the recent increase in global atmospheric carbon dioxide concentration?",
+   "options": [
+    "Burning of fossil fuels such as coal, oil and natural gas.",
+    "Planting large areas of forest in temperate countries.",
+    "Increased volcanic eruptions worldwide.",
+    "Release of oxygen from industrial electrolysis plants."
+   ],
+   "answer": 0,
+   "explanation": "Combustion of fossil fuels releases CO₂ that was stored underground, raising atmospheric CO₂. Planting forests would remove CO₂, not increase it. Volcanic emissions are small compared with human fossil fuel emissions. Industrial electrolysis releases oxygen, not a major source of CO₂."
+  },
+  {
+   "n": 9,
+   "topic": "Chemical analysis",
+   "q": "A student tests a solution for chloride ions using silver nitrate solution. They add dilute nitric acid first, then silver nitrate and observe a white precipitate that dissolves on adding dilute ammonia solution. Which conclusion is correct?",
+   "options": [
+    "Chloride ions are present; the white precipitate is silver chloride (AgCl), which dissolves in dilute ammonia.",
+    "Chloride ions are absent; the white precipitate must be silver carbonate.",
+    "Chloride ions are present and the white precipitate is silver bromide which dissolves in dilute ammonia.",
+    "Chloride ions are present, but silver chloride does not dissolve in any ammonia concentration."
+   ],
+   "answer": 0,
+   "explanation": "Adding nitric acid removes carbonate/scenario interferences; a white precipitate with AgNO₃ that dissolves in dilute ammonia is characteristic of AgCl. Silver carbonate would not be formed under these conditions. Silver chloride does dissolve in dilute ammonia, unlike silver bromide which is less soluble and usually requires concentrated ammonia."
+  },
+  {
+   "n": 10,
+   "topic": "Quantitative chemistry",
+   "q": "A student reacts 2.00 g of magnesium with excess sulfuric acid to make magnesium sulfate solution and hydrogen gas. The relative formula mass (Mr) of magnesium sulfate, MgSO4, is 120. Using the molar mass of Mg = 24.0 g mol⁻¹, what mass of MgSO4 could form (assuming 100% yield)?",
+   "options": [
+    "20.00 g",
+    "2.40 g",
+    "10.00 g",
+    "5.00 g"
+   ],
+   "answer": 2,
+   "explanation": "2.00 g Mg ÷ 24.0 g mol⁻¹ = 0.08333 mol Mg. Reaction gives 1 mol Mg → 1 mol MgSO4, so moles MgSO4 = 0.08333 mol. Mass = 0.08333 mol × 120 g mol⁻¹ = 10.00 g. 2.40 g would be if Mr used incorrectly as 28.8, 5.00 g is half the correct mass, and 20.00 g would be if Mg moles were doubled."
+  },
+  {
+   "n": 11,
+   "topic": "Quantitative chemistry",
+   "q": "When 250 cm³ of 0.100 mol dm⁻³ sodium hydroxide solution reacts completely with hydrochloric acid, how many moles of HCl were neutralised?",
+   "options": [
+    "0.0250 mol",
+    "0.100 mol",
+    "0.00250 mol",
+    "0.250 mol"
+   ],
+   "answer": 0,
+   "explanation": "250 cm³ = 0.250 dm³. Moles NaOH = concentration × volume = 0.100 mol dm⁻³ × 0.250 dm³ = 0.0250 mol. Neutralisation between NaOH and HCl is 1:1, so 0.0250 mol HCl were neutralised. 0.250 mol would be if volume not converted to dm³, 0.00250 mol if a factor of 10 error, and 0.100 mol confuses concentration with moles."
+  },
+  {
+   "n": 12,
+   "topic": "The rate and extent of chemical change",
+   "q": "A student measures the rate of reaction by timing how long it takes for a cross under a glass beaker to become just invisible as a reaction mixture turns cloudy. Which change would increase the initial rate the most?",
+   "options": [
+    "Decrease the temperature of the reaction mixture by 10 °C.",
+    "Decrease the particle size of a solid reactant (make the solid powder instead of large lumps).",
+    "Use a thinner beaker with the same reaction mixture volume.",
+    "Add a small amount of a product of the reaction to the mixture."
+   ],
+   "answer": 1,
+   "explanation": "Decreasing particle size increases surface area and so increases the frequency of successful collisions, raising the initial rate. Decreasing temperature would slow the rate, adding product could reduce rate if equilibrium shifts but usually not increase it, and changing beaker thickness does not alter collision frequency in the mixture."
+  },
+  {
+   "n": 13,
+   "topic": "The rate and extent of chemical change",
+   "q": "A reversible reaction A + B ⇌ C + D is exothermic in the forward direction. According to Le Chatelier's principle, what will happen to the position of equilibrium if the temperature is increased?",
+   "options": [
+    "The equilibrium position shifts to the right, favouring products C and D; the equilibrium yield of C and D increases.",
+    "Temperature has no effect on this equilibrium because the reaction is reversible.",
+    "The equilibrium position shifts to the left, favouring reactants A and B; the equilibrium yield of C and D decreases.",
+    "The equilibrium position shifts to the left but the equilibrium yield of C and D increases."
+   ],
+   "answer": 2,
+   "explanation": "For an exothermic forward reaction, increasing temperature favours the endothermic reverse reaction, so equilibrium shifts left and product yield decreases. The claim that temperature has no effect is incorrect, and it cannot shift left while increasing product yield."
+  },
+  {
+   "n": 14,
+   "topic": "Using resources",
+   "q": "A water company treats hard water by adding sodium carbonate to precipitate calcium as calcium carbonate. Which statement correctly describes the chemical change and a practical advantage of this process?",
+   "options": [
+    "Adding sodium carbonate removes chloride ions by precipitation, reducing corrosion in pipes.",
+    "Adding sodium carbonate converts calcium ions into soluble calcium bicarbonate, increasing water hardness.",
+    "Adding sodium carbonate causes Ca²⁺(aq) + CO3²⁻(aq) → CaCO3(s), removing hardness ions so less scale forms in kettles and boilers.",
+    "Adding sodium carbonate produces Ca(OH)2(s) which dissolves scale, making kettles cleaner."
+   ],
+   "answer": 2,
+   "explanation": "Sodium carbonate supplies CO3²⁻ which reacts with Ca²⁺ to form insoluble CaCO3(s), removing hardness and reducing scale. It does not form Ca(OH)2 in this reaction, does not remove chloride ions, and does not make calcium more soluble as bicarbonate."
+  },
+  {
+   "n": 15,
+   "topic": "Using resources",
+   "q": "A householder chooses to install solar panels to reduce electricity bought from the grid. Which long-term environmental and economic effect is most likely?",
+   "options": [
+    "Immediate elimination of all electricity costs and no need for any backup electricity.",
+    "Higher carbon dioxide emissions because making solar panels always emits more CO2 than they save.",
+    "Lower carbon dioxide emissions from electricity use and, after the payback period, lower electricity bills.",
+    "No change in carbon dioxide emissions but increased reliance on fossil fuels."
+   ],
+   "answer": 2,
+   "explanation": "Solar panels reduce grid electricity demand and associated CO2 emissions; after initial cost, they typically lower bills once payback is reached. They do not immediately eliminate all electricity costs or always cause net higher CO2 over their lifetime; lifecycle emissions are usually lower than continued fossil-fuel electricity. They also reduce reliance on fossil fuels, not leave it unchanged."
+  },
+  {
+   "n": 16,
+   "topic": "Bonding, structure and the properties of matter",
+   "q": "Which statement explains why sodium chloride crystals conduct electricity only when molten or dissolved in water?",
+   "options": [
+    "In solid sodium chloride the ions are fixed in a lattice and cannot move, but molten or aqueous NaCl provides mobile ions that carry charge.",
+    "Solid sodium chloride contains only covalent bonds so has no charged particles to move.",
+    "Ions in solid sodium chloride move freely but cannot conduct until thermal agitation frees electrons.",
+    "Sodium chloride is metallic in the solid state and so conducts electricity only when heated."
+   ],
+   "answer": 0,
+   "explanation": "Solid NaCl has a fixed ionic lattice so ions cannot move and cannot conduct; melting or dissolving allows the ions to move and carry current. NaCl is ionic, not covalent or metallic, and conduction is by moving ions, not free electrons in this case."
+  },
+  {
+   "n": 17,
+   "topic": "Bonding, structure and the properties of matter",
+   "q": "A sample of silicon has a giant covalent structure. Which set of properties would you expect for silicon (compared with sodium chloride and diamond)?",
+   "options": [
+    "Gas at room temperature, low melting point, non-conductor, soluble in organic solvents.",
+    "Hard solid, high melting point, does not conduct electricity as a solid (but can conduct when doped), and poor solubility in water.",
+    "Soft solid, low melting point, conducts electricity as a solid, readily soluble in water.",
+    "Hard solid, low melting point, conducts electricity in pure form as a solid, dissolves in water to give ions."
+   ],
+   "answer": 1,
+   "explanation": "Silicon's giant covalent lattice gives hardness, high melting point and insolubility; pure silicon does not conduct well, but can conduct when doped (semiconductor behaviour). It is not soft or soluble, nor a gas at room temperature, and it does not conduct like a metal in pure form."
+  },
+  {
+   "n": 18,
+   "topic": "Atomic structure and the periodic table",
+   "q": "An element Z has atoms with 20 protons and 20 electrons. Which statement about element Z is correct?",
+   "options": [
+    "It is a singly charged positive ion of potassium (K⁺) because it has lost one electron.",
+    "It is a neutral atom of argon with atomic number 20 and it is a noble gas in Group 18.",
+    "It must be a metal that always forms covalent bonds because it has 20 electrons.",
+    "It is a neutral atom of calcium with atomic number 20 and it is in Group 2 of the Periodic Table."
+   ],
+   "answer": 3,
+   "explanation": "An atom with 20 protons is calcium (atomic number 20). If it has 20 electrons it is neutral. Calcium is an alkaline earth metal in Group 2, not a noble gas (argon has 18 protons). It is not a potassium ion (K⁺ has 19 protons) and metals like calcium typically form ionic, not always covalent, bonds."
+  },
+  {
+   "n": 19,
+   "topic": "Chemical changes",
+   "q": "A student adds excess dilute sulfuric acid to a sample of magnesium ribbon and collects the gas produced. Which test and observation confirm the gas is hydrogen?",
+   "options": [
+    "Bubble the gas through limewater and observe it turn milky, because hydrogen forms calcium carbonate.",
+    "Bring a lit splint near the gas and hear a 'pop' sound due to hydrogen burning with oxygen.",
+    "Smell the gas; it has a sharp, choking odour characteristic of hydrogen.",
+    "Test the gas with damp litmus paper and see it turn blue because hydrogen is alkaline."
+   ],
+   "answer": 1,
+   "explanation": "Hydrogen gives a characteristic 'pop' with a lit splint as it combusts in air. Hydrogen does not turn limewater milky (that indicates carbon dioxide), it is odourless (so no sharp smell), and it is not alkaline so litmus would not turn blue."
+  },
+  {
+   "n": 20,
+   "topic": "Chemical changes",
+   "q": "Which statement correctly explains why aqueous copper(II) sulfate turns from blue to colourless when zinc is added and the mixture is filtered?",
+   "options": [
+    "Zinc increases the temperature, causing the blue copper(II) complex to decompose into colourless gases that escape.",
+    "Zinc atoms reduce Cu²⁺ ions to copper metal, forming a brown solid deposit; Zn is oxidised to Zn²⁺ which stays in solution, so the blue Cu²⁺ colour disappears.",
+    "Zinc forms a soluble blue complex with sulfate, which replaces copper in solution and makes copper precipitate as colourless solid.",
+    "Zinc reacts with water to form colourless zinc metal, which dissolves and removes the blue colour."
+   ],
+   "answer": 1,
+   "explanation": "Zinc is more reactive than copper and reduces Cu²⁺ to copper metal, removing the blue aqueous Cu²⁺ and producing Zn²⁺ in solution (colourless). Zinc does not produce colourless zinc metal by reacting with water, the process is a redox reaction not thermal decomposition, and copper does not precipitate as a colourless solid due to zinc forming a soluble complex."
+  },
+  {
+   "n": 21,
+   "topic": "Energy changes",
+   "q": "A student measures temperature change when dissolving 2.00 g of a salt in 50.0 g of water. The temperature of the water falls by 3.00 °C. Using specific heat capacity of water 4.18 J g⁻¹ °C⁻¹, what is the heat change (q) for the solution (in J), and is the process exothermic or endothermic for the system?",
+   "options": [
+    "q = -627 J; the process is endothermic for the system (heat absorbed from water, so water temperature falls).",
+    "q = -1254 J; the process is endothermic because you must include the mass of the salt as well as water.",
+    "q = +1254 J; the process is exothermic and the sign is positive because energy is released into the surroundings.",
+    "q = +627 J; the process is exothermic for the system because a temperature change occurred."
+   ],
+   "answer": 0,
+   "explanation": "Heat change q = mass of water × c × ΔT = 50.0 g × 4.18 J g⁻¹ °C⁻¹ × (-3.00 °C) = -627 J (negative because water lost heat). The salt dissolving absorbed heat from the water, so the process is endothermic for the system. Including the salt mass would be wrong because specific heat capacity of the solution was not given; we use the water only as stated."
+  },
+  {
+   "n": 22,
+   "topic": "Energy changes",
+   "q": "Which enthalpy profile best describes an exothermic reaction?",
+   "options": [
+    "Reactants and products at the same energy, with no overall energy change and no activation energy peak.",
+    "Reactants at higher energy than products but without any activation energy peak (no energy barrier).",
+    "Reactants at higher energy than products, with a downward overall energy change and a peak (activation energy) between them.",
+    "Reactants at lower energy than products, with an upward overall energy change; this represents an exothermic reaction."
+   ],
+   "answer": 2,
+   "explanation": "Exothermic reactions release energy so reactants start at higher energy than products; there is still an activation energy peak. Saying reactants and products have same energy is incorrect (that would be zero enthalpy change), and reactants lower than products describes endothermic. All real reactions have an activation energy barrier."
+  },
+  {
+   "n": 23,
+   "topic": "Organic chemistry",
+   "q": "Which structural formula represents but-2-ene (the Z isomer) and why is it classified as an alkene?",
+   "options": [
+    "CH₃-CH=CH-CH₃ with the two larger groups on opposite sides of the C=C; it is an alkene because it contains a triple bond.",
+    "CH₂=CH-CH₂-CH₃ with the double bond between C1 and C2; it is an alkene because it contains an oxygen atom.",
+    "CH₃-CH₂-CH₂-CH₃ with no double bond; it is an alkene because it has four carbons.",
+    "CH₃-CH=CH-CH₃ with the two larger groups (CH₃ and CH₃) on the same side of the C=C; it is an alkene because it contains a carbon–carbon double bond."
+   ],
+   "answer": 3,
+   "explanation": "But-2-ene has the double bond between C2 and C3 (CH₃-CH=CH-CH₃) and the Z isomer has the larger groups on the same side; alkenes are hydrocarbons with a carbon–carbon double bond. The formula with no double bond is an alkane, the claim about oxygen is wrong, and a triple bond would make it an alkyne, not an alkene."
+  },
+  {
+   "n": 24,
+   "topic": "Organic chemistry",
+   "q": "Which reagent and condition convert an alkene into a saturated alkane in an industrial hydrogenation process?",
+   "options": [
+    "Potassium permanganate (acidic) at cold conditions, which oxidises the alkene to a diol.",
+    "Hydrogen gas with a nickel catalyst at raised temperature and pressure.",
+    "Sodium bromide in water, which substitutes hydrogen atoms for bromine to make a dibromoalkane.",
+    "Conc. sulfuric acid at room temperature, which adds OH to form an alcohol."
+   ],
+   "answer": 1,
+   "explanation": "Hydrogenation of alkenes uses H₂ with a metal catalyst (nickel, palladium) often at raised temperature/pressure to add hydrogen across the C=C. Concentrated sulfuric acid typically leads to addition leading to alkyl hydrogen sulfate then alcohol after hydrolysis, not hydrogenation. Potassium permanganate oxidises to diols or further, and sodium bromide alone does not brominate alkenes."
+  },
+  {
+   "n": 25,
+   "topic": "Chemistry of the atmosphere",
+   "q": "Which change in the early Earth's atmosphere most directly led to the formation of an ozone layer in the stratosphere?",
+   "options": [
+    "The concentration of oxygen (O₂) increased, allowing O₂ to be split by ultraviolet light to form ozone (O₃).",
+    "Water vapour condensed to form oceans and the reduced amount of gas allowed ozone to form.",
+    "Methane (CH₄) concentrations rose, and reactions between methane molecules produced ozone.",
+    "Carbon dioxide (CO₂) levels fell so nitrogen (N₂) could accumulate and form ozone."
+   ],
+   "answer": 0,
+   "explanation": "Ozone (O₃) forms when O₂ molecules are split by UV light and the resulting O atoms combine with O₂. The key change was the rise in atmospheric O₂ (from photosynthetic organisms). Falling CO₂, rising CH₄, or condensation of water vapour do not directly produce the molecular oxygen needed to make ozone."
+  },
+  {
+   "n": 26,
+   "topic": "Chemistry of the atmosphere",
+   "q": "Which human activity is the main cause of the recent increase in atmospheric carbon dioxide concentration?",
+   "options": [
+    "Natural volcanic eruptions emitting more CO₂ than human activities.",
+    "Burning fossil fuels for electricity generation, transport and industry (combustion of coal, oil and gas).",
+    "Increased nitrogen fertiliser use releasing CO₂ into the atmosphere.",
+    "Large-scale planting of trees (afforestation) increasing photosynthesis and releasing CO₂."
+   ],
+   "answer": 1,
+   "explanation": "The largest contribution to the recent rise in atmospheric CO₂ is combustion of fossil fuels for energy and transport. Afforestation removes CO₂ rather than adds it; volcanic emissions are much smaller than human emissions; nitrogen fertiliser use releases nitrous oxide (N₂O) rather than CO₂ as a major greenhouse gas."
+  },
+  {
+   "n": 27,
+   "topic": "Chemical analysis",
+   "q": "You have an unknown aqueous solution. After acidifying it with dilute nitric acid then adding barium chloride solution, a white precipitate forms that is insoluble in excess acid. Which ion is present in the original solution?",
+   "options": [
+    "Chloride ions (Cl⁻), because they give a white precipitate of barium chloride with nitric acid.",
+    "Nitrate ions (NO₃⁻), because they form a white precipitate with barium chloride after acidification.",
+    "Carbonate ions (CO₃²⁻), because they give a white precipitate of barium carbonate that is insoluble in acid.",
+    "Sulfate ions (SO₄²⁻), because barium sulfate is a white precipitate that remains when acidified with nitric acid."
+   ],
+   "answer": 3,
+   "explanation": "Barium chloride after acidification gives a white precipitate with sulfate ions (BaSO₄), and nitric acid is used to avoid carbonate giving false positives. Chloride gives a white precipitate with silver ions, not barium. Carbonate would produce CO₂ on acidification and barium carbonate would dissolve in excess acid, so it would not remain insoluble. Nitrate ions do not give a precipitate with barium chloride."
+  },
+  {
+   "n": 28,
+   "topic": "Quantitative chemistry",
+   "q": "2.50 g of magnesium ribbon (Mr = 24.3) reacts completely with excess dilute sulfuric acid to make magnesium sulfate (MgSO₄, Mr = 120.4) and hydrogen. What mass of magnesium sulfate is produced?",
+   "options": [
+    "7.47 g of magnesium sulfate.",
+    "0.102 g of magnesium sulfate.",
+    "12.4 g of magnesium sulfate.",
+    "61.6 g of magnesium sulfate."
+   ],
+   "answer": 2,
+   "explanation": "Moles of Mg = 2.50 ÷ 24.3 = 0.1029 mol. Reaction produces 1 mol Mg → 1 mol MgSO₄, so moles MgSO₄ = 0.1029. Mass = 0.1029 × 120.4 = 12.39 g ≈ 12.4 g. 7.47 g would come from using Mr ≈ 72.6, 0.102 g is a factor-of-100 error, and 61.6 g implies a tenfold arithmetic mistake."
+  },
+  {
+   "n": 29,
+   "topic": "The rate and extent of chemical change",
+   "q": "For the equilibrium N₂(g) + 3H₂(g) ⇌ 2NH₃(g), what is the effect on the equilibrium position when the total pressure is increased (by compressing the gases) at constant temperature?",
+   "options": [
+    "The equilibrium constant increases, so more ammonia is produced because higher pressure raises K.",
+    "The equilibrium shifts to the left, producing more reactants, because increasing pressure favours formation of more gas molecules.",
+    "The equilibrium shifts to the right (towards ammonia) because fewer moles of gas are on the product side (2 moles) than on the reactant side (4 moles).",
+    "There is no change to the equilibrium position because pressure does not affect equilibria."
+   ],
+   "answer": 2,
+   "explanation": "Le Chatelier's principle: increasing pressure favours the side with fewer gas moles, so the equilibrium shifts right to produce more ammonia (2 moles) from 4 moles of reactant gases. Pressure change does not change the equilibrium constant (K) at constant temperature, and it does affect equilibrium position, so 'no change' and 'K increases' are incorrect."
+  },
+  {
+   "n": 30,
+   "topic": "Atomic structure and the periodic table",
+   "q": "An element P has two naturally occurring isotopes: P‑35 with abundance 75% and P‑37 with abundance 25%. What is the relative atomic mass (Ar) of element P to two decimal places?",
+   "options": [
+    "35.25",
+    "36.00",
+    "35.50",
+    "36.50"
+   ],
+   "answer": 2,
+   "explanation": "Relative atomic mass = (35 × 75 + 37 × 25) ÷ 100 = (2625 + 925) ÷ 100 = 3550 ÷ 100 = 35.50. 36.00 is the simple average of 35 and 37 and ignores abundances; 35.25 would come from an incorrect division by 200; 36.50 comes from weighting the heavier isotope too much."
+  }
+ ]
+}

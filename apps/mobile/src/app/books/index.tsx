@@ -31,6 +31,8 @@ import {
   type SchoolLevel,
   type Stage,
 } from '@/lib/books';
+import { booksCountry, regionOf } from '@/lib/region';
+import { useSession } from '@/lib/session';
 
 type Step = 'country' | 'stage' | 'level' | 'stream' | 'course' | 'done';
 type Draft = { country?: Country; stage?: Stage; level?: string };
@@ -74,7 +76,9 @@ export default function Books() {
   const { profile, save } = useBooksProfile();
   const [chosen, setChosen] = useState<Step | null>(null);
   const [history, setHistory] = useState<Step[]>([]);
-  const [draft, setDraft] = useState<Draft>({});
+  // The first question starts on the country of the student's study region; they can pick another.
+  const { user } = useSession();
+  const [draft, setDraft] = useState<Draft>(() => ({ country: booksCountry(regionOf(user)) }));
   const [classes, setClasses] = useState<Classes | null>(null);
   const [classesError, setClassesError] = useState<string | null>(null);
 

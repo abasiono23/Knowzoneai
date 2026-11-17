@@ -2,7 +2,7 @@
  * The public study pages of app.knowzoneai.com: thousands of pages search engines can read, written
  * from Knowzone's data in apps/server/data.
  *
- *   /practice-questions   JAMB, WAEC and NECO practice questions by exam, subject, topic and paper
+ *   /practice-questions   JAMB, WAEC, NECO, SAT and GCSE-style practice questions by exam, subject, topic and paper
  *   /study-notes          summaries of school subjects and university courses, topic by topic
  *   /textbooks            books by university course, by country and subject, and one page per book
  *   /course-guides        what you study in each university course, and what to read
@@ -24,7 +24,7 @@ import { pathToFileURL } from 'node:url';
 import vm from 'node:vm';
 
 import { ANALYTICS } from '../analytics-loader.mjs';
-import { EXAMS, EXAM_SUBJECTS, loadBooks, loadCourses, loadLibraries, loadPapers } from './lib/data.mjs';
+import { loadBooks, loadCourses, loadLibraries, loadPapers, notesSubject, practiceLabel } from './lib/data.mjs';
 import { PATHS, setChrome } from './lib/html.mjs';
 import { notesFor } from './lib/match.mjs';
 import { bookIndex, bookPages } from './pages/books.mjs';
@@ -109,13 +109,13 @@ export function studyPages({ dist, analytics }) {
   // Exam topics and summaries, paired both ways.
   const practiceLinks = new Map();
   for (const g of groups) {
-    const library = libraries.find((l) => l.id === g.subject);
+    const library = libraries.find((l) => l.id === notesSubject(g));
     if (!library) continue;
     for (const t of g.topics)
       for (const note of notesFor(library, t.name)) {
         const key = `${library.id}/${note.id}`;
         if (!practiceLinks.has(key)) practiceLinks.set(key, []);
-        practiceLinks.get(key).push({ href: `${PATHS.practice}/${g.exam}/${g.subject}/${t.id}`, name: `${EXAMS[g.exam].name} ${EXAM_SUBJECTS[g.subject]}: ${t.name}` });
+        practiceLinks.get(key).push({ href: `${PATHS.practice}/${g.exam}/${g.subject}/${t.id}`, name: `${practiceLabel(g)}: ${t.name}` });
       }
   }
   const practiceFor = (library, topic) => (practiceLinks.get(`${library.id}/${topic}`) ?? []).slice(0, 9);

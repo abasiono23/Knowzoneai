@@ -1,0 +1,531 @@
+{
+ "id": "jamb-biology-p3",
+ "exam": "jamb",
+ "subject": "biology",
+ "year": null,
+ "number": 3,
+ "source": "ai",
+ "minutes": 27,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Genetics",
+   "q": "A cattle farmer in Maiduguri crosses a red Shorthorn bull with a white Shorthorn cow. Coat colour in this breed shows codominance. What coat colour will the offspring have?",
+   "options": [
+    "Pink, due to even blending of red and white",
+    "Uniform white",
+    "Uniform red",
+    "Roan, with both red and white hairs"
+   ],
+   "answer": 3,
+   "explanation": "In codominance both alleles are expressed in the heterozygote, so the offspring has both red and white hairs, seen as roan. Red and white are not blended into pink; each allele produces its own pigment."
+  },
+  {
+   "n": 2,
+   "topic": "Genetics",
+   "q": "Mrs Eze in Enugu is a carrier of the recessive allele for albinism (Aa), while her husband is homozygous normal (AA). What is the probability that their first child will be an albino?",
+   "options": [
+    "3/4",
+    "0",
+    "1/4",
+    "1/2"
+   ],
+   "answer": 1,
+   "explanation": "A cross of Aa × AA produces only AA and Aa offspring. Albinism is expressed only in aa, so none of the children can be albino."
+  },
+  {
+   "n": 3,
+   "topic": "Genetics",
+   "q": "A diploid organism has 12 chromosomes in each body cell. How many different chromosome combinations can its gametes have as a result of independent assortment alone?",
+   "options": [
+    "64",
+    "12",
+    "24",
+    "36"
+   ],
+   "answer": 0,
+   "explanation": "The organism has 6 homologous pairs because 12 chromosomes in a diploid cell means 2n = 12, so n = 6. Independent assortment gives 2⁶ = 64 possible chromosome combinations in gametes."
+  },
+  {
+   "n": 4,
+   "topic": "Cell structure and organisation",
+   "q": "In a pancreatic cell that secretes digestive enzymes, which organelle packages and modifies the enzymes before they are released from the cell?",
+   "options": [
+    "Golgi apparatus",
+    "Mitochondrion",
+    "Lysosome",
+    "Smooth endoplasmic reticulum"
+   ],
+   "answer": 0,
+   "explanation": "The Golgi apparatus receives proteins from the rough endoplasmic reticulum, modifies and packages them into vesicles for secretion. Mitochondria supply energy, lysosomes contain digestive enzymes, and smooth endoplasmic reticulum is mainly involved in lipid synthesis and detoxification."
+  },
+  {
+   "n": 5,
+   "topic": "Cell structure and organisation",
+   "q": "A student in Zaria compares a light microscope with an electron microscope. Which cell structure is too small to be clearly resolved with a light microscope?",
+   "options": [
+    "Starch grain",
+    "Chloroplast",
+    "Ribosome",
+    "Nucleus"
+   ],
+   "answer": 2,
+   "explanation": "The resolving power of a light microscope is about 0.2 µm, while a ribosome is only about 20 nm across. Nuclei, chloroplasts and starch grains are much larger and can be seen with a light microscope."
+  },
+  {
+   "n": 6,
+   "topic": "Cell structure and organisation",
+   "q": "A white blood cell in Lagos engulfs bacteria. Which organelle contains hydrolytic enzymes that digest the engulfed bacteria?",
+   "options": [
+    "Ribosome",
+    "Golgi apparatus",
+    "Lysosome",
+    "Rough endoplasmic reticulum"
+   ],
+   "answer": 2,
+   "explanation": "Lysosomes contain hydrolytic enzymes and fuse with food vacuoles to digest engulfed bacteria. Ribosomes make proteins, the Golgi apparatus modifies and packages materials, and rough endoplasmic reticulum is mainly involved in protein synthesis and transport."
+  },
+  {
+   "n": 7,
+   "topic": "Transport systems",
+   "q": "During the ejection phase of ventricular systole in a healthy human heart, which valves are closed?",
+   "options": [
+    "Valves in the lymphatic vessels",
+    "Atrioventricular valves",
+    "Semilunar valves",
+    "Valves in the large veins"
+   ],
+   "answer": 1,
+   "explanation": "During ejection, ventricular pressure exceeds atrial pressure, so the atrioventricular valves close to prevent backflow into the atria, while the semilunar valves open to allow blood into the aorta and pulmonary artery. Venous and lymphatic valves are not part of this immediate cardiac cycle event."
+  },
+  {
+   "n": 8,
+   "topic": "Transport systems",
+   "q": "A cassava farmer in Ogun removes a complete ring of bark from a stem. Sugar made in the leaves accumulates above the ring. Which transport tissue in the bark has been interrupted?",
+   "options": [
+    "Xylem",
+    "Cambium",
+    "Endodermis",
+    "Phloem"
+   ],
+   "answer": 3,
+   "explanation": "The bark contains phloem, which carries sucrose from source leaves to sink tissues by translocation. Removing it blocks sugar movement, causing accumulation above the ring; xylem lies mainly in the wood and transports water and mineral salts upward, while cambium and endodermis have other roles."
+  },
+  {
+   "n": 9,
+   "topic": "Ecology",
+   "q": "Untreated sewage from a settlement near Onitsha is discharged into a slow-flowing river. Which immediate change is most likely in the river?",
+   "options": [
+    "The number of aerobic fish increases rapidly near the discharge point.",
+    "Dissolved oxygen falls as aerobic bacteria decompose the organic waste.",
+    "Dissolved oxygen rises because the sewage supplies mineral nutrients.",
+    "Water temperature falls below freezing because of the sewage."
+   ],
+   "answer": 1,
+   "explanation": "Bacteria decompose the organic waste in the sewage and use dissolved oxygen, so the oxygen concentration falls. Mineral nutrients may later encourage algal growth, but the immediate oxygen demand from decomposition reduces oxygen availability."
+  },
+  {
+   "n": 10,
+   "topic": "Ecology",
+   "q": "In a field near Zaria, cowpea plants grow faster when their roots are infected by nitrogen-fixing Rhizobium bacteria. The bacteria obtain sugars from the plant. The relationship is best described as",
+   "options": [
+    "commensalism",
+    "parasitism",
+    "competition",
+    "mutualism"
+   ],
+   "answer": 3,
+   "explanation": "Both organisms benefit: the plant receives usable nitrogen compounds while the bacteria obtain organic nutrients from the plant. In commensalism only one partner benefits and the other is unaffected."
+  },
+  {
+   "n": 11,
+   "topic": "Respiration",
+   "q": "Which reaction takes place in the mitochondrial matrix of a eukaryotic cell?",
+   "options": [
+    "Glucose is split into two molecules of pyruvate.",
+    "Electrons are passed along the electron transport chain to oxygen.",
+    "The Krebs cycle oxidises acetyl CoA, releasing carbon dioxide and reducing NAD and FAD.",
+    "ATP synthase uses a proton gradient to form ATP."
+   ],
+   "answer": 2,
+   "explanation": "The Krebs cycle occurs in the mitochondrial matrix, where acetyl CoA is oxidised and carbon dioxide is released. The electron transport chain and ATP synthase are located on the inner mitochondrial membrane, while glycolysis occurs in the cytoplasm."
+  },
+  {
+   "n": 12,
+   "topic": "Respiration",
+   "q": "A student in Benin City adds cyanide to a suspension of actively respiring mitochondria. Cyanide binds to cytochrome oxidase in the electron transport chain. Which immediate change is expected?",
+   "options": [
+    "Electron flow to oxygen stops and ATP production by oxidative phosphorylation falls.",
+    "ATP production by substrate-level phosphorylation in the cytoplasm stops at once.",
+    "Glycolysis stops immediately because glucose cannot enter the mitochondrion.",
+    "The Krebs cycle releases more carbon dioxide because oxygen is used directly in the matrix."
+   ],
+   "answer": 0,
+   "explanation": "Cyanide prevents cytochrome oxidase from passing electrons to oxygen, so the electron transport chain and oxidative phosphorylation stop. Glycolysis and cytoplasmic substrate-level ATP production can continue for a short time without oxygen."
+  },
+  {
+   "n": 13,
+   "topic": "Respiration",
+   "q": "In a sealed flask containing yeast and glucose solution, which products accumulate when oxygen is excluded?",
+   "options": [
+    "Acetyl CoA and oxygen",
+    "Ethanol and carbon dioxide",
+    "Pyruvate and water",
+    "Lactic acid and carbon dioxide"
+   ],
+   "answer": 1,
+   "explanation": "In the absence of oxygen, yeast carries out alcoholic fermentation, converting pyruvate to ethanol and carbon dioxide while regenerating NAD. Lactic acid formation occurs in human muscle and some bacteria, not in yeast."
+  },
+  {
+   "n": 14,
+   "topic": "Diffusion, osmosis and active transport",
+   "q": "Which statement correctly describes facilitated diffusion across a cell membrane?",
+   "options": [
+    "It uses ATP to move substances against their concentration gradient.",
+    "It moves water from a region of lower water potential to a region of higher water potential.",
+    "It requires no membrane proteins and occurs only for lipid-soluble substances.",
+    "It uses membrane carrier proteins and does not require ATP."
+   ],
+   "answer": 3,
+   "explanation": "Facilitated diffusion is passive movement down a concentration gradient through specific membrane proteins, so it does not use ATP. Active transport uses ATP to move substances against a gradient, while simple diffusion of lipid-soluble substances does not need proteins."
+  },
+  {
+   "n": 15,
+   "topic": "Diffusion, osmosis and active transport",
+   "q": "A wilted lettuce leaf left in clean water becomes firm again. Which explanation is correct?",
+   "options": [
+    "Water is actively transported into the cells using ATP.",
+    "Salts move out of the leaf cells by diffusion, causing water to enter.",
+    "Water moves out of the cells by osmosis, increasing the turgor pressure.",
+    "Water enters the leaf cells by osmosis because the surrounding water has a higher water potential than the cell sap."
+   ],
+   "answer": 3,
+   "explanation": "The cell sap contains solutes, so it has a lower water potential than the clean water outside. Water enters by osmosis, increases turgor pressure and makes the leaf firm."
+  },
+  {
+   "n": 16,
+   "topic": "Diffusion, osmosis and active transport",
+   "q": "Onion epidermal cells are treated with a chemical that prevents ATP formation. Uptake of potassium ions from the surrounding solution into the cell vacuole, where the ion concentration is already higher, is likely to be reduced because",
+   "options": [
+    "water potential is the only force that moves potassium ions into the vacuole.",
+    "osmosis carries the potassium ions along with water into the vacuole.",
+    "the ions must be moved against their concentration gradient by active transport, which requires energy.",
+    "potassium ions can enter only by simple diffusion through the phospholipid bilayer."
+   ],
+   "answer": 2,
+   "explanation": "Potassium ions are being taken up against a concentration gradient, which requires carrier proteins and ATP. Preventing ATP formation therefore reduces active transport, while simple diffusion and osmosis would only move substances down their gradients or move water."
+  },
+  {
+   "n": 17,
+   "topic": "Excretion",
+   "q": "The conversion of excess amino acids into urea in the human liver is known as",
+   "options": [
+    "egestion",
+    "deamination",
+    "assimilation",
+    "digestion"
+   ],
+   "answer": 1,
+   "explanation": "Deamination removes the amino group from excess amino acids, and the ammonia formed is converted to urea in the liver. Egestion is the removal of undigested food, not the chemical breakdown of amino acids."
+  },
+  {
+   "n": 18,
+   "topic": "Excretion",
+   "q": "A man in Maiduguri sweats heavily and drinks very little water on a hot afternoon. Which change is most likely compared with a well-hydrated person?",
+   "options": [
+    "Decreased ADH secretion causes more water reabsorption, giving more concentrated urine.",
+    "Increased ADH secretion causes more water reabsorption from the collecting ducts, giving more concentrated urine.",
+    "Increased ADH secretion reduces water reabsorption from the collecting ducts, giving dilute urine.",
+    "The kidneys stop filtering blood completely so that no water is lost in urine."
+   ],
+   "answer": 1,
+   "explanation": "Sweating and low water intake raise blood osmotic pressure, stimulating ADH release. ADH makes the collecting ducts more permeable to water, so more water is reabsorbed and a smaller volume of concentrated urine is produced."
+  },
+  {
+   "n": 19,
+   "topic": "Classification of living things",
+   "q": "A student in Abeokuta collects a small animal with three pairs of jointed legs, one pair of antennae and a body divided into head, thorax and abdomen. The animal should be classified as",
+   "options": [
+    "a crustacean",
+    "an arachnid",
+    "an insect",
+    "a myriapod"
+   ],
+   "answer": 2,
+   "explanation": "Three pairs of legs, one pair of antennae and a body in head, thorax and abdomen are characteristic of insects. Arachnids have four pairs of legs, crustaceans usually have more than three pairs and two pairs of antennae, while myriapods have many leg-bearing segments."
+  },
+  {
+   "n": 20,
+   "topic": "Variation and evolution",
+   "q": "In a population of fruit flies in a genetics laboratory in Ile-Ife, the frequency of a recessive allele is 0.2. Assuming the population is in Hardy–Weinberg equilibrium, what percentage of the flies is heterozygous?",
+   "options": [
+    "64%",
+    "32%",
+    "4%",
+    "16%"
+   ],
+   "answer": 1,
+   "explanation": "Let q = 0.2; then p = 1 − 0.2 = 0.8. The heterozygous frequency is 2pq = 2 × 0.8 × 0.2 = 0.32, which is 32%. The value 4% is q² and represents recessive homozygotes, not heterozygotes."
+  },
+  {
+   "n": 21,
+   "topic": "Nutrition in plants and animals",
+   "q": "A student in Ibadan de-starches a potted plant, covers one leaf with black paper and exposes the plant to sunlight for six hours. After decolourising the leaves in alcohol and adding iodine solution, the covered leaf remains brown while the exposed leaf turns blue-black. The result shows that",
+   "options": [
+    "oxygen is released during photosynthesis",
+    "light is necessary for starch formation in the leaf",
+    "respiration produces carbon dioxide in the leaf",
+    "chlorophyll is present only in the covered leaf"
+   ],
+   "answer": 1,
+   "explanation": "The exposed part turns blue-black with iodine because starch is formed in the presence of light. The covered leaf cannot photosynthesise and so does not form starch. The experiment does not test oxygen release, respiration, or chlorophyll distribution."
+  },
+  {
+   "n": 22,
+   "topic": "Diseases and their control",
+   "q": "A crowded students' hostel in Abuja has several cases of tuberculosis. Which measure is most appropriate for reducing the spread of the disease in the hostel?",
+   "options": [
+    "covering the mouth and nose when coughing and keeping the rooms well ventilated",
+    "avoiding the sharing of eating utensils with patients",
+    "sleeping under insecticide-treated mosquito nets",
+    "boiling all drinking water before use"
+   ],
+   "answer": 0,
+   "explanation": "Tuberculosis spreads mainly through droplets in the air when an infected person coughs or sneezes, so covering coughs and ensuring good ventilation reduce airborne transmission. Boiling water, mosquito nets and avoiding shared utensils do not directly control airborne droplets."
+  },
+  {
+   "n": 23,
+   "topic": "Classification of living things",
+   "q": "A biology club in Ogbomoso examines a mould growing on bread. Its cells are eukaryotic, it has thread-like hyphae and it absorbs nutrients from the bread. It should be placed in the kingdom",
+   "options": [
+    "Monera",
+    "Fungi",
+    "Protista",
+    "Plantae"
+   ],
+   "answer": 1,
+   "explanation": "Eukaryotic cells, hyphae and absorption of nutrients are features of fungi. The mould is not in Monera because it has a true nucleus, and it is not a plant because it lacks chlorophyll and does not photosynthesise."
+  },
+  {
+   "n": 24,
+   "topic": "Variation and evolution",
+   "q": "In a population of snails in Calabar, birds eat most snails whose shells are either very light or very dark, while snails with intermediate shell colour survive better. Over many generations, this is most likely to result in",
+   "options": [
+    "artificial selection producing a new shell colour",
+    "disruptive selection producing only the two extreme shell colours",
+    "directional selection towards very dark shells",
+    "stabilising selection, keeping the intermediate shell colour common"
+   ],
+   "answer": 3,
+   "explanation": "When both extremes are selected against and the intermediate phenotype has the highest fitness, stabilising selection maintains the intermediate form. Directional selection would favour one extreme, while disruptive selection would favour both extremes."
+  },
+  {
+   "n": 25,
+   "topic": "Diseases and their control",
+   "q": "A person in Lagos is bitten by an infected female Anopheles mosquito. Which stage of Plasmodium is injected into the person's blood during the bite?",
+   "options": [
+    "sporozoites",
+    "merozoites",
+    "gametocytes",
+    "trophozoites"
+   ],
+   "answer": 0,
+   "explanation": "An infected female Anopheles mosquito injects sporozoites from its salivary glands when it bites. Gametocytes are taken up by the mosquito from human blood, while merozoites and trophozoites occur in human blood after infection and are not the stage injected by the mosquito."
+  },
+  {
+   "n": 26,
+   "topic": "Nutrition in plants and animals",
+   "q": "A three-year-old child in Kano is fed mainly on cassava and has a swollen abdomen, swollen feet, thin hair and low blood protein. The condition is most likely",
+   "options": [
+    "kwashiorkor",
+    "scurvy",
+    "marasmus",
+    "rickets"
+   ],
+   "answer": 0,
+   "explanation": "Kwashiorkor results from a diet deficient in protein, causing low blood protein, oedema and a swollen abdomen even though energy intake may be adequate. Marasmus involves severe deficiency of both energy and protein with marked wasting, while rickets and scurvy are caused by deficiencies of vitamin D and vitamin C respectively."
+  },
+  {
+   "n": 27,
+   "topic": "Diseases and their control",
+   "q": "A community in Kaduna records many cases of typhoid fever. Which practice most directly reduces the spread of the disease?",
+   "options": [
+    "wearing shoes when walking outdoors",
+    "sleeping under insecticide-treated nets",
+    "covering the mouth when coughing",
+    "drinking boiled or chlorinated water and disposing of sewage safely"
+   ],
+   "answer": 3,
+   "explanation": "Typhoid fever is spread mainly through food and water contaminated with faeces containing Salmonella typhi. Safe water and proper sewage disposal interrupt this faecal–oral route. Mosquito nets, cough hygiene and wearing shoes are controls for other diseases."
+  },
+  {
+   "n": 28,
+   "topic": "Variation and evolution",
+   "q": "A small group of lizards is carried by a flood from a large mainland population to an island near Lagos. Many generations later, the island population has allele frequencies very different from the mainland population mainly because",
+   "options": [
+    "natural selection always produces the same allele frequencies as the mainland",
+    "the island lizards interbred freely with the mainland population throughout",
+    "every lizard in the founding group mutated at the same time",
+    "the small founding group contained only a sample of the mainland alleles, so genetic drift had a strong effect"
+   ],
+   "answer": 3,
+   "explanation": "A new population founded by a few individuals may have allele frequencies that differ by chance from the source population; this founder effect, followed by genetic drift in a small population, changes allele frequencies. Continued free interbreeding with the mainland would tend to prevent large divergence, and mutation alone is unlikely to change frequencies so greatly in a short time."
+  },
+  {
+   "n": 29,
+   "topic": "Support and movement",
+   "q": "The atlas vertebra in a human skeleton is adapted for supporting the skull mainly because it",
+   "options": [
+    "has a long neural spine that provides a broad surface for muscle attachment",
+    "bears costal facets for articulation with the ribs",
+    "has a ring-like shape with facets that articulate with the occipital condyles",
+    "has a large centrum that fuses with the sacrum in adults"
+   ],
+   "answer": 2,
+   "explanation": "The atlas is the first cervical vertebra. It is ring-shaped, lacks a centrum, and has articular facets that receive the occipital condyles, allowing the skull to rest on and nod against the vertebral column. A long neural spine or costal facets are features of thoracic vertebrae, not the atlas."
+  },
+  {
+   "n": 30,
+   "topic": "Nervous and hormonal coordination",
+   "q": "In a myelinated nerve fibre from a student in Enugu, an impulse travels faster than in an unmyelinated fibre mainly because",
+   "options": [
+    "the impulse jumps from one node of Ranvier to the next",
+    "myelin conducts the impulse as an electric current back to the cell body",
+    "the axon diameter becomes smaller, increasing resistance",
+    "neurotransmitters are released along the whole length of the axon"
+   ],
+   "answer": 0,
+   "explanation": "In a myelinated axon, the myelin sheath insulates the internodes, so ion exchange occurs mainly at the nodes of Ranvier. The action potential therefore appears to jump from node to node in saltatory conduction, making conduction faster than in an unmyelinated axon of similar diameter."
+  },
+  {
+   "n": 31,
+   "topic": "Nervous and hormonal coordination",
+   "q": "Maize seedlings growing near a window in a Jos classroom bend towards the light because",
+   "options": [
+    "auxin accumulates on the shaded side and causes greater cell elongation there",
+    "cytokinin causes rapid cell division on the shaded side",
+    "gibberellin collects on the lit side and makes cells shorten",
+    "abscisic acid moves to the shaded side and stimulates elongation"
+   ],
+   "answer": 0,
+   "explanation": "In a shoot, auxin moves away from the side receiving light and accumulates on the shaded side. The higher auxin concentration there stimulates greater cell elongation, so the shoot bends towards the light. This response is phototropism, not shortening caused by gibberellin or cell division caused by cytokinin."
+  },
+  {
+   "n": 32,
+   "topic": "Nervous and hormonal coordination",
+   "q": "After a person in Kaduna has not eaten for several hours, blood glucose is kept from falling too low mainly by",
+   "options": [
+    "thyroxine from the thyroid gland increasing glucose uptake by muscles",
+    "antidiuretic hormone from the pituitary gland converting fat to glucose",
+    "glucagon from the pancreas stimulating the breakdown of glycogen in the liver",
+    "insulin from the pancreas stimulating glycogen formation"
+   ],
+   "answer": 2,
+   "explanation": "During fasting, blood glucose tends to fall. The pancreas releases glucagon, which stimulates the liver to break down glycogen and release glucose into the blood. Insulin does the opposite, while thyroxine and antidiuretic hormone do not directly raise blood glucose by this mechanism."
+  },
+  {
+   "n": 33,
+   "topic": "Reproduction",
+   "q": "In a flowering plant, after fertilisation has occurred, the ovule develops into the",
+   "options": [
+    "embryo sac",
+    "fruit",
+    "seed coat",
+    "seed"
+   ],
+   "answer": 3,
+   "explanation": "After double fertilisation in a flowering plant, the ovule develops into the seed, containing the embryo and food reserve. The ovary normally develops into the fruit, the integuments become the seed coat, and the embryo sac does not become the seed."
+  },
+  {
+   "n": 34,
+   "topic": "Reproduction",
+   "q": "A mother in Abuja exclusively breastfeeds her baby and her menstrual periods are temporarily absent. This is mainly because breastfeeding raises prolactin level, which",
+   "options": [
+    "reduces the release of gonadotrophins needed for ovarian follicle development",
+    "causes the endometrium to break down continuously",
+    "increases progesterone secretion by the corpus luteum to maintain pregnancy",
+    "directly prevents the ovum from passing through the Fallopian tube"
+   ],
+   "answer": 0,
+   "explanation": "Suckling stimulates prolactin secretion. High prolactin suppresses the hypothalamic signal that normally leads to release of gonadotrophins, so ovarian follicles do not develop and ovulation is usually delayed; this is lactational amenorrhoea. Prolactin does not act by maintaining the corpus luteum or by physically blocking the ovum in the Fallopian tube."
+  },
+  {
+   "n": 35,
+   "topic": "Genetics",
+   "q": "In a cross between a fruit fly of genotype GgNn and one of genotype ggnn, the genes are on different chromosomes. If G is grey and g black, N normal and n vestigial, what fraction of the offspring is expected to be black with vestigial wings?",
+   "options": [
+    "1/4",
+    "1/16",
+    "3/4",
+    "1/2"
+   ],
+   "answer": 0,
+   "explanation": "The cross is a testcross for each gene because the other parent is ggnn. For body colour, Gg × gg gives a 1/2 chance of gg (black), and for wing type, Nn × nn gives a 1/2 chance of nn (vestigial). The combined probability is 1/2 × 1/2 = 1/4."
+  },
+  {
+   "n": 36,
+   "topic": "Genetics",
+   "q": "A mutation caused by the insertion of one extra nucleotide into the coding region of a gene is most likely to",
+   "options": [
+    "have no effect on the protein because DNA repair always removes it",
+    "change the reading frame so that many amino acids after the insertion are altered",
+    "change only one amino acid because the genetic code is degenerate",
+    "change the chromosome number without affecting the gene sequence"
+   ],
+   "answer": 1,
+   "explanation": "An insertion of one nucleotide shifts the reading frame of all codons after the insertion point. This usually changes many amino acids in the resulting protein and often produces a non-functional protein. A single amino acid change is more typical of a base substitution, not a one-base insertion."
+  },
+  {
+   "n": 37,
+   "topic": "Cell structure and organisation",
+   "q": "A mucus-secreting cell in the lining of a Nigerian child's trachea contains many Golgi apparatuses. Which process is most directly carried out by these organelles in such a cell?",
+   "options": [
+    "Formation of spindle fibres during mitosis",
+    "Digestion of worn-out organelles by hydrolytic enzymes",
+    "Modification and packaging of proteins for secretion",
+    "Synthesis of ATP by oxidative phosphorylation"
+   ],
+   "answer": 2,
+   "explanation": "The Golgi apparatus modifies, sorts and packages proteins and glycoproteins into vesicles for secretion. Mucus contains glycoproteins, so a mucus-secreting cell needs many Golgi bodies; ATP synthesis occurs mainly in mitochondria, while hydrolytic digestion occurs in lysosomes."
+  },
+  {
+   "n": 38,
+   "topic": "Cell structure and organisation",
+   "q": "Onion epidermal cells placed in distilled water become turgid without bursting. Which structure prevents their rupture?",
+   "options": [
+    "Plasma membrane",
+    "Large central vacuole",
+    "Nuclear envelope",
+    "Cellulose cell wall"
+   ],
+   "answer": 3,
+   "explanation": "The cellulose cell wall is strong and resists stretching, so it prevents the turgid cell from bursting. The vacuole takes in water and creates turgor pressure, but it is the wall that provides the mechanical limit."
+  },
+  {
+   "n": 39,
+   "topic": "Transport systems",
+   "q": "A healthy adult in Abuja moves from a hot room into a cold air-conditioned room. Which response helps reduce heat loss from the skin?",
+   "options": [
+    "Dilation of arterioles supplying skin capillaries",
+    "Increased depth of breathing",
+    "Increased sweating by sweat glands",
+    "Constriction of arterioles supplying skin capillaries"
+   ],
+   "answer": 3,
+   "explanation": "In a cold environment, constriction of skin arterioles reduces blood flow through skin capillaries and so reduces heat loss from the body surface. Dilation and increased sweating would increase heat loss instead."
+  },
+  {
+   "n": 40,
+   "topic": "Transport systems",
+   "q": "A cocoa plant in Ondo transports sucrose from leaves to developing pods. Which feature of phloem sieve tubes most directly allows this transport?",
+   "options": [
+    "Perforated sieve plates at their end walls",
+    "Absence of companion cells",
+    "Thick lignified walls with an empty lumen",
+    "Root hairs with a large surface area"
+   ],
+   "answer": 0,
+   "explanation": "Sieve plates are perforated end walls between sieve tube elements, allowing continuous flow of sucrose solution through the phloem. Lignified empty vessels belong to xylem, not phloem."
+  }
+ ]
+}

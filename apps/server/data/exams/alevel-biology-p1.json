@@ -1,0 +1,401 @@
+{
+ "id": "alevel-biology-p1",
+ "exam": "alevel",
+ "subject": "biology",
+ "year": null,
+ "number": 1,
+ "source": "ai",
+ "minutes": 40,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Gene expression and gene technology",
+   "q": "A mature mRNA molecule has a coding region of 720 nucleotides, not including the stop codon. Assuming no post-translational removal of amino acids, how many amino acids are in the completed polypeptide chain?",
+   "options": [
+    "720 amino acids",
+    "240 amino acids",
+    "239 amino acids",
+    "241 amino acids"
+   ],
+   "answer": 1,
+   "explanation": "A triplet codon specifies one amino acid, so 720 ÷ 3 = 240 amino acids. The stop codon is not included in the stated 720 nucleotides, so it would not add an amino acid. Choosing 241 would incorrectly count an extra codon."
+  },
+  {
+   "n": 2,
+   "topic": "Gene expression and gene technology",
+   "q": "A DNA sample containing 10 double-stranded molecules is amplified by PCR for 6 complete cycles. Assuming 100% efficiency and no side products, how many double-stranded DNA molecules are present at the end?",
+   "options": [
+    "60 DNA molecules",
+    "64 DNA molecules",
+    "640 DNA molecules",
+    "320 DNA molecules"
+   ],
+   "answer": 2,
+   "explanation": "Each PCR cycle doubles the number of double-stranded DNA molecules, so after 6 cycles the multiplication factor is 2⁶ = 64. Starting with 10 molecules gives 10 × 64 = 640 molecules. Adding 10 × 6 = 60 would wrongly treat the increase as linear."
+  },
+  {
+   "n": 3,
+   "topic": "Gene expression and gene technology",
+   "q": "Priya cuts a human gene and a plasmid with the same restriction enzyme, which leaves single-stranded sticky ends. Which result is essential for forming a stable recombinant plasmid?",
+   "options": [
+    "Any two blunt-ended DNA fragments are joined only when reverse transcriptase is present.",
+    "The same restriction enzyme permanently joins the gene to the plasmid by forming hydrogen bonds.",
+    "Complementary sticky ends are held only by hydrogen bonds, so no covalent bonds are needed.",
+    "The gene and plasmid have complementary sticky ends, and DNA ligase forms phosphodiester bonds between them."
+   ],
+   "answer": 3,
+   "explanation": "Cutting both DNA molecules with the same restriction enzyme produces complementary sticky ends that base-pair. DNA ligase then seals the joins by forming phosphodiester bonds, making a stable recombinant plasmid. Hydrogen bonding between sticky ends is not sufficient for a stable join, and restriction enzymes cut DNA rather than ligate it."
+  },
+  {
+   "n": 4,
+   "topic": "Cells and microscopy",
+   "q": "A micrograph produced by Imran in Leicester shows a cell with a width of 40 mm. The actual width of the cell is 50 µm. What is the magnification of the micrograph? (1 mm = 1000 µm)",
+   "options": [
+    "800×",
+    "0.00125×",
+    "80×",
+    "8000×"
+   ],
+   "answer": 0,
+   "explanation": "Convert the image width to micrometres: 40 mm × 1000 = 40,000 µm. Magnification = image size ÷ actual size = 40,000 ÷ 50 = 800, so the micrograph is 800× magnified. Using 40 ÷ 50 without converting units gives an incorrect value."
+  },
+  {
+   "n": 5,
+   "topic": "Cells and microscopy",
+   "q": "A transmission electron microscope can resolve two ribosomes 0.025 µm apart, while a light microscope with high magnification cannot. Which statement explains this?",
+   "options": [
+    "A light microscope cannot resolve the ribosomes because its magnification is always lower than that of any electron microscope.",
+    "Electron microscopes use a longer wavelength, which reduces diffraction and allows smaller structures to be seen.",
+    "The electron microscope has a greater resolving power because the electron beam has a shorter wavelength than visible light.",
+    "Ribosomes are living structures that can be seen only with the electron microscope's ultraviolet light."
+   ],
+   "answer": 2,
+   "explanation": "Resolution depends on the wavelength of the radiation used; shorter wavelengths allow smaller distances to be distinguished. A light microscope may magnify enough but cannot resolve objects below about 0.2 µm because of the longer wavelength of visible light. Greater magnification alone does not improve resolution."
+  },
+  {
+   "n": 6,
+   "topic": "Exchange and transport in organisms",
+   "q": "Roshni in Cardiff is comparing oxygen uptake in fish gills. Why does countercurrent flow of water and blood increase oxygen uptake compared with parallel flow?",
+   "options": [
+    "The blood flows faster than the water, so oxygen is forced into the blood by pressure.",
+    "A concentration gradient for oxygen is maintained along the whole length of the gill lamella.",
+    "Oxygen is actively pumped from water into blood by carrier proteins along the gill lamella.",
+    "Water and blood reach the same oxygen concentration at the start of the gill lamella, increasing diffusion."
+   ],
+   "answer": 1,
+   "explanation": "In countercurrent flow, water and blood flow in opposite directions, so water always has a higher oxygen concentration than the adjacent blood along most of the gill. This maintains a diffusion gradient for oxygen and allows more oxygen to be absorbed. Parallel flow quickly equalises concentrations, reducing diffusion along much of the gill."
+  },
+  {
+   "n": 7,
+   "topic": "Exchange and transport in organisms",
+   "q": "During a PE lesson in Swansea, Nia has a heart rate of 150 beats min⁻¹ and a stroke volume of 100 cm³. What is her cardiac output in dm³ min⁻¹?",
+   "options": [
+    "1500 dm³ min⁻¹",
+    "150 dm³ min⁻¹",
+    "15 dm³ min⁻¹",
+    "1.5 dm³ min⁻¹"
+   ],
+   "answer": 2,
+   "explanation": "Cardiac output = heart rate × stroke volume = 150 × 100 = 15,000 cm³ min⁻¹. Since 1 dm³ = 1000 cm³, this is 15,000 ÷ 1000 = 15 dm³ min⁻¹. Multiplying or dividing by the wrong power of ten gives the other values."
+  },
+  {
+   "n": 8,
+   "topic": "Exchange and transport in organisms",
+   "q": "Which statement best explains how water is transported up the xylem of a tall tree according to the cohesion–tension theory?",
+   "options": [
+    "Water moves down the xylem by osmosis from the leaves, creating a push from above.",
+    "Water is actively pumped up xylem vessels by ATP-driven carrier proteins in the vessel walls.",
+    "Evaporation from leaf surfaces creates tension, and cohesive water molecules form a continuous column pulled upwards.",
+    "Root pressure alone pushes water to the top of tall trees, regardless of transpiration."
+   ],
+   "answer": 2,
+   "explanation": "Transpiration from leaves lowers pressure in the xylem, creating tension that pulls the continuous water column upwards. Hydrogen bonding makes water molecules cohesive, so the column can withstand tension, and adhesion to xylem walls helps prevent it breaking. Active pumping by xylem carrier proteins and root pressure alone cannot explain water movement in tall trees."
+  },
+  {
+   "n": 9,
+   "topic": "Immunity and disease",
+   "q": "After Aaminah in Bradford receives a vaccination, a second dose is given several weeks later. Why does antibody concentration rise faster and higher after the second dose?",
+   "options": [
+    "Memory cells phagocytose the antigen and then convert it into antibodies.",
+    "Memory B cells from the first exposure rapidly divide and differentiate into plasma cells secreting specific antibodies.",
+    "Antibodies from the first dose remain in the blood and are copied directly by memory T cells.",
+    "The second dose contains antibiotics that stimulate plasma cells to release antibodies more quickly."
+   ],
+   "answer": 1,
+   "explanation": "The first exposure produces memory B cells specific to the antigen. On a second exposure, these memory cells divide and differentiate more rapidly into plasma cells, which secrete a larger amount of antibody. Antibodies are not copied from the first dose, and memory cells do not convert antigen into antibody."
+  },
+  {
+   "n": 10,
+   "topic": "Immunity and disease",
+   "q": "A doctor in Manchester, Dr Aisha Khan, explains why antibiotic-resistant bacteria can increase in a patient during a course of antibiotics. Which statement describes the process correctly?",
+   "options": [
+    "Bacteria with a mutation giving resistance survive and reproduce, passing the resistance allele to offspring; resistance genes can also be transferred on plasmids.",
+    "All bacteria become resistant because the antibiotic kills weaker bacteria and this directly strengthens the survivors' DNA.",
+    "Antibiotic resistance develops because the patient's immune system produces antibodies that alter bacterial cell walls.",
+    "The antibiotic causes bacteria to mutate so that every surviving bacterium becomes resistant during treatment."
+   ],
+   "answer": 0,
+   "explanation": "Antibiotic resistance is selected for when genetic variation already exists: resistant bacteria survive treatment and reproduce, increasing the frequency of resistance alleles. Resistance genes may also spread between bacteria via plasmids. The antibiotic does not cause the resistance mutation, and antibodies do not alter bacterial DNA."
+  },
+  {
+   "n": 11,
+   "topic": "Homeostasis",
+   "q": "Blood glucose concentration falls below the normal set point. Which response would help restore it towards the set point?",
+   "options": [
+    "Increased insulin secretion increases glucose uptake by muscle and liver cells.",
+    "Increased ADH secretion increases glucose reabsorption from kidney tubules.",
+    "Decreased glucagon secretion promotes conversion of glucose to glycogen in liver cells.",
+    "Increased glucagon secretion promotes glycogenolysis and gluconeogenesis in liver cells."
+   ],
+   "answer": 3,
+   "explanation": "A fall in blood glucose stimulates glucagon release, which acts on liver cells to break down glycogen and make glucose from non-carbohydrate sources. Insulin has the opposite effect and would lower blood glucose further. ADH mainly controls water reabsorption and does not increase glucose reabsorption."
+  },
+  {
+   "n": 12,
+   "topic": "Homeostasis",
+   "q": "As ADH concentration in the blood increases, which change occurs in the cells of the collecting duct?",
+   "options": [
+    "The collecting duct becomes less permeable to urea, so less water is reabsorbed.",
+    "More aquaporins are inserted into the apical membrane, increasing water reabsorption.",
+    "Fewer aquaporins are inserted into the membrane, so less water is reabsorbed.",
+    "More sodium ions are actively removed from the filtrate by the loop of Henle, increasing urine volume."
+   ],
+   "answer": 1,
+   "explanation": "ADH binds to receptors on collecting duct cells and causes vesicles carrying aquaporins to fuse with the apical membrane. This makes the duct more permeable to water, so more water is reabsorbed by osmosis and a smaller volume of more concentrated urine is produced. Reducing aquaporin insertion has the opposite effect."
+  },
+  {
+   "n": 13,
+   "topic": "Homeostasis",
+   "q": "During exercise, homeostatic control increases a student's heart rate from 60 to 150 beats per minute and stroke volume from 70 cm³ to 100 cm³. What is the increase in cardiac output in dm³ min⁻¹? (Cardiac output = heart rate × stroke volume; 1 dm³ = 1000 cm³.)",
+   "options": [
+    "2.7 dm³ min⁻¹",
+    "4.2 dm³ min⁻¹",
+    "15.0 dm³ min⁻¹",
+    "10.8 dm³ min⁻¹"
+   ],
+   "answer": 3,
+   "explanation": "Resting cardiac output is 60 × 70 = 4200 cm³ min⁻¹, which is 4.2 dm³ min⁻¹. During exercise it is 150 × 100 = 15 000 cm³ min⁻¹, or 15.0 dm³ min⁻¹. The increase is 15.0 − 4.2 = 10.8 dm³ min⁻¹, not the exercise value alone."
+  },
+  {
+   "n": 14,
+   "topic": "DNA, genes and protein synthesis",
+   "q": "A protein has 180 amino acids. The mature mRNA contains a stop codon immediately after the codon for the final amino acid, and the coding region contains no introns. What is the minimum number of DNA base pairs in the transcribed region that encodes this protein?",
+   "options": [
+    "1080 base pairs",
+    "543 base pairs",
+    "1086 base pairs",
+    "540 base pairs"
+   ],
+   "answer": 1,
+   "explanation": "The 180 amino acids require 180 codons, and the stop codon adds one more codon. Each codon is three mRNA bases, so 181 × 3 = 543 mRNA bases; the corresponding double-stranded DNA region has 543 base pairs. Counting both DNA strands as separate nucleotides would give 1086 nucleotides, not base pairs."
+  },
+  {
+   "n": 15,
+   "topic": "DNA, genes and protein synthesis",
+   "q": "A substitution mutation changes a codon in mRNA from 5′-UAC-3′ to 5′-UAA-3′. UAA is a stop codon. What is the most likely effect on the protein produced?",
+   "options": [
+    "Translation terminates early, producing a shorter polypeptide.",
+    "A different amino acid is inserted because the genetic code is degenerate.",
+    "The mRNA cannot be translated because the start codon is destroyed.",
+    "The reading frame is shifted from that point onwards."
+   ],
+   "answer": 0,
+   "explanation": "UAA signals the release of the polypeptide chain, so translation stops at the mutated codon and the protein is shortened. Degeneracy means several codons can code for the same amino acid, but UAA is a stop signal rather than an amino-acid codon. A substitution does not shift the reading frame or necessarily destroy the start codon."
+  },
+  {
+   "n": 16,
+   "topic": "DNA, genes and protein synthesis",
+   "q": "Which statement correctly describes a feature of gene expression in eukaryotic cells?",
+   "options": [
+    "Introns are removed from pre-mRNA by splicing before the mRNA leaves the nucleus.",
+    "RNA polymerase binds directly to the start codon on mRNA.",
+    "RNA polymerase moves along the template strand in the 5′ to 3′ direction.",
+    "Translation of mRNA begins at the promoter region."
+   ],
+   "answer": 0,
+   "explanation": "Eukaryotic genes are transcribed as pre-mRNA, and splicing removes introns while joining exons to form mature mRNA. RNA polymerase binds to a promoter on DNA, not to the start codon on mRNA, and ribosomes begin translation at the start codon. RNA polymerase reads the template strand in the 3′ to 5′ direction and synthesises RNA in the 5′ to 3′ direction."
+  },
+  {
+   "n": 17,
+   "topic": "Genetic diversity, classification and evolution",
+   "q": "Which event during meiosis generates new combinations of alleles on a single chromosome?",
+   "options": [
+    "Crossing over between non-sister chromatids of homologous chromosomes.",
+    "Random fusion of gametes at fertilisation.",
+    "Independent assortment of homologous chromosomes at metaphase I.",
+    "Separation of sister chromatids during anaphase II."
+   ],
+   "answer": 0,
+   "explanation": "Crossing over exchanges corresponding sections between non-sister chromatids, so alleles from one homologue can become linked with alleles from the other on the same chromatid. Independent assortment produces new combinations of whole chromosomes in gametes, not new combinations of alleles on one chromosome. Random fusion of gametes occurs after meiosis, not during it."
+  },
+  {
+   "n": 18,
+   "topic": "Genetic diversity, classification and evolution",
+   "q": "Which sequence best describes allopatric speciation?",
+   "options": [
+    "Geographical isolation reduces gene flow; different selection pressures change allele frequencies in each population; reproductive isolation eventually separates the populations into different species.",
+    "Two populations live in the same area but interbreed less often because of different courtship songs.",
+    "A chromosome duplication occurs in one individual, instantly forming a new species unable to breed with its parent species.",
+    "Gene flow between two populations increases until their allele frequencies become identical and a single species is formed."
+   ],
+   "answer": 0,
+   "explanation": "Allopatric speciation requires a geographical barrier that separates populations and limits gene flow. Natural selection, genetic drift and mutation can then make their allele frequencies diverge until reproductive isolation evolves. The same-area courtship example describes sympatric divergence rather than allopatric speciation."
+  },
+  {
+   "n": 19,
+   "topic": "Cell membranes and transport",
+   "q": "A plant cell has a water potential of −350 kPa. It is placed in a solution with a water potential of −250 kPa. Assuming the cell membrane is partially permeable, what is the initial net movement of water and why?",
+   "options": [
+    "Water enters the cell, because −250 kPa is a higher water potential than −350 kPa.",
+    "Water leaves the cell, because water moves from a more negative water potential to a less negative water potential.",
+    "Water leaves the cell, because −250 kPa is a lower water potential than −350 kPa.",
+    "There is no net movement, because both water potentials are negative."
+   ],
+   "answer": 0,
+   "explanation": "Water moves by osmosis from a higher water potential to a lower water potential. −250 kPa is less negative, so it is higher than −350 kPa, and water therefore enters the cell. The more negative value, −350 kPa, is the lower water potential."
+  },
+  {
+   "n": 20,
+   "topic": "Cell membranes and transport",
+   "q": "If a cell's ATP supply is inhibited, which transport process would be most directly reduced?",
+   "options": [
+    "Facilitated diffusion of glucose down its concentration gradient through a carrier protein.",
+    "Active transport of K⁺ into the cell by the sodium–potassium pump.",
+    "Simple diffusion of O₂ across the phospholipid bilayer.",
+    "Osmosis of water through aquaporins."
+   ],
+   "answer": 1,
+   "explanation": "The sodium–potassium pump uses ATP hydrolysis to move ions against their concentration gradients, so inhibiting ATP production directly reduces this active transport. Simple diffusion, osmosis and facilitated diffusion down a concentration gradient are passive processes that do not directly require ATP. Facilitated diffusion uses proteins but not metabolic energy."
+  },
+  {
+   "n": 21,
+   "topic": "Inheritance and populations",
+   "q": "A recessive condition caused by genotype aa occurs in 1 in 2,500 live births in a large population. Assuming the population is in Hardy–Weinberg equilibrium, what is the expected frequency of heterozygous carriers (Aa) in the population?",
+   "options": [
+    "0.0200",
+    "0.9604",
+    "0.0392",
+    "0.0004"
+   ],
+   "answer": 2,
+   "explanation": "q² = 1 ÷ 2,500 = 0.0004, so q = √0.0004 = 0.02 and p = 0.98. The carrier frequency is 2pq = 2 × 0.98 × 0.02 = 0.0392. The value 0.0200 is the allele frequency q, not the carrier frequency."
+  },
+  {
+   "n": 22,
+   "topic": "Inheritance and populations",
+   "q": "In a small, isolated population on a remote island, a neutral allele increases in frequency over several generations even though it gives no selective advantage. Which mechanism most directly explains this change?",
+   "options": [
+    "Natural selection",
+    "Gene flow",
+    "Genetic drift",
+    "Mutation"
+   ],
+   "answer": 2,
+   "explanation": "In a small population, allele frequencies can change by chance from one generation to the next; this is genetic drift. Natural selection needs a fitness difference, gene flow needs migration between populations, and mutation creates new alleles rather than directly causing this frequency change."
+  },
+  {
+   "n": 23,
+   "topic": "Biological molecules",
+   "q": "Which statement correctly compares α-glucose and β-glucose?",
+   "options": [
+    "They have different molecular formulae: α-glucose contains one fewer carbon atom than β-glucose.",
+    "They have the same molecular formula but a different arrangement around carbon 1, causing them to form different polysaccharides.",
+    "α-glucose has the hydroxyl group on carbon 1 below the ring and forms cellulose by β-1,4-glycosidic bonds.",
+    "β-glucose cannot be respired because its shape prevents it from entering glycolysis."
+   ],
+   "answer": 1,
+   "explanation": "Both molecules have the formula C₆H₁₂O₆ but differ in the arrangement around carbon 1. α-glucose forms α-1,4-glycosidic bonds in starch and glycogen, whereas β-glucose forms β-1,4 bonds in cellulose."
+  },
+  {
+   "n": 24,
+   "topic": "Biological molecules",
+   "q": "An enzyme-catalysed reaction is measured at increasing substrate concentrations. A competitive inhibitor is present. Which observation is expected as substrate concentration is raised very high?",
+   "options": [
+    "The inhibitor becomes more effective because it binds irreversibly to the active site.",
+    "The inhibitor's effect decreases, and the reaction can reach the same maximum rate as without the inhibitor.",
+    "The maximum rate decreases because the inhibitor changes the enzyme's active site shape permanently.",
+    "The substrate concentration has no effect because competitive inhibitors always reduce the rate by the same proportion."
+   ],
+   "answer": 1,
+   "explanation": "A competitive inhibitor binds reversibly to the active site, so its effect is reduced when substrate molecules outcompete it. The enzyme can still reach the same maximum rate, although a higher substrate concentration is needed; irreversible or allosteric effects would alter this."
+  },
+  {
+   "n": 25,
+   "topic": "Biological molecules",
+   "q": "A sample of double-stranded DNA contains 22% adenine. Assuming the DNA contains only adenine, thymine, cytosine and guanine, what percentage of its bases is guanine?",
+   "options": [
+    "56%",
+    "22%",
+    "44%",
+    "28%"
+   ],
+   "answer": 3,
+   "explanation": "Adenine pairs with thymine, so thymine is also 22%. This leaves 100% − 44% = 56% for cytosine plus guanine, and because they pair in equal amounts, guanine is 28%."
+  },
+  {
+   "n": 26,
+   "topic": "Photosynthesis and respiration",
+   "q": "A leaf-disc preparation in bright light releases 240 mm³ of oxygen in 10 minutes. In darkness, the same preparation takes up 60 mm³ of oxygen in 10 minutes. What is the mean gross oxygen production per minute in the light?",
+   "options": [
+    "6 mm³ min⁻¹",
+    "30 mm³ min⁻¹",
+    "18 mm³ min⁻¹",
+    "24 mm³ min⁻¹"
+   ],
+   "answer": 1,
+   "explanation": "Net oxygen release in the light is 240 ÷ 10 = 24 mm³ min⁻¹. The dark uptake shows respiration uses 60 ÷ 10 = 6 mm³ min⁻¹, so gross production = net release + respiration = 24 + 6 = 30 mm³ min⁻¹."
+  },
+  {
+   "n": 27,
+   "topic": "Photosynthesis and respiration",
+   "q": "Which statement best describes the role of NAD in respiration?",
+   "options": [
+    "It accepts oxygen at the end of the electron transport chain to form water.",
+    "It is reduced during glycolysis and the Krebs cycle and then supplies electrons to the electron transport chain.",
+    "It is hydrolysed to ADP and phosphate to provide energy for ATP synthesis.",
+    "It transfers acetyl groups from the link reaction directly to the electron transport chain."
+   ],
+   "answer": 1,
+   "explanation": "In glycolysis and the Krebs cycle, NAD accepts hydrogen/electrons and becomes reduced NAD. Reduced NAD then supplies electrons to the electron transport chain, where oxygen is the final electron acceptor."
+  },
+  {
+   "n": 28,
+   "topic": "Photosynthesis and respiration",
+   "q": "During the Calvin cycle, six molecules of carbon dioxide are fixed to allow the net synthesis of one molecule of glucose. How many molecules of triose phosphate are removed to synthesise glucose, and how many are recycled to regenerate RuBP?",
+   "options": [
+    "1 removed and 11 recycled",
+    "6 removed and 6 recycled",
+    "2 removed and 12 recycled",
+    "2 removed and 10 recycled"
+   ],
+   "answer": 3,
+   "explanation": "Fixing six carbon dioxide molecules produces 12 triose phosphate molecules. Two are removed to make one glucose, and the remaining 10 are used to regenerate six RuBP molecules."
+  },
+  {
+   "n": 29,
+   "topic": "Nervous and hormonal coordination",
+   "q": "What is the main significance of the refractory period in a neurone?",
+   "options": [
+    "It causes neurotransmitter to be released continuously from the presynaptic membrane.",
+    "It increases the amplitude of the next action potential so that impulses can travel faster.",
+    "It prevents a second action potential from being generated immediately in the same region, helping to ensure one-way transmission along the axon.",
+    "It allows sodium ions to diffuse out of the axon, which speeds up saltatory conduction."
+   ],
+   "answer": 2,
+   "explanation": "During the refractory period, sodium ion channels are inactivated and a new action potential cannot be generated immediately. This ensures impulses are discrete and prevents them travelling backwards, limiting impulse frequency in the same region."
+  },
+  {
+   "n": 30,
+   "topic": "Nervous and hormonal coordination",
+   "q": "A person drinks a large volume of water. Which sequence of changes is expected?",
+   "options": [
+    "Osmoreceptors in the hypothalamus are more stimulated, ADH secretion increases, and the collecting ducts become more permeable to water.",
+    "Osmoreceptors in the hypothalamus are less stimulated, ADH secretion decreases, and the collecting ducts become less permeable to water.",
+    "Osmoreceptors in the pituitary gland detect dilute blood, ADH secretion increases, and urine becomes more concentrated.",
+    "Osmoreceptors in the medulla oblongata are less stimulated, aldosterone secretion increases, and more sodium is reabsorbed from the collecting ducts."
+   ],
+   "answer": 1,
+   "explanation": "A large water intake dilutes the blood, so hypothalamic osmoreceptors are less stimulated and secrete less ADH from the posterior pituitary. Less ADH makes the collecting ducts less permeable to water, so more dilute urine is produced."
+  }
+ ]
+}

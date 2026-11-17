@@ -763,7 +763,7 @@ const help = {
             body: ['AI output may:'],
             bullets: [
               'Contain factual errors, especially in calculations, dates and figures',
-              'Miss details from your specific syllabus or exam board (WAEC, NECO, JAMB)',
+              'Miss details from your specific syllabus or exam board (WAEC, SAT, GCSE…)',
               'Misread handwriting, blurry photos or complex diagrams',
               'Not know about very recent events or syllabus changes',
               'Sound confident even when it’s wrong',

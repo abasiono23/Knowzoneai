@@ -65,6 +65,10 @@ const personalize: Translation<typeof en> = {
     title: 'Báwo lo ṣe fẹ́ràn láti kẹ́kọ̀ọ́?',
     subtitle: 'Yan àwọn tí o fẹ́ràn jù. A ó fi wọ́n ṣáájú, a ó sì da àwọn yòókù pọ̀ mọ́ ọn.',
   },
+  region: {
+    title: 'Níbo ni o ti ń kẹ́kọ̀ọ́?',
+    subtitle: 'A ó fi àwọn ìdánwò àti ìdánrawò ìdánwò orílẹ̀-èdè rẹ hàn ọ́. O lè yí i padà nígbàkúgbà nínú Ètò.',
+  },
   language: {
     title: 'Yan èdè rẹ',
     subtitle: 'Gbogbo áàpù náà, àwọn ẹ̀kọ́ rẹ àti olùkọ́ AI rẹ yóò lo èdè yìí lẹ́sẹ̀kẹsẹ̀.',
@@ -113,6 +117,7 @@ const personalize: Translation<typeof en> = {
       teachLevels: 'Akẹ́kọ̀ọ́',
       age: 'Ẹgbẹ́ ọjọ́ orí',
       education: 'Ìpele',
+      region: 'Orílẹ̀-èdè ẹ̀kọ́',
       pathway: 'Ọ̀nà',
       exams: 'Ìdánwò',
       subjects: 'Ẹ̀kọ́',
@@ -256,7 +261,7 @@ const personalize: Translation<typeof en> = {
   learnerTypes: {
     school: { label: 'Akẹ́kọ̀ọ́ ilé-ìwé', description: 'Ilé-ìwé alákọ̀ọ́bẹ̀rẹ̀ tàbí girama' },
     university: { label: 'Yunifásítì tàbí kọ́lẹ́ẹ̀jì', description: 'Dìgírí, díplómà tàbí ND/HND' },
-    exam: { label: 'Olùdíje ìdánwò', description: 'Ìmúrasílẹ̀ fún JAMB, WAEC, IELTS àti àwọn mìíràn' },
+    exam: { label: 'Olùdíje ìdánwò', description: 'Ìmúrasílẹ̀ fún JAMB, WAEC, IELTS àti àwọn mìíràn', descriptionFor: 'Ìmúrasílẹ̀ fún {{exams}} àti àwọn mìíràn' },
     professional: { label: 'Òṣìṣẹ́ alámọ̀dájú', description: 'Mímú ìmọ̀ pọ̀ sí i tàbí gbígba ìwé-ẹ̀rí' },
     lifelong: { label: 'Olùfẹ́-ìmọ̀', description: 'Kíkọ́ nǹkan tuntun fún ìgbádùn' },
     teacher: { label: 'Olùkọ́ tàbí olùkọ́ àdáni', description: 'Ṣẹ̀dá kíláàsì, fúnni ní ìdánrawò, tọpinpin ìlọsíwájú' },
@@ -265,7 +270,7 @@ const personalize: Translation<typeof en> = {
     'school-teacher': { label: 'Olùkọ́ ilé-ìwé', description: 'Ilé-ìwé alákọ̀ọ́bẹ̀rẹ̀ tàbí girama' },
     lecturer: { label: 'Olùkọ́ni ní ilé-ẹ̀kọ́ gíga', description: 'Yunifásítì, pólì tàbí kọ́lẹ́ẹ̀jì' },
     'private-tutor': { label: 'Olùkọ́ àdáni', description: 'Ẹnìkan-sí-ẹnìkan tàbí ẹgbẹ́ kékeré' },
-    'exam-coach': { label: 'Akọ́nimọ̀ ìmúrasílẹ̀ ìdánwò', description: 'JAMB, WAEC, IELTS àti àwọn mìíràn' },
+    'exam-coach': { label: 'Akọ́nimọ̀ ìmúrasílẹ̀ ìdánwò', description: 'JAMB, WAEC, IELTS àti àwọn mìíràn', descriptionFor: '{{exams}} àti àwọn mìíràn' },
     parent: { label: 'Òbí tàbí olùkọ́ ilé', description: 'Mo ń tọ́ àwọn ọmọ mi fúnra mi' },
   },
   teachLevelOptions: {

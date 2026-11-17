@@ -479,6 +479,33 @@ const videos: Translation<typeof en> = {
     sceneHeading: 'Titre de la scène {{number}}',
     sceneNarration: 'Narration de la scène {{number}}',
   },
+  kora: {
+    title: 'Leçons avec Kora',
+    subtitle: 'Des leçons de trois minutes données par Kora, chacune avec une question rapide.',
+    name: 'Kora',
+    role: 'ta tutrice IA',
+    english: 'Anglais',
+    minutes: '{{n}} min',
+    watched: 'Vue',
+    open: 'Ouvrir la leçon : {{title}}',
+    groups: {
+      exam: 'Pour {{exams}}',
+      cyber: 'Cybersécurité',
+      skills: 'Méthodes de travail',
+    },
+    start: 'Commencer la leçon',
+    loading: 'Chargement de la leçon…',
+    loadFailed: 'Cette leçon ne s’est pas chargée. Vérifie ta connexion et réessaie.',
+    listFailed: 'Impossible de charger les leçons. Vérifie ta connexion et réessaie.',
+    part: 'Partie {{n}} sur {{total}} : {{title}}',
+    pauseAndTry: 'Mets en pause et essaie',
+    continuesIn: 'Kora reprend dans {{n}} s',
+    continue: 'Continuer',
+    back10: 'Reculer de 10 secondes',
+    finishedTitle: 'Leçon terminée',
+    finishedBody: 'Bravo. Essaie une autre leçon, ou pose à Kora toutes tes questions.',
+    moreLessons: 'Autres leçons',
+  },
 };
 
 export default videos;

@@ -203,7 +203,7 @@ const study: Translation<typeof en> = {
     topicLabel: 'Tema',
     topicPlaceholder: 'p. ej., Cómo funcionan las vacunas',
     focusLabel: '¿Algo en concreto? (opcional)',
-    focusPlaceholder: 'p. ej., para WAEC, céntrate en los cálculos',
+    focusPlaceholder: 'p. ej., para {{exam}}, céntrate en los cálculos',
     popular: 'POPULAR AHORA',
     ideas: {
       photosynthesis: 'La fotosíntesis',
@@ -354,7 +354,7 @@ const study: Translation<typeof en> = {
     subject: 'Asignatura',
     folderName: 'Nombre de la carpeta',
     tags: 'Etiquetas',
-    tagsPlaceholder: 'p. ej., WAEC, 2.º trimestre, repasar',
+    tagsPlaceholder: 'p. ej., {{exam}}, 2.º trimestre, repasar',
     tagsHint: 'Separa las etiquetas con comas',
     created: 'Creado el {{date}} desde {{source}}',
   },

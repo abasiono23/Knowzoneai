@@ -1,0 +1,661 @@
+{
+ "id": "waec-chemistry-p5",
+ "exam": "waec",
+ "subject": "chemistry",
+ "year": null,
+ "number": 5,
+ "source": "ai",
+ "minutes": 60,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Rates of reaction and equilibrium",
+   "q": "In a laboratory in Onitsha, Chika follows the catalytic decomposition of hydrogen peroxide: 2H₂O₂(aq) → 2H₂O(l) + O₂(g). If the concentration of H₂O₂ decreases at 0.048 mol dm⁻³ s⁻¹, at what rate is oxygen formed?",
+   "options": [
+    "0.096 mol dm⁻³ s⁻¹",
+    "0.024 mol dm⁻³ s⁻¹",
+    "0.012 mol dm⁻³ s⁻¹",
+    "0.048 mol dm⁻³ s⁻¹"
+   ],
+   "answer": 1,
+   "explanation": "For every 2 mol of H₂O₂ consumed, 1 mol of O₂ is formed. The rate of formation of oxygen is therefore 0.048 ÷ 2 = 0.024 mol dm⁻³ s⁻¹; 0.096 would come from multiplying instead of using the 2:1 mole ratio."
+  },
+  {
+   "n": 2,
+   "topic": "Rates of reaction and equilibrium",
+   "q": "In an industrial plant at Port Harcourt, methane reacts with steam: CH₄(g) + H₂O(g) ⇌ CO(g) + 3H₂(g), ΔH = +206 kJ mol⁻¹. Which change will increase the equilibrium yield of hydrogen?",
+   "options": [
+    "Adding a catalyst",
+    "Decreasing the temperature",
+    "Increasing the pressure",
+    "Increasing the temperature"
+   ],
+   "answer": 3,
+   "explanation": "The forward reaction is endothermic, so raising the temperature shifts the equilibrium to the right and increases the hydrogen yield. Increasing pressure shifts it toward the side with fewer gas molecules, while a catalyst changes only the rate and not the equilibrium yield."
+  },
+  {
+   "n": 3,
+   "topic": "Metals and their compounds",
+   "q": "A student in Ijebu-Ode adds equal portions of an oxide to separate samples of dilute hydrochloric acid and sodium hydroxide solution. The oxide dissolves in both liquids. Which oxide behaves in this way?",
+   "options": [
+    "Al₂O₃",
+    "MgO",
+    "Fe₂O₃",
+    "CuO"
+   ],
+   "answer": 0,
+   "explanation": "Aluminium oxide is amphoteric, so it reacts with both acids and alkalis. Magnesium oxide, copper(II) oxide and iron(III) oxide are basic oxides and do not dissolve in sodium hydroxide solution."
+  },
+  {
+   "n": 4,
+   "topic": "Functional groups in organic chemistry",
+   "q": "A student in Ogbomoso heats ethanol with excess concentrated tetraoxosulphate(VI) acid at 170 °C. The main organic product is",
+   "options": [
+    "ethene",
+    "ethanal",
+    "ethanoic acid",
+    "ethoxyethane"
+   ],
+   "answer": 0,
+   "explanation": "At about 170 °C, concentrated tetraoxosulphate(VI) acid dehydrates ethanol to ethene. At a lower temperature the main product is ethoxyethane, while ethanal and ethanoic acid are oxidation products."
+  },
+  {
+   "n": 5,
+   "topic": "Functional groups in organic chemistry",
+   "q": "Which pair of compounds are functional group isomers?",
+   "options": [
+    "Butane and 2-methylpropane",
+    "Ethanoic acid and methyl methanoate",
+    "Propan-1-ol and propan-2-ol",
+    "But-1-ene and but-2-ene"
+   ],
+   "answer": 1,
+   "explanation": "Ethanoic acid and methyl methanoate both have molecular formula C₂H₄O₂, but they contain different functional groups, a carboxylic acid and an ester. The other pairs are position or chain isomers rather than functional group isomers."
+  },
+  {
+   "n": 6,
+   "topic": "Functional groups in organic chemistry",
+   "q": "What is the IUPAC name of the compound CH₃CH(CH₃)CH₂OH?",
+   "options": [
+    "2-methylpropan-2-ol",
+    "2-methylpropan-1-ol",
+    "butan-1-ol",
+    "2-methylpropanal"
+   ],
+   "answer": 1,
+   "explanation": "The longest chain containing the alcohol group has three carbon atoms. Numbering from the CH₂OH end places the OH on carbon 1 and the methyl branch on carbon 2, giving 2-methylpropan-1-ol."
+  },
+  {
+   "n": 7,
+   "topic": "Gas laws",
+   "q": "Equal volumes of oxygen and sulfur(IV) oxide are allowed to diffuse through the same porous plug under the same conditions. If the oxygen takes 20.0 s, how long will the sulfur(IV) oxide take? (O = 16, S = 32)",
+   "options": [
+    "28.3 s",
+    "40.0 s",
+    "14.1 s",
+    "10.0 s"
+   ],
+   "answer": 0,
+   "explanation": "For equal volumes, diffusion time is proportional to √M. Thus time for SO₂ = 20.0 × √(64/32) = 20.0 × √2 = 28.3 s. The value 14.1 s uses the inverse ratio, and 40.0 s would arise from a wrong 2:1 time ratio."
+  },
+  {
+   "n": 8,
+   "topic": "Gas laws",
+   "q": "A cooking-gas burner in Owerri burns methane completely in air: CH₄(g) + 2O₂(g) → CO₂(g) + 2H₂O(l). What volume of oxygen at s.t.p. is needed to burn 2.00 dm³ of methane measured at s.t.p.?",
+   "options": [
+    "8.00 dm³",
+    "2.00 dm³",
+    "4.00 dm³",
+    "1.00 dm³"
+   ],
+   "answer": 2,
+   "explanation": "At the same temperature and pressure, gas volumes react in the same mole ratio as the equation. Methane and oxygen react in a 1:2 ratio, so 2.00 dm³ of methane needs 2 × 2.00 = 4.00 dm³ of oxygen."
+  },
+  {
+   "n": 9,
+   "topic": "Hydrocarbons",
+   "q": "Natural gas, mainly methane, is reacted with steam over a nickel catalyst at high temperature to produce hydrogen. Which product is formed together with the hydrogen?",
+   "options": [
+    "Carbon(II) oxide",
+    "Ethyne",
+    "Methanol",
+    "Carbon(IV) oxide"
+   ],
+   "answer": 0,
+   "explanation": "Steam reforming of methane over a nickel catalyst gives carbon(II) oxide and hydrogen: CH₄(g) + H₂O(g) ⇌ CO(g) + 3H₂(g). Carbon(IV) oxide would arise only if the carbon(II) oxide were later converted further by steam."
+  },
+  {
+   "n": 10,
+   "topic": "Hydrocarbons",
+   "q": "A factory in Kano converts vegetable oil to margarine by bubbling hydrogen through the oil in the presence of finely divided nickel. The reaction involved is best described as",
+   "options": [
+    "addition of hydrogen to the carbon–carbon double bonds",
+    "substitution of hydrogen by hydroxyl groups",
+    "cracking of long hydrocarbon chains",
+    "polymerisation of the oil molecules"
+   ],
+   "answer": 0,
+   "explanation": "The unsaturated carbon–carbon double bonds in the oil add hydrogen, causing the oil to become more solid. This is a hydrogenation addition reaction, not substitution, cracking or polymerisation."
+  },
+  {
+   "n": 11,
+   "topic": "Hydrocarbons",
+   "q": "A chemical plant in Eleme converts ethene to ethanol by reacting it with steam over a phosphoric acid catalyst at high temperature and pressure. The reaction is an example of",
+   "options": [
+    "hydration",
+    "halogenation",
+    "cracking",
+    "dehydrogenation"
+   ],
+   "answer": 0,
+   "explanation": "In the reaction, water adds across the ethene double bond to form ethanol: C₂H₄ + H₂O → C₂H₅OH. This addition of water is called hydration."
+  },
+  {
+   "n": 12,
+   "topic": "Periodic table",
+   "q": "An element has atomic number 15. In which group and period of the Periodic Table is it found?",
+   "options": [
+    "Group VII and Period 3",
+    "Group V and Period 4",
+    "Group III and Period 5",
+    "Group V and Period 3"
+   ],
+   "answer": 3,
+   "explanation": "The element with atomic number 15 is phosphorus, with electron configuration 1s² 2s² 2p⁶ 3s² 3p³. It has three occupied shells, so it is in Period 3, and five outer-shell electrons, so it is in Group V."
+  },
+  {
+   "n": 13,
+   "topic": "Periodic table",
+   "q": "An element X is in Group II of the Periodic Table and another element Y is in Group VI. Which formula is most likely for the compound formed between X and Y?",
+   "options": [
+    "XY₂",
+    "X₂Y₃",
+    "X₂Y",
+    "XY"
+   ],
+   "answer": 3,
+   "explanation": "X, in Group II, forms X²⁺ ions, while Y, in Group VI, forms Y²⁻ ions. Equal charges of opposite sign balance in the ratio 1:1, giving the formula XY."
+  },
+  {
+   "n": 14,
+   "topic": "Non-metals and their compounds",
+   "q": "A student in Owerri adds dilute hydrochloric acid to a sample containing sodium sulphide. The gas evolved is",
+   "options": [
+    "Hydrogen",
+    "Sulphur(IV) oxide",
+    "Hydrogen sulphide",
+    "Carbon(IV) oxide"
+   ],
+   "answer": 2,
+   "explanation": "Sodium sulphide reacts with dilute hydrochloric acid to give hydrogen sulphide: Na₂S + 2HCl → 2NaCl + H₂S. A sulphite would give sulphur(IV) oxide, while a carbonate would give carbon(IV) oxide."
+  },
+  {
+   "n": 15,
+   "topic": "Energy changes",
+   "q": "A student in Kaduna mixes 50 cm³ of 1.0 mol dm⁻³ hydrochloric acid with 50 cm³ of 1.0 mol dm⁻³ sodium hydroxide in a plastic cup. The temperature rises by 6.8 °C. Assuming the density of the mixture is 1.0 g cm⁻³ and its specific heat capacity is 4.2 J g⁻¹ K⁻¹, calculate the heat evolved.",
+   "options": [
+    "0.286 kJ",
+    "28.6 kJ",
+    "2.86 kJ",
+    "5.71 kJ"
+   ],
+   "answer": 2,
+   "explanation": "The total mass of the mixture is 50 g + 50 g = 100 g. Heat evolved = mcΔT = 100 × 4.2 × 6.8 = 2856 J = 2.856 kJ, which is approximately 2.86 kJ."
+  },
+  {
+   "n": 16,
+   "topic": "Chemical bonding",
+   "q": "A copper wire is used to connect a battery to a bulb. Which statement best explains why the copper wire conducts electricity in the solid state?",
+   "options": [
+    "Delocalised electrons move through a lattice of copper ions.",
+    "Positive protons travel along the wire.",
+    "Copper ions move freely through the metal lattice.",
+    "Electrons are localised in fixed covalent bonds between copper atoms."
+   ],
+   "answer": 0,
+   "explanation": "Copper has metallic bonding: fixed copper ions occupy lattice sites and delocalised electrons are free to move through the metal, carrying current. Copper ions and positive protons are not free to move through the solid metal."
+  },
+  {
+   "n": 17,
+   "topic": "Separation of mixtures",
+   "q": "A dairy in Kaduna separates cream from milk by spinning the milk rapidly in a machine. The separation technique used is",
+   "options": [
+    "fractional distillation.",
+    "centrifugation.",
+    "decantation.",
+    "sublimation."
+   ],
+   "answer": 1,
+   "explanation": "Centrifugation uses rapid spinning to separate components of different densities; the denser portion is forced away from the axis, leaving cream separated from milk. Decantation, sublimation and fractional distillation do not depend on this rapid spinning action."
+  },
+  {
+   "n": 18,
+   "topic": "Water and solubility",
+   "q": "A student in Jos dissolves 8.0 g of sodium chloride in water and makes the solution up to 250 cm³. What is the concentration of the solution in g/dm³?",
+   "options": [
+    "40 g/dm³",
+    "2.0 g/dm³",
+    "32 g/dm³",
+    "8.0 g/dm³"
+   ],
+   "answer": 2,
+   "explanation": "Convert 250 cm³ to dm³: 250 ÷ 1000 = 0.250 dm³. Concentration = mass ÷ volume = 8.0 g ÷ 0.250 dm³ = 32 g/dm³."
+  },
+  {
+   "n": 19,
+   "topic": "Water and solubility",
+   "q": "At 35°C, 12 g of a solid solute dissolves in 40 g of water to form a saturated solution. What is the solubility of the solute at this temperature?",
+   "options": [
+    "48 g per 100 g of water",
+    "12 g per 100 g of water",
+    "30 g per 100 g of water",
+    "4.8 g per 100 g of water"
+   ],
+   "answer": 2,
+   "explanation": "Solubility is the mass of solute that saturates 100 g of water. If 12 g saturates 40 g of water, then for 100 g of water: 12 × 100/40 = 30 g."
+  },
+  {
+   "n": 20,
+   "topic": "Water and solubility",
+   "q": "At constant temperature, the solubility of carbon dioxide gas in water is increased by",
+   "options": [
+    "increasing the pressure of carbon dioxide above the water.",
+    "stirring the solution continuously.",
+    "raising the temperature of the water.",
+    "adding more water to the solution."
+   ],
+   "answer": 0,
+   "explanation": "For a gas, solubility at constant temperature increases as pressure increases; carbon dioxide is forced into the water under higher pressure. Raising temperature decreases gas solubility, while stirring only speeds up the attainment of saturation and does not change the saturated concentration."
+  },
+  {
+   "n": 21,
+   "topic": "Mole concept and stoichiometry",
+   "q": "A sample of limestone from Ogun State contains 80.0% calcium carbonate by mass. What volume of carbon(IV) oxide, measured at s.t.p., is produced when 25.0 g of the sample is treated with excess dilute hydrochloric acid? (CaCO₃ = 100; molar volume at s.t.p. = 22.4 dm³)",
+   "options": [
+    "5.60 dm³",
+    "8.96 dm³",
+    "4.48 dm³",
+    "2.24 dm³"
+   ],
+   "answer": 2,
+   "explanation": "The sample contains 25.0 g × 80.0/100 = 20.0 g of CaCO₃, which is 20.0/100 = 0.200 mol. From CaCO₃ + 2HCl → CaCl₂ + CO₂ + H₂O, 0.200 mol of CaCO₃ gives 0.200 mol of CO₂, so the volume is 0.200 × 22.4 = 4.48 dm³."
+  },
+  {
+   "n": 22,
+   "topic": "Mole concept and stoichiometry",
+   "q": "An analyst in Ibadan needs to prepare 250 cm³ of 0.0400 mol dm⁻³ sulfuric acid from a stock solution of concentration 0.500 mol dm⁻³. What volume of the stock solution should be diluted to 250 cm³?",
+   "options": [
+    "12.5 cm³",
+    "40.0 cm³",
+    "100 cm³",
+    "20.0 cm³"
+   ],
+   "answer": 3,
+   "explanation": "Using C₁V₁ = C₂V₂, 0.500 × V = 0.0400 × 250, so V = 10.0/0.500 = 20.0 cm³. Therefore 20.0 cm³ of the stock acid must be diluted to 250 cm³."
+  },
+  {
+   "n": 23,
+   "topic": "Acids, bases and salts",
+   "q": "At 25 °C, a solution contains 2.5 × 10⁻⁴ mol dm⁻³ hydroxide ions. What is the pH of the solution? (Kw = 1.0 × 10⁻¹⁴ mol² dm⁻⁶)",
+   "options": [
+    "11.0",
+    "10.4",
+    "3.6",
+    "4.4"
+   ],
+   "answer": 1,
+   "explanation": "The pOH = −log(2.5 × 10⁻⁴) = 3.6, so at 25 °C pH = 14.00 − 3.6 = 10.4. Alternatively, [H⁺] = 1.0 × 10⁻¹⁴ ÷ (2.5 × 10⁻⁴) = 4.0 × 10⁻¹¹ mol dm⁻³, whose negative logarithm is 10.4."
+  },
+  {
+   "n": 24,
+   "topic": "Acids, bases and salts",
+   "q": "0.10 mol of tetraoxophosphate(V) acid, H₃PO₄, reacts completely with 0.10 mol of sodium hydroxide. Which salt is formed?",
+   "options": [
+    "NaH₂PO₄",
+    "Na₃PO₄",
+    "Na₂HPO₄",
+    "NaH₂PO₃"
+   ],
+   "answer": 0,
+   "explanation": "H₃PO₄ is a triprotic acid, and one mole of NaOH neutralises only one acidic hydrogen. The equation is H₃PO₄ + NaOH → NaH₂PO₄ + H₂O, so sodium dihydrogen tetraoxophosphate(V), NaH₂PO₄, is formed."
+  },
+  {
+   "n": 25,
+   "topic": "Atomic structure",
+   "q": "The ground-state electron configuration of an element ends with 4s¹, and all preceding inner shells are completely filled. In which group and period is the element?",
+   "options": [
+    "Group I and Period 4",
+    "Group I and Period 3",
+    "Group II and Period 4",
+    "Group VII and Period 4"
+   ],
+   "answer": 0,
+   "explanation": "The configuration 1s² 2s² 2p⁶ 3s² 3p⁶ 4s¹ has one electron in its outermost shell, so it is in Group I. The highest occupied principal shell is the fourth shell, so the element is in Period 4."
+  },
+  {
+   "n": 26,
+   "topic": "Oxidation, reduction and electrolysis",
+   "q": "A chemical plant in Calabar electrolyses molten sodium chloride using inert electrodes. What volume of chlorine, measured at s.t.p., is produced at the anode when a current of 0.500 A is passed for 2.00 hours? (Faraday constant = 96 500 C mol⁻¹; molar volume at s.t.p. = 22.4 dm³)",
+   "options": [
+    "0.209 dm³",
+    "0.418 dm³",
+    "0.836 dm³",
+    "0.0373 dm³"
+   ],
+   "answer": 1,
+   "explanation": "Quantity of electricity = 0.500 A × 7200 s = 3600 C. The moles of electrons is 3600 ÷ 96 500 = 0.0373 mol; from 2Cl⁻ → Cl₂ + 2e⁻, moles of chlorine = 0.0373 ÷ 2 = 0.01865 mol, so volume = 0.01865 × 22.4 = 0.418 dm³."
+  },
+  {
+   "n": 27,
+   "topic": "Rates of reaction and equilibrium",
+   "q": "A student in Ilorin adds excess magnesium ribbon to 50 cm³ of 0.10 mol dm⁻³ hydrochloric acid. Which change will increase both the initial rate and the total volume of hydrogen produced?",
+   "options": [
+    "Use the same mass of magnesium as powder instead of ribbon",
+    "Add 50 cm³ of distilled water to the acid before adding the magnesium",
+    "Cool the acid to 15 °C before adding the magnesium",
+    "Use 50 cm³ of 0.20 mol dm⁻³ hydrochloric acid instead of 0.10 mol dm⁻³ hydrochloric acid"
+   ],
+   "answer": 3,
+   "explanation": "Doubling the acid concentration while keeping the same volume doubles the amount of hydrochloric acid present, so more hydrogen is produced; the higher concentration also increases the initial rate. The powdered form only increases surface area and does not increase the final volume, while adding water dilutes the acid and lowers the rate."
+  },
+  {
+   "n": 28,
+   "topic": "Rates of reaction and equilibrium",
+   "q": "At 500 K, the equilibrium constant Kc for X₂(g) + Y₂(g) ⇌ 2XY(g) is 4.0. In a 1.0 dm³ vessel at equilibrium, there are 2.0 mol of XY and 1.0 mol of X₂. What amount of Y₂ is present at equilibrium?",
+   "options": [
+    "1.0 mol",
+    "0.50 mol",
+    "2.0 mol",
+    "4.0 mol"
+   ],
+   "answer": 0,
+   "explanation": "Using Kc = [XY]²/([X₂][Y₂]) gives 4.0 = (2.0)²/(1.0 × [Y₂]), so [Y₂] = 1.0 mol dm⁻³. Since the volume is 1.0 dm³, the amount of Y₂ present is 1.0 mol."
+  },
+  {
+   "n": 29,
+   "topic": "Rates of reaction and equilibrium",
+   "q": "For the decomposition of hydrogen peroxide in a certain experiment, the rate is first order in H₂O₂. If the half-life is 20 min, how long will it take for the concentration of H₂O₂ to fall from 0.80 mol dm⁻³ to 0.20 mol dm⁻³?",
+   "options": [
+    "80 min",
+    "40 min",
+    "20 min",
+    "10 min"
+   ],
+   "answer": 1,
+   "explanation": "The concentration falls from 0.80 to 0.40 mol dm⁻³ in one half-life, and then from 0.40 to 0.20 mol dm⁻³ in a second half-life. The total time is therefore 20 min + 20 min = 40 min."
+  },
+  {
+   "n": 30,
+   "topic": "Functional groups in organic chemistry",
+   "q": "Propene is shaken with bromine water at room temperature. Which observation and product are correct?",
+   "options": [
+    "The bromine water becomes colourless and propane is formed",
+    "The orange-brown colour of bromine water is discharged and 1,2-dibromopropane is formed",
+    "No visible change occurs and bromopropane is formed",
+    "The bromine water turns purple and propan-2-ol is formed"
+   ],
+   "answer": 1,
+   "explanation": "Propene has a carbon-carbon double bond, so bromine adds across the double bond and the orange-brown bromine water is decolourised. The addition product is 1,2-dibromopropane."
+  },
+  {
+   "n": 31,
+   "topic": "Gas laws",
+   "q": "A vessel at 27 °C contains 0.20 mol of nitrogen and 0.30 mol of oxygen. If the total pressure is 150 kPa, what is the partial pressure of nitrogen?",
+   "options": [
+    "100 kPa",
+    "60 kPa",
+    "50 kPa",
+    "90 kPa"
+   ],
+   "answer": 1,
+   "explanation": "The total number of moles is 0.20 + 0.30 = 0.50 mol, so the mole fraction of nitrogen is 0.20/0.50 = 0.40. Its partial pressure is therefore 0.40 × 150 kPa = 60 kPa."
+  },
+  {
+   "n": 32,
+   "topic": "Gas laws",
+   "q": "What volume is occupied by 1.70 g of ammonia, NH₃, at s.t.p.? (Molar volume at s.t.p. = 22.4 dm³; N = 14, H = 1)",
+   "options": [
+    "22.4 dm³",
+    "2.24 dm³",
+    "1.12 dm³",
+    "4.48 dm³"
+   ],
+   "answer": 1,
+   "explanation": "The molar mass of NH₃ is 14 + 3(1) = 17 g mol⁻¹, so 1.70 g is 1.70/17 = 0.10 mol. At s.t.p., the volume is 0.10 × 22.4 dm³ = 2.24 dm³."
+  },
+  {
+   "n": 33,
+   "topic": "Hydrocarbons",
+   "q": "In a petrochemical plant near Warri, ethene is mixed with steam and passed over a phosphoric acid catalyst at high temperature and pressure. The main organic product is",
+   "options": [
+    "ethanol",
+    "ethanoic acid",
+    "ethyl ethanoate",
+    "ethane-1,2-diol"
+   ],
+   "answer": 0,
+   "explanation": "Under these conditions, water adds across the C=C double bond of ethene in catalytic hydration, giving ethanol. Acidified potassium manganate(VII) would give ethane-1,2-diol, while ethanoic acid requires oxidation of ethanol."
+  },
+  {
+   "n": 34,
+   "topic": "Hydrocarbons",
+   "q": "A gaseous hydrocarbon contains 85.7% carbon and 14.3% hydrogen by mass. Its empirical formula is",
+   "options": [
+    "CH₃",
+    "CH₂",
+    "C₂H₃",
+    "C₂H₅"
+   ],
+   "answer": 1,
+   "explanation": "Dividing percentage masses by atomic masses gives C : H = 85.7/12 : 14.3/1 ≈ 7.14 : 14.3, which simplifies to 1 : 2; hence the empirical formula is CH₂. C₂H₅ and CH₃ do not fit this percentage composition."
+  },
+  {
+   "n": 35,
+   "topic": "Hydrocarbons",
+   "q": "Which hydrocarbon burns with a smoky flame and does not decolourise bromine water at room temperature?",
+   "options": [
+    "But-2-ene",
+    "Ethyne",
+    "Ethene",
+    "Benzene"
+   ],
+   "answer": 3,
+   "explanation": "Benzene has a high carbon-to-hydrogen ratio, so it burns with a smoky flame, and its delocalised ring does not react with bromine water without a catalyst or ultraviolet light. Ethene, ethyne and but-2-ene are unsaturated in a way that rapidly decolourises bromine water."
+  },
+  {
+   "n": 36,
+   "topic": "Periodic table",
+   "q": "Which statement best explains why potassium has a larger atomic radius than sodium?",
+   "options": [
+    "Potassium has one more occupied electron shell than sodium.",
+    "The shielding effect is smaller in potassium than in sodium.",
+    "Potassium has a higher nuclear charge, so its outer electrons are pulled inward.",
+    "Potassium has fewer electron shells than sodium."
+   ],
+   "answer": 0,
+   "explanation": "Going down Group I from sodium to potassium adds another occupied electron shell, and this increase in size outweighs the increased nuclear charge. A higher nuclear charge alone would tend to pull the outer electrons inward, not enlarge the atom."
+  },
+  {
+   "n": 37,
+   "topic": "Periodic table",
+   "q": "An element M is in Group II and another element X is in Group VII. Which formula is most likely for the compound formed between M and X?",
+   "options": [
+    "M₂X",
+    "MX",
+    "M₂X₇",
+    "MX₂"
+   ],
+   "answer": 3,
+   "explanation": "A Group II element M commonly forms M²⁺ ions, while a Group VII element X forms X⁻ ions; charge balance requires two X⁻ for each M²⁺, giving MX₂. MX, M₂X and M₂X₇ would not give a zero total charge for these common ions."
+  },
+  {
+   "n": 38,
+   "topic": "Non-metals and their compounds",
+   "q": "A laboratory technician in Kaduna passes hydrogen sulphide gas into lead(II) nitrate solution. Which observation is made?",
+   "options": [
+    "A black precipitate is formed",
+    "No visible change occurs",
+    "A yellow precipitate is formed",
+    "A white precipitate is formed"
+   ],
+   "answer": 0,
+   "explanation": "Hydrogen sulphide supplies sulphide ions, which react with lead(II) ions to form lead(II) sulphide, a black precipitate. Lead(II) sulphate and lead(II) chloride would be white, but they are not produced in this test."
+  },
+  {
+   "n": 39,
+   "topic": "Non-metals and their compounds",
+   "q": "A student in Kano heats a mixture of ammonium chloride and calcium hydroxide. The gas evolved is",
+   "options": [
+    "ammonia",
+    "nitrogen",
+    "hydrogen chloride",
+    "chlorine"
+   ],
+   "answer": 0,
+   "explanation": "Ammonium salts react with alkalis when heated to liberate ammonia gas; calcium hydroxide supplies the alkali. Chlorine would require oxidation of chloride, and hydrogen chloride is not produced as the main gas under these conditions."
+  },
+  {
+   "n": 40,
+   "topic": "Energy changes",
+   "q": "A student in Lagos mixes 100 cm³ of 0.50 mol dm⁻³ hydrochloric acid at 25.0 °C with 100 cm³ of 0.50 mol dm⁻³ sodium hydroxide at 25.0 °C. The temperature rises by 5.0 °C. Assuming the density of the mixture is 1.0 g cm⁻³ and its specific heat capacity is 4.2 J g⁻¹ K⁻¹, what is the heat evolved?",
+   "options": [
+    "420 J",
+    "8.4 kJ",
+    "4.2 kJ",
+    "2.1 kJ"
+   ],
+   "answer": 2,
+   "explanation": "Total mass = (100 + 100) cm³ × 1.0 g cm⁻³ = 200 g. Heat evolved = mcΔT = 200 × 4.2 × 5.0 = 4200 J = 4.2 kJ. Using only one 100 g portion would wrongly give 2.1 kJ."
+  },
+  {
+   "n": 41,
+   "topic": "Energy changes",
+   "q": "Using the enthalpy changes below, what is ΔH for 2NO₂(g) → N₂(g) + 2O₂(g)? N₂(g) + O₂(g) → 2NO(g), ΔH = +180 kJ mol⁻¹; 2NO(g) + O₂(g) → 2NO₂(g), ΔH = −114 kJ mol⁻¹",
+   "options": [
+    "+66 kJ mol⁻¹",
+    "+294 kJ mol⁻¹",
+    "−294 kJ mol⁻¹",
+    "−66 kJ mol⁻¹"
+   ],
+   "answer": 3,
+   "explanation": "Adding the two given equations gives N₂(g) + 2O₂(g) → 2NO₂(g) with ΔH = +180 + (−114) = +66 kJ mol⁻¹. Reversing this equation changes the sign, so 2NO₂(g) → N₂(g) + 2O₂(g) has ΔH = −66 kJ mol⁻¹. The value 294 kJ mol⁻¹ comes from combining the magnitudes without reversing or cancelling correctly."
+  },
+  {
+   "n": 42,
+   "topic": "Non-metals and their compounds",
+   "q": "The bleaching action of moist chlorine on coloured cloth is mainly due to the formation of",
+   "options": [
+    "hypochlorous acid, which oxidises the dye",
+    "hydrochloric acid, which neutralises the dye",
+    "oxygen gas, which physically removes the dye",
+    "chloride ions, which dissolve the dye"
+   ],
+   "answer": 0,
+   "explanation": "Chlorine reacts with water to form hydrochloric acid and hypochlorous acid; the hypochlorous acid oxidises the colouring matter to a colourless compound. Hydrochloric acid and chloride ions do not account for the bleaching."
+  },
+  {
+   "n": 43,
+   "topic": "Environmental chemistry",
+   "q": "Refrigerant gases containing chlorofluorocarbons escape into the atmosphere. The main reason these gases are harmful to the environment is that they",
+   "options": [
+    "release chlorine atoms that catalyse the breakdown of ozone in the stratosphere.",
+    "form sulphuric acid which falls as acid rain.",
+    "increase the amount of oxygen available for respiration.",
+    "combine with nitrogen to form ammonia in the upper atmosphere."
+   ],
+   "answer": 0,
+   "explanation": "Ultraviolet light breaks down chlorofluorocarbons and releases chlorine atoms, which catalyse the destruction of ozone in the stratosphere. Acid rain is mainly caused by sulphur dioxide and nitrogen oxides, not by chlorofluorocarbons, and these gases do not increase atmospheric oxygen."
+  },
+  {
+   "n": 44,
+   "topic": "Environmental chemistry",
+   "q": "A coal-fired factory in Enugu is required to reduce the sulphur dioxide released from its chimney. Which method is most suitable?",
+   "options": [
+    "Cool the flue gases with water before releasing them.",
+    "Burn the coal in pure oxygen instead of air.",
+    "Pass the flue gases through a slurry of calcium carbonate or calcium oxide.",
+    "Build a taller chimney to spread the gas over a wider area."
+   ],
+   "answer": 2,
+   "explanation": "The alkaline calcium carbonate or calcium oxide slurry reacts with and removes sulphur dioxide from the flue gases. A taller chimney and cooling only disperse or dilute the gas; burning in pure oxygen may increase combustion efficiency but does not remove the sulphur impurity."
+  },
+  {
+   "n": 45,
+   "topic": "Chemical bonding",
+   "q": "The bond angle in a water molecule is about 104.5°. Which statement best explains why this angle is less than the tetrahedral angle?",
+   "options": [
+    "Hydrogen bonds between hydrogen atoms in the molecule pull them closer.",
+    "Oxygen has no lone pairs, so the molecule becomes linear rather than tetrahedral.",
+    "The lone pairs on oxygen repel the bonding pairs more strongly than bonding pairs repel each other.",
+    "The two O–H bonds are double bonds, so the hydrogen atoms are forced together."
+   ],
+   "answer": 2,
+   "explanation": "Water has two bonding pairs and two lone pairs on oxygen; lone-pair repulsion is stronger and compresses the H–O–H angle. The O–H bonds are single bonds, and hydrogen bonding occurs between water molecules rather than pulling the atoms within one molecule closer."
+  },
+  {
+   "n": 46,
+   "topic": "Separation of mixtures",
+   "q": "A pupil in Ede has a mixture of potassium nitrate and potassium chloride. Both are soluble in water, but potassium nitrate is much more soluble at high temperature than at low temperature. Which method is most suitable for separating the two solids?",
+   "options": [
+    "Fractional crystallisation from water.",
+    "Filtration of the dry mixture.",
+    "Sublimation of potassium chloride.",
+    "Using a magnet to attract potassium nitrate."
+   ],
+   "answer": 0,
+   "explanation": "Both salts dissolve in water, but their solubilities change differently with temperature, so controlled evaporation and cooling can crystallise them separately. Filtration cannot separate two soluble solids, neither salt is magnetic, and potassium chloride does not sublime readily."
+  },
+  {
+   "n": 47,
+   "topic": "Separation of mixtures",
+   "q": "A technician in Lokoja is given a mixture of iron filings, common salt and sand. Which sequence will separate the three components?",
+   "options": [
+    "Use a separating funnel to run off the salt, then dry the residue.",
+    "Add water, filter, then use a magnet on the filtrate to remove the salt.",
+    "Use a magnet to remove the iron, add water and stir, filter off the sand, then evaporate the filtrate to recover the salt.",
+    "Heat the mixture strongly to sublime the iron filings, then filter."
+   ],
+   "answer": 2,
+   "explanation": "The magnet removes iron, water dissolves the salt, filtration removes insoluble sand, and evaporation of the filtrate leaves the salt. Salt is not removed magnetically, iron does not sublime readily under these conditions, and a separating funnel is for immiscible liquids."
+  },
+  {
+   "n": 48,
+   "topic": "Water and solubility",
+   "q": "A water treatment plant in Abeokuta adds alum to the water before sedimentation. The main function of alum is to",
+   "options": [
+    "kill bacteria by releasing chlorine.",
+    "coagulate fine suspended particles so that they settle out.",
+    "increase the solubility of oxygen in the water.",
+    "remove calcium and magnesium ions that cause hardness."
+   ],
+   "answer": 1,
+   "explanation": "Alum acts as a coagulant: it helps tiny suspended particles clump together into larger particles that settle during sedimentation. It is not the main disinfectant, it is not primarily used to remove hardness ions, and it does not increase oxygen solubility."
+  },
+  {
+   "n": 49,
+   "topic": "Mole concept and stoichiometry",
+   "q": "A sample of an oxide of copper from a workshop in Enugu contains 0.800 g of copper and 0.200 g of oxygen. What is the empirical formula of the oxide? (Cu = 64, O = 16)",
+   "options": [
+    "CuO₂",
+    "CuO",
+    "Cu₂O",
+    "Cu₂O₃"
+   ],
+   "answer": 1,
+   "explanation": "The amounts are 0.800 ÷ 64 = 0.0125 mol Cu and 0.200 ÷ 16 = 0.0125 mol O. Dividing by the smaller amount gives a Cu:O mole ratio of 1:1, so the empirical formula is CuO. Cu₂O would require twice as many moles of copper as oxygen."
+  },
+  {
+   "n": 50,
+   "topic": "Mole concept and stoichiometry",
+   "q": "A gas cylinder in Kaduna contains 1.60 g of a gas which occupies 560 cm³ at s.t.p. What is the molar mass of the gas? (Molar volume at s.t.p. = 22.4 dm³ mol⁻¹)",
+   "options": [
+    "80 g mol⁻¹",
+    "64 g mol⁻¹",
+    "32 g mol⁻¹",
+    "40 g mol⁻¹"
+   ],
+   "answer": 1,
+   "explanation": "560 cm³ = 0.560 dm³, so the amount of gas is 0.560 ÷ 22.4 = 0.0250 mol. The molar mass is 1.60 g ÷ 0.0250 mol = 64 g mol⁻¹."
+  }
+ ]
+}

@@ -50,6 +50,7 @@ const settings: Translation<typeof en> = {
     activeCount_one: '{{count}} dey on',
     activeCount_other: '{{count}} dey on',
     language: 'Language',
+    region: 'Study region',
     appearance: 'How e go look',
     privacy: 'Privacy',
     downloadData: 'Download my data',
@@ -94,6 +95,11 @@ const settings: Translation<typeof en> = {
     reduceMotionHint: 'Animations wey dey move go reduce for the whole app',
     haptics: 'Vibration for games',
     hapticsHint: 'Haptic feedback for Knowzone World',
+  },
+  region: {
+    title: 'Study region',
+    intro: 'Choose the country wey you dey study. Knowzone go show that country exam practice first, and your AI tutor go follow their exams.',
+    footer: 'Your scores go remain when you change country, and you fit open other countries’ papers from the exam practice page.',
   },
   language: {
     title: 'Language',

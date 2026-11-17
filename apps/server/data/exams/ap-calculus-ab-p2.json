@@ -1,0 +1,557 @@
+{
+ "id": "ap-calculus-ab-p2",
+ "exam": "ap",
+ "subject": "calculus-ab",
+ "year": null,
+ "number": 2,
+ "source": "ai",
+ "minutes": 100,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Differential equations",
+   "q": "If dy/dx = (x² + 1)/y and y(0) = 3, which of the following is the particular solution?",
+   "options": [
+    "y = ±√((2/3)x³ + 2x + 9)",
+    "y = √((2/3)x³ + 2x + 3)",
+    "y = √((2/3)x³ + 2x + 9)",
+    "y = (1/3)x³ + x + 3"
+   ],
+   "answer": 2,
+   "explanation": "Separating variables gives y dy = (x² + 1) dx, so y²/2 = x³/3 + x + C. The initial condition y(0) = 3 gives C = 9/2, hence y² = (2/3)x³ + 2x + 9. Because y(0) > 0, the particular solution uses the positive square root, not ±√."
+  },
+  {
+   "n": 2,
+   "topic": "Differential equations",
+   "q": "A bacteria culture grows at a rate proportional to the number of bacteria present. Initially there are 500 bacteria, and after 2 hours there are 1500 bacteria. Which expression gives the number N(t) of bacteria after t hours?",
+   "options": [
+    "N(t) = 1500 · 3^(t/2)",
+    "N(t) = 500 · 3^t",
+    "N(t) = 500 · 3^(t/2)",
+    "N(t) = 500 + 500t"
+   ],
+   "answer": 2,
+   "explanation": "For proportional growth, N(t) = N(0)e^(kt). Using N(0) = 500 and N(2) = 1500 gives e^(2k) = 3, so k = (ln 3)/2. Therefore N(t) = 500e^(t ln 3/2) = 500 · 3^(t/2)."
+  },
+  {
+   "n": 3,
+   "topic": "Applications of integration",
+   "q": "What is the area of the region enclosed by y = 4 - x² and y = 3?",
+   "options": [
+    "4/3",
+    "2/3",
+    "8/3",
+    "2"
+   ],
+   "answer": 0,
+   "explanation": "The curves meet where 4 - x² = 3, so x = ±1, and y = 4 - x² is above y = 3 on this interval. Thus the area is ∫ from -1 to 1 of (1 - x²) dx = [x - x³/3] from -1 to 1 = 4/3. Using the area under y = 4 - x² instead of the enclosed region gives a different value."
+  },
+  {
+   "n": 4,
+   "topic": "Applications of integration",
+   "q": "A particle moves along a line with velocity v(t) = 3t² - 8t for 0 ≤ t ≤ 3, where t is in seconds and v is in meters per second. What is the particle's displacement during this interval?",
+   "options": [
+    "0 m",
+    "3 m",
+    "9 m",
+    "-9 m"
+   ],
+   "answer": 3,
+   "explanation": "Displacement is the definite integral of velocity: ∫ from 0 to 3 of (3t² - 8t) dt. An antiderivative is t³ - 4t², so the value is (27 - 36) - 0 = -9. Thus the particle ends 9 meters in the negative direction from its starting point."
+  },
+  {
+   "n": 5,
+   "topic": "Analytical applications of differentiation",
+   "q": "The function f is defined by f(x) = x³ - 3x² - 9x + 5. On which intervals is f increasing?",
+   "options": [
+    "(-∞, -3) and (1, ∞)",
+    "(-∞, 3)",
+    "(-1, 3)",
+    "(-∞, -1) and (3, ∞)"
+   ],
+   "answer": 3,
+   "explanation": "The derivative is f′(x) = 3x² - 6x - 9 = 3(x - 3)(x + 1), which is positive for x < -1 and for x > 3. Therefore f is increasing on (-∞, -1) and (3, ∞). The interval (-1, 3) is where f′(x) < 0, so f is decreasing there."
+  },
+  {
+   "n": 6,
+   "topic": "Analytical applications of differentiation",
+   "q": "Let f be continuous on [1, 5] and differentiable on (1, 5). If f(1) = 3 and f(5) = 11, which of the following must be true?",
+   "options": [
+    "There exists a number c in (1, 5) such that f′(c) = 0.",
+    "There exists a number c in (1, 5) such that f′(c) = 2.",
+    "f is increasing on [1, 5].",
+    "There exists a number c in (1, 5) such that f′(c) = 8."
+   ],
+   "answer": 1,
+   "explanation": "By the Mean Value Theorem, there is a number c in (1, 5) such that f′(c) = (f(5) - f(1))/(5 - 1) = (11 - 3)/4 = 2. The theorem does not guarantee a derivative value of 8 or 0, nor does it force f to be increasing throughout the interval."
+  },
+  {
+   "n": 7,
+   "topic": "Differentiation: definition and basic rules",
+   "q": "What is lim h→0 of ((2 + h)³ - 8)/h?",
+   "options": [
+    "24",
+    "12",
+    "8",
+    "6"
+   ],
+   "answer": 1,
+   "explanation": "This limit is the derivative of x³ at x = 2. Expanding gives ((8 + 12h + 6h² + h³) - 8)/h = 12 + 6h + h², whose limit as h→0 is 12."
+  },
+  {
+   "n": 8,
+   "topic": "Differentiation: definition and basic rules",
+   "q": "Let f(x) = (x² + 1)/(x - 1). What is f′(2)?",
+   "options": [
+    "-1",
+    "-3",
+    "1",
+    "3"
+   ],
+   "answer": 0,
+   "explanation": "By the quotient rule, f′(x) = [(2x)(x - 1) - (x² + 1)]/(x - 1)² = (x² - 2x - 1)/(x - 1)². At x = 2, the numerator is 4 - 4 - 1 = -1 and the denominator is 1, so f′(2) = -1."
+  },
+  {
+   "n": 9,
+   "topic": "Differentiation: composite, implicit and inverse functions",
+   "q": "If h(x) = √(x² + 3x), what is h′(1)?",
+   "options": [
+    "5/4",
+    "5/2",
+    "5/8",
+    "5"
+   ],
+   "answer": 0,
+   "explanation": "By the chain rule, h′(x) = (2x + 3)/(2√(x² + 3x)). At x = 1, this is 5/(2√4) = 5/4. Forgetting the denominator factor 2 gives 5/2."
+  },
+  {
+   "n": 10,
+   "topic": "Integration and accumulation of change",
+   "q": "What is ∫ from 0 to 2 of (3x² - 4x + 1) dx?",
+   "options": [
+    "2",
+    "6",
+    "0",
+    "4"
+   ],
+   "answer": 0,
+   "explanation": "An antiderivative is x³ - 2x² + x. Evaluating from 0 to 2 gives (8 - 8 + 2) - 0 = 2."
+  },
+  {
+   "n": 11,
+   "topic": "Integration and accumulation of change",
+   "q": "Let F(x) = ∫ from 0 to x of (t² - 4t) dt for 0 ≤ x ≤ 5. At what value of x does F have a local minimum?",
+   "options": [
+    "5",
+    "2",
+    "0",
+    "4"
+   ],
+   "answer": 3,
+   "explanation": "By the Fundamental Theorem of Calculus, F′(x) = x² - 4x = x(x - 4). On (0, 4), F′ is negative, and on (4, 5), F′ is positive, so F changes from decreasing to increasing at x = 4. Thus F has a local minimum at x = 4."
+  },
+  {
+   "n": 12,
+   "topic": "Differential equations",
+   "q": "If dy/dx = 3x²y and y(1)=2, what is the value of y(2)?",
+   "options": [
+    "e^7",
+    "2e^8",
+    "2e^7",
+    "2e^6"
+   ],
+   "answer": 2,
+   "explanation": "Separating variables gives dy/y = 3x² dx, so ln|y| = x³ + C and y = A e^{x³}. From y(1)=2, A=2/e, so y(2)=(2/e)e⁸=2e⁷. The value e⁷ would result from omitting the factor determined by the initial condition."
+  },
+  {
+   "n": 13,
+   "topic": "Differential equations",
+   "q": "The slope field for a differential equation has a horizontal segment at every point with x=0, positive slopes at every point with x>0, negative slopes at every point with x<0, and the slope magnitude increases as |x| increases. Which differential equation is consistent with this slope field?",
+   "options": [
+    "dy/dx = e^x",
+    "dy/dx = x²",
+    "dy/dx = x + y",
+    "dy/dx = x"
+   ],
+   "answer": 3,
+   "explanation": "For dy/dx = x, the slope is zero at x=0, has the sign of x, and has magnitude |x|, which increases as |x| increases. The equations dy/dx = x² and dy/dx = e^x never have negative slopes for x<0, while dy/dx = x + y is not determined by x alone."
+  },
+  {
+   "n": 14,
+   "topic": "Applications of integration",
+   "q": "The region bounded by y = x² and y = 4 is rotated about the x-axis. What is the volume of the solid generated?",
+   "options": [
+    "128π/5 cubic units",
+    "512π/5 cubic units",
+    "64π/5 cubic units",
+    "256π/5 cubic units"
+   ],
+   "answer": 3,
+   "explanation": "Using washers perpendicular to the x-axis, the outer radius is 4 and the inner radius is x², so the volume is π∫ from -2 to 2 of (16 - x⁴) dx. By symmetry this equals 2π∫ from 0 to 2 of (16 - x⁴) dx = 2π(32 - 32/5) = 256π/5 cubic units. The value 128π/5 would result from missing the factor of 2 from symmetry."
+  },
+  {
+   "n": 15,
+   "topic": "Applications of integration",
+   "q": "A particle moves along a straight line with velocity v(t)=6t-3t² meters per second for 0≤t≤3. What is the total distance traveled by the particle during this time?",
+   "options": [
+    "16 meters",
+    "0 meters",
+    "8 meters",
+    "4 meters"
+   ],
+   "answer": 2,
+   "explanation": "The velocity is positive for 0<t<2 and negative for 2<t<3. Thus total distance is ∫ from 0 to 2 of (6t-3t²) dt minus ∫ from 2 to 3 of (6t-3t²) dt = 4 - (-4)=8 meters. The net displacement is 0 meters, but that is not total distance."
+  },
+  {
+   "n": 16,
+   "topic": "Contextual applications of differentiation",
+   "q": "The radius of a circle is increasing at a constant rate of 0.5 centimeter per second. At the instant the radius is 10 centimeters, how fast is the area of the circle increasing?",
+   "options": [
+    "5π square centimeters per second",
+    "20π square centimeters per second",
+    "100π square centimeters per second",
+    "10π square centimeters per second"
+   ],
+   "answer": 3,
+   "explanation": "The area is A=πr², so dA/dt=2πr dr/dt. Substituting r=10 and dr/dt=0.5 gives dA/dt=2π(10)(0.5)=10π square centimeters per second. The value 5π would omit the factor 2 from differentiating r²."
+  },
+  {
+   "n": 17,
+   "topic": "Contextual applications of differentiation",
+   "q": "The cost C(x), in dollars, of producing x units is modeled by C(x)=0.01x³+4x+150. What is the best interpretation of C′(20)?",
+   "options": [
+    "Producing the 21st unit costs exactly $16 more than producing the 20th unit.",
+    "When 20 units are produced, the total cost is increasing at a rate of about $16 per additional unit.",
+    "The average cost per unit when 20 units are produced is $16.",
+    "The total cost of producing 20 units is $16."
+   ],
+   "answer": 1,
+   "explanation": "C′(x)=0.03x²+4, so C′(20)=0.03(400)+4=16. The derivative gives the marginal cost: the rate at which total cost increases per additional unit when 20 units are produced. The exact extra cost to produce the 21st unit is C(21)-C(20)=16.61, not exactly $16."
+  },
+  {
+   "n": 18,
+   "topic": "Analytical applications of differentiation",
+   "q": "The function f is continuous on [2,5] and differentiable on (2,5). If f(2)=1 and f(5)=10, which of the following must be true?",
+   "options": [
+    "There is a number c in (2,5) such that f′(c)=9.",
+    "f is increasing on the interval [2,5].",
+    "f has a local maximum at some c in (2,5).",
+    "There is a number c in (2,5) such that f′(c)=3."
+   ],
+   "answer": 3,
+   "explanation": "By the Mean Value Theorem, there is a number c in (2,5) such that f′(c)=[f(5)-f(2)]/(5-2)=9/3=3. The value 9 would be the numerator in the average rate of change without dividing by the interval length, and the theorem does not guarantee that f is increasing throughout the interval."
+  },
+  {
+   "n": 19,
+   "topic": "Differentiation: definition and basic rules",
+   "q": "If f(x) = x² sin x, what is f′(π/2)?",
+   "options": [
+    "π",
+    "π²/4",
+    "0",
+    "2"
+   ],
+   "answer": 0,
+   "explanation": "Using the product rule, f′(x) = 2x sin x + x² cos x. At x = π/2, sin(π/2) = 1 and cos(π/2) = 0, so f′(π/2) = 2(π/2)(1) = π. The value π²/4 is f(π/2), not the derivative."
+  },
+  {
+   "n": 20,
+   "topic": "Differentiation: composite, implicit and inverse functions",
+   "q": "If f(x) = √(x² + 3x + 1), what is f′(0)?",
+   "options": [
+    "3/4",
+    "1/2",
+    "3/2",
+    "3"
+   ],
+   "answer": 2,
+   "explanation": "By the chain rule, f′(x) = (2x + 3)/(2√(x² + 3x + 1)). Substituting x = 0 gives 3/(2√1) = 3/2. The value 3 comes from differentiating only the inside expression and omitting the factor from the square root."
+  },
+  {
+   "n": 21,
+   "topic": "Integration and accumulation of change",
+   "q": "Water flows into a tank at a rate modeled by r(t) = 6 − 2t gallons per hour for 0 ≤ t ≤ 4. How many gallons of water flow into the tank from t = 0 to t = 3 hours?",
+   "options": [
+    "18 gallons",
+    "8 gallons",
+    "9 gallons",
+    "12 gallons"
+   ],
+   "answer": 2,
+   "explanation": "The total amount is ∫ from 0 to 3 of (6 − 2t) dt. An antiderivative is 6t − t², so the value is (18 − 9) − 0 = 9 gallons. The value 8 gallons would result from integrating over 0 ≤ t ≤ 4."
+  },
+  {
+   "n": 22,
+   "topic": "Differentiation: definition and basic rules",
+   "q": "Let f be a differentiable function with f(3) = 5 and f′(3) = −2. Using the tangent-line approximation at x = 3, what is the approximate value of f(3.1)?",
+   "options": [
+    "5.2",
+    "4.8",
+    "4.5",
+    "4.98"
+   ],
+   "answer": 1,
+   "explanation": "The tangent-line approximation is f(3.1) ≈ f(3) + f′(3)(3.1 − 3) = 5 + (−2)(0.1) = 4.8. The value 5.2 uses the opposite sign for the slope."
+  },
+  {
+   "n": 23,
+   "topic": "Integration and accumulation of change",
+   "q": "Let F(x) = ∫ from 2 to x² of √(1 + t³) dt. What is F′(1)?",
+   "options": [
+    "2",
+    "4",
+    "√2",
+    "2√2"
+   ],
+   "answer": 3,
+   "explanation": "By the Fundamental Theorem of Calculus and the chain rule, F′(x) = √(1 + (x²)³) · 2x = 2x√(1 + x⁶). At x = 1, this is 2√(1 + 1) = 2√2. The value √2 comes from evaluating the integrand at the upper limit and omitting the factor 2x."
+  },
+  {
+   "n": 24,
+   "topic": "Limits and continuity",
+   "q": "Let f be the function defined by f(x) = (x² + ax + b)/(x − 2) for x ≠ 2, and f(2) = 5. If f is continuous at x = 2, what is b − a?",
+   "options": [
+    "−7",
+    "7",
+    "−5",
+    "−6"
+   ],
+   "answer": 0,
+   "explanation": "For the limit at x = 2 to be finite, the numerator must be 0 at x = 2, so 4 + 2a + b = 0. Factoring then gives (x² + ax + b)/(x − 2) = x + a + 2 near x = 2, so the limit is 2 + a + 2 = a + 4. Setting a + 4 = 5 gives a = 1, and then b = −6, so b − a = −7."
+  },
+  {
+   "n": 25,
+   "topic": "Differentiation: composite, implicit and inverse functions",
+   "q": "The differentiable function f has an inverse function. Selected values of f and f′ are given in the table.\n\nx | 1 | 2 | 3 | 4\nf(x) | 4 | 1 | 2 | 5\nf′(x) | 3 | −2 | 5 | 1/3\n\nWhat is (f⁻¹)′(2)?",
+   "options": [
+    "1/3",
+    "1/5",
+    "5",
+    "−1/2"
+   ],
+   "answer": 1,
+   "explanation": "Since f(3) = 2, the inverse function satisfies f⁻¹(2) = 3. The inverse-function derivative formula gives (f⁻¹)′(2) = 1/f′(3) = 1/5. The value −1/2 would come from using f′(2) instead of f′(3)."
+  },
+  {
+   "n": 26,
+   "topic": "Differential equations",
+   "q": "If y is a function of x satisfying dy/dx = y cos x and y(0) = 2, which of the following gives y as a function of x?",
+   "options": [
+    "2 + sin x",
+    "e^(2 sin x)",
+    "2e^(cos x)",
+    "2e^(sin x)"
+   ],
+   "answer": 3,
+   "explanation": "Separating variables gives (1/y) dy = cos x dx, so ln y = sin x + K and y = Ke^(sin x). The initial condition y(0) = 2 gives K = 2, so y = 2e^(sin x)."
+  },
+  {
+   "n": 27,
+   "topic": "Differential equations",
+   "q": "What is the particular solution to the differential equation dy/dx = 2x/y with initial condition y(0) = 1?",
+   "options": [
+    "y = √(2x² + 1)",
+    "y = √(x² + 1)",
+    "y = e^(x²)",
+    "y = x² + 1"
+   ],
+   "answer": 0,
+   "explanation": "Separating variables gives y dy = 2x dx, so y²/2 = x² + K. The initial condition gives 1/2 = K, so y² = 2x² + 1. Since y(0) = 1 is positive, y = √(2x² + 1)."
+  },
+  {
+   "n": 28,
+   "topic": "Differential equations",
+   "q": "Maya is modeling the growth of a cell culture. The culture has 200 cells at time t = 0, and its growth rate is proportional to the number of cells. The population doubles every 3 hours. Which expression gives the number of cells N(t) after t hours?",
+   "options": [
+    "200(2)^(t/3)",
+    "200(1/2)^(t/3)",
+    "200e^(t/3)",
+    "200(2)^(3t)"
+   ],
+   "answer": 0,
+   "explanation": "Exponential growth with doubling time 3 has the form N(t) = N(0)(2)^(t/3). With N(0) = 200, this is N(t) = 200(2)^(t/3), which gives 400 cells at t = 3."
+  },
+  {
+   "n": 29,
+   "topic": "Applications of integration",
+   "q": "What is the average value of f(x) = x² on the interval [1,3]?",
+   "options": [
+    "4",
+    "8/3",
+    "26/3",
+    "13/3"
+   ],
+   "answer": 3,
+   "explanation": "The average value is 1/(3−1) times ∫ from 1 to 3 of x² dx = 1/2 [x³/3] from 1 to 3 = 1/2(27/3 − 1/3) = 1/2(26/3) = 13/3."
+  },
+  {
+   "n": 30,
+   "topic": "Contextual applications of differentiation",
+   "q": "A particle moves along a straight line with position s(t) = t³ − 6t² + 9t for t ≥ 0. For which intervals is the particle slowing down?",
+   "options": [
+    "0 < t < 2",
+    "0 < t < 1 and 2 < t < 3",
+    "1 < t < 2 and t > 3",
+    "1 < t < 3"
+   ],
+   "answer": 1,
+   "explanation": "v(t)=s′(t)=3(t−1)(t−3) and a(t)=v′(t)=6(t−2). The particle slows down when velocity and acceleration have opposite signs. This happens for 0<t<1, where v>0 and a<0, and for 2<t<3, where v<0 and a>0."
+  },
+  {
+   "n": 31,
+   "topic": "Analytical applications of differentiation",
+   "q": "The function f is defined by f(x) = x³ − 3x² + 4. At what value of x does f have a local minimum?",
+   "options": [
+    "x = 0 and x = 2",
+    "x = 2",
+    "x = 0",
+    "x = 1"
+   ],
+   "answer": 1,
+   "explanation": "f′(x)=3x²−6x=3x(x−2), so the critical numbers are x=0 and x=2. Since f″(x)=6x−6, f″(0)<0 and f″(2)>0, so the local minimum occurs at x=2."
+  },
+  {
+   "n": 32,
+   "topic": "Analytical applications of differentiation",
+   "q": "The function f is differentiable on (0,6) and continuous on [0,6]. If f(1) = 2 and f(5) = 14, which of the following must be true?",
+   "options": [
+    "f′(x) = 3 for every x in (1,5).",
+    "There is a number c in (1,5) such that f′(c) = 3.",
+    "f has a local maximum in (1,5).",
+    "There is a number c in (1,5) such that f′(c) = 12."
+   ],
+   "answer": 1,
+   "explanation": "The average rate of change of f on [1,5] is (14 − 2)/(5 − 1) = 3. By the Mean Value Theorem, there is at least one c in (1,5) with f′(c) = 3. The theorem does not force f′ to equal 3 everywhere, nor does it guarantee a local maximum or a derivative value of 12."
+  },
+  {
+   "n": 33,
+   "topic": "Limits and continuity",
+   "q": "Let f be the function defined by f(x)= (x² − 4x + 3)/(x² − 1) for x≠1 and x≠−1, and f(1)=k. For what value of k is f continuous at x=1?",
+   "options": [
+    "0",
+    "−1",
+    "−2",
+    "1"
+   ],
+   "answer": 1,
+   "explanation": "Factor and cancel: f(x)=((x−1)(x−3))/((x−1)(x+1))=(x−3)/(x+1) for x near 1, x≠1. Thus lim x→1 f(x)=(1−3)/(1+1)=−1, so continuity at x=1 requires k=−1."
+  },
+  {
+   "n": 34,
+   "topic": "Limits and continuity",
+   "q": "What is lim x→0 (√(x+9) − 3)/x ?",
+   "options": [
+    "1/6",
+    "1/3",
+    "Does not exist",
+    "0"
+   ],
+   "answer": 0,
+   "explanation": "Rationalizing the numerator gives ((x+9)−9)/(x(√(x+9)+3))=1/(√(x+9)+3). As x→0, this tends to 1/(3+3)=1/6, so the limit exists even though direct substitution gives 0/0."
+  },
+  {
+   "n": 35,
+   "topic": "Limits and continuity",
+   "q": "The function g is continuous on [0,6]. Selected values of g are shown in the table.\nx | 0 | 2 | 4 | 6\ng(x) | 4 | 12 | 6 | 14\nWhat is the least possible number of solutions to g(x)=10 on [0,6]?",
+   "options": [
+    "2",
+    "3",
+    "4",
+    "1"
+   ],
+   "answer": 1,
+   "explanation": "On each interval [0,2], [2,4], and [4,6], the value 10 lies strictly between the endpoint values of the continuous function g. Therefore g(x)=10 has at least one solution in each of these three intervals, and the endpoint values are not 10, so the least possible number is 3."
+  },
+  {
+   "n": 36,
+   "topic": "Differentiation: definition and basic rules",
+   "q": "If f(x)= x/(x+2), what is f′(1)?",
+   "options": [
+    "2/9",
+    "4/9",
+    "1/9",
+    "2/3"
+   ],
+   "answer": 0,
+   "explanation": "By the quotient rule, f′(x)=((1)(x+2)−x(1))/(x+2)²=2/(x+2)². Evaluating at x=1 gives 2/(3²)=2/9; using x+2 instead of (x+2)² would incorrectly give 2/3."
+  },
+  {
+   "n": 37,
+   "topic": "Differentiation: definition and basic rules",
+   "q": "The graph of f(x)=x³−6x²+9x has horizontal tangents at which x-values?",
+   "options": [
+    "x = 2 only",
+    "x = 1 and x = 3",
+    "x = −1 and x = −3",
+    "x = 0 and x = 3"
+   ],
+   "answer": 1,
+   "explanation": "f′(x)=3x²−12x+9=3(x−1)(x−3). Horizontal tangents occur where f′(x)=0, which gives x=1 and x=3."
+  },
+  {
+   "n": 38,
+   "topic": "Differentiation: composite, implicit and inverse functions",
+   "q": "The functions f and g are differentiable. The table gives values of f, f′, g, and g′ at selected values of x.\nx | 1 | 2\nf(x) | 4 | 1\nf′(x) | 3 | -2\ng(x) | 2 | 1\ng′(x) | 5 | 4\nIf h(x)=f(g(x)), what is h′(2)?",
+   "options": [
+    "12",
+    "15",
+    "−8",
+    "20"
+   ],
+   "answer": 0,
+   "explanation": "By the chain rule, h′(2)=f′(g(2))g′(2). From the table g(2)=1 and g′(2)=4, while f′(1)=3, so h′(2)=3·4=12. Using f′(2) instead of f′(g(2)) gives (−2)·4=−8."
+  },
+  {
+   "n": 39,
+   "topic": "Integration and accumulation of change",
+   "q": "What is ∫ from 0 to 3 of (2x + e^x) dx?",
+   "options": [
+    "e³ + 8",
+    "e³ + 9",
+    "e³ − 1",
+    "e³ + 10"
+   ],
+   "answer": 0,
+   "explanation": "An antiderivative of 2x+e^x is x²+e^x. Evaluating from 0 to 3 gives (9+e³)−(0+1)=e³+8. Forgetting to subtract the value at the lower limit gives e³+9."
+  },
+  {
+   "n": 40,
+   "topic": "Integration and accumulation of change",
+   "q": "If F(x)=∫ from 1 to x² of sin(t²) dt, what is F′(x)?",
+   "options": [
+    "2x sin(x⁴)",
+    "sin(x²)",
+    "sin(x⁴)",
+    "2x sin(x²)"
+   ],
+   "answer": 0,
+   "explanation": "By the Fundamental Theorem of Calculus and the chain rule, F′(x)=sin((x²)²)·(2x)=2x sin(x⁴). Omitting the derivative of the upper limit gives sin(x⁴)."
+  },
+  {
+   "n": 41,
+   "topic": "Differential equations",
+   "q": "Let y = f(x) be the solution to the differential equation dy/dx = y/(x + 1) for x > −1, with initial condition f(1) = 3. What is f(3)?",
+   "options": [
+    "3/2",
+    "6",
+    "12",
+    "5"
+   ],
+   "answer": 1,
+   "explanation": "Separating variables gives dy/y = dx/(x + 1), so ln y = ln(x + 1) + C and y = C₂(x + 1) for x > −1. From f(1) = 3, C₂ = 3/2, and therefore f(3) = (3/2)(4) = 6. The value 12 comes from using C₂ = 3, and 3/2 comes from the sign error y = C/(x + 1)."
+  },
+  {
+   "n": 42,
+   "topic": "Differential equations",
+   "q": "A yeast culture has mass M(t) grams after t hours, where dM/dt = k(10 − M) for a positive constant k. Initially the mass is 2 grams, and after 1 hour it is 5 grams. Which expression gives M(t)?",
+   "options": [
+    "10 + 8(5/8)^t",
+    "10 − 8(5/8)^t",
+    "10 − 8(8/5)^t",
+    "10 − 8(3/8)^t"
+   ],
+   "answer": 1,
+   "explanation": "Solving dM/(10 − M) = k dt gives M(t) = 10 − Ae^(−kt). Since M(0) = 2, A = 8. The condition M(1) = 5 gives e^(−k) = 5/8, so M(t) = 10 − 8(5/8)^t. The expression 10 + 8(5/8)^t has the wrong sign for the initial difference from 10."
+  }
+ ]
+}

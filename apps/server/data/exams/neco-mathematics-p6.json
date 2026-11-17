@@ -1,0 +1,791 @@
+{
+ "id": "neco-mathematics-p6",
+ "exam": "neco",
+ "subject": "mathematics",
+ "year": null,
+ "number": 6,
+ "source": "ai",
+ "minutes": 60,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Trigonometry",
+   "q": "Given that cos θ = 12/13 and 270° < θ < 360°, find the value of sin θ + tan θ.",
+   "options": [
+    "−5/13",
+    "5/156",
+    "−125/156",
+    "−5/12"
+   ],
+   "answer": 2,
+   "explanation": "In the fourth quadrant sin θ is negative, so sin θ = −5/13 and tan θ = sin θ/cos θ = −5/12. Therefore sin θ + tan θ = −5/13 − 5/12 = −(60 + 65)/156 = −125/156. A tempting error is to take sin θ as positive or to add only sin θ and ignore tan θ."
+  },
+  {
+   "n": 2,
+   "topic": "Trigonometry",
+   "q": "In triangle PQR, PQ = 13 cm, QR = 14 cm and PR = 15 cm. Find cos ∠PQR.",
+   "options": [
+    "3/5",
+    "33/65",
+    "5/13",
+    "5/12"
+   ],
+   "answer": 2,
+   "explanation": "Using the cosine rule at Q, cos ∠PQR = (PQ² + QR² − PR²)/(2 × PQ × QR) = (13² + 14² − 15²)/(2 × 13 × 14) = 140/364 = 5/13. Using PR as an adjacent side or mixing the order of sides gives a different fraction."
+  },
+  {
+   "n": 3,
+   "topic": "Trigonometry",
+   "q": "Solve 2 cos² θ + 3 cos θ + 1 = 0 for 0° ≤ θ < 360°.",
+   "options": [
+    "120°, 180° and 240°",
+    "60°, 120° and 240°",
+    "60°, 180° and 300°",
+    "120° and 240°"
+   ],
+   "answer": 0,
+   "explanation": "Factorising gives (2 cos θ + 1)(cos θ + 1) = 0, so cos θ = −1/2 or cos θ = −1. Within 0° ≤ θ < 360°, cos θ = −1/2 at 120° and 240°, while cos θ = −1 at 180°, giving 120°, 180° and 240°. Taking positive reciprocals or omitting the solution at 180° leads to the other choices."
+  },
+  {
+   "n": 4,
+   "topic": "Matrices and determinants",
+   "q": "If M = [[4, −1], [3, 2]], find M⁻¹.",
+   "options": [
+    "1/5 × [[2, 1], [−3, 4]]",
+    "1/11 × [[2, −1], [3, 4]]",
+    "1/11 × [[4, 1], [−3, 2]]",
+    "1/11 × [[2, 1], [−3, 4]]"
+   ],
+   "answer": 3,
+   "explanation": "For M = [[a, b], [c, d]], the inverse is 1/(ad − bc) [[d, −b], [−c, a]]. Here ad − bc = 4 × 2 − (−1) × 3 = 11, so M⁻¹ = 1/11 [[2, 1], [−3, 4]]. Using 5 as the determinant or changing the signs in the adjugate gives the other options."
+  },
+  {
+   "n": 5,
+   "topic": "Matrices and determinants",
+   "q": "If A = [[2, 1], [3, 4]] and B = [[0, 2], [1, 5]], find AB.",
+   "options": [
+    "[[1, 9], [4, 26]]",
+    "[[0, 2], [3, 20]]",
+    "[[1, 9], [7, 22]]",
+    "[[6, 8], [17, 21]]"
+   ],
+   "answer": 0,
+   "explanation": "Multiplying rows of A by columns of B gives AB = [[2 × 0 + 1 × 1, 2 × 2 + 1 × 5], [3 × 0 + 4 × 1, 3 × 2 + 4 × 5]] = [[1, 9], [4, 26]]. Computing BA instead, multiplying corresponding entries, or making an arithmetic slip in the second row gives the other options."
+  },
+  {
+   "n": 6,
+   "topic": "Matrices and determinants",
+   "q": "Find the determinant of N = [[1, 2, 0], [3, 1, 4], [2, −1, 5]].",
+   "options": [
+    "23",
+    "−23",
+    "−5",
+    "2"
+   ],
+   "answer": 2,
+   "explanation": "Expanding along the first row, det N = 1 × (1 × 5 − 4 × (−1)) − 2 × (3 × 5 − 4 × 2) + 0 = 9 − 2 × 7 = −5. Reversing a cofactor sign or miscomputing the second minor gives values such as −23 or 2."
+  },
+  {
+   "n": 7,
+   "topic": "Simultaneous equations and inequalities",
+   "q": "At Oja Oba Market in Ilorin, 4 kg of garri and 3 kg of beans cost ₦5,500, while 2 kg of garri and 5 kg of beans cost ₦5,900. Find the cost of 1 kg of garri.",
+   "options": [
+    "₦800",
+    "₦1,000",
+    "₦700",
+    "₦900"
+   ],
+   "answer": 2,
+   "explanation": "Let the cost of 1 kg of garri be g and 1 kg of beans be b. Then 4g + 3b = 5500 and 2g + 5b = 5900. Multiplying the second equation by 2 gives 4g + 10b = 11800; subtracting the first equation gives 7b = 6300, so b = 900. Then 2g + 4500 = 5900, hence g = 700."
+  },
+  {
+   "n": 8,
+   "topic": "Simultaneous equations and inequalities",
+   "q": "Find the range of values of x satisfying both 5x − 2 ≤ 3x + 8 and 2x + 7 > x − 1.",
+   "options": [
+    "−8 < x ≤ 5",
+    "−8 < x < 5",
+    "x ≤ 5",
+    "−8 ≤ x < 5"
+   ],
+   "answer": 0,
+   "explanation": "The first inequality gives 2x ≤ 10, so x ≤ 5. The second gives x > −8. Combining them gives −8 < x ≤ 5. Keeping the wrong inequality sign or using the wrong boundary inclusion produces the other ranges."
+  },
+  {
+   "n": 9,
+   "topic": "Integration",
+   "q": "Evaluate ∫₀¹ (4x − 1)(x + 3) dx.",
+   "options": [
+    "59/6",
+    "41/6",
+    "23/6",
+    "28/3"
+   ],
+   "answer": 2,
+   "explanation": "Expanding gives 4x² + 11x − 3. Integrating gives 4/3x³ + 11/2x² − 3x; at x = 1 this is 4/3 + 11/2 − 3 = 23/6, while at x = 0 it is 0. Omitting the −3 term would give 41/6, which is a common error."
+  },
+  {
+   "n": 10,
+   "topic": "Integration",
+   "q": "A body moves along a straight line with acceleration a = (4 − 2t) m/s². If its velocity is 5 m/s when t = 0, find its velocity when t = 3 s.",
+   "options": [
+    "3 m/s",
+    "5 m/s",
+    "26 m/s",
+    "8 m/s"
+   ],
+   "answer": 3,
+   "explanation": "Velocity v = ∫(4 − 2t)dt = 4t − t² + C. Since v = 5 when t = 0, C = 5, so v = 4t − t² + 5. At t = 3 s, v = 12 − 9 + 5 = 8 m/s; omitting the constant would wrongly give 3 m/s."
+  },
+  {
+   "n": 11,
+   "topic": "Mensuration",
+   "q": "A rectangular water tank in Onitsha measures 1.2 m by 0.8 m by 0.5 m. How many litres of water can it hold when full?",
+   "options": [
+    "480 litres",
+    "48 litres",
+    "0.48 litres",
+    "4,800 litres"
+   ],
+   "answer": 0,
+   "explanation": "Volume = 1.2 × 0.8 × 0.5 = 0.48 m³. Since 1 m³ = 1000 litres, capacity = 0.48 × 1000 = 480 litres. A decimal shift gives 48 litres or 4,800 litres, which is incorrect."
+  },
+  {
+   "n": 12,
+   "topic": "Mensuration",
+   "q": "A solid spherical ball in Kano has radius 21 cm. Find its volume. [Take π = 22/7]",
+   "options": [
+    "38,808 cm³",
+    "116,424 cm³",
+    "29,106 cm³",
+    "5,544 cm³"
+   ],
+   "answer": 0,
+   "explanation": "Volume = 4/3πr³ = 4/3 × 22/7 × 21³ = 38,808 cm³. Using πr³ without the factor 4/3 gives 29,106 cm³, while forgetting to divide by 3 gives 116,424 cm³."
+  },
+  {
+   "n": 13,
+   "topic": "Sequences and series",
+   "q": "Three numbers are in arithmetic progression. Their sum is 27 and the product of the first and the third is 65. Find the largest of the three numbers.",
+   "options": [
+    "17",
+    "5",
+    "9",
+    "13"
+   ],
+   "answer": 3,
+   "explanation": "Let the numbers be 9 − d, 9, and 9 + d because their sum is 27. Then (9 − d)(9 + d) = 65, so 81 − d² = 65 and d² = 16, giving d = 4. The numbers are 5, 9, and 13, so the largest is 13; 9 is only the middle term."
+  },
+  {
+   "n": 14,
+   "topic": "Sequences and series",
+   "q": "A ball is dropped from a height of 9 m. It rebounds to 2/3 of the height from which it falls each time. Find the total vertical distance travelled by the ball before coming to rest.",
+   "options": [
+    "27 m",
+    "54 m",
+    "36 m",
+    "45 m"
+   ],
+   "answer": 3,
+   "explanation": "After the first fall of 9 m, the rebound heights form a geometric series 6, 4, 8/3, … with sum 6/(1 − 2/3) = 18 m in one direction. The upward and downward travel after the first fall is 2 × 18 = 36 m, so total distance = 9 + 36 = 45 m. Taking 54 m counts the first fall twice."
+  },
+  {
+   "n": 15,
+   "topic": "Indices and logarithms",
+   "q": "A radioactive substance in a laboratory in Zaria has mass 80 g. Its mass halves every 3 years. What mass remains after 12 years?",
+   "options": [
+    "5 g",
+    "10 g",
+    "2.5 g",
+    "20 g"
+   ],
+   "answer": 0,
+   "explanation": "In 12 years there are 12 ÷ 3 = 4 halving periods. The remaining mass is 80 × (1/2)⁴ = 80/16 = 5 g. Using three halving periods gives 10 g, and using five gives 2.5 g."
+  },
+  {
+   "n": 16,
+   "topic": "Indices and logarithms",
+   "q": "Solve for x: log₅(x − 2) = 1 + log₅ 3.",
+   "options": [
+    "10",
+    "5",
+    "17",
+    "13"
+   ],
+   "answer": 2,
+   "explanation": "The right side is log₅5 + log₅3 = log₅15. Hence x − 2 = 15, so x = 17. Setting x − 2 = 5 + 3 gives x = 10, while subtracting 2 instead of adding gives 13; both are incorrect."
+  },
+  {
+   "n": 17,
+   "topic": "Indices and logarithms",
+   "q": "Given that log₂ 3 = p, express log₂ 48 in terms of p.",
+   "options": [
+    "p + 3",
+    "4p",
+    "3p",
+    "4 + p"
+   ],
+   "answer": 3,
+   "explanation": "Since 48 = 16 × 3 = 2⁴ × 3, we have log₂48 = log₂2⁴ + log₂3 = 4 + p. Multiplying p by 4 or 3 is a common error from wrongly treating 48 as a power of 3."
+  },
+  {
+   "n": 18,
+   "topic": "Statistics",
+   "q": "The numbers of cars washed per day at a car wash in Enugu over 20 days are recorded as follows: 4 cars on 3 days, 5 cars on 7 days, 6 cars on 6 days and 7 cars on 4 days. Calculate the mean number of cars washed per day.",
+   "options": [
+    "6.00 cars per day",
+    "5.45 cars per day",
+    "5.50 cars per day",
+    "5.55 cars per day"
+   ],
+   "answer": 3,
+   "explanation": "Total cars washed = 4×3 + 5×7 + 6×6 + 7×4 = 12 + 35 + 36 + 28 = 111. Mean = 111 ÷ 20 = 5.55, so the mean is 5.55 cars per day. Using the wrong total frequency or rounding too early leads to the other values."
+  },
+  {
+   "n": 19,
+   "topic": "Angles and circle geometry",
+   "q": "In a cyclic quadrilateral ABCD, ∠ABC = (4x + 10)° and ∠ADC = (2x + 50)°. Find the value of x.",
+   "options": [
+    "20",
+    "15",
+    "25",
+    "10"
+   ],
+   "answer": 0,
+   "explanation": "Opposite angles of a cyclic quadrilateral are supplementary, so (4x + 10) + (2x + 50) = 180. This gives 6x + 60 = 180, hence x = 20. Checking gives ∠ABC = 90° and ∠ADC = 90°, which are supplementary."
+  },
+  {
+   "n": 20,
+   "topic": "Angles and circle geometry",
+   "q": "From an external point T, a tangent TP and a secant TQR are drawn to a circle, with Q between T and R. If TQ = 4 cm and QR = 5 cm, find the length TP.",
+   "options": [
+    "6 cm",
+    "9 cm",
+    "3 cm",
+    "5 cm"
+   ],
+   "answer": 0,
+   "explanation": "By the tangent–secant theorem, TP² = TQ × TR. Here TR = TQ + QR = 4 + 5 = 9 cm, so TP² = 4 × 9 = 36 and TP = 6 cm. Adding only the given lengths without squaring would not give the tangent length."
+  },
+  {
+   "n": 21,
+   "topic": "Variation",
+   "q": "The amount A paid to a group of workers varies directly as the number of workers n and the number of hours h worked. Six workers working for 8 hours are paid ₦24,000. How much will nine workers working for 5 hours be paid at the same rate?",
+   "options": [
+    "₦22,500",
+    "₦18,000",
+    "₦30,000",
+    "₦27,000"
+   ],
+   "answer": 0,
+   "explanation": "The variation is A = knh. Using the first set, 24,000 = k × 6 × 8, so k = 500. For nine workers and 5 hours, A = 500 × 9 × 5 = ₦22,500."
+  },
+  {
+   "n": 22,
+   "topic": "Number bases",
+   "q": "If 314ₓ = 118₁₀, find the value of x.",
+   "options": [
+    "7",
+    "6",
+    "8",
+    "5"
+   ],
+   "answer": 1,
+   "explanation": "Expanding 314ₓ gives 3x² + x + 4. Solving 3x² + x + 4 = 118 gives 3x² + x - 114 = 0, which factorises as (3x + 19)(x - 6) = 0. Since a base must be greater than 4, x = 6."
+  },
+  {
+   "n": 23,
+   "topic": "Statistics",
+   "q": "The masses, in kg, of seven parcels at a post office in Abeokuta are 8, 11, 9, 14, 11, 7 and 10. Calculate the median mass.",
+   "options": [
+    "11 kg",
+    "10 kg",
+    "9 kg",
+    "10.5 kg"
+   ],
+   "answer": 1,
+   "explanation": "Arrange the masses in order: 7, 8, 9, 10, 11, 11, 14. The middle value is the fourth mass, which is 10 kg. The value 11 kg is the mode, not the median."
+  },
+  {
+   "n": 24,
+   "topic": "Surds",
+   "q": "Solve for x: x − √(3x + 4) = 2.",
+   "options": [
+    "0",
+    "7",
+    "4",
+    "0 and 7"
+   ],
+   "answer": 1,
+   "explanation": "Squaring x − 2 = √(3x + 4) gives x² − 7x = 0, so x = 0 or x = 7. Checking in the original equation, x = 0 gives −2, not 2; only x = 7 gives 7 − √25 = 2. Hence the valid solution is 7."
+  },
+  {
+   "n": 25,
+   "topic": "Surds",
+   "q": "Rationalise the denominator and simplify: 8/(√6 + √2).",
+   "options": [
+    "2√6 + 2√2",
+    "2√6 − 2√2",
+    "4√6 − 4√2",
+    "√6 − √2"
+   ],
+   "answer": 1,
+   "explanation": "Multiplying numerator and denominator by √6 − √2 gives 8(√6 − √2)/(6 − 2). This simplifies to 2√6 − 2√2. Keeping the plus sign after multiplying by the conjugate gives the incorrect 2√6 + 2√2."
+  },
+  {
+   "n": 26,
+   "topic": "Coordinate geometry",
+   "q": "A straight line in Enugu passes through N(−2, 5) and is perpendicular to 4x − 3y = 12. Find its equation.",
+   "options": [
+    "3x + 4y + 14 = 0",
+    "3x + 4y − 14 = 0",
+    "4x − 3y + 23 = 0",
+    "3x − 4y + 26 = 0"
+   ],
+   "answer": 1,
+   "explanation": "The line 4x − 3y = 12 has gradient 4/3, so a perpendicular line has gradient −3/4. Using N(−2, 5), y − 5 = −3/4(x + 2), which simplifies to 3x + 4y − 14 = 0. Using the same gradient instead gives 4x − 3y + 23 = 0, which is not perpendicular."
+  },
+  {
+   "n": 27,
+   "topic": "Coordinate geometry",
+   "q": "A circle has equation x² + y² − 6x + 8y − 11 = 0. Find its centre and radius.",
+   "options": [
+    "centre (−3, 4), radius 6",
+    "centre (3, −4), radius 36",
+    "centre (3, 4), radius 6",
+    "centre (3, −4), radius 6"
+   ],
+   "answer": 3,
+   "explanation": "Completing the square gives (x − 3)² + (y + 4)² = 36. Hence the centre is (3, −4) and the radius is √36 = 6. The value 36 is the square of the radius, not the radius itself."
+  },
+  {
+   "n": 28,
+   "topic": "Differentiation",
+   "q": "Find the x-coordinates of the points on the curve y = x³ − 3x² + 4 at which the tangent is parallel to y = 9x + 1.",
+   "options": [
+    "x = 3 and x = 1",
+    "x = −3 and x = 1",
+    "x = 3 and x = −1",
+    "x = 0 and x = 2"
+   ],
+   "answer": 2,
+   "explanation": "The tangent must have gradient 9, so 3x² − 6x = 9. This gives x² − 2x − 3 = 0, hence (x − 3)(x + 1) = 0, so x = 3 or x = −1. Setting the derivative to zero instead would give x = 0 or x = 2, which are the stationary-point x-values."
+  },
+  {
+   "n": 29,
+   "topic": "Differentiation",
+   "q": "Given that y = (5x − 2)/(x + 1), where x ≠ −1, find dy/dx.",
+   "options": [
+    "−7/(x + 1)²",
+    "3/(x + 1)²",
+    "7/(x + 1)²",
+    "7/(x + 1)"
+   ],
+   "answer": 2,
+   "explanation": "Applying the quotient rule gives [5(x + 1) − (5x − 2)]/(x + 1)² = (5x + 5 − 5x + 2)/(x + 1)² = 7/(x + 1)². The result 7/(x + 1) would come from omitting the square in the denominator."
+  },
+  {
+   "n": 30,
+   "topic": "Quadratic equations",
+   "q": "Solve the equation 4x² − 12x + 5 = 0.",
+   "options": [
+    "x = 1/2 or x = 5/2",
+    "x = 1 or x = 5",
+    "x = −1/2 or x = −5/2",
+    "x = 1/2 or x = −5/2"
+   ],
+   "answer": 0,
+   "explanation": "Factorising gives (2x − 1)(2x − 5) = 0. Therefore 2x − 1 = 0 or 2x − 5 = 0, so x = 1/2 or x = 5/2. The product of the roots is 5/4 and their sum is 3, both consistent with this answer."
+  },
+  {
+   "n": 31,
+   "topic": "Quadratic equations",
+   "q": "If α and β are the roots of 2x² − 7x + 3 = 0, find 1/α + 1/β.",
+   "options": [
+    "3/7",
+    "5",
+    "7/6",
+    "7/3"
+   ],
+   "answer": 3,
+   "explanation": "For 2x² − 7x + 3 = 0, α + β = 7/2 and αβ = 3/2. Thus 1/α + 1/β = (α + β)/(αβ) = (7/2)/(3/2) = 7/3. The value 7/6 arises from taking αβ as 3 instead of 3/2."
+  },
+  {
+   "n": 32,
+   "topic": "Sets",
+   "q": "In a class of 40 students in Ilorin, 24 offer Economics, 18 offer Government and 6 offer neither subject. How many students offer both Economics and Government?",
+   "options": [
+    "12",
+    "6",
+    "8",
+    "10"
+   ],
+   "answer": 2,
+   "explanation": "Students offering at least one subject = 40 − 6 = 34. Using n(E ∪ G) = n(E) + n(G) − n(E ∩ G) gives 34 = 24 + 18 − n(E ∩ G), so the number offering both is 8. The value 6 is the number offering neither, not both."
+  },
+  {
+   "n": 33,
+   "topic": "Sets",
+   "q": "Let U = {2, 3, 4, 5, 6, 7, 8, 9}, A = {x ∈ U : x is a prime number} and B = {x ∈ U : x is an even number}. Find (A ∪ B)′.",
+   "options": [
+    "{3, 5, 7}",
+    "{2}",
+    "{9}",
+    "{4, 6, 8}"
+   ],
+   "answer": 2,
+   "explanation": "The primes in U are {2, 3, 5, 7} and the even numbers are {2, 4, 6, 8}, so A ∪ B = {2, 3, 4, 5, 6, 7, 8}. The complement in U is the remaining element, {9}."
+  },
+  {
+   "n": 34,
+   "topic": "Sets",
+   "q": "In a survey of newspaper readers in Ogbomoso, 50 read The Guardian, 45 read Punch and 35 read Vanguard. Also, 18 read The Guardian and Punch, 15 read The Guardian and Vanguard, 12 read Punch and Vanguard, while 8 read all three newspapers. How many readers read exactly one of the three newspapers?",
+   "options": [
+    "72",
+    "50",
+    "64",
+    "56"
+   ],
+   "answer": 2,
+   "explanation": "The numbers reading only The Guardian, only Punch and only Vanguard are 50−18−15+8=25, 45−18−12+8=23 and 35−15−12+8=16 respectively. Their sum is 25+23+16=64, so 64 read exactly one newspaper."
+  },
+  {
+   "n": 35,
+   "topic": "Fractions, decimals and percentages",
+   "q": "A trader in Katsina had 4/5 of a bag of beans. He sold 3/8 of this quantity. What fraction of a full bag of beans remained?",
+   "options": [
+    "3/10",
+    "7/10",
+    "1/8",
+    "1/2"
+   ],
+   "answer": 3,
+   "explanation": "The quantity sold was (3/8) × (4/5) = 3/10 of a bag. The remaining fraction was 4/5 − 3/10 = 8/10 − 3/10 = 5/10 = 1/2 of a bag."
+  },
+  {
+   "n": 36,
+   "topic": "Fractions, decimals and percentages",
+   "q": "A shop in Umuahia marked a generator at ₦250,000. A cash customer was given a 12% discount, and 7.5% VAT was then charged on the discounted price. How much did the customer pay in total?",
+   "options": [
+    "₦242,500",
+    "₦238,750",
+    "₦236,500",
+    "₦220,000"
+   ],
+   "answer": 2,
+   "explanation": "After the 12% discount, the price is ₦250,000 × 0.88 = ₦220,000. VAT is 7.5% of ₦220,000 = ₦16,500, so the total paid is ₦220,000 + ₦16,500 = ₦236,500. Charging VAT on the original price would give ₦238,750, which is incorrect."
+  },
+  {
+   "n": 37,
+   "topic": "Trigonometry",
+   "q": "In right-angled triangle PQR, angle Q = 90°, PQ = 9 cm and QR = 40 cm. Find sin P.",
+   "options": [
+    "40/9",
+    "9/40",
+    "9/41",
+    "40/41"
+   ],
+   "answer": 3,
+   "explanation": "The hypotenuse PR = √(9² + 40²) = √(81 + 1600) = √1681 = 41 cm. Since sin P = opposite/hypotenuse = QR/PR, sin P = 40/41."
+  },
+  {
+   "n": 38,
+   "topic": "Matrices and determinants",
+   "q": "Find the determinant of the matrix [[1, 2, 0], [0, 3, 1], [2, 1, 4]].",
+   "options": [
+    "17",
+    "−15",
+    "15",
+    "9"
+   ],
+   "answer": 2,
+   "explanation": "Expanding along the first row: 1(3×4 − 1×1) − 2(0×4 − 1×2) + 0 = 1(11) − 2(−2) = 11 + 4 = 15. The terms involving zero in the first row do not add anything."
+  },
+  {
+   "n": 39,
+   "topic": "Matrices and determinants",
+   "q": "If M = [[2, 1], [5, 3]], find M⁻¹.",
+   "options": [
+    "[[−3, 1], [5, −2]]",
+    "[[3, 1], [−5, 2]]",
+    "[[3, −1], [5, 2]]",
+    "[[3, −1], [−5, 2]]"
+   ],
+   "answer": 3,
+   "explanation": "The determinant is 2×3 − 1×5 = 1. For a 2 × 2 matrix [[a, b], [c, d]], the inverse is (1/det) × [[d, −b], [−c, a]], so the inverse is [[3, −1], [−5, 2]]."
+  },
+  {
+   "n": 40,
+   "topic": "Probability",
+   "q": "A bag of buttons at a tailoring shop in Kano contains 6 white, 4 black and 5 brown buttons. If one button is picked at random, what is the probability that it is not white?",
+   "options": [
+    "3/5",
+    "3/10",
+    "4/15",
+    "2/5"
+   ],
+   "answer": 0,
+   "explanation": "There are 6 + 4 + 5 = 15 buttons in total, and 4 + 5 = 9 are not white. The probability is 9/15 = 3/5. The value 2/5 is the probability that the button is white, not non-white."
+  },
+  {
+   "n": 41,
+   "topic": "Probability",
+   "q": "A box in Enugu contains 4 blue pens and 6 yellow pens. Two pens are drawn at random one after the other without replacement. What is the probability that both pens are blue?",
+   "options": [
+    "4/15",
+    "2/15",
+    "1/5",
+    "4/25"
+   ],
+   "answer": 1,
+   "explanation": "The probability that the first pen is blue is 4/10 = 2/5. After removing one blue pen, the probability that the second is blue is 3/9 = 1/3, so the required probability is 2/5 × 1/3 = 2/15. The value 4/25 would come from replacing the first pen before drawing the second."
+  },
+  {
+   "n": 42,
+   "topic": "Simultaneous equations and inequalities",
+   "q": "At a stationery shop in Bauchi, Tunde bought 2 notebooks and 3 rulers for ₦950, while Amina bought 5 notebooks and 4 rulers for ₦1,850. How much do one notebook and one ruler cost altogether?",
+   "options": [
+    "₦300",
+    "₦400",
+    "₦350",
+    "₦450"
+   ],
+   "answer": 1,
+   "explanation": "Let a notebook cost n naira and a ruler cost r naira. From 2n + 3r = 950 and 5n + 4r = 1850, eliminating r gives 7n = 1750, so n = 250. Then 2(250) + 3r = 950 gives r = 150, and n + r = 400."
+  },
+  {
+   "n": 43,
+   "topic": "Simultaneous equations and inequalities",
+   "q": "Find the greatest integer x that satisfies both 5x − 3 < 2x + 21 and 3x + 4 ≥ x + 10.",
+   "options": [
+    "6",
+    "7",
+    "9",
+    "8"
+   ],
+   "answer": 1,
+   "explanation": "The first inequality simplifies to 3x < 24, so x < 8. The second simplifies to 2x ≥ 6, so x ≥ 3. Thus the integers satisfying both are 3, 4, 5, 6 and 7; the greatest is 7. The value 8 would be chosen if the strict inequality were treated as inclusive."
+  },
+  {
+   "n": 44,
+   "topic": "Simultaneous equations and inequalities",
+   "q": "At Oja Oba Market in Ilorin, 3 tubers of yam and 2 baskets of tomatoes cost ₦9,500, while 4 tubers of yam and 1 basket of tomatoes cost ₦10,750. Find the total cost of 1 tuber of yam and 1 basket of tomatoes.",
+   "options": [
+    "₦3,250",
+    "₦3,800",
+    "₦3,550",
+    "₦4,000"
+   ],
+   "answer": 2,
+   "explanation": "Let a tuber of yam cost y naira and a basket of tomatoes cost t naira. From 3y + 2t = 9500 and 4y + t = 10750, doubling the second equation and subtracting gives 5y = 12000, so y = 2400. Then t = 10750 − 9600 = 1150, and y + t = 3550."
+  },
+  {
+   "n": 45,
+   "topic": "Mensuration",
+   "q": "A rectangular water tank in Ilesa measures 1.5 m by 80 cm by 60 cm. What is its capacity in litres when full?",
+   "options": [
+    "72 litres",
+    "720 litres",
+    "7,200 litres",
+    "900 litres"
+   ],
+   "answer": 1,
+   "explanation": "Converting to metres gives 1.5 m × 0.8 m × 0.6 m = 0.72 m³. Since 1 m³ = 1000 litres, the capacity is 0.72 × 1000 = 720 litres."
+  },
+  {
+   "n": 46,
+   "topic": "Mensuration",
+   "q": "A sector of a circle of radius 14 cm has angle 90°. It is folded to form the curved surface of a cone. Find the radius of the base of the cone. [Take π = 22/7]",
+   "options": [
+    "2.5 cm",
+    "5.5 cm",
+    "3.5 cm",
+    "7 cm"
+   ],
+   "answer": 2,
+   "explanation": "The arc length of the sector is 90/360 × 2 × 22/7 × 14 = 22 cm. This arc becomes the circumference of the base of the cone, so 2 × 22/7 × r = 22. Hence r = 22 × 7/44 = 3.5 cm."
+  },
+  {
+   "n": 47,
+   "topic": "Sequences and series",
+   "q": "A trader in Aba sold goods worth ₦50,000 in the first week. If the sales decrease by 10% each week, find the total sales for the first 4 weeks.",
+   "options": [
+    "₦171,950",
+    "₦17,195",
+    "₦36,450",
+    "₦170,000"
+   ],
+   "answer": 0,
+   "explanation": "Each week's sale is 0.9 of the previous week's sale, so this is a geometric series with a = 50,000 and r = 0.9. S₄ = 50,000(1 - 0.9⁴)/(1 - 0.9) = 50,000(1 - 0.6561)/0.1 = 171,950. Treating the fall as a straight ₦5,000 each week gives 170,000, but the decreases are percentages of the changing amount."
+  },
+  {
+   "n": 48,
+   "topic": "Sequences and series",
+   "q": "The sum to infinity of a geometric progression is 18 and its first term is 6. Find the third term.",
+   "options": [
+    "4",
+    "16/3",
+    "2/3",
+    "8/3"
+   ],
+   "answer": 3,
+   "explanation": "For a sum to infinity, S∞ = a/(1 - r); hence 18 = 6/(1 - r), so r = 2/3. The third term is ar² = 6 × (2/3)² = 6 × 4/9 = 8/3. Using r = 1/3 gives the incorrect third term 2/3."
+  },
+  {
+   "n": 49,
+   "topic": "Indices and logarithms",
+   "q": "Simplify (125^(2/3) × 49^(1/2)) ÷ 25^(3/2).",
+   "options": [
+    "7",
+    "5/7",
+    "7/5",
+    "7/25"
+   ],
+   "answer": 2,
+   "explanation": "125^(2/3) = 5² = 25, 49^(1/2) = 7, and 25^(3/2) = 5³ = 125. Therefore (25 × 7) ÷ 125 = 175/125 = 7/5. Taking the denominator as 25 instead of 125 would give 7, which is not correct."
+  },
+  {
+   "n": 50,
+   "topic": "Indices and logarithms",
+   "q": "Solve for x: log₃(2x - 1) - log₃(x - 2) = 1.",
+   "options": [
+    "5",
+    "1",
+    "7",
+    "2"
+   ],
+   "answer": 0,
+   "explanation": "Using the quotient rule, log₃((2x - 1)/(x - 2)) = 1, so (2x - 1)/(x - 2) = 3. Thus 2x - 1 = 3x - 6, giving x = 5, which satisfies x > 2. The value 2 makes the original logarithm undefined."
+  },
+  {
+   "n": 51,
+   "topic": "Indices and logarithms",
+   "q": "Given that log₁₀ 5 = 0.6990 and log₁₀ 7 = 0.8451, evaluate log₁₀ 0.28.",
+   "options": [
+    "0.1461",
+    "0.5529",
+    "-0.5529",
+    "-0.1461"
+   ],
+   "answer": 2,
+   "explanation": "Write 0.28 = 28/100 = 7/25 = 7/5². So log₁₀ 0.28 = log₁₀ 7 - 2 log₁₀ 5 = 0.8451 - 1.3980 = -0.5529. The common error of taking 0.28 as 7/5 leads to 0.1461, but the correct denominator is 25."
+  },
+  {
+   "n": 52,
+   "topic": "Statistics",
+   "q": "The marks scored by 10 pupils in a Mathematics test in Owerri are 5, 8, 6, 9, 8, 7, 4, 8, 10 and 5. Calculate the mode and median respectively.",
+   "options": [
+    "8 and 7",
+    "8 and 7.5",
+    "8 and 8",
+    "5 and 7.5"
+   ],
+   "answer": 1,
+   "explanation": "The mark 8 occurs most often, so the mode is 8. Arranged in order, the marks are 4, 5, 5, 6, 7, 8, 8, 8, 9, 10; the median is the average of the fifth and sixth marks, (7 + 8)/2 = 7.5."
+  },
+  {
+   "n": 53,
+   "topic": "Statistics",
+   "q": "The ages, in years, of 9 traders in Oja Oba Market, Ibadan, are 22, 25, 27, 29, 31, 34, 36, 38 and 41. Calculate the interquartile range.",
+   "options": [
+    "11 years",
+    "6 years",
+    "13 years",
+    "19 years"
+   ],
+   "answer": 0,
+   "explanation": "The data are already in order: 22, 25, 27, 29, 31, 34, 36, 38, 41. The lower quartile is (25 + 27)/2 = 26 and the upper quartile is (36 + 38)/2 = 37. Hence the interquartile range is 37 - 26 = 11 years; 19 years is the full range, not the interquartile range."
+  },
+  {
+   "n": 54,
+   "topic": "Angles and circle geometry",
+   "q": "A, B, C and D are points on the circumference of a circle. A and D lie on the same side of chord BC. If ∠BAC = 28°, find ∠BDC.",
+   "options": [
+    "56°",
+    "28°",
+    "14°",
+    "62°"
+   ],
+   "answer": 1,
+   "explanation": "Angles subtended by the same chord at the circumference in the same segment are equal. Since both angles stand on chord BC and lie on the same side of it, ∠BDC = 28°. Doubling to 56° would be mistaking it for an angle at the centre."
+  },
+  {
+   "n": 55,
+   "topic": "Angles and circle geometry",
+   "q": "A chord AB of a circle with centre O is 10 cm long and subtends an angle of 90° at O. Find the radius of the circle, leaving your answer in surd form.",
+   "options": [
+    "5√2 cm",
+    "10√2 cm",
+    "10√3 cm",
+    "5 cm"
+   ],
+   "answer": 0,
+   "explanation": "Triangle OAB has OA = OB = r and the included angle at O is 90°, so AB² = OA² + OB². Thus 10² = r² + r² = 2r², giving r² = 50 and r = 5√2 cm. The 5 cm value is half the chord, not the radius."
+  },
+  {
+   "n": 56,
+   "topic": "Variation",
+   "q": "A metal fabricator in Aba finds that the mass M kg of a uniform metal sheet varies directly as its area A m² and inversely as the square of its thickness t mm. A sheet of area 8 m² and thickness 2 mm has mass 40 kg. Find the mass of a sheet of the same metal with area 10 m² and thickness 5 mm.",
+   "options": [
+    "312.5 kg",
+    "20 kg",
+    "40 kg",
+    "8 kg"
+   ],
+   "answer": 3,
+   "explanation": "Since M = kA/t², substituting 40 = k(8)/2² gives k = 20. For A = 10 m² and t = 5 mm, M = 20 × 10 / 5² = 8 kg. The value 20 kg results from using M ∝ A/t instead of M ∝ A/t²."
+  },
+  {
+   "n": 57,
+   "topic": "Number bases",
+   "q": "A computer science student in Owerri writes the decimal number 45 in binary. How many 1s are in the binary representation?",
+   "options": [
+    "4",
+    "3",
+    "5",
+    "6"
+   ],
+   "answer": 0,
+   "explanation": "45 = 32 + 8 + 4 + 1 = 101101₂, which contains four 1s. The value 6 is the number of binary digits, not the number of 1s."
+  },
+  {
+   "n": 58,
+   "topic": "Surds",
+   "q": "Simplify √75 − √12 + 2√3.",
+   "options": [
+    "6√3",
+    "3√3",
+    "4√3",
+    "5√3"
+   ],
+   "answer": 3,
+   "explanation": "Write √75 = 5√3 and √12 = 2√3. Then 5√3 − 2√3 + 2√3 = 5√3. The value 3√3 comes from subtracting the 2√3 but forgetting to add the final 2√3."
+  },
+  {
+   "n": 59,
+   "topic": "Coordinate geometry",
+   "q": "Find the distance between the points P(−2, 3) and Q(4, −5) on a Cartesian plane.",
+   "options": [
+    "14 units",
+    "6 units",
+    "8 units",
+    "10 units"
+   ],
+   "answer": 3,
+   "explanation": "The distance is √[(4 − (−2))² + (−5 − 3)²] = √(6² + (−8)²) = √100 = 10 units. The value 6 units is only the horizontal difference, and 8 units is only the vertical difference."
+  },
+  {
+   "n": 60,
+   "topic": "Variation",
+   "q": "The load P kg that a wooden beam in Ibadan can safely carry varies directly as the square of its depth d cm and inversely as its length l m. A beam of depth 4 cm and length 3 m safely carries 80 kg. Find the load that a beam of the same timber with depth 6 cm and length 5 m can safely carry.",
+   "options": [
+    "108 kg",
+    "300 kg",
+    "90 kg",
+    "72 kg"
+   ],
+   "answer": 0,
+   "explanation": "With P = kd²/l, 80 = k(4²)/3 gives k = 15. Thus P = 15 × 6² / 5 = 108 kg. Using depth instead of depth squared gives 72 kg, while treating l as directly proportional gives 300 kg."
+  }
+ ]
+}

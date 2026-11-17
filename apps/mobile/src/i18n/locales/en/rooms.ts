@@ -62,7 +62,7 @@ export default {
   },
   goal: 'ROOM GOAL',
   goalEmpty: 'No goal yet.',
-  goalPlaceholder: 'e.g. Finish JAMB Physics paper 1',
+  goalPlaceholder: 'e.g. Finish {{exam}} Physics paper 1',
   setGoal: 'Set goal',
   editGoal: 'Change',
   goalProgress: '{{done}} of {{total}} done',

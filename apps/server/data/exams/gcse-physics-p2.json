@@ -1,0 +1,401 @@
+{
+ "id": "gcse-physics-p2",
+ "exam": "gcse",
+ "subject": "physics",
+ "year": null,
+ "number": 2,
+ "source": "ai",
+ "minutes": 35,
+ "questions": [
+  {
+   "n": 1,
+   "topic": "Atomic structure and radioactivity",
+   "q": "A radioactive sample has an activity of 6 400 Bq. After three half-lives what is the activity of the sample?",
+   "options": [
+    "200 Bq",
+    "800 Bq",
+    "3 200 Bq",
+    "1 600 Bq"
+   ],
+   "answer": 1,
+   "explanation": "Each half-life halves the activity: after one half-life 6 400 → 3 200 Bq, after two → 1 600 Bq, after three → 800 Bq. 200 Bq would be four halvings, 1 600 Bq is after two half-lives and 3 200 Bq is after one half-life."
+  },
+  {
+   "n": 2,
+   "topic": "Atomic structure and radioactivity",
+   "q": "Write the nuclear equation for uranium-238 undergoing alpha decay. Which equation is correct?",
+   "options": [
+    "238 92 U → 234 90 Pa + 4 2 He",
+    "238 92 U → 234 92 Th + 4 0 n",
+    "238 92 U → 234 90 Th + 4 2 He",
+    "238 92 U → 234 90 Th + 1 0 e"
+   ],
+   "answer": 2,
+   "explanation": "Alpha decay emits a 4 2 He nucleus, so mass number falls by 4 (238 → 234) and atomic number falls by 2 (92 → 90), giving thorium (Th). The other equations either keep the atomic number wrong, emit the wrong particle, or show beta decay instead of alpha."
+  },
+  {
+   "n": 3,
+   "topic": "Atomic structure and radioactivity",
+   "q": "Which type of radiation has the highest penetrating power and the lowest ionising power?",
+   "options": [
+    "Gamma radiation has the highest penetrating power and the lowest ionising power.",
+    "Alpha radiation has the highest penetrating power and the lowest ionising power.",
+    "Neutron radiation has the highest penetrating power and the lowest ionising power.",
+    "Beta radiation has the highest penetrating power and the lowest ionising power."
+   ],
+   "answer": 0,
+   "explanation": "Gamma rays are uncharged electromagnetic radiation that penetrate materials best but ionise least per interaction. Alpha particles are very ionising but stopped quickly; beta is intermediate. Neutrons are penetrating but ionising behaviour is different and not described as lowest ionising power in GCSE contexts."
+  },
+  {
+   "n": 4,
+   "topic": "Forces and motion",
+   "q": "A 2.5 kg toy car is accelerated from rest at 4.0 m/s². What is the resultant force acting on the car?",
+   "options": [
+    "10 N",
+    "40 N",
+    "6.5 N",
+    "0.625 N"
+   ],
+   "answer": 0,
+   "explanation": "Use F = m × a: F = 2.5 kg × 4.0 m/s² = 10 N. 6.5 N and 0.625 N are results of incorrect multiplications or division errors, and 40 N would be 2.5 × 16 (wrong acceleration)."
+  },
+  {
+   "n": 5,
+   "topic": "Forces and motion",
+   "q": "A car travelling at 20 m/s brakes with constant deceleration 5.0 m/s². What is the stopping time and the stopping distance?",
+   "options": [
+    "Stopping time 0.25 s and stopping distance 2.5 m",
+    "Stopping time 4.0 s and stopping distance 40 m",
+    "Stopping time 4.0 s and stopping distance 80 m",
+    "Stopping time 20 s and stopping distance 200 m"
+   ],
+   "answer": 1,
+   "explanation": "Time t = v ÷ a = 20 ÷ 5.0 = 4.0 s. Distance s = ut + 0.5 a t² = 20×4.0 + 0.5×(−5.0)×(4.0)² = 80 − 40 = 40 m. The 80 m result omitted the negative sign from deceleration; the others are arithmetic errors."
+  },
+  {
+   "n": 6,
+   "topic": "Forces and motion",
+   "q": "A swimmer pushes water backwards and moves forwards. According to Newton's third law, what is the reaction force?",
+   "options": [
+    "The swimmer exerts a larger backward force on the water than the water exerts forward on the swimmer.",
+    "The water exerts an equal and opposite forward force on the swimmer.",
+    "The swimmer exerts an equal forward force on the water and also a separate upward lift on their body.",
+    "There is no reaction force because the swimmer is doing the pushing."
+   ],
+   "answer": 1,
+   "explanation": "Newton's third law states forces between two interacting bodies are equal in size and opposite in direction, so if the swimmer pushes water backwards the water pushes the swimmer forwards with an equal force. The other answers contradict Newton's third law or add unrelated forces."
+  },
+  {
+   "n": 7,
+   "topic": "Magnetism and electromagnetism",
+   "q": "According to Lenz's law, when the magnetic flux through a coil is increasing into the page, the induced current in the coil will flow so that the magnetic field it creates is:",
+   "options": [
+    "Into the page, reinforcing the increase into the page.",
+    "Zero, because induced current only appears when flux decreases.",
+    "Out of the page, opposing the increase into the page.",
+    "Alternating between into and out of the page regardless of the change."
+   ],
+   "answer": 2,
+   "explanation": "Lenz's law says the induced magnetic field opposes the change in flux. If the external flux into the page is increasing, the induced field must be out of the page to oppose that increase. The induced field does not reinforce the change, and induction occurs for increasing or decreasing flux."
+  },
+  {
+   "n": 8,
+   "topic": "Magnetism and electromagnetism",
+   "q": "A transformer has 400 turns on the primary coil and 1 000 turns on the secondary coil. If the primary is connected to 230 V AC, what is the secondary voltage (ideal transformer)?",
+   "options": [
+    "575 V",
+    "230 V",
+    "2 875 V",
+    "92 V"
+   ],
+   "answer": 0,
+   "explanation": "For an ideal transformer Vp/Vs = Np/Ns, so Vs = Vp × (Ns/Np) = 230 × (1000/400) = 230 × 2.5 = 575 V. 92 V would be 230 × (400/1000), 2 875 V is 230 × 12.5, and 230 V would be unchanged only if turns ratio were 1:1."
+  },
+  {
+   "n": 9,
+   "topic": "Energy",
+   "q": "A 3 000 W electric kettle is switched on for 4 minutes. If its efficiency is 90% in transferring electrical energy to water, what energy is wasted as heat (not heating the water)?",
+   "options": [
+    "12 000 J",
+    "72 000 J",
+    "648 000 J",
+    "1 080 000 J"
+   ],
+   "answer": 1,
+   "explanation": "Total electrical energy = power × time = 3 000 W × (4 × 60) s = 3 000 × 240 = 720 000 J. Wasted energy = 10% of that = 0.10 × 720 000 = 72 000 J. 648 000 J would be the useful energy delivered to the water (90%)."
+  },
+  {
+   "n": 10,
+   "topic": "Energy",
+   "q": "How much energy is required to raise the temperature of 0.50 kg of water by 20 °C? (Specific heat capacity of water = 4 200 J/kg °C)",
+   "options": [
+    "4 200 J",
+    "420 000 J",
+    "840 J",
+    "42 000 J"
+   ],
+   "answer": 3,
+   "explanation": "Energy = mass × specific heat capacity × temperature change = 0.50 kg × 4 200 J/kg °C × 20 °C = 0.5 × 4 200 × 20 = 42 000 J. 4 200 J would be missing the mass or temperature change, and 420 000 J would be 10 times too large."
+  },
+  {
+   "n": 11,
+   "topic": "Electricity",
+   "q": "A 3.0 kW immersion heater is switched on for 30 minutes. If electricity costs £0.18 per kWh, how much does it cost to run the heater for that time (to the nearest penny)?",
+   "options": [
+    "£0.27",
+    "£0.90",
+    "£1.08",
+    "£1.62"
+   ],
+   "answer": 0,
+   "explanation": "Energy used = power × time = 3.0 kW × 0.5 h = 1.5 kWh. Cost = 1.5 kWh × £0.18/kWh = £0.27. The other values are from incorrect time or power conversions (for example £1.62 would be 9 kWh at £0.18)."
+  },
+  {
+   "n": 12,
+   "topic": "Electricity",
+   "q": "A filament lamp is connected to a 12 V supply. The lamp's resistance increases as it heats up. Which statement best explains the shape of the I–V graph for this lamp?",
+   "options": [
+    "The graph is a horizontal line because current is independent of voltage for a filament lamp.",
+    "As voltage rises, current increases but less steeply because resistance increases with temperature, producing a curve that flattens at higher voltage.",
+    "Current decreases as voltage increases because higher voltage makes the filament cooler.",
+    "Current stays proportional to voltage so the graph is a straight line through the origin."
+   ],
+   "answer": 1,
+   "explanation": "As the filament heats, its resistance increases, so current does not increase proportionally with voltage; the I–V graph is a curve that becomes less steep at higher voltage. The straight-line proportional option would apply to an ohmic resistor at fixed temperature, and the other choices contradict how heating affects resistance."
+  },
+  {
+   "n": 13,
+   "topic": "Waves",
+   "q": "A water wave has a frequency of 2.5 Hz and a wavelength of 0.80 m. What is the wave speed?",
+   "options": [
+    "1.25 m/s",
+    "0.32 m/s",
+    "3.3 m/s",
+    "2.0 m/s"
+   ],
+   "answer": 3,
+   "explanation": "Wave speed v = frequency × wavelength = 2.5 Hz × 0.80 m = 2.0 m/s. The other options come from incorrect multiplication or using division instead of multiplication."
+  },
+  {
+   "n": 14,
+   "topic": "Waves",
+   "q": "A sound source and an observer move directly towards each other. Which change does the observer measure compared with the source frequency emitted?",
+   "options": [
+    "The observer detects a lower frequency because the waves are stretched out.",
+    "The observer detects a higher frequency because the waves are compressed, so the wavelength reaching the observer is shorter.",
+    "The observed pitch becomes quieter but frequency stays the same.",
+    "The observed frequency is the same because frequency does not change with motion."
+   ],
+   "answer": 1,
+   "explanation": "When source and observer move towards each other the received wavelength is shorter, so the observer measures a higher frequency (Doppler effect). The idea that frequency is unchanged is wrong for relative motion; loudness (intensity) may change but is not the same as frequency."
+  },
+  {
+   "n": 15,
+   "topic": "Space physics",
+   "q": "A satellite moves in a circular orbit 300 km above Earth's surface. Earth's radius is 6 370 km. Using orbital speed v = 2πr / T, which of these statements correctly explains why the satellite does not fall straight down?",
+   "options": [
+    "Gravity is zero at 300 km, so there is no downward force on the satellite.",
+    "The satellite is fixed in place by magnetic forces from Earth.",
+    "There is no air in orbit, so without air resistance the satellite cannot fall.",
+    "The satellite has sufficient horizontal speed that as it falls, Earth's curvature means the ground curves away at the same rate, so it stays in orbit."
+   ],
+   "answer": 3,
+   "explanation": "Gravity still acts at 300 km, providing the centripetal force for circular motion; the satellite's horizontal velocity causes it to continuously 'fall around' Earth. Gravity is not zero at that altitude, and magnetic forces or absence of air are not the reason it remains in orbit."
+  },
+  {
+   "n": 16,
+   "topic": "Space physics",
+   "q": "Which observation gives direct evidence that the Universe is expanding?",
+   "options": [
+    "The night sky is dark (Olbers' paradox) proving the Universe is finite.",
+    "Planets orbit stars in elliptical paths as described by Kepler's laws.",
+    "Stars in our galaxy move in circular orbits around the galactic centre.",
+    "Light from distant galaxies is redshifted, showing spectral lines displaced to longer wavelengths."
+   ],
+   "answer": 3,
+   "explanation": "Redshift of spectral lines from distant galaxies is direct observational evidence that galaxies are moving away, consistent with universal expansion. The other statements are true in other contexts but do not directly indicate expansion of the Universe."
+  },
+  {
+   "n": 17,
+   "topic": "Particle model of matter",
+   "q": "A 0.50 kg block of metal is heated, and its temperature rises by 40 °C when it absorbs 6 000 J of energy. What is the specific heat capacity of the metal?",
+   "options": [
+    "120 J/kg°C",
+    "150 J/kg°C",
+    "480 J/kg°C",
+    "300 J/kg°C"
+   ],
+   "answer": 3,
+   "explanation": "Specific heat capacity c = energy / (mass × temperature change) = 6 000 J / (0.50 kg × 40 °C) = 6 000 / 20 = 300 J/kg°C. The other options result from incorrect division or wrong substitution into the formula."
+  },
+  {
+   "n": 18,
+   "topic": "Particle model of matter",
+   "q": "A fixed mass of gas in a sealed, rigid container is heated. Which of these changes will occur and why?",
+   "options": [
+    "The pressure stays the same because volume is fixed so temperature has no effect.",
+    "The pressure decreases because heating makes the gas expand and the container cannot change size.",
+    "The pressure increases because heating increases the average kinetic energy of molecules, so they collide with the walls more frequently and with greater force.",
+    "The number of molecules increases, causing the pressure to rise."
+   ],
+   "answer": 2,
+   "explanation": "Heating raises the average kinetic energy of gas molecules, increasing collision rate and force on the walls, so pressure rises in a rigid container. Pressure does not decrease; the number of molecules does not change as mass is fixed."
+  },
+  {
+   "n": 19,
+   "topic": "Waves",
+   "q": "A diagram shows two waves approaching a barrier with a narrow gap. The waves on the other side spread out into semicircular wavefronts from the gap. Which phenomenon is being demonstrated and what affects the amount of spreading?",
+   "options": [
+    "Diffraction; the amount of spreading is greater when the gap width is similar to or smaller than the wavelength.",
+    "Polarisation; the spreading depends on the orientation of the wave oscillations.",
+    "Refraction; the spreading depends on the change in wave speed across materials.",
+    "Interference; the spreading depends on the phase difference of the two incoming waves."
+   ],
+   "answer": 0,
+   "explanation": "Diffraction is the bending and spreading of waves after passing through a gap; it is most pronounced when the gap width is comparable to or smaller than the wavelength. Refraction, interference and polarisation are different wave behaviours not primarily concerned with gap-induced spreading."
+  },
+  {
+   "n": 20,
+   "topic": "Atomic structure and radioactivity",
+   "q": "Carbon-14 is written as 14C and has 6 protons. Which of the following gives the correct number of neutrons and electrons in a neutral atom of carbon-14?",
+   "options": [
+    "14 neutrons and 6 electrons",
+    "6 neutrons and 8 electrons",
+    "8 neutrons and 14 electrons",
+    "8 neutrons and 6 electrons"
+   ],
+   "answer": 3,
+   "explanation": "The mass number (14) equals protons + neutrons, so neutrons = 14 − 6 = 8. A neutral atom has equal protons and electrons, so electrons = 6. The other choices swap or misuse mass and proton counts."
+  },
+  {
+   "n": 21,
+   "topic": "Atomic structure and radioactivity",
+   "q": "A neutron in a nucleus decays via beta emission into a proton and an electron (beta particle). Which description correctly states what happens to the nucleus during this beta decay?",
+   "options": [
+    "The proton number stays the same and the mass number decreases by 1",
+    "The proton number increases by 1 and the mass number increases by 1",
+    "The proton number decreases by 1 and the mass number decreases by 1",
+    "The proton number increases by 1 and the mass number stays the same"
+   ],
+   "answer": 3,
+   "explanation": "Beta decay converts a neutron to a proton plus an electron emitted, so proton number (atomic number) increases by 1 while total nucleons (mass number) remain unchanged. Mass number does not change because a neutron becomes a proton."
+  },
+  {
+   "n": 22,
+   "topic": "Atomic structure and radioactivity",
+   "q": "Gamma rays are often used in medical imaging because of their penetrating ability. Which statement explains why gamma rays are chosen rather than alpha particles for imaging inside the body?",
+   "options": [
+    "Gamma rays change the element in the tracer, making it easier to detect",
+    "Gamma rays carry positive charge which improves image quality",
+    "Gamma rays are stopped by the skin so they only image superficial tissues",
+    "Gamma rays penetrate body tissues so detectors outside the body can measure emitted radiation"
+   ],
+   "answer": 3,
+   "explanation": "Gamma rays are electrically neutral and highly penetrating, allowing them to exit the body and be detected externally; alpha particles are stopped quickly by tissue so cannot be used for internal imaging. Gamma rays are neutral (not positively charged) and do not change elements in the tracer during detection."
+  },
+  {
+   "n": 23,
+   "topic": "Forces and motion",
+   "q": "A 1.2 kg model rocket accelerates uniformly from rest to 24.0 m/s in 6.0 s. What is the size of the resultant (net) force on the rocket?",
+   "options": [
+    "28.8 N",
+    "19.2 N",
+    "4.8 N",
+    "2.0 N"
+   ],
+   "answer": 2,
+   "explanation": "Acceleration a = Δv / t = 24.0 / 6.0 = 4.0 m/s². Resultant force F = ma = 1.2 × 4.0 = 4.8 N. A common mistake is using mass × velocity or forgetting to calculate acceleration first."
+  },
+  {
+   "n": 24,
+   "topic": "Forces and motion",
+   "q": "A car of mass 900 kg travels at 20 m/s. It applies the brakes and stops in 10 s with constant deceleration. What is the magnitude of the average braking force?",
+   "options": [
+    "9 000 N",
+    "90 N",
+    "180 N",
+    "1 800 N"
+   ],
+   "answer": 3,
+   "explanation": "Deceleration a = (0 − 20) / 10 = −2.0 m/s² (magnitude 2.0). Force = ma = 900 × 2.0 = 1 800 N. Mistakes include using time incorrectly or omitting the negative sign (magnitude requested so positive answer)."
+  },
+  {
+   "n": 25,
+   "topic": "Forces and motion",
+   "q": "Two ice skaters, one of mass 50 kg and one of mass 70 kg, push off from rest and move in opposite directions. If the 50 kg skater gains speed 1.8 m/s to the right, what is the speed of the 70 kg skater to the left (ignore friction)?",
+   "options": [
+    "1.8 m/s",
+    "0.86 m/s",
+    "2.52 m/s",
+    "1.29 m/s"
+   ],
+   "answer": 3,
+   "explanation": "Conservation of momentum: 0 = 50×1.8 + 70×v_left (taking right positive). So v_left = −(50×1.8)/70 = −90/70 = −1.2857… ≈ 1.29 m/s to the left. Errors arise from mixing up which mass multiplies which speed or dividing incorrectly."
+  },
+  {
+   "n": 26,
+   "topic": "Magnetism and electromagnetism",
+   "q": "A straight horizontal wire carries a current from west to east. Which description correctly gives the direction of the magnetic field at a point 1 cm directly above the wire (north of the wire when viewed from above)?",
+   "options": [
+    "From west to east (same as the current)",
+    "Into the page (downwards) using the right-hand rule for the magnetic field around a current",
+    "Out of the page (upwards)",
+    "From south to north (towards the point)"
+   ],
+   "answer": 1,
+   "explanation": "Using the right-hand rule curl fingers around a current pointing east: above the wire (north) the field points into the page (downwards). The field circles the wire; it is not in the same direction as the current nor pointing from south to north at that location."
+  },
+  {
+   "n": 27,
+   "topic": "Magnetism and electromagnetism",
+   "q": "A straight wire of length 0.40 m lies perpendicular to a uniform magnetic field of magnitude 0.50 T. A current of 3.0 A flows through the wire. What is the magnitude of the magnetic force on the wire?",
+   "options": [
+    "6.00 N",
+    "1.50 N",
+    "0.60 N",
+    "0.067 N"
+   ],
+   "answer": 2,
+   "explanation": "Magnetic force F = B I L when wire is perpendicular to the field. So F = 0.50 × 3.0 × 0.40 = 0.60 N. Common errors include forgetting to multiply by the length or using incorrect units."
+  },
+  {
+   "n": 28,
+   "topic": "Energy",
+   "q": "An electric motor lifts a 12 kg piano vertically by 20 m in 6.0 s at constant speed. The motor is 80% efficient. What is the electrical power input to the motor (to three s.f.)? Use g = 9.81 m/s².",
+   "options": [
+    "613 W",
+    "61.3 W",
+    "491 W",
+    "392 W"
+   ],
+   "answer": 2,
+   "explanation": "Useful power = m g h / t = 12×9.81×20 / 6.0 = (12×9.81×20)=2 354.4 J ÷6 = 392.4 W. Electrical input = useful / efficiency = 392.4 / 0.80 = 490.5 W ≈ 491 W. The tempting 392 W is the useful output power, not the input."
+  },
+  {
+   "n": 29,
+   "topic": "Space physics",
+   "q": "A satellite is in a circular low Earth orbit 200 km above Earth's surface. Use Earth's radius 6.37×10^6 m and GM (gravitational parameter) = 3.986×10^14 m^3/s^2. What is the orbital period of the satellite, in minutes (to two significant figures)?",
+   "options": [
+    "88 minutes",
+    "45 minutes",
+    "24 hours",
+    "8.8 minutes"
+   ],
+   "answer": 0,
+   "explanation": "Orbit radius r = 6.37×10^6 + 2.00×10^5 = 6.57×10^6 m. Period T = 2π√(r^3/GM) = 2π√((6.57×10^6)^3 / 3.986×10^14) ≈ 2π×844.5 s ≈ 5.30×10^3 s ≈ 88 minutes. 45 minutes would result from using an incorrect smaller radius; 8.8 minutes is a factor-of-10 arithmetic error; 24 hours is Earth’s rotation period, not a low Earth orbital period."
+  },
+  {
+   "n": 30,
+   "topic": "Forces and motion",
+   "q": "A cyclist of mass 75 kg coasts down a straight hill that makes an angle of 6.0° to the horizontal. At terminal speed 8.0 m/s the cyclist stops accelerating because the total resistive forces (air resistance and friction) exactly balance the component of the weight down the slope. What is the magnitude and direction of the total resistive force on the cyclist?",
+   "options": [
+    "Approximately 736 N acting up the slope (using the full weight mg without resolving into components).",
+    "Approximately 77 N acting up the slope (resistive forces equal mg sin 6.0° ≈ 75 × 9.81 × sin6.0° ≈ 76.9 N).",
+    "Approximately 13 N acting up the slope (mistakenly using sin 6° ≈ 0.017 instead of ≈ 0.105).",
+    "Approximately 732 N acting up the slope (using mg cos 6.0° by mistake)."
+   ],
+   "answer": 1,
+   "explanation": "At terminal speed the downslope component of weight mg sinθ is balanced by resistive forces. mg sin6.0° = 75 × 9.81 × sin6.0° ≈ 735.75 × 0.1045 ≈ 76.9 N, so about 77 N up the slope. The 736 N and 732 N answers come from using the whole weight or mg cosθ instead of the downslope component; the 13 N arises from an incorrect value for sin6°."
+  }
+ ]
+}

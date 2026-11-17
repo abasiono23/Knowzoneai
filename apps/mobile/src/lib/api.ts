@@ -43,6 +43,10 @@ export type User = {
   aiCredits: number;
   plan: 'FREE' | 'PLUS' | 'PRO';
   referralCode: string;
+  /** Study region (ISO country code, "ZZ" = another country). Missing on accounts from before regions: Nigeria. */
+  region?: string;
+  /** True once the account has picked its region (sign-up form, onboarding or Settings); onboarding asks those who haven't. */
+  regionChosen?: boolean;
   // Optional profile details (screen 178)
   username?: string;
   school?: string;
@@ -896,6 +900,8 @@ export type AppSettings = {
   };
   reminders: Reminder[];
   appLanguage: string;
+  /** Study region (ISO country code): whose exams the app shows first. */
+  region?: string;
   privacy: {
     profileVisibility: 'everyone' | 'school' | 'private';
     personalisedRecommendations: boolean;
@@ -1179,7 +1185,7 @@ export async function uploadForm<T>(path: string, form: FormData, onProgress: (s
 
 export const api = {
   // Auth & onboarding
-  register: (input: { name: string; email: string; password: string; consent: Consent }) =>
+  register: (input: { name: string; email: string; password: string; consent: Consent; region?: string }) =>
     post<AuthResponse>('/auth/register', input),
   login: (input: { email: string; password: string }) => post<AuthResponse>('/auth/login', input),
   socialSignIn: (input: { provider: 'google' | 'apple'; idToken: string }) =>
