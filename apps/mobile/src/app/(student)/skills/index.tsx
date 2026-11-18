@@ -10,6 +10,7 @@ import { LinearGradient } from '@/components/ui/gradient';
 import { Colors, Radius, Spacing } from '@/constants/theme';
 import { errorText } from '@/i18n/errors';
 import { useFlipStyle } from '@/i18n/provider';
+import { loadKoraLessons } from '@/lib/kora/lessons';
 import { SKILL_LOOK, skillsApi, type SkillCard } from '@/lib/skills';
 
 /** Future skills: one card per subject; a card opens that subject's lessons. */
@@ -26,6 +27,22 @@ export default function FutureSkills() {
       .catch((e) => setError(errorText(e, t('skills.loadFailed'))));
   }, [t]);
   useEffect(load, [load]);
+
+  // Kora's own lessons on each subject count too: they are listed with its YouTube lessons.
+  const [kora, setKora] = useState<Record<string, number>>({});
+  useEffect(() => {
+    let live = true;
+    loadKoraLessons()
+      .then((all) => {
+        const counts: Record<string, number> = {};
+        for (const l of all) if (l.skill) counts[l.skill] = (counts[l.skill] ?? 0) + 1;
+        if (live) setKora(counts);
+      })
+      .catch(() => {});
+    return () => {
+      live = false;
+    };
+  }, []);
 
   return (
     <Screen withTabBar={false}>
@@ -67,7 +84,7 @@ export default function FutureSkills() {
                       {s.tagline}
                     </Text>
                     <Text variant="small" color={Colors.primary} style={{ fontSize: 12 }}>
-                      {t('skills.lessons', { count: s.lessons })}
+                      {t('skills.lessons', { count: s.lessons + (kora[s.id] ?? 0) })}
                     </Text>
                   </View>
                   <Ionicons name="chevron-forward" size={20} color={Colors.textMuted} style={flip} />

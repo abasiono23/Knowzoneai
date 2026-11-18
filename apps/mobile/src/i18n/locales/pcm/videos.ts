@@ -485,6 +485,7 @@ const videos: Translation<typeof en> = {
     finishedTitle: 'You don finish the lesson',
     finishedBody: 'Well done. Try another lesson, or ask Kora anything wey never clear.',
     moreLessons: 'More lessons',
+    lessonTag: 'Lesson with Kora',
   },
 };
 

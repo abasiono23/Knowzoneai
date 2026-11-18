@@ -3,6 +3,7 @@
  * before the backend endpoints exist. Enabled with EXPO_PUBLIC_USE_MOCKS=true.
  * Data persists on the device so reloads keep you signed in.
  */
+import { DEMO_SKILLS } from './mock-skills';
 import type {
   AppSettings,
   Billing,
@@ -552,6 +553,15 @@ export async function mockRequest<T>(path: string, init: RequestInit, token: str
     await save(db);
     return result as unknown as T;
   };
+
+  // Future skills (Explore): a short demo list of each subject's YouTube lessons.
+  if (path === '/skills')
+    return done({ skills: DEMO_SKILLS.map((s) => ({ id: s.id, name: s.name, tagline: s.tagline, lessons: s.videos.length })) });
+  if (path.startsWith('/skills/')) {
+    const skill = DEMO_SKILLS.find((s) => s.id === path.slice('/skills/'.length));
+    if (!skill) throw new MockError(404, 'Skill not found');
+    return done({ skill: { id: skill.id, name: skill.name, summary: skill.summary, videos: skill.videos } });
+  }
 
   if (path.startsWith('/teacher/')) {
     const user = requireMe();

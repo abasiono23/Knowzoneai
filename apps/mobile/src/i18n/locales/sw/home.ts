@@ -213,7 +213,7 @@ const home: Translation<typeof en> = {
     review: 'Pitia kadi tena',
   },
   skills: {
-    intro: 'Stadi za vitendo kwa ajili ya dunia ijayo, kupitia masomo ya YouTube yaliyochaguliwa kwa makini.',
+    intro: 'Stadi za vitendo kwa ajili ya dunia ijayo: masomo mafupi na Kora, kisha video za YouTube zilizochaguliwa kwa makini ili kujifunza zaidi.',
     loadFailed: 'Hatukuweza kupakia masomo haya. Angalia muunganisho wako kisha ujaribu tena.',
     retry: 'Jaribu tena',
     summary: 'Muhtasari',

@@ -1,0 +1,191 @@
+{
+ "id": "ui-ux",
+ "name": {
+  "en": "UI/UX design",
+  "pcm": "UI/UX design",
+  "yo": "Ìṣètò UI/UX",
+  "ig": "Nhazi UI/UX",
+  "ha": "Zanen UI/UX",
+  "fr": "Design UI/UX",
+  "ar": "تصميم UI/UX",
+  "sw": "Ubunifu wa UI/UX",
+  "pt": "Design UI/UX",
+  "es": "Diseño UI/UX"
+ },
+ "tagline": {
+  "en": "Design apps and websites that people find easy to use",
+  "pcm": "Design apps and websites wey people go fit use easy-easy",
+  "yo": "Ṣe ìṣètò àwọn app àti website tí ó rọrùn fún ènìyàn láti lò",
+  "ig": "Hazie app na website ndị mmadụ ga-eji n’ụzọ dị mfe",
+  "ha": "Zana manhajoji da shafukan yanar gizo masu sauƙin amfani",
+  "fr": "Concevoir des applis et des sites faciles à utiliser",
+  "ar": "صمّم تطبيقات ومواقع يسهل على الناس استخدامها",
+  "sw": "Buni app na tovuti ambazo watu wanaweza kutumia kwa urahisi",
+  "pt": "Cria aplicações e sites fáceis de utilizar",
+  "es": "Diseña apps y sitios web fáciles de usar"
+ },
+ "summary": {
+  "en": "UI/UX design is about making apps and websites easy and pleasant to use. UX (user experience) covers how a product works for the person using it, while UI (user interface) covers the screens, buttons and layouts they see and touch. It is useful because good design saves people confusion. These lessons build from the basic ideas to design principles, the tool Figma, research with users and how UX designers work in teams.",
+  "pcm": "UI/UX design na to make apps and websites easy and sweet to use. UX (user experience) na how product dey work for the person wey dey use am, while UI (user interface) na the screens, buttons and layouts wey the person dey see and touch. E useful because good design dey save people from confusion. These lessons start from the basic ideas, then go design principles, the tool Figma, research with users, and how UX designers dey work for team.",
+  "yo": "Ìṣètò UI/UX jẹ́ nípa mímú kí àwọn app àti website rọrùn, kí ó sì dùn láti lò. UX (user experience, ìrírí olùlò) ni bí ọjà kan ṣe ń ṣiṣẹ́ fún ẹni tó ń lò ó, nígbà tí UI (user interface, ojú-ìlò) jẹ́ àwọn ojú-ìbòjú, bọ́tìnnì àti ìtò-ojú-ewé tí ó ń rí tí ó sì ń fọwọ́ kàn. Ó wúlò nítorí pé ìṣètò tó dára máa ń gba àwọn ènìyàn lọ́wọ́ ìdàrúdàpọ̀. Àwọn ẹ̀kọ́ wọ̀nyí bẹ̀rẹ̀ láti àwọn èrò ìpìlẹ̀ lọ sí àwọn ìlànà ìṣètò, irinṣẹ́ Figma, ìwádìí pẹ̀lú àwọn olùlò, àti bí àwọn UX designer ṣe ń ṣiṣẹ́ papọ̀ nínú ẹgbẹ́.",
+  "ig": "Nhazi UI/UX bụ ime ka app na website dị mfe ma dị ụtọ iji. UX (user experience, ahụmịhe onye na-eji ya) na-ekwu otú ngwaahịa si arụ ọrụ maka onye na-eji ya, ebe UI (user interface) na-ekwu maka ihuenyo, bọtịnụ na nhazi ihe onye ahụ na-ahụ ma na-emetụ aka. Ọ bara uru n’ihi na nhazi dị mma na-egbochi ndị mmadụ inwe mgbagwoju anya. Ihe ọmụmụ ndị a na-esi n’echiche ndị bụ isi gaa n’ụkpụrụ nhazi, ngwá ọrụ Figma, nchọcha a na-eme n’etiti ndị na-eji ngwaahịa, na otú ndị UX designer si arụkọ ọrụ n’otu.",
+  "ha": "Zanen UI/UX yana nufin sa manhajoji da shafukan yanar gizo su zama masu sauƙi da daɗin amfani. UX (user experience, ƙwarewar mai amfani) ita ce yadda samfur ke aiki ga mutumin da ke amfani da shi, yayin da UI (user interface) su ne fuskoki, maɓallai da tsare-tsaren da mutum ke gani yake taɓawa. Yana da amfani domin zane mai kyau yana kare mutane daga ruɗani. Waɗannan darussa sun fara daga muhimman ra’ayoyi zuwa ƙa’idojin zane, kayan aikin Figma, bincike tare da masu amfani, da yadda UX designers ke aiki a ƙungiya.",
+  "fr": "Le design UI/UX consiste à rendre les applis et les sites web faciles et agréables à utiliser. L’UX (user experience, expérience utilisateur) concerne la façon dont un produit fonctionne pour la personne qui l’utilise, et l’UI (user interface, interface utilisateur) les écrans, boutons et mises en page qu’elle voit et touche. C’est utile, car un bon design évite la confusion. Ces leçons vont des idées de base aux principes de design, à l’outil Figma, à la recherche auprès des utilisateurs et au travail en équipe des designers UX.",
+  "ar": "يهدف تصميم UI/UX إلى جعل التطبيقات والمواقع سهلة وممتعة في الاستخدام. تشير UX (تجربة المستخدم) إلى طريقة عمل المنتج بالنسبة إلى من يستخدمه، بينما تشير UI (واجهة المستخدم) إلى الشاشات والأزرار والتخطيطات التي يراها ويلمسها. وتكمن فائدته في أن التصميم الجيد يجنّب الناس الارتباك. تتدرج هذه الدروس من الأفكار الأساسية إلى مبادئ التصميم وأداة Figma والبحث مع المستخدمين وطريقة عمل مصممي UX ضمن الفرق.",
+  "sw": "Ubunifu wa UI/UX unahusu kufanya app na tovuti ziwe rahisi na za kupendeza kutumia. UX (user experience, uzoefu wa mtumiaji) ni jinsi bidhaa inavyomfanyia kazi mtu anayeitumia, na UI (user interface, kiolesura) ni skrini, vitufe na mipangilio anayoona na kugusa. Ni muhimu kwa sababu ubunifu mzuri huwaepusha watu na mkanganyiko. Masomo haya yanaanzia mawazo ya msingi hadi kanuni za ubunifu, zana ya Figma, utafiti na watumiaji, na jinsi wabunifu wa UX wanavyofanya kazi katika timu.",
+  "pt": "O design UI/UX consiste em tornar aplicações e sites fáceis e agradáveis de utilizar. O UX (user experience, experiência do utilizador) diz respeito à forma como um produto funciona para quem o utiliza, e o UI (user interface, interface do utilizador) aos ecrãs, botões e esquemas que essa pessoa vê e toca. É útil porque um bom design evita confusão. Estas lições vão das ideias básicas aos princípios de design, à ferramenta Figma, à investigação com utilizadores e ao trabalho dos designers de UX em equipa.",
+  "es": "El diseño UI/UX busca que las apps y los sitios web sean fáciles y agradables de usar. La UX (user experience, experiencia de usuario) se refiere a cómo funciona un producto para quien lo usa, y la UI (user interface, interfaz de usuario) a las pantallas, botones y diseños que esa persona ve y toca. Es útil porque un buen diseño evita confusiones. Estas lecciones van de las ideas básicas a los principios de diseño, la herramienta Figma, la investigación con usuarios y el trabajo en equipo de los diseñadores de UX."
+ },
+ "videos": [
+  {
+   "id": "ziQEqGZB8GE",
+   "summary": {
+    "en": "Learn what UX design means, its key factors and what sits at its core. Examples of good UX, including one from Don Norman, show the ideas in action, then come the five basic steps of UX design and a UX designer’s daily tasks.",
+    "pcm": "You go learn wetin UX design mean, the main things wey dey inside am and wetin be the heart of am. Examples of good UX, including one from Don Norman, go show how the ideas dey work, then you go see the five basic steps of UX design and wetin UX designer dey do every day.",
+    "yo": "Kọ́ ohun tí UX design túmọ̀ sí, àwọn kókó pàtàkì rẹ̀ àti ohun tó wà ní ọkàn rẹ̀. Àwọn àpẹẹrẹ UX tó dára, pẹ̀lú ọ̀kan láti ọ̀dọ̀ Don Norman, fi àwọn èrò náà hàn ní ìṣe, lẹ́yìn náà ni ìgbésẹ̀ ìpìlẹ̀ márùn-ún ti UX design àti àwọn iṣẹ́ ojoojúmọ́ UX designer.",
+    "ig": "Mụta ihe UX design pụtara, ihe ndị bụ isi o nwere na ihe dị ya n’obi. Ihe atụ nke UX dị mma, gụnyere otu sitere n’aka Don Norman, na-egosi otú echiche ndị ahụ si arụ ọrụ, e mesịa, ị ga-ahụ usoro ise bụ isi nke UX design na ọrụ UX designer na-arụ kwa ụbọchị.",
+    "ha": "Koyi ma’anar UX design, muhimman abubuwan da suka shafe shi da kuma ginshiƙinsa. Misalan UX mai kyau, ciki har da ɗaya daga Don Norman, sun nuna yadda ra’ayoyin ke aiki, sannan matakai biyar na asali na UX design da ayyukan yau da kullum na UX designer.",
+    "fr": "Découvre ce qu’est le design UX, ses facteurs clés et ce qui en constitue le cœur. Des exemples de bonne UX, dont un de Don Norman, montrent ces idées en pratique, puis viennent les cinq étapes de base du design UX et les tâches quotidiennes d’un designer UX.",
+    "ar": "تعلّم معنى تصميم UX وعوامله الرئيسية وجوهره. توضّح أمثلة على التصميم الجيد، منها مثال من Don Norman، هذه الأفكار عمليًا، ثم تتعرّف إلى الخطوات الخمس الأساسية لتصميم UX والمهام اليومية لمصمم UX.",
+    "sw": "Jifunze maana ya UX design, mambo yake muhimu na kiini chake. Mifano ya UX nzuri, ukiwemo mmoja kutoka kwa Don Norman, inaonyesha mawazo haya kwa vitendo, kisha hatua tano za msingi za UX design na kazi za kila siku za mbunifu wa UX.",
+    "pt": "Aprende o que é o design de UX, os seus fatores-chave e o que está no seu centro. Exemplos de boa UX, incluindo um de Don Norman, mostram estas ideias na prática, seguidos dos cinco passos básicos do design de UX e das tarefas diárias de um designer de UX.",
+    "es": "Aprende qué es el diseño UX, sus factores clave y cuál es su núcleo. Ejemplos de buena UX, incluido uno de Don Norman, muestran estas ideas en la práctica, y después vienen los cinco pasos básicos del diseño UX y las tareas diarias de un diseñador UX."
+   }
+  },
+  {
+   "id": "5CxXhyhT6Fc",
+   "summary": {
+    "en": "Learn clear definitions of UX design and UI design, and how the two roles are similar and different. You will compare the tasks each one involves, see an example of a UI designer and think about which might suit you better.",
+    "pcm": "You go learn clear meaning of UX design and UI design, plus how the two work take resemble and how dem take different. You go compare the tasks wey each one get, see example of UI designer, and think about which one fit you pass.",
+    "yo": "Kọ́ ìtumọ̀ tó ṣe kedere fún UX design àti UI design, àti bí iṣẹ́ méjèèjì ṣe jọra tí wọ́n sì yàtọ̀ síra. Wàá fi àwọn iṣẹ́ tí ọ̀kọ̀ọ̀kan ní wé ara wọn, wàá rí àpẹẹrẹ UI designer, wàá sì ronú nípa èyí tó lè bá ọ mu jù.",
+    "ig": "Mụta nkọwa doro anya nke UX design na UI design, na otú ọrụ abụọ ahụ si yie ma dị iche. Ị ga-atụnyere ọrụ ndị dị n’ime nke ọ bụla, hụ ihe atụ nke UI designer, ma chee echiche banyere nke nwere ike ikwekọrọ gị karịa.",
+    "ha": "Koyi ma’anar UX design da UI design a fili, da yadda ayyukan biyu suka yi kama da kuma bambancinsu. Za ka kwatanta ayyukan da kowanne ya ƙunsa, ka ga misalin UI designer, ka kuma yi tunanin wanda zai fi dacewa da kai.",
+    "fr": "Découvre des définitions claires du design UX et du design UI, ainsi que les points communs et les différences entre ces deux métiers. Tu compares les tâches de chacun, tu vois un exemple de designer UI et tu réfléchis à celui qui te conviendrait le mieux.",
+    "ar": "تعلّم تعريفات واضحة لتصميم UX وتصميم UI، وأوجه التشابه والاختلاف بين الدورين. ستقارن بين المهام التي يتضمنها كل منهما، وترى مثالًا على مصمم UI، وتفكّر في أيهما قد يناسبك أكثر.",
+    "sw": "Jifunze maana wazi za UX design na UI design, na jinsi kazi hizi mbili zinavyofanana na kutofautiana. Utalinganisha majukumu ya kila moja, utaona mfano wa mbunifu wa UI, na utafikiria ipi inaweza kukufaa zaidi.",
+    "pt": "Aprende definições claras de design de UX e de design de UI, e em que estas duas funções se parecem e se distinguem. Vais comparar as tarefas de cada uma, ver um exemplo de designer de UI e pensar em qual te poderá servir melhor.",
+    "es": "Aprende definiciones claras del diseño UX y del diseño UI, y en qué se parecen y se diferencian estos dos roles. Compararás las tareas de cada uno, verás un ejemplo de diseñador UI y pensarás cuál podría encajar mejor contigo."
+   }
+  },
+  {
+   "id": "9EPTM91TBDU",
+   "summary": {
+    "en": "Learn the main rules for creating compositions that work well and carry an organised message. The course takes each principle in turn, including balance, unity, contrast, emphasis, pattern, rhythm, movement, proportion, harmony and variety.",
+    "pcm": "You go learn the main rules to arrange design wey dey work well and wey dey carry clear, organised message. The course dey take each principle one by one, including balance, unity, contrast, emphasis, pattern, rhythm, movement, proportion, harmony and variety.",
+    "yo": "Kọ́ àwọn òfin pàtàkì fún ṣíṣe àkójọpọ̀ àwòrán tó dára tí ó sì ń gbé ọ̀rọ̀ tó wà létòlétò jáde. Ẹ̀kọ́ náà ṣàlàyé ìlànà kọ̀ọ̀kan ní ọ̀kọ̀ọ̀kan, pẹ̀lú balance (ìdọ́gba), unity (ìṣọ̀kan), contrast (ìyàtọ̀), emphasis (ìtẹnumọ́), pattern (àpẹẹrẹ), rhythm (ìlù), movement (ìṣípò), proportion (ìwọ̀n), harmony (ìbámu) àti variety (oríṣiríṣi).",
+    "ig": "Mụta iwu ndị bụ isi maka ịhazi ihe e sere ka ọ dị mma ma bute ozi a haziri nke ọma. Ihe ọmụmụ a na-akọwa ụkpụrụ ọ bụla n’otu n’otu, gụnyere balance (nguzozi), unity (ịdị n’otu), contrast (ọdịiche), emphasis (nkwusi ike), pattern (usoro), rhythm (ụda), movement (mmegharị), proportion (nha), harmony (nkwekọ) na variety (ụdị dị iche iche).",
+    "ha": "Koyi manyan ƙa’idojin tsara zane mai kyau wanda ke isar da saƙo cikin tsari. Kwas ɗin yana bayani kan kowace ƙa’ida ɗaya bayan ɗaya, ciki har da balance (daidaito), unity (haɗin kai), contrast (bambanci), emphasis (ƙarfafawa), pattern (tsari mai maimaituwa), rhythm (kari), movement (motsi), proportion (gwargwado), harmony (jituwa) da variety (nau’o’i daban-daban).",
+    "fr": "Apprends les principales règles pour créer des compositions réussies et porteuses d’un message organisé. Le cours aborde chaque principe tour à tour, dont l’équilibre, l’unité, le contraste, l’accent, le motif, le rythme, le mouvement, la proportion, l’harmonie et la variété.",
+    "ar": "تعلّم القواعد الرئيسية لإنشاء تركيبات بصرية ناجحة تنقل رسالة منظّمة. تتناول الدورة كل مبدأ على حدة، ومنها التوازن والوحدة والتباين والتركيز والنمط والإيقاع والحركة والتناسب والانسجام والتنوع.",
+    "sw": "Jifunze kanuni kuu za kutunga miundo inayofanya kazi vizuri na kubeba ujumbe uliopangwa vizuri. Kozi inaeleza kila kanuni kwa zamu, zikiwemo usawa (balance), umoja (unity), utofauti (contrast), msisitizo (emphasis), ruwaza (pattern), mdundo (rhythm), mwendo (movement), uwiano (proportion), upatanifu (harmony) na anuwai (variety).",
+    "pt": "Aprende as principais regras para criar composições que resultam bem e transmitem uma mensagem organizada. O curso trata cada princípio à vez, incluindo equilíbrio, unidade, contraste, ênfase, padrão, ritmo, movimento, proporção, harmonia e variedade.",
+    "es": "Aprende las reglas principales para crear composiciones que funcionen bien y transmitan un mensaje organizado. El curso trata cada principio por turnos, entre ellos equilibrio, unidad, contraste, énfasis, patrón, ritmo, movimiento, proporción, armonía y variedad."
+   }
+  },
+  {
+   "id": "II-6dDzc-80",
+   "summary": {
+    "en": "Learn the basics of Figma step by step, starting from downloading and installing it. This beginner tutorial aims to give you what you need to start using Figma for your own web and UI design projects.",
+    "pcm": "You go learn Figma basics step by step, from how to download and install am. This beginner tutorial wan give you wetin you need to start to use Figma for your own web and UI design projects.",
+    "yo": "Kọ́ àwọn ìpìlẹ̀ Figma ní ìgbésẹ̀-ìgbésẹ̀, bẹ̀rẹ̀ láti gbígba á sílẹ̀ àti fífi í sórí ẹ̀rọ. Ẹ̀kọ́ àwọn olùbẹ̀rẹ̀ yìí ní èrò láti fún ọ ní ohun tí o nílò láti bẹ̀rẹ̀ sí í lo Figma fún àwọn iṣẹ́ web àti UI design tìrẹ.",
+    "ig": "Mụta isi ihe gbasara Figma nzọụkwụ n’otu n’otu, malite n’ibudata ya na ịwụnye ya. Nkuzi a maka ndị mbido bu n’obi inye gị ihe ị chọrọ iji malite iji Figma rụọ ọrụ web na UI design nke gị.",
+    "ha": "Koyi tushen Figma mataki-mataki, tun daga saukewa da shigar da shi. Wannan darasi na masu farawa yana nufin ba ka abin da kake buƙata don fara amfani da Figma a ayyukanka na web da UI design.",
+    "fr": "Apprends les bases de Figma pas à pas, à commencer par son téléchargement et son installation. Ce tutoriel pour débutants vise à te donner ce qu’il faut pour commencer à utiliser Figma dans tes propres projets de design web et UI.",
+    "ar": "تعلّم أساسيات Figma خطوة بخطوة، بدءًا من تنزيله وتثبيته. يهدف هذا الدرس للمبتدئين إلى تزويدك بما تحتاج إليه لتبدأ استخدام Figma في مشاريعك الخاصة لتصميم الويب وUI.",
+    "sw": "Jifunze misingi ya Figma hatua kwa hatua, kuanzia kuipakua na kuisakinisha. Mafunzo haya kwa wanaoanza yanalenga kukupa unachohitaji ili uanze kutumia Figma katika miradi yako ya web na UI design.",
+    "pt": "Aprende as bases do Figma passo a passo, desde o descarregar e instalar. Este tutorial para principiantes pretende dar-te o que precisas para começares a usar o Figma nos teus próprios projetos de design web e de UI.",
+    "es": "Aprende lo básico de Figma paso a paso, empezando por descargarlo e instalarlo. Este tutorial para principiantes busca darte lo que necesitas para empezar a usar Figma en tus propios proyectos de diseño web y UI."
+   }
+  },
+  {
+   "id": "kQ_6faxhyIw",
+   "summary": {
+    "en": "Learn how UX research puts the user first and closes the gap between what a business thinks users need and what they actually need, before an expensive product is made. It also covers choosing a research method, each method’s benefits and drawbacks, and types of bias.",
+    "pcm": "You go learn how UX research dey put the user first and close the gap between wetin business think say users need and wetin dem really need, before dem make costly product. E also cover how to choose research method, the good and bad side of each method, and the types of bias (wey fit spoil fair judgement).",
+    "yo": "Kọ́ bí UX research (ìwádìí UX) ṣe ń fi olùlò ṣáájú, tí ó sì ń dí àlàfo láàárín ohun tí ilé-iṣẹ́ rò pé àwọn olùlò nílò àti ohun tí wọ́n nílò ní tòótọ́, kí wọ́n tó ṣe ọjà olówó ńlá. Ó tún ṣàlàyé bí a ṣe ń yan ọ̀nà ìwádìí, àǹfààní àti àléébù ọ̀nà kọ̀ọ̀kan, àti irú bias (ojúsàájú).",
+    "ig": "Mụta otú UX research (nchọcha UX) si ebute onye na-eji ngwaahịa ụzọ, ma mechie ọdịiche dị n’etiti ihe azụmahịa chere na ndị na-eji ya chọrọ na ihe ha chọrọ n’ezie, tupu e mee ngwaahịa dị oké ọnụ. Ọ na-akụziekwa otú e si ahọrọ ụzọ nchọcha, uru na ọghọm nke ụzọ ọ bụla, na ụdị bias (ịkwado otu akụkụ).",
+    "ha": "Koyi yadda UX research (binciken UX) ke fifita mai amfani, yake kuma cike giɓin da ke tsakanin abin da kamfani ke tunanin masu amfani suna buƙata da abin da suke buƙata a zahiri, kafin a yi samfur mai tsada. Ya kuma shafi zaɓen hanyar bincike, amfani da rashin amfanin kowace hanya, da nau’o’in bias (son kai).",
+    "fr": "Découvre comment la recherche UX place l’utilisateur au premier plan et comble l’écart entre ce dont une entreprise pense que les utilisateurs ont besoin et ce dont ils ont réellement besoin, avant de créer un produit coûteux. Tu verras aussi comment choisir une méthode de recherche, les avantages et inconvénients de chacune et les types de biais.",
+    "ar": "تعلّم كيف يضع بحث UX المستخدم في المقام الأول ويردم الفجوة بين ما تظن الشركة أن المستخدمين يحتاجون إليه وما يحتاجون إليه فعلًا، قبل صنع منتج مكلف. ويتناول أيضًا اختيار طريقة البحث، ومزايا كل طريقة وعيوبها، وأنواع التحيّز.",
+    "sw": "Jifunze jinsi UX research (utafiti wa UX) inavyomweka mtumiaji mbele na kuziba pengo kati ya kile biashara inachodhani watumiaji wanahitaji na kile wanachohitaji hasa, kabla ya kutengeneza bidhaa ya gharama kubwa. Pia inahusu kuchagua njia ya utafiti, faida na hasara za kila njia, na aina za bias (upendeleo).",
+    "pt": "Aprende como a investigação em UX coloca o utilizador em primeiro lugar e reduz a distância entre aquilo de que uma empresa pensa que os utilizadores precisam e aquilo de que realmente precisam, antes de se criar um produto caro. Vê também como escolher um método de investigação, as vantagens e desvantagens de cada um e os tipos de enviesamento.",
+    "es": "Aprende cómo la investigación UX pone al usuario en primer lugar y reduce la distancia entre lo que una empresa cree que los usuarios necesitan y lo que de verdad necesitan, antes de crear un producto caro. También verás cómo elegir un método de investigación, las ventajas e inconvenientes de cada uno y los tipos de sesgo."
+   }
+  },
+  {
+   "id": "2QQQtiFwXjU",
+   "summary": {
+    "en": "Learn the basics of UX design, what makes a good user experience and what entry-level UX designers do. It also explains specialists, generalists and T-shaped designers, working in a cross-functional team (people with different skills), and UX design at different types of company.",
+    "pcm": "You go learn the basics of UX design, wetin dey make user experience good and wetin entry-level UX designers (people wey just dey start) dey do. E also explain specialists, generalists and T-shaped designers, how to work for cross-functional team (people wey get different skills), and UX design for different types of company.",
+    "yo": "Kọ́ àwọn ìpìlẹ̀ UX design, ohun tó ń mú kí ìrírí olùlò dára àti ohun tí àwọn UX designer tó ṣẹ̀ṣẹ̀ bẹ̀rẹ̀ ń ṣe. Ó tún ṣàlàyé specialist, generalist àti T-shaped designer, ṣíṣiṣẹ́ nínú cross-functional team (ẹgbẹ́ àwọn tó ní ọgbọ́n oríṣiríṣi), àti UX design ní oríṣiríṣi ilé-iṣẹ́.",
+    "ig": "Mụta isi ihe gbasara UX design, ihe na-eme ka ahụmịhe onye na-eji ya dị mma na ihe ndị UX designer na-amalite ọrụ na-eme. Ọ na-akọwakwa specialist, generalist na T-shaped designer, ịrụ ọrụ na cross-functional team (ndị otu nwere nka dị iche iche), na UX design n’ụdị ụlọ ọrụ dị iche iche.",
+    "ha": "Koyi tushen UX design, abin da ke sa ƙwarewar mai amfani ta yi kyau da kuma abin da sababbin UX designers ke yi. Ya kuma bayyana specialist, generalist da T-shaped designer, aiki a cross-functional team (ƙungiyar masu ƙwarewa daban-daban), da UX design a nau’o’in kamfanoni daban-daban.",
+    "fr": "Apprends les bases du design UX, ce qui fait une bonne expérience utilisateur et ce que font les designers UX débutants. Tu découvres aussi les spécialistes, les généralistes et les designers en T, le travail dans une équipe pluridisciplinaire (aux compétences variées) et le design UX selon le type d’entreprise.",
+    "ar": "تعلّم أساسيات تصميم UX، وما الذي يجعل تجربة المستخدم جيدة، وما الذي يفعله مصممو UX المبتدئون. ويشرح أيضًا المتخصصين والعامّين والمصممين على شكل T (T-shaped)، والعمل في فريق متعدد التخصصات، وتصميم UX في أنواع مختلفة من الشركات.",
+    "sw": "Jifunze misingi ya UX design, kinachofanya uzoefu wa mtumiaji uwe mzuri na kazi za wabunifu wa UX wanaoanza. Pia inaeleza specialists, generalists na T-shaped designers, kufanya kazi katika cross-functional team (timu ya watu wenye ujuzi tofauti), na UX design katika aina tofauti za kampuni.",
+    "pt": "Aprende as bases do design de UX, o que faz uma boa experiência do utilizador e o que fazem os designers de UX em início de carreira. Vê também o que são especialistas, generalistas e designers em T, como é trabalhar numa equipa multidisciplinar (com competências diferentes) e o design de UX em vários tipos de empresa.",
+    "es": "Aprende lo básico del diseño UX, qué hace buena una experiencia de usuario y qué hacen los diseñadores UX que empiezan. También verás qué son los especialistas, los generalistas y los diseñadores en T, cómo se trabaja en un equipo multidisciplinar (con habilidades distintas) y el diseño UX en distintos tipos de empresa."
+   }
+  },
+  {
+   "id": "20SHvU2PKsM",
+   "summary": {
+    "en": "Learn why websites and apps must work for people with disabilities, and how good accessibility helps everyone, including older people and anyone on a mobile phone. It also introduces the international W3C standards that guide accessible design.",
+    "pcm": "Learn why websites and apps must work for people wey get disability, and how good accessibility dey help everybody, including old people and anybody wey dey use mobile phone. E still introduce the international W3C standards wey dey guide accessible design.",
+    "yo": "Kọ́ ìdí tí àwọn wẹ́ẹ̀bùsáìtì àti app fi gbọ́dọ̀ ṣiṣẹ́ fún àwọn tó ní àìlera, àti bí accessibility tó dára ṣe ń ran gbogbo ènìyàn lọ́wọ́, títí kan àwọn àgbàlagbà àti ẹnikẹ́ni tó ń lo fóònù alágbèéká. Ó tún ṣàfihàn àwọn ìlànà W3C àgbáyé tó ń darí apẹrẹ tí gbogbo ènìyàn lè lò.",
+    "ig": "Mụta ihe mere weebụsaịtị na app ga-eji rụọ ọrụ maka ndị nwere nkwarụ, na otú accessibility dị mma si enyere onye ọ bụla aka, gụnyere ndị agadi na onye ọ bụla na-eji ekwentị. Ọ na-ewebatakwa ụkpụrụ W3C mba ụwa na-eduzi imewe nke onye ọ bụla nwere ike iji.",
+    "ha": "Koyi dalilin da yasa dole shafukan yanar gizo da manhajoji su yi aiki ga masu nakasa, da yadda kyakkyawan accessibility ke taimakon kowa, har da tsofaffi da duk mai amfani da wayar hannu. Ya kuma gabatar da ƙa’idojin W3C na duniya da ke jagorantar ƙira da kowa zai iya amfani da ita.",
+    "fr": "Apprends pourquoi les sites et les applis doivent fonctionner pour les personnes en situation de handicap, et comment une bonne accessibilité aide tout le monde, y compris les personnes âgées et quiconque utilise un téléphone mobile. La vidéo présente aussi les normes internationales du W3C qui guident la conception accessible.",
+    "ar": "تعلّم لماذا يجب أن تعمل المواقع والتطبيقات للأشخاص ذوي الإعاقة، وكيف تفيد إمكانية الوصول (accessibility) الجيدة الجميع، بمن فيهم كبار السن وكل من يستخدم الهاتف المحمول. ويعرّفك أيضًا بمعايير W3C الدولية التي توجّه التصميم القابل للوصول.",
+    "sw": "Jifunze kwa nini tovuti na app lazima zifanye kazi kwa watu wenye ulemavu, na jinsi accessibility nzuri inavyomsaidia kila mtu, wakiwemo wazee na yeyote anayetumia simu ya mkononi. Pia inatambulisha viwango vya kimataifa vya W3C vinavyoongoza usanifu unaofikika kwa wote.",
+    "pt": "Aprende porque é que os sites e as apps têm de funcionar para pessoas com deficiência, e como uma boa acessibilidade ajuda toda a gente, incluindo pessoas mais velhas e quem usa o telemóvel. O vídeo apresenta também as normas internacionais do W3C que orientam o design acessível.",
+    "es": "Aprende por qué los sitios web y las apps deben funcionar para las personas con discapacidad, y cómo una buena accesibilidad ayuda a todos, incluidas las personas mayores y cualquiera que use el móvil. También presenta los estándares internacionales del W3C que guían el diseño accesible."
+   }
+  },
+  {
+   "id": "n8MnoJyl3W4",
+   "summary": {
+    "en": "A quick introduction to usability testing, one of the most popular UX research methods. You’ll see how watching real people try tasks with a design uncovers its problems and opportunities to improve it.",
+    "pcm": "Quick introduction to usability testing, one of the UX research methods wey people dey use pass. You go see how to watch real people as dem dey try do tasks with one design dey show the problems and the chance to make am better.",
+    "yo": "Ìfihàn ṣókí sí usability testing, ọ̀kan lára àwọn ọ̀nà ìwádìí UX tí wọ́n ń lò jùlọ. Wàá rí bí wíwo àwọn ènìyàn gidi tí wọ́n ń gbìyànjú láti ṣe iṣẹ́ pẹ̀lú apẹrẹ kan ṣe ń ṣàfihàn àwọn ìṣòro rẹ̀ àti àwọn àǹfààní láti mú un dára sí i.",
+    "ig": "Mmeghe dị mkpirikpi banyere usability testing, otu n’ime ụzọ nchọpụta UX kacha ewu ewu. Ị ga-ahụ otú ile ezigbo mmadụ ka ha na-anwa ịrụ ọrụ na otu imewe si ekpughe nsogbu ya na ohere iji meziwanye ya.",
+    "ha": "Gajeriyar gabatarwa ga usability testing, ɗaya daga cikin hanyoyin bincike na UX da aka fi amfani da su. Za ka ga yadda kallon mutane na gaske suna ƙoƙarin yin ayyuka da wata ƙira ke bayyana matsalolinta da damar inganta ta.",
+    "fr": "Une introduction rapide aux tests d’utilisabilité, l’une des méthodes de recherche UX les plus utilisées. Tu verras comment observer de vraies personnes essayer d’accomplir des tâches avec un design révèle ses problèmes et des pistes pour l’améliorer.",
+    "ar": "مقدمة سريعة عن اختبار قابلية الاستخدام (usability testing)، وهو من أشهر أساليب أبحاث تجربة المستخدم. سترى كيف تكشف مراقبة أشخاص حقيقيين وهم يحاولون إنجاز مهام بتصميم ما عن مشكلاته وفرص تحسينه.",
+    "sw": "Utangulizi mfupi wa usability testing, mojawapo ya mbinu za utafiti wa UX zinazotumika zaidi. Utaona jinsi kuwatazama watu halisi wakijaribu kufanya kazi kwa kutumia muundo fulani kunavyofichua matatizo yake na nafasi za kuuboresha.",
+    "pt": "Uma introdução rápida aos testes de usabilidade, um dos métodos de investigação em UX mais usados. Vais ver como observar pessoas reais a tentar fazer tarefas com um design revela os seus problemas e oportunidades para o melhorar.",
+    "es": "Una introducción rápida a las pruebas de usabilidad, uno de los métodos de investigación UX más populares. Verás cómo observar a personas reales intentando hacer tareas con un diseño revela sus problemas y oportunidades para mejorarlo."
+   }
+  },
+  {
+   "id": "sqi0-Lz_ZTY",
+   "summary": {
+    "en": "Learn how to review a product step by step against proven usability principles (heuristics) to find problems before your users do. You’ll see how to plan the review and record what you find, with a free workbook from Nielsen Norman Group.",
+    "pcm": "Learn how to check one product step by step against usability principles (heuristics) wey don prove well, so you fit find problems before your users find am. You go see how to plan the review and write down wetin you find, with free workbook from Nielsen Norman Group.",
+    "yo": "Kọ́ bí a ṣe ń ṣàyẹ̀wò ọjà kan ní ìgbésẹ̀-ń-ìgbésẹ̀ pẹ̀lú àwọn ìlànà usability tí a ti fi hàn pé ó ṣiṣẹ́ (heuristics), láti rí àwọn ìṣòro kí àwọn olùlò rẹ tó rí wọn. Wàá rí bí a ṣe ń ṣètò àyẹ̀wò náà àti bí a ṣe ń kọ ohun tí o rí sílẹ̀, pẹ̀lú ìwé iṣẹ́ ọ̀fẹ́ láti Nielsen Norman Group.",
+    "ig": "Mụta ka e si enyocha ngwaahịa nzọụkwụ n’otu n’otu megide ụkpụrụ usability e gosipụtara na ọ na-arụ ọrụ (heuristics), iji chọta nsogbu tupu ndị ọrụ gị ahụ ha. Ị ga-ahụ ka e si eme atụmatụ nyocha ahụ ma dee ihe ị chọtara, site na akwụkwọ ọrụ efu sitere na Nielsen Norman Group.",
+    "ha": "Koyi yadda ake duba wani samfuri mataki-mataki bisa ƙa’idojin usability da aka tabbatar da ingancinsu (heuristics), don gano matsaloli kafin masu amfani su gan su. Za ka ga yadda ake tsara binciken da rubuta abin da ka gano, tare da littafin aiki kyauta daga Nielsen Norman Group.",
+    "fr": "Apprends à passer un produit au crible, étape par étape, à l’aide de principes d’utilisabilité éprouvés (heuristiques) pour trouver les problèmes avant tes utilisateurs. Tu verras comment préparer l’évaluation et noter ce que tu trouves, avec un cahier d’exercices gratuit du Nielsen Norman Group.",
+    "ar": "تعلّم كيف تراجع منتجًا خطوة بخطوة وفق مبادئ مجرّبة لقابلية الاستخدام (heuristics) لتكتشف المشكلات قبل أن يواجهها المستخدمون. سترى كيف تخطط للتقييم وتدوّن ما تجده، مع كرّاسة عمل مجانية من مجموعة نيلسن نورمان (Nielsen Norman Group).",
+    "sw": "Jifunze jinsi ya kukagua bidhaa hatua kwa hatua dhidi ya kanuni za usability zilizothibitishwa (heuristics) ili kupata matatizo kabla watumiaji wako hawajayaona. Utaona jinsi ya kupanga ukaguzi na kuandika unachokipata, ukiwa na kitabu cha mazoezi cha bure kutoka Nielsen Norman Group.",
+    "pt": "Aprende a rever um produto passo a passo com base em princípios de usabilidade comprovados (heurísticas), para encontrares problemas antes dos teus utilizadores. Vais ver como planear a avaliação e registar o que encontras, com um caderno de trabalho gratuito do Nielsen Norman Group.",
+    "es": "Aprende a revisar un producto paso a paso según principios de usabilidad probados (heurísticas) para encontrar problemas antes que tus usuarios. Verás cómo planificar la evaluación y anotar lo que encuentres, con un cuaderno de trabajo gratuito del Nielsen Norman Group."
+   }
+  },
+  {
+   "id": "gHGN6hs2gZY",
+   "summary": {
+    "en": "Get an overview of design thinking, a problem-solving approach that starts with understanding people’s needs. You’ll learn its main stages, from understanding the problem to generating ideas, prototyping and testing them.",
+    "pcm": "Get overview of design thinking, one way to solve problem wey dey start with understanding wetin people need. You go learn the main stages, from understanding the problem reach bringing ideas, prototyping and testing dem.",
+    "yo": "Ní òye gbogbogbò nípa design thinking, ọ̀nà ìyanjú ìṣòro tó bẹ̀rẹ̀ pẹ̀lú òye ohun tí àwọn ènìyàn nílò. Wàá kọ́ àwọn ìpele pàtàkì rẹ̀, láti òye ìṣòro náà dé ṣíṣe àwọn èrò jáde, ṣíṣe prototype àti dídán wọn wò.",
+    "ig": "Nweta nchịkọta banyere design thinking, ụzọ e si edozi nsogbu nke na-amalite site n’ịghọta mkpa ndị mmadụ. Ị ga-amụta usoro ya ndị bụ isi, site n’ịghọta nsogbu ahụ ruo n’iwepụta echiche, ime prototype na ịnwale ha.",
+    "ha": "Samu taƙaitaccen bayani kan design thinking, hanyar warware matsala da ke farawa da fahimtar bukatun mutane. Za ka koyi manyan matakanta, daga fahimtar matsalar zuwa samar da ra’ayoyi, yin prototype da gwada su.",
+    "fr": "Découvre le design thinking, une démarche de résolution de problèmes qui commence par la compréhension des besoins des gens. Tu apprendras ses grandes étapes, de la compréhension du problème à la recherche d’idées, au prototypage et aux tests.",
+    "ar": "تعرّف إلى التفكير التصميمي (design thinking)، وهو أسلوب لحل المشكلات يبدأ بفهم احتياجات الناس. ستتعلم مراحله الرئيسية، من فهم المشكلة إلى توليد الأفكار وبناء النماذج الأولية (prototypes) واختبارها.",
+    "sw": "Pata muhtasari wa design thinking, mbinu ya kutatua matatizo inayoanza kwa kuelewa mahitaji ya watu. Utajifunza hatua zake kuu, kuanzia kuelewa tatizo hadi kubuni mawazo, kutengeneza prototype na kuyajaribu.",
+    "pt": "Fica a conhecer o design thinking, uma forma de resolver problemas que começa por compreender as necessidades das pessoas. Vais aprender as suas principais fases, desde perceber o problema até gerar ideias, criar protótipos e testá-los.",
+    "es": "Conoce el design thinking, un enfoque para resolver problemas que empieza por entender las necesidades de las personas. Aprenderás sus etapas principales, desde comprender el problema hasta generar ideas, crear prototipos y probarlos."
+   }
+  }
+ ]
+}

@@ -208,7 +208,7 @@ const home = {
     review: 'Go through the cards again',
   },
   skills: {
-    intro: 'Practical skills for the world ahead, taught through hand-picked YouTube lessons.',
+    intro: 'Practical skills for the world ahead: short lessons with Kora, then hand-picked YouTube videos to go deeper.',
     loadFailed: 'We couldn’t load these lessons. Check your connection and try again.',
     retry: 'Try again',
     summary: 'Summary',

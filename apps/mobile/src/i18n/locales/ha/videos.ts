@@ -488,6 +488,7 @@ const videos: Translation<typeof en> = {
     finishedTitle: 'An gama darasin',
     finishedBody: 'Madalla. Gwada wani darasi, ko ka tambayi Kora duk abin da bai bayyana maka ba.',
     moreLessons: 'Ƙarin darussa',
+    lessonTag: 'Darasi tare da Kora',
   },
 };
 

@@ -14,10 +14,11 @@ import { regionOf } from '@/lib/region';
 import { useSession } from '@/lib/session';
 
 /** Kora, head and shoulders, with her smile drawn in (the lesson player draws her mouth live instead). */
-const KORA = require('@/assets/kora/card.webp');
-const COVERS: Record<Lesson['group'], readonly [string, string]> = {
+export const KORA = require('@/assets/kora/card.webp');
+export const COVERS: Record<Lesson['group'], readonly [string, string]> = {
   exam: ['#2A1290', '#6A45FF'],
   cyber: ['#0D2B5E', '#1C82D1'],
+  future: ['#3B1D8F', '#B04CFF'],
   skills: ['#0B5D55', '#14B8A6'],
 };
 

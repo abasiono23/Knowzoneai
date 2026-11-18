@@ -221,7 +221,7 @@ const home: Translation<typeof en> = {
     review: 'Repasar las tarjetas',
   },
   skills: {
-    intro: 'Habilidades prácticas para el mundo de mañana, con lecciones de YouTube bien elegidas.',
+    intro: 'Habilidades prácticas para el mundo de mañana: lecciones cortas con Kora y después vídeos de YouTube bien elegidos para profundizar.',
     loadFailed: 'No pudimos cargar estas lecciones. Revisa tu conexión e inténtalo de nuevo.',
     retry: 'Intentar de nuevo',
     summary: 'Resumen',

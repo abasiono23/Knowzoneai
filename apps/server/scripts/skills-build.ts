@@ -4,6 +4,8 @@
  * lessons, or a language or summary is missing, so nothing half-done reaches students.
  *
  *   npx tsx scripts/skills-build.ts <folder with picked.json and skill-*.json>
+ *
+ * The current inputs live in scripts/skills-inputs.
  */
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';

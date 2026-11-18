@@ -83,7 +83,7 @@ function budget(next: number) {
 // ─── Vultr ────────────────────────────────────────────────────────────────────
 
 /** fetch that rides out a dropped connection, a busy model or a server error. */
-async function call(path: string, init: RequestInit, tries = 6): Promise<Response> {
+async function call(path: string, init: RequestInit, tries = 12): Promise<Response> {
   let last = '';
   for (let attempt = 0; attempt < tries; attempt++) {
     if (attempt) await sleep(2500 * attempt);
@@ -96,10 +96,18 @@ async function call(path: string, init: RequestInit, tries = 6): Promise<Respons
     }
     if (res.status === 429 || res.status >= 500) {
       last = `HTTP ${res.status}`;
-      await sleep((Number(res.headers.get('retry-after')) || 6) * 1000);
+      await sleep((Number(res.headers.get('retry-after')) || 6 + attempt * 4) * 1000);
       continue;
     }
-    if (!res.ok) throw new Error(`${path} ${res.status}: ${scrub(await res.text().catch(() => ''))}`);
+    if (!res.ok) {
+      const said = scrub(await res.text().catch(() => ''));
+      // A body damaged on the way is refused as "not valid JSON": that is the network's fault, so it is sent again.
+      if (res.status === 400 && /not valid JSON/.test(said) && attempt < tries - 1) {
+        last = 'HTTP 400 (damaged request)';
+        continue;
+      }
+      throw new Error(`${path} ${res.status}: ${said}`);
+    }
     return res;
   }
   throw new Error(`${path} didn't answer (${scrub(last)})`);
@@ -256,7 +264,7 @@ HOW IT MUST SOUND
 - Spoken English, not a textbook read aloud. Short sentences. One idea per sentence. Contractions are fine.
 - ${SPELLING[t.spelling]}
 - Warm but not childish. No slang, no "guys", no jokes that waste time, no filler like "let's dive in".
-- Every sentence must be easy to say aloud. Write every number as words ("twenty-two point four", "six point zero two times ten to the power twenty-three", "x squared minus five x plus six equals zero", "H two O"). No digits, no symbols, no brackets, no slashes in the spoken text. Abbreviations only if they are said as they are written (JAMB, WAEC, SAT, GCSE, HTTPS, IP, DNS, CTF).
+- Every sentence must be easy to say aloud. Write every number as words ("twenty-two point four", "six point zero two times ten to the power twenty-three", "x squared minus five x plus six equals zero", "H two O"). No digits, no symbols, no brackets, no slashes in the spoken text. Abbreviations only if they are said as they are written (JAMB, WAEC, SAT, GCSE, HTTPS, IP, DNS, CTF, AI, UX, UI, LLM, SQL, WCAG).
 - Total 430 to 480 words of speech. This limit matters: the lesson is three minutes.
 
 SECTIONS, in this order (use these ids exactly)
@@ -293,9 +301,19 @@ function scriptProblems(s: Script): string[] {
   return out.slice(0, 10);
 }
 
+/**
+ * A script with nothing in its lines but text: tabs, line breaks and other control characters (a model
+ * sometimes leaves them in a code sample or a quoted prompt) become spaces, so the voice, the captions
+ * and the word times are all made from the same words.
+ */
+function tidyScript(script: Script): Script {
+  const clean = (line: string) => line.replace(/[\u0000-\u001f\u007f-\u009f\u2028\u2029]+/g, ' ').replace(/ {2,}/g, ' ').trim();
+  return { ...script, sections: script.sections.map((sec) => ({ ...sec, lines: sec.lines.map(clean).filter(Boolean) })) };
+}
+
 async function makeScript(t: Topic, dir: string): Promise<Script> {
   const file = join(dir, 'script.json');
-  if (existsSync(file)) return readJson<Script>(file);
+  if (existsSync(file)) return tidyScript(readJson<Script>(file));
   const brief = scriptBrief(t);
   const draftFile = join(dir, 'script-draft.json');
   const draft = existsSync(draftFile) ? readJson<Script>(draftFile) : await chatJson(WRITER, brief, ScriptSchema, `${t.id} draft`, 0.7);
@@ -331,8 +349,8 @@ ${JSON.stringify(script)}`;
   const left = scriptProblems(current);
   saveJson(join(dir, 'script-review.json'), { issues, left });
   if (left.some((p) => !p.startsWith('the script has'))) throw new Error(`${t.id}: script still has problems: ${left.join(' | ')}`);
-  saveJson(file, current);
-  return current;
+  saveJson(file, tidyScript(current));
+  return tidyScript(current);
 }
 
 // ─── 2. The board ─────────────────────────────────────────────────────────────
@@ -516,6 +534,14 @@ const SAY: [RegExp, string][] = [
   [/\bATP\b/g, 'A T P'],
   [/\bNADP\b/g, 'N A D P'],
   [/\bIP\b/g, 'I P'],
+  [/\bAI\b/g, 'A I'],
+  [/\bUX\b/g, 'U X'],
+  [/\bUI\b/g, 'U I'],
+  [/\bLLMs\b/g, 'L L Ms'],
+  [/\bLLM\b/g, 'L L M'],
+  [/\bSQL\b/g, 'S Q L'],
+  [/\bWCAG\b/g, 'W C A G'],
+  [/\bID\b/g, 'I D'],
   [/\bIT\b/g, 'I T'],
   [/\bUK\b/g, 'U K'],
   [/\bUS\b/g, 'U S'],
@@ -636,7 +662,8 @@ async function makeVoice(t: Topic, s: Script, dir: string): Promise<{ narration:
   const keyFile = join(voiceDir, 'lines.json');
   // A changed script changes its clips: only the lines that differ are spoken again.
   const before = existsSync(keyFile) ? readJson<string[]>(keyFile) : [];
-  const stale = texts.map((text, i) => before[i] !== text || !existsSync(join(voiceDir, `${i}.wav`)));
+  // (A run that was cut off leaves clips but no list: those clips are kept.)
+  const stale = texts.map((text, i) => (before.length > 0 && before[i] !== text) || !existsSync(join(voiceDir, `${i}.wav`)));
   await pool(texts, PARALLEL, async (text, i) => {
     if (stale[i]) await speakLine(text, join(voiceDir, `${i}.wav`), 100 + i);
   });
@@ -853,7 +880,7 @@ async function build(t: Topic, s: Script, board: Board, narration: Narration, al
 function writeIndex() {
   const lessons = TOPICS.filter((t) => existsSync(join(OUT, t.id, 'lesson.json'))).map((t) => {
     const l = readJson<LessonFile>(join(OUT, t.id, 'lesson.json'));
-    return { id: l.id, title: l.title, subject: l.subject, label: l.label, group: t.group, exams: l.exams, language: l.language, seconds: l.seconds };
+    return { id: l.id, title: l.title, subject: l.subject, label: l.label, group: t.group, ...(t.skill ? { skill: t.skill } : {}), exams: l.exams, language: l.language, seconds: l.seconds };
   });
   writeFileSync(join(OUT, 'index.json'), JSON.stringify({ version: 1, lessons }));
   let bytes = 0;

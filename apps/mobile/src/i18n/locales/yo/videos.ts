@@ -485,6 +485,7 @@ const videos: Translation<typeof en> = {
     finishedTitle: 'Ẹ̀kọ́ ti parí',
     finishedBody: 'O ṣeun. Gbìyànjú ẹ̀kọ́ mìíràn, tàbí bi Kora nípa ohunkóhun tí kò yé ọ.',
     moreLessons: 'Àwọn ẹ̀kọ́ mìíràn',
+    lessonTag: 'Ẹ̀kọ́ pẹ̀lú Kora',
   },
 };
 

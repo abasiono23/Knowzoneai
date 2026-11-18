@@ -532,6 +532,7 @@ const videos: Translation<typeof en> = {
     finishedTitle: 'اكتمل الدرس',
     finishedBody: 'أحسنت. جرّب درسًا آخر، أو اسأل كورا عن أي شيء لم يتضح لك.',
     moreLessons: 'دروس أخرى',
+    lessonTag: 'درس مع كورا',
   },
 };
 

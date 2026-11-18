@@ -23,7 +23,9 @@ export type KoraLessonCard = {
   subject: string;
   /** "SAT", "GCSE", "JAMB · WAEC", "Cybersecurity", "Study skills": names, never translated. */
   label: string;
-  group: 'cyber' | 'skills' | 'exam';
+  group: 'cyber' | 'skills' | 'exam' | 'future';
+  /** The Future skills subject it belongs to ("coding", "cybersecurity" ...): it is listed there too, with that subject's YouTube lessons. */
+  skill?: string;
   /** The exams it is written for; none means it is for everyone. */
   exams: ExamId[];
   language: string;
@@ -89,6 +91,9 @@ export function lessonsForRegion(lessons: KoraLessonCard[], region: string): Kor
   const mine = lessons.filter((l) => l.exams.length === 0 || l.exams.some((e) => own.includes(e)));
   return [...mine.filter((l) => l.exams.length > 0), ...mine.filter((l) => l.exams.length === 0)];
 }
+
+/** A Future skills subject's Kora lessons, in teaching order. They are for everyone, whatever the region. */
+export const lessonsForSkill = (lessons: KoraLessonCard[], skill: string) => lessons.filter((l) => l.skill === skill);
 
 /** "3 min" style length, rounded to the nearest half minute's whole number. */
 export const lessonMinutes = (seconds: number) => Math.max(1, Math.round(seconds / 60));

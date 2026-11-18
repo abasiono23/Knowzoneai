@@ -213,7 +213,7 @@ const home: Translation<typeof en> = {
     review: 'Gafee kaadị ndị a ọzọ',
   },
   skills: {
-    intro: 'Nkà bara uru maka ụwa na-abịa, site na ihe ọmụmụ YouTube ahọpụtara nke ọma.',
+    intro: 'Nkà bara uru maka ụwa na-abịa: nkuzi dị mkpirikpi na Kora, wee vidiyo YouTube ahọpụtara nke ọma iji mụtakwuo.',
     loadFailed: 'Anyị enweghị ike imepe ihe ọmụmụ ndị a. Lelee njikọ gị ma nwaa ọzọ.',
     retry: 'Nwaa ọzọ',
     summary: 'Nchịkọta',

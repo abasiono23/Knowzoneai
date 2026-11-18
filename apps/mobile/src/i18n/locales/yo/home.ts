@@ -210,7 +210,7 @@ const home: Translation<typeof en> = {
     review: 'Lọ nípasẹ̀ àwọn káàdì lẹ́ẹ̀kan sí i',
   },
   skills: {
-    intro: 'Àwọn ọgbọ́n tó wúlò fún ayé tó ń bọ̀, nípasẹ̀ àwọn ẹ̀kọ́ YouTube tí a yàn dáadáa.',
+    intro: 'Àwọn ọgbọ́n tó wúlò fún ayé tó ń bọ̀: ẹ̀kọ́ kúkúrú pẹ̀lú Kora, lẹ́yìn náà àwọn fídíò YouTube tí a yàn dáadáa láti kọ́ jinlẹ̀ sí i.',
     loadFailed: 'A kò lè ṣí àwọn ẹ̀kọ́ wọ̀nyí. Ṣàyẹ̀wò ìsopọ̀ rẹ kí o sì gbìyànjú lẹ́ẹ̀kan sí i.',
     retry: 'Gbìyànjú lẹ́ẹ̀kan sí i',
     summary: 'Àkótán',

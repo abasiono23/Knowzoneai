@@ -129,6 +129,12 @@ function Clip({ uri, radius }: { uri: string; radius: number }) {
   );
 }
 
+/** What marks a board line as code rather than a formula: indentation, or a Python keyword or call at its start. */
+const CODE = /^ {2,}|^(if|elif|else|for|while|def|return|print|import)\b|\b(print|input|range|len)\(|^[a-z_0-9]+ = (input|[a-z_]+\(|[a-z_0-9]+ [*+/-] [a-z_0-9]+$|"|True|False|\d+$)/;
+/** A space that is kept at the start of a line, so code stays indented. */
+const NBSP = String.fromCharCode(160);
+const MONO = Platform.select({ ios: 'Menlo', android: 'monospace', default: 'ui-monospace, Menlo, Consolas, monospace' });
+
 /** A step's number among the scene's steps. */
 const stepNumber = (items: BoardItem[], it: BoardItem) => items.filter((x) => x.kind === 'step').indexOf(it) + 1;
 
@@ -155,12 +161,17 @@ function Item({ item, u, index }: { item: BoardItem; u: number; index: number })
           {!!item.detail && <RNText style={[styles.text, body, { fontSize: u * 0.94 }]}>{item.detail}</RNText>}
         </View>
       );
-    case 'formula':
+    case 'formula': {
+      // A line of code keeps its indentation and reads from the left, in a fixed-width face; a formula sits in the middle.
+      const code = CODE.test(item.text);
       return (
         <View style={[styles.formula, { borderRadius: u * 0.7, paddingVertical: u * 0.5, paddingHorizontal: u * 0.8 }]}>
-          <RNText style={[styles.strong, { fontSize: u * 1.16, lineHeight: u * 1.6, textAlign: 'center' }]}>{item.text}</RNText>
+          <RNText style={[styles.strong, code ? { fontFamily: MONO, fontWeight: '700', fontSize: u * 0.98, lineHeight: u * 1.5 } : { fontSize: u * 1.16, lineHeight: u * 1.6, textAlign: 'center' }]}>
+            {code ? item.text.replace(/^ +/, (m) => NBSP.repeat(m.length)) : item.text}
+          </RNText>
         </View>
       );
+    }
     case 'step':
       return (
         <View style={styles.row}>

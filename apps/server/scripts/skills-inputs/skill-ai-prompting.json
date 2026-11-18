@@ -1,0 +1,191 @@
+{
+ "id": "ai-prompting",
+ "name": {
+  "en": "AI prompting",
+  "pcm": "AI prompting",
+  "yo": "Kíkọ prompt fún AI",
+  "ig": "Ide prompt maka AI",
+  "ha": "Rubutun prompt don AI",
+  "fr": "Rédiger des prompts pour l’IA",
+  "ar": "كتابة الأوامر (prompts) للذكاء الاصطناعي",
+  "sw": "Kuandika prompt za AI",
+  "pt": "Escrever prompts para IA",
+  "es": "Escribir prompts para IA"
+ },
+ "tagline": {
+  "en": "Ask AI clearly, and check what it gives back",
+  "pcm": "Ask AI clear-clear, and check wetin e give you",
+  "yo": "Béèrè lọ́wọ́ AI ní kedere, kí o sì ṣàyẹ̀wò ìdáhùn rẹ̀",
+  "ig": "Jụọ AI ajụjụ nke ọma, ma lelee ihe o nyere gị",
+  "ha": "Tambayi AI a sarari, kuma ka duba amsar da ya bayar",
+  "fr": "Demande clairement à l’IA, puis vérifie sa réponse",
+  "ar": "اسأل الذكاء الاصطناعي بوضوح، وتحقّق مما يقدّمه لك",
+  "sw": "Uliza AI kwa uwazi, kisha kagua inachokupa",
+  "pt": "Pede à IA com clareza e verifica o que te devolve",
+  "es": "Pregunta a la IA con claridad y revisa lo que te da"
+ },
+ "summary": {
+  "en": "AI prompting is the skill of telling an AI tool clearly what you want: the task, the background and the form the answer should take. Better prompts usually get more useful answers, though AI can still make mistakes, so its work needs checking. These lessons cover how language models work and build up from clear, structured prompts to more advanced methods.",
+  "pcm": "AI prompting na the skill to tell AI tool clear-clear wetin you want: the work, the background and how the answer suppose be. Better prompt dey usually bring answer wey help pass, but AI fit still make mistake, so you gats check wetin e do. These lessons go show you how language models dey work, and dem go carry you from clear, well-arranged prompt reach more advanced methods.",
+  "yo": "AI prompting ni ọgbọ́n láti sọ ohun tí o fẹ́ fún irinṣẹ́ AI ní kedere: iṣẹ́ náà, àlàyé nípa ipò rẹ̀, àti bí ìdáhùn ṣe yẹ kó rí. Prompt tó dára máa ń mú ìdáhùn tó wúlò jù wá, ṣùgbọ́n AI ṣì lè ṣe àṣìṣe, nítorí náà ó yẹ kí a ṣàyẹ̀wò iṣẹ́ rẹ̀. Àwọn ẹ̀kọ́ wọ̀nyí ṣàlàyé bí àwọn language model ṣe ń ṣiṣẹ́, wọ́n sì tẹ̀síwájú láti prompt tó ṣe kedere, tó wà létòlétò, dé àwọn ọ̀nà tó ga jù.",
+  "ig": "AI prompting bụ nkà ịgwa ngwá ọrụ AI nke ọma ihe ịchọrọ: ọrụ ahụ, ihe gbara ya gburugburu, na ụdị azịza kwesịrị ịdị. Prompt ka mma na-enyekarị azịza bara uru karị, mana AI ka nwere ike imehie ihe, ya mere ọ dị mkpa ilele ihe o mere. Ihe ọmụmụ ndị a na-akọwa otú language model si arụ ọrụ, ma na-esi na prompt doro anya ma hazie nke ọma ruo n’ụzọ ndị dị elu karị.",
+  "ha": "AI prompting ƙwarewa ce ta gaya wa kayan aikin AI abin da kake so a sarari: aikin, bayanan da suka shafe shi, da yadda ya kamata amsar ta kasance. Prompt mai kyau yakan kawo amsa mafi amfani, amma AI na iya yin kuskure, don haka ya kamata a duba aikinsa. Waɗannan darussa sun bayyana yadda language model ke aiki, kuma sun tashi daga prompt bayyananne mai tsari zuwa hanyoyin da suka fi ci gaba.",
+  "fr": "Rédiger des prompts, c’est savoir dire clairement à un outil d’IA ce que l’on veut : la tâche, le contexte et la forme attendue de la réponse. De meilleurs prompts donnent généralement des réponses plus utiles, mais l’IA peut quand même se tromper : son travail doit donc être vérifié. Ces leçons expliquent le fonctionnement des modèles de langage et vont des prompts clairs et structurés jusqu’à des méthodes plus avancées.",
+  "ar": "كتابة الأوامر (prompts) هي مهارة إخبار أداة الذكاء الاصطناعي بوضوح بما تريد: المهمة، والخلفية، والشكل الذي ينبغي أن تأتي عليه الإجابة. عادةً ما تؤدي الأوامر الأفضل إلى إجابات أكثر فائدة، لكن الذكاء الاصطناعي قد يخطئ مع ذلك، لذا يجب التحقق من عمله. تشرح هذه الدروس كيف تعمل النماذج اللغوية، وتتدرّج من الأوامر الواضحة والمنظمة إلى أساليب أكثر تقدمًا.",
+  "sw": "Kuandika prompt ni ujuzi wa kuiambia zana ya AI kwa uwazi unachotaka: kazi yenyewe, maelezo ya msingi, na jinsi jibu linavyopaswa kuwa. Prompt bora kwa kawaida huleta majibu yenye manufaa zaidi, lakini AI bado inaweza kukosea, kwa hiyo kazi yake inahitaji kukaguliwa. Masomo haya yanaeleza jinsi language model zinavyofanya kazi, na yanapanda kutoka prompt zilizo wazi na zilizopangwa hadi mbinu za juu zaidi.",
+  "pt": "Escrever prompts é saber dizer claramente a uma ferramenta de IA o que se pretende: a tarefa, o contexto e a forma que a resposta deve ter. Melhores prompts costumam dar respostas mais úteis, mas a IA pode ainda assim errar, por isso o seu trabalho tem de ser verificado. Estas lições explicam como funcionam os modelos de linguagem e progridem dos prompts claros e estruturados até métodos mais avançados.",
+  "es": "Escribir prompts es saber decirle con claridad a una herramienta de IA lo que quieres: la tarea, el contexto y la forma que debe tener la respuesta. Los mejores prompts suelen dar respuestas más útiles, aunque la IA aún puede equivocarse, así que hay que comprobar su trabajo. Estas lecciones explican cómo funcionan los modelos de lenguaje y van desde prompts claros y estructurados hasta métodos más avanzados."
+ },
+ "videos": [
+  {
+   "id": "QAKtNOWsaHI",
+   "summary": {
+    "en": "Learn how to write clearer prompts for vibe coding, which means creating software by describing it in natural language, through the build of a playable 3D racing game. The strategies are to be specific, guide the choice of technology and add sketches or screenshots as visual references.",
+    "pcm": "Learn how to write clear prompt for vibe coding, wey mean say you dey create software by describing am for normal language, as dem dey build 3D racing game wey person fit play. The strategies na to dey specific, guide which technology dem go use, and add sketch or screenshot as visual reference.",
+    "yo": "Kọ́ bí a ṣe ń kọ prompt tó ṣe kedere fún vibe coding, ìyẹn ṣíṣe software nípa ṣíṣàpèjúwe rẹ̀ ní èdè ojoojúmọ́, bí wọ́n ṣe ń kọ́ eré ìje 3D tí a lè ṣe. Àwọn ọ̀nà náà ni láti sọ ohun tí o fẹ́ ní pàtó, láti tọ́ka sí technology tí a ó lò, àti láti fi sketch tàbí screenshot kún un gẹ́gẹ́ bí àpẹẹrẹ ìrísí.",
+    "ig": "Mụta otú e si ede prompt doro anya maka vibe coding, ya bụ ịmepụta software site n’ịkọwa ya n’asụsụ nkịtị, ka a na-ewu egwuregwu ọsọ 3D a na-egwu egwu. Usoro ndị ahụ bụ ịkọwapụta ihe ịchọrọ kpọmkwem, iduzi nhọrọ teknụzụ, na itinye sketch ma ọ bụ screenshot dị ka ihe ntụaka a na-ahụ anya.",
+    "ha": "Koyi yadda ake rubuta prompt mai bayyane don vibe coding, wato ƙirƙirar software ta hanyar bayyana ta da harshe na yau da kullum, ta hanyar bin yadda ake gina wasan tsere na 3D da za a iya yi. Dabarun su ne fayyace abin da kake so dalla-dalla, jagorantar zaɓin fasaha, da ƙara zane ko screenshot a matsayin abin kwaikwayo na gani.",
+    "fr": "Apprends à écrire des prompts plus clairs pour le vibe coding, qui consiste à créer un logiciel en le décrivant en langage courant, à travers la création d’un jeu de course en 3D jouable. Les stratégies : être précis, orienter le choix de la technologie et ajouter des croquis ou des captures d’écran comme références visuelles.",
+    "ar": "تعلّم كتابة أوامر (prompts) أوضح من أجل vibe coding، أي إنشاء البرامج بوصفها بلغة طبيعية، من خلال بناء لعبة سباق ثلاثية الأبعاد قابلة للعب. وتتمثل الاستراتيجيات في أن تكون محددًا، وأن توجّه اختيار التقنية، وأن تضيف رسومات أو لقطات شاشة كمراجع بصرية.",
+    "sw": "Jifunze kuandika prompt zilizo wazi zaidi kwa ajili ya vibe coding, yaani kutengeneza software kwa kuielezea kwa lugha ya kawaida, kupitia ujenzi wa mchezo wa mbio wa 3D unaoweza kuchezwa. Mbinu ni kuwa mahususi, kuongoza uchaguzi wa teknolojia, na kuongeza michoro au screenshot kama marejeleo ya kuona.",
+    "pt": "Aprende a escrever prompts mais claros para vibe coding, ou seja, criar software descrevendo-o em linguagem natural, através da construção de um jogo de corridas 3D jogável. As estratégias são ser específico, orientar a escolha da tecnologia e juntar esboços ou capturas de ecrã como referências visuais.",
+    "es": "Aprende a escribir prompts más claros para el vibe coding, es decir, crear software describiéndolo en lenguaje natural, mediante la creación de un juego de carreras en 3D jugable. Las estrategias son ser específico, orientar la elección de la tecnología y añadir bocetos o capturas de pantalla como referencias visuales."
+   }
+  },
+  {
+   "id": "LPZh9BOjkQs",
+   "summary": {
+    "en": "Get a short, light introduction to large language models, known as LLMs, along with chatbots, pretraining and transformers. These ideas give you a first picture of the topic, and you can explore it further later.",
+    "pcm": "Get short, easy introduction to large language models, wey people dey call LLMs, plus chatbots, pretraining and transformers. These ideas go give you first picture of the topic, and you fit learn more about am later.",
+    "yo": "Gba ìfihàn kúkúrú, tó rọrùn sí large language models, tí a mọ̀ sí LLMs, pẹ̀lú chatbots, pretraining àti transformers. Àwọn èrò wọ̀nyí yóò fún ọ ní òye àkọ́kọ́ nípa kókó yìí, o sì lè kọ́ sí i nípa rẹ̀ lẹ́yìn náà.",
+    "ig": "Nweta okwu mmalite dị mkpirikpi ma dị mfe gbasara large language models, nke a maara dị ka LLMs, yana chatbots, pretraining na transformers. Echiche ndị a na-enye gị nghọta mbụ gbasara isiokwu a, ị ga-enwekwa ike ịmụtakwu ya ma emechaa.",
+    "ha": "Sami gajeren gabatarwa mai sauƙi kan large language models, waɗanda ake kira LLMs, tare da chatbots, pretraining da transformers. Waɗannan ra’ayoyin za su ba ka hoton farko na wannan batu, kuma za ka iya ƙara koyo game da shi daga baya.",
+    "fr": "Découvre une introduction courte et accessible aux grands modèles de langage (large language models, ou LLM), ainsi qu’aux chatbots, au pré-entraînement (pretraining) et aux transformers. Ces notions te donnent une première idée du sujet, que tu pourras approfondir plus tard.",
+    "ar": "احصل على مقدمة قصيرة وخفيفة عن النماذج اللغوية الكبيرة (LLMs)، إلى جانب روبوتات الدردشة (chatbots) والتدريب المسبق (pretraining) والمحوّلات (transformers). تمنحك هذه الأفكار صورة أولى عن الموضوع، ويمكنك التعمق فيه لاحقًا.",
+    "sw": "Pata utangulizi mfupi na mwepesi wa large language models, zinazojulikana kama LLMs, pamoja na chatbots, pretraining na transformers. Mawazo haya yanakupa picha ya kwanza ya mada hii, na unaweza kujifunza zaidi baadaye.",
+    "pt": "Fica com uma introdução curta e acessível aos grandes modelos de linguagem (large language models, ou LLM), bem como aos chatbots, ao pré-treino (pretraining) e aos transformers. Estas ideias dão-te uma primeira imagem do tema, que podes aprofundar mais tarde.",
+    "es": "Obtén una introducción breve y sencilla a los grandes modelos de lenguaje (large language models, o LLM), junto con los chatbots, el preentrenamiento (pretraining) y los transformers. Estas ideas te dan una primera imagen del tema, en el que puedes profundizar más adelante."
+   }
+  },
+  {
+   "id": "-Hjw0_PMyfQ",
+   "summary": {
+    "en": "Learn the basics of prompt engineering through a worked example of a business insights summary, using Amazon Bedrock, an AWS service for building AI applications. Topics include clear instructions, where to place questions, separator characters, output indicators and inference parameters.",
+    "pcm": "Learn the basics of prompt engineering through example of business insights summary, as dem dey use Amazon Bedrock, one AWS service for building AI applications. Topics include clear instructions, where to put question, separator characters, output indicators and inference parameters.",
+    "yo": "Kọ́ àwọn ìpìlẹ̀ prompt engineering nípasẹ̀ àpẹẹrẹ àkópọ̀ business insights, ní lílo Amazon Bedrock, iṣẹ́ AWS kan fún kíkọ́ àwọn ohun èlò AI. Àwọn kókó náà ni ìtọ́ni tó ṣe kedere, ibi tí a ó fi ìbéèrè sí, separator characters, output indicators àti inference parameters.",
+    "ig": "Mụta ihe ndị bụ isi na prompt engineering site n’ihe atụ nke nchịkọta business insights, jiri Amazon Bedrock, ọrụ AWS maka iwu ngwa AI. Isiokwu ndị ahụ gụnyere ntụziaka doro anya, ebe a ga-etinye ajụjụ, separator characters, output indicators na inference parameters.",
+    "ha": "Koyi tushen prompt engineering ta hanyar misalin taƙaitaccen bayanin business insights, ana amfani da Amazon Bedrock, wani sabis na AWS don gina manhajojin AI. Batutuwan sun haɗa da umarni bayyanannu, inda za a sanya tambayoyi, separator characters, output indicators da inference parameters.",
+    "fr": "Apprends les bases du prompt engineering à partir d’un exemple de résumé d’analyses commerciales (business insights), avec Amazon Bedrock, un service AWS pour créer des applications d’IA. Au programme : instructions claires, place des questions, caractères séparateurs, indicateurs de sortie et paramètres d’inférence.",
+    "ar": "تعلّم أساسيات هندسة الأوامر (prompt engineering) من خلال مثال تطبيقي لملخص رؤى الأعمال، باستخدام Amazon Bedrock، وهي خدمة من AWS لبناء تطبيقات الذكاء الاصطناعي. تشمل الموضوعات التعليمات الواضحة، وأين توضع الأسئلة، ورموز الفصل، ومؤشرات المخرجات، ومعاملات الاستدلال (inference parameters).",
+    "sw": "Jifunze misingi ya prompt engineering kupitia mfano wa muhtasari wa business insights, kwa kutumia Amazon Bedrock, huduma ya AWS ya kujenga programu za AI. Mada ni pamoja na maelekezo yaliyo wazi, mahali pa kuweka maswali, separator characters, output indicators na inference parameters.",
+    "pt": "Aprende as bases da engenharia de prompts (prompt engineering) através de um exemplo de resumo de informações de negócio, com o Amazon Bedrock, um serviço da AWS para criar aplicações de IA. Os temas incluem instruções claras, onde colocar as perguntas, caracteres separadores, indicadores de saída e parâmetros de inferência.",
+    "es": "Aprende los fundamentos de la ingeniería de prompts (prompt engineering) con un ejemplo de resumen de información empresarial, usando Amazon Bedrock, un servicio de AWS para crear aplicaciones de IA. Los temas incluyen instrucciones claras, dónde colocar las preguntas, caracteres separadores, indicadores de salida y parámetros de inferencia."
+   }
+  },
+  {
+   "id": "jC4v5AS4RIM",
+   "summary": {
+    "en": "Learn a six-part prompt formula for chatbots such as ChatGPT: task, context, exemplars (examples), persona, format and tone. Real-world examples show how each part helps, and you’ll see tips such as starting the task with an action verb. The lesson ends by comparing outputs from good and bad prompts.",
+    "pcm": "Learn prompt formula wey get six parts for chatbot like ChatGPT: task, context, exemplars (examples), persona, format and tone. Real-world examples go show how each part dey help, and you go see tips like to start the task with action verb. The lesson end by comparing wetin good and bad prompts bring out.",
+    "yo": "Kọ́ àgbékalẹ̀ prompt oníapá mẹ́fà fún chatbot bíi ChatGPT: task, context, exemplars (àwọn àpẹẹrẹ), persona, format àti tone. Àwọn àpẹẹrẹ ojúlówó fi hàn bí apá kọ̀ọ̀kan ṣe ń ṣèrànwọ́, o sì máa rí àwọn àmọ̀ràn bíi bíbẹ̀rẹ̀ task pẹ̀lú ọ̀rọ̀-ìṣe. Ẹ̀kọ́ náà parí pẹ̀lú ìfiwéra èsì prompt rere àti ti búburú.",
+    "ig": "Mụta usoro prompt nwere akụkụ isii maka chatbot dị ka ChatGPT: task, context, exemplars (ihe atụ), persona, format na tone. Ihe atụ sitere n’ezi ndụ na-egosi otú akụkụ ọ bụla si enyere aka, ị ga-ahụkwa ndụmọdụ dị ka ịmalite task site na ngwaa omume. Ihe ọmụmụ a na-ejedebe site n’itule ihe prompt ọma na prompt ọjọọ na-ewepụta.",
+    "ha": "Koyi tsarin prompt mai sassa shida don chatbot kamar ChatGPT: task, context, exemplars (misalai), persona, format da tone. Misalai na zahiri sun nuna yadda kowane sashi ke taimakawa, kuma za ka ga shawarwari kamar fara task da fi’ili mai nuna aiki. Darasin ya ƙare da kwatanta sakamakon prompt mai kyau da mara kyau.",
+    "fr": "Apprends une formule de prompt en six parties pour des chatbots comme ChatGPT : tâche, contexte, exemples (exemplars), persona, format et ton. Des exemples concrets montrent l’utilité de chaque partie, avec des conseils comme commencer la tâche par un verbe d’action. La leçon se termine en comparant les résultats de bons et de mauvais prompts.",
+    "ar": "تعلّم صيغة من ستة أجزاء لكتابة الأوامر (prompts) لروبوتات الدردشة مثل ChatGPT: المهمة، والسياق، والأمثلة (exemplars)، والشخصية (persona)، والتنسيق، والنبرة. توضّح أمثلة واقعية فائدة كل جزء، وسترى نصائح مثل بدء المهمة بفعل يدل على العمل. ويُختتم الدرس بمقارنة نتائج الأوامر الجيدة والسيئة.",
+    "sw": "Jifunze fomula ya prompt yenye sehemu sita kwa chatbot kama ChatGPT: task, context, exemplars (mifano), persona, format na tone. Mifano halisi inaonyesha jinsi kila sehemu inavyosaidia, na utaona vidokezo kama kuanza task kwa kitenzi cha kitendo. Somo linamalizia kwa kulinganisha matokeo ya prompt nzuri na mbaya.",
+    "pt": "Aprende uma fórmula de prompt em seis partes para chatbots como o ChatGPT: tarefa, contexto, exemplos (exemplars), persona, formato e tom. Exemplos reais mostram como cada parte ajuda, com dicas como começar a tarefa com um verbo de ação. A lição termina a comparar os resultados de bons e maus prompts.",
+    "es": "Aprende una fórmula de prompt en seis partes para chatbots como ChatGPT: tarea, contexto, ejemplos (exemplars), persona, formato y tono. Ejemplos reales muestran cómo ayuda cada parte, con consejos como empezar la tarea con un verbo de acción. La lección termina comparando los resultados de prompts buenos y malos."
+   }
+  },
+  {
+   "id": "1c9iyoVIwDs",
+   "summary": {
+    "en": "Compare four prompt engineering methods: Retrieval Augmented Generation (RAG), Chain-of-Thought (COT), ReACT (Reason + Act) and Directional Stimulus Prompting (DSP). You’ll see an example of each, how they differ, and how they can be best used and even combined.",
+    "pcm": "Compare four prompt engineering methods: Retrieval Augmented Generation (RAG), Chain-of-Thought (COT), ReACT (Reason + Act) and Directional Stimulus Prompting (DSP). You go see example of each one, how dem take different, and the best way to use dem, even to join dem together.",
+    "yo": "Fi ọ̀nà mẹ́rin ti prompt engineering wé ara wọn: Retrieval Augmented Generation (RAG), Chain-of-Thought (COT), ReACT (Reason + Act) àti Directional Stimulus Prompting (DSP). Wàá rí àpẹẹrẹ ọ̀kọ̀ọ̀kan, bí wọ́n ṣe yàtọ̀ síra, àti ọ̀nà tó dára jù láti lò wọ́n, àní láti so wọ́n pọ̀.",
+    "ig": "Tụlee ụzọ anọ nke prompt engineering: Retrieval Augmented Generation (RAG), Chain-of-Thought (COT), ReACT (Reason + Act) na Directional Stimulus Prompting (DSP). Ị ga-ahụ ihe atụ nke ọ bụla, otú ha si dị iche, na otú kacha mma e si eji ha, ọbụna ijikọ ha ọnụ.",
+    "ha": "Kwatanta hanyoyi huɗu na prompt engineering: Retrieval Augmented Generation (RAG), Chain-of-Thought (COT), ReACT (Reason + Act) da Directional Stimulus Prompting (DSP). Za ka ga misalin kowanne, yadda suka bambanta, da yadda za a fi amfani da su, har ma da haɗa su.",
+    "fr": "Compare quatre méthodes de prompt engineering : Retrieval Augmented Generation (RAG), Chain-of-Thought (COT), ReACT (Reason + Act) et Directional Stimulus Prompting (DSP). Tu verras un exemple de chacune, leurs différences, la meilleure façon de les utiliser et même de les combiner.",
+    "ar": "قارن بين أربع طرق في هندسة الأوامر (prompt engineering): Retrieval Augmented Generation (RAG)، وChain-of-Thought (COT)، وReACT (Reason + Act)، وDirectional Stimulus Prompting (DSP). سترى مثالًا على كل طريقة، وكيف تختلف، وأفضل طريقة لاستخدامها، بل والجمع بينها.",
+    "sw": "Linganisha mbinu nne za prompt engineering: Retrieval Augmented Generation (RAG), Chain-of-Thought (COT), ReACT (Reason + Act) na Directional Stimulus Prompting (DSP). Utaona mfano wa kila moja, jinsi zinavyotofautiana, na njia bora ya kuzitumia, hata kuzichanganya.",
+    "pt": "Compara quatro métodos de engenharia de prompts: Retrieval Augmented Generation (RAG), Chain-of-Thought (COT), ReACT (Reason + Act) e Directional Stimulus Prompting (DSP). Vais ver um exemplo de cada um, em que diferem, a melhor forma de os usar e até de os combinar.",
+    "es": "Compara cuatro métodos de ingeniería de prompts: Retrieval Augmented Generation (RAG), Chain-of-Thought (COT), ReACT (Reason + Act) y Directional Stimulus Prompting (DSP). Verás un ejemplo de cada uno, en qué se diferencian, cómo usarlos mejor e incluso cómo combinarlos."
+   }
+  },
+  {
+   "id": "_ZvnD73m40o",
+   "summary": {
+    "en": "Learn prompt engineering techniques for better results from ChatGPT and other LLMs in a longer course. It covers AI, machine learning, linguistics and language models, then the prompt engineering mindset, GPT-4, best practices, zero-shot and few-shot prompts, AI hallucinations (made-up answers) and text embeddings.",
+    "pcm": "Learn prompt engineering techniques to get better results from ChatGPT and other LLMs for this long course. E go pass through AI, machine learning, linguistics and language models, then the prompt engineering mindset, GPT-4, best practices, zero-shot and few-shot prompts, AI hallucinations (when AI make up things) and text embeddings.",
+    "yo": "Kọ́ àwọn ọgbọ́n prompt engineering láti rí èsì tó dára jù láti ọ̀dọ̀ ChatGPT àti àwọn LLM mìíràn nínú ẹ̀kọ́ gígùn yìí. Ó ṣàlàyé AI, machine learning, linguistics àti language models, lẹ́yìn náà prompt engineering mindset, GPT-4, best practices, zero-shot àti few-shot prompts, AI hallucinations (nígbà tí AI bá hùmọ̀ nǹkan) àti text embeddings.",
+    "ig": "Mụta usoro prompt engineering iji nweta nsonaazụ ka mma site na ChatGPT na LLM ndị ọzọ n’ọmụmụ ogologo a. Ọ na-agafe AI, machine learning, linguistics na language models, wee gaa n’echiche prompt engineering (mindset), GPT-4, best practices, zero-shot na few-shot prompts, AI hallucinations (mgbe AI na-echepụta ihe) na text embeddings.",
+    "ha": "Koyi dabarun prompt engineering don samun sakamako mafi kyau daga ChatGPT da sauran LLMs a wannan dogon kwas. Yana bi ta AI, machine learning, linguistics da language models, sannan tunanin prompt engineering (mindset), GPT-4, best practices, zero-shot da few-shot prompts, AI hallucinations (lokacin da AI ya ƙirƙiri abin da ba gaskiya ba) da text embeddings.",
+    "fr": "Apprends des techniques de prompt engineering pour obtenir de meilleurs résultats avec ChatGPT et d’autres LLM dans ce cours plus long. Il aborde l’IA, le machine learning, la linguistique et les modèles de langage, puis l’état d’esprit du prompt engineering, GPT-4, les bonnes pratiques, les prompts zero-shot et few-shot, les hallucinations de l’IA (quand elle invente) et les text embeddings.",
+    "ar": "تعلّم تقنيات هندسة الأوامر (prompt engineering) للحصول على نتائج أفضل من ChatGPT ونماذج LLM الأخرى في هذه الدورة الأطول. تتناول الدورة الذكاء الاصطناعي، وتعلّم الآلة، وعلم اللغة، والنماذج اللغوية، ثم عقلية هندسة الأوامر، وGPT-4، وأفضل الممارسات، وأوامر zero-shot وfew-shot، وهلوسات الذكاء الاصطناعي (عندما يختلق معلومات)، والتضمينات النصية (text embeddings).",
+    "sw": "Jifunze mbinu za prompt engineering ili kupata matokeo bora kutoka ChatGPT na LLM nyingine katika kozi hii ndefu. Inapitia AI, machine learning, isimu (linguistics) na language models, kisha mtazamo wa prompt engineering, GPT-4, mbinu bora, prompt za zero-shot na few-shot, AI hallucinations (AI inapobuni mambo) na text embeddings.",
+    "pt": "Aprende técnicas de engenharia de prompts para obter melhores resultados do ChatGPT e de outros LLM neste curso mais longo. Passa pela IA, machine learning, linguística e modelos de linguagem, e depois pela mentalidade da engenharia de prompts, GPT-4, boas práticas, prompts zero-shot e few-shot, alucinações da IA (quando inventa coisas) e text embeddings.",
+    "es": "Aprende técnicas de ingeniería de prompts para obtener mejores resultados de ChatGPT y otros LLM en este curso más largo. Recorre la IA, el machine learning, la lingüística y los modelos de lenguaje, y luego la mentalidad de la ingeniería de prompts, GPT-4, las buenas prácticas, los prompts zero-shot y few-shot, las alucinaciones de la IA (cuando inventa cosas) y los text embeddings."
+   }
+  },
+  {
+   "id": "cfqtFvWOfg0",
+   "summary": {
+    "en": "Learn why AI chatbots sometimes state false things with confidence, which is called hallucination. You’ll see the main types and causes, and steps you can take as a user to make them less likely.",
+    "pcm": "Learn why AI chatbots dey sometimes talk false things with confidence, wey dem dey call hallucination. You go see the main types and causes, and wetin you fit do as user to reduce am.",
+    "yo": "Kọ́ ìdí tí àwọn AI chatbot fi máa ń sọ ohun tí kì í ṣe òótọ́ pẹ̀lú ìgboyà nígbà mìíràn, èyí tí wọ́n ń pè ní hallucination. Wàá rí àwọn oríṣi àti ohun tó ń fà á, àti àwọn ìgbésẹ̀ tí o lè gbé gẹ́gẹ́ bí olùlò láti dín in kù.",
+    "ig": "Mụta ihe mere AI chatbot ji ekwu ihe ụgha mgbe ụfọdụ n’obi ike, nke a na-akpọ hallucination. Ị ga-ahụ ụdị ya na ihe na-akpata ya, na nzọụkwụ ị nwere ike ime dị ka onye ọrụ iji belata ya.",
+    "ha": "Koyi dalilin da yasa AI chatbots ke faɗin abubuwan ƙarya da ƙarfin gwiwa wani lokaci, abin da ake kira hallucination. Za ka ga manyan nau’o’insa da musabbabansa, da matakan da za ka iya ɗauka a matsayinka na mai amfani don rage shi.",
+    "fr": "Apprends pourquoi les chatbots d’IA affirment parfois des choses fausses avec assurance, ce qu’on appelle des hallucinations. Tu verras leurs principaux types et causes, et ce que tu peux faire en tant qu’utilisateur pour les limiter.",
+    "ar": "تعلّم لماذا تقدّم روبوتات الدردشة بالذكاء الاصطناعي أحيانًا معلومات خاطئة بثقة، وهو ما يُسمّى الهلوسة (hallucination). سترى أنواعها الرئيسية وأسبابها، والخطوات التي يمكنك اتخاذها كمستخدم للحدّ منها.",
+    "sw": "Jifunze kwa nini AI chatbots wakati mwingine husema mambo ya uongo kwa kujiamini, jambo linaloitwa hallucination. Utaona aina zake kuu na visababishi vyake, na hatua unazoweza kuchukua kama mtumiaji kulipunguza.",
+    "pt": "Aprende porque é que os chatbots de IA às vezes afirmam coisas falsas com toda a confiança, o que se chama alucinação. Vais ver os principais tipos e causas, e o que podes fazer como utilizador para as tornar menos prováveis.",
+    "es": "Aprende por qué los chatbots de IA a veces afirman cosas falsas con total seguridad, lo que se llama alucinación. Verás sus principales tipos y causas, y qué puedes hacer como usuario para que ocurran menos."
+   }
+  },
+  {
+   "id": "gV0_raKR2UQ",
+   "summary": {
+    "en": "Understand how AI systems can end up unfair. You’ll learn five common sources of algorithmic bias, from data that reflects existing prejudice to feedback loops and deliberately harmful data, and why it pays to question AI results.",
+    "pcm": "Understand how AI systems fit end up dey unfair. You go learn five common sources of algorithmic bias, from data wey carry the bias wey don dey before reach feedback loops and data wey people spoil on purpose, and why e good make you dey question AI results.",
+    "yo": "Ní òye bí àwọn sístẹ́mù AI ṣe lè di aláìṣòdodo. Wàá kọ́ orísun márùn-ún tó wọ́pọ̀ fún algorithmic bias, láti data tó ń ṣàfihàn ẹ̀tanú tó ti wà tẹ́lẹ̀ dé feedback loop àti data tí wọ́n mọ̀ọ́mọ̀ bàjẹ́, àti ìdí tó fi dára láti máa béèrè ìbéèrè nípa èsì AI.",
+    "ig": "Ghọta otú sistemu AI si nwere ike ịghọ ndị na-ezighi ezi. Ị ga-amụta isi iyi ise a na-ahụkarị nke algorithmic bias, site na data na-egosipụta ajọ mmụọ dị adị ruo na feedback loop na data e mebiri n’ụma, na ihe mere o ji dị mma ịjụ ajụjụ banyere nsonaazụ AI.",
+    "ha": "Fahimci yadda tsarin AI zai iya zama marar adalci. Za ka koyi tushe biyar na algorithmic bias da suka fi yawa, daga data da ke nuna wariyar da ke akwai zuwa feedback loops da data mai cutarwa da gangan, da dalilin da yasa yake da kyau ka riƙa tambayar sakamakon AI.",
+    "fr": "Comprends comment des systèmes d’IA peuvent devenir injustes. Tu découvriras cinq sources courantes de biais algorithmiques, des données qui reflètent des préjugés existants aux boucles de rétroaction et aux données volontairement malveillantes, et pourquoi il vaut la peine de remettre en question les résultats d’une IA.",
+    "ar": "افهم كيف يمكن أن تصبح أنظمة الذكاء الاصطناعي غير منصفة. ستتعرف إلى خمسة مصادر شائعة للتحيّز الخوارزمي (algorithmic bias)، من البيانات التي تعكس أحكامًا مسبقة قائمة إلى حلقات التغذية الراجعة والبيانات الضارة عمدًا، ولماذا يستحق الأمر أن تتساءل عن نتائج الذكاء الاصطناعي.",
+    "sw": "Elewa jinsi mifumo ya AI inavyoweza kuishia kutotenda haki. Utajifunza vyanzo vitano vya kawaida vya algorithmic bias, kuanzia data inayoakisi chuki zilizopo hadi feedback loops na data yenye madhara iliyowekwa kwa makusudi, na kwa nini inafaa kuhoji matokeo ya AI.",
+    "pt": "Percebe como os sistemas de IA podem acabar por ser injustos. Vais conhecer cinco fontes comuns de enviesamento algorítmico, desde dados que refletem preconceitos existentes até ciclos de feedback e dados deliberadamente maliciosos, e porque vale a pena questionar os resultados da IA.",
+    "es": "Entiende cómo los sistemas de IA pueden acabar siendo injustos. Conocerás cinco fuentes comunes de sesgo algorítmico, desde datos que reflejan prejuicios existentes hasta bucles de retroalimentación y datos malintencionados, y por qué conviene cuestionar los resultados de la IA."
+   }
+  },
+  {
+   "id": "9aA2YAcFs0A",
+   "summary": {
+    "en": "Sal Khan shares simple strategies for prompting an AI to get answers that are truly useful for learning. The tips are shown with Khan Academy’s AI tutor Khanmigo, but they work with any AI assistant you use to study.",
+    "pcm": "Sal Khan share simple ways to prompt AI so you go get answers wey really dey useful for learning. Dem show the tips with Khanmigo, the AI tutor for Khan Academy, but dem go work with any AI assistant wey you dey use read book.",
+    "yo": "Sal Khan pín àwọn ọgbọ́n rírọrùn fún bíbéèrè lọ́wọ́ AI (prompting) láti rí ìdáhùn tó wúlò gan-an fún ẹ̀kọ́. Wọ́n fi àwọn ìmọ̀ràn náà hàn pẹ̀lú Khanmigo, olùkọ́ AI ti Khan Academy, ṣùgbọ́n wọ́n ń ṣiṣẹ́ pẹ̀lú èyíkéyìí AI assistant tí o ń lò láti kàwé.",
+    "ig": "Sal Khan na-ekerịta atụmatụ dị mfe maka ịnye AI prompt iji nweta azịza bara uru n’ezie maka mmụta. E gosiri ndụmọdụ ndị a site na Khanmigo, onye nkuzi AI nke Khan Academy, mana ha na-arụ ọrụ na AI assistant ọ bụla ị na-eji agụ akwụkwọ.",
+    "ha": "Sal Khan ya bayar da dabaru masu sauƙi na yin prompt ga AI don samun amsoshin da ke da amfani sosai wajen koyo. An nuna shawarwarin da Khanmigo, malamin AI na Khan Academy, amma suna aiki da kowane AI assistant da kake amfani da shi wajen karatu.",
+    "fr": "Sal Khan partage des stratégies simples pour rédiger des prompts qui donnent des réponses vraiment utiles pour apprendre. Les conseils sont montrés avec Khanmigo, le tuteur IA de Khan Academy, mais ils fonctionnent avec n’importe quel assistant IA que tu utilises pour étudier.",
+    "ar": "يشارك سال خان استراتيجيات بسيطة لكتابة الأوامر (prompts) للذكاء الاصطناعي للحصول على إجابات مفيدة فعلًا للتعلّم. تُعرض النصائح باستخدام Khanmigo، المعلّم الذكي من Khan Academy، لكنها تنجح مع أي مساعد ذكاء اصطناعي تستخدمه في الدراسة.",
+    "sw": "Sal Khan anashiriki mbinu rahisi za kuandika prompt kwa AI ili kupata majibu yenye manufaa kweli kwa kujifunza. Vidokezo vinaonyeshwa kwa Khanmigo, mwalimu wa AI wa Khan Academy, lakini vinafanya kazi na AI assistant yoyote unayotumia kusoma.",
+    "pt": "Sal Khan partilha estratégias simples para escrever prompts que dão respostas realmente úteis para aprender. As dicas são mostradas com o Khanmigo, o tutor de IA da Khan Academy, mas funcionam com qualquer assistente de IA que uses para estudar.",
+    "es": "Sal Khan comparte estrategias sencillas para escribir prompts que den respuestas realmente útiles para aprender. Los consejos se muestran con Khanmigo, el tutor de IA de Khan Academy, pero sirven con cualquier asistente de IA que uses para estudiar."
+   }
+  },
+  {
+   "id": "zjkBMFhNj_g",
+   "summary": {
+    "en": "A one-hour talk for a general audience by AI researcher Andrej Karpathy on how large language models like ChatGPT are built and trained, and where they are heading. It also covers new security risks such as jailbreaks and prompt injection (recorded in November 2023).",
+    "pcm": "One-hour talk for everybody by AI researcher Andrej Karpathy on how large language models like ChatGPT dey get built and trained, and where dem dey go. E still talk about new security wahala like jailbreaks and prompt injection (dem record am for November 2023).",
+    "yo": "Ọ̀rọ̀ wákàtí kan fún gbogbo ènìyàn láti ọwọ́ olùwádìí AI Andrej Karpathy lórí bí wọ́n ṣe ń kọ́ àti ṣe ìdánilẹ́kọ̀ọ́ àwọn large language model bíi ChatGPT, àti ibi tí wọ́n ń lọ. Ó tún sọ̀rọ̀ nípa àwọn ewu ààbò tuntun bíi jailbreak àti prompt injection (wọ́n gbà á sílẹ̀ ní November 2023).",
+    "ig": "Okwu otu awa maka ọha mmadụ nke onye nchọpụta AI Andrej Karpathy kwuru banyere otú e si ewu ma zụọ large language model dị ka ChatGPT, na ebe ha na-aga. Ọ na-ekwukwa banyere ihe egwu nchekwa ọhụrụ dị ka jailbreak na prompt injection (e dekọrọ ya na November 2023).",
+    "ha": "Jawabin awa ɗaya ga kowa daga mai binciken AI Andrej Karpathy kan yadda ake gina da horar da large language models kamar ChatGPT, da inda suka nufa. Ya kuma tattauna sabbin haɗarin tsaro kamar jailbreak da prompt injection (an naɗa shi a watan Nuwamba 2023).",
+    "fr": "Une conférence d’une heure, accessible à tous, du chercheur en IA Andrej Karpathy sur la façon dont les grands modèles de langage comme ChatGPT sont construits et entraînés, et sur leur avenir. Elle aborde aussi de nouveaux risques de sécurité comme le jailbreak et l’injection de prompt (enregistrée en novembre 2023).",
+    "ar": "محاضرة مدتها ساعة لعامة الجمهور يقدّمها باحث الذكاء الاصطناعي أندريه كارباثي عن كيفية بناء النماذج اللغوية الكبيرة (large language models) مثل ChatGPT وتدريبها، وإلى أين تتجه. وتتناول أيضًا مخاطر أمنية جديدة مثل كسر القيود (jailbreak) وحقن الأوامر (prompt injection) (سُجّلت في نوفمبر 2023).",
+    "sw": "Hotuba ya saa moja kwa hadhira ya kawaida na mtafiti wa AI Andrej Karpathy kuhusu jinsi large language models kama ChatGPT zinavyojengwa na kufunzwa, na zinakoelekea. Pia inazungumzia hatari mpya za usalama kama jailbreak na prompt injection (ilirekodiwa Novemba 2023).",
+    "pt": "Uma palestra de uma hora, para o público em geral, do investigador de IA Andrej Karpathy sobre como os grandes modelos de linguagem como o ChatGPT são construídos e treinados, e para onde caminham. Aborda também novos riscos de segurança, como o jailbreak e a injeção de prompts (gravada em novembro de 2023).",
+    "es": "Una charla de una hora, para todo el público, del investigador de IA Andrej Karpathy sobre cómo se construyen y entrenan los grandes modelos de lenguaje como ChatGPT, y hacia dónde van. También trata nuevos riesgos de seguridad como el jailbreak y la inyección de prompts (grabada en noviembre de 2023)."
+   }
+  }
+ ]
+}

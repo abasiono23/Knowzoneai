@@ -491,6 +491,7 @@ const videos: Translation<typeof en> = {
     finishedTitle: 'Ihe ọmụmụ agwụla',
     finishedBody: 'Ị mere nke ọma. Nwaa ihe ọmụmụ ọzọ, ma ọ bụ jụọ Kora ihe ọ bụla na-edoghị gị anya.',
     moreLessons: 'Ihe ọmụmụ ndị ọzọ',
+    lessonTag: 'Ihe ọmụmụ na Kora',
   },
 };
 

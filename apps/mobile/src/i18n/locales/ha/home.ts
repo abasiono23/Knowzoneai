@@ -210,7 +210,7 @@ const home: Translation<typeof en> = {
     review: 'Sake bi ta katunan',
   },
   skills: {
-    intro: 'Dabarun aiki masu amfani ga duniyar gobe, ta darussan YouTube da aka zaɓa da kyau.',
+    intro: 'Dabarun aiki masu amfani ga duniyar gobe: gajerun darussa tare da Kora, sannan bidiyon YouTube da aka zaɓa da kyau don zurfafa.',
     loadFailed: 'Ba mu iya loda waɗannan darussan ba. Duba haɗin intanet ɗinka ka sake gwadawa.',
     retry: 'Sake gwadawa',
     summary: 'Taƙaitawa',

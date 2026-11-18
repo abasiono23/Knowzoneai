@@ -485,6 +485,7 @@ const videos: Translation<typeof en> = {
     finishedTitle: 'Somo limekamilika',
     finishedBody: 'Kazi nzuri. Jaribu somo lingine, au muulize Kora chochote ambacho hujaelewa.',
     moreLessons: 'Masomo zaidi',
+    lessonTag: 'Somo na Kora',
   },
 };
 

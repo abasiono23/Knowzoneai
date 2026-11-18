@@ -210,7 +210,7 @@ const home: Translation<typeof en> = {
     review: 'Go through the cards again',
   },
   skills: {
-    intro: 'Skills wey go help you for the world wey dey come, with YouTube lessons wey we pick well well.',
+    intro: 'Skills wey go help you for the world wey dey come: short lessons with Kora, then YouTube videos wey we pick well well to learn more.',
     loadFailed: 'We no fit load these lessons. Check your network come try again.',
     retry: 'Try again',
     summary: 'Summary',

@@ -1,0 +1,191 @@
+{
+ "id": "data-science",
+ "name": {
+  "en": "Data science",
+  "pcm": "Data science",
+  "yo": "Sáyẹ́ǹsì dátà",
+  "ig": "Sayensị data",
+  "ha": "Kimiyyar data",
+  "fr": "Science des données",
+  "ar": "علم البيانات",
+  "sw": "Sayansi ya data",
+  "pt": "Ciência de dados",
+  "es": "Ciencia de datos"
+ },
+ "tagline": {
+  "en": "Turn raw data into clear answers and better decisions",
+  "pcm": "Turn raw data to clear answers and better decisions",
+  "yo": "Sọ dátà di ìdáhùn tó yéni àti ìpinnu tó dára jù",
+  "ig": "Tụgharịa data ka ọ bụrụ azịza doro anya na mkpebi ka mma",
+  "ha": "Mayar da data zuwa amsoshi bayyanannu da shawarwari masu kyau",
+  "fr": "Des données brutes aux réponses claires et aux bonnes décisions",
+  "ar": "حوّل البيانات الخام إلى إجابات واضحة وقرارات أفضل",
+  "sw": "Geuza data ghafi kuwa majibu wazi na maamuzi bora",
+  "pt": "Transforma dados em bruto em respostas claras e melhores decisões",
+  "es": "Convierte datos en bruto en respuestas claras y mejores decisiones"
+ },
+ "summary": {
+  "en": "Data science combines statistics, computer programming and knowledge of a subject to find useful patterns in data and answer real questions. It helps people in health, business, government and research make better-informed decisions, though results are only as good as the data behind them. These lessons move from what the field is, through statistics and machine learning, to exploring a dataset in Python and organising a data project.",
+  "pcm": "Data science join statistics, computer programming and knowledge of one subject together to find useful patterns for data and answer real questions. E dey help people for health, business, government and research make better decisions wey get correct information, but the result no fit pass the data wey dey behind am. These lessons start from wetin the field be, pass through statistics and machine learning, reach how to explore dataset for Python and how to arrange data project.",
+  "yo": "Sáyẹ́ǹsì dátà so statistics (ìṣirò àkójọpọ̀), ìṣètò kọ̀ǹpútà (programming) àti ìmọ̀ nípa kókó ẹ̀kọ́ kan pọ̀ láti rí àwọn ìlànà tó wúlò nínú dátà àti láti dáhùn àwọn ìbéèrè gidi. Ó ń ran àwọn ènìyàn lọ́wọ́ nínú ìlera, iṣẹ́ òwò, ìjọba àti ìwádìí láti ṣe ìpinnu tó dá lórí ìmọ̀ tó péye, ṣùgbọ́n àbájáde kò lè dára ju dátà tí ó wà lẹ́yìn rẹ̀ lọ. Àwọn ẹ̀kọ́ wọ̀nyí bẹ̀rẹ̀ láti ohun tí pápá ẹ̀kọ́ yìí jẹ́, wọ́n kọjá sí statistics àti machine learning (ẹ̀kọ́ ẹ̀rọ), títí dé ṣíṣe àyẹ̀wò dátà nínú Python àti ṣíṣètò iṣẹ́ àkànṣe dátà.",
+  "ig": "Sayensị data na-ejikọta statistics (ọmụmụ ọnụọgụgụ), mmemme kọmputa (programming) na ihe mmadụ maara banyere otu isiokwu iji chọta usoro bara uru n’ime data ma zaa ajụjụ ndị dị adị. Ọ na-enyere ndị mmadụ aka na ahụike, azụmahịa, gọọmentị na nchọpụta ime mkpebi dabere n’ezi ihe ọmụma, mana nsonaazụ anaghị aka mma karịa data dị n’azụ ya. Ihe ọmụmụ ndị a na-amalite site n’ihe ngalaba a bụ, gafee statistics na machine learning (mmụta igwe), ruo n’inyocha data na Python na ịhazi ọrụ data.",
+  "ha": "Kimiyyar data na haɗa ƙididdiga (statistics), shirye-shiryen kwamfuta (programming) da ilimin wani fanni don gano alamu masu amfani a cikin data (bayanai) da amsa tambayoyi na gaske. Tana taimaka wa mutane a fannin lafiya, kasuwanci, gwamnati da bincike su yanke shawara bisa ingantaccen bayani, amma sakamako ba zai fi data da aka yi amfani da ita kyau ba. Waɗannan darussan sun fara daga ma’anar wannan fanni, suka bi ta ƙididdiga da machine learning (koyon na’ura), har zuwa binciken data da Python da kuma tsara aikin data.",
+  "fr": "La science des données combine les statistiques, la programmation informatique et la connaissance d’un domaine pour trouver des tendances utiles dans les données et répondre à de vraies questions. Elle aide des personnes dans la santé, les entreprises, les administrations et la recherche à prendre des décisions mieux éclairées, mais les résultats ne valent que ce que valent les données utilisées. Ces leçons vont de la découverte de ce domaine aux statistiques et au machine learning (apprentissage automatique), puis à l’exploration d’un jeu de données en Python et à l’organisation d’un projet de données.",
+  "ar": "يجمع علم البيانات بين الإحصاء وبرمجة الحاسوب والمعرفة بمجال معيّن لاكتشاف أنماط مفيدة في البيانات والإجابة عن أسئلة حقيقية. وهو يساعد العاملين في الصحة والأعمال والحكومة والبحث العلمي على اتخاذ قرارات مبنية على معلومات أفضل، لكن جودة النتائج تبقى مرهونة بجودة البيانات التي تستند إليها. تنتقل هذه الدروس من التعريف بهذا المجال، مرورًا بالإحصاء وتعلّم الآلة (machine learning)، وصولًا إلى استكشاف مجموعة بيانات باستخدام Python وتنظيم مشروع بيانات.",
+  "sw": "Sayansi ya data inachanganya takwimu, upangaji programu za kompyuta na ujuzi wa somo fulani ili kupata mifumo yenye manufaa katika data na kujibu maswali halisi. Inasaidia watu katika afya, biashara, serikali na utafiti kufanya maamuzi yenye msingi wa taarifa bora, ingawa ubora wa matokeo hutegemea ubora wa data iliyotumika. Masomo haya yanaanza na maana ya fani hii, yanapitia takwimu na machine learning (ujifunzaji wa mashine), hadi kuchunguza seti ya data kwa Python na kupanga mradi wa data.",
+  "pt": "A ciência de dados combina estatística, programação informática e conhecimento de uma área para encontrar padrões úteis nos dados e responder a perguntas reais. Ajuda pessoas na saúde, nas empresas, na administração pública e na investigação a tomar decisões mais bem informadas, embora os resultados só valham tanto quanto os dados em que assentam. Estas lições vão do que é esta área, passando pela estatística e pelo machine learning (aprendizagem automática), até à exploração de um conjunto de dados em Python e à organização de um projeto de dados.",
+  "es": "La ciencia de datos combina estadística, programación informática y conocimiento de un área para encontrar patrones útiles en los datos y responder a preguntas reales. Ayuda a personas de la salud, las empresas, la administración pública y la investigación a tomar decisiones mejor informadas, aunque los resultados solo son tan buenos como los datos en que se basan. Estas lecciones van desde qué es este campo, pasando por la estadística y el machine learning (aprendizaje automático), hasta explorar un conjunto de datos en Python y organizar un proyecto de datos."
+ },
+ "videos": [
+  {
+   "id": "RBSUwFGa6Fk",
+   "summary": {
+    "en": "Learn what data science is: a blend of computer science, mathematics and business knowledge used to predict, diagnose and solve problems. An IBM engineer explains the basics, including data mining, data cleaning and machine learning, and how they turn data into insights people can act on.",
+    "pcm": "Learn wetin data science be: e join computer science, mathematics and business knowledge together to predict, diagnose and solve problems. One IBM engineer go explain the basics, like data mining, data cleaning and machine learning, and how dem dey turn data to insights wey people fit use take act.",
+    "yo": "Kọ́ ohun tí sáyẹ́ǹsì dátà jẹ́: àpapọ̀ sáyẹ́ǹsì kọ̀ǹpútà, ìṣirò àti ìmọ̀ iṣẹ́ òwò tí a fi ń sọ àsọtẹ́lẹ̀, ṣàwárí ohun tó fa ìṣòro, tí a sì ń yanjú ìṣòro. Onímọ̀-ẹ̀rọ kan láti IBM ṣàlàyé àwọn ìpìlẹ̀ rẹ̀, pẹ̀lú data mining (wíwá ìmọ̀ nínú dátà), data cleaning (títún dátà ṣe) àti machine learning, àti bí wọ́n ṣe ń sọ dátà di ìmọ̀ tí àwọn ènìyàn lè lò láti gbé ìgbésẹ̀.",
+    "ig": "Mụta ihe sayensị data bụ: ngwakọta nke sayensị kọmputa, mgbakọ na mwepụ na ihe ọmụma azụmahịa, nke a na-eji ebu amụma, chọpụta ihe kpatara nsogbu ma dozie nsogbu. Otu injinịa IBM na-akọwa ihe ndị bụ isi, gụnyere data mining (ịchọpụta ihe n’ime data), data cleaning (ihicha data) na machine learning, na otú ha si eme ka data ghọọ nghọta ndị mmadụ nwere ike iji mee ihe.",
+    "ha": "Koyi mene ne kimiyyar data: haɗin kimiyyar kwamfuta, lissafi da ilimin kasuwanci da ake amfani da shi wajen yin hasashe, gano musabbabin matsala da warware matsaloli. Wani injiniya daga IBM ya bayyana tushen abin, ciki har da data mining (haƙo bayanai), data cleaning (tsaftace data) da machine learning, da yadda suke mayar da data fahimtar da mutane za su iya aiki da ita.",
+    "fr": "Découvre ce qu’est la science des données : un mélange d’informatique, de mathématiques et de connaissances en affaires qui sert à prévoir, diagnostiquer et résoudre des problèmes. Un ingénieur d’IBM en explique les bases, dont le data mining (exploration de données), le nettoyage des données et le machine learning, et comment ils transforment les données en informations exploitables.",
+    "ar": "تعرّف على علم البيانات: مزيج من علوم الحاسوب والرياضيات والمعرفة بالأعمال، يُستخدم للتنبؤ بالمشكلات وتشخيصها وحلّها. يشرح مهندس من IBM الأساسيات، ومنها التنقيب في البيانات (data mining) وتنظيف البيانات وتعلّم الآلة (machine learning)، وكيف تحوّل البيانات إلى رؤى يمكن للناس العمل بها.",
+    "sw": "Jifunze sayansi ya data ni nini: mchanganyiko wa sayansi ya kompyuta, hisabati na ujuzi wa biashara unaotumika kutabiri, kuchunguza chanzo cha matatizo na kuyatatua. Mhandisi wa IBM anaeleza misingi yake, ikiwa ni pamoja na data mining (kuchimba taarifa kutoka kwenye data), kusafisha data na machine learning, na jinsi vinavyogeuza data kuwa maarifa ambayo watu wanaweza kuyafanyia kazi.",
+    "pt": "Aprende o que é a ciência de dados: uma mistura de informática, matemática e conhecimento de negócios usada para prever, diagnosticar e resolver problemas. Um engenheiro da IBM explica as bases, incluindo data mining (mineração de dados), limpeza de dados e machine learning, e como transformam dados em conclusões úteis para agir.",
+    "es": "Aprende qué es la ciencia de datos: una mezcla de informática, matemáticas y conocimiento empresarial que se usa para predecir, diagnosticar y resolver problemas. Un ingeniero de IBM explica lo básico, como la minería de datos (data mining), la limpieza de datos y el machine learning, y cómo convierten los datos en conclusiones útiles para actuar."
+   }
+  },
+  {
+   "id": "dcXqhMqhZUo",
+   "summary": {
+    "en": "Learn the difference between data science and data analytics, two terms people often use as if they meant the same thing. The lesson looks at the two job roles and compares the tools and practices of data scientists with those of data analysts.",
+    "pcm": "Learn the difference between data science and data analytics, two names wey people dey often use like say na the same thing. The lesson look the two kinds of work and compare the tools and ways of working of data scientists with the ones of data analysts.",
+    "yo": "Kọ́ ìyàtọ̀ tó wà láàárín data science (sáyẹ́ǹsì dátà) àti data analytics (ìtúpalẹ̀ dátà), orúkọ méjì tí àwọn ènìyàn sábà máa ń lò bí ẹni pé ohun kan náà ni wọ́n. Ẹ̀kọ́ yìí wo iṣẹ́ méjèèjì, ó sì fi àwọn irinṣẹ́ àti ọ̀nà iṣẹ́ àwọn data scientist wé ti àwọn data analyst.",
+    "ig": "Mụta ọdịiche dị n’etiti data science (sayensị data) na data analytics (nyocha data), okwu abụọ ndị mmadụ na-ejikarị dị ka a ga-asị na ha bụ otu ihe. Ihe ọmụmụ a na-eleba anya n’ọrụ abụọ ahụ ma tụnyere ngwaọrụ na ụzọ ọrụ nke ndị data scientist na nke ndị data analyst.",
+    "ha": "Koyi bambancin da ke tsakanin data science (kimiyyar data) da data analytics (nazarin data), kalmomi biyu da mutane kan yi amfani da su kamar abu ɗaya ne. Darasin ya duba waɗannan ayyuka biyu, ya kuma kwatanta kayan aiki da hanyoyin aikin data scientist da na data analyst.",
+    "fr": "Apprends la différence entre la science des données et l’analyse de données, deux expressions souvent employées comme si elles signifiaient la même chose. La leçon examine ces deux métiers et compare les outils et les pratiques des data scientists à ceux des data analysts.",
+    "ar": "تعلّم الفرق بين علم البيانات وتحليل البيانات، وهما مصطلحان كثيرًا ما يستخدمهما الناس كأنهما يعنيان الشيء نفسه. يتناول الدرس هذين الدورين الوظيفيين ويقارن بين أدوات وممارسات علماء البيانات وأدوات وممارسات محللي البيانات.",
+    "sw": "Jifunze tofauti kati ya sayansi ya data na uchanganuzi wa data (data analytics), maneno mawili ambayo watu mara nyingi huyatumia kana kwamba yana maana moja. Somo linaangalia kazi hizi mbili na kulinganisha zana na mbinu za wanasayansi wa data na zile za wachanganuzi wa data.",
+    "pt": "Aprende a diferença entre ciência de dados e análise de dados, dois termos que muitas vezes são usados como se significassem o mesmo. A lição analisa as duas funções profissionais e compara as ferramentas e práticas dos cientistas de dados com as dos analistas de dados.",
+    "es": "Aprende la diferencia entre la ciencia de datos y el análisis de datos, dos términos que la gente suele usar como si significaran lo mismo. La lección examina ambos puestos de trabajo y compara las herramientas y prácticas de los científicos de datos con las de los analistas de datos."
+   }
+  },
+  {
+   "id": "sxQaBpKfDRk",
+   "summary": {
+    "en": "Learn what statistics are and why they matter in everyday life, from small daily choices to government policy. It also explains that statistics are tools that cannot give every answer and can be used to misinform, and the series aims to make you a more informed reader of them.",
+    "pcm": "Learn wetin statistics be and why e matter for everyday life, from small choices wey you dey make every day reach government policy. E also explain say statistics na tools wey no fit give every answer and people fit use am take deceive, and the series wan make you understand these numbers well.",
+    "yo": "Kọ́ ohun tí statistics (ìṣirò àkójọpọ̀) jẹ́ àti ìdí tó fi ṣe pàtàkì nínú ìgbésí ayé ojoojúmọ́, láti ìpinnu kéékèèké ojoojúmọ́ dé ìlànà ìjọba. Ó tún ṣàlàyé pé irinṣẹ́ ni statistics, pé kò lè fún wa ní gbogbo ìdáhùn, àti pé a lè fi ṣi àwọn ènìyàn lọ́nà; àfojúsùn ẹ̀ka àwọn fídíò yìí sì ni láti jẹ́ kí o lè fi òye ka irú àwọn nọ́ńbà bẹ́ẹ̀.",
+    "ig": "Mụta ihe statistics (ọmụmụ ọnụọgụgụ) bụ na ihe mere o ji dị mkpa ná ndụ kwa ụbọchị, site na obere nhọrọ kwa ụbọchị ruo na iwu gọọmentị. Ọ na-akọwakwa na statistics bụ ngwaọrụ na-enweghị ike inye azịza niile, na enwere ike iji ya duhie ndị mmadụ, ma usoro vidiyo a chọrọ inyere gị aka ịghọta ọnụọgụgụ ndị dị otú ahụ nke ọma.",
+    "ha": "Koyi mene ne ƙididdiga (statistics) da dalilin da ya sa take da muhimmanci a rayuwar yau da kullum, daga ƙananan zaɓuɓɓukan yau da kullum har zuwa manufofin gwamnati. Darasin ya kuma bayyana cewa ƙididdiga kayan aiki ne da ba za su iya ba da dukkan amsoshi ba, kuma ana iya amfani da su don yaudara, kuma jerin bidiyon yana son ya taimaka maka ka fahimci irin waɗannan alƙaluma sosai.",
+    "fr": "Apprends ce que sont les statistiques et pourquoi elles comptent au quotidien, des petits choix de tous les jours aux politiques publiques. La leçon explique aussi que les statistiques sont des outils qui ne donnent pas toutes les réponses et peuvent servir à désinformer, et la série vise à t’aider à lire ces chiffres avec plus d’esprit critique.",
+    "ar": "تعلّم ما هو الإحصاء ولماذا يهمّ في الحياة اليومية، من الخيارات اليومية الصغيرة إلى السياسات الحكومية. ويوضح الدرس أيضًا أن الإحصاءات أدوات لا يمكنها تقديم كل الإجابات وقد تُستخدم للتضليل، وتهدف السلسلة إلى مساعدتك على قراءة هذه الأرقام بوعي أكبر.",
+    "sw": "Jifunze takwimu ni nini na kwa nini ni muhimu katika maisha ya kila siku, kuanzia maamuzi madogo ya kila siku hadi sera za serikali. Somo pia linaeleza kwamba takwimu ni zana zisizoweza kutoa majibu yote na zinaweza kutumiwa kupotosha, na mfululizo huu unalenga kukusaidia kuelewa namba hizo kwa uangalifu zaidi.",
+    "pt": "Aprende o que é a estatística e porque é importante no dia a dia, desde pequenas escolhas diárias até às políticas do governo. A lição explica também que a estatística é uma ferramenta que não dá todas as respostas e pode ser usada para desinformar, e a série pretende ajudar-te a ler esses números com mais sentido crítico.",
+    "es": "Aprende qué es la estadística y por qué importa en la vida diaria, desde pequeñas decisiones cotidianas hasta las políticas del gobierno. La lección también explica que la estadística es una herramienta que no da todas las respuestas y puede usarse para desinformar, y la serie busca ayudarte a leer esas cifras con más sentido crítico."
+   }
+  },
+  {
+   "id": "Gv9_4yMHFhI",
+   "summary": {
+    "en": "Learn the most basic ideas behind machine learning, without the hype and confusing terms. Simple, silly examples introduce classification, which sorts things into groups, and regression, which predicts a number, giving you a foundation for learning more.",
+    "pcm": "Learn the most basic ideas wey dey behind machine learning, without the hype and confusing grammar. Simple, funny examples go show you classification, wey dey share things into groups, and regression, wey dey predict number, so you go get foundation to learn more.",
+    "yo": "Kọ́ àwọn èrò ìpìlẹ̀ jùlọ lẹ́yìn machine learning (ẹ̀kọ́ ẹ̀rọ), láìsí àsọdùn àti àwọn ọ̀rọ̀ tó ń dàrú mọ́ni lójú. Àwọn àpẹẹrẹ rírọrùn tó ń pani lẹ́rìn-ín ṣàlàyé classification, tó ń pín nǹkan sí ẹgbẹ́-ẹgbẹ́, àti regression, tó ń sọ àsọtẹ́lẹ̀ nọ́ńbà, èyí sì fún ọ ní ìpìlẹ̀ láti kọ́ sí i.",
+    "ig": "Mụta echiche ndị kacha bụrụ isi n’azụ machine learning (mmụta igwe), na-enweghị ikwubiga okwu ókè na okwu na-agbagwoju anya. Ihe atụ dị mfe ma na-atọ ọchị na-egosi classification, nke na-ekewa ihe n’ìgwè, na regression, nke na-ebu amụma ọnụọgụgụ, iji nye gị ntọala ị ga-eji mụtakwuo.",
+    "ha": "Koyi ainihin ra’ayoyin da ke bayan machine learning (koyon na’ura), ba tare da zuzutawa da kalmomi masu rikitarwa ba. Misalai masu sauƙi da ban dariya sun gabatar da classification, wadda ke rarraba abubuwa zuwa rukuni, da regression, wadda ke hasashen lamba, don ba ka tushen da za ka ƙara koyo a kai.",
+    "fr": "Apprends les idées les plus simples derrière le machine learning (apprentissage automatique), sans le battage ni le jargon déroutant. Des exemples simples et amusants présentent la classification, qui range les choses en groupes, et la régression, qui prédit un nombre, pour te donner une base avant d’aller plus loin.",
+    "ar": "تعلّم أبسط الأفكار التي يقوم عليها تعلّم الآلة (machine learning)، بعيدًا عن التهويل والمصطلحات المربكة. تقدّم أمثلة بسيطة وطريفة التصنيف (classification) الذي يفرز الأشياء إلى مجموعات، والانحدار (regression) الذي يتنبأ بقيمة رقمية، لتمنحك أساسًا لتعلّم المزيد.",
+    "sw": "Jifunze mawazo ya msingi kabisa ya machine learning (ujifunzaji wa mashine), bila kutia chumvi wala maneno yanayochanganya. Mifano rahisi ya kuchekesha inatambulisha classification, inayopanga vitu katika makundi, na regression, inayotabiri namba, ili kukupa msingi wa kujifunza zaidi.",
+    "pt": "Aprende as ideias mais básicas por trás do machine learning (aprendizagem automática), sem exageros nem termos confusos. Exemplos simples e divertidos apresentam a classificação, que separa coisas em grupos, e a regressão, que prevê um número, dando-te uma base para aprenderes mais.",
+    "es": "Aprende las ideas más básicas del machine learning (aprendizaje automático), sin exageraciones ni términos confusos. Ejemplos sencillos y divertidos presentan la clasificación, que separa cosas en grupos, y la regresión, que predice un número, para darte una base con la que seguir aprendiendo."
+   }
+  },
+  {
+   "id": "xi0vhXFPegw",
+   "summary": {
+    "en": "Learn the basics of exploratory data analysis, using Python and the pandas library to get to know a dataset. Step by step, you see how to read in the data, prepare it, study its features (columns) and the relationships between them, then ask a question of the data.",
+    "pcm": "Learn the basics of exploratory data analysis, wey mean to use Python and the pandas library take sabi one dataset well. Step by step, you go see how to read the data, prepare am, study the features (columns) and how dem relate, then ask the data one question.",
+    "yo": "Kọ́ ìpìlẹ̀ exploratory data analysis (àyẹ̀wò láti mọ dátà), ní lílo Python àti ilé-ìkàwé pandas láti mọ àkójọ dátà kan dáadáa. Ní ìgbésẹ̀-ìgbésẹ̀, wàá rí bí a ṣe ń ka dátà wọlé, bí a ṣe ń pèsè rẹ̀ sílẹ̀, bí a ṣe ń ṣe àyẹ̀wò àwọn feature (ọ̀wọ̀n) àti ìbáṣepọ̀ wọn, lẹ́yìn náà bí a ṣe ń béèrè ìbéèrè lọ́wọ́ dátà náà.",
+    "ig": "Mụta ihe ndị bụ isi na exploratory data analysis (inyocha data iji mata ya), na-eji Python na ọbá akwụkwọ pandas iji mata otu dataset nke ọma. N’otu n’otu, ị ga-ahụ otú e si agụbata data, kwadebe ya, nyochaa features (kọlụm) ya na mmekọrịta dị n’etiti ha, ma jụzie data ahụ ajụjụ.",
+    "ha": "Koyi tushen exploratory data analysis (binciken data don saninta), ta amfani da Python da laburaren pandas don sanin wani dataset sosai. Mataki-mataki, za ka ga yadda ake karanta data, a shirya ta, a yi nazarin features (ginshiƙai) da dangantakar da ke tsakaninsu, sannan a yi wa data tambaya.",
+    "fr": "Apprends les bases de l’analyse exploratoire des données, avec Python et la bibliothèque pandas, pour bien connaître un jeu de données. Étape par étape, tu vois comment charger les données, les préparer, étudier les variables (colonnes) et leurs relations, puis poser une question aux données.",
+    "ar": "تعلّم أساسيات تحليل البيانات الاستكشافي باستخدام Python ومكتبة pandas للتعرّف جيدًا إلى مجموعة بيانات. خطوةً بخطوة، سترى كيف تُقرأ البيانات وتُجهَّز، وكيف تُدرس الخصائص (features أي الأعمدة) والعلاقات بينها، ثم كيف يُطرح سؤال على البيانات.",
+    "sw": "Jifunze misingi ya uchanganuzi wa uchunguzi wa data (exploratory data analysis), ukitumia Python na maktaba ya pandas ili kuifahamu vizuri seti ya data. Hatua kwa hatua, utaona jinsi ya kusoma data, kuiandaa, kuchunguza features (safu wima) na uhusiano kati yake, kisha kuuliza swali kuhusu data hiyo.",
+    "pt": "Aprende as bases da análise exploratória de dados, com Python e a biblioteca pandas, para ficares a conhecer bem um conjunto de dados. Passo a passo, vês como ler os dados, prepará-los, estudar as variáveis (colunas) e as relações entre elas e, por fim, fazer uma pergunta aos dados.",
+    "es": "Aprende los fundamentos del análisis exploratorio de datos, con Python y la biblioteca pandas, para conocer bien un conjunto de datos. Paso a paso, verás cómo leer los datos, prepararlos, estudiar las variables (columnas) y las relaciones entre ellas y, por último, hacerles una pregunta."
+   }
+  },
+  {
+   "id": "4DlsTsqpY84",
+   "summary": {
+    "en": "Learn what data professionals do at work and the skills data careers call for, in this long beginner course. It also covers using data analytics for good, how the field has developed, communication, and PACE (Plan, Analyze, Construct, Execute), a workflow for organising data projects.",
+    "pcm": "Learn wetin data professionals dey do for work and the skills wey data careers need, for this long beginner course. E also cover how to use data analytics for good, how the field don grow, communication, and PACE (Plan, Analyze, Construct, Execute), one way to arrange data projects.",
+    "yo": "Kọ́ ohun tí àwọn akọ́ṣẹ́mọṣẹ́ dátà ń ṣe níbi iṣẹ́ àti àwọn ọgbọ́n tí iṣẹ́ dátà ń béèrè, nínú ẹ̀kọ́ gígùn yìí fún àwọn olùbẹ̀rẹ̀. Ó tún sọ̀rọ̀ nípa lílo data analytics fún ire, bí pápá yìí ṣe ti ń lọ, ìbánisọ̀rọ̀, àti PACE (Plan, Analyze, Construct, Execute: ṣètò, ṣàyẹ̀wò, kọ́, ṣe), ọ̀nà kan láti ṣètò iṣẹ́ àkànṣe dátà.",
+    "ig": "Mụta ihe ndị ọkachamara data na-eme n’ebe ọrụ na nka ọrụ data chọrọ, n’ọmụmụ ogologo a maka ndị mmalite. Ọ na-ekwukwa maka iji data analytics mee ihe ọma, otú ngalaba a si aga, nkwurịta okwu, na PACE (Plan, Analyze, Construct, Execute), usoro maka ịhazi ọrụ data.",
+    "ha": "Koyi abin da ƙwararrun data ke yi a wurin aiki da dabarun da ayyukan data ke buƙata, a wannan dogon kwas na masu farawa. Ya kuma tattauna yin amfani da data analytics don alheri, yadda fannin ya bunƙasa, sadarwa, da PACE (Plan, Analyze, Construct, Execute), hanyar tsara ayyukan data.",
+    "fr": "Apprends ce que font les professionnels des données au travail et les compétences que demandent ces métiers, dans ce long cours pour débutants. Il aborde aussi l’analyse de données au service du bien commun, l’évolution du domaine, la communication et PACE (Plan, Analyze, Construct, Execute), une méthode pour organiser les projets de données.",
+    "ar": "تعلّم ما يفعله المتخصصون في البيانات في العمل والمهارات التي تتطلبها وظائف البيانات، في هذه الدورة الطويلة للمبتدئين. وتتناول أيضًا استخدام تحليل البيانات في الخير، ومسار تطوّر هذا المجال، والتواصل، وPACE (Plan, Analyze, Construct, Execute: التخطيط والتحليل والبناء والتنفيذ)، وهي طريقة لتنظيم مشاريع البيانات.",
+    "sw": "Jifunze wataalamu wa data hufanya nini kazini na ujuzi unaohitajika katika kazi za data, katika kozi hii ndefu ya wanaoanza. Pia inagusia kutumia uchanganuzi wa data kwa manufaa ya jamii, mwelekeo wa fani hii, mawasiliano, na PACE (Plan, Analyze, Construct, Execute), njia ya kupanga miradi ya data.",
+    "pt": "Aprende o que fazem os profissionais de dados no trabalho e as competências que estas carreiras exigem, neste longo curso para principiantes. Aborda também o uso da análise de dados para o bem, a evolução da área, a comunicação e o PACE (Plan, Analyze, Construct, Execute), um método para organizar projetos de dados.",
+    "es": "Aprende qué hacen los profesionales de datos en el trabajo y qué habilidades piden estas carreras, en este largo curso para principiantes. También trata el uso del análisis de datos para hacer el bien, la evolución del campo, la comunicación y PACE (Plan, Analyze, Construct, Execute), un método para organizar proyectos de datos."
+   }
+  },
+  {
+   "id": "hEWY6kkBdpo",
+   "summary": {
+    "en": "Learn how to turn raw numbers into clear charts. You’ll see the difference between categorical and quantitative data, and when to use bar charts, pie charts, pictographs and histograms.",
+    "pcm": "Learn how to turn raw numbers to clear charts. You go see the difference between categorical and quantitative data, and when to use bar charts, pie charts, pictographs and histograms.",
+    "yo": "Kọ́ bí a ṣe ń yí àwọn nọ́ńbà aláìṣètò padà sí chart tó ṣe kedere. Wàá rí ìyàtọ̀ láàárín categorical data àti quantitative data, àti ìgbà tó yẹ láti lo bar chart, pie chart, pictograph àti histogram.",
+    "ig": "Mụta ka e si atụgharị ọnụọgụgụ ndị a na-ahazibeghị ka ha bụrụ chart doro anya. Ị ga-ahụ ọdịiche dị n’etiti categorical data na quantitative data, na mgbe ị ga-eji bar chart, pie chart, pictograph na histogram.",
+    "ha": "Koyi yadda ake mayar da lambobi danyu zuwa chart masu bayyana. Za ka ga bambanci tsakanin categorical data da quantitative data, da lokacin da za a yi amfani da bar chart, pie chart, pictograph da histogram.",
+    "fr": "Apprends à transformer des chiffres bruts en graphiques clairs. Tu verras la différence entre données qualitatives et quantitatives, et quand utiliser un diagramme en barres, un camembert, un pictogramme ou un histogramme.",
+    "ar": "تعلّم كيف تحوّل الأرقام الخام إلى رسوم بيانية واضحة. سترى الفرق بين البيانات الفئوية (categorical) والكمية (quantitative)، ومتى تستخدم المخططات الشريطية والدائرية والتصويرية والمدرّجات التكرارية (histograms).",
+    "sw": "Jifunze jinsi ya kugeuza namba ghafi kuwa chati zilizo wazi. Utaona tofauti kati ya categorical data na quantitative data, na wakati wa kutumia bar chart, pie chart, pictograph na histogram.",
+    "pt": "Aprende a transformar números em bruto em gráficos claros. Vais ver a diferença entre dados categóricos e quantitativos, e quando usar gráficos de barras, gráficos circulares, pictogramas e histogramas.",
+    "es": "Aprende a convertir números en bruto en gráficos claros. Verás la diferencia entre datos categóricos y cuantitativos, y cuándo usar gráficos de barras, gráficos circulares, pictogramas e histogramas."
+   }
+  },
+  {
+   "id": "HZGCoVF3YvM",
+   "summary": {
+    "en": "A visual explanation of Bayes’ theorem, the rule for updating what you believe when new evidence arrives. Clear diagrams show where the formula comes from and why people so often misjudge probabilities.",
+    "pcm": "Visual explanation of Bayes’ theorem, the rule for how to update wetin you believe when new evidence show. Clear diagrams go show where the formula come from and why people dey always misjudge probabilities.",
+    "yo": "Àlàyé onípàwòrán nípa Bayes’ theorem, òfin fún yíyí ohun tí o gbàgbọ́ padà nígbà tí ẹ̀rí tuntun bá dé. Àwọn àwòrán tó ṣe kedere fi ibi tí fọ́múlà náà ti wá hàn, àti ìdí tí àwọn ènìyàn fi máa ń ṣìdájọ́ probability.",
+    "ig": "Nkọwa n’ụzọ foto nke Bayes’ theorem, iwu maka imelite ihe ị kwenyere mgbe ihe akaebe ọhụrụ bịara. Eserese doro anya na-egosi ebe usoro mgbakọ ahụ si bịa na ihe mere ndị mmadụ ji ehiekarị ikpe banyere probability.",
+    "ha": "Bayani da hotuna kan Bayes’ theorem, ƙa’idar sabunta abin da kake gaskatawa idan sabuwar shaida ta zo. Zane-zane masu bayyana sun nuna inda dabarar ta fito da dalilin da yasa mutane suke yawan kuskure wajen kimanta probability.",
+    "fr": "Une explication visuelle du théorème de Bayes, la règle qui permet de mettre à jour ce que l’on croit quand de nouvelles preuves arrivent. Des schémas clairs montrent d’où vient la formule et pourquoi on se trompe si souvent sur les probabilités.",
+    "ar": "شرح مرئي لمبرهنة بايز (Bayes’ theorem)، القاعدة التي تحدّث بها معتقداتك عند ظهور أدلة جديدة. توضح رسوم واضحة من أين تأتي الصيغة ولماذا يخطئ الناس كثيرًا في تقدير الاحتمالات.",
+    "sw": "Maelezo kwa picha ya Bayes’ theorem, kanuni ya kusasisha unachoamini ushahidi mpya unapofika. Michoro iliyo wazi inaonyesha fomula inakotoka na kwa nini watu hukosea mara nyingi kukadiria uwezekano (probability).",
+    "pt": "Uma explicação visual do teorema de Bayes, a regra para atualizar aquilo em que acreditas quando surgem novas provas. Diagramas claros mostram de onde vem a fórmula e porque é que as pessoas avaliam tantas vezes mal as probabilidades.",
+    "es": "Una explicación visual del teorema de Bayes, la regla para actualizar lo que crees cuando llegan nuevas pruebas. Diagramas claros muestran de dónde sale la fórmula y por qué la gente juzga mal las probabilidades tan a menudo."
+   }
+  },
+  {
+   "id": "LgXzzu68j7M",
+   "summary": {
+    "en": "A step-by-step start with spreadsheets in Microsoft Excel. You’ll go from entering and formatting data to sorting, filtering, conditional formatting, charts and pivot tables, the everyday tools of data analysis.",
+    "pcm": "Step-by-step start with spreadsheets for Microsoft Excel. You go move from entering and formatting data reach sorting, filtering, conditional formatting, charts and pivot tables, the tools wey people dey use every day for data analysis.",
+    "yo": "Ìbẹ̀rẹ̀ ìgbésẹ̀-ń-ìgbésẹ̀ pẹ̀lú spreadsheet nínú Microsoft Excel. Wàá lọ láti títẹ data sílẹ̀ àti ṣíṣe àtúntò rẹ̀ dé sorting, filtering, conditional formatting, chart àti pivot table, àwọn irinṣẹ́ ojoojúmọ́ fún ìtúpalẹ̀ data.",
+    "ig": "Mmalite nzọụkwụ n’otu n’otu na spreadsheet na Microsoft Excel. Ị ga-esi n’itinye na ịhazi data gaa na sorting, filtering, conditional formatting, chart na pivot table, ngwaọrụ a na-eji kwa ụbọchị na nyocha data.",
+    "ha": "Farawa mataki-mataki da spreadsheet a Microsoft Excel. Za ka tashi daga shigar da data da tsara shi zuwa sorting, filtering, conditional formatting, chart da pivot table, kayan aikin yau da kullum na nazarin data.",
+    "fr": "Un démarrage pas à pas avec les tableurs dans Microsoft Excel. Tu passeras de la saisie et la mise en forme des données au tri, au filtrage, à la mise en forme conditionnelle, aux graphiques et aux tableaux croisés dynamiques, les outils quotidiens de l’analyse de données.",
+    "ar": "بداية خطوة بخطوة مع جداول البيانات في Microsoft Excel. ستنتقل من إدخال البيانات وتنسيقها إلى الفرز والتصفية والتنسيق الشرطي والمخططات والجداول المحورية (pivot tables)، وهي الأدوات اليومية لتحليل البيانات.",
+    "sw": "Mwanzo wa hatua kwa hatua na spreadsheets katika Microsoft Excel. Utatoka kwenye kuingiza na kupanga muonekano wa data hadi sorting, filtering, conditional formatting, chati na pivot tables, zana za kila siku za uchambuzi wa data.",
+    "pt": "Um começo passo a passo com folhas de cálculo no Microsoft Excel. Vais passar de introduzir e formatar dados a ordenar, filtrar, usar formatação condicional, gráficos e tabelas dinâmicas, as ferramentas do dia a dia da análise de dados.",
+    "es": "Un comienzo paso a paso con hojas de cálculo en Microsoft Excel. Pasarás de introducir y dar formato a los datos a ordenar, filtrar, aplicar formato condicional, crear gráficos y tablas dinámicas, las herramientas diarias del análisis de datos."
+   }
+  },
+  {
+   "id": "h0nxCDiD-zg",
+   "summary": {
+    "en": "Learn to write your own SQL queries to get data out of a database, with no prior knowledge and only free tools. SQL is the standard language for talking to databases and one of the most useful skills for any data role.",
+    "pcm": "Learn how to write your own SQL queries to bring data comot from database, even if you no know anything before, and with only free tools. SQL na the standard language to talk to databases and e dey among the most useful skills for any data work.",
+    "yo": "Kọ́ bí o ṣe lè kọ SQL query tìrẹ láti mú data jáde láti inú database, láìsí ìmọ̀ ṣáájú àti pẹ̀lú irinṣẹ́ ọ̀fẹ́ nìkan. SQL ni èdè àjùmọ̀lò fún bíbá database sọ̀rọ̀, ó sì jẹ́ ọ̀kan lára ọgbọ́n tó wúlò jùlọ fún iṣẹ́ data èyíkéyìí.",
+    "ig": "Mụta ide SQL query nke gị iji wepụta data na database, na-enweghị ihe ọmụma mbụ ma were naanị ngwaọrụ efu. SQL bụ asụsụ a na-ejikarị agwa database okwu, ọ bụkwa otu n’ime nkà kacha baa uru maka ọrụ data ọ bụla.",
+    "ha": "Koyi rubuta SQL query naka don fitar da data daga database, ba tare da wani ilimi a baya ba kuma da kayan aiki kyauta kawai. SQL ita ce daidaitacciyar harshe ta magana da database kuma ɗaya daga cikin ƙwarewa mafi amfani ga kowane aikin data.",
+    "fr": "Apprends à écrire tes propres requêtes SQL pour extraire des données d’une base de données, sans connaissances préalables et avec des outils gratuits. SQL est le langage standard pour dialoguer avec les bases de données et l’une des compétences les plus utiles pour tout métier de la donnée.",
+    "ar": "تعلّم كتابة استعلامات SQL خاصة بك لاستخراج البيانات من قاعدة البيانات، دون معرفة مسبقة وبأدوات مجانية فقط. SQL هي اللغة القياسية للتعامل مع قواعد البيانات، ومن أكثر المهارات فائدة في أي وظيفة تتعلق بالبيانات.",
+    "sw": "Jifunze kuandika SQL queries zako mwenyewe ili kutoa data kwenye database, bila maarifa ya awali na kwa zana za bure tu. SQL ndiyo lugha ya kawaida ya kuwasiliana na databases na mojawapo ya ujuzi wenye manufaa zaidi kwa kazi yoyote ya data.",
+    "pt": "Aprende a escrever as tuas próprias consultas SQL para tirar dados de uma base de dados, sem conhecimentos prévios e só com ferramentas gratuitas. O SQL é a linguagem padrão para comunicar com bases de dados e uma das competências mais úteis para qualquer função ligada a dados.",
+    "es": "Aprende a escribir tus propias consultas SQL para sacar datos de una base de datos, sin conocimientos previos y solo con herramientas gratuitas. SQL es el lenguaje estándar para comunicarse con bases de datos y una de las habilidades más útiles para cualquier trabajo con datos."
+   }
+  }
+ ]
+}

@@ -501,6 +501,7 @@ const videos: Translation<typeof en> = {
     finishedTitle: 'Lección completada',
     finishedBody: 'Buen trabajo. Prueba otra lección, o pregúntale a Kora lo que no te haya quedado claro.',
     moreLessons: 'Más lecciones',
+    lessonTag: 'Lección con Kora',
   },
 };
 

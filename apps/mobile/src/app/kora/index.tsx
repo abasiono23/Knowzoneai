@@ -1,5 +1,5 @@
 import { Ionicons } from '@expo/vector-icons';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ActivityIndicator, Pressable, View } from 'react-native';
 
@@ -9,12 +9,12 @@ import { Colors, Spacing } from '@/constants/theme';
 import { useKoraLessons, useWatchedLessons, type KoraLessonCard as Lesson } from '@/lib/kora/lessons';
 import { examNames, listOf, regionOf } from '@/lib/region';
 import { useSession } from '@/lib/session';
-
-const GROUPS: Lesson['group'][] = ['exam', 'cyber', 'skills'];
+import { skillsApi } from '@/lib/skills';
 
 /**
  * Lessons with Kora: three-minute lessons taught by Kora, for the student's region. Lessons for the
- * exams their country sits come first, then cybersecurity and study skills, which are for everyone.
+ * exams their country sits come first; then Future skills (coding, UI/UX design, cybersecurity, AI
+ * prompting, data science), subject by subject; then study skills. The last two are for everyone.
  */
 export default function KoraLessonsScreen() {
   const [attempt, setAttempt] = useState(0);
@@ -23,11 +23,37 @@ export default function KoraLessonsScreen() {
 
 function Lessons({ onRetry }: { onRetry: () => void }) {
   const { t } = useTranslation('videos');
+  const { t: th } = useTranslation('home');
   const { user } = useSession();
   const region = regionOf(user);
   const lessons = useKoraLessons(region);
   const watched = useWatchedLessons();
   const exams = listOf(examNames(region));
+  // The subjects' names in the app's language come from the server; until they arrive (or without them) a lesson's own subject is used.
+  const [skillNames, setSkillNames] = useState<Record<string, string>>({});
+  useEffect(() => {
+    let live = true;
+    skillsApi
+      .list()
+      .then((r) => live && setSkillNames(Object.fromEntries(r.skills.map((s) => [s.id, s.name]))))
+      .catch(() => {});
+    return () => {
+      live = false;
+    };
+  }, []);
+
+  const grid = (items: Lesson[]) => (
+    <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: Spacing.sm }}>
+      {items.map((l) => (
+        <KoraLessonCard key={l.id} lesson={l} watched={watched.has(l.id)} style={{ flexBasis: 200, flexGrow: 1, maxWidth: 352 }} />
+      ))}
+    </View>
+  );
+  const all = lessons ?? [];
+  const forExams = all.filter((l) => l.group === 'exam');
+  const future = all.filter((l) => !!l.skill);
+  const skills = [...new Set(future.map((l) => l.skill!))];
+  const study = all.filter((l) => l.group !== 'exam' && !l.skill);
   return (
     <Screen withTabBar={false}>
       <ScreenHeader title={t('kora.title')} />
@@ -49,20 +75,36 @@ function Lessons({ onRetry }: { onRetry: () => void }) {
           </Pressable>
         </Card>
       ) : (
-        GROUPS.map((group) => {
-          const items = lessons.filter((l) => l.group === group);
-          if (!items.length) return null;
-          return (
-            <View key={group} style={{ gap: Spacing.sm }}>
-              <SectionHeader title={group === 'exam' ? t('kora.groups.exam', { exams }) : t(`kora.groups.${group}`)} />
-              <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: Spacing.sm }}>
-                {items.map((l) => (
-                  <KoraLessonCard key={l.id} lesson={l} watched={watched.has(l.id)} style={{ flexBasis: 200, flexGrow: 1, maxWidth: 352 }} />
-                ))}
-              </View>
+        <>
+          {forExams.length > 0 && (
+            <View style={{ gap: Spacing.sm }}>
+              <SectionHeader title={t('kora.groups.exam', { exams })} />
+              {grid(forExams)}
             </View>
-          );
-        })
+          )}
+          {future.length > 0 && (
+            <View style={{ gap: Spacing.sm }}>
+              <SectionHeader title={th('explore.collections.future.title')} />
+              {skills.map((skill) => {
+                const items = future.filter((l) => l.skill === skill);
+                return (
+                  <View key={skill} style={{ gap: Spacing.xs }}>
+                    <Text variant="label" color={Colors.textSecondary}>
+                      {(skillNames[skill] ?? items[0].subject).toUpperCase()}
+                    </Text>
+                    {grid(items)}
+                  </View>
+                );
+              })}
+            </View>
+          )}
+          {study.length > 0 && (
+            <View style={{ gap: Spacing.sm }}>
+              <SectionHeader title={t('kora.groups.skills')} />
+              {grid(study)}
+            </View>
+          )}
+        </>
       )}
     </Screen>
   );

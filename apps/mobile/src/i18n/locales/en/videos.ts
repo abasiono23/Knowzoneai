@@ -485,6 +485,7 @@ const videos = {
     finishedTitle: 'Lesson complete',
     finishedBody: 'Nice work. Try another lesson, or ask Kora about anything you’re unsure of.',
     moreLessons: 'More lessons',
+    lessonTag: 'Lesson with Kora',
   },
 };
 

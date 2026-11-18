@@ -1,0 +1,191 @@
+{
+ "id": "coding",
+ "name": {
+  "en": "Coding",
+  "pcm": "Coding",
+  "yo": "Kíkọ kóòdù",
+  "ig": "Ide koodu",
+  "ha": "Rubutun code",
+  "fr": "Programmation",
+  "ar": "البرمجة",
+  "sw": "Uandishi wa msimbo",
+  "pt": "Programação",
+  "es": "Programación"
+ },
+ "tagline": {
+  "en": "Learn how code works, then write your own",
+  "pcm": "Learn how code dey work, then write your own",
+  "yo": "Kọ́ bí kóòdù ṣe ń ṣiṣẹ́, kí o sì kọ tìrẹ",
+  "ig": "Mụta otú koodu si arụ ọrụ, ma dee nke gị",
+  "ha": "Koyi yadda code ke aiki, sannan ka rubuta naka",
+  "fr": "Comprends le code, puis écris le tien",
+  "ar": "افهم كيف يعمل الكود، ثم اكتب كودك الخاص",
+  "sw": "Elewa jinsi msimbo unavyofanya kazi, kisha andika wako",
+  "pt": "Percebe como funciona o código e escreve o teu",
+  "es": "Entiende el código y luego escribe el tuyo"
+ },
+ "summary": {
+  "en": "Coding means writing instructions a computer can follow, using languages such as Python and HTML. It is useful for building websites and apps, automating repetitive tasks and solving problems step by step. These lessons start with how computers read code and how websites are made, practise problem-solving, then build up to writing your own simple web pages and Python programs.",
+  "pcm": "Coding mean to write instructions wey computer fit follow, with languages like Python and HTML. E dey useful to build websites and apps, make computer do repeated work by itself, and solve problems step by step. These lessons start with how computers dey read code and how dem dey make websites, practise problem-solving, then reach where you go write your own simple web pages and Python programs.",
+  "yo": "Kíkọ kóòdù (coding) túmọ̀ sí kíkọ àwọn ìtọ́ni tí kọ̀ǹpútà lè tẹ̀lé, ní lílo àwọn èdè bíi Python àti HTML. Ó wúlò fún ṣíṣe àwọn website àti app, mímú kí kọ̀ǹpútà ṣe àwọn iṣẹ́ tí a ń tún ṣe léraléra fúnra rẹ̀, àti yíyanjú ìṣòro ní ìgbésẹ̀-ní-ìgbésẹ̀. Àwọn ẹ̀kọ́ yìí bẹ̀rẹ̀ pẹ̀lú bí kọ̀ǹpútà ṣe ń ka kóòdù àti bí a ṣe ń ṣe website, wọ́n ń kọ́ ọ ní yíyanjú ìṣòro, títí o fi lè kọ àwọn ojú-ewé web tó rọrùn àti àwọn ètò Python tìrẹ.",
+  "ig": "Ide koodu (coding) pụtara ide ntụziaka kọmputa nwere ike ịgbaso, site n’iji asụsụ dị ka Python na HTML. Ọ bara uru maka iwu websites na apps, ime ka kọmputa n’onwe ya rụọ ọrụ ndị a na-emegharị emegharị, na idozi nsogbu nzọụkwụ n’otu n’otu. Ihe ọmụmụ ndị a na-amalite site n’otú kọmputa si agụ koodu na otú e si ewu websites, mgbe ahụ ha na-eme ka ị mụọ idozi nsogbu, ruo n’ide ibe web dị mfe nke gị na mmemme Python.",
+  "ha": "Rubutun code yana nufin rubuta umarni da kwamfuta za ta iya bi, ta amfani da harsuna kamar Python da HTML. Yana da amfani wajen gina shafukan yanar gizo da manhajoji, sa kwamfuta ta yi ayyuka masu maimaituwa da kanta, da warware matsaloli mataki-mataki. Waɗannan darussan sun fara ne da yadda kwamfuta ke karanta code da yadda ake gina shafukan yanar gizo, sai atisayen warware matsaloli, har zuwa rubuta naka shafukan yanar gizo masu sauƙi da shirye-shiryen Python.",
+  "fr": "Programmer (ou coder), c’est écrire des instructions qu’un ordinateur peut suivre, dans des langages comme Python et HTML. Cela sert à créer des sites web et des applications, à automatiser des tâches répétitives et à résoudre des problèmes étape par étape. Ces leçons commencent par la façon dont les ordinateurs lisent le code et dont les sites web sont faits, font travailler la résolution de problèmes, puis mènent à l’écriture de tes propres pages web simples et programmes Python.",
+  "ar": "البرمجة هي كتابة تعليمات يستطيع الحاسوب اتباعها، باستخدام لغات مثل Python وHTML. وهي مفيدة لإنشاء المواقع والتطبيقات، وأتمتة المهام المتكررة، وحل المشكلات خطوة بخطوة. تبدأ هذه الدروس بكيفية قراءة الحاسوب للكود وكيفية بناء المواقع، ثم تدرّبك على حل المشكلات، وصولًا إلى كتابة صفحات ويب بسيطة وبرامج Python خاصة بك.",
+  "sw": "Uandishi wa msimbo (coding) ni kuandika maagizo ambayo kompyuta inaweza kufuata, kwa kutumia lugha kama Python na HTML. Ni muhimu kwa kutengeneza tovuti na programu, kufanya kazi zinazojirudia kiotomatiki na kutatua matatizo hatua kwa hatua. Masomo haya yanaanza na jinsi kompyuta zinavyosoma msimbo na jinsi tovuti zinavyotengenezwa, yanakupa mazoezi ya kutatua matatizo, na kufikia hatua ya kuandika kurasa zako rahisi za wavuti na programu za Python.",
+  "pt": "Programar é escrever instruções que um computador consegue seguir, em linguagens como Python e HTML. É útil para criar sites e aplicações, automatizar tarefas repetitivas e resolver problemas passo a passo. Estas lições começam por explicar como os computadores leem código e como se fazem os sites, treinam a resolução de problemas e chegam à escrita das tuas próprias páginas web simples e programas em Python.",
+  "es": "Programar consiste en escribir instrucciones que un ordenador puede seguir, con lenguajes como Python y HTML. Sirve para crear sitios web y aplicaciones, automatizar tareas repetitivas y resolver problemas paso a paso. Estas lecciones empiezan por cómo leen el código los ordenadores y cómo se hacen los sitios web, practican la resolución de problemas y llegan hasta escribir tus propias páginas web sencillas y programas en Python."
+ },
+ "videos": [
+  {
+   "id": "QXjU9qTsYCc",
+   "summary": {
+    "en": "Learn what happens between the code you write and the computer running it. You will see how source code differs from machine code, how a compiler translates one into the other, and how compilers make programming easier.",
+    "pcm": "Learn wetin dey happen between the code wey you write and when computer run am. You go see how source code different from machine code, how compiler dey translate one go the other, and how compilers dey make programming easier.",
+    "yo": "Kọ́ ohun tó ń ṣẹlẹ̀ láàárín kóòdù tí o kọ àti ìgbà tí kọ̀ǹpútà bá ń ṣe é. Wàá rí ìyàtọ̀ láàárín source code àti machine code, bí compiler ṣe ń túmọ̀ ọ̀kan sí èkejì, àti bí àwọn compiler ṣe ń mú kí ìṣètò kóòdù rọrùn.",
+    "ig": "Mụta ihe na-eme n’etiti koodu ị dere na mgbe kọmputa na-agba ya. Ị ga-ahụ ọdịiche dị n’etiti source code na machine code, otú compiler si atụgharị otu n’ime ha gaa na nke ọzọ, na otú compilers si eme ka mmemme dị mfe.",
+    "ha": "Koyi abin da ke faruwa tsakanin code ɗin da ka rubuta da lokacin da kwamfuta ta gudanar da shi. Za ka ga bambanci tsakanin source code da machine code, yadda compiler ke fassara ɗaya zuwa ɗayan, da yadda compilers ke sauƙaƙa shirye-shirye.",
+    "fr": "Apprends ce qui se passe entre le code que tu écris et son exécution par l’ordinateur. Tu verras la différence entre le code source et le code machine, comment un compilateur traduit l’un en l’autre et comment les compilateurs facilitent la programmation.",
+    "ar": "تعلّم ما يحدث بين الكود الذي تكتبه وتشغيله على الحاسوب. سترى الفرق بين الكود المصدري (source code) وكود الآلة (machine code)، وكيف يترجم المترجم (compiler) أحدهما إلى الآخر، وكيف تجعل المترجمات البرمجة أسهل.",
+    "sw": "Jifunze kinachotokea kati ya msimbo unaouandika na kompyuta inapouendesha. Utaona tofauti kati ya source code (msimbo chanzo) na machine code (msimbo wa mashine), jinsi compiler inavyotafsiri mmoja kuwa mwingine, na jinsi compiler zinavyorahisisha upangaji wa programu.",
+    "pt": "Aprende o que acontece entre o código que escreves e o momento em que o computador o executa. Vais ver a diferença entre código-fonte e código-máquina, como um compilador traduz um no outro e como os compiladores facilitam a programação.",
+    "es": "Aprende qué ocurre entre el código que escribes y el momento en que el ordenador lo ejecuta. Verás en qué se diferencia el código fuente del código máquina, cómo un compilador traduce uno al otro y cómo los compiladores facilitan la programación."
+   }
+  },
+  {
+   "id": "gT0Lh1eYk78",
+   "summary": {
+    "en": "Learn which three languages are used to build websites: HTML, CSS and JavaScript. This short explainer for beginners shows why you can’t exist online without them, and it is meant to be watched before you start any web development tutorial.",
+    "pcm": "Learn the three languages wey dem dey use build websites: HTML, CSS and JavaScript. This short explainer for beginners show why you no fit exist online without dem, and e good make you watch am before you start any web development tutorial.",
+    "yo": "Kọ́ èdè mẹ́ta tí a fi ń ṣe website: HTML, CSS àti JavaScript. Àlàyé kúkúrú yìí fún àwọn olùbẹ̀rẹ̀ fi hàn ìdí tí o kò fi lè wà lórí ayélujára láìsí wọn, ó sì dára kí o wò ó kí o tó bẹ̀rẹ̀ ẹ̀kọ́ web development èyíkéyìí.",
+    "ig": "Mụta asụsụ atọ e ji ewu websites: HTML, CSS na JavaScript. Nkọwa dị mkpirikpi a maka ndị mbido na-egosi ihe mere na ị pụghị ịdị n’ịntanetị na-enweghị ha, ọ dịkwa mma ikiri ya tupu ịmalite nkuzi ọ bụla gbasara web development.",
+    "ha": "Koyi harsuna uku da ake amfani da su wajen gina shafukan yanar gizo: HTML, CSS da JavaScript. Wannan gajeren bayani ga masu farawa ya nuna dalilin da ya sa ba za ka iya kasancewa a intanet ba tare da su ba, kuma yana da kyau ka kalle shi kafin ka fara kowane darasi na gina yanar gizo.",
+    "fr": "Découvre les trois langages utilisés pour créer des sites web : HTML, CSS et JavaScript. Cette courte explication pour débutants montre pourquoi on ne peut pas exister en ligne sans eux, et elle est à voir avant de commencer tout tutoriel de développement web.",
+    "ar": "تعرّف على اللغات الثلاث المستخدمة لبناء المواقع: HTML وCSS وJavaScript. يوضح هذا الشرح القصير للمبتدئين لماذا لا يمكن الوجود على الإنترنت من دونها، ومن الجيد مشاهدته قبل بدء أي درس في تطوير المواقع.",
+    "sw": "Jifunze lugha tatu zinazotumiwa kutengeneza tovuti: HTML, CSS na JavaScript. Maelezo haya mafupi kwa wanaoanza yanaonyesha kwa nini huwezi kuwepo mtandaoni bila lugha hizi, na ni vizuri kuyatazama kabla ya kuanza mafunzo yoyote ya kutengeneza tovuti.",
+    "pt": "Aprende quais são as três linguagens usadas para criar sites: HTML, CSS e JavaScript. Esta breve explicação para principiantes mostra porque não se pode existir online sem elas, e convém vê-la antes de começares qualquer tutorial de desenvolvimento web.",
+    "es": "Aprende cuáles son los tres lenguajes que se usan para crear sitios web: HTML, CSS y JavaScript. Esta breve explicación para principiantes muestra por qué no se puede existir en internet sin ellos, y conviene verla antes de empezar cualquier tutorial de desarrollo web."
+   }
+  },
+  {
+   "id": "KFVdHDMcepw",
+   "summary": {
+    "en": "Learn to think like a programmer through an animated adventure. Ethic wakes up in a mysterious cell, and she and her robot Hedge must solve programming puzzles to escape. It is the first episode of a 10-part TED-Ed series.",
+    "pcm": "Learn to think like programmer through animated adventure. Ethic wake up inside one mysterious cell, and she and her robot Hedge must solve programming puzzles to escape. Na the first episode of TED-Ed series wey get 10 episodes.",
+    "yo": "Kọ́ láti ronú bí olùkọ kóòdù nípasẹ̀ ìrìnàjò eré àwòrán tó ń rìn. Ethic jí nínú yàrá ẹ̀wọ̀n àràmàǹdà kan, òun àti robot rẹ̀ Hedge sì gbọ́dọ̀ yanjú àwọn àlọ́ ìṣètò kóòdù kí wọ́n lè sá àsálà. Èyí ni apá àkọ́kọ́ nínú eré TED-Ed alápá mẹ́wàá.",
+    "ig": "Mụta iche echiche dị ka onye na-ede koodu site n’akụkọ njem eserese na-emegharị ahụ. Ethic tetara n’ime ụlọ mkpọrọ dị omimi, ya na robot ya bụ Hedge ga-edozi ajụjụ mgbagwoju anya nke mmemme iji gbapụ. Nke a bụ akụkụ mbụ nke usoro TED-Ed nwere akụkụ 10.",
+    "ha": "Koyi yin tunani kamar mai rubuta code ta hanyar wani labarin kasada na zane-zane masu motsi. Ethic ta farka a wani ɗakin kurkuku mai ban mamaki, kuma ita da mutum-mutuminta Hedge dole su warware wasanin kwakwalwa na shirye-shirye don su tsere. Wannan shi ne kashi na farko a cikin jerin TED-Ed mai kashi 10.",
+    "fr": "Entraîne-toi à penser comme un programmeur grâce à une aventure animée. Ethic se réveille dans une cellule mystérieuse et doit, avec son robot Hedge, résoudre des énigmes de programmation pour s’échapper. C’est le premier épisode d’une série TED-Ed en 10 épisodes.",
+    "ar": "تعلّم التفكير كمبرمج من خلال مغامرة رسوم متحركة. تستيقظ إيثيك (Ethic) في زنزانة غامضة، وعليها مع روبوتها هيدج (Hedge) حل ألغاز برمجية للهروب. هذه هي الحلقة الأولى من سلسلة من 10 حلقات من TED-Ed.",
+    "sw": "Jifunze kufikiri kama mtengeneza programu kupitia hadithi ya katuni. Ethic anaamka katika seli ya ajabu, na yeye na roboti wake Hedge lazima watatue mafumbo ya programu ili kutoroka. Hiki ni kipindi cha kwanza cha mfululizo wa vipindi 10 wa TED-Ed.",
+    "pt": "Aprende a pensar como um programador através de uma aventura animada. A Ethic acorda numa cela misteriosa e, com o seu robô Hedge, tem de resolver enigmas de programação para escapar. É o primeiro episódio de uma série de 10 episódios do TED-Ed.",
+    "es": "Aprende a pensar como un programador con una aventura animada. Ethic despierta en una celda misteriosa y, junto con su robot Hedge, debe resolver acertijos de programación para escapar. Es el primer episodio de una serie de 10 episodios de TED-Ed."
+   }
+  },
+  {
+   "id": "Z1Yd7upQsXY",
+   "summary": {
+    "en": "Learn what Python is, what you can do with it, and how to set up Python and Jupyter Notebook using Anaconda. You will then use the print() function, find out what variables are, assign one variable to another, and try a practice problem: swapping two variables.",
+    "pcm": "Learn wetin Python be, wetin you fit do with am, and how to set up Python and Jupyter Notebook with Anaconda. After that you go use the print() function, know wetin variables be, assign one variable to another, and try one practice problem: to swap two variables.",
+    "yo": "Kọ́ ohun tí Python jẹ́, ohun tí o lè fi ṣe, àti bí o ṣe lè fi Python àti Jupyter Notebook sórí kọ̀ǹpútà pẹ̀lú Anaconda. Lẹ́yìn náà wàá lo print() function, wàá mọ ohun tí variables jẹ́, wàá fi variable kan sí òmíràn, wàá sì ṣe ìdánrawò kan: pípààrọ̀ variables méjì.",
+    "ig": "Mụta ihe Python bụ, ihe ị nwere ike iji ya mee, na otú ị ga-esi wụnye Python na Jupyter Notebook site n’iji Anaconda. Mgbe ahụ ị ga-eji ọrụ print(), mata ihe variables bụ, kenye otu variable na nke ọzọ, ma mee omume: ịgbanwe ebe variables abụọ.",
+    "ha": "Koyi mene ne Python, abin da za ka iya yi da shi, da yadda za ka saita Python da Jupyter Notebook ta amfani da Anaconda. Bayan haka za ka yi amfani da aikin print(), ka san mene ne variables, ka sanya variable ɗaya a wani, kuma ka yi atisaye: musanya variables biyu.",
+    "fr": "Découvre ce qu’est Python, ce qu’on peut faire avec, et comment installer Python et Jupyter Notebook grâce à Anaconda. Tu utiliseras ensuite la fonction print(), tu verras ce que sont les variables, tu affecteras une variable à une autre et tu feras un exercice : échanger deux variables.",
+    "ar": "تعلّم ما هي Python وما يمكنك فعله بها، وكيف تثبّت Python وJupyter Notebook باستخدام Anaconda. بعد ذلك ستستخدم الدالة print()، وتعرف ما هي المتغيرات (variables)، وتسند متغيرًا إلى متغير آخر، وتحل تمرينًا عمليًا: تبديل قيمتي متغيرين.",
+    "sw": "Jifunze Python ni nini, unaweza kufanya nini nayo, na jinsi ya kusakinisha Python na Jupyter Notebook kwa kutumia Anaconda. Kisha utatumia kitendakazi cha print(), utajua variables (vigezo) ni nini, utakabidhi variable moja kwa nyingine na kufanya zoezi: kubadilishana variables mbili.",
+    "pt": "Aprende o que é o Python, o que se pode fazer com ele e como instalar o Python e o Jupyter Notebook com o Anaconda. Depois vais usar a função print(), descobrir o que são variáveis, atribuir uma variável a outra e fazer um exercício prático: trocar duas variáveis.",
+    "es": "Aprende qué es Python, qué se puede hacer con él y cómo instalar Python y Jupyter Notebook con Anaconda. Después usarás la función print(), descubrirás qué son las variables, asignarás una variable a otra y harás un ejercicio práctico: intercambiar dos variables."
+   }
+  },
+  {
+   "id": "FQdaUv95mR8",
+   "summary": {
+    "en": "Learn to create a simple web page with HTML, step by step. You will make and edit an HTML file, add headers, paragraphs, lists, links, images, audio, video, tables and forms, and get tips on structuring your page and writing clean, semantic code (tags that describe their content).",
+    "pcm": "Learn how to create simple web page with HTML, step by step. You go make and edit HTML file, add headers, paragraphs, lists, links, images, audio, video, tables and forms, and get tips to arrange your page and write clean, semantic code (tags wey describe wetin dey inside dem).",
+    "yo": "Kọ́ bí a ṣe ń ṣe ojú-ewé web tó rọrùn pẹ̀lú HTML, ní ìgbésẹ̀-ní-ìgbésẹ̀. Wàá ṣẹ̀dá fáìlì HTML, wàá sì ṣàtúnṣe rẹ̀, wàá fi àwọn àkọlé, ìpínrọ̀, àtòjọ, ìjápọ̀, àwòrán, ohùn, fídíò, tábìlì àti fọ́ọ̀mù kún un, wàá sì gba àwọn àmọ̀ràn lórí bí a ṣe ń ṣètò ojú-ewé àti kíkọ kóòdù tó mọ́ tó sì jẹ́ semantic (àwọn tag tó ń ṣàpèjúwe ohun tó wà nínú wọn).",
+    "ig": "Mụta otú e si eke ibe web dị mfe site n’iji HTML, nzọụkwụ n’otu n’otu. Ị ga-eke ma dezie faịlụ HTML, tinye isiokwu, paragraf, ndepụta, njikọ, foto, ụda, vidiyo, tebụl na fọm, ma nweta ndụmọdụ maka ịhazi ibe gị na ide koodu dị ọcha na semantic (tags na-akọwa ihe dị n’ime ha).",
+    "ha": "Koyi yadda ake ƙirƙirar shafin yanar gizo mai sauƙi da HTML, mataki-mataki. Za ka ƙirƙira ka kuma gyara fayil ɗin HTML, ka ƙara kanun rubutu, sakin layi, jeri, hanyoyin haɗi, hotuna, sauti, bidiyo, teburori da fom, ka kuma sami shawarwari kan tsara shafinka da rubuta code mai tsabta da semantic (tags masu bayyana abin da ke cikinsu).",
+    "fr": "Apprends à créer une page web simple en HTML, étape par étape. Tu vas créer et modifier un fichier HTML, ajouter des titres, des paragraphes, des listes, des liens, des images, de l’audio, de la vidéo, des tableaux et des formulaires, et recevoir des conseils pour structurer ta page et écrire un code propre et sémantique (des balises qui décrivent leur contenu).",
+    "ar": "تعلّم إنشاء صفحة ويب بسيطة باستخدام HTML خطوة بخطوة. ستنشئ ملف HTML وتعدّله، وتضيف العناوين والفقرات والقوائم والروابط والصور والصوت والفيديو والجداول والنماذج، وتحصل على نصائح لتنظيم صفحتك وكتابة كود نظيف ودلالي (semantic: وسوم تصف محتواها).",
+    "sw": "Jifunze kutengeneza ukurasa rahisi wa wavuti kwa HTML, hatua kwa hatua. Utaunda na kuhariri faili ya HTML, kuongeza vichwa, aya, orodha, viungo, picha, sauti, video, majedwali na fomu, na kupata vidokezo vya kupanga ukurasa wako na kuandika msimbo safi wa semantic (tagi zinazoeleza maudhui yake).",
+    "pt": "Aprende a criar uma página web simples em HTML, passo a passo. Vais criar e editar um ficheiro HTML, acrescentar cabeçalhos, parágrafos, listas, ligações, imagens, áudio, vídeo, tabelas e formulários, e receber dicas para estruturar a página e escrever código limpo e semântico (etiquetas que descrevem o seu conteúdo).",
+    "es": "Aprende a crear una página web sencilla con HTML, paso a paso. Crearás y editarás un archivo HTML, añadirás encabezados, párrafos, listas, enlaces, imágenes, audio, vídeo, tablas y formularios, y recibirás consejos para estructurar tu página y escribir código limpio y semántico (etiquetas que describen su contenido)."
+   }
+  },
+  {
+   "id": "b093aqAZiPU",
+   "summary": {
+    "en": "Learn to program in Python from scratch: get Python, run your first code and set up Visual Studio Code. You will then work with numbers, text, variables, if statements, functions, loops and libraries, and learn to troubleshoot syntax, semantic and runtime errors.",
+    "pcm": "Learn Python programming from zero: how to get Python, run your first code and set up Visual Studio Code. After that you go work with numbers, text, variables, if statements, functions, loops and libraries, and learn how to fix syntax, semantic and runtime errors.",
+    "yo": "Kọ́ ètò Python láti ìbẹ̀rẹ̀: bí o ṣe lè rí Python gbà, mú kóòdù àkọ́kọ́ rẹ ṣiṣẹ́, kí o sì ṣètò Visual Studio Code. Lẹ́yìn náà wàá ṣiṣẹ́ pẹ̀lú nọ́ńbà, ọ̀rọ̀, variables, if statements, functions, loops àti libraries, wàá sì kọ́ bí a ṣe ń yanjú àwọn àṣìṣe syntax, semantic àti runtime.",
+    "ig": "Mụta mmemme Python site na mmalite: otú e si enweta Python, gbaa koodu mbụ gị, ma hazie Visual Studio Code. Mgbe ahụ ị ga-arụ ọrụ na nọmba, ederede, variables, if statements, functions, loops na libraries, ma mụta otú e si edozi njehie syntax, semantic na runtime.",
+    "ha": "Koyi shirye-shirye da Python daga farko: yadda ake samun Python, gudanar da code ɗinka na farko da saita Visual Studio Code. Bayan haka za ka yi aiki da lambobi, rubutu, variables, if statements, functions, loops da libraries, ka kuma koyi gyara kurakuran syntax, semantic da runtime.",
+    "fr": "Apprends à programmer en Python depuis zéro : obtenir Python, exécuter ton premier code et configurer Visual Studio Code. Tu travailleras ensuite avec les nombres, le texte, les variables, les instructions if, les fonctions, les boucles et les bibliothèques, et tu apprendras à corriger les erreurs de syntaxe, de sémantique et d’exécution.",
+    "ar": "تعلّم البرمجة بلغة Python من الصفر: الحصول على Python، وتشغيل أول كود لك، وإعداد Visual Studio Code. بعد ذلك ستعمل مع الأرقام والنصوص والمتغيرات وجمل if والدوال والحلقات والمكتبات، وتتعلم معالجة الأخطاء النحوية (syntax) والدلالية (semantic) وأخطاء وقت التشغيل (runtime).",
+    "sw": "Jifunze kupanga programu kwa Python tangu mwanzo: kupata Python, kuendesha msimbo wako wa kwanza na kuweka Visual Studio Code. Kisha utafanya kazi na namba, maandishi, variables, if statements, functions, loops na libraries, na kujifunza kutatua makosa ya syntax, semantic na runtime.",
+    "pt": "Aprende a programar em Python a partir do zero: obter o Python, executar o teu primeiro código e configurar o Visual Studio Code. Depois vais trabalhar com números, texto, variáveis, instruções if, funções, ciclos e bibliotecas, e aprender a resolver erros de sintaxe, semânticos e de execução.",
+    "es": "Aprende a programar en Python desde cero: conseguir Python, ejecutar tu primer código y configurar Visual Studio Code. Después trabajarás con números, texto, variables, sentencias if, funciones, bucles y bibliotecas, y aprenderás a solucionar errores de sintaxis, semánticos y de ejecución."
+   }
+  },
+  {
+   "id": "MwxMsaFFycg",
+   "summary": {
+    "en": "Find out how computers find each other on the internet. Internet co-founder Vint Cerf and engineer Paola Mejia explain IP addresses, which work like postal addresses for devices, and DNS, which turns website names into those numbers.",
+    "pcm": "Find out how computers dey take find each other for internet. Vint Cerf, one of the people wey start internet, and engineer Paola Mejia explain IP addresses, wey be like postal address for devices, and DNS, wey dey turn website names to those numbers.",
+    "yo": "Mọ̀ bí àwọn kọ̀ǹpútà ṣe ń rí ara wọn lórí íńtánẹ́ẹ̀tì. Vint Cerf, ọ̀kan lára àwọn olùdásílẹ̀ íńtánẹ́ẹ̀tì, àti ẹnjiníà Paola Mejia ṣàlàyé IP address, tó dà bí àdírẹ́sì ilé fún àwọn ẹ̀rọ, àti DNS, tó ń yí orúkọ wẹ́ẹ̀bùsáìtì padà sí àwọn nọ́ńbà náà.",
+    "ig": "Chọpụta otú kọmputa si achọta ibe ha n’ịntanetị. Vint Cerf, otu n’ime ndị guzobere ịntanetị, na onye injinia Paola Mejia na-akọwa IP address, nke dị ka adreesị nzi ozi maka ngwaọrụ, na DNS, nke na-atụgharị aha weebụsaịtị ka ọ bụrụ nọmba ndị ahụ.",
+    "ha": "Gano yadda kwamfutoci ke samun juna a intanet. Vint Cerf, ɗaya daga cikin waɗanda suka kafa intanet, da injiniya Paola Mejia sun bayyana IP address, wanda yake kamar adireshin gidan waya ga na’urori, da DNS, wanda ke mayar da sunayen shafukan yanar gizo zuwa waɗannan lambobi.",
+    "fr": "Découvre comment les ordinateurs se trouvent les uns les autres sur Internet. Vint Cerf, cofondateur d’Internet, et l’ingénieure Paola Mejia expliquent les adresses IP, qui fonctionnent comme des adresses postales pour les appareils, et le DNS, qui transforme les noms de sites en ces numéros.",
+    "ar": "اكتشف كيف تعثر الحواسيب بعضها على بعض عبر الإنترنت. يشرح فينت سيرف، أحد مؤسسي الإنترنت، والمهندسة باولا ميخيا عناوين IP التي تعمل كعناوين بريدية للأجهزة، ونظام أسماء النطاقات (DNS) الذي يحوّل أسماء المواقع إلى تلك الأرقام.",
+    "sw": "Gundua jinsi kompyuta zinavyopatana kwenye intaneti. Vint Cerf, mmoja wa waanzilishi wa intaneti, na mhandisi Paola Mejia wanaeleza IP address, zinazofanya kazi kama anwani za posta za vifaa, na DNS, inayogeuza majina ya tovuti kuwa namba hizo.",
+    "pt": "Descobre como os computadores se encontram uns aos outros na internet. Vint Cerf, cofundador da internet, e a engenheira Paola Mejia explicam os endereços IP, que funcionam como moradas postais para os dispositivos, e o DNS, que transforma os nomes dos sites nesses números.",
+    "es": "Descubre cómo los ordenadores se encuentran entre sí en internet. Vint Cerf, cofundador de internet, y la ingeniera Paola Mejia explican las direcciones IP, que funcionan como direcciones postales para los dispositivos, y el DNS, que convierte los nombres de los sitios web en esos números."
+   }
+  },
+  {
+   "id": "hJHvdBlSxug",
+   "summary": {
+    "en": "Get the big picture of what happens when you open a website. You will follow a request from your browser to a server and back, and see how domains, servers and responses fit together.",
+    "pcm": "See the big picture of wetin dey happen when you open website. You go follow one request from your browser go server and come back, and see how domains, servers and responses dey work together.",
+    "yo": "Rí àwòrán gbogbogbò ohun tó ń ṣẹlẹ̀ nígbà tí o bá ṣí wẹ́ẹ̀bùsáìtì kan. Wàá tẹ̀lé request kan láti browser rẹ lọ sí server kan àti padà, wàá sì rí bí domain, server àti response ṣe ń ṣiṣẹ́ pọ̀.",
+    "ig": "Hụ nnukwu foto nke ihe na-eme mgbe ị meghere weebụsaịtị. Ị ga-eso otu request site na browser gị gaa na server wee laghachi, ma hụ otú domain, server na response si arụkọ ọrụ ọnụ.",
+    "ha": "Samu cikakken hoton abin da ke faruwa idan ka buɗe shafin yanar gizo. Za ka bi wani request daga browser ɗinka zuwa server da dawowa, ka ga yadda domain, server da response ke aiki tare.",
+    "fr": "Comprends dans les grandes lignes ce qui se passe quand tu ouvres un site web. Tu suivras une requête de ton navigateur jusqu’à un serveur et retour, et tu verras comment les domaines, les serveurs et les réponses s’articulent.",
+    "ar": "كوّن صورة شاملة عمّا يحدث عندما تفتح موقعًا إلكترونيًا. ستتتبّع طلبًا (request) من متصفحك إلى الخادم (server) ثم عودته، وترى كيف تترابط أسماء النطاقات والخوادم والاستجابات.",
+    "sw": "Pata picha kamili ya kinachotokea unapofungua tovuti. Utafuatilia ombi (request) kutoka kwenye browser yako hadi kwenye server na kurudi, na kuona jinsi domain, server na majibu (responses) vinavyoshirikiana.",
+    "pt": "Fica com uma visão geral do que acontece quando abres um site. Vais seguir um pedido (request) desde o teu navegador até um servidor e de volta, e ver como os domínios, os servidores e as respostas se encaixam.",
+    "es": "Obtén una visión general de lo que pasa cuando abres un sitio web. Seguirás una petición (request) desde tu navegador hasta un servidor y de vuelta, y verás cómo encajan los dominios, los servidores y las respuestas."
+   }
+  },
+  {
+   "id": "rL8X2mlNHPM",
+   "summary": {
+    "en": "Learn what an algorithm is and why some are much faster than others. Using sorting and finding the shortest route on a map, you’ll see how computer scientists measure an algorithm’s efficiency with Big O notation and make it better.",
+    "pcm": "Learn wetin algorithm be and why some dey fast pass others well well. With sorting and how to find the shortest road for map, you go see how computer scientists dey measure how efficient algorithm be with Big O notation and how dem dey make am better.",
+    "yo": "Kọ́ ohun tí algorithm jẹ́ àti ìdí tí àwọn kan fi yára ju àwọn mìíràn lọ púpọ̀. Nípasẹ̀ sorting (títo nǹkan lẹ́sẹẹsẹ) àti wíwá ọ̀nà tó kúrú jùlọ lórí máàpù, wàá rí bí àwọn onímọ̀ sáyẹ́ǹsì kọ̀ǹpútà ṣe ń wọn bí algorithm ṣe múná dóko tó pẹ̀lú Big O notation, àti bí wọ́n ṣe ń mú un dára sí i.",
+    "ig": "Mụta ihe algorithm bụ na ihe mere ụfọdụ ji dị ngwa karịa ndị ọzọ nke ukwuu. Site na sorting (ịhazi ihe n’usoro) na ịchọta ụzọ kacha dị mkpụmkpụ na map, ị ga-ahụ otú ndị ọkà mmụta sayensị kọmputa si atụ ịrụ ọrụ nke ọma nke algorithm site na Big O notation, ma mee ka ọ ka mma.",
+    "ha": "Koyi menene algorithm da dalilin da yasa wasu suka fi wasu sauri sosai. Ta hanyar sorting (jera abubuwa) da neman hanya mafi gajarta a taswira, za ka ga yadda masana kimiyyar kwamfuta ke auna ingancin algorithm da Big O notation, da yadda suke inganta shi.",
+    "fr": "Apprends ce qu’est un algorithme et pourquoi certains sont bien plus rapides que d’autres. À travers le tri et la recherche du plus court chemin sur une carte, tu verras comment les informaticiens mesurent l’efficacité d’un algorithme avec la notation grand O, et comment l’améliorer.",
+    "ar": "تعلّم ما هي الخوارزمية ولماذا تكون بعض الخوارزميات أسرع بكثير من غيرها. من خلال الترتيب (sorting) وإيجاد أقصر طريق على الخريطة، سترى كيف يقيس علماء الحاسوب كفاءة الخوارزمية باستخدام ترميز O الكبير (Big O notation) وكيف يحسّنونها.",
+    "sw": "Jifunze algorithm ni nini na kwa nini baadhi ni za haraka zaidi kuliko nyingine kwa kiasi kikubwa. Kupitia sorting (kupanga vitu kwa mpangilio) na kutafuta njia fupi zaidi kwenye ramani, utaona jinsi wanasayansi wa kompyuta wanavyopima ufanisi wa algorithm kwa Big O notation na kuiboresha.",
+    "pt": "Aprende o que é um algoritmo e porque é que uns são muito mais rápidos do que outros. Com a ordenação de dados e a procura do caminho mais curto num mapa, vais ver como os cientistas da computação medem a eficiência de um algoritmo com a notação Big O e como a melhoram.",
+    "es": "Aprende qué es un algoritmo y por qué algunos son mucho más rápidos que otros. Con la ordenación de datos y la búsqueda de la ruta más corta en un mapa, verás cómo los informáticos miden la eficiencia de un algoritmo con la notación Big O y cómo la mejoran."
+   }
+  },
+  {
+   "id": "RGOj5yH7evk",
+   "summary": {
+    "en": "A hands-on course on Git and GitHub, the tools developers use to track changes to their code and work together on projects. You’ll learn to create a repository, commit changes, use branches and share your work on GitHub.",
+    "pcm": "One practical course on Git and GitHub, the tools wey developers dey use track changes for their code and work together for projects. You go learn how to create repository, commit changes, use branches and share your work for GitHub.",
+    "yo": "Ẹ̀kọ́ ìfọwọ́ṣe lórí Git àti GitHub, àwọn irinṣẹ́ tí àwọn olùṣẹ̀dá sọ́fítíwià ń lò láti tọpa àwọn àyípadà nínú kóòdù wọn àti láti ṣiṣẹ́ pọ̀ lórí iṣẹ́ àkànṣe. Wàá kọ́ bí a ṣe ń ṣẹ̀dá repository, commit àwọn àyípadà, lo branch, àti pín iṣẹ́ rẹ lórí GitHub.",
+    "ig": "Nkuzi omume banyere Git na GitHub, ngwaọrụ ndị mmepe sọftwia na-eji eso mgbanwe na koodu ha ma rụkọọ ọrụ ọnụ na pọjekt. Ị ga-amụta ka e si emepụta repository, commit mgbanwe, jiri branch, ma kekọrịta ọrụ gị na GitHub.",
+    "ha": "Kwas na aikace-aikace kan Git da GitHub, kayan aikin da masu haɓaka manhaja ke amfani da su wajen bin diddigin canje-canje a code ɗinsu da yin aiki tare a kan ayyuka. Za ka koyi yadda ake ƙirƙirar repository, commit na canje-canje, amfani da branch da raba aikinka a GitHub.",
+    "fr": "Un cours pratique sur Git et GitHub, les outils que les développeurs utilisent pour suivre les modifications de leur code et travailler ensemble sur des projets. Tu apprendras à créer un dépôt, à enregistrer des modifications (commit), à utiliser les branches et à partager ton travail sur GitHub.",
+    "ar": "دورة عملية عن Git وGitHub، الأداتين اللتين يستخدمهما المطوّرون لتتبّع التغييرات في الكود والعمل معًا على المشاريع. ستتعلم إنشاء مستودع (repository) وحفظ التغييرات (commit) واستخدام الفروع (branches) ومشاركة عملك على GitHub.",
+    "sw": "Kozi ya vitendo kuhusu Git na GitHub, zana ambazo wasanidi programu hutumia kufuatilia mabadiliko kwenye msimbo wao na kufanya kazi pamoja kwenye miradi. Utajifunza kuunda repository, ku-commit mabadiliko, kutumia branches na kushiriki kazi yako kwenye GitHub.",
+    "pt": "Um curso prático sobre Git e GitHub, as ferramentas que os programadores usam para acompanhar as alterações ao código e trabalhar em conjunto em projetos. Vais aprender a criar um repositório, gravar alterações (commit), usar ramos (branches) e partilhar o teu trabalho no GitHub.",
+    "es": "Un curso práctico sobre Git y GitHub, las herramientas que usan los desarrolladores para seguir los cambios en su código y trabajar juntos en proyectos. Aprenderás a crear un repositorio, guardar cambios (commit), usar ramas (branches) y compartir tu trabajo en GitHub."
+   }
+  }
+ ]
+}
