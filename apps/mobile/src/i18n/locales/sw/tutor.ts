@@ -385,6 +385,14 @@ const tutor: Translation<typeof en> = {
     failedTitle: 'Imeshindikana',
     failedBody: 'Hatukuweza kuzitengeneza sasa hivi. Angalia muunganisho wako kisha ujaribu tena.',
   },
+  videoSummaries: {
+    title: 'Muhtasari wako wa video',
+    fromBook: 'Muhtasari wa video kutoka kitabu hiki',
+    seeAll: 'Ona zote',
+    open: 'Tazama muhtasari wa video wa {{topic}}',
+    making: 'Unaandaliwa…',
+    failed: 'Haukukamilika',
+  },
   textbook: {
     cardTitle: 'Geuza kitabu chako cha kiada kuwa kadi za kujifunzia au muhtasari wa video',
     cardBody: 'Pakia PDF. AI inaorodhesha mada zake; chagua moja upate kadi za kujifunzia au video fupi.',

@@ -385,6 +385,14 @@ const tutor: Translation<typeof en> = {
     failedTitle: 'Kò ṣiṣẹ́',
     failedBody: 'A kò lè ṣe wọ́n báyìí. Ṣàyẹ̀wò ìsopọ̀ rẹ kí o sì tún gbìyànjú.',
   },
+  videoSummaries: {
+    title: 'Àwọn àkópọ̀ fídíò rẹ',
+    fromBook: 'Àwọn àkópọ̀ fídíò láti inú ìwé yìí',
+    seeAll: 'Wo gbogbo rẹ̀',
+    open: 'Wo àkópọ̀ fídíò {{topic}}',
+    making: 'À ń ṣe é…',
+    failed: 'Kò parí',
+  },
   textbook: {
     cardTitle: 'Sọ ìwé ẹ̀kọ́ rẹ di káàdì ìrántí tàbí àkópọ̀ fídíò',
     cardBody: 'Gbé PDF sókè. AI yóò to àwọn àkòrí inú rẹ̀ lẹ́sẹẹsẹ; yan ọ̀kan kí o sì gba káàdì ìrántí tàbí fídíò kúkúrú.',

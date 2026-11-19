@@ -85,14 +85,17 @@ export function ScenePlayer({
   // The clock: 10 ticks a second, paused on unanswered quick checks.
   useEffect(() => {
     if (!playing || waitingForAnswer || !scenes.length) return;
+    let ticks = 0;
     const h = setInterval(() => {
       const next = Math.min(total, tRef.current + 0.1 * speed);
       tRef.current = next;
       setT(next);
       if (next >= total) onEndedRef.current?.();
+      // Once a second: if the voice stopped on its own while the video runs, it picks up again.
+      if (voiceOn && ++ticks % 10 === 0) narrator.keepGoing();
     }, 100);
     return () => clearInterval(h);
-  }, [playing, waitingForAnswer, speed, total, scenes.length]);
+  }, [playing, waitingForAnswer, speed, total, scenes.length, voiceOn]);
 
   useEffect(() => {
     onTimeRef.current?.(t);

@@ -24,6 +24,7 @@ import { useTextbook, useTextbooks } from '@/lib/textbooks/store';
 import type { Textbook, Topic } from '@/lib/textbooks/types';
 import { CLIP_CREDITS, LENGTHS } from '@/lib/videos/options';
 import { DEFAULT_VIDEO_SETTINGS, useVideos } from '@/lib/videos/store';
+import { VideoSummaryRail } from '@/components/videos/summary-rail';
 
 /** The video summary's length: short, one credit. */
 const SUMMARY_LENGTH = '1m';
@@ -279,6 +280,9 @@ function TopicPicker({ b }: { b: Textbook }) {
             <Text variant="display">{t('textbook.pickerTitle')}</Text>
             <Text color={Colors.textSecondary}>{b.topics.length ? t('textbook.pickerBody') : t('textbook.noTopics')}</Text>
           </View>
+
+          {/* Video summaries already made from this book, to watch again. */}
+          <VideoSummaryRail textbookId={b.id} />
 
           {b.topics.length > 0 && (
             <TextField

@@ -385,6 +385,14 @@ const tutor: Translation<typeof en> = {
     failedTitle: 'Ọ rụghị ọrụ',
     failedBody: 'Anyị enweghị ike ịme ha ugbu a. Lelee njikọ gị ma nwaa ọzọ.',
   },
+  videoSummaries: {
+    title: 'Nchịkọta vidiyo gị',
+    fromBook: 'Nchịkọta vidiyo sitere n’akwụkwọ a',
+    seeAll: 'Hụ ha niile',
+    open: 'Lee nchịkọta vidiyo nke {{topic}}',
+    making: 'A na-eme ya…',
+    failed: 'Ọ gwụchaghị',
+  },
   textbook: {
     cardTitle: 'Mee ka akwụkwọ ọgụgụ gị bụrụ flashcard ma ọ bụ nchịkọta vidiyo',
     cardBody: 'Bulite PDF. AI ga-edepụta isiokwu ndị dị n’ime ya; họrọ otu ma nweta flashcard ma ọ bụ vidiyo dị mkpirikpi.',

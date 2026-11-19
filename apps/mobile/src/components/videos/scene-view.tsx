@@ -85,6 +85,8 @@ function Texture({ s }: { s: VisualStyle }) {
 function SceneClip({ uri, size }: { uri: string; size: number }) {
   const player = useVideoPlayer(uri, (p) => {
     p.muted = true;
+    // A silent picture must never take the sound over from the narration.
+    p.audioMixingMode = 'mixWithOthers';
     p.loop = true;
     p.play();
   });

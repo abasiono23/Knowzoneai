@@ -387,6 +387,14 @@ const tutor = {
     failedBody: 'We couldn’t make these just now. Check your connection and try again.',
   },
   /** Textbooks: upload a PDF, the AI lists its topics, pick one for flashcards or a video summary. */
+  videoSummaries: {
+    title: 'Your video summaries',
+    fromBook: 'Video summaries from this book',
+    seeAll: 'See all',
+    open: 'Watch the video summary of {{topic}}',
+    making: 'Being made…',
+    failed: 'Didn\'t finish',
+  },
   textbook: {
     cardTitle: 'Turn your textbook into flashcards or a video summary',
     cardBody: 'Upload a PDF. The AI lists its topics; pick one and get flashcards or a short video.',

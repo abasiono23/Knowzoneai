@@ -388,6 +388,14 @@ const tutor: Translation<typeof en> = {
     failedTitle: 'Bai yi aiki ba',
     failedBody: 'Ba mu iya yin su yanzu ba. Duba haɗin intanet ɗinka ka sake gwadawa.',
   },
+  videoSummaries: {
+    title: 'Taƙaitattun bidiyonka',
+    fromBook: 'Taƙaitattun bidiyo daga wannan littafin',
+    seeAll: 'Duba duka',
+    open: 'Kalli taƙaitaccen bidiyo na {{topic}}',
+    making: 'Ana yin sa…',
+    failed: 'Bai ƙare ba',
+  },
   textbook: {
     cardTitle: 'Mayar da littafin karatunka zuwa katunan bita ko taƙaitaccen bidiyo',
     cardBody: 'Ɗora PDF. AI zai lissafa maudu’an da ke cikinsa; zaɓi ɗaya ka sami katunan bita ko gajeren bidiyo.',

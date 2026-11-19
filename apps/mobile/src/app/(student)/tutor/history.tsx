@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { Pressable, ScrollView, StyleSheet, TextInput, View } from 'react-native';
 
 import { EmptyState } from '@/components/content/empty-state';
+import { VideoSummaryRail } from '@/components/videos/summary-rail';
 import { ChoiceChip } from '@/components/personalize/choice-chip';
 import { ActionSheet, Button, Screen, ScreenHeader, Text } from '@/components/ui';
 import { Colors, Fonts, NoWebOutline, Radius, Spacing } from '@/constants/theme';
@@ -80,6 +81,9 @@ export default function HistoryScreen() {
           ))}
         </ScrollView>
       )}
+
+      {/* Textbook video summaries are kept too: they show here above the conversations. */}
+      {!query && !subject && <VideoSummaryRail />}
 
       {conversations.length === 0 ? (
         <EmptyState

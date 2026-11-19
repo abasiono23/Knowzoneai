@@ -385,6 +385,14 @@ const tutor: Translation<typeof en> = {
     failedTitle: 'E no work',
     failedBody: 'We no fit make am now. Check your network make you try again.',
   },
+  videoSummaries: {
+    title: 'Your video summaries',
+    fromBook: 'Video summaries from dis book',
+    seeAll: 'See all',
+    open: 'Watch di video summary of {{topic}}',
+    making: 'E still dey make…',
+    failed: 'E no finish',
+  },
   textbook: {
     cardTitle: 'Turn your textbook to flashcards or video summary',
     cardBody: 'Upload PDF. AI go list the topics inside; pick one and get flashcards or short video.',

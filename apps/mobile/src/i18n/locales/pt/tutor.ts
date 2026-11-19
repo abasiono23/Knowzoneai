@@ -394,6 +394,14 @@ const tutor: Translation<typeof en> = {
     failedTitle: 'Não funcionou',
     failedBody: 'Não foi possível criá-los agora. Verifica a tua ligação e tenta novamente.',
   },
+  videoSummaries: {
+    title: 'Os teus resumos em vídeo',
+    fromBook: 'Resumos em vídeo deste livro',
+    seeAll: 'Ver todos',
+    open: 'Ver o resumo em vídeo de {{topic}}',
+    making: 'A ser feito…',
+    failed: 'Não terminou',
+  },
   textbook: {
     cardTitle: 'Transforma o teu manual em flashcards ou num resumo em vídeo',
     cardBody: 'Carrega um PDF. A IA lista os temas; escolhe um e recebe flashcards ou um vídeo curto.',

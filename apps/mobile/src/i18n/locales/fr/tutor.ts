@@ -394,6 +394,14 @@ const tutor: Translation<typeof en> = {
     failedTitle: 'Ça n’a pas marché',
     failedBody: 'Impossible de les créer pour le moment. Vérifie ta connexion et réessaie.',
   },
+  videoSummaries: {
+    title: 'Tes résumés vidéo',
+    fromBook: 'Résumés vidéo de ce livre',
+    seeAll: 'Tout voir',
+    open: 'Regarder le résumé vidéo de {{topic}}',
+    making: 'En préparation…',
+    failed: 'Inachevé',
+  },
   textbook: {
     cardTitle: 'Transforme ton manuel en cartes mémoire ou en résumé vidéo',
     cardBody: 'Importe un PDF. L’IA liste ses thèmes ; choisis-en un et obtiens des cartes mémoire ou une courte vidéo.',
