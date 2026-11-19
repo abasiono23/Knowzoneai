@@ -1,258 +1,376 @@
 import { Ionicons } from '@expo/vector-icons';
-import { Image } from 'expo-image';
-import { LinearGradient } from 'expo-linear-gradient';
 import { router, type Href } from 'expo-router';
 import { useEffect, useRef, useState, type ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
-import { ActivityIndicator, Pressable, StyleSheet, View, type StyleProp, type ViewStyle } from 'react-native';
-import Animated, { FadeIn, FadeInDown, FadeOutUp, ZoomIn } from 'react-native-reanimated';
+import {
+  AccessibilityInfo,
+  ActivityIndicator,
+  I18nManager,
+  Platform,
+  Pressable,
+  StyleSheet,
+  View,
+  type StyleProp,
+  type ViewStyle,
+} from 'react-native';
+import Animated, { FadeIn } from 'react-native-reanimated';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import Svg, { Circle } from 'react-native-svg';
 
 import { Text } from '@/components/ui';
-import { Colors, Radius, Spacing } from '@/constants/theme';
+import { Fonts, Palette } from '@/constants/theme';
 import { useFlipStyle } from '@/i18n/provider';
-import { KORA_IMAGE } from '@/lib/games/english';
-import { useSession } from '@/lib/session';
 
-/** The deep navy-to-violet background every word game uses. */
-export const GAME_BG = ['#0B0F2A', '#1C1668', '#2B1F8F'] as const;
-export const FONT = 'Manrope_800ExtraBold';
+/**
+ * The word games' look: a quiet light page, white square tiles with crisp borders, dark ink, and colour
+ * kept for meaning (green right, red wrong, purple for focus), always with an icon or words as well.
+ */
+export const W = {
+  page: '#F6F5FA',
+  surface: '#FFFFFF',
+  ink: '#16192E',
+  inkSoft: '#474C6B',
+  muted: '#6E7391',
+  line: '#E4E2EC',
+  lineStrong: '#C6C3D6',
+  key: '#E8E6F0',
+  keyPressed: '#D6D3E3',
+  given: '#EFEEF5',
+  focus: Palette.purple600,
+  focusSoft: 'rgba(106, 69, 255, 0.10)',
+  correct: '#0E8C79',
+  correctSoft: '#E3F5F1',
+  wrong: '#C9354F',
+  wrongSoft: '#FCE8EC',
+  rare: '#B26A00',
+  rareSoft: '#FFF3DC',
+} as const;
+export const FONT = Fonts.extrabold;
 
 export function GameBackground({ children }: { children: ReactNode }) {
-  return (
-    <LinearGradient colors={GAME_BG} start={{ x: 0.2, y: 0 }} end={{ x: 0.8, y: 1 }} style={{ flex: 1 }}>
-      {STARS.map(([x, y, s], i) => (
-        <View
-          key={i}
-          pointerEvents="none"
-          style={[styles.star, { left: `${x}%`, top: `${y}%`, width: s, height: s }]}
-        />
-      ))}
-      {children}
-    </LinearGradient>
-  );
-}
-const STARS: [number, number, number][] = [
-  [8, 12, 2],
-  [22, 30, 3],
-  [78, 8, 2],
-  [90, 26, 3],
-  [60, 18, 2],
-  [12, 60, 2],
-  [85, 52, 2],
-  [40, 44, 2],
-  [70, 72, 3],
-  [28, 86, 2],
-  [92, 90, 2],
-];
-
-/** Gold coin with the "K", and the learner's balance. */
-export function CoinPill() {
-  const { user } = useSession();
-  return (
-    <View style={styles.coinPill} accessibilityLabel={`${user?.coins ?? 0}`}>
-      <View style={styles.coin}>
-        <Text style={{ fontFamily: FONT, fontSize: 12, color: '#7A4B00' }}>K</Text>
-      </View>
-      <Text style={{ fontFamily: FONT, fontSize: 16, color: Colors.reward }}>{user?.coins ?? 0}</Text>
-    </View>
-  );
+  return <View style={{ flex: 1, backgroundColor: W.page }}>{children}</View>;
 }
 
-export function HeartsRow({ left, total = 3, size = 22 }: { left: number; total?: number; size?: number }) {
-  const { t } = useTranslation('games');
-  return (
-    <View style={{ flexDirection: 'row', gap: 4 }} accessibilityLabel={t('ui.heartsLeft', { count: left })}>
-      {Array.from({ length: total }, (_, i) => (
-        <Ionicons key={i} name="heart" size={size} color={i < left ? '#FF5A9A' : 'rgba(255,255,255,0.18)'} />
-      ))}
-    </View>
-  );
+/**
+ * A row that runs left to right in every language: the puzzles are English, and Word Hunter counts its
+ * cells from the left. In right-to-left languages a plain row is mirrored, so it is reversed back.
+ */
+export function ltrRow(): { flexDirection: 'row' | 'row-reverse' } {
+  const rtl =
+    Platform.OS === 'web'
+      ? typeof document !== 'undefined' && document.documentElement.dir === 'rtl'
+      : I18nManager.isRTL;
+  return { flexDirection: rtl ? 'row-reverse' : 'row' };
 }
 
-/** Round pause button, a centred label, and a slot on the right (coins, hearts). */
-export function TopBar({
-  onPause,
+/** Says something to screen readers (feedback that appears without a tap on it). */
+export function announce(text: string) {
+  AccessibilityInfo.announceForAccessibility(text);
+}
+
+/** A round icon button with a label for screen readers (44 pt, with extra room to tap). */
+export function IconButton({
+  icon,
   label,
-  center,
-  right,
-  pauseColor = '#5B3FE0',
-}: {
-  onPause: () => void;
-  label?: string;
-  center?: ReactNode;
-  right?: ReactNode;
-  pauseColor?: string;
-}) {
-  const { t } = useTranslation('world');
-  return (
-    <SafeAreaView edges={['top']} style={styles.topBar}>
-      <Pressable
-        onPress={onPause}
-        accessibilityRole="button"
-        accessibilityLabel={t('hud.pause')}
-        hitSlop={10}
-        style={({ pressed }) => [
-          styles.pause,
-          { backgroundColor: pauseColor },
-          pressed && { transform: [{ scale: 0.94 }] },
-        ]}>
-        <Ionicons name="pause" size={22} color="#fff" />
-      </Pressable>
-      <View style={{ flex: 1, alignItems: 'center' }}>
-        {label && (
-          <Text numberOfLines={2} style={styles.topLabel}>
-            {label}
-          </Text>
-        )}
-        {center}
-      </View>
-      <View style={{ minWidth: 48, alignItems: 'flex-end' }}>{right}</View>
-    </SafeAreaView>
-  );
-}
-
-type TileTone = 'violet' | 'gold' | 'teal' | 'red' | 'empty' | 'dim';
-const TONES: Record<Exclude<TileTone, 'empty'>, { colors: [string, string]; edge: string; text: string }> = {
-  violet: { colors: ['#8A6BFF', '#5B3FE0'], edge: '#3A239E', text: '#FFFFFF' },
-  gold: { colors: ['#FFD978', '#F5A623'], edge: '#B86F0A', text: '#5A2E00' },
-  teal: { colors: ['#5EEAD4', '#14B8A6'], edge: '#0B7A6E', text: '#FFFFFF' },
-  red: { colors: ['#FF8FA6', '#FF4D6D'], edge: '#B3243F', text: '#FFFFFF' },
-  dim: { colors: ['#2E2878', '#231E5E'], edge: '#16123F', text: 'rgba(255,255,255,0.35)' },
-};
-
-/** A glossy 3D letter tile (violet, gold, teal, red), or an empty dashed slot. */
-export function GlossyTile({
-  letter,
-  size = 54,
-  tone = 'violet',
-  points,
-  badge,
-  round,
   onPress,
-  accessibilityLabel,
-  style,
+  flip,
 }: {
-  letter?: string;
-  size?: number;
-  tone?: TileTone;
-  points?: number;
-  badge?: string;
-  round?: boolean;
-  onPress?: () => void;
-  accessibilityLabel?: string;
-  style?: StyleProp<ViewStyle>;
+  icon: keyof typeof Ionicons.glyphMap;
+  label: string;
+  onPress: () => void;
+  flip?: boolean;
 }) {
-  const radius = round ? size / 2 : Math.round(size * 0.24);
-  const body =
-    tone === 'empty' ? (
-      <View style={[styles.emptySlot, { width: size, height: size, borderRadius: radius }]} />
-    ) : (
-      <View style={[{ width: size, height: size + 5, borderRadius: radius, backgroundColor: TONES[tone].edge }]}>
-        <LinearGradient
-          colors={TONES[tone].colors}
-          style={{
-            width: size,
-            height: size,
-            borderRadius: radius,
-            alignItems: 'center',
-            justifyContent: 'center',
-            overflow: 'hidden',
-          }}>
-          <View style={[styles.gloss, { borderTopLeftRadius: radius, borderTopRightRadius: radius }]} />
-          {!!letter && (
-            <Text style={{ fontFamily: FONT, fontSize: size * 0.5, lineHeight: size * 0.62, color: TONES[tone].text }}>
-              {letter}
-            </Text>
-          )}
-          {points !== undefined && (
-            <Text style={[styles.points, { color: TONES[tone].text, fontSize: Math.max(9, size * 0.2) }]}>
-              {points}
-            </Text>
-          )}
-        </LinearGradient>
-        {!!badge && (
-          <View style={styles.badge}>
-            <Text style={{ fontFamily: FONT, fontSize: 9, color: '#5A2E00' }}>{badge}</Text>
-          </View>
-        )}
-      </View>
-    );
-  if (!onPress) return <View style={style}>{body}</View>;
+  const flipStyle = useFlipStyle();
   return (
     <Pressable
       onPress={onPress}
       accessibilityRole="button"
-      accessibilityLabel={accessibilityLabel ?? letter}
-      hitSlop={4}
-      style={({ pressed }) => [style, pressed && { transform: [{ scale: 0.92 }, { translateY: 2 }] }]}>
-      {body}
+      accessibilityLabel={label}
+      hitSlop={6}
+      style={({ pressed }) => [styles.iconButton, pressed && { backgroundColor: W.key }]}>
+      <Ionicons name={icon} size={20} color={W.ink} style={flip ? flipStyle : undefined} />
     </Pressable>
   );
 }
 
-/** The big pill button with a magenta-violet gradient and a soft glow. */
-export function GradientButton({
+/** The bar over every game: leave, the game and level, how to play, and pause. */
+export function GameTopBar({
   title,
+  subtitle,
+  onLeave,
+  onHelp,
+  onPause,
+}: {
+  title: string;
+  subtitle: string;
+  onLeave: () => void;
+  onHelp: () => void;
+  onPause: () => void;
+}) {
+  const { t } = useTranslation('games');
+  return (
+    <SafeAreaView edges={['top']} style={styles.topBar}>
+      <View style={styles.topRow}>
+        <IconButton icon="close" label={t('ui.leave')} onPress={onLeave} />
+        <View style={{ flex: 1, alignItems: 'center' }}>
+          <Text style={styles.topTitle} numberOfLines={1} accessibilityRole="header">
+            {title}
+          </Text>
+          <Text style={styles.topSub} numberOfLines={1}>
+            {subtitle}
+          </Text>
+        </View>
+        <View style={{ flexDirection: 'row', gap: 6 }}>
+          <IconButton icon="help" label={t('ui.help')} onPress={onHelp} />
+          <IconButton icon="pause" label={t('ui.pause')} onPress={onPause} />
+        </View>
+      </View>
+    </SafeAreaView>
+  );
+}
+
+/** A row of small facts under the top bar (progress, hearts, time), split by thin rules. */
+export function StatusRow({ children }: { children: ReactNode }) {
+  return <View style={styles.statusRow}>{children}</View>;
+}
+
+export function Stat({
   icon,
+  text,
+  label,
+  tone = 'plain',
+}: {
+  icon?: keyof typeof Ionicons.glyphMap;
+  text: string;
+  /** What a screen reader says, when the text alone isn't clear. */
+  label?: string;
+  tone?: 'plain' | 'alert' | 'good';
+}) {
+  const color = tone === 'alert' ? W.wrong : tone === 'good' ? W.correct : W.ink;
+  return (
+    <View style={styles.stat} accessible accessibilityLabel={label ?? text}>
+      {icon && <Ionicons name={icon} size={16} color={color} />}
+      <Text style={[styles.statText, { color }]}>{text}</Text>
+    </View>
+  );
+}
+
+/** Hearts left: full and empty hearts are different shapes, and the number is said aloud. */
+export function HeartsStat({ left, total = 3 }: { left: number; total?: number }) {
+  const { t } = useTranslation('games');
+  return (
+    <View style={styles.stat} accessible accessibilityLabel={t('ui.heartsLeft', { count: left })}>
+      {Array.from({ length: total }, (_, i) => (
+        <Ionicons key={i} name={i < left ? 'heart' : 'heart-outline'} size={16} color={i < left ? W.wrong : W.muted} />
+      ))}
+    </View>
+  );
+}
+
+/** Time left ("0:24"), or "No timer" in relaxed mode. Under ten seconds it turns red and its icon changes. */
+export function TimerStat({ seconds, relaxed }: { seconds: number; relaxed: boolean }) {
+  const { t } = useTranslation('games');
+  if (relaxed) return <Stat icon="infinite" text={t('ui.relaxed')} />;
+  const low = seconds <= 10;
+  return (
+    <Stat
+      icon={low ? 'alarm' : 'time-outline'}
+      text={`${Math.floor(Math.max(0, seconds) / 60)}:${String(Math.max(0, seconds) % 60).padStart(2, '0')}`}
+      label={t('ui.secondsLeft', { count: seconds })}
+      tone={low ? 'alert' : 'plain'}
+    />
+  );
+}
+
+export type TileState = 'empty' | 'active' | 'filled' | 'given' | 'correct' | 'wrong' | 'used' | 'rare';
+
+/**
+ * A square letter tile. Right and wrong tiles also carry a tick or a cross, so the answer never depends
+ * on colour alone. `points` shows a letter's value in the corner (Word Clash).
+ */
+export function LetterTile({
+  letter,
+  size = 52,
+  state = 'filled',
+  points,
+  onPress,
+  label,
+  style,
+}: {
+  letter?: string | null;
+  size?: number;
+  state?: TileState;
+  points?: number;
+  onPress?: () => void;
+  label?: string;
+  style?: StyleProp<ViewStyle>;
+}) {
+  const look = TILE[state];
+  const mark = state === 'correct' ? 'checkmark' : state === 'wrong' ? 'close' : null;
+  const body = (
+    <View
+      style={[
+        styles.tile,
+        {
+          width: size,
+          height: size,
+          borderRadius: Math.max(6, Math.round(size * 0.14)),
+          backgroundColor: look.bg,
+          borderColor: look.border,
+          borderStyle: state === 'empty' ? 'dashed' : 'solid',
+        },
+      ]}>
+      {!!letter && (
+        <Text style={{ fontFamily: FONT, fontSize: size * 0.48, lineHeight: size * 0.6, color: look.ink }} allowFontScaling={false}>
+          {letter}
+        </Text>
+      )}
+      {points !== undefined && (
+        <Text style={[styles.points, { color: look.ink, fontSize: Math.max(9, size * 0.2) }]} allowFontScaling={false}>
+          {points}
+        </Text>
+      )}
+      {mark && (
+        <View style={[styles.mark, { backgroundColor: look.border }]}>
+          <Ionicons name={mark} size={Math.max(10, size * 0.22)} color="#fff" />
+        </View>
+      )}
+    </View>
+  );
+  if (!onPress)
+    return (
+      <View style={style} accessible={!!label} accessibilityLabel={label}>
+        {body}
+      </View>
+    );
+  return (
+    <Pressable
+      onPress={onPress}
+      accessibilityRole="button"
+      accessibilityLabel={label ?? letter ?? undefined}
+      hitSlop={3}
+      style={({ pressed }) => [style, pressed && { transform: [{ scale: 0.94 }] }]}>
+      {body}
+    </Pressable>
+  );
+}
+const TILE: Record<TileState, { bg: string; border: string; ink: string }> = {
+  empty: { bg: W.surface, border: W.lineStrong, ink: W.ink },
+  active: { bg: W.focusSoft, border: W.focus, ink: W.ink },
+  filled: { bg: W.surface, border: W.ink, ink: W.ink },
+  given: { bg: W.given, border: W.line, ink: W.inkSoft },
+  correct: { bg: W.correct, border: '#0A6B5D', ink: '#fff' },
+  wrong: { bg: W.wrong, border: '#962539', ink: '#fff' },
+  used: { bg: W.given, border: W.line, ink: '#B5B3C4' },
+  rare: { bg: W.rareSoft, border: W.rare, ink: '#5C3700' },
+};
+
+/** A keyboard key or a letter to choose: light grey, dark letter, a clear pressed state. */
+export function Key({
+  label,
+  onPress,
+  disabled,
+  icon,
+  width,
+  height = 54,
+  accessibilityLabel,
+  sub,
+  tone = 'plain',
+}: {
+  label?: string;
+  onPress: () => void;
+  disabled?: boolean;
+  icon?: keyof typeof Ionicons.glyphMap;
+  width?: number;
+  height?: number;
+  accessibilityLabel?: string;
+  /** A small note in the corner (a letter's points). */
+  sub?: string;
+  tone?: 'plain' | 'rare' | 'accent';
+}) {
+  const flip = useFlipStyle();
+  const bg = tone === 'rare' ? W.rareSoft : tone === 'accent' ? W.ink : W.key;
+  const ink = tone === 'accent' ? '#fff' : tone === 'rare' ? '#5C3700' : W.ink;
+  return (
+    <Pressable
+      onPress={onPress}
+      disabled={disabled}
+      accessibilityRole="button"
+      accessibilityLabel={accessibilityLabel ?? label}
+      accessibilityState={{ disabled: !!disabled }}
+      style={({ pressed }) => [
+        styles.key,
+        { height, backgroundColor: bg, opacity: disabled ? 0.35 : 1 },
+        tone === 'rare' && { borderWidth: 1.5, borderColor: W.rare },
+        width ? { width } : { flex: 1 },
+        pressed && { backgroundColor: tone === 'plain' ? W.keyPressed : bg, transform: [{ scale: 0.96 }] },
+      ]}>
+      {icon ? (
+        <Ionicons name={icon} size={22} color={ink} style={icon === 'backspace-outline' ? flip : undefined} />
+      ) : (
+        <Text style={{ fontFamily: FONT, fontSize: 20, color: ink }} allowFontScaling={false}>
+          {label}
+        </Text>
+      )}
+      {!!sub && <Text style={[styles.keySub, { color: ink }]}>{sub}</Text>}
+    </Pressable>
+  );
+}
+
+/** The main action: a dark pill with white words. */
+export function PrimaryButton({
+  title,
   onPress,
   disabled,
   busy,
-  colors = ['#E040FB', '#8B5CF6'],
+  icon,
   style,
-  height = 60,
 }: {
   title: string;
-  icon?: keyof typeof Ionicons.glyphMap;
   onPress: () => void;
   disabled?: boolean;
   busy?: boolean;
-  colors?: readonly [string, string];
+  icon?: keyof typeof Ionicons.glyphMap;
   style?: StyleProp<ViewStyle>;
-  height?: number;
 }) {
+  const flip = useFlipStyle();
   return (
     <Pressable
       onPress={onPress}
       disabled={disabled || busy}
       accessibilityRole="button"
       accessibilityLabel={title}
-      accessibilityState={{ disabled: disabled || busy }}
-      style={({ pressed }) => [{ opacity: disabled ? 0.45 : 1 }, pressed && { transform: [{ scale: 0.97 }] }, style]}>
-      <LinearGradient
-        colors={colors}
-        start={{ x: 0, y: 0 }}
-        end={{ x: 1, y: 0 }}
-        style={[styles.gradientButton, { height, shadowColor: colors[0] }]}>
-        {busy ? (
-          <ActivityIndicator color="#fff" />
-        ) : (
-          <>
-            {icon && <Ionicons name={icon} size={22} color="#fff" />}
-            <Text style={{ fontFamily: FONT, fontSize: height > 52 ? 22 : 17, color: '#fff' }}>{title}</Text>
-          </>
-        )}
-      </LinearGradient>
+      accessibilityState={{ disabled: !!(disabled || busy), busy: !!busy }}
+      style={({ pressed }) => [
+        styles.primary,
+        disabled && { backgroundColor: '#B9B7C8' },
+        pressed && { backgroundColor: '#2A2E4A' },
+        style,
+      ]}>
+      {busy ? (
+        <ActivityIndicator color="#fff" />
+      ) : (
+        <>
+          <Text style={styles.primaryText}>{title}</Text>
+          {icon && <Ionicons name={icon} size={18} color="#fff" style={icon === 'arrow-forward' ? flip : undefined} />}
+        </>
+      )}
     </Pressable>
   );
 }
 
-/** A darker, quieter pill (Hint, Clear). */
-export function SoftButton({
+/** A quieter action: white with a dark outline. */
+export function SecondaryButton({
   title,
-  icon,
   onPress,
   disabled,
-  trailing,
+  icon,
   style,
   accessibilityLabel,
 }: {
-  title?: string;
-  icon?: keyof typeof Ionicons.glyphMap;
+  title: string;
   onPress: () => void;
   disabled?: boolean;
-  trailing?: ReactNode;
+  icon?: keyof typeof Ionicons.glyphMap;
   style?: StyleProp<ViewStyle>;
   accessibilityLabel?: string;
 }) {
@@ -262,84 +380,78 @@ export function SoftButton({
       disabled={disabled}
       accessibilityRole="button"
       accessibilityLabel={accessibilityLabel ?? title}
+      accessibilityState={{ disabled: !!disabled }}
       style={({ pressed }) => [
-        styles.softButton,
-        disabled && { opacity: 0.45 },
-        pressed && { transform: [{ scale: 0.96 }] },
+        styles.secondary,
+        disabled && { opacity: 0.4 },
+        pressed && { backgroundColor: W.key },
         style,
       ]}>
-      {icon && <Ionicons name={icon} size={22} color={Colors.reward} />}
-      {!!title && <Text style={{ fontFamily: FONT, fontSize: 17, color: '#fff' }}>{title}</Text>}
-      {trailing}
+      {icon && <Ionicons name={icon} size={18} color={W.ink} />}
+      <Text style={styles.secondaryText}>{title}</Text>
     </Pressable>
   );
 }
 
-/** Kora the owl with an optional speech bubble. */
-export function KoraBubble({
-  text,
-  size = 92,
-  side = 'left',
-  style,
+/**
+ * What happened, right after an answer: an icon, a short word and a detail line, read out to screen
+ * readers as it appears.
+ */
+export function Feedback({
+  tone,
+  title,
+  detail,
+  trailing,
 }: {
-  text?: string;
-  size?: number;
-  side?: 'left' | 'right';
-  style?: StyleProp<ViewStyle>;
+  tone: 'good' | 'bad' | 'info';
+  title: string;
+  detail?: string | null;
+  trailing?: ReactNode;
 }) {
+  useEffect(() => {
+    announce(detail ? `${title}. ${detail}` : title);
+  }, [title, detail]);
+  const look =
+    tone === 'good'
+      ? { bg: W.correctSoft, ink: W.correct, icon: 'checkmark-circle' as const }
+      : tone === 'bad'
+        ? { bg: W.wrongSoft, ink: W.wrong, icon: 'close-circle' as const }
+        : { bg: W.given, ink: W.inkSoft, icon: 'information-circle' as const };
   return (
-    <View
-      style={[{ flexDirection: side === 'left' ? 'row' : 'row-reverse', alignItems: 'flex-end', gap: 4 }, style]}
-      pointerEvents="none">
-      {!!text && (
-        <Animated.View
-          key={text}
-          entering={FadeIn.duration(250)}
-          style={[styles.speech, side === 'left' ? { borderBottomRightRadius: 4 } : { borderBottomLeftRadius: 4 }]}>
-          <Text style={{ fontFamily: 'Manrope_700Bold', fontSize: 15, color: '#2A1E6E' }}>{text}</Text>
-        </Animated.View>
-      )}
-      <Image source={KORA_IMAGE} style={{ width: size, height: size }} contentFit="contain" accessible={false} />
+    <Animated.View
+      entering={FadeIn.duration(160)}
+      accessibilityLiveRegion="polite"
+      style={[styles.feedback, { backgroundColor: look.bg }]}>
+      <Ionicons name={look.icon} size={22} color={look.ink} />
+      <View style={{ flex: 1 }}>
+        <Text style={{ fontFamily: Fonts.bold, fontSize: 15, color: look.ink }}>{title}</Text>
+        {!!detail && <Text style={{ fontFamily: Fonts.semibold, fontSize: 15, color: W.ink }}>{detail}</Text>}
+      </View>
+      {trailing}
+    </Animated.View>
+  );
+}
+
+/** A clue or prompt: the label in small capitals over the text. */
+export function ClueCard({ label, text }: { label: string; text: string }) {
+  return (
+    <View style={styles.clue}>
+      <Text style={styles.eyebrow}>{label}</Text>
+      <Text style={styles.clueText}>{text}</Text>
     </View>
   );
 }
 
-/** Circular gold countdown ring with the time in the middle. */
-export function TimerRing({ seconds, total, size = 96 }: { seconds: number; total: number; size?: number }) {
-  const { t } = useTranslation('games');
-  const stroke = 7;
-  const r = (size - stroke) / 2;
-  const c = 2 * Math.PI * r;
-  const share = total ? Math.max(0, seconds) / total : 0;
-  const low = seconds <= 5;
+/** Coins next to a hint's price. */
+export function CoinCost({ cost }: { cost: number }) {
   return (
-    <View
-      style={{ width: size, height: size, alignItems: 'center', justifyContent: 'center' }}
-      accessibilityLabel={t('ui.secondsLeft', { count: seconds })}>
-      <Svg width={size} height={size} style={StyleSheet.absoluteFill}>
-        <Circle cx={size / 2} cy={size / 2} r={r} stroke="rgba(255,200,87,0.18)" strokeWidth={stroke} fill="#120D3A" />
-        <Circle
-          cx={size / 2}
-          cy={size / 2}
-          r={r}
-          stroke={low ? Colors.danger : Colors.reward}
-          strokeWidth={stroke}
-          fill="none"
-          strokeDasharray={`${c} ${c}`}
-          strokeDashoffset={c * (1 - share)}
-          strokeLinecap="round"
-          transform={`rotate(-90 ${size / 2} ${size / 2})`}
-        />
-      </Svg>
-      <Text
-        style={{
-          fontFamily: FONT,
-          fontSize: size * 0.3,
-          color: low ? Colors.danger : '#fff',
-          fontVariant: ['tabular-nums'],
-        }}>
-        {`${Math.floor(Math.max(0, seconds) / 60)}:${String(Math.max(0, seconds) % 60).padStart(2, '0')}`}
-      </Text>
+    <View style={{ flexDirection: 'row', alignItems: 'center', gap: 4 }}>
+      <View style={styles.coin}>
+        <Text style={{ fontFamily: FONT, fontSize: 9, color: '#5C3700' }} allowFontScaling={false}>
+          K
+        </Text>
+      </View>
+      <Text style={{ fontFamily: Fonts.bold, fontSize: 14, color: W.ink }}>{cost}</Text>
     </View>
   );
 }
@@ -372,45 +484,16 @@ export function useCountdown(total: number, running: boolean, onEnd: () => void,
   return state.key === key ? state.left : total;
 }
 
-/** "+42" floating up in gold. */
-export function PointsPop({
-  value,
-  color = Colors.reward,
-  size = 34,
-}: {
-  value: string | null;
-  color?: string;
-  size?: number;
-}) {
-  if (!value) return null;
-  return (
-    <Animated.View key={value} entering={ZoomIn.springify()} exiting={FadeOutUp} pointerEvents="none">
-      <Text
-        style={{ fontFamily: FONT, fontSize: size, color, textShadowColor: 'rgba(0,0,0,0.35)', textShadowRadius: 6 }}>
-        {value}
-      </Text>
-    </Animated.View>
-  );
-}
-
-/** A short coloured message under the board (right, wrong, tips). */
-export function Feedback({ text, tone }: { text: string | null; tone: 'good' | 'bad' | 'info' }) {
-  if (!text) return null;
-  const color = tone === 'good' ? Colors.success : tone === 'bad' ? '#FF7A93' : Colors.textSecondary;
-  return (
-    <Animated.View entering={FadeInDown.duration(200)} style={{ alignItems: 'center' }}>
-      <Text style={{ fontFamily: 'Manrope_700Bold', fontSize: 16, color, textAlign: 'center' }}>{text}</Text>
-    </Animated.View>
-  );
-}
+/** The content column of a game screen: centred, at most 520 wide. */
+export const column = { width: '100%', maxWidth: 520, alignSelf: 'center' } as const;
 
 export function GameLoading() {
   const { t } = useTranslation('games');
   return (
     <GameBackground>
-      <View style={styles.center}>
-        <KoraBubble text={t('ui.loading')} size={110} />
-        <ActivityIndicator color={Colors.reward} style={{ marginTop: Spacing.lg }} />
+      <View style={styles.center} accessibilityLiveRegion="polite">
+        <ActivityIndicator color={W.ink} />
+        <Text style={{ fontFamily: Fonts.semibold, color: W.inkSoft, marginTop: 12 }}>{t('ui.loading')}</Text>
       </View>
     </GameBackground>
   );
@@ -418,119 +501,118 @@ export function GameLoading() {
 
 export function GameError({ message, onRetry }: { message: string; onRetry: () => void }) {
   const { t } = useTranslation('games');
-  const flip = useFlipStyle();
   return (
     <GameBackground>
-      <SafeAreaView style={[styles.center, { padding: Spacing.lg, gap: Spacing.lg }]}>
-        <KoraBubble text={message} size={110} />
-        <GradientButton title={t('ui.retry')} icon="refresh" onPress={onRetry} style={{ alignSelf: 'stretch' }} />
-        <Pressable
-          onPress={() => (router.canGoBack() ? router.back() : router.replace('/world/english' as Href))}
-          accessibilityRole="button"
-          hitSlop={10}
-          style={{ flexDirection: 'row', alignItems: 'center', gap: 4 }}>
-          <Ionicons name="chevron-back" size={18} color={Colors.textSecondary} style={flip} />
-          <Text color={Colors.textSecondary}>{t('results.back')}</Text>
-        </Pressable>
+      <SafeAreaView style={[styles.center, { padding: 24, gap: 16 }]}>
+        <Ionicons name="cloud-offline-outline" size={36} color={W.muted} />
+        <Text style={{ fontFamily: Fonts.semibold, fontSize: 16, color: W.ink, textAlign: 'center', maxWidth: 420 }}>
+          {message}
+        </Text>
+        <View style={{ width: '100%', maxWidth: 360, gap: 10 }}>
+          <PrimaryButton title={t('ui.retry')} icon="refresh" onPress={onRetry} />
+          <SecondaryButton
+            title={t('results.back')}
+            onPress={() => (router.canGoBack() ? router.back() : router.replace('/world/english' as Href))}
+          />
+        </View>
       </SafeAreaView>
     </GameBackground>
   );
 }
+
 export const styles = StyleSheet.create({
-  star: { position: 'absolute', borderRadius: 2, backgroundColor: 'rgba(255,255,255,0.45)' },
   center: { flex: 1, alignItems: 'center', justifyContent: 'center' },
-  topBar: {
+  topBar: { backgroundColor: W.surface, borderBottomWidth: 1, borderBottomColor: W.line },
+  topRow: {
+    ...column,
     flexDirection: 'row',
     alignItems: 'center',
-    gap: Spacing.sm,
-    paddingHorizontal: Spacing.md,
-    paddingTop: Spacing.xs,
+    gap: 10,
+    paddingHorizontal: 16,
+    paddingVertical: 8,
   },
-  pause: {
-    width: 52,
-    height: 52,
-    borderRadius: 26,
+  topTitle: { fontFamily: FONT, fontSize: 17, color: W.ink, letterSpacing: -0.2 },
+  topSub: { fontFamily: Fonts.semibold, fontSize: 13, color: W.muted },
+  iconButton: {
+    width: 40,
+    height: 40,
+    borderRadius: 20,
     alignItems: 'center',
     justifyContent: 'center',
-    shadowColor: '#7C5CFF',
-    shadowOpacity: 0.6,
-    shadowRadius: 10,
-    shadowOffset: { width: 0, height: 4 },
-    elevation: 6,
+    borderWidth: 1,
+    borderColor: W.line,
+    backgroundColor: W.surface,
   },
-  topLabel: {
-    fontFamily: FONT,
-    fontSize: 14,
-    letterSpacing: 1.2,
-    color: 'rgba(235,232,255,0.92)',
-    textAlign: 'center',
-  },
-  coinPill: {
+  statusRow: {
+    ...column,
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 6,
-    paddingVertical: 6,
-    paddingHorizontal: 10,
-    borderRadius: Radius.pill,
-    backgroundColor: 'rgba(10,8,40,0.55)',
+    justifyContent: 'space-between',
+    flexWrap: 'wrap',
+    rowGap: 6,
+    paddingHorizontal: 16,
+    paddingTop: 14,
   },
-  coin: {
-    width: 26,
-    height: 26,
-    borderRadius: 13,
-    backgroundColor: Colors.reward,
-    borderWidth: 2,
-    borderColor: '#F5A623',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  emptySlot: {
-    borderWidth: 2.5,
-    borderStyle: 'dashed',
-    borderColor: 'rgba(160,140,255,0.7)',
-    backgroundColor: 'rgba(124,92,255,0.14)',
-  },
-  gloss: { position: 'absolute', top: 0, left: 0, right: 0, height: '42%', backgroundColor: 'rgba(255,255,255,0.18)' },
-  points: { position: 'absolute', right: 5, bottom: 3, fontFamily: FONT },
-  badge: {
+  stat: { flexDirection: 'row', alignItems: 'center', gap: 5, minHeight: 24 },
+  statText: { fontFamily: Fonts.bold, fontSize: 14, fontVariant: ['tabular-nums'] },
+  tile: { alignItems: 'center', justifyContent: 'center', borderWidth: 2 },
+  points: { position: 'absolute', right: 4, bottom: 2, fontFamily: Fonts.bold },
+  mark: {
     position: 'absolute',
-    top: -7,
-    right: -7,
-    paddingHorizontal: 5,
-    paddingVertical: 1,
-    borderRadius: 8,
-    backgroundColor: '#FFE9A8',
-  },
-  gradientButton: {
-    flexDirection: 'row',
+    top: -6,
+    right: -6,
+    width: 18,
+    height: 18,
+    borderRadius: 9,
     alignItems: 'center',
     justifyContent: 'center',
-    gap: Spacing.sm,
-    borderRadius: 999,
-    paddingHorizontal: Spacing.lg,
-    shadowOpacity: 0.55,
-    shadowRadius: 16,
-    shadowOffset: { width: 0, height: 6 },
-    elevation: 8,
+    borderWidth: 2,
+    borderColor: W.page,
   },
-  softButton: {
+  key: { minWidth: 30, borderRadius: 8, alignItems: 'center', justifyContent: 'center' },
+  keySub: { position: 'absolute', right: 5, bottom: 3, fontFamily: Fonts.bold, fontSize: 10 },
+  primary: {
+    minHeight: 52,
+    paddingHorizontal: 24,
+    borderRadius: 999,
+    backgroundColor: W.ink,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
     gap: 8,
-    height: 60,
-    paddingHorizontal: Spacing.lg,
-    borderRadius: 999,
-    backgroundColor: '#3A2DA8',
-    borderWidth: 1,
-    borderColor: 'rgba(160,140,255,0.35)',
   },
-  speech: {
-    maxWidth: 220,
-    paddingHorizontal: 14,
-    paddingVertical: 10,
-    borderRadius: 18,
-    backgroundColor: '#D9CCFF',
-    marginBottom: 30,
+  primaryText: { fontFamily: Fonts.bold, fontSize: 16, color: '#fff', textAlign: 'center' },
+  secondary: {
+    minHeight: 52,
+    paddingHorizontal: 20,
+    borderRadius: 999,
+    borderWidth: 1.5,
+    borderColor: W.ink,
+    backgroundColor: W.surface,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 8,
+  },
+  secondaryText: { fontFamily: Fonts.bold, fontSize: 16, color: W.ink, textAlign: 'center' },
+  feedback: { flexDirection: 'row', alignItems: 'center', gap: 10, paddingHorizontal: 14, paddingVertical: 12, borderRadius: 12 },
+  clue: {
+    padding: 16,
+    borderRadius: 14,
+    backgroundColor: W.surface,
+    borderWidth: 1,
+    borderColor: W.line,
+    gap: 6,
+  },
+  eyebrow: { fontFamily: Fonts.bold, fontSize: 11, letterSpacing: 1.2, color: W.muted },
+  clueText: { fontFamily: Fonts.semibold, fontSize: 18, lineHeight: 26, color: W.ink },
+  coin: {
+    width: 16,
+    height: 16,
+    borderRadius: 8,
+    backgroundColor: Palette.gold400,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 });
+

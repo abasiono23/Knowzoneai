@@ -1,38 +1,35 @@
-import { Image } from 'expo-image';
-import { LinearGradient } from 'expo-linear-gradient';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ScrollView, StyleSheet, useWindowDimensions, View } from 'react-native';
-import Animated, {
-  FadeIn,
-  FadeOut,
-  useAnimatedStyle,
-  useSharedValue,
-  withSequence,
-  withTiming,
-  ZoomIn,
-} from 'react-native-reanimated';
+import Animated, { FadeIn, useAnimatedStyle, useSharedValue, withSequence, withTiming } from 'react-native-reanimated';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { Text } from '@/components/ui';
-import { Spacing } from '@/constants/theme';
+import { Fonts } from '@/constants/theme';
 import type { GameOutcome, SpellcasterRun } from '@/lib/api';
-import { ARENA_IMAGES, MONSTER_IMAGES, WIZARD_IMAGE } from '@/lib/games/english';
+import { useKeys } from '@/lib/games/english';
 
 import { GameShell, useGame, type Game } from './shell';
 import {
-  CoinPill,
-  FONT,
-  GlossyTile,
-  GradientButton,
-  HeartsRow,
-  KoraBubble,
-  PointsPop,
-  TopBar,
+  ClueCard,
+  column,
+  Feedback,
+  HeartsStat,
+  Key,
+  LetterTile,
+  ltrRow,
+  PrimaryButton,
+  Stat,
+  StatusRow,
+  TimerStat,
   useCountdown,
+  W,
 } from './ui';
 
-/** Spellcaster: spell the word from its clue to cast a spell at the world's guardian. */
+/**
+ * Spellcaster: spell the word a clue describes from a set of letters (with a few extra ones). Right
+ * words score towards the level's target; reach it to clear the level.
+ */
 export function Spellcaster({ level }: { level: number }) {
   const g = useGame<SpellcasterRun>('spellcaster', level);
   return (
@@ -44,28 +41,27 @@ export function Spellcaster({ level }: { level: number }) {
 
 function Board({ g, run }: { g: Game<SpellcasterRun>; run: SpellcasterRun }) {
   const { t } = useTranslation('games');
-  const { width, height } = useWindowDimensions();
+  const { width } = useWindowDimensions();
   const [i, setI] = useState(0);
   const spell = run.spells[Math.min(i, run.spells.length - 1)]!;
   const [picked, setPicked] = useState<number[]>([]);
   const [outcome, setOutcome] = useState<GameOutcome | null>(null);
+  const [done, setDone] = useState(false);
   const [spellStart, setSpellStart] = useState(() => Date.now());
   const answered = !!outcome;
-  const guardian = t(`spell.worlds.${run.monster}.name`);
-  const defeated = run.hp <= 0;
+  const shake = useSharedValue(0);
+  const shakeStyle = useAnimatedStyle(() => ({ transform: [{ translateX: shake.value }] }));
 
-  const sceneW = Math.min(width, 560);
-  const sceneH = Math.max(300, Math.min(height * 0.42, 420));
-  const fire = useSharedValue(0);
-  const hit = useSharedValue(0);
-  const lunge = useSharedValue(0);
-  const fireStyle = useAnimatedStyle(() => ({
-    opacity: fire.value > 0 && fire.value < 1 ? 1 : 0,
-    transform: [{ translateX: fire.value * sceneW * 0.42 }, { scale: 0.7 + fire.value * 0.5 }],
-  }));
-  const monsterStyle = useAnimatedStyle(() => ({
-    transform: [{ translateX: hit.value * 10 - lunge.value * sceneW * 0.25 }],
-  }));
+  const advance = (finished: boolean) => {
+    if (finished) {
+      void g.finish();
+      return;
+    }
+    setOutcome(null);
+    setPicked([]);
+    setI((n) => n + 1);
+    setSpellStart(Date.now());
+  };
 
   const cast = async (timeout = false) => {
     if (answered || g.busy) return;
@@ -76,246 +72,147 @@ function Board({ g, run }: { g: Game<SpellcasterRun>; run: SpellcasterRun }) {
     });
     if (!res) return;
     setOutcome(res.outcome);
+    setDone(res.done);
     if (res.outcome.correct) {
       g.buzz('success');
-      fire.set(0);
-      fire.set(withTiming(1, { duration: 520 }));
-      hit.set(
-        withSequence(
-          withTiming(0, { duration: 480 }),
-          withTiming(1, { duration: 60 }),
-          withTiming(-1, { duration: 60 }),
-          withTiming(0, { duration: 60 }),
-        ),
-      );
+      setTimeout(() => advance(res.done), res.done ? 1400 : 1100);
     } else {
       g.buzz('error');
-      lunge.set(withSequence(withTiming(1, { duration: 220 }), withTiming(0, { duration: 260 })));
+      shake.set(withSequence(withTiming(-8, { duration: 50 }), withTiming(8, { duration: 50 }), withTiming(0, { duration: 50 })));
     }
-    setTimeout(
-      () => {
-        if (res.done) {
-          void g.finish();
-          return;
-        }
-        setOutcome(null);
-        setPicked([]);
-        setI(i + 1);
-        setSpellStart(Date.now());
-      },
-      res.done ? 1800 : res.outcome.correct ? 1300 : 2200,
-    );
   };
 
-  const left = useCountdown(
-    spell.seconds,
-    !answered && !g.paused && run.status === 'playing',
-    () => void cast(true),
-    i,
+  const left = useCountdown(spell.seconds, !g.relaxed && !answered && !g.paused && run.status === 'playing', () => void cast(true), i);
+
+  const pick = (k: number) => {
+    if (answered || picked.includes(k) || picked.length >= spell.length) return;
+    g.buzz('tap');
+    setPicked([...picked, k]);
+  };
+  useKeys(
+    (key) => {
+      if (answered) {
+        if (key === 'Enter' && !outcome?.correct) advance(done);
+        return;
+      }
+      if (key === 'Enter') {
+        if (picked.length === spell.length) void cast();
+      } else if (key === 'Backspace') setPicked(picked.slice(0, -1));
+      else {
+        const k = spell.stones.findIndex((ch, x) => ch === key && !picked.includes(x));
+        if (k >= 0) pick(k);
+      }
+    },
+    !g.paused,
   );
 
+  const avail = Math.min(width, 520) - 32;
+  const slotSize = Math.max(30, Math.min(52, Math.floor((avail - (spell.length - 1) * 6) / spell.length)));
+  const perRow = Math.min(spell.stones.length, 8);
+  const keyW = Math.min(60, Math.floor((avail - (perRow - 1) * 8) / perRow));
   const slots = Array.from({ length: spell.length }, (_, k) =>
     outcome && !outcome.correct ? outcome.word?.[k] : spell.stones[picked[k]!],
   );
-  // The spell book sits inside two paddings and a border.
-  const avail = Math.min(width, 560) - Spacing.md * 4 - 6;
-  const stones = spell.stones.length;
-  const stoneSize = Math.max(34, Math.min(58, Math.floor((avail - (stones - 1) * 8) / stones)));
-  const slotSize = Math.max(34, Math.min(64, Math.floor((avail - (spell.length - 1) * 6) / spell.length)));
+  const scored = run.maxHp - Math.max(0, run.hp);
+  const share = run.maxHp ? Math.min(1, scored / run.maxHp) : 0;
 
   return (
     <View style={{ flex: 1 }}>
-      <View style={{ height: sceneH, width: '100%' }}>
-        <Image
-          source={ARENA_IMAGES[run.monster]}
-          style={StyleSheet.absoluteFill}
-          contentFit="cover"
-          accessible={false}
-        />
-        <LinearGradient colors={['transparent', '#1C1668']} style={styles.sceneFade} pointerEvents="none" />
-        <TopBar
-          onPause={() => g.setPaused(true)}
-          right={
-            <View style={{ alignItems: 'flex-end', gap: 6 }}>
-              <CoinPill />
-              <HeartsRow left={run.hearts} size={20} />
-            </View>
-          }
-        />
-        <View style={[styles.stage, { width: sceneW }]}>
-          <Image
-            source={WIZARD_IMAGE}
-            style={[styles.wizard, { width: sceneW * 0.36, height: sceneW * 0.36 }]}
-            contentFit="contain"
-            accessible={false}
-          />
-          <Animated.View
-            style={[styles.fireball, fireStyle, { left: sceneW * 0.28, bottom: sceneW * 0.2 }]}
-            pointerEvents="none">
-            <LinearGradient colors={['#FFF3B0', '#FF9F43', '#FF4D6D']} style={styles.fireCore} />
-          </Animated.View>
-          <View style={[styles.monsterWrap, { width: sceneW * 0.42 }]}>
-            <View
-              style={styles.hpTrack}
-              accessibilityLabel={t('spell.hpA11y', { name: guardian, hp: run.hp, max: run.maxHp })}>
-              <LinearGradient
-                colors={['#FF4D6D', '#FF7A93']}
-                start={{ x: 0, y: 0 }}
-                end={{ x: 1, y: 0 }}
-                style={{ height: '100%', width: `${(run.hp / run.maxHp) * 100}%`, borderRadius: 999 }}
-              />
-            </View>
-            <Text numberOfLines={1} style={styles.guardian}>
-              {guardian}
-            </Text>
-            {!defeated ? (
-              <Animated.View style={monsterStyle}>
-                <Image
-                  source={MONSTER_IMAGES[run.monster]}
-                  style={{ width: sceneW * 0.38, height: sceneW * 0.38 }}
-                  contentFit="contain"
-                  accessible={false}
-                />
-              </Animated.View>
-            ) : (
-              <Animated.Text entering={ZoomIn.springify()} style={styles.defeated}>
-                {t('spell.defeated', { name: guardian })}
-              </Animated.Text>
-            )}
+      <StatusRow>
+        <Stat text={t('ui.wordOf', { n: Math.min(i + 1, run.spells.length), total: run.spells.length })} />
+        <HeartsStat left={run.hearts} />
+        <TimerStat seconds={left} relaxed={g.relaxed} />
+      </StatusRow>
+      <ScrollView contentContainerStyle={[column, styles.body]} showsVerticalScrollIndicator={false}>
+        <View style={{ gap: 6 }} accessible accessibilityLabel={t('spell.progressA11y', { score: scored, max: run.maxHp })}>
+          <View style={styles.targetRow}>
+            <Text style={styles.targetLabel}>{t('spell.target', { max: run.maxHp })}</Text>
+            <Text style={styles.targetValue}>{run.hp > 0 ? t('spell.toGo', { count: run.hp }) : t('spell.cleared')}</Text>
           </View>
-          <View style={styles.damage} pointerEvents="none">
-            {outcome?.correct && <PointsPop value={`-${outcome.damage}`} color="#FF5A7A" size={40} />}
+          <View style={styles.track}>
+            <View style={[styles.fill, { width: `${share * 100}%` }]} />
           </View>
         </View>
-        {outcome && !outcome.correct && (
-          <Animated.View entering={FadeIn.duration(120)} exiting={FadeOut} style={styles.hurt} pointerEvents="none" />
-        )}
-      </View>
 
-      <ScrollView contentContainerStyle={styles.body} showsVerticalScrollIndicator={false}>
-        <View style={styles.timer}>
-          <View style={[styles.timerFill, { width: `${(left / spell.seconds) * 100}%` }]} />
-        </View>
-        <View style={styles.book}>
-          <Text style={styles.spellLabel}>{t('spell.spell')}</Text>
-          <Text style={styles.prompt}>{spell.prompt}</Text>
-          <View style={styles.slots}>
+        <Animated.View key={spell.id} entering={FadeIn.duration(180)} style={{ gap: 18 }}>
+          <ClueCard label={t('spell.spell')} text={spell.prompt} />
+          <Animated.View style={[styles.slots, ltrRow(), shakeStyle]}>
             {slots.map((ch, k) => (
-              <GlossyTile
+              <LetterTile
                 key={k}
                 letter={ch}
                 size={slotSize}
-                tone={ch ? (outcome ? (outcome.correct ? 'gold' : 'red') : 'gold') : 'empty'}
-                onPress={
-                  !answered && picked[k] !== undefined ? () => setPicked(picked.filter((_, j) => j !== k)) : undefined
-                }
-                accessibilityLabel={t('spell.slotA11y', { n: k + 1, letter: ch ?? '' })}
+                state={outcome ? (outcome.correct ? 'correct' : 'wrong') : ch ? 'filled' : k === picked.length ? 'active' : 'empty'}
+                onPress={!answered && picked[k] !== undefined ? () => setPicked(picked.filter((_, j) => j !== k)) : undefined}
+                label={t('spell.slotA11y', { n: k + 1, letter: ch ?? '' })}
               />
             ))}
-          </View>
-          {outcome && (
-            <Text
-              style={{
-                fontFamily: FONT,
-                fontSize: 16,
-                color: outcome.correct ? '#7CEBDD' : '#FF8FA6',
-                textAlign: 'center',
-              }}>
-              {outcome.correct
-                ? outcome.fast
-                  ? t('spell.fast')
-                  : t('spell.hit')
-                : t('spell.miss', { word: outcome.word })}
-            </Text>
-          )}
-          <View style={styles.stones}>
-            {spell.stones.map((ch, k) => (
-              <GlossyTile
-                key={k}
-                letter={ch}
-                round
-                size={stoneSize}
-                tone={picked.includes(k) || answered ? 'dim' : 'teal'}
-                onPress={() => {
-                  if (answered || picked.includes(k) || picked.length >= spell.length) return;
-                  g.buzz('tap');
-                  setPicked([...picked, k]);
-                }}
-                accessibilityLabel={t('spell.stoneA11y', { letter: ch })}
+          </Animated.View>
+        </Animated.View>
+
+        <View style={{ minHeight: 64 }}>
+          {outcome &&
+            (outcome.correct ? (
+              <Feedback
+                tone="good"
+                title={t('ui.correct')}
+                detail={`${t('ui.points', { count: outcome.damage ?? outcome.points })}${outcome.fast ? ` · ${t('spell.fast')}` : ''}`}
               />
+            ) : (
+              <Feedback tone="bad" title={t('ui.wrong')} detail={t('spell.miss', { word: outcome.word })} />
             ))}
-          </View>
+        </View>
+
+        <View style={[styles.stones, ltrRow()]}>
+          {spell.stones.map((ch, k) => (
+            <Key
+              key={k}
+              label={ch}
+              width={keyW}
+              disabled={picked.includes(k) || answered}
+              onPress={() => pick(k)}
+              accessibilityLabel={t('spell.stoneA11y', { letter: ch })}
+            />
+          ))}
         </View>
       </ScrollView>
 
       <SafeAreaView edges={['bottom']} style={styles.footer}>
-        <KoraBubble
-          text={!answered && i === 0 && !picked.length ? t('spell.kora') : undefined}
-          size={84}
-          style={styles.kora}
-        />
-        <GradientButton
-          title={t('spell.cast')}
-          icon="sparkles"
-          onPress={() => void cast()}
-          disabled={picked.length !== spell.length || answered}
-          busy={g.busy && !answered}
-          style={{ marginRight: 80 }}
-        />
+        {answered && !outcome?.correct ? (
+          <PrimaryButton title={done ? t('clash.results') : t('ui.next')} icon="arrow-forward" onPress={() => advance(done)} />
+        ) : (
+          <View style={styles.actions}>
+            <Key
+              icon="backspace-outline"
+              onPress={() => setPicked(picked.slice(0, -1))}
+              width={56}
+              height={52}
+              accessibilityLabel={t('ui.delete')}
+              disabled={answered || !picked.length}
+            />
+            <PrimaryButton
+              title={t('ui.check')}
+              onPress={() => void cast()}
+              disabled={picked.length !== spell.length || answered}
+              busy={g.busy && !answered}
+              style={{ flex: 1 }}
+            />
+          </View>
+        )}
       </SafeAreaView>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  sceneFade: { position: 'absolute', left: 0, right: 0, bottom: 0, height: 70 },
-  stage: {
-    flex: 1,
-    alignSelf: 'center',
-    flexDirection: 'row',
-    alignItems: 'flex-end',
-    justifyContent: 'space-between',
-    paddingHorizontal: Spacing.sm,
-    paddingBottom: Spacing.md,
-  },
-  wizard: { marginBottom: 4 },
-  fireball: { position: 'absolute', width: 54, height: 54 },
-  fireCore: { flex: 1, borderRadius: 27, shadowColor: '#FF9F43', shadowOpacity: 0.9, shadowRadius: 18, elevation: 10 },
-  monsterWrap: { alignItems: 'center', gap: 4 },
-  hpTrack: {
-    width: '86%',
-    height: 14,
-    borderRadius: 999,
-    backgroundColor: 'rgba(10,8,40,0.7)',
-    borderWidth: 2,
-    borderColor: 'rgba(255,255,255,0.25)',
-    overflow: 'hidden',
-  },
-  guardian: { fontFamily: FONT, fontSize: 13, color: '#fff', textShadowColor: 'rgba(0,0,0,0.6)', textShadowRadius: 4 },
-  defeated: { fontFamily: FONT, fontSize: 20, color: '#FFC857', textAlign: 'center', marginBottom: 40 },
-  damage: { position: 'absolute', right: '22%', top: '52%' },
-  hurt: { position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, backgroundColor: 'rgba(255,77,109,0.25)' },
-  body: { padding: Spacing.md, gap: Spacing.sm, maxWidth: 560, width: '100%', alignSelf: 'center', paddingBottom: 120 },
-  timer: { height: 8, borderRadius: 999, backgroundColor: 'rgba(10,8,40,0.6)', overflow: 'hidden' },
-  timerFill: { height: '100%', borderRadius: 999, backgroundColor: '#2DD4BF' },
-  book: {
-    gap: Spacing.sm,
-    padding: Spacing.md,
-    borderRadius: 28,
-    backgroundColor: 'rgba(58,32,140,0.85)',
-    borderWidth: 2,
-    borderColor: '#8B5CF6',
-  },
-  spellLabel: { fontFamily: FONT, fontSize: 30, color: '#FFE3B8', textAlign: 'center' },
-  prompt: { fontFamily: 'Manrope_700Bold', fontSize: 19, lineHeight: 26, color: '#FFE3B8', textAlign: 'center' },
-  slots: { flexDirection: 'row', justifyContent: 'center', gap: 6, flexWrap: 'wrap', marginVertical: 4 },
+  body: { padding: 16, gap: 18, paddingBottom: 32 },
+  targetRow: { flexDirection: 'row', justifyContent: 'space-between', gap: 8, flexWrap: 'wrap' },
+  targetLabel: { fontFamily: Fonts.semibold, fontSize: 13, color: W.muted },
+  targetValue: { fontFamily: Fonts.bold, fontSize: 13, color: W.ink },
+  track: { height: 6, borderRadius: 3, backgroundColor: W.line, overflow: 'hidden' },
+  fill: { height: '100%', borderRadius: 3, backgroundColor: W.correct },
+  slots: { flexDirection: 'row', justifyContent: 'center', gap: 6, flexWrap: 'wrap' },
   stones: { flexDirection: 'row', justifyContent: 'center', gap: 8, flexWrap: 'wrap' },
-  footer: {
-    paddingHorizontal: Spacing.md,
-    paddingBottom: Spacing.sm,
-    maxWidth: 560,
-    width: '100%',
-    alignSelf: 'center',
-  },
-  kora: { position: 'absolute', right: Spacing.xs, bottom: 0 },
+  footer: { ...column, paddingHorizontal: 16, paddingTop: 10, paddingBottom: 12 },
+  actions: { flexDirection: 'row', gap: 8, alignItems: 'center' },
 });

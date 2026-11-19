@@ -1,6 +1,6 @@
 import { useId } from 'react';
 import { useTranslation } from 'react-i18next';
-import { View } from 'react-native';
+import { Platform, View } from 'react-native';
 import Svg, { Defs, G, LinearGradient, Path, RadialGradient, Rect, Stop } from 'react-native-svg';
 
 import { Text } from '@/components/ui';
@@ -58,11 +58,16 @@ export function LogoMark({ size = 96 }: { size?: number }) {
   );
 }
 
+const LTR = Platform.OS === 'web' ? null : ({ direction: 'ltr' } as const);
+
 /** "Knowzone" set in Manrope ExtraBold with the gold "AI" badge. */
 export function Wordmark({ fontSize = 24 }: { fontSize?: number }) {
   return (
     // The brand reads left to right in every language, including Arabic.
-    <View style={{ flexDirection: 'row', alignItems: 'center', gap: fontSize * 0.3, direction: 'ltr' }}>
+    // React Native Web rejects `direction` in a style, so on the web it goes on the element as dir="ltr".
+    <View
+      style={[{ flexDirection: 'row', alignItems: 'center', gap: fontSize * 0.3 }, LTR]}
+      {...(Platform.OS === 'web' ? ({ dir: 'ltr' } as object) : null)}>
       <Text
         style={{ fontFamily: Fonts.extrabold, fontSize, lineHeight: fontSize * 1.2, letterSpacing: -fontSize * 0.03 }}>
         Knowzone

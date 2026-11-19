@@ -181,6 +181,8 @@ export type GridCell = [number, number];
 export type WordHunterRun = RunBase & {
   game: 'word-hunter';
   theme: string;
+  /** The theme's English name, for themes the app has no translation for yet. */
+  themeTitle?: string;
   size: number;
   grid: string[][];
   seconds: number;
@@ -201,7 +203,17 @@ export type SpellcasterRun = RunBase & {
     result?: { correct: boolean; points: number; word: string };
   }[];
 };
-export type GrammarTopic = 'presentSimple' | 'pastTense' | 'questions' | 'prepositions' | 'passiveConditionals';
+export type GrammarTopic =
+  | 'presentSimple'
+  | 'pastTense'
+  | 'questions'
+  | 'prepositions'
+  | 'passiveConditionals'
+  | 'presentPerfect'
+  | 'relativeClauses'
+  | 'reportedSpeech'
+  | 'mixedConditionals'
+  | 'inversion';
 export type SentenceMasterRun = RunBase & {
   game: 'sentence-master';
   topic: GrammarTopic;

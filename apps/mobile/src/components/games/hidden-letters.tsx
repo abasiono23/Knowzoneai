@@ -1,37 +1,30 @@
-import { Ionicons } from '@expo/vector-icons';
-import { LinearGradient } from 'expo-linear-gradient';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ScrollView, StyleSheet, useWindowDimensions, View } from 'react-native';
-import Animated, {
-  FadeInDown,
-  useAnimatedStyle,
-  useSharedValue,
-  withSequence,
-  withTiming,
-} from 'react-native-reanimated';
+import Animated, { FadeIn, useAnimatedStyle, useSharedValue, withSequence, withTiming } from 'react-native-reanimated';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-import { Text } from '@/components/ui';
-import { Colors, Spacing } from '@/constants/theme';
 import type { GameOutcome, HiddenLettersRun } from '@/lib/api';
+import { useKeys } from '@/lib/games/english';
 
 import { GameShell, useGame, type Game } from './shell';
 import {
-  CoinPill,
-  FONT,
-  GlossyTile,
-  GradientButton,
-  HeartsRow,
-  KoraBubble,
-  PointsPop,
-  SoftButton,
-  TimerRing,
-  TopBar,
+  ClueCard,
+  column,
+  Feedback,
+  HeartsStat,
+  Key,
+  LetterTile,
+  ltrRow,
+  PrimaryButton,
+  SecondaryButton,
+  Stat,
+  StatusRow,
+  TimerStat,
   useCountdown,
 } from './ui';
 
-/** Hidden Letters: fill the gaps in a word from its clue before the ring runs out. */
+/** Hidden Letters: fill the gaps in a word from its clue. */
 export function HiddenLetters({ level }: { level: number }) {
   const g = useGame<HiddenLettersRun>('hidden-letters', level);
   return (
@@ -42,19 +35,31 @@ export function HiddenLetters({ level }: { level: number }) {
 }
 
 function Board({ g, run }: { g: Game<HiddenLettersRun>; run: HiddenLettersRun }) {
+  const { t } = useTranslation('games');
+  const { width } = useWindowDimensions();
   const [i, setI] = useState(0);
   const [filled, setFilled] = useState<Record<number, string>>({});
   const [outcome, setOutcome] = useState<GameOutcome | null>(null);
-  const { t } = useTranslation('games');
-  const { width } = useWindowDimensions();
+  const [done, setDone] = useState(false);
   const step = run.steps[Math.min(i, run.steps.length - 1)]!;
   const open = step.tiles.map((ch, k) => (ch === null ? k : -1)).filter((k) => k >= 0);
   const full = open.every((k) => filled[k]);
   const answered = !!outcome;
-  const [started] = useState(() => Date.now());
-  const [stepStart, setStepStart] = useState(started);
+  const [stepStart, setStepStart] = useState(() => Date.now());
   const shake = useSharedValue(0);
   const shakeStyle = useAnimatedStyle(() => ({ transform: [{ translateX: shake.value }] }));
+  const nextBlank = open.find((k) => !filled[k]);
+
+  const advance = (finished: boolean) => {
+    if (finished) {
+      void g.finish();
+      return;
+    }
+    setOutcome(null);
+    setFilled({});
+    setI((n) => n + 1);
+    setStepStart(Date.now());
+  };
 
   const submit = async (timeout = false) => {
     if (answered || g.busy) return;
@@ -65,44 +70,40 @@ function Board({ g, run }: { g: Game<HiddenLettersRun>; run: HiddenLettersRun })
     });
     if (!res) return;
     setOutcome(res.outcome);
+    setDone(res.done);
     g.buzz(res.outcome.correct ? 'success' : 'error');
     if (!res.outcome.correct)
       shake.set(
         withSequence(
-          withTiming(-12, { duration: 50 }),
-          withTiming(12, { duration: 50 }),
-          withTiming(-6, { duration: 50 }),
+          withTiming(-8, { duration: 50 }),
+          withTiming(8, { duration: 50 }),
+          withTiming(-4, { duration: 50 }),
           withTiming(0, { duration: 50 }),
         ),
       );
-    setTimeout(
-      () => {
-        if (res.done) {
-          void g.finish();
-          return;
-        }
-        setOutcome(null);
-        setFilled({});
-        setI(i + 1);
-        setStepStart(Date.now());
-      },
-      res.outcome.correct ? 1300 : 2200,
-    );
+    // Right answers move on by themselves; after a wrong one, the learner reads the word and continues.
+    else setTimeout(() => advance(res.done), 1100);
   };
 
   const left = useCountdown(
     step.seconds,
-    !answered && !g.paused && run.status === 'playing',
+    !g.relaxed && !answered && !g.paused && run.status === 'playing',
     () => void submit(true),
     i,
   );
 
   const place = (letter: string) => {
-    if (answered) return;
-    const k = open.find((x) => !filled[x]);
-    if (k === undefined) return;
+    if (answered || nextBlank === undefined) return;
     g.buzz('tap');
-    setFilled({ ...filled, [k]: letter });
+    setFilled({ ...filled, [nextBlank]: letter });
+  };
+  const removeLast = () => {
+    if (answered) return;
+    const last = [...open].reverse().find((k) => filled[k]);
+    if (last === undefined) return;
+    const next = { ...filled };
+    delete next[last];
+    setFilled(next);
   };
   const hint = async () => {
     const h = await g.hint(step.id);
@@ -113,142 +114,132 @@ function Board({ g, run }: { g: Game<HiddenLettersRun>; run: HiddenLettersRun })
     }
   };
 
-  // Tiles shrink to fit long words on one or two rows.
-  const avail = Math.min(width, 560) - Spacing.md * 2;
-  const perRow = step.length <= 7 ? step.length : Math.ceil(step.length / 2);
-  const size = Math.max(40, Math.min(66, Math.floor((avail - (perRow - 1) * 8) / perRow)));
-  const tone = (k: number) => (outcome ? (outcome.correct ? 'teal' : open.includes(k) ? 'red' : 'violet') : 'violet');
+  useKeys(
+    (key) => {
+      if (answered) {
+        if (key === 'Enter' && !outcome?.correct) advance(done);
+        return;
+      }
+      if (key === 'Enter') {
+        if (full) void submit();
+      } else if (key === 'Backspace') removeLast();
+      else if (step.choices.includes(key)) place(key);
+    },
+    !g.paused,
+  );
+
+  // Tiles shrink to fit long words on one line, then wrap.
+  const avail = Math.min(width, 520) - 32;
+  // One row when the word fits at a readable size, else two.
+  const oneRow = Math.floor((avail - (step.length - 1) * 6) / step.length) >= 36;
+  const perRow = oneRow ? step.length : Math.ceil(step.length / 2);
+  const size = Math.max(34, Math.min(58, Math.floor((avail - (perRow - 1) * 6) / perRow)));
+  const cols = step.choices.length > 8 ? 6 : 4;
+  const keyW = Math.min(76, Math.floor((avail - (cols - 1) * 8) / cols));
+  const stateOf = (k: number) => {
+    const isOpen = open.includes(k);
+    if (outcome) return outcome.correct ? 'correct' : isOpen ? 'wrong' : 'given';
+    if (!isOpen) return 'given';
+    if (filled[k]) return 'filled';
+    return k === nextBlank ? 'active' : 'empty';
+  };
   const letterAt = (k: number) => (outcome && !outcome.correct ? outcome.word?.[k] : (step.tiles[k] ?? filled[k]));
 
   return (
     <View style={{ flex: 1 }}>
-      <TopBar
-        onPause={() => g.setPaused(true)}
-        label={t('ui.level', { game: t('english.hidden-letters.name').toUpperCase(), level: run.level })}
-        right={<CoinPill />}
-      />
-      <ScrollView contentContainerStyle={styles.body} showsVerticalScrollIndicator={false}>
-        <View style={styles.statusRow}>
-          <HeartsRow left={run.hearts} size={20} />
-          <TimerRing seconds={left} total={step.seconds} size={100} />
-          <View style={styles.streak} accessibilityLabel={t('hidden.streakA11y', { count: run.streak })}>
-            <Ionicons name="flame" size={26} color={run.streak > 0 ? '#FF9F43' : 'rgba(255,255,255,0.25)'} />
-            <Text
-              style={{ fontFamily: FONT, fontSize: 16, color: run.streak > 0 ? '#FFC857' : 'rgba(255,255,255,0.35)' }}>
-              {t('hidden.streak', { count: run.streak })}
-            </Text>
-          </View>
-        </View>
-
-        <Animated.View key={step.id} entering={FadeInDown} style={[styles.word, shakeStyle]}>
-          {step.tiles.map((_, k) => {
-            const ch = letterAt(k);
-            const isOpen = open.includes(k);
-            return (
-              <GlossyTile
-                key={k}
-                size={size}
-                tone={ch ? tone(k) : 'empty'}
-                letter={ch ?? undefined}
-                onPress={
-                  isOpen && filled[k] && !answered
-                    ? () => setFilled(Object.fromEntries(Object.entries(filled).filter(([x]) => Number(x) !== k)))
-                    : undefined
-                }
-                accessibilityLabel={
-                  ch ? t('hidden.filledA11y', { letter: ch }) : t('hidden.blankA11y', { n: open.indexOf(k) + 1 })
-                }
-              />
-            );
-          })}
+      <StatusRow>
+        <Stat text={t('ui.wordOf', { n: Math.min(i + 1, run.steps.length), total: run.steps.length })} />
+        <HeartsStat left={run.hearts} />
+        <Stat
+          icon="flame-outline"
+          text={t('hidden.streak', { count: run.streak })}
+          label={t('hidden.streakA11y', { count: run.streak })}
+          tone={run.streak > 1 ? 'good' : 'plain'}
+        />
+        <TimerStat seconds={left} relaxed={g.relaxed} />
+      </StatusRow>
+      <ScrollView contentContainerStyle={[column, styles.body]} showsVerticalScrollIndicator={false}>
+        <Animated.View key={step.id} entering={FadeIn.duration(180)} style={{ gap: 20 }}>
+          <ClueCard label={t('hidden.clue')} text={step.clue} />
+          <Animated.View style={[styles.word, ltrRow(), shakeStyle]}>
+            {step.tiles.map((_, k) => {
+              const ch = letterAt(k);
+              const isOpen = open.includes(k);
+              return (
+                <LetterTile
+                  key={k}
+                  size={size}
+                  state={stateOf(k)}
+                  letter={ch ?? undefined}
+                  onPress={
+                    isOpen && filled[k] && !answered
+                      ? () => setFilled(Object.fromEntries(Object.entries(filled).filter(([x]) => Number(x) !== k)))
+                      : undefined
+                  }
+                  label={
+                    ch ? (isOpen && !answered ? t('hidden.filledA11y', { letter: ch }) : ch) : t('hidden.blankA11y', { n: open.indexOf(k) + 1 })
+                  }
+                />
+              );
+            })}
+          </Animated.View>
         </Animated.View>
-        <View style={{ height: 40, alignItems: 'center', justifyContent: 'center' }}>
-          {outcome?.correct ? (
-            <PointsPop value={t('ui.points', { count: outcome.points })} />
-          ) : outcome ? (
-            <Text style={{ fontFamily: 'Manrope_700Bold', fontSize: 16, color: '#FF8FA6' }}>
-              {t('hidden.wrong', { word: outcome.word })}
-            </Text>
-          ) : null}
+
+        <View style={{ minHeight: 64 }}>
+          {outcome &&
+            (outcome.correct ? (
+              <Feedback tone="good" title={t('ui.correct')} detail={t('ui.points', { count: outcome.points })} />
+            ) : (
+              <Feedback tone="bad" title={t('ui.wrong')} detail={t('hidden.wrong', { word: outcome.word })} />
+            ))}
         </View>
 
-        <LinearGradient colors={['#B7A3FF', '#8F72F7']} style={styles.clue}>
-          <Text style={styles.clueText}>{step.clue}</Text>
-        </LinearGradient>
-
-        <View style={styles.choicesRow}>
-          <View style={styles.choices}>
-            {step.choices.map((ch) => (
-              <GlossyTile
-                key={ch}
-                letter={ch}
-                size={64}
-                onPress={() => place(ch)}
-                accessibilityLabel={t('hidden.letterA11y', { letter: ch })}
-              />
-            ))}
-          </View>
+        <View style={[styles.keys, ltrRow()]}>
+          {step.choices.map((ch) => (
+            <Key
+              key={ch}
+              label={ch}
+              width={keyW}
+              onPress={() => place(ch)}
+              disabled={answered || nextBlank === undefined}
+              accessibilityLabel={t('hidden.letterA11y', { letter: ch })}
+            />
+          ))}
         </View>
       </ScrollView>
 
       <SafeAreaView edges={['bottom']} style={styles.footer}>
-        <KoraBubble
-          text={outcome?.correct ? t('hidden.correct') : !outcome && open.length ? t('ui.hint') : undefined}
-          size={96}
-          style={styles.kora}
-        />
-        <View style={styles.actions}>
-          <SoftButton
-            icon="bulb"
-            onPress={hint}
-            disabled={answered || open.length === 0}
-            accessibilityLabel={t('ui.hintA11y', { cost: run.hintCost })}
-            trailing={
-              <View style={{ flexDirection: 'row', alignItems: 'center', gap: 4 }}>
-                <Text style={{ fontFamily: FONT, fontSize: 18, color: '#fff' }}>{run.hintCost}</Text>
-                <View style={styles.coin}>
-                  <Text style={{ fontFamily: FONT, fontSize: 10, color: '#7A4B00' }}>K</Text>
-                </View>
-              </View>
-            }
-          />
-          <GradientButton
-            title={t('ui.check')}
-            onPress={() => void submit()}
-            disabled={!full || answered}
-            busy={g.busy && !answered}
-            style={{ flex: 1 }}
-          />
-        </View>
+        {answered && !outcome?.correct ? (
+          <PrimaryButton title={done ? t('clash.results') : t('ui.next')} icon="arrow-forward" onPress={() => advance(done)} />
+        ) : (
+          <View style={styles.actions}>
+            <SecondaryButton
+              title={t('ui.hintCost', { cost: run.hintCost })}
+              icon="bulb-outline"
+              onPress={hint}
+              disabled={answered || open.length === 0}
+              accessibilityLabel={t('ui.hintA11y', { cost: run.hintCost })}
+              style={{ paddingHorizontal: 16 }}
+            />
+            <Key icon="backspace-outline" onPress={removeLast} width={56} height={52} accessibilityLabel={t('ui.delete')} disabled={answered} />
+            <PrimaryButton
+              title={t('ui.check')}
+              onPress={() => void submit()}
+              disabled={!full || answered}
+              busy={g.busy && !answered}
+              style={{ flex: 1 }}
+            />
+          </View>
+        )}
       </SafeAreaView>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  body: { padding: Spacing.md, gap: Spacing.md, maxWidth: 560, width: '100%', alignSelf: 'center', paddingBottom: 140 },
-  statusRow: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' },
-  streak: { width: 72, alignItems: 'center', gap: 2 },
-  word: { flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center', gap: 8 },
-  clue: { borderRadius: 24, paddingVertical: Spacing.lg, paddingHorizontal: Spacing.md, alignItems: 'center' },
-  clueText: { fontFamily: FONT, fontSize: 20, lineHeight: 28, color: '#1E145A', textAlign: 'center' },
-  choicesRow: { alignItems: 'flex-start' },
-  choices: { flexDirection: 'row', flexWrap: 'wrap', gap: 12, width: 4 * 64 + 3 * 12 },
-  footer: {
-    paddingHorizontal: Spacing.md,
-    paddingBottom: Spacing.sm,
-    maxWidth: 560,
-    width: '100%',
-    alignSelf: 'center',
-  },
-  kora: { position: 'absolute', right: Spacing.sm, bottom: 72 },
-  actions: { flexDirection: 'row', gap: Spacing.sm, alignItems: 'center' },
-  coin: {
-    width: 20,
-    height: 20,
-    borderRadius: 10,
-    backgroundColor: Colors.reward,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+  body: { padding: 16, gap: 16, paddingBottom: 32 },
+  word: { flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center', gap: 6, paddingVertical: 4 },
+  keys: { flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center', gap: 8 },
+  footer: { ...column, paddingHorizontal: 16, paddingTop: 10, paddingBottom: 12 },
+  actions: { flexDirection: 'row', gap: 8, alignItems: 'center' },
 });

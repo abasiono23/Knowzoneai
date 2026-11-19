@@ -1,6 +1,7 @@
 import * as Haptics from 'expo-haptics';
 import { router, type Href } from 'expo-router';
-import { useCallback, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
+import { Platform } from 'react-native';
 
 import { errorText } from '@/i18n/errors';
 import {
@@ -11,7 +12,6 @@ import {
   type GameOutcome,
   type GameRunPublic,
   type GameSummary,
-  type SpellcasterRun,
 } from '@/lib/api';
 import { useSession } from '@/lib/session';
 import { useWorld } from '@/lib/world/store';
@@ -24,43 +24,73 @@ export const ENGLISH_GAMES: EnglishGameId[] = [
   'spellcaster',
   'sentence-master',
 ];
-export const MAX_LEVEL = 5;
+/**
+ * The level ladder (the server's services/games/english.ts has the same): ten levels from Starter (CEFR A1)
+ * to Super hard. Levels up to OPEN_LEVELS are open to everyone; later ones open with a star on the level
+ * before. Names: t(`games:levels.names.<key>`).
+ */
+export const MAX_LEVEL = 10;
+export const OPEN_LEVELS = 4;
+export const LEVEL_KEYS = [
+  'starter',
+  'beginner',
+  'elementary',
+  'intermediate',
+  'upperIntermediate',
+  'advanced',
+  'proficient',
+  'expert',
+  'master',
+  'superHard',
+] as const;
+export type LevelKey = (typeof LEVEL_KEYS)[number];
+export const CEFR = ['A1', 'A1', 'A2', 'B1', 'B2', 'C1', 'C2', 'C2+', 'C2+', 'C2+'] as const;
+export const levelKey = (level: number): LevelKey => LEVEL_KEYS[Math.min(MAX_LEVEL, Math.max(1, level)) - 1]!;
 
-/** Art made with OpenAI (apps/server/scripts/world-art.ts, english-*). */
-export const COVERS: Record<EnglishGameId, number> = {
-  'hidden-letters': require('@/assets/images/world/english/cover-hidden-letters.webp'),
-  'word-clash': require('@/assets/images/world/english/cover-word-clash.webp'),
-  'word-hunter': require('@/assets/images/world/english/cover-word-hunter.webp'),
-  spellcaster: require('@/assets/images/world/english/cover-spellcaster.webp'),
-  'sentence-master': require('@/assets/images/world/english/cover-sentence-master.webp'),
-};
+/** Kora the owl, used by the lab games (the word games have no mascot). */
 export const KORA_IMAGE = require('@/assets/images/world/english/kora.webp');
-export const WIZARD_IMAGE = require('@/assets/images/world/english/wizard.webp');
-type Monster = SpellcasterRun['monster'];
-export const MONSTERS: Monster[] = ['slime', 'crystal', 'ember', 'frost', 'shadow'];
-export const MONSTER_IMAGES: Record<Monster, number> = {
-  slime: require('@/assets/images/world/english/monster-slime.webp'),
-  crystal: require('@/assets/images/world/english/monster-crystal.webp'),
-  ember: require('@/assets/images/world/english/monster-ember.webp'),
-  frost: require('@/assets/images/world/english/monster-frost.webp'),
-  shadow: require('@/assets/images/world/english/monster-shadow.webp'),
-};
-export const ARENA_IMAGES: Record<Monster, number> = {
-  slime: require('@/assets/images/world/english/arena-slime.webp'),
-  crystal: require('@/assets/images/world/english/arena-crystal.webp'),
-  ember: require('@/assets/images/world/english/arena-ember.webp'),
-  frost: require('@/assets/images/world/english/arena-frost.webp'),
-  shadow: require('@/assets/images/world/english/arena-shadow.webp'),
+
+/** Each game's accent: small marks only (cover, level badge), never a whole screen. */
+export const GAME_ACCENT: Record<EnglishGameId, string> = {
+  'hidden-letters': '#6A45FF',
+  'word-clash': '#C27C0E',
+  'word-hunter': '#0F8F7E',
+  spellcaster: '#1C7FC0',
+  'sentence-master': '#D2436A',
 };
 
-/** Each game's accent colours (cards, buttons). */
-export const GAME_COLORS: Record<EnglishGameId, readonly [string, string]> = {
-  'hidden-letters': ['#7C5CFF', '#B04CFF'],
-  'word-clash': ['#FF9F43', '#FFC857'],
-  'word-hunter': ['#2DD4BF', '#4CC9FF'],
-  spellcaster: ['#B04CFF', '#FF5A7A'],
-  'sentence-master': ['#FF5A7A', '#B04CFF'],
-};
+/** Whether the timer is off (relaxed mode): the world setting "Question timer", also in the pause menu. */
+export function useRelaxed() {
+  const { settings, updateSettings } = useWorld();
+  return { relaxed: !settings.timer, setRelaxed: (relaxed: boolean) => updateSettings({ timer: !relaxed }) };
+}
+
+/**
+ * Keys typed on a computer (the web app): letters, Enter, Backspace, Space and the arrows. Ignored while
+ * the focus is in a text field, and with Ctrl, Cmd or Alt held. Does nothing on phones.
+ */
+export function useKeys(onKey: (key: string) => void, enabled = true) {
+  const ref = useRef(onKey);
+  useEffect(() => {
+    ref.current = onKey;
+  });
+  useEffect(() => {
+    if (Platform.OS !== 'web' || !enabled || typeof window === 'undefined') return;
+    const listener = (e: KeyboardEvent) => {
+      if (e.ctrlKey || e.metaKey || e.altKey) return;
+      const target = e.target as HTMLElement | null;
+      if (target && (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA' || target.isContentEditable)) return;
+      const key = e.key.length === 1 ? e.key.toUpperCase() : e.key;
+      if (/^[A-Z0-9 ]$/.test(key) || ['Enter', 'Backspace', 'ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'Escape'].includes(key)) {
+        // Space and the arrows would scroll the page; Enter would press the focused button too.
+        if (key === ' ' || key.startsWith('Arrow') || key === 'Enter') e.preventDefault();
+        ref.current(key);
+      }
+    };
+    window.addEventListener('keydown', listener);
+    return () => window.removeEventListener('keydown', listener);
+  }, [enabled]);
+}
 
 export const gameHref = (game: EnglishGameId): Href => `/world/english/${game}` as Href;
 export const playHref = (game: EnglishGameId, level: number): Href =>

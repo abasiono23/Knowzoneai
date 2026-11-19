@@ -1,5 +1,6 @@
 import { createHash } from 'node:crypto';
 
+import * as HUNT_DATA from '../../data/english/hunts.js';
 import { HUNT_THEMES } from '../../data/english/hunts.js';
 import { SENTENCES, type GrammarTopic, type Sentence } from '../../data/english/sentences.js';
 import { VOCAB } from '../../data/english/vocab.js';
@@ -12,8 +13,45 @@ import { counts, fits, isWord, wordsFromRack } from './dictionary.js';
  */
 export const ENGLISH_GAMES = ['hidden-letters', 'word-clash', 'word-hunter', 'spellcaster', 'sentence-master'] as const;
 export type EnglishGame = (typeof ENGLISH_GAMES)[number];
-export const MAX_LEVEL = 5;
+/**
+ * The level ladder, from Starter (CEFR A1) to Super hard (rare academic and specialist words). Levels
+ * up to OPEN_LEVELS are open to everyone, so strong players needn't start on the easiest words; each
+ * level after that opens with a star on the one before. Progress from the old five-level ladder keeps
+ * its level number: those five levels ran from everyday words to advanced exam words, at or above the
+ * new levels 1–5, so nobody is credited past what they have shown.
+ */
+export const MAX_LEVEL = 10;
+export const OPEN_LEVELS = 4;
+export const LEVEL_KEYS = [
+  'starter',
+  'beginner',
+  'elementary',
+  'intermediate',
+  'upperIntermediate',
+  'advanced',
+  'proficient',
+  'expert',
+  'master',
+  'superHard',
+] as const;
+export const CEFR = ['A1', 'A1', 'A2', 'B1', 'B2', 'C1', 'C2', 'C2+', 'C2+', 'C2+'] as const;
+/** Whether a level can be played: open levels always, later ones once the level before has a star. */
+export const levelOpen = (level: number, starsOnLevelBefore: number) => level <= OPEN_LEVELS || starsOnLevelBefore > 0;
 export const HEARTS = 3;
+
+/**
+ * A level's content, or the nearest level's when that level has none yet (lower levels first), so the
+ * ladder works while its content grows.
+ */
+export function nearest<T>(content: Record<number, T>, level: number): T {
+  for (let d = 0; d < MAX_LEVEL; d++) {
+    const below = content[level - d];
+    if (below !== undefined) return below;
+    const above = content[level + d];
+    if (above !== undefined) return above;
+  }
+  throw new Error(`No content for level ${level}`);
+}
 
 // ─── Seeded randomness ────────────────────────────────────────────────────────
 
@@ -60,14 +98,16 @@ const lvl = (level: number) => Math.min(MAX_LEVEL, Math.max(1, level)) - 1;
 // ─── Hidden Letters ───────────────────────────────────────────────────────────
 
 const HL_WORDS = 8;
-const HL_BLANKS = [1, 2, 2, 3, 3];
-const HL_SECONDS = [40, 35, 30, 30, 25];
+const HL_BLANKS = [1, 1, 2, 2, 2, 3, 3, 3, 4, 4];
+const HL_SECONDS = [45, 40, 40, 35, 35, 35, 35, 30, 30, 30];
+/** Letters to choose from: more decoys higher up. */
+const HL_CHOICES = [8, 8, 8, 8, 8, 10, 10, 10, 12, 12];
 export const HL_HINT_COST = 15;
 
 type HiddenStep = { word: string; clue: string; blanks: number[]; choices: string[]; seconds: number };
 
 function buildHiddenLetters(level: number, r: Rand) {
-  const steps: HiddenStep[] = sample(r, VOCAB[level]!, HL_WORDS).map(({ word, clue }) => {
+  const steps: HiddenStep[] = sample(r, nearest(VOCAB, level), HL_WORDS).map(({ word, clue }) => {
     const positions = shuffle(
       r,
       word.split('').map((_, i) => i),
@@ -76,7 +116,7 @@ function buildHiddenLetters(level: number, r: Rand) {
       .sort((x, y) => x - y);
     const needed = [...new Set(positions.map((i) => word[i]!))];
     const extra: string[] = [];
-    while (needed.length + extra.length < 8) {
+    while (needed.length + extra.length < HL_CHOICES[lvl(level)]!) {
       const ch = randomLetter(r);
       if (!needed.includes(ch) && !extra.includes(ch)) extra.push(ch);
     }
@@ -88,8 +128,8 @@ function buildHiddenLetters(level: number, r: Rand) {
 // ─── Word Clash ───────────────────────────────────────────────────────────────
 
 const WC_ROUNDS = 5;
-const WC_SECONDS = [60, 55, 50, 45, 45];
-const WC_RARE_ROUNDS = [1, 1, 2, 2, 3];
+const WC_SECONDS = [75, 70, 65, 60, 55, 50, 50, 45, 45, 40];
+const WC_RARE_ROUNDS = [0, 1, 1, 1, 2, 2, 2, 3, 3, 3];
 /** Scrabble-style letter values; rare letters are gold tiles that count double. */
 export const LETTER_POINTS: Record<string, number> = {
   A: 1,
@@ -144,7 +184,7 @@ export const RARE_SEEDS = [
   'SQUARE',
   'KING',
 ];
-const BOT_SHARE = [0.35, 0.45, 0.55, 0.65, 0.72];
+const BOT_SHARE = [0.3, 0.36, 0.42, 0.5, 0.56, 0.62, 0.68, 0.74, 0.8, 0.86];
 
 export function clashPoints(word: string) {
   const letters = word.split('').map((ch) => ({ ch, points: LETTER_POINTS[ch]! * (RARE_LETTERS.includes(ch) ? 2 : 1) }));
@@ -152,19 +192,20 @@ export function clashPoints(word: string) {
   return { total: letters.reduce((s, l) => s + l.points, 0) + bonus, letters, bonus };
 }
 
-let commonSeeds: string[] | null = null;
-function seedWords() {
-  commonSeeds ??= [
-    ...new Set(
-      [
-        ...Object.values(VOCAB)
-          .flat()
-          .map((v) => v.word),
-        ...HUNT_THEMES.flatMap((t) => t.words),
-      ].filter((w) => w.length >= 5 && w.length <= 7),
-    ),
-  ];
-  return commonSeeds;
+const seedsByLevel = new Map<number, string[]>();
+/**
+ * Words a rack is built around: the level's own vocabulary (5–7 letters, in the dictionary), so racks
+ * get harder up the ladder; with too few, Word Hunter's theme words join in.
+ */
+function seedWords(level: number) {
+  let seeds = seedsByLevel.get(level);
+  if (!seeds) {
+    const fit = (w: string) => w.length >= 5 && w.length <= 7 && isWord(w);
+    seeds = [...new Set(nearest(VOCAB, level).map((v) => v.word).filter(fit))];
+    if (seeds.length < 12) seeds = [...new Set([...seeds, ...HUNT_THEMES.flatMap((t) => t.words).filter(fit)])];
+    seedsByLevel.set(level, seeds);
+  }
+  return seeds;
 }
 
 function makeRack(r: Rand, seed: string) {
@@ -190,7 +231,7 @@ export function bestWord(rack: string[]) {
 function buildWordClash(level: number, r: Rand) {
   const rareRounds = new Set(sample(r, [0, 1, 2, 3, 4], WC_RARE_ROUNDS[lvl(level)]!));
   const rounds = Array.from({ length: WC_ROUNDS }, (_, i) => {
-    const rack = makeRack(r, rareRounds.has(i) ? pick(r, RARE_SEEDS) : pick(r, seedWords()));
+    const rack = makeRack(r, rareRounds.has(i) ? pick(r, RARE_SEEDS) : pick(r, seedWords(level)));
     return { rack, seconds: WC_SECONDS[lvl(level)]!, best: bestWord(rack) };
   });
   return { kind: 'word-clash' as const, rounds };
@@ -204,9 +245,11 @@ export function botRounds(level: number, seed: string, best: number[]) {
 
 // ─── Word Hunter ──────────────────────────────────────────────────────────────
 
-const WH_SIZE = [6, 7, 8, 9, 10];
-const WH_WORDS = [5, 6, 6, 7, 8];
-const WH_SECONDS = [90, 100, 120, 135, 150];
+const WH_SIZE = [6, 7, 7, 8, 8, 9, 9, 10, 10, 11];
+const WH_WORDS = [5, 6, 6, 7, 7, 8, 8, 9, 9, 10];
+const WH_SECONDS = [120, 120, 130, 140, 150, 160, 170, 180, 190, 200];
+/** Which of DIRECTIONS each level uses: across and down first, every direction from level 7. */
+const WH_DIRECTIONS = [0, 1, 1, 2, 2, 3, 4, 4, 4, 4];
 const DIRECTIONS: [number, number][][] = [
   [
     [0, 1],
@@ -248,9 +291,9 @@ export type Cell = [number, number];
 
 function buildWordHunter(level: number, r: Rand) {
   const size = WH_SIZE[lvl(level)]!;
-  const dirs = DIRECTIONS[lvl(level)]!;
+  const dirs = DIRECTIONS[WH_DIRECTIONS[lvl(level)]!]!;
   for (let attempt = 0; ; attempt++) {
-    const theme = pick(r, HUNT_THEMES);
+    const theme = pick(r, huntThemes(level));
     const candidates = shuffle(
       r,
       theme.words.filter((w) => w.length <= size && w.length >= 3),
@@ -274,8 +317,15 @@ function buildWordHunter(level: number, r: Rand) {
     // Small themes can't always fill a big grid; try another theme (or accept after a few tries).
     if (placed.length < WH_WORDS[lvl(level)]! && attempt < 8) continue;
     const letters = grid.map((row) => row.map((ch) => ch ?? randomLetter(r)));
-    return { kind: 'word-hunter' as const, theme: theme.id, size, grid: letters, words: placed, seconds: WH_SECONDS[lvl(level)]! };
+    return { kind: 'word-hunter' as const, theme: theme.id, themeTitle: theme.title, size, grid: letters, words: placed, seconds: WH_SECONDS[lvl(level)]! };
   }
+}
+
+type HuntTheme = { id: string; title?: string; words: string[] };
+/** The level's own themes when the content has them (HUNTS), else the shared ones. */
+function huntThemes(level: number): HuntTheme[] {
+  const own = (HUNT_DATA as { HUNTS?: Record<number, HuntTheme[]> }).HUNTS;
+  return own && Object.keys(own).length ? nearest(own, level) : HUNT_THEMES;
 }
 
 /** The straight line of cells between two cells, or null if they aren't in a line. */
@@ -291,22 +341,22 @@ export function lineBetween(from: Cell, to: Cell): Cell[] | null {
 
 const SC_SPELLS = 9;
 const SC_TO_WIN = 6;
-const SC_EXTRA_STONES = [2, 3, 3, 4, 4];
-const SC_SECONDS = [30, 30, 30, 35, 40];
-/** Each level is a magical world with its own guardian (art and names live in the app). */
+const SC_EXTRA_STONES = [1, 2, 2, 3, 3, 3, 4, 4, 5, 5];
+const SC_SECONDS = [40, 40, 40, 40, 40, 40, 45, 45, 50, 50];
+/** Kept for app versions from before the redesign, which drew a guardian per level (one per two levels now). */
 export const SC_MONSTERS = ['slime', 'crystal', 'ember', 'frost', 'shadow'];
 
 export const spellDamage = (word: string, fast: boolean) => 15 + 2 * word.length + (fast ? 5 : 0);
 
 function buildSpellcaster(level: number, r: Rand) {
-  const pool = VOCAB[level]!.filter((v) => v.word.length <= 10);
+  const pool = nearest(VOCAB, level).filter((v) => v.word.length <= 12);
   const spells = sample(r, pool, SC_SPELLS).map(({ word, clue }) => {
     const extra = Array.from({ length: SC_EXTRA_STONES[lvl(level)]! }, () => randomLetter(r));
     return { word, clue, stones: shuffle(r, [...word.split(''), ...extra]), seconds: SC_SECONDS[lvl(level)]! };
   });
   // Six right spells (without speed bonuses) defeat the guardian.
   const hp = spells.slice(0, SC_TO_WIN).reduce((s, sp) => s + spellDamage(sp.word, false), 0);
-  return { kind: 'spellcaster' as const, monster: SC_MONSTERS[lvl(level)]!, hp, spells };
+  return { kind: 'spellcaster' as const, monster: SC_MONSTERS[Math.floor(lvl(level) / 2)]!, hp, spells };
 }
 
 // ─── Sentence Master ──────────────────────────────────────────────────────────
@@ -315,7 +365,7 @@ const SM_SENTENCES = 8;
 export const SM_HINT_COST = 10;
 
 function buildSentenceMaster(level: number, r: Rand) {
-  const { topic, sentences } = SENTENCES[level]!;
+  const { topic, sentences } = nearest(SENTENCES, level);
   const steps = sample(r, sentences, SM_SENTENCES).map((sentence) => ({ sentence, chips: shuffle(r, [...sentence.words, sentence.trap]) }));
   return { kind: 'sentence-master' as const, topic, steps };
 }
@@ -423,6 +473,7 @@ export function publicState({ puzzle: p, progress, opponent }: RunState) {
     case 'word-hunter':
       return {
         theme: p.theme,
+        ...(p.themeTitle && { themeTitle: p.themeTitle }),
         size: p.size,
         grid: p.grid,
         seconds: p.seconds,

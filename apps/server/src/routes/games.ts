@@ -13,6 +13,7 @@ import {
   HEARTS,
   HL_HINT_COST,
   isOver,
+  levelOpen,
   MAX_LEVEL,
   newProgress,
   publicState,
@@ -110,6 +111,12 @@ const DAY = 86_400_000;
 /** Games by subject. Game ids are unique across subjects. */
 const SUBJECTS = { english: ENGLISH_GAMES, chemistry: CHEMISTRY_GAMES, space: SPACE_GAMES, history: HISTORY_GAMES, tech: TECH_GAMES, business: BUSINESS_GAMES } as const;
 const Subject = z.enum(['english', 'chemistry', 'space', 'history', 'tech', 'business']);
+/** English has the ten-level ladder (services/games/english.ts); the lab subjects have five levels. */
+const LAB_LEVELS = 5;
+const maxLevel = (subject: string) => (subject === 'english' ? MAX_LEVEL : LAB_LEVELS);
+/** A level can be played once the one before has a star; English opens its first levels to everyone. */
+const unlocked = (subject: string, level: number, starsBefore: number) =>
+  subject === 'english' ? levelOpen(level, starsBefore) : level === 1 || starsBefore > 0;
 const Level = z.coerce.number().int().min(1).max(MAX_LEVEL);
 
 /** A lab state: the run's puzzle and progress (each lab has its own puzzle shape). */
@@ -243,17 +250,19 @@ async function rewardsToday(userId: string) {
 /** Each game's levels, best stars and what's unlocked (a level opens once the one before has a star). */
 gamesRouter.get('/me/games/:subject', async (req, res) => {
   const user = me(req);
-  const games = SUBJECTS[Subject.parse(req.params.subject)];
+  const subject = Subject.parse(req.params.subject);
+  const games = SUBJECTS[subject];
   const progress = await prisma.gameProgress.findMany({ where: { userId: user.id, game: { in: [...games] } } });
   const best = (game: string, level: number) => progress.find((p) => p.game === game && p.level === level);
   res.json({
     games: games.map((game) => ({
       id: game,
-      levels: Array.from({ length: MAX_LEVEL }, (_, i) => {
+      levels: Array.from({ length: maxLevel(subject) }, (_, i) => {
         const p = best(game, i + 1);
         return {
           level: i + 1,
-          unlocked: i === 0 || (best(game, i)?.bestStars ?? 0) > 0,
+          // A level already won stays open (whatever happened to the one before).
+          unlocked: unlocked(subject, i + 1, best(game, i)?.bestStars ?? 0) || (p?.bestStars ?? 0) > 0,
           bestStars: p?.bestStars ?? 0,
           bestScore: p?.bestScore ?? 0,
           plays: p?.plays ?? 0,
@@ -281,7 +290,10 @@ function displayName(u: Pick<User, 'name' | 'photo' | 'settings'>) {
  * same racks (round by round, their score is revealed after yours). If there isn't one, or the
  * learner can't play other players right now, it's a practice rival, and the app says so.
  */
-async function clashOpponent(user: User, level: number): Promise<{ seed: string; opponent: Opponent | null }> {
+async function clashOpponent(
+  user: User,
+  level: number,
+): Promise<{ seed: string; opponent: Opponent | null; puzzle?: RunState['puzzle'] }> {
   const restricted = restrictionOf(user)?.limits?.includes('battles');
   if (!restricted) {
     const played = (await prisma.gameRun.findMany({ where: { userId: user.id, game: 'word-clash' }, select: { seed: true } })).map((r) => r.seed);
@@ -301,9 +313,14 @@ async function clashOpponent(user: User, level: number): Promise<{ seed: string;
     });
     if (candidates.length) {
       const c = candidates[Math.floor(Math.random() * candidates.length)]!;
-      const results = stateOf(c).progress.results;
-      const rounds = Array.from({ length: 5 }, (_, i) => results[i]?.points ?? 0);
-      return { seed: c.seed, opponent: { kind: 'player', runId: c.id, ...displayName(c.user), rounds } };
+      const { progress, puzzle } = stateOf(c);
+      const rounds = Array.from({ length: 5 }, (_, i) => progress.results[i]?.points ?? 0);
+      // The very racks they played (the content behind a seed can change between releases).
+      return {
+        seed: c.seed,
+        opponent: { kind: 'player', runId: c.id, ...displayName(c.user), rounds },
+        ...(puzzle?.kind === 'word-clash' && puzzle.rounds.length === 5 && { puzzle }),
+      };
     }
   }
   return { seed: randomBytes(8).toString('hex'), opponent: null };
@@ -313,10 +330,12 @@ gamesRouter.post('/me/games/:subject/:game/runs', async (req, res) => {
   const user = me(req);
   const subject = Subject.parse(req.params.subject);
   const game = z.enum(SUBJECTS[subject] as unknown as [string, ...string[]]).parse(req.params.game);
-  const { level } = z.object({ level: Level }).parse(req.body);
+  const { level } = z.object({ level: Level.max(maxLevel(subject)) }).parse(req.body);
   if (level > 1) {
     const prev = await prisma.gameProgress.findUnique({ where: { userId_game_level: { userId: user.id, game, level: level - 1 } } });
-    if (!prev?.bestStars) throw new AppError(403, 'Win at least one star on the level before to unlock this one.', 'locked');
+    const own = await prisma.gameProgress.findUnique({ where: { userId_game_level: { userId: user.id, game, level } } });
+    if (!unlocked(subject, level, prev?.bestStars ?? 0) && !own?.bestStars)
+      throw new AppError(403, 'Win at least one star on the level before to unlock this one.', 'locked');
   }
   // One game at a time: an unfinished earlier run of this game is dropped.
   await prisma.gameRun.updateMany({ where: { userId: user.id, game, status: 'playing' }, data: { status: 'abandoned' } });
@@ -334,12 +353,14 @@ gamesRouter.post('/me/games/:subject/:game/runs', async (req, res) => {
 
   let seed = randomBytes(8).toString('hex');
   let opponent: Opponent | undefined;
+  let theirs: RunState['puzzle'] | undefined;
   if (game === 'word-clash') {
     const picked = await clashOpponent(user, level);
     seed = picked.seed;
     opponent = picked.opponent ?? undefined;
+    theirs = picked.puzzle;
   }
-  const puzzle = buildPuzzle(game as EnglishGame, level, seed);
+  const puzzle = theirs ?? buildPuzzle(game as EnglishGame, level, seed);
   if (puzzle.kind === 'word-clash' && !opponent)
     opponent = {
       kind: 'bot',
@@ -628,7 +649,8 @@ gamesRouter.post('/me/games/runs/:id/finish', async (req, res) => {
       coins: run.coins,
       best: { stars: best?.bestStars ?? run.stars, score: best?.bestScore ?? run.score },
       newBest: run.score >= (best?.bestScore ?? 0),
-      nextLevelUnlocked: run.stars > 0 && run.level < MAX_LEVEL,
+      // The next level can be played (with a star here, or because it's one of English's open levels).
+      nextLevelUnlocked: run.level < maxLevel(subjectOf(run.game)) && unlocked(subjectOf(run.game), run.level + 1, run.stars),
       ...(opponent && {
         opponent: {
           kind: opponent.kind,

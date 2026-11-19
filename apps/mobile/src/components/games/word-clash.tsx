@@ -1,36 +1,32 @@
 import { Ionicons } from '@expo/vector-icons';
 import { Image } from 'expo-image';
-import { LinearGradient } from 'expo-linear-gradient';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Pressable, ScrollView, StyleSheet, useWindowDimensions, View } from 'react-native';
-import Animated, {
-  FadeInDown,
-  useAnimatedStyle,
-  useSharedValue,
-  withSequence,
-  withTiming,
-} from 'react-native-reanimated';
+import { ScrollView, StyleSheet, useWindowDimensions, View } from 'react-native';
+import Animated, { FadeIn, useAnimatedStyle, useSharedValue, withSequence, withTiming } from 'react-native-reanimated';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-import { Avatar } from '@/components/world/avatar';
 import { Text } from '@/components/ui';
-import { Colors, Radius, Spacing } from '@/constants/theme';
+import { Fonts } from '@/constants/theme';
 import type { ClashTile, GameOutcome, WordClashRun } from '@/lib/api';
+import { useKeys } from '@/lib/games/english';
 import { useSession } from '@/lib/session';
-import { useWorld } from '@/lib/world/store';
 
 import { GameShell, useGame, type Game } from './shell';
 import {
-  CoinPill,
+  column,
+  Feedback,
   FONT,
-  GlossyTile,
-  GradientButton,
-  HeartsRow,
-  KoraBubble,
-  PointsPop,
-  TopBar,
+  HeartsStat,
+  Key,
+  LetterTile,
+  ltrRow,
+  PrimaryButton,
+  Stat,
+  StatusRow,
+  TimerStat,
   useCountdown,
+  W,
 } from './ui';
 
 /** Word Clash: five rounds of making the best word from seven tiles, against another learner. */
@@ -75,33 +71,23 @@ function Board({ g, run }: { g: Game<WordClashRun>; run: WordClashRun }) {
     const o = res.outcome;
     if (o.retry) {
       g.buzz('error');
-      shake.set(
-        withSequence(
-          withTiming(-10, { duration: 50 }),
-          withTiming(10, { duration: 50 }),
-          withTiming(0, { duration: 50 }),
-        ),
-      );
+      shake.set(withSequence(withTiming(-8, { duration: 50 }), withTiming(8, { duration: 50 }), withTiming(0, { duration: 50 })));
       const typed = word.map((p) => p.tile.letter).join('');
       setMessage(
-        o.reason === 'too-short'
-          ? t('clash.tooShort')
-          : o.reason === 'letters'
-            ? t('clash.letters')
-            : t('clash.notAWord', { word: typed }),
+        o.reason === 'too-short' ? t('clash.tooShort') : o.reason === 'letters' ? t('clash.letters') : t('clash.notAWord', { word: typed }),
       );
       if (res.done) void g.finish();
       return;
     }
     g.buzz(o.correct ? 'success' : 'tap');
     setOutcome(o);
-    setMessage(t('clash.theyScored', { name: opponentName, count: o.opponentPoints ?? 0 }));
+    setMessage(null);
     if (res.done && run.hearts <= 0) void g.finish();
   };
 
   const left = useCountdown(
     round.seconds,
-    !roundOver && !g.paused && run.status === 'playing',
+    !g.relaxed && !roundOver && !g.paused && run.status === 'playing',
     () => void play(true),
     i,
   );
@@ -127,10 +113,35 @@ function Board({ g, run }: { g: Game<WordClashRun>; run: WordClashRun }) {
     setMessage(null);
     setWord([...word, { tile: round.rack[k]!, from: k }]);
   };
-  const shuffle = () => setOrder([...order].sort(() => Math.random() - 0.5));
+  const shuffle = () => {
+    const next = [...order];
+    for (let a = next.length - 1; a > 0; a--) {
+      const b = Math.floor(Math.random() * (a + 1));
+      [next[a], next[b]] = [next[b]!, next[a]!];
+    }
+    setOrder(next);
+  };
 
-  const avail = Math.min(width, 560) - Spacing.md * 2;
-  const rackSize = Math.min(58, Math.floor((avail - 6 * 8) / 7));
+  useKeys(
+    (key) => {
+      if (roundOver) {
+        if (key === 'Enter') next();
+        return;
+      }
+      if (key === 'Enter') {
+        if (word.length >= 3) void play();
+      } else if (key === 'Backspace') setWord(word.slice(0, -1));
+      else if (key === ' ') shuffle();
+      else {
+        const k = order.find((x) => !used.has(x) && round.rack[x]!.letter === key);
+        if (k !== undefined) tap(k);
+      }
+    },
+    !g.paused,
+  );
+
+  const avail = Math.min(width, 520) - 32;
+  const keyW = Math.min(64, Math.floor((avail - 6 * 6) / 7));
   // After a word is played, the board shows the server's scoring (rare letters count double).
   const boardTiles =
     outcome?.correct && outcome.letters
@@ -139,87 +150,76 @@ function Board({ g, run }: { g: Game<WordClashRun>; run: WordClashRun }) {
           return { letter: l.ch, points: rare ? l.points / 2 : l.points, rare };
         })
       : word.map((p) => p.tile);
-  const boardSize = Math.min(
-    78,
-    Math.floor((avail - 32 - (Math.max(boardTiles.length, 4) - 1) * 8) / Math.max(boardTiles.length, 4)),
-  );
+  const slot = Math.min(56, Math.floor((avail - 6 * 6) / 7));
+  const typed = word.map((p) => p.tile.letter).join('');
 
   return (
     <View style={{ flex: 1 }}>
-      <TopBar
-        onPause={() => g.setPaused(true)}
-        pauseColor="#FF4D6D"
-        center={<HeartsRow left={run.hearts} size={26} />}
-        right={<CoinPill />}
-      />
-      <ScrollView contentContainerStyle={styles.body} showsVerticalScrollIndicator={false}>
-        <View style={styles.versus}>
+      <StatusRow>
+        <Stat text={t('clash.round', { n: Math.min(i + 1, run.rounds.length), total: run.rounds.length })} />
+        <HeartsStat left={run.hearts} />
+        <TimerStat seconds={left} relaxed={g.relaxed} />
+      </StatusRow>
+      <ScrollView contentContainerStyle={[column, styles.body]} showsVerticalScrollIndicator={false}>
+        <View style={styles.score} accessible accessibilityLabel={t('results.versus', { you: run.score, them: theirTotal, name: opponentName })}>
           <Player name={t('clash.you')} score={run.score} me />
-          <View style={{ alignItems: 'center', gap: 6, flex: 1 }}>
-            <Text style={styles.vs}>{t('clash.vs')}</Text>
-            <Text style={styles.round}>
-              {t('clash.round', { n: Math.min(i + 1, run.rounds.length), total: run.rounds.length })}
-            </Text>
-            <View style={styles.timerTrack}>
-              <LinearGradient
-                colors={left <= 10 ? ['#FF5A7A', '#FF9F43'] : ['#14C8B4', '#4CC9FF']}
-                start={{ x: 0, y: 0 }}
-                end={{ x: 1, y: 0 }}
-                style={{ height: '100%', width: `${(left / round.seconds) * 100}%`, borderRadius: 999 }}
-              />
-            </View>
-          </View>
-          <Player
-            name={opponentName}
-            score={theirTotal}
-            photo={run.opponent?.photo}
-            bot={run.opponent?.kind === 'bot'}
-          />
+          <Text style={styles.dash}>–</Text>
+          <Player name={opponentName} score={theirTotal} photo={run.opponent?.photo} bot={run.opponent?.kind === 'bot'} />
         </View>
+        {run.opponent?.kind === 'bot' && i === 0 && !word.length && !outcome && (
+          <Text style={styles.note}>{t('clash.koraRival')}</Text>
+        )}
 
-        <View style={styles.boardPanel}>
-          <Animated.View style={[styles.boardRow, shakeStyle]}>
-            {boardTiles.length ? (
-              boardTiles.map((tile, k) => (
-                <Animated.View key={`${k}-${tile.letter}`} entering={FadeInDown.duration(160)}>
-                  <GlossyTile
-                    letter={tile.letter}
-                    points={tile.points}
-                    tone={outcome && !outcome.correct ? 'dim' : 'gold'}
-                    size={boardSize}
-                    badge={tile.rare ? t('clash.rare') : undefined}
-                    onPress={!roundOver ? () => setWord(word.filter((_, j) => j !== k)) : undefined}
-                    accessibilityLabel={t('clash.tileA11y', { letter: tile.letter, points: tile.points })}
-                  />
-                </Animated.View>
-              ))
-            ) : (
-              <Text style={styles.placeholder}>{roundOver ? t('clash.noWord') : t('clash.kora')}</Text>
-            )}
-          </Animated.View>
-          <View style={{ height: 46, alignItems: 'center', justifyContent: 'center' }}>
-            {outcome?.correct && <PointsPop value={t('ui.points', { count: outcome.points })} size={38} />}
-          </View>
-          {roundOver && outcome?.best?.word && (
-            <Text color={Colors.textSecondary} center>
-              {t('clash.best', { word: outcome.best.word, points: outcome.best.points })}
-            </Text>
+        <Animated.View style={[styles.board, ltrRow(), shakeStyle]} accessibilityLabel={typed || t('clash.kora')}>
+          {Array.from({ length: Math.max(7, boardTiles.length) }, (_, k) => {
+            const tile = boardTiles[k];
+            if (!tile) return <LetterTile key={k} size={slot} state="empty" />;
+            return (
+              <Animated.View key={`${k}-${tile.letter}`} entering={FadeIn.duration(120)}>
+                <LetterTile
+                  letter={tile.letter}
+                  points={tile.points}
+                  size={slot}
+                  state={outcome?.correct ? 'correct' : tile.rare ? 'rare' : 'filled'}
+                  onPress={!roundOver ? () => setWord(word.filter((_, j) => j !== k)) : undefined}
+                  label={t('clash.tileA11y', { letter: tile.letter, points: tile.points })}
+                />
+              </Animated.View>
+            );
+          })}
+        </Animated.View>
+        {!word.length && !roundOver && <Text style={styles.note}>{t('clash.kora')}</Text>}
+
+        <View style={{ minHeight: 64, gap: 8 }}>
+          {message && <Feedback tone="bad" title={t('ui.wrong')} detail={message} />}
+          {roundOver && outcome && (
+            <Feedback
+              tone={outcome.correct ? 'good' : 'info'}
+              title={outcome.correct ? t('ui.points', { count: outcome.points }) : t('clash.noWord')}
+              detail={[
+                t('clash.theyScored', { name: opponentName, count: outcome.opponentPoints ?? 0 }),
+                outcome.best?.word ? t('clash.best', { word: outcome.best.word, points: outcome.best.points }) : null,
+              ]
+                .filter(Boolean)
+                .join(' · ')}
+            />
           )}
         </View>
 
-        <View style={styles.rack}>
+        <View style={[styles.rack, ltrRow()]}>
           {order.map((k) => {
             const tile = round.rack[k]!;
             return (
-              <GlossyTile
+              <Key
                 key={k}
-                letter={tile.letter}
-                points={tile.points}
-                tone={used.has(k) || roundOver ? 'dim' : 'gold'}
-                size={rackSize}
-                badge={tile.rare && !used.has(k) ? t('clash.rare') : undefined}
+                label={tile.letter}
+                sub={String(tile.points)}
+                tone={tile.rare ? 'rare' : 'plain'}
+                width={keyW}
+                height={keyW + 4}
+                disabled={used.has(k) || roundOver}
                 onPress={() => tap(k)}
-                accessibilityLabel={t('clash.tileA11y', { letter: tile.letter, points: tile.points })}
+                accessibilityLabel={t('clash.tileA11y', { letter: tile.letter, points: tile.points }) + (tile.rare ? `, ${t('clash.rareA11y')}` : '')}
               />
             );
           })}
@@ -227,147 +227,70 @@ function Board({ g, run }: { g: Game<WordClashRun>; run: WordClashRun }) {
       </ScrollView>
 
       <SafeAreaView edges={['bottom']} style={styles.footer}>
-        <KoraBubble
-          text={message ?? (run.opponent?.kind === 'bot' && i === 0 && !word.length ? t('clash.koraRival') : undefined)}
-          size={96}
-          side="right"
-          style={styles.kora}
-        />
-        <View style={styles.actions}>
-          {!roundOver && (
-            <Pressable
-              onPress={shuffle}
-              accessibilityRole="button"
-              accessibilityLabel={t('clash.shuffle')}
-              style={({ pressed }) => [styles.shuffle, pressed && { transform: [{ rotate: '-30deg' }] }]}>
-              <Ionicons name="refresh" size={28} color="#fff" />
-            </Pressable>
-          )}
-          {roundOver ? (
-            <GradientButton
-              title={last ? t('clash.results') : t('clash.nextRound')}
-              icon="arrow-forward"
-              onPress={next}
-              busy={g.busy}
-              style={{ flex: 1 }}
-            />
-          ) : (
-            <GradientButton
-              title={t('clash.playWord')}
-              onPress={() => void play()}
-              disabled={word.length < 3}
-              busy={g.busy}
-              colors={['#B04CFF', '#7C5CFF']}
-              style={{ flex: 1 }}
-            />
-          )}
-        </View>
+        {roundOver ? (
+          <PrimaryButton title={last ? t('clash.results') : t('clash.nextRound')} icon="arrow-forward" onPress={next} busy={g.busy} />
+        ) : (
+          <View style={styles.actions}>
+            <Key icon="shuffle" onPress={shuffle} width={56} height={52} accessibilityLabel={t('clash.shuffle')} />
+            <Key icon="backspace-outline" onPress={() => setWord(word.slice(0, -1))} width={56} height={52} accessibilityLabel={t('ui.delete')} disabled={!word.length} />
+            <PrimaryButton title={t('clash.playWord')} onPress={() => void play()} disabled={word.length < 3} busy={g.busy} style={{ flex: 1 }} />
+          </View>
+        )}
       </SafeAreaView>
     </View>
   );
 }
 
-function Player({
-  name,
-  score,
-  me,
-  photo,
-  bot,
-}: {
-  name: string;
-  score: number;
-  me?: boolean;
-  photo?: string;
-  bot?: boolean;
-}) {
-  const { avatar } = useWorld();
+function Player({ name, score, me, photo, bot }: { name: string; score: number; me?: boolean; photo?: string; bot?: boolean }) {
   const { user } = useSession();
   const myPhoto = user?.photo?.kind === 'photo' ? user.photo.uri : undefined;
+  const pic = me ? myPhoto : photo;
   return (
-    <View style={{ alignItems: 'center', gap: 4, width: 104 }}>
-      <LinearGradient colors={me ? ['#B04CFF', '#7C5CFF'] : ['#4CC9FF', '#2563EB']} style={styles.avatarRing}>
-        <View style={styles.avatarInner}>
-          {me && avatar ? (
-            <Avatar config={avatar} size={84} />
-          ) : me && myPhoto ? (
-            <Image source={{ uri: myPhoto }} style={{ width: 84, height: 84 }} />
-          ) : photo ? (
-            <Image source={{ uri: photo }} style={{ width: 84, height: 84 }} />
-          ) : bot ? (
-            <Ionicons name="hardware-chip" size={42} color="#fff" />
-          ) : (
-            <Text style={{ fontFamily: FONT, fontSize: 32, color: '#fff' }}>
-              {(me ? user?.name : name)?.[0]?.toUpperCase() ?? '?'}
-            </Text>
-          )}
-        </View>
-      </LinearGradient>
-      <Text
-        numberOfLines={2}
-        style={{ fontFamily: FONT, fontSize: name.length > 10 ? 14 : 18, color: '#fff', textAlign: 'center' }}>
-        {name}
-      </Text>
-      <Text style={{ fontFamily: FONT, fontSize: 22, color: 'rgba(235,232,255,0.85)' }}>{score}</Text>
+    <View style={[styles.player, !me && { flexDirection: 'row-reverse' }]}>
+      <View style={styles.avatar}>
+        {pic ? (
+          <Image source={{ uri: pic }} style={{ width: 36, height: 36 }} accessible={false} />
+        ) : bot ? (
+          <Ionicons name="hardware-chip-outline" size={18} color={W.ink} />
+        ) : (
+          <Text style={{ fontFamily: FONT, fontSize: 15, color: W.ink }}>{(me ? user?.name : name)?.[0]?.toUpperCase() ?? '?'}</Text>
+        )}
+      </View>
+      <View style={{ flexShrink: 1, alignItems: me ? 'flex-start' : 'flex-end' }}>
+        <Text numberOfLines={1} style={{ fontFamily: Fonts.semibold, fontSize: 13, color: W.muted }}>
+          {name}
+        </Text>
+        <Text style={{ fontFamily: FONT, fontSize: 24, color: W.ink, fontVariant: ['tabular-nums'] }}>{score}</Text>
+      </View>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  body: { padding: Spacing.md, gap: Spacing.md, maxWidth: 560, width: '100%', alignSelf: 'center', paddingBottom: 150 },
-  versus: { flexDirection: 'row', alignItems: 'center' },
-  vs: { fontFamily: FONT, fontSize: 48, color: '#FFC857', textShadowColor: '#FF9F43', textShadowRadius: 12 },
-  round: { fontFamily: FONT, fontSize: 14, color: '#6FA8FF', letterSpacing: 0.5 },
-  timerTrack: {
-    width: '100%',
-    height: 12,
-    borderRadius: 999,
-    backgroundColor: 'rgba(10,8,40,0.6)',
-    overflow: 'hidden',
-  },
-  avatarRing: { width: 96, height: 96, borderRadius: 48, padding: 4 },
-  avatarInner: {
-    flex: 1,
-    borderRadius: 44,
-    overflow: 'hidden',
-    backgroundColor: '#2A1E8A',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  boardPanel: {
-    minHeight: 200,
-    borderRadius: Radius.xl,
-    padding: Spacing.md,
-    justifyContent: 'center',
-    gap: Spacing.xs,
-    backgroundColor: 'rgba(16,12,60,0.55)',
-    borderWidth: 1,
-    borderColor: 'rgba(160,140,255,0.18)',
-  },
-  boardRow: {
+  body: { padding: 16, gap: 16, paddingBottom: 32 },
+  score: {
     flexDirection: 'row',
-    justifyContent: 'center',
-    gap: 8,
-    flexWrap: 'wrap',
-    minHeight: 90,
     alignItems: 'center',
+    padding: 14,
+    borderRadius: 14,
+    backgroundColor: W.surface,
+    borderWidth: 1,
+    borderColor: W.line,
   },
-  placeholder: { fontFamily: 'Manrope_700Bold', fontSize: 16, color: 'rgba(235,232,255,0.6)', textAlign: 'center' },
-  rack: { flexDirection: 'row', justifyContent: 'center', gap: 8 },
-  footer: {
-    paddingHorizontal: Spacing.md,
-    paddingBottom: Spacing.sm,
-    maxWidth: 560,
-    width: '100%',
-    alignSelf: 'center',
-  },
-  kora: { position: 'absolute', right: Spacing.sm, bottom: 72 },
-  actions: { flexDirection: 'row', gap: Spacing.sm, alignItems: 'center', paddingRight: 0 },
-  shuffle: {
-    width: 60,
-    height: 60,
-    borderRadius: 30,
-    backgroundColor: '#5B3FE0',
+  player: { flex: 1, flexDirection: 'row', alignItems: 'center', gap: 10 },
+  avatar: {
+    width: 36,
+    height: 36,
+    borderRadius: 18,
+    overflow: 'hidden',
+    backgroundColor: W.key,
     alignItems: 'center',
     justifyContent: 'center',
   },
+  dash: { fontFamily: FONT, fontSize: 20, color: W.lineStrong, paddingHorizontal: 8 },
+  note: { fontFamily: Fonts.regular, fontSize: 14, lineHeight: 20, color: W.inkSoft, textAlign: 'center' },
+  board: { flexDirection: 'row', justifyContent: 'center', flexWrap: 'wrap', gap: 6, paddingVertical: 6 },
+  rack: { flexDirection: 'row', justifyContent: 'center', gap: 6, flexWrap: 'wrap' },
+  footer: { ...column, paddingHorizontal: 16, paddingTop: 10, paddingBottom: 12 },
+  actions: { flexDirection: 'row', gap: 8, alignItems: 'center' },
 });

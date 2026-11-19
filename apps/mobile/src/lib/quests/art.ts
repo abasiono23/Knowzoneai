@@ -1,7 +1,6 @@
 import type { Href } from 'expo-router';
 
 import type { QuestItem, QuestPlace } from '@/lib/api';
-import { COVERS } from '@/lib/games/english';
 import { MUSEUM_SCENES } from '@/lib/games/history';
 import { SCENES } from '@/lib/games/lab';
 import { SPACE_SCENES } from '@/lib/games/space';
@@ -26,7 +25,8 @@ export const PLACE_ICON: Record<QuestPlace, { src: number; aspect: number }> = {
 export function questPicture(q: Pick<QuestItem, 'place' | 'game'>): number {
   switch (q.place) {
     case 'english':
-      return COVERS[(q.game ?? 'word-clash') as keyof typeof COVERS] ?? COVERS['word-clash'];
+      // The word games' covers are drawn in code; quests show the island's picture.
+      return PLACE_ICON.english.src;
     case 'chemistry':
       return SCENES.hall;
     case 'space':

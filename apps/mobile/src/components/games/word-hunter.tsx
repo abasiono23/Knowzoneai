@@ -1,32 +1,22 @@
 import { Ionicons } from '@expo/vector-icons';
-import { LinearGradient } from 'expo-linear-gradient';
 import { useRef, useState, type ComponentRef } from 'react';
 import { useTranslation } from 'react-i18next';
-import { ScrollView, StyleSheet, useWindowDimensions, View, type GestureResponderEvent } from 'react-native';
-import Animated, { ZoomIn } from 'react-native-reanimated';
+import { Platform, ScrollView, StyleSheet, useWindowDimensions, View, type GestureResponderEvent } from 'react-native';
+import Animated, { FadeIn } from 'react-native-reanimated';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { Text } from '@/components/ui';
-import { Spacing } from '@/constants/theme';
+import { Fonts } from '@/constants/theme';
 import type { GridCell, WordHunterRun } from '@/lib/api';
-import { clock } from '@/lib/games/english';
+import { useKeys } from '@/lib/games/english';
 
 import { GameShell, useGame, type Game } from './shell';
-import { FONT, KoraBubble, TopBar, useCountdown } from './ui';
+import { column, Feedback, FONT, ltrRow, PrimaryButton, Stat, StatusRow, TimerStat, useCountdown, W } from './ui';
 
-/** Highlight colours for found words, in the order they're found. */
-const MARKS = [
-  ['#2DD4BF', '#14B8A6'],
-  ['#E040FB', '#B04CFF'],
-  ['#FFC857', '#FF9F43'],
-  ['#4CC9FF', '#2563EB'],
-  ['#FF7A93', '#FF4D6D'],
-  ['#9B82FF', '#6A45FF'],
-  ['#7CEBDD', '#2DD4BF'],
-  ['#FFDE99', '#FFB627'],
-] as const;
+/** Marks for found words, in the order they're found: soft and see-through, so the letters stay readable. */
+const MARKS = ['rgba(14,140,121,0.28)', 'rgba(106,69,255,0.24)', 'rgba(194,124,14,0.28)', 'rgba(28,127,192,0.26)', 'rgba(210,67,106,0.24)'];
 
-/** Word Hunter: drag across the grid to find every word before the clock runs out. */
+/** Word Hunter: find every listed word in the grid, by dragging across it or tapping its two ends. */
 export function WordHunter({ level }: { level: number }) {
   const g = useGame<WordHunterRun>('word-hunter', level);
   return (
@@ -36,27 +26,28 @@ export function WordHunter({ level }: { level: number }) {
   );
 }
 
+/** Which way words may run at each level (games:hunter.directions.<n>). */
+const DIRECTION_NOTE = ['1', '2', '2', '3', '3', '4', '5', '5', '5', '5'] as const;
+
 function Board({ g, run }: { g: Game<WordHunterRun>; run: WordHunterRun }) {
   const { t } = useTranslation('games');
   const { width } = useWindowDimensions();
   const [drag, setDrag] = useState<{ from: GridCell; to: GridCell } | null>(null);
-  const [lastFound, setLastFound] = useState<string | null>(null);
-  const [miss, setMiss] = useState(false);
+  /** The first end chosen by a tap (or Enter), waiting for the second. */
+  const [anchor, setAnchor] = useState<GridCell | null>(null);
+  const [cursor, setCursor] = useState<GridCell>([0, 0]);
+  const [note, setNote] = useState<{ tone: 'good' | 'bad'; text: string } | null>(null);
   const gridRef = useRef<ComponentRef<typeof View>>(null);
   const origin = useRef({ x: 0, y: 0 });
   const done = run.found.length === run.words.length;
 
-  const left = useCountdown(
-    run.seconds,
-    !done && !g.paused && run.status === 'playing',
-    () => void g.finish(0),
-    run.id,
-  );
+  const left = useCountdown(run.seconds, !g.relaxed && !done && !g.paused && run.status === 'playing', () => void g.finish(0), run.id);
 
-  const pad = 10;
-  const gap = 6;
-  const panel = Math.min(width, 520) - Spacing.md * 2;
-  const cell = Math.floor((panel - pad * 2 - gap * (run.size - 1)) / run.size);
+  const pad = 8;
+  const gap = 4;
+  // Cells fill the column on phones, up to 52 points on wide screens.
+  const cell = Math.min(52, Math.floor((Math.min(width, 520) - 32 - pad * 2 - gap * (run.size - 1)) / run.size));
+  const panel = cell * run.size + gap * (run.size - 1) + pad * 2;
   const step = cell + gap;
 
   const cellAt = (page: { x: number; y: number }): GridCell => {
@@ -82,41 +73,61 @@ function Board({ g, run }: { g: Game<WordHunterRun>; run: WordHunterRun }) {
     }
     return from;
   };
+  const same = (a: GridCell, b: GridCell) => a[0] === b[0] && a[1] === b[1];
 
   const submit = async (from: GridCell, to: GridCell) => {
-    if (from[0] === to[0] && from[1] === to[1]) return;
+    if (same(from, to)) return;
     const res = await g.answer({ from, to });
     if (!res) return;
     if (res.outcome.correct) {
       g.buzz('success');
-      setLastFound(res.outcome.word ?? null);
-      setMiss(false);
-      if (res.done) void g.finish(left);
+      setNote({ tone: 'good', text: t('hunter.foundWord', { word: res.outcome.word }) });
+      if (res.done) void g.finish(g.relaxed ? 0 : left);
     } else {
       g.buzz('error');
-      setMiss(true);
+      setNote({ tone: 'bad', text: t('hunter.kora') });
     }
   };
 
-  // Touch handling with React Native's responder props (works the same on phones and the web).
-  // The grid's position is measured when a drag starts (it scrolls); until that answer arrives,
-  // moves are only remembered, and a very quick drag is completed once it does.
+  /** A tap (or Enter): the first one marks a start, the second the end of a word. */
+  const choose = (c: GridCell) => {
+    if (done) return;
+    if (!anchor) {
+      g.buzz('tap');
+      setAnchor(c);
+      setNote(null);
+      return;
+    }
+    const a = anchor;
+    setAnchor(null);
+    if (same(a, c)) return;
+    void submit(a, snap(a, c));
+  };
+
+  // Dragging with React Native's responder props (the same on phones and the web). The grid's place is
+  // measured when a drag starts (the page scrolls); a very quick drag is finished once that answer arrives.
   const touch = useRef({ start: { x: 0, y: 0 }, last: { x: 0, y: 0 }, measuring: false, released: false });
   const current = () => {
     const from = cellAt(touch.current.start);
     return { from, to: snap(from, cellAt(touch.current.last)) };
   };
   const pageOf = (e: GestureResponderEvent) => ({ x: e.nativeEvent.pageX, y: e.nativeEvent.pageY });
+  const end = () => {
+    const d = current();
+    setDrag(null);
+    if (same(d.from, d.to)) choose(d.from);
+    else {
+      setAnchor(null);
+      void submit(d.from, d.to);
+    }
+  };
   const grant = (e: GestureResponderEvent) => {
     touch.current = { start: pageOf(e), last: pageOf(e), measuring: true, released: false };
     gridRef.current?.measureInWindow((x: number, y: number) => {
       origin.current = { x, y };
       touch.current.measuring = false;
-      const d = current();
-      if (touch.current.released) {
-        setDrag(null);
-        void submit(d.from, d.to);
-      } else setDrag(d);
+      if (touch.current.released) end();
+      else setDrag(current());
     });
   };
   const move = (e: GestureResponderEvent) => {
@@ -128,17 +139,26 @@ function Board({ g, run }: { g: Game<WordHunterRun>; run: WordHunterRun }) {
       touch.current.released = true;
       return;
     }
-    const d = current();
-    setDrag(null);
-    void submit(d.from, d.to);
+    end();
   };
 
-  const capsule = (from: GridCell, to: GridCell, colors: readonly [string, string], key: string, live?: boolean) => {
+  useKeys(
+    (key) => {
+      const moves: Record<string, [number, number]> = { ArrowUp: [-1, 0], ArrowDown: [1, 0], ArrowLeft: [0, -1], ArrowRight: [0, 1] };
+      const m = moves[key];
+      if (m) setCursor(([r, c]) => [Math.max(0, Math.min(run.size - 1, r + m[0])), Math.max(0, Math.min(run.size - 1, c + m[1]))]);
+      else if (key === 'Enter' || key === ' ') choose(cursor);
+      else if (key === 'Escape') setAnchor(null);
+    },
+    !g.paused,
+  );
+
+  const capsule = (from: GridCell, to: GridCell, color: string, key: string, live?: boolean) => {
     const x1 = pad + from[1] * step + cell / 2;
     const y1 = pad + from[0] * step + cell / 2;
     const x2 = pad + to[1] * step + cell / 2;
     const y2 = pad + to[0] * step + cell / 2;
-    const length = Math.hypot(x2 - x1, y2 - y1) + cell * 0.92;
+    const length = Math.hypot(x2 - x1, y2 - y1) + cell * 0.86;
     const angle = (Math.atan2(y2 - y1, x2 - x1) * 180) / Math.PI;
     return (
       <View
@@ -147,53 +167,33 @@ function Board({ g, run }: { g: Game<WordHunterRun>; run: WordHunterRun }) {
         style={{
           position: 'absolute',
           left: (x1 + x2) / 2 - length / 2,
-          top: (y1 + y2) / 2 - cell * 0.44,
+          top: (y1 + y2) / 2 - cell * 0.43,
           width: length,
-          height: cell * 0.88,
+          height: cell * 0.86,
+          borderRadius: cell * 0.43,
+          backgroundColor: color,
+          borderWidth: live ? 2 : 0,
+          borderColor: W.focus,
           transform: [{ rotate: `${angle}deg` }],
-        }}>
-        <LinearGradient
-          colors={colors}
-          start={{ x: 0, y: 0 }}
-          end={{ x: 1, y: 0 }}
-          style={[styles.capsule, { borderRadius: cell * 0.44, opacity: live ? 0.55 : 0.6 }]}
-        />
-      </View>
+        }}
+      />
     );
   };
+  const themeName = t(`hunter.themes.${run.theme}`, { defaultValue: run.themeTitle ?? run.theme });
+  const keyboard = Platform.OS === 'web';
 
   return (
     <View style={{ flex: 1 }}>
-      <TopBar
-        onPause={() => g.setPaused(true)}
-        right={
-          <View style={styles.scorePill}>
-            <Ionicons name="flash" size={16} color="#fff" />
-            <Text style={{ fontFamily: FONT, fontSize: 16, color: '#fff' }}>{run.score}</Text>
-          </View>
-        }
-      />
-      <ScrollView contentContainerStyle={styles.body} scrollEnabled={!drag} showsVerticalScrollIndicator={false}>
-        <Text style={styles.title}>{t('hunter.title')}</Text>
-        <Text style={styles.theme}>
-          {t('hunter.theme', { theme: t(`hunter.themes.${run.theme}`, { defaultValue: run.theme }) })}
-        </Text>
-
-        <LinearGradient
-          colors={left <= 10 ? ['#FF4D6D', '#FF7A93'] : ['#FF9F43', '#E040FB']}
-          start={{ x: 0, y: 0 }}
-          end={{ x: 1, y: 0 }}
-          style={styles.timerBar}>
-          <View style={[styles.timerFill, { width: `${(1 - left / run.seconds) * 100}%` }]} />
-          <Text style={styles.timerText}>{clock(left)}</Text>
-          <Text style={styles.foundText}>
-            {t('hunter.found', { found: run.found.length, total: run.words.length })}
-          </Text>
-        </LinearGradient>
-
+      <StatusRow>
+        <Stat icon="pricetag-outline" text={themeName} label={t('hunter.theme', { theme: themeName })} />
+        <Stat text={t('hunter.found', { found: run.found.length, total: run.words.length })} />
+        <TimerStat seconds={left} relaxed={g.relaxed} />
+      </StatusRow>
+      <ScrollView contentContainerStyle={[column, styles.body]} scrollEnabled={!drag} showsVerticalScrollIndicator={false}>
+        <Text style={styles.hint}>{t(`hunter.directions.${DIRECTION_NOTE[Math.min(9, run.level - 1)]}`)}</Text>
         <View
           ref={gridRef}
-          style={[styles.panel, { width: panel }]}
+          style={[styles.panel, { width: panel, padding: pad, gap }]}
           onStartShouldSetResponder={() => true}
           onMoveShouldSetResponder={() => true}
           onResponderTerminationRequest={() => false}
@@ -202,111 +202,106 @@ function Board({ g, run }: { g: Game<WordHunterRun>; run: WordHunterRun }) {
           onResponderRelease={release}
           onResponderTerminate={() => setDrag(null)}>
           {run.grid.map((row, r) => (
-            <View key={r} style={{ flexDirection: 'row', gap }}>
-              {row.map((letter, c) => (
-                <View
-                  key={c}
-                  style={[styles.cell, { width: cell, height: cell, borderRadius: Math.round(cell * 0.24) }]}
-                  accessibilityLabel={t('hunter.cellA11y', { row: r + 1, col: c + 1, letter })}>
-                  <Text style={{ fontFamily: FONT, fontSize: cell * 0.48, color: '#fff' }}>{letter}</Text>
-                </View>
-              ))}
+            <View key={r} style={[ltrRow(), { gap }]}>
+              {row.map((letter, c) => {
+                const isAnchor = !!anchor && same(anchor, [r, c]);
+                const isCursor = keyboard && same(cursor, [r, c]);
+                return (
+                  <View
+                    key={c}
+                    accessible
+                    accessibilityRole="button"
+                    accessibilityLabel={t('hunter.cellA11y', { row: r + 1, col: c + 1, letter })}
+                    accessibilityState={{ selected: isAnchor }}
+                    accessibilityActions={[{ name: 'activate' }]}
+                    onAccessibilityAction={() => choose([r, c])}
+                    style={[
+                      styles.cell,
+                      { width: cell, height: cell, borderRadius: Math.round(cell * 0.18) },
+                      isAnchor && { backgroundColor: W.focus, borderColor: W.focus },
+                      isCursor && !isAnchor && { borderColor: W.focus, borderWidth: 2 },
+                    ]}>
+                    <Text
+                      allowFontScaling={false}
+                      style={{ fontFamily: FONT, fontSize: cell * 0.46, color: isAnchor ? '#fff' : W.ink }}>
+                      {letter}
+                    </Text>
+                  </View>
+                );
+              })}
             </View>
           ))}
-          {/* Found words (and the current drag) lie across the letters, see-through. */}
           {run.found.map((f, k) => capsule(f.cells[0]!, f.cells.at(-1)!, MARKS[k % MARKS.length]!, f.word))}
-          {drag && capsule(drag.from, drag.to, ['#9B82FF', '#7C5CFF'], 'drag', true)}
+          {drag && capsule(drag.from, drag.to, 'rgba(106,69,255,0.14)', 'drag', true)}
         </View>
-        {miss && <Text style={styles.miss}>{t('hunter.kora')}</Text>}
+        <View style={{ minHeight: 52 }}>
+          {anchor ? (
+            <Feedback tone="info" title={t('hunter.start', { letter: run.grid[anchor[0]]![anchor[1]] })} />
+          ) : done ? (
+            <Feedback tone="good" title={t('hunter.allFound')} />
+          ) : (
+            note && <Feedback tone={note.tone} title={note.text} />
+          )}
+        </View>
 
-        <View style={styles.words}>
+        <View style={[styles.words, ltrRow()]}>
           {run.words.map((w) => {
-            const k = run.found.findIndex((f) => f.word === w);
-            const found = k >= 0;
-            return found ? (
-              <Animated.View key={w} entering={ZoomIn.springify()} style={styles.chipWrap}>
-                <LinearGradient
-                  colors={MARKS[k % MARKS.length]!}
-                  style={styles.chip}
-                  accessibilityLabel={t('hunter.wordA11y', { word: w })}>
-                  <Text style={[styles.chipText, { color: '#fff' }]}>{w}</Text>
-                </LinearGradient>
-              </Animated.View>
-            ) : (
-              <View
+            const found = run.found.some((f) => f.word === w);
+            return (
+              <Animated.View
                 key={w}
-                style={[styles.chip, styles.chipTodo, styles.chipWrap]}
-                accessibilityLabel={t('hunter.wordTodoA11y', { word: w })}>
-                <Text style={styles.chipText}>{w}</Text>
-              </View>
+                entering={FadeIn}
+                style={[styles.chip, found && styles.chipFound]}
+                accessible
+                accessibilityLabel={found ? t('hunter.wordA11y', { word: w }) : t('hunter.wordTodoA11y', { word: w })}>
+                {found && <Ionicons name="checkmark" size={14} color={W.correct} />}
+                <Text style={[styles.chipText, found && { color: W.muted, textDecorationLine: 'line-through' }]}>{w}</Text>
+              </Animated.View>
             );
           })}
         </View>
+        {keyboard && <Text style={styles.hint}>{t('hunter.keyHint')}</Text>}
       </ScrollView>
-      <SafeAreaView edges={['bottom']} pointerEvents="none" style={styles.koraWrap}>
-        <KoraBubble text={done ? t('hunter.allFound') : (lastFound ?? undefined)} size={104} />
-      </SafeAreaView>
+      {done && (
+        <SafeAreaView edges={['bottom']} style={styles.footer}>
+          <PrimaryButton title={t('clash.results')} icon="arrow-forward" onPress={() => void g.finish(g.relaxed ? 0 : left)} busy={g.busy} />
+        </SafeAreaView>
+      )}
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  body: {
-    padding: Spacing.md,
-    gap: Spacing.md,
-    alignItems: 'center',
-    maxWidth: 560,
-    width: '100%',
-    alignSelf: 'center',
-    paddingBottom: 140,
-  },
-  title: { fontFamily: FONT, fontSize: 44, lineHeight: 48, color: '#F1EEFF', textAlign: 'center', letterSpacing: 1 },
-  theme: { fontFamily: 'Manrope_700Bold', fontSize: 15, color: 'rgba(235,232,255,0.7)', marginTop: -8 },
-  timerBar: {
-    alignSelf: 'stretch',
-    height: 52,
-    borderRadius: 999,
-    overflow: 'hidden',
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-    paddingHorizontal: Spacing.lg,
-  },
-  timerFill: { position: 'absolute', right: 0, top: 0, bottom: 0, backgroundColor: 'rgba(16,12,60,0.55)' },
-  timerText: { fontFamily: FONT, fontSize: 24, color: '#fff', flex: 1, textAlign: 'center' },
-  foundText: { fontFamily: FONT, fontSize: 15, color: '#fff' },
+  body: { padding: 16, gap: 14, alignItems: 'center', paddingBottom: 32 },
+  hint: { fontFamily: Fonts.regular, fontSize: 14, lineHeight: 20, color: W.inkSoft, textAlign: 'center' },
   panel: {
     userSelect: 'none',
-    padding: 10,
-    gap: 6,
-    borderRadius: 26,
-    borderWidth: 2,
-    borderColor: 'rgba(124,92,255,0.6)',
-    backgroundColor: 'rgba(20,14,80,0.5)',
+    borderRadius: 14,
+    borderWidth: 1,
+    borderColor: W.line,
+    backgroundColor: W.surface,
   },
   cell: {
     userSelect: 'none',
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#3A2DA8',
-    borderBottomWidth: 3,
-    borderBottomColor: '#251B7A',
+    backgroundColor: W.page,
+    borderWidth: 1,
+    borderColor: 'transparent',
   },
-  capsule: { flex: 1 },
-  miss: { fontFamily: 'Manrope_700Bold', color: 'rgba(235,232,255,0.7)', textAlign: 'center' },
-  words: { flexDirection: 'row', flexWrap: 'wrap', gap: 10, alignSelf: 'stretch', paddingRight: 96 },
-  chipWrap: { width: '47%' },
-  chip: { borderRadius: 999, paddingVertical: 12, alignItems: 'center' },
-  chipTodo: { backgroundColor: '#2E2A9A' },
-  chipText: { fontFamily: FONT, fontSize: 18, color: 'rgba(235,232,255,0.9)', letterSpacing: 1 },
-  scorePill: {
+  words: { flexDirection: 'row', flexWrap: 'wrap', gap: 8, justifyContent: 'center', alignSelf: 'stretch' },
+  chip: {
     flexDirection: 'row',
     alignItems: 'center',
     gap: 4,
     paddingHorizontal: 12,
-    paddingVertical: 6,
-    borderRadius: 999,
-    backgroundColor: '#FF9F43',
+    paddingVertical: 8,
+    borderRadius: 8,
+    borderWidth: 1,
+    borderColor: W.lineStrong,
+    backgroundColor: W.surface,
   },
-  koraWrap: { position: 'absolute', right: Spacing.sm, bottom: 0 },
+  chipFound: { backgroundColor: W.correctSoft, borderColor: 'transparent' },
+  chipText: { fontFamily: Fonts.bold, fontSize: 14, letterSpacing: 0.8, color: W.ink },
+  footer: { ...column, paddingHorizontal: 16, paddingTop: 10, paddingBottom: 12 },
 });

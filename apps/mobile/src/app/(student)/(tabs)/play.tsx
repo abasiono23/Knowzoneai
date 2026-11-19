@@ -8,11 +8,11 @@ import Animated, { FadeInDown, ZoomIn } from 'react-native-reanimated';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Svg, { Path } from 'react-native-svg';
 
+import { GameCover } from '@/components/games/cover';
 import { Avatar } from '@/components/world/avatar';
 import { Wallet } from '@/components/world/world-ui';
 import { Button, Card, ProgressBar, Screen, Text } from '@/components/ui';
 import { Colors, Gradients, MaxContentWidth, Radius, Spacing, TabBarHeight, WorldGradients } from '@/constants/theme';
-import { COVERS } from '@/lib/games/english';
 import { SCENES, STUDENT } from '@/lib/games/lab';
 import { EXPLORER, MUSEUM_SCENES } from '@/lib/games/history';
 import { PLACE_ICON } from '@/lib/quests/art';
@@ -314,13 +314,9 @@ function WordGamesCard() {
         style={styles.wordGames}>
         <View style={styles.wordCovers}>
           {(['hidden-letters', 'word-clash', 'spellcaster'] as const).map((g, k) => (
-            <Image
-              key={g}
-              source={COVERS[g]}
-              style={[styles.wordCover, { marginLeft: k ? -18 : 0 }]}
-              contentFit="contain"
-              accessible={false}
-            />
+            <View key={g} style={[styles.wordCover, { marginLeft: k ? -14 : 0 }]}>
+              <GameCover game={g} size={40} />
+            </View>
           ))}
         </View>
         <View style={{ flex: 1 }}>
@@ -469,7 +465,7 @@ const styles = StyleSheet.create({
     borderRadius: Radius.xl,
   },
   wordCovers: { flexDirection: 'row' },
-  wordCover: { width: 46, height: 46 },
+  wordCover: { width: 46, height: 46, borderRadius: 12, padding: 3, backgroundColor: '#fff' },
   noAvatar: { width: 56, height: 56, borderRadius: 28, backgroundColor: Colors.surfaceRaised },
   shortcuts: { flexDirection: 'row', gap: Spacing.xs },
   shortcut: {

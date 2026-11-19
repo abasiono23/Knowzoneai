@@ -5,7 +5,20 @@ import { SENTENCES } from '../src/data/english/sentences.js';
 import { VOCAB } from '../src/data/english/vocab.js';
 import { prisma } from '../src/db.js';
 import { isWord } from '../src/services/games/dictionary.js';
-import { buildPuzzle, clashPoints, lineBetween, publicState, newProgress, RARE_SEEDS, type RunState } from '../src/services/games/english.js';
+import {
+  buildPuzzle,
+  CEFR,
+  clashPoints,
+  LEVEL_KEYS,
+  lineBetween,
+  MAX_LEVEL,
+  nearest,
+  newProgress,
+  OPEN_LEVELS,
+  publicState,
+  RARE_SEEDS,
+  type RunState,
+} from '../src/services/games/english.js';
 import { http, signIn } from './helpers.js';
 
 type As = Awaited<ReturnType<typeof signIn>>['as'];
@@ -45,13 +58,67 @@ describe('word game content', () => {
     if (spells.kind !== 'spellcaster') throw new Error('kind');
     for (const s of spells.spells) expect(shownSpells).not.toContain(`"${s.word}"`);
 
-    for (let level = 1; level <= 5; level++) {
+    for (let level = 1; level <= MAX_LEVEL; level++) {
       const hunt = buildPuzzle('word-hunter', level, `h${level}`);
       if (hunt.kind !== 'word-hunter') throw new Error('kind');
+      // Grids grow up the ladder.
+      expect(hunt.size).toBeGreaterThanOrEqual(level === 1 ? 6 : (buildPuzzle('word-hunter', level - 1, 'x') as { size: number }).size);
       // Every hidden word really is in the grid where the server says.
       for (const w of hunt.words) expect(w.cells.map(([r, c]) => hunt.grid[r]![c]).join('')).toBe(w.word);
     }
     expect(lineBetween([0, 0], [2, 1])).toBeNull();
+  });
+});
+
+describe('the level ladder', () => {
+  it('has ten levels, Starter to Super hard, with the first four open to everyone', () => {
+    expect(MAX_LEVEL).toBe(10);
+    expect(OPEN_LEVELS).toBe(4);
+    expect(LEVEL_KEYS[0]).toBe('starter');
+    expect(LEVEL_KEYS.at(-1)).toBe('superHard');
+    expect(LEVEL_KEYS).toHaveLength(MAX_LEVEL);
+    expect(CEFR).toHaveLength(MAX_LEVEL);
+    // CEFR never goes down the ladder.
+    const order = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2', 'C2+'];
+    for (let i = 1; i < CEFR.length; i++) expect(order.indexOf(CEFR[i]!)).toBeGreaterThanOrEqual(order.indexOf(CEFR[i - 1]!));
+  });
+
+  it('builds every game at every level, falling back to the nearest level with content', () => {
+    expect(nearest({ 1: 'a', 5: 'e' }, 3)).toBe('a');
+    expect(nearest({ 2: 'b', 5: 'e' }, 1)).toBe('b');
+    expect(nearest({ 1: 'a', 5: 'e' }, 10)).toBe('e');
+    for (let level = 1; level <= MAX_LEVEL; level++)
+      for (const game of ['hidden-letters', 'word-clash', 'word-hunter', 'spellcaster', 'sentence-master'] as const) {
+        const p = buildPuzzle(game, level, `s${level}`);
+        expect(JSON.stringify(publicState({ puzzle: p, progress: newProgress(p) })).length).toBeGreaterThan(50);
+        // Old app versions draw a guardian for Spellcaster: it is always one of the five they know.
+        if (p.kind === 'spellcaster') expect(['slime', 'crystal', 'ember', 'frost', 'shadow']).toContain(p.monster);
+      }
+  });
+
+  it('opens levels 1–4 to everyone, then one level per star, and keeps old progress where it was', async () => {
+    const { as, sub } = await signIn();
+    const levels = async (game: string) =>
+      (await as.get('/me/games/english').expect(200)).body.games.find((g: { id: string }) => g.id === game).levels as { level: number; unlocked: boolean; bestStars: number }[];
+    const fresh = await levels('hidden-letters');
+    expect(fresh).toHaveLength(10);
+    expect(fresh.map((l) => l.unlocked)).toEqual([true, true, true, true, false, false, false, false, false, false]);
+    await start(as, 'hidden-letters', 4).expect(201);
+    expect((await start(as, 'hidden-letters', 5).expect(403)).body.reason).toBe('locked');
+    await start(as, 'hidden-letters', 11).expect(400);
+
+    // Stars won on the old five-level ladder count at the same level number.
+    for (const level of [1, 2, 3, 4, 5])
+      await prisma.gameProgress.create({ data: { userId: sub, game: 'word-hunter', level, bestStars: 2, bestScore: 300, plays: 1 } });
+    const carried = await levels('word-hunter');
+    expect(carried.slice(0, 5).map((l) => l.bestStars)).toEqual([2, 2, 2, 2, 2]);
+    expect(carried.map((l) => l.unlocked)).toEqual([true, true, true, true, true, true, false, false, false, false]);
+    await start(as, 'word-hunter', 6).expect(201);
+
+    // The lab subjects keep five levels, opened one at a time.
+    const lab = (await as.get('/me/games/chemistry').expect(200)).body.games[0].levels;
+    expect(lab).toHaveLength(5);
+    expect(lab.map((l: { unlocked: boolean }) => l.unlocked)).toEqual([true, false, false, false, false]);
   });
 });
 
@@ -96,14 +163,14 @@ describe('playing the games (server-checked)', () => {
     const hl = cat.games.find((g: { id: string }) => g.id === 'hidden-letters');
     expect(hl.levels[0]).toMatchObject({ bestStars: 3, plays: 1 });
     expect(hl.levels[1].unlocked).toBe(true);
-    expect(hl.levels[2].unlocked).toBe(false);
+    expect(hl.levels[4].unlocked).toBe(false);
   });
 
   it('locks levels until the one before has a star, and pays less for replays', async () => {
     const { as } = await signIn();
-    expect((await start(as, 'sentence-master', 2).expect(403)).body.reason).toBe('locked');
+    expect((await start(as, 'sentence-master', 5).expect(403)).body.reason).toBe('locked');
     const play = async () => {
-      const run = (await start(as, 'sentence-master').expect(201)).body.run;
+      const run = (await start(as, 'sentence-master', 4).expect(201)).body.run;
       const p = await secret(run.id);
       if (p.kind !== 'sentence-master') throw new Error('kind');
       for (let i = 0; i < 8; i++) await as.post(`/me/games/runs/${run.id}/answer`, { step: i, words: p.steps[i]!.sentence.words }).expect(200);
@@ -113,7 +180,8 @@ describe('playing the games (server-checked)', () => {
     const again = await play();
     expect(first.stars).toBe(3);
     expect(again.xp).toBe(Math.ceil(first.xp * 0.3));
-    await start(as, 'sentence-master', 2).expect(201);
+    expect(first.nextLevelUnlocked).toBe(true);
+    await start(as, 'sentence-master', 5).expect(201);
   });
 
   it('Sentence Master: the trap word makes it wrong, and the right sentence is shown', async () => {
