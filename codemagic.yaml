@@ -1,21 +1,63 @@
-# Codemagic: builds the Knowzone AI Android app (apps/mobile, Expo) as an installable APK.
+# Codemagic: builds the Knowzone AI Android app (apps/mobile, Expo).
 #
-# Set up once in Codemagic (Team settings → Environment variables / Code signing):
-# - Environment group "knowzone_app" with:
+# Two workflows:
+# - android-apk      every push to main: a test APK and app bundle, emailed. Nothing goes to Google Play.
+# - android-release  a release tag such as v1.0.1: a signed app bundle uploaded to Google Play's
+#                    PRODUCTION track as a draft. Rollout starts only when you press it in Play Console.
+#                    Step-by-step guide: docs/play-production-release.md
+#
+# Set up once in Codemagic (Team settings):
+# - Environment group "knowzone_app":
 #     EXPO_PUBLIC_API_URL                    the server's public address (https://…)
 #     EXPO_PUBLIC_SUPABASE_URL               from the Supabase project settings
 #     EXPO_PUBLIC_SUPABASE_PUBLISHABLE_KEY   the publishable (anon) key — never the service key
-# - Later, for the Play Store: upload an Android keystore named "knowzone_keystore" (Code signing
-#   identities) and add `android_signing: [knowzone_keystore]` under `environment` below. Until then the
-#   APK is signed with a debug key: fine for installing on phones to test, not for the Play Store.
-#   Keep the keystore and its passwords safe: every future update must be signed with the same one.
+# - Code signing identities → Android keystores: the Play UPLOAD key, reference name "knowzone_keystore".
+#   It must be the same key that signed the internal-testing upload. Keep it and its passwords safe:
+#   every future update must be signed with it.
+# - Environment group "google_play" (release only):
+#     GCLOUD_SERVICE_ACCOUNT_CREDENTIALS     the JSON key of a service account with release rights in
+#                                            Play Console (mark it Secret)
 
-workflows:
-  android-apk:
-    name: Knowzone AI · Android APK
+definitions:
+  base: &base
     instance_type: linux_x2
     max_build_duration: 60
     working_directory: apps/mobile
+    cache:
+      cache_paths:
+        - $HOME/.npm
+        - $HOME/.gradle/caches
+  scripts:
+    - &install
+      name: Install dependencies
+      script: npm ci
+    - &checks
+      name: Check types, lint and translations
+      script: |
+        npx tsc --noEmit
+        npm run lint
+        npm run i18n:check
+    - &version
+      name: Set the Android version
+      script: node scripts/ci-android-version.mjs
+    - &prebuild
+      name: Generate the Android project
+      script: npx expo prebuild --platform android --no-install --clean
+    - &signing
+      name: Use the Codemagic keystore for release builds
+      script: node scripts/ci-android-signing.mjs
+  email: &email
+    email:
+      recipients:
+        - abasionoukpong74@gmail.com
+      notify:
+        success: true
+        failure: true
+
+workflows:
+  android-apk:
+    <<: *base
+    name: Knowzone AI · Android APK (testing)
     environment:
       node: 22
       java: 17
@@ -23,10 +65,6 @@ workflows:
         - knowzone_app
       vars:
         EXPO_PUBLIC_USE_MOCKS: 'false'
-    cache:
-      cache_paths:
-        - $HOME/.npm
-        - $HOME/.gradle/caches
     triggering:
       events:
         - push
@@ -35,19 +73,12 @@ workflows:
           include: true
       cancel_previous_builds: true
     scripts:
-      - name: Install dependencies
-        script: npm ci
-      - name: Check types, lint and translations
-        script: |
-          npx tsc --noEmit
-          npm run lint
-          npm run i18n:check
-      - name: Generate the Android project
-        script: npx expo prebuild --platform android --no-install --clean
-      - name: Use the Codemagic keystore for release builds
-        script: node scripts/ci-android-signing.mjs
-      # The APK installs straight onto phones; the AAB (app bundle) is what the Play Console takes,
-      # including the internal testing track that Google Play Billing needs (docs/play-billing-setup.md).
+      - *install
+      - *checks
+      - *version
+      - *prebuild
+      - *signing
+      # The APK installs straight onto phones; the AAB is the format Play Console takes.
       - name: Build the APK and the Play app bundle
         script: |
           cd android
@@ -57,9 +88,47 @@ workflows:
       - android/app/build/outputs/apk/release/*.apk
       - android/app/build/outputs/bundle/release/*.aab
     publishing:
-      email:
-        recipients:
-          - abasionoukpong74@gmail.com
-        notify:
-          success: true
-          failure: true
+      <<: *email
+
+  android-release:
+    <<: *base
+    name: Knowzone AI · Google Play release
+    environment:
+      node: 22
+      java: 17
+      groups:
+        - knowzone_app
+        - google_play
+      android_signing:
+        - knowzone_keystore
+      vars:
+        EXPO_PUBLIC_USE_MOCKS: 'false'
+        REQUIRE_RELEASE_SIGNING: 'true'
+    # Only a release tag starts it (git tag v1.0.1 && git push origin v1.0.1), or "Start new build" by hand.
+    triggering:
+      events:
+        - tag
+      tag_patterns:
+        - pattern: 'v*'
+          include: true
+    scripts:
+      - *install
+      - *checks
+      - *version
+      - *prebuild
+      - *signing
+      - name: Build the Play app bundle
+        script: |
+          cd android
+          chmod +x gradlew
+          ./gradlew bundleRelease --no-daemon
+    artifacts:
+      - android/app/build/outputs/bundle/release/*.aab
+      - android/app/build/outputs/mapping/release/mapping.txt
+    publishing:
+      <<: *email
+      google_play:
+        credentials: $GCLOUD_SERVICE_ACCOUNT_CREDENTIALS
+        track: production
+        # Uploaded as a draft: review it in Play Console, then press "Start rollout to Production".
+        submit_as_draft: true

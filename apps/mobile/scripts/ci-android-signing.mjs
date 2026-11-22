@@ -13,6 +13,11 @@ const file = resolve(import.meta.dirname, '../android/app/build.gradle');
 let gradle = readFileSync(file, 'utf8');
 
 if (!process.env.CM_KEYSTORE_PATH) {
+  // A Play Store release must never fall back to the debug key: Google Play rejects it.
+  if (process.env.REQUIRE_RELEASE_SIGNING === 'true') {
+    console.error('No Codemagic keystore: upload the Play upload key as "knowzone_keystore" (Code signing identities).');
+    process.exit(1);
+  }
   console.log('No Codemagic keystore: the release APK is signed with the debug key (testing only).');
   process.exit(0);
 }
