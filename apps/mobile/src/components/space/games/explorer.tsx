@@ -202,6 +202,40 @@ function Orrery({ run, current }: { run: SolarExplorerRun; current: number }) {
   );
 }
 
+/** The worked example: Europa's probe readout, with Jupiter and the moon's orbit drawn to the side. */
+function HowTo() {
+  const { t } = useTranslation('space');
+  return (
+    <View style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}>
+      <View
+        style={[{ width: 96, aspectRatio: 1 }, LTR]}
+        {...ltr}
+        accessibilityElementsHidden
+        importantForAccessibility="no-hide-descendants">
+        <Svg viewBox="0 0 100 100" width="100%" height="100%">
+          <Circle cx={50} cy={50} r={38} stroke={D.axis} strokeDasharray="2 3" fill="none" />
+          <Circle cx={50} cy={50} r={17} fill="#D9B48A" />
+          <Path d="M34,44 H66 M33,52 H67 M36,59 H64" stroke="#B98B5E" strokeWidth={2.2} />
+          <Circle cx={77} cy={23} r={6} fill="#fff" stroke={D.accent} strokeWidth={2} />
+          <SvgText fontFamily={Fonts.semibold} x={50} y={96} fontSize={9} fill={D.muted} textAnchor="middle">
+            {t('play.explorer.bodies.jupiter')}
+          </SvgText>
+        </Svg>
+      </View>
+      <View style={{ flex: 1 }}>
+        <DataRows
+          rows={[
+            [t('play.explorer.radius'), '1 561 km'],
+            [t('play.explorer.around'), t('play.explorer.bodies.jupiter')],
+            [t('play.explorer.period'), `3.55 ${t('play.explorer.units.d')}`],
+          ]}
+        />
+      </View>
+    </View>
+  );
+}
+
 defineGameFrame('solar-explorer', {
+  HowTo,
   review: (run) => choiceReview(((run as SolarExplorerRun).visits ?? []).flatMap((v) => v.questions)),
 });

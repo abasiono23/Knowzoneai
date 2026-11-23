@@ -8,10 +8,10 @@ import { Text } from '@/components/ui';
 import { Fonts } from '@/constants/theme';
 import type { GameOutcome, LabTest, MysterySubstanceRun } from '@/lib/api';
 import { useKeys } from '@/lib/games/english';
+import type { CoverMap } from '@/lib/games/lab';
 import type { LabGame } from '@/lib/games/use-lab-run';
 
 import { defineGameFrame } from '../contract';
-import type { CoverMap } from '../station';
 import { Board, Card, Chem, FadeInView, GlassFigure, optionIndex, Options, StepHeader } from './kit';
 
 const LIQUID: [RegExp, string][] = [

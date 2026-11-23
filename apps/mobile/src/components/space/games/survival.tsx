@@ -18,6 +18,7 @@ import {
   DataRows,
   LTR,
   ltr,
+  MONO,
   QuizStep,
   Sheet,
   StepBar,
@@ -157,4 +158,41 @@ function Approach({ run }: { run: AsteroidSurvivalRun }) {
   );
 }
 
-defineGameFrame('asteroid-survival', { review: (run) => choiceReview((run as AsteroidSurvivalRun).challenges ?? []) });
+/** The worked example: a probe 400 km up, its speed from v = √(GM ÷ r), the orbit radius from Earth's centre. */
+function HowTo() {
+  const { t } = useTranslation('space');
+  return (
+    <View style={{ gap: 10 }}>
+      <View
+        style={[{ width: '100%', maxWidth: 260, aspectRatio: 260 / 120, alignSelf: 'center' }, LTR]}
+        {...ltr}
+        accessibilityElementsHidden
+        importantForAccessibility="no-hide-descendants">
+        <Svg viewBox="0 0 260 120" width="100%" height="100%">
+          <Circle cx={90} cy={60} r={50} stroke={D.axis} strokeDasharray="3 3" fill="none" />
+          <Circle cx={90} cy={60} r={40} fill={D.sky} />
+          <Line x1={90} y1={60} x2={140} y2={60} stroke={D.ink} strokeWidth={1.2} />
+          <SvgText fontFamily={MONO} x={113} y={55} fontSize={10} fill={D.ink} textAnchor="middle">
+            r
+          </SvgText>
+          <Circle cx={140} cy={60} r={4} fill={D.accent} />
+          {/* The velocity arrow, along the orbit. */}
+          <Line x1={140} y1={60} x2={140} y2={16} stroke={D.accent} strokeWidth={2} />
+          <Path d="M135,22 L140,12 L145,22 Z" fill={D.accent} />
+          <SvgText fontFamily={MONO} x={150} y={24} fontSize={11} fill={D.accent}>
+            v = 7 670 m/s
+          </SvgText>
+          <SvgText fontFamily={MONO} x={150} y={78} fontSize={10} fill={D.soft}>
+            400 km
+          </SvgText>
+        </Svg>
+      </View>
+      <CodeBlock text={'v = √(GM ÷ r)\nr = 6 370 km + 400 km = 6 770 km'} label={t('play.survival.formula')} />
+    </View>
+  );
+}
+
+defineGameFrame('asteroid-survival', {
+  HowTo,
+  review: (run) => choiceReview((run as AsteroidSurvivalRun).challenges ?? []),
+});

@@ -144,7 +144,31 @@ const styles = StyleSheet.create({
   },
 });
 
+/** The worked example: the bank's name is only a subdomain; the real domain is secure-login.ru. */
+function HowTo() {
+  const { t } = useTranslation('tech');
+  return (
+    <Card style={{ gap: 10 }}>
+      <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+        <Ionicons name={ICON.email} size={18} color={W.inkSoft} />
+        <Eyebrow text={t('play.cyber.kinds.email')} />
+      </View>
+      <View style={{ flexDirection: 'row', gap: 8, alignItems: 'center' }}>
+        <Text style={[styles.small, { width: 64 }]}>{t('play.cyber.from')}</Text>
+        <Text style={[styles.mono, { flex: 1 }, LTR]} {...ltr}>
+          support@kobo-bank.
+          <Text style={[styles.mono, { color: W.wrong, fontFamily: MONO, textDecorationLine: 'underline' }]}>
+            secure-login.ru
+          </Text>
+        </Text>
+        <Ionicons name="warning-outline" size={18} color={W.wrong} />
+      </View>
+    </Card>
+  );
+}
+
 defineGameFrame('cyber-defender', {
+  HowTo,
   review: (run) =>
     ((run as CyberDefenderRun).items ?? []).flatMap((c) =>
       c.result

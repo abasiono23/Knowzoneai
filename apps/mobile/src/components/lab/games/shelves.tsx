@@ -5,8 +5,8 @@ import { W } from '@/components/games/ui';
 import { Text } from '@/components/ui';
 import { Fonts } from '@/constants/theme';
 import type { Glassware, LabReagent } from '@/lib/api';
+import type { CoverMap } from '@/lib/games/lab';
 
-import type { CoverMap } from '../station';
 import { BottleChip, Board, GlassFigure } from './kit';
 
 /**

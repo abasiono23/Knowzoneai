@@ -8,10 +8,10 @@ import { Text } from '@/components/ui';
 import { Fonts } from '@/constants/theme';
 import type { ElementCategory, ElementCell, ElementQuestRun, GameOutcome } from '@/lib/api';
 import { useKeys } from '@/lib/games/english';
+import type { CoverMap } from '@/lib/games/lab';
 import type { LabGame } from '@/lib/games/use-lab-run';
 
 import { defineGameFrame } from '../contract';
-import type { CoverMap } from '../station';
 import { Board, Card, Chem, StepHeader } from './kit';
 
 /** Family colours, used as a hint on the lower levels only (always with the key below the table). */

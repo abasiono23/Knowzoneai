@@ -7,11 +7,10 @@ import { Text } from '@/components/ui';
 import { Fonts } from '@/constants/theme';
 import type { GameOutcome, MixtureLabRun } from '@/lib/api';
 import { useKeys } from '@/lib/games/english';
-import { sub } from '@/lib/games/lab';
+import { sub, type CoverMap } from '@/lib/games/lab';
 import type { LabGame } from '@/lib/games/use-lab-run';
 
 import { defineGameFrame } from '../contract';
-import type { CoverMap } from '../station';
 import { BottleChip, Board, Card, Chem, FadeInView, GlassFigure, optionIndex, Options, StepHeader } from './kit';
 
 /** Whitish colours count as "colourless" when choosing the starting colour of a mixture. */

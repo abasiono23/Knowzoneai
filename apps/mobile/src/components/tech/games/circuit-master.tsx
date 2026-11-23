@@ -437,7 +437,56 @@ const styles = StyleSheet.create({
   want: { fontFamily: Fonts.bold },
 });
 
+/** The worked example: an AND gate gives 1 only on the row where A and B are both 1. */
+function HowTo() {
+  const rows = [
+    [0, 0, 0],
+    [0, 1, 0],
+    [1, 0, 0],
+    [1, 1, 1],
+  ];
+  const y = (k: number) => (k ? 50 : 22);
+  return (
+    <View
+      style={[{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 16 }, LTR]}
+      {...ltr}
+      accessibilityElementsHidden
+      importantForAccessibility="no-hide-descendants">
+      <Svg width={150} height={72} viewBox="0 0 150 72">
+        {['A', 'B'].map((n, k) => (
+          <G key={n}>
+            <SvgText x={4} y={y(k) + 4} fontSize={12} fontFamily={Fonts.bold} fill={D.ink}>
+              {n}
+            </SvgText>
+            <SvgText x={20} y={y(k) + 4} fontSize={12} fontFamily={MONO} fill={D.good}>
+              1
+            </SvgText>
+            <Line x1={32} y1={y(k)} x2={50} y2={y(k)} stroke={D.good} strokeWidth={2} />
+            <Line x1={50} y1={y(k)} x2={50} y2={k ? 44 : 28} stroke={D.good} strokeWidth={2} />
+            <Line x1={50} y1={k ? 44 : 28} x2={56} y2={k ? 44 : 28} stroke={D.good} strokeWidth={2} />
+          </G>
+        ))}
+        <GateSymbol gate="AND" x={56} y={19} color={D.good} />
+        <Line x1={56 + GW} y1={36} x2={120} y2={36} stroke={D.good} strokeWidth={2} />
+        <Circle cx={130} cy={36} r={10} fill={D.good} />
+        <SvgText x={130} y={40} fontSize={12} fontFamily={MONO} fill="#fff" textAnchor="middle">
+          1
+        </SvgText>
+      </Svg>
+      <View style={{ gap: 2 }}>
+        <Text style={{ fontFamily: MONO, fontSize: 13, color: W.muted }}>A B  Q</Text>
+        {rows.map((r) => (
+          <Text key={r.join('')} style={{ fontFamily: MONO, fontSize: 13, color: r[2] ? W.correct : W.ink }}>
+            {`${r[0]} ${r[1]}  ${r[2]}`}
+          </Text>
+        ))}
+      </View>
+    </View>
+  );
+}
+
 defineGameFrame('circuit-master', {
+  HowTo,
   hearts: false,
   review: (run) =>
     ((run as CircuitMasterRun).puzzles ?? []).flatMap((x) =>

@@ -8,11 +8,10 @@ import { Text } from '@/components/ui';
 import { Fonts } from '@/constants/theme';
 import type { GameOutcome, ReactionRushRun } from '@/lib/api';
 import { useKeys, useRelaxed } from '@/lib/games/english';
-import { atomsOf, sub } from '@/lib/games/lab';
+import { atomsOf, sub, type CoverMap } from '@/lib/games/lab';
 import type { LabGame } from '@/lib/games/use-lab-run';
 
 import { defineGameFrame } from '../contract';
-import type { CoverMap } from '../station';
 import { Board, Card, Chem, optionIndex, Options, StepHeader } from './kit';
 
 /** A species' charge from "Fe^3+" / "e^-" (0 when none). */

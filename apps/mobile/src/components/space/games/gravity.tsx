@@ -434,7 +434,40 @@ const styles = StyleSheet.create({
   },
 });
 
+/** The worked example: the comet would pass above the ring; a planet below its path bends it down into the ring. */
+function HowTo() {
+  const { t } = useTranslation('space');
+  return (
+    <View
+      style={[{ width: '100%', maxWidth: 280, aspectRatio: 260 / 140, alignSelf: 'center' }, LTR]}
+      {...ltr}
+      accessibilityElementsHidden
+      importantForAccessibility="no-hide-descendants">
+      <Svg viewBox="0 0 260 140" width="100%" height="100%">
+        <Circle cx={214} cy={98} r={14} fill="#E3F5F1" stroke={D.good} strokeWidth={2} strokeDasharray="4 3" />
+        <Circle cx={214} cy={98} r={3} fill={D.good} />
+        {/* Without the planet: straight on, over the ring. With it: pulled down into the ring. */}
+        <Line x1={24} y1={40} x2={250} y2={40} stroke={D.axis} strokeWidth={1.4} strokeDasharray="4 4" />
+        <Path d="M24,40 Q150,36 214,98" stroke={D.accent} strokeWidth={2} fill="none" />
+        <Circle cx={132} cy={104} r={13} fill={D.accent} />
+        <Line x1={132} y1={88} x2={132} y2={60} stroke={D.accent} strokeWidth={1} strokeDasharray="2 3" />
+        <Circle cx={24} cy={40} r={5} fill={D.ink} />
+        <SvgText fontFamily={Fonts.semibold} x={24} y={26} fontSize={10} fill={D.ink} textAnchor="middle">
+          {t('play.gravity.comet')}
+        </SvgText>
+        <SvgText fontFamily={Fonts.semibold} x={214} y={128} fontSize={10} fill={D.good} textAnchor="middle">
+          {t('play.gravity.target')}
+        </SvgText>
+        <SvgText fontFamily={Fonts.semibold} x={132} y={132} fontSize={10} fill={D.accent} textAnchor="middle">
+          {t('play.gravity.planetN', { n: 1 })}
+        </SvgText>
+      </Svg>
+    </View>
+  );
+}
+
 defineGameFrame('gravity-master', {
+  HowTo,
   hearts: false,
   review: (run) =>
     ((run as GravityRun).puzzles ?? []).flatMap((x) =>

@@ -353,7 +353,44 @@ const styles = StyleSheet.create({
   opText: { fontFamily: MONO, fontSize: 14, color: W.ink },
 });
 
+/** The worked example: right 3, down 2 (round the crate), then pick up the parcel. */
+const EXAMPLE: RobotRescueRun['puzzles'][number] = {
+  id: 0,
+  w: 4,
+  h: 3,
+  blocked: [[1, 1]],
+  kinds: ['crate'],
+  robot: [0, 0],
+  kitten: [3, 2],
+  best: 3,
+  maxCards: 3,
+  tries: 0,
+};
+function HowTo() {
+  return (
+    <View style={{ gap: 10, alignItems: 'center' }}>
+      <Warehouse
+        p={EXAMPLE}
+        at={{ x: 3, y: 2, carrying: true }}
+        path={[
+          { x: 0, y: 0 },
+          { x: 3, y: 0 },
+          { x: 3, y: 2 },
+        ]}
+      />
+      <Text
+        style={[{ fontFamily: MONO, fontSize: 13, color: W.ink }, LTR]}
+        {...ltr}
+        accessibilityElementsHidden
+        importantForAccessibility="no-hide-descendants">
+        move(right, 3) · move(down, 2) · pick()
+      </Text>
+    </View>
+  );
+}
+
 defineGameFrame('robot-rescue', {
+  HowTo,
   hearts: false,
   review: (run) =>
     ((run as RobotRescueRun).puzzles ?? []).flatMap((x) =>

@@ -3,12 +3,12 @@ import { Image } from 'expo-image';
 import type { ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Pressable, StyleSheet, View, type StyleProp, type ViewStyle } from 'react-native';
-import Animated, { FadeIn, FadeInDown, ZoomIn } from 'react-native-reanimated';
+import Animated, { FadeIn, FadeInDown } from 'react-native-reanimated';
 
 import { Text } from '@/components/ui';
 import { Colors, Spacing } from '@/constants/theme';
 import { KORA_IMAGE } from '@/lib/games/english';
-import { ITEMS, sub, type ItemArt } from '@/lib/games/lab';
+import { sub } from '@/lib/games/lab';
 import { useSession } from '@/lib/session';
 
 export const PANEL = 'rgba(14,18,44,0.82)';
@@ -117,97 +117,6 @@ export function Objective({
         </View>
       ))}
     </Animated.View>
-  );
-}
-
-/** A picture of a piece of equipment or a bottle, with an optional label on it. */
-export function ItemPicture({
-  art,
-  height,
-  label,
-  tint,
-}: {
-  art: ItemArt;
-  height: number;
-  label?: string;
-  tint?: string;
-}) {
-  const a = ITEMS[art];
-  const w = height * a.aspect;
-  return (
-    <View style={{ width: w, height, alignItems: 'center' }}>
-      <Image source={a.src} style={{ width: w, height }} contentFit="contain" accessible={false} />
-      {!!tint && (
-        <View
-          pointerEvents="none"
-          style={[
-            styles.tint,
-            { backgroundColor: tint, height: height * 0.32, width: w * 0.62, bottom: height * 0.06 },
-          ]}
-        />
-      )}
-      {!!label && (
-        <View pointerEvents="none" style={[styles.label, { top: height * 0.5, width: Math.max(w * 0.9, 44) }]}>
-          <Text
-            numberOfLines={2}
-            style={{
-              fontFamily: BOLD,
-              fontSize: Math.max(9, height * 0.11),
-              lineHeight: Math.max(11, height * 0.13),
-              color: '#1D2340',
-              textAlign: 'center',
-            }}>
-            {sub(label)}
-          </Text>
-        </View>
-      )}
-    </View>
-  );
-}
-
-export type InventoryItem = { key: string; art: ItemArt; label?: string };
-
-/** Five slots along the bottom: what the student is carrying. */
-export function Inventory({
-  items,
-  onTap,
-  selected,
-}: {
-  items: InventoryItem[];
-  onTap?: (key: string) => void;
-  selected?: string | null;
-}) {
-  const { t } = useTranslation('lab');
-  return (
-    <View style={styles.inventory} accessibilityLabel={t('inventory.label', { count: items.length })}>
-      {Array.from({ length: 5 }, (_, k) => {
-        const it = items[k];
-        return (
-          <Pressable
-            key={k}
-            disabled={!it || !onTap}
-            onPress={() => it && onTap?.(it.key)}
-            accessibilityRole="button"
-            accessibilityLabel={it?.label ?? t('inventory.empty')}
-            style={[
-              styles.slot,
-              selected &&
-                it?.key === selected && { borderColor: Colors.reward, backgroundColor: 'rgba(255,200,87,0.18)' },
-            ]}>
-            {it && (
-              <Animated.View entering={ZoomIn.springify()} style={{ alignItems: 'center' }}>
-                <ItemPicture art={it.art} height={36} />
-                {!!it.label && (
-                  <Text numberOfLines={1} style={{ fontSize: 9, color: '#fff', maxWidth: 56 }}>
-                    {sub(it.label)}
-                  </Text>
-                )}
-              </Animated.View>
-            )}
-          </Pressable>
-        );
-      })}
-    </View>
   );
 }
 

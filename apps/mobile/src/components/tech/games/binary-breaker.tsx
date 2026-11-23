@@ -209,7 +209,30 @@ const styles = StyleSheet.create({
   total: { fontFamily: Fonts.semibold, fontSize: 14, color: W.inkSoft, textAlign: 'center' },
 });
 
+/** The worked example: 13 = 8 + 4 + 1, so the switches under 8, 4 and 1 are on. */
+function HowTo() {
+  const bits = [1, 1, 0, 1];
+  return (
+    <View style={{ gap: 8, alignItems: 'center' }} accessibilityElementsHidden importantForAccessibility="no-hide-descendants">
+      <View style={[styles.bits, LTR, { alignSelf: 'stretch' }]} {...ltr}>
+        {bits.map((b, k) => (
+          <View key={k} style={{ alignItems: 'center', gap: 4, flex: 1, maxWidth: 52 }}>
+            <Text style={styles.place}>{2 ** (3 - k)}</Text>
+            <View style={[styles.bit, b === 1 && styles.bitOn]}>
+              <Text style={[styles.bitText, b === 1 && { color: '#fff' }]}>{b}</Text>
+            </View>
+          </View>
+        ))}
+      </View>
+      <Text style={[styles.total, { fontFamily: MONO, color: W.ink }, LTR]} {...ltr}>
+        8 + 4 + 0 + 1 = 13
+      </Text>
+    </View>
+  );
+}
+
 defineGameFrame('binary-breaker', {
+  HowTo,
   review: (run) =>
     ((run as BinaryBreakerRun).vaults ?? []).flatMap((v) =>
       v.result

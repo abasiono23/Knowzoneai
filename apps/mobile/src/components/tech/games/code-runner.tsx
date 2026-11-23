@@ -414,7 +414,40 @@ const styles = StyleSheet.create({
   blockCode: { fontFamily: MONO, fontSize: 14, color: W.ink },
 });
 
+/** The worked example: three blocks in a loop instead of six in a row. */
+function HowTo() {
+  return (
+    <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 16 }}>
+      <Text
+        style={[{ fontFamily: MONO, fontSize: 14, lineHeight: 21, color: W.ink }, LTR]}
+        {...ltr}
+        accessibilityElementsHidden
+        importantForAccessibility="no-hide-descendants">
+        {'repeat 3:\n    move()\n    turn_left()'}
+      </Text>
+      <Grid
+        tiles={[
+          [0, 0],
+          [1, 0],
+          [0, 1],
+          [1, 1],
+        ]}
+        gems={[]}
+        goal={[0, 1]}
+        runner={{ x: 0, y: 1, dir: 1 }}
+        path={[
+          { x: 1, y: 1, dir: 0 },
+          { x: 1, y: 0, dir: 3 },
+          { x: 0, y: 0, dir: 2 },
+          { x: 0, y: 1, dir: 1 },
+        ]}
+      />
+    </View>
+  );
+}
+
 defineGameFrame('code-runner', {
+  HowTo,
   hearts: false,
   review: (run) =>
     ((run as CodeRunnerRun).puzzles ?? []).flatMap((x) =>

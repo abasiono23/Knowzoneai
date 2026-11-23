@@ -492,7 +492,50 @@ const styles = StyleSheet.create({
   count: { fontFamily: FONT, fontSize: 16, color: W.ink, minWidth: 18, textAlign: 'center' },
 });
 
+/** The worked example: thrust up, weight down, and their ratio; above 1 the rocket lifts off. */
+function HowTo() {
+  return (
+    <View
+      style={[{ width: '100%', maxWidth: 280, aspectRatio: 280 / 150, alignSelf: 'center' }, LTR]}
+      {...ltr}
+      accessibilityElementsHidden
+      importantForAccessibility="no-hide-descendants">
+      <Svg viewBox="0 0 280 150" width="100%" height="100%">
+        <Line x1={10} y1={138} x2={110} y2={138} stroke={D.axis} />
+        {/* The rocket: nose, tank, engine bell. */}
+        <Path d="M50,22 Q60,6 70,22 Z" fill="#fff" stroke={D.ink} strokeWidth={1.6} />
+        <Rect x={50} y={22} width={20} height={70} fill="#fff" stroke={D.ink} strokeWidth={1.6} />
+        <Path d="M54,92 H66 L70,104 H50 Z" fill={D.soft} />
+        {/* Thrust (up, from the engine) and weight (down, from the centre of mass). */}
+        <Line x1={28} y1={104} x2={28} y2={34} stroke={D.good} strokeWidth={2.4} />
+        <Path d="M22,42 L28,30 L34,42 Z" fill={D.good} />
+        <Line x1={92} y1={58} x2={92} y2={122} stroke={D.bad} strokeWidth={2.4} />
+        <Path d="M86,114 L92,126 L98,114 Z" fill={D.bad} />
+        <SvgText fontFamily={MONO} x={22} y={22} fontSize={11} fill={D.good} textAnchor="middle">
+          80 kN
+        </SvgText>
+        <SvgText fontFamily={MONO} x={100} y={140} fontSize={11} fill={D.bad}>
+          49 kN
+        </SvgText>
+        <SvgText fontFamily={MONO} x={128} y={56} fontSize={11} fill={D.soft}>
+          5 000 kg × 9.8 m/s²
+        </SvgText>
+        <SvgText fontFamily={MONO} x={128} y={74} fontSize={11} fill={D.soft}>
+          = 49 000 N
+        </SvgText>
+        <SvgText fontFamily={Fonts.bold} x={128} y={102} fontSize={13} fill={D.ink}>
+          TWR = 80 ÷ 49 = 1.63
+        </SvgText>
+        <SvgText fontFamily={Fonts.bold} x={128} y={122} fontSize={13} fill={D.good}>
+          1.63 &gt; 1 ✓
+        </SvgText>
+      </Svg>
+    </View>
+  );
+}
+
 defineGameFrame('rocket-builder', {
+  HowTo,
   review: (run) =>
     ((run as RocketBuilderRun).missions ?? []).flatMap((m) =>
       m.result

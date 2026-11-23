@@ -149,4 +149,36 @@ function DefenceMap({ run, current }: { run: GalaxyDefenderRun; current: number 
   );
 }
 
-defineGameFrame('galaxy-defender', { review: (run) => choiceReview((run as GalaxyDefenderRun).questions ?? []) });
+/** The worked example: one object on a hit course; the right answer bends its path away from Earth. */
+function HowTo() {
+  const { t } = useTranslation('space');
+  return (
+    <View
+      style={[{ width: '100%', maxWidth: 280, aspectRatio: 240 / 150, alignSelf: 'center' }, LTR]}
+      {...ltr}
+      accessibilityElementsHidden
+      importantForAccessibility="no-hide-descendants">
+      <Svg viewBox="0 0 240 150" width="100%" height="100%">
+        <Circle cx={62} cy={92} r={44} stroke={D.grid} fill="none" />
+        {/* Where it was heading, and the bent path after the deflection burn. */}
+        <Line x1={150} y1={56} x2={84} y2={83} stroke={D.axis} strokeWidth={1.4} strokeDasharray="4 4" />
+        <Path d="M226,24 L150,56 Q112,72 136,136" stroke={D.good} strokeWidth={2} fill="none" />
+        <Circle cx={150} cy={56} r={4} fill="none" stroke={D.accent} strokeWidth={1.6} />
+        <Circle cx={136} cy={136} r={4} fill={D.good} />
+        <Circle cx={226} cy={24} r={4} fill={D.soft} />
+        <Circle cx={62} cy={92} r={20} fill={D.sky} />
+        <SvgText fontFamily={Fonts.semibold} x={62} y={128} fontSize={10} fill={D.soft} textAnchor="middle">
+          {t('play.defender.earth')}
+        </SvgText>
+        <SvgText fontFamily={Fonts.bold} x={150} y={136} fontSize={14} fill={D.good} textAnchor="middle">
+          ✓
+        </SvgText>
+      </Svg>
+    </View>
+  );
+}
+
+defineGameFrame('galaxy-defender', {
+  HowTo,
+  review: (run) => choiceReview((run as GalaxyDefenderRun).questions ?? []),
+});
