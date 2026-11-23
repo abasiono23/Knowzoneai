@@ -8,6 +8,10 @@ import type { Place } from './lab';
  * The simulators below match the server's (apps/server/src/services/games/tech.ts): they animate
  * moves and let you test a circuit; the server's run decides.
  */
+/** The ten-level ladder (the server's services/games/*.ts has the same); levels 1–4 are open to everyone. */
+export const MAX_LEVEL = 10;
+export const OPEN_LEVELS = 4;
+
 export type TechStation = 'code' | 'cyber' | 'robot' | 'vault' | 'circuit';
 
 const img = {

@@ -1,270 +1,254 @@
 import { Ionicons } from '@expo/vector-icons';
-import { Image } from 'expo-image';
+import { t as i18nT } from 'i18next';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Pressable, StyleSheet, View } from 'react-native';
 import Animated, { FadeIn, ZoomIn } from 'react-native-reanimated';
-import { SafeAreaView } from 'react-native-safe-area-context';
 
-import { Backdrop } from '@/components/lab/backdrop';
-import { LabHall } from '@/components/lab/hall';
-import { BOLD, GoldButton, Panel } from '@/components/lab/hud';
-import { QuestionCard } from '@/components/space/question-card';
+import { SecondaryButton, W } from '@/components/games/ui';
+import { defineGameFrame } from '@/components/lab/contract';
 import { Text } from '@/components/ui';
-import { Colors, Spacing } from '@/constants/theme';
+import { Fonts } from '@/constants/theme';
 import type { LostCivilizationRun } from '@/lib/api';
-import { ARTIFACTS, DIG_SCENES, digPlace, type DigSpot } from '@/lib/games/history';
 import type { HistoryGame } from '@/lib/games/use-lab-run';
 
-const SPOTS: DigSpot[] = ['a', 'b', 'c'];
-/** Taps of the brush to uncover a find. */
-const BRUSHES = 5;
+import { Artefact } from '../artefact';
+import { Board, Eyebrow, Panel, QuizCard, quiz } from '../quiz';
+
+/** Translation outside React (review lists for the results screen). */
+const tr = i18nT as unknown as (key: string, options?: Record<string, unknown>) => string;
 
 type Dig = LostCivilizationRun['digs'][number];
-const artOf = (dig: Dig, n: number) => {
-  const f = dig.finds[n]!;
-  return ARTIFACTS[f.art === 'hero' ? dig.art : f.art] ?? ARTIFACTS.pottery!;
-};
+const COLS = 4;
+const ROWS = 3;
+
+/** Which squares of the trench hide the finds (the same for a dig every time, spread across it). */
+function hidingPlaces(dig: Dig) {
+  let h = 0;
+  for (const ch of `${dig.art}${dig.id}`) h = (h * 31 + ch.charCodeAt(0)) >>> 0;
+  const squares = Array.from({ length: COLS * ROWS }, (_, i) => i);
+  const out: number[] = [];
+  while (out.length < dig.finds.length) {
+    h = (h * 1103515245 + 12345) >>> 0;
+    const s = squares[h % squares.length]!;
+    if (!out.includes(s)) out.push(s);
+  }
+  return out;
+}
 
 /**
- * Lost Civilization: walk to the dig spots, brush away the soil to uncover three artifacts, read
- * their clues, then name the civilization (which unlocks its city) and answer a question about it.
+ * Lost Civilisation: an excavation. Uncover the squares of a trench (each is a button) to find the
+ * artefacts, read their clues, name the civilisation that made them, then answer a question about it.
  */
 export function LostCivilization({ g, run, paused }: { g: HistoryGame; run: LostCivilizationRun; paused: boolean }) {
   const { t } = useTranslation('history');
-  const next = useTranslation('space').t('ui.next');
-  const seeResults = useTranslation('lab').t('result.see');
-  const [k, setK] = useState(() => Math.min(Math.floor(run.at / 2), run.digs.length - 1));
+  const tx = t as unknown as (k: string, o?: Record<string, unknown>) => string;
+  const total = run.digs.length;
+  const [k, setK] = useState(() => Math.min(Math.floor(run.at / 2), total - 1));
   const dig = run.digs[k]!;
-  const [dug, setDug] = useState<DigSpot[]>(() => (dig.mystery.result ? SPOTS : []));
-  const [phase, setPhase] = useState<'walk' | 'digging' | 'found' | 'mystery' | 'follow'>(() =>
-    dig.mystery.result ? 'follow' : 'walk',
-  );
-  const [brushed, setBrushed] = useState(0);
-  const unlocked = run.digs.filter((d) => d.mystery.result?.correct).length;
-  const n = dug.length; // the find being dug up now (or the last one found)
+  const hidden = hidingPlaces(dig);
+  const [open, setOpen] = useState<number[]>(() => (dig.mystery.result ? Array.from({ length: COLS * ROWS }, (_, i) => i) : []));
+  const [phase, setPhase] = useState<'dig' | 'name' | 'follow'>(() => (dig.followUp?.result || dig.mystery.result ? 'follow' : 'dig'));
+  const found = hidden.filter((s) => open.includes(s)).length;
+  const allFound = found === dig.finds.length;
+  const over = run.status !== 'playing' || run.hearts <= 0;
+  const lastDig = k + 1 >= total || over;
+  const seconds = run.seconds ?? 0;
 
   const nextDig = () => {
-    if (run.status !== 'playing' || run.hearts <= 0 || k + 1 >= run.digs.length) {
-      void g.finish();
-      return;
-    }
+    if (lastDig) return void g.finish();
     setK(k + 1);
-    setDug([]);
-    setBrushed(0);
-    setPhase('walk');
+    setOpen([]);
+    setPhase('dig');
+  };
+  const uncover = (s: number) => {
+    if (open.includes(s)) return;
+    g.buzz(hidden.includes(s) ? 'success' : 'tap');
+    setOpen([...open, s]);
   };
 
   return (
-    <View style={StyleSheet.absoluteFill}>
-      {phase === 'walk' ? (
-        <LabHall<DigSpot>
-          key={dig.id}
-          place={digPlace(dig.dig)}
-          ns="history"
-          names={{ a: t('dig.spot', { n: 1 }), b: t('dig.spot', { n: 2 }), c: t('dig.spot', { n: 3 }) }}
-          openLabel={t('dig.dig')}
-          badges={Object.fromEntries(dug.map((s) => [s, '✓']))}
-          goal={SPOTS.find((s) => !dug.includes(s)) ?? null}
-          paused={paused}
-          topReserve={230}
-          onOpen={(s) => {
-            if (dug.includes(s)) return;
-            g.buzz('tap');
-            setDug([...dug, s]);
-            setBrushed(0);
-            setPhase('digging');
-          }}
-        />
-      ) : (
-        <Backdrop source={DIG_SCENES[dig.dig]} dim={0.35} />
-      )}
+    <Board>
+      <View style={{ gap: 4 }}>
+        <Eyebrow>{tx('excavation.trench', { n: k + 1, total })}</Eyebrow>
+        <Text style={quiz.small}>{phase === 'dig' ? tx('excavation.uncover') : tx('excavation.found', { done: found, total: dig.finds.length })}</Text>
+      </View>
 
-      <SafeAreaView edges={['top']} style={styles.top} pointerEvents="none">
-        <Panel style={{ gap: 4 }}>
-          <Text style={{ fontFamily: BOLD, color: '#fff', fontSize: 15 }}>
-            {t('dig.objective', { n: k + 1, total: run.digs.length })} ·{' '}
-            {t('dig.finds', { done: phase === 'digging' ? n - 1 : n, total: 3 })}
-          </Text>
-          <Text style={{ color: Colors.reward, fontSize: 12, fontFamily: BOLD }}>
-            {t('dig.cities', { count: unlocked, total: run.digs.length })}
-          </Text>
-          {/* The notebook: clues found so far. */}
-          {dig.finds.slice(0, phase === 'digging' ? n - 1 : n).map((f) => (
-            <Text key={f.name} style={{ color: 'rgba(235,238,255,0.9)', fontSize: 12 }}>
-              • <Text style={{ fontFamily: BOLD, color: '#fff', fontSize: 12 }}>{f.name}:</Text> {f.clue}
-            </Text>
+      <Panel style={{ gap: 12 }}>
+        <View style={styles.trench} accessibilityRole="grid">
+          {Array.from({ length: ROWS }, (_, r) => (
+            <View key={r} style={styles.trenchRow}>
+              {Array.from({ length: COLS }, (_, c) => {
+                const s = r * COLS + c;
+                const isOpen = open.includes(s);
+                const find = hidden.indexOf(s);
+                const f = find >= 0 ? dig.finds[find] : null;
+                return (
+                  <Pressable
+                    key={s}
+                    onPress={() => uncover(s)}
+                    disabled={isOpen || phase !== 'dig'}
+                    accessibilityRole="button"
+                    accessibilityLabel={
+                      isOpen ? (f ? tx('excavation.foundA11y', { n: s + 1, name: f.name }) : tx('excavation.empty', { n: s + 1 })) : tx('excavation.square', { n: s + 1 })
+                    }
+                    style={({ pressed }) => [styles.square, isOpen && styles.squareOpen, pressed && { opacity: 0.8 }]}>
+                    {isOpen ? (
+                      f ? (
+                        <Animated.View entering={ZoomIn.duration(200)}>
+                          <Artefact art={f.art} size={44} />
+                        </Animated.View>
+                      ) : (
+                        <View style={styles.soil} />
+                      )
+                    ) : (
+                      <Text style={styles.grid}>{`${String.fromCharCode(65 + r)}${c + 1}`}</Text>
+                    )}
+                  </Pressable>
+                );
+              })}
+            </View>
           ))}
-        </Panel>
-      </SafeAreaView>
-
-      {phase === 'digging' && (
-        <View style={styles.middle}>
-          <Pressable
-            onPress={() => {
-              g.buzz('tap');
-              const b = brushed + 1;
-              setBrushed(b);
-              if (b >= BRUSHES) setPhase('found');
-            }}
-            accessibilityRole="button"
-            accessibilityLabel={t('dig.digA11y')}
-            style={styles.mound}>
-            <Image source={artOf(dig, n - 1).src} style={styles.buried} contentFit="contain" accessible={false} />
-            {/* Layers of soil that come away with each brush. */}
-            {Array.from({ length: BRUSHES }, (_, j) => (
-              <View
-                key={j}
-                pointerEvents="none"
-                style={[
-                  styles.soil,
-                  {
-                    opacity: j < BRUSHES - brushed ? 1 : 0,
-                    bottom: j * 14,
-                    width: 260 - j * 34,
-                    height: 90 - j * 6,
-                    backgroundColor: ['#7A4A26', '#8B5A2E', '#9C6A38', '#A97643', '#B5834F'][j],
-                  },
-                ]}
-              />
-            ))}
-          </Pressable>
-          <Animated.View entering={FadeIn} style={styles.hint}>
-            <Ionicons name="brush" size={18} color={Colors.reward} />
-            <Text style={{ color: '#fff', fontFamily: BOLD }}>{t('dig.tap')}</Text>
-          </Animated.View>
         </View>
-      )}
+        {phase === 'dig' && !allFound && <SecondaryButton title={tx('excavation.digAll')} icon="layers-outline" onPress={() => setOpen(Array.from({ length: COLS * ROWS }, (_, i) => i))} />}
+      </Panel>
 
-      {phase === 'found' && (
-        <View style={styles.middle} pointerEvents="box-none">
-          <Animated.View entering={ZoomIn.springify()} style={{ alignSelf: 'stretch' }}>
-            <Panel style={{ gap: Spacing.sm, alignItems: 'center', borderColor: Colors.reward }}>
-              <Text style={{ fontFamily: BOLD, color: Colors.reward, letterSpacing: 1, fontSize: 12 }}>
-                {t('dig.found')}
-              </Text>
-              <Image
-                source={artOf(dig, n - 1).src}
-                style={{ height: 150, width: 150 * artOf(dig, n - 1).aspect }}
-                contentFit="contain"
-                accessibilityLabel={dig.finds[n - 1]!.name}
-              />
-              <Text style={{ fontFamily: BOLD, color: '#fff', fontSize: 18 }}>{dig.finds[n - 1]!.name}</Text>
-              <Text style={{ color: 'rgba(235,238,255,0.9)', textAlign: 'center' }}>{dig.finds[n - 1]!.clue}</Text>
-              <View style={{ alignSelf: 'stretch' }}>
-                <GoldButton
-                  title={n >= 3 ? t('dig.solve') : t('dig.collect')}
-                  icon={n >= 3 ? 'search' : 'add-circle'}
-                  onPress={() => setPhase(n >= 3 ? 'mystery' : 'walk')}
-                />
-              </View>
-            </Panel>
-          </Animated.View>
-        </View>
-      )}
-
-      {(phase === 'mystery' || phase === 'follow') && (
-        <SafeAreaView edges={['bottom']} style={styles.bottom} pointerEvents="box-none">
-          <View style={styles.shelf}>
-            {dig.finds.map((f, j) => (
-              <Image
-                key={f.name}
-                source={artOf(dig, j).src}
-                style={{ height: 64, width: 64 * artOf(dig, j).aspect }}
-                contentFit="contain"
-                accessibilityLabel={f.name}
-              />
-            ))}
-          </View>
-          {phase === 'mystery' ? (
-            <QuestionCard
-              key={dig.mystery.id}
-              q={dig.mystery.q}
-              options={dig.mystery.options}
-              onAnswer={async (choice) => {
-                const res = await g.answer(
-                  choice === null ? { step: dig.mystery.id, timeout: true } : { step: dig.mystery.id, choice },
-                );
-                if (!res) return null;
-                g.buzz(res.outcome.correct ? 'success' : 'error');
-                return res.outcome;
-              }}
-              rightText={(o) => `${t('dig.unlocked')} +${o.points}`}
-              extra={(o) => (
-                <View style={{ gap: Spacing.sm }}>
-                  {!!o.about && <Text style={{ color: 'rgba(235,238,255,0.9)' }}>{o.about}</Text>}
-                  <GoldButton
-                    title={next}
-                    icon="arrow-forward"
-                    onPress={() => (run.status !== 'playing' || run.hearts <= 0 ? void g.finish() : setPhase('follow'))}
-                  />
+      {found > 0 && (
+        <View style={{ gap: 8 }}>
+          <Eyebrow>{tx('excavation.finds')}</Eyebrow>
+          {hidden.map((s, i) =>
+            open.includes(s) ? (
+              <Animated.View key={s} entering={FadeIn.duration(180)} style={styles.find}>
+                <Artefact art={dig.finds[i]!.art} size={56} />
+                <View style={{ flex: 1, gap: 2 }}>
+                  <Text style={styles.findName}>{dig.finds[i]!.name}</Text>
+                  <Text style={quiz.small}>{dig.finds[i]!.clue}</Text>
                 </View>
-              )}
-              onNext={() => setPhase('follow')}
-            />
-          ) : dig.followUp ? (
-            <QuestionCard
-              key={dig.followUp.id}
-              q={dig.followUp.q}
-              options={dig.followUp.options}
-              onAnswer={async (choice) => {
-                const res = await g.answer(
-                  choice === null ? { step: dig.followUp!.id, timeout: true } : { step: dig.followUp!.id, choice },
-                );
-                if (!res) return null;
-                g.buzz(res.outcome.correct ? 'success' : 'error');
-                return res.outcome;
-              }}
-              nextLabel={k + 1 >= run.digs.length ? seeResults : t('dig.next')}
-              onNext={nextDig}
-            />
-          ) : null}
-        </SafeAreaView>
+              </Animated.View>
+            ) : null,
+          )}
+        </View>
       )}
+
+      {phase === 'dig' && allFound && (
+        <Pressable onPress={() => setPhase('name')} accessibilityRole="button" style={styles.cta}>
+          <Text style={styles.ctaText}>{tx('excavation.identify')}</Text>
+          <Ionicons name="arrow-forward" size={18} color="#fff" />
+        </Pressable>
+      )}
+
+      {phase !== 'dig' && (
+        <QuizCard
+          key={dig.mystery.id}
+          eyebrow={tx('excavation.identify')}
+          q={tx('excavation.who')}
+          options={dig.mystery.options}
+          seconds={seconds}
+          paused={paused || phase !== 'name'}
+          done={dig.mystery.result ? { correct: dig.mystery.result.correct, answer: dig.mystery.result.answer } : undefined}
+          onAnswer={async (choice) => {
+            const res = await g.answer(choice === null ? { step: dig.mystery.id, timeout: true } : { step: dig.mystery.id, choice });
+            if (!res) return null;
+            g.buzz(res.outcome.correct ? 'success' : 'error');
+            return res.outcome;
+          }}
+          explain={() =>
+            dig.mystery.result?.about ? (
+              <Panel>
+                <Eyebrow>{tx('excavation.about')}</Eyebrow>
+                <Text style={quiz.body}>{dig.mystery.result.about}</Text>
+              </Panel>
+            ) : null
+          }
+          onNext={() => (over ? void g.finish() : setPhase('follow'))}
+          nextLabel={tx('quiz.next')}
+        />
+      )}
+
+      {phase === 'follow' && dig.followUp && (
+        <QuizCard
+          key={dig.followUp.id}
+          eyebrow={dig.mystery.result?.answer ?? ''}
+          q={dig.followUp.q}
+          options={dig.followUp.options}
+          seconds={seconds}
+          paused={paused}
+          done={dig.followUp.result ? { correct: dig.followUp.result.correct, answer: dig.followUp.result.answer } : undefined}
+          onAnswer={async (choice) => {
+            const res = await g.answer(choice === null ? { step: dig.followUp!.id, timeout: true } : { step: dig.followUp!.id, choice });
+            if (!res) return null;
+            g.buzz(res.outcome.correct ? 'success' : 'error');
+            return res.outcome;
+          }}
+          onNext={nextDig}
+          nextLabel={lastDig ? tx('quiz.finish') : tx('quiz.next')}
+        />
+      )}
+    </Board>
+  );
+}
+
+/** The how-to example: a find with its clue. */
+function HowTo() {
+  return (
+    <View style={styles.find}>
+      <Artefact art="hero" size={56} />
+      <View style={{ flex: 1, gap: 2 }}>
+        <Text style={styles.findName}>Clay head</Text>
+        <Text style={quiz.small}>Fired clay, with triangular eyes and pierced pupils; more than 2,000 years old.</Text>
+      </View>
     </View>
   );
 }
 
+defineGameFrame('lost-civilization', {
+  HowTo,
+  review: (r) => {
+    const run = r as LostCivilizationRun;
+    return run.digs.flatMap((d) => [
+      ...(d.mystery.result
+        ? [
+            {
+              key: `n${d.id}`,
+              correct: d.mystery.result.correct,
+              main: d.mystery.result.answer,
+              detail: d.finds.map((f) => f.name).join(' · '),
+            },
+          ]
+        : []),
+      ...(d.followUp?.result
+        ? [{ key: `f${d.id}`, correct: d.followUp.result.correct, main: d.followUp.q, detail: tr('games:ui.correct') + `: ${d.followUp.result.answer}` }]
+        : []),
+    ]);
+  },
+});
+
 const styles = StyleSheet.create({
-  top: { position: 'absolute', left: Spacing.md, right: Spacing.md, top: 56 },
-  bottom: { position: 'absolute', left: Spacing.md, right: Spacing.md, bottom: Spacing.md, gap: Spacing.sm },
-  middle: {
-    position: 'absolute',
-    left: Spacing.md,
-    right: Spacing.md,
-    top: 0,
-    bottom: 0,
+  trench: { gap: 4, padding: 4, borderRadius: 10, backgroundColor: '#8C6A45' },
+  trenchRow: { flexDirection: 'row', gap: 4 },
+  square: {
+    flex: 1,
+    aspectRatio: 1,
+    minHeight: 48,
+    maxHeight: 96,
+    borderRadius: 6,
+    backgroundColor: '#C9A87A',
     alignItems: 'center',
     justifyContent: 'center',
-    gap: Spacing.md,
-    paddingTop: 120,
   },
-  mound: { width: 280, height: 220, alignItems: 'center', justifyContent: 'flex-end' },
-  buried: { position: 'absolute', bottom: 20, width: 150, height: 150 },
-  soil: {
-    position: 'absolute',
-    alignSelf: 'center',
-    borderTopLeftRadius: 140,
-    borderTopRightRadius: 140,
-    borderBottomLeftRadius: 30,
-    borderBottomRightRadius: 30,
-  },
-  hint: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 8,
-    paddingHorizontal: 14,
-    paddingVertical: 8,
+  squareOpen: { backgroundColor: '#E9DCC3' },
+  soil: { width: 18, height: 2, borderRadius: 1, backgroundColor: '#B49A72' },
+  grid: { fontFamily: Fonts.bold, fontSize: 11, color: '#6B5236' },
+  find: { flexDirection: 'row', gap: 12, alignItems: 'flex-start', padding: 12, borderRadius: 12, backgroundColor: W.surface, borderWidth: 1, borderColor: W.line },
+  findName: { fontFamily: Fonts.bold, fontSize: 15, color: W.ink },
+  cta: {
+    minHeight: 52,
     borderRadius: 999,
-    backgroundColor: 'rgba(14,18,44,0.82)',
-  },
-  shelf: {
+    backgroundColor: W.ink,
     flexDirection: 'row',
+    alignItems: 'center',
     justifyContent: 'center',
-    alignItems: 'flex-end',
-    gap: 14,
-    padding: 8,
-    borderRadius: 16,
-    backgroundColor: 'rgba(14,18,44,0.7)',
+    gap: 8,
   },
+  ctaText: { fontFamily: Fonts.bold, fontSize: 16, color: '#fff' },
 });

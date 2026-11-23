@@ -5,14 +5,12 @@ import Svg, {
   Defs,
   Ellipse,
   G,
-  LinearGradient,
   Path,
   Rect,
-  Stop,
   Text as SvgText,
 } from 'react-native-svg';
 
-import { backgroundOf } from '@/lib/world/avatar';
+import { backdropOf } from '@/lib/world/avatar';
 import type { AvatarConfig } from '@/lib/world/types';
 
 const BODY = 'M14 124 C14 98 34 87 60 87 C86 87 106 98 106 124 Z';
@@ -74,38 +72,28 @@ function HairFront({ a }: { a: AvatarConfig }) {
 }
 
 function Eyes({ a }: { a: AvatarConfig }) {
-  const dark = '#1B1530';
-  const round = (x: number) => (
-    <G key={x}>
-      <Circle cx={x} cy={58} r={3.4} fill={dark} />
-      <Circle cx={x + 1.1} cy={56.9} r={1.1} fill="#fff" />
+  const dark = '#22233A';
+  const dot = (x: number) => <Ellipse key={x} cx={x} cy={58} rx={2.3} ry={2.6} fill={dark} />;
+  const arc = (x: number) => (
+    <Path key={x} d={`M${x - 3} 58.5 Q${x} 55.5 ${x + 3} 58.5`} stroke={dark} strokeWidth={1.8} fill="none" strokeLinecap="round" />
+  );
+  // Brows give the face its expression; eyes stay small and calm.
+  const brows = (
+    <G key="brows" stroke={shade(a.hairColor, 10)} strokeWidth={1.8} strokeLinecap="round" opacity={0.85}>
+      <Path d="M46 51.5 Q50.5 50 55 51" fill="none" />
+      <Path d="M65 51 Q69.5 50 74 51.5" fill="none" />
     </G>
   );
-  const arc = (x: number) => (
-    <Path
-      key={x}
-      d={`M${x - 4} 59 Q${x} 54 ${x + 4} 59`}
-      stroke={dark}
-      strokeWidth={2.4}
-      fill="none"
-      strokeLinecap="round"
-    />
-  );
-  if (a.eyes === 'happy') return <G>{[arc(51), arc(69)]}</G>;
-  if (a.eyes === 'wink') return <G>{[round(51), arc(69)]}</G>;
-  return <G>{[round(51), round(69)]}</G>;
+  if (a.eyes === 'happy') return <G>{[brows, arc(51), arc(69)]}</G>;
+  if (a.eyes === 'wink') return <G>{[brows, dot(51), arc(69)]}</G>;
+  return <G>{[brows, dot(51), dot(69)]}</G>;
 }
 
 function Mouth({ a }: { a: AvatarConfig }) {
-  if (a.mouth === 'grin')
-    return (
-      <G>
-        <Path d="M51 67 Q60 78 69 67 Z" fill="#5A1E2B" />
-        <Path d="M53 67.5 L67 67.5 L66 70 L54 70 Z" fill="#fff" />
-      </G>
-    );
-  if (a.mouth === 'open') return <Ellipse cx={60} cy={70} rx={4.5} ry={5} fill="#5A1E2B" />;
-  return <Path d="M52 68 Q60 75 68 68" stroke="#5A1E2B" strokeWidth={2.6} fill="none" strokeLinecap="round" />;
+  const lip = shade(a.skin, -70);
+  if (a.mouth === 'grin') return <Path d="M53.5 67.5 Q60 73 66.5 67.5" stroke={lip} strokeWidth={2.2} fill="none" strokeLinecap="round" />;
+  if (a.mouth === 'open') return <Ellipse cx={60} cy={69} rx={3} ry={2.2} fill={lip} />;
+  return <Path d="M55 68 Q60 71 65 68" stroke={lip} strokeWidth={2} fill="none" strokeLinecap="round" />;
 }
 
 function Outfit({ a, clip }: { a: AvatarConfig; clip: string }) {
@@ -300,18 +288,16 @@ function Hat({ id }: { id?: string }) {
   }
 }
 
-/** Layered SVG avatar: backdrop, hair, outfit, face and accessories. */
+/**
+ * A profile portrait drawn in layers: a flat backdrop, hair, outfit, a calm face and any accessories.
+ * Kept quiet on purpose (flat colours, small features), like a well-made profile picture.
+ */
 export function Avatar({ config: a, size = 96, ring }: { config: AvatarConfig; size?: number; ring?: string }) {
   const uid = useId().replace(/[^a-zA-Z0-9]/g, '');
-  const bg = backgroundOf(a.background);
   const skinDark = shade(a.skin, -28);
   return (
     <Svg width={size} height={size} viewBox="0 0 120 120">
       <Defs>
-        <LinearGradient id={`bg${uid}`} x1="0" y1="0" x2="1" y2="1">
-          <Stop offset="0" stopColor={bg[0]} />
-          <Stop offset="1" stopColor={bg[1]} />
-        </LinearGradient>
         <ClipPath id={`clip${uid}`}>
           <Circle cx={60} cy={60} r={60} />
         </ClipPath>
@@ -320,8 +306,7 @@ export function Avatar({ config: a, size = 96, ring }: { config: AvatarConfig; s
         </ClipPath>
       </Defs>
       <G clipPath={`url(#clip${uid})`}>
-        <Rect width={120} height={120} fill={`url(#bg${uid})`} />
-        <Circle cx={100} cy={18} r={22} fill="#fff" opacity={0.08} />
+        <Rect width={120} height={120} fill={backdropOf(a.background)} />
         <HairBack a={a} />
         <Rect x={52} y={72} width={16} height={18} rx={6} fill={skinDark} />
         <Outfit a={a} clip={`body${uid}`} />
@@ -330,8 +315,8 @@ export function Avatar({ config: a, size = 96, ring }: { config: AvatarConfig; s
         <Ellipse cx={60} cy={57} rx={24} ry={26} fill={a.skin} />
         <HairFront a={a} />
         <Eyes a={a} />
-        <Circle cx={45} cy={66} r={3.5} fill="#FF7A93" opacity={0.25} />
-        <Circle cx={75} cy={66} r={3.5} fill="#FF7A93" opacity={0.25} />
+        {/* A soft nose shadow. */}
+        <Path d="M60 60 Q58 64.5 60.5 65" stroke={skinDark} strokeWidth={1.4} fill="none" strokeLinecap="round" opacity={0.6} />
         <Mouth a={a} />
         <Glasses id={a.glasses} />
         <Hat id={a.hat} />

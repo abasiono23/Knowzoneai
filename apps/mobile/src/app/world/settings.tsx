@@ -4,9 +4,11 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Pressable, StyleSheet, Switch, View } from 'react-native';
 
+import { W } from '@/components/games/ui';
 import { ConfirmDialog } from '@/components/world/overlays';
-import { Card, Screen, ScreenHeader, Text } from '@/components/ui';
-import { Colors, Spacing } from '@/constants/theme';
+import { worldStyles } from '@/components/world/world-ui';
+import { Screen, ScreenHeader, Text } from '@/components/ui';
+import { Fonts } from '@/constants/theme';
 import { useFlipStyle } from '@/i18n/provider';
 import { useWorld } from '@/lib/world/store';
 import type { GameSettings } from '@/lib/world/types';
@@ -41,70 +43,58 @@ export default function GameSettingsScreen() {
     <Screen withTabBar={false}>
       <ScreenHeader eyebrow={t('eyebrow')} title={t('settings.title')} />
       {GROUPS.map((g) => (
-        <View key={g.id} style={{ gap: Spacing.xs }}>
-          <Text variant="label" color={Colors.textMuted}>
-            {t(`settings.groups.${g.id}`)}
-          </Text>
-          <Card style={{ gap: Spacing.md }}>
-            {g.rows.map((r) => (
-              <View key={r.key} style={styles.row}>
-                <Ionicons name={r.icon} size={20} color={Colors.primary} />
+        <View key={g.id} style={{ gap: 8 }}>
+          <Text style={styles.eyebrow}>{t(`settings.groups.${g.id}`).toUpperCase()}</Text>
+          <View style={styles.list}>
+            {g.rows.map((r, k) => (
+              <View key={r.key} style={[worldStyles.row, k > 0 && worldStyles.rowLine]}>
+                <Ionicons name={r.icon} size={20} color={W.ink} />
                 <View style={{ flex: 1 }}>
-                  <Text variant="bodyStrong">{t(`settings.rows.${r.key}.label`)}</Text>
-                  <Text variant="small" color={Colors.textMuted} style={{ fontSize: 12 }}>
-                    {t(`settings.rows.${r.key}.hint`)}
-                  </Text>
+                  <Text style={worldStyles.strong}>{t(`settings.rows.${r.key}.label`)}</Text>
+                  <Text style={worldStyles.small}>{t(`settings.rows.${r.key}.hint`)}</Text>
                 </View>
                 <Switch
                   value={settings[r.key]}
                   onValueChange={(v) => updateSettings({ [r.key]: v })}
                   disabled={r.key === 'anonymous' && !settings.leaderboard}
-                  trackColor={{ true: Colors.primary, false: Colors.surfaceRaised }}
+                  trackColor={{ true: W.ink, false: W.lineStrong }}
                   thumbColor="#fff"
                   accessibilityLabel={t(`settings.rows.${r.key}.label`)}
                 />
               </View>
             ))}
-          </Card>
+          </View>
         </View>
       ))}
 
-      <View style={{ gap: Spacing.xs }}>
-        <Text variant="label" color={Colors.textMuted}>
-          {t('settings.more')}
-        </Text>
-        <Card style={{ gap: Spacing.md }}>
+      <View style={{ gap: 8 }}>
+        <Text style={styles.eyebrow}>{t('settings.more').toUpperCase()}</Text>
+        <View style={styles.list}>
+          <LinkRow icon="help-circle-outline" label={t('settings.replayTutorial')} onPress={() => router.push('/world/tutorial')} />
+          <LinkRow line icon="book-outline" label={t('settings.howItWorks')} onPress={() => router.push('/world/intro')} />
           <LinkRow
-            icon="help-circle-outline"
-            label={t('settings.replayTutorial')}
-            onPress={() => router.push('/world/tutorial')}
-          />
-          <LinkRow icon="book-outline" label={t('settings.howItWorks')} onPress={() => router.push('/world/intro')} />
-          <LinkRow
-            icon="color-wand-outline"
+            line
+            icon="person-circle-outline"
             label={t('settings.editAvatar')}
             onPress={() => router.push({ pathname: '/world/avatar/create', params: { edit: '1' } })}
           />
-        </Card>
+        </View>
       </View>
 
-      <Card style={styles.fair}>
-        <Ionicons name="shield-checkmark" size={22} color={Colors.success} />
-        <Text variant="small" style={{ flex: 1 }}>
-          {t('settings.fairPlay')}
-        </Text>
-      </Card>
+      <View style={[styles.list, styles.fair]}>
+        <Ionicons name="shield-checkmark-outline" size={22} color={W.correct} />
+        <Text style={[worldStyles.small, { flex: 1 }]}>{t('settings.fairPlay')}</Text>
+      </View>
 
       <Pressable onPress={() => setConfirm(true)} accessibilityRole="button" style={styles.reset}>
-        <Ionicons name="trash-outline" size={18} color={Colors.danger} />
-        <Text variant="bodyStrong" color={Colors.danger}>
-          {t('settings.reset')}
-        </Text>
+        <Ionicons name="trash-outline" size={18} color={W.wrong} />
+        <Text style={[worldStyles.strong, { color: W.wrong }]}>{t('settings.reset')}</Text>
       </Pressable>
       {done && (
-        <Text variant="small" color={Colors.success} center>
-          {t('settings.resetDone')}
-        </Text>
+        <View style={styles.done} accessibilityLiveRegion="polite">
+          <Ionicons name="checkmark-circle" size={16} color={W.correct} />
+          <Text style={[worldStyles.small, { color: W.correct }]}>{t('settings.resetDone')}</Text>
+        </View>
       )}
       <ConfirmDialog
         visible={confirm}
@@ -125,29 +115,25 @@ export default function GameSettingsScreen() {
   );
 }
 
-function LinkRow({
-  icon,
-  label,
-  onPress,
-}: {
-  icon: keyof typeof Ionicons.glyphMap;
-  label: string;
-  onPress: () => void;
-}) {
+function LinkRow({ icon, label, onPress, line }: { icon: keyof typeof Ionicons.glyphMap; label: string; onPress: () => void; line?: boolean }) {
   const flip = useFlipStyle();
   return (
-    <Pressable onPress={onPress} accessibilityRole="button" accessibilityLabel={label} style={styles.row}>
-      <Ionicons name={icon} size={20} color={Colors.primary} />
-      <Text variant="bodyStrong" style={{ flex: 1 }}>
-        {label}
-      </Text>
-      <Ionicons name="chevron-forward" size={18} color={Colors.textMuted} style={flip} />
+    <Pressable
+      onPress={onPress}
+      accessibilityRole="button"
+      accessibilityLabel={label}
+      style={({ pressed }) => [worldStyles.row, line && worldStyles.rowLine, pressed && { backgroundColor: W.page }]}>
+      <Ionicons name={icon} size={20} color={W.ink} />
+      <Text style={[worldStyles.strong, { flex: 1 }]}>{label}</Text>
+      <Ionicons name="chevron-forward" size={18} color={W.muted} style={flip} />
     </Pressable>
   );
 }
 
 const styles = StyleSheet.create({
-  row: { flexDirection: 'row', alignItems: 'center', gap: Spacing.sm },
-  fair: { flexDirection: 'row', gap: Spacing.sm, alignItems: 'center', borderColor: Colors.success + '55' },
-  reset: { flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 6, padding: Spacing.md },
+  eyebrow: { fontFamily: Fonts.bold, fontSize: 11, letterSpacing: 1.2, color: W.muted },
+  list: { borderRadius: 16, backgroundColor: W.surface, borderWidth: 1, borderColor: W.line, overflow: 'hidden' },
+  fair: { flexDirection: 'row', gap: 10, alignItems: 'center', padding: 14 },
+  reset: { flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 6, padding: 16, minHeight: 48 },
+  done: { flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 6 },
 });

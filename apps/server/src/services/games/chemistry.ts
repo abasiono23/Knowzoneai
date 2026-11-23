@@ -1,16 +1,31 @@
-import { EQUATIONS, COMPLETIONS, type Equation } from '../../data/chemistry/equations.js';
-import { ELEMENTS, MISSIONS, type CardField, type Element } from '../../data/chemistry/elements.js';
-import { EXPERIMENTS, REAGENTS } from '../../data/chemistry/experiments.js';
+import { makeCalc } from '../../data/chemistry/calc.js';
+import { COMPLETIONS, EQUATIONS, HARD_EQUATIONS, type Completion, type Equation } from '../../data/chemistry/equations.js';
+import { EXPERIMENTS, REAGENTS, type Experiment } from '../../data/chemistry/experiments.js';
+import { atomsOf, balance, isBalancedWith } from '../../data/chemistry/formula.js';
+import { GEN_COMPLETIONS, GEN_EXPERIMENTS, GEN_REAGENTS, GEN_RESULTS, GEN_SUBSTANCES } from '../../data/chemistry/generated.js';
+import { ELEMENT_LEVELS, makeMissions, type InfoField } from '../../data/chemistry/missions.js';
 import { MOLECULES, VALENCY } from '../../data/chemistry/molecules.js';
-import { SUBSTANCES, TESTS_BY_LEVEL, type TestId } from '../../data/chemistry/substances.js';
-import { random, type Answer, type Outcome, type Progress } from './english.js';
+import { configOf, configText, PERIODIC, shellsText } from '../../data/chemistry/periodic.js';
+import { countsOf, fromSmiles, hillFormula, sameStructure, structureProblem, type Graph } from '../../data/chemistry/structure.js';
+import { SUBSTANCES, TESTS_BY_LEVEL, type Substance, type TestId } from '../../data/chemistry/substances.js';
+import { MAX_LEVEL, nearest, OPEN_LEVELS, random, type Answer, type Outcome, type Progress } from './english.js';
+
+export { atomsOf };
 
 /**
  * The chemistry lab games. Like the English games, every run is built from a seed and the answers
  * stay on the server: `publicState` is all the app sees, and `check` decides every answer.
+ *
+ * The ladder has ten levels, like the word games (1 Starter … 10 Super hard), mapped to curriculum
+ * depth: 1–3 early secondary, 4–5 WAEC / GCSE / SAT, 6–7 A-level / AP / first-year university, 8–9
+ * upper university, 10 olympiad. Levels 1–4 are open to everyone; later ones open with a star on the
+ * level before. The old ladder had five levels of school content (now levels 1–5, made from the same
+ * data), so stars won there stay on the same level numbers and open the same next levels.
  */
 export const CHEMISTRY_GAMES = ['mixture-lab', 'element-quest', 'molecule-builder', 'reaction-rush', 'mystery-substance'] as const;
 export type ChemistryGame = (typeof CHEMISTRY_GAMES)[number];
+export const CHEM_MAX_LEVEL = MAX_LEVEL;
+export const CHEM_OPEN_LEVELS = OPEN_LEVELS;
 
 type Rand = () => number;
 function shuffle<T>(r: Rand, list: readonly T[]) {
@@ -23,171 +38,157 @@ function shuffle<T>(r: Rand, list: readonly T[]) {
 }
 const sample = <T>(r: Rand, list: readonly T[], n: number) => shuffle(r, list).slice(0, n);
 const sameSet = (a: string[], b: string[]) => a.length === b.length && [...a].sort().join('|') === [...b].sort().join('|');
+const lvl = (level: number) => Math.min(MAX_LEVEL, Math.max(1, level));
+/** Per-level tables (index 0 = level 1). */
+const at = <T>(table: readonly T[], level: number) => table[lvl(level) - 1]!;
 
-// ─── Formulas ─────────────────────────────────────────────────────────────────
+// ─── Content by level ─────────────────────────────────────────────────────────
 
-/** Atoms in a formula: "Ca(OH)2" → { Ca: 1, O: 2, H: 2 }. Handles nested brackets. */
-export function atomsOf(formula: string): Record<string, number> {
-  let i = 0;
-  const group = (): Record<string, number> => {
-    const out: Record<string, number> = {};
-    const add = (part: Record<string, number>, times: number) => {
-      for (const [el, n] of Object.entries(part)) out[el] = (out[el] ?? 0) + n * times;
-    };
-    while (i < formula.length && formula[i] !== ')') {
-      if (formula[i] === '(') {
-        i++;
-        const inner = group();
-        i++; // ')'
-        add(inner, number());
-      } else {
-        const m = /^[A-Z][a-z]?/.exec(formula.slice(i));
-        if (!m) throw new Error(`Bad formula ${formula}`);
-        i += m[0].length;
-        add({ [m[0]]: 1 }, number());
-      }
-    }
-    return out;
-  };
-  const number = () => {
-    const m = /^\d+/.exec(formula.slice(i));
-    if (!m) return 1;
-    i += m[0].length;
-    return Number(m[0]);
-  };
-  return group();
+const ALL_REAGENTS = [...REAGENTS, ...GEN_REAGENTS.filter((g) => !REAGENTS.some((r) => r.id === g.id))];
+const reagent = (id: string) => ALL_REAGENTS.find((x) => x.id === id)!;
+const experimentsAt = (level: number): Experiment[] => nearest({ ...EXPERIMENTS, ...nonEmpty(GEN_EXPERIMENTS) }, lvl(level));
+const completionsAt = (level: number): Completion[] => nearest({ ...COMPLETIONS, ...nonEmpty(GEN_COMPLETIONS) }, lvl(level));
+function nonEmpty<T>(table: Record<number, T[]>) {
+  return Object.fromEntries(Object.entries(table).filter(([, v]) => v.length >= 4)) as Record<number, T[]>;
 }
 
-const gcd = (a: number, b: number): number => (b ? gcd(b, a % b) : a);
+/** Equations to balance: the school ones (1–5) with their numbers, the ionic and redox ones worked out. */
+export const BALANCE_SETS: Record<number, Equation[]> = {
+  ...EQUATIONS,
+  ...Object.fromEntries(
+    Object.entries(HARD_EQUATIONS).map(([level, list]) => [
+      level,
+      list.map(([reactants, products]) => ({ reactants, products, coefficients: balance(reactants, products)! })),
+    ]),
+  ),
+};
 
-/** Balanced with the smallest whole numbers (no zeros, no common factor). */
-export function isBalanced(e: Pick<Equation, 'reactants' | 'products'>, coefficients: number[]) {
-  const species = [...e.reactants, ...e.products];
-  if (coefficients.length !== species.length || coefficients.some((c) => !Number.isInteger(c) || c < 1 || c > 30)) return false;
-  if (coefficients.reduce(gcd) !== 1) return false;
-  const side = (list: string[], offset: number) => {
-    const total: Record<string, number> = {};
-    list.forEach((f, k) => {
-      for (const [el, n] of Object.entries(atomsOf(f))) total[el] = (total[el] ?? 0) + n * coefficients[offset + k]!;
-    });
-    return total;
-  };
-  const left = side(e.reactants, 0);
-  const right = side(e.products, e.reactants.length);
-  const keys = new Set([...Object.keys(left), ...Object.keys(right)]);
-  return [...keys].every((k) => left[k] === right[k]);
-}
+/** Every unknown, with the results of the newer tests filled in. */
+export const ALL_SUBSTANCES: Substance[] = [
+  ...SUBSTANCES.map((s) => ({ ...s, results: { ...GEN_RESULTS[s.id], ...s.results } })),
+  ...GEN_SUBSTANCES,
+];
+const substance = (id: string) => ALL_SUBSTANCES.find((s) => s.id === id)!;
 
 // ─── Molecules ────────────────────────────────────────────────────────────────
 
-export type BuiltMolecule = { atoms: string[]; bonds: [number, number, number][] };
+export type BuiltMolecule = Graph;
+const graphs = new Map<string, Graph>();
+const graphOf = (smiles: string) => {
+  if (!graphs.has(smiles)) graphs.set(smiles, fromSmiles(smiles));
+  return graphs.get(smiles)!;
+};
 
-/** Why a built molecule is wrong, or null when it's right. */
-export function moleculeProblem(target: Record<string, number>, m: BuiltMolecule): 'count' | 'valency' | 'disconnected' | null {
-  const counts: Record<string, number> = {};
-  for (const a of m.atoms) counts[a] = (counts[a] ?? 0) + 1;
-  if (!sameSet(Object.keys(counts), Object.keys(target)) || Object.entries(target).some(([el, n]) => counts[el] !== n)) return 'count';
-  const used = m.atoms.map(() => 0);
-  const seen = new Set<string>();
-  for (const [a, b, order] of m.bonds) {
-    if (a === b || a < 0 || b < 0 || a >= m.atoms.length || b >= m.atoms.length || order < 1 || order > 3) return 'valency';
-    const key = [Math.min(a, b), Math.max(a, b)].join('-');
-    if (seen.has(key)) return 'valency';
-    seen.add(key);
-    used[a]! += order;
-    used[b]! += order;
-  }
-  if (m.atoms.some((el, k) => used[k] !== VALENCY[el])) return 'valency';
-  // Everything joined into one molecule.
-  const parent = m.atoms.map((_, k) => k);
-  const find = (k: number): number => (parent[k] === k ? k : (parent[k] = find(parent[k]!)));
-  for (const [a, b] of m.bonds) parent[find(a)] = find(b);
-  return new Set(m.atoms.map((_, k) => find(k))).size === 1 ? null : 'disconnected';
+/** Why a built molecule is wrong (or 'isomer': valid, but a different structure), or null when right. */
+export function moleculeProblem(smiles: string, m: BuiltMolecule): 'count' | 'valency' | 'disconnected' | 'isomer' | null {
+  const target = graphOf(smiles);
+  const problem = structureProblem(countsOf(target), m);
+  if (problem) return problem;
+  return sameStructure(target, m) ? null : 'isomer';
 }
 
 // ─── Building runs ────────────────────────────────────────────────────────────
 
-const lvl = (level: number) => Math.min(5, Math.max(1, level));
-const reagent = (id: string) => REAGENTS.find((x) => x.id === id)!;
-
+const MIX_OPTIONS = [3, 3, 3, 3, 3, 4, 4, 4, 5, 5];
+const MIX_SHELF = [10, 10, 12, 12, 12, 14, 14, 16, 16, 16];
 function buildMixture(level: number, r: Rand) {
-  const experiments = sample(r, EXPERIMENTS[lvl(level)]!, 3).map((e) => ({ ...e, options: shuffle(r, [e.answer, ...e.wrong]) }));
+  const experiments = sample(r, experimentsAt(level), 3).map((e) => ({
+    ...e,
+    options: shuffle(r, [e.answer, ...sample(r, e.wrong, at(MIX_OPTIONS, level) - 1)]),
+  }));
   const needed = [...new Set(experiments.flatMap((e) => e.reagents))];
   const others = sample(
     r,
-    REAGENTS.filter((x) => !needed.includes(x.id)),
-    Math.max(0, 12 - needed.length),
+    ALL_REAGENTS.filter((x) => !needed.includes(x.id)),
+    Math.max(0, at(MIX_SHELF, level) - needed.length),
   ).map((x) => x.id);
-  return { kind: 'mixture-lab' as const, experiments, shelf: shuffle(r, [...needed, ...others]) };
+  return { kind: 'mixture-lab' as const, level: lvl(level), experiments, shelf: shuffle(r, [...needed, ...others]) };
 }
 
-/** Card details shown for an element (fewer at harder levels). */
-function card(e: Element, show: CardField[]) {
-  return {
-    symbol: e.symbol,
-    name: e.name,
-    ...Object.fromEntries(show.filter((f) => f !== 'shells' || e.shells).map((f) => [f, f === 'shells' ? e.shells : e[f]])),
-  };
-}
-
+const QUEST_MISSIONS = [3, 3, 3, 3, 3, 4, 4, 4, 4, 4];
 function buildElementQuest(level: number, r: Rand) {
-  const missions = sample(r, MISSIONS[lvl(level)]!, 3).map((m) => {
-    const pool = ELEMENTS.filter((e) => !m.pool || m.pool(e));
-    const targets = sample(r, pool.filter(m.test), Math.min(4, Math.max(2, Math.floor(r() * 3) + 2)));
-    const distractors = sample(
-      r,
-      pool.filter((e) => !m.test(e)),
-      9 - targets.length,
-    );
-    return {
-      id: m.id,
-      text: m.text,
-      show: m.show,
-      cabinet: shuffle(r, [...targets, ...distractors]).map((e) => e.symbol),
-      targets: targets.map((e) => e.symbol),
-    };
-  });
-  return { kind: 'element-quest' as const, missions };
+  return { kind: 'element-quest' as const, level: lvl(level), missions: makeMissions(lvl(level), r, at(QUEST_MISSIONS, level)) };
 }
 
+const MOLECULE_COUNT = [4, 4, 4, 4, 4, 4, 4, 4, 4, 4];
 function buildMolecules(level: number, r: Rand) {
-  const molecules = sample(r, MOLECULES[lvl(level)]!, 4).map((mol) => {
-    // The tray holds the atoms you need plus one or two you don't.
+  const molecules = sample(r, nearest(MOLECULES, lvl(level)), at(MOLECULE_COUNT, level)).map((mol) => {
+    const atoms = countsOf(graphOf(mol.smiles));
+    // The tray holds the atoms you need plus decoys (more at higher levels).
     const extra = shuffle(
       r,
-      Object.keys(VALENCY).filter((el) => !(el in mol.atoms)),
-    ).slice(0, level >= 3 ? 2 : 1);
-    return { ...mol, palette: [...Object.keys(mol.atoms), ...extra] };
+      Object.keys(VALENCY).filter((el) => !(el in atoms) && el !== 'P' && el !== 'B'),
+    ).slice(0, level >= 6 ? 3 : level >= 3 ? 2 : 1);
+    return { ...mol, atoms, palette: [...Object.keys(atoms), ...extra] };
   });
-  return { kind: 'molecule-builder' as const, molecules };
+  return { kind: 'molecule-builder' as const, level: lvl(level), molecules };
 }
 
-const RUSH_SECONDS = [100, 95, 90, 90, 90];
+/** Reaction Rush per level: how many of each task, and the clock (the relaxed mode has none). */
+const RUSH_MIX: [balance: number, complete: number, calc: number][] = [
+  [6, 2, 0],
+  [6, 2, 0],
+  [5, 2, 1],
+  [4, 2, 2],
+  [4, 2, 2],
+  [3, 2, 2],
+  [3, 1, 3],
+  [2, 2, 3],
+  [2, 1, 4],
+  [2, 1, 4],
+];
+export const RUSH_SECONDS = [100, 100, 110, 120, 130, 170, 200, 220, 260, 300];
 function buildRush(level: number, r: Rand) {
-  const balance = sample(r, EQUATIONS[lvl(level)]!, 6).map((e) => ({ type: 'balance' as const, ...e }));
-  const complete = sample(r, COMPLETIONS[lvl(level)]!, 3).map((c) => ({ type: 'complete' as const, ...c, options: shuffle(r, [c.answer, ...c.wrong]) }));
-  // Mostly balancing, with completions mixed in.
-  const tasks = shuffle(r, [...balance, ...complete]);
-  return { kind: 'reaction-rush' as const, seconds: RUSH_SECONDS[lvl(level) - 1]!, tasks };
+  const [nb, nc, nk] = at(RUSH_MIX, level);
+  const balanceSet = nearest(BALANCE_SETS, lvl(level));
+  const balanceTasks = sample(r, balanceSet, nb).map((e) => ({ type: 'balance' as const, reactants: e.reactants, products: e.products, coefficients: e.coefficients }));
+  const completeTasks = sample(r, completionsAt(level), nc).map((c) => ({
+    type: 'complete' as const,
+    reactants: c.reactants,
+    answer: c.answer,
+    options: shuffle(r, [c.answer, ...sample(r, c.wrong, level >= 6 ? 3 : 2)]),
+  }));
+  const calcTasks = Array.from({ length: nk }, () => ({ type: 'calc' as const, ...makeCalc(lvl(level), r) }));
+  // Balancing first at low levels; mixed in higher up.
+  const tasks = level <= 5 ? [...shuffle(r, balanceTasks), ...shuffle(r, [...completeTasks, ...calcTasks])] : shuffle(r, [...balanceTasks, ...completeTasks, ...calcTasks]);
+  return { kind: 'reaction-rush' as const, level: lvl(level), seconds: at(RUSH_SECONDS, level), tasks };
+}
+
+const MYSTERY_CASES = [3, 3, 3, 3, 3, 4, 4, 4, 4, 4];
+const MYSTERY_SUSPECTS = [4, 4, 4, 4, 4, 5, 5, 6, 6, 6];
+/** Most tests you may run on one unknown (none = no limit). */
+export const MYSTERY_MAX_TESTS = [0, 0, 0, 0, 0, 0, 0, 5, 4, 3];
+
+/** Whether some set of at most `max` tests tells `a` apart from every other suspect. */
+function separable(a: Substance, others: Substance[], tests: TestId[], max: number) {
+  const differs = (t: TestId, o: Substance) => a.results[t] !== o.results[t];
+  if (!max) return others.every((o) => a.appearance !== o.appearance || tests.some((t) => differs(t, o)));
+  const combos = (k: number, from = 0): TestId[][] =>
+    k === 0 ? [[]] : tests.slice(from).flatMap((t, i) => combos(k - 1, from + i + 1).map((c) => [t, ...c]));
+  for (let k = 0; k <= max; k++)
+    for (const c of combos(k)) if (others.every((o) => a.appearance !== o.appearance || c.some((t) => differs(t, o)))) return true;
+  return false;
 }
 
 function buildMystery(level: number, r: Rand) {
-  const tests = TESTS_BY_LEVEL[lvl(level)]!;
-  const pool = SUBSTANCES.filter((s) => s.level <= lvl(level));
-  const signature = (id: string) => {
-    const s = SUBSTANCES.find((x) => x.id === id)!;
-    return [s.appearance, ...tests.map((t) => s.results[t])].join('|');
-  };
-  const cases = sample(r, pool, 3).map((unknown) => {
-    // Suspects the available tests can tell apart from the unknown.
+  const tests = nearest(TESTS_BY_LEVEL, lvl(level));
+  const max = at(MYSTERY_MAX_TESTS, level);
+  const pool = ALL_SUBSTANCES.filter((s) => s.level <= lvl(level) && tests.every((t) => s.results[t]));
+  // Harder levels prefer the newer, closer-matched unknowns.
+  const preferred = level >= 6 ? pool.filter((s) => s.level >= 4) : pool;
+  const cases: { unknown: string; suspects: string[] }[] = [];
+  for (const unknown of shuffle(r, preferred.length >= 6 ? preferred : pool)) {
+    if (cases.length >= at(MYSTERY_CASES, level)) break;
+    if (cases.some((c) => c.unknown === unknown.id)) continue;
     const others = sample(
       r,
-      pool.filter((s) => s.id !== unknown.id && signature(s.id) !== signature(unknown.id)),
-      3,
+      pool.filter((s) => s.id !== unknown.id && (s.appearance !== unknown.appearance || tests.some((t) => s.results[t] !== unknown.results[t]))),
+      at(MYSTERY_SUSPECTS, level) - 1,
     );
-    return { unknown: unknown.id, suspects: shuffle(r, [unknown.id, ...others.map((s) => s.id)]) };
-  });
-  return { kind: 'mystery-substance' as const, tests, cases };
+    if (others.length < 3 || !separable(unknown, others, tests, max)) continue;
+    cases.push({ unknown: unknown.id, suspects: shuffle(r, [unknown.id, ...others.map((s) => s.id)]) });
+  }
+  return { kind: 'mystery-substance' as const, level: lvl(level), tests, maxTests: max, cases };
 }
 
 export type ChemPuzzle =
@@ -231,11 +232,37 @@ export function chemStepCount(p: ChemPuzzle) {
 
 // ─── What the app sees ────────────────────────────────────────────────────────
 
+/** One periodic-table cell, with only the facts this level lets you look up. */
+function cell(a: (typeof PERIODIC)[number], info: InfoField[]) {
+  const has = (f: InfoField) => info.includes(f);
+  return {
+    number: a.number,
+    symbol: a.symbol,
+    group: a.group,
+    period: a.period,
+    category: a.category,
+    ...(has('name') && { name: a.name }),
+    ...(has('state') && { state: a.state }),
+    ...(has('shells') && a.number <= 20 && { shells: shellsText(a.number) }),
+    ...(has('config') && { config: configText(configOf(a.number)) }),
+    ...(has('mass') && { mass: a.mass }),
+    ...(has('en') && a.en && { en: a.en }),
+    ...(has('ie1') && a.ie1 && { ie1: a.ie1 }),
+    ...(has('fact') && a.fact && { fact: a.fact }),
+  };
+}
+
+/** "C2H6O" style formula of a molecule target. */
+const formulaOf = (smiles: string) => hillFormula(countsOf(graphOf(smiles)));
+/** Reaction levels hide the product's formula from level 9 (working it out is part of the task). */
+const showFormula = (level: number, task?: string) => !task || level <= 8;
+
 export function chemPublicState({ puzzle: p, progress }: ChemState) {
   const results = progress.results;
   switch (p.kind) {
     case 'mixture-lab':
       return {
+        level: p.level,
         shelf: p.shelf.map(reagent),
         experiments: p.experiments.map((e, i) => ({
           id: i,
@@ -248,56 +275,77 @@ export function chemPublicState({ puzzle: p, progress }: ChemState) {
           ...(results[i] && { result: { ...results[i], answer: e.answer, equation: e.equation } }),
         })),
       };
-    case 'element-quest':
+    case 'element-quest': {
+      const spec = ELEMENT_LEVELS[p.level ?? 1]!;
+      const upTo = Math.max(...p.missions.map((m) => m.view.upTo));
       return {
+        level: p.level,
+        table: PERIODIC.filter((a) => a.number <= upTo).map((a) => cell(a, spec.info)),
         missions: p.missions.map((m, i) => ({
           id: i,
           text: m.text,
-          show: m.show,
-          cabinet: m.cabinet.map((sym) =>
-            card(
-              ELEMENTS.find((e) => e.symbol === sym)!,
-              m.show,
-            ),
-          ),
-          ...(results[i] && { result: { ...results[i], answer: m.targets } }),
+          single: m.single,
+          upTo: m.view.upTo,
+          colours: m.view.colours,
+          ...(results[i] && { result: { ...results[i], answer: m.targets, why: m.why } }),
         })),
       };
+    }
     case 'molecule-builder':
       return {
+        level: p.level,
         valency: VALENCY,
-        molecules: p.molecules.map((m, i) => ({
-          id: i,
-          name: m.name,
-          formula: m.formula,
-          atoms: m.atoms,
-          palette: m.palette,
-          ...(results[i] && { result: results[i] }),
-        })),
+        /** Hydrogens can be filled in with one tap from level 4 (the skeleton is the point). */
+        autoHydrogens: p.level >= 4,
+        molecules: p.molecules.map((m, i) => {
+          const done = results[i];
+          return {
+            id: i,
+            name: m.task && !done ? null : m.name,
+            task: m.task ?? null,
+            formula: showFormula(p.level, m.task) || done ? formulaOf(m.smiles) : null,
+            atoms: showFormula(p.level, m.task) || done ? m.atoms : null,
+            palette: m.palette,
+            ...(done && { result: { ...done, smiles: m.smiles, structure: graphOf(m.smiles) } }),
+          };
+        }),
       };
     case 'reaction-rush':
       return {
+        level: p.level,
         seconds: p.seconds,
         tasks: p.tasks.map((t, i) => ({
           id: i,
           ...(t.type === 'balance'
             ? { type: t.type, reactants: t.reactants, products: t.products }
-            : { type: t.type, reactants: t.reactants, options: t.options }),
-          ...(results[i] && { result: { ...results[i], answer: t.type === 'balance' ? t.coefficients : t.answer } }),
+            : t.type === 'complete'
+              ? { type: t.type, reactants: t.reactants, options: t.options }
+              : { type: t.type, prompt: t.prompt, options: t.options }),
+          ...(results[i] && {
+            result: {
+              ...results[i],
+              answer: t.type === 'balance' ? t.coefficients : t.answer,
+              ...(t.type === 'calc' && { working: t.working }),
+            },
+          }),
         })),
       };
     case 'mystery-substance':
       return {
+        level: p.level,
         tests: p.tests,
+        maxTests: p.maxTests ?? 0,
         cases: p.cases.map((c, i) => {
-          const unknown = SUBSTANCES.find((s) => s.id === c.unknown)!;
+          const unknown = substance(c.unknown);
           const ran = (progress.tests?.[i] ?? []) as TestId[];
           return {
             id: i,
             appearance: unknown.appearance,
-            suspects: c.suspects.map((id) => SUBSTANCES.find((s) => s.id === id)!.name),
+            suspects: c.suspects.map((id) => substance(id).name),
             results: Object.fromEntries(ran.map((t) => [t, unknown.results[t]])),
-            ...(results[i] && { result: { ...results[i], answer: unknown.name } }),
+            ...(results[i] && {
+              result: { ...results[i], answer: unknown.name, all: Object.fromEntries(p.tests.map((t) => [t, unknown.results[t]])) },
+            }),
           };
         }),
       };
@@ -307,49 +355,54 @@ export function chemPublicState({ puzzle: p, progress }: ChemState) {
 // ─── Checking ─────────────────────────────────────────────────────────────────
 
 export function chemCheck({ puzzle: p, progress }: ChemState, a: Answer): Outcome {
-  const at = progress.at;
+  const step = progress.at;
   switch (p.kind) {
     case 'mixture-lab': {
-      const e = p.experiments[at]!;
+      const e = p.experiments[step]!;
       const correct = !a.timeout && sameSet(a.reagents ?? [], e.reagents) && a.choice === e.answer;
       return { correct, points: correct ? 100 : 0, heartLost: !correct, advance: true, reveal: { answer: e.answer, equation: e.equation } };
     }
     case 'element-quest': {
-      const m = p.missions[at]!;
+      const m = p.missions[step]!;
       const correct = !a.timeout && sameSet(a.symbols ?? [], m.targets);
-      return { correct, points: correct ? 100 : 0, heartLost: !correct, advance: true, reveal: { answer: m.targets } };
+      return { correct, points: correct ? 100 : 0, heartLost: !correct, advance: true, reveal: { answer: m.targets, why: m.why } };
     }
     case 'molecule-builder': {
-      const m = p.molecules[at]!;
-      if (a.timeout) return { correct: false, points: 0, heartLost: false, advance: true, reveal: {} };
-      const problem = moleculeProblem(m.atoms, { atoms: a.atoms ?? [], bonds: a.bonds ?? [] });
+      const m = p.molecules[step]!;
+      if (a.timeout) return { correct: false, points: 0, heartLost: false, advance: true, reveal: { answer: m.name } };
+      const problem = moleculeProblem(m.smiles, { atoms: a.atoms ?? [], bonds: a.bonds ?? [] });
       if (problem) return { correct: false, points: 0, heartLost: true, retry: true, advance: false, reveal: { problem } };
-      return { correct: true, points: 100, heartLost: false, advance: true, reveal: {} };
+      return { correct: true, points: 100, heartLost: false, advance: true, reveal: { answer: m.name } };
     }
     case 'reaction-rush': {
-      const t = p.tasks[at]!;
-      const correct = !a.timeout && (t.type === 'balance' ? isBalanced(t, a.coefficients ?? []) : a.choice === t.answer);
+      const t = p.tasks[step]!;
+      const correct =
+        !a.timeout &&
+        (t.type === 'balance' ? isBalancedWith(t.reactants, t.products, a.coefficients ?? []) : a.choice === t.answer);
       const combo = correct ? Math.min(progress.streak + 1, 5) : 0;
       return {
         correct,
         points: correct ? 100 + 25 * (combo - 1) : 0,
         heartLost: false,
         advance: true,
-        reveal: { answer: t.type === 'balance' ? t.coefficients : t.answer, combo },
+        reveal: { answer: t.type === 'balance' ? t.coefficients : t.answer, combo, ...(t.type === 'calc' && { working: t.working }) },
       };
     }
     case 'mystery-substance': {
-      const c = p.cases[at]!;
-      const unknown = SUBSTANCES.find((s) => s.id === c.unknown)!;
+      const c = p.cases[step]!;
+      const unknown = substance(c.unknown);
       if (a.test) {
-        // Running a test: shows its result and moves nothing on.
-        if (!p.tests.includes(a.test as TestId)) return { correct: false, points: 0, heartLost: false, advance: false, reveal: {} };
+        // Running a test: shows its result and moves nothing on (within the level's test limit).
+        const ran = progress.tests?.[step] ?? [];
+        const limit = p.maxTests ?? 0;
+        if (!p.tests.includes(a.test as TestId) || (limit && !ran.includes(a.test) && ran.length >= limit))
+          return { correct: false, points: 0, heartLost: false, advance: false, reveal: {} };
         return { correct: false, points: 0, heartLost: false, advance: false, reveal: { test: a.test, result: unknown.results[a.test as TestId] } };
       }
       const correct = !a.timeout && a.choice === unknown.name;
       // Fewer tests, more points.
-      const ran = progress.tests?.[at]?.length ?? 0;
-      const points = correct ? 100 + Math.max(0, p.tests.length - ran) * 20 : 0;
+      const ran = progress.tests?.[step]?.length ?? 0;
+      const points = correct ? 100 + Math.max(0, Math.min(p.tests.length, 6) - ran) * 20 : 0;
       return { correct, points, heartLost: !correct, advance: true, reveal: { answer: unknown.name } };
     }
   }
@@ -362,15 +415,16 @@ export function chemIsOver({ puzzle: p, progress }: ChemState, hearts: number) {
 
 export function chemStars({ puzzle: p, progress }: ChemState, hearts: number) {
   const right = Object.values(progress.results).filter((x) => x.correct).length;
+  const total = chemStepCount(p);
   switch (p.kind) {
     case 'reaction-rush': {
       const share = right / p.tasks.length;
       return share >= 0.85 ? 3 : share >= 0.55 ? 2 : share >= 0.3 ? 1 : 0;
     }
     case 'molecule-builder':
-      return right >= 4 ? (hearts >= 2 ? 3 : 2) : right >= 3 ? 2 : right >= 2 ? 1 : 0;
+      return right >= total ? (hearts >= 2 ? 3 : 2) : right >= total - 1 ? 2 : right >= 2 ? 1 : 0;
     default:
-      return right >= 3 ? 3 : right >= 2 ? 2 : right >= 1 ? 1 : 0;
+      return right >= total ? 3 : right >= total - 1 ? 2 : right >= 1 ? 1 : 0;
   }
 }
 
@@ -379,32 +433,34 @@ export function chemStars({ puzzle: p, progress }: ChemState, hearts: number) {
  * towards it, not to give it away).
  */
 export function chemHelpContext({ puzzle: p, progress }: ChemState) {
-  const at = Math.min(progress.at, chemStepCount(p) - 1);
+  const step = Math.min(progress.at, chemStepCount(p) - 1);
   switch (p.kind) {
     case 'mixture-lab': {
-      const e = p.experiments[at]!;
+      const e = p.experiments[step]!;
       return `Experiment: ${e.title}. Mix ${reagent(e.reagents[0]).name} with ${reagent(e.reagents[1]).name} in a ${e.glassware}. Observation: ${e.observation.text}. Question: ${e.question} Options: ${e.options.join('; ')}. Correct answer: ${e.answer}. Equation: ${e.equation}.`;
     }
     case 'element-quest': {
-      const m = p.missions[at]!;
-      return `Mission: ${m.text}. Elements in the cabinet: ${m.cabinet.join(', ')}. Correct ones: ${m.targets.join(', ')}.`;
+      const m = p.missions[step]!;
+      return `Periodic table mission: ${m.text}. Correct elements: ${m.targets.join(', ')}. Why: ${m.why}`;
     }
     case 'molecule-builder': {
-      const m = p.molecules[at]!;
-      return `Build ${m.name} (${m.formula}) from atoms with bonds. Usual bonds per atom: ${Object.entries(VALENCY)
+      const m = p.molecules[step]!;
+      return `${m.task ? `Task: ${m.task}. The answer is ${m.name}` : `Build ${m.name}`} (${formulaOf(m.smiles)}, SMILES ${m.smiles}) from atoms with bonds. Usual bonds per atom: ${Object.entries(VALENCY)
         .map(([k, v]) => `${k} ${v}`)
         .join(', ')}.`;
     }
     case 'reaction-rush': {
-      const t = p.tasks[at]!;
+      const t = p.tasks[step]!;
       return t.type === 'balance'
-        ? `Balance: ${t.reactants.join(' + ')} → ${t.products.join(' + ')}. Correct coefficients in order: ${t.coefficients.join(', ')}.`
-        : `Complete: ${t.reactants} ?. Options: ${t.options.join('; ')}. Correct: ${t.answer}.`;
+        ? `Balance: ${t.reactants.join(' + ')} → ${t.products.join(' + ')} (charges after ^). Correct coefficients in order: ${t.coefficients.join(', ')}.`
+        : t.type === 'complete'
+          ? `Complete: ${t.reactants} ?. Options: ${t.options.join('; ')}. Correct: ${t.answer}.`
+          : `Calculation: ${t.prompt} Options: ${t.options.join('; ')}. Correct: ${t.answer}. Working: ${t.working}`;
     }
     case 'mystery-substance': {
-      const c = p.cases[at]!;
-      const unknown = SUBSTANCES.find((s) => s.id === c.unknown)!;
-      return `Identify an unknown liquid (${unknown.appearance}). Suspects: ${c.suspects.map((id) => SUBSTANCES.find((s) => s.id === id)!.name).join('; ')}. Tests available: ${p.tests.join(', ')}. Results already seen: ${JSON.stringify(progress.tests?.[at] ?? [])}. It is ${unknown.name}; its results: ${JSON.stringify(unknown.results)}.`;
+      const c = p.cases[step]!;
+      const unknown = substance(c.unknown);
+      return `Identify an unknown (${unknown.appearance}). Suspects: ${c.suspects.map((id) => substance(id).name).join('; ')}. Tests available: ${p.tests.join(', ')}. Results already seen: ${JSON.stringify(progress.tests?.[step] ?? [])}. It is ${unknown.name}; its results: ${JSON.stringify(unknown.results)}.`;
     }
   }
 }

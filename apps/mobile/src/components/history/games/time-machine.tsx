@@ -1,243 +1,192 @@
-import { useEffect, useState } from 'react';
+import { t as i18nT } from 'i18next';
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { StyleSheet, View } from 'react-native';
-import Animated, {
-  Easing,
-  FadeIn,
-  useAnimatedStyle,
-  useSharedValue,
-  withRepeat,
-  withTiming,
-  ZoomIn,
-} from 'react-native-reanimated';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import Svg, { Circle } from 'react-native-svg';
+import Svg, { Circle, G, Line, Path, Text as SvgText } from 'react-native-svg';
 
-import { Backdrop } from '@/components/lab/backdrop';
-import { LabHall } from '@/components/lab/hall';
-import { BOLD, Panel } from '@/components/lab/hud';
-import { QuestionCard } from '@/components/space/question-card';
+import { W } from '@/components/games/ui';
+import { defineGameFrame } from '@/components/lab/contract';
 import { Text } from '@/components/ui';
-import { Colors, Spacing } from '@/constants/theme';
+import { Fonts } from '@/constants/theme';
 import type { TimeMachineRun } from '@/lib/api';
-import { ERA_SCENES, eraPlace, type EraSpot } from '@/lib/games/history';
 import type { HistoryGame } from '@/lib/games/use-lab-run';
 
-import { OrderCard } from '../order-card';
+import { Board, Eyebrow, OrderList, Panel, QuizCard, quiz } from '../quiz';
 
-const SPOTS: EraSpot[] = ['a', 'b'];
+/** Translation outside React (review lists for the results screen). */
+const tr = i18nT as unknown as (key: string, options?: Record<string, unknown>) => string;
+
+type Era = TimeMachineRun['eras'][number];
 
 /**
- * History Time Machine: travel to each era in turn (earliest first), walk around the scene, and solve
- * the challenge waiting at each marked spot.
+ * Time Machine: a journey through real moments in history, earliest first. Each stop has a museum
+ * label and two challenges (a question, or putting events in order). The journey is drawn as a
+ * timeline across the top.
  */
 export function TimeMachine({ g, run, paused }: { g: HistoryGame; run: TimeMachineRun; paused: boolean }) {
   const { t } = useTranslation('history');
-  const next = useTranslation('space').t('ui.next');
-  const seeResults = useTranslation('lab').t('result.see');
-  const [k, setK] = useState(() => Math.min(Math.floor(run.at / 2), run.eras.length - 1));
+  const tx = t as unknown as (k: string, o?: Record<string, unknown>) => string;
+  const total = run.eras.length;
+  const [at, setAt] = useState(() => Math.min(run.at, total * 2 - 1));
+  const k = Math.floor(at / 2);
+  const j = at % 2;
   const era = run.eras[k]!;
-  const answered = era.challenges.filter((c) => c.result).length;
-  const [phase, setPhase] = useState<'travel' | 'walk' | 'challenge'>(() => (answered ? 'walk' : 'travel'));
-  const [visited, setVisited] = useState<EraSpot[]>(() => SPOTS.slice(0, answered));
-
-  useEffect(() => {
-    if (phase !== 'travel') return;
-    const id = setTimeout(() => setPhase('walk'), 2200);
-    return () => clearTimeout(id);
-  }, [phase]);
-
-  // The challenge on screen stays put after it's answered (so its result shows), until Next.
-  const [active, setActive] = useState<number | null>(null);
-  const current =
-    era.challenges.find((c) => c.id === active) ?? era.challenges.find((c) => !c.result) ?? era.challenges.at(-1)!;
-  const last = k + 1 >= run.eras.length;
-  const after = () => {
-    const over = run.status !== 'playing' || run.hearts <= 0 || run.at >= run.total;
-    if (visited.length < 2 && !over) {
-      setPhase('walk');
-      return;
-    }
-    if (over || last) {
-      void g.finish();
-      return;
-    }
-    setK(k + 1);
-    setVisited([]);
-    setPhase('travel');
-  };
-  const nextLabel = visited.length < 2 ? next : last ? seeResults : t('time.nextEra');
-
-  if (phase === 'travel') return <Travel scene={ERA_SCENES[era.id] ?? ERA_SCENES.independence!} when={era.when} />;
+  const c = era.challenges[j]!;
+  const over = run.status !== 'playing' || run.hearts <= 0;
+  const last = at >= total * 2 - 1 || over;
+  const next = () => (last || run.at >= total * 2 ? void g.finish() : setAt(at + 1));
+  const nextLabel = last ? tx('quiz.finish') : j === 1 ? tx('quiz.nextStop') : tx('quiz.next');
+  const eyebrow = tx('quiz.challenge', { n: j + 1 });
+  const seconds = run.seconds ?? 0;
 
   return (
-    <View style={StyleSheet.absoluteFill}>
-      <LabHall<EraSpot>
-        key={era.id}
-        place={eraPlace(era.id)}
-        ns="history"
-        names={{ a: era.spots[0], b: era.spots[1] }}
-        openLabel={era.spots[visited.length] ?? era.spots[1]}
-        badges={Object.fromEntries(visited.map((s) => [s, '✓']))}
-        goal={SPOTS.find((s) => !visited.includes(s)) ?? null}
-        paused={paused || phase !== 'walk'}
-        topReserve={250}
-        onOpen={(s) => {
-          if (visited.includes(s) || visited.length >= 2) return;
-          g.buzz('tap');
-          setVisited([...visited, s]);
-          setActive((era.challenges.find((c) => !c.result) ?? era.challenges.at(-1)!).id);
-          setPhase('challenge');
-        }}
-      />
-
-      <SafeAreaView edges={['top']} style={styles.top} pointerEvents="none">
-        <Timeline eras={run.eras} at={k} />
-        <Panel style={{ gap: 2 }}>
-          <Text style={{ fontFamily: BOLD, color: Colors.reward, fontSize: 12 }}>
-            {era.when} · {era.place}
-          </Text>
-          <Text style={{ fontFamily: BOLD, color: '#fff', fontSize: 15 }}>
-            {t('time.objective', { n: k + 1, total: run.eras.length, title: era.title })}
-          </Text>
-          <Text style={{ color: 'rgba(235,238,255,0.9)', fontSize: 12 }}>{era.intro}</Text>
-        </Panel>
-      </SafeAreaView>
-
-      {phase === 'challenge' && (
-        <SafeAreaView edges={['bottom']} style={styles.bottom} pointerEvents="box-none">
-          {current.type === 'order' ? (
-            <OrderCard
-              key={current.id}
-              label={t('time.challenge', { n: (current.id % 2) + 1, total: 2 })}
-              q={current.q}
-              items={current.items}
-              onAnswer={async (order) => {
-                const res = await g.answer({ step: current.id, order });
-                if (!res) return null;
-                g.buzz(res.outcome.correct ? 'success' : 'error');
-                return res.outcome;
-              }}
-              nextLabel={nextLabel}
-              onNext={after}
-            />
-          ) : (
-            <QuestionCard
-              key={current.id}
-              label={t('time.challenge', { n: (current.id % 2) + 1, total: 2 })}
-              q={current.q}
-              options={current.options}
-              onAnswer={async (choice) => {
-                const res = await g.answer(
-                  choice === null ? { step: current.id, timeout: true } : { step: current.id, choice },
-                );
-                if (!res) return null;
-                g.buzz(res.outcome.correct ? 'success' : 'error');
-                return res.outcome;
-              }}
-              nextLabel={nextLabel}
-              onNext={after}
-            />
-          )}
-        </SafeAreaView>
+    <Board>
+      <Timeline eras={run.eras} at={k} />
+      <Placard era={era} n={k + 1} total={total} />
+      {c.type === 'order' ? (
+        <OrderList
+          key={c.id}
+          eyebrow={eyebrow}
+          q={c.q}
+          items={c.items}
+          seconds={seconds * 2}
+          paused={paused}
+          done={c.result}
+          onAnswer={async (order) => {
+            const res = await g.answer(order ? { step: c.id, order } : { step: c.id, timeout: true });
+            if (!res) return null;
+            g.buzz(res.outcome.correct ? 'success' : 'error');
+            return res.outcome;
+          }}
+          onNext={next}
+          nextLabel={nextLabel}
+        />
+      ) : (
+        <QuizCard
+          key={c.id}
+          eyebrow={eyebrow}
+          q={c.q}
+          options={c.options}
+          seconds={seconds}
+          paused={paused}
+          done={c.result ? { correct: c.result.correct, answer: c.result.answer } : undefined}
+          onAnswer={async (choice) => {
+            const res = await g.answer(choice === null ? { step: c.id, timeout: true } : { step: c.id, choice });
+            if (!res) return null;
+            g.buzz(res.outcome.correct ? 'success' : 'error');
+            return res.outcome;
+          }}
+          onNext={next}
+          nextLabel={nextLabel}
+        />
       )}
-    </View>
+    </Board>
   );
 }
 
-/** The run's eras as dots on a line, the current one glowing. */
-function Timeline({ eras, at }: { eras: TimeMachineRun['eras']; at: number }) {
-  return (
-    <View style={styles.timeline}>
-      <View style={styles.line} />
-      {eras.map((e, k) => (
-        <View key={e.id} style={{ alignItems: 'center', flex: 1 }}>
-          <View style={[styles.dot, k < at && { backgroundColor: Colors.success }, k === at && styles.dotOn]} />
-          <Text
-            numberOfLines={1}
-            style={{ fontSize: 11, fontFamily: BOLD, color: k === at ? Colors.reward : 'rgba(235,238,255,0.75)' }}>
-            {e.when}
-          </Text>
-        </View>
-      ))}
-    </View>
-  );
-}
-
-/** Through the portal: the era appears behind a swirl of light. */
-function Travel({ scene, when }: { scene: number; when: string }) {
+/** The museum label of a stop: date and place, title, and what is happening. */
+function Placard({ era, n, total }: { era: Era; n: number; total: number }) {
   const { t } = useTranslation('history');
-  const spin = useSharedValue(0);
-  const open = useSharedValue(0);
-  useEffect(() => {
-    spin.set(withRepeat(withTiming(360, { duration: 1400, easing: Easing.linear }), -1));
-    open.set(withTiming(1, { duration: 2000, easing: Easing.in(Easing.quad) }));
-  }, [spin, open]);
-  const swirl = useAnimatedStyle(() => ({
-    transform: [{ rotate: `${spin.value}deg` }, { scale: 0.6 + open.value * 3 }],
-    opacity: 1 - open.value * 0.85,
-  }));
-  const veil = useAnimatedStyle(() => ({ opacity: 1 - open.value }));
+  const tx = t as unknown as (k: string, o?: Record<string, unknown>) => string;
   return (
-    <View style={StyleSheet.absoluteFill}>
-      <Backdrop source={scene} />
-      <Animated.View style={[StyleSheet.absoluteFill, { backgroundColor: '#1A0E3A' }, veil]} />
-      <View style={styles.center} pointerEvents="none">
-        <Animated.View style={swirl}>
-          <Svg width={260} height={260}>
-            {[120, 95, 70, 45, 22].map((r, k) => (
-              <Circle
-                key={r}
-                cx={130}
-                cy={130}
-                r={r}
-                stroke={k % 2 ? '#B04CFF' : '#FFC857'}
-                strokeWidth={6 - k}
-                strokeDasharray={`${20 + k * 6} ${14 + k * 4}`}
-                fill="none"
-              />
-            ))}
-          </Svg>
-        </Animated.View>
+    <Panel style={styles.placard}>
+      <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+        <View style={{ flex: 1 }}>
+          <Eyebrow>{tx('quiz.stop', { n, total })}</Eyebrow>
+        </View>
+        <Text style={styles.when}>{era.when}</Text>
       </View>
-      <Animated.View entering={FadeIn.delay(200)} style={styles.travelText} pointerEvents="none">
-        <Animated.Text
-          entering={ZoomIn}
-          style={{
-            fontFamily: BOLD,
-            fontSize: 24,
-            color: '#fff',
-            textAlign: 'center',
-            textShadowColor: '#000',
-            textShadowRadius: 8,
-          }}>
-          {t('time.travelling', { when })}
-        </Animated.Text>
-      </Animated.View>
+      <Text style={quiz.title} accessibilityRole="header">
+        {era.title}
+      </Text>
+      <Text style={styles.place}>{era.place}</Text>
+      <View style={styles.rule} />
+      <Text style={quiz.body}>{era.intro}</Text>
+    </Panel>
+  );
+}
+
+/**
+ * The journey as a timeline: one mark per stop, evenly spaced (history spans thousands of years, so
+ * the spacing is by order, not to scale), with its date; stops passed are filled, the current one ringed.
+ */
+function Timeline({ eras, at }: { eras: Era[]; at: number }) {
+  const { t } = useTranslation('history');
+  const tx = t as unknown as (k: string, o?: Record<string, unknown>) => string;
+  const w = 340;
+  const pad = 26;
+  const x = (k: number) => (eras.length === 1 ? w / 2 : pad + ((w - 2 * pad) * k) / (eras.length - 1));
+  return (
+    <View
+      accessible
+      accessibilityRole="image"
+      accessibilityLabel={tx('timeline.a11y', { list: eras.map((e) => `${e.when} ${e.title}`).join('; ') })}
+      style={styles.timeline}>
+      <Svg width="100%" height={64} viewBox={`0 0 ${w} 64`}>
+        <Line x1={8} x2={w - 8} y1={28} y2={28} stroke={W.lineStrong} strokeWidth={2} />
+        <Path d={`M${w - 14},23 L${w - 6},28 L${w - 14},33`} stroke={W.lineStrong} strokeWidth={2} fill="none" />
+        {/* Minor ticks: a ruler. */}
+        {Array.from({ length: 33 }, (_, i) => (
+          <Line key={i} x1={10 + i * 10} x2={10 + i * 10} y1={28} y2={i % 5 === 0 ? 34 : 31} stroke={W.line} strokeWidth={1} />
+        ))}
+        {eras.map((e, k) => (
+          <G key={e.id}>
+            {k < at && <Line x1={x(k)} x2={x(k + 1)} y1={28} y2={28} stroke={W.ink} strokeWidth={3} />}
+            <Circle cx={x(k)} cy={28} r={k === at ? 9 : 6} fill={k <= at ? W.ink : W.surface} stroke={W.ink} strokeWidth={2} />
+            {k === at && <Circle cx={x(k)} cy={28} r={13} fill="none" stroke={W.focus} strokeWidth={2} />}
+            <SvgText x={x(k)} y={56} fontSize={11} fill={k === at ? W.ink : W.muted} textAnchor="middle" fontFamily={k === at ? Fonts.bold : Fonts.semibold}>
+              {e.when.length > 12 ? `${e.when.slice(0, 11)}…` : e.when}
+            </SvgText>
+          </G>
+        ))}
+      </Svg>
     </View>
   );
 }
+
+/** The how-to example: two events in order on a little timeline. */
+function HowTo() {
+  return (
+    <View style={{ gap: 8 }}>
+      <Timeline
+        eras={[
+          { id: 'a', title: 'Ghana becomes independent', when: '1957', year: 1957, place: 'Accra', intro: '', challenges: [] },
+          { id: 'b', title: 'The OAU is founded', when: '1963', year: 1963, place: 'Addis Ababa', intro: '', challenges: [] },
+          { id: 'c', title: 'Moon landing', when: '1969', year: 1969, place: '', intro: '', challenges: [] },
+        ]}
+        at={1}
+      />
+    </View>
+  );
+}
+
+defineGameFrame('time-machine', {
+  HowTo,
+  review: (r) => {
+    const run = r as TimeMachineRun;
+    return run.eras.flatMap((e) =>
+      e.challenges.flatMap((c) =>
+        c.result
+          ? [
+              {
+                key: String(c.id),
+                correct: c.result.correct,
+                main: c.q,
+                detail: `${tr('history:review.era', { title: e.title, when: e.when })}${
+                  c.result.correct ? '' : ` · ${Array.isArray(c.result.answer) ? c.result.answer.join(' → ') : c.result.answer}`
+                }`,
+              },
+            ]
+          : [],
+      ),
+    );
+  },
+});
 
 const styles = StyleSheet.create({
-  top: { position: 'absolute', left: Spacing.md, right: Spacing.md, top: 56, gap: Spacing.sm },
-  bottom: { position: 'absolute', left: Spacing.md, right: Spacing.md, bottom: Spacing.md },
-  timeline: {
-    flexDirection: 'row',
-    alignItems: 'flex-start',
-    paddingVertical: 6,
-    borderRadius: 999,
-    backgroundColor: 'rgba(14,18,44,0.82)',
-  },
-  line: {
-    position: 'absolute',
-    left: '15%',
-    right: '15%',
-    top: 12,
-    height: 2,
-    backgroundColor: 'rgba(255,200,87,0.4)',
-  },
-  dot: { width: 12, height: 12, borderRadius: 6, backgroundColor: 'rgba(255,255,255,0.35)', marginBottom: 2 },
-  dotOn: { backgroundColor: Colors.reward, boxShadow: '0 0 8px #FFC857' },
-  center: { ...StyleSheet.absoluteFill, alignItems: 'center', justifyContent: 'center' },
-  travelText: { position: 'absolute', left: Spacing.md, right: Spacing.md, bottom: 160 },
+  timeline: { paddingVertical: 4, paddingHorizontal: 4, borderRadius: 14, backgroundColor: W.surface, borderWidth: 1, borderColor: W.line },
+  placard: { borderLeftWidth: 4, borderLeftColor: W.ink, gap: 6 },
+  when: { fontFamily: Fonts.extrabold, fontSize: 15, color: W.focus, fontVariant: ['tabular-nums'] },
+  place: { fontFamily: Fonts.semibold, fontSize: 14, color: W.muted },
+  rule: { height: 1, backgroundColor: W.line, marginVertical: 2 },
 });

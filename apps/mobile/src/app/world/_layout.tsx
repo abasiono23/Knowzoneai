@@ -1,6 +1,6 @@
 import { Stack } from 'expo-router';
 
-import { Colors } from '@/constants/theme';
+import { W } from '@/components/games/ui';
 
 export default function WorldLayout() {
   return (
@@ -8,7 +8,7 @@ export default function WorldLayout() {
       screenOptions={{
         headerShown: false,
         animation: 'slide_from_right',
-        contentStyle: { backgroundColor: Colors.backgroundDeep },
+        contentStyle: { backgroundColor: W.page },
       }}>
       <Stack.Screen name="welcome" options={{ animation: 'fade' }} />
       <Stack.Screen name="play/[levelId]" options={{ animation: 'fade', gestureEnabled: false }} />

@@ -1,6 +1,14 @@
 import type { ChemGameId, Glassware, LabReagent, LabTest } from '@/lib/api';
 
 /**
+ * The chemistry ladder (the server's services/games/chemistry.ts has the same): ten levels, Starter to
+ * Super hard, named like the word games (t(`games:levels.names.<key>`)). Levels up to OPEN_LEVELS are open
+ * to everyone; later ones open with a star on the level before.
+ */
+export const MAX_LEVEL = 10;
+export const OPEN_LEVELS = 4;
+
+/**
  * The chemistry lab (2.5D): a realistic lab hall the student walks around, and close-up stations.
  * Positions are fractions of each scene picture (x across, y down). Art: apps/server/scripts/lab-art.ts.
  */
@@ -43,7 +51,7 @@ export const bottleArt = (r: Pick<LabReagent, 'bottle'>): ItemArt =>
   r.bottle === 'brown' ? 'brown' : r.bottle === 'dropper' ? 'dropper' : r.bottle === 'solid' ? 'jar' : 'bottle';
 
 /** The equipment used for each Mystery Substance test. */
-export const TEST_ART: Record<LabTest, ItemArt> = {
+export const TEST_ART: Partial<Record<LabTest, ItemArt>> = {
   litmus: 'litmus',
   ph: 'phmeter',
   mg: 'magnesium',
@@ -182,9 +190,15 @@ const SUB: Record<string, string> = {
   '8': '₈',
   '9': '₉',
 };
-/** "Ca(OH)2 + 2HCl" → "Ca(OH)₂ + 2HCl": digits after a letter or bracket become subscripts. */
+const SUP: Record<string, string> = { '0': '⁰', '1': '¹', '2': '²', '3': '³', '4': '⁴', '5': '⁵', '6': '⁶', '7': '⁷', '8': '⁸', '9': '⁹', '+': '⁺', '-': '⁻' };
+/**
+ * Chemistry as it's printed: "Ca(OH)2 + 2HCl" → "Ca(OH)₂ + 2HCl" (digits after an element or a bracket
+ * become subscripts), "Fe^3+" → "Fe³⁺", "10^-14" → "10⁻¹⁴". Coefficients and plain numbers stay as they are.
+ */
 export const sub = (text: string) =>
-  text.replace(/([A-Za-z)])(\d+)/g, (_, a: string, d: string) => a + d.replace(/\d/g, (c) => SUB[c]!));
+  text
+    .replace(/\^([0-9]*[+-]|[+-]?[0-9]+)/g, (_, s: string) => s.replace(/[0-9+-]/g, (c) => SUP[c]!))
+    .replace(/([A-Z][a-z]?|[)\]])(\d+)/g, (_, a: string, d: string) => a + d.replace(/\d/g, (c) => SUB[c]!));
 
 /** Atoms in a formula, for the live atom count while balancing ("Ca(OH)2" → Ca 1, O 2, H 2). */
 export function atomsOf(formula: string): Record<string, number> {

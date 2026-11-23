@@ -2,7 +2,30 @@
  * Mystery Substance: unknown liquids and what each school test shows for them (WAEC qualitative
  * analysis). Every substance answers every test, so cases can be checked for a unique answer.
  */
-export type TestId = 'litmus' | 'ph' | 'mg' | 'flame' | 'agno3' | 'naoh' | 'bacl2';
+export const BASIC_TESTS = ['litmus', 'ph', 'mg', 'flame', 'agno3', 'naoh', 'bacl2'] as const;
+/** Tests added from level 6 (A-level and university qualitative analysis). */
+export const MORE_TESTS = ['nh3', 'kscn', 'kmno4', 'nahco3', 'brwater', 'dnph', 'tollens', 'fehling', 'iodoform', 'fecl3'] as const;
+export type TestId = (typeof BASIC_TESTS)[number] | (typeof MORE_TESTS)[number];
+/** What each test is, for the checker and the help text. */
+export const TEST_TEXT: Record<TestId, string> = {
+  litmus: 'red and blue litmus paper',
+  ph: 'universal indicator / pH meter',
+  mg: 'add a piece of magnesium ribbon',
+  flame: 'flame test on a nichrome wire',
+  agno3: 'add dilute nitric acid then silver nitrate solution',
+  naoh: 'add sodium hydroxide solution dropwise, then in excess',
+  bacl2: 'add dilute hydrochloric acid then barium chloride solution',
+  nh3: 'add aqueous ammonia dropwise, then in excess',
+  kscn: 'add potassium thiocyanate solution',
+  kmno4: 'add a few drops of acidified potassium manganate(VII) and warm',
+  nahco3: 'add solid sodium hydrogencarbonate',
+  brwater: 'add bromine water and shake',
+  dnph: "add 2,4-dinitrophenylhydrazine (Brady's reagent)",
+  tollens: "warm with Tollens' reagent",
+  fehling: "warm with Fehling's solution",
+  iodoform: 'warm with iodine in sodium hydroxide solution',
+  fecl3: 'add neutral iron(III) chloride solution',
+};
 
 /** Tests open at each level (appearance is always shown). */
 export const TESTS_BY_LEVEL: Record<number, TestId[]> = {
@@ -11,9 +34,14 @@ export const TESTS_BY_LEVEL: Record<number, TestId[]> = {
   3: ['litmus', 'ph', 'mg', 'flame', 'agno3'],
   4: ['litmus', 'ph', 'mg', 'flame', 'agno3', 'naoh'],
   5: ['litmus', 'ph', 'mg', 'flame', 'agno3', 'naoh', 'bacl2'],
+  6: ['litmus', 'ph', 'flame', 'agno3', 'naoh', 'bacl2', 'nh3', 'kscn'],
+  7: ['ph', 'flame', 'agno3', 'naoh', 'bacl2', 'nh3', 'kscn', 'kmno4', 'nahco3'],
+  8: ['ph', 'flame', 'agno3', 'naoh', 'nh3', 'kmno4', 'nahco3', 'brwater', 'dnph', 'tollens'],
+  9: ['ph', 'agno3', 'naoh', 'nh3', 'kmno4', 'nahco3', 'brwater', 'dnph', 'tollens', 'fehling', 'iodoform', 'fecl3'],
+  10: ['ph', 'flame', 'agno3', 'naoh', 'nh3', 'kscn', 'kmno4', 'nahco3', 'brwater', 'dnph', 'tollens', 'fehling', 'iodoform', 'fecl3'],
 };
 
-export type Substance = { id: string; name: string; appearance: string; level: number; results: Record<TestId, string> };
+export type Substance = { id: string; name: string; appearance: string; level: number; results: Partial<Record<TestId, string>> };
 
 const none = 'No visible change';
 

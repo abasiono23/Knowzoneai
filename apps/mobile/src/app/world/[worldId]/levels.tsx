@@ -1,221 +1,183 @@
 import { Ionicons } from '@expo/vector-icons';
-import { LinearGradient } from 'expo-linear-gradient';
-import { router, useLocalSearchParams, type Href } from 'expo-router';
-import { useEffect, useState } from 'react';
+import { Redirect, router, type Href, useLocalSearchParams } from 'expo-router';
+import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Pressable, ScrollView, StyleSheet, useWindowDimensions, View } from 'react-native';
-import Animated, {
-  FadeInDown,
-  useAnimatedStyle,
-  useSharedValue,
-  withRepeat,
-  withTiming,
-  ZoomIn,
-} from 'react-native-reanimated';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import Svg, { Path } from 'react-native-svg';
+import { Pressable, StyleSheet, View } from 'react-native';
+import Animated, { FadeIn } from 'react-native-reanimated';
 
-import { GameBack, levelHref, Stars, Wallet } from '@/components/world/world-ui';
-import { Button, Text } from '@/components/ui';
-import { Colors, MaxContentWidth, Radius, Spacing, WorldGradients } from '@/constants/theme';
+import { FONT, PrimaryButton, W } from '@/components/games/ui';
+import { WORLD_ACCENT, WorldCover } from '@/components/world/world-cover';
+import { levelHref, Meter, STAR, Wallet, worldStyles } from '@/components/world/world-ui';
+import { Screen, ScreenHeader, Text } from '@/components/ui';
+import { Fonts } from '@/constants/theme';
+import { useFlipStyle } from '@/i18n/provider';
+import { levelKey } from '@/lib/games/english';
 import { getWorld } from '@/lib/world/content';
-import { levelsOf } from '@/lib/world/levels';
+import { levelsOf, MAX_LEVEL, OPEN_LEVELS, WORLD_STARS } from '@/lib/world/levels';
 import { useWorld } from '@/lib/world/store';
-import { KIND_INFO, type Level } from '@/lib/world/types';
+import type { Level, World } from '@/lib/world/types';
 
-const STEP = 128;
-const XS = [0.5, 0.78, 0.5, 0.22, 0.5, 0.5];
-
-/** Screen 137: the level path through a world. Tap a level to see it, then play. */
-export default function LevelSelectScreen() {
-  const { t } = useTranslation('world');
+/**
+ * One world of the adventure: its progress, the ten-level ladder from Starter to Super hard, and the
+ * collectibles its stars unlock. (It lives at /world/<id>/levels, since some world ids are also the
+ * names of other games' pages.)
+ */
+export default function WorldScreen() {
   const { worldId } = useLocalSearchParams<{ worldId: string }>();
   const world = getWorld(worldId);
-  const { best, isLevelUnlocked, worldStars, settings } = useWorld();
-  const { width } = useWindowDimensions();
-  const w = Math.min(width, MaxContentWidth);
-  const levels = world ? levelsOf(world.id) : [];
-  const current = levels.find((l) => isLevelUnlocked(l) && !(best[l.id]?.stars ?? 0)) ?? levels[levels.length - 1];
-  const [selected, setSelected] = useState<Level | undefined>(current);
-  const pulse = useSharedValue(1);
-  useEffect(() => {
-    if (!settings.reduceMotion) pulse.value = withRepeat(withTiming(1.12, { duration: 800 }), -1, true);
-  }, [pulse, settings.reduceMotion]);
-  const pulseStyle = useAnimatedStyle(() => ({ transform: [{ scale: pulse.value }] }));
+  const { isWorldUnlocked, ready } = useWorld();
+  if (!world) return <Redirect href="/world/select" />;
+  if (ready && !isWorldUnlocked(world)) return <Redirect href={`/world/unlock/${world.id}` as Href} />;
+  return <WorldPage world={world} />;
+}
 
-  if (!world) return null;
-  // The path winds down the world, ending at the boss.
-  const pts = levels.map((l, k) => ({ l, x: XS[k] * w, y: k * STEP + 70 }));
-  const height = levels.length * STEP + 40;
-  const sel = selected && levels.find((l) => l.id === selected.id);
-  const selOpen = sel && isLevelUnlocked(sel);
+function WorldPage({ world }: { world: World }) {
+  const { t } = useTranslation('world');
+  const { t: tg } = useTranslation('games');
+  const { best, worldStars, collected, isLevelUnlocked, markWorldSeen } = useWorld();
+  const levels = levelsOf(world.id);
+  const stars = worldStars(world.id);
+  const cleared = levels.filter((l) => (best[l.id]?.stars ?? 0) > 0).length;
+  const have = collected(world);
+  const next =
+    levels.find((l) => !(best[l.id]?.stars ?? 0) && isLevelUnlocked(l)) ?? levels.find((l) => (best[l.id]?.stars ?? 0) < 3) ?? levels[0];
+  const accent = WORLD_ACCENT[world.id];
+  useEffect(() => markWorldSeen(world.id), [world.id, markWorldSeen]);
 
   return (
-    <View style={{ flex: 1 }}>
-      <LinearGradient
-        colors={[WorldGradients[world.id][1] + 'AA', WorldGradients[world.id][0], Colors.backgroundDeep]}
-        style={StyleSheet.absoluteFill}
-      />
-      <SafeAreaView edges={['top']} style={styles.top}>
-        <GameBack />
-        <View style={{ flex: 1, alignItems: 'center' }}>
-          <Text variant="label" color="rgba(255,255,255,0.8)">
-            {t('levels.stars', { stars: worldStars(world.id) })}
+    <Screen withTabBar={false}>
+      <ScreenHeader eyebrow={t('adv.eyebrow')} right={<Wallet compact />} />
+      <Animated.View entering={FadeIn.duration(200)} style={styles.hero}>
+        <WorldCover world={world.id} size={76} />
+        <View style={{ flex: 1, gap: 4 }}>
+          <Text style={worldStyles.title} accessibilityRole="header">
+            {world.name}
           </Text>
-          <Text variant="heading">{world.name}</Text>
+          <Text style={worldStyles.body}>{world.subjects.join(' · ')}</Text>
         </View>
-        <Wallet compact />
-      </SafeAreaView>
-      <ScrollView contentContainerStyle={{ height: height + 240, width: w, alignSelf: 'center' }}>
-        <Svg width={w} height={height} style={StyleSheet.absoluteFill}>
-          <Path
-            d={pts
-              .map((p, k) =>
-                k === 0
-                  ? `M${p.x} ${p.y}`
-                  : `C${pts[k - 1].x} ${p.y - STEP / 2} ${p.x} ${pts[k - 1].y + STEP / 2} ${p.x} ${p.y}`,
-              )
-              .join(' ')}
-            stroke="rgba(255,255,255,0.35)"
-            strokeWidth={10}
-            strokeLinecap="round"
-            strokeDasharray="1 18"
-            fill="none"
-          />
-        </Svg>
-        {pts.map(({ l, x, y }, k) => {
-          const open = isLevelUnlocked(l);
-          const stars = best[l.id]?.stars ?? 0;
-          const info = KIND_INFO[l.kind];
-          const isCurrent = l.id === current?.id && !stars;
-          const size = l.kind === 'boss' ? 92 : 72;
-          const node = (
-            <Pressable
-              onPress={() => setSelected(l)}
-              accessibilityRole="button"
-              accessibilityState={{ selected: selected?.id === l.id, disabled: !open }}
-              accessibilityLabel={t('levels.nodeA11y', {
-                number: l.number,
-                title: l.title,
-                kind: info.label,
-                status: open ? t('levels.starsA11y', { count: stars }) : t('select.locked'),
-              })}
-              style={[
-                styles.node,
-                { width: size, height: size, borderRadius: size / 2 },
-                open
-                  ? { backgroundColor: info.color, borderColor: stars === 3 ? Colors.reward : 'rgba(255,255,255,0.6)' }
-                  : styles.locked,
-                selected?.id === l.id && { borderColor: '#fff', borderWidth: 4 },
-              ]}>
-              {open ? (
-                l.kind === 'boss' ? (
-                  <Text style={{ fontSize: 40 }}>{world.boss.emoji}</Text>
-                ) : (
-                  <>
-                    <Ionicons name={info.icon} size={22} color={Colors.onBright} />
-                    <Text variant="label" color={Colors.onBright}>
-                      {l.number}
-                    </Text>
-                  </>
-                )
-              ) : (
-                <Ionicons name="lock-closed" size={22} color={Colors.textMuted} />
-              )}
-            </Pressable>
-          );
-          return (
-            <Animated.View
-              key={l.id}
-              entering={ZoomIn.delay(k * 60)}
-              style={[styles.nodeWrap, { left: x - 60, top: y - size / 2 }]}>
-              {isCurrent ? <Animated.View style={pulseStyle}>{node}</Animated.View> : node}
-              <View style={styles.starRow}>{open && <Stars value={stars} size={14} />}</View>
-            </Animated.View>
-          );
-        })}
-      </ScrollView>
-      {sel && (
-        <Animated.View key={sel.id} entering={FadeInDown.duration(220)} style={styles.sheet}>
-          <SafeAreaView edges={['bottom']} style={{ gap: Spacing.sm }}>
-            <View style={styles.sheetRow}>
-              <View style={[styles.kind, { backgroundColor: KIND_INFO[sel.kind].color + '22' }]}>
-                <Ionicons name={KIND_INFO[sel.kind].icon} size={22} color={KIND_INFO[sel.kind].color} />
-              </View>
-              <View style={{ flex: 1 }}>
-                <Text variant="label" color={KIND_INFO[sel.kind].color}>
-                  {t('detail.levelKind', { number: sel.number, kind: KIND_INFO[sel.kind].label.toUpperCase() })}
-                </Text>
-                <Text variant="heading">{sel.kind === 'boss' ? world.boss.name : sel.title}</Text>
-                <Text variant="small" color={Colors.textSecondary}>
-                  {KIND_INFO[sel.kind].how}
-                </Text>
-              </View>
-              <Stars value={best[sel.id]?.stars ?? 0} size={16} />
-            </View>
-            {selOpen ? (
-              <Button
-                title={best[sel.id] ? t('levels.playAgain') : t('levels.play')}
-                icon="play"
-                onPress={() => router.push(levelHref(sel))}
-              />
-            ) : (
-              <Button
-                variant="secondary"
-                title={t('levels.clearToUnlock', { number: sel.number - 1 })}
-                icon="lock-closed"
-                disabled
-              />
-            )}
-            <Text variant="small" color={Colors.textMuted} center style={{ fontSize: 12 }}>
-              {best[sel.id]?.plays
-                ? t('levels.rewardPlayed', { xp: sel.xp, count: sel.coins, plays: best[sel.id].plays })
-                : t('levels.reward', { xp: sel.xp, count: sel.coins })}
-            </Text>
-          </SafeAreaView>
-        </Animated.View>
-      )}
-      {!sel && (
-        <View style={styles.sheet}>
-          <Button title={t('levels.details')} variant="secondary" onPress={() => router.push(`/world/${world.id}` as Href)} />
+      </Animated.View>
+      <Text style={worldStyles.body}>{world.tagline}</Text>
+
+      <View style={styles.card}>
+        <View style={styles.stats}>
+          <Stat icon="star" color={STAR} value={`${stars}/${WORLD_STARS}`} label={t('adv.statStars')} />
+          <Stat icon="checkmark-circle-outline" value={`${cleared}/${MAX_LEVEL}`} label={t('adv.statLevels')} />
+          <Stat icon="ribbon-outline" value={`${have.length}/${world.collectibles.length}`} label={t('inventory.collectibles')} />
         </View>
-      )}
+        <Meter value={stars / WORLD_STARS} color={accent} />
+        <PrimaryButton
+          title={`${best[next.id] ? t('detail.improve', { number: next.number }) : t('detail.playLevel', { number: next.number })} · ${tg(`levels.names.${levelKey(next.number)}`)}`}
+          icon="arrow-forward"
+          onPress={() => router.push(levelHref(next))}
+        />
+        {world.id === 'language' && (
+          <Pressable onPress={() => router.push('/world/english' as Href)} accessibilityRole="button" style={styles.inline}>
+            <Ionicons name="text-outline" size={18} color={W.ink} />
+            <Text style={[worldStyles.strong, { flex: 1 }]}>{tg('hub.entryTitle')}</Text>
+            <Ionicons name="chevron-forward" size={16} color={W.muted} />
+          </Pressable>
+        )}
+      </View>
+
+      <View style={{ gap: 10 }}>
+        <Text style={worldStyles.heading}>{t('adv.ladder')}</Text>
+        <Text style={worldStyles.small}>{tg('levels.openNote', { open: OPEN_LEVELS })}</Text>
+        <View style={styles.list}>
+          {levels.map((l, k) => (
+            <LevelRow key={l.id} level={l} first={k === 0} accent={accent} stars={best[l.id]?.stars ?? 0} open={isLevelUnlocked(l)} />
+          ))}
+        </View>
+      </View>
+
+      <View style={{ gap: 10 }}>
+        <Text style={worldStyles.heading}>{t('inventory.collectibles')}</Text>
+        <View style={styles.list}>
+          {world.collectibles.map((c, k) => {
+            const got = have.includes(c.id);
+            return (
+              <View key={c.id} style={[worldStyles.row, k > 0 && worldStyles.rowLine]} accessible accessibilityLabel={got ? `${c.name}. ${c.description}` : t('adv.collectibleAt', { count: c.atStars })}>
+                <View style={[styles.medal, got && { backgroundColor: accent, borderColor: accent }]}>
+                  <Ionicons name={got ? 'ribbon' : 'lock-closed-outline'} size={16} color={got ? '#fff' : W.muted} />
+                </View>
+                <View style={{ flex: 1 }}>
+                  <Text style={[worldStyles.strong, !got && { color: W.muted }]}>{got ? c.name : t('adv.collectibleLocked')}</Text>
+                  <Text style={worldStyles.small}>{got ? c.description : t('adv.collectibleAt', { count: c.atStars })}</Text>
+                </View>
+              </View>
+            );
+          })}
+        </View>
+      </View>
+    </Screen>
+  );
+}
+
+function Stat({ icon, value, label, color = W.ink }: { icon: keyof typeof Ionicons.glyphMap; value: string; label: string; color?: string }) {
+  return (
+    <View style={{ flex: 1, alignItems: 'center', gap: 2 }} accessible accessibilityLabel={`${label}: ${value}`}>
+      <View style={{ flexDirection: 'row', alignItems: 'center', gap: 5 }}>
+        <Ionicons name={icon} size={16} color={color} />
+        <Text style={styles.statValue}>{value}</Text>
+      </View>
+      <Text style={worldStyles.meta}>{label}</Text>
     </View>
   );
 }
 
+function LevelRow({ level, first, accent, stars, open }: { level: Level; first: boolean; accent: string; stars: number; open: boolean }) {
+  const { t } = useTranslation('world');
+  const { t: tg } = useTranslation('games');
+  const flip = useFlipStyle();
+  const name = tg(`levels.names.${levelKey(level.number)}`);
+  const kind = t(`adv.kinds.${level.kind}.name`);
+  const status = open ? t('levels.starsA11y', { count: stars }) : tg('levels.locked', { level: level.number - 1 });
+  return (
+    <Pressable
+      disabled={!open}
+      onPress={() => router.push(levelHref(level))}
+      accessibilityRole="button"
+      accessibilityLabel={`${tg('levels.level', { level: level.number })}: ${name}, ${kind}. ${t(`adv.stage.${level.number}` as 'adv.stage.1')}. ${status}`}
+      accessibilityState={{ disabled: !open }}
+      style={({ pressed }) => [worldStyles.row, !first && worldStyles.rowLine, { minHeight: 68 }, pressed && { backgroundColor: W.page }]}>
+      <View style={[styles.badge, stars > 0 && { backgroundColor: accent, borderColor: accent }, !open && { borderColor: W.line }]}>
+        <Text style={[styles.badgeText, stars > 0 && { color: '#fff' }, !open && { color: W.muted }]}>{level.number}</Text>
+      </View>
+      <View style={{ flex: 1, gap: 1 }}>
+        <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8, flexWrap: 'wrap' }}>
+          <Text style={[styles.levelName, !open && { color: W.muted }]}>{name}</Text>
+          <View style={styles.tag}>
+            <Text style={styles.tagText}>{kind}</Text>
+          </View>
+        </View>
+        <Text style={worldStyles.small}>{open ? t(`adv.stage.${level.number}` as 'adv.stage.1') : tg('levels.locked', { level: level.number - 1 })}</Text>
+      </View>
+      {open ? (
+        <View style={{ flexDirection: 'row', alignItems: 'center', gap: 6 }}>
+          <View style={{ flexDirection: 'row', gap: 2 }}>
+            {[0, 1, 2].map((i) => (
+              <Ionicons key={i} name={i < stars ? 'star' : 'star-outline'} size={15} color={i < stars ? STAR : W.lineStrong} />
+            ))}
+          </View>
+          <Ionicons name="chevron-forward" size={16} color={W.muted} style={flip} />
+        </View>
+      ) : (
+        <Ionicons name="lock-closed-outline" size={18} color={W.muted} />
+      )}
+    </Pressable>
+  );
+}
+
 const styles = StyleSheet.create({
-  top: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: Spacing.sm,
-    paddingHorizontal: Spacing.md,
-    paddingBottom: Spacing.xs,
-  },
-  nodeWrap: { position: 'absolute', width: 120, alignItems: 'center', gap: 4 },
-  node: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    borderWidth: 3,
-    shadowColor: '#000',
-    shadowOpacity: 0.35,
-    shadowRadius: 8,
-    shadowOffset: { width: 0, height: 4 },
-  },
-  locked: { backgroundColor: Colors.surfaceRaised, borderColor: Colors.borderStrong },
-  starRow: { height: 16 },
-  sheet: {
-    position: 'absolute',
-    left: 0,
-    right: 0,
-    bottom: 0,
-    padding: Spacing.md,
-    borderTopLeftRadius: Radius.xl,
-    borderTopRightRadius: Radius.xl,
-    backgroundColor: Colors.surface,
-    borderTopWidth: 1,
-    borderColor: Colors.borderStrong,
-  },
-  sheetRow: { flexDirection: 'row', alignItems: 'center', gap: Spacing.sm },
-  kind: { width: 48, height: 48, borderRadius: 14, alignItems: 'center', justifyContent: 'center' },
+  hero: { flexDirection: 'row', alignItems: 'center', gap: 16 },
+  card: { gap: 14, padding: 16, borderRadius: 16, backgroundColor: W.surface, borderWidth: 1, borderColor: W.line },
+  stats: { flexDirection: 'row' },
+  statValue: { fontFamily: FONT, fontSize: 18, color: W.ink, fontVariant: ['tabular-nums'] },
+  inline: { flexDirection: 'row', alignItems: 'center', gap: 10, minHeight: 44, paddingTop: 4, borderTopWidth: 1, borderTopColor: W.line },
+  list: { borderRadius: 16, backgroundColor: W.surface, borderWidth: 1, borderColor: W.line, overflow: 'hidden' },
+  badge: { width: 34, height: 34, borderRadius: 17, borderWidth: 1.5, borderColor: W.ink, alignItems: 'center', justifyContent: 'center' },
+  badgeText: { fontFamily: FONT, fontSize: 14, color: W.ink },
+  levelName: { fontFamily: Fonts.bold, fontSize: 15, color: W.ink },
+  tag: { paddingHorizontal: 6, paddingVertical: 1, borderRadius: 4, backgroundColor: W.given },
+  tagText: { fontFamily: Fonts.bold, fontSize: 11, color: W.inkSoft, letterSpacing: 0.3 },
+  medal: { width: 34, height: 34, borderRadius: 17, borderWidth: 1.5, borderColor: W.line, alignItems: 'center', justifyContent: 'center' },
 });

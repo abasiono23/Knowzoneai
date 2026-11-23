@@ -1,8 +1,6 @@
 import { describe, expect, it, vi } from 'vitest';
 
-import { CIVILIZATIONS } from '../src/data/history/civilizations.js';
-import { COUNTRIES, mapDistance } from '../src/data/history/countries.js';
-import { ERAS, EVENTS } from '../src/data/history/eras.js';
+import { CIVILIZATIONS, COUNTRIES, ERAS, EVENTS, mapDistance } from '../src/data/history/levels.js';
 import { prisma } from '../src/db.js';
 import { buildHistoryPuzzle, HISTORY_GAMES, type HistoryState } from '../src/services/games/history.js';
 import { http, signIn } from './helpers.js';
@@ -48,14 +46,14 @@ describe('history content is correct', () => {
   });
 
   it('visits eras in time order and puts events far enough apart', () => {
-    for (let level = 1; level <= 5; level++)
+    for (let level = 1; level <= 10; level++)
       for (const seed of ['a', 'b', 'c']) {
         const p = buildHistoryPuzzle('time-machine', level, seed);
         if (p.kind !== 'time-machine') throw new Error('kind');
         const years = p.eras.map((e) => ERAS.find((x) => x.id === e.id)!.year);
         expect([...years].sort((a, b) => a - b)).toEqual(years);
         const orders = p.eras.flatMap((e) => e.challenges.filter((c) => c.type === 'order'));
-        expect(orders.length).toBe(level >= 4 ? 2 : level >= 2 ? 1 : 0);
+        expect(orders.length).toBe([0, 1, 1, 1, 2, 2, 2, 2, 3, 3][level - 1]);
       }
   });
 });

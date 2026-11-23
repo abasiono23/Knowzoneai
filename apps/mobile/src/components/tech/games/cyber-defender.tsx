@@ -1,206 +1,161 @@
 import { Ionicons } from '@expo/vector-icons';
-import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Pressable, StyleSheet, View } from 'react-native';
-import Animated, { FadeInDown, ZoomIn } from 'react-native-reanimated';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { StyleSheet, View } from 'react-native';
 
-import { Backdrop } from '@/components/lab/backdrop';
-import { BOLD, GoldButton, Panel } from '@/components/lab/hud';
+import { W } from '@/components/games/ui';
+import { defineGameFrame } from '@/components/lab/contract';
+import { Card, CodeBlock, Eyebrow, LTR, ltr, MONO, QuizStep, Sheet, StepBar, useAdvance } from '@/components/space/kit';
 import { Text } from '@/components/ui';
-import { Colors, Spacing } from '@/constants/theme';
-import type { CyberDefenderRun, GameOutcome } from '@/lib/api';
-import { TECH_SCENES } from '@/lib/games/tech';
+import { Fonts } from '@/constants/theme';
+import type { CyberDefenderRun } from '@/lib/api';
 import type { TechGame } from '@/lib/games/use-lab-run';
 
-const KIND_ICON = { email: 'mail', sms: 'chatbubble-ellipses', password: 'key', situation: 'help-buoy' } as const;
-const GOOD = new Set(['safe', 'strong']);
+type Item = CyberDefenderRun['items'][number];
+const ICON: Record<Item['kind'], keyof typeof Ionicons.glyphMap> = {
+  email: 'mail-outline',
+  sms: 'chatbubble-outline',
+  password: 'key-outline',
+  situation: 'person-outline',
+  attack: 'warning-outline',
+  fix: 'shield-checkmark-outline',
+};
 
 /**
- * Cyber Defender: judge each email, text, password or everyday situation before the clock runs out.
- * Wrong answers weaken the network shield (hearts); after each one you see why.
+ * Cyber Defender: read each case as a security analyst would. Messages are shown as a mail client
+ * shows them (sender address and link in monospace, so look-alike domains can be spotted); later
+ * levels bring attack reports, log lines and code to name the attack or choose the best defence.
  */
 export function CyberDefender({ g, run, paused }: { g: TechGame; run: CyberDefenderRun; paused: boolean }) {
   const { t } = useTranslation('tech');
-  const [i, setI] = useState(() => Math.min(run.at, run.items.length - 1));
-  const item = run.items[i]!;
-  const [picked, setPicked] = useState<string | null>(null);
-  const [outcome, setOutcome] = useState<GameOutcome | null>(null);
-  const [left, setLeft] = useState(run.seconds);
-  const leftRef = useRef(run.seconds);
-
-  const answer = async (choice: string | null) => {
-    if (outcome || g.busy) return;
-    setPicked(choice);
-    const res = await g.answer(choice === null ? { step: i, timeout: true } : { step: i, choice });
-    if (!res) {
-      setPicked(null);
-      return;
-    }
-    g.buzz(res.outcome.correct ? 'success' : 'error');
-    setOutcome(res.outcome);
-  };
-  const answerRef = useRef(answer);
-  useEffect(() => {
-    answerRef.current = answer;
-  });
-
-  // The clock (stops while paused or answered).
-  useEffect(() => {
-    if (outcome || paused) return;
-    const started = Date.now();
-    const from = leftRef.current;
-    const id = setInterval(() => {
-      const remaining = Math.max(0, from - (Date.now() - started) / 1000);
-      leftRef.current = remaining;
-      setLeft(remaining);
-      if (remaining <= 0) {
-        clearInterval(id);
-        void answerRef.current(null);
-      }
-    }, 200);
-    return () => clearInterval(id);
-  }, [outcome, paused, i]);
-
-  const next = () => {
-    if (run.status !== 'playing' || run.hearts <= 0 || run.at >= run.items.length) {
-      void g.finish();
-      return;
-    }
-    setI(run.at);
-    setPicked(null);
-    setOutcome(null);
-    leftRef.current = run.seconds;
-    setLeft(run.seconds);
-  };
-
-  const shield = Math.max(0, run.hearts) / 3;
+  const total = run.items.length;
+  const { i, next, over } = useAdvance(run, total, g.finish);
+  const c = run.items[i]!;
+  const verdict = ['email', 'sms', 'password', 'situation'].includes(c.kind);
+  const label = (o: string) => (verdict ? t(`play.cyber.verdicts.${o}`, { defaultValue: o }) : o);
   return (
-    <View style={StyleSheet.absoluteFill}>
-      <Backdrop source={TECH_SCENES.cyber} dim={0.45} />
-      <SafeAreaView edges={['top']} style={styles.top} pointerEvents="none">
-        <Panel style={{ gap: 6 }}>
-          <View style={styles.row}>
-            <Ionicons name="shield-half" size={18} color="#2DD4BF" />
-            <Text style={{ color: '#fff', fontFamily: BOLD, fontSize: 12 }}>{t('cyber.shield')}</Text>
-            <View style={styles.track}>
-              <View
-                style={[
-                  styles.fill,
-                  { width: `${shield * 100}%`, backgroundColor: shield > 0.4 ? '#2DD4BF' : Colors.danger },
-                ]}
-              />
-            </View>
-          </View>
-          <View style={styles.row}>
-            <Text style={{ color: Colors.reward, fontFamily: BOLD, fontSize: 12, flex: 1 }}>
-              {t('cyber.objective', { n: i + 1, total: run.items.length })}
-            </Text>
-            <Text
-              style={{
-                color: left < 6 ? '#FF8FA6' : '#fff',
-                fontFamily: BOLD,
-              }}>{`0:${String(Math.ceil(left)).padStart(2, '0')}`}</Text>
-          </View>
-        </Panel>
-      </SafeAreaView>
+    <Sheet>
+      <StepBar label={t('play.cyber.step', { n: i + 1, total })} n={i + 1} total={total} />
+      <Case item={c} />
+      <QuizStep
+        key={c.id}
+        stepKey={c.id}
+        q={c.question ?? t(`play.cyber.ask.${c.kind}`)}
+        options={c.options.map(label)}
+        seconds={run.seconds}
+        paused={paused}
+        onAnswer={async (choice) => {
+          const raw = choice === null ? null : c.options[c.options.map(label).indexOf(choice)]!;
+          const res = await g.answer(raw === null ? { step: i, timeout: true } : { step: i, choice: raw });
+          if (!res) return null;
+          g.buzz(res.outcome.correct ? 'success' : 'error');
+          return { ...res.outcome, answer: label(String(res.outcome.answer ?? '')) };
+        }}
+        after={(o) =>
+          o.why ? (
+            <Card>
+              <Eyebrow text={t('play.cyber.why')} />
+              <Text style={styles.body}>{String(o.why)}</Text>
+            </Card>
+          ) : null
+        }
+        nextLabel={over ? t('play.finish') : undefined}
+        onNext={next}
+      />
+    </Sheet>
+  );
+}
 
-      <View style={styles.middle} pointerEvents="box-none">
-        <Animated.View key={i} entering={ZoomIn.springify()} style={styles.message}>
-          <View style={styles.row}>
-            <Ionicons name={KIND_ICON[item.kind]} size={18} color="#4A5590" />
-            <Text style={{ fontFamily: BOLD, color: '#4A5590', fontSize: 12, letterSpacing: 1 }}>
-              {t(`cyber.kinds.${item.kind}`)}
-            </Text>
-          </View>
-          {!!item.from && <Text style={styles.meta}>{t('cyber.from', { from: item.from })}</Text>}
-          {!!item.subject && <Text style={{ fontFamily: BOLD, color: '#1B1F3B', fontSize: 16 }}>{item.subject}</Text>}
-          {item.kind === 'password' ? (
-            <>
-              <Text style={{ color: '#4A5590' }}>{t('cyber.passwordQ')}</Text>
-              <Text style={styles.password}>{item.body}</Text>
-            </>
-          ) : (
-            <Text style={{ color: '#1B1F3B', fontSize: 15, lineHeight: 21 }}>{item.body}</Text>
-          )}
-          {!!item.link && <Text style={styles.link}>{t('cyber.link', { link: item.link })}</Text>}
-        </Animated.View>
+function Case({ item: c }: { item: Item }) {
+  const { t } = useTranslation('tech');
+  if (c.kind === 'password')
+    return (
+      <Card>
+        <Eyebrow text={t('play.cyber.kinds.password')} />
+        <View style={styles.password}>
+          <Ionicons name="key-outline" size={18} color={W.inkSoft} />
+          <Text style={[styles.mono, { fontSize: 18 }, LTR]} {...ltr} selectable>
+            {c.body}
+          </Text>
+        </View>
+        <Text style={styles.small}>{t('play.cyber.length', { count: [...c.body].length })}</Text>
+      </Card>
+    );
+  const message = c.kind === 'email' || c.kind === 'sms';
+  return (
+    <Card style={{ gap: 12 }}>
+      <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+        <Ionicons name={ICON[c.kind]} size={18} color={W.inkSoft} />
+        <Eyebrow text={t(`play.cyber.kinds.${c.kind}`)} />
       </View>
+      {message && (
+        <View style={styles.headers}>
+          {!!c.from && <Header label={t('play.cyber.from')} value={c.from} />}
+          {!!c.subject && <Header label={t('play.cyber.subject')} value={c.subject} plain />}
+        </View>
+      )}
+      <Text style={styles.body}>{c.body}</Text>
+      {!!c.link && (
+        <View style={styles.link}>
+          <Ionicons name="link-outline" size={16} color={W.focus} />
+          <Text style={[styles.mono, { color: W.focus, flex: 1 }, LTR]} {...ltr} selectable>
+            {c.link}
+          </Text>
+        </View>
+      )}
+      {!!c.code && <CodeBlock text={c.code} label={t('play.cyber.code')} />}
+    </Card>
+  );
+}
 
-      <SafeAreaView edges={['bottom']} style={styles.bottom} pointerEvents="box-none">
-        {outcome ? (
-          <Animated.View entering={FadeInDown}>
-            <Panel style={{ gap: Spacing.sm, borderColor: outcome.correct ? Colors.success : Colors.danger }}>
-              <Text style={{ fontFamily: BOLD, fontSize: 17, color: outcome.correct ? Colors.success : '#FF8FA6' }}>
-                {outcome.correct
-                  ? t('cyber.right', { points: outcome.points })
-                  : picked
-                    ? t('cyber.wrong')
-                    : t('cyber.timeUp')}{' '}
-                {!outcome.correct && `→ ${t(`cyber.choices.${String(outcome.answer) as 'safe'}`)}`}
-              </Text>
-              {!!outcome.why && <Text style={{ color: '#fff' }}>{outcome.why}</Text>}
-              <GoldButton title={t('cyber.next')} icon="arrow-forward" onPress={next} />
-            </Panel>
-          </Animated.View>
-        ) : (
-          <View style={styles.choices}>
-            {item.options.map((o) => (
-              <Pressable
-                key={o}
-                onPress={() => void answer(o)}
-                disabled={!!picked}
-                accessibilityRole="button"
-                style={({ pressed }) => [
-                  styles.choice,
-                  { backgroundColor: GOOD.has(o) ? '#1E9E6A' : '#D64545' },
-                  pressed && { opacity: 0.85 },
-                ]}>
-                <Ionicons name={GOOD.has(o) ? 'checkmark-circle' : 'warning'} size={22} color="#fff" />
-                <Text style={{ fontFamily: BOLD, color: '#fff', fontSize: 18 }}>
-                  {t(`cyber.choices.${o as 'safe'}`)}
-                </Text>
-              </Pressable>
-            ))}
-          </View>
-        )}
-      </SafeAreaView>
+function Header({ label, value, plain }: { label: string; value: string; plain?: boolean }) {
+  return (
+    <View style={{ flexDirection: 'row', gap: 8 }}>
+      <Text style={[styles.small, { width: 64 }]}>{label}</Text>
+      <Text style={[plain ? styles.subject : styles.mono, { flex: 1 }, !plain && LTR]} {...ltr} selectable>
+        {value}
+      </Text>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  top: { position: 'absolute', left: Spacing.md, right: Spacing.md, top: 56 },
-  middle: {
-    position: 'absolute',
-    left: Spacing.md,
-    right: Spacing.md,
-    top: 160,
-    bottom: 200,
-    justifyContent: 'center',
-  },
-  bottom: { position: 'absolute', left: Spacing.md, right: Spacing.md, bottom: Spacing.md },
-  row: { flexDirection: 'row', alignItems: 'center', gap: 6 },
-  track: { flex: 1, height: 8, borderRadius: 4, backgroundColor: 'rgba(255,255,255,0.15)', overflow: 'hidden' },
-  fill: { height: 8, borderRadius: 4 },
-  message: {
-    gap: 8,
-    padding: Spacing.md,
-    borderRadius: 18,
-    backgroundColor: '#F4F6FF',
-    boxShadow: '0 8px 24px rgba(0,0,0,0.4)',
-  },
-  meta: { color: '#4A5590', fontSize: 12 },
-  password: { fontFamily: 'Courier', fontSize: 24, color: '#1B1F3B', textAlign: 'center', paddingVertical: 8 },
-  link: { color: '#2563EB', textDecorationLine: 'underline', fontSize: 13 },
-  choices: { flexDirection: 'row', gap: Spacing.sm },
-  choice: {
-    flex: 1,
-    height: 64,
-    borderRadius: 18,
+  headers: { gap: 6, paddingBottom: 10, borderBottomWidth: 1, borderBottomColor: W.line },
+  body: { fontFamily: Fonts.regular, fontSize: 16, lineHeight: 24, color: W.ink },
+  subject: { fontFamily: Fonts.bold, fontSize: 15, color: W.ink },
+  mono: { fontFamily: MONO, fontSize: 14, color: W.ink },
+  small: { fontFamily: Fonts.semibold, fontSize: 13, color: W.muted },
+  link: {
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'center',
-    gap: 8,
+    gap: 6,
+    padding: 10,
+    borderRadius: 8,
+    backgroundColor: W.focusSoft,
   },
+  password: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 10,
+    padding: 12,
+    borderRadius: 10,
+    backgroundColor: '#F1F0F6',
+    borderWidth: 1,
+    borderColor: W.line,
+  },
+});
+
+defineGameFrame('cyber-defender', {
+  review: (run) =>
+    ((run as CyberDefenderRun).items ?? []).flatMap((c) =>
+      c.result
+        ? [
+            {
+              key: String(c.id),
+              correct: c.result.correct,
+              main: (c.subject ?? c.question ?? c.body).slice(0, 90),
+              detail: `${c.result.answer} · ${c.result.why}`,
+            },
+          ]
+        : [],
+    ),
 });

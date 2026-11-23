@@ -1,6 +1,11 @@
 import type { DigSite, HistoryGameId } from '@/lib/api';
 
 import type { Place } from './lab';
+import './history-text';
+
+/** The ten-level ladder (the server's services/games/history.ts has the same): levels 1–4 are open to everyone, later ones open with a star on the level before. */
+export const MAX_LEVEL = 10;
+export const OPEN_LEVELS = 4;
 
 /**
  * The Museum of Time (2.5D): a museum hall the student walks around as a young explorer, the eras

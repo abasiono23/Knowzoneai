@@ -3,7 +3,7 @@ import i18n from '../../i18n';
 import type { AvatarConfig, ShopItem } from './types';
 
 export const SKINS = ['#FFDBB4', '#E8B48A', '#C68642', '#A0612F', '#7B4423', '#4E2A17'];
-export const HAIR_COLORS = ['#1B1B1B', '#4A2C1A', '#8B5A2B', '#D4A15A', '#B5462E', '#7C5CFF'];
+export const HAIR_COLORS = ['#1B1B1B', '#4A2C1A', '#8B5A2B', '#D4A15A', '#B5462E', '#8D8D94'];
 /** Option labels are read through getters, so they follow the current language. */
 const option = <T extends string>(group: 'hair' | 'eyes' | 'mouth', id: T) => ({
   id,
@@ -21,8 +21,8 @@ export const EYES: { id: AvatarConfig['eyes']; readonly label: string }[] = (['r
 export const MOUTHS: { id: AvatarConfig['mouth']; readonly label: string }[] = (['smile', 'grin', 'open'] as const).map(
   (id) => option('mouth', id),
 );
-/** Free outfit colours at creation; patterned outfits are in the shop. */
-export const OUTFIT_COLORS = ['#7C5CFF', '#2DD4BF', '#FF7A93', '#FFC857', '#4CC9FF', '#1A2150'];
+/** Free outfit colours at creation (muted, like real clothes); patterned outfits are in the shop. */
+export const OUTFIT_COLORS = ['#3D4A7A', '#2F6F62', '#8E3B52', '#B9832B', '#4C6FB0', '#23263A'];
 export const BACKGROUNDS: Record<string, readonly [string, string]> = {
   violet: ['#3B2DBF', '#7C5CFF'],
   teal: ['#0E8F6E', '#2DD4BF'],
@@ -100,4 +100,17 @@ export const SHOP: ShopItem[] = [
 
 export const getItem = (id: string) => SHOP.find((i) => i.id === id);
 export const backgroundOf = (bg: string) => BACKGROUNDS[bg.replace(/^bg-/, '')] ?? BACKGROUNDS.violet;
-export const RARITY_COLOR = { common: '#A6ADD6', rare: '#4CC9FF', epic: '#FFC857' } as const;
+/** The flat backdrop a portrait is drawn on: a quiet tint of its background's colour. */
+const BACKDROPS: Record<string, string> = {
+  violet: '#DEDAF6',
+  teal: '#CFE9E2',
+  sunset: '#F5DCD3',
+  galaxy: '#2A2F52',
+  jungle: '#D5E7D2',
+  gold: '#F1E2B8',
+  ocean: '#D3E3F3',
+  nebula: '#E6D6EE',
+  savanna: '#EFDFC4',
+};
+export const backdropOf = (bg: string) => BACKDROPS[bg.replace(/^bg-/, '')] ?? BACKDROPS.violet;
+export const RARITY_COLOR = { common: '#8A8FA8', rare: '#2F55C8', epic: '#B26A00' } as const;

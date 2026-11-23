@@ -238,6 +238,7 @@ export type LabReagent = {
 export type Glassware = 'beaker' | 'tube' | 'flask';
 export type MixtureLabRun = RunBase & {
   game: 'mixture-lab';
+  level?: number;
   shelf: LabReagent[];
   experiments: {
     id: number;
@@ -250,32 +251,71 @@ export type MixtureLabRun = RunBase & {
     result?: { correct: boolean; points: number; answer: string; equation: string };
   }[];
 };
-export type ElementCardField = 'category' | 'group' | 'period' | 'state' | 'shells' | 'number' | 'fact';
-export type ElementCard = { symbol: string; name: string } & Partial<Record<ElementCardField, string | number>>;
+export type ElementCategory =
+  | 'alkali'
+  | 'alkaline-earth'
+  | 'transition'
+  | 'post-transition'
+  | 'metalloid'
+  | 'nonmetal'
+  | 'halogen'
+  | 'noble'
+  | 'lanthanide'
+  | 'actinide';
+/** A periodic-table cell, with only the facts the level lets you look up. */
+export type ElementCell = {
+  number: number;
+  symbol: string;
+  /** 1–18; 0 for the lanthanide and actinide rows. */
+  group: number;
+  period: number;
+  category: ElementCategory;
+  name?: string;
+  state?: 'solid' | 'liquid' | 'gas';
+  shells?: string;
+  config?: string;
+  mass?: number;
+  en?: number;
+  ie1?: number;
+  fact?: string;
+};
 export type ElementQuestRun = RunBase & {
   game: 'element-quest';
+  level?: number;
+  table: ElementCell[];
   missions: {
     id: number;
     text: string;
-    show: ElementCardField[];
-    cabinet: ElementCard[];
-    result?: { correct: boolean; points: number; answer: string[] };
+    /** One answer ("Find…") rather than a set ("Select every…"). */
+    single: boolean;
+    /** The table shows elements 1…upTo. */
+    upTo: number;
+    /** Cells coloured by family (a hint on the lower levels). */
+    colours: boolean;
+    result?: { correct: boolean; points: number; answer: string[]; why: string };
   }[];
 };
 export type MoleculeBuilderRun = RunBase & {
   game: 'molecule-builder';
+  level?: number;
   valency: Record<string, number>;
+  /** Hydrogens can be filled in with one tap. */
+  autoHydrogens?: boolean;
   molecules: {
     id: number;
-    name: string;
-    formula: string;
-    atoms: Record<string, number>;
+    /** Hidden on reaction levels until answered (it is the answer). */
+    name: string | null;
+    /** Reaction levels: what to build. */
+    task: string | null;
+    formula: string | null;
+    atoms: Record<string, number> | null;
     palette: string[];
-    result?: { correct: boolean; points: number };
+    result?: { correct: boolean; points: number; smiles: string; structure: { atoms: string[]; bonds: [number, number, number][] } };
   }[];
 };
 export type ReactionRushRun = RunBase & {
   game: 'reaction-rush';
+  level?: number;
   seconds: number;
   tasks: (
     | {
@@ -292,18 +332,45 @@ export type ReactionRushRun = RunBase & {
         options: string[];
         result?: { correct: boolean; points: number; answer: string };
       }
+    | {
+        id: number;
+        type: 'calc';
+        prompt: string;
+        options: string[];
+        result?: { correct: boolean; points: number; answer: string; working: string };
+      }
   )[];
 };
-export type LabTest = 'litmus' | 'ph' | 'mg' | 'flame' | 'agno3' | 'naoh' | 'bacl2';
+export type LabTest =
+  | 'litmus'
+  | 'ph'
+  | 'mg'
+  | 'flame'
+  | 'agno3'
+  | 'naoh'
+  | 'bacl2'
+  | 'nh3'
+  | 'kscn'
+  | 'kmno4'
+  | 'nahco3'
+  | 'brwater'
+  | 'dnph'
+  | 'tollens'
+  | 'fehling'
+  | 'iodoform'
+  | 'fecl3';
 export type MysterySubstanceRun = RunBase & {
   game: 'mystery-substance';
+  level?: number;
   tests: LabTest[];
+  /** Most tests per unknown (0 = no limit). */
+  maxTests?: number;
   cases: {
     id: number;
     appearance: string;
     suspects: string[];
     results: Partial<Record<LabTest, string>>;
-    result?: { correct: boolean; points: number; answer: string };
+    result?: { correct: boolean; points: number; answer: string; all?: Partial<Record<LabTest, string>> };
   }[];
 };
 export type LabRun = MixtureLabRun | ElementQuestRun | MoleculeBuilderRun | ReactionRushRun | MysterySubstanceRun;
@@ -321,29 +388,38 @@ export type GalaxyDefenderRun = RunBase & { game: 'galaxy-defender'; seconds: nu
 export type AsteroidSurvivalRun = RunBase & {
   game: 'asteroid-survival';
   seconds: number;
-  challenges: ChoiceQuestion[];
+  /** `given`: constants and data for the calculation; `hint`: the formula (easier levels only). */
+  challenges: (ChoiceQuestion & { given?: string[]; hint?: string })[];
 };
-export type EngineId = 'spark' | 'nova' | 'titan' | 'ion';
-export type TankId = 'small' | 'medium' | 'large';
-export type RocketDesign = { engine: EngineId; tanks: TankId[] };
+export type EngineId = 'spark' | 'nova' | 'titan' | 'ion' | 'vega' | 'atlas';
+export type TankId = 'small' | 'medium' | 'large' | 'xl';
+export type RocketStage = { engine: EngineId; tanks: TankId[] };
+export type RocketDesign = RocketStage & { upper?: RocketStage };
 export type RocketStats = {
   mass: number;
   dry: number;
   fuel: number;
   weight: number;
   thrust: number;
+  twr?: number;
   dv: number;
+  stages?: { dv: number; mass?: number; twr?: number }[];
   cost: number;
 };
-export type RocketProblem = 'no-fuel' | 'budget' | 'no-liftoff' | 'not-enough' | 'invalid';
+export type RocketProblem = 'no-fuel' | 'budget' | 'no-liftoff' | 'low-twr' | 'not-enough' | 'vacuum' | 'upper-thrust' | 'invalid';
 export type RocketBuilderRun = RunBase & {
   game: 'rocket-builder';
   parts: {
-    engines: Record<EngineId, { name: string; mass: number; thrust: number; isp: number; cost: number }>;
-    tanks: Record<TankId, { name: string; dry: number; fuel: number; cost: number }>;
+    /** The parts this level has. */
+    engines: Partial<Record<EngineId, { name: string; mass: number; thrust: number; isp: number; cost: number; vacuum?: boolean }>>;
+    tanks: Partial<Record<TankId, { name: string; dry: number; fuel: number; cost: number }>>;
     fins: { mass: number; cost: number };
     maxTanks: number;
+    maxUpperTanks?: number;
     g: number;
+    /** Level 7 on: a second (upper) stage may be added. */
+    staging?: boolean;
+    upperTwr?: number;
   };
   missions: {
     id: number;
@@ -352,6 +428,8 @@ export type RocketBuilderRun = RunBase & {
     payload: { name: string; kind: 'nose' | 'capsule'; mass: number };
     dv: number;
     budget: number;
+    /** Smallest thrust-to-weight ratio allowed at lift-off. */
+    twr?: number;
     tries: number;
     design?: RocketDesign;
     stats?: RocketStats;
@@ -381,6 +459,8 @@ export type SolarExplorerRun = RunBase & {
     planet: string;
     mission: string;
     facts: string[];
+    /** The probe's readout. Period: d days, h hours, y years. */
+    data?: { radius: number; gravity?: number; around: string; period?: [number, 'h' | 'd' | 'y']; distance?: [number, 'km' | 'AU'] };
     questions: ChoiceQuestion[];
   }[];
 };
@@ -395,29 +475,34 @@ export type TimeChallenge =
       type: 'order';
       q: string;
       items: string[];
-      result?: { correct: boolean; points: number; answer: string[] };
+      result?: { correct: boolean; points: number; answer: string[]; years?: number[] };
     };
 export type TimeMachineRun = RunBase & {
   game: 'time-machine';
+  /** Seconds per question (order challenges get double); 0 = no clock. */
+  seconds?: number;
   eras: {
     id: string;
     title: string;
     when: string;
     year: number;
     place: string;
+    region?: string;
     intro: string;
-    spots: [string, string];
+    spots?: [string, string];
     challenges: TimeChallenge[];
   }[];
 };
 export type DigSite = 'savanna' | 'desert' | 'stone';
 export type LostCivilizationRun = RunBase & {
   game: 'lost-civilization';
+  seconds?: number;
   digs: {
     id: number;
     dig: DigSite;
     art: string;
-    finds: { name: string; clue: string; art: 'hero' | 'pottery' | 'beads' | 'tool' }[];
+    /** The kind of find, for its drawing (hero, pottery, beads, tool, tablet, coin, figure, mask…). */
+    finds: { name: string; clue: string; art: string }[];
     mystery: {
       id: number;
       q: string;
@@ -429,10 +514,13 @@ export type LostCivilizationRun = RunBase & {
 };
 export type AfricaExplorerRun = RunBase & {
   game: 'africa-explorer';
+  seconds?: number;
   stops: {
     id: number;
     name: string;
     region?: string;
+    /** Markers to choose from instead of tapping the map: [longitude, latitude]. */
+    choices?: [number, number][];
     find?: { correct: boolean; points: number; at: [number, number] };
     landmark?: string;
     art?: string;
@@ -479,17 +567,43 @@ export type RobotRescueRun = RunBase & {
     result?: PuzzleResult;
   }[];
 };
+export type VaultType =
+  | 'set'
+  | 'read'
+  | 'add'
+  | 'ascii'
+  | 'hex'
+  | 'signed'
+  | 'and'
+  | 'or'
+  | 'xor'
+  | 'shl'
+  | 'shr'
+  | 'neg'
+  | 'sub'
+  | 'hosts'
+  | 'network'
+  | 'hamming'
+  | 'gray'
+  | 'float';
 export type BinaryBreakerRun = RunBase & {
   game: 'binary-breaker';
   vaults: {
     id: number;
-    type: 'set' | 'read' | 'ascii' | 'add';
+    type: VaultType;
     bits: number;
     target?: number;
     shown?: number[];
     options?: string[];
     a?: number[];
     b?: number[];
+    /** hex: the number in hexadecimal; shl/shr: places; neg/gray: n; sub: x − y; hosts: /prefix; network: "ip/prefix". */
+    hex?: string;
+    n?: number;
+    x?: number;
+    y?: number;
+    prefix?: number;
+    address?: string;
     result?: PuzzleResult & { answer: string };
   }[];
 };
@@ -503,6 +617,8 @@ export type CircuitMasterRun = RunBase & {
     out: string;
     gates: LogicGate[];
     target: number[];
+    /** Easier levels: the bulb's output for each row shows as you build. */
+    preview?: boolean;
     tries: number;
     result?: PuzzleResult & { solution: Record<string, LogicGate> };
   }[];
@@ -512,11 +628,15 @@ export type CyberDefenderRun = RunBase & {
   seconds: number;
   items: {
     id: number;
-    kind: 'email' | 'sms' | 'password' | 'situation';
+    kind: 'email' | 'sms' | 'password' | 'situation' | 'attack' | 'fix';
     from?: string;
     subject?: string;
     body: string;
     link?: string;
+    /** A log line or code (monospace). */
+    code?: string;
+    /** attack / fix: what is asked. */
+    question?: string;
     options: string[];
     result?: PuzzleResult & { answer: string; why: string };
   }[];
@@ -525,6 +645,25 @@ export type TechRun = CodeRunnerRun | RobotRescueRun | BinaryBreakerRun | Circui
 
 // Business District (Business, Finance & Economics): the server runs each simulation turn.
 export type BusinessGameId = 'startup-tycoon' | 'budget-master' | 'market-master' | 'profit-quest' | 'market-simulator';
+/** An analyst's desk question: its words come from business:analyst.kinds.<kind>.q with `vars`. */
+export type AnalystStep = {
+  id: number;
+  kind: string;
+  vars: Record<string, string>;
+  options: string[];
+  /** 0 = no clock. */
+  seconds: number;
+  result?: { correct: boolean; points: number; answer: string; choice?: string | null };
+};
+/** What every Business District run has besides its own simulation. */
+type BusinessBase = RunBase & {
+  level?: number;
+  /** Exact research and staff hints (they fade from Proficient). */
+  hints?: boolean;
+  /** Simulation turns before the analyst's desk. */
+  turns?: number;
+  analyst?: AnalystStep[];
+};
 export type StaffRole = 'maker' | 'seller' | 'support';
 export type Grade = 'best' | 'ok' | 'poor';
 export type StartupReport = {
@@ -555,7 +694,7 @@ export type StartupReport = {
   overload: number;
   market: number;
 };
-export type StartupTycoonRun = RunBase & {
+export type StartupTycoonRun = BusinessBase & {
   game: 'startup-tycoon';
   company: 'bakery' | 'repair' | 'apps' | 'fashion' | 'solar';
   months: number;
@@ -600,7 +739,7 @@ export type BudgetReport = {
   foodOk: boolean;
   points: number;
 };
-export type BudgetMasterRun = RunBase & {
+export type BudgetMasterRun = BusinessBase & {
   game: 'budget-master';
   income: number[];
   foodMin: number;
@@ -643,7 +782,7 @@ export type DayReport = {
   rival: number | null;
   points: number;
 };
-export type MarketMasterRun = RunBase & {
+export type MarketMasterRun = BusinessBase & {
   game: 'market-master';
   product: 'lemonade' | 'fruit' | 'icePops' | 'sandwiches';
   cost: number;
@@ -676,7 +815,7 @@ export type WeekReport = {
   points: number;
 };
 export type CalcKind = 'contribution' | 'breakeven' | 'profit' | 'margin' | 'priceForTarget' | 'machine';
-export type ProfitQuestRun = RunBase & {
+export type ProfitQuestRun = BusinessBase & {
   game: 'profit-quest';
   product: 'backpacks' | 'bikes' | 'phoneCases' | 'shoes';
   step: number;
@@ -689,8 +828,10 @@ export type ProfitQuestRun = RunBase & {
         calc: CalcKind;
         nums: Record<string, number>;
         options: string[];
+        seconds?: number;
         result?: PuzzleResult & { answer: string; choice?: string };
       }
+    | ({ type: 'analyst' } & Omit<AnalystStep, 'id'>)
     | {
         type: 'week';
         research?: { price: number; customers: number; about: boolean }[];
@@ -715,7 +856,7 @@ export type QuarterReport = {
   right: boolean;
   points: number;
 };
-export type MarketSimulatorRun = RunBase & {
+export type MarketSimulatorRun = BusinessBase & {
   game: 'market-simulator';
   stocks: { id: string; sector: string; risk: 'low' | 'medium' | 'high' }[];
   assets: string[];
@@ -820,6 +961,7 @@ export type GameAnswer = {
   test?: LabTest;
   engine?: EngineId;
   tanks?: TankId[];
+  upper?: RocketStage;
   placements?: Body[];
   hits?: number;
   order?: string[];
@@ -882,10 +1024,12 @@ export type GameOutcome = {
   table?: number[];
   wrongRows?: number[];
   equation?: string;
-  problem?: 'count' | 'valency' | 'disconnected' | RocketProblem;
+  problem?: 'count' | 'valency' | 'disconnected' | 'isomer' | RocketProblem;
   combo?: number;
   test?: LabTest;
   result?: string;
+  /** Reaction Rush calculations: the worked answer. */
+  working?: string;
 };
 export type GameSummary = {
   stars: number;

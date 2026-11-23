@@ -1,134 +1,104 @@
-import { Ionicons } from '@expo/vector-icons';
 import * as Haptics from 'expo-haptics';
-import { LinearGradient } from 'expo-linear-gradient';
 import { router, useLocalSearchParams } from 'expo-router';
 import { useEffect, useMemo, useRef, useState } from 'react';
-import { Trans, useTranslation } from 'react-i18next';
-import { ScrollView, StyleSheet, View } from 'react-native';
-import Animated, {
-  FadeIn,
-  FadeInDown,
-  FadeInRight,
-  useAnimatedStyle,
-  useSharedValue,
-  withSequence,
-  withTiming,
-  ZoomIn,
-} from 'react-native-reanimated';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { useTranslation } from 'react-i18next';
+import { Platform, Pressable, StyleSheet, View } from 'react-native';
+import Animated, { FadeIn, FadeInDown } from 'react-native-reanimated';
 
+import { ClueCard, Feedback, GameLoading, HeartsStat, PrimaryButton, SecondaryButton, Stat, TimerStat, useCountdown, W } from '@/components/games/ui';
 import { LevelRoute, type LoadedLevel } from '@/components/world/level-route';
-import { ConfirmDialog, HintSheet, PauseMenu } from '@/components/world/overlays';
-import { AnswerButton, GameHud, Hearts, Kora } from '@/components/world/world-ui';
-import { Button, ProgressBar, Text } from '@/components/ui';
-import { Colors, Gradients, Radius, Spacing, WorldGradients } from '@/constants/theme';
-import { WORLDS } from '@/lib/world/content';
-import { DAILY_ID, HEARTS, QUESTION_SECONDS, questionsFor } from '@/lib/world/levels';
+import { LevelIntro, PlayFrame, usePlayState, type PlayLevel } from '@/components/world/play-frame';
+import { AnswerButton, type AnswerState } from '@/components/world/world-ui';
+import { Text } from '@/components/ui';
+import { Fonts } from '@/constants/theme';
+import { useKeys } from '@/lib/games/english';
+import { useBank, type BankQuestion } from '@/lib/world/bank';
+import { bankTier, DAILY_ID, questionsFor, rungOf } from '@/lib/world/levels';
 import { useWorld } from '@/lib/world/store';
-import { KIND_INFO } from '@/lib/world/types';
 
-/** Screen 139: gameplay for missions, boss levels and the daily challenge. `?review=1` replays your mistakes. */
+/**
+ * Quizzes: the quiz levels, the final test (level 10), the daily challenge and `?review=1`, which
+ * replays the questions you got wrong (no hearts, no clock).
+ */
 export default function GameplayScreen() {
-  return <LevelRoute>{(l) => <Game key={l.id} level={l} />}</LevelRoute>;
+  return <LevelRoute>{(l) => <Quiz key={l.id} level={l} />}</LevelRoute>;
 }
 
-function Game({ level }: { level: LoadedLevel }) {
-  const { t } = useTranslation('world');
+function Quiz({ level }: { level: LoadedLevel }) {
+  const bank = useBank(level.worldId, bankTier(level));
   const { review } = useLocalSearchParams<{ review?: string }>();
-  const reviewing = review === '1';
-  const { recordRun, settings, mistakes: pastMistakes } = useWorld();
-  const [round, setRound] = useState(0);
-  const questions = useMemo(() => {
-    const qs = questionsFor(level, round);
-    if (!reviewing) return qs;
-    const wrong = new Set(pastMistakes[level.id] ?? []);
-    return WORLDS.flatMap((w) => w.questions).filter((q) => wrong.has(q.id));
-  }, [level, round, reviewing, pastMistakes]);
-  const boss = level.kind === 'boss';
-  const daily = level.id === DAILY_ID;
-  const timed = settings.timer && !reviewing;
+  const { mistakes } = useWorld();
+  if (!bank) return <GameLoading />;
+  if (review === '1') {
+    const wrong = new Set((mistakes[level.id] ?? []).map((id) => id.replace(/-tf$/, '')));
+    return <QuizGame level={level} pool={bank.questions.filter((q) => wrong.has(q.id))} reviewing />;
+  }
+  return <QuizGame level={level} pool={bank.questions} />;
+}
 
-  const [started, setStarted] = useState(reviewing);
+function QuizGame({ level, pool, reviewing }: { level: PlayLevel; pool: BankQuestion[]; reviewing?: boolean }) {
+  const { t } = useTranslation('world');
+  const { t: tg } = useTranslation('games');
+  const { recordRun } = useWorld();
+  const s = usePlayState(level);
+  const daily = level.id === DAILY_ID;
+  const rung = rungOf(daily ? { number: level.tier ?? 4 } : level);
+  const hearts0 = reviewing ? 0 : rung.hearts || 3;
+  const hintLevel = daily || reviewing ? 2 : rung.hints;
+  const [round, setRound] = useState(0);
+  const questions = useMemo(
+    () => (reviewing ? pool : questionsFor(level, { questions: pool, truths: [], terms: [] }, round)),
+    [level, pool, round, reviewing],
+  );
+  const timed = !s.relaxed && !reviewing;
+
   const [i, setI] = useState(0);
-  const [hearts, setHearts] = useState(HEARTS);
+  const [hearts, setHearts] = useState(hearts0);
   const [picked, setPicked] = useState<number | null>(null);
   const [correct, setCorrect] = useState(0);
   const [score, setScore] = useState(0);
-  const [combo, setCombo] = useState(0);
+  const [streak, setStreak] = useState(0);
   const [gain, setGain] = useState(0);
   const [wrong, setWrong] = useState<string[]>([]);
-  const [hints, setHints] = useState({ nudge: false, fifty: false });
-  const [hintsUsed, setHintsUsed] = useState(0);
+  const [hint, setHint] = useState(false);
   const [removed, setRemoved] = useState<number[]>([]);
-  const [left, setLeft] = useState(QUESTION_SECONDS);
-  const [paused, setPaused] = useState(false);
-  const [hintOpen, setHintOpen] = useState(false);
-  const [confirm, setConfirm] = useState<'restart' | 'quit' | null>(null);
+  const [hintsUsed, setHintsUsed] = useState(0);
   const startedAt = useRef(0);
-  const shake = useSharedValue(0);
-  const bossStyle = useAnimatedStyle(() => ({ transform: [{ translateX: shake.value }] }));
 
   const q = questions[i];
   const answered = picked !== null;
-  const over = hearts <= 0 && !reviewing;
-  const buzz = (type: Haptics.NotificationFeedbackType) =>
-    settings.haptics && Haptics.notificationAsync(type).catch(() => {});
+  const over = !reviewing && hearts <= 0;
+  const buzz = (type: Haptics.NotificationFeedbackType) => s.haptics && Haptics.notificationAsync(type).catch(() => {});
 
   const answer = (k: number) => {
-    if (answered || !q) return;
-    const ok = k === q.correctIndex;
+    if (answered || !q || s.halted) return;
+    const ok = k === q.answer;
     setPicked(k);
     if (ok) {
-      const mult = hints.fifty ? 0.5 : hints.nudge ? 0.75 : 1;
-      const speed = timed ? Math.round((left / QUESTION_SECONDS) * 50) : 25;
-      const pts = Math.round((100 + speed + Math.min(combo, 5) * 10) * mult);
+      const mult = removed.length ? 0.5 : hint ? 0.75 : 1;
+      const speed = timed ? Math.round((left / rung.seconds) * 50) : 25;
+      const pts = Math.round((100 + speed + Math.min(streak, 5) * 10) * mult);
       setGain(pts);
-      setScore((s) => s + pts);
+      setScore((x) => x + pts);
       setCorrect((c) => c + 1);
-      setCombo((c) => c + 1);
+      setStreak((c) => c + 1);
       buzz(Haptics.NotificationFeedbackType.Success);
-      if (boss)
-        shake.set(
-          withSequence(
-            withTiming(-10, { duration: 60 }),
-            withTiming(10, { duration: 60 }),
-            withTiming(0, { duration: 60 }),
-          ),
-        );
     } else {
       setGain(0);
-      setCombo(0);
+      setStreak(0);
       setWrong((w) => [...w, q.id]);
       if (!reviewing) setHearts((h) => h - 1);
       buzz(Haptics.NotificationFeedbackType.Error);
     }
   };
 
-  // Question clock: runs only while a question is live and the game isn't paused.
-  const answerRef = useRef(answer);
-  useEffect(() => {
-    answerRef.current = answer;
-  });
-  useEffect(() => {
-    if (!started || answered || paused || hintOpen || !timed || over) return;
-    const timer = setInterval(() => {
-      setLeft((s) => {
-        if (s <= 1) {
-          clearInterval(timer);
-          answerRef.current(-1);
-          return 0;
-        }
-        return s - 1;
-      });
-    }, 1000);
-    return () => clearInterval(timer);
-  }, [started, answered, paused, hintOpen, timed, over, i]);
+  const left = useCountdown(rung.seconds, s.started && timed && !answered && !s.halted && !over, () => answer(-1), `${round}-${i}`);
 
   useEffect(() => {
-    if (started) startedAt.current = Date.now();
-  }, [started, round]);
+    if (s.started) startedAt.current = Date.now();
+  }, [s.started, round]);
 
-  const finish = (final?: { hearts: number }) => {
+  const finish = () => {
     if (reviewing) return router.back();
     const run = recordRun({
       levelId: level.id,
@@ -138,17 +108,11 @@ function Game({ level }: { level: LoadedLevel }) {
       seconds: Math.round((Date.now() - startedAt.current) / 1000),
       hintsUsed,
       mistakes: wrong,
-      failed: (final?.hearts ?? hearts) <= 0,
+      failed: hearts <= 0,
     });
     router.replace({
       pathname: '/world/results/[levelId]',
-      params: {
-        levelId: level.id,
-        run: run.id,
-        fresh: '1',
-        unlocked: run.unlockedWorlds.join(','),
-        ach: run.newAchievements.join(','),
-      },
+      params: { levelId: level.id, run: run.id, fresh: '1', unlocked: run.unlockedWorlds.join(','), ach: run.newAchievements.join(',') },
     });
   };
 
@@ -156,363 +120,149 @@ function Game({ level }: { level: LoadedLevel }) {
     if (over || i === questions.length - 1) return finish();
     setI(i + 1);
     setPicked(null);
-    setHints({ nudge: false, fifty: false });
+    setHint(false);
     setRemoved([]);
-    setLeft(QUESTION_SECONDS);
   };
 
   const restart = () => {
-    setConfirm(null);
-    setPaused(false);
     setRound((r) => r + 1);
     setI(0);
-    setHearts(HEARTS);
+    setHearts(hearts0);
     setPicked(null);
     setCorrect(0);
     setScore(0);
-    setCombo(0);
+    setStreak(0);
     setWrong([]);
-    setHints({ nudge: false, fifty: false });
-    setHintsUsed(0);
+    setHint(false);
     setRemoved([]);
-    setLeft(QUESTION_SECONDS);
+    setHintsUsed(0);
   };
 
-  const colors = daily ? Gradients.reward : WorldGradients[level.worldId];
+  useKeys(
+    (key) => {
+      if (!s.started || s.halted) return;
+      if (answered) {
+        if (key === 'Enter' || key === ' ') next();
+        return;
+      }
+      const n = /^[1-5]$/.test(key) ? Number(key) - 1 : /^[A-E]$/.test(key) ? key.charCodeAt(0) - 65 : -1;
+      if (q && n >= 0 && n < q.options.length && !removed.includes(n)) answer(n);
+    },
+    !!q,
+  );
 
-  if (!started) {
-    const info = KIND_INFO[level.kind];
+  if (!s.started) return <LevelIntro s={s} count={questions.length} />;
+
+  if (!q)
     return (
-      <LinearGradient colors={[colors[0], Colors.backgroundDeep]} style={{ flex: 1 }}>
-        <SafeAreaView style={styles.introWrap}>
-          <ScrollView contentContainerStyle={styles.intro}>
-            <Animated.Text entering={ZoomIn.duration(400)} style={styles.bigEmoji}>
-              {boss ? level.world.boss.emoji : daily ? '📅' : level.world.emoji}
-            </Animated.Text>
-            <Text variant="label" color="rgba(255,255,255,0.8)" center>
-              {daily
-                ? t('play.dailyEyebrow')
-                : t('play.eyebrow', {
-                    world: level.world.name.toUpperCase(),
-                    number: level.number,
-                    kind: info.label.toUpperCase(),
-                  })}
-            </Text>
-            <Text variant="display" center>
-              {boss ? level.world.boss.name : level.title}
-            </Text>
-            <Animated.View entering={FadeInDown.delay(200)} style={{ alignSelf: 'stretch' }}>
-              <Kora>
-                {boss
-                  ? t('detail.quote', { text: level.world.boss.taunt })
-                  : daily
-                    ? t('play.dailyIntro')
-                    : level.number === 1
-                      ? level.world.story
-                      : level.blurb}
-              </Kora>
-            </Animated.View>
-            <View style={styles.rules}>
-              {[
-                { id: 'questions', icon: 'help-circle' as const, text: t('play.questions', { count: questions.length }) },
-                { id: 'hearts', icon: 'heart' as const, text: t('play.hearts', { count: HEARTS }) },
-                {
-                  id: 'timer',
-                  icon: 'time' as const,
-                  text: timed ? t('play.secondsEach', { count: QUESTION_SECONDS }) : t('play.noTimer'),
-                },
-                { id: 'helper', icon: 'bulb' as const, text: t('play.aiHelper') },
-              ].map((r) => (
-                <View key={r.id} style={styles.rule}>
-                  <Ionicons name={r.icon} size={16} color={Colors.reward} />
-                  <Text variant="small">{r.text}</Text>
-                </View>
-              ))}
-            </View>
-            <Text variant="small" color={Colors.textSecondary} center>
-              {t('levels.reward', { xp: level.xp, count: level.coins })}
-            </Text>
-          </ScrollView>
-          <View style={styles.introFooter}>
-            <Button title={boss ? t('play.fight') : t('play.start')} icon="play" onPress={() => setStarted(true)} />
-            <Button variant="ghost" title={t('actions.notNow', { ns: 'common' })} onPress={() => router.back()} />
-          </View>
-        </SafeAreaView>
-      </LinearGradient>
+      <PlayFrame s={s} step={{ n: 1, total: 1 }} status={null} onRestart={restart}>
+        <View style={{ gap: 16, paddingTop: 24 }}>
+          <Text style={styles.question}>{t('play.nothingToReview')}</Text>
+          <PrimaryButton title={t('actions.back', { ns: 'common' })} onPress={() => router.back()} />
+        </View>
+      </PlayFrame>
     );
-  }
 
-  if (!q) {
-    return (
-      <SafeAreaView
-        style={[
-          styles.introWrap,
-          { justifyContent: 'center', padding: Spacing.lg, gap: Spacing.md, backgroundColor: Colors.background },
-        ]}>
-        <Text variant="title" center>
-          {t('play.nothingToReview')}
-        </Text>
-        <Button title={t('actions.back', { ns: 'common' })} onPress={() => router.back()} />
-      </SafeAreaView>
-    );
-  }
-
-  const optionState = (k: number) =>
-    removed.includes(k)
-      ? 'removed'
-      : !answered
-        ? 'idle'
-        : k === q.correctIndex
-          ? 'right'
-          : k === picked
-            ? 'wrong'
-            : 'dim';
+  const stateOf = (k: number): AnswerState =>
+    removed.includes(k) ? 'removed' : !answered ? 'idle' : k === q.answer ? 'right' : k === picked ? 'wrong' : 'dim';
 
   return (
-    <View style={{ flex: 1, backgroundColor: Colors.background }}>
-      <LinearGradient colors={[colors[0] + '66', 'transparent']} style={StyleSheet.absoluteFill} pointerEvents="none" />
-      <GameHud
-        onPause={() => setPaused(true)}
-        progress={(i + (answered ? 1 : 0)) / questions.length}
-        right={
-          <View style={styles.score} accessibilityLabel={t('play.scoreA11y', { score })}>
-            <Ionicons name="trophy" size={14} color={Colors.reward} />
-            <Text variant="bodyStrong" style={{ fontSize: 14 }}>
-              {score}
-            </Text>
-          </View>
-        }
-        left={
-          <View style={{ flexDirection: 'row', alignItems: 'center', gap: Spacing.sm }}>
-            {reviewing ? (
-              <Text variant="label" color={Colors.reward}>
-                {t('play.practising')}
-              </Text>
-            ) : (
-              <Hearts left={hearts} />
-            )}
-            {combo >= 2 && (
-              <Animated.View key={combo} entering={ZoomIn} style={styles.combo}>
-                <Ionicons name="flame" size={13} color="#FF9F43" />
-                <Text variant="label" color="#FF9F43">
-                  {t('play.comboShort', { count: combo })}
-                </Text>
-              </Animated.View>
-            )}
-          </View>
-        }
-        timer={timed ? left : undefined}
-      />
-
-      <ScrollView contentContainerStyle={styles.body}>
-        {boss && (
-          <View style={styles.boss}>
-            <Animated.Text style={[styles.bossEmoji, bossStyle]}>{level.world.boss.emoji}</Animated.Text>
-            <View style={{ flex: 1, gap: 4 }}>
-              <Text variant="label" color={Colors.danger}>
-                {level.world.boss.name.toUpperCase()}
-              </Text>
-              <ProgressBar progress={1 - correct / questions.length} height={10} colors={[Colors.danger, '#FF9F43']} />
-            </View>
-          </View>
-        )}
-        <Animated.View key={`${round}-${i}`} entering={FadeInRight.duration(260)} style={{ gap: Spacing.md }}>
-          <Text variant="label" color={Colors.textMuted}>
-            {q.hard
-              ? t('play.questionOfTricky', { n: i + 1, total: questions.length })
-              : t('play.questionOf', { n: i + 1, total: questions.length })}
-          </Text>
-          <Text variant="title" style={{ fontSize: 22, lineHeight: 30 }}>
-            {q.question}
-          </Text>
-          {hints.nudge && !answered && (
-            <Animated.View entering={FadeIn}>
-              <Kora mood="happy">{q.hint}</Kora>
-            </Animated.View>
-          )}
-          <View style={{ gap: Spacing.xs }}>
-            {q.options.map((o, k) => (
-              <AnswerButton
-                key={k}
-                label={o}
-                index={k}
-                state={optionState(k)}
-                onPress={() => answer(k)}
-                disabled={answered}
-              />
-            ))}
-          </View>
-          {answered && (
-            <Animated.View
-              entering={FadeInDown.duration(250)}
-              style={[styles.feedback, picked === q.correctIndex ? styles.good : styles.bad]}>
-              <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
-                <Text variant="bodyStrong" color={picked === q.correctIndex ? Colors.success : Colors.danger}>
-                  {picked === q.correctIndex ? t('play.correct') : picked === -1 ? t('play.timesUp') : t('play.wrong')}
-                </Text>
-                {gain > 0 && (
-                  <Animated.View entering={ZoomIn}>
-                    <Text variant="bodyStrong" color={Colors.reward}>
-                      {t('play.gain', { count: gain })}
-                    </Text>
-                  </Animated.View>
-                )}
-              </View>
-              {picked !== q.correctIndex && (
-                <Text variant="small">
-                  <Trans
-                    t={t}
-                    i18nKey="play.answer"
-                    values={{ answer: q.options[q.correctIndex] }}
-                    components={{ b: <Text variant="small" style={{ fontFamily: 'Manrope_700Bold' }} /> }}
-                  />
-                </Text>
-              )}
-              <Text variant="small" color={Colors.textSecondary}>
-                {q.explanation}
-              </Text>
-            </Animated.View>
-          )}
-        </Animated.View>
-      </ScrollView>
-
-      <SafeAreaView edges={['bottom']} style={styles.footer}>
-        {answered ? (
-          <Button
-            title={
-              over
-                ? t('play.seeResults')
-                : i === questions.length - 1
-                  ? reviewing
-                    ? t('play.donePractising')
-                    : t('play.finish')
-                  : t('actions.continue', { ns: 'common' })
-            }
+    <PlayFrame
+      s={s}
+      step={{ n: i + 1, total: questions.length }}
+      onRestart={restart}
+      status={
+        <>
+          <Stat icon="list-outline" text={`${i + 1}/${questions.length}`} label={t('play.questionOf', { n: i + 1, total: questions.length })} />
+          {reviewing ? <Stat icon="refresh" text={t('play.practising')} /> : <HeartsStat left={hearts} total={hearts0} />}
+          <Stat icon="trophy-outline" text={String(score)} label={t('play.scoreA11y', { score })} />
+          {!reviewing && <TimerStat seconds={left} relaxed={!timed} />}
+        </>
+      }
+      footer={
+        answered ? (
+          <PrimaryButton
+            title={over ? t('play.seeResults') : i === questions.length - 1 ? (reviewing ? t('play.donePractising') : t('play.finish')) : tg('ui.next')}
             icon="arrow-forward"
             onPress={next}
           />
+        ) : hintLevel > 0 ? (
+          <View style={{ flexDirection: 'row', gap: 8 }}>
+            <SecondaryButton
+              title={t('adv.hint')}
+              icon="bulb-outline"
+              disabled={hint}
+              style={{ flex: 1 }}
+              accessibilityLabel={t('adv.hintA11y')}
+              onPress={() => {
+                setHint(true);
+                setHintsUsed((n) => n + 1);
+              }}
+            />
+            {hintLevel >= 2 && (
+              <SecondaryButton
+                title="50:50"
+                icon="git-compare-outline"
+                disabled={removed.length > 0}
+                style={{ flex: 1 }}
+                accessibilityLabel={t('adv.fiftyA11y')}
+                onPress={() => {
+                  const wrongOnes = q.options.map((_, k) => k).filter((k) => k !== q.answer);
+                  setRemoved(wrongOnes.slice(0, Math.max(1, q.options.length - 2)));
+                  setHintsUsed((n) => n + 1);
+                }}
+              />
+            )}
+          </View>
         ) : (
-          <Button
-            variant="secondary"
-            title={hints.nudge || hints.fifty ? t('play.moreHelp') : t('tutorial.askHint')}
-            icon="sparkles"
-            onPress={() => setHintOpen(true)}
-          />
+          <Text style={styles.noHints}>{t('adv.noHints')}</Text>
+        )
+      }>
+      <Animated.View key={`${round}-${i}`} entering={FadeIn.duration(180)} style={{ gap: 14 }}>
+        <View style={styles.qCard}>
+          <Text style={styles.eyebrow}>{t('play.questionOf', { n: i + 1, total: questions.length }).toUpperCase()}</Text>
+          <Text style={styles.question} accessibilityRole="header">
+            {q.q}
+          </Text>
+        </View>
+        {hint && !answered && (
+          <Animated.View entering={FadeIn}>
+            <ClueCard label={t('adv.hint').toUpperCase()} text={q.hint} />
+          </Animated.View>
         )}
-      </SafeAreaView>
-
-      <HintSheet
-        visible={hintOpen}
-        question={q}
-        used={hints}
-        onClose={() => setHintOpen(false)}
-        onNudge={() => {
-          if (!hints.nudge) setHintsUsed((n) => n + 1);
-          setHints((h) => ({ ...h, nudge: true }));
-        }}
-        onFiftyFifty={() => {
-          const wrongOnes = q.options.map((_, k) => k).filter((k) => k !== q.correctIndex);
-          setRemoved(wrongOnes.slice(0, 2));
-          setHints((h) => ({ ...h, fifty: true }));
-          setHintsUsed((n) => n + 1);
-          setHintOpen(false);
-        }}
-      />
-      <PauseMenu
-        visible={paused && !confirm}
-        title={daily ? t('levelPlan.daily.title') : level.title}
-        subtitle={t('play.pauseSubtitle', { n: i + 1, total: questions.length, count: score })}
-        onResume={() => setPaused(false)}
-        onRestart={() => setConfirm('restart')}
-        onQuit={() => setConfirm('quit')}
-      />
-      <ConfirmDialog
-        visible={confirm === 'restart'}
-        title={t('game.restartTitle')}
-        body={t('game.restartBody')}
-        confirmLabel={t('game.restart')}
-        onConfirm={restart}
-        onCancel={() => setConfirm(null)}
-      />
-      <ConfirmDialog
-        visible={confirm === 'quit'}
-        icon="exit-outline"
-        destructive
-        title={t('game.quitTitle')}
-        body={t('game.quitBody')}
-        confirmLabel={t('pause.quit')}
-        onConfirm={() => {
-          setConfirm(null);
-          router.back();
-        }}
-        onCancel={() => setConfirm(null)}
-      />
-    </View>
+        <View style={{ gap: 8 }}>
+          {q.options.map((o, k) => (
+            <AnswerButton key={k} label={o} index={k} state={stateOf(k)} onPress={() => answer(k)} disabled={answered || s.halted} />
+          ))}
+        </View>
+        {answered && (
+          <Animated.View entering={FadeInDown.duration(200)} style={{ gap: 8 }}>
+            <Feedback
+              tone={picked === q.answer ? 'good' : 'bad'}
+              title={picked === q.answer ? tg('ui.correct') : picked === -1 ? t('play.timesUp') : tg('ui.wrong')}
+              detail={picked === q.answer ? null : t('adv.answerWas', { answer: q.options[q.answer] })}
+              trailing={gain > 0 ? <Text style={styles.gain}>{tg('ui.points', { count: gain })}</Text> : undefined}
+            />
+            <Text style={styles.why}>{q.why}</Text>
+          </Animated.View>
+        )}
+      </Animated.View>
+      {!answered && Platform.OS === 'web' && (
+        <Pressable onPress={() => s.setHelp(true)} accessibilityRole="button" style={styles.keysNote}>
+          <Text style={styles.keysText}>{t('adv.keysShort')}</Text>
+        </Pressable>
+      )}
+    </PlayFrame>
   );
 }
 
 const styles = StyleSheet.create({
-  introWrap: { flex: 1 },
-  intro: {
-    padding: Spacing.lg,
-    gap: Spacing.md,
-    alignItems: 'center',
-    maxWidth: 560,
-    width: '100%',
-    alignSelf: 'center',
-  },
-  bigEmoji: { fontSize: 96, lineHeight: 112, marginTop: Spacing.lg },
-  rules: { flexDirection: 'row', flexWrap: 'wrap', gap: Spacing.xs, justifyContent: 'center' },
-  rule: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 6,
-    paddingHorizontal: Spacing.sm,
-    paddingVertical: 6,
-    borderRadius: Radius.pill,
-    backgroundColor: 'rgba(0,0,0,0.3)',
-  },
-  introFooter: { padding: Spacing.md, gap: Spacing.xs, maxWidth: 560, width: '100%', alignSelf: 'center' },
-  score: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 4,
-    paddingHorizontal: 10,
-    paddingVertical: 5,
-    borderRadius: Radius.pill,
-    backgroundColor: Colors.surface,
-    borderWidth: 1,
-    borderColor: Colors.border,
-  },
-  combo: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 3,
-    paddingHorizontal: 8,
-    paddingVertical: 3,
-    borderRadius: Radius.pill,
-    backgroundColor: 'rgba(255,159,67,0.15)',
-  },
-  body: { padding: Spacing.md, gap: Spacing.md, maxWidth: 720, width: '100%', alignSelf: 'center' },
-  boss: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: Spacing.sm,
-    padding: Spacing.sm,
-    borderRadius: Radius.md,
-    backgroundColor: Colors.dangerSoft,
-    borderWidth: 1,
-    borderColor: Colors.danger + '55',
-  },
-  bossEmoji: { fontSize: 40 },
-  feedback: { gap: 4, padding: Spacing.md, borderRadius: Radius.md, borderWidth: 1 },
-  good: { backgroundColor: Colors.successSoft, borderColor: Colors.success + '66' },
-  bad: { backgroundColor: Colors.dangerSoft, borderColor: Colors.danger + '66' },
-  footer: {
-    padding: Spacing.md,
-    paddingTop: Spacing.sm,
-    borderTopWidth: 1,
-    borderTopColor: Colors.border,
-    backgroundColor: Colors.backgroundDeep,
-  },
+  qCard: { gap: 8, padding: 18, borderRadius: 16, backgroundColor: W.surface, borderWidth: 1, borderColor: W.line },
+  eyebrow: { fontFamily: Fonts.bold, fontSize: 11, letterSpacing: 1.2, color: W.muted },
+  question: { fontFamily: Fonts.bold, fontSize: 19, lineHeight: 27, color: W.ink },
+  gain: { fontFamily: Fonts.bold, fontSize: 15, color: W.correct },
+  why: { fontFamily: Fonts.regular, fontSize: 15, lineHeight: 22, color: W.inkSoft, paddingHorizontal: 4 },
+  noHints: { fontFamily: Fonts.semibold, fontSize: 14, color: W.muted, textAlign: 'center', paddingVertical: 14 },
+  keysNote: { alignSelf: 'center', minHeight: 32, justifyContent: 'center' },
+  keysText: { fontFamily: Fonts.regular, fontSize: 12, color: W.muted, textAlign: 'center' },
 });

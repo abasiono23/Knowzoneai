@@ -1,85 +1,76 @@
-import { Image } from 'expo-image';
-import { useEffect, useRef, useState } from 'react';
+import { Ionicons } from '@expo/vector-icons';
+import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Pressable, StyleSheet, View, type GestureResponderEvent } from 'react-native';
-import Animated, {
-  FadeInDown,
-  useAnimatedStyle,
-  useSharedValue,
-  withRepeat,
-  withTiming,
-  Easing,
-} from 'react-native-reanimated';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import Svg, { Circle, Defs, Polyline, RadialGradient, Stop } from 'react-native-svg';
+import { Pressable, StyleSheet, View } from 'react-native';
+import Svg, { Circle, Defs, G, Line, Marker, Path, Polyline, Text as SvgText } from 'react-native-svg';
 
-import { BOLD, GoldButton, KoraTip, Panel, PANEL } from '@/components/lab/hud';
+import { Feedback, FONT, PrimaryButton, SecondaryButton, W } from '@/components/games/ui';
+import { defineGameFrame } from '@/components/lab/contract';
 import { Text } from '@/components/ui';
-import { Colors, Spacing } from '@/constants/theme';
+import { Fonts } from '@/constants/theme';
 import type { Body, GameOutcome, GravityRun } from '@/lib/api';
-import { coverMap } from '@/lib/games/lab';
-import { BOARD, fly, GOAL_R, planetRadius, placementOk } from '@/lib/games/gravity';
-import { PLANETS, SPACE_SCENES } from '@/lib/games/space';
+import { useKeys } from '@/lib/games/english';
+import { BOARD, fly, GOAL_R, placementOk, planetRadius } from '@/lib/games/gravity';
 import type { SpaceGame } from '@/lib/games/use-lab-run';
 
-const FIXED_ART = ['mars', 'moon', 'mercury'];
-const MOVABLE_ART = ['jupiter', 'neptune'];
-/** Shown as a planet's size on screen (its pull reaches further than this). */
-const looks = (mass: number) => planetRadius(mass) * 2.3;
+import { Card, D, Eyebrow, LTR, ltr, Sheet, StepBar } from '../kit';
+
+/** Board size on screen (the board is 1 wide and 1.5 tall in simulation units). */
+const PX = 300;
+const NUDGE = 0.02;
 
 /**
- * Gravity Master: drag planets onto the board (and choose how heavy they are) so their pull bends
- * the comet into the portal. The first part of the path is drawn; the server flies the rest.
+ * Gravity Master: a comet flies across a field; place planets (and choose their mass) so that
+ * gravity, pulling as 1/r², bends its path through the target ring. The predicted path is drawn for
+ * a short way (shorter at higher levels); Launch flies the whole thing, which the server checks.
+ * Planets are placed by tapping the board and nudged with the arrow buttons (or arrow keys).
  */
 export function GravityBoard({ g, run }: { g: SpaceGame; run: GravityRun }) {
   const { t } = useTranslation('space');
-  const [size, setSize] = useState({ w: 0, h: 0 });
-  const [i, setI] = useState(() => Math.min(run.at, run.puzzles.length - 1));
+  const total = run.puzzles.length;
+  const [i, setI] = useState(() => Math.min(run.at, total - 1));
   const p = run.puzzles[i]!;
   const [placed, setPlaced] = useState<(Body | null)[]>(() => p.movable.map(() => null));
-  const [selected, setSelected] = useState(0);
+  const [sel, setSel] = useState(0);
   const [flight, setFlight] = useState<{ path: [number, number][]; shown: number } | null>(null);
   const [outcome, setOutcome] = useState<GameOutcome | null>(null);
   const [message, setMessage] = useState<string | null>(null);
-  const drag = useRef<{ k: number; dx: number; dy: number } | null>(null);
-
-  // The board fits between the top panels and the controls.
-  const top = 150;
-  const bottom = 270;
-  const scale = Math.max(1, Math.min((size.w - 24) / BOARD.w, (size.h - top - bottom) / BOARD.h));
-  const ox = (size.w - BOARD.w * scale) / 2;
-  const oy = top + Math.max(0, (size.h - top - bottom - BOARD.h * scale) / 2);
-  const sx = (x: number) => ox + x * scale;
-  const sy = (y: number) => oy + y * scale;
-  // Planets wait here until you drag them onto the board.
-  const trayY = size.h - 228;
-  const trayX = (k: number) => size.w / 2 + (k - (p.movable.length - 1) / 2) * 90;
 
   const onBoard = placed.flatMap((b) => (b ? [b] : []));
   const bad = placed.map(
     (b, k) => !!b && !placementOk(b, [...p.fixed, ...onBoard.filter((o) => o !== placed[k])], p.launch, p.goal),
   );
-  const ready = placed.every((b) => b) && !bad.some(Boolean);
+  const ready = placed.every(Boolean) && !bad.some(Boolean);
   const preview = fly(p.launch, [...p.fixed, ...onBoard], p.goal, 3, run.preview);
 
-  // The comet flies along the full path, then the server says how it went.
   useEffect(() => {
     if (!flight || flight.shown >= flight.path.length) return;
-    // Functional update: a frame queued just before the flight was cleared must not bring it back.
     const id = requestAnimationFrame(() =>
-      setFlight((f) => f && { ...f, shown: Math.min(f.path.length, f.shown + 2) }),
+      setFlight((f) => f && { ...f, shown: Math.min(f.path.length, f.shown + 3) }),
     );
     return () => cancelAnimationFrame(id);
   }, [flight]);
 
+  const massOf = (k: number) => placed[k]?.mass ?? p.movable[k]![Math.floor((p.movable[k]!.length - 1) / 2)]!;
+  const put = (k: number, x: number, y: number, mass = massOf(k)) => {
+    if (flight || outcome) return;
+    const cx = Math.min(BOARD.w, Math.max(0, x));
+    const cy = Math.min(BOARD.h, Math.max(0, y));
+    setPlaced(placed.map((b, n) => (n === k ? { x: cx, y: cy, mass } : b)));
+    setMessage(null);
+  };
+  const nudge = (dx: number, dy: number) => {
+    const b = placed[sel] ?? { x: 0.5, y: 0.75, mass: massOf(sel) };
+    put(sel, b.x + dx, b.y + dy, b.mass);
+  };
+
   const launch = async () => {
-    if (!ready || flight) return;
+    if (!ready || flight || outcome) return;
     const planets = placed as Body[];
     const path = fly(p.launch, [...p.fixed, ...planets], p.goal, 2).path;
     setMessage(null);
     setFlight({ path, shown: 1 });
     const res = await g.answer({ step: i, placements: planets });
-    // Let the comet finish its flight before the verdict.
     setTimeout(
       () => {
         setFlight(null);
@@ -90,7 +81,7 @@ export function GravityBoard({ g, run }: { g: SpaceGame; run: GravityRun }) {
         else
           setMessage(o.end === 'invalid' ? t('gravity.blocked') : t(`gravity.${o.end ?? 'time'}` as 'gravity.crash'));
       },
-      Math.max(300, (path.length / 2) * 16),
+      Math.max(300, (path.length / 3) * 16),
     );
   };
   const giveUp = async () => {
@@ -98,321 +89,357 @@ export function GravityBoard({ g, run }: { g: SpaceGame; run: GravityRun }) {
     if (res) setOutcome(res.outcome);
   };
   const next = () => {
-    if (run.status !== 'playing' || run.at >= run.puzzles.length) {
-      void g.finish();
-      return;
-    }
+    if (run.status !== 'playing' || run.at >= total) return void g.finish();
     const n = run.at;
     setI(n);
     setPlaced(run.puzzles[n]!.movable.map(() => null));
-    setSelected(0);
+    setSel(0);
     setOutcome(null);
     setMessage(null);
   };
 
-  // Dragging planets (from the tray or on the board).
-  const where = (k: number): [number, number] => {
-    const b = placed[k];
-    return b ? [sx(b.x), sy(b.y)] : [trayX(k), trayY];
-  };
-  const grab = (e: GestureResponderEvent) => {
-    if (flight || outcome) return false;
-    const { pageX, pageY } = e.nativeEvent;
-    const k = placed.findIndex((_, n) => {
-      const [x, y] = where(n);
-      return Math.hypot(pageX - x, pageY - y) < 44;
-    });
-    if (k < 0) return false;
-    const [x, y] = where(k);
-    drag.current = { k, dx: x - pageX, dy: y - pageY };
-    setSelected(k);
-    return true;
-  };
-  const move = (e: GestureResponderEvent) => {
-    const d = drag.current;
-    if (!d) return;
-    const x = (e.nativeEvent.pageX + d.dx - ox) / scale;
-    const y = (e.nativeEvent.pageY + d.dy - oy) / scale;
-    const mass = placed[d.k]?.mass ?? p.movable[d.k]![Math.floor((p.movable[d.k]!.length - 1) / 2)]!;
-    const inside = x > -0.05 && x < BOARD.w + 0.05 && y > -0.05 && y < BOARD.h + 0.05;
-    setPlaced(
-      placed.map((b, n) =>
-        n === d.k
-          ? inside
-            ? { x: Math.min(BOARD.w, Math.max(0, x)), y: Math.min(BOARD.h, Math.max(0, y)), mass }
-            : null
-          : b,
-      ),
-    );
-  };
+  useKeys((key) => {
+    if (key === 'ArrowLeft') nudge(-NUDGE, 0);
+    else if (key === 'ArrowRight') nudge(NUDGE, 0);
+    else if (key === 'ArrowUp') nudge(0, -NUDGE);
+    else if (key === 'ArrowDown') nudge(0, NUDGE);
+    else if (key === 'Enter') void (outcome ? next() : launch());
+    else if (/^[1-3]$/.test(key) && p.movable[sel]!.includes(Number(key)))
+      setPlaced(placed.map((b, n) => (n === sel && b ? { ...b, mass: Number(key) } : b)));
+  });
 
-  const map = coverMap(size.w, size.h);
-  const pts = (path: [number, number][]) => path.map(([x, y]) => `${sx(x)},${sy(y)}`).join(' ');
-  const comet = flight ? flight.path[Math.min(flight.shown, flight.path.length) - 1]! : null;
-  const solution = outcome && !outcome.correct ? outcome.solution : undefined;
-
+  const solution = outcome && !outcome.correct ? (p.result?.solution ?? outcome.solution) : null;
+  const shownPlanets = solution ?? onBoard;
+  const H = PX * BOARD.h;
+  const s = (v: number) => v * PX;
   return (
-    <View
-      style={StyleSheet.absoluteFill}
-      onLayout={(e) => setSize({ w: e.nativeEvent.layout.width, h: e.nativeEvent.layout.height })}
-      onStartShouldSetResponder={grab}
-      onResponderMove={move}
-      onResponderRelease={() => (drag.current = null)}
-      onResponderTerminate={() => (drag.current = null)}>
-      {size.w > 0 && (
-        <View style={[StyleSheet.absoluteFill, { userSelect: 'none' }]} pointerEvents="none">
-          <Image
-            source={SPACE_SCENES.space}
-            style={{ position: 'absolute', left: map.ox, top: map.oy, width: map.dw, height: map.dh }}
-            contentFit="cover"
-            accessible={false}
-          />
-          <View
-            pointerEvents="none"
-            style={[styles.board, { left: ox, top: oy, width: BOARD.w * scale, height: BOARD.h * scale }]}
-          />
-          <Svg width={size.w} height={size.h} style={StyleSheet.absoluteFill}>
+    <Sheet>
+      <StepBar
+        label={t('play.gravity.step', { n: i + 1, total })}
+        n={i + 1}
+        total={total}
+        right={<Text style={styles.tries}>{t('gravity.tries', { count: p.tries })}</Text>}
+      />
+      <View style={{ alignItems: 'center' }}>
+        <Pressable
+          accessibilityRole="adjustable"
+          accessibilityLabel={t('play.gravity.boardA11y', { n: sel + 1 })}
+          onPress={(e) => put(sel, e.nativeEvent.locationX / PX, e.nativeEvent.locationY / PX)}
+          style={[styles.board, LTR]}
+          {...ltr}>
+          <Svg width={PX} height={H} viewBox={`0 0 ${PX} ${H}`}>
             <Defs>
-              <RadialGradient id="comet" cx="50%" cy="50%" r="50%">
-                <Stop offset="0" stopColor="#FFF4D6" />
-                <Stop offset="0.5" stopColor="#FFB547" />
-                <Stop offset="1" stopColor="#FF7A2B" stopOpacity="0" />
-              </RadialGradient>
+              <Marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+                <Path d="M0,0 L10,5 L0,10 Z" fill={D.ink} />
+              </Marker>
             </Defs>
-            {/* Where each planet's pull is strong. */}
-            {[...p.fixed, ...onBoard].map((b, n) => (
-              <Circle
-                key={`ring-${n}`}
-                cx={sx(b.x)}
-                cy={sy(b.y)}
-                r={(0.09 + 0.045 * b.mass) * scale}
-                stroke="rgba(124,92,255,0.45)"
-                strokeWidth={1.5}
-                strokeDasharray="4 6"
-                fill="rgba(124,92,255,0.06)"
-              />
+            {Array.from({ length: 11 }, (_, k) => (
+              <Line key={`v${k}`} x1={k * 30} y1={0} x2={k * 30} y2={H} stroke={D.grid} />
             ))}
+            {Array.from({ length: 16 }, (_, k) => (
+              <Line key={`h${k}`} x1={0} y1={k * 30} x2={PX} y2={k * 30} stroke={D.grid} />
+            ))}
+            {/* Target ring */}
+            <Circle
+              cx={s(p.goal.x)}
+              cy={s(p.goal.y)}
+              r={s(GOAL_R)}
+              fill="#E3F5F1"
+              stroke={D.good}
+              strokeWidth={2}
+              strokeDasharray="4 3"
+            />
+            <Circle cx={s(p.goal.x)} cy={s(p.goal.y)} r={3} fill={D.good} />
+            {/* Launch velocity */}
+            <Line
+              x1={s(p.launch.x)}
+              y1={s(p.launch.y)}
+              x2={s(p.launch.x + p.launch.vx * 0.22)}
+              y2={s(p.launch.y + p.launch.vy * 0.22)}
+              stroke={D.ink}
+              strokeWidth={1.6}
+              markerEnd="url(#arrow)"
+            />
+            <Circle cx={s(p.launch.x)} cy={s(p.launch.y)} r={5} fill={D.ink} />
+            {/* Predicted path (part of it) */}
             {!flight && !outcome && (
               <Polyline
-                points={pts(preview.path)}
-                stroke="rgba(255,255,255,0.75)"
-                strokeWidth={2.5}
-                strokeDasharray="2 7"
-                strokeLinecap="round"
+                points={preview.path.map(([x, y]) => `${s(x)},${s(y)}`).join(' ')}
+                stroke={D.accent}
+                strokeWidth={1.6}
+                strokeDasharray="3 4"
                 fill="none"
               />
             )}
             {flight && (
               <Polyline
-                points={pts(flight.path.slice(0, flight.shown))}
-                stroke="rgba(255,181,71,0.8)"
-                strokeWidth={3}
+                points={flight.path
+                  .slice(0, flight.shown)
+                  .map(([x, y]) => `${s(x)},${s(y)}`)
+                  .join(' ')}
+                stroke={D.accent}
+                strokeWidth={2}
                 fill="none"
               />
             )}
-            {comet && <Circle cx={sx(comet[0])} cy={sy(comet[1])} r={14} fill="url(#comet)" />}
-            {!flight && <Circle cx={sx(p.launch.x)} cy={sy(p.launch.y)} r={12} fill="url(#comet)" />}
-            {solution?.map((b, n) => (
-              <Circle
-                key={`sol-${n}`}
-                cx={sx(b.x)}
-                cy={sy(b.y)}
-                r={(looks(b.mass) / 2) * scale}
-                stroke={Colors.success}
-                strokeWidth={2}
-                strokeDasharray="5 5"
-                fill="rgba(45,212,191,0.15)"
+            {solution && (
+              <Polyline
+                points={fly(p.launch, [...p.fixed, ...solution], p.goal, 3)
+                  .path.map(([x, y]) => `${s(x)},${s(y)}`)
+                  .join(' ')}
+                stroke={D.good}
+                strokeWidth={1.6}
+                fill="none"
               />
-            ))}
-          </Svg>
-          <Portal x={sx(p.goal.x)} y={sy(p.goal.y)} r={GOAL_R * scale * 1.3} />
-          {p.fixed.map((b, n) => (
-            <PlanetImage
-              key={`fixed-${n}`}
-              art={FIXED_ART[n % FIXED_ART.length]!}
-              x={sx(b.x)}
-              y={sy(b.y)}
-              d={looks(b.mass) * scale}
-            />
-          ))}
-          {p.movable.map((_, k) => {
-            const [x, y] = where(k);
-            const b = placed[k];
-            return (
-              <View key={`move-${k}`} pointerEvents="none">
-                <PlanetImage
-                  art={MOVABLE_ART[k % MOVABLE_ART.length]!}
-                  x={x}
-                  y={y}
-                  d={looks(b?.mass ?? 2) * scale}
-                  ring={bad[k] ? Colors.danger : selected === k ? Colors.reward : undefined}
+            )}
+            {p.fixed.map((b, k) => (
+              <G key={`f${k}`}>
+                <Circle
+                  cx={s(b.x)}
+                  cy={s(b.y)}
+                  r={s(planetRadius(b.mass))}
+                  fill="#D9D7E3"
+                  stroke={D.soft}
+                  strokeWidth={1}
                 />
-              </View>
-            );
-          })}
+                <SvgText
+                  x={s(b.x)}
+                  y={s(b.y) + 4}
+                  fontSize={11}
+                  fontFamily={Fonts.bold}
+                  fill={D.ink}
+                  textAnchor="middle">
+                  {b.mass}
+                </SvgText>
+              </G>
+            ))}
+            {shownPlanets.map((b, k) => {
+              const n = solution ? k : placed.indexOf(b);
+              const isBad = !solution && bad[n];
+              const isSel = !solution && n === sel;
+              return (
+                <G key={`m${k}`}>
+                  {/* Pull falls off as 1/r²: rings at 2r and 3r show how fast it fades. */}
+                  <Circle
+                    cx={s(b.x)}
+                    cy={s(b.y)}
+                    r={s(planetRadius(b.mass)) * 2.2}
+                    stroke={D.accent}
+                    strokeOpacity={0.25}
+                    fill="none"
+                  />
+                  <Circle
+                    cx={s(b.x)}
+                    cy={s(b.y)}
+                    r={s(planetRadius(b.mass))}
+                    fill={solution ? D.good : isBad ? D.bad : D.accent}
+                    stroke={isSel ? D.ink : '#fff'}
+                    strokeWidth={isSel ? 2.5 : 1.5}
+                  />
+                  <SvgText
+                    x={s(b.x)}
+                    y={s(b.y) + 4}
+                    fontSize={11}
+                    fontFamily={Fonts.bold}
+                    fill="#fff"
+                    textAnchor="middle">
+                    {b.mass}
+                  </SvgText>
+                </G>
+              );
+            })}
+            {flight && flight.shown > 0 && (
+              <Circle
+                cx={s(flight.path[Math.min(flight.shown, flight.path.length) - 1]![0])}
+                cy={s(flight.path[Math.min(flight.shown, flight.path.length) - 1]![1])}
+                r={4.5}
+                fill={D.ink}
+              />
+            )}
+          </Svg>
+        </Pressable>
+        <View style={[styles.legend, LTR]} {...ltr}>
+          <Legend color={D.ink} text={t('play.gravity.comet')} />
+          <Legend color={D.good} text={t('play.gravity.target')} ring />
+          <Legend color={D.accent} text={t('play.gravity.yours')} />
+          <Legend color="#D9D7E3" text={t('play.gravity.fixed')} />
+        </View>
+      </View>
+
+      {!outcome && (
+        <Card>
+          <Eyebrow text={t('play.gravity.yourPlanets')} />
+          <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 8 }}>
+            {p.movable.map((masses, k) => (
+              <Pressable
+                key={k}
+                onPress={() => setSel(k)}
+                accessibilityRole="radio"
+                accessibilityState={{ selected: sel === k }}
+                accessibilityLabel={t('play.gravity.planetN', { n: k + 1 })}
+                style={[styles.chip, sel === k && { borderColor: W.focus, backgroundColor: W.focusSoft }]}>
+                <Text style={styles.chipText}>
+                  {t('play.gravity.planetN', { n: k + 1 })} {placed[k] ? (bad[k] ? '✗' : '✓') : '·'}
+                </Text>
+              </Pressable>
+            ))}
+          </View>
+          {p.movable[sel]!.length > 1 && (
+            <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+              <Text style={styles.small}>{t('gravity.mass')}</Text>
+              {p.movable[sel]!.map((m) => (
+                <Pressable
+                  key={m}
+                  onPress={() =>
+                    placed[sel]
+                      ? setPlaced(placed.map((b, n) => (n === sel && b ? { ...b, mass: m } : b)))
+                      : put(sel, 0.5, 0.75, m)
+                  }
+                  accessibilityRole="radio"
+                  accessibilityState={{ selected: massOf(sel) === m }}
+                  accessibilityLabel={`${t('gravity.mass')} ${m}: ${t(`gravity.masses.${m}` as 'gravity.masses.1')}`}
+                  style={[styles.mass, massOf(sel) === m && { backgroundColor: W.ink }]}>
+                  <Text style={{ fontFamily: FONT, color: massOf(sel) === m ? '#fff' : W.ink }}>{m}</Text>
+                </Pressable>
+              ))}
+            </View>
+          )}
+          <View style={[{ flexDirection: 'row', alignItems: 'center', gap: 8 }, LTR]} {...ltr}>
+            <Text style={[styles.small, { flex: 1 }]}>
+              {placed[sel] ? t('play.gravity.nudge') : t('play.gravity.tap')}
+            </Text>
+            {(
+              [
+                ['arrow-back', -NUDGE, 0, 'left'],
+                ['arrow-up', 0, -NUDGE, 'up'],
+                ['arrow-down', 0, NUDGE, 'down'],
+                ['arrow-forward', NUDGE, 0, 'right'],
+              ] as const
+            ).map(([icon, dx, dy, dir]) => (
+              <Pressable
+                key={dir}
+                onPress={() => nudge(dx, dy)}
+                accessibilityRole="button"
+                accessibilityLabel={t(`play.gravity.move.${dir}`)}
+                style={styles.nudge}>
+                <Ionicons name={icon} size={18} color={W.ink} />
+              </Pressable>
+            ))}
+          </View>
+          {bad.some(Boolean) && <Feedback tone="bad" title={t('gravity.blocked')} />}
+        </Card>
+      )}
+
+      {!!message && <Feedback tone="bad" title={message} />}
+      {outcome ? (
+        <View style={{ gap: 10 }}>
+          <Feedback
+            tone={outcome.correct ? 'good' : 'info'}
+            title={outcome.correct ? t('gravity.hit', { points: outcome.points }) : t('gravity.solution')}
+          />
+          <PrimaryButton
+            title={run.at >= total ? t('play.finish') : t('gravity.next')}
+            icon="arrow-forward"
+            onPress={next}
+          />
+        </View>
+      ) : (
+        <View style={{ gap: 10 }}>
+          <PrimaryButton
+            title={t('gravity.launch')}
+            icon="rocket-outline"
+            disabled={!ready || !!flight}
+            busy={g.busy && !!flight}
+            onPress={() => void launch()}
+          />
+          <View style={{ flexDirection: 'row', gap: 10 }}>
+            <SecondaryButton
+              style={{ flex: 1 }}
+              title={t('gravity.reset')}
+              onPress={() => setPlaced(p.movable.map(() => null))}
+              disabled={!!flight}
+            />
+            {p.tries >= 2 && (
+              <SecondaryButton
+                style={{ flex: 1 }}
+                title={t('gravity.skip')}
+                onPress={() => void giveUp()}
+                disabled={!!flight}
+              />
+            )}
+          </View>
         </View>
       )}
-
-      <SafeAreaView edges={['top']} style={styles.top} pointerEvents="box-none">
-        <Panel style={{ marginTop: 56, gap: 2 }}>
-          <Text style={{ fontFamily: BOLD, color: '#fff', fontSize: 14 }}>
-            {t('gravity.objective', { n: i + 1, total: run.puzzles.length })}
-          </Text>
-          <Text style={{ color: 'rgba(235,238,255,0.85)', fontSize: 12 }}>
-            {p.movable.length > 1 ? t('gravity.placeMany') : t('gravity.place')} ·{' '}
-            {t('gravity.tries', { count: run.puzzles[i]!.tries })}
-          </Text>
-        </Panel>
-      </SafeAreaView>
-
-      <SafeAreaView edges={['bottom']} style={styles.bottom} pointerEvents="box-none">
-        {outcome ? (
-          <Animated.View entering={FadeInDown}>
-            <Panel style={{ gap: Spacing.sm, borderColor: outcome.correct ? Colors.success : Colors.reward }}>
-              <Text style={{ fontFamily: BOLD, fontSize: 17, color: outcome.correct ? Colors.success : '#fff' }}>
-                {outcome.correct ? t('gravity.hit', { points: outcome.points }) : t('gravity.solution')}
-              </Text>
-              <GoldButton title={t('gravity.next')} icon="arrow-forward" onPress={next} />
-            </Panel>
-          </Animated.View>
-        ) : (
-          <View style={{ gap: Spacing.sm }}>
-            <View style={styles.trayRow} pointerEvents="box-none">
-              {p.movable[selected]!.length > 1 && placed[selected] && (
-                <View style={styles.masses}>
-                  <Text style={{ color: '#fff', fontSize: 12, fontFamily: BOLD }}>{t('gravity.mass')}</Text>
-                  {p.movable[selected]!.map((m) => (
-                    <Pressable
-                      key={m}
-                      disabled={!!flight}
-                      onPress={() => setPlaced(placed.map((b, n) => (n === selected && b ? { ...b, mass: m } : b)))}
-                      accessibilityRole="radio"
-                      accessibilityState={{ selected: placed[selected]?.mass === m }}
-                      style={[styles.mass, placed[selected]?.mass === m && styles.massOn]}>
-                      <Text style={{ color: '#fff', fontSize: 12 }}>
-                        {t(`gravity.masses.${m}` as 'gravity.masses.1')}
-                      </Text>
-                    </Pressable>
-                  ))}
-                </View>
-              )}
-            </View>
-            {message ? (
-              <KoraTip text={message} />
-            ) : bad.some(Boolean) ? (
-              <KoraTip text={t('gravity.blocked')} />
-            ) : (
-              <KoraTip text={t('gravity.tip')} />
-            )}
-            <View style={{ flexDirection: 'row', gap: Spacing.sm }}>
-              <Pressable
-                onPress={() => {
-                  setPlaced(p.movable.map(() => null));
-                  setMessage(null);
-                }}
-                disabled={!!flight}
-                accessibilityRole="button"
-                style={styles.secondary}>
-                <Text style={{ fontFamily: BOLD, color: '#fff' }}>{t('gravity.reset')}</Text>
-              </Pressable>
-              {run.puzzles[i]!.tries >= 3 && (
-                <Pressable
-                  onPress={() => void giveUp()}
-                  disabled={!!flight || g.busy}
-                  accessibilityRole="button"
-                  style={styles.secondary}>
-                  <Text style={{ fontFamily: BOLD, color: '#fff' }}>{t('gravity.skip')}</Text>
-                </Pressable>
-              )}
-              <View style={{ flex: 1 }}>
-                <GoldButton
-                  title={t('gravity.launch')}
-                  icon="rocket"
-                  disabled={!ready || !!flight || g.busy}
-                  onPress={() => void launch()}
-                />
-              </View>
-            </View>
-          </View>
-        )}
-      </SafeAreaView>
-    </View>
+    </Sheet>
   );
 }
 
-function PlanetImage({ art, x, y, d, ring }: { art: string; x: number; y: number; d: number; ring?: string }) {
-  const a = PLANETS[art]!;
+function Legend({ color, text, ring }: { color: string; text: string; ring?: boolean }) {
   return (
-    <View
-      pointerEvents="none"
-      style={{ position: 'absolute', left: x - (d * a.aspect) / 2, top: y - d / 2, width: d * a.aspect, height: d }}>
-      <Image source={a.src} style={{ width: d * a.aspect, height: d }} contentFit="contain" accessible={false} />
-      {!!ring && (
-        <View
-          style={[
-            styles.ring,
-            { borderColor: ring, borderRadius: d, left: (d * a.aspect - d) / 2 - 4, width: d + 8, height: d + 8 },
-          ]}
-        />
-      )}
+    <View style={{ flexDirection: 'row', alignItems: 'center', gap: 5 }}>
+      <View
+        style={{
+          width: 10,
+          height: 10,
+          borderRadius: 5,
+          backgroundColor: ring ? 'transparent' : color,
+          borderWidth: ring ? 2 : 0,
+          borderColor: color,
+        }}
+      />
+      <Text style={{ fontFamily: Fonts.semibold, fontSize: 12, color: W.inkSoft }}>{text}</Text>
     </View>
-  );
-}
-
-/** The goal: a slowly turning ring of light. */
-function Portal({ x, y, r }: { x: number; y: number; r: number }) {
-  const spin = useSharedValue(0);
-  useEffect(() => {
-    spin.set(withRepeat(withTiming(360, { duration: 4000, easing: Easing.linear }), -1));
-  }, [spin]);
-  const style = useAnimatedStyle(() => ({ transform: [{ rotate: `${spin.value}deg` }] }));
-  return (
-    <Animated.View
-      pointerEvents="none"
-      style={[{ position: 'absolute', left: x - r, top: y - r, width: 2 * r, height: 2 * r }, style]}>
-      <Svg width={2 * r} height={2 * r}>
-        <Circle
-          cx={r}
-          cy={r}
-          r={r - 2}
-          stroke="#2DD4BF"
-          strokeWidth={3}
-          strokeDasharray="10 6"
-          fill="rgba(45,212,191,0.12)"
-        />
-        <Circle cx={r} cy={r} r={r * 0.55} stroke="#9FF5E8" strokeWidth={2} fill="none" />
-      </Svg>
-    </Animated.View>
   );
 }
 
 const styles = StyleSheet.create({
   board: {
-    position: 'absolute',
-    borderRadius: 18,
+    width: PX,
+    height: PX * BOARD.h,
+    borderRadius: 12,
+    overflow: 'hidden',
+    backgroundColor: W.surface,
     borderWidth: 1,
-    borderColor: 'rgba(124,92,255,0.35)',
-    backgroundColor: 'rgba(8,10,30,0.25)',
+    borderColor: W.lineStrong,
   },
-  top: { position: 'absolute', left: Spacing.md, right: Spacing.md, top: 0 },
-  bottom: { position: 'absolute', left: Spacing.md, right: Spacing.md, bottom: Spacing.sm },
-  trayRow: { minHeight: 36, alignItems: 'center' },
-  masses: { flexDirection: 'row', alignItems: 'center', gap: 6, padding: 6, borderRadius: 999, backgroundColor: PANEL },
-  mass: {
-    paddingHorizontal: 12,
-    paddingVertical: 6,
-    borderRadius: 999,
+  legend: { flexDirection: 'row', flexWrap: 'wrap', gap: 12, justifyContent: 'center', marginTop: 8 },
+  tries: { fontFamily: Fonts.semibold, fontSize: 13, color: W.muted },
+  chip: {
+    minHeight: 44,
+    paddingHorizontal: 14,
+    justifyContent: 'center',
+    borderRadius: 22,
     borderWidth: 1.5,
-    borderColor: 'rgba(255,255,255,0.25)',
+    borderColor: W.line,
+    backgroundColor: W.surface,
   },
-  massOn: { borderColor: Colors.reward, backgroundColor: 'rgba(255,200,87,0.2)' },
-  secondary: {
-    height: 52,
-    paddingHorizontal: 18,
-    borderRadius: 999,
+  chipText: { fontFamily: Fonts.bold, fontSize: 14, color: W.ink },
+  small: { fontFamily: Fonts.semibold, fontSize: 14, color: W.inkSoft },
+  mass: {
+    width: 44,
+    height: 44,
+    borderRadius: 22,
+    borderWidth: 1.5,
+    borderColor: W.ink,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: 'rgba(124,92,255,0.35)',
   },
-  ring: { position: 'absolute', top: -4, borderWidth: 2.5 },
+  nudge: {
+    width: 44,
+    height: 44,
+    borderRadius: 10,
+    backgroundColor: W.key,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
+
+defineGameFrame('gravity-master', {
+  hearts: false,
+  review: (run) =>
+    ((run as GravityRun).puzzles ?? []).flatMap((x) =>
+      x.result
+        ? [{ key: String(x.id), correct: x.result.correct, main: `#${x.id + 1}`, detail: `${x.result.points}` }]
+        : [],
+    ),
 });

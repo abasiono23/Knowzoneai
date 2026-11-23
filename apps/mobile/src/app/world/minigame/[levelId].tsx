@@ -1,291 +1,178 @@
 import { Ionicons } from '@expo/vector-icons';
 import * as Haptics from 'expo-haptics';
-import { LinearGradient } from 'expo-linear-gradient';
 import { router } from 'expo-router';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Pressable, StyleSheet, View } from 'react-native';
-import Animated, { FadeIn, FadeOut, ZoomIn } from 'react-native-reanimated';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { Platform, Pressable, StyleSheet, View } from 'react-native';
+import Animated, { FadeIn } from 'react-native-reanimated';
 
+import { announce, FONT, GameLoading, Stat, TimerStat, useCountdown, W } from '@/components/games/ui';
 import { LevelRoute, type LoadedLevel } from '@/components/world/level-route';
-import { ConfirmDialog, PauseMenu } from '@/components/world/overlays';
-import { GameHud, Kora } from '@/components/world/world-ui';
-import { Button, Text } from '@/components/ui';
-import { Colors, Radius, Spacing, WorldGradients } from '@/constants/theme';
-import { SPRINT_SECONDS, sprintDeck } from '@/lib/world/levels';
+import { LevelIntro, PlayFrame, usePlayState, type PlayLevel } from '@/components/world/play-frame';
+import { Text } from '@/components/ui';
+import { Fonts } from '@/constants/theme';
+import { useKeys } from '@/lib/games/english';
+import { useBank, type BankLevel } from '@/lib/world/bank';
+import { rungOf, sprintDeck } from '@/lib/world/levels';
 import { useWorld } from '@/lib/world/store';
 
-/** Screen 141: the lightning-round mini-game. True or false, as many as you can before time runs out. */
+/**
+ * The lightning round: true or false, as many as you can before the clock runs out. Relaxed mode
+ * doubles the clock rather than removing it (the race is the game). Keys: T / F or the arrows.
+ */
 export default function MiniGameScreen() {
   return <LevelRoute>{(l) => <Sprint key={l.id} level={l} />}</LevelRoute>;
 }
 
 function Sprint({ level }: { level: LoadedLevel }) {
+  const bank = useBank(level.worldId, level.number);
+  if (!bank) return <GameLoading />;
+  return <SprintGame level={level} bank={bank} />;
+}
+
+function SprintGame({ level, bank }: { level: PlayLevel; bank: BankLevel }) {
   const { t } = useTranslation('world');
-  const { recordRun, settings } = useWorld();
-  // Relaxed mode doubles the clock instead of removing it: the race is the game.
-  const duration = settings.timer ? SPRINT_SECONDS : SPRINT_SECONDS * 2;
+  const { recordRun } = useWorld();
+  const s = usePlayState(level);
+  const rung = rungOf(level);
+  const duration = s.relaxed ? rung.seconds * 2 : rung.seconds;
   const [round, setRound] = useState(0);
-  const deck = useMemo(() => sprintDeck(level, round), [level, round]);
-  const [started, setStarted] = useState(false);
+  const deck = useMemo(() => sprintDeck(level, bank, round), [level, bank, round]);
   const [i, setI] = useState(0);
-  const [left, setLeft] = useState(duration);
   const [right, setRight] = useState(0);
   const [wrong, setWrong] = useState<string[]>([]);
   const [streak, setStreak] = useState(0);
-  const [flash, setFlash] = useState<null | { ok: boolean; n: number }>(null);
-  const [paused, setPaused] = useState(false);
-  const [confirm, setConfirm] = useState<'restart' | 'quit' | null>(null);
+  const [last, setLast] = useState<null | { ok: boolean; n: number; why: string; answer: boolean; s: string }>(null);
   const done = useRef(false);
+  const [ended, setEnded] = useState(false);
+  const left = useCountdown(duration, s.started && !s.halted && !ended, () => setEnded(true), `sprint-${round}`);
 
-  const card = deck[i % deck.length];
-  const finished = left <= 0 || i >= deck.length;
+  const card = deck[i % Math.max(1, deck.length)];
+  const finished = ended || i >= deck.length;
 
+  const latest = useRef({ right, wrong, i, left });
   useEffect(() => {
-    if (!started || paused || finished) return;
-    const timer = setInterval(() => setLeft((s) => Math.max(0, s - 1)), 1000);
-    return () => clearInterval(timer);
-  }, [started, paused, finished]);
-
-  const latest = useRef({ right, wrong, i });
-  useEffect(() => {
-    latest.current = { right, wrong, i };
+    latest.current = { right, wrong, i, left };
   });
   useEffect(() => {
-    if (!finished || !started || done.current) return;
+    if (!finished || !s.started || done.current) return;
     done.current = true;
-    const { right: r, wrong: w, i: n } = latest.current;
-    const run = recordRun({
-      levelId: level.id,
-      correct: r,
-      total: n,
-      score: r * 100,
-      seconds: duration - left,
-      hintsUsed: 0,
-      mistakes: w,
-    });
+    const { right: r, wrong: w, i: n, left: l } = latest.current;
+    const run = recordRun({ levelId: level.id, correct: r, total: n, score: r * 100, seconds: duration - l, hintsUsed: 0, mistakes: w });
     router.replace({
       pathname: '/world/results/[levelId]',
-      params: {
-        levelId: level.id,
-        run: run.id,
-        fresh: '1',
-        unlocked: run.unlockedWorlds.join(','),
-        ach: run.newAchievements.join(','),
-      },
+      params: { levelId: level.id, run: run.id, fresh: '1', unlocked: run.unlockedWorlds.join(','), ach: run.newAchievements.join(',') },
     });
-  }, [finished, started, recordRun, level.id, duration, left]);
+  }, [finished, s.started, recordRun, level.id, duration]);
 
   const choose = (v: boolean) => {
-    if (finished || paused) return;
+    if (finished || s.halted || !card) return;
     const ok = v === card.answer;
     if (ok) {
       setRight((r) => r + 1);
-      setStreak((s) => s + 1);
+      setStreak((x) => x + 1);
     } else {
       setWrong((w) => [...w, card.id]);
       setStreak(0);
     }
-    setFlash({ ok, n: i });
-    if (settings.haptics)
-      Haptics.impactAsync(ok ? Haptics.ImpactFeedbackStyle.Light : Haptics.ImpactFeedbackStyle.Heavy).catch(() => {});
+    setLast({ ok, n: i, why: card.why, answer: card.answer, s: card.s });
+    announce(ok ? t('adv.status.right') : t('adv.status.wrong'));
+    if (s.haptics) Haptics.impactAsync(ok ? Haptics.ImpactFeedbackStyle.Light : Haptics.ImpactFeedbackStyle.Heavy).catch(() => {});
     setI(i + 1);
   };
 
   const restart = () => {
-    setConfirm(null);
-    setPaused(false);
+    done.current = false;
+    setEnded(false);
     setRound((r) => r + 1);
     setI(0);
-    setLeft(duration);
     setRight(0);
     setWrong([]);
     setStreak(0);
-    setFlash(null);
+    setLast(null);
   };
 
-  const colors = WorldGradients[level.worldId];
+  useKeys((key) => {
+    if (!s.started || s.halted) return;
+    if (key === 'T' || key === 'ArrowLeft') choose(true);
+    if (key === 'F' || key === 'ArrowRight') choose(false);
+  });
 
-  if (!started)
-    return (
-      <LinearGradient colors={[colors[0], Colors.backgroundDeep]} style={{ flex: 1 }}>
-        <SafeAreaView style={styles.intro}>
-          <Animated.View entering={ZoomIn.springify()} style={styles.boltWrap}>
-            <Ionicons name="flash" size={64} color={Colors.reward} />
-          </Animated.View>
-          <Text variant="label" color="rgba(255,255,255,0.8)">
-            {t('sprint.eyebrow', { world: level.world.name.toUpperCase() })}
-          </Text>
-          <Text variant="display" center>
-            {level.title}
-          </Text>
-          <Kora>{t('sprint.intro', { count: duration })}</Kora>
-          <View style={{ alignSelf: 'stretch', gap: Spacing.xs, marginTop: 'auto' }}>
-            <Button title={t('sprint.go')} icon="flash" onPress={() => setStarted(true)} />
-            <Button variant="ghost" title={t('actions.notNow', { ns: 'common' })} onPress={() => router.back()} />
-          </View>
-        </SafeAreaView>
-      </LinearGradient>
-    );
+  if (!s.started) return <LevelIntro s={s} count={deck.length} />;
+  if (!card) return null;
 
   return (
-    <View style={{ flex: 1, backgroundColor: Colors.background }}>
-      <LinearGradient colors={[colors[0] + '55', 'transparent']} style={StyleSheet.absoluteFill} pointerEvents="none" />
-      <GameHud
-        onPause={() => setPaused(true)}
-        progress={1 - left / duration}
-        timer={left}
-        left={
-          <View style={{ flexDirection: 'row', gap: Spacing.sm, alignItems: 'center' }}>
-            <View style={styles.tally}>
-              <Ionicons name="checkmark-circle" size={16} color={Colors.success} />
-              <Text variant="bodyStrong">{right}</Text>
-            </View>
-            <View style={styles.tally}>
-              <Ionicons name="close-circle" size={16} color={Colors.danger} />
-              <Text variant="bodyStrong">{wrong.length}</Text>
-            </View>
-            {streak >= 3 && (
-              <Animated.View key={streak} entering={ZoomIn}>
-                <Text variant="label" color="#FF9F43">
-                  {t('sprint.inARow', { count: streak })}
-                </Text>
-              </Animated.View>
-            )}
+    <PlayFrame
+      s={s}
+      step={{ n: Math.min(i + 1, deck.length), total: deck.length }}
+      onRestart={restart}
+      status={
+        <>
+          <Stat icon="checkmark-circle-outline" text={String(right)} label={t('adv.rightCount', { count: right })} tone="good" />
+          <Stat icon="close-circle-outline" text={String(wrong.length)} label={t('adv.wrongCount', { count: wrong.length })} />
+          {streak >= 3 && <Stat icon="trending-up" text={`×${streak}`} label={t('adv.streak', { count: streak })} />}
+          <TimerStat seconds={left} relaxed={false} />
+        </>
+      }
+      footer={
+        <View style={{ flexDirection: 'row', gap: 10 }}>
+          <Choice label={t('sprint.true')} keyName="T" icon="checkmark" onPress={() => choose(true)} />
+          <Choice label={t('sprint.false')} keyName="F" icon="close" onPress={() => choose(false)} />
+        </View>
+      }>
+      <Animated.View key={`${round}-${i}`} entering={FadeIn.duration(140)} style={styles.card}>
+        <Text style={styles.eyebrow}>{t('adv.trueOrFalse').toUpperCase()}</Text>
+        <Text style={styles.statement} accessibilityRole="header">
+          {card.s}
+        </Text>
+      </Animated.View>
+      {last && (
+        <Animated.View key={last.n} entering={FadeIn.duration(140)} style={[styles.last, { backgroundColor: last.ok ? W.correctSoft : W.wrongSoft }]} accessibilityLiveRegion="polite">
+          <Ionicons name={last.ok ? 'checkmark-circle' : 'close-circle'} size={20} color={last.ok ? W.correct : W.wrong} />
+          <View style={{ flex: 1 }}>
+            <Text style={[styles.lastTitle, { color: last.ok ? W.correct : W.wrong }]}>
+              {last.ok ? t('adv.status.right') : t('adv.lastWas', { answer: last.answer ? t('sprint.true') : t('sprint.false') })}
+            </Text>
+            {!last.ok && <Text style={[styles.lastWhy, { fontStyle: 'italic' }]}>{`“${last.s}”`}</Text>}
+            {!last.ok && <Text style={styles.lastWhy}>{last.why}</Text>}
           </View>
-        }
-      />
-      <View style={styles.stage}>
-        {flash && (
-          <Animated.View
-            key={flash.n}
-            entering={FadeIn.duration(80)}
-            exiting={FadeOut.duration(300)}
-            style={styles.flash}>
-            <Ionicons
-              name={flash.ok ? 'checkmark-circle' : 'close-circle'}
-              size={28}
-              color={flash.ok ? Colors.success : Colors.danger}
-            />
-          </Animated.View>
-        )}
-        {card && (
-          <Animated.View key={i} entering={ZoomIn.duration(180)} style={styles.card}>
-            <Text variant="label" color={Colors.textMuted}>
-              {t('sprint.statement', { n: i + 1 })}
-            </Text>
-            <Text variant="title" center style={{ fontSize: 24, lineHeight: 32 }}>
-              {card.statement}
-            </Text>
-          </Animated.View>
-        )}
-      </View>
-      <SafeAreaView edges={['bottom']} style={styles.buttons}>
-        <Pressable
-          onPress={() => choose(false)}
-          accessibilityRole="button"
-          accessibilityLabel={t('sprint.false')}
-          style={({ pressed }) => [styles.tf, styles.false, pressed && { transform: [{ scale: 0.96 }] }]}>
-          <Ionicons name="close" size={30} color="#fff" />
-          <Text variant="heading" color="#fff">
-            {t('sprint.falseButton')}
-          </Text>
-        </Pressable>
-        <Pressable
-          onPress={() => choose(true)}
-          accessibilityRole="button"
-          accessibilityLabel={t('sprint.true')}
-          style={({ pressed }) => [styles.tf, styles.true, pressed && { transform: [{ scale: 0.96 }] }]}>
-          <Ionicons name="checkmark" size={30} color="#fff" />
-          <Text variant="heading" color="#fff">
-            {t('sprint.trueButton')}
-          </Text>
-        </Pressable>
-      </SafeAreaView>
-      <PauseMenu
-        visible={paused && !confirm}
-        title={level.title}
-        subtitle={t('sprint.pauseSubtitle', { right, count: left })}
-        onResume={() => setPaused(false)}
-        onRestart={() => setConfirm('restart')}
-        onQuit={() => setConfirm('quit')}
-      />
-      <ConfirmDialog
-        visible={confirm === 'restart'}
-        title={t('sprint.restartTitle')}
-        body={t('sprint.restartBody')}
-        confirmLabel={t('game.restart')}
-        onConfirm={restart}
-        onCancel={() => setConfirm(null)}
-      />
-      <ConfirmDialog
-        visible={confirm === 'quit'}
-        icon="exit-outline"
-        destructive
-        title={t('sprint.quitTitle')}
-        body={t('sprint.quitBody')}
-        confirmLabel={t('sprint.quit')}
-        onConfirm={() => {
-          setConfirm(null);
-          router.back();
-        }}
-        onCancel={() => setConfirm(null)}
-      />
-    </View>
+        </Animated.View>
+      )}
+    </PlayFrame>
+  );
+}
+
+function Choice({ label, keyName, icon, onPress }: { label: string; keyName: string; icon: 'checkmark' | 'close'; onPress: () => void }) {
+  return (
+    <Pressable
+      onPress={onPress}
+      accessibilityRole="button"
+      accessibilityLabel={label}
+      style={({ pressed }) => [styles.choice, pressed && { backgroundColor: W.keyPressed, transform: [{ scale: 0.98 }] }]}>
+      <Ionicons name={icon} size={22} color={W.ink} />
+      <Text style={styles.choiceText}>{label}</Text>
+      {Platform.OS === 'web' && <Text style={styles.key}>{keyName}</Text>}
+    </Pressable>
   );
 }
 
 const styles = StyleSheet.create({
-  intro: {
+  card: { gap: 10, padding: 22, minHeight: 180, justifyContent: 'center', borderRadius: 16, backgroundColor: W.surface, borderWidth: 1, borderColor: W.line },
+  eyebrow: { fontFamily: Fonts.bold, fontSize: 11, letterSpacing: 1.2, color: W.muted },
+  statement: { fontFamily: Fonts.bold, fontSize: 21, lineHeight: 29, color: W.ink },
+  last: { flexDirection: 'row', gap: 10, padding: 12, borderRadius: 12, alignItems: 'flex-start' },
+  lastTitle: { fontFamily: Fonts.bold, fontSize: 14 },
+  lastWhy: { fontFamily: Fonts.regular, fontSize: 14, lineHeight: 20, color: W.ink },
+  choice: {
     flex: 1,
-    alignItems: 'center',
-    gap: Spacing.md,
-    padding: Spacing.lg,
-    maxWidth: 560,
-    width: '100%',
-    alignSelf: 'center',
-  },
-  boltWrap: {
-    marginTop: Spacing.xl,
-    width: 120,
-    height: 120,
-    borderRadius: 60,
-    backgroundColor: 'rgba(0,0,0,0.3)',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  tally: { flexDirection: 'row', alignItems: 'center', gap: 4 },
-  stage: { flex: 1, padding: Spacing.lg, justifyContent: 'center', maxWidth: 720, width: '100%', alignSelf: 'center' },
-  flash: { position: 'absolute', top: Spacing.lg, alignSelf: 'center' },
-  card: {
-    gap: Spacing.md,
-    alignItems: 'center',
-    padding: Spacing.xl,
-    minHeight: 220,
-    justifyContent: 'center',
-    borderRadius: Radius.xl,
-    backgroundColor: Colors.surface,
-    borderWidth: 1.5,
-    borderColor: Colors.borderStrong,
-  },
-  buttons: {
+    minHeight: 64,
     flexDirection: 'row',
-    gap: Spacing.sm,
-    padding: Spacing.md,
-    maxWidth: 720,
-    width: '100%',
-    alignSelf: 'center',
-  },
-  tf: {
-    flex: 1,
-    height: 110,
-    borderRadius: Radius.lg,
     alignItems: 'center',
     justifyContent: 'center',
-    gap: 4,
-    borderBottomWidth: 6,
+    gap: 8,
+    borderRadius: 14,
+    backgroundColor: W.key,
   },
-  false: { backgroundColor: '#E2445F', borderBottomColor: '#A32640' },
-  true: { backgroundColor: '#14B39B', borderBottomColor: '#0B7A69' },
+  choiceText: { fontFamily: FONT, fontSize: 18, color: W.ink },
+  key: { position: 'absolute', right: 10, bottom: 6, fontFamily: Fonts.bold, fontSize: 11, color: W.muted },
 });

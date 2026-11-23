@@ -1,489 +1,509 @@
 import { Ionicons } from '@expo/vector-icons';
-import { Image } from 'expo-image';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Pressable, ScrollView, StyleSheet, View } from 'react-native';
-import Animated, {
-  Easing,
-  FadeIn,
-  FadeInDown,
-  runOnJS,
-  useAnimatedStyle,
-  useSharedValue,
-  withRepeat,
-  withSequence,
-  withTiming,
-} from 'react-native-reanimated';
-import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context';
+import { Pressable, StyleSheet, View } from 'react-native';
+import Svg, { G, Line, Path, Polyline, Rect, Text as SvgText } from 'react-native-svg';
 
-import { BOLD, GoldButton, Panel, PANEL } from '@/components/lab/hud';
+import { Feedback, FONT, PrimaryButton, SecondaryButton, W } from '@/components/games/ui';
+import { defineGameFrame } from '@/components/lab/contract';
 import { Text } from '@/components/ui';
-import { Colors, Spacing } from '@/constants/theme';
-import type { EngineId, GameOutcome, RocketBuilderRun, RocketDesign, TankId } from '@/lib/api';
-import { coverMap } from '@/lib/games/lab';
-import { num, ROCKET, SPACE_SCENES } from '@/lib/games/space';
+import { Fonts } from '@/constants/theme';
+import type { EngineId, GameOutcome, RocketBuilderRun, RocketDesign, RocketStage, TankId } from '@/lib/api';
+import { num } from '@/lib/games/space';
 import type { SpaceGame } from '@/lib/games/use-lab-run';
 
-import { QuestionCard } from '../question-card';
+import { Card, D, Eyebrow, LTR, ltr, MONO, QuizStep, Sheet, StepBar } from '../kit';
 
-/** Tank heights, in rocket diameters. */
-const TANK_HEIGHT: Record<TankId, number> = { small: 2.2, medium: 3.4, large: 5 };
-const ENGINE_ORDER: EngineId[] = ['spark', 'nova', 'titan', 'ion'];
-const TANK_ORDER: TankId[] = ['small', 'medium', 'large'];
-/** Side panels' widths, and the launch bar's height. */
-const LEFT_W = 104;
-const RIGHT_W = 118;
-const BAR_H = 76;
+type Parts = RocketBuilderRun['parts'];
+type Mission = RocketBuilderRun['missions'][number];
 
-/** The same numbers the server works out (Δv from the rocket equation). */
-function statsOf(run: RocketBuilderRun, payload: number, d: { engine: EngineId | null; tanks: TankId[] }) {
-  const { engines, tanks, fins, g } = run.parts;
-  const e = d.engine ? engines[d.engine] : null;
-  const tankDry = d.tanks.reduce((s, x) => s + tanks[x].dry, 0);
-  const fuel = d.tanks.reduce((s, x) => s + tanks[x].fuel, 0);
-  const dry = payload + fins.mass + (e?.mass ?? 0) + tankDry;
-  const mass = dry + fuel;
+/** The same numbers the server works out (data/space/rockets.ts), for the live readouts. */
+function stats(parts: Parts, m: Mission, d: RocketDesign) {
+  const stage = (s: RocketStage) => {
+    const e = parts.engines[s.engine]!;
+    return {
+      dry: e.mass + s.tanks.reduce((n, t) => n + parts.tanks[t]!.dry, 0),
+      fuel: s.tanks.reduce((n, t) => n + parts.tanks[t]!.fuel, 0),
+      cost: e.cost + s.tanks.reduce((n, t) => n + parts.tanks[t]!.cost, 0),
+      isp: e.isp,
+      thrust: e.thrust,
+    };
+  };
+  const lo = stage(d);
+  const up = d.upper ? stage(d.upper) : null;
+  const top = m.payload.mass + parts.fins.mass + (up ? up.dry + up.fuel : 0);
+  const mass = top + lo.dry + lo.fuel;
+  const dvOf = (isp: number, full: number, empty: number) =>
+    full > empty ? isp * parts.g * Math.log(full / empty) : 0;
+  const lowerDv = dvOf(lo.isp, mass, top + lo.dry);
+  const upFull = up ? m.payload.mass + parts.fins.mass + up.dry + up.fuel : 0;
+  const upperDv = up ? dvOf(up.isp, upFull, upFull - up.fuel) : 0;
   return {
     mass,
-    weight: mass * g,
-    thrust: e?.thrust ?? 0,
-    dv: e && fuel > 0 ? e.isp * g * Math.log(mass / dry) : 0,
-    cost: (e?.cost ?? 0) + fins.cost + d.tanks.reduce((s, x) => s + tanks[x].cost, 0),
+    twr: lo.thrust / (mass * parts.g),
+    upperTwr: up ? up.thrust / (upFull * parts.g) : null,
+    dv: lowerDv + upperDv,
+    lowerDv,
+    upperDv,
+    cost: lo.cost + parts.fins.cost + (up?.cost ?? 0),
   };
 }
 
-/** A section's height in rocket diameters (drawn so its body matches the rocket's width). */
-const unitsOf = (art: { aspect: number; body: number }) => 1 / (art.body * art.aspect);
-
 /**
- * Rocket Builder in the workshop: choose an engine and stack fuel tanks under the payload on the
- * launch tower, watch the physics readouts, and launch. The server checks the flight; then a question
- * about your rocket. Laid out like the approved design: readouts left, parts right, the rocket between.
+ * Rocket Builder: an engineering bench. Choose an engine and fuel tanks (and, from level 7, an upper
+ * stage) and watch the readouts: lift-off thrust-to-weight, Δv from the rocket equation against the
+ * mission's need, and cost against the budget. Launch is checked on the server; then a question about
+ * your own rocket's numbers.
  */
 export function RocketWorkshop({ g, run }: { g: SpaceGame; run: RocketBuilderRun }) {
   const { t } = useTranslation('space');
-  const insets = useSafeAreaInsets();
-  const [size, setSize] = useState({ w: 0, h: 0 });
-  const [cardBottom, setCardBottom] = useState(150);
-  const [k, setK] = useState(() => Math.min(Math.floor(run.at / 2), run.missions.length - 1));
-  const [stage, setStage] = useState<'build' | 'flying' | 'report' | 'question'>(() =>
-    run.at % 2 ? 'question' : 'build',
-  );
-  const [engine, setEngine] = useState<EngineId | null>(null);
-  const [tanks, setTanks] = useState<TankId[]>([]);
-  const [outcome, setOutcome] = useState<GameOutcome | null>(null);
-  const [flame, setFlame] = useState(false);
+  const parts = run.parts;
+  const total = run.missions.length;
+  const [k, setK] = useState(() => Math.min(Math.floor(run.at / 2), total - 1));
   const m = run.missions[k]!;
-  const s = statsOf(run, m.payload.mass, { engine, tanks });
-  const lifts = s.thrust > s.weight;
+  const engines = Object.keys(parts.engines) as EngineId[];
+  const tanks = Object.keys(parts.tanks) as TankId[];
+  const [lower, setLower] = useState<RocketStage>({
+    engine: engines.includes('nova') ? 'nova' : engines[0]!,
+    tanks: [],
+  });
+  const [upper, setUpper] = useState<RocketStage | null>(null);
+  const [which, setWhich] = useState<'lower' | 'upper'>('lower');
+  const [fail, setFail] = useState<GameOutcome | null>(null);
+  const [flown, setFlown] = useState<GameOutcome | null>(null);
 
-  const rise = useSharedValue(0);
-  const jiggle = useSharedValue(0);
-  const rocketStyle = useAnimatedStyle(() => ({
-    transform: [{ translateY: rise.value }, { translateX: jiggle.value }],
-  }));
-  const flicker = useSharedValue(1);
-  const plumeStyle = useAnimatedStyle(() => ({
-    transform: [{ scaleY: flicker.value }, { scaleX: 2 - flicker.value }],
-  }));
-  const smoke = useSharedValue(0);
-  const smokeStyle = useAnimatedStyle(() => ({
-    opacity: smoke.value,
-    transform: [{ scale: 0.6 + smoke.value * 0.6 }],
-  }));
+  const design: RocketDesign = { ...lower, ...(upper && { upper }) };
+  const s = stats(parts, m, design);
+  const minTwr = m.twr ?? 1;
+  const upperMin = parts.upperTwr ?? 0.5;
+  const built = m.design && m.stats;
+  const step = built ? 2 * k + 1 : 2 * k;
 
-  const afterFlight = (o: GameOutcome) => {
-    setFlame(false);
-    smoke.set(withTiming(0, { duration: 1200 }));
-    setOutcome(o);
-    setStage('report');
+  const editing = which === 'upper' && upper ? upper : lower;
+  const setEditing = (st: RocketStage) => (which === 'upper' && upper ? setUpper(st) : setLower(st));
+  const maxTanks = which === 'upper' ? (parts.maxUpperTanks ?? 3) : parts.maxTanks;
+  const count = (id: TankId) => editing.tanks.filter((x) => x === id).length;
+  const addTank = (id: TankId) =>
+    editing.tanks.length < maxTanks && setEditing({ ...editing, tanks: [...editing.tanks, id] });
+  const removeTank = (id: TankId) => {
+    const at = editing.tanks.lastIndexOf(id);
+    if (at >= 0) setEditing({ ...editing, tanks: editing.tanks.filter((_, n) => n !== at) });
   };
 
   const launch = async () => {
-    if (!engine || stage !== 'build') return;
-    const res = await g.answer({ step: 2 * k, engine, tanks });
+    setFail(null);
+    const res = await g.answer({ step, engine: lower.engine, tanks: lower.tanks, ...(upper && { upper }) });
     if (!res) return;
-    const o = res.outcome;
-    setStage('flying');
-    const problem = o.problem;
-    if (problem === 'budget' || problem === 'no-fuel' || problem === 'invalid') {
-      g.buzz('error');
-      afterFlight(o);
-      return;
-    }
-    setFlame(true);
-    smoke.set(withTiming(1, { duration: 900 }));
-    flicker.set(withRepeat(withSequence(withTiming(1.12, { duration: 70 }), withTiming(0.9, { duration: 70 })), -1));
-    jiggle.set(
-      withRepeat(withSequence(withTiming(-1.5, { duration: 40 }), withTiming(1.5, { duration: 40 })), 24, true),
-    );
-    const done = () => {
-      g.buzz(o.correct ? 'success' : 'error');
-      afterFlight(o);
-    };
-    if (o.correct)
-      rise.set(
-        withSequence(
-          withTiming(0, { duration: 900 }),
-          withTiming(-size.h * 1.6, { duration: 2200, easing: Easing.in(Easing.quad) }, () => runOnJS(done)()),
-        ),
-      );
-    else if (problem === 'not-enough')
-      rise.set(
-        withSequence(
-          withTiming(0, { duration: 800 }),
-          withTiming(-size.h * 0.3, { duration: 1300, easing: Easing.out(Easing.quad) }),
-          withTiming(0, { duration: 1000, easing: Easing.in(Easing.quad) }, () => runOnJS(done)()),
-        ),
-      );
-    else rise.set(withTiming(0, { duration: 1900 }, () => runOnJS(done)()));
-  };
-
-  const resetRocket = () => {
-    rise.set(0);
-    jiggle.set(0);
-    flicker.set(1);
-    smoke.set(0);
-  };
-  const afterReport = () => {
-    resetRocket();
-    if (!outcome?.correct) {
-      // A failed launch: fix the rocket and try again (or the game is over).
-      setOutcome(null);
-      if (run.hearts <= 0 || run.status !== 'playing') void g.finish();
-      else setStage('build');
-      return;
-    }
-    setOutcome(null);
-    setStage('question');
+    g.buzz(res.outcome.correct ? 'success' : 'error');
+    if (res.outcome.correct) setFlown(res.outcome);
+    else setFail(res.outcome);
   };
   const nextMission = () => {
-    if (run.status !== 'playing' || run.at >= run.total || run.hearts <= 0) {
-      void g.finish();
-      return;
-    }
+    if (run.status !== 'playing' || run.at >= total * 2 || run.hearts <= 0) return void g.finish();
     setK(Math.floor(run.at / 2));
-    setEngine(null);
-    setTanks([]);
-    setStage('build');
-    resetRocket();
+    setLower({ engine: lower.engine, tanks: [] });
+    setUpper(null);
+    setWhich('lower');
+    setFail(null);
+    setFlown(null);
   };
 
-  // ── The rocket: as tall as the space between the mission card and the launch bar allows ──
-  const map = coverMap(size.w, size.h);
-  const shown: RocketDesign | { engine: EngineId | null; tanks: TankId[] } =
-    stage === 'question' && m.design ? m.design : { engine, tanks };
-  const nose = ROCKET[m.payload.kind];
-  const engineArt = shown.engine ? ROCKET[shown.engine] : null;
-  const units =
-    unitsOf(nose) + shown.tanks.reduce((n, x) => n + TANK_HEIGHT[x], 0) + (engineArt ? unitsOf(engineArt) : 0);
-  const padY = size.h - BAR_H - insets.bottom - 8;
-  const room = padY - cardBottom - 16;
-  // Fit the height, keep the widest section between the side panels, and never thinner than a pencil.
-  const between = size.w - 2 * Spacing.md - 2 * Math.max(LEFT_W, RIGHT_W) - 12;
-  const widest = Math.max(1 / nose.body, engineArt ? 1 / engineArt.body : 1);
-  const W = Math.max(16, Math.min(64, room / Math.max(units, 5), between / widest));
-  const plumeW = W * 1.5;
+  const checks: { ok: boolean; label: string; value: string }[] = [
+    { ok: s.twr >= minTwr && s.twr > 1, label: t('play.rocket.twr'), value: `${s.twr.toFixed(2)} ≥ ${minTwr}` },
+    ...(s.upperTwr !== null
+      ? [
+          {
+            ok: s.upperTwr >= upperMin,
+            label: t('play.rocket.upperTwr'),
+            value: `${s.upperTwr.toFixed(2)} ≥ ${upperMin}`,
+          },
+        ]
+      : []),
+    { ok: s.dv >= m.dv, label: t('rocket.readouts.dv'), value: `${num(s.dv)} / ${num(m.dv)} m/s` },
+    { ok: s.cost <= m.budget, label: t('rocket.readouts.cost'), value: `${s.cost} / ${m.budget}` },
+  ];
 
   return (
-    <View
-      style={StyleSheet.absoluteFill}
-      onLayout={(e) => setSize({ w: e.nativeEvent.layout.width, h: e.nativeEvent.layout.height })}>
-      {size.w > 0 && (
-        <Image
-          source={SPACE_SCENES.workshop}
-          style={{ position: 'absolute', left: map.ox, top: map.oy, width: map.dw, height: map.dh }}
-          contentFit="cover"
-          accessible={false}
-        />
-      )}
+    <Sheet>
+      <StepBar label={t('rocket.objective', { n: k + 1, total, title: m.title })} n={k + 1} total={total} />
+      <Card>
+        <Eyebrow text={t('play.rocket.brief')} />
+        <View style={styles.brief}>
+          <Brief label={t('play.rocket.target')} value={m.target} />
+          <Brief label={t('play.rocket.payload')} value={`${num(m.payload.mass)} kg`} />
+          <Brief label={t('play.rocket.needDv')} value={`${num(m.dv)} m/s`} />
+          <Brief label={t('play.rocket.minTwr')} value={String(minTwr)} />
+          <Brief label={t('play.rocket.budget')} value={String(m.budget)} />
+        </View>
+      </Card>
 
-      {size.w > 0 && (
+      {built ? (
         <>
-          <Animated.View
-            pointerEvents="none"
-            style={[
-              styles.smoke,
-              {
-                left: size.w / 2 - size.w * 0.6,
-                width: size.w * 1.2,
-                height: (size.w * 1.2) / ROCKET.smoke.aspect,
-                top: padY - ((size.w * 1.2) / ROCKET.smoke.aspect) * 0.75,
-              },
-              smokeStyle,
-            ]}>
-            <Image source={ROCKET.smoke.src} style={StyleSheet.absoluteFill} contentFit="contain" accessible={false} />
-          </Animated.View>
-          <Animated.View
-            style={[styles.stack, { left: size.w / 2 - 80, width: 160, bottom: size.h - padY }, rocketStyle]}
-            pointerEvents="box-none">
-            <Image
-              source={nose.src}
-              style={{ width: W / nose.body, height: W / nose.body / nose.aspect }}
-              contentFit="contain"
-              accessibilityLabel={m.payload.name}
+          <Card style={{ alignItems: 'center' }}>
+            <Ascent dv={m.stats!.dv} need={m.dv} />
+            <Feedback
+              tone="good"
+              title={t('rocket.success', { target: m.target })}
+              detail={`Δv ${num(m.stats!.dv)} m/s · TWR ${(m.stats!.twr ?? m.stats!.thrust / m.stats!.weight).toFixed(2)}`}
             />
-            {shown.tanks.map((x, n) => (
-              <Pressable
-                key={`${x}-${n}`}
-                disabled={stage !== 'build'}
-                onPress={() => setTanks(tanks.filter((_, j) => j !== n))}
-                accessibilityRole="button"
-                accessibilityLabel={t('rocket.removeTank', { name: run.parts.tanks[x].name })}>
-                <Image
-                  source={ROCKET.tank.src}
-                  style={{ width: W, height: W * TANK_HEIGHT[x] }}
-                  contentFit="fill"
-                  accessible={false}
-                />
-              </Pressable>
-            ))}
-            {engineArt && shown.engine && (
-              <View style={{ alignItems: 'center' }}>
-                <Image
-                  source={engineArt.src}
-                  style={{ width: W / engineArt.body, height: W / engineArt.body / engineArt.aspect }}
-                  contentFit="contain"
-                  accessibilityLabel={run.parts.engines[shown.engine].name}
-                />
-                {flame && (
-                  <Animated.View
-                    style={[
-                      styles.plume,
-                      { width: plumeW, height: plumeW / ROCKET.plume.aspect, marginLeft: -plumeW / 2 },
-                      plumeStyle,
-                    ]}>
-                    <Image
-                      source={ROCKET.plume.src}
-                      style={StyleSheet.absoluteFill}
-                      contentFit="fill"
-                      accessible={false}
-                    />
-                  </Animated.View>
-                )}
-              </View>
-            )}
-          </Animated.View>
-          {stage === 'build' && !engine && (
-            <View style={[styles.hint, { top: padY - 70 }]} pointerEvents="none">
-              <Text style={{ color: '#fff', fontSize: 12, textAlign: 'center' }}>{t('rocket.empty')}</Text>
-            </View>
+          </Card>
+          {m.question && (
+            <QuizStep
+              stepKey={`q${k}`}
+              q={m.question.q}
+              options={m.question.options}
+              mono
+              onAnswer={async (choice) => {
+                const res = await g.answer(choice === null ? { step, timeout: true } : { step, choice });
+                if (!res) return null;
+                g.buzz(res.outcome.correct ? 'success' : 'error');
+                return res.outcome;
+              }}
+              nextLabel={k + 1 >= total ? t('play.finish') : t('rocket.nextMission')}
+              onNext={nextMission}
+            />
           )}
         </>
-      )}
-
-      <SafeAreaView edges={['top']} style={styles.top} pointerEvents="box-none">
-        <View onLayout={(e) => setCardBottom(e.nativeEvent.layout.y + e.nativeEvent.layout.height + insets.top)}>
-          <Panel style={{ gap: 2, marginTop: 56 }}>
-            <Text style={{ fontFamily: BOLD, fontSize: 14, color: '#fff' }}>
-              {t('rocket.objective', { n: k + 1, total: run.missions.length, title: m.title })}
-            </Text>
-            <Text style={{ fontSize: 12, color: 'rgba(235,238,255,0.9)' }}>
-              {t('rocket.target', { target: m.target })} ·{' '}
-              {t('rocket.payload', { name: m.payload.name, mass: num(m.payload.mass) })}
-            </Text>
-          </Panel>
-        </View>
-      </SafeAreaView>
-
-      {(stage === 'build' || stage === 'flying') && (
+      ) : (
         <>
-          {/* Readouts on the left, like a mission-control screen. */}
-          <View style={[styles.side, { left: Spacing.md, width: LEFT_W, top: cardBottom + 10 }]} pointerEvents="none">
-            <Panel style={styles.sidePanel}>
-              <Readout label={t('rocket.readouts.mass')} value={`${num(s.mass)} kg`} />
-              <Readout label={t('rocket.readouts.weight')} value={`${num(Math.round(s.weight))} N`} />
-              <Readout
-                label={t('rocket.readouts.thrust')}
-                value={`${num(s.thrust)} N`}
-                tone={engine ? (lifts ? 'good' : 'bad') : undefined}
-              />
-              <Readout
-                label={t('rocket.readouts.dv')}
-                value={`${num(Math.round(s.dv))} m/s`}
-                sub={t('rocket.readouts.need', { value: `${num(m.dv)} m/s` })}
-                tone={engine && tanks.length ? (s.dv >= m.dv ? 'good' : 'bad') : undefined}
-              />
-              <Readout
-                label={t('rocket.readouts.cost')}
-                value={String(s.cost)}
-                sub={t('rocket.readouts.budget', { value: m.budget })}
-                tone={s.cost > m.budget ? 'bad' : 'good'}
-              />
-              {!!engine && (
-                <View style={{ flexDirection: 'row', gap: 4, alignItems: 'flex-start' }}>
+          <View style={[styles.bench, LTR]} {...ltr}>
+            <Card style={{ alignItems: 'center', justifyContent: 'center', paddingHorizontal: 8 }}>
+              <Schematic parts={parts} design={design} payload={m.payload.kind} />
+            </Card>
+            <View style={{ flex: 1, gap: 8 }}>
+              {checks.map((c) => (
+                <View
+                  key={c.label}
+                  style={[styles.check, { borderColor: c.ok ? W.correct : W.line }]}
+                  accessible
+                  accessibilityLabel={`${c.label}: ${c.value}. ${c.ok ? t('play.rocket.ok') : t('play.rocket.notYet')}`}>
                   <Ionicons
-                    name={lifts ? 'checkmark-circle' : 'close-circle'}
-                    size={14}
-                    color={lifts ? Colors.success : '#FF8FA6'}
+                    name={c.ok ? 'checkmark-circle' : 'ellipse-outline'}
+                    size={18}
+                    color={c.ok ? W.correct : W.muted}
                   />
-                  <Text style={{ flex: 1, fontSize: 10, fontFamily: BOLD, color: lifts ? Colors.success : '#FF8FA6' }}>
-                    {lifts ? t('rocket.liftOff') : t('rocket.tooHeavy')}
-                  </Text>
+                  <View style={{ flex: 1 }}>
+                    <Text style={styles.checkLabel}>{c.label}</Text>
+                    <Text style={styles.checkValue}>{c.value}</Text>
+                  </View>
                 </View>
-              )}
-            </Panel>
+              ))}
+              <Text style={styles.small}>{t('play.rocket.mass', { mass: num(s.mass) })}</Text>
+            </View>
           </View>
 
-          {/* Parts on the right. */}
-          <View
-            style={[
-              styles.side,
-              { right: Spacing.md, width: RIGHT_W, top: cardBottom + 10, bottom: BAR_H + insets.bottom + 12 },
-            ]}
-            pointerEvents="box-none">
-            <Panel style={[styles.sidePanel, { flexShrink: 1 }]}>
-              <ScrollView contentContainerStyle={{ gap: 5 }} showsVerticalScrollIndicator={false}>
-                <Text style={styles.heading}>{t('rocket.engines')}</Text>
-                {ENGINE_ORDER.map((id) => {
-                  const e = run.parts.engines[id];
-                  const on = engine === id;
-                  return (
-                    <Pressable
-                      key={id}
-                      disabled={stage !== 'build'}
-                      onPress={() => setEngine(id)}
-                      accessibilityRole="radio"
-                      accessibilityState={{ selected: on }}
-                      style={[styles.part, on && styles.partOn]}>
-                      <Text style={{ fontFamily: BOLD, color: '#fff', fontSize: 12 }}>{e.name}</Text>
-                      <Text style={styles.partText}>
-                        {t('rocket.engineCard', { thrust: num(e.thrust / 1000), isp: e.isp })}
-                      </Text>
-                      <Text style={styles.partText}>{t('rocket.partInfo', { mass: num(e.mass), cost: e.cost })}</Text>
-                    </Pressable>
-                  );
-                })}
-                <Text style={[styles.heading, { marginTop: 4 }]}>
-                  {t('rocket.tanks')} · {tanks.length}/{run.parts.maxTanks}
-                </Text>
-                {TANK_ORDER.map((id) => {
-                  const x = run.parts.tanks[id];
-                  const full = tanks.length >= run.parts.maxTanks;
-                  return (
-                    <Pressable
-                      key={id}
-                      disabled={full || stage !== 'build'}
-                      onPress={() => setTanks([...tanks, id])}
-                      accessibilityRole="button"
-                      accessibilityLabel={t('rocket.addTank', { name: x.name })}
-                      style={[styles.part, full && { opacity: 0.45 }]}>
-                      <View style={{ flexDirection: 'row', alignItems: 'center', gap: 3 }}>
-                        <Ionicons name="add-circle" size={14} color={Colors.reward} />
-                        <Text
-                          numberOfLines={1}
-                          style={{ flexShrink: 1, fontFamily: BOLD, color: '#fff', fontSize: 11 }}>
-                          {x.name}
-                        </Text>
-                      </View>
-                      <Text style={styles.partText}>{t('rocket.tankInfo', { fuel: num(x.fuel), cost: x.cost })}</Text>
-                    </Pressable>
-                  );
-                })}
-                {tanks.length > 0 && (
-                  <Text style={{ fontSize: 10, color: 'rgba(235,238,255,0.7)' }}>{t('rocket.remove')}</Text>
-                )}
-              </ScrollView>
-            </Panel>
-          </View>
-        </>
-      )}
+          {parts.staging && (
+            <View style={styles.tabs} accessibilityRole="tablist">
+              {(['lower', 'upper'] as const).map((st) => (
+                <Pressable
+                  key={st}
+                  accessibilityRole="tab"
+                  accessibilityState={{ selected: which === st }}
+                  onPress={() => {
+                    if (st === 'upper' && !upper)
+                      setUpper({ engine: engines.includes('vega') ? 'vega' : engines[0]!, tanks: [] });
+                    setWhich(st);
+                  }}
+                  style={[styles.tab, which === st && styles.tabOn]}>
+                  <Text style={[styles.tabText, which === st && { color: '#fff' }]}>
+                    {st === 'lower'
+                      ? t('play.rocket.lower')
+                      : upper
+                        ? t('play.rocket.upper')
+                        : t('play.rocket.addUpper')}
+                  </Text>
+                </Pressable>
+              ))}
+            </View>
+          )}
 
-      <SafeAreaView edges={['bottom']} style={styles.bottom} pointerEvents="box-none">
-        {stage === 'question' && m.question ? (
-          <QuestionCard
-            key={k}
-            label={t('rocket.question')}
-            q={m.question.q}
-            options={m.question.options}
-            onAnswer={async (choice) => {
-              const res = await g.answer(
-                choice === null ? { step: 2 * k + 1, timeout: true } : { step: 2 * k + 1, choice },
+          <Card>
+            <Eyebrow text={t('rocket.engines')} />
+            {engines.map((id) => {
+              const e = parts.engines[id]!;
+              const on = editing.engine === id;
+              return (
+                <Pressable
+                  key={id}
+                  onPress={() => setEditing({ ...editing, engine: id })}
+                  accessibilityRole="radio"
+                  accessibilityState={{ selected: on }}
+                  style={[styles.part, on && styles.partOn]}>
+                  <Ionicons
+                    name={on ? 'radio-button-on' : 'radio-button-off'}
+                    size={18}
+                    color={on ? W.focus : W.muted}
+                  />
+                  <View style={{ flex: 1 }}>
+                    <Text style={styles.partName}>
+                      {e.name}
+                      {e.vacuum ? ` · ${t('play.rocket.vacuum')}` : ''}
+                    </Text>
+                    <Text
+                      style={
+                        styles.partSpec
+                      }>{`${num(e.thrust / 1000)} kN · Isp ${e.isp} s · ${num(e.mass)} kg · ${t('play.rocket.cost', { cost: e.cost })}`}</Text>
+                  </View>
+                </Pressable>
               );
-              if (!res) return null;
-              g.buzz(res.outcome.correct ? 'success' : 'error');
-              return res.outcome;
-            }}
-            nextLabel={k + 1 >= run.missions.length ? undefined : t('rocket.nextMission')}
-            onNext={nextMission}
-          />
-        ) : stage === 'report' && outcome ? (
-          <Animated.View entering={FadeInDown}>
-            <Panel style={{ gap: Spacing.sm, borderColor: outcome.correct ? Colors.success : Colors.danger }}>
-              <Text style={{ fontFamily: BOLD, fontSize: 17, color: outcome.correct ? Colors.success : '#FF8FA6' }}>
-                {outcome.correct
-                  ? `${t('rocket.success', { target: m.target })} +${outcome.points}`
-                  : t(`rocket.problems.${outcome.problem as 'budget'}`)}
-              </Text>
-              <GoldButton title={t('ui.next')} icon="arrow-forward" onPress={afterReport} />
-            </Panel>
-          </Animated.View>
-        ) : (
-          <GoldButton
-            title={stage === 'flying' ? t('rocket.launching') : t('rocket.launch')}
-            icon="rocket"
-            disabled={!engine || stage !== 'build' || g.busy}
+            })}
+          </Card>
+          <Card>
+            <Eyebrow text={`${t('rocket.tanks')} · ${editing.tanks.length}/${maxTanks}`} />
+            {tanks.map((id) => {
+              const tk = parts.tanks[id]!;
+              return (
+                <View key={id} style={styles.part}>
+                  <View style={{ flex: 1 }}>
+                    <Text style={styles.partName}>{tk.name}</Text>
+                    <Text
+                      style={
+                        styles.partSpec
+                      }>{`${num(tk.fuel)} kg ${t('play.rocket.fuel')} · ${num(tk.dry)} kg ${t('play.rocket.empty')} · ${t('play.rocket.cost', { cost: tk.cost })}`}</Text>
+                  </View>
+                  <Pressable
+                    onPress={() => removeTank(id)}
+                    accessibilityRole="button"
+                    accessibilityLabel={t('rocket.removeTank', { name: tk.name })}
+                    style={styles.stepper}>
+                    <Ionicons name="remove" size={18} color={W.ink} />
+                  </Pressable>
+                  <Text style={styles.count}>{count(id)}</Text>
+                  <Pressable
+                    onPress={() => addTank(id)}
+                    disabled={editing.tanks.length >= maxTanks}
+                    accessibilityRole="button"
+                    accessibilityLabel={t('rocket.addTank', { name: tk.name })}
+                    style={[styles.stepper, editing.tanks.length >= maxTanks && { opacity: 0.35 }]}>
+                    <Ionicons name="add" size={18} color={W.ink} />
+                  </Pressable>
+                </View>
+              );
+            })}
+            {which === 'upper' && upper && (
+              <SecondaryButton
+                title={t('play.rocket.removeUpper')}
+                onPress={() => {
+                  setUpper(null);
+                  setWhich('lower');
+                }}
+              />
+            )}
+          </Card>
+          {fail && (
+            <Feedback tone="bad" title={t(`play.rocket.problems.${(fail.problem as string) ?? 'invalid'}` as never)} />
+          )}
+          <PrimaryButton
+            title={t('rocket.launch')}
+            icon="rocket-outline"
+            busy={g.busy}
+            disabled={!lower.tanks.length || (!!upper && !upper.tanks.length)}
             onPress={() => void launch()}
           />
-        )}
-      </SafeAreaView>
-      {stage === 'flying' && <Animated.View entering={FadeIn} style={styles.glow} pointerEvents="none" />}
+        </>
+      )}
+      {flown && !m.question && <PrimaryButton title={t('rocket.nextMission')} onPress={nextMission} />}
+    </Sheet>
+  );
+}
+
+function Brief({ label, value }: { label: string; value: string }) {
+  return (
+    <View style={{ minWidth: '30%', flexGrow: 1 }}>
+      <Text style={styles.small}>{label}</Text>
+      <Text style={{ fontFamily: MONO, fontSize: 15, color: W.ink }}>{value}</Text>
     </View>
   );
 }
 
-function Readout({ label, value, sub, tone }: { label: string; value: string; sub?: string; tone?: 'good' | 'bad' }) {
+/** A side-on schematic of the stack: fairing or capsule, upper stage, tanks, engine bell. */
+function Schematic({ parts, design, payload }: { parts: Parts; design: RocketDesign; payload: 'nose' | 'capsule' }) {
+  const w = 34;
+  const x0 = 40;
+  const tankH = (id: TankId) => ({ small: 14, medium: 22, large: 34, xl: 52 })[id];
+  const blocks: { y: number; h: number; kind: string; id?: string }[] = [];
+  let y = 8;
+  blocks.push({ y, h: 26, kind: payload });
+  y += 26;
+  const stage = (s: RocketStage, upper: boolean) => {
+    for (const id of s.tanks) {
+      blocks.push({ y, h: tankH(id), kind: upper ? 'utank' : 'tank', id });
+      y += tankH(id);
+    }
+    blocks.push({ y, h: 16, kind: parts.engines[s.engine]?.vacuum ? 'vbell' : 'bell', id: s.engine });
+    y += 16;
+    if (upper) {
+      blocks.push({ y, h: 4, kind: 'sep' });
+      y += 4;
+    }
+  };
+  if (design.upper) stage(design.upper, true);
+  stage(design, false);
+  const H = Math.max(140, y + 10);
   return (
-    <View style={styles.readout}>
-      <Text numberOfLines={1} style={{ fontSize: 9, color: 'rgba(235,238,255,0.7)' }}>
-        {label}
-      </Text>
-      <Text
-        numberOfLines={1}
-        style={{
-          fontFamily: BOLD,
-          fontSize: 13,
-          color: tone === 'good' ? Colors.success : tone === 'bad' ? '#FF8FA6' : '#fff',
-        }}>
-        {value}
-      </Text>
-      {!!sub && (
-        <Text numberOfLines={1} style={{ fontSize: 9, color: 'rgba(235,238,255,0.7)' }}>
-          {sub}
-        </Text>
+    <Svg width={110} height={Math.min(320, H)} viewBox={`0 0 120 ${H}`}>
+      {blocks.map((b, i) => {
+        if (b.kind === 'nose')
+          return (
+            <Path
+              key={i}
+              d={`M${x0},${b.y + b.h} L${x0 + w / 2},${b.y} L${x0 + w},${b.y + b.h} Z`}
+              fill="#fff"
+              stroke={D.ink}
+            />
+          );
+        if (b.kind === 'capsule')
+          return (
+            <Path
+              key={i}
+              d={`M${x0 + 4},${b.y + b.h} L${x0 + 10},${b.y + 2} L${x0 + w - 10},${b.y + 2} L${x0 + w - 4},${b.y + b.h} Z`}
+              fill="#fff"
+              stroke={D.ink}
+            />
+          );
+        if (b.kind === 'tank' || b.kind === 'utank')
+          return (
+            <G key={i}>
+              <Rect
+                x={x0}
+                y={b.y}
+                width={w}
+                height={b.h}
+                fill={b.kind === 'utank' ? '#EFEAFE' : '#F4F3F8'}
+                stroke={D.ink}
+              />
+              <SvgText fontFamily={Fonts.semibold} x={x0 + w + 6} y={b.y + b.h / 2 + 3} fontSize={8} fill={D.muted}>
+                {b.id}
+              </SvgText>
+            </G>
+          );
+        if (b.kind === 'sep')
+          return (
+            <Line
+              key={i}
+              x1={x0 - 4}
+              y1={b.y + 2}
+              x2={x0 + w + 4}
+              y2={b.y + 2}
+              stroke={D.accent}
+              strokeDasharray="3 2"
+            />
+          );
+        const wide = b.kind === 'vbell' ? 30 : 22;
+        return (
+          <G key={i}>
+            <Path
+              d={`M${x0 + w / 2 - 6},${b.y} L${x0 + w / 2 + 6},${b.y} L${x0 + w / 2 + wide / 2},${b.y + b.h} L${x0 + w / 2 - wide / 2},${b.y + b.h} Z`}
+              fill="#D9D7E3"
+              stroke={D.ink}
+            />
+            <SvgText fontFamily={Fonts.semibold} x={x0 - 6} y={b.y + 11} fontSize={8} fill={D.muted} textAnchor="end">
+              {b.id}
+            </SvgText>
+          </G>
+        );
+      })}
+      {!design.tanks.length && (
+        <SvgText fontFamily={Fonts.semibold} x={60} y={H - 6} fontSize={9} fill={D.muted} textAnchor="middle">
+          + fuel
+        </SvgText>
       )}
+    </Svg>
+  );
+}
+
+/** A gravity-turn ascent: altitude against downrange, rising to the orbit line. */
+function Ascent({ dv, need }: { dv: number; need: number }) {
+  const W2 = 300;
+  const H = 120;
+  const pts = Array.from({ length: 40 }, (_, i) => {
+    const x = i / 39;
+    return [20 + x * (W2 - 40), H - 16 - (H - 40) * Math.sin((x * Math.PI) / 2) ** 0.7] as const;
+  });
+  return (
+    <View
+      style={[{ width: '100%', aspectRatio: W2 / H }, LTR]}
+      {...ltr}
+      accessibilityElementsHidden
+      importantForAccessibility="no-hide-descendants">
+      <Svg viewBox={`0 0 ${W2} ${H}`} width="100%" height="100%">
+        <Line x1={20} y1={H - 16} x2={W2 - 10} y2={H - 16} stroke={D.axis} />
+        <Line x1={20} y1={H - 16} x2={20} y2={10} stroke={D.axis} />
+        <Line x1={20} y1={24} x2={W2 - 10} y2={24} stroke={D.good} strokeDasharray="4 4" />
+        <Polyline points={pts.map(([x, y]) => `${x},${y}`).join(' ')} stroke={D.accent} strokeWidth={2} fill="none" />
+        <SvgText fontFamily={Fonts.semibold} x={W2 - 12} y={20} fontSize={9} fill={D.good} textAnchor="end">
+          {`Δv ${num(dv)} ≥ ${num(need)} m/s`}
+        </SvgText>
+      </Svg>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  top: { position: 'absolute', left: Spacing.md, right: Spacing.md, top: 0 },
-  bottom: { position: 'absolute', left: Spacing.md, right: Spacing.md, bottom: Spacing.sm },
-  stack: { position: 'absolute', alignItems: 'center' },
-  plume: { position: 'absolute', top: '96%', left: '50%', transformOrigin: 'top' },
-  smoke: { position: 'absolute' },
-  hint: {
-    position: 'absolute',
-    alignSelf: 'center',
-    left: '30%',
-    right: '30%',
-    padding: 6,
-    borderRadius: 10,
-    backgroundColor: PANEL,
-  },
-  side: { position: 'absolute' },
-  sidePanel: { padding: 8, gap: 6 },
-  readout: { paddingVertical: 4, paddingHorizontal: 6, borderRadius: 8, backgroundColor: 'rgba(255,255,255,0.06)' },
-  heading: { fontFamily: BOLD, fontSize: 10, color: Colors.reward, letterSpacing: 1 },
-  part: {
-    paddingHorizontal: 7,
-    paddingVertical: 5,
+  brief: { flexDirection: 'row', flexWrap: 'wrap', gap: 10 },
+  bench: { flexDirection: 'row', gap: 12, alignItems: 'stretch' },
+  check: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 8,
+    padding: 10,
     borderRadius: 10,
     borderWidth: 1.5,
-    borderColor: 'rgba(255,255,255,0.18)',
-    backgroundColor: 'rgba(255,255,255,0.04)',
+    backgroundColor: W.surface,
   },
-  partOn: { borderColor: Colors.reward, backgroundColor: 'rgba(255,200,87,0.15)' },
-  partText: { fontSize: 10, color: 'rgba(235,238,255,0.85)' },
-  glow: { position: 'absolute', left: 0, right: 0, bottom: 0, height: 160, backgroundColor: 'rgba(255,150,60,0.08)' },
+  checkLabel: { fontFamily: Fonts.semibold, fontSize: 12, color: W.inkSoft },
+  checkValue: { fontFamily: MONO, fontSize: 13, color: W.ink },
+  small: { fontFamily: Fonts.semibold, fontSize: 13, color: W.inkSoft },
+  tabs: { flexDirection: 'row', gap: 8 },
+  tab: {
+    flex: 1,
+    minHeight: 44,
+    borderRadius: 22,
+    borderWidth: 1.5,
+    borderColor: W.ink,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: W.surface,
+  },
+  tabOn: { backgroundColor: W.ink },
+  tabText: { fontFamily: Fonts.bold, fontSize: 14, color: W.ink },
+  part: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 10,
+    minHeight: 52,
+    paddingVertical: 8,
+    paddingHorizontal: 10,
+    borderRadius: 10,
+    borderWidth: 1,
+    borderColor: W.line,
+  },
+  partOn: { borderColor: W.focus, backgroundColor: W.focusSoft },
+  partName: { fontFamily: Fonts.bold, fontSize: 15, color: W.ink },
+  partSpec: { fontFamily: MONO, fontSize: 12, color: W.inkSoft },
+  stepper: {
+    width: 44,
+    height: 44,
+    borderRadius: 10,
+    backgroundColor: W.key,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  count: { fontFamily: FONT, fontSize: 16, color: W.ink, minWidth: 18, textAlign: 'center' },
+});
+
+defineGameFrame('rocket-builder', {
+  review: (run) =>
+    ((run as RocketBuilderRun).missions ?? []).flatMap((m) =>
+      m.result
+        ? [
+            {
+              key: String(m.id),
+              correct: m.result.correct,
+              main: m.title,
+              detail: m.question?.q ? `${m.question.q} → ${m.result.answer ?? ''}` : undefined,
+            },
+          ]
+        : [],
+    ),
 });

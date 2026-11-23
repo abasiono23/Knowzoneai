@@ -111,12 +111,16 @@ const DAY = 86_400_000;
 /** Games by subject. Game ids are unique across subjects. */
 const SUBJECTS = { english: ENGLISH_GAMES, chemistry: CHEMISTRY_GAMES, space: SPACE_GAMES, history: HISTORY_GAMES, tech: TECH_GAMES, business: BUSINESS_GAMES } as const;
 const Subject = z.enum(['english', 'chemistry', 'space', 'history', 'tech', 'business']);
-/** English has the ten-level ladder (services/games/english.ts); the lab subjects have five levels. */
+/**
+ * Subjects on the ten-level ladder (services/games/english.ts: MAX_LEVEL levels, the first OPEN_LEVELS
+ * open to everyone); the other lab subjects still have five levels.
+ */
+const TEN_LEVELS = new Set<string>(['english', 'business', 'history', 'chemistry', 'space', 'tech']);
 const LAB_LEVELS = 5;
-const maxLevel = (subject: string) => (subject === 'english' ? MAX_LEVEL : LAB_LEVELS);
-/** A level can be played once the one before has a star; English opens its first levels to everyone. */
+const maxLevel = (subject: string) => (TEN_LEVELS.has(subject) ? MAX_LEVEL : LAB_LEVELS);
+/** A level can be played once the one before has a star; the ten-level ladders open their first levels to everyone. */
 const unlocked = (subject: string, level: number, starsBefore: number) =>
-  subject === 'english' ? levelOpen(level, starsBefore) : level === 1 || starsBefore > 0;
+  TEN_LEVELS.has(subject) ? levelOpen(level, starsBefore) : level === 1 || starsBefore > 0;
 const Level = z.coerce.number().int().min(1).max(MAX_LEVEL);
 
 /** A lab state: the run's puzzle and progress (each lab has its own puzzle shape). */
@@ -400,16 +404,18 @@ const AnswerBody = z.object({
   reagents: z.array(z.string().max(20)).max(4).optional(),
   choice: z.string().max(120).optional(),
   symbols: z.array(z.string().max(3)).max(12).optional(),
-  atoms: z.array(z.string().max(3)).max(16).optional(),
+  atoms: z.array(z.string().max(3)).max(40).optional(),
   bonds: z
     .array(z.tuple([z.number().int().min(0).max(30), z.number().int().min(0).max(30), z.number().int().min(1).max(3)]))
-    .max(40)
+    .max(60)
     .optional(),
   coefficients: z.array(z.number().int().min(1).max(30)).max(8).optional(),
   test: z.string().max(20).optional(),
   // Space Academy
   engine: z.string().max(20).optional(),
   tanks: z.array(z.string().max(20)).max(8).optional(),
+  /** Rocket Builder (level 7 on): an upper stage. */
+  upper: z.object({ engine: z.string().max(20), tanks: z.array(z.string().max(20)).max(8) }).optional(),
   placements: z
     .array(z.object({ x: z.number().min(-1).max(3), y: z.number().min(-1).max(3), mass: z.number().int().min(1).max(3) }))
     .max(4)

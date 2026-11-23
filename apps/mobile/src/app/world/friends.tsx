@@ -6,9 +6,10 @@ import { useTranslation } from 'react-i18next';
 import { ActivityIndicator, Pressable, StyleSheet, View } from 'react-native';
 
 import { TextField } from '@/components/auth/text-field';
+import { PrimaryButton, SecondaryButton, W } from '@/components/games/ui';
 import { BoardRow } from '@/components/world/board-row';
 import { PlayerMenu } from '@/components/world/player-menu';
-import { Button, Card, IconButton, Screen, ScreenHeader, Text } from '@/components/ui';
+import { Card, IconButton, Screen, ScreenHeader, Text } from '@/components/ui';
 import { Colors, Radius, Spacing } from '@/constants/theme';
 import { formatNumber } from '@/i18n';
 import { errorText } from '@/i18n/errors';
@@ -108,10 +109,9 @@ export default function FriendsScreen() {
           <Text variant="title" style={{ flex: 1, letterSpacing: 2 }}>
             {view?.code ?? '…'}
           </Text>
-          <Button
+          <SecondaryButton
             title={copied ? t('friends.copied') : t('friends.copy')}
-            icon={copied ? 'checkmark' : 'copy'}
-            variant="secondary"
+            icon={copied ? 'checkmark' : 'copy-outline'}
             disabled={!view}
             onPress={() => {
               if (!view) return;
@@ -141,9 +141,9 @@ export default function FriendsScreen() {
           error={error}
           hint={sent ? t('friends.sent') : undefined}
         />
-        <Button
+        <PrimaryButton
           title={t('friends.add')}
-          icon="person-add"
+          icon="person-add-outline"
           disabled={busy || code.trim().length < 3}
           onPress={async () => {
             if (await act(() => api.addFriend(code.trim()))) {
@@ -174,7 +174,7 @@ export default function FriendsScreen() {
                 disabled={busy}
                 accessibilityRole="button"
                 style={styles.accept}>
-                <Text variant="small" color={Colors.onBright} style={{ fontFamily: 'Manrope_700Bold' }}>
+                <Text variant="small" color="#fff" style={{ fontFamily: 'Manrope_700Bold' }}>
                   {t('friends.accept')}
                 </Text>
               </Pressable>
@@ -209,7 +209,7 @@ export default function FriendsScreen() {
                 <View style={styles.rowActions}>
                   {!noBattles && (
                     <IconButton
-                      icon="flash"
+                      icon="flash-outline"
                       label={t('friends.battle', { name: nameOf(r) })}
                       onPress={() => challenge(r)}
                     />
@@ -249,12 +249,7 @@ export default function FriendsScreen() {
         </Card>
       )}
 
-      <Button
-        title={t('friends.invite')}
-        icon="paper-plane"
-        variant="secondary"
-        onPress={() => router.push('/referrals/invite')}
-      />
+      <SecondaryButton title={t('friends.invite')} icon="paper-plane-outline" onPress={() => router.push('/referrals/invite')} />
       <Text variant="small" color={Colors.textMuted} center style={{ fontSize: 12 }}>
         {t('friends.practiceNote')}
       </Text>
@@ -270,7 +265,9 @@ const styles = StyleSheet.create({
     paddingHorizontal: 14,
     paddingVertical: 8,
     borderRadius: Radius.pill ?? 999,
-    backgroundColor: Colors.success,
+    minHeight: 40,
+    justifyContent: 'center',
+    backgroundColor: W.ink,
   },
-  decline: { paddingHorizontal: 12, paddingVertical: 8, borderRadius: 999, borderWidth: 1, borderColor: Colors.border },
+  decline: { paddingHorizontal: 12, minHeight: 40, justifyContent: 'center', borderRadius: 999, borderWidth: 1, borderColor: W.lineStrong },
 });

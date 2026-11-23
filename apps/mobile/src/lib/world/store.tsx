@@ -8,7 +8,7 @@ import { useSession } from '../session';
 import { useRewards } from '../rewards/store';
 import { storage } from '../storage';
 import { WORLDS } from './content';
-import { ALL_LEVELS, DAILY_ID, dayKey, getLevel, levelsOf, rewardFor, starsFor } from './levels';
+import { ALL_LEVELS, DAILY_ID, dayKey, getLevel, levelsOf, OPEN_LEVELS, rewardFor, starsFor, WORLD_STARS } from './levels';
 import { ACHIEVEMENTS, addCounts, weekKey, ZERO, type Counts, type Facts, type Quest } from './progress';
 import {
   DEFAULT_SETTINGS,
@@ -201,7 +201,7 @@ export function WorldProvider({ children }: { children: ReactNode }) {
       totalStars,
       perfectLevels: ALL_LEVELS.filter((l) => s.best[l.id]?.stars === 3).length,
       worldsUnlocked: WORLDS.filter((w) => totalStars >= w.unlockStars).length,
-      worldsMastered: WORLDS.filter((w) => starsIn(s.best, w.id) === 18).length,
+      worldsMastered: WORLDS.filter((w) => starsIn(s.best, w.id) === WORLD_STARS).length,
       dailyStreak: streakOf(s.dailyHistory),
       sprintBest: s.sprintBest,
       collectibles: WORLDS.reduce(
@@ -307,7 +307,12 @@ export function WorldProvider({ children }: { children: ReactNode }) {
     totalStars,
     facts,
     isWorldUnlocked: (w) => totalStars >= w.unlockStars,
-    isLevelUnlocked: (l) => l.number === 1 || (state.best[`${l.worldId}-${l.number - 1}`]?.stars ?? 0) > 0,
+    // Levels 1–4 are open to everyone; later ones open with a star on the level before, and a level
+    // already won stays open.
+    isLevelUnlocked: (l) =>
+      l.number <= OPEN_LEVELS ||
+      (state.best[`${l.worldId}-${l.number - 1}`]?.stars ?? 0) > 0 ||
+      (state.best[l.id]?.stars ?? 0) > 0,
     worldStars: (id) => starsIn(state.best, id),
     collected: (w) => w.collectibles.filter((c) => starsIn(state.best, w.id) >= c.atStars).map((c) => c.id),
     questProgress: (q, weekly) => {
@@ -329,7 +334,7 @@ export function WorldProvider({ children }: { children: ReactNode }) {
       const next = { ...a };
       if (slot === 'hat') next.hat = item?.id;
       else if (slot === 'glasses') next.glasses = item?.id;
-      else if (slot === 'outfit') next.outfit = item?.id ?? '#7C5CFF';
+      else if (slot === 'outfit') next.outfit = item?.id ?? '#3D4A7A';
       else if (slot === 'background') next.background = item?.id ?? 'violet';
       commit({ ...ref.current, avatar: next });
       pushAvatar(next);

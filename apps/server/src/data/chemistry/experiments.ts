@@ -63,7 +63,7 @@ export type Experiment = {
   observation: Observation;
   question: string;
   answer: string;
-  wrong: [string, string];
+  wrong: string[];
   /** Shown after answering, to teach. */
   equation: string;
 };

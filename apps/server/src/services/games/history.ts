@@ -1,15 +1,24 @@
-import { CIVILIZATIONS } from '../../data/history/civilizations.js';
-import { COUNTRIES, mapDistance } from '../../data/history/countries.js';
-import { ERAS, EVENTS } from '../../data/history/eras.js';
-import type { Question } from '../../data/space/questions.js';
+import { CIVILIZATIONS, COUNTRIES, ERAS, EVENTS, mapDistance, type LeveledQuestion } from '../../data/history/levels.js';
 import { random, type Answer, type Outcome, type Progress } from './english.js';
 
 /**
  * The Museum of Time games (History & Geography). Like the other games, every run is built from a
  * seed and the answers stay on the server: `historyPublicState` is all the app sees.
+ *
+ * The ladder has ten levels, like the word games: 1 Starter (famous facts) to 10 Super hard (source
+ * criticism, historiography and fine chronology). Levels up to OPEN_LEVELS are open to everyone;
+ * later ones open with a star on the level before. Progress from the old five-level ladder keeps its
+ * level numbers: old level L content is now at levels 2L − 1 and 2L, so nobody is credited past what
+ * they have shown. As the levels rise the questions get harder, the timeline gets tighter (more
+ * events, closer together), digs show fewer and subtler finds with more look-alike civilisations, the
+ * map needs a more exact tap without a region hint, and the clock gets shorter (unless the learner
+ * has turned the timer off).
  */
 export const HISTORY_GAMES = ['time-machine', 'lost-civilization', 'africa-explorer'] as const;
 export type HistoryGame = (typeof HISTORY_GAMES)[number];
+export const MAX_LEVEL = 10;
+export const OPEN_LEVELS = 4;
+export const levelOpen = (level: number, starsOnLevelBefore: number) => level <= OPEN_LEVELS || starsOnLevelBefore > 0;
 
 type Rand = () => number;
 function shuffle<T>(r: Rand, list: readonly T[]) {
@@ -21,85 +30,161 @@ function shuffle<T>(r: Rand, list: readonly T[]) {
   return out;
 }
 const sample = <T>(r: Rand, list: readonly T[], n: number) => shuffle(r, list).slice(0, n);
-const lvl = (level: number) => Math.min(5, Math.max(1, level));
-const asked = (r: Rand, x: Question) => ({ q: x.q, answer: x.answer, options: shuffle(r, [x.answer, ...x.wrong]) });
+const lvl = (level: number) => Math.min(MAX_LEVEL, Math.max(1, Math.round(level)));
+/** Per level (index 0 = level 1). */
+const by = <T>(list: readonly T[], level: number) => list[lvl(level) - 1]!;
 
-/** Picks `n` from what's open at this level; from level 2, one of them is new at this level. */
-function trip<T extends { level: number }>(r: Rand, all: readonly T[], level: number, n: number) {
-  const pool = all.filter((x) => x.level <= level);
-  const fresh = pool.filter((x) => x.level === level);
-  const first = level > 1 && fresh.length ? [fresh[Math.floor(r() * fresh.length)]!] : [];
-  return shuffle(r, [
-    ...first,
-    ...sample(
-      r,
-      pool.filter((x) => !first.includes(x)),
-      n - first.length,
-    ),
-  ]);
+/** Seconds for a question at each level; 0 = no clock (the first three levels). Order challenges get double. */
+export const SECONDS = [0, 0, 0, 45, 40, 35, 30, 25, 25, 20];
+
+/** The question nearest a level: its own level first, then one below, one above, two below… */
+function nearest(r: Rand, list: readonly LeveledQuestion[], level: number, avoid: Set<string> = new Set()) {
+  const free = list.filter((x) => !avoid.has(x.q));
+  for (const d of [0, -1, 1, -2, 2, -3, 3, -4, 4, -5, 5, -6, 6, -7, 7, -8, 8, -9, 9]) {
+    const here = free.filter((x) => x.level === level + d);
+    if (here.length) return here[Math.floor(r() * here.length)]!;
+  }
+  return null;
+}
+const asked = (r: Rand, x: LeveledQuestion) => ({ q: x.q, answer: x.answer, options: shuffle(r, [x.answer, ...x.wrong.slice(0, 3)]) });
+/** How close a pool's questions are to a level (the best match counts). */
+const fit = (list: readonly LeveledQuestion[], level: number) => Math.min(...list.map((x) => Math.abs(x.level - level)));
+
+/**
+ * Places for a run: `n` from those open at this level whose questions suit it, with at least one in
+ * Africa and (from level 2) one elsewhere in the world, and from level 3 one that is new at about
+ * this level.
+ */
+function places<T extends { id: string; level: number; region?: string; questions: LeveledQuestion[] }>(
+  r: Rand,
+  all: readonly T[],
+  level: number,
+  n: number,
+  mix = true,
+) {
+  const open = all.filter((x) => x.level <= level && fit(x.questions, level) <= 2);
+  const pool = open.length >= n ? open : all.filter((x) => x.level <= level);
+  const picked: T[] = [];
+  const take = (from: T[]) => {
+    const left = from.filter((x) => !picked.includes(x));
+    if (left.length) picked.push(left[Math.floor(r() * left.length)]!);
+  };
+  if (level >= 3) take(pool.filter((x) => x.level >= level - 2));
+  if (mix) {
+    if (!picked.some((x) => x.region === 'africa')) take(pool.filter((x) => x.region === 'africa'));
+    if (level >= 2 && !picked.some((x) => x.region !== 'africa')) take(pool.filter((x) => x.region !== 'africa'));
+  }
+  while (picked.length < n && picked.length < pool.length) take(pool);
+  return shuffle(r, picked);
 }
 
-// ─── Building runs ────────────────────────────────────────────────────────────
+// ─── Time machine ─────────────────────────────────────────────────────────────
 
-/** Four real events far enough apart to put in order (earliest first). */
-function orderChallenge(r: Rand, level: number) {
-  const pool = EVENTS.filter((e) => e.level <= level);
-  for (;;) {
-    const picked = sample(r, pool, 4);
-    const years = picked.map((e) => e.year).sort((a, b) => a - b);
-    if (years.every((y, k) => k === 0 || y - years[k - 1]! >= 10)) {
-      const answer = [...picked].sort((a, b) => a.year - b.year).map((e) => e.text);
-      return { type: 'order' as const, q: 'Put these events in order, earliest first.', items: shuffle(r, answer), answer };
+const ERA_COUNT = [3, 3, 3, 3, 4, 4, 4, 4, 5, 5];
+const ORDER_CHALLENGES = [0, 1, 1, 1, 2, 2, 2, 2, 3, 3];
+const ORDER_ITEMS = [3, 4, 4, 4, 5, 5, 5, 6, 6, 6];
+/** The fewest years between neighbouring events in an order challenge. */
+const ORDER_GAP = [200, 100, 60, 40, 25, 15, 10, 5, 2, 1];
+
+/** Events far enough apart to put in order (earliest first). Ancient dates are approximate, so they need a wide gap. */
+export function orderChallenge(r: Rand, level: number) {
+  const items = by(ORDER_ITEMS, level);
+  const gap = by(ORDER_GAP, level);
+  // Mostly events about this well known; from level 3, at least one of this level's.
+  const pool = EVENTS.filter((e) => e.level <= level && e.level >= level - 4);
+  const wide = EVENTS.filter((e) => e.level <= level);
+  for (let tries = 0; ; tries++) {
+    const from = tries < 200 && pool.length >= items * 2 ? pool : wide;
+    const picked = sample(r, from, items).sort((a, b) => a.year - b.year);
+    const spaced = picked.every((e, k) => {
+      if (k === 0) return true;
+      const before = picked[k - 1]!;
+      const need = Math.max(gap, Math.min(e.year, before.year) < 1000 ? 150 : 0);
+      return e.year - before.year >= need;
+    });
+    if (spaced || tries > 2000) {
+      const answer = picked.map((e) => e.text);
+      return { type: 'order' as const, q: 'Put these events in order, earliest first.', items: shuffle(r, answer), answer, years: picked.map((e) => e.year) };
     }
   }
 }
 
 function buildTimeMachine(level: number, r: Rand) {
   // Visited in time order, like a real journey through history.
-  const eras = trip(r, ERAS, lvl(level), 3).sort((a, b) => a.year - b.year);
-  const orders = level >= 4 ? 2 : level >= 2 ? 1 : 0;
+  const eras = places(r, ERAS, level, by(ERA_COUNT, level)).sort((a, b) => a.year - b.year);
+  const orders = by(ORDER_CHALLENGES, level);
   return {
     kind: 'time-machine' as const,
+    level,
     eras: eras.map((era, k) => {
-      const [first, second] = sample(r, era.questions, 2);
+      const first = nearest(r, era.questions, level)!;
+      const second = nearest(r, era.questions, level, new Set([first.q])) ?? first;
       return {
         id: era.id,
         challenges: [
-          { type: 'choice' as const, ...asked(r, first!) },
-          k >= eras.length - orders ? orderChallenge(r, lvl(level)) : { type: 'choice' as const, ...asked(r, second!) },
+          { type: 'choice' as const, ...asked(r, first) },
+          k >= eras.length - orders ? orderChallenge(r, level) : { type: 'choice' as const, ...asked(r, second) },
         ],
       };
     }),
   };
 }
 
+// ─── Lost civilization ────────────────────────────────────────────────────────
+
+const DIG_COUNT = [3, 3, 3, 4, 4, 4, 4, 5, 5, 5];
+/** Finds shown per dig, and how many of them are the subtle kind. */
+const FINDS = [3, 3, 3, 3, 3, 3, 2, 2, 2, 2];
+const SUBTLE = [0, 0, 0, 0, 1, 1, 1, 1, 2, 2];
+const NAME_OPTIONS = [4, 4, 4, 4, 5, 5, 6, 6, 6, 6];
+
 function buildLostCivilization(level: number, r: Rand) {
-  const civs = trip(r, CIVILIZATIONS, lvl(level), 3);
+  const civs = places(r, CIVILIZATIONS, level, by(DIG_COUNT, level));
   return {
     kind: 'lost-civilization' as const,
+    level,
     digs: civs.map((c) => {
-      const others = sample(
-        r,
-        CIVILIZATIONS.filter((x) => x.id !== c.id),
-        3,
-      ).map((x) => x.name);
+      const plain = c.finds.filter((f) => !f.subtle);
+      const subtle = c.finds.filter((f) => f.subtle);
+      const wantSubtle = Math.min(subtle.length, by(SUBTLE, level));
+      const finds = [...sample(r, subtle, wantSubtle), ...sample(r, plain, by(FINDS, level) - wantSubtle)];
+      // From level 5, the wrong names are from the same part of the world first (harder to tell apart).
+      const others = CIVILIZATIONS.filter((x) => x.id !== c.id && x.name !== c.name);
+      const near = level >= 5 ? shuffle(r, others.filter((x) => x.region === c.region)) : [];
+      const names = [...new Set([...near, ...shuffle(r, others)].map((x) => x.name))].slice(0, by(NAME_OPTIONS, level) - 1);
       return {
         id: c.id,
-        mystery: { q: 'Which civilization left these behind?', answer: c.name, options: shuffle(r, [c.name, ...others]) },
-        followUp: asked(r, sample(r, c.questions, 1)[0]!),
+        finds: shuffle(r, finds).map((f) => c.finds.indexOf(f)),
+        mystery: { q: 'Which civilisation left these behind?', answer: c.name, options: shuffle(r, [c.name, ...names]) },
+        followUp: asked(r, nearest(r, c.questions, level)!),
       };
     }),
   };
 }
 
-/** How close a tap must be at each level (easier at first). */
-const FIND_SLACK = [1.35, 1.2, 1.1, 1, 1];
+// ─── Africa explorer ──────────────────────────────────────────────────────────
+
+const STOPS = [4, 4, 4, 5, 5, 5, 6, 6, 6, 6];
+/** How close a tap must be, as a share of the country's size (easier at first). */
+export const FIND_SLACK = [1.4, 1.3, 1.2, 1.1, 1, 1, 0.9, 0.85, 0.8, 0.75];
 
 function buildAfricaExplorer(level: number, r: Rand) {
+  const stops = places(r, COUNTRIES, level, by(STOPS, level), false);
   return {
     kind: 'africa-explorer' as const,
-    slack: FIND_SLACK[lvl(level) - 1]!,
-    stops: trip(r, COUNTRIES, lvl(level), 4).map((c) => ({ id: c.id, question: asked(r, sample(r, c.questions, 1)[0]!) })),
+    level,
+    slack: by(FIND_SLACK, level),
+    stops: stops.map((c) => {
+      // Markers to choose from instead of tapping the map (for anyone who can't place a pin): the
+      // country and three others well away from it and each other.
+      const others: [number, number][] = [];
+      for (const o of shuffle(r, COUNTRIES)) {
+        if (others.length >= 3) break;
+        if (o.id === c.id) continue;
+        if ([c.at, ...others].every((p) => mapDistance(p, o.at) > Math.max(5, c.radius * 2))) others.push(o.at);
+      }
+      return { id: c.id, choices: shuffle(r, [c.at, ...others]), question: asked(r, nearest(r, c.questions, level)!) };
+    }),
   };
 }
 
@@ -108,13 +193,14 @@ export type HistoryState = { puzzle: HistoryPuzzle; progress: Progress };
 
 export function buildHistoryPuzzle(game: HistoryGame, level: number, seed: string): HistoryPuzzle {
   const r = random(`${game}:${level}:${seed}`);
+  const L = lvl(level);
   switch (game) {
     case 'time-machine':
-      return buildTimeMachine(level, r);
+      return buildTimeMachine(L, r);
     case 'lost-civilization':
-      return buildLostCivilization(level, r);
+      return buildLostCivilization(L, r);
     case 'africa-explorer':
-      return buildAfricaExplorer(level, r);
+      return buildAfricaExplorer(L, r);
   }
 }
 
@@ -135,12 +221,17 @@ export function historyStepCount(p: HistoryPuzzle) {
 const era = (id: string) => ERAS.find((e) => e.id === id)!;
 const civ = (id: string) => CIVILIZATIONS.find((c) => c.id === id)!;
 const country = (id: string) => COUNTRIES.find((c) => c.id === id)!;
+/** Runs started before the ten-level ladder have no level in their puzzle. */
+const levelOf = (p: HistoryPuzzle, level: number) => ('level' in p && p.level ? p.level : lvl(level));
 
-export function historyPublicState({ puzzle: p, progress }: HistoryState, level: number) {
+export function historyPublicState({ puzzle: p, progress }: HistoryState, runLevel: number) {
   const results = progress.results;
+  const level = levelOf(p, runLevel);
+  const seconds = by(SECONDS, level);
   switch (p.kind) {
     case 'time-machine':
       return {
+        seconds,
         eras: p.eras.map((x, k) => {
           const e = era(x.id);
           return {
@@ -149,30 +240,44 @@ export function historyPublicState({ puzzle: p, progress }: HistoryState, level:
             when: e.when,
             year: e.year,
             place: e.place,
+            region: e.region,
             intro: e.intro,
-            spots: e.spots,
             challenges: x.challenges.map((c, j) => {
               const i = 2 * k + j;
-              const result = results[i] && { result: { ...results[i], answer: c.answer } };
-              return c.type === 'order'
-                ? { id: i, type: c.type, q: c.q, items: c.items, ...result }
-                : { id: i, type: c.type, q: c.q, options: c.options, ...result };
+              if (c.type === 'order') {
+                const done = results[i];
+                return {
+                  id: i,
+                  type: c.type,
+                  q: c.q,
+                  items: c.items,
+                  ...(done && { result: { ...done, answer: c.answer, years: 'years' in c ? c.years : undefined } }),
+                };
+              }
+              return { id: i, type: c.type, q: c.q, options: c.options, ...(results[i] && { result: { ...results[i], answer: c.answer } }) };
             }),
           };
         }),
       };
     case 'lost-civilization':
       return {
+        seconds,
         digs: p.digs.map((x, k) => {
           const c = civ(x.id);
           const named = results[2 * k];
+          // Old runs kept no list of finds: they showed all of them.
+          const finds = 'finds' in x && Array.isArray(x.finds) ? x.finds.map((i) => c.finds[i]!) : c.finds;
           return {
             id: k,
             dig: c.dig,
-            // The hero find's picture is the civilization's; the app shows it once dug up.
             art: c.id,
-            finds: c.finds,
-            mystery: { id: 2 * k, q: x.mystery.q, options: x.mystery.options, ...(named && { result: { ...named, answer: c.name, about: c.about } }) },
+            finds: finds.map((f) => ({ name: f.name, clue: f.clue, art: f.art })),
+            mystery: {
+              id: 2 * k,
+              q: x.mystery.q,
+              options: x.mystery.options,
+              ...(named && { result: { ...named, answer: c.name, about: c.about } }),
+            },
             ...(named && {
               followUp: {
                 id: 2 * k + 1,
@@ -186,6 +291,7 @@ export function historyPublicState({ puzzle: p, progress }: HistoryState, level:
       };
     case 'africa-explorer':
       return {
+        seconds,
         stops: p.stops.map((x, k) => {
           const c = country(x.id);
           const found = results[2 * k];
@@ -193,7 +299,8 @@ export function historyPublicState({ puzzle: p, progress }: HistoryState, level:
             id: k,
             name: c.name,
             // A hint on the first levels.
-            ...(level <= 2 && { region: c.region }),
+            ...(level <= 3 && { region: c.region }),
+            ...(!found && 'choices' in x ? { choices: x.choices } : {}),
             ...(found && {
               find: { ...found, at: c.at },
               landmark: c.landmark,
@@ -231,8 +338,16 @@ export function historyCheck({ puzzle: p, progress }: HistoryState, a: HistoryAn
     case 'time-machine': {
       const c = p.eras[k]!.challenges[at % 2]!;
       if (c.type === 'order') {
-        const correct = !a.timeout && (a.order ?? []).length === c.answer.length && c.answer.every((t, j) => a.order![j] === t);
-        return choiceOutcome(correct, c.answer);
+        const given = a.order ?? [];
+        const correct = !a.timeout && given.length === c.answer.length && c.answer.every((t, j) => given[j] === t);
+        // Partly right orders still earn something (each event in its right place).
+        const placed = a.timeout ? 0 : c.answer.filter((t, j) => given[j] === t).length;
+        return {
+          ...choiceOutcome(correct, c.answer),
+          points: correct ? 100 : Math.round((50 * placed) / c.answer.length),
+          // The dates, shown once answered.
+          reveal: { answer: c.answer, ...('years' in c && { years: c.years }) },
+        };
       }
       return choiceOutcome(!a.timeout && a.choice === c.answer, c.answer);
     }
@@ -248,7 +363,9 @@ export function historyCheck({ puzzle: p, progress }: HistoryState, a: HistoryAn
       const x = p.stops[k]!;
       const c = country(x.id);
       if (at % 2 === 0) {
-        const correct = !a.timeout && !!a.point && mapDistance(a.point, c.at) <= c.radius * p.slack;
+        // Never less than a degree, so the smallest countries can still be found.
+        const reach = Math.max(1, c.radius * p.slack);
+        const correct = !a.timeout && !!a.point && mapDistance(a.point, c.at) <= reach;
         return { correct, points: correct ? 100 : 0, heartLost: !correct, advance: true, reveal: { at: c.at } };
       }
       return choiceOutcome(!a.timeout && a.choice === x.question.answer, x.question.answer);
@@ -261,7 +378,8 @@ export function historyIsOver({ puzzle: p, progress }: HistoryState, hearts: num
 }
 
 export function historyStars({ puzzle: p, progress }: HistoryState) {
-  const share = Object.values(progress.results).filter((x) => x.correct).length / historyStepCount(p);
+  const points = Object.values(progress.results).reduce((s, x) => s + x.points, 0);
+  const share = points / (100 * historyStepCount(p));
   return share >= 0.85 ? 3 : share >= 0.6 ? 2 : share >= 0.3 ? 1 : 0;
 }
 
@@ -284,7 +402,7 @@ export function historyHelpContext({ puzzle: p, progress }: HistoryState) {
       const c = civ(x.id);
       const task =
         at % 2 === 0
-          ? `Identify the civilization from these finds: ${c.finds.map((f) => `${f.name} (${f.clue})`).join('; ')}. Options: ${x.mystery.options.join('; ')}. Correct: ${c.name}.`
+          ? `Identify the civilisation from these finds: ${c.finds.map((f) => `${f.name} (${f.clue})`).join('; ')}. Options: ${x.mystery.options.join('; ')}. Correct: ${c.name}.`
           : `About ${c.name} (${c.about}): ${x.followUp.q} Options: ${x.followUp.options.join('; ')}. Correct: ${x.followUp.answer}.`;
       return `Archaeology game. ${task}`;
     }

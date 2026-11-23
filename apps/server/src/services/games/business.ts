@@ -2,6 +2,7 @@ import { BUDGET_LEVELS, LIFE_EVENTS, type BudgetSetup, type LifeEvent, type Pot 
 import { NEWS, QUIZ, STOCKS, type Sector } from '../../data/business/invest.js';
 import { FACTORY_PRODUCTS, MARKET_DAYS, STALL_PRODUCTS, type FactoryProduct, type StallProduct } from '../../data/business/market.js';
 import { COMPANIES, DILEMMAS, type Company, type Effect, type Grade } from '../../data/business/startup.js';
+import { analystQuestion, analystSeconds, type AnalystKind, type AnalystQuestion } from '../../data/business/analyst.js';
 import { random, type Answer, type Outcome, type Progress } from './english.js';
 
 /**
@@ -13,6 +14,23 @@ import { random, type Answer, type Outcome, type Progress } from './english.js';
 export const BUSINESS_GAMES = ['startup-tycoon', 'budget-master', 'market-master', 'profit-quest', 'market-simulator'] as const;
 export type BusinessGame = (typeof BUSINESS_GAMES)[number];
 
+/**
+ * The ladder: ten levels like the word games, from pocket-money budgeting and a lemonade stall
+ * (1 Starter) to company valuation, market structure and case-level strategy (10 Super hard). Levels
+ * up to OPEN_LEVELS are open to everyone; later ones open with a star on the level before. Progress
+ * from the old five-level ladder keeps its level numbers; old level L's settings now sit at about
+ * level 2L − 1, so nobody is credited past what they have shown. As the levels rise the simulations
+ * get tighter (less cash, more turns, higher goals, noisier demand, fewer hints) and the analyst's
+ * desk at the end of a run asks more, harder questions with more distractors and less time.
+ */
+export const MAX_LEVEL = 10;
+export const OPEN_LEVELS = 4;
+export const levelOpen = (level: number, starsOnLevelBefore: number) => level <= OPEN_LEVELS || starsOnLevelBefore > 0;
+/** Per level (index 0 = level 1). */
+const by = <T>(list: readonly T[], level: number) => list[Math.min(MAX_LEVEL, Math.max(1, level)) - 1]!;
+/** The content pools were written for five levels: level L draws from those up to about L ÷ 2. */
+const pool = (level: number) => Math.ceil(level / 2);
+
 type Rand = () => number;
 function shuffle<T>(r: Rand, list: readonly T[]) {
   const out = [...list];
@@ -23,7 +41,7 @@ function shuffle<T>(r: Rand, list: readonly T[]) {
   return out;
 }
 const pick = <T>(r: Rand, list: readonly T[]) => list[Math.floor(r() * list.length)]!;
-const lvl = (level: number) => Math.min(5, Math.max(1, level));
+const lvl = (level: number) => Math.min(MAX_LEVEL, Math.max(1, Math.round(level)));
 const round2 = (n: number) => Math.round(n * 100) / 100;
 /** Returns keep a tenth of a percent. */
 const round4 = (n: number) => Math.round(n * 10000) / 10000;
@@ -32,19 +50,129 @@ const GRADE_POINTS: Record<Grade, number> = { best: 60, ok: 35, poor: 0 };
 
 type Plan = Record<string, number>;
 type Decision = { plan: Plan; choice?: string };
-const decisions = (progress: Progress) => Array.from({ length: progress.at }, (_, i) => progress.designs?.[i] as Decision);
+/** The decisions of the simulation turns so far (the analyst's desk questions come after them). */
+const decisions = (progress: Progress, turns = Infinity) =>
+  Array.from({ length: Math.min(progress.at, turns) }, (_, i) => progress.designs?.[i] as Decision);
+
+// ─── The analyst's desk ───────────────────────────────────────────────────────
+
+/** Which questions each game asks at each level (index 0 = level 1), and how many. */
+const DESK: Record<Exclude<BusinessGame, 'profit-quest'>, { kinds: AnalystKind[][]; count: number[] }> = {
+  'budget-master': {
+    kinds: [
+      [],
+      ['saveWeeks'],
+      ['saveWeeks', 'shareOf'],
+      ['shareOf', 'simpleInterest'],
+      ['cardInterest', 'simpleInterest'],
+      ['compound', 'cardInterest'],
+      ['ear', 'realRate', 'compound'],
+      ['loanPayment', 'realRate', 'ear'],
+      ['taxBands', 'loanPayment', 'ear'],
+      ['retirement', 'taxBands', 'loanPayment'],
+    ],
+    count: [0, 1, 1, 1, 2, 2, 2, 3, 3, 3],
+  },
+  'market-master': {
+    kinds: [
+      ['revenue'],
+      ['profitDay'],
+      ['demandAt', 'profitDay'],
+      ['demandAt', 'revenue'],
+      ['elasticity', 'demandAt'],
+      ['bestPrice', 'elasticity'],
+      ['monopolyQ', 'bestPrice'],
+      ['hhi', 'monopolyQ', 'elasticity'],
+      ['cournot', 'hhi', 'monopolyQ'],
+      ['deadweight', 'cournot', 'hhi'],
+    ],
+    count: [1, 1, 1, 1, 2, 2, 2, 3, 3, 3],
+  },
+  'market-simulator': {
+    kinds: [
+      [],
+      ['dividendYield'],
+      ['portfolioReturn'],
+      ['peValue', 'portfolioReturn'],
+      ['peValue', 'dividendYield'],
+      ['capm', 'peValue'],
+      ['sharpe', 'capm'],
+      ['gordon', 'sharpe', 'capm'],
+      ['bondPrice', 'gordon', 'sharpe'],
+      ['twoAssetSd', 'bondPrice', 'gordon'],
+    ],
+    count: [0, 1, 1, 1, 1, 2, 2, 2, 3, 3],
+  },
+  'startup-tycoon': {
+    kinds: [
+      [],
+      ['grossMargin'],
+      ['runway'],
+      ['runway', 'grossMargin'],
+      ['ltvCac', 'runway'],
+      ['dilution', 'ltvCac'],
+      ['evMultiple', 'dilution'],
+      ['dcfPerpetuity', 'evMultiple', 'dilution'],
+      ['convertible', 'dcfPerpetuity', 'evMultiple'],
+      ['twoStageDcf', 'dcfPerpetuity', 'convertible'],
+    ],
+    count: [0, 1, 1, 1, 1, 2, 2, 2, 3, 3],
+  },
+};
+/** Options per question: four, then five from Proficient (more distractors). */
+const optionCount = (level: number) => (level >= 7 ? 5 : 4);
+
+/** The desk questions for a run: the level's kinds in turn, the newest kind first. */
+function desk(game: Exclude<BusinessGame, 'profit-quest'>, level: number, r: Rand): AnalystQuestion[] {
+  const { kinds, count } = DESK[game];
+  const list = by(kinds, level);
+  return Array.from({ length: by(count, level) }, (_, k) => analystQuestion(list[k % list.length]!, r, optionCount(level)));
+}
+const deskOf = (p: { analyst?: AnalystQuestion[] }) => p.analyst ?? [];
+/** How many simulation turns a run has (its steps before the desk). */
+export function turnsOf(p: BusinessPuzzle) {
+  switch (p.kind) {
+    case 'startup-tycoon':
+      return p.months;
+    case 'budget-master':
+      return p.income.length;
+    case 'market-master':
+      return p.days.length;
+    case 'profit-quest':
+      return p.steps.length;
+    case 'market-simulator':
+      return p.quarters.length;
+  }
+}
+/** The desk as the app sees it: the question, its options and clock, and once answered the result. */
+function deskView(p: BusinessPuzzle, progress: Progress) {
+  const turns = turnsOf(p);
+  const level = 'level' in p ? (p.level as number) : 1;
+  return deskOf(p as { analyst?: AnalystQuestion[] }).map((q, k) => {
+    const id = turns + k;
+    const result = progress.results[id];
+    return {
+      id,
+      kind: q.kind,
+      vars: q.vars,
+      options: q.options,
+      seconds: analystSeconds(q.kind, level),
+      ...(result && { result: { ...result, answer: q.answer, choice: (progress.designs?.[id] as Decision | undefined)?.choice ?? null } }),
+    };
+  });
+}
 
 // ─── Startup Tycoon ───────────────────────────────────────────────────────────
 
 export type Role = 'maker' | 'seller' | 'support';
 const ROLES: Role[] = ['maker', 'seller', 'support'];
 export const MARKETING = [0, 300, 600, 1200];
-const START_CASH = [9000, 8000, 7000, 6000, 5000];
-const MONTHS = [5, 6, 6, 7, 8];
+const START_CASH = [9000, 8500, 8000, 7500, 7000, 6500, 6000, 5500, 5000, 4500];
+const MONTHS = [4, 5, 5, 6, 6, 7, 7, 8, 8, 9];
 /** How many customers the market holds, as a multiple of the regulars: past a point, more selling brings few new ones. */
 const MARKET_SIZE = 6;
 /** The goal, as a share of what a sensible plan reaches (higher levels ask for more). */
-const GOAL_SHARE = [0.85, 0.9, 0.9, 0.92, 0.94];
+const GOAL_SHARE = [0.8, 0.85, 0.88, 0.9, 0.9, 0.92, 0.93, 0.94, 0.95, 0.96];
 
 /** How a company works, from its prices and pay: a maker's output pays for a maker and a seller together. */
 export function companyNumbers(c: Company) {
@@ -223,20 +351,21 @@ export function replayStartup(p: StartupPuzzle, ds: Decision[]) {
 
 function startupPuzzle(level: number, r: Rand) {
   const company = pick(r, COMPANIES).id;
-  const pool = DILEMMAS.filter((x) => x.level <= level);
-  const months = MONTHS[level - 1]!;
-  const events = shuffle(r, pool)
-    .slice(0, months)
-    .map((x) => x.id);
-  const startCash = START_CASH[level - 1]!;
-  const puzzle = { kind: 'startup-tycoon' as const, company, months, startCash, goal: 0, events };
+  const dilemmas = DILEMMAS.filter((x) => x.level <= pool(level));
+  const months = by(MONTHS, level);
+  // Each month has its own dilemma; long runs repeat the pool (never twice in a row).
+  const order = shuffle(r, dilemmas);
+  const events = Array.from({ length: months }, (_, k) => order[k % order.length]!.id);
+  const startCash = by(START_CASH, level);
+  const puzzle = { kind: 'startup-tycoon' as const, level, company, months, startCash, goal: 0, events, analyst: [] as AnalystQuestion[] };
   // The goal: most of what a sensible plan reaches (grow to a balanced team with support, a little
   // marketing, the best choices), so doing nothing falls short and good management gets there.
   const reference = events.map((id, i) => ({
     plan: i === 0 ? { maker: 2, seller: 2, support: 0, marketing: 300 } : { maker: 3, seller: 3, support: 1, marketing: 300 },
     choice: DILEMMAS.find((x) => x.id === id)!.options.find((o) => o.grade === 'best')!.id,
   }));
-  puzzle.goal = Math.round((firmValue(replayStartup(puzzle, reference).firm) * GOAL_SHARE[level - 1]!) / 100) * 100;
+  puzzle.goal = Math.round((firmValue(replayStartup(puzzle, reference).firm) * by(GOAL_SHARE, level)) / 100) * 100;
+  puzzle.analyst = desk('startup-tycoon', level, r);
   return puzzle;
 }
 type StartupPuzzle = ReturnType<typeof startupPuzzle>;
@@ -249,28 +378,28 @@ export const BUDGET_KEYS = ['food', 'fun', 'clothes', 'emergency', 'goal', 'debt
 type Wallet = { emergency: number; goal: number; debt: number; recurring: { id: string; amount: number }[] };
 
 function budgetPuzzle(level: number, r: Rand) {
-  const setup = BUDGET_LEVELS[level - 1]!;
+  const setup = by(BUDGET_LEVELS, level);
   const income = Array.from({ length: setup.months }, () => {
     const [lo, hi] = setup.income;
     return lo === hi ? lo : Math.round((lo + r() * (hi - lo)) / 50) * 50;
   });
-  const events = shuffle(
+  const order = shuffle(
     r,
-    LIFE_EVENTS.filter((e) => e.level <= level),
-  )
-    .slice(0, setup.months)
-    .map((e) => e.id);
-  return { kind: 'budget-master' as const, level, income, events };
+    LIFE_EVENTS.filter((e) => e.level <= pool(level)),
+  );
+  const events = Array.from({ length: setup.months }, (_, k) => order[k % order.length]!.id);
+  return { kind: 'budget-master' as const, level, income, events, analyst: desk('budget-master', level, r) };
 }
 type BudgetPuzzle = ReturnType<typeof budgetPuzzle>;
-const setupOf = (p: BudgetPuzzle): BudgetSetup => BUDGET_LEVELS[p.level - 1]!;
+const setupOf = (p: BudgetPuzzle): BudgetSetup => by(BUDGET_LEVELS, p.level);
 
 /** The bills a month must pay before anything else, including the card's minimum payment. */
 export function billsFor(p: BudgetPuzzle, w: Wallet, interest: number) {
   const s = setupOf(p);
   const owed = w.debt + interest;
   return {
-    ...s.bills,
+    // Bills of nothing (no rent on pocket money) aren't listed.
+    ...Object.fromEntries(Object.entries(s.bills).filter(([, v]) => v > 0)),
     ...Object.fromEntries(w.recurring.map((x) => [x.id, x.amount])),
     ...(s.debt && owed > 0 && { minimum: Math.min(s.debt.min, owed) }),
   } as Record<string, number>;
@@ -358,27 +487,31 @@ export function replayBudget(p: BudgetPuzzle, ds: Decision[]) {
 
 // ─── Market Master ────────────────────────────────────────────────────────────
 
-const DAYS = [4, 5, 5, 6, 6];
+const DAYS = [4, 4, 5, 5, 5, 6, 6, 6, 7, 7];
+/** From Upper-intermediate, real days differ from the forecast by up to this much either way. */
+const DAY_NOISE = [0, 0, 0, 0, 0.08, 0.1, 0.12, 0.14, 0.16, 0.18];
 export const STALL_FEE = 10;
 
 function marketPuzzle(level: number, r: Rand) {
   const product = pick(r, STALL_PRODUCTS).id;
-  const pool = MARKET_DAYS.filter((x) => x.level <= level);
+  const top = pool(level);
+  const kinds = MARKET_DAYS.filter((x) => x.level <= top);
   // Each level's days include the newest kinds of day it introduces (repeating kinds if there are few).
   const fresh = shuffle(
     r,
-    pool.filter((x) => x.level === level),
+    kinds.filter((x) => x.level === top),
   );
-  const order = [...fresh.slice(0, 2), ...shuffle(r, [...pool.filter((x) => x.level !== level), ...fresh.slice(2)])];
-  const count = DAYS[level - 1]!;
+  const order = [...fresh.slice(0, 2), ...shuffle(r, [...kinds.filter((x) => x.level !== top), ...fresh.slice(2)])];
+  const count = by(DAYS, level);
+  const spread = by(DAY_NOISE, level);
   const days = shuffle(
     r,
     Array.from({ length: count }, (_, k) => order[k % order.length]!),
   ).map((x) => ({
     id: x.id,
-    noise: level >= 4 ? round2(0.88 + r() * 0.24) : 1,
+    noise: spread ? round2(1 - spread + r() * 2 * spread) : 1,
   }));
-  return { kind: 'market-master' as const, level, product, days };
+  return { kind: 'market-master' as const, level, product, days, analyst: desk('market-master', level, r) };
 }
 type MarketPuzzle = ReturnType<typeof marketPuzzle>;
 
@@ -452,16 +585,28 @@ function runDay(p: MarketPuzzle, plan: Plan, i: number) {
 // ─── Profit Quest ─────────────────────────────────────────────────────────────
 
 export type CalcKind = 'contribution' | 'breakeven' | 'profit' | 'margin' | 'priceForTarget' | 'machine';
-const CALCS: CalcKind[][] = [
+/** The business maths each level asks: the factory's own sums, then project appraisal (analyst kinds). */
+const CALCS: (CalcKind | AnalystKind)[][] = [
   ['contribution', 'breakeven'],
   ['contribution', 'breakeven', 'profit'],
   ['breakeven', 'profit', 'margin'],
   ['profit', 'margin', 'priceForTarget'],
   ['margin', 'priceForTarget', 'machine'],
+  ['priceForTarget', 'machine', 'operatingLeverage'],
+  ['machine', 'operatingLeverage', 'npv'],
+  ['operatingLeverage', 'npv', 'wacc'],
+  ['npv', 'wacc', 'projectNpv'],
+  ['wacc', 'projectNpv', 'npv'],
 ];
+const FACTORY_CALCS: readonly string[] = ['contribution', 'breakeven', 'profit', 'margin', 'priceForTarget', 'machine'];
+const PROFIT_STEPS = [4, 6, 6, 6, 6, 8, 8, 8, 10, 10];
+/** The clock on the factory's own sums (none up to Elementary). */
+const CALC_SECONDS = [0, 0, 0, 120, 105, 90, 80, 70, 60, 60];
+/** Weekly demand differs from research by up to this much either way (from Upper-intermediate). */
+const WEEK_NOISE = [0, 0, 0, 0, 0.06, 0.08, 0.1, 0.12, 0.14, 0.16];
 const money = (n: number) => String(round2(n));
 
-function calcQuestion(kind: CalcKind, f: FactoryProduct, r: Rand) {
+function calcQuestion(kind: CalcKind, f: FactoryProduct, r: Rand, count = 4) {
   const best = (f.a / f.b + f.unit) / 2;
   const price = Math.round((best * (0.9 + r() * 0.3)) / f.step) * f.step;
   const unit = f.unit;
@@ -508,17 +653,25 @@ function calcQuestion(kind: CalcKind, f: FactoryProduct, r: Rand) {
     }
   }
   const options = [...new Set([answer, ...wrong].map(money))];
-  for (let k = 1; options.length < 4; k++) options.push(money(answer + k * (kind === 'margin' ? 3 : f.step * 7)));
-  return { type: 'calc' as const, calc: kind, nums, answer: money(answer), options: shuffle(r, options.slice(0, 4)) };
+  for (let k = 1; options.length < count; k++) {
+    const extra = money(answer + (k % 2 ? 1 : -1) * Math.ceil(k / 2) * (kind === 'margin' ? 3 : f.step * 7));
+    if (!options.includes(extra) && Number(extra) > 0) options.push(extra);
+  }
+  return { type: 'calc' as const, calc: kind, nums, answer: money(answer), options: shuffle(r, options.slice(0, count)) };
 }
 
 function profitPuzzle(level: number, r: Rand) {
   const f = pick(r, FACTORY_PRODUCTS);
-  const steps = level === 1 ? 4 : 6;
-  const kinds = CALCS[level - 1]!;
-  const plan = Array.from({ length: steps }, (_, i) =>
-    i % 2 === 0 ? calcQuestion(kinds[(i / 2) % kinds.length]!, f, r) : { type: 'week' as const, noise: level >= 4 ? round2(0.92 + r() * 0.16) : 1 },
-  );
+  const steps = by(PROFIT_STEPS, level);
+  const kinds = by(CALCS, level);
+  const spread = by(WEEK_NOISE, level);
+  const plan = Array.from({ length: steps }, (_, i) => {
+    if (i % 2) return { type: 'week' as const, noise: spread ? round2(1 - spread + r() * 2 * spread) : 1 };
+    const kind = kinds[(i / 2) % kinds.length]!;
+    return FACTORY_CALCS.includes(kind)
+      ? calcQuestion(kind as CalcKind, f, r, optionCount(level))
+      : { type: 'analyst' as const, ...analystQuestion(kind as AnalystKind, r, optionCount(level)) };
+  });
   return { kind: 'profit-quest' as const, level, product: f.id, steps: plan };
 }
 type ProfitPuzzle = ReturnType<typeof profitPuzzle>;
@@ -544,7 +697,7 @@ function runWeek(p: ProfitPuzzle, plant0: Plant, d: Decision, i: number) {
   const f = factory(p);
   const step = p.steps[i] as { type: 'week'; noise: number };
   const plant: Plant = structuredClone(plant0);
-  const upgrade = p.level >= 3 && (d.choice === 'machine' || d.choice === 'ads') && !plant[d.choice] ? d.choice : null;
+  const upgrade = p.level >= 4 && (d.choice === 'machine' || d.choice === 'ads') && !plant[d.choice] ? d.choice : null;
   if (upgrade === 'machine') {
     plant.machine = true;
     plant.fixed = Math.round(plant.fixed * (1 + UPGRADES.machine.fixed));
@@ -606,32 +759,34 @@ export function replayProfit(p: ProfitPuzzle, ds: Decision[]) {
 
 // ─── Market Simulator ─────────────────────────────────────────────────────────
 
-const QUARTERS = [4, 4, 5, 6, 6];
+const QUARTERS = [4, 4, 4, 5, 5, 6, 6, 6, 7, 7];
 export const START_PORTFOLIO = 10_000;
 
 function investPuzzle(level: number, r: Rand) {
-  const stocks = (level <= 2 ? STOCKS.slice(0, 4) : STOCKS).map((s) => s.id);
-  const quarters = QUARTERS[level - 1]!;
+  const stocks = (level <= 3 ? STOCKS.slice(0, 4) : STOCKS).map((s) => s.id);
+  const quarters = by(QUARTERS, level);
   const news = shuffle(
     r,
-    NEWS.filter((n) => n.level <= level),
+    NEWS.filter((n) => n.level <= pool(level)),
   );
   const quiz = shuffle(
     r,
-    QUIZ.filter((q) => q.level <= level),
+    QUIZ.filter((q) => q.level <= pool(level)),
   );
   const plan = Array.from({ length: quarters }, (_, i) => {
-    const headlines = [news[(i * 2) % news.length]!.id, ...(level >= 3 && r() < 0.5 ? [news[(i * 2 + 1) % news.length]!.id] : [])];
+    const headlines = [news[(i * 2) % news.length]!.id, ...(level >= 5 && r() < (level >= 8 ? 0.8 : 0.5) ? [news[(i * 2 + 1) % news.length]!.id] : [])];
     const market = round2(-0.04 + r() * 0.1);
     const noise = Object.fromEntries(stocks.map((id) => [id, round2(r() * 2 - 1)]));
     return { news: [...new Set(headlines)], quiz: quiz[i % quiz.length]!.id, market, noise };
   });
-  return { kind: 'market-simulator' as const, level, stocks, quarters: plan };
+  return { kind: 'market-simulator' as const, level, stocks, quarters: plan, analyst: desk('market-simulator', level, r) };
 }
 type InvestPuzzle = ReturnType<typeof investPuzzle>;
 
 /** Assets you can hold. Fees a quarter (from level 3): a stock costs more to hold than an index fund. */
 export const assetsOf = (p: InvestPuzzle) => ['cash', 'bonds', 'index', ...p.stocks];
+/** The most in one company before it counts as too concentrated (from Upper-intermediate). */
+const concentrationLimit = (level: number) => (level >= 9 ? 30 : level >= 7 ? 35 : 40);
 const FEES: Record<string, number> = { cash: 0, bonds: 0.001, index: 0.0005 };
 const STOCK_FEE = 0.003;
 
@@ -653,11 +808,11 @@ function runQuarter(p: InvestPuzzle, value: number, d: Decision, i: number) {
   const assets = assetsOf(p);
   const weights = Object.fromEntries(assets.map((a) => [a, clamp(Math.round((d.plan[a] ?? 0) / 10) * 10, 0, 100) / 100]));
   const returns = quarterReturns(p, i);
-  const fees = p.level >= 3 ? assets.reduce((s, a) => s + weights[a]! * (FEES[a] ?? STOCK_FEE), 0) : 0;
+  const fees = p.level >= 5 ? assets.reduce((s, a) => s + weights[a]! * (FEES[a] ?? STOCK_FEE), 0) : 0;
   const r = assets.reduce((s, a) => s + weights[a]! * returns[a]!, 0) - fees;
   const after = Math.round(value * (1 + r));
   const topStock = Math.max(0, ...p.stocks.map((s) => weights[s]!));
-  const concentrated = p.level >= 3 && topStock > 0.4;
+  const concentrated = p.level >= 5 && topStock > concentrationLimit(p.level) / 100;
   const quiz = QUIZ.find((x) => x.id === p.quarters[i]!.quiz)!;
   const right = d.choice === String(quiz.answer);
   const perf = clamp(30 + Math.round((r - returns.index!) * 400), 0, 60);
@@ -718,25 +873,22 @@ export function buildBusinessPuzzle(game: BusinessGame, level: number, seed: str
   }
 }
 
+/** The simulation turns, then the analyst's desk questions. */
 export function businessStepCount(p: BusinessPuzzle) {
-  switch (p.kind) {
-    case 'startup-tycoon':
-      return p.months;
-    case 'budget-master':
-      return p.income.length;
-    case 'market-master':
-      return p.days.length;
-    case 'profit-quest':
-      return p.steps.length;
-    case 'market-simulator':
-      return p.quarters.length;
-  }
+  return turnsOf(p) + deskOf(p as { analyst?: AnalystQuestion[] }).length;
 }
 
 // ─── What the app sees ────────────────────────────────────────────────────────
 
-export function businessPublicState({ puzzle: p, progress }: BusinessState) {
-  const ds = decisions(progress);
+export function businessPublicState(state: BusinessState) {
+  const { puzzle: p } = state;
+  const level = 'level' in p ? (p.level as number) : 1;
+  // Hints (exact research, each maker's output) fade from Proficient.
+  return { level, hints: level <= 6, turns: turnsOf(p), analyst: deskView(p, state.progress), ...gameView(state) };
+}
+
+function gameView({ puzzle: p, progress }: BusinessState) {
+  const ds = decisions(progress, turnsOf(p));
   switch (p.kind) {
     case 'startup-tycoon': {
       const { firm, reports } = replayStartup(p, ds);
@@ -802,7 +954,7 @@ export function businessPublicState({ puzzle: p, progress }: BusinessState) {
             cost,
             rival: rivalPrice(s, day),
             // Market research: exact up to level 3, then only a forecast (and yesterday's sales).
-            ...(p.level <= 3 && { research: prices.map((price) => ({ price, customers: stallDemand(s, d.id, d.noise, price) })) }),
+            ...(p.level <= 4 && { research: prices.map((price) => ({ price, customers: stallDemand(s, d.id, d.noise, price) })) }),
             ...(i < progress.at && { report: runDay(p, (progress.designs?.[i] as Decision).plan, i) }),
           };
         }),
@@ -817,21 +969,35 @@ export function businessPublicState({ puzzle: p, progress }: BusinessState) {
         product: p.product,
         step: f.step,
         plant,
-        upgrades: p.level >= 3,
+        upgrades: p.level >= 4,
         maxPrice: prices.at(-1)!,
         steps: p.steps.map((s, i) => {
+          if (s.type === 'analyst') {
+            const result = progress.results[i];
+            return {
+              type: s.type,
+              kind: s.kind,
+              vars: s.vars,
+              options: s.options,
+              seconds: analystSeconds(s.kind, p.level),
+              ...(result && { result: { ...result, answer: s.answer, choice: (progress.designs?.[i] as Decision | undefined)?.choice } }),
+            };
+          }
           if (s.type === 'calc') {
             const { answer, ...q } = s;
             return {
               ...q,
+              seconds: by(CALC_SECONDS, p.level),
               ...(progress.results[i] && { result: { ...progress.results[i], answer, choice: (progress.designs?.[i] as Decision | undefined)?.choice } }),
             };
           }
           return {
             type: s.type,
-            ...(i <= progress.at && {
-              research: research.map((price) => ({ price, customers: weekDemand(f, plant, 1, price), about: p.level >= 4 })),
-            }),
+            // Research: exact at first, a forecast from Upper-intermediate, none at Master and above.
+            ...(i <= progress.at &&
+              p.level <= 8 && {
+                research: research.map((price) => ({ price, customers: weekDemand(f, plant, 1, price), about: p.level >= 5 })),
+              }),
             ...(reports[i] && { report: reports[i] }),
           };
         }),
@@ -847,8 +1013,8 @@ export function businessPublicState({ puzzle: p, progress }: BusinessState) {
         assets: assetsOf(p),
         value,
         index,
-        fees: p.level >= 3,
-        limit: p.level >= 3 ? 40 : null,
+        fees: p.level >= 5,
+        limit: p.level >= 5 ? concentrationLimit(p.level) : null,
         quarters: p.quarters.map((q, i) => ({
           news: q.news,
           quiz: { id: q.quiz, options: QUIZ.find((x) => x.id === q.quiz)!.options },
@@ -867,7 +1033,7 @@ const retry = (why: string): Checked => ({ correct: false, points: 0, heartLost:
 
 export function businessCheck({ puzzle: p, progress }: BusinessState, a: BusinessAnswer): Checked {
   const at = progress.at;
-  const ds = decisions(progress);
+  const ds = decisions(progress, turnsOf(p));
   const plan = a.plan ?? {};
   const decision: Decision = { plan, ...(a.choice !== undefined && { choice: a.choice }) };
   const done = (points: number, correct: boolean, heartLost: boolean, reveal: Record<string, unknown>): Checked => ({
@@ -878,6 +1044,14 @@ export function businessCheck({ puzzle: p, progress }: BusinessState, a: Busines
     reveal,
     store: { designs: decision },
   });
+  // The analyst's desk, after the simulation turns.
+  const turns = turnsOf(p);
+  if (at >= turns) {
+    const q = deskOf(p as { analyst?: AnalystQuestion[] })[at - turns];
+    if (!q) return retry('invalid');
+    const correct = !a.timeout && a.choice === q.answer;
+    return done(correct ? 100 : 0, correct, !correct, { answer: q.answer, kind: q.kind });
+  }
   switch (p.kind) {
     case 'startup-tycoon': {
       const dilemma = DILEMMAS.find((x) => x.id === p.events[at])!;
@@ -909,6 +1083,10 @@ export function businessCheck({ puzzle: p, progress }: BusinessState, a: Busines
     }
     case 'profit-quest': {
       const step = p.steps[at]!;
+      if (step.type === 'analyst') {
+        const correct = !a.timeout && a.choice === step.answer;
+        return done(correct ? 100 : 0, correct, !correct, { answer: step.answer, kind: step.kind });
+      }
       if (step.type === 'calc') {
         const correct = !a.timeout && a.choice === step.answer;
         return done(correct ? 100 : 0, correct, !correct, { answer: step.answer, calc: step.calc });
@@ -932,7 +1110,7 @@ export function businessCheck({ puzzle: p, progress }: BusinessState, a: Busines
 
 export function businessIsOver({ puzzle: p, progress }: BusinessState, hearts: number) {
   if (hearts <= 0 || progress.at >= businessStepCount(p)) return true;
-  return p.kind === 'startup-tycoon' && replayStartup(p, decisions(progress)).firm.bankrupt;
+  return p.kind === 'startup-tycoon' && replayStartup(p, decisions(progress, turnsOf(p))).firm.bankrupt;
 }
 
 export function businessStars({ puzzle: p, progress }: BusinessState) {
@@ -941,13 +1119,16 @@ export function businessStars({ puzzle: p, progress }: BusinessState) {
   const points = results.reduce((s, x) => s + x.points, 0);
   const share = points / (total * 100);
   if (p.kind === 'startup-tycoon') {
-    const { firm, reports } = replayStartup(p, decisions(progress));
-    if (firm.bankrupt || reports.length < total) return 0;
+    const { firm, reports } = replayStartup(p, decisions(progress, turnsOf(p)));
+    if (firm.bankrupt || reports.length < turnsOf(p)) return 0;
     const reached = firmValue(firm) >= p.goal;
-    return reached && !reports.some((x) => x.grade === 'poor') ? 3 : reached || share >= 0.75 ? 2 : 1;
+    const desk = deskOf(p);
+    const deskShare = desk.length ? desk.reduce((s, _, k) => s + (progress.results[turnsOf(p) + k]?.points ?? 0), 0) / (100 * desk.length) : 1;
+    const stars = reached && !reports.some((x) => x.grade === 'poor') ? 3 : reached || share >= 0.75 ? 2 : 1;
+    return deskShare < 0.5 ? Math.min(2, stars) : stars;
   }
   if (p.kind === 'budget-master') {
-    const { wallet } = replayBudget(p, decisions(progress));
+    const { wallet } = replayBudget(p, decisions(progress, turnsOf(p)));
     const goal = wallet.goal >= setupOf(p).goal.amount;
     return share >= 0.85 && goal ? 3 : share >= 0.6 ? 2 : share >= 0.3 ? 1 : 0;
   }
@@ -957,7 +1138,10 @@ export function businessStars({ puzzle: p, progress }: BusinessState) {
 /** What Kora needs to help on the current step (Kora is told to guide, not to give the answer away). */
 export function businessHelpContext({ puzzle: p, progress }: BusinessState) {
   const at = Math.min(progress.at, businessStepCount(p) - 1);
-  const ds = decisions(progress);
+  const asked = at >= turnsOf(p) ? deskOf(p as { analyst?: AnalystQuestion[] })[at - turnsOf(p)] : p.kind === 'profit-quest' && p.steps[at]?.type === 'analyst' ? (p.steps[at] as AnalystQuestion) : null;
+  if (asked)
+    return `Business and finance maths question (kind "${asked.kind}") with these numbers: ${JSON.stringify(asked.vars)}. Options: ${asked.options.join('; ')}. Correct: ${asked.answer}. Explain the method and formula step by step with the learner's numbers, but don't give the final answer or say which option is right.`;
+  const ds = decisions(progress, turnsOf(p));
   switch (p.kind) {
     case 'startup-tycoon': {
       const c = COMPANIES.find((x) => x.id === p.company)!;
@@ -985,7 +1169,7 @@ export function businessHelpContext({ puzzle: p, progress }: BusinessState) {
       if (step.type === 'calc')
         return `Business maths (${step.calc}) about a factory making ${f.id}: ${JSON.stringify(step.nums)}. Correct answer: ${step.answer}. Explain the formula (contribution = price − variable cost; break-even = fixed costs ÷ contribution; profit = units × contribution − fixed costs; margin = profit ÷ revenue); don't say the answer.`;
       const { plant } = replayProfit(p, ds);
-      const best = bestWeek(f, plant, step.noise);
+      const best = bestWeek(f, plant, (step as { noise: number }).noise);
       return `Factory week making ${f.id}: variable cost $${plant.unit} each, fixed costs $${plant.fixed} a week, demand about ${plant.a} − ${f.b} × price, ${plant.inventory} in stock, storage costs for leftovers. Best price about $${best.price}. Explain making as many as you can sell, break-even and the price trade-off; don't give the numbers.`;
     }
     case 'market-simulator': {

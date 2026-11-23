@@ -1,8 +1,23 @@
 import { describe, expect, it, vi } from 'vitest';
 
-import { CYBER } from '../src/data/tech/cyber.js';
 import { prisma } from '../src/db.js';
-import { blockCount, buildTechPuzzle, runProgram, runRobot, TECH_GAMES, truthTable, type Card, type Op, type TechState } from '../src/services/games/tech.js';
+import { MORE_CYBER } from '../src/data/tech/cyber-ladder.js';
+import {
+  ALL_CYBER,
+  blockCount,
+  buildTechPuzzle,
+  cyberPool,
+  MAX_LEVEL,
+  OPEN_LEVELS,
+  runProgram,
+  runRobot,
+  SET_TYPES,
+  TECH_GAMES,
+  truthTable,
+  type Card,
+  type Op,
+  type TechState,
+} from '../src/services/games/tech.js';
 import { http, signIn } from './helpers.js';
 
 vi.mock('../src/services/games/help-ai.js', () => ({ ASK_COST: 10, askKora: vi.fn(async () => 'Look for the pattern that repeats.') }));
@@ -51,7 +66,7 @@ const rescue = (b: Board): Card[] => [...route(b, b.robot, b.kitten), { op: 'pic
 
 describe('tech puzzles are solvable and fair', () => {
   it('Code Runner: the planned program reaches the goal within the block limit; from level 3 you need a loop', () => {
-    for (let level = 1; level <= 5; level++)
+    for (let level = 1; level <= 10; level++)
       for (let k = 0; k < 5; k++) {
         const p = buildTechPuzzle('code-runner', level, `s${k}`);
         if (p.kind !== 'code-runner') throw new Error('kind');
@@ -59,6 +74,9 @@ describe('tech puzzles are solvable and fair', () => {
           expect(runProgram(x.solution, x).end).toBe('goal');
           expect(blockCount(x.solution)).toBeLessThanOrEqual(x.maxBlocks);
           if (level >= 3) expect(unrolled(x.solution)).toBeGreaterThan(x.maxBlocks);
+          // From level 7 there are no spare blocks; from level 6 a loop sits inside a loop.
+          if (level >= 7) expect(x.maxBlocks).toBe(blockCount(x.solution));
+          if (level >= 6) expect(x.solution.some((o) => o.op === 'repeat' && o.body.some((i) => i.op === 'repeat'))).toBe(true);
         }
       }
     const board = { tiles: [[0, 0], [1, 0], [3, 0]] as [number, number][], start: { x: 0, y: 0, dir: 1 }, goal: [3, 0] as [number, number] };
@@ -67,36 +85,106 @@ describe('tech puzzles are solvable and fair', () => {
   });
 
   it('Robot Rescue: every board can be solved, and the robot stops at walls', () => {
-    for (let level = 1; level <= 5; level++)
+    for (let level = 1; level <= 10; level++)
       for (let k = 0; k < 5; k++) {
         const p = buildTechPuzzle('robot-rescue', level, `r${k}`);
         if (p.kind !== 'robot-rescue') throw new Error('kind');
         for (const x of p.puzzles) {
           expect(runRobot(rescue(x), x).end).toBe('saved');
           expect(!!x.home).toBe(level >= 3);
+          if (level >= 8) expect(x.maxCards).toBe(x.best);
         }
       }
     expect(runRobot([{ dir: 'left', n: 1 }], { w: 3, h: 3, blocked: [], robot: [0, 0], kitten: [2, 2] }).end).toBe('bump');
   });
 
   it('Circuit Master: the planned gates light the bulb exactly as asked, and it is never always on or off', () => {
-    for (let level = 1; level <= 5; level++)
+    for (let level = 1; level <= 10; level++)
       for (let k = 0; k < 5; k++) {
         const p = buildTechPuzzle('circuit-master', level, `c${k}`);
         if (p.kind !== 'circuit-master') throw new Error('kind');
         for (const x of p.puzzles) {
           expect(truthTable(x.inputs, x.slots, x.out, x.solution)).toEqual(x.target);
           expect(new Set(x.target).size).toBe(2);
+          expect(x.target).toHaveLength(2 ** x.inputs.length);
+          expect(x.preview).toBe(level <= 6);
         }
       }
   });
 
   it('Cyber items each have one answer from their own choices', () => {
-    for (const c of CYBER) {
-      const choices = c.kind === 'password' ? ['weak', 'strong'] : c.kind === 'situation' ? ['risky', 'safe'] : ['phishing', 'safe'];
+    for (const c of ALL_CYBER) {
+      const choices = c.options ?? (c.kind === 'password' ? ['weak', 'strong'] : c.kind === 'situation' ? ['risky', 'safe'] : ['phishing', 'safe']);
       expect(choices, c.id).toContain(c.answer);
+      if (c.options) expect(new Set(c.options).size, c.id).toBe(c.options.length);
     }
-    expect(new Set(CYBER.map((c) => c.id)).size).toBe(CYBER.length);
+    expect(new Set(ALL_CYBER.map((c) => c.id)).size).toBe(ALL_CYBER.length);
+    expect(MORE_CYBER.length).toBeGreaterThan(100);
+    // Every level has enough cases, and never takes cases from a harder level.
+    for (let level = 1; level <= MAX_LEVEL; level++) {
+      const pool = cyberPool(level);
+      expect(pool.length, `level ${level}`).toBeGreaterThanOrEqual(level >= 6 ? 10 : 8);
+      expect(pool.every((c) => c.level <= level)).toBe(true);
+    }
+  });
+
+  it('Binary Breaker works out every answer in code, up to subnets and floating point', () => {
+    expect([MAX_LEVEL, OPEN_LEVELS]).toEqual([10, 4]);
+    const seen = new Set<string>();
+    for (let level = 1; level <= 10; level++)
+      for (let k = 0; k < 6; k++) {
+        const p = buildTechPuzzle('binary-breaker', level, `b${k}`);
+        if (p.kind !== 'binary-breaker') throw new Error('kind');
+        for (const v of p.vaults as Record<string, unknown>[]) {
+          seen.add(String(v.type));
+          const n = Number(v.answer);
+          const bits = v.bits as number;
+          switch (v.type) {
+            case 'add':
+              expect(n).toBe(parseInt((v.a as number[]).join(''), 2) + parseInt((v.b as number[]).join(''), 2));
+              break;
+            case 'xor':
+              expect(n).toBe(parseInt((v.a as number[]).join(''), 2) ^ parseInt((v.b as number[]).join(''), 2));
+              break;
+            case 'neg':
+              expect(n).toBe(2 ** bits - (v.n as number));
+              break;
+            case 'sub':
+              expect(n).toBe(2 ** bits + (v.x as number) - (v.y as number));
+              break;
+            case 'gray':
+              expect(n).toBe((v.n as number) ^ ((v.n as number) >> 1));
+              break;
+            case 'hosts':
+              expect(n).toBe(2 ** (32 - (v.prefix as number)) - 2);
+              break;
+            case 'network': {
+              const [ip, prefix] = String(v.address).split('/');
+              const octets = ip!.split('.').map(Number);
+              const mask = Number(prefix);
+              const addr = octets.reduce((a, o) => a * 256 + o, 0);
+              const net = Math.floor(addr / 2 ** (32 - mask)) * 2 ** (32 - mask);
+              expect(v.answer).toBe([24, 16, 8, 0].map((sh) => Math.floor(net / 2 ** sh) % 256).join('.'));
+              break;
+            }
+            case 'float': {
+              const b = (v.shown as number[]).join('');
+              const sign = b[0] === '1' ? -1 : 1;
+              const e = parseInt(b.slice(1, 6), 2);
+              const f = parseInt(b.slice(6), 2);
+              expect(n).toBe(sign * (1 + f / 1024) * 2 ** (e - 15));
+              break;
+            }
+          }
+          if (!SET_TYPES.includes(v.type as never)) {
+            const options = v.options as string[];
+            expect(options).toContain(v.answer);
+            expect(new Set(options).size).toBe(options.length);
+            expect(options.length).toBe(level >= 8 ? 5 : 4);
+          }
+        }
+      }
+    expect(seen.size).toBeGreaterThanOrEqual(16);
   });
 });
 
@@ -137,7 +225,7 @@ describe('playing the tech games (server-checked)', () => {
     for (let i = 0; i < p.vaults.length; i++) {
       const v = p.vaults[i]!;
       const n = Number(v.answer);
-      const body = v.type === 'set' || v.type === 'add' ? { bits: Array.from({ length: v.bits }, (_, k) => (n >> (v.bits - 1 - k)) & 1) } : { choice: v.answer };
+      const body = SET_TYPES.includes(v.type) ? { bits: Array.from({ length: v.bits }, (_, k) => (n >> (v.bits - 1 - k)) & 1) } : { choice: v.answer };
       expect((await answer(as, run.id, { step: i, ...body })).body.outcome.correct, v.type).toBe(true);
     }
 
@@ -157,7 +245,7 @@ describe('playing the tech games (server-checked)', () => {
     expect(run.items[0]).not.toHaveProperty('answer');
     const p = await secret(run.id);
     if (p.kind !== 'cyber-defender') throw new Error('kind');
-    const c = CYBER.find((x) => x.id === p.items[0])!;
+    const c = ALL_CYBER.find((x) => x.id === p.items[0])!;
     const res = await answer(as, run.id, { step: 0, choice: c.answer });
     expect(res.body.outcome).toMatchObject({ correct: true, why: c.why });
     expect((await as.get('/me/games/tech').expect(200)).body.games.map((g: { id: string }) => g.id)).toEqual([...TECH_GAMES]);

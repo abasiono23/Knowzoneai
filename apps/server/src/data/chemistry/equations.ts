@@ -3,7 +3,7 @@
  * whole numbers) and reactions to complete. Formulas use plain digits; the app shows subscripts.
  */
 export type Equation = { reactants: string[]; products: string[]; coefficients: number[]; name?: string };
-export type Completion = { reactants: string; answer: string; wrong: [string, string] };
+export type Completion = { reactants: string; answer: string; wrong: string[] };
 
 const eq = (reactants: string[], products: string[], coefficients: number[]): Equation => ({ reactants, products, coefficients });
 
@@ -52,6 +52,64 @@ export const EQUATIONS: Record<number, Equation[]> = {
     eq(['C4H10', 'O2'], ['CO2', 'H2O'], [2, 13, 8, 10]),
     eq(['FeS2', 'O2'], ['Fe2O3', 'SO2'], [4, 11, 2, 8]),
     eq(['NaHCO3'], ['Na2CO3', 'H2O', 'CO2'], [2, 1, 1, 1]),
+  ],
+};
+
+/**
+ * Levels 6–10: ionic and redox equations (charges written "Fe^3+", electrons "e^-"). Only the species
+ * are written here: the coefficients are worked out by formula.ts `balance`, and the tests check that
+ * each has exactly one smallest whole-number answer, no bigger than 30.
+ */
+export const HARD_EQUATIONS: Record<number, [string[], string[]][]> = {
+  6: [
+    [['Cu', 'HNO3'], ['Cu(NO3)2', 'NO2', 'H2O']],
+    [['C8H18', 'O2'], ['CO2', 'H2O']],
+    [['Ca3(PO4)2', 'H2SO4'], ['CaSO4', 'H3PO4']],
+    [['Fe3O4', 'H2'], ['Fe', 'H2O']],
+    [['NaHCO3', 'H2SO4'], ['Na2SO4', 'H2O', 'CO2']],
+    [['Fe^3+', 'OH^-'], ['Fe(OH)3']],
+    [['CO3^2-', 'H^+'], ['H2O', 'CO2']],
+    [['Al^3+', 'OH^-'], ['Al(OH)3']],
+    [['NH4NO3'], ['N2O', 'H2O']],
+  ],
+  7: [
+    [['MnO4^-', 'H^+', 'Fe^2+'], ['Mn^2+', 'H2O', 'Fe^3+']],
+    [['Cr2O7^2-', 'H^+', 'Fe^2+'], ['Cr^3+', 'H2O', 'Fe^3+']],
+    [['MnO4^-', 'H^+', 'C2O4^2-'], ['Mn^2+', 'H2O', 'CO2']],
+    [['IO3^-', 'I^-', 'H^+'], ['I2', 'H2O']],
+    [['Cu', 'H^+', 'NO3^-'], ['Cu^2+', 'NO', 'H2O']],
+    [['H2O2', 'I^-', 'H^+'], ['I2', 'H2O']],
+    [['MnO4^-', 'H^+', 'e^-'], ['Mn^2+', 'H2O']],
+    [['Cr2O7^2-', 'H^+', 'e^-'], ['Cr^3+', 'H2O']],
+  ],
+  8: [
+    [['Cl2', 'OH^-'], ['Cl^-', 'ClO3^-', 'H2O']],
+    [['MnO4^-', 'I^-', 'H2O'], ['MnO2', 'I2', 'OH^-']],
+    [['Cr(OH)3', 'ClO^-', 'OH^-'], ['CrO4^2-', 'Cl^-', 'H2O']],
+    [['P4', 'OH^-', 'H2O'], ['PH3', 'H2PO2^-']],
+    [['S2O3^2-', 'I2'], ['S4O6^2-', 'I^-']],
+    [['Al', 'OH^-', 'H2O'], ['[Al(OH)4]^-', 'H2']],
+    [['H2O2', 'Fe^2+', 'H^+'], ['Fe^3+', 'H2O']],
+    [['Zn', 'NO3^-', 'H^+'], ['Zn^2+', 'NH4^+', 'H2O']],
+  ],
+  9: [
+    [['As2S3', 'HNO3', 'H2O'], ['H3AsO4', 'H2SO4', 'NO']],
+    [['FeS2', 'O2'], ['Fe2O3', 'SO2']],
+    [['KClO3', 'HCl'], ['KCl', 'Cl2', 'H2O']],
+    [['K2Cr2O7', 'HCl'], ['KCl', 'CrCl3', 'Cl2', 'H2O']],
+    [['Zn', 'HNO3'], ['Zn(NO3)2', 'NH4NO3', 'H2O']],
+    [['NaBH4', 'H2O'], ['NaB(OH)4', 'H2']],
+    [['Cu2S', 'HNO3'], ['Cu(NO3)2', 'CuSO4', 'NO2', 'H2O']],
+  ],
+  10: [
+    [['P4', 'HNO3', 'H2O'], ['H3PO4', 'NO']],
+    [['Mn^2+', 'BiO3^-', 'H^+'], ['MnO4^-', 'Bi^3+', 'H2O']],
+    [['XeF6', 'H2O'], ['XeO3', 'HF']],
+    [['Cu2S', 'NO3^-', 'H^+'], ['Cu^2+', 'SO4^2-', 'NO', 'H2O']],
+    [['S', 'HNO3'], ['H2SO4', 'NO2', 'H2O']],
+    [['PbS', 'H2O2'], ['PbSO4', 'H2O']],
+    [['N2H4', 'IO3^-', 'H^+', 'Cl^-'], ['N2', 'ICl2^-', 'H2O']],
+    [['Ag', 'CN^-', 'O2', 'H2O'], ['[Ag(CN)2]^-', 'OH^-']],
   ],
 };
 

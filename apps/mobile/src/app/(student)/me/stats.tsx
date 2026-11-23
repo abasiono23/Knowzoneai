@@ -15,7 +15,7 @@ import { useSession } from '@/lib/session';
 import { useMaterials } from '@/lib/studio/store';
 import { useVideos } from '@/lib/videos/store';
 import { WORLDS } from '@/lib/world/content';
-import { dayKey } from '@/lib/world/levels';
+import { dayKey, WORLD_STARS } from '@/lib/world/levels';
 import { useWorld } from '@/lib/world/store';
 
 /** Screen 180: learning statistics, from every part of the app. */
@@ -188,10 +188,10 @@ export default function LearningStatsScreen() {
                 {w.emoji} {w.name}
               </Text>
               <Text variant="small" color={Colors.textSecondary}>
-                {world.worldStars(w.id)}/18
+                {world.worldStars(w.id)}/{WORLD_STARS}
               </Text>
             </View>
-            <ProgressBar progress={world.worldStars(w.id) / 18} height={6} colors={Gradients.reward} />
+            <ProgressBar progress={world.worldStars(w.id) / WORLD_STARS} height={6} colors={Gradients.reward} />
           </View>
         ))}
       </Card>

@@ -1,6 +1,7 @@
 import { Router } from 'express';
 import { z } from 'zod';
 
+import { bankLevel } from '../data/world/bank.js';
 import { ACHIEVEMENT_ITEMS } from '../data/world-items.js';
 import { prisma } from '../db.js';
 import { acceptFriend, addFriend, friendsView, removeFriend } from '../services/friends.js';
@@ -17,6 +18,20 @@ async function profileView(userId: string) {
   const owned = await ownedItems(userId, p);
   return { avatar: p.avatar, owned, onLeaderboards: p.onLeaderboards, anonymous: p.anonymous };
 }
+
+/**
+ * One level of a world's question bank (the adventure's levels 1–10). Open to everyone: the adventure's
+ * progress is kept on the learner's device, so the questions come with their answers and explanations.
+ */
+worldRouter.get('/world/bank/:world/:level', (req, res) => {
+  const bank = bankLevel(String(req.params.world), Number(req.params.level));
+  if (!bank) {
+    res.status(404).json({ error: 'No such level', reason: 'not-found' });
+    return;
+  }
+  res.set('Cache-Control', 'public, max-age=3600');
+  res.json(bank);
+});
 
 worldRouter.get('/me/world', async (req, res) => {
   res.json(await profileView(me(req).id));

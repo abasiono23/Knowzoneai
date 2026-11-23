@@ -5,6 +5,9 @@ import { View } from 'react-native';
 
 import {
   Action,
+  AnalystDesk,
+  atDesk,
+  LineChart,
   Card,
   Eyebrow,
   GameScreen,
@@ -19,8 +22,15 @@ import {
 import { BOLD } from '@/components/lab/hud';
 import { Text } from '@/components/ui';
 import type { MarketSimulatorRun } from '@/lib/api';
-import { BUSINESS_SCENES, money, pct } from '@/lib/games/business';
+import { money, pct } from '@/lib/games/business';
 import type { BusinessGame } from '@/lib/games/use-lab-run';
+import { defineGameFrame } from '@/components/lab/contract';
+import { t as i18nT } from 'i18next';
+
+import { deskReview } from '../review';
+
+/** Translation outside React (review lists for the results screen). */
+const tr = i18nT as unknown as (key: string, options?: Record<string, unknown>) => string;
 
 const RISK_COLOR = { low: GREEN, medium: '#C98A00', high: RED } as const;
 
@@ -29,13 +39,42 @@ const RISK_COLOR = { low: GREEN, medium: '#C98A00', high: RED } as const;
  * spread the portfolio across cash, bonds, an index fund and made-up companies. The server moves the
  * market and compares you with the whole market.
  */
-export function MarketSimulator({ g, run }: { g: BusinessGame; run: MarketSimulatorRun }) {
+export function MarketSimulator({ g, run, paused }: { g: BusinessGame; run: MarketSimulatorRun; paused?: boolean }) {
   const [i, setI] = useState(() => Math.min(run.at, run.quarters.length - 1));
+  const [desk, setDesk] = useState(() => atDesk(run));
   const next = () => {
-    if (run.status !== 'playing' || run.hearts <= 0 || run.at >= run.quarters.length) void g.finish();
-    else setI(run.at);
+    if (run.status !== 'playing' || run.hearts <= 0) void g.finish();
+    else if (run.at >= run.quarters.length) {
+      if (run.analyst?.length) setDesk(true);
+      else void g.finish();
+    } else setI(run.at);
   };
+  if (desk) return <AnalystDesk g={g} run={run} paused={paused} />;
   return <Quarter key={i} g={g} run={run} i={i} onNext={next} />;
+}
+
+/** The portfolio and the index fund, from the start to the last quarter played. */
+function Growth({ run }: { run: MarketSimulatorRun }) {
+  const { t } = useTranslation('business');
+  const tx = t as unknown as (key: string, options?: Record<string, unknown>) => string;
+  const done = run.quarters.flatMap((q) => (q.report ? [q.report] : []));
+  if (!done.length) return null;
+  const start = done[0]!.before;
+  const mine = [start, ...done.map((r) => r.value)];
+  const index = [start, ...done.map((r) => r.indexValue)];
+  return (
+    <Card>
+      <LineChart
+        title={tx('charts.portfolio')}
+        labels={mine.map((_, k) => (k ? tx('charts.quarter', { n: k }) : '0'))}
+        series={[
+          { name: tx('charts.portfolio'), values: mine },
+          { name: tx('charts.index'), values: index, dashed: true },
+        ]}
+        summary={`${tx('charts.portfolio')} ${money(mine.at(-1)!)}, ${tx('charts.index')} ${money(index.at(-1)!)}`}
+      />
+    </Card>
+  );
 }
 
 function Quarter({ g, run, i, onNext }: { g: BusinessGame; run: MarketSimulatorRun; i: number; onNext: () => void }) {
@@ -79,7 +118,7 @@ function Quarter({ g, run, i, onNext }: { g: BusinessGame; run: MarketSimulatorR
         {
           label: t('invest.portfolio'),
           value: money(run.value),
-          color: run.value >= run.index ? '#7CF0B8' : '#FFB4C2',
+          tone: run.value >= run.index ? ('good' as const) : ('bad' as const),
         },
         { label: name('index'), value: money(run.index) },
       ]}
@@ -87,10 +126,10 @@ function Quarter({ g, run, i, onNext }: { g: BusinessGame; run: MarketSimulatorR
   );
   const news = (
     <Card>
-      <Eyebrow color="#6A4BE0">{t('invest.news')}</Eyebrow>
+      <Eyebrow>{t('invest.news')}</Eyebrow>
       {quarter.news.map((n) => (
         <View key={n} style={kit.row}>
-          <Ionicons name="newspaper" size={16} color="#5B6390" />
+          <Ionicons name="newspaper-outline" size={16} color="#474C6B" />
           <Text style={[kit.body, { flex: 1 }]}>{tx(`invest.newsItems.${n}`)}</Text>
         </View>
       ))}
@@ -98,11 +137,10 @@ function Quarter({ g, run, i, onNext }: { g: BusinessGame; run: MarketSimulatorR
   );
 
   if (report) {
-    const last = run.at >= run.quarters.length || run.hearts <= 0;
+    const last = (run.at >= run.quarters.length && !run.analyst?.length) || run.hearts <= 0;
     const held = run.assets.filter((a) => (report.weights[a] ?? 0) > 0);
     return (
       <GameScreen
-        scene={BUSINESS_SCENES.exchange}
         action={
           <Action
             title={last ? t('ui.finish') : t('ui.next')}
@@ -111,9 +149,10 @@ function Quarter({ g, run, i, onNext }: { g: BusinessGame; run: MarketSimulatorR
           />
         }>
         {header}
+        <Growth run={run} />
         {news}
         <Card>
-          <Eyebrow color="#6A4BE0">{t('invest.report', { n: i + 1 })}</Eyebrow>
+          <Eyebrow>{t('invest.report', { n: i + 1 })}</Eyebrow>
           {run.assets.map((a) => (
             <View key={a} style={kit.row}>
               <Text style={[kit.body, { flex: 1, fontFamily: held.includes(a) ? BOLD : undefined }]}>
@@ -136,7 +175,7 @@ function Quarter({ g, run, i, onNext }: { g: BusinessGame; run: MarketSimulatorR
           <Text style={{ fontFamily: BOLD, color: GREEN }}>{t('ui.points', { points: report.points })}</Text>
         </Card>
         <Card>
-          <Eyebrow color="#6A4BE0">{t('invest.quizTitle')}</Eyebrow>
+          <Eyebrow>{t('invest.quizTitle')}</Eyebrow>
           <Text style={kit.title}>{tx(`${q}.q`)}</Text>
           <Options
             options={options(quarter.quiz.id).map((label, k) => ({ id: String(k), label }))}
@@ -156,7 +195,6 @@ function Quarter({ g, run, i, onNext }: { g: BusinessGame; run: MarketSimulatorR
 
   return (
     <GameScreen
-      scene={BUSINESS_SCENES.exchange}
       action={
         <Action
           title={t('invest.run')}
@@ -167,9 +205,10 @@ function Quarter({ g, run, i, onNext }: { g: BusinessGame; run: MarketSimulatorR
         />
       }>
       {header}
+      <Growth run={run} />
       {news}
       <Card>
-        <Eyebrow color="#6A4BE0">{t('invest.quizTitle')}</Eyebrow>
+        <Eyebrow>{t('invest.quizTitle')}</Eyebrow>
         <Text style={kit.title}>{tx(`${q}.q`)}</Text>
         <Options
           options={options(quarter.quiz.id).map((label, k) => ({ id: String(k), label }))}
@@ -181,7 +220,7 @@ function Quarter({ g, run, i, onNext }: { g: BusinessGame; run: MarketSimulatorR
         />
       </Card>
       <Card>
-        <Eyebrow color="#6A4BE0">{t('invest.allocate', { value: run.value.toLocaleString('en-US') })}</Eyebrow>
+        <Eyebrow>{t('invest.allocate', { value: run.value.toLocaleString('en-US') })}</Eyebrow>
         {run.assets.map((a) => {
           const stock = run.stocks.find((s) => s.id === a);
           const risk = stock?.risk ?? (a === 'index' ? 'medium' : 'low');
@@ -217,3 +256,41 @@ function Quarter({ g, run, i, onNext }: { g: BusinessGame; run: MarketSimulatorR
     </GameScreen>
   );
 }
+
+function HowTo() {
+  const { t } = useTranslation('business');
+  const tx = t as unknown as (key: string) => string;
+  return (
+    <LineChart
+      title={tx('charts.portfolio')}
+      labels={['0', '1', '2', '3']}
+      series={[
+        { name: tx('charts.portfolio'), values: [10000, 10250, 10120, 10480] },
+        { name: tx('charts.index'), values: [10000, 10180, 10210, 10390], dashed: true },
+      ]}
+      summary="$10,480 vs $10,390"
+    />
+  );
+}
+
+defineGameFrame('market-simulator', {
+  HowTo,
+  review: (r) => {
+    const run = r as MarketSimulatorRun;
+    return [
+      ...run.quarters.flatMap((q, k) =>
+        q.report
+          ? [
+              {
+                key: `q${k}`,
+                correct: q.report.right,
+                main: `${tr('business:charts.quarter', { n: k + 1 })} · ${pct(q.report.ret)}`,
+                detail: tr(`business:invest.quiz.${q.quiz.id}.q`),
+              },
+            ]
+          : [],
+      ),
+      ...deskReview(run),
+    ];
+  },
+});

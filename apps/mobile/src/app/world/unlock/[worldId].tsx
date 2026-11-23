@@ -1,18 +1,20 @@
-import { LinearGradient } from 'expo-linear-gradient';
-import { router, useLocalSearchParams, type Href } from 'expo-router';
+import { Ionicons } from '@expo/vector-icons';
+import { router, useLocalSearchParams } from 'expo-router';
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { StyleSheet, View } from 'react-native';
-import Animated, { FadeIn, FadeInDown, ZoomIn } from 'react-native-reanimated';
+import { Pressable, ScrollView, StyleSheet, View } from 'react-native';
+import Animated, { FadeIn, FadeInDown } from 'react-native-reanimated';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-import { Celebration } from '@/components/onboarding/celebration';
-import { Button, Text } from '@/components/ui';
-import { Colors, Radius, Spacing, WorldGradients } from '@/constants/theme';
+import { column, FONT, GameBackground, PrimaryButton, W } from '@/components/games/ui';
+import { WORLD_ACCENT, WorldCover } from '@/components/world/world-cover';
+import { GameBack, Meter, STAR, worldHref } from '@/components/world/world-ui';
+import { Text } from '@/components/ui';
+import { Fonts } from '@/constants/theme';
 import { getWorld } from '@/lib/world/content';
 import { useWorld } from '@/lib/world/store';
 
-/** Screen 148: a new world unlocked. */
+/** A world just unlocked (a short welcome), or still locked (how many stars it takes). */
 export default function UnlockWorldScreen() {
   const { t } = useTranslation('world');
   const { worldId } = useLocalSearchParams<{ worldId: string }>();
@@ -25,110 +27,82 @@ export default function UnlockWorldScreen() {
 
   if (!world)
     return (
-      <SafeAreaView
-        style={{ flex: 1, backgroundColor: Colors.background, padding: Spacing.lg, justifyContent: 'center' }}>
-        <Button title={t('levelRoute.backToMap')} onPress={() => router.replace('/play')} />
-      </SafeAreaView>
+      <GameBackground>
+        <SafeAreaView style={{ flex: 1, padding: 24, justifyContent: 'center' }}>
+          <PrimaryButton title={t('levelRoute.backToMap')} onPress={() => router.replace('/play')} />
+        </SafeAreaView>
+      </GameBackground>
     );
 
-  const colors = WorldGradients[world.id];
+  const need = Math.max(0, world.unlockStars - totalStars);
   return (
-    <View style={{ flex: 1 }}>
-      <LinearGradient colors={[colors[1], colors[0], Colors.backgroundDeep]} style={StyleSheet.absoluteFill} />
-      <SafeAreaView style={styles.wrap}>
-        <Animated.Text entering={FadeIn.duration(600)} style={styles.kicker}>
-          {open ? t('unlock.unlocked') : t('unlock.locked')}
-        </Animated.Text>
-        <Animated.View entering={ZoomIn.delay(200).springify().damping(9)} style={styles.portal}>
-          <View style={styles.ring}>
-            <Text style={{ fontSize: 88, lineHeight: 104 }}>{world.emoji}</Text>
-          </View>
-        </Animated.View>
-        <Animated.View entering={FadeInDown.delay(500)} style={{ alignItems: 'center', gap: Spacing.xs }}>
-          <Text variant="display" center>
-            {world.name}
-          </Text>
-          <Text color="rgba(255,255,255,0.85)" center>
-            {world.tagline}
-          </Text>
-        </Animated.View>
-        <Animated.View entering={FadeInDown.delay(700)} style={styles.story}>
-          <Text center>
-            {open ? world.story : t('unlock.collect', { count: world.unlockStars, have: totalStars })}
-          </Text>
-          <View style={styles.tags}>
-            {world.subjects.map((s) => (
-              <View key={s} style={styles.tag}>
-                <Text variant="small" style={{ fontSize: 12 }}>
-                  {s}
-                </Text>
-              </View>
-            ))}
-          </View>
-        </Animated.View>
-        <View style={{ gap: Spacing.xs, marginTop: 'auto', alignSelf: 'stretch' }}>
-          {open && (
-            <Button
-              title={t('select.enter', { world: world.name })}
-              icon="enter"
-              onPress={() => router.replace(`/world/${world.id}` as Href)}
-            />
-          )}
-          <Button variant="ghost" title={t('levelRoute.backToMap')} onPress={() => router.replace('/play')} />
+    <GameBackground>
+      <SafeAreaView edges={['top', 'bottom']} style={{ flex: 1 }}>
+        <View style={[column, { paddingHorizontal: 16, paddingTop: 8 }]}>
+          <GameBack />
         </View>
+        <ScrollView contentContainerStyle={[column, styles.page]}>
+          <Animated.View entering={FadeIn.duration(220)} style={{ alignItems: 'center', gap: 12 }}>
+            <WorldCover world={world.id} size={112} locked={!open} />
+            <View style={[styles.kicker, open && { backgroundColor: W.correctSoft }]}>
+              <Ionicons name={open ? 'lock-open-outline' : 'lock-closed-outline'} size={14} color={open ? W.correct : W.inkSoft} />
+              <Text style={[styles.kickerText, open && { color: W.correct }]}>{open ? t('adv.unlocked') : t('adv.locked')}</Text>
+            </View>
+            <Text style={styles.title} accessibilityRole="header">
+              {world.name}
+            </Text>
+            <Text style={styles.body}>{world.tagline}</Text>
+          </Animated.View>
+
+          <Animated.View entering={FadeInDown.delay(150).duration(220)} style={styles.card}>
+            {open ? (
+              <Text style={styles.body}>{world.story}</Text>
+            ) : (
+              <>
+                <View style={{ flexDirection: 'row', alignItems: 'center', gap: 6 }}>
+                  <Ionicons name="star" size={16} color={STAR} />
+                  <Text style={styles.strong}>{t('adv.starsProgress', { have: Math.min(totalStars, world.unlockStars), need: world.unlockStars })}</Text>
+                </View>
+                <Meter value={totalStars / world.unlockStars} color={WORLD_ACCENT[world.id]} />
+                <Text style={styles.body}>{t('adv.needMore', { count: need })}</Text>
+              </>
+            )}
+            <View style={styles.tags}>
+              {world.subjects.map((s) => (
+                <View key={s} style={styles.tag}>
+                  <Text style={styles.tagText}>{s}</Text>
+                </View>
+              ))}
+            </View>
+          </Animated.View>
+
+          <View style={{ gap: 10 }}>
+            {open ? (
+              <PrimaryButton title={t('select.enter', { world: world.name })} icon="arrow-forward" onPress={() => router.replace(worldHref(world.id))} />
+            ) : (
+              <PrimaryButton title={t('adv.seeAllWorlds')} icon="map-outline" onPress={() => router.replace('/world/select')} />
+            )}
+            <Pressable onPress={() => router.replace('/play')} accessibilityRole="button" style={styles.link}>
+              <Text style={styles.linkText}>{t('levelRoute.backToMap')}</Text>
+            </Pressable>
+          </View>
+        </ScrollView>
       </SafeAreaView>
-      {open && <Celebration />}
-    </View>
+    </GameBackground>
   );
 }
 
 const styles = StyleSheet.create({
-  wrap: {
-    flex: 1,
-    alignItems: 'center',
-    gap: Spacing.lg,
-    padding: Spacing.lg,
-    maxWidth: 560,
-    width: '100%',
-    alignSelf: 'center',
-  },
-  kicker: {
-    marginTop: Spacing.lg,
-    color: Colors.reward,
-    fontFamily: 'Manrope_800ExtraBold',
-    letterSpacing: 3,
-    fontSize: 13,
-  },
-  portal: {
-    width: 200,
-    height: 200,
-    borderRadius: 100,
-    backgroundColor: 'rgba(255,255,255,0.12)',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  ring: {
-    width: 168,
-    height: 168,
-    borderRadius: 84,
-    borderWidth: 4,
-    borderColor: Colors.reward,
-    backgroundColor: 'rgba(0,0,0,0.25)',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  story: {
-    gap: Spacing.sm,
-    padding: Spacing.md,
-    borderRadius: Radius.lg,
-    backgroundColor: 'rgba(0,0,0,0.3)',
-    alignItems: 'center',
-  },
+  page: { padding: 20, gap: 20, paddingBottom: 40 },
+  kicker: { flexDirection: 'row', alignItems: 'center', gap: 6, paddingHorizontal: 10, paddingVertical: 4, borderRadius: 999, backgroundColor: W.given },
+  kickerText: { fontFamily: Fonts.bold, fontSize: 12, letterSpacing: 0.8, color: W.inkSoft },
+  title: { fontFamily: FONT, fontSize: 30, lineHeight: 36, letterSpacing: -0.6, color: W.ink, textAlign: 'center' },
+  body: { fontFamily: Fonts.regular, fontSize: 15, lineHeight: 22, color: W.inkSoft, textAlign: 'center' },
+  strong: { fontFamily: Fonts.bold, fontSize: 15, color: W.ink },
+  card: { gap: 12, padding: 16, borderRadius: 16, backgroundColor: W.surface, borderWidth: 1, borderColor: W.line },
   tags: { flexDirection: 'row', flexWrap: 'wrap', gap: 6, justifyContent: 'center' },
-  tag: {
-    paddingHorizontal: 10,
-    paddingVertical: 4,
-    borderRadius: Radius.pill,
-    backgroundColor: 'rgba(255,255,255,0.15)',
-  },
+  tag: { paddingHorizontal: 8, paddingVertical: 3, borderRadius: 6, backgroundColor: W.given },
+  tagText: { fontFamily: Fonts.semibold, fontSize: 12, color: W.inkSoft },
+  link: { alignSelf: 'center', paddingVertical: 10, paddingHorizontal: 16, minHeight: 44, justifyContent: 'center' },
+  linkText: { fontFamily: Fonts.bold, fontSize: 15, color: W.inkSoft, textDecorationLine: 'underline' },
 });

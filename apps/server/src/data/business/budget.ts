@@ -173,7 +173,27 @@ export type BudgetSetup = {
   emergencyTarget: number;
 };
 
+/**
+ * The ten levels: pocket money and a first part-time job, then the old five levels (now 3–7), then
+ * irregular freelance pay with bigger debts and goals (8–10). Bills of 0 aren't shown.
+ */
 export const BUDGET_LEVELS: BudgetSetup[] = [
+  {
+    months: 3,
+    income: [400, 400],
+    bills: { rent: 0, utilities: 0, phone: 20, transport: 40 },
+    foodMin: 80,
+    goal: { id: 'bike', amount: 250 },
+    emergencyTarget: 100,
+  },
+  {
+    months: 3,
+    income: [800, 800],
+    bills: { rent: 250, utilities: 0, phone: 20, transport: 60 },
+    foodMin: 130,
+    goal: { id: 'laptop', amount: 300 },
+    emergencyTarget: 200,
+  },
   {
     months: 3,
     income: [1200, 1200],
@@ -216,5 +236,32 @@ export const BUDGET_LEVELS: BudgetSetup[] = [
     debt: { balance: 1600, rate: 0.025, min: 60 },
     goal: { id: 'deposit', amount: 1500 },
     emergencyTarget: 1400,
+  },
+  {
+    months: 6,
+    income: [2200, 3600],
+    bills: { rent: 900, utilities: 110, phone: 45, transport: 150 },
+    foodMin: 310,
+    debt: { balance: 2500, rate: 0.025, min: 80 },
+    goal: { id: 'deposit', amount: 2000 },
+    emergencyTarget: 1800,
+  },
+  {
+    months: 7,
+    income: [2000, 4000],
+    bills: { rent: 950, utilities: 120, phone: 50, transport: 150 },
+    foodMin: 320,
+    debt: { balance: 3500, rate: 0.03, min: 100 },
+    goal: { id: 'deposit', amount: 2800 },
+    emergencyTarget: 2400,
+  },
+  {
+    months: 8,
+    income: [1900, 4400],
+    bills: { rent: 1000, utilities: 120, phone: 50, transport: 160 },
+    foodMin: 320,
+    debt: { balance: 4500, rate: 0.035, min: 125 },
+    goal: { id: 'deposit', amount: 3500 },
+    emergencyTarget: 3000,
   },
 ];

@@ -1,75 +1,56 @@
-import { Image } from 'expo-image';
-import { LinearGradient } from 'expo-linear-gradient';
 import { router } from 'expo-router';
-import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { StyleSheet, View } from 'react-native';
-import Animated, {
-  Easing,
-  FadeInDown,
-  useAnimatedStyle,
-  useSharedValue,
-  withRepeat,
-  withTiming,
-  ZoomIn,
-} from 'react-native-reanimated';
+import { Pressable, StyleSheet, View } from 'react-native';
+import Animated, { FadeIn, FadeInDown } from 'react-native-reanimated';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-import { Button, Text } from '@/components/ui';
-import { Colors, Spacing } from '@/constants/theme';
+import { FONT, GameBackground, PrimaryButton, W } from '@/components/games/ui';
+import { WorldCover } from '@/components/world/world-cover';
+import { Text } from '@/components/ui';
+import { Fonts } from '@/constants/theme';
 import { useSession } from '@/lib/session';
-import { useWorld } from '@/lib/world/store';
+import { WORLDS } from '@/lib/world/content';
 
-/** Made with OpenAI (apps/server/scripts/world-art.ts): a student riding a laptop past the seven worlds. */
-const WELCOME_HERO = require('@/assets/images/world/welcome-hero.webp');
-
-/** Screen 129: welcome to Knowzone World. A student flies past the seven worlds. */
+/** Welcome to Knowzone World: the seven worlds, and what playing them is like. */
 export default function WorldWelcomeScreen() {
   const { t } = useTranslation('world');
   const { user } = useSession();
-  const { settings } = useWorld();
-  const float = useSharedValue(0);
-  useEffect(() => {
-    if (settings.reduceMotion) return;
-    float.value = withRepeat(withTiming(1, { duration: 2600, easing: Easing.inOut(Easing.sin) }), -1, true);
-  }, [float, settings.reduceMotion]);
-  const bob = useAnimatedStyle(() => ({ transform: [{ translateY: -10 * float.value }] }));
-
   return (
-    <LinearGradient colors={['#1B1150', '#3B2DBF', Colors.backgroundDeep]} style={{ flex: 1 }}>
+    <GameBackground>
       <SafeAreaView style={styles.wrap}>
-        <Animated.View entering={ZoomIn.springify()} style={[styles.art, bob]}>
-          <Image source={WELCOME_HERO} style={StyleSheet.absoluteFill} contentFit="contain" accessible={false} />
-        </Animated.View>
-        <Animated.View entering={FadeInDown.delay(500)} style={{ gap: Spacing.sm, alignItems: 'center' }}>
-          <Text variant="label" color={Colors.reward}>
+        <View style={styles.covers} accessible={false}>
+          {WORLDS.map((w, k) => (
+            <Animated.View key={w.id} entering={FadeIn.delay(80 + k * 60).duration(240)}>
+              <WorldCover world={w.id} size={64} />
+            </Animated.View>
+          ))}
+        </View>
+        <Animated.View entering={FadeInDown.delay(300).duration(240)} style={{ gap: 10, alignItems: 'center' }}>
+          <Text style={styles.eyebrow}>
             {user ? t('welcome.eyebrowName', { name: user.name.split(' ')[0].toUpperCase() }) : t('welcome.eyebrow')}
           </Text>
-          <Text variant="display" center>
+          <Text style={styles.title} accessibilityRole="header">
             {t('welcome.title')}
           </Text>
-          <Text color="rgba(255,255,255,0.85)" center>
-            {t('welcome.body')}
-          </Text>
+          <Text style={styles.body}>{t('adv.welcomeBody')}</Text>
         </Animated.View>
-        <View style={{ alignSelf: 'stretch', gap: Spacing.xs, marginTop: 'auto' }}>
-          <Button title={t('welcome.go')} icon="rocket" onPress={() => router.replace('/world/intro')} />
-          <Button variant="ghost" title={t('welcome.later')} onPress={() => router.back()} />
+        <View style={{ alignSelf: 'stretch', gap: 6, marginTop: 'auto' }}>
+          <PrimaryButton title={t('welcome.go')} icon="arrow-forward" onPress={() => router.replace('/world/intro')} />
+          <Pressable onPress={() => router.back()} accessibilityRole="button" style={styles.link}>
+            <Text style={styles.linkText}>{t('welcome.later')}</Text>
+          </Pressable>
         </View>
       </SafeAreaView>
-    </LinearGradient>
+    </GameBackground>
   );
 }
 
 const styles = StyleSheet.create({
-  wrap: {
-    flex: 1,
-    alignItems: 'center',
-    gap: Spacing.lg,
-    padding: Spacing.lg,
-    maxWidth: 560,
-    width: '100%',
-    alignSelf: 'center',
-  },
-  art: { width: '100%', maxWidth: 340, aspectRatio: 1, marginTop: Spacing.md },
+  wrap: { flex: 1, alignItems: 'center', gap: 28, padding: 24, maxWidth: 560, width: '100%', alignSelf: 'center' },
+  covers: { flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center', gap: 10, maxWidth: 330, marginTop: 32 },
+  eyebrow: { fontFamily: Fonts.bold, fontSize: 11, letterSpacing: 1.2, color: W.muted },
+  title: { fontFamily: FONT, fontSize: 30, lineHeight: 36, letterSpacing: -0.6, color: W.ink, textAlign: 'center' },
+  body: { fontFamily: Fonts.regular, fontSize: 16, lineHeight: 24, color: W.inkSoft, textAlign: 'center' },
+  link: { alignSelf: 'center', minHeight: 44, justifyContent: 'center', paddingHorizontal: 16 },
+  linkText: { fontFamily: Fonts.bold, fontSize: 15, color: W.inkSoft, textDecorationLine: 'underline' },
 });

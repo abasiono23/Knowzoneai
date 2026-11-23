@@ -14,8 +14,8 @@ const league = (id: 'bronze' | 'silver' | 'gold' | 'diamond', color: string) => 
 });
 
 export const LEAGUES = [
-  league('bronze', '#CD7F32'),
-  league('silver', '#C0C7D6'),
-  league('gold', '#FFC857'),
-  league('diamond', '#4CC9FF'),
+  league('bronze', '#A86A35'),
+  league('silver', '#8E96A8'),
+  league('gold', '#C99A1E'),
+  league('diamond', '#2F7FC0'),
 ];

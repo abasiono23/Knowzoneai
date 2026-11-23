@@ -115,10 +115,10 @@ describe('the level ladder', () => {
     expect(carried.map((l) => l.unlocked)).toEqual([true, true, true, true, true, true, false, false, false, false]);
     await start(as, 'word-hunter', 6).expect(201);
 
-    // The lab subjects keep five levels, opened one at a time.
+    // The subject worlds use the same ten-level ladder: levels 1–4 open to everyone.
     const lab = (await as.get('/me/games/chemistry').expect(200)).body.games[0].levels;
-    expect(lab).toHaveLength(5);
-    expect(lab.map((l: { unlocked: boolean }) => l.unlocked)).toEqual([true, false, false, false, false]);
+    expect(lab).toHaveLength(10);
+    expect(lab.map((l: { unlocked: boolean }) => l.unlocked)).toEqual([true, true, true, true, false, false, false, false, false, false]);
   });
 });
 

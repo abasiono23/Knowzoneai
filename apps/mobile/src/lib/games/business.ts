@@ -1,6 +1,11 @@
 import type { BusinessGameId } from '@/lib/api';
 
 import type { Place } from './lab';
+import './business-text';
+
+/** The ten-level ladder (the server's services/games/business.ts has the same): levels 1–4 are open to everyone, later ones open with a star on the level before. */
+export const MAX_LEVEL = 10;
+export const OPEN_LEVELS = 4;
 
 /**
  * The Business District (2.5D): a sunny city square the entrepreneur walks around in her emerald

@@ -7,6 +7,10 @@ import type { Place } from './lab';
  * and the planets' surfaces for Solar System Explorer. Positions are fractions of each scene picture
  * (x across, y down). Art: apps/server/scripts/space-art.ts.
  */
+/** The ten-level ladder (the server's services/games/*.ts has the same); levels 1–4 are open to everyone. */
+export const MAX_LEVEL = 10;
+export const OPEN_LEVELS = 4;
+
 export type SpaceStation = 'hangar' | 'workshop' | 'gravity' | 'observatory';
 
 const art = {

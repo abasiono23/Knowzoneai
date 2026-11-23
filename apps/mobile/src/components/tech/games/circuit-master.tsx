@@ -1,304 +1,455 @@
 import { Ionicons } from '@expo/vector-icons';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Pressable, ScrollView, StyleSheet, View } from 'react-native';
-import Animated, { FadeInDown } from 'react-native-reanimated';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import Svg, { Line } from 'react-native-svg';
+import { Pressable, StyleSheet, View } from 'react-native';
+import Svg, { Circle, G, Line, Path, Rect, Text as SvgText } from 'react-native-svg';
 
-import { Backdrop } from '@/components/lab/backdrop';
-import { BOLD, GoldButton, Panel, PANEL } from '@/components/lab/hud';
+import { Feedback, PrimaryButton, SecondaryButton, W } from '@/components/games/ui';
+import { defineGameFrame } from '@/components/lab/contract';
+import { Card, D, Eyebrow, LTR, ltr, MONO, Sheet, StepBar } from '@/components/space/kit';
 import { Text } from '@/components/ui';
-import { Colors, Spacing } from '@/constants/theme';
+import { Fonts } from '@/constants/theme';
 import type { CircuitMasterRun, GameOutcome, LogicGate } from '@/lib/api';
-import { evaluate, rowInputs, TECH_SCENES } from '@/lib/games/tech';
+import { useKeys } from '@/lib/games/english';
+import { evaluate, rowInputs } from '@/lib/games/tech';
 import type { TechGame } from '@/lib/games/use-lab-run';
 
-const POWER = '#FFD34D';
-const OFF = 'rgba(160,170,210,0.55)';
+type Puzzle = CircuitMasterRun['puzzles'][number];
+const GW = 46;
+const GH = 34;
+const COL = 96;
+
+/** An ANSI (distinctive-shape) gate symbol with its output at (GW, GH/2). */
+export function GateSymbol({
+  gate,
+  x,
+  y,
+  color = D.ink,
+  fill = '#fff',
+}: {
+  gate: LogicGate | null;
+  x: number;
+  y: number;
+  color?: string;
+  fill?: string;
+}) {
+  const bubble = gate === 'NAND' || gate === 'NOR' || gate === 'NOT';
+  const body = (() => {
+    switch (gate) {
+      case 'AND':
+      case 'NAND':
+        return `M0,0 H${GW / 2 - 4} A${GH / 2},${GH / 2} 0 0 1 ${GW / 2 - 4},${GH} H0 Z`;
+      case 'OR':
+      case 'NOR':
+      case 'XOR':
+        return `M0,0 Q14,${GH / 2} 0,${GH} Q${GW * 0.62},${GH} ${GW - 6},${GH / 2} Q${GW * 0.62},0 0,0 Z`;
+      case 'NOT':
+        return `M4,2 L${GW - 12},${GH / 2} L4,${GH - 2} Z`;
+      default:
+        return null;
+    }
+  })();
+  return (
+    <G x={x} y={y}>
+      {gate === 'WIRE' ? (
+        <Line x1={0} y1={GH / 2} x2={GW} y2={GH / 2} stroke={color} strokeWidth={2} />
+      ) : body ? (
+        <>
+          <Path d={body} fill={fill} stroke={color} strokeWidth={1.8} />
+          {gate === 'XOR' && <Path d={`M-6,0 Q8,${GH / 2} -6,${GH}`} fill="none" stroke={color} strokeWidth={1.8} />}
+          {bubble ? (
+            <>
+              <Circle
+                cx={gate === 'NOT' ? GW - 8 : GW - 2}
+                cy={GH / 2}
+                r={3.5}
+                fill="#fff"
+                stroke={color}
+                strokeWidth={1.6}
+              />
+              {gate === 'NOT' && <Line x1={GW - 4} y1={GH / 2} x2={GW} y2={GH / 2} stroke={color} strokeWidth={1.6} />}
+            </>
+          ) : (
+            gate !== 'AND' && <Line x1={GW - 6} y1={GH / 2} x2={GW} y2={GH / 2} stroke={color} strokeWidth={1.6} />
+          )}
+          {gate === 'AND' && <Line x1={GW - 4} y1={GH / 2} x2={GW} y2={GH / 2} stroke={color} strokeWidth={1.6} />}
+        </>
+      ) : (
+        <>
+          <Rect
+            x={0}
+            y={0}
+            width={GW}
+            height={GH}
+            rx={6}
+            fill={D.accentSoft}
+            stroke={D.accent}
+            strokeDasharray="4 3"
+            strokeWidth={1.5}
+          />
+          <SvgText x={GW / 2} y={GH / 2 + 5} fontSize={14} fontFamily={Fonts.bold} fill={D.accent} textAnchor="middle">
+            ?
+          </SvgText>
+        </>
+      )}
+    </G>
+  );
+}
+
+/** Where every input, slot and the bulb sit: one column per depth, spread evenly down each column. */
+function layout(p: Puzzle) {
+  const depth: Record<string, number> = Object.fromEntries(p.inputs.map((n) => [n, 0]));
+  for (const s of p.slots) depth[s.id] = 1 + Math.max(...s.from.map((f) => depth[f] ?? 0));
+  const cols = Math.max(...Object.values(depth));
+  const byCol: string[][] = Array.from({ length: cols + 1 }, () => []);
+  for (const [id, d] of Object.entries(depth)) byCol[d]!.push(id);
+  const H = Math.max(160, Math.max(...byCol.map((c) => c.length)) * 64 + 20);
+  const pos: Record<string, { x: number; y: number }> = {};
+  byCol.forEach((ids, d) =>
+    ids.forEach((id, k) => (pos[id] = { x: 24 + d * COL, y: ((k + 0.5) * H) / ids.length - GH / 2 })),
+  );
+  return { pos, W: 24 + (cols + 1) * COL + 40, H };
+}
 
 /**
- * Circuit Master: put logic gates in the circuit's slots so the bulb lights exactly when the table
- * says. Flip the switches to try it; the server tests every combination.
+ * Circuit Master: choose a gate for every empty slot so the bulb follows the truth table. Gates are
+ * drawn with their standard symbols; the table lists every input combination. On the easier levels
+ * the bulb's current output shows for each row as you build.
  */
 export function CircuitMaster({ g, run }: { g: TechGame; run: CircuitMasterRun }) {
   const { t } = useTranslation('tech');
-  const [size, setSize] = useState({ w: 0, h: 0 });
-  const [i, setI] = useState(() => Math.min(run.at, run.puzzles.length - 1));
-  const x = run.puzzles[i]!;
-  const [chosen, setGates] = useState<Partial<Record<string, LogicGate>>>({});
-  const [switches, setSwitches] = useState<Record<string, number>>(() =>
-    Object.fromEntries(x.inputs.map((n) => [n, 0])),
-  );
-  const [slot, setSlot] = useState<string | null>(null);
+  const total = run.puzzles.length;
+  const [i, setI] = useState(() => Math.min(run.at, total - 1));
+  const p = run.puzzles[i]!;
+  const [gates, setGates] = useState<Record<string, LogicGate>>({});
+  const [sel, setSel] = useState(p.slots[0]!.id);
   const [outcome, setOutcome] = useState<GameOutcome | null>(null);
-  const [message, setMessage] = useState<string | null>(null);
+  const [wrongRows, setWrongRows] = useState<number[]>([]);
+  const [boxW, setBoxW] = useState(0);
+  const slot = p.slots.find((s) => s.id === sel)!;
+  const choices: LogicGate[] = slot.kind === 'unary' ? ['NOT', 'WIRE'] : p.gates.filter((x) => x !== 'NOT');
+  const rows = 2 ** p.inputs.length;
+  const preview = p.preview !== false;
+  const now = Array.from({ length: rows }, (_, r) => evaluate(rowInputs(p.inputs, r), p.slots, gates)[p.out] ?? 0);
+  const complete = p.slots.every((s) => gates[s.id]);
+  const shown = outcome?.correct === false && p.result?.solution ? p.result.solution : gates;
 
-  // After skipping, the circuit shows a solution.
-  const gates: Partial<Record<string, LogicGate>> =
-    outcome && !outcome.correct && x.result?.solution ? x.result.solution : chosen;
-  const filled = x.slots.every((s) => gates[s.id]);
-  const live = evaluate(switches, x.slots, gates);
-  const row = x.inputs.reduce((n, name) => n * 2 + (switches[name] ?? 0), 0);
-  // What the current gates give on every row (once every slot has a gate).
-  const mine = filled ? x.target.map((_, r) => evaluate(rowInputs(x.inputs, r), x.slots, gates)[x.out]!) : null;
-
-  // Layout: inputs on the left, slots by depth, the bulb on the right.
-  const depth: Record<string, number> = Object.fromEntries(x.inputs.map((n) => [n, 0]));
-  for (const s of x.slots) depth[s.id] = 1 + Math.max(...s.from.map((f) => depth[f] ?? 0));
-  const maxDepth = Math.max(...x.slots.map((s) => depth[s.id]!));
-  // The schematic fills the space between the top panel and the table and buttons.
-  const board = { top: 150, h: Math.max(220, size.h - 150 - 280), w: size.w - 2 * Spacing.md };
-  const colX = (d: number) => Spacing.md + 30 + (d * (board.w - 90)) / (maxDepth + 1);
-  const at: Record<string, [number, number]> = {};
-  x.inputs.forEach((n, k) => (at[n] = [colX(0), board.top + ((k + 0.5) * board.h) / x.inputs.length]));
-  for (let d = 1; d <= maxDepth; d++) {
-    const here = x.slots.filter((s) => depth[s.id] === d);
-    here.forEach((s, k) => (at[s.id] = [colX(d), board.top + ((k + 0.5) * board.h) / here.length]));
-  }
-  const bulb: [number, number] = [Spacing.md + board.w - 30, at[x.out]![1]];
-  const wires = [...x.slots.flatMap((s) => s.from.map((f) => [f, s.id] as const)), [x.out, 'bulb'] as const];
-  const lit = live[x.out] === 1 && filled;
-
-  const choices = (kind: 'binary' | 'unary'): LogicGate[] =>
-    kind === 'unary' ? ['NOT', 'WIRE'] : x.gates.filter((gt) => gt !== 'NOT');
+  const choose = (gate: LogicGate) => {
+    if (outcome) return;
+    setGates({ ...gates, [sel]: gate });
+    setWrongRows([]);
+    // Move on to the next empty slot.
+    const nextEmpty = p.slots.find((s) => s.id !== sel && !gates[s.id]);
+    if (nextEmpty) setSel(nextEmpty.id);
+  };
   const test = async () => {
-    if (!filled) {
-      setMessage(t('circuit.unfinished'));
-      return;
-    }
-    const res = await g.answer({ step: i, gates: gates as Record<string, LogicGate> });
+    if (!complete || outcome) return;
+    const res = await g.answer({ step: i, gates });
     if (!res) return;
     g.buzz(res.outcome.correct ? 'success' : 'error');
-    if (res.outcome.correct) setOutcome(res.outcome);
-    else setMessage(t('circuit.wrong'));
+    if (res.outcome.correct || !res.outcome.retry) setOutcome(res.outcome);
+    else setWrongRows(res.outcome.wrongRows ?? []);
   };
   const giveUp = async () => {
     const res = await g.answer({ step: i, timeout: true });
     if (res) setOutcome(res.outcome);
   };
   const next = () => {
-    if (run.status !== 'playing' || run.at >= run.puzzles.length) {
-      void g.finish();
-      return;
-    }
-    const n = run.puzzles[run.at]!;
-    setI(run.at);
+    if (run.status !== 'playing' || run.at >= total) return void g.finish();
+    const n = run.at;
+    setI(n);
     setGates({});
-    setSwitches(Object.fromEntries(n.inputs.map((name) => [name, 0])));
-    setSlot(null);
+    setSel(run.puzzles[n]!.slots[0]!.id);
     setOutcome(null);
-    setMessage(null);
+    setWrongRows([]);
   };
+  useKeys((key) => {
+    if (key === 'Enter') return void (outcome ? next() : test());
+    const k = Number(key) - 1;
+    if (k >= 0 && k < choices.length) choose(choices[k]!);
+  });
 
+  const { pos, W: SW, H } = layout(p);
+  const out = pos[p.out]!;
+  // The whole circuit shrinks to fit the card (big circuits on a phone), never cut off at the edge.
+  const scale = boxW > 0 ? Math.min(1, boxW / SW) : 1;
   return (
-    <View
-      style={StyleSheet.absoluteFill}
-      onLayout={(e) => setSize({ w: e.nativeEvent.layout.width, h: e.nativeEvent.layout.height })}>
-      <Backdrop source={TECH_SCENES.circuit} dim={0.35} />
-      {size.w > 0 && (
-        <>
-          <Svg width={size.w} height={size.h} style={StyleSheet.absoluteFill} pointerEvents="none">
-            {wires.map(([from, to], k) => {
-              const [x1, y1] = at[from]!;
-              const [x2, y2] = to === 'bulb' ? bulb : at[to]!;
-              const on = (live[from] ?? 0) === 1;
-              return (
-                <Line
-                  key={k}
-                  x1={x1}
-                  y1={y1}
-                  x2={x2}
-                  y2={y2}
-                  stroke={on ? POWER : OFF}
-                  strokeWidth={on ? 5 : 3}
-                  strokeLinecap="round"
+    <Sheet>
+      <StepBar
+        label={t('play.circuit.step', { n: i + 1, total })}
+        n={i + 1}
+        total={total}
+        right={<Text style={styles.small}>{t('play.circuit.tries', { count: p.tries })}</Text>}
+      />
+      <Card style={{ padding: 8 }}>
+        <View
+          onLayout={(e) => setBoxW(e.nativeEvent.layout.width)}
+          style={[{ alignItems: 'center' }, LTR]}
+          {...ltr}>
+          <Svg width={SW * scale} height={H * scale} viewBox={`0 0 ${SW} ${H}`}>
+            {/* Wires: from each source's output to the gate's input pins. */}
+            {p.slots.map((s) =>
+              s.from.map((f, k) => {
+                const a = pos[f]!;
+                const b = pos[s.id]!;
+                const ax = p.inputs.includes(f) ? a.x + 22 : a.x + GW;
+                const ay = a.y + GH / 2;
+                const by = b.y + (s.from.length === 1 ? GH / 2 : k === 0 ? 9 : GH - 9);
+                const mid = b.x - 14 - k * 6;
+                return (
+                  <Path
+                    key={`${s.id}${k}`}
+                    d={`M${ax},${ay} H${mid} V${by} H${b.x + (s.kind === 'binary' ? 4 : 2)}`}
+                    stroke={D.soft}
+                    strokeWidth={1.5}
+                    fill="none"
+                  />
+                );
+              }),
+            )}
+            {p.inputs.map((n) => (
+              <G key={n}>
+                <Circle
+                  cx={pos[n]!.x + 10}
+                  cy={pos[n]!.y + GH / 2}
+                  r={12}
+                  fill="#fff"
+                  stroke={D.ink}
+                  strokeWidth={1.6}
                 />
-              );
-            })}
+                <SvgText
+                  x={pos[n]!.x + 10}
+                  y={pos[n]!.y + GH / 2 + 5}
+                  fontSize={13}
+                  fontFamily={Fonts.bold}
+                  fill={D.ink}
+                  textAnchor="middle">
+                  {n}
+                </SvgText>
+              </G>
+            ))}
+            {p.slots.map((s) => (
+              <G key={s.id}>
+                {s.id === sel && !outcome && (
+                  <Rect
+                    x={pos[s.id]!.x - 10}
+                    y={pos[s.id]!.y - 6}
+                    width={GW + 18}
+                    height={GH + 12}
+                    rx={8}
+                    fill="none"
+                    stroke={D.accent}
+                    strokeWidth={2}
+                  />
+                )}
+                <GateSymbol
+                  gate={shown[s.id] ?? null}
+                  x={pos[s.id]!.x}
+                  y={pos[s.id]!.y}
+                  color={outcome?.correct === false ? D.good : D.ink}
+                />
+                {shown[s.id] && shown[s.id] !== 'WIRE' && (
+                  <SvgText
+                    x={pos[s.id]!.x + GW / 2 - 4}
+                    y={pos[s.id]!.y + GH + 13}
+                    fontSize={9}
+                    fontFamily={MONO}
+                    fill={D.muted}
+                    textAnchor="middle">
+                    {shown[s.id]}
+                  </SvgText>
+                )}
+              </G>
+            ))}
+            {/* The bulb (output) */}
+            <Line
+              x1={out.x + GW}
+              y1={out.y + GH / 2}
+              x2={out.x + GW + 18}
+              y2={out.y + GH / 2}
+              stroke={D.soft}
+              strokeWidth={1.5}
+            />
+            <Circle
+              cx={out.x + GW + 30}
+              cy={out.y + GH / 2}
+              r={12}
+              fill={outcome?.correct ? '#FFE9A8' : '#fff'}
+              stroke={D.ink}
+              strokeWidth={1.6}
+            />
+            <Path
+              d={`M${out.x + GW + 24},${out.y + GH / 2 - 5} L${out.x + GW + 36},${out.y + GH / 2 + 5} M${out.x + GW + 36},${out.y + GH / 2 - 5} L${out.x + GW + 24},${out.y + GH / 2 + 5}`}
+              stroke={D.ink}
+              strokeWidth={1.2}
+            />
+            <SvgText
+              fontFamily={Fonts.semibold}
+              x={out.x + GW + 30}
+              y={out.y + GH / 2 + 26}
+              fontSize={9}
+              fill={D.muted}
+              textAnchor="middle">
+              Q
+            </SvgText>
           </Svg>
-          {x.inputs.map((n) => (
-            <Pressable
-              key={n}
-              onPress={() => setSwitches({ ...switches, [n]: 1 - (switches[n] ?? 0) })}
-              accessibilityRole="switch"
-              accessibilityState={{ checked: switches[n] === 1 }}
-              accessibilityLabel={t('circuit.toggle', {
-                name: n,
-                state: switches[n] ? t('binary.on') : t('binary.off'),
-              })}
-              style={[
-                styles.input,
-                { left: at[n]![0] - 26, top: at[n]![1] - 26 },
-                switches[n] ? styles.inputOn : null,
-              ]}>
-              <Text style={{ fontFamily: BOLD, color: switches[n] ? '#3A2600' : '#fff', fontSize: 16 }}>{n}</Text>
-              <Text style={{ fontSize: 9, color: switches[n] ? '#3A2600' : '#fff' }}>{switches[n] ? 'ON' : 'OFF'}</Text>
-            </Pressable>
-          ))}
-          {x.slots.map((s, k) => (
-            <Pressable
-              key={s.id}
-              onPress={() => !outcome && setSlot(slot === s.id ? null : s.id)}
-              accessibilityRole="button"
-              accessibilityLabel={t('circuit.slotA11y', { n: k + 1, gate: gates[s.id] ?? t('circuit.empty') })}
-              style={[
-                styles.chip,
-                { left: at[s.id]![0] - 34, top: at[s.id]![1] - 22 },
-                slot === s.id && { borderColor: Colors.reward },
-                !gates[s.id] && styles.empty,
-              ]}>
-              <Text style={{ fontFamily: BOLD, color: '#fff', fontSize: 13 }}>
-                {gates[s.id] === 'WIRE' ? t('circuit.wire') : (gates[s.id] ?? '?')}
-              </Text>
-            </Pressable>
-          ))}
-          <View style={[styles.bulb, { left: bulb[0] - 24, top: bulb[1] - 28 }]} pointerEvents="none">
-            <Ionicons name={lit ? 'bulb' : 'bulb-outline'} size={46} color={lit ? POWER : '#C9CEE8'} />
+        </View>
+      </Card>
+
+      {!outcome && (
+        <Card>
+          <Eyebrow text={t('play.circuit.choose', { slot: p.slots.indexOf(slot) + 1 })} />
+          <View style={styles.palette}>
+            {p.slots.length > 1 && (
+              <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 6, width: '100%' }}>
+                {p.slots.map((s, k) => (
+                  <Pressable
+                    key={s.id}
+                    onPress={() => setSel(s.id)}
+                    accessibilityRole="radio"
+                    accessibilityState={{ selected: s.id === sel }}
+                    accessibilityLabel={t('play.circuit.slotA11y', { n: k + 1, gate: gates[s.id] ?? '?' })}
+                    style={[styles.slotChip, s.id === sel && { borderColor: W.focus, backgroundColor: W.focusSoft }]}>
+                    <Text style={styles.slotText}>{`${k + 1}: ${gates[s.id] ?? '?'}`}</Text>
+                  </Pressable>
+                ))}
+              </View>
+            )}
+            {choices.map((gate, k) => (
+              <Pressable
+                key={gate}
+                onPress={() => choose(gate)}
+                accessibilityRole="button"
+                accessibilityLabel={t('play.circuit.gateA11y', { gate: t(`play.circuit.gates.${gate}`), key: k + 1 })}
+                style={[styles.gate, gates[sel] === gate && { borderColor: W.ink, backgroundColor: W.key }]}>
+                <Svg width={58} height={40} viewBox="-8 -3 62 40">
+                  <GateSymbol gate={gate} x={0} y={0} />
+                </Svg>
+                <Text style={styles.gateName}>{t(`play.circuit.gates.${gate}`)}</Text>
+              </Pressable>
+            ))}
           </View>
-        </>
+        </Card>
       )}
 
-      <SafeAreaView edges={['top']} style={styles.top} pointerEvents="none">
-        <Panel style={{ gap: 2 }}>
-          <Text style={{ fontFamily: BOLD, color: '#fff', fontSize: 14 }}>
-            {t('circuit.objective', { n: i + 1, total: run.puzzles.length })} · {t('ui.tries', { count: x.tries })}
-          </Text>
-          <Text style={{ color: 'rgba(235,238,255,0.85)', fontSize: 12 }}>{t('circuit.goal')}</Text>
-        </Panel>
-      </SafeAreaView>
-
-      <SafeAreaView edges={['bottom']} style={styles.bottom} pointerEvents="box-none">
-        <Panel style={{ gap: Spacing.sm, padding: 10 }}>
-          {/* The truth table: what the bulb should do for each switch setting. */}
-          <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={{ gap: 4 }}>
-            {x.target.map((v, r) => {
-              const ins = rowInputs(x.inputs, r);
-              return (
-                <View key={r} style={[styles.rowBox, r === row && { borderColor: Colors.reward }]}>
-                  <Text style={{ color: 'rgba(235,238,255,0.8)', fontSize: 11 }}>
-                    {x.inputs.map((n) => `${n}${ins[n]}`).join(' ')}
-                  </Text>
-                  <Text style={{ fontFamily: BOLD, color: v ? POWER : '#C9CEE8', fontSize: 12 }}>
-                    {v ? t('circuit.onLabel') : t('circuit.offLabel')}
-                  </Text>
-                  {mine && (
-                    <Text style={{ fontSize: 12, color: mine[r] === v ? Colors.success : Colors.danger }}>
-                      {mine[r] === v ? '✓' : '✗'}
-                    </Text>
-                  )}
-                </View>
-              );
-            })}
-          </ScrollView>
-          {outcome ? (
-            <Animated.View entering={FadeInDown} style={{ gap: Spacing.sm }}>
-              <Text style={{ fontFamily: BOLD, fontSize: 17, color: outcome.correct ? Colors.success : '#fff' }}>
-                {outcome.correct ? t('circuit.lit', { points: outcome.points }) : t('ui.solution')}
+      <Card>
+        <Eyebrow text={t('play.circuit.table')} />
+        <View style={[styles.table, LTR]} {...ltr} accessibilityRole="none">
+          <View style={[styles.tr, styles.th]}>
+            {p.inputs.map((n) => (
+              <Text key={n} style={styles.td}>
+                {n}
               </Text>
-              <GoldButton title={t('circuit.next')} icon="arrow-forward" onPress={next} />
-            </Animated.View>
-          ) : (
-            <>
-              {slot && (
-                <View style={{ gap: 6 }}>
-                  <Text style={styles.heading}>{t('circuit.pickGate')}</Text>
-                  <View style={styles.wrap}>
-                    {choices(x.slots.find((s) => s.id === slot)!.kind).map((gt) => (
-                      <Pressable
-                        key={gt}
-                        onPress={() => {
-                          g.buzz('tap');
-                          setGates({ ...gates, [slot]: gt });
-                          setSlot(null);
-                          setMessage(null);
-                        }}
-                        accessibilityRole="button"
-                        style={[styles.gate, gates[slot] === gt && { borderColor: Colors.reward }]}>
-                        <Text style={{ fontFamily: BOLD, color: '#fff' }}>
-                          {gt === 'WIRE' ? t('circuit.wire') : gt}
-                        </Text>
-                      </Pressable>
-                    ))}
+            ))}
+            <Text style={[styles.td, styles.want]}>{t('play.circuit.want')}</Text>
+            {preview && <Text style={[styles.td, styles.want]}>{t('play.circuit.now')}</Text>}
+          </View>
+          {Array.from({ length: rows }, (_, r) => {
+            const ins = rowInputs(p.inputs, r);
+            const ok = now[r] === p.target[r];
+            const flagged = wrongRows.includes(r);
+            return (
+              <View
+                key={r}
+                style={[styles.tr, flagged && { backgroundColor: W.wrongSoft }]}
+                accessible
+                accessibilityLabel={`${p.inputs.map((n) => `${n} ${ins[n]}`).join(', ')}: ${t('play.circuit.want')} ${p.target[r]}${preview ? `, ${t('play.circuit.now')} ${now[r]}` : ''}`}>
+                {p.inputs.map((n) => (
+                  <Text key={n} style={styles.td}>
+                    {ins[n]}
+                  </Text>
+                ))}
+                <Text style={[styles.td, styles.want]}>{p.target[r]}</Text>
+                {preview && (
+                  <View style={[styles.tdBox, { flexDirection: 'row', gap: 4 }]}>
+                    <Text style={styles.tdText}>{complete ? now[r] : '·'}</Text>
+                    {complete && (
+                      <Ionicons name={ok ? 'checkmark' : 'close'} size={14} color={ok ? W.correct : W.wrong} />
+                    )}
                   </View>
-                </View>
-              )}
-              {!!message && <Text style={{ color: '#FF8FA6', fontFamily: BOLD }}>{message}</Text>}
-              <View style={{ flexDirection: 'row', gap: Spacing.sm }}>
-                {x.tries >= 3 && (
-                  <Pressable
-                    onPress={() => void giveUp()}
-                    disabled={g.busy}
-                    accessibilityRole="button"
-                    style={styles.secondary}>
-                    <Text style={{ fontFamily: BOLD, color: '#fff' }}>{t('ui.skip')}</Text>
-                  </Pressable>
                 )}
-                <View style={{ flex: 1 }}>
-                  <GoldButton title={t('circuit.test')} icon="flash" disabled={g.busy} onPress={() => void test()} />
-                </View>
+                {flagged && !preview && <Ionicons name="close" size={14} color={W.wrong} />}
               </View>
-            </>
-          )}
-        </Panel>
-      </SafeAreaView>
-    </View>
+            );
+          })}
+        </View>
+      </Card>
+
+      {wrongRows.length > 0 && <Feedback tone="bad" title={t('play.circuit.wrong', { count: wrongRows.length })} />}
+      {outcome ? (
+        <View style={{ gap: 10 }}>
+          <Feedback
+            tone={outcome.correct ? 'good' : 'info'}
+            title={outcome.correct ? t('play.circuit.lit', { points: outcome.points }) : t('play.circuit.solution')}
+          />
+          <PrimaryButton
+            title={run.at >= total ? t('play.finish') : t('play.circuit.next')}
+            icon="arrow-forward"
+            onPress={next}
+          />
+        </View>
+      ) : (
+        <View style={{ gap: 10 }}>
+          <PrimaryButton
+            title={t('play.circuit.test')}
+            icon="flash-outline"
+            disabled={!complete}
+            busy={g.busy}
+            onPress={() => void test()}
+          />
+          {p.tries >= 3 && <SecondaryButton title={t('play.circuit.giveUp')} onPress={() => void giveUp()} />}
+        </View>
+      )}
+    </Sheet>
   );
 }
 
 const styles = StyleSheet.create({
-  top: { position: 'absolute', left: Spacing.md, right: Spacing.md, top: 56 },
-  bottom: { position: 'absolute', left: Spacing.md, right: Spacing.md, bottom: Spacing.sm },
-  input: {
-    position: 'absolute',
-    width: 52,
-    height: 52,
-    borderRadius: 14,
-    alignItems: 'center',
+  small: { fontFamily: Fonts.semibold, fontSize: 13, color: W.muted },
+  palette: { flexDirection: 'row', flexWrap: 'wrap', gap: 8 },
+  slotChip: {
+    minHeight: 36,
+    paddingHorizontal: 12,
     justifyContent: 'center',
-    backgroundColor: '#2A3366',
-    borderWidth: 2,
-    borderColor: '#5B6BC9',
+    borderRadius: 18,
+    borderWidth: 1.5,
+    borderColor: W.line,
   },
-  inputOn: { backgroundColor: POWER, borderColor: '#FFF1B8' },
-  chip: {
-    position: 'absolute',
-    width: 68,
-    height: 44,
-    borderRadius: 10,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: '#1F2A52',
-    borderWidth: 2,
-    borderColor: '#7C5CFF',
-  },
-  empty: { borderStyle: 'dashed', backgroundColor: PANEL },
-  bulb: { position: 'absolute', width: 48, height: 56, alignItems: 'center', justifyContent: 'center' },
-  heading: { fontFamily: BOLD, fontSize: 10, color: Colors.reward, letterSpacing: 1 },
-  wrap: { flexDirection: 'row', flexWrap: 'wrap', gap: 6 },
+  slotText: { fontFamily: MONO, fontSize: 13, color: W.ink },
   gate: {
-    paddingHorizontal: 14,
-    paddingVertical: 10,
-    borderRadius: 10,
-    backgroundColor: '#1F2A52',
-    borderWidth: 2,
-    borderColor: '#5B6BC9',
-  },
-  rowBox: {
+    width: 92,
+    minHeight: 72,
     alignItems: 'center',
+    justifyContent: 'center',
     gap: 2,
-    paddingHorizontal: 8,
-    paddingVertical: 6,
     borderRadius: 10,
     borderWidth: 1.5,
-    borderColor: 'rgba(255,255,255,0.2)',
+    borderColor: W.line,
+    backgroundColor: W.surface,
   },
-  secondary: {
-    height: 52,
-    paddingHorizontal: 16,
-    borderRadius: 999,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: 'rgba(124,92,255,0.35)',
-  },
+  gateName: { fontFamily: MONO, fontSize: 12, color: W.ink },
+  table: { borderWidth: 1, borderColor: W.line, borderRadius: 10, overflow: 'hidden' },
+  tr: { flexDirection: 'row', alignItems: 'center', minHeight: 32, borderTopWidth: 1, borderTopColor: W.line },
+  th: { backgroundColor: '#F1F0F6', borderTopWidth: 0 },
+  td: { flex: 1, textAlign: 'center', fontFamily: MONO, fontSize: 14, color: W.ink },
+  tdBox: { flex: 1, alignItems: 'center', justifyContent: 'center' },
+  tdText: { fontFamily: MONO, fontSize: 14, color: W.ink },
+  want: { fontFamily: Fonts.bold },
+});
+
+defineGameFrame('circuit-master', {
+  hearts: false,
+  review: (run) =>
+    ((run as CircuitMasterRun).puzzles ?? []).flatMap((x) =>
+      x.result
+        ? [
+            {
+              key: String(x.id),
+              correct: x.result.correct,
+              main: `${x.inputs.join(', ')} → Q: ${x.target.join('')}`,
+              detail: Object.values(x.result.solution).join(' · '),
+            },
+          ]
+        : [],
+    ),
 });

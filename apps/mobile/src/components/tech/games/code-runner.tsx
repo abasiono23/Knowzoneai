@@ -1,112 +1,129 @@
 import { Ionicons } from '@expo/vector-icons';
-import { Image } from 'expo-image';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Pressable, ScrollView, StyleSheet, View } from 'react-native';
-import Animated, { FadeInDown } from 'react-native-reanimated';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { Pressable, StyleSheet, View } from 'react-native';
+import Svg, { G, Path, Polyline, Rect } from 'react-native-svg';
 
-import { Backdrop } from '@/components/lab/backdrop';
-import { BOLD, GoldButton, Panel, PANEL } from '@/components/lab/hud';
+import { Feedback, PrimaryButton, SecondaryButton, W } from '@/components/games/ui';
+import { defineGameFrame } from '@/components/lab/contract';
+import { Card, D, Eyebrow, LTR, ltr, MONO, Sheet, StepBar } from '@/components/space/kit';
 import { Text } from '@/components/ui';
-import { Colors, Spacing } from '@/constants/theme';
-import type { CodeOp, CodeRunnerRun, GameOutcome } from '@/lib/api';
-import { blockCount, runProgram, TECH_SCENES, TECH_SPRITES, type RunnerState } from '@/lib/games/tech';
+import { Fonts } from '@/constants/theme';
+import type { CodeOp, CodeRunnerRun, GameOutcome, GridCell } from '@/lib/api';
+import { useKeys } from '@/lib/games/english';
+import { blockCount, runProgram, type RunnerState } from '@/lib/games/tech';
 import type { TechGame } from '@/lib/games/use-lab-run';
 
-type Simple = Exclude<CodeOp['op'], 'repeat'>;
-const BLOCK_COLOR: Record<CodeOp['op'], string> = {
-  move: '#2D9CDB',
-  jump: '#7C5CFF',
-  left: '#F2994A',
-  right: '#F2994A',
-  repeat: '#27AE60',
-};
-const ARROW = ['arrow-up', 'arrow-forward', 'arrow-down', 'arrow-back'] as const;
+type Path_ = number[];
+/** The list a path points at: [] is the program, [2] the body of the repeat at line 2, and so on. */
+function listAt(ops: CodeOp[], path: Path_): CodeOp[] {
+  let list = ops;
+  for (const k of path) {
+    const o = list[k];
+    if (!o || o.op !== 'repeat') return list;
+    list = o.body;
+  }
+  return list;
+}
+/** A copy of the program with the list at `path` changed. */
+function editAt(ops: CodeOp[], path: Path_, change: (list: CodeOp[]) => CodeOp[]): CodeOp[] {
+  if (!path.length) return change(ops);
+  const [k, ...rest] = path;
+  return ops.map((o, n) => (n === k && o.op === 'repeat' ? { ...o, body: editAt(o.body, rest, change) } : o));
+}
+/** The program as lines of code (Python-like), with each line's path. */
+function lines(ops: CodeOp[], depth = 0, at: Path_ = []): { text: string; depth: number; path: Path_; op: CodeOp }[] {
+  return ops.flatMap((o, k) => {
+    const path = [...at, k];
+    const text =
+      o.op === 'repeat'
+        ? `repeat ${o.times}:`
+        : o.op === 'left'
+          ? 'turn_left()'
+          : o.op === 'right'
+            ? 'turn_right()'
+            : `${o.op}()`;
+    return [{ text, depth, path, op: o }, ...(o.op === 'repeat' ? lines(o.body, depth + 1, path) : [])];
+  });
+}
 
 /**
- * Code Runner: build a program from blocks (move, jump, turn, repeat) to walk the runner along the
- * glowing path to the flag, within the block limit. The program runs here to animate and on the
- * server to decide. Failed runs can be retried; after three tries you may skip.
+ * Code Runner: write a short program that walks the runner along the path to the flag. move() goes one
+ * tile, jump() two (over a gap), turn_left() and turn_right() turn on the spot, and repeat n: runs the
+ * lines inside it n times. The block limit means you must spot the pattern and loop it; from level 6
+ * the pattern has a loop inside a loop. The program is shown as code, in a monospace face.
  */
 export function CodeRunner({ g, run }: { g: TechGame; run: CodeRunnerRun }) {
   const { t } = useTranslation('tech');
-  const [size, setSize] = useState({ w: 0, h: 0 });
-  const [i, setI] = useState(() => Math.min(run.at, run.puzzles.length - 1));
-  const x = run.puzzles[i]!;
-  const [ops, setOps] = useState<CodeOp[]>([]);
-  const [open, setOpen] = useState<number | null>(null);
-  const [trail, setTrail] = useState<RunnerState[] | null>(null);
-  const [shown, setShown] = useState(0);
+  const total = run.puzzles.length;
+  const [i, setI] = useState(() => Math.min(run.at, total - 1));
+  const p = run.puzzles[i]!;
+  const [program, setProgram] = useState<CodeOp[]>([]);
+  const [target, setTarget] = useState<Path_>([]);
+  const [trail, setTrail] = useState<{ steps: RunnerState[]; shown: number } | null>(null);
   const [outcome, setOutcome] = useState<GameOutcome | null>(null);
   const [message, setMessage] = useState<string | null>(null);
-  const used = blockCount(ops);
+  const used = blockCount(program);
 
-  // Play the runner along its trail, one step at a time.
   useEffect(() => {
-    if (!trail || shown >= trail.length - 1) return;
-    const id = setTimeout(() => setShown((n) => n + 1), 300);
+    if (!trail || trail.shown >= trail.steps.length) return;
+    const id = setTimeout(() => setTrail((tr) => tr && { ...tr, shown: tr.shown + 1 }), 220);
     return () => clearTimeout(id);
-  }, [trail, shown]);
+  }, [trail]);
 
   const add = (op: CodeOp['op']) => {
     if (outcome || trail) return;
-    g.buzz('tap');
-    if (op === 'repeat') {
-      setOps([...ops, { op: 'repeat', times: 2, body: [] }]);
-      setOpen(ops.length);
+    const o: CodeOp = op === 'repeat' ? { op, times: 2, body: [] } : { op };
+    const list = listAt(program, target);
+    setProgram(editAt(program, target, (l) => [...l, o]));
+    setMessage(null);
+    // A new repeat: further blocks go inside it.
+    if (op === 'repeat') setTarget([...target, list.length]);
+  };
+  const removeLast = () => {
+    const list = listAt(program, target);
+    if (!list.length && target.length) {
+      // An empty repeat: remove it and step out.
+      const parent = target.slice(0, -1);
+      const k = target.at(-1)!;
+      setProgram(editAt(program, parent, (l) => l.filter((_, n) => n !== k)));
+      setTarget(parent);
       return;
     }
-    if (open !== null && ops[open]?.op === 'repeat') {
-      setOps(ops.map((o, k) => (k === open && o.op === 'repeat' ? { ...o, body: [...o.body, { op }] } : o)));
-      return;
-    }
-    setOps([...ops, { op }]);
+    setProgram(editAt(program, target, (l) => l.slice(0, -1)));
   };
-  const remove = (k: number, inner?: number) => {
-    if (outcome || trail) return;
-    if (inner === undefined) {
-      setOps(ops.filter((_, j) => j !== k));
-      if (open === k) setOpen(null);
-      else if (open !== null && open > k) setOpen(open - 1);
-    } else
-      setOps(
-        ops.map((o, j) => (j === k && o.op === 'repeat' ? { ...o, body: o.body.filter((_, b) => b !== inner) } : o)),
-      );
-  };
-  const times = (k: number, by: number) =>
-    setOps(
-      ops.map((o, j) => (j === k && o.op === 'repeat' ? { ...o, times: Math.min(9, Math.max(2, o.times + by)) } : o)),
+  const times = (path: Path_, d: number) =>
+    setProgram(
+      editAt(program, path.slice(0, -1), (l) =>
+        l.map((o, n) =>
+          n === path.at(-1) && o.op === 'repeat' ? { ...o, times: Math.min(9, Math.max(2, o.times + d)) } : o,
+        ),
+      ),
     );
 
-  const go = async () => {
-    const sim = runProgram(ops, x);
+  const runIt = async () => {
+    if (!program.length || outcome || trail) return;
     setMessage(null);
-    setTrail(sim.trail);
-    setShown(0);
-    const res = await g.answer({ step: i, program: ops });
-    // Wait for the runner to finish moving before the verdict.
+    const local = runProgram(program, p);
+    setTrail({ steps: local.trail, shown: 1 });
+    const res = await g.answer({ step: i, program });
     setTimeout(
       () => {
-        if (!res) {
-          setTrail(null);
-          return;
-        }
+        setTrail(null);
+        if (!res) return;
         const o = res.outcome;
         g.buzz(o.correct ? 'success' : 'error');
         if (o.correct) setOutcome(o);
-        else {
-          setTrail(null);
+        else
           setMessage(
             o.end === 'blocks'
               ? t('code.over')
               : o.end === 'fell' || o.end === 'short' || o.end === 'long'
-                ? t(`code.${o.end as 'fell'}`)
+                ? t(`code.${o.end}`)
                 : t('code.invalid'),
           );
-        }
       },
-      sim.trail.length * 300 + 200,
+      local.trail.length * 220 + 200,
     );
   };
   const giveUp = async () => {
@@ -114,344 +131,304 @@ export function CodeRunner({ g, run }: { g: TechGame; run: CodeRunnerRun }) {
     if (res) setOutcome(res.outcome);
   };
   const next = () => {
-    if (run.status !== 'playing' || run.at >= run.puzzles.length) {
-      void g.finish();
-      return;
-    }
+    if (run.status !== 'playing' || run.at >= total) return void g.finish();
     setI(run.at);
-    setOps([]);
-    setOpen(null);
-    setTrail(null);
+    setProgram([]);
+    setTarget([]);
     setOutcome(null);
     setMessage(null);
   };
+  useKeys((key) => {
+    if (key === 'Enter') return void (outcome ? next() : runIt());
+    if (key === 'Backspace') return removeLast();
+    const map: Record<string, CodeOp['op']> = { M: 'move', J: 'jump', L: 'left', R: 'right', P: 'repeat' };
+    if (map[key] && p.ops.includes(map[key]!)) add(map[key]!);
+  });
 
-  // The board: the path's tiles scaled to fit the top half.
-  const cols = Math.max(...x.tiles.map((c) => c[0])) + 1;
-  const rows = Math.max(...x.tiles.map((c) => c[1])) + 1;
-  const area = { top: 150, h: Math.max(160, size.h * 0.42 - 150), w: size.w - 2 * Spacing.md };
-  const cell = Math.min(60, area.w / cols, area.h / rows);
-  const ox = Spacing.md + (area.w - cols * cell) / 2;
-  const oy = area.top + (area.h - rows * cell) / 2;
-  const at = trail ? trail[Math.min(shown, trail.length - 1)]! : x.start;
-  const gemsGot = trail ? runProgram(ops, x).gems : [];
-  const solution = outcome && !outcome.correct ? x.result?.solution : undefined;
-
+  const at = trail ? trail.steps[Math.min(trail.shown, trail.steps.length) - 1]! : p.start;
+  const shownCode = outcome && !outcome.correct && p.result?.solution ? p.result.solution : program;
   return (
-    <View
-      style={StyleSheet.absoluteFill}
-      onLayout={(e) => setSize({ w: e.nativeEvent.layout.width, h: e.nativeEvent.layout.height })}>
-      <Backdrop source={TECH_SCENES.code} dim={0.1} />
-      {size.w > 0 && (
-        <View style={StyleSheet.absoluteFill} pointerEvents="none">
-          {x.tiles.map(([cx, cy]) => (
-            <View
-              key={`${cx},${cy}`}
-              style={[
-                styles.tile,
-                { left: ox + cx * cell + 2, top: oy + cy * cell + 2, width: cell - 4, height: cell - 4 },
-              ]}
-            />
-          ))}
-          {x.gems
-            .filter(([gx, gy]) => !gemsGot.slice(0, shown).includes(`${gx},${gy}`))
-            .map(([gx, gy]) => (
-              <Image
-                key={`gem${gx},${gy}`}
-                source={TECH_SPRITES.gem.src}
-                style={{
-                  position: 'absolute',
-                  left: ox + gx * cell + cell * 0.25,
-                  top: oy + gy * cell + cell * 0.25,
-                  width: cell * 0.5,
-                  height: cell * 0.5,
-                }}
-                contentFit="contain"
-                accessible={false}
-              />
-            ))}
-          <Image
-            source={TECH_SPRITES.flag.src}
-            style={{
-              position: 'absolute',
-              left: ox + x.goal[0] * cell + cell * 0.15,
-              top: oy + x.goal[1] * cell - cell * 0.2,
-              width: cell * 0.7,
-              height: cell,
-            }}
-            contentFit="contain"
-            accessible={false}
-          />
-          <View
-            style={{
-              position: 'absolute',
-              left: ox + at.x * cell,
-              top: oy + at.y * cell - cell * 0.25,
-              width: cell,
-              height: cell,
-              alignItems: 'center',
-            }}>
-            <Image
-              source={TECH_SPRITES.runner.src}
-              style={{ width: cell * 0.85, height: cell * 0.95 }}
-              contentFit="contain"
-              accessible={false}
-            />
-            <View style={styles.dir}>
-              <Ionicons name={ARROW[at.dir]!} size={12} color="#fff" />
-            </View>
-          </View>
-        </View>
-      )}
-
-      <SafeAreaView edges={['top']} style={styles.top} pointerEvents="none">
-        <Panel style={{ gap: 2 }}>
-          <Text style={{ fontFamily: BOLD, color: '#fff', fontSize: 14 }}>
-            {t('code.objective', { n: i + 1, total: run.puzzles.length })}
+    <Sheet>
+      <StepBar
+        label={t('play.code.step', { n: i + 1, total })}
+        n={i + 1}
+        total={total}
+        right={
+          <Text style={[styles.count, used > p.maxBlocks && { color: W.wrong }]}>
+            {t('code.blocks', { used, max: p.maxBlocks })}
           </Text>
-          <Text style={{ color: used > x.maxBlocks ? '#FF8FA6' : Colors.reward, fontSize: 12, fontFamily: BOLD }}>
-            {t('code.blocks', { used, max: x.maxBlocks })} · {t('ui.tries', { count: x.tries })}
-          </Text>
-        </Panel>
-      </SafeAreaView>
+        }
+      />
+      <Card style={{ alignItems: 'center', padding: 10 }}>
+        <Grid tiles={p.tiles} gems={p.gems} goal={p.goal} runner={at} path={trail?.steps.slice(0, trail.shown)} />
+      </Card>
 
-      <SafeAreaView edges={['bottom']} style={styles.bottom} pointerEvents="box-none">
-        {outcome ? (
-          <Animated.View entering={FadeInDown}>
-            <Panel style={{ gap: Spacing.sm, borderColor: outcome.correct ? Colors.success : Colors.reward }}>
-              <Text style={{ fontFamily: BOLD, fontSize: 17, color: outcome.correct ? Colors.success : '#fff' }}>
-                {outcome.correct
-                  ? `${t('code.goal', { points: outcome.points })}${outcome.gems ? ` · ${t('code.gems', { count: outcome.gems })}` : ''}`
-                  : t('ui.solution')}
-              </Text>
-              {solution && <Program ops={solution} />}
-              <GoldButton title={t('code.next')} icon="arrow-forward" onPress={next} />
-            </Panel>
-          </Animated.View>
-        ) : (
-          <Panel style={{ gap: Spacing.sm, padding: 10 }}>
-            <Text style={styles.heading}>{t('code.program')}</Text>
-            <ScrollView style={{ maxHeight: 150 }} contentContainerStyle={{ gap: 6 }}>
-              {ops.length === 0 && (
-                <Text style={{ color: 'rgba(235,238,255,0.6)', fontSize: 12 }}>{t('code.empty')}</Text>
-              )}
-              <View style={styles.wrap}>
-                {ops.map((o, k) =>
-                  o.op === 'repeat' ? (
-                    <View key={k} style={[styles.repeat, open === k && { borderColor: Colors.reward }]}>
-                      <View style={styles.repeatHead}>
-                        <Pressable
-                          onPress={() => setOpen(open === k ? null : k)}
-                          accessibilityRole="button"
-                          accessibilityState={{ expanded: open === k }}
-                          style={{ flex: 1 }}>
-                          <Text style={{ fontFamily: BOLD, color: '#fff', fontSize: 13 }}>
-                            {t('code.times', { count: o.times })}
-                          </Text>
-                        </Pressable>
-                        <Pressable
-                          onPress={() => times(k, -1)}
-                          accessibilityRole="button"
-                          accessibilityLabel={t('code.fewer')}
-                          hitSlop={6}
-                          style={styles.tiny}>
-                          <Ionicons name="remove" size={14} color="#fff" />
-                        </Pressable>
-                        <Pressable
-                          onPress={() => times(k, 1)}
-                          accessibilityRole="button"
-                          accessibilityLabel={t('code.more')}
-                          hitSlop={6}
-                          style={styles.tiny}>
-                          <Ionicons name="add" size={14} color="#fff" />
-                        </Pressable>
-                        <Pressable
-                          onPress={() => remove(k)}
-                          accessibilityRole="button"
-                          accessibilityLabel={t('code.remove', { block: t('code.op.repeat') })}
-                          hitSlop={6}
-                          style={styles.tiny}>
-                          <Ionicons name="close" size={14} color="#fff" />
-                        </Pressable>
-                      </View>
-                      <View style={styles.wrap}>
-                        {o.body.map((b, j) => (
-                          <Chip
-                            key={j}
-                            op={b.op as Simple}
-                            onPress={() => remove(k, j)}
-                            label={t('code.remove', { block: t(`code.op.${b.op}`) })}
-                          />
-                        ))}
-                      </View>
-                    </View>
-                  ) : (
-                    <Chip
-                      key={k}
-                      op={o.op}
-                      onPress={() => remove(k)}
-                      label={t('code.remove', { block: t(`code.op.${o.op}`) })}
-                    />
-                  ),
+      <Card>
+        <Eyebrow text={t('play.code.program')} />
+        <View style={[styles.editor, LTR]} {...ltr}>
+          <Pressable
+            onPress={() => setTarget([])}
+            accessibilityRole="button"
+            accessibilityLabel={t('play.code.mainA11y')}
+            style={[styles.line, !target.length && !outcome && styles.lineOn]}>
+            <Text style={styles.comment}>{t('play.code.main')}</Text>
+          </Pressable>
+          {lines(shownCode).map((l) => {
+            const on = l.op.op === 'repeat' && target.join() === l.path.join() && !outcome;
+            return (
+              <View key={l.path.join('.')} style={[styles.line, on && styles.lineOn]}>
+                <Pressable
+                  style={{ flex: 1, minHeight: 36, justifyContent: 'center' }}
+                  disabled={l.op.op !== 'repeat' || !!outcome}
+                  onPress={() => setTarget(l.path)}
+                  accessibilityRole={l.op.op === 'repeat' ? 'button' : 'text'}
+                  accessibilityLabel={l.op.op === 'repeat' ? t('play.code.insideA11y', { count: l.op.times }) : l.text}>
+                  <Text style={styles.code}>
+                    <Text style={styles.gutter}>{'    '.repeat(l.depth)}</Text>
+                    {l.text}
+                  </Text>
+                </Pressable>
+                {l.op.op === 'repeat' && !outcome && (
+                  <View style={{ flexDirection: 'row', gap: 4 }}>
+                    <Pressable
+                      onPress={() => times(l.path, -1)}
+                      accessibilityRole="button"
+                      accessibilityLabel={t('code.fewer')}
+                      style={styles.small}>
+                      <Ionicons name="remove" size={16} color={W.ink} />
+                    </Pressable>
+                    <Pressable
+                      onPress={() => times(l.path, 1)}
+                      accessibilityRole="button"
+                      accessibilityLabel={t('code.more')}
+                      style={styles.small}>
+                      <Ionicons name="add" size={16} color={W.ink} />
+                    </Pressable>
+                  </View>
                 )}
               </View>
-            </ScrollView>
-            <Text style={{ color: 'rgba(235,238,255,0.7)', fontSize: 11 }}>
-              {open !== null ? t('code.inside') : t('code.hint')}
-            </Text>
-            <Text style={styles.heading}>{t('code.tray')}</Text>
-            <View style={styles.wrap}>
-              {x.ops.map((op) => (
+            );
+          })}
+          {!shownCode.length && (
+            <Text style={[styles.comment, { paddingHorizontal: 10, paddingBottom: 8 }]}>{t('code.empty')}</Text>
+          )}
+        </View>
+        {!outcome && (
+          <>
+            <Text style={styles.hint}>{target.length ? t('play.code.addingInside') : t('play.code.adding')}</Text>
+            <View style={styles.tray}>
+              {p.ops.map((op) => (
                 <Pressable
                   key={op}
                   onPress={() => add(op)}
-                  disabled={!!trail || (op === 'repeat' && open !== null)}
                   accessibilityRole="button"
-                  style={[
-                    styles.block,
-                    { backgroundColor: BLOCK_COLOR[op] },
-                    op === 'repeat' && open !== null && { opacity: 0.4 },
-                  ]}>
-                  <Ionicons name="add" size={14} color="#fff" />
-                  <Text style={styles.blockText}>{t(`code.op.${op}`)}</Text>
+                  accessibilityLabel={t(`code.op.${op}`)}
+                  style={styles.block}>
+                  <Text style={styles.blockCode}>
+                    {op === 'repeat'
+                      ? 'repeat n:'
+                      : op === 'left'
+                        ? 'turn_left()'
+                        : op === 'right'
+                          ? 'turn_right()'
+                          : `${op}()`}
+                  </Text>
                 </Pressable>
               ))}
-            </View>
-            {!!message && <Text style={{ color: '#FF8FA6', fontFamily: BOLD }}>{message}</Text>}
-            <View style={{ flexDirection: 'row', gap: Spacing.sm }}>
               <Pressable
-                onPress={() => {
-                  setOps([]);
-                  setOpen(null);
-                  setMessage(null);
-                }}
-                disabled={!!trail}
+                onPress={removeLast}
                 accessibilityRole="button"
-                style={styles.secondary}>
-                <Text style={{ fontFamily: BOLD, color: '#fff' }}>{t('ui.clear')}</Text>
+                accessibilityLabel={t('play.code.undo')}
+                style={[styles.block, { backgroundColor: W.key }]}>
+                <Ionicons name="backspace-outline" size={18} color={W.ink} />
               </Pressable>
-              {x.tries >= 3 && (
-                <Pressable
-                  onPress={() => void giveUp()}
-                  disabled={!!trail || g.busy}
-                  accessibilityRole="button"
-                  style={styles.secondary}>
-                  <Text style={{ fontFamily: BOLD, color: '#fff' }}>{t('ui.skip')}</Text>
-                </Pressable>
-              )}
-              <View style={{ flex: 1 }}>
-                <GoldButton
-                  title={t('code.run')}
-                  icon="play"
-                  disabled={!ops.length || !!trail || g.busy}
-                  onPress={() => void go()}
-                />
-              </View>
             </View>
-          </Panel>
+          </>
         )}
-      </SafeAreaView>
-    </View>
-  );
-}
+      </Card>
 
-function Chip({ op, onPress, label }: { op: Simple; onPress: () => void; label: string }) {
-  const { t } = useTranslation('tech');
-  return (
-    <Pressable
-      onPress={onPress}
-      accessibilityRole="button"
-      accessibilityLabel={label}
-      style={[styles.block, { backgroundColor: BLOCK_COLOR[op] }]}>
-      <Text style={styles.blockText}>{t(`code.op.${op}`)}</Text>
-    </Pressable>
-  );
-}
-
-/** A program shown read-only (the solution after skipping). */
-function Program({ ops }: { ops: CodeOp[] }) {
-  const { t } = useTranslation('tech');
-  return (
-    <View style={styles.wrap}>
-      {ops.map((o, k) =>
-        o.op === 'repeat' ? (
-          <View key={k} style={styles.repeat}>
-            <Text style={{ fontFamily: BOLD, color: '#fff', fontSize: 13 }}>{t('code.times', { count: o.times })}</Text>
-            <View style={styles.wrap}>
-              {o.body.map((b, j) => (
-                <View key={j} style={[styles.block, { backgroundColor: BLOCK_COLOR[b.op] }]}>
-                  <Text style={styles.blockText}>{t(`code.op.${b.op}`)}</Text>
-                </View>
-              ))}
-            </View>
+      {!!message && <Feedback tone="bad" title={message} />}
+      {outcome ? (
+        <View style={{ gap: 10 }}>
+          <Feedback
+            tone={outcome.correct ? 'good' : 'info'}
+            title={outcome.correct ? t('code.goal', { points: outcome.points }) : t('play.code.solution')}
+            detail={outcome.correct && outcome.gems ? t('code.gems', { count: outcome.gems }) : null}
+          />
+          <PrimaryButton
+            title={run.at >= total ? t('play.finish') : t('code.next')}
+            icon="arrow-forward"
+            onPress={next}
+          />
+        </View>
+      ) : (
+        <View style={{ gap: 10 }}>
+          <PrimaryButton
+            title={t('code.run')}
+            icon="play"
+            disabled={!program.length || !!trail}
+            busy={!!trail}
+            onPress={() => void runIt()}
+          />
+          <View style={{ flexDirection: 'row', gap: 10 }}>
+            <SecondaryButton
+              style={{ flex: 1 }}
+              title={t('play.code.clear')}
+              onPress={() => {
+                setProgram([]);
+                setTarget([]);
+              }}
+              disabled={!!trail}
+            />
+            {p.tries >= 3 && (
+              <SecondaryButton style={{ flex: 1 }} title={t('play.code.giveUp')} onPress={() => void giveUp()} />
+            )}
           </View>
-        ) : (
-          <View key={k} style={[styles.block, { backgroundColor: BLOCK_COLOR[o.op] }]}>
-            <Text style={styles.blockText}>{t(`code.op.${o.op}`)}</Text>
-          </View>
-        ),
+        </View>
       )}
+    </Sheet>
+  );
+}
+
+/** The path of tiles from above: tiles, gaps (no tile), gems, the flag and the runner with its heading. */
+export function Grid({
+  tiles,
+  gems,
+  goal,
+  runner,
+  path,
+}: {
+  tiles: GridCell[];
+  gems: GridCell[];
+  goal: GridCell;
+  runner: RunnerState;
+  path?: RunnerState[];
+}) {
+  const { t } = useTranslation('tech');
+  const cols = Math.max(...tiles.map((c) => c[0]), runner.x) + 1;
+  const rows = Math.max(...tiles.map((c) => c[1]), runner.y) + 1;
+  const C = Math.min(40, Math.floor(320 / Math.max(cols, rows)));
+  const cx = (x: number) => x * C + C / 2;
+  const heading = [0, 90, 180, 270][runner.dir]!;
+  return (
+    <View style={LTR} {...ltr} accessible accessibilityLabel={t('play.code.gridA11y', { cols, rows })}>
+      <Svg width={cols * C} height={rows * C}>
+        {Array.from({ length: rows }, (_, y) =>
+          Array.from({ length: cols }, (_, x) => (
+            <Rect
+              key={`${x},${y}`}
+              x={x * C + 1}
+              y={y * C + 1}
+              width={C - 2}
+              height={C - 2}
+              rx={3}
+              fill={D.grid}
+              opacity={0.5}
+            />
+          )),
+        )}
+        {tiles.map(([x, y]) => (
+          <Rect
+            key={`t${x},${y}`}
+            x={x * C + 2}
+            y={y * C + 2}
+            width={C - 4}
+            height={C - 4}
+            rx={4}
+            fill="#fff"
+            stroke={D.axis}
+          />
+        ))}
+        {gems.map(([x, y]) => (
+          <Path
+            key={`g${x},${y}`}
+            d={`M${cx(x)},${cx(y) - C * 0.2} L${cx(x) + C * 0.16},${cx(y)} L${cx(x)},${cx(y) + C * 0.2} L${cx(x) - C * 0.16},${cx(y)} Z`}
+            fill={D.warm}
+          />
+        ))}
+        <Rect
+          x={goal[0] * C + 6}
+          y={goal[1] * C + 6}
+          width={C - 12}
+          height={C - 12}
+          rx={3}
+          fill="none"
+          stroke={D.good}
+          strokeWidth={2.5}
+        />
+        <Path
+          d={`M${cx(goal[0]) - 3},${cx(goal[1]) + 7} V${cx(goal[1]) - 8} L${cx(goal[0]) + 7},${cx(goal[1]) - 4} L${cx(goal[0]) - 3},${cx(goal[1])}`}
+          stroke={D.good}
+          strokeWidth={2}
+          fill={D.good}
+        />
+        {path && path.length > 1 && (
+          <Polyline
+            points={path.map((s) => `${cx(s.x)},${cx(s.y)}`).join(' ')}
+            stroke={D.accent}
+            strokeWidth={2}
+            fill="none"
+          />
+        )}
+        <G rotation={heading} origin={`${cx(runner.x)}, ${cx(runner.y)}`}>
+          <Path
+            d={`M${cx(runner.x)},${cx(runner.y) - C * 0.32} L${cx(runner.x) + C * 0.26},${cx(runner.y) + C * 0.24} L${cx(runner.x)},${cx(runner.y) + C * 0.12} L${cx(runner.x) - C * 0.26},${cx(runner.y) + C * 0.24} Z`}
+            fill={D.accent}
+          />
+        </G>
+      </Svg>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  top: { position: 'absolute', left: Spacing.md, right: Spacing.md, top: 56 },
-  bottom: { position: 'absolute', left: Spacing.md, right: Spacing.md, bottom: Spacing.sm },
-  tile: {
-    position: 'absolute',
+  count: { fontFamily: Fonts.bold, fontSize: 13, color: W.inkSoft },
+  editor: { borderRadius: 10, backgroundColor: '#F1F0F6', borderWidth: 1, borderColor: W.line, paddingVertical: 4 },
+  line: { flexDirection: 'row', alignItems: 'center', paddingHorizontal: 10, minHeight: 36 },
+  lineOn: { backgroundColor: W.focusSoft },
+  code: { fontFamily: MONO, fontSize: 15, color: W.ink },
+  gutter: { fontFamily: MONO, color: W.muted },
+  comment: { fontFamily: MONO, fontSize: 14, color: W.muted },
+  small: {
+    width: 36,
+    height: 36,
     borderRadius: 8,
-    borderWidth: 2,
-    borderColor: '#2DD4BF',
-    backgroundColor: 'rgba(45,212,191,0.18)',
-    boxShadow: '0 0 10px rgba(45,212,191,0.6)',
-  },
-  dir: {
-    position: 'absolute',
-    bottom: -4,
-    right: 0,
-    width: 18,
-    height: 18,
-    borderRadius: 9,
-    backgroundColor: '#7C5CFF',
+    backgroundColor: W.surface,
+    borderWidth: 1,
+    borderColor: W.line,
     alignItems: 'center',
     justifyContent: 'center',
   },
-  heading: { fontFamily: BOLD, fontSize: 10, color: Colors.reward, letterSpacing: 1 },
-  wrap: { flexDirection: 'row', flexWrap: 'wrap', gap: 6, alignItems: 'flex-start' },
+  hint: { fontFamily: Fonts.regular, fontSize: 13, color: W.inkSoft },
+  tray: { flexDirection: 'row', flexWrap: 'wrap', gap: 8 },
   block: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 3,
-    paddingHorizontal: 10,
-    paddingVertical: 7,
-    borderRadius: 10,
-  },
-  blockText: { fontFamily: BOLD, color: '#fff', fontSize: 13 },
-  repeat: {
-    gap: 6,
-    padding: 6,
-    borderRadius: 12,
-    borderWidth: 2,
-    borderColor: '#27AE60',
-    backgroundColor: 'rgba(39,174,96,0.15)',
-    minWidth: 140,
-  },
-  repeatHead: { flexDirection: 'row', alignItems: 'center', gap: 6 },
-  tiny: {
-    width: 22,
-    height: 22,
-    borderRadius: 11,
+    minHeight: 44,
+    paddingHorizontal: 12,
+    borderRadius: 8,
+    borderWidth: 1.5,
+    borderColor: W.ink,
+    backgroundColor: W.surface,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: PANEL,
   },
-  secondary: {
-    height: 52,
-    paddingHorizontal: 16,
-    borderRadius: 999,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: 'rgba(124,92,255,0.35)',
-  },
+  blockCode: { fontFamily: MONO, fontSize: 14, color: W.ink },
+});
+
+defineGameFrame('code-runner', {
+  hearts: false,
+  review: (run) =>
+    ((run as CodeRunnerRun).puzzles ?? []).flatMap((x) =>
+      x.result
+        ? [
+            {
+              key: String(x.id),
+              correct: x.result.correct,
+              main: `#${x.id + 1} · ${x.maxBlocks}`,
+              detail: lines(x.result.solution)
+                .map((l) => '  '.repeat(l.depth) + l.text)
+                .join('\n'),
+            },
+          ]
+        : [],
+    ),
 });

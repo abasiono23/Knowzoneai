@@ -1,3 +1,4 @@
+import { MORE_CYBER } from '../../data/tech/cyber-ladder.js';
 import { CYBER, type CyberItem } from '../../data/tech/cyber.js';
 import { random, type Answer, type Outcome, type Progress } from './english.js';
 
@@ -7,6 +8,15 @@ import { random, type Answer, type Outcome, type Progress } from './english.js';
  */
 export const TECH_GAMES = ['code-runner', 'cyber-defender', 'robot-rescue', 'binary-breaker', 'circuit-master'] as const;
 export type TechGame = (typeof TECH_GAMES)[number];
+/**
+ * The ten-level ladder, like the word games (services/games/english.ts): from binary basics and first
+ * programs (levels 1–3) through exam computing (4–5), A-level and first-year topics (6–7: bitwise
+ * logic, two's complement, nested loops, multi-gate circuits, web attacks) to upper-university and
+ * specialist work (8–10: subnets, floating point, Gray code, four-input logic design, real security
+ * incidents). Levels 1–5 keep the old content, so stars already won stay on the same level numbers.
+ */
+export const MAX_LEVEL = 10;
+export const OPEN_LEVELS = 4;
 
 type Rand = () => number;
 function shuffle<T>(r: Rand, list: readonly T[]) {
@@ -19,7 +29,9 @@ function shuffle<T>(r: Rand, list: readonly T[]) {
 }
 const pick = <T>(r: Rand, list: readonly T[]) => list[Math.floor(r() * list.length)]!;
 const int = (r: Rand, lo: number, hi: number) => lo + Math.floor(r() * (hi - lo + 1));
-const lvl = (level: number) => Math.min(5, Math.max(1, level));
+const lvl = (level: number) => Math.min(MAX_LEVEL, Math.max(1, Math.round(level)));
+/** A value from a per-level table (index 0 is level 1). */
+const at = <T>(table: readonly T[], level: number) => table[lvl(level) - 1]!;
 type Cell = [number, number];
 const key = ([x, y]: Cell) => `${x},${y}`;
 /** Up, right, down, left (y grows downwards). */
@@ -134,6 +146,22 @@ function layOut(program: Op[], start: Runner) {
   return { tiles, goal: [x, y] as Cell };
 }
 
+/** Code Runner by level: puzzles per run, extra blocks allowed over the planned program, biggest board. */
+const CODE = {
+  puzzles: [4, 4, 4, 4, 4, 4, 5, 5, 5, 5],
+  slack: [2, 2, 1, 1, 1, 1, 0, 0, 0, 0],
+  board: [10, 10, 10, 10, 10, 12, 12, 12, 14, 14],
+};
+
+/** A loop with a loop inside it (levels 6 and up): the inner loop is a straight run, the outer adds turns. */
+function nested(r: Rand, level: number): Op {
+  const inner: Op = { op: 'repeat', times: int(r, 2, 3), body: [{ op: level >= 8 && r() < 0.4 ? 'jump' : 'move' }] };
+  const turn: Op = { op: pick(r, ['left', 'right'] as const) };
+  const back: Op = { op: turn.op === 'left' ? 'right' : 'left' };
+  // A staircase: run, turn, step, turn back.
+  return { op: 'repeat', times: int(r, 2, 3), body: [inner, turn, { op: 'move' }, back] };
+}
+
 function codePuzzle(level: number, r: Rand) {
   for (;;) {
     const start: Runner = { x: 0, y: 0, dir: 1 };
@@ -141,11 +169,13 @@ function codePuzzle(level: number, r: Rand) {
     if (level === 1) solution = Array.from({ length: int(r, 2, 3) }, () => motif(r, 1)).flat();
     else if (level === 2) solution = Array.from({ length: 3 }, () => motif(r, 2)).flat();
     else if (level < 5) solution = [{ op: 'repeat', times: int(r, 3, 4), body: motif(r, level) }];
-    else
+    else if (level === 5)
       solution = [
         { op: 'repeat', times: int(r, 2, 3), body: motif(r, level) },
         { op: 'repeat', times: int(r, 2, 3), body: motif(r, level) },
       ];
+    else if (level <= 7) solution = [...motif(r, 4).slice(0, 2), nested(r, level)];
+    else solution = [nested(r, level), { op: 'repeat', times: int(r, 2, 3), body: motif(r, level) }, ...(level >= 10 ? [nested(r, level)] : [])];
     const laid = layOut(solution, start);
     if (!laid || laid.tiles.length < 4) continue;
     // Normalise to positive coordinates.
@@ -153,17 +183,16 @@ function codePuzzle(level: number, r: Rand) {
     const minY = Math.min(...laid.tiles.map((t) => t[1]));
     const shift = (c: Cell): Cell => [c[0] - minX, c[1] - minY];
     const tiles = laid.tiles.map(shift);
-    if (Math.max(...tiles.map((t) => t[0])) > 9 || Math.max(...tiles.map((t) => t[1])) > 9) continue;
+    const size = at(CODE.board, level);
+    if (Math.max(...tiles.map((t) => t[0])) >= size || Math.max(...tiles.map((t) => t[1])) >= size) continue;
     const gems = shuffle(r, tiles.slice(1, -1)).slice(0, Math.min(3, Math.floor(tiles.length / 3)));
     const blocks = blockCount(solution);
-    // Early levels allow a little extra; from level 3 you need the repeat block to fit.
-    const maxBlocks = level <= 2 ? blocks + 2 : blocks + 1;
     return {
       tiles,
       gems,
       start: { x: start.x - minX, y: start.y - minY, dir: start.dir },
       goal: shift(laid.goal),
-      maxBlocks,
+      maxBlocks: blocks + at(CODE.slack, level),
       ops: [...(level >= 2 ? ['move', 'jump', 'left', 'right'] : ['move', 'left', 'right']), ...(level >= 3 ? ['repeat'] : [])],
       solution,
     };
@@ -246,63 +275,212 @@ function fewestCards(b: RescueBoard, from: Cell, to: Cell) {
   return null;
 }
 
+/** Robot Rescue by level: board size, spare cards over the shortest programme, and the shortest route. */
+const RESCUE = {
+  size: [5, 5, 6, 6, 7, 7, 8, 8, 9, 9],
+  spare: [4, 4, 2, 2, 2, 1, 1, 0, 0, 0],
+  /** The fewest turns (cards) the shortest route may take. */
+  minCards: [2, 3, 3, 4, 4, 5, 6, 7, 8, 9],
+  puzzles: [3, 3, 3, 3, 3, 3, 4, 4, 4, 4],
+};
+
 function rescuePuzzle(level: number, r: Rand) {
-  const size = [5, 5, 6, 6, 7][level - 1]!;
-  for (;;) {
+  const size = at(RESCUE.size, level);
+  for (let tries = 0; ; tries++) {
     const cells: Cell[] = [];
     for (let y = 0; y < size; y++) for (let x = 0; x < size; x++) cells.push([x, y]);
     const [robot, kitten, home] = shuffle(r, cells);
     const blocked = shuffle(
       r,
       cells.filter((c) => c !== robot && c !== kitten && c !== home),
-    ).slice(0, Math.floor(cells.length * (0.18 + level * 0.03)));
+    ).slice(0, Math.floor(cells.length * Math.min(0.36, 0.18 + level * 0.025)));
     const carry = level >= 3;
     const board: RescueBoard = { w: size, h: size, blocked, robot: robot!, kitten: kitten!, ...(carry && { home: home! }) };
     const there = fewestCards(board, robot!, kitten!);
     const back = carry ? fewestCards(board, kitten!, home!) : 0;
-    if (there === null || back === null || there + back < (level === 1 ? 2 : 3)) continue;
+    // A winding route at higher levels (eased off if a board takes too long to find).
+    const need = Math.max(2, at(RESCUE.minCards, level) - Math.floor(tries / 400));
+    if (there === null || back === null || there + back < need) continue;
     const best = there + back + (carry ? 2 : 1);
     // Water and crates are just looks: both block the robot.
     const kinds = blocked.map(() => (r() < 0.5 ? 'crate' : 'water'));
-    return { ...board, kinds, best, maxCards: best + (level <= 2 ? 4 : 2) };
+    return { ...board, kinds, best, maxCards: best + at(RESCUE.spare, level) };
   }
 }
 
 // ─── Binary Breaker ───────────────────────────────────────────────────────────
 
-const BITS = [4, 6, 8, 8, 8];
-const toBits = (n: number, bits: number) => Array.from({ length: bits }, (_, i) => (n >> (bits - 1 - i)) & 1);
+const toBits = (n: number, bits: number) => Array.from({ length: bits }, (_, i) => Math.floor(n / 2 ** (bits - 1 - i)) % 2);
 const fromBits = (b: number[]) => b.reduce((n, d) => n * 2 + d, 0);
+const hex = (n: number, digits: number) => n.toString(16).toUpperCase().padStart(digits, '0');
+/** Two's complement: the bit pattern of a (possibly negative) number. */
+const wrap = (n: number, bits: number) => ((n % 2 ** bits) + 2 ** bits) % 2 ** bits;
+const signed = (n: number, bits: number) => (n >= 2 ** (bits - 1) ? n - 2 ** bits : n);
+const dotted = (n: number) => [24, 16, 8, 0].map((sh) => Math.floor(n / 2 ** sh) % 256).join('.');
+
+/**
+ * Vault kinds. "Set" kinds are answered by switching bits on and off; the others by choosing from
+ * `options`. Every answer is worked out here.
+ *   set: a number → its bits             read: bits → the number           add: a + b → bits
+ *   ascii: bits → the letter             hex: a hex number → bits           signed: bits → signed value
+ *   and / or / xor: a ∘ b → bits         shl / shr: a shifted → bits        neg: −n in two's complement
+ *   sub: x − y in two's complement       hosts: usable hosts in a /p subnet
+ *   network: network address of an IPv4 address   hamming: bits that differ   gray: n → Gray code
+ *   float: a 16-bit IEEE 754 half-precision pattern → its value
+ */
+export type VaultType =
+  | 'set'
+  | 'read'
+  | 'add'
+  | 'ascii'
+  | 'hex'
+  | 'signed'
+  | 'and'
+  | 'or'
+  | 'xor'
+  | 'shl'
+  | 'shr'
+  | 'neg'
+  | 'sub'
+  | 'hosts'
+  | 'network'
+  | 'hamming'
+  | 'gray'
+  | 'float';
+/** Kinds answered by setting bits. */
+export const SET_TYPES: VaultType[] = ['set', 'add', 'hex', 'and', 'or', 'xor', 'shl', 'shr', 'neg', 'sub', 'gray'];
+
+/** Kinds, switch count and vaults per run, by level. */
+const VAULTS: { bits: number; types: VaultType[]; count: number }[] = [
+  { bits: 4, types: ['set', 'read'], count: 5 },
+  { bits: 6, types: ['set', 'read'], count: 5 },
+  { bits: 8, types: ['set', 'read', 'add'], count: 5 },
+  { bits: 8, types: ['read', 'add', 'ascii', 'hex'], count: 5 },
+  { bits: 8, types: ['hex', 'signed', 'add', 'ascii'], count: 6 },
+  { bits: 8, types: ['and', 'or', 'xor', 'shl', 'signed'], count: 6 },
+  { bits: 8, types: ['neg', 'sub', 'xor', 'shr', 'hex'], count: 6 },
+  { bits: 8, types: ['hosts', 'network', 'sub', 'gray', 'hamming'], count: 7 },
+  { bits: 8, types: ['network', 'hamming', 'gray', 'neg', 'float'], count: 7 },
+  { bits: 8, types: ['float', 'network', 'hamming', 'sub', 'gray'], count: 8 },
+];
+
+/** Different wrong options near the right one (the likely slips first). */
+function nearMisses(r: Rand, right: string, candidates: string[], fill: () => string, count: number) {
+  const wrong = new Set<string>();
+  for (const c of candidates) if (c !== right && wrong.size < count) wrong.add(c);
+  for (let k = 0; wrong.size < count && k < 200; k++) {
+    const c = fill();
+    if (c !== right) wrong.add(c);
+  }
+  return shuffle(r, [...wrong]);
+}
 
 function vault(level: number, r: Rand, k: number) {
-  const bits = BITS[level - 1]!;
+  const spec = at(VAULTS, level);
+  const type = spec.types[k % spec.types.length]!;
+  const bits = type === 'hex' && level >= 7 ? 12 : type === 'float' ? 16 : spec.bits;
   const max = 2 ** bits - 1;
-  const types = level >= 5 ? ['set', 'read', 'add', 'ascii'] : level >= 4 ? ['set', 'read', 'ascii'] : ['set', 'read'];
-  const type = types[k % types.length]!;
-  if (type === 'read') {
-    const n = int(r, 1, max);
-    const wrong = new Set<number>();
-    while (wrong.size < 3) {
-      const w = pick(r, [n + 1, n - 1, n ^ 1, n ^ 2, n * 2, Math.floor(n / 2), n + 8, n - 8, int(r, 1, max)].filter((v) => v >= 0 && v <= max && v !== n));
-      wrong.add(w);
+  const count = level >= 8 ? 4 : 3;
+  const choice = (answer: string, slips: string[], fill: () => string, extra: Record<string, unknown>) => ({
+    type,
+    bits,
+    ...extra,
+    answer,
+    options: shuffle(r, [answer, ...nearMisses(r, answer, slips, fill, count)]),
+  });
+  const set = (n: number, extra: Record<string, unknown>) => ({ type, bits, ...extra, answer: String(wrap(n, bits)) });
+  switch (type) {
+    case 'read': {
+      const n = int(r, 1, max);
+      const slips = [n + 1, n - 1, n ^ 1, n ^ 2, n * 2, Math.floor(n / 2), fromBits(toBits(n, bits).reverse())].filter((v) => v >= 0 && v <= max);
+      return choice(String(n), shuffle(r, slips).map(String), () => String(int(r, 1, max)), { shown: toBits(n, bits) });
     }
-    return { type, bits, shown: toBits(n, bits), answer: String(n), options: shuffle(r, [String(n), ...[...wrong].map(String)]) };
+    case 'ascii': {
+      const code = int(r, 65, 90);
+      const letter = String.fromCharCode(code);
+      const slips = [code + 1, code - 1, code + 32, code ^ 2].filter((c) => c >= 65 && c <= 90).map((c) => String.fromCharCode(c));
+      return choice(letter, slips, () => String.fromCharCode(int(r, 65, 90)), { shown: toBits(code, 8) });
+    }
+    case 'signed': {
+      const n = int(r, 129, 254);
+      const v = signed(n, 8);
+      return choice(String(v), [String(n), String(-v), String(-(n & 127)), String(v + 1), String(v - 1)], () => String(int(r, -128, -1)), { shown: toBits(n, 8) });
+    }
+    case 'add': {
+      const a = int(r, 1, Math.floor(max / 2));
+      const b = int(r, 1, max - a);
+      return set(a + b, { a: toBits(a, bits), b: toBits(b, bits) });
+    }
+    case 'hex': {
+      const n = int(r, 16, max);
+      return set(n, { hex: hex(n, bits / 4) });
+    }
+    case 'and':
+    case 'or':
+    case 'xor': {
+      const a = int(r, 1, max);
+      const b = int(r, 1, max);
+      return set(type === 'and' ? a & b : type === 'or' ? a | b : a ^ b, { a: toBits(a, bits), b: toBits(b, bits) });
+    }
+    case 'shl':
+    case 'shr': {
+      const a = int(r, 1, max);
+      const n = int(r, 1, 3);
+      return set(type === 'shl' ? (a << n) & max : a >> n, { a: toBits(a, bits), n });
+    }
+    case 'neg': {
+      const n = int(r, 2, 120);
+      return set(-n, { n });
+    }
+    case 'sub': {
+      const x = int(r, 1, 100);
+      const y = int(r, x + 1, 127);
+      return set(x - y, { x, y });
+    }
+    case 'gray': {
+      const n = int(r, 5, max);
+      return set(n ^ (n >> 1), { n });
+    }
+    case 'hamming': {
+      const a = int(r, 1, max);
+      const flips = int(r, 2, 6);
+      let b = a;
+      for (const i of shuffle(r, Array.from({ length: bits }, (_, j) => j)).slice(0, flips)) b ^= 1 << i;
+      const slips = [flips - 1, flips + 1, flips + 2, bits - flips, flips - 2].filter((x) => x >= 0 && x <= bits).map(String);
+      return choice(String(flips), slips, () => String(int(r, 0, bits)), { a: toBits(a, bits), b: toBits(b, bits) });
+    }
+    case 'hosts': {
+      const p = int(r, 22, 30);
+      const n = 2 ** (32 - p) - 2;
+      return choice(String(n), [String(n + 2), String(2 ** (31 - p)), String(2 ** (33 - p) - 2), String(n - 1)], () => String(2 ** int(r, 2, 10)), { prefix: p });
+    }
+    case 'network': {
+      // From level 10 the prefix can fall inside the third octet too.
+      const p = level >= 10 ? pick(r, [19, 20, 21, 22, 23, 26, 27, 28, 29]) : pick(r, [25, 26, 27, 28, 29]);
+      const ip = [pick(r, [10, 172, 192]), int(r, 0, 255), int(r, 0, 255), int(r, 1, 254)];
+      const addr = ip.reduce((n, o) => n * 256 + o, 0);
+      const size = 2 ** (32 - p);
+      const net = Math.floor(addr / size) * size;
+      const slips = [dotted(net + size - 1), dotted(Math.floor(addr / 256) * 256), dotted(net + 1), dotted(Math.floor(addr / (size / 2)) * (size / 2)), dotted(Math.floor(addr / (size * 2)) * size * 2)];
+      return choice(dotted(net), slips, () => dotted(net + int(r, 1, 3) * size), { address: `${ip.join('.')}/${p}` });
+    }
+    case 'float': {
+      // ±(1 + f/1024) × 2^(e − 15) with a short fraction, so the value is exact.
+      const sign = r() < 0.4 ? 1 : 0;
+      const e = int(r, 11, 20);
+      const f = pick(r, [0, 128, 256, 384, 512, 640, 768, 896]);
+      const s = sign ? -1 : 1;
+      const value = s * (1 + f / 1024) * 2 ** (e - 15);
+      const pattern = sign * 2 ** 15 + e * 2 ** 10 + f;
+      const show = (v: number) => String(Number(v.toPrecision(6)));
+      const slips = [show(-value), show(s * (f / 1024) * 2 ** (e - 15)), show(s * (1 + f / 1024) * 2 ** (e - 16)), show(s * (1 + f / 1024) * 2 ** e), show(value * 2)];
+      return choice(show(value), slips, () => show(value * pick(r, [4, 0.25, 8, 0.125])), { shown: toBits(pattern, 16) });
+    }
+    default: {
+      const n = int(r, 1, max);
+      return set(n, { target: n });
+    }
   }
-  if (type === 'ascii') {
-    const letter = String.fromCharCode(int(r, 65, 90));
-    const others = shuffle(
-      r,
-      'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').filter((c) => c !== letter),
-    ).slice(0, 3);
-    return { type, bits: 8, shown: toBits(letter.charCodeAt(0), 8), answer: letter, options: shuffle(r, [letter, ...others]) };
-  }
-  if (type === 'add') {
-    const a = int(r, 1, max / 2);
-    const b = int(r, 1, max - a);
-    return { type, bits, a: toBits(a, bits), b: toBits(b, bits), answer: String(a + b) };
-  }
-  const n = int(r, 1, max);
-  return { type, bits, target: n, answer: String(n) };
 }
 
 // ─── Circuit Master ───────────────────────────────────────────────────────────
@@ -323,99 +501,117 @@ export function truthTable(inputs: string[], slots: Slot[], out: string, gates: 
   });
 }
 
-/** Topologies by level: which slots, fed from which inputs. */
+/** Topologies by level: which slots, fed from which inputs (one or two to choose from per level). */
+const b = (id: string, from: string[]): Slot => ({ id, kind: 'binary', from });
+const u = (id: string, from: string): Slot => ({ id, kind: 'unary', from: [from] });
 const LAYOUTS: { inputs: string[]; slots: Slot[] }[][] = [
-  [{ inputs: ['A', 'B'], slots: [{ id: 'g1', kind: 'binary', from: ['A', 'B'] }] }],
+  [{ inputs: ['A', 'B'], slots: [b('g1', ['A', 'B'])] }],
+  [{ inputs: ['A', 'B'], slots: [u('u1', 'A'), b('g1', ['u1', 'B'])] }],
   [
-    {
-      inputs: ['A', 'B'],
-      slots: [
-        { id: 'u1', kind: 'unary', from: ['A'] },
-        { id: 'g1', kind: 'binary', from: ['u1', 'B'] },
-      ],
-    },
+    { inputs: ['A', 'B'], slots: [b('g1', ['A', 'B']), u('u1', 'g1')] },
+    { inputs: ['A', 'B'], slots: [u('u1', 'B'), b('g1', ['A', 'u1'])] },
+  ],
+  [{ inputs: ['A', 'B', 'C'], slots: [b('g1', ['A', 'B']), b('g2', ['g1', 'C'])] }],
+  [
+    { inputs: ['A', 'B'], slots: [b('g1', ['A', 'B']), b('g2', ['A', 'B']), b('g3', ['g1', 'g2'])] },
+    { inputs: ['A', 'B', 'C'], slots: [u('u1', 'C'), b('g1', ['A', 'B']), b('g2', ['g1', 'u1'])] },
   ],
   [
-    {
-      inputs: ['A', 'B'],
-      slots: [
-        { id: 'g1', kind: 'binary', from: ['A', 'B'] },
-        { id: 'u1', kind: 'unary', from: ['g1'] },
-      ],
-    },
-    {
-      inputs: ['A', 'B'],
-      slots: [
-        { id: 'u1', kind: 'unary', from: ['B'] },
-        { id: 'g1', kind: 'binary', from: ['A', 'u1'] },
-      ],
-    },
+    { inputs: ['A', 'B', 'C'], slots: [b('g1', ['A', 'B']), b('g2', ['B', 'C']), b('g3', ['g1', 'g2'])] },
+    { inputs: ['A', 'B', 'C'], slots: [u('u1', 'A'), b('g1', ['u1', 'B']), b('g2', ['g1', 'C'])] },
   ],
   [
-    {
-      inputs: ['A', 'B', 'C'],
-      slots: [
-        { id: 'g1', kind: 'binary', from: ['A', 'B'] },
-        { id: 'g2', kind: 'binary', from: ['g1', 'C'] },
-      ],
-    },
+    { inputs: ['A', 'B', 'C'], slots: [u('u1', 'A'), b('g1', ['u1', 'B']), b('g2', ['B', 'C']), b('g3', ['g1', 'g2'])] },
+    { inputs: ['A', 'B', 'C'], slots: [b('g1', ['A', 'B']), b('g2', ['A', 'C']), b('g3', ['g1', 'g2']), u('u1', 'g3')] },
+  ],
+  [{ inputs: ['A', 'B', 'C'], slots: [b('g1', ['A', 'B']), b('g2', ['B', 'C']), b('g3', ['A', 'C']), b('g4', ['g1', 'g2']), b('g5', ['g4', 'g3'])] }],
+  [
+    { inputs: ['A', 'B', 'C', 'D'], slots: [b('g1', ['A', 'B']), b('g2', ['C', 'D']), b('g3', ['g1', 'g2'])] },
+    { inputs: ['A', 'B', 'C'], slots: [u('u1', 'A'), b('g1', ['u1', 'B']), b('g2', ['A', 'C']), b('g3', ['g1', 'g2']), b('g4', ['g3', 'C'])] },
   ],
   [
-    {
-      inputs: ['A', 'B'],
-      slots: [
-        { id: 'g1', kind: 'binary', from: ['A', 'B'] },
-        { id: 'g2', kind: 'binary', from: ['A', 'B'] },
-        { id: 'g3', kind: 'binary', from: ['g1', 'g2'] },
-      ],
-    },
-    {
-      inputs: ['A', 'B', 'C'],
-      slots: [
-        { id: 'u1', kind: 'unary', from: ['C'] },
-        { id: 'g1', kind: 'binary', from: ['A', 'B'] },
-        { id: 'g2', kind: 'binary', from: ['g1', 'u1'] },
-      ],
-    },
+    { inputs: ['A', 'B', 'C', 'D'], slots: [b('g1', ['A', 'B']), b('g2', ['C', 'D']), b('g3', ['g1', 'C']), b('g4', ['g2', 'g3']), u('u1', 'g4')] },
+    { inputs: ['A', 'B', 'C', 'D'], slots: [b('g1', ['A', 'B']), b('g2', ['B', 'C']), b('g3', ['C', 'D']), b('g4', ['g1', 'g2']), b('g5', ['g4', 'g3'])] },
   ],
 ];
-const GATES_BY_LEVEL: Gate[][] = [['AND', 'OR'], ['AND', 'OR', 'NOT'], ['AND', 'OR', 'NOT'], ['AND', 'OR', 'NOT', 'NAND', 'NOR'], ['AND', 'OR', 'NOT', 'NAND', 'NOR', 'XOR']];
+const ALL_GATES: Gate[] = ['AND', 'OR', 'NOT', 'NAND', 'NOR', 'XOR'];
+const GATES_BY_LEVEL: Gate[][] = [
+  ['AND', 'OR'],
+  ['AND', 'OR', 'NOT'],
+  ['AND', 'OR', 'NOT'],
+  ['AND', 'OR', 'NOT', 'NAND', 'NOR'],
+  ALL_GATES,
+  ALL_GATES,
+  ALL_GATES,
+  ALL_GATES,
+  ALL_GATES,
+  ALL_GATES,
+];
+/** Circuits per run, and whether the board shows the bulb's output for each row as you build (easier levels). */
+const CIRCUITS = { puzzles: [3, 3, 3, 3, 3, 3, 4, 4, 4, 4], preview: 6 };
+
+/** Every input changes the output somewhere (no input is wired in for nothing). */
+function usesEveryInput(inputs: string[], target: number[]) {
+  return inputs.every((_, i) => {
+    const bit = 2 ** (inputs.length - 1 - i);
+    return target.some((v, row) => (row & bit) === 0 && target[row | bit] !== v);
+  });
+}
 
 function circuitPuzzle(level: number, r: Rand) {
-  const gates = GATES_BY_LEVEL[level - 1]!;
+  const gates = at(GATES_BY_LEVEL, level);
   for (;;) {
-    const layout = pick(r, LAYOUTS[level - 1]!);
+    const layout = pick(r, at(LAYOUTS, level));
     const solution: Record<string, Gate> = Object.fromEntries(
       layout.slots.map((s) => [s.id, s.kind === 'unary' ? pick(r, ['NOT', 'NOT', 'WIRE'] as Gate[]) : pick(r, BINARY.filter((g) => gates.includes(g)))]),
     );
     const out = layout.slots.at(-1)!.id;
     const target = truthTable(layout.inputs, layout.slots, out, solution);
-    // Always on or always off isn't a puzzle.
+    // Always on or always off isn't a puzzle; from level 6 every input must matter.
     if (target.every((v) => v === target[0])) continue;
-    return { inputs: layout.inputs, slots: layout.slots, out, gates, target, solution };
+    if (level >= 6 && !usesEveryInput(layout.inputs, target)) continue;
+    return { inputs: layout.inputs, slots: layout.slots, out, gates, target, preview: level <= CIRCUITS.preview, solution };
   }
 }
 
 // ─── Building runs ────────────────────────────────────────────────────────────
 
-const CYBER_SECONDS = [30, 26, 22, 20, 18];
+/** Cyber Defender: cases per run and seconds per case (attack and code cases take longer to read). */
+const CYBER_STEPS = [8, 8, 8, 8, 8, 10, 10, 10, 10, 10];
+const CYBER_SECONDS = [30, 28, 26, 24, 24, 40, 40, 45, 45, 50];
+export const ALL_CYBER: CyberItem[] = [...CYBER, ...MORE_CYBER];
+
+/** A level's cases: its own first, then the levels just below (never above). */
+export function cyberPool(level: number) {
+  const L = lvl(level);
+  const pool: CyberItem[] = [];
+  for (let l = L; l >= 1 && pool.length < 2 * at(CYBER_STEPS, L); l--) pool.push(...ALL_CYBER.filter((c) => c.level === l));
+  return pool;
+}
 
 function build(game: TechGame, level: number, r: Rand) {
   const L = lvl(level);
   switch (game) {
     case 'code-runner':
-      return { kind: game, puzzles: Array.from({ length: 4 }, () => codePuzzle(L, r)) };
+      return { kind: game, puzzles: Array.from({ length: at(CODE.puzzles, L) }, () => codePuzzle(L, r)) };
     case 'robot-rescue':
-      return { kind: game, puzzles: Array.from({ length: 3 }, () => rescuePuzzle(L, r)) };
+      return { kind: game, puzzles: Array.from({ length: at(RESCUE.puzzles, L) }, () => rescuePuzzle(L, r)) };
     case 'binary-breaker':
-      return { kind: game, vaults: shuffle(r, Array.from({ length: 5 }, (_, k) => vault(L, r, k))) };
+      return { kind: game, vaults: shuffle(r, Array.from({ length: at(VAULTS, L).count }, (_, k) => vault(L, r, k))) };
     case 'circuit-master':
-      return { kind: game, puzzles: Array.from({ length: 3 }, () => circuitPuzzle(L, r)) };
+      return { kind: game, puzzles: Array.from({ length: at(CIRCUITS.puzzles, L) }, () => circuitPuzzle(L, r)) };
     case 'cyber-defender': {
-      const pool = CYBER.filter((c) => c.level <= L);
-      // A mix: some messages, a password or two, and situations.
-      const items = shuffle(r, pool).slice(0, 8);
-      return { kind: game, seconds: CYBER_SECONDS[L - 1]!, items: items.map((c) => c.id) };
+      const pool = cyberPool(L);
+      const own = shuffle(r, pool.filter((c) => c.level === L));
+      const rest = shuffle(r, pool.filter((c) => c.level !== L));
+      const items = shuffle(r, [...own, ...rest].slice(0, at(CYBER_STEPS, L)));
+      return {
+        kind: game,
+        seconds: at(CYBER_SECONDS, L),
+        items: items.map((c) => c.id),
+        // The options of attack and defence cases, in this run's order.
+        order: Object.fromEntries(items.filter((c) => c.options).map((c) => [c.id, shuffle(r, c.options!)])),
+      };
     }
   }
 }
@@ -425,7 +621,7 @@ export type TechPuzzle =
   | { kind: 'robot-rescue'; puzzles: ReturnType<typeof rescuePuzzle>[] }
   | { kind: 'binary-breaker'; vaults: ReturnType<typeof vault>[] }
   | { kind: 'circuit-master'; puzzles: ReturnType<typeof circuitPuzzle>[] }
-  | { kind: 'cyber-defender'; seconds: number; items: string[] };
+  | { kind: 'cyber-defender'; seconds: number; items: string[]; order?: Record<string, string[]> };
 export type TechState = { puzzle: TechPuzzle; progress: Progress };
 
 export function buildTechPuzzle(game: TechGame, level: number, seed: string): TechPuzzle {
@@ -445,8 +641,10 @@ export function techStepCount(p: TechPuzzle) {
   }
 }
 
-const cyber = (id: string) => CYBER.find((c) => c.id === id)!;
-const choicesOf = (c: CyberItem) => (c.kind === 'password' ? ['weak', 'strong'] : c.kind === 'situation' ? ['risky', 'safe'] : ['phishing', 'safe']);
+const cyber = (id: string) => ALL_CYBER.find((c) => c.id === id)!;
+/** A case's choices: a verdict pair, or (attacks and defences) its own options in this run's order. */
+const choicesOf = (c: CyberItem, order?: Record<string, string[]>) =>
+  c.options ? (order?.[c.id] ?? c.options) : c.kind === 'password' ? ['weak', 'strong'] : c.kind === 'situation' ? ['risky', 'safe'] : ['phishing', 'safe'];
 
 // ─── What the app sees ────────────────────────────────────────────────────────
 
@@ -474,8 +672,8 @@ export function techPublicState({ puzzle: p, progress }: TechState) {
       return {
         seconds: p.seconds,
         items: p.items.map((id, i) => {
-          const { answer, why, level: _level, ...c } = cyber(id);
-          return { ...c, id: i, options: choicesOf(cyber(id)), ...(results[i] && { result: { ...results[i], answer, why } }) };
+          const { answer, why, level: _level, options: _options, ...c } = cyber(id);
+          return { ...c, id: i, options: choicesOf(cyber(id), p.order), ...(results[i] && { result: { ...results[i], answer, why } }) };
         }),
       };
   }
@@ -538,7 +736,7 @@ export function techCheck({ puzzle: p, progress }: TechState, a: TechAnswer): Ou
     }
     case 'binary-breaker': {
       const v = p.vaults[at]!;
-      const given = v.type === 'set' || v.type === 'add' ? (a.bits && a.bits.length === v.bits && a.bits.every((b) => b === 0 || b === 1) ? String(fromBits(a.bits)) : null) : (a.choice ?? null);
+      const given = SET_TYPES.includes(v.type as VaultType) ? (a.bits && a.bits.length === v.bits && a.bits.every((b) => b === 0 || b === 1) ? String(fromBits(a.bits)) : null) : (a.choice ?? null);
       const correct = !a.timeout && given === v.answer;
       const combo = correct ? Math.min(progress.streak + 1, 5) : 0;
       return { correct, points: correct ? 100 + 20 * (combo - 1) : 0, heartLost: !correct, advance: true, reveal: { answer: v.answer, combo } };
@@ -589,11 +787,11 @@ export function techHelpContext({ puzzle: p, progress }: TechState) {
     }
     case 'binary-breaker': {
       const v = p.vaults[at]!;
-      return `Binary puzzle (${v.type}) with ${v.bits} bits (place values ${Array.from({ length: v.bits }, (_, i) => 2 ** (v.bits - 1 - i)).join(', ')}). ${JSON.stringify({ ...v, answer: undefined })}. Correct answer: ${v.answer}. Explain place values; don't say the answer.`;
+      return `Binary puzzle (${v.type}) with ${v.bits} bits (place values ${Array.from({ length: v.bits }, (_, i) => 2 ** (v.bits - 1 - i)).join(', ')}). ${JSON.stringify({ ...v, answer: undefined })}. Correct answer: ${v.answer}${SET_TYPES.includes(v.type as VaultType) ? ` (as bits: ${toBits(Number(v.answer), v.bits).join('')})` : ''}. Explain the method (place values, two's complement, masks, subnetting or IEEE 754 as needed); don't say the answer.`;
     }
     case 'cyber-defender': {
       const c = cyber(p.items[at]!);
-      return `Cyber safety: judge this ${c.kind} as ${choicesOf(c).join(' or ')}. ${c.from ? `From: ${c.from}. ` : ''}${c.subject ? `Subject: ${c.subject}. ` : ''}${c.body}${c.link ? ` Link: ${c.link}` : ''}. Correct: ${c.answer} (${c.why}). Point to the warning signs to look for; don't say the verdict.`;
+      return `Cyber safety: judge this ${c.kind} case: ${c.question ?? ''} Choices: ${choicesOf(c, p.order).join(' / ')}. ${c.from ? `From: ${c.from}. ` : ''}${c.subject ? `Subject: ${c.subject}. ` : ''}${c.body}${c.link ? ` Link: ${c.link}` : ''}${c.code ? ` Code/log: ${c.code}` : ''}. Correct: ${c.answer} (${c.why}). Point to the warning signs to look for; don't say the verdict.`;
     }
   }
 }

@@ -1,86 +1,83 @@
 import { Ionicons } from '@expo/vector-icons';
-import { Image } from 'expo-image';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Pressable, StyleSheet, View } from 'react-native';
-import Animated, { FadeInDown } from 'react-native-reanimated';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import Svg, { Circle, G, Line, Path, Polyline, Rect } from 'react-native-svg';
 
-import { Backdrop } from '@/components/lab/backdrop';
-import { BOLD, GoldButton, Panel } from '@/components/lab/hud';
+import { Feedback, PrimaryButton, SecondaryButton, W } from '@/components/games/ui';
+import { defineGameFrame } from '@/components/lab/contract';
+import { Card, D, Eyebrow, LTR, ltr, MONO, Sheet, StepBar } from '@/components/space/kit';
 import { Text } from '@/components/ui';
-import { Colors, Spacing } from '@/constants/theme';
+import { Fonts } from '@/constants/theme';
 import type { GameOutcome, RobotCard, RobotRescueRun } from '@/lib/api';
-import { runRobot, TECH_SCENES, TECH_SPRITES } from '@/lib/games/tech';
+import { useKeys } from '@/lib/games/english';
+import { runRobot } from '@/lib/games/tech';
 import type { TechGame } from '@/lib/games/use-lab-run';
 
-const ICON = { up: 'arrow-up', right: 'arrow-forward', down: 'arrow-down', left: 'arrow-back' } as const;
+type Dir = 'up' | 'right' | 'down' | 'left';
+const ARROW: Record<Dir, keyof typeof Ionicons.glyphMap> = {
+  up: 'arrow-up',
+  right: 'arrow-forward',
+  down: 'arrow-down',
+  left: 'arrow-back',
+};
+const cardCode = (c: RobotCard) => ('op' in c ? `${c.op}()` : `move(${c.dir}, ${c.n})`);
 
 /**
- * Robot Rescue: program the robot with arrow cards (each card moves it N steps) to reach the kitten,
- * pick it up, and from level 3 bring it to the home pad and drop it. It stops at crates and water.
+ * Robot Rescue: program a warehouse robot with a list of commands, move(direction, n), pick() and
+ * drop(), to collect the parcel (and from level 3 deliver it to the pad) without hitting a wall.
+ * Grids grow and the card limit tightens up the ladder; from level 8 only the shortest programme fits.
  */
 export function RobotRescue({ g, run }: { g: TechGame; run: RobotRescueRun }) {
   const { t } = useTranslation('tech');
-  const [size, setSize] = useState({ w: 0, h: 0 });
-  const [i, setI] = useState(() => Math.min(run.at, run.puzzles.length - 1));
-  const x = run.puzzles[i]!;
+  const total = run.puzzles.length;
+  const [i, setI] = useState(() => Math.min(run.at, total - 1));
+  const p = run.puzzles[i]!;
   const [cards, setCards] = useState<RobotCard[]>([]);
-  const [trail, setTrail] = useState<{ x: number; y: number; carrying: boolean }[] | null>(null);
-  const [shown, setShown] = useState(0);
+  const [trail, setTrail] = useState<{ steps: { x: number; y: number; carrying: boolean }[]; shown: number } | null>(
+    null,
+  );
   const [outcome, setOutcome] = useState<GameOutcome | null>(null);
   const [message, setMessage] = useState<string | null>(null);
 
   useEffect(() => {
-    if (!trail || shown >= trail.length - 1) return;
-    const id = setTimeout(() => setShown((n) => n + 1), 260);
+    if (!trail || trail.shown >= trail.steps.length) return;
+    const id = setTimeout(() => setTrail((tr) => tr && { ...tr, shown: tr.shown + 1 }), 180);
     return () => clearTimeout(id);
-  }, [trail, shown]);
+  }, [trail]);
 
-  const addMove = (dir: 'up' | 'right' | 'down' | 'left') => {
-    if (trail || outcome) return;
-    g.buzz('tap');
+  const addMove = (dir: Dir) => {
+    if (outcome || trail) return;
     const last = cards.at(-1);
-    // Tapping the same arrow again adds a step to the last card.
+    // The same direction again adds a step to the last command.
     if (last && 'dir' in last && last.dir === dir && last.n < 9)
       setCards([...cards.slice(0, -1), { dir, n: last.n + 1 }]);
-    else if (cards.length < x.maxCards) setCards([...cards, { dir, n: 1 }]);
-  };
-  const addOp = (op: 'pick' | 'drop') => {
-    if (trail || outcome || cards.length >= x.maxCards) return;
-    g.buzz('tap');
-    setCards([...cards, { op }]);
-  };
-
-  const go = async () => {
-    const sim = runRobot(cards, x);
+    else if (cards.length < p.maxCards) setCards([...cards, { dir, n: 1 }]);
     setMessage(null);
-    setTrail(sim.trail);
-    setShown(0);
+  };
+  const addOp = (op: 'pick' | 'drop') =>
+    !outcome && !trail && cards.length < p.maxCards && setCards([...cards, { op }]);
+  const go = async () => {
+    if (!cards.length || outcome || trail) return;
+    setMessage(null);
+    const local = runRobot(cards, p);
+    setTrail({ steps: local.trail, shown: 1 });
     const res = await g.answer({ step: i, cards });
     setTimeout(
       () => {
-        if (!res) {
-          setTrail(null);
-          return;
-        }
+        setTrail(null);
+        if (!res) return;
         const o = res.outcome;
         g.buzz(o.correct ? 'success' : 'error');
         if (o.correct) setOutcome(o);
-        else {
-          setTrail(null);
+        else
           setMessage(
-            o.end === 'bump'
-              ? t('robot.bump')
-              : o.end === 'missed'
-                ? t('robot.missed')
-                : o.end === 'cards'
-                  ? t('robot.tooMany')
-                  : t('robot.short'),
+            o.end === 'cards'
+              ? t('robot.tooMany')
+              : t(`play.robot.${o.end === 'bump' || o.end === 'missed' ? o.end : 'short'}`),
           );
-        }
       },
-      sim.trail.length * 260 + 250,
+      local.trail.length * 180 + 200,
     );
   };
   const giveUp = async () => {
@@ -88,258 +85,280 @@ export function RobotRescue({ g, run }: { g: TechGame; run: RobotRescueRun }) {
     if (res) setOutcome(res.outcome);
   };
   const next = () => {
-    if (run.status !== 'playing' || run.at >= run.puzzles.length) {
-      void g.finish();
-      return;
-    }
+    if (run.status !== 'playing' || run.at >= total) return void g.finish();
     setI(run.at);
     setCards([]);
-    setTrail(null);
     setOutcome(null);
     setMessage(null);
   };
+  useKeys((key) => {
+    const dirs: Record<string, Dir> = { ArrowUp: 'up', ArrowRight: 'right', ArrowDown: 'down', ArrowLeft: 'left' };
+    if (dirs[key]) addMove(dirs[key]!);
+    else if (key === 'P') addOp('pick');
+    else if (key === 'D' && p.home) addOp('drop');
+    else if (key === 'Backspace') setCards(cards.slice(0, -1));
+    else if (key === 'Enter') void (outcome ? next() : go());
+  });
 
-  // The board, as big as fits the top half.
-  const area = { top: 150, h: Math.max(180, size.h * 0.48 - 150), w: size.w - 2 * Spacing.md };
-  const cell = Math.min(64, area.w / x.w, area.h / x.h);
-  const ox = Spacing.md + (area.w - x.w * cell) / 2;
-  const oy = area.top + (area.h - x.h * cell) / 2;
-  const pos = trail ? trail[Math.min(shown, trail.length - 1)]! : { x: x.robot[0], y: x.robot[1], carrying: false };
-  const kittenWithRobot = pos.carrying;
-  const blockedKind = (cx: number, cy: number) => {
-    const k = x.blocked.findIndex(([bx, by]) => bx === cx && by === cy);
-    return k < 0 ? null : (x.kinds[k] ?? 'crate');
-  };
-
+  const now = trail
+    ? trail.steps[Math.min(trail.shown, trail.steps.length) - 1]!
+    : { x: p.robot[0], y: p.robot[1], carrying: false };
   return (
-    <View
-      style={StyleSheet.absoluteFill}
-      onLayout={(e) => setSize({ w: e.nativeEvent.layout.width, h: e.nativeEvent.layout.height })}>
-      <Backdrop source={TECH_SCENES.robot} dim={0.25} />
-      {size.w > 0 && (
-        <View style={StyleSheet.absoluteFill} pointerEvents="none">
-          {Array.from({ length: x.h }, (_, cy) =>
-            Array.from({ length: x.w }, (_, cx) => {
-              const kind = blockedKind(cx, cy);
-              const home = x.home && x.home[0] === cx && x.home[1] === cy;
-              return (
-                <View
-                  key={`${cx},${cy}`}
-                  style={[
-                    styles.cell,
-                    { left: ox + cx * cell, top: oy + cy * cell, width: cell - 2, height: cell - 2 },
-                    kind === 'water' && styles.water,
-                    home && styles.home,
-                  ]}>
-                  {kind === 'crate' && (
-                    <Image
-                      source={TECH_SPRITES.crate.src}
-                      style={{ width: cell * 0.8, height: cell * 0.8 }}
-                      contentFit="contain"
-                      accessible={false}
-                    />
-                  )}
-                  {home && <Ionicons name="home" size={cell * 0.4} color="#FFE8A3" />}
-                </View>
-              );
-            }),
-          )}
-          {!kittenWithRobot && !(outcome?.correct && !x.home) && (
-            <Image
-              source={TECH_SPRITES.kitten.src}
-              style={{
-                position: 'absolute',
-                left: ox + x.kitten[0] * cell + cell * 0.1,
-                top: oy + x.kitten[1] * cell + cell * 0.05,
-                width: cell * 0.8,
-                height: cell * 0.85,
-              }}
-              contentFit="contain"
-              accessible={false}
-            />
-          )}
-          <View
-            style={{
-              position: 'absolute',
-              left: ox + pos.x * cell,
-              top: oy + pos.y * cell - cell * 0.15,
-              width: cell,
-              height: cell,
-              alignItems: 'center',
-            }}>
-            <Image
-              source={TECH_SPRITES.robot.src}
-              style={{ width: cell * 0.85, height: cell * 0.95 }}
-              contentFit="contain"
-              accessible={false}
-            />
-            {kittenWithRobot && (
-              <Image
-                source={TECH_SPRITES.kitten.src}
-                style={{ position: 'absolute', top: -cell * 0.3, width: cell * 0.5, height: cell * 0.5 }}
-                contentFit="contain"
-                accessible={false}
-              />
-            )}
-          </View>
+    <Sheet>
+      <StepBar
+        label={p.home ? t('play.robot.stepHome', { n: i + 1, total }) : t('play.robot.step', { n: i + 1, total })}
+        n={i + 1}
+        total={total}
+        right={
+          <Text style={[styles.count, cards.length > p.maxCards && { color: W.wrong }]}>
+            {t('robot.cards', { used: cards.length, max: p.maxCards })}
+          </Text>
+        }
+      />
+      <Card style={{ alignItems: 'center', padding: 10 }}>
+        <Warehouse p={p} at={now} path={trail?.steps.slice(0, trail.shown)} />
+        <View style={[styles.legend, LTR]} {...ltr}>
+          <Key icon="navigate" color={D.accent} text={t('play.robot.robot')} />
+          <Key icon="cube-outline" color={D.warm} text={t('play.robot.parcel')} />
+          {!!p.home && <Key icon="square-outline" color={D.good} text={t('play.robot.pad')} />}
+          <Key icon="square" color="#C6C3D6" text={t('play.robot.wall')} />
         </View>
-      )}
-
-      <SafeAreaView edges={['top']} style={styles.top} pointerEvents="none">
-        <Panel style={{ gap: 2 }}>
-          <Text style={{ fontFamily: BOLD, color: '#fff', fontSize: 14 }}>
-            {x.home
-              ? t('robot.objectiveHome', { n: i + 1, total: run.puzzles.length })
-              : t('robot.objective', { n: i + 1, total: run.puzzles.length })}
-          </Text>
-          <Text style={{ color: Colors.reward, fontSize: 12, fontFamily: BOLD }}>
-            {t('robot.cards', { used: cards.length, max: x.maxCards })} · {t('robot.best', { count: x.best })} ·{' '}
-            {t('ui.tries', { count: x.tries })}
-          </Text>
-        </Panel>
-      </SafeAreaView>
-
-      <SafeAreaView edges={['bottom']} style={styles.bottom} pointerEvents="box-none">
-        {outcome ? (
-          <Animated.View entering={FadeInDown}>
-            <Panel style={{ gap: Spacing.sm, borderColor: outcome.correct ? Colors.success : Colors.reward }}>
-              <Text style={{ fontFamily: BOLD, fontSize: 17, color: outcome.correct ? Colors.success : '#fff' }}>
-                {outcome.correct ? t('robot.saved', { points: outcome.points }) : t('ui.solution')}
-              </Text>
-              {outcome.correct && cards.length <= x.best && (
-                <Text style={{ color: Colors.reward, fontFamily: BOLD }}>{t('robot.shortest')}</Text>
-              )}
-              <GoldButton title={t('robot.next')} icon="arrow-forward" onPress={next} />
-            </Panel>
-          </Animated.View>
-        ) : (
-          <Panel style={{ gap: Spacing.sm, padding: 10 }}>
-            <Text style={styles.heading}>{t('robot.program')}</Text>
-            <View style={styles.wrap}>
-              {cards.map((c, k) => (
-                <Pressable
-                  key={k}
-                  onPress={() => !trail && setCards(cards.filter((_, j) => j !== k))}
-                  accessibilityRole="button"
-                  accessibilityLabel={`${'dir' in c ? t('robot.step', { dir: t(`robot.dirs.${c.dir}`), n: c.n }) : t(`robot.${c.op}`)}: ${t('robot.remove')}`}
-                  style={[styles.card, 'op' in c && { backgroundColor: '#27AE60' }]}>
-                  {'dir' in c ? (
-                    <>
-                      <Ionicons name={ICON[c.dir]} size={16} color="#fff" />
-                      <Text style={styles.cardText}>{c.n}</Text>
-                    </>
-                  ) : (
-                    <Text style={styles.cardText}>{t(`robot.${c.op}`)}</Text>
-                  )}
-                </Pressable>
-              ))}
-            </View>
-            <Text style={{ color: 'rgba(235,238,255,0.7)', fontSize: 11 }}>{t('robot.hint')}</Text>
-            <View style={[styles.wrap, { justifyContent: 'center' }]}>
-              {(['up', 'left', 'down', 'right'] as const).map((d) => (
+      </Card>
+      <Card>
+        <Eyebrow text={t('play.robot.program')} />
+        <View style={[styles.editor, LTR]} {...ltr}>
+          {cards.length ? (
+            cards.map((c, k) => (
+              <Pressable
+                key={k}
+                disabled={!!outcome || !!trail}
+                onPress={() => setCards(cards.filter((_, n) => n !== k))}
+                accessibilityRole="button"
+                accessibilityLabel={`${cardCode(c)}. ${t('robot.remove')}`}
+                style={styles.line}>
+                <Text style={styles.lineNo}>{String(k + 1).padStart(2, ' ')}</Text>
+                <Text style={styles.code}>{cardCode(c)}</Text>
+                {!outcome && <Ionicons name="close" size={14} color={W.muted} />}
+              </Pressable>
+            ))
+          ) : (
+            <Text style={[styles.code, { color: W.muted, padding: 10 }]}>{t('play.robot.empty')}</Text>
+          )}
+        </View>
+        {!outcome && (
+          <>
+            <Text style={styles.hint}>{t('play.robot.hint')}</Text>
+            <View style={[styles.pad, LTR]} {...ltr}>
+              {(['left', 'up', 'down', 'right'] as Dir[]).map((d) => (
                 <Pressable
                   key={d}
                   onPress={() => addMove(d)}
-                  disabled={!!trail}
                   accessibilityRole="button"
                   accessibilityLabel={t(`robot.dirs.${d}`)}
                   style={styles.arrow}>
-                  <Ionicons name={ICON[d]} size={22} color="#fff" />
+                  <Ionicons name={ARROW[d]} size={20} color={W.ink} />
                 </Pressable>
               ))}
               <Pressable
                 onPress={() => addOp('pick')}
-                disabled={!!trail}
                 accessibilityRole="button"
-                style={[styles.arrow, styles.op]}>
-                <Text style={styles.cardText}>{t('robot.pick')}</Text>
+                accessibilityLabel={t('robot.pick')}
+                style={styles.op}>
+                <Text style={styles.opText}>pick()</Text>
               </Pressable>
-              {!!x.home && (
+              {!!p.home && (
                 <Pressable
                   onPress={() => addOp('drop')}
-                  disabled={!!trail}
                   accessibilityRole="button"
-                  style={[styles.arrow, styles.op]}>
-                  <Text style={styles.cardText}>{t('robot.drop')}</Text>
+                  accessibilityLabel={t('robot.drop')}
+                  style={styles.op}>
+                  <Text style={styles.opText}>drop()</Text>
                 </Pressable>
               )}
             </View>
-            {!!message && <Text style={{ color: '#FF8FA6', fontFamily: BOLD }}>{message}</Text>}
-            <View style={{ flexDirection: 'row', gap: Spacing.sm }}>
-              <Pressable
-                onPress={() => setCards([])}
-                disabled={!!trail}
-                accessibilityRole="button"
-                style={styles.secondary}>
-                <Text style={{ fontFamily: BOLD, color: '#fff' }}>{t('ui.clear')}</Text>
-              </Pressable>
-              {x.tries >= 3 && (
-                <Pressable
-                  onPress={() => void giveUp()}
-                  disabled={!!trail || g.busy}
-                  accessibilityRole="button"
-                  style={styles.secondary}>
-                  <Text style={{ fontFamily: BOLD, color: '#fff' }}>{t('ui.skip')}</Text>
-                </Pressable>
-              )}
-              <View style={{ flex: 1 }}>
-                <GoldButton
-                  title={t('robot.go')}
-                  icon="rocket"
-                  disabled={!cards.length || !!trail || g.busy}
-                  onPress={() => void go()}
-                />
-              </View>
-            </View>
-          </Panel>
+          </>
         )}
-      </SafeAreaView>
+      </Card>
+      {!!message && <Feedback tone="bad" title={message} />}
+      {outcome ? (
+        <View style={{ gap: 10 }}>
+          <Feedback
+            tone={outcome.correct ? 'good' : 'info'}
+            title={outcome.correct ? t('play.robot.saved', { points: outcome.points }) : t('play.robot.skipped')}
+            detail={outcome.correct ? t('robot.best', { count: p.best }) : null}
+          />
+          <PrimaryButton
+            title={run.at >= total ? t('play.finish') : t('robot.next')}
+            icon="arrow-forward"
+            onPress={next}
+          />
+        </View>
+      ) : (
+        <View style={{ gap: 10 }}>
+          <PrimaryButton
+            title={t('play.robot.run')}
+            icon="play"
+            disabled={!cards.length || !!trail}
+            busy={!!trail}
+            onPress={() => void go()}
+          />
+          <View style={{ flexDirection: 'row', gap: 10 }}>
+            <SecondaryButton
+              style={{ flex: 1 }}
+              title={t('play.code.clear')}
+              onPress={() => setCards([])}
+              disabled={!!trail}
+            />
+            {p.tries >= 3 && (
+              <SecondaryButton style={{ flex: 1 }} title={t('play.code.giveUp')} onPress={() => void giveUp()} />
+            )}
+          </View>
+        </View>
+      )}
+    </Sheet>
+  );
+}
+
+function Key({ icon, color, text }: { icon: keyof typeof Ionicons.glyphMap; color: string; text: string }) {
+  return (
+    <View style={{ flexDirection: 'row', alignItems: 'center', gap: 4 }}>
+      <Ionicons name={icon} size={13} color={color} />
+      <Text style={{ fontFamily: Fonts.semibold, fontSize: 12, color: W.inkSoft }}>{text}</Text>
+    </View>
+  );
+}
+
+function Warehouse({
+  p,
+  at,
+  path,
+}: {
+  p: RobotRescueRun['puzzles'][number];
+  at: { x: number; y: number; carrying: boolean };
+  path?: { x: number; y: number }[];
+}) {
+  const { t } = useTranslation('tech');
+  const C = Math.min(42, Math.floor(320 / p.w));
+  const c = (v: number) => v * C + C / 2;
+  const blocked = new Set(p.blocked.map((b) => b.join(',')));
+  return (
+    <View
+      style={LTR}
+      {...ltr}
+      accessible
+      accessibilityLabel={t('play.robot.gridA11y', {
+        w: p.w,
+        h: p.h,
+        rx: p.robot[0] + 1,
+        ry: p.robot[1] + 1,
+        px: p.kitten[0] + 1,
+        py: p.kitten[1] + 1,
+      })}>
+      <Svg width={p.w * C} height={p.h * C}>
+        {Array.from({ length: p.h }, (_, y) =>
+          Array.from({ length: p.w }, (_, x) =>
+            blocked.has(`${x},${y}`) ? (
+              <G key={`${x},${y}`}>
+                <Rect x={x * C + 1} y={y * C + 1} width={C - 2} height={C - 2} fill="#D9D7E3" />
+                <Line x1={x * C + 1} y1={y * C + C - 1} x2={x * C + C - 1} y2={y * C + 1} stroke="#B9B7C8" />
+              </G>
+            ) : (
+              <Rect
+                key={`${x},${y}`}
+                x={x * C + 1}
+                y={y * C + 1}
+                width={C - 2}
+                height={C - 2}
+                fill="#fff"
+                stroke={D.grid}
+              />
+            ),
+          ),
+        )}
+        {p.home && (
+          <Rect
+            x={p.home[0] * C + 4}
+            y={p.home[1] * C + 4}
+            width={C - 8}
+            height={C - 8}
+            fill="#E3F5F1"
+            stroke={D.good}
+            strokeWidth={2}
+            strokeDasharray="4 3"
+          />
+        )}
+        {!at.carrying && (
+          <Rect
+            x={p.kitten[0] * C + C * 0.28}
+            y={p.kitten[1] * C + C * 0.28}
+            width={C * 0.44}
+            height={C * 0.44}
+            rx={2}
+            fill="#FFF3DC"
+            stroke={D.warm}
+            strokeWidth={1.8}
+          />
+        )}
+        {path && path.length > 1 && (
+          <Polyline
+            points={path.map((s) => `${c(s.x)},${c(s.y)}`).join(' ')}
+            stroke={D.accent}
+            strokeWidth={2}
+            fill="none"
+          />
+        )}
+        <Circle cx={c(at.x)} cy={c(at.y)} r={C * 0.32} fill={D.accent} />
+        {at.carrying && (
+          <Rect
+            x={c(at.x) - C * 0.13}
+            y={c(at.y) - C * 0.13}
+            width={C * 0.26}
+            height={C * 0.26}
+            fill="#FFF3DC"
+            stroke={D.warm}
+          />
+        )}
+        <Path d={`M${c(at.x) - 3},${c(at.y) - C * 0.32 - 4} h6`} stroke={D.accent} />
+      </Svg>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  top: { position: 'absolute', left: Spacing.md, right: Spacing.md, top: 56 },
-  bottom: { position: 'absolute', left: Spacing.md, right: Spacing.md, bottom: Spacing.sm },
-  cell: {
-    position: 'absolute',
-    borderRadius: 8,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: 'rgba(124,145,180,0.55)',
-    borderWidth: 1,
-    borderColor: 'rgba(255,255,255,0.25)',
-  },
-  water: { backgroundColor: 'rgba(43,120,214,0.85)', borderColor: '#7FC4FF' },
-  home: { backgroundColor: 'rgba(255,200,87,0.35)', borderColor: Colors.reward, borderWidth: 2 },
-  heading: { fontFamily: BOLD, fontSize: 10, color: Colors.reward, letterSpacing: 1 },
-  wrap: { flexDirection: 'row', flexWrap: 'wrap', gap: 6 },
-  card: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 3,
-    paddingHorizontal: 10,
-    paddingVertical: 7,
-    borderRadius: 10,
-    backgroundColor: '#2D9CDB',
-  },
-  cardText: { fontFamily: BOLD, color: '#fff', fontSize: 13 },
+  count: { fontFamily: Fonts.bold, fontSize: 13, color: W.inkSoft },
+  legend: { flexDirection: 'row', flexWrap: 'wrap', gap: 12, justifyContent: 'center', marginTop: 8 },
+  editor: { borderRadius: 10, backgroundColor: '#F1F0F6', borderWidth: 1, borderColor: W.line, paddingVertical: 4 },
+  line: { flexDirection: 'row', alignItems: 'center', gap: 10, minHeight: 36, paddingHorizontal: 10 },
+  lineNo: { fontFamily: MONO, fontSize: 13, color: W.muted },
+  code: { flex: 1, fontFamily: MONO, fontSize: 15, color: W.ink },
+  hint: { fontFamily: Fonts.regular, fontSize: 13, color: W.inkSoft },
+  pad: { flexDirection: 'row', flexWrap: 'wrap', gap: 8 },
   arrow: {
-    minWidth: 48,
-    height: 44,
-    paddingHorizontal: 10,
-    borderRadius: 12,
+    width: 52,
+    height: 48,
+    borderRadius: 10,
+    backgroundColor: W.key,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#2D9CDB',
   },
-  op: { backgroundColor: '#27AE60' },
-  secondary: {
-    height: 52,
-    paddingHorizontal: 16,
-    borderRadius: 999,
+  op: {
+    minHeight: 48,
+    paddingHorizontal: 14,
+    borderRadius: 10,
+    borderWidth: 1.5,
+    borderColor: W.ink,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: 'rgba(124,92,255,0.35)',
   },
+  opText: { fontFamily: MONO, fontSize: 14, color: W.ink },
+});
+
+defineGameFrame('robot-rescue', {
+  hearts: false,
+  review: (run) =>
+    ((run as RobotRescueRun).puzzles ?? []).flatMap((x) =>
+      x.result
+        ? [{ key: String(x.id), correct: x.result.correct, main: `${x.w}×${x.h}`, detail: `${x.result.points}` }]
+        : [],
+    ),
 });

@@ -1,24 +1,15 @@
 import { Ionicons } from '@expo/vector-icons';
-import { Image } from 'expo-image';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import {
-  ActivityIndicator,
-  Modal,
-  Pressable,
-  ScrollView,
-  StyleSheet,
-  TextInput,
-  View,
-} from 'react-native';
-import Animated, { FadeInDown } from 'react-native-reanimated';
+import { ActivityIndicator, Modal, Pressable, ScrollView, StyleSheet, TextInput, View } from 'react-native';
+import Animated, { FadeIn, FadeInDown } from 'react-native-reanimated';
 
+import { CoinCost, FONT, PrimaryButton, W } from '@/components/games/ui';
 import { Text } from '@/components/ui';
-import { Colors, NoWebOutline, Spacing } from '@/constants/theme';
-import { KORA_IMAGE } from '@/lib/games/english';
+import { Fonts, NoWebOutline } from '@/constants/theme';
 import { useSession } from '@/lib/session';
 
-import { ASK_COST, BOLD, Coins, GoldButton } from './hud';
+import { ASK_COST } from './hud';
 
 /** Ask Kora about the current task, for 10 coins a question. Kora guides; it won't give the answer. */
 export function AskKora({
@@ -50,36 +41,47 @@ export function AskKora({
   };
 
   return (
-    <Modal visible={visible} transparent animationType="slide" onRequestClose={onClose}>
-      <View style={styles.backdrop}>
+    <Modal visible={visible} transparent animationType="none" onRequestClose={onClose}>
+      <Animated.View entering={FadeIn.duration(150)} style={styles.backdrop}>
         <Pressable style={{ flex: 1 }} onPress={onClose} accessibilityLabel={t('ask.close')} />
-        <View style={styles.sheet}>
+        <View style={styles.sheet} accessibilityViewIsModal>
           <View style={styles.head}>
-            <Image source={KORA_IMAGE} style={{ width: 52, height: 52 }} contentFit="contain" accessible={false} />
-            <View style={{ flex: 1 }}>
-              <Text style={{ fontFamily: BOLD, fontSize: 18, color: '#fff' }}>{t('ask.title')}</Text>
-              <Text style={{ fontSize: 12, color: 'rgba(235,238,255,0.8)' }}>{t('ask.cost', { cost: ASK_COST })}</Text>
+            <View style={styles.icon}>
+              <Ionicons name="chatbubble-ellipses-outline" size={22} color={W.ink} />
             </View>
-            <Coins />
-            <Pressable onPress={onClose} accessibilityRole="button" accessibilityLabel={t('ask.close')} hitSlop={10}>
-              <Ionicons name="close" size={24} color="#fff" />
+            <View style={{ flex: 1 }}>
+              <Text style={styles.title} accessibilityRole="header">
+                {t('ask.title')}
+              </Text>
+              <Text style={styles.small}>{t('ask.cost', { cost: ASK_COST })}</Text>
+            </View>
+            <View style={styles.coins} accessibilityLabel={String(user?.coins ?? 0)}>
+              <CoinCost cost={user?.coins ?? 0} />
+            </View>
+            <Pressable
+              onPress={onClose}
+              accessibilityRole="button"
+              accessibilityLabel={t('ask.close')}
+              hitSlop={8}
+              style={styles.close}>
+              <Ionicons name="close" size={22} color={W.ink} />
             </Pressable>
           </View>
-          <ScrollView style={{ maxHeight: 300 }} contentContainerStyle={{ gap: Spacing.sm }}>
+          <ScrollView style={{ maxHeight: 300 }} contentContainerStyle={{ gap: 10 }}>
             {chat.map((m, k) => (
-              <Animated.View key={k} entering={FadeInDown} style={{ gap: 6 }}>
+              <Animated.View key={k} entering={FadeInDown.duration(180)} style={{ gap: 6 }}>
                 <View style={[styles.bubble, styles.me]}>
-                  <Text style={{ color: '#fff' }}>{m.q}</Text>
+                  <Text style={{ color: '#fff', fontFamily: Fonts.semibold, fontSize: 15 }}>{m.q}</Text>
                 </View>
-                <View style={[styles.bubble, styles.kora]}>
-                  <Text style={{ color: '#1E145A' }}>{m.a}</Text>
+                <View style={[styles.bubble, styles.kora]} accessibilityLiveRegion="polite">
+                  <Text style={{ color: W.ink, fontFamily: Fonts.regular, fontSize: 15, lineHeight: 22 }}>{m.a}</Text>
                 </View>
               </Animated.View>
             ))}
-            {busy && <ActivityIndicator color={Colors.reward} />}
+            {busy && <ActivityIndicator color={W.ink} />}
           </ScrollView>
           {broke ? (
-            <Text style={{ color: '#FF8FA6', textAlign: 'center' }}>{t('ask.noCoins', { cost: ASK_COST })}</Text>
+            <Text style={[styles.small, { color: W.wrong, textAlign: 'center' }]}>{t('ask.noCoins', { cost: ASK_COST })}</Text>
           ) : (
             <>
               <View style={styles.quick}>
@@ -89,8 +91,8 @@ export function AskKora({
                     onPress={() => void send(q)}
                     disabled={busy}
                     accessibilityRole="button"
-                    style={styles.chip}>
-                    <Text style={{ fontSize: 13, color: '#fff' }}>{q}</Text>
+                    style={({ pressed }) => [styles.chip, pressed && { backgroundColor: W.key }]}>
+                    <Text style={{ fontFamily: Fonts.semibold, fontSize: 14, color: W.ink }}>{q}</Text>
                   </Pressable>
                 ))}
               </View>
@@ -99,60 +101,78 @@ export function AskKora({
                   value={question}
                   onChangeText={setQuestion}
                   placeholder={t('ask.placeholder')}
-                  placeholderTextColor="rgba(235,238,255,0.5)"
+                  placeholderTextColor={W.muted}
                   style={[styles.input, NoWebOutline]}
                   maxLength={300}
                   onSubmitEditing={() => question.trim() && void send(question.trim())}
                   accessibilityLabel={t('ask.placeholder')}
                 />
-                <View style={{ width: 120 }}>
-                  <GoldButton
-                    title={t('ask.send', { cost: ASK_COST })}
-                    disabled={!question.trim() || busy}
-                    onPress={() => void send(question.trim())}
-                  />
-                </View>
+                <PrimaryButton
+                  title={t('ask.send', { cost: ASK_COST })}
+                  disabled={!question.trim() || busy}
+                  onPress={() => void send(question.trim())}
+                  style={{ minHeight: 48, paddingHorizontal: 18 }}
+                />
               </View>
             </>
           )}
         </View>
-      </View>
+      </Animated.View>
     </Modal>
   );
 }
 
 const styles = StyleSheet.create({
-  backdrop: { flex: 1, backgroundColor: 'rgba(5,6,20,0.6)' },
+  backdrop: { flex: 1, backgroundColor: 'rgba(14,16,32,0.5)' },
   sheet: {
-    gap: Spacing.sm,
-    padding: Spacing.md,
-    paddingBottom: Spacing.xl,
-    borderTopLeftRadius: 24,
-    borderTopRightRadius: 24,
-    backgroundColor: '#141A45',
+    gap: 12,
+    padding: 18,
+    paddingBottom: 28,
+    borderTopLeftRadius: 20,
+    borderTopRightRadius: 20,
+    backgroundColor: W.surface,
     maxWidth: 620,
     width: '100%',
     alignSelf: 'center',
   },
-  head: { flexDirection: 'row', alignItems: 'center', gap: Spacing.sm },
-  bubble: { padding: 10, borderRadius: 16, maxWidth: '88%' },
-  me: { alignSelf: 'flex-end', backgroundColor: '#4B36D6', borderBottomRightRadius: 4 },
-  kora: { alignSelf: 'flex-start', backgroundColor: '#D9CCFF', borderBottomLeftRadius: 4 },
-  quick: { flexDirection: 'row', flexWrap: 'wrap', gap: 6 },
+  head: { flexDirection: 'row', alignItems: 'center', gap: 12 },
+  icon: { width: 44, height: 44, borderRadius: 22, backgroundColor: W.given, alignItems: 'center', justifyContent: 'center' },
+  title: { fontFamily: FONT, fontSize: 19, color: W.ink, letterSpacing: -0.2 },
+  small: { fontFamily: Fonts.regular, fontSize: 13, lineHeight: 18, color: W.inkSoft },
+  coins: { paddingHorizontal: 10, paddingVertical: 6, borderRadius: 999, borderWidth: 1, borderColor: W.line },
+  close: {
+    width: 40,
+    height: 40,
+    borderRadius: 20,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderWidth: 1,
+    borderColor: W.line,
+  },
+  bubble: { paddingVertical: 10, paddingHorizontal: 12, borderRadius: 14, maxWidth: '88%' },
+  me: { alignSelf: 'flex-end', backgroundColor: W.ink, borderBottomRightRadius: 4 },
+  kora: { alignSelf: 'flex-start', backgroundColor: W.given, borderBottomLeftRadius: 4 },
+  quick: { flexDirection: 'row', flexWrap: 'wrap', gap: 8 },
   chip: {
-    paddingHorizontal: 12,
-    paddingVertical: 8,
+    minHeight: 40,
+    justifyContent: 'center',
+    paddingHorizontal: 14,
     borderRadius: 999,
     borderWidth: 1,
-    borderColor: 'rgba(255,200,87,0.5)',
+    borderColor: W.lineStrong,
+    backgroundColor: W.surface,
   },
-  inputRow: { flexDirection: 'row', gap: Spacing.sm, alignItems: 'center' },
+  inputRow: { flexDirection: 'row', gap: 10, alignItems: 'center' },
   input: {
     flex: 1,
-    height: 52,
+    height: 48,
     borderRadius: 999,
     paddingHorizontal: 16,
-    color: '#fff',
-    backgroundColor: 'rgba(255,255,255,0.08)',
+    color: W.ink,
+    fontFamily: Fonts.regular,
+    fontSize: 15,
+    backgroundColor: W.page,
+    borderWidth: 1,
+    borderColor: W.line,
   },
 });

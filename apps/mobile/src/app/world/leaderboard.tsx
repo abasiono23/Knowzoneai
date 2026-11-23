@@ -1,15 +1,15 @@
 import { Ionicons } from '@expo/vector-icons';
-import { LinearGradient } from 'expo-linear-gradient';
 import { router, useFocusEffect } from 'expo-router';
 import { useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ActivityIndicator, Pressable, StyleSheet, View } from 'react-native';
 
+import { FONT, W } from '@/components/games/ui';
 import { BoardRow } from '@/components/world/board-row';
 import { PlayerMenu } from '@/components/world/player-menu';
-import { ChoiceChip } from '@/components/personalize/choice-chip';
-import { Card, Screen, ScreenHeader, Text } from '@/components/ui';
-import { Colors, Radius, Spacing } from '@/constants/theme';
+import { worldStyles } from '@/components/world/world-ui';
+import { Screen, ScreenHeader, Text } from '@/components/ui';
+import { Fonts } from '@/constants/theme';
 import { formatNumber } from '@/i18n';
 import { errorText } from '@/i18n/errors';
 import { useFlipStyle } from '@/i18n/provider';
@@ -72,21 +72,19 @@ export default function LeaderboardScreen() {
   return (
     <Screen withTabBar={false}>
       <ScreenHeader eyebrow={t('eyebrow')} title={t('leaderboard.title')} />
-      <LinearGradient
-        colors={[tier.color, '#2A2F5E']}
-        start={{ x: 0, y: 0 }}
-        end={{ x: 1, y: 1 }}
-        style={styles.league}>
-        <Text style={{ fontSize: 40 }}>🏆</Text>
+      <View style={styles.league}>
+        <View style={[styles.trophy, { borderColor: tier.color }]}>
+          <Ionicons name="trophy-outline" size={26} color={tier.color} />
+        </View>
         <View style={{ flex: 1, gap: 2 }}>
-          <Text variant="label" color="rgba(255,255,255,0.85)">
+          <Text style={styles.eyebrow}>
             {t('leaderboard.thisWeekEyebrow')}
             {league ? ` · ${t('leaderboard.endsIn', { time: left(league.endsIn) })}` : ''}
           </Text>
-          <Text variant="title" color="#fff">
+          <Text style={styles.title} accessibilityRole="header">
             {t('leaderboard.league', { league: tier.name })}
           </Text>
-          <Text variant="small" color="rgba(255,255,255,0.9)">
+          <Text style={worldStyles.small}>
             {USE_MOCKS
               ? t('leaderboard.offline')
               : league?.restricted
@@ -101,61 +99,61 @@ export default function LeaderboardScreen() {
                     : ''}
           </Text>
         </View>
-      </LinearGradient>
+      </View>
 
-      <View style={styles.filters}>
-        <ChoiceChip label={t('leaderboard.tabs.league')} selected={tab === 'league'} onPress={() => setTab('league')} />
-        <ChoiceChip label={t('leaderboard.tabs.school')} selected={tab === 'school'} onPress={() => setTab('school')} />
+      <View style={styles.tabs} accessibilityRole="tablist">
+        {(['league', 'school'] as const).map((id) => (
+          <Pressable
+            key={id}
+            onPress={() => setTab(id)}
+            accessibilityRole="tab"
+            accessibilityState={{ selected: tab === id }}
+            style={[styles.tab, tab === id && styles.tabOn]}>
+            <Text style={[styles.tabText, tab === id && { color: '#fff' }]}>{t(`leaderboard.tabs.${id}`)}</Text>
+          </Pressable>
+        ))}
       </View>
 
       <Pressable
         onPress={() => router.push('/world/friends')}
         accessibilityRole="button"
         accessibilityLabel={t('leaderboard.friends')}>
-        <Card style={styles.friends}>
-          <Ionicons name="people" size={20} color={Colors.info} />
-          <Text variant="bodyStrong" style={{ flex: 1 }}>
-            {t('leaderboard.friends')}
-          </Text>
-          <Ionicons name="chevron-forward" size={18} color={Colors.textMuted} style={flip} />
-        </Card>
+        <View style={[styles.card, styles.friends]}>
+          <Ionicons name="people-outline" size={20} color={W.ink} />
+          <Text style={[worldStyles.strong, { flex: 1 }]}>{t('leaderboard.friends')}</Text>
+          <Ionicons name="chevron-forward" size={18} color={W.muted} style={flip} />
+        </View>
       </Pressable>
 
       {!!error && (
-        <Text variant="small" color={Colors.danger}>
-          {error}
-        </Text>
+        <Text style={[worldStyles.small, { color: W.wrong }]}>{error}</Text>
       )}
       {!league && !error && !USE_MOCKS ? (
-        <ActivityIndicator color={Colors.primary} style={{ marginTop: Spacing.lg }} />
+        <ActivityIndicator color={W.ink} style={{ marginTop: 24 }} />
       ) : tab === 'school' && school && !school.school ? (
-        <Card>
-          <Text variant="small">{t('leaderboard.noSchool')}</Text>
-        </Card>
+        <View style={styles.card}>
+          <Text style={worldStyles.small}>{t('leaderboard.noSchool')}</Text>
+        </View>
       ) : (
         <>
           {tab === 'school' && school?.school && (
-            <Text variant="label" color={Colors.textMuted}>
-              {t('leaderboard.schoolTitle', { school: school.school })}
-            </Text>
+            <Text style={styles.eyebrow}>{t('leaderboard.schoolTitle', { school: school.school }).toUpperCase()}</Text>
           )}
           {rows.length === 0 ? (
             league?.joined || tab === 'school' ? (
-              <Card>
-                <Text variant="small" color={Colors.textSecondary}>
-                  {t('leaderboard.empty')}
-                </Text>
-              </Card>
+              <View style={styles.card}>
+                <Text style={worldStyles.small}>{t('leaderboard.empty')}</Text>
+              </View>
             ) : null
           ) : (
-            <Card style={{ padding: Spacing.xs, gap: 2 }}>
+            <View style={styles.list}>
               {rows.map((r, k) => {
                 const promote = tab === 'league' && league ? league.promote : 0;
                 const demote = tab === 'league' && league ? league.demote : 0;
                 return (
-                  <View key={r.id}>
+                  <View key={r.id} style={k > 0 && worldStyles.rowLine}>
                     {demote > 0 && k === rows.length - demote && rows.length > promote + demote && (
-                      <Zone label={t('leaderboard.demotionZone')} color={Colors.danger} icon="arrow-down" />
+                      <Zone label={t('leaderboard.demotionZone')} color={W.wrong} icon="arrow-down" />
                     )}
                     <BoardRow
                       rank={r.rank ?? k + 1}
@@ -166,27 +164,25 @@ export default function LeaderboardScreen() {
                       menu={r.me ? undefined : <PlayerMenu id={r.id} name={nameOf(r)} />}
                     />
                     {promote > 0 && k === promote - 1 && k < rows.length - 1 && (
-                      <Zone label={t('leaderboard.promotionZone')} color={Colors.success} icon="arrow-up" />
+                      <Zone label={t('leaderboard.promotionZone')} color={W.correct} icon="arrow-up" />
                     )}
                   </View>
                 );
               })}
-            </Card>
+            </View>
           )}
         </>
       )}
 
-      <Card style={styles.privacy}>
-        <Ionicons name="shield-checkmark" size={20} color={Colors.success} />
-        <View style={{ flex: 1 }}>
-          <Text variant="small">{t('leaderboard.privacy')}</Text>
-          <Pressable onPress={() => router.push('/world/settings')} accessibilityRole="link">
-            <Text variant="small" color={Colors.primary}>
-              {t('leaderboard.privacyLink')}
-            </Text>
+      <View style={[styles.card, styles.privacy]}>
+        <Ionicons name="shield-checkmark-outline" size={20} color={W.correct} />
+        <View style={{ flex: 1, gap: 4 }}>
+          <Text style={worldStyles.small}>{t('leaderboard.privacy')}</Text>
+          <Pressable onPress={() => router.push('/world/settings')} accessibilityRole="link" style={{ minHeight: 32, justifyContent: 'center' }}>
+            <Text style={[worldStyles.small, { color: W.focus, fontFamily: Fonts.bold }]}>{t('leaderboard.privacyLink')}</Text>
           </Pressable>
         </View>
-      </Card>
+      </View>
     </Screen>
   );
 }
@@ -195,19 +191,26 @@ function Zone({ label, color, icon }: { label: string; color: string; icon: 'arr
   return (
     <View style={styles.zone}>
       <Ionicons name={icon} size={12} color={color} />
-      <Text variant="label" color={color} style={{ fontSize: 10 }}>
-        {label}
-      </Text>
-      <View style={[styles.zoneLine, { backgroundColor: color + '66' }]} />
+      <Text style={[styles.zoneText, { color }]}>{label.toUpperCase()}</Text>
+      <View style={[styles.zoneLine, { backgroundColor: color + '55' }]} />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  league: { flexDirection: 'row', alignItems: 'center', gap: Spacing.md, padding: Spacing.lg, borderRadius: Radius.xl },
-  filters: { flexDirection: 'row', flexWrap: 'wrap', gap: Spacing.xs },
-  friends: { flexDirection: 'row', alignItems: 'center', gap: Spacing.sm },
-  zone: { flexDirection: 'row', alignItems: 'center', gap: 4, paddingHorizontal: Spacing.sm, paddingVertical: 4 },
+  league: { flexDirection: 'row', alignItems: 'center', gap: 14, padding: 16, borderRadius: 16, backgroundColor: W.surface, borderWidth: 1, borderColor: W.line },
+  trophy: { width: 52, height: 52, borderRadius: 26, borderWidth: 2, alignItems: 'center', justifyContent: 'center' },
+  eyebrow: { fontFamily: Fonts.bold, fontSize: 11, letterSpacing: 1.2, color: W.muted },
+  title: { fontFamily: FONT, fontSize: 22, letterSpacing: -0.3, color: W.ink },
+  tabs: { flexDirection: 'row', gap: 4, padding: 4, borderRadius: 999, backgroundColor: W.key },
+  tab: { flex: 1, alignItems: 'center', justifyContent: 'center', minHeight: 40, borderRadius: 999 },
+  tabOn: { backgroundColor: W.ink },
+  tabText: { fontFamily: Fonts.bold, fontSize: 14, color: W.ink },
+  card: { padding: 14, borderRadius: 14, backgroundColor: W.surface, borderWidth: 1, borderColor: W.line },
+  list: { borderRadius: 16, backgroundColor: W.surface, borderWidth: 1, borderColor: W.line, overflow: 'hidden' },
+  friends: { flexDirection: 'row', alignItems: 'center', gap: 10, minHeight: 52 },
+  zone: { flexDirection: 'row', alignItems: 'center', gap: 6, paddingHorizontal: 12, paddingVertical: 6, backgroundColor: W.page },
+  zoneText: { fontFamily: Fonts.bold, fontSize: 10, letterSpacing: 0.8 },
   zoneLine: { flex: 1, height: 1 },
-  privacy: { flexDirection: 'row', gap: Spacing.sm, alignItems: 'flex-start' },
+  privacy: { flexDirection: 'row', gap: 10, alignItems: 'flex-start' },
 });

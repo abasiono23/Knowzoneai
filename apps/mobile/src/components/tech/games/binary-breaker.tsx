@@ -1,195 +1,226 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Pressable, StyleSheet, View } from 'react-native';
-import Animated, { FadeInDown, ZoomIn } from 'react-native-reanimated';
-import { SafeAreaView } from 'react-native-safe-area-context';
 
-import { Backdrop } from '@/components/lab/backdrop';
-import { BOLD, Choice, GoldButton, Panel } from '@/components/lab/hud';
+import { Feedback, PrimaryButton, W } from '@/components/games/ui';
+import { defineGameFrame } from '@/components/lab/contract';
+import { Card, CodeBlock, Eyebrow, LTR, ltr, MONO, QuizStep, Sheet, StepBar, useAdvance } from '@/components/space/kit';
 import { Text } from '@/components/ui';
-import { Colors, Spacing } from '@/constants/theme';
-import type { BinaryBreakerRun, GameOutcome } from '@/lib/api';
-import { TECH_SCENES } from '@/lib/games/tech';
+import { Fonts } from '@/constants/theme';
+import type { BinaryBreakerRun, GameOutcome, VaultType } from '@/lib/api';
+import { useKeys } from '@/lib/games/english';
 import type { TechGame } from '@/lib/games/use-lab-run';
 
-const value = (bits: number[]) => bits.reduce((n, b) => n * 2 + b, 0);
+/** Kinds answered by setting bits (the others are answered by choosing). */
+const SET: VaultType[] = ['set', 'add', 'hex', 'and', 'or', 'xor', 'shl', 'shr', 'neg', 'sub', 'gray'];
+const str = (b: number[]) => b.join('');
+const value = (b: number[]) => b.reduce((n, d) => n * 2 + d, 0);
+/** Groups of four bits, like engineers write them: 1011 0010. */
+const nibbles = (b: number[]) => str(b).replace(/(.{4})(?=.)/g, '$1 ');
+
+type Vault = BinaryBreakerRun['vaults'][number];
+
+/** The operands of a vault, written out in monospace (left to right in every language). */
+function operands(v: Vault): string | null {
+  switch (v.type) {
+    case 'add':
+      return `  ${nibbles(v.a!)}\n+ ${nibbles(v.b!)}`;
+    case 'and':
+    case 'or':
+    case 'xor':
+      return `    ${nibbles(v.a!)}\n${v.type.toUpperCase().padEnd(3)} ${nibbles(v.b!)}`;
+    case 'shl':
+      return `${nibbles(v.a!)} << ${v.n}`;
+    case 'shr':
+      return `${nibbles(v.a!)} >> ${v.n}`;
+    case 'hex':
+      return `0x${v.hex}`;
+    case 'neg':
+      return `−${v.n}`;
+    case 'sub':
+      return `${v.x} − ${v.y}`;
+    case 'gray':
+      return `n = ${v.n}`;
+    case 'hosts':
+      return `/${v.prefix}`;
+    case 'network':
+      return v.address ?? '';
+    case 'hamming':
+      return `a = ${nibbles(v.a!)}\nb = ${nibbles(v.b!)}`;
+    case 'read':
+    case 'ascii':
+    case 'signed':
+    case 'float':
+      return nibbles(v.shown!);
+    default:
+      return v.target !== undefined ? String(v.target) : null;
+  }
+}
 
 /**
- * Binary Breaker: open vaults by setting switches to a number, reading a binary number, decoding a
- * letter (ASCII) or adding two binary numbers. Place values are shown under every switch.
+ * Binary Breaker: open each vault by working in binary. Early levels set switches to a number or read
+ * one; later ones add, mask, shift, use two's complement, subnet an IPv4 address, count a Hamming
+ * distance, write Gray code, and decode IEEE 754 half precision. Every answer is checked on the server.
  */
 export function BinaryBreaker({ g, run }: { g: TechGame; run: BinaryBreakerRun }) {
   const { t } = useTranslation('tech');
-  const [i, setI] = useState(() => Math.min(run.at, run.vaults.length - 1));
+  const total = run.vaults.length;
+  const { i, next, over } = useAdvance(run, total, g.finish);
   const v = run.vaults[i]!;
-  const [bits, setBits] = useState<number[]>(() => Array(v.bits).fill(0));
-  const [choice, setChoice] = useState<string | null>(null);
-  const [outcome, setOutcome] = useState<GameOutcome | null>(null);
-  const settable = v.type === 'set' || v.type === 'add';
+  const settable = SET.includes(v.type);
+  const prompt = t(`play.binary.types.${v.type}`, { bits: v.bits, n: v.n, x: v.x, y: v.y });
+  const code = operands(v);
+  return (
+    <Sheet>
+      <StepBar label={t('play.binary.step', { n: i + 1, total })} n={i + 1} total={total} />
+      {settable ? (
+        <Card>
+          <Text style={styles.prompt}>{prompt}</Text>
+          {!!code && <CodeBlock text={code} />}
+          <BitInput key={v.id} v={v} level={run.level ?? 1} g={g} step={i} onNext={next} over={over} />
+        </Card>
+      ) : (
+        <QuizStep
+          stepKey={v.id}
+          q={prompt}
+          options={v.options ?? []}
+          mono
+          before={code ? <CodeBlock text={code} /> : undefined}
+          onAnswer={async (choice) => {
+            const res = await g.answer(choice === null ? { step: i, timeout: true } : { step: i, choice });
+            if (!res) return null;
+            g.buzz(res.outcome.correct ? 'success' : 'error');
+            return res.outcome;
+          }}
+          nextLabel={over ? t('play.finish') : undefined}
+          onNext={next}
+        />
+      )}
+    </Sheet>
+  );
+}
 
-  const unlock = async () => {
-    const res = await g.answer(settable ? { step: i, bits } : { step: i, choice: choice ?? '' });
+function BitInput({
+  v,
+  level,
+  g,
+  step,
+  onNext,
+  over,
+}: {
+  v: Vault;
+  level: number;
+  g: TechGame;
+  step: number;
+  onNext: () => void;
+  over: boolean;
+}) {
+  const { t } = useTranslation('tech');
+  const tg = useTranslation('games').t;
+  const [bits, setBits] = useState<number[]>(() => Array(v.bits).fill(0));
+  const [outcome, setOutcome] = useState<GameOutcome | null>(null);
+  const flip = (k: number) => !outcome && setBits(bits.map((b, n) => (n === k ? 1 - b : b)));
+  const send = async () => {
+    if (outcome || g.busy) return;
+    const res = await g.answer({ step, bits });
     if (!res) return;
     g.buzz(res.outcome.correct ? 'success' : 'error');
     setOutcome(res.outcome);
   };
-  const next = () => {
-    if (run.status !== 'playing' || run.hearts <= 0 || run.at >= run.vaults.length) {
-      void g.finish();
-      return;
-    }
-    const n = run.vaults[run.at]!;
-    setI(run.at);
-    setBits(Array(n.bits).fill(0));
-    setChoice(null);
-    setOutcome(null);
-  };
-
-  const shownBits = settable ? bits : (v.shown ?? []);
-  return (
-    <View style={StyleSheet.absoluteFill}>
-      <Backdrop source={TECH_SCENES.vault} dim={0.3} />
-      <SafeAreaView edges={['top']} style={styles.top} pointerEvents="none">
-        <Panel style={{ gap: 2 }}>
-          <Text style={{ fontFamily: BOLD, color: '#fff', fontSize: 14 }}>
-            {t('binary.objective', { n: i + 1, total: run.vaults.length })}
-          </Text>
-          <Text style={{ color: Colors.reward, fontSize: 15, fontFamily: BOLD }}>
-            {v.type === 'set'
-              ? t('binary.set', { n: v.target })
-              : v.type === 'add'
-                ? t('binary.add')
-                : v.type === 'read'
-                  ? t('binary.read')
-                  : t('binary.ascii')}
-          </Text>
-        </Panel>
-      </SafeAreaView>
-
-      <View style={styles.middle} pointerEvents="box-none">
-        <Animated.View key={i} entering={ZoomIn.springify()} style={styles.lock}>
-          {v.type === 'add' && (
-            <>
-              <BitRow bits={v.a ?? []} />
-              <Text style={{ color: '#fff', fontFamily: BOLD, fontSize: 20 }}>+</Text>
-              <BitRow bits={v.b ?? []} />
-              <View style={styles.rule} />
-            </>
-          )}
-          <View style={styles.row}>
-            {shownBits.map((b, k) => {
-              const place = 2 ** (shownBits.length - 1 - k);
-              return (
-                <View key={k} style={{ alignItems: 'center', gap: 4 }}>
-                  <Pressable
-                    disabled={!settable || !!outcome}
-                    onPress={() => {
-                      g.buzz('tap');
-                      setBits(bits.map((x, j) => (j === k ? 1 - x : x)));
-                    }}
-                    accessibilityRole="switch"
-                    accessibilityState={{ checked: b === 1 }}
-                    accessibilityLabel={t('binary.switchA11y', {
-                      value: place,
-                      state: b ? t('binary.on') : t('binary.off'),
-                    })}
-                    style={[styles.bit, b ? styles.bitOn : null]}>
-                    <Text style={{ fontFamily: BOLD, fontSize: 20, color: b ? '#062B24' : '#9FF5E8' }}>{b}</Text>
-                  </Pressable>
-                  <Text style={styles.place}>{place}</Text>
-                </View>
-              );
-            })}
-          </View>
-          {settable && <Text style={styles.value}>{t('binary.value', { n: value(bits) })}</Text>}
-        </Animated.View>
-      </View>
-
-      <SafeAreaView edges={['bottom']} style={styles.bottom} pointerEvents="box-none">
-        {outcome ? (
-          <Animated.View entering={FadeInDown}>
-            <Panel style={{ gap: Spacing.sm, borderColor: outcome.correct ? Colors.success : Colors.danger }}>
-              <Text style={{ fontFamily: BOLD, fontSize: 17, color: outcome.correct ? Colors.success : '#FF8FA6' }}>
-                {outcome.correct
-                  ? t('binary.right', { points: outcome.points })
-                  : t('binary.wrong', { answer: String(outcome.answer ?? '') })}
-              </Text>
-              <GoldButton title={t('binary.next')} icon="arrow-forward" onPress={next} />
-            </Panel>
-          </Animated.View>
-        ) : (
-          <Panel style={{ gap: Spacing.sm }}>
-            {!settable && (
-              <View style={styles.options}>
-                {(v.options ?? []).map((o) => (
-                  <View key={o} style={{ flexBasis: '45%', flexGrow: 1 }}>
-                    <Choice label={o} state={choice === o ? 'selected' : 'idle'} onPress={() => setChoice(o)} />
-                  </View>
-                ))}
-              </View>
-            )}
-            <GoldButton
-              title={t('binary.unlock')}
-              icon="lock-open"
-              disabled={g.busy || (!settable && !choice)}
-              onPress={() => void unlock()}
-            />
-          </Panel>
-        )}
-      </SafeAreaView>
-    </View>
+  useKeys((key) => {
+    if (key === 'Enter') return void (outcome ? onNext() : send());
+    const k = Number(key);
+    if (k >= 1 && k <= v.bits) flip(k - 1);
+  });
+  const answerBits = outcome ? Number(outcome.answer).toString(2).padStart(v.bits, '0') : null;
+  // Rows of eight switches at most.
+  const rows = Array.from({ length: Math.ceil(v.bits / 8) }, (_, r) =>
+    bits.slice(r * 8, r * 8 + 8).map((b, c) => [b, r * 8 + c] as const),
   );
-}
-
-function BitRow({ bits }: { bits: number[] }) {
   return (
-    <View style={styles.row}>
-      {bits.map((b, k) => (
-        <View key={k} style={[styles.bit, styles.small, b ? styles.bitOn : null]}>
-          <Text style={{ fontFamily: BOLD, fontSize: 15, color: b ? '#062B24' : '#9FF5E8' }}>{b}</Text>
+    <View style={{ gap: 12 }}>
+      <Eyebrow text={t('play.binary.switches')} />
+      {rows.map((row, r) => (
+        <View key={r} style={[styles.bits, LTR]} {...ltr}>
+          {row.map(([b, k]) => {
+            const place = v.bits - 1 - k;
+            return (
+              <View key={k} style={{ alignItems: 'center', gap: 4, flex: 1, maxWidth: 52 }}>
+                <Text style={styles.place}>{place < 11 ? 2 ** place : `2^${place}`}</Text>
+                <Pressable
+                  onPress={() => flip(k)}
+                  accessibilityRole="switch"
+                  accessibilityState={{ checked: b === 1 }}
+                  accessibilityLabel={t('play.binary.bitA11y', { place: 2 ** place, value: b })}
+                  style={[styles.bit, b === 1 && styles.bitOn]}>
+                  <Text style={[styles.bitText, b === 1 && { color: '#fff' }]}>{b}</Text>
+                </Pressable>
+              </View>
+            );
+          })}
         </View>
       ))}
+      {/* The running total helps on the easier levels only. */}
+      {level <= 4 && <Text style={styles.total}>{t('play.binary.total', { value: value(bits) })}</Text>}
+      {outcome ? (
+        <View style={{ gap: 10 }}>
+          <Feedback
+            tone={outcome.correct ? 'good' : 'bad'}
+            title={
+              outcome.correct ? `${tg('ui.correct')} · ${tg('ui.points', { count: outcome.points })}` : tg('ui.wrong')
+            }
+            detail={
+              outcome.correct
+                ? null
+                : t('play.binary.answer', { bits: answerBits!.replace(/(.{4})(?=.)/g, '$1 '), value: outcome.answer })
+            }
+          />
+          <PrimaryButton title={over ? t('play.finish') : tg('ui.next')} icon="arrow-forward" onPress={onNext} />
+        </View>
+      ) : (
+        <PrimaryButton
+          title={t('play.binary.open')}
+          icon="lock-open-outline"
+          busy={g.busy}
+          onPress={() => void send()}
+        />
+      )}
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  top: { position: 'absolute', left: Spacing.md, right: Spacing.md, top: 56 },
-  middle: {
-    position: 'absolute',
-    left: Spacing.md,
-    right: Spacing.md,
-    top: 150,
-    bottom: 220,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  bottom: { position: 'absolute', left: Spacing.md, right: Spacing.md, bottom: Spacing.md },
-  lock: {
-    alignItems: 'center',
-    gap: Spacing.sm,
-    padding: Spacing.md,
-    borderRadius: 24,
-    backgroundColor: 'rgba(6,20,30,0.85)',
-    borderWidth: 2,
-    borderColor: '#2DD4BF',
-    boxShadow: '0 0 24px rgba(45,212,191,0.5)',
-  },
-  row: { flexDirection: 'row', gap: 4 },
+  prompt: { fontFamily: Fonts.bold, fontSize: 17, lineHeight: 24, color: W.ink },
+  bits: { flexDirection: 'row', gap: 6, justifyContent: 'center' },
+  place: { fontFamily: MONO, fontSize: 11, color: W.muted },
   bit: {
-    width: 38,
-    height: 54,
-    borderRadius: 10,
+    width: '100%',
+    minWidth: 34,
+    height: 52,
+    borderRadius: 8,
+    borderWidth: 1.5,
+    borderColor: W.ink,
     alignItems: 'center',
     justifyContent: 'center',
-    borderWidth: 2,
-    borderColor: '#2DD4BF',
-    backgroundColor: 'rgba(45,212,191,0.08)',
+    backgroundColor: W.surface,
   },
-  small: { width: 30, height: 36 },
-  bitOn: { backgroundColor: '#2DD4BF', boxShadow: '0 0 12px #2DD4BF' },
-  place: { fontSize: 10, color: 'rgba(235,238,255,0.75)', fontFamily: BOLD },
-  value: { fontFamily: BOLD, fontSize: 26, color: '#9FF5E8' },
-  rule: { alignSelf: 'stretch', height: 2, backgroundColor: '#2DD4BF' },
-  options: { flexDirection: 'row', flexWrap: 'wrap', gap: 8 },
+  bitOn: { backgroundColor: W.ink },
+  bitText: { fontFamily: MONO, fontSize: 20, color: W.ink },
+  total: { fontFamily: Fonts.semibold, fontSize: 14, color: W.inkSoft, textAlign: 'center' },
+});
+
+defineGameFrame('binary-breaker', {
+  review: (run) =>
+    ((run as BinaryBreakerRun).vaults ?? []).flatMap((v) =>
+      v.result
+        ? [
+            {
+              key: String(v.id),
+              correct: v.result.correct,
+              main: `${v.type} · ${operands(v) ?? ''}`.replace(/\n/g, ' ; '),
+              detail: v.result.answer,
+            },
+          ]
+        : [],
+    ),
 });

@@ -4,14 +4,20 @@
  */
 export type CyberItem = {
   id: string;
-  kind: 'email' | 'sms' | 'password' | 'situation';
+  /** attack: name the attack; fix: choose the best defence (both from `options`). */
+  kind: 'email' | 'sms' | 'password' | 'situation' | 'attack' | 'fix';
   level: number;
   from?: string;
   subject?: string;
   body: string;
   link?: string;
-  /** email/sms: phishing | safe; password: weak | strong; situation: risky | safe. */
-  answer: 'phishing' | 'safe' | 'weak' | 'strong' | 'risky';
+  /** A log line or code snippet (shown in a monospace face). */
+  code?: string;
+  /** attack/fix: the question and its options (the right one first; the game shuffles them). */
+  question?: string;
+  options?: string[];
+  /** email/sms: phishing | safe; password: weak | strong; situation: risky | safe; attack/fix: one of `options`. */
+  answer: string;
   why: string;
 };
 

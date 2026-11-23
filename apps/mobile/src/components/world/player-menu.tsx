@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { Pressable, StyleSheet } from 'react-native';
 
 import { ActionSheet } from '@/components/ui';
-import { Colors } from '@/constants/theme';
+import { W } from '@/components/games/ui';
 import { useSafety } from '@/lib/safety/store';
 
 import { ConfirmDialog } from './overlays';
@@ -33,7 +33,7 @@ export function PlayerMenu({
         accessibilityRole="button"
         accessibilityLabel={t('playerMenu.more', { name })}
         style={styles.btn}>
-        <Ionicons name="ellipsis-horizontal" size={18} color={Colors.textMuted} />
+        <Ionicons name="ellipsis-horizontal" size={18} color={W.muted} />
       </Pressable>
       <ActionSheet
         visible={open}
@@ -90,5 +90,5 @@ export function PlayerMenu({
 }
 
 const styles = StyleSheet.create({
-  btn: { width: 32, height: 40, alignItems: 'center', justifyContent: 'center' },
+  btn: { width: 44, height: 44, alignItems: 'center', justifyContent: 'center' },
 });

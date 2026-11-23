@@ -4,14 +4,18 @@ import { useTranslation } from 'react-i18next';
 import { Modal, Pressable, StyleSheet, Switch, View } from 'react-native';
 import Animated, { FadeIn, SlideInDown, ZoomIn } from 'react-native-reanimated';
 
+import { FONT, PrimaryButton, SecondaryButton, W } from '@/components/games/ui';
 import { Button, Text } from '@/components/ui';
-import { Colors, Radius, Spacing } from '@/constants/theme';
+import { Colors, Fonts, Radius, Spacing } from '@/constants/theme';
 import type { GameQuestion } from '@/lib/world/types';
 import { useWorld } from '@/lib/world/store';
 
 import { Kora } from './world-ui';
 
-/** Screen 144: pause menu, over the paused game. */
+/**
+ * The pause menu over a paused game, in the word games' look: resume, start again, the timer and haptics
+ * switches, how to play and settings, and leave.
+ */
 export function PauseMenu({
   visible,
   title,
@@ -19,6 +23,7 @@ export function PauseMenu({
   onResume,
   onRestart,
   onQuit,
+  onHelp,
 }: {
   visible: boolean;
   title: string;
@@ -26,24 +31,25 @@ export function PauseMenu({
   onResume: () => void;
   onRestart: () => void;
   onQuit: () => void;
+  /** The game's own how-to-play; without it, the link opens the World tutorial. */
+  onHelp?: () => void;
 }) {
   const { settings, updateSettings } = useWorld();
   const { t } = useTranslation('world');
   return (
     <Modal visible={visible} transparent animationType="fade" onRequestClose={onResume}>
       <View style={styles.backdrop}>
-        <Animated.View entering={ZoomIn.duration(220)} style={styles.card}>
-          <View style={styles.pauseIcon}>
-            <Ionicons name="pause" size={28} color={Colors.primary} />
+        <Animated.View entering={ZoomIn.duration(180)} style={styles.card} accessibilityViewIsModal>
+          <View style={{ gap: 4 }}>
+            <Text style={styles.eyebrow} numberOfLines={2}>
+              {t('pause.subtitle', { title, subtitle }).toUpperCase()}
+            </Text>
+            <Text style={styles.title} accessibilityRole="header">
+              {t('pause.title')}
+            </Text>
           </View>
-          <Text variant="title" center>
-            {t('pause.title')}
-          </Text>
-          <Text variant="small" color={Colors.textSecondary} center>
-            {t('pause.subtitle', { title, subtitle })}
-          </Text>
-          <Button title={t('pause.resume')} icon="play" onPress={onResume} />
-          <Button variant="secondary" title={t('pause.restart')} icon="refresh" onPress={onRestart} />
+          <PrimaryButton title={t('pause.resume')} icon="play" onPress={onResume} />
+          <SecondaryButton title={t('pause.restart')} icon="refresh" onPress={onRestart} />
           <View style={styles.toggles}>
             <ToggleLine
               label={t('pause.timer')}
@@ -56,15 +62,15 @@ export function PauseMenu({
           <View style={styles.row}>
             <Pressable
               onPress={() => {
+                if (onHelp) return onHelp();
                 onResume();
                 router.push('/world/tutorial');
               }}
               accessibilityRole="button"
+              hitSlop={6}
               style={styles.link}>
-              <Ionicons name="help-circle-outline" size={16} color={Colors.textSecondary} />
-              <Text variant="small" color={Colors.textSecondary}>
-                {t('pause.howToPlay')}
-              </Text>
+              <Ionicons name="help-circle-outline" size={18} color={W.inkSoft} />
+              <Text style={styles.linkText}>{t('pause.howToPlay')}</Text>
             </Pressable>
             <Pressable
               onPress={() => {
@@ -72,14 +78,16 @@ export function PauseMenu({
                 router.push('/world/settings');
               }}
               accessibilityRole="button"
+              hitSlop={6}
               style={styles.link}>
-              <Ionicons name="settings-outline" size={16} color={Colors.textSecondary} />
-              <Text variant="small" color={Colors.textSecondary}>
-                {t('pause.settings')}
-              </Text>
+              <Ionicons name="settings-outline" size={18} color={W.inkSoft} />
+              <Text style={styles.linkText}>{t('pause.settings')}</Text>
             </Pressable>
           </View>
-          <Button variant="ghost" title={t('pause.quit')} icon="exit-outline" onPress={onQuit} />
+          <Pressable onPress={onQuit} accessibilityRole="button" hitSlop={6} style={[styles.link, styles.quit]}>
+            <Ionicons name="exit-outline" size={18} color={W.wrong} />
+            <Text style={[styles.linkText, { color: W.wrong }]}>{t('pause.quit')}</Text>
+          </Pressable>
         </Animated.View>
       </View>
     </Modal>
@@ -100,17 +108,13 @@ function ToggleLine({
   return (
     <View style={styles.toggle}>
       <View style={{ flex: 1 }}>
-        <Text variant="small">{label}</Text>
-        {hint && (
-          <Text variant="small" color={Colors.textMuted} style={{ fontSize: 11 }}>
-            {hint}
-          </Text>
-        )}
+        <Text style={styles.toggleLabel}>{label}</Text>
+        {hint && <Text style={styles.toggleHint}>{hint}</Text>}
       </View>
       <Switch
         value={value}
         onValueChange={onChange}
-        trackColor={{ true: Colors.primary, false: Colors.surfaceRaised }}
+        trackColor={{ true: W.ink, false: W.lineStrong }}
         thumbColor="#fff"
         accessibilityLabel={label}
       />
@@ -118,7 +122,7 @@ function ToggleLine({
   );
 }
 
-/** Screen 145 (and quit): a confirm dialog. */
+/** A confirm dialog (leave, start again, delete...), in the word games' look. */
 export function ConfirmDialog({
   visible,
   icon = 'refresh',
@@ -144,22 +148,16 @@ export function ConfirmDialog({
   return (
     <Modal visible={visible} transparent animationType="fade" onRequestClose={onCancel}>
       <View style={styles.backdrop}>
-        <Animated.View entering={ZoomIn.duration(200)} style={styles.card}>
-          <View
-            style={[
-              styles.pauseIcon,
-              destructive && { backgroundColor: Colors.dangerSoft, borderColor: Colors.danger },
-            ]}>
-            <Ionicons name={icon} size={26} color={destructive ? Colors.danger : Colors.reward} />
+        <Animated.View entering={ZoomIn.duration(180)} style={styles.card} accessibilityViewIsModal>
+          <View style={[styles.icon, destructive && { backgroundColor: W.wrongSoft }]}>
+            <Ionicons name={icon} size={24} color={destructive ? W.wrong : W.ink} />
           </View>
-          <Text variant="heading" center>
+          <Text style={[styles.title, styles.dialogTitle]} accessibilityRole="header">
             {title}
           </Text>
-          <Text variant="small" color={Colors.textSecondary} center>
-            {body}
-          </Text>
-          <Button variant={destructive ? 'danger' : 'primary'} title={confirmLabel} onPress={onConfirm} />
-          <Button variant="secondary" title={cancelLabel ?? t('confirm.keepPlaying')} onPress={onCancel} />
+          <Text style={styles.body}>{body}</Text>
+          <PrimaryButton title={confirmLabel} onPress={onConfirm} style={destructive ? { backgroundColor: W.wrong } : undefined} />
+          <SecondaryButton title={cancelLabel ?? t('confirm.keepPlaying')} onPress={onCancel} />
         </Animated.View>
       </View>
     </Modal>
@@ -248,44 +246,29 @@ export function HintSheet({
 }
 
 const styles = StyleSheet.create({
-  backdrop: {
-    flex: 1,
-    backgroundColor: 'rgba(5,8,26,0.82)',
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: Spacing.lg,
-  },
-  card: {
-    width: '100%',
-    maxWidth: 380,
-    gap: Spacing.sm,
-    padding: Spacing.lg,
-    borderRadius: Radius.lg,
-    backgroundColor: Colors.surface,
-    borderWidth: 1,
-    borderColor: Colors.borderStrong,
-  },
-  pauseIcon: {
+  backdrop: { flex: 1, backgroundColor: 'rgba(14,16,32,0.5)', alignItems: 'center', justifyContent: 'center', padding: 16 },
+  card: { width: '100%', maxWidth: 400, gap: 12, padding: 22, borderRadius: 20, backgroundColor: W.surface },
+  eyebrow: { fontFamily: Fonts.bold, fontSize: 11, letterSpacing: 1.2, color: W.muted },
+  title: { fontFamily: FONT, fontSize: 26, lineHeight: 32, letterSpacing: -0.5, color: W.ink },
+  dialogTitle: { textAlign: 'center', fontSize: 22, lineHeight: 28 },
+  body: { fontFamily: Fonts.regular, fontSize: 15, lineHeight: 22, color: W.inkSoft, textAlign: 'center', marginBottom: 4 },
+  icon: {
     alignSelf: 'center',
-    width: 60,
-    height: 60,
-    borderRadius: 30,
-    backgroundColor: Colors.primarySoft,
-    borderWidth: 1,
-    borderColor: Colors.primary,
+    width: 52,
+    height: 52,
+    borderRadius: 26,
+    backgroundColor: W.given,
     alignItems: 'center',
     justifyContent: 'center',
   },
-  toggles: {
-    gap: Spacing.xs,
-    paddingVertical: Spacing.xs,
-    borderTopWidth: 1,
-    borderBottomWidth: 1,
-    borderColor: Colors.border,
-  },
-  toggle: { flexDirection: 'row', alignItems: 'center', gap: Spacing.sm },
-  row: { flexDirection: 'row', justifyContent: 'center', gap: Spacing.lg },
-  link: { flexDirection: 'row', alignItems: 'center', gap: 4, padding: 4 },
+  toggles: { gap: 4, paddingVertical: 6, borderTopWidth: 1, borderBottomWidth: 1, borderColor: W.line },
+  toggle: { flexDirection: 'row', alignItems: 'center', gap: 12, minHeight: 48 },
+  toggleLabel: { fontFamily: Fonts.bold, fontSize: 15, color: W.ink },
+  toggleHint: { fontFamily: Fonts.regular, fontSize: 13, lineHeight: 18, color: W.muted },
+  row: { flexDirection: 'row', justifyContent: 'center', flexWrap: 'wrap', gap: 16 },
+  link: { flexDirection: 'row', alignItems: 'center', gap: 6, minHeight: 44, paddingHorizontal: 6 },
+  linkText: { fontFamily: Fonts.bold, fontSize: 14, color: W.inkSoft },
+  quit: { alignSelf: 'center' },
   sheetBackdrop: { flex: 1, backgroundColor: 'rgba(5,8,26,0.7)', justifyContent: 'flex-end' },
   sheet: {
     gap: Spacing.sm,

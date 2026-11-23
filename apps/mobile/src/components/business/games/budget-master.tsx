@@ -5,6 +5,9 @@ import { Pressable, View } from 'react-native';
 
 import {
   Action,
+  AnalystDesk,
+  atDesk,
+  BarList,
   Card,
   Eyebrow,
   GameScreen,
@@ -23,23 +26,35 @@ import {
 import { BOLD } from '@/components/lab/hud';
 import { Text } from '@/components/ui';
 import type { BudgetKey, BudgetMasterRun } from '@/lib/api';
-import { BUSINESS_SCENES, money } from '@/lib/games/business';
+import { money } from '@/lib/games/business';
 import type { BusinessGame } from '@/lib/games/use-lab-run';
+import { defineGameFrame } from '@/components/lab/contract';
+import { t as i18nT } from 'i18next';
 
-const NEEDS = '#4C7BF3';
-const WANTS = '#F2A93B';
-const SAVE = '#1E9E6A';
+import { deskReview } from '../review';
+
+/** Translation outside React (review lists for the results screen). */
+const tr = i18nT as unknown as (key: string, options?: Record<string, unknown>) => string;
+
+const NEEDS = '#16192E';
+const WANTS = '#B26A00';
+const SAVE = '#2F6FD0';
 
 /**
  * Budget Master: plan a month's pay. Bills come first; then food, wants, the emergency fund, a
  * savings goal and extra debt payments must use every dollar. Then something happens.
  */
-export function BudgetMaster({ g, run }: { g: BusinessGame; run: BudgetMasterRun }) {
+export function BudgetMaster({ g, run, paused }: { g: BusinessGame; run: BudgetMasterRun; paused?: boolean }) {
   const [i, setI] = useState(() => Math.min(run.at, run.income.length - 1));
+  const [desk, setDesk] = useState(() => atDesk(run));
   const next = () => {
-    if (run.status !== 'playing' || run.hearts <= 0 || run.at >= run.income.length) void g.finish();
-    else setI(run.at);
+    if (run.status !== 'playing' || run.hearts <= 0) void g.finish();
+    else if (run.at >= run.income.length) {
+      if (run.analyst?.length) setDesk(true);
+      else void g.finish();
+    } else setI(run.at);
   };
+  if (desk) return <AnalystDesk g={g} run={run} paused={paused} />;
   return <Month key={i} g={g} run={run} i={i} onNext={next} />;
 }
 
@@ -94,7 +109,7 @@ function Month({ g, run, i, onNext }: { g: BusinessGame; run: BudgetMasterRun; i
   );
 
   if (report) {
-    const last = run.at >= run.income.length || run.hearts <= 0;
+    const last = (run.at >= run.income.length && !run.analyst?.length) || run.hearts <= 0;
     const check = (ok: boolean, text: string) => (
       <View key={text} style={kit.row}>
         <Ionicons name={ok ? 'checkmark-circle' : 'alert-circle'} size={18} color={ok ? GREEN : RED} />
@@ -103,7 +118,6 @@ function Month({ g, run, i, onNext }: { g: BusinessGame; run: BudgetMasterRun; i
     );
     return (
       <GameScreen
-        scene={BUSINESS_SCENES.budget}
         action={
           <Action
             title={last ? t('ui.finish') : t('ui.next')}
@@ -113,7 +127,21 @@ function Month({ g, run, i, onNext }: { g: BusinessGame; run: BudgetMasterRun; i
         }>
         {header}
         <Card>
-          <Eyebrow color="#6A4BE0">{t('budget.report', { n: i + 1 })}</Eyebrow>
+          <BarList
+            title={tx('charts.allocation')}
+            rows={[
+              { label: tx('charts.needs'), value: report.billTotal + report.plan.food },
+              { label: tx('charts.wants'), value: report.plan.fun + report.plan.clothes },
+              { label: tx('charts.savings'), value: report.plan.emergency + report.plan.goal + report.plan.debt, strong: true },
+            ]}
+          />
+          <View style={{ gap: 4 }}>
+            <Text style={kit.small}>{`${goalName}: ${money(report.goal)} / ${money(run.goal.amount)}`}</Text>
+            <Meter value={report.goal} max={run.goal.amount} />
+          </View>
+        </Card>
+        <Card>
+          <Eyebrow>{t('budget.report', { n: i + 1 })}</Eyebrow>
           {check(report.foodOk, report.foodOk ? t('budget.check.food') : t('budget.check.noFood'))}
           {check(report.savingRate >= 20, t('budget.check.saved', { pct: report.savingRate }))}
           {check(report.wantsRate <= 30, t('budget.check.wants', { pct: report.wantsRate }))}
@@ -181,13 +209,12 @@ function Month({ g, run, i, onNext }: { g: BusinessGame; run: BudgetMasterRun; i
 
   return (
     <GameScreen
-      scene={BUSINESS_SCENES.budget}
       action={
         <Action title={t('budget.run')} onPress={() => void submit()} disabled={g.busy} icon="calendar" note={note} />
       }>
       {header}
       <Card>
-        <Eyebrow color="#6A4BE0">{t('budget.event')}</Eyebrow>
+        <Eyebrow>{t('budget.event')}</Eyebrow>
         <Text style={kit.title}>{tx(`${e}.title`)}</Text>
         <Text style={kit.body}>{tx(`${e}.body`)}</Text>
         <Options
@@ -204,7 +231,7 @@ function Month({ g, run, i, onNext }: { g: BusinessGame; run: BudgetMasterRun; i
         />
       </Card>
       <Card>
-        <Eyebrow color="#6A4BE0">{t('budget.bills')}</Eyebrow>
+        <Eyebrow>{t('budget.bills')}</Eyebrow>
         <Statement
           rows={[
             ...Object.entries(run.bills).map(([id, amount]) => ({
@@ -216,7 +243,7 @@ function Month({ g, run, i, onNext }: { g: BusinessGame; run: BudgetMasterRun; i
         />
       </Card>
       <Card>
-        <Eyebrow color="#6A4BE0">{t('budget.plan')}</Eyebrow>
+        <Eyebrow>{t('budget.plan')}</Eyebrow>
         {run.keys.map((k) => (
           <Stepper
             key={k}
@@ -233,9 +260,9 @@ function Month({ g, run, i, onNext }: { g: BusinessGame; run: BudgetMasterRun; i
         <View style={{ gap: 6 }}>
           <SplitBar
             parts={[
-              { share: needs, color: NEEDS },
-              { share: wants, color: WANTS },
-              { share: savings, color: SAVE },
+              { share: needs, color: NEEDS, label: tx('charts.needs') },
+              { share: wants, color: WANTS, label: tx('charts.wants') },
+              { share: savings, color: SAVE, label: tx('charts.savings') },
             ]}
           />
           <Text style={kit.small}>
@@ -245,19 +272,58 @@ function Month({ g, run, i, onNext }: { g: BusinessGame; run: BudgetMasterRun; i
         </View>
         <View style={kit.row}>
           <Text style={{ flex: 1, fontFamily: BOLD, color: left === 0 ? GREEN : RED }}>
-            {left >= 0 ? t('ui.left', { amount: left }) : t('ui.over', { amount: -left })}
+            {left === 0 ? `✓ ${t('ui.left', { amount: 0 })}` : left > 0 ? t('ui.left', { amount: left }) : `⚠ ${t('ui.over', { amount: -left })}`}
           </Text>
           {left > 0 && (
             <Pressable
               onPress={() => setPlan((p) => ({ ...p, goal: p.goal + left }))}
               accessibilityRole="button"
-              style={{ paddingVertical: 6, paddingHorizontal: 10, borderRadius: 10, backgroundColor: '#E3F6EC' }}>
+              style={{ minHeight: 44, justifyContent: 'center', paddingHorizontal: 12, borderRadius: 10, backgroundColor: '#E3F5F1' }}>
               <Text style={{ color: GREEN, fontFamily: BOLD, fontSize: 12 }}>{t('budget.restToGoal')}</Text>
             </Pressable>
           )}
         </View>
-        <Meter value={planned + billTotal} max={income} color={left === 0 ? GREEN : left < 0 ? RED : '#7C5CFF'} />
+        <Meter value={planned + billTotal} max={income} color={left === 0 ? GREEN : left < 0 ? RED : '#16192E'} />
       </Card>
     </GameScreen>
   );
 }
+
+/** The how-to-play example: pocket money shared out. */
+function HowTo() {
+  const { t } = useTranslation('business');
+  const tx = t as unknown as (key: string) => string;
+  return (
+    <View style={{ gap: 10 }}>
+      <SplitBar
+        parts={[
+          { share: 140, color: NEEDS, label: tx('charts.needs') },
+          { share: 40, color: WANTS, label: tx('charts.wants') },
+          { share: 220, color: SAVE, label: tx('charts.savings') },
+        ]}
+      />
+    </View>
+  );
+}
+
+defineGameFrame('budget-master', {
+  HowTo,
+  review: (r) => {
+    const run = r as BudgetMasterRun;
+    return [
+      ...run.events.flatMap((e) =>
+        e.report
+          ? [
+              {
+                key: `m${e.report.month}`,
+                correct: e.report.points >= 60,
+                main: `${tr('business:budget.month', { n: e.report.month + 1, total: run.income.length })} · ${e.report.savingRate}%`,
+                detail: tr(`business:budget.events.${e.id}.title`),
+              },
+            ]
+          : [],
+      ),
+      ...deskReview(run),
+    ];
+  },
+});

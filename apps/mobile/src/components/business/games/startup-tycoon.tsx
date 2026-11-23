@@ -4,6 +4,9 @@ import { Pressable, StyleSheet, View } from 'react-native';
 
 import {
   Action,
+  AnalystDesk,
+  atDesk,
+  LineChart,
   Card,
   Eyebrow,
   GameScreen,
@@ -20,10 +23,16 @@ import {
 } from '@/components/business/kit';
 import { BOLD } from '@/components/lab/hud';
 import { Text } from '@/components/ui';
-import { Colors } from '@/constants/theme';
 import type { StaffRole, StartupTycoonRun } from '@/lib/api';
-import { BUSINESS_SCENES, money } from '@/lib/games/business';
+import { money } from '@/lib/games/business';
 import type { BusinessGame } from '@/lib/games/use-lab-run';
+import { defineGameFrame } from '@/components/lab/contract';
+import { t as i18nT } from 'i18next';
+
+import { deskReview } from '../review';
+
+/** Translation outside React (review lists for the results screen). */
+const tr = i18nT as unknown as (key: string, options?: Record<string, unknown>) => string;
 
 const ROLES: StaffRole[] = ['maker', 'seller', 'support'];
 const MARKETING = [0, 300, 600, 1200];
@@ -32,13 +41,23 @@ const MARKETING = [0, 300, 600, 1200];
  * Startup Tycoon: run a company month by month. Each month: a management decision, your team and
  * marketing; the server runs the month and sends back a profit and loss statement.
  */
-export function StartupTycoon({ g, run }: { g: BusinessGame; run: StartupTycoonRun }) {
+export function StartupTycoon({ g, run, paused }: { g: BusinessGame; run: StartupTycoonRun; paused?: boolean }) {
   const [i, setI] = useState(() => Math.min(run.at, run.months - 1));
+  const [desk, setDesk] = useState(() => atDesk(run));
   const next = () => {
-    if (run.status !== 'playing' || run.hearts <= 0 || run.at >= run.months || run.firm.bankrupt) void g.finish();
-    else setI(run.at);
+    if (run.status !== 'playing' || run.hearts <= 0 || run.firm.bankrupt) void g.finish();
+    else if (run.at >= run.months) {
+      if (run.analyst?.length) setDesk(true);
+      else void g.finish();
+    } else setI(run.at);
   };
+  if (desk) return <AnalystDesk g={g} run={run} paused={paused} />;
   return <Month key={i} g={g} run={run} i={i} onNext={next} />;
+}
+
+/** Cash at the start and after each month played so far. */
+function cashLine(run: StartupTycoonRun) {
+  return [run.startCash, ...run.dilemmas.flatMap((d) => (d.report ? [d.report.cash] : []))];
 }
 
 function Month({ g, run, i, onNext }: { g: BusinessGame; run: StartupTycoonRun; i: number; onNext: () => void }) {
@@ -88,10 +107,10 @@ function Month({ g, run, i, onNext }: { g: BusinessGame; run: StartupTycoonRun; 
           : report.capacity > report.demand * 1.2
             ? t('startup.ops.idle')
             : t('startup.ops.balanced');
-    const last = run.at >= run.months || run.firm.bankrupt || run.hearts <= 0;
+    const last = (run.at >= run.months && !run.analyst?.length) || run.firm.bankrupt || run.hearts <= 0;
+    const cash = cashLine(run);
     return (
       <GameScreen
-        scene={BUSINESS_SCENES.startup}
         action={
           <Action
             title={last ? t('ui.finish') : t('ui.next')}
@@ -101,12 +120,20 @@ function Month({ g, run, i, onNext }: { g: BusinessGame; run: StartupTycoonRun; 
         }>
         {header}
         <Card>
-          <Eyebrow color="#6A4BE0">{t('startup.report', { n: i + 1 })}</Eyebrow>
+          <LineChart
+            title={tx('charts.cash')}
+            labels={cash.map((_, k) => String(k))}
+            series={[{ name: tx('charts.cash'), values: cash }]}
+            summary={cash.map((c, k) => `${k}: ${money(c)}`).join(', ')}
+          />
+        </Card>
+        <Card>
+          <Eyebrow>{t('startup.report', { n: i + 1 })}</Eyebrow>
           <Text style={kit.body}>
             {t('startup.ops.line', { demand: report.demand, capacity: report.capacity, sold: report.sold })}
           </Text>
           {report.order > 0 && <Text style={kit.small}>{t('startup.ops.order', { count: report.order })}</Text>}
-          <Text style={[kit.small, { color: report.overload > 0 || turnedAway > 0 ? RED : '#5B6390' }]}>{ops}</Text>
+          <Text style={[kit.small, { color: report.overload > 0 || turnedAway > 0 ? RED : '#474C6B' }]}>{ops}</Text>
           {report.demand > report.market * 0.75 && <Text style={kit.small}>{t('startup.ops.saturated')}</Text>}
           <Statement
             rows={[
@@ -153,13 +180,12 @@ function Month({ g, run, i, onNext }: { g: BusinessGame; run: StartupTycoonRun; 
 
   return (
     <GameScreen
-      scene={BUSINESS_SCENES.startup}
       action={
         <Action title={t('startup.run')} onPress={() => void submit()} disabled={g.busy} icon="play" note={note} />
       }>
       {header}
       <Card>
-        <Eyebrow color="#6A4BE0">{t('startup.decision')}</Eyebrow>
+        <Eyebrow>{t('startup.decision')}</Eyebrow>
         <Text style={kit.title}>{tx(`${d}.title`)}</Text>
         <Text style={kit.body}>{tx(`${d}.body`)}</Text>
         <Options
@@ -172,15 +198,20 @@ function Month({ g, run, i, onNext }: { g: BusinessGame; run: StartupTycoonRun; 
         />
       </Card>
       <Card>
-        <Eyebrow color="#6A4BE0">{t('startup.team')}</Eyebrow>
+        <Eyebrow>{t('startup.team')}</Eyebrow>
         {ROLES.map((r) => (
           <View key={r} style={{ gap: 2 }}>
             <Stepper
               label={t(`startup.roles.${r}`)}
-              hint={`${tx(`startup.roleHint.${r}`, {
-                n: r === 'maker' ? run.perMaker : run.perSeller,
-                sale: tx(`startup.sale.${run.company}`),
-              })} · ${t('startup.salary', { amount: run.salary[r].toLocaleString('en-US') })}`}
+              // The output of each maker and seller is a hint that fades from Proficient.
+              hint={`${
+                run.hints === false
+                  ? ''
+                  : `${tx(`startup.roleHint.${r}`, {
+                      n: r === 'maker' ? run.perMaker : run.perSeller,
+                      sale: tx(`startup.sale.${run.company}`),
+                    })} · `
+              }${t('startup.salary', { amount: run.salary[r].toLocaleString('en-US') })}`}
               value={staff[r]}
               onChange={(v) => setStaff((s) => ({ ...s, [r]: v }))}
               step={1}
@@ -195,7 +226,7 @@ function Month({ g, run, i, onNext }: { g: BusinessGame; run: StartupTycoonRun; 
         )}
       </Card>
       <Card>
-        <Eyebrow color="#6A4BE0">{t('startup.marketing')}</Eyebrow>
+        <Eyebrow>{t('startup.marketing')}</Eyebrow>
         <View style={styles.segments}>
           {MARKETING.map((m) => (
             <Pressable
@@ -220,11 +251,52 @@ const styles = StyleSheet.create({
   segment: {
     flex: 1,
     alignItems: 'center',
+    minHeight: 44,
+    justifyContent: 'center',
     paddingVertical: 10,
-    borderRadius: 12,
-    borderWidth: 2,
-    borderColor: '#E3DDF2',
+    borderRadius: 10,
+    borderWidth: 1.5,
+    borderColor: '#E4E2EC',
     backgroundColor: '#fff',
   },
-  segmentOn: { backgroundColor: Colors.primary, borderColor: Colors.primary },
+  segmentOn: { backgroundColor: INK, borderColor: INK },
+});
+
+/** The how-to-play example: a month's profit and loss. */
+function HowTo() {
+  const { t } = useTranslation('business');
+  return (
+    <Statement
+      rows={[
+        { label: t('startup.statement.revenue'), value: money(9000) },
+        { label: t('startup.statement.cogs'), value: money(-3000) },
+        { label: t('startup.statement.gross', { pct: 67 }), value: money(6000), total: true },
+        { label: t('startup.statement.payroll'), value: money(-4300) },
+        { label: t('startup.statement.rent'), value: money(-900) },
+        { label: t('startup.statement.net'), value: money(800), total: true, color: GREEN },
+      ]}
+    />
+  );
+}
+
+defineGameFrame('startup-tycoon', {
+  HowTo,
+  review: (r) => {
+    const run = r as StartupTycoonRun;
+    return [
+      ...run.dilemmas.flatMap((d) =>
+        d.report
+          ? [
+              {
+                key: `m${d.report.month}`,
+                correct: d.report.grade !== 'poor' && d.report.net >= 0,
+                main: `${tr('business:startup.month', { n: d.report.month + 1, total: run.months })} · ${money(d.report.net)}`,
+                detail: tr(`business:startup.dilemmas.${d.id}.title`),
+              },
+            ]
+          : [],
+      ),
+      ...deskReview(run),
+    ];
+  },
 });
