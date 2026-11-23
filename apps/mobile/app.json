@@ -9,7 +9,14 @@
     "userInterfaceStyle": "dark",
     "ios": {
       "icon": "./assets/images/icon.png",
-      "bundleIdentifier": "ai.knowzone.app"
+      "bundleIdentifier": "ai.knowzone.app",
+      "config": {
+        "usesNonExemptEncryption": false
+      },
+      "infoPlist": {
+        "NSSpeechRecognitionUsageDescription": "Knowzone turns what you say to Kora into text, so she can answer your question.",
+        "NSMicrophoneUsageDescription": "Knowzone uses the microphone when you ask Kora a question out loud."
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -21,7 +28,13 @@
       "predictiveBackGestureEnabled": false,
       "softwareKeyboardLayoutMode": "resize",
       "package": "ai.knowzone.app",
-      "permissions": ["com.android.vending.BILLING"]
+      "permissions": [
+        "com.android.vending.BILLING",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.MODIFY_AUDIO_SETTINGS",
+        "android.permission.FOREGROUND_SERVICE",
+        "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK"
+      ]
     },
     "web": {
       "output": "single",
@@ -63,6 +76,17 @@
       "typedRoutes": true,
       "reactCompiler": true
     },
-    "backgroundColor": "#0B1026"
+    "backgroundColor": "#0B1026",
+    "extra": {
+      "router": {
+        "asyncRoutes": {
+          "web": true
+        }
+      },
+      "eas": {
+        "projectId": "1ea8f02d-b925-415e-807c-66b8ede10799"
+      }
+    },
+    "owner": "abasiono"
   }
 }
