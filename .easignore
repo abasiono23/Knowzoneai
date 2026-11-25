@@ -1,0 +1,43 @@
+# What EAS Build uploads for the phone app. When this file exists EAS uses it INSTEAD of .gitignore,
+# so it repeats the ignores from .gitignore and apps/mobile/.gitignore, then leaves out everything the
+# phone build doesn't need: the server and its data, the waitlist site, docs, and the web-only Kora
+# lesson files (the app streams those from the website).
+
+# --- Same as .gitignore -------------------------------------------------------
+node_modules/
+.env
+.env*.local
+dist/
+.expo/
+*.log
+.DS_Store
+.pgdata/
+docs/design/
+
+# --- Same as apps/mobile/.gitignore --------------------------------------------
+web-build/
+expo-env.d.ts
+.kotlin/
+*.orig.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.pem
+.metro-health-check*
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+*.tsbuildinfo
+apps/mobile/ios/
+apps/mobile/android/
+
+# --- Not needed by the phone build ----------------------------------------------
+apps/server/
+apps/web/
+docs/
+apps/mobile/public/kora-lessons/
+/*.jpeg
+/*.png
+/*.ips
