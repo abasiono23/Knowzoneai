@@ -148,11 +148,23 @@ describe('subject videos', () => {
     // School subjects never pick up a course's set, and unknown or odd course names have none.
     const school = await http().get('/books/countries/ng/subjects/economics/videos?level=ss1').expect(200);
     expect(school.body.topics.some((t: { library: string }) => t.library.startsWith('uni-'))).toBe(false);
-    for (const c of ['mechanical-engineering', '..%2Fsubjects'])
+    for (const c of ['basket-weaving', '..%2Fsubjects'])
       expect((await http().get(`/books/courses/${c}/videos?stage=college`).expect(200)).body).toEqual({
         reels: [],
         topics: [],
       });
+    useSubjectVideos([videos('mathematics'), videos('biology')]);
+  });
+
+  it('names a course set’s topics from its summaries when the set has no names of its own', async () => {
+    const lib = summaries('uni-physics', 'Physics');
+    useSummaries([summaries('mathematics', 'Mathematics'), { ...lib, topics: lib.topics.map((t, i) => ({ ...t, stage: i ? 'core' : 'intro' })) }]);
+    useSubjectVideos([{ id: 'uni-physics', topics: [{ id: 'second', stage: 'core', videos: [video(5)], flashcards: [] }] }]);
+    const { body } = await http().get('/books/courses/physics/videos?stage=undergraduate').set('X-Language', 'fr').expect(200);
+    expect(body.topics).toEqual([
+      expect.objectContaining({ library: 'uni-physics', libraryName: 'Physics (fr)', id: 'second', title: 'Physics advanced (fr)', yours: true }),
+    ]);
+    useSummaries([summaries('mathematics', 'Mathematics'), summaries('biology', 'Biology')]);
     useSubjectVideos([videos('mathematics'), videos('biology')]);
   });
 
