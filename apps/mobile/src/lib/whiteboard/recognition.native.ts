@@ -29,6 +29,9 @@ export const canListen = () => {
   }
 };
 
+/** English the phone may offer when it can't listen in the app's language (iPhones have no Nigerian English). */
+const ENGLISH_FALLBACKS = ['en-NG', 'en-GB', 'en-US'];
+
 /** iPhones only give a finished sentence when listening ends, so a pause this long counts as the end. */
 const IOS_PAUSE_MS = 1200;
 /** Restarts that fail in a row (the recogniser busy or gone) before giving up. */
@@ -40,8 +43,11 @@ export function listen(language: string, { onFinal, onPartial, onError }: Handle
   let stopped = false;
   let started = false;
   let fails = 0;
-  // Phones that can't listen in a language (often Yoruba, Igbo or Hausa) fall back to Nigerian English.
-  let locale = speechLocale(language);
+  // Phones that can't listen in a language fall back through these, in order. Android hears Nigerian
+  // English; iPhones don't offer it, so they get British, then US English (Yoruba, Igbo and Hausa likewise).
+  const locales = [...new Set([speechLocale(language), ...ENGLISH_FALLBACKS])];
+  let tried = 0;
+  let locale = locales[0]!;
   let partial = '';
   let pause: ReturnType<typeof setTimeout> | undefined;
   let retry: ReturnType<typeof setTimeout> | undefined;
@@ -94,8 +100,11 @@ export function listen(language: string, { onFinal, onPartial, onError }: Handle
         case 'audio-capture':
           return giveUp('noMic');
         case 'language-not-supported':
-          if (locale !== 'en-NG') locale = 'en-NG';
-          else giveUp('language');
+          // Try the next language on the list; only when none of them works does Kora ask for typing.
+          if (++tried < locales.length) {
+            locale = locales[tried]!;
+            again(SETTLE_MS);
+          } else giveUp('language');
           return;
         case 'network':
           return onError?.('network');
@@ -150,6 +159,21 @@ export function listen(language: string, { onFinal, onPartial, onError }: Handle
       if (!asked.granted) return giveUp('blocked');
     } catch {
       return giveUp('blocked');
+    }
+    // iPhones say which languages they can hear, so the first try already uses one they support.
+    if (Platform.OS === 'ios') {
+      try {
+        const { locales: supported } = await Speech.getSupportedLocales({});
+        const have = new Set(supported.map((l) => l.replace('_', '-')));
+        const first = locales.findIndex((l) => have.has(l));
+        if (first > 0) {
+          tried = first;
+          locale = locales[first]!;
+        }
+      } catch {
+        // The list isn't available: the fallbacks above take over if the first language is refused.
+      }
+      if (!mine()) return;
     }
     again(Math.max(0, lastStop + SETTLE_MS - Date.now()));
   })();
